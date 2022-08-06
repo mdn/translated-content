@@ -15,75 +15,75 @@ translation_of: Web/API/Request
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Интерфейс </span></font><strong>Request</strong></code> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> является запросом ресурсов или данных.</p>
+<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Интерфейс </span></font><strong>Request</strong></code> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> является запросом ресурсов или данных.</p>
 
-<p>Создать новый объект <code>Request</code> можно, используя конструктор {{domxref("Request.Request","Request()")}}, однако чаще всего встречается способ возврата объекта <code>Request</code> , как результат операции API. Например такой как service worker {{domxref("FetchEvent.request")}}.</p>
+<p>Создать новый объект <code>Request</code> можно, используя конструктор {{domxref("Request.Request","Request()")}}, однако чаще всего встречается способ возврата объекта <code>Request</code> , как результат операции API. Например такой как service worker {{domxref("FetchEvent.request")}}.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
 <dl>
  <dt>{{domxref("Request.Request","Request()")}}</dt>
- <dd>Создаёт новый <code>Request</code> объект.</dd>
+ <dd>Создаёт новый <code>Request</code> объект.</dd>
 </dl>
 
 <h2 id="Параметры">Параметры</h2>
 
 <dl>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
- <dd>Содержит кешированное состояние запроса (напр., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
- <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
+ <dd>Содержит кешированное состояние запроса (напр., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
+ <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
  <dd>Содержит контекст запроса (напр., <code>audio</code>, <code>image</code>, <code>iframe</code>, и т.д..)</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
- <dd>Содержит данные идентификации запроса (напр., <code>"omit"</code>, <code>"same-origin"</code>, <code>"include"</code>). Значение по умолчанию: <code>"same-origin"</code>.</dd>
+ <dd>Содержит данные идентификации запроса (напр., <code>"omit"</code>, <code>"same-origin"</code>, <code>"include"</code>). Значение по умолчанию: <code>"same-origin"</code>.</dd>
  <dt>{{domxref("Request.destination")}} {{ReadOnlyInline}}</dt>
- <dd>Возвращает строку из {{domxref("RequestDestination")}} enum, описывая назначение запроса. Это строка, указывающая тип запрошенных данных.</dd>
+ <dd>Возвращает строку из {{domxref("RequestDestination")}} enum, описывая назначение запроса. Это строка, указывающая тип запрошенных данных.</dd>
  <dt>{{domxref("Request.headers")}} {{readonlyInline}}</dt>
- <dd>Содержит назначенный {{domxref("Headers")}} объект запроса (заголовки).</dd>
+ <dd>Содержит назначенный {{domxref("Headers")}} объект запроса (заголовки).</dd>
  <dt>{{domxref("Request.integrity")}} {{readonlyInline}}</dt>
- <dd>Содержит "<a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a>" значение запроса (напр., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
+ <dd>Содержит "<a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a>" значение запроса (напр., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
  <dt>{{domxref("Request.method")}} {{readonlyInline}}</dt>
- <dd>Содержит метод запроса (<code>GET</code>, <code>POST</code>, и т.д.)</dd>
+ <dd>Содержит метод запроса (<code>GET</code>, <code>POST</code>, и т.д.)</dd>
  <dt>{{domxref("Request.mode")}} {{readonlyInline}}</dt>
  <dd>Содержит режим запроса (напр., <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code>.)</dd>
  <dt>{{domxref("Request.redirect")}} {{readonlyinline}}</dt>
- <dd>Содержит режим перенаправления. Может быть одним из следующих: <code>follow</code>, <code>error</code>, или <code>manual</code>.</dd>
+ <dd>Содержит режим перенаправления. Может быть одним из следующих: <code>follow</code>, <code>error</code>, или <code>manual</code>.</dd>
  <dt>{{domxref("Request.referrer")}} {{readonlyInline}}</dt>
- <dd>Содержит значение "referrer" ("ссылающийся") запроса (например., <code>client</code>).</dd>
+ <dd>Содержит значение "referrer" ("ссылающийся") запроса (например., <code>client</code>).</dd>
  <dt>{{domxref("Request.referrerPolicy")}} {{readonlyInline}}</dt>
- <dd>Содержит политику "ссылающегося" данного запроса (e.g., <code>no-referrer</code>).</dd>
+ <dd>Содержит политику "ссылающегося" данного запроса (e.g., <code>no-referrer</code>).</dd>
  <dt>{{domxref("Request.url")}} {{readonlyInline}}</dt>
- <dd>Содержит URL запроса.</dd>
+ <dd>Содержит URL запроса.</dd>
 </dl>
 
 <p><code>Request</code> имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:</p>
 
 <dl>
  <dt>{{domxref("Body.body", "body")}} {{readonlyInline}}</dt>
- <dd>Простой getter используемый для раскрытия {{domxref("ReadableStream")}} "тела" (body) содержимого.</dd>
+ <dd>Простой getter используемый для раскрытия {{domxref("ReadableStream")}} "тела" (body) содержимого.</dd>
  <dt>{{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Хранит {{domxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.</dd>
+ <dd>Хранит {{domxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
 <dl>
  <dt>{{domxref("Request.clone()")}}</dt>
- <dd>Создаёт копию текущего <code>Request</code> объекта.</dd>
+ <dd>Создаёт копию текущего <code>Request</code> объекта.</dd>
 </dl>
 
 <p><code>Request</code> имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:</p>
 
 <dl>
  <dt>{{domxref("Body.arrayBuffer()")}}</dt>
- <dd>Возвращает промис, который выполняется, возвращая {{domxref("ArrayBuffer")}} репрезентацию тела запроса.</dd>
+ <dd>Возвращает промис, который выполняется, возвращая {{domxref("ArrayBuffer")}} репрезентацию тела запроса.</dd>
  <dt>{{domxref("Body.blob()")}}</dt>
- <dd>Возвращает promise </dd>
+ <dd>Возвращает promise </dd>
  <dt>{{domxref("Body.formData()")}}</dt>
- <dd>Возвращает promise который разрешается с помощью {{domxref("FormData")}} представления тела запроса.</dd>
+ <dd>Возвращает promise который разрешается с помощью {{domxref("FormData")}} представления тела запроса.</dd>
  <dt>{{domxref("Body.json()")}}</dt>
- <dd>Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.</dd>
+ <dd>Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.</dd>
  <dt>{{domxref("Body.text()")}}</dt>
- <dd>Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.</dd>
+ <dd>Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.</dd>
 </dl>
 
 <div class="note">
@@ -104,7 +104,7 @@ const credentials = request.credentials;
 <p>You could then fetch this request by passing the <code>Request</code> object in as a parameter to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} call, for example:</p>
 
 <pre class="brush: js">fetch(request)
-  .then(response =&gt; response.blob())
+  .then(response =&gt; response.blob())
   .then(blob =&gt; {
     image.src = URL.createObjectURL(blob);
   });</pre>
@@ -120,26 +120,26 @@ const bodyUsed = request.bodyUsed;
 </pre>
 
 <div class="note">
-<p><strong>Примечание:</strong> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.</p>
+<p><strong>Примечание:</strong> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.</p>
 </div>
 
 
 
-<p>Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, например, и получить ответ:</p>
+<p>Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, например, и получить ответ:</p>
 
 <pre class="brush: js">fetch(request)
   .then(response =&gt; {
     if (response.status === 200) {
-      return response.json();
+      return response.json();
     } else {
-      throw new Error('Что-то пошло не так на API сервере.');
+      throw new Error('Что-то пошло не так на API сервере.');
     }
   })
   .then(response =&gt; {
     console.debug(response);
-    // ...
+    // ...
   }).catch(error =&gt; {
-    console.error(error);
+    console.error(error);
   });</pre>
 
 <h2 id="Specifications">Specifications</h2>

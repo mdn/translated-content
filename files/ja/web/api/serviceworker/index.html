@@ -13,7 +13,7 @@ translation_of: Web/API/ServiceWorker
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> のインターフェイスである <code>ServiceWorker</code> は service worker に関するレファレンスを提供しています。様々なブラウザー環境（例えばページ、worker など）が同一の service worker に関連付けることができて、一意な <code>ServiceWorker</code> オブジェクト​からアクセスできます。 </p>
+<p><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> のインターフェイスである <code>ServiceWorker</code> は service worker に関するレファレンスを提供しています。様々なブラウザー環境（例えばページ、worker など）が同一の service worker に関連付けることができて、一意な <code>ServiceWorker</code> オブジェクト​からアクセスできます。 </p>
 
 <p><code>ServiceWorker</code> オブジェクトはプロバティ{{domxref("ServiceWorkerRegistration.active")}}と{{domxref("ServiceWorkerContainer.controller")}}プロパティ — これは起動された service worker でページを管理しています (そのservice workerが正常に登録されて管理されるページがリロードされています) — の中で利用可能です。</p>
 
@@ -29,14 +29,14 @@ translation_of: Web/API/ServiceWorker
  <p>{{domxref("ServiceWorkerRegistration")}}の一部と定義されたスクリプト URL にシリアライズされた <code>ServiceWorker</code> を返します。この URL はその <code>ServiceWorker</code> を登録している document と同一オリジン上でなければなりません。</p>
  </dd>
  <dt>{{domxref("ServiceWorker.state")}} {{readonlyinline}}</dt>
- <dd>service worker の状態を返します。<code>installing</code>, <code>installed</code>, <code>activating</code>, <code>activated</code>, <code>redundant</code> のいずれかの値を返します。</dd>
+ <dd>service worker の状態を返します。<code>installing</code>, <code>installed</code>, <code>activating</code>, <code>activated</code>, <code>redundant</code> のいずれかの値を返します。</dd>
 </dl>
 
 <h3 id="Event_handlers" name="Event_handlers">イベントハンドラ</h3>
 
 <dl>
  <dt>{{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}</dt>
- <dd><code>statechange</code> イベントが発火した際に呼び出される{{domxref("EventListener")}} プロパティです。このイベントは {{domxref("ServiceWorker.state")}} が変更された際に発火されます。</dd>
+ <dd><code>statechange</code> イベントが発火した際に呼び出される{{domxref("EventListener")}} プロパティです。このイベントは {{domxref("ServiceWorker.state")}} が変更された際に発火されます。</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">メソッド</h2>

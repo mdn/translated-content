@@ -11,7 +11,7 @@ translation_of: Web/API/GamepadEvent
 ---
 <p>{{APIRef("Gamepad API")}}</p>
 
-<p>Gamepad API の GamepadEvent インターフェースは、<span class="tlid-translation translation"><span title="">システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント </span></span>{{domxref("Window.gamepadconnected")}} <span class="tlid-translation translation"><span title=""> と </span></span>{{domxref("Window.gamepaddisconnected")}}<span class="tlid-translation translation"><span title=""> が応答して発生するものです。</span></span></p>
+<p>Gamepad API の GamepadEvent インターフェースは、<span class="tlid-translation translation"><span title="">システムに接続されているゲームパッドへの参照が含まれています。これは、ゲームパッドイベント </span></span>{{domxref("Window.gamepadconnected")}} <span class="tlid-translation translation"><span title=""> と </span></span>{{domxref("Window.gamepaddisconnected")}}<span class="tlid-translation translation"><span title=""> が応答して発生するものです。</span></span></p>
 
 <h2 id="コンストラクタ">コンストラクタ</h2>
 
@@ -24,12 +24,12 @@ translation_of: Web/API/GamepadEvent
 
 <dl>
  <dt>{{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}</dt>
- <dd><span class="tlid-translation translation"><span title="">発生したイベントの関連するゲームパッドデータへのアクセスを提供する </span></span>{{ domxref("Gamepad") }}<span class="tlid-translation translation"><span title=""> オブジェクトを返します。</span></span></dd>
+ <dd><span class="tlid-translation translation"><span title="">発生したイベントの関連するゲームパッドデータへのアクセスを提供する </span></span>{{ domxref("Gamepad") }}<span class="tlid-translation translation"><span title=""> オブジェクトを返します。</span></span></dd>
 </dl>
 
 <h2 id="例">例</h2>
 
-<p><span class="tlid-translation translation"><span title="">ゲームパッドプロパティは、起動された </span></span>{{domxref("Window.gamepadconnected")}}<span class="tlid-translation translation"><span title=""> イベントで呼び出されます。</span></span></p>
+<p><span class="tlid-translation translation"><span title="">ゲームパッドプロパティは、起動された </span></span>{{domxref("Window.gamepadconnected")}}<span class="tlid-translation translation"><span title=""> イベントで呼び出されます。</span></span></p>
 
 <pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",

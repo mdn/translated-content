@@ -71,7 +71,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <p>状況をより複雑にしているのが、一部のデバイスは高い解像度の画面を持ち、きれいに表示するには、期待されるよりも大きい画像を必要としていることです。 これは本質的に同じ問題ですが、少し異なる状況のものです。</p>
 
-<p>ベクター画像はある側面でこれらの問題を解決すると思うかもしれません。 — ファイルサイズが小さくて容易に縮尺変更でき、どこでも利用できるからです。 しかし、すべての種類の画像に適しているわけではありません。 — 単純な図形、パターン、インターフェイス要素などには適していますが、例えば写真のような、ディティールのものをベクターベースの画像で作成すると、とても複雑になります。  JPEG のようなラスター画像形式は、上記の例に見られるような種類の画像により適しています。</p>
+<p>ベクター画像はある側面でこれらの問題を解決すると思うかもしれません。 — ファイルサイズが小さくて容易に縮尺変更でき、どこでも利用できるからです。 しかし、すべての種類の画像に適しているわけではありません。 — 単純な図形、パターン、インターフェイス要素などには適していますが、例えば写真のような、ディティールのものをベクターベースの画像で作成すると、とても複雑になります。  JPEG のようなラスター画像形式は、上記の例に見られるような種類の画像により適しています。</p>
 
 <p>この種の問題は、ウェブが最初に登場したとき、90年代前半から中期の頃には存在しませんでした — ウェブをブラウズする唯一のデバイスはデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。<em> レスポンシブ画像技術</em>は上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像<em>(解像度の切り替え</em>)、異なる領域の取り方が異なる様々な画像(アートディレクション)を含めることができます。</p>
 
@@ -130,24 +130,24 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
  <li>選択したスロットサイズに最も近い <code>srcset</code> リストで参照される画像を読み込みます。</li>
 </ol>
 
-<p>以上です！  この時点で、480px のビューポート幅を持つブラウザーがページを読み込むと、 (<code>max-width: 480px</code>) メディア条件が真となるため、440px スロットが選択されるので、その固有幅(<code>480w</code>)が <code>440px</code> に最も近い <code>elva-fairy-480w.jpg</code> が読み込まれます。 800px の画像は 128KB ですが、480px の画像は 63KB で 65KB の節約になります。 今、これが多くの写真を持っているページだったと想像してみてください。 この技術を使用することで、モバイルユーザーは多くの帯域幅を節約できます。</p>
+<p>以上です！  この時点で、480px のビューポート幅を持つブラウザーがページを読み込むと、 (<code>max-width: 480px</code>) メディア条件が真となるため、440px スロットが選択されるので、その固有幅(<code>480w</code>)が <code>440px</code> に最も近い <code>elva-fairy-480w.jpg</code> が読み込まれます。 800px の画像は 128KB ですが、480px の画像は 63KB で 65KB の節約になります。 今、これが多くの写真を持っているページだったと想像してみてください。 この技術を使用することで、モバイルユーザーは多くの帯域幅を節約できます。</p>
 
 <p>これらの機能をサポートしていない古いブラウザーはそれを無視し、 {{htmlattrxref("src", "img")}} 属性で参照されている画像を通常の方法で読み込みます。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: ドキュメントの {{htmlelement("head")}} には、 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code> という行があります。  これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。  (一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。  これについては、今後のモジュールで詳しく説明します。)</p>
+<p><strong>メモ</strong>: ドキュメントの {{htmlelement("head")}} には、 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code> という行があります。  これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。  (一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。  これについては、今後のモジュールで詳しく説明します。)</p>
 </div>
 
 <h3 id="Useful_developer_tools" name="Useful_developer_tools">便利な開発者ツール</h3>
 
-<p>ブラウザーには、必要なスロット幅などの作業に役立ついくつかの便利な<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">開発者ツール</a>があります。 私がそれらを作業していたとき、私は最初にサンプルの非レスポンシブ版(<code>not-responsive.html</code>)を読み込んでから<a href="/ja/docs/Tools/Responsive_Design_Mode">レスポンシブデザインモード</a>(ツール → ウェブ開発 → レスポンシブデザインモード)に行きました。 まるでさまざまなデバイスの画面サイズで表示されているかのようにウェブページのレイアウトを見ることができます。</p>
+<p>ブラウザーには、必要なスロット幅などの作業に役立ついくつかの便利な<a href="/ja/docs/Learn/Common_questions/What_are_browser_developer_tools">開発者ツール</a>があります。 私がそれらを作業していたとき、私は最初にサンプルの非レスポンシブ版(<code>not-responsive.html</code>)を読み込んでから<a href="/ja/docs/Tools/Responsive_Design_Mode">レスポンシブデザインモード</a>(ツール → ウェブ開発 → レスポンシブデザインモード)に行きました。 まるでさまざまなデバイスの画面サイズで表示されているかのようにウェブページのレイアウトを見ることができます。</p>
 
 <p>ビューポート幅を 320px から 480px に設定して、それぞれのために私は<a href="/ja/docs/Tools/Page_Inspector">インスペクタ</a>へ行き、私たちが興味を持っている &lt;img&gt; 要素をクリックしてから、画面の右側にある [レイアウト] タブの [ボックスモデル] でそのサイズを調べました。 これはあなたが必要とする固有の画像幅を与えるはずです。</p>
 
 <p><img alt="インスペクタで強調表示された画像要素を持つfirefox開発者ツールのスクリーンショット。サイズは440 x 293ピクセルです。" src="https://mdn.mozillademos.org/files/12932/box-model-devtools.png" style="display: block; height: 845px; margin: 0px auto; width: 480px;">次に、ビューポート幅を任意に設定して(たとえば、幅を狭く設定する)、ネットワークインスペクタ(ツール → ウェブ開発 → ネットワーク)を開き、ページを再読み込みすることで、<code>srcset</code> が機能しているかどうかを確認できます。 これにより、ウェブページを構成するためにダウンロードされた資産のリストが表示されます。 ここでダウンロード用に選択された画像ファイルを確認できます。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: Chrome でテストするときは、[その他ツール] → [デベロッパー ツール] → [ネットワーク] タブの [Disable cache (when DevTools is open)] チェックボックスをオンにして、開発者ツールが開いているときにキャッシュを無効にします。  そうしないと、Chrome はキャッシュされた画像をより適切なものより優先します。</p>
+<p><strong>メモ</strong>: Chrome でテストするときは、[その他ツール] → [デベロッパー ツール] → [ネットワーク] タブの [Disable cache (when DevTools is open)] チェックボックスをオンにして、開発者ツールが開いているときにキャッシュを無効にします。  そうしないと、Chrome はキャッシュされた画像をより適切なものより優先します。</p>
 </div>
 
 <p><img alt="firefox開発者ツールのネットワークインスペクタのスクリーンショット。ページのHTMLがダウンロードされていることと、レスポンシブ画像の2つの800ワイドバージョンを含む3つの画像" src="https://mdn.mozillademos.org/files/12934/network-devtools.png" style="display: block; height: 630px; margin: 0px auto; width: 600px;"></p>
@@ -155,7 +155,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <h3 id="Resolution_switching_Same_size_different_resolutions" name="Resolution_switching_Same_size_different_resolutions">解像度の切り替え: 同じサイズ、異なる解像度</h3>
 
 <p>複数の画面解像度をサポートしていても、誰もが画面上で同じ実世界サイズで画像を見る場合は、<code>sizes</code> を指定せずに x 記述子を指定した <code>srcset</code> を使用してブラウザーに適切な解像度の画像を選択させることができます — やや簡単な構文です！ これは <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">srcset-resolutions.html</a> のようなものです(<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html">ソースコード</a>も参照してください)。<br>
-  </p>
+  </p>
 
 <pre class="brush: html">&lt;img srcset="elva-fairy-320w.jpg,
              elva-fairy-480w.jpg 1.5x,
@@ -173,13 +173,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <h3 id="Art_direction" name="Art_direction">アートディレクション</h3>
 
-<p>要約すると、<strong>アートディレクションの問題</strong>は、表示される画像を異なる画像表示サイズに合うように変更したいことを含みます。 たとえば、デスクトップブラウザーで見たときに中央に人がいる大きな風景をウェブサイトに表示している場合、モバイルブラウザーでウェブサイトを表示すると縮小され、人がとても小さくて見えにくいので格好悪くなります。 モバイルでは、人にズームインしたより小型のポートレイト画像を表示するほうがよいでしょう。  {{htmlelement("picture")}} 要素は、この種の解決法を実装することを可能にします。<br>
+<p>要約すると、<strong>アートディレクションの問題</strong>は、表示される画像を異なる画像表示サイズに合うように変更したいことを含みます。 たとえば、デスクトップブラウザーで見たときに中央に人がいる大きな風景をウェブサイトに表示している場合、モバイルブラウザーでウェブサイトを表示すると縮小され、人がとても小さくて見えにくいので格好悪くなります。 モバイルでは、人にズームインしたより小型のポートレイト画像を表示するほうがよいでしょう。  {{htmlelement("picture")}} 要素は、この種の解決法を実装することを可能にします。<br>
  <br>
  オリジナルの <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> の例に戻ると、アートディレクションがひどく必要な画像があります。</p>
 
 <pre class="brush: html">&lt;img src="elva-800w.jpg" alt="クリスは立って彼の娘エルバを保持します"&gt;</pre>
 
-<p>{{htmlelement("picture")}} でこれを修正しましょう！   <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code>や<code>&lt;audio&gt;</code></a>と同様に、<code>&lt;picture&gt;</code> 要素はラッパーで、ブラウザーが選択できるいくつかの異なるソースを提供するいくつかの {{htmlelement("source")}} 要素を含み、次に極めて重要な {{htmlelement("img")}} 要素が続きます。 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> のコードは次のようになります。</p>
+<p>{{htmlelement("picture")}} でこれを修正しましょう！   <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code>や<code>&lt;audio&gt;</code></a>と同様に、<code>&lt;picture&gt;</code> 要素はラッパーで、ブラウザーが選択できるいくつかの異なるソースを提供するいくつかの {{htmlelement("source")}} 要素を含み、次に極めて重要な {{htmlelement("img")}} 要素が続きます。 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> のコードは次のようになります。</p>
 
 <pre class="brush: html">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
@@ -190,7 +190,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <ul>
  <li><code>&lt;source&gt;</code> 要素にはメディア条件が含まれている <code>media</code> 属性が含まれています。 最初の srcset の例のように、これらの条件はどの画像が表示されるかを決定するテストであり、最初に真を返すものが表示されます。 この場合、ビューポート幅が 799 ピクセル幅以下の場合、最初の <code>&lt;source&gt;</code> 要素の画像が表示されます。 ビューポート幅が 800 ピクセル以上であれば、2番目のものになります。<br>
-   </li>
+   </li>
  <li><code>srcset</code> 属性には、表示する画像へのパスが含まれます。 上記の <code>&lt;img&gt; </code>で見たように、<code>&lt;source&gt;</code> は複数の画像を参照する <code>srcset</code> 属性と <code>sizes</code> 属性をとることができます。 したがって、<code>&lt;picture&gt;</code> 要素で複数の画像を提供することもできますが、それぞれの画像も複数の解像度で提供することができます。 現実的には、この種のことを非常に頻繁にやりたいとは思わないでしょう。</li>
  <li>すべての場合で、<code>&lt;img&gt;</code> 要素に <code>src</code> と <code>alt</code> を付けて <code>&lt;/picture&gt;</code> の直前に置く必要があります。 そうしないと画像は表示されません。 これはメディア条件のどれも true を返さない場合(この例では2番目の <code>&lt;source&gt;</code>要素を実際に削除できる)や、<code>&lt;picture&gt;</code> 要素をサポートしないブラウザーの代替に適用されるデフォルトのケースを提供します。</li>
 </ul>
@@ -254,7 +254,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
  <li><strong>解像度切り替え</strong>: デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを狭い画面のデバイスに配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、<a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">ベクターグラフィックス</a>(SVG 画像)と {{htmlattrxref("srcset", "img")}} と {{htmlattrxref("sizes", "img")}} 属性を使用して解決できます。</li>
 </ul>
 
-<p>これはまた、<a href="/ja/docs/Learn/HTML/Multimedia_and_embedding">マルチメディアと埋め込み</a>のモジュール全体を閉じます！  先に進む前に行うべき唯一のことは、マルチメディアの評価を試み、あなたがどのように乗り出すかを見ることです。 楽しんでください。</p>
+<p>これはまた、<a href="/ja/docs/Learn/HTML/Multimedia_and_embedding">マルチメディアと埋め込み</a>のモジュール全体を閉じます！  先に進む前に行うべき唯一のことは、マルチメディアの評価を試み、あなたがどのように乗り出すかを見ることです。 楽しんでください。</p>
 
 <h2 id="See_also" name="See_also">関連項目</h2>
 

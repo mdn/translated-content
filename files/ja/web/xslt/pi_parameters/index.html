@@ -11,7 +11,7 @@ translation_of: Web/XSLT/PI_Parameters
  <br>
  これを解決するために2つの新しい PI 、つまり <code>&lt;?xslt-param?&gt;</code> および <code>&lt;?xslt-param-namespace?&gt;</code> が <a href="/ja/docs/XSLT/en/Firefox_2">Firefox 2</a> (詳細については<a href="#supported_versions">Supported versions</a>を参照) で実装されています。どちらのPIにも、<code>xml-stylesheet</code> PI と同じ方法で「擬似属性」を含めることができます。<br>
  <br>
- 次のドキュメントは "color" と "size" の2つのパラメータをスタイルシート  "style.xsl" に渡します。</p>
+ 次のドキュメントは "color" と "size" の2つのパラメータをスタイルシート  "style.xsl" に渡します。</p>
 
 <pre class="eval">&lt;?xslt-param name="color" value="blue"?&gt;
 &lt;?xslt-param name="size" select="2"?&gt;
@@ -33,13 +33,13 @@ translation_of: Web/XSLT/PI_Parameters
 <p><code>xslt-param</code> PI は 4つの属性をサポートしています。</p>
 
 <dl>
- <dt>name </dt>
+ <dt>name </dt>
  <dd>パラメータ名のローカル名部分。属性の構文チェックは行われませんが、有効な <a href="http://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</a> でない場合は、スタイルシートのどのパラメータにも一致しません。</dd>
- <dt>namespace </dt>
+ <dt>namespace </dt>
  <dd>パラメータ名の名前空間。属性の構文チェックは行われません。</dd>
- <dt>value </dt>
+ <dt>value </dt>
  <dd>パラメータの文字列値を格納します。属性の値はパラメータの値として使用されます。データ型は常に最適です。</dd>
- <dt>select </dt>
+ <dt>select </dt>
  <dd>パラメータの <a href="/ja/docs/XPath">XPath</a> 式。属性の値は XPath 式として解析されます。式を評価した結果はパラメータの値として使用されます。</dd>
 </dl>
 
@@ -95,9 +95,9 @@ translation_of: Web/XSLT/PI_Parameters
 <p><code>xslt-param-namespace</code> は2つの属性を使用します。</p>
 
 <dl>
- <dt>prefix </dt>
+ <dt>prefix </dt>
  <dd>マッピングされている接頭辞</dd>
- <dt>namespace </dt>
+ <dt>namespace </dt>
  <dd>接頭辞がマップされる名前空間</dd>
 </dl>
 

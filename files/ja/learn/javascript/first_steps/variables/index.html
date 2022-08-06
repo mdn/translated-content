@@ -88,12 +88,12 @@ if (name === 'アダム') {
 
 <h2 id="Declaring_a_variable" name="Declaring_a_variable">変数を宣言する</h2>
 
-<p>変数を使用するためには、まずは変数を作らなければなりません。より正確には、「宣言する」といいます。そのためには <code>var</code> または <code>let</code> キーワードに続けて変数名を書きます。</p>
+<p>変数を使用するためには、まずは変数を作らなければなりません。より正確には、「宣言する」といいます。そのためには <code>var</code> または <code>let</code> キーワードに続けて変数名を書きます。</p>
 
 <pre class="brush: js notranslate">let myName;
 let myAge;</pre>
 
-<p>ここでは 2 つの変数 <code>myName</code> と <code>myAge</code> を宣言しています。それではこの 2 つの行をブラウザーのコンソールに入力してみましょう。すぐ下のコンソールに入力することも可能です。続けて、好きな名前で変数を作ってみましょう。</p>
+<p>ここでは 2 つの変数 <code>myName</code> と <code>myAge</code> を宣言しています。それではこの 2 つの行をブラウザーのコンソールに入力してみましょう。すぐ下のコンソールに入力することも可能です。続けて、好きな名前で変数を作ってみましょう。</p>
 
 <div class="note">
 <p><strong>注</strong>: JavaScript では、命令の行末ごとにセミコロン (<code>;</code>) を書かなければなりません。1行ずつ書いているうちは動くかもしれませんが、複数行を書き始めたら動かなくなってしまうでしょう。いつでもセミコロンを書くようにして、慣れていきましょう。</p>
@@ -104,7 +104,7 @@ let myAge;</pre>
 <pre class="brush: js notranslate">myName;
 myAge;</pre>
 
-<p>これらの変数は現在、値を保持しておらず、空です。変数の名前を入力すると、<code>undefined</code> という値が表示されるでしょう。もし変数自体が存在していない場合はエラーメッセージが表示されます。以下の変数を入力してみてください。</p>
+<p>これらの変数は現在、値を保持しておらず、空です。変数の名前を入力すると、<code>undefined</code> という値が表示されるでしょう。もし変数自体が存在していない場合はエラーメッセージが表示されます。以下の変数を入力してみてください。</p>
 
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
@@ -194,8 +194,8 @@ myAge = 40;</pre>
  <li>変数名の先頭に数字を使用してはいけません。これは JavaScript の文法エラーとなります。</li>
  <li>複数の単語をつなげる場合は、<a href="https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms">"小文字始まりのキャメルケース"</a>と呼ばれる書き方に従いましょう。最初の単語を全て小文字で書いて、その後に続く単語の最初の文字を大文字にする記法です。この記事ではこの書き方を採用しています。</li>
  <li>保持するデータを説明する、分かりやすい名前を付けましょう。1 つの文字・数字や、長すぎる命名はしないようにしましょう。</li>
- <li>変数名は大文字・小文字を区別します。<code>myage</code> と <code>myAge</code> は違うものになります。</li>
- <li>最後に、JavaScript の予約語 ( これは JavaScript の文法を構成する単語のことです) を変数名には付けないようにしましょう。<code>var</code>、<code>function</code>、<code>let</code>、<code>for</code> 等を変数名として使用することは出来ません。ブラウザーはそれを異なるように解釈し、結果としてエラーとなるでしょう。</li>
+ <li>変数名は大文字・小文字を区別します。<code>myage</code> と <code>myAge</code> は違うものになります。</li>
+ <li>最後に、JavaScript の予約語 ( これは JavaScript の文法を構成する単語のことです) を変数名には付けないようにしましょう。<code>var</code>、<code>function</code>、<code>let</code>、<code>for</code> 等を変数名として使用することは出来ません。ブラウザーはそれを異なるように解釈し、結果としてエラーとなるでしょう。</li>
 </ul>
 
 <div class="note">
@@ -246,7 +246,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <h3 id="Booleans" name="Booleans">真偽値</h3>
 
-<p>真偽値は <code>true</code> と <code>false</code> の二つの値だけを持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。</p>
+<p>真偽値は <code>true</code> と <code>false</code> の二つの値だけを持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。</p>
 
 <pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> iAmAlive <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span></code></pre>
 
@@ -254,7 +254,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">let</span> test <span class="operator token">=</span> <span class="number token">6</span> <span class="operator token">&lt;</span> <span class="number token">3</span><span class="punctuation token">;</span></code></pre>
 
-<p>これは「小なり」演算子 (<code>&lt;</code>) を使用して 6 が 3 より小さいかどうかを判定しています。想像の通り、6 は 3 より小さくないためにこれは <code>false</code> となります。このような演算子はまた今度じっくりと紹介します。</p>
+<p>これは「小なり」演算子 (<code>&lt;</code>) を使用して 6 が 3 より小さいかどうかを判定しています。想像の通り、6 は 3 より小さくないためにこれは <code>false</code> となります。このような演算子はまた今度じっくりと紹介します。</p>
 
 <h3 id="Arrays" name="Arrays">配列</h3>
 
@@ -301,7 +301,7 @@ myNumberArray[2]; // 40 と表示されます</pre>
 myNumber <span class="operator token">=</span> <span class="number token">500</span><span class="punctuation token">;</span> <span class="comment token">// much better — now this is a number</span>
 <span class="keyword token">typeof</span> myNumber<span class="punctuation token">;</span></code></pre>
 
-<p>上の 4行をコンソールに一つづつ入力して、結果を見てみてください。<code><a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、<code>myNumber</code> には <code>'500'</code> という文字列が入っているため、<code>string</code> と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。</p>
+<p>上の 4行をコンソールに一つづつ入力して、結果を見てみてください。<code><a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、<code>myNumber</code> には <code>'500'</code> という文字列が入っているため、<code>string</code> と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。</p>
 
 <h2 id="Constants_in_JavaScript" name="Constants_in_JavaScript">JavaScript の定数</h2>
 

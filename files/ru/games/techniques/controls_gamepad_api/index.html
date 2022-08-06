@@ -17,7 +17,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <h2 id="Элементы_управления_для_web_игр">Элементы управления для web игр</h2>
 
-<p>Исторически игра на консоли, подключённой к телевизору, всегда была совершенно другим опытом, чем игра на ПК, в основном из-за уникальных элементов управления. В конце концов, дополнительные драйверы и плагины позволили нам использовать консольные геймпады с настольными играми - либо нативными играми, либо теми, которые работают в браузере. Теперь, в эпоху HTML5, у нас наконец есть API Gamepad, который даёт нам возможность играть в браузерные игры с использованием геймпад-контроллеры без каких-либо плагинов. API Gamepad достигает этого, предоставляя интерфейс, демонстрирующий нажатия кнопок и изменения оси, которые могут быть использованы внутри кода JavaScript для обработки входных данных. Это хорошие времена для браузерных игр.</p>
+<p>Исторически игра на консоли, подключённой к телевизору, всегда была совершенно другим опытом, чем игра на ПК, в основном из-за уникальных элементов управления. В конце концов, дополнительные драйверы и плагины позволили нам использовать консольные геймпады с настольными играми - либо нативными играми, либо теми, которые работают в браузере. Теперь, в эпоху HTML5, у нас наконец есть API Gamepad, который даёт нам возможность играть в браузерные игры с использованием геймпад-контроллеры без каких-либо плагинов. API Gamepad достигает этого, предоставляя интерфейс, демонстрирующий нажатия кнопок и изменения оси, которые могут быть использованы внутри кода JavaScript для обработки входных данных. Это хорошие времена для браузерных игр.</p>
 
 <p><img alt="gamepad-controls" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img01.png" style="display: block; height: 400px; margin: 0px auto; width: 600px;"></p>
 
@@ -29,15 +29,15 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <p><img alt="gamepad devices" src="http://end3r.com/tmp/gamepad/devices.jpg" style="display: block; height: 450px; margin: 0px auto; width: 600px;"></p>
 
-<p>Наиболее популярные геймпады в наше время - геймпады от Xbox 360, Xbox One, PS3 и PS4 — они прошли все испытания и хорошо работают с Gamepad API, реализованном в браузерах на Windows и Mac OS X.</p>
+<p>Наиболее популярные геймпады в наше время - геймпады от Xbox 360, Xbox One, PS3 и PS4 — они прошли все испытания и хорошо работают с Gamepad API, реализованном в браузерах на Windows и Mac OS X.</p>
 
 <p>Существует также ряд других устройств с различными макетами кнопок, которые более или менее работают в разных реализациях браузера. Код, описанный в этой статье, был протестирован с помощью нескольких геймпадов, но любимая конфигурация автора-это беспроводной контроллер Xbox 360 и браузер Firefox на Mac OS X.</p>
 
 <h2 id="Пример_исследования_Голодный_холодильник">Пример исследования: Голодный холодильник</h2>
 
-<p>The competition ran in November 2013 and  decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly. You can <a href="http://enclavegames.com/games/hungry-fridge/">try Hungry Fridge here</a>.</p>
+<p>The competition ran in November 2013 and  decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly. You can <a href="http://enclavegames.com/games/hungry-fridge/">try Hungry Fridge here</a>.</p>
 
-<p>Конкурс <a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> состоялся в ноябре 2013 года, и <a href="http://enclavegames.com/">Enclave Games</a> решила принять в нем участие. Тема для конкурса была "переменна", поэтому они представили игру, в которой вы должны накормить голодный холодильник, нажав на здоровую пищу (яблоки, морковь, салат) и избежать "плохой" пищи (пиво, гамбургеры, пицца.) Обратный отсчёт меняет тип пищи, которую холодильник хочет съесть каждые несколько секунд, поэтому вы должны быть осторожны и действовать быстро. Вы можете попробовать Голодный холодильник <a href="http://enclavegames.com/games/hungry-fridge/">здесь</a>.</p>
+<p>Конкурс <a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a> состоялся в ноябре 2013 года, и <a href="http://enclavegames.com/">Enclave Games</a> решила принять в нем участие. Тема для конкурса была "переменна", поэтому они представили игру, в которой вы должны накормить голодный холодильник, нажав на здоровую пищу (яблоки, морковь, салат) и избежать "плохой" пищи (пиво, гамбургеры, пицца.) Обратный отсчёт меняет тип пищи, которую холодильник хочет съесть каждые несколько секунд, поэтому вы должны быть осторожны и действовать быстро. Вы можете попробовать Голодный холодильник <a href="http://enclavegames.com/games/hungry-fridge/">здесь</a>.</p>
 
 <p><img alt="hungryfridge-mainmenu" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img02.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
 
@@ -51,7 +51,7 @@ translation_of: Games/Techniques/Controls_Gamepad_API
 
 <h2 id="Демо-версия">Демо-версия</h2>
 
-<p>Сначала была построена полная версия игры Hungry Fridge, а затем, чтобы для демонстрации API Gamepad в действии и показа исходного кода JavaScript, была создана <a href="https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html">простая демо-версия</a>. Это часть <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">набора контента Gamepad API</a>, доступного на GitHub, где вы можете глубоко погрузиться в код и изучить, как именно он работает.</p>
+<p>Сначала была построена полная версия игры Hungry Fridge, а затем, чтобы для демонстрации API Gamepad в действии и показа исходного кода JavaScript, была создана <a href="https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html">простая демо-версия</a>. Это часть <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">набора контента Gamepad API</a>, доступного на GitHub, где вы можете глубоко погрузиться в код и изучить, как именно он работает.</p>
 
 <p><img alt="Hungry Fridge demo using Gamepad API" src="http://end3r.com/tmp/gamepad/super-turbo.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
 
@@ -105,7 +105,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 
 <p>The <code>connect()</code> function takes the event as a parameter and assigns the <code>gamepad</code> object to the <code>gamepadAPI.controller</code> variable. We are using only one gamepad for this game, so it's a single object instead of an array of gamepads. We then set the <code>turbo</code> property to <code>true</code>. (We could use the <code>gamepad.connected</code> boolean for this purpose, but we wanted to have a separate variable for turning on Turbo mode without needing to have a gamepad connected, for reasons explained above.)</p>
 
-<p>Функция <code>connect()</code> принимает событие в качестве параметра и назначает объект <code>gamepad</code> объекту <code>gamepadAPI.controller</code>. Мы используем только один геймпад для этой игры, так что это один объект вместо массива геймпадов. Затем мы устанавливаем свойство turbo в true. (Мы могли бы использовать <code>gamepad.connected</code>, т.к для этой цели подключается логическое значение, но мы хотели иметь отдельную переменную для включения турбо-режима без необходимости подключения геймпада, по причинам, описанным выше.)</p>
+<p>Функция <code>connect()</code> принимает событие в качестве параметра и назначает объект <code>gamepad</code> объекту <code>gamepadAPI.controller</code>. Мы используем только один геймпад для этой игры, так что это один объект вместо массива геймпадов. Затем мы устанавливаем свойство turbo в true. (Мы могли бы использовать <code>gamepad.connected</code>, т.к для этой цели подключается логическое значение, но мы хотели иметь отдельную переменную для включения турбо-режима без необходимости подключения геймпада, по причинам, описанным выше.)</p>
 
 <pre class="brush: js"><code>disconnect: function(evt) {
   gamepadAPI.turbo = false;
@@ -114,7 +114,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 },</code>
 </pre>
 
-<p>Функция <code>disconnect</code> устанавливает <code>gamepad.turbo property</code> на <code>false</code> и удаляет переменную, содержащую объект gamepad.</p>
+<p>Функция <code>disconnect</code> устанавливает <code>gamepad.turbo property</code> на <code>false</code> и удаляет переменную, содержащую объект gamepad.</p>
 
 <h3 id="Объект_геймпада">Объект геймпада</h3>
 
@@ -123,13 +123,13 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 <ul>
  <li><code>id</code>: Строка, содержащая информацию о контроллере.</li>
  <li><code>index</code>: Уникальный идентификатор для подключённого устройства.</li>
- <li><code>connected</code>: Логическая переменная. Возвращает <code>true</code> при подключении.</li>
- <li><code>mapping</code>: Тип компоновки кнопок; Стандартный - единственный доступный вариант на данный момент.</li>
+ <li><code>connected</code>: Логическая переменная. Возвращает <code>true</code> при подключении.</li>
+ <li><code>mapping</code>: Тип компоновки кнопок; Стандартный - единственный доступный вариант на данный момент.</li>
  <li><code>axes</code>: Состояние каждой оси, представленное массивом значений с плавающей запятой.</li>
- <li><code>buttons</code> : Состояние каждой кнопки, представленное массивом объектов GamepadButton, содержащих <code>pressed</code> и <code>value</code> свойства.</li>
+ <li><code>buttons</code> : Состояние каждой кнопки, представленное массивом объектов GamepadButton, содержащих <code>pressed</code> и <code>value</code> свойства.</li>
 </ul>
 
-<p>Переменная <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index</span></font> полезна, если мы подключаем более одного контроллера и хотим идентифицировать их, чтобы действовать соответственно — например, когда у нас есть игра для двух игроков, требующая подключения двух устройств.</p>
+<p>Переменная <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index</span></font> полезна, если мы подключаем более одного контроллера и хотим идентифицировать их, чтобы действовать соответственно — например, когда у нас есть игра для двух игроков, требующая подключения двух устройств.</p>
 
 <h3 id="Запрос_объекта_геймпада">Запрос объекта геймпада</h3>
 
@@ -171,11 +171,11 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 },</code>
 </pre>
 
-<p>На каждом кадре, <code>update()</code> сохраняет кнопки, нажатые во время предыдущего кадра, в массиве <code>buttonsCache </code>и берёт новые из объекта <code>gamepadAPI.controller</code>. Затем он проходит по кнопкам и осям, чтобы получить их фактические состояния и значения.</p>
+<p>На каждом кадре, <code>update()</code> сохраняет кнопки, нажатые во время предыдущего кадра, в массиве <code>buttonsCache </code>и берёт новые из объекта <code>gamepadAPI.controller</code>. Затем он проходит по кнопкам и осям, чтобы получить их фактические состояния и значения.</p>
 
 <h3 id="Обнаружение_нажатия_кнопок">Обнаружение нажатия кнопок</h3>
 
-<p>Метод <code>buttonPressed()</code> также помещается в основной игровой цикл для обработки нажатий кнопок. Для этого требуется два параметра - кнопка, которую мы хотим прослушать, и (необязательно) способ сообщить игре, что удержание кнопки принято. Без него вам придётся отпустить кнопку и нажать её снова, чтобы получить желаемый эффект.</p>
+<p>Метод <code>buttonPressed()</code> также помещается в основной игровой цикл для обработки нажатий кнопок. Для этого требуется два параметра - кнопка, которую мы хотим прослушать, и (необязательно) способ сообщить игре, что удержание кнопки принято. Без него вам придётся отпустить кнопку и нажать её снова, чтобы получить желаемый эффект.</p>
 
 <pre class="brush: js"><code>buttonPressed: function(button, hold) {
   var newPress = false;
@@ -213,7 +213,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 }</code>
 </pre>
 
-<p>Если <code>gamepadAPI.turbo</code> возвращает <code>true</code>, при нажатии (или удержании) данных кнопок мы выполняем соответствующие функции, возложенные на них. В этом случае нажатие или удержание "A" приведёт к выстрелу пули, а нажатие "B" поставит игру на паузу.</p>
+<p>Если <code>gamepadAPI.turbo</code> возвращает <code>true</code>, при нажатии (или удержании) данных кнопок мы выполняем соответствующие функции, возложенные на них. В этом случае нажатие или удержание "A" приведёт к выстрелу пули, а нажатие "B" поставит игру на паузу.</p>
 
 <h3 id="Порог_оси">Порог оси</h3>
 
@@ -249,7 +249,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 };
 </pre>
 
-<p>Это перечисление определяет набор известных отображений для геймпада. На данный момент доступна только компоновка <code>standart</code>, но в будущем могут появиться новые. Если макет неизвестен, он устанавливается в пустую строку.</p>
+<p>Это перечисление определяет набор известных отображений для геймпада. На данный момент доступна только компоновка <code>standart</code>, но в будущем могут появиться новые. Если макет неизвестен, он устанавливается в пустую строку.</p>
 
 <h3 id="События">События</h3>
 
@@ -257,4 +257,4 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code>
 
 <h2 id="Подведение_итогов">Подведение итогов</h2>
 
-<p>API геймпада очень прост в разработке. Теперь это проще, чем когда-либо, вы можете использовать браузер как консоль без необходимости каких-либо плагинов. Вы можете играть в полную версию игры Hungry Fridge непосредственно в вашем браузере, установить её из <a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> или проверить исходный код демо-версии вместе со всеми другими ресурсами в <a href="https://github.com/EnclaveGames/Hungry-Fridge">комплекте контента Gamepad API</a>.</p>
+<p>API геймпада очень прост в разработке. Теперь это проще, чем когда-либо, вы можете использовать браузер как консоль без необходимости каких-либо плагинов. Вы можете играть в полную версию игры Hungry Fridge непосредственно в вашем браузере, установить её из <a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> или проверить исходный код демо-версии вместе со всеми другими ресурсами в <a href="https://github.com/EnclaveGames/Hungry-Fridge">комплекте контента Gamepad API</a>.</p>

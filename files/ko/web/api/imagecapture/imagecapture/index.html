@@ -35,9 +35,9 @@ translation_of: Web/API/ImageCapture/ImageCapture
 
 <pre class="brush: js"> navigator.mediaDevices.getUserMedia({video: true})
   .then(mediaStream =&gt; {
-    document.querySelector('video').srcObject = mediaStream
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
+    document.querySelector('video').srcObject = mediaStream
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
   })
   .catch(error =&gt; console.log(error));</pre>
 

@@ -101,11 +101,11 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <h3 id="Using_analytics" name="Using_analytics">アクセス解析を使う</h3>
 
-<p>A much more accurate source of data, if you can get it, comes from an analytics app like <a href="https://www.google.com/analytics/">Google Analytics</a>. This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.</p>
+<p>A much more accurate source of data, if you can get it, comes from an analytics app like <a href="https://www.google.com/analytics/">Google Analytics</a>. This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.</p>
 
 <p>But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.</p>
 
-<p>You may also consider using open source and privacy focussed analytics platforms like <a href="http://www.openwebanalytics.com">Open Web Analytics</a> and <a href="https://matomo.org">Matomo</a>. They expect you to self-host the analytics platform. </p>
+<p>You may also consider using open source and privacy focussed analytics platforms like <a href="http://www.openwebanalytics.com">Open Web Analytics</a> and <a href="https://matomo.org">Matomo</a>. They expect you to self-host the analytics platform. </p>
 
 <h4 id="Setting_up_Google_analytics" name="Setting_up_Google_analytics">Setting up Google analytics</h4>
 
@@ -133,7 +133,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 <p>You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. 例えば、you can find out what browsers and operating systems your users are using by selecting <em>Audience &gt; Technology &gt; Browser &amp; OS</em> from the left hand menu.</p>
 
 <div class="note">
-<p><strong>注</strong>: When using Google analytics, you need to beware of misleading bias, e.g. "We  have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.</p>
+<p><strong>注</strong>: When using Google analytics, you need to beware of misleading bias, e.g. "We  have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.</p>
 </div>
 
 <h3 id="Other_considerations" name="Other_considerations">その他の考慮</h3>
@@ -209,7 +209,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <ul>
  <li>A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users comonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see <a href="https://help.ubuntu.com/community/WindowsDualBoot">WindowsDualBoot</a> for help with this.</li>
- <li>A couple of lower spec mobile devices, so you can test performance of features like animations on lower powered processors.</li>
+ <li>A couple of lower spec mobile devices, so you can test performance of features like animations on lower powered processors.</li>
 </ul>
 
 <p>Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.</p>
@@ -230,7 +230,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <p>Emulators are basically programs that run inside your computer and emulate a device or particular device conditions of some kind, allowing you to do some of your testing more conveniently than having to find a particular combination of hardware/software to test.</p>
 
-<p>An emulator might be as simple as testing a device condition. 例えば、if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's <a href="/ja/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>. Safari has a similar mode too, which can be enabled by going to <em>Safari &gt; Preferences</em>, and checking <em>Show Develop menu</em>, then choosing <em>Develop &gt; Enter Responsive Design Mode</em>. Chrome also has something similar: Device mode (see <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>). </p>
+<p>An emulator might be as simple as testing a device condition. 例えば、if you want to do some quick and dirty testing of your width/height media queries for responsive design, you could use Firefox's <a href="/ja/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>. Safari has a similar mode too, which can be enabled by going to <em>Safari &gt; Preferences</em>, and checking <em>Show Develop menu</em>, then choosing <em>Develop &gt; Enter Responsive Design Mode</em>. Chrome also has something similar: Device mode (see <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>). </p>
 
 <p>More often than not though, you'll have to install some kind of emulator. The most common devices/browsers you'll want to test are as follows:</p>
 
@@ -318,7 +318,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 
 <h2 id="User_testing" name="User_testing">ユーザーテスト</h2>
 
-<p>Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.</p>
+<p>Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.</p>
 
 <p>Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the <a href="#what_are_you_going_to_test">What are you going to test</a> section above — it is easy to turn the test criteria detailed there into steps to follow. 例えば、the following would work for a sighted user:</p>
 
@@ -334,14 +334,14 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 <p>When running tests, it can also be a good idea to:</p>
 
 <ul>
- <li>Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">Use the Profile Manager to create and remove Firefox profiles</a> and <a href="https://support.google.com/chrome/answer/2364824">Share Chrome with others or add personas</a>, 例えば、).</li>
+ <li>Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles">Use the Profile Manager to create and remove Firefox profiles</a> and <a href="https://support.google.com/chrome/answer/2364824">Share Chrome with others or add personas</a>, 例えば、).</li>
  <li>Use browser's private mode functionality when running tests, where available (e.g. <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">Private Browsing</a> in Firefox, <a href="https://support.google.com/chrome/answer/95464">Incognito Mode</a> in Chrome) so things like cookies and temp files are not saved.</li>
 </ul>
 
 <p>These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.</p>
 
 <div class="note">
-<p><strong>注</strong>: Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.</p>
+<p><strong>注</strong>: Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.</p>
 </div>
 
 <div class="note">

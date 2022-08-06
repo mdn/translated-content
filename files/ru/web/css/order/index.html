@@ -9,7 +9,7 @@ translation_of: Web/CSS/order
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство  <strong><code>order</code></strong> определяет порядок, используемый для размещения flex элементов в их flex контейнере. Элементы располагаются в восходящем порядке по значению <code>order</code>. Элементы с одинаковым значением <code>order</code>  располагаются в том порядке, в каком они находятся в исходном коде.</p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство  <strong><code>order</code></strong> определяет порядок, используемый для размещения flex элементов в их flex контейнере. Элементы располагаются в восходящем порядке по значению <code>order</code>. Элементы с одинаковым значением <code>order</code>  располагаются в том порядке, в каком они находятся в исходном коде.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/order.html")}}</div>
 
@@ -27,16 +27,16 @@ order: initial;
 order: unset;</pre>
 
 <div class="note">
-<p><strong>Важно</strong>: <code>order</code> воздействует только на <strong>визуальный порядок</strong> элементов, но не логический порядок или табуляцию. <code><strong>order</strong></code> не должен применяться к невизуальным медиаданным, таким как речь.</p>
+<p><strong>Важно</strong>: <code>order</code> воздействует только на <strong>визуальный порядок</strong> элементов, но не логический порядок или табуляцию. <code><strong>order</strong></code> не должен применяться к невизуальным медиаданным, таким как речь.</p>
 </div>
 
-<p>Посмотрите <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Используем CSS flexible boxes</a> для более подробной информации и дополнительных свойствах.</p>
+<p>Посмотрите <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Используем CSS flexible boxes</a> для более подробной информации и дополнительных свойствах.</p>
 
 <h3 id="Значения">Значения</h3>
 
 <dl>
  <dt><code>&lt;integer&gt;</code></dt>
- <dd>Представляет порядковую группу, которая присвоена flex элементу.</dd>
+ <dd>Представляет порядковую группу, которая присвоена flex элементу.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
@@ -45,7 +45,7 @@ order: unset;</pre>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Имеется базовый отрывок HTML кода:</p>
+<p>Имеется базовый отрывок HTML кода:</p>
 
 <pre class="brush:html;">&lt;header&gt;...&lt;/header&gt;
 &lt;main&gt;
@@ -55,7 +55,7 @@ order: unset;</pre>
 &lt;/main&gt;
 &lt;footer&gt;...&lt;/footer&gt;</pre>
 
-<p>Следующий CSS код должен создать классический блок контента окружённый боковыми панелями. Flexible Box Layout Module автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины.</p>
+<p>Следующий CSS код должен создать классический блок контента окружённый боковыми панелями. Flexible Box Layout Module автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины.</p>
 
 <pre class="brush:css;">main { display: flex;  text-align:center; }
 main &gt; article { flex:1;        order: 2; }
@@ -79,5 +79,5 @@ main &gt; aside   { width: 200px;  order: 3; }</pre>
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/docs/Web/Guide/CSS/Flexible_boxes">Используя CSS flexible boxes</a></li>
+ <li><a href="/docs/Web/Guide/CSS/Flexible_boxes">Используя CSS flexible boxes</a></li>
 </ul>

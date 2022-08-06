@@ -93,25 +93,25 @@ if($_SERVER['HTTP_ORIGIN'] == "http://arunranga.com") {
 if($_SERVER['REQUEST_METHOD'] == "GET") {
 
   header('Content-Type: text/plain');
-  echo "This HTTP resource is designed to handle POSTed XML input";
+  echo "This HTTP resource is designed to handle POSTed XML input";
   echo "from arunranga.com and not be retrieved with GET";
 
 } elseif($_SERVER['REQUEST_METHOD'] == "OPTIONS") {
   // 告訴客戶端我們支援來自 arunranga.com 的呼叫
   // 以及這個預檢請求的有效期限僅有 20 天
 
-  if($_SERVER['HTTP_ORIGIN'] == "http://arunranga.com") {
-    header('Access-Control-Allow-Origin: http://arunranga.com');
-    header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-    header('Access-Control-Allow-Headers: X-PINGARUNER');
-    header('Access-Control-Max-Age: 1728000');
-    header("Content-Length: 0");
-    header("Content-Type: text/plain");
-    //exit(0);
-  } else {
-    header("HTTP/1.1 403 Access Forbidden");
-    header("Content-Type: text/plain");
-    echo "You cannot repeat this request";
+  if($_SERVER['HTTP_ORIGIN'] == "http://arunranga.com") {
+    header('Access-Control-Allow-Origin: http://arunranga.com');
+    header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+    header('Access-Control-Allow-Headers: X-PINGARUNER');
+    header('Access-Control-Max-Age: 1728000');
+    header("Content-Length: 0");
+    header("Content-Type: text/plain");
+    //exit(0);
+  } else {
+    header("HTTP/1.1 403 Access Forbidden");
+    header("Content-Type: text/plain");
+    echo "You cannot repeat this request";
   }
 
 } elseif($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -120,20 +120,20 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
 
   if($_SERVER['HTTP_ORIGIN'] == "http://arunranga.com") {
     $postData = file_get_contents('php://input');
-    $document = simplexml_load_string($postData);
+    $document = simplexml_load_string($postData);
 
     // 對 POST 請求的資料做一些處理
 
-    $ping = $_SERVER['HTTP_X_PINGARUNER'];
+    $ping = $_SERVER['HTTP_X_PINGARUNER'];
 
-    header('Access-Control-Allow-Origin: http://arunranga.com');
-    header('Content-Type: text/plain');
-    echo // 在處理之後要回傳的一些回應字串
-  } else {
-    die("POSTing Only Allowed from arunranga.com");
+    header('Access-Control-Allow-Origin: http://arunranga.com');
+    header('Content-Type: text/plain');
+    echo // 在處理之後要回傳的一些回應字串
+  } else {
+    die("POSTing Only Allowed from arunranga.com");
   }
 } else {
-    die("No Other Methods Allowed");
+    die("No Other Methods Allowed");
 }
 ?&gt;
 </pre>

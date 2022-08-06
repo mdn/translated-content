@@ -15,7 +15,7 @@ En {{Glossary("JavaScript")}}, null est l'une des {{Glossary("Primitive", "valeu
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Null")}} sur Wikipédia
+- [`Null`](https://fr.wikipedia.org/wiki/Null) sur Wikipédia
 
 ### Référence technique
 

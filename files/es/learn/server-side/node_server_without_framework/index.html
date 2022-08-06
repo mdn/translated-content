@@ -7,18 +7,18 @@ translation_of: Learn/Server-side/Node_server_without_framework
 
 <p class="summary">Este artículo proporciona un servidor de ficheros estático simple construido con Node.js puro, para aquellos de vosotros que no quieran usar un framework.</p>
 
-<p><a href="https://nodejs.org/en/">NodeJS</a> has many frameworks to help you get your server up and running, the most popular being:</p>
+<p><a href="https://nodejs.org/en/">NodeJS</a> has many frameworks to help you get your server up and running, the most popular being:</p>
 
 <ul>
  <li><a href="http://expressjs.com/">Express</a>: The most used framework.</li>
  <li><a href="https://www.totaljs.com/">Total</a>: The all-in-one Node.js framework that has everything and does not depend on any other framework or module.</li>
 </ul>
 
-<p>There is however not a solution that will suit every situation. A developer may need to build his/her own server, without any other dependency.</p>
+<p>There is however not a solution that will suit every situation. A developer may need to build his/her own server, without any other dependency.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>Below is a simple static file server built with NodeJS:</p>
+<p>Below is a simple static file server built with NodeJS:</p>
 
 <pre class="brush: js">var http = require('http');
 var fs = require('fs');

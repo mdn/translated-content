@@ -10,7 +10,7 @@ translation_of: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 <p id="Introduction"><strong>メモ</strong>: この文書は古くなっています。<a href="/ja/docs/Web/Guide/HTML/Editable_content">コンテンツを編集可能にする</a>にある最新のドキュメントを参照することをお勧めします。</p>
 </div>
 
-<p>Mozilla 1.3 は、Microsoft<sup>®</sup> Internet Explorer の designMode 機能の実装を導入しました。 Mozilla 1.3 のリッチテキスト編集機能は、HTML 文書をリッチテキスト編集環境へと変える designMode 属性をサポートします。更に、Firefox 3 以降、Mozilla は、あらゆる要素を編集可能にしたり編集不能にしたりする (後者は、編集可能な環境に含まれる固定したい要素の編集をできなくするのに使います) Internet Explorer の contentEditable 属性をサポートするようになりました。 </p>
+<p>Mozilla 1.3 は、Microsoft<sup>®</sup> Internet Explorer の designMode 機能の実装を導入しました。 Mozilla 1.3 のリッチテキスト編集機能は、HTML 文書をリッチテキスト編集環境へと変える designMode 属性をサポートします。更に、Firefox 3 以降、Mozilla は、あらゆる要素を編集可能にしたり編集不能にしたりする (後者は、編集可能な環境に含まれる固定したい要素の編集をできなくするのに使います) Internet Explorer の contentEditable 属性をサポートするようになりました。 </p>
 
 <h3 id="Setting_Up_Rich-Text_Editing" name="Setting_Up_Rich-Text_Editing">リッチテキスト編集の準備をする</h3>
 
@@ -121,52 +121,52 @@ function doRichEditCommand(aName, aArg){
 var oDoc, sDefTxt;
 
 function initDoc() {
-  oDoc = document.getElementById("textBox");
-  sDefTxt = oDoc.innerHTML;
-  if (document.compForm.switchMode.checked) { setDocMode(true); }
+  oDoc = document.getElementById("textBox");
+  sDefTxt = oDoc.innerHTML;
+  if (document.compForm.switchMode.checked) { setDocMode(true); }
 }
 
 function formatDoc(sCmd, sValue) {
-  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
+  if (validateMode()) { document.execCommand(sCmd, false, sValue); oDoc.focus(); }
 }
 
 function validateMode() {
-  if (!document.compForm.switchMode.checked) { return true ; }
-  alert("Uncheck \"Show HTML\".");
-  oDoc.focus();
-  return false;
+  if (!document.compForm.switchMode.checked) { return true ; }
+  alert("Uncheck \"Show HTML\".");
+  oDoc.focus();
+  return false;
 }
 
 function setDocMode(bToSource) {
-  var oContent;
-  if (bToSource) {
-    oContent = document.createTextNode(oDoc.innerHTML);
-    oDoc.innerHTML = "";
-    var oPre = document.createElement("pre");
-    oDoc.contentEditable = false;
-    oPre.id = "sourceText";
-    oPre.contentEditable = true;
-    oPre.appendChild(oContent);
-    oDoc.appendChild(oPre);
-  } else {
-    if (document.all) {
-      oDoc.innerHTML = oDoc.innerText;
-    } else {
-      oContent = document.createRange();
-      oContent.selectNodeContents(oDoc.firstChild);
-      oDoc.innerHTML = oContent.toString();
-    }
-    oDoc.contentEditable = true;
-  }
-  oDoc.focus();
+  var oContent;
+  if (bToSource) {
+    oContent = document.createTextNode(oDoc.innerHTML);
+    oDoc.innerHTML = "";
+    var oPre = document.createElement("pre");
+    oDoc.contentEditable = false;
+    oPre.id = "sourceText";
+    oPre.contentEditable = true;
+    oPre.appendChild(oContent);
+    oDoc.appendChild(oPre);
+  } else {
+    if (document.all) {
+      oDoc.innerHTML = oDoc.innerText;
+    } else {
+      oContent = document.createRange();
+      oContent.selectNodeContents(oDoc.firstChild);
+      oDoc.innerHTML = oContent.toString();
+    }
+    oDoc.contentEditable = true;
+  }
+  oDoc.focus();
 }
 
 function printDoc() {
-  if (!validateMode()) { return; }
-  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
-  oPrntWin.document.open();
-  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
-  oPrntWin.document.close();
+  if (!validateMode()) { return; }
+  var oPrntWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+  oPrntWin.document.open();
+  oPrntWin.document.write("&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Print&lt;\/title&gt;&lt;\/head&gt;&lt;body onload=\"print();\"&gt;" + oDoc.innerHTML + "&lt;\/body&gt;&lt;\/html&gt;");
+  oPrntWin.document.close();
 }
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
@@ -174,17 +174,17 @@ function printDoc() {
 img.intLink { border: 0; }
 #toolBar1 select { font-size:10px; }
 #textBox {
-  width: 540px;
-  height: 200px;
-  border: 1px #000000 solid;
-  padding: 12px;
-  overflow: scroll;
+  width: 540px;
+  height: 200px;
+  border: 1px #000000 solid;
+  padding: 12px;
+  overflow: scroll;
 }
 #textBox #sourceText {
-  padding: 0;
-  margin: 0;
-  min-width: 498px;
-  min-height: 200px;
+  padding: 0;
+  margin: 0;
+  min-width: 498px;
+  min-height: 200px;
 }
 #editMode label { cursor: pointer; }
 &lt;/style&gt;

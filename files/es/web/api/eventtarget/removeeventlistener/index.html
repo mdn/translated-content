@@ -49,7 +49,7 @@ translation_of: Web/API/EventTarget/removeEventListener
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>Ahora, considera  <code>removeEventListener()</code>:</p>
+<p>Ahora, considera  <code>removeEventListener()</code>:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Fallo</span>
 element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="boolean token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>      <span class="comment token">// Éxito</span></code></pre>
@@ -62,7 +62,7 @@ element<span class="punctuation token">.</span><span class="function token">remo
 
 <p>Aqui, especificamos un objeto <code>options</code> en el cual <code>passive</code> esta definido como <code>true</code>, mientras que otras opciones son dejados con su valor por defecto de <code>false</code>.</p>
 
-<p>Vea consecutivamente, cada una de las siguientes llamadas a  <code>removeEventListener()</code>. Cualquiera de éstas donde <code>capture</code> o <code>useCapture</code> es <code>true</code> falla; en todas las demás funciona. Solo la configuración <code>capture</code> importa a <code>removeEventListener()</code>.</p>
+<p>Vea consecutivamente, cada una de las siguientes llamadas a  <code>removeEventListener()</code>. Cualquiera de éstas donde <code>capture</code> o <code>useCapture</code> es <code>true</code> falla; en todas las demás funciona. Solo la configuración <code>capture</code> importa a <code>removeEventListener()</code>.</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> passive<span class="punctuation token">:</span> <span class="boolean token">true</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>     <span class="comment token">// Funciona</span>
 element<span class="punctuation token">.</span><span class="function token">removeEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> handleMouseDown<span class="punctuation token">,</span> <span class="punctuation token">{</span> capture<span class="punctuation token">:</span> <span class="boolean token">false</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>    <span class="comment token">// Funciona</span>
@@ -77,11 +77,11 @@ element<span class="punctuation token">.</span><span class="function token">remo
 
 <p>Si un {{ domxref("EventListener") }} es removido de un {{ domxref("EventTarget") }} cuando aún se está procesando el evento, no será ejecutado. Después de ser removido, un {{ domxref("EventListener") }} no será invocado por el evento al cual se registró, sin embargo se podrá adjuntar de nuevo a dicho evento.</p>
 
-<p>Llamar {{ domxref("<code>removeEventListener</code>") }}  en algún {{ domxref("EventTarget") }} que no contenga el {{ domxref("EventListener") }} especificado será un acción sin efecto, es decir, se podrá llamar {{ domxref("<code>removeEventListener</code>") }} sin efectos negativos en los scripts.</p>
+<p>Llamar {{ domxref("<code>removeEventListener</code>") }}  en algún {{ domxref("EventTarget") }} que no contenga el {{ domxref("EventListener") }} especificado será un acción sin efecto, es decir, se podrá llamar {{ domxref("<code>removeEventListener</code>") }} sin efectos negativos en los scripts.</p>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p>Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }} </p>
+<p>Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }} </p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> body <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'body'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
     clickTarget <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'click-target'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>

@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 <div class="twocolumns"></div>
 
 <p><br>
- La cabecera HTTP <strong><code>Content-Security-Policy  </code></strong>en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).</p>
+ La cabecera HTTP <strong><code>Content-Security-Policy  </code></strong>en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).</p>
 
 <dl>
  <dt></dt>
@@ -47,29 +47,29 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <p>"Fetch directives" controla la ubicación o ubicaciones desde la cual se pueden cargar ciertos tipos de recursos</p>
 
-<h4 id="Lista_de_Content_Security_Policy_Fetch_directives">Lista de Content Security Policy Fetch directives</h4>
+<h4 id="Lista_de_Content_Security_Policy_Fetch_directives">Lista de Content Security Policy Fetch directives</h4>
 
 <dl>
  <dt>{{CSP("child-src")}}</dt>
- <dd>Define los origenes válidos para <a href="/es/docs/Web/API/Web_Workers_API">web workers</a> y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
+ <dd>Define los origenes válidos para <a href="/es/docs/Web/API/Web_Workers_API">web workers</a> y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
  <div class="warning">
  <p>En lugar de <strong><code>child-src</code></strong>, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.</p>
  </div>
  </dd>
  <dt>{{CSP("connect-src")}}</dt>
- <dd>Restringe las URLs que pueden ser cargados usando scripts.</dd>
+ <dd>Restringe las URLs que pueden ser cargados usando scripts.</dd>
  <dt>{{CSP("default-src")}}</dt>
  <dd>Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.</dd>
  <dt>{{CSP("font-src")}}</dt>
- <dd>Especifica origenes válidos para las fuentes cargadas usando {{cssxref("@font-face")}}.</dd>
+ <dd>Especifica origenes válidos para las fuentes cargadas usando {{cssxref("@font-face")}}.</dd>
  <dt>{{CSP("frame-src")}}</dt>
- <dd>Especifica origenes válidos para contextos de navageción anidada cargados usando elementos como {{HTMLElement("frame")}} y  {{HTMLElement("iframe")}}.</dd>
+ <dd>Especifica origenes válidos para contextos de navageción anidada cargados usando elementos como {{HTMLElement("frame")}} y  {{HTMLElement("iframe")}}.</dd>
  <dt>{{CSP("img-src")}}</dt>
- <dd>Especifica origenes válidos de imágenes y favicons.</dd>
+ <dd>Especifica origenes válidos de imágenes y favicons.</dd>
  <dt>{{CSP("manifest-src")}}</dt>
  <dd>Especifica origenes válidos de archivos de manifiesto de una aplicación.</dd>
  <dt>{{CSP("media-src")}}</dt>
- <dd>Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.</dd>
+ <dd>Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.</dd>
  <dt>{{CSP("object-src")}}</dt>
  <dd>Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.</dd>
  <dd class="note">Elements controlled by <code>object-src</code> are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes <code>sandbox</code> or <code>allow</code> for <code>&lt;iframe&gt;</code>). Therefore it is <strong>recommended</strong> to restrict this fetch-directive (e.g. explicitly set <code>object-src 'none'</code> if possible).</dd>
@@ -155,7 +155,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 
 <h2 id="CSP_in_workers">CSP in workers</h2>
 
-<p><a href="/en-US/docs/Web/API/Worker">Workers</a> en general no se rigen por las politicas de seguridad de contenido de el documento (o padre del worker) que los creó. To specify a content security policy for the worker, set a <code>Content-Security-Policy</code> response header for the request which requested the worker script itself.</p>
+<p><a href="/en-US/docs/Web/API/Worker">Workers</a> en general no se rigen por las politicas de seguridad de contenido de el documento (o padre del worker) que los creó. To specify a content security policy for the worker, set a <code>Content-Security-Policy</code> response header for the request which requested the worker script itself.</p>
 
 <p>The exception to this is if the worker script's origin is a globally unique identifier (for example, if its URL has a scheme of data or blob). In this case, the worker does inherit the content security policy of the document or worker that created it.</p>
 

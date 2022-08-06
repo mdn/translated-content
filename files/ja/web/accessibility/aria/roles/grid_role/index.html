@@ -10,34 +10,34 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 <p><span class="seoSummary">グリッド (<code>grid</code>) ロールは、1つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。</span></p>
 
 <pre class="brush: html">&lt;table role="grid" aria-labelledby="id-select-your-seat"&gt;
-  &lt;caption id="id-select-your-seat"&gt;座席を選んでください&lt;/caption&gt;
-  &lt;tbody role="presentation"&gt;
-    &lt;tr role="presentation"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th&gt;列 A&lt;/th&gt;
-      &lt;th&gt;列 B&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;通路 1&lt;/th&gt;
-      &lt;td tabindex="0"&gt;
-        &lt;button id="1a" tabindex="-1"&gt;1A&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="1b" tabindex="-1"&gt;1B&lt;/button&gt;
-      &lt;/td&gt;
+  &lt;caption id="id-select-your-seat"&gt;座席を選んでください&lt;/caption&gt;
+  &lt;tbody role="presentation"&gt;
+    &lt;tr role="presentation"&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;th&gt;列 A&lt;/th&gt;
+      &lt;th&gt;列 B&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;通路 1&lt;/th&gt;
+      &lt;td tabindex="0"&gt;
+        &lt;button id="1a" tabindex="-1"&gt;1A&lt;/button&gt;
+      &lt;/td&gt;
+      &lt;td tabindex="-1"&gt;
+        &lt;button id="1b" tabindex="-1"&gt;1B&lt;/button&gt;
+      &lt;/td&gt;
       &lt;!-- その他の列 --&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;通路 2&lt;/th&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="2a" tabindex="-1"&gt;2A&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;td tabindex="-1"&gt;
-        &lt;button id="2b" tabindex="-1"&gt;2B&lt;/button&gt;
-      &lt;/td&gt;
-      &lt;!-- その他の列 --&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;通路 2&lt;/th&gt;
+      &lt;td tabindex="-1"&gt;
+        &lt;button id="2a" tabindex="-1"&gt;2A&lt;/button&gt;
+      &lt;/td&gt;
+      &lt;td tabindex="-1"&gt;
+        &lt;button id="2b" tabindex="-1"&gt;2B&lt;/button&gt;
+      &lt;/td&gt;
+      &lt;!-- その他の列 --&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
@@ -49,7 +49,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 
 <p>グリッドをインタラクティブなウィジェットとして使用する場合は、<a href="#keyboard_interactions">キーボードインタラクション</a>を実装する必要があります。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Associated_ARIA_roles_states_and_properties" name="Associated_ARIA_roles_states_and_properties">関連する ARIA のロール、ステート、プロパティ</h3>
 
@@ -183,139 +183,139 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 <h4 id="HTML" name="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader" aria-readonly=true&gt;
-  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
-      &lt;td&gt;26&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;28&lt;/td&gt;
-      &lt;td&gt;29&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;31&lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        2
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        3
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        4
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        5
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        6
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        7
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        8
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 37&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        9
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        10
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        11
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        12
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        13
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        14
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        15
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 38&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        16
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        17
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        18
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        19
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        20
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        21
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        22
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 39&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        23
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        24
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        25
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        26
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        27
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        28
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        29
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 40&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        30
-      &lt;/td&gt;
-      &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
+  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
+  &lt;thead role="rowgroup"&gt;
+    &lt;tr role="row"&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody role="rowgroup"&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        2
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        3
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        4
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        5
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        6
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        7
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        8
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 37&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        9
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        10
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        11
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        12
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        13
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        14
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        15
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 38&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        16
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        17
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        18
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        19
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        20
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        21
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        22
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 39&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        23
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        24
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        25
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        26
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        27
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        28
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        29
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 40&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        30
+      &lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 
 <h4 id="CSS" name="CSS">CSS</h4>
@@ -338,11 +338,11 @@ tbody th, tbody td {
 tbody td {
   border: 1px solid #000;
   text-align: right;
-  color: #767676;
+  color: #767676;
 }
 
 tbody td[role="gridcell"] {
-  color: #000;
+  color: #000;
 }
 
 tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
@@ -465,82 +465,82 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 <h4 id="HTML_2" name="HTML_2">HTML</h4>
 
 <pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
-  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td&gt;&lt;/td&gt;
-      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
-      &lt;td&gt;26&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;28&lt;/td&gt;
-      &lt;td&gt;29&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;31&lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        2
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        3
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        4
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        5
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        6
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        7
-      &lt;/td&gt;
-      &lt;td role="gridcell" tabindex="-1"&gt;
-        8
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;!-- … Additional Rows … --&gt;
-  &lt;/tbody&gt;
+  &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
+  &lt;thead role="rowgroup"&gt;
+    &lt;tr role="row"&gt;
+      &lt;td&gt;&lt;/td&gt;
+      &lt;th role="columnheader" aria-label="Sunday"&gt;S&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Monday"&gt;M&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Tuesday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody role="rowgroup"&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 35&lt;/th&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;31&lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr role="row"&gt;
+      &lt;th scope="row" role="rowheader"&gt;Week 36&lt;/th&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        2
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        3
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        4
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        5
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        6
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        7
+      &lt;/td&gt;
+      &lt;td role="gridcell" tabindex="-1"&gt;
+        8
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;!-- … Additional Rows … --&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 
 <h4 id="CSS_2" name="CSS_2">CSS</h4>
 
 <pre class="brush: css">table {
-  margin: 0;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
+  margin: 0;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
 }
 
 tbody th, tbody td {
-  padding: 5px;
+  padding: 5px;
 }
 
 tbody td {
-  border: 1px solid #000;
-  text-align: right;
-  color: #767676;
+  border: 1px solid #000;
+  text-align: right;
+  color: #767676;
 }
 
 tbody td[role="gridcell"] {
-  color: #000;
+  color: #000;
 }
 
 tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
-  background-color: #f6f6f6; outline: 3px solid blue;
+  background-color: #f6f6f6; outline: 3px solid blue;
 }
 </pre>
 

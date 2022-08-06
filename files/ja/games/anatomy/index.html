@@ -58,7 +58,7 @@ main(); //メインループ開始</pre>
 
 <h2 id="Building_a_better_main_loop_in_Javascript" name="Building_a_better_main_loop_in_Javascript">Javascriptでマシなメインループを作る</h2>
 
-<p>明らかに 2 つ問題が上記のメインループにはあります。 <code>main()</code> が <code>{{ domxref("window") }}</code> オブジェクトを汚染している(そこにはすべてのグローバル変数が格納されているのですが)ことと、すべてのタブが閉じられるか更新されるかするまでループを止めることができません。ひとつつ目の問題に関しては、もしメインループがただ走るだけで簡単に(直接)それにアクセスする必要がないのであれば、それを Immediately-Invoked Function Expression (IIFE)  として作ることができます。</p>
+<p>明らかに 2 つ問題が上記のメインループにはあります。 <code>main()</code> が <code>{{ domxref("window") }}</code> オブジェクトを汚染している(そこにはすべてのグローバル変数が格納されているのですが)ことと、すべてのタブが閉じられるか更新されるかするまでループを止めることができません。ひとつつ目の問題に関しては、もしメインループがただ走るだけで簡単に(直接)それにアクセスする必要がないのであれば、それを Immediately-Invoked Function Expression (IIFE)  として作ることができます。</p>
 
 <pre class="notranslate">/*
 * セミコロンで始めるというのは以下の例では automatic semicolon insertion (ASI) によります。

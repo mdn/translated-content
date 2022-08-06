@@ -13,7 +13,7 @@ SSL (Secure Sockets Layer) est un protocole standard qui garantit que la communi
 
 ### Culture générale
 
-{{Interwiki("wikipedia","Transport_Layer_Security","Transport Layer Security")}} sur Wikipedia
+- [<i lang="en">Transport Layer Security</i>](https://fr.wikipedia.org/wiki/Transport_Layer_Security) sur Wikipédia
 
 ### Voir aussi
 

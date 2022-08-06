@@ -184,7 +184,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901">
+       placeholder="123-4567-8901">
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -199,7 +199,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -212,7 +212,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -227,7 +227,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444">
+       value="333-4444-4444">
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -241,10 +241,10 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 <input id="telNo" name="telNo" type="tel" list="defaultTels">
 
 <datalist id="defaultTels">
-  <option value="111-1111-1111">111-1111-1111</option>
-  <option value="122-2222-2222">122-2222-2222</option>
-  <option value="333-3333-3333">333-3333-3333</option>
-  <option value="344-4444-4444">344-4444-4444</option>
+  <option value="111-1111-1111">111-1111-1111</option>
+  <option value="122-2222-2222">122-2222-2222</option>
+  <option value="333-3333-3333">333-3333-3333</option>
+  <option value="344-4444-4444">344-4444-4444</option>
 </datalist>
 ```
 

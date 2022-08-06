@@ -16,7 +16,7 @@ original_slug: Glossaire/RSS
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "RSS")}} sur Wikipédia
+- [RSS](https://fr.wikipedia.org/wiki/RSS) sur Wikipédia
 
 ### Référence technique
 

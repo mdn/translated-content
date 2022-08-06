@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 ## 설명(Description)
 
-새 원시(primitive) 심볼을 생성하려면, 심볼을 설명하는 선택적(optional) 문자열과 함께 `Symbol()`을 쓰면됩니다.
+새 원시(primitive) 심볼을 생성하려면, 심볼을 설명하는 선택적(optional) 문자열과 함께 `Symbol()`을 쓰면됩니다.
 
 ```js
 var sym1 = Symbol();
@@ -28,7 +28,7 @@ var sym2 = Symbol("foo");
 var sym3 = Symbol("foo");
 ```
 
-위의 코드는 세 개의 새 심볼을 생성합니다. `Symbol("foo")`는 "foo"라는 문자열을 심볼로 강제로 변환시키지 않는다는 점에 유의하시기 바랍니다. 해당 코드는 매 번 새로운 심볼을 생성합니다:
+위의 코드는 세 개의 새 심볼을 생성합니다. `Symbol("foo")`는 "foo"라는 문자열을 심볼로 강제로 변환시키지 않는다는 점에 유의하시기 바랍니다. 해당 코드는 매 번 새로운 심볼을 생성합니다:
 
 ```js
 Symbol("foo") === Symbol("foo"); // false

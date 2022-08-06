@@ -21,18 +21,18 @@ translation_of: Web/API/CSSStyleDeclaration/getPropertyPriority
 <h3 id="Parameters">引数</h3>
 
 <ul>
-  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、チェックするプロパティ名を表します。</li>
+  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、チェックするプロパティ名を表します。</li>
 </ul>
 
 <h3 id="Return_value">返値</h3>
 
 <ul>
-  <li><code><em>priority</em></code> は {{domxref('DOMString')}} で、存在する場合は優先度 (<code>"important"</code> など) を表します。存在しない場合は、空文字列を返します。</li>
+  <li><code><em>priority</em></code> は {{domxref('DOMString')}} で、存在する場合は優先度 (<code>"important"</code> など) を表します。存在しない場合は、空文字列を返します。</li>
 </ul>
 
 <h2 id="Example">例</h2>
 
-<p>以下の JavaScript コードは、 <code>margin</code> が CSS セレクターの規則で important と記されているかどうかをチェックします。</p>
+<p>以下の JavaScript コードは、 <code>margin</code> が CSS セレクターの規則で important と記されているかどうかをチェックします。</p>
 
 <pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
 var isImportant = declaration.getPropertyPriority('margin') === 'important';

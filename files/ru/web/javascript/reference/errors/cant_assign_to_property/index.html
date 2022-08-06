@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<div>Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств. </div>
+<div>Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств. </div>
 
 <h2 id="Message">Message</h2>
 
@@ -19,7 +19,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 <h2 id="What_went_wrong">What went wrong?</h2>
 
-<p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on <a href="/en-US/docs/Glossary/primitive">primitive</a> value such as a <a href="/en-US/docs/Glossary/symbol">symbol</a>, a <a href="/en-US/docs/Glossary/string">string</a>, a <a href="/en-US/docs/Glossary/number">number</a> or a <a href="/en-US/docs/Glossary/boolean">boolean</a>. <a href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
+<p>In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on <a href="/en-US/docs/Glossary/primitive">primitive</a> value such as a <a href="/en-US/docs/Glossary/symbol">symbol</a>, a <a href="/en-US/docs/Glossary/string">string</a>, a <a href="/en-US/docs/Glossary/number">number</a> or a <a href="/en-US/docs/Glossary/boolean">boolean</a>. <a href="/en-US/docs/Glossary/Primitive">Primitive</a> values cannot hold any <a href="/en-US/docs/Glossary/property/JavaScript">property</a>.</p>
 
 <p>The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.</p>
 

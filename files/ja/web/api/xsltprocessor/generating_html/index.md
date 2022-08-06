@@ -9,7 +9,7 @@ translation_of: Web/API/XSLTProcessor/Generating_HTML
 
 記事の `<body>` 要素は HTML 要素（図 2 では `<b>` タグと `<u>` タグ）を含みます。XML 文書は HTML 要素と XML 要素の両方を含みますが、一つの名前空間、つまり XML 要素のための名前空間のみが必要です。これには HTML 名前空間が無く、XHTML 名前空間を使用すると HTML 文書のように振舞わない XML 文書を XSL に生成させてしまうため、XSL スタイルシート内の `xsl:output` によって結果の文書が HTML として扱われるようにします。XML 要素については、私たちの独自の名前空間 [`http://devedge.netscape.com/2002/de`](http://devedge.netscape.com/2002/de) と、それによって与えられる myNS 接頭辞 `(xmlns:myNS="http://devedge.netscape.com/2002/de")` が必要です。
 
-**図 2 XML ファイル :(example2.xml)**
+**図 2 XML ファイル :(example2.xml)**
 
 ```xml
 <?xml version="1.0"?>
@@ -28,7 +28,7 @@ translation_of: Web/API/XSLTProcessor/Generating_HTML
 
 XSL スタイルシートは二つの名前空間を持つ必要があります。一つは XSLT 要素、もう一つは私たちの独自の XML 要素を XML 文書内で使用するためのものです。XSL スタイルシートの出力は、`xsl:output` 要素を使用して `HTML` に設定します。出力を HTML に設定すると結果的に要素 (青色の部分) が名前空間を持たないため、これらの要素は HTML 要素とみなされます。
 
-**図 3 : 二つの名前空間をもつ XSL スタイルシート** (example2.xsl)
+**図 3 : 二つの名前空間をもつ XSL スタイルシート** (example2.xsl)
 
 ```xml
 <?xml version="1.0"?>
@@ -43,7 +43,7 @@ XSL スタイルシートは二つの名前空間を持つ必要があります�
 
 XML 文書のルートノードに一致するテンプレートは、基本的な HTML ページの構造を生成するために作成し、使用されます。
 
-**図 4 : 基本的な HTML 文書の生成**
+**図 4 : 基本的な HTML 文書の生成**
 
 ```xml
 ...
@@ -85,7 +85,7 @@ XML 文書のルートノードに一致するテンプレートは、基本的�
 
 例を完成するには、さらに三つの `xsl:template` が必要です。最初の `xsl:template` は、二番目のテンプレートが body ノードを処理する間、author ノードに使用されます。三番目のテンプレートは、任意のノードや任意の属性に対応する一般的な対応規則を持っています。これは XML 文書内で、HTML 要素のすべてに対応し、変換生成される HTML 文書にコピーする要素を予約しておくために必要です。
 
-**図 5 : 最終的な三つのテンプレート**
+**図 5 : 最終的な三つのテンプレート**
 
 ```xml
 ...
@@ -117,7 +117,7 @@ XML 文書のルートノードに一致するテンプレートは、基本的�
 
 最終的な XSLT スタイルシートは次のようになります。
 
-**図 6 : 最終的な XSLT スタイルシート**
+**図 6 : 最終的な XSLT スタイルシート**
 
 ```xml
 <?xml version="1.0"?>

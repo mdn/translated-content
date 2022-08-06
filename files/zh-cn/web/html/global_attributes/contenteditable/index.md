@@ -29,7 +29,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 
 注意，虽然该属性允许设定的值包括 `true` 和 `false`，但该属性仍是一个*枚举*属性而非*布尔*属性。
 
-你可以使用 CSS {{cssxref("caret-color")}} 属性设置用于绘制文本插入 {{Glossary("caret")}} 的颜色。
+你可以使用 CSS {{cssxref("caret-color")}} 属性设置用于绘制文本插入 {{Glossary("caret")}} 的颜色。
 
 ## 规范
 

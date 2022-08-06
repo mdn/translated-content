@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <strong><code>[@@search]()</code></strong> выполняет поиск совпадения между регулярным выражением <code>this</code> и строкой.</p>
+<p>Метод <strong><code>[@@search]()</code></strong> выполняет поиск совпадения между регулярным выражением <code>this</code> и строкой.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 
 <dl>
  <dt><code>str</code></dt>
- <dd>{{jsxref("String")}}, являющийся объектом поиска.</dd>
+ <dd>{{jsxref("String")}}, являющийся объектом поиска.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 
 <h2 id="Описание">Описание</h2>
 
-<p>Этот метод вызывается внутреннее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.</p>
+<p>Этот метод вызывается внутреннее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.</p>
 
 <pre class="brush: js">'abc'.search(/a/);
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 
 <h3 id="Прямой_вызов">Прямой вызов</h3>
 
-<p>Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого <code>this</code> и другого порядка аргументов.</p>
+<p>Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого <code>this</code> и другого порядка аргументов.</p>
 
 <pre class="brush: js">var re = /-/g;
 var str = '2016-01-02';
@@ -54,9 +54,9 @@ var result = re[Symbol.search](str);
 console.log(result);  // 4
 </pre>
 
-<h3 id="Используя_search_в_подклассах">Используя <code>@@search</code> в подклассах</h3>
+<h3 id="Используя_search_в_подклассах">Используя <code>@@search</code> в подклассах</h3>
 
-<p>Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода <code>[@@search]()</code> для изменения поведения.</p>
+<p>Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода <code>[@@search]()</code> для изменения поведения.</p>
 
 <pre class="brush: js">class MyRegExp extends RegExp {
   constructor(str) {

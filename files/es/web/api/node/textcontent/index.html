@@ -5,10 +5,10 @@ translation_of: Web/API/Node/textContent
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>La propiedad <strong><code>textContent</code></strong> de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.</p>
+<p>La propiedad <strong><code>textContent</code></strong> de la interfaz {{domxref("Node")}} representa el contenido de texto de un nodo y sus dencendientes.</p>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> <code>textContent</code> y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero <a href="#Diferencias_con_innerText">ambos son diferentes en varias formas importantes</a>.</p>
+<p><strong>Nota:</strong> <code>textContent</code> y {{domxref("HTMLElement.innerText")}} son confundidos con facilidad, pero <a href="#Diferencias_con_innerText">ambos son diferentes en varias formas importantes</a>.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -26,12 +26,12 @@ translation_of: Web/API/Node/textContent
 <p>Al obtener esta propiedad:</p>
 
 <ul>
- <li>Si el nodo es un <a href="/es/docs/Web/API/Document">documento</a>, un <a href="/es/docs/Glossary/Doctype">DOCTYPE</a>, o una <a href="/en-US/docs/Web/API/Notation">notation</a>, <code>textContent</code> devuelve <code>null</code>. (Para obtener todo el texto y los datos de <a href="/en-US/docs/Web/API/CDATASection">CDATA data</a> del documento completo, uno podría usar <code><a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.)</li>
- <li>Si el nodo es una <a href="/en-US/docs/Web/API/CDATASection">sección CDATA</a>, un comentario, una <a href="/en-US/docs/Web/API/ProcessingInstruction">instrucción de procesamiento</a>, o un <a href="/es/docs/Web/API/Document/createTextNode">nodo de texto</a>,  <code>textContent</code> devuelve el texto dentro del nodo, por ejemplo, el {{domxref("Node.nodeValue")}}.</li>
+ <li>Si el nodo es un <a href="/es/docs/Web/API/Document">documento</a>, un <a href="/es/docs/Glossary/Doctype">DOCTYPE</a>, o una <a href="/en-US/docs/Web/API/Notation">notation</a>, <code>textContent</code> devuelve <code>null</code>. (Para obtener todo el texto y los datos de <a href="/en-US/docs/Web/API/CDATASection">CDATA data</a> del documento completo, uno podría usar <code><a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.)</li>
+ <li>Si el nodo es una <a href="/en-US/docs/Web/API/CDATASection">sección CDATA</a>, un comentario, una <a href="/en-US/docs/Web/API/ProcessingInstruction">instrucción de procesamiento</a>, o un <a href="/es/docs/Web/API/Document/createTextNode">nodo de texto</a>,  <code>textContent</code> devuelve el texto dentro del nodo, por ejemplo, el {{domxref("Node.nodeValue")}}.</li>
  <li>Para otros tipos de nodos, <code>textContent</code> retorna la concatenación del atributo <code>textContent</code> de todos los nodos hijos, excluyendo los nodos comentario y los nodos de instrucciones. Esto es una cadena vacía si el nodo no tiene hijos.</li>
 </ul>
 
-<p>Estableciendo <code>textContent</code> en un nodo elimina todos sus hijos y los reemplaza con un solo nodo de texto con el valor dado.</p>
+<p>Estableciendo <code>textContent</code> en un nodo elimina todos sus hijos y los reemplaza con un solo nodo de texto con el valor dado.</p>
 
 <h3 id="Diferencias_con_innerText">Diferencias con innerText</h3>
 
@@ -85,7 +85,7 @@ document.getElementById("divA").textContent = "Esto es un nuevo texto";
   <tr>
    <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
    <td>{{Spec2('DOM4')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
@@ -95,4 +95,4 @@ document.getElementById("divA").textContent = "Esto es un nuevo texto";
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>

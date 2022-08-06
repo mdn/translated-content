@@ -9,7 +9,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 
 
-<p class="summary">현대 웹 브라우저들은 (사용자의 허락 하에) 사용자 컴퓨터에 웹사이트 정보를 저장할 수 있는 다양한 방법을 제공합니다. 그리고 필요한때 그 정보들을 읽어오죠. 이는 당신이 장기간 데이터를 보관할 수 있게 해주고 사이트와 웹문서를 당신이 지정한 설정에 따라 오프라인 상태에서도 사용할수 있게 해줍니다. 이 문서는 이러한 것들이 어떻게 동작하는지에 대한 기본지식들을 설명합니다.  </p>
+<p class="summary">현대 웹 브라우저들은 (사용자의 허락 하에) 사용자 컴퓨터에 웹사이트 정보를 저장할 수 있는 다양한 방법을 제공합니다. 그리고 필요한때 그 정보들을 읽어오죠. 이는 당신이 장기간 데이터를 보관할 수 있게 해주고 사이트와 웹문서를 당신이 지정한 설정에 따라 오프라인 상태에서도 사용할수 있게 해줍니다. 이 문서는 이러한 것들이 어떻게 동작하는지에 대한 기본지식들을 설명합니다.  </p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -54,8 +54,8 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>현대의 브라우저들은 클라이언트-사이드 데이터를 저장하는 데에 cookies보다 더 쉽고 더 효율적인 API들을 제공합니다.</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>는 이름과 대응되는 값으로 이루어진 더 작은 데이터를 저장하고 가져오는 매우 간단한 기능을 제공합니다. 이것은 사용자 이름과 로그인 여부, 스크린 배경색을 어떤 색으로 할지 등등 같은 간단한 데이터를 저장할 필요가 있을 때 유용합니다. </li>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>는 복잡한 데이터를 저장할 수 있는 완벽한 데이터베이스를 브라우저에서 제공할 수 있게 해줍니다. 이것은 소비자 기록의 복잡한 데이터셋부터 오디오나 비디오 파일같은 더욱 복잡한 데이터까지 저장하는 데에 쓰일 수 있습니다.</li>
+ <li><a href="/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>는 이름과 대응되는 값으로 이루어진 더 작은 데이터를 저장하고 가져오는 매우 간단한 기능을 제공합니다. 이것은 사용자 이름과 로그인 여부, 스크린 배경색을 어떤 색으로 할지 등등 같은 간단한 데이터를 저장할 필요가 있을 때 유용합니다. </li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>는 복잡한 데이터를 저장할 수 있는 완벽한 데이터베이스를 브라우저에서 제공할 수 있게 해줍니다. 이것은 소비자 기록의 복잡한 데이터셋부터 오디오나 비디오 파일같은 더욱 복잡한 데이터까지 저장하는 데에 쓰일 수 있습니다.</li>
 </ul>
 
 <p>밑에서 이런 API들을 더 배울 수 있습니다.</p>
@@ -158,7 +158,7 @@ myName</pre>
   <p>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> file in a new directory on your computer.</p>
  </li>
  <li>
-  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code> (see line 40). We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
+  <p>Next, note how our HTML references a JavaScript file called <code>index.js</code> (see line 40). We need to create this and write our JavaScript code into it. Create an <code>index.js</code> file in the same directory as your HTML file. </p>
  </li>
  <li>
   <p>We'll start off by creating references to all the HTML features we need to manipulate in this example — we'll create them all as constants, as these references do not need to change in the lifecycle of the app. Add the following lines to your JavaScript file:</p>
@@ -195,7 +195,7 @@ submitBtn.addEventListener('click', function() {
 });</pre>
  </li>
  <li>
-  <p>At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In  this function we remove the <code>name</code> item from web storage using <code>removeItem()</code>, then again run <code>nameDisplayCheck()</code> to update the display. Add this to the bottom:</p>
+  <p>At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In  this function we remove the <code>name</code> item from web storage using <code>removeItem()</code>, then again run <code>nameDisplayCheck()</code> to update the display. Add this to the bottom:</p>
 
   <pre class="brush: js notranslate">// run function when the 'Forget' button is clicked
 forgetBtn.addEventListener('click', function() {

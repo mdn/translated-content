@@ -11,19 +11,19 @@ tags:
   - типографика
 translation_of: Web/CSS/@font-face
 ---
-<div><strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">@-правило</a> <font>позволяет указать </font><font>шрифты для отображения текста на веб-страницах, которые могут быть загружены либо с удалённого сервера, либо с компьютера пользователя. Если в правиле была объявлена функция </font><code>local()</code>, с названием шрифта, то будет производиться поиск на компьютере пользователя, и в случае обнаружения будет использован этот шрифт. Иначе будет скачан и использован шрифт, указанный в функции <code>url()</code>.</div>
+<div><strong><code>@font-face</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">@-правило</a> <font>позволяет указать </font><font>шрифты для отображения текста на веб-страницах, которые могут быть загружены либо с удалённого сервера, либо с компьютера пользователя. Если в правиле была объявлена функция </font><code>local()</code>, с названием шрифта, то будет производиться поиск на компьютере пользователя, и в случае обнаружения будет использован этот шрифт. Иначе будет скачан и использован шрифт, указанный в функции <code>url()</code>.</div>
 
-<div> </div>
+<div> </div>
 
-<div><code>@font-face</code> позволяет разрабатывать контент не ограничиваясь набором "безопасных" шрифтов (шрифтов, которые настолько распространены, что считаются доступными по умолчанию). Возможность определить локально установленный шрифт позволяет более гибко настраивать шрифты не полагаясь на соединение с интернетом. </div>
+<div><code>@font-face</code> позволяет разрабатывать контент не ограничиваясь набором "безопасных" шрифтов (шрифтов, которые настолько распространены, что считаются доступными по умолчанию). Возможность определить локально установленный шрифт позволяет более гибко настраивать шрифты не полагаясь на соединение с интернетом. </div>
 
-<div> </div>
+<div> </div>
 
 <div>Распространённым случаем является одновременное использование <code>url()</code> и <code>local()</code>, чтобы использовать локальный шрифт, если он доступен, или иначе скачать копию шрифта.</div>
 
-<div> </div>
+<div> </div>
 
-<div><font>Это правило может использоваться не только на верхнем уровне CSS, но и внутри любого </font> <a href="/en-US/docs/CSS/At-rule">@-правила</a>.</div>
+<div><font>Это правило может использоваться не только на верхнем уровне CSS, но и внутри любого </font> <a href="/en-US/docs/CSS/At-rule">@-правила</a>.</div>
 
 <pre class="brush: css no-line-numbers">@font-face {
  font-family: "Open Sans";
@@ -56,21 +56,21 @@ translation_of: Web/CSS/@font-face
  <dt>{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}</dt>
  <dd>Позволяет осуществлять низкоуровневый контроль над вариациями OpenType и TrueType шрифтов, указывая четырёхбуквенные названия осей для изменения вместе с их значениями.</dd>
  <dt>{{cssxref("@font-face/src", "src")}}</dt>
- <dd><font>Задаёт ресурс, содержащий данные шрифта. Это может быть URL-адрес расположения удалённого файла шрифта или имя шрифта на компьютере пользователя.<br>
+ <dd><font>Задаёт ресурс, содержащий данные шрифта. Это может быть URL-адрес расположения удалённого файла шрифта или имя шрифта на компьютере пользователя.<br>
  <br>
- Чтобы дать браузеру возможность выбрать наиболее подходящий формат шрифта, его можно указать при объявлении внутри функции <code>format()</code>:</font><br>
+ Чтобы дать браузеру возможность выбрать наиболее подходящий формат шрифта, его можно указать при объявлении внутри функции <code>format()</code>:</font><br>
 
  <pre><code>src: url(ideal-sans-serif.woff) format("woff"),
      url(basic-sans-serif.ttf) format("opentype");</code>
 </pre>
 
- <p>Список доступных форматов: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, и <code>"svg"</code>.</p>
+ <p>Список доступных форматов: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, и <code>"svg"</code>.</p>
  </dd>
 </dl>
 
 <dl>
  <dt>{{cssxref("@font-face/unicode-range", "unicode-range")}}</dt>
- <dd>Диапазон Unicode кодов, который будет использоваться в шрифте.</dd>
+ <dd>Диапазон Unicode кодов, который будет использоваться в шрифте.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -144,7 +144,7 @@ translation_of: Web/CSS/@font-face
 <h2 id="Примечания">Примечания</h2>
 
 <ul>
- <li>Веб шрифты попадают под правило ограничения домена (файлы шрифтов должны находиться на том же самом домене, что и использующая их страница), если это ограничение не снимается с помощью <a href="/ru/docs/Glossary/CORS">CORS</a>.</li>
+ <li>Веб шрифты попадают под правило ограничения домена (файлы шрифтов должны находиться на том же самом домене, что и использующая их страница), если это ограничение не снимается с помощью <a href="/ru/docs/Glossary/CORS">CORS</a>.</li>
  <li>@font-face не может быть объявлен внутри CSS-селектора. Следующий пример не будет работать:
   <pre class="brush: css; example-bad">.className {
   @font-face {
@@ -172,7 +172,7 @@ translation_of: Web/CSS/@font-face
  <li><a href="https://everythingfonts.com/font-face">Everythingfonts font-face generator</a></li>
  <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
  <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
+ <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
  <li><a class="external" href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">Microsoft Developer Network (MSDN) @font-face reference</a></li>
  <li><a class="external" href="http://caniuse.com/woff">When can I use WOFF?</a></li>
  <li><a class="external" href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>

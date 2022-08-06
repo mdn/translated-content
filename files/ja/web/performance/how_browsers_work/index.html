@@ -121,7 +121,7 @@ translation_of: Web/Performance/How_browsers_work
 
 <p><img alt="サンプルコードの DOM ツリーで、テキストノードを含むすべてのノードが表示されています。" src="dom.gif"></p>
 
-<p>パーサーが画像のようなノンブロッキングリソースを発見した場合、ブラウザーはそのリソースをリクエストし、そのままパース処理を継続します。CSS ファイルに遭遇した場合もパース処理を継続できます、しかし  <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> または <code>defer</code> 属性がない <code>&lt;script&gt;</code> タグはレンダリングをブロックし、HTML のパース処理を停止します。ブラウザーのプリロードスキャナーがブロックの時間を減らしますが、それでも過度のスクリプトの使用は重大なボトルネックになり得ます。</p>
+<p>パーサーが画像のようなノンブロッキングリソースを発見した場合、ブラウザーはそのリソースをリクエストし、そのままパース処理を継続します。CSS ファイルに遭遇した場合もパース処理を継続できます、しかし  <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> または <code>defer</code> 属性がない <code>&lt;script&gt;</code> タグはレンダリングをブロックし、HTML のパース処理を停止します。ブラウザーのプリロードスキャナーがブロックの時間を減らしますが、それでも過度のスクリプトの使用は重大なボトルネックになり得ます。</p>
 
 <h3 id="Preload_scanner">プリロードスキャナー</h3>
 

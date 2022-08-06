@@ -6,9 +6,9 @@ original_slug: Web/CSS/hifens
 ---
 <div>{{CSSRef}}</div>
 
-<div>A propriedade <a href="/en-US/docs/">CSS</a>  <strong><code>hyphens</code></strong> especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.</div>
+<div>A propriedade <a href="/en-US/docs/">CSS</a>  <strong><code>hyphens</code></strong> especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.</div>
 
-<div> </div>
+<div> </div>
 
 <pre class="brush:css no-line-numbers">hyphens: none;
 hyphens: manual;
@@ -20,10 +20,10 @@ hyphens: initial;
 hyphens: unset;
 </pre>
 
-<p>Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a>,</code> e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a>.</code></p>
+<p>Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a>,</code> e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo <code><a href="/en-US/docs/Web/SVG/Attribute/xml:lang">xml:lang</a>.</code></p>
 
 <div class="note">
-<p><strong>Nota:</strong> As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.</p>
+<p><strong>Nota:</strong> As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.</p>
 </div>
 
 <p>{{cssinfo}}</p>
@@ -38,13 +38,13 @@ hyphens: unset;
  <dt><code>none</code></dt>
  <dd>Palavras não são separadas em quebras de linha, mesmo se seus caracteres sugiram pontos de quebra de linha. Linhas são quebradas apenas em espaços em branco.</dd>
  <dt><code>manual</code></dt>
- <dd>Palavras são separadas apenas onde caracteres dentro de uma palavras sugiram oportunidades de quebra de linha. Veja abaixo <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> para mais detalhes.</dd>
+ <dd>Palavras são separadas apenas onde caracteres dentro de uma palavras sugiram oportunidades de quebra de linha. Veja abaixo <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> para mais detalhes.</dd>
  <dt><code>auto</code></dt>
- <dd>O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.</dd>
+ <dd>O navegador é livre para quebrar palavras automaticamente nos pontos apropriados de hifenização, seguindo quaisquer regras que ele escolher. Entretanto, oportunidades sugeridas de quebras de linha (veja <a href="#suggesting_line_break_opportunities">Oportunidades sugeridas de quebra de linha</a> abaixo) irão sobrepor a seleção automática de pontos de quebra quando presentes.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Nota:</strong> O comportamento da configuração <code>auto</code> requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML <code>lang</code> para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.</p>
+<p><strong>Nota:</strong> O comportamento da configuração <code>auto</code> requer que a propriedade idioma seja indicada corretamente para que as regras de hifenização sejam selecionadas. Você deve especificar o idioma utilizando o atributo HTML <code>lang</code> para garantir que a hifenização automática seja aplicada na linguagem de sua escolha.</p>
 </div>
 
 <h2 id="Oportunidades_sugeridas_de_quebra_de_linha">Oportunidades sugeridas de quebra de linha</h2>
@@ -55,7 +55,7 @@ hyphens: unset;
  <dt>U+2010 (HYPHEN)</dt>
  <dd>O caractere hífen "duro" indica uma oportunidade de quebra de linha visível. Mesmo que não haja quebra de linha naquele ponto, o hífen ainda será renderizado.</dd>
  <dt>U+00AD (SHY)</dt>
- <dd>Um hífen invisivel, "suave". Este caractere não é renderizado visivelmente; ao invés, ele marca um local onde o browser deve quebrar a palavra se um hífen for necessário. Em HTML você pode usar <code>&amp;shy;</code> para inserir um hífen suave.</dd>
+ <dd>Um hífen invisivel, "suave". Este caractere não é renderizado visivelmente; ao invés, ele marca um local onde o browser deve quebrar a palavra se um hífen for necessário. Em HTML você pode usar <code>&amp;shy;</code> para inserir um hífen suave.</dd>
 </dl>
 
 <h3 id="Sintaxe_formal">Sintaxe formal</h3>
@@ -777,7 +777,7 @@ p.auto {
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
-   <td> </td>
+   <td> </td>
    <td>{{CompatUnknown}}</td>
   </tr>
   <tr>
@@ -884,11 +884,11 @@ p.auto {
 </table>
 </div>
 
-<p>[1] <strong>Sem hifenização automática</strong>, apenas <code>-webkit-hyphens: none</code> é suportado.</p>
+<p>[1] <strong>Sem hifenização automática</strong>, apenas <code>-webkit-hyphens: none</code> é suportado.</p>
 
-<p>[2] Hifenização automática funciona apenas para idiomas cujos dicionários de hifenização sejam integrados com Gecko. Veja <a href="#Notes_on_supported_languages">a nota abaixo</a> para ver a lista completa destas linguagens.</p>
+<p>[2] Hifenização automática funciona apenas para idiomas cujos dicionários de hifenização sejam integrados com Gecko. Veja <a href="#Notes_on_supported_languages">a nota abaixo</a> para ver a lista completa destas linguagens.</p>
 
-<p>[3] Hifenização automática funciona apenas para idiomas cujos dicionários de hifenização sejam integrados com Internet Explorer. Veja <a href="#Notes_on_supported_languages">a nota abaixo</a> para ver a lista completa destas linguagens.</p>
+<p>[3] Hifenização automática funciona apenas para idiomas cujos dicionários de hifenização sejam integrados com Internet Explorer. Veja <a href="#Notes_on_supported_languages">a nota abaixo</a> para ver a lista completa destas linguagens.</p>
 
 <p>[4] Usa um dicionário en-US.</p>
 

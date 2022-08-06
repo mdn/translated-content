@@ -15,7 +15,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">На этом уроке мы покажем вам процесс работы с HTML-формами в Django. В частности, продемонстрируем самый простой способ построения формы для создания, обновления и удаления экземпляров модели. При этом мы расширим сайт  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">местной библиотеки</a>, чтобы библиотекари могли обновлять книги, создавать, обновлять и удалять авторов, используя наши собственные формы (а не возможности приложения администратора).</p>
+<p class="summary">На этом уроке мы покажем вам процесс работы с HTML-формами в Django. В частности, продемонстрируем самый простой способ построения формы для создания, обновления и удаления экземпляров модели. При этом мы расширим сайт  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">местной библиотеки</a>, чтобы библиотекари могли обновлять книги, создавать, обновлять и удалять авторов, используя наши собственные формы (а не возможности приложения администратора).</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -32,9 +32,9 @@ translation_of: Learn/Server-side/Django/Forms
 
 <h2 id="Обзор">Обзор</h2>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форма </a>- это группа из одного или нескольких полей/виджетов на веб-странице, которая используется для сбора информации от пользователей для последующей отправки на сервер. Формы являются гибким механизмом сбора пользовательских данных, поскольку имеют целый набор виджетов для ввода различных типов данных, как то: текстовые поля, флажки, переключатели, установщики дат и т. д. Формы являются относительно безопасным способом взаимодействия пользовательского клиента и сервера, поскольку они позволяют отправлять данные в POST-запросах, применяя защиту от <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D0%BB%D0%BA%D0%B0_%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0">Межсайтовой подделки запроса</a> (<em><span lang="en">Cross Site Request Forgery - CSRF</span></em>)</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форма </a>- это группа из одного или нескольких полей/виджетов на веб-странице, которая используется для сбора информации от пользователей для последующей отправки на сервер. Формы являются гибким механизмом сбора пользовательских данных, поскольку имеют целый набор виджетов для ввода различных типов данных, как то: текстовые поля, флажки, переключатели, установщики дат и т. д. Формы являются относительно безопасным способом взаимодействия пользовательского клиента и сервера, поскольку они позволяют отправлять данные в POST-запросах, применяя защиту от <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D0%BB%D0%BA%D0%B0_%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0">Межсайтовой подделки запроса</a> (<em><span lang="en">Cross Site Request Forgery - CSRF</span></em>)</p>
 
-<p>Пока что мы не создавали каких-либо форм в этом учебнике, но мы встречались с ними в административной панели Django —  например, снимок экрана ниже показывает форму для редактирования одной из наших моделей книг (<a href="/en-US/docs/Learn/Server-side/Django/Models">Book</a>), состоящую из нескольких списков выбора и текстовых редакторов. </p>
+<p>Пока что мы не создавали каких-либо форм в этом учебнике, но мы встречались с ними в административной панели Django —  например, снимок экрана ниже показывает форму для редактирования одной из наших моделей книг (<a href="/en-US/docs/Learn/Server-side/Django/Models">Book</a>), состоящую из нескольких списков выбора и текстовых редакторов. </p>
 
 <p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -51,14 +51,14 @@ translation_of: Learn/Server-side/Django/Forms
 <p>Форма описывается на языке HTML как набор элементов, расположенных внутри парных тэгов <code>&lt;form&gt;...&lt;/form&gt;</code>. Любая форма содержит как минимум одно поле-тэг <code>input</code> типа <code>type="submit"</code>.</p>
 
 <pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>Здесь у нас только одно поле для ввода имени команды, но форма <em>может</em> иметь любое количество элементов ввода и, связанных с ними, текстовых меток. Атрибут элемента <code>type</code> определяет какого типа виджет будет показан в данной строке. Атрибуты <code>name</code> и  <code>id</code> используются для однозначной идентификации данного поля в JavaScript/CSS/HTML, в то время как <code>value</code> содержит значение для поля (когда оно показывается в первый раз). Текстовая метка добавляется при помощи тэга <code style="font-style: normal; font-weight: normal;">label</code> (смотрите "Enter name", в предыдущем фрагменте) и имеет атрибут <code style="font-style: normal; font-weight: normal;">for</code> со значением идентификатора <code style="font-style: normal; font-weight: normal;">id</code>, того поля, с которым данная текстовая метка связана.</p>
+<p>Здесь у нас только одно поле для ввода имени команды, но форма <em>может</em> иметь любое количество элементов ввода и, связанных с ними, текстовых меток. Атрибут элемента <code>type</code> определяет какого типа виджет будет показан в данной строке. Атрибуты <code>name</code> и  <code>id</code> используются для однозначной идентификации данного поля в JavaScript/CSS/HTML, в то время как <code>value</code> содержит значение для поля (когда оно показывается в первый раз). Текстовая метка добавляется при помощи тэга <code style="font-style: normal; font-weight: normal;">label</code> (смотрите "Enter name", в предыдущем фрагменте) и имеет атрибут <code style="font-style: normal; font-weight: normal;">for</code> со значением идентификатора <code style="font-style: normal; font-weight: normal;">id</code>, того поля, с которым данная текстовая метка связана.</p>
 
-<p>Элемент <code>input</code>  с  <code>type="submit"</code> будет показана как кнопка (по умолчанию), нажав на которую, пользователь отправляет введённые им данные на сервер (в данном случае только значение поля с идентификатором <code>team_name</code>). Атрибуты формы определяют каким методом будут отправлены данные на сервер (атрибут <code>method</code>) и куда  (атрибут <code>action</code>):</p>
+<p>Элемент <code>input</code>  с  <code>type="submit"</code> будет показана как кнопка (по умолчанию), нажав на которую, пользователь отправляет введённые им данные на сервер (в данном случае только значение поля с идентификатором <code>team_name</code>). Атрибуты формы определяют каким методом будут отправлены данные на сервер (атрибут <code>method</code>) и куда  (атрибут <code>action</code>):</p>
 
 <ul>
  <li><code>action</code>: Это ресурс/URL-адрес куда будут отправлены данные для обработки. Если значение не установлено (то есть, значением поля является пустая строка), тогда данные будут отправлены в отображение (функцию, или класс), которое сформировало текущую страницу.</li>
@@ -70,7 +70,7 @@ translation_of: Learn/Server-side/Django/Forms
  </li>
 </ul>
 
-<p>Ролью сервера в первую очередь является отрисовка начального состояния формы — либо содержащей пустые поля, либо с установленными начальными значениями. После того как пользователь нажмёт на кнопку,  сервер получит все данные формы, а затем должен провести их валидацию. В том случае, если форма содержит неверные данные, сервер должен снова отрисовать форму, показав при этом поля с правильными данными, а также сообщения, описывающие "что именно пошло не так". В тот момент, когда сервер получит запрос с "правильными" данными он должен выполнить все необходимые действия (например, сохранение данных, возврат результата поиска, загрузка файла и тому подобное), а затем, в случае необходимости, проинформировать пользователя.</p>
+<p>Ролью сервера в первую очередь является отрисовка начального состояния формы — либо содержащей пустые поля, либо с установленными начальными значениями. После того как пользователь нажмёт на кнопку,  сервер получит все данные формы, а затем должен провести их валидацию. В том случае, если форма содержит неверные данные, сервер должен снова отрисовать форму, показав при этом поля с правильными данными, а также сообщения, описывающие "что именно пошло не так". В тот момент, когда сервер получит запрос с "правильными" данными он должен выполнить все необходимые действия (например, сохранение данных, возврат результата поиска, загрузка файла и тому подобное), а затем, в случае необходимости, проинформировать пользователя.</p>
 
 <p>Как вы видите, создание HTML-формы, валидация и возврат данных, переотрисовка введённых значений, при необходимости, а также выполнение желаемых действий с "правильными данными", в целом, может потребовать довольно больших усилий для того, чтобы все "заработало". Django делает этот процесс намного проще, беря на себя некоторые "тяжёлые" и повторяющиеся участки кода!</p>
 
@@ -98,8 +98,8 @@ translation_of: Learn/Server-side/Django/Forms
  </li>
  <li>Очистка и валидация данных.
   <ul>
-   <li>Очистка данных  - это их проверка на наличие возможных значений, или вставок в поля ввода (то есть очистка - это удаление неправильных символов, которые потенциально могут использоваться для отправки вредоносного содержимого на сервер), с последующей конвертацией очищенных данных в подходящие типы данных Python.</li>
-   <li>Валидация проверяет, значения полей (например, правильность введённых дат, их диапазон и так далее)</li>
+   <li>Очистка данных  - это их проверка на наличие возможных значений, или вставок в поля ввода (то есть очистка - это удаление неправильных символов, которые потенциально могут использоваться для отправки вредоносного содержимого на сервер), с последующей конвертацией очищенных данных в подходящие типы данных Python.</li>
+   <li>Валидация проверяет, значения полей (например, правильность введённых дат, их диапазон и так далее)</li>
   </ul>
  </li>
  <li>Если какие-либо данные являются неверными, то выполнение перерисовки формы, но на этот раз, с уже введёнными пользователем данными и сообщениями об ошибках, описывающих возникшие проблемы.</li>
@@ -107,7 +107,7 @@ translation_of: Learn/Server-side/Django/Forms
  <li>Когда все действия были успешно завершены, то перенаправление пользователя на другую страницу.</li>
 </ol>
 
-<p>Django предоставляет несколько инструментов и приёмов, которые помогают вам во время выполнения задач, описанных выше. Наиболее фундаментальным из них является класс <code>Form</code>, который упрощает генерацию HTML-формы и очистку/валидацию её данных. В следующем разделе мы опишем процесс работы с формами при помощи практического примера по созданию страницы, которая позволит библиотекарям обновлять информацию о книгах.</p>
+<p>Django предоставляет несколько инструментов и приёмов, которые помогают вам во время выполнения задач, описанных выше. Наиболее фундаментальным из них является класс <code>Form</code>, который упрощает генерацию HTML-формы и очистку/валидацию её данных. В следующем разделе мы опишем процесс работы с формами при помощи практического примера по созданию страницы, которая позволит библиотекарям обновлять информацию о книгах.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Понимание того, как используется класс <code>Form</code> поможет вам когда мы будем рассматривать классы фреймворка Django, для работы с формами более "высокого уровня".</p>
@@ -115,7 +115,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <h2 id="HTML-форма_обновления_книги._Класс_Form_и_функция_отображения">HTML-форма обновления книги. Класс Form и функция отображения</h2>
 
-<p>Данная глава будет посвящена процессу создания страницы, которая позволит библиотекарям обновлять информацию о книгах (в частности, вводить дату возврата книги). Для того, чтобы сделать это мы создадим форму, которая позволит пользователям вводить значение дат. Мы проинициализируем поле датой, равной 3 неделям, начиная с текущего дня, и, для того, чтобы библиотекарь не имел возможность ввести "неправильную" дату, мы добавим валидацию введённых значений, которая будет проверять, чтобы введённая дата не относилась к прошлому, или к слишком далёкому будущему. Когда будет получена "правильная" дата мы запишем её значение в поле  <code>BookInstance.due_back</code>.</p>
+<p>Данная глава будет посвящена процессу создания страницы, которая позволит библиотекарям обновлять информацию о книгах (в частности, вводить дату возврата книги). Для того, чтобы сделать это мы создадим форму, которая позволит пользователям вводить значение дат. Мы проинициализируем поле датой, равной 3 неделям, начиная с текущего дня, и, для того, чтобы библиотекарь не имел возможность ввести "неправильную" дату, мы добавим валидацию введённых значений, которая будет проверять, чтобы введённая дата не относилась к прошлому, или к слишком далёкому будущему. Когда будет получена "правильная" дата мы запишем её значение в поле  <code>BookInstance.due_back</code>.</p>
 
 <p>Данный пример будет использовать отображение на основе функции, а также продемонстрирует работу с классом <code>Form</code>. Следующие разделы покажут изменения, которые вам надо сделать, чтобы продемонстрировать работу форм в проекте <em>LocalLibrary</em>.</p>
 
@@ -125,19 +125,19 @@ translation_of: Learn/Server-side/Django/Forms
 
 <h4 id="Объявление_класса_формы_Form">Объявление класса формы Form</h4>
 
-<p>Синтаксис объявления для класса формы <code>Form</code> очень похож на объявление класса модели <code>Model</code>, он даже использует те же типы полей (и некоторые похожие параметры). Это существенный момент, поскольку в обоих случаях нам надо убедиться, что каждое поле управляет правильным типом данных, соответствует нужному диапазону (или другому критерию) и имеет необходимое описание для показа/документации.</p>
+<p>Синтаксис объявления для класса формы <code>Form</code> очень похож на объявление класса модели <code>Model</code>, он даже использует те же типы полей (и некоторые похожие параметры). Это существенный момент, поскольку в обоих случаях нам надо убедиться, что каждое поле управляет правильным типом данных, соответствует нужному диапазону (или другому критерию) и имеет необходимое описание для показа/документации.</p>
 
 <p>Для того, чтобы создать класс с возможностями базового класса <code>Form</code> мы должны импортировать библиотеку <code>forms</code>, наследовать наш класс от класса <code>Form</code>, а затем объявить поля формы. Таким образом, самый простой класс формы в нашем случае будет иметь вид, показанный ниже:</p>
 
 <pre class="brush: python">from django import forms
 
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 </pre>
 
 <h4 id="Поля_формы">Поля формы</h4>
 
-<p>В  нашем случае мы имеем одно поле типа <code><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield">DateField</a></code>, которое служит для ввода обновлённой даты возврата книги, которое будет отрендерено в HTML с пустым значением и текстовой меткой "<em>Renewal date:</em>", а также текстовым описанием: "<em>Enter a date between now and 4 weeks (default 3 weeks).</em>" Так как никаких дополнительных опций мы не определяем, то поле будет "получать" даты в следующем формате <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#django.forms.DateField.input_formats">input_formats</a>: YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), а для отрисовки по умолчанию, будет использовать <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget">виджет</a>: <a href="https://docs.djangoproject.com/en/1.10/ref/forms/widgets/#django.forms.DateInput">DateInput</a>.</p>
+<p>В  нашем случае мы имеем одно поле типа <code><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield">DateField</a></code>, которое служит для ввода обновлённой даты возврата книги, которое будет отрендерено в HTML с пустым значением и текстовой меткой "<em>Renewal date:</em>", а также текстовым описанием: "<em>Enter a date between now and 4 weeks (default 3 weeks).</em>" Так как никаких дополнительных опций мы не определяем, то поле будет "получать" даты в следующем формате <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#django.forms.DateField.input_formats">input_formats</a>: YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), а для отрисовки по умолчанию, будет использовать <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget">виджет</a>: <a href="https://docs.djangoproject.com/en/1.10/ref/forms/widgets/#django.forms.DateInput">DateInput</a>.</p>
 
 <p>Существует множество других типов полей для класса формы, которые по своей функциональности подобны соответствующим им эквивалентам типов полей для классов моделей: <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#booleanfield"><code>BooleanField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#charfield"><code>CharField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#choicefield"><code>ChoiceField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedchoicefield"><code>TypedChoiceField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datefield"><code>DateField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#datetimefield"><code>DateTimeField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#decimalfield"><code>DecimalField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#durationfield"><code>DurationField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#emailfield"><code>EmailField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filefield"><code>FileField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#filepathfield"><code>FilePathField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#floatfield"><code>FloatField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#imagefield"><code>ImageField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#integerfield"><code>IntegerField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#genericipaddressfield"><code>GenericIPAddressField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multiplechoicefield"><code>MultipleChoiceField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#typedmultiplechoicefield"><code>TypedMultipleChoiceField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#nullbooleanfield"><code>NullBooleanField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#regexfield"><code>RegexField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#slugfield"><code>SlugField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#timefield"><code>TimeField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#urlfield"><code>URLField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#uuidfield"><code>UUIDField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#combofield"><code>ComboField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#multivaluefield"><code>MultiValueField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#splitdatetimefield"><code>SplitDateTimeField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelmultiplechoicefield"><code>ModelMultipleChoiceField</code></a>, <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#modelchoicefield"><code>ModelChoiceField</code></a>​​​​.</p>
 
@@ -158,7 +158,7 @@ class RenewBookForm(forms.Form):
 
 <h4 id="Валидация">Валидация</h4>
 
-<p>Django предоставляет несколько мест где вы можете осуществить валидацию ваших данных. Простейшим способом проверки значения одиночного поля является переопределение метода<code>clean_<strong>&lt;fieldname&gt;</strong>()</code> (здесь, <code><strong>&lt;fieldname&gt;</strong></code> это имя поля, которое вы хотите проверить). Например, мы хотим проверить, что введённое значение <code>renewal_date</code> находится между текущей датой и  4 неделями в будущем. Для этого мы создаём метод <code>clean_<strong>renewal_date</strong>()</code>, как показано ниже:</p>
+<p>Django предоставляет несколько мест где вы можете осуществить валидацию ваших данных. Простейшим способом проверки значения одиночного поля является переопределение метода<code>clean_<strong>&lt;fieldname&gt;</strong>()</code> (здесь, <code><strong>&lt;fieldname&gt;</strong></code> это имя поля, которое вы хотите проверить). Например, мы хотим проверить, что введённое значение <code>renewal_date</code> находится между текущей датой и  4 неделями в будущем. Для этого мы создаём метод <code>clean_<strong>renewal_date</strong>()</code>, как показано ниже:</p>
 
 <pre class="brush: python">from django import forms
 
@@ -167,21 +167,21 @@ from django.utils.translation import ugettext_lazy as _
 import datetime #for checking renewal date range.
 </strong>
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
+<strong>    def clean_renewal_date(self):
+        data = self.cleaned_data['renewal_date']
 
-        #Проверка того, что дата не выходит за "нижнюю" границу (не в прошлом).
-        if data &lt; datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
+        #Проверка того, что дата не выходит за "нижнюю" границу (не в прошлом).
+        if data &lt; datetime.date.today():
+            raise ValidationError(_('Invalid date - renewal in past'))
 
-        #Проверка того, то дата не выходит за "верхнюю" границу (+4 недели).
-        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+        #Проверка того, то дата не выходит за "верхнюю" границу (+4 недели).
+        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-        # Помните, что всегда надо возвращать "очищенные" данные.
-        return data</strong></pre>
+        # Помните, что всегда надо возвращать "очищенные" данные.
+        return data</strong></pre>
 
 <p>Необходимо отметить два важных момента. Первый это то, что мы получаем наши данные при помощи словаря <code>self.cleaned_data['renewal_date']</code>, а затем в конце возвращаем полученное значение, для проведения необходимых проверок. Данный шаг позволяет нам, при помощи валидаторов, получить "очищенные", проверенные, а затем, приведённые к стандартным типам, данные (в нашем случае к типу Python <code>datetime.datetime</code>).</p>
 
@@ -205,7 +205,7 @@ class RenewBookForm(forms.Form):
     url(r'^book/(?P&lt;pk&gt;[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>Данная конфигурация перенаправит запросы с адресов формата <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> в функции с именем <code>renew_book_librarian()</code> в <strong>views.py</strong>, туда же передаст идентификатор id записи <code>BookInstance</code> в качестве параметра с именем <code>pk</code>. Шаблон соответствует только если <strong>pk </strong>это правильно отформатированный <strong>uiid.</strong></p>
+<p>Данная конфигурация перенаправит запросы с адресов формата <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> в функции с именем <code>renew_book_librarian()</code> в <strong>views.py</strong>, туда же передаст идентификатор id записи <code>BookInstance</code> в качестве параметра с именем <code>pk</code>. Шаблон соответствует только если <strong>pk </strong>это правильно отформатированный <strong>uiid.</strong></p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Вместо имени "pk" мы можем использовать любое другое, по нашему желанию, потому что мы имеем полный контроль над функцией отображения (которого у нас нет в случае использования встроенного обобщённого класса отображения, который ожидает параметр с определённым именем). Тем не менее имя <code>pk</code> является понятным сокращением от "primary key", поэтому мы его тут и используем!</p>
@@ -217,7 +217,7 @@ class RenewBookForm(forms.Form):
 
 <p>Для форм, которые используют <code>POST</code>-запрос при отправке информации на сервер, наиболее общей схемой проверки данного факта является следующая строка кода <code>if request.method == 'POST':</code>. <code>GET</code>-запросу, а также первому запросу формы, в таком случае соответствует блок <code>else</code>. Если вы хотите отправлять свои данные в виде <code>GET</code>-запроса, то в таком случае приёмом проверки того факта, что данный запрос первый (или последующий), является получение значения какого-либо поля формы (например, если значение скрытого поля формы пустое, то данный вызов является первым).</p>
 
-<p>Процесс обновления книги приводит к изменению информации в базе данных, таким образом, в соответствии с нашими соглашениями, в таком случае мы должны применять запрос типа <code>POST</code>. Фрагмент кода, представленный ниже, показывает (наиболее общую) схему работы для таких запросов. </p>
+<p>Процесс обновления книги приводит к изменению информации в базе данных, таким образом, в соответствии с нашими соглашениями, в таком случае мы должны применять запрос типа <code>POST</code>. Фрагмент кода, представленный ниже, показывает (наиболее общую) схему работы для таких запросов. </p>
 
 <pre class="brush: python">from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
@@ -227,85 +227,85 @@ import datetime
 from .forms import RenewBookForm
 
 def renew_book_librarian(request, pk):
-    book_inst = get_object_or_404(BookInstance, pk=pk)
+    book_inst = get_object_or_404(BookInstance, pk=pk)
 
-    # Если данный запрос типа POST, тогда
-<strong>    if request.method == 'POST':</strong>
+    # Если данный запрос типа POST, тогда
+<strong>    if request.method == 'POST':</strong>
 
-        # Создаём экземпляр формы и заполняем данными из запроса (связывание, binding):
-        form = RenewBookForm(request.POST)
+        # Создаём экземпляр формы и заполняем данными из запроса (связывание, binding):
+        form = RenewBookForm(request.POST)
 
-        # Проверка валидности данных формы:
-        <strong>if form.is_valid():</strong>
-            # Обработка данных из form.cleaned_data
+        # Проверка валидности данных формы:
+        <strong>if form.is_valid():</strong>
+            # Обработка данных из form.cleaned_data
             #(здесь мы просто присваиваем их полю due_back)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # Переход по адресу 'all-borrowed':
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # Переход по адресу 'all-borrowed':
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # Если это GET (или какой-либо ещё), создать форму по умолчанию.
-<strong>    else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # Если это GET (или какой-либо ещё), создать форму по умолчанию.
+<strong>    else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>В первую очередь мы импортируем наш класс формы (<code>RenewBookForm</code>), а также другие необходимые объекты и методы:</p>
 
 <ul>
- <li><code><a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Возвращает определённый объект из модели в зависимости от значения его первичного ключа, или выбрасывает исключение <code>Http404</code>, если данной записи не существует. </li>
- <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Данный класс перенаправляет на другой адрес (HTTP код статуса 302). </li>
- <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: Данная функция генерирует URL-адрес при помощи соответствующего имени URL конфигурации/преобразования и дополнительных аргументов. Это эквивалент Python тэгу <code>url</code>, которые мы использовали в наших шаблонах.</li>
- <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: Библиотека Python для работы с датами и временим. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Возвращает определённый объект из модели в зависимости от значения его первичного ключа, или выбрасывает исключение <code>Http404</code>, если данной записи не существует. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Данный класс перенаправляет на другой адрес (HTTP код статуса 302). </li>
+ <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: Данная функция генерирует URL-адрес при помощи соответствующего имени URL конфигурации/преобразования и дополнительных аргументов. Это эквивалент Python тэгу <code>url</code>, которые мы использовали в наших шаблонах.</li>
+ <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: Библиотека Python для работы с датами и временим. </li>
 </ul>
 
-<p>В отображении аргумент <code>pk</code> мы используем в функции<code>get_object_or_404()</code> для получения текущего объекта типа <code>BookInstance</code> (если его не существует, то функция, а следом и наше отображение прервут своё выполнение, а на странице пользователя отобразится сообщение об ошибке: "объект не найден"). Если запрос вызова отображения <em>не является</em> <code>POST</code>-запросом, то мы переходим к условному блоку <code>else</code>, в котором мы создаём форму по умолчанию и передаём ей начальное значения<code>initial</code> для поля <code>renewal_date</code> (выделено жирным ниже, - 3 недели, начиная с текущей даты). </p>
+<p>В отображении аргумент <code>pk</code> мы используем в функции<code>get_object_or_404()</code> для получения текущего объекта типа <code>BookInstance</code> (если его не существует, то функция, а следом и наше отображение прервут своё выполнение, а на странице пользователя отобразится сообщение об ошибке: "объект не найден"). Если запрос вызова отображения <em>не является</em> <code>POST</code>-запросом, то мы переходим к условному блоку <code>else</code>, в котором мы создаём форму по умолчанию и передаём ей начальное значения<code>initial</code> для поля <code>renewal_date</code> (выделено жирным ниже, - 3 недели, начиная с текущей даты). </p>
 
 <pre class="brush: python">    book_inst = get_object_or_404(BookInstance, pk=pk)
 
-    # Если это GET (или другой метод), тогда создаём форму по умолчанию
-    <strong>else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
+    # Если это GET (или другой метод), тогда создаём форму по умолчанию
+    <strong>else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
+        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>После создания формы мы вызываем функцию <code>render()</code>, чтобы создать HTML страницу; передаём ей в качестве параметров шаблон и контекст, который содержит объект формы. Кроме того, контекст содержит объект типа <code>BookInstance</code>, который мы будем использовать в шаблоне, для получения информации об обновляемой книге.</p>
 
-<p>Если все таки у нас <code>POST</code>-запрос, тогда мы создаём объект с  именем <code>form</code> и заполняем его данными, полученными из запроса. Данный процесс называется связыванием (или, биндингом, от англ. "binding") и позволяет нам провести валидацию данных. Далее осуществляется валидация формы, при этом проверяются все поля формы — для этого используются как код обобщённого класса, так и пользовательских функций, в частности нашей функции проверки введённых дат <code>clean_renewal_date()</code>. </p>
+<p>Если все таки у нас <code>POST</code>-запрос, тогда мы создаём объект с  именем <code>form</code> и заполняем его данными, полученными из запроса. Данный процесс называется связыванием (или, биндингом, от англ. "binding") и позволяет нам провести валидацию данных. Далее осуществляется валидация формы, при этом проверяются все поля формы — для этого используются как код обобщённого класса, так и пользовательских функций, в частности нашей функции проверки введённых дат <code>clean_renewal_date()</code>. </p>
 
-<pre class="brush: python">    book_inst = get_object_or_404(BookInstance, pk=pk)
+<pre class="brush: python">    book_inst = get_object_or_404(BookInstance, pk=pk)
 
-    # Если данный запрос типа POST, тогда
-    if request.method == 'POST':
+    # Если данный запрос типа POST, тогда
+    if request.method == 'POST':
 
-        # Создаём экземпляр формы и заполняем данными из запроса (связывание, binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        # Создаём экземпляр формы и заполняем данными из запроса (связывание, binding):
+<strong>        form = RenewBookForm(request.POST)</strong>
 
-        # Проверка валидности формы:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Проверка валидности формы:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
-<p>Если формы не прошла валидацию, то мы снова вызываем функцию <code>render()</code>, но на этот раз форма будет содержать сообщения об ошибках. </p>
+<p>Если формы не прошла валидацию, то мы снова вызываем функцию <code>render()</code>, но на этот раз форма будет содержать сообщения об ошибках. </p>
 
-<p>Если форма прошла валидацию, тогда мы можем начать использовать данные, получая их из атрибута формы <code>form.cleaned_data</code>  (то есть, <code>data = form.cleaned_data['renewal_date']</code>). Здесь мы просто сохраняем данные в поле <code>due_back</code> , соответствующего объекта<code> BookInstance</code>.</p>
+<p>Если форма прошла валидацию, тогда мы можем начать использовать данные, получая их из атрибута формы <code>form.cleaned_data</code>  (то есть, <code>data = form.cleaned_data['renewal_date']</code>). Здесь мы просто сохраняем данные в поле <code>due_back</code> , соответствующего объекта<code> BookInstance</code>.</p>
 
 <div class="warning">
-<p><strong>Важно</strong>: Хотя вы также можете получить доступ к данным формы непосредственно через запрос (например <code>request.POST['renewal_date'],</code> или <code>request.GET['renewal_date']</code> (в случае GET-запроса), это НЕ рекомендуется. Очищенные данные проверены на вредоносность и преобразованы в типы, совместимые с Python.</p>
+<p><strong>Важно</strong>: Хотя вы также можете получить доступ к данным формы непосредственно через запрос (например <code>request.POST['renewal_date'],</code> или <code>request.GET['renewal_date']</code> (в случае GET-запроса), это НЕ рекомендуется. Очищенные данные проверены на вредоносность и преобразованы в типы, совместимые с Python.</p>
 </div>
 
 <p>Последним шагом в части обработки формы представления является перенаправление на другую страницу, обычно страницу «Успех». В нашем случае мы используем объект класса <code>HttpResponseRedirect</code> и функцию <code>reverse()</code> для перехода к отображению с именем <code>'all-borrowed'</code> (это было домашним заданием в <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Руководство часть 8: Аутентификация и разграничение доступа</a>). Если вы не создали данную страницу, то просто укажите переход на домашнюю страницу сайта по адресу '/').</p>
 
-<p>Все это необходимо для управления формой как таковой, но нам нужно как-то ограничить доступ к отображению (открыть доступ только библиотекарям). Мы могли бы создать новое разрешение (permission) в классе <code>BookInstance</code> ("<code>can_renew</code>"), но мы пойдём простым путём и воспользуемся функцией-декоратором <code>@permission_required</code>  вместе с нашим существующим разрешением<code>can_mark_returned</code>.</p>
+<p>Все это необходимо для управления формой как таковой, но нам нужно как-то ограничить доступ к отображению (открыть доступ только библиотекарям). Мы могли бы создать новое разрешение (permission) в классе <code>BookInstance</code> ("<code>can_renew</code>"), но мы пойдём простым путём и воспользуемся функцией-декоратором <code>@permission_required</code>  вместе с нашим существующим разрешением<code>can_mark_returned</code>.</p>
 
 <p>Окончательный вид отображения показан ниже. Пожалуйста, скопируйте данный текст в нижнюю часть файла <strong>locallibrary/catalog/views.py</strong>.</p>
 
@@ -320,32 +320,32 @@ from .forms import RenewBookForm
 
 <strong>@permission_required('catalog.<code>can_mark_returned</code>')</strong>
 def renew_book_librarian(request, pk):
-    """
-    View function for renewing a specific BookInstance by librarian
-    """
-    book_inst = get_object_or_404(BookInstance, pk=pk)
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 </pre>
 
 <h3 id="Шаблон">Шаблон</h3>
@@ -363,7 +363,7 @@ def renew_book_librarian(request, pk):
         {% csrf_token %}
         &lt;table&gt;
         \{{ form }}
-        &lt;/table&gt;
+        &lt;/table&gt;
         &lt;input type="submit" value="Submit" /&gt;
     &lt;/form&gt;</strong>
 
@@ -371,7 +371,7 @@ def renew_book_librarian(request, pk):
 
 <p>Большая его часть вам знакома из предыдущих частей руководства. Мы расширяем базовый шаблон, а затем замещаем блок содержимого <code>content</code>. У нас имеется возможность ссылаться на переменную <code>\{{bookinst}}</code> (и её поля) поскольку мы передали её в объект контекста при вызове функции <code>render()</code>. Здесь мы используем данный объект для вывода заголовка книги, дат её получения и возврата.</p>
 
-<p>Код формы относительно прост. В первую очередь мы объявляем тэг<code>form</code>, затем определяем куда будут отправлены данные (<code>action</code>) и каким способом (<code>method</code>, в данном случае "HTTP POST") — если обратитесь к обзору раздела <a href="#HTML_forms">Формы HTML</a> в верхней части данной страницы, то найдёте там замещение, что пустое значение атрибута <code>action</code>, означает, что данные из формы будут переданы обратно по текущему URL-адресу данной страницы  (чего мы и хотим!). Внутри тэга формы мы объявляем кнопку <code>submit</code> при помощи которой мы можем отправить наши данные. Блок <code>{% csrf_token %}</code>, добавленный первой строкой внутри блока формы, является частью фреймворка Django и служит для борьбы с CSRF.</p>
+<p>Код формы относительно прост. В первую очередь мы объявляем тэг<code>form</code>, затем определяем куда будут отправлены данные (<code>action</code>) и каким способом (<code>method</code>, в данном случае "HTTP POST") — если обратитесь к обзору раздела <a href="#HTML_forms">Формы HTML</a> в верхней части данной страницы, то найдёте там замещение, что пустое значение атрибута <code>action</code>, означает, что данные из формы будут переданы обратно по текущему URL-адресу данной страницы  (чего мы и хотим!). Внутри тэга формы мы объявляем кнопку <code>submit</code> при помощи которой мы можем отправить наши данные. Блок <code>{% csrf_token %}</code>, добавленный первой строкой внутри блока формы, является частью фреймворка Django и служит для борьбы с CSRF.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Добавляйте <code>{% csrf_token %}</code> в каждый шаблон Django, в котором вы создаёте форму для отправки данных методом <code>POST</code>. Это поможет уменьшить вероятность взлома вашего сайта злоумышленниками.</p>
@@ -380,12 +380,12 @@ def renew_book_librarian(request, pk):
 <p>Все что осталось, это указать переменную <code>\{{form}}</code>, которую мы передали в шаблон в словаре контекста. Возможно это вас не удивит, но таким образом мы предоставим возможность форме отрендерить свои поля с их метками, виджетами и дополнительными текстами, и в результате мы получим следующее:</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-  &lt;td&gt;
-    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
-    &lt;br /&gt;
-    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
-  &lt;/td&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+  &lt;td&gt;
+    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
+    &lt;br /&gt;
+    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
@@ -396,20 +396,20 @@ def renew_book_librarian(request, pk):
 <p>Если вы ввели неправильную дату, то на странице вы должны получить список сообщений об ошибках (показано жирным ниже).</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-   &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
-        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
-      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
-      &lt;br /&gt;
-      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+   &lt;td&gt;
+<strong>      &lt;ul class="errorlist"&gt;
+        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
+      &lt;/ul&gt;</strong>
+      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
+      &lt;br /&gt;
+      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
     &lt;/td&gt;
 &lt;/tr&gt;</pre>
 
 <h4 id="Другие_варианты_применения_переменной_шаблона_form">Другие варианты применения переменной шаблона form</h4>
 
-<p>В простом случае применения <code>\{{form}}</code> как показано выше, каждое поле рендерится  в виде отдельной строки таблицы. Кроме того, вы можете отрендерить каждое поле как список элементов (<code>\{{form.as_ul}}</code> ), или как параграф (<code>\{{form.as_p}}</code>).</p>
+<p>В простом случае применения <code>\{{form}}</code> как показано выше, каждое поле рендерится  в виде отдельной строки таблицы. Кроме того, вы можете отрендерить каждое поле как список элементов (<code>\{{form.as_ul}}</code> ), или как параграф (<code>\{{form.as_p}}</code>).</p>
 
 <p>Что ещё больше вдохновляет, так это то, что вы можете полностью контролировать процесс рендеринга любой части формы, используя для этого дот-нотацию (точку). Например, мы можем получить доступ к следующим полям поля формы <code>renewal_date</code>:</p>
 
@@ -455,7 +455,7 @@ def renew_book_librarian(request, pk):
 
 <p>Тем не менее, если вам просто нужна форма для отображения полей одиночной модели, тогда эта самая модель уже содержит большую часть информации, которая вам нужна для построения формы: сами поля, текстовые метки, дополнительный текст и так далее. И чтобы не воспроизводить информацию из модели для вашей формы, проще воспользоваться классом <a href="https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/">ModelForm</a>, который помогает создавать формы непосредственно из модели. Класс <code>ModelForm</code> может применяться в ваших отображениях точно таким же образом как и "классический" класс формы <code>Form</code>.</p>
 
-<p>Базовая реализация <code>ModelForm</code> содержит тоже поле как и ваш предыдущий класс формы  <code>RenewBookForm</code>, что и показано ниже. Все что вам необходимо сделать, - внутри вашего нового класса добавить класс <code>Meta</code> и связать его с моделью <code>model</code> (<code>BookInstance</code>), а затем перечислить поля модели в поле <code>fields</code> которые должны быть включены в форму (вы можете включить все поля при помощи <code>fields = '__all__'</code>, или можно воспользоваться полем <code>exclude</code> (вместо <code>fields</code>), чтобы определить поля модели, которые <em>не</em> нужно включать).</p>
+<p>Базовая реализация <code>ModelForm</code> содержит тоже поле как и ваш предыдущий класс формы  <code>RenewBookForm</code>, что и показано ниже. Все что вам необходимо сделать, - внутри вашего нового класса добавить класс <code>Meta</code> и связать его с моделью <code>model</code> (<code>BookInstance</code>), а затем перечислить поля модели в поле <code>fields</code> которые должны быть включены в форму (вы можете включить все поля при помощи <code>fields = '__all__'</code>, или можно воспользоваться полем <code>exclude</code> (вместо <code>fields</code>), чтобы определить поля модели, которые <em>не</em> нужно включать).</p>
 
 <pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
@@ -479,25 +479,25 @@ class RenewBookModelForm(ModelForm):
     help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), } </strong>
 </pre>
 
-<p>Чтобы добавить валидацию, вы можете использовать тот же способ как и для класса <code>Form</code> — вы определяете функцию с именем  <code>clean_<em>field_name</em>()</code> из которой выбрасываете исключение <code>ValidationError</code>, если это необходимо. Единственным отличием от нашей оригинальной формы будет являться то, что поле модели имеет имя <code>due_back</code>, а не "<code>renewal_date</code>".</p>
+<p>Чтобы добавить валидацию, вы можете использовать тот же способ как и для класса <code>Form</code> — вы определяете функцию с именем  <code>clean_<em>field_name</em>()</code> из которой выбрасываете исключение <code>ValidationError</code>, если это необходимо. Единственным отличием от нашей оригинальной формы будет являться то, что поле модели имеет имя <code>due_back</code>, а не "<code>renewal_date</code>".</p>
 
 <pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back']
+<strong>    def clean_due_back(self):
+       data = self.cleaned_data['due_back']
 
-       #Проверка того, что дата не в прошлом
-       if data &lt; datetime.date.today():
-           raise ValidationError(_('Invalid date - renewal in past'))
+       #Проверка того, что дата не в прошлом
+       if data &lt; datetime.date.today():
+           raise ValidationError(_('Invalid date - renewal in past'))
 
-       #Check date is in range librarian allowed to change (+4 weeks)
-       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+       #Check date is in range librarian allowed to change (+4 weeks)
+       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-       # Не забывайте всегда возвращать очищенные данные
-       return data
+       # Не забывайте всегда возвращать очищенные данные
+       return data
 </strong>
     class Meta:
         model = BookInstance
@@ -510,13 +510,13 @@ class RenewBookModelForm(ModelForm):
 
 <h2 id="Обобщённые_классы_отображения_для_редактирования">Обобщённые классы отображения для редактирования</h2>
 
-<p>Алгоритм управления формой, который мы использовали в нашей функции отображения, является примером достаточно общего подхода к работе с формой. Django старается абстрагировать и упростить большую часть данной работы, путём широкого применения <a href="https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/">обобщённых классов отображений</a>, которые служат для создания, редактирования и удаления отображений на основе моделей. Они не только управляют поведением отображения, но, кроме того, они из вашей модели автоматически создают класс формы  (<code>ModelForm</code>).</p>
+<p>Алгоритм управления формой, который мы использовали в нашей функции отображения, является примером достаточно общего подхода к работе с формой. Django старается абстрагировать и упростить большую часть данной работы, путём широкого применения <a href="https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/">обобщённых классов отображений</a>, которые служат для создания, редактирования и удаления отображений на основе моделей. Они не только управляют поведением отображения, но, кроме того, они из вашей модели автоматически создают класс формы  (<code>ModelForm</code>).</p>
 
 <div class="note">
 <p><strong>Примечание: </strong>В дополнение к отображениям для редактирования, описываемых здесь, существует также класс <a href="https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/#formview">FormView</a>, который по своему предназначению находится где-то между "простой" функцией отображения и другими обобщёнными отображениями, то есть в каком-то смысле, в диапазоне: "гибкость" против "усилия при программировании". Применяя <code>FormView,</code> вы все ещё нуждаетесь в создании класса <code>Form</code>, но вам не нужно реализовывать всю "стандартную" функциональность работы с формой. Вместо этого, вы должны просто реализовать функцию, которая будет вызвана в тот момент, когда станет понятно, что получаемые из формы данные, "правильные" (валидны).</p>
 </div>
 
-<p>В данном разделе мы собираемся  использовать обобщённые классы для редактирования, для того, чтобы создать страницы, который добавляют функциональность создания, редактирования и удаления записей типа <code>Author</code> из нашей библиотеки — предоставляя базовую функциональность некоторых частей административной части сайта (это может быть полезно для случаев, когда вам нужно создать административную часть сайта, которая, в отличие от стандартной, была бы более гибкой).</p>
+<p>В данном разделе мы собираемся  использовать обобщённые классы для редактирования, для того, чтобы создать страницы, который добавляют функциональность создания, редактирования и удаления записей типа <code>Author</code> из нашей библиотеки — предоставляя базовую функциональность некоторых частей административной части сайта (это может быть полезно для случаев, когда вам нужно создать административную часть сайта, которая, в отличие от стандартной, была бы более гибкой).</p>
 
 <h3 id="Отображения">Отображения</h3>
 
@@ -547,9 +547,9 @@ class AuthorDelete(DeleteView):
 
 <h3 id="Шаблоны">Шаблоны</h3>
 
-<p>Отображения  "создать" и "обновить" используют  шаблоны с именем <em>model_name</em><strong>_form.html,</strong> по умолчанию: (вы можете поменять суффикс на что-нибудь другое, при помощи поля <code>template_name_suffix</code> в вашем отображении, например, <code>template_name_suffix = '_other_suffix'</code>)</p>
+<p>Отображения  "создать" и "обновить" используют  шаблоны с именем <em>model_name</em><strong>_form.html,</strong> по умолчанию: (вы можете поменять суффикс на что-нибудь другое, при помощи поля <code>template_name_suffix</code> в вашем отображении, например, <code>template_name_suffix = '_other_suffix'</code>)</p>
 
-<p>Создайте файл шаблона <strong>locallibrary/catalog/templates/catalog/author_form.html</strong>  и скопируйте в него следующий текст.</p>
+<p>Создайте файл шаблона <strong>locallibrary/catalog/templates/catalog/author_form.html</strong>  и скопируйте в него следующий текст.</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -613,7 +613,7 @@ class AuthorDelete(DeleteView):
 
 <p>Введите в поля значения и нажмите на кнопку <strong>Submit</strong>, чтобы сохранить новую запись об авторе. После этого, вы должны были перейти на страницу редактирования только что созданного автора, имеющий адрес, похожий на следующий <em>http://127.0.0.1:8000/catalog/author/10</em>.</p>
 
-<p>У вас есть возможность редактирования записей при помощи добавления<em> /update/</em> в конец адреса подробной информации (то есть, <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — мы не показываем скриншот, потому что он выглядит в точности также как  страница "создать"!</p>
+<p>У вас есть возможность редактирования записей при помощи добавления<em> /update/</em> в конец адреса подробной информации (то есть, <em>http://127.0.0.1:8000/catalog/author/10/update/</em>) — мы не показываем скриншот, потому что он выглядит в точности также как  страница "создать"!</p>
 
 <p>И последнее, мы можем удалить страницу, добавляя строку <em>/delete/</em> в конец адреса подробной информации автора (то есть, <em>http://127.0.0.1:8000/catalog/author/10/delete/</em>). Django должен показать страницу, которая похожа на представленную ниже. Нажмите <strong>Yes, delete.</strong>, чтобы удалить запись и перейти на страницу со списком авторов.</p>
 
@@ -630,17 +630,17 @@ class AuthorDelete(DeleteView):
 
 <h2 id="Итоги">Итоги</h2>
 
-<p>Создание и управление формами может быть достаточно сложным! Django делает этот процесс намного проще, предоставляя прикладные механизмы объявления, рендеринга и проверки форм. Более того, Django предоставляет обобщённые классы  редактирования форм, которые могут выполнять <em>практически любую</em> работу по созданию, редактированию и удалению записей, связанных с одиночной моделью.</p>
+<p>Создание и управление формами может быть достаточно сложным! Django делает этот процесс намного проще, предоставляя прикладные механизмы объявления, рендеринга и проверки форм. Более того, Django предоставляет обобщённые классы  редактирования форм, которые могут выполнять <em>практически любую</em> работу по созданию, редактированию и удалению записей, связанных с одиночной моделью.</p>
 
-<p>Существует много чего ещё, что можно делать с формами (ознакомьтесь со списком ниже), но теперь вы должны понимать как добавлять базовые формы и создавать код управления формой на вашем сайте.  </p>
+<p>Существует много чего ещё, что можно делать с формами (ознакомьтесь со списком ниже), но теперь вы должны понимать как добавлять базовые формы и создавать код управления формой на вашем сайте.  </p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/forms/">Работа с формами</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial04/#write-a-simple-form">Создание вашего первого приложения, часть 4 &gt; Создание простой формы </a>(Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/">Forms API</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/">Поля класса Form</a> (Django docs) </li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/">Forms API</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/">Поля класса Form</a> (Django docs) </li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/validation/">Класс Form и валидация поля</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-editing/">Управление классом Form из классов отображений</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/">Создание форм из моделей</a> (Django docs)</li>

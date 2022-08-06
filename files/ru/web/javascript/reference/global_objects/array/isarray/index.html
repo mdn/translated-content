@@ -57,9 +57,9 @@ Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
 </pre>
 
-<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
+<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
 
-<p>Когда проверяем экземпляр <code>Array</code>, <code>Array.isArray</code> предпочтительней, чем <code>instanceof</code>, потому что он работает и с <code>iframes</code>.</p>
+<p>Когда проверяем экземпляр <code>Array</code>, <code>Array.isArray</code> предпочтительней, чем <code>instanceof</code>, потому что он работает и с <code>iframes</code>.</p>
 
 <pre class="brush: js">var iframe = document.createElement('iframe');
 document.body.appendChild(iframe);

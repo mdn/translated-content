@@ -16,7 +16,7 @@ translation_of: Web/API/Element/scrollIntoView
 ---
 <div>{{ APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p>O método <code><strong>Element.scrollIntoView()</strong></code> move o elemento ao qual é aplicado para a área visível da janela do navegador.</p>
+<p>O método <code><strong>Element.scrollIntoView()</strong></code> move o elemento ao qual é aplicado para a área visível da janela do navegador.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -29,10 +29,10 @@ element.scrollIntoView(<var>scrollIntoViewOptions</var>); // argumento Objeto
 
 <dl>
  <dt><code>alignToTop</code> {{optional_inline}}</dt>
- <dd>É um valor {{jsxref("Boolean")}}:
+ <dd>É um valor {{jsxref("Boolean")}}:
  <ul>
-  <li>Se <code>true</code>, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Este é o valor default.</li>
-  <li><code><font face="Open Sans, Arial, sans-serif">Se </font>false</code>, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
+  <li>Se <code>true</code>, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Este é o valor default.</li>
+  <li><code><font face="Open Sans, Arial, sans-serif">Se </font>false</code>, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
  </ul>
  </dd>
  <dt><code>scrollIntoViewOptions</code> {{optional_inline}}</dt>
@@ -44,7 +44,7 @@ element.scrollIntoView(<var>scrollIntoViewOptions</var>); // argumento Objeto
   inline:   "start" | "center" | "end" | "<strong>nearest</strong>"
 }</pre>
  </dd>
- <dd>Caso seja um valor booleano, true corresponde a <code>{block: "start"}</code> e false<font face="Consolas, Liberation Mono, Courier, monospace"> a</font> <code>{block: "end"}</code>.</dd>
+ <dd>Caso seja um valor booleano, true corresponde a <code>{block: "start"}</code> e false<font face="Consolas, Liberation Mono, Courier, monospace"> a</font> <code>{block: "end"}</code>.</dd>
 </dl>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -59,7 +59,7 @@ element.scrollIntoView({block: "end", behavior: "smooth"});
 
 <h2 id="Observações">Observações</h2>
 
-<p>O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo de sua composição com outros elementos.</p>
+<p>O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo de sua composição com outros elementos.</p>
 
 <h2 id="Especificações">Especificações</h2>
 

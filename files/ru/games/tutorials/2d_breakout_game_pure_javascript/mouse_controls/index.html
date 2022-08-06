@@ -16,10 +16,10 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управлен
 <p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}</p>
 
 <div class="summary">
-<p>Это 9-й шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код к этому уроку в <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>.</p>
+<p>Это 9-й шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код к этому уроку в <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>.</p>
 </div>
 
-<p><span class="seoSummary">Сама игра на самом деле закончена, так что давайте отполируем её. Мы уже добавили элементы управления клавиатуру, но мы могли бы легко добавить элемент управления мышь.</span></p>
+<p><span class="seoSummary">Сама игра на самом деле закончена, так что давайте отполируем её. Мы уже добавили элементы управления клавиатуру, но мы могли бы легко добавить элемент управления мышь.</span></p>
 
 <h2 id="Отслеживание_движений_мыши">Отслеживание движений мыши</h2>
 
@@ -38,7 +38,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управлен
     }
 }</pre>
 
-<p>В этой функции мы сначала разрабатываем значение <code>relativeX</code>, которое равно горизонтальному положению мыши в окне браузера (<code>e.clientX</code>) минус расстояние между левым краем canvas и левым краем окна браузера (<code>canvas.offsetLeft</code>) - фактически это равно расстоянию между левым краем canvas и указателем мыши. Если относительный указатель позиции X больше нуля и меньше, чем ширина Canvas, указатель находится в пределах границы Canvas, и <code>paddleX</code> установки (крепится на левый край ракетки) - устанавливается на <code>relativeX</code> значение минус половина ширины ракетки, так что движение будет по отношению к середине ракетки.</p>
+<p>В этой функции мы сначала разрабатываем значение <code>relativeX</code>, которое равно горизонтальному положению мыши в окне браузера (<code>e.clientX</code>) минус расстояние между левым краем canvas и левым краем окна браузера (<code>canvas.offsetLeft</code>) - фактически это равно расстоянию между левым краем canvas и указателем мыши. Если относительный указатель позиции X больше нуля и меньше, чем ширина Canvas, указатель находится в пределах границы Canvas, и <code>paddleX</code> установки (крепится на левый край ракетки) - устанавливается на <code>relativeX</code> значение минус половина ширины ракетки, так что движение будет по отношению к середине ракетки.</p>
 
 <p>Ракетка теперь будет следовать за положением курсора мыши, но так как мы ограничиваем движение размером Canvas, он не исчезнет полностью с обеих сторон.</p>
 
@@ -49,7 +49,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управлен
 <p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/1L9ep9r2/1/","","395")}}</p>
 
 <div class="summary">
-<p>Упражнение: отрегулируйте границы движения ракетки так, что вся ракетка будет видна на обоих краях Canvas, а не только на его половину.</p>
+<p>Упражнение: отрегулируйте границы движения ракетки так, что вся ракетка будет видна на обоих краях Canvas, а не только на его половину.</p>
 </div>
 
 <h2 id="Следующий_шаг">Следующий шаг</h2>

@@ -8,7 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/Guide/Mobile
 ---
-<p>이 페이지에는 모바일 기기에서도 잘 작동하는 웹 사이트를 디자인하기 위한 몇 가지의 방법과 노하우가 담겨 있습니다. Mozilla Firefox OS 프로젝트에 대한 정보를 찾고 계신다면, <a href="/en/Mozilla/Firefox_OS" title="Boot to Gecko">Firefox OS</a> 페이지를 참고하세요. 아니면 <a href="/en/Mozilla/Firefox_for_Android" title="Firefox for Android">Firefox for Android</a>에 대한 자세한 정보를 찾아보실 수도 있습니다.</p>
+<p>이 페이지에는 모바일 기기에서도 잘 작동하는 웹 사이트를 디자인하기 위한 몇 가지의 방법과 노하우가 담겨 있습니다. Mozilla Firefox OS 프로젝트에 대한 정보를 찾고 계신다면, <a href="/en/Mozilla/Firefox_OS" title="Boot to Gecko">Firefox OS</a> 페이지를 참고하세요. 아니면 <a href="/en/Mozilla/Firefox_for_Android" title="Firefox for Android">Firefox for Android</a>에 대한 자세한 정보를 찾아보실 수도 있습니다.</p>
 
 <p>We've organized it into two sections, <a href="#Designing_for_mobile_devices">designing for mobile devices</a> and <a href="#Cross-browser_development">cross-browser compatibility</a>. Also see Jason Grlicky's guide to <a href="/en-US/docs/Web_Development/Mobile/Mobile-friendliness" title="/en-US/docs/Web_Development/Mobile/Mobile-friendliness">mobile-friendliness</a> for web developers.</p>
 
@@ -31,11 +31,11 @@ translation_of: Web/Guide/Mobile
 
 <p>터치 스크린을 사용하려면 당신은 <a href="/en/DOM/Touch_events" title="en/DOM/Touch_events">DOM 터치 이벤트</a>에 대해서 배워야 합니다. You won't be able to use the <a href="/En/CSS/:hover" title="En/CSS/:hover">CSS :hover</a> pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">designing for touch screens</a>.</p>
 
-<p><a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a> 미디어 쿼리를 이용해 터치를 사용할 수 있는 기기에서 다른 CSS 파일을 불러들일 수도 있습니다.</p>
+<p><a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a> 미디어 쿼리를 이용해 터치를 사용할 수 있는 기기에서 다른 CSS 파일을 불러들일 수도 있습니다.</p>
 
 <h3 id="이미지_최적화하기">이미지 최적화하기</h3>
 
-<p>네트워크 속도가 느리거나 비용이 비싼 기기를 사용하는 사용자들을 위해, 디바이스 화면 크기와 해상도에 맞게 최적화된 이미지를 불러들이게 할 수 있습니다. You do this in CSS by querying for screen <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, and <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
+<p>네트워크 속도가 느리거나 비용이 비싼 기기를 사용하는 사용자들을 위해, 디바이스 화면 크기와 해상도에 맞게 최적화된 이미지를 불러들이게 할 수 있습니다. You do this in CSS by querying for screen <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, and <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
 
 <p>You can also make use of CSS properties to implement visual effects like <a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> and <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> without images.</p>
 
@@ -52,7 +52,7 @@ translation_of: Web/Guide/Mobile
 <ul>
  <li>벤더별 접두어(vendor-prefix)가 사용된 CSS 프로퍼티 등 특정 브라우저에서만 작동하는 기능 사용을 배제할 것.</li>
  <li>그러한 특정 기능을 사용해야 하는 경우, 다른 브라우저에서도 그러한 기능이 구현되어 있는지 확인할 것. 그러한 기능이 있다면, 그 브라우저에 대한 지원도 목표로 할 것.</li>
- <li>다른 브라우저에서 그러한 특정 기능이 지원되지 않는다면, 그런 브라우저들을 위해 납득 가능한 대체재(fallback)를 만들어 둘 것.</li>
+ <li>다른 브라우저에서 그러한 특정 기능이 지원되지 않는다면, 그런 브라우저들을 위해 납득 가능한 대체재(fallback)를 만들어 둘 것.</li>
 </ul>
 
 <p>For example, if you set a gradient as a background for some text using a vendor-prefixed property like <code>-webkit-linear-gradient</code>, it's best to include the other vendor-prefixed versions of the <a href="/en/CSS/linear-gradient" title="en/CSS/linear-gradient">linear-gradient</a> property. If you don't do that, at least make sure that the default background contrasts with the text: that way, the page will at least be usable in a browser which is not targeted by your <code>linear-gradient</code> rule.</p>

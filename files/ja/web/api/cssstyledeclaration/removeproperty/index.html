@@ -11,7 +11,7 @@ translation_of: Web/API/CSSStyleDeclaration/removeProperty
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><strong><code>CSSStyleDeclaration.removeProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトからプロパティを削除します。</p>
+<p><strong><code>CSSStyleDeclaration.removeProperty()</code></strong> メソッドインターフェイスは、 CSS スタイル宣言オブジェクトからプロパティを削除します。</p>
 
 <h2 id="Syntax">構文</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/CSSStyleDeclaration/removeProperty
 <h3 id="Parameters">引数</h3>
 
 <ul>
-  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。</li>
+  <li><em><code>property</code></em> は {{domxref('DOMString')}} で、削除するプロパティ名を表します。なお、複数語からなるプロパティ名はハイフン区切りであって、キャメルケースではありません。</li>
 </ul>
 
 <h3 id="Return_value">返値</h3>
@@ -33,12 +33,12 @@ translation_of: Web/API/CSSStyleDeclaration/removeProperty
 <h3 id="Exceptions">例外</h3>
 
 <ul>
-  <li>{{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: プロパティまたは宣言ブロックが読取専用の場合。</li>
+  <li>{{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: プロパティまたは宣言ブロックが読取専用の場合。</li>
 </ul>
 
 <h2 id="Example">例</h2>
 
-<p>次の JavaScript コードは、 CSS の <code>background-color</code> プロパティをセレクター規則から削除します。</p>
+<p>次の JavaScript コードは、 CSS の <code>background-color</code> プロパティをセレクター規則から削除します。</p>
 
 <pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
 var oldValue = declaration.removeProperty('background-color');

@@ -6,7 +6,7 @@ original_slug: Web/API/HTMLElement/transitionend_event
 ---
 <div>{{APIRef}}</div>
 
-<p><code>transitionend</code> 事件会在 <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> 结束后触发。当 transition 完成前移除 transition 时，比如移除 css 的{{cssxref("transition-property")}} 属性，事件将不会被触发。如在 transition 完成前设置  {{cssxref("display")}} 为"<code>none"</code>，事件同样不会被触发。</p>
+<p><code>transitionend</code> 事件会在 <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> 结束后触发。当 transition 完成前移除 transition 时，比如移除 css 的{{cssxref("transition-property")}} 属性，事件将不会被触发。如在 transition 完成前设置  {{cssxref("display")}} 为"<code>none"</code>，事件同样不会被触发。</p>
 
 <table class="properties">
  <tbody>
@@ -29,7 +29,7 @@ original_slug: Web/API/HTMLElement/transitionend_event
  </tbody>
 </table>
 
-<p><code>transitionend</code> 事件是双向触发的 - 当完成到转换状态的过渡，以及完全恢复到默认或非转换状态时都会触发。 如果没有过渡延迟或持续时间，即两者的值都为 0s 或者都未声明， 则不发生过渡，并且任何过渡事件都不会触发。如果触发了 <code>transitioncancel</code> 事件，则<code>transitionend</code> 事件不会触发。</p>
+<p><code>transitionend</code> 事件是双向触发的 - 当完成到转换状态的过渡，以及完全恢复到默认或非转换状态时都会触发。 如果没有过渡延迟或持续时间，即两者的值都为 0s 或者都未声明， 则不发生过渡，并且任何过渡事件都不会触发。如果触发了 <code>transitioncancel</code> 事件，则<code>transitionend</code> 事件不会触发。</p>
 
 <h2 id="例">例</h2>
 
@@ -38,7 +38,7 @@ original_slug: Web/API/HTMLElement/transitionend_event
  * 然后指定一个函数，例如 showMessage()
  */
 function showMessage() {
-    console.log('Transition 已完成');
+    console.log('Transition 已完成');
 }
 
 var element = document.getElementById("slidingMenu");

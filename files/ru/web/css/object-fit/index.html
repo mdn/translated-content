@@ -9,13 +9,13 @@ translation_of: Web/CSS/object-fit
 ---
 <div>{{CSSRef}}</div>
 
-<p>Свойство<strong> <code>object-fit</code></strong> определяет, как содержимое заменяемого элемента, такого как <a href="/ru/docs/Web/HTML/Element/img" title="The HTML &lt;img> element embeds an image into the document. It is a replaced element."><code>&lt;img&gt;</code></a> или <code><a href="/ru/docs/Web/HTML/Element/video" title="The HTML Video element (&lt;video>) embeds a media player which supports video playback into the document.">&lt;video&gt;</a></code>, должно заполнять контейнер относительно его высоты и ширины.</p>
+<p>Свойство<strong> <code>object-fit</code></strong> определяет, как содержимое заменяемого элемента, такого как <a href="/ru/docs/Web/HTML/Element/img" title="The HTML &lt;img> element embeds an image into the document. It is a replaced element."><code>&lt;img&gt;</code></a> или <code><a href="/ru/docs/Web/HTML/Element/video" title="The HTML Video element (&lt;video>) embeds a media player which supports video playback into the document.">&lt;video&gt;</a></code>, должно заполнять контейнер относительно его высоты и ширины.</p>
 
 <p>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<p class="brush:css">Для <code>object-fit</code> можно указать одно из нижеперечисленных свойств.</p>
+<p class="brush:css">Для <code>object-fit</code> можно указать одно из нижеперечисленных свойств.</p>
 
 <h3 id="Values">Значения</h3>
 
@@ -23,7 +23,7 @@ translation_of: Web/CSS/object-fit
  <dt><code>fill</code></dt>
  <dd>Смещаемый контент меняет свой размер таким образом, чтобы заполнить всю область внутри блока: используется вся ширина и высота блока.</dd>
  <dt><code>contain</code></dt>
- <dd>Смещаемый контент меняет свой размер таким образом, чтобы подстроиться под область внутри блока пропорционально собственным параметрам: окончательный размер контента будет определён как "помещённый внутрь" блока, ограничиваясь его шириной и высотой.</dd>
+ <dd>Смещаемый контент меняет свой размер таким образом, чтобы подстроиться под область внутри блока пропорционально собственным параметрам: окончательный размер контента будет определён как "помещённый внутрь" блока, ограничиваясь его шириной и высотой.</dd>
  <dt><code>cover</code></dt>
  <dd>Смещаемый контент меняет свой размер таким образом, чтобы сохранять свои пропорции при заполнении блока: окончательный размер контента будет определён как "покрытие" блока, ограничиваясь его шириной и высотой.</dd>
  <dt><code>none</code></dt>
@@ -44,79 +44,79 @@ translation_of: Web/CSS/object-fit
 <h3 id="HTML_Контент">HTML Контент</h3>
 
 <pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
+  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
+  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
+  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
+  &lt;h2&gt;object-fit: none&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
+  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
+  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
 
 &lt;/div&gt;</pre>
 
 <h3 id="CSS_Контент">CSS Контент</h3>
 
 <pre class="brush: css">h2 {
-  font-family: Courier New, monospace;
-  font-size: 1em;
-  margin: 1em 0 0.3em;
+  font-family: Courier New, monospace;
+  font-size: 1em;
+  margin: 1em 0 0.3em;
 }
 
 div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   height: 940px;
 }
 
 img {
-  width: 150px;
-  height: 100px;
-  border: 1px solid #000;
+  width: 150px;
+  height: 100px;
+  border: 1px solid #000;
 }
 
 .narrow {
   width: 100px;
-  height: 150px;
-  margin-top: 10px;
+  height: 150px;
+  margin-top: 10px;
 }
 
 .fill {
-  object-fit: fill;
+  object-fit: fill;
 }
 
 .contain {
-  object-fit: contain;
+  object-fit: contain;
 }
 
 .cover {
-  object-fit: cover;
+  object-fit: cover;
 }
 
 .none {
-  object-fit: none;
+  object-fit: none;
 }
 
 .scale-down {
-  object-fit: scale-down;
+  object-fit: scale-down;
 }
 </pre>
 

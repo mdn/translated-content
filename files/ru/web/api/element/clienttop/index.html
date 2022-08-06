@@ -7,13 +7,13 @@ translation_of: Web/API/Element/clientTop
 
 <p>Толщина верхней границы элемента в пикселях. Не включает в себя margin и padding. Свойство только для чтения.</p>
 
-<p>Всё, что лежит между двумя местами (<code>offsetTop</code> и верх клиентской области) является границей элемента, потому что <code>offsetTop</code> показывает местоположение верха border элемента (не margin), в то время как верх клиентской области начинается сразу под border (клиентская область включает padding). Поэтому значение <strong>clientTop</strong> всегда будет равно значению <code>.getComputedStyle()</code> для "border-top-width". Например, если значение "border-top-width" равно нулю, то и <strong>clientTop</strong> тоже равно нулю.</p>
+<p>Всё, что лежит между двумя местами (<code>offsetTop</code> и верх клиентской области) является границей элемента, потому что <code>offsetTop</code> показывает местоположение верха border элемента (не margin), в то время как верх клиентской области начинается сразу под border (клиентская область включает padding). Поэтому значение <strong>clientTop</strong> всегда будет равно значению <code>.getComputedStyle()</code> для "border-top-width". Например, если значение "border-top-width" равно нулю, то и <strong>clientTop</strong> тоже равно нулю.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong> Это свойство округляет значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
+<p><strong>Примечание:</strong> Это свойство округляет значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
-<p>Основанные на <a href="en/Gecko">Gecko</a> приложения поддерживают <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">clientTop начиная с </span>Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, реализовано в  {{ Bug(111207) }}). Это свойство не поддерживается в  Firefox 2 и более ранних.</p>
+<p>Основанные на <a href="en/Gecko">Gecko</a> приложения поддерживают <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">clientTop начиная с </span>Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, реализовано в  {{ Bug(111207) }}). Это свойство не поддерживается в  Firefox 2 и более ранних.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/clientTop
 
 <h2 id="Example">Пример</h2>
 
-<p>В следующей иллюстрации клиентская область показана белым (части под названиями "Top", "Right" и т. д. не имеют никакого отношения к клиентской области). Значение <strong>clientTop</strong> - расстояние между окончанием области margin (жёлтый) или padding и началом области контента (белый)</p>
+<p>В следующей иллюстрации клиентская область показана белым (части под названиями "Top", "Right" и т. д. не имеют никакого отношения к клиентской области). Значение <strong>clientTop</strong> - расстояние между окончанием области margin (жёлтый) или padding и началом области контента (белый)</p>
 
 <div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
 <div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
@@ -38,7 +38,7 @@ translation_of: Web/API/Element/clientTop
 
 <h2 id="Notes">Примечание</h2>
 
-<p><code>clientTop</code> был впервые введён в MS IE DHTML object model.</p>
+<p><code>clientTop</code> был впервые введён в MS IE DHTML object model.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
