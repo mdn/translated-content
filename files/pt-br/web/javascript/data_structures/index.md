@@ -3,57 +3,61 @@ title: Estrutura de dados do Javascript
 slug: Web/JavaScript/Data_structures
 tags:
   - Iniciante
+  - Guide
   - JavaScript
   - Tipos
 translation_of: Web/JavaScript/Data_structures
 ---
 {{jsSidebar("More")}}
 
-Todas as linguagens de programação têm sua própria estrutura de dados embutida, mas essa estrutura frequentemente difere uma da outra. Este artigo busca listar os tipos de dados disponíveis na linguagem JavaScript e que propriedades eles possuem. Quando possível, comparações com outras linguagens serão apresentadas.
+Todas as linguagens de programação têm estruturas de dados embutidas, mas essas estruturas frequentemente diferem de uma linguagem para outra. Este artigo busca listar os tipos de estruturas de dados disponíveis em JavaScript e suas propriedades. Quando possível, serão apresentadas comparações com outras linguagens.
 
 ## Tipagem Dinâmica
 
-JavaScript é uma linguagem de tipagem _dinâmica_. Isso significa que você não necessita declarar o tipo de uma variável antes de sua atribuição. O tipo será automaticamente determinado quando o programa for processado. Isso também significa que você pode reatribuir uma mesma variável com um tipo diferente:
+JavaScript é uma linguagem de tipagem *frouxa* e *dinâmica*. Isso significa que variáveis em JavaScript não estão diretamente associadas a um valor de tipo em particular, e qualquer variável pode ter atribuídos (ou re-atribuídos) valores de qualquer tipo:
 
 ```js
-var foo = 42;    // foo é um Number agora
-foo     = "bar"; // foo é um String agora
-foo     = true;  // foo é um Boolean agora
+let foo = 42;    // foo agora é um tipo Number 
+foo     = 'bar'; // foo agora é um tipo String string 
+foo     = true;  // foo agora é um tipo Boolean
 ```
 
 ## Tipos de Dados
 
-A última versão ECMAScript define sete tipos de dados:
+O conjunto de tipos na linguagem JavaScript consiste em [_valores primitivos_](#valores_primitivos) e [_objetos_](#objetos).
 
-- Sete tipos de dados são: {{Glossary("Primitive", "primitives")}}:
+- [Valores primitivos](#valores_primitivos) (dados imutáveis representados diretamente no nível mais baixo da linguagem)
+  - [Tipo "Boolean"](#tipo_boolean)
+  - [Tipo "Null"](#tipo_null)
+  - [Tipo "Undefined](#tipo_undefined)
+  - [Tipo "Number"](#tipo_number)
+  - [Tipo "BigInt"](#tipo_bigint)
+  - [Tipo "String"](#tipo_string)
+  - [Tipo "Symbol"](#tipo_symbol)
 
-  - {{Glossary("Boolean")}}
-  - {{Glossary("Null")}}
-  - {{Glossary("Undefined")}}
-  - {{Glossary("Number")}}
-  - {{Glossary("BigInt")}}
-  - {{Glossary("String")}}
-  - {{Glossary("Symbol")}}
-
-- e {{Glossary("Object")}}
+- [Objetos](#objetos) (coleções de propriedades)
 
 ## Valores Primitivos
 
-Todos os tipos, com a exceção de objetos, definem valores imutáveis (valores que são incapazes de mudar). Por exemplo e diferentemente da linguagem C, Strings são imutáveis. Nós nos referimos a valores desse tipo como "valores primitivos".
+Todos os tipos, com a exceção de objetos, definem valores imutáveis (ou seja, valores que não podem ser modificados). Por exemplo, Strings são imutáveis. Nós nos referimos a valores desses tipos como "_valores primitivos_".
 
 ### Tipo "Boolean"
 
-Boolean representa uma entidade lógica e pode ter dois valores: verdadeiro`(true)` ou falso`(false)`.
+Booleanos representam uma entidade lógica e pode ter dois valores: `true` (verdadeiro) e `false` (falso). Veja [Boolean](/pt-BR/docs/Glossary/Boolean) e {{jsxref("Boolean")}} para mais detalhes.
 
 ### Tipo "Null"
 
-O tipo Null tem exatamente um valor: `null`(nulo). Veja {{jsxref("null")}} e {{Glossary("Null")}} para mais detalhes.
+O tipo Null tem exatamente um valor: `null`(nulo). Veja [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) e [Null](/pt-BR/docs/Glossary/Null) para mais detalhes.
 
 ### Tipo "Undefined"
 
-Uma variável que não foi atribuída a um valor específico, assume o valor `undefined`(indefinido). Veja {{jsxref("undefined")}} e {{Glossary("Undefined")}} para mais detalhes.
+Uma variável à qual não foi atribuído um valor específico, assume o valor `undefined`(indefinido). Veja {{jsxref("undefined")}} e [Undefined](/pt-BR/docs/Glossary/undefined) para mais detalhes.
 
-### Tipo "Number"
+### Tipos numéricos
+
+ECMAScript possui dois tipos numéricos embutidos: [Number](#tipo_number) e [BigInt](#tipo_bigint) — junto com o valor relacionado [NaN](#nan).
+
+#### Tipo "Number"
 
 De acordo com os padrões ECMAScript, existe somente um tipo numérico*.* O [double-precision 64-bit binary format IEEE 754 value](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) (número entre -(2<sup>53</sup> -1) e 2<sup>53</sup> -1). **Não existe um tipo específico para inteiros**. Além de poderem representar números de ponto-flutuante, o tipo _number_ possui três valores simbólicos: `+Infinity`, `-Infinity`, e [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (não numérico).
 
