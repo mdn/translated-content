@@ -12,7 +12,7 @@ translation_of: Glossary/BigInt
 
 ### 知识点
 
-- 维基百科：{{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}}
+- 维基百科：[Numeric types](https://zh.wikipedia.org/wiki/Data_type#Numeric_types)
 
 ### 参阅
 

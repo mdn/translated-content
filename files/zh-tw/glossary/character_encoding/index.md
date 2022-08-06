@@ -20,4 +20,4 @@ translation_of: Glossary/character_encoding
 ### 基本知識
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Character encoding")}} (維基百科)
+- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) (維基百科)

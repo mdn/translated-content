@@ -43,16 +43,16 @@ var body = XMLHttpRequest.response;
 var url = 'somePage.html'; //A local page
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      callback(xhr.response);
-    }
-  }
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      callback(xhr.response);
+    }
+  }
 
   xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.send('');
 }
 ```
 

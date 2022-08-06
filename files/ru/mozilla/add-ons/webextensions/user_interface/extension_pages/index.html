@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 
 <p><img alt="Example of a simple bundled page displayed as a detached panel." src="https://mdn.mozillademos.org/files/15752/bundled_page_as_panel_small.png" style="display: block; height: 216px; margin-left: auto; margin-right: auto; width: 350px;"></p>
 
-<p>Эти страницы получат доступ к привилегированным средствам JavaScript API — таким же как те, что доступны фоновым скриптам расширения. Но каждая из них будет открыта в своей отдельной вкладке — со своей очередью задач JavaScript, своими глобальными переменными и т. д.</p>
+<p>Эти страницы получат доступ к привилегированным средствам JavaScript API — таким же как те, что доступны фоновым скриптам расширения. Но каждая из них будет открыта в своей отдельной вкладке — со своей очередью задач JavaScript, своими глобальными переменными и т. д.</p>
 
 <p>Фоновую страницу можно считать "невидимой страницей расширения".</p>
 
@@ -31,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 
 <p>Есть два способа отобразить страницу расширения: {{WebExtAPIRef("windows.create()")}} и {{WebExtAPIRef("tabs.create()")}}.</p>
 
-<p>Например для того, чтобы создать окно сообщения, можно с помощью функции <code>windows.create()</code> открыть страницу HTML в отсоединённой панели (detached panel) — в окне без строки адреса, полосы закладок и других обычных элементов управления:</p>
+<p>Например для того, чтобы создать окно сообщения, можно с помощью функции <code>windows.create()</code> открыть страницу HTML в отсоединённой панели (detached panel) — в окне без строки адреса, полосы закладок и других обычных элементов управления:</p>
 
 <pre class="brush: js">let createData = {
   type: "detached_panel",
@@ -52,7 +52,7 @@ let creating = browser.windows.create(createData);</pre>
 
 <h2 id="Страницы_расширения_и_история">Страницы расширения и история</h2>
 
-<p>По умолчанию страницы, открытые таким образом, будут сохранены в истории браузера — точно так же, как и обычные веб-страницы. Если такое поведение не нужно, используйте {{WebExtAPIRef("history.deleteUrl()")}}, чтобы удалить запись:</p>
+<p>По умолчанию страницы, открытые таким образом, будут сохранены в истории браузера — точно так же, как и обычные веб-страницы. Если такое поведение не нужно, используйте {{WebExtAPIRef("history.deleteUrl()")}}, чтобы удалить запись:</p>
 
 <pre class="brush: js" id="ct-4">function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {

@@ -14,9 +14,9 @@ translation_of: Web/API/BlobBuilder
 ---
 {{APIRef("File API")}}{{ deprecated_header}}
 
-> **Note:** `BlobBuilder` インターフェイスは新しく導入された {{domxref('Blob')}} コンストラクターに置き換えられて非推奨になりました。
+> **Note:** `BlobBuilder` インターフェイスは新しく導入された {{domxref('Blob')}} コンストラクターに置き換えられて非推奨になりました。
 
-**`BlobBuilder`** インターフェイスは {{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に `BlobBuilder` を作成し、 [`append()`](#append) メソッドを使ってデータのチャンクを付け足していってください。 blob の生成が完了したら [`getBlob()`](#getblob) メソッドを呼んで、ビルダーに送り込んだデータの {{domxref("Blob")}} を取得してください。
+**`BlobBuilder`** インターフェイスは {{domxref("Blob")}} オブジェクトを構築する簡単な方法を提供します。単に `BlobBuilder` を作成し、 [`append()`](#append) メソッドを使ってデータのチャンクを付け足していってください。 blob の生成が完了したら [`getBlob()`](#getblob) メソッドを呼んで、ビルダーに送り込んだデータの {{domxref("Blob")}} を取得してください。
 
 ## メソッド概要
 
@@ -54,7 +54,7 @@ translation_of: Web/API/BlobBuilder
 
 ### append()
 
-生成中の {{domxref("Blob")}} に対して、指定された JavaScript オブジェクトの内容を付け足します。もし指定した値が {{domxref("Blob")}} 、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) のいずれでもなければ、文字列に変換されたのち、 blob に付け足されます。
+生成中の {{domxref("Blob")}} に対して、指定された JavaScript オブジェクトの内容を付け足します。もし指定した値が {{domxref("Blob")}} 、[`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) のいずれでもなければ、文字列に変換されたのち、 blob に付け足されます。
 
 ```js
 void append(

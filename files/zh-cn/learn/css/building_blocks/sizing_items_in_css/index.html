@@ -5,7 +5,7 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}</div>
 
-<p>在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。 在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。</p>
+<p>在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。 在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 <p>在受 CSS 设置影响之前，HTML 元素有其原始的尺寸。一个直观的例子就是图像。一副图像的长和宽由这个图像文件自身确定。这个尺寸就是固有尺寸。</p>
 
-<p>如果你把图片放置在网页中的时候没有在<code>&lt;img&gt;</code> 标签或 CSS 中设置其尺寸，那么将使用其固有尺寸显示。我们给下面的示例图像绘制了一个边框，以便你看出图像文件的长宽。</p>
+<p>如果你把图片放置在网页中的时候没有在<code>&lt;img&gt;</code> 标签或 CSS 中设置其尺寸，那么将使用其固有尺寸显示。我们给下面的示例图像绘制了一个边框，以便你看出图像文件的长宽。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}</p>
 
@@ -32,11 +32,11 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}</p>
 
-<p>在上面的例子中，试着在空元素内部添加些内容。现在边框内包含一些文字了，因为元素的高度由其所含内容高度确定。再强调一次，这就是元素的固有尺寸 — 由其所包含的内容决定。</p>
+<p>在上面的例子中，试着在空元素内部添加些内容。现在边框内包含一些文字了，因为元素的高度由其所含内容高度确定。再强调一次，这就是元素的固有尺寸 — 由其所包含的内容决定。</p>
 
 <h2 id="设置具体的尺寸">设置具体的尺寸</h2>
 
-<p>我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为<strong>外部尺寸</strong>。以上面例子中的 <code>&lt;div&gt;</code> 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。 正如我们在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content">上一课</a>有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。</p>
+<p>我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为<strong>外部尺寸</strong>。以上面例子中的 <code>&lt;div&gt;</code> 举例 — 我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。 正如我们在<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content">上一课</a>有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}</p>
 

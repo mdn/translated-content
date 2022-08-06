@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/await
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>Оператор <code>await</code> используется для ожидания окончания {{jsxref("Promise")}}. Может быть использован только внутри {{jsxref("Statements/async_function", "async function")}}.</p>
+<p>Оператор <code>await</code> используется для ожидания окончания {{jsxref("Promise")}}. Может быть использован только внутри {{jsxref("Statements/async_function", "async function")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -16,19 +16,19 @@ translation_of: Web/JavaScript/Reference/Operators/await
  <dd>{{jsxref("Promise")}} или любое другое значение для ожидания разрешения.</dd>
  <dt><code>rv</code></dt>
  <dd>
- <p>Возвращает полученное из <code>Promise</code> значение, либо само значение, если оно не является <code>Promise.</code></p>
+ <p>Возвращает полученное из <code>Promise</code> значение, либо само значение, если оно не является <code>Promise.</code></p>
  </dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Оператор <code>await</code> заставляет функцию, объявленную с использованием оператора <code>async</code>, ждать выполнения <code>Promise</code> и продолжать выполнение после возвращения <code>Promise</code> значения. Впоследствии возвращает полученное из  <code>Promise</code> значение. Если типом значения, к которому был применён оператор <code>await</code>, является не <code>Promise</code>, то значение приводится к успешно выполненному <code>Promise</code>.</p>
+<p>Оператор <code>await</code> заставляет функцию, объявленную с использованием оператора <code>async</code>, ждать выполнения <code>Promise</code> и продолжать выполнение после возвращения <code>Promise</code> значения. Впоследствии возвращает полученное из  <code>Promise</code> значение. Если типом значения, к которому был применён оператор <code>await</code>, является не <code>Promise</code>, то значение приводится к успешно выполненному <code>Promise</code>.</p>
 
-<p>Если <code>Promise</code> отклоняется, то <code>await</code> генерирует исключение с отклонённым значением.</p>
+<p>Если <code>Promise</code> отклоняется, то <code>await</code> генерирует исключение с отклонённым значением.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p><code>await</code> ожидает разрешения <code>Promise</code> и возвращает полученное значение.</p>
+<p><code>await</code> ожидает разрешения <code>Promise</code> и возвращает полученное значение.</p>
 
 <pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
@@ -54,7 +54,7 @@ f1();
 f2();
 </pre>
 
-<p>Если <code>Promise</code> отклонён, то выбрасывается исключение с переданным значением.</p>
+<p>Если <code>Promise</code> отклонён, то выбрасывается исключение с переданным значением.</p>
 
 <pre class="brush: js">async function f3() {
   try {
@@ -65,7 +65,7 @@ f2();
 }
 f3();</pre>
 
-<p>Обработка отклонённого <code>Promise</code> без <code>try/catch</code> блока.</p>
+<p>Обработка отклонённого <code>Promise</code> без <code>try/catch</code> блока.</p>
 
 <pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.log(err); });
 // response получит значение undefined, если Promise будет отклонён

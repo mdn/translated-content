@@ -9,28 +9,28 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexb
 
 <h2 id="История_flexbox">История flexbox</h2>
 
-<p>Как  и все спецификации CSS, flexbox претерпела огромное количество изменений, прежде чем стать Кандидатом в рекомендации W3C. У спецификации в этом статусе не должно быть значительных изменений, однако с предыдущими итерациями все было иначе.</p>
+<p>Как  и все спецификации CSS, flexbox претерпела огромное количество изменений, прежде чем стать Кандидатом в рекомендации W3C. У спецификации в этом статусе не должно быть значительных изменений, однако с предыдущими итерациями все было иначе.</p>
 
-<p>Flexbox был реализован экспериментальным путём в нескольких браузерах. В то время метод создания экспериментальных реализаций подразумевал использование вендорных префиксов. Идея этих префиксов была в том, чтобы позволить инженерам браузеров и веб-разработчикам исследовать и протестировать новшества спецификации без конфликтов с другими реализациями. Идея заключалась в том, чтобы не использовать экспериментальные реализации на продакшене. Однако, в конечном счёте префиксы всё равно попали в продакшн, и изменения в экспериментальной спецификации вынудили людей обновлять сайты, чтобы этой самой спецификации соответствовать.</p>
+<p>Flexbox был реализован экспериментальным путём в нескольких браузерах. В то время метод создания экспериментальных реализаций подразумевал использование вендорных префиксов. Идея этих префиксов была в том, чтобы позволить инженерам браузеров и веб-разработчикам исследовать и протестировать новшества спецификации без конфликтов с другими реализациями. Идея заключалась в том, чтобы не использовать экспериментальные реализации на продакшене. Однако, в конечном счёте префиксы всё равно попали в продакшн, и изменения в экспериментальной спецификации вынудили людей обновлять сайты, чтобы этой самой спецификации соответствовать.</p>
 
-<p><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">В 2009</a> спецификация выглядела совсем по-другому. Чтобы создать flex-контейнер, вам нужно было использовать <code>display: box</code> и несколько <code>box-*</code> свойств, которые делали то, что сегодня вы понимаете под flexbox.</p>
+<p><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">В 2009</a> спецификация выглядела совсем по-другому. Чтобы создать flex-контейнер, вам нужно было использовать <code>display: box</code> и несколько <code>box-*</code> свойств, которые делали то, что сегодня вы понимаете под flexbox.</p>
 
-<p>Очередное <a href="https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">обновление</a> спецификации поменяло синтаксис на <code>display: flexbox</code> — и опять с вендорными префиксами.</p>
+<p>Очередное <a href="https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">обновление</a> спецификации поменяло синтаксис на <code>display: flexbox</code> — и опять с вендорными префиксами.</p>
 
-<p>В конечном счёте спецификация была обновлена, чтобы определить <code>display: flex</code> как способ создания flex-контейнера. Начиная с этого момента поддержка браузерами обновлённой версии спецификации отличная.</p>
+<p>В конечном счёте спецификация была обновлена, чтобы определить <code>display: flex</code> как способ создания flex-контейнера. Начиная с этого момента поддержка браузерами обновлённой версии спецификации отличная.</p>
 
-<p>Существует несколько старых статей, которые описывают более ранние версии flexbox, их довольно легко вычислить по тому, как они описывают создание flex-контейнера. Если вы нашли что-то вроде  <code>display: box</code> или <code>display: flexbox</code>, то это уже устаревшая информация.</p>
+<p>Существует несколько старых статей, которые описывают более ранние версии flexbox, их довольно легко вычислить по тому, как они описывают создание flex-контейнера. Если вы нашли что-то вроде  <code>display: box</code> или <code>display: flexbox</code>, то это уже устаревшая информация.</p>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>Браузеры отлично поддерживают flexbox, и на данный момент большинству из них не нужны префиксы для этого. Safari последним из основных браузеров избавился от префиксов после релиза Safari 9 в 2015. Два браузера, о которых вам нужно помнить для обеспечения кроссбраузерности, это:</p>
+<p>Браузеры отлично поддерживают flexbox, и на данный момент большинству из них не нужны префиксы для этого. Safari последним из основных браузеров избавился от префиксов после релиза Safari 9 в 2015. Два браузера, о которых вам нужно помнить для обеспечения кроссбраузерности, это:</p>
 
 <ul>
- <li>Internet Explorer 10, который внедрил <code>display: flexbox</code> версию спецификации с префиксом <code>-ms-</code>.</li>
- <li>UC Browser, который все ещё поддерживает спецификацию версии 2009 год с <code>display: box</code> и префиксом <code>-webkit-</code>.</li>
+ <li>Internet Explorer 10, который внедрил <code>display: flexbox</code> версию спецификации с префиксом <code>-ms-</code>.</li>
+ <li>UC Browser, который все ещё поддерживает спецификацию версии 2009 год с <code>display: box</code> и префиксом <code>-webkit-</code>.</li>
 </ul>
 
-<p>Также возьмите на заметку, что Explorer 11 поддерживает современный <code>display: flex,</code> однако не без багов.</p>
+<p>Также возьмите на заметку, что Explorer 11 поддерживает современный <code>display: flex,</code> однако не без багов.</p>
 
 <h2 id="Common_issues">Common issues</h2>
 
@@ -54,12 +54,12 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexb
 <h3 id="Floated_items">Floated items</h3>
 
 <blockquote>
-<p>“float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers">3. Flex Containers</a></p>
+<p>“float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers">3. Flex Containers</a></p>
 </blockquote>
 
 <p>In the following live example, I have floated two blocks and then set <code>display: flex</code> on the container. The items are now flex items, which means they stretch to equal height. Any float behaviour does not apply.</p>
 
-<p>You can test the fallback behaviour by removing <code>display: flex</code> from the wrapper.</p>
+<p>You can test the fallback behaviour by removing <code>display: flex</code> from the wrapper.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/float.html", '100%', 550)}}</p>
 
@@ -80,7 +80,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexb
 <p>If you then declare <code>display: flex</code> on the parent item, these anonymous boxes do not get created and so your item remains a direct child and can become a flex item — losing any of the table display features.</p>
 
 <blockquote>
-<p>“Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">4. Flex Items</a></p>
+<p>“Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table.” - <a href="https://www.w3.org/TR/css-flexbox-1/#flex-items">4. Flex Items</a></p>
 </blockquote>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}</p>

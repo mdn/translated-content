@@ -32,23 +32,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h2 id="Description">Описание</h2>
 
-<p>Метод <code>bind()</code> создаёт новую "<strong>привязанную функцию</strong>" (<strong>ПФ</strong>).  <strong>ПФ</strong> <span class="translation-chunk">- это "необычный </span> <span class="translation-chunk">функциональный объект" ( термин из </span> <strong>ECMAScript 6</strong> <span class="translation-chunk"> ), который является обёрткой над исходным </span> <span class="translation-chunk">функциональным объектом. Вызов </span> <strong>ПФ</strong> <span class="translation-chunk">  приводит к исполнению кода обёрнутой функции.</span></p>
+<p>Метод <code>bind()</code> создаёт новую "<strong>привязанную функцию</strong>" (<strong>ПФ</strong>).  <strong>ПФ</strong> <span class="translation-chunk">- это "необычный </span> <span class="translation-chunk">функциональный объект" ( термин из </span> <strong>ECMAScript 6</strong> <span class="translation-chunk"> ), который является обёрткой над исходным </span> <span class="translation-chunk">функциональным объектом. Вызов </span> <strong>ПФ</strong> <span class="translation-chunk">  приводит к исполнению кода обёрнутой функции.</span></p>
 
 <p><strong>ПФ</strong> <span class="translation-chunk"> имеет следующие внутренние ( скрытые ) свойства:</span></p>
 
 <ul>
- <li><span class="translation-chunk"><strong>[[BoundTargetFunction]]</strong> - оборачиваемый  (целевой ) </span> <span class="translation-chunk">функциональный </span><span class="translation-chunk">объект</span></li>
- <li><span class="translation-chunk"><strong>[[BoundThis]]</strong> - значение, которое всегда передаётся в качестве значения   <strong>this </strong>при вызове обёрнутой функции.</span></li>
+ <li><span class="translation-chunk"><strong>[[BoundTargetFunction]]</strong> - оборачиваемый  (целевой ) </span> <span class="translation-chunk">функциональный </span><span class="translation-chunk">объект</span></li>
+ <li><span class="translation-chunk"><strong>[[BoundThis]]</strong> - значение, которое всегда передаётся в качестве значения   <strong>this </strong>при вызове обёрнутой функции.</span></li>
  <li><span class="translation-chunk"><strong>[[BoundArguments]] </strong>- список значений, элементы которого используются в качестве первого аргумента при вызове оборачиваемой функции.</span></li>
- <li><strong><span class="translation-chunk">[[</span>Call</strong><span class="translation-chunk"><strong>]] </strong>- внутренний метод. Выполняет код (функциональное выражение), связанный с функциональным объектом. </span></li>
+ <li><strong><span class="translation-chunk">[[</span>Call</strong><span class="translation-chunk"><strong>]] </strong>- внутренний метод. Выполняет код (функциональное выражение), связанный с функциональным объектом. </span></li>
 </ul>
 
 <p><span class="translation-chunk">Когда <strong>ПФ </strong>вызывается, исполняется её внутренний метод </span> <strong>[[Call]]</strong> <span class="translation-chunk"> со следующими аргументами </span> <strong>Call(<em>target</em>, <em>boundThis</em>, <em>args</em>).</strong></p>
 
 <ul>
- <li><strong><em>target</em></strong> <span class="translation-chunk">  -    <strong>[[BoundTargetFunction]]</strong>;</span></li>
- <li><span class="translation-chunk"><em><strong>boundThis </strong></em></span><em><strong> <span class="translation-chunk"> </span> </strong></em><span class="translation-chunk"><em><strong>  </strong></em>-    </span><strong> </strong><span class="translation-chunk"><strong>[[BoundThis]]</strong>;</span></li>
- <li><em><strong>args  </strong></em> -  <strong> <span class="translation-chunk">[[BoundArguments]].</span></strong></li>
+ <li><strong><em>target</em></strong> <span class="translation-chunk">  -    <strong>[[BoundTargetFunction]]</strong>;</span></li>
+ <li><span class="translation-chunk"><em><strong>boundThis </strong></em></span><em><strong> <span class="translation-chunk"> </span> </strong></em><span class="translation-chunk"><em><strong>  </strong></em>-    </span><strong> </strong><span class="translation-chunk"><strong>[[BoundThis]]</strong>;</span></li>
+ <li><em><strong>args  </strong></em> -  <strong> <span class="translation-chunk">[[BoundArguments]].</span></strong></li>
 </ul>
 
 <p>Привязанная функция также может быть сконструирована с помощью оператора {{jsxref("Operators/new", "new")}}: это работает так, как если бы вместо неё конструировалась целевая функция. Предоставляемое значение <code>this</code> в этом случае игнорируется, хотя ведущие аргументы всё ещё передаются в эмулируемую функцию.</p>
@@ -57,12 +57,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h3 id="Example:_Creating_a_bound_function">Пример: создание привязанной функции</h3>
 
-<p>Простейшим способом использования <code>bind()</code> является создание функции, которая, вне зависимости от способа её вызова, вызывается с определённым значением <code>this</code>. Обычным заблуждением для новичков в JavaScript является извлечение метода из объекта с целью его дальнейшего вызова в качестве функции и ожидание того, что он будет использовать оригинальный объект в качестве своего значения <code>this</code> (например, такое может случиться при использовании метода как колбэк-функции). Однако, без специальной обработки, оригинальный объект зачастую теряется. Создание привязанной функции из функции, использующей оригинальный объект, изящно решает эту проблему:</p>
+<p>Простейшим способом использования <code>bind()</code> является создание функции, которая, вне зависимости от способа её вызова, вызывается с определённым значением <code>this</code>. Обычным заблуждением для новичков в JavaScript является извлечение метода из объекта с целью его дальнейшего вызова в качестве функции и ожидание того, что он будет использовать оригинальный объект в качестве своего значения <code>this</code> (например, такое может случиться при использовании метода как колбэк-функции). Однако, без специальной обработки, оригинальный объект зачастую теряется. Создание привязанной функции из функции, использующей оригинальный объект, изящно решает эту проблему:</p>
 
 <pre class="brush: js">this.x = 9;
 var module = {
-  x: 81,
-  getX: function() { return this.x; }
+  x: 81,
+  getX: function() { return this.x; }
 };
 
 module.getX(); // 81
@@ -219,7 +219,7 @@ slice(arguments);
 
 <ul>
  <li>Частичная реализация предполагает, что методы {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} и {{jsxref("Function.prototype.apply()")}} являются встроенными, имеют своё первоначальное значение.</li>
- <li>Частичная реализация создаёт функции, не имеющие неизменяемых свойств «отравленной пилюли» — {{jsxref("Function.caller", "caller")}} и <code>arguments</code> — которые выбрасывают исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} при попытке получить, установить или удалить эти свойства. (Такие свойства могут быть добавлены, если реализация поддерживает {{jsxref("Object.defineProperty")}}, либо частично реализованы [без поведения исключение-при-попытке-удаления], если реализация поддерживает расширения {{jsxref("Object.defineGetter", "__defineGetter__")}} и {{jsxref("Object.defineSetter", "__defineSetter__")}}.)</li>
+ <li>Частичная реализация создаёт функции, не имеющие неизменяемых свойств «отравленной пилюли» — {{jsxref("Function.caller", "caller")}} и <code>arguments</code> — которые выбрасывают исключение {{jsxref("Global_Objects/TypeError", "TypeError")}} при попытке получить, установить или удалить эти свойства. (Такие свойства могут быть добавлены, если реализация поддерживает {{jsxref("Object.defineProperty")}}, либо частично реализованы [без поведения исключение-при-попытке-удаления], если реализация поддерживает расширения {{jsxref("Object.defineGetter", "__defineGetter__")}} и {{jsxref("Object.defineSetter", "__defineSetter__")}}.)</li>
  <li>Частичная реализация создаёт функции, имеющие свойство <code>prototype</code>. (Правильная привязанная функция его не имеет.)</li>
  <li>Частичная реализация создаёт привязанные функции, чьё свойство {{jsxref("Function.length", "length")}} не соответствует с определением в ECMA-262; оно равно 0, в то время, как полная реализация, в зависимости от значения свойства <code>length</code> целевой функции и количества предопределённых аргументов, может вернуть значение, отличное от нуля.</li>
 </ul>

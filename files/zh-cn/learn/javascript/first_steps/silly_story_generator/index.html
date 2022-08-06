@@ -36,10 +36,10 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 
 <h2 id="起点">起点</h2>
 
-<p>测验开始之前需要下载并保存 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html">index.html</a>、<a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/style.css">style.css</a>、<a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt">raw-text.txt</a>。</p>
+<p>测验开始之前需要下载并保存 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html">index.html</a>、<a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/style.css">style.css</a>、<a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt">raw-text.txt</a>。</p>
 
 <div class="note">
-<p><strong>注：</strong> 你还可以用类似 <a href="http://jsbin.com/">JSBin</a> 或 <a href="https://glitch.com/">Glitch</a> 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 <code>&lt;script&gt;</code> 元素。</p>
+<p><strong>注：</strong> 你还可以用类似 <a href="http://jsbin.com/">JSBin</a> 或 <a href="https://glitch.com/">Glitch</a> 这些在线编辑器来完成测验。你可以把 HTML、CSS 及 JavaScript 代码复制过去。如果你选的工具没有独立的 JavaScript 版面，可以随时在 HTML 页面中添加 <code>&lt;script&gt;</code> 元素。</p>
 </div>
 
 <h2 id="项目简介">项目简介</h2>
@@ -94,8 +94,8 @@ translation_of: Learn/JavaScript/First_steps/Silly_story_generator
     &lt;input id="customname" type="text" placeholder="李雷"&gt;
 &lt;/div&gt;
 &lt;div&gt;
-      &lt;label for="metric"&gt;公制&lt;/label&gt;&lt;input id="metric" type="radio" name="measure" value="metric" checked&gt;
-      &lt;label for="american"&gt;美制&lt;/label&gt;&lt;input id="american" type="radio" name="measure" value="american"&gt;
+      &lt;label for="metric"&gt;公制&lt;/label&gt;&lt;input id="metric" type="radio" name="measure" value="metric" checked&gt;
+      &lt;label for="american"&gt;美制&lt;/label&gt;&lt;input id="american" type="radio" name="measure" value="american"&gt;
 &lt;/div&gt;
 &lt;div&gt;
     &lt;button class="randomize"&gt;随机生成笑话&lt;/button&gt;
@@ -109,8 +109,8 @@ const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 function randomValueFromArray(array){
-  const random = Math.floor(Math.random() * array.length);
-  return array[random];
+  const random = Math.floor(Math.random() * array.length);
+  return array[random];
 }
 
 let storyText = '今天气温 35 摄氏度，:insertx:出门散步。当走到:inserty:门前时，突然就:insertz:。人们都惊呆了，李雷全程目睹但并没有慌，因为:insertx:是一个 140 公斤的胖子，天气又辣么热。';
@@ -121,31 +121,31 @@ let insertZ = ['自燃了', '在人行道化成了一坨泥', '变成一只鼻�
 randomize.addEventListener('click', result);
 
 function result() {
-  let newStory = storyText;
+  let newStory = storyText;
 
-  let xItem = randomValueFromArray(insertX);
-  let yItem = randomValueFromArray(insertY);
-  let zItem = randomValueFromArray(insertZ);
+  let xItem = randomValueFromArray(insertX);
+  let yItem = randomValueFromArray(insertY);
+  let zItem = randomValueFromArray(insertZ);
 
-  newStory = newStory.replace(':insertx:', xItem);
-  newStory = newStory.replace(':insertx:', xItem);
-  newStory = newStory.replace(':inserty:', yItem);
-  newStory = newStory.replace(':insertz:', zItem);
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem);
 
-  if(customName.value !== '') {
-    const name = customName.value;
-    newStory = newStory.replace('李雷', name);
-  }
+  if(customName.value !== '') {
+    const name = customName.value;
+    newStory = newStory.replace('李雷', name);
+  }
 
-  if(document.getElementById("american").checked) {
-    const weight = Math.round(140 * 2.20462) + ' 磅';
-    const temperature =  Math.round(35 * 9 / 5 + 32) + ' 华氏度';
-    newStory = newStory.replace('35 摄氏度', temperature);
-    newStory = newStory.replace('140 公斤', weight);
-  }
+  if(document.getElementById("american").checked) {
+    const weight = Math.round(140 * 2.20462) + ' 磅';
+    const temperature =  Math.round(35 * 9 / 5 + 32) + ' 华氏度';
+    newStory = newStory.replace('35 摄氏度', temperature);
+    newStory = newStory.replace('140 公斤', weight);
+  }
 
-  story.textContent = newStory;
-  story.style.visibility = 'visible';
+  story.textContent = newStory;
+  story.style.visibility = 'visible';
 }
 &lt;/script&gt;
 
@@ -156,7 +156,7 @@ function result() {
 <p>{{ EmbedLiveSample('Silly_story_generator', '100%', 350, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>译注： </strong><a class="external external-icon">点击在线试用</a> 汉化版本。有兴趣还可以在本节结束后回来 <a href="https://github.com/roy-tian/learning-area/tree/master/javascript/introduction-to-js-1/assessment-finished">看看代码</a>。（没兴趣就跳过吧 :）</p>
+<p><strong>译注： </strong><a class="external external-icon">点击在线试用</a> 汉化版本。有兴趣还可以在本节结束后回来 <a href="https://github.com/roy-tian/learning-area/tree/master/javascript/introduction-to-js-1/assessment-finished">看看代码</a>。（没兴趣就跳过吧 :）</p>
 </div>
 
 <h2 id="步骤">步骤</h2>
@@ -166,13 +166,13 @@ function result() {
 <p>初始化变量和函数：</p>
 
 <ol>
- <li>将刚下载的文本文件中的“1. 定义变量和函数”标题项下所有代码复制粘贴至 main.js 中。此时你就有了三个变量（<code>customName</code> 是对“输入自定义的名字”文本框的引用，<code>randomize</code> 是对“随机生成笑话”按钮的引用，<code>story</code> 是对 HTML 底部的、准备存放笑话的 {{htmlelement("p")}} 元素的引用）和一个函数（<code>randomValueFromArray()</code> 取一个数组作参数，随机返回数组中的一个元素）。</li>
- <li>然后是文本文件的第二节——“2. 纯文本字符串”。这里包含了一些字符串，这些字符串是项目的输入信息。你应该在 main.js 文件中用变量来保存它们。
+ <li>将刚下载的文本文件中的“1. 定义变量和函数”标题项下所有代码复制粘贴至 main.js 中。此时你就有了三个变量（<code>customName</code> 是对“输入自定义的名字”文本框的引用，<code>randomize</code> 是对“随机生成笑话”按钮的引用，<code>story</code> 是对 HTML 底部的、准备存放笑话的 {{htmlelement("p")}} 元素的引用）和一个函数（<code>randomValueFromArray()</code> 取一个数组作参数，随机返回数组中的一个元素）。</li>
+ <li>然后是文本文件的第二节——“2. 纯文本字符串”。这里包含了一些字符串，这些字符串是项目的输入信息。你应该在 main.js 文件中用变量来保存它们。
   <ol>
    <li>用 <code>storyText</code> 变量保存第一个长字符串，“今天气温……”。</li>
    <li>用 <code>insertX</code> 数组保存第一组三个字符串，“怪兽威利……”。</li>
    <li>用 <code>insertY</code> 数组保存第二组三个字符串。“肯德基……”。</li>
-   <li>用 <code>insertZ</code> 数组保存第三组三个字符串。“自燃了……”。</li>
+   <li>用 <code>insertZ</code> 数组保存第三组三个字符串。“自燃了……”。</li>
   </ol>
  </li>
 </ol>
@@ -189,17 +189,17 @@ function result() {
  </li>
 </ol>
 
-<p>补全 <code>result()</code> 函数：</p>
+<p>补全 <code>result()</code> 函数：</p>
 
 <ol>
  <li>将 <code>newStory</code> 的值设置为 <code>storyText</code>。声明新变量有必要的，只有这样才能在每次按下按钮后、在函数运行时生成一个新的随机笑话。如果直接操作 <code>storyText</code> 则只能生成一次新故事</li>
- <li>将 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code> 分别设置为 <code>randomValueFromArray(insertX)</code>、<code>randomValueFromArray(insertY)</code> 和 <code>randomValueFromArray(insertZ)</code>。</li>
- <li>接下来将 <code>newStory</code> 中的占位符（<code>:inserta:</code>、<code>:insertb:</code> 和 <code>:insertc:</code> ）替换为 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code>。有专用的字符串方法可供使用，并用该方法的返回值为 <code>newStory</code> 赋值。每当按下按钮时，这些占位符都会替换为随机的笑话字符串。再给你一点提示，我们所说的这种方法每次只会将所找到的首个子字符串进行替换，因此该方法对某个占位符需要执行两次。</li>
- <li>在第一个 <code>if</code> 块中再次调用这个字符串替换方法，以使 <code>newStory</code> 字符串中的名字“李雷”替换为变量 <code>name</code> 的值。这里我们说：“如果 <code>customName</code> 中有值，就把故事里的“李雷”替换成它。”如果是汉化版将 newStory 中的“李雷”替换成 <code>name</code> 的值；</li>
- <li>在第二个 <code>if</code> 块中检查 <code>american</code> 单选按钮是否被选中。如果选中，就要将故事中的重量和温度值从公斤和摄氏度转换为磅和华氏度，具体事项如下：
+ <li>将 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code> 分别设置为 <code>randomValueFromArray(insertX)</code>、<code>randomValueFromArray(insertY)</code> 和 <code>randomValueFromArray(insertZ)</code>。</li>
+ <li>接下来将 <code>newStory</code> 中的占位符（<code>:inserta:</code>、<code>:insertb:</code> 和 <code>:insertc:</code> ）替换为 <code>xItem</code>、<code>yItem</code> 和 <code>zItem</code>。有专用的字符串方法可供使用，并用该方法的返回值为 <code>newStory</code> 赋值。每当按下按钮时，这些占位符都会替换为随机的笑话字符串。再给你一点提示，我们所说的这种方法每次只会将所找到的首个子字符串进行替换，因此该方法对某个占位符需要执行两次。</li>
+ <li>在第一个 <code>if</code> 块中再次调用这个字符串替换方法，以使 <code>newStory</code> 字符串中的名字“李雷”替换为变量 <code>name</code> 的值。这里我们说：“如果 <code>customName</code> 中有值，就把故事里的“李雷”替换成它。”如果是汉化版将 newStory 中的“李雷”替换成 <code>name</code> 的值；</li>
+ <li>在第二个 <code>if</code> 块中检查 <code>american</code> 单选按钮是否被选中。如果选中，就要将故事中的重量和温度值从公斤和摄氏度转换为磅和华氏度，具体事项如下：
   <ol>
    <li>确定英美单位的转换公式。</li>
-   <li>定义变量 <code>weight</code>、<code>temperature</code> 的行中，分别将美制单位按公式转化为英制，用 <code>Math.round()</code> 对计算结果取整。然后将英式单位连接到末尾。</li>
+   <li>定义变量 <code>weight</code>、<code>temperature</code> 的行中，分别将美制单位按公式转化为英制，用 <code>Math.round()</code> 对计算结果取整。然后将英式单位连接到末尾。</li>
    <li>就在上述两个变量的定义下方增加两个字符串置换操作，将“35 摄氏度”替换为 <code>temperature</code> 的值，将“140 公斤”替换为 <code>weight</code> 的值。</li>
   </ol>
  </li>
@@ -215,12 +215,12 @@ function result() {
   <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.querySelector('html').style.backgroundColor = 'red';</code></pre>
  </li>
  <li><code class="language-js"><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round()</a></code> 是 Javascript 的内建函数，可取得与传入小数最接近的整数。</li>
- <li>本示例中有三类字符串需要替换。可以多次重复 <code>replace()</code> 方法，也可使用正则表达式。例如：<code>var text = 'I am the biggest lover, I love my love';</code> 或 <code>text.replace(/love/g,'like');</code> 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！</li>
+ <li>本示例中有三类字符串需要替换。可以多次重复 <code>replace()</code> 方法，也可使用正则表达式。例如：<code>var text = 'I am the biggest lover, I love my love';</code> 或 <code>text.replace(/love/g,'like');</code> 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！</li>
 </ul>
 
 <h2 id="测验">测验</h2>
 
-<p>如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 <a href="https://discourse.mozilla.org/t/silly-story-generator-assessment/24686">本节测验的讨论页</a> 或者 <a href="https://wiki.mozilla.org/IRC">Mozilla 聊天室 </a>的 <a href="irc://irc.mozilla.org/mdn">#mdn</a> 频道取得帮助。要自己先尝试，作弊是不会有收获的！</p>
+<p>如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 <a href="https://discourse.mozilla.org/t/silly-story-generator-assessment/24686">本节测验的讨论页</a> 或者 <a href="https://wiki.mozilla.org/IRC">Mozilla 聊天室 </a>的 <a href="irc://irc.mozilla.org/mdn">#mdn</a> 频道取得帮助。要自己先尝试，作弊是不会有收获的！</p>
 
 <p>{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</p>
 

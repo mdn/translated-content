@@ -39,15 +39,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/concat
 
 <p>El método <code>concat</code> crea un nuevo array que consta de los elementos del objeto que lo llama, seguido, en orden de ingreso, por los elementos de cada parámetro (en caso de que el parámetro sea un array), o el parámetro mismo (en caso de que no sea un array). No se aplica de forma recursiva a parámetros con arreglos anidados.</p>
 
-<p>El método <code>concat</code> no altera <code>this</code> el array original, ni ninguno de los que fueron ingresados como parámetros, sino que devuelve una copia superficial que contiene copias de los mismos elementos de los arrays originales combinados. Los elementos de los arrays originales son copiados en el nuevo array de la siguiente manera:</p>
+<p>El método <code>concat</code> no altera <code>this</code> el array original, ni ninguno de los que fueron ingresados como parámetros, sino que devuelve una copia superficial que contiene copias de los mismos elementos de los arrays originales combinados. Los elementos de los arrays originales son copiados en el nuevo array de la siguiente manera:</p>
 
 <ul>
- <li>Referencias a Objetos (no el objeto real): <code>concat</code> copia las referencias de objetos en el nuevo array. Ambos, el array original y el nuevo refieren al mismo objeto. Es decir, si un objeto referenciado es modificado, los cambios serán visibles tanto en el array nuevo como en el antiguo.</li>
- <li>Tipo de de datos como cadenas, números y boleanos (no objetos {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}} o {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): <code>concat</code> copia los valores de los strings y numeros en el nuevo array.</li>
+ <li>Referencias a Objetos (no el objeto real): <code>concat</code> copia las referencias de objetos en el nuevo array. Ambos, el array original y el nuevo refieren al mismo objeto. Es decir, si un objeto referenciado es modificado, los cambios serán visibles tanto en el array nuevo como en el antiguo.</li>
+ <li>Tipo de de datos como cadenas, números y boleanos (no objetos {{jsxref("Global_Objects/String", "String")}}, {{jsxref("Global_Objects/Number", "Number")}} o {{jsxref("Global_Objects/Boolean", "Boolean")}} objects): <code>concat</code> copia los valores de los strings y numeros en el nuevo array.</li>
 </ul>
 
 <div class="note">
-<p><strong>Nota:</strong> Al concatenar arrays o valores no se modificarán los originales. Además, las operaciones en el nuevo array (excepto las operaciones en elementos que son referencias a objetos) no tendrán efecto en el array original, y viceversa.</p>
+<p><strong>Nota:</strong> Al concatenar arrays o valores no se modificarán los originales. Además, las operaciones en el nuevo array (excepto las operaciones en elementos que son referencias a objetos) no tendrán efecto en el array original, y viceversa.</p>
 </div>
 
 <h2 id="Ejemplos">Ejemplos</h2>
@@ -91,7 +91,7 @@ console.log(alphaNumeric);
 
 <h3 id="Concatenando_arrays_anidados">Concatenando arrays anidados</h3>
 
-<p>En el siguiente código concatena arrays anidados y demuestra retención de referencias:</p>
+<p>En el siguiente código concatena arrays anidados y demuestra retención de referencias:</p>
 
 <pre class="brush: js">var num1 = [[1]];
 var num2 = [2, [3]];
@@ -133,9 +133,9 @@ console.log(nums);
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li>{{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — añadir/eliminar elementos desde el fin del array</li>
- <li>{{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — añadir/eliminar elementos desde el comienzo del array</li>
- <li>{{jsxref("Array.splice", "splice")}} — añadir/eliminar elementos desde una posición específica del array</li>
+ <li>{{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} — añadir/eliminar elementos desde el fin del array</li>
+ <li>{{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} — añadir/eliminar elementos desde el comienzo del array</li>
+ <li>{{jsxref("Array.splice", "splice")}} — añadir/eliminar elementos desde una posición específica del array</li>
  <li>{{jsxref("String.prototype.concat()")}}</li>
  <li>{{jsxref("Symbol.isConcatSpreadable")}} – controla el flattening (aplanamiento).</li>
 </ul>

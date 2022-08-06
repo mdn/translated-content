@@ -21,13 +21,13 @@ original_slug: Aprender/Getting_started_with_the_web/lidando_com_arquivos
 <p>Um site consiste de muitos arquivos: conteúdo em texto, código, folhas de estilo, conteúdo em mídia e por aí vai. Ao criar um site, você precisa reunir esses arquivos em uma certa estrutura no computador local, certificar-se de que eles possam se comunicar e obter todo o conteúdo antes de <a href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site">enviá-los para o servidor</a>. <em>Lidando com Arquivos</em> discute algumas questões às quais você deve estar ciente para que você possa configurar uma estrutura de arquivos para o seu site.</p>
 </div>
 
-<h2 id="Onde_seu_site_deve_residir_no_seu_computador">Onde seu site deve residir no seu computador?</h2>
+<h2 id="Onde_seu_site_deve_residir_no_seu_computador">Onde seu site deve residir no seu computador?</h2>
 
-<p>Quando você está trabalhando em um site localmente no seu próprio computador, você deve manter todos os arquivos relacionados em uma mesma pasta que reflete a estrutura dos arquivos do site publicado em um servidor. Essa pasta pode estar em qualquer lugar que você quiser, mas você deve colocá-la em algum lugar de fácil acesso, talvez no Desktop, na sua pasta Home, ou na raiz do seu HD.</p>
+<p>Quando você está trabalhando em um site localmente no seu próprio computador, você deve manter todos os arquivos relacionados em uma mesma pasta que reflete a estrutura dos arquivos do site publicado em um servidor. Essa pasta pode estar em qualquer lugar que você quiser, mas você deve colocá-la em algum lugar de fácil acesso, talvez no Desktop, na sua pasta Home, ou na raiz do seu HD.</p>
 
 <ol>
- <li>Escolha um lugar para guardar seus projetos de site. Aqui, crie uma nova pasta chamada <code>projetos-web</code> (ou algo do tipo). Essa é a pasta onde todos seus projetos de site estarão.</li>
- <li>Dentro dessa pasta, crie outra pasta para guardar seu primeiro site. Chame ela de <code>site-teste</code> (ou algo mais criativo).</li>
+ <li>Escolha um lugar para guardar seus projetos de site. Aqui, crie uma nova pasta chamada <code>projetos-web</code> (ou algo do tipo). Essa é a pasta onde todos seus projetos de site estarão.</li>
+ <li>Dentro dessa pasta, crie outra pasta para guardar seu primeiro site. Chame ela de <code>site-teste</code> (ou algo mais criativo).</li>
 </ol>
 
 <h2 id="Deixando_de_lado_as_maiúsculas_e_espaços">Deixando de lado as maiúsculas e espaços</h2>
@@ -35,8 +35,8 @@ original_slug: Aprender/Getting_started_with_the_web/lidando_com_arquivos
 <p>Você vai perceber no decorrer desse artigo que nós pedimos para que você nomeie pastas e arquivos completamente em letras minúsculas e sem espaços. Isso acontece porque:</p>
 
 <ol>
- <li>Muitos computadores, particularmente servidores web, são case-sensitive. Então, por exemplo, se você colocar uma imagem no seu site em <code><span style="font-family: consolas,monaco,andale mono,monospace;">site-teste</span>/MyImage.jpg</code>, e então em um outro arquivo você tentar chamar <code><span style="font-family: consolas,monaco,andale mono,monospace;">site-teste</span>/myimage.jpg</code>, não vai funcionar.</li>
- <li>Navegadores, servidores web e linguagens de programação não lidam bem com espaços. Por exemplo, se você usa espaços no nome do seu arquivo, alguns sistemas vão tratar o nome do arquivo como dois nomes. Alguns servidores vão substituir os espaços no nome do arquivo por "%20" (o código para espaço em URLs), quebrando seus links. É melhor separar palavras com traços, em vez de sublinhado: <code> meu-arquivo.html</code> vs. <code>meu_arquivo.html</code>.</li>
+ <li>Muitos computadores, particularmente servidores web, são case-sensitive. Então, por exemplo, se você colocar uma imagem no seu site em <code><span style="font-family: consolas,monaco,andale mono,monospace;">site-teste</span>/MyImage.jpg</code>, e então em um outro arquivo você tentar chamar <code><span style="font-family: consolas,monaco,andale mono,monospace;">site-teste</span>/myimage.jpg</code>, não vai funcionar.</li>
+ <li>Navegadores, servidores web e linguagens de programação não lidam bem com espaços. Por exemplo, se você usa espaços no nome do seu arquivo, alguns sistemas vão tratar o nome do arquivo como dois nomes. Alguns servidores vão substituir os espaços no nome do arquivo por "%20" (o código para espaço em URLs), quebrando seus links. É melhor separar palavras com traços, em vez de sublinhado: <code> meu-arquivo.html</code> vs. <code>meu_arquivo.html</code>.</li>
 </ol>
 
 <p>A resposta curta é que você deve usar um hífen para os nomes dos arquivos. O mecanismo de pesquisa do Google trata um hífen como separador de palavras, mas não considera um sublinhado dessa maneira. Por esses motivos, é melhor criar o hábito de escrever sua pasta e nomes de arquivos em letras minúsculas, sem espaços e com palavras separadas por traços, pelo menos até você saber o que está fazendo. Dessa forma, você encontrará menos problemas no futuro.</p>
@@ -86,8 +86,8 @@ original_slug: Aprender/Getting_started_with_the_web/lidando_com_arquivos
 <ul>
  <li>Para linkar para um arquivo no mesmo diretório do arquivo HTML, apenas use o nome do arquivo, ex.: <code>my-image.jpg</code>.</li>
  <li>Para linkar um arquivo em um sub-diretório, escreva o nome do diretório na frente, mais uma barra, ex.: <code>subdirectory/my-image.jpg</code>.</li>
- <li>Para linkar um arquivo <strong>acima </strong>do arquivo HTML, use dois pontos. Então, por exemplo, se <code>index.html</code> estiver dentro de uma subpasta de <code>site-teste</code> e <code>my-image.png</code> estiver dentro de <code>site-teste</code>, você pode fazer referência a <code>my-image.png</code> em <code>index.html</code> usando <code>../my-image.png</code>.</li>
- <li>Você pode combinar isso como preferir, por exemplo <code>../subdiretorio/outro-subdiretorio/my-image.png</code>.</li>
+ <li>Para linkar um arquivo <strong>acima </strong>do arquivo HTML, use dois pontos. Então, por exemplo, se <code>index.html</code> estiver dentro de uma subpasta de <code>site-teste</code> e <code>my-image.png</code> estiver dentro de <code>site-teste</code>, você pode fazer referência a <code>my-image.png</code> em <code>index.html</code> usando <code>../my-image.png</code>.</li>
+ <li>Você pode combinar isso como preferir, por exemplo <code>../subdiretorio/outro-subdiretorio/my-image.png</code>.</li>
 </ul>
 
 <p>Por agora, isso é tudo o que precisamos saber.</p>

@@ -10,7 +10,7 @@ translation_of: Web/API/FileReader/FileReader
 ---
 <p>Конструктор <strong><code>FileReader()</code></strong> создаёт новый FileReader.</p>
 
-<p>Дополнительные сведения об использовании <code>FileReader</code>, смотрите в разделе <a href="/ru/docs/Web/API/File/Using_files_from_web_applications">Использование файлов из веб-приложений</a>.</p>
+<p>Дополнительные сведения об использовании <code>FileReader</code>, смотрите в разделе <a href="/ru/docs/Web/API/File/Using_files_from_web_applications">Использование файлов из веб-приложений</a>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -27,9 +27,9 @@ translation_of: Web/API/FileReader/FileReader
 <pre class="brush: js">function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
-    console.log(evt.target.result);
-  };
-  reader.readAsText(file);
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
 }
 </pre>
 

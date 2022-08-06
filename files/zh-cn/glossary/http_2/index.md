@@ -15,7 +15,7 @@ HTTP/2 不会修改 HTTP 协议的语义。HTTP 1.1 中的所有核心概念（�
 - 常识
 
   - [HTTP on MDN](/zh-CN/docs/Web/HTTP)
-  - {{interwiki("wikipedia", "HTTP/2", "HTTP/2")}} on Wikipedia
+  - [HTTP/2](https://zh.wikipedia.org/wiki/HTTP/2) on Wikipedia
 
 - [词汇表](/zh-CN/docs/Glossary)
 

@@ -5,21 +5,21 @@ translation_of: Web/API/MessageEvent
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>La interface <code><strong>MessageEvent</strong></code> representa un mensaje recibido por un objeto de destino.</p>
+<p>La interface <code><strong>MessageEvent</strong></code> representa un mensaje recibido por un objeto de destino.</p>
 
-<p>Este es usado  para representar mensajes en : </p>
+<p>Este es usado  para representar mensajes en : </p>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Server-sent_events">Eventos enviados por el servidor </a>(ver {{domxref("EventSource.onmessage")}}).</li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> (ver la propiedad <code>onmessage</code> de la interface <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> ).</li>
- <li>Mensajeria cruzada(ver {{domxref("Window.postMessage()")}} y {{domxref("Window.onmessage")}}).</li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> (ver la propiedad <code>onmessage</code> de la interface <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> ).</li>
+ <li>Mensajeria cruzada(ver {{domxref("Window.postMessage()")}} y {{domxref("Window.onmessage")}}).</li>
  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Mensajes de canal </a>(ver {{domxref("MessagePort.postMessage()")}} y {{domxref("MessagePort.onmessage")}}).</li>
- <li>Trabajo cruzado / Mensajes de texto (vea las dos entradas anteriores, pero también {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)</li>
+ <li>Trabajo cruzado / Mensajes de texto (vea las dos entradas anteriores, pero también {{domxref("Worker.postMessage()")}}, {{domxref("Worker.onmessage")}}, {{domxref("ServiceWorkerGlobalScope.onmessage")}}, etc.)</li>
  <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Canales de Transmisión</a>(ver{{domxref("Broadcastchannel.postMessage()")}}) y {{domxref("BroadcastChannel.onmessage")}}).</li>
- <li>Canal de datos WebRTC (ver {{domxref("RTCDataChannel.onmessage")}}).</li>
+ <li>Canal de datos WebRTC (ver {{domxref("RTCDataChannel.onmessage")}}).</li>
 </ul>
 
-<p>La acción desencadenada por este evento es definida en una función establecida como el controlador de eventos para el evento pertinente {{event("message")}} ( es decir :  Usando un manejador de <code>onmessage</code>  como se lista arriba).</p>
+<p>La acción desencadenada por este evento es definida en una función establecida como el controlador de eventos para el evento pertinente {{event("message")}} ( es decir :  Usando un manejador de <code>onmessage</code>  como se lista arriba).</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -32,19 +32,19 @@ translation_of: Web/API/MessageEvent
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<p><em>Esta interface tambien herada propiedadesde desde su padre {{domxref("Evento")}}.</em></p>
+<p><em>Esta interface tambien herada propiedadesde desde su padre {{domxref("Evento")}}.</em></p>
 
 <dl>
  <dt>{{domxref("MessageEvent.data")}} {{readonlyInline}}</dt>
  <dd>La información enviada por el emisor del mensaje.</dd>
  <dt>{{domxref("MessageEvent.origin")}} {{readonlyInline}}</dt>
- <dd>{{domxref("USVString")}} es una representacion del origen del emisor del mensaje. </dd>
+ <dd>{{domxref("USVString")}} es una representacion del origen del emisor del mensaje. </dd>
  <dt>{{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}</dt>
  <dd>{{domxref("DOMString")}} es una representación de una ID unico para el evento.</dd>
  <dt>{{domxref("MessageEvent.source")}} {{readonlyInline}}</dt>
- <dd>El <code>MessageEventSource</code> (El cual puede ser un {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) es ima representación del mensaje emitido.</dd>
+ <dd>El <code>MessageEventSource</code> (El cual puede ser un {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) es ima representación del mensaje emitido.</dd>
  <dt>{{domxref("MessageEvent.ports")}} {{readonlyInline}}</dt>
- <dd>Un  array de objetos {{domxref("MessagePort")}} representa los puertos asociados al canal, el mensaje se esta enviado a traves de (donde sea apropiado,  por ejemplo, en mensajes de canal o al enviar un mensaje a un trabajador compartido).</dd>
+ <dd>Un  array de objetos {{domxref("MessagePort")}} representa los puertos asociados al canal, el mensaje se esta enviado a traves de (donde sea apropiado,  por ejemplo, en mensajes de canal o al enviar un mensaje a un trabajador compartido).</dd>
 </dl>
 
 <h2 id="Metodos">Metodos</h2>
@@ -53,12 +53,12 @@ translation_of: Web/API/MessageEvent
 
 <dl>
  <dt>{{domxref("MessageEvent.initMessageEvent()")}} {{deprecated_inline}}</dt>
- <dd>Inicializar un vento de mensaje. <strong>No use esto mas </strong>— en vez de eso use el constructor <strong>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} .</strong></dd>
+ <dd>Inicializar un vento de mensaje. <strong>No use esto mas </strong>— en vez de eso use el constructor <strong>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}} .</strong></dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>En nuestro <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Ejemplo basico de trabajador compartido</a>(<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">Ejecutar trabajador compartdo </a>), Tenemos dos paginas HTML, cada una de las cuales usa algo de JavaScript para mejorar un calculo simple. Los diferentes scripts estan usando el mismo archivo de trabajo para mejorar el calculo — Ambos pueden accederlo,  Incluso si sus paginas esta corriendo n diferentes ventanas. </p>
+<p>En nuestro <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Ejemplo basico de trabajador compartido</a>(<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">Ejecutar trabajador compartdo </a>), Tenemos dos paginas HTML, cada una de las cuales usa algo de JavaScript para mejorar un calculo simple. Los diferentes scripts estan usando el mismo archivo de trabajo para mejorar el calculo — Ambos pueden accederlo,  Incluso si sus paginas esta corriendo n diferentes ventanas. </p>
 
 <p>The following code snippet shows creation of a <code>SharedWorker</code> object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:</p>
 
@@ -111,7 +111,7 @@ myWorker.port.onmessage = function(e) {
   <tr>
    <td>{{SpecName('HTML WHATWG', "#messageevent", "MessageEvent")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

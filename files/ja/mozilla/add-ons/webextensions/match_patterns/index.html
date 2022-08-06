@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>マッチパターンは URL のグループを指定する方法です。マッチパターンはいくつかの URL にマッチします。マッチパターンは WebExtensions API を使う拡張機能向けに、いくつかの場所で使用されます。特に<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">コンテンツスクリプト</a>をロードする文書を指定するときや、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code> リスナーを追加する URL を指定する時に使用します。</p>
 
-<p>マッチパターンを使用する API は通常マッチパターンのリストを受け取り、URL がパターンのいずれかにマッチする場合は適切なアクションを実行します。たとえば manifest.json 内の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを参照してください。</p>
+<p>マッチパターンを使用する API は通常マッチパターンのリストを受け取り、URL がパターンのいずれかにマッチする場合は適切なアクションを実行します。たとえば manifest.json 内の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーを参照してください。</p>
 
 <h2 id="Match_pattern_structure" name="Match_pattern_structure">マッチパターンの構造</h2>
 
@@ -18,13 +18,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
  詳しくは<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns$edit#Browser_compatibility">ブラウザー互換性テーブル</a>を見てください。</p>
 </div>
 
-<p>すべてのマッチパターンは文字列で指定します。特別な値<a href="/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E"> <code>&lt;all_urls&gt;</code></a> を除き、マッチパターンは３つの部分から成り立っています。 <em>scheme</em>, <em>host</em>, <em>path</em> です。 scheme と host の間は  <code>://</code> で句切られます。</p>
+<p>すべてのマッチパターンは文字列で指定します。特別な値<a href="/ja/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E"> <code>&lt;all_urls&gt;</code></a> を除き、マッチパターンは３つの部分から成り立っています。 <em>scheme</em>, <em>host</em>, <em>path</em> です。 scheme と host の間は  <code>://</code> で句切られます。</p>
 
 <pre class="notranslate">&lt;scheme&gt;://&lt;host&gt;&lt;path&gt;</pre>
 
 <h3 id="scheme" name="scheme">scheme</h3>
 
-<p> <em>scheme</em> 部は２つの形式のうち、どちらかを指定します。</p>
+<p> <em>scheme</em> 部は２つの形式のうち、どちらかを指定します。</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -84,7 +84,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 <p>その後、ワイルドカード <code>*</code> と、URL パスとして許可される文字とを組み合わせたものが続けて入るかもしれません。ホスト部と異なり、パス部はワイルドカード <code>*</code> を途中や終わりに含むことができて、さらに 2 つ以上の <code>*</code> を含められます。</p>
 
-<p><em>path</em> の値は、URL パスに <a href="https://en.wikipedia.org/wiki/Query_string">URL クエリーストリング</a>を加えた文字列と一致します。クエリーストリングがある場合、それらの間に <code>?</code> を含んでいます。例えば、<code>foo.bar</code> で終わる URL パスのあらゆるドメインに URL マッチしたい場合、マッチパターンは <code>['*://*/*foo.bar', '*://*/*foo.bar?*']</code>です。単に <code>bar*</code> ではなく <code>?*</code> は必要で、最後の <code>*</code> は URL クエリーストリングにも、URL パスの部分でないものにも適用するためです。</p>
+<p><em>path</em> の値は、URL パスに <a href="https://en.wikipedia.org/wiki/Query_string">URL クエリーストリング</a>を加えた文字列と一致します。クエリーストリングがある場合、それらの間に <code>?</code> を含んでいます。例えば、<code>foo.bar</code> で終わる URL パスのあらゆるドメインに URL マッチしたい場合、マッチパターンは <code>['*://*/*foo.bar', '*://*/*foo.bar?*']</code>です。単に <code>bar*</code> ではなく <code>?*</code> は必要で、最後の <code>*</code> は URL クエリーストリングにも、URL パスの部分でないものにも適用するためです。</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Fragment_identifier">URL フラグメント識別子</a>や、<code>#</code> の後についているものは、<em>path</em> とみなされません。</p>
 
@@ -238,7 +238,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
    <td>
     <p><code>https://*/path</code></p>
 
-    <p> HTTPS URL で path が "path"のホストのみマッチ</p>
+    <p> HTTPS URL で path が "path"のホストのみマッチ</p>
    </td>
    <td>
     <p><code>https://mozilla.org/path</code></p>

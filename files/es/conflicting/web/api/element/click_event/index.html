@@ -10,18 +10,18 @@ original_slug: Web/API/GlobalEventHandlers/onclick
 
 
 
-<p>La propiedad <strong>onclick</strong> devuelve el manejador del evento <code>click</code> del elemento actual.</p>
+<p>La propiedad <strong>onclick</strong> devuelve el manejador del evento <code>click</code> del elemento actual.</p>
 
-<div class="note"><strong>Note:</strong> Cuando uses el evento <code>click</code> para ejecutar algo, considera agregar la misma acción al evento <code>keydown</code>, para permitirle el uso a personas que no usan mouse o pantalla táctil.</div>
+<div class="note"><strong>Note:</strong> Cuando uses el evento <code>click</code> para ejecutar algo, considera agregar la misma acción al evento <code>keydown</code>, para permitirle el uso a personas que no usan mouse o pantalla táctil.</div>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
 <pre class="syntaxbox"><var>element</var>.onclick = <var>functionRef</var>;
 </pre>
 
-<p>Donde <em>functionRef</em> es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una <em>expresión de la función</em> .Ver "<a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript Guide:Functions</a>" para más detalles.</p>
+<p>Donde <em>functionRef</em> es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una <em>expresión de la función</em> .Ver "<a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript Guide:Functions</a>" para más detalles.</p>
 
-<p>el único argumento pasado a la función  manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, <code>this</code> será el elemento sobre él  el evento ha sido invocado.</p>
+<p>el único argumento pasado a la función  manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, <code>this</code> será el elemento sobre él  el evento ha sido invocado.</p>
 
 <h2 id="Example" name="Example">Ejemplo</h2>
 
@@ -62,7 +62,7 @@ original_slug: Web/API/GlobalEventHandlers/onclick
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
-<p>El evento <code>click</code> se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos <code>mousedown</code> y <code>mouseup</code>.</p>
+<p>El evento <code>click</code> se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos <code>mousedown</code> y <code>mouseup</code>.</p>
 
 <p>Solo se puede asignar un controlador <code>click</code> a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.</p>
 

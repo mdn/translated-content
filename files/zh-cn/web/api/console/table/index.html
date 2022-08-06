@@ -13,11 +13,11 @@ translation_of: Web/API/Console/table
 
 <p>将数据以表格的形式显示。</p>
 
-<p>这个方法需要一个必须参数 <code>data</code>，<code>data</code> 必须是一个数组或者是一个对象；还可以使用一个可选参数 <code>columns</code>。</p>
+<p>这个方法需要一个必须参数 <code>data</code>，<code>data</code> 必须是一个数组或者是一个对象；还可以使用一个可选参数 <code>columns</code>。</p>
 
 <p>它会把数据 <code>data</code> 以表格的形式打印出来。数组中的每一个元素（或对象中可枚举的属性）将会以行的形式显示在表格中。</p>
 
-<p>表格的第一列是 <code>index</code>。如果数据 <code>data</code> 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）<code>console.table</code> 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。</p>
+<p>表格的第一列是 <code>index</code>。如果数据 <code>data</code> 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）<code>console.table</code> 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -34,8 +34,8 @@ console.table(["apples", "oranges", "bananas"]);</pre>
 <pre class="brush: js">// 打印一个属性值是字符串的对象
 
 function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
 var me = new Person("John", "Smith");

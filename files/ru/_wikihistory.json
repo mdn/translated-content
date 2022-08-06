@@ -4169,22 +4169,6 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2020-09-09T11:16:44.121Z",
-    "contributors": [
-      "andrygreen777",
-      "S-inTheory",
-      "SphinxKnight",
-      "wbamberg",
-      "BychekRU",
-      "NekoBroadway",
-      "jswisher",
-      "gitzizou",
-      "warsan",
-      "Corba",
-      "uleming"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:49:58.338Z",
     "contributors": [
@@ -4194,28 +4178,7 @@
       "anmo"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2020-01-05T13:03:37.237Z",
-    "contributors": [
-      "Ivan961",
-      "lesha.boklag",
-      "seliverstova",
-      "wbamberg",
-      "scrum",
-      "lavr1986uxa",
-      "BychekRU",
-      "dstereo",
-      "Daniil",
-      "Unregistered45",
-      "Aleksej",
-      "0leg",
-      "teoli",
-      "mitabuba",
-      "ilya",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-09-30T17:52:35.205Z",
     "contributors": [
       "chrisdavidmills",
@@ -4229,7 +4192,7 @@
       "Palatovskaya"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-10-30T09:48:31.108Z",
     "contributors": [
       "ksam",
@@ -4257,6 +4220,33 @@
       "Vovan"
     ]
   },
+  "MDN/Community/Issues": {
+    "modified": "2020-10-30T08:02:44.010Z",
+    "contributors": [
+      "ksam"
+    ]
+  },
+  "MDN/Contribute": {
+    "modified": "2020-01-05T13:03:37.237Z",
+    "contributors": [
+      "Ivan961",
+      "lesha.boklag",
+      "seliverstova",
+      "wbamberg",
+      "scrum",
+      "lavr1986uxa",
+      "BychekRU",
+      "dstereo",
+      "Daniil",
+      "Unregistered45",
+      "Aleksej",
+      "0leg",
+      "teoli",
+      "mitabuba",
+      "ilya",
+      "Mars"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-01-16T19:24:18.760Z",
     "contributors": [
@@ -4271,77 +4261,11 @@
       "fuggy"
     ]
   },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-17T02:02:49.196Z",
-    "contributors": [
-      "wbamberg",
-      "irodger"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web": {
-    "modified": "2019-03-18T20:31:43.828Z",
-    "contributors": [
-      "MuradAz"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_and_edit_pages": {
-    "modified": "2020-04-10T13:36:06.534Z",
-    "contributors": [
-      "karifan8767",
-      "wbamberg",
-      "djigach",
-      "KaroHovhannisyan",
-      "Ferguse",
-      "vaser321",
-      "TemmyR",
-      "Servik17",
-      "vislogurov",
-      "Chronosms",
-      "BychekRU",
-      "SashaSh",
-      "Spiker"
-    ]
-  },
-  "MDN/Contribute/Howto/Report_a_problem": {
-    "modified": "2020-10-30T08:02:44.010Z",
-    "contributors": [
-      "ksam"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
-    "modified": "2020-07-17T02:29:17.890Z",
-    "contributors": [
-      "stefantsova",
-      "OrlovPetr",
-      "boxa6",
-      "wbamberg",
-      "MaryoneFrolova",
-      "chrootsu",
-      "bracket",
-      "MuradAz"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T00:00:52.853Z",
     "contributors": [
       "wbamberg",
       "warsan"
-    ]
-  },
-  "MDN/Guidelines": {
-    "modified": "2020-11-02T10:17:56.940Z",
-    "contributors": [
-      "ksam"
-    ]
-  },
-  "MDN/Structures": {
-    "modified": "2020-09-30T12:57:22.613Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "warsan",
-      "BychekRU",
-      "jswisher"
     ]
   },
   "MDN/Structures/Live_samples": {
@@ -4372,6 +4296,70 @@
     "modified": "2020-11-05T06:23:08.678Z",
     "contributors": [
       "ksam"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2020-09-09T11:16:44.121Z",
+    "contributors": [
+      "andrygreen777",
+      "S-inTheory",
+      "SphinxKnight",
+      "wbamberg",
+      "BychekRU",
+      "NekoBroadway",
+      "jswisher",
+      "gitzizou",
+      "warsan",
+      "Corba",
+      "uleming"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
+    "modified": "2020-04-10T13:36:06.534Z",
+    "contributors": [
+      "karifan8767",
+      "wbamberg",
+      "djigach",
+      "KaroHovhannisyan",
+      "Ferguse",
+      "vaser321",
+      "TemmyR",
+      "Servik17",
+      "vislogurov",
+      "Chronosms",
+      "BychekRU",
+      "SashaSh",
+      "Spiker"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
+    "modified": "2020-07-17T02:29:17.890Z",
+    "contributors": [
+      "stefantsova",
+      "OrlovPetr",
+      "boxa6",
+      "wbamberg",
+      "MaryoneFrolova",
+      "chrootsu",
+      "bracket",
+      "MuradAz"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T12:57:22.613Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "warsan",
+      "BychekRU",
+      "jswisher"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-17T02:02:49.196Z",
+    "contributors": [
+      "wbamberg",
+      "irodger"
     ]
   },
   "MDN/Yari": {
@@ -7806,26 +7794,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:57:01.164Z",
-    "contributors": [
-      "wbamberg",
-      "roman-dudin",
-      "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:57:03.709Z",
-    "contributors": [
-      "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:18:16.560Z",
     "contributors": [
@@ -8763,18 +8731,18 @@
       "Ibadichan"
     ]
   },
-  "Web/API/Media_Session_API": {
-    "modified": "2020-10-15T22:31:42.491Z",
-    "contributors": [
-      "sh7dm"
-    ]
-  },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
     "modified": "2020-02-17T09:19:46.393Z",
     "contributors": [
       "mechtool",
       "lolyanepizdi",
       "tifund"
+    ]
+  },
+  "Web/API/Media_Session_API": {
+    "modified": "2020-10-15T22:31:42.491Z",
+    "contributors": [
+      "sh7dm"
     ]
   },
   "Web/API/MouseEvent": {
@@ -10583,6 +10551,14 @@
       "WaveMeUp"
     ]
   },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:57:01.164Z",
+    "contributors": [
+      "wbamberg",
+      "roman-dudin",
+      "xercool"
+    ]
+  },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-23T22:08:49.378Z",
     "contributors": [
@@ -11067,6 +11043,12 @@
     "modified": "2019-03-23T22:29:58.839Z",
     "contributors": [
       "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
     ]
   },
   "Web/API/XMLHttpRequest/loadstart_event": {
@@ -16666,30 +16648,6 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-18T16:30:12.782Z",
-    "contributors": [
-      "HardKullez",
-      "qwerty-wasd",
-      "imalyavskiy",
-      "Davidnadejdin",
-      "SedovDP",
-      "metelskiy",
-      "wbamberg",
-      "rinbik",
-      "SphinxKnight",
-      "toolX",
-      "vherever",
-      "Megabyteceer",
-      "ndrsrv",
-      "NobbsNobby",
-      "Saviloff",
-      "makdeb",
-      "fscholz",
-      "esskia",
-      "ivan.p"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:39:43.277Z",
     "contributors": [
@@ -17017,15 +16975,6 @@
       "kichik",
       "askhat",
       "ixidor",
-      "uleming"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:58.256Z",
-    "contributors": [
-      "nnragmailcom",
-      "fscholz",
-      "teoli",
       "uleming"
     ]
   },
@@ -21984,13 +21933,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Manifest/dir": {
-    "modified": "2020-10-15T22:28:08.586Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
   "Web/Manifest/display": {
     "modified": "2020-10-15T22:28:07.850Z",
     "contributors": [
@@ -21998,22 +21940,8 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Manifest/iarc_rating_id": {
-    "modified": "2020-10-15T22:28:08.596Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
   "Web/Manifest/icons": {
     "modified": "2020-10-15T22:28:09.358Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/lang": {
-    "modified": "2020-10-15T22:28:09.577Z",
     "contributors": [
       "almaceleste",
       "chrisdavidmills"
@@ -23331,6 +23259,18 @@
       "Mingun"
     ]
   },
+  "conflicting/MDN/Writing_guidelines": {
+    "modified": "2020-11-02T10:17:56.940Z",
+    "contributors": [
+      "ksam"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-03-18T20:31:43.828Z",
+    "contributors": [
+      "MuradAz"
+    ]
+  },
   "conflicting/Mozilla/Add-ons": {
     "modified": "2019-03-23T23:58:39.567Z",
     "contributors": [
@@ -23599,6 +23539,12 @@
       "alexismaster"
     ]
   },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:57:03.709Z",
+    "contributors": [
+      "xercool"
+    ]
+  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": [
@@ -23795,6 +23741,39 @@
       "fscholz",
       "teoli",
       "smfd",
+      "uleming"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-18T16:30:12.782Z",
+    "contributors": [
+      "HardKullez",
+      "qwerty-wasd",
+      "imalyavskiy",
+      "Davidnadejdin",
+      "SedovDP",
+      "metelskiy",
+      "wbamberg",
+      "rinbik",
+      "SphinxKnight",
+      "toolX",
+      "vherever",
+      "Megabyteceer",
+      "ndrsrv",
+      "NobbsNobby",
+      "Saviloff",
+      "makdeb",
+      "fscholz",
+      "esskia",
+      "ivan.p"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:58.256Z",
+    "contributors": [
+      "nnragmailcom",
+      "fscholz",
+      "teoli",
       "uleming"
     ]
   },
@@ -24150,6 +24129,27 @@
     "contributors": [
       "ekirpichyov",
       "AntonPtitsyn"
+    ]
+  },
+  "conflicting/Web/Manifest": {
+    "modified": "2020-10-15T22:28:08.586Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c": {
+    "modified": "2020-10-15T22:28:09.577Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205": {
+    "modified": "2020-10-15T22:28:08.596Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
     ]
   },
   "conflicting/Web/Media/Formats": {

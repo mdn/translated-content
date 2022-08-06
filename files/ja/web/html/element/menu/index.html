@@ -34,13 +34,13 @@ translation_of: Web/HTML/Element/menu
   <tr>
    <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
    <td>
-    <p><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>。この要素の子に 1 個以上の {{HTMLElement("li")}} 要素がある場合は<a href="/ja/docs/Web/Guide/HTML/Content_categories#palpable_content">知覚可能コンテンツ</a>。</p>
+    <p><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。この要素の子に 1 個以上の {{HTMLElement("li")}} 要素がある場合は<a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。</p>
    </td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
    <td>
-    <p>要素が<em>リストメニュー</em>状態である場合: <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>または 0 個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}}。 (<em>リストメニュー</em>は、親要素が<em>コンテキストメニュー</em>状態の {{HTMLElement("menu")}} でない場合の既定の状態です。)</p>
+    <p>要素が<em>リストメニュー</em>状態である場合: <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>または 0 個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}}。 (<em>リストメニュー</em>は、親要素が<em>コンテキストメニュー</em>状態の {{HTMLElement("menu")}} でない場合の既定の状態です。)</p>
 
     <p>要素が<em>コンテキストメニュー</em>状態である場合: 任意の順序で、 0 個以上の {{HTMLElement("menu")}} (コンテキストメニュー状態に限る), {{HTMLElement("menuitem")}}, {{HTMLElement("hr")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}}。</p>
    </td>
@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/menu
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
   </tr>
   <tr>
    <th scope="row">暗黙の ARIA ロール</th>
@@ -79,7 +79,7 @@ translation_of: Web/HTML/Element/menu
  <dd>この属性は定義済みのメニューの種類を示すものであり、以下 2 つの値のいずれかを指定します。
  <ul>
   <li><code>context</code> {{Deprecated_inline}} : 他の要素を介して起動されるコマンドのグループを表す<em>ポップアップメニュー</em>状態を表します。これは {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性で参照されるボタンメニューや、 <a href="/ja/docs/Web/HTML/Global_attributes#attr-contextmenu"><code>contextmenu</code></a> 属性のある要素のコンテキストメニューである可能性があります。この値はこの属性がなく、その親要素も <code>&lt;menu&gt;</code> であった場合の既定値です。</li>
-  <li><code>toolbar</code>: <em>ツールバー</em>状態であり、ユーザーと対話するための一連のコマンドから成るツールバーを表します。これは {{HTMLElement("li")}} の番号なしリストの形か、子要素に <code>&lt;li&gt;</code> を含まない場合は、利用できるコマンドを記述した<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>です。この値はこの属性が指定されていない場合の既定値です。</li>
+  <li><code>toolbar</code>: <em>ツールバー</em>状態であり、ユーザーと対話するための一連のコマンドから成るツールバーを表します。これは {{HTMLElement("li")}} の番号なしリストの形か、子要素に <code>&lt;li&gt;</code> を含まない場合は、利用できるコマンドを記述した<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>です。この値はこの属性が指定されていない場合の既定値です。</li>
  </ul>
  </dd>
 </dl>
@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/menu
 
 <p><strong><a href="#context_menu">コンテキストメニュー</a></strong>は、 <code>&lt;menu&gt;</code> 要素の中にメニューで選択可能な項目を表す {{HTMLElement("menuitem")}} 要素、メニュー内のサブメニューを表す <code>&lt;menu&gt;</code> 要素、メニューの内容をセクションに分けるセパレーター行を表す {{HTMLElement("hr")}} 要素が含まれたもので構成されます。 コンテキストメニューは、関連付ける要素の {{HTMLAttrxRef("contextmenu")}} 属性、または<a href="#button_menu">ボタンでアクティブにするメニュー</a>であれば {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性を使用して、メニューをアクティブ化する要素に紐づけます。</p>
 
-<p><strong><a href="#toolbar">ツールバーメニュー</a></strong> は、 <code>&lt;menu&gt;</code> 要素の中身が 2 通りのうちの一方で記述されたもので構成されます。 {{HTMLElement("li")}} 要素で表した項目の順不同リスト (それぞれの項目が、ユーザーが利用できるコマンドやオプションを表す) または、 (<code>&lt;li&gt;</code> 要素がない場合) 使用なコマンドやオプションを表す<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>のどちらかです。</p>
+<p><strong><a href="#toolbar">ツールバーメニュー</a></strong> は、 <code>&lt;menu&gt;</code> 要素の中身が 2 通りのうちの一方で記述されたもので構成されます。 {{HTMLElement("li")}} 要素で表した項目の順不同リスト (それぞれの項目が、ユーザーが利用できるコマンドやオプションを表す) または、 (<code>&lt;li&gt;</code> 要素がない場合) 使用なコマンドやオプションを表す<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>のどちらかです。</p>
 
 <p>この要素は HTML4 で非推奨になりましたが、 HTML5.1 および HTML living standard で再導入されました。本ドキュメントは、現行の Firefox の実装について説明します。 HTML 5.1 によれば、 type 属性の 'list' が 'toolbar' に変わったようです。</p>
 
@@ -106,23 +106,23 @@ translation_of: Web/HTML/Element/menu
 
 <pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
 &lt;div contextmenu="popup-menu"&gt;
-  Right-click to see the adjusted context menu
+  Right-click to see the adjusted context menu
 &lt;/div&gt;
 
 &lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
+  &lt;hr/&gt;
+  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
 &lt;/menu&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css;">div {
-  width: 300px;
-  height: 80px;
-  background-color: lightgreen;
+  width: 300px;
+  height: 80px;
+  background-color: lightgreen;
 }
 </pre>
 
@@ -144,14 +144,14 @@ translation_of: Web/HTML/Element/menu
 
 <pre class="brush: html;">&lt;!-- A button, which displays a menu when clicked. --&gt;
 &lt;button type="menu" menu="popup-menu"&gt;
-  Dropdown
+  Dropdown
 &lt;/button&gt;
 
 &lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
+  &lt;hr/&gt;
+  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
 &lt;/menu&gt;
 </pre>
 
@@ -168,23 +168,23 @@ translation_of: Web/HTML/Element/menu
 <h4 id="HTML_3">HTML</h4>
 
 <pre class="brush: html;">&lt;!-- A context menu for a simple editor,
-   - containing two menu buttons. --&gt;
+   - containing two menu buttons. --&gt;
 &lt;menu type="toolbar"&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
-    &lt;menu type="context" id="file-menu"&gt;
-      &lt;menuitem label="New..." onclick="newFile()"&gt;
-      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
-    &lt;menu type="context" id="edit-menu"&gt;
-      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
-      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
-      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
+    &lt;menu type="context" id="file-menu"&gt;
+      &lt;menuitem label="New..." onclick="newFile()"&gt;
+      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
+    &lt;/menu&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
+    &lt;menu type="context" id="edit-menu"&gt;
+      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
+      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
+      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
+    &lt;/menu&gt;
+  &lt;/li&gt;
 &lt;/menu&gt;
 </pre>
 

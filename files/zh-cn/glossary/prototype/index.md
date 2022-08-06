@@ -16,4 +16,4 @@ translation_of: Glossary/Prototype
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Software Prototyping")}} 维基百科
+- [Software Prototyping](https://zh.wikipedia.org/wiki/Software_Prototyping) 维基百科

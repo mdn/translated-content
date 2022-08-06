@@ -9,27 +9,27 @@ translation_of: Web/SVG/Tutorial/Patterns
 
 <h2 id="패턴">패턴</h2>
 
-<p>패턴은 SVG에 사용할 보다 복잡한 채움 형태의 하나다.  또한 강력하다, 그래서 관련해서 얘기하고 적어도 기본을 익히는 것은 가치가 있다. 색퍼짐(gradients)처럼, 이 {{SVGElement('pattern')}} 요소도 SVG 파일의 <code>&lt;defs&gt;</code> 섹션에 놓여야 한다.</p>
+<p>패턴은 SVG에 사용할 보다 복잡한 채움 형태의 하나다.  또한 강력하다, 그래서 관련해서 얘기하고 적어도 기본을 익히는 것은 가치가 있다. 색퍼짐(gradients)처럼, 이 {{SVGElement('pattern')}} 요소도 SVG 파일의 <code>&lt;defs&gt;</code> 섹션에 놓여야 한다.</p>
 
 <pre class="brush: html">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient1"&gt;
-      &lt;stop offset="5%" stop-color="white"/&gt;
-      &lt;stop offset="95%" stop-color="blue"/&gt;
-    &lt;/linearGradient&gt;
-    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
-      &lt;stop offset="5%" stop-color="red"/&gt;
-      &lt;stop offset="95%" stop-color="orange"/&gt;
-    &lt;/linearGradient&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient1"&gt;
+      &lt;stop offset="5%" stop-color="white"/&gt;
+      &lt;stop offset="95%" stop-color="blue"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
+      &lt;stop offset="5%" stop-color="red"/&gt;
+      &lt;stop offset="95%" stop-color="orange"/&gt;
+    &lt;/linearGradient&gt;
 
-    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
-      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
-      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
-      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
-    &lt;/pattern&gt;
-  &lt;/defs&gt;
+    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
+      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
+      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
+      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
+    &lt;/pattern&gt;
+  &lt;/defs&gt;
 
-  &lt;rect fill="url(#Pattern)" stroke="black" width="200" height="200"/&gt;
+  &lt;rect fill="url(#Pattern)" stroke="black" width="200" height="200"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{ EmbedLiveSample('Patterns','220','220','/files/725/SVG_Pattern_Example.png') }}</p>

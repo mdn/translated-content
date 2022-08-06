@@ -29,7 +29,7 @@ translation_of: Web/API/VRDisplay/requestPresent
 <ul>
  <li>Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".</li>
  <li>Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода <code>requestPresent()</code> обновит массив отображаемых <code>VRLayer</code> объектов.</li>
- <li>Если объект <code>VRDisplay</code> уже отображает сцену, а вызов метода <code>requestPresent()</code> приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.</li>
+ <li>Если объект <code>VRDisplay</code> уже отображает сцену, а вызов метода <code>requestPresent()</code> приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.</li>
  <li>If <code>requestPresent()</code> is called outside of an engagement gesture the promise will be rejected unless the <code>VRDisplay</code> was already presenting. This engagement gesture is also sufficient to allow <code><a href="/en-US/docs/Web/API/Element/requestPointerLock">requestPointerLock()</a></code> calls until presentation has ended.</li>
 </ul>
 </div>

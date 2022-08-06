@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>O método <code><strong>flat()</strong></code> cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade<em> </em>especificada.</p>
+<p>O método <code><strong>flat()</strong></code> cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade<em> </em>especificada.</p>
 
 <p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 <dl>
  <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>O nível de profundidade especifíca o quanto um array aninhando deve ser achatado. O Default é 1.</dd>
+ <dd>O nível de profundidade especifíca o quanto um array aninhando deve ser achatado. O Default é 1.</dd>
 </dl>
 
 <h3 id="Retorno">Retorno</h3>
@@ -53,9 +53,9 @@ arr3.flat(2);
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8]</code></pre>
 
-<h3 id="Achatando_e_buracos_em_array">Achatando e buracos em array</h3>
+<h3 id="Achatando_e_buracos_em_array">Achatando e buracos em array</h3>
 
-<p>o método flat remove espaços vazios do array:</p>
+<p>o método flat remove espaços vazios do array:</p>
 
 <pre class="brush: js notranslate">var arr4 = [1, 2, , 4, 5];
 arr4.flat();
@@ -65,7 +65,7 @@ arr4.flat();
 
 <h2 id="Alternativa">Alternativa</h2>
 
-<h3 id="reduce_e_concat"><code>reduce</code> e <code>concat</code></h3>
+<h3 id="reduce_e_concat"><code>reduce</code> e <code>concat</code></h3>
 
 <pre class="brush: js notranslate">var arr1 = [1, 2, [3, 4]];
 arr1.flat();

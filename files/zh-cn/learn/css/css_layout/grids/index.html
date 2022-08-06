@@ -26,7 +26,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"> HTML 简介</a>)，以及了解 CSS 如何工作的 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a> 和 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">盒子样式</a>。)</td>
+   <td>HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"> HTML 简介</a>)，以及了解 CSS 如何工作的 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a> 和 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">盒子样式</a>。)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -85,7 +85,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <div id="Grid_1">
 <div class="hidden">
-<h6 id="简单的网格示例">简单的网格示例 </h6>
+<h6 id="简单的网格示例">简单的网格示例 </h6>
 
 <pre class="brush:css notranslate">body {
   width: 90%;
@@ -131,7 +131,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
     grid-template-columns: 1fr 1fr 1fr;
 }</pre>
 
-<p>将窗口调窄（由于示例中设定了{{cssxref("max-width")}}，可能需要很窄），你应该能看到每一列的宽度可以会随着可用空间变小而变小。<code>fr</code> 单位按比例划分了可用空间，如果没有理解，可以试着改一下数值，看看会发生什么，比如下面的代码：</p>
+<p>将窗口调窄（由于示例中设定了{{cssxref("max-width")}}，可能需要很窄），你应该能看到每一列的宽度可以会随着可用空间变小而变小。<code>fr</code> 单位按比例划分了可用空间，如果没有理解，可以试着改一下数值，看看会发生什么，比如下面的代码：</p>
 
 <pre class="notranslate">.container {
     display: grid;
@@ -184,7 +184,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <h3 id="网格间隙">网格间隙</h3>
 
-<p>使用 {{cssxref("grid-column-gap")}} 属性来定义列间隙；使用 {{cssxref("grid-row-gap")}} 来定义行间隙；使用 {{cssxref("grid-gap")}} 可以同时设定两者。</p>
+<p>使用 {{cssxref("grid-column-gap")}} 属性来定义列间隙；使用 {{cssxref("grid-row-gap")}} 来定义行间隙；使用 {{cssxref("grid-gap")}} 可以同时设定两者。</p>
 
 <pre class="notranslate">.container {
     display: grid;
@@ -255,11 +255,11 @@ translation_of: Learn/CSS/CSS_layout/Grids
     grid-gap: 20px;
 }</pre>
 
-<p>和之前一样，你仍然得到了 3 个<code>1fr</code>的列。第一个传入 repeat 函数的值（<code>3</code>）表明了后续列宽的配置要重复多少次，而第二个值（<code>1fr</code>）表示需要重复的构建配置，这个配置可以具有多个长度设定。例如<code>repeat(2, 2fr 1fr)</code>，如果你仍然不明白，可以实际测试一下效果，这相当于填入了<code>2fr 1fr 2fr 1fr</code>。</p>
+<p>和之前一样，你仍然得到了 3 个<code>1fr</code>的列。第一个传入 repeat 函数的值（<code>3</code>）表明了后续列宽的配置要重复多少次，而第二个值（<code>1fr</code>）表示需要重复的构建配置，这个配置可以具有多个长度设定。例如<code>repeat(2, 2fr 1fr)</code>，如果你仍然不明白，可以实际测试一下效果，这相当于填入了<code>2fr 1fr 2fr 1fr</code>。</p>
 
 <h3 id="显式网格与隐式网格">显式网格与隐式网格</h3>
 
-<p>到目前为止，我们定义过了列，但还没有管过行。但在这之前，我们要来理解一下显式网格和隐式网格。显式网格是我们用<code>grid-template-columns</code> 或 <code>grid-template-rows</code> 属性创建的。而隐式网格则是当有内容被放到网格外时才会生成的。显式网格与隐式网格的关系与弹性盒子的 main 和 cross 轴的关系有些类似。</p>
+<p>到目前为止，我们定义过了列，但还没有管过行。但在这之前，我们要来理解一下显式网格和隐式网格。显式网格是我们用<code>grid-template-columns</code> 或 <code>grid-template-rows</code> 属性创建的。而隐式网格则是当有内容被放到网格外时才会生成的。显式网格与隐式网格的关系与弹性盒子的 main 和 cross 轴的关系有些类似。</p>
 
 <p>隐式网格中生成的行/列大小是参数默认是<code>auto</code>，大小会根据放入的内容自动调整。当然，你也可以使用{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}属性手动设定隐式网格的大小。下面的例子将<code>grid-auto-rows</code>设为了<code>100px</code>，然后你可以看到那些隐式网格中的行（因为这个例子里没有设定{{cssxref("grid-template-rows")}}，因此，所有行都位于隐式网格内）现在都是 100 像素高了。</p>
 
@@ -309,7 +309,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <p>100像素高的行/列有时可能会不够用，因为时常会有比100像素高的内容加进去。所以，我们希望可以将其设定为至少100像素，而且可以跟随内容来自动拓展尺寸保证能容纳所有内容。显而易见，你很难知道网页上某个元素的尺寸在不同情况下会变成多少，一些额外的内容或者更大的字号就会导致许多能做到像素级精准的设计出现问题。所以，我们有了{{cssxref("minmax")}}函数。</p>
 
-<p>{{cssxref("minmax")}} 函数为一个行/列的尺寸设置了取值范围。比如设定为 <code>minmax(100px, auto)</code>，那么尺寸就至少为 100 像素，并且如果内容尺寸大于 100 像素则会根据内容自动调整。在这里试一下把 <code>grid-auto-rows</code> 属性设置为<code>minmax</code>函数。</p>
+<p>{{cssxref("minmax")}} 函数为一个行/列的尺寸设置了取值范围。比如设定为 <code>minmax(100px, auto)</code>，那么尺寸就至少为 100 像素，并且如果内容尺寸大于 100 像素则会根据内容自动调整。在这里试一下把 <code>grid-auto-rows</code> 属性设置为<code>minmax</code>函数。</p>
 
 <pre class="notranslate">.container {
     display: grid;
@@ -318,7 +318,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
     grid-gap: 20px;
 }</pre>
 
-<p>如果所有网格内的内容均小于 100 像素，那么看起来不会有变化，但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是<code>grid-auto-rows</code> ，因此只会作用于隐式网格。当然，这一项属性也可以应用于显示网格，更多内容可以参考{{cssxref("minmax")}}页面。</p>
+<p>如果所有网格内的内容均小于 100 像素，那么看起来不会有变化，但如果在某一项中放入很长的内容或者图片，你可以看到这个格子所在的哪一行的高度变成能刚好容纳内容的高度了。注意我们修改的是<code>grid-auto-rows</code> ，因此只会作用于隐式网格。当然，这一项属性也可以应用于显示网格，更多内容可以参考{{cssxref("minmax")}}页面。</p>
 
 <h3 id="自动使用多列填充">自动使用多列填充</h3>
 
@@ -725,9 +725,9 @@ aside {
 
 <p>为了确保整个网站或应用程序的一致性体验，从一开始就将其置于网格系统上，这意味着您不需要考虑某个元素相对于其他元素的宽度。您的选择限于“该元素将跨越多少个网格列”。</p>
 
-<p>您的“网格系统”可以简单地是在设计过程中使用常规网格所做的决策。如果你的设计开始于一个图形编辑应用，如 Photoshop 的话，你可以参考这篇文章中所描述的过程创建一个网格 <a href="http://www.elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/">一个更好响应网页设计的 Photoshop 网格</a>由<a href="http://www.elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/">艾利特杰伊</a>提供。</p>
+<p>您的“网格系统”可以简单地是在设计过程中使用常规网格所做的决策。如果你的设计开始于一个图形编辑应用，如 Photoshop 的话，你可以参考这篇文章中所描述的过程创建一个网格 <a href="http://www.elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/">一个更好响应网页设计的 Photoshop 网格</a>由<a href="http://www.elliotjaystocks.com/blog/a-better-photoshop-grid-for-responsive-web-design/">艾利特杰伊</a>提供。</p>
 
-<p>您的网格系统也可能是一个框架—— 无论是由第三方还是您为您自己的的项目创建的——通过 CSS 强制实现网格。</p>
+<p>您的网格系统也可能是一个框架—— 无论是由第三方还是您为您自己的的项目创建的——通过 CSS 强制实现网格。</p>
 
 <h2 id="创建简单的网格框架">创建简单的网格框架</h2>
 
@@ -737,7 +737,7 @@ aside {
 
 <p>要创建的最简单的网格框架类型是固定宽度的 —— 我们只需要计算出想要设计的总宽度，想要多少列，以及沟槽和列的宽度。如果我们决定在具有列根据浏览器宽度增长和缩小的网格上布置设计，我们需要计算出列和沟槽之间的百分比宽度。</p>
 
-<p>在接下来的部分中，我们会讨论如何创建这两者。我们将创建一个 12 列网格 —— 一种很常见的选择，因为 12 可以被 6、4、3 和 2 整除，被认为非常适应不同的情况。</p>
+<p>在接下来的部分中，我们会讨论如何创建这两者。我们将创建一个 12 列网格 —— 一种很常见的选择，因为 12 可以被 6、4、3 和 2 整除，被认为非常适应不同的情况。</p>
 
 <h3 id="一个简单的定宽网格">一个简单的定宽网格</h3>
 
@@ -772,7 +772,7 @@ aside {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13901/simple-grid-finished.png" style="display: block; height: 50px; margin: 0px auto; width: 952px;"></p>
 
-<p>为包装容器提供 980 像素的宽度，其右侧有 20px 的 padding，这使总共列/沟槽宽度 960 像素——在这里，padding 被整个 content 的宽度减去，因为我们将这里所有元素的{{cssxref("box-sizing")}}属性的值设置为 <code>border-box</code>  (可以看 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> 有更详细的解释)。在<a href="/zh-CN/docs/Web/HTML/Element/style">&lt;style&gt;</a>元素中，添加以下代码。</p>
+<p>为包装容器提供 980 像素的宽度，其右侧有 20px 的 padding，这使总共列/沟槽宽度 960 像素——在这里，padding 被整个 content 的宽度减去，因为我们将这里所有元素的{{cssxref("box-sizing")}}属性的值设置为 <code>border-box</code>  (可以看 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">Changing the box model completely</a> 有更详细的解释)。在<a href="/zh-CN/docs/Web/HTML/Element/style">&lt;style&gt;</a>元素中，添加以下代码。</p>
 
 <pre class="brush: css notranslate">* {
   box-sizing: border-box;
@@ -800,7 +800,7 @@ body {
 
 <p>我们需要从 960 像素的总宽度中减去它，为列提供 720 像素。如果我们除以 12，每列就应该是 60 像素宽。</p>
 
-<p>下一步是为<code>.col类</code>创建一个规则集，让它向左浮动，给它一个 20 像素的{{cssxref("margin-left")}}形成一个沟槽，一个 60 像素的 {{cssxref("width")}}。将以下规则添加到 CSS 的底部：</p>
+<p>下一步是为<code>.col类</code>创建一个规则集，让它向左浮动，给它一个 20 像素的{{cssxref("margin-left")}}形成一个沟槽，一个 60 像素的 {{cssxref("width")}}。将以下规则添加到 CSS 的底部：</p>
 
 <pre class="brush: css notranslate">.col {
   float: left;
@@ -815,7 +815,7 @@ body {
 <p><strong>注意：</strong>我们还为每个列指定了一个浅红色，以便您可以准确地看到每个列占用多少空间。</p>
 </div>
 
-<p>那些我们想要跨越多个列的布局容器需要被赋予特殊的类，来将它们的{{cssxref("width")}} 值调整到所需的列数（加上之间的沟槽）。我们需要创建一个额外的类，以允许容器跨越 2 到 12 列。每个宽度是将该列数的列宽加上沟槽宽度得到的结果，总是比列数少 1。</p>
+<p>那些我们想要跨越多个列的布局容器需要被赋予特殊的类，来将它们的{{cssxref("width")}} 值调整到所需的列数（加上之间的沟槽）。我们需要创建一个额外的类，以允许容器跨越 2 到 12 列。每个宽度是将该列数的列宽加上沟槽宽度得到的结果，总是比列数少 1。</p>
 
 <p>在 CSS 的底部添加以下内容：</p>
 
@@ -896,7 +896,7 @@ body {
   background: rgb(255, 150, 150);
 }</pre>
 
-<p>现在来看稍微更费力的部分 —  我们需要更新所有的 <code>.col.span </code>规则，使用百分比而不是像素宽度。这需要一点时间与计算器; 为了省你一些努力，我们已经为你做了下面。</p>
+<p>现在来看稍微更费力的部分 —  我们需要更新所有的 <code>.col.span </code>规则，使用百分比而不是像素宽度。这需要一点时间与计算器; 为了省你一些努力，我们已经为你做了下面。</p>
 
 <p>使用以下内容更新 CSS 规则的底部块：</p>
 
@@ -923,7 +923,7 @@ body {
 
 <h3 id="使用calc_函数更容易的计算">使用 calc() 函数更容易的计算</h3>
 
-<p>你可以使用<a href="/zh-CN/docs/Web/CSS/calc()">calc()</a>函数在你的 CSS 里面做数学 — 这允许你插入简单的数学方程到你的 CSS 值，计算一个值应该是什么。当需要执行复杂的数学运算时，它是特别有用的，甚至可以计算使用不同单位的计算，例如“我希望此元素的高度始终为父级高度的 100％，减去 50px”。<a href="/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">从 MediaRecorder API 教程中</a>查看<a href="/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">此示例</a>。</p>
+<p>你可以使用<a href="/zh-CN/docs/Web/CSS/calc()">calc()</a>函数在你的 CSS 里面做数学 — 这允许你插入简单的数学方程到你的 CSS 值，计算一个值应该是什么。当需要执行复杂的数学运算时，它是特别有用的，甚至可以计算使用不同单位的计算，例如“我希望此元素的高度始终为父级高度的 100％，减去 50px”。<a href="/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">从 MediaRecorder API 教程中</a>查看<a href="/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">此示例</a>。</p>
 
 <p>无论如何，回到我们的网格！跨越网格的多个列的任何列具有 6.25％的总宽度乘以跨越的列数加上 2.08333333％乘以槽的数量（其将总是列数减去 1）。该 calc() 函数允许我们在宽度值内部执行此计算，因此对于跨 4 列的任何项目，我们可以执行此操作，例如：</p>
 
@@ -1192,7 +1192,7 @@ body {
   &lt;div class="col span2"&gt;16&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>这次我们有一个父 <code>&lt;div&gt;</code> 的类 <code>wrapper</code>，所有的子元素只是直接出现在包装器内——没有行元素。我们已经将一个类添加到应该跨越多个列的项目。</p>
+<p>这次我们有一个父 <code>&lt;div&gt;</code> 的类 <code>wrapper</code>，所有的子元素只是直接出现在包装器内——没有行元素。我们已经将一个类添加到应该跨越多个列的项目。</p>
 
 <p>现在将以下内容添加到<a href="/zh-CN/docs/Web/HTML/Element/style">&lt;style&gt;</a>元素中：</p>
 
@@ -1209,9 +1209,9 @@ body {
   background: rgb(255,150,150);
 }</pre>
 
-<p>这里我们设置.wrapper 规则，因此它是 90％的身体宽度，居中，并且 <a href="/zh-CN/docs/Web/CSS/max-width">max-width</a> 为 960px。</p>
+<p>这里我们设置.wrapper 规则，因此它是 90％的身体宽度，居中，并且 <a href="/zh-CN/docs/Web/CSS/max-width">max-width</a> 为 960px。</p>
 
-<p>现在为 CSS 网格属性。我们可以使用{{cssxref("display")}} 属性的 <code>grid</code> 值声明一个网格，使用 {{cssxref("grid-gap")}} 设置网格的间隔，然后使用{{cssxref("grid-template-columns")}} 属性、 <code>repeat()</code> 函数和 <code>fr</code> 单位——这个为网格布局定义的单位——创建一个 12 列等宽的网格。</p>
+<p>现在为 CSS 网格属性。我们可以使用{{cssxref("display")}} 属性的 <code>grid</code> 值声明一个网格，使用 {{cssxref("grid-gap")}} 设置网格的间隔，然后使用{{cssxref("grid-template-columns")}} 属性、 <code>repeat()</code> 函数和 <code>fr</code> 单位——这个为网格布局定义的单位——创建一个 12 列等宽的网格。</p>
 
 <p>该 fr 单元是一小部分单元 - 它描述在网格容器的可用空间的一小部分。如果所有列都是 1fr，它们将占用相等的空间量。这消除了计算百分比以创建灵活网格的需要。</p>
 
@@ -1291,14 +1291,14 @@ body {
 
 <p>不需要使用边距伪造沟槽或显式计算它们的宽度 — CSS 网格具有这种功能内置的<code>grid-gap</code> 属性。</p>
 
-<p>我们只是接触了 CSS 网格布局所有可能的皮毛，但在本文的行文中要理解的关键是，你不需要用网格创建一个网格系统——它已经是一个了。您可以编写 CSS，将项目直接放入预定义的网格上。要了解更多，请看 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout Module</a>。</p>
+<p>我们只是接触了 CSS 网格布局所有可能的皮毛，但在本文的行文中要理解的关键是，你不需要用网格创建一个网格系统——它已经是一个了。您可以编写 CSS，将项目直接放入预定义的网格上。要了解更多，请看 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout Module</a>。</p>
 
 <h3 id="主动学习：编写自己的简单网格">主动学习：编写自己的简单网格</h3>
 
 <p>在<a href="/zh-CN/docs/Learn/CSS/CSS_layout/Introduction">CSS 布局 aticle 简介中</a>，我们包括一个关于<a href="/zh-CN/docs/Learn/CSS/CSS_layout/Introduction#CSS_tables">CSS 表</a>的部分，其中包括一个简单的形式示例（参见<a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a>实例和<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">源代码</a>）。我们希望您复制此示例，并执行以下操作：</p>
 
 <ol>
- <li>删除 &lt;div&gt;元素 —  将会对你的内容处理行数和列。就不再需要此作为 CSS 网格。</li>
+ <li>删除 &lt;div&gt;元素 —  将会对你的内容处理行数和列。就不再需要此作为 CSS 网格。</li>
  <li>使用 CSS 网格属性创建一个接近原始的表单布局，你必须设定容器元素的宽度，并思考怎么设置列的的间隙和行差距。</li>
 </ol>
 

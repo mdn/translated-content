@@ -64,11 +64,11 @@ f1();
 
 ```js
 async function f2() {
-  const thenable = {
-    then: function(resolve, _reject) {
-      resolve('resolved!')
+  const thenable = {
+    then: function(resolve, _reject) {
+      resolve('resolved!')
     }
-  };
+  };
   console.log(await thenable); // resolved!
 }
 

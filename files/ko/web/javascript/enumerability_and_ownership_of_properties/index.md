@@ -155,7 +155,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -258,7 +258,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
             >getOwnPropertySymbols</a
           ></code
         >
-        – filtered to exclude enumerables using <code
+        – filtered to exclude enumerables using <code
           ><a
             href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
             >propertyIsEnumerable</a
@@ -296,7 +296,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 ## Obtaining properties by enumerability/ownership
 
-아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
+아래는 모든 경우에 가장 효율적인 알고리즘은 아니지만 빠르게 코드를 작성하여 확인하기 좋습니다.
 
 - Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
 - Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
@@ -375,7 +375,7 @@ var SimplePropertyRetriever = {
       <th>Enumerable</th>
       <th>Nonenumerable</th>
       <th>Symbols keys</th>
-      <th>Inherited Enumerable</th>
+      <th>Inherited Enumerable</th>
       <th>Inherited Nonenumerable</th>
       <th>Inherited Symbols keys</th>
     </tr>

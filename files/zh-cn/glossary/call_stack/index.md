@@ -64,7 +64,7 @@ greeting();
 
 ### 基础知识
 
-- Wikipedia 上的 {{Interwiki("wikipedia", "调用栈")}}
+- Wikipedia 上的 [调用栈](https://zh.wikipedia.org/wiki/调用栈)
 - [MDN Web 文档中的术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Call stack")}}

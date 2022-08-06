@@ -10,4 +10,4 @@ original_slug: Glossary/编译时间
 
 ### 基础知识
 
-- {{Interwiki("wikipedia", "Compile time")}} on Wikipedia
+- [Compile time](https://zh.wikipedia.org/wiki/Compile_time) on Wikipedia

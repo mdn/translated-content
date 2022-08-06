@@ -15,5 +15,5 @@ translation_of: Glossary/Syntax_error
 
 ### 基础知识
 
-- {{Interwiki("wikipedia", "语法错误")}} - 维基百科
+- [语法错误](https://zh.wikipedia.org/wiki/语法错误) - 维基百科
 - {{jsxref("SyntaxError")}} - JavaScript 对象

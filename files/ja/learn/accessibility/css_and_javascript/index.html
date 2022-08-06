@@ -188,7 +188,7 @@ a:active {
 
 <h3 id="Hiding_things" name="Hiding_things">ものごとを隠す</h3>
 
-<p>すべてのコンテンツをいちどきに示さないことを視覚的デザインが求めているような、多くの事例があります。たとえば、<a href="http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> の例 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">ソースコード</a>を参照)  では、三つの情報パネルがありますが、それらをお互いの上に<a href="/ja//docs/Learn/CSS/CSS_layout/Positioning">配置</a>しており、クリックするとそれぞれの情報パネルを表示できるタブを設けています (これはキーボード・アクセシブルでもあります。つまり、情報パネルを選ぶのに、クリックする代わりに、タブキーとエンターキー / リターンキーとを使うこともできます)。</p>
+<p>すべてのコンテンツをいちどきに示さないことを視覚的デザインが求めているような、多くの事例があります。たとえば、<a href="http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> の例 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">ソースコード</a>を参照)  では、三つの情報パネルがありますが、それらをお互いの上に<a href="/ja//docs/Learn/CSS/CSS_layout/Positioning">配置</a>しており、クリックするとそれぞれの情報パネルを表示できるタブを設けています (これはキーボード・アクセシブルでもあります。つまり、情報パネルを選ぶのに、クリックする代わりに、タブキーとエンターキー / リターンキーとを使うこともできます)。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13368/tabbed-info-box.png" style="display: block; height: 400px; margin: 0px auto; width: 450px;"></p>
 
@@ -234,11 +234,11 @@ a:active {
 
 <p>JavaScript に頼りすぎると、しばしば問題が起きます。ときどき、何でもかんでも JavaScript で行われたウェブサイト—— HTML が JavaScript により生成され、CSS が JavaScript により生成され、といった調子のもの——を見るでしょう。これには、あらゆる種類のアクセシビリティの問題および付随するその他の問題があり、お勧めできません。</p>
 
-<p>ふさわしい役割にふさわしい要素を使うのと同様に、ふさわしい役割にふさわしい技術を使っていることも確認しておくべきです!  JavaScript で実装されたキラキラの 3D 情報ボックスが必要なのか、あるいは、プレーンな古めかしいテキストでも用が足りそうか、ということについて注意深く考えてください。複雑で非標準的なフォーム・ウィジェットが必要なのか、あるいは、テキスト入力でも用が足りそうか、ということについて注意深く考えてください。そして、とにかく可能な場合に JavaScript を使ってすべての HTML コンテンツを生成する、などということはしないでください。</p>
+<p>ふさわしい役割にふさわしい要素を使うのと同様に、ふさわしい役割にふさわしい技術を使っていることも確認しておくべきです!  JavaScript で実装されたキラキラの 3D 情報ボックスが必要なのか、あるいは、プレーンな古めかしいテキストでも用が足りそうか、ということについて注意深く考えてください。複雑で非標準的なフォーム・ウィジェットが必要なのか、あるいは、テキスト入力でも用が足りそうか、ということについて注意深く考えてください。そして、とにかく可能な場合に JavaScript を使ってすべての HTML コンテンツを生成する、などということはしないでください。</p>
 
 <h3 id="Keeping_it_unobtrusive" name="Keeping_it_unobtrusive">ひかえめに保つこと</h3>
 
-<p>コンテンツを作るときには、<strong>ひかえめな (unobtrusive) JavaScript</strong>  を心に留めておくべきです。ひかえめな JavaScript という考え方は、次のようなものです。すなわち、機能を拡張できるところならどこでも使うべきだけれども、機能を盛り込むためにはまったく使うべきではない——基本的機能は JavaScript なしでも理想的には動くはずなのだから。もっとも、これが常に選択できるとは限らないことはよく理解されているのですが。しかし再び言いますが、この考えの大部分を占めるのは、可能な箇所ではブラウザーの組み込み機能を使うということです。</p>
+<p>コンテンツを作るときには、<strong>ひかえめな (unobtrusive) JavaScript</strong>  を心に留めておくべきです。ひかえめな JavaScript という考え方は、次のようなものです。すなわち、機能を拡張できるところならどこでも使うべきだけれども、機能を盛り込むためにはまったく使うべきではない——基本的機能は JavaScript なしでも理想的には動くはずなのだから。もっとも、これが常に選択できるとは限らないことはよく理解されているのですが。しかし再び言いますが、この考えの大部分を占めるのは、可能な箇所ではブラウザーの組み込み機能を使うということです。</p>
 
 <p>ひかえめな JavaScript の適切な使用例には、次のものが含まれます。</p>
 
@@ -287,27 +287,27 @@ function validate(e) {
 
 <p>検査が実行された際に、もしテストに通れば、フォームが送信されます。もしエラーがあれば (つまり <code>if(errorList.innerHTML !== '')</code> であれば)、 (<code><a href="/ja/docs/Web/API/Event/preventDefault">preventDefault()</a></code> を用いて) フォームの送信を中止し、生成されたエラーメッセージをすべて表示します (下記参照)。この仕組みは、エラーが存在するときにだけエラーが表示される、ということを意味します。そしてそのことは、使い勝手のうえで、より良いことなのです。</p>
 
-<p>フォームが送信される際に値が入れられていない入力それぞれについて、リンクを有するリスト項目を作って、それを <code>errorList</code>  に挿入しています。</p>
+<p>フォームが送信される際に値が入れられていない入力それぞれについて、リンクを有するリスト項目を作って、それを <code>errorList</code>  に挿入しています。</p>
 
 <pre class="brush: js">function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  var listItem = document.createElement('li');
+  var anchor = document.createElement('a');
+  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+  anchor.href = '#' + testItem.input.name;
+  anchor.onclick = function() {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }</pre>
 
 <p>各リンクは二つの役割を果たします。つまり、何のエラーなのかを教えてくれますし、さらに、そのリンクをクリックする / アクティブにすると問題の入力要素へ直接ジャンプして入力を訂正できるようになっています。</p>
 
 <div class="note">
-<p><strong>注意</strong>: この例の <code>focus()</code>  の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、<code>onclick</code>/<code>focus()</code> ブロックを必要としません。Safari  はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには <code>onclick</code>/<code>focus()</code> ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox  のユーザーは、現時点ではこの <code>onclick</code>/<code>focus()</code> ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox  の問題はすぐに修正されるはずです。というのも、他のブラウザと同等のふるまいを Firefox  にさせるための作業が、今なされている最中ですから ({{bug(277178)}} を参照).</p>
+<p><strong>注意</strong>: この例の <code>focus()</code>  の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、<code>onclick</code>/<code>focus()</code> ブロックを必要としません。Safari  はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには <code>onclick</code>/<code>focus()</code> ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox  のユーザーは、現時点ではこの <code>onclick</code>/<code>focus()</code> ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox  の問題はすぐに修正されるはずです。というのも、他のブラウザと同等のふるまいを Firefox  にさせるための作業が、今なされている最中ですから ({{bug(277178)}} を参照).</p>
 </div>
 
-<p>さらに、ソース順における先頭に <code>errorField</code>  を置いてあります (CSS を使って、UI 上では別のところに配置してありますが)。これが意味することは、ユーザーが、ページの最初に戻ることで、自分のフォーム送信でまさに何が間違っているのかも分かるし、問題の入力要素にも行ける、ということです。</p>
+<p>さらに、ソース順における先頭に <code>errorField</code>  を置いてあります (CSS を使って、UI 上では別のところに配置してありますが)。これが意味することは、ユーザーが、ページの最初に戻ることで、自分のフォーム送信でまさに何が間違っているのかも分かるし、問題の入力要素にも行ける、ということです。</p>
 
 <p>最後の注記ですが、このデモではいくつか WAI-ARIA 属性を使いました。ページリロードをともなわずに絶えず更新するコンテンツの領域が引き起こすアクセシビリティの問題を、解決する手助けとするためです (スクリーン・リーダーは、デフォルトでは、こうしたコンテンツを拾い上げたり、ユーザーにこうしたコンテンツを警告したりはしないでしょう)。</p>
 
@@ -319,7 +319,7 @@ function validate(e) {
 <p>もっと詳細に <a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> を扱う次の記事で、これらの属性について説明します。</p>
 
 <div class="note">
-<p><strong>注意</strong>: HTML5 フォームには <code>required</code> 属性や <code>min</code>/<code>minlength</code> 属性や <code>max</code>/<code>maxlength</code>  属性のような組み込みの検査の仕組みがあること (より詳しくは、{{htmlelement("input")}} 要素のリファレンスを参照) について考える読者もおそらくいることでしょう。このデモでは、結局これらの属性は使いませんでした。なぜなら、これらの属性についてのクロスブラウザ・サポートが当てにならないからです (たとえば IE10 以上のみでのサポートだったり、Safari ではサポートされていなかったりします)。</p>
+<p><strong>注意</strong>: HTML5 フォームには <code>required</code> 属性や <code>min</code>/<code>minlength</code> 属性や <code>max</code>/<code>maxlength</code>  属性のような組み込みの検査の仕組みがあること (より詳しくは、{{htmlelement("input")}} 要素のリファレンスを参照) について考える読者もおそらくいることでしょう。このデモでは、結局これらの属性は使いませんでした。なぜなら、これらの属性についてのクロスブラウザ・サポートが当てにならないからです (たとえば IE10 以上のみでのサポートだったり、Safari ではサポートされていなかったりします)。</p>
 </div>
 
 <div class="note">
@@ -332,7 +332,7 @@ function validate(e) {
 
 <h4 id="mouse-specific_events" name="mouse-specific_events">マウスに特有のイベント</h4>
 
-<p> お気づきのとおり、ユーザーとの対話的動作のほとんどは、イベントハンドラーを使ってクライアントサイドの JavaScript で実装されます。イベントハンドラーによって、特定のイベントが起きるのに応じて関数を実行できるようになります。ある種のイベントには、アクセシビリティの問題があるかもしれません。読者が見つけることになるであろう主な例は、<a href="/ja/docs/Web/Events/mouseover">mouseover</a> や <a href="/ja/docs/Web/Events/mouseout">mouseout</a> や <a href="/ja/docs/Web/Events/dblclick">dblclick</a> などの、マウスに特有のイベントです。これらのイベントに応じて動作する機能は、キーボード・コントロールのような他の仕組みを用いていると、アクセシブルではなくなります。</p>
+<p> お気づきのとおり、ユーザーとの対話的動作のほとんどは、イベントハンドラーを使ってクライアントサイドの JavaScript で実装されます。イベントハンドラーによって、特定のイベントが起きるのに応じて関数を実行できるようになります。ある種のイベントには、アクセシビリティの問題があるかもしれません。読者が見つけることになるであろう主な例は、<a href="/ja/docs/Web/Events/mouseover">mouseover</a> や <a href="/ja/docs/Web/Events/mouseout">mouseout</a> や <a href="/ja/docs/Web/Events/dblclick">dblclick</a> などの、マウスに特有のイベントです。これらのイベントに応じて動作する機能は、キーボード・コントロールのような他の仕組みを用いていると、アクセシブルではなくなります。</p>
 
 <p>こうした問題を軽減するには、これらのイベントと、他の手段によってアクティブにできるような類似のイベントとの二重化をすべきです (いわゆるデバイスとは独立なイベントハンドラーです)。<a href="/ja/docs/Web/Events/focus">focus</a> と <a href="/ja/docs/Web/Events/blur">blur</a> は、キーボードのユーザーに対するアクセシビリティを提供してくれることでしょう。</p>
 
@@ -348,7 +348,7 @@ imgThumb.onblur = hideImg;</pre>
 
 <p>最初の 2 行は、それぞれ、マウスポインターがサムネイル上にホバーしたときと、マウスポインターがサムネイル上にホバーするのをやめたときに、関数を動作させます。しかしこれだと、ズームしたビューにキーボードを通じてアクセスすることはできません。それをできるようにするために、後ろの方の 2 行を含めました。この 2 行は、画像にフォーカスが当たったときと、画像からフォーカスが外れた (フォーカスが停止した) ときに、関数を動作させます。こうしたことは、タブキーで画像上に移動することでできることです。なぜなら、画像に <code>tabindex="0"</code> を含めておいたからです。</p>
 
-<p><a href="/ja/docs/Web/Events/click">click</a> クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター / リターンが押された後に、あるいは、そうした要素がタッチスクリーン装置上でタップされたときに、<a href="/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a>  イベントハンドラーをアクティブにすることでしょう。しかしこれは、tabindex を用いて、デフォルトではフォーカス可能ではないイベントがフォーカスを持つようにしていると、デフォルトのままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります (<a href="/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a> を参照)。</p>
+<p><a href="/ja/docs/Web/Events/click">click</a> クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター / リターンが押された後に、あるいは、そうした要素がタッチスクリーン装置上でタップされたときに、<a href="/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a>  イベントハンドラーをアクティブにすることでしょう。しかしこれは、tabindex を用いて、デフォルトではフォーカス可能ではないイベントがフォーカスを持つようにしていると、デフォルトのままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります (<a href="/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a> を参照)。</p>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 

@@ -6,45 +6,45 @@ original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}</div>
 
-<p class="summary">Hay muchos casos donde los <a href="/en-US/docs/HTML/Forms/The_native_form_widgets" title="/en-US/docs/HTML/Forms/The_native_form_widgets">widgets de formularios HTML disponibles</a> simplemente no son suficientes. si desea <a href="/en-US/docs/Advanced_styling_for_HTML_forms" title="/en-US/docs/Advanced_styling_for_HTML_forms">establecer un estilo avanzado</a> en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.</p>
+<p class="summary">Hay muchos casos donde los <a href="/en-US/docs/HTML/Forms/The_native_form_widgets" title="/en-US/docs/HTML/Forms/The_native_form_widgets">widgets de formularios HTML disponibles</a> simplemente no son suficientes. si desea <a href="/en-US/docs/Advanced_styling_for_HTML_forms" title="/en-US/docs/Advanced_styling_for_HTML_forms">establecer un estilo avanzado</a> en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.</p>
 
 <p>En este aartículo, veremos cómo construir dicho widget. Para ello, trabajaremos con un ejemplo: Reconstruir el elemento {{HTMLElement("select")}}.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Nos enfocaremos en construir los widgets, no en cómo hacer que el código sea genérico y reutilizable; eso implicaría algún código JavaScript no trivial y manipulación del DOM en un contexto desconocido, y eso está fuera del alcance de este artículo.</p>
+<p><strong>Nota:</strong> Nos enfocaremos en construir los widgets, no en cómo hacer que el código sea genérico y reutilizable; eso implicaría algún código JavaScript no trivial y manipulación del DOM en un contexto desconocido, y eso está fuera del alcance de este artículo.</p>
 </div>
 
-<h2 id="Diseño_estructura_y_semántica">Diseño, estructura, y semántica</h2>
+<h2 id="Diseño_estructura_y_semántica">Diseño, estructura, y semántica</h2>
 
 <p>Antes de crear un widget personalizado, debería iniciar por averiguar exactamente qué es lo que desea. Esto le ahorarrá tiempo considerable. En particular, es importante definir claramente todos los estados de su widget. Para hacer esto, es bueno comenzar con un widget existente, cuyos estados y comportamientos son bien conocidos, por lo que simplemente puede imitarlos tanto como sea posible.</p>
 
-<p>En nuestro ejemplo, reconstruiremos el elemento {{HTMLElement("select")}}. Este es el resultado que queremos lograr:</p>
+<p>En nuestro ejemplo, reconstruiremos el elemento {{HTMLElement("select")}}. Este es el resultado que queremos lograr:</p>
 
 <p><img alt="The three states of a select box" src="/files/4481/custom-select.png" style="height: 135px; width: 366px;"></p>
 
-<p>Esta captura de pantall muestra los tres estados principales de nuestro widget: el estado normal (a la izquiera); el estado activo (en el centro) y el estado abierto (a la derecha).</p>
+<p>Esta captura de pantall muestra los tres estados principales de nuestro widget: el estado normal (a la izquiera); el estado activo (en el centro) y el estado abierto (a la derecha).</p>
 
-<p>En términos de comportamiento, queremos que nuestro widget sea utilizable tanto con un ratón como con un teclado, al igual que cualquier widget nativo. Comencemos por definir cómo el widget llega a cada estado:</p>
+<p>En términos de comportamiento, queremos que nuestro widget sea utilizable tanto con un ratón como con un teclado, al igual que cualquier widget nativo. Comencemos por definir cómo el widget llega a cada estado:</p>
 
 <dl>
  <dt>El widget está en su estado normal cuando:</dt>
  <dd>
  <ul>
   <li>La página carga</li>
-  <li>El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget</li>
+  <li>El widget estaba activo y el usuario hace clic en cualquier lugar fuera del widget</li>
   <li>El widget estaba activo y el usuario mueve el foco a otro widget usando el teclado</li>
  </ul>
 
  <div class="note">
- <p><strong>Nota:</strong> Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación <a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">combinación Opction+Tab</a>.</p>
+ <p><strong>Nota:</strong> Mover el foco al rededor de la página generalmente se hace presionando la tecla de tabulación, pero este no es el estándar en todas partes. Por ejemplo, el ciclo a través de enlaces en una página se realiza en Safari de forma predeterminada usando la combinación <a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">combinación Opction+Tab</a>.</p>
  </div>
  </dd>
- <dt>El widget está en su estado activo cuando:</dt>
+ <dt>El widget está en su estado activo cuando:</dt>
  <dd>
  <ul>
   <li>El usuario hace clic en él</li>
-  <li>El usuario presiona la tecla tab y obtiene foco</li>
-  <li>El widget estaba en su estado abierto y el usuario hace clic en el widget.</li>
+  <li>El usuario presiona la tecla tab y obtiene foco</li>
+  <li>El widget estaba en su estado abierto y el usuario hace clic en el widget.</li>
  </ul>
  </dd>
  <dt>El widget está en su estado abierto cuando:</dt>
@@ -71,7 +71,7 @@ original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 
 <ul>
  <li>Cuando se abre el widget, se resalta la opción seleccionada</li>
- <li>Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal</li>
+ <li>Cuando el ratón está sobre una opción, la opción se resalta y la opción resaltada anteriormente vuelve a su estado normal</li>
 </ul>
 
 <p>Para los fines de nuestro ejemplo, nos detendremos con eso; sin embargo, si eres un lector cuidadoso, notarás que faltan algunos comportamientos. Por ejemplo, ¿qué crees que sucederá si el usuario pulsa la tecla de tabulación mientras el widget está en estado abierto? La respuesta es ... nada. OK, el comportamiento correcto parece obvio, pero el hecho es que, como no está definido en nuestras especificaciones, es muy fácil pasar por alto este comportamiento. Esto es especialmente cierto en un entorno de equipo cuando las personas que diseñan el comportamiento del widget son diferentes de las que lo implementan.</p>
@@ -87,12 +87,12 @@ original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 </ul>
 
 <div class="note">
-<p><strong>Nota: </strong>Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento <code>clic</code>.</p>
+<p><strong>Nota: </strong>Ademas, en la mayoría de los sistemas hay una forma de abrir el elemento {{HTMLElement("select")}} para ver todas las opciones disponibles (esto es lo mismo que hacer clic en el elemento {{HTMLElement("select")}} con un ratón). Esto se logra con Alt+Flecha abajo en Windows y no fué implementado en nuestro ejemplo —pero sería facil hacerlo, ya que el mecanismo ya se implementó para el evento <code>clic</code>.</p>
 </div>
 
-<h3 id="Definiendo_la_estructura_y_semántica_HTML">Definiendo la estructura y semántica HTML</h3>
+<h3 id="Definiendo_la_estructura_y_semántica_HTML">Definiendo la estructura y semántica HTML</h3>
 
-<p>Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenzar a construir nuestro widget. El primer paso es definir su estructura HTML y darle una semántica básica. Esto es lo que necesitamos para reconstruir un elemento {{HTMLElement("select")}}:</p>
+<p>Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenzar a construir nuestro widget. El primer paso es definir su estructura HTML y darle una semántica básica. Esto es lo que necesitamos para reconstruir un elemento {{HTMLElement("select")}}:</p>
 
 <pre class="brush: html">&lt;!-- Este es nuestro contenedor principal para nuestro widget.
      El atributo tabindex es lo que permite al usuario enforcar el widget.
@@ -116,7 +116,7 @@ original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 
 &lt;/div&gt;</pre>
 
-<p>Tenga en cuanta el uso de nombres de clases; estos identifican cada parte relevante independientemente de los elementos HTML subyacentes reales utilizados. Esto es importante para garantizar que no vinculamos nuestro CSS y JavaScript a una estructura HTML sólida, de modo que podamos realizar cambios despues en la implementación sin romper el código que usa el widget. Pro ejemplo, si desea implementar el equivalente del elemento {{HTMLElement("optgroup")}}.</p>
+<p>Tenga en cuanta el uso de nombres de clases; estos identifican cada parte relevante independientemente de los elementos HTML subyacentes reales utilizados. Esto es importante para garantizar que no vinculamos nuestro CSS y JavaScript a una estructura HTML sólida, de modo que podamos realizar cambios despues en la implementación sin romper el código que usa el widget. Pro ejemplo, si desea implementar el equivalente del elemento {{HTMLElement("optgroup")}}.</p>
 
 <h3 id="Creating_the_look_and_feel_using_CSS">Creating the look and feel using CSS</h3>
 
@@ -653,7 +653,7 @@ window.addEventListener('load', function () {
   });
 });</pre>
 
-<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex" title="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.</p>
+<p>In the code above, it's worth noting the use of the <code><a href="/en-US/docs/Web/API/HTMLElement/tabIndex" title="/en-US/docs/Web/API/HTMLElement/tabIndex">tabIndex</a></code> property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.</p>
 
 <p>With that, we're done! Here's the result:</p>
 
@@ -766,7 +766,7 @@ window.addEventListener('load', function () {
 
 <p>{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -784,4 +784,4 @@ window.addEventListener('load', function () {
  <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

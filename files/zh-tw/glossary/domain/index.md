@@ -11,4 +11,4 @@ translation_of: Glossary/Domain
 
 ## 了解更多
 
-- 維基百科上的 {{interwiki("wikipedia", "Domain_(software_engineering)", "域在 IT 領域")}}
+- 維基百科上的 [域在 IT 領域](https://zh.wikipedia.org/wiki/Domain_(software_engineering))

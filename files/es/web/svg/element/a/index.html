@@ -5,9 +5,9 @@ translation_of: Web/SVG/Element/a
 ---
 <div>{{SVGRef}}</div>
 
-<p>El elemento SVG &lt;a&gt; crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.</p>
+<p>El elemento SVG &lt;a&gt; crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.</p>
 
-<p>En SVG, el elemento &lt;a&gt; es un contenedor, es decir, puede crear un enlace alrededor del texto, como en HTML, pero también puede crear un enlace alrededor de cualquier forma.</p>
+<p>En SVG, el elemento &lt;a&gt; es un contenedor, es decir, puede crear un enlace alrededor del texto, como en HTML, pero también puede crear un enlace alrededor de cualquier forma.</p>
 
 <div id="Exemple">
 <div class="hidden">
@@ -16,21 +16,21 @@ html,body,svg { height:100% }</pre>
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;!-- Un vínculo alrededor de una forma --&gt;
-  &lt;a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle"&gt;
-    &lt;circle cx="50" cy="40" r="35"/&gt;
-  &lt;/a&gt;
+  &lt;!-- Un vínculo alrededor de una forma --&gt;
+  &lt;a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle"&gt;
+    &lt;circle cx="50" cy="40" r="35"/&gt;
+  &lt;/a&gt;
 
-  &lt;!-- Un vínculo alrededor de una forma --&gt;
-  &lt;a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle"&gt;
-    &lt;text x="50" y="90" text-anchor="middle"&gt;
-      &amp;lt;circle&amp;gt;
-    &lt;/text&gt;
-  &lt;/a&gt;
+  &lt;!-- Un vínculo alrededor de una forma --&gt;
+  &lt;a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle"&gt;
+    &lt;text x="50" y="90" text-anchor="middle"&gt;
+      &amp;lt;circle&amp;gt;
+    &lt;/text&gt;
+  &lt;/a&gt;
 &lt;/svg&gt;</pre>
 
 <pre class="brush: css">/* Como SVG no proporciona un estilo visual predeterminado para los enlaces,
-   se considera una práctica recomendada agregar algunos */
+   se considera una práctica recomendada agregar algunos */
 
 @namespace svgns url(http://www.w3.org/2000/svg);
 
@@ -67,17 +67,17 @@ svgns|a:hover, svgns|a:active {
  <dd>This attribute contains the URL or URL fragment that the hyperlink points to.<br>
  <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{htmlattrxref("ping", "a")}} {{experimental_inline}}</dt>
- <dd>Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" title="The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header."><code>POST</code></a> con el cuerpo <code>PING</code> serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte <a href="/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon()</a>.<br>
+ <dd>Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST" title="The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header."><code>POST</code></a> con el cuerpo <code>PING</code> serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte <a href="/en-US/docs/Web/API/Navigator/sendBeacon">Navigator.sendBeacon()</a>.<br>
  <small><em>Value type</em>: <strong><a href="/docs/Web/SVG/Content_type#List-of-Ts">&lt;list-of-URLs&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}</dt>
- <dd>Este atributo indica qué <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> se enviará al obtener {{Glossary("URL")}}.<br>
- <small><em>Value type</em>: <code>no-referrer</code>|<code>no-referrer-when-downgrade</code>|<code>same-origin</code>|<code>origin</code>|<code>strict-origin</code>|<code>origin-when-cross-origin</code>|<code>strict-origin-when-cross-origin</code>|<code>unsafe-url</code> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
+ <dd>Este atributo indica qué <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> se enviará al obtener {{Glossary("URL")}}.<br>
+ <small><em>Value type</em>: <code>no-referrer</code>|<code>no-referrer-when-downgrade</code>|<code>same-origin</code>|<code>origin</code>|<code>strict-origin</code>|<code>origin-when-cross-origin</code>|<code>strict-origin-when-cross-origin</code>|<code>unsafe-url</code> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{htmlattrxref("rel", "a")}} {{experimental_inline}}</dt>
- <dd>Este atributo especifica la relación del objeto de destino con el vínculado.<br>
+ <dd>Este atributo especifica la relación del objeto de destino con el vínculado.<br>
  <small><em>Value type</em>: <strong><a href="/docs/Web/HTML/Link_types">&lt;list-of-Link-Types&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("target")}}</dt>
  <dd>Este atributo especifica dónde mostrar el {{Glossary("URL")}}.<br>
- <small><em>Value type</em>: <code>_self</code>|<code>_parent</code>|<code>_top</code>|<code>_blank</code>|<strong>&lt;name&gt;</strong> ; <em>Default value</em>: <code>_self</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
+ <small><em>Value type</em>: <code>_self</code>|<code>_parent</code>|<code>_top</code>|<code>_blank</code>|<strong>&lt;name&gt;</strong> ; <em>Default value</em>: <code>_self</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{htmlattrxref("type", "a")}}</dt>
  <dd>Este atributo especifica el tipo de medio en forma de un {{Glossary ( "tipo MIME ")}} para la dirección URL vinculada.<br>
  <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
@@ -89,7 +89,7 @@ svgns|a:hover, svgns|a:active {
 <h3 id="Atributos_globales">Atributos globales</h3>
 
 <dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Atributos principales</a> </dt>
+ <dt><a href="/docs/Web/SVG/Attribute/Core">Atributos principales</a> </dt>
  <dd><small>Especialmente: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}</small></dd>
  <dt><a href="/docs/Web/SVG/Attribute/Styling">Atributos de estilo</a></dt>
  <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
@@ -123,7 +123,7 @@ svgns|a:hover, svgns|a:active {
   <tr>
    <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
    <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Añadido el atributo <code>referrerpolicy</code>.</td>
+   <td>Añadido el atributo <code>referrerpolicy</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}</td>

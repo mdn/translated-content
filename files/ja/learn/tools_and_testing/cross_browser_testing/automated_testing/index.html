@@ -3,7 +3,7 @@ title: 自動テストのイントロダクション
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
-<div> {{LearnSidebar}}</div>
+<div> {{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
@@ -108,13 +108,13 @@ npm init</pre>
  <li>Next, run the following command inside your npm project directory root to set up gulp as a dependency of your project:
   <pre class="brush: bash">npm install --save-dev gulp</pre>
  </li>
- <li>Now create a new file inside your project directory called <code>gulpfile.js</code>. This is the file that will run all our tasks. Inside this file, put the following:
+ <li>Now create a new file inside your project directory called <code>gulpfile.js</code>. This is the file that will run all our tasks. Inside this file, put the following:
   <pre class="brush: js">var gulp = require('gulp');
 
 gulp.task('default', function() {
   console.log('Gulp running');
 });</pre>
-  This requires the <code>gulp</code> module we installed earlier, and then runs a basic task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is written in the same basic format — <code>gulp</code>'s <code>task()</code> method is run, and given two parameters — the name of the task, and a callback function containing the actual code to run to complete the task.</li>
+  This requires the <code>gulp</code> module we installed earlier, and then runs a basic task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is written in the same basic format — <code>gulp</code>'s <code>task()</code> method is run, and given two parameters — the name of the task, and a callback function containing the actual code to run to complete the task.</li>
  <li>You can run your gulp task with the following commands — try this now:
   <pre class="brush: bash">gulp
 </pre>
@@ -133,23 +133,23 @@ gulp.task('default', function() {
 
 <p>See the links above for full instructions on the different gulp packages we are using.</p>
 
-<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally add the name of your task inside the <code>default</code> task.</p>
+<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally add the name of your task inside the <code>default</code> task.</p>
 
 <p>Before you go any further, update the default task to this:</p>
 
 <pre class="brush: js">gulp.task('default', [ ]);</pre>
 
-<p>Inside the array goes the names of all the tasks you want Gulp to run, once you run the <code>gulp</code> command on the command line.</p>
+<p>Inside the array goes the names of all the tasks you want Gulp to run, once you run the <code>gulp</code> command on the command line.</p>
 
 <h4 id="html-tidy">html-tidy</h4>
 
 <ol>
  <li>Install using the following line:
-  <pre class="brush: bash"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
+  <pre class="brush: bash"><span class="text"><span>npm install --save-dev gulp-htmltidy</span></span>
 </pre>
 
   <div class="note">
-  <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it as, it has been added to the <code>devDependencies</code> property.</p>
+  <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it as, it has been added to the <code>devDependencies</code> property.</p>
   </div>
  </li>
  <li class="line">Add the following dependencies to <code>gulpfile.js</code>:
@@ -165,7 +165,7 @@ gulp.task('default', function() {
  <li>Add <code>'html'</code> as an item inside the array in the <code>default</code> task.</li>
 </ol>
 
-<p>Here we are grabbing our development <code>index.html</code> file — <code>gulp.src()</code> which allows us to grab a source file to do something with.</p>
+<p>Here we are grabbing our development <code>index.html</code> file — <code>gulp.src()</code> which allows us to grab a source file to do something with.</p>
 
 <p>We next use the <code>pipe()</code> function to pass that source to another command to do something else with. We can chain as many of these together as we want. We first run <code>htmltidy()</code> on the source, which goes through and fixes errors in our file. The second <code>pipe()</code> function writes the output HTML file to the <code>build</code> directory.</p>
 
@@ -205,23 +205,23 @@ var csslint = require('gulp-csslint');</pre>
  <li>Install using the following lines:
   <pre class="editor editor-colors">npm install --save-dev gulp-babel @babel/preset-env
 npm install --save-dev @babel/core
-<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
+<span class="shell source"><span>npm install jshint gulp-jshint --save-dev</span></span>
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
   <pre class="editor editor-colors">var babel = require('gulp-babel');
-<span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
+<span class="js source"><span class="js storage type"><span>var</span></span><span> jshint </span><span class="assignment js keyword operator"><span>=</span></span><span> </span><span class="function-call js meta"><span class="function js support"><span>require</span></span><span class="js meta"><span class="begin definition js punctuation round"><span>(</span></span><span class="js quoted single string"><span class="begin definition js punctuation string"><span>'</span></span><span>gulp-jshint</span><span class="definition end js punctuation string"><span>'</span></span></span><span class="definition end js punctuation round"><span>)</span></span></span></span><span class="js punctuation statement terminator"><span>;</span></span></span>
 </pre>
  </li>
  <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:
   <pre class="brush: js">gulp.task('js', function() {
-    return gulp.src('src/main.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(gulp.dest('build'));
+    return gulp.src('src/main.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('build'));
 });</pre>
  </li>
  <li>Add <code>'js'</code> as an item inside the array in the <code>default</code> task.</li>
@@ -265,19 +265,19 @@ npm install --save-dev @babel/core
 
 <ul>
  <li>Grunt works in a very similar way to Gulp, except that it relies on tasks specified in a config file, rather than using written JavaScript. See <a href="http://gruntjs.com/getting-started">Getting started with Grunt for more details.</a></li>
- <li>You can also run tasks directly using npm scripts located inside your <code>package.json</code> file, without needing to install any kind of extra task runner system. This works on the premise that things like Gulp plugins are basically wrappers around command line tools. So, if you can work out how to run the tools using the command line, you can then run them using npm scripts. It is a bit trickier to work with, but can be rewarding for those who are strong with their command line skills.<a href="https://css-tricks.com/why-npm-scripts/"> Why npm scripts?</a> provides a good introduction with a good deal of further information.</li>
+ <li>You can also run tasks directly using npm scripts located inside your <code>package.json</code> file, without needing to install any kind of extra task runner system. This works on the premise that things like Gulp plugins are basically wrappers around command line tools. So, if you can work out how to run the tools using the command line, you can then run them using npm scripts. It is a bit trickier to work with, but can be rewarding for those who are strong with their command line skills.<a href="https://css-tricks.com/why-npm-scripts/"> Why npm scripts?</a> provides a good introduction with a good deal of further information.</li>
 </ul>
 
 <h2 id="Using_commercial_testing_services_to_speed_up_browser_testing">Using commercial testing services to speed up browser testing</h2>
 
-<p>Now let's look at commercial 3rd party browser testing services and what they can do for us.</p>
+<p>Now let's look at commercial 3rd party browser testing services and what they can do for us.</p>
 
-<p>The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, logfiles, text, etc.</p>
+<p>The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, logfiles, text, etc.</p>
 
 <p>You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
+<p><strong>Note</strong>: There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
 </div>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
@@ -319,9 +319,9 @@ npm install --save-dev @babel/core
 
 <h4 id="Advanced_The_Sauce_Labs_API">Advanced: The Sauce Labs API</h4>
 
-<p>Sauce Labs has a <a href="https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API">restful API</a> that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs, to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.</p>
+<p>Sauce Labs has a <a href="https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API">restful API</a> that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs, to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.</p>
 
-<p>It has several clients available to allow you to make calls to the API using your favourite environment, be it PHP, Java, Node.js, etc.</p>
+<p>It has several clients available to allow you to make calls to the API using your favourite environment, be it PHP, Java, Node.js, etc.</p>
 
 <p>Let's have a brief look at how we'd access the API using Node.js and <a href="https://github.com/danjenkins/node-saucelabs">node-saucelabs</a>.</p>
 
@@ -602,7 +602,7 @@ function getSessionDetails(session){
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -617,4 +617,4 @@ function getSessionDetails(session){
  <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

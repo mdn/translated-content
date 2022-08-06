@@ -9,7 +9,7 @@ translation_of: Glossary/Codec
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Codec")}} on Wikipedia
+- [Codec](https://zh.wikipedia.org/wiki/Codec) on Wikipedia
 
 ### Technical reference
 

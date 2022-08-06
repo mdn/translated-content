@@ -9,7 +9,7 @@ translation_of: Glossary/XHR_(XMLHttpRequest)
 
 ### 常识
 
-- 维基百科上的 {{interwiki("wikipedia", "XMLHttpRequest")}}
+- 维基百科上的 [XMLHttpRequest](https://zh.wikipedia.org/wiki/XMLHttpRequest)
 - [异步通信 vs. 同步通信](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 
 ### 技术信息

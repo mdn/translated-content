@@ -15,13 +15,13 @@ original_slug: Learn/Accessibility/CSS_e_JavaScript
 
 <div>{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}</div>
 
-<p class="summary">CSS e JavaScript, quando usados de maneira correta, têm também potencial para permitir experiências web acessíveis... ou podem causar danos significativos se usados de forma indevida. Este artigo descreve algumas das melhores práticas em CSS e JavaScript a serem consideradas para garantir que até mesmo conteúdos complexos estejam tão acessíveis quanto possível.</p>
+<p class="summary">CSS e JavaScript, quando usados de maneira correta, têm também potencial para permitir experiências web acessíveis... ou podem causar danos significativos se usados de forma indevida. Este artigo descreve algumas das melhores práticas em CSS e JavaScript a serem consideradas para garantir que até mesmo conteúdos complexos estejam tão acessíveis quanto possível.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Conhecimento básico de computação, Conhecimento básico de HTML, CSS, e JavaScript, e entendimento sobre <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">o que é acessibilidade</a>.</td>
+   <td>Conhecimento básico de computação, Conhecimento básico de HTML, CSS, e JavaScript, e entendimento sobre <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">o que é acessibilidade</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -30,9 +30,9 @@ original_slug: Learn/Accessibility/CSS_e_JavaScript
  </tbody>
 </table>
 
-<h2 id="CSS_e_JavaScript_são_acessíveis">CSS e JavaScript são acessíveis?</h2>
+<h2 id="CSS_e_JavaScript_são_acessíveis">CSS e JavaScript são acessíveis?</h2>
 
-<p>CSS e JavaScript não têm a mesma importância imediata que o HTML, mas eles continuam sendo capazes de ajudar ou causar danos à acessibilidade, dependendo de como são usados. Ou seja, é importante que você considere algumas das melhores práticas para assegurar que o seu uso de CSS e JavaScript não danifiquem a acessibilidade de seus documentos.</p>
+<p>CSS e JavaScript não têm a mesma importância imediata que o HTML, mas eles continuam sendo capazes de ajudar ou causar danos à acessibilidade, dependendo de como são usados. Ou seja, é importante que você considere algumas das melhores práticas para assegurar que o seu uso de CSS e JavaScript não danifiquem a acessibilidade de seus documentos.</p>
 
 <h2 id="CSS">CSS</h2>
 
@@ -40,11 +40,11 @@ original_slug: Learn/Accessibility/CSS_e_JavaScript
 
 <h3 id="Semântica_correta_e_expectativas_do_usuário">Semântica correta e expectativas do usuário</h3>
 
-<p>É possível usar  CSS para fazer qualquer elemento HTML se parecer com qualquer coisa, mas isso não quer dizer que você deve. Como frequentemente mencionado no nosso artigo <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: Uma boa base para acessibilidade</a>, você deve utilizar a semântica apropriada do elemento para determinada tarefa, sempre que possível. Se não o fizer, isso poderá acarretar confusão e problemas de usabilidade para todos, particularmente para usuários portadores de deficiência. Utilizar uma semântica correta tem muito a ver com as expectativas do usuário — elementos se parecem e se comportam de certas maneiras, de acordo com suas funcionalidades, e essas convenções são esperadas pelos usuários.</p>
+<p>É possível usar  CSS para fazer qualquer elemento HTML se parecer com qualquer coisa, mas isso não quer dizer que você deve. Como frequentemente mencionado no nosso artigo <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: Uma boa base para acessibilidade</a>, você deve utilizar a semântica apropriada do elemento para determinada tarefa, sempre que possível. Se não o fizer, isso poderá acarretar confusão e problemas de usabilidade para todos, particularmente para usuários portadores de deficiência. Utilizar uma semântica correta tem muito a ver com as expectativas do usuário — elementos se parecem e se comportam de certas maneiras, de acordo com suas funcionalidades, e essas convenções são esperadas pelos usuários.</p>
 
-<p>Por exemplo, um usuário utilizando um leitor de tela não consegue navegar por uma página através de elementos de heading se o desenvolvedor não tiver usado apropriadamente estes elementos para marcação do conteúdo. Da mesma forma, um heading perde o seu propósito visual se você estilizá-lo de maneira que ele não se pareça com um heading.</p>
+<p>Por exemplo, um usuário utilizando um leitor de tela não consegue navegar por uma página através de elementos de heading se o desenvolvedor não tiver usado apropriadamente estes elementos para marcação do conteúdo. Da mesma forma, um heading perde o seu propósito visual se você estilizá-lo de maneira que ele não se pareça com um heading.</p>
 
-<p>A regra de ouro é que você pode atualizar o estilo de recurso de página para se adequar ao seu design, mas não o altere tanto ao ponto de não mais se parecer ou se comportar como o esperado. As sessões que se seguem resumem os principais recursos HTML a serem considerados.</p>
+<p>A regra de ouro é que você pode atualizar o estilo de recurso de página para se adequar ao seu design, mas não o altere tanto ao ponto de não mais se parecer ou se comportar como o esperado. As sessões que se seguem resumem os principais recursos HTML a serem considerados.</p>
 
 <h4 id="Estrututa_standard_de_conteúdo_textual">Estrututa "standard" de conteúdo textual</h4>
 
@@ -59,7 +59,7 @@ original_slug: Learn/Accessibility/CSS_e_JavaScript
   &lt;li&gt;tem dois itens.&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>Um código CSS típico pode se parecer com isso:</p>
+<p>Um código CSS típico pode se parecer com isso:</p>
 
 <pre class="brush: css">h1 {
   font-size: 5rem;
@@ -78,7 +78,7 @@ p, li {
  <li>A cor do seu texto deve ter um bom contraste com a cor de fundo.</li>
 </ul>
 
-<p>Veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML fundamentos de texto</a> e <a href="/en-US/docs/Learn/CSS/Styling_text">Estilizando texto</a> para maiores informações.</p>
+<p>Veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML fundamentos de texto</a> e <a href="/en-US/docs/Learn/CSS/Styling_text">Estilizando texto</a> para maiores informações.</p>
 
 <h4 id="Texto_em_negrito">Texto em negrito</h4>
 
@@ -94,7 +94,7 @@ p, li {
   color: #a60000;
 }</pre>
 
-<p>De qualquer forma, você raramente irá precisar de estilizar um elemento de ênfase. As convenções para texto em negrito e itálico são bastante reconhecidas e alterar seu estilo pode causar confusão. Para saber mais sobre elemento ênfase (negrito), veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance">Emphasis and importance</a>.</p>
+<p>De qualquer forma, você raramente irá precisar de estilizar um elemento de ênfase. As convenções para texto em negrito e itálico são bastante reconhecidas e alterar seu estilo pode causar confusão. Para saber mais sobre elemento ênfase (negrito), veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance">Emphasis and importance</a>.</p>
 
 <h4 id="Abreviações">Abreviações</h4>
 
@@ -108,7 +108,7 @@ p, li {
   color: #a60000;
 }</pre>
 
-<p>A convenção de estilo que é reconhecida para abreviações é uma linha pontilhada, e não é recomendado estilizá-la. Para saber mais sobre abreviações, veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
+<p>A convenção de estilo que é reconhecida para abreviações é uma linha pontilhada, e não é recomendado estilizá-la. Para saber mais sobre abreviações, veja <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations">Abbreviations</a>.</p>
 
 <h4 id="Links">Links</h4>
 
@@ -196,7 +196,7 @@ a:active {
 <p>It is possible for users to override your styles with their own custom styles, for example:</p>
 
 <ul>
- <li>See Sarah Maddox's <a class="external external-icon" href="https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/" rel="noopener">How to use a custom style sheet (CSS) with Firefox</a> for a useful guide covering how to do this manually in Firefox, and <a href="https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/">How to use a custom style sheet (CSS) with Internet Explorer</a> by Adrian Gordon for the equivalent <abbr>IE</abbr> instructions.</li>
+ <li>See Sarah Maddox's <a class="external external-icon" href="https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-firefox/" rel="noopener">How to use a custom style sheet (CSS) with Firefox</a> for a useful guide covering how to do this manually in Firefox, and <a href="https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/">How to use a custom style sheet (CSS) with Internet Explorer</a> by Adrian Gordon for the equivalent <abbr>IE</abbr> instructions.</li>
  <li>It is probably easier to do it using an extension, for example the Stylish extension is available for <a href="https://addons.mozilla.org/en-US/firefox/addon/stylish/">Firefox</a>, <a href="https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45">Safari</a>, <a href="https://addons.opera.com/en/extensions/details/stylish/">Opera</a>, and <a href="https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe">Chrome</a>.</li>
 </ul>
 
@@ -279,15 +279,15 @@ function validate(e) {
 <p>For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the <code>errorList</code>.</p>
 
 <pre class="brush: js">function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  var listItem = document.createElement('li');
+  var anchor = document.createElement('a');
+  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+  anchor.href = '#' + testItem.input.name;
+  anchor.onclick = function() {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }</pre>
 
 <p>Each link serves a dual purpose — it tells you what the error is, plus you can click on it/activate it to jump straight to the input element in question and correct your entry.</p>

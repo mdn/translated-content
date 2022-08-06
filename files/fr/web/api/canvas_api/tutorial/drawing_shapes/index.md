@@ -419,8 +419,8 @@ function draw() {
     ctx.fill();
     
     for(let i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 35, 4, 4);
-    }
+      ctx.fillRect(51 + i * 16, 35, 4, 4);
+    }
     
     for(i = 0; i < 6; i++) {
         ctx.fillRect(115, 51 + i * 16, 4, 4);

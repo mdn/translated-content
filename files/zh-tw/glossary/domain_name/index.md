@@ -12,5 +12,5 @@ translation_of: Glossary/Domain_name
 
 ### **基礎知識**
 
-- 維基百科上的 {{interwiki("wikipedia", "Domain_name", "域名")}}
+- 維基百科上的 [域名](https://zh.wikipedia.org/wiki/Domain_name)
 - [理解域名](/en-US/Learn/Understanding_domain_names)

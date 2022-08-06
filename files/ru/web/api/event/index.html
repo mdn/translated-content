@@ -12,7 +12,7 @@ translation_of: Web/API/Event
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Интерфейс <code><strong>Event</strong></code> представляет собой любое событие, которое происходит в <a href="/ru/docs/DOM/DOM_Reference">DOM</a>; некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе <code>Event</code>. <code>Event</code> содержит общие свойства и методы для всех событий.</p>
+<p>Интерфейс <code><strong>Event</strong></code> представляет собой любое событие, которое происходит в <a href="/ru/docs/DOM/DOM_Reference">DOM</a>; некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе <code>Event</code>. <code>Event</code> содержит общие свойства и методы для всех событий.</p>
 
 <h2 id="Introduction">Интерфейсы, основанные на <code>Event</code></h2>
 
@@ -78,7 +78,7 @@ translation_of: Web/API/Event
 
 <dl>
  <dt>{{domxref("Event.Event", "Event()")}}</dt>
- <dd>Создаёт объект <code>Event</code> и возвращает его вызывающему.</dd>
+ <dd>Создаёт объект <code>Event</code> и возвращает его вызывающему.</dd>
 </dl>
 
 <h2 id="Properties">Свойства</h2>
@@ -94,7 +94,7 @@ translation_of: Web/API/Event
  <dd>Логическое значение, показывающее может или нет событие всплывать через границы между shadow DOM (внутренний DOM конкретного элемента) и обычного DOM документа.</dd>
  <dt>{{domxref("Event.currentTarget")}} {{readonlyinline}}</dt>
  <dd>Ссылка на текущий зарегистрированный объект, на котором обрабатывается событие. Это объект, которому планируется отправка события; поведение можно изменить с использованием перенаправления (<em>retargeting</em>).</dd>
- <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
  <dd>{{jsxref("Array", "Массив")}} DOM-{{domxref("Node", "узлов")}}, через которые всплывало событие.</dd>
  <dt>{{domxref("Event.defaultPrevented")}} {{readonlyinline}}</dt>
  <dd>Показывает, была ли для события вызвана функция {{domxref("event.preventDefault()")}}.</dd>
@@ -107,7 +107,7 @@ translation_of: Web/API/Event
  <dt>{{domxref("Event.returnValue")}} {{non-standard_inline}}</dt>
  <dd>Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.</dd>
  <dt>{{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}</dt>
- <dd>{{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в  {{domxref("Event.composed", "composed")}}.</dd>
+ <dd>{{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в  {{domxref("Event.composed", "composed")}}.</dd>
  <dt>{{domxref("Event.srcElement")}} {{non-standard_inline}}</dt>
  <dd>Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.</dd>
  <dt>{{domxref("Event.target")}} {{readonlyinline}}</dt>
@@ -122,16 +122,16 @@ translation_of: Web/API/Event
 
 <h2 id="Methods">Методы</h2>
 
-<p> </p>
+<p> </p>
 
 <dl>
- <dt>{{domxref("Event.createEvent()")}} </dt>
+ <dt>{{domxref("Event.createEvent()")}} </dt>
  <dd>
  <p>Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода <code>initEvent()</code>.</p>
  </dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{domxref("Event.initEvent()")}} {{deprecated_inline}}</dt>

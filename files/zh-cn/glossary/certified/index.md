@@ -12,7 +12,7 @@ translation_of: Glossary/Certified
 ### 一般性知识
 
 - [信息安全教程](/zh-CN/Learn/tutorial/Information_Security_Basics)
-- 维基百科中的{{Interwiki("wikipedia", "Professional_certification_(computer_technology)#Information_systems_security", "证书")}}
+- 维基百科中的[证书](https://zh.wikipedia.org/wiki/Professional_certification_(computer_technology)#Information_systems_security)
 
 ### Firefox OS
 

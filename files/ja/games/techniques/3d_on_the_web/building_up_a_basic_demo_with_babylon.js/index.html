@@ -7,7 +7,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Bab
 
 <p class="summary">Babylon.jsは開発者に使われている最も有名な3Dゲームエンジンです。他のどんな3Dと同様に、より迅速に共通の3D機能を実装するのを助けるプラグイン機能を提供します。この記事ではBabylon.jsを使った基礎を通じて開発環境の構築、必要なHTML構造、JavaScriptの書き方を提供します。</p>
 
-<p>はじめに、簡単なデモを作ることに挑戦します。 — 立方体をレンダリングさせます。もしThree.js、PlayCanvas、A-Frame（もしくは同様の他の3Dライブラリー）と一緒に基本的なデモシリーズをすでに動かしていたら、camera、light、といったオブジェクト達と同様のコンセプトが動くことをBabylon.jsで気づくかも知れません。</p>
+<p>はじめに、簡単なデモを作ることに挑戦します。 — 立方体をレンダリングさせます。もしThree.js、PlayCanvas、A-Frame（もしくは同様の他の3Dライブラリー）と一緒に基本的なデモシリーズをすでに動かしていたら、camera、light、といったオブジェクト達と同様のコンセプトが動くことをBabylon.jsで気づくかも知れません。</p>
 
 <h2 id="環境構築">環境構築</h2>
 
@@ -22,7 +22,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Bab
 
 <h2 id="HTML構造">HTML構造</h2>
 
-<p>ここに使うHTMLの構造を示します: </p>
+<p>ここに使うHTMLの構造を示します: </p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -44,13 +44,13 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Bab
 &lt;/html&gt;
 </pre>
 
-<p>ここには文書の {{htmlelement("title")}} (タイトル) や、Babylon.js がその内容を描画するための{{htmlelement("canvas")}} 要素の幅や高さが利用可能なビューポート領域全体を占めるようにする CSS など、文書の基本的な情報が含まれています。 初めの{{htmlelement("script")}}要素はBabylon.jsに含みます。; サンプルコードを次に書いていきます。 これらはすでに含まれていて可変な一つの助けになります。そしてそれは、<code>&lt;canvas&gt;要素の参照を保存していくものになります。</code>.</p>
+<p>ここには文書の {{htmlelement("title")}} (タイトル) や、Babylon.js がその内容を描画するための{{htmlelement("canvas")}} 要素の幅や高さが利用可能なビューポート領域全体を占めるようにする CSS など、文書の基本的な情報が含まれています。 初めの{{htmlelement("script")}}要素はBabylon.jsに含みます。; サンプルコードを次に書いていきます。 これらはすでに含まれていて可変な一つの助けになります。そしてそれは、<code>&lt;canvas&gt;要素の参照を保存していくものになります。</code>.</p>
 
 <p>読み続ける前に<code>index.html</code>.として、作業ディレクトリに新しいテキストファイルとしてこのコードをコピーして下さい。</p>
 
 <h2 id="Babylon.jsエンジンの初期化">Babylon.jsエンジンの初期化</h2>
 
-<p>はじめに、ゲームの開発を始める前にBabylon.jsエンジンのインスタンスを作らなければなりません。(レンダーするための<code>&lt;canvas&gt;要素を省きます</code> )  次の<code>&lt;script&gt;要素のボタンのコードを次に付け加えます</code>:</p>
+<p>はじめに、ゲームの開発を始める前にBabylon.jsエンジンのインスタンスを作らなければなりません。(レンダーするための<code>&lt;canvas&gt;要素を省きます</code> )  次の<code>&lt;script&gt;要素のボタンのコードを次に付け加えます</code>:</p>
 
 <pre class="brush: js">var engine = new BABYLON.Engine(canvas);
 </pre>
@@ -65,7 +65,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Bab
 scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>このようにsceneは作られて、2番目の行を書いてバックグラウンドカラーをグレーにします。</p>
 
@@ -89,12 +89,12 @@ engine.runRenderLoop(renderLoop);
 <pre class="brush: js">var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>Babylon.jsにはたくさんのcameraを可能にするものがあります。<code>FreeCameraは最も基本的で普遍的なものの1つです。初期化するために3つのパラメータを通す必要があります。</code>:<code>どんな名前で使いたいか、3Dで示したい座標、加えたいシーン。</code></p>
 
 <div class="note">
-<p><strong>Note</strong>: あなたはここで使う <code>BABYLON.Vector3()メソッドに注意を払うだろう</code>  — この定義はsceneでの3Dの位置を決めるものである。 Babylon.js は完全な数学のライブラリーをバンドルしていて、それはベクトル、色、行列などを操作するものなのである。</p>
+<p><strong>Note</strong>: あなたはここで使う <code>BABYLON.Vector3()メソッドに注意を払うだろう</code>  — この定義はsceneでの3Dの位置を決めるものである。 Babylon.js は完全な数学のライブラリーをバンドルしていて、それはベクトル、色、行列などを操作するものなのである。</p>
 </div>
 
 <h2 id="lightをここに置きます">lightをここに置きます</h2>
@@ -114,11 +114,11 @@ engine.runRenderLoop(renderLoop);
 <pre class="brush: js">var box = BABYLON.Mesh.CreateBox("box", 2, scene);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>メッシュは幾何学的形状を作り出すエンジンの方法です。ですのでmaterialはあとからこれらを適応することを簡単にすることができます。この場合ではサイズが2であることやsceneに加えたい宣言やを含んだMesh.CreateBoxメソッドを用いることで箱形を創りあげることができます。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p><strong>Note</strong>: サイズや位置の値は（例えば箱形のサイズ）は単位がなく、基本的にあなたのsceneに適していると考えられるすべてのものにできます。---ミリメーター、メーター、フィート、あるいはマイル ---あなたができるもののうち</p>
@@ -126,13 +126,13 @@ engine.runRenderLoop(renderLoop);
 
 <p>もし、ファイルを保存して、ブラウザをリフレッシュを今できれば、正方形を見ることができるでしょう。なぜならcameraに焦点が当たっているからです。オブジェクトにとって良いことはscene上にそれらを動かすことができることです。しかしながら望めば例えば回転や拡大・縮小を行うことができます。それでは箱形を少し回転させてみましょう。それからさらにもう一つの面をみることができます。 --- 以下のようなこれらの行を付け加えて下さい。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">box.rotation.x = -0.2;
 box.rotation.y = -0.4;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>同時にこれらの箱は黒く見えます。なぜなら面にmaterialを定義していないからです。それでは次で扱いましょう。</p>
 
@@ -145,7 +145,7 @@ boxMaterial.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
 box.material = boxMaterial;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>StandardMaterialは2つのパラメータを持ちます。:名前、付け加えたいsceneの名前。二つ目の行はemissiveColorを定義するものです。 --- 我々に見えるようにするものの一つ。機能を定義するためにColor3のビルトインを使うことができます。三番目の行は箱形のmaterialを新しく作り出す割り当てをします。</p>
 
@@ -172,22 +172,22 @@ torus.position.x = -5;
 torus.rotation.x = 1.5;
 </pre>
 
-<p> </p>
+<p> </p>
 
-<p>これはトーラスを創り出し、sceneを付け加えます。パラメーターはname（名前）、diameter（直径）、 thickness（厚さ）、 tessellation（セグメントの数）そして付け加えるscene。左に少し位置を置いたり、もっとよく見えるようにx軸を回転します。さあ、materialを追加しましょう。</p>
+<p>これはトーラスを創り出し、sceneを付け加えます。パラメーターはname（名前）、diameter（直径）、 thickness（厚さ）、 tessellation（セグメントの数）そして付け加えるscene。左に少し位置を置いたり、もっとよく見えるようにx軸を回転します。さあ、materialを追加しましょう。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var torusMaterial = new BABYLON.StandardMaterial("material", scene);
 torusMaterial.emissiveColor = new BABYLON.Color3(0.4, 0.4, 0.4);
 torus.material = torusMaterial;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>それは箱の要素のように見えます。 — 　標準的なmaterialを作っています。灰色にしたり、トーラスの配分をしていっています。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="円柱">円柱</h3>
 
@@ -201,21 +201,21 @@ cylinderMaterial.emissiveColor = new BABYLON.Color3(1, 0.58, 0);
 cylinder.material = cylinderMaterial;
 </pre>
 
-<p> </p>
+<p> </p>
 
-<p>円柱のパラメーターはname（名前）、height（高さ）、 diameter（頂点の倍率）、diameter（底の倍率）, tessellation（テッセレーション）, height subdivisions（高さの分割）、そして加えたいscene。それから立方体をちょっと右に位置したり、ちょっと回転させたり、3Dの形に見えるようにしたり、黄色のmaterialを与えたりします。</p>
+<p>円柱のパラメーターはname（名前）、height（高さ）、 diameter（頂点の倍率）、diameter（底の倍率）, tessellation（テッセレーション）, height subdivisions（高さの分割）、そして加えたいscene。それから立方体をちょっと右に位置したり、ちょっと回転させたり、3Dの形に見えるようにしたり、黄色のmaterialを与えたりします。</p>
 
 <p>今ここでsceneが右に見えるようになるべきです。</p>
 
 <p><img alt="Light gray torus, blue box and yellow cylinder created with Babylon.js on the gray background." src="https://end3r.github.io/MDN-Games-3D/Babylon.js/img/shapes.png" style="display: block; height: 210px; margin: 0px auto; width: 600px;"></p>
 
-<p>これは動きますが、少し退屈です。ゲームの中ではいつも何か起こります。 — 　アニメーションを見ることができます。—　それではそれらのアニメーションによって、それらの形に命を生まれさせましょう。</p>
+<p>これは動きますが、少し退屈です。ゲームの中ではいつも何か起こります。 — 　アニメーションを見ることができます。—　それではそれらのアニメーションによって、それらの形に命を生まれさせましょう。</p>
 
 <h2 id="アニメーション">アニメーション</h2>
 
 <p>私たちはすでに形作る位置に適当なpositionやrotationといったものを使うことができます。私たちはそれらをスケールすることもできました。正確なアニメーションを示すために、コードの終わりのレンダリングのループの内側にこれらの値の変化を作る必要があります。なのでそれらはすべてのフレームで更新されます。ちょうどrenderLoopの前にアニメーションを使うだろうための助けになる可変的な---t---を定義して下さい。そしてこのようにループの内側にすべてのフレームにおいてそれを減じて下さい。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var t = 0;
 var renderLoop = function () {
@@ -226,11 +226,11 @@ var renderLoop = function () {
 engine.runRenderLoop(renderLoop);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>可変的なtはすべてのレンダーされたフレーム上で値が増えていくでしょう。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="回転">回転</h3>
 
@@ -239,7 +239,7 @@ engine.runRenderLoop(renderLoop);
 <pre class="brush: js">box.rotation.y = t*2;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>y軸に沿って箱が回転していくでしょう。</p>
 
@@ -247,12 +247,12 @@ engine.runRenderLoop(renderLoop);
 
 <p>以前にトーラスをスケールした一つの下にこの行を加えましょう。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>これらはアニメーションの見た目や感覚を良くするためのちょっとした調整です。値によってどのようにアニメーションが魅力的に見えるか経験することができます。</p>
 
@@ -263,7 +263,7 @@ engine.runRenderLoop(renderLoop);
 <pre class="brush: js">cylinder.position.y = Math.sin(t*3);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>Math.sin()ファンクションのおかげで円柱がy軸に沿って沈んだり浮かんだりするでしょう。</p>
 
@@ -273,7 +273,7 @@ engine.runRenderLoop(renderLoop);
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}</p>
 
-<p>もし、自分でローカル環境で自分自身で行いたい場合は、<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html"> GitHub</a> をみたり、<a href="https://github.com/end3r/MDN-Games-3D/">repository</a> をフォークするこができます。今やあなたはBabylon.jsエンジンの基礎を知り、幸せな演習をしました。</p>
+<p>もし、自分でローカル環境で自分自身で行いたい場合は、<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html"> GitHub</a> をみたり、<a href="https://github.com/end3r/MDN-Games-3D/">repository</a> をフォークするこができます。今やあなたはBabylon.jsエンジンの基礎を知り、幸せな演習をしました。</p>
 
 <h2 id="参照">参照</h2>
 

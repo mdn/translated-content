@@ -36,8 +36,8 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <table>
  <thead>
   <tr>
-   <th scope="col">Attribute name</th>
-   <th scope="col">Default value</th>
+   <th scope="col">Attribute name</th>
+   <th scope="col">Default value</th>
    <th scope="col">Description</th>
   </tr>
  </thead>
@@ -55,7 +55,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
   <tr>
    <td><code>form</code></td>
    <td></td>
-   <td>Элемент формы, с которым ассоциирован виджет. Значением данного атрибута должен быть атрибут <code>id</code> элемента {{HTMLElement("form")}}  в том же документе. Теоретически, это позволяет вам помещать определение виджета за рамками элемента {{HTMLElement("form")}}. На практике, однако, не существует браузеров, поддерживающих данную функцию.</td>
+   <td>Элемент формы, с которым ассоциирован виджет. Значением данного атрибута должен быть атрибут <code>id</code> элемента {{HTMLElement("form")}}  в том же документе. Теоретически, это позволяет вам помещать определение виджета за рамками элемента {{HTMLElement("form")}}. На практике, однако, не существует браузеров, поддерживающих данную функцию.</td>
   </tr>
   <tr>
    <td><code>name</code></td>
@@ -72,7 +72,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h2 id="Поля_ввода_текста">Поля ввода текста</h2>
 
-<p>Текстовые поля {{htmlelement("input")}}  являются самыми базовыми виджетами форм. Эти поля наиболее удобны для пользовательского ввода различной информации. Однако, некоторые текстовые поля отличаются от данного и используются для специфических нужд. Мы уже видели несколько простых примеров.</p>
+<p>Текстовые поля {{htmlelement("input")}}  являются самыми базовыми виджетами форм. Эти поля наиболее удобны для пользовательского ввода различной информации. Однако, некоторые текстовые поля отличаются от данного и используются для специфических нужд. Мы уже видели несколько простых примеров.</p>
 
 <div class="note">
 <p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla" title="/en-US/docs/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter out there are custom widgets created with HTML, CSS, and JavaScript.</p>
@@ -93,10 +93,10 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h3 id="Однострочные_текстовые_поля">Однострочные текстовые поля</h3>
 
-<p>Однострочные текстовые поля создаются с использованием элемента {{HTMLElement("input")}}  чей атрибут {{htmlattrxref("type","input")}} имеет значение <code>text</code> (если вы не поставите другое значение атрибута {{htmlattrxref("type","input")}}, <code>text</code> является значением по умолчанию). Значение <code>text</code> для этого атрибута является возвратным, если значение которое вы определили для {{htmlattrxref("type","input")}} неизвестно браузеру (например, если вы определили <code>type="date"</code> а браузер не поддерживает выбор даты).</p>
+<p>Однострочные текстовые поля создаются с использованием элемента {{HTMLElement("input")}}  чей атрибут {{htmlattrxref("type","input")}} имеет значение <code>text</code> (если вы не поставите другое значение атрибута {{htmlattrxref("type","input")}}, <code>text</code> является значением по умолчанию). Значение <code>text</code> для этого атрибута является возвратным, если значение которое вы определили для {{htmlattrxref("type","input")}} неизвестно браузеру (например, если вы определили <code>type="date"</code> а браузер не поддерживает выбор даты).</p>
 
 <div class="note">
-<p><strong>Note</strong>: вы можете найти примеры всех типов однострочных текстовых полей на GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">see it live also</a>).</p>
+<p><strong>Note</strong>: вы можете найти примеры всех типов однострочных текстовых полей на GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">see it live also</a>).</p>
 </div>
 
 <p>Пример базового одностраничного текстового поля:</p>
@@ -111,11 +111,11 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h4 id="E-mail_address_field">E-mail address field</h4>
 
-<p>Этот тип поля устанавливается со значением <code>email</code> для атрибута {{htmlattrxref("type","input")}}:</p>
+<p>Этот тип поля устанавливается со значением <code>email</code> для атрибута {{htmlattrxref("type","input")}}:</p>
 
 <pre class="brush: html">&lt;input type="email" id="email" name="email" multiple&gt;</pre>
 
-<p>Когда используется этот <code>type</code>, пользователь должен ввести в поле валидный адрес электронной почты; любое другое содержание будет отображено браузером при отправке формы как ошибка. Заметьте, что это проверка ошибок на стороне клиента, выполняемая браузером:</p>
+<p>Когда используется этот <code>type</code>, пользователь должен ввести в поле валидный адрес электронной почты; любое другое содержание будет отображено браузером при отправке формы как ошибка. Заметьте, что это проверка ошибок на стороне клиента, выполняемая браузером:</p>
 
 <p><img alt="An invalid email input showing the message Please enter an email address." src="email-invalid.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -191,8 +191,8 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
  <caption>Attributes for the {{HTMLElement("textarea")}} element</caption>
  <thead>
   <tr>
-   <th scope="col">Attribute name</th>
-   <th scope="col">Default value</th>
+   <th scope="col">Attribute name</th>
+   <th scope="col">Default value</th>
    <th scope="col">Description</th>
   </tr>
  </thead>
@@ -245,16 +245,16 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <p>If required, the default value for the select box can be set using the {{htmlattrxref("selected","option")}} attribute on the desired {{HTMLElement("option")}} element — this option is then preselected when the page loads. The {{HTMLElement("option")}} elements can also be nested inside {{HTMLElement("optgroup")}} elements to create visually associated groups of values:</p>
 
 <pre class="brush: html">&lt;select id="groups" name="groups"&gt;
-  &lt;optgroup label="fruits"&gt;
-    &lt;option&gt;Banana&lt;/option&gt;
-    &lt;option selected&gt;Cherry&lt;/option&gt;
-    &lt;option&gt;Lemon&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="vegetables"&gt;
-    &lt;option&gt;Carrot&lt;/option&gt;
-    &lt;option&gt;Eggplant&lt;/option&gt;
-    &lt;option&gt;Potato&lt;/option&gt;
-  &lt;/optgroup&gt;
+  &lt;optgroup label="fruits"&gt;
+    &lt;option&gt;Banana&lt;/option&gt;
+    &lt;option selected&gt;Cherry&lt;/option&gt;
+    &lt;option&gt;Lemon&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="vegetables"&gt;
+    &lt;option&gt;Carrot&lt;/option&gt;
+    &lt;option&gt;Eggplant&lt;/option&gt;
+    &lt;option&gt;Potato&lt;/option&gt;
+  &lt;/optgroup&gt;
 &lt;/select&gt;</pre>
 
 <p><img alt="Screenshots of single line select box on several platforms." src="all-select.png"></p>
@@ -265,7 +265,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h3 id="Multiple_choice_select_box">Multiple choice select box</h3>
 
-<p>By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values).</p>
+<p>By default, a select box only lets the user select a single value. By adding the {{htmlattrxref("multiple","select")}} attribute to the {{HTMLElement("select")}} element, you can allow users to select several values, by using the default mechanism provided by the operating system (e.g. holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> and clicking multiple values).</p>
 
 <p>Note: In the case of multiple choice select boxes, the select box no longer displays the values as drop-down content — instead, they are all displayed at once in a list.</p>
 
@@ -290,14 +290,14 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <pre class="brush: html">&lt;label for="myFruit"&gt;What's your favorite fruit?&lt;/label&gt;
 &lt;input type="text" name="myFruit" id="myFruit" list="mySuggestion"&gt;
 &lt;datalist id="mySuggestion"&gt;
-  &lt;option&gt;Apple&lt;/option&gt;
-  &lt;option&gt;Banana&lt;/option&gt;
-  &lt;option&gt;Blackberry&lt;/option&gt;
-  &lt;option&gt;Blueberry&lt;/option&gt;
-  &lt;option&gt;Lemon&lt;/option&gt;
-  &lt;option&gt;Lychee&lt;/option&gt;
-  &lt;option&gt;Peach&lt;/option&gt;
-  &lt;option&gt;Pear&lt;/option&gt;
+  &lt;option&gt;Apple&lt;/option&gt;
+  &lt;option&gt;Banana&lt;/option&gt;
+  &lt;option&gt;Blackberry&lt;/option&gt;
+  &lt;option&gt;Blueberry&lt;/option&gt;
+  &lt;option&gt;Lemon&lt;/option&gt;
+  &lt;option&gt;Lychee&lt;/option&gt;
+  &lt;option&gt;Peach&lt;/option&gt;
+  &lt;option&gt;Pear&lt;/option&gt;
 &lt;/datalist&gt;</pre>
 
 <div class="note"><strong>Note:</strong> According to <a href="https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">the HTML specification</a>, the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.</div>
@@ -308,7 +308,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <h4 id="Datalist_support_and_fallbacks">Datalist support and fallbacks</h4>
 
-<p>The  {{HTMLElement("datalist")}} element is a very recent addition to HTML forms, so browser support is a bit more limited than what we saw earlier. Most notably, it isn't supported in IE versions below 10, and Safari still doesn't support it at the time of writing.</p>
+<p>The  {{HTMLElement("datalist")}} element is a very recent addition to HTML forms, so browser support is a bit more limited than what we saw earlier. Most notably, it isn't supported in IE versions below 10, and Safari still doesn't support it at the time of writing.</p>
 
 <p>To handle this, here is a little trick to provide a nice fallback for those browsers:</p>
 
@@ -316,17 +316,17 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 &lt;input type="text" id="myFruit" name="fruit" list="fruitList"&gt;
 
 &lt;datalist id="fruitList"&gt;
-  &lt;label for="suggestion"&gt;or pick a fruit&lt;/label&gt;
-  &lt;select id="suggestion" name="altFruit"&gt;
-    &lt;option&gt;Apple&lt;/option&gt;
-    &lt;option&gt;Banana&lt;/option&gt;
-    &lt;option&gt;Blackberry&lt;/option&gt;
-    &lt;option&gt;Blueberry&lt;/option&gt;
-    &lt;option&gt;Lemon&lt;/option&gt;
-    &lt;option&gt;Lychee&lt;/option&gt;
-    &lt;option&gt;Peach&lt;/option&gt;
-    &lt;option&gt;Pear&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;label for="suggestion"&gt;or pick a fruit&lt;/label&gt;
+  &lt;select id="suggestion" name="altFruit"&gt;
+    &lt;option&gt;Apple&lt;/option&gt;
+    &lt;option&gt;Banana&lt;/option&gt;
+    &lt;option&gt;Blackberry&lt;/option&gt;
+    &lt;option&gt;Blueberry&lt;/option&gt;
+    &lt;option&gt;Lemon&lt;/option&gt;
+    &lt;option&gt;Lychee&lt;/option&gt;
+    &lt;option&gt;Peach&lt;/option&gt;
+    &lt;option&gt;Pear&lt;/option&gt;
+  &lt;/select&gt;
 &lt;/datalist&gt;
 </pre>
 
@@ -355,7 +355,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <p><strong>Note</strong>: You can find the examples from this section on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">see it live also</a>).</p>
 </div>
 
-<p>For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). This is shown in the examples. </p>
+<p>For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list.  Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). This is shown in the examples. </p>
 
 <p>You also need to provide values for these kinds of inputs inside the <code>value</code> attribute if you want them to be meaningful — if no value is provided, check boxes and radio buttons are given a value of <code>on</code>.</p>
 
@@ -379,21 +379,21 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <p>Several radio buttons can be tied together. If they share the same value for their {{htmlattrxref("name","input")}} attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at the same time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form.</p>
 
 <pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;label for="soup"&gt;Soup&lt;/label&gt;
-      &lt;input type="radio" checked id="soup" name="meal" value="soup"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="curry"&gt;Curry&lt;/label&gt;
-      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
-      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;legend&gt;What is your favorite meal?&lt;/legend&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;label for="soup"&gt;Soup&lt;/label&gt;
+      &lt;input type="radio" checked id="soup" name="meal" value="soup"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="curry"&gt;Curry&lt;/label&gt;
+      &lt;input type="radio" id="curry" name="meal" value="curry"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;label for="pizza"&gt;Pizza&lt;/label&gt;
+      &lt;input type="radio" id="pizza" name="meal" value="pizza"&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
 <p><img alt="Screenshots of radio buttons on several platforms." src="all-radio.png"></p>

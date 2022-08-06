@@ -5,9 +5,9 @@ translation_of: Web/API/VRPose
 ---
 <div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRPose</code></strong> インターフェイスは，特定のタイムスタンプにおけるVRセンサーの状態（向き，位置，速度，加速度の情報を含みます）を示します．</p>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>VRPose</code></strong> インターフェイスは，特定のタイムスタンプにおけるVRセンサーの状態（向き，位置，速度，加速度の情報を含みます）を示します．</p>
 
-<p>このインターフェイスには，{{domxref("VRDisplay.getPose()")}} と {{domxref("VRDisplay.getImmediatePose()")}} メソッドを通じてアクセスします．</p>
+<p>このインターフェイスには，{{domxref("VRDisplay.getPose()")}} と {{domxref("VRDisplay.getImmediatePose()")}} メソッドを通じてアクセスします．</p>
 
 <h2 id="プロパティ">プロパティ</h2>
 
@@ -15,17 +15,17 @@ translation_of: Web/API/VRPose
  <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}}</dt>
  <dd>システムの現在のタイムスタンプを返します — これは単調増加する値で，位置データが更新されたか，どんな順番で更新が発生しているかを決めるのに使えます．</dd>
  <dt>{{domxref("VRPose.position")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の位置を3Dベクトルとして返します．</dd>
+ <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の位置を3Dベクトルとして返します．</dd>
  <dt>{{domxref("VRPose.linearVelocity")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）速度を返します．単位はメートル/秒です．</dd>
+ <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）速度を返します．単位はメートル/秒です．</dd>
  <dt>{{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）加速度を返します．単位はメートル/秒/秒です．</dd>
+ <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の（線形の）加速度を返します．単位はメートル/秒/秒です．</dd>
  <dt>{{domxref("VRPose.orientation")}} {{readonlyInline}}</dt>
  <dd>現在の {{domxref("VRPose.timestamp")}} におけるセンサーの向きをクォータニオンとして返します．</dd>
  <dt>{{domxref("VRPose.angularVelocity")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角速度を返します．単位はラジアン/秒です．</dd>
+ <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角速度を返します．単位はラジアン/秒です．</dd>
  <dt>{{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}</dt>
- <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角加速度を返します．単位はラジアン/秒/秒です．</dd>
+ <dd>現在の {{domxref("VRPose.timestamp")}} における {{domxref("VRDisplay")}} の角加速度を返します．単位はラジアン/秒/秒です．</dd>
 </dl>
 
 <h2 id="例">例</h2>

@@ -20,13 +20,13 @@ translation_of: Web/API/MediaStream/active
 <p>В этом примере, стрим ведётся с пользовательского микрофона и веб-камеры, запрошенных с помощью {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. Когда стрим становится активным (а это тогда, когда выполнен {{jsxref("Promise")}}, кнопка на странице обновляется, опираясь на состояние стрима, активен он или же нет.</p>
 
 <pre class="brush: js">var promise = navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: true
+  audio: true,
+  video: true
 });
 
 promise.then(function(stream) {
   var startBtn = document.querySelector('#startBtn');
-  startBtn.disabled = stream.active;
+  startBtn.disabled = stream.active;
 };)</pre>
 
 <h2 id="Спецификации">Спецификации</h2>

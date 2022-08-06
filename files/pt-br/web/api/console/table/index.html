@@ -7,17 +7,17 @@ translation_of: Web/API/Console/table
 
 <p><span class="seoSummary">Exibe dados tabulares como uma tabela.</span></p>
 
-<p>Essa função recebe um parâmetro obrigatório <code>data</code>, que deve ser um array ou um objeto, e um parametro opcional <code>columns</code>.</p>
+<p>Essa função recebe um parâmetro obrigatório <code>data</code>, que deve ser um array ou um objeto, e um parametro opcional <code>columns</code>.</p>
 
-<p>Registra <code>data</code> como uma tabela. Cada elemento no array (ou propriedade enumerável se <code>data</code> for um objeto) será uma linha na tabela.</p>
+<p>Registra <code>data</code> como uma tabela. Cada elemento no array (ou propriedade enumerável se <code>data</code> for um objeto) será uma linha na tabela.</p>
 
-<p>A primeira coluna na tabela será rotulada <code>(index)</code>. Se <code>data</code> for um array, seus valores serão os índices da matriz. Se <code>data</code> for um objeto, seus valores serão os nomes das propriedades. Observe que (no Firefox) o <code>console.table</code> está limitado a exibir 1000 linhas (a primeira linha é o índice rotulado).</p>
+<p>A primeira coluna na tabela será rotulada <code>(index)</code>. Se <code>data</code> for um array, seus valores serão os índices da matriz. Se <code>data</code> for um objeto, seus valores serão os nomes das propriedades. Observe que (no Firefox) o <code>console.table</code> está limitado a exibir 1000 linhas (a primeira linha é o índice rotulado).</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h3 id="Coleções_de_tipos_primitivos">Coleções de tipos primitivos</h3>
 
-<p>O argumento <code>data</code> pode ser um array ou um objeto.</p>
+<p>O argumento <code>data</code> pode ser um array ou um objeto.</p>
 
 <pre class="brush: js">// um array de strings
 
@@ -28,8 +28,8 @@ console.table(["apples", "oranges", "bananas"]);</pre>
 <pre class="brush: js">// um objeto cujas propriedades são strings
 
 function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
 var me = new Person("John", "Smith");
@@ -40,7 +40,7 @@ console.table(me);</pre>
 
 <h3 id="Coleções_de_tipos_compostos">Coleções de tipos compostos</h3>
 
-<p>Se os elementos no array, ou propriedades no objeto, forem arrays ou objetos, seus elementos ou propriedades serão enumerados na linha, um por coluna:</p>
+<p>Se os elementos no array, ou propriedades no objeto, forem arrays ou objetos, seus elementos ou propriedades serão enumerados na linha, um por coluna:</p>
 
 <pre class="brush: js">// um array de arrays
 
@@ -99,7 +99,7 @@ console.table([john, jane, emily], ["firstName"]);</pre>
 
 <h3 id="Classificando_colunas">Classificando colunas</h3>
 
-<p>Você pode classificar a tabela por uma coluna específica clicando no rótulo dessa coluna.</p>
+<p>Você pode classificar a tabela por uma coluna específica clicando no rótulo dessa coluna.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -112,7 +112,7 @@ console.table([john, jane, emily], ["firstName"]);</pre>
  <dt><code>data</code></dt>
  <dd>Os dados a serem exibidos. Deve ser um array ou um objeto.</dd>
  <dt><code>columns</code></dt>
- <dd>Um array contendo os nomes das colunas para incluir na saída.</dd>
+ <dd>Um array contendo os nomes das colunas para incluir na saída.</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>

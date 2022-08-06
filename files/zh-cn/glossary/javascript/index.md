@@ -22,7 +22,7 @@ JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来�
 
 ### 基本知识
 
-- 维基百科上的{{interwiki("wikipedia", "JavaScript", "JavaScript")}}
+- 维基百科上的[JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
 
 ### 学习 JavaScript
 

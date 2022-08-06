@@ -41,7 +41,7 @@ p:nth-child(2){
 
 <dl>
  <dt>没有内容将父元素和后代元素分开</dt>
- <dd>    如果没有边框{{cssxref("border")}}，内边距{{cssxref("padding")}}，行内内容，也没有创建<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式上下文</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">清除浮动</a>来分开一个块级元素的上边界{{cssxref("margin-top")}} 与其内一个或多个后代块级元素的上边界{{cssxref("margin-top")}}；或没有边框，内边距，行内内容，高度{{cssxref("height")}}，最小高度{{cssxref("min-height")}}或 最大高度{{cssxref("max-height")}} 来分开一个块级元素的下边界{{cssxref("margin-bottom")}}与其内的一个或多个后代后代块元素的下边界{{cssxref("margin-bottom")}}，则就会出现父块元素和其内后代块元素外边界重叠，重叠部分最终会溢出到父级块元素外面。</dd>
+ <dd>    如果没有边框{{cssxref("border")}}，内边距{{cssxref("padding")}}，行内内容，也没有创建<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式上下文</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear">清除浮动</a>来分开一个块级元素的上边界{{cssxref("margin-top")}} 与其内一个或多个后代块级元素的上边界{{cssxref("margin-top")}}；或没有边框，内边距，行内内容，高度{{cssxref("height")}}，最小高度{{cssxref("min-height")}}或 最大高度{{cssxref("max-height")}} 来分开一个块级元素的下边界{{cssxref("margin-bottom")}}与其内的一个或多个后代后代块元素的下边界{{cssxref("margin-bottom")}}，则就会出现父块元素和其内后代块元素外边界重叠，重叠部分最终会溢出到父级块元素外面。</dd>
 </dl>
 
 <pre class="brush: html notranslate">&lt;style type="text/css"&gt;
@@ -61,7 +61,7 @@ p:nth-child(2){
 
 &lt;section&gt;
     &lt;header&gt;上边界重叠 87&lt;/header&gt;
-    &lt;main&gt;&lt;/main&gt;
+    &lt;main&gt;&lt;/main&gt;
     &lt;footer&gt;下边界重叠 87 不能再高了&lt;/footer&gt;
 &lt;/section&gt;</pre>
 
@@ -76,7 +76,7 @@ p:nth-child(2){
 }
 div {
   margin-top: 13px;
-  margin-bottom: 87px;
+  margin-bottom: 87px;
 }
 &lt;/style&gt;
 

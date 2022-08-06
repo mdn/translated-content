@@ -5,7 +5,7 @@ translation_of: Web/API/PerformanceEntry/name
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p><strong><code>name</code></strong> 是 {{domxref("PerformanceEntry")}} 接口的属性，此属性的返回值是 {{domxref("PerformanceEntry.entryType")}} 的返回值的一个补充，例如 entry.entryType="navigation",entry.name="document". 这是一个只读属性。</p>
+<p><strong><code>name</code></strong> 是 {{domxref("PerformanceEntry")}} 接口的属性，此属性的返回值是 {{domxref("PerformanceEntry.entryType")}} 的返回值的一个补充，例如 entry.entryType="navigation",entry.name="document". 这是一个只读属性。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/PerformanceEntry/name
    <td>{{domxref("DOMString")}}</td>
    <td>{{domxref('PerformanceMark')}}</td>
    <td><code>mark</code></td>
-   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
+   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
   </tr>
   <tr>
    <td>{{domxref("DOMString")}}</td>
@@ -85,37 +85,37 @@ translation_of: Web/API/PerformanceEntry/name
 }
   //
   //例如上面 p 中一个 entry p[0] = {
-  //  "name": "document",
-  //  "entryType": "navigation",
-  //  "startTime": 0,
-  //  "duration": 3611.26,
-  //  "initiatorType": "navigation",
-  //  "nextHopProtocol": "http/1.1",
-  //  "workerStart": 0,
-  //  "redirectStart": 0,
-  //  "redirectEnd": 0,
-  //  "fetchStart": 0.32,
-  //  "domainLookupStart": 17.64,
-  //  "domainLookupEnd": 17.78,
-  //  "connectStart": 17.86,
-  //  "connectEnd": 18.1,
-  //  "secureConnectionStart": 0,
-  //  "requestStart": 18.3,
-  //  "responseStart": 294.06,
-  //  "responseEnd": 1610.3600000000001,
-  //  "transferSize": 97683,
-  //  "encodedBodySize": 97112,
-  //  "decodedBodySize": 97112,
-  //  "unloadEventStart": 1614.8372840721554,
-  //  "unloadEventEnd": 1619.1600105887128,
-  //  "domInteractive": 3110.767514889843,
-  //  "domContentLoadedEventStart": 3125.859851800787,
-  //  "domContentLoadedEventEnd": 3438.5779820633365,
-  //  "domComplete": 3609.999662153349,
-  //  "loadEventStart": 3610.017623620869,
-  //  "loadEventEnd": 3611.2672285754975,
-  //  "type": "reload",
-  //  "redirectCount": 0
+  //  "name": "document",
+  //  "entryType": "navigation",
+  //  "startTime": 0,
+  //  "duration": 3611.26,
+  //  "initiatorType": "navigation",
+  //  "nextHopProtocol": "http/1.1",
+  //  "workerStart": 0,
+  //  "redirectStart": 0,
+  //  "redirectEnd": 0,
+  //  "fetchStart": 0.32,
+  //  "domainLookupStart": 17.64,
+  //  "domainLookupEnd": 17.78,
+  //  "connectStart": 17.86,
+  //  "connectEnd": 18.1,
+  //  "secureConnectionStart": 0,
+  //  "requestStart": 18.3,
+  //  "responseStart": 294.06,
+  //  "responseEnd": 1610.3600000000001,
+  //  "transferSize": 97683,
+  //  "encodedBodySize": 97112,
+  //  "decodedBodySize": 97112,
+  //  "unloadEventStart": 1614.8372840721554,
+  //  "unloadEventEnd": 1619.1600105887128,
+  //  "domInteractive": 3110.767514889843,
+  //  "domContentLoadedEventStart": 3125.859851800787,
+  //  "domContentLoadedEventEnd": 3438.5779820633365,
+  //  "domComplete": 3609.999662153349,
+  //  "loadEventStart": 3610.017623620869,
+  //  "loadEventEnd": 3611.2672285754975,
+  //  "type": "reload",
+  //  "redirectCount": 0
   //}
 
   //下面的函数 check_PerformanceEntry 的参数 obj 就是上面的 p[0]

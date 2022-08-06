@@ -48,7 +48,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 <p>JavaScript では、あるオブジェクトのインスタンスとそのプロトタイプ (コンストラクタの <code>prototype</code> プロパティから派生した <code>__proto__</code> プロパティ) の間にリンクが張られており、そのプロパティとメソッドはプロトタイプの連鎖を辿って発見されます。</p>
 
 <div class="note">
-<p><strong>Note:</strong> <strong>オブジェクトの <code>prototype</code></strong> (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code> または非推奨の <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> プロパティで取得可能) と<strong>コンストラクタ関数の<code>prototype</code> プロパティ</strong>の違いを理解することが重要です。</p>
+<p><strong>Note:</strong> <strong>オブジェクトの <code>prototype</code></strong> (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code> または非推奨の <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> プロパティで取得可能) と<strong>コンストラクタ関数の<code>prototype</code> プロパティ</strong>の違いを理解することが重要です。</p>
 
 <p>前者は各インスタンス上のプロパティ、後者はコンストラクタ上のプロパティです。つまり、<code>Object.getPrototypeOf(new <var>Foobar</var>())</code> は<code><var>Foobar</var>.prototype</code>と同じオブジェクトを参照しています。</p>
 </div>
@@ -65,11 +65,11 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
   // property and method definitions
   this.name = {
-    'first': first,
-    'last' : last
-  };
-  this.age = age;
-  this.gender = gender;
+    'first': first,
+    'last' : last
+  };
+  this.age = age;
+  this.gender = gender;
   //...see link in summary above for full definition
 }</pre>
 
@@ -105,7 +105,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: ECMAScript 2015 以前は、オブジェクトの <code>prototype</code> に直接アクセスする方法は公式にはありませんでした - チェーン内のアイテム間の「リンク」は、JavaScript 言語の仕様で <code>[[prototype]]</code> と呼ばれる内部プロパティで定義されています ({{glossary("ECMAScript")}}}を参照してください)。</p>
+<p><strong>Note</strong>: ECMAScript 2015 以前は、オブジェクトの <code>prototype</code> に直接アクセスする方法は公式にはありませんでした - チェーン内のアイテム間の「リンク」は、JavaScript 言語の仕様で <code>[[prototype]]</code> と呼ばれる内部プロパティで定義されています ({{glossary("ECMAScript")}}}を参照してください)。</p>
 
 <p>しかし、ほとんどの最新のブラウザでは、オブジェクトのコンストラクタのプロトタイプオブジェクトを含む <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (アンダースコア2個分) というプロパティを提供しています。例えば、<code>person1.__proto__</code> と <code>person1.__proto__.__proto__</code> を試してみてください。</p>
 
@@ -246,11 +246,11 @@ Person.prototype.farewell = function() {
 <p>しかし、<code>farewell()</code> メソッドは <code>person1</code> オブジェクトのインスタンスで利用可能です。そのメンバーは、新たに定義された <code>farewell()</code> メソッドを含むように自動的に更新されます。</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 逆に、コンストラクタのプロトタイプに定義されたプロパティを <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 演算子を使用して削除すると、他のすべてのクラスインスタンスからもそれぞれのプロパティが削除されます。</p>
+<p><strong>Note</strong>: 逆に、コンストラクタのプロトタイプに定義されたプロパティを <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 演算子を使用して削除すると、他のすべてのクラスインスタンスからもそれぞれのプロパティが削除されます。</p>
 
 <p>上記の例では、<code>delete person1.__proto__.farewell</code> または <code>delete Person.prototype.farewell</code> を実行すると、すべての <code>Person</code> インスタンスから <code>farewell()</code> メソッドが削除されます。</p>
 
-<p>この問題を軽減するために、代わりに <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> を使用することができます。</p>
+<p>この問題を軽減するために、代わりに <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty()</a></code> を使用することができます。</p>
 </div>
 
 <div class="note">

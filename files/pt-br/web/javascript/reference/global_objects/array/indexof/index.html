@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 <div>{{JSRef}}</div>
 
-<div>O método <code><strong>indexOf() </strong></code>retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.</div>
+<div>O método <code><strong>indexOf() </strong></code>retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.</div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,16 +24,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
  <dt><code>elementoDePesquisa</code></dt>
  <dd><code>Elemento a ser pesquisado no array.</code></dd>
  <dt><code>pontoInicial</code></dt>
- <dd>O índice para iniciar a procura. Se o índice for maior ou igual ao tamanho do array, é retornado -1 e signfica que o item não será procurado. Se o<code> pontoInicial é fornecido</code> com um número negativo,  é tomado como deslocamento da extremidade do array. Nota: se o <code>pontoInicial</code> fornecido é negativo, a procura no array acontece de frente para trás. Se o <code>pontoInicial</code> fornecido é 0, então o array inteiro será pesquisado. Padrão: 0 (pesquisa em todo array).</dd>
+ <dd>O índice para iniciar a procura. Se o índice for maior ou igual ao tamanho do array, é retornado -1 e signfica que o item não será procurado. Se o<code> pontoInicial é fornecido</code> com um número negativo,  é tomado como deslocamento da extremidade do array. Nota: se o <code>pontoInicial</code> fornecido é negativo, a procura no array acontece de frente para trás. Se o <code>pontoInicial</code> fornecido é 0, então o array inteiro será pesquisado. Padrão: 0 (pesquisa em todo array).</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>indexOf()</code> compara o  <code>elementoDePesquisa</code> com os elementos do Array usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdade estrita</a> (o mesmo método usado pelo ===, ou triple-equals operator). </p>
+<p><code>indexOf()</code> compara o  <code>elementoDePesquisa</code> com os elementos do Array usando <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">igualdade estrita</a> (o mesmo método usado pelo ===, ou triple-equals operator). </p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_indexOf">Usando <code>indexOf()</code></h3>
+<h3 id="Usando_indexOf">Usando <code>indexOf()</code></h3>
 
 <p><code>O exemplo seguinte usa indexOf() para localizar valores em um array</code></p>
 
@@ -80,7 +80,7 @@ atualizarColecaoVegetais(vegetais, 'espinafre');
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>indexOf() </code>foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o <code>indexOf() </code>quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("Global_Objects/TypeError", "TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.</p>
+<p><code>indexOf() </code>foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o <code>indexOf() </code>quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("Global_Objects/TypeError", "TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.</p>
 
 <pre class="brush: js notranslate">// Passos para a produção do ECMA-262, Edition 5, 15.4.4.14
 // Referência: http://es5.github.io/#x15.4.4.14

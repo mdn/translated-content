@@ -7,9 +7,9 @@ translation_of: Web/API/Blob/Blob
 
 <p>Blob()</p>
 
-<p> </p>
+<p> </p>
 
-<p>Retorna um novo objeto <font>Blob</font> criado, cujo o conteúdo consiste na concatenação de um array de valores estabelecidos no parâmetro da função.</p>
+<p>Retorna um novo objeto <font>Blob</font> criado, cujo o conteúdo consiste na concatenação de um array de valores estabelecidos no parâmetro da função.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -19,11 +19,11 @@ translation_of: Web/API/Blob/Blob
 <h3 id="Parâmetros">Parâmetros</h3>
 
 <ul>
- <li><em>array</em> é um {{jsxref("Array")}} de objetos {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou uma combinação de quaisquer um destes objetos, que serão colocados dentro do {{domxref("Blob")}}. DOMStrings são codificadas como UTF-8.</li>
- <li><em>option</em><em>s</em> é um dicionário opcional <code>BlobPropertyBag</code> que pode especificar os dois atributos seguintes:
+ <li><em>array</em> é um {{jsxref("Array")}} de objetos {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, ou uma combinação de quaisquer um destes objetos, que serão colocados dentro do {{domxref("Blob")}}. DOMStrings são codificadas como UTF-8.</li>
+ <li><em>option</em><em>s</em> é um dicionário opcional <code>BlobPropertyBag</code> que pode especificar os dois atributos seguintes:
   <ul>
-   <li><code>type</code>, com um valor padrão de <code>""</code>, que representa o MIME type do conteúdo do array que será inserido no blob.</li>
-   <li><code>endings</code>, com um valor padrão de <code>"transparent"</code>, especifica como strings contendo o caracter de final de linha <code>\n</code> deverão ser escritos. Tem um dos dois valores: <code>"native"</code>, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou <code>"transparent", </code>indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}</li>
+   <li><code>type</code>, com um valor padrão de <code>""</code>, que representa o MIME type do conteúdo do array que será inserido no blob.</li>
+   <li><code>endings</code>, com um valor padrão de <code>"transparent"</code>, especifica como strings contendo o caracter de final de linha <code>\n</code> deverão ser escritos. Tem um dos dois valores: <code>"native"</code>, indicando que caracteres de final de linha são modificados para coincidir com a convenção do Sistema Operacional, ou <code>"transparent", </code>indicando que finais são armazenados no blob sem quaisquer modificações. {{non-standard_inline}}</li>
   </ul>
  </li>
 </ul>
@@ -57,7 +57,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li>A versão descontinuada que o construtor {{domxref("BlobBuilder")}} substitui.</li>
+ <li>A versão descontinuada que o construtor {{domxref("BlobBuilder")}} substitui.</li>
 </ul>
 
-<p> </p>
+<p> </p>

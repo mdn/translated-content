@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.arc()</code></strong> 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</p>
+<p><strong><code>CanvasRenderingContext2D.arc()</code></strong> 是 Canvas 2D API 绘制圆弧路径的方法。圆弧路径的圆心在 <em>(x, y)</em> 位置，半径为<em> r</em> ，根据<em>anticlockwise</em> （默认为顺时针）指定的方向从 <em>startAngle</em> 开始绘制，到 <em>endAngle</em> 结束。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -24,9 +24,9 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
  <dt><code>startAngle</code></dt>
  <dd>圆弧的起始点，x 轴方向开始计算，单位以弧度表示。</dd>
  <dt><code>endAngle</code></dt>
- <dd>圆弧的终点， 单位以弧度表示。</dd>
+ <dd>圆弧的终点， 单位以弧度表示。</dd>
  <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>可选的{{jsxref("Boolean")}}值 ，如果为 <code>true</code>，逆时针绘制圆弧，反之，顺时针绘制。 </dd>
+ <dd>可选的{{jsxref("Boolean")}}值 ，如果为 <code>true</code>，逆时针绘制圆弧，反之，顺时针绘制。 </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -57,8 +57,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();

@@ -14,11 +14,11 @@ translation_of: Web/CSS/filter
 
 <h2 id="Описание">Описание</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>filter</code></strong>  позволяет вам применять к элементу такие графические эффекты, как размытие и смещение цвета. Фильтры обычно используются для регулировки рендеринга изображений, фонов и рамок.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>filter</code></strong>  позволяет вам применять к элементу такие графические эффекты, как размытие и смещение цвета. Фильтры обычно используются для регулировки рендеринга изображений, фонов и рамок.</p>
 
-<p>В стандарт CSS включены несколько функций, которые обеспечивают предопределённые эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на <a href="/en-US/docs/Web/SVG/Element/filter">элемент фильтра SVG</a>.</p>
+<p>В стандарт CSS включены несколько функций, которые обеспечивают предопределённые эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на <a href="/en-US/docs/Web/SVG/Element/filter">элемент фильтра SVG</a>.</p>
 
-<div class="note"><strong>Предупреждение:</strong> Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный <a class="external" href="http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx">"filter"</a>, который с тех пор устарел.</div>
+<div class="note"><strong>Предупреждение:</strong> Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный <a class="external" href="http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx">"filter"</a>, который с тех пор устарел.</div>
 
 <p>{{cssinfo}}</p>
 
@@ -50,7 +50,7 @@ filter: unset;
 <pre class="syntaxbox">filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none
 </pre>
 
-<p>Для ссылки на SVG {{SVGElement("filter")}} элемент, используйте:</p>
+<p>Для ссылки на SVG {{SVGElement("filter")}} элемент, используйте:</p>
 
 <pre class="syntaxbox">filter: url(svg-url#element-id)
 </pre>
@@ -61,16 +61,16 @@ filter: unset;
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Примеры использования предопределённых функций показаны ниже. См. каждую функцию для конкретного примера.</p>
+<p>Примеры использования предопределённых функций показаны ниже. См. каждую функцию для конкретного примера.</p>
 
 <pre class="brush: css">.mydiv { filter: grayscale(50%) }
 
 /* сделать все изображения серыми на 50% и размыть на 10px */
 img {
-  filter: grayscale(0.5) blur(10px);
+  filter: grayscale(0.5) blur(10px);
 }</pre>
 
-<p>Примеры использования функции URL с SVG ресурсом показаны ниже.</p>
+<p>Примеры использования функции URL с SVG ресурсом показаны ниже.</p>
 
 <pre class="brush: css">.target { filter: url(#c1); }
 
@@ -79,7 +79,7 @@ img {
 
 <h2 id="Функции">Функции</h2>
 
-<p>Для использования CSS-свойства <code>filter</code>, вы указываете значение для одной из выбранных функций. Если это значение недействительно, функция возвращает "none." За исключением тех случаев, когда функции, которые принимают значение, выраженное в процентах (34%), также принимают значение, выраженное как десятичная дробь (0.34).</p>
+<p>Для использования CSS-свойства <code>filter</code>, вы указываете значение для одной из выбранных функций. Если это значение недействительно, функция возвращает "none." За исключением тех случаев, когда функции, которые принимают значение, выраженное в процентах (34%), также принимают значение, выраженное как десятичная дробь (0.34).</p>
 
 <h3 id="url"><code>url()</code></h3>
 
@@ -212,7 +212,7 @@ table.standard-table td {
         &lt;feFuncB type="linear" slope="2"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
+  &lt;image xlink:href="/files/3708/Test_Form.jpg" filter="url(#brightness)" width="286px" height="217px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3709/Test_Form_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -308,7 +308,7 @@ table.standard-table td {
       &lt;feFuncB type="linear" slope="2" intercept="-0.5"/&gt;
     &lt;/feComponentTransfer&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
+  &lt;image xlink:href="/files/3712/Test_Form_3.jpeg" filter="url(#contrast)" width="240px" height="151px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_s.jpg" id="img4" class="internal default" src="/files/3713/Test_Form_3_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -375,7 +375,7 @@ table.standard-table td {
  <dt><code>&lt;blur-radius&gt;</code> <small>(optional)</small></dt>
  <dd>This is a third {{cssxref("&lt;length&gt;")}} value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be <code>0</code> (the shadow's edge is sharp).</dd>
  <dt><code>&lt;spread-radius&gt;</code> <small>(optional)</small></dt>
- <dd>This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, and negative values will cause the shadow to shrink. If not specified, it will be <code>0</code> (the shadow will be the same size as the element). <br>
+ <dd>This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, and negative values will cause the shadow to shrink. If not specified, it will be <code>0</code> (the shadow will be the same size as the element). <br>
  Note: Webkit, and maybe other browsers, do not support this 4th length; it will not render if added.</dd>
  <dt><code>&lt;color&gt;</code> <small>(optional)</small></dt>
  <dd>See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations. If not specified, the color depends on the browser. In Gecko (Firefox), Presto (Opera) and Trident (Internet Explorer), the value of the {{cssxref("color")}} property is used. On the other hand, WebKit's shadow is transparent and therefore useless if <code>&lt;color&gt;</code> is omitted.</dd>
@@ -425,24 +425,24 @@ table.standard-table td {
       &lt;td&gt;&lt;img alt="Test_Form_4_s.jpg" id="img4" class="internal default" src="/files/3715/Test_Form_4_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Original image" id="img11" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border - Live example" id="img12" class="internal default" src="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png" style="width: 100%;" /&gt;&lt;/td&gt;
       &lt;td&gt;
         &lt;div class="svg-container"&gt;
           &lt;svg xmlns="http://www.w3.org/2000/svg" id="img13" viewbox="0 0 239 187"&gt;
             &lt;filter id="drop-shadow2"&gt;
-              &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4"/&gt;
-              &lt;feOffset dx="8" dy="10"/&gt;
-              &lt;feMerge&gt;
-                &lt;feMergeNode/&gt;
-                &lt;feMergeNode in="SourceGraphic"/&gt;
-              &lt;/feMerge&gt;
+              &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4"/&gt;
+              &lt;feOffset dx="8" dy="10"/&gt;
+              &lt;feMerge&gt;
+                &lt;feMergeNode/&gt;
+                &lt;feMergeNode in="SourceGraphic"/&gt;
+              &lt;/feMerge&gt;
             &lt;/filter&gt;
             &lt;image xlink:href="/files/8467/Test_Form_4_irregular-shape_opacity-gradient.png<span style="font-size: 1rem;">" filter="url(#drop-shadow2)" width="213px" height="161px" /&gt;</span>
           &lt;/svg&gt;
         &lt;div&gt;
       &lt;/td&gt;
-      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img alt="Test_Form_4 distorded border drop shadow - Static example" id="img14" class="internal default" src="/files/8469/Test_Form_4_irregular-shape_opacity-gradient_drop-shadow.png" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -537,7 +537,7 @@ table.standard-table td {
                        0.2126 0.7152 0.0722 0 0
                        0 0 0 1 0"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
+  &lt;image xlink:href="/files/3716/Test_Form_5.jpeg" filter="url(#grayscale)" width="276px" height="184px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_5_s.jpg" id="img4" class="internal default" src="/files/3717/Test_Form_5_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -618,7 +618,7 @@ table.standard-table td {
     &lt;feColorMatrix type="hueRotate"
                values="90"/&gt;
   &lt;/filter&gt;
-  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
+  &lt;image xlink:href="/files/3718/Test_Form_6.jpeg" filter="url(#hue-rotate)" width="266px" height="190px" /&gt;
 &lt;/svg&gt;&lt;div&gt;&lt;/td&gt;
       &lt;td&gt;&lt;img alt="Test_Form_6_s.jpg" id="img4" class="internal default" src="/files/3719/Test_Form_6_s.jpg" style="width: 100%;" /&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -766,7 +766,7 @@ table.standard-table td {
 
 <h3 id="opacity_непрозрачность"><code>opacity() [непрозрачность]</code></h3>
 
-<p>Applies transparency to the samples in the input image. The value of ‘<code class="property">amount</code>’ defines the proportion of the conversion. A value of <code>0%</code> is completely transparent. A value of <code>100%</code> leaves the input unchanged. Values between <code>0%</code> and <code>100%</code> are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. If the ‘<code class="property">amount</code>’ parameter is missing, a value of <code>1</code> is used. This function is similar to the more established {{Cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.</p>
+<p>Applies transparency to the samples in the input image. The value of ‘<code class="property">amount</code>’ defines the proportion of the conversion. A value of <code>0%</code> is completely transparent. A value of <code>100%</code> leaves the input unchanged. Values between <code>0%</code> and <code>100%</code> are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. If the ‘<code class="property">amount</code>’ parameter is missing, a value of <code>1</code> is used. This function is similar to the more established {{Cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.</p>
 
 <pre class="brush: css">filter: opacity(50%)</pre>
 

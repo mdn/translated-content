@@ -5,11 +5,11 @@ translation_of: Web/HTML/Element/textarea
 ---
 <div>{{HTMLRef}}</div>
 
-<p>O <strong>elemento</strong>  HTML <code>&lt;textarea&gt;</code> representa um controle de edição para uma caixa de texto, útil quando você quer permitir ao usuário informar um texto  extenso em formato livre, como um comentário ou formulário de retorno.          </p>
+<p>O <strong>elemento</strong>  HTML <code>&lt;textarea&gt;</code> representa um controle de edição para uma caixa de texto, útil quando você quer permitir ao usuário informar um texto  extenso em formato livre, como um comentário ou formulário de retorno.          </p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}</div>
 
-<p class="hidden">O código fonte deste exemplo interativo está armazenado em um repositório GitHub. Caso queira contribuir com o projeto de exemplos interativos, faça um clone do repósitório <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> e nos envie um  solicitação de recebimento.</p>
+<p class="hidden">O código fonte deste exemplo interativo está armazenado em um repositório GitHub. Caso queira contribuir com o projeto de exemplos interativos, faça um clone do repósitório <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> e nos envie um  solicitação de recebimento.</p>
 
 <p>Os exemplos acima demonstram vários recursos do <code>&lt;textarea&gt;</code>. O primeiro exemplo mostra o uso mais simples, com apenas um <code>id</code> atributo para permitir que o<code>&lt;textarea&gt;</code> estar associado a um {{htmlelement("label")}} elemento para fins de acessibilidade e um <code>name</code> atributo para definir o nome do ponto de dados associado enviado ao servidor quando o formulário é enviado.</p>
 
@@ -47,11 +47,11 @@ translation_of: Web/HTML/Element/textarea
   <li><code>on</code>: O navegador pode concluir automaticamente o valor com base nos valores inseridos pelo usuário durante os usos anteriores.</li>
  </ul>
 
- <p>Se o <code>autocomplete</code> atributo não está especificado em um <code>&lt;textarea&gt;</code> elemento, o navegador usa o elemento <code>autocomplete</code> valor do atributo <code>&lt;textarea&gt;</code> proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este<code>&lt;textarea&gt;</code> elemento é um descendente ou o elemento de formulário cuja <code>id</code> é especificado pelo <code>form</code> atributo do elemento de entrada. Para mais informações, consulte o {{htmlattrxref("autocomplete", "form")}} atribuno no {{HTMLElement("form")}}.</p>
+ <p>Se o <code>autocomplete</code> atributo não está especificado em um <code>&lt;textarea&gt;</code> elemento, o navegador usa o elemento <code>autocomplete</code> valor do atributo <code>&lt;textarea&gt;</code> proprietário do formulário do elemento. O proprietário do formulário é o {{HTMLElement("form")}} elemento que este<code>&lt;textarea&gt;</code> elemento é um descendente ou o elemento de formulário cuja <code>id</code> é especificado pelo <code>form</code> atributo do elemento de entrada. Para mais informações, consulte o {{htmlattrxref("autocomplete", "form")}} atribuno no {{HTMLElement("form")}}.</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
  <dd>Esse atributo booleano permite especificar que um controle de formulário tenha foco de entrada quando a página for carregada. Somente um elemento associado ao formulário em um documento pode ter esse atributo especificado.<br>
-  <br>
+  <br>
  {{ htmlattrdef("cols") }}</dd>
  <dd>A largura visível do controle de texto, em larguras médias de caracteres. Se for especificado, deve ser um número inteiro positivo. Se não for especificado, o valor padrão é 20.</dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
@@ -66,7 +66,7 @@ translation_of: Web/HTML/Element/textarea
  <dd>O nome do controle.</dd>
  <dt>{{ htmlattrdef("placeholder") }}</dt>
  <dd>Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
- <div class="note"><strong>Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada</strong> {{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.</div>
+ <div class="note"><strong>Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada</strong> {{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.</div>
  </dd>
  <dt>{{ htmlattrdef("readonly") }}</dt>
  <dd>Esse atributo booleano indica que o usuário não pode modificar o valor do controle. Ao contrário do <code>disabled</code> atributo, o<code>readonly</code> O atributo não impede o usuário de clicar ou selecionar no controle. O valor de um controle somente leitura ainda é enviado com o formulário.</dd>
@@ -87,7 +87,7 @@ translation_of: Web/HTML/Element/textarea
  <ul>
   <li><code>hard</code>: O navegador insere automaticamente quebras de linha (CR + LF) para que cada linha não tenha mais que a largura do controle; a <code>cols</code> O atributo também deve ser especificado para que isso entre em vigor.</li>
   <li><code>soft</code>: O navegador garante que todas as quebras de linha no valor consistam em um par CR + LF, mas não insira nenhuma quebra de linha adicional.</li>
-  <li><code>off</code> {{non-standard_inline}}: Como <code>soft</code> mas muda a aparência para <code>white-space: pre</code> segmentos de linha que excedam <code>cols</code> não estão embrulhados e os <code>&lt;textarea&gt;</code> torna-se rolável horizontalmente.</li>
+  <li><code>off</code> {{non-standard_inline}}: Como <code>soft</code> mas muda a aparência para <code>white-space: pre</code> segmentos de linha que excedam <code>cols</code> não estão embrulhados e os <code>&lt;textarea&gt;</code> torna-se rolável horizontalmente.</li>
  </ul>
 
  <p>Se este atributo não for especificado, <code>soft</code> é o seu valor padrão.</p>
@@ -109,7 +109,7 @@ translation_of: Web/HTML/Element/textarea
 <p>Na maioria dos navegadores, <code>&lt;textarea&gt;</code>s são redimensionáveis - você notará a alça de arrasto no canto direito, que pode ser usada para alterar o tamanho do elemento na página. Isso é controlado pelo {{ cssxref("resize") }} Propriedade CSS - o redimensionamento está ativado por padrão, mas você pode desativá-lo explicitamente usando um<code>resize</code> valor de<code>none</code>:</p>
 
 <pre class="brush: html">textarea {
-  resize: none;
+  resize: none;
 }
 </pre>
 
@@ -164,7 +164,7 @@ textarea:valid {
 
 <h3 id="Desativado_e_somente_leitura">Desativado e somente leitura</h3>
 
-<p>Este exemplo mostra dois <code>&lt;textarea&gt;</code>s — um dos quais é <code>disabled</code>, e o outro é <code>readonly</code>.Brinque com os dois e verá a diferença de comportamento - O <code>disabled</code> elemento não é selecionável de forma alguma (e seu valor não é enviado), enquanto o elemento <code>readonly</code> é selecionável e seu conteúdo copiável (e seu valor é enviado); você simplesmente não pode editar o conteúdo.</p>
+<p>Este exemplo mostra dois <code>&lt;textarea&gt;</code>s — um dos quais é <code>disabled</code>, e o outro é <code>readonly</code>.Brinque com os dois e verá a diferença de comportamento - O <code>disabled</code> elemento não é selecionável de forma alguma (e seu valor não é enviado), enquanto o elemento <code>readonly</code> é selecionável e seu conteúdo copiável (e seu valor é enviado); você simplesmente não pode editar o conteúdo.</p>
 
 <pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"

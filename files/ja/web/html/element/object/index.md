@@ -24,13 +24,13 @@ translation_of: Web/HTML/Element/object
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が {{htmlattrxref("usemap","object")}} 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#form_listed">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#form_submittable">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#form-associated_content">フォーム関連要素</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が {{htmlattrxref("usemap","object")}} 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        0 個以上の {{HTMLElement("param")}} 要素とそれに続く <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>
+        0 個以上の {{HTMLElement("param")}} 要素とそれに続く <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/object
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

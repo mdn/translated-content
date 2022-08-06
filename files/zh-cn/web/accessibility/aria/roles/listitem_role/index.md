@@ -78,15 +78,13 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 `li
 
 ## 规范
 
-| Specification                                            | Status                   |
-| -------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 屏幕阅读器支持
 
 TBD
 
-## 相关链接
+## 参见
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

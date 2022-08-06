@@ -5,7 +5,7 @@ translation_of: Web/API/AnalyserNode/frequencyBinCount
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p><strong><code>frequencyBinCount</code></strong> 的值固定为 {{ domxref("AnalyserNode") }} 接口中 fftSize 值的一半。该属性通常用于可视化的数据值的数量。</p>
+<p><strong><code>frequencyBinCount</code></strong> 的值固定为 {{ domxref("AnalyserNode") }} 接口中 fftSize 值的一半。该属性通常用于可视化的数据值的数量。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,9 +20,9 @@ var bufferLength = analyser.frequencyBinCount;
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子展示了 <a href="/zh-CN/docs/Web/API/AudioContext"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="/zh-CN/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> 去反复收集频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
+<p>下面的例子展示了 <a href="/zh-CN/docs/Web/API/AudioContext"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="/zh-CN/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> 去反复收集频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
 
-<p>更多的例子/信息，查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
+<p>更多的例子/信息，查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -39,25 +39,25 @@ var dataArray = new Uint8Array(bufferLength);
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
-  drawVisual = requestAnimationFrame(draw);
+  drawVisual = requestAnimationFrame(draw);
 
-  analyser.getByteFrequencyData(dataArray);
+  analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  var barWidth = (WIDTH / bufferLength) * 2.5;
+  var barHeight;
+  var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
-    barHeight = dataArray[i];
+  for(var i = 0; i &lt; bufferLength; i++) {
+    barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
+    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
 
-    x += barWidth + 1;
-  }
+    x += barWidth + 1;
+  }
 };
 
 draw();</pre>

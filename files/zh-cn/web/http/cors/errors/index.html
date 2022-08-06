@@ -4,10 +4,10 @@ slug: Web/HTTP/CORS/Errors
 translation_of: Web/HTTP/CORS/Errors
 ---
 <div>
-<p> </p>
+<p> </p>
 </div>
 
-<div> </div>
+<div> </div>
 
 <div class="hidden">
 <p><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing</a> ({{Glossary("CORS")}}) 是一种允许服务器放宽同源策略的标准。 这用于明确允许一些跨源请求，同时拒绝其他请求。 例如，如果站点提供外界嵌入的服务，则可能需要放宽同源策略（<a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>）。 设置这样的 CORS 配置并不一定容易，并且可能存在一些挑战。 在这些页面中，我们将研究一些常见的 CORS 错误消息以及如何解决它们。</p>
@@ -19,11 +19,11 @@ translation_of: Web/HTTP/CORS/Errors
 
 <p>要了解 CORS 配置的基本问题，您需要找出哪个请求有问题以及原因。步骤如下：</p>
 
-<p> </p>
+<p> </p>
 
 <ol>
- <li> 打开有问题的网站并打开开发者工具（<a href="/en-US/docs/Tools">Developer Tools</a>）。</li>
- <li> 尝试重现失败的事务并检查控制台（ <a href="/en-US/docs/Tools/Web_Console">console</a>）是否看到 CORS 违规错误消息。它可能看起来像这样：</li>
+ <li> 打开有问题的网站并打开开发者工具（<a href="/en-US/docs/Tools">Developer Tools</a>）。</li>
+ <li> 尝试重现失败的事务并检查控制台（ <a href="/en-US/docs/Tools/Web_Console">console</a>）是否看到 CORS 违规错误消息。它可能看起来像这样：</li>
 </ol>
 
 <p><img alt="Firefox console showing CORS error" src="cors-error2.png"></p>
@@ -40,7 +40,7 @@ additional information here</em>).</pre>
 
 <h2 id="CORS错误信息">CORS 错误信息</h2>
 
-<p>当请求因 CORS 失败时，Firefox 的控制台会在其控制台中显示消息。 错误文本的一部分是“原因”消息，它提供了对出错的更深入的了解。 消息的原因如下： </p>
+<p>当请求因 CORS 失败时，Firefox 的控制台会在其控制台中显示消息。 错误文本的一部分是“原因”消息，它提供了对出错的更深入的了解。 消息的原因如下： </p>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDisabled">原因：CORS 被禁用</a></li>

@@ -3,11 +3,11 @@ title: with
 slug: Web/JavaScript/Reference/Statements/with
 translation_of: Web/JavaScript/Reference/Statements/with
 ---
-<div class="warning">Использование оператора <code>with не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости</code>. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".</div>
+<div class="warning">Использование оператора <code>with не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости</code>. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".</div>
 
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Инструкция <strong>with</strong> расширяет цепочку областей видимости для инструкции.</p>
+<p>Инструкция <strong>with</strong> расширяет цепочку областей видимости для инструкции.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -17,22 +17,22 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <dl>
  <dt><code>expression</code></dt>
- <dd>Добавляет данный exrpession в цепочку областей видимости используемое когда исследуется statement. Рекомендуется использовать круглые скобки вокруг выражения.</dd>
+ <dd>Добавляет данный exrpession в цепочку областей видимости используемое когда исследуется statement. Рекомендуется использовать круглые скобки вокруг выражения.</dd>
  <dt><code>statement</code></dt>
- <dd>Любое выражение. Чтобы использовать несколько выражений, используйте оператор <a href="/en-US/docs/Web/JavaScript/Reference/Statements/block" title="JavaScript/Reference/Statements/block">block</a> statement ({ ... }), чтобы сгруппировать их.</dd>
+ <dd>Любое выражение. Чтобы использовать несколько выражений, используйте оператор <a href="/en-US/docs/Web/JavaScript/Reference/Statements/block" title="JavaScript/Reference/Statements/block">block</a> statement ({ ... }), чтобы сгруппировать их.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p>JavaScript ищет unqualified имя, исследуя  цепочку областей видимости, связанную с выполнением скрипта или функции, содержащих это unqualified имя. Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. Если unqualified имя используемое в теле соответствует свойству в цепочке областей видимости, тогда имя привязывается к свойству и объекту, содержащему это свойство. В противном случае возвращается {{jsxref("ReferenceError")}}.</p>
+<p>JavaScript ищет unqualified имя, исследуя  цепочку областей видимости, связанную с выполнением скрипта или функции, содержащих это unqualified имя. Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. Если unqualified имя используемое в теле соответствует свойству в цепочке областей видимости, тогда имя привязывается к свойству и объекту, содержащему это свойство. В противном случае возвращается {{jsxref("ReferenceError")}}.</p>
 
-<div class="note">Использование оператора <code>with не рекомендуется</code>, и недопустимо в строгом режиме (<a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode</a>)  ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.</div>
+<div class="note">Использование оператора <code>with не рекомендуется</code>, и недопустимо в строгом режиме (<a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode</a>)  ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.</div>
 
 <h3 id="Performance_pro_contra">Performance pro &amp; contra</h3>
 
-<p><strong>Pro:</strong> Оператор <strong>with</strong> может помочь уменьшить размер файла, уменьшив необходимость повторять длинную ссылку на объект без снижения производительности.  Изменение цепочки контекста, необходимое для 'with', не требует больших вычислительных затрат.  Использование 'with' избавит интерпретатор от разбора повторных ссылок на объекты. Однако, обратите внимание, что во многих случаях это преимущество может быть достигнуто с помощью временной переменной для хранения ссылки на нужный объект.</p>
+<p><strong>Pro:</strong> Оператор <strong>with</strong> может помочь уменьшить размер файла, уменьшив необходимость повторять длинную ссылку на объект без снижения производительности.  Изменение цепочки контекста, необходимое для 'with', не требует больших вычислительных затрат.  Использование 'with' избавит интерпретатор от разбора повторных ссылок на объекты. Однако, обратите внимание, что во многих случаях это преимущество может быть достигнуто с помощью временной переменной для хранения ссылки на нужный объект.</p>
 
-<p><strong>Contra:</strong> Оператор <strong>with</strong> заставляет указанный объект быть найденным сначала среди всех имён поиска.  Поэтому все идентификаторы, которые не относятся к указанному объекту, будут обнаруживаться медленнее в блоке «<strong>with</strong>.  Там, где важна производительность, «with» следует использовать только для охвата блоков кода, которые обращаются к членам указанного объекта.</p>
+<p><strong>Contra:</strong> Оператор <strong>with</strong> заставляет указанный объект быть найденным сначала среди всех имён поиска.  Поэтому все идентификаторы, которые не относятся к указанному объекту, будут обнаруживаться медленнее в блоке «<strong>with</strong>.  Там, где важна производительность, «with» следует использовать только для охвата блоков кода, которые обращаются к членам указанного объекта.</p>
 
 <h3 id="Ambiguity_contra">Ambiguity contra</h3>
 
@@ -61,9 +61,9 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использование_with">Использование <code>with</code></h3>
+<h3 id="Использование_with">Использование <code>with</code></h3>
 
-<p>Последующее использование <strong><code>with</code></strong> указывает что Объект <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math"><code>Math</code></a> является объектом по умолчанию. Следующие инструкции  за <strong><code>with</code></strong>  ссылаются на свойства <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI">PI</a><font face="Open Sans, arial, sans-serif"> и методы </font></code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos"><code>cos</code></a> и <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin"><code>sin</code></a>, без указания объекта. JavaScript предполагает Объект <code>Math</code> для этих справок.</p>
+<p>Последующее использование <strong><code>with</code></strong> указывает что Объект <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" title="JavaScript/Reference/Global_Objects/Math"><code>Math</code></a> является объектом по умолчанию. Следующие инструкции  за <strong><code>with</code></strong>  ссылаются на свойства <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" title="JavaScript/Reference/Global_Objects/Math/PI">PI</a><font face="Open Sans, arial, sans-serif"> и методы </font></code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos" title="JavaScript/Reference/Global_Objects/Math/cos"><code>cos</code></a> и <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="JavaScript/Reference/Global_Objects/Math/sin"><code>sin</code></a>, без указания объекта. JavaScript предполагает Объект <code>Math</code> для этих справок.</p>
 
 <pre class="brush:js">var a, x, y;
 var r = 10;

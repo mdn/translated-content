@@ -16,7 +16,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
-<p>{{Glossary("CORS")}} 请求只能使用 HTTPS URL 方案，但请求指定的 URL 可能是不同类型。这种情况经常发生在 URL 指定本地文件，例如使用了 <code>file:///</code> 的 URL。</p>
+<p>{{Glossary("CORS")}} 请求只能使用 HTTPS URL 方案，但请求指定的 URL 可能是不同类型。这种情况经常发生在 URL 指定本地文件，例如使用了 <code>file:///</code> 的 URL。</p>
 
 <p>要解决此问题，请确保在发出涉及 CORS 的请求时使用 HTTPS URL，例如 {{domxref("XMLHttpRequest")}}，<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> API，或 Web Fonts（<code>@font-face</code>），或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL 纹理</a>, 或 XSL 样式表。</p>
 

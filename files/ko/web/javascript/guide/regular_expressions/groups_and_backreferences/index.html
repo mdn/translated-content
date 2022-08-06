@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   <tr>
    <td><code><em>x</em>|<em>y</em></code></td>
    <td>
-    <p><code>x</code>또는 <code>y</code>와 매칭되는 경우. 예를들면 <code>/green|red/</code> 은 "green apple"의 "green"과 매치되고 "red apple"의 "red"와 매치됩니다.</p>
+    <p><code>x</code>또는 <code>y</code>와 매칭되는 경우. 예를들면 <code>/green|red/</code> 은 "green apple"의 "green"과 매치되고 "red apple"의 "red"와 매치됩니다.</p>
    </td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   <tr>
    <td><code>(<em>x</em>)</code></td>
    <td>
-    <p><strong>Capturing group: </strong>Matches <code><em>x</em></code> and remembers the match. For example, <code>/(foo)/</code> matches and remembers "foo" in "foo bar". </p>
+    <p><strong>Capturing group: </strong>Matches <code><em>x</em></code> and remembers the match. For example, <code>/(foo)/</code> matches and remembers "foo" in "foo bar". </p>
 
     <p>A regular expression may have multiple capturing groups. In results, matches to capturing groups typically in an array whose members are in the same order as the left parentheses in the capturing group. This is usually just the order of the capturing groups themselves. This becomes important when capturing groups are nested. Matches are accessed using the index of the the result's elements (<code>[1], ..., [n]</code>) or from the predefined <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).</p>
 
@@ -71,14 +71,14 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
   <tr>
    <td><code>(?&lt;Name&gt;x)</code></td>
    <td>
-    <p><strong>Named capturing group: </strong>Matches <code>x</code> and stores it on the groups property of the returned matches under the name specified by <code>&lt;Name&gt;</code>. The angle brackets ('<code>&lt;</code>' and '<code>&gt;</code>') are required for group name.</p>
+    <p><strong>Named capturing group: </strong>Matches <code>x</code> and stores it on the groups property of the returned matches under the name specified by <code>&lt;Name&gt;</code>. The angle brackets ('<code>&lt;</code>' and '<code>&gt;</code>') are required for group name.</p>
 
     <p>For example, to extract the United States area code from a phone number, I could use <code>/\((?&lt;area&gt;\d\d\d)\)/</code>. The resulting number would appear under <code>matches.groups.area</code>.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?:<em>x</em>)</code></td>
-   <td><strong>Non-capturing group: </strong>Matches <code><em>x</em></code> but does not remember the match. The matched substring cannot be recalled from the resulting array's elements (<code>[1], ..., [n]</code>) or from the predefined <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).</td>
+   <td><strong>Non-capturing group: </strong>Matches <code><em>x</em></code> but does not remember the match. The matched substring cannot be recalled from the resulting array's elements (<code>[1], ..., [n]</code>) or from the predefined <code>RegExp</code> object's properties (<code>$1, ..., $9</code>).</td>
   </tr>
  </tbody>
 </table>

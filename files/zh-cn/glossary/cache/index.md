@@ -9,4 +9,4 @@ translation_of: Glossary/Cache
 
 ### 基础知识
 
-- 维基百科上的{{interwiki("wikipedia", "Web cache")}}
+- 维基百科上的[Web cache](https://zh.wikipedia.org/wiki/Web_cache)

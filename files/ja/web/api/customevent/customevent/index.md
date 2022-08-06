@@ -59,7 +59,7 @@ obj.dispatchEvent(dogFound);
 // "cat" および "dog" がコンソールの出力される
 ```
 
-その他の例が[イベントの作成と軌道](/ja/docs/Web/Events/Creating_and_triggering_events)にあります。
+その他の例が[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events)にあります。
 
 ## 仕様書
 

@@ -11,12 +11,12 @@ original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}</div>
 
 <div class="summary">
-<p><a href="/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes">도형 그리기</a> 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.</p>
+<p><a href="/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes">도형 그리기</a> 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.</p>
 </div>
 
 <h2 id="Colors" name="Colors">색상</h2>
 
-<p>지금까지는 그리기 메소드만 살펴봤습니다. 도형에 색을 적용하고자 하면, <code>fillStyle</code>과  <code>strokeStyle</code> 두 가지 중요한 속성을 사용할 수 있습니다.</p>
+<p>지금까지는 그리기 메소드만 살펴봤습니다. 도형에 색을 적용하고자 하면, <code>fillStyle</code>과  <code>strokeStyle</code> 두 가지 중요한 속성을 사용할 수 있습니다.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
@@ -31,7 +31,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 <p><strong>참고:</strong> <code>strokeStyle</code> 또는 <code>fillStyle</code> 속성을 설정하면, 새로 설정된 값이 앞으로 그려질 도형의 기본 값이 됩니다. 각 도형에 다른 색을 적용하려면 <code>fillStyle</code> 또는 <code>strokeStyle</code> 속성을 다시 적용해야 합니다.</p>
 </div>
 
-<p>색의 올바른 값은 CSS3 사양에 나오는 {{cssxref("&lt;color&gt;")}} 값입니다. 아래에 나오는 색은 모두 한가지 색을 다르게 표현한 것입니다.</p>
+<p>색의 올바른 값은 CSS3 사양에 나오는 {{cssxref("&lt;color&gt;")}} 값입니다. 아래에 나오는 색은 모두 한가지 색을 다르게 표현한 것입니다.</p>
 
 <pre class="brush: js">// fillStyle에 적용되는 색은 모두 '오렌지'
 
@@ -43,7 +43,7 @@ ctx.fillStyle = "rgba(255, 165, 0, 1)";
 
 <h3 id="A_fillStyle_example" name="A_fillStyle_example"><code>fillStyle</code> 예제</h3>
 
-<p>이 예제에서 <code>for</code> 반복문을 두 번 사용하여 사각형 격자를 그릴 것입니다. 결과는 스크린샷과 같을 것입니다. 결과가 그리 대단한 것은 아닙니다. 각 사각형의 RGB 색상값에서 붉은색과 녹색 값만을 변수 <code>i</code>와 <code>j</code>를 사용하여 변경합니다. 파란색 채널은 고정된 값입니다. 채널 값들을 변경함으로써, 모든 종류의 팔레트를 생성할 수 있습니다. 단계를 늘리면 Photoshop에서 사용하는 색상 팔레트와 비슷한 모양을 얻을 수 있습니다.</p>
+<p>이 예제에서 <code>for</code> 반복문을 두 번 사용하여 사각형 격자를 그릴 것입니다. 결과는 스크린샷과 같을 것입니다. 결과가 그리 대단한 것은 아닙니다. 각 사각형의 RGB 색상값에서 붉은색과 녹색 값만을 변수 <code>i</code>와 <code>j</code>를 사용하여 변경합니다. 파란색 채널은 고정된 값입니다. 채널 값들을 변경함으로써, 모든 종류의 팔레트를 생성할 수 있습니다. 단계를 늘리면 Photoshop에서 사용하는 색상 팔레트와 비슷한 모양을 얻을 수 있습니다.</p>
 
 <pre class="brush: js;highlight[5,6]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -99,12 +99,12 @@ ctx.fillStyle = "rgba(255, 165, 0, 1)";
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}</dt>
- <dd>투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 투명)입니다.</dd>
+ <dd>투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 투명)입니다.</dd>
 </dl>
 
 <p><code>globalAlpha</code>는 모두 같은 투명도로 캔버스에 많은 도형을 그릴 때 유용합니다. 하지만, 보통은 각각의 도형마다 투명도를 설정하는 것이 더 유용할 것입니다.</p>
 
-<p><code>strokeStyle</code>과 <code>fillStyle</code> 값에 CSS rgba 색상값을 적용할 수 있으므로, 투명한 색을 적용하려면 아래와 같은 표기법을 사용할 수 있습니다.</p>
+<p><code>strokeStyle</code>과 <code>fillStyle</code> 값에 CSS rgba 색상값을 적용할 수 있으므로, 투명한 색을 적용하려면 아래와 같은 표기법을 사용할 수 있습니다.</p>
 
 <pre class="brush: js">// 외곽선과 채움 스타일에 투명 적용
 
@@ -116,7 +116,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <h3 id="A_globalAlpha_example" name="A_globalAlpha_example"><code>globalAlpha</code> 예제</h3>
 
-<p>이 예제에서, 네 가지 다른 색을 가진 사각형을 배경에 그릴 것입니다. 그 위에, 반투명한 원을 여러 개 그릴 것입니다. <code>globalAlpha</code> 값을 <code>0.2</code>로 설정하면 이후 그려질 도형은 이 값을 사용합니다. <code>for</code> 반복문을 사용하여 점점 큰 반지름의 원을 그립니다. 최종 결과물은 원형 그레이디언트가 됩니다. 원이 겹쳐지면서 점점 불투명해지는 것을 볼 수 있으며, 최종적으로 한 가운데에 있는 원에서는 뒷 배경이 거의 보이지 않게 됩니다.</p>
+<p>이 예제에서, 네 가지 다른 색을 가진 사각형을 배경에 그릴 것입니다. 그 위에, 반투명한 원을 여러 개 그릴 것입니다. <code>globalAlpha</code> 값을 <code>0.2</code>로 설정하면 이후 그려질 도형은 이 값을 사용합니다. <code>for</code> 반복문을 사용하여 점점 큰 반지름의 원을 그립니다. 최종 결과물은 원형 그레이디언트가 됩니다. 원이 겹쳐지면서 점점 불투명해지는 것을 볼 수 있으며, 최종적으로 한 가운데에 있는 원에서는 뒷 배경이 거의 보이지 않게 됩니다.</p>
 
 <pre class="brush: js;highlight[15]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -155,25 +155,25 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 <p>두번째 예제에서는 위의 예제와 비슷한 일을 하지만, 겹쳐진 원을 그리는 대신, 불투명도가 증가하는 작은 사각형을 그릴 것입니다. 각각의 도형마다 윤곽선이나 채움 스타일을 따로따로 설정할 수 있기 때문에, <code>rgba()</code>를 사용할 때는 조금 더 제어가 쉽고 융통성도 있습니다.</p>
 
 <pre class="brush: js;highlight[16]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // 배경을 그린다
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  // 배경을 그린다
+  ctx.fillStyle = 'rgb(255,221,0)';
+  ctx.fillRect(0,0,150,37.5);
+  ctx.fillStyle = 'rgb(102,204,0)';
+  ctx.fillRect(0,37.5,150,37.5);
+  ctx.fillStyle = 'rgb(0,153,255)';
+  ctx.fillRect(0,75,150,37.5);
+  ctx.fillStyle = 'rgb(255,51,0)';
+  ctx.fillRect(0,112.5,150,37.5);
 
-  // 반투명한 사각형을 그린다
-  for (var i=0;i&lt;10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&lt;4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
-    }
-  }
+  // 반투명한 사각형을 그린다
+  for (var i=0;i&lt;10;i++){
+    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
+    for (var j=0;j&lt;4;j++){
+      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+    }
+  }
 }</pre>
 
 <div class="hidden">
@@ -202,18 +202,18 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash", "setLineDash(segments)")}}</dt>
  <dd>현재 선의 대시 패턴을 설정합니다.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset = value")}}</dt>
- <dd>선의 대시 배열이 어디서 시작될지 지정합니다.</dd>
+ <dd>선의 대시 배열이 어디서 시작될지 지정합니다.</dd>
 </dl>
 
 <p>아래 예제들을 보면 어떻게 동작하는지 이해할 수 있을 것입니다.</p>
 
 <h3 id="A_lineWidth_example" name="A_lineWidth_example"><code>lineWidth</code> 예제</h3>
 
-<p>현재 선의 두께를 설정합니다. 설정값은 반드시 양수이어야 하며, 초기 설정값은 1.0 단위입니다.</p>
+<p>현재 선의 두께를 설정합니다. 설정값은 반드시 양수이어야 하며, 초기 설정값은 1.0 단위입니다.</p>
 
-<p>선의 두께는 지정된 경로의 가운데에 있는 획의 두께입니다. 이 말의 뜻은, 경로의 좌우로, 설정된 두께 반 만큼의 폭 영역이 그려진다는 것입니다. 캔버스 좌표는 픽셀을 직접 참조하지 않으므로, 선명한 수평 및 수직선을 얻기 위해 특별히 주의를 기울여야 합니다.</p>
+<p>선의 두께는 지정된 경로의 가운데에 있는 획의 두께입니다. 이 말의 뜻은, 경로의 좌우로, 설정된 두께 반 만큼의 폭 영역이 그려진다는 것입니다. 캔버스 좌표는 픽셀을 직접 참조하지 않으므로, 선명한 수평 및 수직선을 얻기 위해 특별히 주의를 기울여야 합니다.</p>
 
-<p>아래에 나오는 예제에서는, 선의 두께가 점점 증가하는 10개의 직선이 그려집니다. 가장 왼쪽의 선은 1.0 단위 폭입니다. 그러나, 경로의 위치 때문에 가장 왼쪽과 다른 모든 홀수 폭 두께 선은 선명하게 보이지 않습니다.</p>
+<p>아래에 나오는 예제에서는, 선의 두께가 점점 증가하는 10개의 직선이 그려집니다. 가장 왼쪽의 선은 1.0 단위 폭입니다. 그러나, 경로의 위치 때문에 가장 왼쪽과 다른 모든 홀수 폭 두께 선은 선명하게 보이지 않습니다.</p>
 
 <pre class="brush: js;highlight[4]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -235,11 +235,11 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
 
-<p>선명한 선을 얻으려면 경로에 획을 어떻게 그려지는지 이해해야 합니다. 아래의 이미지를 보면, 격자는 캔버스의 좌표 격자를 나타냅니다. 격자선 사이에 있는 사각형은 실제 픽셀과 딱 맞아 떨어집니다. 아래에 있는 첫번째 이미지를 보면, (2,1)에서 (5,5)로 사각형이 채워져 있습니다. 사각형의 전체 영역(연한 붉은 색)은 픽셀 경계선 사이에 딱 맞아 떨어지기 때문에 채워진 사각형은 선명한 가장자리를 갖습니다.</p>
+<p>선명한 선을 얻으려면 경로에 획을 어떻게 그려지는지 이해해야 합니다. 아래의 이미지를 보면, 격자는 캔버스의 좌표 격자를 나타냅니다. 격자선 사이에 있는 사각형은 실제 픽셀과 딱 맞아 떨어집니다. 아래에 있는 첫번째 이미지를 보면, (2,1)에서 (5,5)로 사각형이 채워져 있습니다. 사각형의 전체 영역(연한 붉은 색)은 픽셀 경계선 사이에 딱 맞아 떨어지기 때문에 채워진 사각형은 선명한 가장자리를 갖습니다.</p>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
 
-<p>만일 (3,1)에서 (3,5)로 그리는 직선의 두께가 1.0이라면, 두번째 이미지와 같은 상황이 됩니다. 채워진 실제 영역 (진한 파란색)은 패스의 양쪽에있는 픽셀의 절반까지만 확장됩니다. 이것은 1 픽셀을 채우는 것이 아니므로 근사값으로 화면에 그려지게 됩니다. 그래서 양옆의 영역(연한 파란색과 짙은 파란 색)으로, 실제 설정한 색과는 다른 흐릿한 색으로 채워지는 것입니다. 이전 예제에서 보듯이 선 두께가 <code>1.0</code>인 선에서 일어난 일입니다.</p>
+<p>만일 (3,1)에서 (3,5)로 그리는 직선의 두께가 1.0이라면, 두번째 이미지와 같은 상황이 됩니다. 채워진 실제 영역 (진한 파란색)은 패스의 양쪽에있는 픽셀의 절반까지만 확장됩니다. 이것은 1 픽셀을 채우는 것이 아니므로 근사값으로 화면에 그려지게 됩니다. 그래서 양옆의 영역(연한 파란색과 짙은 파란 색)으로, 실제 설정한 색과는 다른 흐릿한 색으로 채워지는 것입니다. 이전 예제에서 보듯이 선 두께가 <code>1.0</code>인 선에서 일어난 일입니다.</p>
 
 <p>이렇게 되는 것을 막으려면, 경로를 아주 정밀하게 생성해야 합니다. 선의 두께가 1.0이면 경로의 양쪽으로 0.5 단위만큼이라는 것을 알고 있으니, (3.5,1)에서 (3.5,5)로 그리는 경로를 생성하는 세번째 이미지의 결과는 완벽히 정밀하게 1 픽셀 두께의 수직선이 됩니다.</p>
 
@@ -310,7 +310,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <p><code>lineJoin</code> 속성은, 도형을 이루는 선이나 호나 곡선들이 연결되는 지점의 모양을 결정합니다. 끝점과 제어점이 정확히 같은 위치인, 길이가 0인 부분들은 제외된다.</p>
 
-<p>이 속성에는 세 가지 값이 있는데, <code>round</code>, <code>bevel</code>, <code>miter</code>이며, 초기 설정값은 <code>miter</code>입니다. 두 부분들이 같은 방향으로 연결되어 있는 경우에는, <code>lineJoin</code>을 설정해도 아무런 효과가 나타나지 않습니다.</p>
+<p>이 속성에는 세 가지 값이 있는데, <code>round</code>, <code>bevel</code>, <code>miter</code>이며, 초기 설정값은 <code>miter</code>입니다. 두 부분들이 같은 방향으로 연결되어 있는 경우에는, <code>lineJoin</code>을 설정해도 아무런 효과가 나타나지 않습니다.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
 
@@ -320,7 +320,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
  <dt><code>bevel</code></dt>
  <dd>도형의 모서리를, 연결되는 부분들의 공통 끝점에서 세모 모양으로 만듭니다.</dd>
  <dt><code>miter</code></dt>
- <dd>도형의 모서리를, 두 부분의 바깥쪽 테두리 선을 각각 연장하여 교차된 점으로 생긴 마름모꼴 모양으로 만듭니다. <code>miterLimit</code> 속성값에 따라 모양이 달라집니다.</dd>
+ <dd>도형의 모서리를, 두 부분의 바깥쪽 테두리 선을 각각 연장하여 교차된 점으로 생긴 마름모꼴 모양으로 만듭니다. <code>miterLimit</code> 속성값에 따라 모양이 달라집니다.</dd>
 </dl>
 
 <p>아래 예제에서 세 개의 경로를 그릴 것입니다. 세 경로는 각각 다른 <code>lineJoin</code> 속성값을 가집니다.</p>
@@ -352,7 +352,7 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 <h3 id="A_demo_of_the_miterLimit_property" name="A_demo_of_the_miterLimit_property"><code>miterLimit</code> 속성 예제</h3>
 
-<p>위의 예제에서 볼 수 있듯이, 속성값을 <code>miter</code>로 하여 두 선이 연결되면, 연결되는 두 선의 바깥쪽 테두리는 연장선이 만나는 지점까지 확장됩니다. 연결된 두 선이 이루는 각도가 크면, 확장되는 영역이 크지 않지만, 각도가 작아짐(끝이 뾰족해짐)에 따라서 이 영역이 기하급수적으로 커질 수도 있습니다.</p>
+<p>위의 예제에서 볼 수 있듯이, 속성값을 <code>miter</code>로 하여 두 선이 연결되면, 연결되는 두 선의 바깥쪽 테두리는 연장선이 만나는 지점까지 확장됩니다. 연결된 두 선이 이루는 각도가 크면, 확장되는 영역이 크지 않지만, 각도가 작아짐(끝이 뾰족해짐)에 따라서 이 영역이 기하급수적으로 커질 수도 있습니다.</p>
 
 <p><code>miterLimit</code> 속성은 끝점이 만나는 지점과 테두리 연장선이 만나는 지점이 얼마나 떨어져 있을지를 결정합니다. 두 선이 이 값을 넘게 되면, <code>lineJoin</code> 속성의 <code>bevel</code> 값 모양이 적용됩니다. <code>miterLimit</code> 속성값(HTML {{HTMLElement("canvas")}}에서, 초기 설정값은 10.0)에 의해, 현재 좌표 방식 안에서, 선의 두께에 따라, 어느 정도까지 뾰족해질 수 있는지가 계산됩니다. 그래서 <code>miterLimit</code>은 현재 디스플레이 비율이나 경로의 변형 같은 것으로 각각 설정될 수 있습니다. 그렇게 하여 선의 모서리에만 영향을 줍니다.</p>
 
@@ -424,11 +424,11 @@ draw();</pre>
 
 <p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="대시라인_사용하기">대시라인 사용하기</h3>
 
-<p><code>setLineDash</code> 메소드와 <code>lineDashOffset</code> 속성은 선의 대시 패턴을 지정합니다.  <code>setLineDash</code> 메소드는 거리를 지정하는 숫자 목록을 받아 선과 틈을 교대로 그리며 <code>lineDashOffset</code> 속성은 패턴을 시작할 위치를 오프셋으로 설정합니다.</p>
+<p><code>setLineDash</code> 메소드와 <code>lineDashOffset</code> 속성은 선의 대시 패턴을 지정합니다.  <code>setLineDash</code> 메소드는 거리를 지정하는 숫자 목록을 받아 선과 틈을 교대로 그리며 <code>lineDashOffset</code> 속성은 패턴을 시작할 위치를 오프셋으로 설정합니다.</p>
 
 <p>이 예제에서 우리는 행진하는 개미 효과를 만들고 있습니다. 컴퓨터 그래픽 프로그램의 선택 도구에서 흔히 볼 수있는 애니메이션 기술입니다. 테두리를 애니메이션화하여 사용자가 선택 테두리와 이미지 배경을 구별하는 데 도움이됩니다. 이 튜토리얼의 뒷부분에서 이 작업 및 다른 <a href="/ko/docs/docs/Web/API/Canvas_API/Tutorial/Basic_animations">기본 애니메이션</a>을 수행하는 방법을 배울 수 있습니다.</p>
 
@@ -477,11 +477,11 @@ march();</pre>
 var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 </pre>
 
-<p><code>CanvasGradient</code> 객체를 만들었다면, <code>addColorStop()</code> 메소드를 사용하여, 오브젝트에 색을 적용할 수 있습니다.</p>
+<p><code>CanvasGradient</code> 객체를 만들었다면, <code>addColorStop()</code> 메소드를 사용하여, 오브젝트에 색을 적용할 수 있습니다.</p>
 
 <dl>
  <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
- <dd><code>gradient</code> 오브젝트에 새로운 색 중단점(color stop)을 생성합니다. <code>position</code>은 0.0에서 1.0 사이의 숫자이고 그라디언트에서 색상의 상대적인 위치를 정의합니다. <code>color</code> 인자는 CSS {{cssxref("&lt;color&gt;")}}를 나타내는 문자열이어야하고, 그라디언트가 (전환효과로) 진행되면서 도달한 지점의 색상을 의미합니다.</dd>
+ <dd><code>gradient</code> 오브젝트에 새로운 색 중단점(color stop)을 생성합니다. <code>position</code>은 0.0에서 1.0 사이의 숫자이고 그라디언트에서 색상의 상대적인 위치를 정의합니다. <code>color</code> 인자는 CSS {{cssxref("&lt;color&gt;")}}를 나타내는 문자열이어야하고, 그라디언트가 (전환효과로) 진행되면서 도달한 지점의 색상을 의미합니다.</dd>
 </dl>
 
 <p>색 중단점은 원하는 만큼 마음대로 추가할 수 있습니다. 흰 색에서 검은 색으로 변하는 선형 그레이디언트를 만들려면 아래와 같이 합니다.</p>
@@ -526,9 +526,9 @@ lineargradient.addColorStop(1, 'black');
 <pre class="brush: js">draw();</pre>
 </div>
 
-<p>첫번째 그라디언트는 배경 그라디언트입니다. 보시다시피 같은 위치에 두 가지 색상을 지정했습니다. 매우 선명한 색상 전환을 만들기 위해 이 작업을 수행합니다(이 경우 흰색에서 녹색으로). 일반적으로 색상 중단점을 정의하는 순서는 중요하지 않지만, 이 특별한 경우에는 의미가 있습니다.</p>
+<p>첫번째 그라디언트는 배경 그라디언트입니다. 보시다시피 같은 위치에 두 가지 색상을 지정했습니다. 매우 선명한 색상 전환을 만들기 위해 이 작업을 수행합니다(이 경우 흰색에서 녹색으로). 일반적으로 색상 중단점을 정의하는 순서는 중요하지 않지만, 이 특별한 경우에는 의미가 있습니다.</p>
 
-<p>두 번째 그래디언트에서는 시작 색상 (위치 0.0)을 지정하지 않았는데, 자동으로 다음 색상 중단점의 색상으로 가정하기 때문에 반드시 필요하지는 않기 때문입니다. 따라서 위치 0.5에 검은색을 지정하면 시작부터 중단점까지 자동으로 검정색 그라이언트를 만듭니다.</p>
+<p>두 번째 그래디언트에서는 시작 색상 (위치 0.0)을 지정하지 않았는데, 자동으로 다음 색상 중단점의 색상으로 가정하기 때문에 반드시 필요하지는 않기 때문입니다. 따라서 위치 0.5에 검은색을 지정하면 시작부터 중단점까지 자동으로 검정색 그라이언트를 만듭니다.</p>
 
 <p>{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}</p>
 
@@ -586,11 +586,11 @@ lineargradient.addColorStop(1, 'black');
 
 <h2 id="Patterns" name="Patterns">패턴(Patterns)</h2>
 
-<p>이전 페이지의 예제 중 하나에서 일련의 루프를 사용하여 이미지 패턴을 만들었습니다. 그러나 훨씬 간단한 메소드 인 createPattern () 메소드가 있습니다.</p>
+<p>이전 페이지의 예제 중 하나에서 일련의 루프를 사용하여 이미지 패턴을 만들었습니다. 그러나 훨씬 간단한 메소드 인 createPattern () 메소드가 있습니다.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}</dt>
- <dd>새 캔버스 패턴 객체를 만들어 반환합니다. <code>image</code>는 {{domxref("CanvasImageSource")}}(즉, {{domxref("HTMLImageElement")}}, 다른 캔버스, {{HTMLElement("video")}} 요소 등등)입니다. <code>type</code>은 이미지 사용 방법을 나타내는 문자열입니다.</dd>
+ <dd>새 캔버스 패턴 객체를 만들어 반환합니다. <code>image</code>는 {{domxref("CanvasImageSource")}}(즉, {{domxref("HTMLImageElement")}}, 다른 캔버스, {{HTMLElement("video")}} 요소 등등)입니다. <code>type</code>은 이미지 사용 방법을 나타내는 문자열입니다.</dd>
 </dl>
 
 <p><code>type</code>은 패턴을 만들기 위해 이미지를 사용하는 방법을 지정하며, 다음 문자열 값 중 하나 여야합니다.</p>
@@ -619,7 +619,7 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <h3 id="A_createPattern_example" name="A_createPattern_example"><code>createPattern</code> 예제</h3>
 
-<p>이 마지막 예제에서, <code>fillStyle</code> 속성에 적용할 패턴을 만들 것입니다. 한 가지 눈여겨 볼 것은, 이미지 <code>onload</code> 핸들러 사용한다는 것입니다. 이미지를 패턴에 적용하기 전에 불러오기가 완료되었는지 확인하는 것입니다.</p>
+<p>이 마지막 예제에서, <code>fillStyle</code> 속성에 적용할 패턴을 만들 것입니다. 한 가지 눈여겨 볼 것은, 이미지 <code>onload</code> 핸들러 사용한다는 것입니다. 이미지를 패턴에 적용하기 전에 불러오기가 완료되었는지 확인하는 것입니다.</p>
 
 <pre class="brush: js;highlight[10]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -658,19 +658,19 @@ var ptrn = ctx.createPattern(img, 'repeat');
  <dt>{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY = float")}}</dt>
  <dd>그림자가 객체에서 연장되어야하는 수직 거리를 나타냅니다. 이 값은 변환 행렬의 영향을 받지 않습니다. 기본값은 0입니다.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
- <dd>흐림(blur) 효과의 크기를 나타냅니다. 이 값은 픽셀 수와 일치하지 않으며 현재 변환 행렬의 영향을 받지 않습니다. 기본값은 0입니다.</dd>
+ <dd>흐림(blur) 효과의 크기를 나타냅니다. 이 값은 픽셀 수와 일치하지 않으며 현재 변환 행렬의 영향을 받지 않습니다. 기본값은 0입니다.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd>그림자 효과의 색상을 나타내는 표준 CSS 색상 값. 기본적으로 완전 검은색입니다.</dd>
+ <dd>그림자 효과의 색상을 나타내는 표준 CSS 색상 값. 기본적으로 완전 검은색입니다.</dd>
 </dl>
 
-<p><code>shadowOffsetX</code> 및 <code>shadowOffsetY</code> 속성은 그림자가 X 및 Y 방향으로 객체에서 얼마나 멀리 떨어져야하는지 나타냅니다. 이 값은 현재 변환 행렬의 영향을받지 않습니다. 음수값을 사용하면 그림자가 위로 또는 왼쪽으로 확장되고 양수값을 사용하면 그림자가 아래로 또는 오른쪽으로 확장됩니다. 기본값은 모두 0입니다.</p>
+<p><code>shadowOffsetX</code> 및 <code>shadowOffsetY</code> 속성은 그림자가 X 및 Y 방향으로 객체에서 얼마나 멀리 떨어져야하는지 나타냅니다. 이 값은 현재 변환 행렬의 영향을받지 않습니다. 음수값을 사용하면 그림자가 위로 또는 왼쪽으로 확장되고 양수값을 사용하면 그림자가 아래로 또는 오른쪽으로 확장됩니다. 기본값은 모두 0입니다.</p>
 
-<p><code>shadowBlur</code> 속성은 흐림 효과의 크기를 나타냅니다. 이 값은 픽셀 수와 일치하지 않으며 현재 변환 행렬의 영향을받지 않습니다. 기본값은 0입니다.</p>
+<p><code>shadowBlur</code> 속성은 흐림 효과의 크기를 나타냅니다. 이 값은 픽셀 수와 일치하지 않으며 현재 변환 행렬의 영향을받지 않습니다. 기본값은 0입니다.</p>
 
-<p><code>shadowColor</code> 속성은 그림자 효과의 색상을 나타내는 표준 CSS 색상 값입니다. 기본값은 완전 검은색입니다.</p>
+<p><code>shadowColor</code> 속성은 그림자 효과의 색상을 나타내는 표준 CSS 색상 값입니다. 기본값은 완전 검은색입니다.</p>
 
 <div class="note">
-<p><strong>알아둘 것:</strong> 음영은 <code>source-over</code> <a href="/ko/docs/docs/Web/API/Canvas_API/Tutorial/Compositing">합성 작업</a>에만 사용됩니다.</p>
+<p><strong>알아둘 것:</strong> 음영은 <code>source-over</code> <a href="/ko/docs/docs/Web/API/Canvas_API/Tutorial/Compositing">합성 작업</a>에만 사용됩니다.</p>
 </div>
 
 <h3 id="그림자_있는_글자_예제">그림자 있는 글자 예제</h3>
@@ -703,16 +703,16 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 <h2 id="캔버스_채우기_규칙">캔버스 채우기 규칙</h2>
 
-<p><code>fill</code> (혹은 {{domxref("CanvasRenderingContext2D.clip", "clip")}} 및 {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}})을 사용할 때 한 점이 경로 안쪽 또는 바깥에 있는지 그리고 따라서 채워지는지 여부를 결정하기 위한 채우기 규칙 알고리즘을 선택적으로 제공 할 수 있습니다. 경로가 교차하거나 중첩 된 경우에 유용합니다.<br>
+<p><code>fill</code> (혹은 {{domxref("CanvasRenderingContext2D.clip", "clip")}} 및 {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}})을 사용할 때 한 점이 경로 안쪽 또는 바깥에 있는지 그리고 따라서 채워지는지 여부를 결정하기 위한 채우기 규칙 알고리즘을 선택적으로 제공 할 수 있습니다. 경로가 교차하거나 중첩 된 경우에 유용합니다.<br>
  <br>
  다음 두가지 값을 사용할 수 있습니다:</p>
 
 <ul>
- <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a> 알고리즘. 기본값.</li>
- <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a> 알고리즘.</li>
+ <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a> 알고리즘. 기본값.</li>
+ <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a> 알고리즘.</li>
 </ul>
 
-<p>In this example we are using the <code>evenodd</code> rule.</p>
+<p>In this example we are using the <code>evenodd</code> rule.</p>
 
 <pre class="brush: js;highlight[6]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');

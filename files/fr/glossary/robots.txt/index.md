@@ -15,4 +15,4 @@ Par exemple, l'administrateur d'un site peut interdire aux robots d'indexation d
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Protocole_d'exclusion_des_robots", "Robots.txt")}} sur Wikipédia
+- [Protocole d'exclusion des robots](https://fr.wikipedia.org/wiki/Protocole_d'exclusion_des_robots) sur Wikipédia

@@ -32,7 +32,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {
->   content: "→";
+>   content: "→";
 > }
 > ```
 >

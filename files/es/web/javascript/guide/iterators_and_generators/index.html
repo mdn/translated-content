@@ -9,33 +9,33 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p class="summary">Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Sentencias/for","for")}}<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>hasta métodos como<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>{{jsxref("Objetos_globales/Array/map","map()")}} y {{jsxref("Objetos_globales/Array/filter","filter()")}}.<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Sentencias/for...of","for...of")}}.</p>
+<p class="summary">Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Sentencias/for","for")}}<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>hasta métodos como<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>{{jsxref("Objetos_globales/Array/map","map()")}} y {{jsxref("Objetos_globales/Array/filter","filter()")}}.<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for" title="en/Core_JavaScript_1.5_Reference/Statements/for"> </a>Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Sentencias/for...of","for...of")}}.</p>
 
 <p>Para más información, véase:</p>
 
 <ul>
  <li>{{jsxref("Iteration_protocols", "Protocolos de iteración")}}</li>
  <li>{{jsxref("Sentencias/for...of","for...of")}}</li>
- <li>{{jsxref("Sentencias/function*","function*")}} y {{jsxref("Objetos_globales/Generador","Generador")}}</li>
+ <li>{{jsxref("Sentencias/function*","function*")}} y {{jsxref("Objetos_globales/Generador","Generador")}}</li>
  <li>{{jsxref("Operadores/yield","yield")}} y {{jsxref("Operadores/yield*","yield*")}}</li>
 </ul>
 
 <h2 id="Iteradores">Iteradores</h2>
 
-<p>En JavaScript, un <strong>iterador</strong> es un objeto que permite recorrer una colección y devolver un valor al terminar. </p>
+<p>En JavaScript, un <strong>iterador</strong> es un objeto que permite recorrer una colección y devolver un valor al terminar. </p>
 
-<p>Específicamente, un iterador es un objeto que implementa el <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">protocolo de iteración</a> a través del método <code>next()</code>, el cual devuelve un objeto con dos propiedades:</p>
+<p>Específicamente, un iterador es un objeto que implementa el <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">protocolo de iteración</a> a través del método <code>next()</code>, el cual devuelve un objeto con dos propiedades:</p>
 
 <dl>
  <dt><code><var>value</var></code></dt>
  <dd>El siguiente valor en la secuencia de iteración.</dd>
  <dt><code><var>done</var></code></dt>
- <dd>Es <code>true</code> si el último valor en la secuencia ya ha sido consumido. Si <code><var>value</var></code> está presente junto con <code><var>done</var></code>, es el valor de retorno del iterador.</dd>
+ <dd>Es <code>true</code> si el último valor en la secuencia ya ha sido consumido. Si <code><var>value</var></code> está presente junto con <code><var>done</var></code>, es el valor de retorno del iterador.</dd>
 </dl>
 
 <p>Un iterador se considera ya terminado/finalizado cuando la invocación de <code>next()</code> regresa un objeto donde la propiedad <code>done</code> es <code>verdadero</code>.</p>
 
-<p>Una vez creado, un objeto iterador puede utilizarse explícitamente llamando repetidamente al método  <code>next()</code>.</p>
+<p>Una vez creado, un objeto iterador puede utilizarse explícitamente llamando repetidamente al método  <code>next()</code>.</p>
 
 <pre class="brush: js">function crearIterador(arreglo){
     var siguienteIndice = 0;
@@ -79,7 +79,7 @@ console.log(gen.next().value); // 2
 
 <p>Un objeto es <strong>iterable</strong> si define cómo se itera. Un ejemplo son los valores que se iteran en un bucle {{jsxref("Sentencias/for...of", "for...of")}}. Algunos tipos integrados de datos, como {{jsxref("Array")}} o {{jsxref("Map")}}, tienen una forma de iteración ya definida, mientras que otras no (como {{jsxref("Object")}}).</p>
 
-<p><span id="result_box" lang="es"><span class="hps">Con el fin de</span> <span class="hps">ser</span> <strong><span class="hps">iterable</span></strong><span>,</span> <span class="hps">un objeto</span> <span class="hps">debe implementar</span></span> el método <strong>@@iterator</strong>. Esto quiere decir que dicho objeto (o alguno en su <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos">cadena de prototipos</a>) debe tener una propiedad definida usando la llave {{jsxref("Symbol.iterator")}}. Esta función debería regresar un nuevo iterador en cada invocación, pero no es obligatorio.</p>
+<p><span id="result_box" lang="es"><span class="hps">Con el fin de</span> <span class="hps">ser</span> <strong><span class="hps">iterable</span></strong><span>,</span> <span class="hps">un objeto</span> <span class="hps">debe implementar</span></span> el método <strong>@@iterator</strong>. Esto quiere decir que dicho objeto (o alguno en su <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos">cadena de prototipos</a>) debe tener una propiedad definida usando la llave {{jsxref("Symbol.iterator")}}. Esta función debería regresar un nuevo iterador en cada invocación, pero no es obligatorio.</p>
 
 <h3 id="Iterables_definidos_por_el_usuario">Iterables definidos por el usuario</h3>
 
@@ -87,9 +87,9 @@ console.log(gen.next().value); // 2
 
 <pre class="brush: js">var miIterable = {}
 miIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+    yield 1;
+    yield 2;
+    yield 3;
 };
 
 for (let valor of miIterable) {

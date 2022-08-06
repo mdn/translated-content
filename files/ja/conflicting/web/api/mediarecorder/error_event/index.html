@@ -33,7 +33,7 @@ original_slug: Web/API/MediaRecorder/onerror
  <dt><code>SecurityError</code></dt>
  <dd>{{domxref("MediaStream")}} は記録を禁止するように設定されています。 これは、例えば、ユーザーが入力デバイスを使用するパーミッションを拒否したときに {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得されたソースの場合などです。 これは、ソースストリームの {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} 制約により、ストリーム内の {{domxref("MediaStreamTrack")}} が {{domxref("MediaStreamTrack.isolated", "isolated")}} としてマークされている場合にも発生します。</dd>
  <dt><code>NotSupportedError</code></dt>
- <dd> ユーザーのデバイスがサポートしていない MIME タイプを使用して <code>MediaRecorder</code> をインスタンス化しようとしました。 1つ以上の要求されたコンテナ、コーデック、またはプロファイル、その他の情報が無効である可能性があります。</dd>
+ <dd> ユーザーのデバイスがサポートしていない MIME タイプを使用して <code>MediaRecorder</code> をインスタンス化しようとしました。 1つ以上の要求されたコンテナ、コーデック、またはプロファイル、その他の情報が無効である可能性があります。</dd>
  <dt><code>UnknownError</code></dt>
  <dd>分類できない、セキュリティに関連しないエラーが発生しました。 記録が停止し、<code>MediaRecorder</code> の {{domxref("MediaRecorder.state", "state")}} が非アクティブになり、最後の {{event("dataavailable")}} イベントが残りの受信データと共に <code>MediaRecorder</code> に送られ、最後に {{event("stop")}} イベントが送られます。</dd>
 </dl>

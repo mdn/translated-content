@@ -49,7 +49,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: CSS と HTML に関する一般的な問題の1つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の1つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間"  CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 <code>.audio-player ul a</code> です。</p>
+<p><strong>メモ</strong>: CSS と HTML に関する一般的な問題の1つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の1つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間"  CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 <code>.audio-player ul a</code> です。</p>
 </div>
 
 <h3 id="検証">検証</h3>
@@ -195,7 +195,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
       <span class="punctuation token">}</span></code></pre>
 </div>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span><span class="punctuation token">&gt;</span></span>
       <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
@@ -208,7 +208,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
       <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span></code></pre>
 
-<div class="hidden"> </div>
+<div class="hidden"> </div>
 
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 150) }}</p>
 
@@ -308,7 +308,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <ol>
  <li>To try this example, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with <code>p:first-child</code>, which won't work in old versions of IE.</li>
- <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
+ <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
  <li>Put the following code into the head of your HTML document, just before the opening <code>&lt;style&gt;</code> tag:
   <pre class="brush: html line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>MooTools-Core-1.6.0.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
     <span class="comment token">&lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
@@ -318,7 +318,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 </ol>
 
 <ol>
- <li> </li>
+ <li> </li>
 </ol>
 
 <p>If you try running this in an old version of IE, it should work fine.</p>
@@ -369,7 +369,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 </ol>
 
 <ul>
- <li> </li>
+ <li> </li>
  <li>Now try to set a new value for the CSS property you are interested in on that element; you can do this using the <a href="/ja/docs/Web/API/HTMLElement/style">style</a> property of the element, for example try typing these into the JavaScript console:
   <pre class="brush: js line-numbers language-js"><code class="language-js">test<span class="punctuation token">.</span>style<span class="punctuation token">.</span>transform <span class="operator token">=</span> <span class="string token">'rotate(90deg)'</span>
 test<span class="punctuation token">.</span>style<span class="punctuation token">.</span>webkitTransform <span class="operator token">=</span> <span class="string token">'rotate(90deg)'</span></code></pre>
@@ -377,7 +377,7 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 </ul>
 
 <ol>
- <li> </li>
+ <li> </li>
 </ol>
 
 <p>As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.</p>
@@ -390,7 +390,7 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 <span class="property token">-webkit-transform</span><span class="punctuation token">:</span> <span class="function token">rotate</span><span class="punctuation token">(</span><span class="number token">90</span><span class="token unit">deg</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="property token">transform</span><span class="punctuation token">:</span> <span class="function token">rotate</span><span class="punctuation token">(</span><span class="number token">90</span><span class="token unit">deg</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
+<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
 
 <p>Of course, doing this for lots of different CSS rules can get really tedious. It is better to use an automation tool to do it for you. And such tools exist:</p>
 
@@ -438,7 +438,7 @@ test<span class="punctuation token">.</span>style<span class="punctuation token"
 </div>
 
 <div class="note">
-<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
+<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
 </div>
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>

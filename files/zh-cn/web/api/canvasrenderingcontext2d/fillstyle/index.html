@@ -8,9 +8,9 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.fillStyle</code></strong> 是 Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 <code>#000</code> （黑色）。</p>
+<p><strong><code>CanvasRenderingContext2D.fillStyle</code></strong> 是 Canvas 2D API 使用内部方式描述颜色和样式的属性。默认值是 <code>#000</code> （黑色）。</p>
 
-<p>参见  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+<p>参见  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 
 <h3 id="Using_the_fillStyle_property">使用 <code>fillStyle</code> 属性设置不同的颜色</h3>
 
-<p>这是一段简单的代码片段，使用 <code>fillStyle</code> 属性设置不同的颜色。</p>
+<p>这是一段简单的代码片段，使用 <code>fillStyle</code> 属性设置不同的颜色。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -57,8 +57,8 @@ ctx.fillRect(10, 10, 100, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.fillStyle = "blue";
@@ -93,9 +93,9 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
 
-<h3 id="fillStyle_使用_for_循环的例子"><code>fillStyle</code> 使用 <code>for</code> 循环的例子</h3>
+<h3 id="fillStyle_使用_for_循环的例子"><code>fillStyle</code> 使用 <code>for</code> 循环的例子</h3>
 
-<p>在这个例子中， 我们使用两个 <code>for</code> 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。</p>
+<p>在这个例子中， 我们使用两个 <code>for</code> 循环绘制一个矩形表格，每个单元格都有不同的颜色。 最终的结果图像看起来像屏幕截图，其实没有令人惊叹的事情发生。我们使用两个变量 i 和 j 为每一个单元格生成唯一的 RGB 颜色，并且只改变红色和绿色的数值。蓝色通道的值是固定不变的。通过修改这些通道，你能生成各种各样的调色板。通过逐步地增加，你能实现类似 Photoshop 的调色板。</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
@@ -128,7 +128,7 @@ for (var i=0;i&lt;6;i++){
 <h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
 
 <ul>
- <li>支持 WebKit- 和 Blink-based 的浏览器中， 有一个不标准的、被反对的方法 <code>ctx.setFillColor()</code> 已经实现。
+ <li>支持 WebKit- 和 Blink-based 的浏览器中， 有一个不标准的、被反对的方法 <code>ctx.setFillColor()</code> 已经实现。
 
   <pre class="brush: js">setFillColor(color, optional alpha);
 setFillColor(grayLevel, optional alpha);
@@ -142,7 +142,7 @@ setFillColor(c, m, y, k, a);
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/Canvas_API">Canvas API</a></li>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
+ <li>接口定义， {{domxref("CanvasRenderingContext2D")}}</li>
  <li>此属性使用的值：
   <ul>
    <li>{{cssxref("&lt;color&gt;")}} CSS 数据类型</li>

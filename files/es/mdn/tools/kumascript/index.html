@@ -10,9 +10,9 @@ original_slug: MDN/Tools/Introduction_to_KumaScript
 
 <h2 id="Vistazo_general">Vistazo general</h2>
 
-<p>En el verano de 2012, MDN  cambió a una nueva plataforma wiki llamada <a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma</a>. Esta reemplaza el lenguaje de plantilla <a class="external" href="http://developer.mindtouch.com/en/docs/DekiScript" title="http://developer.mindtouch.com/en/docs/DekiScript">DekiScript</a> con un nuevo sistema llamado <a class="link-https" href="https://github.com/mozilla/kumascript" title="https://github.com/mozilla/kumascript">KumaScript</a>. KumaScript se alimenta de JavaScript del lado del servidor, usando <a class="external" href="http://nodejs.org/">Node.js</a>. Este artículo provee informaciónde cómo usar KumaScript y cómo actualizar scripts migrados parcialmente desde MindTouch.</p>
+<p>En el verano de 2012, MDN  cambió a una nueva plataforma wiki llamada <a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma</a>. Esta reemplaza el lenguaje de plantilla <a class="external" href="http://developer.mindtouch.com/en/docs/DekiScript" title="http://developer.mindtouch.com/en/docs/DekiScript">DekiScript</a> con un nuevo sistema llamado <a class="link-https" href="https://github.com/mozilla/kumascript" title="https://github.com/mozilla/kumascript">KumaScript</a>. KumaScript se alimenta de JavaScript del lado del servidor, usando <a class="external" href="http://nodejs.org/">Node.js</a>. Este artículo provee informaciónde cómo usar KumaScript y cómo actualizar scripts migrados parcialmente desde MindTouch.</p>
 
-<p>Para detalles y preguntas frecuentes sobre KumaScript, mira el <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=" style="line-height: 1.5;">KumaScript Fireside Chat</a> del equipo de desarrolladores<span style="line-height: 1.5;"> MDN</span><span style="line-height: 1.5;">.</span></p>
+<p>Para detalles y preguntas frecuentes sobre KumaScript, mira el <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=" style="line-height: 1.5;">KumaScript Fireside Chat</a> del equipo de desarrolladores<span style="line-height: 1.5;"> MDN</span><span style="line-height: 1.5;">.</span></p>
 
 <p><span style="">¿Qué es KumaScript?</span></p>
 
@@ -33,19 +33,19 @@ original_slug: MDN/Tools/Introduction_to_KumaScript
 
 <h2 id="Aspectos_básicos">Aspectos básicos</h2>
 
-<p>KumaScript funciona permitiendo a <em>wiki de confianza</em> escribir <a class="link-https" href="https://github.com/visionmedia/ejs">plantillas JavaScript ensambladas</a>. Estas plantillas pueden ser invocadas en el contenido del documento por cualquier editor <em>wiki</em> mediante el uso de <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macros</a>.</p>
+<p>KumaScript funciona permitiendo a <em>wiki de confianza</em> escribir <a class="link-https" href="https://github.com/visionmedia/ejs">plantillas JavaScript ensambladas</a>. Estas plantillas pueden ser invocadas en el contenido del documento por cualquier editor <em>wiki</em> mediante el uso de <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macros</a>.</p>
 
 <table style="display: block;">
  <tbody>
   <tr>
    <td>
-    <p>Una <a class="link-https" href="/en-US/docs/Template:hello" title="/en-US/docs/Template:hello">plantilla</a> se vé así:</p>
+    <p>Una <a class="link-https" href="/en-US/docs/Template:hello" title="/en-US/docs/Template:hello">plantilla</a> se vé así:</p>
    </td>
    <td>
-    <p>Una <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macro</a> se vé así:</p>
+    <p>Una <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macro</a> se vé así:</p>
    </td>
    <td>
-    <p>El <a class="link-https" href="/en-US/docs/KumaTests/hello_test" title="/en-US/docs/KumaTests/hello_test">resultado de una macro</a> sale así:</p>
+    <p>El <a class="link-https" href="/en-US/docs/KumaTests/hello_test" title="/en-US/docs/KumaTests/hello_test">resultado de una macro</a> sale así:</p>
    </td>
   </tr>
   <tr>
@@ -80,8 +80,8 @@ Hello #2</pre>
 <p>La sintaxis de una Macro se compone de estas reglas:</p>
 
 <ul>
- <li>Las Macros comienzan y terminan con los caracteres <code>\{{</code> y <code>}}</code>.</li>
- <li>La primera parte de la macro es el nombre de la plantilla. Esta corresponde a una wiki en <code>/en-US/docs/Template:{name}</code>. Editar y crear estas páginas requiere un permiso especial que los administradores pueden otorgar a editores de confianza.</li>
+ <li>Las Macros comienzan y terminan con los caracteres <code>\{{</code> y <code>}}</code>.</li>
+ <li>La primera parte de la macro es el nombre de la plantilla. Esta corresponde a una wiki en <code>/en-US/docs/Template:{name}</code>. Editar y crear estas páginas requiere un permiso especial que los administradores pueden otorgar a editores de confianza.</li>
  <li>Una plantilla puede aceptar parámetros, y esta lista de parámetroa comienza y termina con paréntesis.</li>
  <li>En una plantilla, los parámetros ingresados están disponibles dentro de la macro como las variables <code>$0</code>, <code>$1</code>, <code>$2</code>, y así sucesivamente.</li>
  <li>Todos los parámetros no numéricos deber ir entre comillas. Los números pueden quedar sin ellas.</li>
@@ -95,37 +95,37 @@ Hello #2</pre>
 <pre class="notranslate">\{{ templateName({ "Alpha":"one", "Beta":["a","b","c"], "Foo":"http:\/\/mozilla.org\/" }) }}
 </pre>
 
-<p>Los datos de esta macro estarán disponibles en un código de plantilla como un objeto en el argumento <code>$0</code> (por ejemplo, <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). Esto también te permite expresar estructuras de datos complejos en los parámetros de macro que son difíciles o imposibles de hacer con una simple lista de parámetros.</p>
+<p>Los datos de esta macro estarán disponibles en un código de plantilla como un objeto en el argumento <code>$0</code> (por ejemplo, <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). Esto también te permite expresar estructuras de datos complejos en los parámetros de macro que son difíciles o imposibles de hacer con una simple lista de parámetros.</p>
 
 <p>Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamente a la <a href="http://json.org/" title="http://json.org/">sintaxis JSON</a>, que tiene algunas exigencias escurridizas que son fáciles de pasar por alto (por ejemplo, todas las barras (/) llevan escapes). Cuando haya dudas, <a href="http://jsonlint.com/">intenta ejecutar tu JSON con un validador</a>.</p>
 
 <h4 id="Cómo_escribir">Cómo escribir "\{{"</h4>
 
-<p>Como la secuencia de caracteres "<code>\{{</code>" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "<code>\{{</code>" and "<code>}}</code>" como texto de una página. Probablemente dará un mensaje de error <code>DocumentParsingError</code>.</p>
+<p>Como la secuencia de caracteres "<code>\{{</code>" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "<code>\{{</code>" and "<code>}}</code>" como texto de una página. Probablemente dará un mensaje de error <code>DocumentParsingError</code>.</p>
 
 <p>En este caso, puedes escapar la primer llave con una barra invertida, así: <code>\\{</code></p>
 
 <h3 id="Sintaxis_de_la_plantilla">Sintaxis de la plantilla</h3>
 
-<p>Las plantillas KumaScript son procesadas por un <a class="link-https" href="https://github.com/visionmedia/ejs">motor de plantillas JavaScript ensamblado</a> con estas simples reglas:</p>
+<p>Las plantillas KumaScript son procesadas por un <a class="link-https" href="https://github.com/visionmedia/ejs">motor de plantillas JavaScript ensamblado</a> con estas simples reglas:</p>
 
 <ul>
  <li>La mayoría del texto es tratado como salida e incluido en el flujo de salida.</li>
  <li>Las expresiones y variables JavaScript pueden insertarse en el flujo de salida con estos bloques:
   <ul>
-   <li><code>&lt;%= expr %&gt;</code> — el valor de la expresión JavaScript es escapado por el HTML antes de incluirse en la salida (por ejemplo, caracteres como <code>&lt;</code> y <code>&gt;</code>  se convierten en <code>&amp;lt;</code> y <code>&amp;gt;</code>).</li>
+   <li><code>&lt;%= expr %&gt;</code> — el valor de la expresión JavaScript es escapado por el HTML antes de incluirse en la salida (por ejemplo, caracteres como <code>&lt;</code> y <code>&gt;</code>  se convierten en <code>&amp;lt;</code> y <code>&amp;gt;</code>).</li>
    <li><code>&lt;%- expr %&gt;</code> — el valor de una expresión JavaScript es incluído en la salida pero sin escape. (usa esto si quieres construir etiquetas HTML o usar los resultados de otra plantilla que puedan incluir etiquetas HTML.)</li>
    <li>Es un error incluir punto y coma dentro de los bloques.</li>
   </ul>
  </li>
- <li>Cualquier cosa dentro de un bloque <code>&lt;% %&gt;</code>  se interpreta como JavaScript. Esto puede incluir bucles, condiciones, etc.</li>
- <li>No hay nada dentro de un bloque <code>&lt;% %&gt;</code> que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando <code>&lt;% %&gt; </code>—Por ejemplo:
+ <li>Cualquier cosa dentro de un bloque <code>&lt;% %&gt;</code>  se interpreta como JavaScript. Esto puede incluir bucles, condiciones, etc.</li>
+ <li>No hay nada dentro de un bloque <code>&lt;% %&gt;</code> que pueda contribuir al flujo de salida. Pero puedes hacer la transición desde el modo JS al modo de salida usando <code>&lt;% %&gt; </code>—Por ejemplo:
   <pre class="notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
 Hello #&lt;%= i %&gt;
 &lt;% } %&gt;
 </pre>
 
-  <p>Nota como el JS está contenido entre <code>&lt;% ... %&gt;</code>, y la salida va en el espacio entre <code>%&gt; ... &lt;%</code>. El bucle <em>for</em> en JS puede comenzar en un bloque <code>&lt;% %&gt;</code> , luego el flujo de salida, y terminar en un segundo bloque JS <code>&lt;% %&gt;</code>.</p>
+  <p>Nota como el JS está contenido entre <code>&lt;% ... %&gt;</code>, y la salida va en el espacio entre <code>%&gt; ... &lt;%</code>. El bucle <em>for</em> en JS puede comenzar en un bloque <code>&lt;% %&gt;</code> , luego el flujo de salida, y terminar en un segundo bloque JS <code>&lt;% %&gt;</code>.</p>
  </li>
  <li>For more details on EJS syntax, <a class="link-https" href="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
 </ul>
@@ -136,7 +136,7 @@ Hello #&lt;%= i %&gt;
 
 <h3 id="Variables_de_entorno">Variables de entorno</h3>
 
-<p>Cuando la wiki hace una llamada al servicio KumaScript, <a class="link-https" href="https://github.com/mozilla/kuma/blob/master/apps/wiki/kumascript.py#L130">pasa por una part del contexto del documento actual</a> que KumaScript pone a disposición de las plantillas como variables:</p>
+<p>Cuando la wiki hace una llamada al servicio KumaScript, <a class="link-https" href="https://github.com/mozilla/kuma/blob/master/apps/wiki/kumascript.py#L130">pasa por una part del contexto del documento actual</a> que KumaScript pone a disposición de las plantillas como variables:</p>
 
 <dl>
  <dt><code>env.path</code></dt>
@@ -186,7 +186,7 @@ Hello #&lt;%= i %&gt;
 
 <h4 id="Trabajando_con_listas">Trabajando con listas</h4>
 
-<p>Las variables <code>env.tags</code> y <code>env.review_tags</code> devuelven colecciones de etiqutas. Puedes trabajar con estas de varias maneras, por supuesto, pero aquí se dan un par de sugerencias.</p>
+<p>Las variables <code>env.tags</code> y <code>env.review_tags</code> devuelven colecciones de etiqutas. Puedes trabajar con estas de varias maneras, por supuesto, pero aquí se dan un par de sugerencias.</p>
 
 <h5 id="Buscar_si_se_colocó_una_etiqueta_específica">Buscar si se colocó una etiqueta específica</h5>
 
@@ -222,14 +222,14 @@ Hello #&lt;%= i %&gt;
  <dt><code>template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
  <dd>Ejecuta y devuelve el resultado de las plantillas mencionadas con la lista de parámetros provistos.</dd>
  <dd>Utilizado en plantillas así: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</dd>
- <dd>Esta es una función JavaScript. Así que, si uno de los parámetroses una variable arg como $2, no lo pongas entre comillas. Así: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. Si necesitas llamar otra plantilla desde el interior de un bloque e código, no uses <code>&lt;%</code> ... <code>%&gt;</code>. Ejemplo: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
+ <dd>Esta es una función JavaScript. Así que, si uno de los parámetroses una variable arg como $2, no lo pongas entre comillas. Así: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. Si necesitas llamar otra plantilla desde el interior de un bloque e código, no uses <code>&lt;%</code> ... <code>%&gt;</code>. Ejemplo: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></dd>
  <dt><code>require(name)</code></dt>
  <dd>Carga otra plantilla como un módulo. Cualquier resultadu es ignorado. Devuelce cualquier cosa asignada a <code>module.exports</code> en la plantilla.</dd>
- <dd>Utilizado en plantillas así: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
+ <dd>Utilizado en plantillas así: <code>&lt;% var my_module = require('MyModule'); %&gt;</code>.</dd>
  <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
- <dd>Usando la key y duración de entrada de caché proporcionadas, cachea los resultados de la función proporcionada. Prioriza el valor de <code>env.cache_control</code> para invalidar el cache en <code>no-cache</code>, que puede ser enviado por un usuario logueado  que tipee shift-refresh.</dd>
+ <dd>Usando la key y duración de entrada de caché proporcionadas, cachea los resultados de la función proporcionada. Prioriza el valor de <code>env.cache_control</code> para invalidar el cache en <code>no-cache</code>, que puede ser enviado por un usuario logueado  que tipee shift-refresh.</dd>
  <dt><code>request</code></dt>
- <dd>Acceso al <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, una librería para hacer consultas HTTP. Usar este módulo en las plantillas KumaScriptno es muy amigable, así que quizá desees envolver uso en APIs de módulo que simplifiquen las cosas.</dd>
+ <dd>Acceso al <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, una librería para hacer consultas HTTP. Usar este módulo en las plantillas KumaScriptno es muy amigable, así que quizá desees envolver uso en APIs de módulo que simplifiquen las cosas.</dd>
 </dl>
 
 <h4 id="Módulos_de_API_incorporados">Módulos de API incorporados</h4>
@@ -238,8 +238,8 @@ Hello #&lt;%= i %&gt;
 
 <dl>
  <dt><code>kuma.htmlEscape(string)</code></dt>
- <dd>Escapa los caracteres <code>&amp;, &lt;, &gt;, "</code> a <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code>, respectivamente.</dd>
- <dt> </dt>
+ <dd>Escapa los caracteres <code>&amp;, &lt;, &gt;, "</code> a <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code>, respectivamente.</dd>
+ <dt> </dt>
  <dt><code>kuma.include(path)</code></dt>
  <dd>Incluye contenido de la página en la ruta proporcionada. Cacheo pesado.</dd>
 </dl>
@@ -251,7 +251,7 @@ Hello #&lt;%= i %&gt;
 
 <h4 id="Creando_módulos">Creando módulos</h4>
 
-<p>Usando el mátodo incorporado <code>require()</code>, puedes cargar una plantilla como módulo para compartir variables y métodos comunes entre plantillas. Un módulo puede definirse como una plantilla de la siguiente manera:</p>
+<p>Usando el mátodo incorporado <code>require()</code>, puedes cargar una plantilla como módulo para compartir variables y métodos comunes entre plantillas. Un módulo puede definirse como una plantilla de la siguiente manera:</p>
 
 <pre class="notranslate">&lt;%
 module.exports = {
@@ -262,7 +262,7 @@ module.exports = {
 %&gt;
 </pre>
 
-<p>Asumiendo que esta plantilla está guardada como <code>/en-US/docs/Template:MathLib</code>, puedes utilizarla en otra plantilla, así:</p>
+<p>Asumiendo que esta plantilla está guardada como <code>/en-US/docs/Template:MathLib</code>, puedes utilizarla en otra plantilla, así:</p>
 
 <pre class="notranslate">&lt;%
 var math_lib = require("MathLib");
@@ -380,7 +380,7 @@ El resultado de 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
  <li>No more <code>&lt;span class="script"&gt;</code></li>
  <li>No more <code>template.</code> nor <code>wiki.template</code> prefixing</li>
  <li>No more <code>template({name}[, arguments])</code> syntax</li>
- <li>Arguments must be quoted - e.g., <code>bug(123456)</code> becomes <code>bug("123456")</code> - unless you are calling the template from within another template, and the argument is one of the passed-in args like <code>$1</code> in this example: <code>template("LXRSearch", ["ident", "i", $1])</code>.</li>
+ <li>Arguments must be quoted - e.g., <code>bug(123456)</code> becomes <code>bug("123456")</code> - unless you are calling the template from within another template, and the argument is one of the passed-in args like <code>$1</code> in this example: <code>template("LXRSearch", ["ident", "i", $1])</code>.</li>
 </ul>
 
 <h3 id="Caching">Caching</h3>
@@ -471,11 +471,11 @@ wiki.languages({
 var u = uri.parts(Page.uri);
 var lang = string.tolower(u.path[0]);
 if (string.contains(lang, "project") || string.contains(lang, "Project")) {
-  lang = string.substr(lang, 8);
+  lang = string.substr(lang, 8);
 }
 /* fall back to page.language on a user page */
 else if (string.StartsWith(lang, "user:")) {
-  lang = page.language;
+  lang = page.language;
 }
 </pre>
 
@@ -486,8 +486,8 @@ else if (string.StartsWith(lang, "user:")) {
 <p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
 
 <pre class="notranslate">&lt;%
-  var contents = mdn.getFileContent(fileUrl);
-  ... do stuff with the contents ...
+  var contents = mdn.getFileContent(fileUrl);
+  ... do stuff with the contents ...
 %&gt;
 </pre>
 
@@ -635,17 +635,17 @@ web.html("&lt;p&gt;Firefox " + $0 + ", based on Gecko " + $1 + ", will ship in "
 &lt;p&gt;Firefox &lt;%= $0 %&gt;, based on Gecko &lt;%= $1 %&gt;, will ship in &lt;%= $2 %&gt;. This
  article provides information about the changes in this release that will
  affect developers. Nightly builds of what will become Firefox &lt;%= $0 %&gt;
- are &lt;%- web.link(url, "currently available")%&gt;  on the
+ are &lt;%- web.link(url, "currently available")%&gt;  on the
  &lt;%= string.ToUpperFirst($3) %&gt; channel.&lt;/p&gt;</pre>
 
 <pre class="notranslate">// Before: old Dekiscript snippet
 if ($1 &amp;&amp; string.length($1)) {
-  optionsText = optionsText + "&lt;li&gt;" + LXRSearch("ident", "i", $1) + "&lt;/li&gt;";
+  optionsText = optionsText + "&lt;li&gt;" + LXRSearch("ident", "i", $1) + "&lt;/li&gt;";
 }
 
 // After: new Kumascript. Quote parameters to template() unless it is an arg variable (like $1).
 if ($1 &amp;&amp; string.length($1)) {
-    optionsText = optionsText + "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";
+    optionsText = optionsText + "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";
 }
 
 // Note that template() within &lt;% ... %&gt; outputs nothing directly. If you want to call another

@@ -23,7 +23,7 @@ translation_of: Glossary/Signature/Security
 
 ### 基础知识
 
-- {{Interwiki("wikipedia", "Digital signature")}} on Wikipedia
+- [Digital signature](https://zh.wikipedia.org/wiki/Digital_signature) on Wikipedia
 - See {{glossary("digest")}}, {{glossary("encryption")}}
 
 ### 技术参考

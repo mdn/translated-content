@@ -71,7 +71,7 @@ translation_of: Web/CSS/CSS_Selectors
     **構文:** `A + B`  
     **例:** `h2 + p` は {{HTMLElement("h2")}} 要素の後にすぐに続く {{HTMLElement("p")}} 要素をすべて選択します。  
 
-- [列結合子](/ja/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+- [列結合子](/ja/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : `||` 結合子は列に所属するノードを選択します。  
     **構文:** `A || B`  
     **例:** `col || td` は {{HTMLElement("col")}} 要素のスコープに所属するすべての {{HTMLElement("td")}} 要素を選択します。  
