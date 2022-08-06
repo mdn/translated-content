@@ -1,219 +1,221 @@
 ---
-title: どのようにすべてのタイプのユーザーを対象に設計できますか？
+title: どうすればすべての種類のユーザーのためにデザインすることができるか？
 slug: Learn/Common_questions/Design_for_all_types_of_users
+tags:
+  - Accessibility
+  - Beginner
+  - Design
+  - Example
+  - Intro
+  - Mobile
+  - NeedsActiveLearning
 translation_of: Learn/Common_questions/Design_for_all_types_of_users
 ---
-<div>{{IncludeSubnav("/ja/Learn")}}</div>
+この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
-<div class="summary">
-<p>この記事ではあらゆる種類のユーザーのための Web サイトを設計する基本的なヒントを紹介します。</p>
-</div>
-
-<table class="learn-box nostripe standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件</th>
-   <td>あなたはすでに<a href="/ja/Learn/What_is_accessibility">アクセシビリティとは何か？</a>を読んでいますか？,ここではアクセシビリティについて詳細にカバーしていませんので</td>
-  </tr>
-  <tr>
-   <th scope="row">目的</th>
-   <td>ユニバーサルデザインとは、障害や技術的制約にかかわらず、すべての人のためのデザインを意味します。 この記事では、ユニバーサルデザインの最も重要なクイックウィンを紹介します。</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        ユニバーサルデザインとは、障碍や技術的な制約に関係なく、すべての人のためにデザインすることを意味します。この記事では、ユニバーサルデザインのための最も重要な即効性のある方法を挙げています。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>ウェブサイトを構築する際に考えなければならない課題のトップの一つが<a href="https://en.wikipedia.org/wiki/Universal_design">ユニバーサルデザイン</a>です。障害、技術的な制約、文化、場所などに関わらず、すべてのユーザーが包含されるものです。</p>
+ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://en.wikipedia.org/wiki/Universal_design)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
 
-<h2 id="アクティブラーニング">アクティブラーニング</h2>
+## アクティブラーニング
 
-<p><em>まだ、アクティブラーニングがありません。 <a href="/ja/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
 
-<h2 id="深く掘っていく">深く掘っていく</h2>
+## より深く掘り下げる
 
-<h3 id="カラーコントラスト">カラーコントラスト</h3>
+### カラーコントラスト
 
-<p>テキストの読みやすさを維持するためにバックグラウンドカラーと一緒にテキストカラーとのコントラストを良くしなければなりません。視覚的に障害をもつ人々や路上でスマートフォンを使っている人々などを助けるために余計にやさしくしなければなりません。</p>
+文字を読みやすくするために、背景色とのコントラストが高い文字色を使用しましょう。視覚障碍者や街中でスマホを使用する人のために、テキストは特に読みやすくしましょう。
 
-<p>{{Glossary("W3C")}}は前景と背景の間の明るさの比のアルゴリズムの計算をして良いカラーの混合を定義しました。計算はかなり複雑なように見えますが、私たち自身の仕事で信頼できるツールにできました。 </p>
+{{Glossary("W3C")}} では、前景と背景の輝度の比を計算するアルゴリズムで、良い色の混合を定義しています。計算がかなり複雑に思えるかもしれませんが、その仕事を代行してくれるツールに頼ることができます。
 
-<p>Pacielloグループ<a href="http://www.paciellogroup.com/resources/contrastanalyser/">カラーコントラストアナライザー</a>をダウンロードしてインストールしてみましょう。</p>
+Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) をダウンロードし、インストールしてみましょう。
 
-<div class="note">
-<p>注意: あなたはオンライン上でコントラストチェッカーを選択的にウェブ用の<a href="http://webaim.org/resources/contrastchecker/">カラーコントラストチェッカー</a>のようなものをいくつか見つけることができるでしょう。カラーの値を画面上で見つけ出すのでローカルのカラーチェッカーを私たちはお薦めします。</p>
+> **Note:** 他にも、WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
+
+例えば、このページの色をカラーコントラストアナライザーで調べて、結果を確認してみましょう。
+![Color contrast on this page: excellent!](color-contrast.png)
+
+文字と背景の輝度コントラスト比は 8.30:1 で、最低基準 (4.5:1) を超えており、多くの視覚障碍者がこのページを読むことができるはずです。
+
+### フォントサイズ
+
+ウェブサイトにおけるフォントサイズは、相対単位でも絶対単位でも指定することができます。
+
+#### 絶対単位
+
+絶対単位とは、比率計算ではなく、いわば設定された大きさを参照するもので、ほとんどの場合、ピクセル (`px`) で表現されます。例えば、 CSS でこのように宣言した場合、
+
+```css
+body { font-size:16px; }
+```
+
+… これは、何が起ころうともフォントサイズは 16 ピクセルでなければならない、とブラウザーに指示していることになります。最近のブラウザーは、「ユーザーが拡大率を 100% に設定したときの 16 ピクセル」を依頼しているように装うことで、このルールを回避しています。
+
+しかし、 Internet Explorer は長年、 16 ピクセルを頑なに 16 ピクセルと表示していました。 Internet Explorer 8 に至るまで、拡大縮小しても何も起こりませんでした。まだ存在しているため、私たちは合わせなければなりません。
+
+#### 相対単位
+
+**比例単位**とも呼ばれる相対単位は、親要素を基準として計算されます。相対単位は、ユーザーのシステムの設定を尊重するため、アクセシビリティに友好的です。
+
+相対単位は `em` 、`%` や `rem` で表現されます。
+
+- パーセントベースのサイズ: `%`
+  - : この単位は、ある要素のフォントサイズが、フォントサイズが表現された前の要素の N% でなければならないことを、ブラウザーに指示します。親要素が見つからない場合、ブラウザー内の既定値を基本サイズとして計算します（通常は 16 ピクセルに相当します）。
+- em ベースのサイズ: `em`
+  - : この単位は、 100 分の 1 ではなく、 1 分の 1 で計算することを除けば、パーセントと同じように計算します。 "em" はアルファベットの大文字 "M" の幅と言われています（大雑把に言うと "M" が四角に収まる）。
+- rem ベースのサイズ: `rem`
+  - : この単位はルート要素のフォントサイズに比例し、 `em` のように 1 分の 1 で表現されます。
+
+例えば、基本のフォントサイズを 16px、h1 （大見出し）を 32px 相当で表示したいとします。しかし、 h1 の中に `subheading` クラスの `span` を見つけると、それも既定のフォントサイズ（通常は 16px）でレンダリングしなければならないので、このようにします。
+
+以下は、使用している HTML の例です。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font size experiment</title>
+</head>
+<body>
+
+    <h1>This is our main heading
+        <span class="subheading">This is our subheading</span>
+    </h1>
+
+</body>
+</html>
+```
+
+パーセントベースの CSS は、次のようになります。
+
+```css
+body { font-size:100%; } /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 { font-size:200%; } /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading { font-size:50%; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+```
+
+em でも同じ問題が発生します。
+
+```css
+body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 { font-size:2em; } /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading { font-size:0.5em; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+```
+
+ご覧のように、親、親の親、親の親の親などを保有しなければならない場合、計算はすぐに大変なことになります。(ほとんどのデザインはピクセルベースのソフトウェアで行われるため、計算は CSS をコーディングする人が行わなければなりません)。
+
+そこで登場するのが `rem` です。この単位はルート要素のサイズに対する相対的なもので、他の親要素に対するものではありません。 CSS はこのように書き換えることができます。
+
+```css
+body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 { font-size:2rem; } /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading { font-size:1rem; } /* 元のサイズ */
+```
+
+もっと簡単でしょう？これは、 [Internet Explorer 9 と他のすべての現行ブラウザーで](https://caniuse.com/#search=rem)の時点で動作するので、この単位は気軽に使用してください。
+
+> **Note:** Opera Mini は rem のフォントサイズに対応していないことにお気づきかもしれません。結局は独自のフォントサイズを設定することになるので、わざわざフォント単位を与える必要はありません。
+
+#### なぜ比例単位を使用するのか
+
+なぜなら、いつピクセル単位で表記されたテキストの拡大表示を拒否するブラウザーが現れるかわからないからです。また、あなたのウェブサイトの統計情報を確認してください。古いブラウザーからの訪問を受ける可能性があります。
+
+次のことをアドバイスします。
+
+- フォントを `rem` 単位で記述すると、ほとんどのブラウザーはとても満足するはずです。
+- 古いブラウザーには、自身の内部エンジンでフォントを表示させましょう。ブラウザーのエンジンは、CSS のプロパティや 値に対応できない場合は無視するので、デザイナーのビジョンに忠実でなくても、ウェブサイトが使用できるようになります。古いブラウザーは、いずれは消えていくものです。
+
+> **Note:** ご使用のブラウザによって異なるかもしれません。古いブラウザーに合わせなければならない場合は、 `em` を使用し、もう少し計算する必要があります。
+
+### 行の長さ
+
+ウェブ上の行の長さについては、長年の議論がありますが、ここではその話をします。新聞があった頃、印刷会社は、行が長すぎると読者の目が次の行に行きにくくなることに気づきました。その解決策は？段組みです。
+
+もちろん、ウェブに移行してもこの問題は解消さ れません。読者の目は、行から行へと移動するシャトルのようなものです。目に優しくするためには、行の幅を 60 文字か 70 文字程度に制限することです。（訳注：日本語では 40 文字程度と言われています。）
+
+そのためには、テキストのコンテナーの大きさを指定します。この HTML を考えてみましょう。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font size experiment</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>This is our main heading
+        <span class="subheading">This is our subheading</span>
+    </h1>
+
+    <p>[lengthy text that spans many lines]</p>
 </div>
 
-<p>例えば、どのようにカラーコントラストアナライザーを使えばいいのかこのページでカラーテストを行ってみましょう。</p>
+</body>
+</html>
+```
 
-<p><img alt="Colour contrast on this page: excellent!" src="https://mdn.mozillademos.org/files/9671/colour-contrast.png" style="height: 575px; width: 799px;"></p>
+ここに、`container` クラスを持つ `div` があります。この `div` には、幅を設定する（`width` プロパティを使用する）か、大きすぎないように最大幅を設定する（`max-width` プロパティを使用する）かのどちらかのスタイルを設定することができます。もし、伸縮性のあるレスポンシブなウェブサイトを作りたいが、ブラウザーの既定の幅が分からない場合は、 `max-width` プロパティを使用して、 1 行に 70 文字まで許容し、それ以上は許容しないようにすることができます。
 
-<p>テキストと背景明るさの比は 8.30:1 でそれは最小の標準を超えていて (4.5:1) 、視覚障害のある多くの人でもこのページを読めるようにすべきである。</p>
+```css
+div.container { max-width:70em; }
+```
 
-<h3 id="フォントサイズ">フォントサイズ</h3>
+### 画像、音声、動画の代替コンテンツ
 
-<p>ウェブサイトにおけるフォントサイズの相関位置と絶対位置のどちらも指定することができます。</p>
+ウェブサイトには、プレーンテキスト以外のものが入ることがよくあります。
 
-<h4 id="絶対単位">絶対単位</h4>
+#### 画像
 
-<p>絶対単位は比例を計算しません。しかし、サイズをストーンに設定して参照します。そうなので、話すために、そして、ピクセルで示すことが最も多いです。例えばCSSはこのように宣言されています。 </p>
+画像には装飾的なものと情報的なものがありますが、ユーザーに見てもらえるという保証はありません。例えば、以下のような場合です。
 
-<pre>body { font-size:16px; }</pre>
+- 視覚障碍者は、テキストしか扱えない画面リーダーに頼っています。
+- 読者が、 {{Glossary("CDN")}} から発信される画像をブロックする非常に厳しいイントラネットを使用している可能性があります。
+- 読者が、特にモバイル機器の帯域幅を節約するために、画像を無効にしている可能性があります （下記参照）。
 
-<p>… あなたがブラウザに言うと何かが起こるかもしれません。フォントサイズは16ピクセルにしなければなりません。モダンブラウザでは100%ズームと要素を設定した時にあなたが要求した16ピクセルのふりをすることによってこのルールを得ているかもしれません。</p>
+<!---->
 
-<p>もう何年間もインターネットエクスプローラーはインターネットエクスプローラー8になるあたりまで断固として16ピクセルは16ピクセルとして表示をしてきました。この場合では拡大することはなく、そしてそれはまだ周りにあることによってそのようにふるまわねばなりません。 </p>
+- 装飾的な画像
+  - : これらは単なる装飾であり、実際の情報を伝えるものではありません。ほとんどの場合、背景画像で置き換えることができます。空の `alt` 属性があることを確認してください。 `<img src="deco.gif" alt="">` のように、テキストが詰まることがないようにします。
+- 情報的な画像
+  - : 情報を伝えるために使用されることから、その名がつきました。例えば、グラフを表示したり、人の身振りを表示したり、その他の情報を表示することができます。少なくとも、関連する `alt` 属性を提供する必要があります。
 
-<h4 id="相関単位">相関単位</h4>
+画像が簡潔に記述できるのであれば、`alt`属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
 
-<p><em>比例単位</em>と呼ばれているものも、相関単位は親要素に関連して計算されます。相関単位はアクセシビリティに親しみのあるもので、なぜならそれらは、ユーザーシステム上に設定され尊重されるものだからです。 </p>
+> **Note:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 
-<p>相関単位は <code>em</code> 、<code>%</code> や <code>rem</code>:で表現されます。</p>
+#### 音声/動画
 
-<dl>
- <dt>Percent-based sizes: <code>%</code></dt>
- <dd>Thisこの単位は以前の要素で表現されたフォントサイズN%で示すように指示します。 もし、親がない場合、デフォルトのフォントサイズ計算による基本的なサイズがブラウザで考えられます。 (たいてい16ピクセルに同等になります。)</dd>
- <dt>Em-based sizes: <code>em</code></dt>
- <dd>This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital “M” in the alphabet (roughly speaking, an “M” fits into a square).</dd>
- <dt>Rem-based sizes: <code>rem</code></dt>
- <dd>This unit is proportional to the root element's font size and is expressed as portions of 1, like <code>em</code>.</dd>
-</dl>
+マルチメディアコンテンツの代替も提供することが必要です。
 
-<p>Suppose we wanted a base font size of 16px and an h1 (main heading) at the equivalent of 32px, yet if within the h1 we find a <code>span</code> with the <code>subheading</code> class, it too must be rendered at the default font size (usually 16px).</p>
+- 字幕／クローズキャプション
+  - : 音声が聞こえない訪問者のために、動画にキャプションを入れる必要があります。ユーザーの中には、聴覚障害をお持ちの方や、スピーカーが機能しない方、（電車の中など）騒がしい環境で作業している方もいます。
+- 文字起こし
+  - : 字幕は、誰かが動画を見て初めて機能するものです。多くのユーザーは時間がなかったり、適切なプラグインやコーデックがなかったりします。さらに、検索エンジンは、コンテンツをインデックスするために、主にテキストに頼っています。これらの理由から、動画/音声ファイルをテキストで書き起こしたものを提供してください。
 
-<p>Here is the HTML we're using:</p>
+### 画像の圧縮
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Font size experiment&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+ユーザーによっては、画像を表示することを選んでも、特に発展途上国やモバイル機器では、利用できる帯域幅が限られている場合があります。ウェブサイトを成功させたいのであれば、画像を圧縮してください。オンラインでもローカルでも、様々なツールがあります。
 
-    &lt;h1&gt;This is our main heading
-        &lt;span class="subheading"&gt;This is our subheading&lt;/span&gt;
-    &lt;/h1&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>A percent-based CSS will look like this:</p>
-
-<pre>body { font-size:100%; } /* 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:200%; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:50%; } /* half the size of the h1, thus 16 pixels to come back to the original size */
-</pre>
-
-<p>The same problem expressed with ems:</p>
-
-<pre>body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:2em; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:0.5em; } /* half the size of the h1, thus 16 pixels to come back to the original size */</pre>
-
-<p>As you can see, the math quickly gets daunting when you have to keep track of the parent, the parent's parent, the parent's parent's parent, and so on. (Most designs are done in pixel-based software, so the math has to be done by the person coding the CSS).</p>
-
-<p>Enter <code>rem</code>. This unit is relative to the root element's size and not to any other parent. The CSS can be rewritten thus:</p>
-
-<pre>body { font-size:1em; } /* 1em = 100% of the browser's base font size, so in most cases this will render as 16 pixels */
-h1 { font-size:2rem; } /* twice the size of the body, thus 32 pixels */
-span.subheading { font-size:1rem; } /* original size */</pre>
-
-<p>Easier, isn't it? This works as of <a href="http://caniuse.com/#search=rem">Internet Explorer 9 and in every other current browser</a>, so please feel free to use this unit.</p>
-
-<div class="note">
-<p><strong>Note:</strong> You may notice Opera Mini does not support font sizing in rem. It will end up setting its own font size, so don't bother feeding it font units.</p>
-</div>
-
-<h4 id="Why_would_I_want_to_use_proportional_units">Why would I want to use proportional units?</h4>
-
-<p>Because you don't know when a browser is going to come around and refuse to zoom up text whose size is expressed in pixels. Also, check your website's statistics: you may receive visits from older browsers.</p>
-
-<p>We would advise the following:</p>
-
-<ul>
- <li>Describe fonts in <code>rem</code> units, most browsers will be very happy with them;</li>
- <li>Let older browsers display fonts with their own internal engine. Browser's engines will ignore any property or value in the CSS if they can't cope with them, so that your website is still usable if not true to your designer's vision. Older browsers are on the way out anyway.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note:</strong> Your mileage may vary. If you have to cater to older browsers, you'll have to use <code>em</code>s and do a bit more math.</p>
-</div>
-
-<h3 id="Line_width">Line width</h3>
-
-<p>There is a longstanding debate about line length on the web, but here's the story. Back when we had newspapers, printers realized that the reader's eyes would have trouble going from one line to the next if the lines were too long. The solution? Columns.</p>
-
-<p>Of course the problem doesn't go away when we switch to the Web. The reader's eyes act like a shuttle going from line to line. To make it easier on people's eyes, limit line width to around 60 or 70 characters.</p>
-
-<p>To achieve this, you can specify a size for your text's container. Let's consider this HTML:</p>
-
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Font size experiment&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class="container"&gt;
-    &lt;h1&gt;This is our main heading
-        &lt;span class="subheading"&gt;This is our subheading&lt;/span&gt;
-    &lt;/h1&gt;
-
-    &lt;p&gt;[lengthly text that spans many lines]&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>We have a <code>div</code> with class <code>container</code>. We can style the <code>div</code> either to set its width (using the <code>width</code> property) or its maximum width so that it never gets too large (using the <code>max-width</code> property). If you want an elastic/responsive website, and you don't know what the browser's default width is, you can use the <code>max-width</code> property to allow up to 70 characters per line and no more:</p>
-
-<pre>div.container { max-width:70em; }</pre>
-
-<h3 id="Alternative_content_for_images_audio_and_video">Alternative content for images, audio, and video</h3>
-
-<p>Websites often include stuff besides plain text.</p>
-
-<h4 id="Images">Images</h4>
-
-<p>Images can be either decorative or informative, but there's no guarantee that your users can see them. For example,</p>
-
-<ul>
- <li>Visually impaired users rely on a screen reader, which can only handle text.</li>
- <li>Your readers may be using a very strict intranet that blocks images originating from a {{Glossary("CDN")}}.</li>
- <li>Your readers may have disabled images to save bandwidth, especially on mobile devices (see below).</li>
-</ul>
-
-<dl>
- <dt>Decorative images</dt>
- <dd>They're just for decoration and don't convey any real information. They could most often be replaced by a background image. Make sure they feature an empty <code>alt</code> attribute: <code>&lt;img src="deco.gif" alt=""&gt;</code> so they don't clog up the text.</dd>
- <dt>Informative images</dt>
- <dd>They are used to convey information, hence their name. They can, for instance, feature a graph, or show a person's gesture, or any other information. At minimum, you must provide a relevant <code>alt</code> attribute.</dd>
-</dl>
-
-<p>If the image can be described succinctly, you can provide an <code>alt</code> attribute and nothing more. If the image cannot be described succinctly, you will have to either provide the same content in another form in the same page (e.g., complement a pie chart with a table providing the same data), or resort to a <code>longdesc </code>attribute. This attribute's value is a URL pointing towards a resource explicitly describing in detail the image's content.</p>
-
-<div class="note">
-<p>Note: the use and even the existence of <code>longdesc</code> has been debated for quite some time. Please refer to the W3C's <a href="http://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a> for the full explanation and thorough examples.</p>
-</div>
-
-<h4 id="Audiovideo">Audio/video</h4>
-
-<p>You must also provide alternatives to multimedia content.</p>
-
-<dl>
- <dt>Subtitling/close-captioning</dt>
- <dd>You should include captions in your video to cater to visitors who can't hear the audio. Some users have hearing challenges, lack functioning speakers, or work in a noisy environment (like on the train).</dd>
- <dt>Transcript</dt>
- <dd>Subtitles only work if somebody watches the video. Many users don't have time, or lack the proper plugin or codec. Additionally, search engines rely mainly on text to index your contents. For all these reasons, please provide a text transcript of the video/audio file.</dd>
-</dl>
-
-<h3 id="Image_compression">Image compression</h3>
-
-<p>Some users may choose to display images, but still have limited bandwidth available, especially in developing countries and on mobile devices. If you want a successful website, please compress your images. There are various tools to help you, either online or local:</p>
-
-<ul>
- <li><strong>Installed software.</strong> <a href="https://imageoptim.com/">ImageOptim</a> (Mac), <a href="http://optipng.sourceforge.net/">OptiPNG</a> (all platforms), <a href="http://pmt.sourceforge.net/pngcrush/">PNGcrush</a> (DOS, Unix/Linux)</li>
- <li><strong>Online tools.</strong> Yahoo's <a href="http://smush.it/">smushit!</a>, Dynamic drive's <a href="http://tools.dynamicdrive.com/imageoptimizer/">Online Image Optimizer</a> (which can convert automatically from one format to another if it's more bandwidth-efficient)</li>
-</ul>
+- **インストールするソフトウェア** [ImageOptim](https://imageoptim.com/api) (Mac)、[OptiPNG](http://optipng.sourceforge.net/) （全プラットフォーム）、[PNGcrush](https://pmt.sourceforge.io/pngcrush/) （DOS、Unix/Linux）
+- **オンラインツール** Dynamic drive の [Online Image Optimizer](https://tools.dynamicdrive.com/imageoptimizer/) （帯域幅がより有効になるように、ある形式から別の形式に自動的に変換することができます。）
