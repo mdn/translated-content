@@ -5,7 +5,7 @@ page-type: web-api-constructor
 translation_of: Web/API/SharedWorker/SharedWorker
 browser-compat: api.SharedWorker.SharedWorker
 l10n:
-  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
+  sourceCommit: abaa8b38ddf68a2b468e2b46e56b277db25f16cf
 ---
 {{APIRef("Web Workers API")}}
 
@@ -21,7 +21,7 @@ new SharedWorker(uneURL, nom)
 new SharedWorker(uneURL, options)
 ```
 
-### Paramètre
+### Paramètres
 
 - `uneURL`
   - : Une chaîne de caractères représentant l'URL du script que le <i lang="en">worker</i> exécutera. Cette URL doit respecter la politique de même origine.
@@ -42,13 +42,13 @@ new SharedWorker(uneURL, options)
 - `SecurityError` [`DOMException`](/fr/docs/Web/API/DOMException)
   - : Déclenchée si le document n'est pas autorisé à démarrer des <i lang="en">workers</i>, par exemple si la syntaxe de l'URL est invalide ou si cette dernière ne respecte pas la règle de même origine.
 - `NetworkError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Déclenchée si le type MIME du script du <i lang="en">worker</i> est incorrect. Ce devrait _toujours_ être `text/javascript` (pour des raisons historiques, [d'autres types MIME JavaScript](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) peuvent être acceptés).
+  - : Déclenchée si le type MIME du script du <i lang="en">worker</i> est incorrect. Ce devrait _toujours_ être `text/javascript` (pour des raisons historiques, [d'autres types MIME JavaScript](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) peuvent être acceptés).
 - `SyntaxError` [`DOMException`](/fr/docs/Web/API/DOMException)
   - : Déclenchée si `uneURL` ne peut pas être analysée.
 
 ## Exemples
 
-L'extrait de code suivant montre la création d'un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) en utilisant le contructeur `SharedWorker()` et l'usage qui en est fait.
+L'extrait de code suivant montre la création d'un objet [`SharedWorker`](/fr/docs/Web/API/SharedWorker) en utilisant le constructeur `SharedWorker()` et l'usage qui en est fait.
 
 ```js
 const monWorker = new SharedWorker('worker.js');
