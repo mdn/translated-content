@@ -28,7 +28,7 @@ Les méthodes de SEO se répartissent en trois grandes classes :
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Optimisation_pour_les_moteurs_de_recherche","Optimisation pour les moteurs de recherche")}} sur Wikipedia
+- [Optimisation pour les moteurs de recherche](https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche) sur Wikipédia
 
 ### Apprendre SEO
 

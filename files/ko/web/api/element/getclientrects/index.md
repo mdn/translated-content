@@ -116,29 +116,29 @@ HTML {{HtmlElement("area")}} 엘리먼트, 스스로는 어떠한 것도 렌더�
 <p>테이블의 테두리 박스가 캡션을 포함하지는 않지만, 클라이언트 사각형은 캡션을 포함합니다.</p>
 
 <div>
-  <strong>원본</strong>
-  <table>
-    <caption>캡션</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>원본</strong>
+  <table>
+    <caption>캡션</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div>
-  <strong>table의 사각형</strong>
-  <table class="withClientRectsOverlay">
-    <caption>캡션</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>table의 사각형</strong>
+  <table class="withClientRectsOverlay">
+    <caption>캡션</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 ```
 
@@ -168,23 +168,23 @@ JavaScript 코드는 `withClientRectsOverlay` CSS 클래스가 할당된 모든 
 
 ```js
 function addClientRectsOverlay(elt) {
-  /* 각 클라이언트 사각형에서 div를 절대적으로 배치하였기 때문에 div의 테두리 너비는 사각형의 너비와 동일합니다.
-     Note: 유저가 크기를 조정하거나 확대/축소하는 경우 오버레이가 제 위치를 벗어날 수 있습니다. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
-    // rect.width가 테두리 너비가 되어야 하므로 콘텐츠 너비는 2px 더 작습니다.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
-    document.body.appendChild(tableRectDiv);
+  /* 각 클라이언트 사각형에서 div를 절대적으로 배치하였기 때문에 div의 테두리 너비는 사각형의 너비와 동일합니다.
+     Note: 유저가 크기를 조정하거나 확대/축소하는 경우 오버레이가 제 위치를 벗어날 수 있습니다. */
+  var rects = elt.getClientRects();
+  for (var i = 0; i != rects.length; i++) {
+    var rect = rects[i];
+    var tableRectDiv = document.createElement('div');
+    tableRectDiv.style.position = 'absolute';
+    tableRectDiv.style.border = '1px solid red';
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    // rect.width가 테두리 너비가 되어야 하므로 콘텐츠 너비는 2px 더 작습니다.
+    tableRectDiv.style.width = (rect.width - 2) + 'px';
+    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    document.body.appendChild(tableRectDiv);
   }
 }
 

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/file
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} элемент с атрибутом <strong><code>type="file"</code></strong> позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи <a href="/ru/docs/Learn/HTML/Forms">формы</a>, или обработаны JavaScript и <a href="/en-US/docs/Using_files_from_web_applications">File API</a>.</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} элемент с атрибутом <strong><code>type="file"</code></strong> позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи <a href="/ru/docs/Learn/HTML/Forms">формы</a>, или обработаны JavaScript и <a href="/en-US/docs/Using_files_from_web_applications">File API</a>.</span></p>
 
 <div id="file-example">
 <pre class="brush: html">&lt;input name="myFile" type="file"&gt;
@@ -41,14 +41,14 @@ translation_of: Web/HTML/Element/input/file
 
 <h2 id="Value">Value</h2>
 
-<p>Атрибут {{htmlattrxref("value", "input")}} элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, <code>value</code> представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.</p>
+<p>Атрибут {{htmlattrxref("value", "input")}} элемента input содержит {{domxref("DOMString")}}, который представляет путь к выбранным файлам. Если пользователь выбрал несколько файлов, <code>value</code> представляет первый файл из списка. Остальные файлы можно определить используя {{domxref("HTMLInputElement.files")}} свойство элемента input.</p>
 
 <div class="note"><strong>Note:</strong>
 
 <ol>
- <li>Если выбрано несколько файлов, строка представляет собой первый выбранный файл. JavaScript предоставляет доступ к остальным файлам через свойство <a href="/en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)"><code>FileList</code></a>.</li>
+ <li>Если выбрано несколько файлов, строка представляет собой первый выбранный файл. JavaScript предоставляет доступ к остальным файлам через свойство <a href="/en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)"><code>FileList</code></a>.</li>
  <li>Если не выбрано ни одного файла, .строка равна <code>""</code> (пустая).</li>
- <li>Строка <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">начинается с  <code>C:\fakepath\</code></a>,  для предотвращения определения файловой структуры пользователя вредоносным ПО.</li>
+ <li>Строка <a href="https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly">начинается с  <code>C:\fakepath\</code></a>,  для предотвращения определения файловой структуры пользователя вредоносным ПО.</li>
 </ol>
 </div>
 
@@ -136,14 +136,14 @@ translation_of: Web/HTML/Element/input/file
 <p>Let's look like a more complete example:</p>
 
 <pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
-  &lt;div&gt;
-    &lt;label for="profile_pic"&gt;Choose file to upload&lt;/label&gt;
-    &lt;input type="file" id="profile_pic" name="profile_pic"
+  &lt;div&gt;
+    &lt;label for="profile_pic"&gt;Choose file to upload&lt;/label&gt;
+    &lt;input type="file" id="profile_pic" name="profile_pic"
           accept=".jpg, .jpeg, .png"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <div class="hidden">

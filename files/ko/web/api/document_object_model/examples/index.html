@@ -2,11 +2,11 @@
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
 ---
-<p>이 장에서는 DOM을 사용한 웹, XML 개발의 긴 예제를 제공합니다. 예제는 문서의 object를 조작하기 위해 가능한 JavaScript의 일반적인 API, 트릭, 패턴을 사용합니다. </p>
+<p>이 장에서는 DOM을 사용한 웹, XML 개발의 긴 예제를 제공합니다. 예제는 문서의 object를 조작하기 위해 가능한 JavaScript의 일반적인 API, 트릭, 패턴을 사용합니다. </p>
 
 <h2 id="Example_1_height_and_width" name="Example_1:_height_and_width">예제 1: 높이와 너비</h2>
 
-<p>아래의 예제는 다양한 면적의 이미지를 통해 <code>height</code> 와 <code>width</code>  속성을 사용하는 방법을 보여줍니다:</p>
+<p>아래의 예제는 다양한 면적의 이미지를 통해 <code>height</code> 와 <code>width</code>  속성을 사용하는 방법을 보여줍니다:</p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -94,7 +94,7 @@ function setBorderWidth(width) {
 
 <h2 id="Example_3_Manipulating_Styles" name="Example_3:_Manipulating_Styles">예제 3: 스타일 조작</h2>
 
-<p>아래의 간단한 예제에서 HTML 단락 element( <code>&lt;p&gt;</code>)의 일부 기본 스타일 속성들은 DOM에서 검색하고 설정할 수 있는 element의 스타일 객체와, 그 객체의 CSS 스타일 속성을 사용해 접근합니다. 이 경우 개별 스타일을 직접 조작합니다. 다음 예제(예제 4)에서는 stylesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다. </p>
+<p>아래의 간단한 예제에서 HTML 단락 element( <code>&lt;p&gt;</code>)의 일부 기본 스타일 속성들은 DOM에서 검색하고 설정할 수 있는 element의 스타일 객체와, 그 객체의 CSS 스타일 속성을 사용해 접근합니다. 이 경우 개별 스타일을 직접 조작합니다. 다음 예제(예제 4)에서는 stylesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다. </p>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -124,7 +124,7 @@ function changeText() {
 
 <h2 id="Example_4_Using_Stylesheets" name="Example_4:_Using_Stylesheets">예제 4: Stylesheet 사용</h2>
 
-<p>document 객체의 styleSheets 속성은 그 문서에서 로드된 stylesheet 목록을 반환합니다. 이 예제에서 설명된대로 stylesheet, 스타일, CSSRule 객체를 사용해 이러한 stylesheet와 규칙에 개별적으로 접근할 수 있습니다. 이 예제는 모든 스타일 규칙 Selector를 콘솔에 출력합니다. </p>
+<p>document 객체의 styleSheets 속성은 그 문서에서 로드된 stylesheet 목록을 반환합니다. 이 예제에서 설명된대로 stylesheet, 스타일, CSSRule 객체를 사용해 이러한 stylesheet와 규칙에 개별적으로 접근할 수 있습니다. 이 예제는 모든 스타일 규칙 Selector를 콘솔에 출력합니다. </p>
 
 <pre class="brush:js">var ss = document.styleSheets;
 
@@ -134,7 +134,7 @@ for(var i = 0; i &lt; ss.length; i++) {
   }
 }</pre>
 
-<p>아래와 같은 세가지 규칙이 정의된 하나의 stylesheet가 있는 문서의 경우: </p>
+<p>아래와 같은 세가지 규칙이 정의된 하나의 stylesheet가 있는 문서의 경우: </p>
 
 <pre class="brush:css">body { background-color: darkblue; }
 p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
@@ -148,7 +148,7 @@ P
 #LUMPY
 </pre>
 
-<h2 id="Example_5_Event_Propagation" name="Example_5:_Event_Propagation">예제 5: Event 전파</h2>
+<h2 id="Example_5_Event_Propagation" name="Example_5:_Event_Propagation">예제 5: Event 전파</h2>
 
 <p>This example demonstrates how events fire and are handled in the DOM in a very simple way. When the BODY of this HTML document loads, an event listener is registered with the top row of the TABLE. The event listener handles the event by executing the function stopEvent, which changes the value in the bottom cell of the table.</p>
 
@@ -282,40 +282,40 @@ td { padding: 2px 10px 2px 10px; }
 &lt;script&gt;
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var lableList = ['#', 'Property', 'Value'];
+  var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
-    addCell(row, lableList[i]);
-  }
+  for (var i=0; i&lt;len; i++) {
+    addCell(row, lableList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
 &lt;/script&gt;
 &lt;/head&gt;

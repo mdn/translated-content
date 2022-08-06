@@ -17,9 +17,9 @@ translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 
 <h2 id="Buffered">Buffered</h2>
 
-<p>Атрибут <code>buffered</code> расскажет нам, какие части медиа-элемента были загружены. Он возвращает объект {{ domxref("TimeRanges") }}, который содержит информацию о том, какие куски медиа были загружены. Обычно он непрерывный, но если пользователь перескакивает, когда медиа-элемент занят буферизацией, он может содержать пропуски.</p>
+<p>Атрибут <code>buffered</code> расскажет нам, какие части медиа-элемента были загружены. Он возвращает объект {{ domxref("TimeRanges") }}, который содержит информацию о том, какие куски медиа были загружены. Обычно он непрерывный, но если пользователь перескакивает, когда медиа-элемент занят буферизацией, он может содержать пропуски.</p>
 
-<p>Это будет работать с {{htmlelement("audio") }} или {{htmlelement("video") }}; теперь давайте рассмотрим простой пример для audio:</p>
+<p>Это будет работать с {{htmlelement("audio") }} или {{htmlelement("video") }}; теперь давайте рассмотрим простой пример для audio:</p>
 
 <pre class="brush: html">&lt;audio id="my-audio" controls src="music.mp3"&gt;
 &lt;/audio&gt;</pre>
@@ -91,7 +91,7 @@ myAudio.buffered.end(1);   // returns 19</pre>
 
         var startX = myAudio.buffered.start(i) * inc;
         var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
+        var width = endX - startX;
 
         context.fillRect(startX, 0, width, myCanvas.height);
         context.rect(startX, 0, width, myCanvas.height);
@@ -126,7 +126,7 @@ myAudio.buffered.end(1);   // returns 19</pre>
 
 <p>It is better perhaps to give an indication of how much media has actually downloaded — this what the browser's native players seem to display.</p>
 
-<p>Итак, давайте реализуем это. HTML для нашего плеера выглядит так:</p>
+<p>Итак, давайте реализуем это. HTML для нашего плеера выглядит так:</p>
 
 <pre class="brush: css">&lt;audio id="my-audio" preload controls&gt;
   &lt;source src="music.mp3" type="audio/mpeg"&gt;
@@ -178,12 +178,12 @@ myAudio.buffered.end(1);   // returns 19</pre>
   myAudio.addEventListener('progress', function() {
     var duration =  myAudio.duration;
     if (duration &gt; 0) {
-      for (var i = 0; i &lt; myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) &lt; myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
-        }
+      for (var i = 0; i &lt; myAudio.buffered.length; i++) {
+            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) &lt; myAudio.currentTime) {
+                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
+                break;
+            }
+        }
     }
   });
 
@@ -207,7 +207,7 @@ myAudio.buffered.end(1);   // returns 19</pre>
 <p><strong>Note</strong>: You can see the <a href="http://jsbin.com/badimipi/1/edit">buffering code running live on JS Bin</a>.</p>
 </div>
 
-<h2 id="Пару_слов_о_Played">Пару слов о Played</h2>
+<h2 id="Пару_слов_о_Played">Пару слов о Played</h2>
 
 <p>Надо заметить, что есть свойство <code>played</code>, сообщающее, были ли воспроизведены интервалы полностью. Пример:</p>
 

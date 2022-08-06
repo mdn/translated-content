@@ -13,14 +13,14 @@ translation_of: Web/API/Element/outerHTML
 
 <h2 id="Summary">Описание</h2>
 
-<p>Атрибут <code>outerHTML</code> DOM-интерфейса {{ domxref("element") }} получает сериализованный HTML-фрагмент, описывающий элемент, включая его потомков. Можно установить замену элемента узлами, полученными из заданной строки.</p>
+<p>Атрибут <code>outerHTML</code> DOM-интерфейса {{ domxref("element") }} получает сериализованный HTML-фрагмент, описывающий элемент, включая его потомков. Можно установить замену элемента узлами, полученными из заданной строки.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>var content</em> = <em>element</em>.outerHTML;
 </pre>
 
-<p>На выводе, <code>content</code> содержит сериализованный HTML-фрагмент, описывающий <code>element</code> и его потомки.</p>
+<p>На выводе, <code>content</code> содержит сериализованный HTML-фрагмент, описывающий <code>element</code> и его потомки.</p>
 
 <pre class="eval"><em>element</em>.outerHTML = content;
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Element/outerHTML
 
 <h2 id="Examples">Примеры</h2>
 
-<p>Получение свойства <code>outerHTML</code> элемента:</p>
+<p>Получение свойства <code>outerHTML</code> элемента:</p>
 
 <pre class="brush: js">// HTML:
 // &lt;div id="d"&gt;&lt;p&gt;Content&lt;/p&gt;&lt;p&gt;Further Elaborated&lt;/p&gt;&lt;/div&gt;
@@ -41,7 +41,7 @@ console.log(d.outerHTML);
 // выведена в окно консоли
 </pre>
 
-<p>Замена ветки с помощью изменения свойства <code>outerHTML</code>:</p>
+<p>Замена ветки с помощью изменения свойства <code>outerHTML</code>:</p>
 
 <pre class="brush: js">// HTML:
 // &lt;div id="container"&gt;&lt;div id="d"&gt;Это div.&lt;/div&gt;&lt;/div&gt;
@@ -59,7 +59,7 @@ console.log(container.firstChild.nodeName); // логирует "P"
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Если у элемента нет родительской ветки, которая не является корневой веткой документа, установка его свойства <code>outerHTML</code> выбросит исключение <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> с кодом ошибки <code>NO_MODIFICATION_ALLOWED_ERR</code>. Например:</p>
+<p>Если у элемента нет родительской ветки, которая не является корневой веткой документа, установка его свойства <code>outerHTML</code> выбросит исключение <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> с кодом ошибки <code>NO_MODIFICATION_ALLOWED_ERR</code>. Например:</p>
 
 <pre class="brush: js">document.documentElement.outerHTML = "test";  // бросает DOMException
 </pre>

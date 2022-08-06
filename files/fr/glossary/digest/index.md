@@ -24,4 +24,4 @@ Il est primordial de choisir la fonction de hachage appropriée à votre cas con
 ## Pour approfondir
 
 - Voir {{glossary("hash","fonction de hachage")}}
-- {{interwiki("wikipedia", "Fonction_de_hachage_cryptographique", "Fonction de hachage")}} sur Wikipédia
+- [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia

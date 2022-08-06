@@ -117,14 +117,14 @@ button.addEventListener('click', function() {
 );
 
 function stepondown() {
-  let input = document.getElementById('theNumber');
-  let val = document.getElementById('decrementer').value;
+  let input = document.getElementById('theNumber');
+  let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* 引数付きで減算 */
-    input.stepDown(val);
-  } else {    /* 引数なしで減算。 0, 5, -2 などを試してください。 */
-    input.stepDown();
-  }
+  if (val) {  /* 引数付きで減算 */
+    input.stepDown(val);
+  } else {    /* 引数なしで減算。 0, 5, -2 などを試してください。 */
+    input.stepDown();
+  }
 }
 ```
 

@@ -15,7 +15,7 @@ translation_of: Web/API/Headers
 
 <p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の <strong><code>Headers</code></strong> インターフェースは、HTTP リクエストとレスポンスのヘッダ上のさまざまなアクションを実行します。これらのアクションには、取得や設定、追加、削除が含まれます。<code>Headers</code> オブジェクトは、最初は空で 0 個以上の名前と値のペアで構成される関連するヘッダリストを持っています。<span style="line-height: 19.0909080505371px;">追加には {{domxref("Headers.append","append()")}}（<a href="#例">例</a> を見てください）のようなメソッドを使用できます。</span>このインタフェースのすべてのメソッドで、ヘッダ名は大文字と小文字を区別しないバイトシーケンスにマッチしています。</p>
 
-<p>セキュリティ上の理由から、いくつかのヘッダはユーザーエージェントでしか制御できません。それらのヘッダには、{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} と {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}} が含まれます。</p>
+<p>セキュリティ上の理由から、いくつかのヘッダはユーザーエージェントでしか制御できません。それらのヘッダには、{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} と {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}} が含まれます。</p>
 
 <p>ヘッダは関連するガードも持っています。ガードは <code>immutable</code> か <code>request</code>、<code>request-no-cors</code>、<code>response</code>、<code>none</code> のいずれかの値を取ります。これはヘッダを変更する {{domxref("Headers.set","set()")}} メソッドと {{domxref("Headers.delete","delete()")}} メソッド、{{domxref("Headers.append","append()")}} メソッドに影響を与えます。詳細は {{Glossary("Guard")}} を見てください。</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/Headers
  <dt>{{domxref("Headers.entries()")}}</dt>
  <dd>このオブジェクトに含まれるすべてのキー/値 ペアを通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。</dd>
  <dt>{{domxref("Headers.get()")}}</dt>
- <dd><code>Headers</code> オブジェクト内から指定したヘッダのすべての値の {{domxref("ByteString")}} を返す。</dd>
+ <dd><code>Headers</code> オブジェクト内から指定したヘッダのすべての値の {{domxref("ByteString")}} を返す。</dd>
  <dt>{{domxref("Headers.has()")}}</dt>
  <dd><code>Headers</code> オブジェクトが特定のヘッダを含むかどうかを示す boolean 値を返す。</dd>
  <dt>{{domxref("Headers.keys()")}}</dt>

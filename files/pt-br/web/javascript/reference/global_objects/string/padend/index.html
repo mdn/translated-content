@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
  <dt><code>targetLength</code></dt>
  <dd>O comprimento da string resultante após a string original ter sido preenchida. Se o valor for menor do que o próprio comprimento da string original, a string original é retornada sem modificações.</dd>
  <dt><code>padString</code></dt>
- <dd>Opcional. O caractere (ou caracteres) que deve completar a string atual. Caso o comprimento desta string seja muito longo, estando acima do comprimento alvo, ela será truncada e sua parte esquerda restante é aplicada. O valor padrão para esse parâmetro é  "<code> </code>" (<code>U+0020</code>).</dd>
+ <dd>Opcional. O caractere (ou caracteres) que deve completar a string atual. Caso o comprimento desta string seja muito longo, estando acima do comprimento alvo, ela será truncada e sua parte esquerda restante é aplicada. O valor padrão para esse parâmetro é  "<code> </code>" (<code>U+0020</code>).</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 
 <h3 id="Usando_padEnd">Usando padEnd</h3>
 
-<pre class="brush: js notranslate">'abc'.padEnd(10);          // "abc       "
+<pre class="brush: js notranslate">'abc'.padEnd(10);          // "abc       "
 'abc'.padEnd(10, "foo");   // "abcfoofoof"
 'abc'.padEnd(6, "123456"); // "abc123"
 'abc'.padEnd(1);           // "abc"</pre>
@@ -51,20 +51,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 <pre class="brush: js notranslate">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
-    String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
+    String.prototype.padEnd = function padEnd(targetLength,padString) {
+        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
         padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length &gt; targetLength) {
-            return String(this);
-        }
-        else {
-            targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
-                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
-            }
-            return String(this) + padString.slice(0,targetLength);
-        }
-    };
+        if (this.length &gt; targetLength) {
+            return String(this);
+        }
+        else {
+            targetLength = targetLength-this.length;
+            if (targetLength &gt; padString.length) {
+                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
+            }
+            return String(this) + padString.slice(0,targetLength);
+        }
+    };
 }
 </pre>
 

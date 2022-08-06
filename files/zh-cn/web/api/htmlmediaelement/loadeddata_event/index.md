@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
 {{APIRef("HTMLMediaElement")}}
 
-**`loadeddata`** 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发。
+**`loadeddata`** 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发。
 
 ## 基本信息
 

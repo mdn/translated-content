@@ -37,7 +37,7 @@ function showType(fileInput) {
 
   for (var i = 0; i < files.length; i++) {
     var name = files[i].name;
-    var type = files[i].type;
+    var type = files[i].type;
     alert("Filename: " + name + " , Type: " + type);
   }
 }

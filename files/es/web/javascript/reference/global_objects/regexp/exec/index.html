@@ -13,9 +13,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>exec()</code></strong> ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.</p>
+<p>El método <strong><code>exec()</code></strong> ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.</p>
 
-<p>Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.</p>
+<p>Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -30,13 +30,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Si se encuentran coincidencial, el método <code>exec()</code> devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.</p>
+<p>Si se encuentran coincidencial, el método <code>exec()</code> devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.</p>
 
-<p>Si la busqueda falla, el método <code>exec()</code> devuelve {{jsxref("null")}}.</p>
+<p>Si la busqueda falla, el método <code>exec()</code> devuelve {{jsxref("null")}}.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Considerando el siguiente ejemplo:</p>
+<p>Considerando el siguiente ejemplo:</p>
 
 <pre class="brush: js">// Busca "quick brown" seguido de "jumps", ignorando los caracteres que se
 // encuentren entre medias.
@@ -65,7 +65,7 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
   <tr>
    <td><code>[1],...[<em>n</em>]</code></td>
    <td>
-    <p>Las subcadenas entre parentesis que han sido encontradas, si hay alguna. El número de subcadenas encontradas es ilimitado</p>
+    <p>Las subcadenas entre parentesis que han sido encontradas, si hay alguna. El número de subcadenas encontradas es ilimitado</p>
    </td>
    <td><code>[1] = Brown<br>
     [2] = Jumps</code></td>
@@ -98,7 +98,7 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
   </tr>
   <tr>
    <td><code>multiline</code></td>
-   <td>Indica si la bandera "<code>m"</code> fue usada para buscar en cadenas sobre multiples lineas</td>
+   <td>Indica si la bandera "<code>m"</code> fue usada para buscar en cadenas sobre multiples lineas</td>
    <td><code>false</code></td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 <h3 id="Encontrando_coincidencias_sucesivas">Encontrando coincidencias sucesivas</h3>
 
-<p>Si tu expresión regular contiene la bandera "<code>g</code>", puedes usar el método <code>exec()</code> varias veces para encontrar coincidencias sucesivas en la misma cadena. Cuando lo haces, la busqueda empieza en la subcadena <code>str</code> especificada por la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} de la expresión regular ({{jsxref("RegExp.prototype.test()", "test()")}} también movera hacia adelante el indice de la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}}). Por ejemplo, asumiendo que tienes este script:</p>
+<p>Si tu expresión regular contiene la bandera "<code>g</code>", puedes usar el método <code>exec()</code> varias veces para encontrar coincidencias sucesivas en la misma cadena. Cuando lo haces, la busqueda empieza en la subcadena <code>str</code> especificada por la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} de la expresión regular ({{jsxref("RegExp.prototype.test()", "test()")}} también movera hacia adelante el indice de la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}}). Por ejemplo, asumiendo que tienes este script:</p>
 
 <pre class="brush: js">var myRe = /ab*/g;
 var str = 'abbcdefabh';
@@ -131,11 +131,11 @@ while ((myArray = myRe.exec(str)) !== null) {
 Se ha encontrado ab. La siguiente coincidencia empieza en el indice 9
 </pre>
 
-<p>Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.</p>
+<p>Nota: No uses la expresión regular literalmente (o el constructor {{jsxref("RegExp")}}) dentro de la condición del bucle while o se creará un bucle infinito si hay una coincidencia, por culpa de que la propiedad {{jsxref("RegExp.lastIndex", "lastIndex")}} va a ser reiniciada por cada iteración del bucle. Además asegurate de que has usado la bandera de busqueda global "g" o se creará un bucle también.</p>
 
-<h3 id="Usando_exec()_con_RegExp_literales">Usando <code>exec()</code> con <code>RegExp</code> literales</h3>
+<h3 id="Usando_exec()_con_RegExp_literales">Usando <code>exec()</code> con <code>RegExp</code> literales</h3>
 
-<p>También se puede usar <code>exec() sin crear un objeto de </code> {{jsxref("RegExp")}}:</p>
+<p>También se puede usar <code>exec() sin crear un objeto de </code> {{jsxref("RegExp")}}:</p>
 
 <pre class="brush: js">var matches = /(hola \S+)/.exec('Esto es un hola mundo!');
 console.log(matches[1]);
@@ -160,17 +160,17 @@ console.log(matches[1]);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -51,4 +51,4 @@ public static void main(String[] args)
 
 ### `Culture générale`
 
-- {{Interwiki("wikipedia", "Signature de type#Java", "Signatures de type interne en Java")}} sur Wikipédia
+- [Signature de type](https://fr.wikipedia.org/wiki/Signature_de_type) sur Wikipédia

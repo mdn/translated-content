@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 <p>Dê uma olhada na seção <a href="#Browser_compatibility">Compatibilidade do Navegador</a> para verificar quais navegadores suportam os argumentos <code>locales</code> e <code>options</code>, e o <a href="#">Exemplo: Verificando o suporte dos argumentos <code>locales</code> e <code>options</code></a> para detecção desta característica.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento <code>locales</code> ao método <code>Number.toLocaleString()</code>. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos<a href="https://en.wikipedia.org/wiki/Arabic_numerals"> Árabe Ocidental</a>. Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ({{bug(999003)}})</p>
+<p><strong>Nota:</strong> ECMAScript Internationalization API, implementada com o Firefox 29, incluiu o argumento <code>locales</code> ao método <code>Number.toLocaleString()</code>. Se o argumento for {{jsxref("undefined")}}, este método retorna os dígitos de localização especificados pelo SO, enquanto que as versões anteriores doFirefox retornavam os dígitos<a href="https://en.wikipedia.org/wiki/Arabic_numerals"> Árabe Ocidental</a>. Esta mudança foi relatada como uma regressão que afeta a retrocompatibilidade que será corrigida em breve. ({{bug(999003)}})</p>
 </div>
 
 <div>{{page('pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parâmetros')}}</div>
@@ -46,11 +46,11 @@ console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U
 <p>Os argumentos <code>locales</code> e <code>options</code> não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:</p>
 
 <pre class="brush: js">function toLocaleStringSupportsLocales() {
-  var numero = 0;
-  try {
-     numero.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var numero = 0;
+  try {
+     numero.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -103,7 +103,7 @@ console.log(numero.toLocaleString(['ban', 'id']));
 
 // informando um formato de moeda
 console.log(numero.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // o yen japonês não tem uma unidade menor
 console.log(numero.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
@@ -135,32 +135,32 @@ console.log(numero.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int 1.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

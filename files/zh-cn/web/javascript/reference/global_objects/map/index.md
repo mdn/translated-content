@@ -13,25 +13,25 @@ browser-compat: javascript.builtins.Map
 ---
 {{JSRef}}
 
-**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
+**`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "基本类型")}}）都可以作为一个键或一个值。
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
 ## 描述
 
-一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
+一个 `Map` 对象在迭代时会根据对象中元素的插入顺序来进行——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key，value]` 的数组。
 
 ### 键的相等
 
 - 键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法。
-- {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
+- {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其它的值是根据 `===` 运算符的结果判断是否相等。
 - 在目前的 ECMAScript 规范中，`-0` 和 `+0` 被认为是相等的，尽管这在早期的草案中并不是这样。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“Value equality for -0 and 0”。
 
 ### Objects 和 maps 的比较
 
-{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。
+{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。
 
-不过 `Map` 和 `Object` 有一些重要的区别，在下列情况中使用 `Map` 会是更好的选择：
+不过 `Map` 和 `Object` 有一些重要的区别，在下列情况中使用 `Map` 会是更好的选择：
 
 <table class="standard-table">
   <thead>
@@ -218,7 +218,7 @@ console.log(contacts.size) // 1
 
 ## 示例
 
-### 使用 Map 对象
+### 使用 Map 对象
 
 ```js
 const myMap = new Map();
@@ -235,17 +235,17 @@ myMap.set(keyFunc, "和键 keyFunc 关联的值");
 myMap.size; // 3
 
 // 读取值
-myMap.get(keyString);    // "和键'a string'关联的值"
-myMap.get(keyObj);       // "和键 keyObj 关联的值"
-myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
+myMap.get(keyString);    // "和键'a string'关联的值"
+myMap.get(keyObj);       // "和键 keyObj 关联的值"
+myMap.get(keyFunc);      // "和键 keyFunc 关联的值"
 
-myMap.get('a string');   // "和键'a string'关联的值"
-                         // 因为 keyString === 'a string'
-myMap.get({});           // undefined，因为 keyObj !== {}
+myMap.get('a string');   // "和键'a string'关联的值"
+                         // 因为 keyString === 'a string'
+myMap.get({});           // undefined，因为 keyObj !== {}
 myMap.get(function() {}); // undefined，因为 keyFunc !== function () {}
 ```
 
-### 将 NaN 作为 Map 的键
+### 将 NaN 作为 Map 的键
 
 `NaN` 也可以作为 `Map` 对象的键。虽然 `NaN` 与任何值甚至与自己都不相等（`NaN !== NaN` 返回 true），但是因为所有的 `NaN` 的值都是无法区分的，所以下面的例子成立：
 
@@ -261,7 +261,7 @@ myMap.get(otherNaN)
 // "not a number"
 ```
 
-### 使用 for..of 方法迭代 Map
+### 使用 for..of 方法迭代 Map
 
 `Map` 可以使用 `for..of` 循环来实现迭代：
 
@@ -295,7 +295,7 @@ for (const [key, value] of myMap.entries()) {
 // 1 = one
 ```
 
-### 使用 forEach() 方法迭代 Map
+### 使用 forEach() 方法迭代 Map
 
 `Map` 也可以通过 {{jsxref("Map.prototype.forEach", "forEach()")}} 方法迭代：
 
@@ -327,7 +327,7 @@ console.log([...myMap]);
 console.log(Array.from(myMap.keys())); // 输出 ["key1", "key2"]
 ```
 
-### 复制或合并 Maps
+### 复制或合并 Maps
 
 `Map` 能像数组一样被复制：
 

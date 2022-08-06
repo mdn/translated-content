@@ -9,7 +9,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
-<p>Пример выше показывает, как элемент <code>&lt;fieldset&gt;</code> группирует части HTML-формы, а вложенный элемент {{htmlelement("legend")}} даёт заголовок для <code>&lt;fieldset&gt;</code>. Он может иметь несколько атрибутов, самый используемый из них <code>form</code>, который содержит <code>id</code> формы {{htmlelement("form")}} на этой же странице. Этот атрибут позволяет сделать <code>&lt;fieldset&gt;</code> частью формы <code>&lt;form&gt;</code> даже если он не находится внутри неё. Также вы можете отключить <code>&lt;fieldset&gt;</code> и всё его содержимое с помощью атрибута <code>disabled</code>.</p>
+<p>Пример выше показывает, как элемент <code>&lt;fieldset&gt;</code> группирует части HTML-формы, а вложенный элемент {{htmlelement("legend")}} даёт заголовок для <code>&lt;fieldset&gt;</code>. Он может иметь несколько атрибутов, самый используемый из них <code>form</code>, который содержит <code>id</code> формы {{htmlelement("form")}} на этой же странице. Этот атрибут позволяет сделать <code>&lt;fieldset&gt;</code> частью формы <code>&lt;form&gt;</code> даже если он не находится внутри неё. Также вы можете отключить <code>&lt;fieldset&gt;</code> и всё его содержимое с помощью атрибута <code>disabled</code>.</p>
 
 <h2 id="Атрибуты">Атрибуты</h2>
 
@@ -17,20 +17,20 @@ translation_of: Web/HTML/Element/fieldset
 
 <dl>
  <dt>{{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Если этот логический атрибут установлен, все элементы управления формой, вложенные в <code>&lt;fieldset&gt;</code> будут отключены. Это значит, что их нельзя изменять, но можно отправить через форму <code>&lt;form&gt;</code>, в отличие от атрибута {{htmlattrdef("disabled")}} на элементах управления формой. Они не будут реагировать на браузерные события, такие как клики мышью или события focus. По умолчанию, браузер отображает такие элементы управления в сером цвете. Обратите внимание, что элементы формы внутри элемента {{HTMLElement("legend")}} не будут отключены.</dd>
+ <dd>Если этот логический атрибут установлен, все элементы управления формой, вложенные в <code>&lt;fieldset&gt;</code> будут отключены. Это значит, что их нельзя изменять, но можно отправить через форму <code>&lt;form&gt;</code>, в отличие от атрибута {{htmlattrdef("disabled")}} на элементах управления формой. Они не будут реагировать на браузерные события, такие как клики мышью или события focus. По умолчанию, браузер отображает такие элементы управления в сером цвете. Обратите внимание, что элементы формы внутри элемента {{HTMLElement("legend")}} не будут отключены.</dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Этот атрибут принимает значение атрибута <code>id</code> элемента {{HTMLElement("form")}}, с которой вам нужно связать <code>&lt;fieldset&gt;</code>, даже если он находится вне формы.</dd>
+ <dd>Этот атрибут принимает значение атрибута <code>id</code> элемента {{HTMLElement("form")}}, с которой вам нужно связать <code>&lt;fieldset&gt;</code>, даже если он находится вне формы.</dd>
  <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Имя, связанное с группой.
- <div class="note"><strong>Примечание</strong>: Заголовок для &lt;fieldset&gt; устанавливается первым {{HTMLElement("legend")}} внутри него.</div>
+ <div class="note"><strong>Примечание</strong>: Заголовок для &lt;fieldset&gt; устанавливается первым {{HTMLElement("legend")}} внутри него.</div>
  </dd>
 </dl>
 
 <h2 id="Стилизация_с_CSS">Стилизация с CSS</h2>
 
-<p>Есть несколько особенностей стилизации <code>&lt;fieldset&gt;</code>. </p>
+<p>Есть несколько особенностей стилизации <code>&lt;fieldset&gt;</code>. </p>
 
-<p>По умолчанию, значение свойства {{cssxref("display")}} равняется <code>block</code>, что создаёт блочный контекст форматирования. Если установить значение <code>display</code> как inline-элементу <code>&lt;fieldset&gt;</code>, это будет работать как <code>inline-block</code>, в ином случае, это будет работать как <code>block</code>. По умолчанию, имеется border 2px groobe вокруг содержимого и небольшой внутренний отступ. Элемент имеет <code>min-inline-size: min-content</code> по умолчанию.</p>
+<p>По умолчанию, значение свойства {{cssxref("display")}} равняется <code>block</code>, что создаёт блочный контекст форматирования. Если установить значение <code>display</code> как inline-элементу <code>&lt;fieldset&gt;</code>, это будет работать как <code>inline-block</code>, в ином случае, это будет работать как <code>block</code>. По умолчанию, имеется border 2px groobe вокруг содержимого и небольшой внутренний отступ. Элемент имеет <code>min-inline-size: min-content</code> по умолчанию.</p>
 
 <p>Если задан &lt;legend&gt;, он будет помещён поверх верхней границы. &lt;legend&gt; сжимается и переносится, также имеет свой контекст форматирования. Значение <code>display</code> блочное (например, <code>display: inline</code> работает как <code>block</code>).</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <h3 id="Простой_fieldset">Простой fieldset</h3>
 
-<p>Этот пример показывает простой <code>&lt;fieldset&gt;</code> с <code>&lt;legend&gt;</code> и единственным элементом управления внутри.</p>
+<p>Этот пример показывает простой <code>&lt;fieldset&gt;</code> с <code>&lt;legend&gt;</code> и единственным элементом управления внутри.</p>
 
 <pre class="brush: html">&lt;form action="#"&gt;
   &lt;fieldset&gt;
@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/fieldset
 
 <h3 id="Отключённый_fieldset">Отключённый fieldset</h3>
 
-<p>Этот пример показывает отключённый <code>&lt;fieldset&gt;</code> с двумя элементами управления внутри.</p>
+<p>Этот пример показывает отключённый <code>&lt;fieldset&gt;</code> с двумя элементами управления внутри.</p>
 
 <pre class="brush: html">&lt;form action="#"&gt;
   &lt;fieldset disabled&gt;
@@ -101,7 +101,7 @@ translation_of: Web/HTML/Element/fieldset
    <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
   </tr>
   <tr>
-   <th scope="row">Взаимодействие с DOM </th>
+   <th scope="row">Взаимодействие с DOM </th>
    <td>{{domxref("HTMLFieldSetElement")}}</td>
   </tr>
  </tbody>

@@ -31,7 +31,7 @@ referenceStr.localeCompare(compareString, locales, options)
 
 - `compareString`
   - : この文字列と比較される文字列です。
-- `locales` および `options`
+- `locales` および `options`
 
   - : これらの引数は関数の動作をカスタマイズし、アプリケーションが使用すべき書式化の習慣を持つ言語を決めることができます。 `locales` および `options` 引数を無視する実装においては、使用されるロケールと返却される文字列の書式は完全に実装依存となります。
 
@@ -39,23 +39,23 @@ referenceStr.localeCompare(compareString, locales, options)
 
 ### 返値
 
-`referenceStr` が `compareString` より前に出現するものである場合は**負**の数です。 `referenceStr` が `compareString` より後に出現するものである場合は**正**の数です。等しい場合は `0` です。
+`referenceStr` が `compareString` より前に出現するものである場合は**負**の数です。 `referenceStr` が `compareString` より後に出現するものである場合は**正**の数です。等しい場合は `0` です。
 
 ## 解説
 
-`referenceStr` が `compareString` より前に来るか、後に来るか、あるいは等しいかを示す整数を返します。
+`referenceStr` が `compareString` より前に来るか、後に来るか、あるいは等しいかを示す整数を返します。
 
-- `referenceStr` が `compareString` より前に出現するものである場合は負の数
-- `referenceStr` が `compareString` より後に出現するものである場合は正の数
-- 等しい場合は `0`
+- `referenceStr` が `compareString` より前に出現するものである場合は負の数
+- `referenceStr` が `compareString` より後に出現するものである場合は正の数
+- 等しい場合は `0`
 
 > **Warning:** 返値が正確な `-1` または `1` であると思わないでください。
 >
-> 結果の負の整数と正の整数は、ブラウザー間 (およびブラウザーのバージョン間) で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては `-2` や `2` を、あるいは他の負の値、正の値を返却するかもしれません。
+> 結果の負の整数と正の整数は、ブラウザー間 (およびブラウザーのバージョン間) で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては `-2` や `2` を、あるいは他の負の値、正の値を返却するかもしれません。
 
 ## 性能
 
-巨大な配列のソートなど大量の文字列を比較する場合は {{jsxref("Global_Objects/Collator", "Intl.Collator")}} オブジェクトを作成し、 {{jsxref("Collator.prototype.compare", "compare")}} プロパティで提供される関数を使うことをお勧めします。
+巨大な配列のソートなど大量の文字列を比較する場合は {{jsxref("Global_Objects/Collator", "Intl.Collator")}} オブジェクトを作成し、 {{jsxref("Collator.prototype.compare", "compare")}} プロパティで提供される関数を使うことをお勧めします。
 
 ## 例
 
@@ -74,7 +74,7 @@ referenceStr.localeCompare(compareString, locales, options)
 
 ### 配列の並べ替え
 
-`localeCompare()` で、大文字小文字の違いを無視した配列の並べ替えができます。
+`localeCompare()` で、大文字小文字の違いを無視した配列の並べ替えができます。
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
@@ -84,7 +84,7 @@ items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
 
 ### 拡張引数をブラウザーが対応しているか調べる
 
-`locales` と `options` の引数は、まだすべてのブラウザーで対応しているわけではありません。
+`locales` と `options` の引数は、まだすべてのブラウザーで対応しているわけではありません。
 
 実装がこれらに対応しているか調べるには、引数 `"i"` (不正な言語タグが除外される要件) を使用して、例外 {{jsxref("RangeError")}} を調べてください。
 

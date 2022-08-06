@@ -38,7 +38,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <p><strong>Note</strong>: <a href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/">Make the web work for everyone</a> provides more useful perspective on the different browsers people use, their market share, and related cross browser compatibility issues.</p>
 </div>
 
-<p>We should explain a few bits of terminology here. To start with, when we talk about sites "working cross browser", we are really saying that they should provide an acceptable user experience across different browsers. It is potentially OK for a site to not deliver the exact same experience on all browsers, as long as the core functionality is accessible in some way. On modern browsers you might get something animated, 3D and shiny, whereas on older browsers you might just get a flat graphic representing the same information. As long as the site owner is happy with this, then you have done your job.</p>
+<p>We should explain a few bits of terminology here. To start with, when we talk about sites "working cross browser", we are really saying that they should provide an acceptable user experience across different browsers. It is potentially OK for a site to not deliver the exact same experience on all browsers, as long as the core functionality is accessible in some way. On modern browsers you might get something animated, 3D and shiny, whereas on older browsers you might just get a flat graphic representing the same information. As long as the site owner is happy with this, then you have done your job.</p>
 
 <p>On the other hand, it is not OK for a site to work fine for sighted users, but be completely inaccessible for visually impaired users because their screen reader application can't read any of the information stored on it.</p>
 
@@ -50,7 +50,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <h2 id="Why_do_cross_browser_issues_occur">Why do cross browser issues occur?</h2>
 
-<p>There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> from previous topics to refresh your memory if needed).</p>
+<p>There are many different reasons why cross browser issues occur, and note that here we are talking about issues where things behave different across different browsers / devices / browsing preferences. Before you even get to cross browser issues, you should have already fixed out bugs in your code (see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a>, <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a>, and <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a> from previous topics to refresh your memory if needed).</p>
 
 <p>Cross browser issues commonly occur because:</p>
 
@@ -84,7 +84,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>So for example, you might be building an e-commerce site that serves customers in North America. the site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, IE/Edge, and Safari. It should also provide an acceptable experience on IE 8 and 9, and be accessible with WCAG AA compliance.</p>
 
-<p>Now you know your target testing platforms, you should go back and review the required featureset and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.</p>
+<p>Now you know your target testing platforms, you should go back and review the required featureset and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.</p>
 
 <p>You should compile a list of the potential problem areas.</p>
 
@@ -128,7 +128,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
  <li>Also do tests in any other browsers you have included inside your target list.</li>
 </ul>
 
-<p>The most low fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a  team). You should try to test it on real physical devices where possible.</p>
+<p>The most low fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a  team). You should try to test it on real physical devices where possible.</p>
 
 <p>If you haven't got the means to test all those different browser, operating system, and device combinations on physical hardware, you can also make use of emulators (emulate a device using software on your desktop computer) and virtual machines (software that allows you to emulate multiple operating system/software combinations on your desktop computer). This is a very popular choice, especially in some circumstances — for example, Windows doesn't let you have multiple versions of Windows installed simulataneously on the same machine, so using multiple virtual machines is often the only option here.</p>
 

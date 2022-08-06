@@ -5,22 +5,22 @@ translation_of: Web/CSS/ident
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary"><strong><code>&lt;ident&gt;</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a> は、 {{glossary("identifier")}} として使用される任意の文字列を意味します。</span></p>
+<p><span class="seoSummary"><strong><code>&lt;ident&gt;</code></strong> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/CSS_Types">データ型</a> は、 {{glossary("identifier")}} として使用される任意の文字列を意味します。</span></p>
 
 <h2 id="構文">構文</h2>
 
-<p><code>&lt;custom-ident&gt;</code> の構文は CSS の識別子 (プロパティ名など)に似ていますが、 <a class="external" href="http://en.wikipedia.org/wiki/Case_sensitivity">大文字と小文字の区別</a> がある点が違います。 これは次の文字から成る文字の並びです:</p>
+<p><code>&lt;custom-ident&gt;</code> の構文は CSS の識別子 (プロパティ名など)に似ていますが、 <a class="external" href="http://en.wikipedia.org/wiki/Case_sensitivity">大文字と小文字の区別</a> がある点が違います。 これは次の文字から成る文字の並びです:</p>
 
 <ul>
- <li>アルファベット (<code>A</code> - <code>Z</code> と <code>a</code> - <code>z</code>)</li>
- <li>数字 (<code>0</code> - <code>9</code>)</li>
+ <li>アルファベット (<code>A</code> - <code>Z</code> と <code>a</code> - <code>z</code>)</li>
+ <li>数字 (<code>0</code> - <code>9</code>)</li>
  <li>ハイフン (<code>-</code>)</li>
  <li>アンダースコア (<code>_</code>)</li>
- <li>エスケープ文字 (バックスラッシュ <code>\</code> に続く)</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Unicode">Unicode</a> 文字 (バックスラッシュ <code>\</code> と、それに続く 1-6 個の16進数を形式をとる、Unicode コードポイント)</li>
+ <li>エスケープ文字 (バックスラッシュ <code>\</code> に続く)</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Unicode">Unicode</a> 文字 (バックスラッシュ <code>\</code> と、それに続く 1-6 個の16進数を形式をとる、Unicode コードポイント)</li>
 </ul>
 
-<p><a class="external" href="http://en.wikipedia.org/wiki/Case_sensitivity">大文字と小文字の区別</a> があるため <code>id1</code>、 <code>Id1</code>、 <code>iD1</code> そして <code>ID1</code> は全て異なる識別子である点に注意してください。しかし、文字をエスケープする方法はいくつか存在するため、 <code>toto\?</code> と <code>toto\3F</code> は同じ識別子です。</p>
+<p><a class="external" href="http://en.wikipedia.org/wiki/Case_sensitivity">大文字と小文字の区別</a> があるため <code>id1</code>、 <code>Id1</code>、 <code>iD1</code> そして <code>ID1</code> は全て異なる識別子である点に注意してください。しかし、文字をエスケープする方法はいくつか存在するため、 <code>toto\?</code> と <code>toto\3F</code> は同じ識別子です。</p>
 
 <h2 id="例">例</h2>
 
@@ -75,5 +75,5 @@ bili.bob	アルファベット、 _、 - のみをエスケープする必要は
 <h2 id="関連情報">関連情報</h2>
 
 <ul>
- <li>{{CSSxRef("&lt;custom-ident&gt;")}} – CSS全体のキーワードを除く <code>&lt;ident&gt;</code> 値の制限されたサブセット、 {{CSSxRef("--*", "custom properties")}} 及びその他のプロパティ値。</li>
+ <li>{{CSSxRef("&lt;custom-ident&gt;")}} – CSS全体のキーワードを除く <code>&lt;ident&gt;</code> 値の制限されたサブセット、 {{CSSxRef("--*", "custom properties")}} 及びその他のプロパティ値。</li>
 </ul>

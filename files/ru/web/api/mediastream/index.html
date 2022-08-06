@@ -13,9 +13,9 @@ translation_of: Web/API/MediaStream
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary">Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</span></p>
+<p><span class="seoSummary">Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</span></p>
 
-<p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.</p>
+<p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
@@ -33,9 +33,9 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.active")}} {{readonlyinline}}</dt>
- <dd>Возвращает <code>true</code>, если <code>MediaStream</code> активен, иначе <code>false</code>.</dd>
- <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}</dt>
- <dd>Возвращает <code style="font-size: 14px;">true</code>, если достигнут конец потока. Это свойство удалено из спецификации; следует проверять свойство {{domxref("MediaStreamTrack.readyState")}}, которое имеет значение <code>"ended"</code> у завершённых треков.</dd>
+ <dd>Возвращает <code>true</code>, если <code>MediaStream</code> активен, иначе <code>false</code>.</dd>
+ <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}</dt>
+ <dd>Возвращает <code style="font-size: 14px;">true</code>, если достигнут конец потока. Это свойство удалено из спецификации; следует проверять свойство {{domxref("MediaStreamTrack.readyState")}}, которое имеет значение <code>"ended"</code> у завершённых треков.</dd>
 </dl>
 
 <dl>
@@ -47,56 +47,56 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.</dd>
+ <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("addtrack")}} при добавлении нового объекта {{domxref("MediaStreamTrack")}}.</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта  {{domxref("MediaStreamTrack")}}.</dd>
+ <dd>Объект {{event("Event_handlers", "event handler")}}, содержащий действие, которое должно выполняться, когда случается событие {{event("removetrack")}} при удалении объекта  {{domxref("MediaStreamTrack")}}.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
-<p><em>Этот интерфейс наследует методы своего родителя, </em><em>{{domxref("EventTarget")}}.</em></p>
+<p><em>Этот интерфейс наследует методы своего родителя, </em><em>{{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>Сохраняет копию данного объекта {{domxref("MediaStreamTrack")}}. Если данный трек добавлялся в <code>MediaStream</code> ранее, ничего не происходит.</dd>
+ <dd>Сохраняет копию данного объекта {{domxref("MediaStreamTrack")}}. Если данный трек добавлялся в <code>MediaStream</code> ранее, ничего не происходит.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.clone()")}}</dt>
- <dd>Возвращает точную копию объекта <code>MediaStream</code>. Исключение составляет значение {{domxref("MediaStream.id", "id")}}, которое изменится на новое уникальное.</dd>
+ <dd>Возвращает точную копию объекта <code>MediaStream</code>. Исключение составляет значение {{domxref("MediaStream.id", "id")}}, которое изменится на новое уникальное.</dd>
 </dl>
 
 <dl>
  <dt><span style="line-height: 1.572;">{{domxref("MediaStream.getAudioTracks()")}}</span></dt>
- <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"audio"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
+ <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"audio"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
- <dd>Возвращает трек с <code style="font-size: 14px;">trackid</code> соответствующем данному. Если в метод не передано аргументов или трека с данным ID нет, возвращает <code>null</code>. Если несколько треков имеют одинаковый ID, возвращает первый из них.</dd>
+ <dd>Возвращает трек с <code style="font-size: 14px;">trackid</code> соответствующем данному. Если в метод не передано аргументов или трека с данным ID нет, возвращает <code>null</code>. Если несколько треков имеют одинаковый ID, возвращает первый из них.</dd>
  <dt>{{domxref("MediaStream.getTracks()")}}</dt>
- <dd>Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте <code>MediaStream</code>, вне зависимости от значения их свойства <code>kind</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
+ <dd>Возвращает список всех объектов {{domxref("MediaStreamTrack")}}, сохранённых в объекте <code>MediaStream</code>, вне зависимости от значения их свойства <code>kind</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"video"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
+ <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"video"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
 </dl>
 
 <dl>
  <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>Удаляет данный объект {{domxref("MediaStreamTrack")}}. Если данный трек не сохранён в объекте <code style="font-size: 14px;">MediaStream</code>, ничего не происходит.</dd>
+ <dd>Удаляет данный объект {{domxref("MediaStreamTrack")}}. Если данный трек не сохранён в объекте <code style="font-size: 14px;">MediaStream</code>, ничего не происходит.</dd>
 </dl>
 
 <h2 id="События">События</h2>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack</a></code></dt>
- <dd>Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.<br>
- Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onaddtrack">onaddtrack</a></code>.</dd>
+ <dd>Вызывается при добавлении нового объекта {{domxref("MediaStreamTrack")}}.<br>
+ Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onaddtrack">onaddtrack</a></code>.</dd>
  <dt><code><a href="/en-US/docs/Web/API/MediaStream/removetrack_event">removetrack</a></code></dt>
  <dd>Вызывается при удалении объекта {{domxref("MediaStreamTrack")}}.<br>
- Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onremovetrack">onremovetrack</a></code>.</dd>
+ Также доступно как свойство <code><a href="/en-US/docs/Web/API/MediaStream/onremovetrack">onremovetrack</a></code>.</dd>
 </dl>
 
 <h2 id="Спецификации">Спецификации</h2>

@@ -64,16 +64,16 @@ let rayMode = xrInputSource.targetRayMode;
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (let source of session.getInputSources()) {
+    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
-    if (targetRayPose) {
-      if (source.targetRayMode == "tracked-pointer") {
-        myRenderTargetRayAsBeam(targetRayPose);
-      }
-    }
+    if (targetRayPose) {
+      if (source.targetRayMode == "tracked-pointer") {
+        myRenderTargetRayAsBeam(targetRayPose);
+      }
+    }
 
-    /* ... */
+    /* ... */
   }
 }
 ```

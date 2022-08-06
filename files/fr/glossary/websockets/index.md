@@ -20,7 +20,7 @@ Toute application cliente ou serveur peut utiliser WebSocket, mais plus particul
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Websocket")}} sur Wikipédia
+- [WebSocket](https://fr.wikipedia.org/wiki/WebSocket) sur Wikipédia
 
 ### Référence technique
 

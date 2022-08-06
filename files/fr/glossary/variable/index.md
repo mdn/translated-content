@@ -16,7 +16,7 @@ Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "v
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Variable (informatique)")}} sur Wikipédia
+- [Variable](https://fr.wikipedia.org/wiki/Variable_(informatique)) sur Wikipédia
 
 ### Référence technique
 

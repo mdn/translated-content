@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Keep-Alive
 <p>El encabezado <code><strong>Keep-Alive</strong></code> permite al remitente indicar como será la forma de conexión, se puede establecer un tiempo de espera y una cantidad máxima de solicitudes.</p>
 
 <div class="note">
-<p>El encabezado  {{HTTPHeader("Connection")}} se tiene que establecer en  "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en  HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.</p>
+<p>El encabezado  {{HTTPHeader("Connection")}} se tiene que establecer en  "keep-alive" para que este encabezado tenga sentido. Además, {{HTTPHeader("Connection")}} y {{HTTPHeader("Keep-Alive")}} son ignorados en  HTTP/2; la administración de la conexión se realiza mediante otros mecanismos.</p>
 </div>
 
 <table class="properties">
@@ -39,8 +39,8 @@ translation_of: Web/HTTP/Headers/Keep-Alive
  <dt><em>parámetros</em></dt>
  <dd>Lista de parámetros separados por coma, cada uno consiste en un identificador y un valor separado por el signo igual (<code>'='</code>). Es posible establecer los siguientes identificadores:
  <ul>
-  <li><code>timeout</code>: indica la cantidad de  tiempo <em>mínima  </em>en la cual una conexión ociosa se debe mantener abierta (en segundos). Nótese que los <em>timeouts</em> mas largos que el <em>timeout</em> de TCP pueden ser ignorados si no se establece un mensaje de<em> TCP keep-alive</em>  en la capa de transporte.</li>
-  <li><code>max</code>: indica el número máximo de peticiones que pueden ser enviadas en esta conexión antes de que sea cerrada. Si es  <code>0</code>, este valor es ignorado para las conexiones no segmentadas, ya que se enviara otra solicitud en la próxima respuesta. Una canalización de HTTP puede ser usada para limitar la división.</li>
+  <li><code>timeout</code>: indica la cantidad de  tiempo <em>mínima  </em>en la cual una conexión ociosa se debe mantener abierta (en segundos). Nótese que los <em>timeouts</em> mas largos que el <em>timeout</em> de TCP pueden ser ignorados si no se establece un mensaje de<em> TCP keep-alive</em>  en la capa de transporte.</li>
+  <li><code>max</code>: indica el número máximo de peticiones que pueden ser enviadas en esta conexión antes de que sea cerrada. Si es  <code>0</code>, este valor es ignorado para las conexiones no segmentadas, ya que se enviara otra solicitud en la próxima respuesta. Una canalización de HTTP puede ser usada para limitar la división.</li>
  </ul>
  </dd>
 </dl>

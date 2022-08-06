@@ -10,9 +10,9 @@ translation_of: Web/API/Document/write
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p>O método <strong><code>Document.write()</code></strong> grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.</p>
+<p>O método <strong><code>Document.write()</code></strong> grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.</p>
 
-<div class="note"><strong>Nota</strong>: à medida que <code>document.write</code> grava no <strong>fluxo</strong> de documentos, chamando <code>document.write</code> em um documento fechado (carregado) invoca automaticamente <code>document.open</code>, <a href="/en-US/docs/Web/API/document.open#Notes">que limpará o documento</a>.</div>
+<div class="note"><strong>Nota</strong>: à medida que <code>document.write</code> grava no <strong>fluxo</strong> de documentos, chamando <code>document.write</code> em um documento fechado (carregado) invoca automaticamente <code>document.open</code>, <a href="/en-US/docs/Web/API/document.open#Notes">que limpará o documento</a>.</div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/write
 
 <dl>
  <dt><var>markup</var></dt>
- <dd>Uma string contendo o texto a ser gravado no documento.</dd>
+ <dd>Uma string contendo o texto a ser gravado no documento.</dd>
 </dl>
 
 <h3 id="Exemplo">Exemplo</h3>
@@ -53,22 +53,22 @@ translation_of: Web/API/Document/write
 
 <h2 id="Notas">Notas</h2>
 
-<p>Escrevendo em um documento que já foi carregado sem chamar {{domxref("document.open()")}} automaticamente vai chamar <code>document.open</code>. Ao términno da escrita, é recomendável chamar {{domxref("document.close()")}} para dizer ao navegador para encerrar o carregamento da página. O texto que você escreve é analisado no modelo de estrutura do documento. No exemplo acima, o elemento <code>h1</code> se torna um nó (node) no documento.</p>
+<p>Escrevendo em um documento que já foi carregado sem chamar {{domxref("document.open()")}} automaticamente vai chamar <code>document.open</code>. Ao términno da escrita, é recomendável chamar {{domxref("document.close()")}} para dizer ao navegador para encerrar o carregamento da página. O texto que você escreve é analisado no modelo de estrutura do documento. No exemplo acima, o elemento <code>h1</code> se torna um nó (node) no documento.</p>
 
-<p>Se chamar <code>document.write()</code> incorporada em uma tag HTML <code>&lt;script&gt;</code> embutida, então <code>document.open()</code> não será chamada. Por exemplo:</p>
+<p>Se chamar <code>document.write()</code> incorporada em uma tag HTML <code>&lt;script&gt;</code> embutida, então <code>document.open()</code> não será chamada. Por exemplo:</p>
 
 <pre class="brush: html notranslate">&lt;script&gt;
   document.write("&lt;h1&gt;Título principal&lt;/h1&gt;")
 &lt;/script&gt;
 </pre>
 
-<div class="note"><strong>Nota</strong>: <code>document.write</code> e {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">não funcionam em documentos XHTML</a> (você receberá o erro "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. Mais informações disponíveis em <a class="external" href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</div>
+<div class="note"><strong>Nota</strong>: <code>document.write</code> e {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">não funcionam em documentos XHTML</a> (você receberá o erro "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] no console de erros). Isso acontece ao abrir um arquivo local com a extensão .xhtml ou em qualquer documento exibido com um MIME type <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. Mais informações disponíveis em <a class="external" href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</div>
 
-<div class="note"><strong>Nota</strong>: <code>document.write</code> em <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> ou <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts será ignorado, e você receberá uma mensagem como "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" no console de erros.</div>
+<div class="note"><strong>Nota</strong>: <code>document.write</code> em <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> ou <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts será ignorado, e você receberá uma mensagem como "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" no console de erros.</div>
 
-<div class="note"><strong>Nota</strong>: Somente no Edge, chamando <code>document.write</code> mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".</div>
+<div class="note"><strong>Nota</strong>: Somente no Edge, chamando <code>document.write</code> mais de uma vez em {{HTMLElement("iframe")}} causa o erro "SCRIPT70: Permission denied".</div>
 
-<div class="note"><strong>Nota</strong>: A partir de 55, Chrome não executará elementos <code>&lt;script&gt;</code> injetados via <code>document.write()</code> caso haja falta de cache HTTP para usuários em uma conexão 2G. Há <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">uma lista de condições </a>que precisam ser atendidas para que isso seja verdade.</div>
+<div class="note"><strong>Nota</strong>: A partir de 55, Chrome não executará elementos <code>&lt;script&gt;</code> injetados via <code>document.write()</code> caso haja falta de cache HTTP para usuários em uma conexão 2G. Há <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">uma lista de condições </a>que precisam ser atendidas para que isso seja verdade.</div>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -98,7 +98,7 @@ translation_of: Web/API/Document/write
 
 <div>{{Compat("api.Document.write")}}</div>
 
-<h2 id="Veja_também">Veja também</h2>
+<h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li>{{domxref("element.innerHTML")}}</li>

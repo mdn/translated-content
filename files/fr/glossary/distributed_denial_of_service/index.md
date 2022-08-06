@@ -32,4 +32,4 @@ L'équipe de préparation aux urgences informatiques des États-Unis (US-CERT) d
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Attaque_par_déni_de_service", "Attaque par déni de service")}} sur Wikipedia
+- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_d%C3%A9ni_de_service) sur Wikipédia

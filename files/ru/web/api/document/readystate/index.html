@@ -9,9 +9,9 @@ translation_of: Web/API/Document/readyState
 <div>
 <p>{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}</p>
 
-<p>Свойство<strong> <code>Document.readyState</code></strong> описывает состояние загрузки {{domxref("document")}}.</p>
+<p>Свойство<strong> <code>Document.readyState</code></strong> описывает состояние загрузки {{domxref("document")}}.</p>
 
-<p>Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.</p>
+<p>Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -20,18 +20,18 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Значения">Значения</h3>
 
-<p>Свойство <strong>readyState</strong> объекта document может иметь одно из следующих значений:</p>
+<p>Свойство <strong>readyState</strong> объекта document может иметь одно из следующих значений:</p>
 
 <dl>
  <dt><code>loading</code></dt>
  <dd>Страница все ещё загружается.</dd>
  <dt><code>interactive</code></dt>
- <dd>Страница уже загружена и <a href="/en-US/docs/Glossary/DOM">DOM</a> дерево построено, но дополнительные ресурсы, такие как изображения и <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, все ещё загружаются.</dd>
+ <dd>Страница уже загружена и <a href="/en-US/docs/Glossary/DOM">DOM</a> дерево построено, но дополнительные ресурсы, такие как изображения и <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, все ещё загружаются.</dd>
  <dt><code>complete</code></dt>
- <dd>Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.</dd>
+ <dd>Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.</dd>
 </dl>
 
-<p>При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.</p>
+<p>При изменении значения, данного свойства, вызывается событие {{event("readystatechange")}} на объекте {{ domxref("document") }}.</p>
 
 <h2 id="Примеры"><span>Примеры</span></h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/Document/readyState
     // Страница все ещё загружается
     break;
   case "interactive":
-    // Страница уже загружена. Теперь мы можем получить доступ к DOM объектам.
+    // Страница уже загружена. Теперь мы можем получить доступ к DOM объектам.
     var span = document.createElement("span");
     span.textContent = "A &lt;span&gt; element.";
     document.body.appendChild(span);

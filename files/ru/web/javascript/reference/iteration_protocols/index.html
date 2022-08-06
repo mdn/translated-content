@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 <div>{{jsSidebar("More")}}</div>
 </div>
 
-<p>Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.</p>
+<p>Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.</p>
 
 <h2 id="Протоколы_перебора">Протоколы перебора</h2>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 
 <h3 id="Протокол_Итератор">Протокол "Итератор"</h3>
 
-<p>Протокол "<strong>Итератор</strong>" определяет стандартный способ получения последовательности значений  (конечной или бесконечной).</p>
+<p>Протокол "<strong>Итератор</strong>" определяет стандартный способ получения последовательности значений  (конечной или бесконечной).</p>
 
 <p>Объект является итератором, если в нем определён метод <strong>next()</strong> , реализующий следующую логику:</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
 <pre class="brush: js">var someArray = [1, 5, 7];
 var someArrayEntries = someArray.entries();
 
-someArrayEntries.toString();           // "[object Array Iterator]"
+someArrayEntries.toString();           // "[object Array Iterator]"
 someArrayEntries === someArrayEntries[Symbol.iterator]();    // true
 </pre>
 
@@ -96,11 +96,11 @@ iterator.next()                              // { value: "h", done: false }
 iterator.next()                              // { value: "i", done: false }
 iterator.next()                              // { value: undefined, done: true }</pre>
 
-<p>Некоторые встроенные конструкции языка, например, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>, используют в своей внутренней реализации тот же протокол итерации:</p>
+<p>Некоторые встроенные конструкции языка, например, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>, используют в своей внутренней реализации тот же протокол итерации:</p>
 
 <pre class="brush: js">[...someString]                              // ["h", "i"]</pre>
 
-<p>Поведение итератора можно переопределить применив собственный <code>@@iterator</code>:</p>
+<p>Поведение итератора можно переопределить применив собственный <code>@@iterator</code>:</p>
 
 <pre class="brush: js">var someString = new String("hi");          // need to construct a String object explicitly to avoid auto-boxing
 
@@ -125,9 +125,9 @@ someString[Symbol.iterator] = function() {
 someString + ""                              // "hi"
 </pre>
 
-<h2 id="Встроенная_итерируемость">Встроенная итерируемость</h2>
+<h2 id="Встроенная_итерируемость">Встроенная итерируемость</h2>
 
-<p>{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат <code>@@</code><code>iterator</code> метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода <code>@@</code><code>iterator</code></p>
+<p>{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат <code>@@</code><code>iterator</code> метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода <code>@@</code><code>iterator</code></p>
 
 <h2 id="Итерируемость_определённая_пользователем">Итерируемость определённая пользователем</h2>
 
@@ -160,9 +160,9 @@ new WeakSet(function*() {
 
 <p>and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from", "Array.from()")}}</p>
 
-<h2 id="Синтаксис_предполагающий_итерируемость">Синтаксис предполагающий итерируемость</h2>
+<h2 id="Синтаксис_предполагающий_итерируемость">Синтаксис предполагающий итерируемость</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for-of</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a>, yield*, destructing  - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for-of</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a>, yield*, destructing  - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:</p>
 
 <pre class="brush: js">for(let value of ["a", "b", "c"]){
     console.log(value)
@@ -304,7 +304,7 @@ console.log(gen.next().value); // '2'
   <tr>
    <td>{{SpecName('ESDraft', '#sec-iteration', 'Iteration')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

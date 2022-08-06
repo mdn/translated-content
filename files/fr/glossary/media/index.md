@@ -13,4 +13,4 @@ Le terme **média** est surchargé quand on parle du Web ; il prend des signific
 
 ## Apprendre plus
 
-- {{interwiki("wikipedia", "Media")}} on Wikipedia
+- [Média](https://fr.wikipedia.org/wiki/Media) sur Wikipédia

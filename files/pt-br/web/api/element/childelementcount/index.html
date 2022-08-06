@@ -11,10 +11,10 @@ original_slug: Web/API/ParentNode/childElementCount
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>A propriedade <code><strong>ParentNode.childElementCount</strong></code>, do tipo "somente leitura" (read-only), tem como retorno um <code>unsigned long</code> que representa q quantidade de elementos filhos de um outro determinado elemento.</p>
+<p>A propriedade <code><strong>ParentNode.childElementCount</strong></code>, do tipo "somente leitura" (read-only), tem como retorno um <code>unsigned long</code> que representa q quantidade de elementos filhos de um outro determinado elemento.</p>
 
 <div class="note">
-<p>Essa propriedade foi inicialmente definida na interface pura {{domxref("ElementTraversal")}}. Como essa interface continha dois conjuntos distintos de propriedades, sendo uma destinada para {{domxref("Node")}} que tem filhos, e outra destinada para aqueles que são filhos de fato, essas propriedades foram movidas para duas interfaces puras distintas: {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. Nesse caso, <code>childElementCount</code> foi movido para {{domxref("ParentNode")}}.  Essa é uma alteração bastante técnica que não deve afetar a compatibilidade.</p>
+<p>Essa propriedade foi inicialmente definida na interface pura {{domxref("ElementTraversal")}}. Como essa interface continha dois conjuntos distintos de propriedades, sendo uma destinada para {{domxref("Node")}} que tem filhos, e outra destinada para aqueles que são filhos de fato, essas propriedades foram movidas para duas interfaces puras distintas: {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. Nesse caso, <code>childElementCount</code> foi movido para {{domxref("ParentNode")}}.  Essa é uma alteração bastante técnica que não deve afetar a compatibilidade.</p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -24,9 +24,9 @@ original_slug: Web/API/ParentNode/childElementCount
 
 <dl>
  <dt><code>count</code></dt>
- <dd>variável que recebe o valor retornado pelo método, sendo esse valor do tipo <code>unsigned long</code> (simplesmente um número inteiro).</dd>
+ <dd>variável que recebe o valor retornado pelo método, sendo esse valor do tipo <code>unsigned long</code> (simplesmente um número inteiro).</dd>
  <dt><code>node</code></dt>
- <dd>Objeto que representa {{domxref("Document")}}, {{domxref("DocumentFragment")}}, ou {{domxref("Element")}}.</dd>
+ <dd>Objeto que representa {{domxref("Document")}}, {{domxref("DocumentFragment")}}, ou {{domxref("Element")}}.</dd>
 </dl>
 
 <h2 id="Exemplo">Exemplo</h2>
@@ -37,9 +37,9 @@ if (foo.childElementCount &gt; 0) {
 }
 </pre>
 
-<h2 id="Utilizando_Polyfill_no_IE8_IE9_e_Safari">Utilizando Polyfill no IE8, IE9 e Safari</h2>
+<h2 id="Utilizando_Polyfill_no_IE8_IE9_e_Safari">Utilizando Polyfill no IE8, IE9 e Safari</h2>
 
-<p>Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou Safari, não será suportada somente por Objetos de <code>Document</code> e <code>DocumentFragment</code>.</p>
+<p>Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou Safari, não será suportada somente por Objetos de <code>Document</code> e <code>DocumentFragment</code>.</p>
 
 <pre class="brush:js">;(function(constructor) {
   if (constructor &amp;&amp;
@@ -70,14 +70,14 @@ if (foo.childElementCount &gt; 0) {
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-parentnode-childelementcount', 'ParentNode.childElementCount')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Divide a interface <code>ElementTraversal</code> entre {{domxref("ChildNode")}} e <code>ParentNode</code>. Esse método é definido ao final.<br>
+   <td>Divide a interface <code>ElementTraversal</code> entre {{domxref("ChildNode")}} e <code>ParentNode</code>. Esse método é definido ao final.<br>
     {{domxref("Document")}} e {{domxref("DocumentFragment")}} implementam essas novas interfaces.</td>
   </tr>
   <tr>
    <td>{{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}}</td>
    <td>{{Spec2('Element Traversal')}}</td>
    <td>
-    <p>Adicionada sua definição inicial à interface pura do <code>ElementTraversal</code> e use-a em {{domxref("Element")}}.</p>
+    <p>Adicionada sua definição inicial à interface pura do <code>ElementTraversal</code> e use-a em {{domxref("Element")}}.</p>
    </td>
   </tr>
  </tbody>

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 <div>{{JSRef}}</div>
 
-<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a>.</p>
+<p>Статический метод <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}</div>
 
@@ -31,15 +31,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 <h3 id="Исключения">Исключения</h3>
 
-<p>Исключение {{jsxref("TypeError")}}, если <code>target</code> не является {{jsxref("Object")}}.</p>
+<p>Исключение {{jsxref("TypeError")}}, если <code>target</code> не является {{jsxref("Object")}}.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Метод <code>Reflect.deleteProperty</code> позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> без использования строгого режима.</p>
+<p>Метод <code>Reflect.deleteProperty</code> позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> без использования строгого режима.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использования_Reflect.deleteProperty()">Использования <code>Reflect.deleteProperty()</code></h3>
+<h3 id="Использования_Reflect.deleteProperty()">Использования <code>Reflect.deleteProperty()</code></h3>
 
 <pre class="brush: js">var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, 'x'); // true

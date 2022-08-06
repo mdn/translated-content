@@ -28,7 +28,7 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 
 <h2 id="アクティブラーニング">アクティブラーニング</h2>
 
-<p><em>まだ、アクティブラーニングがありません。 <a href="/ja/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+<p><em>まだ、アクティブラーニングがありません。 <a href="/ja/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
 
 <h2 id="深く掘っていく">深く掘っていく</h2>
 
@@ -36,7 +36,7 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 
 <p>テキストの読みやすさを維持するためにバックグラウンドカラーと一緒にテキストカラーとのコントラストを良くしなければなりません。視覚的に障害をもつ人々や路上でスマートフォンを使っている人々などを助けるために余計にやさしくしなければなりません。</p>
 
-<p>{{Glossary("W3C")}}は前景と背景の間の明るさの比のアルゴリズムの計算をして良いカラーの混合を定義しました。計算はかなり複雑なように見えますが、私たち自身の仕事で信頼できるツールにできました。 </p>
+<p>{{Glossary("W3C")}}は前景と背景の間の明るさの比のアルゴリズムの計算をして良いカラーの混合を定義しました。計算はかなり複雑なように見えますが、私たち自身の仕事で信頼できるツールにできました。 </p>
 
 <p>Pacielloグループ<a href="http://www.paciellogroup.com/resources/contrastanalyser/">カラーコントラストアナライザー</a>をダウンロードしてインストールしてみましょう。</p>
 
@@ -48,7 +48,7 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 
 <p><img alt="Colour contrast on this page: excellent!" src="https://mdn.mozillademos.org/files/9671/colour-contrast.png" style="height: 575px; width: 799px;"></p>
 
-<p>テキストと背景明るさの比は 8.30:1 でそれは最小の標準を超えていて (4.5:1) 、視覚障害のある多くの人でもこのページを読めるようにすべきである。</p>
+<p>テキストと背景明るさの比は 8.30:1 でそれは最小の標準を超えていて (4.5:1) 、視覚障害のある多くの人でもこのページを読めるようにすべきである。</p>
 
 <h3 id="フォントサイズ">フォントサイズ</h3>
 
@@ -56,23 +56,23 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 
 <h4 id="絶対単位">絶対単位</h4>
 
-<p>絶対単位は比例を計算しません。しかし、サイズをストーンに設定して参照します。そうなので、話すために、そして、ピクセルで示すことが最も多いです。例えばCSSはこのように宣言されています。 </p>
+<p>絶対単位は比例を計算しません。しかし、サイズをストーンに設定して参照します。そうなので、話すために、そして、ピクセルで示すことが最も多いです。例えばCSSはこのように宣言されています。 </p>
 
 <pre>body { font-size:16px; }</pre>
 
 <p>… あなたがブラウザに言うと何かが起こるかもしれません。フォントサイズは16ピクセルにしなければなりません。モダンブラウザでは100%ズームと要素を設定した時にあなたが要求した16ピクセルのふりをすることによってこのルールを得ているかもしれません。</p>
 
-<p>もう何年間もインターネットエクスプローラーはインターネットエクスプローラー8になるあたりまで断固として16ピクセルは16ピクセルとして表示をしてきました。この場合では拡大することはなく、そしてそれはまだ周りにあることによってそのようにふるまわねばなりません。 </p>
+<p>もう何年間もインターネットエクスプローラーはインターネットエクスプローラー8になるあたりまで断固として16ピクセルは16ピクセルとして表示をしてきました。この場合では拡大することはなく、そしてそれはまだ周りにあることによってそのようにふるまわねばなりません。 </p>
 
 <h4 id="相関単位">相関単位</h4>
 
-<p><em>比例単位</em>と呼ばれているものも、相関単位は親要素に関連して計算されます。相関単位はアクセシビリティに親しみのあるもので、なぜならそれらは、ユーザーシステム上に設定され尊重されるものだからです。 </p>
+<p><em>比例単位</em>と呼ばれているものも、相関単位は親要素に関連して計算されます。相関単位はアクセシビリティに親しみのあるもので、なぜならそれらは、ユーザーシステム上に設定され尊重されるものだからです。 </p>
 
-<p>相関単位は <code>em</code> 、<code>%</code> や <code>rem</code>:で表現されます。</p>
+<p>相関単位は <code>em</code> 、<code>%</code> や <code>rem</code>:で表現されます。</p>
 
 <dl>
  <dt>Percent-based sizes: <code>%</code></dt>
- <dd>Thisこの単位は以前の要素で表現されたフォントサイズN%で示すように指示します。 もし、親がない場合、デフォルトのフォントサイズ計算による基本的なサイズがブラウザで考えられます。 (たいてい16ピクセルに同等になります。)</dd>
+ <dd>Thisこの単位は以前の要素で表現されたフォントサイズN%で示すように指示します。 もし、親がない場合、デフォルトのフォントサイズ計算による基本的なサイズがブラウザで考えられます。 (たいてい16ピクセルに同等になります。)</dd>
  <dt>Em-based sizes: <code>em</code></dt>
  <dd>This unit is calculated the same way as percents, except that you compute in portions of 1 and not portions of 100. It is said that "em" is the width of a capital “M” in the alphabet (roughly speaking, an “M” fits into a square).</dd>
  <dt>Rem-based sizes: <code>rem</code></dt>

@@ -39,7 +39,7 @@ window.onload = function() {
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "jQuery")}} sur Wikipedia
+- [jQuery](https://fr.wikipedia.org/wiki/JQuery) sur Wikipédia
 - [jQuery Official Website](https://jquery.com/)
 
 ### Apprentissage de jQuery

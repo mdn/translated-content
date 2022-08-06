@@ -289,40 +289,40 @@ HTML は次のようになります。
 ```html
 <form>
   <div class="nativeDatePicker">
-    <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday">
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">誕生日を入力してください。</p>
-  <div class="fallbackDatePicker">
-    <span>
-      <select id="year" name="year">
-      </select>
-      <label for="year">年</label>
-    </span>
-    <span>
-      <select id="month" name="month">
-        <option selected>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-      </select>
-      <label for="month">月</label>
-    </span>
-    <span>
-      <select id="day" name="day">
-      </select>
-      <label for="day">日</label>
-    </span>
-  </div>
+    <label for="bday">誕生日を入力してください。</label>
+    <input type="date" id="bday" name="bday">
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">誕生日を入力してください。</p>
+  <div class="fallbackDatePicker">
+    <span>
+      <select id="year" name="year">
+      </select>
+      <label for="year">年</label>
+    </span>
+    <span>
+      <select id="month" name="month">
+        <option selected>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+      <label for="month">月</label>
+    </span>
+    <span>
+      <select id="day" name="day">
+      </select>
+      <label for="day">日</label>
+    </span>
+  </div>
 </form>
 ```
 

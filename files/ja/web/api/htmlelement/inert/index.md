@@ -18,7 +18,7 @@ HTMLElement.inert = true | false;
 
 ### 値
 
-論理値で、その要素が不活性である場合は `true`、それ以外の場合はこの値は `false` になります。
+論理値で、その要素が不活性である場合は `true`、それ以外の場合はこの値は `false` になります。
 
 <h2 id="Example">例</h3>
 

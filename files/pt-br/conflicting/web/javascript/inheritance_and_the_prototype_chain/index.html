@@ -26,23 +26,23 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
  <li><span id="result_box" lang="pt"><span class="alt-edited hps">Uma</span><em> </em><span class="alt-edited hps"><em>instância</em>,</span> <span class="alt-edited hps">por outro</span> <span class="hps">lado, é a</span> <span class="hps">instanciação de uma classe</span><span>, ou seja,</span> <span class="hps">um dos seus membros</span><span>.</span> <span class="hps">Por exemplo</span><span>, <code>Victoria</code></span> <span class="hps">poderia ser uma</span> <span class="hps">instância da classe</span> </span><code>Employee</code><span id="result_box" lang="pt"><span>, o que representa</span> <span class="hps">um indivíduo em particular</span> <span class="hps">como um empregado.</span> <span class="hps">Uma instância</span> <span class="hps">tem exatamente</span> <span class="hps">as propriedades de</span> <span class="hps">sua classe pai</span> <span class="atn hps">(</span><span>nem mais, nem</span> <span class="hps">menos).</span></span></li>
 </ul>
 
-<p><span id="result_box" lang="pt"><span class="alt-edited hps">Uma</span> <span class="hps">linguagem baseada em</span> <span class="hps">protótipo</span><span>, como</span> <span class="hps">JavaScript,</span> <span class="hps">não faz essa</span> <span class="hps">distinção</span><span>:</span> <span class="hps">ele simplesmente tem</span> <span class="hps">objetos.</span> <span class="hps">Uma</span> <span class="hps">linguagem baseada em</span> <span class="hps">protótipo</span> <span class="hps">tem a idéia </span><span class="alt-edited hps">de um <em>objeto</em></span><em> <span class="alt-edited hps">prototípico</span></em></span><span lang="pt"><span>, um objeto</span> <span class="hps">usado como um modelo</span> <span class="alt-edited hps">do qual</span> <span class="alt-edited hps">obtém as propriedades</span> <span class="hps">iniciais para</span> <span class="hps">um novo objeto.</span> <span class="hps">Qualquer objeto</span> <span class="hps">pode especificar</span> <span class="hps">suas próprias propriedades</span><span class="alt-edited">, quando você</span> <span class="alt-edited hps">o cria</span> <span class="hps">ou</span> <span class="hps">em tempo de execução</span><span>.</span> <span class="hps">Além disso, qualquer</span> <span class="hps">objeto</span> <span class="hps">pode ser associado</span> <span class="hps">como</span> <span class="alt-edited hps">um protótipo de </span><span class="alt-edited hps">outro objeto,</span> <span class="alt-edited hps">permitindo ao</span> <span class="hps">segundo objeto</span> <span class="alt-edited hps">compartilhar</span> <span class="hps">as propriedades</span> <span class="hps">do primeiro</span> <span class="hps">objeto</span><span>.</span></span></p>
+<p><span id="result_box" lang="pt"><span class="alt-edited hps">Uma</span> <span class="hps">linguagem baseada em</span> <span class="hps">protótipo</span><span>, como</span> <span class="hps">JavaScript,</span> <span class="hps">não faz essa</span> <span class="hps">distinção</span><span>:</span> <span class="hps">ele simplesmente tem</span> <span class="hps">objetos.</span> <span class="hps">Uma</span> <span class="hps">linguagem baseada em</span> <span class="hps">protótipo</span> <span class="hps">tem a idéia </span><span class="alt-edited hps">de um <em>objeto</em></span><em> <span class="alt-edited hps">prototípico</span></em></span><span lang="pt"><span>, um objeto</span> <span class="hps">usado como um modelo</span> <span class="alt-edited hps">do qual</span> <span class="alt-edited hps">obtém as propriedades</span> <span class="hps">iniciais para</span> <span class="hps">um novo objeto.</span> <span class="hps">Qualquer objeto</span> <span class="hps">pode especificar</span> <span class="hps">suas próprias propriedades</span><span class="alt-edited">, quando você</span> <span class="alt-edited hps">o cria</span> <span class="hps">ou</span> <span class="hps">em tempo de execução</span><span>.</span> <span class="hps">Além disso, qualquer</span> <span class="hps">objeto</span> <span class="hps">pode ser associado</span> <span class="hps">como</span> <span class="alt-edited hps">um protótipo de </span><span class="alt-edited hps">outro objeto,</span> <span class="alt-edited hps">permitindo ao</span> <span class="hps">segundo objeto</span> <span class="alt-edited hps">compartilhar</span> <span class="hps">as propriedades</span> <span class="hps">do primeiro</span> <span class="hps">objeto</span><span>.</span></span></p>
 
 <h3 id="Definindo_uma_classe">Definindo uma classe</h3>
 
-<p>Em linguagens baseadas em classe, você define uma classe em uma <em>definição de classe</em> separada. Nessa definição, você pode especificar métodos especiais, chamados de <em>construtores</em>, para criar instâncias da classe. Um método <em>construtor</em> pode especificar valores iniciais para as propriedades da instância e executar outros processamentos apropriados no momento da criação. Você pode usar o operador <code>new</code>, em associação com o método construtor para criar instâncias de classe.</p>
+<p>Em linguagens baseadas em classe, você define uma classe em uma <em>definição de classe</em> separada. Nessa definição, você pode especificar métodos especiais, chamados de <em>construtores</em>, para criar instâncias da classe. Um método <em>construtor</em> pode especificar valores iniciais para as propriedades da instância e executar outros processamentos apropriados no momento da criação. Você pode usar o operador <code>new</code>, em associação com o método construtor para criar instâncias de classe.</p>
 
-<p>O JavaScript segue um modelo semelhante, mas não têm uma definição da classe separada do construtor. Em vez disso, você define uma função de construtor para criar objetos com um conjunto inicial particular de propriedades e valores. Qualquer função JavaScript pode ser usado como um construtor. Você pode usar o operador <code>new</code> com uma função de construtor para criar um novo objeto.</p>
+<p>O JavaScript segue um modelo semelhante, mas não têm uma definição da classe separada do construtor. Em vez disso, você define uma função de construtor para criar objetos com um conjunto inicial particular de propriedades e valores. Qualquer função JavaScript pode ser usado como um construtor. Você pode usar o operador <code>new</code> com uma função de construtor para criar um novo objeto.</p>
 
 <h3 id="Subclasses_e_herança">Subclasses e herança</h3>
 
-<p>Em uma linguagem baseada em classe, você cria a hierárquia de classes através de sua definição. Em uma definição de classes,  você pode  especificar que a nova classe é uma <em>subclasse</em> de outra já existente. A subclasse herda todas as propriedades da  superclasse e pode adicionar novas propriedades ou modificar propriedades herdadas. Por exemplo, assuma que  a classe <code>Employee</code> tem somente duas propriedades <code>name</code> e <code>dept</code> , e <code>Manager</code> é uma subclasse of <code>Employee </code>que adiciona a propriedade <code>reports</code>. Neste caso, uma instância da classe <code>Manager</code>  terá todas as três propiedades: <code>name</code>, <code>dept</code>, and <code>reports</code>.</p>
+<p>Em uma linguagem baseada em classe, você cria a hierárquia de classes através de sua definição. Em uma definição de classes,  você pode  especificar que a nova classe é uma <em>subclasse</em> de outra já existente. A subclasse herda todas as propriedades da  superclasse e pode adicionar novas propriedades ou modificar propriedades herdadas. Por exemplo, assuma que  a classe <code>Employee</code> tem somente duas propriedades <code>name</code> e <code>dept</code> , e <code>Manager</code> é uma subclasse of <code>Employee </code>que adiciona a propriedade <code>reports</code>. Neste caso, uma instância da classe <code>Manager</code>  terá todas as três propiedades: <code>name</code>, <code>dept</code>, and <code>reports</code>.</p>
 
-<p>Em JavaScript, a herança é implementada associando um objeto prototípico a qualquer função de construtor. Então, você pode criar exatamente o mesmo exemplo: <code>Employee</code> — <code>Manager</code>, mas utilizando uma terminologia ligeramente diferente. Primeiro, define-se a função de construtor de  <code>Employee</code>, especificando as propriedades <code>name</code> e <code>dept</code>. Depois,  define-se a função de construtor de  <code>Manager</code>, especificando a propriedade <code>reports</code>. Finalmente, associa-se um objeto new <code>Employee</code>  como  <code>prototype</code> para a função de construtor <code>Manager</code>. Então, quando vocẽ criar um objeto new <code>Manager</code>, ele herdará as propriedades  <code>name</code> e <code>dept</code> do objeto <code>Employee</code>.</p>
+<p>Em JavaScript, a herança é implementada associando um objeto prototípico a qualquer função de construtor. Então, você pode criar exatamente o mesmo exemplo: <code>Employee</code> — <code>Manager</code>, mas utilizando uma terminologia ligeramente diferente. Primeiro, define-se a função de construtor de  <code>Employee</code>, especificando as propriedades <code>name</code> e <code>dept</code>. Depois,  define-se a função de construtor de  <code>Manager</code>, especificando a propriedade <code>reports</code>. Finalmente, associa-se um objeto new <code>Employee</code>  como  <code>prototype</code> para a função de construtor <code>Manager</code>. Então, quando vocẽ criar um objeto new <code>Manager</code>, ele herdará as propriedades  <code>name</code> e <code>dept</code> do objeto <code>Employee</code>.</p>
 
 <h3 id="Adicionando_e_removendo_propriedades">Adicionando e removendo propriedades</h3>
 
-<p>Em uma linguagem baseada em classe, você normalmente cria uma classe em tempo de compilação e então vincula as instâncias da classe em tempo de compilação, ou tempo de execução. Você não pode alterar o número ou o tipo de propriedade de uma classe após definí-la. Em javaScript, no entanto, você pode adicionar ou remover propriedades de qualquer objeto. Se você adiciona uma propriedade a um objeto que é usado como o protótipo para um conjunto de objetos, os objetos no qual ele é protótipo herdarão as novas propriedades.</p>
+<p>Em uma linguagem baseada em classe, você normalmente cria uma classe em tempo de compilação e então vincula as instâncias da classe em tempo de compilação, ou tempo de execução. Você não pode alterar o número ou o tipo de propriedade de uma classe após definí-la. Em javaScript, no entanto, você pode adicionar ou remover propriedades de qualquer objeto. Se você adiciona uma propriedade a um objeto que é usado como o protótipo para um conjunto de objetos, os objetos no qual ele é protótipo herdarão as novas propriedades.</p>
 
 <h3 id="Sumário_das_diferenças">Sumário das diferenças</h3>
 
@@ -53,7 +53,7 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
  <thead>
   <tr>
    <th scope="col"><strong>Baseados em classes (Java)</strong></th>
-   <th scope="col"><strong>Baseados em protótipos (JavaScript)</strong></th>
+   <th scope="col"><strong>Baseados em protótipos (JavaScript)</strong></th>
   </tr>
  </thead>
  <tbody>
@@ -62,16 +62,16 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
    <td>Todos os objetos são instancias.</td>
   </tr>
   <tr>
-   <td>Define uma classe com uma definição de classe; cria um objeto - como instância da classe - com o método constructor.</td>
+   <td>Define uma classe com uma definição de classe; cria um objeto - como instância da classe - com o método constructor.</td>
    <td>Define e cria um conjunto de objetos com funções construtoras.</td>
   </tr>
   <tr>
-   <td>Cria um único objeto com o operador <code>new</code>.</td>
+   <td>Cria um único objeto com o operador <code>new</code>.</td>
    <td>Faz o mesmo.</td>
   </tr>
   <tr>
    <td>Constroi uma hierarquia de objetos usando definição de classe para definir subclasses de classes existentes.</td>
-   <td>Constrói uma hierarquia de objetos, atribuindo um objeto como o protótipo associado com uma função de construtor.</td>
+   <td>Constrói uma hierarquia de objetos, atribuindo um objeto como o protótipo associado com uma função de construtor.</td>
   </tr>
   <tr>
    <td>Herda propriedade seguindo a cadeia de classe.</td>
@@ -86,7 +86,7 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <h2 id="O_exemplo_employee">O exemplo employee</h2>
 
-<p>O restante deste capítulo usa a hierarquia employee como mostrado na figura abaixo. </p>
+<p>O restante deste capítulo usa a hierarquia employee como mostrado na figura abaixo. </p>
 
 <div class="twocolumns">
 <p>Uma simples hierarquia de objetos:</p>
@@ -94,23 +94,23 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 <p><img alt="" src="https://mdn.mozillademos.org/files/3060/figure8.1.png"></p>
 
 <ul>
- <li><code>Employee</code> tem a propriedade <code>name</code> (cujo valor padrão é uma string vazia) e <code>dept</code> (cujo valor padrão  e o "general").</li>
- <li><code>Manager</code> é baseado no <code>Employee</code>. É adicionada a propriedade <code>reports</code> (cujo valor padrão é um array vazio, planejado para ter um array do objeto <code>Employee como valor</code>).</li>
- <li><code>WorkerBee</code> também é baseado no  <code>Employee</code>. É adicionada  a propriedade <code>projects</code> (cujo valor padrão é um array vazio, pretende-se ter um array de strings como valor).</li>
- <li><code>SalesPerson</code> é baseado no <code>WorkerBee</code>. É adicionada a propriedade <code>quota</code> (cujo valor padrão é 100). E também controla a propriedade <code>dept</code>  com o valor "sales", indicando que todos os salespersons são o mesmo departamento.</li>
- <li><code>Engineer</code> é baseado no <code>WorkerBee</code>. É adicionada a propriedade <code>machine</code> (cujo valor padrão é uma string vazia) e também controla a propriedade <code>dept</code> com o valor "engineering".</li>
+ <li><code>Employee</code> tem a propriedade <code>name</code> (cujo valor padrão é uma string vazia) e <code>dept</code> (cujo valor padrão  e o "general").</li>
+ <li><code>Manager</code> é baseado no <code>Employee</code>. É adicionada a propriedade <code>reports</code> (cujo valor padrão é um array vazio, planejado para ter um array do objeto <code>Employee como valor</code>).</li>
+ <li><code>WorkerBee</code> também é baseado no  <code>Employee</code>. É adicionada  a propriedade <code>projects</code> (cujo valor padrão é um array vazio, pretende-se ter um array de strings como valor).</li>
+ <li><code>SalesPerson</code> é baseado no <code>WorkerBee</code>. É adicionada a propriedade <code>quota</code> (cujo valor padrão é 100). E também controla a propriedade <code>dept</code>  com o valor "sales", indicando que todos os salespersons são o mesmo departamento.</li>
+ <li><code>Engineer</code> é baseado no <code>WorkerBee</code>. É adicionada a propriedade <code>machine</code> (cujo valor padrão é uma string vazia) e também controla a propriedade <code>dept</code> com o valor "engineering".</li>
 </ul>
 </div>
 
 <h2 id="Criando_a_hierarquia">Criando a hierarquia</h2>
 
-<p>Há muitas formas de definir funções construtoras apropriadas para implementar a hierarquia <code>Employee</code>. Como escolher defini-las depende amplamente do que você quer ser capaz de fazer em sua aplicação.</p>
+<p>Há muitas formas de definir funções construtoras apropriadas para implementar a hierarquia <code>Employee</code>. Como escolher defini-las depende amplamente do que você quer ser capaz de fazer em sua aplicação.</p>
 
-<p>Esta seção mostra definições simples de como trabalhar com heranças. Nestas definições, você não pode especificar nenhum valor de propriedade quando criar um objeto. O recém-criado objeto terá os valores padrão, que você poderá alterar mais tarde.</p>
+<p>Esta seção mostra definições simples de como trabalhar com heranças. Nestas definições, você não pode especificar nenhum valor de propriedade quando criar um objeto. O recém-criado objeto terá os valores padrão, que você poderá alterar mais tarde.</p>
 
-<p>Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja <a href="#Construtores_flexíveis">Construtores flexíveis</a> para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.</p>
+<p>Na aplicação real, você poderia definir construtores que permitem que você forneça valores de propriedade no momento da criação do objeto (veja <a href="#Construtores_flexíveis">Construtores flexíveis</a> para saber mais). Por enquanto, estas simples definições demonstram como a herança ocorre.</p>
 
-<p>As seguintes definições Java e JavaScript <code>Employee</code> são similares. A única diferença é que você precisa especificar o tipo de cada propriedade em Java, mas não em JavaScript (devido ao Java ser uma <a href="http://en.wikipedia.org/wiki/Strong_and_weak_typing">linguagem fortemente tipada</a> enquanto o JavaScript é linguagem fracamente tipada).</p>
+<p>As seguintes definições Java e JavaScript <code>Employee</code> são similares. A única diferença é que você precisa especificar o tipo de cada propriedade em Java, mas não em JavaScript (devido ao Java ser uma <a href="http://en.wikipedia.org/wiki/Strong_and_weak_typing">linguagem fortemente tipada</a> enquanto o JavaScript é linguagem fracamente tipada).</p>
 
 <div class="twocolumns">
 <h4 id="JavaScript">JavaScript</h4>
@@ -130,7 +130,7 @@ original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 </pre>
 </div>
 
-<p>As definições <code>Manager</code> e <code>WorkerBee</code> mostram a diferença na forma de especificar o próximo objeto mais alto na cadeia de herança. Em JavaScript, você adiciona uma instância prototípica como o valor da propriedade <code>prototype</code> da função construtora. Você pode fazer isso a qualquer momento depois de definir o construtor. Em Java, você especifica a superclasse dentro da classe definida. Você não pode alterar a superclasse fora da classe definida.</p>
+<p>As definições <code>Manager</code> e <code>WorkerBee</code> mostram a diferença na forma de especificar o próximo objeto mais alto na cadeia de herança. Em JavaScript, você adiciona uma instância prototípica como o valor da propriedade <code>prototype</code> da função construtora. Você pode fazer isso a qualquer momento depois de definir o construtor. Em Java, você especifica a superclasse dentro da classe definida. Você não pode alterar a superclasse fora da classe definida.</p>
 
 <div class="twocolumns">
 <h4 id="JavaScript_2">JavaScript</h4>
@@ -164,7 +164,7 @@ public class WorkerBee extends Employee {
 </pre>
 </div>
 
-<p>As definições <code>Engineer</code> e <code>SalesPerson</code> criam objetos que descendem de <code>WorkerBee</code> e consequentemente de <code>Employee</code>. Objetos destes tipos tem propriedades de todos os objetos acima de sua cadeia. Em adição, estas definições substituem o valor herdado da propriedade <code>dept</code> com novos valores específicos para esses objetos.</p>
+<p>As definições <code>Engineer</code> e <code>SalesPerson</code> criam objetos que descendem de <code>WorkerBee</code> e consequentemente de <code>Employee</code>. Objetos destes tipos tem propriedades de todos os objetos acima de sua cadeia. Em adição, estas definições substituem o valor herdado da propriedade <code>dept</code> com novos valores específicos para esses objetos.</p>
 
 <div class="twocolumns">
 <h4 id="JavaScript_3">JavaScript</h4>
@@ -202,10 +202,10 @@ public class Engineer extends WorkerBee {
 </pre>
 </div>
 
-<p>Usando estas definições, você pode criar instâncias desses objetos que obterão valores padrão para suas propriedades. A próxima imagem mostra o uso destas definições JavaScript para criar novos objetos e mostrar os valores das propriedades dos novos objetos. </p>
+<p>Usando estas definições, você pode criar instâncias desses objetos que obterão valores padrão para suas propriedades. A próxima imagem mostra o uso destas definições JavaScript para criar novos objetos e mostrar os valores das propriedades dos novos objetos. </p>
 
 <div class="note">
-<p><strong>Note:</strong> O termo <em>instancia   </em>tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que <code><code>jane</code></code> é uma instância de <code><code>Engineer</code></code>. Similarmente, embora os termos <em><em>parent</em>, <em>child</em>, <em>ancestor</em></em>, e <em><em>descendant</em></em> não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.</p>
+<p><strong>Note:</strong> O termo <em>instancia   </em>tem significado específicamente técnico em linguagens baseadas em classe. Nessas linguagens, uma instância é uma instanciação individual de uma classe e é fundamentalmente diferente de uma classe. Em JavaScript, "instância" não tem esse significado técnico porque JavaScript não tem essa diferença entre classes e instâncias. No entanto, falando sobre JavaScript, "instância" pode ser usada informalmente para significar um objeto criado usando uma função construtora particular. Então, neste exemplo, você pode informalmente dizer que <code><code>jane</code></code> é uma instância de <code><code>Engineer</code></code>. Similarmente, embora os termos <em><em>parent</em>, <em>child</em>, <em>ancestor</em></em>, e <em><em>descendant</em></em> não tenham significados formais em JavaScript; você pode usá-los informalmente para referir a objetos altos ou baixos na cadeia de protótipos.</p>
 </div>
 
 <h3 id="Criando_objetos_com_definições_simples">Criando objetos com definições simples</h3>
@@ -253,14 +253,14 @@ var jane = new Engineer;
 
 <h3 id="Herdando_Propriedades">Herdando Propriedades</h3>
 
-<p>Suponha que você criou o objeto <code>mark</code> como um <code>WorkerBee</code> com a seguinte declaração:</p>
+<p>Suponha que você criou o objeto <code>mark</code> como um <code>WorkerBee</code> com a seguinte declaração:</p>
 
 <pre class="brush: js notranslate">var mark = new WorkerBee;
 </pre>
 
-<p>Quando o JavaScript vê o operador <code>new</code>, ele cria um novo objeto genérico e implicitamente define o valor da propriedade interna [[Protótipo]] para o valor de <code>WorkerBee.prototype</code> passando este novo objeto como o valor da palavra-chave <code>this</code> para a função construtora de <code>WorkerBee</code>. A propriedade interna [[__proto__]] determina a cadeia de protótipos usada para retornar os valores das propriedades. Uma vez que essas propriedades são definidas, o JavaScript retorna o novo objeto e a declaração de atribuição define a variável <code>mark</code> para este objeto.</p>
+<p>Quando o JavaScript vê o operador <code>new</code>, ele cria um novo objeto genérico e implicitamente define o valor da propriedade interna [[Protótipo]] para o valor de <code>WorkerBee.prototype</code> passando este novo objeto como o valor da palavra-chave <code>this</code> para a função construtora de <code>WorkerBee</code>. A propriedade interna [[__proto__]] determina a cadeia de protótipos usada para retornar os valores das propriedades. Uma vez que essas propriedades são definidas, o JavaScript retorna o novo objeto e a declaração de atribuição define a variável <code>mark</code> para este objeto.</p>
 
-<p>Este processo não põe explicitamente valores no objeto <code>mark</code> (valores <em>locais</em>) para as propriedades que <code>mark</code> herdou da cadeia de protótipo. Quando você solicita o valor de uma propriedade, o JavaScript primeiro verifica se o valor existe nesse objeto. Caso exista, esse valor é retornado. Se o valor não existe localmente, JavaScript verifica a cadeia de protótipos (usando a propriedade  interna __proto__). Se um objeto na cadeia de protótipos possui um valor para a propriedade, este valor é retornado. Se nenhuma propriedade é encontrada, o Javascript avisa que o objeto não possui a propriedade. Deste modo, o objeto <code>mark</code> possui as seguintes propriedades e valores: </p>
+<p>Este processo não põe explicitamente valores no objeto <code>mark</code> (valores <em>locais</em>) para as propriedades que <code>mark</code> herdou da cadeia de protótipo. Quando você solicita o valor de uma propriedade, o JavaScript primeiro verifica se o valor existe nesse objeto. Caso exista, esse valor é retornado. Se o valor não existe localmente, JavaScript verifica a cadeia de protótipos (usando a propriedade  interna __proto__). Se um objeto na cadeia de protótipos possui um valor para a propriedade, este valor é retornado. Se nenhuma propriedade é encontrada, o Javascript avisa que o objeto não possui a propriedade. Deste modo, o objeto <code>mark</code> possui as seguintes propriedades e valores: </p>
 
 <pre class="brush: js notranslate">mark.name = "";
 mark.dept = "general";

@@ -13,4 +13,4 @@ original_slug: Glossaire/ASCII
 
 ### Connaissance générale
 
-{{Interwiki("wikipedia", "ASCII")}} sur Wikipedia
+- [ASCII](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) sur Wikipédia

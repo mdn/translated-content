@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Classes/static
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>A palavra chave <strong>static</strong> define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.</p>
+<p>A palavra chave <strong>static</strong> define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -25,17 +25,17 @@ translation_of: Web/JavaScript/Reference/Classes/static
 
 <h3 id="De_outro_método_estático">De outro método estático</h3>
 
-<p>Para chamar um método estático dentro de outro método estático da mesma classe, podemos utilizar a palavra reservada <code>this</code>.</p>
+<p>Para chamar um método estático dentro de outro método estático da mesma classe, podemos utilizar a palavra reservada <code>this</code>.</p>
 
 
 
 <pre class="brush: js"><code>class ChamadaDoMetodoEstatico {
-  static metodoEstatico() {
-    return 'O método estático foi chamado';
-  }
-  static outroMetodoEstatico() {
-    return this.metodoEstatico() + ' de outro método estático';
-  }
+  static metodoEstatico() {
+    return 'O método estático foi chamado';
+  }
+  static outroMetodoEstatico() {
+    return this.metodoEstatico() + ' de outro método estático';
+  }
 }
 ChamadaDoMetodoEstatico.metodoEstatico();
 // 'O método estático foi chamado'
@@ -59,17 +59,17 @@ ChamadaDoMetodoEstatico.outroMetodoEstatico();
 
 
 <pre class="brush: js"><code>class ChamadaDoMetodoEstatico {
-  constructor() {
-    console.log(ChamadaDoMetodoEstatico.MetodoEstatico());
-    // 'O método estático foi chamado.'
+  constructor() {
+    console.log(ChamadaDoMetodoEstatico.MetodoEstatico());
+    // 'O método estático foi chamado.'
 
-    console.log(this.constructor.MetodoEstatico());
-    // 'O método estático foi chamado.'
-  }
+    console.log(this.constructor.MetodoEstatico());
+    // 'O método estático foi chamado.'
+  }
 
-  static MetodoEstatico() {
-    return 'O método estático foi chamado.';
-  }
+  static MetodoEstatico() {
+    return 'O método estático foi chamado.';
+  }
 }</code></pre>
 
 

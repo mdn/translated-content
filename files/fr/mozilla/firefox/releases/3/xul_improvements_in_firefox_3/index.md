@@ -15,10 +15,10 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 
 - [Contrôles numériques](/fr/Tutoriel_XUL/Les_contrôles_numériques)&nbsp;:
 
-  - Le nouvel élément [`<scale>`](/fr/XUL/scale) permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. {{ interwiki('wikimo', 'XUL:Slider_Tag', 'Plus d\'informations sur scale') }} [Référence de `scale`](/fr/XUL/scale) ({{ Bug(290255) }})
-  - Une nouvelle valeur `'number'` pour l'attribut `type` des élément `textbox` crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. {{ interwiki('wikimo', 'XUL:Specs:NumberBox', 'Plus d\'informations sur les boîtes de texte numériques') }} ({{ Bug(345510) }})
+  - Le nouvel élément [`<scale>`](/fr/XUL/scale) permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. [Référence de `scale`](/fr/XUL/scale) ({{ Bug(290255) }})
+  - Une nouvelle valeur `'number'` pour l'attribut `type` des élément `textbox` crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. ({{ Bug(345510) }})
   - Un élément [`<spinbuttons>`](/fr/XUL/spinbuttons) a été ajouté, qui peut être utilisé pour créer des contrôles à l'aide de liaisons XBL. ({{ Bug(155053) }})
-  - Deux contrôles, [`<datepicker>`](/fr/XUL/datepicker) et [`<timepicker>`](/fr/XUL/timepicker), peuvent être utilisés pour permettre l'entrée de dates et d'heures. Le sélecteur de tdate est disponible en plusieurs styles selon l'attribut `type`, et permet des entrées via des boîtes de texte ou un calendrier. {{ interwiki('wikimo', 'XUL:Specs:DateTimePickers', 'Plus d\'informations sur les sélecteurs de date') }} [Référence sur `datepicker`](/fr/XUL/datepicker)
+  - Deux contrôles, [`<datepicker>`](/fr/XUL/datepicker) et [`<timepicker>`](/fr/XUL/timepicker), peuvent être utilisés pour permettre l'entrée de dates et d'heures. Le sélecteur de tdate est disponible en plusieurs styles selon l'attribut `type`, et permet des entrées via des boîtes de texte ou un calendrier. [Référence sur `datepicker`](/fr/XUL/datepicker)
 
 - Un [guide](/fr/XUL/Guide_des_popups) a été créé pour décrire les nouvelles fonctionnalités disponibles pour les menus et les popups.
 
@@ -29,7 +29,7 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 
 - Il est possible à présent faire défiler des arbres horizontalement. Une barre de défilement horizontal apparaitra si toutes les colonnes n'entrent pas dans la largeur disponible. Cela se produira si la somme des largeurs de colonnes spécifiées est plus grande que l'espace disponible. ({{ Bug(212789) }})
 - Un nouveau style de sélection permet de sélectionner les cellules individuellement plutôt que des lignes entières. On peut l'utiliser en définissant l'attribut `seltype` d'un arbre à la valeur `'cell'`. ({{ Bug(296040) }})
-- Des cellules individuelles d'un arbre peuvent être modifiées. Un double-clic sur une cellule éditable affichera un champ texte dans lequel l'utilisateur pourra modifier le contenu de la cellule. {{ interwiki('wikimo', 'XUL:Tree', 'Plus de détails') }} ({{ Bug(201499) }})
+- Des cellules individuelles d'un arbre peuvent être modifiées. Un double-clic sur une cellule éditable affichera un champ texte dans lequel l'utilisateur pourra modifier le contenu de la cellule. ({{ Bug(201499) }})
 - Les éléments \<treecol> supportent maintenant un attribut `overflow` qui peut être défini à `true` pour permettre au texte des cellules d'un colonne de déborder dans les cellules vides voisines si le texte est trop grand pour s'afficher dans une seule cellule.
 
 ### Améliorations des menus

@@ -17,4 +17,4 @@ original_slug: Glossaire/NAT
 ### Culture générale
 
 - [Introduction aux protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols) sur MDN
-- {{interwiki("wikipedia", "Network_address_translation","NAT")}} sur Wikipédia
+- [NAT](https://fr.wikipedia.org/wiki/Network_address_translation) sur Wikipédia

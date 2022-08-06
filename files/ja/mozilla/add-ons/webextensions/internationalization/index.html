@@ -106,11 +106,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
-      }
-    }
+      "url" : {
+        "content" : "$1",
+        "example" : "https://developer.mozilla.org"
+      }
+    }
   }
 }</pre>
 
@@ -153,7 +153,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
-<p>これは拡張機能がブラウザーの現在のロケールに対するロケール文字列を含んでいない場合のデフォルトロケールを指定します。ブラウザーロケールで利用できないあらゆるメッセージ文字列が代わりのデフォルトロケールとして引受られます。ブラウザーが文字列を選ぶ方法に関して意識すべき詳細な点があります —  <a href="#localized_string_selection">Localized string selection</a> を見てください。</p>
+<p>これは拡張機能がブラウザーの現在のロケールに対するロケール文字列を含んでいない場合のデフォルトロケールを指定します。ブラウザーロケールで利用できないあらゆるメッセージ文字列が代わりのデフォルトロケールとして引受られます。ブラウザーが文字列を選ぶ方法に関して意識すべき詳細な点があります —  <a href="#localized_string_selection">Localized string selection</a> を見てください。</p>
 
 <h2 id="Locale-dependent_CSS" name="Locale-dependent_CSS">ロケールに依存しない CSS</h2>
 
@@ -167,10 +167,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <h2 id="Retrieving_message_strings_from_JavaScript" name="Retrieving_message_strings_from_JavaScript">JavaScript からメッセージ文字列を取得する</h2>
 
-<p>それで、メッセージ文字列とマニフェストがセットアップできました。今は単に JavaScript からメッセージ文字列を呼び出して、拡張機能ができるだけ多くの正しい言語を話すようにします。実際の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n API</a> はとてもシンプルで、そこには 4 つのメソッドがあります:</p>
+<p>それで、メッセージ文字列とマニフェストがセットアップできました。今は単に JavaScript からメッセージ文字列を呼び出して、拡張機能ができるだけ多くの正しい言語を話すようにします。実際の <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n API</a> はとてもシンプルで、そこには 4 つのメソッドがあります:</p>
 
 <ul>
- <li>たぶん一番多く {{WebExtAPIRef("i18n.getMessage()")}} を使うでしょう — これは上記に触れられたとおり、特定の文字列を取得するのに使うメソッドです。これの使用例は下記で見ます。</li>
+ <li>たぶん一番多く {{WebExtAPIRef("i18n.getMessage()")}} を使うでしょう — これは上記に触れられたとおり、特定の文字列を取得するのに使うメソッドです。これの使用例は下記で見ます。</li>
  <li>{{WebExtAPIRef("i18n.getAcceptLanguages()")}} と{{WebExtAPIRef("i18n.getUILanguage()")}} メソッドはロケールに応じて UI をカスタマイズする場合に使います — たぶんユーザーの好みの言語に応じて設定リストの上の方に表示したり、特定言語だけに関連する文化的情報を表示したり、ブラウザーロケールに従って日付表示を整形したりすると良いでしょう。</li>
  <li>{{WebExtAPIRef("i18n.detectLanguage()")}} メソッドはユーザーが投稿したコンテンツの言語を特定したり、それを適切に整形したりするのに使います。</li>
 </ul>
@@ -180,7 +180,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 <pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
-<p>最初は単に <code>messages.json</code> ファイルからブラウザーの現ロケールのための <code>notificationTitle message</code> 項目を取得します。2 つ目は同様ですが、2 つ目のパラメーターに URL を渡されます。これは何でしょう？これは <code>notificationContent message</code> 項目の中の <code>$URL$</code> プレースホルダーを置き換えるためにコンテンツを指定する方法です: </p>
+<p>最初は単に <code>messages.json</code> ファイルからブラウザーの現ロケールのための <code>notificationTitle message</code> 項目を取得します。2 つ目は同様ですが、2 つ目のパラメーターに URL を渡されます。これは何でしょう？これは <code>notificationContent message</code> 項目の中の <code>$URL$</code> プレースホルダーを置き換えるためにコンテンツを指定する方法です: </p>
 
 <pre class="brush: json">"notificationContent": {
   "message": "You clicked $URL$.",
@@ -194,26 +194,26 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 }
 </pre>
 
-<p><code>"placeholders"</code> メンバーはプレースホルダーを定義し、ここから取得します。<code>"url"</code> プレースホルダーは $1、つまり 2 つ目のパラメーターの <code>getMessage()</code>.の最初の値から取ってきたコンテンツを指定します。プレースホルダーは<code>"url"</code> と呼ばれるため、実際のメッセージ文字列の中で呼び出すのに <code>$URL$</code> を使います (なので <code>"name"</code> には <code>$NAME$</code>などを使う)。複数のプレースホルダーがある場合、{{WebExtAPIRef("i18n.getMessage()")}} の 2 つ目のパラメーターとして渡す配列の中で提供できます —  <code>messages.json</code> 内部で <code>[a, b, c]</code> は<code>$1</code>, <code>$2</code>, <code>$3</code>, として使われる、など。</p>
+<p><code>"placeholders"</code> メンバーはプレースホルダーを定義し、ここから取得します。<code>"url"</code> プレースホルダーは $1、つまり 2 つ目のパラメーターの <code>getMessage()</code>.の最初の値から取ってきたコンテンツを指定します。プレースホルダーは<code>"url"</code> と呼ばれるため、実際のメッセージ文字列の中で呼び出すのに <code>$URL$</code> を使います (なので <code>"name"</code> には <code>$NAME$</code>などを使う)。複数のプレースホルダーがある場合、{{WebExtAPIRef("i18n.getMessage()")}} の 2 つ目のパラメーターとして渡す配列の中で提供できます —  <code>messages.json</code> 内部で <code>[a, b, c]</code> は<code>$1</code>, <code>$2</code>, <code>$3</code>, として使われる、など。</p>
 
-<p>例をざっと見ましょう: <code>en/messages.json</code> ファイル内のオリジナルの <code>notificationContent</code> メッセージ文字列はこうです</p>
+<p>例をざっと見ましょう: <code>en/messages.json</code> ファイル内のオリジナルの <code>notificationContent</code> メッセージ文字列はこうです</p>
 
 <pre>You clicked $URL$.</pre>
 
-<p><code>https://developer.mozilla.org</code> を指すリンクがクリックされたとします。{{WebExtAPIRef("i18n.getMessage()")}} を呼び出した後、2 つ目のパラメーターのコンテンツは messages.json 内で <code>$1</code> として利用できて、これは <code>"url"</code> プレースホルダー内で定義された <code>$URL$</code> プレースホルダーを置換します。よって最終のメッセージ文字列はこうなります</p>
+<p><code>https://developer.mozilla.org</code> を指すリンクがクリックされたとします。{{WebExtAPIRef("i18n.getMessage()")}} を呼び出した後、2 つ目のパラメーターのコンテンツは messages.json 内で <code>$1</code> として利用できて、これは <code>"url"</code> プレースホルダー内で定義された <code>$URL$</code> プレースホルダーを置換します。よって最終のメッセージ文字列はこうなります</p>
 
 <pre>You clicked https://developer.mozilla.org.</pre>
 
 <h3 id="Direct_placeholder_usage" name="Direct_placeholder_usage">直接プレースホルダーを使う</h3>
 
-<p>メッセージ文字列の中に直接に変数 (<code>$1</code>, <code>$2</code>, <code>$3</code> など) を挿入できます。例えば上記の <code>"notificationContent"</code> メンバーをこう書き換えてみます:</p>
+<p>メッセージ文字列の中に直接に変数 (<code>$1</code>, <code>$2</code>, <code>$3</code> など) を挿入できます。例えば上記の <code>"notificationContent"</code> メンバーをこう書き換えてみます:</p>
 
 <pre class="brush: json">"notificationContent": {
   "message": "You clicked $1.",
   "description": "Tells the user which link they clicked."
 }</pre>
 
-<p>これはややこしくなくて速いように見えますが、他の方法 (<code>"プレースホルダー"</code>を使う)が最も良いやり方です。これはプレースホルダー名 (例えば<code>"url"</code>) や例によって、プレースホルダーの目的を思い出せます — コードを書いた 1週間後には、<code>$1</code>–<code>$8</code> が何を指すか忘れているでしょうが、プレースホルダー名が何を指すかならもっと思い出しやすいでしょう。</p>
+<p>これはややこしくなくて速いように見えますが、他の方法 (<code>"プレースホルダー"</code>を使う)が最も良いやり方です。これはプレースホルダー名 (例えば<code>"url"</code>) や例によって、プレースホルダーの目的を思い出せます — コードを書いた 1週間後には、<code>$1</code>–<code>$8</code> が何を指すか忘れているでしょうが、プレースホルダー名が何を指すかならもっと思い出しやすいでしょう。</p>
 
 <h3 id="Hardcoded_substitution" name="Hardcoded_substitution">ハードコーディングされた置き換え</h3>
 
@@ -235,12 +235,12 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <h2 id="Localized_string_selection" name="Localized_string_selection">ローカライズ済みの文字列の選択</h2>
 
-<p>ロケールは <code>fr</code> や <code>en</code> のような言語コードによってのみ指定されるか、さらに <code>en_US</code> や <code>en_GB</code> といった地域コードつきで (これは同じ言語の地域的な変形を記述します) 認証されます。i18n に文字列を問い合わせた時、次のアルゴリズムで文字列を選択します:</p>
+<p>ロケールは <code>fr</code> や <code>en</code> のような言語コードによってのみ指定されるか、さらに <code>en_US</code> や <code>en_GB</code> といった地域コードつきで (これは同じ言語の地域的な変形を記述します) 認証されます。i18n に文字列を問い合わせた時、次のアルゴリズムで文字列を選択します:</p>
 
 <ol>
- <li>現在のロケールと全く同じ <code>messages.json</code> ファイルがあって、そこに文字列が入っている場合、それを返します</li>
- <li>それ以外で、現在のロケールが地域つきで認証されて (例<code>en_US</code>) 、そのロケールの地域になし版の <code>messages.json</code> ファイルがあって (例<code>en</code>)、そこに文字列が入っている場合、それを返します</li>
- <li>それ以外で、<code>manifest.json</code>内に定義された <code>default_locale</code> 用の <code>messages.json</code> ファイルがあって、そこに文字列が入っている場合、それを返します</li>
+ <li>現在のロケールと全く同じ <code>messages.json</code> ファイルがあって、そこに文字列が入っている場合、それを返します</li>
+ <li>それ以外で、現在のロケールが地域つきで認証されて (例<code>en_US</code>) 、そのロケールの地域になし版の <code>messages.json</code> ファイルがあって (例<code>en</code>)、そこに文字列が入っている場合、それを返します</li>
+ <li>それ以外で、<code>manifest.json</code>内に定義された <code>default_locale</code> 用の <code>messages.json</code> ファイルがあって、そこに文字列が入っている場合、それを返します</li>
  <li>それ以外は空文字を返します</li>
 </ol>
 
@@ -284,11 +284,11 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
  </li>
 </ul>
 
-<p><code>default_locale</code> が <code>fr</code> にセットされ、ブラウザーの現在のロケールが <code>en_GB</code> と仮定します:</p>
+<p><code>default_locale</code> が <code>fr</code> にセットされ、ブラウザーの現在のロケールが <code>en_GB</code> と仮定します:</p>
 
 <ul>
  <li>拡張機能が <code>getMessage("colorLocalised")</code>を呼び出すと、"colour"を返します</li>
- <li><code>en_GB</code> に "colorLocalised" がなかったとしたら、<code>getMessage("colorLocalised")</code> は"couleur" でなく "color" を返します</li>
+ <li><code>en_GB</code> に "colorLocalised" がなかったとしたら、<code>getMessage("colorLocalised")</code> は"couleur" でなく "color" を返します</li>
 </ul>
 
 <h2 id="Predefined_messages" name="Predefined_messages">事前定義されたメッセージ</h2>

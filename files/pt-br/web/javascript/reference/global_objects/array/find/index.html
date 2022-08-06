@@ -5,15 +5,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>find()</strong></code> retorna o <strong>valor </strong>do <strong>primeiro elemento</strong> do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.</p>
+<p>O método <code><strong>find()</strong></code> retorna o <strong>valor </strong>do <strong>primeiro elemento</strong> do array que satisfizer a função de teste provida. Caso contrario, {{jsxref("undefined")}} é retornado.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-find.html")}}</div>
 
 <p class="hidden">O código-fonte desse exemplo interativo está em um repositório do GitHub. Se você quiser contribuir para o projeto de exemplos interativos, clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um pull request.</p>
 
-<p>Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o <strong>índice</strong> do elemento encontrado no array ao invés do seu valor.</p>
+<p>Veja também o método {{jsxref("Array.findIndex", "findIndex()")}}, que retorna o <strong>índice</strong> do elemento encontrado no array ao invés do seu valor.</p>
 
-<p>Se você precisa encontrar a posição de um elemento ou se um elemento existe em um array, use {{jsxref("Array.prototype.indexOf()")}} ou {{jsxref("Array.prototype.includes()")}}.</p>
+<p>Se você precisa encontrar a posição de um elemento ou se um elemento existe em um array, use {{jsxref("Array.prototype.indexOf()")}} ou {{jsxref("Array.prototype.includes()")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
  </dl>
  </dd>
  <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>Opcional. Objeto usado como <code>this</code> quando executando o <code>callback</code>.</dd>
+ <dd>Opcional. Objeto usado como <code>this</code> quando executando o <code>callback</code>.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -43,15 +43,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>find</code> executa a função <code>callback </code>uma vez para cada elemento presente no array até que encontre um onde <code>callback</code>  retorne o valor true. Se o elemento é encontrado, <code>find</code> retorna imediatamente o valor deste elemento. Caso contrário, <code>find</code> retorna {{jsxref("Global_Objects/undefined", "undefined")}}. O <code>callback </code>é acionado para todos os índices do array de <code>0</code> a <code>tamanho-1</code>, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.</p>
+<p>O método <code>find</code> executa a função <code>callback</code> uma vez para cada elemento presente no array até que encontre um onde <code>callback</code> retorne o valor true. Se o elemento é encontrado, <code>find</code> retorna imediatamente o valor deste elemento. Caso contrário, <code>find</code> retorna {{jsxref("Global_Objects/undefined", "undefined")}}. O <code>callback</code> é acionado para todos os índices do array de <code>0</code> a <code>tamanho-1</code>, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.</p>
 
-<p>O <code>callback</code> é acionado com três argumentos: o valor do elemento, o índice do elemento e o objeto do Array que está sendo executado.</p>
+<p>O <code>callback</code> é acionado com três argumentos: o valor do elemento, o índice do elemento e o objeto do Array que está sendo executado.</p>
 
-<p>Se um parâmetro <code>thisArg</code> é provido ao <code>find</code>, ele será usado como o <code>this</code> para cada acionamento do <code>callback</code>. Se não for provido, então {{jsxref("Global_Objects/undefined", "undefined")}} é usado.</p>
+<p>Se um parâmetro <code>thisArg</code> é provido ao <code>find</code>, ele será usado como o <code>this</code> para cada acionamento do <code>callback</code>. Se não for provido, então {{jsxref("Global_Objects/undefined", "undefined")}} é usado.</p>
 
-<p>O <code>find</code> não altera a array à qual foi acionado.</p>
+<p>O <code>find</code> não altera a array à qual foi acionado.</p>
 
-<p>O conjunto dos elementos processados por <code>find</code> é definido antes do primeiro acionamento do <code>callback</code>. Elementos que são anexados à array após o início da chamada ao <code>find</code> não serão visitados pelo <code>callback</code>. Se um elemento existente ainda não visitado da array for alterado pelo <code>callback</code>, o valor passado ao <code>callback</code> quando o visitar será o valor no momento que <code>find</code> visita o índice daquele elemento; elementos excluídos ainda são visitados.</p>
+<p>O conjunto dos elementos processados por <code>find</code> é definido antes do primeiro acionamento do <code>callback</code>. Elementos que são anexados à array após o início da chamada ao <code>find</code> não serão visitados pelo <code>callback</code>. Se um elemento existente ainda não visitado da array for alterado pelo <code>callback</code>, o valor passado ao <code>callback</code> quando o visitar será o valor no momento que <code>find</code> visita o índice daquele elemento; elementos excluídos ainda são visitados.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -102,7 +102,7 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Este método foi adicionado à especificação do ECMAScript 2015 e pode não estar disponível em todas as implementações do JavaScript. Entretanto, você pode fazer um polyfill para o <code>Array.prototype.find</code> com o trecho de código abaixo:</p>
+<p>Este método foi adicionado à especificação do ECMAScript 2015 e pode não estar disponível em todas as implementações do JavaScript. Entretanto, você pode fazer um polyfill para o <code>Array.prototype.find</code> com o trecho de código abaixo:</p>
 
 <pre class="brush: js notranslate">if (!Array.prototype.find) {
   Array.prototype.find = function(predicate) {

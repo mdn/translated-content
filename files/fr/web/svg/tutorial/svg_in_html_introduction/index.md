@@ -80,5 +80,5 @@ L'attribut `style` ancre l'élément SVG en arrière plan du formulaire.
 
 ### Liens sur le sujet
 
-- L'article wikipedia sur le format [SVG](http://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)
+- L'article Wikipédia sur le format [SVG](http://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)
 - La page [Inline SVG](http://svg-whiz.com/wiki/index.php?title=Inline_SVG) sur le wiki SVG

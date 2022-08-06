@@ -18,7 +18,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 <p>После того, как пользовательская речь была распознана, алгоритм возвращает результат (список результатов) в качестве текстовой строки, с которой мы можем продолжить работу.</p>
 
 <div class="note">
-<p><strong>Внимание:</strong> В Chrome распознавание речи на веб-странице завязано на взаимодействие с сервером. Ваш звук отправляется на веб-службу для обработки распознавания, поэтому приложение не будет работать в офлайн-режиме.</p>
+<p><strong>Внимание:</strong> В Chrome распознавание речи на веб-странице завязано на взаимодействие с сервером. Ваш звук отправляется на веб-службу для обработки распознавания, поэтому приложение не будет работать в офлайн-режиме.</p>
 </div>
 
 <h3 id="Демо">Демо</h3>
@@ -37,16 +37,16 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
 <ul>
  <li dir="ltr">
-  <p dir="ltr">Мобильный и десктопный Firefox поддерживает его в Gecko 44+ без префиксов, и его можно включить, установив значение флага <code>media.webspeech.recognition.enable</code> на <code>true</code> в <code>about:config</code></p>
+  <p dir="ltr">Мобильный и десктопный Firefox поддерживает его в Gecko 44+ без префиксов, и его можно включить, установив значение флага <code>media.webspeech.recognition.enable</code> на <code>true</code> в <code>about:config</code></p>
  </li>
  <li dir="ltr">
-  <p dir="ltr">Chrome для настольных компьютеров и версия для Android поддерживали его с версии 33, но с прописанными префиксами, поэтому вам нужно использовать префиксную версию, например <code>webkitSpeechRecognition</code></p>
+  <p dir="ltr">Chrome для настольных компьютеров и версия для Android поддерживали его с версии 33, но с прописанными префиксами, поэтому вам нужно использовать префиксную версию, например <code>webkitSpeechRecognition</code></p>
  </li>
 </ul>
 
 <p dir="ltr">Традиционно, самая актуальная информация по поддержке чего-либо в браузерах на <a href="https://caniuse.com/#search=speech">caniuse</a>.</p>
 
-<h3 id="HTML_и_CSS">HTML и CSS</h3>
+<h3 id="HTML_и_CSS">HTML и CSS</h3>
 
 <p>Разметка и стили предельно просты. У нас есть значок микрофона, на который мы можем кликнуть для начала записи, анимация звукозаписи, которая включается после клика, и фоновый контейнер, который будет изменять свой цвет, в зависимости от того, что озвучит пользователь.</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
 <p>А вот на реализацию логики давайте обратим более пристальное внимание.</p>
 
-<h4 id="Поддержка_Chrome">Поддержка Chrome </h4>
+<h4 id="Поддержка_Chrome">Поддержка Chrome </h4>
 
 <p>Как уже упоминалось ранее, в настоящее время Chrome поддерживает интерфейс распознавания речи с указанными префиксами, поэтому в начале нашего кода мы включаем строки префиксов для использования нужных объектов в Chrome и ссылки на объекты без префиксов для Firefox.</p>
 
@@ -91,7 +91,7 @@ const grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colorsLi
 
 <ul>
  <li dir="ltr">
-  <p dir="ltr">Линии разделены точкой с запятой, как и в JavaScript.</p>
+  <p dir="ltr">Линии разделены точкой с запятой, как и в JavaScript.</p>
  </li>
  <li dir="ltr">
   <p dir="ltr">Первая строка - <code>#JSGF V1.0;</code> - указывает формат и версию. Это всегда необходимо включать в первую очередь.</p>
@@ -104,7 +104,7 @@ const grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colorsLi
  </li>
 </ul>
 
-<h4 id="Подключение_грамматики_к_нашему_распознаванию_речи"><strong id="docs-internal-guid-5c511c58-7fff-3f7e-ba1f-2130d83c633a">Подключение грамматики к нашему распознаванию речи</strong></h4>
+<h4 id="Подключение_грамматики_к_нашему_распознаванию_речи"><strong id="docs-internal-guid-5c511c58-7fff-3f7e-ba1f-2130d83c633a">Подключение грамматики к нашему распознаванию речи</strong></h4>
 
 <p>Следующее, что нужно сделать, это определить экземпляр объекта распознавания речи для управления записью нашего приложения.</p>
 
@@ -113,12 +113,12 @@ const grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colorsLi
 <pre>const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();</pre>
 
-<p>Добавляем нашу “грамматику” в список, используя метод <code>SpeechGrammarList.addFromString()</code>. Он принимает в качестве параметров строку, плюс необязательное значение веса, которое указывает важность этой грамматики по отношению к другим грамматикам, доступным в списке (может быть от 0 до 1 включительно). Добавленная грамматика доступна в списке как экземпляр объекта <code>SpeechGrammar</code>.</p>
+<p>Добавляем нашу “грамматику” в список, используя метод <code>SpeechGrammarList.addFromString()</code>. Он принимает в качестве параметров строку, плюс необязательное значение веса, которое указывает важность этой грамматики по отношению к другим грамматикам, доступным в списке (может быть от 0 до 1 включительно). Добавленная грамматика доступна в списке как экземпляр объекта <code>SpeechGrammar</code>.</p>
 
 <pre class="brush: js">speechRecognitionList.addFromString(grammar, 1);
 </pre>
 
-<p dir="ltr">Затем мы добавляем <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList">SpeechGrammarList</a></code> к уже созданному объекту распознавания речи, присваивая его значение свойству <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars">SpeechRecognition.grammars</a></code>. Также зададим ещё несколько свойств объекту, прежде чем двигаться дальше:</p>
+<p dir="ltr">Затем мы добавляем <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList">SpeechGrammarList</a></code> к уже созданному объекту распознавания речи, присваивая его значение свойству <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars">SpeechRecognition.grammars</a></code>. Также зададим ещё несколько свойств объекту, прежде чем двигаться дальше:</p>
 
 <ul>
  <li dir="ltr">
@@ -140,14 +140,14 @@ recognition.maxAlternatives = 1;
 </pre>
 
 <div class="note">
-<p dir="ltr"><strong>Внимание:</strong>  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous">SpeechRecognition.continuous</a></code> задаёт, отслеживаются ли продолжающиеся результаты или только 1 результат, каждый раз, когда запись начата. Это закомментировано, поскольку данное свойство в ещё не реализовано в Gecko.</p>
+<p dir="ltr"><strong>Внимание:</strong>  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous">SpeechRecognition.continuous</a></code> задаёт, отслеживаются ли продолжающиеся результаты или только 1 результат, каждый раз, когда запись начата. Это закомментировано, поскольку данное свойство в ещё не реализовано в Gecko.</p>
 
 <p dir="ltr">Вы можете получить аналогичный результат, просто прекратив распознавание после получения первого результата.</p>
 </div>
 
 <h4 id="Запуск_распознавания_речи">Запуск распознавания речи</h4>
 
-<p>После получения ссылок на DOM-элементы, необходимые нам для обработки пользовательских событий и обновления цвета фона приложения, мы реализуем обработчик <code>onclick</code>, чтобы при нажатии на значок микрофона сервис распознавания речи начинал работу. Запуск происходит путём вызова функции <code>SpeechRecognition.start()</code>.</p>
+<p>После получения ссылок на DOM-элементы, необходимые нам для обработки пользовательских событий и обновления цвета фона приложения, мы реализуем обработчик <code>onclick</code>, чтобы при нажатии на значок микрофона сервис распознавания речи начинал работу. Запуск происходит путём вызова функции <code>SpeechRecognition.start()</code>.</p>
 
 <pre>microphoneIcon.onclick = function() {
   recognition.start();
@@ -162,16 +162,16 @@ recognition.onaudiostart = function() {
 
 <h4 id="Получение_и_обработка_результата">Получение и обработка результата</h4>
 
-<p>После того, как процесс распознавания речи был запущен, есть много обработчиков событий, которые могут быть использованы для работы с результатом и другой сопутствующей информацией (см. <a href="https://developer.mozilla.org/ru/docs/Web/API/SpeechRecognition#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">Список обработчиков событий SpeechRecognition</a>.) Наиболее распространённый, который вы, вероятно, и будете использовать, это <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult</a>, который запускается сразу после получения успешного результата. Значение цвета получаем вызовом функции <code>getColor()</code></p>
+<p>После того, как процесс распознавания речи был запущен, есть много обработчиков событий, которые могут быть использованы для работы с результатом и другой сопутствующей информацией (см. <a href="https://developer.mozilla.org/ru/docs/Web/API/SpeechRecognition#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">Список обработчиков событий SpeechRecognition</a>.) Наиболее распространённый, который вы, вероятно, и будете использовать, это <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onresult">SpeechRecognition.onresult</a>, который запускается сразу после получения успешного результата. Значение цвета получаем вызовом функции <code>getColor()</code></p>
 
 <pre>function getColor(speechResult) {
-  for (let index = 0; index &lt; colorsList.length; index += 1) {
-    if (speechResult.indexOf(colorsList[index]) !== -1) {
-      const colorKey = colorsList[index];
-      return [colorKey, colors[colorKey]];
-    }
-  }
-  return null;
+  for (let index = 0; index &lt; colorsList.length; index += 1) {
+    if (speechResult.indexOf(colorsList[index]) !== -1) {
+      const colorKey = colorsList[index];
+      return [colorKey, colors[colorKey]];
+    }
+  }
+  return null;
 }
 
 recognition.onresult = function(event) {
@@ -182,9 +182,9 @@ recognition.onresult = function(event) {
   console.log('Confidence: ' + event.results[0][0].confidence);
 };</pre>
 
-<p>Третья строка здесь выглядит немного усложнённой, поэтому давайте разберёмся с ней подробнее. Свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results">SpeechRecognitionEvent.results</a></code> возвращает объект <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList">SpeechRecognitionResultList</a></code>, содержащий в себе другие объекты типа <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult">SpeechRecognitionResult</a></code>. У него есть геттер, поэтому он может быть доступен как массив, поэтому переменная <code>last</code> определяет ссылку на <code>SpeechRecognitionResult</code> из списка. Каждый объект <code>SpeechRecognitionResult</code> содержит объекты <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative">SpeechRecognitionAlternative</a></code>, которые содержат отдельные распознанные слова. Они также имеют геттеры, поэтому к ним можно получить доступ как к массивам, поэтому логично, что [0] возвращает значение <code>SpeechRecognitionAlternative</code> по индексу 0. Затем мы возвращаем строку, содержащую индивидуально распознанный результат, используя который и можем установить цвет фона.</p>
+<p>Третья строка здесь выглядит немного усложнённой, поэтому давайте разберёмся с ней подробнее. Свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results">SpeechRecognitionEvent.results</a></code> возвращает объект <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList">SpeechRecognitionResultList</a></code>, содержащий в себе другие объекты типа <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult">SpeechRecognitionResult</a></code>. У него есть геттер, поэтому он может быть доступен как массив, поэтому переменная <code>last</code> определяет ссылку на <code>SpeechRecognitionResult</code> из списка. Каждый объект <code>SpeechRecognitionResult</code> содержит объекты <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative">SpeechRecognitionAlternative</a></code>, которые содержат отдельные распознанные слова. Они также имеют геттеры, поэтому к ним можно получить доступ как к массивам, поэтому логично, что [0] возвращает значение <code>SpeechRecognitionAlternative</code> по индексу 0. Затем мы возвращаем строку, содержащую индивидуально распознанный результат, используя который и можем установить цвет фона.</p>
 
-<p>Мы также используем свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend">SpeechRecognition.speechend</a></code>, чтобы задать обработчик на завершение работы распознавателя речи (вызов <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop">SpeechRecognition.stop()</a></code> ), как только одно слово было распознано, и входящий речевой поток был остановлен.</p>
+<p>Мы также используем свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend">SpeechRecognition.speechend</a></code>, чтобы задать обработчик на завершение работы распознавателя речи (вызов <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop">SpeechRecognition.stop()</a></code> ), как только одно слово было распознано, и входящий речевой поток был остановлен.</p>
 
 <pre>recognition.onspeechend = function() {
   recognition.stop();
@@ -196,13 +196,13 @@ recognition.onresult = function(event) {
 
 <h4 id="Обработка_ошибок">Обработка ошибок</h4>
 
-<p>Последние два обработчика используются для отлова ошибок: когда речь была признана не в соответствии с определённой грамматикой или произошла ошибка. По логике, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch">SpeechRecognition.onnomatch</a></code>, должен обрабатывать первый случай, но обратите внимание, что на данный момент он не срабатывает правильно в Firefox или Chrome, он просто возвращает все, что было распознано в любом случае:</p>
+<p>Последние два обработчика используются для отлова ошибок: когда речь была признана не в соответствии с определённой грамматикой или произошла ошибка. По логике, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch">SpeechRecognition.onnomatch</a></code>, должен обрабатывать первый случай, но обратите внимание, что на данный момент он не срабатывает правильно в Firefox или Chrome, он просто возвращает все, что было распознано в любом случае:</p>
 
 <pre>recognition.onnomatch = function(event) {
   alert("I didn't recognise that color.");
 };</pre>
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror">SpeechRecognition.onerror</a></code> обрабатывает случаи, когда имела место быть фактическая ошибка при распознавании. Свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionError/error">SpeechRecognitionError.error</a></code> содержит возвращаемую фактическую ошибку:</p>
+<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onerror">SpeechRecognition.onerror</a></code> обрабатывает случаи, когда имела место быть фактическая ошибка при распознавании. Свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionError/error">SpeechRecognitionError.error</a></code> содержит возвращаемую фактическую ошибку:</p>
 
 <pre>recognition.onerror = function(event) {
   alert(`Error occurred in recognition: ${event.error}`);
@@ -219,7 +219,7 @@ recognition.onresult = function(event) {
 <h3 id="Демо_2">Демо</h3>
 
 <p>То же самое приложение из предыдущего примера.<br>
- <a href="https://ru.web-speech-api-example.cheliz.top/">Ссылка на приложение</a> или <a href="https://github.com/Oleg-Miniuk/ru_web_speech_example">репозиторий</a> (клонируем, затем <code>npm install &amp;&amp; npm run start</code> в терминале, после чего открыть <strong>localhost:4001</strong> в браузере).<br>
+ <a href="https://ru.web-speech-api-example.cheliz.top/">Ссылка на приложение</a> или <a href="https://github.com/Oleg-Miniuk/ru_web_speech_example">репозиторий</a> (клонируем, затем <code>npm install &amp;&amp; npm run start</code> в терминале, после чего открыть <strong>localhost:4001</strong> в браузере).<br>
  <br>
  Пользовательский интерфейс включает в себя набор элементов для ввода текста, задания высоты тона, скорости воспроизведения и непосредственного выбора голоса, которым будет текст произнесён.</p>
 
@@ -267,7 +267,7 @@ recognition.onresult = function(event) {
           &lt;div class="value value--rate-value"&gt;1&lt;/div&gt;
         &lt;/div&gt;
 
-        &lt;div class="value-box"&gt;
+        &lt;div class="value-box"&gt;
           &lt;div&gt;Диапазон (Pitch)&lt;/div&gt;
           &lt;div class="value value--pitch-value"&gt;1&lt;/div&gt;
         &lt;/div&gt;
@@ -308,7 +308,7 @@ let voices = [];</pre>
 
 <h4 id="Заполнение_выпадающего_списка">Заполнение выпадающего списка</h4>
 
-<p>Чтобы заполнить элемент <code><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> различными вариантами голоса, доступных на устройстве, напишем функцию <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">populateVoiceList()</a></code>. Сначала мы вызываем <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">SpeechSynthesis.getVoices()</a></code>, который возвращает список всех доступных вариантов голосов, представленных объектами <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice">SpeechSynthesisVoice</a></code>. Затем мы проходимся по списку, создавая элемент <code><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name">SpeechSynthesisVoice.name</a></code>), языка голоса (из <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang">SpeechSynthesisVoice.lang</a></code>), и  “по умолчанию”, если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default">SpeechSynthesisVoice.default</a></code> возвращает значение <code>true</code>.)</p>
+<p>Чтобы заполнить элемент <code><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/select">&lt;select&gt;</a></code> различными вариантами голоса, доступных на устройстве, напишем функцию <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">populateVoiceList()</a></code>. Сначала мы вызываем <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">SpeechSynthesis.getVoices()</a></code>, который возвращает список всех доступных вариантов голосов, представленных объектами <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice">SpeechSynthesisVoice</a></code>. Затем мы проходимся по списку, создавая элемент <code><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name">SpeechSynthesisVoice.name</a></code>), языка голоса (из <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang">SpeechSynthesisVoice.lang</a></code>), и  “по умолчанию”, если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default">SpeechSynthesisVoice.default</a></code> возвращает значение <code>true</code>.)</p>
 
 <p>Мы также задаём <code>data-</code> атрибуты для каждого варианта, содержащие имя и язык связанного голоса, благодаря чему мы можем легко их собрать их позже, а затем вложить все варианты в качестве дочерних элементов нашего списка (<code>&lt;select&gt;</code>).</p>
 
@@ -333,7 +333,7 @@ let voices = [];</pre>
   voicesList.selectedIndex = selectedIndex;
 }</pre>
 
-<p>Когда мы собираемся запустить функцию, мы делаем следующее. Это связано с тем, что Firefox не поддерживает свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged">SpeechSynthesis.onvoiceschanged</a></code> и будет только возвращать список голосов при запуске <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">SpeechSynthesis.getVoices()</a></code>. Однако, в Chrome вам нужно дождаться триггера события перед заполнением списка, следовательно, нужно условие, описанное в блоке с <code>if</code> ниже.</p>
+<p>Когда мы собираемся запустить функцию, мы делаем следующее. Это связано с тем, что Firefox не поддерживает свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged">SpeechSynthesis.onvoiceschanged</a></code> и будет только возвращать список голосов при запуске <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices">SpeechSynthesis.getVoices()</a></code>. Однако, в Chrome вам нужно дождаться триггера события перед заполнением списка, следовательно, нужно условие, описанное в блоке с <code>if</code> ниже.</p>
 
 <pre>populateVoiceList();
   if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -342,18 +342,18 @@ let voices = [];</pre>
 
 <h4 id="Озвучка_введённого_текста">Озвучка введённого текста</h4>
 
-<p>Затем мы создаём обработчик событий, чтобы начать “произносить” текст, введённый в текстовом поле, при нажатии на кнопку <code>Enter/Return</code> или на <code>Play</code>. Для этого используем обработчик <code><a href="https://developer.mozilla.org/ru/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a></code> в html-формы. В функции-обработчике <code>speak()</code> мы создаём новый экземпляр <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance">SpeechSynthesisUtterance()</a></code>, передавая значение текстового поля в конструктор.</p>
+<p>Затем мы создаём обработчик событий, чтобы начать “произносить” текст, введённый в текстовом поле, при нажатии на кнопку <code>Enter/Return</code> или на <code>Play</code>. Для этого используем обработчик <code><a href="https://developer.mozilla.org/ru/docs/Web/API/GlobalEventHandlers/onsubmit">onsubmit</a></code> в html-формы. В функции-обработчике <code>speak()</code> мы создаём новый экземпляр <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance">SpeechSynthesisUtterance()</a></code>, передавая значение текстового поля в конструктор.</p>
 
 <p dir="ltr">Затем нам нужно выяснить, какой голос использовать. Мы используем свойство <code><a href="https://developer.mozilla.org/ru/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></code> <code>selectedOptions</code> для получения выбранного элемента <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option">&lt;option&gt;</a></code>, у которого берём атрибут data-name, и находим объект <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice">SpeechSynthesisVoice</a></code>, имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий “голосовой” объект как значение свойства <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice">SpeechSynthesisUtterance.voice</a></code>.</p>
 
 <p>Наконец, мы устанавливаем <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch">SpeechSynthesisUtterance.pitch</a></code> (высота тона) и <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate">SpeechSynthesisUtterance.rate</a></code> (скорость) в соответствии со значениями соответствующих элементов формы. Затем, после всего проделанного, мы запускаем произношение речи, вызывая <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak">SpeechSynthesis.speak()</a></code>, и передавая ему экземпляр <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance">SpeechSynthesisUtterance</a></code> в качестве аргумента.</p>
 
-<p>Внутри функции <code>speak()</code> мы выполняем проверку на то, воспроизводится ли речь в данный момент, с помощью свойства <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking">SpeechSynthesis.speaking</a></code> <br>
- Если да, то останавливаем процесс функцией <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel" title="The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue.">SpeechSynthesis.cancel()</a></code> и запускаем рекурсивно заново.</p>
+<p>Внутри функции <code>speak()</code> мы выполняем проверку на то, воспроизводится ли речь в данный момент, с помощью свойства <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking">SpeechSynthesis.speaking</a></code> <br>
+ Если да, то останавливаем процесс функцией <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel" title="The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue.">SpeechSynthesis.cancel()</a></code> и запускаем рекурсивно заново.</p>
 
 <p>В последней части функции мы включаем обработчик <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">SpeechSynthesisUtterance.onpause</a></code>, чтобы показать пример применения <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent">SpeechSynthesisEvent</a></code> в различных ситуациях. Вызов <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause">SpeechSynthesis.pause() </a></code>возвращает сообщение с информацией о номере символа и слове, на котором была вызвана пауза.</p>
 
-<p>Наконец, мы назовём <code>blur()</code> у текстового поля. Это, прежде всего, для того, чтобы скрыть клавиатуру в ОС Firefox.</p>
+<p>Наконец, мы назовём <code>blur()</code> у текстового поля. Это, прежде всего, для того, чтобы скрыть клавиатуру в ОС Firefox.</p>
 
 <pre>function speak() {
   if (synth.speaking) {
@@ -371,7 +371,7 @@ let voices = [];</pre>
       };
       const selectedOption = voicesList.selectedOptions[0].getAttribute('data-name');
 
-      for (i = 0; i &lt; voices.length; i++) {
+      for (i = 0; i &lt; voices.length; i++) {
         if (voices[i].name === selectedOption) {
           utterThis.voice = voices[i];
         }
@@ -380,10 +380,10 @@ let voices = [];</pre>
       utterThis.onpause = function(event) {
         const char = event.utterance.text.charAt(event.charIndex);
         console.log('Speech paused at character ' +
-          event.charIndex +
-          ' of "' +
-          event.utterance.text +
-          '", which is "' +
+          event.charIndex +
+          ' of "' +
+          event.utterance.text +
+          '", which is "' +
           char +
           '".'
         );

@@ -17,9 +17,9 @@ translation_of: Web/API/Window/parent
 
 <p>Ссылка на родительский объект window или родительский iframe.</p>
 
-<p>Если у объекта window нет родителя, то свойство <span style="font-family: courier,andale mono,monospace;">parent</span> данного объекта будет ссылаться на сам объект.</p>
+<p>Если у объекта window нет родителя, то свойство <span style="font-family: courier,andale mono,monospace;">parent</span> данного объекта будет ссылаться на сам объект.</p>
 
-<p>Если window загружен внутри {{htmlelement("iframe")}}, {{htmlelement("object")}}, или {{htmlelement("frame")}}, то его parent - это объект window с элементом содержащим данный window.</p>
+<p>Если window загружен внутри {{htmlelement("iframe")}}, {{htmlelement("object")}}, или {{htmlelement("frame")}}, то его parent - это объект window с элементом содержащим данный window.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Window/parent
 
 <h2 id="Example">Пример</h2>
 
-<pre class="brush:js">if (window.parent != window.top) {
+<pre class="brush:js">if (window.parent != window.top) {
   // мы находимся глубже чем один уровень
 }</pre>
 
@@ -41,6 +41,6 @@ translation_of: Web/API/Window/parent
 <h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li>{{domxref("window.frameElement")}} возвращает элемент (например <code>&lt;iframe&gt;</code>), который содержит объект  <span style="font-family: courier,andale mono,monospace;">window</span>.</li>
+ <li>{{domxref("window.frameElement")}} возвращает элемент (например <code>&lt;iframe&gt;</code>), который содержит объект  <span style="font-family: courier,andale mono,monospace;">window</span>.</li>
  <li>{{domxref("window.top")}} возвращает ссылку на объект window самого верхнего уровня.</li>
 </ul>

@@ -5,22 +5,22 @@ translation_of: Web/API/CustomElementRegistry
 ---
 <p>{{DefaultAPISidebar("Web Components")}}</p>
 
-<p><span class="seoSummary">A interface <strong><code>CustomElementRegistry</code></strong> provê métodos para registro de elementos customizados e busca de elementos registrados. Para instancia-lo, use a propriedade {{domxref("window.customElements")}}. </span></p>
+<p><span class="seoSummary">A interface <strong><code>CustomElementRegistry</code></strong> provê métodos para registro de elementos customizados e busca de elementos registrados. Para instancia-lo, use a propriedade {{domxref("window.customElements")}}. </span></p>
 
 <h2 id="Métodos">Métodos</h2>
 
 <dl>
  <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>Define um novo <a href="/en-US/docs/Web/Web_Components/Custom_Elements">elemento customizado</a>.</dd>
+ <dd>Define um novo <a href="/en-US/docs/Web/Web_Components/Custom_Elements">elemento customizado</a>.</dd>
  <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>Retorna o construtor do nome do elemento informado, ou <code>undefined</code> caso não tenha sido definido.</dd>
+ <dd>Retorna o construtor do nome do elemento informado, ou <code>undefined</code> caso não tenha sido definido.</dd>
  <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
- <dd>Retorna um {{jsxref("Promise", "promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.</dd>
+ <dd>Retorna um {{jsxref("Promise", "promise")}} vazio que é resolvido quando o elemento customizado é inserido. Se o elemento já foi definido, o retorno ja é informado.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>O código a seguir foi pego do nosso <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> exemplo (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">veja em ação</a>). Perceba que usamos o método {{domxref("CustomElementRegistry.define()")}} para definir um elemento customizado.</p>
+<p>O código a seguir foi pego do nosso <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> exemplo (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">veja em ação</a>). Perceba que usamos o método {{domxref("CustomElementRegistry.define()")}} para definir um elemento customizado.</p>
 
 <pre class="brush: js">// Cria uma classe para o elemento
 class WordCount extends HTMLParagraphElement {
@@ -84,10 +84,10 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p> </p>
+<p> </p>
 
 
 
 <p>{{Compat("api.CustomElementRegistry")}}</p>
 
-<p> </p>
+<p> </p>

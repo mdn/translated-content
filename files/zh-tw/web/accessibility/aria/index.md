@@ -8,7 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/Accessibility/ARIA
 ---
-Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
+Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
 
 ARIA is a set of special accessibility attributes which can be added to any markup, but is especially suited to HTML. The `role` attribute defines what the general type of object is (such as an article, alert, or slider). Additional ARIA attributes provide other useful properties, such as a description for a form or the current value of a progressbar.
 
@@ -30,7 +30,7 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 ### Simple ARIA Enhancements
 
 - [Enhancing Page Navigation with ARIA Landmarks](http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/)
-  - : A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. [See also, ARIA landmark implementation notes](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) and examples on real sites (updated as of July '11).
+  - : A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. [See also, ARIA landmark implementation notes](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) and examples on real sites (updated as of July '11).
 - [Improving Form Accessibility](/en-US/docs/ARIA/forms)
   - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
 - [Live regions (work-in-progress)](/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions)
@@ -41,7 +41,7 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 ### ARIA for Scripted Widgets
 
 - [Keyboard Navigation and Focus for JavaScript Widgets](/en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : The first step in developing an accessible JavaScript widget is to make it keyboard navigable. This article steps through the process. The [Yahoo! focus management article](http://www.yuiblog.com/blog/2009/02/23/managing-focus/) is a great resource as well.
+  - : The first step in developing an accessible JavaScript widget is to make it keyboard navigable. This article steps through the process. The [Yahoo! focus management article](http://www.yuiblog.com/blog/2009/02/23/managing-focus/) is a great resource as well.
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
   - : A challenge with ARIA is getting developers to implement consistent behavior -- clearly best for users. This style guide describes the keyboard interface for common widgets.
 
@@ -76,11 +76,11 @@ ARIA information on blogs tends to get out of date quickly. Still, there is some
 - [ARIA Examples Library](/en-US/docs/Accessibility/ARIA/ARIA_Test_Cases)
   - : A set of barebones example files which are easy to learn from.
 - Accessible JS Widget Library Demos
-  - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
+  - : [Dojo](http://dojotoolkit.org/widgets), [jQuery](http://hanshillen.github.com/jqtest/), [Fluid](http://wiki.fluidproject.org/display/fluid/Components), [YUI](http://yuilibrary.com/gallery/)
 - [Yahoo! Mail](http://mail.yahoo.com)
-  - : Yahoo! puts it all together with Yahoo! Mail, a web app that almost looks like a native app. It works very well. As a [review of Yahoo! Mail](http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/) by screen reader Marco Zehe says, "Keep up the good work!".
+  - : Yahoo! puts it all together with Yahoo! Mail, a web app that almost looks like a native app. It works very well. As a [review of Yahoo! Mail](http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/) by screen reader Marco Zehe says, "Keep up the good work!".
 - [Yahoo! Search](http://search.yahoo.com)
-  - : Yahoo! has done an amazing job of advancing ARIA here, by exercising ARIA's full capabilities and [sharing their techniques](http://ycorpblog.com/2011/03/23/searchdirect/). Yahoo! Search uses a combination of ARIA landmarks, live regions, and widgets.
+  - : Yahoo! has done an amazing job of advancing ARIA here, by exercising ARIA's full capabilities and [sharing their techniques](http://ycorpblog.com/2011/03/23/searchdirect/). Yahoo! Search uses a combination of ARIA landmarks, live regions, and widgets.
 
 ### Standardization Efforts
 
