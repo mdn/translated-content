@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 {{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
 
-左から右へ適用する際は {{jsxref("Array.prototype.reduce()")}} を参照してください。
+左から右へ適用する際は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
 ## 構文
 

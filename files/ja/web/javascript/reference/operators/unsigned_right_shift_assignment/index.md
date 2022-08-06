@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignme
 ---
 {{jsSidebar("Operators")}}
 
-符号なし右シフト代入演算子 (_`>>>=`_) は、指定された数だけビットを右に移動し、結果を変数に代入します。
+符号なし右シフト代入演算子 (_`>>>=`_) は、指定された数だけビットを右に移動し、結果を変数に代入します。
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 

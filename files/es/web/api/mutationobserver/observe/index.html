@@ -5,7 +5,7 @@ translation_of: Web/API/MutationObserver/observe
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary">El método {{domxref("MutationObserver")}} <code><strong>observe()</strong></code><strong> </strong>configura la funcion <code>MutationObserver</code> para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.</span></p>
+<p><span class="seoSummary">El método {{domxref("MutationObserver")}} <code><strong>observe()</strong></code><strong> </strong>configura la funcion <code>MutationObserver</code> para que inicie la recepción de cambios en el DOM que coincidan con las opciones dadas.</span></p>
 
 <p>Según la configuración, el <em>observador </em>verá un solo {{domxref("Node")}} del árbol del DOM, o ese nodo y alguno o todos los nodos descendientes.</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/MutationObserver/observe
 
 <dl>
  <dt><code>target</code></dt>
- <dd> Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al  árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.</dd>
+ <dd> Un {{domxref("Node")}} del DOM (que puede ser un {{domxref("Element")}}) perteneciente al  árbol DOM, o la raiz de un subárbol de nodos, donde observar cambios.</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>Un objeto {{domxref("MutationObserverInit")}} opcional, que decribe qué cambios en el DOM deben ser enviados a la función <code>callback </code>del observador.</dd>
 </dl>
@@ -40,7 +40,7 @@ translation_of: Web/API/MutationObserver/observe
  <dd>
  <ul>
   <li>Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son <strong>false</strong>)</li>
-  <li>La opcion <code>attributes</code> es  <code>false</code> (indicando que los cambios en los atributos no son monitorizados) y <code>attributeOldValue</code> es <code>true</code> y/o <code>attributeFilter</code> está presente.</li>
+  <li>La opcion <code>attributes</code> es  <code>false</code> (indicando que los cambios en los atributos no son monitorizados) y <code>attributeOldValue</code> es <code>true</code> y/o <code>attributeFilter</code> está presente.</li>
   <li>Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son <code>true </code>pero {{domxref("MutationObserverInit.characterData")}} es <code>false</code> (indicando que los cambios en los caracteres no se guardan).</li>
  </ul>
  </dd>
@@ -50,7 +50,7 @@ translation_of: Web/API/MutationObserver/observe
 
 <h3 id="Reutilizar_MutationObservers">Reutilizar MutationObservers</h3>
 
-<p>Puede llamar varias veces al método <code>observe()</code> del mismo objeto <code>MutationObserver</code>  para ver los cambios en diferentes partes del árbol del DOM y/o diferentes tipos de cambios. Sin embargo ha de tener en cuenta:</p>
+<p>Puede llamar varias veces al método <code>observe()</code> del mismo objeto <code>MutationObserver</code>  para ver los cambios en diferentes partes del árbol del DOM y/o diferentes tipos de cambios. Sin embargo ha de tener en cuenta:</p>
 
 <ul>
  <li>Si llama a <code>observe()</code> en un nodo que ya estaba siendo observado por el mísmo <code>MutationObserver</code>, todos los observadores serán automáticamente eliminados de todos los elementos observados antes de que el nuevo observador sea activado.</li>
@@ -67,7 +67,7 @@ translation_of: Web/API/MutationObserver/observe
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Specifications" name="Specifications">Especificaciones</h2>
 
@@ -83,7 +83,7 @@ translation_of: Web/API/MutationObserver/observe
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}}</td>
    <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

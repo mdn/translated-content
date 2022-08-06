@@ -106,7 +106,7 @@ La programmation côté serveur est très utile parce qu'elle nous permet de dé
 
 Des compagnies comme Amazon utilisent la programmation côté serveur pour construire la recherche de produits, faire des suggestions de produit ciblées sur les préférences du client et ses habitudes d'achat, simplifier les achats, etc.
 
-Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipedia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
+Les banques l'utilisent pour stocker les informations du compte ainsi que faire des transactions et n'autoriser à les consulter que les utilisateurs reconnus. D'autres services comme Facebook, Twitter, Instagram, et Wikipédia utilisent la programmation côté serveur pour mettre en avant, partager et contrôler l'accès au contenu.
 
 Les utilisations les plus courantes et les plus bénéfiques de la programmation côté serveur sont listées ci-dessous. Vous verrez qu'il y a quelques recoupements :
 

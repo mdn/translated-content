@@ -5,7 +5,7 @@ translation_of: Web/API/OfflineAudioContext
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<div>A interface <code>OfflineAudioContext</code> é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um <code>OfflineAudioContext</code> não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.</div>
+<div>A interface <code>OfflineAudioContext</code> é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um <code>OfflineAudioContext</code> não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.</div>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/OfflineAudioContext
 
 <dl>
  <dt>{{domxref("OfflineAudioContext.OfflineAudioContext()")}}</dt>
- <dd>Cria uma nova instância <code>OfflineAudioContext</code>.</dd>
+ <dd>Cria uma nova instância <code>OfflineAudioContext</code>.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -31,7 +31,7 @@ translation_of: Web/API/OfflineAudioContext
 
 <dl>
  <dt>{{domxref("OfflineAudioContext.oncomplete")}}</dt>
- <dd>É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}}  - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.</dd>
+ <dd>É uma chamada {{event("Event_handlers", "event handler")}} quando o processamento é encerrado, é quando o evento {{event("complete")}}  - do tipo {{domxref("OfflineAudioCompletionEvent")}} - é gerado, após a versão baseada em eventos do {{domxref("OfflineAudioContext.startRendering()")}} é usada.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -55,14 +55,14 @@ translation_of: Web/API/OfflineAudioContext
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>Nesse exemplo, declaramos um ambos {{domxref("AudioContext")}} e um <code>OfflineAudioContext</code> objeto. Nós usamos o <code>AudioContext</code> para carregar uma faixa de áudio via XHR ({{domxref("AudioContext.decodeAudioData")}}), então o <code>OfflineAudioContext</code> para renderizar o áudio em um {{domxref("AudioBufferSourceNode")}} e reproduzir a trilha. Depois que o gráfico de áudio off-line estiver configurado, você deve renderizá-lo para {{domxref("AudioBuffer")}} usando {{domxref("OfflineAudioContext.startRendering")}}.</p>
+<p>Nesse exemplo, declaramos um ambos {{domxref("AudioContext")}} e um <code>OfflineAudioContext</code> objeto. Nós usamos o <code>AudioContext</code> para carregar uma faixa de áudio via XHR ({{domxref("AudioContext.decodeAudioData")}}), então o <code>OfflineAudioContext</code> para renderizar o áudio em um {{domxref("AudioBufferSourceNode")}} e reproduzir a trilha. Depois que o gráfico de áudio off-line estiver configurado, você deve renderizá-lo para {{domxref("AudioBuffer")}} usando {{domxref("OfflineAudioContext.startRendering")}}.</p>
 
-<p>Quando a 'promise' <code>startRendering()</code> é resolvida, a renderização foi concluída e a saída <code>AudioBuffer</code> é retornada fora da 'promise.</p>
+<p>Quando a 'promise' <code>startRendering()</code> é resolvida, a renderização foi concluída e a saída <code>AudioBuffer</code> é retornada fora da 'promise.</p>
 
-<p>Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa <code>AudioBuffer</code>. Isso é jogado como parte de um gráfico de áudio padrão simples.</p>
+<p>Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBufferSourceNode")}} dentro dele e configuramos o buffer para ser igual à promessa <code>AudioBuffer</code>. Isso é jogado como parte de um gráfico de áudio padrão simples.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Para um exemplo de trabalho, veja nosso <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (veja o <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">código fonte</a> também.)</p>
+<p><strong>Nota</strong>: Para um exemplo de trabalho, veja nosso <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (veja o <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">código fonte</a> também.)</p>
 </div>
 
 <pre class="brush: js">// define o contexto de áudio online e offline

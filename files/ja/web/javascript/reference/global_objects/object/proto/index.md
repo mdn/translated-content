@@ -53,9 +53,9 @@ console.log(shape.__proto__ === Circle);  // false
 
 const ShapeA = function () {};
 const ShapeB = {
-    a() {
-        console.log('aaa');
-    }
+    a() {
+        console.log('aaa');
+    }
 };
 console.log(ShapeA.prototype.__proto__ = ShapeB);
 

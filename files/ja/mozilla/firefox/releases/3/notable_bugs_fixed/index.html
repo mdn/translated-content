@@ -16,7 +16,7 @@ original_slug: Notable_bugs_fixed_in_Firefox_3
  <li>ボタンの <code>dlgType</code> プロパティが正しく動作するようになりました。 ({{ Bug(308591) }})</li>
  <li>{{ Domxref("event.initEvent") }} の引数 <code>canBubble</code> が正しく動作するようになり、浮上しないイベントを発生させられるようになりました。 ({{ Bug(330190) }})</li>
  <li><code>DOMAttrModified</code> イベントが名前空間付きの属性を適切に処理するようになりました。 ({{ Bug(362391) }})</li>
- <li><code>&lt;?xml-stylesheet ?&gt;</code> のようなXML処理命令が、 XUL 文書の DOM へと追加されるようになりました。したがって、 {{ Domxref("document.firstChild") }} が必ずしもルート要素であることを保証しないことになります。代わりに {{ Domxref("document.documentElement") }} を使用してください。また、 <code>&lt;?xml-stylesheet ?&gt;</code> や <code>&lt;?xul-overlay ?&gt;</code> 処理命令は、文書の前置き以外の場所では効果を発揮しないようになりました。 ({{ Bug(319654) }})</li>
+ <li><code>&lt;?xml-stylesheet ?&gt;</code> のようなXML処理命令が、 XUL 文書の DOM へと追加されるようになりました。したがって、 {{ Domxref("document.firstChild") }} が必ずしもルート要素であることを保証しないことになります。代わりに {{ Domxref("document.documentElement") }} を使用してください。また、 <code>&lt;?xml-stylesheet ?&gt;</code> や <code>&lt;?xul-overlay ?&gt;</code> 処理命令は、文書の前置き以外の場所では効果を発揮しないようになりました。 ({{ Bug(319654) }})</li>
  <li>XUL 要素や文書に対する <span id="m-getElementsByAttributeNS"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS()</a></code></span> 関数が追加されました。 ({{ Bug(239976) }})</li>
  <li>XUL 文書から要素を移動したり削除したりしても、イベントリスナが保持されます。 ({{ Bug(286619) }})</li>
  <li>変異イベントが非表示ドキュメントでも発生するようになりました。 ({{ Bug(201236) }})</li>

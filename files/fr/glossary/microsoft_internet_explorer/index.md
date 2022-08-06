@@ -24,9 +24,9 @@ IE a évolué au fur et à mesure de nombreuses versions et en est actuellement 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} sur Wikipédia
-- {{interwiki("wikipedia", "Internet Explorer#Historique", "Historique d'Internet Explorer")}} sur Wikipédia
-- {{interwiki("wikipedia", "Internet Explorer#Versions", "Versions d'Internet Explorer")}} sur Wikipédia
+- [Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer) sur Wikipédia
+- [Historique d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Historique) sur Wikipédia
+- [Versions d'Internet Explorer](https://fr.wikipedia.org/wiki/Internet_Explorer#Versions) sur Wikipédia
 
 ### À propos d'Internet Explorer
 

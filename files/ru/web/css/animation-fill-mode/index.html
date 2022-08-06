@@ -11,7 +11,7 @@ translation_of: Web/CSS/animation-fill-mode
 
 <h2 id="Описание">Описание</h2>
 
-<p><a href="/en/CSS" title="CSS">CSS</a> свойство <strong><code>animation-fill-mode</code></strong> определяет, как нужно применять стили к объекту анимации до и после её выполнения.</p>
+<p><a href="/en/CSS" title="CSS">CSS</a> свойство <strong><code>animation-fill-mode</code></strong> определяет, как нужно применять стили к объекту анимации до и после её выполнения.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -32,9 +32,9 @@ animation-fill-mode: both, forwards, none;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>Стили анимации не будут применены к элементу до и после её выполнения.</dd>
+ <dd>Стили анимации не будут применены к элементу до и после её выполнения.</dd>
  <dt><code>forwards</code></dt>
- <dd>По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
+ <dd>По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
  <table class="standard-table">
   <thead>
    <tr>
@@ -47,7 +47,7 @@ animation-fill-mode: both, forwards, none;
    <tr>
     <td><code>normal</code></td>
     <td>любое</td>
-    <td><code>100%</code> или <code>to</code></td>
+    <td><code>100%</code> или <code>to</code></td>
    </tr>
    <tr>
     <td><code>reverse</code></td>
@@ -78,7 +78,7 @@ animation-fill-mode: both, forwards, none;
  </table>
  </dd>
  <dt><code>backwards</code></dt>
- <dd>Элемент сохранит стиль первого <a href="/en-US/docs/CSS/@keyframes">ключевого кадра</a> на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
+ <dd>Элемент сохранит стиль первого <a href="/en-US/docs/CSS/@keyframes">ключевого кадра</a> на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
  <table class="standard-table">
   <thead>
    <tr>
@@ -88,18 +88,18 @@ animation-fill-mode: both, forwards, none;
   </thead>
   <tbody>
    <tr>
-    <td><code>normal</code> или <code>alternate</code></td>
-    <td><code>0%</code> или <code>from</code></td>
+    <td><code>normal</code> или <code>alternate</code></td>
+    <td><code>0%</code> или <code>from</code></td>
    </tr>
    <tr>
-    <td><code>reverse</code> или <code>alternate-reverse</code></td>
-    <td><code>100%<font face="Open Sans, Arial, sans-serif"> или </font></code><code>to</code></td>
+    <td><code>reverse</code> или <code>alternate-reverse</code></td>
+    <td><code>100%<font face="Open Sans, Arial, sans-serif"> или </font></code><code>to</code></td>
    </tr>
   </tbody>
  </table>
  </dd>
  <dt><code>both</code></dt>
- <dd>Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.</dd>
+ <dd>Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
@@ -108,7 +108,7 @@ animation-fill-mode: both, forwards, none;
 
 <h2 id="Example">Пример</h2>
 
-<p>Вы можете посмотреть эффект animation-fill-mode в следующем примере. По умолчанию, по окончании анимации стиль элемента возвращается к исходному. Значение forwards сохранит для элемента стиль последнего ключевого кадра.</p>
+<p>Вы можете посмотреть эффект animation-fill-mode в следующем примере. По умолчанию, по окончании анимации стиль элемента возвращается к исходному. Значение forwards сохранит для элемента стиль последнего ключевого кадра.</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -161,6 +161,6 @@ animation-fill-mode: both, forwards, none;
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимации</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="Tutorial about CSS animations">Использование CSS-анимации</a></li>
  <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
 </ul>

@@ -12,7 +12,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D.fillStyle`** は[キャンバス 2D API](/ja/docs/Web/API/Canvas_API) のプロパティで、図形の内側を塗りつぶすために使用する色、グラデーション、またはパターンを指定します。既定値は `#000` (黒色)です。
+**`CanvasRenderingContext2D.fillStyle`** は[キャンバス 2D API](/ja/docs/Web/API/Canvas_API) のプロパティで、図形の内側を塗りつぶすために使用する色、グラデーション、またはパターンを指定します。既定値は `#000` (黒色)です。
 
 > **Note:** 輪郭と塗りつぶしのスタイル例については、[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[スタイルと色を適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)をご覧ください。
 
@@ -27,7 +27,7 @@ ctx.fillStyle = pattern;
 ### オプション
 
 - `color`
-  - : {{domxref("DOMString")}} で、 [CSS](/ja/docs/Web/CSS) の {{cssxref("&lt;color&gt;")}} 値として解釈される値です。
+  - : {{domxref("DOMString")}} で、 [CSS](/ja/docs/Web/CSS) の {{cssxref("&lt;color&gt;")}} 値として解釈される値です。
 - `gradient`
   - : {{domxref("CanvasGradient")}} オブジェクト (線形または放射状のグラデーション) 。
 - `pattern`
@@ -61,7 +61,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### ループを使用した複数の塗りつぶし色の作成
 
-この例では 2 つの `for` ループでそれぞれが異なる塗りつぶし色を持つ四角形のグリッドを描画します。 このためには、 2 つの変数 `i` と `j` を四角形ごとに固有となる RGB 色を生成するために使用し、また赤色と緑色の値だけを変更するようにします (青色は固定値とします) 。チャンネルを変更することによって全ての種類のパターンを生成することができます。
+この例では 2 つの `for` ループでそれぞれが異なる塗りつぶし色を持つ四角形のグリッドを描画します。 このためには、 2 つの変数 `i` と `j` を四角形ごとに固有となる RGB 色を生成するために使用し、また赤色と緑色の値だけを変更するようにします (青色は固定値とします) 。チャンネルを変更することによって全ての種類のパターンを生成することができます。
 
 ```html hidden
 <canvas id="canvas" width="150" height="150"></canvas>

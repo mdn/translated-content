@@ -21,28 +21,28 @@ translation_of: Web/API/WebRTC_API/Connectivity
 
 <h3 id="Session_descriptions">Session descriptions</h3>
 
-<p>WebRTC 接続のエンドポイント設定は <strong>session description</strong> と呼ばれます。そこに含まれる情報は、送られるメディアの種類、形式、使用される転送プロトコル、エンドポイントの IP アドレスとポート、またその他メディア転送エンドポイントを記述するのに必要な情報です。この情報を  <strong>Session Description Protocol</strong> ({{Glossary("SDP")}}) を使って交換し、保存します。SDP データ形式の詳細は {{RFC(2327)}} にあります。</p>
+<p>WebRTC 接続のエンドポイント設定は <strong>session description</strong> と呼ばれます。そこに含まれる情報は、送られるメディアの種類、形式、使用される転送プロトコル、エンドポイントの IP アドレスとポート、またその他メディア転送エンドポイントを記述するのに必要な情報です。この情報を  <strong>Session Description Protocol</strong> ({{Glossary("SDP")}}) を使って交換し、保存します。SDP データ形式の詳細は {{RFC(2327)}} にあります。</p>
 
-<p>ユーザーが WebRTC コールを他のユーザーに開始するとき、<strong>オファー</strong>と呼ばれる特別な記述を作成します。コールする側がコールに必要な設定を提案し、そのすべての情報をオファーの記述に盛り込みます。受け取る側は<strong>アンサー</strong>を返します。アンサーは受け取る側が用意する記述です。このようにして、両デバイスがお互いにメディアデータの交換に必要な情報を共有します。この交換は Interactive Connectivity Establishment ({{Glossary("ICE")}}) を使って行われます。ICE とは二つのデバイスが Network Address Translation ({{Glossary("NAT")}}) によって隔てられていてもオファーとアンサーを交換するために媒介を利用できるようにするプロトコルです。</p>
+<p>ユーザーが WebRTC コールを他のユーザーに開始するとき、<strong>オファー</strong>と呼ばれる特別な記述を作成します。コールする側がコールに必要な設定を提案し、そのすべての情報をオファーの記述に盛り込みます。受け取る側は<strong>アンサー</strong>を返します。アンサーは受け取る側が用意する記述です。このようにして、両デバイスがお互いにメディアデータの交換に必要な情報を共有します。この交換は Interactive Connectivity Establishment ({{Glossary("ICE")}}) を使って行われます。ICE とは二つのデバイスが Network Address Translation ({{Glossary("NAT")}}) によって隔てられていてもオファーとアンサーを交換するために媒介を利用できるようにするプロトコルです。</p>
 
-<p>各ピアは二つの記述を手に入れます。 <strong>local description</strong> が自分側の記述で、 <strong>remote description</strong> が相手側の記述です。</p>
+<p>各ピアは二つの記述を手に入れます。 <strong>local description</strong> が自分側の記述で、 <strong>remote description</strong> が相手側の記述です。</p>
 
-<p>オファー／アンサーの交換はコールを最初に確立する際に実行されますが、それだけでなくフォーマットや他の設定に変更が必要なときにも随時実行されます。コールの新規作成時でも既存の設定変更時でも、いずれにしてもオファーとアンサーを交換するために以下のような基本的なステップが実行されます。なお、ここでは ICE レイヤーは除外しています。</p>
+<p>オファー／アンサーの交換はコールを最初に確立する際に実行されますが、それだけでなくフォーマットや他の設定に変更が必要なときにも随時実行されます。コールの新規作成時でも既存の設定変更時でも、いずれにしてもオファーとアンサーを交換するために以下のような基本的なステップが実行されます。なお、ここでは ICE レイヤーは除外しています。</p>
 
 <ol>
- <li>呼び出す側が {{domxref("navigator.mediaDevices.getUserMedia()")}} を通じてローカルメディアを取得する</li>
- <li>呼び出す側が <code>RTCPeerConnection</code> を作成し、 {{domxref("RTCPeerConnection.addTrack()")}} を実行する。(<code>addStream</code> が非推奨であるため)</li>
+ <li>呼び出す側が {{domxref("navigator.mediaDevices.getUserMedia()")}} を通じてローカルメディアを取得する</li>
+ <li>呼び出す側が <code>RTCPeerConnection</code> を作成し、 {{domxref("RTCPeerConnection.addTrack()")}} を実行する。(<code>addStream</code> が非推奨であるため)</li>
  <li>呼び出す側がオファーを作成するために {{domxref("RTCPeerConnection.createOffer()")}} を実行する</li>
- <li>呼び出す側がオファーを <em>local description</em> (ローカル側の接続の記述) として設定するために {{domxref("RTCPeerConnection.setLocalDescription()")}} を実行する</li>
+ <li>呼び出す側がオファーを <em>local description</em> (ローカル側の接続の記述) として設定するために {{domxref("RTCPeerConnection.setLocalDescription()")}} を実行する</li>
  <li>呼び出す側は setLocalDescription() を実行した後、STUN サーバーに問い合わせて ICE 候補を生成する</li>
  <li>呼び出す側がシグナリングサーバーを使ってオファーを届けたい相手に送る</li>
  <li>受け取る側がオファーを受け取り、それを <em>remote description</em> (相手側の接続の記述) として記録するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する</li>
  <li>受け取る側がコールに必要なセットアップを行う。ローカルメディアを取得し、 {{domxref("RTCPeerConnection.addTrack()")}} を通じてメディアトラックをピア接続にアタッチする</li>
- <li>受け取る側が {{domxref("RTCPeerConnection.createAnswer()")}} を実行することでアンサーを作成する</li>
+ <li>受け取る側が {{domxref("RTCPeerConnection.createAnswer()")}} を実行することでアンサーを作成する</li>
  <li>受け取る側が {{domxref("RTCPeerConnection.setLocalDescription()")}} に作成したアンサーを渡して実行し、アンサーを自身の local description としてセットする。この時点で受け取る側は両側の接続設定を知ることになる。</li>
  <li>受け取る側がシグナリングサーバーを使ってアンサーを呼び出す側に送る</li>
  <li>呼び出す側がアンサーを受け取る。</li>
- <li>呼び出す側がアンサーを remote description として設定するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する。これで呼び出す側も両者の設定を知ることになる。設定した通りにメディアが流れ始める。</li>
+ <li>呼び出す側がアンサーを remote description として設定するために {{domxref("RTCPeerConnection.setRemoteDescription()")}} を実行する。これで呼び出す側も両者の設定を知ることになる。設定した通りにメディアが流れ始める。</li>
 </ol>
 
 <h3 id="Pending_and_current_descriptions">Pending and current descriptions</h3>
@@ -51,7 +51,7 @@ translation_of: Web/API/WebRTC_API/Connectivity
 
 <p>The <strong>current description</strong> (which is returned by the {{domxref("RTCPeerConnection.currentLocalDescription")}} and {{domxref("RTCPeerConnection.currentRemoteDescription")}} properties) represents the description currently in actual use by the connection. This is the most recent connection that both sides have fully agreed to use.</p>
 
-<p>The <strong>pending description</strong> (returned by {{domxref("RTCPeerConnection.pendingLocalDescription")}} and {{domxref("RTCPeerConnection.pendingRemoteDescription")}}) indicates a description which is currently under consideration following a call to  <code>setLocalDescription()</code> or <code>setRemoteDescription()</code>, respectively.</p>
+<p>The <strong>pending description</strong> (returned by {{domxref("RTCPeerConnection.pendingLocalDescription")}} and {{domxref("RTCPeerConnection.pendingRemoteDescription")}}) indicates a description which is currently under consideration following a call to  <code>setLocalDescription()</code> or <code>setRemoteDescription()</code>, respectively.</p>
 
 <p>When reading the description (returned by {{domxref("RTCPeerConnection.localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription")}}), the returned value is the value of <code>pendingLocalDescription</code>/<code>pendingRemoteDescription</code> if there's a pending description (that is, the pending description isn't <code>null</code>); otherwise, the current description (<code>currentLocalDescription</code>/<code>currentRemoteDescription</code>) is returned.</p>
 
@@ -127,7 +127,7 @@ translation_of: Web/API/WebRTC_API/Connectivity
 
 <p>To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is <code>rollback</code>. Any other properties in the description object are ignored.</p>
 
-<p>In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state <code>have-local-offer</code>, indicating that the local peer had previously <em>sent</em> an offer, calling <code>setRemoteDescription()</code> with a <em>received</em> offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.</p>
+<p>In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state <code>have-local-offer</code>, indicating that the local peer had previously <em>sent</em> an offer, calling <code>setRemoteDescription()</code> with a <em>received</em> offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.</p>
 
 <h3 id="ICE_restarts">ICE restarts</h3>
 

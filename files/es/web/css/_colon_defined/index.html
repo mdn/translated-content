@@ -11,16 +11,16 @@ translation_of: 'Web/CSS/:defined'
 ---
 <div>{{ CSSRef }}</div>
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:defined</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier elemento que se haya definido.  Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).</p>
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:defined</code></strong> de <a href="/es/docs/Web/CSS">CSS</a> representa cualquier elemento que se haya definido.  Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).</p>
 
 <pre class="brush: css no-line-numbers">/* Selecciona cualquier elemento definido */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* Selecciona cualquier instancia de un elemento personalizado específico */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 </pre>
 
@@ -30,7 +30,7 @@ simple-custom:defined {
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>Los siguientes fragmentos están tomados de nuestra demostración <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">Pseudo-clase-definida</a> (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">ver también en directo</a>).</p>
+<p>Los siguientes fragmentos están tomados de nuestra demostración <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">Pseudo-clase-definida</a> (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">ver también en directo</a>).</p>
 
 <p>En esta demostración, definimos un elemento personalizado trivial muy simple:</p>
 
@@ -47,7 +47,7 @@ simple-custom:defined {
   }
 })</pre>
 
-<p>Luego inserta una copia de este elemento en el documento, junto con un <code>&lt;p&gt;</code> estándar:</p>
+<p>Luego inserta una copia de este elemento en el documento, junto con un <code>&lt;p&gt;</code> estándar:</p>
 
 <pre class="brush: html">&lt;simple-custom text="Texto de ejemplo del elemento personalizado"&gt;&lt;/simple-custom&gt;
 
@@ -79,7 +79,7 @@ simple-custom:defined {
   display: block;
 }</pre>
 
-<p>Esto es útil si tiene un elemento personalizado complejo que demora un tiempo en cargarse en la página — es posible que desee ocultar las instancias del elemento hasta que la definición esté completa, para que no terminen con feos destellos de elementos sin estilo en la página</p>
+<p>Esto es útil si tiene un elemento personalizado complejo que demora un tiempo en cargarse en la página — es posible que desee ocultar las instancias del elemento hasta que la definición esté completa, para que no terminen con feos destellos de elementos sin estilo en la página</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

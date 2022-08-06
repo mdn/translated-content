@@ -54,14 +54,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
     <p>これらのスクリプトは、配列内の出現順で読み込まれます。</p>
 
-    <p><code>"scripts"</code> を指定したときは、スクリプトを実行するための空のバックグラウンドページが作られます。</p>
+    <p><code>"scripts"</code> を指定したときは、スクリプトを実行するための空のバックグラウンドページが作られます。</p>
 
     <div class="note">
-    <p><strong>注:</strong> <code>&lt;script&gt;</code> タグを使って外部からスクリプトを取り込む場合 (例: <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>)、拡張機能の manifest.json で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> キーを変更する必要があります。</p>
+    <p><strong>注:</strong> <code>&lt;script&gt;</code> タグを使って外部からスクリプトを取り込む場合 (例: <code>&lt;script src = "https://code.jquery.com/jquery-1.7.1.min.js"&gt;</code>)、拡張機能の manifest.json で <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> キーを変更する必要があります。</p>
     </div>
 
     <div class="note">
-    <p><strong>注:</strong> Firefox 50 より前のバージョンにはこれに影響するバグがあることに注意してください。Firefox のデバッガーが開いているときは、必ずしも配列内の出現順でスクリプトが読み込まれるとは限りません。このバグに対処するには、<code>"page"</code> プロパティを使い、そのページから <code>&lt;script&gt;</code> タグによってバックグラウンドスクリプトを読み込んでください。このバグは Firefox 50 で修正され、それ以降は常に配列内の出現順でスクリプトが読み込まれます。</p>
+    <p><strong>注:</strong> Firefox 50 より前のバージョンにはこれに影響するバグがあることに注意してください。Firefox のデバッガーが開いているときは、必ずしも配列内の出現順でスクリプトが読み込まれるとは限りません。このバグに対処するには、<code>"page"</code> プロパティを使い、そのページから <code>&lt;script&gt;</code> タグによってバックグラウンドスクリプトを読み込んでください。このバグは Firefox 50 で修正され、それ以降は常に配列内の出現順でスクリプトが読み込まれます。</p>
     </div>
    </td>
   </tr>
@@ -96,9 +96,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 <h2 id="Example" name="Example">例</h2>
 
-<pre class="brush: json no-line-numbers">  "background": {
-    "scripts": ["jquery.js", "my-background.js"]
-  }</pre>
+<pre class="brush: json no-line-numbers">  "background": {
+    "scripts": ["jquery.js", "my-background.js"]
+  }</pre>
 
 <p>２つのバックグラウンドスクリプトを読み込みます。</p>
 

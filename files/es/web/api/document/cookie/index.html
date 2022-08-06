@@ -32,7 +32,7 @@ original_slug: DOM/document.cookie
   <ul>
    <li class="eval"><code>;path=<em>pat</em>h</code> (p. ej.: '/'. '/midir'). Si no se especifica, por defecto corresponde a la ruta del documento actual.<br>
     La ruta debe ser <strong>absoluta</strong> (ver <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a>). Para más información sobre cómo utilizar rutas relativas, ir a <a href="https://developer.mozilla.org/es/docs/DOM/document.cookie$edit#Using_relative_URLs_in_the_path_parameter">este párrafo</a>.</li>
-   <li class="eval"><code>;domain=<em>domain</em></code> (p. ej. 'example.com', 'subdomain.example.com'). Si no se especifica, su valor por defecto es la porción de la dirección web de la ubicación actual del archivo. A diferencia de lo que ocurría en las primeras especificaciones, los puntos iniciales de los nombre de dominio se ignoran, pero los navegadores pueden impedir crear cookies que contengan dichos puntos. Si se especifica un dominio, los subdominios siempre son incluidos.</li>
+   <li class="eval"><code>;domain=<em>domain</em></code> (p. ej. 'example.com', 'subdomain.example.com'). Si no se especifica, su valor por defecto es la porción de la dirección web de la ubicación actual del archivo. A diferencia de lo que ocurría en las primeras especificaciones, los puntos iniciales de los nombre de dominio se ignoran, pero los navegadores pueden impedir crear cookies que contengan dichos puntos. Si se especifica un dominio, los subdominios siempre son incluidos.</li>
    <li class="eval"><code>;max-age=</code><em><code>duración-máxima-en-segundos</code></em> Por ejemplo: 60*60*24*365 para un año.</li>
    <li class="eval"><code>;expires=</code><em><code>fecha-en-formato-GMTString</code> </em>Si no se especifica <code>max-age</code> ni <code>expires</code>, la cookie expirará al terminar la sesión actual.</li>
    <li class="eval"><code>;secure</code> La cookie sólo será transmitida en un protocolo seguro (HTTPS, SSL). Antes de Chrmoe 52, este atributo podía aparecer con cookes de dominios http.</li>
@@ -47,7 +47,7 @@ original_slug: DOM/document.cookie
  <li class="eval">El valor de la cookie puede ser evaluado mediante <a href="/es/Referencia_de_JavaScript_1.5/Funciones_globales/encodeURIComponent" title="encodeURIComponent">encodeURIComponent()</a> para asegurarse de que dicha cadena no incluya comas, punto y coma, ni espacios en blanco (lo cual no está permitido en el valor de una cookie).</li>
  <li class="eval">Algunas implementaciones de agente de usuario soporta los siguientes prefijos de cookie:
   <ul>
-   <li class="eval"><code>__Secure-</code>  Señales para el navegador que solo deben incluirse en las perticiones de cookie transmitidas por un canal seguro.</li>
+   <li class="eval"><code>__Secure-</code>  Señales para el navegador que solo deben incluirse en las perticiones de cookie transmitidas por un canal seguro.</li>
    <li class="eval"><code>__Host-</code> Señales del navegador que además de la restricción de uso de cookies que provienen de un origen serugo, el ámbito de la cookie está limitado a un atributo path que proporciona el servidor. Si el servidor omite el atributo path, el directorio de las petición URI está en uso. Tabién las señales del atributo dominio no deben estar presentes, lo cual previene que la cookie sea usada en otros dominis. Para Chrome, el atributo path debe tener el mismo origen.</li>
   </ul>
  </li>
@@ -70,7 +70,7 @@ function alertCookie() {
 
 <p>{{EmbedLiveSample('Example_1_Simple_usage', 200, 36)}}</p>
 
-<h3 id="Ejemplo_2_Obtener_una_cookie_de_ejemplo_llamada_test2">Ejemplo #2: Obtener una cookie de ejemplo llamada <em>test2</em></h3>
+<h3 id="Ejemplo_2_Obtener_una_cookie_de_ejemplo_llamada_test2">Ejemplo #2: Obtener una cookie de ejemplo llamada <em>test2</em></h3>
 
 <pre>document.cookie = "test1=Hola";
 document.cookie = "test2=Mundo";
@@ -86,9 +86,9 @@ function alertCookieValue() {
 
 <p>{{EmbedLiveSample('Example_2_Get_a_sample_cookie_named_test2', 200, 36)}}</p>
 
-<h3 id="Ejemplo_3_Hacer_algo_una_sola_vez">Ejemplo #3: Hacer algo una sola vez</h3>
+<h3 id="Ejemplo_3_Hacer_algo_una_sola_vez">Ejemplo #3: Hacer algo una sola vez</h3>
 
-<p>De manera a usar el siguiente código, favor remplace todas las veces la palabra <code>hacerAlgoUnaSolaVez</code> (el nombre de la cookie) con un nombre personalizado.</p>
+<p>De manera a usar el siguiente código, favor remplace todas las veces la palabra <code>hacerAlgoUnaSolaVez</code> (el nombre de la cookie) con un nombre personalizado.</p>
 
 <pre>function hazUnaVez() {
   if (document.cookie.replace(/(?:(?:^|.*;\s*)<code>hacerAlgoUnaSolaVez</code>\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
@@ -110,7 +110,7 @@ function alertCookieValue() {
 <ul>
  <li>Empezando con Firefox 2, está disponible un mejor mecanismo de almacenamiento en cliente - <a href="/es/DOM/Storage" title="es/DOM/Storage">WHATWG DOM Storage</a>.</li>
  <li>Puedes eliminar una cookie simplemente estableciendo su fecha de expiración a cero.</li>
- <li>Cabe mencionar que entre más cookies se tengan, mayor cantidad de datos serán transferidos entre el servidor y el cliente en cada solicitud. Esto reducirá el tiempo entre cada solicitud. Es altamente recomendado que se utilice <a href="/es/DOM/Storage" title="es/DOM/Storage">WHATWG DOM Storage</a> si se van a mantener los datos solamente en el cliente.</li>
+ <li>Cabe mencionar que entre más cookies se tengan, mayor cantidad de datos serán transferidos entre el servidor y el cliente en cada solicitud. Esto reducirá el tiempo entre cada solicitud. Es altamente recomendado que se utilice <a href="/es/DOM/Storage" title="es/DOM/Storage">WHATWG DOM Storage</a> si se van a mantener los datos solamente en el cliente.</li>
 </ul>
 
 <h3 id="Especificaci.C3.B3n" name="Especificaci.C3.B3n">Especificación</h3>

@@ -84,23 +84,23 @@ translation_of: Web/HTML/Element/menu
 
 <pre class="brush: html;">&lt;!-- A &lt;div&gt; element with a context menu --&gt;
 &lt;div contextmenu="popup-menu"&gt;
-  Right-click to see the adjusted context menu
+  Right-click to see the adjusted context menu
 &lt;/div&gt;
 
 &lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
+  &lt;hr/&gt;
+  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
 &lt;/menu&gt;
 </pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css;">div {
-  width: 300px;
-  height: 80px;
-  background-color: lightgreen;
+  width: 300px;
+  height: 80px;
+  background-color: lightgreen;
 }
 </pre>
 
@@ -122,14 +122,14 @@ translation_of: Web/HTML/Element/menu
 
 <pre class="brush: html;">&lt;!-- A button, which displays a menu when clicked. --&gt;
 &lt;button type="menu" menu="popup-menu"&gt;
-  Dropdown
+  Dropdown
 &lt;/button&gt;
 
 &lt;menu type="context" id="popup-menu"&gt;
-  &lt;menuitem&gt;Action&lt;/menuitem&gt;
-  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
-  &lt;hr/&gt;
-  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Action&lt;/menuitem&gt;
+  &lt;menuitem&gt;Another action&lt;/menuitem&gt;
+  &lt;hr/&gt;
+  &lt;menuitem&gt;Separated action&lt;/menuitem&gt;
 &lt;/menu&gt;
 </pre>
 
@@ -146,23 +146,23 @@ translation_of: Web/HTML/Element/menu
 <h4 id="HTML_3">HTML</h4>
 
 <pre class="brush: html;">&lt;!-- A context menu for a simple editor,
-   - containing two menu buttons. --&gt;
+   - containing two menu buttons. --&gt;
 &lt;menu type="toolbar"&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
-    &lt;menu type="context" id="file-menu"&gt;
-      &lt;menuitem label="New..." onclick="newFile()"&gt;
-      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
-    &lt;menu type="context" id="edit-menu"&gt;
-      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
-      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
-      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
-    &lt;/menu&gt;
-  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button type="menu" menu="file-menu"&gt;File&lt;/button&gt;
+    &lt;menu type="context" id="file-menu"&gt;
+      &lt;menuitem label="New..." onclick="newFile()"&gt;
+      &lt;menuitem label="Save..." onclick="saveFile()"&gt;
+    &lt;/menu&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;button type="menu" menu="edit-menu"&gt;Edit&lt;/button&gt;
+    &lt;menu type="context" id="edit-menu"&gt;
+      &lt;menuitem label="Cut..." onclick="cutEdit()"&gt;
+      &lt;menuitem label="Copy..." onclick="copyEdit()"&gt;
+      &lt;menuitem label="Paste..." onclick="pasteEdit()"&gt;
+    &lt;/menu&gt;
+  &lt;/li&gt;
 &lt;/menu&gt;
 </pre>
 

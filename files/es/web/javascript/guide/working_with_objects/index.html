@@ -350,7 +350,7 @@ car2.displayCar();
 
 <h2 id="Usar_this_para_referencias_a_objetos">Usar <code>this</code> para referencias a objetos</h2>
 
-<p>JavaScript tiene una palabra clave especial, <code>this</code>, que puedes usar dentro de un método para referirte al objeto actual. Por ejemplo, supongamos que tienes 2 objetos,<code>Manager</code> e <code>Intern</code>. Cada objeto tiene su propio <code>name</code>,<code>age</code> y <code>job</code>. En la función <code>sayHi()</code>, observa que hay <code>this.name</code>. Cuando se agregan a los 2 objetos, se pueden llamar y devuelve el <code>'Hola, mi nombre es'</code> y luego agrega el valor <code>name</code> de ese objeto específico. Como se muestra abajo. </p>
+<p>JavaScript tiene una palabra clave especial, <code>this</code>, que puedes usar dentro de un método para referirte al objeto actual. Por ejemplo, supongamos que tienes 2 objetos,<code>Manager</code> e <code>Intern</code>. Cada objeto tiene su propio <code>name</code>,<code>age</code> y <code>job</code>. En la función <code>sayHi()</code>, observa que hay <code>this.name</code>. Cuando se agregan a los 2 objetos, se pueden llamar y devuelve el <code>'Hola, mi nombre es'</code> y luego agrega el valor <code>name</code> de ese objeto específico. Como se muestra abajo. </p>
 
 <pre class="brush: js notranslate">const Manager = {
   name: "John",
@@ -376,7 +376,7 @@ Manager.sayHi() // Hola, mi nombre es John'
 Intern.sayHi() // Hola, mi nombre es Ben'
 </pre>
 
-<p><code>this</code> se refiere al objeto en el que se encuentra. Puedes crear una nueva función llamada <code>howOldAmI()</code> que registra una oración que dice cuántos años tiene la persona. </p>
+<p><code>this</code> se refiere al objeto en el que se encuentra. Puedes crear una nueva función llamada <code>howOldAmI()</code> que registra una oración que dice cuántos años tiene la persona. </p>
 
 <pre class="brush: js notranslate">function howOldAmI() {
   console.log('Tengo ' + this.age + ' años.')
@@ -387,7 +387,7 @@ Manager.howOldAmI() // Tengo 27 años.
 
 <h2 id="Definición_de_captadores_getters_y_establecedores_setters">Definición de captadores (<code>getters</code>) y establecedores (<code>setters</code>)</h2>
 
-<p>Un captador (<a href="/es/docs/Web/JavaScript/Reference/Functions/get">getter</a>) es un método que obtiene el valor de una propiedad específica. Un establecedor (<a href="/es/docs/Web/JavaScript/Reference/Functions/set">setter</a>) es un método que establece el valor de una propiedad específica. Puedes definir captadores y establecedores en cualquier objeto principal predefinido o en un objeto definido por el usuario que admita la adición de nuevas propiedades. </p>
+<p>Un captador (<a href="/es/docs/Web/JavaScript/Reference/Functions/get">getter</a>) es un método que obtiene el valor de una propiedad específica. Un establecedor (<a href="/es/docs/Web/JavaScript/Reference/Functions/set">setter</a>) es un método que establece el valor de una propiedad específica. Puedes definir captadores y establecedores en cualquier objeto principal predefinido o en un objeto definido por el usuario que admita la adición de nuevas propiedades. </p>
 
 <p>En principio, los captadores y establecedores pueden ser</p>
 

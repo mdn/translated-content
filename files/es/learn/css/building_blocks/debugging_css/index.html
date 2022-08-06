@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace lo que esperas. Tal vez creas que cierto selector debería coincidir con un elemento, pero no sucede nada; o una caja tiene un tamaño diferente al que esperabas. Este artículo te orientará sobre cómo solucionar un problema de CSS y te mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarte a descubrir qué sucede.</p>
+<p>Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace lo que esperas. Tal vez creas que cierto selector debería coincidir con un elemento, pero no sucede nada; o una caja tiene un tamaño diferente al que esperabas. Este artículo te orientará sobre cómo solucionar un problema de CSS y te mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarte a descubrir qué sucede.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -31,7 +31,7 @@ original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 
 <h2 id="El_DOM_y_View_Source">El DOM y "View Source"</h2>
 
-<p>Algo que puede hacer tropezar a los recién llegados a DevTools es la diferencia entre lo que ves cuando <a href="/es/docs/Tools/View_source">miras el código fuente</a> de una página web, o miras el archivo HTML que colocas en el servidor, y lo que puedes ver en la <a href="/es/docs/Tools/Page_Inspector/UI_Tour#Panel_HTML">ventana HTML</a> de DevTools. Aunque ves más o menos lo mismo que puedes ver desde View Source (Ver código fuente de la página), hay algunas diferencias.</p>
+<p>Algo que puede hacer tropezar a los recién llegados a DevTools es la diferencia entre lo que ves cuando <a href="/es/docs/Tools/View_source">miras el código fuente</a> de una página web, o miras el archivo HTML que colocas en el servidor, y lo que puedes ver en la <a href="/es/docs/Tools/Page_Inspector/UI_Tour#Panel_HTML">ventana HTML</a> de DevTools. Aunque ves más o menos lo mismo que puedes ver desde View Source (Ver código fuente de la página), hay algunas diferencias.</p>
 
 <p>En el DOM procesado, el navegador puede haber corregido algunos HTML mal escritos por ti. Si cerraste un elemento incorrectamente, por ejemplo, por abrir con un <code>&lt;h2&gt;</code> y cerrar con un <code>&lt;/h3&gt;</code>, el navegador descubre lo que ibas a hacer y el HTML del DOM cerrará ese <code>&lt;h2&gt;</code> de apertura correctamente con un <code>&lt;/h2&gt;</code>. El navegador también normaliza todo el HTML, y el DOM también muestra los cambios que hace JavaScript.</p>
 
@@ -39,11 +39,11 @@ original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 
 <h2 id="Inspección_del_CSS_aplicado">Inspección del CSS aplicado</h2>
 
-<p>Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho o pulsando la tecla ctrl para seleccionar la opción <em>Inspect</em>, o seleccionándolo del árbol HTML que hay a la izquierda de la pantalla de la interfaz DevTools. Selecciona el elemento con la clase <code>box1</code>; este es el primer elemento de la página con una caja alrededor.</p>
+<p>Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho o pulsando la tecla ctrl para seleccionar la opción <em>Inspect</em>, o seleccionándolo del árbol HTML que hay a la izquierda de la pantalla de la interfaz DevTools. Selecciona el elemento con la clase <code>box1</code>; este es el primer elemento de la página con una caja alrededor.</p>
 
 <p><img alt="La página de ejemplo para este tutorial con DevTools abiertas." src="https://mdn.mozillademos.org/files/16606/inspecting1.png" style="border-style: solid; border-width: 1px; height: 1527px; width: 2278px;"></p>
 
-<p>Si observasla  <a href="/es/docs/Tools/Page_Inspector/UI_Tour#Panel_CSS">vista de reglas</a>, que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase <code>box1</code> y también el CSS que la caja hereda de su elemento padre, en este caso <code>&lt;body&gt;</code>. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.</p>
+<p>Si observasla  <a href="/es/docs/Tools/Page_Inspector/UI_Tour#Panel_CSS">vista de reglas</a>, que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase <code>box1</code> y también el CSS que la caja hereda de su elemento padre, en este caso <code>&lt;body&gt;</code>. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.</p>
 
 <p>También es útil la capacidad de expandir las propiedades abreviadas. En nuestro ejemplo se usa la abreviación <code>margin</code>.</p>
 
@@ -81,7 +81,7 @@ original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 
 <p>En esta ventana, una de las propiedades que se detallan es la propiedad <code>box-sizing</code>, que controla qué modelo de cajas usa el elemento.</p>
 
-<p><strong>Compara las dos cajas con las clases <code>box1</code> y <code>box2</code>. Ambas tienen el mismo ancho aplicado (400 px), sin embargo, <code>box1</code> es visualmente más ancha. En la ventana de diseño puedes ver que usa <code>content-box</code>. Este es el valor que toma el tamaño que asignas al elemento y luego añade el área de relleno y el ancho del borde.</strong></p>
+<p><strong>Compara las dos cajas con las clases <code>box1</code> y <code>box2</code>. Ambas tienen el mismo ancho aplicado (400 px), sin embargo, <code>box1</code> es visualmente más ancha. En la ventana de diseño puedes ver que usa <code>content-box</code>. Este es el valor que toma el tamaño que asignas al elemento y luego añade el área de relleno y el ancho del borde.</strong></p>
 
 <p>El elemento con una clase <code>box2</code> usa <code>border-box</code>, por lo que aquí el área de relleno y el borde se restan del tamaño que has asignado al elemento. Esto significa que el espacio que la caja ocupa en la página es el tamaño exacto que se ha especificado, en nuestro caso <code>width: 400px</code>.</p>
 
@@ -128,7 +128,7 @@ original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 
 <h3 id="¿Tu_HTML_y_CSS_son_válidos">¿Tu HTML y CSS son válidos?</h3>
 
-<p>Los navegadores esperan que tu CSS y HTML estén escritos correctamente, sin embargo, los navegadores también son muy indulgentes y harán todo lo posible para mostrar tus páginas web incluso si tiene errores en el marcado o en la hoja de estilo. Si tienes errores en el código, el navegador trata de adivinar lo que quieres decir, y podría tomar una decisión diferente a lo que tenías en mente. Además, dos navegadores diferentes pueden hacer frente al problema de dos maneras diferentes. Por lo tanto, un buen primer paso es pasar tu HTML y CSS por un validador, que detectar cualquier error.</p>
+<p>Los navegadores esperan que tu CSS y HTML estén escritos correctamente, sin embargo, los navegadores también son muy indulgentes y harán todo lo posible para mostrar tus páginas web incluso si tiene errores en el marcado o en la hoja de estilo. Si tienes errores en el código, el navegador trata de adivinar lo que quieres decir, y podría tomar una decisión diferente a lo que tenías en mente. Además, dos navegadores diferentes pueden hacer frente al problema de dos maneras diferentes. Por lo tanto, un buen primer paso es pasar tu HTML y CSS por un validador, que detectar cualquier error.</p>
 
 <ul>
  <li><a href="https://jigsaw.w3.org/css-validator/">Validador de CSS</a></li>

@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Headers/Content-Location
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>La cabecera <strong><code>Content-Location</code></strong> indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>.</p>
+<p>La cabecera <strong><code>Content-Location</code></strong> indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>.</p>
 
-<p>Las cabeceras {{HTTPHeader("Location")}} y <code>Content-Location</code> son diferentes. <code>Location</code> indica la URL de una redirección, mientras que <code>Content-Location</code> indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a> en el futuro. Mientras que <code>Location</code> es una cabecera asociada con la respuesta, <code>Content-Location</code> está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos <a href="#Examples">ejemplos</a>.</p>
+<p>Las cabeceras {{HTTPHeader("Location")}} y <code>Content-Location</code> son diferentes. <code>Location</code> indica la URL de una redirección, mientras que <code>Content-Location</code> indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a> en el futuro. Mientras que <code>Location</code> es una cabecera asociada con la respuesta, <code>Content-Location</code> está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos <a href="#Examples">ejemplos</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -31,14 +31,14 @@ translation_of: Web/HTTP/Headers/Content-Location
 
 <dl>
  <dt>&lt;url&gt;</dt>
- <dd>Una URL <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">relativa</a> o <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">absoluta</a> (a la URL de la petición).</dd>
+ <dd>Una URL <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_relative_URLs">relativa</a> o <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL#Examples_of_absolute_URLs">absoluta</a> (a la URL de la petición).</dd>
 </dl>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <h3 id="Solicitando_datos_de_un_servidor_en_distintos_formatos">Solicitando datos de un servidor en distintos formatos</h3>
 
-<p>Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o <a href="https://en.wikipedia.org/wiki/Comma-separated_values" rel="external" title="Comma-separated values">CSV</a>. Si la URL de un documento particular se encuentra en <code>https://example.com/documents/foo</code>, el sitio web podría retornar distintas URLs en la cabecera <code>Content-Location</code> dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición: </p>
+<p>Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o <a href="https://en.wikipedia.org/wiki/Comma-separated_values" rel="external" title="Comma-separated values">CSV</a>. Si la URL de un documento particular se encuentra en <code>https://example.com/documents/foo</code>, el sitio web podría retornar distintas URLs en la cabecera <code>Content-Location</code> dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición: </p>
 
 <table class="standard-table">
  <thead>
@@ -63,13 +63,13 @@ translation_of: Web/HTTP/Headers/Content-Location
  </tbody>
 </table>
 
-<p>Estas URLs son ejemplos — el sitio web podría servir los distintos tipos de ficheros con cualquier patrón de URL que desee, por ejemplo, por medio de un <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">parámetro en la query</a>: <code>/documents/foo?format=json</code>, <code>/documents/foo?format=xml</code>, y así sucesivamente.</p>
+<p>Estas URLs son ejemplos — el sitio web podría servir los distintos tipos de ficheros con cualquier patrón de URL que desee, por ejemplo, por medio de un <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search">parámetro en la query</a>: <code>/documents/foo?format=json</code>, <code>/documents/foo?format=xml</code>, y así sucesivamente.</p>
 
-<p>De esa forma el cliente podrÍa recordar que la versión en formato JSON está disponible en esa URL particular, saltándose el paso de la negociación de contenido la próxima vez que solicite ese documento.</p>
+<p>De esa forma el cliente podrÍa recordar que la versión en formato JSON está disponible en esa URL particular, saltándose el paso de la negociación de contenido la próxima vez que solicite ese documento.</p>
 
 <p>El servidor podría también considerar otras cabeceras de <a href="/en-US/docs/Web/HTTP/Content_negotiation">negociación de contenido</a>, tales como {{HTTPHeader("Accept-Language")}}.</p>
 
-<h3 id="Apuntando_a_un_nuevo_documento_HTTP_201_Created">Apuntando a un nuevo documento (HTTP 201 Created)</h3>
+<h3 id="Apuntando_a_un_nuevo_documento_HTTP_201_Created">Apuntando a un nuevo documento (HTTP 201 Created)</h3>
 
 <p>Suponga que está creando una nueva entrada de un blog, a través de la API del sitio web:</p>
 
@@ -93,7 +93,7 @@ Content-Location: /my-first-blog-post
 
 <h3 id="Indicating_the_URL_of_a_transactions_result">Indicating the URL of a transaction's result</h3>
 
-<p>Digamos que tiene un formulario <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code>  para el envío de dinero a otro usuario de un sitio web.</p>
+<p>Digamos que tiene un formulario <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code>  para el envío de dinero a otro usuario de un sitio web.</p>
 
 <pre class="brush: html">&lt;form action="/enviar-pago" method="post"&gt;
   &lt;p&gt;
@@ -112,7 +112,7 @@ Content-Location: /my-first-blog-post
 &lt;/form&gt;
 </pre>
 
-<p>Cuando el formulario es enviado, el sitio web genera un recibo o comprobante de la transacción. El servidor podría utilizar la cabecera <code>Content-Location</code> para indicar la URL de ese comprobante para un acceso futuro.</p>
+<p>Cuando el formulario es enviado, el sitio web genera un recibo o comprobante de la transacción. El servidor podría utilizar la cabecera <code>Content-Location</code> para indicar la URL de ese comprobante para un acceso futuro.</p>
 
 <pre>HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8

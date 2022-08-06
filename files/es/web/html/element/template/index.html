@@ -6,9 +6,9 @@ tags:
 translation_of: Web/HTML/Element/template
 original_slug: Web/HTML/Elemento/template
 ---
-<p><span class="seoSummary">El <strong>elemento</strong> <strong>HTML <code>&lt;template&gt;</code></strong> es un mecanismo para mantener el contenido </span> <span class="seoSummary">{{Glossary("HTML")}}</span> <span class="seoSummary">del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.</span></p>
+<p><span class="seoSummary">El <strong>elemento</strong> <strong>HTML <code>&lt;template&gt;</code></strong> es un mecanismo para mantener el contenido </span> <span class="seoSummary">{{Glossary("HTML")}}</span> <span class="seoSummary">del lado del cliente que no se renderiza cuando se carga una página, pero que posteriormente puede ser instanciado durante el tiempo de ejecución empleando JavaScript.</span></p>
 
-<p>Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento <strong><code>&lt;template&gt;</code> </strong>durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.</p>
+<p>Piensa en la plantilla como un fragmento de contenido que está siendo almacenado para un uso posterior en el documento. El analizador procesa el contenido del elemento <strong><code>&lt;template&gt;</code> </strong>durante la carga de la página, pero sólo lo hace para asegurar que esos contenidos son válidos; sin embargo, estos contenidos del elemento no se renderizan.</p>
 
 <table class="properties">
  <tbody>
@@ -47,7 +47,7 @@ original_slug: Web/HTML/Elemento/template
 
 <p>Este elemento sólo incluye <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
 
-<p>SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad  {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo  {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.</p>
+<p>SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad  {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo  {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.</p>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
@@ -73,7 +73,7 @@ original_slug: Web/HTML/Elemento/template
 &lt;/template&gt;
 </pre>
 
-<p>Inicialmente tenemos una tabla en la cual insertaremos más tarde contenido usando código JavaScript. Más abajo viene el template, el cual describe la estructura de un fragmento HTML representando la fila de una tabla.</p>
+<p>Inicialmente tenemos una tabla en la cual insertaremos más tarde contenido usando código JavaScript. Más abajo viene el template, el cual describe la estructura de un fragmento HTML representando la fila de una tabla.</p>
 
 <p>Ahora que la tabla ha sido creada y el template definido, usamos JavaScript para insertar filas en la tabla, con cada fila siendo construida usando el template como su base.</p>
 

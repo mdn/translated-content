@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<div>O método <strong>catch()</strong> retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de fato, chamando <code>obj.catch(onRejected)</code> internamente é chamado <code>obj.then(undefined, onRejected)</code>).</div>
+<div>O método <strong>catch()</strong> retorna uma Promise e lida apenas com casos rejeitados. Ele possui o mesmo comportamento de quando chamamos {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de fato, chamando <code>obj.catch(onRejected)</code> internamente é chamado <code>obj.then(undefined, onRejected)</code>).</div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -22,34 +22,34 @@ p.catch(function(motivo) {
  <dt>onRejected</dt>
  <dd>Uma {{jsxref("Function")}} chamada quando a <code>Promise</code> é rejeitada. Esta função possui um argumento:<br>
  <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><strong>reason</strong></span></font> da rejeição.<br>
-       O motivo da rejeição.<br>
+       O motivo da rejeição.<br>
  <br>
- A Promise retornada pelo <code>catch()</code> é rejeitada apenas se <code>onRejected</code> cospe um erro ou se o o retorno da Promise foi rejeitada por si mesmo, ou seja, foi resolvida.</dd>
+ A Promise retornada pelo <code>catch()</code> é rejeitada apenas se <code>onRejected</code> cospe um erro ou se o o retorno da Promise foi rejeitada por si mesmo, ou seja, foi resolvida.</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Internamente chamamos <code>Promise.prototype.then</code> sobre o objeto que é chamando passando parâmetros como <code>undefined</code> e <code>onRejected</code> no manipulador de eventos. Então retornamos o valor da chamada que é {{jsxref("Promise")}}.</p>
+<p>Internamente chamamos <code>Promise.prototype.then</code> sobre o objeto que é chamando passando parâmetros como <code>undefined</code> e <code>onRejected</code> no manipulador de eventos. Então retornamos o valor da chamada que é {{jsxref("Promise")}}.</p>
 
 <div class="warning">
-<p>O exemplo abaixo está cuspindo uma string. Isso é considerado uma má prática. Sempre cuspir uma instance de erro (Error). Em todo caso, a parte que faz a captura deve fazer verificaçoes sobre os argumentos para saber se é uma string ou um erro e você poderá perder informações valiosas como stack traces.</p>
+<p>O exemplo abaixo está cuspindo uma string. Isso é considerado uma má prática. Sempre cuspir uma instance de erro (Error). Em todo caso, a parte que faz a captura deve fazer verificaçoes sobre os argumentos para saber se é uma string ou um erro e você poderá perder informações valiosas como stack traces.</p>
 </div>
 
 <p><strong>Demonstração de uma camada interna:</strong></p>
 
-<pre class="brush: js notranslate">// Sobrescrevendo o techo original de  Promise.prototype.then/catch adicionando alguns logs
+<pre class="brush: js notranslate">// Sobrescrevendo o techo original de  Promise.prototype.then/catch adicionando alguns logs
 (function(Promise){
-    var originalThen = Promise.prototype.then;
-    var originalCatch = Promise.prototype.catch;
+    var originalThen = Promise.prototype.then;
+    var originalCatch = Promise.prototype.catch;
 
-    Promise.prototype.then = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; chamando .then em %o com argumentos: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; chamando .catch em %o com argumentos: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
+    Promise.prototype.then = function(){
+        console.log('&gt; &gt; &gt; &gt; &gt; &gt; chamando .then em %o com argumentos: %o', this, arguments);
+        return originalThen.apply(this, arguments);
+    };
+    Promise.prototype.catch = function(){
+        console.log('&gt; &gt; &gt; &gt; &gt; &gt; chamando .catch em %o com argumentos: %o', this, arguments);
+        return originalCatch.apply(this, arguments);
+    };
 
 })(this.Promise);
 
@@ -67,33 +67,33 @@ Promise.resolve().catch(function XXX(){});
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_o_método_catch">Usando o método <code>catch</code></h3>
+<h3 id="Usando_o_método_catch">Usando o método <code>catch</code></h3>
 
 <pre class="brush: js notranslate">var p1 = new Promise(function(resolve, reject) {
-  resolve('Sucesso');
+  resolve('Sucesso');
 });
 
 p1.then(function(value) {
-  console.log(value); // "Sucesso!"
-  throw 'Ah, não!';
+  console.log(value); // "Sucesso!"
+  throw 'Ah, não!';
 }).catch(function(e) {
-  console.log(e); // "Ah, não!"
+  console.log(e); // "Ah, não!"
 }).then(function(){
-  console.log('Após um catch, a sequencia é restaurada');
+  console.log('Após um catch, a sequencia é restaurada');
 }, function () {
-  console.log('Não engatilhado devido ao catch');
+  console.log('Não engatilhado devido ao catch');
 });
 
 // O seguinte se comporta da mesma maneira que o anterior
 p1.then(function(value) {
-  console.log(value); // "Sucesso!"
+  console.log(value); // "Sucesso!"
   return Promise.reject('Ah, não!');
 }).catch(function(e) {
-  console.log(e); // "Ah, não!"
+  console.log(e); // "Ah, não!"
 }).then(function(){
-  console.log('Após um catch, a sequencia é restaurada');
+  console.log('Após um catch, a sequencia é restaurada');
 }, function () {
-  console.log('Não engatilhado devido ao catch');
+  console.log('Não engatilhado devido ao catch');
 });
 
 </pre>

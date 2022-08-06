@@ -146,11 +146,11 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}</dt>
  <dd>Добавляет квадратичную кривую Безье к текущему контуру.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arc()")}}</dt>
- <dd>Добавляет к контуру дугу, с центром в точке <em>(x, y)</em>, радиусом <em>r,</em> имеющую угол начала <em>startAngle</em> и конца <em>endAngle</em>, рисующуюся в направлении, заданном в аргументе <em>anticlockwise</em> (по умолчанию - по часовой стрелке).</dd>
+ <dd>Добавляет к контуру дугу, с центром в точке <em>(x, y)</em>, радиусом <em>r,</em> имеющую угол начала <em>startAngle</em> и конца <em>endAngle</em>, рисующуюся в направлении, заданном в аргументе <em>anticlockwise</em> (по умолчанию - по часовой стрелке).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.arcTo()")}}</dt>
  <dd>Добавляет к контуру дугу, заданную контрольными точками и радиусом, соединяющуюся с предыдущей точкой прямой линией.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}</dt>
- <dd>Добавляет к контуру эллипс, с центром в точке <em>(x, y)</em>, заданный радиусами <em>radiusX</em> и <em>radiusY</em>, имеющий угол начала <em>startAngle</em> и конца <em>endAngle</em>, рисующийся в направлении, заданном в аргументе <em>anticlockwise</em> (по умолчанию - по часовой стрелке).</dd>
+ <dd>Добавляет к контуру эллипс, с центром в точке <em>(x, y)</em>, заданный радиусами <em>radiusX</em> и <em>radiusY</em>, имеющий угол начала <em>startAngle</em> и конца <em>endAngle</em>, рисующийся в направлении, заданном в аргументе <em>anticlockwise</em> (по умолчанию - по часовой стрелке).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.rect()")}}</dt>
  <dd>Создаёт контур прямоугольника с началом в точке <em>(x, y)</em>, и размерами, заданными шириной <em>width</em> и высотой <em>height</em>.</dd>
 </dl>
@@ -184,7 +184,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.rotate()")}}</dt>
  <dd>Добавляет вращение в матрицу преобразований. Аргумент представляет угол вращения по часовой стрелке, выраженный в радианах.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.scale()")}}</dt>
- <dd>Добавляет к  элементам холста трансформацию масштабирования в x раз по горизонтали и y раз по вертикали.</dd>
+ <dd>Добавляет к  элементам холста трансформацию масштабирования в x раз по горизонтали и y раз по вертикали.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.translate()")}}</dt>
  <dd>Добавляет трансформацию перемещения, перемещая начальную точку системы координат холста на x по горизонтали и y по вертикали.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.transform()")}}</dt>
@@ -219,9 +219,9 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.createImageData()")}}</dt>
  <dd>Создаёт новый пустой объект {{domxref("ImageData")}} с заданными размерами. Цвет всех пикселов в новом объекте устанавливается в прозрачный чёрный.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.getImageData()")}}</dt>
- <dd>Возвращает объект {{domxref("ImageData")}}, представляющий данные о пикселах, расположенных под областью холста, ограниченной прямоугольником длиной <em>sw</em> и высотой <em>sh</em>, начальная точка которого находится в позиции <em>(sx, sy)</em>.</dd>
+ <dd>Возвращает объект {{domxref("ImageData")}}, представляющий данные о пикселах, расположенных под областью холста, ограниченной прямоугольником длиной <em>sw</em> и высотой <em>sh</em>, начальная точка которого находится в позиции <em>(sx, sy)</em>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.putImageData()")}}</dt>
- <dd>Переносит данные, заданные в объекте {{domxref("ImageData")}}, на холст. Если в аргументах задана уточняющая прямоугольная область, отрисованы  будут только пикселы из этой области.</dd>
+ <dd>Переносит данные, заданные в объекте {{domxref("ImageData")}}, на холст. Если в аргументах задана уточняющая прямоугольная область, отрисованы  будут только пикселы из этой области.</dd>
 </dl>
 
 <h2 id="Сглаживание_изображений">Сглаживание изображений</h2>
@@ -233,13 +233,13 @@ ctx.fillRect(10, 10, 55, 50);
 
 <h2 id="Состояние_холста">Состояние холста</h2>
 
-<p>Контекст рендеринга <code>CanvasRenderingContext2D</code> содержит множество состояний стилей рисования (атрибуты для стилей линий, стили теней, стили текста). Следующие методы помогут вам работать с этими состояниями:</p>
+<p>Контекст рендеринга <code>CanvasRenderingContext2D</code> содержит множество состояний стилей рисования (атрибуты для стилей линий, стили теней, стили текста). Следующие методы помогут вам работать с этими состояниями:</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save()")}}</dt>
  <dd>Сохраняет текущее состояние стилей рисования, используя для этого стек, так что вы можете отменить любые внесённые в него изменения с помощью метода <code>restore()</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore()")}}</dt>
- <dd>Восстанавливает состояние стилей рисования в значение, сохранённое методом <code>save()</code> в стек состояний последним.</dd>
+ <dd>Восстанавливает состояние стилей рисования в значение, сохранённое методом <code>save()</code> в стек состояний последним.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
  <dd>Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может иметь значение {{jsxref("null")}}, если она не связана с элементом {{HTMLElement("canvas")}}.</dd>
 </dl>
@@ -296,7 +296,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.getContextAttributes()</code></dt>
- <dd>По аналогии с аналогичным методом класса <code>WebGLRenderingContext</code>, возвращает объект <code>Canvas2DContextAttributes</code>, который содержит атрибуты "storage", показывающие какое хранилище используется (по умолчанию "persistent") и атрибут "alpha" (<code>true</code> по умолчанию), показывающий используется ли прозрачность на холсте.</dd>
+ <dd>По аналогии с аналогичным методом класса <code>WebGLRenderingContext</code>, возвращает объект <code>Canvas2DContextAttributes</code>, который содержит атрибуты "storage", показывающие какое хранилище используется (по умолчанию "persistent") и атрибут "alpha" (<code>true</code> по умолчанию), показывающий используется ли прозрачность на холсте.</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.isContextLost()</code></dt>
  <dd>По аналогии с аналогичным методом класса <code>WebGLRenderingContext</code>, возвращает <code>true</code> если контекст canvas был потерян, <code>иначе false</code>.</dd>
 </dl>
@@ -326,9 +326,9 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
- <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
- <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
  <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>

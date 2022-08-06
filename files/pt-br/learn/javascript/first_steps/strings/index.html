@@ -30,7 +30,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 <h2 id="Strings_—_O_básico">Strings — O básico</h2>
 
-<p>Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir isto no console</a> em uma guia ou janela separada, ou usar o  <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console do navegador</a> se você preferir).</p>
+<p>Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">abrir isto no console</a> em uma guia ou janela separada, ou usar o  <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console do navegador</a> se você preferir).</p>
 
 <div class="hidden">
 <h6 id="Código_oculto">Código oculto</h6>
@@ -109,8 +109,8 @@ translation_of: Learn/JavaScript/First_steps/Strings
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length &gt; 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -192,7 +192,7 @@ dblSgl;</pre>
 <pre class="brush: js">var bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: <code>\"</code>,  e há alguns códigos especiais também. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notação de escape</a> para mais detalhes.</p>
+<p>Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: <code>\"</code>,  e há alguns códigos especiais também. Veja <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation">Notação de escape</a> para mais detalhes.</p>
 
 <h2 id="Concatenando_strings">Concatenando strings</h2>
 
@@ -240,7 +240,7 @@ button.onclick = function() {
  <li>Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
   <pre class="brush: js">'Front ' + 242;
 </pre>
-  Você pode esperar um erro disto, mas funciona correto. Tentando representar  uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.</li>
+  Você pode esperar um erro disto, mas funciona correto. Tentando representar  uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.</li>
  <li>Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador <code>typeof</code> para checar o que a variável é, se um número ou string):
   <pre class="brush: js">var myDate = '19' + '67';
 typeof myDate;</pre>

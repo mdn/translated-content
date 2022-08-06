@@ -20,7 +20,7 @@ ArrayBuffer readAsArrayBuffer(blob);
 
 ### 返値
 
-ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
+ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
 
 ## 例外
 

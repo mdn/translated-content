@@ -8,9 +8,9 @@ original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 ---
 <h2 id="Introduction" name="Introduction">Introducción</h2>
 
-<p>Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript.  Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente.  Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.</p>
+<p>Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript.  Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente.  Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.</p>
 
-<div class="note">Los métodos DOM presentados aquí forman parte del Modelo de Documento basado en Objetos (DOM: Document Object Model por sus siglas en inglés) de especificación nivel 1.  DOM nivel 1 incluye métodos tanto para acceso genérico del documento (DOM 1 Core) así como métodos específicos para documentos HTML (DOM 1 HTML).</div>
+<div class="note">Los métodos DOM presentados aquí forman parte del Modelo de Documento basado en Objetos (DOM: Document Object Model por sus siglas en inglés) de especificación nivel 1.  DOM nivel 1 incluye métodos tanto para acceso genérico del documento (DOM 1 Core) así como métodos específicos para documentos HTML (DOM 1 HTML).</div>
 
 <h2 id="Overview_of_Sample1.html" name="Overview_of_Sample1.html">Ejemplo: Crear una tabla HTML dinámicamente (<code>Ejemplo1.html</code>)</h2>
 
@@ -22,38 +22,38 @@ original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
 <pre class="brush: js">function genera_tabla() {
-  // Obtener la referencia del elemento body
-  var body = document.getElementsByTagName("body")[0];
+  // Obtener la referencia del elemento body
+  var body = document.getElementsByTagName("body")[0];
 
-  // Crea un elemento &lt;table&gt; y un elemento &lt;tbody&gt;
-  var tabla   = document.createElement("table");
-  var tblBody = document.createElement("tbody");
+  // Crea un elemento &lt;table&gt; y un elemento &lt;tbody&gt;
+  var tabla   = document.createElement("table");
+  var tblBody = document.createElement("tbody");
 
-  // Crea las celdas
-  for (var i = 0; i &lt; 2; i++) {
-    // Crea las hileras de la tabla
-    var hilera = document.createElement("tr");
+  // Crea las celdas
+  for (var i = 0; i &lt; 2; i++) {
+    // Crea las hileras de la tabla
+    var hilera = document.createElement("tr");
 
-    for (var j = 0; j &lt; 2; j++) {
-      // Crea un elemento &lt;td&gt; y un nodo de texto, haz que el nodo de
-      // texto sea el contenido de &lt;td&gt;, ubica el elemento &lt;td&gt; al final
-      // de la hilera de la tabla
-      var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
-    }
+    for (var j = 0; j &lt; 2; j++) {
+      // Crea un elemento &lt;td&gt; y un nodo de texto, haz que el nodo de
+      // texto sea el contenido de &lt;td&gt;, ubica el elemento &lt;td&gt; al final
+      // de la hilera de la tabla
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
 
-    // agrega la hilera al final de la tabla (al final del elemento tblbody)
-    tblBody.appendChild(hilera);
-  }
+    // agrega la hilera al final de la tabla (al final del elemento tblbody)
+    tblBody.appendChild(hilera);
+  }
 
-  // posiciona el &lt;tbody&gt; debajo del elemento &lt;table&gt;
-  tabla.appendChild(tblBody);
-  // appends &lt;table&gt; into &lt;body&gt;
-  body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  tabla.setAttribute("border", "2");
+  // posiciona el &lt;tbody&gt; debajo del elemento &lt;table&gt;
+  tabla.appendChild(tblBody);
+  // appends &lt;table&gt; into &lt;body&gt;
+  body.appendChild(tabla);
+  // modifica el atributo "border" de la tabla y lo fija a "2";
+  tabla.setAttribute("border", "2");
 }</pre>
 
 <p>{{ EmbedLiveSample('Overview_of_Sample1.html') }}</p>
@@ -94,10 +94,10 @@ original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 
 <pre>...
 &lt;table border="2"&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;&lt;td&gt;celda en la hilera 0, columna 0&lt;/td&gt;&lt;td&gt;celda en la hilera 0, columna 1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;celda en la hilera 0, columna 0&lt;/td&gt;&lt;td&gt;celda en la hilera 0, columna 1&lt;/td&gt;&lt;/tr&gt;
         &lt;tr&gt;&lt;td&gt;celda en la hilera 1, columna 0&lt;/td&gt;&lt;td&gt;celda en la hilera 1, columna 1&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
+    &lt;/tbody&gt;
 &lt;/table&gt;
 ...
 </pre>
@@ -108,43 +108,43 @@ original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 
 <p>Tú puedes construir esta tabla y sus elementos internos utilizando sólo algunos de los varios métodos del DOM. Recuerda tener en mente el modelo de la estructura que planeas crear; esto hará mucho más fácil la escritura del código necesario.</p>
 
-<p>En el árbol del elemento &lt;table&gt; de la Figura 1, el elemento &lt;table&gt; tiene solamente un hijo mientras que &lt;tbody&gt; tiene dos.  A su vez, cada hijo de &lt;tbody&gt; tiene dos hijos. Finalmente, cada elemento &lt;td&gt; tiene sólo uno, el nodo de texto.</p>
+<p>En el árbol del elemento &lt;table&gt; de la Figura 1, el elemento &lt;table&gt; tiene solamente un hijo mientras que &lt;tbody&gt; tiene dos.  A su vez, cada hijo de &lt;tbody&gt; tiene dos hijos. Finalmente, cada elemento &lt;td&gt; tiene sólo uno, el nodo de texto.</p>
 
 <h2 id="Setting_background_of_a_paragraph" name="Setting_background_of_a_paragraph">Ejemplo: Configuración del color de fondo de un párrafo</h2>
 
-<p><code>getElementsByTagName(tagNameValue)</code> es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición [0] de la matriz.</p>
+<p><code>getElementsByTagName(tagNameValue)</code> es un método disponible en cualquier elemento DOM o el elemento raíz del documento. Cuando se le llama, devolverá una matriz con todos los descendientes de elementos que coincidan con el nombre de la etiqueta. El primer elemento de la lista se encuentra en la posición [0] de la matriz.</p>
 
 <h3 id="HTML_Content">HTML Content</h3>
 
 <pre class="brush: html">&lt;body&gt;
-  &lt;input type="button" value="Set paragraph background color" onclick="set_background()"&gt;
-  &lt;p&gt;hi&lt;/p&gt;
-  &lt;p&gt;hello&lt;/p&gt;
+  &lt;input type="button" value="Set paragraph background color" onclick="set_background()"&gt;
+  &lt;p&gt;hi&lt;/p&gt;
+  &lt;p&gt;hello&lt;/p&gt;
 &lt;/body&gt;</pre>
 
 <h3 id="JavaScript_Content_2">JavaScript Content</h3>
 
 <pre class="brush: js">function set_background() {
-  // get a list of all the body elements (there will only be one),
-  // and then select the zeroth (or first) such element
-  myBody = document.getElementsByTagName("body")[0];
+  // get a list of all the body elements (there will only be one),
+  // and then select the zeroth (or first) such element
+  myBody = document.getElementsByTagName("body")[0];
 
-  // now, get all the p elements that are descendants of the body
-  myBodyElements = myBody.getElementsByTagName("p");
+  // now, get all the p elements that are descendants of the body
+  myBodyElements = myBody.getElementsByTagName("p");
 
-  // get the second item of the list of p elements
-  myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  // get the second item of the list of p elements
+  myP = myBodyElements[1];
+  myP.style.background = "rgb(255,0,0)";
 }</pre>
 
 <p>{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}</p>
 
-<p>En este ejemplo, establecemos la variable <code>myP</code> en el objeto DOM para el segundo elemento<code>p</code> dentro del body:</p>
+<p>En este ejemplo, establecemos la variable <code>myP</code> en el objeto DOM para el segundo elemento<code>p</code> dentro del body:</p>
 
 <ol>
  <li>Primero, obtendremos una lista de todos los elementos body mediante
   <pre>myBody = document.getElementsByTagName("body")[0]</pre>
-  Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando <code>{{mediawiki.external(0)}}</code>.</li>
+  Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando <code>{{mediawiki.external(0)}}</code>.</li>
  <li>Luego, obtenemos todos los elementos p que son descendientes del body mediante
   <pre>myBodyElements = myBody.getElementsByTagName("p");</pre>
  </li>
@@ -155,7 +155,7 @@ original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 
 <p><img alt="Image:sample2a2.jpg" src="/@api/deki/files/834/=Sample2a2.jpg"></p>
 
-<p>Una vez que haya obtenido el objeto DOM para un elemento HTML, puede establecer sus propiedades. Por ejemplo, si desea establecer la propiedad estilo de color de fondo, agregue:</p>
+<p>Una vez que haya obtenido el objeto DOM para un elemento HTML, puede establecer sus propiedades. Por ejemplo, si desea establecer la propiedad estilo de color de fondo, agregue:</p>
 
 <pre>myP.style.background = "rgb(255,0,0)";
 // setting inline STYLE attribute

@@ -7,36 +7,36 @@ tags:
   - History API Tutorial
 translation_of: Web/API/History_API/Working_with_the_History_API
 ---
-<p>HTML5 では {{DOMxRef("History.pushState","pushState()")}} および {{DOMxRef("History.replaceState","replaceState()")}} メソッドが導入され、それぞれにより履歴エントリの追加と修正が可能となりました。 これらのメソッドは {{ domxref("window.onpopstate") }}イベントと連動して動作します。</p>
+<p>HTML5 では {{DOMxRef("History.pushState","pushState()")}} および {{DOMxRef("History.replaceState","replaceState()")}} メソッドが導入され、それぞれにより履歴エントリの追加と修正が可能となりました。 これらのメソッドは {{ domxref("window.onpopstate") }}イベントと連動して動作します。</p>
 
 <h2 id="履歴エントリの追加と修正">履歴エントリの追加と修正</h2>
 
 <p>{{ gecko_minversion_header("2") }}</p>
 
-<p>{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での <code>this</code> となるウィンドウの持つドキュメントの URL となります。</p>
+<p>{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での <code>this</code> となるウィンドウの持つドキュメントの URL となります。</p>
 
 <h3 id="pushState_の例">pushState() の例</h3>
 
 <p>以下の JavaScript は <span class="nowiki">http://mozilla.org/foo.html</span> において実行されると仮定します：</p>
 
 <pre class="brush: js">let stateObj = {
-    foo: "bar",
+    foo: "bar",
 };
 
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>これにより URL バーには <span class="nowiki">http://mozilla.org/bar.html</span> と表示されますが、ブラウザは <code>bar.html</code> をロードすることはなくまたその存在をチェックすることはありません。</p>
+<p>これにより URL バーには <span class="nowiki">http://mozilla.org/bar.html</span> と表示されますが、ブラウザは <code>bar.html</code> をロードすることはなくまたその存在をチェックすることはありません。</p>
 
-<p>ユーザが http://google.com に移動し、それから戻るボタンをクリックしたとします。このとき、URL バーは http://mozilla.org/bar.html を表示し、<code>history.state</code> は <code>stateObj</code> になります。popstate イベントはページがリロードされたために発火しません。ページそれ自体は bar.html のように見えます。</p>
+<p>ユーザが http://google.com に移動し、それから戻るボタンをクリックしたとします。このとき、URL バーは http://mozilla.org/bar.html を表示し、<code>history.state</code> は <code>stateObj</code> になります。popstate イベントはページがリロードされたために発火しません。ページそれ自体は bar.html のように見えます。</p>
 
-<p>再び戻るボタンをクリックすると、URL は <span class="nowiki">http://mozilla.org/foo.html</span> へ変化し、 <code>popstate</code> イベントが発火され、state は null オブジェクトとなります。ここでもまた、<code>popstate</code> イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。</p>
+<p>再び戻るボタンをクリックすると、URL は <span class="nowiki">http://mozilla.org/foo.html</span> へ変化し、 <code>popstate</code> イベントが発火され、state は null オブジェクトとなります。ここでもまた、<code>popstate</code> イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Although <code>history.back()</code> normally behaves the same way as clicking the Back button, the <code>history.back()</code> method acts differently from the browser Back button after using <code>history.pushState()</code>. Calling <code>history.back()</code> after <code>history.pushState()</code> does not raise a <code>popstate</code> event while clicking on the browser's Back button does raise the event.</p>
 </div>
 
-<h3 id="pushState_メソッド">pushState() メソッド</h3>
+<h3 id="pushState_メソッド">pushState() メソッド</h3>
 
 <p><code>pushState()</code> は、state オブジェクト、タイトル（現在のところ無視されます）、そしてURL（任意）の3つのパラメータを使用します。これら3つのパラメータについて詳細に見ていきましょう：</p>
 
@@ -71,7 +71,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>In other documents, it creates an element with a <code>null</code> namespace URI.</p>
 
-<h3 id="replaceState_メソッド">replaceState() メソッド</h3>
+<h3 id="replaceState_メソッド">replaceState() メソッド</h3>
 
 <p><code>history.replaceState()</code> は丁度 <code>history.pushState()</code> のように動作しますが、<code>pushState()</code> と異なる点として、 <code>replaceState()</code> は新しく履歴エントリを作成する代わりに現在の履歴エントリを修正します。Note that this doesn't prevent the creation of a new entry in the global browser history.</p>
 
@@ -81,18 +81,18 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="replaceState_の例">replaceState() の例</h3>
 
-<p><span class="nowiki">仮に <code>http://mozilla.org/foo.html</code></span> は次の JavaScript を実行するものとします。</p>
+<p><span class="nowiki">仮に <code>http://mozilla.org/foo.html</code></span> は次の JavaScript を実行するものとします。</p>
 
 <pre class="brush: js">var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");</pre>
 
-<p>この2行のコードの説明は <a href="/ja/docs/Web/API/History_API/Working_with_the_History_API$edit#Example_of_pushState_method">pushState()の例 </a><em>のセクションで見ることができます。次に、</em><code>http://mozilla.org/bar.html</code> が次の JavaScript を実行するものとします。</p>
+<p>この2行のコードの説明は <a href="/ja/docs/Web/API/History_API/Working_with_the_History_API$edit#Example_of_pushState_method">pushState()の例 </a><em>のセクションで見ることができます。次に、</em><code>http://mozilla.org/bar.html</code> が次の JavaScript を実行するものとします。</p>
 
 <pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");</pre>
 
-<p>これによってアドレスバーには <code><span class="nowiki">http://mozilla.org/bar2.html</span></code> が表示されますが、ブラウザは <code>bar2.html</code> の読み込みを行わず、<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">bar2.html</span></font> が存在するかどうかもチェックしません。</p>
+<p>これによってアドレスバーには <code><span class="nowiki">http://mozilla.org/bar2.html</span></code> が表示されますが、ブラウザは <code>bar2.html</code> の読み込みを行わず、<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">bar2.html</span></font> が存在するかどうかもチェックしません。</p>
 
-<p>仮に今、ユーザーが <code><span class="nowiki">http://www.microsoft.com</span></code> に移動し、<strong>戻る</strong>ボタンを押したとします。この時点でアドレスバーには <code><span class="nowiki">http://mozilla.org/bar2.html</span></code> が表示されています。もしユーザーが再び<strong>戻る</strong>ボタンを押すと、アドレスバーには <code><span class="nowiki">http://mozilla.org/foo.html</span></code> が表示され、<code>bar.html</code> を完全に回避します。</p>
+<p>仮に今、ユーザーが <code><span class="nowiki">http://www.microsoft.com</span></code> に移動し、<strong>戻る</strong>ボタンを押したとします。この時点でアドレスバーには <code><span class="nowiki">http://mozilla.org/bar2.html</span></code> が表示されています。もしユーザーが再び<strong>戻る</strong>ボタンを押すと、アドレスバーには <code><span class="nowiki">http://mozilla.org/foo.html</span></code> が表示され、<code>bar.html</code> を完全に回避します。</p>
 
 <h3 id="popstate_イベント">popstate イベント</h3>
 

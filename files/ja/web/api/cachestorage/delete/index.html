@@ -45,13 +45,13 @@ translation_of: Web/API/CacheStorage/delete
 
   event.waitUntil(
     caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cachesToKeep.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
+      return Promise.all(keyList.map(function(key) {
+        if (cachesToKeep.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 });</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>

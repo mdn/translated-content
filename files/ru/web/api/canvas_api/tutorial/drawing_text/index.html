@@ -13,7 +13,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
 
 <div class="summary">
-<p>После того, как мы увидели в предыдущей главе, как <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">применять стили и цвета</a>, взглянем на написание текста в canvas.</p>
+<p>После того, как мы увидели в предыдущей главе, как <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">применять стили и цвета</a>, взглянем на написание текста в canvas.</p>
 </div>
 
 <h2 id="Рисование_текста">Рисование текста</h2>
@@ -22,19 +22,19 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillText", "fillText(text, x, y [, maxWidth])")}}</dt>
- <dd>Вставляет заданный текст в положении (x,y). Опционально может быть указана максимальная ширина.</dd>
+ <dd>Вставляет заданный текст в положении (x,y). Опционально может быть указана максимальная ширина.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeText", "strokeText(text, x, y [, maxWidth])")}}</dt>
- <dd>Вставляет контур заданного текста в положении (x,y). Опционально может быть указана максимальная ширина.</dd>
+ <dd>Вставляет контур заданного текста в положении (x,y). Опционально может быть указана максимальная ширина.</dd>
 </dl>
 
-<h3 id="Пример_fillText">Пример <code>fillText</code></h3>
+<h3 id="Пример_fillText">Пример <code>fillText</code></h3>
 
-<p>Текст вставлен с использованием текущего <code>fillStyle</code>.</p>
+<p>Текст вставлен с использованием текущего <code>fillStyle</code>.</p>
 
 <pre class="brush: js;highlight[4]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = "48px serif";
-  ctx.fillText("Hello world", 10, 50);
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }</pre>
 
 <div class="hidden">
@@ -45,9 +45,9 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 <p>{{EmbedLiveSample("Пример_fillText", 310, 110)}}</p>
 
-<h3 id="Пример_strokeText">Пример <code>strokeText</code></h3>
+<h3 id="Пример_strokeText">Пример <code>strokeText</code></h3>
 
-<p>Текст вставлен с использованием текущего <code>strokeStyle</code>.</p>
+<p>Текст вставлен с использованием текущего <code>strokeStyle</code>.</p>
 
 <pre class="brush: js;highlight[4]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -69,18 +69,18 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_текста
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.font", "font = value")}}</dt>
- <dd>Это основной стиль, который будет использоваться для вывода текста. Строка имеет такой же синтаксис, как <a href="/en-US/docs/Web/CSS">CSS</a>-свойство {{cssxref("font")}}. По умолчанию - sans-serif высотой 10px.</dd>
+ <dd>Это основной стиль, который будет использоваться для вывода текста. Строка имеет такой же синтаксис, как <a href="/en-US/docs/Web/CSS">CSS</a>-свойство {{cssxref("font")}}. По умолчанию - sans-serif высотой 10px.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}</dt>
  <dd>Настройка выравнивания текста. Возможные значения: <code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> или <code>center</code>. По умолчанию - <code>start</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}</dt>
  <dd>Настройка выравнивания текста по вертикали. Возможные значения: <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code>, <code>bottom</code>. По умолчанию - <code>alphabetic</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.direction", "direction = value")}}</dt>
- <dd>Направление текста. Возможные значения: <code>ltr</code>, <code>rtl</code>, <code>inherit</code>. По умолчанию - <code>inherit</code>.</dd>
+ <dd>Направление текста. Возможные значения: <code>ltr</code>, <code>rtl</code>, <code>inherit</code>. По умолчанию - <code>inherit</code>.</dd>
 </dl>
 
 <p>Эти свойства могут быть вам знакомы если вы работали с CSS.</p>
 
-<p>Изображение от <a class="external" href="http://www.whatwg.org/">WHATWG</a> ниже показывает различные варианты свойства <code>textBaseline</code>.<img alt="The top of the em square is
+<p>Изображение от <a class="external" href="http://www.whatwg.org/">WHATWG</a> ниже показывает различные варианты свойства <code>textBaseline</code>.<img alt="The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,
@@ -105,8 +105,8 @@ ctx.strokeText("Hello world!", 0, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.font = "48px serif";
@@ -144,11 +144,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="Измерение_ширины_текста">Измерение ширины текста</h2>
 
-<p>Для измерения ширины текста (без рисования его на canvas) можно воспользоваться следующим методом:</p>
+<p>Для измерения ширины текста (без рисования его на canvas) можно воспользоваться следующим методом:</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.measureText", "measureText()")}}</dt>
- <dd>Возвращает объект {{domxref("TextMetrics")}}, содержащий ширину текста в пикселах, до отрисовки на canvas.</dd>
+ <dd>Возвращает объект {{domxref("TextMetrics")}}, содержащий ширину текста в пикселах, до отрисовки на canvas.</dd>
 </dl>
 
 <p>Пример ниже показывает, как можно измерить ширину текста.</p>
@@ -162,6 +162,6 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs">методы API с префиксами</a> для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.</p>
+<p>В ранних версиях Gecko (движок рендеринга в Firefox, Firefox OS и других приложениях Mozilla) были реализованы <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs">методы API с префиксами</a> для рисования текста на canvas. На данный момент они устарели и уже, возможно, удалены, поэтому их правильная работа не гарантируется.</p>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</p>

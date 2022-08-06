@@ -16,4 +16,4 @@ Les modems sont différents des {{Glossary("Router","routeurs")}}, mais de nombr
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Modem")}} sur Wikipédia
+- [Modem](https://fr.wikipedia.org/wiki/Modem) sur Wikipédia

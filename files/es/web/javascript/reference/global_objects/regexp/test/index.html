@@ -20,24 +20,24 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/test
 
 <dl>
  <dt><code>cadena</code></dt>
- <dd>La cadena a comparar contra la expresión regular.</dd>
+ <dd>La cadena a comparar contra la expresión regular.</dd>
 </dl>
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-<p>Retorna <code>true</code> si existe una coincidencia entre la expresión regular y la cadena especificada; de lo contrario retorna <code>false</code>.</p>
+<p>Retorna <code>true</code> si existe una coincidencia entre la expresión regular y la cadena especificada; de lo contrario retorna <code>false</code>.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Use <code>test()</code> cuando desee saber si existe la ocurrencia de un patrón en una cadena (similar al método {{jsxref("String.prototype.search()")}}, la diferencia es que <code>test()</code> devuelve un booleano, mientras que <code>search()</code> devuelve el índice de la coincidencia (si la encuentra) o -1 si no la encuentra).</p>
+<p>Use <code>test()</code> cuando desee saber si existe la ocurrencia de un patrón en una cadena (similar al método {{jsxref("String.prototype.search()")}}, la diferencia es que <code>test()</code> devuelve un booleano, mientras que <code>search()</code> devuelve el índice de la coincidencia (si la encuentra) o -1 si no la encuentra).</p>
 
-<p>Si requiere más información (a coste de una ejecución más lenta) utilice el método {{jsxref("RegExp.prototype.exec()", "exec()")}}. Al igual que este último, multiples llamadas a <code>test()</code> sobre la misma instancia global de una expresión regular avanzará desde de la ocurrencia anterior.</p>
+<p>Si requiere más información (a coste de una ejecución más lenta) utilice el método {{jsxref("RegExp.prototype.exec()", "exec()")}}. Al igual que este último, multiples llamadas a <code>test()</code> sobre la misma instancia global de una expresión regular avanzará desde de la ocurrencia anterior.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_test()">Usando <code>test()</code></h3>
+<h3 id="Usando_test()">Usando <code>test()</code></h3>
 
-<p>Ejemplo simple que prueba si "hello" está contenido al principio de una cadena y devuelve un valor booleano.</p>
+<p>Ejemplo simple que prueba si "hello" está contenido al principio de una cadena y devuelve un valor booleano.</p>
 
 <pre class="brush: js">var cadena = "hello world!";
 var result = /^hello/.test(cadena);
@@ -74,17 +74,17 @@ console.log(result); // true
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.10.6.3', 'RegExp.test')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -96,6 +96,6 @@ console.log(result); // true
 <h2 id="Vea_también">Vea también</h2>
 
 <ul>
- <li>El capítulo <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones Regulares</a> de la <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía JavaScript</a></li>
+ <li>El capítulo <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">Expresiones Regulares</a> de la <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">Guía JavaScript</a></li>
  <li>{{jsxref("RegExp")}}</li>
 </ul>

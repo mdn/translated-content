@@ -5,12 +5,12 @@ translation_of: Web/API/MediaSource/MediaSource
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-**`MediaSource()`** 是 {{domxref("MediaSource")}} 的构造函数 返回一个没有分配 source buffers 新的 `MediaSource` 对象。
+**`MediaSource()`** 是 {{domxref("MediaSource")}} 的构造函数，返回一个没有分配 source buffers 新的 `MediaSource` 对象。
 
 ## 语法
 
 ```js
-var mediaSource = new MediaSource();
+new MediaSource()
 ```
 
 ### 参数
@@ -19,7 +19,7 @@ var mediaSource = new MediaSource();
 
 ## 示例
 
-下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 [查看完整例子](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) 或者 [下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) .)
+以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
 var video = document.querySelector('video');
@@ -43,7 +43,7 @@ if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSource.MediaSource")}}
+{{Compat}}
 
 ## 相关链接
 

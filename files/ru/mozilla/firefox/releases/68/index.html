@@ -10,7 +10,7 @@ translation_of: Mozilla/Firefox/Releases/68
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">Эта статья содержит информацию об изменениях в Firefox 68, которые касаются разработчиков. Firefox 68 был выпущен 9 июля 2019.</p>
+<p class="summary">Эта статья содержит информацию об изменениях в Firefox 68, которые касаются разработчиков. Firefox 68 был выпущен 9 июля 2019.</p>
 
 <h2 id="Изменения_для_веб_разработчиков">Изменения для веб разработчиков</h2>
 
@@ -73,7 +73,7 @@ translation_of: Mozilla/Firefox/Releases/68
  <li>{{htmlelement("link")}} элементы снова поддерживают атрибут <code>disabled</code>, с другим поведением. Когда <code>disabled</code> установлен на элементе <code>&lt;link&gt;</code> вместе с <code>rel="stylesheet"</code>, то стили не загружаются во время загрузки страницы, будут загружены лишь тогда, когда атрибут <code>disabled</code> будет изменён на <code>false</code>, либо удалён ({{bug(1281135)}}).</li>
 </ul>
 
-<h4 id="Удалённые"> Удалённые</h4>
+<h4 id="Удалённые"> Удалённые</h4>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/HTML/Element/meta">&lt;meta http-equiv="set-cookie"&gt;</a></code> больше не поддерживается ({{bug(1457503)}}).</li>
@@ -92,12 +92,12 @@ translation_of: Mozilla/Firefox/Releases/68
  </li>
  <li>Свойство {{CSSxRef("-webkit-line-clamp")}} было добавлено для обратной совместимости с другими браузерами ({{bug(866102)}}).</li>
  <li>Для псевдо-элементов была добавлена поддержка {{CSSxRef("::marker")}} ({{bug(205202)}}) и псевдо <code>::marker</code> для анимации ({{bug(1538618)}})</li>
- <li>Мы изменили {{CSSxRef("currentColor")}} на вычисляемое значение (кроме свойства {{cssxref("color")}})  ({{bug(760345)}}).</li>
- <li>Support has been fixed for the <code>ch</code> length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})</li>
- <li>Свойство {{CSSxRef("counter-set")}} реализовано. ({{bug(1518201)}}).</li>
+ <li>Мы изменили {{CSSxRef("currentColor")}} на вычисляемое значение (кроме свойства {{cssxref("color")}})  ({{bug(760345)}}).</li>
+ <li>Support has been fixed for the <code>ch</code> length unit so it now matches the spec (fallback for no '0' glyph, vertical metrics) ({{bug(282126)}})</li>
+ <li>Свойство {{CSSxRef("counter-set")}} реализовано. ({{bug(1518201)}}).</li>
  <li>Мы реализовали нумерацию списков, используя встроенный счётчик "list-item"; это исправило баги с нумерацией списков ({{bug(288704)}}).</li>
- <li>Selector matching and parsing support has been implemented for <code><a href="/en-US/docs/Web/CSS/::part">::part()</a></code> ({{bug(1545430)}}) and ({{bug(1545425)}}).</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a> теперь поддерживаются в косвенно рендерящихся вещах e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).</li>
+ <li>Selector matching and parsing support has been implemented for <code><a href="/en-US/docs/Web/CSS/::part">::part()</a></code> ({{bug(1545430)}}) and ({{bug(1545425)}}).</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a> теперь поддерживаются в косвенно рендерящихся вещах e.g.)  {{SVGElement("mask")}},  {{SVGElement("marker")}},  {{SVGElement("pattern")}},  {{SVGElement("clipPath")}} ({{bug(1323962)}}).</li>
  <li>
   <p>While we're keeping the prefixed versions of the various gradient properties ({{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, and {{cssxref("repeating-radial-gradient")}} available for compatibility reasons, we have revised how they're parsed so that they're handled much more like the non-prefixed versions. This means that certain existing styles won't work correctly.</p>
 
@@ -159,10 +159,10 @@ translation_of: Mozilla/Firefox/Releases/68
  <li>{{domxref("RTCDataChannel.negotiated")}} теперь реализован ({{bug(1529695)}}).</li>
  <li>Конструктор {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} был обновлён в соответствии со спецификацией, где "first audio track" в потоке дорожка, идентификатора которой приходит первым в лексикографическом порядке ({{bug(1324548)}}).</li>
  <li>
-  <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопасного контекста; попытки сделать это будут сопровождаться исключением <code>NotAllowedError</code>. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему  <code>file:///</code>, либо загружены из <code>localhost</code>. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы <code>getUserMedia()</code>, установив надстройку <code>media.getusermedia.insecure.enabled</code> в состояние <code>true</code> ({{bug(1335740)}}).</p>
+  <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопасного контекста; попытки сделать это будут сопровождаться исключением <code>NotAllowedError</code>. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему  <code>file:///</code>, либо загружены из <code>localhost</code>. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы <code>getUserMedia()</code>, установив надстройку <code>media.getusermedia.insecure.enabled</code> в состояние <code>true</code> ({{bug(1335740)}}).</p>
 
   <div class="blockIndicator note">
-  <p><strong>Примечание:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
+  <p><strong>Примечание:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
   </div>
  </li>
 </ul>

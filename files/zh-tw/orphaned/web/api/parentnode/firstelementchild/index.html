@@ -6,7 +6,7 @@ original_slug: Web/API/ParentNode/firstElementChild
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><strong><code>ParentNode.firstElementChild</code></strong> 介面會會返回 <code>ParentNode</code>的第一個子元素(唯讀) ，如果該節點沒有子節點則返回<code>null</code>。</p>
+<p><strong><code>ParentNode.firstElementChild</code></strong> 介面會會返回 <code>ParentNode</code>的第一個子元素(唯讀) ，如果該節點沒有子節點則返回<code>null</code>。</p>
 
 <div class="note">
 <p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("ParentNode")}} and {{domxref("ChildNode")}}. In this case, <code>firstElementChild</code> moved to {{domxref("ParentNode")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
@@ -32,7 +32,7 @@ console.log(foo.firstElementChild.textContent);
 &lt;/script&gt;
 </pre>
 
-<h2 id="適用於IE8_IE9_和_Safari的Polyfill">適用於IE8, IE9 和 Safari的Polyfill</h2>
+<h2 id="適用於IE8_IE9_和_Safari的Polyfill">適用於IE8, IE9 和 Safari的Polyfill</h2>
 
 <pre class="brush: js">// Overwrites native 'firstElementChild' prototype.
 // Adds Document &amp; DocumentFragment support for IE9 &amp; Safari.

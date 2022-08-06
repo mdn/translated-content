@@ -39,7 +39,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p>機能検出の根底にあるアイデアは、プログラムを実行中のブラウザーがある特定の機能に対応しているかを確かめ、その結果に応じて異なるコードを実行するということで、対応ブラウザーと非対応ブラウザーのいずれでも許容できる挙動となるようにすることです。もしこの対策をしなければ、その特定の機能に対応していないブラウザーではあなたのサイトが正常に表示されなかったり、エラーを起こしてユーザーの体験を悪化させるでしょう。</p>
 
-<p>それでは、私たちが <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> で触れた例を振り返ってみましょう。<a href="/ja/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (ブラウザーを実行している端末の位置情報を返します)は、 <a href="/ja/docs/Web/API/Navigator">Navigator</a> オブジェクトに含まれる <code>geolocation</code> プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。</p>
+<p>それでは、私たちが <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> で触れた例を振り返ってみましょう。<a href="/ja/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (ブラウザーを実行している端末の位置情報を返します)は、 <a href="/ja/docs/Web/API/Navigator">Navigator</a> オブジェクトに含まれる <code>geolocation</code> プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。</p>
 
 <pre class="language-js notranslate">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -51,7 +51,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p>しかし、機能検出のためのコードを毎回自分で書くよりも、確立された既存の機能検出ライブラリを使うほうが良いでしょう。この用途では Modernizr が一般に利用されています。Modernizr には後ほど触れます。</p>
 
-<p>次に進む前にもう1つお伝えさせてください。機能検出と<strong>ブラウザー検出</strong>(サイトにアクセスしているブラウザーの種類の検出)を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code">Using bad browser sniffing code</a> を参照してください。</p>
+<p>次に進む前にもう1つお伝えさせてください。機能検出と<strong>ブラウザー検出</strong>(サイトにアクセスしているブラウザーの種類の検出)を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_bad_browser_sniffing_code">Using bad browser sniffing code</a> を参照してください。</p>
 
 <h2 id="Writing_your_own_feature_detection_tests">Writing your own feature detection tests</h2>
 

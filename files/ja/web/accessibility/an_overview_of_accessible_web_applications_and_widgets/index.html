@@ -19,21 +19,21 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <pre class="brush: html">&lt;!-- これはタブウィジェットです。マークアップだけを見て、どのようにしてわかるのでしょうか?--&gt;
 &lt;ol&gt;
-  &lt;li id="ch1Tab"&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab"&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab"&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+  &lt;li id="ch1Tab"&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab"&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab"&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
+  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p><em>例 2: タブウィジェットはどのようにして視覚的にスタイルが設定されるのでしょうか。ユーザはそれを視覚的に認識するでしょう。しかし、支援技術向けに機械が読み取れる意味の情報はありません。</em><br>
@@ -52,22 +52,22 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 <pre class="brush: html">&lt;!-- *これら* はタブです!--&gt;
 &lt;!-- タブリストや各タブを表すために、role 属性を追加しました。--&gt;
 &lt;ol role="tablist"&gt;
-  &lt;li id="ch1Tab" role="tab"&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab" role="tab"&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab" role="tab"&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+  &lt;li id="ch1Tab" role="tab"&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab" role="tab"&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab" role="tab"&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;!-- タブのパネルを表すために追加した role および aria-labelledby 属性に注目してください。--&gt;
-  &lt;div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab"&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab"&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel" role="tabpanel" aria-labelledby="quizTab"&gt;Quiz content goes here&lt;/div&gt;
+  &lt;!-- タブのパネルを表すために追加した role および aria-labelledby 属性に注目してください。--&gt;
+  &lt;div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab"&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab"&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel" role="tabpanel" aria-labelledby="quizTab"&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 

@@ -153,7 +153,7 @@ translation_of: Web/CSS/CSS_Grid_Layout
 
 ## 外部リソース
 
-- [CSS Grid and IE11](http://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
+- [CSS Grid and IE11](http://tomrothe.de/posts/css_grid_and_ie11.html) ([polyfill](https://github.com/motine/css_grid_annotator))
 - [Examples from Jen Simmons](http://labs.jensimmons.com/)
 - [Grid by Example - a collection of usage examples and video tutorials](http://gridbyexample.com/)
 - [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)

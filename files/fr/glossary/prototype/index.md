@@ -16,4 +16,4 @@ Voir [Héritage et chaîne de prototypes](/fr/docs/Web/JavaScript/Héritage_et_c
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Prototypage logiciel")}} sur Wikipédia
+- [Prototypage logiciel](https://fr.wikipedia.org/wiki/Prototypage_logiciel) sur Wikipédia

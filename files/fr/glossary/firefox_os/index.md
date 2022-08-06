@@ -17,7 +17,7 @@ Firefox OS est le système d'exploitation mobile de Mozilla, basé sur Linux et 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Firefox_OS")}} sur Wikipedia
+- [Firefox OS](https://fr.wikipedia.org/wiki/Firefox_OS) sur Wikipédia
 
 ### Référence technique
 

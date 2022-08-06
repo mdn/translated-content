@@ -5,9 +5,9 @@ translation_of: Web/Accessibility
 l10n:
   sourceCommit: acebfb2b738c2b3d7caf73607000f1aa4b4393d1
 ---
-La **accesibilidad web** (a menudo abreviada como **A11y** — como "a", luego 11 caracteres, y luego "y") se refiere a la posibilidad de acceso a los diferentes sitios web y a todo su contenido por todas las personas, independientemente de sus limitaciones físicas (discapacidad) o las derivadas del contexto de uso (tecnológicas o ambientales).
+La **accesibilidad web** (a menudo abreviada como **A11y** — como "a", luego 11 caracteres, y luego "y") se refiere a la posibilidad de acceso a los diferentes sitios web y a todo su contenido por todas las personas, independientemente de sus limitaciones físicas (discapacidad) o las derivadas del contexto de uso (tecnológicas o ambientales).
 
-Para muchas personas, la tecnología facilita las cosas. Para las personas con algun tipo de discapacidad, la tecnología hace las cosas posibles. Accesibilidad significa desarrollar contenido para que sea lo más accesible posible sin importar las habilidades físicas y cognitivas de un individuo y sin importar cómo acceda a la web.
+Para muchas personas, la tecnología facilita las cosas. Para las personas con algun tipo de discapacidad, la tecnología hace las cosas posibles. Accesibilidad significa desarrollar contenido para que sea lo más accesible posible sin importar las habilidades físicas y cognitivas de un individuo y sin importar cómo acceda a la web.
 
 "**La Web está diseñada fundamentalmente para que funcione para todas las personas**, independientemente de su hardware, software, idioma, cultura, ubicación, capacidad física o mental. Cuando la Web cumple este objetivo, es accesible para personas con una amplia gama de capacidades auditivas, de movimiento, de vista y cognitivas." ([W3C - Accesibilidad](https://www.w3.org/standards/webdesign/accessibility))
 
