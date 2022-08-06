@@ -208,16 +208,16 @@ a;
 <p>以下のフィボナッチ数列ジェネレーターでは数列を再起動するのに <code>next(x)</code> を使っています:</p>
 
 <pre class="brush: js notranslate">function* fibonacci() {
-  let current = 0;
-  let next = 1;
-  while (true) {
-    let reset = yield current;
-    [current, next] = [next, next + current];
-    if (reset) {
-        current = 0;
-        next = 1;
-    }
-  }
+  let current = 0;
+  let next = 1;
+  while (true) {
+    let reset = yield current;
+    [current, next] = [next, next + current];
+    if (reset) {
+        current = 0;
+        next = 1;
+    }
+  }
 }
 
 const sequence = fibonacci();

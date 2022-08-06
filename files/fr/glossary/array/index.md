@@ -17,17 +17,19 @@ Chaque élément d'un _array_ a un numéro qui lui est associé, appelé index n
 
 À quoi ressemble-t-il en JavaScript ?
 
-    var myArray = [1, 2, 3, 4];
+```js
+var myArray = [1, 2, 3, 4];
 
-    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
-    //Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
+//Des arrays en JavaScript peuvent contenir différents types de données, comme indiqué ci-dessus.
+```
 
 ## Pour approfondir
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Tableau_(structure_de_données)","Array")}} on Wikipedia
+- [Tableau (structure de données)](https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)) sur Wikipédia
 
 ### Informations techniques
 

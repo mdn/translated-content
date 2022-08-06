@@ -5,23 +5,23 @@ translation_of: Web/API/CharacterData
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Абстрактный интерфейс <code><strong>CharacterData</strong></code> представляет собой объект {{domxref("Node")}}, который содержит символы. "Абстрактность" интерфейса означает то, что не существует объектов типа <code>CharacterData</code>: интерфейс <code><strong>CharacterData</strong></code> реализуется посредством других интерфейсов, таких как {{domxref("Text")}}, {{domxref("Comment")}}, или {{domxref("ProcessingInstruction")}}, которые не являются абстрактными.</p>
+<p>Абстрактный интерфейс <code><strong>CharacterData</strong></code> представляет собой объект {{domxref("Node")}}, который содержит символы. "Абстрактность" интерфейса означает то, что не существует объектов типа <code>CharacterData</code>: интерфейс <code><strong>CharacterData</strong></code> реализуется посредством других интерфейсов, таких как {{domxref("Text")}}, {{domxref("Comment")}}, или {{domxref("ProcessingInstruction")}}, которые не являются абстрактными.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
 <h2 id="Свойства">Свойства</h2>
 
-<p><em>Наследует свойства родителя, {{domxref("Node")}},  реализуется с помощью {{domxref("ChildNode")}} и {{domxref("NonDocumentTypeChildNode")}}интерфейсов.</em></p>
+<p><em>Наследует свойства родителя, {{domxref("Node")}},  реализуется с помощью {{domxref("ChildNode")}} и {{domxref("NonDocumentTypeChildNode")}}интерфейсов.</em></p>
 
 <dl>
  <dt>{{domxref("CharacterData.data")}}</dt>
- <dd> - это {{domxref("DOMString")}}, представляющая(ий) текстовые данные, которые содержит этот объект (DOMString).</dd>
+ <dd> - это {{domxref("DOMString")}}, представляющая(ий) текстовые данные, которые содержит этот объект (DOMString).</dd>
  <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
- <dd>Возвращает an <code>unsigned long</code> и отображает размер строки, содержащейся в <code>CharacterData.data</code>.</dd>
+ <dd>Возвращает an <code>unsigned long</code> и отображает размер строки, содержащейся в <code>CharacterData.data</code>.</dd>
  <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Element")}} следующий сразу после указанного  {{domxref("Element")}} элемента в дочернем списке своего родителя, или <code>null</code> если указанный элемент - последний в списке.</dd>
+ <dd>Возвращает {{domxref("Element")}} следующий сразу после указанного  {{domxref("Element")}} элемента в дочернем списке своего родителя, или <code>null</code> если указанный элемент - последний в списке.</dd>
  <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Element")}} непосредственно до указанного элемента в дочернем списке своего родительского элемента, или <code>null</code> если указанный элемент - первый в списке.</dd>
+ <dd>Возвращает {{domxref("Element")}} непосредственно до указанного элемента в дочернем списке своего родительского элемента, или <code>null</code> если указанный элемент - первый в списке.</dd>
 </dl>
 
 <h2 id="Methods">Методы</h2>
@@ -30,17 +30,17 @@ translation_of: Web/API/CharacterData
 
 <dl>
  <dt>{{domxref("CharacterData.appendData()")}}</dt>
- <dd>Добавляет указанную {{domxref("DOMString")}} к строке <code>CharacterData.data</code>; после выполнения данного метода, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">данные содержат</span></font> объединённый(элемент) {{domxref("DOMString")}}.</dd>
+ <dd>Добавляет указанную {{domxref("DOMString")}} к строке <code>CharacterData.data</code>; после выполнения данного метода, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">данные содержат</span></font> объединённый(элемент) {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("CharacterData.deleteData()")}}</dt>
- <dd>Удаляет указанное количество символов, начиная с указанного отступа, из строки <code>CharacterData.data</code>; после выполнения метода, данные(<code>data)</code> содержат урезанный {{domxref("DOMString")}}.</dd>
+ <dd>Удаляет указанное количество символов, начиная с указанного отступа, из строки <code>CharacterData.data</code>; после выполнения метода, данные(<code>data)</code> содержат урезанный {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("CharacterData.insertData()")}}</dt>
  <dd>Inserts the specified characters, at the specified offset, in the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Удаляет объект из its parent children списка.</dd>
+ <dd>Удаляет объект из its parent children списка.</dd>
  <dt>{{domxref("CharacterData.replaceData()")}}</dt>
- <dd>Заменяет указанное количество символов, начиная с указанного отступа, с указанным {{domxref("DOMString")}}; после выполнения метода, данные(<code>data)</code> содержат изменений {{domxref("DOMString")}}.</dd>
+ <dd>Заменяет указанное количество символов, начиная с указанного отступа, с указанным {{domxref("DOMString")}}; после выполнения метода, данные(<code>data)</code> содержат изменений {{domxref("DOMString")}}.</dd>
  <dt>{{domxref("CharacterData.substringData()")}}</dt>
- <dd>Возвращает {{domxref("DOMString")}}, содержащую(ий) часть <code>CharacterData.data</code> указанной длины и начиная с указанного отступа.</dd>
+ <dd>Возвращает {{domxref("DOMString")}}, содержащую(ий) часть <code>CharacterData.data</code> указанной длины и начиная с указанного отступа.</dd>
 </dl>
 
 <h2 id="Specification">Спецификации</h2>
@@ -77,13 +77,13 @@ translation_of: Web/API/CharacterData
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p> </p>
+<p> </p>
 
 <p>{{Compat}}</p>
 
 <h2 id="Смотри(те)_также">Смотри(те) также</h2>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>

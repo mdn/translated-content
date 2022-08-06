@@ -16,7 +16,7 @@ translation_of: Web/CSS/align-tracks
 
 {{SeeCompatTable}}
 
-**`align-tracks`** は CSS のプロパティで、ブロック軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
+**`align-tracks`** は CSS のプロパティで、ブロック軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
 
 ## 構文
 
@@ -51,7 +51,7 @@ align-tracks: unset;
 - `baseline first baseline`
   `last baseline`
   - : ボックスの先頭または末尾のベースラインセットの配置ベースラインを、ベースライン共有グループのすべてのボックスの共有された先頭または末尾のベースラインセットの対応するベースラインに合わせます。
-    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+    `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `space-between`
   - : アイテムは配置コンテナー内で組積軸に沿って均等に配置されます。隣接するアイテム同士の間の間隔は同じです。先頭のアイテムは、コンテナーの先頭の端に詰められ、末尾のアイテムは、コンテナーの末尾の端に詰められます。
 - `space-around`
@@ -85,4 +85,4 @@ align-tracks: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("justify-tracks")}}, {{cssxref("masonry-auto-flow")}}
+- 関連する CSS プロパティ: {{cssxref("justify-tracks")}}, {{cssxref("masonry-auto-flow")}}

@@ -65,7 +65,7 @@ translation_of: Web/API/WebXR_Device_API
  <dt>{{DOMxRef("XRSession")}}</dt>
  <dd>XR ハードウェアと対話するためのインターフェイスを提供します。 {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} から <code>XRSession</code> が取得されると、セッションを使用して、ビューアーの位置と方向を確認し、デバイスに環境情報を照会し、仮想世界や拡張世界をユーザーに提示できます。</dd>
  <dt>{{DOMxRef("XRSpace")}}</dt>
- <dd><code>XRSpace</code> は、すべての仮想座標系インターフェイスが基にする不透明な基本クラスです。 WebXR での位置は、特定の {{domxref("XRFrame")}}  が発生する時点で、常に特定の <code>XRSpace</code> に関連して表現されます。 空間の座標系は、指定された物理的な位置を原点とします。</dd>
+ <dd><code>XRSpace</code> は、すべての仮想座標系インターフェイスが基にする不透明な基本クラスです。 WebXR での位置は、特定の {{domxref("XRFrame")}}  が発生する時点で、常に特定の <code>XRSpace</code> に関連して表現されます。 空間の座標系は、指定された物理的な位置を原点とします。</dd>
  <dt>{{DOMxRef("XRReferenceSpace")}}</dt>
  <dd>{{domxref("XRSpace")}} のサブクラスであり、ユーザーの物理的環境との関係で空間関係を識別するために使用されます。 <code>XRReferenceSpace</code> 座標系は、{{domxref("XRSession")}} の存続期間を通じて変更されないままであると予想されます。 世界には境界がなく、あらゆる方向に無限に広がります。</dd>
  <dt>{{DOMxRef("XRBoundedReferenceSpace")}}</dt>

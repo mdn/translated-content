@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLMediaElement/durationchange_event
 ---
 <p>{{APIRef("HTMLMediaElement")}}</p>
 
-<p><span class="seoSummary"><code>durationchange</code> 事件会在 <code>duration</code> 属性更新时被触发。</span></p>
+<p><code>durationchange</code> 事件会在 <code>duration</code> 属性更新时被触发。</p>
 
 <table class="properties">
  <tbody>
@@ -42,16 +42,16 @@ translation_of: Web/API/HTMLMediaElement/durationchange_event
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子为 HTMLMediaElement 的 <code>durationchange</code>  事件添加事件监听器，然后在事件触发时发送一个消息。</p>
+<p>下面的例子为 HTMLMediaElement 的 <code>durationchange</code>  事件添加事件监听器，然后在事件触发时发送一个消息。</p>
 
-<p>使用 <code>addEventListener()</code>:</p>
+<p>使用 <code>addEventListener()</code>:</p>
 
 <pre class="brush: js notranslate">const video = document.querySelector('video');
 
@@ -59,7 +59,7 @@ video.addEventListener('durationchange', (event) =&gt; {
   console.log('Not sure why, but the duration of the video has changed.');
 });</pre>
 
-<p>使用 <code>ondurationchange</code> 事件处理器属性：</p>
+<p>使用 <code>ondurationchange</code> 事件处理器属性：</p>
 
 <pre class="brush: js notranslate">const video = document.querySelector('video');
 
@@ -69,22 +69,7 @@ video.ondurationchange = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-durationchange", "durationchange media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-durationchange", "durationchange media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

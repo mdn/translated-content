@@ -14,9 +14,11 @@ translation_of: Web/API/Storage/key
 
 La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en argument et retourne la n-ième clé contenue dans storage. L'ordre des clés étant définie par le navigateur, il est recommandé de ne pas s'y référer .
 
-## Syntax
+## Syntaxe
 
-    var unNomDeCle = storage.key(cle);
+```js
+var unNomDeCle = storage.key(cle);
+```
 
 ### Paramètres
 

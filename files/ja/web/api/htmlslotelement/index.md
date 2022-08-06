@@ -31,7 +31,7 @@ translation_of: Web/API/HTMLSlotElement
 ## イベント
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot "<slot> は HTML の要素 — ウェブコンポーネント技術の一部 — は、ウェブコンポーネント内で別な DOM ツリーを構築し、いっしょに表示することができる独自のマークアップを入れることができるプレイスホルダーです。") 要素) に発生します。
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) 要素) に発生します。
 
 ## 例
 
@@ -40,8 +40,8 @@ translation_of: Web/API/HTMLSlotElement
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });
 ```
 

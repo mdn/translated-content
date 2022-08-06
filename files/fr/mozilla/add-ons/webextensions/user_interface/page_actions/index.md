@@ -27,7 +27,7 @@ Les différences sont :
 
 - La visibilité du bouton **:**
 
-  - L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés [manifest ](/fr/Add-ons/WebExtensions/manifest.json/page_action)des clés `show_matches` et `hide_matches`), et vous appelez [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) et [`pageAction.hide()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) pour l'afficher ou la masquer dans des onglets spécifiques.
+  - L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés [manifest](/fr/Add-ons/WebExtensions/manifest.json/page_action) des clés `show_matches` et `hide_matches`), et vous appelez [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) et [`pageAction.hide()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) pour l'afficher ou la masquer dans des onglets spécifiques.
   - L'action du navigateur est toujours affichée.
 
 Utilisez une action de page lorsque l'action est liée à la page en cours, et une action navigateur lorsque l'action est liée au navigateur dans son ensemble ou à trop de pages. Par exemple :
@@ -77,10 +77,12 @@ La seule clé obligatoire est `default_icon`.
 Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
 - **Sans popup:** Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser [`pageAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
-- ```js
+
+  ```js
   browser.pageAction.onClicked.addListener(handleClick);
   ```
-- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup ](/fr/Add-ons/WebExtensions/Popups)pour plus de détails sur la création et la gestion des popups.
+
+- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/Add-ons/WebExtensions/Popups) pour plus de détails sur la création et la gestion des popups.
 
 Notez que votre extension ne peut avoir qu'une seule page action.
 

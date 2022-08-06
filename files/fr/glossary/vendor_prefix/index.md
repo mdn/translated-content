@@ -50,4 +50,4 @@ Quant aux propriétés et aux méthodes, sont généralement utilisés :
 
 ### Culture générale
 
-{{Interwiki("wikipedia", "Métadonnée#Services_Web", "Services web")}} sur Wikipédia
+- [Section en anglais sur les préfixes des navigateurs en CSS](https://en.wikipedia.org/wiki/CSS_hack#Browser_prefixes) sur Wikipédia

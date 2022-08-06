@@ -55,9 +55,9 @@ translation_of: Web/Accessibility/ARIA/Roles/Role_Img
 <p>例えば、テキストに絵文字を使用した場合、その意味は目の見えるユーザーにとっては明白かもしれませんが、スクリーンリーダーを使用している人は、絵文字にはテキスト表現が全くないか、代替テキストが紛らわしく、それが使用されているコンテキストと一致しないために混乱する可能性があります。 例えば、次のコードです。</p>
 
 <pre class="brush: html">&lt;div role="img" aria-label="その猫はとても面白い"&gt;
-  &lt;p&gt;
-    &amp;#x1F408; &amp;#x1F602;
-  &lt;/p&gt;
+  &lt;p&gt;
+    &amp;#x1F408; &amp;#x1F602;
+  &lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <p>&amp;#x1F408; &amp;#x1F602; の絵文字の実体参照は「猫」と「涙が出るほど嬉しい顔」で読み上げられますが、これは必ずしも意味をなしません — 暗黙の意味はおそらく「その猫はとても面白い」で、それを <code>aria-label</code> で画像ロール (<code>role="img"</code>) と一緒に指定します。</p>

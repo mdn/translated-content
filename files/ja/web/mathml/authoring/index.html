@@ -84,10 +84,10 @@ var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome')
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 body, m|mtext {
-    font-family: Latin Modern;
+    font-family: Latin Modern;
 }
 m|math {
-    font-family: Latin Modern Math;
+    font-family: Latin Modern Math;
 }</pre>
 
 <p>You can then use the <a href="/ja/docs/Web/CSS/@font-face">@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="http://fred-wang.github.io/MathFonts/">its test page</a>.</p>
@@ -95,28 +95,28 @@ m|math {
 <h4 id="XML文書（XHTML，EPUB等々）におけるMathML">XML文書（XHTML，EPUB等々）におけるMathML</h4>
 
 <p>If for some reason you need to use MathML in XML documents, be sure to satisfy the usual requirements: well-formed document, use of correct MIME type, MathML namespace <code>"http://www.w3.org/1998/Math/MathML"</code> on <code>&lt;math&gt;</code> roots. For example, the XHTML version of the previous example looks like this:<br>
-  </p>
+  </p>
 
 <pre class="brush: xml notranslate">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
+  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 &lt;head&gt;
- &lt;title&gt;XHTML+MathML例&lt;/title&gt;
+ &lt;title&gt;XHTML+MathML例&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;h1&gt;XHTML+MathML例&lt;/h1&gt;
 
-  &lt;p&gt;
-    2の平方根は
-    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-      &lt;msqrt&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msqrt&gt;
-    &lt;/math&gt;
-    である。
-  &lt;/p&gt;
+  &lt;p&gt;
+    2の平方根は
+    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+      &lt;msqrt&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msqrt&gt;
+    &lt;/math&gt;
+    である。
+  &lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt; </pre>

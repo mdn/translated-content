@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).</p>
+<p class="summary">En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -26,55 +26,55 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>Un <a href="/en-US/docs/Web/Guide/HTML/Forms">Formulario HTML </a>es un conjunto de uno o más campos/widgets en una página web, que pueden ser usados para recolectar información de los usuarios para el envío a un servidor. Los formularios son un mecanismo flexible para recolectar datos de entrada porque <span id="result_box" lang="es"><span>son widgets adecuados para ingresar diferentes tipos de datos, incluyendo campos de texto, checkboxes, radio buttons, selector de fechas, etc. Los formularios son también una forma relativamente segura de compartir datos con el servidor, ya que permiten enviar información en peticiones </span></span><code>POST</code> <span class="short_text" id="result_box" lang="es"><span>con protección de falsificación de solicitud entre sitios.</span></span></p>
 
-<p>Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla  de abajo muestra un formulario para editar uno de nuestros modelos de <a href="/en-US/docs/Learn/Server-side/Django/Models">Libro</a>, compuesto de un número de listas de selección y editores de texto.</p>
+<p>Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla  de abajo muestra un formulario para editar uno de nuestros modelos de <a href="/en-US/docs/Learn/Server-side/Django/Models">Libro</a>, compuesto de un número de listas de selección y editores de texto.</p>
 
 <p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Trabajar con formularios puede ser complicado! Los desarrolladores deben de escribir código HTML para el formulario, validar y adecuadamente limpiar los datos ingresados en el servidor (y posiblemente también en el browser o navegador), volver a publicar el formulario con mensajes de error para informar a los usuarios de cualquier campo invalido, manejar los datos cuando hayan sido enviados exitosamente y finalmente, responder al usuario de alguna manera, para indicar el éxito de la operación.  Django Forms  elimina mucho del trabajo de todos estos pasos, al proporcionar un marco de trabajo que le permite definir formularios y sus campos a travéz de programación y luego, utilizar estos objetos para generar el código HTML del formulario y manejar gran parte de la validación y la interacción del usuario.</p>
+<p>Trabajar con formularios puede ser complicado! Los desarrolladores deben de escribir código HTML para el formulario, validar y adecuadamente limpiar los datos ingresados en el servidor (y posiblemente también en el browser o navegador), volver a publicar el formulario con mensajes de error para informar a los usuarios de cualquier campo invalido, manejar los datos cuando hayan sido enviados exitosamente y finalmente, responder al usuario de alguna manera, para indicar el éxito de la operación.  Django Forms  elimina mucho del trabajo de todos estos pasos, al proporcionar un marco de trabajo que le permite definir formularios y sus campos a travéz de programación y luego, utilizar estos objetos para generar el código HTML del formulario y manejar gran parte de la validación y la interacción del usuario.</p>
 
-<p>En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con formularios y en particular, cómo las vistas genéricas de edición de formularios pueden significativamente reducir la cantidad del trabajo necesario para crear formularios para manejar sus modelos. En el camino iremos extendiendo nuestra aplicación <em>LocalLibrary</em>  por agregar un formulario para permitir a los  bibliotecarios renovar libros de la biblioteca y crearemos páginas para crear, editar o eliminar libros y autores (reproduciendo una versión básica del formulario mostrado arriba para editar libros).</p>
+<p>En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con formularios y en particular, cómo las vistas genéricas de edición de formularios pueden significativamente reducir la cantidad del trabajo necesario para crear formularios para manejar sus modelos. En el camino iremos extendiendo nuestra aplicación <em>LocalLibrary</em>  por agregar un formulario para permitir a los  bibliotecarios renovar libros de la biblioteca y crearemos páginas para crear, editar o eliminar libros y autores (reproduciendo una versión básica del formulario mostrado arriba para editar libros).</p>
 
 <h2 id="Formularios_HTML">Formularios HTML</h2>
 
-<p>Primero, una breve revisión de <a href="/en-US/docs/Learn/HTML/Forms">Formularios HTML</a>. Considere un  simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:</p>
+<p>Primero, una breve revisión de <a href="/en-US/docs/Learn/HTML/Forms">Formularios HTML</a>. Considere un  simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:</p>
 
 <p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
 
-<p>El formulario es definido en HTML como una colección de elementos dentro de las etiquetas  <code>&lt;form&gt;...&lt;/form&gt;</code>, conteniendo por lo menos un elemento de entrada - <code>input</code> de tipo enviar - <code>type="submit"</code>.</p>
+<p>El formulario es definido en HTML como una colección de elementos dentro de las etiquetas  <code>&lt;form&gt;...&lt;/form&gt;</code>, conteniendo por lo menos un elemento de entrada - <code>input</code> de tipo enviar - <code>type="submit"</code>.</p>
 
 <pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>Si bien acá solo tenemos un campo de texto para ingresar el nombre del equipo, un formulario puede tener cualquier número de otros elementos de entrada y sus etiquetas asociadas. El tipo del atributo del campo - <code>type</code>  define que clase de widget será mostrado. El nombre - <code>name</code> y el identificador - <code>id</code> del campo son usados para identificar el campo en JavaScript/CSS/HTML, mientrras que el valor - <code>value</code> define el valor inicial para el campo cuando este se muestra por primera vez. La etiqueta del equipo correspondiente es especificada utilizando la etiqueta - <code style="font-style: normal; font-weight: normal;">label</code> (consulte "Enter name" arriba), con un campo  <code style="font-style: normal; font-weight: normal;">for</code>  que contiene el valor de identificación  <code style="font-style: normal; font-weight: normal;">id</code> de la entrada asociada <code style="font-style: normal; font-weight: normal;">input</code>.</p>
+<p>Si bien acá solo tenemos un campo de texto para ingresar el nombre del equipo, un formulario puede tener cualquier número de otros elementos de entrada y sus etiquetas asociadas. El tipo del atributo del campo - <code>type</code>  define que clase de widget será mostrado. El nombre - <code>name</code> y el identificador - <code>id</code> del campo son usados para identificar el campo en JavaScript/CSS/HTML, mientrras que el valor - <code>value</code> define el valor inicial para el campo cuando este se muestra por primera vez. La etiqueta del equipo correspondiente es especificada utilizando la etiqueta - <code style="font-style: normal; font-weight: normal;">label</code> (consulte "Enter name" arriba), con un campo  <code style="font-style: normal; font-weight: normal;">for</code>  que contiene el valor de identificación  <code style="font-style: normal; font-weight: normal;">id</code> de la entrada asociada <code style="font-style: normal; font-weight: normal;">input</code>.</p>
 
-<p>La entrada de envío - <code>submit</code> se mostrará como un botón (de forma predeterminada)  que el usuario puede presionar para cargar los datos en todos los demás elementos de entrada en el formulario al servidor (en este caso, solo el nombre del equipo - <code>team_name</code>). Los atributos del formulario definen el metodo -  <code>method</code> de HTTP usado para enviar los datos y el destino de los datos al servidor (<code>action</code>):</p>
+<p>La entrada de envío - <code>submit</code> se mostrará como un botón (de forma predeterminada)  que el usuario puede presionar para cargar los datos en todos los demás elementos de entrada en el formulario al servidor (en este caso, solo el nombre del equipo - <code>team_name</code>). Los atributos del formulario definen el metodo -  <code>method</code> de HTTP usado para enviar los datos y el destino de los datos al servidor (<code>action</code>):</p>
 
 <ul>
  <li><code>action</code>: El recurso URL - resource/URL donde los datos serán enviados para su procesamiento cuando se envíe el formulario. Si esto no se establece (o se deja como una cadena vacía), entonces el formulario será enviado de regreso al URL de la página actual.</li>
  <li><code>method</code>: El método utilizado por HTTP para enviar los datos: <em>post</em> o <em>get</em>.
   <ul>
-   <li>El método  <code>POST</code> siempre debe usarse si los datos enviados van a resultar en un cambio en la base de datos del servidor porque esto puede ser mas resistente a un ataque de solicitud de falsificación entre sitios (cross-site forgery request attacks).</li>
+   <li>El método  <code>POST</code> siempre debe usarse si los datos enviados van a resultar en un cambio en la base de datos del servidor porque esto puede ser mas resistente a un ataque de solicitud de falsificación entre sitios (cross-site forgery request attacks).</li>
    <li>El método <code>GET</code> unicamente debe usarse para cuando los formularios no cambian datos de usuario (por ejemplo, un formulario de búsqueda). También, este es recomendado para cuando desee guardar, marcar o compartir el URL.</li>
   </ul>
  </li>
 </ul>
 
-<p>El rol del servidor es primero procesar el estado inicial del formulario ya sea conteniendo campos en blanco o completados previamente con valores inciales. Después de que el usuario presiona el botón de Enviar, el servidor recibirá los datos del formulario con valores del navegador web y deberá validar  la información. Si el formulario contiene datos inválidos, el servidor deberá desplegar el formulario de nuevo, esta vez con datos ingresados por el usuario en campos "válidos" y mensajes para describir el problema en los campos con valor inválidos. Una vez el servidor recibe una petición con todos los datos de formulario válidos, este puede realizar una acción apropiada (por ejemplo, guardando los datos, regresando el resultado de una búsqueda, cargando un archivo, etc.) y luego notificar al usuario.</p>
+<p>El rol del servidor es primero procesar el estado inicial del formulario ya sea conteniendo campos en blanco o completados previamente con valores inciales. Después de que el usuario presiona el botón de Enviar, el servidor recibirá los datos del formulario con valores del navegador web y deberá validar  la información. Si el formulario contiene datos inválidos, el servidor deberá desplegar el formulario de nuevo, esta vez con datos ingresados por el usuario en campos "válidos" y mensajes para describir el problema en los campos con valor inválidos. Una vez el servidor recibe una petición con todos los datos de formulario válidos, este puede realizar una acción apropiada (por ejemplo, guardando los datos, regresando el resultado de una búsqueda, cargando un archivo, etc.) y luego notificar al usuario.</p>
 
 <p>Como puede imaginar, crear el código HTML, validar los datos retornados, redesplegar los datos ingresados con errores reportados si fuera necesario y realizar las operaciones deseadas sobre los datos válidos puede todo tomar bastante esfuerzo para "hacerlo bien". Django hace esto mucho más fácil por quitar parte del trabajo pesado y código repetitivo!</p>
 
 <h2 id="Proceso_del_manejo_de_formularios_de_Django">Proceso del manejo de formularios de Django</h2>
 
-<p>El manejo de formularios de Django utiliza las mismas técnicas que aprendimos en tutoriales anteriores (para mostrar información sobre nuestros modelos):  la vista recibe una solicitud, realiza cualquier acción requerida incluyendo leer datos de los modelos, luego generar y devolver una página HTML (de una platilla, en la que pasamos un <em>contexto </em>conteniendo los datos a ser desplegados).  Lo que hace las cosas más complicadas  es que el servidor también necesita poder procesar los datos proporcionados por el usuario y volver a mostrar la página si hay algún error.</p>
+<p>El manejo de formularios de Django utiliza las mismas técnicas que aprendimos en tutoriales anteriores (para mostrar información sobre nuestros modelos):  la vista recibe una solicitud, realiza cualquier acción requerida incluyendo leer datos de los modelos, luego generar y devolver una página HTML (de una platilla, en la que pasamos un <em>contexto </em>conteniendo los datos a ser desplegados).  Lo que hace las cosas más complicadas  es que el servidor también necesita poder procesar los datos proporcionados por el usuario y volver a mostrar la página si hay algún error.</p>
 
 <p>A continuación se muestra un diagram de flujo del proceso de cómo Django maneja las solicitudes de formulario, comenzando con una solicitud de una página que contiene un formulario (mostrado en verde).</p>
 
 <p><img alt="Updated form handling process doc." src="https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png" style="display: block; height: 569px; margin: 0px auto; width: 800px;"></p>
 
-<p>Basado en el diagrama de anterior, las principales pasos que  hace el proceso del manejo de formularios de Django son:</p>
+<p>Basado en el diagrama de anterior, las principales pasos que  hace el proceso del manejo de formularios de Django son:</p>
 
 <ol>
  <li>Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
@@ -85,7 +85,7 @@ translation_of: Learn/Server-side/Django/Forms
  </li>
  <li>Recibir datos de una solicitud de envío y vincularlo al formulario.
   <ul>
-   <li>La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario. </li>
+   <li>La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario. </li>
   </ul>
  </li>
  <li>Limpiar y validar los datos. Clean and validate the data.
@@ -102,12 +102,12 @@ translation_of: Learn/Server-side/Django/Forms
 <p>Django provee una serie de herramientas y enfoques para ayudarlo con las tareas detalladas anteriormente. La más fundamental es la clase <code>Form</code>, la cuál simplifica la generación de formularios HTML y la limpieza y validación de datos. En la siguiente sección describimos cómo funcionan los formularios usando el ejemplo práctico de una página para permitir a los bibliotecarios renovar libros.</p>
 
 <div class="note">
-<p><strong>Nota:</strong>  Comprender como se usa la clase <code>Form</code>  lo ayudará cuando analicemos las clases de marco de formulario de más "alto nivel" de Django.</p>
+<p><strong>Nota:</strong>  Comprender como se usa la clase <code>Form</code>  lo ayudará cuando analicemos las clases de marco de formulario de más "alto nivel" de Django.</p>
 </div>
 
 <h2 id="Renew-book_form_usando_un_Form_y_la_funcion_view">Renew-book form usando un Form y la funcion view</h2>
 
-<p>A continuación, vamos a añadir una página que permita a los bibilotecarios renovar los libros prestados. Para hacer esto crearemos un formulario que permita a los usuarios introducir una fecha. Rellenaremos el campo con un valor inicial de 3 semanas desde la fecha actual (el periodo de préstamo normal), y añadiremos alguna validación para asegurar que el bibilotecario no pueda introducir una fecha pasada o una demasiado lejana en el futuro. Cuando se haya introducido una fecha válida, la escribiremos sobre el campo <code>BookInstance.due_back</code> del registro actual.</p>
+<p>A continuación, vamos a añadir una página que permita a los bibilotecarios renovar los libros prestados. Para hacer esto crearemos un formulario que permita a los usuarios introducir una fecha. Rellenaremos el campo con un valor inicial de 3 semanas desde la fecha actual (el periodo de préstamo normal), y añadiremos alguna validación para asegurar que el bibilotecario no pueda introducir una fecha pasada o una demasiado lejana en el futuro. Cuando se haya introducido una fecha válida, la escribiremos sobre el campo <code>BookInstance.due_back</code> del registro actual.</p>
 
 <p>El ejemplo utilizará una vista basada en funciones y una clase <code>Form</code>. Las próximas secciones explican como los formularios funcionan, y los cambios que necesitas realizar para continuar adelante con nuestro proyecto <em>LocalLibrary</em>.</p>
 
@@ -119,12 +119,12 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>La sintaxis de declaración para un formulario es muy similar a la de declarar un modelo, y comparte los mismos tipos de campo (y algunos parámetros similares). Esto tiene sentido porque en ambos casos debemos asegurarnos de que cada campo maneja los tipos correctos de datos, está restringido a datos válidos y tiene una descripción para la visualización / documentación.</p>
 
-<p>Para crear un formulario (<code>Form</code>) es necesario importar la libreria f<code>orms</code>, derivada de la clase <code>Form</code>, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:</p>
+<p>Para crear un formulario (<code>Form</code>) es necesario importar la libreria f<code>orms</code>, derivada de la clase <code>Form</code>, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:</p>
 
 <pre class="brush: python notranslate">from django import forms
 
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 </pre>
 
 <h4 id="Campos_del_Form">Campos del Form</h4>
@@ -136,8 +136,8 @@ class RenewBookForm(forms.Form):
 <p>Los argumentos que son comunes a la mayoría de los campos se enumeran a continuación (estos tienen valores predeterminados sensibles):</p>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#required">required</a>: Si es <code>True</code>, el campo no se puede dejar en blanco o dar un valor  <code>None</code>. Los Campos son obligatorios por defecto, tambien puedes establecer <code>required=False</code> para permitir valores en blanco en el formulario.</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label">label</a>: label es usado cuando renderizamos el campo en  HTML. Si <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label">label</a> no es especificado entonces Django crearía uno a partir del nombre del campo al poner en mayúscula la primera letra y reemplazar los guiones bajos por espacios (por ejemplo. <em>Renewal date</em>).</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#required">required</a>: Si es <code>True</code>, el campo no se puede dejar en blanco o dar un valor  <code>None</code>. Los Campos son obligatorios por defecto, tambien puedes establecer <code>required=False</code> para permitir valores en blanco en el formulario.</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label">label</a>: label es usado cuando renderizamos el campo en  HTML. Si <a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label">label</a> no es especificado entonces Django crearía uno a partir del nombre del campo al poner en mayúscula la primera letra y reemplazar los guiones bajos por espacios (por ejemplo. <em>Renewal date</em>).</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#label-suffix">label_suffix</a>: <span class="tlid-translation translation" lang="es"><span title="">Por defecto, se muestran dos puntos después de la etiqueta</span></span> (ejemplo. Renewal date<strong>:</strong>). Este argumento le permite especificar como sufijo diferente que contiene otros caracteres.</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#initial">initial</a>: El valor inicial para el campo cuando es mostrado en el formulario.</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/#widget">widget</a>: <span class="tlid-translation translation" lang="es"><span title="">El widget de visualización para usar</span></span>.</li>
@@ -159,45 +159,45 @@ from django.utils.translation import ugettext_lazy as _
 import datetime #for checking renewal date range.
 </strong>
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
+<strong>    def clean_renewal_date(self):
+        data = self.cleaned_data['renewal_date']
 
-        #Check date is not in past.
-        if data &lt; datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
+        #Check date is not in past.
+        if data &lt; datetime.date.today():
+            raise ValidationError(_('Invalid date - renewal in past'))
 
-        #Check date is in range librarian allowed to change (+4 weeks).
-        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+        #Check date is in range librarian allowed to change (+4 weeks).
+        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-        # Remember to always return the cleaned data.
-        return data</strong></pre>
+        # Remember to always return the cleaned data.
+        return data</strong></pre>
 
-<p>Hay dos cosas importantes a tener en cuenta. El primero es que obtenemos nuestros datos usando <code>self.cleaned_data['renewal_date']</code> y que devolvemos estos datos si los cambiamos o no al final de la función. Este paso nos permite "limpiar" y desinfectar los datos de entrada potencialmente insegura utilizando los validadores predeterminados, y convertirlos al tipo estándar correcto para los datos (en este caso, un objeto Python  <code>datetime.datetime</code>).</p>
+<p>Hay dos cosas importantes a tener en cuenta. El primero es que obtenemos nuestros datos usando <code>self.cleaned_data['renewal_date']</code> y que devolvemos estos datos si los cambiamos o no al final de la función. Este paso nos permite "limpiar" y desinfectar los datos de entrada potencialmente insegura utilizando los validadores predeterminados, y convertirlos al tipo estándar correcto para los datos (en este caso, un objeto Python  <code>datetime.datetime</code>).</p>
 
-<p>El segundo punto es que si un valor cae fuera de nuestro rango, elevamos un <code>ValidationError</code>, especificando el texto de error que queremos mostrar en el formulario si se ingresa un valor no válido. El ejemplo anterior también envuelve este texto en uno de las <a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/">funciones de traduccion de Django</a> <code>ugettext_lazy()</code> (importado como <code>_()</code>), lo cual es una buena práctica si desea traducir su sitio más tarde.</p>
+<p>El segundo punto es que si un valor cae fuera de nuestro rango, elevamos un <code>ValidationError</code>, especificando el texto de error que queremos mostrar en el formulario si se ingresa un valor no válido. El ejemplo anterior también envuelve este texto en uno de las <a href="https://docs.djangoproject.com/en/1.10/topics/i18n/translation/">funciones de traduccion de Django</a> <code>ugettext_lazy()</code> (importado como <code>_()</code>), lo cual es una buena práctica si desea traducir su sitio más tarde.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Existen muchos otros métodos y ejemplos para validar formularios en <a href="https://docs.djangoproject.com/en/1.10/ref/forms/validation/">Validacion de Formularios  y campos</a> (Django docs). Por ejemplo, en los casos en que tiene varios campos que dependen unos de otros, puede anular la función <a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function y colocar un <code>ValidationError</code>.</p>
+<p><strong>Nota:</strong> Existen muchos otros métodos y ejemplos para validar formularios en <a href="https://docs.djangoproject.com/en/1.10/ref/forms/validation/">Validacion de Formularios  y campos</a> (Django docs). Por ejemplo, en los casos en que tiene varios campos que dependen unos de otros, puede anular la función <a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> function y colocar un <code>ValidationError</code>.</p>
 </div>
 
 <p>¡Eso es todo lo que necesitamos para el formulario en este ejemplo!</p>
 
 <h4 id="Copia_el_Formulario">Copia el Formulario</h4>
 
-<p>Crea y abre el archivo <strong>locallibrary/catalog/forms.py</strong> y copie el listado completo del código del bloque anterior en él.</p>
+<p>Crea y abre el archivo <strong>locallibrary/catalog/forms.py</strong> y copie el listado completo del código del bloque anterior en él.</p>
 
 <h3 id="Configuracion_del_URL">Configuracion del URL</h3>
 
-<p>Antes de crear nuestra vista, agreguemos una configuración de URL para la página de renovar libros. Copie la siguiente configuración en la parte inferior de  <strong>locallibrary/catalog/urls.py</strong>.</p>
+<p>Antes de crear nuestra vista, agreguemos una configuración de URL para la página de renovar libros. Copie la siguiente configuración en la parte inferior de  <strong>locallibrary/catalog/urls.py</strong>.</p>
 
 <pre class="brush: python notranslate">urlpatterns += [
     url(r'^book/(?P&lt;pk&gt;[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
 ]</pre>
 
-<p>La configuración de URL redirigirá las URL con el formato  <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> a la función llamada <code>renew_book_librarian()</code> en <strong>views.py</strong>, y envia el id de <code>BookInstance</code> como parametro llamado <code>pk</code>.</p>
+<p>La configuración de URL redirigirá las URL con el formato  <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong> a la función llamada <code>renew_book_librarian()</code> en <strong>views.py</strong>, y envia el id de <code>BookInstance</code> como parametro llamado <code>pk</code>.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Podemos nombrar nuestros datos de URL capturados "pk" como queramos, porque tenemos un control completo sobre la función de vista (no estamos usando una clase de vista de detalles genérica que espere parámetros con un nombre determinado). sin embargo <code>pk</code>, abreviatura de "primary key", es una convención razonable de usar!</p>
@@ -207,9 +207,9 @@ class RenewBookForm(forms.Form):
 
 <p>Como se discutió en el <a href="#django_form_handling_process">proceso de manejo de formularios de Django</a> arriba, la vista debe presentar el formulario predeterminado cuando se llama por primera vez y luego volver a representarlo con mensajes de error si los datos no son válidos, o procesar los datos y redirigirlos a una nueva página si los datos son válidos. Para realizar estas diferentes acciones, la vista debe poder saber si se está llamando por primera vez para presentar el formulario predeterminado, o una vez posterior para validar los datos.</p>
 
-<p>Para formularios que usan una solicitud <code>POST</code>  para enviar información al servidor, el patrón más común es que la vista pruebe con el tipo de solicitud  <code>POST</code>  (<code>if request.method == 'POST':</code>) para identificar las solicitudes de validación de formularios y <code>GET</code> (usando una condición <code>else</code> ) para identificar la solicitud de creación de formulario inicial. Si desea enviar sus datos utilizando una solicitud <code>GET</code>  entonces, un enfoque típico para identificar si esta es la primera invocación de vista o posterior es leer los datos del formulario (por ejemplo, leer un valor oculto en el formulario).</p>
+<p>Para formularios que usan una solicitud <code>POST</code>  para enviar información al servidor, el patrón más común es que la vista pruebe con el tipo de solicitud  <code>POST</code>  (<code>if request.method == 'POST':</code>) para identificar las solicitudes de validación de formularios y <code>GET</code> (usando una condición <code>else</code> ) para identificar la solicitud de creación de formulario inicial. Si desea enviar sus datos utilizando una solicitud <code>GET</code>  entonces, un enfoque típico para identificar si esta es la primera invocación de vista o posterior es leer los datos del formulario (por ejemplo, leer un valor oculto en el formulario).</p>
 
-<p>El proceso de renovacion de un libro escribira cambios en nuestra base de datos , entonces por convencion usaremos una peticion de tipo <code>POST</code>. El siguiente fragmento de código muestra el patrón (muy estándar) para este tipo de vista de funciones. </p>
+<p>El proceso de renovacion de un libro escribira cambios en nuestra base de datos , entonces por convencion usaremos una peticion de tipo <code>POST</code>. El siguiente fragmento de código muestra el patrón (muy estándar) para este tipo de vista de funciones. </p>
 
 <pre class="brush: python notranslate">from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
@@ -219,84 +219,84 @@ import datetime
 from .forms import RenewBookForm
 
 def renew_book_librarian(request, pk):
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    # If this is a POST request then process the Form data
+<strong>    if request.method == 'POST':</strong>
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        <strong>if form.is_valid():</strong>
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+<strong>    else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>Primero importamos nuestro formulario (<code>RenewBookForm</code>) y una serie de otros objetos / métodos útiles utilizados en el cuerpo de la función de vista:</p>
 
 <ul>
- <li><code><a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Devuelve un objeto especificado de un modelo en función de su valor de clave principal y genera una excepción <code>Http404</code> (not found) si el registro no existe. </li>
- <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Esto crea una redirección a una URL especificada (HTTP status code 302). </li>
+ <li><code><a href="https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>: Devuelve un objeto especificado de un modelo en función de su valor de clave principal y genera una excepción <code>Http404</code> (not found) si el registro no existe. </li>
+ <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>: Esto crea una redirección a una URL especificada (HTTP status code 302). </li>
  <li><code><a href="https://docs.djangoproject.com/en/1.10/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>: Esto genera una URL a partir de un nombre de configuración de URL y un conjunto de argumentos. Es el equivalente en Python de la etiqueta <code>url</code> que hemos estado usando en nuestras plantillas.</li>
- <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: Una libreria de Python para manejar las fechas y horas (dates and time). </li>
+ <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>: Una libreria de Python para manejar las fechas y horas (dates and time). </li>
 </ul>
 
-<p>En la vista, primero usamos el argumento <code>pk</code> argument en  <code>get_object_or_404()</code> para obtener el actual <code>BookInstance</code> (si esto no existe, la vista se cerrará inmediatamente y la página mostrará un error "no encontrado"). Si no se trata de una solicitud POST (manejada por la cláusula else), creamos el formulario predeterminado que pasa un valor inicial (initial) para el campo renewal_date (como se muestra en negrita a continuación, esto es 3 semanas desde la fecha actual)..</p>
+<p>En la vista, primero usamos el argumento <code>pk</code> argument en  <code>get_object_or_404()</code> para obtener el actual <code>BookInstance</code> (si esto no existe, la vista se cerrará inmediatamente y la página mostrará un error "no encontrado"). Si no se trata de una solicitud POST (manejada por la cláusula else), creamos el formulario predeterminado que pasa un valor inicial (initial) para el campo renewal_date (como se muestra en negrita a continuación, esto es 3 semanas desde la fecha actual)..</p>
 
 <pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a GET (or any other method) create the default form
-    <strong>else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
+    # If this is a GET (or any other method) create the default form
+    <strong>else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
+        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>Después de crear el formulario, llamamos <code>render()</code> para crear la página HTML, especificando la plantilla y un contexto que contiene nuestro formulario. En este caso, el contexto también contiene nuestro <code>BookInstance</code>, que usaremos en la plantilla para proporcionar información sobre el libro que estamos renovando.</p>
 
-<p>Sin embargo, si esto es una solicitud <code>POST</code>, entonces crearemos nuestro objeto <code>form</code> y llenarlo con datos de la solicitud. Este proceso se llama "enlace" (binding) y nos permite validar el formulario. Luego verificamos si el formulario es válido, que ejecuta todo el código de validación en todos los campos, incluido el código genérico para verificar que nuestro campo de fecha sea realmente una fecha válida y nuestra funcion del formulario <code>clean_renewal_date()</code> chequea la fecha que tenga un rango correcto. </p>
+<p>Sin embargo, si esto es una solicitud <code>POST</code>, entonces crearemos nuestro objeto <code>form</code> y llenarlo con datos de la solicitud. Este proceso se llama "enlace" (binding) y nos permite validar el formulario. Luego verificamos si el formulario es válido, que ejecuta todo el código de validación en todos los campos, incluido el código genérico para verificar que nuestro campo de fecha sea realmente una fecha válida y nuestra funcion del formulario <code>clean_renewal_date()</code> chequea la fecha que tenga un rango correcto. </p>
 
-<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
+<pre class="brush: python notranslate">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        # Create a form instance and populate it with data from the request (binding):
+<strong>        form = RenewBookForm(request.POST)</strong>
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>Si el formulario no es válido llamamos <code>render()</code> de nuevo, pero esta vez el valor del formulario pasado en el contexto incluirá mensajes de error.</p>
 
 <p>Si el formulario es válido, entonces podemos comenzar a usar los datos, accediendo a ellos a través del atributo <code>form.cleaned_data</code> (ejemplo <code>data = form.cleaned_data['renewal_date']</code>). Aquí solo guardamos los datos en el valor <code>due_back</code> asociado al objeto <code>BookInstance</code>.</p>
 
 <div class="warning">
-<p><strong>Importante</strong>: Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo <code>request.POST['renewal_date']</code> o <code>request.GET['renewal_date']</code> (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.</p>
+<p><strong>Importante</strong>: Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo <code>request.POST['renewal_date']</code> o <code>request.GET['renewal_date']</code> (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.</p>
 </div>
 
-<p>El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos <code>HttpResponseRedirect</code> y <code>reverse()</code> para redirigir a la vista llamada  <code>'all-borrowed'</code>(esto fue creado como el "desafío" en <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').</p>
+<p>El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos <code>HttpResponseRedirect</code> y <code>reverse()</code> para redirigir a la vista llamada  <code>'all-borrowed'</code>(esto fue creado como el "desafío" en <a href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself">Django Tutorial Part 8: User authentication and permissions</a>).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').</p>
 
-<p>Eso es todo lo necesario para el manejo del formulario en sí, pero aún debemos restringir el acceso a la vista a los bibliotecarios. Probablemente deberíamos crear un nuevo permiso en <code>BookInstance</code> ("<code>can_renew</code>"),pero para simplificar las cosas aquí solo usamos la funcion decorator <code>@permission_required</code>  con nuestro existente permiso <code>can_mark_returned</code>.</p>
+<p>Eso es todo lo necesario para el manejo del formulario en sí, pero aún debemos restringir el acceso a la vista a los bibliotecarios. Probablemente deberíamos crear un nuevo permiso en <code>BookInstance</code> ("<code>can_renew</code>"),pero para simplificar las cosas aquí solo usamos la funcion decorator <code>@permission_required</code>  con nuestro existente permiso <code>can_mark_returned</code>.</p>
 
 <p>La vista final es, por lo tanto, como se muestra a continuación. Copie esto en la parte inferior de <strong>locallibrary/catalog/views.py</strong>.</p>
 
@@ -311,37 +311,37 @@ from .forms import RenewBookForm
 
 <strong>@permission_required('catalog.<code>can_mark_returned</code>')</strong>
 def renew_book_librarian(request, pk):
-    """
-    View function for renewing a specific BookInstance by librarian
-    """
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 </pre>
 
 <h3 id="La_plantilla">La plantilla</h3>
 
-<p>Crea la plantilla html referenciada en la vista dentro del directorio (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) y copia el codigo a continuacion dentro del archivo que creaste:</p>
+<p>Crea la plantilla html referenciada en la vista dentro del directorio (<strong>/catalog/templates/catalog/book_renew_librarian.html</strong>) y copia el codigo a continuacion dentro del archivo que creaste:</p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 {% block content %}
@@ -354,7 +354,7 @@ def renew_book_librarian(request, pk):
         {% csrf_token %}
         &lt;table&gt;
         \{{ form }}
-        &lt;/table&gt;
+        &lt;/table&gt;
         &lt;input type="submit" value="Submit" /&gt;
     &lt;/form&gt;</strong>
 
@@ -362,39 +362,39 @@ def renew_book_librarian(request, pk):
 
 <p>La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia<code>\{{bookinst}}</code> (y sus variables) porque se pasó al objeto de contexto en la funci'on <code>render()</code>,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.</p>
 
-<p>El código del formulario es relativamente simple. Primero declaramos las etiquetas del <code>form</code>,especificando dónde se debe enviar el formulario (<code>action</code>) y el  <code>metodo</code> para enviar los datos (en este caso, una "POST HTTP"), si recuerda el <a href="#HTML_forms">HTML Forms</a> resumen en la parte superior de la página, un espacio vacío <code>action</code>como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) <code>submit</code>, que un usuario puede presionar para enviar los datos. Esto <code>{% csrf_token %}</code> es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.</p>
+<p>El código del formulario es relativamente simple. Primero declaramos las etiquetas del <code>form</code>,especificando dónde se debe enviar el formulario (<code>action</code>) y el  <code>metodo</code> para enviar los datos (en este caso, una "POST HTTP"), si recuerda el <a href="#HTML_forms">HTML Forms</a> resumen en la parte superior de la página, un espacio vacío <code>action</code>como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) <code>submit</code>, que un usuario puede presionar para enviar los datos. Esto <code>{% csrf_token %}</code> es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.</p>
 
 <div class="note">
 <p><strong>Nota:</strong> Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.</p>
 </div>
 
-<p>Todo lo que queda es la variable de la plantilla  <code>\{{form}}</code>, <span class="tlid-translation translation" lang="es"><span title="">que pasamos a la plantilla en el diccionario de contexto.</span> <span title="">Quizás, como era de esperar, cuando se usa como se muestra, proporciona la representación predeterminada de todos los campos del formulario, incluidas sus etiquetas, widgets y texto de ayuda; la representación es la que se muestra a continuación:</span></span></p>
+<p>Todo lo que queda es la variable de la plantilla  <code>\{{form}}</code>, <span class="tlid-translation translation" lang="es"><span title="">que pasamos a la plantilla en el diccionario de contexto.</span> <span title="">Quizás, como era de esperar, cuando se usa como se muestra, proporciona la representación predeterminada de todos los campos del formulario, incluidas sus etiquetas, widgets y texto de ayuda; la representación es la que se muestra a continuación:</span></span></p>
 
 <pre class="brush: html notranslate">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-  &lt;td&gt;
-    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
-    &lt;br /&gt;
-    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
-  &lt;/td&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+  &lt;td&gt;
+    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
+    &lt;br /&gt;
+    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
 <div class="note">
-<p><strong>Nota:</strong> <span class="tlid-translation translation" lang="es"><span title="">Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta</span></span> <code>table  </code>arriba).​​​​Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla <code>\{{ form.as_table }}</code>.</p>
+<p><strong>Nota:</strong> <span class="tlid-translation translation" lang="es"><span title="">Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta</span></span> <code>table  </code>arriba).​​​​Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla <code>\{{ form.as_table }}</code>.</p>
 </div>
 
 <p>Si tuviera que ingresar una fecha no válida, también obtendría una lista de los errores que se muestran en la página (en negrita a continuación).</p>
 
 <pre class="brush: html notranslate">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-   &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
-        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
-      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
-      &lt;br /&gt;
-      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+   &lt;td&gt;
+<strong>      &lt;ul class="errorlist"&gt;
+        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
+      &lt;/ul&gt;</strong>
+      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
+      &lt;br /&gt;
+      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
     &lt;/td&gt;
 &lt;/tr&gt;</pre>
 
@@ -444,9 +444,9 @@ def renew_book_librarian(request, pk):
 
 <p>Crear una clase <code>Form</code> utilizando el enfoque descrito anteriormente es muy flexible, lo que le permite crear cualquier tipo de página de formulario que desee y asociarla con cualquier modelo o modelos.</p>
 
-<p>Sin embargo, si solo necesita un formulario para asignar los campos de un solo modelo, entonces su modelo ya definirá la mayor parte de la información que necesita en su formulario: campos, etiquetas, texto de ayuda, etc. En lugar de recrear las definiciones de modelo en su formulario , es más fácil usar una clase auxiliar <a href="https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/">ModelForm</a> para crear el formulario a partir de su modelo. El  <code>ModelForm</code> puede usarse dentro de sus vistas exactamente de la misma manera que un ordinario <code>Form</code>.</p>
+<p>Sin embargo, si solo necesita un formulario para asignar los campos de un solo modelo, entonces su modelo ya definirá la mayor parte de la información que necesita en su formulario: campos, etiquetas, texto de ayuda, etc. En lugar de recrear las definiciones de modelo en su formulario , es más fácil usar una clase auxiliar <a href="https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/">ModelForm</a> para crear el formulario a partir de su modelo. El  <code>ModelForm</code> puede usarse dentro de sus vistas exactamente de la misma manera que un ordinario <code>Form</code>.</p>
 
-<p>Un <code>ModelForm</code> que contiene el mismo campo que nuestro original <code>RenewBookForm</code>se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar <code>class Meta</code> with the associated <code>model</code> (<code>BookInstance</code>) y una lista de los campos del  modelo <code>fields</code>para incluir en el formulario (puede incluir todos los campos usando <code>fields = '__all__'</code>, o puedes usar <code>exclude</code> (en vez de <code>fields</code>) para especificar los campos que no se incluirán del modelo).</p>
+<p>Un <code>ModelForm</code> que contiene el mismo campo que nuestro original <code>RenewBookForm</code>se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar <code>class Meta</code> with the associated <code>model</code> (<code>BookInstance</code>) y una lista de los campos del  modelo <code>fields</code>para incluir en el formulario (puede incluir todos los campos usando <code>fields = '__all__'</code>, o puedes usar <code>exclude</code> (en vez de <code>fields</code>) para especificar los campos que no se incluirán del modelo).</p>
 
 <pre class="brush: python notranslate">from django.forms import ModelForm
 from .models import BookInstance
@@ -470,25 +470,25 @@ class RenewBookModelForm(ModelForm):
     help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), } </strong>
 </pre>
 
-<p>Para agregar validación, puede usar el mismo enfoque que para un normal <code>Form</code> — define una función llamada <code>clean_<em>field_name</em>()</code> y coloca (raise)  <code>ValidationError</code> excepciones para valores no válidos. La única diferencia con respecto a nuestro formulario original es que el campo modelo se llama <code>due_back</code> y no "<code>renewal_date</code>".</p>
+<p>Para agregar validación, puede usar el mismo enfoque que para un normal <code>Form</code> — define una función llamada <code>clean_<em>field_name</em>()</code> y coloca (raise)  <code>ValidationError</code> excepciones para valores no válidos. La única diferencia con respecto a nuestro formulario original es que el campo modelo se llama <code>due_back</code> y no "<code>renewal_date</code>".</p>
 
 <pre class="brush: python notranslate">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back']
+<strong>    def clean_due_back(self):
+       data = self.cleaned_data['due_back']
 
-       #Check date is not in past.
-       if data &lt; datetime.date.today():
-           raise ValidationError(_('Invalid date - renewal in past'))
+       #Check date is not in past.
+       if data &lt; datetime.date.today():
+           raise ValidationError(_('Invalid date - renewal in past'))
 
-       #Check date is in range librarian allowed to change (+4 weeks)
-       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+       #Check date is in range librarian allowed to change (+4 weeks)
+       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-       # Remember to always return the cleaned data.
-       return data
+       # Remember to always return the cleaned data.
+       return data
 </strong>
     class Meta:
         model = BookInstance
@@ -497,7 +497,7 @@ class RenewBookModelForm(ModelForm):
         help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), }
 </pre>
 
-<p>La clase <code>RenewBookModelForm</code> a continuación es ahora funcionalmente equivalente a nuestro original <code>RenewBookForm</code>. Puede importarlo y usarlo donde quiera que lo use actualmente <code>RenewBookForm</code>.</p>
+<p>La clase <code>RenewBookModelForm</code> a continuación es ahora funcionalmente equivalente a nuestro original <code>RenewBookForm</code>. Puede importarlo y usarlo donde quiera que lo use actualmente <code>RenewBookForm</code>.</p>
 
 <h2 id="Vistas_de_edición_genéricas">Vistas de edición genéricas</h2>
 
@@ -538,9 +538,9 @@ class AuthorDelete(DeleteView):
 
 <h3 id="Templates_-_Plantillas">Templates - Plantillas</h3>
 
-<p>Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: <em>model_name</em><strong>_form.html</strong> (puedes cambiar el sufijo a algo diferente a <strong>_form</strong> usando el campo  <code>template_name_suffix</code>en tu vista, ejemplo: <code>template_name_suffix = '_other_suffix'</code>)</p>
+<p>Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: <em>model_name</em><strong>_form.html</strong> (puedes cambiar el sufijo a algo diferente a <strong>_form</strong> usando el campo  <code>template_name_suffix</code>en tu vista, ejemplo: <code>template_name_suffix = '_other_suffix'</code>)</p>
 
-<p>Crea la siguiente plantilla <strong>locallibrary/catalog/templates/catalog/author_form.html </strong> y copia el siguiente texto:</p>
+<p>Crea la siguiente plantilla <strong>locallibrary/catalog/templates/catalog/author_form.html </strong> y copia el siguiente texto:</p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
@@ -612,7 +612,7 @@ class AuthorDelete(DeleteView):
 
 <h2 id="Retarte_a_ti_mismo">Retarte a ti mismo</h2>
 
-<p>Crea algunos formularios para crear, editar y eliminar registros de <code>Book</code>.Puede usar exactamente la misma estructura de <code>Authors</code>. Si tu plantilla  <strong>book_form.html</strong> es solo una versión renombrada de la copia de la plantilla   <strong>author_form.html</strong>, entonces la nueva página "crear libro" se verá como la captura de pantalla a continuación:</p>
+<p>Crea algunos formularios para crear, editar y eliminar registros de <code>Book</code>.Puede usar exactamente la misma estructura de <code>Authors</code>. Si tu plantilla  <strong>book_form.html</strong> es solo una versión renombrada de la copia de la plantilla   <strong>author_form.html</strong>, entonces la nueva página "crear libro" se verá como la captura de pantalla a continuación:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14225/forms_example_create_book.png" style="border-style: solid; border-width: 1px; display: block; height: 521px; margin: 0px auto; width: 595px;"></p>
 
@@ -630,8 +630,8 @@ class AuthorDelete(DeleteView):
 <ul>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/forms/">Working with forms</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial04/#write-a-simple-form">Writing your first Django app, part 4 &gt; Writing a simple form</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/">The Forms API</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/">Form fields</a> (Django docs) </li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/api/">The Forms API</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/fields/">Form fields</a> (Django docs) </li>
  <li><a href="https://docs.djangoproject.com/en/1.10/ref/forms/validation/">Form and field validation</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-editing/">Form handling with class-based views</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/">Creating forms from models</a> (Django docs)</li>

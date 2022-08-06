@@ -41,7 +41,7 @@ En fonction du contexte, le caractère `' '` est traduit par un `'+'` (comme dan
 
 ### Culture générale
 
-- [codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res) sur Wikipedia.
+- [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res) sur Wikipédia.
 
 ### Savoir technique
 

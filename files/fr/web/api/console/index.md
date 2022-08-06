@@ -90,7 +90,9 @@ console.log(someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:27:13.475] ({str:"Some text", id:5})
+```
+[09:27:13.475] ({str:"Some text", id:5})
+```
 
 #### Afficher plusieurs objets
 
@@ -104,7 +106,9 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+```
+[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+```
 
 #### Utiliser les caractères de substitution
 
@@ -148,17 +152,21 @@ Gecko 9.0 {{geckoRelease("9.0")}} a amené le support des caractères de substit
 
 Chacun de ceux-ci ira chercher l'argument qui suit la chaîne à formater. Par exemple :
 
-    for (var i=0; i<5; i++) {
-      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
-    }
+```js
+for (var i=0; i<5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+}
+```
 
 L'affichage ressemblera à ceci :
 
-    [13:14:13.481] Hello, Bob. You've called me 1 times.
-    [13:14:13.483] Hello, Bob. You've called me 2 times.
-    [13:14:13.485] Hello, Bob. You've called me 3 times.
-    [13:14:13.487] Hello, Bob. You've called me 4 times.
-    [13:14:13.488] Hello, Bob. You've called me 5 times.
+```
+[13:14:13.481] Hello, Bob. You've called me 1 times.
+[13:14:13.483] Hello, Bob. You've called me 2 times.
+[13:14:13.485] Hello, Bob. You've called me 3 times.
+[13:14:13.487] Hello, Bob. You've called me 4 times.
+[13:14:13.488] Hello, Bob. You've called me 5 times.
+```
 
 #### Donner un style à l'affichage de la console
 
@@ -172,11 +180,9 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 
 > **Note :** Un certain nombre de propriétés CSS sont supportées par ce style; vous devriez expérimenter et voir lesquels s'avèrent utiles.
 
-{{h3_gecko_minversion("Using groups in the console", "9.0")}}
+### Utiliser des groupes dans la console
 
 Vous pouvez utiliser des groupes imbriqués pour vous aider à vous repérer dans l'affichage. Pour créer un nouveau bloc, appelez `console.group()`. La méthode `console.groupCollapsed()` est similaire, mais elle crée un bloc qui sera réduit.
-
-> **Note :** "Collapsed groups" ne sont pas supportés pour l'instant dans Gecko; La méthode `groupCollapsed()` est la même que `group()` en ce moment.
 
 Pour quitter le groupe dans lequel on est, appeler `console.groupEnd()`. Par exemple, examinez ce code :
 
@@ -197,7 +203,7 @@ L'affichage ressemblera à ceci :
 
 ![Démonstration de groupes imbriqués dans la console Firefox](console_groups_demo.png)
 
-{{h3_gecko_minversion("Timers", "10.0")}}
+### Chronométrage
 
 Pour calculer la durée d'une opération spécifique, Gecko 10 a amené le supports des chronomètres dans l'objet `console`.  pour démarrer un chronomètre, appelez la méthode ` console.time``() ` en lui donnant un seul paramètre, son nom. Pour arrêter le chronomètre et obtenir le temps écoulé en millisecondes, utilisez la méthode `console.timeEnd()`, en passant à nouveau le nom du chronomètre comme paramètre. Une seule page peut faire tourner un maximum de 10.000 chronomètres.
 
@@ -221,14 +227,16 @@ Notez que le nom du chronomètre est affiché deux fois, à son départ et quand
 
 L'objet console supporte aussi l'affichage d'une trace d'appels ; cela montre le chemin pris pour atteindre l'endroit auquel vous avez fait appel à la fonction {{domxref("console.trace()")}}. Ce qui donne avec ce code :
 
-    foo();
+```js
+foo();
 
-    function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
-    }
+function foo() {
+  function bar() {
+    console.trace();
+  }
+  bar();
+}
+```
 
 L'affichage dans la console ressemblera à ceci :
 

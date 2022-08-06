@@ -29,7 +29,7 @@ WebAssembly.compile(bufferSource)
 
 ### 返値
 
-コンパイルされたモジュールを表す {{jsxref("WebAssembly.Module")}} オブジェクトに解決する `Promise` です。
+コンパイルされたモジュールを表す {{jsxref("WebAssembly.Module")}} オブジェクトに解決する `Promise` です。
 
 ### 例外
 
@@ -46,16 +46,15 @@ WebAssembly.compile(bufferSource)
 var worker = new Worker("wasm_worker.js");
 
 fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =>
-  WebAssembly.compile(bytes)
+  WebAssembly.compile(bytes)
 ).then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 
 > **Note:** おそらく多くの場合は {{jsxref("WebAssembly.compileStreaming()")}} を使用したほうが `compile()` よりも効率的なのでそちらの方がいいでしょう。
-
 
 ## 仕様書
 

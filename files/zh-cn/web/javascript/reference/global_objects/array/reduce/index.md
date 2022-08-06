@@ -77,6 +77,7 @@ ECMAScript 规范描述了 `reduce()` 的行为：
 > - 被遍历的对象
 >
 > 回调函数第一次执行时，*previousValue* 和 *currentValue* 的取值有两种情况：
+>
 > - 如果调用 `reduce()` 时提供了 *initialValue*，*previousValue* 取值则为 *initialValue*，*currentValue* 则取数组中的第一个值。
 > - 如果没有提供 *initialValue*，那么 *previousValue* 取数组中的第一个值，*currentValue* 取数组中的第二个值。
 >
@@ -375,7 +376,6 @@ let groupedPeople = groupBy(people, 'age')
 ```
 
 ### 使用扩展运算符和 initialValue 绑定包含在对象数组中的数组
-
 
 ```js
 // friends - an array of objects

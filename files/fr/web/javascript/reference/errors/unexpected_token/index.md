@@ -13,12 +13,13 @@ original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_token
 
 ## Message
 
-    SyntaxError: expected expression, got "x"
-    SyntaxError: expected property name, got "x"
-    SyntaxError: expected target, got "x"
-    SyntaxError: expected rest argument name, got "x"
-    SyntaxError: expected closing parenthesis, got "x"
-    SyntaxError: expected '=>' after argument list, got "x"
+```
+SyntaxError: expected expression, got "x"
+SyntaxError: expected property name, got "x"
+SyntaxError: expected target, got "x"
+SyntaxError: expected rest argument name, got "x"
+SyntaxError: expected closing parenthesis, got "x"\SyntaxError: expected '=>' after argument list, got "x"
+```
 
 ## Type d'erreur
 

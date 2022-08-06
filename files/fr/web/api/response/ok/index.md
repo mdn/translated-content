@@ -17,7 +17,9 @@ La propriété en lecture seule **`ok`** de l'interface {{domxref("Response")}} 
 
 ## Syntaxe
 
-    var myOK = response.ok;
+```js
+var myOK = response.ok;
+```
 
 ### Valeur
 

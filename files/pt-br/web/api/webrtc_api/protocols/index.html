@@ -18,17 +18,17 @@ tags:
   - WebRTC API
 translation_of: Web/API/WebRTC_API/Protocols
 ---
-<div>{{WebRTCSidebar}}{{draft}}</div>
+<div>{{WebRTCSidebar}}</div>
 
 <p>Este artigo apresenta os protocolos sobre os quais a API WebRTC é construída.</p>
 
 <h2 id="ICE">ICE</h2>
 
-<p><a href="http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment">Interactive Connectivity Establishment (ICE)</a> é a estrutura que permite seu navegador web se conectar com outras pessoas. Existem muitas razões pelas quais uma conexão direta do Ponto A para o Ponto B simplesmente não funciona. Ele precisa ignorar firewalls que impediriam a abertura de conexões, fornecer um endereço exclusivo, como na maioria das situações, caso seu dispositivo não tiver um endereço IP público e retransmitir dados por meio de um servidor ou se seu roteador não permitir a conexão direta com seus pares . O ICE usa servidores STUN e / ou TURN para fazer isso, conforme descrito abaixo.</p>
+<p><a href="http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment">Interactive Connectivity Establishment (ICE)</a> é a estrutura que permite seu navegador web se conectar com outras pessoas. Existem muitas razões pelas quais uma conexão direta do Ponto A para o Ponto B simplesmente não funciona. Ele precisa ignorar firewalls que impediriam a abertura de conexões, fornecer um endereço exclusivo, como na maioria das situações, caso seu dispositivo não tiver um endereço IP público e retransmitir dados por meio de um servidor ou se seu roteador não permitir a conexão direta com seus pares . O ICE usa servidores STUN e / ou TURN para fazer isso, conforme descrito abaixo.</p>
 
 <h2 id="STUN">STUN</h2>
 
-<p><a href="http://en.wikipedia.org/wiki/STUN">Session Traversal Utilities for <u>NAT</u> (STU<u>N</u>)</a> (sigla dentro de uma sigla) é um protocolo para descobrir seu endereço público e determinar quaisquer restrições em seu roteador que poderiam impedir uma conexão direta com um par.</p>
+<p><a href="http://en.wikipedia.org/wiki/STUN">Session Traversal Utilities for <u>NAT</u> (STU<u>N</u>)</a> (sigla dentro de uma sigla) é um protocolo para descobrir seu endereço público e determinar quaisquer restrições em seu roteador que poderiam impedir uma conexão direta com um par.</p>
 
 <p>O cliente enviará uma solicitação a um servidor STUN na Internet que responderá com o endereço público do cliente e se o cliente está ou não acessível por meio do NAT do roteador.</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 <p>Alguns roteadores que usam NAT empregam uma restrição chamada ‘Symmetric NAT’ (<em>NAT simétrico</em>). Isso significa que o roteador só aceitará conexões de pares aos quais você já se conectou.</p>
 
-<p><a href="http://en.wikipedia.org/wiki/TURN">Traversal Using Relays around NAT (TURN)</a> destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (<em>peers</em>) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.</p>
+<p><a href="http://en.wikipedia.org/wiki/TURN">Traversal Using Relays around NAT (TURN)</a> destina-se a contornar a restrição de NAT simétrico abrindo uma conexão com um servidor TURN para que ele re-transmita toda informação. Você criaria uma conexão com um servidor TURN e avisaria a todos os pares (<em>peers</em>) para enviar pacotes para este servidor, que lhe encaminharia. Isso obviamente vem com alguma sobrecarga, então só é usado se não houver outras alternativas.</p>
 
 <p><img alt="An interaction between two users of a WebRTC application involving STUN and TURN servers." src="https://mdn.mozillademos.org/files/6117/webrtc-turn.png" style="display: block; height: 297px; margin: 0px auto; width: 295px;"></p>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 <p><a href="http://en.wikipedia.org/wiki/Session_Description_Protocol">Session Description Protocol (SDP)</a> é um padrão para descrever o conteúdo multimídia da conexão, como resolução, formatos, codecs, criptografia, etc., para que os dois pontos possam se entender uma vez que os dados estejam sendo transferidos. Em essência, são os metadados que descrevem o conteúdo e não o conteúdo da mídia em si.</p>
 
-<p>Tecnicamente, então, SDP não é realmente um protocolo, mas um formato de dados usado para descrever a conexão que compartilha mídia entre dispositivos.</p>
+<p>Tecnicamente, então, SDP não é realmente um protocolo, mas um formato de dados usado para descrever a conexão que compartilha mídia entre dispositivos.</p>
 
 <p>A documentação do SDP está bem fora do escopo desta documentação; no entanto, existem algumas coisas que vale a pena observar aqui.</p>
 

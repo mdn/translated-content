@@ -18,7 +18,9 @@ La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {
 
 ## Syntaxe
 
-    Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+```js
+Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+```
 
 ### Paramètres
 

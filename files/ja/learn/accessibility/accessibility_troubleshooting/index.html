@@ -36,7 +36,7 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 
 <p>評価を始めるために、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true">例を含むファイルの ZIP</a> を取得してください。あなたのコンピューターのいずれかのディレクトリーにそのコンテンツを解凍してください。</p>
 
-<p>あるいは、<a class="external external-icon" href="http://jsbin.com/">JSBin</a> や <a href="https://glitch.com/">Glitch</a> のようなサイトを使って試験できます。HTML, CSS, JavaScript をオンラインエディターのいずれかにペーストします。もし使っているオンラインエディターに個別の CSS/JS パネルがない場合、適当な <code>&lt;style&gt;</code> / <code>&lt;script&gt;</code> 要素内に置いて下さい。</p>
+<p>あるいは、<a class="external external-icon" href="https://jsbin.com/">JSBin</a> や <a href="https://glitch.com/">Glitch</a> のようなサイトを使って試験できます。HTML, CSS, JavaScript をオンラインエディターのいずれかにペーストします。もし使っているオンラインエディターに個別の CSS/JS パネルがない場合、適当な <code>&lt;style&gt;</code> / <code>&lt;script&gt;</code> 要素内に置いて下さい。</p>
 
 <p>解凍が完了した評価サイトは次のように見えるはずです:</p>
 
@@ -45,12 +45,12 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 <p>この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: もし行き詰まって助けを求める場合 — ページ最下部の {{anch("Assessment or further help")}} セクションを見てください。</p>
+<p><strong>注</strong>: もし行き詰まって助けを求める場合 — ページ最下部の <a href="#assessment_or_further_help">Assessment or further help</a> セクションを見てください。</p>
 </div>
 
 <h2 id="Project_brief" name="Project_brief">プロジェクトの概要</h2>
 
-<p>このプロジェクトでは、熊の「事実」に関する記事を表示する架空の自然のサイトが表示されます。現状では、これはいくつものアクセシビリティの問題を持っています。あなたの仕事は現状のサイトを見て、全力を尽くして修正し、以下の質問に答えることです。 </p>
+<p>このプロジェクトでは、熊の「事実」に関する記事を表示する架空の自然のサイトが表示されます。現状では、これはいくつものアクセシビリティの問題を持っています。あなたの仕事は現状のサイトを見て、全力を尽くして修正し、以下の質問に答えることです。 </p>
 
 <h3 id="Color" name="Color">色</h3>
 
@@ -61,7 +61,7 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 <ol>
  <li>コンテンツはまだあまりアクセシブルではありません。スクリーンリーダーを使ってナビゲートしようとしたとき、何が起こるか報告してください。</li>
  <li>スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？</li>
- <li>サイトのナビゲーションメニュー ( <code>&lt;div class="nav"&gt;&lt;/div&gt;</code> で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。</li>
+ <li>サイトのナビゲーションメニュー ( <code>&lt;div class="nav"&gt;&lt;/div&gt;</code> で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。</li>
 </ol>
 
 <div class="note">
@@ -75,15 +75,15 @@ translation_of: Learn/Accessibility/Accessibility_troubleshooting
 <h3 id="The_audio_player" name="The_audio_player"><font>オーディオプレイヤー</font></h3>
 
 <ol>
- <li><font><code>&lt;audio&gt;</code> プレイヤーは聴覚障害者にとってアクセシブルではありません</font>。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？</li>
- <li><font><code>&lt;audio&gt;</code> プレイヤーは、HTML5 をサポートしていない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのようにオーディオにアクセスさせることができますか？</font></li>
+ <li><font><code>&lt;audio&gt;</code> プレイヤーは聴覚障害者にとってアクセシブルではありません</font>。それらのユーザーのために何らかのアクセシブルな代替手段を加えることができますか？</li>
+ <li><font><code>&lt;audio&gt;</code> プレイヤーは、HTML5 をサポートしていない古いブラウザーを使用しているユーザーにとってアクセシブルではありません。彼らに対してどのようにオーディオにアクセスさせることができますか？</font></li>
 </ol>
 
 <h3 id="The_forms" name="The_forms"><font>フォーム</font></h3>
 
 <ol>
- <li><font>トップにある検索フォームの <code>&lt;input&gt;</code> 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？</font></li>
- <li><font>コメントフォームの中の 2 つの <code>&lt;input&gt;</code> 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの CSS ルールも修正しなければいけない点に注意してください。</font></li>
+ <li><font>トップにある検索フォームの <code>&lt;input&gt;</code> 要素はラベルとともに使用できるかもしれませんが、表示されるテキストを追加するとデザインを悪化させる可能性がありますし、視覚に問題のないユーザーにとってはあまり必要ありません。スクリーンリーダーにのみアクセシブルなラベルをどうやって追加すればいいでしょう？</font></li>
+ <li><font>コメントフォームの中の 2 つの <code>&lt;input&gt;</code> 要素は表示されるテキストラベルを含んでいますが、それらのラベルと明確に関連付けられていません。どのように関連付けますか？いくつかの CSS ルールも修正しなければいけない点に注意してください。</font></li>
 </ol>
 
 <h3 id="The_showhide_comment_control" name="The_showhide_comment_control"><font>コメント show/hide 制御</font></h3>

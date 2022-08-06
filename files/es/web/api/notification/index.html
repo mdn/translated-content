@@ -7,7 +7,7 @@ translation_of: Web/API/Notification
 
 
 
-<p>La interfaz <code>Notification</code> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> se usa para configurar y mostrar notificaciones de escritorio al usuario. La apariencia y las funcionalidad especificas de esta notificacion varia a traves de las distintas plataformas, pero generalmente esta plataformas proveen un camino para proveer informacion al usuario de manera asincronica.</p>
+<p>La interfaz <code>Notification</code> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> se usa para configurar y mostrar notificaciones de escritorio al usuario. La apariencia y las funcionalidad especificas de esta notificacion varia a traves de las distintas plataformas, pero generalmente esta plataformas proveen un camino para proveer informacion al usuario de manera asincronica.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -67,22 +67,22 @@ translation_of: Web/API/Notification
  <dt>{{domxref("Notification.icon")}} {{readonlyinline}}</dt>
  <dd>La URL de la imagen usada como ícono de la notificación como está especificado en el parámetro options del constructor.</dd>
  <dt>{{domxref("Notification.image")}} {{readonlyinline}}</dt>
- <dd>URL de una imagen para mostrar como parte de la notificación, al igual que se especifica en el parámetro de opciones del constructor.</dd>
+ <dd>URL de una imagen para mostrar como parte de la notificación, al igual que se especifica en el parámetro de opciones del constructor.</dd>
  <dt>{{domxref("Notification.data")}} {{readonlyinline}}</dt>
  <dd>Retorna <span id="result_box" lang="es"><span>un clon</span> <span>estructurado de los</span> <span>datos de la notificación</span><span>.</span></span></dd>
  <dt>{{domxref("Notification.requireInteraction")}} {{readonlyinline}}</dt>
- <dd>Un {{jsxref("Boolean")}} indicando en dispositivos pantallas lo suficientemente grandes, una notificación debería permanecer activa hasta que el usuario haga click o la descarte.</dd>
+ <dd>Un {{jsxref("Boolean")}} indicando en dispositivos pantallas lo suficientemente grandes, una notificación debería permanecer activa hasta que el usuario haga click o la descarte.</dd>
  <dt>{{domxref("Notification.silent")}} {{readonlyinline}}</dt>
  <dd>Especifica si la notificación debería ser silenciada, por ejemplo sin generar sonidos o vibraciones, <span id="result_box" lang="es"><span>independientemente de</span> <span>la configuración del dispositivo</span><span>.</span></span></dd>
  <dt>{{domxref("Notification.timestamp")}} {{readonlyinline}}</dt>
  <dd>Especifica el tiempo en la cual una notificación fué creada o aplicable (pasado, presente o futuro).</dd>
  <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
- <dd>Especifica un patrón de vibración para dispositivos que disponen de hardware para emitirlo. </dd>
+ <dd>Especifica un patrón de vibración para dispositivos que disponen de hardware para emitirlo. </dd>
 </dl>
 
 <h4 id="Propiedades_no_soportadas">Propiedades no soportadas</h4>
 
-<p>Las siguientes propiedades están listadas en las especificaciones más actualizadas, pero aún no están soportadas por los navegadores. Es aconsejable verificarlas regularmente para ver si el estado de ellas ha sido actualizado, y háganos saber si encuentra información desactualizada.</p>
+<p>Las siguientes propiedades están listadas en las especificaciones más actualizadas, pero aún no están soportadas por los navegadores. Es aconsejable verificarlas regularmente para ver si el estado de ellas ha sido actualizado, y háganos saber si encuentra información desactualizada.</p>
 
 <dl>
  <dt>{{domxref("Notification.noscreen")}} {{readonlyinline}}</dt>
@@ -105,14 +105,14 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.onclick")}}</dt>
- <dd>Un manejador para el {{event("click")}} event. Sera inicializado cada vez que el usuario de click en la notificacion.</dd>
+ <dd>Un manejador para el {{event("click")}} event. Sera inicializado cada vez que el usuario de click en la notificacion.</dd>
  <dt>{{domxref("Notification.onerror")}}</dt>
  <dd>A handler for the {{event("error")}} event. It is triggered each time the notification encounters an error.</dd>
 </dl>
 
 <h4 id="Obsolete_handlers">Obsolete handlers</h4>
 
-<p>The following event handlers are still supported as listed in the {{anch("browser compatibility")}} section below, but are no longer listed in the current spec. It is safe therefore to assume they are obsolete, and may stop working in future browser versions.</p>
+<p>The following event handlers are still supported as listed in the <a href="#browser_compatibility">browser compatibility</a> section below, but are no longer listed in the current spec. It is safe therefore to assume they are obsolete, and may stop working in future browser versions.</p>
 
 <dl>
  <dt>{{domxref("Notification.onclose")}}</dt>

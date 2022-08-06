@@ -3,7 +3,7 @@ title: Document.width
 slug: Web/API/Document/width
 translation_of: Web/API/Document/width
 ---
-{{APIRef("DOM")}} {{Obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 > **Note :** À partir de {{Gecko("6.0")}},` document.width `n'est plus pris en charge. Au lieu de cela, utilisez document.body.clientWidth. Voir {{domxref("element.clientWidth")}}.
 
@@ -13,7 +13,9 @@ Non pris en charge par Internet Explorer.
 
 ## Syntaxe
 
-    pixels = document.width;
+```js
+pixels = document.width;
+```
 
 ## Exemple
 
@@ -25,9 +27,11 @@ function init() {
 
 ## Alternatives
 
-    document.body.clientWidth              /* largeur de <body> */
-    document.documentElement.clientWidth   /* largeur de <html> */
-    window.innerWidth                      /* largeur de la fenêtre */
+```js
+document.body.clientWidth              /* largeur de <body> */
+document.documentElement.clientWidth   /* largeur de <html> */
+window.innerWidth                      /* largeur de la fenêtre */
+```
 
 ## Spécification
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p>O método <code><strong>__lookupGetter__</strong></code> retorna a função limite como uma getter para a específica propriedade.</p>
+<p>O método <code><strong>__lookupGetter__</strong></code> retorna a função limite como uma getter para a específica propriedade.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. <code>__lookupGetter__</code> pode ser usado para obter referência à função getter.</p>
+<p>Se uma getter foi definida por uma propriedade de um objeto, não é possível referir-se a função getter através da propriedade, porque essa propriedade se refere ao retorno do valor daquela função. <code>__lookupGetter__</code> pode ser usado para obter referência à função getter.</p>
 
-<p>Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e  {{jsxref("Object.getPrototypeOf()")}}.</p>
+<p>Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.getOwnPropertyDescriptor()")}} e  {{jsxref("Object.getPrototypeOf()")}}.</p>
 
-<h2 id="Examplos">Examplos</h2>
+<h2 id="Exemplos">Exemplos</h2>
 
 <pre class="brush: js">var obj = {
   get foo() {

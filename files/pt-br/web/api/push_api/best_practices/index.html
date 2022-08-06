@@ -11,17 +11,16 @@ tags:
 translation_of: Web/API/Push_API/Best_Practices
 original_slug: Web/API/API_Push/Best_Practices
 ---
-<p>{{draft}}</p>
 
-<p><span class="seoSummary">Este artigo proporciona um compilado das melhores práticas a serem usadas enquanto estiver desenvolvendo websites e aplicações que usem Notificações push para engajamento de usuários.</span></p>
+<p><span class="seoSummary">Este artigo proporciona um compilado das melhores práticas a serem usadas enquanto estiver desenvolvendo websites e aplicações que usem Notificações push para engajamento de usuários.</span></p>
 
 <blockquote>
 <p>“Se feito de uma maneira correta, as notificações ajudam os usuarios, se não, so irritam.” — Conversa entre dois desenvolvedores a respeito da etica das notificações push.</p>
 </blockquote>
 
-<h2 id="Visão_Geral_do_web_push_notifications">Visão Geral do <em>web push notifications</em></h2>
+<h2 id="Visão_Geral_do_web_push_notifications">Visão Geral do <em>web push notifications</em></h2>
 
-<p><em>Notificações Web Push</em> (criadas usando uma combinação das APIs de <em><a href="/en-US/docs/Web/API/Notifications_API">Notificações</a></em>, <em><a href="/en-US/docs/Web/API/Push_API">Push</a></em> e <em><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a></em>) são parte de um movimento crescente em que desenvolvedores e comerciantes estão usando para conseguir atenção para seus sites. Uma procura rápida pelo termo "<em>web push notifications</em>", irá resultar em vários artigos, em que especialistas em marketing que acreditam que deve-se usar a API de Push para recapturar a atenção de pessoas que saíram de seu site para que possam terminar o que estavam fazendo, por exemplo, uma compra, ou então enviar as últimas notícias e até recomendação de produtos</p>
+<p><em>Notificações Web Push</em> (criadas usando uma combinação das APIs de <em><a href="/en-US/docs/Web/API/Notifications_API">Notificações</a></em>, <em><a href="/en-US/docs/Web/API/Push_API">Push</a></em> e <em><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a></em>) são parte de um movimento crescente em que desenvolvedores e comerciantes estão usando para conseguir atenção para seus sites. Uma procura rápida pelo termo "<em>web push notifications</em>", irá resultar em vários artigos, em que especialistas em marketing que acreditam que deve-se usar a API de Push para recapturar a atenção de pessoas que saíram de seu site para que possam terminar o que estavam fazendo, por exemplo, uma compra, ou então enviar as últimas notícias e até recomendação de produtos</p>
 
 <h3 id="O_Lado_obscuro">O Lado obscuro</h3>
 
@@ -63,7 +62,7 @@ original_slug: Web/API/API_Push/Best_Practices
 
 <p><span class="tlid-translation translation" lang="pt"><span title="">Por causa dos abusos da utilização das notificações por push no passado, os desenvolvedores de navegadores começaram a implementar estratégias para ajudar a mitigar esse problema.</span> <span title="">Por exemplo, o Safari 12.1 agora exige - e outros navegadores já o fazem ou estão planejando</span></span><sup><a href="#mitigations-footnote-1">[1]</a></sup> fazer—<span class="tlid-translation translation" lang="pt"><span title="">que o usuário interaja com a página de alguma forma antes que ela possa solicitar permissão para executar notificações por push, assim como já acontece com os popups.</span> <span title="">Isso pelo menos impede que o usuário receba espontaneamente essa pergunta em páginas da Web que apenas olharam de uma só vez, raramente ou nunca mais.</span></span></p>
 
-<p><a id="mitigations-footnote-1" name="mitigations-footnote-1">[1]</a> No caso do Firefox, veja {{bug(1524619)}}, podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência <code>dom.webnotifications.requireuserinteraction</code>.</p>
+<p><a id="mitigations-footnote-1" name="mitigations-footnote-1">[1]</a> No caso do Firefox, veja {{bug(1524619)}}, podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência <code>dom.webnotifications.requireuserinteraction</code>.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -108,7 +108,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 
 ### キー付きコレクション
 
-これらのオブジェクトは、キーを使ったコレクションを表します。反復可能なコレクション ({{JSxRef("Map")}} と {{JSxRef("Set")}}) は挿入順に容易に反復処理することができます。
+これらのオブジェクトは、キーを使ったコレクションを表します。反復可能なコレクション ({{JSxRef("Map")}} と {{JSxRef("Set")}}) は挿入順に容易に反復処理することができます。
 
 - {{JSxRef("Map")}}
 - {{JSxRef("Set")}}

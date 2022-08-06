@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
  <dt><code><var>searchElement</var></code></dt>
  <dd>検索する配列要素です。</dd>
  <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
- <dd>逆向きに検索し始める添字です。デフォルトは配列の長さ に 1 を引いた値（ <code>arr.length - 1</code> ）で、つまり配列全体が検索されます。もしこの添字が配列の長さ以上ならば、配列全体が検索されます。負の数の場合、これは配列の終わりからのオフセットとみなされます。この添字が負の数であってもなお、配列は後ろから前に検索されることに注意してください。負の添字の絶対値が配列の長さを超えた場合、-1 が返され、配列は検索されません。</dd>
+ <dd>逆向きに検索し始める添字です。デフォルトは配列の長さ に 1 を引いた値（ <code>arr.length - 1</code> ）で、つまり配列全体が検索されます。もしこの添字が配列の長さ以上ならば、配列全体が検索されます。負の数の場合、これは配列の終わりからのオフセットとみなされます。この添字が負の数であってもなお、配列は後ろから前に検索されることに注意してください。負の添字の絶対値が配列の長さを超えた場合、-1 が返され、配列は検索されません。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
@@ -75,7 +75,7 @@ console.log(indices);
 
 <h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
 
-<p><code>lastIndexOf</code> は ECMA-262 第 5 版に追加されたメソッドであり、他のバージョンの標準実装には存在しない場合があります。次のコードをスクリプトの先頭に追加することにより、<code>lastIndexOf</code> がネイティブでサポートされていない環境でも、これを使用する事が可能となります。これは ECMA-262 第 5 版で定められたアルゴリズムと全く同じものです。 {{jsxref("Object")}}、{{jsxref("TypeError")}}、{{jsxref("Number")}}、{{jsxref("Math.floor")}}、{{jsxref("Math.abs")}}、{{jsxref("Math.min")}}  が、それぞれオリジナルの値を持つことを仮定しています。</p>
+<p><code>lastIndexOf</code> は ECMA-262 第 5 版に追加されたメソッドであり、他のバージョンの標準実装には存在しない場合があります。次のコードをスクリプトの先頭に追加することにより、<code>lastIndexOf</code> がネイティブでサポートされていない環境でも、これを使用する事が可能となります。これは ECMA-262 第 5 版で定められたアルゴリズムと全く同じものです。 {{jsxref("Object")}}、{{jsxref("TypeError")}}、{{jsxref("Number")}}、{{jsxref("Math.floor")}}、{{jsxref("Math.abs")}}、{{jsxref("Math.min")}}  が、それぞれオリジナルの値を持つことを仮定しています。</p>
 
 <pre class="brush: js notranslate">// Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
@@ -115,7 +115,7 @@ if (!Array.prototype.lastIndexOf) {
 }
 </pre>
 
-<p>上記コードのアルゴリズムは Firefox または SpiderMonky の JavaScript エンジンで実際に使用されているものと同じもので、これには間違いなくエッジケースも含まれています。実際にアプリケーションの中でこれを使用する場合、こうしたエッジケースを無視するならば、より複雑でないコードで <code>fromIndex</code> を計算可能であるかもしれません。</p>
+<p>上記コードのアルゴリズムは Firefox または SpiderMonky の JavaScript エンジンで実際に使用されているものと同じもので、これには間違いなくエッジケースも含まれています。実際にアプリケーションの中でこれを使用する場合、こうしたエッジケースを無視するならば、より複雑でないコードで <code>fromIndex</code> を計算可能であるかもしれません。</p>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 

@@ -9,7 +9,9 @@ La propriété **`port`** de l'interface {{domxref("SharedWorker")}} retourne un
 
 ## Syntaxe
 
-    myWorker.port;
+```js
+myWorker.port;
+```
 
 ### Valeur
 

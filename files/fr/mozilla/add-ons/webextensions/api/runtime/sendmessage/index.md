@@ -63,9 +63,9 @@ En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. 
 
   - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
 
-    1.  Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
-    2.  null
-    3.  indéfini
+    1. Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
+    2. null
+    3. indéfini
 
   - Sinon, les arguments sont interprétés comme `(extensionId, message)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
 

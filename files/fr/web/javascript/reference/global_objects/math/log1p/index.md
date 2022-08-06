@@ -21,7 +21,9 @@ La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxre
 
 ## Syntaxe
 
-    Math.log1p(x)
+```js
+Math.log1p(x)
+```
 
 ### Paramètres
 

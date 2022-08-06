@@ -58,22 +58,22 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <pre class="brush: html">&lt;!-- Без атрибута tabindex, элементы &lt;span&gt; не смогут принимать фокус с клавиатуры --&gt;
 &lt;div&gt;
-    &lt;span role="checkbox" aria-checked="true" tabindex="0"&gt;
-        &lt;img src="checked.gif" role="presentation" alt="" /&gt;
-        Добавить декоративную корзину с фруктами
-    &lt;/span&gt;
+    &lt;span role="checkbox" aria-checked="true" tabindex="0"&gt;
+        &lt;img src="checked.gif" role="presentation" alt="" /&gt;
+        Добавить декоративную корзину с фруктами
+    &lt;/span&gt;
 &lt;/div&gt;
 &lt;div&gt;
-    &lt;span role="checkbox" aria-checked="true" tabindex="0"&gt;
-        &lt;img src="checked.gif" role="presentation" alt="" /&gt;
-        Добавить поющую телеграмму
-    &lt;/span&gt;
+    &lt;span role="checkbox" aria-checked="true" tabindex="0"&gt;
+        &lt;img src="checked.gif" role="presentation" alt="" /&gt;
+        Добавить поющую телеграмму
+    &lt;/span&gt;
 &lt;/div&gt;
 &lt;div&gt;
-    &lt;span role="checkbox" aria-checked="false" tabindex="0"&gt;
-        &lt;img src="unchecked.gif" role="presentation" alt="" /&gt;
-        С предоплатой
-    &lt;/span&gt;
+    &lt;span role="checkbox" aria-checked="false" tabindex="0"&gt;
+        &lt;img src="unchecked.gif" role="presentation" alt="" /&gt;
+        С предоплатой
+    &lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
@@ -113,7 +113,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <h4 id="Неактивные_(disabled)_контролы">Неактивные (disabled) контролы</h4>
 
-<p>Когда элемент управления становится неактивным, он должен не попадать в фокус при нажатии на tab, что обеспечивается выставлением у элемента атрибута <code>tabindex="-1"</code>. Обратите внимание, что неактивные элементы в пределах сгруппированного виджета (такие как, подпункты меню ) должны иметь возможность быть выбранными при помощи стрелочек на клавиатуре.</p>
+<p>Когда элемент управления становится неактивным, он должен не попадать в фокус при нажатии на tab, что обеспечивается выставлением у элемента атрибута <code>tabindex="-1"</code>. Обратите внимание, что неактивные элементы в пределах сгруппированного виджета (такие как, подпункты меню ) должны иметь возможность быть выбранными при помощи стрелочек на клавиатуре.</p>
 
 <h3 id="Управление_фокусом_внутри_виджета">Управление фокусом внутри виджета</h3>
 
@@ -152,7 +152,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <h4 id="Техника_вторая_aria-activedescendant">Техника вторая: aria-activedescendant</h4>
 
-<p>Эта техника позволяет объединить  каждый отдельно взятый обработчик  событий в контейнер графического элемента и использовать  <code>aria-activedescendent</code> для слежения за "виртуальным" фокусом . (Для получения более подробной информации относительно ARIA обратите внимание на  <a href="/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">обзор доступных веб-приложений и виджетов </a>.)</p>
+<p>Эта техника позволяет объединить  каждый отдельно взятый обработчик  событий в контейнер графического элемента и использовать  <code>aria-activedescendent</code> для слежения за "виртуальным" фокусом . (Для получения более подробной информации относительно ARIA обратите внимание на  <a href="/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">обзор доступных веб-приложений и виджетов </a>.)</p>
 
 <p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color).</p>
 
@@ -177,15 +177,15 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <h4 id="Убедитесь_что_клавиатура_и_мышь_производят_одинаковое_действие">Убедитесь, что клавиатура и мышь производят одинаковое действие</h4>
 
-<p>Чтобы обеспечить независимый от устройства ввода механизм взаимодействия с пользователем, обработчики событий мыши и клавиатуры должны совместно использовать код там, где это необходимо. Например, код, который обновляет значение <code>tabindex</code> или стили, когда пользователь переключается между элементами c помощью стрелок, должен выполняться и обработчиками клика мыши, чтобы применить те же самые изменения.</p>
+<p>Чтобы обеспечить независимый от устройства ввода механизм взаимодействия с пользователем, обработчики событий мыши и клавиатуры должны совместно использовать код там, где это необходимо. Например, код, который обновляет значение <code>tabindex</code> или стили, когда пользователь переключается между элементами c помощью стрелок, должен выполняться и обработчиками клика мыши, чтобы применить те же самые изменения.</p>
 
-<h4 id="Убедитесь_что_можно_использовать_клавиатуру_для_активации_элемента">Убедитесь, что можно использовать клавиатуру для активации элемента </h4>
+<h4 id="Убедитесь_что_можно_использовать_клавиатуру_для_активации_элемента">Убедитесь, что можно использовать клавиатуру для активации элемента </h4>
 
-<p>Чтобы обеспечить использование клавиатуры для активации элемента, любые обработчики событий мыши должны быть также связаны с событиями клавиатуры. Например, чтобы клавиша Enter активировала элемент, если у вас есть <code>onclick="doSomething()"</code>, вам необходимо также связать <code>doSomething()</code> с событием нажатия клавиши: <code>onkeydown="return event.keyCode != 13 || doSomething();"</code>.</p>
+<p>Чтобы обеспечить использование клавиатуры для активации элемента, любые обработчики событий мыши должны быть также связаны с событиями клавиатуры. Например, чтобы клавиша Enter активировала элемент, если у вас есть <code>onclick="doSomething()"</code>, вам необходимо также связать <code>doSomething()</code> с событием нажатия клавиши: <code>onkeydown="return event.keyCode != 13 || doSomething();"</code>.</p>
 
-<h4 id="Не_используйте_focus_для_стилизации_фокусировки_(если_вы_поддерживаете_IE_7_и_более_ранние)">Не используйте :focus для стилизации фокусировки (если вы поддерживаете IE 7 и более ранние)</h4>
+<h4 id="Не_используйте_focus_для_стилизации_фокусировки_(если_вы_поддерживаете_IE_7_и_более_ранние)">Не используйте :focus для стилизации фокусировки (если вы поддерживаете IE 7 и более ранние)</h4>
 
-<p>IE 7 и более ранние версии не поддерживают <code>:focus</code> псевдо-селектор; не используйте его для стилизации фокуса. Вместо этого, установите стили с помощью обработчика событий <code>onfocus</code>, например, добавив название CSS стиля атрибуту <code>class</code>.</p>
+<p>IE 7 и более ранние версии не поддерживают <code>:focus</code> псевдо-селектор; не используйте его для стилизации фокуса. Вместо этого, установите стили с помощью обработчика событий <code>onfocus</code>, например, добавив название CSS стиля атрибуту <code>class</code>.</p>
 
 <h4 id="Always_draw_the_focus_for_tabindex-1_items_and_elements_that_receive_focus_programatically">Always draw the focus for tabindex="-1" items and elements that receive focus programatically</h4>
 

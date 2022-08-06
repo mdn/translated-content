@@ -1,0 +1,74 @@
+---
+title: Object.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Object
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca literał obiektowy reprezentujący kod źródłowy danego obiektu.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code>Object.toSource();
+<var>obj</var>.toSource();
+</code></pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<p>Brak.</p>
+
+<h2 id="Opis" name="Opis">Opis</h2>
+
+<p>Metoda <code>toSource()</code> zwraca następujące wartości:</p>
+
+<ul>
+ <li>dla obiektu wbudowanego {{jsxref("Object")}} metoda <code>toSource()</code> zwraca następujący ciąg znaków, wskazujący na niedostępność kodu źródłowego:
+
+  <pre class="brush: js">function Object() {
+   [native code]
+}
+</pre>
+ </li>
+ <li>dla instancji {{jsxref("Object")}} metoda <code>toSource()</code> zwraca ciąg reprezentujący ich kod źródłowy.</li>
+</ul>
+
+<p>Metoda ta zazwyczaj jest używana wewnętrznie przez interpreter JavaScriptu, a nie bezpośrednio w kodzie. Można jednak wywołać <code>toSource()</code> podczas debugowania, by zbadać zawartość danego obiektu.</p>
+
+<h2 id="Przyk.C5.82ady" name="Przyk.C5.82ady">Przykłady</h2>
+
+<h3 id="Przyk.C5.82ad:_Zastosowanie_toSource" name="Przyk.C5.82ad:_Zastosowanie_toSource">Przykład: Zastosowanie <code>toSource()</code></h3>
+
+<p>Poniższy kod definiuje typ obiektowy <code>Pies</code> i tworzy instancję <code>piesek</code> jako obiekt typu <code>Pies</code>:</p>
+
+<pre class="brush: js  language-js"><code class="language-js"><span class="token keyword">function</span> </code>Pies<code class="language-js"><span class="token function"><span class="token punctuation">(</span></span></code>nazwa<code class="language-js"><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span></code>nazwa<code class="language-js"> <span class="token operator">=</span> </code>nazwa<code class="language-js"><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code><code>Pies</code><code class="language-js"><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toSource <span class="token operator">=</span> <span class="token keyword">function</span> </code><code>Pies</code><code class="language-js"><span class="token function">_toSource<span class="token punctuation">(</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token string">'new </span></code><code>Pies</code><code class="language-js"><span class="token string">('</span> <span class="token operator">+</span> <span class="token function">uneval<span class="token punctuation">(</span></span><span class="token keyword">this</span><span class="token punctuation">.</span>nazwa<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token keyword">new</span> </code><code>Pies</code><code class="language-js"><span class="token punctuation">(</span><span class="token string">'Joe'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toSource<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment"> // ---&gt; new </span></code> <code>Pies</code><code class="language-js"><span class="token comment">("Joe")</span></code></pre>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Array", "Array")}} Object method.</li>
+ <li>{{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Boolean", "Boolean")}} Object method.</li>
+ <li>{{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Date", "Date")}} Object method.</li>
+ <li>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Function", "Function")}} Object method.</li>
+ <li>{{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Number", "Number")}} Object method.</li>
+ <li>{{jsxref("Regexp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/RegExp", "RegExp")}} Object method.</li>
+ <li>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/String", "String")}} Object method.</li>
+ <li>{{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Global_Objects/Symbol", "Symbol")}} Object method.</li>
+ <li><code>Math.toSource()</code> — Returns the String "Math".</li>
+</ul>

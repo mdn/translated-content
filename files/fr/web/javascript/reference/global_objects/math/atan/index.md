@@ -19,7 +19,9 @@ La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en ra
 
 ## Syntaxe
 
-    Math.atan(x)
+```js
+Math.atan(x)
+```
 
 ### Paramètres
 

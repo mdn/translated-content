@@ -5,7 +5,7 @@ translation_of: Web/CSS/Containing_block
 ---
 <div>{{cssref}}</div>
 
-<p class="summary" dir="ltr">На размер и позицию элемента часто влияет его <strong>содержащий блок</strong> (containing block). Чаще всего содержащим блоком является content область (<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>) ближайшего блочного (<a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a>) предка, но это не всегда так. <span class="seoSummary">В этой статье мы рассмотрим факторы, которые</span> определяют <span class="seoSummary">содержащий блок элемента.</span></p>
+<p class="summary" dir="ltr">На размер и позицию элемента часто влияет его <strong>содержащий блок</strong> (containing block). Чаще всего содержащим блоком является content область (<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>) ближайшего блочного (<a href="/en-US/docs/Web/HTML/Block-level_elements">block-level</a>) предка, но это не всегда так. <span class="seoSummary">В этой статье мы рассмотрим факторы, которые</span> определяют <span class="seoSummary">содержащий блок элемента.</span></p>
 
 <p class="summary" dir="ltr">Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:</p>
 
@@ -18,41 +18,41 @@ translation_of: Web/CSS/Containing_block
 
 <p><img alt="Diagram of the box model" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
 
-<p dir="ltr">Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.</p>
+<p dir="ltr">Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.</p>
 
 <h2 dir="ltr" id="Эффекты_содержащего_блока">Эффекты содержащего блока</h2>
 
-<p dir="ltr">Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.</p>
+<p dir="ltr">Перед изучением того, что определяет содержащий блок элемента, будет полезно сначала узнать, почему этот блок так важен.</p>
 
-<p dir="ltr">На размер и положение элемента часто влияет его содержащий блок. </p>
+<p dir="ltr">На размер и положение элемента часто влияет его содержащий блок. </p>
 
-<p dir="ltr">Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение <code>absolute</code> или <code>fixed</code>) рассчитываются исходя из его содержащего блока.</p>
+<p dir="ltr">Значения заданные в процентах для свойств {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, и свойства задающие смещение абсолютно позиционированного элемента (т.е., такого, у которого свойство {{cssxref("position")}} имеет значение <code>absolute</code> или <code>fixed</code>) рассчитываются исходя из его содержащего блока.</p>
 
 <h2 dir="ltr" id="Определение_содержащего_блока">Определение содержащего блока</h2>
 
-<p dir="ltr">Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:</p>
+<p dir="ltr">Определение содержащего блока элемента полностью зависит от значения свойства {{cssxref("position")}}:</p>
 
 <ol dir="ltr" start="1">
- <li>Если свойство <code>position</code> имеет значение  <code><strong>static</strong></code>,<strong> </strong><code><strong>relative</strong></code>, или <strong><code>sticky</code></strong>, то содержащий блок задаётся краем <em>content бокса</em> ближайшего предка, который:
+ <li>Если свойство <code>position</code> имеет значение  <code><strong>static</strong></code>,<strong> </strong><code><strong>relative</strong></code>, или <strong><code>sticky</code></strong>, то содержащий блок задаётся краем <em>content бокса</em> ближайшего предка, который:
 
   <ul>
-   <li>либо является <strong>блочным контейнером</strong> (block container), например, если его свойство display имеет значение inline-block, block или list-item.</li>
-   <li>либо <strong>устанавливает контекст форматирования</strong> (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).</li>
+   <li>либо является <strong>блочным контейнером</strong> (block container), например, если его свойство display имеет значение inline-block, block или list-item.</li>
+   <li>либо <strong>устанавливает контекст форматирования</strong> (formatting context), например, контейнер таблицы (table container), flex-контейнер (flex container), grid-контейнер (grid container) или блочный контейнер (block container).</li>
   </ul>
  </li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code>, то содержащий блок задаётся краем <em>padding бокса</em> ближайшего предка, у которого свойство <code>position</code><strong> </strong>имеет значение отличное от <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code> или <code>sticky</code>).</li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>fixed</strong></code>, то содержащий блок задаётся:
+ <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code>, то содержащий блок задаётся краем <em>padding бокса</em> ближайшего предка, у которого свойство <code>position</code><strong> </strong>имеет значение отличное от <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code> или <code>sticky</code>).</li>
+ <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>fixed</strong></code>, то содержащий блок задаётся:
   <ul>
    <li>в случае непрерывного медиа (continuous media) областью просмотра (вьюпорт - {{glossary("viewport")}});</li>
    <li>в случае страничного медиа (paged media) областью страницы.</li>
   </ul>
  </li>
- <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code> или <code><strong>fixed</strong></code>, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
+ <li>Если свойство <code>position</code><strong> </strong>имеет значение <code><strong>absolute</strong></code> или <code><strong>fixed</strong></code>, то содержащий блок может также задаваться краем padding бокса ближайшего предка, у которого:
   <ol start="1">
-   <li>Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от <code>none</code>.</li>
-   <li>Свойство {{cssxref("will-change")}} имеет значение <code>transform</code> или <code>perspective</code>.</li>
-   <li>Свойство {{cssxref("filter")}}<strong> </strong> имеет значение отличное от <code>none</code> или <code>will-change</code> value of <code>filter</code> (работает только в Firefox).</li>
-   <li>Свойство {{cssxref("contain")}} имеет значение <code>paint</code> (например, <code>contain: paint;</code>).</li>
+   <li>Свойство {{cssxref("transform")}} или {{cssxref("perspective")}} имеет значение отличное от <code>none</code>.</li>
+   <li>Свойство {{cssxref("will-change")}} имеет значение <code>transform</code> или <code>perspective</code>.</li>
+   <li>Свойство {{cssxref("filter")}}<strong> </strong> имеет значение отличное от <code>none</code> или <code>will-change</code> value of <code>filter</code> (работает только в Firefox).</li>
+   <li>Свойство {{cssxref("contain")}} имеет значение <code>paint</code> (например, <code>contain: paint;</code>).</li>
   </ol>
  </li>
 </ol>

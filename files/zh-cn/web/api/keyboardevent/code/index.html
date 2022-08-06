@@ -11,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/code
 
 <p>当您想要根据输入设备上的物理位置处理键而不是与这些键相关联的字符时，此属性非常有用;这在编写代码来处理游戏输入时尤为常见，这些游戏使用键盘上的键来模拟类似游戏板的环境。但请注意，您无法使用 <code>KeyboardEvent.code</code>报告的值来确定击键生成的字符，因为键码的名称可能与按键上打印的实际字符或按下键时计算机生成的字符不匹配。</p>
 
-<p>例如，QWERTY布局键盘上的“<kbd>q</kbd>”键返回的<code>code</code>是“<code>KeyQ</code>”，但Dvorak键盘上的“<kbd>'</kbd>”键和AZERTY键盘上的“<kbd>a</kbd>”键也返回的相同<code>code</code>值。这使得如果用户没有使用预期的键盘布局，则无法使用<code>code</code>值来确定用户按键的名称。</p>
+<p>例如，QWERTY 布局键盘上的“<kbd>q</kbd>”键返回的<code>code</code>是“<code>KeyQ</code>”，但 Dvorak 键盘上的“<kbd>'</kbd>”键和 AZERTY 键盘上的“<kbd>a</kbd>”键也返回的相同<code>code</code>值。这使得如果用户没有使用预期的键盘布局，则无法使用<code>code</code>值来确定用户按键的名称。</p>
 
 <div>
 <p>要确定哪个字符与键事件对应，请改用{{domxref("KeyboardEvent.key")}}属性。</p>
@@ -62,7 +62,7 @@ translation_of: Web/API/KeyboardEvent/code
 
 <pre class="brush: html">&lt;p&gt;Use the WASD (ZQSD on AZERTY) keys to move and steer.&lt;/p&gt;
 &lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world"&gt;
-  &lt;polygon id="spaceship" points="15,0 0,30 30,30"/&gt;
+  &lt;polygon id="spaceship" points="15,0 0,30 30,30"/&gt;
 &lt;/svg&gt;
 &lt;script&gt;refresh();&lt;/script&gt;
 </pre>
@@ -183,20 +183,7 @@ let spaceship = document.getElementById("spaceship");
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', '#dom-keyboardevent-code', 'KeyboardEvent.code')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td>Initial definition, included <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3Events-code.html">code values</a>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -212,10 +199,10 @@ let spaceship = document.getElementById("spaceship");
 
 <p>This table shows the Windows scan codes representing keys and the <code>KeyboardEvent.code</code> values which correspond to those hardware keys. Only keys which generate scan codes on Windows are listed.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th colspan="2" rowspan="1" scope="col" style="text-align: center;"><strong><code>KeyboardEvent.code</code></strong> value</th>
   </tr>
   <tr>
@@ -1088,8 +1075,8 @@ let spaceship = document.getElementById("spaceship");
   </tr>
   <tr>
    <th scope="row"><code>0xE020</code></th>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE021</code></th>
@@ -1159,7 +1146,7 @@ let spaceship = document.getElementById("spaceship");
     <p>Prior to Firefox 48, this key code is reported as <code>"VolumeDown"</code>.</p>
     </div>
    </td>
-   <td><code>"VolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
+   <td><code>"VolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE02F</code></th>
@@ -1181,7 +1168,7 @@ let spaceship = document.getElementById("spaceship");
     <p>Prior to Firefox 48, this key code is reported as <code>"VolumeUp"</code>.</p>
     </div>
    </td>
-   <td><code>"VolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
+   <td><code>"VolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0xE031</code></th>
@@ -1489,7 +1476,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>On Mac OS X, it's hard to get scancode or something which can distinguish a physical key from a key event. Therefore, Gecko always maps <code>code</code> value from the virtual keycode.</p>
 
-<table class="standard-table" id="keyname_table_mac">
+<table>
  <thead>
   <tr>
    <th scope="row">Virtual keycode</th>
@@ -1815,18 +1802,18 @@ let spaceship = document.getElementById("spaceship");
   </tr>
   <tr>
    <th scope="row"><code>kVK_VolumeUp (0x48)</code></th>
-   <td><code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Firefox 48)</td>
-   <td><code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Firefox 48)</td>
+   <td><code>"AudioVolumeUp" </code>(was <code>"VolumeUp"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_VolumeDown (0x49)</code></th>
-   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_Mute (0x4A)</code></th>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>kVK_ANSI_KeypadDivide (0x4B)</code></th>
@@ -2081,7 +2068,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>Note that X has too many keys and some of them are not testable with usual keyboard. So, following table is created from source code which maps from scancode to code value.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="row">scancode (hardware_keycode)</th>
@@ -2642,18 +2629,18 @@ let spaceship = document.getElementById("spaceship");
   </tr>
   <tr>
    <th scope="row"><code>0x0079</code></th>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeMute"</code> (was <code>"VolumeMute"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007A</code></th>
-   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeDown"</code> (was <code>"VolumeDown"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007B</code></th>
-   <td><code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Firefox 49)</td>
-   <td><code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
+   <td><code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Firefox 49)</td>
+   <td><code>"AudioVolumeUp"</code> (was <code>"VolumeUp"</code> until Chrome 50)</td>
   </tr>
   <tr>
    <th scope="row"><code>0x007C</code></th>
@@ -2999,10 +2986,7 @@ let spaceship = document.getElementById("spaceship");
 
 <h3 id="Code_values_on_Android_and_Firefox_OS_(When_scancode_is_available)">Code values on Android and Firefox OS (When scancode is available)</h3>
 
-<p><br>
-  </p>
-
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="row">scancode</th>

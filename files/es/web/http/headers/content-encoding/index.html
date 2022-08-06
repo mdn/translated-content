@@ -38,12 +38,12 @@ Content-Encoding: br
 
 <dl>
  <dt><code>gzip</code></dt>
- <dd>Un formato que usa <a class="external" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa <em>gzip de </em>UNIX . El estándar HTTP/1.1 también recomienda que los servidores que soporten esta codificación también deberían reconocer  <code>x-gzip</code> como un alias por motivos de compatibilidad.</dd>
+ <dd>Un formato que usa <a class="external" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77), con un CRC de 32 bits. Este es originalmente el formato del programa <em>gzip de </em>UNIX . El estándar HTTP/1.1 también recomienda que los servidores que soporten esta codificación también deberían reconocer  <code>x-gzip</code> como un alias por motivos de compatibilidad.</dd>
  <dt><code>compress</code></dt>
- <dd>Un formato que usa el algoritmo <a class="external" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW). El nombre viene del programa <em>compress de </em>UNIX , que implementó este algoritmo.<br>
+ <dd>Un formato que usa el algoritmo <a class="external" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW). El nombre viene del programa <em>compress de </em>UNIX , que implementó este algoritmo.<br>
  Al igual que el programa compress, el cual ha desaparecido de la mayoría de distribuciones UNIX, esta codificación apenas es utilizada por los navegadores de hoy día, en parte debido a un problema de patente (la cual expiró en 2003).</dd>
  <dt><code>deflate</code></dt>
- <dd>Usa la estructura <a class="external" href="http://en.wikipedia.org/wiki/Zlib">zlib</a> (definida en <a class="external" href="http://tools.ietf.org/html/rfc1950">RFC 1950</a>), con el algoritmo de compresión <a class="external" href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> (definido en <a class="external" href="http://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
+ <dd>Usa la estructura <a class="external" href="http://en.wikipedia.org/wiki/Zlib">zlib</a> (definida en <a class="external" href="http://tools.ietf.org/html/rfc1950">RFC 1950</a>), con el algoritmo de compresión <a class="external" href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> (definido en <a class="external" href="http://tools.ietf.org/html/rfc1952">RFC 1951</a>).</dd>
  <dt><code>identity</code></dt>
  <dd><span id="result_box" lang="es"><span>Indica la función de identidad (es decir, sin compresión ni modificación).</span> <span>Este símbolo, excepto si se especifica explícitamente, siempre se considera aceptable.</span></span></dd>
  <dt><code>br</code></dt>
@@ -54,7 +54,7 @@ Content-Encoding: br
 
 <h3 id="Comprimiendo_con_gzip">Comprimiendo con gzip</h3>
 
-<p>En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.</p>
+<p>En el lado del cliente, puede detectar una lista de esquemas de compresión que serán enviados en una petición HTTP. La cabecera {{HTTPHeader("Accept-Encoding")}} se utiliza para la negociación de la codificación del contenido.</p>
 
 <pre>Accept-Encoding: gzip, deflate</pre>
 

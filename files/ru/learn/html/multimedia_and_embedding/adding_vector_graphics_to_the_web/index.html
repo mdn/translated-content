@@ -35,12 +35,12 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <ul>
  <li>Растровое изображение задаётся сеткой пикселей — файл растрового изображения содержит информацию о расположении и цвете каждого пикселя. Среди популярных форматов изображений данного типа числятся Bitmap (.bmp), PNG (.png), JPEG (.jpg) и GIF (.gif)</li>
- <li>Векторное изображение  определяется алгоритмом — файл векторного изображения содержит фигуры и правила, по которым компьютер  может вычислить как должно выглядеть изображение, когда выводится на экран.{{glossary("SVG")}} формат позволяет нам создавать векторную графику для использования в веб-документах.</li>
+ <li>Векторное изображение  определяется алгоритмом — файл векторного изображения содержит фигуры и правила, по которым компьютер  может вычислить как должно выглядеть изображение, когда выводится на экран.{{glossary("SVG")}} формат позволяет нам создавать векторную графику для использования в веб-документах.</li>
 </ul>
 
 <p>Для демонстрации различий между типами изображений, давайте взглянем на пример. Вы можете найти данный пример на Github как <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — в нем демонстрируются два, на первый взгляд, одинаковых изображения, расположенных рядом друг с другом. Каждое из изображений представляет собой красную звезду с тенью. Различие их в том, что левое изображение имеет формат PNG, а правое - SVG.</p>
 
-<p>Различия становятся заметны, когда вы изменяете масштаб страницы — PNG изображение становится неровным (становятся видны пиксели), потому что оно содержит информацию о положении и цвете каждого пикселя. При увеличении каждый пиксель также увеличивается, охватывая несколько пикселей дисплея, поэтому становятся заметны "кирпичики". Векторное изображение продолжает выглядеть ровным и красивым, потому что фигуры, масштабируются совместно с ним. </p>
+<p>Различия становятся заметны, когда вы изменяете масштаб страницы — PNG изображение становится неровным (становятся видны пиксели), потому что оно содержит информацию о положении и цвете каждого пикселя. При увеличении каждый пиксель также увеличивается, охватывая несколько пикселей дисплея, поэтому становятся заметны "кирпичики". Векторное изображение продолжает выглядеть ровным и красивым, потому что фигуры, масштабируются совместно с ним. </p>
 
 <p><img alt="Two star images" src="https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png" style="display: block; height: 112px; margin: 0px auto; width: 223px;"></p>
 
@@ -50,11 +50,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 <p><strong>Примечание</strong>: Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> !</p>
 </div>
 
-<p>Более того, файлы векторных изображений намного меньше растровых, т.к. в них содержится алгоритмы построения вместо информации о каждом пикселе.</p>
+<p>Более того, файлы векторных изображений намного меньше растровых, т.к. в них содержится алгоритмы построения вместо информации о каждом пикселе.</p>
 
 <h2 id="What_is_SVG">Что такое SVG?</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> это язык на базе {{glossary("XML")}} для описания векторных изображений. По сути это язык разметки, как и HTML, только содержащий множество различных элементов для определения фигур вашего изображения, а также параметров их отображения. SVG предназначен для разметки графики, а не содержимого. В простейшем случае,  вы можете использовать элементы для создания простых фигур, таких как {{svgelement("circle")}}(круг) и {{svgelement("rect")}}(прямоугольник). Более сложные SVG элементы включают {{svgelement("feColorMatrix")}} (разложение цвета с использованием матрицы), {{svgelement("animate")}} (анимация частей вашего векторного изображения) и {{svgelement("mask")}} (применение маски к изображению.)</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> это язык на базе {{glossary("XML")}} для описания векторных изображений. По сути это язык разметки, как и HTML, только содержащий множество различных элементов для определения фигур вашего изображения, а также параметров их отображения. SVG предназначен для разметки графики, а не содержимого. В простейшем случае,  вы можете использовать элементы для создания простых фигур, таких как {{svgelement("circle")}}(круг) и {{svgelement("rect")}}(прямоугольник). Более сложные SVG элементы включают {{svgelement("feColorMatrix")}} (разложение цвета с использованием матрицы), {{svgelement("animate")}} (анимация частей вашего векторного изображения) и {{svgelement("mask")}} (применение маски к изображению.)</p>
 
 <p>В качестве простого примера, следующий код создаёт круг и прямоугольник:</p>
 
@@ -75,11 +75,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 <p>Дополнительные преимущества SVG:</p>
 
 <ul>
- <li>Текст в векторном изображении остаётся машинописным (то есть доступным для поисковика, что улучшает {{glossary("SEO")}}).</li>
- <li>SVG легко поддаются стилизации/программированию (scripting), потому что каждый компонент изображения может быть стилизован с помощью CSS или запрограммирован с помощью JavaScript.</li>
+ <li>Текст в векторном изображении остаётся машинописным (то есть доступным для поисковика, что улучшает {{glossary("SEO")}}).</li>
+ <li>SVG легко поддаются стилизации/программированию (scripting), потому что каждый компонент изображения может быть стилизован с помощью CSS или запрограммирован с помощью JavaScript.</li>
 </ul>
 
-<p>Так почему же тогда вообще используют растровые изображения, а не только SVG? Дело в том, что SVG имеет ряд недостатков:</p>
+<p>Так почему же тогда вообще используют растровые изображения, а не только SVG? Дело в том, что SVG имеет ряд недостатков:</p>
 
 <ul>
  <li>SVG может очень быстро стать сложным в том смысле, что размер файла увеличивается; сложные SVG-изображения также создают большую вычислительную нагрузку на браузер.</li>
@@ -99,7 +99,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <h3 id="Быстрый_путь_htmlelementimg">Быстрый путь: {{htmlelement("img")}}</h3>
 
-<p>Чтобы встроить SVG используя элемент {{htmlelement ("img")}}, вам просто нужно сослаться на него в атрибуте src, как и следовало ожидать. Вам понадобится атрибут <code>height</code> или <code>width</code> (или оба, если ваш SVG не имеет собственного соотношения сторон). Если вы ещё этого не делали, пожалуйста, прочтите <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Изображения в HTML</a>.</p>
+<p>Чтобы встроить SVG используя элемент {{htmlelement ("img")}}, вам просто нужно сослаться на него в атрибуте src, как и следовало ожидать. Вам понадобится атрибут <code>height</code> или <code>width</code> (или оба, если ваш SVG не имеет собственного соотношения сторон). Если вы ещё этого не делали, пожалуйста, прочтите <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Изображения в HTML</a>.</p>
 
 <pre class="brush: html">&lt;img
     src="equilateral.svg"
@@ -111,14 +111,14 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <ul>
  <li>Быстрый, знакомый синтаксис изображения со встроенным текстовым эквивалентом, доступным в атрибуте <code>alt</code></li>
- <li>Вы можете легко превратить изображение в гиперссылку, поместив <code>&lt;image&gt;</code> в элемент {{htmlelement("a")}}.</li>
+ <li>Вы можете легко превратить изображение в гиперссылку, поместив <code>&lt;image&gt;</code> в элемент {{htmlelement("a")}}.</li>
 </ul>
 
 <h4 id="Минусы">Минусы</h4>
 
 <ul>
  <li>Вы не можете изменять изображение с помощью JavaScript.</li>
- <li>Если вы хотите управлять содержимым SVG с помощью CSS, вы должны использовать встроенные CSS стили в своём SVG коде. (Внешние таблицы стилей, вызываемые из файла SVG, не действуют.)</li>
+ <li>Если вы хотите управлять содержимым SVG с помощью CSS, вы должны использовать встроенные CSS стили в своём SVG коде. (Внешние таблицы стилей, вызываемые из файла SVG, не действуют.)</li>
  <li>Вы не можете изменить стиль изображения с помощью псевдоклассов CSS (например <code>:focus</code>).</li>
 </ul>
 
@@ -128,19 +128,19 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 <pre class="brush: html">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;</pre>
 
-<p>Также вы можете использовать SVG в качестве фоновых изображение CSS, как показано ниже. В приведённом коде ниже старые браузеры будут придерживаться PNG, который они понимают, тогда как новые браузеры будут загружать SVG:</p>
+<p>Также вы можете использовать SVG в качестве фоновых изображение CSS, как показано ниже. В приведённом коде ниже старые браузеры будут придерживаться PNG, который они понимают, тогда как новые браузеры будут загружать SVG:</p>
 
 <pre class="brush: css"><code>background: url("fallback.png") no-repeat center;</code>
 background<code>-image: url("image.svg");
 background-size: contain;</code></pre>
 
-<p>Подобно методу <code>&lt;img&gt;</code>, описанному выше, вставка SVG с использованием фоновых изображений CSS означает, что SVG нельзя манипулировать при помощи JavaScript, и что SVG будет иметь те же ограничения, что и CSS.</p>
+<p>Подобно методу <code>&lt;img&gt;</code>, описанному выше, вставка SVG с использованием фоновых изображений CSS означает, что SVG нельзя манипулировать при помощи JavaScript, и что SVG будет иметь те же ограничения, что и CSS.</p>
 
-<p>Если ваши SVG не отображаются вовсе, возможно, ваш сервер не настроен должным образом. Если проблема в этом, то <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">данная статья укажет вам верное направление</a>.</p>
+<p>Если ваши SVG не отображаются вовсе, возможно, ваш сервер не настроен должным образом. Если проблема в этом, то <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">данная статья укажет вам верное направление</a>.</p>
 
 <h3 id="Как_включить_SVG_в_ваш_HTML_код">Как включить SVG в ваш HTML код</h3>
 
-<p>Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (<strong>SVG inline</strong> или <strong>inlining SVG</strong>). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:</p>
+<p>Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (<strong>SVG inline</strong> или <strong>inlining SVG</strong>). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code> (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:</p>
 
 <pre class="brush: html">&lt;svg width="300" height="200"&gt;
     &lt;rect width="100%" height="100%" fill="green" /&gt;
@@ -151,7 +151,7 @@ background-size: contain;</code></pre>
 
 <ul>
  <li>Вставка вашего SVG путём <strong>SVG inline </strong>позволяет сохранить HTTP запросы и, следовательно, может уменьшить время загрузки.</li>
- <li>Вы можете присваивать <code>class</code>-ы и <code>id</code> элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо <span class="tlid-translation translation" lang="ru"><span title="">внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой</span></span> <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#Presentation_attributes">атрибут представления SVG </a>как свойство CSS.</li>
+ <li>Вы можете присваивать <code>class</code>-ы и <code>id</code> элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо <span class="tlid-translation translation" lang="ru"><span title="">внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой</span></span> <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#Presentation_attributes">атрибут представления SVG </a>как свойство CSS.</li>
  <li><strong>SVG inline </strong>единственный метод, который позволяет вам использовать CSS-взаимодействия (как <code>:focus</code>) и CSS-анимацию на вашем SVG изображении (даже в вашей обычной таблице стилей).</li>
  <li>Вы можете разметить SVG как гиперссылку, обернув в элемент {{htmlelement("a")}}.</li>
 </ul>
@@ -162,7 +162,7 @@ background-size: contain;</code></pre>
  <li>Этот метод подходит, только если вы используете SVG лишь в одном месте. Дублирование делает обслуживание ресурсоёмким.</li>
  <li>Дополнительный SVG код увеличивает размер вашего HTML файла.</li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Браузер не может кешировать встроенный SVG, так как он кеширует обычные изображения</span></span>.</li>
- <li>Вы можете добавить альтернативный вариант в элементе {{svgelement("foreignObject")}}, но браузеры поддерживающие SVG будут продолжать загружать все альтернативные изображения. Вы должны взвесить действительно стоит ли поддержка устаревших браузеров дополнительных накладных расходов (ресурсов).</li>
+ <li>Вы можете добавить альтернативный вариант в элементе {{svgelement("foreignObject")}}, но браузеры поддерживающие SVG будут продолжать загружать все альтернативные изображения. Вы должны взвесить действительно стоит ли поддержка устаревших браузеров дополнительных накладных расходов (ресурсов).</li>
 </ul>
 
 <ul>
@@ -170,7 +170,7 @@ background-size: contain;</code></pre>
 
 <h3 id="Как_встраивать_SVG_при_помощи_htmlelementiframe">Как встраивать SVG при помощи {{htmlelement("iframe")}}</h3>
 
-<p>Вы можете открывать ваши SVG изображения в браузере просто как веб-страницы. Таким образом встраивание SVG документа с помощью <code>&lt;iframe&gt;</code> выполняется как мы изучали ранее в главе <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">От &lt;object&gt; к &lt;iframe&gt; — другие технологии внедрения</a>.</p>
+<p>Вы можете открывать ваши SVG изображения в браузере просто как веб-страницы. Таким образом встраивание SVG документа с помощью <code>&lt;iframe&gt;</code> выполняется как мы изучали ранее в главе <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">От &lt;object&gt; к &lt;iframe&gt; — другие технологии внедрения</a>.</p>
 
 <p>Вот краткий обзор:</p>
 
@@ -189,9 +189,9 @@ background-size: contain;</code></pre>
 
 <h2 id="Активное_изучение_поиграйте_с_SVG">Активное изучение: поиграйте с SVG</h2>
 
-<p>В этом разделе активного изучения мы бы хотели, чтобы вы просто попробовали поиграть с SVG. Ниже, в области <em>Input,</em> вы увидите, что мы уже предоставили некий пример для того, чтобы вы начали. А ещё вы можете посетить <a href="/en-US/docs/Web/SVG/Element">SVG Element Reference</a>, чтобы узнать больше деталей о других игрушках, которые могут быть использованы в SVG, и тоже попробовать их. Этот раздел полностью посвящён практике ваших исследовательских навыков и вашему развлечению.</p>
+<p>В этом разделе активного изучения мы бы хотели, чтобы вы просто попробовали поиграть с SVG. Ниже, в области <em>Input,</em> вы увидите, что мы уже предоставили некий пример для того, чтобы вы начали. А ещё вы можете посетить <a href="/en-US/docs/Web/SVG/Element">SVG Element Reference</a>, чтобы узнать больше деталей о других игрушках, которые могут быть использованы в SVG, и тоже попробовать их. Этот раздел полностью посвящён практике ваших исследовательских навыков и вашему развлечению.</p>
 
-<p>Если Вы где-то застряли и ваш код не работает, вы всегда можете начать сначала, нажав кнопку <em>Reset</em>.</p>
+<p>Если Вы где-то застряли и ваш код не работает, вы всегда можете начать сначала, нажав кнопку <em>Reset</em>.</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -328,10 +328,10 @@ textarea.onkeyup = function(){
 
 <p>В последней статье этого модуля мы будем исследовать адаптивные изображения в деталях, рассматривая инструменты HTML, которые позволяют делать ваши изображения так, чтоб они могли лучше работать на разных устройствах.</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
  <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Quick tips for responsive SVGs</a></li>
  <li><a href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Sara Soueidan's tutorial on responsive SVG images</a></li>
  <li><a href="http://www.w3.org/TR/SVG-access/">Accessibility benefits of SVG</a></li>
@@ -340,13 +340,13 @@ textarea.onkeyup = function(){
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">В этом модуле</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Изображения в HTML</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Видео и аудио контент</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">От &lt;object&gt; до &lt;iframe&gt; — другие способы встраивать контент</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Добавление векторной графики</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Адаптивные изображения</a></li>
+ <li><a href="/ru/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Задание: страница о Mozilla</a></li>
 </ul>

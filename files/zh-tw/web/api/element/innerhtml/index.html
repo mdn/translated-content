@@ -12,9 +12,9 @@ translation_of: Web/API/Element/innerHTML
 
 
 
-<p> <a href="/zh-TW/docs/Glossary/Element">Element</a>  的「innerHTML」屬性獲取或設置元素中包含的HTML或XML標記。</p>
+<p> <a href="/zh-TW/docs/Glossary/Element">Element</a>  的「innerHTML」屬性獲取或設置元素中包含的HTML或XML標記。</p>
 
-<div class="note"><strong>Note:  </strong>如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（&lt;）或（&gt;），innerHTML分別地回傳這些字符成為HTML的<code>“&amp;” </code>，<code>“&lt;” </code>和<code> “&gt;” </code>。 使用 <code>Node.textContent</code> 得到的這些文本節點的內容的原始拷貝件。</div>
+<div class="note"><strong>Note:  </strong>如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（&lt;）或（&gt;），innerHTML分別地回傳這些字符成為HTML的<code>“&amp;” </code>，<code>“&lt;” </code>和<code> “&gt;” </code>。 使用 <code>Node.textContent</code> 得到的這些文本節點的內容的原始拷貝件。</div>
 
 <p>To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
@@ -95,7 +95,7 @@ el.innerHTML = name; // harmless in this case
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // harmless in this case</pre>
 
-<p>Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}} attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag inserted with <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not execute</a>.</p>
+<p>Although this may look like a <a href="https://zh.wikipedia.org/wiki/cross-site_scripting">cross-site scripting</a> attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag inserted with <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not execute</a>.</p>
 
 <p>However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use <code>innerHTML</code> to set strings over which you have no control. For example:</p>
 
@@ -119,7 +119,7 @@ el.innerHTML = name; // shows the alert</pre>
 
   var time = new Date();
   var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
+  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
 }
 
 log("Logging mouse events inside this container...");
@@ -182,22 +182,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

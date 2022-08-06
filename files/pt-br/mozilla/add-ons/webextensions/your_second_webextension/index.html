@@ -91,7 +91,7 @@ cd beastify</pre>
 
 <ul>
  <li>As primeiras três chaves : <strong><code>manifest_version</code></strong>, <strong><code>name</code></strong>, e <strong><code>version</code></strong>, são obrigatórias e contém metadados básicos para a extensão.</li>
- <li><strong><code>permissions</code></strong> lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>. Nós prefirimos por usar a permissão <code>activeTab</code> aqui , mas atualmente não é suportada pela Firefox.</li>
+ <li><strong><code>permissions</code></strong> lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>. Nós prefirimos por usar a permissão <code>activeTab</code> aqui , mas atualmente não é suportada pela Firefox.</li>
  <li><strong><code>browser_action</code></strong> especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
   <ul>
    <li><strong><code>default_icon</code></strong> é obrigatório, e aponta para o icone do botão</li>
@@ -106,9 +106,9 @@ cd beastify</pre>
 
 <h3 id="O_Botão_na_barra_de_ferramentas">O Botão na barra de ferramentas</h3>
 
-<p>O botão na barra de ferramentas precisa de um icone,  e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".</p>
+<p>O botão na barra de ferramentas precisa de um icone,  e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".</p>
 
-<p>Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png">exemplo,</a> que é retirado do  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a> e usado sob os termos de sua <a href="http://www.iconbeast.com/faq/">licença</a>.</p>
+<p>Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png">exemplo,</a> que é retirado do  <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a> e usado sob os termos de sua <a href="http://www.iconbeast.com/faq/">licença</a>.</p>
 
 <p>Se você não fornecer um popup, então um evento de click é lançado para sua extensão quando o usuário clicar no botão. Se você fornecer um popup, o evento de click não envia, mas ao invés disso, o popup é aberto. Nós queremos abrir um popup, então vamos criá-lo na próxima etapa.</p>
 
@@ -243,7 +243,7 @@ function beastNameToURL(beastName) {
 
 </pre>
 
-<p>O content script  adiciona um listener da mensagem para a extensão (especificamente , para "choose_beast.js"). No listener:</p>
+<p>O content script  adiciona um listener da mensagem para a extensão (especificamente , para "choose_beast.js"). No listener:</p>
 
 <ul>
  <li>remover todos os elementos em <code>document.body</code></li>
@@ -286,7 +286,7 @@ function beastNameToURL(beastName) {
 
 <p>Extensões Firefox são empacotados como arquivos XPI, que são apenas arquivos ZIP com a extensão "XPI".</p>
 
-<p>Um truque é que o arquivo ZIP  deve ser um dos arquivos de extensão . Portanto, para criar um XPI a partir dos arquivos beastify , navegue até o diretório " beastify " em um shell de comando e digite:</p>
+<p>Um truque é que o arquivo ZIP  deve ser um dos arquivos de extensão . Portanto, para criar um XPI a partir dos arquivos beastify , navegue até o diretório " beastify " em um shell de comando e digite:</p>
 
 <pre class="brush: bash">   # in beastify/
    zip -r ../beastify.xpi *</pre>

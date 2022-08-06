@@ -35,7 +35,7 @@ translation_of: Web/HTML/Attributes
   <tr>
    <td><code>href</code></td>
    <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("base") }}, {{ HTMLElement("link") }}</td>
-   <td> URL связанного ресурса.</td>
+   <td> URL связанного ресурса.</td>
   </tr>
   <tr>
    <td><code>hreflang</code></td>
@@ -346,7 +346,7 @@ translation_of: Web/HTML/Attributes
   </tr>
   <tr>
    <td><code>usemap</code></td>
-   <td>{{ HTMLElement("img") }},  {{ HTMLElement("input") }}, {{ HTMLElement("object") }}</td>
+   <td>{{ HTMLElement("img") }},  {{ HTMLElement("input") }}, {{ HTMLElement("object") }}</td>
    <td></td>
   </tr>
   <tr>
@@ -414,7 +414,7 @@ translation_of: Web/HTML/Attributes
   <tr>
    <td><code>codebase</code></td>
    <td>{{ HTMLElement("applet") }}</td>
-   <td>Этот атрибут предоставляет абсолютный или относительный URL директории,  файлы аплета .class, на которые ссылаются в хранимом атрибуте кода.</td>
+   <td>Этот атрибут предоставляет абсолютный или относительный URL директории,  файлы аплета .class, на которые ссылаются в хранимом атрибуте кода.</td>
   </tr>
   <tr>
    <td><code>color</code></td>
@@ -588,7 +588,7 @@ translation_of: Web/HTML/Attributes
   </tr>
   <tr>
    <td><code>align</code></td>
-   <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }},  {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }},  {{ HTMLElement("td") }},  {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
+   <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }},  {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }},  {{ HTMLElement("td") }},  {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
    <td>Задаёт горизонтальное выравнивание элемента.</td>
   </tr>
   <tr>
@@ -639,7 +639,7 @@ translation_of: Web/HTML/Attributes
 
 <p>В HTML, большинство атрибутов имеют две грани: <strong>атрибут содержимого</strong> и <strong>IDL атрибут</strong>.</p>
 
-<p>Атрибут содержимого — это атрибут как вы его устанавливаете из содержимого (HTML-код), и его можно устанавливать или получать с помощью  {{domxref("element.setAttribute()")}} или {{domxref("element.getAttribute()")}}. Атрибут содержимого всегда строка, даже когда ожидаемое значение должно быть число. Например, для того чтобы установить <code>maxlength элемента </code>{{HTMLElement("input")}}  в 42 используя атрибут содержимого, вам нужно вызвать <code>setAttribute("maxlength", "42")</code> на этом элементе.</p>
+<p>Атрибут содержимого — это атрибут как вы его устанавливаете из содержимого (HTML-код), и его можно устанавливать или получать с помощью  {{domxref("element.setAttribute()")}} или {{domxref("element.getAttribute()")}}. Атрибут содержимого всегда строка, даже когда ожидаемое значение должно быть число. Например, для того чтобы установить <code>maxlength элемента </code>{{HTMLElement("input")}}  в 42 используя атрибут содержимого, вам нужно вызвать <code>setAttribute("maxlength", "42")</code> на этом элементе.</p>
 
 <p>IDL-атрибут также известен как свойство JavaScript. Это атрибуты, которые вы можете читать или устанавливать используя JavaScript-свойства наподобие <code class="moz-txt-verticalline">element.foo</code>. IDL-атрибут всегда собирается использовать (но может преобразовать) основной атрибут содержимого для возврата, когда вы получаете его и сохраняет в атрибут содержимого, когда вы устанавливаете его. Другими словами, IDL-атрибуты, в сущности, отражают атрибуты содержимого.</p>
 

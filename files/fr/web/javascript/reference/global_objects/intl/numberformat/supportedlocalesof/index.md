@@ -20,7 +20,9 @@ La méthode **`Intl.NumberFormat.supportedLocalesOf()`** renvoie un tableau de l
 
 ## Syntaxe
 
-    Intl.NumberFormat.supportedLocalesOf(locales[, options])
+```js
+Intl.NumberFormat.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 

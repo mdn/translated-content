@@ -5,13 +5,13 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 ---
 <div>{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}</div>
 
-<p>Nos primórdios do web design, páginas eram criadas para serem visualizadas em um tamanho de tela específico.  Se o usuário tivesse uma tela maior ou menor do que o esperado, os resultados iam de barras de rolagem indesejadas, tamanhos de linha excessivamente longos e uso inadequado do espaço. À medida que diferentes tamanhos de tela foram aparecendo, surgiu o conceito de web design responsivo (RWD), um conjunto de práticas que permite que páginas da Web alterem seu layout e aparência para se adequarem a diferentes larguras, resoluções, etc. É uma ideia que mudou a forma de como projetamos para a Web com múltiplos dispositivos e, neste artigo, ajudaremos você a entender as principais técnicas que você precisa conhecer para dominá-la.</p>
+<p>Nos primórdios do web design, páginas eram criadas para serem visualizadas em um tamanho de tela específico.  Se o usuário tivesse uma tela maior ou menor do que o esperado, os resultados iam de barras de rolagem indesejadas, tamanhos de linha excessivamente longos e uso inadequado do espaço. À medida que diferentes tamanhos de tela foram aparecendo, surgiu o conceito de web design responsivo (RWD), um conjunto de práticas que permite que páginas da Web alterem seu layout e aparência para se adequarem a diferentes larguras, resoluções, etc. É uma ideia que mudou a forma de como projetamos para a Web com múltiplos dispositivos e, neste artigo, ajudaremos você a entender as principais técnicas que você precisa conhecer para dominá-la.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerrequisitos:</th>
-   <td>HTML básico (estude <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), e uma idea de como o CSS funciona (estude <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> e <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>.)</td>
+   <td>HTML básico (estude <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), e uma idea de como o CSS funciona (estude <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> e <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -50,27 +50,27 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: As capturas de tela acima foram tiradas usando o <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> no Firefox DevTools.</p>
+<p><strong>Nota</strong>: As capturas de tela acima foram tiradas usando o <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a> no Firefox DevTools.</p>
 </div>
 
 <p>À medida que a Web para dispositivos móveis começava a se tornar realidade com os primeiros telefones com essas características, empresas que desejavam adotar os dispositivos móveis geralmente criavam uma versão mobile do seu site, com uma URL diferente (geralmente algo como m.exemplo.com ou exemplo.mobi) Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas.</p>
 
 <p>Além disso, esses sites para celular geralmente ofereciam uma experiência muito restrita. À medida que os dispositivos móveis se tornaram mais poderosos e capazes de exibir sites completos, os usuários de celular ficaram frustrados, pois, se viram presos na versão mobile do site e incapazes de acessar todas as informações que faziam parte da versão para desktop.</p>
 
-<h2 id="Layouts_flexiveis_antes_do_design_responsivo">Layouts flexiveis antes do design responsivo</h2>
+<h2 id="Layouts_flexiveis_antes_do_design_responsivo">Layouts flexiveis antes do design responsivo</h2>
 
 <p>Várias abordagens foram desenvolvidas para tentar resolver as desvantagens dos métodos de largura líquida ou largura fixa da construção de sites. Em 2004, Cameron Adams escreveu um artigo intitulado <a href="http://www.themaninblue.com/writing/perspective/2004/09/21/">Resolution dependent layout</a>, descrevendo um método para criar um design que pudesse se adaptar a diferentes resoluções de tela. Essa abordagem necessitava do JavaScript para detectar a resolução da tela e carregar o CSS correto.</p>
 
-<p>Zoe Mickley Gillenwater foi fundamental no <a href="http://zomigi.com/blog/voices-that-matter-slides-available/">seu trabalho</a> de descrever e formalizar as diferentes maneiras pelas quais sites flexíveis poderiam ser criados, tentando encontrar um meio termo entre preencher a tela ou ter tamanho completamente fixo.</p>
+<p>Zoe Mickley Gillenwater foi fundamental no <a href="http://zomigi.com/blog/voices-that-matter-slides-available/">seu trabalho</a> de descrever e formalizar as diferentes maneiras pelas quais sites flexíveis poderiam ser criados, tentando encontrar um meio termo entre preencher a tela ou ter tamanho completamente fixo.</p>
 
-<h2 id="Design_Responsivo">Design Responsivo</h2>
+<h2 id="Design_Responsivo">Design Responsivo</h2>
 
-<p>O termo design responsivo foi <a href="https://alistapart.com/article/responsive-web-design/">cunhado por Ethan Marcotte em 2010</a>, e descreveu o uso de três técnicas combinadas.</p>
+<p>O termo design responsivo foi <a href="https://alistapart.com/article/responsive-web-design/">cunhado por Ethan Marcotte em 2010</a>, e descreveu o uso de três técnicas combinadas.</p>
 
 <ol>
- <li>A primeira foi a ideia de grids fluidas, que já estava sendo explorada por Gillenwater, e pode ser encontrada no artigo de Marcotte, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (publicado em 2009 em A List Apart).</li>
- <li>A segunda técnica foi a ideia de <a href="http://unstoppablerobotninja.com/entry/fluid-images">imagens fluidas</a>. Usando uma técnica muito simples que setava a propriedade <code>max-width</code> com <code>100%</code>, as imagens seriam reduzidas se a coluna que as continha se tornasse mais estreita que o tamanho intrínseco da imagem, mas nunca aumentariam. Isso permitiu que uma imagem fosse reduzida em tamanho para caber em uma coluna de tamanho flexível, em vez de transbordar, mas não aumentava e nem tornava-se pixelizada se a coluna fosse mais larga que a imagem.</li>
- <li>O terceiro componente-chave foi a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries habilitavam o tipo de opção de layout usando o JavaScript, que Cameron Adams havia explorado anteriormente, usando apenas CSS. Em vez de ter um layout para todos os tamanhos de tela, o layout podia ser alterado. As barras laterais podiam ser reposicionadas para a tela menor ou uma navegação alternativa podia ser exibida.</li>
+ <li>A primeira foi a ideia de grids fluidas, que já estava sendo explorada por Gillenwater, e pode ser encontrada no artigo de Marcotte, <a href="https://alistapart.com/article/fluidgrids/">Fluid Grids</a> (publicado em 2009 em A List Apart).</li>
+ <li>A segunda técnica foi a ideia de <a href="http://unstoppablerobotninja.com/entry/fluid-images">imagens fluidas</a>. Usando uma técnica muito simples que setava a propriedade <code>max-width</code> com <code>100%</code>, as imagens seriam reduzidas se a coluna que as continha se tornasse mais estreita que o tamanho intrínseco da imagem, mas nunca aumentariam. Isso permitiu que uma imagem fosse reduzida em tamanho para caber em uma coluna de tamanho flexível, em vez de transbordar, mas não aumentava e nem tornava-se pixelizada se a coluna fosse mais larga que a imagem.</li>
+ <li>O terceiro componente-chave foi a <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a>. Media Queries habilitavam o tipo de opção de layout usando o JavaScript, que Cameron Adams havia explorado anteriormente, usando apenas CSS. Em vez de ter um layout para todos os tamanhos de tela, o layout podia ser alterado. As barras laterais podiam ser reposicionadas para a tela menor ou uma navegação alternativa podia ser exibida.</li>
 </ol>
 
 <p>É importante entender que <strong>o design responsivo não é uma tecnologia separada</strong> — é um termo usado para descrever uma abordagem ao web design, ou um conjunto de melhores práticas, usado para criar um layout que possa <em>responder</em> ao dispositivo que está sendo usado para visualizar o conteúdo. Na exploração original de Marcotte, isso significava grades flexíveis (usando floats) e media queries, no entanto, nos últimos 10 anos, desde que o artigo foi escrito, trabalhar de forma responsiva se tornou um padrão. Os métodos de layout CSS modernos são inerentemente responsivos, e temos coisas novas incorporadas à plataforma web para facilitar o design de sites responsivos.</p>
@@ -79,9 +79,9 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <h2 id="Media_Queries">Media Queries</h2>
 
-<p>O Design Responsivo apenas foi capaz de emergir devido o recurse de media query. A especificação Media Queries Level 3 se tornou uma Recomendação de Candidato em 2009, significando que estava pronto para ser implementado nos browsers. Media Queries nos permitem executar uma série de testes (e.g. se a tela do usuário é maior que uma certa largura, ou uma certa resolução)  e aplicar um CSS seletivamente para estilizar a página de acordo com as necessidades do usuário.</p>
+<p>O Design Responsivo apenas foi capaz de emergir devido o recurse de media query. A especificação Media Queries Level 3 se tornou uma Recomendação de Candidato em 2009, significando que estava pronto para ser implementado nos browsers. Media Queries nos permitem executar uma série de testes (e.g. se a tela do usuário é maior que uma certa largura, ou uma certa resolução)  e aplicar um CSS seletivamente para estilizar a página de acordo com as necessidades do usuário.</p>
 
-<p>Por exemplo, a seguinte media querie testa se a página atual está sendo exibida como mídia de tela (portanto, não é um documento impresso) e o viewport tem pelo menos 800 pixels de largura. O CSS para o seletor <code>.container</code> será aplicado apenas se essas duas condições forem verdade.</p>
+<p>Por exemplo, a seguinte media querie testa se a página atual está sendo exibida como mídia de tela (portanto, não é um documento impresso) e o viewport tem pelo menos 800 pixels de largura. O CSS para o seletor <code>.container</code> será aplicado apenas se essas duas condições forem verdade.</p>
 
 <pre class="brush: css notranslate"><code>@media screen and (min-width: 800px) {
   .container {
@@ -90,17 +90,17 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 } </code>
 </pre>
 
-<p>Você pode adicionar múltiplos media queries dentro de uma folha de de estilo, ajustando inteiramente seu layout ou partes dele que melhor se adequem a vários tamanhos de tela. Os pontos em quem uma Media Query é introduzida e o layout alterado são conhecidos como <em>breakpoints</em>.</p>
+<p>Você pode adicionar múltiplos media queries dentro de uma folha de estilo, ajustando inteiramente seu layout ou partes dele que melhor se adequem a vários tamanhos de tela. Os pontos em quem uma Media Query é introduzida e o layout alterado são conhecidos como <em>breakpoints</em>.</p>
 
 <p>Uma abordagem comum ao utilizar Media Queries é criar um layout de única coluna para dispositivos de telas pequenas (e.g smartphones), então fazer a checagem para telas maiores e implementar um layout de múltiplas colunas quando houver largura suficiente. Esse design é frequentemente descrito como <strong>mobile first</strong>.</p>
 
-<p>Encontre mais detalhes na documentação MDN para <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.</p>
+<p>Encontre mais detalhes na documentação MDN para <a href="/en-US/docs/Web/CSS/Media_Queries">Media Queries</a>.</p>
 
 <h2 id="Grids_Flexíveis">Grids Flexíveis</h2>
 
-<p>Sites responsivos não apenas mudam seu layout entre <em>breakpoints</em>, eles são construídos em grids flexíveis. Um grid flexível significa que não há necessidade de marcar todos os tamanhos possíveis existentes, e sim, construir um layout perfeito baseado em pixels que se adequa automaticamente à tela. Essa abordagem seria impossível dado o vasto número de dispositivos com tamanhos diferentes que existem e o fato de que, mesmo nos desktops, as pessoas nem sempre utilizam a janela do navegador maximizada.</p>
+<p>Sites responsivos não apenas mudam seu layout entre <em>breakpoints</em>, eles são construídos em grids flexíveis. Um grid flexível significa que não há necessidade de marcar todos os tamanhos possíveis existentes, e sim, construir um layout perfeito baseado em pixels que se adequa automaticamente à tela. Essa abordagem seria impossível dado o vasto número de dispositivos com tamanhos diferentes que existem e o fato de que, mesmo nos desktops, as pessoas nem sempre utilizam a janela do navegador maximizada.</p>
 
-<p>Com o uso de um grid flexível, não há necessidade de adicionar um <em>breakpoint</em> e alterar o desing no ponto onde o conteúdo começa a parecer ruim em determinada tela. Por exemplo, se o comprimento da linha se torna ilegível à medida que o tamanho da tela aumenta, ou uma caixa se fica espremida com duas palavras em cada linha, conforme o tamanho diminui.</p>
+<p>Com o uso de um grid flexível, não há necessidade de adicionar um <em>breakpoint</em> e alterar o desing no ponto onde o conteúdo começa a parecer ruim em determinada tela. Por exemplo, se o comprimento da linha se torna ilegível à medida que o tamanho da tela aumenta, ou uma caixa se fica espremida com duas palavras em cada linha, conforme o tamanho diminui.</p>
 
 <p>Nos primórdios do design responsivo a única opção disponível para realizar layouts era utilizando <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>. Layouts flexíveis flutuantes eram alcançados dando a cada elemento uma largura percentual, garantindo que em todo layout os totais não fossem maior que 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.</p>
 
@@ -287,12 +287,12 @@ h1 {
 <ul>
  <li><code>initial-scale</code>: Sets the initial zoom of the page, which we set to 1.</li>
  <li><code>height</code>: Sets a specific height for the viewport.</li>
- <li><code>minimum-scale</code>: Sets the minimum zoom level.</li>
- <li><code>maximum-scale</code>: Sets the maximum zoom level.</li>
+ <li><code>minimum-scale</code>: Sets the minimum zoom level.</li>
+ <li><code>maximum-scale</code>: Sets the maximum zoom level.</li>
  <li><code>user-scalable</code>: Prevents zooming if set to <code>no</code>.</li>
 </ul>
 
-<p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
+<p>You should avoid using <code>minimum-scale</code>, <code>maximum-scale</code>, and in particular setting <code>user-scalable</code> to <code>no</code>. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: There is a CSS @ rule designed to replace the viewport meta tag — <a href="/en-US/docs/Web/CSS/@viewport">@viewport</a> — however it has poor browser support. It was implemented in Internet Explorer and Edge, however once the Chromium-based Edge ships it will no longer be part of the Edge browser.</p>

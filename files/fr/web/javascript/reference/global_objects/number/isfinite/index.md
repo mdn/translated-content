@@ -19,7 +19,9 @@ La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie e
 
 ## Syntaxe
 
-    Number.isFinite(valeurÀTester);
+```js
+Number.isFinite(valeurÀTester);
+```
 
 ### Paramètres
 

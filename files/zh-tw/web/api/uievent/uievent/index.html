@@ -5,7 +5,7 @@ translation_of: Web/API/UIEvent/UIEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><strong><code>UIEvent()</code></strong> constructor 是用來建立新的 {{domxref("UIEvent")}}。</p>
+<p><strong><code>UIEvent()</code></strong> constructor 是用來建立新的 {{domxref("UIEvent")}}。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -20,9 +20,9 @@ translation_of: Web/API/UIEvent/UIEvent
 </dl>
 
 <dl>
- <dd>一個 <code>UIEventInit</code> dictionary ，能接受以下參數：
+ <dd>一個 <code>UIEventInit</code> dictionary ，能接受以下參數：
 
- <table class="standard-table">
+ <table>
   <thead>
    <tr>
     <th>參數</th>
@@ -38,42 +38,27 @@ translation_of: Web/API/UIEvent/UIEvent
     <td>●</td>
     <td><code>0</code></td>
     <td><code>long</code></td>
-    <td>定義事件意義的值。關於事件的意義於 {{domxref("UIEvent.detail")}} 已有較詳盡的列表。</td>
+    <td>定義事件意義的值。關於事件的意義於 {{domxref("UIEvent.detail")}} 已有較詳盡的列表。</td>
    </tr>
    <tr>
     <td><code>"view"</code></td>
     <td>●</td>
     <td><code>null</code></td>
     <td>{{domxref("WindowProxy")}}</td>
-    <td>與事件相關的 {{domxref("Window")}} 。</td>
+    <td>與事件相關的 {{domxref("Window")}} 。</td>
    </tr>
   </tbody>
  </table>
 
  <div class="note">
- <p><em><code>UIEventInit</code> dictionary 亦接受 {{domxref("Event.Event", "EventInit")}} dictionary 所接受的參數。</em></p>
+ <p><em><code>UIEventInit</code> dictionary 亦接受 {{domxref("Event.Event", "EventInit")}} dictionary 所接受的參數。</em></p>
  </div>
  </dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">規格</h2>
+<h2 id="Specifications">規格</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#interface-UIEvent','UIEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>原始定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器支援度">瀏覽器支援度</h2>
 

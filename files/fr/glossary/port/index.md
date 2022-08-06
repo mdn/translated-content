@@ -18,4 +18,4 @@ Par exemple, le port par défaut pour le protocole {{Glossary("HTTP")}} est 80 e
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia","Port_(logiciel)","Port (logiciel)")}} sur Wikipedia
+- [Port](https://fr.wikipedia.org/wiki/Port_(logiciel)) sur Wikipédia

@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un ch
 
 ## Syntaxe
 
-    void ctx.rect(x, y, width, height);
+```js
+void ctx.rect(x, y, width, height);
+```
 
 ### Paramètres
 

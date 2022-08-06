@@ -17,13 +17,13 @@ original_slug: Glossary/Funcion_de_primera_clase
 foo();
 </pre>
 
-<p>Asignamos una <strong>Función Anónima</strong> a una {{glossary("Variable")}}, la cual utilizamos para invocar la función añadiendo paréntesis <code>()</code> al final.</p>
+<p>Asignamos una <strong>Función Anónima</strong> a una {{glossary("Variable")}}, la cual utilizamos para invocar la función añadiendo paréntesis <code>()</code> al final.</p>
 
 <div class="note">
-<p><strong>Aunque la función no sea anónima (función nombrada),</strong> se puede utilizar la variable para invocarla. Nombrar las funciones puede ser útil cuando estamos depurando el código. <em>Pero no afectará como invocamos a la función.</em></p>
+<p><strong>Aunque la función no sea anónima (función nombrada),</strong> se puede utilizar la variable para invocarla. Nombrar las funciones puede ser útil cuando estamos depurando el código. <em>Pero no afectará como invocamos a la función.</em></p>
 </div>
 
-<h2 id="Ejemplo_Pasar_la_función_como_argumento">Ejemplo | Pasar la función como argumento</h2>
+<h2 id="Ejemplo_Pasar_la_función_como_argumento">Ejemplo | Pasar la función como argumento</h2>
 
 <h3 id="JavaScript_2">JavaScript</h3>
 
@@ -37,7 +37,7 @@ function saludar(saludo, nombre) {
 saludar(diHola, "JavaScript!");
 </pre>
 
-<p>Pasamos nuestra función <code>diHola()</code> como argumento de la función <code>saludar()</code>, esto explica como tratamos la función como un <strong>valor</strong>.</p>
+<p>Pasamos nuestra función <code>diHola()</code> como argumento de la función <code>saludar()</code>, esto explica como tratamos la función como un <strong>valor</strong>.</p>
 
 <div class="note">
 <p>Una función que pasamos como argumento a otra función, se llama <strong>{{glossary("Callback function")}}</strong>. <em><code>diHola</code> es una función Callback.</em></p>
@@ -54,13 +54,13 @@ saludar(diHola, "JavaScript!");
 }
 </pre>
 
-<p>En este ejemplo; Necesitamos devolver una función desde otra función - <em>Podemos devolver una función porque JavaScript trata la función como un <strong>value</strong>.</em></p>
+<p>En este ejemplo; Necesitamos devolver una función desde otra función - <em>Podemos devolver una función porque JavaScript trata la función como un <strong>value</strong>.</em></p>
 
 <div class="note">
-<p>Una función que devuelve una función se llama <strong>Higher-Order Function</strong>.</p>
+<p>Una función que devuelve una función se llama <strong>Higher-Order Function</strong>.</p>
 </div>
 
-<p>Volviendo al ejemplo; Ahora, necesitamos invocar la función <code>diHola</code> y su  <code>Función Anónima</code> devuelta. Para ello, tenemos dos maneras:</p>
+<p>Volviendo al ejemplo; Ahora, necesitamos invocar la función <code>diHola</code> y su  <code>Función Anónima</code> devuelta. Para ello, tenemos dos maneras:</p>
 
 <h3 id="1-_Usando_una_variable">1- Usando una variable</h3>
 
@@ -73,10 +73,10 @@ const miFuncion = diHola();
 miFuncion();
 </pre>
 
-<p>De esta manera, devolverá el mensaje <code>¡Hola!</code>.</p>
+<p>De esta manera, devolverá el mensaje <code>¡Hola!</code>.</p>
 
 <div class="note">
-<p>Debes usar otra variable para que devuelve el mensaje. Si invocas <code>diHola</code> directamente, devolvera la función en si misma <strong>sin invocar a la función devuelta</strong>.</p>
+<p>Debes usar otra variable para que devuelve el mensaje. Si invocas <code>diHola</code> directamente, devolvera la función en si misma <strong>sin invocar a la función devuelta</strong>.</p>
 </div>
 
 <h3 id="2-_Usando_paréntesis_doble">2- Usando paréntesis doble</h3>
@@ -89,7 +89,7 @@ miFuncion();
 diHola()();
 </pre>
 
-<p>Usamos parétesis dobre <code>()()</code> para invocar también a la función retornada.</p>
+<p>Usamos parétesis dobre <code>()()</code> para invocar también a la función retornada.</p>
 
 <ul>
 </ul>

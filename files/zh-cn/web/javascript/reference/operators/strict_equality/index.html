@@ -15,10 +15,10 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 
 <h2 id="描述">描述</h2>
 
-<p>全等运算符（<code>===</code>和 <code>!==</code>）使用<a class="external external-icon" href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6" rel="noopener">全等比较算法</a>来比较两个操作数。</p>
+<p>全等运算符（<code>===</code>和 <code>!==</code>）使用<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6">全等比较算法</a>来比较两个操作数。</p>
 
 <ul>
- <li>如果操作数的类型不同，则返回 <code>false</code>。</li>
+ <li>如果操作数的类型不同，则返回 <code>false</code>。</li>
  <li>如果两个操作数都是对象，只有当它们指向同一个对象时才返回 <code>true</code>。</li>
  <li>如果两个操作数都为 <code>null</code>，或者两个操作数都为 <code>undefined</code>，返回 <code>true</code>。</li>
  <li>如果两个操作数有任意一个为 <code>NaN</code>，返回 <code>false</code>。</li>
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_equality
  </li>
 </ul>
 
-<p>全等运算符与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">相等运算符</a>（<code>==</code>）最显著的区别是，如果操作数的类型不同，<code>== </code>运算符会在比较之前尝试将它们转换为相同的类型。</p>
+<p>全等运算符与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">相等运算符</a>（<code>==</code>）最显著的区别是，如果操作数的类型不同，<code>== </code>运算符会在比较之前尝试将它们转换为相同的类型。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -71,24 +71,13 @@ console.log(object1 === object1);  // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p>{{Compat("javascript.operators.strict_equality")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,12 +7,12 @@ tags:
   - Web Crypto API
 translation_of: Web/API/Web_Crypto_API
 ---
-<p>{{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}{{draft}}</p>
+<p>{{DefaultAPISidebar("Web Crypto API")}}{{SeeCompatTable}}</p>
 
-<p>La <strong>Web Crypto API</strong>  es una interfaz que permite a un script usar primitivos criptográficos con el fin de construir sistemas utilizando criptografía.</p>
+<p>La <strong>Web Crypto API</strong>  es una interfaz que permite a un script usar primitivos criptográficos con el fin de construir sistemas utilizando criptografía.</p>
 
 <div class="blockIndicator warning">
-<p><strong>Advertencia:</strong> Esta API proporciona una serie de primitivos criptográficos de bajo nivel. Es muy fácil hacer un mal uso de ellos, y las trampas involucradas pueden ser muy sutiles.</p>
+<p><strong>Advertencia:</strong> Esta API proporciona una serie de primitivos criptográficos de bajo nivel. Es muy fácil hacer un mal uso de ellos, y las trampas involucradas pueden ser muy sutiles.</p>
 
 <p>Incluso suponiendo que se utilicen correctamente las funciones criptográficas básicas, la gestión segura de las claves y el diseño general del sistema de seguridad son extremadamente difíciles de conseguir correctamente, y generalmente son el dominio de expertos en seguridad especializados.</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Web_Crypto_API
 <p>Esta interfaz permite el acceso a las siguientes primitivos:</p>
 
 <ul>
- <li><strong><em>digest</em></strong>, la capacidad para calcular un hash de un bloque arbitrario de datos, con el fin de detectar cualquier cambio en él.</li>
+ <li><strong><em>digest</em></strong>, la capacidad para calcular un hash de un bloque arbitrario de datos, con el fin de detectar cualquier cambio en él.</li>
  <li><strong><em>mac</em></strong>, la capacidad de calcular un código de mensaje de autenticación.</li>
  <li><strong><em>sign</em></strong> and <strong><em>verify</em></strong>, la capacidad de firmar digitalmente un documento, y de verificar una firma.</li>
  <li><strong><em>encrypt</em></strong> and <strong><em>decrypt</em></strong>, la capacidad de codificar o descodificar un documento.</li>
@@ -39,7 +39,7 @@ translation_of: Web/API/Web_Crypto_API
 <p>La Web Crypto API no resuelve todos los problemas criptográficos a los que un sitio web o una aplicación puedan encontrarse:</p>
 
 <ul>
- <li>No flexibiliza el modelo de <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin security model</a> del navegador, como los casos en que las claves son emitidas por entidades centralizadas utilizadas por varios sitios web.</li>
+ <li>No flexibiliza el modelo de <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin security model</a> del navegador, como los casos en que las claves son emitidas por entidades centralizadas utilizadas por varios sitios web.</li>
  <li>No interactúa con hardware dedicado, tal y como smart cards, pendrives, o generadores aleatorios.</li>
 </ul>
 
@@ -48,7 +48,7 @@ translation_of: Web/API/Web_Crypto_API
 
 <ul>
  <li>El simple hecho de hacer uso de la criptografía no hace a tu sistema seguro. La Seguridad es un <strong>proceso</strong> que constamentemente evalua el riesgo de un sistema en el contexto de uso. The context and the risks experienced evolve over time.</li>
- <li>Al aplicar seguridad, todo el <strong>sistema</strong> debe considerarse. En el caso de la  Web Crypto API, los desarrolladores Web no sólo deben considerar la seguridad del script, sino también la seguridad de la conexión al servidor y los datos que éste podría comunicar sin encriptar.  La seguridad en general será tan débil como la parte más débil de todo el sistema.</li>
+ <li>Al aplicar seguridad, todo el <strong>sistema</strong> debe considerarse. En el caso de la  Web Crypto API, los desarrolladores Web no sólo deben considerar la seguridad del script, sino también la seguridad de la conexión al servidor y los datos que éste podría comunicar sin encriptar.  La seguridad en general será tan débil como la parte más débil de todo el sistema.</li>
 </ul>
 </div>
 

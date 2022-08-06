@@ -60,9 +60,11 @@ Voir aussi {{jsxref("String.fromCodePoint()")}} ou {{jsxref("String.prototype.co
 
 L'objet {{jsxref("String")}} est un conteneur autour du type de donnée primitif chaîne de caractères.
 
-    var s = new String('foo'); // crée un objet String
-    console.log(s); // affiche : {'0': 'f', '1': 'o', '2': 'o'}
-    typeof s; // retourne 'object'
+```js
+var s = new String('foo'); // crée un objet String
+console.log(s); // affiche : {'0': 'f', '1': 'o', '2': 'o'}
+typeof s; // retourne 'object'
+```
 
 Vous pouvez appeler chacune des méthodes de l'objet `String` avec une valeur littérale de chaîne de caractères&nbsp;: JavaScript convertira automatiquement le littéral en un objet `String` temporaire, appellera la méthode, puis supprimera l'objet `String` temporaire. Vous pouvez aussi utiliser la propriété `String.length` sur un littéral de chaîne de caractères.
 

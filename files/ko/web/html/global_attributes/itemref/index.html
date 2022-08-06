@@ -26,23 +26,23 @@ translation_of: Web/HTML/Global_attributes/itemref
 &lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
 &lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
 &lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
+    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
+    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
 <h3 id="구조화_데이터">구조화 데이터</h3>
 
-<p><small>(<a href="https://json-ld.org/" rel="external">JSON-LD</a> 형식)</small></p>
+<p><small>(<a href="https://json-ld.org/" rel="external">JSON-LD</a> 형식)</small></p>
 
 <pre class="brush: json">{
   "@id": "amanda",
-  "name": "Amanda",
-  "band": {
-    "@id": "b",
-    "name": "Jazz Band",
-    "size": 12
-  }
+  "name": "Amanda",
+  "band": {
+    "@id": "b",
+    "name": "Jazz Band",
+    "size": 12
+  }
 }
 </pre>
 

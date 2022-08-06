@@ -11,7 +11,9 @@ Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("B
 
 ## Syntaxe
 
-    var source = baseAudioContext.createBufferSource();
+```js
+var source = baseAudioContext.createBufferSource();
+```
 
 ### Retourne
 

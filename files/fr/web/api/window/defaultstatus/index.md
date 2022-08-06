@@ -14,16 +14,16 @@ tags:
   - Window
 translation_of: Web/API/Window/defaultStatus
 ---
-{{ obsolete_header(23) }}
-
-{{ APIRef() }}
+{{ APIRef() }}{{deprecated_header}}
 
 Obtient / définit le texte de la barre d'état pour la fenêtre donnée.
 
 ## Syntaxe
 
-    var sMsg = window.defaultStatus;
-    window.defaultStatus = sMsg;
+```js
+var sMsg = window.defaultStatus;
+window.defaultStatus = sMsg;
+```
 
 ### Paramètres
 
@@ -31,11 +31,13 @@ Obtient / définit le texte de la barre d'état pour la fenêtre donnée.
 
 ## Exemple
 
-    <html>
-     <body onload="window.defaultStatus='salut!';"/>
-      <button onclick="window.confirm('Êtes-vous sûr de vouloir quitter?');">confirmer</button>
-     </body>
-    </html>
+```html
+<html>
+  <body onload="window.defaultStatus='salut!';"/>
+  <button onclick="window.confirm('Êtes-vous sûr de vouloir quitter?');">confirmer</button>
+  </body>
+</html>
+```
 
 ## Notes
 

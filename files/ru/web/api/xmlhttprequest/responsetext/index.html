@@ -3,11 +3,11 @@ title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-<div>{{draft}}</div>
+<div></div>
 
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">Только для чтения {{domxref("XMLHttpRequest")}} свойство <strong><code>responseText</code></strong> возвращает текст ответа от сервера на отправленный запрос.</span></p>
+<p><span class="seoSummary">Только для чтения {{domxref("XMLHttpRequest")}} свойство <strong><code>responseText</code></strong> возвращает текст ответа от сервера на отправленный запрос.</span></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -15,17 +15,17 @@ translation_of: Web/API/XMLHttpRequest/responseText
 
 <h3 id="Значение">Значение</h3>
 
-<p>Строка {{domxref("DOMString")}} содержащая либо <code>текстовые данные, </code>полученные при использовании <code>XMLHttpRequest, либо</code> <code>null</code> в случае, когда вопрос возвратил ошибку, или же ещё не был  отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+<p>Строка {{domxref("DOMString")}} содержащая либо <code>текстовые данные, </code>полученные при использовании <code>XMLHttpRequest, либо</code> <code>null</code> в случае, когда вопрос возвратил ошибку, или же ещё не был  отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.</p>
 
-<p>Во время выполнения асинхронных запросов, в значении <code>responseText</code> всегда находится текущее содержимое, полученное от сервера, даже если запрос ещё не завершён, и данные от сервера не получены полностью.</p>
+<p>Во время выполнения асинхронных запросов, в значении <code>responseText</code> всегда находится текущее содержимое, полученное от сервера, даже если запрос ещё не завершён, и данные от сервера не получены полностью.</p>
 
-<p>Понять, что ответ получен полностью, можно когда значение {{domxref("XMLHttpRequest.readyState", "readyState")}} становится {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), а значение {{domxref("XMLHttpRequest.status", "status")}} становится 200 (<code>"OK"</code>).</p>
+<p>Понять, что ответ получен полностью, можно когда значение {{domxref("XMLHttpRequest.readyState", "readyState")}} становится {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), а значение {{domxref("XMLHttpRequest.status", "status")}} становится 200 (<code>"OK"</code>).</p>
 
 <h3 id="Исключения">Исключения</h3>
 
 <dl>
  <dt><code>InvalidStateError</code></dt>
- <dd>Возникает, когда значению {{domxref("XMLHttpRequest.responseType")}} не присвоена либо пустая строка, либо "text". Поскольку свойство <code>responseText</code> предназначено только для текстового содержимого, любое другое значение вызовет ошибку.</dd>
+ <dd>Возникает, когда значению {{domxref("XMLHttpRequest.responseType")}} не присвоена либо пустая строка, либо "text". Поскольку свойство <code>responseText</code> предназначено только для текстового содержимого, любое другое значение вызовет ошибку.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
@@ -49,12 +49,12 @@ xhr.send(null);</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<p> </p>
+<p> </p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Спецификация </th>
+   <th scope="col">Спецификация </th>
    <th scope="col">Статус</th>
    <th scope="col">Comment</th>
   </tr>

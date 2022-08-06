@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Guide/Módulos
 ---
 <div>{{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}</div>
 
-<p>Este guia fornece tudo o que você precisa para começar com a sintaxe de módulo do JavaScript.</p>
+<p>Este guia fornece tudo o que você precisa para começar com a sintaxe de módulo do JavaScript.</p>
 
 <h2 id="Um_background_em_módulos">Um background em módulos</h2>
 
@@ -30,7 +30,7 @@ original_slug: Web/JavaScript/Guide/Módulos
 
 <h2 id="Apresentando_um_exemplo">Apresentando um exemplo</h2>
 
-<p>Para demonstrar o uso dos módulos, criamos um <a href="https://github.com/mdn/js-examples/tree/master/modules">conjunto simples de exemplos</a> que você pode encontrar no GitHub. Estes exemplos demonstram um conjunto simples de módulos que criam um<a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> em uma página da Web e desenhe (e relate informações sobre) formas diferentes na tela.</p>
+<p>Para demonstrar o uso dos módulos, criamos um <a href="https://github.com/mdn/js-examples/tree/master/module-examples">conjunto simples de exemplos</a> que você pode encontrar no GitHub. Estes exemplos demonstram um conjunto simples de módulos que criam um<a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> em uma página da Web e desenhe (e relate informações sobre) formas diferentes na tela.</p>
 
 <p>Estes são bastante triviais, mas foram mantidos deliberadamente simples para demonstrar claramente os módulos.</p>
 
@@ -38,9 +38,9 @@ original_slug: Web/JavaScript/Guide/Módulos
 <p><strong>Nota: Se você deseja fazer o download dos exemplos e executá-los localmente, precisará executá-los por meio de um servidor da web local.</strong></p>
 </div>
 
-<h2 id="Exemplo_de_uma_estrutura_básica">Exemplo de uma estrutura básica</h2>
+<h2 id="Exemplo_de_uma_estrutura_básica">Exemplo de uma estrutura básica</h2>
 
-<p>No nosso primeiro exemplo (consulte <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) nós temos uma estrutura de arquivos da seguinte maneira:</p>
+<p>No nosso primeiro exemplo (consulte <a href="https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules">basic-modules</a>) nós temos uma estrutura de arquivos da seguinte maneira:</p>
 
 <pre class="notranslate">index.html
 main.js
@@ -74,16 +74,16 @@ modules/
 
 <h2 id="Aside_—_.mjs_versus_.js">Aside — <code>.mjs</code> versus <code>.js</code></h2>
 
-<p>Neste artigo, usamos extensões .js para nossos arquivos de módulo, mas em outros recursos você pode ver a extensão .mjs usada. <a href="https://v8.dev/features/modules#mjs">A documentação da V8 recomenda isso</a>, por exemplo. Os motivos apresentados são:</p>
+<p>Neste artigo, usamos extensões .js para nossos arquivos de módulo, mas em outros recursos você pode ver a extensão .mjs usada. <a href="https://v8.dev/features/modules#mjs">A documentação da V8 recomenda isso</a>, por exemplo. Os motivos apresentados são:</p>
 
 <ul>
  <li>É bom para maior clareza, ou seja, deixa claro quais arquivos são módulos e quais são JavaScript regulares.</li>
- <li>Ele garante que seus arquivos de módulo sejam analisados como um módulo por tempos de execução, como <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, e construir ferramentas como <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
+ <li>Ele garante que seus arquivos de módulo sejam analisados como um módulo por tempos de execução, como <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, e construir ferramentas como <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
 </ul>
 
-<p>No entanto, decidimos continuar usando .js, pelo menos por enquanto. Para que os módulos funcionem corretamente em um navegador, você precisa garantir que seu servidor os esteja servindo com um cabeçalho Content-Type que contenha um tipo MIME JavaScript, como text / javascript. Caso contrário, você receberá um erro estrito de verificação do tipo MIME, de acordo com as linhas "O servidor respondeu com um tipo MIME não JavaScript" e o navegador não executará seu JavaScript. A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs. Servidores que já veiculam arquivos .mjs incluem corretamente <a href="https://pages.github.com/">GitHub Pages</a> e <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> para Node.js.</p>
+<p>No entanto, decidimos continuar usando .js, pelo menos por enquanto. Para que os módulos funcionem corretamente em um navegador, você precisa garantir que seu servidor os esteja servindo com um cabeçalho Content-Type que contenha um tipo MIME JavaScript, como text / javascript. Caso contrário, você receberá um erro estrito de verificação do tipo MIME, de acordo com as linhas "O servidor respondeu com um tipo MIME não JavaScript" e o navegador não executará seu JavaScript. A maioria dos servidores já define o tipo correto para arquivos .js, mas ainda não para arquivos .mjs. Servidores que já veiculam arquivos .mjs incluem corretamente <a href="https://pages.github.com/">GitHub Pages</a> e <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> para Node.js.</p>
 
-<p>Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> para arquivos <code>.mjs</code>). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.</p>
+<p>Tudo bem se você já estiver usando esse ambiente ou se não estiver, mas souber o que está fazendo e tiver acesso (ou seja, você pode configurar o servidor para definir a configuração correta <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> para arquivos <code>.mjs</code>). No entanto, isso pode causar confusão se você não controlar o servidor do qual está servindo arquivos ou publicar arquivos para uso público, como estamos aqui.</p>
 
 <p>Para fins de aprendizado e portabilidade, decidimos manter o<code>.js</code>.</p>
 
@@ -93,7 +93,7 @@ modules/
 
 <ul>
  <li>Algumas ferramentas podem nunca suportar .mjs, como<a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
- <li>O  atributo <code>&lt;script type="module"&gt;</code>é usado para indicar quando um módulo está sendo apontado, como você verá abaixo.</li>
+ <li>O  atributo <code>&lt;script type="module"&gt;</code>é usado para indicar quando um módulo está sendo apontado, como você verá abaixo.</li>
 </ul>
 
 <h2 id="Exportando_recursos_do_módulo">Exportando recursos do módulo</h2>
@@ -140,10 +140,10 @@ export function draw(ctx, length, x, y, color) {
 
 <pre class="notranslate">./modules/square.js</pre>
 
-<p>Você pode ver essas linhas em ação em <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
+<p>Você pode ver essas linhas em ação em <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Nota: Em alguns sistemas de módulos, você pode omitir a extensão do arquivo e o ponto</strong>(e.g. <code>'/modules/square'</code>). Isso não funciona nos módulos JavaScript nativos.</p>
+<p><strong>Nota: Em alguns sistemas de módulos, você pode omitir a extensão do arquivo e o ponto</strong>(e.g. <code>'/modules/square'</code>). Isso não funciona nos módulos JavaScript nativos.</p>
 </div>
 
 <p>Depois de importar os recursos para o seu script, você pode usá-los exatamente como eles foram definidos no mesmo arquivo. O seguinte é encontrado em<br>
@@ -165,14 +165,14 @@ reportPerimeter(square1.length, reportList);
 
 <p>Agora, apenas precisamos aplicar o módulo main.js. à nossa página HTML. Isso é muito semelhante ao modo como aplicamos um script regular a uma página, com algumas diferenças notáveis.</p>
 
-<p>Primeiro de tudo, você precisa incluir <code>type="module"</code> no <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> elemento, para declarar esse script como um módulo. Para importar o <code>main.js</code> script, usamos este:</p>
+<p>Primeiro de tudo, você precisa incluir <code>type="module"</code> no <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> elemento, para declarar esse script como um módulo. Para importar o <code>main.js</code> script, usamos este:</p>
 
 <pre class="brush: html; no-line-numbers notranslate">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
 <p>Você também pode incorporar o script do módulo diretamente no arquivo HTML, colocando o código JavaScript no corpo do elemento &lt;script&gt;:</p>
 
 <pre class="brush: js notranslate">&lt;script type="module"&gt;
-  /* JavaScript module code here */
+  /* JavaScript module code here */
 &lt;/script&gt;</pre>
 
 <p>O script para o qual você importa os recursos do módulo atua basicamente como o módulo de nível superior. Se você o omitir, o Firefox, por exemplo, exibirá um erro "SyntaxError: as declarações de importação podem aparecer apenas no nível superior de um módulo".</p>
@@ -195,7 +195,7 @@ reportPerimeter(square1.length, reportList);
 
 <p>Há também um tipo de exportação chamado <strong>default export</strong> — isso foi projetado para facilitar a função padrão fornecida por um módulo e também ajuda os módulos JavaScript a interoperar com os sistemas de módulos CommonJS e AMD existentes (conforme explicado em <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 In Depth: Modules</a> por Jason Orendorff; procure por "Exportações padrão").</p>
 
-<p>Vejamos um exemplo ao explicar como ele funciona. Nos nossos módulos básicos <code>square.js</code> você pode encontrar uma função chamada <code>randomSquare()</code> que cria um quadrado com cor, tamanho e posição aleatórios. Queremos exportar isso como padrão, portanto, na parte inferior do arquivo, escrevemos isso:</p>
+<p>Vejamos um exemplo ao explicar como ele funciona. Nos nossos módulos básicos <code>square.js</code> você pode encontrar uma função chamada <code>randomSquare()</code> que cria um quadrado com cor, tamanho e posição aleatórios. Queremos exportar isso como padrão, portanto, na parte inferior do arquivo, escrevemos isso:</p>
 
 <pre class="brush: js; notranslate">export default randomSquare;</pre>
 
@@ -216,7 +216,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>Nota: A sintaxe as para renomear itens exportados é explicada abaixo no </strong><a href="#Renaming_imports_and_exports">Renaming imports and exports</a> seção.</p>
+<p><strong>Nota: A sintaxe as para renomear itens exportados é explicada abaixo no </strong><a href="#Renaming_imports_and_exports">Renaming imports and exports</a> seção.</p>
 </div>
 
 <h2 id="Evitando_conflitos_de_nomenclatura">Evitando conflitos de nomenclatura</h2>
@@ -247,7 +247,7 @@ export { function1, function2 };
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>Vejamos um exemplo real. Na nossa <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> diretório, você verá o mesmo sistema de módulos do exemplo anterior, exceto que adicionamos <code>circle.js</code> e <code>triangle.js</code> módulos para desenhar e relatar círculos e triângulos.</p>
+<p>Vejamos um exemplo real. Na nossa <a href="https://github.com/mdn/js-examples/tree/master/module-examples/renaming">renaming</a> diretório, você verá o mesmo sistema de módulos do exemplo anterior, exceto que adicionamos <code>circle.js</code> e <code>triangle.js</code> módulos para desenhar e relatar círculos e triângulos.</p>
 
 <p>Dentro de cada um desses módulos, temos recursos com os mesmos nomes sendo exportados e, portanto, cada um tem o mesmo <code>export</code> declaração na parte inferior:</p>
 
@@ -305,7 +305,7 @@ import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from 
 Module.function2()
 etc.</pre>
 
-<p>Novamente, vejamos um exemplo real. Se você for ao nosso <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a> diretório, você verá o mesmo exemplo novamente, mas reescrito para aproveitar essa nova sintaxe. Nos módulos, as exportações são todas da seguinte forma simples:</p>
+<p>Novamente, vejamos um exemplo real. Se você for ao nosso <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-objects">module-objects</a> diretório, você verá o mesmo exemplo novamente, mas reescrito para aproveitar essa nova sintaxe. Nos módulos, as exportações são todas da seguinte forma simples:</p>
 
 <pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
 
@@ -329,7 +329,7 @@ Square.reportPerimeter(square1.length, reportList);</pre>
 
 <p>Como sugerimos anteriormente, você também pode exportar e importar classes; essa é outra opção para evitar conflitos no seu código e é especialmente útil se você já tiver o código do módulo gravado em um estilo orientado a objetos.</p>
 
-<p>Você pode ver um exemplo do nosso módulo de desenho de forma reescrito com as classes ES em nosso <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> diretório. Como exemplo, o <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> O arquivo agora contém todas as suas funcionalidades em uma única classe:</p>
+<p>Você pode ver um exemplo do nosso módulo de desenho de forma reescrito com as classes ES em nosso <a href="https://github.com/mdn/js-examples/tree/master/module-examples/classes">classes</a> diretório. Como exemplo, o <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js">square.js</a></code> O arquivo agora contém todas as suas funcionalidades em uma única classe:</p>
 
 <pre class="brush: js; notranslate">class Square {
   constructor(ctx, listId, length, x, y, color) {
@@ -365,7 +365,7 @@ square1.reportPerimeter();</pre>
 <pre class="brush: js; notranslate">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
-<p>Por exemplo, veja nosso <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a> diretório. Neste exemplo (com base no exemplo de classes anteriores), temos um módulo extra chamado shapes.js, que agrega toda a funcionalidade de circle.js, square.js e triangle.js juntos. Também movemos nossos submódulos para dentro de um subdiretório dentro do diretório modules chamado shapes. Portanto, a estrutura do módulo neste exemplo é:</p>
+<p>Por exemplo, veja nosso <a href="https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation">module-aggregation</a> diretório. Neste exemplo (com base no exemplo de classes anteriores), temos um módulo extra chamado shapes.js, que agrega toda a funcionalidade de circle.js, square.js e triangle.js juntos. Também movemos nossos submódulos para dentro de um subdiretório dentro do diretório modules chamado shapes. Portanto, a estrutura do módulo neste exemplo é:</p>
 
 <pre class="notranslate">modules/
   canvas.js
@@ -412,9 +412,9 @@ import { Triangle } from './modules/triangle.js';</pre>
     // Do something with the module.
   });</pre>
 
-<p>Vejamos um exemplo. No <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> diretório, temos outro exemplo baseado em nosso exemplo de classes. Desta vez, no entanto, não estamos desenhando nada na tela quando o exemplo é carregado. Em vez disso, incluímos trêsbuttons — "Circle", "Square", e "Triangle" — que, quando pressionado, carrega dinamicamente o módulo necessário e, em seguida, usa-o para desenhar os shape.</p>
+<p>Vejamos um exemplo. No <a href="https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports">dynamic-module-imports</a> diretório, temos outro exemplo baseado em nosso exemplo de classes. Desta vez, no entanto, não estamos desenhando nada na tela quando o exemplo é carregado. Em vez disso, incluímos trêsbuttons — "Circle", "Square", e "Triangle" — que, quando pressionado, carrega dinamicamente o módulo necessário e, em seguida, usa-o para desenhar os shape.</p>
 
-<p>Neste exemplo, fizemos apenas alterações em nossa <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> e <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> arquivos - as exportações do módulo permanecem as mesmas de antes.</p>
+<p>Neste exemplo, fizemos apenas alterações em nossa <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html">index.html</a></code> e <code><a href="https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.mjs">main.js</a></code> arquivos - as exportações do módulo permanecem as mesmas de antes.</p>
 
 <p>No main.js, pegamos uma referência a cada botão usando um<a href="/en-US/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a> chamada, por exemplo:</p>
 
@@ -438,7 +438,7 @@ import { Triangle } from './modules/triangle.js';</pre>
 <p>Aqui estão algumas dicas que podem ajudá-lo se você estiver com problemas para fazer seus módulos funcionarem. Sinta-se livre para adicionar à lista se descobrir mais!</p>
 
 <ul>
- <li>Mencionamos isso antes, mas para reiterar: arquivos<code>.js</code> precisa ser carregado com um tipo MIME de <code>text/javascript</code> (ou outro tipo MIME compatível com JavaScript, mas <code>text/javascript</code> é recomendável), caso contrário, você receberá um erro estrito de verificação do tipo MIME como "O servidor respondeu com um tipo MIME não JavaScript".</li>
+ <li>Mencionamos isso antes, mas para reiterar: arquivos<code>.js</code> precisa ser carregado com um tipo MIME de <code>text/javascript</code> (ou outro tipo MIME compatível com JavaScript, mas <code>text/javascript</code> é recomendável), caso contrário, você receberá um erro estrito de verificação do tipo MIME como "O servidor respondeu com um tipo MIME não JavaScript".</li>
  <li>Se você tentar carregar o arquivo HTML localmente (i.e. com um arquivo<code>://</code> URL), você encontrará erros do CORS devido a requisitos de segurança do módulo JavaScript. Você precisa fazer seus testes através de um servidor. As páginas do GitHub são ideais, pois também servem arquivos .js com o tipo MIME correto.</li>
  <li>Como .mjs é uma extensão de arquivo não padrão, alguns sistemas operacionais podem não reconhecê-lo ou tentar substituí-lo por outra. Por exemplo, descobrimos que o macOS estava adicionando silenciosamente .js ao final dos arquivos .mjs e ocultando automaticamente a extensão do arquivo. Então, todos os nossos arquivos foram lançados como x.mjs.js. Depois de desativarmos ocultar automaticamente as extensões de arquivo e treiná-lo para aceitar .mjs, tudo bem.</li>
 </ul>

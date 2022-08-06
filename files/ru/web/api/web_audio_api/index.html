@@ -12,14 +12,14 @@ tags:
 translation_of: Web/API/Web_Audio_API
 ---
 <div>
-<p>Web audio API - мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице, что даёт возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты (такие как panning), визуализировать их и многое другое.</p>
+<p>Web audio API - мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице, что даёт возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты (такие как panning), визуализировать их и многое другое.</p>
 </div>
 
 <h2 id="Общие_концепции_и_использование_Web_Audio">Общие концепции и использование Web Audio</h2>
 
-<p>Web audio API позволяет обрабатывать операции над аудио с помощью специального аудио контекста (audio context), и был спроектирован на использование модульной маршрутизации (modular routing). Базовые операции выполняются с помощью аудио узлов (audio nodes), которые объединяются вместе, формируя аудио-маршрутизатору *таблицу (audio routing graph). Несколько источников - с разными видами поточных схем - поддерживаются даже изнутри простого контекста. Эта модульная концепция обеспечивает гибкость в создании сложных функций для динамических эффектов.</p>
+<p>Web audio API позволяет обрабатывать операции над аудио с помощью специального аудио контекста (audio context), и был спроектирован на использование модульной маршрутизации (modular routing). Базовые операции выполняются с помощью аудио узлов (audio nodes), которые объединяются вместе, формируя аудио-маршрутизатору *таблицу (audio routing graph). Несколько источников - с разными видами поточных схем - поддерживаются даже изнутри простого контекста. Эта модульная концепция обеспечивает гибкость в создании сложных функций для динамических эффектов.</p>
 
-<p>Аудио узлы объединяются в цепи и простые сети их вводами и выводами. Они, как правило, запускаются с одним или более источниками. Источники представляют собой массивы сэмплов на единицу времени. Например, при частоте дискретизации 44100 Гц, в каждой секунде каждого канала расположено 22050 сэмплов. Они могут быть либо  обработаны математически (смотрите : OscillatorNode), либо считаны с звуко/видео файлов (смотрите : AudioBufferSourceNode и  MediaElementAudioSourceNode) или с аудио потоков (смотрите : MediaStreamAudioSourceNode). По факту, звуковые файлы - просто запись звуковых колебаний, которые поступают от микрофона и музыкальных инструментов, смешиваясь в одну сложную волну. Выводные данные этих узлов могут быть связаны с вводными других, что смешивают или модифицируют потоки звуковых образцов в иные потоки. Популярная модификация - умножение образца на значение, чтобы сделать выходной звук менее или более громким (смотрите : GainMode). Когда звук был успешно обработан предназначенным ему эффектом, он может быть привязан к выходному потоку (смотрите : AudioContext.destination), что направляет звук в динамики или микрофон. Данный шаг нужен лишь если вы предпочтёте дать возможность пользователю услышать ваши шедевры.</p>
+<p>Аудио узлы объединяются в цепи и простые сети их вводами и выводами. Они, как правило, запускаются с одним или более источниками. Источники представляют собой массивы сэмплов на единицу времени. Например, при частоте дискретизации 44100 Гц, в каждой секунде каждого канала расположено 22050 сэмплов. Они могут быть либо  обработаны математически (смотрите : OscillatorNode), либо считаны с звуко/видео файлов (смотрите : AudioBufferSourceNode и  MediaElementAudioSourceNode) или с аудио потоков (смотрите : MediaStreamAudioSourceNode). По факту, звуковые файлы - просто запись звуковых колебаний, которые поступают от микрофона и музыкальных инструментов, смешиваясь в одну сложную волну. Выводные данные этих узлов могут быть связаны с вводными других, что смешивают или модифицируют потоки звуковых образцов в иные потоки. Популярная модификация - умножение образца на значение, чтобы сделать выходной звук менее или более громким (смотрите : GainMode). Когда звук был успешно обработан предназначенным ему эффектом, он может быть привязан к выходному потоку (смотрите : AudioContext.destination), что направляет звук в динамики или микрофон. Данный шаг нужен лишь если вы предпочтёте дать возможность пользователю услышать ваши шедевры.</p>
 
 <p>Простой, типичный порядок действий выполнения манипуляций над аудио выглядит так :</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/Web_Audio_API
 <p>Помните: вы можете прочитать более детальный теоретический материал о Web audio API в нашей статье<a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API"> Basic concepts behind Web Audio API</a>.</p>
 </div>
 
-<h2 id="Web_Audio_API_интерфейсы">Web Audio API интерфейсы</h2>
+<h2 id="Web_Audio_API_интерфейсы">Web Audio API интерфейсы</h2>
 
 <p>В Web audio API есть всего 28 интерфейсов и соответствующих событий, которые мы сгруппировали в 9 категорий по функциональности.</p>
 
@@ -52,11 +52,11 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("AudioContext")}}</dt>
- <dd>AudioContext представляет собой некий аудио обрабатывающий объект, сооружённый из аудио модулей связанных вместе, где каждый является экземпляром класса {{domxref("AudioNode")}}. AudioContext управляет созданием узлов, содержащихся в нём и выполняет обработку или декодирование аудио данных.</dd>
+ <dd>AudioContext представляет собой некий аудио обрабатывающий объект, сооружённый из аудио модулей связанных вместе, где каждый является экземпляром класса {{domxref("AudioNode")}}. AudioContext управляет созданием узлов, содержащихся в нём и выполняет обработку или декодирование аудио данных.</dd>
  <dt>{{domxref("AudioNode")}}</dt>
- <dd>Интерфейс AudioNode представляет собой некий обрабатывающий  модуль такой как источник аудио  (то есть HTML &lt;audio&gt; или &lt;video&gt; элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).</dd>
+ <dd>Интерфейс AudioNode представляет собой некий обрабатывающий  модуль такой как источник аудио  (то есть HTML &lt;audio&gt; или &lt;video&gt; элемент), конечный аудио объект, модуль непосредственной обработки (например фильтр BiquadFilterNode или звуковой контроллер такой как GainNode).</dd>
  <dt>{{domxref("AudioParam")}}</dt>
- <dd><code>Интерфейс </code><strong><code>AudioParam </code></strong><code>представляет аудио-параметры связанные с </code>{{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.</dd>
+ <dd><code>Интерфейс </code><strong><code>AudioParam </code></strong><code>представляет аудио-параметры связанные с </code>{{domxref("AudioNode")}}. Он может содержать как точное значение параметра, так и параметры изменяющиеся во времени.</dd>
  <dt>{{event("ended_(Web_Audio)", "ended")}} (event)</dt>
  <dd>Событие <strong>ended </strong>генерируется тогда, когда воспроизведение остановлено по причине окончания носителя.</dd>
  <dt></dt>
@@ -64,19 +64,19 @@ translation_of: Web/API/Web_Audio_API
 
 <h3 id="Источники_звука">Источники звука</h3>
 
-<p>Интерфейсы, которые определяют источники звука для использования в Web Audio API.</p>
+<p>Интерфейсы, которые определяют источники звука для использования в Web Audio API.</p>
 
 <dl>
  <dt>{{domxref("OscillatorNode")}}</dt>
- <dd><strong><code style="font-size: 14px;">OscillatorNode</code></strong><strong> </strong>представляет собой источник синусоидальной волны. Это модуль {{domxref("AudioNode")}} который принимает на вход <em>частоту </em>и генерирует синусоидальную волну с этой частотой.</dd>
+ <dd><strong><code style="font-size: 14px;">OscillatorNode</code></strong><strong> </strong>представляет собой источник синусоидальной волны. Это модуль {{domxref("AudioNode")}} который принимает на вход <em>частоту </em>и генерирует синусоидальную волну с этой частотой.</dd>
  <dt>{{domxref("AudioBuffer")}}</dt>
- <dd>Интерфейс <strong><code>AudioBuffer</code></strong> представляет собой короткий аудио сэмпл находящийся в памяти, созданный из аудио файла с использованием метода {{ domxref("AudioContext.decodeAudioData()") }}, или созданный из необработанных(сырых) данных с использованием метода {{ domxref("AudioContext.createBuffer()") }}. После декодирования аудио данные могут быть помещены в {{ domxref("AudioBufferSourceNode") }}.</dd>
+ <dd>Интерфейс <strong><code>AudioBuffer</code></strong> представляет собой короткий аудио сэмпл находящийся в памяти, созданный из аудио файла с использованием метода {{ domxref("AudioContext.decodeAudioData()") }}, или созданный из необработанных(сырых) данных с использованием метода {{ domxref("AudioContext.createBuffer()") }}. После декодирования аудио данные могут быть помещены в {{ domxref("AudioBufferSourceNode") }}.</dd>
  <dt>{{domxref("AudioBufferSourceNode")}}</dt>
- <dd><code>Интерфейс </code><strong><code>AudioBufferSourceNode </code></strong><code>представляет собой источник звука, состоящий из аудио данных, хранящихся в </code>{{domxref("AudioBuffer")}}. Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
+ <dd><code>Интерфейс </code><strong><code>AudioBufferSourceNode </code></strong><code>представляет собой источник звука, состоящий из аудио данных, хранящихся в </code>{{domxref("AudioBuffer")}}. Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
- <dd>Интерфейс <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> представляет источник звука, содержащегося в элементе HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} .  Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
+ <dd>Интерфейс <code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> представляет источник звука, содержащегося в элементе HTML5 {{ htmlelement("audio") }} или {{ htmlelement("video") }} .  Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd>Интерфейс <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> представляет источник звука, содержащегося в потоке  <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
+ <dd>Интерфейс <code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> представляет источник звука, содержащегося в потоке  <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} (например веб-камеры или микрофона). Это {{domxref("AudioNode")}}, который действует в качестве источника звука.</dd>
 </dl>
 
 <h3 id="Аудио_фильтры">Аудио фильтры</h3>
@@ -85,9 +85,9 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("BiquadFilterNode")}}</dt>
- <dd><strong><code>BiquadFilterNode </code></strong><code>представляет простой фильтр низкого порядка. Это </code>{{domxref("AudioNode")}} представляющий различные виды фильтров такие как эквалайзер или управление тональностью. <strong><code>BiquadFilterNode</code></strong><code> имеет ровно один вход и один выход.</code></dd>
+ <dd><strong><code>BiquadFilterNode </code></strong><code>представляет простой фильтр низкого порядка. Это </code>{{domxref("AudioNode")}} представляющий различные виды фильтров такие как эквалайзер или управление тональностью. <strong><code>BiquadFilterNode</code></strong><code> имеет ровно один вход и один выход.</code></dd>
  <dt>{{domxref("ConvolverNode")}}</dt>
- <dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>это <span style="line-height: 1.5;">{{domxref("AudioNode")}} выполняющий линейную свёртку </span><span style="line-height: 1.5;">AudioBuffer, часто применяется для достижения эффекта реверберации по заданной импульсной характеристике.</span></dd>
+ <dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>это <span style="line-height: 1.5;">{{domxref("AudioNode")}} выполняющий линейную свёртку </span><span style="line-height: 1.5;">AudioBuffer, часто применяется для достижения эффекта реверберации по заданной импульсной характеристике.</span></dd>
  <dt>{{domxref("DelayNode")}}</dt>
  <dd><strong><code>DelayNode</code></strong><strong> </strong>представляет собой линию задержки (<a href="http://en.wikipedia.org/wiki/Digital_delay_line">delay-line</a>); содержит {{domxref("AudioNode")}} вызывающий задержку между выходным и входным сигналом.</dd>
  <dt>{{domxref("DynamicsCompressorNode")}}</dt>
@@ -95,7 +95,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("GainNode")}}</dt>
  <dd>The <strong><code>GainNode</code></strong><strong> </strong>interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given <em>gain</em> to be applied to the input data before its propagation to the output.</dd>
  <dt>{{domxref("StereoPannerNode")}}</dt>
- <dd>The <code><strong>StereoPannerNode</strong></code> interface represents a simple stereo panner node  that can be used to pan an audio stream left or right.</dd>
+ <dd>The <code><strong>StereoPannerNode</strong></code> interface represents a simple stereo panner node  that can be used to pan an audio stream left or right.</dd>
  <dt>{{domxref("WaveShaperNode")}}</dt>
  <dd>The <strong><code>WaveShaperNode</code></strong><strong> </strong>interface represents a non-linear distorter. It is an {{domxref("AudioNode")}} that use a curve to apply a waveshaping distortion to the signal. Beside obvious distortion effects, it is often used to add a warm feeling to the signal.</dd>
  <dt>{{domxref("PeriodicWave")}}</dt>
@@ -149,7 +149,7 @@ translation_of: Web/API/Web_Audio_API
 <p>If you want to use an external script to process your audio source, the below Node and events make it possible.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by {{ anch("Audio_Workers") }}.</p>
+<p><strong>Note</strong>: As of the August 29 2014 Web Audio API spec publication, these features have been marked as deprecated, and are soon to be replaced by <a href="#audio_workers">Audio_Workers</a>.</p>
 </div>
 
 <dl>
@@ -218,146 +218,146 @@ var gainNode = audioCtx.createGain();
 var biquadFilter = audioCtx.createBiquadFilter();
 
 function makeDistortionCurve(amount) { // function to make curve shape for distortion/wave shaper node to use
-  var k = typeof amount === 'number' ? amount : 50,
-    n_samples = 44100,
-    curve = new Float32Array(n_samples),
-    deg = Math.PI / 180,
-    i = 0,
-    x;
-  for ( ; i &lt; n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
-  }
-  return curve;
+  var k = typeof amount === 'number' ? amount : 50,
+    n_samples = 44100,
+    curve = new Float32Array(n_samples),
+    deg = Math.PI / 180,
+    i = 0,
+    x;
+  for ( ; i &lt; n_samples; ++i ) {
+    x = i * 2 / n_samples - 1;
+    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  }
+  return curve;
 };
 
 navigator.getUserMedia (
-  // constraints - only audio needed for this app
-  {
-    audio: true
-  },
+  // constraints - only audio needed for this app
+  {
+    audio: true
+  },
 
-  // Success callback
-  function(stream) {
-    source = audioCtx.createMediaStreamSource(stream);
-    source.connect(analyser);
-    analyser.connect(distortion);
-    distortion.connect(biquadFilter);
-    biquadFilter.connect(gainNode);
-    gainNode.connect(audioCtx.destination); // connecting the different audio graph nodes together
+  // Success callback
+  function(stream) {
+    source = audioCtx.createMediaStreamSource(stream);
+    source.connect(analyser);
+    analyser.connect(distortion);
+    distortion.connect(biquadFilter);
+    biquadFilter.connect(gainNode);
+    gainNode.connect(audioCtx.destination); // connecting the different audio graph nodes together
 
-    visualize(stream);
-    voiceChange();
+    visualize(stream);
+    voiceChange();
 
-  },
+  },
 
-  // Error callback
-  function(err) {
-    console.log('The following gUM error occured: ' + err);
-  }
+  // Error callback
+  function(err) {
+    console.log('The following gUM error occured: ' + err);
+  }
 );
 
 function visualize(stream) {
-  WIDTH = canvas.width;
-  HEIGHT = canvas.height;
+  WIDTH = canvas.width;
+  HEIGHT = canvas.height;
 
-  var visualSetting = visualSelect.value;
-  console.log(visualSetting);
+  var visualSetting = visualSelect.value;
+  console.log(visualSetting);
 
-  if(visualSetting == "sinewave") {
-    analyser.fftSize = 2048;
-    var bufferLength = analyser.frequencyBinCount; // half the FFT value
-    var dataArray = new Uint8Array(bufferLength); // create an array to store the data
+  if(visualSetting == "sinewave") {
+    analyser.fftSize = 2048;
+    var bufferLength = analyser.frequencyBinCount; // half the FFT value
+    var dataArray = new Uint8Array(bufferLength); // create an array to store the data
 
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
-    function draw() {
+    function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
+      analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      canvasCtx.beginPath();
+      canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i &lt; bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
 
-        x += sliceWidth;
-      }
+        x += sliceWidth;
+      }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.stroke();
+    };
 
-    draw();
+    draw();
 
-  } else if(visualSetting == "off") {
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-    canvasCtx.fillStyle = "red";
-    canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-  }
+  } else if(visualSetting == "off") {
+    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+    canvasCtx.fillStyle = "red";
+    canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  }
 
 }
 
 function voiceChange() {
-  distortion.curve = new Float32Array;
-  biquadFilter.gain.value = 0; // reset the effects each time the voiceChange function is run
+  distortion.curve = new Float32Array;
+  biquadFilter.gain.value = 0; // reset the effects each time the voiceChange function is run
 
-  var voiceSetting = voiceSelect.value;
-  console.log(voiceSetting);
+  var voiceSetting = voiceSelect.value;
+  console.log(voiceSetting);
 
-  if(voiceSetting == "distortion") {
-    distortion.curve = makeDistortionCurve(400); // apply distortion to sound using waveshaper node
-  } else if(voiceSetting == "biquad") {
-    biquadFilter.type = "lowshelf";
-    biquadFilter.frequency.value = 1000;
-    biquadFilter.gain.value = 25; // apply lowshelf filter to sounds using biquad
-  } else if(voiceSetting == "off") {
-    console.log("Voice settings turned off"); // do nothing, as off option was chosen
-  }
+  if(voiceSetting == "distortion") {
+    distortion.curve = makeDistortionCurve(400); // apply distortion to sound using waveshaper node
+  } else if(voiceSetting == "biquad") {
+    biquadFilter.type = "lowshelf";
+    biquadFilter.frequency.value = 1000;
+    biquadFilter.gain.value = 25; // apply lowshelf filter to sounds using biquad
+  } else if(voiceSetting == "off") {
+    console.log("Voice settings turned off"); // do nothing, as off option was chosen
+  }
 
 }
 
 // event listeners to change visualize and voice settings
 
 visualSelect.onchange = function() {
-  window.cancelAnimationFrame(drawVisual);
-  visualize(stream);
+  window.cancelAnimationFrame(drawVisual);
+  visualize(stream);
 }
 
 voiceSelect.onchange = function() {
-  voiceChange();
+  voiceChange();
 }
 
 mute.onclick = voiceMute;
 
 function voiceMute() { // toggle to mute and unmute sound
-  if(mute.id == "") {
-    gainNode.gain.value = 0; // gain set to 0 to mute sound
-    mute.id = "activated";
-    mute.innerHTML = "Unmute";
-  } else {
-    gainNode.gain.value = 1; // gain set to 1 to unmute sound
-    mute.id = "";
-    mute.innerHTML = "Mute";
-  }
+  if(mute.id == "") {
+    gainNode.gain.value = 0; // gain set to 0 to mute sound
+    mute.id = "activated";
+    mute.innerHTML = "Unmute";
+  } else {
+    gainNode.gain.value = 1; // gain set to 1 to unmute sound
+    mute.id = "";
+    mute.innerHTML = "Mute";
+  }
 }
 </pre>
 

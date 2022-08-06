@@ -53,7 +53,7 @@ Les événements ont trois fonctions :
 
 ## Objets supplémentaires
 
-### details
+### Détails
 
 - `tabId`
   - : `integer`. L'ID de l'onglet dans lequel la navigation se passait.

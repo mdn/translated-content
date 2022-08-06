@@ -19,7 +19,9 @@ La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font"
 
 ## Syntaxe
 
-    str.fontcolor(couleur)
+```js
+str.fontcolor(couleur)
+```
 
 ### Paramètres
 

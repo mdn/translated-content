@@ -14,6 +14,7 @@ translation_of: Web/API/EventTarget/addEventListener
 일반적인 대상은 {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}지만, {{domxref("XMLHttpRequest")}}와 같이 이벤트를 지원하는 모든 객체가 대상이 될 수 있습니다.
 
 > **참고:** 이벤트 수신기는 다른 방법으로도 추가할 수 있지만, `addEventListener()` 메서드를 사용해서 다음의 장점을 누리는 것이 좋습니다.
+>
 > - 하나의 이벤트 유형에 대해 다수의 수신기를 부착할 수 있습니다. 라이브러리, JavaScript 모듈 등, 다른 라이브러리나 확장 코드와 충돌하지 않고 동작해야 하는 코드에 특히 중요한 점입니다.
 > - `onXYZ` 속성과 달리, 수신기가 어떤 이벤트 전파 단계(캡처링 vs. 버블링)에 동작해야 하는지 조절할 수 있습니다.
 > - HTML과 SVG 요소가 아니어도 이벤트 대상이라면 사용할 수 있습니다.
@@ -43,23 +44,23 @@ addEventListener(type, listener, useCapture);
 - `type`
   - : 수신할 [이벤트 유형](/ko/docs/Web/Events)을 나타내는 대소문자 구분 문자열입니다.
 - `listener`
-  - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. {{domxref("EventListener")}} 인터페이스를 구현하는 객체거나, JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
+  - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. `handleEvent()` 메서드를 포함하는 객체 또는 JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
 - `options` {{optional_inline}}
   - : 이벤트 수신기의 특징을 지정할 수 있는 객체입니다. 가능한 옵션은 다음과 같습니다.
     - `capture`
-      - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다.
+      - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 명시하지 않을 경우 기본 값은 `false`입니다.
     - `once`
-      - : 수신기가 최대 한 번만 동작해야 함을 나타내는 불리언 값입니다. `true`를 지정할 경우, 수신기가 발동한 후에 스스로를 대상에서 제거합니다.
+      - : 수신기가 최대 한 번만 동작해야 함을 나타내는 불리언 값입니다. `true`를 지정할 경우, 수신기가 발동한 후에 스스로를 대상에서 제거합니다. 명시하지 않을 경우 기본 값은 `false`입니다.
     - `passive`
-      - : `true`일 경우, 이 수신기 내에서 절대 {{domxref("Event.preventDefault", "preventDefault()")}}를 호출하지 않을 것임을 나타내는 불리언 값입니다. 이 값이 `true`인데 수신기가 `preventDefault()`를 호출하는 경우, 사용자 에이전트는 콘솔에 경고를 출력하는 것 외에 아무런 동작도 하지 않습니다. [패시브 수신기로 스크롤 성능 향상](#패시브_수신기로_스크롤_성능_향상)에서 이 값에 대해 더 알아보세요.
+      - : `true`일 경우, 이 수신기 내에서 {{domxref("Event.preventDefault", "preventDefault()")}}를 절대 호출하지 않을 것임을 나타내는 불리언 값입니다. 이 값이 `true`인데 수신기가 `preventDefault()`를 호출하는 경우, 사용자 에이전트는 콘솔에 경고를 출력하는 것 외에 아무런 동작도 하지 않습니다. 명시하지 않을 경우의 기본 값은 `false`지만, Safari와 Internet Explorer를 제외한 브라우저에서 {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}}, {{domxref("Element/touchmove_event", "touchmove")}} 이벤트에서의 기본 값은 `true`입니다. [패시브 수신기로 스크롤 성능 향상](#패시브_수신기로_스크롤_성능_향상)에서 이 값에 대해 더 알아보세요.
     - `signal`
-      - : {{domxref("AbortSignal")}}입니다. 지정한 `AbortSignal` 객체의 {{domxref("AbortController.abort", "abort()")}} 메서드를 호출하면 이 수신기가 제거됩니다.
+      - : {{domxref("AbortSignal")}}입니다. 지정한 `AbortSignal` 객체의 {{domxref("AbortController.abort", "abort()")}} 메서드를 호출하면 이 수신기가 제거됩니다. 명시하지 않을 경우 이벤트 수신기가 아무 `AbortSignal`에도 연결되지 않습니다.
 
 - `useCapture` {{optional_inline}}
 
   - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 캡처 모드인 수신기는 DOM 트리의 위쪽으로 버블링 중인 이벤트에 의해선 발동하지 않습니다. 이벤트 버블링과 캡처링은 조상-자손 관계를 가진 두 개의 요소가 동일한 이벤트 유형에 대한 수신기를 가지고 있을 때, 두 요소에 이벤트가 전파되는 방법을 말합니다. 이벤트 전파 모드에 따라 두 요소 중 이벤트를 먼저 수신하는 쪽이 달라집니다. [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)와 [JavaScript Event 순서](https://www.quirksmode.org/js/events_order.html#link4)에서 자세한 설명을 확인하세요. 기본 값은 `false`입니다.
 
-    > **참고:** 이벤트의 대상에 부착된 수신기의 경우 캡처링도, 버블링 단계도 아닌 별도의 단계에 발동합니다. 
+    > **참고:** 이벤트의 대상에 부착된 수신기의 경우 캡처링도, 버블링 단계도 아닌 별도의 단계에 발동합니다.
     > 캡처 모드의 수신기는 캡처 모드가 아닌 다른 모든 수신기보다 앞서 발동합니다.
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
@@ -67,17 +68,17 @@ addEventListener(type, listener, useCapture);
 
 ### 반환 값
 
-없음.
+없음 ({{jsxref("undefined")}}).
 
 ## 사용 일람
 
 ### 이벤트 수신기 콜백
 
-`addEventListener()`에 지정하는 이벤트 수신기는 콜백 함수거나, (콜백으로 작동할 {{domxref("EventListener.handleEvent", "handleEvent()")}} 메서드를 가진) {{domxref("EventListener")}} 인터페이스를 구현하는 객체입니다.
+`addEventListener()`에 지정하는 이벤트 수신기는 콜백 함수거나, 콜백으로 작동할 `handleEvent()` 메서드를 포함하는 객체입니다.
 
 콜백 함수 자체는 `handleEvent()` 메서드와 같은 매개변수, 같은 반환 값을 가집니다. 즉, 콜백 함수는 발생한 이벤트를 설명하는 {{domxref("Event")}} 기반 객체를 유일한 매개변수로 받고, 아무것도 반환하지 않습니다.
 
-다음은 {{event("fullscreenchange")}}와 {{event("fullscreenerror")}} 두 유형의 이벤트를 동시에 처리할 수 있는 이벤트 처리 콜백의 예제입니다.
+다음은 {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}와 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 두 유형의 이벤트를 동시에 처리할 수 있는 이벤트 처리 콜백의 예제입니다.
 
 ```js
 function eventHandler(event) {
@@ -126,9 +127,9 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
                                ? { passive: true } : false);
 ```
 
-위 코드에서는 {{event("mouseup")}} 이벤트에 대한 수신기를 `someElement` 요소에 추가하고 있습니다. 세 번째 매개변수를 살펴보면, 만약 `passiveSupported`가 `true`일 경우 `passive`를 `true`로 지정한 옵션 객체를 지정하고 있으며, `passiveSupported`가 `false`일 경우, 세 번째 매개변수는 불리언 값이어야 할 것이므로 `useCapture`에 대한 값인 `false`를 지정하는 모습입니다.
+위 코드에서는 {domxref("Element/mouseup_event", "mouseup")}} 이벤트에 대한 수신기를 `someElement` 요소에 추가하고 있습니다. 세 번째 매개변수를 살펴보면, 만약 `passiveSupported`가 `true`일 경우 `passive`를 `true`로 지정한 옵션 객체를 지정하고 있으며, `passiveSupported`가 `false`일 경우, 세 번째 매개변수는 불리언 값이어야 할 것이므로 `useCapture`에 대한 값인 `false`를 지정하는 모습입니다.
 
-직접 알아내는 대신 [Modernizr](https://modernizr.com/docs)나 [Detect It](https://github.com/rafrex/detect-it) 등 서드파티 라이브러리를 사용해 기능 감지를 할 수도 있습니다.
+직접 알아내는 대신 [Modernizr](https://modernizr.com/docs)나 [Detect It](https://github.com/rafgraph/detect-it) 등 서드파티 라이브러리를 사용해 기능 감지를 할 수도 있습니다.
 
 [Web Incubator Community Group](https://wicg.github.io/admin/charter.html)의 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)에 대한 글에서 더 자세한 정보를 알아보세요.
 
@@ -462,7 +463,7 @@ const Something = function(element) {
 const s = new Something(document.body);
 ```
 
-다른 방법으로는 {{domxref("EventListener")}} 인터페이스의 `handleEvent()` 메서드를 구현해 모든 이벤트에 대응하는 것입니다.
+다른 방법으로는 `handleEvent()`라는 특별한 이름의 메서드를 구현해 모든 이벤트에 대응하는 것입니다.
 
 ```js
 const Something = function(element) {
@@ -644,7 +645,7 @@ for(let i = 0, j = 0 ; i < els.length ; i++){
 
 명세에 따르면, `passive` 옵션의 기본 값은 항상 `false` 입니다. 그러나 이 기본 값으로 인해 터치 이벤트 등 일부 이벤트의 수신기가 스크롤을 처리 중인 브라우저 메인 스레드를 블록할 가능성이 생기고, 따라서 스크롤 성능이 크게 저하될 수 있습니다.
 
-이 문제를 방지하기 위해 일부 브라우저(Chrome과 Firefox 등)는 문서 레벨 노드인 {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Document.body")}}의 {{event("touchstart")}}와 {{event("touchmove")}} 이벤트에 대해선 `passive`의 기본 값을 `true`로 바꿔 적용합니다. 패시브 이벤트 수신기는 이벤트를 [취소](/ko/docs/Web/API/Event/preventDefault)할 수 없으므로 사용자가 스크롤할 때 브라우저의 렌더링을 방해하지 않습니다.
+이 문제를 방지하기 위해 일부 브라우저(Chrome과 Firefox 등)는 문서 레벨 노드인 {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Document.body")}}의 {{domxref("Element/touchstart_event", "touchstart")}}와 {{domxref("Element/touchmove_event", "touchmove")}} 이벤트에 대해선 `passive`의 기본 값을 `true`로 바꿔 적용합니다. 패시브 이벤트 수신기는 이벤트를 [취소](/ko/docs/Web/API/Event/preventDefault)할 수 없으므로 사용자가 스크롤할 때 브라우저의 렌더링을 방해하지 않습니다.
 
 > **참고:** 어떤 브라우저/버전에서 이렇게 동작하는지는 아래의 브라우저 호환성 표에 나와있습니다.
 
@@ -674,7 +675,7 @@ window.addEventListener('scroll', function(event) {
 
 `addEventListener()`가 `options` 매개변수를 지원하지 않는 구형 브라우저에서 `options` 객체를 지정하면 `useCapture` 매개변수를 사용할 수 없으므로, 위와 같이 [기능 감지](#옵션_지원을_안전하게_감지하기)를 거쳐야 합니다.
 
-{{event("scroll")}} 이벤트에 대해서는 `passive` 옵션을 고려하지 않아도 됩니다. 어차피 취소할 수 없는 이벤트라서, 수신기가 페이지 렌더링을 막을 수도 없기 때문입니다.
+{{domxref("Element/scroll_event", "scroll")}} 이벤트에 대해서는 `passive` 옵션을 고려하지 않아도 됩니다. 어차피 취소할 수 없는 이벤트라서, 수신기가 페이지 렌더링을 막을 수도 없기 때문입니다.
 
 ## 명세
 

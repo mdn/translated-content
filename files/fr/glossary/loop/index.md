@@ -14,6 +14,4 @@ En {{Glossary("computer programming","programmation informatique")}}, une boucle
 
 ### Culture générale
 
-- {{interwiki("wikipedia","Structure_de_contr%C3%B4le#Boucles","Boucles")}} sur Wikipédia
-
-###
+- [Boucles](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le#Boucles) sur Wikipédia

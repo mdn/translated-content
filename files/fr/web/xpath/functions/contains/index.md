@@ -10,7 +10,9 @@ La fonction `contains` détermine si la chaîne passée en premier argument cont
 
 ### Syntaxe
 
-    contains( meule , aiguille )
+```
+contains( meule , aiguille )
+```
 
 ### Arguments
 

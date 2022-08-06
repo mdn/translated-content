@@ -11,7 +11,7 @@ translation_of: Web/API/Event/currentTarget
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.</p>
+<p>Identifica o alvo atual para o evento quando o event percorre o DOM. O currentTarget sempre se refere ao elemento associado ao event handler, ao invés do event.target que identifica o elemento ao qual o evento ocorreu.</p>
 
 <h2 id="Exemplo">Exemplo</h2>
 
@@ -19,15 +19,15 @@ translation_of: Web/API/Event/currentTarget
 
 <pre class="brush: js">function hide(e){
   e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
+  console.log(e.currentTarget);
   // Quando essa função é usada como um event
-  // handler: this === e.currentTarget
+  // handler: this === e.currentTarget
 }
 
 var ps = document.getElementsByTagName('p');
 
 for(var i = 0; i &lt; ps.length; i++){
-  // console: print the clicked &lt;p&gt; element
+  // console: print the clicked &lt;p&gt; element
   ps[i].addEventListener('click', hide, false);
 }
 // console: print &lt;body&gt;
@@ -48,17 +48,17 @@ document.body.addEventListener('click', hide, false);
   <tr>
    <td>{{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}</td>
    <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}}</td>
    <td>{{Spec2("DOM3 Events")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}}</td>

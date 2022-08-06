@@ -16,15 +16,17 @@ Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des pr
 
 ## Syntaxe
 
-    RegExp.$1
-    RegExp.$2
-    RegExp.$3
-    RegExp.$4
-    RegExp.$5
-    RegExp.$6
-    RegExp.$7
-    RegExp.$8
-    RegExp.$9
+```js
+RegExp.$1
+RegExp.$2
+RegExp.$3
+RegExp.$4
+RegExp.$5
+RegExp.$6
+RegExp.$7
+RegExp.$8
+RegExp.$9
+```
 
 ## Description
 

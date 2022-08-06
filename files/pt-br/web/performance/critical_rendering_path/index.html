@@ -4,9 +4,8 @@ slug: Web/Performance/Critical_rendering_path
 translation_of: Web/Performance/Critical_rendering_path
 original_slug: Web/Performance/caminho_de_renderizacao_critico
 ---
-<p>{{draft}}</p>
 
-<p><span class="seoSummary"><strong>O caminho de renderização crítico</strong> é a sequência de passos que o navegador passa para converter HTML, CSS e JavaScript em pixels na tela. Otimizando o caminho de renderização crítico melhora a performance.The critical rendering path includes the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model </a>(DOM), <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model </a>(CSSOM), render tree and layout.</span></p>
+<p><span class="seoSummary"><strong>O caminho de renderização crítico</strong> é a sequência de passos que o navegador passa para converter HTML, CSS e JavaScript em pixels na tela. Otimizando o caminho de renderização crítico melhora a performance.The critical rendering path includes the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model </a>(DOM), <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model </a>(CSSOM), render tree and layout.</span></p>
 
 <p>The document object model is created as the HTML is parsed. The HTML may request JavaScript, which may, in turn, alter the DOM. The HTML includes or makes requests for styles, which in turn builds the CSS object model. The browser engine combines the two to create the Render Tree. Layout determines the size and location of everything on the page. Once layout is determined, pixels are painted to the screen.</p>
 
@@ -32,7 +31,7 @@ original_slug: Web/Performance/caminho_de_renderizacao_critico
 
 <p>In terms of selector performance, less specific selectors are faster than more specific ones. For example, <code>.foo {}</code> is faster than <code>.bar .foo {}</code> because when the browser finds <code>.foo</code>, in the second scenario, it has to walk up the DOM to check if <code>.foo</code> has an ancestor <code>.bar</code>. The more specific tag requires more work from the browser, but this penalty is not likely worth optimizing.</p>
 
-<p>If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your low hanging fruit. When it comes to CSS, selector performance optimization, improvements will only be in microseconds. There are other <a href="/en-US/docs/Learn/Performance/CSS_performance">ways to optimize CSS</a>, such as minification, and separating defered CSS into non-blocking requests by using media queries.</p>
+<p>If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your low hanging fruit. When it comes to CSS, selector performance optimization, improvements will only be in microseconds. There are other <a href="/en-US/docs/Learn/Performance/CSS_performance">ways to optimize CSS</a>, such as minification, and separating defered CSS into non-blocking requests by using media queries.</p>
 
 <h3 id="Render_Tree">Render Tree</h3>
 

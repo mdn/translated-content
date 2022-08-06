@@ -20,7 +20,9 @@ La méthode **`takeRecords()`** de l'interface [`IntersectionObserver`](/fr/docs
 
 ## Syntaxe
 
-    intersectionObserverEntries = intersectionObserver.takeRecords();
+```js
+intersectionObserverEntries = intersectionObserver.takeRecords();
+```
 
 ### Paramètres
 

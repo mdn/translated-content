@@ -6,42 +6,42 @@ original_slug: Web/HTTP/mecanismo_actualizacion_protocolo
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">El protocolo <a href="/en/HTTP" title="en/HTTP">HTTP</a> posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar. </span></p>
+<p><span class="seoSummary">El protocolo <a href="/en/HTTP" title="en/HTTP">HTTP</a> posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar. </span></p>
 
-<p>Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: {{anch("Server-initiated upgrade to TLS", "requerida actualización a TLS")}}), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.</p>
+<p>Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: <a href="#server-initiated_upgrade_to_tls">requerida actualización a TLS</a>), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.</p>
 
 <h2 id="Acuerdo_de_conexión_(handshake)">Acuerdo de conexión (handshake)</h2>
 
-<p>Las actualizaciones del protocolo de comunicación son siempre iniciadas por el cliente; no hay un mecanismo establecido  para que el servidor pida un cambio de protocolo. Cuando el cliente desea una actualización a un nuevo protocolo, lo hace mandando una petición normal al servidor con cualquier método ({{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, etc.). La petición ha de configurarse de manera especial, para que incluya en ella, la petición de actualización del protocolo. </p>
+<p>Las actualizaciones del protocolo de comunicación son siempre iniciadas por el cliente; no hay un mecanismo establecido  para que el servidor pida un cambio de protocolo. Cuando el cliente desea una actualización a un nuevo protocolo, lo hace mandando una petición normal al servidor con cualquier método ({{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, etc.). La petición ha de configurarse de manera especial, para que incluya en ella, la petición de actualización del protocolo. </p>
 
-<p>Específicamente la petición ha de incluir las dos siguientes cabeceras:</p>
+<p>Específicamente la petición ha de incluir las dos siguientes cabeceras:</p>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Connection">Connection: Upgrade</a></code></dt>
- <dd>La cabecera de conexión (<code>Connection</code>) ha de tener el valor <code>"Upgrade"</code>, para indicar que se está pidiendo una actualización del protocolo.</dd>
+ <dd>La cabecera de conexión (<code>Connection</code>) ha de tener el valor <code>"Upgrade"</code>, para indicar que se está pidiendo una actualización del protocolo.</dd>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade: protocols</a></code></dt>
- <dd>La cabecera de actualización (<code>Upgrade</code>) indica los protocolos deseados, en orden de preferencia, separados por comas.</dd>
+ <dd>La cabecera de actualización (<code>Upgrade</code>) indica los protocolos deseados, en orden de preferencia, separados por comas.</dd>
 </dl>
 
-<p>Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: {{anch("Upgrading to a WebSocket connection")}}.</p>
+<p>Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: <a href="#upgrading_to_a_websocket_connection">Upgrading to a WebSocket connection</a>.</p>
 
-<p>El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (<code>"Upgrade"</code>) y responde con un estado normal, ( <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso requerido) — O puede  aceptar la actualización del protocolo de comunicación. En este caso, responde con un código <code>"101 Switching Protocols"</code>  y con una cabecera <code>Upgrade</code> que indica el protocolo elegido.</p>
+<p>El servidor, puede negarse a la actualización en este caso. Y este simplemente ignora la cabecera de actualización (<code>"Upgrade"</code>) y responde con un estado normal, ( <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso requerido) — O puede  aceptar la actualización del protocolo de comunicación. En este caso, responde con un código <code>"101 Switching Protocols"</code>  y con una cabecera <code>Upgrade</code> que indica el protocolo elegido.</p>
 
-<p>Justo después de enviar el código de estado  <code>"101 Switching Protocols"</code> se procederá a realizar el acuerdo de conexión (corresponde con el termino: 'handshake' en inglés). Si el nuevo protocolo lo necesitase, el servidor, enviaría una la respuesta a la petición inicial (la que contenía la cabecera de <code>"Upgrade"</code> ) , de acuerdo a las reglas del protocolo. </p>
+<p>Justo después de enviar el código de estado  <code>"101 Switching Protocols"</code> se procederá a realizar el acuerdo de conexión (corresponde con el termino: 'handshake' en inglés). Si el nuevo protocolo lo necesitase, el servidor, enviaría una la respuesta a la petición inicial (la que contenía la cabecera de <code>"Upgrade"</code> ) , de acuerdo a las reglas del protocolo. </p>
 
-<h2 id="El_código_de_estado_101">El código de estado 101</h2>
+<h2 id="El_código_de_estado_101">El código de estado 101</h2>
 
-<p>El código de estado {{HTTPStatus(101)}} se manda en respuesta a una petición que contenga la cabecera de <code>"Upgrade"</code> para indicar que el emisor de la petición desea actualizar el protocolo de comunicación. Si se responde con el código de estado <code>"101 Switching Protocols"</code>, se han de incluir también  las cabeceras <code>Connection</code> y <code>Upgrade</code> para definir el protocolo elegido. Más adelante en el texto se dan más detalles del funcionamiento de este mecanismo y ejemplos.</p>
+<p>El código de estado {{HTTPStatus(101)}} se manda en respuesta a una petición que contenga la cabecera de <code>"Upgrade"</code> para indicar que el emisor de la petición desea actualizar el protocolo de comunicación. Si se responde con el código de estado <code>"101 Switching Protocols"</code>, se han de incluir también  las cabeceras <code>Connection</code> y <code>Upgrade</code> para definir el protocolo elegido. Más adelante en el texto se dan más detalles del funcionamiento de este mecanismo y ejemplos.</p>
 
-<p>Se puede utilizar el mecanismo de actualización del protocolo para pasar de una conexión en HTTP/1.1 a una conexión con HTTP/2, pero no se permite cambiar el protocolo en el otro sentido. De hecho, el código de estado  <code>"101 Switching Protocols"</code>, no está incluido en HTTP/2, ya que HTTP/2 no posee el mecanismo de actualización de protocolo. </p>
+<p>Se puede utilizar el mecanismo de actualización del protocolo para pasar de una conexión en HTTP/1.1 a una conexión con HTTP/2, pero no se permite cambiar el protocolo en el otro sentido. De hecho, el código de estado  <code>"101 Switching Protocols"</code>, no está incluido en HTTP/2, ya que HTTP/2 no posee el mecanismo de actualización de protocolo. </p>
 
-<h2 id="Usos_frecuentes_del_mecanismo_de_actualización_de_protocolo">Usos frecuentes del mecanismo de actualización de protocolo</h2>
+<h2 id="Usos_frecuentes_del_mecanismo_de_actualización_de_protocolo">Usos frecuentes del mecanismo de actualización de protocolo</h2>
 
-<p>A continuación se presentan los casos más frecuentes del mecanismo de actualización de protocolo, mediante el uso de la cabecera <code>"Upgrade"</code>. </p>
+<p>A continuación se presentan los casos más frecuentes del mecanismo de actualización de protocolo, mediante el uso de la cabecera <code>"Upgrade"</code>. </p>
 
 <h3 id="Actualización_a_una_conexión_con_HTTP2">Actualización a una conexión con HTTP/2</h3>
 
-<p>El procedimiento estándar, es iniciar una conexión usando HTTP/1.1, debido a su amplio uso. Y a continuación, hacer una petición de actualización de protocolo, a HTTP/2. De esta manera, se tiene una conexión de comunicaciones, incluso si el servidor no soporta protocolo HTTP/2. De todas formas, únicamente es posible actualizar el protocolo, a una versión de HTTP/2 no segura (no encriptada). Esto se realiza indicando el protocolo deseado como: <code>h2c</code>, que indica "HTTP/2 Cleartext". Además es necesario que se defina en los campos de cabecera las propiedades <code>HTTP2-Settings</code>. </p>
+<p>El procedimiento estándar, es iniciar una conexión usando HTTP/1.1, debido a su amplio uso. Y a continuación, hacer una petición de actualización de protocolo, a HTTP/2. De esta manera, se tiene una conexión de comunicaciones, incluso si el servidor no soporta protocolo HTTP/2. De todas formas, únicamente es posible actualizar el protocolo, a una versión de HTTP/2 no segura (no encriptada). Esto se realiza indicando el protocolo deseado como: <code>h2c</code>, que indica "HTTP/2 Cleartext". Además es necesario que se defina en los campos de cabecera las propiedades <code>HTTP2-Settings</code>. </p>
 
 <pre>GET / HTTP/1.1
 Host: destination.server.ext
@@ -50,13 +50,13 @@ Upgrade: h2c
 HTTP2-Settings: <em>base64EncodedSettings</em>
 </pre>
 
-<p>Aquí, <code>base64EncodedSettings</code> es una propiedad de HTTP/2 <code>"SETTINGS"</code> del contenido de la trama que se expresa en formato <code>base64url</code>, seguido de un carácter de igual, <code>"="</code>,  omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.</p>
+<p>Aquí, <code>base64EncodedSettings</code> es una propiedad de HTTP/2 <code>"SETTINGS"</code> del contenido de la trama que se expresa en formato <code>base64url</code>, seguido de un carácter de igual, <code>"="</code>,  omitido aquí para que se pudiera incluir en esta cabecera expresada en texto.</p>
 
 <div class="note">
-<p>El formato <a href="https://tools.ietf.org/html/rfc4648#section-5">base64url</a> fno es el mismo que el formato estándar Base64.  La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : <code>"+"</code> y <code>"/"</code> a: <code>"-"</code> (menos) y <code>"_"</code>  respectivamente.</p>
+<p>El formato <a href="https://tools.ietf.org/html/rfc4648#section-5">base64url</a> fno es el mismo que el formato estándar Base64.  La única diferencia es que para asegurar que la cadena de caracteres es segura para que pueda usarse con URLs y nombres de archivos, los caracteres 62 y 63 en el alfabeto de este formato se cambian de : <code>"+"</code> y <code>"/"</code> a: <code>"-"</code> (menos) y <code>"_"</code>  respectivamente.</p>
 </div>
 
-<p>Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con <code>"HTTP/1.1 200 OK"</code>  seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será:  "<code>HTTP/1.1 101 Switching Protocols"</code>. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.</p>
+<p>Si el servidor no puede hacer el cambio a HTTP/2, este responderá en HTTP/1 como si fuera una petición normal (con los códigos: <code>"200 OK"</code> si todo es correcto, o <code>30x</code> si quiere hacer una redirección, o <code>40x</code> ó <code>50x</code>  si no puede responder con el recurso pedido). Así una petición de una página que exista será respondida con <code>"HTTP/1.1 200 OK"</code>  seguido del resto de la cabecera de la página. Si el servidor, si que puede cambiar al protocolo HTTP/2 , la respuesta será:  "<code>HTTP/1.1 101 Switching Protocols"</code>. A continuación, se presenta un ejemplo de una posible respuesta, a una petición de actualización a HTTP/2.</p>
 
 <pre>HTTP/1.1 101 Switching Protocols
 Connection: Upgrade
@@ -64,7 +64,7 @@ Upgrade: h2c
 
 <em>[standard HTTP/2 server connection preface, etc.]</em></pre>
 
-<p>A continuación de la línea en blanco, que sigue al final de la cabecera de respuesta; el servidor, indicará los parámetros ("<code>SETTINGS"</code>) de la nueva comunicación con HTTP/2.</p>
+<p>A continuación de la línea en blanco, que sigue al final de la cabecera de respuesta; el servidor, indicará los parámetros ("<code>SETTINGS"</code>) de la nueva comunicación con HTTP/2.</p>
 
 <h3 id="Mejorar_a_una_conexión_WebSocket">Mejorar a una conexión WebSocket</h3>
 
@@ -229,7 +229,7 @@ Connection: Upgrade
     and what to do if this text is seen ...
 &lt;/html&gt;</pre>
 
-<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under {{anch("Client-initiated upgrade to TLS")}}.</p>
+<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under <a href="#client-initiated_upgrade_to_tls">Client-initiated upgrade to TLS</a>.</p>
 
 <h2 id="Referencias">Referencias</h2>
 

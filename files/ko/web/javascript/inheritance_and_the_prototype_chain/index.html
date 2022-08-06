@@ -30,7 +30,7 @@ original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 <pre class="brush: js">// o라는 객체가 있고, 속성 'a' 와 'b'를 갖고 있다고 하자.
 let f = function () {
     this.a = 1;
-    this.b = 2;
+    this.b = 2;
 }
 let o = new f(); // {a: 1, b: 2}
 
@@ -63,13 +63,13 @@ console.log(o.d); // undefined
 // 속성이 발견되지 않았기 때문에 undefined를 반환한다.
 </pre>
 
-<p>객체의 속성에 값을 지정하면 "자기만의 속성"이 생긴다.  단, <a href="/en/JavaScript/Guide/Obsolete_Pages/Creating_New_Objects/Defining_Getters_and_Setters" title="Defining Getters and Setters">getter or a setter</a>가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용된다.</p>
+<p>객체의 속성에 값을 지정하면 "자기만의 속성"이 생긴다.  단, <a href="/en/JavaScript/Guide/Obsolete_Pages/Creating_New_Objects/Defining_Getters_and_Setters" title="Defining Getters and Setters">getter or a setter</a>가 적용되는 속성이 상속되는 경우 예외적인 규칙이 적용된다.</p>
 
 <h3 id="메소드_상속">메소드 상속</h3>
 
-<p>자바스크립트에 "메소드"라는건 없다. 하지만 자바스크립트는 객체의 속성으로 함수를 지정할 수 있고 속성 값을 사용하듯 쓸 수 있다. 속성 값으로 지정한 함수의 상속 역시 위에서 본 속성의 상속과 동일하다. (단 위에서 언급한 "속성의 가려짐" 대신 "<em>메소드 오버라이딩, method overriding</em>" 라는 용어를 사용한다)</p>
+<p>자바스크립트에 "메소드"라는건 없다. 하지만 자바스크립트는 객체의 속성으로 함수를 지정할 수 있고 속성 값을 사용하듯 쓸 수 있다. 속성 값으로 지정한 함수의 상속 역시 위에서 본 속성의 상속과 동일하다. (단 위에서 언급한 "속성의 가려짐" 대신 "<em>메소드 오버라이딩, method overriding</em>" 라는 용어를 사용한다)</p>
 
-<p>상속된 함수가 실행 될 때,  <a href="/en/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> 라는 변수는 상속된 오브젝트를 가르킨다. 그 함수가 프로토타입의 속성으로 지정되었다고 해도 말이다.</p>
+<p>상속된 함수가 실행 될 때,  <a href="/en/JavaScript/Reference/Operators/this" title="this"><code>this</code></a> 라는 변수는 상속된 오브젝트를 가르킨다. 그 함수가 프로토타입의 속성으로 지정되었다고 해도 말이다.</p>
 
 <pre class="brush: js">var o = {
   a: 2,
@@ -97,7 +97,7 @@ console.log(p.m()); // 13
 
 <p>위에서 언급했듯이, 자바스크립트에서 함수는 속성을 가질 수 있다. 모든 함수에는 <code>prototype</code>이라는 특수한 속성이 있다. 아래의 예제 코드는 독립적이라는 것에 유의하자. (아래의 코드 이외에는 웹페이지에 다른 자바스크립트가 없다고 가정하는 것이 좋다.)</p>
 
-<p>최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 <a href="https://developer.mozilla.org/ko-KR/docs/Tools">Firefox Developer Tools</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a>,<a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide"> Edge DevTools</a> 에서 확인할 수 있다. )</p>
+<p>최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 <a href="https://developer.mozilla.org/ko-KR/docs/Tools">Firefox Developer Tools</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome DevTools</a>,<a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide"> Edge DevTools</a> 에서 확인할 수 있다. )</p>
 
 
 
@@ -109,7 +109,7 @@ console.log( doSomething.prototype );
 var doSomething = function(){};
 console.log( doSomething.prototype );</code></pre>
 
-<p>위 내용을 토대로, 콘솔을 보면  <code>doSomething()</code> 은 기본 <code>prototype</code> 속성을 가진다. 코드를 실행한 뒤에 콘솔에서는 다음과 유사한 형태의 객체가 표시되어야한다.</p>
+<p>위 내용을 토대로, 콘솔을 보면  <code>doSomething()</code> 은 기본 <code>prototype</code> 속성을 가진다. 코드를 실행한 뒤에 콘솔에서는 다음과 유사한 형태의 객체가 표시되어야한다.</p>
 
 <pre><code>{
     constructor: ƒ doSomething(),
@@ -186,11 +186,11 @@ console.log( doSomeInstancing );</code></pre>
 <p>그렇지 않고, doSomeInstancing의 __proto__가 그 속성을 갖고있지 않을때에는<br>
  doSomeInstancing의 __proto__의 __proto__가 그 속성을 갖는지 확인한다.<br>
  기본적으로, 어떠한 함수던지 그 함수의 prototype 속성의 __proto__는 window.Object.prototype이다.<br>
- 그러므로 브라우저는 doSomeInstancing의 __proto__의 __proto__(doSomething.prototype의 __proto__(다시말해, Object.prototype))  에서 그 속성을 찾아본다.<br>
+ 그러므로 브라우저는 doSomeInstancing의 __proto__의 __proto__(doSomething.prototype의 __proto__(다시말해, Object.prototype))  에서 그 속성을 찾아본다.<br>
  만약 그 속성을 doSomeInstancing의 __proto__의 __proto__에서 찾을 수 없다면 그다음엔 doSomeInstancing의 __proto__의 __proto__의 __proto__에서 찾을것이다.<br>
  하지만 여기서 문제가 발생한다.<br>
  doSomeInstancing의 __proto__의 __proto__의 __proto__는 존재할 수 없다(window.Object.prototype의 __proto__는 null이기 때문).<br>
- 그제서야, 오직 모든 프로토타입 체인이 검사 되고 브라우저가 더이상  검사할 __proto__가 없을때에서야 브라우저는 우리가 찾던 값이 undefined라고 결론짓는다.</p>
+ 그제서야, 오직 모든 프로토타입 체인이 검사 되고 브라우저가 더이상  검사할 __proto__가 없을때에서야 브라우저는 우리가 찾던 값이 undefined라고 결론짓는다.</p>
 
 <p>콘솔에 코드를 조금 더 추가해보자.</p>
 
@@ -246,7 +246,7 @@ function f(){
 
 <h3 id="생성자를_이용">생성자를 이용</h3>
 
-<p>자바스크립트에서 생성자는 단지 <a href="/en/JavaScript/Reference/Operators/new" title="new">new 연산자</a>를  사용해 함수를 호출하면 된다.</p>
+<p>자바스크립트에서 생성자는 단지 <a href="/en/JavaScript/Reference/Operators/new" title="new">new 연산자</a>를  사용해 함수를 호출하면 된다.</p>
 
 <pre class="brush: js">function Graph() {
   this.vertexes = [];
@@ -342,7 +342,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 <p>이 기법은 Monkey patching으로 불리며 캡슐화를 망가뜨린다. Prototype.js와 같은 유명한 프레임워크에서도 사용되지만, 빌트인 타입에 비표준 기능을 추가하는 것은 좋은 생각이 아니다.</p>
 
-<p>유일하게 좋은 사용 예라면, 새로운 자바스크립트 엔진에 Array.forEach등의 새로운 기능을 추가하면서 빌트인 프로토타입을 확장하는 것 정도다. </p>
+<p>유일하게 좋은 사용 예라면, 새로운 자바스크립트 엔진에 Array.forEach등의 새로운 기능을 추가하면서 빌트인 프로토타입을 확장하는 것 정도다. </p>
 
 <h2 id="예">예</h2>
 
@@ -356,7 +356,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 // prototype에 varA를 다시 넣는 이유는 무엇인가?
 A.prototype = {
   varA: null,  // 아무것도 안하면서 varA를 쓰는 이유가 있을까?
-      // 아마도 숨겨진 클래스의 할당 구조를 최적화 하려는 것인가?
+      // 아마도 숨겨진 클래스의 할당 구조를 최적화 하려는 것인가?
       // https://developers.google.com/speed/articles/optimizing-javascript#Initializing-instance-variables
       // 모든 객체의 varA가 동일하게 초기화 되어야 상기 링크 내용이 유효할 수 있다.
   doSomething: function() {
@@ -434,7 +434,7 @@ Foo.call(o);</pre>
 
 <p>위임형 상속에서 프로토타입 객체는 다른 객체의 기반이 된다. 위임 프로토타입을 상속받을 경우 새 객체는 해당 프로토타입에 대한 참조를 가지고 있다.</p>
 
-<p>새 객체의 속성에 접근할 때, 해당 객체가 직접적으로 속성을 소유하고 있는지 먼저 체크한다. 없다면 다음 순서로 <code>[[Prototype]]</code>을 체크한다. 이 과정은 프로토타입 체인을 따라서 모든 객체의 프로토타입 체인의 최상위에 있는 객체인 <code>Object.prototype</code>에 도달할 때 까지 반복된다.</p>
+<p>새 객체의 속성에 접근할 때, 해당 객체가 직접적으로 속성을 소유하고 있는지 먼저 체크한다. 없다면 다음 순서로 <code>[[Prototype]]</code>을 체크한다. 이 과정은 프로토타입 체인을 따라서 모든 객체의 프로토타입 체인의 최상위에 있는 객체인 <code>Object.prototype</code>에 도달할 때 까지 반복된다.</p>
 
 <p>메소드를 위임 상속할 경우 모든 객체가 각 메소드에에 대해 하나의 코드를 공유하므로 메모리를 절약할 수 있다.</p>
 
@@ -464,7 +464,7 @@ console.log(msg); // Hello, my name is George
 
 <p>연결형 상속은 한 객체의 속성을 다른 객체에 모두 복사함으로써 상속을 구현하는 방법이다.</p>
 
-<p>이 상속법은 Javascript 객체의 동적 확장성을 이용한 방법이다. 객체 복사는 속성의 초기값을 저장하기 위한 좋은 방법이다: 이 방식은 {{jsxref("Object.assign()")}}을 통해 구현하는 것이 보통이며 ES6 이전에 Lodash, Underscore, jQuery등의 라이브러리들이 <code>.extend()</code> 와 비슷한 메소드로 제공한 방법이다.</p>
+<p>이 상속법은 Javascript 객체의 동적 확장성을 이용한 방법이다. 객체 복사는 속성의 초기값을 저장하기 위한 좋은 방법이다: 이 방식은 {{jsxref("Object.assign()")}}을 통해 구현하는 것이 보통이며 ES6 이전에 Lodash, Underscore, jQuery등의 라이브러리들이 <code>.extend()</code> 와 비슷한 메소드로 제공한 방법이다.</p>
 
 <pre class="brush: js">const proto = {
   hello: function hello() {
@@ -481,7 +481,7 @@ console.log(msg); // Hello, my name is George
 
 <h3 id="함수형_상속Functional_inheritance">함수형 상속(Functional inheritance)</h3>
 
-<p>함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 “JavaScript: The Good Parts”에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.</p>
+<p>함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 “JavaScript: The Good Parts”에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.</p>
 
 <p>기존의 객체를 확장하는데 쓰이는 함수를 일반적으로 믹스인 함수라 칭한다. 객체 확장에 함수를 사용하는 가장 큰 이점은 Private Data를 클로져를 통해 캡슐화 시킬 수 있다는 점이다.</p>
 
@@ -522,7 +522,7 @@ model.set('name', 'Sam');
 
 <p><code>attrs</code> 을 public 속성에서 private 영역으로 옮겨서 public API를 통한 접근을 차단할 수 있다. // 접근할 수 있는 유일한 방법은 Privileged 메소드 뿐이다. Privileged 메소드는 클로져 영역에 정의된 함수로 private data에 접근 가능한 함수들을 일컫는다.</p>
 
-<p>위 예제를 보면 믹스인 함수 <code>rawMixin()</code>.에 대한 래퍼로 <code>mixinModel()</code> 을 선언한 것을 알 수 있다. 이는 예제에서 {{jsxref("Function.prototype.call()")}} 을 사용했듯이 함수 내에서 <code>this</code>의 값을 설정해야 하기 때문이다. Wrapper를 생략하고 호출자가 알아서 하도록 놔둘 수 있지만 그럴 경우 혼동될 가능성이 있다.</p>
+<p>위 예제를 보면 믹스인 함수 <code>rawMixin()</code>.에 대한 래퍼로 <code>mixinModel()</code> 을 선언한 것을 알 수 있다. 이는 예제에서 {{jsxref("Function.prototype.call()")}} 을 사용했듯이 함수 내에서 <code>this</code>의 값을 설정해야 하기 때문이다. Wrapper를 생략하고 호출자가 알아서 하도록 놔둘 수 있지만 그럴 경우 혼동될 가능성이 있다.</p>
 
 <div>
 <h2 id="결론">결론</h2>

@@ -19,7 +19,9 @@ La propriété **`Map[@@toStringTag]`** vaut "Map" initialement.
 
 ## Syntaxe
 
-    Map[Symbol.toStringTag]
+```js
+Map[Symbol.toStringTag]
+```
 
 ## Exemple
 

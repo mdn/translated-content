@@ -112,7 +112,7 @@ translation_of: Web/HTML/Link_types/preload
   &lt;/video&gt;
 &lt;/body&gt;</pre>
 
-<p>この場合、MP4 に対応しているブラウザーは MP4 を先読みして使用し、ユーザーにとって動画プレイヤーをよりスムーズまたはレスポンシブにできるでしょう。ブラウザーが MP4 に対応していない場合は WebM バージョンを読み込みますが、先読みの利点は得られません。これは、どのように先読みコンテンツがプログレッシブエンハンスメントの哲学と結ばれているかを示しています。</p>
+<p>この場合、MP4 に対応しているブラウザーは MP4 を先読みして使用し、ユーザーにとって動画プレイヤーをよりスムーズまたはレスポンシブにできるでしょう。ブラウザーが MP4 に対応していない場合は WebM バージョンを読み込みますが、先読みの利点は得られません。これは、どのように先読みコンテンツがプログレッシブエンハンスメントの哲学と結ばれているかを示しています。</p>
 
 <h2 id="CORS-enabled_fetches">CORS を使用したフェッチ</h2>
 
@@ -120,7 +120,7 @@ translation_of: Web/HTML/Link_types/preload
 
 <p>上記のように、これが当てはまる興味深いケースの 1 つは、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります (<a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>参照)。</p>
 
-<p>このケースを例として使用してみましょう。完全なサンプルソースコードは <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">GitHub のソースコード例</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">およびライブ盤</a>) にあります。</p>
+<p>このケースを例として使用してみましょう。完全なサンプルソースコードは <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">GitHub のソースコード例</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">およびライブ盤</a>) にあります。</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -186,7 +186,7 @@ preloadLink.as = &quot;script&quot;;
 document.head.appendChild(preloadLink);
 </pre>
 
-<p>これは、ブラウザーは <code>myscript.js</code> ファイルを先読みしますが、実際はまだ使用されていません。これを使用するには、以下のようにします。</p>
+<p>これは、ブラウザーは <code>myscript.js</code> ファイルを先読みしますが、実際はまだ使用されていません。これを使用するには、以下のようにします。</p>
 
 <pre class="brush: js">var preloadedScript = document.createElement(&quot;script&quot;);
 preloadedScript.src = &quot;myscript.js&quot;;

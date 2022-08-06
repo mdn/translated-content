@@ -49,29 +49,29 @@ translation_of: Web/API/ServiceWorkerContainer/register
 <p>次の例では、<code>scope</code>（を省略した場合）のデフォルト値を使用しています。 この場合、サービスワーカーは <code>example.com/index.html</code> とその下のページ（<code>example.com/product/description.html</code> など）を制御します。</p>
 
 <pre class="brush: js">if ('serviceWorker' in navigator) {
-  // デフォルトのスコープを使用して、
-  // サイトのルートでホストされるサービスワーカーを登録します。
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ function(error) {
-    console.log('サービスワーカー登録失敗:', error);
-  });
+  // デフォルトのスコープを使用して、
+  // サイトのルートでホストされるサービスワーカーを登録します。
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log('サービスワーカー登録成功:', registration);
+  }, /*catch*/ function(error) {
+    console.log('サービスワーカー登録失敗:', error);
+  });
 } else {
-  console.log('サービスワーカーをサポートしていません。');
+  console.log('サービスワーカーをサポートしていません。');
 }</pre>
 
 <p>次のコードは、サイトのルートにあるページに含まれている場合、上記の例とまったく同じページに適用されます。 スコープが含まれている場合は、ページの場所をベースとして使用することに注意してください。 あるいは、このコードが <code>example.com/product/description.html</code> のページに含まれている場合、<code>'./'</code> のスコープは、サービスワーカーが <code>example.com/product</code> の下のリソースにのみ適用されることを意味します。 <code>example.com</code> のすべてに適用されるサービスワーカーを <code>example.com/product/description.html</code> で登録する必要がある場合は、上記のようにスコープを省略します。</p>
 
 <pre class="brush: js">if ('serviceWorker' in navigator) {
-  // より限定的なスコープを使用して、
-  // サイトのルートでホストされるサービスワーカーを登録します。
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
-    console.log('サービスワーカー登録成功:', registration);
-  }, /*catch*/ function(error) {
-    console.log('サービスワーカー登録失敗:', error);
-  });
+  // より限定的なスコープを使用して、
+  // サイトのルートでホストされるサービスワーカーを登録します。
+  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
+    console.log('サービスワーカー登録成功:', registration);
+  }, /*catch*/ function(error) {
+    console.log('サービスワーカー登録失敗:', error);
+  });
 } else {
-  console.log('サービスワーカーをサポートしていません。');
+  console.log('サービスワーカーをサポートしていません。');
 }
 </pre>
 

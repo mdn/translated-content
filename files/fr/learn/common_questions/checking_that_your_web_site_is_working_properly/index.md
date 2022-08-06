@@ -150,16 +150,18 @@ Les notes vont de A à F. La page actuelle est pluôt légère et respecte donc 
 
 `ping` est une commande plutôt utile pour tester si le serveur rattaché à votre nom de domaine répond correctement :
 
-    $ ping mozilla.org
-    PING mozilla.org (63.245.215.20): 56 data bytes
-    64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
-    64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
-    64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
-    64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
-    ^C
-    --- mozilla.org ping statistics ---
-    4 packets transmitted, 4 packets received, 0.0% packet loss
-    round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```bash
+$ ping mozilla.org
+PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
+64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
+64 bytes from 63.245.215.20: icmp_seq=2 ttl=44 time=148.734 ms
+64 bytes from 63.245.215.20: icmp_seq=3 ttl=44 time=147.857 ms
+^C
+--- mozilla.org ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```
 
 Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
 

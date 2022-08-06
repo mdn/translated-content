@@ -21,8 +21,10 @@ La méthode **`includes()`** permet de déterminer si un tableau contient une va
 
 ## Syntaxe
 
-    array.includes(élémentRecherché)
-    array.includes(élémentRecherché, indiceDépart)
+```js
+array.includes(élémentRecherché)
+array.includes(élémentRecherché, indiceDépart)
+```
 
 ### Paramètres
 

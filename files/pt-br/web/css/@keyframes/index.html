@@ -27,7 +27,7 @@ translation_of: Web/CSS/@keyframes
 
 <h3 id="Valid_keyframe_lists">Valid keyframe lists</h3>
 
-<p>If a keyframe rule doesn't specify the start or end states of the animation (that is, <code>0%</code>/<code>from</code> and <code>100%</code>/<code>to</code>, browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.</p>
+<p>If a keyframe rule doesn't specify the start or end states of the animation (that is, <code>0%</code>/<code>from</code> and <code>100%</code>/<code>to</code>, browsers will use the element's existing styles for the start/end states. This can be used to animate an element from its initial state and back.</p>
 
 <p>Properties that can't be animated in keyframe rules are ignored, but supported properties will still be animated.</p>
 
@@ -72,16 +72,16 @@ translation_of: Web/CSS/@keyframes
 <p>Declarations in a keyframe qualified with <code>!important</code> are ignored.</p>
 
 <pre class="brush: css">@keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* ignored */
-  to   { margin-top: 100px; }
+  from { margin-top: 50px; }
+  50%  { margin-top: 150px !important; } /* ignored */
+  to   { margin-top: 100px; }
 }
 
 @keyframes important2 {
   from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* ignored */
-         margin-bottom: 50px; }
+         margin-bottom: 100px; }
+  to   { margin-top: 150px !important; /* ignored */
+         margin-bottom: 50px; }
 }
 </pre>
 
@@ -122,7 +122,7 @@ translation_of: Web/CSS/@keyframes
   <tr>
    <td>{{ SpecName('CSS3 Animations', '#keyframes', '@keyframes') }}</td>
    <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

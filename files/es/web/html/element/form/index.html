@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/form
 ---
 <h2 id="Resumen">Resumen</h2>
 <p>El elemento HTML form (<code>&lt;form&gt;</code>) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.</p>
-<p>Es posible usar las pseudo-clasess de CSS <code><a href="/es/CSS/%3Avalid" rel="custom">:valid</a></code> e <code><a href="/es/CSS/%3Ainvalid" rel="custom">:invalid</a></code>  para darle estilos a un elemento form.</p>
+<p>Es posible usar las pseudo-clasess de CSS <code><a href="/es/CSS/%3Avalid" rel="custom">:valid</a></code> e <code><a href="/es/CSS/%3Ainvalid" rel="custom">:invalid</a></code>  para darle estilos a un elemento form.</p>
 <h2 id="Contexto_de_uso">Contexto de uso</h2>
 <table class="standard-table">
   <tbody>
@@ -58,13 +58,13 @@ original_slug: Web/HTML/Elemento/form
       <li><span style="font-family: Courier New;">on</span>: El navegador puede completar automáticamente valores basados en lo que el usuario ha ingresado durante entradas previas al formulario.</li>
     </ul>
     <div class="note">
-      <p><strong>Nota:</strong> si se establece <code>autocomplete</code> a un valor de <code>off</code> en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer  <code>autocomplete</code> al valor <code>off</code> para cada uno de los elementos de formulario <code>input</code> que el documento pueda autocompletar {{ anch("Notas para Google Chrome") }}.</p>
+      <p><strong>Nota:</strong> si se establece <code>autocomplete</code> a un valor de <code>off</code> en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer  <code>autocomplete</code> al valor <code>off</code> para cada uno de los elementos de formulario <code>input</code> que el documento pueda autocompletar <a href="#notas_para_google_chrome">Notas para Google Chrome</a>.</p>
     </div>
   </dd>
   <dt>
     {{ htmlattrdef("enctype") }}</dt>
   <dd>
-    Cuando el valor del atributo <code>method</code> es <span style="font-family: Courier New;">post</span>, este atributo es el  <a href="http://en.wikipedia.org/wiki/Mime_type">tipo MIME</a> del contenido que es usado para enviar el formulario al servidor.</dd>
+    Cuando el valor del atributo <code>method</code> es <span style="font-family: Courier New;">post</span>, este atributo es el  <a href="http://en.wikipedia.org/wiki/Mime_type">tipo MIME</a> del contenido que es usado para enviar el formulario al servidor.</dd>
   <dd>
     Los posibles valores son:
     <ul>
@@ -80,9 +80,9 @@ original_slug: Web/HTML/Elemento/form
     El método <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> que el navegador usa para enviar el formulario. Valores posibles son:
     <ul>
       <li><span style="font-family: Courier New;">post</span>: Corresponde al <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">método POST</a> HTTP ; los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.</li>
-      <li><span style="font-family: Courier New;">get</span>: Corresponde al <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">método GET</a> HTTP; los datos del formulario son adjuntados a la URI del atributo  <code>action</code> , con un '?' como separador,  y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.</li>
+      <li><span style="font-family: Courier New;">get</span>: Corresponde al <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">método GET</a> HTTP; los datos del formulario son adjuntados a la URI del atributo  <code>action</code> , con un '?' como separador,  y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.</li>
     </ul>
-    <p>Este valor puede ser sobreescrito por un atributo {{ htmlattrxref("formmethod", "button") }} en un  {{ HTMLElement("button") }} o elemento {{ HTMLElement("input") }}.</p>
+    <p>Este valor puede ser sobreescrito por un atributo {{ htmlattrxref("formmethod", "button") }} en un  {{ HTMLElement("button") }} o elemento {{ HTMLElement("input") }}.</p>
   </dd>
   <dt>
     {{ htmlattrdef("name") }}</dt>
@@ -91,7 +91,7 @@ original_slug: Web/HTML/Elemento/form
   <dt>
     {{ htmlattrdef("novalidate") }} {{ HTMLVersionInline(5) }}</dt>
   <dd>
-    Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe {{ htmlattrxref("formnovalidate", "button") }} en un {{ HTMLElement("button") }} o en un elemento  {{ HTMLElement("input") }} que pertenece al formulario.</dd>
+    Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe {{ htmlattrxref("formnovalidate", "button") }} en un {{ HTMLElement("button") }} o en un elemento  {{ HTMLElement("input") }} que pertenece al formulario.</dd>
   <dt>
     {{ htmlattrdef("target") }}</dt>
   <dd>
@@ -100,7 +100,7 @@ original_slug: Web/HTML/Elemento/form
       <li><span style="font-family: Courier New;">_self</span>: Carga la respuesta dentro del mismo frame HTML 4 (o en HTML5, contexto de navegación) como el marco actual. Este valor es por defecto si el atributo no es especificado.</li>
       <li><span style="font-family: Courier New;">_blank</span>: Carga la respuesta dentro de una nueva ventana sin nombre en HTML 4 o un contexto de navegación en HTML5.</li>
       <li><span style="font-family: Courier New;">_parent</span>: Carga la respuesta en el marco padre del marco actual en HTML 4 o en el contexto de navegación padre del marco actual en HTML5. Si no hay marco padre, esta opción se comporta de la misma manera que <span style="font-family: Courier New;">_self</span>.</li>
-      <li><span style="font-family: Courier New;">_top</span>: HTML 4: Carga la respuesta en toda la ventana original, cancelando otros marcos.  HTML5: Carga la respuesta en el contexto de navegación de más alto nivel (esto es, el contexto de navegación que es ancestro del actual, y no tiene padre). Si no hay padre, esta opción se comporta igual que <span style="font-family: Courier New;">_self</span>.</li>
+      <li><span style="font-family: Courier New;">_top</span>: HTML 4: Carga la respuesta en toda la ventana original, cancelando otros marcos.  HTML5: Carga la respuesta en el contexto de navegación de más alto nivel (esto es, el contexto de navegación que es ancestro del actual, y no tiene padre). Si no hay padre, esta opción se comporta igual que <span style="font-family: Courier New;">_self</span>.</li>
     </ul>
     <p>HTML5: Este valor puede ser sobreescrito por un atributo {{ htmlattrxref("formtarget", "button") }} en un elemento {{ HTMLElement("button") }} o{{ HTMLElement("input") }}.</p>
   </dd>

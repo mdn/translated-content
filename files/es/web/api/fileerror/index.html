@@ -2,16 +2,17 @@
 title: FileError
 slug: Web/API/FileError
 translation_of: Web/API/FileError
+browser-compat: api.FileError
 ---
 <p>{{APIRef("File System API")}}{{obsolete_header()}}</p>
 
 <p>Se ha presentado un error al utilizar la interfaz {{ domxref("FileReader") }}.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Esta interfaz es obsoleta de acuerdo a la última especificación. Use la nueva DOM4 {{ domxref("DOMError") }} en su lugar.</p>
+<p><strong>Nota:</strong> Esta interfaz es obsoleta de acuerdo a la última especificación. Use la nueva DOM4 {{ domxref("DOMError") }} en su lugar.</p>
 </div>
 
-<p>La <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a>, a <code>FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.</code></p>
+<p>La <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a>, a <code>FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.</code></p>
 
 <p>FileError Objects son pasados una vez se haya lanzado un error. Los objetos tiene un código que muestra el tipo de error que haya ocurrido.</p>
 
@@ -23,9 +24,9 @@ translation_of: Web/API/FileError
 
 <p>Aunque las devoluciones de llamada de error son opcionales, usted debe incluirlos en los argumentos de los métodos. Una aplicación web puede fallar por diversas razones, por lo que no requiere pasar el resto de su día adivinando lo que está pasando y/o realizando el sistema.</p>
 
-<h3 id="No_haga_funcionar_su_aplicación_desde_ruta_(file)">No haga funcionar su aplicación desde ruta://  (file://)</h3>
+<h3 id="No_haga_funcionar_su_aplicación_desde_ruta_(file)">No haga funcionar su aplicación desde ruta://  (file://)</h3>
 
-<p>Por razones de seguridad, los navegadores no le permiten ejecutar su aplicación desde file://. De hecho, muchas de las API de almacenamiento de gran alcance(como sistema de archivos, BlobBuilder y FileReader) lanzan errores si ejecuta la aplicación a nivel local de file://. Cuando estás haciendo una prueba de su aplicación y no deseas configurar un servidor web, puede pasarse por alto la restricción de seguridad en Chrome. Simplemente comienza a Chrome con la restricción de seguridad en Chrome con la bandera --allow-file- access-from-files Utilice la bandera sólo para propósitos de prueba.</p>
+<p>Por razones de seguridad, los navegadores no le permiten ejecutar su aplicación desde file://. De hecho, muchas de las API de almacenamiento de gran alcance(como sistema de archivos, BlobBuilder y FileReader) lanzan errores si ejecuta la aplicación a nivel local de file://. Cuando estás haciendo una prueba de su aplicación y no deseas configurar un servidor web, puede pasarse por alto la restricción de seguridad en Chrome. Simplemente comienza a Chrome con la restricción de seguridad en Chrome con la bandera --allow-file- access-from-files Utilice la bandera sólo para propósitos de prueba.</p>
 
 <p><strong><em>Tradución a español en proceso...</em></strong></p>
 
@@ -45,7 +46,7 @@ translation_of: Web/API/FileError
   <tr>
    <td><a name="attr_code"><code>code</code></a></td>
    <td><code>unsigned short</code></td>
-   <td>The most appropriate error code for the condition. See {{anch("Error codes")}} for possible values.</td>
+   <td>The most appropriate error code for the condition. See <a href="#error_codes">Error codes</a> for possible values.</td>
   </tr>
  </tbody>
 </table>
@@ -124,63 +125,13 @@ translation_of: Web/API/FileError
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Especificaciones">Especificaciones</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Specifications}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>0.16{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<ul>
- <li>The <code>FileError</code> interface has been removed starting with Gecko 13 {{ geckoRelease("13.0") }}. Instead the more general {{ domxref("DOMError") }} interface is used and returned by {{ domxref("FileReader", "FileReader.error") }}.</li>
-</ul>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 
@@ -189,5 +140,5 @@ translation_of: Web/API/FileError
  <li>{{ domxref("FileReader") }}</li>
  <li>{{ domxref("File") }}</li>
  <li>{{ domxref("Blob") }}</li>
- <li>{{ spec("http://www.w3.org/TR/file-system-api/#errors-and-exceptions", "Specification: FileAPI Errors and exceptions", "WD") }}</li>
+ <li>{{ spec("http://www.w3.org/TR/file-system-api/#errors-and-exceptions", "Specification: FileAPI Errors and exceptions", "WD") }}</li>
 </ul>

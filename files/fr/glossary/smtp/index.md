@@ -18,4 +18,4 @@ Le protocole est relativement simple. Les principales difficultés viennent du s
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "SMTP")}} sur Wikipédia
+- [SMTP](https://fr.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) sur Wikipédia

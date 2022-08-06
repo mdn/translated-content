@@ -19,4 +19,4 @@ original_slug: Glossaire/typage_dynamique
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Type_(informatique)#Typage_statique_et_typage_dynamique", "Type (informatique)")}} sur Wikipédia
+- [Type (informatique)](https://fr.wikipedia.org/wiki/Type_(informatique)#Typage_statique_et_typage_dynamique) sur Wikipédia

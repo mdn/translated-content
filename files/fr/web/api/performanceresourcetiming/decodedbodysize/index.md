@@ -66,8 +66,7 @@ function check_PerformanceEntries() {
 
 | Spécification                                                                                                                                        | Statut                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Resource Timing 2',
-        '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
+| {{SpecName('Resource Timing 2', '#dom-performanceresourcetiming-decodedbodysize', 'decodedBodySize')}} | {{Spec2('Resource Timing 2')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

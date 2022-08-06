@@ -26,12 +26,12 @@ translation_of: Web/CSS/@media/device-aspect-ratio
 
 ```css
 article {
-  padding: 1rem;
+  padding: 1rem;
 }
 
 @media screen and (min-device-aspect-ratio: 16/9) {
-  article {
-    padding: 1rem 5vw;
+  article {
+    padding: 1rem 5vw;
   }
 }
 ```

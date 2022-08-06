@@ -18,7 +18,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive correspondant à celle r
 
 ## Syntaxe
 
-    objetNumber.valueOf()
+```js
+objetNumber.valueOf()
+```
 
 ### Valeur de retour
 

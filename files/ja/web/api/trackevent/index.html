@@ -15,12 +15,12 @@ translation_of: Web/API/TrackEvent
 <div>{{APIRef("HTML DOM")}}</div>
 
 <p><span class="seoSummary">HTML DOM 仕様の一部である <strong><code>TrackEvent</code></strong> インターフェイスは、HTML メディア要素で使用可能なトラックのセットに対する変更を表すイベントに使用されます。 これらのイベントは {{event("addtrack")}} と {{event("removetrack")}} です。</span> <code>TrackEvent</code> を {{domxref("RTCPeerConnection")}} の一部であるトラックに使用される {{domxref("RTCTrackEvent")}} インターフェイスと混同しないでください。<br>
-  </p>
+  </p>
 
 <p><code>TrackEvent</code> に基づくイベントは、常に次のメディアトラックリストの種類のいずれかに送信されます。</p>
 
 <ul>
- <li><span class="hidden"> </span>動画トラックに関連するイベントは、常に {{domxref("HTMLMediaElement.videoTracks")}} にある {{domxref("VideoTrackList")}} に送信されます。</li>
+ <li><span class="hidden"> </span>動画トラックに関連するイベントは、常に {{domxref("HTMLMediaElement.videoTracks")}} にある {{domxref("VideoTrackList")}} に送信されます。</li>
  <li>音声トラックに関連するイベントは、常に {{domxref("HTMLMediaElement.audioTracks")}} で指定された {{domxref("AudioTrackList")}} に送信されます。</li>
  <li>テキストトラックに影響を与えるイベントは、{{domxref("HTMLMediaElement.textTracks")}} によって示される {{domxref("TextTrackList")}} オブジェクトに送信されます。</li>
 </ul>

@@ -37,9 +37,9 @@ original_slug: Migrate_apps_from_Internet_Explorer_to_Mozilla
 var elm;
 
 if (ns4)
-  elm = document.layers["myID"];
+  elm = document.layers["myID"];
 else if (ie4)
-  elm = document.all["myID"]</pre>
+  elm = document.all["myID"]</pre>
 
 <p>このコードは、拡張性に欠けています。新たなブラウザをサポートしたくなったときに、Web アプリケーション全体のこういったブロックを修正する必要が出てくるからです。</p>
 
@@ -84,18 +84,18 @@ function getElmById(aID){
 
 <p>JavaScript では、コードの可読性を良くする三項演算子が使えます:</p>
 
-<pre class="eval">var foo = (condition) ? conditionIsTrue : conditionIsFalse;
+<pre class="eval">var foo = (condition) ? conditionIsTrue : conditionIsFalse;
 </pre>
 
 <p>例えば、要素を取得するのに、次のような書き方をします:</p>
 
 <pre class="eval">function getElement(aID){
-  return (document.getElementById) ? document.getElementById(aID)
-                                   : document.all[aID]);
+  return (document.getElementById) ? document.getElementById(aID)
+                                   : document.all[aID]);
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Differences_between_Mozilla_and_Internet_Explorer" name="Differences_between_Mozilla_and_Internet_Explorer">Mozilla と Internet Explorer の違い</h3>
 
@@ -103,11 +103,11 @@ function getElmById(aID){
 
 <h4 id="Tooltips" name="Tooltips">ツールチップ</h4>
 
-<p>レガシブラウザは、リンクの上に alt 属性値を表示するツールチップを HTML に導入しました。最新の W3C HTML の仕様では、リンクの詳しい記述を含めることを目的とした title 属性が作られています。新しめのブラウザはツールチップの表示に title 属性値を使います。Mozilla も、alt ではなく、この title 属性を表示するようなツールチップのサポートをしています。</p>
+<p>レガシブラウザは、リンクの上に alt 属性値を表示するツールチップを HTML に導入しました。最新の W3C HTML の仕様では、リンクの詳しい記述を含めることを目的とした title 属性が作られています。新しめのブラウザはツールチップの表示に title 属性値を使います。Mozilla も、alt ではなく、この title 属性を表示するようなツールチップのサポートをしています。</p>
 
 <h4 id="Entities" name="Entities">エンティティ</h4>
 
-<p>HTML マークアップには、<a class="external" href="http://www.w3.org/TR/REC-html40/sgml/entities.html">W3C web standards body</a> の定めているいくつかのエンティティを使うことができます。これらのエンティティは、数字または文字による参照によって利用することができます。たとえば、ノーブレークスペース文字は <code>&amp;#160;</code> もしくは同等の文字列参照 &amp;nbsp; で参照します。</p>
+<p>HTML マークアップには、<a class="external" href="http://www.w3.org/TR/REC-html40/sgml/entities.html">W3C web standards body</a> の定めているいくつかのエンティティを使うことができます。これらのエンティティは、数字または文字による参照によって利用することができます。たとえば、ノーブレークスペース文字は <code>&amp;#160;</code> もしくは同等の文字列参照 &amp;nbsp; で参照します。</p>
 
 <p>Internet Explorer のような古いブラウザは、末尾の ; (セミコロン) のかわりに通常文字が来るような実体参照を許してしまうという特異な挙動をします:</p>
 
@@ -449,9 +449,9 @@ JavaScript:
 
 <h3 id="CSS_differences" name="CSS_differences">CSS の相違</h3>
 
-<p>Internet Explorer やその他のブラウザと比べ、Mozilla ベースの製品は、CSS1 のほとんど、CSS2.1、および CSS3 の一部を含んだカスケーディングスタイルシート (CSS)  のサポートでは最も強力です。</p>
+<p>Internet Explorer やその他のブラウザと比べ、Mozilla ベースの製品は、CSS1 のほとんど、CSS2.1、および CSS3 の一部を含んだカスケーディングスタイルシート (CSS)  のサポートでは最も強力です。</p>
 
-<p>下記で言及するような問題が発生した場合、Mozilla  は JavaScript コンソールにエラーまたは警告を表示します。CSS 関連の問題に遭遇したとは、JavaScript コンソールを開いて確認するとよいでしょう。</p>
+<p>下記で言及するような問題が発生した場合、Mozilla  は JavaScript コンソールにエラーまたは警告を表示します。CSS 関連の問題に遭遇したとは、JavaScript コンソールを開いて確認するとよいでしょう。</p>
 
 <h4 id="Mimetypes_.28when_CSS_files_are_not_applied.29" name="Mimetypes_.28when_CSS_files_are_not_applied.29">Mimetypes (when CSS files are not applied)</h4>
 
@@ -542,7 +542,7 @@ HTML:
 
 <h3 id="Quirks_versus_standards_mode" name="Quirks_versus_standards_mode">Quirks versus standards mode</h3>
 
-<p>Older legacy browsers, such as Internet Explorer 4, rendered with so-called quirks under certain conditions. While Mozilla aims to be a standards-compliant browser, it has three modes that support older Web pages created with these quirky behaviors. The page's content and delivery determine which mode Mozilla will use. Mozilla will indicate the rendering mode in <strong>View -&gt; Page Info</strong> (or <code>Ctrl+I</code>) ; Firefox will list the rendering mode in <strong>Tools -&gt; Page Info</strong>. The mode in which a page is located depends on its doctype.</p>
+<p>Older legacy browsers, such as Internet Explorer 4, rendered with so-called quirks under certain conditions. While Mozilla aims to be a standards-compliant browser, it has three modes that support older Web pages created with these quirky behaviors. The page's content and delivery determine which mode Mozilla will use. Mozilla will indicate the rendering mode in <strong>View -&gt; Page Info</strong> (or <code>Ctrl+I</code>) ; Firefox will list the rendering mode in <strong>Tools -&gt; Page Info</strong>. The mode in which a page is located depends on its doctype.</p>
 
 <p>Doctypes (short for document type declarations) look like this:</p>
 
@@ -602,7 +602,7 @@ HTML:
 
 &lt;script&gt;
   function handleEvent(aEvent) {
-    var myEvent = window.event ? window.event : aEvent;
+    var myEvent = window.event ? window.event : aEvent;
   }
 &lt;/script&gt;
 </pre>
@@ -700,7 +700,7 @@ HTML:
   function handleEvent(aEvent) {
     // if aEvent is null, means the Internet Explorer event model,
     // so get window.event.
-    var myEvent = aEvent ? aEvent : window.event;
+    var myEvent = aEvent ? aEvent : window.event;
   }
 
   function onPageLoad(){
@@ -718,7 +718,7 @@ HTML:
   function handleEvent(aEvent) {
     // if aEvent is null, it is the Internet Explorer event model,
     // so get window.event.
-    var myEvent = aEvent ? aEvent : window.event;
+    var myEvent = aEvent ? aEvent : window.event;
   }
 
   function onPageLoad() {
@@ -970,8 +970,8 @@ JavaScript:
   var myChildren = myXMLDoc.childNodes;
 
   for (var run = 0; run &lt; myChildren.length; run++){
-    if ( (myChildren[run].nodeType != 3) &amp;&amp;
-          myChildren[run].nodeType != 8) ){
+    if ( (myChildren[run].nodeType != 3) &amp;&amp;
+          myChildren[run].nodeType != 8) ){
       // not a text or comment node
     };
   };

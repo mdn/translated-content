@@ -21,4 +21,4 @@ Si cette fonctionnalité de base échoue, il est inutile d'investir du temps dan
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Smoke testing (software)")}} sur Wikipedia (en)
+- [Article en anglais sur le <i lang="en">smoke testing</i>](https://en.wikipedia.org/wiki/Smoke_testing_(software)) sur Wikipédia

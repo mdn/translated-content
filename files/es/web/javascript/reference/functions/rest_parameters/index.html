@@ -10,11 +10,11 @@ original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p>La sintaxis de los <strong>parámetros rest </strong>nos permiten representar un número indefinido de argumentos como un array.</p>
+<p>La sintaxis de los <strong>parámetros rest </strong>nos permiten representar un número indefinido de argumentos como un array.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</p>
 
-<p>La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull-request.</p>
+<p>La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> y envíanos un pull-request.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 
 <h2 id="Descripción">Descripción</h2>
 
-<p class="brush: js">El último parámetro de una función se puede prefijar con <code>...</code>, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".</p>
+<p class="brush: js">El último parámetro de una función se puede prefijar con <code>...</code>, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".</p>
 
 <p class="brush: js">Sólo el último parámetro puede ser un "parámetro rest".</p>
 
@@ -45,15 +45,15 @@ myFun("one", "two", "three", "four", "five", "six");
 
 <h3 id="Diferencia_entre_los_parámetros_rest_y_el_objeto_arguments">Diferencia entre los parámetros rest y el objeto <code>arguments</code></h3>
 
-<p>Hay tres principales diferencias entre los parámetros rest y el objeto <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
+<p>Hay tres principales diferencias entre los parámetros rest y el objeto <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="arguments"><code>arguments</code></a>:</p>
 
 <ul>
- <li>los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto <code>arguments</code> contiene todos los argumentos que se le han pasado a la función;</li>
- <li>el objeto <code>arguments</code> no es un array real, mientras que los parámetros rest son instancias de  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> , lo que significa que lo los métodos como <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> pueden aplicarse directamente;</li>
- <li>el objeto <code>arguments</code> tiene una funcionalidad adicional específica para sí mismo (como la propiedad <code>callee</code>).</li>
+ <li>los parámetros rest son sólo aquellos a los que no se les ha asignado un nombre, mientras que el objeto <code>arguments</code> contiene todos los argumentos que se le han pasado a la función;</li>
+ <li>el objeto <code>arguments</code> no es un array real, mientras que los parámetros rest son instancias de  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a> , lo que significa que lo los métodos como <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" title="Array sort method"><code>sort</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" title="Array map method"><code>map</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" title="Array forEach method"><code>forEach</code></a> o <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="Array pop method"><code>pop</code></a> pueden aplicarse directamente;</li>
+ <li>el objeto <code>arguments</code> tiene una funcionalidad adicional específica para sí mismo (como la propiedad <code>callee</code>).</li>
 </ul>
 
-<h3 id="De_argumentos_a_array">De argumentos a array</h3>
+<h3 id="De_argumentos_a_array">De argumentos a array</h3>
 
 <p>Los parámetros rest han sido agregados para reducir el código repetitivo que se usaba en los parámetros.</p>
 
@@ -78,9 +78,9 @@ function f(...args) {
   let first = normalArray.shift() // OK, gives the first argument
 }</pre>
 
-<h3 id="Desestructuración_de_los_parametros_rest">Desestructuración de los parametros rest</h3>
+<h3 id="Desestructuración_de_los_parametros_rest">Desestructuración de los parametros rest</h3>
 
-<p>Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a>.</p>
+<p>Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a>.</p>
 
 <pre class="notranslate"><code>function f(...[a, b, c]) {
   return a + b + c;
@@ -144,7 +144,7 @@ fun1(5, 6, 7); // 3
 
 <h3 id="Ordinary_parameter_and_rest_parameters">Ordinary parameter and rest parameters</h3>
 
-<p>En el siguiente ejemplo, se usa un parámetro rest para agrupar  dentro de un array a todos los argumentos despues del primero.  Luego cada uno es multiplicado por el primero y el arreglo es retornado:</p>
+<p>En el siguiente ejemplo, se usa un parámetro rest para agrupar  dentro de un array a todos los argumentos despues del primero.  Luego cada uno es multiplicado por el primero y el arreglo es retornado:</p>
 
 <pre class="brush: js notranslate">function multiply(multiplier, ...theArgs) {
   return theArgs.map(function (element) {
@@ -156,7 +156,7 @@ let arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 </pre>
 
-<p>El siguiente ejemplo muestra que se puede usar los métodos de <code>Array</code> en los parámetros rest , pero no en el objeto <code>arguments</code>:</p>
+<p>El siguiente ejemplo muestra que se puede usar los métodos de <code>Array</code> en los parámetros rest , pero no en el objeto <code>arguments</code>:</p>
 
 <pre class="brush: js notranslate">function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
@@ -174,7 +174,7 @@ function sortArguments() {
 console.log(sortArguments(5,3,7,1));
 </pre>
 
-<p>Para poder usar los métodos de  <code>Array</code> en el objeto <code>arguments</code>, se debe convertir a un <code>Array</code> primero.</p>
+<p>Para poder usar los métodos de  <code>Array</code> en el objeto <code>arguments</code>, se debe convertir a un <code>Array</code> primero.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

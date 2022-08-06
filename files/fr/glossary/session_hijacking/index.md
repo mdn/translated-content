@@ -25,11 +25,11 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 
 ### Le processus de piratage de session
 
-1.  **Sniffez**, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.
-2.  **Surveillez** les paquets circulant entre le serveur et l'utilisateur.
-3.  **Brisez** la connexion de la machine victime.
-4.  **Prenez le contrôle** de la session.
-5.  **Injectez** de nouveaux paquets au serveur en utilisant l'ID de session de la victime.
+1. **Sniffez**, c'est-à-dire effectuez une attaque d'homme-dans-le-milieu (MitM), placez-vous entre la victime et le serveur.
+2. **Surveillez** les paquets circulant entre le serveur et l'utilisateur.
+3. **Brisez** la connexion de la machine victime.
+4. **Prenez le contrôle** de la session.
+5. **Injectez** de nouveaux paquets au serveur en utilisant l'ID de session de la victime.
 
 ### Protection contre le détournement de session
 
@@ -44,4 +44,4 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia
+- [<i lang="en">Hijacking</i>](https://fr.wikipedia.org/wiki/Hijacking) sur Wikipédia

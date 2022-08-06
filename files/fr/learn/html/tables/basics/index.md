@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML&nbsp;: notions de base'
+title: 'Tableaux HTML : notions de base'
 slug: Learn/HTML/Tables/Basics
 tags:
   - Apprentissage
@@ -216,23 +216,23 @@ Les tableaux HTML ne doivent être utilisés que pour des données tabulaires �
 
 Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
 
-1.  **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprêtent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
-2.  **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
-3.  **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
+1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprêtent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
+2. **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
+3. **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
 
 ## Apprentissage actif&nbsp;: créer votre premier tableau
 
 Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et construisons un tableau simple.
 
-1.  Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
-2.  Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3.  Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
+1. Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
+2. Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
+3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
     ```html
     <td>Bonjour, je suis votre première cellule.</td>
     ```
 
-4.  Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme&nbsp;:
+4. Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme&nbsp;:
 
     ```html
     <td>Bonjour, je suis votre première cellule </td>
@@ -245,7 +245,7 @@ Comme vous le verrez, les cellules ne sont pas placées les unes en dessous des 
 
 Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Element/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
 
-1.  Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
+1. Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
 
     ```html
     <tr>
@@ -256,7 +256,7 @@ Pour empêcher cette ligne de croître et commencer à placer les cellules suiva
     </tr>
     ```
 
-2.  Maintenant, vous avez fait une ligne, faites en encore une ou deux — chaque ligne doit être encadrée de `<tr>`, et comprend chaque cellule encadrée par `<td>`.
+2. Maintenant, vous avez fait une ligne, faites en encore une ou deux — chaque ligne doit être encadrée de `<tr>`, et comprend chaque cellule encadrée par `<td>`.
 
 Il devrait en résulter un tableau qui ressemble à :
 
@@ -371,9 +371,9 @@ Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'e
 
 Améliorons ce tableau.
 
-1.  En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple «&nbsp;Dogs&nbsp;» ci-dessus.
-2.  Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
-3.  Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
+1. En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple «&nbsp;Dogs&nbsp;» ci-dessus.
+2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
+3. Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
 > **Note :** Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
@@ -453,10 +453,10 @@ Nous avons besoin d'un moyen pour étendre "Animaux", "Hippopotame" et "Crocodil
 
 Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
-1.  Tout d'abord, faites une copie locale de nos fichiers [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le même exemple d'animaux vu ci-dessus.
-2.  Ensuite, utilisez `colspan` pour mettre «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» sur deux colonnes.
-3.  Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
-4.  Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
+1. Tout d'abord, faites une copie locale de nos fichiers [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le même exemple d'animaux vu ci-dessus.
+2. Ensuite, utilisez `colspan` pour mettre «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» sur deux colonnes.
+3. Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
+4. Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
 
 > **Note :** Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
@@ -536,14 +536,14 @@ Ci-dessous, vous pouvez voir le planning d'un professeur de langues. Le vendredi
 
 Recréez le tableau en suivant les étapes ci-dessous.
 
-1.  Tout d'abord, faites une copie locale du fichier [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le tableau vu ci-dessus, à l'exception des informations de style des colonnes.
-2.  Ajoutez un élément `<colgroup>`  au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
-3.  Les deux premières colonnes doivent rester sans style.
-4.  Ajoutez une couleur de fond à la troisième colonne. La valeur de votre attribut `style` est `background-color:#97DB9A;`
-5.  Définissez une largeur différente pour la quatrième colonne. La valeur de votre attribut `style` est `width: 42px;`
-6.  Ajoutez une couleur de fond pour la cinquième colonne. La valeur de votre attribut `style` est `background-color: #97DB9A;`
-7.  Ajoutez une couleur de fond différente et une bordure pour la sixième colonne, pour signifier que c'est une journée spéciale et qu'elle enseigne à une nouvelle classe. Les valeurs de votre attribut `style` sont `background-color:#DCC48E; border:4px solid #C1437A;`
-8.  Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut `style` est `width: 42px;`
+1. Tout d'abord, faites une copie locale du fichier [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le tableau vu ci-dessus, à l'exception des informations de style des colonnes.
+2. Ajoutez un élément `<colgroup>`  au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
+3. Les deux premières colonnes doivent rester sans style.
+4. Ajoutez une couleur de fond à la troisième colonne. La valeur de votre attribut `style` est `background-color:#97DB9A;`
+5. Définissez une largeur différente pour la quatrième colonne. La valeur de votre attribut `style` est `width: 42px;`
+6. Ajoutez une couleur de fond pour la cinquième colonne. La valeur de votre attribut `style` est `background-color: #97DB9A;`
+7. Ajoutez une couleur de fond différente et une bordure pour la sixième colonne, pour signifier que c'est une journée spéciale et qu'elle enseigne à une nouvelle classe. Les valeurs de votre attribut `style` sont `background-color:#DCC48E; border:4px solid #C1437A;`
+8. Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut `style` est `width: 42px;`
 
 Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à [voir aussi](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
 

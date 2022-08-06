@@ -13,13 +13,13 @@ translation_of: Web/HTTP/Methods/PATCH
 
 <p>O <strong>método de requisição HTTP PATCH</strong> aplica modificações parciais a um recurso.</p>
 
-<p>O método HTTP {{HTTPMethod("PUT")}} permite apenas substituições completas de um documento. Em contraste ao <code>PUT</code>, o método <code>PATCH</code> não é <span class="short_text" id="result_box" lang="pt"><span>idempotente</span></span>, ou seja, requisições sucessivas idênticas <em>podem</em> obter efeitos distintos. Todavia, é possível realizar requisições <code>PATCH</code> de modo a serem <span class="short_text" id="result_box" lang="pt"><span>idempotentes</span></span>.</p>
+<p>O método HTTP {{HTTPMethod("PUT")}} permite apenas substituições completas de um documento. Em contraste ao <code>PUT</code>, o método <code>PATCH</code> não é <span class="short_text" id="result_box" lang="pt"><span>idempotente</span></span>, ou seja, requisições sucessivas idênticas <em>podem</em> obter efeitos distintos. Todavia, é possível realizar requisições <code>PATCH</code> de modo a serem <span class="short_text" id="result_box" lang="pt"><span>idempotentes</span></span>.</p>
 
-<p><code>PATCH</code> (assim como <code>PUT</code>) podem ter efeitos colaterais em outros recursos.</p>
+<p><code>PATCH</code> (assim como <code>PUT</code>) podem ter efeitos colaterais em outros recursos.</p>
 
 <p>Para descobrir se um servidor dá suporte a <code>PATCH</code>, um servidor pode divulgar seu suporte adicionando tal suporte à lista no cabeçalho de resposta HTTP {{HTTPHeader("Allow")}} ou {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).</p>
 
-<p>Outra indicação (implícita)  da permissão de PATCH é a presença do cabeçalho {{HTTPHeader("Accept-Patch")}}, que especifica o formato do documento patch aceito pelo servidor.</p>
+<p>Outra indicação (implícita)  da permissão de PATCH é a presença do cabeçalho {{HTTPHeader("Accept-Patch")}}, que especifica o formato do documento patch aceito pelo servidor.</p>
 
 <table class="properties">
  <tbody>
@@ -95,5 +95,5 @@ ETag: "e0023aa4f"</pre>
 <ul>
  <li>{{HTTPStatus("204")}}</li>
  <li>{{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Accept-Patch")}} – Especifica o  documento patch aceito pelo servidor.</li>
+ <li>{{HTTPHeader("Accept-Patch")}} – Especifica o  documento patch aceito pelo servidor.</li>
 </ul>

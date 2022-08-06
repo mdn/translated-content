@@ -58,7 +58,5 @@ Number.parseFloat === parseFloat; // true
 ## 関連情報
 
 - `Number.isSafeInteger` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
-- - {{jsxref("Number")}}
-    - : このメソッドが所属するオブジェクト
-   </li>
+- {{jsxref("Number")}}: このメソッドが所属するオブジェクト
 - グローバルの {{jsxref("parseFloat", "parseFloat()")}} メソッド

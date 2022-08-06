@@ -34,7 +34,7 @@ touch-action: revert;
 touch-action: unset;
 ```
 
-既定でハ、パン（スクロール）およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("HTMLElement/pointermove_event", "pointermove")}} および {{domxref("HTMLElement/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 `touch-action` を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。
+既定では、パン（スクロール）およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("HTMLElement/pointermove_event", "pointermove")}} および {{domxref("HTMLElement/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 `touch-action` を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。
 
 ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
 

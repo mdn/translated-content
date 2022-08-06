@@ -35,9 +35,9 @@ translation_of: Web/API/FileReader/readAsBinaryString
 
 <pre class="brush: js notranslate">var canvas = document.createElement('canvas');
 var height = 200;
-var width  = 200;
+var width  = 200;
 
-canvas.width  = width;
+canvas.width  = width;
 canvas.height = height;
 
 var ctx = canvas.getContext('2d');
@@ -48,13 +48,13 @@ ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
 ctx.stroke();
 
 canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+  var reader = new FileReader();
 
-  reader.onload = function () {
-    console.log(reader.result);
-  }
+  reader.onload = function () {
+    console.log(reader.result);
+  }
 
-  reader.readAsBinaryString(blob);
+  reader.readAsBinaryString(blob);
 });</pre>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">仕様</h2>

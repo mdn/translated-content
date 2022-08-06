@@ -42,7 +42,7 @@ set(index, value)
 
 ### Table.set の使用
 
-次の例 (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください) では、初期サイズが参照 2 つである WebAssembly Table インスタンスを生成しています。そして、テーブルの長さと 2 つの位置の内容 ({{jsxref("WebAssembly/Table/get","Table.prototype.get()")}} で取得) を出力して、長さが 2 であること、それぞれの位置には現在、関数の参照が含まれていないこと (現在は {{jsxref("null")}} を返すこと) を示しています。
+次の例 (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[動作例](https://mdn.github.io/webassembly-examples/blob/master/js-api-examples/table2.html)を確認してください) では、初期サイズが参照 2 つである WebAssembly Table インスタンスを生成しています。そして、テーブルの長さと 2 つの位置の内容 ({{jsxref("WebAssembly/Table/get","Table.prototype.get()")}} で取得) を出力して、長さが 2 であること、それぞれの位置には現在、関数の参照が含まれていないこと (現在は {{jsxref("null")}} を返すこと) を示しています。
 
 ```js
 var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
@@ -66,9 +66,9 @@ var importObj = {
 ```js
 WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
+  console.log(tbl.length);
+  console.log(tbl.get(0)());
+  console.log(tbl.get(1)());
 });
 ```
 

@@ -11,7 +11,9 @@ Cette propriété n'a pas de valeur par défaut.
 
 Syntaxe
 
-    outWindowHeight = window.outerHeight;
+```js
+outWindowHeight = window.outerHeight;
+```
 
 La valeur retournée correspond à la hauteur extérieure de la fenêtre.
 

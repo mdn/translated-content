@@ -18,19 +18,23 @@ Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-cl�
 
 ### Syntaxe de style basique
 
-    règle-de-style-basique ::=
-        liste-de-sélecteurs {
-          liste-de-propriétés
-        }
+```
+règle-de-style-basique ::=
+    liste-de-sélecteurs {
+      liste-de-propriétés
+    }
+```
 
 ... où :
 
-    liste-de-sélecteurs ::=
-        sélecteur[:pseudo-classe] [::pseudo-élément]
-        [, liste-de-sélecteurs]
+```
+liste-de-sélecteurs ::=
+    sélecteur[:pseudo-classe] [::pseudo-élément]
+    [, liste-de-sélecteurs]
 
-    liste-de-propriétés ::=
-        [propriété : valeur] [; liste-de-propriétés]
+liste-de-propriétés ::=
+    [propriété : valeur] [; liste-de-propriétés]
+```
 
 Voir aussi les [_sélecteurs_](#sélecteurs), [_pseudo-classes_](#pseudo-classes), et _[pseudo-éléments](#pseudo-éléments)_ listés ci-dessous. La syntaxe des _valeurs_ dépend du type de données attendu pour chaque _propriété_ indiquée.
 
