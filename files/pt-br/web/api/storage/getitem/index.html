@@ -5,7 +5,7 @@ translation_of: Web/API/Storage/getItem
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p>Passar o nome da chave para o método <code>getItem()</code> da interface {{domxref("Storage")}} retornará o seu valor.</p>
+<p>Passar o nome da chave para o método <code>getItem()</code> da interface {{domxref("Storage")}} retornará o seu valor.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -16,16 +16,16 @@ translation_of: Web/API/Storage/getItem
 
 <dl>
  <dt><em><code>keyName</code></em></dt>
- <dd>Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.</dd>
+ <dd>Um {{domxref("DOMString")}} contendo o nome da chave cujo valor você quer obter.</dd>
 </dl>
 
 <h3 id="Retorno">Retorno</h3>
 
-<p>Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, <font face="Consolas, Liberation Mono, Courier, monospace">é retornado null</font>.</p>
+<p>Um {{domxref("DOMString")}} contendo o valor da chave. Se a chave não existe, <font face="Consolas, Liberation Mono, Courier, monospace">é retornado null</font>.</p>
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>A função seguinte recupera três itens armazenados no local storage e usa-os para definir estilos customizados em uma página.</p>
+<p>A função seguinte recupera três itens armazenados no local storage e usa-os para definir estilos customizados em uma página.</p>
 
 <pre class="brush: js">function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
@@ -42,7 +42,7 @@ translation_of: Web/API/Storage/getItem
 }</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Para ver essa funcionalidade aplicada a um exemplo real, veja nossa <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
+<p><strong>Nota</strong>: Para ver essa funcionalidade aplicada a um exemplo real, veja nossa <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>.</p>
 </div>
 
 <h2 id="Especificações">Especificações</h2>
@@ -68,10 +68,10 @@ translation_of: Web/API/Storage/getItem
 
 <div id="compat-mobile"></div>
 
-<p>Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">estatísticas detalhadas dos níveis de compatibilidade para vários navegadores</a>.</p>
+<p>Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">estatísticas detalhadas dos níveis de compatibilidade para vários navegadores</a>.</p>
 
 <div class="note">
-<p><strong>Nota: </strong>A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.</p>
+<p><strong>Nota: </strong>A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.</p>
 </div>
 
 <h2 id="Veja_também">Veja também</h2>

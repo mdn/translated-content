@@ -345,11 +345,11 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 
 資格情報付きリクエストに返答する場合、
 
-- サーバーは `Access-Control-Allow-Origin` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Origin: https://example.com` のように、明示的にオリジンを指定しなければなりません。
+- サーバーは `Access-Control-Allow-Origin` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Origin: https://example.com` のように、明示的にオリジンを指定しなければなりません。
 
-- サーバーは `Access-Control-Allow-Headers` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type` のように、明示的にヘッダー名を指定しなければなりません。
+- サーバーは `Access-Control-Allow-Headers` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type` のように、明示的にヘッダー名を指定しなければなりません。
 
-- サーバーは `Access-Control-Allow-Methods` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Methods: POST, GET` のように、明示的にメソッド名を指定しなければなりません。
+- サーバーは `Access-Control-Allow-Methods` ヘッダーで "`*`" ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Methods: POST, GET` のように、明示的にメソッド名を指定しなければなりません。
 
 リクエストが資格情報 (多くの場合は `Cookie` ヘッダー) を含んでおり、そのレスポンスが `Access-Control-Allow-Origin: *` ヘッダー (つまりワイルドカード) を含んでいる場合、ブラウザーはレスポンスへのアクセスをブロックし、開発ツールのコンソールに CORS エラーを報告します。
 

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Object.isSealed()</strong></code> si el objeto está sellado.</p>
+<p>El método <code><strong>Object.isSealed()</strong></code> si el objeto está sellado.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-issealed.html")}}</div>
 
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 
 <dl>
  <dt><code>obj</code></dt>
- <dd>El objeto que debe ser verificado.</dd>
+ <dd>El objeto que debe ser verificado.</dd>
 </dl>
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
@@ -35,7 +35,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Devuelve <code>true</code> si el objeto está sellado, de lo contrario devuelve <code>false</code>. Un objeto está sellado si no es {{jsxref("Object.isExtensible", "extensible", "", 1)}} y si todas sus propiedades no se pueden configurar y por lo tanto no removibles (pero no necesariamente no modificables).</p>
+<p>Devuelve <code>true</code> si el objeto está sellado, de lo contrario devuelve <code>false</code>. Un objeto está sellado si no es {{jsxref("Object.isExtensible", "extensible", "", 1)}} y si todas sus propiedades no se pueden configurar y por lo tanto no removibles (pero no necesariamente no modificables).</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -57,7 +57,7 @@ Object.isSealed(hasProp); // === false
 // Pero hazlas todas no configurables
 // y el objeto se vuelve sellado.
 Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+  configurable: false
 });
 Object.isSealed(hasProp); // === true
 
@@ -86,7 +86,7 @@ Object.isFrozen(s3); // === true
 
 <h2 id="Notes">Notes</h2>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un </span></font></code>{{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve <code>true</code>.</p>
+<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un </span></font></code>{{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve <code>true</code>.</p>
 
 <pre class="brush: js">Object.isSealed(1);
 // TypeError: 1 no es un objeto (ES5 code)
@@ -112,12 +112,12 @@ Object.isSealed(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

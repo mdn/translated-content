@@ -22,5 +22,5 @@ Un CR tout de suite suivi par un LF (CRLF, `\r\n`, ou `0x0D0A`) descend le curse
 
 ### Culture générale
 
-- {{interwiki("wikipedia","Fin_de_ligne","Fin de ligne")}} sur Wikipédia
-- {{interwiki("wikipedia","Retour_chariot","Retour chariot")}} sur Wikipédia
+- [Fin de ligne](https://fr.wikipedia.org/wiki/Fin_de_ligne) sur Wikipédia
+- [Retour chariot](https://fr.wikipedia.org/wiki/Retour_chariot) sur Wikipédia

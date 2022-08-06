@@ -5,21 +5,21 @@ translation_of: 'Web/CSS/:dir'
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p><strong><code>:dir()</code></strong> — это <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <a href="/en-US/docs/Web/CSS">CSS</a>, который выбирает элементы на основе направления текста в них.</p>
+<p><strong><code>:dir()</code></strong> — это <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <a href="/en-US/docs/Web/CSS">CSS</a>, который выбирает элементы на основе направления текста в них.</p>
 
 <pre class="brush: css no-line-numbers">/* Выбирает все элементы с текстом справа-налево */
 :dir(rtl) {
   background-color: red;
 }</pre>
 
-<p><code>:dir()</code> учитывает только <em>семантическое </em>направление, т.е. заданное в самом документе. Он не учитывает <em>стилизованное </em>направление, т.е. заданное CSS-правилами, например {{cssxref("direction")}}.</p>
+<p><code>:dir()</code> учитывает только <em>семантическое </em>направление, т.е. заданное в самом документе. Он не учитывает <em>стилизованное </em>направление, т.е. заданное CSS-правилами, например {{cssxref("direction")}}.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong>  помните о том, что псевдокласс <code>:dir()</code> <strong>не эквивалентен</strong> <a href="/ru/docs/Web/CSS/Attribute_selectors">выбору по атрибуту</a> <code>[dir=…]</code>. Последний применяется только к тем элементам HTML, у которых есть атрибут {{htmlattrxref("dir")}}, игнорируя те, у которых он не задан — даже если они унаследовали его значение. (Похожим образом <code>[dir=rtl]</code> и<code>[dir=ltr]</code> не будут включать <code>auto</code>.) <code>:dir()</code>, же, напротив, соответствует значению вычисленному {{glossary("user agent")}}, даже унаследованному.</p>
+<p><strong>Примечание:</strong>  помните о том, что псевдокласс <code>:dir()</code> <strong>не эквивалентен</strong> <a href="/ru/docs/Web/CSS/Attribute_selectors">выбору по атрибуту</a> <code>[dir=…]</code>. Последний применяется только к тем элементам HTML, у которых есть атрибут {{htmlattrxref("dir")}}, игнорируя те, у которых он не задан — даже если они унаследовали его значение. (Похожим образом <code>[dir=rtl]</code> и<code>[dir=ltr]</code> не будут включать <code>auto</code>.) <code>:dir()</code>, же, напротив, соответствует значению вычисленному {{glossary("user agent")}}, даже унаследованному.</p>
 </div>
 
 <div class="note">
-<p><strong>Примечание:</strong> В HTML, направление задаётся атрибутом {{htmlattrxref("dir")}}. В других форматах могут использоваться иные методы.</p>
+<p><strong>Примечание:</strong> В HTML, направление задаётся атрибутом {{htmlattrxref("dir")}}. В других форматах могут использоваться иные методы.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>

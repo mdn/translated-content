@@ -48,7 +48,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h3 id="Ajax_の登場">Ajax の登場</h3>
 
-<p>上述の問題を解決すべく、Web ページから細かいデータ (<a href="/ja/docs/Web/HTML">HTML</a>、{{glossary("XML")}}、<a href="/ja/docs/Learn/JavaScript/Objects/JSON">JSON</a> やプレーンテキストのような) をリクエストし、それを必要な時だけ表示するという技術の誕生へと繋がりました。</p>
+<p>上述の問題を解決すべく、Web ページから細かいデータ (<a href="/ja/docs/Web/HTML">HTML</a>、{{glossary("XML")}}、<a href="/ja/docs/Learn/JavaScript/Objects/JSON">JSON</a> やプレーンテキストのような) をリクエストし、それを必要な時だけ表示するという技術の誕生へと繋がりました。</p>
 
 <p>これは {{domxref("XMLHttpRequest")}} や、最近では <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 <a href="/ja/docs/Web/HTTP">HTTP</a> リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。</p>
 
@@ -288,12 +288,12 @@ myFetch.then(function(response) {
 <p>Fetch を使うブロックの最初は、JavaScript の初めの方にあります:</p>
 
 <pre class="brush: js notranslate">fetch('products.json').then(function(response) {
-  return response.json();
+  return response.json();
 }).then(function(json) {
-  let products = json;
-  initialize(products);
+  let products = json;
+  initialize(products);
 }).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
+  console.log('Fetch problem: ' + err.message);
 });</pre>
 
 <p><code>fetch()</code> 関数はプロミスを返します。これが成功裏に完了すると、一つ目の <code>.then()</code> ブロックの中にある関数は、ネットワークから返された <code>response</code> を受け取ります。</p>
@@ -318,13 +318,13 @@ myFetch.then(function(response) {
 <p>二つ目の Fetch ブロックは <code>fetchBlob()</code> 関数の中にあります:</p>
 
 <pre class="brush: js notranslate">fetch(url).then(function(response) {
-    return response.blob();
+    return response.blob();
 }).then(function(blob) {
-  // Convert the blob to an object URL — this is basically a temporary internal URL
-  // that points to an object stored inside the browser
-  let objectURL = URL.createObjectURL(blob);
-  // invoke showProduct
-  showProduct(objectURL, product);
+  // Convert the blob to an object URL — this is basically a temporary internal URL
+  // that points to an object stored inside the browser
+  let objectURL = URL.createObjectURL(blob);
+  // invoke showProduct
+  showProduct(objectURL, product);
 });</pre>
 
 <p>これも前のとおおよそ同じように動作しますが、{{domxref("Body.json","json()")}} ではなくて {{domxref("Body.blob","blob()")}} を使っているところが違います — 今回の場合は画像ファイルを返したいので、これ用に使うデータ形式は <a href="/ja/docs/Web/API/Blob">Blob</a> — これは "<u>B</u>inary <u>L</u>arge <u>Ob</u>ject" の略で、たいていは巨大なファイルのようなオブジェクト、画像や動画のようなものを示すのに使われます。</p>

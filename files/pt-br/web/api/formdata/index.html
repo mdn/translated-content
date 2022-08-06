@@ -5,19 +5,19 @@ translation_of: Web/API/FormData
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>A interface <strong><code>FormData</code></strong> fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento <code>form</code> e seus valores, os quais podem ser facilmente enviados utilizado o método <a href="/pt-BR/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> do XMLHttpRequest. Essa interface utiliza o mesmo formato que um <code>form</code> utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".</p>
+<p>A interface <strong><code>FormData</code></strong> fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento <code>form</code> e seus valores, os quais podem ser facilmente enviados utilizado o método <a href="/pt-BR/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a> do XMLHttpRequest. Essa interface utiliza o mesmo formato que um <code>form</code> utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".</p>
 
-<p>Um objeto <code>FormData</code> pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: <code>for (var p of myFormData) </code>é o mesmo que <code>for (var p of myFormData.entries())</code>.</p>
+<p>Um objeto <code>FormData</code> pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: <code>for (var p of myFormData) </code>é o mesmo que <code>for (var p of myFormData.entries())</code>.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Esse recurso está disponível em <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API</a></p>
+<p><strong>Nota</strong>: Esse recurso está disponível em <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API</a></p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Construtor</h2>
 
 <dl>
  <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>Cria um novo objeto <code>FormData</code>.</dd>
+ <dd>Cria um novo objeto <code>FormData</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
@@ -38,7 +38,7 @@ translation_of: Web/API/FormData
 </dl>
 
 <div class="note">
-<p><strong>Nota</strong>: Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.</p>
+<p><strong>Nota</strong>: Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.</p>
 </div>
 
 <h2 id="Especificações">Especificações</h2>
@@ -158,7 +158,7 @@ translation_of: Web/API/FormData
 
 <h3 id="Notas_da_Gecko">Notas da Gecko</h3>
 
-<p>Antes do Gecko 7.0 {{geckoRelease("7.0")}}, se você especificasse um {{domxref("Blob")}} como o dado a ser anexado ao objeto, o nome do arquivo relatado no cabeçalho HTTP "Content-Disposition" era uma string vazia; isso resultou em erros sendo relatados por alguns servidores. Começando em Gecko 7.0, o nome do arquivo "blob" é enviado.</p>
+<p>Antes do Gecko 7.0 {{geckoRelease("7.0")}}, se você especificasse um {{domxref("Blob")}} como o dado a ser anexado ao objeto, o nome do arquivo relatado no cabeçalho HTTP "Content-Disposition" era uma string vazia; isso resultou em erros sendo relatados por alguns servidores. Começando em Gecko 7.0, o nome do arquivo "blob" é enviado.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

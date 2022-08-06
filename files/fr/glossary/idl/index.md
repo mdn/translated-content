@@ -15,7 +15,7 @@ Un **IDL** (_Interface Description Language_) est un langage générique utilis�
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Interface description language", "IDL")}} sur Wikipédia
+- [IDL](https://fr.wikipedia.org/wiki/Interface_Description_Language) sur Wikipédia
 
 ### Référence technique
 

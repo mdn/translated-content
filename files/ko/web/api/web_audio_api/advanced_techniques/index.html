@@ -19,7 +19,7 @@ tags:
 <p>우리는 아주 간단한 스텝 시퀸서를 살펴볼 것입니다:</p>
 
 <p><img alt="재생과 BPM 주 제어, 각각을 제어할 수 있는 4가지의 다른 소리를 기능으로 가지는 사운드 시퀸서 애플리케이션." src="sequencer.png"><br>
-  </p>
+  </p>
 
 <p>실제로는 이것은 라이브러리로 하는 것이 더 쉽습니다 — Web Audio API는 기반이 되도록 개발되었습니다. 만약 여러분이 무언가 더욱 복잡한 것의 개발에 착수하려고 한다면, <a href="https://tonejs.github.io/">tone.js</a>가 시작하기 좋은 지점일 것입니다. 그러나, 학습 예제로서, 우리는 이런 데모를 기본 원칙들으로부터 어떻게 개발하는지를 보이고 싶습니다.</p>
 
@@ -154,7 +154,7 @@ function playSweep(time) {
     sweepEnv.gain.setValueAtTime(0, time);
     // attack을 설정합니다
     sweepEnv.gain.linearRampToValueAtTime(1, time + attackTime);
-    // release를 설정합니다
+    // release를 설정합니다
     sweepEnv.gain.linearRampToValueAtTime(0, time + sweepLength - releaseTime);
 
     osc.connect(sweepEnv).connect(audioCtx.destination);
@@ -198,7 +198,7 @@ osc.start(time);
 osc.stop(time + pulseTime);</pre>
 
 <div class="note">
-<p><strong>참고</strong>: 우리는 또한 우리가 생성하는 이 오실레이터 중 어느 것에 대해서도 기본 파동 유형을 사용할 필요가 없습니다 — 우리는 웨이브 테이블과 우리가 전에 한 것처럼 주기파를 사용할 수 있습니다. 최소한의 노드들로도 다수의 가능성이 있습니다.</p>
+<p><strong>참고</strong>: 우리는 또한 우리가 생성하는 이 오실레이터 중 어느 것에 대해서도 기본 파동 유형을 사용할 필요가 없습니다 — 우리는 웨이브 테이블과 우리가 전에 한 것처럼 주기파를 사용할 수 있습니다. 최소한의 노드들로도 다수의 가능성이 있습니다.</p>
 </div>
 
 <h3 id="Pulse_user_controls">펄스 슬라이더</h3>

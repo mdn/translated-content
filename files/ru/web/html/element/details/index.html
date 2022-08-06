@@ -12,13 +12,13 @@ translation_of: Web/HTML/Element/details
 ---
 <div>{{HTMLRef}}</div>
 
-<p>HTML-элемент<strong> <code>&lt;details&gt;</code></strong> используется для раскрытия скрытой (дополнительной) информации.</p>
+<p>HTML-элемент<strong> <code>&lt;details&gt;</code></strong> используется для раскрытия скрытой (дополнительной) информации.</p>
 
-<p>Виджет раскрытия обычно представлен на экране с использованием небольшого треугольника, который поворачивается, чтобы показать состояние открытия / закрытия, с меткой рядом с треугольником. Если первый дочерний элемент элемента <code>&lt;details&gt; </code>является <code>&lt;summary&gt;</code>, содержимое элемента <code>&lt;summary&gt;</code> используется в качестве метки для виджета раскрытия.</p>
+<p>Виджет раскрытия обычно представлен на экране с использованием небольшого треугольника, который поворачивается, чтобы показать состояние открытия / закрытия, с меткой рядом с треугольником. Если первый дочерний элемент элемента <code>&lt;details&gt; </code>является <code>&lt;summary&gt;</code>, содержимое элемента <code>&lt;summary&gt;</code> используется в качестве метки для виджета раскрытия.</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}</p>
 
-<p> </p>
+<p> </p>
 
 <table class="properties">
  <tbody>
@@ -76,16 +76,16 @@ translation_of: Web/HTML/Element/details
 <p>{{EmbedLiveSample("Пример")}}</p>
 
 <div class="note">
-<p><strong>Примечание: </strong>Если приведённый выше пример не работает, см. <a href="#browser_compatibility">Browser compatibility</a> , чтобы определить поддерживает ли вообще ваш браузер эту функцию. </p>
+<p><strong>Примечание: </strong>Если приведённый выше пример не работает, см. <a href="#browser_compatibility">Browser compatibility</a> , чтобы определить поддерживает ли вообще ваш браузер эту функцию. </p>
 </div>
 
 <h2 id="Примеры_стилизации">Примеры стилизации</h2>
 
-<p>Следуя более новой спецификации, Firefox отображает элемент summary как <code>display: list-item</code>  и маркер можно стилизовать так же, как и элементы списка.</p>
+<p>Следуя более новой спецификации, Firefox отображает элемент summary как <code>display: list-item</code>  и маркер можно стилизовать так же, как и элементы списка.</p>
 
-<p>Следуя более старой спецификации, в Chrome and Safari существует пользовательский псевдо-элемент <code>::-webkit-details-marker</code>, с помощью которого можно стилизовать маркер. </p>
+<p>Следуя более старой спецификации, в Chrome and Safari существует пользовательский псевдо-элемент <code>::-webkit-details-marker</code>, с помощью которого можно стилизовать маркер. </p>
 
-<p>Для кроссбраузерной стилизации маркера, чтобы скрыть дефолтный и добавить кастомный, необходимо для Firefox установить элементу <code>summary {display: block;}, а для </code>Chrome и Safari's установить <code>::-webkit-details-marker {display: none;}</code>. После этого дефолтный маркер будет скрыт, после чего можно установить свой маркер любым доступным способом стилизации. В примере ниже с помощью псевдоэлементов маркер возвращается обратно.  </p>
+<p>Для кроссбраузерной стилизации маркера, чтобы скрыть дефолтный и добавить кастомный, необходимо для Firefox установить элементу <code>summary {display: block;}, а для </code>Chrome и Safari's установить <code>::-webkit-details-marker {display: none;}</code>. После этого дефолтный маркер будет скрыт, после чего можно установить свой маркер любым доступным способом стилизации. В примере ниже с помощью псевдоэлементов маркер возвращается обратно.  </p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -132,7 +132,7 @@ details[open] &gt; summary::before {
   <tr>
    <td>{{SpecName('HTML WHATWG', 'forms.html#the-details-element', '&lt;details&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}</td>

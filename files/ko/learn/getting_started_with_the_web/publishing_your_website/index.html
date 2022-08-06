@@ -76,7 +76,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
  <li>다음으로, <a href="https://github.com/join">GitHub 계정을 위해 가입하세요</a>. 간단하고 쉽습니다.</li>
  <li>가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.</li>
  <li>그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, <em>New Repository </em>를 선택하세요.</li>
- <li>이 페이지에서, <em>Repository name</em> 박스 안에, <em>username</em>.github.io 를 입력하세요, <em>username</em> 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 <em>bobsmith.github.io </em>를 입력할 것입니다.<img alt="" src="https://mdn.mozillademos.org/files/9479/github-create-repo.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></li>
+ <li>이 페이지에서, <em>Repository name</em> 박스 안에, <em>username</em>.github.io 를 입력하세요, <em>username</em> 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 <em>bobsmith.github.io </em>를 입력할 것입니다.<img alt="" src="https://mdn.mozillademos.org/files/9479/github-create-repo.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></li>
  <li><em>Create repository</em> 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:<img alt="" src="https://mdn.mozillademos.org/files/9481/github-populate-repo.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></li>
 </ol>
 
@@ -98,44 +98,44 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
  <li><strong>리눅스</strong>: 보통 <em>Ctrl + Alt + T</em> 로 터미널을 꺼낼 수 있습니다. 만약 작동하지 않는다면 app 바 또는 메뉴에서 <strong>Terminal </strong>을 찾아보세요.</li>
 </ul>
 
-<p>처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.</p>
+<p>처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.</p>
 
 <ol>
- <li>커맨드 라인을 여러분의 <code>test-site</code> 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, <code>cd</code> 명령을 사용합니다 (말하자면 "<em>c</em>hange <em>d</em>irectory"). 여기 만약 <code>test-site</code> 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
+ <li>커맨드 라인을 여러분의 <code>test-site</code> 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, <code>cd</code> 명령을 사용합니다 (말하자면 "<em>c</em>hange <em>d</em>irectory"). 여기 만약 <code>test-site</code> 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
 
   <pre class="brush: bash">cd Desktop/test-site</pre>
  </li>
- <li>커맨드 라인이 여러분의 웹사이트 폴더 안을 가리킬 때, 그 폴더를 git repository 가 되도록 <code>git</code> 도구에게 알려주는 다음의 명령을 입력하세요:
+ <li>커맨드 라인이 여러분의 웹사이트 폴더 안을 가리킬 때, 그 폴더를 git repository 가 되도록 <code>git</code> 도구에게 알려주는 다음의 명령을 입력하세요:
   <pre class="brush: bash">git init</pre>
  </li>
- <li>다음으로, GitHub 사이트로 돌아가세요. 현재 페이지에서, you are interested in the section <em>…or push an existing repository from the command line</em>. 이 구역에 나열된 두 코드를 보게 되실 겁니다. 첫 번째 줄의 코드 전체를 복사하고, 커맨드 라인에 붙여넣은 다음, 엔터를 누르세요. 그 명령은 이렇게 보일 것입니다:
+ <li>다음으로, GitHub 사이트로 돌아가세요. 현재 페이지에서, you are interested in the section <em>…or push an existing repository from the command line</em>. 이 구역에 나열된 두 코드를 보게 되실 겁니다. 첫 번째 줄의 코드 전체를 복사하고, 커맨드 라인에 붙여넣은 다음, 엔터를 누르세요. 그 명령은 이렇게 보일 것입니다:
   <pre class="brush: bash">git remote add origin https://github.com/bobsmith/bobsmith.github.io.git</pre>
  </li>
- <li>다음으로, 다음 두 명령어를 입력하고, 각 명령마다 엔터를 누릅니다. 이것은 GitHub 에 코드를 올릴 준비를 하는 것이고, Git 에게 그 파일들을 관리하도록 요청합니다.
+ <li>다음으로, 다음 두 명령어를 입력하고, 각 명령마다 엔터를 누릅니다. 이것은 GitHub 에 코드를 올릴 준비를 하는 것이고, Git 에게 그 파일들을 관리하도록 요청합니다.
   <pre class="brush: bash">git add --all
 git commit -m "adding my files to my repository"</pre>
  </li>
- <li>마지막으로, GitHub 웹 페이지로 가서 3단계에서 봤던 두 개의 명령어중 두 번째 줄을 터미널에 입력하는 것으로 코드를 푸시합니다:
+ <li>마지막으로, GitHub 웹 페이지로 가서 3단계에서 봤던 두 개의 명령어중 두 번째 줄을 터미널에 입력하는 것으로 코드를 푸시합니다:
   <pre class="brush: bash">git push -u origin master</pre>
  </li>
- <li>이제 새 브라우저 탭 (<em>username.github.io</em>) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.</li>
+ <li>이제 새 브라우저 탭 (<em>username.github.io</em>) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.</li>
 </ol>
 
 <div class="note">
-<p><strong>노트</strong>: 만약 막히셨다면, <a href="https://pages.github.com/">GitHub Pages 홈페이지</a> 또한 아주 도움이 될 것입니다.</p>
+<p><strong>노트</strong>: 만약 막히셨다면, <a href="https://pages.github.com/">GitHub Pages 홈페이지</a> 또한 아주 도움이 될 것입니다.</p>
 </div>
 
 <h3 id="더_많은_GitHub_이해">더 많은 GitHub 이해</h3>
 
-<p>만약 여러분이 테스트 사이트에 더 많은 변화를 주고 GitHub에 그것들을 업로드하길 원하신다면, 이전에 하신것 처럼 간단하게 파일에 변화를 주면 됩니다. 그리고나서, GitHub에 변화를 푸시하기 위해 다음 명령어를 입력 (각 명령 다음에 엔터누르기) 해야 합니다:</p>
+<p>만약 여러분이 테스트 사이트에 더 많은 변화를 주고 GitHub에 그것들을 업로드하길 원하신다면, 이전에 하신것 처럼 간단하게 파일에 변화를 주면 됩니다. 그리고나서, GitHub에 변화를 푸시하기 위해 다음 명령어를 입력 (각 명령 다음에 엔터누르기) 해야 합니다:</p>
 
 <pre>git add --all
 git commit -m 'another commit'
 git push</pre>
 
-<p><em>another commit</em> 대신에 여러분이 막 변경했던 것을 설명할 수 있는 더 적합한 메시지로 바꾸세요.</p>
+<p><em>another commit</em> 대신에 여러분이 막 변경했던 것을 설명할 수 있는 더 적합한 메시지로 바꾸세요.</p>
 
-<p>우리는 Git 의 겉을 살짝 건드려 보았습니다. 더 많이 배우시려면, <a href="https://help.github.com/index.html">GitHub Help 사</a>이트 에서 시작하세요.</p>
+<p>우리는 Git 의 겉을 살짝 건드려 보았습니다. 더 많이 배우시려면, <a href="https://help.github.com/index.html">GitHub Help 사</a>이트 에서 시작하세요.</p>
 
 <h2 id="마무리">마무리</h2>
 
@@ -143,7 +143,7 @@ git push</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/9485/hosted-final-site.png" style="display: block; height: 1049px; margin: 0px auto; width: 878px;"></p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="더_읽을거리">더 읽을거리</h2>
 
@@ -152,12 +152,12 @@ git push</pre>
  <li><a href="/en-US/Learn/Understanding_domain_names">도메인 이름 이해하기</a></li>
  <li><a href="/en-US/Learn/How_much_does_it_cost">웹에서 무언가를 하기 위한 비용은 얼마나 들까요</a></li>
  <li><a href="https://www.codecademy.com/learn/deploy-a-website">Deploy a Website</a>: A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.</li>
- <li>Scott Murray 의 <a href="http://alignedleft.com/resources/cheap-web-hosting">Cheap or free static web hosting</a> 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다. </li>
+ <li>Scott Murray 의 <a href="http://alignedleft.com/resources/cheap-web-hosting">Cheap or free static web hosting</a> 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다. </li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -172,6 +172,6 @@ git push</pre>
  <li id="How_the_web_works"><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></li>
 </ul>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>

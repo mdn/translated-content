@@ -73,8 +73,8 @@ div {
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+    <div class="box">Sample</div>
 </body>
 ```
 
@@ -116,8 +116,8 @@ This is treated as if it were:
 
 ```css
 div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }
 ```
 
@@ -208,7 +208,7 @@ JavaScript を使用して、ある場所にボールを移動させる効果を
 var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
 ```
 

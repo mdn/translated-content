@@ -12,4 +12,4 @@ translation_of: Glossary/PNG
 
 ### 基礎知識
 
-- 維基百科上的  [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
+- 維基百科上的  [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)

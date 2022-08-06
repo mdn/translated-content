@@ -55,7 +55,7 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 
 <p>前の記事では歴史的に、ウェブフォームのスタイル設定は OS で行われており、それがこのコントロールの見た目のカスタマイズの問題の一部となっていました。</p>
 
-<p>{{cssxref("appearance")}} プロパティは OS やシステムレベルでウェブフォームのスタイル設定を制御する方法として作成されました。不運なことに、そのプロパティの元々の実装の動作はブラウザー間で大きく異なっており、そんなに便利ではありませんでした。最近の実装ではもっと動作が一貫してきており、十分興味深く、それは Chromium-ベースのブラウザー (Chrome, Opera, Edge), Safari, Firefox のいずれも <code>-webkit-</code>  のプレフィックスつきバージョン (<code>-webkit-appearance</code>)をサポートしています。Firefox は、ウェブ開発者の大半が <code>-webkit-</code> プレフィックスバージョンをサポート使っていて互換性が良いため、このように決めました。</p>
+<p>{{cssxref("appearance")}} プロパティは OS やシステムレベルでウェブフォームのスタイル設定を制御する方法として作成されました。不運なことに、そのプロパティの元々の実装の動作はブラウザー間で大きく異なっており、そんなに便利ではありませんでした。最近の実装ではもっと動作が一貫してきており、十分興味深く、それは Chromium-ベースのブラウザー (Chrome, Opera, Edge), Safari, Firefox のいずれも <code>-webkit-</code>  のプレフィックスつきバージョン (<code>-webkit-appearance</code>)をサポートしています。Firefox は、ウェブ開発者の大半が <code>-webkit-</code> プレフィックスバージョンをサポート使っていて互換性が良いため、このように決めました。</p>
 
 <p>リファレンスページを見ると <code>-webkit-appearance</code> の多くの値がありますが、最も便利で、おそらく唯一使うのは <code>none</code> です。これはあらゆるコントロールがシステムレベルのスタイル設定するのをできるだけ防止して、CSS を用いた独自のスタイル設定をできるようにします。</p>
 
@@ -276,7 +276,7 @@ input[type=checkbox]:disabled {
 
 <h2 id="劣悪な要素に何ができるか">"劣悪な"要素に何ができるか?</h2>
 
-<p>今度は"劣悪な"コントロールに注目しましょう — これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、<code><a href="/ja/docs/Web/HTML/Element/input/color">color</a></code> や <code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> のような複合コントロールタイプ、フィードバック —  {{HTMLElement("progress")}} や {{HTMLElement("meter")}}のような指向性コントロールです。</p>
+<p>今度は"劣悪な"コントロールに注目しましょう — これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、<code><a href="/ja/docs/Web/HTML/Element/input/color">color</a></code> や <code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> のような複合コントロールタイプ、フィードバック —  {{HTMLElement("progress")}} や {{HTMLElement("meter")}}のような指向性コントロールです。</p>
 
 <p>問題は、要素はブラウザー同士でいろいろな既定の見た目があって、それにスタイル設定できても、内部のいくつかはスタイル設定できないことです。</p>
 
@@ -530,7 +530,7 @@ label[for="file"]:active {
 
 <p>このガイドの次の記事では、モダンブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな <a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>を見ていきます。</p>
 
-<p>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}} </p>
+<p>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}} </p>
 
 <h2 id="In_this_module" name="In_this_module">このモジュール</h2>
 

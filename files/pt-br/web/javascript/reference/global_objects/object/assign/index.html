@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
  <dt><code>destino</code></dt>
  <dd>O objeto <em>destino</em>.</dd>
  <dt><code>origens</code></dt>
- <dd>Um ou mais objetos de <em>origem</em>.</dd>
+ <dd>Um ou mais objetos de <em>origem</em>.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -39,13 +39,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>Object.assign()</code> copia apenas propriedades <em>enumeráveis</em><em> </em>e<em> próprias</em> de um objeto <em>de origem</em> para um objeto destino. Ele usa <code>[[Get]]</code> na origem e <code>[[Put]]</code> no <em>destino</em>, então isto irá invocar <em>getters</em> e <em>setters</em>.</p>
+<p>O método <code>Object.assign()</code> copia apenas propriedades <em>enumeráveis</em><em> </em>e<em> próprias</em> de um objeto <em>de origem</em> para um objeto destino. Ele usa <code>[[Get]]</code> na origem e <code>[[Put]]</code> no <em>destino</em>, então isto irá invocar <em>getters</em> e <em>setters</em>.</p>
 
-<p>Portanto, ele <em>atribui</em> propriedades, em vez de simplesmente copiar ou definir novas propriedades. Isso pode fazê-lo impróprio para combinar novas propriedades com um <em>prototype</em> se os objetos <em>de origem</em> contiverem getters. Para copiar definições de propriedades, incluindo sua enumerabilidade, para <em>prototypes</em> {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.defineProperty()")}} devem ser utilizadas no lugar.</p>
+<p>Portanto, ele <em>atribui</em> propriedades, em vez de simplesmente copiar ou definir novas propriedades. Isso pode fazê-lo impróprio para combinar novas propriedades com um <em>prototype</em> se os objetos <em>de origem</em> contiverem getters. Para copiar definições de propriedades, incluindo sua enumerabilidade, para <em>prototypes</em> {{jsxref("Object.getOwnPropertyDescriptor()")}} e {{jsxref("Object.defineProperty()")}} devem ser utilizadas no lugar.</p>
 
-<p>Ambas as propriedades {{jsxref("String")}} e {{jsxref("Symbol")}} são copiadas.</p>
+<p>Ambas as propriedades {{jsxref("String")}} e {{jsxref("Symbol")}} são copiadas.</p>
 
-<p>No caso de erro, por exemplo, se uma propriedade não é <em>writable</em>, um {{jsxref("TypeError")}} será lançado e o objeto <em>destino</em> permanecerá inalterado. Note que <code>Object.assign()</code> não lança erros caso algum argumento <em>source</em> seja {{jsxref("null")}} ou {{jsxref("undefined")}}.</p>
+<p>No caso de erro, por exemplo, se uma propriedade não é <em>writable</em>, um {{jsxref("TypeError")}} será lançado e o objeto <em>destino</em> permanecerá inalterado. Note que <code>Object.assign()</code> não lança erros caso algum argumento <em>source</em> seja {{jsxref("null")}} ou {{jsxref("undefined")}}.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -173,7 +173,7 @@ console.log(copy);
         if (nextSource === undefined || nextSource === null) {
           continue;
         }
-        nextSource = Object(nextSource);
+        nextSource = Object(nextSource);
 
         var keysArray = Object.keys(Object(nextSource));
         for (var nextIndex = 0, len = keysArray.length; nextIndex &lt; len; nextIndex++) {

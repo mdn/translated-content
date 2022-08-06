@@ -21,7 +21,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 <pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>Como siempre, necesitamos un entorno para dibujar. Para dibujar la bola, creamos un contenido <code>ball</code> lo cual contiene propiedades y un método <code>draw()</code>.</p>
+<p>Como siempre, necesitamos un entorno para dibujar. Para dibujar la bola, creamos un contenido <code>ball</code> lo cual contiene propiedades y un método <code>draw()</code>.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -89,13 +89,13 @@ ball.draw();
 
 <h2 id="Límites">Límites</h2>
 
-<p>Si no probamos los límites, de repente nuestra bola se agota el canvas. Necesitamos verificar si las posiciones <code>x</code> e <code>y</code> están fuera de las dimensiones del canvas y invertir la direción de los vectores de velocidad. Para hacer eso, agregamos los siguentes pasos al método <code>draw</code>:</p>
+<p>Si no probamos los límites, de repente nuestra bola se agota el canvas. Necesitamos verificar si las posiciones <code>x</code> e <code>y</code> están fuera de las dimensiones del canvas y invertir la direción de los vectores de velocidad. Para hacer eso, agregamos los siguentes pasos al método <code>draw</code>:</p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }</pre>
 
 <h3 id="Primera_demo">Primera demo</h3>
@@ -291,7 +291,7 @@ ball.draw();</pre>
 
 <h2 id="Agregar_control_de_ratón">Agregar control de ratón</h2>
 
-<p>Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>, por ejemplo. El evento <code><a href="/en-US/docs/Web/Events/click">click</a></code> solta la bola y la deja rebotar de nuevo.</p>
+<p>Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>, por ejemplo. El evento <code><a href="/en-US/docs/Web/Events/click">click</a></code> solta la bola y la deja rebotar de nuevo.</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -369,7 +369,7 @@ ball.draw();
 
 <h2 id="Breakout">Breakout</h2>
 
-<p>Este capítulo corto sólo explica algunas técnicas para crear animaciones más avanzadas. ¡Hay muchos más!  ¿Qué tal agregar una raqueta, algunos ladrillos, y convertir esta demo en un partido <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a>? Visita nuestra área de <a href="/en-US/docs/Games">Game development</a> para mayor información.</p>
+<p>Este capítulo corto sólo explica algunas técnicas para crear animaciones más avanzadas. ¡Hay muchos más!  ¿Qué tal agregar una raqueta, algunos ladrillos, y convertir esta demo en un partido <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a>? Visita nuestra área de <a href="/en-US/docs/Games">Game development</a> para mayor información.</p>
 
 <h2 id="Vea_también">Vea también</h2>
 

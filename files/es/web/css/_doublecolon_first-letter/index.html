@@ -10,7 +10,7 @@ translation_of: 'Web/CSS/::first-letter'
 ---
 <div>{{CSSRef}}</div>
 
-<p>El <a href="/en-US/docs/Web/CSS/Pseudo-elements" rel="noopener">pseudo-elemento</a> <strong><code>::first-letter</code></strong> aplica estilos a la primera letra de la primera línea un <a href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements">elemento de bloque</a>, sólo cuando no es precedido de otro contenido (como imágenes o tablas).</p>
+<p>El <a href="/en-US/docs/Web/CSS/Pseudo-elements" rel="noopener">pseudo-elemento</a> <strong><code>::first-letter</code></strong> aplica estilos a la primera letra de la primera línea un <a href="https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements">elemento de bloque</a>, sólo cuando no es precedido de otro contenido (como imágenes o tablas).</p>
 
 <pre class="brush: css no-line-numbers notranslate">/* Selecciona la primera letra de &lt;p&gt; */
 p::first-letter {
@@ -20,27 +20,27 @@ p::first-letter {
 <p>La primera letra de un elemento no es siempre fácil de identificar:</p>
 
 <ul>
- <li>La puntuación que precede o sigue inmediatamente a la primera letra se incluye. La puntuación incluyo cualquier caracter Unicode definido on las clases <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), y <em>other punctuation</em> (Po).</li>
+ <li>La puntuación que precede o sigue inmediatamente a la primera letra se incluye. La puntuación incluyo cualquier caracter Unicode definido on las clases <em>open</em> (Ps), <em>close</em> (Pe), <em>initial quote</em> (Pi), <em>final quote</em> (Pf), y <em>other punctuation</em> (Po).</li>
  <li>Algunos idiomas tienen dígrafos que siempre se capitalizan juntos, como el <code>IJ</code> en holandés. En estos casos, ambas letras del dígrafo deben coincidir con el pseudo-elemento <code>::first-letter</code>. (Esto pobremente implementado en los navegadores; consulte la tabla de compatibilidad).</li>
  <li>La combinación del pseudoelemento {{ cssxref("::before") }} y la propiedad {{ cssxref("content") }} podría inyectar texto al inico del elemento. En dicho caso, <code>::first-letter</code> se aplicaría a la primera letra de este contenido generado.</li>
 </ul>
 
 <div class="note">
-<p>CSS3 introdujo la notación<code>::first-letter</code> (con doble dos puntos) para distinguir <a href="/en-US/docs/Web/CSS/Pseudo-classes" rel="noopener">pseudo-clases</a> de <a href="/en-US/docs/Web/CSS/Pseudo-elements" rel="noopener">pseudo-elementos</a>. Los navegadores también aceptan<code>:first-letter</code>, introducido en CSS2.</p>
+<p>CSS3 introdujo la notación<code>::first-letter</code> (con doble dos puntos) para distinguir <a href="/en-US/docs/Web/CSS/Pseudo-classes" rel="noopener">pseudo-clases</a> de <a href="/en-US/docs/Web/CSS/Pseudo-elements" rel="noopener">pseudo-elementos</a>. Los navegadores también aceptan<code>:first-letter</code>, introducido en CSS2.</p>
 </div>
 
 <h2 id="Propiedades_permitidas">Propiedades permitidas</h2>
 
-<p>Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento <code>::first-letter</code>:</p>
+<p>Sólo unas pocas propiedades de CSS se pueden usar con el pseudoelemento <code>::first-letter</code>:</p>
 
 <ul>
  <li>Todas las propiedades de fuente: {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} and {{ Cssxref("font-family") }}</li>
  <li>Todas las propiedades de fondo: {{ Cssxref("background") }}, {{ Cssxref("background-color") }}, {{ Cssxref("background-image") }}, {{cssxref("background-clip")}}, {{cssxref("background-origin")}}, {{ Cssxref("background-position") }}, {{ Cssxref("background-repeat") }}, {{ cssxref("background-size") }}, {{ Cssxref("background-attachment") }}, and {{cssxref("background-blend-mode")}}</li>
  <li>Todas las propiedades de márgenes: {{ Cssxref("margin") }}, {{ Cssxref("margin-top") }}, {{ Cssxref("margin-right") }}, {{ Cssxref("margin-bottom") }}, {{ Cssxref("margin-left") }}</li>
  <li>Todas las propiedades de relleno: {{ Cssxref("padding") }}, {{ Cssxref("padding-top") }}, {{ Cssxref("padding-right") }}, {{ Cssxref("padding-bottom") }}, {{ Cssxref("padding-left") }}</li>
- <li>Todas las propiedades de bordes: {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}</li>
- <li>La propiedad {{ cssxref("color") }}</li>
- <li>Las propiedades {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (sólo si <code>float</code> es <code>none</code>)</li>
+ <li>Todas las propiedades de bordes: {{ Cssxref("border") }}, {{ Cssxref("border-style") }}, {{ Cssxref("border-color") }}, {{ cssxref("border-width") }}, {{ cssxref("border-radius") }}, {{cssxref("border-image")}}</li>
+ <li>La propiedad {{ cssxref("color") }}</li>
+ <li>Las propiedades {{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (when appropriate), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} (sólo si <code>float</code> es <code>none</code>)</li>
 </ul>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -100,12 +100,12 @@ p::first-letter {
   <tr>
    <td>{{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow with ::first-letter')}}</td>
    <td>{{ Spec2('CSS3 Text Decoration')}}</td>
-   <td>Permite el uso de {{cssxref("text-shadow")}} con <code>::first-letter</code>.</td>
+   <td>Permite el uso de {{cssxref("text-shadow")}} con <code>::first-letter</code>.</td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS3 Selectors', '#first-letter', '::first-letter') }}</td>
    <td>{{ Spec2('CSS3 Selectors') }}</td>
-   <td>Introducción de la sintaxis de doble dos puntos. Definición de casos particulares, como con idiomas específicos (ej., el dígrafo holandés <code>IJ</code>).</td>
+   <td>Introducción de la sintaxis de doble dos puntos. Definición de casos particulares, como con idiomas específicos (ej., el dígrafo holandés <code>IJ</code>).</td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter') }}</td>

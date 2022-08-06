@@ -69,9 +69,9 @@ translation_of: Web/Security
 クリックジャックでは、ユーザーがだまされて、ユーザーが期待するもの以外のアクションを実行する UI 要素をクリックします。
 
 - [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーが [`<frame>`](/ja/docs/Web/HTML/Element/frame), [`<iframe>`](/ja/docs/Web/HTML/Element/iframe), [`<embed>`](/ja/docs/Web/HTML/Element/embed), [`<object>`](/ja/docs/Web/HTML/Element/object) でページをレンダリングできるかどうかを示すことができます。サイトはこれを使用してコンテンツが他のサイトに埋め込まれないようにすることで、クリックジャッキング攻撃を回避できます。
+  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーが [`<frame>`](/ja/docs/Web/HTML/Element/frame), [`<iframe>`](/ja/docs/Web/HTML/Element/iframe), [`<embed>`](/ja/docs/Web/HTML/Element/embed), [`<object>`](/ja/docs/Web/HTML/Element/object) でページをレンダリングできるかどうかを示すことができます。サイトはこれを使用してコンテンツが他のサイトに埋め込まれないようにすることで、クリックジャッキング攻撃を回避できます。
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} を使用して、ページを埋め込むことができる有効な親を指定します。
+  - : HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} を使用して、ページを埋め込むことができる有効な親を指定します。
 
 ## ユーザー情報セキュリティ
 

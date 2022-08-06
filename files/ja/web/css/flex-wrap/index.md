@@ -3,9 +3,9 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 tags:
   - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
+  - CSS Flexible Boxes
+  - CSS Property
+  - Reference
   - recipe:css-property
 browser-compat: css.properties.flex-wrap
 translation_of: Web/CSS/flex-wrap
@@ -29,6 +29,7 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: revert;
+flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
@@ -88,26 +89,26 @@ flex-wrap: unset;
 .content1,
 .content2 {
   color: #fff;
-  font: 100 24px/100px sans-serif;
+  font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
-  text-align: center;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-  height: 50%;
-  width: 300px;
+  height: 50%;
+  width: 300px;
 }
 .red {
-  background: orangered;
+  background: orangered;
 }
 .green {
-  background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-  background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
@@ -116,18 +117,18 @@ flex-wrap: unset;
   flex-wrap: wrap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## 仕様書
 

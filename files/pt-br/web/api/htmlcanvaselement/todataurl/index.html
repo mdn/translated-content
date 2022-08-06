@@ -14,11 +14,11 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 </div>
 </div>
 
-<p>O método <strong><code>HTMLCanvasElement.toDataURL()</code></strong> retorna uma <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>, contendo uma representação da imagem no formato especificado pelo parâmetro <code>type</code> (por padrão, esse valor é <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). A resolução da imagem retornada é de 96 dpi.</p>
+<p>O método <strong><code>HTMLCanvasElement.toDataURL()</code></strong> retorna uma <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>, contendo uma representação da imagem no formato especificado pelo parâmetro <code>type</code> (por padrão, esse valor é <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). A resolução da imagem retornada é de 96 dpi.</p>
 
 <ul>
- <li>Se a altura ou largura do canvas for <code>0</code>, será retornada a string <code>"data:,"</code>.</li>
- <li>Se o tipo solicitado não for <code>image/png</code>, mas o valor retornado começa com <code>data:image/png</code>, então o tipo da requisição não é suportado.</li>
+ <li>Se a altura ou largura do canvas for <code>0</code>, será retornada a string <code>"data:,"</code>.</li>
+ <li>Se o tipo solicitado não for <code>image/png</code>, mas o valor retornado começa com <code>data:image/png</code>, então o tipo da requisição não é suportado.</li>
  <li>O Chrome também suporta o tipo <code>image/webp</code>.</li>
 </ul>
 
@@ -31,19 +31,19 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 
 <dl>
  <dt><code>type</code> {{optional_inline}}</dt>
- <dd>Uma {{domxref("DOMString")}} indicando o formato da imagem. Por padrão, o formato definido é <code>image/png</code>.</dd>
+ <dd>Uma {{domxref("DOMString")}} indicando o formato da imagem. Por padrão, o formato definido é <code>image/png</code>.</dd>
  <dt><code>encoderOptions</code> {{optional_inline}}</dt>
- <dd>Um {{jsxref("Number")}} entre <code>0</code> e <code>1</code>, indicando a qualidade da imagem solicitada pelo tipo <code>image/jpeg</code> ou <code>image/webp</code>.<br>
- Se esse argumento for outro valor que não de <code>0</code> a <code>1</code>, então o valor padrão (<code>0.92)</code> será usado. Outros valores serão ignorados.</dd>
+ <dd>Um {{jsxref("Number")}} entre <code>0</code> e <code>1</code>, indicando a qualidade da imagem solicitada pelo tipo <code>image/jpeg</code> ou <code>image/webp</code>.<br>
+ Se esse argumento for outro valor que não de <code>0</code> a <code>1</code>, então o valor padrão (<code>0.92)</code> será usado. Outros valores serão ignorados.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
 
-<p>Uma {{domxref("DOMString")}} contendo a <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> solicitada.</p>
+<p>Uma {{domxref("DOMString")}} contendo a <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> solicitada.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Dado este elemento {{HTMLElement("canvas")}}:</p>
+<p>Dado este elemento {{HTMLElement("canvas")}}:</p>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="5" height="5"&gt;&lt;/canvas&gt;
 </pre>
@@ -67,7 +67,7 @@ var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 
 <h3 id="Example_Dynamically_change_images" name="Example:_Dynamically_change_images">Exemplo: Alterando imagens dinamicamente</h3>
 
-<p>Você poderá utilizar esta técnica em associação com os eventos do mouse para alterar dinamicamente uma imagem (escala de cinza vs. cor, neste exemplo):</p>
+<p>Você poderá utilizar esta técnica em associação com os eventos do mouse para alterar dinamicamente uma imagem (escala de cinza vs. cor, neste exemplo):</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -151,5 +151,5 @@ function removeColors() {
 
 <ul>
  <li>A interface que a define, {{domxref("HTMLCanvasElement")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> na referência <a href="/en-US/docs/Web/HTTP">HTTP</a>.</li>
+ <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> na referência <a href="/en-US/docs/Web/HTTP">HTTP</a>.</li>
 </ul>

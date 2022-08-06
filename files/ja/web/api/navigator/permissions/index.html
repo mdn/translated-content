@@ -26,12 +26,12 @@ translation_of: Web/API/Navigator/permissions
 <h2 id="Examples" name="Examples">例</h2>
 
 <pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(result) {
-  if (result.state === 'granted') {
-    showMap();
-  } else if (result.state === 'prompt') {
-    showButtonToEnableMap();
-  }
-  // パーミッションが拒否された場合は、何もしないでください。
+  if (result.state === 'granted') {
+    showMap();
+  } else if (result.state === 'prompt') {
+    showButtonToEnableMap();
+  }
+  // パーミッションが拒否された場合は、何もしないでください。
 });
 </pre>
 

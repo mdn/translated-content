@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Proxy-Authorization
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP <strong><code>Proxy-Authorization</code></strong> リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} <code>Proxy Authentication Required</code> ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。</p>
+<p>HTTP <strong><code>Proxy-Authorization</code></strong> リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} <code>Proxy Authentication Required</code> ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。</p>
 
 <table class="properties">
  <tbody>
@@ -33,7 +33,7 @@ translation_of: Web/HTTP/Headers/Proxy-Authorization
  <dd>"Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
  <ul>
   <li>コロンで結合したユーザー名とパスワード (<code>aladdin:opensesame</code>)。</li>
-  <li>結果の文字列は <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64</a> でエンコードされます (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
+  <li>結果の文字列は <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64</a> でエンコードされます (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
  </ul>
 
  <div class="note">

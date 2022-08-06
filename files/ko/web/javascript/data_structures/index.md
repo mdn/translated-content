@@ -57,7 +57,7 @@ Null 타입은 `null` 하나의 값만 가질 수 있습니다. {{glossary("Null
 
 ECMAScript는 **Number**와 **BigInt** 두 가지의 내장 숫자 타입을 가지고 있습니다. (BigInt는 아래를 보세요)
 
-Number 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)(-(2^53 − 1)부터 2^53 − 1까지의 수)입니다. Number 타입은 부동소수점 숫자 외에도 `+Infinity`, `-Infinity`, {{jsxref("NaN")}}("**N**ot a **N**umber") 세 개의 상징적인 값을 가집니다.
+Number 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)(-(2^53 − 1)부터 2^53 − 1까지의 수)입니다. Number 타입은 부동소수점 숫자 외에도 `+Infinity`, `-Infinity`, {{jsxref("NaN")}}("**N**ot a **N**umber") 세 개의 상징적인 값을 가집니다.
 
 {{jsxref("Infinity", "±Infinity")}} 범위 내에서 가능한 가장 크거나 작은 수를 확인하려면 {{jsxref("Number.MAX_VALUE")}}와 {{jsxref("Number.MIN_VALUE")}} 상수를 사용할 수 있습니다.
 
@@ -306,10 +306,10 @@ JavaScript 객체는 키와 값 사이의 맵핑입니다. 키는 문자열 또�
 | {{jsxref("Uint16Array")}}       | `0` ~ `65535`                | 2           | 16비트 부호 없는 정수                                            | `unsigned short`      | `uint16_t`                      |
 | {{jsxref("Int32Array")}}        | `-2147483648` ~ `2147483647` | 4           | 32비트 2의 보수 부호 있는 정수                                   | `long`                | `int32_t`                       |
 | {{jsxref("Uint32Array")}}       | `0` ~ `4294967295`           | 4           | 32비트 부호 없는 정수                                            | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `1.2E-38` ~ `3.4E38`         | 4           | 32비트 IEEE 부동소수점 실수 (7개의 유효숫자, e.g. `1.1234567`)   | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `5E-324` ~ `1.8E308`         | 8           | 64비트 IEEE 부동소수점 실수 (16개의 유효숫자, e.g. `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | `-2^63` ~ `2^63 - 1`         | 8           | 64비트 2의 보수 부호 있는 정수                                   | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | `0` ~ `2^64 - 1`             | 8           | 64비트 부호 없는 정수                                            | `bigint`              | `uint64_t (unsigned long long)` |
+| {{jsxref("Float32Array")}}      | `1.2E-38` ~ `3.4E38`         | 4           | 32비트 IEEE 부동소수점 실수 (7개의 유효숫자, e.g. `1.1234567`)   | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `5E-324` ~ `1.8E308`         | 8           | 64비트 IEEE 부동소수점 실수 (16개의 유효숫자, e.g. `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | `-2^63` ~ `2^63 - 1`         | 8           | 64비트 2의 보수 부호 있는 정수                                   | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}    | `0` ~ `2^64 - 1`             | 8           | 64비트 부호 없는 정수                                            | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### 키 컬렉션: Map, Set, WeakMap, WeakSet
 

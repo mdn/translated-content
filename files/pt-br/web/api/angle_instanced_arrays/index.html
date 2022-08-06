@@ -10,14 +10,14 @@ translation_of: Web/API/ANGLE_instanced_arrays
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p>A extenção <code><strong>ANGLE_instanced_arrays</strong></code> é parte do <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> e permite desenhar o mesmo objeto, ou grupos de objectos semelhantes várias vezes, se eles compartilham os mesmos dados de vértice, contagem primitiva e tipo.</p>
+<p>A extenção <code><strong>ANGLE_instanced_arrays</strong></code> é parte do <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> e permite desenhar o mesmo objeto, ou grupos de objectos semelhantes várias vezes, se eles compartilham os mesmos dados de vértice, contagem primitiva e tipo.</p>
 
-<p>As extensões WebGL estão disponíveis usando o método {{domxref("WebGLRenderingContext.getExtension()")}}. Para mais informações, veja também <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Usando Extenções</a> no <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+<p>As extensões WebGL estão disponíveis usando o método {{domxref("WebGLRenderingContext.getExtension()")}}. Para mais informações, veja também <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Usando Extenções</a> no <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
 
 <div class="note">
-<p><strong>Disponibilidade:</strong> Esta extenção só está disponível para contextos {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}}. Em {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, a funcionalidade desta extenção está disponível no contexto WebGL2 por padrão e as constantes e métodos estao disponíveis sem o sufixo "<code>ANGLE</code>".</p>
+<p><strong>Disponibilidade:</strong> Esta extenção só está disponível para contextos {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}}. Em {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, a funcionalidade desta extenção está disponível no contexto WebGL2 por padrão e as constantes e métodos estao disponíveis sem o sufixo "<code>ANGLE</code>".</p>
 
-<p>Apesar do nome "ANGLE", esta extenção funciona em qualquer dispositivo se o hardware oferece suporte a ele e não apenas no Windows ao usar a biblioteca ANGLE. "ANGLE" apenas indica que essa extencão foi escrita pelos autores da biblioteca ANGLE.</p>
+<p>Apesar do nome "ANGLE", esta extenção funciona em qualquer dispositivo se o hardware oferece suporte a ele e não apenas no Windows ao usar a biblioteca ANGLE. "ANGLE" apenas indica que essa extencão foi escrita pelos autores da biblioteca ANGLE.</p>
 </div>
 
 <h2 id="Constantes">Constantes</h2>
@@ -26,17 +26,17 @@ translation_of: Web/API/ANGLE_instanced_arrays
 
 <dl>
  <dt><code>ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE</code></dt>
- <dd>Retorna um {{domxref("GLint")}} descrevendo o divisor de frequência usado para renderização instanciada quando usado no {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} como parâmetro <code>pname</code>.</dd>
+ <dd>Retorna um {{domxref("GLint")}} descrevendo o divisor de frequência usado para renderização instanciada quando usado no {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} como parâmetro <code>pname</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p>Essa extensão expõe três novos métodos.</p>
+<p>Essa extensão expõe três novos métodos.</p>
 
 <dl>
  <dt>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}</dt>
  <dd>
- <p>Se comporta de forma idêntica a {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} exceto que múltiplo instâncias do intervalo de elementos são executadas e a instância avança para cada iteração.</p>
+ <p>Se comporta de forma idêntica a {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} exceto que múltiplo instâncias do intervalo de elementos são executadas e a instância avança para cada iteração.</p>
  </dd>
  <dt>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}</dt>
  <dd>

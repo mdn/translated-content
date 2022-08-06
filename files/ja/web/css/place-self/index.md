@@ -103,10 +103,10 @@ place-self: unset;
 
 ```html
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
-  <span>Fourth</span>
+  <span>First</span>
+  <span>Second</span>
+  <span>Third</span>
+  <span>Fourth</span>
 </article>
 ```
 

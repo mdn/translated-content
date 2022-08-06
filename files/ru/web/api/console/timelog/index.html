@@ -5,9 +5,9 @@ translation_of: Web/API/Console/timeLog
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<div>Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.</div>
+<div>Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.</div>
 
-<p>Подробности и примеры смотрите в документации <a href="/en-US/docs/Web/API/console#Timers">Timers</a>.</p>
+<p>Подробности и примеры смотрите в документации <a href="/en-US/docs/Web/API/console#Timers">Timers</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -29,13 +29,13 @@ translation_of: Web/API/Console/timeLog
 
 <pre>default: 1042ms</pre>
 
-<p>Если в параметре <code>label</code> указано имя существующего таймера:</p>
+<p>Если в параметре <code>label</code> указано имя существующего таймера:</p>
 
 <pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">timer name: 1242ms</span></span></span></span></pre>
 
 <h3 id="Исключения">Исключения</h3>
 
-<p>При отсутствии запущенного таймера по умолчанию <code>timeLog()</code> выводит предупреждение:</p>
+<p>При отсутствии запущенного таймера по умолчанию <code>timeLog()</code> выводит предупреждение:</p>
 
 <pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Timer “default” doesn’t exist.</span></span></span></pre>
 
@@ -52,11 +52,11 @@ alert("Делаем кучу другой работы...");
 console.timeEnd("answer time");
 </pre>
 
-<p>Отчёт таймера начинается с момента вызова <code>console.time()</code>. Сначала выводится время от начала отсчёта до закрытия первого уведомления. Затем выводится время с начала отсчёта до закрытия второго уведомления:</p>
+<p>Отчёт таймера начинается с момента вызова <code>console.time()</code>. Сначала выводится время от начала отсчёта до закрытия первого уведомления. Затем выводится время с начала отсчёта до закрытия второго уведомления:</p>
 
 <p><img alt="timerresult.png" class="default internal" src="https://mdn.mozillademos.org/files/16113/console-timeLog.png" style="border: 1px solid black; height: 102px; margin: 0 auto; width: 318px;"></p>
 
-<p>Обратите внимание, имя таймера печатается как при вызовах <code>timeLog()</code> , так и при завершении таймера.</p>
+<p>Обратите внимание, имя таймера печатается как при вызовах <code>timeLog()</code> , так и при завершении таймера.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

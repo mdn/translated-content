@@ -109,9 +109,9 @@ translation_of: Web/HTML/Attributes/rel
     <link rel="icon" href="favicon.ico">
     ```
 
-    複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](media) 属性、[`type`](type) 属性、 [`sizes`](sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
+    複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](media) 属性、[`type`](type) 属性、 [`sizes`](sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
 
-    > **Note:** Firefox 83 以前は [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `rel="icon"` で対応していませんでしたが、 [Chrome でも未解決の問題があります](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > **Note:** Firefox 83 以前は [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `rel="icon"` で対応していませんでしたが、 [Chrome でも未解決の問題があります](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
     > **Note:** Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](sizes) 属性を使用していません。代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 

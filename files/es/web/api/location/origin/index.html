@@ -11,12 +11,12 @@ translation_of: Web/API/Location/origin
 ---
 <p>{{APIRef("Location")}}</p>
 
-<p><span class="seoSummary">La propiedad de sólo-lectura <strong><code>origin</code></strong> de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa</span>; que es:</p>
+<p><span class="seoSummary">La propiedad de sólo-lectura <strong><code>origin</code></strong> de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa</span>; que es:</p>
 
 <ul>
- <li>para una URL que usa <code>http</code> o <code>https</code>, el esquema seguido de <code>'://'</code>, seguido del dominio, seguido de <code>':'</code>, seguido del puerto (el puerto por defecto, <code>80</code> y <code>443</code> respectivamente, si se indica de forma explícita);</li>
- <li>para una URL que usa <code>file:</code> esquema, el valor es independiente del navegador;</li>
- <li>para una URL que usa <code>blob:</code> esquema, el origen de la URL seguido de <code>blob:</code>. Ej. <code>"blob:https://mozilla.org"</code> tendrá <code>"https://mozilla.org".</code></li>
+ <li>para una URL que usa <code>http</code> o <code>https</code>, el esquema seguido de <code>'://'</code>, seguido del dominio, seguido de <code>':'</code>, seguido del puerto (el puerto por defecto, <code>80</code> y <code>443</code> respectivamente, si se indica de forma explícita);</li>
+ <li>para una URL que usa <code>file:</code> esquema, el valor es independiente del navegador;</li>
+ <li>para una URL que usa <code>blob:</code> esquema, el origen de la URL seguido de <code>blob:</code>. Ej. <code>"blob:https://mozilla.org"</code> tendrá <code>"https://mozilla.org".</code></li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>

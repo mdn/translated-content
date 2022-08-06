@@ -32,5 +32,5 @@ Peu de temps après avoir inventé le web, Tim Berners-Lee a fondé le {{Glossar
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "World Wide Web")}} sur Wikipédia
+- [<i lang="en">World Wide Web</i>](https://fr.wikipedia.org/wiki/World_Wide_Web) sur Wikipédia
 - [Le site web du W3C](http://w3.org)

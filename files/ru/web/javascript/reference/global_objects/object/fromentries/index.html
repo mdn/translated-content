@@ -29,11 +29,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Новый объект, свойства которого задаются записями iterable.</p>
+<p>Новый объект, свойства которого задаются записями iterable.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Метод <code>Object.fromEntries()</code> принимает список пар ключ-значение и возвращает новый объект, свойства которого задаются этими записями. Ожидается, что аргумент <em>iterable </em>будет объектом, который реализует метод <code>@@iterator</code>, который возвращает объект итератора, который создаёт двухэлементный массивоподобный объект, первый элемент которого является значением, которое будет использоваться в качестве ключа свойства, а второй элемент — значением связанного с этим ключом свойства.</p>
+<p>Метод <code>Object.fromEntries()</code> принимает список пар ключ-значение и возвращает новый объект, свойства которого задаются этими записями. Ожидается, что аргумент <em>iterable </em>будет объектом, который реализует метод <code>@@iterator</code>, который возвращает объект итератора, который создаёт двухэлементный массивоподобный объект, первый элемент которого является значением, которое будет использоваться в качестве ключа свойства, а второй элемент — значением связанного с этим ключом свойства.</p>
 
 <p><code>Object.fromEntries()</code> выполняет процедуру, обратную {{jsxref("Object.entries()")}}.</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 <h3 id="Преобразование_Map_в_Object">Преобразование <code>Map</code> в <code>Object</code></h3>
 
-<p>С <code>Object.fromEntries</code> вы можете преобразовать {{jsxref("Map")}} в {{jsxref("Object")}}:</p>
+<p>С <code>Object.fromEntries</code> вы можете преобразовать {{jsxref("Map")}} в {{jsxref("Object")}}:</p>
 
 <pre class="brush: js">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
@@ -50,7 +50,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 
 <h3 id="Преобразование_Array_в_Object">Преобразование <code>Array</code> в <code>Object</code></h3>
 
-<p>С <code>Object.fromEntries</code> вы можете преобразовать {{jsxref("Array")}} в {{jsxref("Object")}}:</p>
+<p>С <code>Object.fromEntries</code> вы можете преобразовать {{jsxref("Array")}} в {{jsxref("Object")}}:</p>
 
 <pre class="brush: js">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
@@ -59,7 +59,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 <h3 id="Трансформации_объектов">Трансформации объектов</h3>
 
-<p>С <code>Object.fromEntries</code>, обратным ему методом {{jsxref("Object.entries()")}} и <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">методами манипулирования массивами</a> вы можете преобразовывать объекты следующим образом:</p>
+<p>С <code>Object.fromEntries</code>, обратным ему методом {{jsxref("Object.entries()")}} и <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">методами манипулирования массивами</a> вы можете преобразовывать объекты следующим образом:</p>
 
 <pre class="brush: js">const object1 = { a: 1, b: 2, c: 3 };
 

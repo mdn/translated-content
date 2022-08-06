@@ -5,10 +5,10 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
 <div>{{APIRef}}</div>
 
-<p>La propiedad <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineCap</code></strong> del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.</p>
+<p>La propiedad <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineCap</code></strong> del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.</p>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.</p>
+<p><strong>Nota:</strong> La líneas se puede dibujar con los métodos {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, y {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -57,9 +57,9 @@ ctx.stroke();
 
 <h3 id="Comparando_los_finales_de_línea">Comparando los finales de línea</h3>
 
-<p>En este ejemplo se dibujan 3 líneas, cada una con un valor distinto de la propiedad <code>lineCap</code>. Se agregaron dos guías para resaltar las diferencias entre las tres líneas. Cada una de estas líneas empiezan y terminan en estas guías.</p>
+<p>En este ejemplo se dibujan 3 líneas, cada una con un valor distinto de la propiedad <code>lineCap</code>. Se agregaron dos guías para resaltar las diferencias entre las tres líneas. Cada una de estas líneas empiezan y terminan en estas guías.</p>
 
-<p>La línea de la izquiera usa la opción por defecto <code>"butt"</code>. Esta es dibujada completamente al ras de las líneas de guía. La segunda esta configurada para usar la opción <code>"round</code>. Esta agrega un semicírculo al final que tiene un radio de la mitad del grosor de línea. La línea de la derecha use la opción <code>"square"</code>. Esta agrega un cuadrado con ancho y altura de la mitad del grosor de línea.</p>
+<p>La línea de la izquiera usa la opción por defecto <code>"butt"</code>. Esta es dibujada completamente al ras de las líneas de guía. La segunda esta configurada para usar la opción <code>"round</code>. Esta agrega un semicírculo al final que tiene un radio de la mitad del grosor de línea. La línea de la derecha use la opción <code>"square"</code>. Esta agrega un cuadrado con ancho y altura de la mitad del grosor de línea.</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
@@ -104,7 +104,7 @@ for (let i = 0; i &lt; lineCap.length; i++) {
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -118,7 +118,7 @@ for (let i = 0; i &lt; lineCap.length; i++) {
 <h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
 
 <ul>
- <li>En WebKit- y navegadores basados en Blink, el método no estandard  y obsoleto <code>ctx.setLineCap()</code> es implementado ademas de esta propiedad.</li>
+ <li>En WebKit- y navegadores basados en Blink, el método no estandard  y obsoleto <code>ctx.setLineCap()</code> es implementado ademas de esta propiedad.</li>
 </ul>
 
 <h2 id="Ver_también">Ver también</h2>

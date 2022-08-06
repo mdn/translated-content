@@ -6,21 +6,21 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">Para permitir que o WebAssembly seja lido e editado por humanos foi criado uma representação textual do código binário wasm. Essa é uma forma textual intermediária desenvolvida para ser usada em editores de textos, ferramentas de desenvolvimento dos navegatores, etc. Esse artigo expica como essa expressão textual funciona, mostrando a sintase de maneira bruta,  e como ela está relacionada com o código binário ao qual ela representa - e os objetos que encapsulam o wasm dentro do JavaScript.</p>
+<p class="summary">Para permitir que o WebAssembly seja lido e editado por humanos foi criado uma representação textual do código binário wasm. Essa é uma forma textual intermediária desenvolvida para ser usada em editores de textos, ferramentas de desenvolvimento dos navegatores, etc. Esse artigo expica como essa expressão textual funciona, mostrando a sintase de maneira bruta,  e como ela está relacionada com o código binário ao qual ela representa - e os objetos que encapsulam o wasm dentro do JavaScript.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Esse artigo trata de maneira aprofundada a descrição textual do WebAssembly, se você é um desenvolvedor web que quer apenas carregar algum módulo wasm em seu código JavaScript e usá-lo em sua página web recomendamos que dê uma olhada no seguinte artigo: <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>. Esse artigo será de grande valia caso você queira otimizar a performance de módulos wasm em seu código JavaScript, ou ainda fazer seu próprio compilador de WebAssembly. </p>
+<p><strong>Nota</strong>: Esse artigo trata de maneira aprofundada a descrição textual do WebAssembly, se você é um desenvolvedor web que quer apenas carregar algum módulo wasm em seu código JavaScript e usá-lo em sua página web recomendamos que dê uma olhada no seguinte artigo: <a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a>. Esse artigo será de grande valia caso você queira otimizar a performance de módulos wasm em seu código JavaScript, ou ainda fazer seu próprio compilador de WebAssembly. </p>
 </div>
 
 <h2 id="S-expressions">S-expressions</h2>
 
-<p>Em seus dois formatos, binário e textual, a unidade fundamental do WebAssembly é um módulo. Na forma textual, um módulo é representado como uma grande S-expression.  S-expressions são um tipo bem antigo e simples de representar textualmente árvores de dados, então podemos descrever um módulo como uma árvore de nós que descreve a estrutura e código daquele módulo. Diferente da Árvore Sintática Abstrata de uma linguagem de programação qualquer, a árvore do WebAssembly é bem rasa, consistindo basicamente de uma grande lista de instruções.</p>
+<p>Em seus dois formatos, binário e textual, a unidade fundamental do WebAssembly é um módulo. Na forma textual, um módulo é representado como uma grande S-expression.  S-expressions são um tipo bem antigo e simples de representar textualmente árvores de dados, então podemos descrever um módulo como uma árvore de nós que descreve a estrutura e código daquele módulo. Diferente da Árvore Sintática Abstrata de uma linguagem de programação qualquer, a árvore do WebAssembly é bem rasa, consistindo basicamente de uma grande lista de instruções.</p>
 
-<p>First, let’s see what an S-expression looks like.  Each node in the tree goes inside a pair of parentheses — <code>( ... )</code>.  The first label inside the parenthesis tells you what type of node it is, and after that there is a space-separated list of either attributes or child nodes.  So that means the WebAssembly S-expression:</p>
+<p>First, let’s see what an S-expression looks like.  Each node in the tree goes inside a pair of parentheses — <code>( ... )</code>.  The first label inside the parenthesis tells you what type of node it is, and after that there is a space-separated list of either attributes or child nodes.  So that means the WebAssembly S-expression:</p>
 
 <pre>(module (memory 1) (func))</pre>
 
-<p>represents a tree with the root node “module” and two child nodes, a "memory" node with the attribute "1" and a "func" node.  We’ll see shortly what these nodes actually mean.</p>
+<p>represents a tree with the root node “module” and two child nodes, a "memory" node with the attribute "1" and a "func" node.  We’ll see shortly what these nodes actually mean.</p>
 
 <h3 id="The_simplest_module">The simplest module</h3>
 
@@ -79,7 +79,7 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 
 <p>Locals/parameters can be read and written by the body of the function with the <code>get_local</code> and <code>set_local</code> instructions.</p>
 
-<p>The <code>get_local</code>/<code>set_local</code> commands refer to the item to be got/set by its numeric index: parameters are referred to first, in order of their declaration, followed by locals in order of their declaration.  So given the following function:</p>
+<p>The <code>get_local</code>/<code>set_local</code> commands refer to the item to be got/set by its numeric index: parameters are referred to first, in order of their declaration, followed by locals in order of their declaration.  So given the following function:</p>
 
 <pre>(func (param i32) (param f32) (local f64)
   get_local 0
@@ -94,7 +94,7 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 
 <pre>(func (param $p1 i32) (param $p2 f32) (local $loc i32) …)</pre>
 
-<p>And then could write <code>get_local $p1</code> instead of <code>get_local 0</code>, etc.  (Note that when this text gets converted to binary, though, the binary will contain only the integer.)</p>
+<p>And then could write <code>get_local $p1</code> instead of <code>get_local 0</code>, etc.  (Note that when this text gets converted to binary, though, the binary will contain only the integer.)</p>
 
 <h2 id="Stack_machines">Stack machines</h2>
 
@@ -111,7 +111,7 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 
 <p>The stack contains exactly one <code>i32</code> value — the result of the expression (<code>$p + $p</code>), which is handled by <code>i32.add</code>. The return value of a function is just the final value left on the stack.</p>
 
-<p>The WebAssembly validation rules ensure the stack matches exactly: if you declare a <code>(result f32)</code>, then the stack must contain exactly one <code>f32</code> at the end.  If there is no result type, the stack must be empty.</p>
+<p>The WebAssembly validation rules ensure the stack matches exactly: if you declare a <code>(result f32)</code>, then the stack must contain exactly one <code>f32</code> at the end.  If there is no result type, the stack must be empty.</p>
 
 <h2 id="Our_first_function_body">Our first function body</h2>
 
@@ -129,7 +129,7 @@ original_slug: WebAssembly/Entendendo_o_formato_textual_do_WebAssembly
 
 <h3 id="Calling_the_function">Calling the function</h3>
 
-<p>Our function won’t do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an <code>export</code> statement inside the module.</p>
+<p>Our function won’t do very much on its own — now we need to call it. How do we do that? Like in an ES2015 module, wasm functions must be explicitly exported by an <code>export</code> statement inside the module.</p>
 
 <p>Like locals, functions are identified by an index by default, but for convenience, they can be named. Let's start by doing this — first, we'll add a name preceded by a dollar sign, just after the <code>func</code> keyword:</p>
 
@@ -207,7 +207,7 @@ function fetchAndInstantiate(url, importObject) {
 });</pre>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html">call.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/call.html">see it live also</a>). Again, see <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">wasm-utils.js</a></code> for the <code>fetchAndInstantiate()</code> source.</p>
+<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html">call.html</a> (<a href="https://mdn.github.io/webassembly-examples/understanding-text-format/call.html">see it live also</a>). Again, see <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">wasm-utils.js</a></code> for the <code>fetchAndInstantiate()</code> source.</p>
 </div>
 
 <h3 id="Importing_functions_from_JavaScript">Importing functions from JavaScript</h3>
@@ -248,7 +248,7 @@ fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
 
 <h3 id="WebAssembly_Memory">WebAssembly Memory</h3>
 
-<p>The above example is a pretty terrible logging function: it only prints a single integer!  What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides <strong>memory</strong>. According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like <code>i32.load</code> and <code>i32.store</code> for reading and writing from <a href="http://webassembly.org/docs/semantics/#linear-memory">linear memory</a>.</p>
+<p>The above example is a pretty terrible logging function: it only prints a single integer!  What if we wanted to log a text string? To deal with strings and other more complex data types, WebAssembly provides <strong>memory</strong>. According to WebAssembly, memory is just a large array of bytes that can grow over time. WebAssembly contains instructions like <code>i32.load</code> and <code>i32.store</code> for reading and writing from <a href="http://webassembly.org/docs/semantics/#linear-memory">linear memory</a>.</p>
 
 <p>From JavaScript’s point of view, it’s is as though memory is all inside one big (resizable) {{domxref("ArrayBuffer")}}. That’s literally all that asm.js has to play with (except that it isn't resizable; see the asm.js <a href="http://asmjs.org/spec/latest/#programming-model">Programming model</a>).</p>
 
@@ -262,7 +262,7 @@ fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
 
 <pre>(import "console" "log" (func $log (param i32) (param i32)))</pre>
 
-<p>On the JavaScript side, we can use the <a href="/en-US/docs/Web/API/TextDecoder">TextDecoder API</a> to easily decode our bytes into a JavaScript string.  (We specify <code>utf8</code> here, but many other encodings are supported.)</p>
+<p>On the JavaScript side, we can use the <a href="/en-US/docs/Web/API/TextDecoder">TextDecoder API</a> to easily decode our bytes into a JavaScript string.  (We specify <code>utf8</code> here, but many other encodings are supported.)</p>
 
 <pre class="brush: js">consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
@@ -272,13 +272,13 @@ fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
 
 <p>The last missing piece of the puzzle is where <code>consoleLogString</code> gets access to the WebAssembly <code>memory</code>. WebAssembly gives us a lot of flexibility here: we can either create a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory">Memory</a></code> object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.</p>
 
-<p>For simplicity, let's create it in JavaScript then import it into WebAssembly.  Our <code>import</code> statement is written as follows:</p>
+<p>For simplicity, let's create it in JavaScript then import it into WebAssembly.  Our <code>import</code> statement is written as follows:</p>
 
 <pre>(import "js" "mem" (memory 1))</pre>
 
 <p>The <code>1</code> indicates that the imported memory must have at least 1 page of memory (WebAssembly defines a page to be 64KB.)</p>
 
-<p>So let's see a complete module that prints the string “Hi”.  In a normal compiled C program, you’d call a function to allocate some memory for the string, but since we’re just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a <code>data</code> section.  Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the <code>.data</code> sections in native executable formats.</p>
+<p>So let's see a complete module that prints the string “Hi”.  In a normal compiled C program, you’d call a function to allocate some memory for the string, but since we’re just writing our own assembly here and we own the entire linear memory, we can just write the string contents into global memory using a <code>data</code> section.  Data sections allow a string of bytes to be written at a given offset at instantiation time and are similar to the <code>.data</code> sections in native executable formats.</p>
 
 <p>Our final wasm module looks like this:</p>
 
@@ -413,9 +413,9 @@ fetchAndInstantiate('logger2.wasm', importObj).then(function(instance) {
 <p>We load it into a webpage using the following JavaScript:</p>
 
 <pre class="brush: js">fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
-  console.log(instance.exports.callByIndex(0)); // returns 42
-  console.log(instance.exports.callByIndex(1)); // returns 13
-  console.log(instance.exports.callByIndex(2));
+  console.log(instance.exports.callByIndex(0)); // returns 42
+  console.log(instance.exports.callByIndex(1)); // returns 13
+  console.log(instance.exports.callByIndex(2));
   // returns an error, because there is no index position 2 in the table
 });</pre>
 
@@ -508,6 +508,6 @@ Promise.all([
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies.  See the <a href="http://webassembly.org/docs/semantics">WebAssembly semantics</a> for a treatment of each instruction.</li>
+ <li>The main thing that wasn’t included is a comprehensive list of all the instructions that can occur in function bodies.  See the <a href="http://webassembly.org/docs/semantics">WebAssembly semantics</a> for a treatment of each instruction.</li>
  <li>See also the <a href="https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax">grammar of the text format</a> that is implemented by the spec interpreter.</li>
 </ul>

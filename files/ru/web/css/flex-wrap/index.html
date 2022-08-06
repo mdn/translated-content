@@ -5,7 +5,7 @@ translation_of: Web/CSS/flex-wrap
 ---
 <div>{{ CSSRef}}</div>
 
-<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>flex-wrap</code></strong> задаёт правила вывода flex-элементов —  в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.</p>
+<p>Свойство <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>flex-wrap</code></strong> задаёт правила вывода flex-элементов —  в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.</p>
 
 <pre class="brush:css no-line-numbers">flex-wrap: nowrap;
 flex-wrap: wrap;
@@ -19,11 +19,11 @@ flex-wrap: unset;
 
 <p>{{cssinfo}}</p>
 
-<p>Подробнее по свойствам и общей информации смотрите <a href="/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a>.</p>
+<p>Подробнее по свойствам и общей информации смотрите <a href="/en/CSS/Using_CSS_flexible_boxes" title="/en/CSS/Using_CSS_flexible_boxes">Using CSS flexible boxes</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<p>Свойство <code>flex-wrap</code> может содержать одно из следующих ниже значений.</p>
+<p>Свойство <code>flex-wrap</code> может содержать одно из следующих ниже значений.</p>
 
 <h3 id="Значения">Значения</h3>
 
@@ -31,11 +31,11 @@ flex-wrap: unset;
 
 <dl>
  <dt><code>nowrap</code></dt>
- <dd>Расположение в одну линию, может привести к переполнению контейнера. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения {{cssxref("flex-direction")}}.</dd>
+ <dd>Расположение в одну линию, может привести к переполнению контейнера. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения {{cssxref("flex-direction")}}.</dd>
  <dt><code>wrap</code></dt>
- <dd>Расположение в несколько линий. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения <code>flex-direction</code> и свойство <strong>cross-end</strong> противоположно <strong>cross-start</strong>.</dd>
+ <dd>Расположение в несколько линий. Свойство <strong>cross-start</strong> эквивалентно <strong>start</strong> или <strong>before</strong> в зависимости от значения <code>flex-direction</code> и свойство <strong>cross-end</strong> противоположно <strong>cross-start</strong>.</dd>
  <dt><code>wrap-reverse</code></dt>
- <dd>Ведёт себя так же, как и <code>wrap</code> но <strong>cross-start</strong> и <strong>cross-end</strong> инвертированы.</dd>
+ <dd>Ведёт себя так же, как и <code>wrap</code> но <strong>cross-start</strong> и <strong>cross-end</strong> инвертированы.</dd>
  <dt>
  <h3 id="Formal_syntax">Formal syntax</h3>
  </dt>
@@ -74,26 +74,26 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+    color: #fff;
+    font: 100 24px/100px sans-serif;
+    height: 150px;
+    text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 50%;
+    height: 50%;
+    width: 50%;
 }
 .red {
-    background: orangered;
+    background: orangered;
 }
 .green {
-    background: yellowgreen;
+    background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+    background: steelblue;
 }
 
 /* Flexbox Styles */
@@ -102,12 +102,12 @@ flex-wrap: unset;
     flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
+    display: flex;
+    flex-wrap: wrap-reverse;
 }
 
 </pre>

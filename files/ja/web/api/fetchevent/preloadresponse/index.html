@@ -30,18 +30,18 @@ translation_of: Web/API/FetchEvent/PreloadResponse
 <p>このコードスニペットは、<a href="https://developers.google.com/web/updates/2017/02/navigation-preload#the-solution">ナビゲーションプリロードのページ</a>（英語）からのものです。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} イベントハンドラーは、<code>fetch</code> イベントをリッスンします。 起動したら、{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} に、制御されたページに戻す Promise を渡します。 この Promise は、{{domxref("Cache")}} オブジェクトで最初に一致した URL リクエストに解決されます。 一致が見つからない場合、コードはプリロード済みのレスポンスをチェックします。 それ以外の場合は、ネットワークからレスポンスをフェッチします。</p>
 
 <pre class="brush: js notranslate">addEventListener('fetch', event =&gt; {
-  event.respondWith(async function() {
-    // 可能な場合はキャッシュから応答します
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
+  event.respondWith(async function() {
+    // 可能な場合はキャッシュから応答します
+    const cachedResponse = await caches.match(event.request);
+    if (cachedResponse) return cachedResponse;
 
-    // それ以外の場合は、プリロード済みのレスポンスがあればそれを使用します
-    const response = await event.preloadResponse;
-    if (response) return response;
+    // それ以外の場合は、プリロード済みのレスポンスがあればそれを使用します
+    const response = await event.preloadResponse;
+    if (response) return response;
 
-    // それ以外の場合は、ネットワークを試します。
-    return fetch(event.request);
-  }());
+    // それ以外の場合は、ネットワークを試します。
+    return fetch(event.request);
+  }());
 });</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>

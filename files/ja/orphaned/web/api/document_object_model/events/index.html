@@ -27,10 +27,10 @@ original_slug: Web/API/Document_Object_Model/Events
 <pre class="brush: js notranslate">// myButton は button 要素だと仮定します
 myButton.addEventListener('click', greet, false);
 function greet(event){
-    // print and have a look at the event object
-    // always print arguments in case of overlooking any other arguments
+    // print and have a look at the event object
+    // always print arguments in case of overlooking any other arguments
     console.log('greet:', arguments)
-    alert('hello world')
+    alert('hello world')
 }
 </pre>
 
@@ -71,8 +71,8 @@ myButton.onclick = function(event){alert('Hello world')}
 
 <pre class="brush: js notranslate">function print(evt) {
   // evt 引数は自動的にイベントオブジェクトに割り当てられます
-  // console.log と alert の違いに注意してください
-  console.log('print:', evt)
+  // console.log と alert の違いに注意してください
+  console.log('print:', evt)
   alert(evt)
 }
 // どの関数も意味を持つ適切な名前を付けてください

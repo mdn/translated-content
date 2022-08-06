@@ -14,12 +14,12 @@ translation_of: Web/API/Element/querySelector
 
 <ul>
  <li><code>element</code> и <code>baseElement</code> это {{domxref("element")}} объекты.</li>
- <li><code>selectors</code> - это группа <a href="/ru-RU/docs/Web/Guide/CSS/Getting_Started/Selectors">селекторов</a> для поиска совпадения.</li>
+ <li><code>selectors</code> - это группа <a href="/ru-RU/docs/Web/Guide/CSS/Getting_Started/Selectors">селекторов</a> для поиска совпадения.</li>
 </ul>
 
 <h2 id="Example">Пример</h2>
 
-<p>Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:</p>
+<p>Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:</p>
 
 <pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 </pre>
@@ -28,11 +28,11 @@ translation_of: Web/API/Element/querySelector
 
 <p>Возвращает null если совпадения не найдены, иначе первый найденный элемент.</p>
 
-<p>Генерирует исключение <code>SYNTAX_ERR</code>  если указанная группа селекторов не корректна.</p>
+<p>Генерирует исключение <code>SYNTAX_ERR</code>  если указанная группа селекторов не корректна.</p>
 
-<p><code>querySelector()</code> был представлен в WebApps API.</p>
+<p><code>querySelector()</code> был представлен в WebApps API.</p>
 
-<p>Строка аргументов передаваемая <code>querySelector()</code> должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.</p>
+<p>Строка аргументов передаваемая <code>querySelector()</code> должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.</p>
 
 <h2 id="Спецификация">Спецификация</h2>
 

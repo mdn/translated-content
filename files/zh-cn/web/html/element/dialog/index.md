@@ -73,10 +73,10 @@ translation_of: Web/HTML/Element/dialog
 
 这个元素包含了[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
+> **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
 - {{htmlattrdef("open")}}
-  - : 指示这个对话框是激活的和能互动的。当这个 `open` 属性没有被设置，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染 对话框，而不是使用 `open` 属性。
+  - : 指示这个对话框是激活的和能互动的。当这个 `open` 属性没有被设置，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染 对话框，而不是使用 `open` 属性。
 
 ## 可用性注意事项
 
@@ -84,8 +84,8 @@ translation_of: Web/HTML/Element/dialog
 
 ## 使用备注
 
-- `<form>` 元素可在此对话框中使用，但需要指定属性 `method="dialog"` 。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value` 。
-- {{cssxref('::backdrop')}} CSS 伪元素可用于更改 `<dialog>` 背景元素样式，例如在对话框被打开激活时，调暗背景中不可访问的内容。仅当使用 {{domxref("HTMLDialogElement.showModal()")}} 显示对话框时才会绘制 backdrop 背景。
+- `<form>` 元素可在此对话框中使用，但需要指定属性 `method="dialog"` 。当提交表单时，对话框的 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 属性将会等于表单中被使用的提交按钮的 `value` 。
+- {{cssxref('::backdrop')}} CSS 伪元素可用于更改 `<dialog>` 背景元素样式，例如在对话框被打开激活时，调暗背景中不可访问的内容。仅当使用 {{domxref("HTMLDialogElement.showModal()")}} 显示对话框时才会绘制 backdrop 背景。
 
 ## 示例
 

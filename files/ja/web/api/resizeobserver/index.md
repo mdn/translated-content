@@ -17,7 +17,7 @@ translation_of: Web/API/ResizeObserver
 ---
 {{APIRef("Resize Observer API")}}
 
-**`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。
+**`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。
 
 > **Note:** コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
 

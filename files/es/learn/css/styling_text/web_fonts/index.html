@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary">En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.</p>
+<p class="summary">En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -35,7 +35,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 
 <h2 id="Tipografías_web">Tipografías web</h2>
 
-<p>Hay una alternativa, sin embargo, que funciona muy bien hasta con versiones posteriores a la versión 6 de Internet Explorer. Las tipografías web son una función del CSS que te permite especificar los archivos de tipo de letra que se van a descargar junto con tu sitio web a medida que el usuario acceda a ellos, lo que significa que cualquier navegador que admita tipografías web puede disponer de los tipos de letra que especificas. ¡Increíble! Observa a continuación la sintaxis que se necesita.</p>
+<p>Hay una alternativa, sin embargo, que funciona muy bien hasta con versiones posteriores a la versión 6 de Internet Explorer. Las tipografías web son una función del CSS que te permite especificar los archivos de tipo de letra que se van a descargar junto con tu sitio web a medida que el usuario acceda a ellos, lo que significa que cualquier navegador que admita tipografías web puede disponer de los tipos de letra que especificas. ¡Increíble! Observa a continuación la sintaxis que se necesita.</p>
 
 <p>En primer lugar, tienes un bloque {{cssxref ("@font-face")}} al comienzo del CSS, que especifica los archivos de los tipos de letra que quieres que se descarguen:</p>
 
@@ -79,7 +79,7 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
  <li>Un servicio de tipos de letra en línea: Es un sitio que guarda y te sirve los tipos de letra, lo que te facilita todo el proceso. Consulta la sección <a href="#los_servicios_de_tipos_de_letra_en_línea">Los servicios de tipos de letra en línea</a> para obtener más información.</li>
 </ul>
 
-<p>Vamos a ver algunos tipos de letra. Ve a <a href="https://www.fontsquirrel.com/">Font Squirrel</a> y elige dos tipos de letra: uno que te resulte agradable e interesante para los títulos (quizá una buena tipografía de tipo Display o Slab Serif), y otro un poco menos llamativo y más legible para los párrafos. Cuando encuentres los tipos de letra, pulsa el botón de descarga y guarda el archivo en el mismo directorio que los archivos HTML y CSS que guardaste anteriormente. No importa si son TTF (True Type Fonts) u OTF (Open Type Fonts).</p>
+<p>Vamos a ver algunos tipos de letra. Ve a <a href="https://www.fontsquirrel.com/">Font Squirrel</a> y elige dos tipos de letra: uno que te resulte agradable e interesante para los títulos (quizá una buena tipografía de tipo Display o Slab Serif), y otro un poco menos llamativo y más legible para los párrafos. Cuando encuentres los tipos de letra, pulsa el botón de descarga y guarda el archivo en el mismo directorio que los archivos HTML y CSS que guardaste anteriormente. No importa si son TTF (True Type Fonts) u OTF (Open Type Fonts).</p>
 
 <p>En cada caso, descomprime el paquete de tipos de letra (las tipografías web generalmente se distribuyen en archivos ZIP que contienen los archivos con el tipo de letra y la información de la licencia). En el paquete puede haber más de un archivo con tipos de letra: algunos tipos de letra se distribuyen por familias, con diferentes variantes disponibles, por ejemplo: <em>thin</em>, <em>medium</em>, <em>bold</em>, <em>italic</em>, <em>thin italic</em>, etc. Para este ejemplo, solo queremos que te quedes con un solo archivo de fuente para cada opción.</p>
 
@@ -174,12 +174,12 @@ original_slug: Learn/CSS/Styling_text/Fuentes_web
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>: También puedes especificar los valores particulares {{cssxref ("font-variant")}} y {{cssxref ("font-stretch")}} para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor {{cssxref ("unicode-range")}}, que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.</p>
+<p><strong>Nota</strong>: También puedes especificar los valores particulares {{cssxref ("font-variant")}} y {{cssxref ("font-stretch")}} para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor {{cssxref ("unicode-range")}}, que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. <a href="https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/">Creating Custom Font Stacks with Unicode-Range</a> de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.</p>
 </div>
 
 <h2 id="Tipos_de_letra_variables">Tipos de letra variables</h2>
 
-<p>Los navegadores disponen hoy de una tecnología de tipos de letra reciente llamada tipos de letra variables: se trata de tipos de letra que permiten incorporar muchas variaciones diferentes de un tipo de letra en un solo archivo, en lugar de tener un archivo separado para cada ancho, grosor o estilo. Es demasiado avanzado para nuestro curso para principiantes, pero si te apetece avanzar y echarles un vistazo, lee nuestra <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">guía de tipos de letra variables</a>.</p>
+<p>Los navegadores disponen hoy de una tecnología de tipos de letra reciente llamada tipos de letra variables: se trata de tipos de letra que permiten incorporar muchas variaciones diferentes de un tipo de letra en un solo archivo, en lugar de tener un archivo separado para cada ancho, grosor o estilo. Es demasiado avanzado para nuestro curso para principiantes, pero si te apetece avanzar y echarles un vistazo, lee nuestra <a href="/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">guía de tipos de letra variables</a>.</p>
 
 <h2 id="Resumen">Resumen</h2>
 
