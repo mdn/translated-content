@@ -3929,7 +3929,8 @@
 /ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /ja/docs/Web/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
-/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
+/ja/docs/Web/Accessibility/ARIA/widgets	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
+/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Accessibility/Index	/ja/docs/conflicting/Web/Accessibility
 /ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery

@@ -6622,12 +6622,6 @@
       "ivanoliveira"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Test_Cases": {
-    "modified": "2019-03-23T23:03:31.037Z",
-    "contributors": [
-      "hannahlere"
-    ]
-  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2020-09-18T19:22:52.644Z",
     "contributors": [
@@ -6659,12 +6653,6 @@
     "modified": "2019-03-23T22:27:34.088Z",
     "contributors": [
       "Aschlla"
-    ]
-  },
-  "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-16T23:07:41.279Z",
-    "contributors": [
-      "julianosilvaa"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -15980,10 +15968,22 @@
       "caio.rrs"
     ]
   },
+  "conflicting/Web/Accessibility/ARIA_07681b5fb66700d2792e86830388177c": {
+    "modified": "2019-03-23T23:03:31.037Z",
+    "contributors": [
+      "hannahlere"
+    ]
+  },
   "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
     "modified": "2019-03-23T22:27:11.984Z",
     "contributors": [
       "Aschlla"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155": {
+    "modified": "2019-01-16T23:07:41.279Z",
+    "contributors": [
+      "julianosilvaa"
     ]
   },
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {

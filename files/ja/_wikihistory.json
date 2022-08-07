@@ -24550,12 +24550,6 @@
       "teoli"
     ]
   },
-  "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-18T20:56:13.048Z",
     "contributors": [
@@ -47107,6 +47101,12 @@
     "contributors": [
       "yyss",
       "teoli"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155": {
+    "modified": "2019-03-18T21:35:01.506Z",
+    "contributors": [
+      "Uemmra3"
     ]
   },
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
