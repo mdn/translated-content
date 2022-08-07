@@ -1,16 +1,12 @@
 ---
 title: コード例のガイドライン
-slug: MDN/Guidelines/Code_guidelines
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+page-type: mdn-writing-guide
 tags:
-  - CSS
-  - Code
-  - Guide
-  - Guidelines
-  - HTML
-  - JavaScript
-  - MDN Meta
-  - Shell
-translation_of: MDN/Guidelines/Code_guidelines
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+original_slug: MDN/Guidelines/Code_guidelines
 ---
 {{MDNSidebar}}
 
