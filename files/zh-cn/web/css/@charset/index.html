@@ -15,9 +15,9 @@ translation_of: Web/CSS/@charset
 
 <h2 id="概述">概述</h2>
 
-<p> <strong><code>@charset </code></strong><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/zh-CN/docs/CSS/At-rule">@规则</a>  指定样式表中使用的字符编码。它必须是样式表中的第一个元素，而前面不得有任何字符。因为它不是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Syntax#css_语句">嵌套语句</a>，所以不能在<a href="https://developer.mozilla.org/zh-CN/docs/CSS/At-rule">@规则</a><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/At-rule#条件规则组">条件组</a>中使用。如果有多个 <strong><code>@charset </code></strong><a href="https://developer.mozilla.org/zh-CN/docs/CSS/At-rule">@规则</a>被声明，只有第一个会被使用，而且不能在 HTML 元素或 HTML 页面的字符集相关 {{ HTMLElement("style") }} 元素内的样式属性内使用。</p>
+<p><strong><code>@charset</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/CSS/At-rule">@规则</a>指定样式表中使用的字符编码。它必须是样式表中的第一个元素，而前面不得有任何字符。因为它不是一个<a href="/zh-CN/docs/Web/CSS/Syntax#css_语句">嵌套语句</a>，所以不能在<a href="/zh-CN/docs/CSS/At-rule">@规则</a><a href="/zh-CN/docs/Web/CSS/At-rule#条件规则组">条件组</a>中使用。如果有多个 <strong><code>@charset</code></strong> <a href="/zh-CN/docs/CSS/At-rule">@规则</a>被声明，只有第一个会被使用，而且不能在 HTML 元素或 HTML 页面的字符集相关 {{ HTMLElement("style") }} 元素内的样式属性内使用。</p>
 
-<p>此 <a href="https://developer.mozilla.org/zh-CN/docs/CSS/At-rule">@规则</a> 在某些 CSS 属性中使用非 ASCII 字符时非常有用，例如 {{ cssxref("content") }}。</p>
+<p>此 <a href="/zh-CN/docs/CSS/At-rule">@规则</a>在某些 CSS 属性中使用非 ASCII 字符时非常有用，例如 {{ cssxref("content") }}。</p>
 
 <p>在样式表中有多种方法去声明字符编码，浏览器会按照以下顺序尝试下边的方法（一旦找到就停止并得出结果）：</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/CSS/@charset
 <h3 id="语法格式">语法格式</h3>
 
 <pre class="brush: css">
-@charset "<charset>";
+@charset "&lt;charset&gt;";
 </pre>
 
 <dl>
@@ -68,6 +68,6 @@ translation_of: Web/CSS/@charset
 <h2 id="参见">参见</h2>
 
 <ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/character_set">Character Set</a>术语条目</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Unicode">Unicode</a>术语条目</li>
+<li><a href="/zh-CN/docs/Glossary/character_set">字符集</a>术语条目</li>
+<li><a href="/zh-CN/docs/Glossary/Unicode">Unicode</a> 术语条目</li>
 </ul>
