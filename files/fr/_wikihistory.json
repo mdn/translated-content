@@ -40634,46 +40634,6 @@
       "dattaz"
     ]
   },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:29:18.429Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Porkepix",
-      "thbil"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures": {
-    "modified": "2020-09-30T09:06:59.551Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tristantheb",
-      "wbamberg",
-      "Johann-S"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
-    "modified": "2020-09-30T09:06:59.189Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jmh"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:29:18.597Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tristantheb"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-01-16T21:44:15.383Z",
-    "contributors": [
-      "Waxaal",
-      "julianosilvaa"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
