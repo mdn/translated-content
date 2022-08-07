@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p>我们并不要求你立刻完整理解所有代码，当前只是概括地介绍一些抽象的概念，并且让你对 JavaScript（以及其他编程语言）工作原理有一定的认知。所有具体特性将在后续文章中详细介绍。</p>
 
 <div class="note">
-<p>注：可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（ 函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。</p>
+<p><strong>备注：</strong> 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（ 函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。</p>
 </div>
 
 <h2 id="像程序员一样思考">像程序员一样思考</h2>
@@ -50,10 +50,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <p>本文将向你演示如何构建下面的小游戏：</p>
 
-<div class="hidden">
-<h6 id="Top_hidden_code">Top hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
 &lt;head&gt;
@@ -160,9 +157,8 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Top_hidden_code', '100%', 320, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('示例——猜数字游戏', '100%', 320) }}</p>
 
 <p>先玩上几盘，在继续之前先熟悉一下这个游戏。</p>
 
@@ -221,7 +217,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <h3 id="添加变量以保存数据">添加变量以保存数据</h3>
 
-<p>让我们开始吧。首先，在  {{htmlelement("script")}}  元素中添加以下代码：</p>
+<p>让我们开始吧。首先，在 {{htmlelement("script")}}  元素中添加以下代码：</p>
 
 <pre class="brush: js">let randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -245,7 +241,7 @@ let resetButton;</pre>
  <li>我们用数学算法得出一个 1 到 100 之间的随机数，并赋值给第一个变量（<code>randomNumber</code>）。</li>
  <li>接下来的三个常量均存储着一个引用，分别指向 HTML 结果段落中某个元素，用于在代码后面段落中插入值： </li>
  <li>
-  <pre class="brush: html" dir="rtl">&lt;p class="guesses"&gt;&lt;/p&gt;
+  <pre class="brush: html">&lt;p class="guesses"&gt;&lt;/p&gt;
 &lt;p class="lastResult"&gt;&lt;/p&gt;
 &lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
@@ -258,7 +254,7 @@ let resetButton;</pre>
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: 稍后将讲解更多关于变量/常量的信息。<a href="/en-US/docs/user:chrisdavidmills/variables">参见下节</a>。</p>
+<p><strong>备注：</strong> 稍后将讲解更多关于变量/常量的信息。<a href="/en-US/docs/user:chrisdavidmills/variables">参见下节</a>。</p>
 </div>
 
 <h3 id="函数（Function）">函数（Function）</h3>
@@ -269,36 +265,22 @@ let resetButton;</pre>
   alert('我是一个占位符');
 }</pre>
 
-<div id="gt-src-tools">
-<div id="tts_button">函数是可复用的代码块，可以一次编写，反复运行，从而节省了大量的重复代码。它们真的很有用。定义函数的方法很多，但现在我们先集中考虑当前这个简单的方式。这里我们使用关键字 <code>function</code> 、一个函数名、一对小括号定义了一个函数。随后是一对花括号（<code>{}</code>）。花括号内部是调用函数时要运行的所有代码。</div>
+<div>
+<div>函数是可复用的代码块，可以一次编写，反复运行，从而节省了大量的重复代码。它们真的很有用。定义函数的方法很多，但现在我们先集中考虑当前这个简单的方式。这里我们使用关键字 <code>function</code> 、一个函数名、一对小括号定义了一个函数。随后是一对花括号（<code>{}</code>）。花括号内部是调用函数时要运行的所有代码。</div>
 </div>
 
-<div class="g-unit" id="gt-res-c">
-<div id="gt-res-p">
-<div id="gt-res-data">
-<div id="gt-res-wrap">
-<div id="gt-res-content">
-<div dir="ltr"><br>
+<div>
 要运行一个函数代码时，可以输入函数名加一对小括号。</div>
 
-<div dir="ltr"></div>
-
-<div dir="ltr">让我们尝试一下。保存你的代码并刷新浏览器页面。然后进入<br>
+<div>让我们尝试一下。保存你的代码并刷新浏览器页面。然后进入<br>
 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>，并输入以下代码：</div>
-
-<div dir="ltr"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 <pre class="brush: js">checkGuess();</pre>
 
 <p>在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 "<code>我是一个占位符</code>"；我们在代码中定义了一个函数，当我们调用它时，函数创建了一个告警窗口。</p>
 
 <div class="note">
-<p><strong>注</strong>: <a href="/zh-CN/docs/learn/JavaScript/Building_blocks/Functions">后续课程 </a>将讲解更多有关函数的知识。</p>
+<p><strong>备注：</strong> <a href="/zh-CN/docs/learn/JavaScript/Building_blocks/Functions">后续课程 </a>将讲解更多有关函数的知识。</p>
 </div>
 
 <h3 id="运算符（Operator）">运算符（Operator）</h3>
@@ -307,10 +289,7 @@ let resetButton;</pre>
 
 <p>请保存代码以免丢失，然后刷新浏览器页面，打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下  <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。如果你无法访问浏览器开发者工具，你随时都可以使用下面的简易版内置控制台。</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -411,7 +390,7 @@ let resetButton;</pre>
 &lt;/html&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('运算符（Operator）', '100%', 300) }}</p>
 
 <p>首先让我们来看看算术运算符，例如：</p>
 

@@ -47,7 +47,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>通常客户端和服务端存储是结合在一起使用的。例如，你可以从数据库中下载一个由网络游戏或音乐播放器应用程序使用的音乐文件，将它们存储在客户端数据库中，并按需要播放它们。用户只需下载音乐文件一次——在随后的访问中，它们将从数据库中检索。</p>
 
 <div class="note">
-<p><strong>注意：</strong>使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考<a href="/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">浏览器存储限制和清理标准</a>。</p>
+<p><strong>备注：</strong> 使用客户端存储 API 可以存储的数据量是有限的（可能是每个 API 单独的和累积的总量）;具体的数量限制取决于浏览器，也可能基于用户设置。有关更多信息，获取更多信息，请参考<a href="/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">浏览器存储限制和清理标准</a>。</p>
 </div>
 
 <h3 id="传统方法：cookies">传统方法：cookies</h3>
@@ -55,13 +55,13 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 <p>客户端存储的概念已经存在很长一段时间了。从早期的网络时代开始，网站就使用 <a href="/zh-CN/docs/Web/HTTP/Cookies">cookies</a> 来存储信息，以在网站上提供个性化的用户体验。它们是网络上最早最常用的客户端存储形式。<br>
  因为在那个年代，有许多问题——无论是从技术上的还是用户体验的角度——都是困扰着 cookies 的问题。这些问题非常重要，以至于当第一次访问一个网站时，欧洲居民会收到消息，告诉他们是否会使用 cookies 来存储关于他们的数据，而这是由一项被称为<a href="/zh-CN/docs/Web/HTTP/Cookies#%E6%AC%A7%E7%9B%9FCookie%E6%8C%87%E4%BB%A4">欧盟 Cookie 条例</a>的欧盟法律导致的。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15734/cookies-notice.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/15734/cookies-notice.png"></p>
 
 <p>由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种<a href="/zh-CN/docs/Web/HTTP/Cookies#安全">安全问题</a>，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。<br>
  cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果您的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，您不需要再使用它们了。其实 cookie 也没什么好说的，<code><a href="/zh-CN/docs/Web/API/Document/cookie">document.cookie</a></code>一把梭就完事了。</p>
 
 <div class="note">
-<p>为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。</p>
+<p><strong>备注：</strong> 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。</p>
 </div>
 
 <h3 id="新流派：Web_Storage_和_IndexedDB">新流派：Web Storage 和 IndexedDB</h3>
@@ -255,11 +255,11 @@ function nameDisplayCheck() {
 <p>你的例子完成了 - 做得好！现在剩下的就是保存你的代码并在浏览器中测试你的 HTML 页面。你可以在这里看到我们的<a href="https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html">完成版本并在线运行</a>。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在 <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> 中还有一个稍微复杂点儿的示例。</p>
+<p><strong>备注：</strong> 在 <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> 中还有一个稍微复杂点儿的示例。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 在完成版本的源代码中， <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> 一行里， <code>defer</code> 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。</p>
+<p><strong>备注：</strong> 在完成版本的源代码中， <code>&lt;script src="index.js" defer&gt;&lt;/script&gt;</code> 一行里， <code>defer</code> 属性指明在页面加载完成之前，{{htmlelement("script")}}元素的内容不会执行。</p>
 </div>
 
 <h2 id="存储复杂数据_—_IndexedDB">存储复杂数据 — IndexedDB</h2>
@@ -320,7 +320,7 @@ let request = window.indexedDB.open('notes', 1);</pre>
   <p>要在 IndexedDB 中处理此问题，您需要创建一个请求对象（可以随意命名 - 命名为<code>request</code>，可以表明它的用途）。然后，在请求完成或者失败时，使用事件处理程序来运行代码，您将在下面看到这些代码。</p>
 
   <div class="note">
-  <p><strong>注意</strong>：版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者<code>onupgradeneeded</code>处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。</p>
+  <p><strong>备注：</strong> 版本号很重要。如果要升级数据库（例如：更改表结构），则必须使用增加的版本号或者<code>onupgradeneeded</code>处理程序内指定的不同模式（请参阅下文）等再次运行代码。在这个简单教程中，我们不讨论数据库升级。</p>
   </div>
 
   <ol>
@@ -685,7 +685,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 <p>Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTTP 响应，因此与服务工作者一起工作得非常好。</p>
 
 <div class="note">
-<p><strong>注意</strong>：现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。</p>
+<p><strong>备注：</strong> 现在大多数现代浏览器都支持服务工作者和缓存。在撰写本文时，Safari 仍在忙着实施它，但它应该很快就会存在。</p>
 </div>
 
 <h3 id="一个_service_worker_例子">一个 service worker 例子</h3>
@@ -707,7 +707,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
   }</pre>
 
 <div class="note">
-<p><strong>注意</strong>：<code>sw.js</code>文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。服务人员在<code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。原点是<code>https://mdn.github.io</code>，因此给定的路径必须是<code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。如果您想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。</p>
+<p><strong>备注：</strong> <code>sw.js</code>文件的给定路径是相对于站点源的，而不是包含代码的 JavaScript 文件。服务人员在<code>https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。原点是<code>https://mdn.github.io</code>，因此给定的路径必须是<code>/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js</code>。如果您想在自己的服务器上托管此示例，则必须相应地更改此示例。这是相当令人困惑的，但出于安全原因，它必须以这种方式工作。</p>
 </div>
 
 <h4 id="安装_service_worker">安装 service worker</h4>

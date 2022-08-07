@@ -1,21 +1,6 @@
 ---
 title: 从服务器获取数据
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Fetch
-  - JSON
-  - JavaScript
-  - Promises
-  - XHR
-  - XML
-  - XMLHttpRequest
-  - 初学者
-  - 学习
-  - 数据
-  - 服务器
-  - 脚本编程
-  - 请求
 translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 <div>{{LearnSidebar}}</div>
@@ -41,7 +26,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>最初加载页面很简单  -- 你为网站发送一个请求到服务器，只要没有出错你将会获取资源并显示网页到你的电脑上。</p>
 
-<p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png" style="display: block; height: 134px; margin: 0px auto; width: 484px;"></p>
+<p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png"></p>
 
 <p>这个模型的问题是当你想更新网页的任何部分，例如显示一套新的产品或者加载一个新的页面，你需要再一次加载整个页面。这是非常浪费的并且导致了差的用户体验尤其是现在的页面越来越大且越来越复杂。</p>
 
@@ -52,10 +37,10 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 <p>这是通过使用诸如 {{domxref("XMLHttpRequest")}} 之类的 API 或者 — 最近以来的 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 来实现。这些技术允许网页直接处理对服务器上可用的特定资源的 <a href="/en-US/docs/Web/HTTP">HTTP</a> 请求，并在显示之前根据需要对结果数据进行格式化。</p>
 
 <div class="note">
-<p><strong>注意：在早期，这种通用技术被称为</strong>Asynchronous JavaScript and XML<strong>（Ajax），</strong> 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。 但通常不是这种情况 (你更有可能使用 <code>XMLHttpRequest</code> 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。</p>
+<p><strong>备注：</strong> 在早期，这种通用技术被称为 Asynchronous JavaScript and XML<strong>（Ajax），</strong> 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。 但通常不是这种情况 (你更有可能使用 <code>XMLHttpRequest</code> 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。</p>
 </div>
 
-<p><img alt="A simple modern architecture for web sites" src="https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png" style="display: block; height: 235px; margin: 0px auto; width: 559px;"></p>
+<p><img alt="A simple modern architecture for web sites" src="https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png"></p>
 
 <p>Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不仅仅是让浏览器重新加载整个页面。让我们来思考这个意义：</p>
 
@@ -73,7 +58,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>为了进一步提高速度，有些网站还会在首次请求时将资产和数据存储在用户的计算机上，这意味着在后续访问中，他们将使用本地版本，而不是在首次加载页面时下载新副本。内容仅在更新后从服务器重新加载。</p>
 
-<p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png" style="display: block; height: 383px; margin: 0px auto; width: 562px;"></p>
+<p><img alt="A basic web app data flow architecture" src="https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png"></p>
 
 <p>本文不会涉及这种存储技术。我们稍后会在模块中讨论它。</p>
 
@@ -85,7 +70,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h3 id="XMLHttpRequest">XMLHttpRequest</h3>
 
-<p><code>XMLHttpRequest</code> （通常缩写为 XHR）现在是一个相当古老的技术 - 它是在 20 世纪 90 年代后期由微软发明的，并且已经在相当长的时间内跨浏览器进行了标准化。</p>
+<p><code>XMLHttpRequest</code>（通常缩写为 XHR）现在是一个相当古老的技术 - 它是在 20 世纪 90 年代后期由微软发明的，并且已经在相当长的时间内跨浏览器进行了标准化。</p>
 
 <ol>
  <li>
@@ -352,7 +337,7 @@ myFetch.then(function(response) {
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 如果您在这方面有问题，请到 Github 将您的代码和完成的版本进行对比 ( <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">see the source here</a>, see also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">see it running live</a> )。</p>
+<p><strong>备注：</strong> 如果您在这方面有问题，请到 Github 将您的代码和完成的版本进行对比 ( <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">see the source here</a>, see also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">see it running live</a> )。</p>
 </div>
 
 <h2 id="概述">概述</h2>

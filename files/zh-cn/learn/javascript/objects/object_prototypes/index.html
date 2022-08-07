@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 <p>在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是__proto__属性，是从构造函数的<code>prototype</code>属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。</p>
 
 <div class="note">
-<p><strong>注意：</strong>理解对象的原型（可以通过<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
+<p><strong>备注：</strong> 理解对象的原型（可以通过<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code>或者已被弃用的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>属性获得）与构造函数的<code>prototype</code>属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，<code>Object.getPrototypeOf(new Foobar())</code>和<code>Foobar.prototype</code>指向着同一个对象。</p>
 </div>
 
 <p>以上描述很抽象；我们先看一个例子。</p>
@@ -185,11 +185,11 @@ doSomething.prototype.foo:  bar</pre>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>：必须重申，原型链中的方法和属性<strong>没有</strong>被复制到其他对象——它们被访问需要通过前面所说的“原型链”的方式。</p>
+<p><strong>备注：</strong> 必须重申，原型链中的方法和属性<strong>没有</strong>被复制到其他对象——它们被访问需要通过前面所说的“原型链”的方式。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：没有官方的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 <code>[[prototype]]</code> 表示（参见 {{glossary("ECMAScript")}}）。然而，大多数现代浏览器还是提供了一个名为 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> （前后各有 2 个下划线）的属性，其包含了对象的原型。你可以尝试输入 <code>person1.__proto__</code> 和 <code>person1.__proto__.__proto__</code>，看看代码中的原型链是什么样的！</p>
+<p><strong>备注：</strong> 没有官方的方法用于直接访问一个对象的原型对象——原型链中的“连接”被定义在一个内部属性中，在 JavaScript 语言标准中用 <code>[[prototype]]</code> 表示（参见 {{glossary("ECMAScript")}}）。然而，大多数现代浏览器还是提供了一个名为 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> （前后各有 2 个下划线）的属性，其包含了对象的原型。你可以尝试输入 <code>person1.__proto__</code> 和 <code>person1.__proto__.__proto__</code>，看看代码中的原型链是什么样的！</p>
 </div>
 
 <h2 id="prototype_属性：继承成员被定义的地方">prototype 属性：继承成员被定义的地方</h2>
@@ -203,7 +203,7 @@ doSomething.prototype.foo:  bar</pre>
 <p><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>、<code><a href="zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>，以及其他不在 <code>prototype</code> 对象内的成员，不会被“对象实例”或“继承自 <code>Object()</code> 的对象类型”所继承。这些方法/属性仅能被 <code>Object()</code> 构造器自身使用。</p>
 
 <div class="note">
-<p><strong>注意</strong>：这看起来很奇怪——构造器本身就是函数，你怎么可能在构造器这个函数中定义一个方法呢？其实函数也是一个对象类型，你可以查阅 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> 构造器的参考文档以确认这一点。</p>
+<p><strong>备注：</strong> 这看起来很奇怪——构造器本身就是函数，你怎么可能在构造器这个函数中定义一个方法呢？其实函数也是一个对象类型，你可以查阅 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> 构造器的参考文档以确认这一点。</p>
 </div>
 
 <ol>
@@ -225,7 +225,7 @@ doSomething.prototype.foo:  bar</pre>
 <p><code>myString</code> 立即具有了一些有用的方法，如 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>、<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>、<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code> 等。</p>
 
 <div class="warning">
-<p><strong>重要</strong>：<code>prototype</code> 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，<code>this</code> 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用<code> __proto__</code> 访问）。<code>prototype</code> 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。</p>
+<p><strong>警告：</strong> <code>prototype</code> 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，<code>this</code> 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用<code> __proto__</code> 访问）。<code>prototype</code> 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。</p>
 </div>
 
 <p><strong>create()</strong></p>
@@ -311,7 +311,7 @@ Person.prototype.farewell = function() {
 <p>但是 <code>farewell()</code> 方法<em>仍然</em>可用于 <code>person1</code> 对象实例——旧有对象实例的可用功能被自动更新了。这证明了先前描述的原型链模型。这种继承模型下，上游对象的方法不会复制到下游的对象实例中；下游对象本身虽然没有定义这些方法，但浏览器会通过上溯原型链、从上游对象中找到它们。这种继承模型提供了一个强大而可扩展的功能系统。</p>
 
 <div class="note">
-<p><strong>注意</strong>：如果运行样例时遇到问题，请参阅 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> 样例（也可查看<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">即时运行</a>）。</p>
+<p><strong>备注：</strong> 如果运行样例时遇到问题，请参阅 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> 样例（也可查看<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">即时运行</a>）。</p>
 </div>
 
 <p>你很少看到属性定义在 prototype 属性中，因为如此定义不够灵活。比如，你可以添加一个属性：</p>
@@ -325,7 +325,7 @@ Person.prototype.farewell = function() {
 <p>然而，这么做是无效的，因为本例中 <code>this</code> 引用全局范围，而非函数范围。访问这个属性只会得到 <code>undefined undefined</code>。但这个语句若放在 先前定义在 <code>prototype</code> 上的方法中则有效，因为此时语句位于函数范围内，从而能够成功地转换为对象实例范围。你可能会在 <code>prototype</code> 上定义常属性 (constant property) （指那些你永远无需改变的属性），但一般来说，在构造器内定义属性更好。</p>
 
 <div class="note">
-<p><strong>译者注</strong>：关于 <code>this</code> 关键字指代（引用）什么范围/哪个对象，这个问题超出了本文讨论范围。事实上，这个问题有点复杂，如果现在你没能理解，也不用担心。</p>
+<p><strong>备注：</strong> 关于 <code>this</code> 关键字指代（引用）什么范围/哪个对象，这个问题超出了本文讨论范围。事实上，这个问题有点复杂，如果现在你没能理解，也不用担心。</p>
 </div>
 
 <p>事实上，一种极其常见的对象定义模式是，在构造器（函数体）中定义属性、在 <code>prototype</code> 属性上定义方法。如此，构造器只包含属性定义，而方法则分装在不同的代码块，代码更具可读性。例如：</p>
