@@ -1,40 +1,20 @@
 ---
-title: HTML のガイドライン
-slug: MDN/Guidelines/Code_guidelines/HTML
+title: HTML のコード例を整形するためのガイドライン
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+page-type: mdn-writing-guide
 tags:
-  - Code
-  - Guide
-  - Guidelines
-  - HTML
-  - MDN Meta
-translation_of: MDN/Guidelines/Code_guidelines/HTML
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
 {{MDNSidebar}}
 
-以下のガイドラインでは、MDN のコードの例で HTML をどのように記述するのかを学習します。
+以下のガイドラインでは、MDN Web Docs のコードの例で HTML をどのように記述するのかを扱います。
 
-## 目次
+## HTML コード例のための全般的なガイドライン
 
-- [文書型宣言とメタデータ](#文書型宣言とメタデータ)
-
-  - [文書型宣言](#文書型宣言)
-  - [文書の言語](#文書の言語)
-  - [文書の文字セット](#文書の文字セット)
-  - [ビューポートメタタグ](#ビューポートメタタグ)
-
-- [一般的なマークアップコーディングスタイル](#一般的なマークアップコーディングスタイル)
-
-  - [小文字を使う](#小文字を使う)
-  - [末尾のスラッシュ](#末尾のスラッシュ)
-  - [属性を引用符で囲む](#属性を引用符で囲む)
-  - [二重引用符を使う](#二重引用符を使う)
-  - [論理属性](#論理属性)
-  - [クラスと ID の名前](#クラスと_id_の名前)
-  - [実体参照](#実体参照)
-
-## 文書型宣言とメタデータ
-
-> **Note:** この部分のガイドラインは、完全な HTML 文書を表示する必要がある場合にのみ適用されます。ほとんどの場合、このようなことをする必要はありません。 [EmbedLiveSample マクロ](/ja/docs/MDN/Structures/Code_examples#traditional_live_samples)を使用する場合は、 HTML スニペットを入れるだけで、表示する際、自動的に完全な HTML 文書に挿入されます。
+> **Note:** この章のガイドラインは、完全に HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Structures/Code_examples#traditional_live_samples)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
 
 ### 文書型宣言
 
@@ -74,43 +54,7 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 
 詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Viewport_meta_tag)をご覧ください。
 
-## 一般的なマークアップコーディングスタイル
-
-### 小文字を使う
-
-すべての要素の名前と属性の名前/値に小文字を使ってください、綺麗に見えますし、マークアップをより早く書くことができます。
-
-良い例:
-
-```html example-good
-<p class="nice">This looks nice and neat</p>
-```
-
-良くない例:
-
-```html example-bad
-<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
-```
-
-### 末尾のスラッシュ
-
-空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし、実行速度を遅くします。注意しないと古いブラウザーを中断させます（思い返してみると、 Netscape 4 から問題とはなっていませんが）。
-
-こちらは良い例:
-
-```html example-good
-<input type="text">
-<hr>
-```
-
-スラッシュは必要ありません。
-
-```html example-bad
-<input type="text" />
-<hr />
-```
-
-### 属性を引用符で囲む
+## 属性
 
 すべての属性の値は二重引用符で囲まなければなりません。 HTML5 でクオートの省略が許されるようになり、広まっていますが、取り入れるとマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です。
 
@@ -126,18 +70,6 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 
 上記の例では、 `alt` 属性は複数の属性として解釈されます。なぜなら、 "A circular globe icon" が 1 つの属性値であることを示す引用符が存在しないからです。
 
-### 二重引用符を使う
-
-HTML には単一引用符でなく、二重引用符を使ってください。
-
-```html example-good
-<p class="important">Yes</p>
-```
-
-```html example-bad
-<p class='important'>Nope</p>
-```
-
 ### 論理属性
 
 論理属性は完全な形で書かないでください。設定するには属性の名前だけ書いてください。例えば、このように書きます。
@@ -152,20 +84,40 @@ required
 required="required"
 ```
 
+### 小文字を使う
+
+すべての要素の名前と属性の名前/値に小文字を使ってください、綺麗に見えますし、マークアップをより早く書くことができます。
+
+```html example-good
+<p class="nice">This looks nice and neat</p>
+```
+
+```html example-bad
+<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+```
+
 ### クラスと ID の名前
 
 意味のあるクラス/ID 名を使い、複数の単語はハイフンで分割してください。キャメルケース (camelCase) は使わないでください。
-
-良い例:
 
 ```html example-good
 <p class="editorial-summary">Blah blah blah</p>
 ```
 
-悪い例:
-
 ```html example-bad
 <p class="bigRedBox">Blah blah blah</p>
+```
+
+### 二重引用符を使う
+
+HTML には単一引用符でなく、二重引用符を使ってください。
+
+```html example-good
+<p class="important">Yes</p>
+```
+
+```html example-bad
+<p class='important'>Nope</p>
 ```
 
 ### 実体参照
@@ -186,6 +138,27 @@ required="required"
 
 UTF-8 文字セットで記述する限りは問題ありません。
 
-## MDN での良い HTML の例
+## HTML 要素
 
-優良で、簡潔で、有意義な HTML のスニペットを [HTML リファレンス](/ja/docs/Web/HTML/Reference)の先頭で見つけることができます — 対話形式の例は一般的にこれらのガイドラインに従って書かれていますが、ガイドラインが新規に書かれる前に大部分が書かれているので、いくつかの箇所は異なっているのに気をつけてください。
+MDN Web Docs では、HTML 要素について書くためのいくつかのルールがあります。これらのルールに従うことで、要素やその構成要素について一貫した記述ができ、また、詳細な文書化への正しいリンクが確保されます。
+
+- **要素名**: [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) マクロを使用すると、その要素の MDN Web Docs ページへのリンクを作成します。例えば、`{HTMLElement("title")}}` と書くと "{{HTMLElement("title")}}" が生成されます。
+  リンクを作成しない場合は、**名前を山括弧で囲み**、「インラインコード」スタイル（例：`<title>`）を使用してください。
+- **属性名**: 「インラインコード」スタイルを使用して、属性名を `code font` で表示します。
+    さらに、その属性が何をするものであるかの説明と関連して言及されるとき、またはページで初めて使用されるときは、 **`bold face`** で記述してください。
+- **属性の定義**: 定義語には [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) マクロを使用してください（例: `\{{htmlattrdef("type")}}`）。 これにより、用語の定義には [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) マクロを使用して、他のページから簡単にリンクすることができます（例: `\{{htmlattrxref("type", "element")}}`）。
+- **属性値**: 属性値に「インラインコード」スタイルを使用して `<code>` を適用し、コードサンプルの構文で必要な場合を除き、文字列の値を引用符で囲まないでください。例: 「`<input>` 要素の `type` 属性に `email` または `tel` を設定したとき ...」とします。
+
+### 末尾のスラッシュ
+
+空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし、実行速度を遅くします。注意しないと古いブラウザーを中断させます（思い返してみると、 Netscape 4 から問題とはなっていませんが）。
+
+```html example-good
+<input type="text">
+<hr>
+```
+
+```html example-bad
+<input type="text" />
+<hr />
+```
