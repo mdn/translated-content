@@ -135,7 +135,7 @@ Jean-Yves est écrivain technique sur MDN depuis 2010, il a rejoint Mozilla à p
 
 ## « Learning Area » ou Apprendre le Web
 
-La [Learning Area](https://developer.mozilla.org/en-US/Learn) est un nouveau projet de MDN pour enseigner les compétences de base autour du Web. Ces 10 dernières années, MDN a mis à disposition beaucoup de contenu avancé, permettant aux experts de travailler avec des informations précises. Ce projet est à destination des débutants et vise à combler les manques vis-à-vis de ce public.
+La [Learning Area](/fr/docs/Learn) est un projet de MDN pour enseigner les compétences de base autour du Web. Ces 10 dernières années, MDN a mis à disposition beaucoup de contenu avancé, permettant aux experts de travailler avec des informations précises. Ce projet est à destination des débutants et vise à combler les manques vis-à-vis de ce public.
 
 ## Jérémie Patonnier Écrivain technique, MDN
 
