@@ -1,71 +1,78 @@
 ---
-title: Implementing game control mechanisms
+title: ゲーム制御機構の搭載
 slug: Games/Techniques/Control_mechanisms
+tags:
+  - Controls
+  - Desktop
+  - Gamepad
+  - Games
+  - JavaScript
+  - Laptop
+  - Mobile
+  - keyboard
+  - mouse
+  - touch
 translation_of: Games/Techniques/Control_mechanisms
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p class="summary"> </p>
+ゲーム開発プラットフォームとしての HTML5 の主な利点の 1 つは、さまざまなプラットフォームおよび端末上で実行できることです。端末間の違いを合理化することは、特に異なるコンテキストに適切なコントロールを提供するときには、複数の課題を生み出します。このシリーズの記事では、タッチ画面のスマートフォン、マウス、キーボード、そしてゲームパッドなどのあまり一般的ではないメカニズムを使用してプレイできるゲームの構築方法について説明します。
 
-<p>ゲーム開発プラットフォームとしてのHTML5の主な利点の1つは、さまざまなプラットフォームおよびデバイス上で実行できることです。デバイス間の違いを合理化することは、特に異なるコンテキストに適切なコントロールを提供するときには、複数の課題を生み出します。このシリーズの記事では、タッチスクリーンのスマートフォン、マウス、キーボード、そしてゲームパッドなどのあまり一般的ではないメカニズムを使用してプレイできるゲームの構築方法について説明します。</p>
+## 事例研究
 
-<p class="summary"> </p>
+ここでは [Captain Rogers: Battle at Andromeda demo](http://rogers2.enclavegames.com/demo/) を例にします。
 
-<h2 id="事例研究">事例研究</h2>
+![Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game.](captainrogers2-cover.png)
 
-<p>ここでは <a href="http://rogers2.enclavegames.com/demo/">Captain Rogers: Battle at Andromeda demo</a> を例にします。</p>
+Captain Rogers は [Phaser](https://phaser.io/) フレームワークを使用して作成されています。現在、 JavaScript でシンプルな 2D ゲームを開発するための最も人気のあるツールですが、これらの記事に含まれる知識を純粋な JavaScript または他のフレームワークでゲームを構築する際に再利用することはかなり簡単なはずです。 Phaser の入門書をお探しなら、[2D breakout game using Phaser](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser) チュートリアルをチェックしてみてください。
 
-<p><img alt="Captain Rogers: Battle at Andromeda - cover of the game containing Enclave Games and Blackmoon Design logos, Roger's space ship and title of the game." src="https://mdn.mozillademos.org/files/13849/captainrogers2-cover.png" style="display: block; height: 325px; margin: 0px auto; width: 575px;"></p>
+以下の記事では、モバイルのタッチ操作から、デスクトップのキーボード／マウス／ゲームパッド、そしてテレビのリモコン、ラップトップの前で叫んだり手を振ったり、バナナを握ったりといった型破りなものまで、さまざまなプラットフォームに対応するために、Captain Rogers にさまざまな操作機構を搭載する方法を紹介します。
 
-<p>キャプテンロジャーは現在JavaScriptによる2Dゲームをシンプルに開発できるもっとも一般的なツールある、Phaser フレームワークを用いて作成されており、PureJavaScriptやほかのフレームワークでゲームを構築するとき、これらの記事に含まれるナレッジの再利用がとても容易です。Phaser のよい入門書をお探しであれば、<a>2D breakout game using Phaser</a>tutorialをチェックしてみてください。</p>
+## 環境の設定
 
-<p>In the following articles we will show how to implement various different control mechanisms for Captain Rogers to support different platforms — from touch on mobile, through keyboard/mouse/gamepad on desktop, to more unconventional ones like TV remote, shouting to or waving your hand in front of the laptop, or squeezing bananas.</p>
+まず、ゲームのフォルダー構造、JavaScriptファイル、ゲーム内の状態を手短に説明し、どこで何が起きているのかを把握します。ゲームのフォルダーは以下のような感じです。
 
-<h2 id="Setting_up_the_environment">Setting up the environment</h2>
+![Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts.](captainrogers2-folderstructure.png)
 
-<p>Let's start with a quick overview of the game's folder structure, JavaScript files and in-game states, so we know what's happening where. The game's folders look like this:</p>
+ご覧のように、画像、JavaScript ファイル、フォント、効果音用のフォルダーがあります。 `src` フォルダーには、別個の状態として分割された JavaScript ファイル、 `Boot.js`, `Preloader.js`, `MainMenu.js`, `Game.js` があり、これらはこの順番でインデックスファイルに読み込まれます。最初のものは Phaser を初期化し、 2 つ目はすべての資産を先読みさせ、 3 つ目はプレーヤーを歓迎するメインメニューを制御し、 4 つ目は実際のゲームプレイを制御するものです。
 
-<p><img alt="Captain Rogers: Battle at Andromeda - folder structure of the games' project containing JavaScript sources, images and fonts." src="https://mdn.mozillademos.org/files/13851/captainrogers2-folderstructure.png" style="border-style: solid; border-width: 1px; display: block; height: 479px; margin: 0px auto; width: 575px;"></p>
+状態にはそれぞれ `preload()`, `create()`, `update()` という既定のメソッドがあります。最初のメソッドは必要な資産を先読みするために必要で、`create()` は状態が開始されると実行され、`update()` はフレームごとに実行されます。
 
-<p>As you can see there are folders for images, JavaScript files, fonts and sound effects. The <code>src</code> folder contains the JavaScript files split as a separate states — <code>Boot.js</code>, <code>Preloader.js</code>, <code>MainMenu.js</code> and <code>Game.js</code> — these are loaded into the index file in this exact order. The first one initializes Phaser, the second preloads all the assets, the third one controls the main menu welcoming the player, and the fourth controls the actual gameplay.</p>
+例えば、`create()` 関数でボタンを定義することができます。
 
-<p>Every state has its own default methods: <code>preload()</code>, <code>create()</code>, and <code>update()</code>. The first one is needed for preloading required assets, <code>create()</code> is executed once the state had started, and <code>update()</code> is executed on every frame.</p>
-
-<p>For example, you can define a button in the <code>create()</code> function:</p>
-
-<pre class="brush: js">create: function() {
-	// ...
-	var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
-	// ...
+```js
+create() {
+  // …
+  const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+  // …
 }
-</pre>
+```
 
-<p>It will be created once at the start of the game, and will execute <code>this.clickEnclave()</code> action assigned to it when clicked, but you can also use the mouse's pointer value in the <code>update()</code> function to make an action:</p>
+ゲーム開始時に一度だけ作成され、クリックされるとそれに割り当てられた `this.clickEnclave()` アクションを実行しますが、 `update()` 関数でマウスのポインタの値を使用してアクションを作成することもできます。
 
-<pre class="brush: js">update: function() {
-	// ...
-	if(this.game.input.mousePointer.isDown) {
-	    // do something
-	}
-	// ...
+```js
+update() {
+  // …
+  if(this.game.input.mousePointer.isDown) {
+      // do something
+  }
+  // …
 }
-</pre>
+```
 
-<p>This will be executed whenever the mouse button is pressed, and it will be checked against the input's <code>isDown</code> boolean variable on every frame of the game.</p>
+これはマウスボタンが押されるたびに実行され、ゲームの各フレームで入力の `isDown` という論理変数と照合されます。
 
-<p>That should give you some understanding of the project structure. We'll be playing mostly with the <code>MainMenu.js</code> and <code>Game.js</code> files, and we'll explain the code inside the <code>create()</code> and <code>update()</code> methods in much more detail in later articles.</p>
+これで、プロジェクトの構成がある程度理解できたと思います。今回は、主に `MainMenu.js` と `Game.js` ファイルで遊びます。`create()` と `update()` メソッド内のコードについては、後日、より詳しく説明したいと思います。
 
-<h2 id="Pure_JavaScript_demo">Pure JavaScript demo</h2>
+## 純粋な JavaScript のデモ
 
-<p>There's also a <a href="https://end3r.github.io/JavaScript-Game-Controls/">small online demo</a> with full source code <a href="https://github.com/end3r/JavaScript-Game-Controls/">available on GitHub</a> where the basic support for the control mechanisms described in the articles is implemented in pure JavaScript. It will be explained in the given articles themselves below, but you can play with it already, and use the code however you want for learning purposes.</p>
+また、[小さなオンラインデモ](https://end3r.github.io/JavaScript-Game-Controls/) と [GitHub で利用可能](https://github.com/end3r/JavaScript-Game-Controls/)な完全なソースコードがあり、記事で記述した制御機構の基本的な対応は、純粋な JavaScript で実装されています。それは以下の与えられた記事自体で説明されますが、あなたはすでにそれで遊ぶことができ、学習の目的のためにコードを好きなように使用することができます。
 
-<h2 id="The_articles">The articles</h2>
+## 記事
 
-<p>JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:</p>
+HTML5 が真にマルチプラットフォームであるため、JavaScript はモバイルゲームに最適です。以下の記事はすべて、さまざまな制御機構とインターフェイスするために提供される API に焦点を当てています。
 
-<ol>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch">Mobile touch controls</a> — The first article will kick off with touch, as the mobile first approach is very popular.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a> — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad">Desktop gamepad controls</a> — The Gamepad API rather usefully allows gamepads to be used for controlling web apps on desktop/laptop, for that console feel.</li>
- <li><a href="/en-US/docs/Games/Techniques/Control_mechanisms/Other">Unconventional controls</a> — The final article showcases some unconventional control mechanisms, from the experimental to the slightly crazy, which you might not believe could be used to play the game.</li>
-</ol>
+1. [モバイルのタッチ制御](/ja/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — 最初の記事は、モバイルファーストの考え方が浸透していることから、タッチでキックオフします。
+2. [デスクトップ PC のマウスとキーボードによる操作](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — デスクトップ／ノートパソコンでプレイする場合、ゲームに受け入れられるレベルのアクセシビリティを提供するためには、キーボードとマウスによる操作性を提供することが不可欠です。
+3. [デスクトップ PC のゲームパッドによる操作](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad) — ゲームパッド API は、デスクトップ PC やノート PC のウェブアプリケーションを操作するためにゲームパッドを使用することを可能にし、コンソール感覚を提供します。
+4. [非従来型制御](/ja/docs/Games/Techniques/Control_mechanisms/Other) — 最後の記事では、実験的なものからちょっとクレイジーなものまで、ゲームを使用するとは思えないような、型破りな操作機構を紹介しています。
