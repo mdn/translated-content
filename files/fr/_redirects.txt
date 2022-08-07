@@ -4093,7 +4093,8 @@
 /fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/forms/alerts	/fr/docs/Web/Accessibility/ARIA
-/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/Web/Accessibility/ARIA/widgets
+/fr/docs/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
@@ -6264,8 +6265,7 @@
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
 /fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
-/fr/docs/conflicting/Web/Accessibility/ARIA	/fr/docs/Web/Accessibility/ARIA
-/fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/Web/Accessibility/ARIA/widgets
+/fr/docs/conflicting/Web/Accessibility/ARIA/widgets	/fr/docs/conflicting/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/CSS	/fr/docs/Web/CSS
