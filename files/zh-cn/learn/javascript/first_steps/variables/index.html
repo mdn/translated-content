@@ -73,7 +73,7 @@ if (name === 'Adam') {
 
 <p>变量的另一个特性就是它们能够存储任何的东西 -- 不只是字符串和数字。变量可以存储更复杂的数据，甚至是函数。你将在后续的内容中体验到这些用法。</p>
 
-<p><u><strong>我们说，变量是用来存储数值的，那么有一个重要的概念需要区分。变量不是数值本身，它们仅仅是一个用于存储数值的容器。你可以把变量想象成一个个用来装东西的纸箱子。</strong></u></p>
+<p>我们说，变量是用来存储数值的，那么有一个重要的概念需要区分。变量不是数值本身，它们仅仅是一个用于存储数值的容器。你可以把变量想象成一个个用来装东西的纸箱子。</p>
 
 <p><img src="boxes.png"></p>
 
@@ -86,10 +86,7 @@ let myAge;</pre>
 
 <p>在这里我们声明了两个变量 <code>myName</code> 和 <code>myAge</code>. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this consol</a> ). 此外，你也可以多声明几个变量。</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -190,12 +187,11 @@ let myAge;</pre>
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('声明变量', '100%', 300) }}</p>
 
 <div class="note">
-<p><strong>提示</strong>: 在 JavaScript 中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
+<p><strong>备注：</strong> 在 JavaScript 中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
 </div>
 
 <p>你可以通过使用变量的方式来验证这个变量的数值是否在执行环境中已经存在。例如，</p>
@@ -208,7 +204,7 @@ myAge;</pre>
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
 <div class="note">
-<p><strong>提示</strong>: 千万不要把两个概念弄混淆了，“一个变量存在，但是没有数值”和“一个变量并不存在” — 他们完全是两回事 — 在前面你看到的盒子的类比中，不存在意味着没有可以存放变量的“盒子”。没有定义的值意味着有一个“盒子”，但是它里面没有任何值。</p>
+<p><strong>备注：</strong> 千万不要把两个概念弄混淆了，“一个变量存在，但是没有数值”和“一个变量并不存在” — 他们完全是两回事 — 在前面你看到的盒子的类比中，不存在意味着没有可以存放变量的“盒子”。没有定义的值意味着有一个“盒子”，但是它里面没有任何值。</p>
 </div>
 
 <h2 id="初始化变量">初始化变量</h2>
@@ -230,7 +226,7 @@ myAge;</pre>
 <p>这可能是大多数时间你都会使用的方式， 因为它要比在单独的两行上做两次操作要快。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做<strong>顶置</strong>—阅读<a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a>来了解更多细节。</p>
+<p><strong>备注：</strong> 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做<strong>顶置</strong>—阅读<a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a>来了解更多细节。</p>
 </div>
 
 <h2 id="var_与_let_的区别">var 与 let 的区别</h2>
@@ -254,7 +250,7 @@ logName();
 var myName;</code></pre>
 
 <div class="blockIndicator note">
-<p>Note: 只有在 web 文档中运行多行 JavaScript 时才会有这种效果，当在 JavaScript 控制台中键入单独的行，这将不起作用。</p>
+<p><strong>备注：</strong> 只有在 web 文档中运行多行 JavaScript 时才会有这种效果，当在 JavaScript 控制台中键入单独的行，这将不起作用。</p>
 </div>
 
 <p>这是由于变量的<strong>提升</strong>，更多细节请阅读<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var#变量提升">变量提升</a>。</p>
@@ -281,7 +277,7 @@ myName = 'Bob';</code></pre>
 <p>出于这些以及其他原因，我们建议您在代码中尽可能多地使用 <code>let</code>，而不是 <code>var</code>。因为没有理由使用 <code>var</code>，除非您需要用代码支持旧版本的 Internet Explorer (它直到第 11 版才支持 <code>let</code> ，现代的 Windows Edge 浏览器支持的很好)。</p>
 
 <div class="blockIndicator note">
-<p>  <strong>Note: </strong>我们目前正在更新课程以使用 let 而不是 var。忍耐一下！</p>
+<p><strong>备注：</strong> 我们目前正在更新课程以使用 let 而不是 var。忍耐一下！</p>
 </div>
 
 <h2 id="更新变量">更新变量</h2>
@@ -306,7 +302,7 @@ myAge = 40;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: 你能从<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">词汇语法—关键字</a>找到一个相当完整的保留关键字列表来避免使用关键字当作变量。</p>
+<p><strong>备注：</strong> 你能从<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">词汇语法—关键字</a>找到一个相当完整的保留关键字列表来避免使用关键字当作变量。</p>
 </div>
 
 <p>好的命名示例：</p>

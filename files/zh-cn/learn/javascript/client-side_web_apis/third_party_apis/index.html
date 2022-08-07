@@ -1,12 +1,6 @@
 ---
 title: 第三方 API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - API
-  - youtube
-  - 初学者
-  - 第三方
-  - 谷歌地图
 translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}</div>
@@ -33,7 +27,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 <p>让我们再来瞧一眼这个地图的例子 (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">source code on GitHub</a>; <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">see it live also</a>), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。</p>
+<p><strong>备注：</strong> 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。</p>
 </div>
 
 <h3 id="它们植根于第三方服务器">它们植根于第三方服务器</h3>
@@ -63,7 +57,7 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 <p>以上就是用 Google Maps API 建立一个简单地图所需要的所有信息。所有复杂的工作都全由你所连接的第三方服务器处理，包括展示正确地理位置的地图块，等等。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 一些 api 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求 (参见从服务器获取数据)，以检索特定的数据。这些被称为 RESTful api，稍后我们将在文章中展示这个示例。</p>
+<p><strong>备注：</strong> 一些 api 处理对其功能的访问略有不同，相反，它们要求开发人员向特定的 URL 模式发出 HTTP 请求 (参见从服务器获取数据)，以检索特定的数据。这些被称为 RESTful api，稍后我们将在文章中展示这个示例。</p>
 </div>
 
 <h3 id="权限的不同处理方式">权限的不同处理方式</h3>
@@ -102,7 +96,7 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
   </ol>
 
   <div class="note">
-  <p><strong>注意：获取</strong>Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——<a href="/en-US/docs/Learn#Contact_us">联系我们</a>。</p>
+  <p><strong>备注：</strong> 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——<a href="/en-US/docs/Learn#Contact_us">联系我们</a>。</p>
   </div>
  </li>
  <li>打开你的 Google Maps 起始文件，找到<code>INSERT-YOUR-API-KEY-HERE</code>字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。</li>
@@ -144,11 +138,11 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 访问 <a href="https://developers.google.com/maps/documentation/javascript/custom-markers">Customizing a Google Map: Custom Markers</a> 以查看更多信息。</p>
+<p><strong>备注：</strong> 访问 <a href="https://developers.google.com/maps/documentation/javascript/custom-markers">Customizing a Google Map: Custom Markers</a> 以查看更多信息。</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 访问 <a href="https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3">Map marker or Icon names</a> 以找出还有哪些可以的图标，并查看它们的引用名称是什么。它们的文件名应当是当你点击它们时显示出的图标名，最后带有".png"。</p>
+<p><strong>备注：</strong> 访问 <a href="https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3">Map marker or Icon names</a> 以找出还有哪些可以的图标，并查看它们的引用名称是什么。它们的文件名应当是当你点击它们时显示出的图标名，最后带有".png"。</p>
 </div>
 
 <h3 id="单击标记时显示弹出窗口">单击标记时显示弹出窗口</h3>
@@ -239,7 +233,7 @@ scaleControl: true,</pre>
 
 <p>下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14821/nytimes-search.png" style="border-style: solid; border-width: 1px; display: block; height: 374px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14821/nytimes-search.png"></p>
 
 <h3 id="将API连接到应用">将 API 连接到应用</h3>
 
@@ -302,11 +296,11 @@ function fetchResults(e) {
 &amp;begin_date=20170301&amp;end_date=20170312</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 更多 URL 参数的说明参考 <a href="https://developer.nytimes.com/">NYTimes developer docs</a>.</p>
+<p><strong>备注：</strong> 更多 URL 参数的说明参考 <a href="https://developer.nytimes.com/">NYTimes developer docs</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 <code>required</code> 属性实现)，此外，日期字段有确定的 <code>pattern</code> 属性，它们的值必须由 8 个数字组成 (<code>pattern="[0-9]{8}"</code>)，否则不能提交。更多细节参考 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> </p>
+<p><strong>备注：</strong> 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 <code>required</code> 属性实现)，此外，日期字段有确定的 <code>pattern</code> 属性，它们的值必须由 8 个数字组成 (<code>pattern="[0-9]{8}"</code>)，否则不能提交。更多细节参考 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> </p>
 </div>
 
 <h3 id="从api请求数据">从 api 请求数据</h3>
@@ -439,7 +433,7 @@ function previousPage(e) {
 </ol>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 完整代码参考 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html">finished nytimes API example code on GitHub</a> (实例参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/">see it running live here</a>).</p>
+<p><strong>备注：</strong> 完整代码参考 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html">finished nytimes API example code on GitHub</a> (实例参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/">see it running live here</a>).</p>
 </div>
 
 <h2 id="YouTube示例">YouTube 示例</h2>

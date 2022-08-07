@@ -46,7 +46,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p>同样，比如说，编程来显示一些 3D 图形，使用以更高级语言编写的 API（例如 JavaScript 或 Python）将会比直接编写直接控制计算机的 GPU 或其他图形功能的低级代码（比如 C 或 C++）来执行操作要容易得多。</p>
 
 <div class="note">
-<p><strong>注：</strong>详细说明请见<a href="/en-US/docs/Glossary/API">API - Glossary</a>。</p>
+<p><strong>备注：</strong> 详细说明请见<a href="/en-US/docs/Glossary/API">API - Glossary</a>。</p>
 </div>
 
 <h3 id="客户端JavaScript中的API">客户端 JavaScript 中的 API</h3>
@@ -108,7 +108,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: 你可以在 <a href="http://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>.上发现更多关于第三方 API 的信息。</p>
+<p><strong>备注：</strong> 你可以在 <a href="http://www.programmableweb.com/category/all/apis">Programmable Web API directory</a>.上发现更多关于第三方 API 的信息。</p>
 </div>
 
 <h2 id="API如何工作？">API 如何工作？</h2>
@@ -120,7 +120,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p> API 使用一个或多个 <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> 在您的代码中进行交互，这些对象用作 API 使用的数据（包含在对象属性中）的容器以及 API 提供的功能（包含在对象方法中）。</p>
 
 <div class="note">
-<p> 注意：如果您不熟悉对象如何工作，则应继续学习 <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> 模块。</p>
+<p><strong>备注：</strong> 如果您不熟悉对象如何工作，则应继续学习 <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a> 模块。</p>
 </div>
 
 <p>让我们回到 Geolocation API 的例子 - 这是一个非常简单的 API，由几个简单的对象组成：</p>
@@ -143,7 +143,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 });</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 当您第一次加载上述实例，应当出现一个对话框询问您是否乐意对此应用共享位置信息（参见 <a href="#它们在适当的地方有额外的安全机制">它们在适当的地方有额外的安全机制</a> 这一稍后将会提到的部分）。您需要同意这项询问以将您的位置于地图上绘制。如果您始终无法看见地图，您可能需要手动修改许可项。修改许可项的方法取决于您使用何种浏览器，对于 Firefox 浏览器来说，在页面信息 &gt; 权限 中修改位置权限，在 Chrome 浏览器中则进入 设置 &gt; 隐私 &gt; 显示高级设置 &gt; 内容设置，其后修改位置设定。</p>
+<p><strong>备注：</strong> 当您第一次加载上述实例，应当出现一个对话框询问您是否乐意对此应用共享位置信息（参见 <a href="#它们在适当的地方有额外的安全机制">它们在适当的地方有额外的安全机制</a> 这一稍后将会提到的部分）。您需要同意这项询问以将您的位置于地图上绘制。如果您始终无法看见地图，您可能需要手动修改许可项。修改许可项的方法取决于您使用何种浏览器，对于 Firefox 浏览器来说，在页面信息 &gt; 权限 中修改位置权限，在 Chrome 浏览器中则进入 设置 &gt; 隐私 &gt; 显示高级设置 &gt; 内容设置，其后修改位置设定。</p>
 </div>
 
 <p>我们首先要使用 {{domxref("Geolocation.getCurrentPosition()")}} 方法返回设备的当前位置。浏览器的 {{domxref("Geolocation")}} 对象通过调用 {{domxref("Navigator.geolocation")}} 属性来访问。</p>
@@ -160,7 +160,7 @@ myGeo.getCurrentPosition(function(position) { ... });</pre>
 <p>{{domxref("Geolocation.getCurrentPosition()")}} 方法只有一个必须的参数，这个参数是一个匿名函数，当设备的当前位置被成功取到时，这个函数会运行。  这个函数本身有一个参数，它包含一个表示当前位置数据的 {{domxref("Position")}} 对象。</p>
 
 <div class="note">
-<p><strong>注意：由另一个函数作为参数的函数称为</strong> (<a href="/en-US/docs/Glossary/Callback_function">callback function</a> "回调函数").</p>
+<p><strong>备注：</strong> 由另一个函数作为参数的函数称为 (<a href="/en-US/docs/Glossary/Callback_function">callback function</a> "回调函数").</p>
 </div>
 
 <p>仅在操作完成时调用函数的模式在 JavaScript API 中非常常见 - 确保一个操作已经完成，然后在另一个操作中尝试使用该操作返回的数据。这些被称为 <strong><a href="/en-US/docs/Glossary/Asynchronous">asynchronous</a> </strong> “异步”操作。由于获取设备的当前位置依赖于外部组件（设备的 GPS 或其他地理定位硬件），我们不能保证会立即使用返回的数据。因此，这样子是行不通的：</p>
@@ -194,7 +194,7 @@ var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 <p>最后一块代码突出显示了您将在许多 API 中看到的两种常见模式。 首先，API 对象通常包含构造函数，可以调用这些构造函数来创建用于编写程序的对象的实例。其次，API 对象通常有几个可用的 options(如上面的<code>myOptions</code>对象)，可以调整以获得您的程序所需的确切环境 (根据不同的环境，编写不同的<code>Options</code>对象)。API 构造函数通常接受 options 对象作为参数，这是您设置这些 options 的地方。</p>
 
 <div class="note">
-<p><strong>注意：如果您不能立即理解这个例子的细节，请不要担心。我们将在未来的文章中详细介绍第三方 API。</strong></p>
+<p><strong>备注：</strong> 如果您不能立即理解这个例子的细节，请不要担心。我们将在未来的文章中详细介绍第三方 API。</p>
 </div>
 
 <h3 id="它们有可识别的入口点">它们有可识别的入口点</h3>
@@ -223,7 +223,7 @@ var ctx = canvas.getContext('2d');</pre>
 };</pre>
 
 <div class="note">
-<p><strong>注意</strong>：您可以在我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">弹跳球演示中</a>看到此代码的实际  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">运行情况</a>  （ 也可以参阅它  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">现场运行</a>）。</p>
+<p><strong>备注：</strong> 您可以在我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html">弹跳球演示中</a>看到此代码的实际  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">运行情况</a>  （ 也可以参阅它  <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html">现场运行</a>）。</p>
 </div>
 
 <h3 id="它们使用事件来处理状态的变化">它们使用事件来处理状态的变化</h3>
@@ -247,7 +247,7 @@ request.onload = function() {
 }</pre>
 
 <div class="note">
-<p><strong>注意：您可以在我们的</strong><a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a><strong>示例中看到此代码</strong>  (或者 在线运行版本 <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
+<p><strong>备注：</strong> 您可以在我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html">ajax.html</a><strong>示例中看到此代码</strong>  (或者 在线运行版本 <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html">see it live</a> also).</p>
 </div>
 
 <p>前五行指定了我们要获取的资源的位置，使用<code>XMLHttpRequest()</code> 构造函数创建请求对象的新实例  ，打开 HTTP 的 <code>GET</code> 请求以取得指定资源，指定响应以 JSON 格式发送，然后发送请求。</p>

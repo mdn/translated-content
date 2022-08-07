@@ -34,7 +34,7 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 <p>请先下载 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html">index.html</a>、<a href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css">style.css</a> 和 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js">main.js</a> 三个文件。</p>
 
 <div class="note">
-<p><strong>注：</strong>也可以使用 <a href="http://jsbin.com/">JSBin</a> 或 <a href="https://glitch.com/">Glitch</a> 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。 如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 元素。</p>
+<p><strong>备注：</strong> 也可以使用 <a href="http://jsbin.com/">JSBin</a> 或 <a href="https://glitch.com/">Glitch</a> 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。 如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> 元素。</p>
 </div>
 
 <h2 id="项目简介">项目简介</h2>
@@ -43,10 +43,7 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 
 <p>程序最终会像这样：</p>
 
-<div class="hidden">
-<h6 id="Evil_circle">Evil circle</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -300,12 +297,8 @@ function loop() {
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<ul>
-</ul>
-
-<p>{{ EmbedLiveSample('Evil_circle', '100%', 480, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('项目简介', '100%', 480) }}</p>
 
 <p>可以 <a href="https://roy-tian.github.io/learning-area/javascript/oojs/assessment/">查看完成版本</a> 来获得更全面的体验。（别偷看源代码哦。）</p>
 
@@ -394,10 +387,10 @@ function loop() {
 <p>所以当一个按键按下时，事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性 就可以请求到按下的按键值。如果是代码中那四个指定的键值之一，那么恶魔圈将会左右上下的移动。</p>
 
 <div class="blockIndicator warning">
-<p><strong>译注：</strong>英文页面中使用了事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> 属性，不推荐在新代码中使用该属性，应使用标准 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性代替。（详见介绍页面）</p>
+<p><strong>警告：</strong> 英文页面中使用了事件对象的 <a href="/zh-CN/docs/Web/API/KeyboardEvent/keyCode">keyCode</a> 属性，不推荐在新代码中使用该属性，应使用标准 <a href="/zh-CN/docs/Web/API/KeyboardEvent/key">key</a> 属性代替。（详见介绍页面）</p>
 </div>
 
-<div class="blockIndicator note"><strong>译注：</strong>这里的 <code>window.onkeydown</code> 用一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 代替了英文页面中的匿名函数，从而无需 <code>var _this = this</code>。</div>
+<div class="blockIndicator note"><p><strong>备注：</strong> 这里的 <code>window.onkeydown</code> 用一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 代替了英文页面中的匿名函数，从而无需 <code>var _this = this</code>。</p></div>
 
 <h4 id="collisionDetect"><code>collisionDetect()</code></h4>
 
