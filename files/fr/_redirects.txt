@@ -4287,7 +4287,6 @@
 /fr/docs/Web/CSS/CSS_questions_frequentes	/fr/docs/Learn/CSS/Howto/CSS_FAQ
 /fr/docs/Web/CSS/CSS_values_serialization	/fr/docs/Web/CSS
 /fr/docs/Web/CSS/CSS_values_syntax	/fr/docs/Web/CSS
-/fr/docs/Web/CSS/Cascade	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /fr/docs/Web/CSS/Colonnes_CSS	/fr/docs/Web/CSS/CSS_Columns
 /fr/docs/Web/CSS/Colonnes_CSS/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /fr/docs/Web/CSS/Colonnes_CSS/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
