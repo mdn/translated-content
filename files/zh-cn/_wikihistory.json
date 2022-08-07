@@ -45043,36 +45043,6 @@
       "OlingCat"
     ]
   },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:32:46.472Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "maksyuki",
-      "saka6333",
-      "pixiu",
-      "OlingCat",
-      "Sheppy"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide": {
-    "modified": "2020-11-14T07:38:19.734Z",
-    "contributors": [
-      "kuailekai",
-      "chrisdavidmills",
-      "jswisher",
-      "wbamberg",
-      "codeofjackie",
-      "Dousy",
-      "Terry.Qiao",
-      "jianxin-zhang",
-      "DennisWang",
-      "suncn",
-      "WynnChen",
-      "zmh_w",
-      "OlingCat"
-    ]
-  },
   "conflicting/Mozilla/Add-ons/WebExtensions/user_interface": {
     "modified": "2019-03-18T21:06:10.178Z",
     "contributors": [
