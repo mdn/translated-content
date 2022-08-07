@@ -10,21 +10,14 @@ original_slug: MDN/Guidelines/Code_guidelines
 ---
 {{MDNSidebar}}
 
-この一連の文書では、MDN で使用するデモ、コードスニペット、対話型例などを書く際に使用するコーディングガイドラインと最善の慣習について概説します。
+この記事で記述するガイドラインは、言語に関係なく、コード例のスタイルと形式に適用されます。コード例を書くときにどのような内容を入れるべきかについてのガイドラインは、[執筆スタイルガイド](/ja-US/docs/MDN/Writing_guidelines/writing_style_guide#コード例) を参照してください。
 
-もしコード例を書くときに従うべきガイドラインを探しているのなら、正しい場所に来たと思います。これらのガイドラインを遵守する最大の利点は、 MDN 上の例やデモに一貫性を持たせ、読みやすさと理解力を高めることです。
+技術別のガイドラインについては、以下の記事を参照してください。
 
-> **Note:** コードの内容ではなく、 MDN の記事に表示されるコードのスタイルについてのアドバイスが必要な場合は、[執筆スタイルガイド](/ja/docs/MDN/Guidelines/Writing_style_guide#code_sample_style_and_formatting)を参照してください。
-
-## 記事構成
-
-この記事では、 MDN コード例を書くための一般的な高レベルの最善の慣習を紹介します。内容は以下の通りです。
-
-- [すべてのコードの全般的なガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/General) — 構文的な例と、スタイルや表示の例とで
-- [HTML のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/HTML)
-- [CSS のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/CSS)
-- [JavaScript のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/JavaScript)
-- [シェルプロンプトのガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/Shell)
+- [HTML のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
+- [CSS のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
+- [JavaScript のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
+- [シェルプロンプトのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
 
 ## 全般的な最善の慣習
 
@@ -50,3 +43,166 @@ original_slug: MDN/Guidelines/Code_guidelines
 - 最も効率的な書き方でなくても、可能な限りすっきりして理解できるようにコードを書いてください。
 - 簡潔にするための悪しき慣習（{{HTMLElement("big")}} 等の表現要素や {{domxref("Document.write", "document.write()")}}）を使用せず、正しく行いましょう。
 - API のデモの場合、複数の API を一緒に使用している場合は、どの API が入っているか、どの機能がどこから来ているかを明示しましょう。
+
+## 整形のガイドライン
+
+MDN Web Docs のコード例を整形するためのこれらのガイドラインは、あなたがコードを書くときにも良い実践となります。
+
+### インデント付け
+
+- すべてのコード例で、インデントにはタブごとに 2 つのスペースを使用してください。
+- ブロックの開始中括弧 ("`{`") 文字は、ブロックを開始する文と同じ行に配置してください。
+
+```html example-good
+<div>
+  <p>This is my paragraph.</p>
+</div>
+```
+
+```js example-good
+function myFunc() {
+  if (thingy) {
+    console.log('Yup, that worked.');
+  }
+}
+```
+
+### スペース
+
+制御文やループキーワードと、その開始括弧の間にスペースを追加してください。
+
+ ```js example-good
+if (condition) {
+  /* handle the condition */
+} else {
+  /* handle the "else" case */
+}
+```
+
+### コードの行の長さ
+
+- コード行は、読むのに水平スクロールが必要なほど長くすべきではありません。
+- 推奨される慣習として、コード行の長さは最大 80 文字（[インタラクティブ例](https://github.com/mdn/interactive-examples)では 64 文字）までに抑えてください。
+- 長い行は、読みやすさのために自然な区切り位置で改行してください。ただし、最善の慣習を犠牲にすることはありません。
+
+例えば、次のものは良くありません。
+
+```js example-bad
+let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign matter may have nestled its way into his mighty throat. Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of this awesome prowling machine.';
+```
+
+次のものはましですが、まだ幾らかぎこちないです。
+
+```js
+let tommyCat = 'Said Tommy the Cat as he reeled back to clear whatever foreign '
++ 'matter may have nestled its way into his mighty throat. Many a fat alley rat '
++ 'had met its demise while staring point blank down the cavernous barrel of '
++ 'this awesome prowling machine.';
+```
+
+テンプレートリテラルを使うのもよいでしょう。
+
+```js example-good
+let tommyCat = `Said Tommy the Cat as he reeled back to clear whatever foreign
+  matter may have nestled its way into his mighty throat. Many a fat alley rat
+  had met its demise while staring point blank down the cavernous barrel of
+  this awesome prowling machine.`;
+```
+
+```js example-good
+if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
+       || class.YET_ANOTHER_CONDITION ) {
+  /* something */
+}
+
+var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-service;1"]
+                           .createInstance(Components.interfaces.nsIToolkitProfileService);
+```
+
+### コードブロックの高さ
+
+コードブロックは必要なだけの長さであるべきですが、それより長くなってもいけません。できれば、 15 - 25 行が目安です。コードブロックがはるかに長くなりそうであれば、最も有用なスニペットのみを示し、 GitHub リポジトリや codepen に入れた完全な例にリンクさせてください。
+
+#### インラインコードの整形
+
+関数名、変数名、メソッド名をマークアップするには、 {{HTMLElement("code")}} 要素を使用してください。
+例えば「`frenchText()` 関数」のようにします。
+
+**メソッド名の後には括弧を続けてください。** 例えば、 `doSomethingUseful()` のようにします。
+括弧は、メソッドを他のコード用語と区別するのに役立ちます。
+
+## 適切なレンダリングのためのガイドライン
+
+これらのガイドラインは、あなたが書いたコード例が MDN Web Docs で適切に表示されることを保証するために従うことです。また、コード例がモバイル端末でも使用されるように、レスポンシブを考慮して書く必要があります。
+
+### 表示されるコード例の大きさ
+
+- **幅を 100% に設定する**。 MDN Web Docs のメインコンテンツペインはデスクトップでは約 700px の幅なので、埋め込まれたコード例はその幅で問題なく表示されるはずです。
+- **高さを 700px 以下に設定する**。画面上での可読性を最大にするため、表示されるコード例の幅をこの高さにすることをお勧めします。
+
+### 色の使用
+
+下記のように、主要な色やその他の「基本的な」色はキーワードを使用することを推奨します。
+
+  ```css example-good
+  color: black;
+  color: white;
+  color: red;
+  ```
+
+  もっと複雑な色には `rgb()` を使用してください（半透過のものも含む）。
+
+  ```css example-good
+  color: rgb(0, 0, 0, 0.5);
+  color: rgb(248, 242, 230);
+  ```
+
+  16 進の色を使用する必要がある場合は、小文字を使用してください。
+
+  ```css example-good
+  color: #058ed9;
+  color: #a39a92;
+  ```
+
+  冗長であれば短縮形を使用してください。
+
+  ```css example-good
+  color: #ff0;
+  color: #fff;
+  ```
+
+### 良い例と悪い例の強調表示
+
+このガイドラインを見て回るとわかりますが、良い実践例とされるコードブロックには緑色のチェックマークが、悪い実践例とされるコードブロックには赤丸に十字が表示されているのがわかります。
+
+コード例を書くときにも、同じスタイルに従うことができます。すべての場所でこのスタイルを使用する必要はありません。コード例において、良い例と悪い例を明確に示したい場合にのみ、このスタイルを使用してください。
+
+この表示を行うには、「コードフェンス」を使用してコードブロックを区分けし、その後に言語情報文字列を続けます。
+
+```js
+function myFunc() {
+  console.log('Hello!');
+};
+```
+
+コードブロックを良い例、悪い例と表示するには、以下のように、 `example-good` または `example-bad` を言語文字列の後に入れてください。
+
+````plain
+```html example-good
+<p class="brush: js example-good">
+```
+
+```html example-bad
+<p class="brush: js example-bad">
+```
+````
+
+これらは次のように表示されます。
+
+```html example-good
+<p class="brush: js example-good">
+```
+
+```html example-bad
+<p class="brush: js example-bad">
+```
