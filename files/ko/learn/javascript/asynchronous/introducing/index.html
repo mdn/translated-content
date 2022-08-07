@@ -157,7 +157,7 @@ gods.forEach(function (eachName, index){
 
 <p><code>fetch</code><code>()</code> 는 단일 매개변수만 전달받습니다. — 네트워크에서 가지고 오고 싶은 리소스의 URL — 그리고 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>로 응답합니다. promise 는 비동기 작업이 성공 했는지 혹은 실패했는지를 나타내는 하나의 오브젝트 입니다. 즉 성공/실패 의 분기점이 되는 중간의 상태라고 표현할 수 있죠. 왜 promise라는 이름이 붙었는지 잠깐 살펴보자면.. "내가 할수 있는 한 빨리 너의 요청의 응답을 가지고 돌아간다고 약속(promise)할게" 라는 브라우저의 표현방식 이어서 그렇습니다.</p>
 
-<p>이 개념에 익숙해 지기 위해서는 연습이 필요합니다.; 마치 {{interwiki("wikipedia", "Schrödinger's cat")}}(슈뢰딩거의 고양이) 처럼 느껴질 수 있습니다. 위의 예제에서도 발생 가능한 결과 중 아직 아무것도 발생하지 않았기 때문에, 미래에 어떤 시점에서 <code>fetch()</code>작업이 끝났을때 어떤 작업을 수행 시키기 위해 두 가지 작업이 필요합니다. 예제에선 <code>fetch()</code> 마지막에 세 개의 코드 블럭이 더 있는데 이를 살펴보겠습니다. :</p>
+<p>이 개념에 익숙해 지기 위해서는 연습이 필요합니다.; 마치 <a href="https://ko.wikipedia.org/wiki/%EC%8A%88%EB%A2%B0%EB%94%A9%EA%B1%B0%EC%9D%98_%EA%B3%A0%EC%96%91%EC%9D%B4">슈뢰딩거의 고양이</a> 처럼 느껴질 수 있습니다. 위의 예제에서도 발생 가능한 결과 중 아직 아무것도 발생하지 않았기 때문에, 미래에 어떤 시점에서 <code>fetch()</code>작업이 끝났을때 어떤 작업을 수행 시키기 위해 두 가지 작업이 필요합니다. 예제에선 <code>fetch()</code> 마지막에 세 개의 코드 블럭이 더 있는데 이를 살펴보겠습니다. :</p>
 
 <ul>
  <li>두 개의 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 블럭: 두 함수 모두 이전 작업이 성공했을때 수행할 작업을 나타내는 callback 함수 입니다. 그리고 각 callback함수는 인수로 이전 작업의 성공 결과를 전달받습니다. 따라서 성공했을때의 코드를 callback 함수 안에 작성하면 됩니다. 각 <code>.then()</code> 블럭은 서로 다른 promise를 반환합니다. 이 말은 <code>.then()</code> 을 여러개 사용하여 연쇄적으로 작업을 수행하게 할 수 있음을 말합니다. 따라서 여러 비동기 작업을 차례대로 수행할 수 있습니다.</li>
