@@ -1,0 +1,63 @@
+---
+title: BackgroundFetchManager
+slug: Web/API/BackgroundFetchManager
+page-type: web-api-interface
+tags:
+  - API
+  - Interface
+  - Reference
+  - BackgroundFetchManager
+  - Experimental
+  - Service Workers
+  - Fetch
+browser-compat: api.BackgroundFetchManager
+---
+
+{{DefaultAPISidebar("Background Fetch API")}}
+
+**`BackgroundFetchManager`** является интерфейсом {{domxref('Background Fetch API','','',' ')}}, который представляет собой коллекцию ключ/значение, в которой ключами являются идентификаторы фоновых запросов, а значениями объекты {{domxref("BackgroundFetchRegistration")}}.
+
+## Свойства
+
+Нет.
+
+## Методы
+
+- {{domxref('BackgroundFetchManager.fetch','fetch()' )}}
+  - : Возвращает {{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}} для предоставленного массива URL-адресов и объектов {{domxref("Request")}}.
+- {{domxref('BackgroundFetchManager.get','get()')}}
+  - : Возвращает {{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} связанного с предоставленным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
+- {{domxref('BackgroundFetchManager.getIDs','getIDs()')}}
+  - : Возвращает идентификаторы всех зарегистрированных фоновых запросов.
+
+## Примеры
+
+The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download a video in the background.
+
+```js
+navigator.serviceWorker.ready.then(async (swReg) => {
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    'my-fetch',
+    ['/ep-5.mp3', 'ep-5-artwork.jpg'],
+    {
+      title: 'Episode 5: Interesting things.',
+      icons: [
+        {
+          sizes: '300x300',
+          src: '/ep-5-icon.png',
+          type: 'image/png',
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
+});
+```
+
+## Спецификации
+
+{{Specifications}}
+
+## Браузерная совместимость
+
+{{Compat}}
