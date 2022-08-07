@@ -1,48 +1,26 @@
 ---
-title: CSS のガイドライン
-slug: MDN/Guidelines/Code_guidelines/CSS
+title: CSS のコード例を整形するためのガイドライン
+slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+page-type: mdn-writing-guide
 tags:
-  - CSS
-  - Code
-  - Guide
-  - Guidelines
-  - MDN Meta
-translation_of: MDN/Guidelines/Code_guidelines/CSS
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
 {{MDNSidebar}}
 
 次のガイドラインでは、MDN コードの例として CSS を記述する方法について説明します。
 
-## 目次
+## CSS のコード例のための全般的なガイドライン
 
-- [高水準のガイドライン](#高水準のガイドライン)
+### CSS を計画する
 
-  - [プリプロセッサーを使用しない](#プリプロセッサーを使用しない)
-  - [特定の CSS の方法論を使わない](#特定の_css_の方法論を使わない)
-  - [柔軟性のある/相対的な単位を使う](#柔軟性のある相対的な単位を使う)
-  - [リセットを使わない](#リセットを使わない)
-  - [CSS を計画する - オーバーライドを避ける](#css_を計画する_—_オーバーライドを避ける)
+CSS を大量に書き込む前に、スタイルを慎重に計画しましょう。どのようなスタイルが必要なのか、どのようなレイアウトが必要なのか、どのようなオーバーライドが必要なのか、そしてそれらは再利用可能なものなのか。特に、**オーバーライドのしすぎは禁物**です。スタイルを書いても、いくつかのルールセットで再びキャンセルしてしまうようなことがあれば、おそらく戦略を見直す必要があります。
 
-- [一般的な CSS コーディングスタイル](#一般的な_css_のコーディングスタイル)
+### 柔軟性のある/相対的な単位を使う
 
-  - [展開した構文を使う](#展開した構文を使う)
-  - [一括指定よりも個別指定を推奨](#一括指定よりも個別指定を推奨)
-  - [値の周りには二重引用符を使う](#値の周りには二重引用符を使う)
-  - [関数の引数の空白](#関数の引数の空白)
-  - [CSS のコメント](#css_のコメント)
-  - [!important は使わない](#!important_は使わない)
-
-- [具体的な CSS 構文のポイント](#具体的な_css_構文のポイント)
-
-  - [ボーダーなどのプロパティをオフにする](#border_などのプロパティをオフにする)
-  - [「モバイルファースト」のメディアクエリーを使う](#「モバイルファースト」のメディアクエリーを使う)
-
-- [セレクター](#セレクター)
-
-  - [ID セレクターを使わない](#id_セレクターを使わない)
-  - [複数のセレクターは個別の行に配置する](#複数のセレクターは個別の行に配置する)
-
-## 高水準のガイドライン
+可能な限り幅広い端末で最大限の柔軟性を実現するために、コンテナーやパディングなどの寸法は、em や rem のような相対的な単位を使用し、ビューポートの幅に応じて変化させたい場合はパーセント値やビューポートの単位を使うことをお勧めします。これについては、[レスポンシブデザインの構成要素](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids)の記事をご覧ください。
 
 ### プリプロセッサーを使用しない
 
@@ -52,111 +30,20 @@ MDN のサンプル コードでは、[Sass](https://sass-lang.com/),[Less](http
 
 前のガイドラインと同じ精神で、 [BEM](http://getbem.com/naming/) や [SMACSS](https://smacss.com/) のような特定の CSS の方法論を使って MDN のサンプルコードを書かないようにしてください。これらが有効な CSS 構文であっても、それらの方法論に精通していない人にとっては、命名規則が混乱を招く可能性があります。
 
-### 柔軟性のある/相対的な単位を使う
-
-可能な限り幅広い端末で最大限の柔軟性を実現するために、コンテナーやパディングなどの寸法は、em や rem のような相対的な単位を使用し、ビューポートの幅に応じて変化させたい場合はパーセント値やビューポートの単位を使うことをお勧めします。これについては、[レスポンシブデザインの構成要素](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids)の記事をご覧ください。
-
 ### リセットを使わない
 
 プラットフォーム横断的に CSS を最大限に制御するために、多数の人が CSS リセットを使用してすべてのスタイルを削除し、その後、自分で再構築する方法をとっています。これには確かにメリットがありますが、特に現代では CSS リセットはやりすぎで、既定のマージンやリストスタイルなど、元々完全に壊れていないものを再実装するために多数の余分な時間がかかってしまうことがあります。
 
 もし本当にリセットを使う必要があると感じたら、[Nicolas Gallagher による normalize.css](https://necolas.github.io/normalize.css/) の使用を検討してください。これは、ブラウザー間でより一貫したものにし、いつも削除している既定の厄介なもの（例えば `<body>` 上のマージン）を取り除き、いくつかのバグを修正することだけを目的としています。
 
-### CSS を計画する — オーバーライドを避ける
+### !important は使わない
 
-CSS を大量に書き込む前に、スタイルを慎重に計画しましょう。どのようなスタイルが必要なのか、どのようなレイアウトが必要なのか、どのようなオーバーライドが必要なのか、そしてそれらは再利用可能なものなのか。特に、オーバーライドのしすぎは禁物です。スタイルを書いても、いくつかのルールセットで再びキャンセルしてしまうようなことがあれば、おそらく戦略を見直す必要があります。
-
-## 一般的な CSS のコーディングスタイル
-
-### 展開した構文を使う
-
-CSS にはさまざまな記述方法がありますが、私たちは、セレクター/開始中括弧、終了中括弧、および各宣言がそれぞれ別の行にある、展開されたスタイルを好んで使用します。これは読みやすさを最大限に高め、また MDN での一貫性を促進します。
-
-このようにしてください。
-
-```css example-good
-p {
-  color: white;
-  background-color: black;
-  padding: 1rem;
-}
-```
-
-このようにはしないでください。
+`!important` は最後の手段で、何かを上書きする必要があり、他に方法がないときだけ使用します。これは悪しき習慣であり、可能な限り避けるべきです。
 
 ```css example-bad
-p { color: white; background-color: black; padding: 1rem; }
-```
-
-また、以下の点に注意してください。
-
-- セレクターと中括弧の間には空白を入れる。
-- 最後の宣言の最後には、たとえ厳密には必要ないとしても、必ずセミコロンを入れる。
-- 閉じ中括弧は改行して書く。
-- それぞれの宣言では、区切りコロンの後に空白を入れ、その前には入れない。
-- コードのインデントには空白を 2 つ 使う。
-
-### 一括指定よりも個別指定を推奨
-
-通常、 CSS 構文の詳細を教える場合、簡潔な一括指定よりも個別指定のプロパティを使用した方が明確でわかりやすいです（もちろん、簡潔な一括指定を教えることがこの例のポイントである場合は除きます）。 MDN の例のポイントは、人に教えることであって、賢いやり方でも効率的でもないことを覚えておいてください。
-
-そもそも、一括指定は何をやっているのか理解するのが難しいことが多いのです。例えば {{cssxref("font")}} 構文が何をしているのかを正確に拾い上げるには、しばらく時間がかかります。
-
-```css
-font: small-caps bold 2rem/1.5 sans-serif;
-```
-
-一方、こちらはより即座に理解することができます。
-
-```css
-font-variant: small-caps;
-font-weight: bold;
-font-size: 2rem;
-line-height: 1.5;
-font-family: sans-serif;
-```
-
-第二に、 CSS の一括指定には潜在的な落とし穴があります。明示的に設定していない構文の属値に既定値が設定され、カスケードで先に設定した値を予期せぬ形でリセットしてしまったり、その他の予期せぬ効果をもたらす可能性があるからです。例えば {{cssxref("grid")}} プロパティは、指定されていない項目に対して、以下のすべての既定値を設定します。
-
-- {{cssxref("grid-template-rows")}}: `none`
-- {{cssxref("grid-template-columns")}}: `none`
-- {{cssxref("grid-template-areas")}}: `none`
-- {{cssxref("grid-auto-rows")}}: `auto`
-- {{cssxref("grid-auto-columns")}}: `auto`
-- {{cssxref("grid-auto-flow")}}: `row`
-- {{cssxref("column-gap")}}: `0`
-- {{cssxref("row-gap")}}: `0`
-- {{cssxref("column-gap")}}: `normal`
-- {{cssxref("row-gap")}}: `normal`
-
-さらに、一部の一括指定は、様々な値の構成要素を特定の順序で入れないと期待通りに動作しません。例えば CSS アニメーションでは、次のようになります。
-
-```css
-/* duration | timing-function | delay | iteration-count
-   direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
-```
-
-例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/animation#構文)の詳細をご覧ください。
-
-### 値の周りには二重引用符を使う
-
-引用符を入れることができる、または入れる必要がある場合は、次のように二重引用符を使用してください。
-
-```css example-good
-[data-vegetable="liquid"] {
-  background-color: goldenrod;
-  background-image: url("../../media/examples/lizard.png");
+.bad-code {
+  font-size: 4rem !important;
 }
-```
-
-### 関数の引数の空白
-
-関数の引数には、区切り文字のカンマの後に空白を置くべきですが、その前には置きません。
-
-```css example-good
-color: rgb(255, 0, 0);
-background-image: linear-gradient(to bottom, red, black);
 ```
 
 ### CSS のコメント
@@ -178,33 +65,63 @@ h3 {
 }
 ```
 
-また、アスタリスクとコメントの間には、それぞれの場合で空白を空けておくことに注意してください。
+### 値の周りには二重引用符を使う
 
-### !important は使わない
+引用符を入れることができる、または入れる必要がある場合は、次のように二重引用符を使用してください。
 
-`!important` は最後の手段で、何かを上書きする必要があり、他に方法がないときだけ使用します。これは悪しき習慣であり、可能な限り避けるべきです。
-
-悪い例:
-
-```css example-bad
-.bad-code {
-  font-size: 4rem !important;
+```css example-good
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+  background-image: url("../../media/examples/lizard.png");
 }
 ```
 
-## 具体的な CSS 構文のポイント
+### 一括指定と個別指定のルール
 
-### border などのプロパティをオフにする
+通常、 CSS 構文の詳細を教える場合、簡潔な一括指定よりも個別指定のプロパティを使用した方が明確でわかりやすいです（もちろん、簡潔な一括指定を教えることがこの例のポイントである場合は除きます）。 MDN の例のポイントは、人に教えることであって、賢いやり方でも効率的でもないことを覚えておいてください。
 
-境界（および他のプロパティのうち、値として `0` または `none` を取ることができるもの）をオフにするときは、 `none` ではなく `0` を使用してください。
+- そもそも、一括指定は何をやっているのか理解するのが難しいことが多いのです。例えば {{cssxref("font")}} 構文が何をしているのかを正確に拾い上げるには、しばらく時間がかかります。
 
-```css example-good
-border: 0;
-```
+  ```css
+  font: small-caps bold 2rem/1.5 sans-serif;
+  ```
+
+  一方、こちらはより即座に理解することができます。
+
+  ```css
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-family: sans-serif;
+  ```
+
+- CSS の一括指定には潜在的な落とし穴があります。明示的に設定していない構文の属値に既定値が設定され、カスケードで先に設定した値を予期せぬ形でリセットしてしまったり、その他の予期せぬ効果をもたらす可能性があるからです。例えば {{cssxref("grid")}} プロパティは、指定されていない項目に対して、以下のすべての既定値を設定します。
+
+  - {{cssxref("grid-template-rows")}}: `none`
+  - {{cssxref("grid-template-columns")}}: `none`
+  - {{cssxref("grid-template-areas")}}: `none`
+  - {{cssxref("grid-auto-rows")}}: `auto`
+  - {{cssxref("grid-auto-columns")}}: `auto`
+  - {{cssxref("grid-auto-flow")}}: `row`
+  - {{cssxref("column-gap")}}: `0`
+  - {{cssxref("row-gap")}}: `0`
+  - {{cssxref("column-gap")}}: `normal`
+  - {{cssxref("row-gap")}}: `normal`
+
+- 一部の一括指定は、様々な値の構成要素を特定の順序で入れないと期待通りに動作しません。例えば CSS アニメーションでは、次のようになります。
+
+  ```css
+  /* duration | timing-function | delay | iteration-count
+    direction | fill-mode | play-state | name */
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  ```
+
+  例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/animation#構文)の詳細をご覧ください。
 
 ### 「モバイルファースト」のメディアクエリーを使う
 
-同じスタイルシート内でメディアクエリーを使用して、様々なターゲットのビューポートサイズによって異なるスタイルのセットを入れるとき、メディアクエリーが文書に適用される前の既定のスタイルを狭い画面／モバイルスタイルとし、その後メディアクエリー内で広いビューポート用に上書きするのはよい考えです。
+同じスタイルシート内で[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)を使用して、様々なターゲットのビューポートサイズによって異なるスタイルのセットを入れるとき、メディアクエリーが文書に適用される前の既定のスタイルを狭い画面／モバイルスタイルとし、その後メディアクエリー内で広いビューポート用に上書きするのはよい考えです。これには多くの利点があり、[モバイルファースト](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first)の記事で概説しています。
 
 ```css example-good
 /* 狭い画面向けの既定の CSS レイアウト値 */
@@ -222,54 +139,87 @@ border: 0;
 }
 ```
 
-これには多くの利点があり、[モバイルファースト](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first)の記事で概説しています。
-
 ## セレクター
 
-### ID セレクターを使わない
+- ID セレクターを使用しないでください。理由は以下の通りです。
+  - ID セレクターは柔軟性に欠け、複数必要だとわかっても追加できません。
+  - クラスよりも特異性が高く、必要な場合に上書きするのが難しいです。
 
-ID セレクターを使用する必要はありません。 ID セレクターは柔軟性に欠け（複数必要だとわかっても追加できない）、クラスよりも特異性が高く、必要な場合に上書きするのが難しいからです。
+  ```css example-good
+  .editorial-summary {
+    ...
+  }
+  ```
 
-良い例:
+  ```css example-bad
+  #editorial-summary {
+    ...
+  }
+  ```
+
+- ルールに複数のセレクターがある場合、それぞれのセレクターを別の行に置いてください。こうすることで、セレクターのリストが読みやすくなり、コードの各行を短くすることができます。
+
+  次のようにしてください。
+
+  ```css example-good
+  h1,
+  h2,
+  h3 {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  ```
+
+  次のようにはしないでください。
+
+  ```css example-bad
+  h1, h2, h3 {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  ```
+
+### 関数の引数のスペース
+
+関数の引数には、区切り文字のカンマの後にスペースを置くべきですが、その前には置きません。
 
 ```css example-good
-.editorial-summary {
-  /* … */
-}
+color: rgb(255, 0, 0);
+background-image: linear-gradient(to bottom, red, black);
 ```
 
-悪い例:
+### 構文のスタイル
 
-```css example-bad
-#editorial-summary {
-  /* … */
-}
-```
+CSS にはさまざまな記述方法がありますが、私たちは、セレクター/開始中括弧、終了中括弧、および各宣言がそれぞれ別の行にある、展開されたスタイルを好んで使用します。これは読みやすさを最大限に高め、また MDN での一貫性を促進します。
 
-### 複数のセレクターは個別の行に配置する
+加えて、以下の慣例を意識してください。
 
-ルールに複数のセレクターがある場合、それぞれのセレクターを別の行に置いてください。こうすることで、セレクターのリストが読みやすくなり、コードの一行一行を短くすることができます。
-
-このようにしてください。
+- セレクターと中括弧の間にはスペースを入れる。
+- 最後の宣言の最後には、たとえ厳密には必要ないとしても、必ずセミコロンを入れる。
+- 閉じ中括弧は改行して書く。
+- それぞれの宣言では、区切りコロンの後にスペースを入れ、その前には入れない。
+- コードのインデントには 2 つのスペースを使う。
 
 ```css example-good
-h1,
-h2,
-h3 {
-  font-family: sans-serif;
-  text-align: center;
+p {
+  color: white;
+  background-color: black;
+  padding: 1rem;
 }
 ```
-
-このようにはしないでください。
 
 ```css example-bad
-h1, h2, h3 {
-  font-family: sans-serif;
-  text-align: center;
-}
+p { color: white; background-color: black; padding: 1rem; }
 ```
 
-## MDN の良い CSS の例
+### border などのプロパティをオフにする
 
-CSS プロパティのリファレンスページの冒頭には、簡潔で意味のある良い CSS スニペットが掲載されています。 [CSS のキーワード索引](/ja/docs/Web/CSS/Reference#keyword_index)から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。
+境界（および他のプロパティのうち、値として `0` または `none` を取ることができるもの）をオフにするときは、 `none` ではなく `0` を使用してください。
+
+```css example-good
+border: 0;
+```
+
+## 関連情報
+
+[CSS のキーワード索引](/ja/docs/Web/CSS/Reference#index)から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。
