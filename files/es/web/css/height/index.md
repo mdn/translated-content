@@ -1,0 +1,57 @@
+---
+title: height
+slug: Web/CSS/height
+browser-compat: css.properties.height
+l10n:
+  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2eabcebf471d56ef12239e2565f26d952e8a8cab2e
+---
+{{CSSRef}}
+
+La propiedad CSS **`height`** especifica la altura de un elemento. Por defecto, la propiedad define la altura del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). Sin embargo, si {{cssxref("box-sizing")}} está configurado como `border-box`, determina la altura del [área de borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+
+{{EmbedInteractiveExample("pages/css/height.html")}}
+
+Las propiedades {{cssxref("min-height")}} y {{cssxref("max-height")}} anulan a la propiedad `height` .
+
+## Sintaxis
+
+```css
+/* Valores de longitud */
+height: 120px;
+height: 10em;
+
+/* Valores de porcentaje */
+height: 75%;
+
+/* Valores con palabras clave */
+height: max-content;
+height: min-content;
+height: fit-content(20em);
+height: auto;
+
+/* Valores globales */
+height: inherit;
+height: initial;
+height: revert;
+height: revert-layer;
+height: unset;
+```
+### Valores
+
+- {{cssxref("&lt;length&gt;")}}
+  - : Define la altura como un valor absoluto.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Define la altura como un porcentaje de la altura del bloque contenedor.
+- `auto`
+  - : El navegador calculará y seleccionará una altura para el elemento especificado.
+- `max-content`
+  - : La altura preferida intrínseca.
+- `min-content`
+  - : La altura mínima intrínseca.
+- `fit-content`
+  - : La caja (box en la demo de prueba de arriba) usará todo el espacio disponible, pero nunca más de lo indicado por `max-content` .
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+  - : Utiliza la fórmula _fit-content_ con el espacio disponible sustituido por el argumento especificado, es decir `min(max-content, max(min-content, <length-percentage>))`
+- {{cssxref("clamp", "clamp()")}}
+  - : Permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos.
+   
