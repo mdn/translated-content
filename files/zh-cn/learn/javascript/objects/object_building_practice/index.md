@@ -10,34 +10,40 @@ tags:
   - 画布
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</div>
-
-<p>在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！</p>
+在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，了解 HTML 与 CSS 的基本概念，熟悉 JavaScript 基本知识（请参阅 <a href="/zh-CN/docs/Learn/JavaScript/First_steps">入门</a> 和 <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建块结构</a>）和面向对象的 JavaScript（OOJS）基础（请参阅 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics">对象基础</a>）。</td>
-  </tr>
-  <tr>
-   <th scope="row">目标：</th>
-   <td>练习使用对象，在真实环境中应用面向对象开发技术。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">预备知识：</th>
+      <td>
+        基本的计算机知识，了解 HTML 与 CSS 的基本概念，熟悉 JavaScript
+        基本知识（请参阅
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">入门</a> 和
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks">构建块结构</a
+        >）和面向对象的 JavaScript（OOJS）基础（请参阅
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics">对象基础</a>）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>练习使用对象，在真实环境中应用面向对象开发技术。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="弹跳吧！小彩球！">弹跳吧！小彩球！</h2>
+## 弹跳吧！小彩球！
 
-<p>本文通过编写一个弹球 demo 来展示 JavaScript 中对象的重要性。我们的小球会在屏幕上弹跳，当它们碰到彼此时会变色。最终会像这样：</p>
+本文通过编写一个弹球 demo 来展示 JavaScript 中对象的重要性。我们的小球会在屏幕上弹跳，当它们碰到彼此时会变色。最终会像这样：
 
-<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <style>
         body {
             margin: 0;
             overflow: hidden;
@@ -54,14 +60,14 @@ translation_of: Learn/JavaScript/Objects/Object_building_practice
             color: transparent;
             text-shadow: 0 0 4px white;
         }
-     &lt;/style&gt;
-  &lt;/head&gt;
+     </style>
+  </head>
 
-  &lt;body&gt;
-    &lt;h1&gt;弹球&lt;/h1&gt;
-    &lt;canvas&gt;&lt;/canvas&gt;
+  <body>
+    <h1>弹球</h1>
+    <canvas></canvas>
 
-    &lt;script&gt;
+    <script>
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -98,19 +104,19 @@ Ball.prototype.draw = function() {
 };
 
 Ball.prototype.update = function() {
-  if((this.x + this.size) &gt;= width) {
+  if((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
 
-  if((this.x - this.size) &lt;= 0) {
+  if((this.x - this.size) <= 0) {
     this.velX = -(this.velX);
   }
 
-  if((this.y + this.size) &gt;= height) {
+  if((this.y + this.size) >= height) {
     this.velY = -(this.velY);
   }
 
-  if((this.y - this.size) &lt;= 0) {
+  if((this.y - this.size) <= 0) {
     this.velY = -(this.velY);
   }
 
@@ -119,13 +125,13 @@ Ball.prototype.update = function() {
 };
 
 Ball.prototype.collisionDetect = function() {
-  for(let j = 0; j &lt; balls.length; j++) {
+  for(let j = 0; j < balls.length; j++) {
     if(this !== balls[j]) {
       const dx = this.x - balls[j].x;
       const dy = this.y - balls[j].y;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      if (distance &lt; this.size + balls[j].size) {
+      if (distance < this.size + balls[j].size) {
         balls[j].color = this.color = randomColor();
       }
     }
@@ -134,7 +140,7 @@ Ball.prototype.collisionDetect = function() {
 
 let balls = [];
 
-while(balls.length &lt; 25) {
+while(balls.length < 25) {
   const size = random(10,20);
   let ball = new Ball(
     random(0 + size, width - size),
@@ -151,7 +157,7 @@ function loop() {
   ctx.fillStyle = 'rgba(0,0,0,0.25)';
   ctx.fillRect(0,0,width,height);
 
-  for(let i = 0; i &lt; balls.length; i++) {
+  for(let i = 0; i < balls.length; i++) {
     balls[i].draw();
     balls[i].update();
     balls[i].collisionDetect();
@@ -162,43 +168,44 @@ function loop() {
 
 loop();
 
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('弹跳吧！小彩球！', '100%', 480) }}</p>
+{{ EmbedLiveSample('弹跳吧！小彩球！', '100%', 480) }}
 
-<p>这个实例将会利用 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Canvas API</a> 来在屏幕上画小球，还会用到 <a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> API 来使整个画面动起来 —— 我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。</p>
+这个实例将会利用 [Canvas API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) 来在屏幕上画小球，还会用到 [requestAnimationFrame](/zh-CN/docs/Web/API/window/requestAnimationFrame) API 来使整个画面动起来 —— 我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。
 
-<h2 id="让我们开始吧">让我们开始吧</h2>
+## 让我们开始吧
 
-<p>首先下载 <a href="https://raw.githubusercontent.com/roy-tian/learning-area/master/javascript/oojs/bouncing-balls/bouncing-balls-start.zip">bouncing-balls-start.zip</a>，其中包含以下三个文件：index.html、style.css 和 main.js。它们分别包含以下内容：</p>
+首先下载 [bouncing-balls-start.zip](https://raw.githubusercontent.com/roy-tian/learning-area/master/javascript/oojs/bouncing-balls/bouncing-balls-start.zip)，其中包含以下三个文件：index.html、style.css 和 main.js。它们分别包含以下内容：
 
-<ol>
- <li>一个非常简单的 HTML 文档，包括一个 <code>&lt;h1&gt;</code> 元素、一个{{HTMLElement("canvas")}} 元素来画小球，还有一些元素将 CSS 和 JavaScript 运用到我们的 HTML 中。</li>
- <li>一些非常简单的样式，主要是 <code>&lt;h1&gt;</code> 元素的样式和定位，另外还能使画面填充整个页面从而摆脱滚动条和边缘的空白（这样看起来非常简洁）</li>
- <li>一些 JavaScript 用来设置 <code>&lt;canvas&gt;</code> 元素，并提供我们要用到的基本函数。</li>
-</ol>
+1.  一个非常简单的 HTML 文档，包括一个 `<h1>` 元素、一个{{HTMLElement("canvas")}} 元素来画小球，还有一些元素将 CSS 和 JavaScript 运用到我们的 HTML 中。
+2.  一些非常简单的样式，主要是 `<h1>` 元素的样式和定位，另外还能使画面填充整个页面从而摆脱滚动条和边缘的空白（这样看起来非常简洁）
+3.  一些 JavaScript 用来设置 `<canvas>` 元素，并提供我们要用到的基本函数。
 
-<p>脚本的第一部分是这样的：</p>
+脚本的第一部分是这样的：
 
-<pre class="brush: js">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 
 const ctx = canvas.getContext('2d');
 
 const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;</pre>
+const height = canvas.height = window.innerHeight;
+```
 
-<p>这个脚本使用变量代指了 <code>&lt;canvas&gt;</code> 元素，然后对其调用 <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> 从而我们获得一个开始画画的环境。存储以上操作结果的变量（<code>ctx</code>）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。</p>
+这个脚本使用变量代指了 `<canvas>` 元素，然后对其调用 [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) 从而我们获得一个开始画画的环境。存储以上操作结果的变量（`ctx`）是一个对象，直接代指画布上的一块允许我们绘制 2D 图形的区域。
 
-<p>接下来，我们设置 <code>width</code> 和 <code>height</code> 变量，并且让画布元素的宽和高（分别使用 <code>canvas.width</code> 和 <code>canvas.height</code> 表示）等于浏览器的宽和高（也就是网页显示的区域 — 可以从 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}参数获得）。</p>
+接下来，我们设置 `width` 和 `height` 变量，并且让画布元素的宽和高（分别使用 `canvas.width` 和 `canvas.height` 表示）等于浏览器的宽和高（也就是网页显示的区域 — 可以从 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}参数获得）。
 
-<p>你会看到我们在这里串联了多个赋值表达式在一起，这样能更快地设置变量——这是完全正确的。</p>
+你会看到我们在这里串联了多个赋值表达式在一起，这样能更快地设置变量——这是完全正确的。
 
-<p>原始脚本最后的部分如下：</p>
+原始脚本最后的部分如下：
 
-<pre class="brush: js">function random(min,max) {
+```js
+function random(min,max) {
   return Math.floor(Math.random()*(max-min)) + min;
 }
 
@@ -207,241 +214,241 @@ function randomColor() {
          random(0, 255) + ', ' +
          random(0, 255) + ', ' +
          random(0, 255) + ')';
-}</pre>
+}
+```
 
-<p>第一个函数为我们生成一个 <code>min</code> 至 <code>max</code> 之间的随机整数，第二个函数为我们生成一个随机的颜色值。</p>
+第一个函数为我们生成一个 `min` 至 `max` 之间的随机整数，第二个函数为我们生成一个随机的颜色值。
 
-<h2 id="为程序中的小球建立模型">为程序中的小球建立模型</h2>
+## 为程序中的小球建立模型
 
-<p>我们的项目中会有很多小球在屏幕上跳来跳去。因此这些小球会以相同的方式运作，从而我们可以通过一个对象实例化它们。首先，我们将下面的构造器加入到代码的底部。</p>
+我们的项目中会有很多小球在屏幕上跳来跳去。因此这些小球会以相同的方式运作，从而我们可以通过一个对象实例化它们。首先，我们将下面的构造器加入到代码的底部。
 
-<pre class="brush: js">function Ball(x, y, velX, velY, color, size) {
+```js
+function Ball(x, y, velX, velY, color, size) {
   this.x = x;
   this.y = y;
   this.velX = velX;
   this.velY = velY;
   this.color = color;
   this.size = size;
-}</pre>
+}
+```
 
-<p>这个构造器中定义了每个小球需要的参数：</p>
+这个构造器中定义了每个小球需要的参数：
 
-<ul>
- <li><code>x</code> 和 <code>y</code> 坐标 —— 小球在屏幕上最开始时候的坐标。坐标的范围从 0（左上角）到浏览器视口的宽和高（右下角）。</li>
- <li>水平和竖直速度（<code>velX</code> 和 <code>velY</code>）—— 我们会给每个小球一个水平和竖直速度。实际上，当我们让这些球开始运动时候，每过一帧都会给小球的 <code>x</code> 和 <code>y</code> 坐标加一次这些值。</li>
- <li><code>color</code> —— 每一个小球会有自己的颜色。</li>
- <li><code>size</code> —— 每一个小球会有自己的大小 — 也就是小球的半径，以像素为单位。</li>
-</ul>
+- `x` 和 `y` 坐标 —— 小球在屏幕上最开始时候的坐标。坐标的范围从 0（左上角）到浏览器视口的宽和高（右下角）。
+- 水平和竖直速度（`velX` 和 `velY`）—— 我们会给每个小球一个水平和竖直速度。实际上，当我们让这些球开始运动时候，每过一帧都会给小球的 `x` 和 `y` 坐标加一次这些值。
+- `color` —— 每一个小球会有自己的颜色。
+- `size` —— 每一个小球会有自己的大小 — 也就是小球的半径，以像素为单位。
 
-<p>这里说明了小球的属性，那么方法呢？别忘了我们要让小球动起来。</p>
+这里说明了小球的属性，那么方法呢？别忘了我们要让小球动起来。
 
-<h3 id="画小球">画小球</h3>
+### 画小球
 
-<p>首先给小球的原型加上 <code>draw()</code> 方法：</p>
+首先给小球的原型加上 `draw()` 方法：
 
-<pre class="brush: js">Ball.prototype.draw = function() {
+```js
+Ball.prototype.draw = function() {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}</pre>
+}
+```
 
-<p>通过使用这个函数，通过使用我们之前定义的 <code>ctx</code>对象 的方法，我们就可以让在屏幕上画出小球了。<code>ctx</code> 的内容区域就像是一张纸，现在我们就可以命令我们的笔画一点东西。</p>
+通过使用这个函数，通过使用我们之前定义的 `ctx`对象 的方法，我们就可以让在屏幕上画出小球了。`ctx` 的内容区域就像是一张纸，现在我们就可以命令我们的笔画一点东西。
 
-<ul>
- <li>首先，我们使用 <code><a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/beginPath">beginPath()</a></code> 来声明我们现在要开始在纸上画一个图形了。</li>
- <li>然后，我们使用 <code><a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillStyle">fillStyle</a></code> 来定义这个图形的颜色 — 这个值正是小球的颜色属性。</li>
- <li>接下来，我们使用 <code><a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/arc">arc()</a></code> 方法来在纸上画出一段圆弧。有这些参数：
-  <ul>
-   <li><code>x</code> 和 <code>y</code> 是圆弧的中心的坐标 —— 也就是小球的中心坐标。</li>
-   <li>圆弧的半径 —— 小球的半径。</li>
-   <li>最后两个参数是开始和结束，也就是圆弧对应的夹角，单位以弧度表示。这里我们用的是 0 和 <code>2 * PI</code>，也就是 360 度（如果你设置成 0 和 <code>1 * PI</code>，则只会出现一个半圆，也就是 180 度）</li>
-  </ul>
- </li>
- <li>最后，我们使用 <code><a href="/zh-CN/docs/Web/API/CanvasRenderingContext2D/fill">fill()</a></code> 方法，也就是声明我们结束了以 <code>beginPath()</code> 开始的绘画，并且使用我们之前设置的颜色进行填充。 </li>
-</ul>
+- 首先，我们使用 [`beginPath()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/beginPath) 来声明我们现在要开始在纸上画一个图形了。
+- 然后，我们使用 [`fillStyle`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fillStyle) 来定义这个图形的颜色 — 这个值正是小球的颜色属性。
+- 接下来，我们使用 [`arc()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/arc) 方法来在纸上画出一段圆弧。有这些参数：
 
-<p>现在你已经可以测试你的对象了。</p>
+  - `x` 和 `y` 是圆弧的中心的坐标 —— 也就是小球的中心坐标。
+  - 圆弧的半径 —— 小球的半径。
+  - 最后两个参数是开始和结束，也就是圆弧对应的夹角，单位以弧度表示。这里我们用的是 0 和 `2 * PI`，也就是 360 度（如果你设置成 0 和 `1 * PI`，则只会出现一个半圆，也就是 180 度）
 
-<ol>
- <li>保存代码，将 HTML 加载到浏览器中。</li>
- <li>打开浏览器中的 JavaScript 控制台，刷新页面，从而画布可以根据可视的区域调整自己的大小。</li>
- <li>通过下面的代码创建一个小球实例。
-  <pre class="brush: js">let testBall = new Ball(50, 100, 4, 4, 'blue', 10);</pre>
- </li>
- <li>你可以调用实例的这些属性。
-  <pre class="brush: js">testBall.x
-testBall.size
-testBall.color
-testBall.draw()</pre>
- </li>
- <li>当你键入最后一行的时候，你会在你的画布上看到一个小球被画出来了。</li>
-</ol>
+- 最后，我们使用 [`fill()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/fill) 方法，也就是声明我们结束了以 `beginPath()` 开始的绘画，并且使用我们之前设置的颜色进行填充。
 
-<h3 id="更新小球的数据">更新小球的数据</h3>
+现在你已经可以测试你的对象了。
 
-<p>我们可以在一个固定位置画出小球，但是他们不会动，我们需要一个函数来更新一些东西。在 JavaScript 文件底部加上下面的代码，也就是给小球原型加上一个 update() 方法。</p>
+1.  保存代码，将 HTML 加载到浏览器中。
+2.  打开浏览器中的 JavaScript 控制台，刷新页面，从而画布可以根据可视的区域调整自己的大小。
+3.  通过下面的代码创建一个小球实例。
 
-<pre class="brush: js">Ball.prototype.update = function() {
-  if ((this.x + this.size) &gt;= width) {
+    ```js
+    let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+    ```
+
+4.  你可以调用实例的这些属性。
+
+    ```js
+    testBall.x
+    testBall.size
+    testBall.color
+    testBall.draw()
+    ```
+
+5.  当你键入最后一行的时候，你会在你的画布上看到一个小球被画出来了。
+
+### 更新小球的数据
+
+我们可以在一个固定位置画出小球，但是他们不会动，我们需要一个函数来更新一些东西。在 JavaScript 文件底部加上下面的代码，也就是给小球原型加上一个 update() 方法。
+
+```js
+Ball.prototype.update = function() {
+  if ((this.x + this.size) >= width) {
     this.velX = -(this.velX);
   }
 
-  if ((this.x - this.size) &lt;= 0) {
+  if ((this.x - this.size) <= 0) {
     this.velX = -(this.velX);
   }
 
-  if ((this.y + this.size) &gt;= height) {
+  if ((this.y + this.size) >= height) {
     this.velY = -(this.velY);
   }
 
-  if ((this.y - this.size) &lt;= 0) {
+  if ((this.y - this.size) <= 0) {
     this.velY = -(this.velY);
   }
 
   this.x += this.velX;
   this.y += this.velY;
-}</pre>
+}
+```
 
-<p>函数的前四个部分用来检查小球是否碰到画布的边缘。如果碰到，我们反转小球的速度方向来让它向反方向移动。就比如说，如果小球正向上移动（正 <code>velY</code>），然后垂直速度发生改变，小球就向下移动（负 <code>velY</code>）。</p>
+函数的前四个部分用来检查小球是否碰到画布的边缘。如果碰到，我们反转小球的速度方向来让它向反方向移动。就比如说，如果小球正向上移动（正 `velY`），然后垂直速度发生改变，小球就向下移动（负 `velY`）。
 
-<p>在这四部分中，我们：</p>
+在这四部分中，我们：
 
-<ul>
- <li>检查小球的 <code>x</code> 坐标是否大于画布的宽度（小球会从右边缘离开）。</li>
- <li>检查小球的 <code>x</code> 坐标是否小于 0（小球会从左边缘离开）。</li>
- <li>检查小球的 <code>y</code> 坐标是否大于画布的高度（小球会从下边缘离开）。</li>
- <li>检查小球的 <code>y</code> 坐标是否小于 0（小球会从上边缘离开）。</li>
-</ul>
+- 检查小球的 `x` 坐标是否大于画布的宽度（小球会从右边缘离开）。
+- 检查小球的 `x` 坐标是否小于 0（小球会从左边缘离开）。
+- 检查小球的 `y` 坐标是否大于画布的高度（小球会从下边缘离开）。
+- 检查小球的 `y` 坐标是否小于 0（小球会从上边缘离开）。
 
-<p>在每种情况下，我们都会加上小球的半径，因为 <code>x</code>/<code>y</code> 坐标是小球中心的坐标，我们希望小球在其边界接触浏览器窗口的边界时反弹，而不是小球的一部分都不见了再返回。</p>
+在每种情况下，我们都会加上小球的半径，因为 `x`/`y` 坐标是小球中心的坐标，我们希望小球在其边界接触浏览器窗口的边界时反弹，而不是小球的一部分都不见了再返回。
 
-<p>最后两行，我们将 <code>velX</code> 的值加到 <code>x</code> 的坐标上，将 <code>velY</code> 的值加到 <code>y</code> 坐标上 —— 每次调用这个方法的时候小球就移动这么多。</p>
+最后两行，我们将 `velX` 的值加到 `x` 的坐标上，将 `velY` 的值加到 `y` 坐标上 —— 每次调用这个方法的时候小球就移动这么多。
 
-<p>暂时先这样做；让我们继续做一些动画！</p>
+暂时先这样做；让我们继续做一些动画！
 
-<h2 id="让球动起来">让球动起来 </h2>
+## 让球动起来
 
-<p>现在就变得非常有趣了。我们在画布上加上一些小球，并且让他们动起来。</p>
+现在就变得非常有趣了。我们在画布上加上一些小球，并且让他们动起来。
 
-<ol>
- <li>首先我们需要一个地方储存小球，下面的数组会干这件事 —— 现在将它添加到你的代码底部：
-  <pre class="brush: js">let balls = [];
+1.  首先我们需要一个地方储存小球，下面的数组会干这件事 —— 现在将它添加到你的代码底部：
 
-while (balls.length &lt; 25) {
-    let size = random(10, 20);
-    let ball = new Ball(
-      // 为避免绘制错误，球至少离画布边缘球本身一倍宽度的距离
-      random(0 + size, width - size),
-      random(0 + size, height - size),
-      random(-7, 7),
-      random(-7, 7),
-      randomColor(),
-      size
-    );
-    balls.push(ball);
-  }
-</pre>
- </li>
- <li>
-  <p>几乎所有的动画效果都会用到一个运动循环，也就是每一帧都自动更新视图。这是大多数游戏或者其他类似项目的基础。</p>
- </li>
- <li>现在将它添加到你的代码底部：
-  <pre class="brush: js">function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-  ctx.fillRect(0, 0, width, height);
+    ```js
+    let balls = [];
 
-  for (let i = 0; i &lt; balls.length; i++) {
-    balls[i].draw();
-    balls[i].update();
-  }
+    while (balls.length < 25) {
+        let size = random(10, 20);
+        let ball = new Ball(
+          // 为避免绘制错误，球至少离画布边缘球本身一倍宽度的距离
+          random(0 + size, width - size),
+          random(0 + size, height - size),
+          random(-7, 7),
+          random(-7, 7),
+          randomColor(),
+          size
+        );
+        balls.push(ball);
+      }
+    ```
 
-  requestAnimationFrame(loop);
-}</pre>
+2.  几乎所有的动画效果都会用到一个运动循环，也就是每一帧都自动更新视图。这是大多数游戏或者其他类似项目的基础。
+3.  现在将它添加到你的代码底部：
 
-  <p><code>loop()</code> 函数做了下面的事情：</p>
+    ```js
+    function loop() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+      ctx.fillRect(0, 0, width, height);
 
-  <ul>
-   <li>将整个画布的颜色设置成半透明的黑色。然后使用  <code>fillRect()</code>（这四个参数分别是起始的坐标、绘制的矩形的宽和高）画出一个填充满整个画布的矩形。这是在下一个视图画出来时用来遮住之前的视图的。如果不这样做得话，你就会在屏幕上看到一条蛇的形状而不是小球的运动了。用来填充的颜色设置成半透明的<code>rgba(0,0,0,0.25)</code>，也就是让之前的视图留下来一点点，从而你可以看到小球运动时的轨迹。如果你将 0.25 设置成 1 时，你就完全看不到了。试着改变其中的值查看造成的影响。</li>
-   <li>当且仅当小球数量小于 25 时，将 <code>random()</code> 函数产生的数字传入新的小球实例从而创建一个新的小球，并且加入到数组中。因此当屏幕上有 25 个小球时，不会再出现更多小球。你可以改变这个值，从而看到不同小球个数造成的影响。如果你的电脑或者浏览器性能不怎么样的话，几千个小球的速度就会明显慢下来。</li>
-   <li>遍历数组中的所有小球，并且让每个小球都调用 <code>draw()</code> 和 <code>update()</code> 函数来将自己画出来，并且再接下来的每一帧都按照其速度进行位置的更新。</li>
-   <li>使用 <code>requestAnimationFrame()</code> 方法再运行一次函数 —— 当一个函数正在运行时传递相同的函数名，从而每隔一小段时间都会运行一次这个函数，这样我们可以得到一个平滑的动画效果。这主要是通过递归完成的 —— 也就是说函数每次运行的时候都会调用自己，从而可以一遍又一遍得运行。</li>
-  </ul>
- </li>
- <li>最后但是非常重要的是，加上下面这一行 —— 让动画开始运行的话我们需要调用这个函数。
-  <pre class="brush: js">loop();</pre>
- </li>
-</ol>
+      for (let i = 0; i < balls.length; i++) {
+        balls[i].draw();
+        balls[i].update();
+      }
 
-<p>完成这些基础的之后在浏览器打开测试一下！</p>
+      requestAnimationFrame(loop);
+    }
+    ```
 
-<h2 id="添加碰撞检测">添加碰撞检测</h2>
+    `loop()` 函数做了下面的事情：
 
-<p>现在会更加有趣，给我们的项目加上碰撞检测，从而小球会知道他们正在撞击其他的球。</p>
+    - 将整个画布的颜色设置成半透明的黑色。然后使用 `fillRect()`（这四个参数分别是起始的坐标、绘制的矩形的宽和高）画出一个填充满整个画布的矩形。这是在下一个视图画出来时用来遮住之前的视图的。如果不这样做得话，你就会在屏幕上看到一条蛇的形状而不是小球的运动了。用来填充的颜色设置成半透明的`rgba(0,0,0,0.25)`，也就是让之前的视图留下来一点点，从而你可以看到小球运动时的轨迹。如果你将 0.25 设置成 1 时，你就完全看不到了。试着改变其中的值查看造成的影响。
+    - 当且仅当小球数量小于 25 时，将 `random()` 函数产生的数字传入新的小球实例从而创建一个新的小球，并且加入到数组中。因此当屏幕上有 25 个小球时，不会再出现更多小球。你可以改变这个值，从而看到不同小球个数造成的影响。如果你的电脑或者浏览器性能不怎么样的话，几千个小球的速度就会明显慢下来。
+    - 遍历数组中的所有小球，并且让每个小球都调用 `draw()` 和 `update()` 函数来将自己画出来，并且再接下来的每一帧都按照其速度进行位置的更新。
+    - 使用 `requestAnimationFrame()` 方法再运行一次函数 —— 当一个函数正在运行时传递相同的函数名，从而每隔一小段时间都会运行一次这个函数，这样我们可以得到一个平滑的动画效果。这主要是通过递归完成的 —— 也就是说函数每次运行的时候都会调用自己，从而可以一遍又一遍得运行。
 
-<ol>
- <li>首先在 <code>update()</code> 方法后添加以下方法（即 <code>Ball.prototype.update</code> 的下面）。
+4.  最后但是非常重要的是，加上下面这一行 —— 让动画开始运行的话我们需要调用这个函数。
 
-  <pre class="brush: js">Ball.prototype.collisionDetect = function() {
-  for (let j = 0; j &lt; balls.length; j++) {
-    if (this !== balls[j]) {
-      const dx = this.x - balls[j].x;
-      const dy = this.y - balls[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+    ```js
+    loop();
+    ```
 
-      if (distance &lt; this.size + balls[j].size) {
-        balls[j].color = this.color = randomColor();
+完成这些基础的之后在浏览器打开测试一下！
+
+## 添加碰撞检测
+
+现在会更加有趣，给我们的项目加上碰撞检测，从而小球会知道他们正在撞击其他的球。
+
+1.  首先在 `update()` 方法后添加以下方法（即 `Ball.prototype.update` 的下面）。
+
+    ```js
+    Ball.prototype.collisionDetect = function() {
+      for (let j = 0; j < balls.length; j++) {
+        if (this !== balls[j]) {
+          const dx = this.x - balls[j].x;
+          const dy = this.y - balls[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < this.size + balls[j].size) {
+            balls[j].color = this.color = randomColor();
+          }
+        }
       }
     }
-  }
-}</pre>
+    ```
 
-  <p>这个方法有一点点复杂，如果不理解的话不必过分担心，下面是对它的解释：</p>
+    这个方法有一点点复杂，如果不理解的话不必过分担心，下面是对它的解释：
 
-  <ul>
-   <li>对于每个小球，我们都要检查其他的小球是否和当前这个小球相撞了。为了达到此目的，我们构造另外一个 <code>for</code> 循环来遍历 <code>balls[]</code> 数组中的小球。</li>
-   <li>在循环里面，我们使用一个 <code>if</code> 语句来检查遍历的小球是否是当前的小球。我们不希望检测到一个小球撞到了自己！为了达到这个目的，我们需要检查当前小球 (即正在调用 <code>collisionDetect</code> 方法的球) 是否和被循环到的小球 (<code>for</code> 循环检测中的当前遍历所引用的球) 是不是同一个。我们使用 <code>!</code> 来否定判断，因此只有两个小球<strong>不是</strong>同一个时，条件判断中的代码才会运行。</li>
-   <li>我们使用了一个常见的算法来检测两个小球是否相撞了，两个小球中心的距离是否小于两个小球的半径之和。这些会在 <a href="/zh-CN/docs/Games/Techniques/2D_collision_detection">2D 碰撞检测</a> 介绍地更加详细。</li>
-   <li>如果检测到了碰撞，会运行 <code>if</code> 语句中的代码。我们会将两个小球的颜色都设置成随机的一种。我们也可以将这步操作变得复杂一点，比如让两个小球弹开，那样需要植入更加复杂的代码。像这样的物理场景，有以下专门的库比如 <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a>，<a href="http://brm.io/matter-js/">matter.js</a>，<a href="http://phaser.io/">Phaser</a> 等。</li>
-  </ul>
- </li>
- <li>我们也需要在每一帧动画中都调用这个函数，因此在 <code>balls[i].update()</code> 加上下面的代码：
-  <pre class="brush: js">balls[i].collisionDetect();</pre>
- </li>
- <li>保存文件，刷新浏览器，你就会看到小球在撞击时会变色！</li>
-</ol>
+    - 对于每个小球，我们都要检查其他的小球是否和当前这个小球相撞了。为了达到此目的，我们构造另外一个 `for` 循环来遍历 `balls[]` 数组中的小球。
+    - 在循环里面，我们使用一个 `if` 语句来检查遍历的小球是否是当前的小球。我们不希望检测到一个小球撞到了自己！为了达到这个目的，我们需要检查当前小球 (即正在调用 `collisionDetect` 方法的球) 是否和被循环到的小球 (`for` 循环检测中的当前遍历所引用的球) 是不是同一个。我们使用 `!` 来否定判断，因此只有两个小球**不是**同一个时，条件判断中的代码才会运行。
+    - 我们使用了一个常见的算法来检测两个小球是否相撞了，两个小球中心的距离是否小于两个小球的半径之和。这些会在 [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection) 介绍地更加详细。
+    - 如果检测到了碰撞，会运行 `if` 语句中的代码。我们会将两个小球的颜色都设置成随机的一种。我们也可以将这步操作变得复杂一点，比如让两个小球弹开，那样需要植入更加复杂的代码。像这样的物理场景，有以下专门的库比如 [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/)，[matter.js](http://brm.io/matter-js/)，[Phaser](http://phaser.io/) 等。
 
-<div class="note">
-<p><strong>备注：</strong> 如果示例无法顺利执行，可参考我们的 <a href="https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls">最终版本</a>，或者 <a href="https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/">在线试用</a>。</p>
-</div>
+2.  我们也需要在每一帧动画中都调用这个函数，因此在 `balls[i].update()` 加上下面的代码：
 
-<h2 id="概要">概要</h2>
+    ```js
+    balls[i].collisionDetect();
+    ```
 
-<p>我们希望你玩得开心，编写出你自己的随机弹跳球的例子，在整个程序中使用各种对象和面向对象的技术！在你实际运用对象中能提供一些有用的帮助。</p>
+3.  保存文件，刷新浏览器，你就会看到小球在撞击时会变色！
 
-<p>对象文章就到这里了。现在剩下的就是在下一节的对象评估中测试你的技能。</p>
+> **备注：** 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
 
-<h2 id="另请参阅">另请参阅</h2>
+## 概要
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> —— 2D canvas 初学者指南。</li>
- <li><a href="/zh-CN/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></li>
- <li><a href="zh-CN/docs/Games/Techniques/2D_collision_detection">2D 碰撞检测</a></li>
- <li><a href="/zh-CN/docs/Games/Techniques/3D_collision_detection">3D 碰撞检测</a></li>
- <li><a href="/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">纯 JavaScript 编写的 2D 消除游戏</a> —— 一个很好的 2D 游戏开发初学者教程。</li>
- <li><a href="/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser">Phaser 编写的 2D 消除游戏</a> —— JavaScript 游戏库构建 2D 游戏的基础知识。</li>
-</ul>
+我们希望你玩得开心，编写出你自己的随机弹跳球的例子，在整个程序中使用各种对象和面向对象的技术！在你实际运用对象中能提供一些有用的帮助。
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}</p>
+对象文章就到这里了。现在剩下的就是在下一节的对象评估中测试你的技能。
 
-<h2 id="本章目录">本章目录</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics">对象基础</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS">适合初学者的 JavaScript 面向对象</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Inheritance">JavaScript 中的继承</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/JSON">使用 JSON 数据</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice">构建对象实战</a></li>
- <li><a href="/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features">向“弹跳球”演示程序添加新功能</a></li>
-</ul>
+- [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) —— 2D canvas 初学者指南。
+- [requestAnimationFrame()](/zh-CN/docs/Web/API/window/requestAnimationFrame)
+- [2D 碰撞检测](zh-CN/docs/Games/Techniques/2D_collision_detection)
+- [3D 碰撞检测](/zh-CN/docs/Games/Techniques/3D_collision_detection)
+- [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —— 一个很好的 2D 游戏开发初学者教程。
+- [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) —— JavaScript 游戏库构建 2D 游戏的基础知识。
+
+{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+
+## 本章目录
+
+- [对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
+- [适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)
+- [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
+- [构建对象实战](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [向“弹跳球”演示程序添加新功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

@@ -11,86 +11,66 @@ tags:
 translation_of: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 original_slug: Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript
 ---
-<div>{{learnsidebar}}</div>
+{{learnsidebar}}这个测试的目的是为了评估你是否已经理解了我们的[适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)，[对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)，和 [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)文章。
 
-<div>这个测试的目的是为了评估你是否已经理解了我们的<a href="/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS">适合初学者的 JavaScript 面向对象</a>，<a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>，和 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Inheritance">JavaScript 中的继承</a>文章。</div>
+> **备注：** 你可以尝试在下方的交互编辑器，但是若你下载源码或是使用在线工具例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或 [Glitch](https://glitch.com/) 来进行这些项目的话，会更有帮助。
+>
+> 如果你在过程中想不出解决方案，你可以向我们寻求帮助——查看在本页的底部章节 [Assessment or further help](#assessment_or_further_help)。
 
+> **备注：** 在下方的例子中，如果在你的代码中有错误内容的话，错误内容将在页面的结果面板进行显示，以此来帮助你想出解决方案（若是下载的版本，请进入浏览器的 JavaScript 控制台）。
 
+## OOJS 1
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 你可以尝试在下方的交互编辑器，但是若你下载源码或是使用在线工具例如 <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, 或 <a href="https://glitch.com/">Glitch</a> 来进行这些项目的话，会更有帮助。</p>
+In this task we provide you with a constructor. We want you to:
 
-<p>如果你在过程中想不出解决方案，你可以向我们寻求帮助——查看在本页的底部章节 <a href="#assessment_or_further_help">Assessment or further help</a>。</p>
-</div>
+- Add a new method to the `Shape` class's prototype, `calcPerimeter()`, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.
+- Create a new instance of the `Shape` class called `square`. Give it a `name` of `square` and a `sideLength` of `5`.
+- Call your `calcPerimeter()` method on the instance, to see whether it logs the calculation result to the browser DevTools' console as expected.
+- Create a new instance of `Shape` called `triangle`, with a `name` of `triangle` and a `sideLength` of `3`.
+- Call `triangle.calcPerimeter()` to check that it works OK.
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 在下方的例子中，如果在你的代码中有错误内容的话，错误内容将在页面的结果面板进行显示，以此来帮助你想出解决方案（若是下载的版本，请进入浏览器的 JavaScript 控制台）。</p>
-</div>
+Try updating the live code below to recreate the finished example:
 
-<h2 id="OOJS_1">OOJS 1</h2>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-<p>In this task we provide you with a constructor. We want you to:</p>
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
 
-<ul>
- <li>Add a new method to the <code>Shape</code> class's prototype, <code>calcPerimeter()</code>, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console.</li>
- <li>Create a new instance of the <code>Shape</code> class called <code>square</code>. Give it a <code>name</code> of <code>square</code> and a <code>sideLength</code> of <code>5</code>.</li>
- <li>Call your <code>calcPerimeter()</code> method on the instance, to see whether it logs the calculation result to the browser DevTools' console as expected.</li>
- <li>Create a new instance of <code>Shape</code> called <code>triangle</code>, with a <code>name</code> of <code>triangle</code> and a <code>sideLength</code> of <code>3</code>.</li>
- <li>Call <code>triangle.calcPerimeter()</code> to check that it works OK.</li>
-</ul>
+## OOJS 2
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Next up we want you to take the `Shape` class you saw in Task #1 (including the `calcPerimeter()` method) and recreate it using ES class syntax instead.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}</p>
+Test that it works by creating the `square` and `triangle` object instances as before (using `new Shape()` for both), and then calling their `calcPerimeter()` methods.
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> <a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs1-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+Try updating the live code below to recreate the finished example:
 
-<h2 id="OOJS_2">OOJS 2</h2>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-<p>Next up we want you to take the <code>Shape</code> class you saw in Task #1 (including the <code>calcPerimeter()</code> method) and recreate it using ES class syntax instead.</p>
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
 
-<p>Test that it works by creating the <code>square</code> and <code>triangle</code> object instances as before (using <code>new Shape()</code> for both), and then calling their <code>calcPerimeter()</code> methods.</p>
+## OOJS 3
 
-<p>Try updating the live code below to recreate the finished example:</p>
+Finally, we'd like you to start with the ES `Shape` class you created in the last task.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}</p>
+We'd like you to create a `Square` class that inherits from `Shape`, and adds a `calcArea()` method that calculates the square's area. Also set up the constructor so that the `name` property of `Square` object instances is automatically set to `square`, and the `sides` property is automatically set to `4`. When invoking the constructor, you should therefore just need to provide the `sideLength` property.
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> <a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs2-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+Create an instance of the `Square` class called `square` with appropriate property values, and call its `calcPerimeter()` and `calcArea()` methods to show that it works ok.
 
-<h2 id="OOJS_3">OOJS 3</h2>
+Try updating the live code below to recreate the finished example:
 
-<p>Finally, we'd like you to start with the ES <code>Shape</code> class you created in the last task.</p>
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs3.html", '100%', 400)}}
 
-<p>We'd like you to create a <code>Square</code> class that inherits from <code>Shape</code>, and adds a <code>calcArea()</code> method that calculates the square's area. Also set up the constructor so that the <code>name</code> property of <code>Square</code> object instances is automatically set to <code>square</code>, and the <code>sides</code> property is automatically set to <code>4</code>. When invoking the constructor, you should therefore just need to provide the <code>sideLength</code> property.</p>
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs3-download.html) to work in your own editor or in an online editor.
 
-<p>Create an instance of the <code>Square</code> class called <code>square</code> with appropriate property values, and call its <code>calcPerimeter()</code> and <code>calcArea()</code> methods to show that it works ok.</p>
+## Assessment or further help
 
-<p>Try updating the live code below to recreate the finished example:</p>
+You can practice these examples in the Interactive Editors above.
 
-<p>{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs3.html", '100%', 400)}}</p>
+If you would like your work assessed, or are stuck and want to ask for help:
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> <a href="https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs3-download.html">Download the starting point for this task</a> to work in your own editor or in an online editor.</p>
-</div>
+1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-<h2 id="Assessment_or_further_help">Assessment or further help</h2>
-
-<p>You can practice these examples in the Interactive Editors above.</p>
-
-<p>If you would like your work assessed, or are stuck and want to ask for help:</p>
-
-<ol>
- <li>Put your work into an online shareable editor such as <a href="https://codepen.io/">CodePen</a>, <a href="https://jsfiddle.net/">jsFiddle</a>, or <a href="https://glitch.com/">Glitch</a>. You can write the code yourself, or use the starting point files linked to in the above sections.</li>
- <li>Write a post asking for assessment and/or help at the <a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a>. Your post should include:
-  <ul>
-   <li>A descriptive title such as "Assessment wanted for OOJS 1 skill test".</li>
-   <li>Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.</li>
-   <li>A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.</li>
-   <li>A link to the actual task or assessment page, so we can find the question you want help with.</li>
-  </ul>
- </li>
-</ol>
+    - A descriptive title such as "Assessment wanted for OOJS 1 skill test".
+    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
+    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
+    - A link to the actual task or assessment page, so we can find the question you want help with.
