@@ -35,7 +35,7 @@ tags:
 
 <h2 id="Synchronous_JavaScript">同步的 JavaScript</h2>
 
-<p>在我們了解什麼是非同步（ <strong>{{Glossary("asynchronous")}}</strong> ） JavaScript 之前，我們應該確保我們已經了解什麼是同步（ <strong>{{Glossary("synchronous")}}</strong> ） JavaScript 。在本章節會回顧我們在前篇文章所看到的一些資訊。</p>
+<p>在我們了解什麼是非同步（<strong>{{Glossary("asynchronous")}}</strong> ） JavaScript 之前，我們應該確保我們已經了解什麼是同步（ <strong>{{Glossary("synchronous")}}</strong> ） JavaScript 。在本章節會回顧我們在前篇文章所看到的一些資訊。</p>
 
 <p>我們在前一個學習單元所看到的大部分功能都是同步的——當跑一段程式碼，瀏覽器會將執行結果盡快的回傳。我們來看看一則簡單的範例（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html">線上範例</a>，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html">原始碼</a>）：</p>
 
@@ -67,14 +67,12 @@ btn.addEventListener('click', () =&gt; {
 
 <p>所以在上面的範例中，直到警告視窗的確認按鈕被按下為止之前，文字段落都不會出現。你可以試試看底下的範例：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;button&gt;點擊我&lt;/button&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;button&gt;點擊我&lt;/button&gt;</pre>
 
-<p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
+<p>{{EmbedLiveSample('同步的 JavaScript', '100%', '70px')}}</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：使用 <code><a href="/zh-TW/docs/Web/API/Window/alert">alert()</a></code> 有個很重要的事情要記得，雖然用在證明是否為同步的阻塞操作非常有用，但非常不建議用在實際的應用程式上，使用體驗將會相當糟糕。</p>
+<p><strong>備註：</strong> 使用 <code><a href="/zh-TW/docs/Web/API/Window/alert">alert()</a></code> 有個很重要的事情要記得，雖然用在證明是否為同步的阻塞操作非常有用，但非常不建議用在實際的應用程式上，使用體驗將會相當糟糕。</p>
 </div>
 
 <h2 id="Asynchronous_JavaScript">非同步 JavaScript</h2>
@@ -161,7 +159,7 @@ gods.forEach(function (eachName, index){
 });</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：你可以在 GitHub （<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">原始碼</a>，<a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">線上範例</a>）找到最終版本。</p>
+<p><strong>備註：</strong> 你可以在 GitHub （<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">原始碼</a>，<a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">線上範例</a>）找到最終版本。</p>
 </div>
 
 <p>在這裡我們看到 <code>fetch</code><code>()</code> 帶一個參數——你想要在網路上提取資源的網址——並回傳一個 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> 。這一個 promise 用來表示一個完成或失敗的非同步操作的物件。它代表的是一種中間的狀態。本質上，它代表瀏覽器述說著：「我承諾我會盡快給予你一個答覆」，因此名稱就叫做「 promise 」。</p>
@@ -174,7 +172,7 @@ gods.forEach(function (eachName, index){
 </ul>
 
 <div class="notecard note">
-<p><strong>注意</strong>：你將會在稍後的單元學習到更多關於 promise 的觀念，即使現在尚未完全理解你也不需要太擔心。</p>
+<p><strong>備註：</strong> 你將會在稍後的單元學習到更多關於 promise 的觀念，即使現在尚未完全理解你也不需要太擔心。</p>
 </div>
 
 <h3 id="The_event_queue">事件佇列</h3>
@@ -252,7 +250,7 @@ console.log("all done");</pre>
 <p>這是因為在這個時間點瀏覽器試著去執行最後的 <code>console.log()</code> 時 <code>fetch()</code> 還沒有完成執行，所以 <code>image</code> 變數尚未賦予值因而導致錯誤。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：由於安全性考量，你沒辦法呼叫 <code>fetch()</code> 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個<a href="/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server">網路伺服器</a>來執行。</p>
+<p><strong>備註：</strong> 由於安全性考量，你沒辦法呼叫 <code>fetch()</code> 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個<a href="/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server">網路伺服器</a>來執行。</p>
 </div>
 
 <h2 id="Active_learning_make_it_all_async!">主動學習：讓一切非同步化！</h2>
@@ -260,7 +258,7 @@ console.log("all done");</pre>
 <p>為了修復 <code>fetch()</code> 這個有問題的範例讓三個 <code>console.log()</code> 的敘述可以依序被執行你可以讓第三個 <code>console.log()</code> 也非同步的被執行。你可以新增一個新的 <code>.then()</code> 再將其放在裡面，這個新增的 <code>.then()</code> 再串連 promise 區塊的倒數第二個結尾；或者也可以將其放入原本的 <code>.then()</code> 中來解決這個問題。試著現在修復這個問題吧。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你的想法卡住，你可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">在這裡</a>找到解答（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">線上範例</a>）。你也可以在我們稍後的<a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises">優雅的使用 Promise 來處理非同步操作</a> 這個單元找到更多關於 promise 的資訊。</p>
+<p><strong>備註：</strong> 如果你的想法卡住，你可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">在這裡</a>找到解答（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">線上範例</a>）。你也可以在我們稍後的<a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises">優雅的使用 Promise 來處理非同步操作</a> 這個單元找到更多關於 promise 的資訊。</p>
 </div>
 
 <h2 id="Conclusion">結論</h2>
