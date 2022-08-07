@@ -68,7 +68,7 @@ C'est pour cela que des propriétés _logiques_ ont fait leur apparition comme {
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-Le module de spécification [CSS sur les propriétés et valeurs logiques](/en-US/docs/Web/CSS/CSS_Logical_Properties) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
+Le module de spécification [CSS sur les propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties) contient des versions logiques des propriétés contrôlant les marges, le remplissage (_padding_) et les bordures et d'autres correspondances pour les concepts qu'on manipulait habituellement avec des directions _physiques_.
 
 ## Résumé
 

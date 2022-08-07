@@ -31,7 +31,7 @@ Chaque [type d'évènement de déplacement](/fr/docs/Web/API/DragEvent#Event_typ
 | Évènement                    | Gestionnaire d'évènement global                                                  | Déclenchement                                                                                                                                                                                |
 | ---------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{event('drag')}}     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | …un objet déplaçable (que ce soit un élément ou une sélection de texte) est déplacée.                                                                                                        |
-| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir [Terminer un déplacement](/en-US/docs/DragDrop/Drag_Operations#dragend)) |
+| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | …une opération de déplacement se termine (en relâchant le bouton de la souris ou en utilisant la touche Echap, voir [Terminer un déplacement](/fr/docs/DragDrop/Drag_Operations#dragend)) |
 | {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | …un élément en cours de déplacement arrive sur une zone de dépôt valide (voir [indiquer une cible de destination](/fr/docs/DragDrop/Drag_Operations#droptargets)).                           |
 | {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | …un élément n'est plus la sélection immédiate du déplacement.                                                                                                                                |
 | {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | …un élément en cours de déplacement quitte une zone de dépôt valide.                                                                                                                         |
@@ -143,7 +143,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-See [Drag Effects](/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
+See [Drag Effects](/fr/docs/Web/Guide/HTML/Drag_operations#drageffects) for more details.
 
 ### Définir la zone où déposer l'élément déplacé
 
@@ -210,7 +210,7 @@ Pour plus d'informations sur la gestion de la fin d'une opération de glisser-d�
 
 ## Interopérabilité
 
-Comme on peut le voir [dans le tableau de compatibilité pour l'interface `DataTransferItem`](/en-US/docs/Web/API/DataTransferItem#Browser_compatibility), la prise en charge du _drag-and-drop_ est assez répandue parmi les navigateurs de bureau à l'exception des interfaces {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}}. Ce tableau montre également que la prise en charge sur mobile est assez faible.
+Comme on peut le voir [dans le tableau de compatibilité pour l'interface `DataTransferItem`](/fr/docs/Web/API/DataTransferItem#Browser_compatibility), la prise en charge du _drag-and-drop_ est assez répandue parmi les navigateurs de bureau à l'exception des interfaces {{domxref("DataTransferItem")}} et {{domxref("DataTransferItemList")}}. Ce tableau montre également que la prise en charge sur mobile est assez faible.
 
 ## Exemples et démos
 

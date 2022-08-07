@@ -18,7 +18,7 @@ Malheureusement, ce n'est pas possible actuellement. Il est impossible de cibler
 
 ## L'espaceement : la propriété `column-gap`
 
-L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)).
+L'espacement entre les colonnes est contrôlé par la propriété `column-gap`. Cette propriété était initialement définie dans le module de spécification _Multi-column Layout_ mais est désormais définie dans le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ (dont le but est d'unifier la gestion des espacements entre les boîtes, que ce soit pour les colonnes ou pour d'autres types de disposition telles que [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)).
 
 Dans une disposition multi-colonne, la valeur initiale de la propriété `column-gap` est `1em`. Cela signifie que les colonnes ne se touchent pas les unes les autres. Pour les autres méthodes de disposition, la valeur initiale de `column-gap` est 0. Le mot-clé `normal` est une valeur qui permet d'obtenir un écart de 1em.
 

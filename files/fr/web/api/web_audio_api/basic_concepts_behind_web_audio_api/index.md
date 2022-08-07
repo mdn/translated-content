@@ -28,7 +28,7 @@ Les sources audio peuvent être de provenance variée&nbsp;:
 - générées directement en JavaScript avec un noeud audio (tel qu'un oscillateur)
 - créées à partir de données PCM brutes (le contexte audio a des méthodes pour décoder les formats audio supportés)
 - fournies par une balise HTML media (telle que {{HTMLElement("video")}} ou {{HTMLElement("audio")}})
-- récupérées directement avec [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} (une webcam ou un microphone)
+- récupérées directement avec [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} (une webcam ou un microphone)
 
 ## Données audio: ce qu'on trouve dans un échantillon
 
@@ -383,7 +383,7 @@ On peut accéder aux données en utilisant les méthodes suivantes:
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
 
-> **Note :** Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
+> **Note :** Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
 
 ## Spatialisations
 
@@ -397,7 +397,7 @@ La position de l'auditeur est décrite avec des coodonnées cartésiennes selon 
 
 ![On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°](listener.svg)
 
-> **Note :** For more information, see our [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
+> **Note :** For more information, see our [Web audio spatialization basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
 
 ## Fan-in et Fan-out
 

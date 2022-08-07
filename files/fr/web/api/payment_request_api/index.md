@@ -21,7 +21,7 @@ Les avantages de l'utilisation de l'API *Payment Request* avec des règlements p
 
 Pour demander un paiement, une page web crée un {{domxref("PaymentRequest")}} objet en réponse à une action de l'utilisateur qui initie un paiement, comme cliquer sur un bouton "Achat". Le `PaymentRequest` permet à la page web d'interagir avec l'utilisateur prendant qu'il donne les information pour terminer la transaction.
 
-Vous pouvez trouver un guide complet dans l'article [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
+Vous pouvez trouver un guide complet dans l'article [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
 
 > **Note :** L'API est disponible à l'intérieur des éléments cross-origin {{htmlelement("iframe")}} seulement si on leur a affecté l'attribut {{htmlattrxref("allowpaymentrequest","iframe")}}.
 
@@ -80,8 +80,8 @@ Vous pouvez trouver un guide complet dans l'article [Using the Payment Request A
 
 ## See also
 
-- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/fr/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/fr/docs/Web/API/Payment_Request_API/Concepts)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)

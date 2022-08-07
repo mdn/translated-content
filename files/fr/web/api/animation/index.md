@@ -14,7 +14,7 @@ translation_of: Web/API/Animation
 ---
 {{ APIRef("Web Animations API") }}{{SeeCompatTable}}
 
-L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_Animations_API) correspond à un lecteur d'animations et offre les commandes nécessaires au contrôle et à la chronologie d'un noeud ou d'une source d'animation.
+L'interface **`Animation`** de [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API) correspond à un lecteur d'animations et offre les commandes nécessaires au contrôle et à la chronologie d'un noeud ou d'une source d'animation.
 
 ## Constructeur
 

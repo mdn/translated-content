@@ -170,7 +170,7 @@ Pour en savoir plus, voir [cette section Wikipédia](https://en.wikipedia.org/wi
 
 ### Cookies Zombie et Evercookies
 
-Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/en-US/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
+Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
 - [Zombie cookies sur Wikipédia](https://en.wikipedia.org/wiki/Zombie_cookie)
@@ -181,7 +181,7 @@ Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies"
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecting cookies using the Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
+- [Inspecting cookies using the Storage Inspector](/fr/docs/Tools/Storage_Inspector)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

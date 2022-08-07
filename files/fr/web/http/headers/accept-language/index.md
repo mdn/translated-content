@@ -56,7 +56,7 @@ Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
 - `*`
   - : Toute langue ; `'*'` est utilisé comme un joker.
 - `;q=` (pondération q-factor)
-  - : Une quantité numérique donnant un ordre de préférence et qui utilise une [valeur de qualité](/en-US/docs/Glossary/Quality_values) relative, appelée _poids_.
+  - : Une quantité numérique donnant un ordre de préférence et qui utilise une [valeur de qualité](/fr/docs/Glossary/Quality_values) relative, appelée _poids_.
 
 ## Exemples
 
