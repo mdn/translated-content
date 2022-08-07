@@ -33,7 +33,7 @@ browser-compat: api.fetch
 - `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
 - `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
 - `tags` 为[文章标签](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag)，被用于站点管理和自动化数据处理
-- `browser-compat` 为[**浏览器兼容性表**](https://developer.mozilla.org/zh-CN/docs/MDN/Structures/Compatibility_tables)对应的宏所使用的元数据。
+- `browser-compat` 为[**浏览器兼容性表**](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)对应的宏所使用的元数据。
 
 在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`tags`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
 
