@@ -1,117 +1,135 @@
 ---
-title: MDN Web Docs に掲載するものであるかどうか
+title: 私たちが書くものは何か
 slug: MDN/Writing_guidelines/What_we_write
+page-type: mdn-writing-guide
 tags:
-  - Guide
-  - Guidelines
-  - MDN Meta
-translation_of: MDN/Guidelines/Does_this_belong_on_MDN
-original_slug: MDN/Guidelines/Does_this_belong_on_MDN
+  - meta
+  - writing-guide
+translation_of: MDN/Writing_guidelines/What_we_write
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}  
 
-<p><span class="seoSummary">この記事では、ある主題やコンテンツの種類を MDN Web Docs に載せるべきかどうかを決定する方法について説明します。</span>また、詳細ではありませんが、コンテンツを配置する可能性のある他の場所についても検討します。</p>
+MDN Web Docs には、ウェブ開発者が**ブラウザーを意識することなく**コードを書けるように、**ブラウザー中立的な**文書を掲載しています。この記事では、特定のトピックやコンテンツの種類が MDN Web Docs に入れられるべきかどうかについての情報を探ります。
 
-<h2 id="The_question">問い</h2>
+## 編集方針
 
-<p>何らかの文書をまとめる準備をしている場合、その情報を MDN Web Docs に載せるどうか考えるかもしれません。加えて、ソースコード内の文書を維持したり、その文書を <a href="https://wiki.mozilla.org/">Mozilla wiki</a> や、git リポジトリー内の readme ファイルに置いたりすることを検討しているかもしれません。この記事の目的は、あなたのコンテンツが、これらのオプションのどれにふさわしいのかを決めるのに役立つことです。</p>
+この節では、 Mozilla MDN のスタッフが MDN Web Docs のコンテンツを管理するために設定したポリシーについて説明します。 MDN Web Docs への協力者はすべて、これらのポリシーを遵守することが期待されます。
 
-<p>文書を MDN に載せるかどうかについて、主に 2 つ考慮する点があります。</p>
+### 関連性
 
-<ul>
- <li>文書の主題 (何についてのものか)</li>
- <li>文書の性質 (これはどんな種類の文書か)</li>
-</ul>
+MDN のすべてのコンテンツは、それが現れる技術セクションに関連していなければなりません。スパム（商業広告）およびその他の無関係なコンテンツは、このサイトでは受け付けられません。 Mozilla MDN のスタッフの裁量により、スパムを投稿するユーザーは MDN から追放されることがあります。
 
-<p>MDN への寄稿は、すべて特定のオープンソースライセンスに該当することに注意してください。これは <a href="/ja/docs/MDN/About">MDN について</a>ページに<a href="/ja/docs/MDN/About#copyrights_and_licenses">詳細に記されています</a>。</p>
+リンクされているトピックに関連する商用サイトへの外部リンクは、ケースバイケースで判断されます。ウェブ開発者を支援するうえでのその価値は、リンク先サイトの商業的利益を上回るものでなければなりません。
 
-<div class="note">
-<p><strong>注</strong>: MDN Web Docs を利用したり、投稿したりする際には、Mozilla の<a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/">ウェブサイトおよびコミュニケーション利用規約</a>が適用されることに注意してください。この文書を確認して、 Mozilla のサイトで投稿できること、できないことを確認してください。</p>
-</div>
+### 中立性
 
-<h2 id="What_topics_belong_on_MDN_Web_Docs">どのようなトピックが MDN Web Docs に載るのか</h2>
+MDN Web Docs の記事は[中立的な視点](https://ja.wikipedia.org/wiki/Wikipedia:%E4%B8%AD%E7%AB%8B%E7%9A%84%E3%81%AA%E8%A6%B3%E7%82%B9)を保持し、編集上の偏見なくブラウザーのバリエーションについて報告しなければなりません。任意のブラウザーまたはユーザーエージェントについての論評は容認できません。
 
-<p>一般的には、オープンなウェブ向きの技術であれば、MDN 上で文書化します。これは、現在および近い将来にサイトやアプリケーションを作成するウェブ開発者が使用できる機能を意味します。複数のブラウザーで実装されていて、標準として受け入れられているか、標準化に向けて進んでいるものであれば、そうですね。もしそれがまだ非常に実験的で、複数のブラウザーで実装されておらず、変更される可能性がある場合、それでも載せるのに適してはいますが、ライターのチームが取り組むべき優先事項とは見なされないかもしれません。</p>
+### オープンウェブのトピック
 
-<p>主にフロントエンドのウェブ技術に重点を置いています。</p>
+MDN Web Docs で文書化されるウェブ技術は、標準化される予定があり、少なくとも1つのレンダリングエンジンが実装しているものである必要があります。ブラウザー対応状況の違いは、記事の[ブラウザーの互換性](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)の節に記載されています。
 
-<ul>
- <li><a href="/ja/docs/Web/HTML">HTML</a></li>
- <li><a href="/ja/docs/Web/CSS">CSS</a></li>
- <li><a href="/ja/docs/Web/JavaScript">JavaScript</a></li>
- <li><a href="/ja/docs/Web/SVG">SVG</a></li>
- <li><a href="/ja/docs/Web/API">Web APIs</a></li>
- <li><a href="/ja/docs/Web/API/WebGL_API">WebGL</a></li>
- <li>など</li>
-</ul>
+## コンテンツの提案
 
-<div class="note">
-<p><strong>Note</strong>: バックエンドテクノロジーには、別の文書化の場所があり、 MDN はこれにとって代わるつもりはありませんが、<a href="/ja/docs/Learn/Server-side">いくつかの例外はあります</a>。</p>
-</div>
+MDN Web Docs にコンテンツを提案したい場合は、投稿する前に必ずこのページを読んで、提案する内容が適切かどうかを確認してください。
 
-<p>また、複数の技術にまたがるが、以下のようなウェブ開発に関連したトピックも歓迎します。</p>
+新しいリファレンスページやガイドについては、[コミュニティリポジトリー](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions)で、提案する内容とその理由を説明するディスカッションを開いてください（できるだけ明確にしてください）。
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility">Accessibility</a></li>
- <li><a href="/ja/docs/Web/Guide/AJAX">AJAX</a></li>
- <li><a href="/ja/docs/Web/Guide/Graphics">ウェブグラフィック</a></li>
- <li><a href="/ja/docs/Web/Progressive_web_apps">プログレッシブウェブアプリ</a></li>
- <li><a href="/ja/docs/Games">ウェブベースのゲーム</a></li>
-</ul>
+コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
 
-<div class="note">
-<p><strong>注:</strong> MDN は、ウェブに公開されていて、特に一般的に使われている場合には、一部の標準外の機能をカバーしています。例えば、WebKit 固有の CSS プロパティのドキュメントがあります。MDN は、ウェブ開発者にとって十分に有用であると考えられる場合には、ウェブ標準以外の技術もカバーしています。<a href="/ja/docs/Related">ウェブ関連技術</a>のセクションを参照してください。</p>
-</div>
+## どのようなトピックが MDN Web Docs に載るのか
 
-<h2 id="What_topics_dont_belong_on_MDN_Web_Docs">MDN Web Docs に掲載しない主題</h2>
+一般的には、オープンなウェブ向きの技術であれば、MDN 上で文書化します。これは、現在および近い将来にサイトやアプリケーションを作成するウェブ開発者が使用できる機能を意味します。
 
-<p>一般医、オープンなウェブ標準ではないものはすべて、MDN に掲載するものではありません。以下にもっと具体的に示します。</p>
+複数のブラウザーで実装されていて、標準として受け入れられているか、標準化に向けて進んでいるものであれば、そうですね。もしそれがまだ非常に実験的で、複数のブラウザーで実装されておらず、変更される可能性がある場合、それでも載せるのに適してはいますが、ライターのチームが取り組むべき優先事項とは見なされないかもしれません。
 
-<h3 id="Mozilla_products">Mozilla 製品</h3>
+つまり、MDN Web Docs で文書化されるウェブ技術は、次のような条件を満たすものでなければなりません。
 
-<p>このカテゴリーの文書には、 Mozilla 製品に対して開発者として作業する方法と、これらのオープンソースプロジェクトに貢献する方法との、両方があります。</p>
+- 標準化の流れに乗っていること。
+- 信頼できる標準化団体から発行された仕様書で仕様化されていること。
+- 少なくとも 1 つのレンダリングエンジンに実装されていること。
+- 安定版のブラウザーでリリースされていること。
 
-<p>MDN には Mozilla 製品の文書が大量にありますが、新規コンテンツ開発の重点はオープンウェブに置いています。MDN に Mozilla 製品の文書を新規作成することは推奨されません。Mozilla 製品 (やそうなるかもしれない製品) の作業を進めている場合は、<a href="https://wiki.mozilla.org/Engagement/MDN_Durable_Team">MDN スタッフチーム</a>のメンバーに話して、その製品の文書化の道を議論してください。また、下記の<a href="#cases_for_documenting_elsewhere">他の場所に文書化する場合</a>も見てください。</p>
+主に次のようなフロントエンドのウェブ技術について書くことに焦点を当てています。
 
-<ul>
- <li><a href="/ja/docs/Mozilla/Firefox">Firefox ブラウザー</a>
+- [HTML](/ja/docs/Web/HTML)
+- [CSS](/ja/docs/Web/CSS)
+- [JavaScript](/ja/docs/Web/JavaScript)
+- [Web API](/ja/docs/Web/API)
+- [HTTP](/ja/docs/Web/HTTP)
 
-  <ul>
-   <li><a href="/ja/docs/Tools">Firefox 開発ツール</a></li>
-   <li><a href="/ja/docs/Mozilla/Add-ons">アドオン</a></li>
-   <li><a href="/ja/docs/Mozilla/Developer_guide/Build_Instructions">Firefox の構築と構成</a></li>
-   <li>など</li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Mozilla">Mozilla プラットフォーム</a>
-  <ul>
-   <li><a href="/ja/docs/Mozilla/Gecko">Gecko</a></li>
-   <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a></li>
-   <li>など</li>
-  </ul>
- </li>
-</ul>
+また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn)や[用語集](/ja/docs/Glossary)を提供しています。
 
-<h3 id="What_else">それ以外</h3>
+> **Note:** バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn/Server-side)。
 
-<p>その他の MDN Web Docs のトピックとして適切ではないものの例です。</p>
+MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
-<ul>
- <li>ウェブに公開されていない技術で、Mozilla 以外のブラウザーに固有のもの</li>
- <li>ウェブにも Mozilla 製品にも関係しない技術</li>
- <li>エンドユーザー向け文書。Mozilla 製品では、こうした文書は <a href="https://support.mozilla.org">Mozilla サポートサイト</a>に載っています。</li>
-</ul>
+MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照してください。
 
-<h2 id="What_types_of_documents_belong_on_MDN">MDN に掲載する文書の種類</h2>
+### 新しい技術を文書化するとき
 
-<p>一般に、MDN は<em>プロダクト</em>のドキュメントであり、<em>プロジェクト</em>や<em>プロセス</em>のドキュメントではありません (<a href="/ja/docs/MDN">MDN 自体について</a>を除く)。そのため、もしドキュメントが「どのように使うか」や「どのように動作するか」 (「どの」とは下記で記述されている特定のカテゴリのことです) なら MDN に掲載しましょう。しかし、「誰が開発したか」や「開発プランについて」などは MDN にふさわしくありません。Mozilla 傘下で開発されているものの場合は <a href="https://wiki.mozilla.org/Main_Page">Mozilla project wiki</a> に掲載するといいでしょう。</p>
+MDN Web Docs で、私たちは常に新しいウェブ標準技術を適切に文書化することを検討しています。
+私たちは、開発者が必要なときにすぐに新機能を知ることができるように十分に早く文書を公開することと、文書が常に更新されたり急速に削除されたりする必要がないよう、技術が成熟し安定した状態まで十分に待ってから公開することのバランスを取ろうと努めています。
 
-<p>MDN に掲載するのにふさわしく<em>ない</em>種類の文書の例をいくつか挙げます。</p>
+一般的に、私たちが新しい技術の文書化を検討する時期について、次のように定義しています。
 
-<ul>
- <li>計画書</li>
- <li>設計書</li>
- <li>プロジェクト提案書</li>
- <li>仕様書や標準</li>
- <li>プロモーション素材、広告、<a href="#about_your_profile">個人情報</a></li>
-</ul>
+_「その機能が標準化の流れにあって、どこかに実装されたとき」_
+
+私たちは、次のような場合、新しい技術を文書化することを考えます。
+
+- 信頼できる標準化団体（W3C、WHATWG、Khronos、IETF など）の下で発行された仕様書に明記され、妥当なレベルの安定性に達している（たとえば、W3C の作業草案または勧告候補、あるいは仕様に対して申し立てられた問題の流れから判断してかなり安定していると思われる場合など）。
+- 少なくとも 1 つのブラウザーで一貫して実装されており、他のブラウザー開発者が関心を示している（アクティブなチケットや "intent to implement" プロセスが有効であるなど）。
+
+私たちは、次のような場合、新しい技術の文書化は行いません。
+
+- 仕様書がない、または仕様が大まかなもので、今後変更される可能性がある場合。
+- 現在、その技術を搭載しているブラウザーが1つまたはゼロであり、対応していないブラウザーがその技術の実装に関心を示す気配がない。これは、ブラウザーのバグトラッカーやメーリングリストなどを見て、そのブラウザーの開発を行っている技術者に依頼することで判断することができます。
+- ウェブに公開されている技術ではない、あるいは完全に独占的な技術である。
+- すでに非推奨になっている、または類似の機能に取って代わられる兆しがある。
+
+## MDN Web Docs に掲載しない主題
+
+一般的に、オープンウェブの標準でないものは MDN Web Docs にふさわしくありません。スパム（商業広告）およびその他の無関係なコンテンツは、決してサイトに受け入れられません。スパムを投稿しようとする投稿者は、Mozilla MDN スタッフの判断により、MDN から追放される可能性があります。
+
+MDN Web Docs に不適切なトピックの例としては、以下のようなものが挙げられます。
+
+- ウェブに公開されない、あるブラウザーに特化した技術。
+- ウェブに関連しない技術。
+- エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org) に属します。
+- 自己リンクや自己宣伝のための外部リンク。外部リンクを追加する前に、[執筆スタイルガイド ](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#外部リンク)にあるガイドラインを確認してみてください。
+
+### 文書を削除する場合
+
+MDN Web Docs からページが削除されるのは、有用な情報が含まれていない場合や 十分に古い情報である場合、あるいは残しておくと誤解を招く可能性がある点で間違っている場合です。
+
+次の例は、ページやコンテンツが削除される可能性がある状況を記述したものです。
+
+- すべてのブラウザーに搭載されず、後に取り下げられた機能（通常は接頭辞付きの機能などの実験的な機能）に関する情報を含んでいる記事。
+- ブラウザーに搭載される前に仕様書から削除された機能を記述したリファレンスページ。
+- 後に悪しき慣習であることが示され、より優れた技術に取って代わられた技術を扱っている記事。
+- 後に他のより良い品質の情報に置き換えられた情報が含まれている記事。
+- MDN Web Docs には不適切なコンテンツを含む記事。
+- MDN Web Docs のあるセクションがオープンウェブ技術にフォーカスされておらず、メンテナンスに負担がかかっている場合。
+
+文書の削除方法については、[ページの作成、移動、削除](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)のガイドを参照してください。
+
+## MDN Web Docs に掲載する文書の種類
+
+一般的に、私たちの文書化は次のようなカテゴリーに分けられます。
+
+- リファレンス
+- ガイド
+- 用語集
+- 学習/チュートリアル
+
+一般に、 MDN Web Docs は*プロダクト*のドキュメントであり、*プロジェクト*や*プロセス*のドキュメントではありません。そのため、もしドキュメントが「どのように使うか」や「どのように動作するか」（「どの」とは前述した特定のカテゴリーのことです）なら MDN Web Docs に掲載しましょう。
+
+文書が「誰が開発したか」や「開発プランについて」などは MDN Web Docs にふさわしくありません。 
+
+MDN Web Docs に掲載するのにふさわしく*ない*種類の文書の例をいくつか挙げます。
+
+- 計画書
+- 設計書
+- プロジェクト提案書
+- 仕様書や標準
+- プロモーション素材、広告、個人情報
