@@ -11,7 +11,7 @@ tags:
   - django
   - lado servidor
 translation_of: Learn/Server-side/Django/Tutorial_local_library_website
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 

@@ -3,7 +3,7 @@ title: Flujo normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
 translation_of: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/Flujo_normal
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

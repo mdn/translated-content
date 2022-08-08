@@ -3,7 +3,7 @@ title: Pseudoclases y pseudoelementos
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 

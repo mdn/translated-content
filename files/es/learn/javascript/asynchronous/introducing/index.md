@@ -10,7 +10,7 @@ tags:
   - bloques
 translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
 

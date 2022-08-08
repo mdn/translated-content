@@ -3,7 +3,7 @@ title: ¿Cómo se utiliza Github pages?
 slug: Learn/Common_questions/Using_Github_pages
 translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Learn/Using_Github_pages
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 [GitHub](https://github.com/) es un sitio "social coding". Te permite subir repositorios de código para almacenarlo en el **sistema de control de versiones** [Git](http://git-scm.com/). Tu puedes colaborar en proyectos de código, y el sistema es código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código en GitHub, usarlo, aprender de el, y mejorarlo. ¡Tú puedes hacer eso con el código de otras personas tambien! Este artículo provee una guía básica para publicar contenido usando la característica gh-pages de Github.
 

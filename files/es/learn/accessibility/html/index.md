@@ -2,7 +2,7 @@
 title: 'HTML: Una buena base para la accesibilidad'
 slug: Learn/Accessibility/HTML
 translation_of: Learn/Accessibility/HTML
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 

@@ -2,7 +2,7 @@
 title: 'Express Tutorial: The Local Library website'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 

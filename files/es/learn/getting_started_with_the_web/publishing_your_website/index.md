@@ -14,7 +14,7 @@ tags:
   - publicar
   - web server
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
-htmlDate: 20221208
+htmlDate: 2022-12-08
 ---
 {{LearnSidebar()}}
 

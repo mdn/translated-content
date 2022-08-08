@@ -14,7 +14,7 @@ tags:
   - iframe
   - img
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

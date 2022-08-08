@@ -12,7 +12,7 @@ tags:
   - Principiante
   - aprende
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
-htmlDate: 20221208
+htmlDate: 2022-12-08
 ---
 {{IncludeSubnav("/es/Learn")}}
 

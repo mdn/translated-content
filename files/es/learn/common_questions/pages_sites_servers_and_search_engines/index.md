@@ -3,7 +3,7 @@ title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor 
   motor de búsqueda?
 slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
 

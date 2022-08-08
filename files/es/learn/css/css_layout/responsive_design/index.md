@@ -3,7 +3,7 @@ title: Diseño receptivo
 slug: Learn/CSS/CSS_layout/Responsive_Design
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Diseño_receptivo
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 

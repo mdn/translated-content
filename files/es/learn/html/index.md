@@ -10,7 +10,7 @@ tags:
   - Tema
   - introducción
 translation_of: Learn/HTML
-htmlDate: 20220420
+htmlDate: 2022-04-20
 ---
 {{LearnSidebar}}
 

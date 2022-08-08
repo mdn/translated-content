@@ -3,7 +3,7 @@ title: Introducción al diseño en CSS
 slug: Learn/CSS/CSS_layout/Introduction
 translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introducción
-htmlDate: 20220211
+htmlDate: 2022-02-11
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 

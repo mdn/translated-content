@@ -2,7 +2,7 @@
 title: Dar estilo a los enlaces
 slug: Learn/CSS/Styling_text/Styling_links
 translation_of: Learn/CSS/Styling_text/Styling_links
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 

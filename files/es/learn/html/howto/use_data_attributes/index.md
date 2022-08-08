@@ -3,7 +3,7 @@ title: Uso de atributos de datos
 slug: Learn/HTML/Howto/Use_data_attributes
 translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Learn/HTML/como/Usando_atributos_de_datos
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

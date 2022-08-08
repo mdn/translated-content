@@ -6,7 +6,7 @@ tags:
   - JavaScript
   - Principante
 translation_of: Learn/JavaScript/Howto
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

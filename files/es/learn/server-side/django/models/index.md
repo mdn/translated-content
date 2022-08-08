@@ -11,7 +11,7 @@ tags:
   - django
   - lado-servidor
 translation_of: Learn/Server-side/Django/Models
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 

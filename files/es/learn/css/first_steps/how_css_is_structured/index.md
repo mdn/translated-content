@@ -3,7 +3,7 @@ title: Cómo se estructura el CSS
 slug: Learn/CSS/First_steps/How_CSS_is_structured
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 

@@ -6,7 +6,7 @@ tags:
   - HTML
 translation_of: Learn/HTML/Howto
 original_slug: Learn/HTML/como
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

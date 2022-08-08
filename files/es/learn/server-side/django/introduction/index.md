@@ -11,7 +11,7 @@ tags:
   - introducción
 translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introducción
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 

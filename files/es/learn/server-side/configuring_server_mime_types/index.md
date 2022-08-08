@@ -8,7 +8,7 @@ tags:
   - Todas_las_Categorías
 translation_of: Learn/Server-side/Configuring_server_MIME_types
 original_slug: Configurar_correctamente_los_tipos_MIME_del_servidor
-htmlDate: 20220211
+htmlDate: 2022-02-11
 ---
 ### Introduccion
 

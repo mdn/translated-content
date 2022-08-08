@@ -11,7 +11,7 @@ tags:
   - concreción
   - longitud
 translation_of: Learn/CSS
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

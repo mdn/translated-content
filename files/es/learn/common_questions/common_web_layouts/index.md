@@ -10,7 +10,7 @@ tags:
   - Principiante
 translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Learn/Common_questions/diseños_web_comunes
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{IncludeSubnav("/en-US/Learn")}}
 

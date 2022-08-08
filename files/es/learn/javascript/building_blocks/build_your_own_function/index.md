@@ -12,7 +12,7 @@ tags:
   - Tutorial
 translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 

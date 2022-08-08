@@ -9,7 +9,7 @@ tags:
   - plantillas django
   - vistas django
 translation_of: Learn/Server-side/Django/Generic_views
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 

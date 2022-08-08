@@ -8,7 +8,7 @@ tags:
   - Variables
   - aprende
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
-htmlDate: 20220523
+htmlDate: 2022-05-23
 ---
 {{learnsidebar}}
 

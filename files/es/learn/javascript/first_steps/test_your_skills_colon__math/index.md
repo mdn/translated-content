@@ -8,7 +8,7 @@ tags:
   - Prueba tus habilidades
   - aprende
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Math
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{learnsidebar}}
 

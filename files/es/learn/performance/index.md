@@ -2,7 +2,7 @@
 title: Rendimiento web
 slug: Learn/Performance
 translation_of: Learn/Performance
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

@@ -10,7 +10,7 @@ tags:
   - formulários
 translation_of: Learn/Forms/Your_first_form
 original_slug: Learn/HTML/Forms/Your_first_HTML_form
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 

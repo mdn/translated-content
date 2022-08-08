@@ -2,7 +2,7 @@
 title: Aplicación de estilo a listas
 slug: Learn/CSS/Styling_text/Styling_lists
 translation_of: Learn/CSS/Styling_text/Styling_lists
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 

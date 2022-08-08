@@ -11,7 +11,7 @@ tags:
   - semántica
 translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML
-htmlDate: 20220420
+htmlDate: 2022-04-20
 ---
 {{LearnSidebar}}
 

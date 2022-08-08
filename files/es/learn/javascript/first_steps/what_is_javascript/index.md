@@ -18,7 +18,7 @@ tags:
   - externo
 translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
-htmlDate: 20220603
+htmlDate: 2022-06-03
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 

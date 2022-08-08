@@ -16,7 +16,7 @@ tags:
   - modulo
 translation_of: Learn/JavaScript/First_steps/Math
 original_slug: Learn/JavaScript/First_steps/Matemáticas
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 

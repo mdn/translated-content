@@ -6,7 +6,7 @@ tags:
   - Proyecto MDC
 translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Preguntas_frecuentes_sobre_CSS
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 #### Mi CSS es válida, pero no se representa correctamente
 

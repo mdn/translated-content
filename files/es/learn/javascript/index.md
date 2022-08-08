@@ -11,7 +11,7 @@ tags:
   - modulo
   - princiante JavaScript
 translation_of: Learn/JavaScript
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

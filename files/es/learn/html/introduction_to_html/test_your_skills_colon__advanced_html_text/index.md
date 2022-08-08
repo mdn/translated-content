@@ -3,7 +3,7 @@ title: 'Pon a prueba tus habilidades: texto HTML avanzado'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_text
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 {{learnsidebar}}
 

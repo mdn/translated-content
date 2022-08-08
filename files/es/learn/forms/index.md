@@ -6,7 +6,7 @@ tags:
   - HTML
   - HTML5
 original_slug: HTML/HTML5/Forms_in_HTML5
-htmlDate: 20220804
+htmlDate: 2022-08-04
 ---
 Los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico que en HTML4 y eliminan gran parte del tedioso trabajo de programar y diseñar que se necesitaba en HTML4. Las funcionalidades de los formularios en HTML5 brindan una experiencia mejor para los usuarios al permitir que los formularios tengan un comportamiento más consistente entre diferentes sitios web y al darle una devolución inmediata acerca de la información ingresada. También proveen esta experiencia a los usuarios que han deshabilitado javascript en sus navegadores.
 

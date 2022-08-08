@@ -13,7 +13,7 @@ tags:
   - l10n:priority
   - strings
 translation_of: Learn/JavaScript/First_steps/Variables
-htmlDate: 20221208
+htmlDate: 2022-12-08
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
