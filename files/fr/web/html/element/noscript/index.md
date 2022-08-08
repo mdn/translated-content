@@ -21,16 +21,16 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 ### HTML
 
 ```html
-<noscript>
-  <!-- Un lien vers un site externe -->
-  <a href="http://www.mozilla.com/">Un autre site</a>
-</noscript>
-<p>Elle est où la poulette ?</p>
+<p>Elle est où<noscript>, <a href="http://www.mozilla.com/">la poulette</a></noscript> ?</p>
 ```
 
-### Résultat
+### Resultat avec JavaScript activé
 
-{{EmbedLiveSample("Exemples","300","200")}}
+Elle est où ?
+
+### Resultat avec JavaScript désactivé
+
+Elle est où, [la poulette](https://www.mozilla.org/) ?
 
 ## Résumé technique
 
