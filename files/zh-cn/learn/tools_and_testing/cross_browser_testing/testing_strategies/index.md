@@ -189,7 +189,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 我们将介绍下面的其他选项。
 
-> **备注：** 已做出一些努力用来创建可公开访问的设备实验室，请参阅 [Open Device Labs](https://opendevicelab.com/)。
+> **备注：** 已做出一些努力用来创建可公开访问的设备实验室，请参阅 [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/)。
 
 > **备注：** 我们还需要考虑辅助功能 — 可以在计算机上安装许多有用的工具，以方便辅助功能测试，但我们将在本课程的后面部分介绍"处理常见辅助功能问题"一文中的工具。
 

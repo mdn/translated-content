@@ -1,73 +1,65 @@
 ---
-title: 关于 MDN
+title: 撰写指南
 slug: MDN/Writing_guidelines
-tags:
-  - MDN
-  - 合作伙伴
-  - 指南
-  - 文档
-  - 版权
-  - 社区
-  - 许可
-translation_of: MDN/About
-original_slug: MDN/About
+translation_of: MDN/Writing_guidelines
 ---
 {{MDNSidebar}}
 
-MDN Web Docs（以前称为 MDN——the Mozilla Developer Network）是一个提供 Web 技术和促进 Web  技术软件的不断发展的学习平台，包括：[CSS](/zh-CN/docs/Web/CSS)、[HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript)。我们还有一套详细的给初学者的学习资料——参见[学习 Web 开发](/zh-CN/docs/Learn)。
+MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们在 MDN Web 文档上撰写*什么*文档以及*如何*撰写文档的指南。学习*如何做出贡献*，请参见我们的[贡献指南](/zh-CN/docs/MDN/Community)。
 
-## 使用 MDN 的内容
+- [撰写的文档内容](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)
 
-MDN的内容是免费的，并在开源许可证下提供。
+  - : 本节涵盖了我们在 MDN Web 文档中包含的内容和我们不希望包含的内容，以及其它的政策，如：我们何时为新技术撰写文档、内容建议流程和我们是否接受外链。如果你正在考虑为我们撰写或更新内容，这是一个很好的入门内容。本节还包括：
+    - [包含的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+      - : 本文提供了要将内容添加到 MDN Web 文档的深入标准、在 MDN Web 文档添加新文档的申请流程，以及申请的期望和指南。
 
-### 版权和许可
+- [如何撰写 MDN Web 文档](/zh-CN/docs/MDN/Writing_guidelines/Howto)
 
-MDN的内容在各种开源许可证下完全可用。本节介绍我们提供的内容类型以及每种内容的许可证。
+  - : 本节涵盖了与创建和编辑页面有关的所有内容，包括我们遵循的流程和技术。本节提供有关入门的信息、页面结构概述，以及在哪里可以找到有关特定任务的操作方法。本节包括以下主题：
 
-#### 文档
+    - [使用 markdown](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)
 
-> **备注：** MDN 文档来自于包括 Mozilla 基金会内部与外部编辑者的贡献。除非另有说明，文档基于[署名 - 相同方式共享许可](https://creativecommons.org/licenses/by-sa/2.5/)（CC-BY-SA）V2.5 及以上版本发布。
+      - : 我们使用的 markdown 格式源自 [GitHub 风格的 markdown（GFM）](https://github.github.com/gfm/)。本节是我们在 MDN Web 文档中使用 markdown 的指南，包括特定页内组件的格式，例如特别声明的内容和定义列表。
 
-在复用 MDN 内容时，你需要确保两点：
+    - [添加图像和媒体内容](/zh-CN/docs/MDN/Writing_guidelines/Howto/Images_media)
 
-1. 归属权属于原文档。
+      - : 本节介绍了在页面中包含诸如图像等媒体内容的要求。
 
-文档的归属权属于“Mozilla 贡献者”。你应该将源文档的超链接（如果是在线使用）或 URL（如果是印刷版）放在你的材料当中。以本文为例，你可以这样写：
+    - [向术语表添加条目](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)
 
-> [About MDN](/en-US/docs/MDN/About) by [Mozilla Contributors](/en-US/docs/MDN/About/contributors.txt) is licensed under [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
+      - : 本节介绍了如何在 MDN Web 文档中添加术语条目以及链接到这些条目。它还提供了有关术语表条目的布局和内容的指南。
 
-注意在示例当中，“Mozilla 贡献者”被引用到页面的历史记录当中。参见[版权归属的最佳实践](https://wiki.creativecommons.org/wiki/Marking/Users)以获取更为详细的信息。
+    - [如何研究一项技术](/zh-CN/docs/MDN/Writing_guidelines/Howto/Research_technology)
 
-2. 你的重用文档将在与原始内容相同的许可证[署名 - 相同方式共享许可](https://creativecommons.org/licenses/by-sa/2.5/)（CC-BY-SA）V2.5 及以上版本发布。
+      - : 本节为你提供了在撰写文档时研究一项技术的技巧。
 
-#### 代码示例和代码片段
+    - [如何移动和删除页面](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)
 
-2010 年 8 月 20 日或之后添加的代码示例都属于[公有领域](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/))。不需要有意添加许可信息。如果你需要的话，可以使用：
+      - : 本节说明了如何移动或删除页面。
 
-> Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
+- [撰写风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-2010 年 8 月 20 日之前的代码示例基于 [MIT license](https://opensource.org/licenses/mit-license.php)，你应该在 MIT 模板中插入以下归属信息：
+  - : 撰写风格指南涵盖了我们在 MDN Web 文档上撰写文档时使用的语言和风格。它还介绍了如何格式化代码示例。
 
-> © \<date of last wiki page revision> \<name of person who put it in the wiki>
+- [MDN Web 文档上的页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
-自 2020 年 12 月 14 日推出新的 Yari MDN 平台以来，目前还无法确定你需要哪一个。我们正在进行这方面的工作，并将很快更新此内容。
+  - : 不论是 CSS 参考页面还是 JavaScript 指南页面，MDN Web 文档上的每个页面都有特定的页面类型。本节列出了不同的页面类型并提供了每种类型的模板。浏览这个文档将有助于你了解你正在撰写的文档的类型。
 
-#### 贡献
+- [MDN Web 文档的页面结构](/zh-CN/docs/MDN/Writing_guidelines/Page_structures)
 
-如果你需要对该 wiki 作出贡献，你必须在 Attribution-ShareAlike license（或者在你编辑的页面已经制定的其它版权许可）下发布你的文档，在 [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/)（专用于公有领域）下发布你的示例代码。将内容添加到这个 wiki 表明你同意在相应的许可之下发布你贡献的内容。
+  - : 本节介绍了我们用于在 MDN Web 文档中提供一致的信息呈现的各种页面结构。包括：
 
-一些历史内容是在不同于以上的版权许可之下发布的，这些已在页面底部通过*其它版权许可*的方式进行了标注。
+    - [代码示例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-> **警告：** 任何新建的页面都不可以使用其它版权许可。
+      - : 在页面上包含示代码示例的方法很多，本节介绍了这些方法，并提供了不同语言的语法指南。
 
-**贡献的内容的版权在作者未授予他人之前归原作者所有**。
+    - [宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
-对于此处讨论的话题有任何问题，请联系 [MDN 管理员](mailto:mdn-admins@mozilla.org?subject=MDN%20licensing%20question)。
+      - : 宏是页面中用于生成内容的较为便捷的方式，例如侧边栏。本节列出了我们使用的宏以及它们的作用。
 
-#### 徽标、商标、服务标记和文字标记
+- [如何标记一项技术](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)
 
-Mozilla 基金会的商标、标识、服务标志以及网站的设计、外观不包含在基于知识共享许可的范围内。从某种意义上说，它们是内容的创造者（如图标和图形设计），而这些内容并不在上述许可范畴内发布。如果你也希望这样发布文档，或者你对这些许可条款还有任何的疑问，你可以联系 Mozilla 基金会以获得更多的帮助：[licensing@mozilla.org](mailto:licensing@mozilla.org "mailto:licensing@mozilla.org")
+  - : 本节涵盖了我们对过时、弃用和实验性术语的定义，并提供了关于何时从 MDN Web 文档中删除相应内容的指南。
 
-### 链接到 MDN
-
-我们经常会有用户问我们如何链接到 MDN 的问题，甚至问是否允许这样做。简单的答案是：**是的，你可以链接到 MDN**！超文本链接不仅是 Web 的本质，它既是将你的用户指向宝贵资源的一种方式，也是对我们社区所做工作的信任。
+- [署名和版权许可协议](/zh-CN/docs/MDN/Writing_guidelines/Attrib_copyright_license)
+  - : 本节介绍了文档内容的版权许可协议，以及如何正确署名。
