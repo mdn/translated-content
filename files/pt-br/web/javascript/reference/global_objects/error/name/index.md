@@ -32,7 +32,7 @@ throw e;
 
 {{Specifications}}
 
-## Compatibilidade de Browser
+## Compatibilidade com navegadores
 
 {{Compat}}
 
