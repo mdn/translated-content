@@ -1,238 +1,255 @@
 ---
-title: Gamepad APIを使用したコントロールの実装
+title: ゲームパッド API を使用したコントロールの実装
 slug: Games/Techniques/Controls_Gamepad_API
+tags:
+  - Controls
+  - Gamepad API
+  - Gamepads
+  - Games
+  - JavaScript
+  - controllers
 translation_of: Games/Techniques/Controls_Gamepad_API
 ---
-<div>{{GamesSidebar}}</div><p class="summary"><span id="result_box" lang="ja"><span>この記事では、Gamepad API を使用して Web ゲーム用の効果的なクロスブラウザー制御システムを実装し、コンソールゲームコントローラーを使用してWebゲームを制御できるようにします。</span></span><a href="http://enclavegames.com/">Enclave Games</a><span lang="ja"><span> によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。</span></span></p>
+{{GamesSidebar}}
 
-<h2 id="Web_ゲームのコントロール">Web ゲームのコントロール</h2>
+この記事では、ゲームパッド API を使用してウェブゲーム用の効果的なクロスブラウザー制御システムを実装し、ゲーム機のゲームコントローラーを使用してウェブゲームを制御できるようにします。 [Enclave Games](http://enclavegames.com/) によって作成されたケーススタディゲーム Hungry Fridge を掲載しています。
 
-<p><span id="result_box" lang="ja"><span>歴史的には、テレビに接続されたコンソールでゲームをすること、PC 上でのゲームとはまったく異なる体験でした。</span></span><span id="result_box" lang="ja"><span>最終的にはドライバとプラグインにより、コンソールゲームパッドをデスクトップゲームーネイティブかブラウザで実行されるゲームー</span></span><span lang="ja"><span>で使用できるようになりました。</span> <span>HTML5 の時代になり、</span></span><a href="/ja/docs/Web/API/Gamepad_API">Gamepad API</a><span lang="ja"><span> が完成し、プラグインなしでゲームパッドコントローラを使用してブラウザベースのゲームをプレイできるようになりました。</span> <span>Gamepad API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。</span> <span>これらは、ブラウザゲームにとって良いことです。</span></span></p>
+## ウェブゲームのコントロール
 
-<p><img alt="gamepad-controls" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img01.png" style="display: block; height: 400px; margin: 0px auto; width: 600px;"></p>
+歴史的には、テレビに接続されたゲーム機でゲームをすることと、 PC 上でのゲームとはまったく異なる体験でした。最終的にはドライバーとプラグインにより、ゲーム機のゲームパッドをデスクトップゲーム――ネイティブかブラウザーで実行されるゲーム――で使用できるようになりました。 HTML5 の時代になり、[ゲームパッド API](/ja/docs/Web/API/Gamepad_API) が完成し、プラグインなしでゲームパッドコントローラを使用してブラウザーベースのゲームをプレイできるようになりました。ゲームパッド API は、入力を処理するために JavaScript コード内で使用できるボタンの押下と軸の変更を公開するインターフェイスを提供することで、これを実現します。 これらは、ブラウザーゲームにとって良いことです。
 
-<h2 id="API_ステータスとブラウザサポート">API ステータスとブラウザサポート</h2>
+## API ステータスとブラウザーサポート
 
-<p><a href="http://www.w3.org/TR/gamepad/">Gamepad API</a> は W3C のプロセスではまだドラフトの状態であり、まだ実装が変わることがありますが、<a href="http://caniuse.com/gamepad">ブラウザサポート</a>はかなり良い状態です。Firefox 29 以降はそのまま使用できます。Opera はバージョン 22 以降で API をサポートしています（<span id="result_box" lang="ja"><span>ChromeのBlinkエンジンを使用していることを考えると驚くことではありません</span></span>）。Microsoft はEdge にて API をサポートしており、Gamepad API は4つの中心的なブラウザーにを現在サポートされています。</p>
+[ゲームパッド API](http://www.w3.org/TR/gamepad/) は W3C のプロセスではまだ草案の状態であり、まだ実装が変わることがありますが、[ブラウザーの対応](http://caniuse.com/gamepad)はかなり良い状態です。 Firefox 29 以降はそのまま使用できます。 Opera はバージョン 22 以降で API に対応しています（Chrome の Blink エンジンを使用していることを考えると驚くことではありません）。 Microsoft は Edge にて API をサポートしており、ゲームパッド API は 4 つの主要なブラウザーが現在対応しています。
 
-<h2 id="どのゲームパッドが良いか？">どのゲームパッドが良いか？</h2>
+## どのゲームパッドが良いか？
 
-<p><img alt="gamepad devices" src="http://end3r.com/tmp/gamepad/devices.jpg" style="display: block; height: 450px; margin: 0px auto; width: 600px;"></p>
+現在最も人気のあるゲームパッドは XBox 360、XBox One、PS3 や PS4 であり、これらは かなりテストが行われており、Windows や Mac OS X のブラウザーでゲームパッド API がうまく動いています。
 
-<p>現在最も人気のあるゲームパッドは XBox 360、XBox One、PS3 や PS4 であり、これらは かなりテストが行われており、Windows や Mac OS X のブラウザで Gamepad API がうまく動いています。</p>
+さまざまなボタンレイアウトを備えたデバイスも多数あり、ブラウザーの実装によって多かれ少なかれ動作します。 この記事で取り上げたコードはいくつかのゲームパッドでテストしましたが、著者の好みはワイヤレス XBox 360 コントローラと Mac OS X 上の Firefox ブラウザーの組み合わせです。
 
-<p><span id="result_box" lang="ja"><span>さまざまなボタンレイアウトを備えたデバイスも多数あり、ブラウザの実装によって多かれ少なかれ動作します。</span> <span>この記事で取り上げたコードはいくつかのゲームパッドでテストしましたが、著者の好みはワイヤレス XBox 360 コントローラと Mac OS X 上の Firefox ブラウザの組み合わせです。</span></span></p>
+## ケーススタディ: Hungry Fridge
 
-<h2 id="ケーススタディ_Hungry_Fridge">ケーススタディ: Hungry Fridge</h2>
+[GitHub Game Off II](https://github.blog/2013-10-30-github-game-off-ii/) のコンペが 2013 年 11 月に実施され、 [Enclave Games](http://enclavegames.com/) が参加することに決めました。コンペのテーマは「変化」で、 Hungry Fridge に健康な食べ物（リンゴ、ニンジン、レタス）をタップして与え、「悪しき」食べ物（ビール、ハンバーガー、ピザ）を避けるゲームを提出しました。カウントダウンで、Fridgeが食べたいものの種類が数秒ごとに変わるので、注意してすばやく行動する必要があります。
 
-<p><a href="https://github.com/blog/1674-github-game-off-ii">GitHub Game Off II</a><span lang="ja"><span> のコンペが2013年11月に実施され、</span></span><a href="http://enclavegames.com/">Enclave Games</a><span lang="ja"><span> が参加することに決めました。</span> <span>競争のテーマは「変化」だったため、彼らは健康食品（リンゴ、ニンジン、レタス）をタップして飢えた冷蔵庫に食べさせ、「悪い」食べ物（ビール、ハンバーガー、ピザ）を避けなければならないゲームを提出しました。</span> <span>カウントダウンは、冷蔵庫が数秒ごとに食べたい食べ物のタイプを変えるので、注意して素早く行動する必要があります。</span> <span>あなたは</span></span><a href="http://enclavegames.com/games/hungry-fridge/"> Hungry Fridge</a><span lang="ja"><span> を</span></span><a href="http://enclavegames.com/games/hungry-fridge/">ここ</a><span lang="ja"><span>で試すことができます。</span></span></p>
+2 番目の、隠された「変化」の実装は、静的な Fridge を本格的な移動式射撃食堂に変えることです。 コントローラーを接続すると、ゲームが大きく変わります（Hungry Fridge が Super Turbo Hungry Fridge に変わります）、ゲームパッド API を使用して装甲冷蔵庫を制御できます。 あなたは食べ物を撃たなければなりませんが、もう一度、冷蔵庫が各所で食べたい食べ物の種類を見つけなければなりません。そうしないとエネルギーが失われます。
 
-<p><img alt="hungryfridge-mainmenu" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img02.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
+このゲームは、 2 つの全く異なるタイプの「変化」をカプセル化しています。
 
-<p><span id="result_box" lang="ja"><span>2番目の、隠された「変更」の実装は、静的な冷蔵庫を本格的な移動式射撃食堂に変えることです。</span> <span>コントローラーを接続すると、ゲームが大きく変わります（Hungry FridgeがSuper Turbo Hungry Fridgeに変わります）、Gamepad API を使用して装甲冷蔵庫を制御できます。</span> <span>あなたは食べ物を撃たなければなりませんが、もう一度、冷蔵庫が各所で食べたい食べ物の種類を見つけなければなりません。そうしないとエネルギーが失われます。</span></span></p>
+## デモ
 
-<p><img alt="hungryfridge-howtoplay-gamepad" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img03.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
+Hungry Fridge ゲームのフルバージョンが最初に構築され、次にゲームパッド API が実際に表示され、JavaScript のソースコードが表示され、[簡単なデモ](https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html)が作成されました。 これは GitHub で利用可能な [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の一部であり、コードを深く掘り下げてどのように動作するかを正確に調べることができます。
 
-<p><span class="short_text" id="result_box" lang="ja"><span>このゲームは、2つの全く異なるタイプの「変化」をカプセル化しています。</span></span></p>
+以下に説明するコードは、Hungry Fridge ゲームのフルバージョンからのものですが、デモのものとほぼ同じです。唯一の違いは、フルバージョンでは、スーパーターボモードを使用してゲームを起動するかどうかを決定する`ターボ`変数。 これは独立して機能するので、ゲームパッドが接続されていなくてもオンにすることができます。
 
-<p><img alt="hungryfridge-gameplay-gamepad" src="http://end3r.com/tmp/gamepad/gamepadapi-hungryfridge-img04.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
+> **Note:** イースターエッグの時間: ゲームパッドを接続せずにデスクトップで Super Turbo Hungry Fridge を起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。 それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます。タレットを左右に回すたには A と D、撃つためには W、移動の多面実は矢印キーを使います。
 
-<h2 id="デモ">デモ</h2>
+## 実装
 
-<p><span id="result_box" lang="ja"><span>Hungry Fridge ゲームのフルバージョンが最初に構築され、次に Gamepad API が実際に表示され、JavaScript のソースコードが表示され、</span></span><a href="https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html">簡単なデモ</a><span lang="ja"><span>が作成されました。</span> <span>これはGitHubで利用可能な</span></span> <a href="https://end3r.github.io/Gamepad-API-Content-Kit/">Gamepad API Content Kit</a> <span lang="ja"><span>の一部であり、コードを深く掘り下げてどのように動作するかを正確に調べることができます。</span></span></p>
+ゲームパッド API で使用する重要なイベントは、`gamepadconnected` と `gamepaddisconnected` の2つです。最初のイベントは、ブラウザが新しいゲームパッドの接続を検出したときに発行され、 2 つ目はゲームパッドが切断されたときに発行されます（ユーザーによる物理的な切断、または操作不能による切断）。このデモでは、`gamepadAPI` オブジェクトを使用して API に関するすべての情報を格納しています。
 
-<p><img alt="Hungry Fridge demo using Gamepad API" src="http://end3r.com/tmp/gamepad/super-turbo.png" style="display: block; height: 333px; margin: 0px auto; width: 500px;"></p>
-
-<p><span id="result_box" lang="ja"><span>以下に説明するコードは、Hungry Fridge ゲームのフルバージョンからのものですが、デモのものとほぼ同じです。唯一の違いは、フルバージョンでは、スーパーターボモードを使用してゲームを起動するかどうかを決定する</span></span><code>ターボ</code><span lang="ja"><span>変数</span><span>。</span> <span>これは独立して機能するので、ゲームパッドが接続されていなくてもオンにすることができます。</span></span></p>
-
-<div class="note">
-<p><strong>注記</strong>: <span id="result_box" lang="ja"><span>イースターエッグタイム：ゲームパッドを接続せずにデスクトップにSuper Turbo Hungry Fridgeを起動する隠しオプションがあります。スクリーンの右上にあるゲームパッドアイコンをクリックします。</span> <span>それはスーパーターボモードでゲームを起動し、あなたはキーボードで冷蔵庫を制御することができます：タレットを左右に回すためのAとD、撮影のためのW、動きのための矢印キー。</span></span></p>
-</div>
-
-<h2 id="実装">実装</h2>
-
-<p><span id="result_box" lang="ja"><span>Gamepad API には</span></span><code> gamepadconnected</code><span lang="ja"><span> と gamepaddisconnected という2つの重要なイベントがあります。</span> <span>最初のゲームはゲームパッドが切断されたとき（ユーザーが物理的に、または非アクティブのため）ゲームパッドが新しいゲームパッドの接続を検出したときに起動されます。デモでは、</span></span><code>gamepadAPI </code><span lang="ja"><span>オブジェクトは</span></span><span class="short_text" id="result_box" lang="ja"><span>、APIに関連するすべてを格納するために使用されます：</span></span></p>
-
-<pre class="brush: js"><code>var gamepadAPI = {
+```js
+const gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect() {},
+  disconnect() {},
+  update() {},
+  buttonPressed() {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
   axesStatus: []
-};</code></pre>
+};
+```
 
-<p><code>buttons</code> の配列は XBox 360 ボタンレイアウトを格納します：</p>
+`buttons` の配列は XBox 360 ボタンレイアウトを格納します。
 
-<pre class="brush: js"><code>buttons: [
+```js
+buttons: [
   'DPad-Up','DPad-Down','DPad-Left','DPad-Right',
   'Start','Back','Axis-Left','Axis-Right',
   'LB','RB','Power','A','B','X','Y',
-],</code></pre>
+],
+```
 
-<p><span id="result_box" lang="ja"><span>これは、PS3コントローラ（または名前のない、一般的なもの）のような他のタイプのゲームパッドでは異なる場合があり、期待しているボタンが実際に得るのと同じボタンになるか注意する必要があり、また仮定してはいけません：</span></span></p>
+これは、 PS3 コントローラ（または名前のない、一般的なもの）のような他のタイプのゲームパッドでは異なる場合があり、期待しているボタンが実際に得るのと同じボタンになるか注意する必要があり、また仮定してはいけません。
 
-<pre class="brush: js"><code>window.addEventListener("gamepadconnected", gamepadAPI.connect);
-window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></pre>
+```js
+window.addEventListener("gamepadconnected", gamepadAPI.connect);
+window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);
+```
 
-<p><span id="result_box" lang="ja"><span>セキュリティポリシーのため、イベントが発生するとページが表示されている間にコントローラーと最初にやりとりする必要があります。</span> <span>APIがユーザーとのやりとりなしで動作した場合、APIを認識することなくフィンガープリントに使用できます。</span></span></p>
+セキュリティポリシーのため、イベントが発生するとページが表示されている間にコントローラーと最初にやりとりする必要があります。 API がユーザーとのやりとりなしで動作した場合、 API を認識することなくフィンガープリントに使用できます。
 
-<p><span class="short_text" id="result_box" lang="ja"><span>どちらの関数もかなりシンプルです：</span></span></p>
+どちらの関数もかなりシンプルです。
 
-<pre class="brush: js"><code>connect: function(evt) {
+```js
+connect(evt) {
   gamepadAPI.controller = evt.gamepad;
   gamepadAPI.turbo = true;
   console.log('Gamepad connected.');
-},</code></pre>
+},
+```
 
-<p><code>connect()</code> <span id="result_box" lang="ja"><span>関数はイベントをパラメータとして受け取り、</span></span><code>gamepad </code><span lang="ja"><span>オブジェクトを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> 変数に割り当てます。</span></span><span class="short_text" id="result_box" lang="ja"><span>このゲームでは1つのゲームパッドしか使用しないため、ゲームパッドの配列ではなく単一のオブジェクトです。</span></span><span id="result_box" lang="ja"><span>次に、</span></span><code>turbo </code><span lang="ja"><span>プロパティを </span></span><code>true </code><span lang="ja"><span>に設定します。</span><span>（この目的のために </span></span><code>gamepad.connected </code><span lang="ja"><span>というブール値を使用することができましたが、上で説明した理由から、ゲームパッドを接続しなくてもターボモードを有効にするための別の変数が必要でした）。</span></span></p>
+`connect()` 関数はイベントを引数として受け取り、 `gamepad` オブジェクトを `gamepadAPI.controller` 変数に代入します。このゲームでは 1 つのゲームパッドしか使用しないため、ゲームパッドの配列ではなく単一のオブジェクトです。次に、 `turbo` プロパティを `true` に設定します。（この目的のために `gamepad.connected` という論理値を使用することができましたが、上で説明した理由から、ゲームパッドを接続しなくてもターボモードを有効にするための別の変数が必要でした）。
 
-<pre class="brush: js"><code>disconnect: function(evt) {
+```js
+disconnect(evt) {
   gamepadAPI.turbo = false;
   delete gamepadAPI.controller;
   console.log('Gamepad disconnected.');
-},</code></pre>
+},
+```
 
-<p><code>disconnect</code> 関数は <code>gamepad.turbo プロパティを</code> <code>false</code> に設定し、gamepad オブジェクトを含む変数を削除します。</p>
+`disconnect` 関数は `gamepad.turbo` プロパティを` `false` に設定し、gamepad オブジェクトを含む変数を削除します。
 
-<h3 id="Gamepad_オブジェクト">Gamepad オブジェクト</h3>
+### Gamepad オブジェクト
 
-<p><code>gamepad </code><span class="short_text" lang="ja"><span>オブジェクトには、ボタンや軸の状態が最も重要な情報がたくさんあります</span></span>：</p>
+`gamepad `オブジェクトには、ボタンや軸の状態が最も重要な情報がたくさんあります。
 
-<ul>
- <li><code>id</code>: コントローラーに関する情報を含む文字列。</li>
- <li><code>index</code>: 接続したデバイスを定義するユニークな識別子。</li>
- <li><code>connected</code>: 接続時に <code>true</code> になる真偽値の変数。</li>
- <li><code>mapping</code>: <span class="short_text" id="result_box" lang="ja"><span>ボタンのレイアウトタイプ。</span> <span>標準は現在利用可能な唯一のオプション。</span></span></li>
- <li><code>axes</code>: <span class="short_text" id="result_box" lang="ja"><span>各軸の状態。浮動小数点値の配列で表される。</span></span></li>
- <li><code>buttons</code> : <code>pressed </code><span lang="ja"><span>プロパティと </span></span><code>value</code><span lang="ja"><span> のプロパティを含む </span></span><code>GamepadButton</code><span lang="ja"><span> オブジェクトの配列で表される各ボタンの状態。</span></span></li>
-</ul>
+- `id`: コントローラーに関する情報を含む文字列。
+- `index`: 接続したデバイスを定義するユニークな識別子。
+- `connected`: 接続時に `true` になる真偽値の変数。
+- `mapping`: ボタンのレイアウトタイプ。 標準は現在利用可能な唯一のオプション。
+- `axes`: 各軸の状態。浮動小数点値の配列で表される。
+- `buttons` : `pressed` プロパティと `value` のプロパティを含む `GamepadButton` オブジェクトの配列で表される各ボタンの状態。
 
-<p><code>index </code><span lang="ja"><span>変数は、2つ以上のコントローラを接続しており、2つのデバイスが接続されている2人のゲームがある場合など、それらを識別する必要がある場合に便利です。</span></span></p>
+`index `変数は、 2 つ以上のコントローラを接続しており、2つのデバイスが接続されている2人のゲームがある場合など、それらを識別する必要がある場合に便利です。
 
-<h3 id="gamepad_オブジェクトのクエリ">gamepad オブジェクトのクエリ</h3>
+### gamepad オブジェクトのクエリー
 
-<p><code>connect() </code><span lang="ja"><span>と </span></span><code>disconnect()</code><span lang="ja"><span> のほかに、</span></span><code>gamepadAPI </code><span lang="ja"><span>オブジェクトには</span></span><code> update() </code><span lang="ja"><span>と </span></span><code>buttonPressed()</code><span lang="ja"><span> の2つのメソッドがあります。</span> </span><code>update() </code><span lang="ja"><span>は、ゲームループ内のすべてのフレームで実行され、ゲームパッドオブジェクトの実際のステータスを定期的に更新します：</span></span></p>
+`connect() `と `disconnect()` のほかに、`gamepadAPI `オブジェクトには` update() `と `buttonPressed()` の 2 つのメソッドがあります。 `update() `は、ゲームループ内のすべてのフレームで実行され、ゲームパッドオブジェクトの実際のステータスを定期的に更新します：
 
-<pre class="brush: js"><code>update: function() {
-  // clear the buttons cache
+```js
+update() {
+  // Clear the buttons cache
   gamepadAPI.buttonsCache = [];
-  // move the buttons status from the previous frame to the cache
-  for(var k=0; k&lt;gamepadAPI.buttonsStatus.length; k++) {
+  
+  // Move the buttons status from the previous frame to the cache
+  for (let k = 0; k < gamepadAPI.buttonsStatus.length; k++) {
     gamepadAPI.buttonsCache[k] = gamepadAPI.buttonsStatus[k];
   }
-  // clear the buttons status
+  
+  // Clear the buttons status
   gamepadAPI.buttonsStatus = [];
-  // get the gamepad object
-  var c = gamepadAPI.controller || {};
+  
+  // Get the gamepad object
+  const c = gamepadAPI.controller || {};
 
-  // loop through buttons and push the pressed ones to the array
-  var pressed = [];
-  if(c.buttons) {
-    for(var b=0,t=c.buttons.length; b&lt;t; b++) {
-      if(c.buttons[b].pressed) {
+  // Loop through buttons and push the pressed ones to the array
+  const pressed = [];
+  if (c.buttons) {
+    for (let b = 0; b < c.buttons.length; b++) {
+      if (c.buttons[b].pressed) {
         pressed.push(gamepadAPI.buttons[b]);
       }
     }
   }
-  // loop through axes and push their values to the array
-  var axes = [];
-  if(c.axes) {
-    for(var a=0,x=c.axes.length; a&lt;x; a++) {
+  
+  // Loop through axes and push their values to the array
+  const axes = [];
+  if (c.axes) {
+    for (let a = 0; a < c.axes.length; a++) {
       axes.push(c.axes[a].toFixed(2));
     }
   }
-  // assign received values
+  
+  // Assign received values
   gamepadAPI.axesStatus = axes;
   gamepadAPI.buttonsStatus = pressed;
-  // return buttons for debugging purposes
+  
+  // Return buttons for debugging purposes
   return pressed;
-},</code></pre>
+},
+```
 
-<p><span id="result_box" lang="ja"><span>すべてのフレームで、</span></span><code>update() </code><span lang="ja"><span>は前のフレームで押されたボタンを </span></span><code>buttonsCache</code><span lang="ja"><span> 配列に保存し、新しいものを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> オブジェクトから取得します。</span> <span>次に、実際の状態と値を取得するためにボタンと軸をループします。</span></span></p>
+すべてのフレームで、 `update()` は前のフレームで押されたボタンを `buttonsCache` 配列に保存し、新しいものを `gamepadAPI.controller` オブジェクトから取得します。 次に、実際の状態と値を取得するためにボタンと軸をループします。
 
-<h3 id="ボタンプレスの検出"><span class="short_text" id="result_box" lang="ja"><span>ボタンプレスの検出</span></span></h3>
+### ボタンプレスの検出
 
-<p><code>buttonPressed()</code>  <span lang="ja"><span>メソッドはメインのゲームループに配置され、ボタンの押下を待機します。</span> <span>2つのパラメータ、つまり聴きたいボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。</span> <span>それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。</span></span></p>
+`buttonPressed()`  メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
 
-<pre class="brush: js"><code>buttonPressed: function(button, hold) {
-  var newPress = false;
-  // loop through pressed buttons
-  for(var i=0,s=gamepadAPI.buttonsStatus.length; i&lt;s; i++) {
-    // if we found the button we're looking for...
-    if(gamepadAPI.buttonsStatus[i] == button) {
-      // set the boolean variable to true
+```js
+buttonPressed(button, hold) {
+  let newPress = false;
+  
+  // Loop through pressed buttons
+  for (let i = 0; i < gamepadAPI.buttonsStatus.length; i++) {
+    // If we found the button we're looking for
+    if (gamepadAPI.buttonsStatus[i] === button) {
+      // Set the boolean variable to true
       newPress = true;
-      // if we want to check the single press
-      if(!hold) {
-        // loop through the cached states from the previous frame
-        for(var j=0,p=gamepadAPI.buttonsCache.length; j&lt;p; j++) {
-          // if the button was already pressed, ignore new press
-          if(gamepadAPI.buttonsCache[j] == button) {
-            newPress = false;
-          }
+      
+      // If we want to check the single press
+      if (!hold) {
+        // Loop through the cached states from the previous frame
+        for (let j = 0; j < gamepadAPI.buttonsCache.length; j++) {
+          // If the button was already pressed, ignore new press
+          newPress = (gamepadAPI.buttonsCache[j] !== button);
         }
       }
     }
   }
   return newPress;
-},</code></pre>
+},
+```
 
-<p><span id="result_box" lang="ja"><span>ボタンには、1回の押下と長押しの2種類のアクションがあります。</span> </span><code>newPress </code><span lang="ja"><span>ブール変数は、ボタンの新規押下があるかどうかを示します。</span> <span>次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、</span></span><code>newPress </code><span lang="ja"><span>変数は </span></span><code>true</code><span lang="ja"><span> に設定されます。</span> <span>プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。</span> <span>ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。</span> <span>最後に、</span></span><code>newPress </code><span lang="ja"><span>変数が返されます。</span> </span><code>buttonPressed</code><span lang="ja"> <span>関数は、このようなゲームの更新ループで使用されます：</span></span></p>
+ボタンには、 1 回の押下と長押しの2種類のアクションがあります。論理型の `newPress` 変数は、ボタンの新規押下があるかどうかを示します。 次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、`newPress `変数は `true` に設定されます。 プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。 ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。 最後に、`newPress `変数が返されます。 `buttonPressed` 関数は、このようなゲームの更新ループで使用されます：
 
-<pre class="brush: js"><code>if(gamepadAPI.turbo) {
-  if(gamepadAPI.buttonPressed('A','hold')) {
+```js
+if (gamepadAPI.turbo) {
+  if (gamepadAPI.buttonPressed('A', 'hold')) {
     this.turbo_fire();
   }
-  if(gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed('B')) {
     this.managePause();
   }
-}</code></pre>
+}
+```
 
-<p><code>gamepadAPI.turbo </code><span lang="ja"><span>が </span></span><code>true </code><span lang="ja"><span>で、指定されたボタンが押された (または保持されている) 場合、それらに割り当てられた適切な関数を実行します。</span> <span>この場合、</span></span><code>A </code><span lang="ja"><span>を押すと、弾丸が発射され、</span></span><code>B </code><span lang="ja"><span>を押すとゲームが一時停止します。</span></span></p>
+`gamepadAPI.turbo` が `true` で、指定されたボタンが押された (または保持されている) 場合、それらに割り当てられた適切な関数を実行します。 この場合、 `A` を押すと、弾丸が発射され、 `B` を押すとゲームが一時停止します。
 
-<h3 id="軸のしきい値"><span class="short_text" id="result_box" lang="ja"><span>軸のしきい値</span></span></h3>
+### 軸のしきい値
 
-<p><span id="result_box" lang="ja"><span>ボタンには </span></span><code>0 </code><span lang="ja"><span>または </span></span><code>1 </code><span lang="ja"><span>の二つの状態しかありませんが、アナログスティックは </span></span><code>X </code><span lang="ja"><span>軸と </span></span><code>Y </code><span lang="ja"><span>軸の両方に沿って </span></span><code>-1 </code><span lang="ja"><span>と </span></span><code>1 </code><span lang="ja"><span>の間の浮動小数点範囲を持っています。</span></span></p>
+ボタンには `0` または `1` の二つの状態しかありませんが、アナログスティックは `X` 軸と `Y` 軸の両方に沿って `-1` と `1` の間の浮動小数点範囲を持っています。
 
-<p><img alt="axis threshold" src="http://end3r.com/tmp/gamepad/axis-threshold.png" style="display: block; height: 300px; margin: 0px auto; width: 400px;"></p>
+ゲームパッドは使用しないまま放置しておくと、ホコリで汚れてしまうことがあり、-1や1の値を正確にチェックすることが難しくなります。このため、軸の値が有効になるための閾値を設定するとよいでしょう。例えば、 Fridge のタンクは、 `X` の値が `0.5` より大きいときだけ右に曲がります。
 
-<p><span id="result_box" lang="ja"><span>ゲームパッドは、ほこりのない場所からのゴミを得ることができます。つまり、正確な </span></span>-1 <span lang="ja"><span>または </span></span>1 <span lang="ja"><span>の値をチェックすることが問題になります。</span> <span>このため、軸の値のしきい値を設定すると効果的です。</span> 例えば<span>、</span></span><code>X </code><span lang="ja"><span>値が </span></span><code>0.5</code><span lang="ja"><span> より大きい場合にのみ、冷蔵庫のタンクが右に回転します：</span></span></p>
-
-<pre><code>if(gamepadAPI.axesStatus[0].x &gt; 0.5) {
+```js
+if (gamepadAPI.axesStatus[0].x > 0.5) {
   this.player.angle += 3;
   this.turret.angle += 3;
-}</code></pre>
+}
+```
 
-<p><span id="result_box" lang="ja"><span>たとえ誤って少し動かしても、スティックが元の位置に戻らない場合でも、タンクが予期せず回転することはありません。</span></span></p>
+たとえ誤って少し動かしても、スティックが元の位置に戻らない場合でも、タンクが予期せず回転することはありません。
 
-<h2 id="仕様の更新"><span class="short_text" id="result_box" lang="ja"><span>仕様の更新</span></span></h2>
+## 仕様書の更新
 
-<p><span id="result_box" lang="ja"><span>1年以上の安定性の後、2015年4月に W3C Gamepad API 仕様が更新されました</span></span> (<a href="https://w3c.github.io/gamepad/">最新の仕様を参照</a>) <span lang="ja"><span>。それはあまり変わっていませんが、何が起こっているのかを知ることは良いことです。</span></span></p>
+1 年以上の安定の後、 2015 年 4 月に W3C Gamepad API 仕様書が更新されました ([最新の仕様を参照](https://w3c.github.io/gamepad/)) 。あまり変わっていませんが、何が起こっているのかを知ることは良いことです。
 
-<h3 id="gamepads_の入手">gamepads の入手</h3>
+### ゲームパッドの取得
 
-<p>{{domxref("Naviagator.getGamepads()")}} <span id="result_box" lang="ja"><span>メソッドは、</span></span><a href="https://w3c.github.io/gamepad/#navigator-interface-extension">より長い解説とコード例</a><span lang="ja"><span>で更新されました。</span> <span>ここで、ゲームパッドの配列の長さは </span></span><code>n + 1</code><span lang="ja"><span> でなければなりません。ここで、</span></span><code>n </code><span lang="ja"><span>は接続されたデバイスの数です </span></span>—<span lang="ja"><span> 接続されたデバイスが1つでインデックスが1の場合、配列の長さは2で、</span> <span>[</span></span><code>null, </code><code>[object Gamepad]</code><code>] </code><span lang="ja"><span>をクリックします。</span> <span>デバイスが接続されていないか使用できない場合、デバイスの値は </span></span><code>null </code><span lang="ja"><span>に設定されます。</span></span></p>
+{{domxref("Navigator.getGamepads()")}} メソッドが[長い説明とコードの例](https://w3c.github.io/gamepad/#navigator-interface-extension)と共に更新されました。ゲームパッドの配列の長さは `n+1` でなければなりません。ここで `n` は接続されている機器の数です。`[null, [object Gamepad]]` となります。機器が切断されていたり、利用できない場合は、その機器に対応する値が `null` に設定されます。
 
-<h3 id="マッピング標準"><span class="short_text" id="result_box" lang="ja"><span>マッピング標準</span></span></h3>
+### マッピング標準
 
-<p><span class="short_text" id="result_box" lang="ja"><span>マッピングタイプは、文字列ではなく列挙可能なオブジェクトになりました：</span></span></p>
+マッピング型は、文字列ではなく列挙型のオブジェクトになりました。
 
-<pre>enum GamepadMappingType {
+```js
+enum GamepadMappingType {
     "",
     "standard"
-};</pre>
+};
+```
 
-<p><span id="result_box" lang="ja"><span>この列挙型は、ゲームパッドの既知のマッピングのセットを定義します。</span> <span>今のところ</span></span><code>標準</code><span lang="ja"><span>のレイアウトしかありませんが、将来は新しいレイアウトが登場する可能性があります。</span> <span>レイアウトが不明な場合は、空の文字列に設定されます。</span></span></p>
+この列挙型は、ゲームパッドの既知のマッピングのセットを定義します。 今のところ `standard` のレイアウトしかありませんが、将来は新しいレイアウトが登場する可能性があります。 レイアウトが不明な場合は、空の文字列に設定されます。
 
-<h3 id="イベント">イベント</h3>
+### イベント
 
-<p><span id="result_box" lang="ja"><span>スペックには、</span></span><code>gamepaddisconnected </code><span lang="ja"><span>と </span></span><code>gamepaddisconnected</code><span lang="ja"><span> よりも多くのイベントがありましたが、あまり役に立たないと思われていた仕様から削除されました。</span> <span>議論は、それを取り戻すべきかどうか、そしてどのような形で進行しているかについてはまだ進行中です。</span></span></p>
+仕様書には `gamepadconnected` と `gamepaddisconnected` 以外にも使用できるイベントがあったが、とても特殊なものではないと判断され、仕様書から削除された。それらを戻すべきかどうか、またどのような形で戻すべきかについては、現在も議論が続いています。
 
-<h2 id="概要"><span class="short_text" id="result_box" lang="ja"><span>概要</span></span></h2>
+## 概要
 
-<p><span id="result_box" lang="ja"><span>Gamepad APIは非常に開発が簡単です。</span> <span>プラグインを必要とせずに、コンソールに似たエクスペリエンスをブラウザに提供することがこれまで以上に簡単になりました。</span> </span><a href="http://enclavegames.com/games/hungry-fridge/">Hungry Fridge </a><span lang="ja"><span>ゲームのフルバージョンをブラウザで直接再生したり、</span></span><a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> <span lang="ja"><span>からインストールしたり、</span></span><a href="https://github.com/EnclaveGames/Hungry-Fridge">Gamepad API Content Kit </a><span lang="ja"><span>のその他のリソースと一緒にデモのソースコードを確認したりすることができます。</span></span></p>
+ゲームパッド API は、とても簡単に開発することができます。プラグインを一切使わずに、ゲーム機のような体験をブラウザで実現することが、これまで以上に簡単にできるようになりました。ブラウザーで直接、 [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) のフルバージョンをプレイすることができます。 [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/) の他のリソースもチェックしてみてください。
