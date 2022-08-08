@@ -39,7 +39,7 @@ Para exemplos mais detalhados veja [Erro > Diferenciar entre erros semelhantes](
 
 ### Fornecendo dados estruturados como a causa de erro
 
-Mensagens de erro escritas para o humano consumir pode ser inapropriado para a análise de marquina, já que estão sujetos a mudanças de reformulação ou pontuação ele pode parar qualquer análise de escrita existente para consumi-los. Então quando um erro é disparado de uma funcão, é uma alternativa para a leitura humana da mensagem de erro, você pode em vez disso fornecer a causa com dados estruturados, para análise de maquina.
+Mensagens de erro escritas para o humano consumir pode ser inapropriado para a análise de máquina, já que estão sujetos a mudanças de reformulação ou pontuação ele pode parar qualquer análise de escrita existente para consumi-los. Então quando um erro é disparado de uma função, é uma alternativa para a leitura humana da mensagem de erro, você pode em vez disso fornecer a causa com dados estruturados, para análise de máquina.
 
 ```js
 function makeRSA(p, q) {
