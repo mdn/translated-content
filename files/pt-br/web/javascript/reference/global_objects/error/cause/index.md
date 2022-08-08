@@ -16,7 +16,7 @@ A propriedade **`cause`** indica a causa original específica de um erro.
 
 ## Valor
 
-Este é o valor que foi passado para o [`Error()` constructor](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) no argumento `options.cause`.
+Este é o valor que foi passado para o [construtor `Error()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) no argumento `options.cause`.
 
 O valor pode ser de qualquer tipo. Você não deve criar suposições que o erro que você apanhou tem um `Error` como sua `cause`, e da mesma forma você não pode ter certeza que a variável vinculada na declaração `catch` e um `Error` qualquer. O exemplo abaixo "Forncenendo dados estruturados é a causa do erro" mostra uma casa onde um não erro é deliberadamente fornecido como causa
 
