@@ -84,7 +84,7 @@ el.innerHTML = name; // harmless in this case
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // harmless in this case</pre>
 
-<p>이것은 {{interwiki("wikipedia", "cross-site scripting")}} 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 <code>innerHTML</code> 과 함께 삽입된 {{HTMLElement("script")}} 태그가 <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">실행되지 않도록 </a>지정합니다.</p>
+<p>이것은 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting</a> 공격처럼 보일 수 있지만, 결과는 무해합니다. HTML5 는 <code>innerHTML</code> 과 함께 삽입된 {{HTMLElement("script")}} 태그가 <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">실행되지 않도록 </a>지정합니다.</p>
 
 <p>그러나 {{HTMLElement("script")}} 요소를 사용하지 않고, 자바스크립트를 실행하는 방법이 있으므로, <code>innerHTML</code> 을 사용하여 제어할 수 없는 문자열을 설정할 때 마다 여전히 보안위험이 있습니다. 예를들어:</p>
 
