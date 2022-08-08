@@ -1547,7 +1547,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
-/zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/conflicting/Web/CSS/CSS_Fonts
+/zh-CN/docs/Web/API/HTMLBaseFontElement	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
@@ -2231,7 +2231,7 @@
 /zh-CN/docs/Web/HTML/Element/Video/canplaythrough_event	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
-/zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
+/zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
