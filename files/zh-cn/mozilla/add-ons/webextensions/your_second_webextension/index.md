@@ -101,7 +101,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中 manifest.json 指定了我们插件的图标位于"icons/beasts-48.png"。
 
-创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) 截取的，使用需要遵循该网站的[许可证](http://www.aha-soft.com/free-icons/free-retina-icon-set//zh-CN/docs/)。
+创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
 
 如果你使用自己的图标，它的尺寸应该是 48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48 像素的。同时，对于高分辨率的设备，可以提供 96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96 像素的图片。此时，manifest.json 应当这样配置：
 
