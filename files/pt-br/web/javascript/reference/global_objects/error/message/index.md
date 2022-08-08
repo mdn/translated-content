@@ -16,7 +16,7 @@ A propriedade **`message`** é a descrição legível para humanos de um erro.
 
 Esta propriedade contém uma breve descrição do erro se ele estiver disponível ou foi definido. A propriedade `message` combinada com a propriedade {{jsxref("Error.prototype.name", "name")}} é usada pelo metodo {{jsxref("Error.prototype.toString()")}} para criar a string de representação do erro.
 
-Por padrão, a propriedade `message` é uma string vazia, mas esse comportamento pode ser sobrescrito por uma instancia especificando a mensagem como o primeiro argumento do construtor {{jsxref("Error/Error", "Error")}} .
+Por padrão, a propriedade `message` é uma string vazia, mas esse comportamento pode ser substituído por uma instância especificando uma mensagem como o primeiro argumento para o construtor {{jsxref("Error/Error", "Error")}}.
 
 ## Exemplos
 
