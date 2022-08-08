@@ -1,65 +1,84 @@
 ---
-title: CSS Fonts
+title: CSS 字体
 slug: Web/CSS/CSS_Fonts
 translation_of: Web/CSS/CSS_Fonts
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Fonts</strong> 是一个 CSS 模块，它定义字体相关的属性和字体资源是如何加载的。它允许定义一个字体的样式，如字体样式、尺寸大小或字体宽度，以及要使用的字形的变体（加粗、斜体等），对于一个字符有几个字形的字体。</p>
+**CSS 字体**是一个 CSS 模块，它定义了字体相关的属性和字体资源是如何加载的。它允许定义一个字体的样式，如字体家族、尺寸或字重、行高，以及对于一个字符有几个字形的字体时要使用的字形。
 
-<h2 id="参考文献">参考文献</h2>
+## 基础示例
 
-<h3 id="属性">属性</h3>
+以下示例展示了使用基本字体属性来对段落文本添加样式的方法。
 
-<div class="index">
-<ul>
- <li>{{cssxref("font")}}</li>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("font-feature-settings")}}</li>
- <li>{{cssxref("font-kerning")}}</li>
- <li>{{cssxref("font-language-override")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-size-adjust")}}</li>
- <li>{{cssxref("font-stretch")}}</li>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-synthesis")}}</li>
- <li>{{cssxref("font-variant")}}</li>
- <li>{{cssxref("font-variant-alternates")}}</li>
- <li>{{cssxref("font-variant-caps")}}</li>
- <li>{{cssxref("font-variant-east-asian")}}</li>
- <li>{{cssxref("font-variant-ligatures")}}</li>
- <li>{{cssxref("font-variant-numeric")}}</li>
- <li>{{cssxref("font-variant-position")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("line-height")}}</li>
-</ul>
-</div>
+```css
+p {
+  width: 600px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-variant-ligatures: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+```
 
-<h3 id="使用规则">使用规则</h3>
+```html
+<p>Three hundred years ago<br>
+  I thought I might get some sleep<br>
+  I stretched myself out on an antique bed<br>
+  An' my spirit did a midnite creep</p>
+```
 
-<dl>
- <dt>{{cssxref("@font-face")}}</dt>
- <dd>
- <div class="index">
- <ul>
-  <li>{{cssxref("@font-face/font-family", "font-family")}}</li>
-  <li>{{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}</li>
-  <li>{{cssxref("@font-face/font-style", "font-style")}}</li>
-  <li>{{cssxref("@font-face/font-variant", "font-variant")}}</li>
-  <li>{{cssxref("@font-face/font-weight", "font-weight")}}</li>
-  <li>{{cssxref("@font-face/font-stretch", "font-stretch")}}</li>
-  <li>{{cssxref("@font-face/src", "src")}}</li>
-  <li>{{cssxref("@font-face/unicode-range", "unicode-range")}}</li>
- </ul>
- </div>
- </dd>
- <dt>{{cssxref("@font-feature-values")}}</dt>
-</dl>
+它的结果如下所示：
 
-<h2 id="Guide">Guide</h2>
+{{EmbedLiveSample('基础示例', '100%', '200')}}
 
-<p><em>None.</em></p>
+## 可变字体示例
 
-<h2 id="Specifications">Specifications</h2>
+你可以在 [v-fonts.com](https://v-fonts.com/) 和 [axis-praxis.org](https://www.axis-praxis.org/) 找到可变字体示例；参见[可变字体指南](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)以获取更多信息。
+
+## 参考文献
+
+### 属性
+
+- {{cssxref("font")}}
+- {{cssxref("font-family")}}
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
+
+### @ 规则
+
+- {{cssxref("@font-face")}}
+- {{cssxref("@font-feature-values")}}
+
+## 指南
+
+- [文本和字体样式基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+  - : 在这篇面向初学者的文章中，我们详细介绍了文本和字体样式的基础知识，包括设置字重、字体家族和样式、字体简写、文本对齐和其它效果，以及行和字母间距。
+- [OpenType 字体特性指南](/zh-CN/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
+  - : 字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字符风格。它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ）、字偶距（kerning，调整特定字母组合的间距）、分数形式、数字风格，和一票其它内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。
+- [可变字体指南](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+  - : **可变字体指南**是 OpenType 字体规范上的演进，它允许将同一字体的多个变体统合进单独的字体文件中。从而无需再将不同字宽、字重或不同样式的字体分割成不同的字体文件。本文将介绍你需要知道的有关使用可变字体的所有内容。
+
+## 规范
 
 {{Specifications}}
