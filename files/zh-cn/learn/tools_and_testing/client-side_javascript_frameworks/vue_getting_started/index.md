@@ -12,11 +12,11 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        <p>熟悉核心的 HTML, CSS 和 JavaScript 语言，了解终端/命令行。</p>
+        <p>熟悉核心的 HTML、CSS 和 JavaScript 语言，了解终端/命令行。</p>
         <p>
           Vue 组件设计成为由管理应用数据的 JavaScript 对象和映射到底层 DOM
           结构的 html 模板语法组成的混合体。安装和使用的一些更高级的功能
-          Vue(如单文件组件或渲染函数),你将需要一个安装了 node 和 npm 的终端。
+          Vue(如单文件组件或渲染函数)，你将需要一个安装了 node 和 npm 的终端。
         </p>
       </td>
     </tr>
@@ -34,13 +34,13 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——不像许多其他框架，您可以使用 Vue 增强现有的 HTML。这使您可以使用 Vue 作为[jQuery](/zh-CN/docs/Glossary/jQuery)等库的临时替代品。
 
-也就是说，您还可以使用 Vue 编写整个单页应用程序 (SPAs)。这允许您创建标记完全由 Vue 管理，可以提高开发人员的经验和性能在处理复杂的应用程序。当你需要的时候它还允许您利用其他库对客户端路由和状态进行管理。此外，Vue 需要“中间地带”的方法工具客户端路由和状态管理。虽然 Vue 核心团队维护了建议的函数库，但他们并没有直接捆绑到 Vue 里。这样你就可以选择一个其他路由/状态管理库，来更好地适应您的应用程序。
+也就是说，您还可以使用 Vue 编写整个单页应用程序 (SPA)。这允许您创建标记完全由 Vue 管理，可以提高开发人员的经验和性能在处理复杂的应用程序。当你需要的时候它还允许您利用其他库对客户端路由和状态进行管理。此外，Vue 需要“中间地带”的方法工具客户端路由和状态管理。虽然 Vue 核心团队维护了建议的函数库，但他们并没有直接捆绑到 Vue 里。这样你就可以选择一个其他路由/状态管理库，来更好地适应您的应用程序。
 
 除了允许您逐步将 Vue 集成到您的应用程序中，Vue 还提供了一种渐进的方式编写标记。像大多数框架，Vue 通过组件允许您创建可重用块标记。大多数时候，Vue 组件是使用一个特殊的 HTML 模板的语法写的。当您需要比 HTML 语法允许的更多的控制时，您可以编写 JSX 或纯 JavaScript 函数来定义组件。
 
 在学习本教程的过程中，您可能希望在其他选项卡中打开[Vue 指南](https://cn.vuejs.org/v2/guide/index.html)和[API 文档](https://cn.vuejs.org/v2/api/index.html)，这样，如果您想了解更多信息，可以参考它们。
 
-要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 Vue 文档：[与其他框架的比较。](https://cn.vuejs.org/v2/guide/comparison.html)
+要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 [Vue 文档：与其他框架的比较](https://cn.vuejs.org/v2/guide/comparison.html)。
 
 ## 安装 Vue
 
@@ -60,8 +60,8 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 
 然而，这种方法有一些局限性。要构建更复杂的应用程序，您需要使用 [Vue NPM package](https://www.npmjs.com/package/vue)。这将允许您使用 Vue 的高级功能并利用 WebPack 等捆绑包。为了使使用 Vue 构建应用程序更容易，有一个 CLI 来简化开发过程。要使用 npm 软件包和 CLI，您需要：
 
-1.  Node.js 8.11+ installed.
-2.  npm or yarn.
+1.  安装 Node.js 8.11 及以上的版本。
+2.  安装包管理器 npm 或 yarn。
 
 > **备注：** 如果您还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
 
@@ -77,7 +77,7 @@ npm install --global @vue/cli
 yarn global add @vue/cli
 ```
 
-安装之后，要初始化一个新项目，可以在要创建项目的目录中打开一个终端，并运行 vue create \<project-name>。CLI 将会给你一个可以使用的项目配置列表。有一些预设的，你可以按照自己的需求。这些选项允许您配置 TypeScript,linting,vue-router,testing，和更多。
+安装之后，要初始化一个新项目，可以在要创建项目的目录中打开一个终端，并运行 `vue create <project-name>`。CLI 将会给你一个可以使用的项目配置列表。有一些预设的，你可以按照自己的需求。这些选项允许您配置 TypeScript、linting、vue-router、testing 等更多高级特性。
 
 - 下面我们来看看使用这个。
 
@@ -85,18 +85,19 @@ yarn global add @vue/cli
 
 为了探索 Vue 中各种各样的特征，我们将建立一个简单的任务清单应用。我们将会使用 Vue 脚手架工具去创建一个新的应用框架并在上面搭建我们的应用。请按照以下步骤：
 
-1.  在终端，用 cd 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue.`
-2.  使用方向键然后 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
+1.  在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
 
-3.  你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果他们没有被选中，使用方向键切换，空格键选中，一旦他们被选中按下 <kbd>Enter</kbd>，继续进行。
+2.  使用方向键然后按下键盘上的 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
 
-4.  接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样辅助我们捕获常见的并且不自以为是的错误。
+3.  你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果它们没有被选中，使用方向键切换，用空格键选中它们，一旦它们被选中，按下 <kbd>Enter</kbd>，继续进行。
+
+4.  接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样可以辅助我们捕获常见的并且不自以为是的错误。
 
 5.  然后你会被询问需要那种自动化的 lint，选择 "Lint on save"，这样我们在项目中保存文件的时候就会自动检查错误。按下 <kbd>Enter</kbd> 继续。
 
-6.  接着你将需要选择把配置文件放在哪里。"In dedicated config files" 这个选项会把你的配置文件比如 ESLint 单独放在一个文件里。另一个选项 "In package.json" 则会把配置放进项目的 package.json 文件里。选择 "In dedicated config files" 然后使劲敲下 <kbd>Enter</kbd>。
+6.  接着你将需要选择把配置文件放在哪里。"In dedicated config files" 这个选项会把你的配置文件比如 ESLint 单独放在一个文件里。另一个选项 "In package.json" 则会把配置放进项目的 `package.json` 文件里。选择 "In dedicated config files" 然后按下 <kbd>Enter</kbd>。
 
-7.  最后会问你，是否选择把本次的选择作为将来的一个预设配置（Save this as a preset for future projects？），这个就安全由你自己决定了。如果你想把本次的配置作为一个预设配置并且以后想再次使用的话，按下 <kbd>y</kbd>，否则按下 <kbd>n</kbd>。
+7.  最后会问你，是否选择把本次的选择作为将来的一个预设配置（Save this as a preset for future projects？），这个就完全由你自己决定了。如果你想把本次的配置作为一个预设配置并且以后想再次使用的话，按下 <kbd>y</kbd>，否则按下 <kbd>n</kbd>。
 
 然后脚手架工具就开始构建项目，并且安装所需的依赖。
 
@@ -118,14 +119,14 @@ yarn global add @vue/cli
 
     > **备注：** 这个不是负责管理页面最终展示的模板，而是管理 Vue 应用之外的静态 HTML 文件，一般只有在用到一些高级功能的时候才会修改这个文件。
 
-- `src`: 这个是 Vue 应用的核心代码目录
+- `src`：这个是 Vue 应用的核心代码目录
 
   - `main.js`：这是应用的入口文件。目前它会初始化 Vue 应用并且制定将应用挂载到 `index.html` 文件中的哪个 HTML 元素上。通常还会做一些注册全局组件或者添额外的 Vue 库的操作。
   - `App.vue`：这是 Vue 应用的根节点组件，往下看可以了解更多关注 Vue 组件的信息。
   - `components`：这是用来存放自定义组件的目录，目前里面会有一个示例组件。
   - `assets`：这个目录用来存放像 CSS、图片这种静态资源，但是因为它们属于代码目录下，所以可以用 webpack 来操作和处理。意思就是你可以使用一些预处理比如 [Sass/SCSS](https://sass-lang.com/) 或者 [Stylus](https://stylus-lang.com/)。
 
-> **备注：** 根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 `views` 的文件夹）
+> **备注：** 根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 `views` 的文件夹）。
 
 ## .vue 文件（单文件组件）
 
@@ -139,13 +140,13 @@ yarn global add @vue/cli
 
 ### App.vue
 
-打开 `App.vue` 文件，可以看到有三部分组成 `<template>`, `<script>`, and `<style>`，分别包含了组件的模板、脚本和样式相关的内容。所有的单文件组件都是这种类似的基本结构。
+打开 `App.vue` 文件，可以看到由 `<template>`、`<script>` 和 `<style>` 三部分组成，分别包含了组件的模板、脚本和样式相关的内容。所有的单文件组件都是这种类似的基本结构。
 
 `<template>` 包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及一些我们接下来要讲的 Vue 特定的语法。
 
-> **备注：** 通过设置 \<template> 标签的 `lang` 属性，例如可以通过设置 `<template lang="pug">` 就可以在使用 Pub 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是这种方式可行你还是值得知道。
+> **备注：** 通过设置 `<template>` 标签的 `lang` 属性，例如可以通过设置 `<template lang="pug">` 就可以在使用 Pug 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是你还是值得知道这种可行的方式。
 
-`<script>` 包含组件中所有的非显示逻辑，最重要的是， `<script>` 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 `render()` 函数的 Vue 组件。
+`<script>` 包含组件中所有的非显示逻辑，最重要的是， `<script>` 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个包含 template 模板的对象会被处理和转换成为一个有 `render()` 函数的 Vue 组件。
 
 对于 `App.vue`，我们的默认导出将组件的名称设置为 `app` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此您需要将其导入并注册到使用它们的每个组件文件中。这对于拆包 / tree shaking（译者注：一种减小包体积优化方式）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
 
@@ -155,7 +156,7 @@ import HelloWorld from './components/HelloWorld.vue';
 export default {
   name: 'app',
   components: {
-    //You can register components locally here.
+    // 可以在这里本地注册组件。
     HelloWorld
   }
 };
@@ -163,15 +164,15 @@ export default {
 
 > **备注：** 如果想要使用 [TypeScript](https://www.typescriptlang.org/) 语法，你应该将 `<script>` 标签的 `lang` 属性设置为 `<script lang="ts">` 来告诉编译器你要使用 TypeScript。
 
-组件的 CSS 应该写在 `<style>` 标签里，如果你添加了 `scoped` 属性，形如 `<style scoped>` ，Vue 会把样式的范围限制到单文件组件的内容里。这个类似 CSS-in-JS 的解决方案，不过允许你书写文本格式的 CSS 了。
+组件的 CSS 应该写在 `<style>` 标签里，如果你添加了 `scoped` 属性（形如 `<style scoped>`），Vue 会把样式的范围限制到单文件组件的内容里。这个是类似于 CSS-in-JS 的解决方案，只不过允许书写纯粹的 CSS。
 
 > **备注：** 如果通过 CLI 创建项目时选择了 CSS 预处理器，则可以将 `lang` 属性添加到 `<style>` 标签中，以便 Webpack 可以在构建时处理内容。例如，`<style lang ="scss">` 将允许您在样式信息中使用 SCSS 语法。
 
 ## 本地运行程序
 
-Vue CLI 带有内置的开发服务器。这样一来，您就可以在本地运行您的应用程序，这样就可以轻松对其进行测试，而无需自己配置服务器。CLI 会以 npm 脚本的形式将 `serve` 命令添加到项目的 `package.json `文件中，因此您可以轻松地运行它。
+Vue CLI 带有内置的开发服务器。这样一来，您就可以在本地运行您的应用程序，这样就可以轻松对其进行测试，而无需自己配置服务器。CLI 会以 npm 脚本的形式将 `serve` 命令添加到项目的 `package.json` 文件中，因此您可以轻松地运行它。
 
-在您的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。您的终端应输出类似以下内容的内容：
+在您的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。你的终端应输出类似以下内容：
 
 ```
 INFO  Starting development server...
@@ -187,9 +188,7 @@ INFO  Starting development server...
   To create a production build, run npm run build.
 ```
 
-If you navigate to the “local” address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
-
-如果在浏览器新选项卡打开“本地”地址（如上所述，该地址应类似于`http://localhost：8080`，但可能会因设置而异），您应该会看到您的应用。现在，它应该包含欢迎消息，Vue 文档的链接，使用 CLI 初始化应用程序时添加的插件的链接，以及指向 Vue 社区和生态系统的其他有用链接。
+如果在浏览器新选项卡打开“本地”地址（如上所述，该地址应类似于 `http://localhost:8080`，但可能会因设置而异），你应该会看到你的应用。现在，它应该包含欢迎消息、Vue 文档的链接、使用 CLI 初始化应用程序时添加的插件的链接，以及指向 Vue 社区和生态系统的其他有用链接。
 
 ![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
@@ -203,7 +202,7 @@ If you navigate to the “local” address in a new browser tab (this should be 
 
 如果你的服务器还在正常运行，应该可以看到 logo 几乎即时从之前渲染出来的页面中消失。我们再把 `HelloWorld` 组件也删掉。
 
-线删除下面这一整行：
+首先删除下面这一整行：
 
 ```html
 <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -225,7 +224,7 @@ components: {
 
 渲染好的应用这时候将不再显示错误了，只有一个空页面，因为我们的 `<template>` 里没有一个可见的内容。
 
-我们接下来要创建一个任务清单的应用，在 `<div id="app">` 中新增一个 `<h1>` 标签，并将标题文案设为 "To-Do List"，参考如下：
+我们接下来要创建一个任务清单的应用，在 `<div id="app">` 中新增一个 `<h1>` 标签，并将标题文案设为 "To-Do List"，像这样：
 
 ```html
 <template>
@@ -247,37 +246,37 @@ components: {
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## 本章目录
 
-- [客户端架构介绍](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [客户端架构介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [开始使用 React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [开始使用 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - [开始我们的 React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [组件化我们的 React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events 和 state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React 交互性：Events 和 state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React 交互性：Editing、filtering 和条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [React 无障碍](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
   - [React 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
   - [开始使用 Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Ember 应用结构和组件化](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember 交互性：Events, classes 和 state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember 交互性：Footer functionality 和条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Ember 路由](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember 资源和疑问解答](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [开始使用 Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [开始使用 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - [创建第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 列表](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加表单：Vue 时间、方法和模型](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [用 Css 装饰 Vue 组件](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Vue 列表渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [待办事项表单：Vue 时间、方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [用 CSS 装饰 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - [使用 Vue 计算属性](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
   - [Vue 条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - [聚焦 Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)

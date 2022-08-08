@@ -438,9 +438,7 @@ if (window.fetch) {
 
 ## 명세
 
-| Specification         | Status             | Comment            |
-| --------------------- | ------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -227,7 +227,7 @@ display.addEventListener('change', function (evt) {
 
 ## 명세
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 

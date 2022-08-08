@@ -1,13 +1,13 @@
 ---
-title: API リファレンスを書くには
-slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
+title: API リファレンスの書き方
+slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 tags:
   - API
   - Documentation
   - Guide
   - Howto
   - MDN Meta
-original_slug: MDN/Contribute/Howto/Write_an_API_reference
+original_slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 ---
 {{MDNSidebar}}
 
@@ -41,7 +41,7 @@ API の文書化を始める前に、利用可能なものを用意しておく�
    そのような人を探すのに良い場所には下記のものがあります。
 
     - あなたが関連企業に勤めている場合、社内アドレス帳。
-    - その API の議論に関与している公開メーリングリスト。例えば Mozilla の [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) リストや W3C の [www-style](https://lists.w3.org/Archives/Public/www-style/) リストなど。
+    - その API の議論に関与している公開メーリングリスト。例えば Mozilla の [dev-platform](https://groups.google.com/a/mozilla.org/g/dev-platform/) リストや W3C の [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/) リストなど。
     - 仕様書そのもの。例えば、 [Web Audio API 仕様書](https://webaudio.github.io/web-audio-api/)には、冒頭に作者とその連絡先が記載されています。
 
 ### 時間をかけて API を使ってみる
@@ -105,7 +105,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 まれに同じインターフェイスに両方が存在する場合は、ページ内で別々の節に（静的メソッド／インスタンスメソッドとして）記載します。
 通常はインスタンスメソッドしか存在しないので、その場合は「メソッド」というタイトルで記載します。
 - 継承されたプロパティやメソッドは、それぞれの親インターフェイスに掲載されているので文書化しません。しかし、その存在を示唆することはあります。
-- ミックスインで定義されたプロパティやメソッドの記事を作成します。詳しくは[ミックスインの協力ガイド](/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixin)を参照してください。
+- ミックスインで定義されたプロパティやメソッドの記事を作成します。詳しくは[ミックスインの協力ガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixin)を参照してください。
 - 文字列化 (`toString()`) や JSON 化 (`toJSON()`) のような特殊なメソッドも、存在する場合は掲載します。
 - 名前の付いたコンストラクター（{{domxref("HTMLImageElement")}} における `Image()` など）も、関連があれば掲載します。
 
@@ -187,19 +187,19 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
-  - ...
+  - …
   - AudioContext.createBuffer()
   - AudioContext.createBufferSource()
-  - ...
+  - …
 
 - AudioNode
 
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
-  - ...
+  - …
   - AudioNode.connect(Param)
-  - ...
+  - …
 
 - AudioParam
 - Events (update list)
@@ -243,11 +243,11 @@ API ランディングページは、 API の規模によって長さが大き�
 
 3. **説明**: インターフェイスページの最初の段落では、インターフェイスの包括的な目的を簡潔に説明する必要があります。追加の説明が必要な場合は、さらに数段落を含めるとよいでしょう。インターフェイスが実質的には辞書である場合、「インターフェイス」の代わりにその用語を使用する必要があります。
 4. **継承図:** [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) マクロを使用して、このインターフェイスの SVG の継承図を埋め込みます。
-5. **プロパティの一覧、メソッドの一覧**: これらの節は、「プロパティ」と「メソッド」というタイトルで、そのインターフェイスのそれぞれのプロパティ/メソッドのリファレンスページへのリンクと（\\{{domxref}} マクロを使用します）、それぞれのプロパティが何を行うかの説明を提供します。これらは、 MDN エディターのツールバーの "Definition List", "Definition Term", "Definition Description" ボタンを使って作成される説明/定義リストを使ってマークアップされるべきです。それぞれの説明は短く簡潔にしてください。可能であれば 1 文で。他のページへのリンクを素早く作成する方法については、「\\{{domxref}} マクロによる他の API 機能の参照」を参照してください。
+5. **プロパティの一覧、メソッドの一覧**: これらの節は、「プロパティ」と「メソッド」というタイトルで、そのインターフェイスのそれぞれのプロパティ/メソッドのリファレンスページへのリンクと（\\{{domxref}} マクロを使用します）、それぞれのプロパティが何を行うかの説明を提供します。これらは[説明/定義リスト](/ja/docs/MDN/Contribute/Markdown_in_MDN#定義リスト)を使用してマークアップしてください。それぞれの説明は短く簡潔にしてください。可能であれば 1 文で。他のページへのリンクを素早く作成する方法については、「\\{{domxref}} マクロによる他の API 機能の参照」を参照してください。
 
     それぞれの節の冒頭で、プロパティ/メソッドの一覧の前に、イタリック体で適切な文章を使用して継承を示してください。
 
-    - _このインターフェイスは固有のプロパティを実装していませんが、 \{{domxref("XYZ")}}, および \{{domxref("XYZ2")}} からプロパティを継承しています。_
+    - _このインターフェイスは固有のプロパティを実装していませんが、 \\{{domxref("XYZ")}}, および \\{{domxref("XYZ2")}} からプロパティを継承しています。_
     - _このインターフェイスには \\{{domxref("XYZ")}}, および \\{{domxref("XYZ2")}} から継承したプロパティもあります。_
     - _このインターフェイスは固有のメソッドを実装していませんが、 \\{{domxref("XYZ")}}, および \\{{domxref("XYZ2")}} からメソッドを継承しています。_
     - _このインターフェイスには \\{{domxref("XYZ")}}, および \\{{domxref("XYZ2")}} から継承したプロパティもあります。_
@@ -294,7 +294,7 @@ API ランディングページは、 API の規模によって長さが大き�
 4. **説明**: プロパティページの最初の段落には、そのプロパティの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに記述すべき追加情報は、その既定値/初期値、および読み取り専用かどうかです。最初の文の構成は、次のようにしなければなりません。
 
    - 読み取り専用のプロパティの場合
-     - : **`インターフェイス名.プロパティ`** は読み取り専用のプロパティで、 \\{{domxref("type")}} を返します...
+     - : **`インターフェイス名.プロパティ`** は読み取り専用のプロパティで、 \\{{domxref("type")}} を返します…
    - その他のプロパティの場合
      - : **`インターフェイス名.プロパティ`** プロパティは \\{{domxref("type")}} 型で…
 
@@ -333,14 +333,14 @@ API ランディングページは、 API の規模によって長さが大き�
 4. **説明**: メソッドページの最初の段落には、そのメソッドの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに追加すべき情報は、デフォルト引数の値、そのメソッドが依存する理論、および引数値が行うことです。
 
     - 最初の文の冒頭は、次のような構成にしなければなりません。
-      - : **`インターフェイス名.メソッド名()`** メソッドインターフェイスは ...
+      - : **`インターフェイス名.メソッド名()`** メソッドインターフェイスは…
 
     > **Note:** `インターフェイス名.メソッド名()` は `<code>` の中に入れ、最初に使用される場合は太字 (`<strong>`) で記述してください。
 
 5. **構文**: 構文の節には、 2 - 3 行の例（通常はインターフェイスの構築とインターフェイスメソッドの呼び出しのみ）を含める必要があります。
 
     - 構文は次の形式にしてください。
-      - : method(param1, param2, ...)
+      - : method(param1, param2, …)
 
     構文の節には、以下の 3 つの項を入れてください（例として、 {{domxref("SubtleCrypto.sign()")}} を参照してください）。
 
@@ -394,4 +394,4 @@ API リファレンスページには、すべてのページに設定すべき�
 
 ## サイドバー
 
-API リファレンスページを作成したら、ページを関連付けるために適切なサイドバーを挿入したくなるでしょう。 [API リファレンスサイドバー](/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars)のガイドで、その方法を説明します。
+API リファレンスページを作成したら、ページを関連付けるために適切なサイドバーを挿入したくなるでしょう。 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)のガイドで、その方法を説明します。
