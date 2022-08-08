@@ -35,7 +35,7 @@ try {
 }
 ```
 
-Para exemplos mais detalhados olhe [Erro > Diferenciar entre erros semelhantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
+Para exemplos mais detalhados veja [Erro > Diferenciar entre erros semelhantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error#differentiate_between_similar_errors).
 
 ### Fornecendo dados estruturados como a causa de erro
 
