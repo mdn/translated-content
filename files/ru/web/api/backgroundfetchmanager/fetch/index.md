@@ -13,66 +13,71 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.fetch
 ---
+
 {{DefaultAPISidebar("Background Fetch API")}}
 
-The **`fetch()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object for a supplied array of URLs and {{domxref("Request")}} objects.
+Метод **`fetch()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}} для предоставленного массива URL-адресов и объектов {{domxref("Request")}}.
 
-## Syntax
+## Синтаксис
 
 ```js
-fetch(id, requests)
-fetch(id, requests, options)
+fetch(id, requests);
+fetch(id, requests, options);
 ```
 
-### Parameters
+### Параметры
 
 - `id`
-  - : A developer-defined identifier that can be passed to the other methods to retrieve a {{domxref("backgroundFetchRegistration")}}.
+  - : Определяемый разработчиком идентификатор, который может быть передан другим методам для получения {{domxref("backgroundFetchRegistration")}}.
 - `requests`
-  - : A {{domxref("RequestInfo")}} object or an array of such objects.
+  - : Объект {{domxref("RequestInfo")}} или массив таких объектов.
 - `options` {{optional_inline}}
-  - : A {{domxref("BackgroundFetchOptions")}} object.
+  - : Объект {{domxref("BackgroundFetchOptions")}}.
 
-### Return value
+### Возвращаемое значение
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} object.
+{{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}}.
 
-### Exceptions
+### Исключения
 
 - {{jsxref("TypeError")}}
-  - : Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested `id`, or the request fails.
+  - : Возникает если запрос не передан, либо если режим запроса 'no-cors', либо если нет сервис-воркера, либо если уже существует запрос с таким идентификатором, либо запрос завершился с ошибкой.
 - `AbortError` {{domxref("DOMException")}}
-  - : Indicates that the fetch was aborted.
+  - : Указывает на то, что запрос был прерван.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Indicates that user permission has not been granted to make background fetches.
+  - : Указывает на то, что пользователю не было предоставлено разрешение на фоновые запросы.
 
-## Examples
+## Примеры
 
-The following examples shows how to use `fetch()` to create a
-{{domxref("BackgroundFetchRegistration")}}. With an active
-{{domxref('ServiceWorker', 'service worker')}}, use the
-{{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the
-`BackgroundFetchManager` object and call its `fetch()`
-method.
+Следующие примеры показывают как использовать `fetch()` чтобы создать {{domxref("BackgroundFetchRegistration")}}. При активном
+{{domxref('ServiceWorker', 'service worker')}}, используйте свойство
+{{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту
+`BackgroundFetchManager` и вызовите его метод `fetch()`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
-    title: 'Episode 5: Interesting things.',
-    icons: [{
-      sizes: '300x300',
-      src: '/ep-5-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
+  const bgFetch = await swReg.backgroundFetch.fetch(
+    'my-fetch',
+    ['/ep-5.mp3', 'ep-5-artwork.jpg'],
+    {
+      title: 'Episode 5: Interesting things.',
+      icons: [
+        {
+          sizes: '300x300',
+          src: '/ep-5-icon.png',
+          type: 'image/png',
+        },
+      ],
+      downloadTotal: 60 * 1024 * 1024,
+    }
+  );
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
