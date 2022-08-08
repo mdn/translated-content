@@ -61,7 +61,7 @@ function makeRSA(p, q) {
 
 {{Specifications}}
 
-## Compatibilidade de Browser
+## Compatibilidade com navegadores
 
 {{Compat}}
 
