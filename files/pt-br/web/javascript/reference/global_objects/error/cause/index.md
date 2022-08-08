@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.Error.cause
 
 A propriedade **`cause`** indica a causa original específica de um erro.
 
-É usado quando captura e relança um erro com uma mensagem mais especifica ou útil para ter acesso ao erro original.
+É usado quando captura e relança um erro com uma mensagem mais específica ou útil para ter acesso ao erro original.
 
 ## Valor
 
