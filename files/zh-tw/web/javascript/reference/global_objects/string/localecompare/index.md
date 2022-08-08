@@ -12,7 +12,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 {{JSRef}}
 
-The **`localeCompare()`** method returns a number indicating whether a reference string comes before, or after, or is the same as the given string in sort order. In implementations with [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) support, this method simply calls `Intl.Collator`.
+**`localeCompare()`** 回傳一個數字，用來表示其與被比較的字串的先後順序。
+
+如果環境中有支援[`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)，這個方法實際上是調用 `Intl.Collator` API。
 
 {{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
@@ -31,46 +33,41 @@ The `locales` and `options` parameters customize the behavior of the function an
 In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), these parameters correspond exactly to the [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) constructor's parameters. Implementations without `Intl.Collator` support are asked to ignore both parameters, making the comparison result returned entirely implementation-dependent — it's only required to be _consistent_.
 
 - `compareString`
-  - : The string against which the `referenceStr` is compared.
+  - : 要和`referenceStr`進行比較的字串
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) parameter of the `Intl.Collator()` constructor.
+  - : 「BCP 47 語言標籤」的字串或是陣列。相當於`Intl.Collator()`的[`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 參數.
 
-    In implementations without `Intl.Collator` support, this parameter is ignored and the host's locale is usually used.
+    如果使用的環境並未實現 `Intl.Collator`，此參數會被忽略，並且視同採用當前主機的語言環境
 - `options` {{optional_inline}}
-  - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) parameter of the `Intl.Collator()` constructor.
+  - : 一個處理輸出格式的物件。相當於`Intl.Collator()`的 [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options)參數。
 
-    In implementations without `Intl.Collator` support, this parameter is ignored.
+    如果使用的環境並未實現`Intl.Collator` ，此參數會被忽略。
 
-See the [`Intl.Collator()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) for details on the `locales` and `options` parameters and how to use them.
+關於`locales`和`options`參數以及其使用的資訊，可參閱[`Intl.Collator()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)。
 
 ### 回傳值
 
-A **negative** number if `referenceStr` occurs before `compareString`; **positive** if the `referenceStr` occurs after `compareString`; `0` if they are equivalent.
+如果`referenceStr`在`compareString`以先，會回傳**負數**；若`referenceStr`在`compareString`以後，則為**正數**; `0`表示兩者相等。
 
-In implementations with `Intl.Collator`, this is equivalent to `new Intl.Collator(locales, options).compare(referenceStr, compareString)`.
+如果所使用的環境有實現 `Intl.Collator`，相當於回傳 `new Intl.Collator(locales, options).compare(referenceStr, compareString)`。
 
 ## 說明
 
-Returns an integer indicating whether the `referenceStr` comes
-before, after or is equivalent to the `compareString`.
+回傳 `referenceStr` 和 `compareString`的先後順序
 
-- Negative when the `referenceStr` occurs before
-  `compareString`
-- Positive when the `referenceStr` occurs after
-  `compareString`
-- Returns `0` if they are equivalent
+- 若回傳負數，表示 `referenceStr`在 `compareString`以先
+- 若為正數，表示 `referenceStr`在`compareString`以後
+- 若回傳`0`，表示兩者相等
 
-> **Warning:** Do not rely on exact return values of `-1` or `1`!
+> **警告：** 不要依靠特定的回傳值，例如 `-1` 或是 `1`！
 >
-> Negative and positive integer results vary between browsers (as well as between
-> browser versions) because the W3C specification only mandates negative and positive
-> values. Some browsers may return `-2` or `2`, or even some other
-> negative or positive value.
-## Performance
+> 正數或是負數的回傳值在不同的瀏覽器(也包誇同一瀏覽器但不同版本）之間有可能會有所不同。因為 W3C 規範僅要求值得正負而已。
+> 也因此，某些瀏覽器可能會回傳 `-2` 、 `2` 甚至其他值。
+> 
 
-When comparing large numbers of strings, such as in sorting large arrays, it is better
-to create an {{jsxref("Global_Objects/Collator", "Intl.Collator")}} object and use the
-function provided by its {{jsxref("Collator.prototype.compare", "compare")}} property.
+## 效能
+
+如果要對大量的字串進行比較，例如排序長度很長的陣列，最好是建立一個 {{jsxref("Global_Objects/Collator", "Intl.Collator")}}物件並使用其{{jsxref("Collator.prototype.compare", "compare")}} 方法。
 
 ## 範例
 
@@ -123,8 +120,8 @@ make sure to specify that language (and possibly some fallback languages) using 
 `locales` argument:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // a negative value: in German, ä sorts before z
-console.log('ä'.localeCompare('z', 'sv')); // a positive value: in Swedish, ä sorts after z
+console.log('ä'.localeCompare('z', 'de')); // 回傳負數：在德文, ä 的順序在 z 之前
+console.log('ä'.localeCompare('z', 'sv')); // 回傳正數：在瑞典文， ä 的順序在 z 之後
 ```
 
 ### 使用 `options`
@@ -133,20 +130,20 @@ The results provided by `localeCompare()` can be customized using the
 `options` argument:
 
 ```js
-// in German, ä has a as the base letter
+// 在德文， ä 和 a 是相同字母
 console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
-// in Swedish, ä and a are separate base letters
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positive value
+// 在瑞典文， ä 和 a 是各自獨立的字母
+console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 回傳正數
 ```
 
 ### 數字排序
 
 ```js
-// by default, "2" > "10"
+// 默認情況下, "2" > "10"
 console.log("2".localeCompare("10")); // 1
-// numeric using options:
+// 使用 option 讓其視為數字進行比較
 console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
-// numeric using locales tag:
+// 使用locales標籤
 console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 ```
 
