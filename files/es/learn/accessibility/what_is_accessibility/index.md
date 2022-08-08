@@ -3,6 +3,7 @@ title: ¿Qué es la accesibilidad?
 slug: Learn/Accessibility/What_is_accessibility
 translation_of: Learn/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/Qué_es_la_accesibilidad
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 

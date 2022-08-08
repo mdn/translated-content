@@ -2,6 +2,7 @@
 title: 'Tutorial de Django Parte 11: Desplegando Django a producción'
 slug: Learn/Server-side/Django/Deployment
 translation_of: Learn/Server-side/Django/Deployment
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 

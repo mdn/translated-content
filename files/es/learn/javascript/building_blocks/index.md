@@ -18,6 +18,7 @@ tags:
   - l10n:priority
   - modulo
 translation_of: Learn/JavaScript/Building_blocks
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

@@ -13,6 +13,7 @@ tags:
   - reglas
 translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
 

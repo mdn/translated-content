@@ -8,6 +8,7 @@ tags:
   - ideación
   - proyecto
 translation_of: Learn/Common_questions/Thinking_before_coding
+htmlDate: 20220804
 ---
 Este artículo cubre el primer paso importante de cada proyecto: definir lo que se desea lograr con él.
 

@@ -19,6 +19,7 @@ tags:
   - tehoría
   - this
 translation_of: Learn/JavaScript/Objects/Basics
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects")}}
 

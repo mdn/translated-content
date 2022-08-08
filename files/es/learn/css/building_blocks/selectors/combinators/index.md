@@ -3,6 +3,7 @@ title: Combinadores
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
 translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 

@@ -11,6 +11,7 @@ tags:
   - Principiante
   - WAI-ARIA
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 

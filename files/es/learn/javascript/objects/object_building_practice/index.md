@@ -3,6 +3,7 @@ title: Ejercicio práctico de construcción de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
 translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 

@@ -19,6 +19,7 @@ tags:
   - shadow
   - web fonts
 translation_of: Learn/CSS/Styling_text
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

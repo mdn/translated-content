@@ -9,6 +9,7 @@ tags:
   - Web
   - aprende
 translation_of: Learn/Getting_started_with_the_web/CSS_basics
+htmlDate: 20220804
 ---
 {{LearnSideBar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
 

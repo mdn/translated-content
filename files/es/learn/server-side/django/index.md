@@ -10,6 +10,7 @@ tags:
   - django
   - introducción
 translation_of: Learn/Server-side/Django
+htmlDate: 20220804
 ---
 Django es un framework web extremadamente popular y completamente funcional, escrito en Python. El módulo muestra por qué Django es uno de los frameworks de servidores web más populares, cómo configurar un entorno de desarrollo y cómo empezar a usarlo para crear tus propias aplicaciones web.
 

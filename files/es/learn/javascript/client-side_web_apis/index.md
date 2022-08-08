@@ -18,6 +18,7 @@ tags:
   - WebAPI
   - data
 translation_of: Learn/JavaScript/Client-side_web_APIs
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

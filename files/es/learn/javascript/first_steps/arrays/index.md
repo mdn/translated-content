@@ -2,6 +2,7 @@
 title: Arrays
 slug: Learn/JavaScript/First_steps/Arrays
 translation_of: Learn/JavaScript/First_steps/Arrays
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 

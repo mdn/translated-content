@@ -3,6 +3,7 @@ title: Introducción a las APIs web
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Learn/JavaScript/Client-side_web_APIs/Introducción
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 

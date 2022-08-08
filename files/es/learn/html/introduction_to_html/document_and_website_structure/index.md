@@ -18,6 +18,7 @@ tags:
   - semántica
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Learn/HTML/Introduccion_a_HTML/estructura
+htmlDate: 20220707
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

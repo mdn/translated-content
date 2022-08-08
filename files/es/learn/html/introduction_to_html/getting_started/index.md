@@ -10,6 +10,7 @@ tags:
   - comentários
 translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
+htmlDate: 20220222
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 

@@ -11,6 +11,7 @@ tags:
   - introducción
 translation_of: Learn/Server-side/First_steps/Client-Server_overview
 original_slug: Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

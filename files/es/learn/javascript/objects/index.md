@@ -14,6 +14,7 @@ tags:
   - TopicStub
   - Tutorial
 translation_of: Learn/JavaScript/Objects
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

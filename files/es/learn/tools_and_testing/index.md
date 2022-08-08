@@ -18,6 +18,7 @@ tags:
   - automatización
 translation_of: Learn/Tools_and_testing
 original_slug: Learn/Herramientas_y_pruebas
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

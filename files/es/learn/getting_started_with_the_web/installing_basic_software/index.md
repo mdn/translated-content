@@ -15,6 +15,7 @@ tags:
   - l10n:priority
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Instalacion_de_software_basico
+htmlDate: 20220211
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 

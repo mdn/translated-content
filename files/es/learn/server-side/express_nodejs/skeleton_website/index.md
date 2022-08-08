@@ -2,6 +2,7 @@
 title: 'Express Tutorial Part 2: Creating a skeleton website'
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

@@ -23,6 +23,7 @@ tags:
   - l10n:priority
   - modulo
 translation_of: Learn/JavaScript/First_steps
+htmlDate: 20220213
 ---
 {{LearnSidebar}}
 

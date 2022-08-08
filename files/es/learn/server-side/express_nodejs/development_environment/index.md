@@ -10,6 +10,7 @@ tags:
   - nodejs
   - npm
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 

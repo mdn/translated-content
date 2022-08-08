@@ -13,6 +13,7 @@ tags:
   - Sintaxis
 translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/Comenzando_CSS
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 

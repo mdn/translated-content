@@ -2,6 +2,7 @@
 title: Imágenes adaptables
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 

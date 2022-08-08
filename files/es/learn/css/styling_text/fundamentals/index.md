@@ -2,6 +2,7 @@
 title: Fundamentos de texto y fuentes tipográficas
 slug: Learn/CSS/Styling_text/Fundamentals
 translation_of: Learn/CSS/Styling_text/Fundamentals
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 

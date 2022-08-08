@@ -12,6 +12,7 @@ tags:
   - programar
 translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

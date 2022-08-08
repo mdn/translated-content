@@ -11,6 +11,7 @@ tags:
   - formulários
 translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Validacion_formulario_datos
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 

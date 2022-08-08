@@ -13,6 +13,7 @@ tags:
   - django
   - lado-servidor
 translation_of: Learn/Server-side/Django/Sessions
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication", "Learn/Server-side/Django")}}
 

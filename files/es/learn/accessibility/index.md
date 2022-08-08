@@ -14,6 +14,7 @@ tags:
   - Principiantes
   - modulo
 translation_of: Learn/Accessibility
+htmlDate: 20221208
 ---
 {{LearnSidebar}}
 

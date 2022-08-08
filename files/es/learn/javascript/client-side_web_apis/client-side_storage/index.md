@@ -12,6 +12,7 @@ tags:
   - Principiante
   - aprende
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+htmlDate: 20220523
 ---
 {{LearnSidebar}}
 

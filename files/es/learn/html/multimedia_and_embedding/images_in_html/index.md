@@ -13,6 +13,7 @@ tags:
   - subtítulos
   - texto alt
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
+htmlDate: 20220804
 ---
 {{LearnSidebar}}
 

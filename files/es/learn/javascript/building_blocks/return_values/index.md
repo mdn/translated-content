@@ -2,6 +2,7 @@
 title: Una función retorna valores
 slug: Learn/JavaScript/Building_blocks/Return_values
 translation_of: Learn/JavaScript/Building_blocks/Return_values
+htmlDate: 20221208
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 

@@ -13,6 +13,7 @@ tags:
   - introducción
 translation_of: Learn/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/Primeros_pasos/seguridad_sitios_web
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 

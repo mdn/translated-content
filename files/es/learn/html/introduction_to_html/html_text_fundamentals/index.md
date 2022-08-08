@@ -16,6 +16,7 @@ tags:
   - semántica
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Learn/HTML/Introduccion_a_HTML/texto
+htmlDate: 20220211
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

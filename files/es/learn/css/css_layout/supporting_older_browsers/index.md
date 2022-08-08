@@ -3,6 +3,7 @@ title: Soporte a navegadores antiguos
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/Soporte_a_navegadores_antiguos
+htmlDate: 20220211
 ---
 {{LearnSidebar}}
 

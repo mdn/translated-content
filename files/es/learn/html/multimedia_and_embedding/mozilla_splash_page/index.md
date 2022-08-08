@@ -20,6 +20,7 @@ tags:
   - src
   - srcset
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
+htmlDate: 20220804
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
