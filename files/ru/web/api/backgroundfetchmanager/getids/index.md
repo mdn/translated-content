@@ -13,31 +13,32 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.getIds
 ---
+
 {{DefaultAPISidebar("Background Fetch API")}}
 
-The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface returns the IDs of all registered background fetches.
+Метод **`getIds()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает идентификаторы всех зарегистрированных фоновых запросов.
 
-## Syntax
+## Синтаксис
 
 ```js
-getIds()
+getIds();
 ```
 
-### Parameters
+### Параметры
 
-None.
+Нет.
 
-### Return value
+### Возвращаемое значение
 
-A {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of {{jsxref('String', 'strings')}}.
+{{jsxref("Promise")}}, который разрешается с {{jsxref('Array', 'массивом')}} {{jsxref('String', 'строк')}}.
 
-### Exceptions
+### Исключения
 
-None.
+Нет.
 
-## Examples
+## Примеры
 
-The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the \`BackgroundFetchManager\` object and call its \`get()\` method.
+Следующие примеры показывают как получить идентификаторы всех зарегистрированных фоновых запросов. При активном {{domxref('ServiceWorker', 'сервис-воркере')}} используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту \`BackgroundFetchManager\` и вызовите его метод \`getIds()\`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -45,10 +46,10 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}

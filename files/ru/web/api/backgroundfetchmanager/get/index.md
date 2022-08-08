@@ -16,7 +16,7 @@ browser-compat: api.BackgroundFetchManager.get
 
 {{DefaultAPISidebar("Background Fetch API")}}
 
-Метож **`get()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} связанного с предоставленным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
+Метод **`get()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} связанного с предоставленным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
 
 ## Синтаксис
 
