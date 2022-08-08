@@ -1,11 +1,6 @@
 ---
 title: Estrutura de dados do Javascript
 slug: Web/JavaScript/Data_structures
-tags:
-  - Iniciante
-  - Guide
-  - JavaScript
-  - Tipos
 translation_of: Web/JavaScript/Data_structures
 ---
 {{jsSidebar("More")}}
