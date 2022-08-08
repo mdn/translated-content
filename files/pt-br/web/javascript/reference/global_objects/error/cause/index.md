@@ -24,7 +24,7 @@ O valor pode ser de qualquer tipo. Você não deve criar suposições que o erro
 
 ### Relançando um erro com a causa
 
-Isso é útil algumas vezes para capturar um erro e relançar-lo com uma nova mensagem.
+Isso é útil algumas vezes para capturar um erro e relançá-lo com uma nova mensagem.
 E nesse caso você deve passar o erro original no construtor para o novo `Error` aparecer.
 
 ```js
