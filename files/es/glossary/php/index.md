@@ -46,12 +46,18 @@ PHP (una inicialización recursiva para PHP: preprocesador de hipertexto) es un 
 ?>
 ```
 
-1.  [Official website](http://php.net/)
-2.  {{Interwiki("wikipedia", "PHP")}} en Wikipedia
-3.  [PHP](https://en.wikibooks.org/wiki/PHP_Programming) en Wikibooks
-4.  [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
-    1.  {{Glossary("Java")}}
-    2.  {{Glossary("JavaScript")}}
-    3.  {{Glossary("Python")}}
-    4.  {{Glossary("Ruby")}}
+<section id="Quick_links">
+ <ol>
+  <li><a href="http://php.net/">Official website</a></li>
+  <li>{{Interwiki("wikipedia", "PHP")}} en Wikipedia</li>
+  <li><a href="https://en.wikibooks.org/wiki/PHP_Programming">PHP</a> en Wikibooks</li>
+  <li><a href="/es/docs/Glossary">MDN Web Docs Glossary</a>
+   <ol>
+    <li>{{Glossary("Java")}}</li>
+    <li>{{Glossary("JavaScript")}}</li>
+    <li>{{Glossary("Python")}}</li>
+    <li>{{Glossary("Ruby")}}</li>
+   </ol>
+  </li>
+ </ol>
+</section>

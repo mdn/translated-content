@@ -14,11 +14,19 @@ En épocas anteriores, los países desarrollaron sus propios conjuntos de caract
 
 Si un conjunto de caracteres se usa incorrectamente (por ejemplo, Unicode para un artículo codificado en Big5), es posible que no vean más que caracteres rotos, que se llaman {{Interwiki("wikipedia", "Mojibake")}}.
 
-## Saber más
-
-- Artículos de Wikipedia
-  - {{Interwiki("wikipedia", "Codificación_de_caracteres", "Codificación de caracteres")}}
-  - {{Interwiki("wikipedia", "Mojibake")}}
-- [Glosario](/es/docs/Glossary)
-  - {{Glossary("Character", "Caracter")}}
-  - {{Glossary("Unicode")}}
+<section id="Quick_links">
+  <ol>
+    <li>Artículos de Wikipedia
+     <ol>
+      <li>{{Interwiki("wikipedia", "Codificación_de_caracteres", "Codificación de caracteres")}}</li>
+      <li>{{Interwiki("wikipedia", "Mojibake")}}</li>
+     </ol>
+    </li>
+    <li><a href="/es/docs/Glossary">Glosario</a>
+     <ol>
+      <li>{{Glossary("Character", "Caracter")}}</li>
+      <li>{{Glossary("Unicode")}}</li>
+     </ol>
+    </li>
+  </ol>
+</section>

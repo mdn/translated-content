@@ -59,12 +59,14 @@ El código del ejemplo se ejecutaría de la siguiente manera:
 
 En resumen, empezamos con una lista de la pila llamadas vacía. Cuando invocamos una función, ésta es automáticamente añadida a la pila de llamadas. Una vez ha ejecutado todo su código, también de manera automática es eliminada de la pila de llamadas. Finalmente, la pila de llamadas vuelve a estar vacía.
 
-## Saber más
-
-### Conocimiento general
-
-- {{Interwiki("wikipedia", "Pila de llamadas")}} en Wikipedia
-
-- [Glosario](/es/docs/Glossary)
-  - {{Glossary("Call stack", "Pila de llamadas")}}
-  - {{Glossary("function", "Función")}}
+<section id="Quick_links">
+ <ul>
+  <li><a href="/es/docs/Glossary">Glosario</a>
+ 
+   <ul>
+    <li>{{Glossary("Call stack", "Pila de llamadas")}}</li>
+    <li>{{Glossary("function", "Función")}}</li>
+   </ul>
+  </li>
+ </ul>
+</section>

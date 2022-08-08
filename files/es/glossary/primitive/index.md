@@ -94,22 +94,21 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 
 El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
-## Aprende más
-
-### Conocimientos generales
-
-- {{JSxRef("../Data_structures", "Introducción a los tipos de datos de JavaScript")}}
-- {{Interwiki("wikipedia", "Tipo de dato primitivo")}} en Wikipedia
-
-1.  {{Link("/es/docs/Glossary")}}
-
-    1.  {{Glossary("JavaScript")}}
-    2.  {{Glossary("string")}}
-    3.  {{Glossary("number")}}
-    4.  {{Glossary("bigint")}}
-    5.  {{Glossary("boolean")}}
-    6.  {{Glossary("null")}}
-    7.  {{Glossary("undefined")}}
-    8.  {{Glossary("symbol")}}
-
-2.  {{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}
+<section id="Quick_links">
+ <ol>
+  <li>{{Link("/es/docs/Glossary")}}
+ 
+   <ol>
+    <li>{{Glossary("JavaScript")}}</li>
+    <li>{{Glossary("string")}}</li>
+    <li>{{Glossary("number")}}</li>
+    <li>{{Glossary("bigint")}}</li>
+    <li>{{Glossary("boolean")}}</li>
+    <li>{{Glossary("null")}}</li>
+    <li>{{Glossary("undefined")}}</li>
+    <li>{{Glossary("symbol")}}</li>
+   </ol>
+  </li>
+  <li>{{JSxRef("../Data_structures", "Tipos de datos JavaScript")}}</li>
+ </ol>
+</section>

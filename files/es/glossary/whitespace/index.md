@@ -18,20 +18,29 @@ La [_HTML Living Standard_](https://html.spec.whatwg.org/) especifica 5 caracter
 
 La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space) establece varios puntos de código Unicode como espacio en blanco: `U+0009` CARACTERES de TABULACIÓN \<TAB>, `U+000B` TABULACIÓN DE LÍNEA \<VT>, `U+000C` FORM FEED \<FF>, `U+0020` ESPACIO \<SP>, `U+00A0` ESPACIO SIN ROTURA \<NBSP>, `U+FEFF` ANCHO CERO NO -BREAK SPACE \<ZWNBSP> y otra categoría “Zs” Cualquier otro punto de código Unicode “Separador, espacio” \<USP>. Estos caracteres suelen ser innecesarios para la funcionalidad del código.
 
-1.  Especificaciones
-
-    1.  [Espacio en blanco ASCII](https://infra.spec.whatwg.org/#ascii-whitespace)
-    2.  [Especificación del lenguaje ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
-
-2.  Referencias
-
-    1.  [Cómo se manejan los espacios en blanco mediante HTML, CSS y el DOM](/es/docs/Web/API/Document_Object_Model/Whitespace)
-    2.  {{cssxref("white-space")}}
-
-3.  Artículos de Wikipedia
-
-    1.  {{interwiki("wikipedia", "El caracter de espacio en blanco")}}
-
-4.  [Glosario](/es/docs/Glossary)
-
-    1.  {{Glossary("Character", "Caracter")}}
+<section id="Quick_links">
+ <ol>
+  <li>Especificaciones
+   <ol>
+    <li><a href="https://infra.spec.whatwg.org/#ascii-whitespace">Espacio en blanco ASCII</a></li>
+    <li><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-white-space">Especificación del lenguaje ECMAScript® 2015</a></li>
+   </ol>
+  </li>
+  <li>Referencias
+   <ol>
+    <li><a href="/es/docs/Web/API/Document_Object_Model/Whitespace">Cómo se manejan los espacios en blanco mediante HTML, CSS y el DOM</a></li>
+    <li>{{cssxref("white-space")}}</li>
+   </ol>
+  </li>
+  <li>Artículos de Wikipedia
+   <ol>
+    <li>{{interwiki("wikipedia", "El caracter de espacio en blanco")}}</li>
+   </ol>
+  </li>
+  <li><a href="/es/docs/Glossary">Glosario</a>
+   <ol>
+    <li>{{Glossary("Character", "Caracter")}}</li>
+   </ol>
+  </li>
+ </ol>
+</section>

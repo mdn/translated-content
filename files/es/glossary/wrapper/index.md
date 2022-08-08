@@ -17,8 +17,15 @@ Por ejemplo, las librerías SDK de AWS son un ejemplo de wrappers.
 
 {{Interwiki("wikipedia", "Wrapper function")}} on Wikipedia
 
-1.  [MDN Web Docs Glossary](https://developer.mozilla.org/es/docs/Glossary)
-
-    1.  {{Glossary("API")}}
-    2.  {{Glossary("Class")}}
-    3.  {{Glossary("Function")}}
+<section id="Quick_links">
+ <ol>
+  <li><a href="es/docs/Glossary">MDN Web Docs Glossary</a>
+ 
+   <ol>
+    <li>{{Glossary("API")}}</li>
+    <li>{{Glossary("Class")}}</li>
+    <li>{{Glossary("Function")}}</li>
+   </ol>
+  </li>
+ </ol>
+</section>
