@@ -13,28 +13,29 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.get
 ---
+
 {{DefaultAPISidebar("Background Fetch API")}}
 
-The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
+Метож **`get()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} связанного с предоставленным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
 
-## Syntax
+## Синтаксис
 
 ```js
-get(id)
+get(id);
 ```
 
-### Parameters
+### Параметры
 
 - `id`
-  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
+  - : Идентификатор {{domxref("backgroundFetchRegistration")}} определяемый при вызове {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
 
-### Return value
+### Возвращаемое значение
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undefined")}}.
+{{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} или {{jsxref("undefined")}}.
 
-## Examples
+## Примеры
 
-The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.
+Следующие примеры показывают как использовать `get()` для получения {{domxref("BackgroundFetchRegistration")}}. При активном {{domxref('ServiceWorker', 'service worker')}} используйте {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `get()`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -43,10 +44,10 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 my code block
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
