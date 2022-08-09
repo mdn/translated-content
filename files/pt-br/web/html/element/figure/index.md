@@ -16,7 +16,7 @@ browser-compat: html.elements.figure
 
 {{HTMLRef}}
 
-O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda, definida pelo elemento {{HTMLElement("figcaption")}}. A figura, sua legenda, e seu conteúdo são normalmente referidos como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.
+O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda, definida pelo elemento {{HTMLElement("figcaption")}}. A figura, sua legenda, e seu conteúdo são normalmente referidos como uma única unidade.
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
