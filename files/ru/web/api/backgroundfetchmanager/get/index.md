@@ -31,7 +31,7 @@ get(id);
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} или {{jsxref("undefined")}}.
+{{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}} или {{jsxref("undefined")}}.
 
 ## Примеры
 
