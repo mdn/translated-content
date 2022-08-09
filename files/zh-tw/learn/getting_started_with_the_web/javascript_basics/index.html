@@ -10,13 +10,9 @@ tags:
   - 網頁
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
-<div style="font-family: Microsoft jhenghei;">{{LearnSidebar}}</div>
+<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}</div>
 
-<div style="font-family: Microsoft jhenghei;">{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}</div>
-
-<div style="font-family: Microsoft jhenghei;">
 <p>JavaScript 是一個可以幫您在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助您踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。</p>
-</div>
 
 <h2 id="所以_JavaScript_到底是什麼？">所以 JavaScript 到底是什麼？</h2>
 
@@ -39,10 +35,10 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 <p>但無論如何，要讓 JavaScript 跟 HTML 和 CSS 合作無間的話，可能還要費一些功夫。現在您將會從一些細小的地方開始著手，接著一步步地往前進。首先，我們將會向您展示如何將一些基本的 JavaScript 給加入您的頁面中，並且打造一個<em>「hello world!」</em>的範例（<a href="https://zh.wikipedia.org/zh-tw/Hello_World">這同時也是許多程式語言的標準範例程式</a>）。</p>
 
 <div class="warning">
-<p><strong>注意</strong>：如果您還沒有學習過先前的課程，<a href="https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip">請您下載這個範例程式碼</a>，並以此開始練習。</p>
+<p><strong>警告：</strong> 如果您還沒有學習過先前的課程，<a href="https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip">請您下載這個範例程式碼</a>，並以此開始練習。</p>
 </div>
 
-<ol style="font-family: Microsoft jhenghei;">
+<ol>
  <li>首先，進入您測試網頁的資料夾中，並建立一個名為 <code>main.js</code> 的檔案，再將她存放於 <code>scripts</code> 資料夾內。</li>
  <li>接著，開啟 <code>index.html</code> 檔案，並在 <code>&lt;/body&gt;</code> 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
   <pre class="brush: html">&lt;script src="scripts/main.js"&gt;&lt;/script&gt;</pre>
@@ -56,7 +52,7 @@ myHeading.textContent = 'Hello world!';</pre>
 </ol>
 
 <div class="note">
-<p><strong>備註</strong>：我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。</p>
+<p><strong>備註：</strong> 我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。</p>
 </div>
 
 <h3 id="發生什麼事了？">發生什麼事了？</h3>
@@ -66,7 +62,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>之後，我們將變數 <code>myHeading</code> 中 {{domxref("Element.innerHTML", "innerHTML")}} 特性的值設為「Hello world!」。</p>
 
 <div class="note">
-<p><strong>備註</strong>：Both of the features you used above are parts of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM) API</a>, which allows you to manipulate documents.</p>
+<p><strong>備註：</strong> Both of the features you used above are parts of the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model (DOM) API</a>, which allows you to manipulate documents.</p>
 </div>
 
 <h2 id="語言基礎速成">語言基礎速成</h2>
@@ -74,7 +70,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>接著我們來解釋一下 JavaScript 基本特性，以讓您更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果您可以充分理解這些基礎知識，您就可以撰寫程式來創造無限可能！</p>
 
 <div class="warning">
-<p>注意：在這篇文章中，請您試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果您想要了解更多 JavaScript 主控台的細節，請參閱 <a href="/zh-TW/Learn/Discover_browser_developer_tools">Discover browser developer tools</a>。</p>
+<p><strong>警告：</strong> 在這篇文章中，請您試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果您想要了解更多 JavaScript 主控台的細節，請參閱 <a href="/zh-TW/Learn/Discover_browser_developer_tools">Discover browser developer tools</a>。</p>
 </div>
 
 <h3 id="變數（Variables）">變數（Variables）</h3>
@@ -83,16 +79,16 @@ myHeading.textContent = 'Hello world!';</pre>
 
 <pre class="brush: js">let myVariable;</pre>
 
-<div class="note" style="font-family: Microsoft jhenghei;">
-<p><strong>備註</strong>：在 JavaScript 檔案內的每行內容都需要在結尾加上分號，以標示出這行結束的位置。只有在需要於單行中隔開敘述句時，分號才是絕對需要的。然而，有些人相信在每一個敘述句結尾加上分號才是最佳實踐。這裡有其他何時要加或不加分號的規則——請參考 <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a> 以瞭解更多資訊。</p>
+<div class="note">
+<p><strong>備註：</strong> 在 JavaScript 檔案內的每行內容都需要在結尾加上分號，以標示出這行結束的位置。只有在需要於單行中隔開敘述句時，分號才是絕對需要的。然而，有些人相信在每一個敘述句結尾加上分號才是最佳實踐。這裡有其他何時要加或不加分號的規則——請參考 <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">Your Guide to Semicolons in JavaScript</a> 以瞭解更多資訊。</p>
 </div>
 
 <div class="note">
-<p><strong>備註</strong>：基本上您可以幫變數取任何名字，不過還是有一些限制的（請參閱<a href="http://www.codelifter.com/main/tips/tip_020.shtml">這篇文章</a>以了解變數的命名規則）。假如不太確定，可以<a href="https://mothereff.in/js-variables">檢查變數名稱</a>來看看是否合法。</p>
+<p><strong>備註：</strong> 基本上您可以幫變數取任何名字，不過還是有一些限制的（請參閱<a href="http://www.codelifter.com/main/tips/tip_020.shtml">這篇文章</a>以了解變數的命名規則）。假如不太確定，可以<a href="https://mothereff.in/js-variables">檢查變數名稱</a>來看看是否合法。</p>
 </div>
 
 <div class="note">
-<p><strong>備註</strong>：JavaScript 是會區分大小寫字母的——<code>myVariable</code> 就跟 <code>myvariable</code> 不相同。如果您的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！</p>
+<p><strong>備註：</strong> JavaScript 是會區分大小寫字母的——<code>myVariable</code> 就跟 <code>myvariable</code> 不相同。如果您的程式碼出現了一些問題，可以試著檢查一下字母的大小寫！</p>
 </div>
 
 <p>宣告了一個變數之後，您可以為她指定一個數值：</p>
@@ -167,7 +163,7 @@ Everything in between is a comment.
 
 <p>如果您的註解只有一行，我們通常會簡單將註解放在兩個斜線的後方，像以下的範例：</p>
 
-<pre class="brush: js" style="font-size: 14px;">// This is a comment
+<pre class="brush: js">// This is a comment
 </pre>
 
 <h3 id="運算子（Operators）">運算子（Operators）</h3>
@@ -236,7 +232,7 @@ Everything in between is a comment.
 <p>其實還有更多的運算子等的您去探索，但我們將在這裡先打住。您可以參照這篇<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators">運算式與運算子</a>以取得完整的列表。</p>
 
 <div class="note">
-<p><strong>備註</strong>：混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以您要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入  <code>"35" + "25"</code>。為什麼您沒有得到您所想要的結果？因為使用引號框住數字會將她轉換成字串，所以您其實是將兩個字串給連接起來，而不是將她們給相加。如果您輸入的是 <code>35 + 25</code>，您將會得到正確的結果。</p>
+<p><strong>備註：</strong> 混合使用多種資料型態的話，可能會在計算時產生一些奇怪的結果，所以您要謹慎地為變數選用正確的資料類型。舉個例子：在主控台中輸入  <code>"35" + "25"</code>。為什麼您沒有得到您所想要的結果？因為使用引號框住數字會將她轉換成字串，所以您其實是將兩個字串給連接起來，而不是將她們給相加。如果您輸入的是 <code>35 + 25</code>，您將會得到正確的結果。</p>
 </div>
 
 <h3 id="條件（Conditionals）">條件（Conditionals）</h3>
@@ -285,7 +281,7 @@ multiply(20,20);
 multiply(0.5,3);</pre>
 
 <div class="note">
-<p><strong>備註</strong>：<a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> 陳述式會要求瀏覽器將 <code>result </code>變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱<a href="/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope">這篇文章以了解變數的有效使用範圍</a>）</p>
+<p><strong>備註：</strong> <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/return"><code>return</code></a> 陳述式會要求瀏覽器將 <code>result </code>變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱<a href="/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope">這篇文章以了解變數的有效使用範圍</a>）</p>
 </div>
 
 <h3 id="事件（Events）">事件（Events）</h3>

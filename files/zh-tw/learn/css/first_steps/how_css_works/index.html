@@ -36,7 +36,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>下面是此流程的示意圖。</p>
 
-<p><img alt="" src="rendering.svg" style="max-width: 635px;"></p>
+<p><img alt="" src="rendering.svg"></p>
 
 <h2 id="關於_DOM">關於 DOM</h2>
 
@@ -74,9 +74,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>{{EmbedLiveSample('一個活生生的_DOM_例子', '100%', 55)}}</p>
 
-<div class="hidden">
-<pre class="brush: css">p {margin:0;}</pre>
-</div>
+<pre class="brush: css hidden">p {margin:0;}</pre>
 
 <h2 id="將_CSS_套用至_DOM">將 CSS 套用至 DOM</h2>
 
@@ -116,7 +114,6 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>下面的例子使用英式英語來拼寫 color (也就是 colour)，進而導致該屬性失效，因為現在瀏覽器看不懂它了。也因此下面的段落無法以藍字顯示，不過其他的 CSS 還是成功地套用上去了，只有無效的會被忽略掉。</p>
 
-<div id="Skipping_example">
 <pre class="brush: html">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
 
 <pre class="brush: css">p {
@@ -124,9 +121,8 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
   colour: blue; /* incorrect spelling of the color property */
   font-size: 200%;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample('Skipping_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('瀏覽器遇到不認識的 CSS 時會發生什麼事？', '100%', 200)}}</p>
 
 <p>這樣做有個很大的好處，就是你可以放心地利用新 CSS 做出很炫炮的效果，而不用擔心瀏覽器不支援時會出錯 — 反正差別只在於那個新特性有或沒有而已。再加上 CSS 層疊 (cascade) 的天性，只要你提供兩條具有相同具體程度(specificity)的規則，就能讓不支援的瀏覽器套用另一條規則。</p>
 
