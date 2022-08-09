@@ -20,7 +20,7 @@ browser-compat: api.BackgroundFetchRegistration
 
 ## Свойства
 
-The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
+Для удобства использования, следующие свойства, скопированные из экземпляра `BackgroundFetchRegistration`, доступны синхронно:
 
 - {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
   - : Строка, содержащая идентификатор фонового запроса.
@@ -29,39 +29,39 @@ The following properties are available synchronously, as convenience properties 
 - {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
   - : {{jsxref("number")}} содержащий количество успешно отправленных байтов, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
-  - : A {{jsxref("number")}} containing the total size in bytes of this download. This is the value set when the background fetch was registered, or `0`.
+  - : {{jsxref("number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
-  - : A {{jsxref("number")}} containing the size in bytes that has been downloaded, initially `0`.
+  - : {{jsxref("number")}} содержащий количество скачанных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
-  - : Returns an empty string initially, on completion either the string `"success"` or `"failure"`.
+  - : Изначально возвращает пустую строку, а по завершению запросо либо `"success"`, либо `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
 
-  - : One of the following strings:
+  - : Возвращает одну из следующих строк:
 
     - `""`
-      - : The background fetch has not completed, or was successful.
+      - : Запрос не завершён, либо завершился успешно.
     - `"aborted"`
-      - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+      - : Операция была отменена пользователем, либо был вызван {{domxref("BackgroundFetchRegistration.abort()","abort()")}}.
     - `"bad-status"`
-      - : A response had a not-ok status (a status outside the range 200-299).
+      - : Статус ответа не-ok (статус не входящий в диапазон 200-299).
     - `"fetch-error"`
-      - : A fetch failed for other reasons, for example CORS, or a network failure.
+      - : Запрос завершился неудачей по какой-либо другой причине, например CORS, или отсутствие сети.
     - `"quota-exceeded"`
-      - : Storage quota was reached during the operation.
+      - : Во время операции была достигнута квота хранилища.
     - `"download-total-exceeded"`
-      - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
+      - : Превышен `downloadTotal`. Его значение устанавливается при регистрации запроса.
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
-  - : A {{jsxref("boolean")}} indicating whether the `recordsAvailable` flag is set.
+  - : {{jsxref("boolean")}} указывает, установлен ли флаг `recordsAvailable`.
 
 ## Методы
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}
-  - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.
+  - : Прерывает фоновый запрос. Возвращает {{jsxref("Promise")}}, который разрешается с `true` если запрос был успешно прерван.
 - {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}
-  - : Returns a single {{domxref("BackgroundFetchRecord")}} object which is the first match for the arguments.
+  - : Возвращает один объект {{domxref("BackgroundFetchRecord")}}, который является первым совпадением по аргументам.
 - {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.
+  - : Возвращает {{jsxref("Promise")}}, который разрешается с массивом объектов {{domxref("BackgroundFetchRecord")}}, содержащих запросы и ответы.
 
 ## События
 
@@ -82,15 +82,15 @@ The following code creates a `BackGroundFetchRegistration` as `bgFetch`, with an
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch(
-    'my-fetch',
-    ['/ep-5.mp3', 'ep-5-artwork.jpg'],
+    "my-fetch",
+    ["/ep-5.mp3", "ep-5-artwork.jpg"],
     {
-      title: 'Episode 5: Interesting things.',
+      title: "Episode 5: Interesting things.",
       icons: [
         {
-          sizes: '300x300',
-          src: '/ep-5-icon.png',
-          type: 'image/png',
+          sizes: "300x300",
+          src: "/ep-5-icon.png",
+          type: "image/png",
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
@@ -108,9 +108,9 @@ console.log(bgFetch.id); // "my-fetch"
 The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 
