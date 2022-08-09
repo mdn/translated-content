@@ -3,264 +3,213 @@ title: JavaScript 解決常見的問題
 slug: Learn/JavaScript/Howto
 translation_of: Learn/JavaScript/Howto
 ---
-<div>{{LearnSidebar}}<br>
-以下鏈接針對您需要修復的常見問題的解決方案，以便讓您的JavaScript語法正確執行。</div>
+{{LearnSidebar}}
+以下鏈接針對您需要修復的常見問題的解決方案，以便讓您的 JavaScript 語法正確執行。
 
-<h2 id="初學者常見的錯誤"><strong>初學者常見的錯誤</strong></h2>
+## **初學者常見的錯誤**
 
-<h3 id="糾正語法和代碼">糾正語法和代碼</h3>
+### 糾正語法和代碼
 
-<p>如果您的代碼毫無反映或瀏覽器反饋某些內容「未定義」，請檢查您是否「正確輸入」所有變量名稱，函數名稱等。</p>
+如果您的代碼毫無反映或瀏覽器反饋某些內容「未定義」，請檢查您是否「正確輸入」所有變量名稱，函數名稱等。
 
-<p>以下的常見造成問題的內置瀏覽器功能比對：</p>
+以下的常見造成問題的內置瀏覽器功能比對：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><strong>正確</strong></th>
-   <th scope="col"><strong>錯誤</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>getElementsByTagName()</code></td>
-   <td><code>getElementbyTagName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementsByName()</code></td>
-   <td><code>getElementByName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementsByClassName()</code></td>
-   <td><code>getElementByClassName()</code></td>
-  </tr>
-  <tr>
-   <td><code>getElementById()</code></td>
-   <td><code>getElementsById()</code></td>
-  </tr>
- </tbody>
-</table>
+| **正確**                   | **錯誤**                  |
+| -------------------------- | ------------------------- |
+| `getElementsByTagName()`   | `getElementbyTagName()`   |
+| `getElementsByName()`      | `getElementByName()`      |
+| `getElementsByClassName()` | `getElementByClassName()` |
+| `getElementById()`         | `getElementsById()`       |
 
-<h3 id="分號位置">分號位置</h3>
+### 分號位置
 
-<p>You need to make sure you don't place any semi-colons incorrectly. For example:</p>
+You need to make sure you don't place any semi-colons incorrectly. For example:
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Correct</th>
-   <th scope="col">Wrong</th>
-  </tr>
-  <tr>
-   <td><code>elem.style.color = 'red';</code></td>
-   <td><code>elem.style.color = 'red;'</code></td>
-  </tr>
- </thead>
-</table>
+| Correct                     | Wrong                       |
+| --------------------------- | --------------------------- |
+| `elem.style.color = 'red';` | `elem.style.color = 'red;'` |
 
-<h3 id="功能內容">功能內容</h3>
+### 功能內容
 
-<p>There are a number of things that can go wrong with functions.</p>
+There are a number of things that can go wrong with functions.
 
-<p>One of the most common errors is to declare the function, but not call it anywhere. For example:</p>
+One of the most common errors is to declare the function, but not call it anywhere. For example:
 
-<pre class="brush: js">function myFunction() {
+```js
+function myFunction() {
   alert('This is my function.');
-};</pre>
+};
+```
 
-<p>This code won't do anything unless you call it, for example with</p>
+This code won't do anything unless you call it, for example with
 
-<pre class="brush: js">myFunction();</pre>
+```js
+myFunction();
+```
 
-<h4 id="功能範圍"><strong>功能範圍</strong></h4>
+#### **功能範圍**
 
-<p>Remember that <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts">functions have their own scope</a> — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e. not inside any functions), or <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">return the value</a> out of the function.</p>
+Remember that [functions have their own scope](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts) — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e. not inside any functions), or [return the value](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values) out of the function.
 
-<h4 id="在return語句後執行語法">在return語句後執行語法</h4>
+#### 在 return 語句後執行語法
 
-<p>Remember also that when you return a value out of a function, the JavaScript interpreter exits the function — no code declared after the return statement will run.</p>
+Remember also that when you return a value out of a function, the JavaScript interpreter exits the function — no code declared after the return statement will run.
 
-<p>In fact, some browsers (like Firefox) will give you an error message in the developer console if you have code after a return statement. Firefox gives you "unreachable code after return statement".</p>
+In fact, some browsers (like Firefox) will give you an error message in the developer console if you have code after a return statement. Firefox gives you "unreachable code after return statement".
 
-<h3 id="對象表示法與正確的指派">對象表示法與正確的指派</h3>
+### 對象表示法與正確的指派
 
-<p>When you assign something normally in JavaScript, you use a single equals sign, e.g.:</p>
+When you assign something normally in JavaScript, you use a single equals sign, e.g.:
 
-<pre class="brush: js">const myNumber = 0;</pre>
+```js
+const myNumber = 0;
+```
 
-<p>This doesn't work in <a href="/en-US/docs/Learn/JavaScript/Objects">Objects</a>, however — with objects you need to separate member names from their values using colons, and separate each member with a comma, for example:</p>
+This doesn't work in [Objects](/en-US/docs/Learn/JavaScript/Objects), however — with objects you need to separate member names from their values using colons, and separate each member with a comma, for example:
 
-<pre class="brush: js">const myObject = {
+```js
+const myObject = {
   name: 'Chris',
   age: 38
-}</pre>
+}
+```
 
-<h2 id="基本定義"><strong>基本定義</strong></h2>
+## **基本定義**
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition">What is JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable">What is a variable?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings">What are strings?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array">What is an array?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">What is a loop?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">What is a function?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">What is an event?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics">What is an object?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON">What is JSON?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs">What is a web API?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model">What is the DOM?</a></li>
-</ul>
+- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition)
+- [What is a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)
+- [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
+- [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
+- [What is a loop?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [What is a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
+- [What is an event?](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [What is an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics)
+- [What is JSON?](/en-US/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON)
+- [What is a web API?](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs)
+- [What is the DOM?](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)
 
-<h2 id="基本使用例子">基本使用例子</h2>
+## 基本使用例子
 
-<h3 id="概括">概括</h3>
+### 概括
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#How_do_you_add_JavaScript_to_your_page">How do you add JavaScript to your page?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Comments">How do you add comments to JavaScript code?</a></li>
-</ul>
+- [How do you add JavaScript to your page?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#How_do_you_add_JavaScript_to_your_page)
+- [How do you add comments to JavaScript code?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Comments)
 
-<h3 id="變量">變量</h3>
+### 變量
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable">How do you declare a variable?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable">How do you initialize a variable with a value?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#Updating_a_variable">How do you update a variable's value?</a> (also see <a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Assignment_operators">Assignment operators</a>)</li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#Variable_types">What data types can values have in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Variables#Loose_typing">What does 'loosely typed' mean?</a></li>
-</ul>
+- [How do you declare a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable)
+- [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable)
+- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#Updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#Assignment_operators))
+- [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#Variable_types)
+- [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#Loose_typing)
 
-<h3 id="數學運算">數學運算</h3>
+### 數學運算
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers">What types of number do you have to deal with in web development?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators">How do you do basic math in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Operator_precedence">What is operator precedence, and how is it handled in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators">How do you increment and decrement values in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Math#Comparison_operators">How do you compare values in JavaScript?</a> (e.g. to see which one is bigger, or to see if one value is equal to another).</li>
-</ul>
+- [What types of number do you have to deal with in web development?](/en-US/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers)
+- [How do you do basic math in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators)
+- [What is operator precedence, and how is it handled in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Math#Operator_precedence)
+- [How do you increment and decrement values in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators)
+- [How do you compare values in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) (e.g. to see which one is bigger, or to see if one value is equal to another).
 
-<h3 id="字串">字串</h3>
+### 字串
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Creating_a_string">How do you create a string in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_versus_double_quotes">Do you have to use single quotes or double quotes?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Escaping_characters_in_a_string">How do you escape characters in strings?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">How do you join strings together?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">Can you join strings and numbers together?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_the_length_of_a_string">How do you find the length of a string?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">How you find what character is at a certain position in a string?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_a_substring_inside_a_string_and_extracting_it">How do you find and extract a specific substring from a string?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Changing_case">How do you change the case of a string?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Updating_parts_of_a_string">How do you replace one specific substring with another?</a></li>
-</ul>
+- [How do you create a string in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Creating_a_string)
+- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_versus_double_quotes)
+- [How do you escape characters in strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Escaping_characters_in_a_string)
+- [How do you join strings together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings)
+- [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings)
+- [How do you find the length of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_the_length_of_a_string)
+- [How you find what character is at a certain position in a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)
+- [How do you find and extract a specific substring from a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_a_substring_inside_a_string_and_extracting_it)
+- [How do you change the case of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Changing_case)
+- [How do you replace one specific substring with another?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Updating_parts_of_a_string)
 
-<h3 id="序列">序列</h3>
+### 序列
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#Creating_an_array">How do you create an array?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#Accessing_and_modifying_array_items">How do you access and modify the items in an array?</a> (this includes multidimensional arrays)</li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#Finding_the_length_of_an_array">How do you find the length of an array?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#Adding_and_removing_array_items">How you add and remove array items?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays#Converting_between_strings_and_arrays">How do you split a string into array items, or join array items into a string?</a></li>
-</ul>
+- [How do you create an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#Creating_an_array)
+- [How do you access and modify the items in an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#Accessing_and_modifying_array_items) (this includes multidimensional arrays)
+- [How do you find the length of an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#Finding_the_length_of_an_array)
+- [How you add and remove array items?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#Adding_and_removing_array_items)
+- [How do you split a string into array items, or join array items into a string?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#Converting_between_strings_and_arrays)
 
-<h3 id="Debugging_JavaScript">Debugging JavaScript</h3>
+### Debugging JavaScript
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error">What are the basic types of error?</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools, and how do you access them?</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API">How do you log a value to the JavaScript console?</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger">How do you use breakpoints, and other JavaScript debugging features?</a></li>
-</ul>
+- [What are the basic types of error?](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error)
+- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [How do you log a value to the JavaScript console?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
+- [How do you use breakpoints, and other JavaScript debugging features?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
 
-<p>For more information on JavaScript debugging, see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a>; also see <a href="/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors">Other common errors</a> for a description of common errors.</p>
+For more information on JavaScript debugging, see [Handling common JavaScript problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript); also see [Other common errors](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors) for a description of common errors.
 
-<h3 id="Making_decisions_in_code">Making decisions in code</h3>
+### Making decisions in code
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">How do you execute different blocks of code, depending on a variable's value or other condition?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">How do you use if ...else statements?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Nesting_if_..._else">How do nest one decision block inside another?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Logical_operators_AND_OR_and_NOT">How do you use AND, OR, and NOT operators in JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements">How do you conveniently handle a large number of choices for one condition?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Ternary_operator">How do you use a ternary operator to make a quick choice between two options based on a true or false test?</a></li>
-</ul>
+- [How do you execute different blocks of code, depending on a variable's value or other condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
+- [How do nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Nesting_if_..._else)
+- [How do you use AND, OR, and NOT operators in JavaScript?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Logical_operators_AND_OR_and_NOT)
+- [How do you conveniently handle a large number of choices for one condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
+- [How do you use a ternary operator to make a quick choice between two options based on a true or false test?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#Ternary_operator)
 
-<h3 id="Loopingiteration">Looping/iteration</h3>
+### Looping/iteration
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">How do you run the same bit of code over and over again?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#Exiting_loops_with_break">How do you exit a loop before the end if a certain condition is met?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#Skipping_iterations_with_continue">How do you skip to the next iteration of a loop if a certain condition is met?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">How do you use while and do ... while loops?</a></li>
- <li>How to iterate over the elements in an array</li>
- <li>How to iterate over the elements in a multidimensional array</li>
- <li>How to iterate over the members in an object</li>
- <li>How to iterate over the members of an object nested inside an array</li>
-</ul>
+- [How do you run the same bit of code over and over again?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [How do you exit a loop before the end if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#Exiting_loops_with_break)
+- [How do you skip to the next iteration of a loop if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#Skipping_iterations_with_continue)
+- [How do you use while and do ... while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- How to iterate over the elements in an array
+- How to iterate over the elements in a multidimensional array
+- How to iterate over the members in an object
+- How to iterate over the members of an object nested inside an array
 
-<h2 id="進階使用例子">進階使用例子</h2>
+## 進階使用例子
 
-<h3 id="Functions">Functions</h3>
+### Functions
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions">How do you find functions in the browser?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Functions_versus_methods">What is the difference between a function and a method?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">How do you create your own functions?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Invoking_functions">How do you run (call, or invoke) a function?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions">What is an anonymous function?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_parameters">How do you specify parameters (or arguments) when invoking a function?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts">What is function scope?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">What are return values, and how do you use them?</a></li>
-</ul>
+- [How do you find functions in the browser?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions)
+- [What is the difference between a function and a method?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Functions_versus_methods)
+- [How do you create your own functions?](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [How do you run (call, or invoke) a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Invoking_functions)
+- [What is an anonymous function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions)
+- [How do you specify parameters (or arguments) when invoking a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_parameters)
+- [What is function scope?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)
+- [What are return values, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
 
-<h3 id="對向">對向</h3>
+### 對向
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics">How do you create an object?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Dot_notation">What is dot notation?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Bracket_notation">What is bracket notation?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#Setting_object_members">How do you get and set the methods and properties of an object?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Basics#What_is_this">What is <code>this</code>, in the context of an object?</a></li>
- <li><a href="/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters">What is object-oriented programming?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances">What are constructors and instances, and how do you create them?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances">What different ways are there to create objects in JavaScript?</a></li>
-</ul>
+- [How do you create an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#Object_basics)
+- [What is dot notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#Dot_notation)
+- [What is bracket notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#Bracket_notation)
+- [How do you get and set the methods and properties of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#Setting_object_members)
+- [What is `this`, in the context of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#What_is_this)
+- [What is object-oriented programming?](/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances)
+- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances)
 
-<h3 id="JSON">JSON</h3>
+### JSON
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON#JSON_structure">How do you structure JSON data, and read it from JavaScript?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON">How can you load a JSON file into a page?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text">How do you convert a JSON object to a text string, and back again?</a></li>
-</ul>
+- [How do you structure JSON data, and read it from JavaScript?](/en-US/docs/Learn/JavaScript/Objects/JSON#JSON_structure)
+- [How can you load a JSON file into a page?](/en-US/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON)
+- [How do you convert a JSON object to a text string, and back again?](/en-US/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text)
 
-<h3 id="任務">任務</h3>
+### 任務
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties">What are event handlers and how do you use them?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these">What are inline event handlers?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()">What does the <code>addEventListener()</code> function do, and how do you use it?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use">Which mechanism should I use to add event code to my web pages?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_objects">What are event objects, and how do you use them?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour">How do you prevent default event behaviour?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture">How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation">What is event delegation, and how does it work?</a></li>
-</ul>
+- [What are event handlers and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties)
+- [What are inline event handlers?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
+- [What does the `addEventListener()` function do, and how do you use it?](</en-US/docs/Learn/JavaScript/Building_blocks/Events#addEventListener()_and_removeEventListener()>)
+- [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
+- [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_objects)
+- [How do you prevent default event behaviour?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour)
+- [How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
+- [What is event delegation, and how does it work?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation)
 
-<h3 id="Object-oriented_JavaScript">Object-oriented JavaScript</h3>
+### Object-oriented JavaScript
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">What are object prototypes?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property">What is the constructor property, and how can you use it?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes">How do you add methods to the constructor?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance">How do you create a new constructor that inherits its members from a parent constructor?</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary">When should you use inheritance in JavaScript?</a></li>
-</ul>
+- [What are object prototypes?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [What is the constructor property, and how can you use it?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property)
+- [How do you add methods to the constructor?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes)
+- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary)
 
-<h3 id="網頁Web_APIs">網頁Web APIs</h3>
+### 網頁 Web APIs
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#Active_learning_Basic_DOM_manipulation">How do you manipulate the DOM (e.g. adding or removing elements) using JavaScript?</a></li>
-</ul>
+- [How do you manipulate the DOM (e.g. adding or removing elements) using JavaScript?](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#Active_learning_Basic_DOM_manipulation)

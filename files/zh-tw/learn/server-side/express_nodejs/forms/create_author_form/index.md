@@ -101,8 +101,6 @@ The validation code demonstrates several new features:
   body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601(),
   ```
 
-<!---->
-
 - Parameters are recieved from the request as strings. We can use `toDate()` (or `toBoolean()`, etc.) to cast these to the proper JavaScript types.
 
   ```js

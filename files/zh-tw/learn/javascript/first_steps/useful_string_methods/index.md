@@ -3,45 +3,46 @@ title: 有用的字符串方法
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
-
-<p>現在我們已經了解了字符串的基礎知識，讓我們開始思考我們可以使用內置方法對字符串執行哪些有用的操作，例如查找文本字符串的長度，連接和拆分字符串 ，將字符串中的一個字符替換為另一個字符，等等。</p>
+現在我們已經了解了字符串的基礎知識，讓我們開始思考我們可以使用內置方法對字符串執行哪些有用的操作，例如查找文本字符串的長度，連接和拆分字符串 ，將字符串中的一個字符替換為另一個字符，等等。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">先備知識:</th>
-   <td>基礎的電腦素養、基本的HTML和CSS、以及清楚什麼是JavaScript。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>了解字串是物件，學習使用一些能夠應用這些字串的基礎方法。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">先備知識:</th>
+      <td>基礎的電腦素養、基本的HTML和CSS、以及清楚什麼是JavaScript。</td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>了解字串是物件，學習使用一些能夠應用這些字串的基礎方法。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="把字串當作物件">把字串當作物件</h2>
+## 把字串當作物件
 
-<p>我們曾經說過，現在我們重申一遍—在javascript中，一切東西都可以被當作物件。例如我們創建一個字串。</p>
+我們曾經說過，現在我們重申一遍—在 javascript 中，一切東西都可以被當作物件。例如我們創建一個字串。
 
-<pre class="brush: js notranslate">var string = 'This is my string';</pre>
+```js
+var string = 'This is my string';
+```
 
-<p>你的變數成為一個字串的實體物件，因此它將有許多性質(properties)與功能(methods)可以使用。</p>
+你的變數成為一個字串的實體物件，因此它將有許多性質(properties)與功能(methods)可以使用。
 
-<p>你的變數成為一個字串的實體物件，因此它將有許多性質(properties)與功能(methods)可以使用。你可以到 {{jsxref("String")}} 物件頁面的左方列表查看這些性質與功能!</p>
+你的變數成為一個字串的實體物件，因此它將有許多性質(properties)與功能(methods)可以使用。你可以到 {{jsxref("String")}} 物件頁面的左方列表查看這些性質與功能!
 
-<p><strong>好的，在你腦袋燒壞之前先別擔心！</strong>在這趟學習旅程中，關於這些大部分對於現在的你其實還不需要知道。不過有一些你可能會經常使用，我們將在這裡介紹。</p>
+**好的，在你腦袋燒壞之前先別擔心！**在這趟學習旅程中，關於這些大部分對於現在的你其實還不需要知道。不過有一些你可能會經常使用，我們將在這裡介紹。
 
-<p>Let's enter some examples into a fresh console. We've provided one below (you can also <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this console</a> in a separate tab or window, or use the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a> if you'd prefer).</p>
+Let's enter some examples into a fresh console. We've provided one below (you can also [open this console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) in a separate tab or window, or use the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) if you'd prefer).
 
-<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;JavaScript console&lt;/title&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -89,14 +90,14 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
         clear: both;
       }
 
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+    </style>
+  </head>
+  <body>
 
 
-  &lt;/body&gt;
+  </body>
 
-  &lt;script&gt;
+  <script>
     var geval = eval;
     function createInput() {
       var inputDiv = document.createElement('div');
@@ -104,7 +105,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
       var inputForm = document.createElement('input');
 
       inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '&gt;';
+      inputPara.textContent = '>';
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
@@ -135,112 +136,135 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
     createInput();
 
-  &lt;/script&gt;
-&lt;/html&gt;</pre>
+  </script>
+</html>
+```
 
-<p>{{ EmbedLiveSample('把字串當作物件', '100%', 300) }}</p>
+{{ EmbedLiveSample('把字串當作物件', '100%', 300) }}
 
-<h3 id="找出字串的長度（length）">找出字串的長度（length）</h3>
+### 找出字串的長度（length）
 
-<p>這很簡單，你可以用 {{jsxref("String.prototype.length", "length")}} 屬性。試著輸入下面幾行：</p>
+這很簡單，你可以用 {{jsxref("String.prototype.length", "length")}} 屬性。試著輸入下面幾行：
 
-<pre class="brush: js notranslate">var browserType = 'mozilla';
-browserType.length;</pre>
+```js
+var browserType = 'mozilla';
+browserType.length;
+```
 
-<p>結果應該會回傳數字7，因為 "mozilla" 字元長度是7。 這在很多狀況下很好用，舉例來說：你會想知道序列的長度，這樣才能將這些序列按照長度排序，或是讓使用者知道他們輸入的名稱是否太長。</p>
+結果應該會回傳數字 7，因為 "mozilla" 字元長度是 7。 這在很多狀況下很好用，舉例來說：你會想知道序列的長度，這樣才能將這些序列按照長度排序，或是讓使用者知道他們輸入的名稱是否太長。
 
-<h3 id="取得字串中的特定字元（string_character）">取得字串中的特定字元（string character）</h3>
+### 取得字串中的特定字元（string character）
 
-<p>On a related note, you can return any character inside a string by using <strong>square bracket notation</strong> — this means you include square brackets (<code>[]</code>) on the end of your variable name. Inside the square brackets you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:</p>
+On a related note, you can return any character inside a string by using **square bracket notation** — this means you include square brackets (`[]`) on the end of your variable name. Inside the square brackets you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:
 
-<pre class="brush: js notranslate">browserType[0];</pre>
+```js
+browserType[0];
+```
 
-<p>記得電腦計數從0開始，不是1！ 如果要在<em>任何</em>一個字串中取得最後一個字元，我們可以使用以下程式碼，結合了取得字元的技巧和上面學過的長度屬性：</p>
+記得電腦計數從 0 開始，不是 1！ 如果要在*任何*一個字串中取得最後一個字元，我們可以使用以下程式碼，結合了取得字元的技巧和上面學過的長度屬性：
 
-<pre class="brush: js notranslate">browserType[browserType.length-1];</pre>
+```js
+browserType[browserType.length-1];
+```
 
-<p>"mozilla" 這個詞的長度是7，但因為電腦是從0開始計數，所以最後一個位置是6，因此我們會將 <code>length-1</code> 。你也可以試試用這個方法找各序列的第一個字母，並將這些序列按字母順序排好 。</p>
+"mozilla" 這個詞的長度是 7，但因為電腦是從 0 開始計數，所以最後一個位置是 6，因此我們會將 `length-1` 。你也可以試試用這個方法找各序列的第一個字母，並將這些序列按字母順序排好 。
 
-<h3 id="尋找字串中的子字串（substring）並提出子字串">尋找字串中的子字串（substring）並提出子字串</h3>
+### 尋找字串中的子字串（substring）並提出子字串
 
-<ol>
- <li>Sometim有時候你會想搜尋是否有一個較小的字串存在於比較大的字串中（<em>我們通常會說是否有個子字串存在於字串中</em>）。這可以用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法，當中需要一個參數（ {{glossary("parameter")}} ），也就是你想搜尋的子字串：</li>
- <li>
-  <pre class="brush: js notranslate">browserType.indexOf('zilla');</pre>
-  結果會傳回2，因為子字串 "zilla" 在 "mozilla" 中是從位置2開始的。（依然要記得電腦計數是從0開始）。這個方法可以用篩選字串，舉例來說：我們有一串網址的清單，而我們只想印出那些包含 "mozilla" 的網址。</li>
- <li>This can be done in another way, which is possibly even more effective. Try the following:
-  <pre class="brush: js notranslate">browserType.indexOf('vanilla');</pre>
-  This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
-  <br>
-  You could use this to find all instances of strings that <strong>don't</strong> contain the substring 'mozilla', or <strong>do,</strong> if you use the negation operator, as shown below. You could do something like this:
+1.  Sometim 有時候你會想搜尋是否有一個較小的字串存在於比較大的字串中（_我們通常會說是否有個子字串存在於字串中_）。這可以用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法，當中需要一個參數（ {{glossary("parameter")}} ），也就是你想搜尋的子字串：
+2.  ```js
+    browserType.indexOf('zilla');
+    ```
 
-  <pre class="brush: js notranslate">if(browserType.indexOf('mozilla') !== -1) {
-  // do stuff with the string
-}</pre>
- </li>
- <li>When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
-  <pre class="brush: js notranslate">browserType.slice(0,3);</pre>
-  This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position. In this example, since the starting index is 0, the second parameter is equal to the length of the string being returned.<br>
-   </li>
- <li>Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
-  <pre class="brush: js notranslate">browserType.slice(2);</pre>
-  This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string. </li>
-</ol>
+    結果會傳回 2，因為子字串 "zilla" 在 "mozilla" 中是從位置 2 開始的。（依然要記得電腦計數是從 0 開始）。這個方法可以用篩選字串，舉例來說：我們有一串網址的清單，而我們只想印出那些包含 "mozilla" 的網址。
 
-<div class="note">
-<p><strong>備註：</strong> The second parameter of <code>slice()</code> is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.</p>
+3.  This can be done in another way, which is possibly even more effective. Try the following:
+
+    ```js
+    browserType.indexOf('vanilla');
+    ```
+
+    This should give you a result of `-1` — this is returned when the substring, in this case 'vanilla', is not found in the main string.
+
+    You could use this to find all instances of strings that **don't** contain the substring 'mozilla', or **do,** if you use the negation operator, as shown below. You could do something like this:
+
+    ```js
+    if(browserType.indexOf('mozilla') !== -1) {
+      // do stuff with the string
+    }
+    ```
+
+4.  When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
+
+    ```js
+    browserType.slice(0,3);
+    ```
+
+    This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position. In this example, since the starting index is 0, the second parameter is equal to the length of the string being returned.
+
+5.  Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+
+    ```js
+    browserType.slice(2);
+    ```
+
+    This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string.
+
+> **備註：** The second parameter of `slice()` is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
+
+### 改變大小寫
+
+The string methods {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} and {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} take a string and convert all the characters to lower- or uppercase, respectively. This can be useful for example if you want to normalize all user-entered data before storing it in a database.
+
+Let's try entering the following lines to see what happens:
+
+```js
+var radData = 'My NaMe Is MuD';
+radData.toLowerCase();
+radData.toUpperCase();
+```
+
+### 更動部分字串
+
+You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.
+
+It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:
+
+```js
+browserType.replace('moz','van');
+```
+
+Note that to actually get the updated value reflected in the `browserType` variable in a real program, you'd have to set the variable value to be the result of the operation; it doesn't just update the substring value automatically. So you'd have to actually write this: `browserType = browserType.replace('moz','van');`
+
+## Active learning examples
+
+In this section we'll get you to try your hand at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.
+
+Each example comes with a "Reset" button, which you can use to reset the code if you make a mistake and can't get it working again, and a "Show solution" button you can press to see a potential answer if you get really stuck.
+
+### Filtering greeting messages
+
+In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
+
+1.  First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
+2.  You'll then need to write a conditional test of the form _operand1 operator operand2_. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?
+3.  Hint: In this case it is probably more useful to test whether the method call _isn't_ equal to a certain result.
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<h3 id="改變大小寫">改變大小寫</h3>
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<p>The string methods {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} and {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} take a string and convert all the characters to lower- or uppercase, respectively. This can be useful for example if you want to normalize all user-entered data before storing it in a database.</p>
-
-<p>Let's try entering the following lines to see what happens:</p>
-
-<pre class="brush: js notranslate">var radData = 'My NaMe Is MuD';
-radData.toLowerCase();
-radData.toUpperCase();</pre>
-
-<h3 id="更動部分字串">更動部分字串</h3>
-
-<p>You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
-
-<p>It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:</p>
-
-<pre class="brush: js notranslate">browserType.replace('moz','van');</pre>
-
-<p>Note that to actually get the updated value reflected in the <code>browserType</code> variable in a real program, you'd have to set the variable value to be the result of the operation; it doesn't just update the substring value automatically. So you'd have to actually write this: <code>browserType = browserType.replace('moz','van');</code></p>
-
-<h2 id="Active_learning_examples">Active learning examples</h2>
-
-<p>In this section we'll get you to try your hand at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.</p>
-
-<p>Each example comes with a "Reset" button, which you can use to reset the code if you make a mistake and can't get it working again, and a "Show solution" button you can press to see a potential answer if you get really stuck.</p>
-
-<h3 id="Filtering_greeting_messages">Filtering greeting messages</h3>
-
-<p>In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the <code>if( ... )</code> structure, to test each string and only print it in the list if it is a Christmas message.</p>
-
-<ol>
- <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
- <li>You'll then need to write a conditional test of the form <em>operand1 operator operand2</em>. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?</li>
- <li>Hint: In this case it is probably more useful to test whether the method call <em>isn't</em> equal to a certain result.</li>
-</ol>
-
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
-
-&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var greetings = ['Happy Birthday!',
@@ -249,7 +273,7 @@ var greetings = ['Happy Birthday!',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
-for (var i = 0; i &lt; greetings.length; i++) {
+for (var i = 0; i < greetings.length; i++) {
   var input = greetings[i];
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
@@ -260,15 +284,16 @@ for (var i = 0; i &lt; greetings.length; i++) {
     list.appendChild(listItem);
   }
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -286,9 +311,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -317,7 +344,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n \'Merry Christmas my love\',\n \'A happy Christmas to all the family\',\n \'You\\\'re all I want for Christmas\',\n \'Get well soon\'];\n\nfor(var i = 0; i &lt; greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n \'Merry Christmas my love\',\n \'A happy Christmas to all the family\',\n \'You\\\'re all I want for Christmas\',\n \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -363,43 +390,41 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Filtering greeting messages', '100%', 590) }}</p>
+{{ EmbedLiveSample('Filtering greeting messages', '100%', 590) }}
 
-<h3 id="Fixing_capitalization">Fixing capitalization</h3>
+### Fixing capitalization
 
-<p>In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:</p>
+In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
 
-<ol>
- <li>Convert the whole of the string contained in the <code>input</code> variable to lower case and store it in a new variable.</li>
- <li>Grab the first letter of the string in this new variable and store it in another variable.</li>
- <li>Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.</li>
- <li>Change the value of the <code>result</code> variable to equal to the final result, not the <code>input</code>.</li>
-</ol>
+1.  Convert the whole of the string contained in the `input` variable to lower case and store it in a new variable.
+2.  Grab the first letter of the string in this new variable and store it in another variable.
+3.  Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
+4.  Change the value of the `result` variable to equal to the final result, not the `input`.
 
-<div class="note">
-<p><strong>備註：</strong> A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.</p>
+> **備註：** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
 </div>
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;div class="output" style="min-height: 125px;"&gt;
-
-&lt;ul&gt;
-
-&lt;/ul&gt;
-
-&lt;/div&gt;
-
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
-for(var i = 0; i &lt; cities.length; i++) {
+for(var i = 0; i < cities.length; i++) {
   var input = cities[i];
   // write your code just below here
 
@@ -408,15 +433,16 @@ for(var i = 0; i &lt; cities.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -434,9 +460,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -465,7 +493,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i &lt; cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -511,44 +539,48 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Fixing capitalization', '100%', 550) }}</p>
+{{ EmbedLiveSample('Fixing capitalization', '100%', 550) }}
 
-<h3 id="Making_new_strings_from_old_parts">Making new strings from old parts</h3>
+### Making new strings from old parts
 
-<p>In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name. For example:</p>
+In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name. For example:
 
-<pre class="notranslate">MAN675847583748sjt567654;Manchester Piccadilly</pre>
+```plain
+MAN675847583748sjt567654;Manchester Piccadilly
+```
 
-<p>We want to extract the station code and name, and put them together in a string with the following structure:</p>
+We want to extract the station code and name, and put them together in a string with the following structure:
 
-<pre class="notranslate">MAN: Manchester Piccadilly</pre>
+```plain
+MAN: Manchester Piccadilly
+```
 
-<p>We'd recommend doing it like this:</p>
+We'd recommend doing it like this:
 
-<ol>
- <li>Extract the three-letter station code and store it in a new variable.</li>
- <li>Find the character index number of the semicolon.</li>
- <li>Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.</li>
- <li>Concatenate the two new variables and a string literal to make the final string.</li>
- <li>Change the value of the <code>result</code> variable to equal to the final string, not the <code>input</code>.</li>
-</ol>
+1.  Extract the three-letter station code and store it in a new variable.
+2.  Find the character index number of the semicolon.
+3.  Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.
+4.  Concatenate the two new variables and a string literal to make the final string.
+5.  Change the value of the `result` variable to equal to the final string, not the `input`.
 
-<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
+```html hidden
+<h2>Live output</h2>
 
-&lt;div class="output" style="min-height: 125px;"&gt;
+<div class="output" style="min-height: 125px;">
 
-&lt;ul&gt;
+<ul>
 
-&lt;/ul&gt;
+</ul>
 
-&lt;/div&gt;
+</div>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
+<textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
@@ -557,7 +589,7 @@ var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                 'SYB4f65hf75f736463;Stalybridge',
                 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (var i = 0; i &lt; stations.length; i++) {
+for (var i = 0; i < stations.length; i++) {
   var input = stations[i];
   // write your code just below here
 
@@ -566,15 +598,16 @@ for (var i = 0; i &lt; stations.length; i++) {
   listItem.textContent = result;
   list.appendChild(listItem);
 }
-&lt;/textarea&gt;
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution"&gt;
-&lt;/div&gt;
-</pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -593,9 +626,10 @@ body {
   margin: 10px;
   background: #f5f9fa;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -624,7 +658,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i &lt; stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
 var solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -670,26 +704,25 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</pre>
+};
+```
 
-<p>{{ EmbedLiveSample('Making new strings from old parts', '100%', 585) }}</p>
+{{ EmbedLiveSample('Making new strings from old parts', '100%', 585) }}
 
-<h2 id="結語">結語</h2>
+## 結語
 
-<p>不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。</p>
+不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。
 
-<p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-<h2 id="在這個學習模組中">在這個學習模組中</h2>
+## 在這個學習模組中
 
-<ul>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript">什麼是 JavaScript?</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash">和 JavaScript 的第一次接觸</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong">什麼出錯了？ JavaScript 的疑難排解（除錯）</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Variables">儲存你需要的資訊 — 變數</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Math">JavaScript 的基本運算— 數字 與 運算子</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Strings">處理文字 — JavaScript 的字串</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods">有用的字串方法</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Arrays">陣列</a></li>
- <li><a href="/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator">附錄：笑話產生器</a></li>
-</ul>
+- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
+- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
+- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
+- [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
+- [附錄：笑話產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)
