@@ -12,7 +12,7 @@ browser-compat: api.BackgroundFetchRegistration
 
 {{APIRef("Background Fetch API")}}
 
-Интерфейс **`BackgroundFetchRegistration`** из {{domxref('Background Fetch API','','',' ')}} представляет собой отдельную фоновую выборку.
+Интерфейс **`BackgroundFetchRegistration`** из {{domxref('Background Fetch API','','',' ')}} представляет собой отдельный фоновый запрос.
 
 Экземпляр `BackgroundFetchRegistration` возвращает метод {{domxref("BackgroundFetchManager.fetch()")}} или метод {{domxref("BackgroundFetchManager.get()")}} и, следовательно, не имеет конструктора.
 
@@ -25,9 +25,9 @@ browser-compat: api.BackgroundFetchRegistration
 - {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
   - : Строка, содержащая идентификатор фонового запроса.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий общее количество байтов для загрузки.
+  - : {{jsxref("number")}} содержащий общее количество байт для загрузки.
 - {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
-  - : {{jsxref("number")}} содержащий количество успешно отправленных байтов, изначально `0`.
+  - : {{jsxref("number")}} содержащий количество успешно отправленных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
   - : {{jsxref("number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
@@ -65,11 +65,11 @@ browser-compat: api.BackgroundFetchRegistration
 
 ## События
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Слушайте эти события используя [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) или назначая слушатель события свойству `oneventname`.
 
 - [`progress`](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event)
 
-  - : Fired when there is a change to any of the following properties:
+  - : Срабатывает при изменении любого из следующих свойств:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},
     {{domxref("BackgroundFetchRegistration.result", "result")}} or
@@ -77,7 +77,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Примеры
 
-The following code creates a `BackGroundFetchRegistration` as `bgFetch`, with an `id` of `"my-fetch"`.
+Следующий пример создаёт `BackGroundFetchRegistration` с идентификатором `"my-fetch"` и присваивает его переменной `bgFetch`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -99,13 +99,13 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-Logging the {{domxref("BackgroundFetchRegistration.id","id")}} to the console returns `"my-fetch"`.
+Логирование {{domxref("BackgroundFetchRegistration.id","id")}} в консоль возвращает `"my-fetch"`.
 
 ```js
 console.log(bgFetch.id); // "my-fetch"
 ```
 
-The {{domxref("BackgroundFetchRegistration.match","match()")}} method can be used to find a particular {{domxref("BackgroundFetchRecord")}} from those that are part of the registration.
+Метод {{domxref("BackgroundFetchRegistration.match","match()")}} можно использовать для поиска конкретного {{domxref("BackgroundFetchRecord")}} из тех, что были зарегистрированы.
 
 ```js
 bgFetch.match("/ep-5.mp3").then(async (record) => {
@@ -114,9 +114,9 @@ bgFetch.match("/ep-5.mp3").then(async (record) => {
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`Запрос`, record.request);
   const response = await record.responseReady;
-  console.log(`And here's the response`, response);
+  console.log(`И ответ`, response);
 });
 ```
 
