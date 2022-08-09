@@ -27,7 +27,7 @@ Si tienes una idea para una nueva entrada al glosario, simplemente abre el sigui
 
 El primer párrafo de cualquiera de las páginas del glosario es una descripción simple y corta del término, preferentemente de no más de una o dos oraciones. Asegúrate de que cualquiera que esté leyendo el glosario debe de poder entender la definición del término inmediatamente.
 
-> **Nota:**Por favor no copies y pegues definiciones de cualquier otro sitio (especialmente no de la Wikipedia, ya que su rango de licencias es más pequeño, y lo hace incompatible con MDN). Es realmente importante que el contenido sea simple y fácil de entender. Merece la pena dedicarle algo de tiempo en lugar de robar contenido a ciegas. Este glosario debería ser contenido nuevo útil, no cosas repetidas de cualquier otro sitio.
+> **Nota:** Por favor no copies y pegues definiciones de cualquier otro sitio (especialmente no de la Wikipedia, ya que su rango de licencias es más pequeño, y lo hace incompatible con MDN). Es realmente importante que el contenido sea simple y fácil de entender. Merece la pena dedicarle algo de tiempo en lugar de robar contenido a ciegas. Este glosario debería ser contenido nuevo útil, no cosas repetidas de cualquier otro sitio.
 
 Los enlaces a la entrada del glosario usarán esos resúmenes en sus tooltips, de tal forma que los lectores puedan ver las definiciones sin navegar fuera de la página donde se encuentran. (Ver más abajo como insertar enlaces a entradas del glosario con la macro \\{{Glossary}} .)
 

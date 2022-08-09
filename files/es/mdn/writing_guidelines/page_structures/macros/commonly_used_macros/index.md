@@ -90,7 +90,7 @@ Hay plantillas para casi todas las grandes colecciones de páginas. Por lo gener
 Uso: `\{{Optional_Inline}}` o `\{{ReadOnlyInline}}`. Ejemplo:
 
 - `isCustomObject`{{ReadOnlyInline}}
-  - , que el objeto es personalizado.
+  - Indica, si es `true`, que el objeto es personalizado.
 - `parameterX`{{Optional_Inline}}
   - : Blah blah blah...
 

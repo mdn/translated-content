@@ -126,9 +126,9 @@ La comunidad de escritores utiliza estas etiquetas para designar los artículos 
 - `{{Tag ("NecesitaContenido")}}`
   - : El artículo es un esbozo o carece de información. Esta etiqueta significa que alguien debe revisar el contenido, añadir más detalles y/o terminar de escribir el artículo.
 - `{{Tag ("NecesitaEjemplos")}}`
-  - .
+  - El artículo necesita uno o más ejemplos para ayudar a demostrar la finalidad el artículo. Estos ejemplos deben utilizar el sistema [live sample system](/es/docs/Project:MDN/Contributing/How_to_help/Code_samples).
 - `{{Tag ("NecesitaEjemplosReales")}}`
-  - .
+  - El artículo tiene uno o más ejemplos que necesitan ser actualizados para usar el sistema [live sample system](/es/docs/Project:MDN/Contributing/How_to_help/Code_samples).
 - `{{Tag ("NecesitaActualizacion")}}`
   - : El contenido no está actualizado y necesita una actualización.
 - `{{Tag ("excluir")}}`
@@ -177,7 +177,7 @@ El proyecto [WebMaker](https://webmaker.org), a través de [Web Literacy Map](ht
 
 Para cada página debes asignar distintos tipos de etiquetas, por ejemplo:
 
-**Un tutorial sobre WebGL para principiantes:**` ``WebGL, Gráficos, Guía, Principiante`
+**Un tutorial sobre WebGL para principiantes:** `WebGL, Gráficos, Guía, Principiante`
 
 **Página de referencia para `{{HTMLElement ("Canvas")}}:`** `Canvas, HTML, elemento, gráficos`
 

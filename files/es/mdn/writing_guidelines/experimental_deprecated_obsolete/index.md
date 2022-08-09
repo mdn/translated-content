@@ -21,9 +21,9 @@ Este artículo define algunas convenciones y definiciones que se usan comúnment
 **Desaprobado** y **obsoleto** son términos comunes asociados con tecnologías y especificaciones, pero ¿qué significan?
 
 - Desaprobado
-  - , que esa "característica ya no se recomienda. Es posible que se elimine en el futuro o que solo se conserve por motivos de compatibilidad. Evita el uso de esta funcionalidad."
+  - En MDN, el término **desaprobado** se usa para marcar una API o tecnología que ya no se recomienda, pero que aún está implementada y puede funcionar. Recientemente, la hemos actualizado a la definición utilizada en nuestro [proyecto de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information), que esa "característica ya no se recomienda. Es posible que se elimine en el futuro o que solo se conserve por motivos de compatibilidad. Evita el uso de esta funcionalidad."
 - Obsoleto
-  - se utiliza para marcar una API o tecnología que no solo ya no se recomienda, sino que ya no se implementa en los navegadores. Sin embargo, esto fue confuso — es similar a desaprobado, y la distinción no es muy útil (aún no debes usarlo en un sitio de producción). Por lo tanto, ya no la usamos, y cualquier instancia con la que te encuentres se debe eliminar/reemplazar por desaprobada.
+  - En MDN, el término **obsoleto** se utiliza para marcar una API o tecnología que no solo ya no se recomienda, sino que ya no se implementa en los navegadores. Sin embargo, esto fue confuso — es similar a desaprobado, y la distinción no es muy útil (aún no debes usarlo en un sitio de producción). Por lo tanto, ya no la usamos, y cualquier instancia con la que te encuentres se debe eliminar/reemplazar por desaprobada.
 
 ### Experimental
 

@@ -76,7 +76,9 @@ Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamen
 
 #### Cómo escribir "\\{\\{"
 
-Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`. En este caso, puedes escapar la primer llave con una barra invertida, así: `\\{{`
+Como la secuencia de caracteres "`\{\{`" se usa para indicar el comienzo de una macro, puede ser un problema si justo quieres usar "`\{\{`" and "`\}\}`" como texto de una página. Probablemente dará un mensaje de error `DocumentParsingError`. 
+
+En este caso, puedes escapar la primer llave con una barra invertida, así: `\\{{`
 
 ### Sintaxis de la plantilla
 
@@ -204,7 +206,7 @@ Es probable que esta documentación mantenida manualmente quede desactualizada c
 Sólo hay una API incorporada por el momento, en el espacio de nombres `kuma`:
 
 - `kuma.htmlEscape(string)`
-  - , respectivamente.
+  - Escapa los caracteres `&, <, >, "` a `&amp, &lt;, &gt;, &quot;`, respectivamente.
 - `kuma.include(path)`
 
   - : Incluye contenido de la página en la ruta proporcionada. Cacheo pesado.
@@ -476,15 +478,15 @@ The KumaScript equivalent of this can be achieved with simple if/else blocks, li
 
 ```js
 <% if ("fr" == env.locale) { %>
-<%- template("CSSRef") %> « <a>Référence CSS:Extensions Mozilla</a>
+<%- template("CSSRef") %> « <a title="Référence_CSS/Extensions_Mozilla" href="/fr/docs/Référence_CSS/Extensions_Mozilla">Référence CSS:Extensions Mozilla</a>
 <% } else if ("ja" == env.locale) { %>
-<%- template("CSSRef") %> « <a>CSS リファレンス:Mozilla 拡張仕様</a>
+<%- template("CSSRef") %> « <a title="CSS_Reference/Mozilla_Extensions" href="/ja/docs/CSS_Reference/Mozilla_Extensions">CSS リファレンス:Mozilla 拡張仕様</a>
 <% } else if ("pl" == env.locale) { %>
-<%- template("CSSRef") %> « <a>Dokumentacja CSS:Rozszerzenia Mozilli</a>
+<%- template("CSSRef") %> « <a title="Dokumentacja_CSS/Rozszerzenia_Mozilli" href="/pl/docs/Dokumentacja_CSS/Rozszerzenia_Mozilli">Dokumentacja CSS:Rozszerzenia Mozilli</a>
 <% } else if ("de" == env.locale) { %>
-<%- template("CSSRef") %> « <a>CSS Referenz: Mozilla Erweiterungen</a>
+<%- template("CSSRef") %> « <a title="CSS_Referenz/Mozilla_CSS_Erweiterungen" href="/de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen">CSS Referenz: Mozilla Erweiterungen</a>
 <% } else { %>
-<%- template("CSSRef") %> « <a>CSS Reference:Mozilla Extensions</a>
+<%- template("CSSRef") %> « <a title="CSS_Reference/Mozilla_Extensions" href="/en-US/docs/CSS_Reference/Mozilla_Extensions">CSS Reference:Mozilla Extensions</a>
 <% } %>
 ```
 
@@ -493,12 +495,12 @@ The KumaScript equivalent of this can be achieved with simple if/else blocks, li
 A similar way this was done in DekiScript was using `<span>`'s with `lang="{locale}"` attributes, like so:
 
 ```html
-<p><span lang="*" class="lang lang-*"><span class="script">CSSRef()</span> « <a>CSS Reference:Mozilla Extensions</a></span>
-<span lang="en" class="lang lang-en"><span class="script">CSSRef()</span> « <a>CSS Reference:Mozilla Extensions</a>
-<span lang="fr" class="lang lang-fr"><span class="script">CSSRef()</span> « <a>Référence CSS:Extensions Mozilla</a></span>
-<span lang="ja" class="lang lang-ja"><span class="script">CSSRef()</span> « <a>CSS リファレンス:Mozilla 拡張仕様</a></span>
-<span lang="pl" class="lang lang-pl"> <span class="script">CSSRef()</span> « <a>Dokumentacja CSS:Rozszerzenia Mozilli</a></span>
-<span lang="de" class="lang lang-de"><span class="script">CSSRef()</span> « <a>CSS Referenz: Mozilla Erweiterungen</a></span></span></p>
+<p><span lang="*" class="lang lang-*"><span class="script">CSSRef()</span> « <a title="en/CSS_Reference/Mozilla_Extensions" href="/en/CSS_Reference/Mozilla_Extensions">CSS Reference:Mozilla Extensions</a></span>
+<span lang="en" class="lang lang-en"><span class="script">CSSRef()</span> « <a title="en/CSS_Reference/Mozilla_Extensions" href="/en/CSS_Reference/Mozilla_Extensions">CSS Reference:Mozilla Extensions</a>
+<span lang="fr" class="lang lang-fr"><span class="script">CSSRef()</span> « <a title="fr/Référence_CSS/Extensions_Mozilla" href="/fr/Référence_CSS/Extensions_Mozilla">Référence CSS:Extensions Mozilla</a></span>
+<span lang="ja" class="lang lang-ja"><span class="script">CSSRef()</span> « <a title="ja/CSS_Reference/Mozilla_Extensions" href="/ja/CSS_Reference/Mozilla_Extensions">CSS リファレンス:Mozilla 拡張仕様</a></span>
+<span lang="pl" class="lang lang-pl"> <span class="script">CSSRef()</span> « <a title="pl/Dokumentacja_CSS/Rozszerzenia_Mozilli" href="/pl/Dokumentacja_CSS/Rozszerzenia_Mozilli">Dokumentacja CSS:Rozszerzenia Mozilli</a></span>
+<span lang="de" class="lang lang-de"><span class="script">CSSRef()</span> « <a title="de/CSS_Referenz/Mozilla_CSS_Erweiterungen" href="/de/CSS_Referenz/Mozilla_CSS_Erweiterungen">CSS Referenz: Mozilla Erweiterungen</a></span></span></p>
 ```
 
 This is no longer supported. If you encounter templates built using the legacy DekiScript approach, revise them to use the new KumaScript pattern.

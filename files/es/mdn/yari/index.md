@@ -29,9 +29,9 @@ Artículos antiguos para clasificar:
 ## Herramientas y tareas
 
 - [Bugs](https://bugzilla.mozilla.org/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=mdn-backlog&sharer_id=416309&list_id=6206936 "https://bugzilla.mozilla.org/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=mdn-backlog&sharer_id=416309&list_id=6206936")
-  - _Este link requiere que entres en Bugzilla con su respectiva cuenta._
+  - Una lista de los bugs de Kuma. Sientase libre para buscar lo que quiera y lo que quieras arreglas! _Este link requiere que entres en Bugzilla con su respectiva cuenta._
 - [Reportar un bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla%20Developer%20Network)
-  - tú puedes reportar un bug!
+  - Si usted tiene un problema con Kuma, o tiene una idea para hacerlo mejor, ¡tú puedes reportar un bug!
 - [Cambios](/es/docs/Project:MDN/Kuma/Changelog)
   - : Una lista de los cambios recientes; este es un buen lugar para ver qué ha pasado recientemente.
 - [¿Qué ha sido implementado?](http://mzl.la/mdn_whats_deployed)
