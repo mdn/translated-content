@@ -38,7 +38,7 @@ getIds();
 
 ## Примеры
 
-Следующие примеры показывают как получить идентификаторы всех зарегистрированных фоновых запросов. При активном {{domxref('ServiceWorker', 'сервис-воркере')}} используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту \`BackgroundFetchManager\` и вызовите его метод \`getIds()\`.
+Следующие примеры показывают, как получить идентификаторы всех зарегистрированных фоновых запросов. При активном {{domxref('ServiceWorker', 'сервис-воркере')}} используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `getIds()`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
