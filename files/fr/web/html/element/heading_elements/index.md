@@ -133,7 +133,7 @@ Lorsque les niveaux sont imbriqués, il est possible de sauter un niveau lorsqu'
 
 ### Libeller une section
 
-Les outils comme les lecteurs d'écran peuvent également générer une liste du [contenu sectionnant](/en-US/docs/Web/HTML/Element#Content_sectioning) afin de déterminer le plan de la page.
+Les outils comme les lecteurs d'écran peuvent également générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Element#Content_sectioning) afin de déterminer le plan de la page.
 
 Le contenu sectionnant peut être libellé en combinant les attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) et {{htmlattrxref("id")}}. Dans ce cas, le libellé décrit, de façon concise, le but de la section. Cette technique s'avère utile lorsqu'on a une page qui possède plusieurs éléments sectionnants.
 

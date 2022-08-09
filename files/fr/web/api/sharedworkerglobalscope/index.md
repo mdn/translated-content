@@ -13,7 +13,7 @@ translation_of: Web/API/SharedWorkerGlobalScope
 ---
 {{APIRef("Web Workers API")}}
 
-The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See the complete list of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/fr/docs/Web/JavaScript/Reference). See the complete list of [functions available to workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Properties
 
@@ -22,7 +22,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
 - {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{readOnlyinline}} {{deprecated_inline}}
-  - : This property returns the {{domxref("ApplicationCache")}} object for the worker (see [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache)).
+  - : This property returns the {{domxref("ApplicationCache")}} object for the worker (see [Using the application cache](/fr/docs/Web/HTML/Using_the_application_cache)).
 
 ### Properties inherited from WorkerGlobalScope
 
@@ -77,11 +77,11 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 
 ## Events
 
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to this event using [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`connect`](/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event)
+- [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)
   - : Fired on shared workers when a new client connects.
-    Also available via the [`onconnect`](/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect) property.
+    Also available via the [`onconnect`](/fr/docs/Web/API/SharedWorkerGlobalScope/onconnect) property.
 
 ## Specifications
 
@@ -97,5 +97,5 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 - {{domxref("SharedWorker")}}
 - {{domxref("WorkerGlobalScope")}}
-- [Using Web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Functions available to workers](/en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)
+- [Using Web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Functions available to workers](/fr/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)

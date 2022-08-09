@@ -73,9 +73,9 @@ x-ec-custom-error: 1
 Content-Length: 0
 ```
 
-### Requête de pré-vérification cross-origin [CORS](https://developer.mozilla.org/fr/docs/Glossaire/CORS)
+### Requête de pré-vérification cross-origin [CORS](/fr/docs/Glossary/CORS)
 
-En [CORS](/en-US/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
+En [CORS](/fr/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
 
 ```
 OPTIONS /resources/post-here/ HTTP/1.1
@@ -121,4 +121,4 @@ Content-Type: text/plain
 ## Voir aussi
 
 - en-tête {{HTTPHeader("Allow")}}
-- [CORS](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [CORS](/fr/docs/Web/HTTP/Access_control_CORS)

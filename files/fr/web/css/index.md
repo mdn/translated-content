@@ -44,10 +44,10 @@ La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qu
 
   - : Plusieurs articles de cette section présentent les aspects clés du langage. On y décrit notamment :
 
-    - [la syntaxe et les formes du langage](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-    - [la spécificité](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) et [l'héritage](/fr/docs/Web/CSS/inheritance)
+    - [la syntaxe et les formes du langage](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+    - [la spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) et [l'héritage](/fr/docs/Web/CSS/inheritance)
     - [les unités et valeurs CSS](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
-    - [le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
+    - [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
     - [le bloc conteneur](/fr/docs/Web/CSS/All_About_The_Containing_Block)
     - [l'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) et [le contexte de formatage de blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)
     - les concepts de [valeur initiale](/fr/docs/Web/CSS/initial_value), [valeur calculée](/fr/docs/Web/CSS/computed_value), [valeur utilisée](/fr/docs/Web/CSS/used_value) et [valeur réelle](/fr/docs/Web/CSS/actual_value)

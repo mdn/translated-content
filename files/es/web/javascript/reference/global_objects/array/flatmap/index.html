@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p>El método <code><strong>flatMap()</strong></code> primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> seguido de un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten">flatten </a>de profundidad 1, pero <code>flatMap</code> es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.</p>
+<p>El método <code><strong>flatMap()</strong></code> primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> seguido de un <a href="/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten">flatten </a>de profundidad 1, pero <code>flatMap</code> es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.</p>
 
 <p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
 
@@ -68,7 +68,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 // [[2], [4], [6], [8]]
 </pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
 
 <h2 id="Alternativa">Alternativa</h2>
 
@@ -82,11 +82,11 @@ arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class
 <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>// [2, 4, 6, 8]</span></span></span></span></span>
 </pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Este polyfill necesita <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat" title="Array.prototype.flat()">Array.prototype.flat polyfill</a></p>
+<p>Este polyfill necesita <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat" title="Array.prototype.flat()">Array.prototype.flat polyfill</a></p>
 
 <pre class="brush: js">if (!Array.prototype.flatMap) {
   Array.prototype.flatMap = function() {
@@ -104,7 +104,7 @@ arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class
    <th scope="col">Comentario</th>
   </tr>
   <tr>
-   <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap"><code>Array.prototype.flatMap</code> </a></td>
+   <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap"><code>Array.prototype.flatMap</code> </a></td>
    <td>Finalizado (4)</td>
    <td></td>
   </tr>

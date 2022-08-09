@@ -22,18 +22,18 @@ translation_of: Web/API/SVGElement
 
 <dl>
  <dt>{{domxref("SVGElement.dataset")}}{{ ReadOnlyInline }}</dt>
- <dd>要素に付与された<a href="/ja/docs/Web/Guide/HTML/Using_data_attributes">カスタム・データ属性</a>に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで <code>*</code> は、その対のキーの名前です。これは、HTML の  {{domxref("HTMLElement.dataset")}} 属性および HTML の {{htmlattrxref("data-*")}} グローバル属性とちょうど同様に、うまく機能します。</dd>
- <dt>{{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
+ <dd>要素に付与された<a href="/ja/docs/Web/Guide/HTML/Using_data_attributes">カスタム・データ属性</a>に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで <code>*</code> は、その対のキーの名前です。これは、HTML の  {{domxref("HTMLElement.dataset")}} 属性および HTML の {{htmlattrxref("data-*")}} グローバル属性とちょうど同様に、うまく機能します。</dd>
+ <dt>{{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if <code>class</code> is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.</dd>
  <dt>{{domxref("SVGElement.ownerSVGElement")}}{{ ReadOnlyInline }}</dt>
- <dd>直近の先祖の  {{SVGElement("svg")}} 要素を参照する {{domxref("SVGSVGElement")}} です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
+ <dd>直近の先祖の  {{SVGElement("svg")}} 要素を参照する {{domxref("SVGSVGElement")}} です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
  <dt>{{domxref("SVGElement.viewportElement")}}{{ ReadOnlyInline }}</dt>
- <dd>現在のビューポートを確立した  {{domxref("SVGElement")}} です。多くの場合は、直近の先祖の  {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
+ <dd>現在のビューポートを確立した  {{domxref("SVGElement")}} です。多くの場合は、直近の先祖の  {{SVGElement("svg")}} 要素です。もし、与えられた要素が最も外側の <code>&lt;svg&gt;</code> 要素であれば、<code>null</code>  です。</dd>
 </dl>
 
 <h2 id="メソッド">メソッド</h2>
 
-<p><em><code>SVGElement</code> </em>インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち <em> {{domxref("Element")}}, </em><em>{{DOMxRef("HTMLOrForeignElement")}}</em> <em> から、</em>メソッドを継承しています。</p>
+<p><em><code>SVGElement</code> </em>インタフェースは、追加のメソッドを何も提供しませんが、親から、すなわち <em> {{domxref("Element")}}, </em><em>{{DOMxRef("HTMLOrForeignElement")}}</em> <em> から、</em>メソッドを継承しています。</p>
 
 <h2 id="イベント">イベント</h2>
 

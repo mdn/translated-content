@@ -56,7 +56,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
   <b>DIV #5</b><br />position: absolute;</div>
 
 <div id="rel1">
-  <b>DIV #6</b><br />position: relative;</div>
+  <b>DIV #6</b><br />position: relative;</div>
 ```
 
 ### CSS
@@ -118,11 +118,11 @@ b {
 }
 
 #rel1 {
-  position: relative;
-  border: 1px dashed #996;
-  background-color: #cff;
-  margin: 0px 10px 0px 10px;
-  text-align: left;
+  position: relative;
+  border: 1px dashed #996;
+  background-color: #cff;
+  margin: 0px 10px 0px 10px;
+  text-align: left;
 }
 ```
 

@@ -16,7 +16,7 @@ Les animations CSS permettent de réaliser réaliser des effets incroyables en m
 
 ## Relancer une animation
 
-La spécifications des [animations CSS](/en-US/docs/Web/CSS/CSS_Animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
+La spécifications des [animations CSS](/fr/docs/Web/CSS/CSS_Animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
 
 ### CSS
 

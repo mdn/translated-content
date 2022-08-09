@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
  ガイド: <a href="/ja/docs/Using_files_from_web_applications">Using files from web applications</a> | <a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop">File drag and drop</a><br>
  API リファレンス: <a href="/ja/docs/Web/API/File">DOM File API</a></p>
 
-<h2 id="Store_files_data_locally_using_the_IndexedDB_file_storage_library" name="Store_files_data_locally_using_the_IndexedDB_file_storage_library"> IndexedDB ファイルストレージライブラリーを使ってローカルにファイル保存する</h2>
+<h2 id="Store_files_data_locally_using_the_IndexedDB_file_storage_library" name="Store_files_data_locally_using_the_IndexedDB_file_storage_library"> IndexedDB ファイルストレージライブラリーを使ってローカルにファイル保存する</h2>
 
 <p>拡張機能がローカルにファイル保存する必要がある場合、<a href="https://www.npmjs.com/package/idb-file-storage">idb-file-storage ライブラリー</a>は 完結な Promiseベースの<a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API</a>ラッパーであり、ストレージやファイルやblobの取得を助けます。</p>
 
@@ -100,15 +100,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 <h3 id="Retrieving_stored_images_for_display" name="Retrieving_stored_images_for_display">保管された画像を表示用に取得する</h3>
 
 <pre class="brush: js">export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
-    const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ let listOptions = filter ? {includes: filter} : undefined;
+ const imagesList = await imagesStore.list(listOptions);
+ let storedImages = [];
+ for (const storedName of imagesList) {
+    const blob = await imagesStore.get(storedName);
+    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
+ }
+ return storedImages;
 }
 </pre>
 
@@ -119,11 +119,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 <h3 id="Delete_collected_images" name="Delete_collected_images">集まった画像を削除する</h3>
 
 <pre class="brush: js">async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
-    URL.revokeObjectURL(storedImage.blobUrl);
-    await imagesStore.remove(storedImage.storedName);
- }
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ for (const storedImage of storedImages) {
+    URL.revokeObjectURL(storedImage.blobUrl);
+    await imagesStore.remove(storedImage.storedName);
+ }
 }
 </pre>
 
@@ -134,7 +134,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 <p>Once the blob URL has been revoked any attempt to load it will result in an error. 例えば、if the blob url was used as the <code>SRC</code> attribute of an <code>IMG</code> tag, the image will not load and will not be visible. It is therefore good practice to remove any revoked blob urls from generated HTML elements when the blob URL is revoked.</p>
 
 <p>Example: <a href="https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain">Store Collected Images</a><br>
- API References:  <a href="https://rpl.github.io/idb-file-storage/">idb-file-storage library</a></p>
+ API References:  <a href="https://rpl.github.io/idb-file-storage/">idb-file-storage library</a></p>
 
 <div class="note">
 <p>Note: You can also use the full Web <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB API</a> to store data from your extension. This can be useful where you need to store data that isn’t handled well by the simple key/value pairs offered by the DOM <a href="/ja/Add-ons/WebExtensions/API/Storage">Storage API</a>.</p>

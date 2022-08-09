@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
-<p>비표준 <strong>$1, $2, $3, $4, $5, $6, $7, $8, $9 </strong>속성들은 정적이며, 괄호로 묶인 하위 문자열 match들을 포함하는 정규 표현식의 읽기 전용 속성들입니다.</p>
+<p>비표준 <strong>$1, $2, $3, $4, $5, $6, $7, $8, $9 </strong>속성들은 정적이며, 괄호로 묶인 하위 문자열 match들을 포함하는 정규 표현식의 읽기 전용 속성들입니다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -22,7 +22,7 @@ RegExp.$9
 
 <h2 id="Description">Description</h2>
 
-<p>$1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as <code>RegExp.$1</code>, ..., <code>RegExp.$9</code>.</p>
+<p>$1, ..., $9 properties are static, they are not a property of an individual regular expression object. Instead, you always use them as <code>RegExp.$1</code>, ..., <code>RegExp.$9</code>.</p>
 
 <p>The values of these properties are read-only and modified whenever successful matches are made.</p>
 
@@ -34,7 +34,7 @@ RegExp.$9
 
 <h3 id="Using_n_with_String.replace">Using <code>$n</code> with <code>String.replace</code></h3>
 
-<p>아래의 script는 first last 포맷의 이름과 매치하기 위해 {{jsxref("String")}} 인스턴스의 {{jsxref("String.prototype.replace()", "replace()")}} 메소드를 사용하고 그것을 last, first 포맷으로 출력한다. 대체 텍스트에서, 이 script는 정규 표현식 패턴에서 매칭되는 괄호들에 해당하는 결과들을 나타내는 <code>$1</code> 과 <code>$2</code> 를 사용한다.</p>
+<p>아래의 script는 first last 포맷의 이름과 매치하기 위해 {{jsxref("String")}} 인스턴스의 {{jsxref("String.prototype.replace()", "replace()")}} 메소드를 사용하고 그것을 last, first 포맷으로 출력한다. 대체 텍스트에서, 이 script는 정규 표현식 패턴에서 매칭되는 괄호들에 해당하는 결과들을 나타내는 <code>$1</code> 과 <code>$2</code> 를 사용한다.</p>
 
 <pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
@@ -49,11 +49,7 @@ RegExp.$2; // "Smith"
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("javascript.builtins.RegExp.n")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 

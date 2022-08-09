@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/in
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div>El <strong>operador <code>in</code></strong> devuelve <code>true</code> si la propiedad especificada está en el objeto especificado o su prototipo.</div>
+<div>El <strong>operador <code>in</code></strong> devuelve <code>true</code> si la propiedad especificada está en el objeto especificado o su prototipo.</div>
 
 <h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
 
@@ -20,12 +20,12 @@ original_slug: Web/JavaScript/Referencia/Operadores/in
 
 <dl>
  <dt><code>prop</code></dt>
- <dd>Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).</dd>
+ <dd>Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).</dd>
 </dl>
 
 <dl>
  <dt><code>object</code></dt>
- <dd>El objeto (o su cadena de prototipo) sobre el que comprobar si contiene la propiedad con el nombre especificado.</dd>
+ <dd>El objeto (o su cadena de prototipo) sobre el que comprobar si contiene la propiedad con el nombre especificado.</dd>
 </dl>
 
 <h2 id="Description" name="Description">Descripción</h2>
@@ -61,7 +61,7 @@ var color2 = "coral";
 
 <h3 id="Using_in_with_deleted_or_undefined_properties" name="Using_in_with_deleted_or_undefined_properties">Usando <code>in</code> con propiedades eliminadas o no definidas</h3>
 
-<p>Si se elimina una propiedad con el operador {{jsxref("Operadores/delete", "delete")}}, el operador <code>in</code> devuelve <code>false</code> para esa propiedad.</p>
+<p>Si se elimina una propiedad con el operador {{jsxref("Operadores/delete", "delete")}}, el operador <code>in</code> devuelve <code>false</code> para esa propiedad.</p>
 
 <pre class="brush:js">var micoche= {marca: "Honda", modelo: "Accord", año: 1998};
 delete micoche.marca;
@@ -72,7 +72,7 @@ delete arboles[3];
 3 in arboles; // devuelve false
 </pre>
 
-<p>Si se cambia una propiedad a {{jsxref("Objetos_globales/undefined", "undefined")}} pero no se elimina, el operador <code>in</code> devuelve true para esa propiedad.</p>
+<p>Si se cambia una propiedad a {{jsxref("Objetos_globales/undefined", "undefined")}} pero no se elimina, el operador <code>in</code> devuelve true para esa propiedad.</p>
 
 <pre class="brush:js">var micoche = {marca: "Honda", modelo: "Accord", año: 1998};
 micoche.marca = undefined;
@@ -86,7 +86,7 @@ arboles[3] = undefined;
 
 <h3 id="Inherited_properties" name="Inherited_properties">Propiedades heredadas</h3>
 
-<p>El operador <code>in</code> devuelve <code>true</code> para propiedades en la cadena del prototipo.</p>
+<p>El operador <code>in</code> devuelve <code>true</code> para propiedades en la cadena del prototipo.</p>
 
 <pre class="brush:js">"toString" in {}; // devuelve true
 </pre>
@@ -103,17 +103,17 @@ arboles[3] = undefined;
   <tr>
    <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES2015', '#sec-relational-operators', 'Relational Operators')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-11.8.7', 'The in Operator')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES3', '#sec-11.8.7', 'The in Operator')}}</td>

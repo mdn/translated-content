@@ -15,4 +15,4 @@ Une **{{glossary("fonction")}}** sert de **fermeture** en {{glossary("JavaScript
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Portée (informatique)")}} sur Wikipédia
+- [Portée](https://fr.wikipedia.org/wiki/Port%C3%A9e_(informatique)) sur Wikipédia

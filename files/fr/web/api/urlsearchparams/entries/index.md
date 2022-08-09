@@ -7,7 +7,7 @@ translation_of: Web/API/URLSearchParams/entries
 
 La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("Iteration_protocols",'iterator')}}) permettant de parcourir les paires de clé/valeur contenues dans cet objet. La clé et la valeur de chaque paire est un objet  {{domxref("USVString")}} .
 
-> **Note :** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> **Note :** This method is available in [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 

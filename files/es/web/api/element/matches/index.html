@@ -13,7 +13,7 @@ translation_of: Web/API/Element/matches
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>El método <strong><code>matches()</code></strong> comprueba si el {{domxref("Element")}} sería seleccionable por el selector CSS especificado en la cadena; en caso contrario, retorna <code>false</code>.</p>
+<p>El método <strong><code>matches()</code></strong> comprueba si el {{domxref("Element")}} sería seleccionable por el selector CSS especificado en la cadena; en caso contrario, retorna <code>false</code>.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -75,7 +75,7 @@ translation_of: Web/API/Element/matches
         };
 }</pre>
 
-<p>However, given the practicality of supporting older browsers, the following should suffice for most (if not all) practical cases (ej. soporte IE9+).</p>
+<p>However, given the practicality of supporting older browsers, the following should suffice for most (if not all) practical cases (ej. soporte IE9+).</p>
 
 <pre class="brush: js notranslate">if (!Element.prototype.matches) {
   Element.prototype.matches = Element.prototype.msMatchesSelector ||

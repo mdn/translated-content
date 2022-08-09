@@ -96,7 +96,7 @@ translation_of: Mozilla/Firefox/Releases/31
 <ul>
  <li><a href="http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&amp;whitespace_mode=show&amp;root=/cvsroot&amp;subdir=mozilla/browser/base/content&amp;command=DIFF_FRAMESET&amp;file=browser.xul&amp;rev2=1.10&amp;rev1=1.9">昔から</a> "<code>center</code>" に設定されていた、<code>urlbar-wrapper</code> (以前は <code>urlbar-container</code>) の "<code>align</code>" 属性を削除しました。これはサードパーティーのテーマに影響を与えることがわかっています。それぞれのテーマにおける正しい修正法は何かを注意深く探るべきですが、同等の効果を維持するのであればテーマに以下の CSS 規則を追加してください:<br>
   <code>#urlbar-wrapper {<br>
-    -moz-box-align: center;<br>
+    -moz-box-align: center;<br>
   }</code></li>
  <li><a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()"><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> および <a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29"><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> が、省略可能な引数 <code>aAdditionalFlags</code> を持ちます。<code>aReverse</code> を <code>true</code> にして <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> を呼び出している場合、この変更により動作に問題が発生します。<code>aAdditionalFlags</code> について詳しくは、<a href="/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants">各フラグの説明</a> (<code>QUERY_CONTENT_FLAG_*</code> および <code>SELECTION_SET_FLAG_*</code>) をご覧ください。</li>
 </ul>

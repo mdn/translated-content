@@ -10,7 +10,7 @@ translation_of: Web/API/Document/createElement
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div> </div>
+<div> </div>
 
 <p>Em um documento <a href="/en-US/docs/Web/HTML">HTML</a>, o método <strong><code>Document.createElement()</code></strong> cria o elemento HTML especificado ou um {{domxref("HTMLUnknownElement")}} se o nome do elemento dado não for conhecido.</p>
 
@@ -70,7 +70,7 @@ function adcElemento () {
  <li>Para criar um elemento com um nome qualificado e <em>namespace URI</em>, use {{ domxref("document.createElementNS()") }}.</li>
  <li>Antes do Gecko 2.0 {{ geckoRelease("2.0") }} você podia incluir os símbolos de menor que e maior que em volta da <code>tagName</code> no modo <em>quirks</em>; a partir do Gecko 2.0, a função comporta-se da mesma forma em ambos os modos <em>quirks</em> e estrito.</li>
  <li>A partir do Gecko 19.0 {{geckoRelease("19.0")}}, <code>createElement(null)</code> funciona como <code>createElement("null")</code>. Note que o Opera torna <code>null</code> uma <em>string</em>, mas ambos Chrome e Internet Explorer lançarão erros.</li>
- <li>A partir do Gecko 22.0 {{geckoRelease("22.0")}} <code>createElement()</code> não mais usa a interface {{domxref("HTMLSpanElement")}} quando o argumento é  "bgsounds", "multicol", or "image".  Ao invés disso, <code>HTMLUnknownElement</code> é usado para "bgsound", "multicol" e {{domxref("HTMLElement")}} <code>HTMLElement</code> é usado para "image".</li>
+ <li>A partir do Gecko 22.0 {{geckoRelease("22.0")}} <code>createElement()</code> não mais usa a interface {{domxref("HTMLSpanElement")}} quando o argumento é  "bgsounds", "multicol", or "image".  Ao invés disso, <code>HTMLUnknownElement</code> é usado para "bgsound", "multicol" e {{domxref("HTMLElement")}} <code>HTMLElement</code> é usado para "image".</li>
  <li>A implementação Gecko de <code>createElement</code> não se conforma à especificação DOM para documentos XUL e XHTML: <code>localName</code> e <code>namespaceURI</code> não estão definidos para <code>null</code> no elemento criado. Veja {{ Bug(280692) }} para detalhes.</li>
 </ul>
 

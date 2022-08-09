@@ -21,7 +21,7 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 
 ## Type d'erreur
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## Quel est le problème ?
 

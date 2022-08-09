@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/has
 ---
 {{APIRef("XMLHttpRequest")}}
 
-{{domxref("FormData")}} 인터페이스의 **`has()`** 메서드는 `FormData` 객체에 특정 키가 들어 있는지 여부를 나타내는 boolean 을 반환합니다.
+{{domxref("FormData")}} 인터페이스의 **`has()`** 메서드는 `FormData` 객체에 특정 키가 들어 있는지 여부를 나타내는 boolean 을 반환합니다.
 
 > **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
@@ -28,7 +28,7 @@ formData.has(name);
 
 ## Example
 
-다음 코드를 따라 빈 `FormData` 객체를 만듭니다:
+다음 코드를 따라 빈 `FormData` 객체를 만듭니다:
 
 ```js
 var formData = new FormData();
@@ -53,6 +53,6 @@ formData.has('username'); // Returns true
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
 - {{HTMLElement("Form")}}

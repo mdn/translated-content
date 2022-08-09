@@ -44,6 +44,10 @@ translation_of: Web/API/Node/nodeType
    <td><code>1</code></td>
    <td>一个 {{domxref("Element", "元素")}} 节点，例如 {{HTMLElement("p")}} 和 {{HTMLElement("div")}}。</td>
   </tr>
+   <td><code>Node.ATTRIBUTE_NODE</code></td>
+   <td>2</td>
+   <td>{{domxref("Element","元素")}} 的耦合 {{domxref("Attr", "属性")}}。</td>
+  </tr>
   <tr>
    <td><code>Node.TEXT_NODE</code></td>
    <td><code>3</code></td>
@@ -79,44 +83,13 @@ translation_of: Web/API/Node/nodeType
    <td><code>11</code></td>
    <td>一个 {{domxref("DocumentFragment")}} 节点</td>
   </tr>
+  <tr>
  </tbody>
 </table>
 
-<h3 id="已弃用的节点类型常量_deprecated_inline()">已弃用的节点类型常量 {{deprecated_inline()}}</h3>
+<p>以下的常量已被弃用且不再使用：<code>Node.ENTITY_REFERENCE_NODE</code>（<code>5</code>）、<code>Node.ENTITY_NODE</code>（<code>6</code>）和 <code>Node.NOTATION_NODE</code>（<code>12</code>）。</p>
 
-<p>以下常量已被弃用，请不要使用。</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>常量</td>
-   <td>值</td>
-   <td>描述</td>
-  </tr>
-  <tr>
-   <td><code>Node.ATTRIBUTE_NODE</code></td>
-   <td>2</td>
-   <td>{{domxref("Element","元素")}} 的耦合{{domxref("Attr", "属性")}} 。在 {{SpecName("DOM4")}} 规范里{{domxref("Node")}} 接口将不再实现这个元素属性。</td>
-  </tr>
-  <tr>
-   <td><code>Node.ENTITY_REFERENCE_NODE</code></td>
-   <td>5</td>
-   <td>一个 XML 实体引用节点。 在 {{SpecName("DOM4")}} 规范里被移除。</td>
-  </tr>
-  <tr>
-   <td><code>Node.ENTITY_NODE</code></td>
-   <td>6</td>
-   <td>一个 XML <code>&lt;!ENTITY ...&gt;</code>  节点。 在 {{SpecName("DOM4")}} 规范中被移除。</td>
-  </tr>
-  <tr>
-   <td><code>Node.NOTATION_NODE</code></td>
-   <td>12</td>
-   <td>一个 XML <code>&lt;!NOTATION ...&gt;</code> 节点。 在 {{SpecName("DOM4")}} 规范里被移除。</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Example">例子</h2>
+<h2 id="Example">示例</h2>
 
 <h3 id="不同的节点类型">不同的节点类型</h3>
 

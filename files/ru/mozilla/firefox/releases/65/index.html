@@ -5,7 +5,7 @@ translation_of: Mozilla/Firefox/Releases/65
 ---
 <div>{{FirefoxSidebar}}</div>
 
-<p>В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.</p>
+<p>В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 29 января 2019 года.</p>
 
 <h2 id="Изменения_для_веб-разработчиков">Изменения для веб-разработчиков</h2>
 
@@ -19,7 +19,7 @@ translation_of: Mozilla/Firefox/Releases/65
  <li>Во вкладку «Заголовки» <a href="/ru/docs/Tools/Network_Monitor">сетевого монитора</a> добавлено отображение политики Referrer для выбранного запроса ({{bug(1496742)}}).</li>
  <li>При просмотре трассировки стека (например, в журналах консоли или отладчике JavaScript) вызовы методов фреймворка распознаются и по умолчанию сворачиваются, что облегчает размещение вашего кода.</li>
  <li>Подобно традиционным терминалам теперь можно использовать обратный поиск в истории консоли JavaScript(<kbd>F9</kbd> в Windows/Linux или <kbd>Ctrl</kbd> + <kbd>R</kbd> в macOS, затем ввести искомое, а сочетаниями <kbd>Ctrl</kbd> + <kbd>R</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> переключаться между результатами).</li>
- <li>Сокращение <code>$0</code> в консоли JavaScript (ссылается на инспектируемый в данный момент элемент страницы) обзавелось возможностью автодополнения. Например, вы можете ввести <code>$0.te</code>, чтобы получить предложения автодополнения для свойств наподобие <code>$0.textContent</code>.</li>
+ <li>Сокращение <code>$0</code> в консоли JavaScript (ссылается на инспектируемый в данный момент элемент страницы) обзавелось возможностью автодополнения. Например, вы можете ввести <code>$0.te</code>, чтобы получить предложения автодополнения для свойств наподобие <code>$0.textContent</code>.</li>
  <li>Правки, внесённые через просмотр правил в Инспекторе, теперь отображаются на вкладке «Изменения» ({{bug(1503920)}}).</li>
 </ul>
 
@@ -43,7 +43,7 @@ translation_of: Mozilla/Firefox/Releases/65
    <li>{{cssxref("break-inside")}} → {{cssxref("page-break-inside")}}.</li>
   </ul>
  </li>
- <li>Реализована поддержка значения <code>anywhere</code> у свойства {{cssxref("overflow-wrap")}} ({{bug(1505786)}}).</li>
+ <li>Реализована поддержка значения <code>anywhere</code> у свойства {{cssxref("overflow-wrap")}} ({{bug(1505786)}}).</li>
  <li>Добавлены новые ключевые слова <code>jump-start</code>, <code>jump-end</code>, <code>jump-none</code> и <code>jump-both</code>, используемые внутри <a href="/en-US/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions">временной функции steps()</a> ({{bug(1496619)}}). Функция <code>frames()</code>, ранее использовавшаяся для этого, объявлена устаревшей.</li>
  <li>Для совместимости с прочими браузерами добавлены несколько новых значений {{cssxref("appearance", "-webkit-appearance")}}. В частности:
   <ul>
@@ -71,7 +71,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li>Удалена настройка <code>layout.css.shape-outside.enabled</code>; поддержку {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}} и {{cssxref("shape-image-threshold")}} больше нельзя отключить через <code>about:config</code> ({{bug(1504387)}}).</li>
- <li>Удалены некоторые специфичные для Firefox значения {{cssxref("user-select")}}  — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code> и <code>toggle</code>. См. {{bug(1492958)}} и {{bug(1506547)}}.</li>
+ <li>Удалены некоторые специфичные для Firefox значения {{cssxref("user-select")}}  — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code> и <code>toggle</code>. См. {{bug(1492958)}} и {{bug(1506547)}}.</li>
  <li>Как упоминалось выше, удалена временная функция <code>frames()</code> ({{bug(1496619)}}).</li>
 </ul>
 
@@ -83,7 +83,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li>Реализована поддержка {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} ({{bug(1504334)}}).</li>
- <li>Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет <code>2^30 - 2</code> (~1 ГБ) вместо <code>2^28 - 1</code> (~256 МБ) ({{bug(1509542)}}).</li>
+ <li>Максимально допустимое значение {{jsxref("String/length","length","","1")}} у строк отныне составляет <code>2^30 - 2</code> (~1 ГБ) вместо <code>2^28 - 1</code> (~256 МБ) ({{bug(1509542)}}).</li>
  <li>Добавлена поддержка свойства <code><a href="https://github.com/tc39/proposal-global">globalThis</a></code> ({{bug(1317422)}}).</li>
 </ul>
 
@@ -132,7 +132,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li>Словарь {{domxref("WebRTC API", "WebRTC", "", "1")}} {{domxref("RTCIceCandidateStats")}} обновлён в соответствии с последними изменениями спецификации ({{bug(1324788)}}, {{bug(1489040)}}).</li>
- <li>События <code>pause</code> и <code>resume</code> {{domxref("MediaRecorder")}} (и соответствующие свойства обработчика событий — {{domxref("MediaRecorder.onpause")}} и {{domxref("MediaRecorder.onresume")}}) не были реализованы ранее, хотя таблицы совместимости утверждали обратное. Теперь они реализованы ({{bug(1458538)}}, {{bug(1514016)}}).</li>
+ <li>События <code>pause</code> и <code>resume</code> {{domxref("MediaRecorder")}} (и соответствующие свойства обработчика событий — {{domxref("MediaRecorder.onpause")}} и {{domxref("MediaRecorder.onresume")}}) не были реализованы ранее, хотя таблицы совместимости утверждали обратное. Теперь они реализованы ({{bug(1458538)}}, {{bug(1514016)}}).</li>
 </ul>
 
 <h4 id="Canvas_и_WebGL">Canvas и WebGL</h4>
@@ -192,7 +192,7 @@ translation_of: Mozilla/Firefox/Releases/65
  <li>Добавлена поддержка изображений в формате <a href="/en-US/docs/Glossary/webp">WebP</a> ({{bug(1294490)}}).
 
   <ul>
-   <li>Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (<code>image/webp</code>) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ({{bug(1507691)}}).</li>
+   <li>Кроме того, для улучшения кросс-браузерной совместимости MIME-тип WebP (<code>image/webp</code>) был добавлен в стандартный заголовок HTTP-запроса {{httpheader ("Accept")}} для файлов HTML ({{bug(1507691)}}).</li>
   </ul>
  </li>
 </ul>

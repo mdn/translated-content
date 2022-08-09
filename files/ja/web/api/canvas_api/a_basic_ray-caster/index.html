@@ -22,13 +22,13 @@ translation_of: Web/API/Canvas_API/A_basic_ray-caster
 
 <h2 id="Why.3F" name="Why.3F">動機付け</h2>
 
-<p>この気のきいた <code>&lt;canvas&gt;</code> 要素に<a href="https://html.spec.whatwg.org/#dynamic">ついての記事</a>を読んでいたら Firefox でそろそろサポートされるだけでなく、最新の Safari でサポート<strong>済み</strong>なののを知ったので、簡単なサンプルを試す必要に駆られました。</p>
+<p>この気のきいた <code>&lt;canvas&gt;</code> 要素に<a href="https://html.spec.whatwg.org/#dynamic">ついての記事</a>を読んでいたら Firefox でそろそろサポートされるだけでなく、最新の Safari でサポート<strong>済み</strong>なののを知ったので、簡単なサンプルを試す必要に駆られました。</p>
 
 <p>MDN で見つけた canvas に関する<a href="/ja/docs/Web/API/Canvas_API">概要</a>と<a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial">チュートリアル</a>はとても素晴らしです、しかし誰もアニメーションについては書いてくれませんでした。なので私がほんの前に動かした基本的な raycaster を移植した方が良いだろうと思うに至りました。ぜひ JavaScript 制御のピクセルバッファーの底力を確認してください。</p>
 
 <h2 id="How.3F" name="How.3F">基本動作</h2>
 
-<p>基本的なアイディアは {{domxref("window.setInterval","setInterval()")}}  を使って任意の遅延時間で欲しいフレームレートに一致させるということです。毎フレームでの更新関数は現在のビューを canvas に再描画します。もちろん私はもっと簡単なサンプルをで始めることもできました。私はこの canvas <a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations">チュートリアルで出来る</a>のは分かっていたので、この方法で可能だということを示したかったのです。</p>
+<p>基本的なアイディアは {{domxref("window.setInterval","setInterval()")}}  を使って任意の遅延時間で欲しいフレームレートに一致させるということです。毎フレームでの更新関数は現在のビューを canvas に再描画します。もちろん私はもっと簡単なサンプルをで始めることもできました。私はこの canvas <a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations">チュートリアルで出来る</a>のは分かっていたので、この方法で可能だということを示したかったのです。</p>
 
 <p>全てのフレームで raycaster はユーザーがキーを押したかどうか見ていて、ユーザーが操作しないときに無駄な計算が発生しない様にします。操作が発生した場合 canvas をクリアしたのちに空と地面が描画されカメラの向きや位置が更新され、ray が投射されます。ray が壁と交差するとき垂直の銀色の壁が描画されます。壁との距離が遠くなると色がだんだん暗くなっていきます。カメラと壁との距離に応じて銀色の高さも調節され、水平線の中央に描画されます。</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/Canvas_API/A_basic_ray-caster
 
 <p>とても良い人が手作業でファイルをコピーしてくれたので、<a href="https://mdn.github.io/canvas-raycaster/">この場所</a>で試せるのでぜひ見てください。そして誰でもハックできる様にコードをそれぞれ小分けしておいてあります。（下部参照）</p>
 
-<p>Safari 1.3+ か Firefox 1.5+ かその他の <code>&lt;canvas&gt;</code> 要素をサポートするブラウザーで動きます。楽しんで！</p>
+<p>Safari 1.3+ か Firefox 1.5+ かその他の <code>&lt;canvas&gt;</code> 要素をサポートするブラウザーで動きます。楽しんで！</p>
 
 <p><br>
  <small><a href="https://github.com/mdn/canvas-raycaster/blob/master/input.js">input.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/Level.js">Level.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/Player.js">Player.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/index.html">RayCaster.html</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/RayCaster.js">RayCaster.js</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/trace.css">trace.css</a> | <a href="https://github.com/mdn/canvas-raycaster/blob/master/trace.js">trace.js</a> </small></p>

@@ -87,13 +87,13 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'マシンを起動') {
-    button.value = 'マシンを停止';
-    paragraph.textContent = 'マシンが起動しています！';
-  } else {
-    button.value = 'マシンを起動';
-    paragraph.textContent = 'マシンが停止しています。';
-  }
+  if (button.value === 'マシンを起動') {
+    button.value = 'マシンを停止';
+    paragraph.textContent = 'マシンが起動しています！';
+  } else {
+    button.value = 'マシンを起動';
+    paragraph.textContent = 'マシンが停止しています。';
+  }
 }</pre>
 
 <p>このスクリプトは DOM で <code>&lt;input&gt;</code> を表す {{domxref("HTMLInputElement")}} オブジェクトの参照を受け取り、この参照を変数 <code>button</code> に保存します。{{domxref("EventTarget.addEventListener", "addEventListener()")}} は、ボタンに {{event("click")}} イベントが発生したときに実行される関数を設定します。</p>
@@ -121,13 +121,13 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'マシンを起動') {
-    button.value = 'マシンを停止';
-    paragraph.textContent = 'マシンが起動しています！';
-  } else {
-    button.value = 'マシンを起動';
-    paragraph.textContent = 'マシンが停止しています。';
-  }
+  if (button.value === 'マシンを起動') {
+    button.value = 'マシンを停止';
+    paragraph.textContent = 'マシンが起動しています！';
+  } else {
+    button.value = 'マシンを起動';
+    paragraph.textContent = 'マシンが停止しています。';
+  }
 }</pre>
 </div>
 
@@ -157,12 +157,12 @@ function updateButton() {
 button.addEventListener('click', disableButton);
 
 function disableButton() {
-  button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
-    button.disabled = false;
-    button.value = 'Enabled';
-  }, 2000);
+  button.disabled = true;
+  button.value = 'Disabled';
+  window.setTimeout(function() {
+    button.disabled = false;
+    button.value = 'Enabled';
+  }, 2000);
 }</pre>
 </div>
 
@@ -221,13 +221,13 @@ function disableButton() {
 
 <div class="hidden">
 <pre class="brush: css notranslate">body {
-  background: #ccc;
+  background: #ccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #ccc;
   width: 150px;
   height: 75px;
   padding: 5px;

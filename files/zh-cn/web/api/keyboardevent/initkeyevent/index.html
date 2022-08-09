@@ -9,14 +9,16 @@ tags:
   - 参考
 translation_of: Web/API/KeyboardEvent/initKeyEvent
 ---
-<p> </p>
+{{ ApiRef("DOM Events") }}
 
-<p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
+<div class="warning">
+ <p><strong>警告：</strong> 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。</p>
+ <p>该方法已从 DOM 规范中删除，并且不受任何现代浏览器支持。Firefox 从版本 93 开始默认通过首选项（<code>dom.keyboardevent.init_key_event.enabled</code>）隐藏此方法，并计划很快移除它。</p>
+</div>
+
+<p>{{deprecated_header}}</p>
 
 <p>KeyboardEvent.initKeyEvent 方法用于初始化使用{{domxref("document.createEvent")}}("KeyboardEvent") 创建的事件的值。 以这种方式初始化的事件必须使用{{domxref("document.createEvent")}}("KeyboardEvent") 方法创建。 在调度之前，必须调用 initKeyEvent 来设置事件。</p>
-
-<p><strong>不要再使用这个方法，而是使用{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}构造函数。</strong><br>
- 该方法基于{{SpecName("DOM2 Events")}}的早期草案，并在基于 Gecko 的浏览器中实现; 其他浏览器基于{{SpecName("DOM3 Events")}}的早期草稿实现{{domxref("KeyboardEvent.initKeyboardEvent")}}。 将现代构造函数结构视为构建事件的唯一跨浏览器方式。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -81,5 +83,3 @@ viewArg of type views::AbstractView
 keyIdentifierArg of type DOMString
 keyLocationArg of type unsigned long
 modifiersList of type DOMString);</pre>
-
-<p> </p>

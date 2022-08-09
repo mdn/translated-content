@@ -15,7 +15,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
-MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 JavaScript를 넓게 보면서 "뭔가요?", "뭘 하나요?"와 같은 질문을 답변하고, 여러분이 JavaScript에 친숙해지도록 도와드립니다.
+MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 JavaScript를 넓게 보면서 "뭔가요?", "뭘 하나요?"와 같은 질문을 답변하고, 여러분이 JavaScript에 친숙해지도록 도와드립니다.
 
 <table>
   <tbody>
@@ -112,8 +112,8 @@ API는 일반적으로 두 개의 범주로 분류할 수 있습니다.
 
 - [DOM (Document Object Model) API](/ko/docs/Web/API/Document_Object_Model)로 HTML 콘텐츠를 추가, 제거, 변경하고, 동적으로 페이지에 스타일을 추가하는 등 HTML/CSS를 조작할 수 있습니다. 페이지 위에 뜨는 팝업창이나, (위쪽의 간단한 예제처럼) 새로운 콘텐츠가 나타나는 것을 본 적이 있으면 DOM이 동작한 겁니다.
 - [Geolocation API](/ko/docs/Web/API/Geolocation)로 지리정보를 가져올 수 있습니다. [Google 지도](https://www.google.com/maps)에서 여러분의 위치를 찾아 지도에 그릴 수 있는 이유가 바로 이 API입니다.
-- [Canvas](/ko/docs/Web/API/Canvas_API)와 [WebGL API](/ko/docs/Web/API/WebGL_API)로 애니메이션을 적용한 2D와 3D 그래픽을 만들 수 있습니다. 두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
-- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/en-US/docs/Web/Guide/Audio_and_video_delivery)로는 멀티미디어를 사용한 흥미로운 일을 할 수 있습니다. 예를 들어 오디오나 비디오를 웹 페이지에서 바로 재생하거나, 여러분의 웹캠으로 비디오를 찍어 다른 사람의 화면에 보여줄 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요)
+- [Canvas](/ko/docs/Web/API/Canvas_API)와 [WebGL API](/ko/docs/Web/API/WebGL_API)로 애니메이션을 적용한 2D와 3D 그래픽을 만들 수 있습니다. 두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
+- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Guide/Audio_and_video_delivery)로는 멀티미디어를 사용한 흥미로운 일을 할 수 있습니다. 예를 들어 오디오나 비디오를 웹 페이지에서 바로 재생하거나, 여러분의 웹캠으로 비디오를 찍어 다른 사람의 화면에 보여줄 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요)
 
 > **참고:** 구형 브라우저에서는 위 예제 중 많은 수가 동작하지 않습니다. 웹 기술을 시험할 땐 Firefox, Chrome, Edge, Safari처럼 모던 브라우저를 사용하는 편이 좋습니다.
 > 이후에 프로덕션 코드 (고객이 사용하게 될 코드) 배포에 다가가게 되면 [크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing)를 고려하세요.
@@ -121,7 +121,7 @@ API는 일반적으로 두 개의 범주로 분류할 수 있습니다.
 **서드파티 API**는 브라우저에 탑재되지 않은 API로, 웹의 어딘가에서 직접 코드와 정보를 찾아야 합니다.
 
 - [Twitter API](https://developer.twitter.com/en/docs)로 여러분의 최신 트윗을 웹 사이트가 보여주도록 구현할 수 있습니다.
-- [Google 지도 API](https://developers.google.com/maps/)와 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)로 웹 사이트에 지도를 삽입하고, 지도 관련 기능을 추가할 수 있습니다.
+- [Google 지도 API](https://developers.google.com/maps/)와 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)로 웹 사이트에 지도를 삽입하고, 지도 관련 기능을 추가할 수 있습니다.
 
 > **참고:** 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. [클라이언트 사이드 웹 API 과정](/ko/docs/Learn/JavaScript/Client-side_web_APIs)에서 알아보세요.
 
@@ -194,7 +194,7 @@ CSS와 비슷한 방법으로 JavaScript를 HTML 코드에 적용할 수 있습�
 
 1. 먼저, 예제 파일인 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)을 여러분의 컴퓨터로 복사하세요. 적당한 폴더에 저장하면 됩니다.
 2. 브라우저와 텍스트 편집기로 1번의 파일을 여세요. HTML 코드가 클릭 가능한 버튼 하나를 포함하는 간단한 웹 페이지를 만드는 것을 확인할 수 있습니다.
-3. 텍스트 편집기로 가서 아래의 코드를 추가하세요. 닫는 `</head>` 태그 바로 앞에 넣어주세요.
+3. 텍스트 편집기로 가서 아래의 코드를 추가하세요. 닫는 `</head>` 태그 바로 앞에 넣어주세요.
 
    ```html
    <script>
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 고전적인 방법은 스크립트 요소를 본문의 맨 마지막(`</body>` 태그 바로 앞)에 배치하는 것입니다. 그러면 모든 HTML을 읽은 후에 스크립트를 불러오게 됩니다. 이 방법의 문제는 HTML DOM을 모두 불러오기 전에는 스크립트의 로딩과 분석이 완전히 중단된다는 점입니다. 그래서 많은 스크립트를 포함하는 대형 사이트에서는 성능이 저하될 수 있습니다.
 
-#### async와 defer
+#### async와 defer
 
 스크립트 중단 문제를 해결할 수 있는 기능에는 사실 두 가지가 있습니다. `async`와 (위에서 본) `defer`입니다. 어떤 차이점이 있는지 알아봅시다.
 

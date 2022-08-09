@@ -21,7 +21,7 @@ translation_of: Web/API/Cache/put
 <pre class="brush: js">fetch(url).then(function(response) {
   if (!response.ok) {
     throw new TypeError('Bad response status');
-  }
+  }
   return cache.put(url, response);
 })
 
@@ -71,15 +71,15 @@ translation_of: Web/API/Cache/put
 
 <pre class="brush: js">var response;
 var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
+  return fetch(event.request);
 }).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
-  });
-  return response.clone();
+  response = r;
+  caches.open('v1').then(function(cache) {
+    cache.put(event.request, response);
+  });
+  return response.clone();
 }).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
+  return caches.match('/sw-test/gallery/myLittleVader.jpg');
 });</pre>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>

@@ -72,7 +72,7 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 
 ### Notes d'implémentation
 
-- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l’utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l’importer en utilisant `Cu.importGlobalProperties(['File']);`
+- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l’utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l’importer en utilisant `Cu.importGlobalProperties(['File']);`
 - À partir de Gecko 6.0 {{geckoRelease("6.0")}}, le code privilégié (par exemple au sein d’une extension) peut passer un objet `nsIFile` au constructeur DOM `File` pour spécifier le fichier à référencer.
 - À partir de Gecko 8.0 {{geckoRelease("8.0")}}, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets `nsIDOMFile` directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
 
@@ -90,4 +90,4 @@ new File(
 
 - [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/Using_files_from_web_applications)
 - {{domxref("FileReader")}}
-- [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s’exécutant dans Gecko, tel que des extensions de Firefox)
+- [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s’exécutant dans Gecko, tel que des extensions de Firefox)

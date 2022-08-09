@@ -63,9 +63,9 @@ original_slug: Web/HTTP/Peticiones_condicionales
  <dt>{{HTTPHeader("If-Modified-Since")}}</dt>
  <dd>Tiene éxito si la fecha {{HTTPHeader("Last-Modified")}} del recurso remoto es más reciente que la dada en este encabezado.</dd>
  <dt>{{HTTPHeader("If-Unmodified-Since")}}</dt>
- <dd>Tiene éxito si la fecha {{HTTPHeader("Last-Modified")}} del recurso remoto es más antigua que la dada en este encabezado.</dd>
+ <dd>Tiene éxito si la fecha {{HTTPHeader("Last-Modified")}} del recurso remoto es más antigua que la dada en este encabezado.</dd>
  <dt>{{HTTPHeader("If-Range")}}</dt>
- <dd>Similar a {{HTTPHeader("If-Match")}}, o {{HTTPHeader("If-Unmodified-Since")}}, pero sólo puede tener una etag, o una fecha. Si falla, la petición de rango falla, y en lugar de una respuesta {{HTTPStatus("206")}} <code>Partial Content</code> , se envía un {{HTTPStatus("200")}} <code>OK</code> con el recurso completo.</dd>
+ <dd>Similar a {{HTTPHeader("If-Match")}}, o {{HTTPHeader("If-Unmodified-Since")}}, pero sólo puede tener una etag, o una fecha. Si falla, la petición de rango falla, y en lugar de una respuesta {{HTTPStatus("206")}} <code>Partial Content</code> , se envía un {{HTTPStatus("200")}} <code>OK</code> con el recurso completo.</dd>
 </dl>
 
 <h2 id="Casos_de_uso">Casos de uso</h2>

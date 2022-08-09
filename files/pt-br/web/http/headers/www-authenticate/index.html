@@ -11,9 +11,9 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>O cabeçalho da resposta HTTP <strong><code>WWW-Authenticate</code></strong> define o método de autenticação a ser usado para obter acesso ao recurso.</p>
+<p>O cabeçalho da resposta HTTP <strong><code>WWW-Authenticate</code></strong> define o método de autenticação a ser usado para obter acesso ao recurso.</p>
 
-<p>O cabeçalho <code>WWW-Authenticate</code> é enviado junto a resposta {{HTTPStatus("401")}} <code>Unauthorized</code>.</p>
+<p>O cabeçalho <code>WWW-Authenticate</code> é enviado junto a resposta {{HTTPStatus("401")}} <code>Unauthorized</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -37,11 +37,11 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
 
 <dl>
  <dt>&lt;type&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de autenticação.</a> Um tipo comum de autenticação é <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. IANA mantém uma <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">lista de esquema de autenticação</a>.</dd>
+ <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">Tipo de autenticação.</a> Um tipo comum de autenticação é <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a>. IANA mantém uma <a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">lista de esquema de autenticação</a>.</dd>
  <dt>realm=&lt;realm&gt;</dt>
  <dd>Uma descrição da área protegida. Se nenhuma área for informada, os clientes frequentemente exibirão um hostname formatado.</dd>
  <dt>charset=&lt;charset&gt;</dt>
- <dd>Informa ao cliente qual é o encoding do servidor quando for submetido usuário e senha. O único valor permitido é "UTF-8". Isso não está relacionado ao encoding da realm string.</dd>
+ <dd>Informa ao cliente qual é o encoding do servidor quando for submetido usuário e senha. O único valor permitido é "UTF-8". Isso não está relacionado ao encoding da realm string.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>

@@ -50,7 +50,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>その一方で、サイトが視力のあるユーザーにとって動作していても、視覚障がいのあるユーザーにとって、スクリーンリーダーアプリケーションがそこにある情報を読み取れないため完全にアクセスできない場合は、OKではありません。</p>
 
-<p>2つ目に、「受け入れられる数のウェブブラウザ間で」と言った時、世界中のブラウザの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザや端末の情報を呼び出すことができます (このシリーズの2つ目の記事で見ていきましょう — <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。</p>
+<p>2つ目に、「受け入れられる数のウェブブラウザ間で」と言った時、世界中のブラウザの 100% の意味ではありません — これは不可能です。ユーザーが使うブラウザや端末の情報を呼び出すことができます (このシリーズの2つ目の記事で見ていきましょう — <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">Gotta test 'em all?</a>を見てください)が、すべてを保証することはできません。ウェブ開発者としては、ある範囲のブラウザと端末にてコードが完全に動作することをサイトオーナーと同意しておく必要があります。しかしそれを超えて、その他のブラウザでコンテンツを使う機会をできるだけ与えられるよう防衛的なコードを書いておく必要があります。</p>
 
 <div class="note">
 <p><strong>注</strong>: このモジュールの後の方でも、防衛的なコードをカバーします。</p>
@@ -64,7 +64,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <ul>
  <li>時々ブラウザにはバグがあったり、異なる仕様で機能が実装されています。この状況はかつてよりはましになっています。1990年代にIE4とNetscape4がブラウザの支配権を争っっていたとき、ブラウザ会社は意図的に競争優位性を得るために互いに異なる実装をしていました。これは開発者にとってはたまったもんじゃありませんでした。今日ではそのときに比べてはブラウザを取り巻く環境は遥かにましになっています。しかし、それでもブラウザ間での違いやバグは時々あります。</li>
- <li> ブラウザ間で機能についてのサポートのレベルが異なる場合があります。これは実装されたばかりの最先端の機能を使おうとした場合や新しい機能が開発されるよりずっと前に開発終了になったものすごく古いブラウザをサポートする場合には避けることはできません。たとえば、自分のサイトでJavaScript最新の機能を使いたい場合、これらの機能は古いブラウザでは動作しないかもしれません。もし古いブラウザをサポートする必要があるならそれらの機能を使わないかクロスコンパイラを使って古い書き方に変換する必要があります。</li>
+ <li> ブラウザ間で機能についてのサポートのレベルが異なる場合があります。これは実装されたばかりの最先端の機能を使おうとした場合や新しい機能が開発されるよりずっと前に開発終了になったものすごく古いブラウザをサポートする場合には避けることはできません。たとえば、自分のサイトでJavaScript最新の機能を使いたい場合、これらの機能は古いブラウザでは動作しないかもしれません。もし古いブラウザをサポートする必要があるならそれらの機能を使わないかクロスコンパイラを使って古い書き方に変換する必要があります。</li>
  <li>端末によっては制約があり、それによってウェブサイトの表示が遅くなったり表示がおかしくなったりします。たとえば、デスクトップPCでよく見えるように意図されたサイトは、携帯端末ではひょっとすると小さく読むのが難しかったりするかもしれません。また大量のアニメーションを読み込むサイトは、ハイスペックのタブレットでは大丈夫かもしれませんが、低スペックの端末ではカクつくかもしれません。</li>
 </ul>
 
@@ -92,7 +92,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>So for example, you might be building an e-commerce site that serves customers in North America. the site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, IE/Edge, and Safari. It should also provide an acceptable experience on IE 8 and 9, and be accessible with WCAG AA compliance.</p>
 
-<p>Now you know your target testing platforms, you should go back and review the required featureset and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.</p>
+<p>Now you know your target testing platforms, you should go back and review the required featureset and what technologies you are going to use. For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each product built into the product pages, they will need to accept that this just won't work in IE versions before 11. You'd have to agree to provide a version of the site without this feature to users of older IE versions.</p>
 
 <p>You should compile a list of the potential problem areas.</p>
 
@@ -136,7 +136,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
  <li>Also do tests in any other browsers you have included inside your target list.</li>
 </ul>
 
-<p>The most low fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a  team). You should try to test it on real physical devices where possible.</p>
+<p>The most low fi option is to just do all the testing you can by yourself (pulling in team mates to help out if you are working in a  team). You should try to test it on real physical devices where possible.</p>
 
 <p>If you haven't got the means to test all those different browser, operating system, and device combinations on physical hardware, you can also make use of emulators (emulate a device using software on your desktop computer) and virtual machines (software that allows you to emulate multiple operating system/software combinations on your desktop computer). This is a very popular choice, especially in some circumstances — for example, Windows doesn't let you have multiple versions of Windows installed simulataneously on the same machine, so using multiple virtual machines is often the only option here.</p>
 
@@ -149,7 +149,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
  <li>take a screenshot of each, allowing you to see if a layout is consistent across the different browsers.</li>
 </ul>
 
-<p>You can also go further than this, if wished. There are commercial tools available such as <a href="https://saucelabs.com/">Sauce Labs</a>, <a href="https://www.browserstack.com/">Browser Stack</a>, <a href="https://www.lambdatest.com/">LambdaTest</a>, <a href="https://testingbot.com">TestingBot</a>, and <a href="https://crossbrowsertesting.com">CrossBrowserTesting</a> that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.</p>
+<p>You can also go further than this, if wished. There are commercial tools available such as <a href="https://saucelabs.com/">Sauce Labs</a>, <a href="https://www.browserstack.com/">Browser Stack</a>, <a href="https://www.lambdatest.com/">LambdaTest</a>, <a href="https://testingbot.com">TestingBot</a>, and <a href="https://crossbrowsertesting.com">CrossBrowserTesting</a> that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing. It is also possible to set up an environment that automatically runs tests for you, and then only lets you check in your changes to the central code repository if the tests still pass.</p>
 
 <h4 id="Testing_on_prerelease_browsers" name="Testing_on_prerelease_browsers">Testing on prerelease browsers</h4>
 

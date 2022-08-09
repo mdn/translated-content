@@ -34,4 +34,4 @@ Les facteurs communs suivants sont à considérer :
 ### Culture générale
 
 - {{Link("fr/docs/Mozilla/Localization")}} sur MDN
-- {{interwiki("wikipedia", "Localisation_linguistique", "Localisation")}} sur Wikipedia
+- [Localisation](https://fr.wikipedia.org/wiki/Localisation_(linguistique)) sur Wikipédia

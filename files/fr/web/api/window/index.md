@@ -535,7 +535,7 @@ Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 - {{domxref("Window.XMLSerializer")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/fr/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}

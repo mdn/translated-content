@@ -29,7 +29,7 @@ original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 
 <h4 id="Cambios_en_el_elemento_SCRIPT">Cambios en el elemento SCRIPT</h4>
 
-<p>Ahora hay que cerrar el elemento <span style="font-family: Courier New;"><span class="nowiki">&lt;script&gt;</span></span> en <span style="font-family: Courier New;"><code>text/html</code></span> con <span style="font-family: Courier New;"><span class="nowiki">&lt;/script&gt;</span></span> en los documentos de HTML 4, incluso si no hay contenido dentro. En las versiones previas de Firefox, bastaba con hacer:</p>
+<p>Ahora hay que cerrar el elemento <span style="font-family: Courier New;"><span class="nowiki">&lt;script&gt;</span></span> en <span style="font-family: Courier New;"><code>text/html</code></span> con <span style="font-family: Courier New;"><span class="nowiki">&lt;/script&gt;</span></span> en los documentos de HTML 4, incluso si no hay contenido dentro. En las versiones previas de Firefox, bastaba con hacer:</p>
 
 <pre class="eval">&lt;script ...   /&gt;
 </pre>
@@ -55,9 +55,9 @@ original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 
 <h4 id="Acceso_Chrome" name="Acceso_Chrome">Acceso Chrome</h4>
 
-<p>En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://</a></code></span> usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos,  lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.</p>
+<p>En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://</a></code></span> usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos,  lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.</p>
 
-<p>Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://browser/</a></code> </span>y en espacio <span style="font-family: Courier New;"><a class="external" rel="freelink">chrome://toolkit/</a></span>. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.</p>
+<p>Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del <span style="font-family: Courier New;"><code><a class="external" rel="freelink">chrome://browser/</a></code> </span>y en espacio <span style="font-family: Courier New;"><a class="external" rel="freelink">chrome://toolkit/</a></span>. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.</p>
 
 <p>Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo<span style="font-family: Courier New;"> chrome.manifest </span>de esta manera:</p>
 
@@ -79,10 +79,10 @@ content mypackage location/ contentaccessible=yes
 
 <h3 id="Cambios_en_JavaScript" name="Cambios_en_JavaScript">Cambios en JavaScript</h3>
 
-<p>Firefox 3 soporta <span style="color: #008080;"><a href="../../../../../en/New_in_JavaScript_1.8" rel="internal">JavaScript 1.8</a></span>. Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los <span style="font-family: Courier New;">Script </span>obsoletos y no-estandar no son soportados. Esto no es la etiqueta <span style="font-family: Courier New;"><code><span class="nowiki">&lt;script&gt;</span></code></span>, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.</p>
+<p>Firefox 3 soporta <span style="color: #008080;"><a href="../../../../../en/New_in_JavaScript_1.8" rel="internal">JavaScript 1.8</a></span>. Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los <span style="font-family: Courier New;">Script </span>obsoletos y no-estandar no son soportados. Esto no es la etiqueta <span style="font-family: Courier New;"><code><span class="nowiki">&lt;script&gt;</span></code></span>, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.</p>
 
 <h3 id="Vea_tambien" name="Vea_tambien">Vea también</h3>
 
 <ul>
- <li><a href="/es/Firefox_3_for_developers" title="es/Firefox_3_for_developers">Firefox 3 para desarrolladores</a> <a href="/es/New_in_JavaScript_1.8" title="es/New_in_JavaScript_1.8">Nuevo en  JavaScript 1.8</a> <a href="/es/Updating_extensions_for_Firefox_3" title="es/Updating_extensions_for_Firefox_3">Actualizando extensiones para Firefox 3</a></li>
+ <li><a href="/es/Firefox_3_for_developers" title="es/Firefox_3_for_developers">Firefox 3 para desarrolladores</a> <a href="/es/New_in_JavaScript_1.8" title="es/New_in_JavaScript_1.8">Nuevo en  JavaScript 1.8</a> <a href="/es/Updating_extensions_for_Firefox_3" title="es/Updating_extensions_for_Firefox_3">Actualizando extensiones para Firefox 3</a></li>
 </ul>

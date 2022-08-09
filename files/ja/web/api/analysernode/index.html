@@ -44,7 +44,7 @@ translation_of: Web/API/AnalyserNode
 
 <h2 id="Properties">Properties</h2>
 
-<p><em> 以下は、</em><em>{{domxref("AudioNode")}}からプロパティを継承する</em>.</p>
+<p><em> 以下は、</em><em>{{domxref("AudioNode")}}からプロパティを継承する</em>.</p>
 
 <dl>
  <dt>{{domxref("AnalyserNode.fftSize")}}</dt>
@@ -96,7 +96,7 @@ translation_of: Web/API/AnalyserNode
 
 <p>以下の例では、AudioContextから１つのAnalyserNodeを作成しており、requestAnimationFrameと&lt;canvas&gt;へ繰り返し時間波形データを繰り返し集め現入力を“オシロスコープスタイル”で出力し描画している。</p>
 
-<p>より多くのサンプルは 我々の <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> デモにご覧頂けます。 (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+<p>より多くのサンプルは 我々の <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> デモにご覧頂けます。 (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
@@ -112,40 +112,40 @@ analyser.getByteTimeDomainData(dataArray);
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+      drawVisual = requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+      analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      canvasCtx.beginPath();
+      canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i &lt; bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
 
-        x += sliceWidth;
-      }
+        x += sliceWidth;
+      }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.stroke();
+    };
 
-    draw();</pre>
+    draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -159,7 +159,7 @@ function draw() {
   <tr>
    <td>{{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

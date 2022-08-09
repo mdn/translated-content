@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
   <tr>
    <td><code>^</code></td>
    <td>
-    <p>入力の先頭にマッチします。複数行フラグが true にセットされている場合は、改行文字の直後にもマッチします。例えば <code>/^A/</code> は "an A" の 'A' にはマッチしませんが、"An E" の 'A' にはマッチします。</p>
+    <p>入力の先頭にマッチします。複数行フラグが true にセットされている場合は、改行文字の直後にもマッチします。例えば <code>/^A/</code> は "an A" の 'A' にはマッチしませんが、"An E" の 'A' にはマッチします。</p>
 
     <div class="blockIndicator note">
     <p>この文字は、文字<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">集合</a>パターンの先頭にある場合は異なる意味を持ちます。</p>
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
   <tr>
    <td><code>$</code></td>
    <td>
-    <p>入力の末尾にマッチします。複数行フラグが true にセットされている場合は、改行文字の直前にもマッチします。例えば <code>/t$/</code> は "eater" の "t" にはマッチしませんが、"eat" の "t" にはマッチします。</p>
+    <p>入力の末尾にマッチします。複数行フラグが true にセットされている場合は、改行文字の直前にもマッチします。例えば <code>/t$/</code> は "eater" の "t" にはマッチしませんが、"eat" の "t" にはマッチします。</p>
    </td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 
     <ul>
      <li><code>/\bm/</code> は "m" にマッチします。これは `\b` が文字列の先頭に存在するからです。</li>
-     <li><code>/oo\b/</code> は "oo" にマッチしません。これは '\b' の前後に単語構成文字があるためです。</li>
+     <li><code>/oo\b/</code> は "oo" にマッチしません。これは '\b' の前後に単語構成文字があるためです。</li>
      <li><code>/oon\b/</code> は "oon" にマッチします。これは、文字列の終端であるためです。</li>
      <li><code>/\w\b\w/</code> はどこにもマッチしないでしょう。これは、'\b' の前後に単語構成文字があるためです。</li>
     </ul>
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
   <tr>
    <td>x(?=y)</td>
    <td>
-    <p><strong>先読み言明：</strong> <em><code>x</code></em> に <em><code>y</code></em> が続く場合のみ <em><code>x</code></em> にマッチします。例えば <code>/Jack(?=Sprat)/</code> は "Jack" の後に "Sprat" が続く場合のみ "Jack" にマッチします。<br>
+    <p><strong>先読み言明：</strong> <em><code>x</code></em> に <em><code>y</code></em> が続く場合のみ <em><code>x</code></em> にマッチします。例えば <code>/Jack(?=Sprat)/</code> は "Jack" の後に "Sprat" が続く場合のみ "Jack" にマッチします。<br>
      <code>/Jack(?=Sprat|Frost)/</code> は "Jack" の後ろに "Sprat" または "Frost" が続く場合のみ "Jack" にマッチします。しかしながら、"Sprat" も "Frost" もマッチの結果には表れません。</p>
    </td>
   </tr>
@@ -143,7 +143,7 @@ console.log(4, fixedMultiline); // 'greon' を修正しますが、'on' は対�
 
 <h3 id="制御文字を利用した入力の開始へのマッチ">^ 制御文字を利用した入力の開始へのマッチ</h3>
 
-<p> <code>^</code> は、通常、単語の開始にマッチさせるために利用します。この例では、<code>/^A/ </code>という正規表現で 'A' で始まるフルーツを取得します。ここでの <code>^</code> は、入力の開始を示すという、たった 1 つの役割を果たしています。適切なフルーツを選択するために<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー</a> 関数で <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter </a>メソッドを用います。</p>
+<p> <code>^</code> は、通常、単語の開始にマッチさせるために利用します。この例では、<code>/^A/ </code>という正規表現で 'A' で始まるフルーツを取得します。ここでの <code>^</code> は、入力の開始を示すという、たった 1 つの役割を果たしています。適切なフルーツを選択するために<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー</a> 関数で <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter </a>メソッドを用います。</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">let</span> fruits <span class="operator token">=</span> <span class="punctuation token">[</span><span class="string token">"Apple"</span><span class="punctuation token">,</span> <span class="string token">"Watermelon"</span><span class="punctuation token">,</span> <span class="string token">"Orange"</span><span class="punctuation token">,</span> <span class="string token">"Avocado"</span><span class="punctuation token">,</span> <span class="string token">"Strawberry"</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
 
@@ -195,7 +195,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <h3 id="言明と範囲における_!_の組み合わせの異なる意味での利用">言明と範囲における '?!' の組み合わせの異なる意味での利用</h3>
 
-<p> <code>?!</code> の組み合わせを利用するとき、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">言明</a> <code>/x(?!y)/ </code>と<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">範囲</a> <code>[^?!]</code>では異なる意味を持ちます。</p>
+<p> <code>?!</code> の組み合わせを利用するとき、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">言明</a> <code>/x(?!y)/ </code>と<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">範囲</a> <code>[^?!]</code>では異なる意味を持ちます。</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">let</span> orangeNotLemon <span class="operator token">=</span> <span class="string token">"Do you want to have an orange? Yes, I do not want to have a lemon!"</span><span class="punctuation token">;</span>
 

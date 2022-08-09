@@ -28,7 +28,7 @@ translation_of: Learn/Accessibility/Multimedia
  <tbody>
   <tr>
    <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターの知識、HTML 、CSS 、JavaScript に対する基本的な理解、 <a href="/ja/docs/Learn/Accessibility/What_is_accessibility">前回の記事</a> の理解</td>
+   <td>基本的なコンピューターの知識、HTML 、CSS 、JavaScript に対する基本的な理解、 <a href="/ja/docs/Learn/Accessibility/What_is_accessibility">前回の記事</a> の理解</td>
   </tr>
   <tr>
    <th scope="row">学習目標:</th>
@@ -39,7 +39,7 @@ translation_of: Learn/Accessibility/Multimedia
 
 <h2 id="Multimedia_and_accessibility" name="Multimedia_and_accessibility">マルチメディアとアクセシビリティ</h2>
 
-<p>このモジュールまで、様々なコンテンツに対してそのアクセシビリティを保証するために何が必要かを見てきました。シンプルな文章から始まって、データテーブル、画像、フォーム要素やボタンといったネイティブのコントロール、より複雑なマークアップ構造 (<a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 属性) などです。</p>
+<p>このモジュールまで、様々なコンテンツに対してそのアクセシビリティを保証するために何が必要かを見てきました。シンプルな文章から始まって、データテーブル、画像、フォーム要素やボタンといったネイティブのコントロール、より複雑なマークアップ構造 (<a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 属性) などです。</p>
 
 <p>一方こちらの記事は、アクセシビリティの保証が難しい別のマルチメディアのコンテンツ群について扱っています。画像、ビデオ、{{htmlelement("canvas")}} 要素、Flash 動画などは、スクリーンリーダーによる理解やキーボードによるナビゲーションが容易ではないため、私たちが手を差し伸べる必要があります。</p>
 
@@ -47,7 +47,7 @@ translation_of: Learn/Accessibility/Multimedia
 
 <h2 id="Simple_images" name="Simple_images">シンプルな画像</h2>
 
-<p>私達は既に <a href="/ja/docs/Learn/Accessibility/HTML">HTML: アクセシビリティの基礎</a> で HTML 画像のシンプルな代替テキストについてカバーしました — 詳細を確認するために、そこに戻っても良いです。簡単に言うと、ビジュアルコンテンツとなり得るものは、スクリーンリーダーがユーザーのために読み上げることができるよう、代替テキストが利用可能であることを保証するべきです。</p>
+<p>私達は既に <a href="/ja/docs/Learn/Accessibility/HTML">HTML: アクセシビリティの基礎</a> で HTML 画像のシンプルな代替テキストについてカバーしました — 詳細を確認するために、そこに戻っても良いです。簡単に言うと、ビジュアルコンテンツとなり得るものは、スクリーンリーダーがユーザーのために読み上げることができるよう、代替テキストが利用可能であることを保証するべきです。</p>
 
 <p>例えば:</p>
 
@@ -100,7 +100,7 @@ translation_of: Learn/Accessibility/Multimedia
 
 <h4 id="Basic_setup" name="Basic_setup">基本のセットアップ</h4>
 
-<p>はじめに、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html">custom-controls-start.html</a>、 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css">custom-controls.css</a>, <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4">rabbit320.mp4</a>、そして <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm">rabbit320.webm</a> のコピーを取得し、あなたのハードドライブのディレクトリーに保存します</p>
+<p>はじめに、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html">custom-controls-start.html</a>、 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css">custom-controls.css</a>, <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4">rabbit320.mp4</a>、そして <a href="https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm">rabbit320.webm</a> のコピーを取得し、あなたのハードドライブのディレクトリーに保存します</p>
 
 <p>main.js というファイルを新規作成し、同じディレクトリーに保存します。</p>
 
@@ -138,7 +138,7 @@ const timeLabel = document.querySelector('.time');</pre>
 
 <pre class="brush: js">const player = document.querySelector('video');</pre>
 
-<p>これは {{domxref("HTMLMediaElement")}} オブジェクトへの参照を保持します。このオブジェクトは、私たちのボタンに機能を紐づけるために使用可能ないくつかの便利なプロパティやメソッドを持っています。 </p>
+<p>これは {{domxref("HTMLMediaElement")}} オブジェクトへの参照を保持します。このオブジェクトは、私たちのボタンに機能を紐づけるために使用可能ないくつかの便利なプロパティやメソッドを持っています。 </p>
 
 <p>私たちのボタンの機能を作る前に、カスタムコンロールの邪魔にならないようネイティブコントロールを削除しましょう。JavaScript の下に次のコードを追加してください:</p>
 
@@ -168,7 +168,7 @@ const timeLabel = document.querySelector('.time');</pre>
   playPauseBtn.textContent = 'Play';
 };</pre>
 
-<p>{{domxref("HTMLMediaElement")}} には <code>stop()</code> 関数がありません。そこで <code>pause()</code> 関数を使用し、同時に <code>currentTime</code> に 0 を設定します。</p>
+<p>{{domxref("HTMLMediaElement")}} には <code>stop()</code> 関数がありません。そこで <code>pause()</code> 関数を使用し、同時に <code>currentTime</code> に 0 を設定します。</p>
 
 <p>続いて、巻き戻しと早送りボタンです。次のブロックをあなたのコードの下に追加してください:</p>
 
@@ -187,7 +187,7 @@ fwdBtn.onclick = function() {
 
 <p>これらはとてもシンプルで、クリックされる度に <code>currentTime</code> 単に 3 秒を足すか引くだけです。実際のビデオプレイヤーでは、あなたはもっと手の込んだものを作りたいでしょう。</p>
 
-<p>早送りボタンが押されたとき、  <code>currentTime</code> がメディアのトータルの <code>duration</code> よりも大きいか、そしてメディアが再生されていないかをチェックするという点についても気をつけてください。もしいずれかの条件が満たされているなら、ビデオが再生されていない時に早送りしようとしてもおかしくならないよう、単純にビデオを停止するか、ビデオの最後まで飛ばします。</p>
+<p>早送りボタンが押されたとき、  <code>currentTime</code> がメディアのトータルの <code>duration</code> よりも大きいか、そしてメディアが再生されていないかをチェックするという点についても気をつけてください。もしいずれかの条件が満たされているなら、ビデオが再生されていない時に早送りしようとしてもおかしくならないよう、単純にビデオを停止するか、ビデオの最後まで飛ばします。</p>
 
 <p>最後に、再生時間を表示するために次の内容をコードの最後に追加します:</p>
 
@@ -213,7 +213,7 @@ fwdBtn.onclick = function() {
   timeLabel.textContent = mediaTime;
 };</pre>
 
-<p>時間が更新される度に (1秒に一度) 、この関数を実行します。これは秒として渡された currentTime の値 (秒で与えられる) から分と秒の数を算定するもので、もし分か秒の値が 10 以下であれば先頭に 0 を追加し、表示用の値を生成して時間ラベルに追加します。 </p>
+<p>時間が更新される度に (1秒に一度) 、この関数を実行します。これは秒として渡された currentTime の値 (秒で与えられる) から分と秒の数を算定するもので、もし分か秒の値が 10 以下であれば先頭に 0 を追加し、表示用の値を生成して時間ラベルに追加します。 </p>
 
 <h4 id="Further_reading" name="Further_reading">参考記事</h4>
 
@@ -225,7 +225,7 @@ fwdBtn.onclick = function() {
  <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a></li>
 </ul>
 
-<p>さらに私たちは、あなたがどのようにしてオブジェクト指向システムを作ることができるかを見せるために高度な例も作りました。これは、ページ内のすべての video と audio プレイヤーを見つけ (どれだけ存在していたとしても)、私たちのカスタムコントロールを追加するものです。<a href="http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/">custom-controls-oojs</a> を見てください (<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS">ソースコード</a>も見てください) 。</p>
+<p>さらに私たちは、あなたがどのようにしてオブジェクト指向システムを作ることができるかを見せるために高度な例も作りました。これは、ページ内のすべての video と audio プレイヤーを見つけ (どれだけ存在していたとしても)、私たちのカスタムコントロールを追加するものです。<a href="http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/">custom-controls-oojs</a> を見てください (<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS">ソースコード</a>も見てください) 。</p>
 
 <h2 id="Audio_transcripts" name="Audio_transcripts">オーディオトランスクリプト(Audio transcripts)</h2>
 
@@ -234,8 +234,8 @@ fwdBtn.onclick = function() {
 <p>トランスクリプトを実際に作成する際は、次の選択肢があります。</p>
 
 <ul>
- <li>商用サービス — プロフェッショナルに料金を払って文字起こししてもらうことができるでしょう。例として <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>、<a href="https://www.rev.com/">Rev</a> などの会社を見てください。色々見てアドバイスをもらい、あなたがうまく作業できる評判の良い会社を見つけてください。</li>
- <li>コミュニティ/草の根/自身の文字起こし — あなたがアクティブなコミュニティや職場のチームの一員であるなら、彼らに文字起こしのヘルプを頼むことができるでしょう。試しに自分自身で文字起こしに挑戦することもできます。</li>
+ <li>商用サービス — プロフェッショナルに料金を払って文字起こししてもらうことができるでしょう。例として <a href="https://scribie.com/">Scribie</a>、<a href="https://castingwords.com/">Casting Words</a>、<a href="https://www.rev.com/">Rev</a> などの会社を見てください。色々見てアドバイスをもらい、あなたがうまく作業できる評判の良い会社を見つけてください。</li>
+ <li>コミュニティ/草の根/自身の文字起こし — あなたがアクティブなコミュニティや職場のチームの一員であるなら、彼らに文字起こしのヘルプを頼むことができるでしょう。試しに自分自身で文字起こしに挑戦することもできます。</li>
  <li>自動サービス — <a href="https://trint.com/">Trint</a> のように利用可能な AI サービスがあります。サイトにビデオ/オーディオファイルをアップロードすれば、自動的にそれを書き起こします。YouTube では、自動的にキャプション/トランスクリプトを生成するように選択できます。生成されるトランスクリプトのクォリティは、どれだけ明瞭に話されているかに応じて大きく変わります。</li>
 </ul>
 
@@ -245,9 +245,9 @@ fwdBtn.onclick = function() {
 
 <h3 id="Transcript_examples" name="Transcript_examples">トランスクリプト例</h3>
 
-<p>もしあなたが自動サービスを使用しているならば、おそらくツールが提供しているユーザーインターフェイスを使用する必要があるでしょう。例えば、<a href="https://www.youtube.com/watch?v=mwF-PpJOjMs">Wait, ARIA Roles Have Categories?</a>  を見て、 3点メニュー (. . .) <em>&gt; Show Transcript</em> を選択してください。トランスクリプトは別のパネルに表れるでしょう。</p>
+<p>もしあなたが自動サービスを使用しているならば、おそらくツールが提供しているユーザーインターフェイスを使用する必要があるでしょう。例えば、<a href="https://www.youtube.com/watch?v=mwF-PpJOjMs">Wait, ARIA Roles Have Categories?</a>  を見て、 3点メニュー (. . .) <em>&gt; Show Transcript</em> を選択してください。トランスクリプトは別のパネルに表れるでしょう。</p>
 
-<p>オーディオとそのトランスクリプトを表示するユーザーインターフェイスを自身で作成する場合、あなたのが考える形で作ることができますが、表示/非表示が可能なパネルを含むと良いかもしれません。私たちの <a href="http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/">audio-transcript-ui</a> の例を見てください。 (<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui">ソースコード</a> も見てください).</p>
+<p>オーディオとそのトランスクリプトを表示するユーザーインターフェイスを自身で作成する場合、あなたのが考える形で作ることができますが、表示/非表示が可能なパネルを含むと良いかもしれません。私たちの <a href="http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/">audio-transcript-ui</a> の例を見てください。 (<a href="https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui">ソースコード</a> も見てください).</p>
 
 <h3 id="Audio_descriptions" name="Audio_descriptions">オーディオの説明</h3>
 
@@ -269,7 +269,7 @@ fwdBtn.onclick = function() {
 <p><strong>注</strong>: テキストトラックは障害者だけでなく他のユーザーにとっても便利になる可能性があります。例えば、うるさい環境 (スポーツ中継を流している混雑したバーなど) にいるためにオーディオが聞こえないユーザーや、他の人を邪魔したくない静かな場所 (図書館など) にいるユーザーなどです。</p>
 </div>
 
-<p>これは新しいコンセプトではありません — テレビ放送では、かなり長い間クローズドキャプションを提供しています:</p>
+<p>これは新しいコンセプトではありません — テレビ放送では、かなり長い間クローズドキャプションを提供しています:</p>
 
 <p><img alt='Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"' src="https://mdn.mozillademos.org/files/14436/closed-captions.png" style="display: block; height: 240px; margin: 0px auto; width: 320px;"></p>
 
@@ -308,7 +308,7 @@ This is the second.
 
 <ul>
  <li>.vtt ファイルとしてアクセス可能な場所に保存します。</li>
- <li>{{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 <code>&lt;track&gt;</code> は <code>&lt;audio&gt;</code> か <code>&lt;video&gt;</code> の間に設置する必要がありますが、すべての <code>&lt;source&gt;</code> 要素の後でなければいけません。 {{htmlattrxref("kind","track")}} 属性を使い、キューが字幕、キャプション、ディスクリプションのどれなのかを指定します。さらに、 {{htmlattrxref("srclang","track")}} を使って、字幕でどの言語が使用されているのかを伝えます。</li>
+ <li>{{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 <code>&lt;track&gt;</code> は <code>&lt;audio&gt;</code> か <code>&lt;video&gt;</code> の間に設置する必要がありますが、すべての <code>&lt;source&gt;</code> 要素の後でなければいけません。 {{htmlattrxref("kind","track")}} 属性を使い、キューが字幕、キャプション、ディスクリプションのどれなのかを指定します。さらに、 {{htmlattrxref("srclang","track")}} を使って、字幕でどの言語が使用されているのかを伝えます。</li>
 </ul>
 
 <p>例を見てみましょう:</p>
@@ -323,7 +323,7 @@ This is the second.
 
 <p><img alt='Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
-<p>詳細は <a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> を読んでください。あなたは、GitHub で GIan Devlin によって作られた<a href="http://iandevlin.github.io/mdn/video-player-with-captions/">例</a>をこの記事と併せて見ることができます。(<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source ソースコード</a> も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。</p>
+<p>詳細は <a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a> を読んでください。あなたは、GitHub で GIan Devlin によって作られた<a href="http://iandevlin.github.io/mdn/video-player-with-captions/">例</a>をこの記事と併せて見ることができます。(<a href="https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions">source ソースコード</a> も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。</p>
 
 <div class="note">
 <p><strong>注</strong>: テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによってビデオの途中に直接リンクすることさえできます。</p>
@@ -343,7 +343,7 @@ This is the second.
 
 <ul>
  <li>もし Flash や Silverlight のようなプラグイン技術を使用してオーディオコンテンツを埋め込んでいる場合、上の <a href="#transcript_examples">Transcript examples</a> セクションで既に紹介したのと同じ方法でオーディオトランスクリプトを提供することができるでしょう。</li>
- <li>Flash や Silverlight のようなプラグイン技術でビデオコンテンツを埋め込んでいる場合、それらの技術で利用可能なキャプション/字幕の技術を利用することができます。例えば、 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>、<a href="https://help.adobe.com/en_US/as3/components/WS5b3ccc516d4fbf351e63e3d118a9c65b32-7ee5.html">Using Timed Text Captions</a> (Flash用) 、 <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a> などを見てください。</li>
+ <li>Flash や Silverlight のようなプラグイン技術でビデオコンテンツを埋め込んでいる場合、それらの技術で利用可能なキャプション/字幕の技術を利用することができます。例えば、 <a href="http://www.adobe.com/accessibility/products/flash/captions.html">Flash captions</a>、<a href="https://help.adobe.com/en_US/as3/components/WS5b3ccc516d4fbf351e63e3d118a9c65b32-7ee5.html">Using Timed Text Captions</a> (Flash用) 、 <a href="https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/">Playing Subtitles with Videos in Silverlight</a> などを見てください。</li>
 </ul>
 
 <p>しかし、他のマルチメディアはアクセシブルにすることがそう簡単ではありません。例えば、没入型 3D ゲームやバーチャルリアリティアプリを扱っている場合、そのような体験に対して代替テキストを提供することは非常に困難であるし、盲目のユーザーはそのようなアプリのターゲットに当てはまらないと考えるかもしれません。</p>

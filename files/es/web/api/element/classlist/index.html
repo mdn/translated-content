@@ -12,32 +12,32 @@ translation_of: Web/API/Element/classList
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>La propiedad de sólo lectura <code><strong>Element.classList</strong></code> devuelve una colección activa de <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" title="The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive."><code>DOMTokenList</code></a> de los atributos de clase del elemento.</p>
+<p>La propiedad de sólo lectura <code><strong>Element.classList</strong></code> devuelve una colección activa de <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList" title="The DOMTokenList interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAnchorElement.relList or HTMLAreaElement.relList. It is indexed beginning with 0 as with JavaScript Array objects. DOMTokenList is always case-sensitive."><code>DOMTokenList</code></a> de los atributos de clase del elemento.</p>
 
-<p>Usar <code>classList</code> es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.</p>
+<p>Usar <code>classList</code> es una forma práctica de acceder a la lista de clases de un elemento como una cadena de texto delimitada por espacios a través de {{domxref("element.className")}}.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
 <pre class="syntaxbox">var <var>elementClasses</var> = elementNodeReference.classList;
 </pre>
 
-<p><em>elementClasses</em> es un <a href="/en-US/docs/DOM/DOMTokenList">DOMTokenList</a> que representa el atributo clase de <em>elementNodeReference</em>. Si el atributo clase no está definido o está vacío, <em>elementClasses.length</em> devuelve 0. <code>element.classList</code> por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos<code> add()</code> y <code>remove()</code>.</p>
+<p><em>elementClasses</em> es un <a href="/en-US/docs/DOM/DOMTokenList">DOMTokenList</a> que representa el atributo clase de <em>elementNodeReference</em>. Si el atributo clase no está definido o está vacío, <em>elementClasses.length</em> devuelve 0. <code>element.classList</code> por sí mismo es de sólo lectura, aunque puede ser modificado usando los métodos<code> add()</code> y <code>remove()</code>.</p>
 
 <h2 id="Métodos">Métodos</h2>
 
 <dl>
  <dt>add( String [, String] )</dt>
  <dd>Añade las clases indicadas. Si estas clases existieran en el atributo del elemento serán ignoradas.</dd>
- <dt>remove( String [, String] )</dt>
+ <dt>remove( String [, String] )</dt>
  <dd>Elimina las clases indicadas.<br>
  <strong>Nota:</strong> Eliminar una clase que no existe NO produce un error.</dd>
  <dt><strong>item</strong>( Number )</dt>
  <dd>Devuelve el valor de la clase por índice en la colección.</dd>
- <dt><strong>toggle</strong>( String [, force] )</dt>
- <dd>Cuando sólo hay un argumento presente: Alterna el valor de la clase; ej., si la clase existe la <u>elimina</u> y devuelve <code>false</code>, si no, la <u>añade</u> y devuelve <code>true</code>.<br>
- Cuando el segundo argumento está presente: Si el segundo argumento se evalúa como <code>true</code>, se añade la clase indicada, y si se evalúa como <code>false</code>, la elimina.</dd>
+ <dt><strong>toggle</strong>( String [, force] )</dt>
+ <dd>Cuando sólo hay un argumento presente: Alterna el valor de la clase; ej., si la clase existe la <u>elimina</u> y devuelve <code>false</code>, si no, la <u>añade</u> y devuelve <code>true</code>.<br>
+ Cuando el segundo argumento está presente: Si el segundo argumento se evalúa como <code>true</code>, se añade la clase indicada, y si se evalúa como <code>false</code>, la elimina.</dd>
  <dt>contains( String )</dt>
- <dd>Comprueba si la clase indicada existe en el atributo de clase del elemento.</dd>
+ <dd>Comprueba si la clase indicada existe en el atributo de clase del elemento.</dd>
  <dt>replace( oldClass, newClass )</dt>
  <dd>Reemplaza una clase existente por una nueva.</dd>
 </dl>
@@ -64,7 +64,7 @@ div.classList.remove("foo", "bar");
 div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
-<p>Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
+<p>Las versiones de Firefox anteriores a la 26 no implementan el uso de múltiples argumentos en los métodos add/remove/toggle. Vea <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
 </div>
 
 <h2 id="Especificaciones">Especificaciones</h2>
@@ -91,7 +91,7 @@ div.classList.replace("foo", "bar");</pre>
   <tr>
    <td>{{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}</td>
    <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

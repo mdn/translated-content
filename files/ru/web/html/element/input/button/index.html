@@ -81,13 +81,13 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Запустить ПК') {
-    button.value = 'Выключить ПК';
-    paragraph.textContent = 'ПК запущен!';
-  } else {
-    button.value = 'Запустить ПК';
-    paragraph.textContent = 'ПК выключен.';
-  }
+  if (button.value === 'Запустить ПК') {
+    button.value = 'Выключить ПК';
+    paragraph.textContent = 'ПК запущен!';
+  } else {
+    button.value = 'Запустить ПК';
+    paragraph.textContent = 'ПК выключен.';
+  }
 }</pre>
 
 <p>Сценарий получает ссылку на объект {{domxref("HTMLInputElement")}}, представляющий <code>&lt;input&gt;</code> в DOM, сохраняя этот параметр в переменной <code>button</code>. Затем {{domxref("EventTarget.addEventListener", "addEventListener()")}} используется для установки функции, которая будет запускаться, когда на кнопке происходят события {{event("click")}}.</p>
@@ -115,13 +115,13 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }</pre>
 </div>
 
@@ -151,12 +151,12 @@ function updateButton() {
 button.addEventListener('click', disableButton);
 
 function disableButton() {
-  button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
-    button.disabled = false;
-    button.value = 'Enabled';
-  }, 2000);
+  button.disabled = true;
+  button.value = 'Disabled';
+  window.setTimeout(function() {
+    button.disabled = false;
+    button.value = 'Enabled';
+  }, 2000);
 }</pre>
 </div>
 
@@ -215,13 +215,13 @@ function disableButton() {
 
 <div class="hidden">
 <pre class="brush: css">body {
-  background: #ccc;
+  background: #ccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #ccc;
   width: 150px;
   height: 75px;
   padding: 5px;

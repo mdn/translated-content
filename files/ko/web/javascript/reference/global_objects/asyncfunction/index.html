@@ -7,9 +7,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Async</strong></code><strong><code>Function</code> 생성자는</strong> 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.</p>
+<p><code><strong>Async</strong></code><strong><code>Function</code> 생성자는</strong> 새로운 {{jsxref("Statements/async_function", "async function")}} 객체를 만든다. 자바스크립트에서 모든 비동기 함수는 사실상 AsyncFunction 객체이다.</p>
 
-<p><code>AsyncFunction</code>이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다. </p>
+<p><code>AsyncFunction</code>이 전역변수가 아님에 주의한다. 다음코드를 보면 알 수 있다. </p>
 
 <pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
 </pre>
@@ -29,27 +29,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <h2 id="상세설명">상세설명</h2>
 
-<p>AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_function", "async function")}} 객체는 함수가 만들어질때 분석된다. 이방법에서는 코드가 실행되지 않을 때도 작동하기 때문에 {{jsxref("Statements/async_function", "async function expression")}} 으로 비동기함수를 정의하고 해당 코드에서 호출할 때보다 비효율적이다.</p>
+<p>AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_function", "async function")}} 객체는 함수가 만들어질때 분석된다. 이방법에서는 코드가 실행되지 않을 때도 작동하기 때문에 {{jsxref("Statements/async_function", "async function expression")}} 으로 비동기함수를 정의하고 해당 코드에서 호출할 때보다 비효율적이다.</p>
 
 <p>함수에 전달된 모든 인수들은 전달된 순서대로 함수내에서 인수이름으로 식별자가 생성된 것처럼 다루어진다.</p>
 
 <div class="note">
-<p><strong>주의:</strong> <code>AsyncFunction</code> 생성자로 만들어진 {{jsxref("Statements/async_function", "async functions")}} 객체는 클로저를 생성 컨텍스트에 만들지 않는다; 이 객체들은 항상  전역 범위에서 생성됩니다. </p>
+<p><strong>주의:</strong> <code>AsyncFunction</code> 생성자로 만들어진 {{jsxref("Statements/async_function", "async functions")}} 객체는 클로저를 생성 컨텍스트에 만들지 않는다; 이 객체들은 항상  전역 범위에서 생성됩니다. </p>
 
 <p>이 객체들을 실행할 때, <code>AsyncFunction</code>생성자가 호출된 범위의 변수가 아니라 자신의 지역 변수와 전역 변수에만 액세스 할 수 있습니다.</p>
 
 <p>이것은 비동기 함수 표현식을위한 코드와 함께 {{jsxref ( "Global_Objects/eval", "eval")}}을 사용하는 것과 다릅니다.</p>
 </div>
 
-<p><code>AsyncFunction</code> 생성자를 (<code>new</code> 연산자를 사용하지 않고) 함수로 호출하는 것과 생성자로 동작시키는 것은 동일하다.</p>
+<p><code>AsyncFunction</code> 생성자를 (<code>new</code> 연산자를 사용하지 않고) 함수로 호출하는 것과 생성자로 동작시키는 것은 동일하다.</p>
 
 <h2 id="속성">속성</h2>
 
 <dl>
  <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd><code>AsyncFunction</code> 생성자의 <code>length</code> 속성(이 값은 1임).</dd>
+ <dd><code>AsyncFunction</code> 생성자의 <code>length</code> 속성(이 값은 1임).</dd>
  <dt><strong><code>AsyncFunction.prototype</code></strong></dt>
- <dd>모든 비동기 함수 객체에 속성을 추가할 수 있도록 함.</dd>
+ <dd>모든 비동기 함수 객체에 속성을 추가할 수 있도록 함.</dd>
  <dt><code><strong>AsyncFunction.constructor</strong></code></dt>
  <dd>초기값은 {{jsxref("AsyncFunction")}}임.</dd>
  <dt><code><strong>AsyncFunction.prototype[@@toStringTag]</strong></code></dt>
@@ -58,13 +58,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <h2 id="AsyncFunction_인스턴스"><code>AsyncFunction 인스턴스</code></h2>
 
-<p><code>AsyncFunction</code> 인스턴스는 <code>AsyncFunction.prototype</code> 에서 메소드와 속성을 상속받는다.</p>
+<p><code>AsyncFunction</code> 인스턴스는 <code>AsyncFunction.prototype</code> 에서 메소드와 속성을 상속받는다.</p>
 
-<p>여느 생성자에서와 같이 모든 <code>AsyncFunction</code> 인스턴스들을 수정할 수 있도록 생성자의 <code>prototype</code> 객체를 수정할 수 있다.</p>
+<p>여느 생성자에서와 같이 모든 <code>AsyncFunction</code> 인스턴스들을 수정할 수 있도록 생성자의 <code>prototype</code> 객체를 수정할 수 있다.</p>
 
 <h2 id="예제">예제</h2>
 
-<h3 id="AsyncFunction_생성자를_통한_비동기_함수_만들기"><code>AsyncFunction</code> 생성자를 통한 비동기 함수 만들기</h3>
+<h3 id="AsyncFunction_생성자를_통한_비동기_함수_만들기"><code>AsyncFunction</code> 생성자를 통한 비동기 함수 만들기</h3>
 
 <pre>function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {
@@ -86,28 +86,11 @@ a(10, 20).then(v =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition in ES2017.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
 <p>{{Compat("javascript.builtins.AsyncFunction")}}</p>
-
-
 
 <h2 id="참고_문서">참고 문서</h2>
 

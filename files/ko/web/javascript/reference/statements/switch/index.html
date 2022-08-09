@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>The <strong><code>switch</code> statement</strong> evaluates an <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expression</a>, matching the expression's value to a <code>case</code> clause, and executes <a href="/en-US/docs/Web/JavaScript/Reference/Statements">statements</a> associated with that case, as well as statements in cases that follow the matching case.</p>
+<p>The <strong><code>switch</code> statement</strong> evaluates an <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">expression</a>, matching the expression's value to a <code>case</code> clause, and executes <a href="/en-US/docs/Web/JavaScript/Reference/Statements">statements</a> associated with that case, as well as statements in cases that follow the matching case.</p>
 
 
 <div>{{EmbedInteractiveExample("pages/js/statement-switch.html")}}</div>
@@ -39,9 +39,9 @@ translation_of: Web/JavaScript/Reference/Statements/switch
  <dd><br>
  각각의 case 절에 맞추어볼 결과에 대한 <code>expression</code></dd>
  <dt><code>case valueN</code> {{optional_inline}}</dt>
- <dd>어떤 <code>case</code> 절은  <code>expression</code>와 맞추어보는데 사용된다. 만약 <code>expression</code> 이 특정 <code>valueN</code>과 일치 된다면, <code>switch</code> statement 문이 끝나거나 <code>break</code>가 오떄까지 case 절 내부가 실행된다.</dd>
+ <dd>어떤 <code>case</code> 절은  <code>expression</code>와 맞추어보는데 사용된다. 만약 <code>expression</code> 이 특정 <code>valueN</code>과 일치 된다면, <code>switch</code> statement 문이 끝나거나 <code>break</code>가 오떄까지 case 절 내부가 실행된다.</dd>
  <dt><code>default</code> {{optional_inline}}</dt>
- <dd><code>default</code> 절; 만약 있다면,  어떤 <code>case</code>의 절도 <code>expression</code> 값과 일치되지 않는다면, default 절이 실행된다.</dd>
+ <dd><code>default</code> 절; 만약 있다면,  어떤 <code>case</code>의 절도 <code>expression</code> 값과 일치되지 않는다면, default 절이 실행된다.</dd>
 </dl>
 
 <h2 id="설명">설명</h2>
@@ -104,18 +104,18 @@ switch (foo) {
     console.log('default');
 }</pre>
 
-<h3 id="Can_I_put_a_default_between_cases">Can I put a default between cases?</h3>
+<h3 id="Can_I_put_a_default_between_cases">Can I put a default between cases?</h3>
 
 <p>Yes, you can! JavaScript will drop you back to the default if it can't find a match:</p>
 
 <pre class="brush: js">var foo = 5;
 switch (foo) {
   case 2:
-    console.log(2);
-    break; // it encounters this break so will not continue into 'default:'
-  default:
-    console.log('default')
-    // fall-through
+    console.log(2);
+    break; // it encounters this break so will not continue into 'default:'
+  default:
+    console.log('default')
+    // fall-through
   case 1:
     console.log('1');
 }
@@ -131,7 +131,7 @@ switch (foo) {
 
 <h4 id="Multi-case_-_single_operation">Multi-case - single operation</h4>
 
-<p>This method takes advantage of the fact that if there is no break below a case statement it will continue to execute the next case statement regardless if the case meets the criteria. See the section titled "What happens if I forgot a break?"</p>
+<p>This method takes advantage of the fact that if there is no break below a case statement it will continue to execute the next case statement regardless if the case meets the criteria. See the section titled "What happens if I forgot a break?"</p>
 
 <p>This is an example of a single operation sequential switch statement, where four different values perform exactly the same.</p>
 
@@ -217,86 +217,56 @@ switch (foo) {
 
 <h3 id="Block-scope_variables_within_switch_statements">Block-scope variables within <code>switch</code> statements</h3>
 
-<p>With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a> statements to declare block-scoped variables.</p>
+<p>With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a> statements to declare block-scoped variables.</p>
 
 <p>Take a look at this example:</p>
 
 <pre class="brush: js">const action = 'say_hello';
 switch (action) {
-  case 'say_hello':
-    let message = 'hello';
-    console.log(message);
-    break;
-  case 'say_hi':
-    let message = 'hi';
-    console.log(message);
-    break;
-  default:
-    console.log('Empty action received.');
-    break;
+  case 'say_hello':
+    let message = 'hello';
+    console.log(message);
+    break;
+  case 'say_hi':
+    let message = 'hi';
+    console.log(message);
+    break;
+  default:
+    console.log('Empty action received.');
+    break;
 }</pre>
 
-<p>This example will output the error <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code> which you were not probably expecting.</p>
+<p>This example will output the error <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code> which you were not probably expecting.</p>
 
-<p>This is because the first <code>let message = 'hello';</code> conflicts with second let statement <code>let message = 'hi';</code> even they're within their own separate case statements <code>case 'say_hello':</code> and <code>case 'say_hi':</code>; ultimately this is due to both <code>let</code> statements being interpreted as duplicate declarations of the same variable name within the same block scope.</p>
+<p>This is because the first <code>let message = 'hello';</code> conflicts with second let statement <code>let message = 'hi';</code> even they're within their own separate case statements <code>case 'say_hello':</code> and <code>case 'say_hi':</code>; ultimately this is due to both <code>let</code> statements being interpreted as duplicate declarations of the same variable name within the same block scope.</p>
 
 <p>We can easily fix this by wrapping our case statements with brackets:</p>
 
 <pre class="brush: js">const action = 'say_hello';
 switch (action) {
-  case 'say_hello': <strong>{ // added brackets</strong>
-    let message = 'hello';
-    console.log(message);
-    break;
-  <strong>} // added brackets</strong>
-  case 'say_hi': <strong>{ // added brackets</strong>
-    let message = 'hi';
-    console.log(message);
-    break;
-  <strong>} // added brackets</strong>
-  default: <strong>{ // added brackets</strong>
-    console.log('Empty action received.');
-    break;
+  case 'say_hello': <strong>{ // added brackets</strong>
+    let message = 'hello';
+    console.log(message);
+    break;
+  <strong>} // added brackets</strong>
+  case 'say_hi': <strong>{ // added brackets</strong>
+    let message = 'hi';
+    console.log(message);
+    break;
+  <strong>} // added brackets</strong>
+  default: <strong>{ // added brackets</strong>
+    console.log('Empty action received.');
+    break;
   <strong>} // added brackets</strong>
 }</pre>
 
 <p>This code will now output <code>hello</code> in the console as it should, without any errors at all.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-switch-statement', 'switch statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.statements.switch")}}</p>
 

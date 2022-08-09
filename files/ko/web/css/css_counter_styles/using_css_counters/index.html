@@ -15,31 +15,31 @@ original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong>CSS counters</strong>를 사용하면 문서에서의 위치에 따라 콘텐츠의 모양을 조정할 수 있습니다. 예를 들어, counters를 사용해 웹페이지의 제목에 자동으로 번호를 매길 수 있습니다. Counters는 요소가 몇 번이나 사용되었는지 추적하여 CSS 규칙에 따라 증가하며, 본질적으로 변수입니다.</p>
+<p><strong>CSS counters</strong>를 사용하면 문서에서의 위치에 따라 콘텐츠의 모양을 조정할 수 있습니다. 예를 들어, counters를 사용해 웹페이지의 제목에 자동으로 번호를 매길 수 있습니다. Counters는 요소가 몇 번이나 사용되었는지 추적하여 CSS 규칙에 따라 증가하며, 본질적으로 변수입니다.</p>
 
 <h2 id="Using_counters">Counters 사용하기</h2>
 
 <h3 id="Manipulating_a_counters_value">카운터 값 조작하기</h3>
 
-<p>CSS counter를 사용하려면 먼저 {{cssxref("counter-reset")}} 속성(초깃값  <code>0</code>)을 사용하여 초기화 해야합니다. 동일한 속성으로 값을 특정 값으로 바꿀 수도 있습니다. 초기화 된 counter의 값은 {{cssxref("counter-increment")}}에 따라 증가하거나 감소합니다. counter의 이름으로 "none", "inherit", "initial"은 사용불가합니다. 이런 이름을 사용하면 선언은 무시됩니다.</p>
+<p>CSS counter를 사용하려면 먼저 {{cssxref("counter-reset")}} 속성(초깃값  <code>0</code>)을 사용하여 초기화 해야합니다. 동일한 속성으로 값을 특정 값으로 바꿀 수도 있습니다. 초기화 된 counter의 값은 {{cssxref("counter-increment")}}에 따라 증가하거나 감소합니다. counter의 이름으로 "none", "inherit", "initial"은 사용불가합니다. 이런 이름을 사용하면 선언은 무시됩니다.</p>
 
 <h3 id="Displaying_a_counter">카운터 표시하기</h3>
 
-<p>Counter의 값은 {{cssxref("content")}} 속성에서 {{cssxref("counter()")}}나 {{cssxref("counters()")}} 함수를 사용하여 표시할 수 있습니다.</p>
+<p>Counter의 값은 {{cssxref("content")}} 속성에서 {{cssxref("counter()")}}나 {{cssxref("counters()")}} 함수를 사용하여 표시할 수 있습니다.</p>
 
-<p><code>counter()</code> 함수는 'counter(name)'와 'counter(name, style)' 두 가지 형태로 사용할 수 있습니다. 생성된 텍스트는 가상 요소가 속한 범위에 있는 이름(name)의 가장 안쪽 counter의 값입니다. 텍스트는 지정된 서식(기본값은 십진수<code>decimal</code>)으로 뿌려집니다.</p>
+<p><code>counter()</code> 함수는 'counter(name)'와 'counter(name, style)' 두 가지 형태로 사용할 수 있습니다. 생성된 텍스트는 가상 요소가 속한 범위에 있는 이름(name)의 가장 안쪽 counter의 값입니다. 텍스트는 지정된 서식(기본값은 십진수<code>decimal</code>)으로 뿌려집니다.</p>
 
-<p><code>counters()</code> 함수도 'counters(name, string)'나 'counters(name, string, style)' 두 가지 형태로 사용할 수 있습니다. 생성된 텍스트는 가상 요소가 속한 모든 범위에서 지정된 이름을 가진 counters의 값으로, 바깥 쪽부터 안쪽까지 값이 주어지며 지정된 문자열로 구분됩니다. counters는 지정된 스타일(기본값은 십진수<code>decimal</code>)로 렌더링 됩니다.</p>
+<p><code>counters()</code> 함수도 'counters(name, string)'나 'counters(name, string, style)' 두 가지 형태로 사용할 수 있습니다. 생성된 텍스트는 가상 요소가 속한 모든 범위에서 지정된 이름을 가진 counters의 값으로, 바깥 쪽부터 안쪽까지 값이 주어지며 지정된 문자열로 구분됩니다. counters는 지정된 스타일(기본값은 십진수<code>decimal</code>)로 렌더링 됩니다.</p>
 
 <h3 id="Basic_example">기본 예제</h3>
 
-<p>여기서는 제목 앞에 숫자를 붙여봅니다.</p>
+<p>여기서는 제목 앞에 숫자를 붙여봅니다.</p>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">body {
   counter-reset: section;                       /* counter 이름을 'section'으로 지정합니다.
-                                                   초깃값은 0입니다. */
+                                                   초깃값은 0입니다. */
 }
 
 h3::before {
@@ -88,7 +88,7 @@ a[href]:empty::after {
 
 <h2 id="Nesting_counters">중첩 카운터</h2>
 
-<p>CSS 카운터는 자식 요소 안에서 새 인스턴스를 자동으로 만들어주어 목차를 만드는데 유용합니다. {{cssxref("counters()")}} 함수를 사용해 중첩된 다른 레벨의 카운터 사이를 분리하는 글자를 지정할 수 있습니다.</p>
+<p>CSS 카운터는 자식 요소 안에서 새 인스턴스를 자동으로 만들어주어 목차를 만드는데 유용합니다. {{cssxref("counters()")}} 함수를 사용해 중첩된 다른 레벨의 카운터 사이를 분리하는 글자를 지정할 수 있습니다.</p>
 
 <h3 id="Example_of_a_nested_counter">중첩 카운터 예제</h3>
 
@@ -146,27 +146,7 @@ li::before {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS3 Lists")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="See_also">See also</h2>
 

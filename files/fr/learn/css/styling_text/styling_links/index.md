@@ -305,7 +305,7 @@ Regardons un peu d'HTML et de CSS qui nous donneront l'effet que nous voulons. T
 
 ```html
 <p>Pour davantage d'information sur la météo, visitez notre <a href="http://#">page météo</a>,
-jetez un œil sur <a href="http://#">météo sur Wikipedia</a>, ou regardez la <a href="http://#">météo sur Science Extrême </a>.</p>
+jetez un œil sur <a href="http://#">météo sur Wikipédia</a>, ou regardez la <a href="http://#">météo sur Science Extrême </a>.</p>
 ```
 
 Ensuite, le CSS:

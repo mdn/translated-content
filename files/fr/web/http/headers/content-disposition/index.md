@@ -130,6 +130,6 @@ value2
 
 ## Voir également
 
-- [HTML Forms](/en-US/docs/Web/Guide/HTML/Forms)
+- [HTML Forms](/fr/docs/Web/Guide/HTML/Forms)
 - {{HTTPHeader("Content-Type")}} définissant la limite du corps multipartie.
 - L'interface {{domxref("FormData")}} utilisée pour manipuler les données de formulaire à utiliser dans l'API {{domxref("XMLHttpRequest")}}.

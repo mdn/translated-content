@@ -13,7 +13,7 @@ L'[API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) fournit une interface
 
 At the heart of Fetch are the Interface abstractions of HTTP {{domxref("Request")}}s, {{domxref("Response")}}s, {{domxref("Headers")}}, and {{domxref("Body")}} payloads, along with a {{domxref("GlobalFetch.fetch","global fetch")}} method for initiating asynchronous resource requests. Because the main components of HTTP are abstracted as JavaScript objects, it is easy for other APIs to make use of such functionality.
 
-[Service Workers](/en-US/docs/Web/API/ServiceWorker_API) is an example of an API that makes heavy use of Fetch.
+[Service Workers](/fr/docs/Web/API/ServiceWorker_API) is an example of an API that makes heavy use of Fetch.
 
 Fetch takes the asynchronous nature of such requests one step further. The API is completely {{jsxref("Promise")}}-based.
 

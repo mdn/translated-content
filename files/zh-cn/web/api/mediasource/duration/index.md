@@ -7,36 +7,28 @@ translation_of: Web/API/MediaSource/duration
 
 {{domxref("MediaSource")}} 接口的属性 **`duration`** 用来获取或者设置当前媒体展示的时长。
 
-## 语法
-
-```js
-mediaSource.duration = 5.5; // 5.5 seconds
-
-var myDuration = mediaSource.duration;
-```
-
 ### 值
 
-以秒为单位的 双精度浮点数。
+以秒为单位的双精度浮点数。
 
 ### 异常
 
 设置新的值的时候可能会有下面的错误抛出。
 
-| 错误                 | 异常                                                                                                                                                                                                                       |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidAccessError` | 时长尝试设置一个负数，或者 `NaN`.                                                                                                                                                                                          |
-| `InvalidStateError`  | {{domxref("MediaSource.readyState")}} 状态不是 `open`, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新 (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 `true`.) |
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : 时长尝试设置一个负数，或者为 `NaN` 则抛出。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : {{domxref("MediaSource.readyState")}} 的状态不是 `open`，或者有一个或多个在 {{domxref("MediaSource.sourceBuffers")}} 中的 {{domxref("SourceBuffer")}} 对象被更新（例如它们的 {{domxref("SourceBuffer.updating")}} 属性是 `true`），则抛出该错误。
 
 ## 示例
 
-下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 [查看完整例子](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), 或者 [下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) .)
+以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
@@ -48,7 +40,7 @@ function sourceOpen (_) {
   });
 };
 
-...
+// …
 ```
 
 ## 规范
@@ -59,7 +51,7 @@ function sourceOpen (_) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

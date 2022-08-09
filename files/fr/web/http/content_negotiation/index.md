@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Content_negotiation
 ---
 {{HTTPSidebar}}
 
-En [HTTP](/en-US/docs/Glossary/HTTP), la **_négociation de contenu_** est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).
+En [HTTP](/fr/docs/Glossary/HTTP), la **_négociation de contenu_** est le mécanisme utilisé pour fournir différentes représentations d'une ressource à la même URI, afin que l'agent utilisateur puisse spécifier celle qui convient le mieux à l'utilisateur (par exemple, la langue d'un document, le format d'image, ou l'encodage du contenu).
 
 ## Principes de la négociation de contenu
 
@@ -26,7 +26,7 @@ Dans la _négociation de contenu gérée par le serveur_, ou négociation proact
 
 ![](httpnegoserver.png)
 
-La norme HTTP/1.1 définit la liste des en-têtes standard qui initient la négociation pilotée par le serveur ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Bien qu'à proprement parler {{HTTPHeader("User-Agent")}} ne figure pas dans la liste, il est aussi parfois utilisé pour envoyer une représentation spécifique de la ressource demandée, bien que cela ne soit pas considéré comme une bonne pratique. Le serveur utilise l'en-tête {{HTTPHeader("Vary")}} pour indiquer quels en-têtes il a effectivement utilisés pour la négociation de contenu (ou plus précisément les en-têtes de réponse associés), pour que les [caches](/en-US/docs/Web/HTTP/Caching) puissent fonctionner de manière optimale.
+La norme HTTP/1.1 définit la liste des en-têtes standard qui initient la négociation pilotée par le serveur ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Bien qu'à proprement parler {{HTTPHeader("User-Agent")}} ne figure pas dans la liste, il est aussi parfois utilisé pour envoyer une représentation spécifique de la ressource demandée, bien que cela ne soit pas considéré comme une bonne pratique. Le serveur utilise l'en-tête {{HTTPHeader("Vary")}} pour indiquer quels en-têtes il a effectivement utilisés pour la négociation de contenu (ou plus précisément les en-têtes de réponse associés), pour que les [caches](/fr/docs/Web/HTTP/Caching) puissent fonctionner de manière optimale.
 
 En outre, il existe une proposition expérimentale visant à ajouter d'autres en-têtes à la liste des en-têtes disponibles, appelés indications (_hints_) du client. Ces hints indiquent sur quel type de périphérique l'agent utilisateur fonctionne (par exemple, s'il s'agit d'un ordinateur de bureau ou d'un périphérique mobile).
 
@@ -40,7 +40,7 @@ Même si la négociation de contenu gérée par le serveur est le moyen le plus 
 
 The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. It is comma-separated lists of MIME types, each combined with a quality factor, a parameter indicating the relative degree of preference between the different MIME types.
 
-The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
+The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/fr/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
 
 ### The `Accept-CH` header {{experimental_inline}}
 
@@ -84,7 +84,7 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### The `User-Agent` header
 
-> **Note :** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> **Note :** Though there are legitimate uses of this header for selecting content, [it is considered bad practice](/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 

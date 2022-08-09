@@ -40,7 +40,7 @@ tags:
 
 ![Screenshot of sequencing-animations assessment page](./sequencing-animations.png)
 
-이미지는 [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
+이미지는 [Using the Web Animations API](/ko/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
 
 ## 프로젝트 설명
 

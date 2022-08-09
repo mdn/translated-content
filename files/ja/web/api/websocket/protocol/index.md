@@ -12,7 +12,7 @@ translation_of: Web/API/WebSocket/protocol
 ---
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.protocol`** は読み取り専用のプロパティで、サーバーが選択したサブプロトコル名を返します。これは {{domxref("WebSocket")}} オブジェクトが作成されるときに、引数の `protocols` で指定された文字列のいずれかになりますが、接続が確立されていない場合は、空文字列となります。
+**`WebSocket.protocol`** は読み取り専用のプロパティで、サーバーが選択したサブプロトコル名を返します。これは {{domxref("WebSocket")}} オブジェクトが作成されるときに、引数の `protocols` で指定された文字列のいずれかになりますが、接続が確立されていない場合は、空文字列となります。
 
 ## 値
 

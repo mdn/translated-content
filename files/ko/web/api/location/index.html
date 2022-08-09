@@ -11,17 +11,17 @@ translation_of: Web/API/Location
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>Location</code></strong> 인터페이스는 객체가 연결된 장소(URL)를 표현합니다.</span> <code>Location</code> 인터페이스에 변경을 가하면 연결된 객체에도 반영되는데, {{domxref("Document")}}와 {{domxref("Window")}} 인터페이스가 이런 <code>Location</code>을 가지고 있습니다. 각각 {{domxref("Document.location")}}과 {{domxref("Window.location")}}으로 접근할 수 있습니다.</p>
+<p><span class="seoSummary"><strong><code>Location</code></strong> 인터페이스는 객체가 연결된 장소(URL)를 표현합니다.</span> <code>Location</code> 인터페이스에 변경을 가하면 연결된 객체에도 반영되는데, {{domxref("Document")}}와 {{domxref("Window")}} 인터페이스가 이런 <code>Location</code>을 가지고 있습니다. 각각 {{domxref("Document.location")}}과 {{domxref("Window.location")}}으로 접근할 수 있습니다.</p>
 
 <h2 id="속성">속성</h2>
 
-<p><code>Location</code> 인터페이스는 아무 속성도 상속하지 않지만, {{domxref("URLUtils")}}의 속성을 구현합니다.</p>
+<p><code>Location</code> 인터페이스는 아무 속성도 상속하지 않지만, {{domxref("URLUtils")}}의 속성을 구현합니다.</p>
 
 <dl>
  <dt>{{domxref("Location.href")}}</dt>
  <dd>온전한 URL을 값으로 하는 {{domxref("DOMString")}}입니다. 바뀔 경우 연결된 문서도 새로운 페이지로 이동합니다. 연결된 문서와 다른 오리진에서도 설정할 수 있습니다.</dd>
  <dt>{{domxref("Location.protocol")}}</dt>
- <dd>URL의 프로토콜 부분을 값으로 하는 {{domxref("DOMString")}}으로, 마지막의 <code>':'</code>도 포함합니다.</dd>
+ <dd>URL의 프로토콜 부분을 값으로 하는 {{domxref("DOMString")}}으로, 마지막의 <code>':'</code>도 포함합니다.</dd>
  <dt>{{domxref("Location.host")}}</dt>
  <dd>URL의 호스트 부분을 값으로 하는 {{domxref("DOMString")}}으로, 호스트명, <code>':'</code>, 포트 번호를 포함합니다.</dd>
  <dt>{{domxref("Location.hostname")}}</dt>
@@ -29,22 +29,22 @@ translation_of: Web/API/Location
  <dt>{{domxref("Location.port")}}</dt>
  <dd>URL의 포트 번호를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
  <dt>{{domxref("Location.pathname")}}</dt>
- <dd><code>'/'</code> 문자 뒤 URL의 경로를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
+ <dd><code>'/'</code> 문자 뒤 URL의 경로를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
  <dt>{{domxref("Location.search")}}</dt>
  <dd><code>'?'</code> 문자 뒤 URL의 쿼리스트링을 값으로 하는 {{domxref("DOMString")}}입니다. 모던 브라우저에서는 {{domxref("URLSearchParams.get()")}}과 {{domxref("URL.searchParams")}}를 사용해서 인자를 쉽게 추출할 수 있습니다.</dd>
  <dt>{{domxref("Location.hash")}}</dt>
- <dd><code>'#'</code> 문자 뒤 URL의 프래그먼트 식별자를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
+ <dd><code>'#'</code> 문자 뒤 URL의 프래그먼트 식별자를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
  <dt>{{domxref("Location.username")}}</dt>
- <dd>도메인 이름 이전에 명시된 사용자명을 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
+ <dd>도메인 이름 이전에 명시된 사용자명을 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
  <dt>{{domxref("Location.password")}}</dt>
  <dd>도메인 이름 이전에 명시된 비밀번호를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
  <dt>{{domxref("Location.origin")}} {{readOnlyInline}}</dt>
- <dd>지정한 장소 오리진의 표준 형태를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
+ <dd>지정한 장소 오리진의 표준 형태를 값으로 하는 {{domxref("DOMString")}}입니다.</dd>
 </dl>
 
 <h2 id="메서드">메서드</h2>
 
-<p><code>Location</code> 인터페이스는 아무 메서드도 상속하지 않지만, {{domxref("URLUtils")}}의 메서드를 구현합니다.</p>
+<p><code>Location</code> 인터페이스는 아무 메서드도 상속하지 않지만, {{domxref("URLUtils")}}의 메서드를 구현합니다.</p>
 
 <dl>
  <dt>{{domxref("Location.assign()")}}</dt>
@@ -76,31 +76,9 @@ console.log(url.origin);    // https://developer.mozilla.org:8080
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#the-location-interface", "Location")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Location")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("api.Location")}}</p>
 

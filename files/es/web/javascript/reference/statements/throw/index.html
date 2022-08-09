@@ -45,7 +45,7 @@ function getNombreMes(mes) {
    mes = mes - 1; // Ajustar el número de mes al índice del arreglo (1 = Ene, 12 = Dic)
    var meses = new Array("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul",
       "Ago", "Sep", "Oct", "Nov", "Dic");
-   if (meses[mes] != null) {
+   if (meses[mes] != null) {
       return meses[mes];
    } else {
       miExcepcionUsuario = new ExceptionUsuario("NumeroMesNoValido");

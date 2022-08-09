@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 
 <h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
 
-<p>이 스크립트는 존재하지 않는 객체의 속성에 접근을 시도했습니다. 요소에 접근하는 방법에는 두 가지가 있습니다.; 더 자세히 알고 싶으시다면, 속성 접근자(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>) 참조 문서를 봐주세요. </p>
+<p>이 스크립트는 존재하지 않는 객체의 속성에 접근을 시도했습니다. 요소에 접근하는 방법에는 두 가지가 있습니다.; 더 자세히 알고 싶으시다면, 속성 접근자(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>) 참조 문서를 봐주세요. </p>
 
 <p>정의되지 않은 속성 참조에 대한 에러는 엄격 모드 코드(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode code</a>)에서만 발생합니다. 비-엄격모드의 코드에서는 존재하지 않는 속성에 대한 접근은 조용히 무시됩니다.</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 
 <h3 id="허용되지_않는_경우">허용되지 않는 경우</h3>
 
-<p>이 경우에는, 속성 <code>bar</code> 는 정의되지 않은 속성으로, <code>ReferenceError</code> 가 발생합니다.</p>
+<p>이 경우에는, 속성 <code>bar</code> 는 정의되지 않은 속성으로, <code>ReferenceError</code> 가 발생합니다.</p>
 
 <pre class="brush: js example-bad">"use strict";
 
@@ -34,7 +34,7 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 
 <h3 id="허용되는_경우">허용되는 경우</h3>
 
-<p>에러를 피하기 위해서는, 접근을 시도하기 앞서, 객체에 <code>bar</code> 에 대한 정의를 추가하거나 <code>bar</code> 속성의 존재 여부를 확인해야 합니다.; 아래와 같이 {{jsxref("Object.prototype.hasOwnProperty()")}} method)를 사용하는 것이 하나의 방법이 될 수 있습니다.:</p>
+<p>에러를 피하기 위해서는, 접근을 시도하기 앞서, 객체에 <code>bar</code> 에 대한 정의를 추가하거나 <code>bar</code> 속성의 존재 여부를 확인해야 합니다.; 아래와 같이 {{jsxref("Object.prototype.hasOwnProperty()")}} method)를 사용하는 것이 하나의 방법이 될 수 있습니다.:</p>
 
 <pre class="brush: js example-good">"use strict";
 

@@ -11,13 +11,13 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">В этой главе мы покажем вам как работать с HTML формами в Express, используя Pug, и в частности как написать формы для создания, обновления и удаления документов из базы данных.</p>
+<p class="summary">В этой главе мы покажем вам как работать с HTML формами в Express, используя Pug, и в частности как написать формы для создания, обновления и удаления документов из базы данных.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Предварительные знания:</th>
-   <td>Завершите изучение предыдущих тем учебника, включая <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Учебник Express Часть 5: Отображение данных библиотеки</a></td>
+   <td>Завершите изучение предыдущих тем учебника, включая <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Учебник Express Часть 5: Отображение данных библиотеки</a></td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -28,11 +28,11 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <h2 id="Обзор">Обзор</h2>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форма</a> - это группа из одного или нескольких полей / виджетов на веб-странице, которая может использоваться для сбора информации от пользователей для отправки на сервер. Формы представляют собой гибкий механизм для сбора данных, вводимых пользователем, поскольку существуют подходящие входные данные форм, доступные для ввода различных типов данных-текстовые поля, флажки, переключатели, средства выбора даты и т. д. Формы также являются относительно безопасным способом обмена данными с сервером, поскольку они позволяют отправлять данные в запросах <code>POST</code> с защитой от подделки межсайтовых запросов.</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форма</a> - это группа из одного или нескольких полей / виджетов на веб-странице, которая может использоваться для сбора информации от пользователей для отправки на сервер. Формы представляют собой гибкий механизм для сбора данных, вводимых пользователем, поскольку существуют подходящие входные данные форм, доступные для ввода различных типов данных-текстовые поля, флажки, переключатели, средства выбора даты и т. д. Формы также являются относительно безопасным способом обмена данными с сервером, поскольку они позволяют отправлять данные в запросах <code>POST</code> с защитой от подделки межсайтовых запросов.</p>
 
-<p>Работа с формами может быть сложной! Разработчику нужно написать HTML код для форм, валидацию и правильно анализировать введённые данные на сервере (и, возможно, также в браузере), отобразить форму с сообщениями об ошибках, чтобы сообщить пользователям о любых недопустимых полях, обработать данные, когда они были успешно отправлены, и, наконец, каким-то образом ответить пользователю о том, что результат успешен.</p>
+<p>Работа с формами может быть сложной! Разработчику нужно написать HTML код для форм, валидацию и правильно анализировать введённые данные на сервере (и, возможно, также в браузере), отобразить форму с сообщениями об ошибках, чтобы сообщить пользователям о любых недопустимых полях, обработать данные, когда они были успешно отправлены, и, наконец, каким-то образом ответить пользователю о том, что результат успешен.</p>
 
-<p>В этом уроке мы покажем вам, как вышеуказанные операции могут быть выполнены в <em>Express</em>. По пути мы расширим веб-сайт <em>LocalLibrary</em>, чтобы пользователи могли создавать, редактировать и удалять элементы из библиотеки.</p>
+<p>В этом уроке мы покажем вам, как вышеуказанные операции могут быть выполнены в <em>Express</em>. По пути мы расширим веб-сайт <em>LocalLibrary</em>, чтобы пользователи могли создавать, редактировать и удалять элементы из библиотеки.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Мы не рассматривали, как ограничить определённые маршруты аутентифицированными или авторизованными пользователями, поэтому на данный момент любой пользователь сможет вносить изменения в базу данных.</p>
@@ -40,16 +40,16 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <h3 id="HTML_Forms">HTML Forms</h3>
 
-<p>Первый краткий обзор <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>. Рассмотрим простую HTML-форму с одним текстовым полем для ввода имени некоторой "команды" и связанной с ней меткой:</p>
+<p>Первый краткий обзор <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML Forms</a>. Рассмотрим простую HTML-форму с одним текстовым полем для ввода имени некоторой "команды" и связанной с ней меткой:</p>
 
 <p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
 
-<p>Определённые в  HTML формы собираются внутри тэга <code>&lt;form&gt;...&lt;/form&gt;</code>, содержащего хотя ы один элемент <code>input</code> с <code>type="submit"</code>.</p>
+<p>Определённые в  HTML формы собираются внутри тэга <code>&lt;form&gt;...&lt;/form&gt;</code>, содержащего хотя ы один элемент <code>input</code> с <code>type="submit"</code>.</p>
 
 <pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
 <p>Хотя здесь мы включили только одно (текстовое) поле для ввода имени команды, форма может содержать любое количество других элементов ввода и связанных с ними меток. Атрибут <code>type</code> определяет какой из <a href="/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм">виджетов</a> будет выбран для отображения поля. Атрибуты <code>name</code> и <code>id</code> идентифицируют поле в JavaScript/CSS/HTML, а <code>value</code> определяет его первоначальное значение. Связанная с полем метка, задаётся с помощью тега <code style="font-style: normal; font-weight: normal;">label</code> (располагается строкой выше и содержит в себе подпись "Enter name"). Связь метки и поля ввода устанавливается при помощи атрибута <code>for</code>, в котором указывается значение идентификатора поля (<code>input</code> <code>id</code>).</p>
@@ -91,7 +91,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p>Часто код обработки формы реализуется с помощью <code>GET </code>route для начального отображения формы и <code>POST </code>route к тому же пути для обработки проверки и обработки данных формы. Это подход, который будет использоваться в этом уроке!</p>
 
-<p>Сам Express не предоставляет какой-либо конкретной поддержки для операций обработки форм, но он может использовать промежуточное программное обеспечение для обработки <code>POST</code> и <code>GET</code> параметров из формы, а также для проверки/очистки их значений.</p>
+<p>Сам Express не предоставляет какой-либо конкретной поддержки для операций обработки форм, но он может использовать промежуточное программное обеспечение для обработки <code>POST</code> и <code>GET</code> параметров из формы, а также для проверки/очистки их значений.</p>
 
 <h3 id="Валидация_и_обработка">Валидация и обработка</h3>
 
@@ -102,7 +102,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
  <li>Очистка удаляет / заменяет символы в данных, которые потенциально могут использоваться для отправки вредоносного содержимого на сервер.</li>
 </ul>
 
-<p>В этом уроке мы будем использовать популярный модуль <a href="https://www.npmjs.com/package/express-validator">express-validator</a> для проверки и очистки данных формы.</p>
+<p>В этом уроке мы будем использовать популярный модуль <a href="https://www.npmjs.com/package/express-validator">express-validator</a> для проверки и очистки данных формы.</p>
 
 <h4 id="Установка">Установка</h4>
 
@@ -117,13 +117,13 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <p><strong>Note:</strong> <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> руководство на Github предоставляет хороший обзор API. Мы рекомендуем вам прочитать это, чтобы получить представление о всех его возможностях (включая создание пользовательских валидаторов). Ниже мы рассмотрим только подмножество, которое полезно для <em>LocalLibrary</em>.</p>
 </div>
 
-<p>Для того, чтобы использовать валидатор в наших контроллерах, мы должны требовать функции, которые мы хотим использовать из модулей <strong>'express-validator/check</strong>' и <strong>'express-validator/filter</strong>', как показано ниже:</p>
+<p>Для того, чтобы использовать валидатор в наших контроллерах, мы должны требовать функции, которые мы хотим использовать из модулей <strong>'express-validator/check</strong>' и <strong>'express-validator/filter</strong>', как показано ниже:</p>
 
 <pre class="brush: js">const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 </pre>
 
-<p>Есть много доступных функций, позволяющих проверять и очищать данные из параметров запроса, тела, заголовков, файлов cookie и т. д., или все сразу. Для этого урока мы будем использовать <code>body</code>, <code>sanitizeBody</code>, and <code>validationResult</code> (как "требуется" выше).</p>
+<p>Есть много доступных функций, позволяющих проверять и очищать данные из параметров запроса, тела, заголовков, файлов cookie и т. д., или все сразу. Для этого урока мы будем использовать <code>body</code>, <code>sanitizeBody</code>, and <code>validationResult</code> (как "требуется" выше).</p>
 
 <p>Функции определяются следующим образом:</p>
 
@@ -140,7 +140,7 @@ body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
 </pre>
 
   <div class="note">
-  <p><strong>Note:</strong> Вы также можете добавить встроенные средства очистки, такие как <code>trim()</code>, как показано выше. Однако средства очистки, применяемые здесь, применяются только к шагу проверки. Если требуется очистить конечный результат, необходимо использовать отдельный метод очистки, как показано ниже.</p>
+  <p><strong>Note:</strong> Вы также можете добавить встроенные средства очистки, такие как <code>trim()</code>, как показано выше. Однако средства очистки, применяемые здесь, применяются только к шагу проверки. Если требуется очистить конечный результат, необходимо использовать отдельный метод очистки, как показано ниже.</p>
   </div>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: Задаёт поле тела для очистки. затем операции очистки последовательно соединяются с этим методом. Например, операция очистки <code>escape()</code>, описанная ниже, удаляет символы HTML из переменной name, которые могут использоваться в атаках сценариев между сайтами JavaScript.
@@ -149,21 +149,21 @@ sanitizeBody('date').toDate(),</pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: Запускает проверку, делая ошибки доступными в виде объекта результата проверки. Это вызывается в отдельном обратном вызове, как показано ниже:
   <pre class="brush: js">(req, res, next) =&gt; {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-        // There are errors. Render form again with sanitized values/errors messages.
-        // Error messages can be returned in an array using `errors.array()`.
-        }
-    else {
-        // Data from form is valid.
-    }
+    if (!errors.isEmpty()) {
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+        }
+    else {
+        // Data from form is valid.
+    }
 }</pre>
   Мы используем метод <code>isEmpty()</code> результата проверки, чтобы проверить, были ли ошибки, и его метод array (), чтобы получить набор сообщений об ошибках. Дополнительные сведения см. в разделе API результатов проверки.</li>
 </ul>
 
-<p>Цепочки проверки и очистки являются промежуточными запросами, которые должны быть переданы обработчику Express -маршрута (мы делаем это косвенно, через контроллер). При запуске промежуточного по каждый валидатор / средства очистки выполняется в указанном порядке..</p>
+<p>Цепочки проверки и очистки являются промежуточными запросами, которые должны быть переданы обработчику Express -маршрута (мы делаем это косвенно, через контроллер). При запуске промежуточного по каждый валидатор / средства очистки выполняется в указанном порядке..</p>
 
 <p>Мы рассмотрим некоторые реальные примеры, когда мы реализуем <em>LocalLibrary </em>формы ниже.</p>
 
@@ -191,7 +191,7 @@ sanitizeBody('date').toDate(),</pre>
 
 <p>Чтобы реализовать наш код обработки форм, нам понадобятся два маршрута с одинаковым шаблоном URL. Первый (<code>GET</code>) маршрут используется для отображения новой пустой формы создания объекта. Второй маршрут (<code>POST</code>) используется для проверки введённых пользователем данных, а затем сохранения информации и перенаправления на страницу сведений (если данные верны) или повторного отображения формы с ошибками (если данные неверны).</p>
 
-<p>Мы уже создали маршруты для всех страниц создания нашей модели в  <strong>/routes/catalog.js</strong> (in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>).  Например, жанровые маршруты показаны ниже:</p>
+<p>Мы уже создали маршруты для всех страниц создания нашей модели в  <strong>/routes/catalog.js</strong> (in a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">previous tutorial</a>).  Например, жанровые маршруты показаны ниже:</p>
 
 <pre class="brush: js">// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
@@ -200,17 +200,17 @@ router.get('/genre/create', genre_controller.genre_create_get);
 router.post('/genre/create', genre_controller.genre_create_post);
 </pre>
 
-<h2 id="Express_формы_—_подразделы">Express формы — подразделы</h2>
+<h2 id="Express_формы_—_подразделы">Express формы — подразделы</h2>
 
 <p>В следующих подразделах мы добавим необходимые формы для нашего веб-сайта. Вы должны прочитать и проработать каждый из них по очереди, прежде чем перейти к следующему.</p>
 
 <ol>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form">Форма для создания Genre</a> — Определение нашей страницы для создания объектов <code>Genre</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Форма для создания Author</a> — Определение страницы для создания объектов <code>Author</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form">Форма для создания Book</a> — Определение страницы/формы для создания объектов <code>Book</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">Форма для создания BookInstance</a> — Определение страницы/формы для создания объектов <code>BookInstance</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">Форма для удаления Author</a> — Определение страницы для удаления объектов <code>Author</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Форма для обновления Book</a> — Определение страницы для обновления объектов <code>Book</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form">Форма для создания Genre</a> — Определение нашей страницы для создания объектов <code>Genre</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Форма для создания Author</a> — Определение страницы для создания объектов <code>Author</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form">Форма для создания Book</a> — Определение страницы/формы для создания объектов <code>Book</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">Форма для создания BookInstance</a> — Определение страницы/формы для создания объектов <code>BookInstance</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">Форма для удаления Author</a> — Определение страницы для удаления объектов <code>Author</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Форма для обновления Book</a> — Определение страницы для обновления объектов <code>Book</code>.</li>
 </ol>
 
 <h2 id="Challenge_yourself">Испытайте себя</h2>
@@ -225,7 +225,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 <p>Несколько подсказок:</p>
 
 <ul>
- <li>Удаление объекта модели <code>Genre</code> очень похоже на удаление объекта модели <code>Author</code>, так как на каждый из этих объектов могут быть ссылки из объектов модели <code>Book</code> (таким образом, в обоих этих случаях вы можете удалить объект только тогда, когда будут удалены объекты модели <code>Book</code>, из которых есть ссылки на объект, указанный к удалению).</li>
+ <li>Удаление объекта модели <code>Genre</code> очень похоже на удаление объекта модели <code>Author</code>, так как на каждый из этих объектов могут быть ссылки из объектов модели <code>Book</code> (таким образом, в обоих этих случаях вы можете удалить объект только тогда, когда будут удалены объекты модели <code>Book</code>, из которых есть ссылки на объект, указанный к удалению).</li>
  <li>Удаление объекта модели <code>Book</code> тоже похоже на удаление объекта модели <code>Author</code>, но в этом случае вам нужно будет проверять, нет ли объектов модели <code>BookInstance</code>, из которых есть ссылки на объект, указанный к удалению.</li>
  <li>Удаление объекта модели <code>BookInstance</code> самое простое из всех, потому что не существует объектов, из которых могут быть ссылки на объект модели <code>BookInstance</code>. В данном случае вы можете просто найти соответствующую запись и удалить её.</li>
 </ul>

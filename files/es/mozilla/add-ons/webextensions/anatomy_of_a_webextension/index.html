@@ -88,13 +88,13 @@ original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 
 <h4 id="Políticas_de_seguridad_para_el_contenido">Políticas de seguridad para el contenido</h4>
 
-<p>Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, a través de la  Política de Seguridad del Contenido. Vea la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de Seguridad del Contenido </a>para más detalles sobre esto.</p>
+<p>Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, a través de la  Política de Seguridad del Contenido. Vea la <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Política de Seguridad del Contenido </a>para más detalles sobre esto.</p>
 
 <h2 id="Scripts_de_contenido">Scripts de contenido</h2>
 
 <p>Usa los scripts de contenido para acceder y manipular páginas web. Los scripts de contenido son cargados dentro de las páginas web y ejecutados en el contexto particular de esa página.</p>
 
-<p>Los scripts de contenido son scripts provistos por la extensión los cuales se ejecutan en el contexto de la página web; estos difieren de los scripts que son cargados por la página misma, incluye aquellos que son proporcionados en los elementos {{HTMLElement("script")}} dentro de la página.</p>
+<p>Los scripts de contenido son scripts provistos por la extensión los cuales se ejecutan en el contexto de la página web; estos difieren de los scripts que son cargados por la página misma, incluye aquellos que son proporcionados en los elementos {{HTMLElement("script")}} dentro de la página.</p>
 
 <p>Los scripts de contenido pueden ver y manipular el DOM de las páginas, igual que los scripts cargados normalmente por la página.</p>
 
@@ -116,6 +116,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 
 <p>Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.</p>
 
-<p>Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</a></code> que referencia a las imágenes mediante el atributo <code>src</code>.</p>
+<p>Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">img</a></code> que referencia a las imágenes mediante el atributo <code>src</code>.</p>
 
 <p>Para aprender más, vea la documentación para la el parámetro <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resource</a> del manifest.json.</p>

@@ -191,11 +191,11 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Getting_s
 - [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari](https://www.apple.com/safari/)
 
-如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、 [Dolphin](https://dolphin.com/) 或者[ UC Browser](http://www.ucweb.com/ucbrowser/)，来测试它。
+如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、[Dolphin](https://dolphin.com/) 来测试它。
 
-但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。Apple Safari 在 iOS 和 Mac OS 上运行，而 Internet Explorer 则只在 Windows 上运行。这时候最好利用像是 [Browsershots](http://browsershots.org/) 或者 [Browserstack](http://www.browserstack.com/) 之类的服务。Browsershots 提供你的网站的截图，就如同它会在不同浏览器中所看到那样。Browserstack 实际上给予你完全远程访问虚拟机 \[virtual machines] 的权限，所以你可以在最普遍的环境中测试你的网站。或者，你可以设置你自己的虚拟机，不过这需要一些专业知识。（如果你选择了这样做，微软 \[Microsoft] 在 [modern.ie](https://modern.ie) 上为开发者提供了一些工具，包括随时可用的虚拟机。)
+但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。Apple Safari 在 iOS 和 Mac OS 上运行，而 Internet Explorer 则只在 Windows 上运行。这时候最好利用像是 [Browsershots](http://browsershots.org/) 或者 [Browserstack](http://www.browserstack.com/) 之类的服务。Browsershots 提供你的网站的截图，就如同它会在不同浏览器中所看到那样。Browserstack 实际上给予你完全远程访问虚拟机的权限，所以你可以在最普遍的环境中测试你的网站。或者，你可以设置你自己的虚拟机，不过这需要一些专业知识。（如果你选择了这样做，微软在上为开发者提供了[随时可用的虚拟机](https://developer.microsoft.com/zh-cn/microsoft-edge/tools/vms/)。）
 
-务必在一个真实设备上运行一些测试，尤其是在真实的移动设备 \[mobile devices] 上。移动设备模拟是一个崭新的，进化中的技术，而且它并不及桌面模拟可靠。当然，移动设备耗费金钱，所以我们推荐你查看一下 [Open Device Lab initiative](http://opendevicelab.com/)。你同时也可以分享设备，如果你想要不花费太多地在多平台上测试的话。
+务必在一个真实设备上运行一些测试，尤其是在真实的移动设备上。移动设备模拟是一个崭新的，进化中的技术，而且它并不及桌面模拟可靠。当然，移动设备耗费金钱，所以我们推荐你查看一下 [Open Device Lab initiative](http://opendevicelab.com/)。你同时也可以分享设备，如果你想要不花费太多地在多平台上测试的话。
 
 ## 下一步
 

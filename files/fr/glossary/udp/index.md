@@ -14,7 +14,7 @@ original_slug: Glossaire/UDP
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","User_Datagram_Protocol","User Datagram Protocol")}} sur Wikipédia
+- [UDP](https://fr.wikipedia.org/wiki/User_Datagram_Protocol) sur Wikipédia
 
 ### Référence technique
 

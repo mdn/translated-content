@@ -52,7 +52,3 @@ p {
 
 - [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)
 - [虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)
-
-### 技術指南
-
-{{SpecName("CSS3 Selectors")}}

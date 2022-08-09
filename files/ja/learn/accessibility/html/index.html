@@ -141,13 +141,13 @@ translation_of: Learn/Accessibility/HTML
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
 これはコンテンツのうちで 2 番目のサブセクションです。この前のものより面白いと思いますよ。</code></pre>
 
-<p>より長いバージョンをスクリーンリーダーで試してみれば (<a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> を参照)、とても良い体験が得られる、とはいかないことでしょう。スクリーンリーダーは、標識として使えるものを何も得られないので、有用な目次は取得できません。また、ページ全体を単一の巨大な塊として見ることになるので、ページ全体が一度にひとかたまりで読み上げられるだけなのです。 </p>
+<p>より長いバージョンをスクリーンリーダーで試してみれば (<a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a> を参照)、とても良い体験が得られる、とはいかないことでしょう。スクリーンリーダーは、標識として使えるものを何も得られないので、有用な目次は取得できません。また、ページ全体を単一の巨大な塊として見ることになるので、ページ全体が一度にひとかたまりで読み上げられるだけなのです。 </p>
 
 <p>アクセシビリティ以外の他の問題もあります。たとえば、CSS を使ってコンテンツにスタイルをつけることや、あるいは、JavaScript でコンテンツを操作することが、より難しくなるのです。なぜなら、セレクターとして使える要素がないからです。</p>
 
 <h4 id="Using_clear_language" name="Using_clear_language">明確な言葉を使う</h4>
 
-<p>使っている言い回しもアクセシビリティに影響を与えることがあります。一般に、過度に複雑ではない、明確な言葉を使うべきです。また、不必要な専門用語 (ジャーゴン) や俗語を使わないようにしましょう。これは、認知的な障害またはその他の障害を抱える人たちの助けとなるだけではありません。母語以外で書かれたテキストの読者や、年少者の助けにもなりますし、実際のところあらゆる人の助けになります!  それに加えて、スクリーンリーダーによって明確に読み上げられない言い回しや文字を使うことを避けるように努めるべきです。たとえば、以下のようなことです。</p>
+<p>使っている言い回しもアクセシビリティに影響を与えることがあります。一般に、過度に複雑ではない、明確な言葉を使うべきです。また、不必要な専門用語 (ジャーゴン) や俗語を使わないようにしましょう。これは、認知的な障害またはその他の障害を抱える人たちの助けとなるだけではありません。母語以外で書かれたテキストの読者や、年少者の助けにもなりますし、実際のところあらゆる人の助けになります!  それに加えて、スクリーンリーダーによって明確に読み上げられない言い回しや文字を使うことを避けるように努めるべきです。たとえば、以下のようなことです。</p>
 
 <ul>
  <li>やめられるものなら、ダッシュを使わないようにしましょう。「5–7」と書く代わりに「5 から 7」と書きましょう。</li>
@@ -226,7 +226,7 @@ translation_of: Learn/Accessibility/HTML
       &lt;/tr&gt;
     &lt;/table&gt;</pre>
 
-<p> スクリーンリーダーを使ってこれを読んで回ろうとすると、おそらくスクリーンリーダーは、見るべきテーブルがありますよ、と教えてくれるでしょう (もっとも、一部のスクリーンリーダーは、テーブル・レイアウトとデータ・テーブルとの違いを推測できるでしょうが)。すると、(使っているスクリーンリーダーによりますが) オブジェクトとしてのテーブルのところまで行って、そのテーブルの項目をそれぞれ別々に見て、それからやっと、テーブルから抜けて元の場所に戻り、コンテンツを読んで回ることを続ける、というふうにせざるを得ない可能性が高いでしょう。</p>
+<p> スクリーンリーダーを使ってこれを読んで回ろうとすると、おそらくスクリーンリーダーは、見るべきテーブルがありますよ、と教えてくれるでしょう (もっとも、一部のスクリーンリーダーは、テーブル・レイアウトとデータ・テーブルとの違いを推測できるでしょうが)。すると、(使っているスクリーンリーダーによりますが) オブジェクトとしてのテーブルのところまで行って、そのテーブルの項目をそれぞれ別々に見て、それからやっと、テーブルから抜けて元の場所に戻り、コンテンツを読んで回ることを続ける、というふうにせざるを得ない可能性が高いでしょう。</p>
 
 <p>テーブル・レイアウトは過去の遺物です。テーブル・レイアウトは、CSS のサポートがブラウザに広く行き渡っていなかった当時には意味を持っていましたが、スクリーンリーダーのユーザーに対して混乱を巻き起こします。しかも、他の多くの理由でも有害です (テーブルの乱用ですし、ほぼ間違いなくマークアップをより多く要しますし、デザインの柔軟さを損ねます)。テーブル・レイアウトをしてはなりません!</p>
 
@@ -266,7 +266,7 @@ translation_of: Learn/Accessibility/HTML
 
 <p>よりモダンな構造の例をスクリーンリーダーで試してみれば、もはやレイアウト・マークアップが妨げになることもなく、コンテンツの読み上げを混乱させることもない、とわかるでしょう。また、これは、コード・サイズの点で、より無駄がなく、より小さくなっています。これが意味することは、コードの保守が容易になるということ、そして、ユーザがダウンロードするのに帯域幅が小さくて済むということです (特に、接続が遅い人たちにとってはこれが効きます)。</p>
 
-<p>レイアウトを作る際に考慮すべきもう一つの事柄は、上記の例に見られるように HTML5 の意味的要素を用いることです (<a href="/ja/docs/Web/HTML/Element#Content_sectioning">コンテンツセクショニング</a> を参照)。 入れ子になった {{htmlelement("div")}} 要素だけを使ってレイアウトを作ることもできますが、適切なセクショニング (区分け) 要素を使って、主要なナビゲーション ({{htmlelement("nav")}}) やフッター ({{htmlelement("footer")}}) や繰り返し現れるコンテンツ単位 ({{htmlelement("article")}}) などを囲う方が良いのです。これらの区分け要素は、いまナビゲートしている最中のコンテンツについての追加的な手がかりをユーザーに与えられるように、スクリーンリーダー (および他のツール) に追加的な意味 (セマンティクス) を提供してくれます (スクリーンリーダー・サポートとはどのようなものなのかについての考え方に関しては、<a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Screen Reader Support for new HTML5 Section Elements</a> を参照)。</p>
+<p>レイアウトを作る際に考慮すべきもう一つの事柄は、上記の例に見られるように HTML5 の意味的要素を用いることです (<a href="/ja/docs/Web/HTML/Element#Content_sectioning">コンテンツセクショニング</a> を参照)。 入れ子になった {{htmlelement("div")}} 要素だけを使ってレイアウトを作ることもできますが、適切なセクショニング (区分け) 要素を使って、主要なナビゲーション ({{htmlelement("nav")}}) やフッター ({{htmlelement("footer")}}) や繰り返し現れるコンテンツ単位 ({{htmlelement("article")}}) などを囲う方が良いのです。これらの区分け要素は、いまナビゲートしている最中のコンテンツについての追加的な手がかりをユーザーに与えられるように、スクリーンリーダー (および他のツール) に追加的な意味 (セマンティクス) を提供してくれます (スクリーンリーダー・サポートとはどのようなものなのかについての考え方に関しては、<a href="http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/">Screen Reader Support for new HTML5 Section Elements</a> を参照)。</p>
 
 <div class="note">
 <p><strong>注</strong>: コンテンツは、ちゃんと意味的なものにしておき、レイアウトも魅惑的にしておくだけでなく、ソース順において論理的に意味をなすようにもしておくべきです。あとで CSS を使えば必ず望みどおりの場所にコンテンツを配置できますが、ソース順は、その順で読み始めるのが適切なようにしておくべきです。そうすれば、スクリーンリーダーのユーザーが読み上げさせたものが、意味をなすことでしょう。</p>
@@ -274,16 +274,16 @@ translation_of: Learn/Accessibility/HTML
 
 <h3 id="UI_controls" name="UI_controls">UI コントロール</h3>
 
-<p>ここで UI コントロールという言葉によって意味しているのは、ユーザーが対話的に操作する対象の、ウェブドキュメントの主要部分のことであり、もっとも一般的には、ボタン、リンク、およびフォーム・コントロールのことです。本節では、そうしたコントロールを作る際に認識しておくべき基本的なアクセシビリティの問題を見てゆきましょう。WAI-ARIA とマルチメディアに関する後続の記事で、UI アクセシビリティの他の側面について見ることにします。</p>
+<p>ここで UI コントロールという言葉によって意味しているのは、ユーザーが対話的に操作する対象の、ウェブドキュメントの主要部分のことであり、もっとも一般的には、ボタン、リンク、およびフォーム・コントロールのことです。本節では、そうしたコントロールを作る際に認識しておくべき基本的なアクセシビリティの問題を見てゆきましょう。WAI-ARIA とマルチメディアに関する後続の記事で、UI アクセシビリティの他の側面について見ることにします。</p>
 
-<p>UI コントロールのアクセシビリティに対する一つの重要な側面は、ブラウザがデフォルトでは 、UI コントロールをキーボードで操作できるようにしている、ということです。このことは、<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> の例 (<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">ソースコード</a> を参照) を用いて試せます。これを新規タブで開いて、タブキーを押してみてください。二、三回押してみた後には、フォーカス可能な異なる要素の間をタブ・フォーカスが動き回り始めたのだと分かるはずです。どの要素にフォーカスが当たっているのかが分かるように、どのブラウザでも、フォーカスの当たっている要素には、ハイライトされたデフォルトのスタイルが付与されます (そのスタイルは、異なるブラウザ間では少し差があります)。</p>
+<p>UI コントロールのアクセシビリティに対する一つの重要な側面は、ブラウザがデフォルトでは 、UI コントロールをキーボードで操作できるようにしている、ということです。このことは、<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> の例 (<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">ソースコード</a> を参照) を用いて試せます。これを新規タブで開いて、タブキーを押してみてください。二、三回押してみた後には、フォーカス可能な異なる要素の間をタブ・フォーカスが動き回り始めたのだと分かるはずです。どの要素にフォーカスが当たっているのかが分かるように、どのブラウザでも、フォーカスの当たっている要素には、ハイライトされたデフォルトのスタイルが付与されます (そのスタイルは、異なるブラウザ間では少し差があります)。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png" style="border-style: solid; border-width: 1px; display: block; height: 39px; margin: 0px auto; width: 288px;"></p>
 
 <p>その後、エンターキー / リターンキーを押すと、フォーカスの当たっているリンクをたどることもできますし、または、ボタンを押すこともできますし (ボタンにメッセージ警告を出させるための JavaScript を含めておきました)、あるいは、テキスト入力欄にテキストを入力するためのタイピングを開始することもできます (他のフォーム要素には別のコントロールがあります。たとえば、{{htmlelement("select")}} 要素は、選択肢を表示させることや、上下の矢印キーを用いて選択肢の間を行ったり来たりさせることができます)。</p>
 
 <div class="note">
-<p><strong>注</strong>: 異なるブラウザでは、異なるキーボード・コントロール・オプションを使用可能としている場合があります。さらに詳しいことは、<a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility">Using native keyboard accessibility</a> を参照してください。</p>
+<p><strong>注</strong>: 異なるブラウザでは、異なるキーボード・コントロール・オプションを使用可能としている場合があります。さらに詳しいことは、<a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility">Using native keyboard accessibility</a> を参照してください。</p>
 </div>
 
 <p>こうした振る舞いは、たとえば以下のように単に適切な要素を用いるだけで、本質的にはただで手に入ります。</p>
@@ -305,26 +305,26 @@ translation_of: Learn/Accessibility/HTML
 &lt;h2&gt;Form&lt;/h2&gt;
 
 &lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="name"&gt;Fill in your name:&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="age"&gt;Enter your age:&lt;/label&gt;
-    &lt;input type="text" id="age" name="age"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="mood"&gt;Choose your mood:&lt;/label&gt;
-    &lt;select id="mood" name="mood"&gt;
-      &lt;option&gt;Happy&lt;/option&gt;
-      &lt;option&gt;Sad&lt;/option&gt;
-      &lt;option&gt;Angry&lt;/option&gt;
-      &lt;option&gt;Worried&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;Fill in your name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="age"&gt;Enter your age:&lt;/label&gt;
+    &lt;input type="text" id="age" name="age"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="mood"&gt;Choose your mood:&lt;/label&gt;
+    &lt;select id="mood" name="mood"&gt;
+      &lt;option&gt;Happy&lt;/option&gt;
+      &lt;option&gt;Sad&lt;/option&gt;
+      &lt;option&gt;Angry&lt;/option&gt;
+      &lt;option&gt;Worried&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>これは、リンクやボタンやフォーム要素やラベルを適切に用いることを意味しています (フォーム・コントロール用の {{htmlelement("label")}} 要素を含めています)。</p>
+<p>これは、リンクやボタンやフォーム要素やラベルを適切に用いることを意味しています (フォーム・コントロール用の {{htmlelement("label")}} 要素を含めています)。</p>
 
 <p>しかし、またしてもですが、人が HTML で変なことをする場合がときにはあるものです。たとえば、次のように {{htmlelement("div")}} を用いてマークアップしたボタンを見かけることも、ときにはあります。</p>
 
@@ -382,7 +382,7 @@ translation_of: Learn/Accessibility/HTML
 <pre class="brush: html example-bad">&lt;p&gt;クジラは本当にすごい生き物です。クジラについてもっと知るには、&lt;a href="whales.html"&gt;ここをクリックしてください&lt;/a&gt;。&lt;/p&gt;</pre>
 
 <div class="note">
-<p><strong>注</strong>: リンクの実装とベスト・プラクティスに関するさらなる情報を、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a>  という記事で知ることができます。また、いくつかの良い例と悪い例を、<a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> と <a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a> で見ることもできます。</p>
+<p><strong>注</strong>: リンクの実装とベスト・プラクティスに関するさらなる情報を、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a>  という記事で知ることができます。また、いくつかの良い例と悪い例を、<a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a> と <a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a> で見ることもできます。</p>
 </div>
 
 <p>フォーム・ラベルも重要です。なぜなら、各フォーム入力欄に何を入力する必要があるのかについての手がかりを与えてくれるからです。以下のものは、十分に筋の通った例のように見えます。</p>
@@ -480,7 +480,7 @@ translation_of: Learn/Accessibility/HTML
 <p>1 枚目の画像は、スクリーンリーダーで見たときに、実際のところ大した手助けをユーザーに与えてはくれません。たとえば VoiceOver は、「/dinosaur.png, image」と読み上げます。なんらかの手助けを提供しようとしてファイル名を読み上げるわけです。この例では、ユーザーは、少なくともこれがある種の恐竜なのだと知ることでしょうが、機械で生成されたファイル名とともにファイルが (たとえばディジタルカメラから) アップロードされる場合もよくありますし、そうしたファイル名は画像の中身に対する文脈を何も与えてはくれないでしょう。</p>
 
 <div class="note">
-<p><strong>注</strong>:  これこそが、画像の内部にテキストコンテンツを決して含めるべきではない理由です。スクリーンリーダーは、まったくそのテキストコンテンツにアクセスできません。それに、他の欠点もあります。すなわち、そのテキストコンテンツを選択することもコピー / ペーストすることもできません。画像の内部にテキストコンテンツを含めるなどということは、とにかくしないでください!</p>
+<p><strong>注</strong>:  これこそが、画像の内部にテキストコンテンツを決して含めるべきではない理由です。スクリーンリーダーは、まったくそのテキストコンテンツにアクセスできません。それに、他の欠点もあります。すなわち、そのテキストコンテンツを選択することもコピー / ペーストすることもできません。画像の内部にテキストコンテンツを含めるなどということは、とにかくしないでください!</p>
 </div>
 
 <p>スクリーンリーダーは、2 枚目の画像に出くわすと、alt 属性を丸々読み上げます。つまり、「赤いティラノサウルス・レックス。人間のように直立する二足歩行の恐竜で、腕は小さく、頭部は大きくて多くの鋭い歯があります」と読み上げます。</p>
@@ -543,22 +543,22 @@ translation_of: Learn/Accessibility/HTML
 
 <h2 id="Summary" name="Summary">要約</h2>
 
-<p> 今や読者の皆さんは、ほとんどの場合にアクセシブルな HTML を書くことについて、熟知しているはずです。<a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA の基本</a> の記事も、この知識の抜けを埋めてくれるでしょうが、本記事でもその基本には気を配ってきました。次は、CSS と JavaScript を検討しましょう。そして、CSS と JavaScript の良い使い方やまずい使い方によって、アクセシビリティがどのような影響を受けるのかを検討しましょう。</p>
+<p> 今や読者の皆さんは、ほとんどの場合にアクセシブルな HTML を書くことについて、熟知しているはずです。<a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA の基本</a> の記事も、この知識の抜けを埋めてくれるでしょうが、本記事でもその基本には気を配ってきました。次は、CSS と JavaScript を検討しましょう。そして、CSS と JavaScript の良い使い方やまずい使い方によって、アクセシビリティがどのような影響を受けるのかを検討しましょう。</p>
 
 <p>{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
 
 <ul>
  <li><a href="/ja/docs/Learn/Accessibility/What_is_accessibility">アクセシビリティとは?</a></li>
  <li><a href="/ja/docs/Learn/Accessibility/HTML">HTML: アクセシビリティの基礎</a></li>
- <li><a href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript">CSS と JavaScript のアクセシビリティのベスト・プラクティス</a></li>
+ <li><a href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript">CSS と JavaScript のアクセシビリティのベスト・プラクティス</a></li>
  <li><a href="/ja/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA の基本</a></li>
  <li><a href="/ja/docs/Learn/Accessibility/Multimedia">アクセシブルなマルチメディア</a></li>
  <li><a href="/ja/docs/Learn/Accessibility/Mobile">モバイルアクセシビリティ</a></li>
  <li><a href="/ja/docs/Learn/Accessibility/Accessibility_troubleshooting">アクセシビリティのトラブルシューティング</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

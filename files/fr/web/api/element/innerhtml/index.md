@@ -94,7 +94,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // inoffensif dans ce cas
 ```
 
-Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Bien que cela puisse ressembler à une attaque [<i lang="en">cross-site scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting), le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec `innerHTML` [ne doit pas s'exécuter](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez `innerHTML` pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :
 

@@ -13,5 +13,5 @@ Une {{Glossary("exception")}} provoquée par l'usage incorrect d'une {{Glossary(
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Syntaxe")}} sur Wikipédia
+- [Syntaxe](https://fr.wikipedia.org/wiki/Syntaxe) sur Wikipédia
 - {{jsxref("SyntaxError")}} objet JavaScript
