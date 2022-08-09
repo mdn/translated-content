@@ -32,7 +32,7 @@ browser-compat: api.BackgroundFetchManager
 
 ## Примеры
 
-Пример ниже показывает как можно получить экземпляр объекта {{domxref("BackgroundFetchManager")}} из объекта {{domxref("ServiceWorkerRegistration")}}, а затем вызвать метод `fetch()`, чтобы загрузить видео в фоне.
+Пример ниже показывает, как можно получить экземпляр объекта {{domxref("BackgroundFetchManager")}} из объекта {{domxref("ServiceWorkerRegistration")}}, а затем вызвать метод `fetch()`, чтобы загрузить видео в фоне.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
