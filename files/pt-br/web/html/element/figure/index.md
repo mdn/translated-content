@@ -16,7 +16,7 @@ browser-compat: html.elements.figure
 
 {{HTMLRef}}
 
-O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda, definida pelo elemento {{HTMLElement("figcaption")}}. A figura, sua legenda, e seu conteúdo são normalmente referidos como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.
+O elemento [HTML](/pt-BR/docs/Web/HTML) **`<figure>`** representa o conteúdo independente, frequentemente com uma legenda, definida pelo elemento {{HTMLElement("figcaption")}}. A figura, sua legenda, e seu conteúdo são normalmente referidos como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
@@ -24,15 +24,15 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Conteúdo de fluxo</a
         >,
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
+        <a href="/pt-BR/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
           >raiz de seção</a
         >, conteúdo palpável.
       </td>
@@ -41,7 +41,7 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
       <th scope="row">Conteúdo permitido</th>
       <td>
         Um elemento {{HTMLElement("figcaption")}}, seguido de
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
           >conteúdo de fluxo</a
         >; ou conteúdo de fluxo seguido de um elemento
         {{HTMLElement("figcaption")}}; ou conteúdo de fluxo.
@@ -55,7 +55,7 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
       <th scope="row">Elemento Pai permitido</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
           >Conteúdo de fluxo.</a
         >.
       </td>
@@ -63,7 +63,7 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
     <tr>
       <th scope="row">Função ARIA implícita</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
+        <a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
           >figure</a
         >
       </td>
@@ -72,7 +72,7 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
       <th scope="row">Funções ARIA permitidas</th>
       <td>
         Sem nenhum
-        <a href="/en-US/docs/Web/HTML/Element/figcaption">figcaption </a
+        <a href="/pt-BR/docs/Web/HTML/Element/figcaption">figcaption </a
         >definido:
         <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>,
         caso contrário nenhuma função permitida
@@ -87,12 +87,12 @@ O elemento [HTML](/en-US/docs/Web/HTML) **`<figure>`** representa o conteúdo in
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/en-US/docs/Web/HTML/Global_attributes).
+Este elemento só inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Uso
 
 - Normalmente uma `<figure>` é uma imagem, uma ilustração, um diagrama, um trecho de código ou um esquema que é referenciado no texto principal, mas que pode ser movido para outra parte do documento ou para um apêndice, sem afetar o fluxo principal.
-- Sendo uma [raiz de seção](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), o esquema do conteúdo do elemento `<figure>` é excluído do esquema principal do documento.
+- Sendo uma [raiz de seção](/pt-BR/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), o esquema do conteúdo do elemento `<figure>` é excluído do esquema principal do documento.
 - Uma legenda pode ser associada ao elemento `<figure>` ao inserir um {{HTMLElement("figcaption")}} dentro (como primeiro ou último filho). O primeiro elemento `<figcaption>` encontrado na figura é apresentado como a legenda da figura.
 
 ## Exemplos
