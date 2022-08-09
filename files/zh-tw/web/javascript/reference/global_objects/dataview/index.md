@@ -3,100 +3,100 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>DataView</code></strong> 視圖提供了一個底層介面來讀寫 {{jsxref("ArrayBuffer")}} 中的二進位資料。<code>DataView</code> 能用多種不同的型別對 <code>ArrayBuffer</code> 進行修改、解讀，且可自訂資料的位元組順序而不受系統平台限制。<code>DataView</code> 物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 <code>ArrayBuffer</code> 物件當中。</p>
+**`DataView`** 視圖提供了一個底層介面來讀寫 {{jsxref("ArrayBuffer")}} 中的二進位資料。`DataView` 能用多種不同的型別對 `ArrayBuffer` 進行修改、解讀，且可自訂資料的位元組順序而不受系統平台限制。`DataView` 物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 `ArrayBuffer` 物件當中。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">new DataView(buffer [, byteOffset [, byteLength]])</pre>
+```plain
+new DataView(buffer [, byteOffset [, byteLength]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>buffer</code></dt>
- <dd>要給DataView物件操作的資料容器並且不能為null</dd>
- <dt><code>byteOffset</code> {{optional_inline}}</dt>
- <dd>The offset, in bytes, to the first byte in the specified buffer for the new view to reference. If not specified, the view of the buffer will start with the first byte.</dd>
- <dt><code>byteLength</code> {{optional_inline}}</dt>
- <dd>The number of elements in the byte array. If unspecified, length of the view will match the buffer's length.</dd>
-</dl>
+- `buffer`
+  - : 要給 DataView 物件操作的資料容器並且不能為 null
+- `byteOffset` {{optional_inline}}
+  - : The offset, in bytes, to the first byte in the specified buffer for the new view to reference. If not specified, the view of the buffer will start with the first byte.
+- `byteLength` {{optional_inline}}
+  - : The number of elements in the byte array. If unspecified, length of the view will match the buffer's length.
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>A new <code>DataView</code> object representing the specified data buffer.</p>
+A new `DataView` object representing the specified data buffer.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
- <dt><code>{{jsxref("RangeError")}}</code></dt>
- <dd>Thrown if the <code>byteOffset</code> and <code>byteLength</code> result in the specified view extending past the end of the buffer.</dd>
-</dl>
+- `{{jsxref("RangeError")}}`
+  - : Thrown if the `byteOffset` and `byteLength` result in the specified view extending past the end of the buffer.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="位元組順序">位元組順序</h3>
+### 位元組順序
 
-<p>Multi-byte number formats are represented in memory differently depending on machine architecture, see {{Glossary("Endianness")}} for an explanation. DataView accessors provide explicit control of how data will be accessed irrespective of the platform architecture's endianness.</p>
+Multi-byte number formats are represented in memory differently depending on machine architecture, see {{Glossary("Endianness")}} for an explanation. DataView accessors provide explicit control of how data will be accessed irrespective of the platform architecture's endianness.
 
-<pre class="brush: js">var littleEndian = (function() {
+```js
+var littleEndian = (function() {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
   return new Int16Array(buffer)[0] === 256;
 })();
 console.log(littleEndian); // true or false
-</pre>
+```
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>DataView.length</dt>
- <dd>The <code>DataView</code> constructor's length property whose value is 3.</dd>
- <dt>{{jsxref("DataView.prototype")}}</dt>
- <dd>Allows the addition of properties to all <code>DataView</code> objects.</dd>
-</dl>
+- DataView\.length
+  - : The `DataView` constructor's length property whose value is 3.
+- {{jsxref("DataView.prototype")}}
+  - : Allows the addition of properties to all `DataView` objects.
 
-<h2 id="DataView_實例"><code>DataView</code> 實例</h2>
+## `DataView` 實例
 
-<p>All <code>DataView</code> instances inherit from {{jsxref("DataView.prototype")}}.</p>
+All `DataView` instances inherit from {{jsxref("DataView.prototype")}}.
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
 
-<h3 id="方法">方法</h3>
+### 方法
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var buffer = new ArrayBuffer(16);
+```js
+var buffer = new ArrayBuffer(16);
 var dv = new DataView(buffer, 0);
 
 dv.setInt16(1, 42);
 dv.getInt16(1); //42
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<p>Starting with Gecko / SpiderMonkey 40 {{geckoRelease(40)}}, <code>DataView</code> requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling <code>DataView()</code> as a function without <code>new</code>, will throw a {{jsxref("TypeError")}} from now on.</p>
+Starting with Gecko / SpiderMonkey 40 {{geckoRelease(40)}}, `DataView` requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling `DataView()` as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
-<pre class="brush: js example-bad">var dv = DataView(buffer, 0);
-// TypeError: calling a builtin DataView constructor without new is forbidden</pre>
+```js example-bad
+var dv = DataView(buffer, 0);
+// TypeError: calling a builtin DataView constructor without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new DataView(buffer, 0);</pre>
+```js example-good
+var dv = new DataView(buffer, 0);
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="https://github.com/jDataView/jDataView">jDataView</a>: JavaScript library that polyfills and extends the <code>DataView</code> API to all browsers and Node.js.</li>
-</ul>
+- [jDataView](https://github.com/jDataView/jDataView): JavaScript library that polyfills and extends the `DataView` API to all browsers and Node.js.

@@ -3,67 +3,70 @@ title: 逗號運算子
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The<strong> comma operator</strong> evaluates each of its operands (from left to right) and returns the value of the last operand.</p>
+The **comma operator** evaluates each of its operands (from left to right) and returns the value of the last operand.
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>expr1</em>, <em>expr2, expr3...</em></pre>
+```plain
+expr1, expr2, expr3...
+```
 
-<h2 id="參數">參數</h2>
+## 參數
 
-<dl>
- <dt><code>expr1</code>, <code>expr2, expr3...</code></dt>
- <dd>Any expressions.</dd>
-</dl>
+- `expr1`, `expr2, expr3...`
+  - : Any expressions.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple parameters in a <code>for</code> loop.</p>
+You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple parameters in a `for` loop.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>If <code>a</code> is a 2-dimensional array with 10 elements on each side, the following code uses the comma operator to increment two variables at once.</p>
+If `a` is a 2-dimensional array with 10 elements on each side, the following code uses the comma operator to increment two variables at once.
 
-<p>The following code prints the values of the diagonal elements in the array:</p>
+The following code prints the values of the diagonal elements in the array:
 
-<pre class="brush:js">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
-  console.log("a[" + i + "][" + j + "] = " + a[i][j]);</pre>
+```js
+for (var i = 0, j = 9; i <= 9; i++, j--)
+  console.log("a[" + i + "][" + j + "] = " + a[i][j]);
+```
 
-<p>Note that the comma in assignments such as the <code>var</code> statement may appear not to have the normal effect of comma operators because they don't exist within an expression. In the following example, <code>a</code> is set to the value of <code>b = 3</code> (which is 3), but the <code>c = 4</code> expression still evaluates and its result returned to console (i.e., 4). This is due to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">operator precedence and associativity</a>.</p>
+Note that the comma in assignments such as the `var` statement may appear not to have the normal effect of comma operators because they don't exist within an expression. In the following example, `a` is set to the value of `b = 3` (which is 3), but the `c = 4` expression still evaluates and its result returned to console (i.e., 4). This is due to [operator precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-<pre class="brush: js">// Note that the following creates globals and is disallowed in strict mode.
+```js
+// Note that the following creates globals and is disallowed in strict mode.
 
 a = b = 3, c = 4; // Returns 4 in console
 console.log(a); // 3 (left-most)
 
 x = (y = 5, z = 6); // Returns 6 in console
 console.log(x); // 6 (right-most)
-</pre>
+```
 
-<p>The comma operator is fully different from the comma within arrays, objects, and function arguments and parameters.</p>
+The comma operator is fully different from the comma within arrays, objects, and function arguments and parameters.
 
-<h3 id="Processing_and_then_returning">Processing and then returning</h3>
+### Processing and then returning
 
-<p>Another example that one could make with comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:</p>
+Another example that one could make with comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:
 
-<pre class="brush: js">function myFunc () {
+```js
+function myFunc () {
   var x = 0;
 
   return (x += 1, x); // the same as return ++x;
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a></li>
-</ul>
+- [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)

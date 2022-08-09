@@ -5,32 +5,33 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>hasOwnProperty()</strong></code> 回傳物件是否有該屬性的布林值。</p>
+**`hasOwnProperty()`** 回傳物件是否有該屬性的布林值。
 
-<h2 id="表達式">表達式</h2>
+## 表達式
 
-<pre class="syntaxbox"><code><var>obj</var>.hasOwnProperty(<var>prop</var>)</code></pre>
+```plain
+obj.hasOwnProperty(prop)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>屬性名稱。</dd>
-</dl>
+- `prop`
+  - : 屬性名稱。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>每個為 {{jsxref("Object")}} 後代的物件都繼承 <code>hasOwnProperty</code> 方法。這個方法可以被使用來決定物件是否擁有特定的直接屬性；跟 {{jsxref("Operators/in", "in")}} 不一樣，這個方法並未檢查物件的原型鏈。</p>
+每個為 {{jsxref("Object")}} 後代的物件都繼承 `hasOwnProperty` 方法。這個方法可以被使用來決定物件是否擁有特定的直接屬性；跟 {{jsxref("Operators/in", "in")}} 不一樣，這個方法並未檢查物件的原型鏈。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_hasOwnProperty_測試屬性是否存在">使用 <code>hasOwnProperty</code> 測試屬性是否存在</h3>
+### 使用 `hasOwnProperty` 測試屬性是否存在
 
-<p>這個範例顯示 <code>o </code>物件是否擁有名為 <code>prop </code>的屬性:</p>
+這個範例顯示 `o `物件是否擁有名為 `prop `的屬性:
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 
 function changeO() {
@@ -41,24 +42,26 @@ function changeO() {
 o.hasOwnProperty('prop');   // 回傳 true
 changeO();
 o.hasOwnProperty('prop');   // 回傳 false
-</pre>
+```
 
-<h3 id="直接與繼承的屬性">直接與繼承的屬性</h3>
+### 直接與繼承的屬性
 
-<p>這個範例區分直接屬性和從原型鍊繼承的屬性：</p>
+這個範例區分直接屬性和從原型鍊繼承的屬性：
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 o.hasOwnProperty('prop');             // 回傳 true
 o.hasOwnProperty('toString');         // 回傳 false
 o.hasOwnProperty('hasOwnProperty');   // 回傳 false
-</pre>
+```
 
-<h3 id="遍歷物件的屬性">遍歷物件的屬性</h3>
+### 遍歷物件的屬性
 
-<p>這個範例顯示如何不執行繼承的屬性去遍歷物件的屬性。注意 {{jsxref("Statements/for...in", "for...in")}} 已經遍歷了可以被列舉的項目，所以不該基於缺乏不可列舉的屬性(如下)而假設 <code>hasOwnProperty</code> 被嚴格地限制在列舉的項目（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。</p>
+這個範例顯示如何不執行繼承的屬性去遍歷物件的屬性。注意 {{jsxref("Statements/for...in", "for...in")}} 已經遍歷了可以被列舉的項目，所以不該基於缺乏不可列舉的屬性(如下)而假設 `hasOwnProperty` 被嚴格地限制在列舉的項目（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。
 
-<pre class="brush: js">var buz = {
+```js
+var buz = {
   fog: 'stack'
 };
 
@@ -70,13 +73,14 @@ for (var name in buz) {
     console.log(name); // toString or something else
   }
 }
-</pre>
+```
 
-<h3 id="將_hasOwnProperty_作為屬性"><code>將 hasOwnProperty</code> 作為屬性</h3>
+### `將 hasOwnProperty` 作為屬性
 
-<p>JavaScript 並未保護 <code>hasOwnProperty</code>；因此，如果一個物件擁有一樣的屬性名稱，為了獲得正確的結果需要使用 <em>external</em> <code>hasOwnProperty</code>：</p>
+JavaScript 並未保護 `hasOwnProperty`；因此，如果一個物件擁有一樣的屬性名稱，為了獲得正確的結果需要使用 _external_ `hasOwnProperty`：
 
-<pre class="brush: js">var foo = {
+```js
+var foo = {
   hasOwnProperty: function() {
     return false;
   },
@@ -90,24 +94,22 @@ foo.hasOwnProperty('bar'); // 總是回傳 false
 
 // 從物件的原型使用 hasOwnProperty 也是可行的
 Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
-</pre>
+```
 
-<p>註：在最後一個例子中並未創建任何新的物件。</p>
+註：在最後一個例子中並未創建任何新的物件。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited">JavaScript Guide: Inheritance revisited</a></li>
-</ul>
+- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Operators/in", "in")}}
+- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited)

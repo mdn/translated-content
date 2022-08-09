@@ -3,72 +3,67 @@ title: Screen
 slug: Web/API/Screen
 translation_of: Web/API/Screen
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p><code>Screen</code> 介面表示了一個用戶端螢幕，通常是指呈現目前頁面的視窗。</p>
+`Screen` 介面表示了一個用戶端螢幕，通常是指呈現目前頁面的視窗。
 
-<p>一般來說為顯示目前網頁的視窗，可以透過 <code>window.screen</code> 取得物件實體。</p>
+一般來說為顯示目前網頁的視窗，可以透過 `window.screen` 取得物件實體。
 
-<h2 id="Example">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("Screen.availTop")}}</dt>
- <dd>Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.</dd>
- <dt>{{domxref("Screen.availLeft")}}</dt>
- <dd>Returns the first available pixel available from the left side of the screen.</dd>
- <dt>{{domxref("Screen.availHeight")}}</dt>
- <dd>Specifies the height of the screen, in pixels, minus permanent or semipermanent user interface features displayed by the operating system, such as the Taskbar on Windows.</dd>
- <dt>{{domxref("Screen.availWidth")}}</dt>
- <dd>Returns the amount of horizontal space in pixels available to the window.</dd>
- <dt>{{domxref("Screen.colorDepth")}}</dt>
- <dd>Returns the color depth of the screen.</dd>
- <dt>{{domxref("Screen.height")}}</dt>
- <dd>Returns the height of the screen in pixels.</dd>
- <dt>{{domxref("Screen.left")}}</dt>
- <dd>Returns the distance in pixels from the left side of the main screen to the left side of the current screen.</dd>
- <dt>{{domxref("Screen.orientation")}}</dt>
- <dd>Returns the current orientation of the screen.</dd>
- <dt>{{domxref("Screen.pixelDepth")}}</dt>
- <dd>Gets the bit depth of the screen.</dd>
- <dt>{{domxref("Screen.top")}}</dt>
- <dd>Returns the distance in pixels from the top side of the current screen.</dd>
- <dt>{{domxref("Screen.width")}}</dt>
- <dd>Returns the width of the screen.</dd>
- <dt>{{domxref("Screen.mozEnabled")}}</dt>
- <dd>Boolean. Setting to false will turn off the device's screen.</dd>
- <dt>{{domxref("Screen.mozBrightness")}}</dt>
- <dd>Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.</dd>
-</dl>
+- {{domxref("Screen.availTop")}}
+  - : Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features.
+- {{domxref("Screen.availLeft")}}
+  - : Returns the first available pixel available from the left side of the screen.
+- {{domxref("Screen.availHeight")}}
+  - : Specifies the height of the screen, in pixels, minus permanent or semipermanent user interface features displayed by the operating system, such as the Taskbar on Windows.
+- {{domxref("Screen.availWidth")}}
+  - : Returns the amount of horizontal space in pixels available to the window.
+- {{domxref("Screen.colorDepth")}}
+  - : Returns the color depth of the screen.
+- {{domxref("Screen.height")}}
+  - : Returns the height of the screen in pixels.
+- {{domxref("Screen.left")}}
+  - : Returns the distance in pixels from the left side of the main screen to the left side of the current screen.
+- {{domxref("Screen.orientation")}}
+  - : Returns the current orientation of the screen.
+- {{domxref("Screen.pixelDepth")}}
+  - : Gets the bit depth of the screen.
+- {{domxref("Screen.top")}}
+  - : Returns the distance in pixels from the top side of the current screen.
+- {{domxref("Screen.width")}}
+  - : Returns the width of the screen.
+- {{domxref("Screen.mozEnabled")}}
+  - : Boolean. Setting to false will turn off the device's screen.
+- {{domxref("Screen.mozBrightness")}}
+  - : Controls the brightness of a device's screen. A double between 0 and 1.0 is expected.
 
-<h3 id="事件處理器">事件處理器</h3>
+### 事件處理器
 
-<dl>
- <dt>{{domxref("Screen.onorientationchange")}}</dt>
- <dd>A handler for the {{event("orientationchange")}} events.</dd>
-</dl>
+- {{domxref("Screen.onorientationchange")}}
+  - : A handler for the {{event("orientationchange")}} events.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("Screen.lockOrientation")}}</dt>
- <dd>Lock the screen orientation (only works in fullscreen or for installed apps)</dd>
- <dt>{{domxref("Screen.unlockOrientation")}}</dt>
- <dd>Unlock the screen orientation (only works in fullscreen or for installed apps)</dd>
-</dl>
+- {{domxref("Screen.lockOrientation")}}
+  - : Lock the screen orientation (only works in fullscreen or for installed apps)
+- {{domxref("Screen.unlockOrientation")}}
+  - : Unlock the screen orientation (only works in fullscreen or for installed apps)
 
-<p>Methods inherit from {{domxref("EventTarget")}}</p>
+Methods inherit from {{domxref("EventTarget")}}
 
-<p>{{page("/en-US/docs/Web/API/EventTarget","Methods")}}</p>
+{{page("/en-US/docs/Web/API/EventTarget","Methods")}}
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush:js">if (screen.pixelDepth &lt; 8) {
+```js
+if (screen.pixelDepth < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
 }
-</pre>
+```
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}

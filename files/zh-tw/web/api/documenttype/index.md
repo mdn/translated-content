@@ -8,52 +8,46 @@ tags:
   - Interface
 translation_of: Web/API/DocumentType
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>DocumentType</code></strong> 介面表示了一個代表文件類型的 {{domxref("Node")}} 節點。</p>
+**`DocumentType`** 介面表示了一個代表文件類型的 {{domxref("Node")}} 節點。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>此介面繼承了其父介面 {{domxref("Node")}} 的屬性，以及實作了 {{domxref("ChildNode")}} 介面。</em></p>
+_此介面繼承了其父介面 {{domxref("Node")}} 的屬性，以及實作了 {{domxref("ChildNode")}} 介面。_
 
-<dl>
- <dt>{{domxref("DocumentType.entities")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>A {{domxref("NamedNodeMap")}} of entities declared in the DTD. Every node in this map implements the {{domxref("Entity")}} interface.</dd>
- <dt>{{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>A {{domxref("DOMString")}} of the internal subset, or <code>null</code> if there is none. Eg <code>"&lt;!ELEMENT foo (bar)&gt;"</code>.</dd>
- <dt>{{domxref("DocumentType.name")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}}, eg <code>"html"</code> for <code>&lt;!DOCTYPE HTML&gt;</code>.</dd>
- <dt>{{domxref("DocumentType.notations")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>A {{domxref("NamedNodeMap")}} with notations declared in the DTD. Every node in this map implements the {{domxref("Notation")}} interface.</dd>
- <dt>{{domxref("DocumentType.publicId")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}}, eg <code>"-//W3C//DTD HTML 4.01//EN"</code>, empty string for HTML5.</dd>
- <dt>{{domxref("DocumentType.systemId")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}}, eg <code>"http://www.w3.org/TR/html4/strict.dtd"</code>, empty string for HTML5.</dd>
-</dl>
+- {{domxref("DocumentType.entities")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : A {{domxref("NamedNodeMap")}} of entities declared in the DTD. Every node in this map implements the {{domxref("Entity")}} interface.
+- {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : A {{domxref("DOMString")}} of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
+- {{domxref("DocumentType.name")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"html"` for `<!DOCTYPE HTML>`.
+- {{domxref("DocumentType.notations")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : A {{domxref("NamedNodeMap")}} with notations declared in the DTD. Every node in this map implements the {{domxref("Notation")}} interface.
+- {{domxref("DocumentType.publicId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"-//W3C//DTD HTML 4.01//EN"`, empty string for HTML5.
+- {{domxref("DocumentType.systemId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"http://www.w3.org/TR/html4/strict.dtd"`, empty string for HTML5.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>此介面繼承了其父介面 {{domxref("Node")}} 的方法，以及實作了 {{domxref("ChildNode")}} 介面。</em></p>
+_此介面繼承了其父介面 {{domxref("Node")}} 的方法，以及實作了 {{domxref("ChildNode")}} 介面。_
 
-<dl>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Removes the object from its parent children list.</dd>
-</dl>
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : Removes the object from its parent children list.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.DocumentType")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
- <li>{{domxref("Entity")}}</li>
- <li>{{domxref("Notation")}}</li>
-</ul>
+- [The DOM interfaces index.](/zh-TW/docs/DOM/DOM_Reference)
+- {{domxref("Entity")}}
+- {{domxref("Notation")}}

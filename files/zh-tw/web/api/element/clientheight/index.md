@@ -6,42 +6,37 @@ tags:
   - Reference
 translation_of: Web/API/Element/clientHeight
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code><strong>Element.clientHeight </strong></code>唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。</p>
+**`Element.clientHeight `**唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。
 
-<p><code>clientHeight</code> 可以被計算成 CSS <code>height</code> + CSS <code>padding</code> - 水平滾動條的高度（如果有顯示）</p>
+`clientHeight` 可以被計算成 CSS `height` + CSS `padding` - 水平滾動條的高度（如果有顯示）
 
-<div class="note">
-<p><strong>Note:</strong> 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax_and_values">表達式</h2>
+## 表達式
 
-<pre class="syntaxbox">var <var>h</var> = <var>element</var>.clientHeight;</pre>
+```plain
+var h = element.clientHeight;
+```
 
-<p><code><var>h</var></code> 代表元素高度(pixels)的正整數.</p>
+`h` 代表元素高度(pixels)的正整數.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<p> </p>
+![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-<p>              <img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
-
-
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h3 id="Notes">註</h3>
+### 註
 
-<p><code>clientHeight</code> 是在 the Internet Explorer 物件介紹的屬性.</p>
+`clientHeight` 是在 the Internet Explorer 物件介紹的屬性.
 
-<h2 id="See_Also">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("HTMLElement.offsetHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN Measuring Element Dimension and Location</a></li>
-</ul>
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("Element.scrollHeight")}}
+- [Determining the dimensions of elements](/en-US/docs/Determining_the_dimensions_of_elements)
+- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

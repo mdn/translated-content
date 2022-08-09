@@ -3,32 +3,33 @@ title: 403 Forbidden
 slug: Web/HTTP/Status/403
 translation_of: Web/HTTP/Status/403
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>403 Forbidden</code></strong> 客戶端錯誤狀態碼表示伺服器理解該請求但拒絕核准。</p>
+HTTP **`403 Forbidden`** 客戶端錯誤狀態碼表示伺服器理解該請求但拒絕核准。
 
-<p>該狀態碼與 HTTP  {{HTTPStatus("401")}} 類似，但重新身分驗證不能提供幫助。 存取被永久性禁止，且與應用程式邏輯有關，如資源的訪問權限不足。</p>
+該狀態碼與 HTTP {{HTTPStatus("401")}} 類似，但重新身分驗證不能提供幫助。 存取被永久性禁止，且與應用程式邏輯有關，如資源的訪問權限不足。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">403 Forbidden</pre>
+```plain
+403 Forbidden
+```
 
-<h2 id="回應範例">回應範例</h2>
+## 回應範例
 
-<pre>HTTP/1.1 403 Forbidden
+```plain
+HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性"><a href="/zh-TW/docs/Web/HTTP/Status/100$edit#%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9B%B8%E5%AE%B9%E6%80%A7">瀏覽器相容性</a></h2>
+## [瀏覽器相容性](/zh-TW/docs/Web/HTTP/Status/100$edit#%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9B%B8%E5%AE%B9%E6%80%A7)
 
-<p>{{Compat("http.status.403")}}</p>
+{{Compat("http.status.403")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPStatus("401")}}</li>
-</ul>
+- {{HTTPStatus("401")}}

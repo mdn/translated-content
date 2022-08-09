@@ -3,26 +3,25 @@ title: Coordinates.altitude
 slug: Web/API/GeolocationCoordinates/altitude
 translation_of: Web/API/GeolocationCoordinates/altitude
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><code><strong>Coordinates.altitude</strong></code> 是個唯讀的正複數用來代表距離海平面的高度，單位為公尺。如果無法提供這個值則回傳 null。</p>
+**`Coordinates.altitude`** 是個唯讀的正複數用來代表距離海平面的高度，單位為公尺。如果無法提供這個值則回傳 null。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>alt</em> = <code><em>coordinates</em><code>.altitude</code></code>
-</pre>
+```plain
+alt = coordinates.altitude
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.GeolocationCoordinates.altitude")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>屬於 {{domxref("Coordinates")}} 介面。</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- 屬於 {{domxref("Coordinates")}} 介面。

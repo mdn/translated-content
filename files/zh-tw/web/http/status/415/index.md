@@ -3,26 +3,24 @@ title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
 translation_of: Web/HTTP/Status/415
 ---
-<div>
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>415 Unsupported Media Type</strong></code> 用戶端的錯誤表示被請求資源的多媒體類型不被伺服器支援，因此該請求被拒絕。</p>
+HTTP **`415 Unsupported Media Type`** 用戶端的錯誤表示被請求資源的多媒體類型不被伺服器支援，因此該請求被拒絕。
 
-<p>該格式問體可能源自於請求中設置的  {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}} 或對資料的直接訪問。</p>
-</div>
+該格式問體可能源自於請求中設置的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}} 或對資料的直接訪問。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre>415 Unsupported Media Type</pre>
+```plain
+415 Unsupported Media Type
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Encoding")}}</li>
- <li>{{HTTPHeader("Accept")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Accept")}}

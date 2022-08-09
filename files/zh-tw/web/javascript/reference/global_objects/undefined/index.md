@@ -5,72 +5,73 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>The global <code><strong>undefined</strong></code> property represents the primitive value <code>{{Glossary("Undefined", "undefined")}}</code>. It is one of JavaScript's {{Glossary("Primitive", "primitive types")}}.</p>
+The global **`undefined`** property represents the primitive value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's {{Glossary("Primitive", "primitive types")}}.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
+## 語法
 
-<h2 id="語法">語法</h2>
+```plain
+undefined
+```
 
-<pre class="syntaxbox"><code>undefined</code></pre>
+## 描述
 
-<h2 id="描述">描述</h2>
+`undefined` is a property of the _global object_; i.e., it is a variable in global scope. The initial value of `undefined` is the primitive value `{{Glossary("Undefined", "undefined")}}`.
 
-<p><code>undefined</code> is a property of the <em>global object</em>; i.e., it is a variable in global scope. The initial value of <code>undefined</code> is the primitive value <code>{{Glossary("Undefined", "undefined")}}</code>.</p>
+In modern browsers (JavaScript 1.8.5 / Firefox 4+), `undefined` is a non-configurable, non-writable property per the ECMAScript 5 specification. Even when this is not the case, avoid overriding it.
 
-<p>In modern browsers (JavaScript 1.8.5 / Firefox 4+), <code>undefined</code> is a non-configurable, non-writable property per the ECMAScript 5 specification. Even when this is not the case, avoid overriding it.</p>
+A variable that has not been assigned a value is of type undefined. A method or statement also returns `undefined` if the variable that is being evaluated does not have an assigned value. A function returns `undefined` if a value was not {{jsxref("Statements/return", "returned")}}.
 
-<p>A variable that has not been assigned a value is of type undefined. A method or statement also returns <code>undefined</code> if the variable that is being evaluated does not have an assigned value. A function returns <code>undefined</code> if a value was not {{jsxref("Statements/return", "returned")}}.</p>
+> **警告：** While it is possible to use it as an {{Glossary("Identifier", "identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a {{jsxref("Reserved_Words", "reserved word")}}), doing so is a very bad idea that will make your code difficult to maintain and debug.
+>
+> ```js
+> //DON'T DO THIS
+>
+> // logs "foo string"
+> (function() { var undefined = 'foo'; console.log(undefined, typeof undefined); })();
+>
+> // logs "foo string"
+> (function(undefined) { console.log(undefined, typeof undefined); })('foo');
+> ```
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> While it is possible to use it as an {{Glossary("Identifier", "identifier")}} (variable name) in any scope other than the global scope (because <code>undefined</code> is not a {{jsxref("Reserved_Words", "reserved word")}}), doing so is a very bad idea that will make your code difficult to maintain and debug.</p>
+## 範例
 
-<pre class="brush: js">//DON'T DO THIS
+### Strict equality and `undefined`
 
-// logs "foo string"
-(function() { var undefined = 'foo'; console.log(undefined, typeof undefined); })();
+You can use `undefined` and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable `x` is not defined, and the `if` statement evaluates to true.
 
-// logs "foo string"
-(function(undefined) { console.log(undefined, typeof undefined); })('foo');
-</pre>
-</div>
-
-<h2 id="範例">範例</h2>
-
-<h3 id="Strict_equality_and_undefined">Strict equality and <code>undefined</code></h3>
-
-<p>You can use <code>undefined</code> and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable <code>x</code> is not defined, and the <code>if</code> statement evaluates to true.</p>
-
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === undefined) {
    // these statements execute
 }
 else {
    // these statements do not execute
 }
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> The strict equality operator rather than the standard equality operator must be used here, because <code>x == undefined</code> also checks whether <code>x</code> is <code>null</code>, while strict equality doesn't. <code>null</code> is not equivalent to <code>undefined</code>. See {{jsxref("Operators/Comparison_Operators", "comparison operators")}} for details.</p>
-</div>
+> **備註：** The strict equality operator rather than the standard equality operator must be used here, because `x == undefined` also checks whether `x` is `null`, while strict equality doesn't. `null` is not equivalent to `undefined`. See {{jsxref("Operators/Comparison_Operators", "comparison operators")}} for details.
 
-<h3 id="Typeof_operator_and_undefined"><code>Typeof</code> operator and <code>undefined</code></h3>
+### `Typeof` operator and `undefined`
 
-<p>Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:</p>
+Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (typeof x === 'undefined') {
    // these statements execute
 }
-</pre>
+```
 
-<p>One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not throw an error if the variable has not been declared.</p>
+One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not throw an error if the variable has not been declared.
 
-<pre class="brush: js">// x has not been declared before
+```js
+// x has not been declared before
 if (typeof x === 'undefined') { // evaluates to true without errors
    // these statements execute
 }
@@ -78,15 +79,16 @@ if (typeof x === 'undefined') { // evaluates to true without errors
 if (x === undefined) { // throws a ReferenceError
 
 }
-</pre>
+```
 
-<p>However, this kind of technique should be avoided. JavaScript is a statically scoped language, so knowing if a variable is declared can be read by seeing whether it is declared in an enclosing context. The only exception is the global scope, but the global scope is bound to the global object, so checking the existence of a variable in the global context can be done by checking the existence of a property on the <em>global object</em> (using the {{jsxref("Operators/in", "in")}} operator, for instance).</p>
+However, this kind of technique should be avoided. JavaScript is a statically scoped language, so knowing if a variable is declared can be read by seeing whether it is declared in an enclosing context. The only exception is the global scope, but the global scope is bound to the global object, so checking the existence of a variable in the global context can be done by checking the existence of a property on the _global object_ (using the {{jsxref("Operators/in", "in")}} operator, for instance).
 
-<h3 id="Void_operator_and_undefined"><code>Void</code> operator and <code>undefined</code></h3>
+### `Void` operator and `undefined`
 
-<p>The {{jsxref("Operators/void", "void")}} operator is a third alternative.</p>
+The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === void 0) {
    // these statements execute
 }
@@ -95,14 +97,12 @@ if (x === void 0) {
 if (y === void 0) {
    // throws a - Uncaught ReferenceError: y is not defined
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-
-
-<p>{{Compat("javascript.builtins.undefined")}}</p>
+{{Compat("javascript.builtins.undefined")}}

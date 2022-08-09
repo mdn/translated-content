@@ -9,30 +9,27 @@ tags:
   - Reference
 translation_of: Web/CSS/border
 ---
-<div>{{CSSRef("CSS Borders")}}</div>
+{{CSSRef("CSS Borders")}}
 
-<p><strong><code>border</code></strong> <a href="/en-US/docs/Web/CSS/Shorthand_properties">shorthand</a> <a href="/en-US/docs/CSS">CSS</a> 屬性可用來設定元素的邊框。它可以設定以下的值 {{Cssxref("border-width")}}、{{Cssxref("border-style")}} 以及 {{Cssxref("border-color")}}。</p>
+**`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/CSS) 屬性可用來設定元素的邊框。它可以設定以下的值 {{Cssxref("border-width")}}、{{Cssxref("border-style")}} 以及 {{Cssxref("border-color")}}。
 
-<div>{{EmbedInteractiveExample("pages/css/border.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border.html")}}
 
+As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
 
+The `border` shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.
 
-<p>As with all shorthand properties, any omitted sub-values will be set to their <a href="/en-US/docs/Web/CSS/initial_value">initial value</a>. Importantly, <code>border</code> cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., <code>none</code>.</p>
+### Borders vs. outlines
 
-<p>The <code>border</code> shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.</p>
+Borders and [outlines](/en-US/docs/Web/CSS/outline) are very similar. However, outlines differ from borders in the following ways:
 
-<h3 id="Borders_vs._outlines">Borders vs. outlines</h3>
+- Outlines never take up space, as they are drawn outside of an element's content.
+- According to the spec, outlines don't have to be rectangular, although they usually are.
 
-<p>Borders and <a href="/en-US/docs/Web/CSS/outline">outlines</a> are very similar. However, outlines differ from borders in the following ways:</p>
+## Syntax
 
-<ul>
- <li>Outlines never take up space, as they are drawn outside of an element's content.</li>
- <li>According to the spec, outlines don't have to be rectangular, although they usually are.</li>
-</ul>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers">/* style */
+```css
+/* style */
 border: solid;
 
 /* width | style */
@@ -48,39 +45,39 @@ border: medium dashed green;
 border: inherit;
 border: initial;
 border: unset;
-</pre>
+```
 
-<p>The <code>border</code> property may be specified using one, two, or three of the values listed below. The order of the values does not matter.</p>
+The `border` property may be specified using one, two, or three of the values listed below. The order of the values does not matter.
 
-<div class="note">
-<p><strong>Note:</strong> The border will be invisible if its style is not defined. This is because the style defaults to <code>none</code>.</p>
-</div>
+> **備註：** The border will be invisible if its style is not defined. This is because the style defaults to `none`.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Sets the thickness of the border. Defaults to <code>medium</code> if absent. See {{Cssxref("border-width")}}.</dd>
- <dt><code>&lt;line-style&gt;</code></dt>
- <dd>Sets the style of the border. Defaults to <code>none</code> if absent. See {{Cssxref("border-style")}}.</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>Sets the color of the border. Defaults to <code>currentcolor</code> if absent. See {{Cssxref("border-color")}}.</dd>
-</dl>
+- `<line-width>`
+  - : Sets the thickness of the border. Defaults to `medium` if absent. See {{Cssxref("border-width")}}.
+- `<line-style>`
+  - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
+- {{cssxref("&lt;color&gt;")}}
+  - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
-<pre class="syntaxbox"><code>{{csssyntax}}</code></pre>
+```plain
+{{csssyntax}}
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;I have a border, an outline, AND a box shadow! Amazing, isn't it?&lt;/div&gt;
-</pre>
+```html
+<div>I have a border, an outline, AND a box shadow! Amazing, isn't it?</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
   box-shadow: 0 0 0 2rem skyblue;
@@ -89,20 +86,19 @@ border: unset;
   margin: 2rem;
   padding: 1rem;
   outline-offset: 0.5rem;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("css.properties.border")}}</p>
+{{Compat("css.properties.border")}}

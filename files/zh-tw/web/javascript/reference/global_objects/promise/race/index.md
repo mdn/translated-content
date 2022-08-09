@@ -3,36 +3,37 @@ title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.race(iterable)</strong></code> 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。</p>
+**`Promise.race(iterable)`** 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
+```plain
+Promise.race(iterable);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt>iterable</dt>
- <dd>一個 iterable 物件，像是 {{jsxref("Array")}}. 請參考<a href="/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議">可迭代協議</a>。</dd>
-</dl>
+- iterable
+  - : 一個 iterable 物件，像是 {{jsxref("Array")}}. 請參考[可迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>當傳入的 iterable 中有 promise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxref("Promise")}}。</p>
+當傳入的 iterable 中有 promise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxref("Promise")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>race</code> 函式回傳一個與傳入的 iterable 之中第一個被解決（settled）的 promise 相同方式被解決（且以相同值）的 <code>Promise</code>。</p>
+`race` 函式回傳一個與傳入的 iterable 之中第一個被解決（settled）的 promise 相同方式被解決（且以相同值）的 `Promise`。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Promise.race_的非同步性質"><code>Promise.race</code> 的非同步性質</h3>
+### `Promise.race` 的非同步性質
 
-<p>以下例子演示了 <code>Promise.race</code> <code>的非同步性質：</code></p>
+以下例子演示了 `Promise.race` `的非同步性質：`
 
-<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
+```js
+// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -47,13 +48,15 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+// Promise { <state>: "fulfilled", <value>: 33 }
+```
 
-<p>一個空的 iterable 造成回傳的 promise 永久擱置：</p>
+一個空的 iterable 造成回傳的 promise 永久擱置：
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
 setTimeout(function(){
     console.log('the stack is now empty');
@@ -61,14 +64,15 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "pending" }
-</pre>
+// Promise { <state>: "pending" }
+```
 
-<p>若 iterable 中有一個或多個非 promise 值且／或一個已經被實現／解決的 promise，<code>Promise.race</code> 將以陣列中第一個這樣的值解決：</p>
+若 iterable 中有一個或多個非 promise 值且／或一個已經被實現／解決的 promise，`Promise.race` 將以陣列中第一個這樣的值解決：
 
-<pre class="brush: js">var foreverPendingPromise = Promise.race([]);
+```js
+var foreverPendingPromise = Promise.race([]);
 var alreadyResolvedProm = Promise.resolve(666);
 
 var arr = [foreverPendingPromise, alreadyResolvedProm, "non-Promise value"];
@@ -85,16 +89,17 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 666 }
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: "non-Promise value" }
-</pre>
+// Promise { <state>: "fulfilled", <value>: 666 }
+// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+```
 
-<h3 id="使用_Promise.race_–_及_setTimeout_的範例">使用 <code>Promise.race</code> – 及 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout</a></code> 的範例</h3>
+### 使用 `Promise.race` – 及 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 的範例
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, 'one');
 });
 var p2 = new Promise(function(resolve, reject) {
@@ -133,19 +138,17 @@ Promise.race([p5, p6]).then(function(value) {
   console.log(reason); // "six"
   // p6 is faster, so it rejects
 });
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Promise.race")}}</p>
+{{Compat("javascript.builtins.Promise.race")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

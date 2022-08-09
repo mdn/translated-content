@@ -3,59 +3,53 @@ title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>finally()</strong></code> 方法會回傳一個 {{jsxref("Promise")}}。當 promise 被 settled 後，無論其結果是 fulfilled 還是 rejected ，都會執行指定的回呼函數。它提供了一個讓 <code>Promise</code> 在被確認後，無論是 fulfilled 或是 rejected 都會執行某些程式碼的一種手段。</p>
+**`finally()`** 方法會回傳一個 {{jsxref("Promise")}}。當 promise 被 settled 後，無論其結果是 fulfilled 還是 rejected ，都會執行指定的回呼函數。它提供了一個讓 `Promise` 在被確認後，無論是 fulfilled 或是 rejected 都會執行某些程式碼的一種手段。
 
-<p>這樣可以避免你在 promise 的 {{jsxref("Promise.then", "then()")}} 和 {{jsxref("Promise.catch", "catch()")}} 重複處理相同的程式碼。</p>
+這樣可以避免你在 promise 的 {{jsxref("Promise.then", "then()")}} 和 {{jsxref("Promise.catch", "catch()")}} 重複處理相同的程式碼。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>p.finally(onFinally)</var>;
+```plain
+p.finally(onFinally);
 
 p.finally(function() {
    // settled（fulfilled 或 rejected)
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>onFinally</code></dt>
- <dd>當 <code>Promise</code> settled 後呼叫的 {{jsxref("Function")}}。</dd>
-</dl>
+- `onFinally`
+  - : 當 `Promise` settled 後呼叫的 {{jsxref("Function")}}。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>回傳 {{jsxref("Promise")}} 當 <code>finally</code> 的處理函數 <code>onFinally</code> 被指定時。</p>
+回傳 {{jsxref("Promise")}} 當 `finally` 的處理函數 `onFinally` 被指定時。
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>當你希望在 promise settled 後且不關心它的結果為何時，執行一些處理或清理的工作， <code>finally()</code> 方法會很有幫助。</p>
+當你希望在 promise settled 後且不關心它的結果為何時，執行一些處理或清理的工作， `finally()` 方法會很有幫助。
 
-<p><code>finally()</code> 方法非常類似於 <code>.then(onFinally, onFinally)</code> 的呼叫方式，但仍有一些差異：</p>
+`finally()` 方法非常類似於 `.then(onFinally, onFinally)` 的呼叫方式，但仍有一些差異：
 
-<ul>
- <li>當建立行內的函數時，可以只傳遞一次，從而避免重複宣告或為它宣告變數。</li>
- <li><code>finally</code> 的回呼函數並不會接收到任何引數，因其沒有可靠的方式來確認 promise 是被 fulfilled 還是 rejected 。它的使用情境僅適用於當你<em>不關心</em> rejection 的原因或 fulfillment 的值，因此無須提供。範例：
-  <ul>
-   <li>與 <code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code>（將被 resolved 為<code>undefined</code>）不同，<code>Promise.resolve(2).finally(() =&gt; {})</code> 將被 resolved 為<code>2</code>。</li>
-   <li>同樣的，與 <code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code>（將 fulfilled 為<code>undefined</code>）不同，<code>Promise.reject(3).finally(() =&gt; {})</code> 將被 rejected 為<code>3</code>。</li>
-  </ul>
- </li>
-</ul>
+- 當建立行內的函數時，可以只傳遞一次，從而避免重複宣告或為它宣告變數。
+- `finally` 的回呼函數並不會接收到任何引數，因其沒有可靠的方式來確認 promise 是被 fulfilled 還是 rejected 。它的使用情境僅適用於當你*不關心* rejection 的原因或 fulfillment 的值，因此無須提供。範例：
 
-<div class="notecard note">
-<p><strong>備註：</strong>在 finally 回呼中使用 throw （或回傳 rejected promise）會導致新的 promise 被 reject ， reject 的原因則是呼叫 throw() 時所指定的值。</p>
-</div>
+  - 與 `Promise.resolve(2).then(() => {}, () => {})`（將被 resolved 為`undefined`）不同，`Promise.resolve(2).finally(() => {})` 將被 resolved 為`2`。
+  - 同樣的，與 `Promise.reject(3).then(() => {}, () => {})`（將 fulfilled 為`undefined`）不同，`Promise.reject(3).finally(() => {})` 將被 rejected 為`3`。
 
-<h2 id="Examples">Examples</h2>
+> **備註：**在 finally 回呼中使用 throw （或回傳 rejected promise）會導致新的 promise 被 reject ， reject 的原因則是呼叫 throw() 時所指定的值。
 
-<pre class="brush: js">let isLoading = true;
+## Examples
+
+```js
+let isLoading = true;
 
 fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");
-    if(contentType &amp;&amp; contentType.includes("application/json")) {
+    if(contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
@@ -63,21 +57,18 @@ fetch(myRequest).then(function(response) {
   .then(function(json) { /* process your JSON further */ })
   .catch(function(error) { console.log(error); })
   .finally(function() { isLoading = false; });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Promise.finally")}}</p>
+{{Compat("javascript.builtins.Promise.finally")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.catch()")}}

@@ -3,26 +3,26 @@ title: 201 Created
 slug: Web/HTTP/Status/201
 translation_of: Web/HTTP/Status/201
 ---
-<p>HTTP <strong><code>201 Created</code></strong> 成功狀態碼表示請求成功且有一個新的資源已經依據需要而被建立。實際上，在此回應傳送前，新資源就已被建立，且其內容在訊息的主體中傳回，其位置為請求的 URL 或是 {{HTTPHeader("Location")}} 標頭的內容。</p>
+HTTP **`201 Created`** 成功狀態碼表示請求成功且有一個新的資源已經依據需要而被建立。實際上，在此回應傳送前，新資源就已被建立，且其內容在訊息的主體中傳回，其位置為請求的 URL 或是 {{HTTPHeader("Location")}} 標頭的內容。
 
-<p>此狀態碼通常用於 {{HTTPMethod("POST")}} 請求的回應中。</p>
+此狀態碼通常用於 {{HTTPMethod("POST")}} 請求的回應中。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">201 Created</pre>
+```plain
+201 Created
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.status.201")}}</p>
+{{Compat("http.status.201")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/HTTP/Methods">HTTP 請求方法</a></li>
-</ul>
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
 
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}

@@ -4,24 +4,24 @@ slug: Web/HTTP/Status/418
 translation_of: Web/HTTP/Status/418
 original_slug: Web/HTTP/Status/418_I_m_a_teapot
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>418 I'm a teapot</code></strong> 用戶端錯誤碼表明了伺服器是個（永久性的）茶壺，所以拒絕煮咖啡。一個結合了咖啡與茶壺的壺子暫時沒咖啡的情境，應該回傳 503。這個錯誤是源自於 1998 與 2014 的愚人節玩笑「超文字咖啡壺控制協定」（Hyper Text Coffee Pot Control Protocol）。</p>
+HTTP **`418 I'm a teapot`** 用戶端錯誤碼表明了伺服器是個（永久性的）茶壺，所以拒絕煮咖啡。一個結合了咖啡與茶壺的壺子暫時沒咖啡的情境，應該回傳 503。這個錯誤是源自於 1998 與 2014 的愚人節玩笑「超文字咖啡壺控制協定」（Hyper Text Coffee Pot Control Protocol）。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">418 I'm a teapot</pre>
+```plain
+418 I'm a teapot
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.status.418")}}</p>
+{{Compat("http.status.418")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="https://zh.wikipedia.org/wiki/超文字咖啡壺控制協定">維基百科的「超文字咖啡壺控制協定」</a></li>
-</ul>
+- [維基百科的「超文字咖啡壺控制協定」](https://zh.wikipedia.org/wiki/超文字咖啡壺控制協定)

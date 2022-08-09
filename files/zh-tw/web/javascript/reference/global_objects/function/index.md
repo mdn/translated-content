@@ -8,72 +8,74 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Function</code> 建構函式</strong>可建立一個新的 <code>Function</code> 物件。在 JavaScript 中，所有的函式實際上都是 <code>Function</code> 物件。</p>
+**`Function` 建構函式**可建立一個新的 `Function` 物件。在 JavaScript 中，所有的函式實際上都是 `Function` 物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>new Function ([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</code></pre>
+```plain
+new Function ([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>function 的引數名稱必須要符合正規的命名。每個名稱都必須要是有效的 JavaScript 識別符號規則的字串，或是使用英文逗號「, 」分隔開的字串清單; 像是 "x", "theValue", 或是 "a, b'。</dd>
- <dt><code>functionBody</code></dt>
- <dd>包含 JavaScript 狀態以及 function 定義的字串。</dd>
-</dl>
+- `arg1, arg2, ... argN`
+  - : function 的引數名稱必須要符合正規的命名。每個名稱都必須要是有效的 JavaScript 識別符號規則的字串，或是使用英文逗號「, 」分隔開的字串清單; 像是 "x", "theValue", 或是 "a, b'。
+- `functionBody`
+  - : 包含 JavaScript 狀態以及 function 定義的字串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Function</code> objects created with the <code>Function</code> constructor are parsed when the function is created. This is less efficient than declaring a function with a <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/function">function expression</a> or <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/function">function statement</a> and calling it within your code, because such functions are parsed with the rest of the code.</p>
+`Function` objects created with the `Function` constructor are parsed when the function is created. This is less efficient than declaring a function with a [function expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/function) or [function statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/function) and calling it within your code, because such functions are parsed with the rest of the code.
 
-<p>All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.</p>
+All arguments passed to the function are treated as the names of the identifiers of the parameters in the function to be created, in the order in which they are passed.
 
-<p>Invoking the <code>Function</code> constructor as a function (without using the <code>new</code> operator) has the same effect as invoking it as a constructor.</p>
+Invoking the `Function` constructor as a function (without using the `new` operator) has the same effect as invoking it as a constructor.
 
-<h2 id="Function_的屬性與方法"><code>Function</code> <code>的屬性與方法</code></h2>
+## `Function` `的屬性與方法`
 
-<p>The global <code>Function</code> object has no methods or properties of its own, however, since it is a function itself it does inherit some methods and properties through the prototype chain from {{jsxref("Function.prototype")}}.</p>
+The global `Function` object has no methods or properties of its own, however, since it is a function itself it does inherit some methods and properties through the prototype chain from {{jsxref("Function.prototype")}}.
 
-<h2 id="Function_原型物件"><code>Function</code> 原型物件</h2>
+## `Function` 原型物件
 
-<h3 id="屬性_Properties">屬性 Properties</h3>
+### 屬性 Properties
 
-<div>{{page('/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}</div>
+{{page('/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Properties')}}
 
-<h3 id="方法_Methods">方法 Methods</h3>
+### 方法 Methods
 
-<div>{{page('/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}</div>
+{{page('/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/prototype', 'Methods')}}
 
-<h2 id="Function_實例"><code>Function</code> 實例</h2>
+## `Function` 實例
 
-<p><code>Function</code> instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all <code>Function</code> instances.</p>
+`Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Specifying_arguments_with_the_Function_constructor">Specifying arguments with the <code>Function</code> constructor</h3>
+### Specifying arguments with the `Function` constructor
 
-<p>The following code creates a <code>Function</code> object that takes two arguments.</p>
+The following code creates a `Function` object that takes two arguments.
 
-<pre class="brush: js">// Example can be run directly in your JavaScript console
+```js
+// Example can be run directly in your JavaScript console
 
 // Create a function that takes two arguments and returns the sum of those arguments
 var adder = new Function('a', 'b', 'return a + b');
 
 // Call the function
 adder(2, 6);
-// &gt; 8
-</pre>
+// > 8
+```
 
-<p>The arguments "<code>a</code>" and "<code>b</code>" are formal argument names that are used in the function body, "<code>return a + b</code>".</p>
+The arguments "`a`" and "`b`" are formal argument names that are used in the function body, "`return a + b`".
 
-<h3 id="Difference_between_Function_constructor_and_function_declaration">Difference between Function constructor and function declaration</h3>
+### Difference between Function constructor and function declaration
 
-<p>Functions created with the <code>Function</code> constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>Function</code> constructor was called. This is different from using {{jsxref("eval")}} with code for a function expression.</p>
+Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was called. This is different from using {{jsxref("eval")}} with code for a function expression.
 
-<pre class="brush: js">var x = 10;
+```js
+var x = 10;
 
 function createFunction1() {
     var x = 20;
@@ -92,24 +94,22 @@ var f1 = createFunction1();
 console.log(f1());          // 10
 var f2 = createFunction2();
 console.log(f2());          // 20
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Functions", "Functions and function scope")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
-</ul>
+- {{jsxref("Functions", "Functions and function scope")}}
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}}

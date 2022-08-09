@@ -5,43 +5,46 @@ tags:
   - DOMParser SVG XML
 translation_of: Web/API/DOMParser
 ---
-<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><code>DOMParser可以將XML或是HTML格式的字串轉成</code>DOM <a href="/en-US/docs/DOM/document">文件</a>. <code>DOMParser</code>的規格請參閱<a href="http://html5.org/specs/dom-parsing.html">DOM解譯與串流化</a>.</p>
+`DOMParser可以將XML或是HTML格式的字串轉成`DOM [文件](/en-US/docs/DOM/document). `DOMParser`的規格請參閱[DOM 解譯與串流化](http://html5.org/specs/dom-parsing.html).
 
-<p>請注意<a href="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a>解譯的是URL連結內容裡的XML與HTML文件.</p>
+請注意[XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件.
 
-<h2 id="產生一個_DOMParser">產生一個 DOMParser</h2>
+## 產生一個 DOMParser
 
-<p>" <code>new DOMParser()" 可產生DOMParser</code>.</p>
+" `new DOMParser()" 可產生DOMParser`.
 
-<p><code>關於如何在Firefox外掛程式中產生DOMParser,</code>請參考<code><a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a>文件</code></p>
+`關於如何在Firefox外掛程式中產生DOMParser,`請參考`nsIDOMParser文件`
 
-<h2 id="解譯_XML">解譯 XML</h2>
+## 解譯 XML
 
-<p>產生解譯物件後，請呼叫<code>parseFromString方法函式來將XML字串轉換成DOM物件</code>:</p>
+產生解譯物件後，請呼叫`parseFromString方法函式來將XML字串轉換成DOM物件`:
 
-<pre class="brush: js">var parser = new DOMParser();
+```js
+var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-</pre>
+```
 
-<h3 id="Error_handling">錯誤處理</h3>
+### 錯誤處理
 
-<p>請注意如果解譯過程出錯,目前的<code>DOMParser不會丟出異常物件(exception)，但是會回傳一個錯誤文件</code>(請看程式臭蟲{{Bug(45566)}}):</p>
+請注意如果解譯過程出錯,目前的`DOMParser不會丟出異常物件(exception)，但是會回傳一個錯誤文件`(請看程式臭蟲{{Bug(45566)}}):
 
-<pre class="brush:xml">&lt;parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml"&gt;
+```xml
+<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
 (error description)
-&lt;sourcetext&gt;(a snippet of the source XML)&lt;/sourcetext&gt;
-&lt;/parsererror&gt;
-</pre>
+<sourcetext>(a snippet of the source XML)</sourcetext>
+</parsererror>
+```
 
-<p>解譯錯誤也會記錄在錯誤終端機中（<a href="/en-US/docs/Error_Console">Error Console</a>）, 紀錄裡頭的文件URI (如下) 則為錯誤來源.</p>
+解譯錯誤也會記錄在錯誤終端機中（[Error Console](/en-US/docs/Error_Console)）, 紀錄裡頭的文件 URI (如下) 則為錯誤來源.
 
-<h2 id="解譯_SVG_或_HTML_文件">解譯 SVG 或 HTML 文件</h2>
+## 解譯 SVG 或 HTML 文件
 
-<p><code>DOMParser也可以用來解譯 </code>SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果MIME 格式是 <code>text/xml</code>,輸出的格式為 <code>XMLDocument</code>, 如果 MIME 格式是 <code>image/svg+xml</code>, 輸出格式為 <code>SVGDocument,</code> 如果 MIME 格式是 <code>text/html</code>, 輸出格式則為 <code>HTMLDocument</code>.</p>
+`DOMParser也可以用來解譯 `SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
 
-<pre class="brush: js">var parser = new DOMParser();
+```js
+var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 // returns a Document, but not a SVGDocument nor a HTMLDocument
 
@@ -52,11 +55,12 @@ doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
 parser = new DOMParser();
 doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 // returns a HTMLDocument, which also is a Document.
-</pre>
+```
 
-<h3 id="其他瀏覽器可用的DOMParser_HTML_外掛程式">其他瀏覽器可用的DOMParser HTML 外掛程式</h3>
+### 其他瀏覽器可用的 DOMParser HTML 外掛程式
 
-<pre class="brush: js">/*
+```js
+/*
  * DOMParser HTML extension
  * 2012-09-04
  *
@@ -90,7 +94,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 			var
 			  doc = document.implementation.createHTMLDocument("")
 			;
-	      		if (markup.toLowerCase().indexOf('&lt;!doctype') &gt; -1) {
+	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
         			doc.documentElement.innerHTML = markup;
       			}
       			else {
@@ -102,21 +106,19 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 		}
 	};
 }(DOMParser));
-</pre>
+```
 
-<h3 id="DOMParser_from_ChromeJSMXPCOMPrivileged_Scope">DOMParser from Chrome/JSM/XPCOM/Privileged Scope</h3>
+### DOMParser from Chrome/JSM/XPCOM/Privileged Scope
 
-<p>See article here: <a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a></p>
+See article here: [nsIDOMParser](/en-US/docs/nsIDOMParser)
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.DOMParser")}}
 
-<h2 id="See_also">參考資料</h2>
+## 參考資料
 
-<ul>
- <li><a href="/en-US/docs/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/XMLSerializer">XMLSerializer</a></li>
- <li><a href="/en-US/Add-ons/Code_snippets/HTML_to_DOM">Parsing HTML to DOM</a></li>
-</ul>
+- [Parsing and serializing XML](/en-US/docs/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest)
+- [XMLSerializer](/en-US/docs/XMLSerializer)
+- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)

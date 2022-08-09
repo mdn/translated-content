@@ -10,30 +10,30 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>values()</strong></code> 方法回傳一個 <code>Iterator</code> 物件，包含著 <code>Set</code> 物件中所有元素，由插入順序排序。</p>
+**`values()`** 方法回傳一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
 
-<p><strong><code>keys()</code></strong> 是這個方法的替身 (為了與 {{jsxref("Map")}} 物件保持相似性)；他運行的完全一模一樣，回傳 <code>Set</code> 中元素的 <strong>values</strong> 。</p>
+**`keys()`** 是這個方法的替身 (為了與 {{jsxref("Map")}} 物件保持相似性)；他運行的完全一模一樣，回傳 `Set` 中元素的 **values** 。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
+## 語法
 
+```plain
+mySet.values();
+```
 
-<h2 id="語法">語法</h2>
+### 回傳值
 
-<pre class="syntaxbox"><code><em>mySet</em>.values();
-</code></pre>
+一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>一個 <code>Iterator</code> 物件，包含著 <code>Set</code> 物件中所有元素，由插入順序排序。</p>
+### 使用 `values()`
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_values()">使用 <code>values()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -42,20 +42,17 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set.values")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.Set.values")}}</p>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}

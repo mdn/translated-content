@@ -10,27 +10,24 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`entries()`** 方法回傳一個 `Iterator` 物件，其包含著一個由插入順序排序，`Set` 物件中每個元素的** `[value, value]`** 陣列。儘管對 `Set` 物件來說沒有像 `Map` 一樣的 `key` 概念，為了確保這個 API 運作的與 `Map` 相似，每個 _entry_ 都有同樣的值同時作為其 _key_ 和 _value_ ，因此回傳的是一個**`[value, value]`** 的陣列。{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 
-<div><code><strong>entries()</strong></code> 方法回傳一個 <code>Iterator</code> 物件，其包含著一個由插入順序排序，<code>Set</code> 物件中每個元素的<strong> <code>[value, value]</code></strong> 陣列。儘管對 <code>Set</code> 物件來說沒有像 <code>Map</code> 一樣的 <code>key</code> 概念，為了確保這個 API 運作的與 <code>Map</code> 相似，每個 <em>entry</em> 都有同樣的值同時作為其 <em>key</em> 和 <em>value</em> ，因此回傳的是一個<strong><code>[value, value]</code></strong> 的陣列。</div>
+## 語法
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}</div>
+```plain
+mySet.entries()
+```
 
+### 回傳值
 
+一個新的 `Iterator` 物件，包含著一個由插入順序排序，`Set` 物件中每個元素的** `[value, value]`** 陣列。
 
-<h2 id="語法">語法</h2>
+## 範例
 
-<pre class="syntaxbox"><code><em>mySet</em>.entries()</code></pre>
+### 使用 `entries()`
 
-<h3 id="回傳值">回傳值</h3>
-
-<p>一個新的 <code>Iterator</code> 物件，包含著一個由插入順序排序，<code>Set</code> 物件中每個元素的<strong> <code>[value, value]</code></strong> 陣列。</p>
-
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_entries()">使用 <code>entries()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foobar');
 mySet.add(1);
 mySet.add('baz');
@@ -40,21 +37,17 @@ var setIter = mySet.entries();
 console.log(setIter.next().value); // ["foobar", "foobar"]
 console.log(setIter.next().value); // [1, 1]
 console.log(setIter.next().value); // ["baz", "baz"]
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set.entries")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.Set.entries")}}</p>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

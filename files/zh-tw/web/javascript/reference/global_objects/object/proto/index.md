@@ -3,25 +3,22 @@ title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
-<div class="notecard warning">
-<p><strong>Warning:</strong> 基於現代Javascript引擎最佳化物件屬性存取的方法，改變一個物件的 <code>[[Prototype]]</code> 在任何瀏覽器或是Javascript引擎都是非常慢的操作?。改變繼承屬性對效能的影響微妙且深遠，不僅僅只是影響執行 <code>obj.__proto__ = ...</code> 的時間，而是會影響到所有有存取到被改變 <code>[[Prototype]]</code> 的物件的程式碼的執行時間。如果你在乎效能的話就應該避免改變一個物件的 <code>[[Prototype]]</code> 。反之，請用 {{jsxref("Object.create()")}} 來產生一個擁有 <code>[[Prototype]]</code> 的物件。</p>
-</div>
+> **警告：** 基於現代 Javascript 引擎最佳化物件屬性存取的方法，改變一個物件的 `[[Prototype]]` 在任何瀏覽器或是 Javascript 引擎都是非常慢的操作?。改變繼承屬性對效能的影響微妙且深遠，不僅僅只是影響執行 `obj.__proto__ = ...` 的時間，而是會影響到所有有存取到被改變 `[[Prototype]]` 的物件的程式碼的執行時間。如果你在乎效能的話就應該避免改變一個物件的 `[[Prototype]]` 。反之，請用 {{jsxref("Object.create()")}} 來產生一個擁有 `[[Prototype]]` 的物件。
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> 雖然 <code>Object.prototype.__proto__</code> 在今日已經被絕大部分的瀏覽器所支援，其存在與確切的行為只有在 ECMAScript 2015 規範才被標準化成一個歷史功能來確保相容性。為了更好的支援，建議使用{{jsxref("Object.getPrototypeOf()")}}。</p>
-</div>
+> **警告：** 雖然 `Object.prototype.__proto__` 在今日已經被絕大部分的瀏覽器所支援，其存在與確切的行為只有在 ECMAScript 2015 規範才被標準化成一個歷史功能來確保相容性。為了更好的支援，建議使用{{jsxref("Object.getPrototypeOf()")}}。
 
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <code>__proto__</code> property of {{jsxref("Object.prototype")}} is an accessor property (a getter function and a setter function) that exposes the internal <code>[[Prototype]]</code> (either an object or {{jsxref("Global_Objects/null", "null")}}) of the object through which it is accessed.</p>
+The `__proto__` property of {{jsxref("Object.prototype")}} is an accessor property (a getter function and a setter function) that exposes the internal `[[Prototype]]` (either an object or {{jsxref("Global_Objects/null", "null")}}) of the object through which it is accessed.
 
-<p>The use of <code>__proto__</code> is controversial, and has been discouraged. It was never originally included in the EcmaScript language spec, but modern browsers decided to implement it anyway. Only recently, the <code>__proto__</code> property has been standardized in the ECMAScript 2015 language specification for web browsers to ensure compatibility, so will be supported into the future. It is deprecated in favor of {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} and {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}} (though still, setting the <code>[[Prototype]]</code> of an object is a slow operation that should be avoided if performance is a concern).</p>
+The use of `__proto__` is controversial, and has been discouraged. It was never originally included in the EcmaScript language spec, but modern browsers decided to implement it anyway. Only recently, the `__proto__` property has been standardized in the ECMAScript 2015 language specification for web browsers to ensure compatibility, so will be supported into the future. It is deprecated in favor of {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} and {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}} (though still, setting the `[[Prototype]]` of an object is a slow operation that should be avoided if performance is a concern).
 
-<p>The <code>__proto__</code> property can also be used in an object literal definition to set the object <code>[[Prototype]]</code> on creation, as an alternative to {{jsxref("Object.create()")}}. See: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal syntax</a>.</p>
+The `__proto__` property can also be used in an object literal definition to set the object `[[Prototype]]` on creation, as an alternative to {{jsxref("Object.create()")}}. See: [object initializer / literal syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var Circle = function () {};
+```js
+var Circle = function () {};
 var shape = {};
 var circle = new Circle();
 
@@ -31,9 +28,10 @@ shape.__proto__ = circle;
 
 // Get the object prototype
 console.log(shape.__proto__ === circle); // true
-</pre>
+```
 
-<pre class="brush: js">var shape = function () {};
+```js
+var shape = function () {};
 var p = {
     a: function () {
         console.log('aaa');
@@ -80,40 +78,34 @@ var obj = {
 };
 
 obj.myname(); // myname
-</pre>
+```
 
-<p>Note: that is two underscores, followed by the five characters "proto", followed by two more underscores.</p>
+Note: that is two underscores, followed by the five characters "proto", followed by two more underscores.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>__proto__</code> getter function exposes the value of the internal <code>[[Prototype]]</code> of an object. For objects created using an object literal, this value is {{jsxref("Object.prototype")}}. For objects created using array literals, this value is {{jsxref("Array.prototype")}}. For functions, this value is {{jsxref("Function.prototype")}}. For objects created using <code>new fun</code>, where <code>fun</code> is one of the built-in constructor functions provided by JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, and so on — including new constructors added as JavaScript evolves), this value is always <code>fun.prototype</code>. For objects created using <code>new fun</code>, where <code>fun</code> is a function defined in a script, this value is the value of <code>fun.prototype</code>. (That is, if the constructor didn't return an other object explicitly, or the <code>fun.prototype</code> has been reassigned since the instance was created).</p>
+The `__proto__` getter function exposes the value of the internal `[[Prototype]]` of an object. For objects created using an object literal, this value is {{jsxref("Object.prototype")}}. For objects created using array literals, this value is {{jsxref("Array.prototype")}}. For functions, this value is {{jsxref("Function.prototype")}}. For objects created using `new fun`, where `fun` is one of the built-in constructor functions provided by JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, and so on — including new constructors added as JavaScript evolves), this value is always `fun.prototype`. For objects created using `new fun`, where `fun` is a function defined in a script, this value is the value of `fun.prototype`. (That is, if the constructor didn't return an other object explicitly, or the `fun.prototype` has been reassigned since the instance was created).
 
-<p>The <code>__proto__</code> setter allows the <code>[[Prototype]]</code> of an object to be mutated. The object must be extensible according to {{jsxref("Object.isExtensible()")}}: if it is not, a {{jsxref("Global_Objects/TypeError", "TypeError")}} is thrown. The value provided must be an object or {{jsxref("Global_Objects/null", "null")}}. Providing any other value will do nothing.</p>
+The `__proto__` setter allows the `[[Prototype]]` of an object to be mutated. The object must be extensible according to {{jsxref("Object.isExtensible()")}}: if it is not, a {{jsxref("Global_Objects/TypeError", "TypeError")}} is thrown. The value provided must be an object or {{jsxref("Global_Objects/null", "null")}}. Providing any other value will do nothing.
 
-<p>To understand how prototypes are used for inheritance, see guide article <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>.</p>
+To understand how prototypes are used for inheritance, see guide article [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-<p>The <code>__proto__</code> property is a simple accessor property on {{jsxref("Object.prototype")}} consisting of a getter and setter function. A property access for <code>__proto__</code> that eventually consults {{jsxref("Object.prototype")}} will find this property, but an access that does not consult {{jsxref("Object.prototype")}} will not find it. If some other <code>__proto__</code> property is found before {{jsxref("Object.prototype")}} is consulted, that property will hide the one found on {{jsxref("Object.prototype")}}.</p>
+The `__proto__` property is a simple accessor property on {{jsxref("Object.prototype")}} consisting of a getter and setter function. A property access for `__proto__` that eventually consults {{jsxref("Object.prototype")}} will find this property, but an access that does not consult {{jsxref("Object.prototype")}} will not find it. If some other `__proto__` property is found before {{jsxref("Object.prototype")}} is consulted, that property will hide the one found on {{jsxref("Object.prototype")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("javascript.builtins.Object.proto")}}
 
+## Compatibility notes
 
-<p>{{Compat("javascript.builtins.Object.proto")}}</p>
-</div>
+While the ECMAScript 2015 specification dictates that support for `__proto__` is required _only_ for web browsers (although being normative), other environments may support it as well for legacy usage.
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## See also
 
-<p>While the ECMAScript 2015 specification dictates that support for <code>__proto__</code> is required <em>only</em> for web browsers (although being normative), other environments may support it as well for legacy usage.</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}

@@ -3,53 +3,31 @@ title: PositionError.code
 slug: Web/API/GeolocationPositionError/code
 translation_of: Web/API/GeolocationPositionError/code
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><code><strong>PositionError.code</strong></code> 是一個唯讀無符號整數(<code>unsigned short)表示錯誤碼</code> 。以下列出可能的值：</p>
+**`PositionError.code`** 是一個唯讀無符號整數(`unsigned short)表示錯誤碼` 。以下列出可能的值：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">值</th>
-   <th scope="col">相對應的常數</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>PERMISSION_DENIED</code></td>
-   <td>取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>POSITION_UNAVAILABLE</code></td>
-   <td>取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td><code>TIMEOUT</code></td>
-   <td>取得地理資訊超過時限，利用 {{domxref("PositionOptions.timeout")}} i來定義取得地理資訊的時限。</td>
-  </tr>
- </tbody>
-</table>
+| 值  | 相對應的常數           | 描述                                                                                                         |
+| --- | ---------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                                     |
+| `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                                             |
+| `3` | `TIMEOUT`              | 取得地理資訊超過時限，利用 {{domxref("PositionOptions.timeout")}} i 來定義取得地理資訊的時限。 |
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>typeErr</var> = <var>poserr</var>.code
-</pre>
+```plain
+typeErr = poserr.code
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.GeolocationPositionError.code")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>屬於 {{domxref("PositionError")}} 。</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- 屬於 {{domxref("PositionError")}} 。

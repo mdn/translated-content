@@ -9,82 +9,69 @@ tags:
   - URL API
 translation_of: Web/API/URL
 ---
-<div>{{ApiRef("URL API")}} {{SeeCompatTable}}</div>
+{{ApiRef("URL API")}} {{SeeCompatTable}}
 
-<p><strong><code>URL</code></strong> 介面提供了建立 <code>URL</code> 物件的靜態方法。</p>
+**`URL`** 介面提供了建立 `URL` 物件的靜態方法。
 
-<p>使用尚未實作此物件的瀏覽器時，可以改用 {{domxref("Window.URL")}} 屬性來呼叫（基於 Webkit 或 Blink 引擎的瀏覽器可使用 <code>Window.webkitURL</code>）。</p>
+使用尚未實作此物件的瀏覽器時，可以改用 {{domxref("Window.URL")}} 屬性來呼叫（基於 Webkit 或 Blink 引擎的瀏覽器可使用 `Window.webkitURL`）。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("URL.href")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the whole URL.</dd>
- <dt>{{domxref("URL.protocol")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the protocol scheme of the URL, including the final <code>':'</code>.</dd>
- <dt>{{domxref("URL.host")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the host, that is the <em>hostname</em>, a <code>':'</code>, and the <em>port</em> of the URL.</dd>
- <dt>{{domxref("URL.hostname")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the domain of the URL.</dd>
- <dt>{{domxref("URL.port")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the port number of the URL.</dd>
- <dt>{{domxref("URL.pathname")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing an initial <code>'/'</code> followed by the path of the URL.</dd>
- <dt>{{domxref("URL.search")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a <code>'?'</code> followed by the parameters of the URL.</dd>
- <dt>{{domxref("URL.hash")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing a <code>'#'</code> followed by the fragment identifier of the URL.</dd>
- <dt>{{domxref("URL.username")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the username specified before the domain name.</dd>
- <dt>{{domxref("URL.password")}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the password specified before the domain name.</dd>
- <dt>{{domxref("URL.origin")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
-</dl>
+- {{domxref("URL.href")}}
+  - : Is a {{domxref("DOMString")}} containing the whole URL.
+- {{domxref("URL.protocol")}}
+  - : Is a {{domxref("DOMString")}} containing the protocol scheme of the URL, including the final `':'`.
+- {{domxref("URL.host")}}
+  - : Is a {{domxref("DOMString")}} containing the host, that is the _hostname_, a `':'`, and the _port_ of the URL.
+- {{domxref("URL.hostname")}}
+  - : Is a {{domxref("DOMString")}} containing the domain of the URL.
+- {{domxref("URL.port")}}
+  - : Is a {{domxref("DOMString")}} containing the port number of the URL.
+- {{domxref("URL.pathname")}}
+  - : Is a {{domxref("DOMString")}} containing an initial `'/'` followed by the path of the URL.
+- {{domxref("URL.search")}}
+  - : Is a {{domxref("DOMString")}} containing a `'?'` followed by the parameters of the URL.
+- {{domxref("URL.hash")}}
+  - : Is a {{domxref("DOMString")}} containing a `'#'` followed by the fragment identifier of the URL.
+- {{domxref("URL.username")}}
+  - : Is a {{domxref("DOMString")}} containing the username specified before the domain name.
+- {{domxref("URL.password")}}
+  - : Is a {{domxref("DOMString")}} containing the password specified before the domain name.
+- {{domxref("URL.origin")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the origin of the URL, that is its scheme, its domain and its port.
+- {{domxref("URL.searchParams")}}
+  - : Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.
 
-<dl>
- <dt>{{domxref("URL.searchParams")}}</dt>
- <dd>Returns a {{domxref("URLSearchParams")}} object allowing to access the GET query arguments contained in the URL.</dd>
-</dl>
+## 建構式
 
-<h2 id="建構式">建構式</h2>
+- {{domxref("URL.URL", "URL()")}}
+  - : Creates and return a `URL` object composed from the given parameters.
 
-<dl>
- <dt>{{domxref("URL.URL", "URL()")}}</dt>
- <dd>Creates and return a <code>URL</code> object composed from the given parameters.</dd>
-</dl>
+## 方法
 
-<h2 id="方法">方法</h2>
+_The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 
-<p><em>The <code>URL</code> interface implements methods defined in {{domxref("URLUtils")}}.</em></p>
+- {{domxref("URLUtils.toString()")}}
+  - : Returns a {{domxref("DOMString")}} containing the whole URL. It is a synonym for {{domxref("URLUtils.href")}}, though it can't be used to modify the value.
 
-<dl>
- <dt>{{domxref("URLUtils.toString()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the whole URL. It is a synonym for {{domxref("URLUtils.href")}}, though it can't be used to modify the value.</dd>
-</dl>
+## 靜態方法
 
-<h2 id="靜態方法">靜態方法</h2>
+- {{domxref("URL.createObjectURL()")}}
+  - : Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
+- {{domxref("URL.revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 
-<dl>
- <dt>{{domxref("URL.createObjectURL()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing a unique blob URL, that is a URL with <code>blob:</code> as its scheme, followed by an opaque string uniquely identifying the object in the browser.</dd>
- <dt>{{domxref("URL.revokeObjectURL()")}}</dt>
- <dd>Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.</dd>
-</dl>
-
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.URL")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>Property allowing to get such an object: {{domxref("Window.URL")}}.</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- Property allowing to get such an object: {{domxref("Window.URL")}}.
+- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

@@ -9,67 +9,68 @@ tags:
   - 運算子
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
+**可選串連**運算子 **`?.`** 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。`?.` 運算子的操作與 `.` 屬性存取運算子相似，後者會在參照到 [nullish](/zh-TW/docs/Glossary/nullish) ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 `undefined` 。 當需要存取一個函數，而這函數並不存在時，則會回傳 `undefined` 。
 
+當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。
 
-<p><strong>可選串連</strong>運算子 <strong><code>?.</code></strong> 允許進行深層次的物件值存取，而無需透過明確的物件值串連驗證。<code>?.</code> 運算子的操作與 <code>.</code> 屬性存取運算子相似，後者會在參照到 <a href="/zh-TW/docs/Glossary/nullish">nullish</a> ({{JSxRef("null")}} or {{JSxRef("undefined")}}) 的值時出現錯誤，而前者可選串連則回傳 <code>undefined</code> 。 當需要存取一個函數，而這函數並不存在時，則會回傳 <code>undefined</code> 。</p>
+{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
 
-<p>當有機會存在參照不存在的時候，可選串連可以提供更簡短的表述式來進行串連性的屬性存取。這有助於在無法保證物件屬性為必要存在的狀況下，進行物件內容的探索。</p>
+## 語法
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}</div>
+```plain
+obj?.prop
+obj?.[expr]
+arr?.[index]
+func?.(args)
+```
 
+## 描述
 
+當串連物件裡面的參照或方法可能是`undefined` 或 `null` 時，可選串連運算子提供簡單的方法去存取這些串連物件下的值。
 
+舉例來說，當一個物件 `obj` 是巢狀結構時，在沒有可選串連之下，要去查找一深層的屬性值需要驗證每層間的參照連結：
 
+```js
+let nestedProp = obj.first && obj.first.second;
+```
 
-<h2 id="語法">語法</h2>
+`obj.first` 的值需要先確定不是 `null` 值（和並非 `undefined` ），才能存取 `obj.first.second` 的值。這才能避免在存取值時，因為直接使用 `obj.first.second` 而沒有測試 `obj.first` 之下帶來的錯誤。
 
-<pre class="syntaxbox"><var>obj</var>?.<var>prop</var>
-<var>obj</var>?.[<var>expr</var>]
-<em>arr</em>?.[<var>index</var>]
-<var>func</var>?.(<var>args</var>)
-</pre>
+當使用了可選串連運算子（`?.`），你不再需要明確地進行測測，並能在基於 `obj.first` 的狀態下直接回傳，忽略存取 `obj.first.second` 的動作：
 
-<h2 id="描述">描述</h2>
+```js
+let nestedProp = obj.first?.second;
+```
 
-<p>當串連物件裡面的參照或方法可能是<code>undefined</code> 或 <code>null</code> 時，可選串連運算子提供簡單的方法去存取這些串連物件下的值。</p>
+從只是 `.` 改用作 `?.` 運算子，JavaScript 會知道在存取 `obj.first.second` 之前，需要間接地檢查並確保 `obj.first` 並不是 `null` 或 `undefined` 。當 `obj.first` 是 `null` 或 `undefined` ，運算式會像短路一樣跳過整個串連存取式，而回傳 `undefined` 。
 
-<p>舉例來說，當一個物件 <code>obj</code> 是巢狀結構時，在沒有可選串連之下，要去查找一深層的屬性值需要驗證每層間的參照連結：</p>
+這是跟以下是相等同的，但是實際上是不會建立臨時變數：
 
-<pre class="brush: js">let nestedProp = obj.first &amp;&amp; obj.first.second;</pre>
-
-<p><code>obj.first</code> 的值需要先確定不是 <code>null</code> 值（和並非 <code>undefined</code> ），才能存取 <code>obj.first.second</code> 的值。這才能避免在存取值時，因為直接使用 <code>obj.first.second</code> 而沒有測試 <code>obj.first</code> 之下帶來的錯誤。</p>
-
-<p>當使用了可選串連運算子（<code>?.</code>），你不再需要明確地進行測測，並能在基於 <code>obj.first</code> 的狀態下直接回傳，忽略存取 <code>obj.first.second</code> 的動作：</p>
-
-<pre class="brush: js">let nestedProp = obj.first?.second;</pre>
-
-<p>從只是 <code>.</code> 改用作 <code>?.</code> 運算子，JavaScript 會知道在存取 <code>obj.first.second</code> 之前，需要間接地檢查並確保 <code>obj.first</code> 並不是 <code>null</code> 或 <code>undefined</code> 。當 <code>obj.first</code> 是 <code>null</code> 或 <code>undefined</code> ，運算式會像短路一樣跳過整個串連存取式，而回傳 <code>undefined</code> 。</p>
-
-<p>這是跟以下是相等同的，但是實際上是不會建立臨時變數：</p>
-
-<pre class="brush: js">let temp = obj.first;
+```js
+let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
-</pre>
+```
 
-<h3 id="可選串連呼叫函數">可選串連呼叫函數</h3>
+### 可選串連呼叫函數
 
-<p>你可以使用可選串連來嘗試呼叫一個或許沒有存在的方法。這可能有助於，舉例來說，使用一些未能提供服務的 API ，這可能因為過時的應用或是使用者的裝置未能支援某種功能。</p>
+你可以使用可選串連來嘗試呼叫一個或許沒有存在的方法。這可能有助於，舉例來說，使用一些未能提供服務的 API ，這可能因為過時的應用或是使用者的裝置未能支援某種功能。
 
-<p>當需要使用的方法並不存在時，透過可選串連去進行呼叫將不會抛出錯誤，取而代之的是回傳 <code>undefined</code> ：</p>
+當需要使用的方法並不存在時，透過可選串連去進行呼叫將不會抛出錯誤，取而代之的是回傳 `undefined` ：
 
-<pre class="brush: js">let result = someInterface.customMethod?.();</pre>
+```js
+let result = someInterface.customMethod?.();
+```
 
-<div class="notecard note">
-<p><strong>備註：</strong>假如物件有同樣的屬性名稱，而不是一個方法，使用 <code>?.</code> 將會抛出 {{JSxRef("TypeError")}} 錯誤（<code>x.y</code><code> 不是一個函數</code>.</p>
-</div>
+> **備註：**假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（` x.y`` 不是一個函數  `.
 
-<h4 id="處理回呼函式或事件處理器">處理回呼函式或事件處理器</h4>
+#### 處理回呼函式或事件處理器
 
-<p>如果你使用回呼函式，或是透過<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring">解構賦值</a>來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 <code>?.</code> 來避免這樣的測試：</p>
+如果你使用回呼函式，或是透過[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring)來擷取物件中的方法，你可能會因為這些方法沒有存在，而無法進行呼叫，除非你事先驗證其存在性。所以，你可以利用 `?.` 來避免這樣的測試：
 
-<pre class="brush: js">// 在 ES2019 下撰寫
+```js
+// 在 ES2019 下撰寫
 function doSomething(onContent, onError) {
   try {
     // ... 對資料進行一些處理
@@ -80,9 +81,10 @@ function doSomething(onContent, onError) {
     }
   }
 }
-</pre>
+```
 
-<pre class="brush: js">// 使用可選串連進行函式呼叫
+```js
+// 使用可選串連進行函式呼叫
 function doSomething(onContent, onError) {
   try {
    // ... 對資料進行一些處理
@@ -91,46 +93,53 @@ function doSomething(onContent, onError) {
     onError?.(err.message); // 就算 onError 是 undefined 也不會抛出錯誤
   }
 }
-</pre>
+```
 
-<h3 id="可選串連表述式">可選串連表述式</h3>
+### 可選串連表述式
 
-<p>你也可以在<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">方括號屬性存取</a>表達式中使用可選串連：</p>
+你也可以在[方括號屬性存取](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation)表達式中使用可選串連：
 
-<pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
-</pre>
+```js
+let nestedProp = obj?.['prop' + 'Name'];
+```
 
-<h3 id="矩陣項目的可選串連">矩陣項目的可選串連</h3>
+### 矩陣項目的可選串連
 
-<pre class="brush: js">let arrayItem = arr?.[42];</pre>
+```js
+let arrayItem = arr?.[42];
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="基本範例">基本範例</h3>
+### 基本範例
 
-<p>這個範例會找出 Map 物件中一個鍵為 <code>bar</code> 成員的 <code>name</code> 屬性值，但事實上並沒有相關成員。所以結果為 <code>undefined</code> 。</p>
+這個範例會找出 Map 物件中一個鍵為 `bar` 成員的 `name` 屬性值，但事實上並沒有相關成員。所以結果為 `undefined` 。
 
-<pre class="brush: js">let myMap = new Map();
+```js
+let myMap = new Map();
 myMap.set("foo", {name: "baz", desc: "inga"});
 
-let nameBar = myMap.get("bar")?.name;</pre>
+let nameBar = myMap.get("bar")?.name;
+```
 
-<h3 id="短路式運算">短路式運算</h3>
+### 短路式運算
 
-<p>當可選串連接上表述式時，如果左邊的運算數值是 <code>null</code> 或 <code>undefined</code> ，表述式則不會被運算。舉例來說：</p>
+當可選串連接上表述式時，如果左邊的運算數值是 `null` 或 `undefined` ，表述式則不會被運算。舉例來說：
 
-<pre class="brush: js">let potentiallyNullObj = null;
+```js
+let potentiallyNullObj = null;
 let x = 0;
 let prop = potentiallyNullObj?.[x++];
 
 console.log(x); // 因為 x 沒有遞增，所以為 0
-</pre>
+```
 
-<h3 id="串接多個可選串連">串接多個可選串連</h3>
+### 串接多個可選串連
 
-<p>在巢狀結構中可以使用多次的可選串連：</p>
+在巢狀結構中可以使用多次的可選串連：
 
-<pre class="brush: js">let customer = {
+```js
+let customer = {
   name: "Carl",
   details: {
     age: 82,
@@ -141,30 +150,30 @@ let customerCity = customer.details?.address?.city;
 
 // … 同樣地，串接多個可選串連來呼叫函式也是湊效的
 let duration = vacations.trip?.getTime?.();
-</pre>
+```
 
-<h3 id="使用空值合併運算子">使用空值合併運算子</h3>
+### 使用空值合併運算子
 
-<p>在可選串連後可以使用{{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：</p>
+在可選串連後可以使用{{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：
 
-<pre class="brush: js">let customer = {
+```js
+let customer = {
   name: "Carl",
   details: { age: 82 }
 };
 const customerCity = customer?.city ?? "Unknown city";
-console.log(customerCity); // Unknown city</pre>
+console.log(customerCity); // Unknown city
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.operators.optional_chaining")}}</p>
+{{Compat("javascript.operators.optional_chaining")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}</li>
- <li><a href="https://github.com/tc39/proposals">TC39 proposals</a></li>
-</ul>
+- {{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}
+- [TC39 proposals](https://github.com/tc39/proposals)

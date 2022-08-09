@@ -3,46 +3,45 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>match()</code></strong> method retrieves the matches when matching a <em>string</em> against a <em>regular expression</em>.</p>
+The **`match()`** method retrieves the matches when matching a _string_ against a _regular expression_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>str</var>.match(<var>regexp</var>)</pre>
+```plain
+str.match(regexp)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>regexp</code></dt>
- <dd>一個正規表達式的物件。 若傳入一個非正規表達式的物件<code>obj</code>，則會視為傳入 <code>new RegExp(obj)</code>。若只呼叫<code>match()</code>而沒有傳入任何參數，則會回傳內含一個空字串的陣列，即<code>[""]</code>。</dd>
-</dl>
+- `regexp`
+  - : 一個正規表達式的物件。 若傳入一個非正規表達式的物件`obj`，則會視為傳入 `new RegExp(obj)`。若只呼叫`match()`而沒有傳入任何參數，則會回傳內含一個空字串的陣列，即`[""]`。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>If the string matches the expression, it will return an {{jsxref("Array")}} containing the entire matched string as the first element, followed by any results captured in parentheses. If there were no matches, {{jsxref("null")}} is returned.</p>
+If the string matches the expression, it will return an {{jsxref("Array")}} containing the entire matched string as the first element, followed by any results captured in parentheses. If there were no matches, {{jsxref("null")}} is returned.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If the regular expression does not include the <code>g</code> flag, <code>str.match()</code> will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. The returned {{jsxref("Array")}} has an extra <code>input</code> property, which contains the original string that was parsed. In addition, it has an <code>index</code> property, which represents the zero-based index of the match in the string.</p>
+If the regular expression does not include the `g` flag, `str.match()` will return the same result as {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. The returned {{jsxref("Array")}} has an extra `input` property, which contains the original string that was parsed. In addition, it has an `index` property, which represents the zero-based index of the match in the string.
 
-<p>If the regular expression includes the <code>g</code> flag, the method returns an {{jsxref("Array")}} containing all matched substrings rather than match objects. Captured groups are not returned. If there were no matches, the method returns {{jsxref("null")}}.</p>
+If the regular expression includes the `g` flag, the method returns an {{jsxref("Array")}} containing all matched substrings rather than match objects. Captured groups are not returned. If there were no matches, the method returns {{jsxref("null")}}.
 
-<h3 id="See_also_RegExp_methods">See also: <code>RegExp</code> methods</h3>
+### See also: `RegExp` methods
 
-<ul>
- <li>If you need to know if a string matches a regular expression {{jsxref("RegExp")}}, use {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.</li>
- <li>If you only want the first match found, you might want to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
- <li>if you want to obtain capture groups and the global flag is set, you need to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.</li>
-</ul>
+- If you need to know if a string matches a regular expression {{jsxref("RegExp")}}, use {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.
+- If you only want the first match found, you might want to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.
+- if you want to obtain capture groups and the global flag is set, you need to use {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} instead.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_match()">Using <code>match()</code></h3>
+### Using `match()`
 
-<p>In the following example, <code>match()</code> is used to find <code>'Chapter'</code> followed by 1 or more numeric characters followed by a decimal point and numeric character 0 or more times. The regular expression includes the <code>i</code> flag so that upper/lower case differences will be ignored.</p>
+In the following example, `match()` is used to find `'Chapter'` followed by 1 or more numeric characters followed by a decimal point and numeric character 0 or more times. The regular expression includes the `i` flag so that upper/lower case differences will be ignored.
 
-<pre class="brush: js">var str = 'For more information, see Chapter 3.4.5.1';
+```js
+var str = 'For more information, see Chapter 3.4.5.1';
 var re = /see (chapter \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -58,31 +57,36 @@ console.log(found);
 // 'Chapter 3.4.5.1' was captured by '(chapter \d+(\.\d)*)'.
 // '.1' was the last value captured by '(\.\d)'.
 // The 'index' property (22) is the zero-based index of the whole match.
-// The 'input' property is the original string that was parsed.</pre>
+// The 'input' property is the original string that was parsed.
+```
 
-<h3 id="Using_global_and_ignore_case_flags_with_match()">Using global and ignore case flags with <code>match()</code></h3>
+### Using global and ignore case flags with `match()`
 
-<p>The following example demonstrates the use of the global and ignore case flags with <code>match()</code>. All letters A through E and a through e are returned, each its own element in the array.</p>
+The following example demonstrates the use of the global and ignore case flags with `match()`. All letters A through E and a through e are returned, each its own element in the array.
 
-<pre class="brush: js">var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+```js
+var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 var regexp = /[A-E]/gi;
 var matches_array = str.match(regexp);
 
 console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
-</pre>
+```
 
-<h3 id="Using_match()_with_no_parameter">Using <code>match()</code> with no parameter</h3>
+### Using `match()` with no parameter
 
-<pre class="brush: js">var str = "Nothing will come of nothing.";
+```js
+var str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]</pre>
+str.match();   // returns [""]
+```
 
-<h3 id="A_non-RegExp_object_as_the_parameter">A non-RegExp object as the parameter</h3>
+### A non-RegExp object as the parameter
 
-<p>When the parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using new RegExp(obj). If it is a positive number with a positive sign,the RegExp() method will ignore the positive sign. </p>
+When the parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using new RegExp(obj). If it is a positive number with a positive sign,the RegExp() method will ignore the positive sign.
 
-<pre class="brush: js">var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+```js
+var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
     str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
     str3 = "The contract was declared null and void.";
 str1.match("number");   // "number" is a string. returns ["number"]
@@ -92,30 +96,27 @@ str1.match(+Infinity);  // returns ["Infinity"]
 str1.match(-Infinity);  // returns ["-Infinity"]
 str2.match(65);         // returns ["65"]
 str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]</pre>
+str3.match(null);       // returns ["null"]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.String.match")}}</p>
+{{Compat("javascript.builtins.String.match")}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li><code>flags</code> was a non standard second argument only available in Gecko : <var>str</var>.match(<var>regexp, flags</var>)</li>
- <li>Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When <code>match()</code> is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to <code>0</code> ({{bug(501739)}}).</li>
- <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
- <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>
- <li>Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard <code>flags</code> argument is no longer supported ({{bug(1108382)}}).</li>
-</ul>
+- `flags` was a non standard second argument only available in Gecko : _str_.match(_regexp, flags_)
+- Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When `match()` is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to `0` ({{bug(501739)}}).
+- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
+- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
+- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

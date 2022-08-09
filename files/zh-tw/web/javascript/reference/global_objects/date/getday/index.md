@@ -3,57 +3,55 @@ title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getDay()</code></strong> 方法會根據當地時間將指定日期返回一星期中的第幾天，其中0代表星期日。 在當月的某天可以參考{{jsxref("Date.prototype.getDate()")}}。</p>
+**`getDay()`** 方法會根據當地時間將指定日期返回一星期中的第幾天，其中 0 代表星期日。 在當月的某天可以參考{{jsxref("Date.prototype.getDate()")}}。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getDay()</code></pre>
+```plain
+dateObj.getDay()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一個整數，數值介於0到6之間，取決於當地時間對應出指定日期為星期幾:0代表星期日，1代表星期一，2代表星期二，依此類推。</p>
+返回一個整數，數值介於 0 到 6 之間，取決於當地時間對應出指定日期為星期幾:0 代表星期日，1 代表星期一，2 代表星期二，依此類推。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_getDay">使用 <code>getDay()</code></h3>
+### 使用 `getDay()`
 
-<p>下面第二行表示根據日期對象'Xmas95'的值，把1賦值給'weekday'。則1995年12月25日是星期一。</p>
+下面第二行表示根據日期對象'Xmas95'的值，把 1 賦值給'weekday'。則 1995 年 12 月 25 日是星期一。
 
-<pre class="brush: js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var weekday = Xmas95.getDay();
 
 console.log(weekday); // 1
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>備註：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上<code>options</code>參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：</p>
+> **備註：**如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上`options`參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：
+>
+> ```js
+> var options = { weekday: 'long'};
+> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> // Monday
+> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> // Montag
+> ```
 
-<pre class="brush: js">var options = { weekday: 'long'};
-console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
-// Monday
-console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
-// Montag
-</pre>
-</div>
-
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
+## 瀏覽器兼容性
 
+{{Compat("javascript.builtins.Date.getDay")}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.Date.getDay")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

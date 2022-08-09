@@ -9,38 +9,35 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>has()</strong></code> 方法對一個指定值元素在 <code>Set</code> 物件中的存在與否回傳一個布林值。</p>
+**`has()`** 方法對一個指定值元素在 `Set` 物件中的存在與否回傳一個布林值。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 
+## 語法
 
+```plain
+mySet.has(value);
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><em>mySet</em>.has(<em>value</em>);</pre>
+- `value`
+  - : 要測試是否存在在 `Set` 中的值。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>value</code></dt>
- <dd>要測試是否存在在 <code>Set</code> 中的值。</dd>
-</dl>
+回傳 `true` 如果給定值存在在 `Set` 物件中；反之回傳 `false` 。
 
-<h3 id="回傳值">回傳值</h3>
+> **備註：**技術上來說，`has()` 使用了 [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) 算法來判斷給定元素的存在與否。
 
-<p>回傳 <code>true</code> 如果給定值存在在 <code>Set</code> 物件中；反之回傳 <code>false</code> 。</p>
+## 範例
 
-<div class="notecard note">
-<p><strong>備註：</strong>技術上來說，<code>has()</code> 使用了 <code><a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">sameValueZero</a></code> 算法來判斷給定元素的存在與否。</p>
-</div>
+### 使用 `has` 方法
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_has_方法">使用 <code>has</code> 方法</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // returns true
@@ -53,22 +50,18 @@ set1.add(obj1);
 set1.has(obj1);        // returns true
 set1.has({'key1': 1}); // returns false because they are different object references
 set1.add({'key1': 1}); // now set1 contains 2 entries
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set.has")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.Set.has")}}</p>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}

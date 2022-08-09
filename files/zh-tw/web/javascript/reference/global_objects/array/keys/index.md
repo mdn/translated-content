@@ -10,49 +10,44 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>keys()</strong></code> 方法會回傳一個包含陣列中的每一個索引之鍵（keys）的新 <code><strong>Array Iterator</strong></code> 物件。</p>
+**`keys()`** 方法會回傳一個包含陣列中的每一個索引之鍵（keys）的新 **`Array Iterator`** 物件。
 
-<div>{{EmbedInteractiveExample("pages/js/array-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
+## 語法
 
+```plain
+arr.keys()
+```
 
-<h2 id="語法">語法</h2>
+### 回傳值
 
-<pre class="syntaxbox"><var>arr</var>.keys()</pre>
+一個新的 {{jsxref("Array")}} 迭代器（iterator）物件。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>一個新的 {{jsxref("Array")}} 迭代器（iterator）物件。</p>
+### 鍵迭代器不會乎略陣列中的空元素
 
-<h2 id="範例">範例</h2>
-
-<h3 id="鍵迭代器不會乎略陣列中的空元素">鍵迭代器不會乎略陣列中的空元素</h3>
-
-<pre class="brush: js">var arr = ['a', , 'c'];
+```js
+var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.keys")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.keys")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols">迭代協議</a></li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- [迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)

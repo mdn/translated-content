@@ -3,42 +3,38 @@ title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
 translation_of: Web/API/XMLHttpRequestEventTarget
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><code>XMLHttpRequestEventTarget</code> 介面描述了一個 {{ domxref("XMLHttpRequest") }} 物件實體當中，所有可註冊事件處理器的屬性。</p>
+`XMLHttpRequestEventTarget` 介面描述了一個 {{ domxref("XMLHttpRequest") }} 物件實體當中，所有可註冊事件處理器的屬性。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onabort") }}</dt>
- <dd>Contains the function to call when a request is aborted and the {{event('abort')}} event is received by this object.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onerror") }}</dt>
- <dd>Contains the function to call when a request encounters an error and the {{event('error')}} event is received by this object.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onload") }}</dt>
- <dd>Contains the function to call when an HTTP request returns after successfully fetching content and the {{event('load')}} event is received by this object.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onloadstart") }}</dt>
- <dd>Contains the function that gets called when the HTTP request first begins loading data and the {{event('loadstart')}} event is received by this object.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onprogress") }}</dt>
- <dd>Contains the function that is called periodically with information about the progress of the request and the {{event('progress')}} event is received by this object.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.ontimeout") }}</dt>
- <dd>Contains the function that is called if the event times out and the {{event("timeout")}} event is received by this object; this only happens if a timeout has been previously established by setting the value of the <code>XMLHttpRequest</code> object's <code>timeout</code> attribute.</dd>
- <dt>{{ domxref("XMLHttpRequestEventTarget.onloadend") }}</dt>
- <dd>Contains the function that is called when the load is completed, even if the request failed, and the {{event('loadend')}} event is received by this object.</dd>
-</dl>
+- {{ domxref("XMLHttpRequestEventTarget.onabort") }}
+  - : Contains the function to call when a request is aborted and the {{event('abort')}} event is received by this object.
+- {{ domxref("XMLHttpRequestEventTarget.onerror") }}
+  - : Contains the function to call when a request encounters an error and the {{event('error')}} event is received by this object.
+- {{ domxref("XMLHttpRequestEventTarget.onload") }}
+  - : Contains the function to call when an HTTP request returns after successfully fetching content and the {{event('load')}} event is received by this object.
+- {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}
+  - : Contains the function that gets called when the HTTP request first begins loading data and the {{event('loadstart')}} event is received by this object.
+- {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
+  - : Contains the function that is called periodically with information about the progress of the request and the {{event('progress')}} event is received by this object.
+- {{ domxref("XMLHttpRequestEventTarget.ontimeout") }}
+  - : Contains the function that is called if the event times out and the {{event("timeout")}} event is received by this object; this only happens if a timeout has been previously established by setting the value of the `XMLHttpRequest` object's `timeout` attribute.
+- {{ domxref("XMLHttpRequestEventTarget.onloadend") }}
+  - : Contains the function that is called when the load is completed, even if the request failed, and the {{event('loadend')}} event is received by this object.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.XMLHttpRequestEventTarget")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{ domxref("XMLHttpRequest") }}</li>
- <li><a href="/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
-</ul>
+- {{ domxref("XMLHttpRequest") }}
+- [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)

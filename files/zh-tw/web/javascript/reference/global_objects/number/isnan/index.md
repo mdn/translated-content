@@ -3,38 +3,37 @@ title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>Number.isNaN()</code></strong> method determines whether the passed value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust version of the original, global {{jsxref("isNaN", "isNaN()")}}.</p>
+The **`Number.isNaN()`** method determines whether the passed value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust version of the original, global {{jsxref("isNaN", "isNaN()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 
+## Syntax
 
+```plain
+Number.isNaN(value)
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="syntaxbox"><code>Number.isNaN(<var>value</var>)</code></pre>
+- `value`
+  - : The value to be tested for {{jsxref("NaN")}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt><code>value</code></dt>
- <dd>The value to be tested for {{jsxref("NaN")}}.</dd>
-</dl>
+**true** if the given value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}; otherwise, **false**.
 
-<h3 id="Return_value">Return value</h3>
+## Description
 
-<p><strong>true</strong> if the given value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}; otherwise, <strong>false</strong>.</p>
+Due to both equality operators, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} and {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluating to `false` when checking if {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, the function `Number.isNaN()` has become necessary. This situation is unlike all other possible value comparisons in JavaScript.
 
-<h2 id="Description">Description</h2>
+In comparison to the global {{jsxref("isNaN", "isNaN()")}} function, `Number.isNaN()` doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to {{jsxref("NaN")}}, but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the type number, that are also {{jsxref("NaN")}}, return `true`.
 
-<p>Due to both equality operators, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} and {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, evaluating to <code>false</code> when checking if {{jsxref("NaN")}} <em>is</em> {{jsxref("NaN")}}, the function <code>Number.isNaN()</code> has become necessary. This situation is unlike all other possible value comparisons in JavaScript.</p>
+## Examples
 
-<p>In comparison to the global {{jsxref("isNaN", "isNaN()")}} function, <code>Number.isNaN()</code> doesn't suffer the problem of forcefully converting the parameter to a number. This means it is now safe to pass values that would normally convert to {{jsxref("NaN")}}, but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the type number, that are also {{jsxref("NaN")}}, return <code>true</code>.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: js">Number.isNaN(NaN);        // true
+```js
+Number.isNaN(NaN);        // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0);      // true
 
@@ -52,28 +51,27 @@ Number.isNaN('37');
 Number.isNaN('37.37');
 Number.isNaN('');
 Number.isNaN(' ');
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following works because NaN is the only value in javascript which is not equal to itself.</p>
+The following works because NaN is the only value in javascript which is not equal to itself.
 
-<pre class="brush: js">Number.isNaN = Number.isNaN || function(value) {
+```js
+Number.isNaN = Number.isNaN || function(value) {
     return value !== value;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Number.isNaN")}}</p>
+{{Compat("javascript.builtins.Number.isNaN")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Number")}}</li>
- <li>{{jsxref("isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Number")}}
+- {{jsxref("isNaN", "isNaN()")}}

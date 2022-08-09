@@ -3,55 +3,58 @@ title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>isNaN()</strong></code> 函式會判斷某個數值是不是 {{jsxref("NaN")}}。注意：在 <code>isNaN</code> 函式裡面，有個<a href="#描述">有趣的</a>強制性規則。你可能會想改用在 ECMAScript 2015 導入的 {{jsxref("Number.isNaN()")}}。</p>
+**`isNaN()`** 函式會判斷某個數值是不是 {{jsxref("NaN")}}。注意：在 `isNaN` 函式裡面，有個[有趣的](#描述)強制性規則。你可能會想改用在 ECMAScript 2015 導入的 {{jsxref("Number.isNaN()")}}。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>isNaN(<em>value</em>)</code></pre>
+```plain
+isNaN(value)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>value</code></dt>
- <dd>要測試的數值。</dd>
-</dl>
+- `value`
+  - : 要測試的數值。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>如果給定值是 {{jsxref("NaN")}} 就回傳 <strong><code>true</code></strong>、否則就回傳 <strong><code>false</code></strong>。</p>
+如果給定值是 {{jsxref("NaN")}} 就回傳 **`true`**、否則就回傳 **`false`**。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="為什麼要用_isNaN_函式">為什麼要用 <code>isNaN</code> 函式</h3>
+### 為什麼要用 `isNaN` 函式
 
-<p>與其他 JavaScript 的值不同，你不可能靠等號運算符（== 與 ===）來判斷某個值是不是 {{jsxref("NaN")}}，因為連 <code>NaN == NaN</code> 與 <code>NaN === NaN</code> 的結果都是 <code>false</code>。因此，<code>isNaN</code> 函式是必要的。</p>
+與其他 JavaScript 的值不同，你不可能靠等號運算符（== 與 ===）來判斷某個值是不是 {{jsxref("NaN")}}，因為連 `NaN == NaN` 與 `NaN === NaN` 的結果都是 `false`。因此，`isNaN` 函式是必要的。
 
-<h3 id="NaN_值的來源"><code>NaN</code> 值的來源</h3>
+### `NaN` 值的來源
 
-<p><code>NaN</code> 會在算術運算（arithmetic operations）出現 <em>undefined</em> 或是 <em>unrepresentable</em> 值的結果時產生。這些值不一定是溢出條件。<code>NaN</code> 亦為試圖給毫無可用數字的原始值、予以強制運算之結果。</p>
+`NaN` 會在算術運算（arithmetic operations）出現 _undefined_ 或是 _unrepresentable_ 值的結果時產生。這些值不一定是溢出條件。`NaN` 亦為試圖給毫無可用數字的原始值、予以強制運算之結果。
 
-<p>例如，零除以零的結果會是 <code>NaN</code>——不過把其他數字除以零則不是 <code>NaN</code>。</p>
+例如，零除以零的結果會是 `NaN`——不過把其他數字除以零則不是 `NaN`。
 
-<h3 id="令人困惑的特殊狀況行為">令人困惑的特殊狀況行為</h3>
+### 令人困惑的特殊狀況行為
 
-<p>從最早的 <code>isNaN</code> 函式版本規範始，其針對非數值之行為，不斷教人困惑至極。當 <code>isNaN</code> 函式的參數並非<a href="http://es5.github.com/#x8.5">數字</a>型別時，此值會先強制轉換到數字。該值接著會測定此值是否為 {{jsxref("NaN")}}。因此，當被強制轉換的非數字，給出了有效的非 NaN 值（經典案例為空的字串與布林原始值：它們在強制轉換時，會給予數字結果 0 或 1）時，會回傳不如預期的「false」值：以空的字串為例，它很明顯地「非數字」。這段教人糾結的點，乃出於「非數字」術語的「數字」一詞、由 IEEE-754 浮點值定義之事實而來。這個函式要解釋為「當這個值，被強制轉換為數值時，它還是 IEEE-754 的『非數字』值嗎？」的答案。</p>
+從最早的 `isNaN` 函式版本規範始，其針對非數值之行為，不斷教人困惑至極。當 `isNaN` 函式的參數並非[數字](http://es5.github.com/#x8.5)型別時，此值會先強制轉換到數字。該值接著會測定此值是否為 {{jsxref("NaN")}}。因此，當被強制轉換的非數字，給出了有效的非 NaN 值（經典案例為空的字串與布林原始值：它們在強制轉換時，會給予數字結果 0 或 1）時，會回傳不如預期的「false」值：以空的字串為例，它很明顯地「非數字」。這段教人糾結的點，乃出於「非數字」術語的「數字」一詞、由 IEEE-754 浮點值定義之事實而來。這個函式要解釋為「當這個值，被強制轉換為數值時，它還是 IEEE-754 的『非數字』值嗎？」的答案。
 
-<p>最新的 ECMAScript（ES2015）版本導入了 {{jsxref("Number.isNaN()")}} 函式。儘管 <code>Number.isNaN</code> 的 <code>NaN</code> 依舊維持了數字上的意義、而不是簡單的「非數字」，<code>Number.isNaN(x)</code> 在偵測 <code>x</code> 為 <code>NaN</code> 與否時比較可靠。另外，如果在缺少 <code>Number.isNaN</code> 的情況下，通過表達式<code>(x != x)</code> 來檢測變量<code>x</code>是否是NaN會更加的可靠。</p>
+最新的 ECMAScript（ES2015）版本導入了 {{jsxref("Number.isNaN()")}} 函式。儘管 `Number.isNaN` 的 `NaN` 依舊維持了數字上的意義、而不是簡單的「非數字」，`Number.isNaN(x)` 在偵測 `x` 為 `NaN` 與否時比較可靠。另外，如果在缺少 `Number.isNaN` 的情況下，通過表達式`(x != x)` 來檢測變量`x`是否是 NaN 會更加的可靠。
 
-<p>一個 <code>isNaN</code> 的 polyfill 可以理解為（這個 polyfill 利用了 <code>NaN</code> 自身永不等於自身這一特性）：</p>
+一個 `isNaN` 的 polyfill 可以理解為（這個 polyfill 利用了 `NaN` 自身永不等於自身這一特性）：
 
-<pre class="brush: js">var isNaN = function(value) {
+```js
+var isNaN = function(value) {
     var n = Number(value);
     return n !== n;
-};</pre>
+};
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">isNaN(NaN);       // true
+```js
+isNaN(NaN);       // true
 isNaN(undefined); // true
 isNaN({});        // true
 
@@ -72,17 +75,18 @@ isNaN(new Date().toString());     // true
 
 // 這個偵測的錯誤是不能完全信賴 isNaN 的理由
 isNaN("blabla")   // true: "blabla" 被轉換為數字，將其解析為數字失敗後回傳了 NaN
-</pre>
+```
 
-<h3 id="實用的特殊狀況行為">實用的特殊狀況行為</h3>
+### 實用的特殊狀況行為
 
-<p>當然，你能以更用途導向的方法去思考 <code>isNaN()</code>：如果 <code>isNaN()</code> 回傳 <code>false</code>，那麼把 <code>x</code> 用在任何算術表達式都不會回傳 <code>NaN</code>。相反地，如果回傳 <code>true</code>，那麼把 <code>x</code> 用在任何算術表達式都會是 <code>NaN</code>。這在 JavaScript 的意義是 <code>isNaN(x) == true</code> 等於 <code>x - 0</code> 回傳 <code>NaN</code>（儘管在 JavaScript 裡面 <code>x - 0 == NaN</code> 永遠回傳 false，你因而無法測試）──事實上，<code>isNaN(x)</code>、<code>isNaN(x - 0)</code>、<code>isNaN(Number(x))</code>、<code>Number.isNaN(x - 0)</code>、<code>Number.isNaN(Number(x))</code> 在 JavaScript 裡面，都會回傳一樣的東西。而 <code>isNaN(x)</code> 是所有表達式裡面最短的一種。</p>
+當然，你能以更用途導向的方法去思考 `isNaN()`：如果 `isNaN()` 回傳 `false`，那麼把 `x` 用在任何算術表達式都不會回傳 `NaN`。相反地，如果回傳 `true`，那麼把 `x` 用在任何算術表達式都會是 `NaN`。這在 JavaScript 的意義是 `isNaN(x) == true` 等於 `x - 0` 回傳 `NaN`（儘管在 JavaScript 裡面 `x - 0 == NaN` 永遠回傳 false，你因而無法測試）── 事實上，`isNaN(x)`、`isNaN(x - 0)`、`isNaN(Number(x))`、`Number.isNaN(x - 0)`、`Number.isNaN(Number(x))` 在 JavaScript 裡面，都會回傳一樣的東西。而 `isNaN(x)` 是所有表達式裡面最短的一種。
 
-<p>比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換(implicitly converting values)，以使用 JavaScript 提供的全部功能。</p>
+比方說，你可以用這個式子，去測試函式的參數能不能透過算術處理（也就是能「像」數字一樣被利用）、否則就提供預設值之類的。你可以透過上下文的根據以隱式數值轉換(implicitly converting values)，以使用 JavaScript 提供的全部功能。
 
-<h2 id="範例_2">範例</h2>
+## 範例
 
-<pre class="brush: js">function increment(x) {
+```js
+function increment(x) {
   if (isNaN(x)) x = 0;
   return x + 1;
 };
@@ -135,21 +139,17 @@ isNaN(x) == isNaN(Number(x)) // 針對所有 x 的值都是 true，x == undefine
                              // 因為 isNaN(undefined) == true 且 Number(undefined) 回傳 NaN，
                              // 不過……
 isNaN() == isNaN(Number())   // false，因為 isNaN() == true 且 Number() == 0
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.isNaN")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.isNaN")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("NaN")}}</li>
- <li>{{jsxref("Number.isNaN()")}}</li>
-</ul>
+- {{jsxref("NaN")}}
+- {{jsxref("Number.isNaN()")}}

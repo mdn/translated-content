@@ -3,44 +3,42 @@ title: Node.textContent
 slug: Web/API/Node/textContent
 translation_of: Web/API/Node/textContent
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.textContent</strong></code> 屬性表示了節點或其後代的文字內容。</p>
+**`Node.textContent`** 屬性表示了節點或其後代的文字內容。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <em>text</em> = element.textContent;
+```plain
+var text = element.textContent;
 element.textContent = "this is some sample text";
-</pre>
+```
 
-<h2 id="Notes">描述</h2>
+## 描述
 
-<ul>
- <li><code>textContent</code> returns <code>null</code> if the element is a <a href="/en-US/docs/DOM/document">document</a>, a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use<code> <a href="/en-US/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>.</li>
- <li>If the node is a CDATA section, a comment, a processing instruction, or a text node, <code>textContent</code> returns the text inside this node (the <a href="/en-US/docs/DOM/Node.nodeValue">nodeValue</a>).</li>
- <li>For other node types, <code>textContent</code> returns the concatenation of the <code>textContent</code> attribute value of every child node, excluding comments and processing instruction nodes. This is an empty string if the node has no children.</li>
- <li>Setting this property on a node removes all of its children and replaces them with a single text node with the given value.</li>
-</ul>
+- `textContent` returns `null` if the element is a [document](/en-US/docs/DOM/document), a document type, or a notation. To grab all of the text and CDATA data for the whole document, one could use` document.documentElement.textContent`.
+- If the node is a CDATA section, a comment, a processing instruction, or a text node, `textContent` returns the text inside this node (the [nodeValue](/en-US/docs/DOM/Node.nodeValue)).
+- For other node types, `textContent` returns the concatenation of the `textContent` attribute value of every child node, excluding comments and processing instruction nodes. This is an empty string if the node has no children.
+- Setting this property on a node removes all of its children and replaces them with a single text node with the given value.
 
-<h3 id="與_innerText_的差異">與 <code>innerText</code> 的差異</h3>
+### 與 `innerText` 的差異
 
-<p>Internet Explorer introduced <code>element.innerText</code>. The intention is similar but with the following differences:</p>
+Internet Explorer introduced `element.innerText`. The intention is similar but with the following differences:
 
-<ul>
- <li>While <code>textContent</code> gets the content of all elements, including {{HTMLElement("script")}} and {{HTMLElement("style")}} elements, the IE-specific property <code>innerText</code> does not.</li>
- <li><code>innerText</code> is aware of style and will not return the text of hidden elements, whereas textContent will.</li>
- <li>As <code>innerText</code> is aware of CSS styling, it will trigger a reflow, whereas <code>textContent</code> will not.</li>
- <li>Unlike <code>textContent</code>, altering <code>innerText</code> in Internet Explorer (up to version 11 inclusive) not just removes child nodes from the element, but also <em>permanently destroys</em> all descendant text nodes (so it is impossible to insert the nodes again into any other element or into the same element anymore).</li>
-</ul>
+- While `textContent` gets the content of all elements, including {{HTMLElement("script")}} and {{HTMLElement("style")}} elements, the IE-specific property `innerText` does not.
+- `innerText` is aware of style and will not return the text of hidden elements, whereas textContent will.
+- As `innerText` is aware of CSS styling, it will trigger a reflow, whereas `textContent` will not.
+- Unlike `textContent`, altering `innerText` in Internet Explorer (up to version 11 inclusive) not just removes child nodes from the element, but also _permanently destroys_ all descendant text nodes (so it is impossible to insert the nodes again into any other element or into the same element anymore).
 
-<h3 id="與_innerHTML_的差異">與 <code>innerHTML</code> 的差異</h3>
+### 與 `innerHTML` 的差異
 
-<p><code>innerHTML</code> returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use <code>innerHTML</code>. <code>textContent</code> should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an XSS attack vector.</p>
+`innerHTML` returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use `innerHTML`. `textContent` should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an XSS attack vector.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush: js">// Given the following HTML fragment:
-//   &lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text&lt;/div&gt;
+```js
+// Given the following HTML fragment:
+//   <div id="divA">This is <span>some</span> text</div>
 
 // Get the text content:
 var text = document.getElementById("divA").textContent;
@@ -49,15 +47,16 @@ var text = document.getElementById("divA").textContent;
 // Set the text content:
 document.getElementById("divA").textContent = "This is some text";
 // The HTML for divA is now:
-//   &lt;div id="divA"&gt;This is some text&lt;/div&gt;
-</pre>
+//   <div id="divA">This is some text</div>
+```
 
-<h2 id="Polyfill_for_IE8">Polyfill for IE8</h2>
+## Polyfill for IE8
 
-<pre class="brush: js">if (Object.defineProperty
-  &amp;&amp; Object.getOwnPropertyDescriptor
-  &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  &amp;&amp; !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
+```js
+if (Object.defineProperty
+  && Object.getOwnPropertyDescriptor
+  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
+  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
   (function() {
     var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
     Object.defineProperty(Element.prototype, "textContent",
@@ -72,18 +71,16 @@ document.getElementById("divA").textContent = "This is some text";
    );
   })();
 }
-</pre>
+```
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">More on differences between <code>innerText</code> and <code>textContent</code></a> (blog post)</li>
-</ul>
+- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post)

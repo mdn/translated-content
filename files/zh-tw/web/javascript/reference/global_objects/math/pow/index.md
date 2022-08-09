@@ -5,38 +5,39 @@ tags:
   - 次方
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.pow()</code></strong> 函式回傳 <code>base</code> 的 <code>exponent</code> 次方（幂）值，也就是 <code>base^exponent</code>。</p>
+**`Math.pow()`** 函式回傳 `base` 的 `exponent` 次方（幂）值，也就是 `base^exponent`。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>Math.pow(<var>base</var>, <var>exponent</var>)</code></pre>
+```plain
+Math.pow(base, exponent)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>base</code></dt>
- <dd>基數。</dd>
- <dt><code>exponent</code></dt>
- <dd>要乘上 <code>base</code> 幾次的指數。</dd>
-</dl>
+- `base`
+  - : 基數。
+- `exponent`
+  - : 要乘上 `base` 幾次的指數。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>A number representing the given base taken to the power of the given exponent.</p>
+A number representing the given base taken to the power of the given exponent.
 
-<h2 id="敘述">敘述</h2>
+## 敘述
 
-<p>The <strong><code>Math.pow()</code></strong> function returns the <code>base</code> to the <code>exponent</code> power, that is, <code>base^exponent</code>, the base and the exponent are in decimal numeral system.</p>
+The **`Math.pow()`** function returns the `base` to the `exponent` power, that is, `base^exponent`, the base and the exponent are in decimal numeral system.
 
-<p>由於 <code>pow()</code> 是 <code>Math</code> 的靜態方法，you always use it as <code>Math.pow()</code>, rather than as a method of a <code>Math</code> object you created（<code>Math</code> 並沒有建構子）。</p>
+由於 `pow()` 是 `Math` 的靜態方法，you always use it as `Math.pow()`, rather than as a method of a `Math` object you created（`Math` 並沒有建構子）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Math.pow">使用 <code>Math.pow()</code></h3>
+### 使用 `Math.pow()`
 
-<pre class="brush: js">// simple
+```js
+// simple
 Math.pow(7, 2);    // 49
 Math.pow(7, 3);    // 343
 Math.pow(2, 10);   // 1024
@@ -56,22 +57,20 @@ Math.pow(-7, 0.5); // NaN (負數沒辦法得出一個實數平方根)
 // and limits in the floating number precision,
 // negative bases with fractional exponents always return NaN
 Math.pow(-7, 1/3); // NaN
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Math.pow")}}</p>
+{{Compat("javascript.builtins.Math.pow")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Exponentiation operator</a> {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.sqrt()")}}
+- [Exponentiation operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}

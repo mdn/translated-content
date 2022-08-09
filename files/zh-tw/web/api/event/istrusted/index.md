@@ -3,28 +3,30 @@ title: Event.isTrusted
 slug: Web/API/Event/isTrusted
 translation_of: Web/API/Event/isTrusted
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Event")}} 介面的 <code>isTrusted</code> 唯讀屬性為一個布林值，若事件物件是由使用者操作而產生，則 <code>isTrusted</code> 值為 <code>true</code>。若事件物件是由程式碼所建立、修改，或是透過 {{domxref("EventTarget.dispatchEvent()")}} 來觸發，則 <code>isTrusted</code> 值為 <code>false</code>。</p>
+{{domxref("Event")}} 介面的 `isTrusted` 唯讀屬性為一個布林值，若事件物件是由使用者操作而產生，則 `isTrusted` 值為 `true`。若事件物件是由程式碼所建立、修改，或是透過 {{domxref("EventTarget.dispatchEvent()")}} 來觸發，則 `isTrusted` 值為 `false`。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var bool = event.isTrusted;
-</pre>
+```plain
+var bool = event.isTrusted;
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre> if (e.isTrusted) {
+```plain
+ if (e.isTrusted) {
      /* The event is trusted. */
  } else {
      /* The event is not trusted. */
  }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Event.isTrusted")}}

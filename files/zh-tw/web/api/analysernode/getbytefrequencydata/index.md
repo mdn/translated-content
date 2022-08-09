@@ -3,29 +3,31 @@ title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 translation_of: Web/API/AnalyserNode/getByteFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AnalyserNode") }} 介面的 <strong><code>getByteFrequencyData()</code></strong> 方法會將當前的頻率資料複製到 {{domxref("Uint8Array")}} （無號 byte 陣列）。</p>
+{{ domxref("AnalyserNode") }} 介面的 **`getByteFrequencyData()`** 方法會將當前的頻率資料複製到 {{domxref("Uint8Array")}} （無號 byte 陣列）。
 
-<p>如果陣列的元素數目比 {{domxref("AnalyserNode.frequencyBinCount")}} 少的話，多餘的元素會被 drop 掉。如果比需要的少的話，多餘的元素會被忽略。</p>
+如果陣列的元素數目比 {{domxref("AnalyserNode.frequencyBinCount")}} 少的話，多餘的元素會被 drop 掉。如果比需要的少的話，多餘的元素會被忽略。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array 應該要和 frequencyBinCount 等長
 analyser.getByteFrequencyData(dataArray); // 將 getByteFrequencyData() 回傳的資料放進 Uint8Array
-</pre>
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>{{domxref("Uint8Array")}}。</p>
+{{domxref("Uint8Array")}}。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>下面的範例顯示出 {{domxref("AudioContext")}} 用於建立一個 <code>AnalyserNode</code> 的基本用法，然後 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} 以及 {{htmlelement("canvas")}} 用來重複收集當前聲音輸入的頻率資料並在 "winamp bargraph style" 畫出輸出。若要知道更完整的範例或是資訊，請參考 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo （看 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 第 128–205 行</a> 會有相關的程式碼）。</p>
+下面的範例顯示出 {{domxref("AudioContext")}} 用於建立一個 `AnalyserNode` 的基本用法，然後 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame")}} 以及 {{htmlelement("canvas")}} 用來重複收集當前聲音輸入的頻率資料並在 "winamp bargraph style" 畫出輸出。若要知道更完整的範例或是資訊，請參考 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) demo （看 [app.js 第 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) 會有相關的程式碼）。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -49,7 +51,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -59,25 +61,22 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="參數">參數</h2>
+## 參數
 
-<dl>
- <dt>陣列</dt>
- <dd>頻率定義域會被複製進去的 {{domxref("Uint8Array")}} 。</dd>
-</dl>
+- 陣列
+  - : 頻率定義域會被複製進去的 {{domxref("Uint8Array")}} 。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參看">參看</h2>
+## 參看
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">使用 Web Audio API</a></li>
-</ul>
+- [使用 Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

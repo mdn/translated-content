@@ -9,35 +9,39 @@ tags:
   - 方法
 translation_of: Web/API/Document/createDocumentFragment
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>建立新的 {{domxref("DocumentFragment")}}.</p>
+建立新的 {{domxref("DocumentFragment")}}.
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <var>fragment</var> = document.createDocumentFragment();
-</pre>
+```plain
+var fragment = document.createDocumentFragment();
+```
 
-<p><code>fragment </code>是 {{domxref("DocumentFragment")}} 的一個參考物件。</p>
+`fragment `是 {{domxref("DocumentFragment")}} 的一個參考物件。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>DocumentFragment</code>s 是 DOM 節點(Nodes)。他們不會成為 DOM主幹的一部份。最常見的作法是先建立文本片段 (document fragment)，然後將元素 (element) 加入文本片段中，最後再將文本片段加入 DOM 樹中。在 DOM 樹中，文本片段將會被他所有的子元素取代。</p>
+`DocumentFragment`s 是 DOM 節點(Nodes)。他們不會成為 DOM 主幹的一部份。最常見的作法是先建立文本片段 (document fragment)，然後將元素 (element) 加入文本片段中，最後再將文本片段加入 DOM 樹中。在 DOM 樹中，文本片段將會被他所有的子元素取代。
 
-<p>正因為文本片段是存在<strong>記憶體</strong>中，並且不是 DOM 主幹的一部分，增加子元素並不會導致網頁重刷 (<a href="https://developers.google.com/speed/articles/reflow?csw=1">reflow</a>)(重新計算元素的位置和幾何)。因此採用文本片段通常會有比較好的效能表現 (<a href="http://ejohn.org/blog/dom-documentfragments/">better performance</a>)。</p>
+正因為文本片段是存在**記憶體**中，並且不是 DOM 主幹的一部分，增加子元素並不會導致網頁重刷 ([reflow](https://developers.google.com/speed/articles/reflow?csw=1))(重新計算元素的位置和幾何)。因此採用文本片段通常會有比較好的效能表現 ([better performance](http://ejohn.org/blog/dom-documentfragments/))。
 
-<h2 id="舉例">舉例</h2>
+## 舉例
 
-<p>這個例子中用清單來呈現主流瀏覽器。</p>
+這個例子中用清單來呈現主流瀏覽器。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul id="ul"&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul id="ul">
+</ul>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var element  = document.getElementById('ul'); // assuming ul exists
+```js
+var element  = document.getElementById('ul'); // assuming ul exists
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
@@ -49,23 +53,21 @@ browsers.forEach(function(browser) {
 });
 
 element.appendChild(fragment);
-</pre>
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>在 <a href="https://jsfiddle.net/a0nn690f/">jsfiddle </a>上看範例結果。</p>
+在 [jsfiddle ](https://jsfiddle.net/a0nn690f/)上看範例結果。
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Document.createDocumentFragment")}}
 
-<h2 id="更多參考">更多參考</h2>
+## 更多參考
 
-<ul>
- <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
- <li>{{domxref("documentFragment")}}</li>
-</ul>
+- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
+- {{domxref("documentFragment")}}

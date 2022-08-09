@@ -3,36 +3,38 @@ title: Object initializer
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
-<div>{{JsSidebar("Operators")}}</div>
+{{JsSidebar("Operators")}}
 
-<p>Objects can be initialized using <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>new Object()</code></a>,<code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>, or using the <em>literal</em> notation (<em>initializer</em> notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (<code>{}</code>).</p>
+Objects can be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object),` Object.create()`, or using the _literal_ notation (_initializer_ notation). An object initializer is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 var o = {a: 'foo', b: 42, c: {}};
 
 var a = 'foo', b = 42, c = {};
 var o = {a: a, b: b, c: c};
 
 var o = {
-  <var>property: function </var>([<var>parameters</var>]) {},
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {}
+  property: function ([parameters]) {},
+  get property() {},
+  set property(value) {}
 };
-</pre>
+```
 
-<h3 id="New_notations_in_ECMAScript_2015">New notations in ECMAScript 2015</h3>
+### New notations in ECMAScript 2015
 
-<p>Please see the compatibility table for support for these notations. In non-supporting environments, these notations will lead to syntax errors.</p>
+Please see the compatibility table for support for these notations. In non-supporting environments, these notations will lead to syntax errors.
 
-<pre class="brush: js">// Shorthand property names (ES2015)
+```js
+// Shorthand property names (ES2015)
 var a = 'foo', b = 42, c = {};
 var o = {a, b, c};
 
 // Shorthand method names (ES2015)
 var o = {
-  <var>property</var>([<var>parameters</var>]) {}
+  property([parameters]) {}
 };
 
 // Computed property names (ES2015)
@@ -40,41 +42,48 @@ var prop = 'foo';
 var o = {
   [prop]: 'hey',
   ['b' + 'ar']: 'there'
-};</pre>
+};
+```
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of <em>properties</em>, which are used to describe an object. Values of object properties can either contain {{Glossary("primitive")}} data types or other objects.</p>
+An object initializer is an expression that describes the initialization of an {{jsxref("Object")}}. Objects consist of _properties_, which are used to describe an object. Values of object properties can either contain {{Glossary("primitive")}} data types or other objects.
 
-<h3 id="建立物件">建立物件</h3>
+### 建立物件
 
-<p>An empty object with no properties can be created like this:</p>
+An empty object with no properties can be created like this:
 
-<pre class="brush: js">var object = {};</pre>
+```js
+var object = {};
+```
 
-<p>However, the advantage of the <em>literal</em> or <em>initializer</em> notation is, that you are able to quickly create objects with properties inside the curly braces. You simply notate a list of <code>key: value</code> pairs delimited by comma. The following code creates an object with three properties and the keys are <code>"foo"</code>, <code>"age"</code> and <code>"baz"</code>. The values of these keys are a string <code>"bar"</code>, a number <code>42</code> and the third property has another object as its value.</p>
+However, the advantage of the _literal_ or _initializer_ notation is, that you are able to quickly create objects with properties inside the curly braces. You simply notate a list of `key: value` pairs delimited by comma. The following code creates an object with three properties and the keys are `"foo"`, `"age"` and `"baz"`. The values of these keys are a string `"bar"`, a number `42` and the third property has another object as its value.
 
-<pre class="brush: js">var object = {
+```js
+var object = {
   foo: 'bar',
   age: 42,
   baz: {myProp: 12}
-}</pre>
+}
+```
 
-<h3 id="存取屬性">存取屬性</h3>
+### 存取屬性
 
-<p>Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. See <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> for detailed information.</p>
+Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.
 
-<pre class="brush: js">object.foo; // "bar"
+```js
+object.foo; // "bar"
 object['age']; // 42
 
 object.foo = 'baz';
-</pre>
+```
 
-<h3 id="屬性定義">屬性定義</h3>
+### 屬性定義
 
-<p>We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:</p>
+We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:
 
-<pre class="brush: js">var a = 'foo',
+```js
+var a = 'foo',
     b = 42,
     c = {};
 
@@ -82,11 +91,13 @@ var o = {
   a: a,
   b: b,
   c: c
-};</pre>
+};
+```
 
-<p>With ECMAScript 2015, there is a shorter notation available to achieve the same:</p>
+With ECMAScript 2015, there is a shorter notation available to achieve the same:
 
-<pre class="brush: js">var a = 'foo',
+```js
+var a = 'foo',
     b = 42,
     c = {};
 
@@ -95,19 +106,21 @@ var o = {a, b, c};
 
 // In other words,
 console.log((o.a === {a}.a)); // true
-</pre>
+```
 
-<h4 id="Duplicate_property_names">Duplicate property names</h4>
+#### Duplicate property names
 
-<p>When using the same name for your properties, the second property will overwrite the first.</p>
+When using the same name for your properties, the second property will overwrite the first.
 
-<pre class="brush: js">var a = {x: 1, x: 2};
+```js
+var a = {x: 1, x: 2};
 console.log(a); // {x: 2}
-</pre>
+```
 
-<p>In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}.  With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.</p>
+In ECMAScript 5 strict mode code, duplicate property names were considered a {{jsxref("SyntaxError")}}. With the introduction of computed property names making duplication possible at runtime, ECMAScript 2015 has removed this restriction.
 
-<pre class="brush: js">function haveES2015DuplicatePropertySemantics() {
+```js
+function haveES2015DuplicatePropertySemantics() {
   'use strict';
   try {
     ({prop: 1, prop: 2});
@@ -118,49 +131,59 @@ console.log(a); // {x: 2}
     // Error thrown, duplicates prohibited in strict mode
     return false;
   }
-}</pre>
+}
+```
 
-<h3 id="方法定義">方法定義</h3>
+### 方法定義
 
-<p>A property of an object can also refer to a <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a> or a <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> or <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> method.</p>
+A property of an object can also refer to a [function](/en-US/docs/Web/JavaScript/Reference/Functions) or a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) or [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method.
 
-<pre class="brush: js">var o = {
-  <var>property: function </var>([<var>parameters</var>]) {},
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {}
-};</pre>
-
-<p>In ECMAScript 2015, a shorthand notation is available, so that the keyword "function" is no longer necessary.</p>
-
-<pre class="brush: js">// Shorthand method names (ES2015)
+```js
 var o = {
-  <var>property</var>([<var>parameters</var>]) {},
-  *<var>generator</var>() {}
-};</pre>
+  property: function ([parameters]) {},
+  get property() {},
+  set property(value) {}
+};
+```
 
-<p>In ECMAScript 2015 There is a way to concisely define properties whose values are generator functions:</p>
+In ECMAScript 2015, a shorthand notation is available, so that the keyword "function" is no longer necessary.
 
-<pre class="brush: js">var o = {
-  *<var>generator</var>() {
+```js
+// Shorthand method names (ES2015)
+var o = {
+  property([parameters]) {},
+  *generator() {}
+};
+```
+
+In ECMAScript 2015 There is a way to concisely define properties whose values are generator functions:
+
+```js
+var o = {
+  *generator() {
     ...........
   }
-};</pre>
+};
+```
 
-<p>Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):</p>
+Which is equivalent to this ES5-like notation (but note that ECMAScript 5 has no generators):
 
-<pre class="brush: js">var o = {
-  generator<var>: function* </var>() {
+```js
+var o = {
+  generator: function* () {
     ...........
   }
-};</pre>
+};
+```
 
-<p>For more information and examples about methods, see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>.</p>
+For more information and examples about methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
-<h3 id="Computed_property_names">Computed property names</h3>
+### Computed property names
 
-<p>Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets <code>[]</code>, that will be computed as the property name. This is symmetrical to the bracket notation of the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:</p>
+Starting with ECMAScript 2015, the object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed as the property name. This is symmetrical to the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you might have used to read and set properties already. Now you can use the same syntax in object literals, too:
 
-<pre class="brush: js">// Computed property names (ES2015)
+```js
+// Computed property names (ES2015)
 var i = 0;
 var a = {
   ['foo' + ++i]: i,
@@ -178,30 +201,34 @@ var config = {
   ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
 };
 
-console.log(config); // {size: 12, mobileSize: 4}</pre>
+console.log(config); // {size: 12, mobileSize: 4}
+```
 
-<h3 id="Spread_properties">Spread properties</h3>
+### Spread properties
 
-<p>The <a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> proposal (stage 3) adds <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a> properties to object literals. It copies own enumerable properties from a provided object onto a new object.</p>
+The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) proposal (stage 3) adds [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) properties to object literals. It copies own enumerable properties from a provided object onto a new object.
 
-<p>Shallow-cloning (excluding prototype) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.</p>
+Shallow-cloning (excluding prototype) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
-<pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
+```js
+var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
 
 var clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
 
 var mergedObj = { ...obj1, ...obj2 };
-// Object { foo: "baz", x: 42, y: 13 }</pre>
+// Object { foo: "baz", x: 42, y: 13 }
+```
 
-<p>Note that {{jsxref("Object.assign()")}} triggers <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a> whereas the spread operator doesn't.</p>
+Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set) whereas the spread operator doesn't.
 
-<h3 id="Prototype_mutation">Prototype mutation</h3>
+### Prototype mutation
 
-<p>A property definition of the form <code>__proto__: value</code> or <code>"__proto__": value</code> does not create a property with the name <code>__proto__</code>.  Instead, if the provided value is an object or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, it changes the <code>[[Prototype]]</code> of the created object to that value.  (If the value is not an object or null, the object is not changed.)</p>
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null), it changes the `[[Prototype]]` of the created object to that value. (If the value is not an object or null, the object is not changed.)
 
-<pre class="brush: js">var obj1 = {};
+```js
+var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
 
 var obj2 = {__proto__: null};
@@ -214,13 +241,14 @@ assert(Object.getPrototypeOf(obj3) === protoObj);
 var obj4 = {__proto__: 'not an object or null'};
 assert(Object.getPrototypeOf(obj4) === Object.prototype);
 assert(!obj4.hasOwnProperty('__proto__'));
-</pre>
+```
 
-<p>Only a single prototype mutation is permitted in an object literal: multiple prototype mutations are a syntax error.</p>
+Only a single prototype mutation is permitted in an object literal: multiple prototype mutations are a syntax error.
 
-<p>Property definitions that do not use "colon" notation are not prototype mutations: they are property definitions that behave identically to similar definitions using any other name.</p>
+Property definitions that do not use "colon" notation are not prototype mutations: they are property definitions that behave identically to similar definitions using any other name.
 
-<pre class="brush: js">var __proto__ = 'variable';
+```js
+var __proto__ = 'variable';
 
 var obj1 = {__proto__};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
@@ -232,33 +260,29 @@ assert(obj2.__proto__() === 'hello');
 
 var obj3 = {['__prot' + 'o__']: 17};
 assert(obj3.__proto__ === 17);
-</pre>
+```
 
-<h2 id="Object_literal_notation_vs_JSON">Object literal notation vs JSON</h2>
+## Object literal notation vs JSON
 
-<p>Object literal notation與<strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/en-US/docs/Glossary/JSON">JSON</a>)是不一樣的東西. 儘管它們看起來很相似，但還是有以下的不同:</p>
+Object literal notation 與**J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON))是不一樣的東西. 儘管它們看起來很相似，但還是有以下的不同:
 
-<ul>
- <li>JSON只允許屬性透過<code>"property": value</code>格式定義. 屬性名稱必須使用雙引號包起來，且不能是速記。</li>
- <li>JSON的數值僅能為string, numbers, arrays, <code>true</code>, <code>false</code>, <code>null</code>, 或另一個JSON物件.</li>
- <li>A function value (see "Methods" above) can not be assigned to a value in JSON.</li>
- <li>Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</li>
- <li>{{jsxref("JSON.parse()")}} will reject computed property names and an error will be thrown.</li>
-</ul>
+- JSON 只允許屬性透過`"property": value`格式定義. 屬性名稱必須使用雙引號包起來，且不能是速記。
+- JSON 的數值僅能為 string, numbers, arrays, `true`, `false`, `null`, 或另一個 JSON 物件.
+- A function value (see "Methods" above) can not be assigned to a value in JSON.
+- Objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
+- {{jsxref("JSON.parse()")}} will reject computed property names and an error will be thrown.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code> / <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">Method definitions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
-</ul>
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

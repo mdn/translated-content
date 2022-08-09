@@ -9,93 +9,91 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Error</code></strong> 建構函式能用來建立一個 error 物件。當執行期間發生錯誤時，<code>Error</code> 物件實體會被拋出。<code>Error</code> 物件也可作為自訂例外的基礎物件，請參考下方的標準內建錯誤類型。</p>
+**`Error`** 建構函式能用來建立一個 error 物件。當執行期間發生錯誤時，`Error` 物件實體會被拋出。`Error` 物件也可作為自訂例外的基礎物件，請參考下方的標準內建錯誤類型。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">new Error([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+```plain
+new Error([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>message</code> {{optional_inline}}</dt>
- <dd>人們可閱讀的錯誤說明。</dd>
- <dt><code>fileName</code> {{optional_inline}} {{non-standard_inline}}</dt>
- <dd>The value for the <code>fileName</code> property on the created <code>Error</code> object. Defaults to the name of the file containing the code that called the <code>Error()</code> constructor.</dd>
- <dt><code>lineNumber</code> {{optional_inline}} {{non-standard_inline}}</dt>
- <dd>Optional. The value for the <code>lineNumber</code> property on the created <code>Error</code> object. Defaults to the line number containing the <code>Error()</code> constructor invocation.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : 人們可閱讀的錯誤說明。
+- `fileName` {{optional_inline}} {{non-standard_inline}}
+  - : The value for the `fileName` property on the created `Error` object. Defaults to the name of the file containing the code that called the `Error()` constructor.
+- `lineNumber` {{optional_inline}} {{non-standard_inline}}
+  - : Optional. The value for the `lineNumber` property on the created `Error` object. Defaults to the line number containing the `Error()` constructor invocation.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>Runtime errors result in new <code>Error</code> objects being created and thrown.</p>
+Runtime errors result in new `Error` objects being created and thrown.
 
-<p>This page documents the use of the <code>Error</code> object itself and its use as a constructor function. For a list of properties and methods inherited by <code>Error</code> instances, see {{jsxref("Error.prototype")}}.</p>
+This page documents the use of the `Error` object itself and its use as a constructor function. For a list of properties and methods inherited by `Error` instances, see {{jsxref("Error.prototype")}}.
 
-<h3 id="錯誤類型">錯誤類型</h3>
+### 錯誤類型
 
-<p>Besides the generic <code>Error</code> constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see <a href="/en-US/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements">Exception Handling Statements</a>.</p>
+Besides the generic `Error` constructor, there are six other core error constructors in JavaScript. For client-side exceptions, see [Exception Handling Statements](/en-US/docs/Web/JavaScript/Guide/Statements#Exception_Handling_Statements).
 
-<dl>
- <dt>{{jsxref("EvalError")}}</dt>
- <dd>Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("InternalError")}} {{non-standard_inline}}</dt>
- <dd>Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".</dd>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.</dd>
- <dt>{{jsxref("ReferenceError")}}</dt>
- <dd>Creates an instance representing an error that occurs when de-referencing an invalid reference.</dd>
- <dt>{{jsxref("SyntaxError")}}</dt>
- <dd>Creates an instance representing a syntax error that occurs while parsing code in {{jsxref("Global_Objects/eval", "eval()")}}.</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.</dd>
- <dt>{{jsxref("URIError")}}</dt>
- <dd>Creates an instance representing an error that occurs when {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} or {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} are passed invalid parameters.</dd>
-</dl>
+- {{jsxref("EvalError")}}
+  - : Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("InternalError")}} {{non-standard_inline}}
+  - : Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".
+- {{jsxref("RangeError")}}
+  - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside of its valid range.
+- {{jsxref("ReferenceError")}}
+  - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
+- {{jsxref("SyntaxError")}}
+  - : Creates an instance representing a syntax error that occurs while parsing code in {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("TypeError")}}
+  - : Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.
+- {{jsxref("URIError")}}
+  - : Creates an instance representing an error that occurs when {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} or {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} are passed invalid parameters.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("Error.prototype")}}</dt>
- <dd>Allows the addition of properties to <code>Error</code> instances.</dd>
-</dl>
+- {{jsxref("Error.prototype")}}
+  - : Allows the addition of properties to `Error` instances.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>The global <code>Error</code> object contains no methods of its own, however, it does inherit some methods through the prototype chain.</p>
+The global `Error` object contains no methods of its own, however, it does inherit some methods through the prototype chain.
 
-<h2 id="Error_實體"><code>Error</code> 實體</h2>
+## `Error` 實體
 
-<div>{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}</div>
+{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Description')}}
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<div>{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}</div>
+{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}</div>
+{{page('en-US/docs/JavaScript/Reference/Global_Objects/Error/prototype', 'Methods')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Throwing_a_generic_error">Throwing a generic error</h3>
+### Throwing a generic error
 
-<p>Usually you create an <code>Error</code> object with the intention of raising it using the {{jsxref("Statements/throw", "throw")}} keyword. You can handle the error using the {{jsxref("Statements/try...catch", "try...catch")}} construct:</p>
+Usually you create an `Error` object with the intention of raising it using the {{jsxref("Statements/throw", "throw")}} keyword. You can handle the error using the {{jsxref("Statements/try...catch", "try...catch")}} construct:
 
-<pre class="brush: js">try {
+```js
+try {
   throw new Error('Whoops!');
 } catch (e) {
   console.log(e.name + ': ' + e.message);
 }
-</pre>
+```
 
-<h3 id="Handling_a_specific_error">Handling a specific error</h3>
+### Handling a specific error
 
-<p>You can choose to handle only specific error types by testing the error type with the error's {{jsxref("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{jsxref("Operators/instanceof", "instanceof")}} keyword:</p>
+You can choose to handle only specific error types by testing the error type with the error's {{jsxref("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{jsxref("Operators/instanceof", "instanceof")}} keyword:
 
-<pre class="brush: js">try {
+```js
+try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
@@ -105,19 +103,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
   }
   // ... etc
 }
-</pre>
+```
 
-<h3 id="Custom_Error_Types">Custom Error Types</h3>
+### Custom Error Types
 
-<p>You might want to define your own error types deriving from <code>Error</code> to be able to <code>throw new MyError()</code> and use <code>instanceof MyError</code> to check the kind of error in the exception handler. The common way to do this is demonstrated below.</p>
+You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. The common way to do this is demonstrated below.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Note that the thrown <code>MyError</code> will report incorrect <code>lineNumber</code> and <code>fileName</code> at least in Firefox.</p>
-</div>
+> **警告：** Note that the thrown `MyError` will report incorrect `lineNumber` and `fileName` at least in Firefox.
 
-<p>See also the <a href="http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript">"What's a good way to extend Error in JavaScript?" discussion on Stackoverflow</a>.</p>
+See also the ["What's a good way to extend Error in JavaScript?" discussion on Stackoverflow](http://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript).
 
-<pre class="brush: js">// Create a new object, that prototypically inherits from the Error constructor
+```js
+// Create a new object, that prototypically inherits from the Error constructor
 function MyError(message) {
   this.name = 'MyError';
   this.message = message || 'Default Message';
@@ -138,20 +135,19 @@ try {
 } catch (e) {
   console.log(e.name);     // 'MyError'
   console.log(e.message);  // 'custom message'
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Error.prototype")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-</ul>
+- {{jsxref("Error.prototype")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}

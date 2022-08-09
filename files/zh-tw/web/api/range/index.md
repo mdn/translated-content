@@ -3,107 +3,99 @@ title: Range
 slug: Web/API/Range
 translation_of: Web/API/Range
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Range</code></strong> 介面代表一個文件的片段（fragment），可以包含節點及部分的文字節點。</p>
+**`Range`** 介面代表一個文件的片段（fragment），可以包含節點及部分的文字節點。
 
-<p>A range can be created using the {{ domxref("Document.createRange", "createRange()") }} method of the {{ domxref("Document") }} object. Range objects can also be retrieved by using the {{ domxref("Selection/getRangeAt", "getRangeAt()") }} method of the {{ domxref("Selection") }} object or the {{domxref("Document/caretRangeFromPoint", "caretRangeFromPoint()")}} method of the {{domxref("Document")}} object.</p>
+A range can be created using the {{ domxref("Document.createRange", "createRange()") }} method of the {{ domxref("Document") }} object. Range objects can also be retrieved by using the {{ domxref("Selection/getRangeAt", "getRangeAt()") }} method of the {{ domxref("Selection") }} object or the {{domxref("Document/caretRangeFromPoint", "caretRangeFromPoint()")}} method of the {{domxref("Document")}} object.
 
-<p>There also is the {{domxref("Range.Range()", "Range()")}} constructor available.</p>
+There also is the {{domxref("Range.Range()", "Range()")}} constructor available.
 
-<h2 id="Properties">屬性</h2>
+## 屬性
 
-<p><em>There are no inherited properties.</em></p>
+_There are no inherited properties._
 
-<dl>
- <dt>{{domxref("Range.collapsed")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating whether the range's start and end points are at the same position.</dd>
- <dt>{{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the deepest {{ domxref("Node") }} that contains the <code>startContainer</code> and <code>endContainer</code> nodes.</dd>
- <dt>{{domxref("Range.endContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> ends.</dd>
- <dt>{{domxref("Range.endOffset")}} {{readonlyInline}}</dt>
- <dd>Returns a number representing where in the <code>endContainer</code> the <code>Range</code> ends.</dd>
- <dt>{{domxref("Range.startContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> starts.</dd>
- <dt>{{domxref("Range.startOffset")}} {{readonlyInline}}</dt>
- <dd>Returns a number representing where in the <code>startContainer</code> the <code>Range</code> starts.</dd>
-</dl>
+- {{domxref("Range.collapsed")}} {{readonlyInline}}
+  - : Returns a {{domxref("Boolean")}} indicating whether the range's start and end points are at the same position.
+- {{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}
+  - : Returns the deepest {{ domxref("Node") }} that contains the `startContainer` and `endContainer` nodes.
+- {{domxref("Range.endContainer")}} {{readonlyInline}}
+  - : Returns the {{ domxref("Node") }} within which the `Range` ends.
+- {{domxref("Range.endOffset")}} {{readonlyInline}}
+  - : Returns a number representing where in the `endContainer` the `Range` ends.
+- {{domxref("Range.startContainer")}} {{readonlyInline}}
+  - : Returns the {{ domxref("Node") }} within which the `Range` starts.
+- {{domxref("Range.startOffset")}} {{readonlyInline}}
+  - : Returns a number representing where in the `startContainer` the `Range` starts.
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{ domxref("Range.Range()", "Range()") }} {{experimental_inline}}</dt>
- <dd>Returns a <code>Range</code> object with the global {{domxref("Document")}} as its start and end.</dd>
-</dl>
+- {{ domxref("Range.Range()", "Range()") }} {{experimental_inline}}
+  - : Returns a `Range` object with the global {{domxref("Document")}} as its start and end.
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p><em>There are no inherited methods.</em></p>
+_There are no inherited methods._
 
-<dl>
- <dt>{{ domxref("Range.setStart()")}}</dt>
- <dd>Sets the start position of a <code>Range</code>.</dd>
- <dt>{{ domxref("Range.setEnd()")}}</dt>
- <dd>Sets the end position of a <code>Range</code>.</dd>
- <dt>{{ domxref("Range.setStartBefore()")}}</dt>
- <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.setStartAfter()")}}</dt>
- <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.setEndBefore()")}}</dt>
- <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.setEndAfter()")}}</dt>
- <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.selectNode()")}}</dt>
- <dd>Sets the <code>Range</code> to contain the {{ domxref("Node") }} and its contents.</dd>
- <dt>{{ domxref("Range.selectNodeContents()")}}</dt>
- <dd>Sets the <code>Range</code> to contain the contents of a {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.collapse()")}}</dt>
- <dd>Collapses the <code>Range</code> to one of its boundary points.</dd>
- <dt>{{ domxref("Range.cloneContents()")}}</dt>
- <dd>Returns a {{ domxref("DocumentFragment") }} copying the nodes of a <code>Range</code>.</dd>
- <dt>{{ domxref("Range.deleteContents()")}}</dt>
- <dd>Removes the contents of a <code>Range</code> from the {{ domxref("Document") }}.</dd>
- <dt>{{ domxref("Range.extractContents()")}}</dt>
- <dd>Moves contents of a <code>Range</code> from the document tree into a {{ domxref("DocumentFragment") }}.</dd>
- <dt>{{ domxref("Range.insertNode()")}}</dt>
- <dd>Insert a {{ domxref("Node") }} at the start of a <code>Range</code>.</dd>
- <dt>{{ domxref("Range.surroundContents()")}}</dt>
- <dd>Moves content of a <code>Range</code> into a new {{ domxref("Node") }}.</dd>
- <dt>{{ domxref("Range.compareBoundaryPoints()")}}</dt>
- <dd>Compares the boundary points of the <code>Range</code> with another <code>Range</code>.</dd>
- <dt>{{ domxref("Range.cloneRange()")}}</dt>
- <dd>Returns a <code>Range</code> object with boundary points identical to the cloned <code>Range</code>.</dd>
- <dt>{{ domxref("Range.detach()")}}</dt>
- <dd>Releases the <code>Range</code> from use to improve performance.</dd>
- <dt>{{ domxref("Range.toString()")}}</dt>
- <dd>Returns the text of the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.compareNode()")}} {{Deprecated_Inline}}{{non-standard_inline}}</dt>
- <dd>Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.</dd>
- <dt>{{ domxref("Range.comparePoint()")}} {{experimental_inline}}</dt>
- <dd>Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}</dt>
- <dd>Returns a {{ domxref("DocumentFragment") }} created from a given string of code.</dd>
- <dt>{{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}</dt>
- <dd>Returns a {{ domxref("DOMRect") }} object which bounds the entire contents of the <code>Range</code>; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.</dd>
- <dt>{{ domxref("Range.getClientRects()") }} {{experimental_inline}}</dt>
- <dd>Returns a list of {{ domxref("DOMRect") }} objects that aggregates the results of {{ domxref("Element.getClientRects()") }} for all the elements in the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.intersectsNode()")}} {{experimental_inline}}</dt>
- <dd>Returns a <code>boolean</code> indicating whether the given node intersects the <code>Range</code>.</dd>
- <dt>{{ domxref("Range.isPointInRange()")}} {{experimental_inline}}</dt>
- <dd>Returns a <code>boolean</code> indicating whether the given point is in the <code>Range</code>.</dd>
-</dl>
+- {{ domxref("Range.setStart()")}}
+  - : Sets the start position of a `Range`.
+- {{ domxref("Range.setEnd()")}}
+  - : Sets the end position of a `Range`.
+- {{ domxref("Range.setStartBefore()")}}
+  - : Sets the start position of a `Range` relative to another {{ domxref("Node") }}.
+- {{ domxref("Range.setStartAfter()")}}
+  - : Sets the start position of a `Range` relative to another {{ domxref("Node") }}.
+- {{ domxref("Range.setEndBefore()")}}
+  - : Sets the end position of a `Range` relative to another {{ domxref("Node") }}.
+- {{ domxref("Range.setEndAfter()")}}
+  - : Sets the end position of a `Range` relative to another {{ domxref("Node") }}.
+- {{ domxref("Range.selectNode()")}}
+  - : Sets the `Range` to contain the {{ domxref("Node") }} and its contents.
+- {{ domxref("Range.selectNodeContents()")}}
+  - : Sets the `Range` to contain the contents of a {{ domxref("Node") }}.
+- {{ domxref("Range.collapse()")}}
+  - : Collapses the `Range` to one of its boundary points.
+- {{ domxref("Range.cloneContents()")}}
+  - : Returns a {{ domxref("DocumentFragment") }} copying the nodes of a `Range`.
+- {{ domxref("Range.deleteContents()")}}
+  - : Removes the contents of a `Range` from the {{ domxref("Document") }}.
+- {{ domxref("Range.extractContents()")}}
+  - : Moves contents of a `Range` from the document tree into a {{ domxref("DocumentFragment") }}.
+- {{ domxref("Range.insertNode()")}}
+  - : Insert a {{ domxref("Node") }} at the start of a `Range`.
+- {{ domxref("Range.surroundContents()")}}
+  - : Moves content of a `Range` into a new {{ domxref("Node") }}.
+- {{ domxref("Range.compareBoundaryPoints()")}}
+  - : Compares the boundary points of the `Range` with another `Range`.
+- {{ domxref("Range.cloneRange()")}}
+  - : Returns a `Range` object with boundary points identical to the cloned `Range`.
+- {{ domxref("Range.detach()")}}
+  - : Releases the `Range` from use to improve performance.
+- {{ domxref("Range.toString()")}}
+  - : Returns the text of the `Range`.
+- {{ domxref("Range.compareNode()")}} {{Deprecated_Inline}}{{non-standard_inline}}
+  - : Returns a constant representing whether the {{domxref("Node")}} is before, after, inside, or surrounding the range.
+- {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
+  - : Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the `Range`.
+- {{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}
+  - : Returns a {{ domxref("DocumentFragment") }} created from a given string of code.
+- {{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}
+  - : Returns a {{ domxref("DOMRect") }} object which bounds the entire contents of the `Range`; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.
+- {{ domxref("Range.getClientRects()") }} {{experimental_inline}}
+  - : Returns a list of {{ domxref("DOMRect") }} objects that aggregates the results of {{ domxref("Element.getClientRects()") }} for all the elements in the `Range`.
+- {{ domxref("Range.intersectsNode()")}} {{experimental_inline}}
+  - : Returns a `boolean` indicating whether the given node intersects the `Range`.
+- {{ domxref("Range.isPointInRange()")}} {{experimental_inline}}
+  - : Returns a `boolean` indicating whether the given point is in the `Range`.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Range")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

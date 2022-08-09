@@ -8,57 +8,59 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
-<p><code>data</code> URIs, 由 <a href="http://tools.ietf.org/html/rfc2397">RFC 2397</a> 文件定義, 允許作者在文件中嵌入檔案.</p>
+`data` URIs, 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 文件定義, 允許作者在文件中嵌入檔案.
 
-<h2 id="Syntax">表達式</h2>
+## 表達式
 
-<p>data URI 的表達式如下：</p>
+data URI 的表達式如下：
 
-<pre class="eval notranslate">data:[&lt;mediatype&gt;][;base64],&lt;data&gt;
-</pre>
+```plain
+data:[<mediatype>][;base64],<data>
+```
 
-<p><code>mediatype</code> 為一 MIME type 字串，例如 JPEG 圖檔為「<code>image/jpeg</code>」，為非必要參數，若省略的話，默認值為「<code>text/plain;charset=US-ASCII</code>」。</p>
+`mediatype` 為一 MIME type 字串，例如 JPEG 圖檔為「`image/jpeg`」，為非必要參數，若省略的話，默認值為「`text/plain;charset=US-ASCII`」。
 
-<p>If the data is textual, you can simply embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify <code>base64</code> to embed base64-encoded binary data.</p>
+If the data is textual, you can simply embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data.
 
-<h3 id="範例">範例</h3>
+### 範例
 
-<dl>
- <dt>data:,Hello%2C%20World!</dt>
- <dd>一個簡單的 text/plain data</dd>
- <dt>data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D</dt>
- <dd>同前者，但經過 base64 編碼。</dd>
- <dt>data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E</dt>
- <dd>一 HTML 檔，內容為<code>&lt;h1&gt;Hello, World&lt;/h1&gt;</code></dd>
-</dl>
+- data:,Hello%2C%20World!
+  - : 一個簡單的 text/plain data
+- data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D
+  - : 同前者，但經過 base64 編碼。
+- data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E
+  - : 一 HTML 檔，內容為`<h1>Hello, World</h1>`
 
-<h2 id="Encoding_data_into_base64_format">以 base64 格式編碼資料</h2>
+## 以 base64 格式編碼資料
 
-<p>在 Linux 和 Mac OS X 中，可以在終端機輸入下面的程式碼來進行編碼：</p>
+在 Linux 和 Mac OS X 中，可以在終端機輸入下面的程式碼來進行編碼：
 
-<pre class="eval notranslate">uuencode -m <code>infile</code> <code>remotename</code>
-</pre>
+```plain
+uuencode -m infile remotename
+```
 
-<p>The <code>infile</code> parameter is the name of the file you wish to encode into base64 format, and <code>remotename</code> is the remote name for the file, which isn't actually used in <code>data</code> URLs.</p>
+The `infile` parameter is the name of the file you wish to encode into base64 format, and `remotename` is the remote name for the file, which isn't actually used in `data` URLs.
 
-<p>輸出結果如下所示：</p>
+輸出結果如下所示：
 
-<pre class="eval notranslate">begin-base64 664 test
+```plain
+begin-base64 664 test
 YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
 ====
-</pre>
+```
 
-<p>The <code>data</code> URI will use the encoded data after the initial header line.</p>
+The `data` URI will use the encoded data after the initial header line.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>請先閱讀文章《 <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a>. 》。</p>
+請先閱讀文章《 [Base64 encoding and decoding](/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding). 》。
 
-<h2 id="Converting_an_nsIFile_to_a_data_URI">轉換 nsIFile 至data URI</h2>
+## 轉換 nsIFile 至 data URI
 
-<p>This function returns a base 64-encoded data URI from the passed <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a>.</p>
+This function returns a base 64-encoded data URI from the passed [nsIFile](/en/XPCOM_Interface_Reference/nsIFile).
 
-<pre class="brush: js notranslate">function generateDataURI(file) {
+```js
+function generateDataURI(file) {
   var contentType = Components.classes["@mozilla.org/mime;1"]
                               .getService(Components.interfaces.nsIMIMEService)
                               .getTypeFromFile(file);
@@ -71,59 +73,52 @@ YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
   var encoded = btoa(stream.readBytes(stream.available()));
   return "data:" + contentType + ";base64," + encoded;
 }
-</pre>
+```
 
-<h2 id="安全">安全</h2>
+## 安全
 
-<div class="note">
-<p><strong>Note:</strong> Prior to {{Gecko("6.0")}}, <code>data</code> URIs inherited the security context of the page currently in the browser window if the user enters a <code>data</code> URI into the location bar. Now <code>data</code> URIs get a new, empty, security context.</p>
-</div>
+> **備註：** Prior to {{Gecko("6.0")}}, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
 
-<h2 id="Common_problems">常見的問題</h2>
+## 常見的問題
 
-<p>以下列舉幾個再使用 <code>data</code> URIs 時常遇到的問題.</p>
+以下列舉幾個再使用 `data` URIs 時常遇到的問題.
 
-<dl>
- <dt>表達式</dt>
- <dd><code>data</code> URIs 的格式十分簡單, 但是我們容易忘記在 "data" 區塊前面使用逗號, 或是不正確的將資料轉換為 base64 的格式.</dd>
- <dt>在HTML 的格式</dt>
- <dd>A <code>data</code> URI provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the <code>data</code> should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12">when using base64 encoding</a>.</dd>
- <dt>長度限制</dt>
- <dd>Although Mozilla supports <code>data</code> URIs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limits <code>data</code> URIs to around 65000 characters.</dd>
- <dt>缺乏錯誤處理</dt>
- <dd>Invalid parameters in media, or typos when specifying "base64", are ignored, but no error is provided.</dd>
- <dt>未支援 query 字串, etc.</dt>
- <dd>
- <p>The data portion of a data URI is opaque, so an attempt to use a query string (page-specific parameters, with the syntax <code><em>&lt;url&gt;</em>?parameter-data</code>) with a data URI will just include the query string in the data the URI represents. For example:</p>
+- 表達式
+  - : `data` URIs 的格式十分簡單, 但是我們容易忘記在 "data" 區塊前面使用逗號, 或是不正確的將資料轉換為 base64 的格式.
+- 在 HTML 的格式
+  - : A `data` URI provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
+- 長度限制
+  - : Although Mozilla supports `data` URIs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limits `data` URIs to around 65000 characters.
+- 缺乏錯誤處理
+  - : Invalid parameters in media, or typos when specifying "base64", are ignored, but no error is provided.
+- 未支援 query 字串, etc.
 
- <pre class="eval notranslate">data:text/html,lots of text...&lt;p&gt;&lt;a name%3D"bottom"&gt;bottom&lt;/a&gt;?arg=val
-</pre>
+  - : The data portion of a data URI is opaque, so an attempt to use a query string (page-specific parameters, with the syntax `<url>?parameter-data`) with a data URI will just include the query string in the data the URI represents. For example:
 
- <p>This represents an HTML resource whose contents are:</p>
+    ```plain
+    data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
+    ```
 
- <pre class="eval notranslate">lots of text...&lt;p&gt;&lt;a name="bottom"&gt;bottom&lt;/a&gt;?arg=val
-</pre>
+    This represents an HTML resource whose contents are:
 
- <p>Note: as of Firefox 6, fragments (anchors) are processed consistent with other URI schemes, thus a bare "#" in the content needs to be escaped as '%23'.</p>
- </dd>
-</dl>
+    ```plain
+    lots of text...<p><a name="bottom">bottom</a>?arg=val
+    ```
 
-<h2 id="Support_in_other_browsers">瀏覽器的支援</h2>
+    Note: as of Firefox 6, fragments (anchors) are processed consistent with other URI schemes, thus a bare "#" in the content needs to be escaped as '%23'.
 
-<p>The <code>data</code> scheme is supported by Opera 7.20 and above, as well as Safari and Konqueror. Internet Explorer 7 and below, however, do not currently support it. Internet Explorer 8 and above only supports <code>data</code> URIs for images in CSS, &lt;link&gt;, and &lt;img&gt;.</p>
+## 瀏覽器的支援
 
-<h2 id="參見">參見</h2>
+The `data` scheme is supported by Opera 7.20 and above, as well as Safari and Konqueror. Internet Explorer 7 and below, however, do not currently support it. Internet Explorer 8 and above only supports `data` URIs for images in CSS, \<link>, and \<img>.
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li>{{domxref("WindowBase64.atob","atob()")}}</li>
- <li>{{domxref("WindowBase64.btoa","btoa()")}}</li>
- <li><a href="/en-US/docs/Web/CSS/uri">CSS <code>url()</code></a></li>
- <li><a href="/en-US/docs/URI">URI</a></li>
-</ul>
+## 參見
 
-<h2 id="Resources">資源</h2>
+- [Base64 encoding and decoding](/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding)
+- {{domxref("WindowBase64.atob","atob()")}}
+- {{domxref("WindowBase64.btoa","btoa()")}}
+- [CSS `url()`](/en-US/docs/Web/CSS/uri)
+- [URI](/en-US/docs/URI)
 
-<ul>
- <li><a href="http://tools.ietf.org/html/rfc2397">RFC 2397</a> -- The "data" URL scheme"</li>
-</ul>
+## 資源
+
+- [RFC 2397](http://tools.ietf.org/html/rfc2397) -- The "data" URL scheme"

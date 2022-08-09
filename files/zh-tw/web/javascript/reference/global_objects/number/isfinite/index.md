@@ -8,36 +8,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isFinite()</code></strong> 方法會判斷傳入的值是否為有限數（finite number）。</p>
+**`Number.isFinite()`** 方法會判斷傳入的值是否為有限數（finite number）。
 
-<div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
+## 語法
 
+```plain
+Number.isFinite(value)
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox">Number.isFinite(v<var>alue</var>)</pre>
+- `value`
+  - : The value to be tested for finiteness.
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>value</code></dt>
- <dd>The value to be tested for finiteness.</dd>
-</dl>
+A {{jsxref("Boolean")}} indicating whether or not the given value is a finite number.
 
-<h3 id="回傳值">回傳值</h3>
+## 說明
 
-<p>A {{jsxref("Boolean")}} indicating whether or not the given value is a finite number.</p>
+In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't forcibly convert the parameter to a number. This means only values of the type number, that are also finite, return `true`.
 
-<h2 id="說明">說明</h2>
+## 範例
 
-<p>In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method doesn't forcibly convert the parameter to a number. This means only values of the type number, that are also finite, return <code>true</code>.</p>
-
-<h2 id="範例">範例</h2>
-
-<pre class="brush: js">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -48,26 +47,25 @@ Number.isFinite('0');       // false, would've been true with
                             // global isFinite('0')
 Number.isFinite(null);      // false, would've been true with
                             // global isFinite(null)
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+```js
+Number.isFinite = Number.isFinite || function(value) {
+    return typeof value === 'number' && isFinite(value);
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Number.isFinite")}}</p>
+{{Compat("javascript.builtins.Number.isFinite")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>The {{jsxref("Number")}} object it belongs to.</li>
- <li>The global function {{jsxref("isFinite")}}.</li>
-</ul>
+- The {{jsxref("Number")}} object it belongs to.
+- The global function {{jsxref("isFinite")}}.

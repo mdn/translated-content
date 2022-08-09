@@ -3,43 +3,35 @@ title: TouchList
 slug: Web/API/TouchList
 translation_of: Web/API/TouchList
 ---
-<div>
-<p>{{ APIRef("Touch Events") }}</p>
-</div>
+{{ APIRef("Touch Events") }}
 
-<p><code>TouchList</code> 介面表示了一個觸控平面上所有觸碰點的列表；舉例來說，假如使用者有三隻手指於觸控平面（如觸控螢幕或是觸控板）上，則其相對應的 <code>TouchList</code> 物件中就會分別有三個 {{domxref("Touch")}} 物件各代表一個手指的觸碰。</p>
+`TouchList` 介面表示了一個觸控平面上所有觸碰點的列表；舉例來說，假如使用者有三隻手指於觸控平面（如觸控螢幕或是觸控板）上，則其相對應的 `TouchList` 物件中就會分別有三個 {{domxref("Touch")}} 物件各代表一個手指的觸碰。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("TouchList.length")}} {{readonlyInline}}</dt>
- <dd>The number of {{domxref("Touch")}} objects in the <code>TouchList</code>.</dd>
-</dl>
+- {{domxref("TouchList.length")}} {{readonlyInline}}
+  - : The number of {{domxref("Touch")}} objects in the `TouchList`.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("TouchList.identifiedTouch()")}} {{Deprecated_Inline}}</dt>
- <dd>Returns the first {{domxref("Touch")}} item in the list whose identifier matches a specified value.</dd>
- <dt>{{domxref("TouchList.item()")}}</dt>
- <dd>Returns the {{domxref("Touch")}} object at the specified index in the list.</dd>
-</dl>
+- {{domxref("TouchList.identifiedTouch()")}} {{Deprecated_Inline}}
+  - : Returns the first {{domxref("Touch")}} item in the list whose identifier matches a specified value.
+- {{domxref("TouchList.item()")}}
+  - : Returns the {{domxref("Touch")}} object at the specified index in the list.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>See the <a href="/en-US/docs/DOM/Touch_events#Example">example on the main Touch events article</a>.</p>
+See the [example on the main Touch events article](/en-US/docs/DOM/Touch_events#Example).
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.TouchList")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/DOM/Touch_events">Touch events</a></li>
- <li>{{domxref("Document.createTouchList()")}}</li>
-</ul>
+- [Touch events](/en-US/docs/DOM/Touch_events)
+- {{domxref("Document.createTouchList()")}}

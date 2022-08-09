@@ -3,11 +3,12 @@ title: line-break
 slug: Web/CSS/line-break
 translation_of: Web/CSS/line-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>line-break</code></strong> CSS 屬性能夠設定在中文、日文和韓文(CJK) 的文字中，遇到標點或符號時該如何斷行。</p>
+**`line-break`** CSS 屬性能夠設定在中文、日文和韓文(CJK) 的文字中，遇到標點或符號時該如何斷行。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 line-break: auto;
 line-break: loose;
 line-break: normal;
@@ -18,39 +19,33 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: unset;
-</pre>
+```
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>以預設的斷行規則斷開文字。</dd>
- <dt><code>loose</code></dt>
- <dd>Break text using the least restrictive line break rule. Typically used for short lines, such as in newspapers.</dd>
- <dt><code>normal</code></dt>
- <dd>Break text using the most common line break rule.</dd>
- <dt><code>strict</code></dt>
- <dd>Break text using the most stringent line break rule.</dd>
- <dt><code>anywhere</code> </dt>
- <dd>
- <p>There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character class or mandated by the word-break property. The different wrapping opportunities must not be prioritized. Hyphenation is not applied.</p>
- </dd>
-</dl>
+- `auto`
+  - : 以預設的斷行規則斷開文字。
+- `loose`
+  - : Break text using the least restrictive line break rule. Typically used for short lines, such as in newspapers.
+- `normal`
+  - : Break text using the most common line break rule.
+- `strict`
+  - : Break text using the most stringent line break rule.
+- `anywhere`
+  - : There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character class or mandated by the word-break property. The different wrapping opportunities must not be prioritized. Hyphenation is not applied.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("css.properties.line-break")}}</p>
+{{Compat("css.properties.line-break")}}

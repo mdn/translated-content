@@ -3,23 +3,26 @@ title: Blob.type
 slug: Web/API/Blob/type
 translation_of: Web/API/Blob/type
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><a href="/en-US/docs/Web/API/Blob"><code>Blob</code></a> 物件的 <strong><code>type</code></strong> 屬性提供檔案的 <a href="/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">MIME 類別</a>。若無法辨明型別則回傳空字串。</p>
+[`Blob`](/en-US/docs/Web/API/Blob) 物件的 **`type`** 屬性提供檔案的 [MIME 類別](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)。若無法辨明型別則回傳空字串。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var mimetype = <var>instanceOfFile</var>.type</pre>
+```plain
+var mimetype = instanceOfFile.type
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一個字串。</p>
+一個字串。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush:js">var i, fileInput, files, allowedFileTypes;
+```js
+var i, fileInput, files, allowedFileTypes;
 
-// fileInput 是個 HTMLInputElement: &lt;input type="file" multiple id="myfileinput"&gt;
+// fileInput 是個 HTMLInputElement: <input type="file" multiple id="myfileinput">
 fileInput = document.getElementById("myfileinput");
 
 // files 是個 FileList 物件 （類似 NodeList）
@@ -28,24 +31,22 @@ files = fileInput.files;
 // 這範例接受 *.png, *.jpeg 和 *.gif 圖片。
 allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
 
-for (i = 0; i &lt; files.length; i++) {
+for (i = 0; i < files.length; i++) {
   // 測試 file.type 是否是允許的類別。
-  if (allowedFileTypes.indexOf(<strong>files[i].type</strong>) &gt; -1) {
+  if (allowedFileTypes.indexOf(files[i].type) > -1) {
     // 若符合則執行這裡的程式碼。
   }
 });
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Blob.type")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

@@ -10,98 +10,92 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>forEach()</strong></code> 方法會將陣列內的每個元素，皆傳入並執行給定的函式一次。</p>
+**`forEach()`** 方法會將陣列內的每個元素，皆傳入並執行給定的函式一次。
 
-<div>{{EmbedInteractiveExample("pages/js/array-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
 
+## 語法
 
-
-<h2 id="語法">語法</h2>
-
-<pre class="syntaxbox"><var>arr</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+```plain
+arr.forEach(function callback(currentValue[, index[, array]]) {
     //your iterator
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>這個 callback 函式將會把 Array 中的每一個元素作為參數，帶進本 callback 函式裡，每個元素各執行一次，接收三個參數：
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>代表目前被處理中的 Array 之中的那個元素。</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>代表目前被處理中的 Array 之中的那個元素的index.</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>呼叫 <code>forEach()</code> 方法的那個 Array 本身，也就是上面語法中的 arr。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code> {{Optional_inline}}</dt>
- <dd>執行 <code>callback</code> 回呼函式的 <code><strong>this</strong></code>（即參考之 <code>Object</code>）值。</dd>
-</dl>
+- `callback`
 
-<h3 id="回傳值">回傳值</h3>
+  - : 這個 callback 函式將會把 Array 中的每一個元素作為參數，帶進本 callback 函式裡，每個元素各執行一次，接收三個參數：
 
-<p>{{jsxref("undefined")}}。</p>
+    - `currentValue`
+      - : 代表目前被處理中的 Array 之中的那個元素。
+    - `index`{{optional_inline}}
+      - : 代表目前被處理中的 Array 之中的那個元素的 index.
+    - `array`{{optional_inline}}
+      - : 呼叫 `forEach()` 方法的那個 Array 本身，也就是上面語法中的 arr。
 
-<h2 id="描述">描述</h2>
+- `thisArg` {{Optional_inline}}
+  - : 執行 `callback` 回呼函式的 **`this`**（即參考之 `Object`）值。
 
-<p><code>forEach()</code> executes the provided <code>callback</code> once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays).</p>
+### 回傳值
 
-<p><code>callback</code> is invoked with <strong>three arguments</strong>:</p>
+{{jsxref("undefined")}}。
 
-<ul>
- <li>the <strong>element value</strong></li>
- <li>the <strong>element index</strong></li>
- <li>the <strong>array being traversed</strong></li>
-</ul>
+## 描述
 
-<p>If a <code>thisArg</code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value.  Otherwise, the value {{jsxref("undefined")}} will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code>callback</code> is determined according to <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+`forEach()` executes the provided `callback` once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays).
 
-<p>The range of elements processed by <code>forEach()</code> is set before the first invocation of <code>callback</code>. Elements that are appended to the array after the call to <code>forEach()</code> begins will not be visited by <code>callback</code>. If the values of existing elements of the array are changed, the value passed to <code>callback</code> will be the value at the time <code>forEach()</code> visits them; elements that are deleted before being visited are not visited. If elements that are already visited are removed (e.g. using {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements will be skipped - see example below.</p>
+`callback` is invoked with **three arguments**:
 
-<p><code>forEach()</code> executes the <code>callback</code> function once for each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or {{jsxref("Array.prototype.reduce()", "reduce()")}} it always returns the value {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.</p>
+- the **element value**
+- the **element index**
+- the **array being traversed**
 
-<p><code>forEach()</code> does not mutate the array on which it is called (although <code>callback</code>, if invoked, may do so).</p>
+If a `thisArg` parameter is provided to `forEach()`, it will be used as callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
-<div class="notecard note">
-<p><strong>備註：</strong>除非是拋出異常，否則並沒有中止 <code>forEach()</code> 迴圈的辦法。如果你需要這樣做，<code>forEach()</code> 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。</p>
-</div>
+The range of elements processed by `forEach()` is set before the first invocation of `callback`. Elements that are appended to the array after the call to `forEach()` begins will not be visited by `callback`. If the values of existing elements of the array are changed, the value passed to `callback` will be the value at the time `forEach()` visits them; elements that are deleted before being visited are not visited. If elements that are already visited are removed (e.g. using {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements will be skipped - see example below.
 
-<h2 id="範例">範例</h2>
+`forEach()` executes the `callback` function once for each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or {{jsxref("Array.prototype.reduce()", "reduce()")}} it always returns the value {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.
 
-<h3 id="Converting_from_for_to_forEach">Converting from for to forEach</h3>
+`forEach()` does not mutate the array on which it is called (although `callback`, if invoked, may do so).
 
-<p>before</p>
+> **備註：**除非是拋出異常，否則並沒有中止 `forEach()` 迴圈的辦法。如果你需要這樣做，`forEach()` 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。
 
-<pre class="brush:js">const items = ['item1', 'item2', 'item3'];
+## 範例
+
+### Converting from for to forEach
+
+before
+
+```js
+const items = ['item1', 'item2', 'item3'];
 const copy = [];
 
-for (let i=0; i&lt;items.length; i++) {
+for (let i=0; i<items.length; i++) {
   copy.push(items[i])
 }
-</pre>
+```
 
-<p>after</p>
+after
 
-<pre class="brush:js">const items = ['item1', 'item2', 'item3'];
+```js
+const items = ['item1', 'item2', 'item3'];
 const copy = [];
 
 items.forEach(function(item){
   copy.push(item)
 });
+```
 
-</pre>
+### Printing the contents of an array
 
-<p> </p>
+The following code logs a line for each element in an array:
 
-<h3 id="Printing_the_contents_of_an_array">Printing the contents of an array</h3>
-
-<p>The following code logs a line for each element in an array:</p>
-
-<pre class="brush:js">function logArrayElements(element, index, array) {
+```js
+function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -112,13 +106,14 @@ items.forEach(function(item){
 // a[0] = 2
 // a[1] = 5
 // a[3] = 9
-</pre>
+```
 
-<h3 id="Using_thisArg">Using <code>thisArg</code></h3>
+### Using `thisArg`
 
-<p>The following (contrived) example updates an object's properties from each entry in the array:</p>
+The following (contrived) example updates an object's properties from each entry in the array:
 
-<pre class="brush:js">function Counter() {
+```js
+function Counter() {
   this.sum = 0;
   this.count = 0;
 }
@@ -136,19 +131,18 @@ obj.count;
 // 3
 obj.sum;
 // 16
-</pre>
+```
 
-<p>Since the <code>thisArg</code> parameter (<code>this</code>) is provided to <code>forEach()</code>, it is passed to <code>callback</code> each time it's invoked, for use as its <code>this</code> value.</p>
+Since the `thisArg` parameter (`this`) is provided to `forEach()`, it is passed to `callback` each time it's invoked, for use as its `this` value.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If passing the function argument using an <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> the <code>thisArg</code> parameter can be omitted as arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
-</div>
+> **備註：** If passing the function argument using an [arrow function expression](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) the `thisArg` parameter can be omitted as arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.
 
-<h3 id="An_object_copy_function">An object copy function</h3>
+### An object copy function
 
-<p>The following code creates a copy of a given object. There are different ways to create a copy of an object; the following is just one way and is presented to explain how <code>Array.prototype.forEach()</code> works by using ECMAScript 5 <code>Object.*</code> meta property functions.</p>
+The following code creates a copy of a given object. There are different ways to create a copy of an object; the following is just one way and is presented to explain how `Array.prototype.forEach()` works by using ECMAScript 5 `Object.*` meta property functions.
 
-<pre class="brush: js">function copy(obj) {
+```js
+function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj));
   const propNames = Object.getOwnPropertyNames(obj);
 
@@ -162,13 +156,14 @@ obj.sum;
 
 const obj1 = { a: 1, b: 2 };
 const obj2 = copy(obj1); // obj2 looks like obj1 now
-</pre>
+```
 
-<h3 id="If_the_array_is_modified_during_iteration_other_elements_might_be_skipped.">If the array is modified during iteration, other elements might be skipped.</h3>
+### If the array is modified during iteration, other elements might be skipped.
 
-<p>The following example logs "one", "two", "four". When the entry containing the value "two" is reached, the first entry of the whole array is shifted off, which results in all remaining entries moving up one position. Because element "four" is now at an earlier position in the array, "three" will be skipped. <code>forEach()</code> does not make a copy of the array before iterating.</p>
+The following example logs "one", "two", "four". When the entry containing the value "two" is reached, the first entry of the whole array is shifted off, which results in all remaining entries moving up one position. Because element "four" is now at an earlier position in the array, "three" will be skipped. `forEach()` does not make a copy of the array before iterating.
 
-<pre class="brush:js">var words = ['one', 'two', 'three', 'four'];
+```js
+var words = ['one', 'two', 'three', 'four'];
 words.forEach(function(word) {
   console.log(word);
   if (word === 'two') {
@@ -178,13 +173,14 @@ words.forEach(function(word) {
 // one
 // two
 // four
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>forEach()</code> was added to the ECMA-262 standard in the 5th edition; as such it may not be present in other implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>forEach()</code> in implementations that don't natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that <code>callback.call()</code> evaluates to the original value of {{jsxref("Function.prototype.call()")}}.</p>
+`forEach()` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in other implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `forEach()` in implementations that don't natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and that `callback.call()` evaluates to the original value of {{jsxref("Function.prototype.call()")}}.
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.18
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
 if (!Array.prototype.forEach) {
 
@@ -203,7 +199,7 @@ if (!Array.prototype.forEach) {
     // 2. Let lenValue be the result of calling the Get() internal
     // method of O with the argument "length".
     // 3. Let len be toUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
@@ -213,15 +209,15 @@ if (!Array.prototype.forEach) {
 
     // 5. If thisArg was supplied, let T be thisArg; else let
     // T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = arguments[1];
     }
 
     // 6. Let k be 0.
     k = 0;
 
-    // 7. Repeat while k &lt; len.
-    while (k &lt; len) {
+    // 7. Repeat while k < len.
+    while (k < len) {
 
       var kValue;
 
@@ -247,28 +243,22 @@ if (!Array.prototype.forEach) {
     // 8. return undefined.
   };
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.forEach")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.forEach")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxref("Set.prototype.forEach()")}}

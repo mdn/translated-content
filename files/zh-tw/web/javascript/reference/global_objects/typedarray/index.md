@@ -7,22 +7,21 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><em>TypedArray</em></strong> 物件表示了一個底層 <code><a href="/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 <code>ArrayBuffer</code>。但並沒有名為 <code>TypedArray</code> 的內建物件，<code>TypedArray</code> 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 <code>TypedArray</code> 的內建物件，它們可以建立限定成員型別的物件實體來操作 <code>ArrayBuffer</code>。這些 <code>TypedArray</code> 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 <code>ArrayBuffer</code> 物件當中。以下將說明每種限定成員型別之 <code>TypedArray</code> 的共同屬性與方法。</p>
+**_TypedArray_** 物件表示了一個底層 [`ArrayBuffer`](/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer) 的類陣列（array-like）視圖，它能以限定的型別解讀、修改 `ArrayBuffer`。但並沒有名為 `TypedArray` 的內建物件，`TypedArray` 也不存在可直接呼叫的建構式。真正能夠使用的是幾個原型繼承自 `TypedArray` 的內建物件，它們可以建立限定成員型別的物件實體來操作 `ArrayBuffer`。這些 `TypedArray` 型別的物件僅為視圖，並不會存放資料，所有的資料皆實際儲存於 `ArrayBuffer` 物件當中。以下將說明每種限定成員型別之 `TypedArray` 的共同屬性與方法。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
 
+## 語法
 
+```plain
+new TypedArray(length);
+new TypedArray(typedArray);
+new TypedArray(object);
+new TypedArray(buffer [, byteOffset [, length]]);
 
-<h2 id="語法">語法</h2>
-
-<pre class="syntaxbox">new<em> TypedArray</em>(length);
-new <em>TypedArray</em>(typedArray);
-new <em>TypedArray</em>(object);
-new <em>TypedArray</em>(buffer [, byteOffset [, length]]);
-
-where <em>TypedArray()</em> is one of:
+where TypedArray() is one of:
 
 Int8Array();
 Uint8Array();
@@ -33,34 +32,33 @@ Int32Array();
 Uint32Array();
 Float32Array();
 Float64Array();
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt>length</dt>
- <dd>When called with a <code>length</code> argument, a typed array containing <code>length</code> zeroes is created.</dd>
- <dt>typedArray</dt>
- <dd>When called with a <code>typedArray</code> argument, which can be an object of any of the typed array types (such as <code>Int32Array</code>), the <code>typedArray</code> gets copied into a new typed array. Each value in <code>typedArray</code> is converted to the corresponding type of the constructor before being copied into the new array.</dd>
- <dt>object</dt>
- <dd>When called with an <code>object</code> argument, a new typed array is created as if by the <code><em>TypedArray</em>.from()</code> method.</dd>
- <dt>buffer, byteOffset, length</dt>
- <dd>When called with a <code>buffer</code>, and optionally a <code>byteOffset</code> and a <code>length</code> argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The <code>byteOffset</code> and <code>length</code> parameters specify the memory range that will be exposed by the typed array view.  If both are omitted, all of <code>buffer</code> is viewed; if only <code>length</code> is omitted, the remainder of <code>buffer</code> is viewed.</dd>
-</dl>
+- length
+  - : When called with a `length` argument, a typed array containing `length` zeroes is created.
+- typedArray
+  - : When called with a `typedArray` argument, which can be an object of any of the typed array types (such as `Int32Array`), the `typedArray` gets copied into a new typed array. Each value in `typedArray` is converted to the corresponding type of the constructor before being copied into the new array.
+- object
+  - : When called with an `object` argument, a new typed array is created as if by the `TypedArray.from()` method.
+- buffer, byteOffset, length
+  - : When called with a `buffer`, and optionally a `byteOffset` and a `length` argument, a new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}. The `byteOffset` and `length` parameters specify the memory range that will be exposed by the typed array view. If both are omitted, all of `buffer` is viewed; if only `length` is omitted, the remainder of `buffer` is viewed.
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>ECMAScript 2015 defines a <em>TypedArray</em> constructor that serves as the <code>[[Prototype]]</code> of all <em>TypedArray</em> constructors.  This constructor is not directly exposed: there is no global <code>%TypedArray%</code> or <code>TypedArray</code> property.  It is only directly accessible through <code>Object.getPrototypeOf(Int8Array)</code> and similar.  All <em>TypedArray</em>s constructors inherit common properties from the <code>%TypedArray%</code> constructor function.  Additionally, all typed array prototypes (<em>TypedArray</em><code>.prototype</code>) have <code>%TypedArray%.prototype</code> as their <code>[[Prototype]]</code>.</p>
+ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All *TypedArray*s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (_TypedArray_`.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
 
-<p>The <code>%TypedArray%</code> constructor on its own is not particularly useful.  Calling it or using it in a <code>new</code> expression will throw a <code>TypeError</code>, except when used during object creation in JS engines that support subclassing.  There are at present no such engines, so <code>%TypedArray%</code> is only useful to polyfill functions or properties onto all <em>TypedArray</em> constructors.</p>
+The `%TypedArray%` constructor on its own is not particularly useful. Calling it or using it in a `new` expression will throw a `TypeError`, except when used during object creation in JS engines that support subclassing. There are at present no such engines, so `%TypedArray%` is only useful to polyfill functions or properties onto all _TypedArray_ constructors.
 
-<p>When creating an instance of a <em>TypedArray</em> (e.g. <code>Int8Array</code>), an array buffer is created internally in memory or, if an <code>ArrayBuffer</code> object is given as constructor argument, then this is used instead.  The buffer address is saved as an internal property of the instance and all the methods of %<code>TypedArray</code>%.<code>prototype</code>, i.e. set value and get value etc., operate on that array buffer address.</p>
+When creating an instance of a _TypedArray_ (e.g. `Int8Array`), an array buffer is created internally in memory or, if an `ArrayBuffer` object is given as constructor argument, then this is used instead. The buffer address is saved as an internal property of the instance and all the methods of %`TypedArray`%.`prototype`, i.e. set value and get value etc., operate on that array buffer address.
 
-<h3 id="Property_access">Property access</h3>
+### Property access
 
-<p>You can reference elements in the array using standard array index syntax (that is, using bracket notation). However, getting or setting indexed properties on typed arrays will not search in the prototype chain for this property, even when the indices are out of bound. Indexed properties will consult the {{jsxref("ArrayBuffer")}} and will never look at object properties. You can still use named properties, just like with all objects.</p>
+You can reference elements in the array using standard array index syntax (that is, using bracket notation). However, getting or setting indexed properties on typed arrays will not search in the prototype chain for this property, even when the indices are out of bound. Indexed properties will consult the {{jsxref("ArrayBuffer")}} and will never look at object properties. You can still use named properties, just like with all objects.
 
-<pre class="brush: js">// Setting and getting using standard array syntax
+```js
+// Setting and getting using standard array syntax
 var int16 = new Int16Array(2);
 int16[0] = 42;
 console.log(int16[0]); // 42
@@ -77,169 +75,94 @@ Int8Array.prototype[-1] = 'foo';
 
 // Named properties are allowed, though (Fx 30)
 Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"</pre>
+(new Int8Array(32)).foo; // "bar"
+```
 
-<h2 id="TypedArray_物件">TypedArray 物件</h2>
+## TypedArray 物件
 
-<table>
- <tbody>
-  <tr>
-   <th>Type</th>
-   <th>Value Range</th>
-   <th>Size in bytes</th>
-   <th>Description</th>
-   <th>Web IDL type</th>
-   <th>Equivalent C type</th>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int8Array")}}</td>
-   <td>-128 to 127</td>
-   <td>1</td>
-   <td>8-bit two's complement signed integer</td>
-   <td><code>byte</code></td>
-   <td><code>int8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8Array")}}</td>
-   <td>0 to 255</td>
-   <td>1</td>
-   <td>8-bit unsigned integer</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint8ClampedArray")}}</td>
-   <td>0 to 255</td>
-   <td>1</td>
-   <td>8-bit unsigned integer (clamped)</td>
-   <td><code>octet</code></td>
-   <td><code>uint8_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int16Array")}}</td>
-   <td>-32768 to 32767</td>
-   <td>2</td>
-   <td>16-bit two's complement signed integer</td>
-   <td><code>short</code></td>
-   <td><code>int16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint16Array")}}</td>
-   <td>0 to 65535</td>
-   <td>2</td>
-   <td>16-bit unsigned integer</td>
-   <td><code>unsigned short</code></td>
-   <td><code>uint16_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Int32Array")}}</td>
-   <td>-2147483648 to 2147483647</td>
-   <td>4</td>
-   <td>32-bit two's complement signed integer</td>
-   <td><code>long</code></td>
-   <td><code>int32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Uint32Array")}}</td>
-   <td>0 to 4294967295</td>
-   <td>4</td>
-   <td>32-bit unsigned integer</td>
-   <td><code>unsigned long</code></td>
-   <td><code>uint32_t</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float32Array")}}</td>
-   <td>1.2x10^-38 to 3.4x10^38</td>
-   <td>4</td>
-   <td>32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)</td>
-   <td><code>unrestricted float</code></td>
-   <td><code>float</code></td>
-  </tr>
-  <tr>
-   <td>{{jsxref("Float64Array")}}</td>
-   <td>5.0x10^-324 to 1.8x10^308</td>
-   <td>8</td>
-   <td>64-bit IEEE floating point number (16 significant digits e.g. 1.123...15)</td>
-   <td><code>unrestricted double</code></td>
-   <td><code>double</code></td>
-  </tr>
- </tbody>
-</table>
+| Type                                     | Value Range               | Size in bytes | Description                                                               | Web IDL type          | Equivalent C type |
+| ---------------------------------------- | ------------------------- | ------------- | ------------------------------------------------------------------------- | --------------------- | ----------------- |
+| {{jsxref("Int8Array")}}         | -128 to 127               | 1             | 8-bit two's complement signed integer                                     | `byte`                | `int8_t`          |
+| {{jsxref("Uint8Array")}}         | 0 to 255                  | 1             | 8-bit unsigned integer                                                    | `octet`               | `uint8_t`         |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                  | 1             | 8-bit unsigned integer (clamped)                                          | `octet`               | `uint8_t`         |
+| {{jsxref("Int16Array")}}         | -32768 to 32767           | 2             | 16-bit two's complement signed integer                                    | `short`               | `int16_t`         |
+| {{jsxref("Uint16Array")}}         | 0 to 65535                | 2             | 16-bit unsigned integer                                                   | `unsigned short`      | `uint16_t`        |
+| {{jsxref("Int32Array")}}         | -2147483648 to 2147483647 | 4             | 32-bit two's complement signed integer                                    | `long`                | `int32_t`         |
+| {{jsxref("Uint32Array")}}         | 0 to 4294967295           | 4             | 32-bit unsigned integer                                                   | `unsigned long`       | `uint32_t`        |
+| {{jsxref("Float32Array")}}     | 1.2x10^-38 to 3.4x10^38   | 4             | 32-bit IEEE floating point number ( 7 significant digits e.g. 1.1234567)  | `unrestricted float`  | `float`           |
+| {{jsxref("Float64Array")}}     | 5.0x10^-324 to 1.8x10^308 | 8             | 64-bit IEEE floating point number (16 significant digits e.g. 1.123...15) | `unrestricted double` | `double`          |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT")}}</dt>
- <dd>Returns a number value of the element size for the different typed array objects.</dd>
- <dt><em>TypedArray</em>.length</dt>
- <dd>Length property whose value is 0.</dd>
- <dt>{{jsxref("TypedArray.name")}}</dt>
- <dd>Returns the string value of the constructor name. E.g "Int8Array".</dd>
- <dt>{{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("TypedArray.prototype")}}</dt>
- <dd>Prototype for the <em>TypedArray</em> objects.</dd>
-</dl>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
+  - : Returns a number value of the element size for the different typed array objects.
+- _TypedArray_.length
+  - : Length property whose value is 0.
+- {{jsxref("TypedArray.name")}}
+  - : Returns the string value of the constructor name. E.g "Int8Array".
+- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+  - : The constructor function that is used to create derived objects.
+- {{jsxref("TypedArray.prototype")}}
+  - : Prototype for the _TypedArray_ objects.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("TypedArray.from()")}}</dt>
- <dd>Creates a new typed array from an array-like or iterable object. See also {{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of()")}}</dt>
- <dd>Creates a new typed array with a variable number of arguments. See also {{jsxref("Array.of()")}}.</dd>
-</dl>
+- {{jsxref("TypedArray.from()")}}
+  - : Creates a new typed array from an array-like or iterable object. See also {{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of()")}}
+  - : Creates a new typed array with a variable number of arguments. See also {{jsxref("Array.of()")}}.
 
-<h2 id="TypedArray_原型">TypedArray 原型</h2>
+## TypedArray 原型
 
-<p>All <em>TypedArray</em>s inherit from {{jsxref("TypedArray.prototype")}}.</p>
+All *TypedArray*s inherit from {{jsxref("TypedArray.prototype")}}.
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Methods')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','Methods')}}
 
-<h3 id="Methods_Polyfill">Methods Polyfill</h3>
+### Methods Polyfill
 
-<p>Many of the methods used in Typed Arrays can be polyfilled using the methods present in regular Javascript Arrays. The following snippet of JavaScript demonstrates how you might polyfill any missing Typed Array methods.</p>
+Many of the methods used in Typed Arrays can be polyfilled using the methods present in regular Javascript Arrays. The following snippet of JavaScript demonstrates how you might polyfill any missing Typed Array methods.
 
-<pre class="brush: js example-bad">var typedArrayTypes = [<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array">Int8Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray">Uint8ClampedArray</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array">Int16Array</a>,
-</code>          <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array">Uint16Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array">Int32Array</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array</a>, ​​​<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a>, </code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array"><code>Float64Array</code></a>];
+```js example-bad
+var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array,
+          Uint16Array, ​​​Int32Array, Uint32Array, ​​​Float32Array, Float64Array];
 
 for (var k in typedArrayTypes)
     for (var v in Array.prototype)
-        if (Array.prototype.hasOwnProperty(v) &amp;&amp;
+        if (Array.prototype.hasOwnProperty(v) &&
           !typedArrayTypes[k].prototype.hasOwnProperty(v))
             typedArrayTypes[k].prototype[v] = Array.prototype[v];
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.TypedArray")}}
 
+## 相容性備註
 
-<p>{{Compat("javascript.builtins.TypedArray")}}</p>
+Starting with ECMAScript 2015, `TypedArray` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `TypedArray` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
-<h2 id="相容性備註">相容性備註</h2>
-
-<p>Starting with ECMAScript 2015, <code>TypedArray</code> constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a <code>TypedArray</code> constructor as a function without <code>new</code>, will throw a {{jsxref("TypeError")}} from now on.</p>
-
-<pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
+```js example-bad
+var dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new Int8Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Int8Array([1, 2, 3]);
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

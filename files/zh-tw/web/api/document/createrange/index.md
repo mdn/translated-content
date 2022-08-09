@@ -3,31 +3,31 @@ title: Document.createRange()
 slug: Web/API/Document/createRange
 translation_of: Web/API/Document/createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>回傳一 {{domxref("Range")}} 物件。</p>
+回傳一 {{domxref("Range")}} 物件。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox">range = document.createRange();
-</pre>
+```plain
+range = document.createRange();
+```
 
-<p><code>創造 range</code> 為 {{domxref("Range")}} 物件.</p>
+`創造 range` 為 {{domxref("Range")}} 物件.
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes">註意</h2>
+## 註意
 
-<p>當  <code>Range</code> 被創建之後，必須先設定其範圍初始點及結束點， 才能使用大部分 {{domxref("Range")}} 所提供的方法。</p>
+當 `Range` 被創建之後，必須先設定其範圍初始點及結束點， 才能使用大部分 {{domxref("Range")}} 所提供的方法。
 
-<h2 id="Specification">規範</h2>
+## 規範
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange">DOM Level 2 Range: DocumentRange.createRange</a></li>
-</ul>
+- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)

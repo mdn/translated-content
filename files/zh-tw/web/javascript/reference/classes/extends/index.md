@@ -3,32 +3,32 @@ title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p><strong><code>extends</code></strong> 關鍵字被使用於<a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">類別（class）宣告</a>或<a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">類別（class）表達式</a>中來建立擴展的子類別 。</p>
+**`extends`** 關鍵字被使用於[類別（class）宣告](/en-US/docs/Web/JavaScript/Reference/Statements/class)或[類別（class）表達式](/en-US/docs/Web/JavaScript/Reference/Operators/class)中來建立擴展的子類別 。
 
-<div>{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}
 
+## 語法
 
+```plain
+class ChildClass extends ParentClass { ... }
+```
 
-<h2 id="語法">語法</h2>
+## 解釋
 
-<pre class="syntaxbox">class ChildClass extends ParentClass { ... }
-</pre>
+`extends` 關鍵字可用於建立一個自訂類別或內建類別的子類別。
 
-<h2 id="解釋">解釋</h2>
+其繼承之原型 `.prototype` 必須是 {{jsxref("Object")}} 或 {{jsxref("null")}}。
 
-<p><code>extends</code> 關鍵字可用於建立一個自訂類別或內建類別的子類別。</p>
+## 範例
 
-<p>其繼承之原型 <code>.prototype</code> 必須是 {{jsxref("Object")}} 或 {{jsxref("null")}}。</p>
+### 使用 `extends`
 
-<h2 id="範例">範例</h2>
+第一個範例是根據 `Polygon`類別建立一個名為 `Square` 的子類別。此範例提取自[線上示例](https://googlechrome.github.io/samples/classes-es6/index.html)。
 
-<h3 id="使用_extends">使用 <code>extends</code></h3>
-
-<p>第一個範例是根據 <code>Polygon</code>類別建立一個名為 <code>Square</code> 的子類別。此範例提取自<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上示例</a>。</p>
-
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
@@ -41,13 +41,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   get area() {
     return this.height * this.width;
   }
-}</pre>
+}
+```
 
-<h3 id="使用_extends_於內建類別">使用 <code>extends</code> 於內建類別</h3>
+### 使用 `extends` 於內建類別
 
-<p>這個範例擴展了內建的 {{jsxref("Date")}} 類別。此範例提取自<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上範例</a>。</p>
+這個範例擴展了內建的 {{jsxref("Date")}} 類別。此範例提取自[線上範例](https://googlechrome.github.io/samples/classes-es6/index.html)。
 
-<pre class="brush: js">class myDate extends Date {
+```js
+class myDate extends Date {
   constructor() {
     super();
   }
@@ -56,13 +58,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return this.getDate() + '-' + months[this.getMonth()] + '-' + this.getFullYear();
   }
-}</pre>
+}
+```
 
-<h3 id="擴展_null">擴展 <code>null</code></h3>
+### 擴展 `null`
 
-<p>像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。</p>
+像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。
 
-<pre class="brush: js">class nullExtends extends null {
+```js
+class nullExtends extends null {
   constructor() {}
 }
 
@@ -70,21 +74,17 @@ Object.getPrototypeOf(nullExtends); // Function.prototype
 Object.getPrototypeOf(nullExtends.prototype) // null
 
 new nullExtends(); //ReferenceError: this is not defined
-</pre>
+```
 
-<h2 id="標準">標準</h2>
+## 標準
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.classes.extends")}}
 
+## 參見
 
-<p>{{Compat("javascript.classes.extends")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></li>
-</ul>
+- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)
+- [super](/en-US/docs/Web/JavaScript/Reference/Operators/super)

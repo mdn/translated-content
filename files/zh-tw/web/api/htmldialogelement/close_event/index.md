@@ -9,30 +9,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>送至視窗的 close event 的處理器（handler）。（不支援 Firefox 2 及 Safari）</p>
+送至視窗的 close event 的處理器（handler）。（不支援 Firefox 2 及 Safari）
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">window.onclose = funcRef;
-</pre>
+```plain
+window.onclose = funcRef;
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<ul>
- <li><code>funcRef</code> 為函式的參照。</li>
-</ul>
+- `funcRef` 為函式的參照。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">window.onclose = resetThatServerThing;
-</pre>
+```js
+window.onclose = resetThatServerThing;
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.GlobalEventHandlers.onclose")}}

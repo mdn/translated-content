@@ -3,56 +3,50 @@ title: CharacterData
 slug: Web/API/CharacterData
 translation_of: Web/API/CharacterData
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>CharacterData</strong></code> 介面表示了含有字元的 {{domxref("Node")}} 物件。<code>CharacterData</code> 為抽象介面，代表不會有型別為 <code>CharacterData</code> 的物件。物件是由其子介面，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 等非抽象介面來實作。</p>
+**`CharacterData`** 介面表示了含有字元的 {{domxref("Node")}} 物件。`CharacterData` 為抽象介面，代表不會有型別為 `CharacterData` 的物件。物件是由其子介面，如 {{domxref("Text")}}、{{domxref("Comment")}} 或 {{domxref("ProcessingInstruction")}} 等非抽象介面來實作。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>Inherits properties from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface.</em></p>
+_Inherits properties from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface._
 
-<dl>
- <dt>{{domxref("CharacterData.data")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the textual data contained in this object.</dd>
- <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
- <dd>Returns an <code>unsigned long</code> representing the size of the string contained in <code>CharacterData.data</code>.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or <code>null</code> if the specified element is the last one in the list.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or <code>null</code> if the specified element is the first one in the list.</dd>
-</dl>
+- {{domxref("CharacterData.data")}}
+  - : Is a {{domxref("DOMString")}} representing the textual data contained in this object.
+- {{domxref("CharacterData.length")}} {{readonlyInline}}
+  - : Returns an `unsigned long` representing the size of the string contained in `CharacterData.data`.
+- {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
+  - : Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or `null` if the specified element is the last one in the list.
+- {{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readonlyInline}}
+  - : Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or `null` if the specified element is the first one in the list.
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p><em>Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} <em>and {{domxref("NonDocumentTypeChildNode")}} </em>interface.</em></p>
+*Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} *and {{domxref("NonDocumentTypeChildNode")}}_ interface._
 
-<dl>
- <dt>{{domxref("CharacterData.appendData()")}}</dt>
- <dd>Appends the given {{domxref("DOMString")}} to the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the concatenated {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.deleteData()")}}</dt>
- <dd>Removes the specified amount of characters, starting at the specified offset, from the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the shortened {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.insertData()")}}</dt>
- <dd>Inserts the specified characters, at the specified offset, in the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Removes the object from its parent children list.</dd>
- <dt>{{domxref("CharacterData.replaceData()")}}</dt>
- <dd>Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.substringData()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the part of <code>CharacterData.data</code> of the specified length and starting at the specified offset.</dd>
-</dl>
+- {{domxref("CharacterData.appendData()")}}
+  - : Appends the given {{domxref("DOMString")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.
+- {{domxref("CharacterData.deleteData()")}}
+  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened {{domxref("DOMString")}}.
+- {{domxref("CharacterData.insertData()")}}
+  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : Removes the object from its parent children list.
+- {{domxref("CharacterData.replaceData()")}}
+  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+- {{domxref("CharacterData.substringData()")}}
+  - : Returns a {{domxref("DOMString")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.CharacterData")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
-</ul>
+- [The DOM interfaces index](/zh-TW/docs/DOM/DOM_Reference).

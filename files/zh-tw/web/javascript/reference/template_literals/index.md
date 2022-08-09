@@ -12,13 +12,14 @@ tags:
   - strings
 translation_of: Web/JavaScript/Reference/Template_literals
 ---
-<div>{{JsSidebar("More")}}</div>
+{{JsSidebar("More")}}
 
-<p>樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。你可以透過樣板字面值來使用多行字串及字串內插（string interpolation）功能。他們在 ES2015 規範的先行版本中被稱為「樣板字串（template strings）」。</p>
+樣板字面值（Template literals）是允許嵌入運算式的字串字面值（string literals）。你可以透過樣板字面值來使用多行字串及字串內插（string interpolation）功能。他們在 ES2015 規範的先行版本中被稱為「樣板字串（template strings）」。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">`string text`
+```plain
+`string text`
 
 `string text line 1
  string text line 2`
@@ -26,76 +27,92 @@ translation_of: Web/JavaScript/Reference/Template_literals
 `string text ${expression} string text`
 
 tag `string text ${expression} string text`
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>樣板字面值（Template literals）被反引號（back-tick，<a href="https://zh.wikipedia.org/wiki/%E9%87%8D%E9%9F%B3%E7%AC%A6">重音符號</a>）：` ` 字元封閉，代替了雙或單引號。樣板字面值可以包含由錢字元及花括號所構成（<code>${expression}</code>）的佔位符（placeholders）。這個在佔位符中的運算式以及在它們之間的文字會被傳入一個函式。預設函式只是將這些部分組合成一個單一的字串。如果在樣板字面值前有一個運算式（<code>tag</code> here），則此樣板字串被稱為「標籤樣板字面值（tagged template literal）」。在此情況下，標籤運算式（通常是一個函式）會被呼叫來處理樣板字面值，讓你可以在函式回傳之前進行操作。要在樣板字面值中跳脫一個反引號，可以於反引號前加上一個反斜線（backslash）<strong>\ </strong>。</p>
+樣板字面值（Template literals）被反引號（back-tick，[重音符號](https://zh.wikipedia.org/wiki/%E9%87%8D%E9%9F%B3%E7%AC%A6)）：\` \` 字元封閉，代替了雙或單引號。樣板字面值可以包含由錢字元及花括號所構成（`${expression}`）的佔位符（placeholders）。這個在佔位符中的運算式以及在它們之間的文字會被傳入一個函式。預設函式只是將這些部分組合成一個單一的字串。如果在樣板字面值前有一個運算式（`tag` here），則此樣板字串被稱為「標籤樣板字面值（tagged template literal）」。在此情況下，標籤運算式（通常是一個函式）會被呼叫來處理樣板字面值，讓你可以在函式回傳之前進行操作。要在樣板字面值中跳脫一個反引號，可以於反引號前加上一個反斜線（backslash）**\\** 。
 
-<pre class="brush: js">`\`` === '`' // --&gt; true</pre>
+```js
+`\`` === '`' // --> true
+```
 
-<h3 id="多行字串">多行字串</h3>
+### 多行字串
 
-<p>任何在樣板字面值中使用、插入的換行符號，都是樣板字面值的一部份。在普通的字串中，我們需要使用如下的語法以達到換行的效果：</p>
+任何在樣板字面值中使用、插入的換行符號，都是樣板字面值的一部份。在普通的字串中，我們需要使用如下的語法以達到換行的效果：
 
-<pre class="brush: js">console.log('string text line 1\n' +
+```js
+console.log('string text line 1\n' +
 'string text line 2');
 // "string text line 1
-// string text line 2"</pre>
+// string text line 2"
+```
 
-<p>但使用樣板字面值，你只需要撰寫如下所示的程式碼，就能達到同樣的效果：</p>
+但使用樣板字面值，你只需要撰寫如下所示的程式碼，就能達到同樣的效果：
 
-<pre class="brush: js">console.log(`string text line 1
+```js
+console.log(`string text line 1
 string text line 2`);
 // "string text line 1
-// string text line 2"</pre>
+// string text line 2"
+```
 
-<h3 id="運算式內插">運算式內插</h3>
+### 運算式內插
 
-<p>要在普通的字串中內嵌運算式，我們必須使用如下語法：</p>
+要在普通的字串中內嵌運算式，我們必須使用如下語法：
 
-<pre class="brush: js">var a = 5;
+```js
+var a = 5;
 var b = 10;
 console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
 // "Fifteen is 15 and
-// not 20."</pre>
+// not 20."
+```
 
-<p>現在有了樣板字面值，我們可以用一種更優雅的寫法，讓語法更具可讀性：</p>
+現在有了樣板字面值，我們可以用一種更優雅的寫法，讓語法更具可讀性：
 
-<pre class="brush: js">var a = 5;
+```js
+var a = 5;
 var b = 10;
 console.log(`Fifteen is ${a + b} and
 not ${2 * a + b}.`);
 // "Fifteen is 15 and
-// not 20."</pre>
+// not 20."
+```
 
-<h3 id="巢狀樣板">巢狀樣板</h3>
+### 巢狀樣板
 
-<p>In certain times, nesting a template is the easiest and perhaps more readable way to have configurable strings. Within a backticked template it is simple to allow inner backticks simply by using them inside a placeholder <code>${ }</code> within the template. For instance, if condition a is true: then return this templated literal.</p>
+In certain times, nesting a template is the easiest and perhaps more readable way to have configurable strings. Within a backticked template it is simple to allow inner backticks simply by using them inside a placeholder `${ }` within the template. For instance, if condition a is true: then return this templated literal.
 
-<p>In ES5:</p>
+In ES5:
 
-<pre class="brush: js">var classes = 'header'
+```js
+var classes = 'header'
 classes += (isLargeScreen() ?
    '' : item.isCollapsed ?
      ' icon-expander' : ' icon-collapser');
-</pre>
+```
 
-<p>In ES2015 with template literals and without nesting:</p>
+In ES2015 with template literals and without nesting:
 
-<pre class="brush: js">const classes = `header ${ isLargeScreen() ? '' :
-    (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;</pre>
+```js
+const classes = `header ${ isLargeScreen() ? '' :
+    (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
+```
 
-<p>In ES2015 with nested template literals:</p>
+In ES2015 with nested template literals:
 
-<pre class="brush: js">const classes = `header $<strong>{</strong> isLargeScreen() ? '' :
- `icon-${item.isCollapsed ? 'expander' : 'collapser'}`<strong> </strong><strong>}`</strong>;</pre>
+```js
+const classes = `header ${ isLargeScreen() ? '' :
+ `icon-${item.isCollapsed ? 'expander' : 'collapser'}` }`;
+```
 
-<h3 id="標籤樣板字面值">標籤樣板字面值</h3>
+### 標籤樣板字面值
 
-<p>標籤樣板字面值是一種更高級的樣板字面值形式，允許你透過標籤函數操作樣板字面值的輸出。標籤函數的第一個參數是一字串陣列，其餘參數則是處理過的表達式。最終，你可以返回一個經處理後的字串，甚至是完全不一樣的東西（如下述第二個範例中）。標籤函數的名稱可以是任何你想要的。</p>
+標籤樣板字面值是一種更高級的樣板字面值形式，允許你透過標籤函數操作樣板字面值的輸出。標籤函數的第一個參數是一字串陣列，其餘參數則是處理過的表達式。最終，你可以返回一個經處理後的字串，甚至是完全不一樣的東西（如下述第二個範例中）。標籤函數的名稱可以是任何你想要的。
 
-<pre class="brush: js">var person = 'Mike';
+```js
+var person = 'Mike';
 var age = 28;
 
 function myTag(strings, personExp, ageExp) {
@@ -109,7 +126,7 @@ function myTag(strings, personExp, ageExp) {
   // var str2 = strings[2];
 
   var ageStr;
-  if (ageExp &gt; 99){
+  if (ageExp > 99){
     ageStr = 'centenarian';
   } else {
     ageStr = 'youngster';
@@ -122,11 +139,13 @@ function myTag(strings, personExp, ageExp) {
 var output = myTag`that ${ person } is a ${ age }`;
 
 console.log(output);
-// that Mike is a youngster</pre>
+// that Mike is a youngster
+```
 
-<p>標籤函數不一定要回傳一個字串，如下列範例：</p>
+標籤函數不一定要回傳一個字串，如下列範例：
 
-<pre class="brush: js">function template(strings, ...keys) {
+```js
+function template(strings, ...keys) {
   return (function(...values) {
     var dict = values[values.length - 1] || {};
     var result = [strings[0]];
@@ -142,24 +161,26 @@ var t1Closure = template`${0}${1}${0}!`;
 t1Closure('Y', 'A');  // "YAY!"
 var t2Closure = template`${0} ${'foo'}!`;
 t2Closure('Hello', {foo: 'World'});  // "Hello World!"
-</pre>
+```
 
-<h3 id="原始字串">原始字串</h3>
+### 原始字串
 
-<p>標籤函數的第一個參數，帶有一個特殊的屬性「 <code>raw</code> 」，允許你獲取原始輸入的、未處理任何<a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings">轉義序列</a>的字串值。</p>
+標籤函數的第一個參數，帶有一個特殊的屬性「 `raw` 」，允許你獲取原始輸入的、未處理任何[轉義序列](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings)的字串值。
 
-<pre class="brush: js">function tag(strings) {
+```js
+function tag(strings) {
   console.log(strings.raw[0]);
 }
 
 tag`string text line 1 \n string text line 2`;
 // logs "string text line 1 \n string text line 2" ,
 // including the two characters '\' and 'n'
-</pre>
+```
 
-<p>此外, 使用 {{jsxref("String.raw()")}} 方法建立的原始字串，也與預設的樣板函數和字串串接會建立的字串相同。 </p>
+此外, 使用 {{jsxref("String.raw()")}} 方法建立的原始字串，也與預設的樣板函數和字串串接會建立的字串相同。
 
-<pre class="brush: js">var str = String.raw`Hi\n${2+3}!`;
+```js
+var str = String.raw`Hi\n${2+3}!`;
 // "Hi\n5!"
 
 str.length;
@@ -167,63 +188,59 @@ str.length;
 
 str.split('').join(',');
 // "H,i,\,n,5,!"
-</pre>
+```
 
-<h3 id="標籤樣板字面值和跳脫序列">標籤樣板字面值和跳脫序列</h3>
+### 標籤樣板字面值和跳脫序列
 
-<p>在 ES2016 的規範中，標籤樣板字面值遵守下列跳脫序列（escape sequences）規則：</p>
+在 ES2016 的規範中，標籤樣板字面值遵守下列跳脫序列（escape sequences）規則：
 
-<ul>
- <li>萬國碼 (Unicode) 跳脫序列由 "\u" 作為開頭, 例： <code>\u00A9</code></li>
- <li>萬國碼位 (Unicode code point) 由 "\u{}" 作為開頭, 例： <code>\u{2F804}</code></li>
- <li>十六進位制碼由 "\x" 作為開頭, 例： <code>\xA9</code></li>
- <li>十進位制碼由 "\" 作為開頭, 例： \251</li>
-</ul>
+- 萬國碼 (Unicode) 跳脫序列由 "\u" 作為開頭, 例： `\u00A9`
+- 萬國碼位 (Unicode code point) 由 "\u{}" 作為開頭, 例： `\u{2F804}`
+- 十六進位制碼由 "\x" 作為開頭, 例： `\xA9`
+- 十進位制碼由 "\\" 作為開頭, 例： \251
 
-<p>這表示像是下述的標籤樣板字面值是有問題的，因為根據 ECMAScript 規範，一個語法分析器會嘗試以萬國碼轉義序列去解析它，然後發現序列有誤：</p>
+這表示像是下述的標籤樣板字面值是有問題的，因為根據 ECMAScript 規範，一個語法分析器會嘗試以萬國碼轉義序列去解析它，然後發現序列有誤：
 
-<pre class="brush: js">latex`\unicode`
+```js
+latex`\unicode`
 // Throws in older ECMAScript versions (ES2016 and earlier)
-// SyntaxError: malformed Unicode character escape sequence</pre>
+// SyntaxError: malformed Unicode character escape sequence
+```
 
-<p>Tagged template literals should allow the embedding of languages (for example <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSLs</a>, or <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>), where other escapes sequences are common. The ECMAScript proposal <a href="https://tc39.github.io/proposal-template-literal-revision/">Template Literal Revision</a> (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.</p>
+Tagged template literals should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. The ECMAScript proposal [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) (stage 4, to be integrated in the ECMAScript 2018 standard) removes the syntax restriction of ECMAScript escape sequences from tagged template literals.
 
-<p>However, illegal escape sequence must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:</p>
+However, illegal escape sequence must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
-<p>l be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:</p>
+l be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
-<p> </p>
-
-<pre class="brush: js">function latex(str) {
+```js
+function latex(str) {
  return { "cooked": str[0], "raw": str.raw[0] }
 }
 
 latex`\unicode`
 
-// { cooked: undefined, raw: "\\unicode" }</pre>
+// { cooked: undefined, raw: "\\unicode" }
+```
 
-<p>Note that the escape sequence restriction is only dropped from <em>tagged</em> template literals and not from <em>untagged</em> template literals:</p>
+Note that the escape sequence restriction is only dropped from _tagged_ template literals and not from _untagged_ template literals:
 
-<pre class="brush: js example-bad">let bad = `bad escape sequence: \unicode`;</pre>
+```js example-bad
+let bad = `bad escape sequence: \unicode`;
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.grammar.template_literals")}}
 
+## 參見
 
-<p>{{Compat("javascript.grammar.template_literals")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("String.raw()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
- <li><a href="https://gist.github.com/WebReflection/8f227532143e63649804">Template-like strings in ES3 compatible syntax</a></li>
- <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/">"ES6 in Depth: Template strings" on hacks.mozilla.org</a></li>
-</ul>
+- {{jsxref("String")}}
+- {{jsxref("String.raw()")}}
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
+- ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

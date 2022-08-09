@@ -10,27 +10,28 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>clear()</strong></code> 方法會從一個 <code>Set</code> 物件中移除其所有元素。</p>
+**`clear()`** 方法會從一個 `Set` 物件中移除其所有元素。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
+## 語法
 
+```plain
+mySet.clear();
+```
 
-<h2 id="語法">語法</h2>
+### 回傳值
 
-<pre class="syntaxbox"><em>mySet</em>.clear();</pre>
+{{jsxref("undefined")}}.
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>{{jsxref("undefined")}}.</p>
+### 使用 `clear` 方法
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_clear_方法">使用 <code>clear</code> 方法</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add('foo');
 
@@ -41,21 +42,17 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has('bar')  // false
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set.clear")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.Set.clear")}}</p>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}

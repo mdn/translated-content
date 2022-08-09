@@ -3,84 +3,82 @@ title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 translation_of: Web/API/HTMLFormElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLFormElement</code></strong> 介面提供了建立及修改 {{HTMLElement("form")}} 元素的方法。<br>
- <strong>document.forms</strong> - returns an array of HTMLFormElement objects referencing all forms on the page.<br>
- <strong>document.forms[index] </strong>- returns an HTMLFormElement object referencing the form at the specified index.<br>
- <strong>document.forms['id'] </strong>- returns an HTMLFormElement object referencing the form with the specified id.<br>
- <strong>document.forms['name'] </strong>- returns an HTMLFormElement object referencing the form with the specified name.</p>
+**`HTMLFormElement`** 介面提供了建立及修改 {{HTMLElement("form")}} 元素的方法。
+**document.forms** - returns an array of HTMLFormElement objects referencing all forms on the page.
+**document.forms\[index]** - returns an HTMLFormElement object referencing the form at the specified index.
+**document.forms\['id']** - returns an HTMLFormElement object referencing the form with the specified id.
+**document.forms\['name']** - returns an HTMLFormElement object referencing the form with the specified name.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>This interface also inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFormElement.elements")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("HTMLFormControlsCollection")}} holding all form controls belonging to this form element.</dd>
- <dt>{{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}</dt>
- <dd>A <code>long</code> reflecting the number of controls in the form.</dd>
- <dt>{{domxref("HTMLFormElement.name")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.</dd>
- <dt>{{domxref("HTMLFormElement.method")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.</dd>
- <dt>{{domxref("HTMLFormElement.target")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.</dd>
- <dt>{{domxref("HTMLFormElement.action")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.</dd>
- <dt>{{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two methods are synonyms.</dd>
- <dt>{{domxref("HTMLFormElement.acceptCharset")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.</dd>
- <dt>{{domxref("HTMLFormElement.autocomplete")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.</dd>
- <dt>{{domxref("HTMLFormElement.noValidate")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.</dd>
-</dl>
+- {{domxref("HTMLFormElement.elements")}}{{ReadOnlyInline}}
+  - : A {{domxref("HTMLFormControlsCollection")}} holding all form controls belonging to this form element.
+- {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
+  - : A `long` reflecting the number of controls in the form.
+- {{domxref("HTMLFormElement.name")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+- {{domxref("HTMLFormElement.method")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+- {{domxref("HTMLFormElement.target")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+- {{domxref("HTMLFormElement.action")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+- {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two methods are synonyms.
+- {{domxref("HTMLFormElement.acceptCharset")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
+- {{domxref("HTMLFormElement.autocomplete")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+- {{domxref("HTMLFormElement.noValidate")}}
+  - : A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>This interface also inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLFormElement.submit()")}}</dt>
- <dd>Submits the form to the server.</dd>
- <dt>{{domxref("HTMLFormElement.reset()")}}</dt>
- <dd>Resets the form to its initial state.</dd>
- <dt>{{domxref("HTMLFormElement.checkValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls are subject to constraint validation and satisfy those contraints; returns <code>false</code> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code>false</code>.</dd>
- <dt>{{domxref("HTMLFormElement.reportValidity()")}}</dt>
- <dd>Returns <code>true</code> if the element's child controls satisfy their validation constraints. When <code>false</code> is returned, cancelable {{Event("invalid")}} events are fired for each invalid child and validation problems are reported to the user.</dd>
- <dt>{{domxref("HTMLFormElement.requestAutocomplete()")}}</dt>
- <dd>Triggers a native browser interface to assist the user in completing the fields which have an <a href="https://html.spec.whatwg.org/#autofill-field-name">autofill field name</a> value that is not <code>off</code> or <code>on</code>. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.</dd>
-</dl>
+- {{domxref("HTMLFormElement.submit()")}}
+  - : Submits the form to the server.
+- {{domxref("HTMLFormElement.reset()")}}
+  - : Resets the form to its initial state.
+- {{domxref("HTMLFormElement.checkValidity()")}}
+  - : Returns `true` if the element's child controls are subject to constraint validation and satisfy those contraints; returns `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+- {{domxref("HTMLFormElement.reportValidity()")}}
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable {{Event("invalid")}} events are fired for each invalid child and validation problems are reported to the user.
+- {{domxref("HTMLFormElement.requestAutocomplete()")}}
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>Create a new form element, modify its attributes and submit it:</p>
+Create a new form element, modify its attributes and submit it:
 
-<pre class="brush: js">var f = document.createElement("form");// Create a form
+```js
+var f = document.createElement("form");// Create a form
 document.body.appendChild(f);          // Add it to the document body
 f.action = "/cgi-bin/some.cgi";        // Add action and method attributes
 f.method = "POST"
 f.submit();                            // Call the form's submit method
-</pre>
+```
 
-<p>Extract information from a form element and set some of its attributes:</p>
+Extract information from a form element and set some of its attributes:
 
-<pre class="brush: html">&lt;form name="formA" id="formA" action="/cgi-bin/test" method="POST"&gt;
- &lt;p&gt;Click "Info" for form details; "Set" to change settings.&lt;/p&gt;
- &lt;p&gt;
-  &lt;input type="button" value="info" onclick="getFormInfo();"&gt;
-  &lt;input type="button" value="set"  onclick="setFormInfo(this.form);"&gt;
-  &lt;input type="reset" value="reset"&gt;&lt;br&gt;
-  &lt;textarea id="tex" style="height:15em; width:20em"&gt;&lt;/textarea&gt;
- &lt;/p&gt;
-&lt;/form&gt;
+```html
+<form name="formA" id="formA" action="/cgi-bin/test" method="POST">
+ <p>Click "Info" for form details; "Set" to change settings.</p>
+ <p>
+  <input type="button" value="info" onclick="getFormInfo();">
+  <input type="button" value="set"  onclick="setFormInfo(this.form);">
+  <input type="reset" value="reset"><br>
+  <textarea id="tex" style="height:15em; width:20em"></textarea>
+ </p>
+</form>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   function getFormInfo(){
     var info;
     var f = document.forms["formA"]; //Get a reference to the form via id.
@@ -100,68 +98,68 @@ f.submit();                            // Call the form's submit method
     f.action = "/cgi-bin/evil_executable.cgi";
     f.name   = "totally_new";
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>Submit a form in a <a href="/en-US/docs/Web/API/Window/open">popup window</a>:</p>
+Submit a form in a [popup window](/en-US/docs/Web/API/Window/open):
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example</title>
+<script type="text/javascript">
 function popupSend (oFormElement) {
-  if (oFormElement.method &amp;&amp; oFormElement.method.toLowerCase() !== "get") {
+  if (oFormElement.method && oFormElement.method.toLowerCase() !== "get") {
     console.error("This script supports the GET method only.");
     return;
   }
   var oField, sFieldType, nFile, sSearch = "";
-  for (var nItem = 0; nItem &lt; oFormElement.elements.length; nItem++) {
+  for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
     oField = oFormElement.elements[nItem];
     if (!oField.hasAttribute("name")) { continue; }
     sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
     if (sFieldType === "FILE") {
-      for (nFile = 0; nFile &lt; oField.files.length; sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
-    } else if ((sFieldType !== "RADIO" &amp;&amp; sFieldType !== "CHECKBOX") || oField.checked) {
-      sSearch += "&amp;" + escape(oField.name) + "=" + escape(oField.value);
+      for (nFile = 0; nFile < oField.files.length; sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
+    } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
+      sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
     }
   }
-  open(oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&amp;/, "?")), "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)), "resizable=yes,scrollbars=yes,status=yes");
+  open(oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&/, "?")), "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)), "resizable=yes,scrollbars=yes,status=yes");
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form name="yourForm" action="test.php" method="get" onsubmit="popupSend(this); return false;"&gt;
-  &lt;p&gt;First name: &lt;input type="text" name="firstname" /&gt;&lt;br /&gt;
-  Last name: &lt;input type="text" name="lastname" /&gt;&lt;br /&gt;
-  Password: &lt;input type="password" name="pwd" /&gt;&lt;br /&gt;
-  &lt;input type="radio" name="sex" value="male" /&gt; Male &lt;input type="radio" name="sex" value="female" /&gt; Female&lt;/p&gt;
-  &lt;p&gt;&lt;input type="checkbox" name="vehicle" value="Bike" /&gt;I have a bike&lt;br /&gt;
-  &lt;input type="checkbox" name="vehicle" value="Car" /&gt;I have a car&lt;/p&gt;
-  &lt;p&gt;&lt;input type="submit" value="Submit" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form name="yourForm" action="test.php" method="get" onsubmit="popupSend(this); return false;">
+  <p>First name: <input type="text" name="firstname" /><br />
+  Last name: <input type="text" name="lastname" /><br />
+  Password: <input type="password" name="pwd" /><br />
+  <input type="radio" name="sex" value="male" /> Male <input type="radio" name="sex" value="female" /> Female</p>
+  <p><input type="checkbox" name="vehicle" value="Bike" />I have a bike<br />
+  <input type="checkbox" name="vehicle" value="Car" />I have a car</p>
+  <p><input type="submit" value="Submit" /></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h3 id="使用_XMLHttpRequest_提交表單及上傳檔案">使用 <code>XMLHttpRequest</code> 提交表單及上傳檔案</h3>
+### 使用 `XMLHttpRequest` 提交表單及上傳檔案
 
-<p>If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">this paragraph</a>.</p>
+If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.HTMLFormElement")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("form") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("form") }}.

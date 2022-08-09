@@ -3,40 +3,34 @@ title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 translation_of: Web/API/ClipboardEvent
 ---
-<p>{{APIRef("Clipboard API")}} {{SeeCompatTable}}</p>
+{{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-<p><strong><code>ClipboardEvent</code></strong> 介面表示了與修改剪貼簿相關的事件，包括 {{event("cut")}}、{{event("copy")}} 及 {{event("paste")}} 事件。</p>
+**`ClipboardEvent`** 介面表示了與修改剪貼簿相關的事件，包括 {{event("cut")}}、{{event("copy")}} 及 {{event("paste")}} 事件。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.</dd>
-</dl>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}</dt>
- <dd>Creates a <code>ClipboardEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
+  - : Creates a `ClipboardEvent` event with the given parameters.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>No specific methods; inherits methods from its parent {{domxref("Event")}}</em>.</p>
+_No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.ClipboardEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
-</ul>
+- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}

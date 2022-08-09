@@ -11,41 +11,38 @@ tags:
   - 待翻譯
 translation_of: Web/API/EventTarget
 ---
-<p>{{ ApiRef("DOM Events") }}</p>
+{{ ApiRef("DOM Events") }}
 
-<p><strong><code>EventTarget</code></strong> 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。</p>
+**`EventTarget`** 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。
 
-<p>除了最為常見的 {{domxref("Element")}}、{{domxref("Document")}} 與 {{domxref("Window")}} 繼承或實作了 <code>EventTarget</code> 介面之外，其它的物件還有 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}}⋯等等。</p>
+除了最為常見的 {{domxref("Element")}}、{{domxref("Document")}} 與 {{domxref("Window")}} 繼承或實作了 `EventTarget` 介面之外，其它的物件還有 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}}⋯ 等等。
 
-<p>許多 <code>EventTarget</code>（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 <a href="/zh-TW/docs/Web/HTML/Element">HTML 元素</a>屬性（{{Glossary("attribute")}}）來設定<a href="/zh-TW/docs/Web/Guide/DOM/Events/Event_handlers">事件處理器</a>。</p>
+許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Element)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/Guide/DOM/Events/Event_handlers)。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>於 <code>EventTarget</code> 物件上註冊指定事件的監聽器。</dd>
- <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>移除 <code>EventTarget</code> 物件上的指定事件監聽器。</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>對此 <code>EventTarget</code> 物件派送（dispatch）一個事件物件，也就是於此 <code>EventTarget</code> 物件上觸發一個指定的事件物件實體。</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : 於 `EventTarget` 物件上註冊指定事件的監聽器。
+- {{domxref("EventTarget.removeEventListener()")}}
+  - : 移除 `EventTarget` 物件上的指定事件監聽器。
+- {{domxref("EventTarget.dispatchEvent()")}}
+  - : 對此 `EventTarget` 物件派送（dispatch）一個事件物件，也就是於此 `EventTarget` 物件上觸發一個指定的事件物件實體。
 
-<h3 id="Mozilla_chrome_code_的額外方法">Mozilla chrome code 的額外方法</h3>
+### Mozilla chrome code 的額外方法
 
-<p>Mozilla extensions for use by JS-implemented event targets to implement on* properties. See also <a href="/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a>.</p>
+Mozilla extensions for use by JS-implemented event targets to implement on\* properties. See also [WebIDL bindings](/docs/Mozilla/WebIDL_bindings).
 
-<ul>
- <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) {{non-standard_inline}}</li>
- <li>EventHandler <strong>getEventHandler</strong>(DOMString type) {{non-standard_inline}}</li>
-</ul>
+- void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
+- EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="_Simple_implementation_of_EventTarget">Simple implementation of EventTarget</h3>
+### Simple implementation of EventTarget
 
-<pre class="brush: js">var EventTarget = function() {
+```js
+var EventTarget = function() {
   this.listeners = {};
 };
 
@@ -62,7 +59,7 @@ EventTarget.prototype.removeEventListener = function(type, callback) {
     return;
   }
   var stack = this.listeners[type];
-  for (var i = 0, l = stack.length; i &lt; l; i++) {
+  for (var i = 0, l = stack.length; i < l; i++) {
     if (stack[i] === callback){
       stack.splice(i, 1);
       return;
@@ -76,27 +73,25 @@ EventTarget.prototype.dispatchEvent = function(event) {
   }
   var stack = this.listeners[event.type];
   event.target = this;
-  for (var i = 0, l = stack.length; i &lt; l; i++) {
+  for (var i = 0, l = stack.length; i < l; i++) {
     stack[i].call(this, event);
   }
   return !event.defaultPrevented;
 };
-</pre>
+```
 
-<p>{{ EmbedLiveSample('_Simple_implementation_of_EventTarget') }}</p>
+{{ EmbedLiveSample('_Simple_implementation_of_EventTarget') }}
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.EventTarget")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/docs/Web/Reference/Events">Event reference</a> - the events available in the platform.</li>
- <li><a href="/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
- <li>{{domxref("Event")}} interface</li>
-</ul>
+- [Event reference](/docs/Web/Reference/Events) - the events available in the platform.
+- [Event developer guide](/docs/Web/Guide/DOM/Events)
+- {{domxref("Event")}} interface

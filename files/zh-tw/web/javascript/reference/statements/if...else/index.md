@@ -3,125 +3,129 @@ title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。</p>
+當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">if (<em>條件式</em>)
-   <em>statement1</em>
+```plain
+if (條件式)
+   statement1
 [else
-   <em>statement2</em>]
-</pre>
+   statement2]
+```
 
-<dl>
- <dt><code>條件式</code></dt>
- <dd>一個成立或不成立的<a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">運算式</a>。</dd>
- <dt><code>第一個陳述式(statement1)</code></dt>
- <dd>如果if中的條件(conditions)為真時執行陳述式(statements)。陳述式可以為任何內容，包含巢狀式(nested)的if陳述。當要執行多行的陳述式(statements)時，使用區塊(block)將所要執行的陳述式包覆。如果不需要執行任何動作時，則不撰寫任何陳述式(empty statement)。</dd>
- <dt><code>第二個陳述式(statement2)</code></dt>
- <dd>當件不成立時所執行的部份，當else被撰寫時才會被執行。可以是任何的陳述式，包含使用區塊(block)及巢狀(nested)的陳述。</dd>
-</dl>
+- `條件式`
+  - : 一個成立或不成立的[運算式](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)。
+- `第一個陳述式(statement1)`
+  - : 如果 if 中的條件(conditions)為真時執行陳述式(statements)。陳述式可以為任何內容，包含巢狀式(nested)的 if 陳述。當要執行多行的陳述式(statements)時，使用區塊(block)將所要執行的陳述式包覆。如果不需要執行任何動作時，則不撰寫任何陳述式(empty statement)。
+- `第二個陳述式(statement2)`
+  - : 當件不成立時所執行的部份，當 else 被撰寫時才會被執行。可以是任何的陳述式，包含使用區塊(block)及巢狀(nested)的陳述。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>多重的 <code>if...else</code> 陳述式可以使用 <code>else if</code> 子句來建立一個巢狀結構的句子。要記住，在JavaScript中沒有 <code>elseif</code> (一個單字) 的語法可以用。</p>
+多重的 `if...else` 陳述式可以使用 `else if` 子句來建立一個巢狀結構的句子。要記住，在 JavaScript 中沒有 `elseif` (一個單字) 的語法可以用。
 
-<pre class="eval">if (<em>condition1</em>)
-   <em>statement1</em>
-else if (<em>condition2</em>)
-   <em>statement2</em>
-else if (<em>condition3</em>)
-   <em>statement3</em>
+```plain
+if (condition1)
+   statement1
+else if (condition2)
+   statement2
+else if (condition3)
+   statement3
 ...
 else
-   <em>statementN</em>
-</pre>
+   statementN
+```
 
-<p>將巢狀結構適當的排版後，我們能更了解其背後運作的邏輯：</p>
+將巢狀結構適當的排版後，我們能更了解其背後運作的邏輯：
 
-<pre class="eval">if (<em>condition1</em>)
-   <em>statement1</em>
+```plain
+if (condition1)
+   statement1
 else
-   if (<em>condition2</em>)
-      <em>statement2</em>
+   if (condition2)
+      statement2
    else
-      if (<em>condition3</em>)
+      if (condition3)
 ...
-</pre>
+```
 
-<p>如果在一個條件式中有多個陳述要執行，可以使用區塊陳述式(<code>{ ... }</code>) 把所有陳述包在一起。 通常來說，無論如何都使用區塊陳述式是個很好的習慣，尤其是當你使用巢狀結構的 <code>if</code> 陳述式時，這會讓人更容易理解你的程式碼。</p>
+如果在一個條件式中有多個陳述要執行，可以使用區塊陳述式(`{ ... }`) 把所有陳述包在一起。 通常來說，無論如何都使用區塊陳述式是個很好的習慣，尤其是當你使用巢狀結構的 `if` 陳述式時，這會讓人更容易理解你的程式碼。
 
-<pre class="eval">if (<em>condition</em>) {
-   <em>statements1</em>
+```plain
+if (condition) {
+   statements1
 } else {
-   <em>statements2</em>
+   statements2
 }
-</pre>
+```
 
-<p>不要被<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>物件中，布林值的 <code>true</code> 和 <code>false</code> 給混淆了。任何值只要不是 <code>false</code>、 <code>undefined</code>、 <code>null</code>、 <code>0</code>、 <code>NaN</code>，或者空字串 (<code>""</code>)，並且任何物件，包括其值是 <code>false</code>的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：</p>
+不要被[Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)物件中，布林值的 `true` 和 `false` 給混淆了。任何值只要不是 `false`、 `undefined`、 `null`、 `0`、 `NaN`，或者空字串 (`""`)，並且任何物件，包括其值是 `false`的布林物件 ，仍然會被條件陳述式視為條件成立。舉例而言：
 
-<pre class="brush: js">var b = new Boolean(false);
+```js
+var b = new Boolean(false);
 if (b) // this condition is truthy
-</pre>
+```
 
-<h2 id="實例">實例</h2>
+## 實例
 
-<h3 id="使用_if...else">使用 <code>if...else</code></h3>
+### 使用 `if...else`
 
-<pre class="brush: js">if (cipher_char === from_char) {
+```js
+if (cipher_char === from_char) {
    result = result + to_char;
    x++;
 } else {
    result = result + clear_char;
 }
-</pre>
+```
 
-<h3 id="使用_else_if">使用 <code>else if</code></h3>
+### 使用 `else if`
 
-<p>要記得JavaScript沒有 <code>elseif</code> 可以使用。不過，你可以使用 <code>else</code> 和 <code>if</code>中間夾著空白的語法：</p>
+要記得 JavaScript 沒有 `elseif` 可以使用。不過，你可以使用 `else` 和 `if`中間夾著空白的語法：
 
-<pre class="brush: js">if (x &gt; 5) {
+```js
+if (x > 5) {
  /* do the right thing */
-} else if (x &gt; 50) {
+} else if (x > 50) {
  /* do the right thing */
 } else {
  /* do the right thing */
-}</pre>
+}
+```
 
-<h3 id="條件表達式中的賦值">條件表達式中的賦值</h3>
+### 條件表達式中的賦值
 
-<p>建議不要在條件表達式中直接對物件賦值，因為這會使人在瀏覽程式碼時很容易將賦值( assignment )與相等( equality )混淆。舉例而言，不要使用以下寫法：</p>
+建議不要在條件表達式中直接對物件賦值，因為這會使人在瀏覽程式碼時很容易將賦值( assignment )與相等( equality )混淆。舉例而言，不要使用以下寫法：
 
-<pre class="brush: js example-bad">if (x = y) {
+```js example-bad
+if (x = y) {
    /* do the right thing */
 }
-</pre>
+```
 
-<p>如果你必須在條件表達式中使用賦值，最好ˇ的作法是以額外的括號包住賦值語句，如下所示：</p>
+如果你必須在條件表達式中使用賦值，最好 ˇ 的作法是以額外的括號包住賦值語句，如下所示：
 
-<pre class="brush: js example-good">if ((x = y)) {
+```js example-good
+if ((x = y)) {
    /* do the right thing */
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.statements.if_else")}}
 
+## 參見
 
-<p>{{Compat("javascript.statements.if_else")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Statements/block", "block")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
- <li>{{jsxref("Operators/conditional_operator", "conditional operator")}}</li>
-</ul>
+- {{jsxref("Statements/block", "block")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Operators/conditional_operator", "conditional operator")}}

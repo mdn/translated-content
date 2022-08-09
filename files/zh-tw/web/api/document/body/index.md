@@ -3,18 +3,21 @@ title: Document.body
 slug: Web/API/Document/body
 translation_of: Web/API/Document/body
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>回傳目前文件的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 節點，如元素不存在則回傳 <code>null</code>。</p>
+回傳目前文件的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 節點，如元素不存在則回傳 `null`。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>var objRef</em> = document.body;
-document.body = <em>objRef;</em></pre>
+```plain
+var objRef = document.body;
+document.body = objRef;
+```
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush:js">// in HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+```js
+// in HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
 var aNewBodyElement = document.createElement("body");
@@ -22,24 +25,22 @@ var aNewBodyElement = document.createElement("body");
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
-</pre>
+```
 
-<h2 id="Notes">備註</h2>
+## 備註
 
-<p><code>document.body</code> is the element that contains the content for the document. In documents with <code>&lt;body&gt;</code> contents, returns the <code>&lt;body&gt;</code> element, and in frameset documents, this returns the outermost <code>&lt;frameset&gt;</code> element.</p>
+`document.body` is the element that contains the content for the document. In documents with `<body>` contents, returns the `<body>` element, and in frameset documents, this returns the outermost `<frameset>` element.
 
-<p>Though <code>body</code> is settable, setting a new body on a document will effectively remove all the current children of the existing <code>&lt;body&gt;</code> element.</p>
+Though `body` is settable, setting a new body on a document will effectively remove all the current children of the existing `<body>` element.
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("document.head")}}</li>
-</ul>
+- {{domxref("document.head")}}

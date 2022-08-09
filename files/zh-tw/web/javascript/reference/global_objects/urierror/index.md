@@ -3,55 +3,54 @@ title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>URIError</strong></code> 物件在全域的URI處理函式被錯誤使用時作為一個錯誤被拋出。</p>
+**`URIError`** 物件在全域的 URI 處理函式被錯誤使用時作為一個錯誤被拋出。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new URIError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>message</code></dt>
- <dd>可選。具人類可讀性的錯誤說明</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>可選。包含造成錯誤發生的程式碼的檔案名稱</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>可選。造成錯誤發生的程式碼行號</dd>
-</dl>
+- `message`
+  - : 可選。具人類可讀性的錯誤說明
+- `fileName` {{non-standard_inline}}
+  - : 可選。包含造成錯誤發生的程式碼的檔案名稱
+- `lineNumber` {{non-standard_inline}}
+  - : 可選。造成錯誤發生的程式碼行號
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p><code>URIError</code> 在全域的URI處理函式被傳入了一個錯誤編碼的URI時被拋出。</p>
+`URIError` 在全域的 URI 處理函式被傳入了一個錯誤編碼的 URI 時被拋出。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("URIError.prototype")}}</dt>
- <dd>允許對一個 <code>URIError</code> 物件增加其屬性。</dd>
-</dl>
+- {{jsxref("URIError.prototype")}}
+  - : 允許對一個 `URIError` 物件增加其屬性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>普遍的 <code>URIError</code> 自身沒有包含方法，儘管他的確從原型鍊中繼承了一些。</p>
+普遍的 `URIError` 自身沒有包含方法，儘管他的確從原型鍊中繼承了一些。
 
-<h2 id="URIError_物件實體"><code>URIError</code> 物件實體</h2>
+## `URIError` 物件實體
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Catch_一個_URIError">Catch 一個 <code>URIError</code></h3>
+### Catch 一個 `URIError`
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%');
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -62,11 +61,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 2
   console.log(e.stack);               // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="生成一個_URIError">生成一個 <code>URIError</code></h3>
+### 生成一個 `URIError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -77,27 +77,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 0
   console.log(e.stack);               // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.URIError")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.URIError")}}</p>
-</div>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("URIError.prototype")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("URIError.prototype")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

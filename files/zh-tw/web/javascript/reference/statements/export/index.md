@@ -3,81 +3,90 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 translation_of: Web/JavaScript/Reference/Statements/export
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>用 <strong>export</strong> 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。</p>
+用 **export** 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。
 
-<p>導出的模塊都會處於{{jsxref("Strict_mode","嚴謹模式")}}，無論是否有所宣告。導出宣告無法使用嵌入式腳本（embedded script）。</p>
+導出的模塊都會處於{{jsxref("Strict_mode","嚴謹模式")}}，無論是否有所宣告。導出宣告無法使用嵌入式腳本（embedded script）。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> };
-export { <var>variable1</var> as <var>name1</var>, <var>variable2</var> as <var>name2</var>, …, <var>nameN</var> };
+```plain
+export { name1, name2, …, nameN };
+export { variable1 as name1, variable2 as name2, …, nameN };
 // 用 var, const 也通
-export let <var>name1</var>, <var>name2</var>, …, <var>nameN</var>;
-export let <var>name1</var> = …, <var>name2</var> = …, …, <var>nameN</var>;
+export let name1, name2, …, nameN;
+export let name1 = …, name2 = …, …, nameN;
 
 // 底下的 function 用 class, function* 也可以
-export default <em>expression</em>;
+export default expression;
 export default function (…) { … }
 export default function name1(…) { … }
 
-export { <var>name1</var> as default, … };
+export { name1 as default, … };
 export * from …;
-export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> } from …;
-export { <var>import1</var> as <var>name1</var>, <var>import2</var> as <var>name2</var>, …, <var>nameN</var> } from …;</pre>
+export { name1, name2, …, nameN } from …;
+export { import1 as name1, import2 as name2, …, nameN } from …;
+```
 
-<dl>
- <dt><code>nameN</code></dt>
- <dd>外部檔案使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> 時，用於辨認的名稱。</dd>
-</dl>
+- `nameN`
+  - : 外部檔案使用 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 時，用於辨認的名稱。
 
-<h2 id="使用說明">使用說明</h2>
+## 使用說明
 
-<p>有兩種使用 export 的方式，<strong>named</strong> 與 <strong>default</strong>。每個模組中可以有多個 named exports, 但只能有一個 default export。每種 export 都對應到一個先前說的語法。</p>
+有兩種使用 export 的方式，**named** 與 **default**。每個模組中可以有多個 named exports, 但只能有一個 default export。每種 export 都對應到一個先前說的語法。
 
-<ul>
- <li>Named exports:
-  <pre class="brush: js">// 前面已經宣告的函式可以這樣輸出
-export { myFunction };
+- Named exports:
 
-// 輸出常數
-export const foo = Math.sqrt(2); </pre>
- </li>
- <li>預設 export （一個 js 檔案只能有一個）:
-  <pre class="brush: js">export default function() {}
-// 或是 '<em>export default class {}</em>'
-// 結尾不用分號</pre>
- </li>
-</ul>
+  ```js
+  // 前面已經宣告的函式可以這樣輸出
+  export { myFunction };
 
-<p>Named exports 在輸出多個值的時候很有用，在 import 的時候, 會強制根據使用相同的物件名稱.</p>
+  // 輸出常數
+  export const foo = Math.sqrt(2);
+  ```
 
-<p>但如果是 default export 則可以用任意的名字輸出.</p>
+- 預設 export （一個 js 檔案只能有一個）:
 
-<pre class="syntaxbox">export default k = 12; // 在test.js中這樣子寫
+  ```js
+  export default function() {}
+  // 或是 'export default class {}'
+  // 結尾不用分號
+  ```
+
+Named exports 在輸出多個值的時候很有用，在 import 的時候, 會強制根據使用相同的物件名稱.
+
+但如果是 default export 則可以用任意的名字輸出.
+
+```plain
+export default k = 12; // 在test.js中這樣子寫
 
 import m from './test' // 注意這邊因為 export default 的關係, 可以用任意名字 import 原先的k出來
 
 console.log(m);        // will log 12
-</pre>
+```
 
-<p>以下語法並不會導出所有被引入的模塊：</p>
+以下語法並不會導出所有被引入的模塊：
 
-<pre>export * from …;</pre>
+```plain
+export * from …;
+```
 
-<p>你必須額外引入它的預設輸出，再導出之：</p>
+你必須額外引入它的預設輸出，再導出之：
 
-<pre>import mod from "mod";
-export default mod;</pre>
+```plain
+import mod from "mod";
+export default mod;
+```
 
-<h2 id="使用範例">使用範例</h2>
+## 使用範例
 
-<h3 id="輸出命名過的變數">輸出命名過的變數</h3>
+### 輸出命名過的變數
 
-<p>模塊內可以這樣用：</p>
+模塊內可以這樣用：
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 function cube(x) {
   return x * x * x;
 }
@@ -92,12 +101,13 @@ var graph = {
     }
 }
 export { cube, foo, graph };
-</pre>
+```
 
-<p>在另一個腳本就會變成這樣：</p>
+在另一個腳本就會變成這樣：
 
-<pre class="brush: js">//You should use this script in html with the type module ,
-//eg ''&lt;script type="module" src="demo.js"&gt;&lt;/script&gt;",
+```js
+//You should use this script in html with the type module ,
+//eg ''<script type="module" src="demo.js"></script>",
 //open the page in a httpserver,otherwise there will be a CORS policy error.
 //script demo.js
 
@@ -108,40 +118,39 @@ graph.options = {
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888</pre>
+console.log(foo);    // 4.555806215962888
+```
 
-<h3 id="使用預設輸出">使用預設輸出</h3>
+### 使用預設輸出
 
-<p>如果我們要輸出單獨的函式、物件、class 或當做 fallback 值來輸出的話，就可以用預設輸出：</p>
+如果我們要輸出單獨的函式、物件、class 或當做 fallback 值來輸出的話，就可以用預設輸出：
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 export default function cube(x) {
   return x * x * x;
 }
-</pre>
+```
 
-<p>外部檔案的 import 用法：</p>
+外部檔案的 import 用法：
 
-<pre class="brush: js">import cube from 'my-module';
+```js
+import cube from 'my-module';
 console.log(cube(3)); // 27
-</pre>
+```
 
-<p>Note 注意預設輸出不能使用 var, let , const。</p>
+Note 注意預設輸出不能使用 var, let , const。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.statements.export")}}
 
+## 參見
 
-<p>{{Compat("javascript.statements.export")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Statements/import", "import")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
-</ul>
+- {{jsxref("Statements/import", "import")}}
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

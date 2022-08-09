@@ -3,176 +3,148 @@ title: JavaScript 指南
 slug: Web/JavaScript/Guide
 translation_of: Web/JavaScript/Guide
 ---
-<div>{{jsSidebar("JavaScript Guide")}}</div>
+{{jsSidebar("JavaScript Guide")}}
 
-<p>JavaScript 指南會讓您了解如何使用 <a href="/zh-TW/docs/Web/JavaScript">JavaScript</a> 並給您這個語言的概觀。若您需要語言功能詳細資訊請參考 <a href="/zh-TW/docs/Web/JavaScript/Reference">JavaScript 參考文件</a>。</p>
+JavaScript 指南會讓您了解如何使用 [JavaScript](/zh-TW/docs/Web/JavaScript) 並給您這個語言的概觀。若您需要語言功能詳細資訊請參考 [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/Reference)。
 
-<h2 id="章節">章節</h2>
+## 章節
 
-<p>本指南區分成以下數個章節：</p>
+本指南區分成以下數個章節：
 
-<h2 id="簡介">簡介</h2>
+## 簡介
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction">簡介</a></p>
+概述：[簡介](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#Where_to_find_JavaScript_information">關於本指南</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript">關於 JavaScript</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java">JavaScript 與 Java</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_the_ECMAScript_Specification">ECMAScript</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#Getting_started_with_JavaScript">工具</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Introduction#Hello_world">Hello World</a></li>
-</ul>
+- [關於本指南](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Where_to_find_JavaScript_information)
+- [關於 JavaScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript)
+- [JavaScript 與 Java](/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java)
+- [ECMAScript](/zh-TW/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_the_ECMAScript_Specification)
+- [工具](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Getting_started_with_JavaScript)
+- [Hello World](/zh-TW/docs/Web/JavaScript/Guide/Introduction#Hello_world)
 
-<h2 id="語法與型別">語法與型別</h2>
+## 語法與型別
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types">語法與型別</a></p>
+概述：[語法與型別](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Basics">基礎語法 &amp; 註解</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">宣告</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope">變數範圍</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_hoisting">變數提升（Hoisting）</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Data_structures_and_types">資料結構與型態</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AD%97%E9%9D%A2%E5%80%BC%EF%BC%88Literals%EF%BC%89">字面值</a></li>
-</ul>
+- [基礎語法 & 註解](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Basics)
+- [宣告](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [變數範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope)
+- [變數提升（Hoisting）](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_hoisting)
+- [資料結構與型態](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Data_structures_and_types)
+- [字面值](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AD%97%E9%9D%A2%E5%80%BC%EF%BC%88Literals%EF%BC%89)
 
-<h2 id="流程控制與錯誤處理">流程控制與錯誤處理</h2>
+## 流程控制與錯誤處理
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">流程控制與錯誤處理</a></p>
+概述：[流程控制與錯誤處理](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement"><code>if...else</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement"><code>switch</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Exception_handling_statements"><code>try</code>/<code>catch</code>/<code>throw</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Utilizing_Error_objects">Error 物件</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Promises">Promises</a></li>
-</ul>
+- [`if...else`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
+- [`switch`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
+- [`try`/`catch`/`throw`](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Exception_handling_statements)
+- [Error 物件](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Utilizing_Error_objects)
+- [Promises](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Promises)
 
-<h2 id="迴圈與迭代">迴圈與迭代</h2>
+## 迴圈與迭代
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration">迴圈與迭代</a></p>
+概述：[迴圈與迭代](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement"><code>for</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement"><code>while</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement"><code>do...while</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement"><code>break</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement"><code>continue</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement"><code>for..in</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement"><code>for..of</code></a></li>
-</ul>
+- [`for`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+- [`while`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
+- [`do...while`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
+- [`break`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
+- [`continue`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
+- [`for..in`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for..of`](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
 
-<h2 id="函數">函數</h2>
+## 函數
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Functions">函數</a></p>
+概述：[函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Defining_functions">定義函數</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Calling_functions">呼叫函數</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_scope">函數範圍</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Closures">閉包（Closure）</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Using_the_arguments_object">參數值</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_parameters">參數</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Functions#Arrow_functions">箭頭函數</a></li>
-</ul>
+- [定義函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Defining_functions)
+- [呼叫函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Calling_functions)
+- [函數範圍](/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_scope)
+- [閉包（Closure）](/zh-TW/docs/Web/JavaScript/Guide/Functions#Closures)
+- [參數值](/zh-TW/docs/Web/JavaScript/Guide/Functions#Using_the_arguments_object)
+- [參數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_parameters)
+- [箭頭函數](/zh-TW/docs/Web/JavaScript/Guide/Functions#Arrow_functions)
 
-<h2 id="運算式與運算子">運算式與運算子</h2>
+## 運算式與運算子
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators">運算式與運算子</a></p>
+概述：[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators">賦值</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators">比較</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators">算數運算子</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators">位元</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators">邏輯運算子</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator">條件（三元）運算子</a></li>
-</ul>
+- [賦值](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators)
+- [比較](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators)
+- [算數運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators)
+- [位元](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise_operators)
+- [邏輯運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators)
+- [條件（三元）運算子](</zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator>)
 
-<h2 id="數字與日期">數字與日期</h2>
+## 數字與日期
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates">數字與日期</a></p>
+概述：[數字與日期](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers">數字書寫法</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object"><code>Number</code> 物件</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Math_object"><code>Math</code> 物件</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Date_object"><code>Date</code> 物件</a></li>
-</ul>
+- [數字書寫法](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers)
+- [`Number` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object)
+- [`Math` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Math_object)
+- [`Date` 物件](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates#Date_object)
 
-<h2 id="文字格式">文字格式</h2>
+## 文字格式
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting">文字格式</a></p>
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_literals">字串書寫法</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_objects"><code>String</code> 物件</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Multi-line_template_literals">模板書寫法</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Internationalization">國際化</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">正規表示法</a></li>
-</ul>
+- [字串書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_literals)
+- [`String` 物件](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#String_objects)
+- [模板書寫法](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Multi-line_template_literals)
+- [國際化](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting#Internationalization)
+- [正規表示法](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-<h2 id="具索引的集合">具索引的集合</h2>
+## 具索引的集合
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Text_formatting">文字格式</a></p>
+概述：[文字格式](/zh-TW/docs/Web/JavaScript/Guide/Text_formatting)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Array_object">陣列</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Typed_Arrays">型態化陣列</a></li>
-</ul>
+- [陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Array_object)
+- [型態化陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Typed_Arrays)
 
-<h2 id="具鍵值的集合">具鍵值的集合</h2>
+## 具鍵值的集合
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections">具鍵值的集合</a></p>
+概述：[具鍵值的集合](/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#Map_object"><code>Map</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object"><code>WeakMap</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#Set_object"><code>Set</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#WeakSet_object"><code>WeakSet</code></a></li>
-</ul>
+- [`Map`](/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#Map_object)
+- [`WeakMap`](/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
+- [`Set`](/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#Set_object)
+- [`WeakSet`](/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections#WeakSet_object)
 
-<h2 id="使用物件">使用物件</h2>
+## 使用物件
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects">使用物件</a></p>
+概述：[使用物件](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties">物件與屬性</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects">建立物件</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods">定義方法</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">取值器與設值器</a></li>
-</ul>
+- [物件與屬性](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties)
+- [建立物件](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects)
+- [定義方法](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods)
+- [取值器與設值器](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
 
-<h2 id="深入了解物件模型">深入了解物件模型</h2>
+## 深入了解物件模型
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">深入了解物件模型</a></p>
+概述：[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages">以原形（Prototype）為基礎的 OOP</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Creating_the_hierarchy">建立物件層級</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited">繼承</a></li>
-</ul>
+- [以原形（Prototype）為基礎的 OOP](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)
+- [建立物件層級](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Creating_the_hierarchy)
+- [繼承](/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited)
 
-<h2 id="迭代器與產生器">迭代器與產生器</h2>
+## 迭代器與產生器
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators">迭代器與產生器</a></p>
+概述：[迭代器與產生器](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterators">迭代器（Iterator）</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">可迭代型態（Iterable）</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">產生器（Generator）</a></li>
-</ul>
+- [迭代器（Iterator）](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterators)
+- [可迭代型態（Iterable）](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)
+- [產生器（Generator）](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
 
-<h2 id="Meta 程式設計">Meta 程式設計</h2>
+## Meta 程式設計
 
-<p>概述：<a href="/zh-TW/docs/Web/JavaScript/Guide/Meta_programming">Meta 程式設計</a></p>
+概述：[Meta 程式設計](/zh-TW/docs/Web/JavaScript/Guide/Meta_programming)
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Proxies"><code>Proxy</code></a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Handlers_and_traps">Handler 與 Trap</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Revocable_Proxy">Revocable Proxy</a></li>
-  <li><a href="/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Reflection"><code>Reflect</code></a></li>
-</ul>
+- [`Proxy`](/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Proxies)
+- [Handler 與 Trap](/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Handlers_and_traps)
+- [Revocable Proxy](/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Revocable_Proxy)
+- [`Reflect`](/zh-TW/docs/Web/JavaScript/Guide/Meta_programming#Reflection)
 
-<p>{{Next("Web/JavaScript/Guide/Introduction")}}</p>
+{{Next("Web/JavaScript/Guide/Introduction")}}

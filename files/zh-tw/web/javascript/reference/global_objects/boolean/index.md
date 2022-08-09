@@ -3,117 +3,119 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Boolean</code></strong> 是布林值的包覆器。</p>
+**`Boolean`** 是布林值的包覆器。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">new Boolean([<var>value</var>])</pre>
+```plain
+new Boolean([value])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>value</code> {{optional_inline}}</dt>
- <dd>這個<code>Boolean</code>物件的初始值。</dd>
-</dl>
+- `value` {{optional_inline}}
+  - : 這個`Boolean`物件的初始值。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>傳入的第一個參數值，如果需要的話，會被轉換成布林值。如果沒傳值，或者是<code>0</code>、<code>-0</code>、{{jsxref("null")}}、<code>false</code>、{{jsxref("NaN")}}、{{jsxref("undefined")}}、空字串(<code>""</code>)的話，這個物件的值會被初始化成<code>false</code>。大多數情況下，DOM 物件 {{domxref("document.all")}} 被傳入後，也會將其初始化為<code>false</code>。至於其他的值，包含所有物件或<code>"false"</code>字串，都會使其初始化為<code>true</code>。</p>
+傳入的第一個參數值，如果需要的話，會被轉換成布林值。如果沒傳值，或者是`0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}、空字串(`""`)的話，這個物件的值會被初始化成`false`。大多數情況下，DOM 物件 {{domxref("document.all")}} 被傳入後，也會將其初始化為`false`。至於其他的值，包含所有物件或`"false"`字串，都會使其初始化為`true`。
 
-<p>不要將原始型別的布林值和這個布林物件搞混，它們並不相同。</p>
+不要將原始型別的布林值和這個布林物件搞混，它們並不相同。
 
-<p>在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} ，儘管是值為<code>false</code> 的 <code>Boolean</code> 物件，都會被轉換成<code>true</code>。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為<code>true</code>：</p>
+在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} ，儘管是值為`false` 的 `Boolean` 物件，都會被轉換成`true`。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為`true`：
 
-<pre class="brush: js">var x = new Boolean(false);
+```js
+var x = new Boolean(false);
 if (x) {
   // this code is executed
 }
-</pre>
+```
 
-<p>以上這個行為和<code>Boolean</code>原始型別沒有關連，反倒是下面的 {{jsxref("Statements/if...else", "if")}} 判斷式會正確地將其視為<code>false</code>：</p>
+以上這個行為和`Boolean`原始型別沒有關連，反倒是下面的 {{jsxref("Statements/if...else", "if")}} 判斷式會正確地將其視為`false`：
 
-<pre class="brush: js">var x = false;
+```js
+var x = false;
 if (x) {
   // this code is not executed
 }
-</pre>
+```
 
-<p>不要用<code>Boolean</code>物件將非布林值轉換成布林值。反而要將<code>Boolean</code>視為函式去轉換非布林值：</p>
+不要用`Boolean`物件將非布林值轉換成布林值。反而要將`Boolean`視為函式去轉換非布林值：
 
-<pre class="brush: js">var x = Boolean(expression);     // 較好
+```js
+var x = Boolean(expression);     // 較好
 var x = new Boolean(expression); // 不要用
-</pre>
+```
 
-<p>如果你要指定任何物件，包括值為<code>false</code>的<code>Boolean</code>物件，作為<code>Boolean</code>物件的初始值，則該<code>Boolean</code>物件的值依舊為<code>true</code>。</p>
+如果你要指定任何物件，包括值為`false`的`Boolean`物件，作為`Boolean`物件的初始值，則該`Boolean`物件的值依舊為`true`。
 
-<pre class="brush: js">var myFalse = new Boolean(false);   // 初始值給false，實際上為true
+```js
+var myFalse = new Boolean(false);   // 初始值給false，實際上為true
 var g = new Boolean(myFalse);       // 想當然耳，true
 var myString = new String('Hello'); // 字串物件，'Hello'
 var s = new Boolean(myString);      // 依舊為true
-</pre>
+```
 
-<p>不要使用<code>Boolean</code>物件代替<code>Boolean</code>的原始型別！</p>
+不要使用`Boolean`物件代替`Boolean`的原始型別！
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt><code>Boolean.length</code></dt>
- <dd>長度永遠為1。</dd>
- <dt>{{jsxref("Boolean.prototype")}}</dt>
- <dd>原型為<code>Boolean</code>的建構式。</dd>
-</dl>
+- `Boolean.length`
+  - : 長度永遠為 1。
+- {{jsxref("Boolean.prototype")}}
+  - : 原型為`Boolean`的建構式。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>全域的<code>Boolean</code>物件自身沒有任何方法，它只有從原型鏈繼承而來的方法。</p>
+全域的`Boolean`物件自身沒有任何方法，它只有從原型鏈繼承而來的方法。
 
-<h2 id="Boolean_實體"><code>Boolean</code> 實體</h2>
+## `Boolean` 實體
 
-<p>所有 <code>Boolean</code> 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。</p>
+所有 `Boolean` 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="用_false_作為初始值建立_Boolean_物件">用 <code>false</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
+### 用 `false` 作為初始值建立 `Boolean` 物件
 
-<pre class="brush: js">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="用_true_作為初始值建立_Boolean_物件">用 <code>true</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
+### 用 `true` 作為初始值建立 `Boolean` 物件
 
-<pre class="brush: js">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("javascript.builtins.Boolean")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Boolean.prototype")}}</li>
- <li>{{Glossary("Boolean")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/Boolean_data_type">Boolean data type (Wikipedia)</a></li>
-</ul>
+- {{jsxref("Boolean.prototype")}}
+- {{Glossary("Boolean")}}
+- [Boolean data type (Wikipedia)](http://en.wikipedia.org/wiki/Boolean_data_type)

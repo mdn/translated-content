@@ -3,29 +3,31 @@ title: super
 slug: Web/JavaScript/Reference/Operators/super
 translation_of: Web/JavaScript/Reference/Operators/super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>super 關鍵字被使用於通過函式存取父層</p>
+super 關鍵字被使用於通過函式存取父層
 
-<p> <code>super.prop</code> 與 <code>super[expr]</code> 表達有效在 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definition</a> 與 <a href="/en-US/docs/Web/JavaScript/Reference/Classes">classes</a> 與 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object literals</a>.</p>
+`super.prop` 與 `super[expr]` 表達有效在 [method definition](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 與 [classes](/en-US/docs/Web/JavaScript/Reference/Classes) 與 [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">super([arguments]); // calls the parent constructor.
+```plain
+super([arguments]); // calls the parent constructor.
 super.functionOnParent([arguments]);
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>當使用建構子，<code>super</code> 關鍵字必須出現在<code>this</code> 關鍵字之前使用，<code>super</code> 關鍵字也可以使用在呼叫函式與父對象</p>
+當使用建構子，`super` 關鍵字必須出現在`this` 關鍵字之前使用，`super` 關鍵字也可以使用在呼叫函式與父對象
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="在類別中使用_super">在類別中使用 <code>super</code> </h3>
+### 在類別中使用 `super`
 
-<p>這個程式碼片段從 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>). 這裏的 <code>super()</code> 被呼叫去避免複製到建構子的 <code>Rectangle</code> 與 <code>Square</code> 的共通部分。</p>
+這個程式碼片段從 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). 這裏的 `super()` 被呼叫去避免複製到建構子的 `Rectangle` 與 `Square` 的共通部分。
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.name = 'Rectangle';
     this.height = height;
@@ -54,13 +56,15 @@ class Square extends Rectangle {
     // can use 'this'. Leaving this out will cause a reference error.
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<h3 id="Super-calling_靜態方法">Super-calling 靜態方法</h3>
+### Super-calling 靜態方法
 
-<p>你也可以使用在<a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">靜態</a>方法.</p>
+你也可以使用在[靜態](/en-US/docs/Web/JavaScript/Reference/Classes/static)方法.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor() {}
   static logNbSides() {
     return 'I have 4 sides';
@@ -74,13 +78,14 @@ class Square extends Rectangle {
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'
-</pre>
+```
 
-<h3 id="刪除_super_屬性將拋出錯誤">刪除 super 屬性將拋出錯誤</h3>
+### 刪除 super 屬性將拋出錯誤
 
-<p>你不能使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> 以及 <code>super.prop</code> 以及 <code>super[expr]</code> 去刪除父層的類別屬性, 不然他會丟出一個錯誤 {{jsxref("ReferenceError")}}.</p>
+你不能使用 [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 以及 `super.prop` 以及 `super[expr]` 去刪除父層的類別屬性, 不然他會丟出一個錯誤 {{jsxref("ReferenceError")}}.
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   constructor() {}
   foo() {}
 }
@@ -91,13 +96,15 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </pre>
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+```
 
-<h3 id="super.prop_不能複寫在不能複寫的屬性"><code>super.prop</code> 不能複寫在不能複寫的屬性</h3>
+### `super.prop` 不能複寫在不能複寫的屬性
 
-<p>當定義不可寫屬性，例如 {{jsxref("Object.defineProperty")}}, <code>super</code> 不能複寫這個屬性的值.</p>
+當定義不可寫屬性，例如 {{jsxref("Object.defineProperty")}}, `super` 不能複寫這個屬性的值.
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -119,13 +126,14 @@ class Y extends X {
 var y = new Y();
 y.foo(); // TypeError: "prop" is read-only
 console.log(y.prop); // 1
-</pre>
+```
 
-<h3 id="使用_super.prop_在對象符號">使用 <code>super.prop</code> 在對象符號</h3>
+### 使用 `super.prop` 在對象符號
 
-<p>Super 可以使用在 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符號. 在這個範例, 有兩個對象定義在一個方法. 在第二個對象裡面, <code>super</code> 呼叫了第一個對象的方法. 這個動作幫助 {{jsxref("Object.setPrototypeOf()")}} 讓我們可以設定原型 <code>obj2</code> to <code>obj1</code>, 所以 <code>super</code> 可以發現 <code>method1</code> 在 <code>obj1</code>裡被找到.</p>
+Super 可以使用在 [object initializer / literal](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符號. 在這個範例, 有兩個對象定義在一個方法. 在第二個對象裡面, `super` 呼叫了第一個對象的方法. 這個動作幫助 {{jsxref("Object.setPrototypeOf()")}} 讓我們可以設定原型 `obj2` to `obj1`, 所以 `super` 可以發現 `method1` 在 `obj1`裡被找到.
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log('method 1');
   }
@@ -139,21 +147,17 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("javascript.operators.super")}}
 
+## 參考
 
-<p>{{Compat("javascript.operators.super")}}</p>
-
-<h2 id="參考">參考</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><a href="https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420">Anurag Majumdar - Super &amp; Extends in JavaScript</a></li>
-</ul>
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

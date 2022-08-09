@@ -3,51 +3,48 @@ title: setter
 slug: Web/JavaScript/Reference/Functions/set
 translation_of: Web/JavaScript/Reference/Functions/set
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>set</code></strong> 語法會在物件屬性被嘗試定義時，將其屬性綁定到要呼叫的函式內。</p>
+**`set`** 語法會在物件屬性被嘗試定義時，將其屬性綁定到要呼叫的函式內。
 
-<div>{{EmbedInteractiveExample("pages/js/functions-setter.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">{set <em>prop</em>(<em>val</em>) { . . . }}
-{set [expression](<em>val</em>) { . . . }}</pre>
+```plain
+{set prop(val) { . . . }}
+{set [expression](val) { . . . }}
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>要綁定到給定函式的屬性名。</dd>
- <dt><code>val</code></dt>
- <dd>變數別名，該變數擁有要被嘗試安插到 <code>prop</code> 的數值。</dd>
- <dt>expression</dt>
- <dd>從 ECMAScript 2015 開始，可以使用計算屬性名（computed property name）表達式，綁定到給定函式。</dd>
-</dl>
+- `prop`
+  - : 要綁定到給定函式的屬性名。
+- `val`
+  - : 變數別名，該變數擁有要被嘗試安插到 `prop` 的數值。
+- expression
+  - : 從 ECMAScript 2015 開始，可以使用計算屬性名（computed property name）表達式，綁定到給定函式。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>JavaScript 的 setter 能在嘗試修改指定屬性時，執行給定函式。Setter 最常用於和 getter 一同建立虛擬屬性（pseudo-property）。你不可能給同一個屬性賦予 setter 與實際值。</p>
+JavaScript 的 setter 能在嘗試修改指定屬性時，執行給定函式。Setter 最常用於和 getter 一同建立虛擬屬性（pseudo-property）。你不可能給同一個屬性賦予 setter 與實際值。
 
-<p>使用 <code>set</code> 語法時，請注意以下情況：</p>
+使用 `set` 語法時，請注意以下情況：
 
-<div>
-<ul>
- <li>可以擁有一個以數字或字串為代表的標示符；</li>
- <li>最少要有一個參數（請參見 <a href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> 的詳細資料）；</li>
- <li>不能以有另一個 <code>set</code> 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 <code>{ set x(v) { }, set x(v) { } }</code> and <code>{ x: ..., set x(v) { } }</code>）</li>
-</ul>
-</div>
+- 可以擁有一個以數字或字串為代表的標示符；
+- 最少要有一個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）；
+- 不能以有另一個 `set` 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 `{ set x(v) { }, set x(v) { } }` and `{ x: ..., set x(v) { } }`）
 
-<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> 操作符可移除 setter。</p>
+[`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 操作符可移除 setter。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在物件初始器的新物件定義_setter">在物件初始器的新物件定義 setter</h3>
+### 在物件初始器的新物件定義 setter
 
-<p>這裡會給物件 <code>language</code> 定義稱為 <code>current</code> 的虛擬屬性。在指派數值時 <code>log</code> 會和該值一同更新：</p>
+這裡會給物件 `language` 定義稱為 `current` 的虛擬屬性。在指派數值時 `log` 會和該值一同更新：
 
-<pre class="brush: js">var language = {
+```js
+var language = {
   set current(name) {
     this.log.push(name);
   },
@@ -59,31 +56,35 @@ console.log(language.log); // ['EN']
 
 language.current = 'FA';
 console.log(language.log); // ['EN', 'FA']
-</pre>
+```
 
-<p>請注意 <code>current</code> is not defined and any attempts to access it will result in <code>undefined</code>.</p>
+請注意 `current` is not defined and any attempts to access it will result in `undefined`.
 
-<h3 id="使用_delete_操作符移除_setter">使用 <code>delete</code> 操作符移除 setter</h3>
+### 使用 `delete` 操作符移除 setter
 
-<p>若想移除 setter 的話，可以直接使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>：</p>
+若想移除 setter 的話，可以直接使用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete)：
 
-<pre class="brush: js">delete o.current;
-</pre>
+```js
+delete o.current;
+```
 
-<h3 id="針對已存在屬性的_setter_使用_defineProperty">針對已存在屬性的 setter 使用 <code>defineProperty</code></h3>
+### 針對已存在屬性的 setter 使用 `defineProperty`
 
-<p>To append a setter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.</p>
+To append a setter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.
 
-<pre class="brush: js">var o = {a: 0};
+```js
+var o = {a: 0};
 
 Object.defineProperty(o, 'b', { set: function(x) { this.a = x / 2; } });
 
 o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a) // 5</pre>
+console.log(o.a) // 5
+```
 
-<h3 id="使用計算屬性名">使用計算屬性名</h3>
+### 使用計算屬性名
 
-<pre class="brush: js">var expr = 'foo';
+```js
+var expr = 'foo';
 
 var obj = {
   baz: 'bar',
@@ -93,23 +94,21 @@ var obj = {
 console.log(obj.baz); // "bar"
 obj.foo = 'baz';      // 跑 setter
 console.log(obj.baz); // "baz"
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.functions.set")}}</p>
+{{Compat("javascript.functions.set")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/get">getter</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
- <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li>JavaScript 教學的<a href="/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">定義 Getters 與 Setters</a></li>
-</ul>
+- [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineGetter", "__defineGetter__")}}
+- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- JavaScript 教學的[定義 Getters 與 Setters](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

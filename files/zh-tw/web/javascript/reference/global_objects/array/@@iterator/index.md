@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@iterator]()'
+title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
   - Array
@@ -11,61 +11,59 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@iterator</strong></code> 屬性的初始值與 {{jsxref("Array.prototype.values()", "values()")}} 屬性的初始值為相同的的函式物件。</p>
+**`@@iterator`** 屬性的初始值與 {{jsxref("Array.prototype.values()", "values()")}} 屬性的初始值為相同的的函式物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+```plain
+arr[Symbol.iterator]()
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>陣列的<strong>迭代器（iterator）</strong>函式，預設與 {{jsxref("Array.prototype.values()", "values()")}} 函式相同。</p>
+陣列的**迭代器（iterator）**函式，預設與 {{jsxref("Array.prototype.values()", "values()")}} 函式相同。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_for...of_迴圈進行迭代">使用 <code>for...of</code> 迴圈進行迭代</h3>
+### 使用 `for...of` 迴圈進行迭代
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
 for (let letter of eArr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="另一種迭代方式">另一種迭代方式</h3>
+### 另一種迭代方式
 
-<pre class="brush: js">var arr = ['w', 'y', 'k', 'o', 'p'];
+```js
+var arr = ['w', 'y', 'k', 'o', 'p'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
 console.log(eArr.next().value); // k
 console.log(eArr.next().value); // o
 console.log(eArr.next().value); // p
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.@@iterator")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}

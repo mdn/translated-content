@@ -3,24 +3,26 @@ title: 預設參數( Default parameters )
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong>函式預設參數 </strong>允許沒有值傳入或是傳入值為 <code>undefined 的情況下，參數能以指定的預設值初始化。</code></p>
+**函式預設參數** 允許沒有值傳入或是傳入值為 `undefined 的情況下，參數能以指定的預設值初始化。`
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[ = defaultValue1 ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
-   <em>要執行的程序</em>
+```plain
+function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
+   要執行的程序
 }
-</pre>
+```
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>在 JavaScript 中，函式的參數預設值都為 <code>{{jsxref("undefined")}} 。然而，指定不同的預設值可能在一些場景很有用。這也是函式參數預設值可以幫上忙的地方。</code></p>
+在 JavaScript 中，函式的參數預設值都為 `{{jsxref("undefined")}} 。然而，指定不同的預設值可能在一些場景很有用。這也是函式參數預設值可以幫上忙的地方。`
 
-<p>以往設定預設值有個普遍方法：在函式的內容裡檢查傳入參數是否為 <code>undefined ，如果是的話，爲他指定一個值。如下列範例，若函式被呼叫時，並沒有提供 b 的值，它的值就會是 undefined，在計算 a*b 時，以及呼叫 multiply 時，就會回傳 NaN。然而這在範例的第二行被阻止了：</code>:</p>
+以往設定預設值有個普遍方法：在函式的內容裡檢查傳入參數是否為 `undefined ，如果是的話，爲他指定一個值。如下列範例，若函式被呼叫時，並沒有提供 b 的值，它的值就會是 undefined，在計算 a*b 時，以及呼叫 multiply 時，就會回傳 NaN。然而這在範例的第二行被阻止了：`:
 
-<pre class="brush: js">function multiply(a, b) {
+```js
+function multiply(a, b) {
   b = (typeof b !== 'undefined') ?  b : 1;
   return a * b;
 }
@@ -28,50 +30,54 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 multiply(5, 2); // 10
 multiply(5, 1); // 5
 multiply(5);    // 5
-</pre>
+```
 
-<p>有了 ES2015 的預設參數，再也不用於函式進行檢查了，現在只要簡單的在函式的起始處為 b 指定 1 的值：</p>
+有了 ES2015 的預設參數，再也不用於函式進行檢查了，現在只要簡單的在函式的起始處為 b 指定 1 的值：
 
-<pre class="brush: js">function multiply(a, b = 1) {
+```js
+function multiply(a, b = 1) {
   return a * b;
 }
 
 multiply(5, 2); // 10
 multiply(5, 1); // 5
 multiply(5);    // 5
-</pre>
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="傳入_undefined">傳入 <code>undefined</code></h3>
+### 傳入 `undefined`
 
-<p>這邊第二段函式呼叫中，僅管第二個傳入參數在呼叫時明確地指定為undefined（雖不是null），其顏色參數的值是預設值（rosybrown）。</p>
+這邊第二段函式呼叫中，僅管第二個傳入參數在呼叫時明確地指定為 undefined（雖不是 null），其顏色參數的值是預設值（rosybrown）。
 
-<pre class="brush: js">function setBackgroundColor(element, color = 'rosybrown') {
+```js
+function setBackgroundColor(element, color = 'rosybrown') {
   element.style.backgroundColor = color;
 }
 
 setBackgroundColor(someDiv);            // color set to 'rosybrown'
 setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
 setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
-</pre>
+```
 
-<h3 id="呼叫時賦予值">呼叫時賦予值</h3>
+### 呼叫時賦予值
 
-<p>跟Python等語言不同的地方是，先前預設的代數值會拿來進行函式內的程序，也因此在函式呼叫的時候，會建立新物件。</p>
+跟 Python 等語言不同的地方是，先前預設的代數值會拿來進行函式內的程序，也因此在函式呼叫的時候，會建立新物件。
 
-<pre class="brush: js">function append(value, array = []) {
+```js
+function append(value, array = []) {
   array.push(value);
   return array;
 }
 
 append(1); //[1]
 append(2); //[2], 而非 [1, 2]
-</pre>
+```
 
-<p>諸如此類的做法，也適用在函式和變量。</p>
+諸如此類的做法，也適用在函式和變量。
 
-<pre class="brush: js">function callSomething(thing = something()) {
+```js
+function callSomething(thing = something()) {
  return thing;
 }
 
@@ -79,13 +85,15 @@ function something() {
   return 'sth';
 }
 
-callSomething();  //sth</pre>
+callSomething();  //sth
+```
 
-<h3 id="預設的參數中，先設定的可提供之後設定的使用">預設的參數中，先設定的可提供之後設定的使用</h3>
+### 預設的參數中，先設定的可提供之後設定的使用
 
-<p>先前有碰到的參數，後來的即可使用。</p>
+先前有碰到的參數，後來的即可使用。
 
-<pre class="brush: js">function singularAutoPlural(singular, plural = singular + '們',
+```js
+function singularAutoPlural(singular, plural = singular + '們',
                             rallyingCry = plural + '，進攻啊!!!') {
   return [singular, plural, rallyingCry];
 }
@@ -99,11 +107,12 @@ singularAutoPlural('狐狸', '火紅的狐狸們');
 //["鹿兒", "鹿兒們", "鹿兒們 ... 有所好轉"]
 singularAutoPlural('鹿兒', '鹿兒們', '鹿兒們平心靜氣的 \
    向政府請願，希望事情有所好轉。');
-</pre>
+```
 
-<p>This functionality is approximated in a straight forward fashion and demonstrates how many edge cases are handled.</p>
+This functionality is approximated in a straight forward fashion and demonstrates how many edge cases are handled.
 
-<pre class="brush: js">function go() {
+```js
+function go() {
   return ':P';
 }
 
@@ -139,50 +148,52 @@ withDefaults.call({value: '=^_^='});
 
 withoutDefaults.call({value: '=^_^='});
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
-</pre>
+```
 
-<h3 id="函式內再定義函式">函式內再定義函式</h3>
+### 函式內再定義函式
 
-<p>Introduced in Gecko 33 {{geckoRelease(33)}}. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see {{bug(1022967)}}). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.</p>
+Introduced in Gecko 33 {{geckoRelease(33)}}. Functions declared in the function body cannot be referred inside default parameters and throw a {{jsxref("ReferenceError")}} (currently a {{jsxref("TypeError")}} in SpiderMonkey, see {{bug(1022967)}}). Default parameters are always executed first, function declarations inside the function body evaluate afterwards.
 
-<pre class="brush: js">// 行不通的！ 最後會丟出 ReferenceError。
+```js
+// 行不通的！ 最後會丟出 ReferenceError。
 function f(a = go()) {
   function go() { return ':P'; }
 }
-</pre>
+```
 
-<h3 id="Parameters_without_defaults_after_default_parameters">Parameters without defaults after default parameters</h3>
+### Parameters without defaults after default parameters
 
-<p>Prior to Gecko 26 {{geckoRelease(26)}}, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in {{bug(777060)}} and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.</p>
+Prior to Gecko 26 {{geckoRelease(26)}}, the following code resulted in a {{jsxref("SyntaxError")}}. This has been fixed in {{bug(777060)}} and works as expected in later versions. Parameters are still set left-to-right, overwriting default parameters even if there are later parameters without defaults.
 
-<pre class="brush: js">function f(x = 1, y) {
+```js
+function f(x = 1, y) {
   return [x, y];
 }
 
 f(); // [1, undefined]
 f(2); // [2, undefined]
-</pre>
+```
 
-<h3 id="Destructured_parameter_with_default_value_assignment">Destructured parameter with default value assignment</h3>
+### Destructured parameter with default value assignment
 
-<p>You can use default value assignment with the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring assignment</a> notation:</p>
+You can use default value assignment with the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) notation:
 
-<pre class="brush: js">function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+```js
+function f([x, y] = [1, 2], {z: z} = {z: 3}) {
   return x + y + z;
 }
 
-f(); // 6</pre>
+f(); // 6
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="瀏覽器的兼容性">瀏覽器的兼容性</h2>
+## 瀏覽器的兼容性
 
 {{Compat}}
 
-<h2 id="要不要也看看">要不要也看看</h2>
+## 要不要也看看
 
-<ul>
- <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">Original proposal at ecmascript.org</a></li>
-</ul>
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)

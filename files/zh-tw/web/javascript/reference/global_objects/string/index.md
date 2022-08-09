@@ -8,225 +8,180 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
-<p>{{JSRef("Global_Objects", "String")}}</p>
+{{JSRef("Global_Objects", "String")}}
 
-<p><strong><code>String</code></strong> 全域物件為字串的構造函數，或是一個字符序列。</p>
+**`String`** 全域物件為字串的構造函數，或是一個字符序列。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<p>字串文字採用下列形式：</p>
+字串文字採用下列形式：
 
-<pre>'string text' "string text" "中文 español deutsch English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ் עברית"</pre>
+```plain
+'string text' "string text" "中文 español deutsch English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ் עברית"
+```
 
-<p>字串也可以被全域的 <code>String</code> 物件建立：</p>
+字串也可以被全域的 `String` 物件建立：
 
-<pre>String(thing)</pre>
+```plain
+String(thing)
+```
 
-<h3 id="Parameters">參數</h3>
+### 參數
 
-<dl>
- <dt><code>thing</code></dt>
- <dd>任何要轉換成字串的物件。</dd>
-</dl>
+- `thing`
+  - : 任何要轉換成字串的物件。
 
-<h3 id="樣板字面值">樣板字面值</h3>
+### 樣板字面值
 
-<p>自 ECMAScript 2015，字串文字也可以是<a href="/zh-TW/docs/Web/JavaScript/Reference/Template_literals">樣板字面值（Template literals）</a>：</p>
+自 ECMAScript 2015，字串文字也可以是[樣板字面值（Template literals）](/zh-TW/docs/Web/JavaScript/Reference/Template_literals)：
 
-<pre>`hello world` `hello! world!` `hello ${who}` escape `&lt;a&gt;${who}&lt;/a&gt;`</pre>
+```plain
+`hello world` `hello! world!` `hello ${who}` escape `<a>${who}</a>`
+```
 
-<h3 id="跳脫符號">跳脫符號</h3>
+### 跳脫符號
 
-<p>除了常規的、可印出來的字元，特殊字元也可以被跳脫符號來表示編碼。</p>
+除了常規的、可印出來的字元，特殊字元也可以被跳脫符號來表示編碼。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">代碼</th>
-   <th scope="col">輸出</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>\0</code></td>
-   <td>空字元</td>
-  </tr>
-  <tr>
-   <td><code>\'</code></td>
-   <td>單引號</td>
-  </tr>
-  <tr>
-   <td><code>\"</code></td>
-   <td>雙引號</td>
-  </tr>
-  <tr>
-   <td><code>\\</code></td>
-   <td>反斜線</td>
-  </tr>
-  <tr>
-   <td><code>\n</code></td>
-   <td>斷行</td>
-  </tr>
-  <tr>
-   <td><code>\r</code></td>
-   <td>回車</td>
-  </tr>
-  <tr>
-   <td><code>\v</code></td>
-   <td>垂直制表</td>
-  </tr>
-  <tr>
-   <td><code>\t</code></td>
-   <td>制表</td>
-  </tr>
-  <tr>
-   <td><code>\b</code></td>
-   <td>退格</td>
-  </tr>
-  <tr>
-   <td><code>\f</code></td>
-   <td>饋頁</td>
-  </tr>
-  <tr>
-   <td><code>\uXXXX</code></td>
-   <td>unicode 代碼</td>
-  </tr>
-  <tr>
-   <td><code>\u{X}</code> ... <code>\u{XXXXXX}</code></td>
-   <td>unicode 代碼 {{experimental_inline}}</td>
-  </tr>
-  <tr>
-   <td><code>\xXX</code></td>
-   <td>Latin-1 字元</td>
-  </tr>
- </tbody>
-</table>
+| 代碼                     | 輸出                                          |
+| ------------------------ | --------------------------------------------- |
+| `\0`                     | 空字元                                        |
+| `\'`                     | 單引號                                        |
+| `\"`                     | 雙引號                                        |
+| `\\`                     | 反斜線                                        |
+| `\n`                     | 斷行                                          |
+| `\r`                     | 回車                                          |
+| `\v`                     | 垂直制表                                      |
+| `\t`                     | 制表                                          |
+| `\b`                     | 退格                                          |
+| `\f`                     | 饋頁                                          |
+| `\uXXXX`                 | unicode 代碼                                  |
+| `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
+| `\xXX`                   | Latin-1 字元                                  |
 
-<dl>
-</dl>
+> **備註：**和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
-<div class="notecard note">
-<p><strong>備註：</strong>和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。</p>
-</div>
+### 長字面值字串
 
-<dl>
-</dl>
+有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。
 
-<h3 id="長字面值字串">長字面值字串</h3>
+你可以用 [+](</en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()>) 運算子附加多個字串在一起，像是這樣：
 
-<p>有些時候，你的程式碼會包含非常長的字串。 為了不讓長字串無止盡地往下長，抑或是在你心血來潮的時候，你可能希望將這樣長的字串能夠斷成多行卻不影響到實際的內容。</p>
-
-<p>你可以用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition_()">+</a> 運算子附加多個字串在一起，像是這樣：</p>
-
-<pre><code>let longString = "This is a very long string which needs " +
+```plain
+let longString = "This is a very long string which needs " +
                  "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable.";</code></pre>
+                 "otherwise my code is unreadable.";
+```
 
-<p>或者，你可以在每一行尾端用反斜線字元("\")表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：</p>
+或者，你可以在每一行尾端用反斜線字元("\\")表示字串會繼續被顯示在下一列。 你必須要確定在反斜線後面沒有任何空白或其他字元，甚至是縮排；否則這個方法將失效。 這個形式看起來像這樣：
 
-<pre><code>let longString = "This is a very long string which needs \
+```plain
+let longString = "This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.";</code></pre>
+otherwise my code is unreadable.";
+```
 
-<p>這兩個方法都會建立相同的字串內容。</p>
+這兩個方法都會建立相同的字串內容。
 
-<h2 id="Description">說明</h2>
+## 說明
 
-<p>字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators">+ 或 += 字串運算元</a> 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。</p>
+字串對於能保留以文字形式表達的資料這件事來說，是有用的。在字串上，一些最常被使用的運算即確認字串長度 {{jsxref("String.length", "length")}} ，用 [+ 或 += 字串運算元](/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators) 建造或者串接字串，用 {{jsxref("String.indexOf", "indexOf")}} 方法檢查?子字串是否存在或子字串的位置，或者是用 {{jsxref("String.substring", "substring")}} 方法將子字串抽取出來。
 
-<h3 id="Character_access">存取字元</h3>
+### 存取字元
 
-<p>有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：</p>
+有兩個方法可以存取字串中個別的字元。第一個是用 {{jsxref("String.charAt", "charAt")}} 方法：
 
-<pre class="brush: js">return 'cat'.charAt(1); // 回傳 "a"
-</pre>
+```js
+return 'cat'.charAt(1); // 回傳 "a"
+```
 
-<p>另一個(在ECMAScript 5中被提到)方法是將字串當作一個類似陣列的物件，直接存取字串中對應的數值索引。</p>
+另一個(在 ECMAScript 5 中被提到)方法是將字串當作一個類似陣列的物件，直接存取字串中對應的數值索引。
 
-<pre class="brush: js">return 'cat'[1]; // 回傳 "a"
-</pre>
+```js
+return 'cat'[1]; // 回傳 "a"
+```
 
-<p>對於存取字元使用的括號表達式，沒辦法去刪除或指派一個值給這些屬性。 這些屬性既非可寫的，也非可設定的。(參見 {{jsxref("Object.defineProperty")}})</p>
+對於存取字元使用的括號表達式，沒辦法去刪除或指派一個值給這些屬性。 這些屬性既非可寫的，也非可設定的。(參見 {{jsxref("Object.defineProperty")}})
 
-<h3 id="Comparing_strings">比較字串</h3>
+### 比較字串
 
-<p>C 語言的開發者有 <code>strcmp()</code> 函式可以用來比較字串。 在 JavaScript 中，你只能用<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">小於和大於運算子</a>：</p>
+C 語言的開發者有 `strcmp()` 函式可以用來比較字串。 在 JavaScript 中，你只能用[小於和大於運算子](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)：
 
-<pre class="brush: js">var a = "a";
+```js
+var a = "a";
 var b = "b";
-if (a &lt; b) // true
+if (a < b) // true
   print(a + " 小於 " + b);
-else if (a &gt; b)
+else if (a > b)
   print(a + " 大於 " + b);
 else
   print(a + " 和 " + b + " 相等");
-</pre>
+```
 
-<p>這樣類似的結果，也能使用繼承 <code>String</code> 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。</p>
+這樣類似的結果，也能使用繼承 `String` 實體的 {{jsxref("String.localeCompare", "localeCompare")}} 方法來實現。
 
-<h3 id="分辨_string_原始型別和_String_物件">分辨 string 原始型別和 <code>String</code> 物件</h3>
+### 分辨 string 原始型別和 `String` 物件
 
-<p>請注意，JavaScript 會區別 <code>String</code> 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。</p>
+請注意，JavaScript 會區別 `String` 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。
 
-<p>String literals (denoted by double or single quotes) and strings returned from <code>String</code> calls in a non-constructor context (i.e., without using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> keyword</a>) are primitive strings. JavaScript automatically converts primitives to <code>String</code> objects, so that it's possible to use <code>String</code> object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.</p>
+String literals (denoted by double or single quotes) and strings returned from `String` calls in a non-constructor context (i.e., without using the [`new` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new)) are primitive strings. JavaScript automatically converts primitives to `String` objects, so that it's possible to use `String` object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.
 
-<pre class="brush: js">var s_prim = "foo";
+```js
+var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // 印出 "string"
 console.log(typeof s_obj);  // 印出 "object"
-</pre>
+```
 
-<p>字串原始型別和 <code>String</code> 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 <code>eval</code> 會被視為原始代碼；<code>String</code> 物件則會回傳，且被視作是其他物件。舉個例子：</p>
+字串原始型別和 `String` 物件也會在使用 {{jsxref("Global_Objects/eval", "eval")}} 時給出不同的結果。 原始型別傳進 `eval` 會被視為原始代碼；`String` 物件則會回傳，且被視作是其他物件。舉個例子：
 
-<pre class="brush: js">s1 = "2 + 2";               // 建立一個字串原始型別
+```js
+s1 = "2 + 2";               // 建立一個字串原始型別
 s2 = new String("2 + 2");   // 建立一個字串物件
 console.log(eval(s1));      // 回傳數字 4
 console.log(eval(s2));      // 回傳字串 "2 + 2"
-</pre>
+```
 
-<p>因為一些原因，程式碼也許在遇到 <code>String</code> 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。</p>
+因為一些原因，程式碼也許在遇到 `String` 物件時，但需要的卻是字串原始型別；儘管如此，通常作者們不需要擔心它的差異。
 
-<p>一個 <code>String</code> 物件總能夠使用 {{jsxref("String.valueOf", "valueOf")}} 方法被轉換成自身的原始副本。</p>
+一個 `String` 物件總能夠使用 {{jsxref("String.valueOf", "valueOf")}} 方法被轉換成自身的原始副本。
 
-<pre class="brush: js">console.log(eval(s2.valueOf())); // 回傳數字 4
-</pre>
+```js
+console.log(eval(s2.valueOf())); // 回傳數字 4
+```
 
-<div class="notecard note"><p><strong>備註：</strong>對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章<a href="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>。</p></div>
+> **備註：**對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)。
 
-<h2 id="Properties">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("String.prototype")}}</dt>
- <dd>能讓字串物件增加屬性。</dd>
-</dl>
+- {{jsxref("String.prototype")}}
+  - : 能讓字串物件增加屬性。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("String.fromCharCode()")}}</dt>
- <dd>利用 Unicode 值的序列建立並回傳一個字串。</dd>
- <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
- <dd>利用編碼位置的序列建立並回傳一個字串。</dd>
-</dl>
+- {{jsxref("String.fromCharCode()")}}
+  - : 利用 Unicode 值的序列建立並回傳一個字串。
+- {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
+  - : 利用編碼位置的序列建立並回傳一個字串。
 
-<h2 id="String_通用方法"><code>String</code> 通用方法</h2>
+## `String` 通用方法
 
-<div class="notecard warning">
-<p><strong>警告：</strong>字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。</p>
-</div>
+> **警告：**字串通用方法是非標準化的、被棄用的，也有近期將被刪除的。
 
-<p>The <code>String </code>instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:</p>
+The `String `instance methods are also available in Firefox as of JavaScript 1.6 (though not part of the ECMAScript standard) on the String object for applying String methods to any object:
 
-<pre class="brush: js">var num = 15;
+```js
+var num = 15;
 alert(String.replace(num, /5/, '2'));
-</pre>
+```
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods">Generics</a> are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.</p>
+[Generics](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
 
-<p>The following is a shim to provide support to non-supporting browsers:</p>
+The following is a shim to provide support to non-supporting browsers:
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function () {
@@ -252,43 +207,43 @@ alert(String.replace(num, /5/, '2'));
             };
         };
 
-    for (i = 0; i &lt; methodCount; i++) {
+    for (i = 0; i < methodCount; i++) {
         assignStringGeneric(methods[i]);
     }
-}());</pre>
+}());
+```
 
-<h2 id="String_instances"><code>String</code> instances</h2>
+## `String` instances
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<p>{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}</p>
+{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}
 
-<p>{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}</p>
+{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="String_conversion">String conversion</h3>
+### String conversion
 
-<p>It's possible to use <code>String</code> as a "safer" {{jsxref("String.toString", "toString")}} alternative, as although it still normally calls the underlying <code>toString</code>, it also works for <code>null</code> and <code>undefined</code>. For example:</p>
+It's possible to use `String` as a "safer" {{jsxref("String.toString", "toString")}} alternative, as although it still normally calls the underlying `toString`, it also works for `null` and `undefined`. For example:
 
-<pre class="brush: js">var outputStrings = [];
-for (let i = 0, n = inputValues.length; i &lt; n; ++i) {
+```js
+var outputStrings = [];
+for (let i = 0, n = inputValues.length; i < n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.String.String")}}</p>
+{{Compat("javascript.builtins.String.String")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("DOMString")}}</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> — a C-like representation of strings based on typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
-</ul>
+- {{domxref("DOMString")}}
+- [`StringView` — a C-like representation of strings based on typed arrays](/en-US/Add-ons/Code_snippets/StringView)
+- [Binary strings](/en-US/docs/Web/API/DOMString/Binary)

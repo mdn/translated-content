@@ -3,108 +3,101 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>ArrayBuffer</code></strong> 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 <code>ArrayBuffer</code> 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 <code>ArrayBuffer</code>。</p>
+**`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">new ArrayBuffer(length)
-</pre>
+```plain
+new ArrayBuffer(length)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>length</code></dt>
- <dd>要建立的緩衝陣列大小，以位元組（byte）計算。</dd>
-</dl>
+- `length`
+  - : 要建立的緩衝陣列大小，以位元組（byte）計算。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>為一個新建立的指定大小 <code>ArrayBuffer</code> 物件，其內容皆初始化為 0。</p>
+為一個新建立的指定大小 `ArrayBuffer` 物件，其內容皆初始化為 0。
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>A {{jsxref("RangeError")}} is thrown if the <code>length</code> is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (&gt;= 2 ** 53) or negative.</p>
+A {{jsxref("RangeError")}} is thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>The <code>ArrayBuffer</code> constructor creates a new <code>ArrayBuffer</code> of the given length in bytes.</p>
+The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in bytes.
 
-<h3 id="從既有的資料取得_ArrayBuffer">從既有的資料取得 ArrayBuffer</h3>
+### 從既有的資料取得 ArrayBuffer
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">From a Base64 string</a></li>
- <li><a href="/zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()">從本地端檔案</a></li>
-</ul>
+- [From a Base64 string](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt><code>ArrayBuffer.length</code></dt>
- <dd>The <code>ArrayBuffer</code> constructor's length property whose value is 1.</dd>
- <dt>{{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("ArrayBuffer.prototype")}}</dt>
- <dd>Allows the addition of properties to all <code>ArrayBuffer</code> objects.</dd>
-</dl>
+- `ArrayBuffer.length`
+  - : The `ArrayBuffer` constructor's length property whose value is 1.
+- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+  - : The constructor function that is used to create derived objects.
+- {{jsxref("ArrayBuffer.prototype")}}
+  - : Allows the addition of properties to all `ArrayBuffer` objects.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}</dt>
- <dd>Returns <code>true</code> if <code>arg</code> is one of the ArrayBuffer views, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a> or a {{jsxref("DataView")}}. Returns <code>false</code> otherwise.</dd>
- <dt>{{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}</dt>
- <dd>
- <div>Returns a new <code>ArrayBuffer</code> whose contents are taken from the <code>oldBuffer</code>'s data and then is either truncated or zero-extended by <code>newByteLength</code>.</div>
- </dd>
-</dl>
+- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
+  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
+- {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
+  - : Returns a new `ArrayBuffer` whose contents are taken from the `oldBuffer`'s data and then is either truncated or zero-extended by `newByteLength`.
 
-<h2 id="ArrayBuffer_實例"><code>ArrayBuffer</code> 實例</h2>
+## `ArrayBuffer` 實例
 
-<p>所有的 <code>ArrayBuffer</code> 物件實例皆繼承自 {{jsxref("ArrayBuffer.prototype")}}.</p>
+所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer.prototype")}}.
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<p>{{page('zh-TW/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','屬性')}}</p>
+{{page('zh-TW/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','屬性')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<p>{{page('/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','方法')}}</p>
+{{page('/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','方法')}}
 
-<dl>
- <dt>{{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}</dt>
- <dd>Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.</dd>
-</dl>
+- {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
+  - : Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:</p>
+In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
 
-<pre class="brush: js">var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);</pre>
+```js
+var buffer = new ArrayBuffer(8);
+var view   = new Int32Array(buffer);
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="相容性備註">相容性備註</h2>
+## 相容性備註
 
-<p>Starting with ECMAScript 2015, <code>ArrayBuffer</code> constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an <code>ArrayBuffer</code> constructor as a function without <code>new</code>, will throw a {{jsxref("TypeError")}} from now on.</p>
+Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
-<pre class="brush: js example-bad">var dv = ArrayBuffer(10);
+```js example-bad
+var dv = ArrayBuffer(10);
 // TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new ArrayBuffer(10);</pre>
+```js example-good
+var dv = new ArrayBuffer(10);
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}
+- {{jsxref("SharedArrayBuffer")}}

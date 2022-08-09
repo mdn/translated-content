@@ -8,49 +8,49 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.floor()</code></strong> 函式會回傳小於等於所給數字的最大整數。</p>
+**`Math.floor()`** 函式會回傳小於等於所給數字的最大整數。
 
-<div>{{EmbedInteractiveExample("pages/js/math-floor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
+## 語法
 
+```plain
+Math.floor(x)
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><code>Math.floor(<var>x</var>)</code></pre>
+- `x`
+  - : 數字型態。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>x</code></dt>
- <dd>數字型態。</dd>
-</dl>
+小於等於所給數字的最大整數。
 
-<h3 id="回傳值">回傳值</h3>
+## 描述
 
-<p>小於等於所給數字的最大整數。</p>
+`floor()` 是 `Math`的靜態函式, 所以不需實體化`Math` 物件, 只要直接呼叫 `Math.floor()`就能使用。
 
-<h2 id="描述">描述</h2>
+(此外`Math` 並不是建構子).
 
-<p> <code>floor()</code> 是 <code>Math</code>的靜態函式, 所以不需實體化<code>Math</code> 物件, 只要直接呼叫 <code>Math.floor()</code>就能使用。</p>
+## 範例
 
-<p>(此外<code>Math</code> 並不是建構子).</p>
+### 使用 `Math.floor()`
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_Math.floor">使用 <code>Math.floor()</code></h3>
-
-<pre class="brush: js">Math.floor( 45.95); //  45
+```js
+Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
 Math.floor(  4   ); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-</pre>
+```
 
-<h3 id="Decimal_adjustment">Decimal adjustment</h3>
+### Decimal adjustment
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -68,7 +68,7 @@ Math.floor(-45.95); // -46
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -118,22 +118,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Math.floor")}}</p>
+{{Compat("javascript.builtins.Math.floor")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

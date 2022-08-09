@@ -9,39 +9,38 @@ tags:
   - Property
 translation_of: Web/API/Document/designMode
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div> </div>
+## 概要
 
-<h2 id="Summary">概要</h2>
+`document.designMode` 控制整個文件是否能夠編輯。可用的數值是 `"on"` 和 `"off"`。根據規範，這個屬性預設值為 `"off"`。Firefox 遵從這個標準。較早以前的 Chrome 和 IE 預設值是 `"inherit"`。從 Chrome 43 起，預設值是 「`off`」；不再支援「`inherit`」。在 IE6-10 中，數值為大寫英文字母。
 
-<p><code>document.designMode</code> 控制整個文件是否能夠編輯。可用的數值是 <code>"on"</code> 和 <code>"off"</code>。根據規範，這個屬性預設值為 <code>"off"</code>。Firefox 遵從這個標準。較早以前的 Chrome 和 IE 預設值是 <code>"inherit"</code>。從 Chrome 43 起，預設值是 「<code>off</code>」；不再支援「<code>inherit</code>」。在 IE6-10 中，數值為大寫英文字母。</p>
+## 語法
 
-<h2 id="語法">語法</h2>
-
-<pre class="brush: js">var mode = document.designMode;
+```js
+var mode = document.designMode;
 document.designMode = "on";
-document.designMode = "off";</pre>
+document.designMode = "off";
+```
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<p>讓 {{HTMLElement("iframe")}} 的文件可以給使用者編輯：</p>
+讓 {{HTMLElement("iframe")}} 的文件可以給使用者編輯：
 
-<pre>iframeNode.contentDocument.designMode = "on";
-</pre>
+```plain
+iframeNode.contentDocument.designMode = "on";
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Document.designMode")}}
 
-<h2 id="See_also">參考</h2>
+## 參考
 
-<ul>
- <li><a href="/zh-TW/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx">designMode property</a> on MSDN</li>
-</ul>
+- [Rich-Text Editing in Mozilla](/zh-TW/docs/Rich-Text_Editing_in_Mozilla)
+- {{domxref("HTMLElement.contentEditable")}}
+- [designMode property](<https://msdn.microsoft.com/en-us/library/ms533720(v=vs.85).aspx>) on MSDN

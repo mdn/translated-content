@@ -1,80 +1,84 @@
 ---
 title: ':first-child'
-slug: 'Web/CSS/:first-child'
+slug: Web/CSS/:first-child
 tags:
   - CSS
   - CSS Pseudo-class
   - Layout
   - Reference
   - Web
-translation_of: 'Web/CSS/:first-child'
+translation_of: Web/CSS/:first-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>:first-child</code>是<a href="/en-US/docs/Web/CSS">CSS</a>當中的一種<a href="/en-US/docs/Web/CSS/Pseudo-classes">偽類別（pseudo-class）</a>，代表任何身為長子的元素（親元素的第一個子元素）。</p>
+`:first-child`是[CSS](/en-US/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/en-US/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
 
-<h2 id="語法">語法</h2>
+## 語法
 
 {{csssyntax}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="範例_1">範例 1</h3>
+### 範例 1
 
-<h4 id="HTML_內文">HTML 內文</h4>
+#### HTML 內文
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;This span is limed!&lt;/span&gt;
-  &lt;span&gt;This span is not. :(&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <span>This span is limed!</span>
+  <span>This span is not. :(</span>
+</div>
+```
 
-<h4 id="CSS_內文">CSS 內文</h4>
+#### CSS 內文
 
-<pre class="brush: css">span:first-child {
+```css
+span:first-child {
     background-color: lime;
 }
-</pre>
+```
 
-<p>呈現效果如下：</p>
+呈現效果如下：
 
-<p>{{EmbedLiveSample('範例_1',300,50)}}</p>
+{{EmbedLiveSample('範例_1',300,50)}}
 
-<h3 id="範例_2_-_使用_UL">範例 2 - 使用 UL</h3>
+### 範例 2 - 使用 UL
 
-<h4 id="HTML_內文_2">HTML 內文</h4>
+#### HTML 內文
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;List 1&lt;/li&gt;
-  &lt;li&gt;List 2&lt;/li&gt;
-  &lt;li&gt;List 3&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>List 1</li>
+  <li>List 2</li>
+  <li>List 3</li>
+</ul>
+```
 
-<h4 id="CSS_內文_2">CSS 內文</h4>
+#### CSS 內文
 
-<pre class="brush: css">li{
+```css
+li{
   color:red;
 }
 li:first-child{
   color:green;
-}</pre>
+}
+```
 
-<p>呈現效果如下：</p>
+呈現效果如下：
 
-<p>{{EmbedLiveSample('範例_2_-_使用_UL',300,100)}}</p>
+{{EmbedLiveSample('範例_2_-_使用_UL',300,100)}}
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("css.selectors.first-child")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{cssxref(":last-child")}}</li>
- <li>{{cssxref(":nth-child")}}</li>
- <li>{{cssxref(":last-of-type")}}</li>
-</ul>
+- {{cssxref(":last-child")}}
+- {{cssxref(":nth-child")}}
+- {{cssxref(":last-of-type")}}

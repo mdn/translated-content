@@ -10,56 +10,51 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>add()</strong></code> 會在一個 <code>Set</code> 物件的尾端加上一個指定 <code>value</code> 的新元素。</p>
+**`add()`** 會在一個 `Set` 物件的尾端加上一個指定 `value` 的新元素。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
+## 語法
 
+```plain
+mySet.add(value);
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><em>mySet</em>.add(<em>value</em>);</pre>
+- `value`
+  - : 要被加到 `Set` 物件中的值。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>value</code></dt>
- <dd>要被加到 <code>Set</code> 物件中的值。</dd>
-</dl>
+`Set` 物件本身。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p><code>Set</code> 物件本身。</p>
+### 使用 `add` 方法
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_add_方法">使用 <code>add</code> 方法</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add('some text'); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set.add")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.Set.add")}}</p>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

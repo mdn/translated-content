@@ -5,82 +5,53 @@ tags:
   - 播放速度 速度 速率
 translation_of: Web/API/HTMLMediaElement/ratechange_event
 ---
-<p><code>ratechange</code> 事件將在播放速度改變時被觸發</p>
+`ratechange` 事件將在播放速度改變時被觸發
 
-<h2 id="基本資訊">基本資訊</h2>
+## 基本資訊
 
-<dl>
- <dt>規格</dt>
- <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ratechange">HTML5 Media</a></dd>
- <dt>介面</dt>
- <dd>事件</dd>
- <dt>是否冒泡</dt>
- <dd>否</dd>
- <dt>是否可取消</dt>
- <dd>否</dd>
- <dt>目標</dt>
- <dd>元素</dd>
- <dt>預設行為</dt>
- <dd>無</dd>
-</dl>
+- 規格
+  - : [HTML5 Media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ratechange)
+- 介面
+  - : 事件
+- 是否冒泡
+  - : 否
+- 是否可取消
+  - : 否
+- 目標
+  - : 元素
+- 預設行為
+  - : 無
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">屬性</th>
-   <th scope="col">類型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件目標（DOM樹中最頂層的目標)</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件類型</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否觸發冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否可取消</td>
-  </tr>
- </tbody>
-</table>
+| 屬性                                  | 類型                                 | 描述                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件目標（DOM 樹中最頂層的目標) |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件類型                        |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 事件是否觸發冒泡                |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 事件是否可取消                  |
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="相關事件">相關事件</h2>
+## 相關事件
 
-<ul>
- <li>{{event("playing")}}</li>
- <li>{{event("waiting")}}</li>
- <li>{{event("seeking")}}</li>
- <li>{{event("seeked")}}</li>
- <li>{{event("ended")}}</li>
- <li>{{event("loadedmetadata")}}</li>
- <li>{{event("loadeddata")}}</li>
- <li>{{event("canplay")}}</li>
- <li>{{event("canplaythrough")}}</li>
- <li>{{event("durationchange")}}</li>
- <li>{{event("timeupdate")}}</li>
- <li>{{event("play")}}</li>
- <li>{{event("pause")}}</li>
- <li>{{event("ratechange")}}</li>
- <li>{{event("volumechange")}}</li>
- <li>{{event("suspend")}}</li>
- <li>{{event("emptied")}}</li>
- <li>{{event("stalled")}}</li>
-</ul>
+- {{event("playing")}}
+- {{event("waiting")}}
+- {{event("seeking")}}
+- {{event("seeked")}}
+- {{event("ended")}}
+- {{event("loadedmetadata")}}
+- {{event("loadeddata")}}
+- {{event("canplay")}}
+- {{event("canplaythrough")}}
+- {{event("durationchange")}}
+- {{event("timeupdate")}}
+- {{event("play")}}
+- {{event("pause")}}
+- {{event("ratechange")}}
+- {{event("volumechange")}}
+- {{event("suspend")}}
+- {{event("emptied")}}
+- {{event("stalled")}}

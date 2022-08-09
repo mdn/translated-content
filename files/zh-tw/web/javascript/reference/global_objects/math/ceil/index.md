@@ -8,50 +8,50 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.ceil()</code></strong> 函式會回傳大於等於所給數字的最小整數。</p>
+**`Math.ceil()`** 函式會回傳大於等於所給數字的最小整數。
 
-<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
+## 語法
 
+```plain
+Math.ceil(x)
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+- `x`
+  - : 一個數字。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一個數字。</dd>
-</dl>
+一個大於等於指定數字的最小整數。
 
-<h3 id="回傳值">回傳值</h3>
+## 描述
 
-<p>一個大於等於指定數字的最小整數。</p>
+Because `ceil()` is a static method of `Math`, you always use it as `Math.ceil()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
-<h2 id="描述">描述</h2>
+## 範例
 
-<p>Because <code>ceil()</code> is a static method of <code>Math</code>, you always use it as <code>Math.ceil()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+### 使用 `Math.ceil()`
 
-<h2 id="範例">範例</h2>
+The following example shows example usage of `Math.ceil()`.
 
-<h3 id="使用_Math.ceil()">使用 <code>Math.ceil()</code></h3>
-
-<p>The following example shows example usage of <code>Math.ceil()</code>.</p>
-
-<pre class="brush: js">Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
-</pre>
+```
 
-<h3 id="Decimal_adjustment">Decimal adjustment</h3>
+### Decimal adjustment
 
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -69,7 +69,7 @@ Math.ceil(-7.004); // -7
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -119,22 +119,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Math.ceil")}}</p>
+{{Compat("javascript.builtins.Math.ceil")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

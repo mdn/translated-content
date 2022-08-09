@@ -9,65 +9,62 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Set</code></strong> 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。</p>
+**`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 
+## 語法
 
+```plain
+new Set([iterable]);
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox">new Set([<em>iterable</em>]);</pre>
+- `iterable`
+  - : 若一個[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of)被傳入，其所有的元素將會被加入至新的 `Set`。若你沒有指定此參數，或參數值為 `null`，則新的 `Set` 會是空的。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>若一個<a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">可迭代物件</a>被傳入，其所有的元素將會被加入至新的 <code>Set</code>。若你沒有指定此參數，或參數值為 <code>null</code>，則新的 <code>Set</code> 會是空的。</dd>
-</dl>
+一個新的 `Set` 物件。
 
-<h3 id="回傳值">回傳值</h3>
+## 描述
 
-<p>一個新的 <code>Set</code> 物件。</p>
+`Set` 對象是數值的收集器。您可以按插入順序迭代收集器中的元素。在 `Set` 裡的元素只會出現一次**；** 意即在`Set`裡的元素都是獨一無二
 
-<h2 id="描述">描述</h2>
+### 值的相等性
 
-<p><code>Set</code> 對象是數值的收集器。您可以按插入順序迭代收集器中的元素。在 <code>Set</code> 裡的元素只會出現一次<strong>；</strong> 意即在<code>Set</code>裡的元素都是獨一無二</p>
+因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的 ECMAScript 規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 `Set`裡+0(在嚴格模式是和-0 相等)和-0 是不同的值。然而在 ECMAScript 2015 規範中這點已被更改。請參閱 [瀏覽器兼容性](#Browser_compatibility) 中的"Value equality for -0 and 0"。
 
-<h3 id="值的相等性">值的相等性</h3>
+另外，NaN 和 undefined 都可以被放置在 Set 中， NaN 之間被視為相同的值（儘管 NaN !== NaN）。
 
-<p>因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的ECMAScript規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 <code>Set</code>裡+0(在嚴格模式是和-0相等)和-0是不同的值。然而在 ECMAScript 2015規範中這點已被更改。請參閱 <a href="#Browser_compatibility">瀏覽器兼容性</a> 中的"Value equality for -0 and 0"。</p>
+- `Set.length`
+  - : The value of the `length` property is 0.
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : The constructor function that is used to create derived objects.
+- {{jsxref("Set.prototype")}}
+  - : Represents the prototype for the `Set` constructor. Allows the addition of properties to all `Set` objects.
 
-<p>另外，NaN和undefined都可以被放置在Set 中， NaN之間被視為相同的值（儘管 NaN !== NaN）。</p>
+## `Set` 物件實體
 
-<dl>
- <dt><code>Set.length</code></dt>
- <dd>The value of the <code>length</code> property is 0.</dd>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("Set.prototype")}}</dt>
- <dd>Represents the prototype for the <code>Set</code> constructor. Allows the addition of properties to all <code>Set</code> objects.</dd>
-</dl>
+All `Set` instances inherit from {{jsxref("Set.prototype")}}.
 
-<h2 id="Set_物件實體"><code>Set</code> 物件實體</h2>
+### 屬性
 
-<p>All <code>Set</code> instances inherit from {{jsxref("Set.prototype")}}.</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
 
-<h3 id="屬性">屬性</h3>
+### 方法
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}</p>
+{{page('en-US/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
 
-<h3 id="方法">方法</h3>
+## 範例
 
-<p>{{page('en-US/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}</p>
+### 使用 `Set` 物件
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_Set_物件">使用 <code>Set</code> 物件</h3>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
@@ -91,11 +88,13 @@ mySet.delete(5); // removes 5 from the set
 mySet.has(5);    // false, 5 has been removed
 
 mySet.size; // 4, we just removed one value
-console.log(mySet);// Set [ 1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2} ]</pre>
+console.log(mySet);// Set [ 1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2} ]
+```
 
-<h3 id="迭代_Sets">迭代 Sets</h3>
+### 迭代 Sets
 
-<pre class="brush: js">// iterate over items in set
+```js
+// iterate over items in set
 // logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet) console.log(item);
 
@@ -109,7 +108,7 @@ for (let item of mySet.values()) console.log(item);
 //(key and value are the same here)
 for (let [key, value] of mySet.entries()) console.log(key);
 
-// convert Set object to an Array object, with <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>
+// convert Set object to an Array object, with Array.from
 var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
 
 // the following will also work if run in an HTML document
@@ -122,10 +121,10 @@ mySet2.size; // 4
 [...mySet2]; // [1, 2, 3, 4]
 
 // intersect can be simulated via
-var intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
+var intersection = new Set([...set1].filter(x => set2.has(x)));
 
 // difference can be simulated via
-var difference = new Set([...set1].filter(x =&gt; !set2.has(x)));
+var difference = new Set([...set1].filter(x => !set2.has(x)));
 
 // Iterate set entries with forEach
 mySet.forEach(function(value) {
@@ -135,11 +134,13 @@ mySet.forEach(function(value) {
 // 1
 // 2
 // 3
-// 4</pre>
+// 4
+```
 
-<h3 id="實作基本的_set_操作">實作基本的 set 操作</h3>
+### 實作基本的 set 操作
 
-<pre class="brush: js">Set.prototype.isSuperset = function(subset) {
+```js
+Set.prototype.isSuperset = function(subset) {
     for (var elem of subset) {
         if (!this.has(elem)) {
             return false;
@@ -179,16 +180,16 @@ var setA = new Set([1, 2, 3, 4]),
     setB = new Set([2, 3]),
     setC = new Set([3, 4, 5, 6]);
 
-setA.isSuperset(setB); // =&gt; true
-setA.union(setC); // =&gt; Set [1, 2, 3, 4, 5, 6]
-setA.intersection(setC); // =&gt; Set [3, 4]
-setA.difference(setC); // =&gt; Set [1, 2]
+setA.isSuperset(setB); // => true
+setA.union(setC); // => Set [1, 2, 3, 4, 5, 6]
+setA.intersection(setC); // => Set [3, 4]
+setA.difference(setC); // => Set [1, 2]
+```
 
-</pre>
+### 與 `Array` 物件關聯
 
-<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
-
-<pre class="brush: js">var myArray = ['value1', 'value2', 'value3'];
+```js
+var myArray = ['value1', 'value2', 'value3'];
 
 // Use the regular Set constructor to transform an Array into a Set
 var mySet = new Set(myArray);
@@ -196,30 +197,28 @@ var mySet = new Set(myArray);
 mySet.has('value1'); // returns true
 
 // Use the spread operator to transform a set into an Array.
-console.log([...mySet]); // Will show you exactly the same Array as myArray</pre>
+console.log([...mySet]); // Will show you exactly the same Array as myArray
+```
 
-<h3 id="與_Strings_關聯">與 <code>Strings</code> 關聯</h3>
+### 與 `Strings` 關聯
 
-<pre class="brush: js">var text = 'India';
+```js
+var text = 'India';
 
 var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
 mySet.size;  // 5
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.builtins.Set")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Set")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

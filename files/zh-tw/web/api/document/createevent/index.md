@@ -5,27 +5,27 @@ translation_of: Web/API/Document/createEvent
 translation_of_original: Web/API/Event/createEvent
 original_slug: Web/API/Event/createEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>建立一個新的事件，該事件必須先以其 <code>init()</code> method 初始化才行。</p>
+建立一個新的事件，該事件必須先以其 `init()` method 初始化才行。
 
-<h3 id="語法">語法</h3>
+### 語法
 
-<pre><code>document.createEvent(type) </code></pre>
+```plain
+document.createEvent(type)
+```
 
-<dl>
- <dt><code>type</code></dt>
- <dd>一個 string 。表示所建立的事件名稱。</dd>
-</dl>
+- `type`
+  - : 一個 string 。表示所建立的事件名稱。
 
-<p>這個 method 會回傳一個新的 DOM {{ domxref("Event") }} object ，其事件類型為傳入的 type 。該事件必須先初始化才能使用。</p>
+這個 method 會回傳一個新的 DOM {{ domxref("Event") }} object ，其事件類型為傳入的 type 。該事件必須先初始化才能使用。
 
-<h3 id="範例">範例</h3>
+### 範例
 
-<pre class="brush: js">var newEvent = document.createEvent("UIEvents");</pre>
+```js
+var newEvent = document.createEvent("UIEvents");
+```
 
-<h3 id="規格定義">規格定義</h3>
+### 規格定義
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document">DOM Level 2 Events</a></li>
-</ul>
+- [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)

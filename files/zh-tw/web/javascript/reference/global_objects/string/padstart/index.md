@@ -3,44 +3,43 @@ title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
-<div>{{JSRef}}{{SeeCompatTable}}</div>
+{{JSRef}}{{SeeCompatTable}}
 
-<p><strong><code>padStart()</code></strong><code> 會將用給定用於填充的字串，以重複的方式，插入到目標字串的起頭(左側)，直到目標字串到達指定長度。</code></p>
+**`padStart()`**` 會將用給定用於填充的字串，以重複的方式，插入到目標字串的起頭(左側)，直到目標字串到達指定長度。`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+```plain
+str.padStart(targetLength [, padString])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>目標字串被填充後的長度。如果此參數小於原字串的長度，那將直接返回原字串。</dd>
- <dt><code>padString</code> {{optional_inline}}</dt>
- <dd>用來填充的字串。如果填充字串太長，則由左側開始，擷取所需要的長度。此參數預設值是空白 " " (U+0020).</dd>
-</dl>
+- `targetLength`
+  - : 目標字串被填充後的長度。如果此參數小於原字串的長度，那將直接返回原字串。
+- `padString` {{optional_inline}}
+  - : 用來填充的字串。如果填充字串太長，則由左側開始，擷取所需要的長度。此參數預設值是空白 " " (U+0020).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>目標字串被填充到指定長度後，所得的新字串。</p>
+目標字串被填充到指定長度後，所得的新字串。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">'abc'.padStart(10);         // "       abc"
+```js
+'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.padEnd()")}}</li>
-</ul>
+- {{jsxref("String.padEnd()")}}

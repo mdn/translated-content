@@ -3,43 +3,42 @@ title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>JSON.stringify()</code></strong> method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified, or optionally including only the specified properties if a replacer array is specified.</p>
+**`JSON.stringify()`** method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified, or optionally including only the specified properties if a replacer array is specified.
 
-<div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])</code></pre>
+```plain
+JSON.stringify(value[, replacer[, space]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>value</code></dt>
- <dd>The value to convert to a JSON string.</dd>
- <dt><code>replacer</code> {{optional_inline}}</dt>
- <dd>A function that alters the behavior of the stringification process, or an array of {{jsxref("String")}} and {{jsxref("Number")}} objects that serve as a whitelist for selecting/filtering the properties of the value object to be included in the JSON string. If this value is null or not provided, all properties of the object are included in the resulting JSON string.</dd>
- <dt><code>space</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("String")}} or {{jsxref("Number")}} object that's used to insert white space into the output JSON string for readability purposes. If this is a <code>Number</code>, it indicates the number of space characters to use as white space; this number is capped at 10 (if it is greater, the value is just 10). Values less than 1 indicate that no space should be used. If this is a <code>String</code>, the string (or the first 10 characters of the string, if it's longer than that) is used as white space. If this parameter is not provided (or is null), no white space is used.</dd>
-</dl>
+- `value`
+  - : The value to convert to a JSON string.
+- `replacer` {{optional_inline}}
+  - : A function that alters the behavior of the stringification process, or an array of {{jsxref("String")}} and {{jsxref("Number")}} objects that serve as a whitelist for selecting/filtering the properties of the value object to be included in the JSON string. If this value is null or not provided, all properties of the object are included in the resulting JSON string.
+- `space` {{optional_inline}}
+  - : A {{jsxref("String")}} or {{jsxref("Number")}} object that's used to insert white space into the output JSON string for readability purposes. If this is a `Number`, it indicates the number of space characters to use as white space; this number is capped at 10 (if it is greater, the value is just 10). Values less than 1 indicate that no space should be used. If this is a `String`, the string (or the first 10 characters of the string, if it's longer than that) is used as white space. If this parameter is not provided (or is null), no white space is used.
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>A JSON string representing the given value.</p>
+A JSON string representing the given value.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>JSON.stringify()</code> converts a value to JSON notation representing it:</p>
+`JSON.stringify()` converts a value to JSON notation representing it:
 
-<ul>
- <li>{{jsxref("Boolean")}}, {{jsxref("Number")}}, and {{jsxref("String")}} objects are converted to the corresponding primitive values during stringification, in accord with the traditional conversion semantics.</li>
- <li>If {{jsxref("undefined")}}, a function, or a symbol is encountered during conversion it is either omitted (when it is found in an object) or censored to {{jsxref("null")}} (when it is found in an array). <code>JSON.stringify</code> can also just return <code>undefined</code> when passing in "pure" values like <code>JSON.stringify(function(){})</code> or <code>JSON.stringify(undefined)</code>.</li>
- <li>All symbol-keyed properties will be completely ignored, even when using the <code>replacer</code> function.</li>
- <li>Non-enumerable properties will be ignored</li>
-</ul>
+- {{jsxref("Boolean")}}, {{jsxref("Number")}}, and {{jsxref("String")}} objects are converted to the corresponding primitive values during stringification, in accord with the traditional conversion semantics.
+- If {{jsxref("undefined")}}, a function, or a symbol is encountered during conversion it is either omitted (when it is found in an object) or censored to {{jsxref("null")}} (when it is found in an array). `JSON.stringify` can also just return `undefined` when passing in "pure" values like `JSON.stringify(function(){})` or `JSON.stringify(undefined)`.
+- All symbol-keyed properties will be completely ignored, even when using the `replacer` function.
+- Non-enumerable properties will be ignored
 
-<pre class="brush: js">JSON.stringify({});                  // '{}'
+```js
+JSON.stringify({});                  // '{}'
 JSON.stringify(true);                // 'true'
 JSON.stringify('foo');               // '"foo"'
 JSON.stringify([1, 'false', false]); // '[1,"false",false]'
@@ -73,26 +72,24 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 // Non-enumerable properties:
 JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
 // '{"y":"y"}'
+```
 
-</pre>
+### The `replacer` parameter
 
-<h3 id="The_replacer_parameter">The <code>replacer</code> parameter</h3>
+The `replacer` parameter can be either a function or an array. As a function, it takes two parameters, the key and the value being stringified. The object in which the key was found is provided as the replacer's `this` parameter. Initially it gets called with an empty key representing the object being stringified, and it then gets called for each property on the object or array being stringified. It should return the value that should be added to the JSON string, as follows:
 
-<p>The <code>replacer</code> parameter can be either a function or an array. As a function, it takes two parameters, the key and the value being stringified. The object in which the key was found is provided as the replacer's <code>this</code> parameter. Initially it gets called with an empty key representing the object being stringified, and it then gets called for each property on the object or array being stringified. It should return the value that should be added to the JSON string, as follows:</p>
+- If you return a {{jsxref("Number")}}, the string corresponding to that number is used as the value for the property when added to the JSON string.
+- If you return a {{jsxref("String")}}, that string is used as the property's value when adding it to the JSON string.
+- If you return a {{jsxref("Boolean")}}, "true" or "false" is used as the property's value, as appropriate, when adding it to the JSON string.
+- If you return any other object, the object is recursively stringified into the JSON string, calling the `replacer` function on each property, unless the object is a function, in which case nothing is added to the JSON string.
+- If you return `undefined`, the property is not included (i.e., filtered out) in the output JSON string.
 
-<ul>
- <li>If you return a {{jsxref("Number")}}, the string corresponding to that number is used as the value for the property when added to the JSON string.</li>
- <li>If you return a {{jsxref("String")}}, that string is used as the property's value when adding it to the JSON string.</li>
- <li>If you return a {{jsxref("Boolean")}}, "true" or "false" is used as the property's value, as appropriate, when adding it to the JSON string.</li>
- <li>If you return any other object, the object is recursively stringified into the JSON string, calling the <code>replacer</code> function on each property, unless the object is a function, in which case nothing is added to the JSON string.</li>
- <li>If you return <code>undefined</code>, the property is not included (i.e., filtered out) in the output JSON string.</li>
-</ul>
+> **備註：** You cannot use the `replacer` function to remove values from an array. If you return `undefined` or a function then `null` is used instead.
 
-<div class="notecard note"><p><strong>Note:</strong> You cannot use the <code>replacer</code> function to remove values from an array. If you return <code>undefined</code> or a function then <code>null</code> is used instead.</p></div>
+#### Example with a function
 
-<h4 id="Example_with_a_function">Example with a function</h4>
-
-<pre class="brush: js">function replacer(key, value) {
+```js
+function replacer(key, value) {
   // Filtering out properties
   if (typeof value === 'string') {
     return undefined;
@@ -103,49 +100,51 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
-</pre>
+```
 
-<h4 id="Example_with_an_array">Example with an array</h4>
+#### Example with an array
 
-<p>If <code>replacer</code> is an array, the array's values indicate the names of the properties in the object that should be included in the resulting JSON string.</p>
+If `replacer` is an array, the array's values indicate the names of the properties in the object that should be included in the resulting JSON string.
 
-<pre class="brush: js">JSON.stringify(foo, ['week', 'month']);
+```js
+JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
-</pre>
+```
 
-<h3 id="The_space_argument">The <code>space</code> argument</h3>
+### The `space` argument
 
-<p>The <code>space</code> argument may be used to control spacing in the final string. If it is a number, successive levels in the stringification will each be indented by this many space characters (up to 10). If it is a string, successive levels will be indented by this string (or the first ten characters of it).</p>
+The `space` argument may be used to control spacing in the final string. If it is a number, successive levels in the stringification will each be indented by this many space characters (up to 10). If it is a string, successive levels will be indented by this string (or the first ten characters of it).
 
-<pre class="brush: js">JSON.stringify({ a: 2 }, null, ' ');
+```js
+JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
-</pre>
+```
 
-<p>Using a tab character mimics standard pretty-print appearance:</p>
+Using a tab character mimics standard pretty-print appearance:
 
-<pre class="brush: js">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+```js
+JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // returns the string:
 // '{
 //     "uno": 1,
 //     "dos": 2
 // }'
-</pre>
+```
 
-<h3 id="toJSON_behavior"><code>toJSON()</code> behavior</h3>
+### `toJSON()` behavior
 
-<p>If an object being stringified has a property named <code>toJSON</code> whose value is a function, then the <code>toJSON()</code> method customizes JSON stringification behavior: instead of the object being serialized, the value returned by the <code>toJSON()</code> method when called will be serialized. <code>JSON.stringify()</code> calls <code>toJSON</code> with one parameter:</p>
+If an object being stringified has a property named `toJSON` whose value is a function, then the `toJSON()` method customizes JSON stringification behavior: instead of the object being serialized, the value returned by the `toJSON()` method when called will be serialized. `JSON.stringify()` calls `toJSON` with one parameter:
 
-<ul>
- <li>if this object is a property value, the property name</li>
- <li>if it is in an array, the index in the array, as a string</li>
- <li>an empty string if <code>JSON.stringify()</code> was directly called on this object</li>
-</ul>
+- if this object is a property value, the property name
+- if it is in an array, the index in the array, as a string
+- an empty string if `JSON.stringify()` was directly called on this object
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">const bonnie = {
+```js
+const bonnie = {
   name: 'Bonnie Washington',
   age: 17,
   class: 'Year 5 Wisdom',
@@ -176,13 +175,15 @@ JSON.stringify(students);
 
 const monitorCandidate = [bonnie];
 JSON.stringify(monitorCandidate)
-// Returns '[{"name":"Bonnie Washington","class":"Wisdom","year":5,"code":"0"}]'</pre>
+// Returns '[{"name":"Bonnie Washington","class":"Wisdom","year":5,"code":"0"}]'
+```
 
-<h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">Issue with plain <code>JSON.stringify</code> for use as JavaScript</h3>
+### Issue with plain `JSON.stringify` for use as JavaScript
 
-<p>Note that JSON is <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">not a completely strict subset of JavaScript</a>, with two line terminators (Line separator and Paragraph separator) not needing to be escaped in JSON but needing to be escaped in JavaScript. Therefore, if the JSON is meant to be evaluated or directly utilized within <a href="https://en.wikipedia.org/wiki/JSONP">JSONP</a>, the following utility can be used:</p>
+Note that JSON is [not a completely strict subset of JavaScript](http://timelessrepo.com/json-isnt-a-javascript-subset), with two line terminators (Line separator and Paragraph separator) not needing to be escaped in JSON but needing to be escaped in JavaScript. Therefore, if the JSON is meant to be evaluated or directly utilized within [JSONP](https://en.wikipedia.org/wiki/JSONP), the following utility can be used:
 
-<pre class="brush: js">function jsFriendlyJSONStringify (s) {
+```js
+function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -203,17 +204,17 @@ eval('(' + jsFriendlyJSONStringify(s) + ')');
 
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert
-alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}</pre>
+alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
+```
 
-<h3 id="Example_of_using_JSON.stringify_with_localStorage">Example of using <code>JSON.stringify()</code> with <code>localStorage</code></h3>
+### Example of using `JSON.stringify()` with `localStorage`
 
-<p>In a case where you want to store an object created by your user and allowing it to be restored even after the browser has been closed, the following example is a model for the applicability of <code>JSON.stringify()</code>:</p>
+In a case where you want to store an object created by your user and allowing it to be restored even after the browser has been closed, the following example is a model for the applicability of `JSON.stringify()`:
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</p>
-</div>
+> **警告：** Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.
 
-<pre class="brush: js">// Creating an example of JSON
+```js
+// Creating an example of JSON
 var session = {
   'screens': [],
   'state': true
@@ -236,18 +237,16 @@ var restoredSession = JSON.parse(localStorage.getItem('session'));
 // Now restoredSession variable contains the object that was saved
 // in localStorage
 console.log(restoredSession);
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("JSON.parse()")}}</li>
-</ul>
+- {{jsxref("JSON.parse()")}}

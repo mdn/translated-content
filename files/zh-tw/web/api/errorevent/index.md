@@ -3,48 +3,42 @@ title: ErrorEvent
 slug: Web/API/ErrorEvent
 translation_of: Web/API/ErrorEvent
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>ErrorEvent</code></strong> 介面是用來提供程式碼或是檔案的錯誤訊息的事件。</p>
+**`ErrorEvent`** 介面是用來提供程式碼或是檔案的錯誤訊息的事件。
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>此介面繼承了其父 {{domxref("Event")}} 的 properties 。</em></p>
+_此介面繼承了其父 {{domxref("Event")}} 的 properties 。_
 
-<dl>
- <dt>{{domxref("ErrorEvent.message")}} {{readonlyInline}}</dt>
- <dd>一 {{domxref("DOMString")}} 提供具可讀性的關於問題的錯誤訊息。</dd>
- <dt>{{domxref("ErrorEvent.filename")}} {{readonlyInline}}</dt>
- <dd>一 {{domxref("DOMString")}} ，為發生錯誤的程式碼檔案的檔名。</dd>
- <dt>{{domxref("ErrorEvent.lineno")}} {{readonlyInline}}</dt>
- <dd>一 <code>整數</code> ，為發生問題的程式的行數。</dd>
- <dt>{{domxref("ErrorEvent.colno")}} {{readonlyInline}}</dt>
- <dd>一 <code>整數</code> ，為發生問題的程式的欄數。</dd>
- <dt>{{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>一個參與該事件的 JavaScript <code>Object</code> 。</dd>
-</dl>
+- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
+  - : 一 {{domxref("DOMString")}} 提供具可讀性的關於問題的錯誤訊息。
+- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
+  - : 一 {{domxref("DOMString")}} ，為發生錯誤的程式碼檔案的檔名。
+- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
+  - : 一 `整數` ，為發生問題的程式的行數。
+- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
+  - : 一 `整數` ，為發生問題的程式的欄數。
+- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
+  - : 一個參與該事件的 JavaScript `Object` 。
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}</dt>
- <dd>建立一 <code>ErrorEvent</code> 事件，其包含提供的參數。</dd>
-</dl>
+- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
+  - : 建立一 `ErrorEvent` 事件，其包含提供的參數。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>此介面繼承了其父 {{domxref("Event")}} 的 methods。</em></p>
+_此介面繼承了其父 {{domxref("Event")}} 的 methods。_
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="瀏覽器支援度比較">瀏覽器支援度比較</h2>
+## 瀏覽器支援度比較
 
 {{Compat("api.ErrorEvent")}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a>, most likely objects to raise such an event</li>
-</ul>
+- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers), most likely objects to raise such an event
