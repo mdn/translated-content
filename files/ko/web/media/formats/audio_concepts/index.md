@@ -178,7 +178,7 @@ Human Speech (Core): 인간 회화 (핵심)<br>Human Speech (Full Range): 인간
 
 중요한 것은, 코덱은 이 모든 어려운 일들을 대신 한다는 점입니다. 이것이 많은 엔지니어링과 과학적 연구가 새로운 알고리즘과 코덱의 생성을 연구하는 이유입니다. 여러분이 해야 할 하나의 일은 옵션과 여러분의 사용 경우를 고려하고, 필요에 맞는 적절한 코덱을 선택하는 것입니다.
 
-> **참고:** 오디오 코덱의 선택에 대한 더욱 자세한 가이드에 대해서는, [웹 오디오 코덱 가이드](/en-US/docs/Web/Media/Formats/Audio_codecs)의 [오디오 코덱 선택하기](/en-US/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)를 참고해 보세요.
+> **참고:** 오디오 코덱의 선택에 대한 더욱 자세한 가이드에 대해서는, [웹 오디오 코덱 가이드](/ko/docs/Web/Media/Formats/Audio_codecs)의 [오디오 코덱 선택하기](/ko/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)를 참고해 보세요.
 
 ## 무손실 인코더 파라미터
 

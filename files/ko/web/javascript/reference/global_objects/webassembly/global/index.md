@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 
 ## 생성자
 
-- [`WebAssembly.Global()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
+- [`WebAssembly.Global()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global)
   - : 새로운 `Global` 객체를 생성합니다.
 
 ## 전역 인스턴스
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 - `Global.prototype.constructor`
   - : 이 객체의 인스턴스를 생성한 함수를 반환합니다. 기본적으로 이것은 {{jsxref("WebAssembly.Global()")}} 생성자입니다.
 - `Global.prototype[@@toStringTag]`
-  - : [@@toStringTag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 프로퍼티의 초기값은 문자열 값 "WebAssembly.Global" 입니다.
+  - : [@@toStringTag](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 프로퍼티의 초기값은 문자열 값 "WebAssembly.Global" 입니다.
 - `Global.prototype.value`
   - : 전역 변수 내부에 포함된 값 - 전역 값을 직접 설정하고 가져오는 데 사용할 수 있습니다.
 

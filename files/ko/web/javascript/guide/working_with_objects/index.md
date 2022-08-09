@@ -376,7 +376,7 @@ car2.displayCar();
 
 ## `this`로 객체 참조하기
 
-JavaScript에는 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
+JavaScript에는 [`this`](/ko/docs/Web/JavaScript/Reference/Operators/this)라는 특별한 키워드가 있습니다. `this`를 사용하면 메서드 내에서 현재 객체를 참조할 수 있습니다. 예를 들어 `Manager`and `Intern` 두 객체를 가정해보겠습니다. 각각의 객체는 자신만의 `name`, `age`, `job` 속성을 가집니다. 아래의 `sayHi()` 함수에서 `this.name`에 접근하는 것에 주목하세요. 이 함수를 각각의 객체에 할당한 후 호출하면 `'안녕하세요, 제 이름은'`, 자신의 `name`, 그리고 `'입니다.'`로 구성된 문자열을 출력하게 됩니다.
 
 ```js
 const Manager = {

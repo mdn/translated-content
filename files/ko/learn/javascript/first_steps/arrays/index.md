@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 만약 배열이 없다면 모든 원소를 별도의 변수에 저장해야 할 것이고, 각 원소에 대해 별도로 출력하고 더하는 코드를 불러야 할 것입니다. 이런 방식은 작성하기에 훨씬 오래 걸리고, 덜 효율적이며, 오류가 나기 쉽습니다. 만약 우리가 청구서에 더할 10개의 물품을 가지고 있다면 이것만으로도 이미 짜증나는데, 100개의 물품, 혹은 1000개의 물품이라면 어떨까요? 우리는 이 문서에서 나중에 이 예시로 돌아올 것입니다.
 
-지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 [개발자 콘솔](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)을 사용하면 됩니다.)
+지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 [개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 사용하면 됩니다.)
 
 <div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
 &#x3C;html>
@@ -651,7 +651,7 @@ updateCode();
 
 ## 당신의 기량을 시험해 보세요!
 
-당신은 이 문서의 끝에 도달했지만, 가장 중요한 정보들을 기억할 수 있으신가요? 당신은 나아가기 전에 이 정보들을 보유하고 있다는 것을 확인하는 추가적인 테스트들을 찾을 수 있습니다 — 다음을 보세요: [Test your skills: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays)
+당신은 이 문서의 끝에 도달했지만, 가장 중요한 정보들을 기억할 수 있으신가요? 당신은 나아가기 전에 이 정보들을 보유하고 있다는 것을 확인하는 추가적인 테스트들을 찾을 수 있습니다 — 다음을 보세요: [Test your skills: Arrays](/ko/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays)
 
 ## 결론
 
@@ -661,19 +661,19 @@ updateCode();
 
 ## 참고
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드
+- [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections) — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드
 - {{jsxref("Array")}} — `Array` 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 ## 이번 모듈에서 배울 것들
 
-- [JavaScript란 무엇인가?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript를 시작해보자](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [원하는 정보를 저장하기 — 변](/en-US/docs/Learn/JavaScript/First_steps/Variables)수
-- [JavaScript의 수학 기초 — 숫자와 연산자](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [문자 다루기 — JavaScript에서의 문자](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자 메소드](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 짧은 글 랜덤 생성기](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript를 시작해보자](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [원하는 정보를 저장하기 — 변](/ko/docs/Learn/JavaScript/First_steps/Variables)수
+- [JavaScript의 수학 기초 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [문자 다루기 — JavaScript에서의 문자](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [유용한 문자 메소드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [평가: 짧은 글 랜덤 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)
