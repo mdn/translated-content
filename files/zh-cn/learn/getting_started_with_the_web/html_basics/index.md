@@ -2,231 +2,236 @@
 title: HTML 基础
 slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-<div>
-<p>超文本标记语言 (英语：<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage，简称：HTML ) 是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。</p>
-</div>
+超文本标记语言 (英语：**H**yper**t**ext **M**arkup **L**anguage，简称：HTML ) 是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。
 
-<h2 id="HTML_到底是什么？">HTML 到底是什么？</h2>
+## HTML 到底是什么？
 
-<p>HTML 不是一门编程语言，而是一种用于定义内容结构的<em>标记语言</em>。HTML 由一系列的<strong>元素（{{Glossary("element", "elements")}}）</strong>组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：</p>
+HTML 不是一门编程语言，而是一种用于定义内容结构的*标记语言*。HTML 由一系列的**元素（{{Glossary("element", "elements")}}）**组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：
 
-<pre class="notranslate">My cat is very grumpy
-</pre>
+```plain
+My cat is very grumpy
+```
 
-<p>可以将这行文字封装成一个段落（<strong>p</strong>aragraph）元素来使其在单独一行呈现：</p>
+可以将这行文字封装成一个段落（**p**aragraph）元素来使其在单独一行呈现：
 
-<pre class="brush: html notranslate">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</pre>
+```html
+<p>My cat is very grumpy</p>
+```
 
-<h3 id="HTML_元素详解">HTML 元素详解</h3>
+### HTML 元素详解
 
-<p>让我们深入探索一下这个段落元素。</p>
+让我们深入探索一下这个段落元素。
 
-<p><img alt="HTML 元素" src="grumpy-cat-small.png"></p>
+![HTML 元素](grumpy-cat-small.png)
 
-<p>这个元素的主要部分有：</p>
+这个元素的主要部分有：
 
-<ol>
- <li><strong>开始标签</strong>（Opening tag）：包含元素的名称（本例为 p），被大于号、小于号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。</li>
- <li><strong>结束标签</strong>（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。</li>
- <li><strong>内容</strong>（Content）：元素的内容，本例中就是所输入的文本本身。</li>
- <li><strong>元素</strong>（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。</li>
-</ol>
+1.  **开始标签**（Opening tag）：包含元素的名称（本例为 p），被大于号、小于号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。
+2.  **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。
+3.  **内容**（Content）：元素的内容，本例中就是所输入的文本本身。
+4.  **元素**（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。
 
-<p>元素也可以有属性（Attribute）：</p>
+元素也可以有属性（Attribute）：
 
-<p><img alt="HTML 属性" src="grumpy-cat-attribute-small.png"></p>
+![HTML 属性](grumpy-cat-attribute-small.png)
 
-<p>属性包含了关于元素的一些额外信息，这些信息本身不应显现在内容中。本例中，<code>class</code> 是属性名称，<code>editor-note</code> 是属性的值。<code>class</code> 属性可为元素提供一个标识名称，以便进一步为元素指定样式或进行其他操作时使用。</p>
+属性包含了关于元素的一些额外信息，这些信息本身不应显现在内容中。本例中，`class` 是属性名称，`editor-note` 是属性的值。`class` 属性可为元素提供一个标识名称，以便进一步为元素指定样式或进行其他操作时使用。
 
-<p>属性应该包含：</p>
+属性应该包含：
 
-<ol>
- <li>在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。</li>
- <li>属性的名称，并接上一个等号。</li>
- <li>由引号所包围的属性值。</li>
-</ol>
+1.  在属性与元素名称（或上一个属性，如果有超过一个属性的话）之间的空格符。
+2.  属性的名称，并接上一个等号。
+3.  由引号所包围的属性值。
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 不包含 ASCII 空格（以及 <code>"</code> <code>'</code> <code>`</code> <code>=</code> <code>&lt;</code> <code>&gt;</code> ）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。</p>
-</div>
+> **备注：** 不包含 ASCII 空格（以及 `"` `'` `` ` `` `=` `<` `>` ）的简单属性值可以不使用引号，但是建议将所有属性值用引号括起来，这样的代码一致性更佳，更易于阅读。
 
-<h3 id="嵌套元素">嵌套元素</h3>
+### 嵌套元素
 
-<p>也可以将一个元素置于其他元素之中 —— 称作<strong>嵌套</strong>。要表明猫咪非常暴躁，可以将“very”用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：</p>
+也可以将一个元素置于其他元素之中 —— 称作**嵌套**。要表明猫咪非常暴躁，可以将“very”用 {{htmlelement("strong")}} 元素包围，爆字将突出显示：
 
-<pre class="brush: html notranslate">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</pre>
+```html
+<p>My cat is <strong>very</strong> grumpy.</p>
+```
 
-<p>必须保证元素嵌套次序正确：本例首先使用 {{htmlelement("p")}} 标签，然后是 {{htmlelement("strong")}} 标签，因此要先结束 {{htmlelement("strong")}} 标签，最后再结束 {{htmlelement("p")}} 标签。这样是不对的：</p>
+必须保证元素嵌套次序正确：本例首先使用 {{htmlelement("p")}} 标签，然后是 {{htmlelement("strong")}} 标签，因此要先结束 {{htmlelement("strong")}} 标签，最后再结束 {{htmlelement("p")}} 标签。这样是不对的：
 
-<pre class="example-bad brush: html notranslate">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</pre>
+```html example-bad
+<p>My cat is <strong>very grumpy.</p></strong>
+```
 
-<p>元素必须正确地开始和结束，才能清楚地显示出正确的嵌套层次。否则浏览器就得自己猜测，虽然它会竭尽全力，但很大程度不会给你期望的结果。所以一定要避免！</p>
+元素必须正确地开始和结束，才能清楚地显示出正确的嵌套层次。否则浏览器就得自己猜测，虽然它会竭尽全力，但很大程度不会给你期望的结果。所以一定要避免！
 
-<h3 id="空元素">空元素</h3>
+### 空元素
 
-<p>不包含任何内容的元素称为空元素。比如 {{htmlelement("img")}} 元素：</p>
+不包含任何内容的元素称为空元素。比如 {{htmlelement("img")}} 元素：
 
-<pre class="brush: html notranslate">&lt;img src="images/firefox-icon.png" alt="My test image"&gt;</pre>
+```html
+<img src="images/firefox-icon.png" alt="My test image">
+```
 
-<p>本元素包含两个属性，但是并没有 <code>&lt;/img&gt;</code> 结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。</p>
+本元素包含两个属性，但是并没有 `</img>` 结束标签，元素里也没有内容。这是因为图像元素不需要通过内容来产生效果，它的作用是向其所在的位置嵌入一个图像。
 
-<h3 id="HTML_文档详解">HTML 文档详解</h3>
+### HTML 文档详解
 
-<p>以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a> 小节中创建的 <code>index.html</code> 示例：</p>
+以上介绍了一些基本的 HTML 元素，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾 [文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 小节中创建的 `index.html` 示例：
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;My test page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <img src="images/firefox-icon.png" alt="My test image">
+  </body>
+</html>
+```
 
-<p>这里有：</p>
+这里有：
+
+- `<!DOCTYPE html>` — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，`DOCTYPE` 用来链接一些 HTML 编写守则，比如自动查错之类。`DOCTYPE` 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。
+- `<html></html>` — {{htmlelement("html")}} 元素。该元素包含整个页面的内容，也称作根元素。
+- `<head></head>` — {{htmlelement("head")}} 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（{{Glossary("keyword", "keywords")}}）、页面描述、CSS 样式表和字符编码声明等。
+- `<meta charset="utf-8">` — 该元素指定文档使用 UTF-8 字符编码，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。
+- `<title></title>` — {{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
+- `<body></body>` — {{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。
+
+## 图像
+
+重温一下 {{htmlelement("img")}} 元素：
+
+```html
+<img src="images/firefox-icon.png" alt="My test image">
+```
+
+像之前所讲，该元素通过包含图像文件路径的地址属性 `src`，可在所在位置嵌入图像。
+
+该元素还包括一个替换文字属性 `alt`，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
+
+1.  用户有视觉障碍。视障用户可以使用屏幕阅读器来朗读 `alt` 属性的内容。
+2.  有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：
+
+![图片内容为文字“测试图片”](alt-text-example.png)
+
+`alt` 属性的关键字即“描述文本”。`alt` 文本应向用户完整地传递图像要表达的意思。用 "测试图片" 来描述 Firefox 标志并不合适，修改成 "Firefox 标志：一只盘旋在地球上的火狐" 就好多了。
+
+可以试着为图像编写一些更好的 `alt` 文本。
+
+> **备注：** 更多信息请参阅 [无障碍访问](/zh-CN/docs/learn/Accessibility)。
+
+## 标记文本
+
+本段包含了一些最常用的文本标记 HTML 元素。
+
+### 标题（Heading）
+
+标题元素可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， {{htmlelement("h1")}}–{{htmlelement("h6")}} ，一般最多用到 3-4 级标题。
+
+```html
+<h1>主标题</h1>
+<h2>顶层标题</h2>
+<h3>子标题</h3>
+<h4>次子标题</h4>
+```
+
+可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
+
+> **备注：** 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 [无障碍访问](/zh-CN/docs/learn/Accessibility) 和 [搜索引擎优化](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化) 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+
+### 段落（Paragraph）
+
+如上文所讲，{{htmlelement("p")}} 元素是用来指定段落的。通常用于指定常规的文本内容：
+
+```html
+<p>这是一个段落</p>
+```
+
+试着添加一些文本（在 [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 小节）到一个或几个段落中，并把它们放在你的 {{htmlelement("img")}} 元素下方。
+
+### 列表（List）
+
+Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标记列表通常包括至少两个元素。最常用的列表类型为：
+
+1.  **无序列表**（Unordered List）中项目的顺序并不重要，就像购物列表。用一个 {{htmlelement("ul")}} 元素包围。
+2.  **有序列表**（Ordered List）中项目的顺序很重要，就像烹调指南。用一个 {{htmlelement("ol")}} 元素包围。
+
+列表的每个项目用一个列表项目（List Item）元素 {{htmlelement("li")}} 包围。
+
+比如，要将下面的段落片段改成一个列表：
+
+```html
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+```
+
+可以这样更改标记：
+
+```html
+<p>At Mozilla, we're a global community of</p>
 
 <ul>
- <li><code>&lt;!DOCTYPE html&gt;</code> — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，<code>DOCTYPE</code> 用来链接一些 HTML 编写守则，比如自动查错之类。<code>DOCTYPE</code> 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。</li>
- <li><code>&lt;html&gt;&lt;/html&gt;</code> — {{htmlelement("html")}} 元素。该元素包含整个页面的内容，也称作根元素。</li>
- <li><code>&lt;head&gt;&lt;/head&gt;</code> — {{htmlelement("head")}} 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（{{Glossary("keyword", "keywords")}}）、页面描述、CSS 样式表和字符编码声明等。</li>
- <li><code>&lt;meta charset="utf-8"&gt;</code> — 该元素指定文档使用 UTF-8 字符编码，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。</li>
- <li><code>&lt;title&gt;&lt;/title&gt;</code> — {{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。</li>
- <li><code>&lt;body&gt;&lt;/body&gt;</code> — {{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。</li>
+  <li>technologists</li>
+  <li>thinkers</li>
+  <li>builders</li>
 </ul>
 
-<h2 id="图像">图像</h2>
+<p>working together… </p>
+```
 
-<p>重温一下 {{htmlelement("img")}} 元素：</p>
+试着在示例页面中添加一个有序列表和无序列表。
 
-<pre class="brush: html notranslate">&lt;img src="images/firefox-icon.png" alt="My test image"&gt;</pre>
+## 链接
 
-<p>像之前所讲，该元素通过包含图像文件路径的地址属性 <code>src</code>，可在所在位置嵌入图像。</p>
+链接非常重要 — 它们赋予 Web 网络属性。要植入一个链接，我们需要使用一个简单的元素 — {{htmlelement("a")}} — a 是 "anchor" （锚）的缩写。要将一些文本添加到链接中，只需如下几步：
 
-<p>该元素还包括一个替换文字属性 <code>alt</code>，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：</p>
+1.  选择一些文本。比如“Mozilla Manifesto”。
+2.  将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
 
-<ol>
- <li>用户有视觉障碍。视障用户可以使用屏幕阅读器来朗读 <code>alt</code> 属性的内容。</li>
- <li>有些错误使图像无法显示。可以试着故意将 <code>src</code> 属性里的路径改错。保存并刷新页面就可以在图像位置看到：</li>
-</ol>
+    ```html
+    <a>Mozilla Manifesto</a>
+    ```
 
-<p><img alt="图片内容为文字“测试图片”" src="alt-text-example.png"></p>
+3.  为此 {{htmlelement("a")}} 元素添加一个 `href` 属性，就像这样：
 
-<p><code>alt</code> 属性的关键字即“描述文本”。<code>alt</code> 文本应向用户完整地传递图像要表达的意思。用 "测试图片" 来描述 Firefox 标志并不合适，修改成 "Firefox 标志：一只盘旋在地球上的火狐" 就好多了。</p>
+    ```html
+    <a href="">Mozilla Manifesto</a>
+    ```
 
-<p>可以试着为图像编写一些更好的 <code>alt</code> 文本。</p>
+4.  把属性的值设置为所需网址：
 
-<div class="note">
-<p><strong>备注：</strong> 更多信息请参阅 <a href="/zh-CN/docs/learn/Accessibility">无障碍访问</a>。</p>
-</div>
+    ```html
+    <a href="https://www.mozilla.org/zh-CN/about/manifesto/">Mozilla Manifesto</a>
+    ```
 
-<h2 id="标记文本">标记文本</h2>
+如果网址开始部分省略了 `https://` 或者 `http://`，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。
 
-<p>本段包含了一些最常用的文本标记 HTML 元素。</p>
+> **备注：** `href` 这个名字可能开始看起来有点令人费解，代表超文本引用（ **h**ypertext **ref**erence）。
 
-<h3 id="标题（Heading）">标题（Heading）</h3>
+现在就为页面添加一个链接吧。
 
-<p>标题元素可用于指定内容的标题和子标题。就像一本书的书名、每章的大标题、小标题，等。HTML 文档也是一样。HTML 包括六个级别的标题， {{htmlelement("h1")}}–{{htmlelement("h6")}} ，一般最多用到 3-4 级标题。</p>
+## 小结
 
-<pre class="brush: html notranslate">&lt;h1&gt;主标题&lt;/h1&gt;
-&lt;h2&gt;顶层标题&lt;/h2&gt;
-&lt;h3&gt;子标题&lt;/h3&gt;
-&lt;h4&gt;次子标题&lt;/h4&gt;</pre>
+如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面。（你也可以 [从这查看](https://mdn.github.io/beginner-html-site/)）：
 
-<p>可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。</p>
+![](finished-test-page-small.png)
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗字体，因为标题对于 <a href="/zh-CN/docs/learn/Accessibility">无障碍访问</a> 和 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">搜索引擎优化</a> 等问题非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。</p>
-</div>
+如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)与你的文件进行比较。
 
-<h3 id="段落（Paragraph）">段落（Paragraph）</h3>
+在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的 [HTML 学习主题页面](/zh-CN/Learn/HTML) 。
 
-<p>如上文所讲，{{htmlelement("p")}} 元素是用来指定段落的。通常用于指定常规的文本内容：</p>
+{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
-<pre class="brush: html notranslate">&lt;p&gt;这是一个段落&lt;/p&gt;</pre>
+## 本章目录
 
-<p>试着添加一些文本（在 <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">设计网站的外观</a> 小节）到一个或几个段落中，并把它们放在你的 {{htmlelement("img")}} 元素下方。</p>
-
-<h3 id="列表（List）">列表（List）</h3>
-
-<p>Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标记列表通常包括至少两个元素。最常用的列表类型为：</p>
-
-<ol>
- <li><strong>无序列表</strong>（Unordered List）中项目的顺序并不重要，就像购物列表。用一个 {{htmlelement("ul")}} 元素包围。</li>
- <li><strong>有序列表</strong>（Ordered List）中项目的顺序很重要，就像烹调指南。用一个 {{htmlelement("ol")}} 元素包围。</li>
-</ol>
-
-<p>列表的每个项目用一个列表项目（List Item）元素 {{htmlelement("li")}} 包围。</p>
-
-<p>比如，要将下面的段落片段改成一个列表：</p>
-
-<pre class="brush: html notranslate">&lt;p&gt;At Mozilla, we're a global community of technologists, thinkers, and builders working together… &lt;/p&gt;</pre>
-
-<p>可以这样更改标记：</p>
-
-<pre class="brush: html notranslate">&lt;p&gt;At Mozilla, we're a global community of&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;technologists&lt;/li&gt;
-  &lt;li&gt;thinkers&lt;/li&gt;
-  &lt;li&gt;builders&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;working together… &lt;/p&gt;</pre>
-
-<p>试着在示例页面中添加一个有序列表和无序列表。</p>
-
-<h2 id="链接">链接</h2>
-
-<p>链接非常重要 — 它们赋予 Web 网络属性。要植入一个链接，我们需要使用一个简单的元素 — {{htmlelement("a")}} — a 是 "anchor" （锚）的缩写。要将一些文本添加到链接中，只需如下几步：</p>
-
-<ol>
- <li>选择一些文本。比如“Mozilla Manifesto”。</li>
- <li>将文本包含在 {{htmlelement("a")}} 元素内，就像这样：
-  <pre class="brush: html notranslate">&lt;a&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
- <li>为此 {{htmlelement("a")}} 元素添加一个 <code>href</code> 属性，就像这样：
-  <pre class="brush: html notranslate">&lt;a href=""&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
- <li>把属性的值设置为所需网址：
-  <pre class="brush: html notranslate">&lt;a href="https://www.mozilla.org/zh-CN/about/manifesto/"&gt;Mozilla Manifesto&lt;/a&gt;</pre>
- </li>
-</ol>
-
-<p>如果网址开始部分省略了 <code>https://</code> 或者 <code>http://</code>，可能会得到错误的结果。在完成一个链接后，可以试着点击它来确保指向正确。</p>
-
-<div class="note">
-<p><strong>备注：</strong> <code>href</code> 这个名字可能开始看起来有点令人费解，代表超文本引用（ <strong>h</strong>ypertext <strong>ref</strong>erence）。</p>
-</div>
-
-<p>现在就为页面添加一个链接吧。</p>
-
-<h2 id="小结">小结</h2>
-
-<p>如果你一直跟着这篇文章里的指导做的话，你应该完成了一个像下面这样的页面。（你也可以 <a href="https://mdn.github.io/beginner-html-site/">从这查看</a>）：<br>
- <br>
- <img alt="" src="finished-test-page-small.png"></p>
-
-<p>如果你遇到困难，你可以将 Github 上的<a href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html">完整示例代码</a>与你的文件进行比较。</p>
-
-<p>在这里，我们只是介绍了一点点 HTML。要学习更多，访问我们的 <a href="/zh-CN/Learn/HTML">HTML 学习主题页面</a> 。</p>
-
-<p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}</p>
-
-<h2 id="本章目录">本章目录</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">设计网站的外观</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基础</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript 基础</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website">发布网站</a></li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Web 是如何运作的</a></li>
-</ul>
+- [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [设计网站的外观](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Web 是如何运作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
