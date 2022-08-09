@@ -1,7 +1,6 @@
 ---
 title: Règles d'écriture
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 l10n:
   sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---

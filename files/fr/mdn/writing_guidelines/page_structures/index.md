@@ -1,7 +1,6 @@
 ---
 title: Structures des documents
 slug: MDN/Writing_guidelines/Page_structures
-original_slug: MDN/Structures
 l10n:
   sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---
