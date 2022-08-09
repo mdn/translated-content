@@ -1,20 +1,6 @@
 ---
 title: 介绍 CSS 布局
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - CSS
-  - flexbox
-  - 介绍
-  - 初学者
-  - 学习
-  - 定位
-  - 布局
-  - 文章
-  - 流
-  - 浮动
-  - 网格
-  - 表格
-translation_of: Learn/CSS/CSS_layout/Introduction
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -73,7 +59,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <p>出现在另一个元素下面的元素被描述为<strong>块</strong>元素，与出现在另一个元素旁边的<strong>内联元素</strong>不同，内联元素就像段落中的单个单词一样。</p>
 
 <div class="blockIndicator note">
-<p>注意：块元素内容的布局方向被描述为<strong>块方向</strong>。块方向在英语等具有水平<strong>书写模式</strong>(<code>writing mode</code>) 的语言中垂直运行。它可以在任何垂直书写模式的语言中水平运行。对应的<strong>内联方向</strong>是内联内容（如句子）的运行方向。</p>
+<p><strong>备注：</strong> 块元素内容的布局方向被描述为<strong>块方向</strong>。块方向在英语等具有水平<strong>书写模式</strong>(<code>writing mode</code>) 的语言中垂直运行。它可以在任何垂直书写模式的语言中水平运行。对应的<strong>内联方向</strong>是内联内容（如句子）的运行方向。</p>
 </div>
 
 <p>当你使用 css 创建一个布局时，你正在离开<strong>正常布局流</strong>，但是对于页面上的多数元素，<strong>正常布局流</strong>将完全可以创建你所需要的布局。从一个结构良好的 Html 文档开始是非常重要，因为你可以按照默认的方式来搭建页面，而不是自造车轮。</p>
@@ -96,27 +82,24 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>除了可以通过将一些内容从<code>block</code>转换为<code>inline</code>（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以<code>display</code>值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是<code>display</code>:<code>flex</code>和<code>display</code>:<code>grid</code>。</p>
 
-<h2 id="弹性盒子Flexbox">弹性盒子 (Flexbox)</h2>
+<h2 id="弹性盒子Flexbox">弹性盒子</h2>
 
 <p>Flexbox 是 CSS 弹性盒子布局模块（<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用<code>display: flex</code> ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。</p>
+
+<h3>设置 display:flex</h3>
 
 <p>下面这些 HTML 标记描述了一个 class 为<code>wrapper</code>的容器元素，它的内部有三个<code>&lt;div&gt;</code>元素。它们在我们的英文文档当中，会默认地作为块元素从上到下进行显示。</p>
 
 <p>现在，当我们把<code>display: flex</code>添加到它的父元素时，这三个元素就自动按列进行排列。这是由于它们变成了<em>flex 项 (flex items)</em>，按照 flex 容器（也就是它们的父元素）的一些 flex 相关的初值进行 flex 布局：它们整整齐齐排成一行，是因为父元素上<code>flex-direction</code>的初值是<code>row</code>。它们全都被拉伸至和最高的元素高度相同，是因为父元素上<code>align-items</code>属性的初值是<code>stretch</code>。这就意味着所有的子元素都会被拉伸到它们的 flex 容器的高度，在这个案例里就是所有 flex 项中最高的一项。所有项目都从容器的开始位置进行排列，排列成一行后，在尾部留下一片空白。</p>
 
-<div id="Flex_1">
-<div class="hidden">
-<h6 id="Flexbox_Example_1">Flexbox Example 1</h6>
-
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper &gt; div {
     border-radius: 5px;
     background-color: rgb(207,232,220);
     padding: 1em;
 }
-    </pre>
-</div>
+</pre>
 
 <pre class="brush: css notranslate">.wrapper {
   display: flex;
@@ -129,19 +112,16 @@ translation_of: Learn/CSS/CSS_layout/Introduction
   &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Flex_1', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('设置 display:flex', '300', '200') }}</p>
+
+<h3>设置 flex 属性</h3>
 
 <p>除了上述可以被应用到 flex 容器的属性以外，还有很多属性可以被应用到 flex 项 (flex items) 上面。这些属性可以改变 flex 项在 flex 布局中占用宽/高的方式，允许它们通过伸缩来适应可用空间。</p>
 
 <p>作为一个简单的例子，我们可以在我们的所有子元素上添加{{cssxref("flex")}} 属性，并赋值为<code>1</code>，这会使得所有的子元素都伸展并填充容器，而不是在尾部留下空白，如果有更多空间，那么子元素们就会变得更宽，反之，他们就会变得更窄。除此之外，如果你在 HTML 标记中添加了一个新元素，那么它们也会变得更小，来为新元素创造空间——不管怎样，最终它们会调整自己直到占用相同宽度的空间。</p>
 
-<div id="Flex_2">
-<div class="hidden">
-<h6 id="Flexbox_Example_2">Flexbox Example 2</h6>
-
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css hidden">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -149,7 +129,6 @@ translation_of: Learn/CSS/CSS_layout/Introduction
         padding: 1em;
     }
     </pre>
-</div>
 
 <pre class="brush: css notranslate">.wrapper {
     display: flex;
@@ -166,25 +145,22 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
+<p>{{ EmbedLiveSample('设置 flex 属性', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>注意：</strong>为了找到更多关于 Flexbox 的信息，看看我们的 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> 的文章。</p>
+<p><strong>备注：</strong> 为了找到更多关于 Flexbox 的信息，看看我们的 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> 的文章。</p>
 </div>
 
 <h2 id="Grid布局">Grid 布局</h2>
 
 <p>Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于同时在两个维度上把元素按行和列排列整齐。</p>
 
+<h3>设置 display: grid</h3>
+
 <p>同 flex 一样，你可以通过指定 display 的值来转到 grid 布局：<code>display: grid</code>。下面的例子使用了与 flex 例子类似的 HTML 标记，描述了一个容器和若干子元素。除了使用<code>display:grid</code>，我们还分别使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 两个属性定义了一些行和列的轨道。定义了三个<code>1fr</code>的列，还有两个<code>100px</code>的行之后，无需再在子元素上指定任何规则，它们自动地排列到了我们创建的格子当中。</p>
 
-<div id="Grid_1">
-<div class="hidden">
-<h6 id="Grid_example_1">Grid example 1</h6>
-
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css hidden">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -192,7 +168,6 @@ translation_of: Learn/CSS/CSS_layout/Introduction
         padding: 1em;
     }
     </pre>
-</div>
 
 <pre class="brush: css notranslate">.wrapper {
     display: grid;
@@ -211,17 +186,14 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     &lt;div class="box6"&gt;Six&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('设置 display: grid', '300', '330') }}</p>
+
+<h3>在网格内放置元素</h3>
 
 <p>一旦你拥有了一个 grid，你也可以显式地将元素摆放在里面，而不是依赖于浏览器进行自动排列。在下面的第二个例子里，我们定义了一个和上面一样的 grid，但是这一次我们只有三个子元素。我们利用 {{cssxref("grid-column")}} 和 {{cssxref("grid-row")}} 两个属性来指定每一个子元素应该从哪一行/列开始，并在哪一行/列结束。这就能够让子元素在多个行/列上展开。</p>
 
-<div id="Grid_2">
-<div class="hidden">
-<h6 id="Grid_example_2">Grid example 2</h6>
-
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css hidden">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -229,7 +201,6 @@ translation_of: Learn/CSS/CSS_layout/Introduction
         padding: 1em;
     }
     </pre>
-</div>
 
 <pre class="brush: css notranslate">.wrapper {
     display: grid;
@@ -260,12 +231,11 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     &lt;div class="box3"&gt;Three&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Grid_2', '300', '330') }}</p>
+<p>{{ EmbedLiveSample('在网格内放置元素', '300', '330') }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章<a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a>。</p>
+<p><strong>备注：</strong> 这两个例子只是展示了 grid 布局的冰山一角，要深入了解 grid 布局，请参阅我们的文章<a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid Layout</a>。</p>
 </div>
 
 <p>这篇指南的其余部分介绍了其他的布局方式，它们与你的页面的主要布局结构关系不大，但是却能够帮助你实现特殊的操作。同时，只要你理解了每一个布局任务的初衷，你就能够马上意识到哪一种布局更适合你的组件。</p>
@@ -285,11 +255,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>在下面这个例子当中，我们把一个<code>&lt;div&gt;</code>元素浮动到左侧，并且给了他一个右侧的{{cssxref("margin")}}，把文字推开。这给了我们文字环绕着这个<code>&lt;div&gt;</code>元素的效果，在现代网页设计当中，这是你唯一需要学会的事情。</p>
 
-<div id="Float_1">
-<div class="hidden">
-<h6 id="Floats_example">Floats example</h6>
-
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
@@ -307,7 +273,6 @@ p {
     border-radius: 5px;
 }
 </pre>
-</div>
 
 <pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
@@ -325,12 +290,11 @@ p {
     margin-right: 30px;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Float_1', '100%', 600) }}</p>
+<p>{{ EmbedLiveSample('浮动', '100%', 600) }}</p>
 
 <div class="note">
-<p><strong>注意：</strong>: CSS 浮动的知识会在我们关于 <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">浮动</a>的教程当中被详细地解释。除此之外，如果您想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于<a href="/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95">传统布局方式</a>的文章。</p>
+<p><strong>备注：</strong> CSS 浮动的知识会在我们关于 <a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">浮动</a>的教程当中被详细地解释。除此之外，如果您想要了解在 Flexbox 和 Grid 布局出现之前我们是如何进行列布局的（仍然有可能碰到这种情形），请阅读我们关于<a href="/zh-CN/docs/Learn/CSS/CSS_layout/%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%B8%83%E5%B1%80%E6%96%B9%E6%B3%95">传统布局方式</a>的文章。</p>
 </div>
 
 <h2 id="定位技术">定位技术</h2>
@@ -376,7 +340,7 @@ p {
 
 <p>渲染效果如下：</p>
 
-<p>{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('简单定位示例', '100%', 300) }}</p>
 
 <h3 id="相对定位">相对定位</h3>
 
@@ -392,17 +356,13 @@ p {
 
 <p>添加此代码将给出以下结果：</p>
 
-<div id="Relative_1">
-<div class="hidden">
-<h6 id="Relative_positioning_example">Relative positioning example</h6>
-
-<pre class="brush: html notranslate">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my relatively positioned element.&lt;/p&gt;
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -415,7 +375,6 @@ p {
     border-radius: 5px;
 }
 </pre>
-</div>
 
 <pre class="brush: css notranslate">.positioned {
   position: relative;
@@ -425,9 +384,8 @@ p {
   left: 30px;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Relative_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('相对定位', '100%', 300) }}</p>
 
 <h3 id="绝对定位">绝对定位</h3>
 
@@ -443,17 +401,13 @@ p {
 
 <p>这里我们给我们的中间段一个{{cssxref("position")}}的 <code>absolute</code>值，并且和前面一样加上 {{cssxref("top")}} 和{{cssxref("left")}} 属性。但是，添加此代码将给出以下结果：</p>
 
-<div id="Absolute_1">
-<div class="hidden">
-<h6 id="Absolute_positioning_example">Absolute positioning example</h6>
-
-<pre class="brush: html notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my absolutely positioned element.&lt;/p&gt;
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -465,7 +419,6 @@ p {
     margin: 10px;
     border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css notranslate">.positioned {
     position: absolute;
@@ -474,9 +427,8 @@ p {
     top: 30px;
     left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Absolute_1', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('绝对定位', '100%', 300) }}</p>
 
 <p>这和之前截然不同！定位元素现在已经与页面布局的其余部分完全分离，并位于页面的顶部。其他两段现在靠在一起，好像之前那个中间段落不存在一样。{{cssxref("top")}}和{{cssxref("left")}}属性对绝对位置元素的影响不同于相对位置元素。在这一案例当中，他们没有指定元素相对于原始位置的移动程度。相反，在这一案例当中，它们指定元素应该从页面边界的顶部和左边的距离 (确切地说，是 <code>&lt;html&gt;</code>元素的距离)。我们也可以修改作为容器的那个元素（在这里是<code>&lt;html&gt;</code>元素），要了解这方面的知识，参见关于<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">定位 (positioning)</a>的课程</p>
 
@@ -497,11 +449,7 @@ p {
 &lt;p&gt;Paragraph 3.&lt;/p&gt;
 </pre>
 
-<div id="Fixed_1">
-<div class="hidden">
-<h6 id="Fixed_positioning_example">Fixed positioning example</h6>
-
-<pre class="brush: html notranslate">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;div class="positioned"&gt;Fixed&lt;/div&gt;
 
@@ -513,7 +461,7 @@ p {
 
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
     width: 500px;
     margin: 0 auto;
 }
@@ -525,26 +473,20 @@ p {
     margin: 10px;
     border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css notranslate">.positioned {
     position: fixed;
     top: 30px;
     left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Fixed_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('固定定位', '100%', 200) }}</p>
 
 <h3 id="粘性定位">粘性定位</h3>
 
 <p>粘性定位 (sticky positioning) 是最后一种我们能够使用的定位方式。它将默认的静态定位 (static positioning) 和固定定位 (fixed positioning) 相混合。当一个元素被指定了<code>position: sticky</code>时，它会在正常布局流中滚动，直到它出现在了我们给它设定的相对于容器的位置，这时候它就会停止随滚动移动，就像它被应用了<code>position: fixed</code>一样。</p>
 
-<div id="Sticky_1">
-<div class="hidden">
-<h6 id="Sticky_positioning_example">Sticky positioning example</h6>
-
-<pre class="brush: html notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -554,7 +496,7 @@ p {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css hidden">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -566,19 +508,17 @@ p {
   margin: 10px;
   border-radius: 5px;
 }</pre>
-</div>
 
 <pre class="brush: css notranslate">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('粘性定位', '100%', 200) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 想要发现更多关于定位的信息，请参阅我们的<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a>和<a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>文章。</p>
+<p><strong>备注：</strong> 想要发现更多关于定位的信息，请参阅我们的<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a>和<a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>文章。</p>
 </div>
 
 <h2 id="Table_layout">表格布局</h2>
@@ -649,7 +589,7 @@ form p {
 
 <p>结果如下：</p>
 
-<p>{{ EmbedLiveSample('Table_layout', '100%', '170') }}</p>
+<p>{{ EmbedLiveSample('表格布局', '100%', '170') }}</p>
 
 <p>你可以在 <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a> 看到预览版 (也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">源码</a>)</p>
 
@@ -672,11 +612,7 @@ form p {
 
 <p>我们指定了该容器的<code>column-width</code>为 200 像素，这让浏览器创建了尽可能多的 200 像素的列来填充这一容器。接着他们共同使用剩余的空间来伸展自己的宽度。</p>
 
-<div id="Multicol_1">
-<div class="hidden">
-<h6 id="Multicol_example">Multicol example</h6>
-
-<pre class="brush: html notranslate">    &lt;div class="container"&gt;
+<pre class="brush: html hidden">    &lt;div class="container"&gt;
         &lt;h1&gt;Multi-column Layout&lt;/h1&gt;
 
         &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
@@ -687,15 +623,13 @@ form p {
     &lt;/div&gt;
         </pre>
 
-<pre class="brush: css notranslate">body { max-width: 800px; margin: 0 auto; } </pre>
-</div>
+<pre class="brush: css hidden">body { max-width: 800px; margin: 0 auto; } </pre>
 
 <pre class="brush: css notranslate">    .container {
         column-width: 200px;
     }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Multicol_1', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('多列布局', '100%', 200) }}</p>
 
 <h2 id="总结">总结</h2>
 

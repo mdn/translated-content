@@ -1,7 +1,6 @@
 ---
 title: 样式列表
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/为文本添加样式/Styling_lists
 ---
 <div>{{LearnSidebar}}</div>
@@ -72,7 +71,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 <p>现在，如果你去到例子的展示页面，并使用<a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>查看那些列表元素，你会注意到若干个默认的样式预设值：</p>
 
 <ul>
- <li> {{htmlelement("ul")}}  和  {{htmlelement("ol")}}  元素设置{{cssxref("margin")}}的顶部和底部：16px(1em) 0;和 padding-left: 40px(2.5em); （在这里注意的是浏览器默认字体大小为 16px）。</li>
+ <li>{{htmlelement("ul")}}  和  {{htmlelement("ol")}}  元素设置{{cssxref("margin")}}的顶部和底部：16px(1em) 0;和 padding-left: 40px(2.5em); （在这里注意的是浏览器默认字体大小为 16px）。</li>
  <li>{{htmlelement("li")}}  默认是没有设置间距的。</li>
  <li>{{htmlelement("dl")}}  元素设置 margin 的顶部和底部：16px(1em) ，无内边距设定。</li>
  <li>{{htmlelement("dd")}} 元素设置为： {{cssxref("margin-left")}}  <code>40px</code> (<code>2.5em</code>)。</li>
@@ -206,7 +205,7 @@ ul li {
 
 <p>效果显示如下：</p>
 
-<p><img alt="an unordered list with the bullet points set as little star images" src="https://mdn.mozillademos.org/files/12956/image-bullets.png" style="border-style: solid; border-width: 1px; display: block; height: 106px; margin: 0px auto; width: 124px;"></p>
+<p><img alt="an unordered list with the bullet points set as little star images" src="https://mdn.mozillademos.org/files/12956/image-bullets.png"></p>
 
 <h3 id="list-style_速记">list-style 速记</h3>
 
@@ -276,7 +275,7 @@ ul li {
 <p>{{ EmbedLiveSample('value', '100%', 150) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 纵然你使用非数字的 {{cssxref("list-style-type")}}, 你仍需要使用与数值同等意义的值作为 value 的属性。</p>
+<p><strong>备注：</strong> 纵然你使用非数字的 {{cssxref("list-style-type")}}, 你仍需要使用与数值同等意义的值作为 value 的属性。</p>
 </div>
 
 <h2 id="主动学习_为嵌套式列表添加样式">主动学习：为嵌套式列表添加样式</h2>
@@ -292,10 +291,7 @@ ul li {
 
 <p>如果犯了错误，可以随时点击 Reset（重置）按钮进行重新设置。如果你真的遇到困难无法继续下去，点击 Show solution（显示解决方案）按钮查看可行的解决方案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;ul&gt;
   &lt;li&gt;First, light the candle.&lt;/li&gt;
@@ -321,7 +317,7 @@ ul li {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -354,9 +350,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('主动学习：为嵌套式列表添加样式', 700, 800) }}</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 

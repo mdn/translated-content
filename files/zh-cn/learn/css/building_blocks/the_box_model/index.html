@@ -133,7 +133,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 <p><img alt="Showing the size of the box when the standard box model is being used." src="standard-box-model.png"></p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。</p>
+<p><strong>备注：</strong> margin 不计入实际大小 —— 当然，它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。</p>
 </div>
 
 <h3 id="替代（IE）盒模型">替代（IE）盒模型</h3>
@@ -150,15 +150,15 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>如果你希望所有元素都使用替代模式，而且确实很常用，设置 <code>box-sizing</code> 在 <code>&lt;html&gt;</code> 元素上，然后设置所有元素继承该属性，正如下面的例子。如果想要深入理解，请看 <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>。</p>
 
-<pre class="brush: css notranslate"><code class="language-css">html {
+<pre class="brush: css notranslate">html {
   box-sizing: border-box;
 }
 *, *::before, *::after {
   box-sizing: inherit;
-}</code></pre>
+}</pre>
 
 <div class="blockIndicator note">
-<p><strong>注：</strong> 一个有趣的历史记录 ——Internet Explorer 默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用<code class="language-css">box-sizing</code> 进行切换）</p>
+<p><strong>备注：</strong> 一个有趣的历史记录 ——Internet Explorer 默认使用替代盒模型，没有可用的机制来切换。（译者注：IE8+ 支持使用 <code>box-sizing</code> 进行切换）</p>
 </div>
 
 <h2 id="玩转盒模型">玩转盒模型</h2>

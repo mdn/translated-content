@@ -37,7 +37,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 <p>这就是<strong>表单校验</strong> —— 当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。</p>
 
 <div class="note">
-<p><strong>译者注</strong>：下面一段在英文原文中已经删除</p>
+<p><strong>备注：</strong> 下面一段在英文原文中已经删除</p>
 </div>
 
 <p>(事实上，没有人愿意填写表单 —— 很多证据表明，用户对填写表单这件事情都感到很烦恼，如果他们在填写表单的过程中遇到一些自己无法理解的问题，通常都会导致他们直接离开你的 Web 应用，简而言之，<a href="https://www.slideshare.net/jwegesin/forms-suck/">表单是一个很烦人的东西</a>。)</p>
@@ -51,7 +51,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 </ul>
 
 <div class="blockIndicator warning">
-<p>警告：永远不要相信从客户端传递到服务器的数据。即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。</p>
+<p><strong>警告：</strong> 永远不要相信从客户端传递到服务器的数据。即使您的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。</p>
 </div>
 
 <h3 id="不同类型的表单数据校验">不同类型的表单数据校验</h3>
@@ -95,25 +95,21 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 <p>让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>找到源码，在线例子如下：</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;form&gt;
+<pre class="brush: html hidden">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 2px solid black;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("Hidden_code", "100%", 50)}}</p>
+<p>{{EmbedLiveSample("input 元素的校验约束 — starting simple", "100%", 50)}}</p>
 
 <p>开始之前，先拷贝一份 <code>fruit-start.html</code> 放在你硬盘上的新目录里。</p>
 
@@ -188,15 +184,13 @@ input:valid {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
 input:valid {
   border: 2px solid black;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample("使用正则表达式校验", "100%", 50)}}</p>
 
@@ -205,11 +199,11 @@ input:valid {
 <p>在这个基础上，尝试把<code>pattern</code> 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响您可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 一些 {{HTMLElement("input")}} 元素类型不需要{{htmlattrxref("pattern","input")}} 属性进行校验。指定特定 <code>email</code> 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 {{htmlattrxref("multiple","input")}} 属性请用逗号来分割多个邮箱). 进一步来说，字段 <code>url</code> 类型则会自动校验输入的是否为一个合法的链接。</p>
+<p><strong>备注：</strong> 一些 {{HTMLElement("input")}} 元素类型不需要{{htmlattrxref("pattern","input")}} 属性进行校验。指定特定 <code>email</code> 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 {{htmlattrxref("multiple","input")}} 属性请用逗号来分割多个邮箱). 进一步来说，字段 <code>url</code> 类型则会自动校验输入的是否为一个合法的链接。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 该 {{HTMLElement("textarea")}} 元素不支持{{htmlattrxref("pattern","input")}} 属性。</p>
+<p><strong>备注：</strong> 该 {{HTMLElement("textarea")}} 元素不支持{{htmlattrxref("pattern","input")}} 属性。</p>
 </div>
 
 <h3 id="限制输入的长度">限制输入的长度</h3>
@@ -241,8 +235,7 @@ input:valid {
  <li>我们同时也能让 <code>number</code> 条目数值限制在 <code>min</code> 为 1 和 一个 <code>max</code> 为 10 中 — 输入超出范围则显示无效，并且您将无法使用递增/递减箭头将该值改变到此范围之外。</li>
 </ul>
 
-<div class="hidden">
-<pre>input:invalid {
+<pre class="brush: css hidden">input:invalid {
   border: 2px dashed red;
 }
 
@@ -253,14 +246,13 @@ input:valid {
 div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>这里是运行的例子：</p>
 
 <p>{{EmbedLiveSample("限制输入的长度", "100%", 70)}}</p>
 
 <div class="note">
-<p><strong>注意</strong>: <code>&lt;input type="number"&gt;</code> (或者其他类型，像 <code>range</code>) 也可以获取到一个{{htmlattrxref("step", "input")}} 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).</p>
+<p><strong>备注：</strong> <code>&lt;input type="number"&gt;</code> (或者其他类型，像 <code>range</code>) 也可以获取到一个{{htmlattrxref("step", "input")}} 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).</p>
 </div>
 
 <h3 id="完整的例子">完整的例子</h3>

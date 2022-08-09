@@ -76,11 +76,9 @@ article {
 
 <p>还可以在单个<code>box-shadow</code>声明中指定多个框阴影，用逗号分隔：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;article class="multiple"&gt;
+<pre class="brush: html hidden">&lt;article class="multiple"&gt;
   &lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt;: The thermostat on the cosmic transcender has reached a critical level.&lt;/p&gt;
 &lt;/article&gt;</pre>
-</div>
 
 <pre class="brush: css">p {
   margin: 0;
@@ -147,7 +145,7 @@ button:active {
 <p>当按钮被按下时，这里的 active 声明将第一个盒阴影换成一个非常暗的 inset 阴影。给人一种按钮被按下的样子。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 还有一个可以在 box-shadow 中设置的值 — 另外一个位于颜色值前面可选的长度值，即<strong>spread radius</strong>，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。</p>
+<p><strong>备注：</strong> 还有一个可以在 box-shadow 中设置的值 — 另外一个位于颜色值前面可选的长度值，即<strong>spread radius</strong>，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。</p>
 </div>
 
 <h2 id="Filters（滤镜）">Filters（滤镜）</h2>
@@ -195,7 +193,7 @@ button:active {
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。</p>
+<p><strong>备注：</strong> 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。</p>
 </div>
 
 <p> 你可以看到更多关于滤镜的例子，在 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html">filters.html</a> (也可以看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html">source code</a>).</p>
@@ -214,7 +212,7 @@ button:active {
 <p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
+<p><strong>备注：</strong> 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
 </div>
 
 <h3 id="background-blend-mode">background-blend-mode</h3>
@@ -329,7 +327,7 @@ article div:last-child {
 <p>如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。</p>
 
 <div class="note">
-<p><strong>注意：</strong>对于一个完整的 <code>-webkit-background-clip: text</code> 代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
+<p><strong>备注：</strong> 对于一个完整的 <code>-webkit-background-clip: text</code> 代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
 </div>
 
 <h2 id="自主学习尝试一些效果">自主学习：尝试一些效果</h2>
@@ -338,10 +336,7 @@ article div:last-child {
 
 <p>如果你犯了一个错误，你可以用 <em>Reset</em> 按钮来重置这个例子。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;div class="style-me"&gt;
 &lt;/div&gt;&lt;/textarea&gt;
@@ -366,7 +361,7 @@ article div:last-child {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -392,9 +387,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 820) }}</p>
+<p>{{ EmbedLiveSample('自主学习：尝试一些效果', 700, 820) }}</p>
 
 <h2 id="总结">总结</h2>
 

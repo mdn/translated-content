@@ -84,43 +84,7 @@ div:nth-of-type(2) {
 
 <p>将这些都放在一起，会得到这样的结果：</p>
 
-<div id="Floated_Two_Col">
-<div class="hidden">
-<h6 id="简单两列布局">简单两列布局</h6>
-
-<pre class="brush: html">&lt;h1&gt;2 column layout example&lt;/h1&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;First column&lt;/h2&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;h2&gt;Second column&lt;/h2&gt;
-  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-div:nth-of-type(1) {
-  width: 48%;
-  float: left;
-}
-
-div:nth-of-type(2) {
-  width: 48%;
-  float: right;
-}
-</pre>
-</div>
-</div>
-
-<p>{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}</p>
+<p>{{ EmbedLiveSample('两列布局', '100%', 520) }}</p>
 
 <p>你有没有注意到我们在宽度的表示上都用的是百分比——这是一个很好的策略，这创建了一个<strong>流动布局（liquid layout），</strong>能够适应不同的屏幕大小，在小一些的屏幕上也能使列保持一样的比例。试一试自己来调整浏览器窗口的宽度，这是响应式网页非常有价值的一个工具。</p>
 

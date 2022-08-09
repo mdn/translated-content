@@ -1,12 +1,6 @@
 ---
 title: 如何构建表单小工具
 slug: Learn/Forms/How_to_build_custom_form_controls
-tags:
-  - HTML
-  - 例子
-  - 表单
-  - 高级
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}</div>
@@ -16,7 +10,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <p>在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}}元素。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 我们将专注于构建小部件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知环境下的 DOM 操作，这超过了这篇文章的范围。</p>
+<p><strong>备注：</strong> 我们将专注于构建小部件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知环境下的 DOM 操作，这超过了这篇文章的范围。</p>
 </div>
 
 <h2 id="设计_结构_和语义">设计，结构，和语义</h2>
@@ -25,52 +19,47 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 <p>在我们的示例中，我们将重建 HTML&lt;select&gt;元素，这是我们希望实现的结果：</p>
 
-<p><img alt="The three states of a select box" src="/files/4481/custom-select.png" style="height: 135px; width: 366px;"></p>
+<p><img alt="The three states of a select box" src="/files/4481/custom-select.png"></p>
 
 <p>上面图片显示了我们控件的三个主要状态：正常状态（左）; 活动状态（中）和打开状态（右）。</p>
 
 <p>在行为方面，我们希望我们的控件像任何原生控件一样对鼠标和键盘都可用。让我们从定义控件如何到达每个状态开始：</p>
 
-<dl>
- <dt>以下情况控件将会呈现正常状态：</dt>
- <dd>
+<ul>
+ <li>以下情况控件将会呈现正常状态：
  <ul>
   <li>页面加载</li>
   <li>控件处于活动状态，但用户点击控件以外的任何位置</li>
   <li>控件是活动状态，但用户使用键盘将焦点移动到另一个小部件</li>
  </ul>
-
  <div class="note">
- <p><strong>注意：</strong> 在页面上移动焦点通常是通过按 Tab 键来完成的，但这并不是哪都通用的标准。例如，在 Safari 中页面上的链接间的循环切换默认下是通过使用<a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">组合键 Option + Tab</a>完成的。</p>
+ <p><strong>备注：</strong> 在页面上移动焦点通常是通过按 Tab 键来完成的，但这并不是哪都通用的标准。例如，在 Safari 中页面上的链接间的循环切换默认下是通过使用<a href="http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/">组合键 Option + Tab</a>完成的。</p>
  </div>
- </dd>
- <dt>以下情况控件将会呈现活动状态：</dt>
- <dd>
+</li>
+ <li>以下情况控件将会呈现活动状态：
  <ul>
   <li>用户点击</li>
   <li>用户按下 tab 让控件获得了焦点。</li>
   <li>控件呈现打开状态然后用户点击控件。</li>
  </ul>
- </dd>
- <dt>以下情况控件将会呈现打开状态：</dt>
- <dd>
+</li>
+ <li>以下情况控件将会呈现打开状态：
  <ul>
   <li>控件在非打开状态时被用户点击。</li>
  </ul>
- </dd>
-</dl>
+</li>
+</ul>
 
 <p>我们知道如何改变状态后，定义如何改变小工具的值还很重要：</p>
 
-<dl>
- <dt>以下情况控件的值将会被改变：</dt>
- <dd>
+<ul>
+ <li>以下情况控件的值将会被改变：
  <ul>
   <li>控件在打开状态下用户点击一个选项</li>
   <li>控件在活动状态下用户按下键盘上方向键或者下方向键</li>
  </ul>
- </dd>
-</dl>
+</li>
+</ul>
 
 <p>最后，让我们定义控件的选项将要怎么表现：</p>
 
@@ -92,7 +81,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>另外， 在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。</p>
+<p><strong>备注：</strong> 另外， 在绝大多数系统中，还有一种方法能够打开{{HTMLElement("select")}}元素来观察其所有的选项（这和用鼠标点击{{HTMLElement("select")}}元素是一样的）。通过 Windows 下的 Alt + 向下箭头实现，在我们的例子中没有实现---但是这样做会很方便，因为鼠标点击事件就是由该原理实现的。</p>
 </div>
 
 <h3 id="定义语义化的_HTML_结构">定义语义化的 HTML 结构</h3>
@@ -307,11 +296,11 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <p>现在我们的设计和结构已经完成了。我们可以写些 JavaScript 代码来让这个部件真正生效。</p>
 
 <div class="warning">
-<p><strong>警告：</strong>下面的代码仅仅是教学性质的，并且不应该照搬使用。在许多方面，正如我们所看到的，这种方案不具有前瞻性，而且可能在旧浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。</p>
+<p><strong>警告：</strong> 下面的代码仅仅是教学性质的，并且不应该照搬使用。在许多方面，正如我们所看到的，这种方案不具有前瞻性，而且可能在旧浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>创建可复用的组件可能是一件需要些技巧的事情。<a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C 网络组件草案</a> 是对这类特定问题的答案之一。<a href="http://x-tags.org/">X-Tag 项目 </a>是对这一规格的实验性实现；我们建议你看看它。</p>
+<p><strong>备注：</strong> 创建可复用的组件可能是一件需要些技巧的事情。<a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C 网络组件草案</a> 是对这类特定问题的答案之一。<a href="http://x-tags.org/">X-Tag 项目 </a>是对这一规格的实验性实现；我们建议你看看它。</p>
 </div>
 
 <h3 id="它为什么不生效？">它为什么不生效？</h3>
@@ -397,7 +386,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 </table>
 
 <div class="note">
-<p><strong>注意：</strong> 如果你真的想让你的代码变得通用和可重用，最好不要做一个 class 选择器开关，而是通过添加一个组件 class 的方式来隐藏{{HTMLElement("select")}} 元素，并且动态地在每一个{{HTMLElement("select")}} 元素后面添加代表页面中自定义组件的 DOM 树。</p>
+<p><strong>备注：</strong> 如果你真的想让你的代码变得通用和可重用，最好不要做一个 class 选择器开关，而是通过添加一个组件 class 的方式来隐藏{{HTMLElement("select")}} 元素，并且动态地在每一个{{HTMLElement("select")}} 元素后面添加代表页面中自定义组件的 DOM 树。</p>
 </div>
 
 <h3 id="让工作变得更简单">让工作变得更简单</h3>
@@ -698,10 +687,10 @@ window.addEventListener('load', function () {
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>注意：</strong>只有当你想要为不支持 <a href="/en-US/docs/CSS/Attribute_selectors">CSS 属性选择器的</a>旧浏览器提供支持时，才有必要同时包含 <code>role</code> 属性和一个<code>class</code> 属性。</p>
+<p><strong>备注：</strong> 只有当你想要为不支持 <a href="/en-US/docs/CSS/Attribute_selectors">CSS 属性选择器的</a>旧浏览器提供支持时，才有必要同时包含 <code>role</code> 属性和一个<code>class</code> 属性。</p>
 </div>
 
-<h3 id="aria-selected_属性"> <code>aria-selected</code> 属性</h3>
+<h3 id="aria-selected_属性"><code>aria-selected</code> 属性</h3>
 
 <p>仅仅使用 <a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques"><code>role</code></a> 属性是不够的。 <a href="/en-US/docs/Accessibility/ARIA">ARIA</a> 还提供了许多状态和属性的内部特征。你能更好更充分的利用它们，你的组件就会能够被辅助技术更好的理解。在我们的例子中，我们会把使用限制在一个属性上：<code>aria-selected</code>。</p>
 

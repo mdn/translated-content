@@ -1,13 +1,6 @@
 ---
 title: 基本文本和字体样式
 slug: Learn/CSS/Styling_text/Fundamentals
-tags:
-  - 初学者
-  - 对齐
-  - 文本
-  - 样式
-  - 间距
-translation_of: Learn/CSS/Styling_text/Fundamentals
 original_slug: Learn/CSS/为文本添加样式/Fundamentals
 ---
 <div>{{LearnSidebar}}</div>
@@ -34,7 +27,7 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 <p>正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 {{htmlelement("br")}} 元素。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习盒模型的理论。</p>
+<p><strong>备注：</strong> 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习盒模型的理论。</p>
 </div>
 
 <p>用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。</p>
@@ -45,7 +38,7 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像<a href="/zh-CN/docs/Web/CSS/::first-letter">::first-letter</a> (选中元素文本的第一个字母), <a href="/zh-CN/docs/Web/CSS/::first-line">::first-line</a> (选中元素文本的第一行), 或者 <a href="/zh-CN/docs/Web/CSS/::selection">::selection</a> (当前光标双击选中的文本)</p>
+<p><strong>备注：</strong> 请记住，包含在元素中的文本是作为一个单一的实体。你不能将文字其中一部分选中或添加样式，如果你要这么做，那么你必须要用适合的元素来包装它们，比如 ( {{htmlelement("span")}} 或者 {{htmlelement("strong")}}), 或者使用伪元素，像<a href="/zh-CN/docs/Web/CSS/::first-letter">::first-letter</a> (选中元素文本的第一个字母), <a href="/zh-CN/docs/Web/CSS/::first-line">::first-line</a> (选中元素文本的第一行), 或者 <a href="/zh-CN/docs/Web/CSS/::selection">::selection</a> (当前光标双击选中的文本)</p>
 </div>
 
 <h2 id="字体">字体</h2>
@@ -77,8 +70,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>这将导致段落变为红色，而不是标准的浏览器默认的黑色，如下所示：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -88,9 +80,8 @@ had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Color', '100%', 230) }}</p>
+<p>{{ EmbedLiveSample('颜色', '100%', 230) }}</p>
 
 <h3 id="字体种类">字体种类</h3>
 
@@ -153,11 +144,11 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 </table>
 
 <div class="note">
-<p><strong>注意</strong>: 在各种资源中，<a href="http://www.cssfontstack.com/">cssfontstack.com</a> 网站维护了一个可用在 Windows 和 Mac 操作系统上使用的网页安全字体的列表，这可以帮助决策网站的安全性。</p>
+<p><strong>备注：</strong> 在各种资源中，<a href="http://www.cssfontstack.com/">cssfontstack.com</a> 网站维护了一个可用在 Windows 和 Mac 操作系统上使用的网页安全字体的列表，这可以帮助决策网站的安全性。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 有一个可以下载来自一个网页的自定义字体的方法，允许你通过任何你想要的方法来定制你使用的字体：<strong>网页字体</strong>。这个有一点复杂，我们将在这个模块中的另一篇文章中讨论这一点。</p>
+<p><strong>备注：</strong> 有一个可以下载来自一个网页的自定义字体的方法，允许你通过任何你想要的方法来定制你使用的字体：<strong>网页字体</strong>。这个有一点复杂，我们将在这个模块中的另一篇文章中讨论这一点。</p>
 </div>
 
 <h4 id="默认字体">默认字体</h4>
@@ -216,7 +207,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 <p>在字体栈的最后提供一个合适的通用的字体名称是个不错的办法，这样的话，即使列出的字体都无法使用，浏览器至少可以提供一个还算合适的选择。为了强调这一点，如果没有其他选项可用，那么段落将被赋予浏览器的默认衬线字体 - 通常是 Time New Roman - 这对于 sans-serif 字体是不利的！</p>
 
 <div class="note">
-<p><strong>注意</strong>: 有一些字体名称不止一个单词，比如<code>Trebuchet MS</code> ，那么就需要用引号包裹。</p>
+<p><strong>备注：</strong> 有一些字体名称不止一个单词，比如<code>Trebuchet MS</code> ，那么就需要用引号包裹。</p>
 </div>
 
 <h4 id="A_font-family_example">一个使用 font-family 的例子</h4>
@@ -230,8 +221,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>这给我们以下结果：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -241,9 +231,8 @@ had met its demise while staring point blank down the cavernous barrel of
  this awesome prowling machine. Truly a wonder of nature this urban
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}</p>
+<p>{{ EmbedLiveSample('一个使用 font-family 的例子', '100%', 220) }}</p>
 
 <h3 id="字体大小">字体大小</h3>
 
@@ -270,8 +259,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <p>我们的新结果是这样的：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -282,7 +270,6 @@ had met its demise while staring point blank down the cavernous barrel of
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
-</div>
 
 <pre class="brush: css">html {
   font-size: 10px;
@@ -298,9 +285,9 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}</p>
+<p>{{ EmbedLiveSample('一个简单的 size 示例', '100%', 260) }}</p>
 
-<h3 id="Font_style_font_weight_text_transform_and_text_decoration">字体样式，字体粗细，文本转换和文本装饰</h3>
+<h3 id="Font_style_font_weight_text_transform_and_text_decoration">字体样式、字体粗细、文本转换和文本装饰</h3>
 
 <p>CSS 提供了 4 种常用的属性来改变文本的样子：</p>
 
@@ -330,9 +317,9 @@ p {
  <li>{{cssxref("text-decoration")}}: 设置/取消字体上的文本装饰 (你将主要使用此方法在设置链接时取消设置链接上的默认下划线。) 可用值为：
   <ul>
    <li><code>none</code>: 取消已经存在的任何文本装饰。</li>
-   <li><code>underline</code>: <u>文本下划线</u>.</li>
+   <li><code>underline</code>: 文本下划线。</li>
    <li><code>overline</code>: 文本上划线</li>
-   <li><code>line-through</code>: 穿过文本的线 <s style="text-decoration: line-through;">strikethrough over the text</s>.</li>
+   <li><code>line-through</code>: 穿过文本的线。</li>
   </ul>
   你应该注意到 {{cssxref("text-decoration")}} 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 <code>text-decoration: underline overline</code>.。同时注意 {{cssxref("text-decoration")}} 是一个缩写形式，它由 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} 和 {{cssxref("text-decoration-color")}} 构成。你可以使用这些属性值的组合来创建有趣的效果，比如 <code>text-decoration: line-through red wavy</code>.</li>
 </ul>
@@ -341,8 +328,7 @@ p {
 
 <p>我们的新结果是这样的：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -353,7 +339,6 @@ had met its demise while staring point blank down the cavernous barrel of
 predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
-</div>
 
 <pre class="brush: css">html {
   font-size: 10px;
@@ -374,7 +359,7 @@ p {
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
 
-<p>{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}</p>
+<p>{{ EmbedLiveSample('字体样式、字体粗细、文本转换和文本装饰', '100%', 260) }}</p>
 
 <h3 id="文字阴影">文字阴影</h3>
 
@@ -392,7 +377,7 @@ p {
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 <code>-1px -1px</code>.</p>
+<p><strong>备注：</strong> 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 <code>-1px -1px</code>.</p>
 </div>
 
 <h4 id="Hidden_example1">多种阴影</h4>
@@ -406,8 +391,7 @@ p {
 
 <p>如果我们把这个样式应用到我们 "Tommy the cat" 示例中的 {{htmlelement("h1")}} 元素，就像这样：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -419,7 +403,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-size: 10px;
 }
 
@@ -441,12 +425,11 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}</p>
+<p>{{ EmbedLiveSample('多种阴影', '100%', 260) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以看到更多有趣的关于 <code>text-shadow</code> 使用的示例在 <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a>.</p>
+<p><strong>备注：</strong> 你可以看到更多有趣的关于 <code>text-shadow</code> 使用的示例在 <a href="http://www.sitepoint.com/moonlighting-css-text-shadow/">Moonlighting with CSS text-shadow</a>.</p>
 </div>
 
 <h2 id="文本布局">文本布局</h2>
@@ -466,8 +449,7 @@ p {
 
 <p>如果我们应用 <code>text-align: center;</code> 到我们例子中的 {{htmlelement("h1")}} 元素中，结果如下：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -479,7 +461,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-size: 10px;
 }
 
@@ -502,9 +484,8 @@ p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Text_alignment', '100%', 260) }}</p>
+<p>{{ EmbedLiveSample('文本对齐', '100%', 260) }}</p>
 
 <h3 id="Hidden_example2">行高</h3>
 
@@ -514,8 +495,7 @@ p {
 
 <p>把这个样式应用到我们示例中的 {{htmlelement("p")}} 元素，结果如下：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -527,7 +507,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-size: 10px;
 }
 
@@ -551,9 +531,8 @@ p {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('行高', '100%', 300) }}</p>
 
 <h3 id="Letter_and_word_spacing">字母和单词间距</h3>
 
@@ -568,8 +547,7 @@ p {
 
 <p>我们会得到下面的结果：</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
+<pre class="brush: html hidden">&lt;h1&gt;Tommy the cat&lt;/h1&gt;
 
 &lt;p&gt;I remember as if it were a meal ago...&lt;/p&gt;
 
@@ -581,7 +559,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.&lt;/p&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-size: 10px;
 }
 
@@ -610,9 +588,8 @@ p {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}</p>
+<p>{{ EmbedLiveSample('字母和单词间距', '100%', 330) }}</p>
 
 <h3 id="其他一些值得看一下的属性">其他一些值得看一下的属性</h3>
 
@@ -670,10 +647,7 @@ p {
 
 <p>如果你犯了错误，你可以使用 Reset 按钮来复原。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;
   &lt;p&gt;Some sample text for your delight&lt;/p&gt;&lt;/textarea&gt;
@@ -691,7 +665,7 @@ p {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -717,9 +691,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('动手练习：使用样式文本', 700, 800) }}</p>
 
 <h2 id="小结">小结</h2>
 

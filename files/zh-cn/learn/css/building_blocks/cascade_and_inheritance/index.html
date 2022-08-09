@@ -66,7 +66,7 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <p>一些属性是不能继承的 — 举个例子如果你在一个元素上设置 {{cssxref("width")}} 50% ，所有的后代不会是父元素的宽度的 50% 。如果这个也可以继承的话，CSS 就会很难使用了！</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: 在 MDN CSS 属性引用页面你会发现一个技术信息框，通常在规范区域的底部，列举了属性的很多数据信息，包括能否被继承。参见 <a href="/en-US/docs/Web/CSS/color#Specifications">color property Specifications section</a>, 例子。</p>
+<p><strong>备注：</strong> 在 MDN CSS 属性引用页面你会发现一个技术信息框，通常在规范区域的底部，列举了属性的很多数据信息，包括能否被继承。参见 <a href="/en-US/docs/Web/CSS/color#Specifications">color property Specifications section</a>, 例子。</p>
 </div>
 
 <h2 id="理解这些概念是如何协同工作的">理解这些概念是如何协同工作的</h2>
@@ -171,11 +171,11 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 </ol>
 
 <div class="note">
-<p><strong>注</strong>: 通用选择器 (<code>*</code>)，组合符 (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' ')，和否定伪类 (<code>:not</code>) 不会影响优先级。</p>
+<p><strong>备注：</strong> 通用选择器 (<code>*</code>)，组合符 (<code>+</code>, <code>&gt;</code>, <code>~</code>, ' ')，和否定伪类 (<code>:not</code>) 不会影响优先级。</p>
 </div>
 
 <div class="blockIndicator warning">
-<p><strong>警告: </strong>在进行计算时不允许进行进位，例如，20 个类选择器仅仅意味着 20 个十位，而不能视为 两个百位，也就是说，无论多少个类选择器的权重叠加，都不会超过一个 ID 选择器。</p>
+<p><strong>警告：</strong> 在进行计算时不允许进行进位，例如，20 个类选择器仅仅意味着 20 个十位，而不能视为 两个百位，也就是说，无论多少个类选择器的权重叠加，都不会超过一个 ID 选择器。</p>
 </div>
 
 <p>下面有几个单独的例子，有空可以看看。试着思考下，理解为什么优先级是这样定的。我们还没有深入介绍选择器，不过你可以在 MDN 上面找到每个选择器的详细信息  <a href="/en-US/docs/Web/CSS/CSS_Selectors">selectors reference</a>.</p>
@@ -265,7 +265,7 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 </ol>
 
 <div class="note">
-<p><strong>注</strong>： 覆盖 <code>!important</code> 唯一的办法就是另一个 <code>!important</code> 具有 相同<em>优先级</em> 而且顺序靠后，或者更高优先级。</p>
+<p><strong>备注：</strong> 覆盖 <code>!important</code> 唯一的办法就是另一个 <code>!important</code> 具有 相同<em>优先级</em> 而且顺序靠后，或者更高优先级。</p>
 </div>
 
 <p>了解 <code>!important</code> 是为了在阅读别人代码的时候知道有什么作用。 <strong>但是，强烈建议除了非常情况不要使用它。</strong> <code>!important</code> 改变了层叠的常规工作方式，它会使调试 CSS 问题非常困难，特别是在大型样式表中。</p>

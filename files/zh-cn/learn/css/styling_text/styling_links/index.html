@@ -1,15 +1,6 @@
 ---
 title: 样式化链接
 slug: Learn/CSS/Styling_text/Styling_links
-tags:
-  - 伪类
-  - 悬浮
-  - 标签
-  - 聚焦
-  - 菜单
-  - 超链接
-  - 链接
-translation_of: Learn/CSS/Styling_text/Styling_links
 original_slug: Learn/CSS/为文本添加样式/Styling_links
 ---
 <div>
@@ -35,7 +26,7 @@ original_slug: Learn/CSS/为文本添加样式/Styling_links
 
 <h2 id="让我们来看一些链接">让我们来看一些链接</h2>
 
-<p>根据最佳实践  <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">创建超链接</a> 中的练习，我们看到了如何在你的 HTML 中实现链接。在本篇文章中，我们会以这个知识为基础，向你展示将样式应用到链接的最佳实践。</p>
+<p>根据最佳实践 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">创建超链接</a> 中的练习，我们看到了如何在你的 HTML 中实现链接。在本篇文章中，我们会以这个知识为基础，向你展示将样式应用到链接的最佳实践。</p>
 
 <h3 id="链接状态">链接状态</h3>
 
@@ -85,7 +76,7 @@ original_slug: Learn/CSS/为文本添加样式/Styling_links
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 你不仅仅只限于上述属性来把样式应用到你的链接上，你可以用任何你喜欢的属性，就是不要搞得太疯狂！</p>
+<p><strong>备注：</strong> 你不仅仅只限于上述属性来把样式应用到你的链接上，你可以用任何你喜欢的属性，就是不要搞得太疯狂！</p>
 </div>
 
 <h3 id="将样式应用到一些链接">将样式应用到一些链接</h3>
@@ -194,10 +185,7 @@ Firefox&lt;/a&gt;, &lt;a href="https://www.google.com/chrome/index.html"&gt;Goog
 
 <p>如果你犯了错误，你都可以使用 <em>Reset 按钮来重置。 </em>如果你遇到了困难，可以按 <em>Show solution</em> 按钮来显示我们上文中的例子。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
+<pre class="brush: html hidden">&lt;div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;"&gt;
   &lt;h2&gt;HTML Input&lt;/h2&gt;
   &lt;textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;p&gt;There are several browsers available, such as &lt;a href="https://www.mozilla.org/zh-CN/firefox/"&gt;Mozilla
  Firefox&lt;/a&gt;, &lt;a href="https://www.google.com/chrome/index.html"&gt;Google Chrome&lt;/a&gt;, and
@@ -237,7 +225,7 @@ a:active {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var htmlInput = document.querySelector(".html-input");
+<pre class="brush: js hidden">var htmlInput = document.querySelector(".html-input");
 var cssInput = document.querySelector(".css-input");
 var reset = document.getElementById("reset");
 var htmlCode = htmlInput.value;
@@ -270,9 +258,8 @@ htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 800) }}</p>
+<p>{{ EmbedLiveSample('动手练习：为你的链接添加样式', 700, 800) }}</p>
 
 <h2 id="在链接中包含图标">在链接中包含图标</h2>
 
@@ -337,7 +324,7 @@ a[href*="http"] {
 <p>就这样啦，尝试重新审视上面的动手练习部分，尝试这种新技术！</p>
 
 <div class="note">
-<p><strong>注意</strong>: 不要担心，如果你目前不熟悉 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">backgrounds</a> 和 <a href="/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">responsive web design</a> ; 这些会在其他地方解释。</p>
+<p><strong>备注：</strong> 不要担心，如果你目前不熟悉 <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">backgrounds</a> 和 <a href="/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks">responsive web design</a> ; 这些会在其他地方解释。</p>
 </div>
 
 <h2 id="样式化链接为按钮">样式化链接为按钮</h2>
@@ -416,7 +403,7 @@ a:active {
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 你也许会注意到 HTML 中的列表的每项内容都在同一行上，这是因为 inline-block 元素在页面上创建的空格换行符，就像几个字之间的空格，这样的空隙也许会破坏我们的水平导航菜单布局。所以我们删除了空格。你可以在  <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a> 找到有关此问题的更多信息（和解决方案）。</p>
+<p><strong>备注：</strong> 你也许会注意到 HTML 中的列表的每项内容都在同一行上，这是因为 inline-block 元素在页面上创建的空格换行符，就像几个字之间的空格，这样的空隙也许会破坏我们的水平导航菜单布局。所以我们删除了空格。你可以在  <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the space between inline block elements</a> 找到有关此问题的更多信息（和解决方案）。</p>
 </div>
 
 <h2 id="测试你的技巧！">测试你的技巧！</h2>

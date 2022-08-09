@@ -31,26 +31,22 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <p>这两种途径会倾向于导致它的表现只有在设计者的屏幕上才是最佳的！液态站点导致了小屏幕上的设计会挤成一团（如下所示），以及大屏幕上难以阅读的很长的行长度。</p>
 
-<figure><img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with two columns squashed into a mobile size viewport." src="mdn-rwd-liquid.png">
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>看一下这个简单的流式布局：<a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">源代码</a>。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。</p>
+<p><strong>备注：</strong> 看一下这个简单的流式布局：<a href="https://mdn.github.io/css-examples/learn/rwd/liquid-width.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html">源代码</a>。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。</p>
 </div>
 
 <p>固定宽度站点的一个可能的后果是，在比站点更窄的屏幕上会出现一个水平滚动条（如下所示），在大屏幕上的设计边缘还会有许多空白。</p>
 
-<figure><img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A layout with a horizontal scrollbar in a mobile viewport." src="mdn-rwd-fixed.png">
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>看下这个简单的固定宽度布局：<a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">源代码</a>，重新观察一下你调整浏览器窗口大小后的结果。</p>
+<p><strong>备注：</strong> 看下这个简单的固定宽度布局：<a href="https://mdn.github.io/css-examples/learn/rwd/fixed-width.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html">源代码</a>，重新观察一下你调整浏览器窗口大小后的结果。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>上面的截屏是在火狐开发者工具的<a href="/en-US/docs/Tools/Responsive_Design_Mode">响应式设计模式</a>中截取的。</p>
+<p><strong>备注：</strong> 上面的截屏是在火狐开发者工具的<a href="/en-US/docs/Tools/Responsive_Design_Mode">响应式设计模式</a>中截取的。</p>
 </div>
 
 <p>随着移动 Web 在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像<em>m.example.com</em>或者<em>example.mobi</em>这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。</p>
@@ -118,18 +114,14 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 
 <p>下面的例子阐释了一个使用媒体查询和灵活网格的简单响应式设计。在窄屏幕上，布局将盒子堆叠在另一个的上面：</p>
 
-<figure><img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A mobile view of the layout with boxes stacked on top of each other vertically." src="mdn-rwd-mobile.png">
 
 <p>在宽些的屏幕上，它们变成了两列：</p>
 
-<figure><img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A desktop view of a layout with two columns." src="mdn-rwd-desktop.png">
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>你可以在 GitHub 上找到此示例的<a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">实时示例</a>和<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">源代码</a>。</p>
+<p><strong>备注：</strong> 你可以在 GitHub 上找到此示例的<a href="https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html">实时示例</a>和<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html">源代码</a>。</p>
 </div>
 
 <h2 id="现代布局技术">现代布局技术</h2>
@@ -168,7 +160,7 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：<a href="https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html">示例</a>、<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html">源代码</a>。</p>
+<p><strong>备注：</strong> 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：<a href="https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html">示例</a>、<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html">源代码</a>。</p>
 </div>
 
 <h3 id="CSS网格">CSS 网格</h3>
@@ -182,7 +174,7 @@ translation_of: Learn/CSS/CSS_layout/Responsive_Design
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列<a href="https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html">：示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html">源代码</a>。</p>
+<p><strong>备注：</strong> 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列<a href="https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html">：示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html">源代码</a>。</p>
 </div>
 
 <h2 id="响应式图像">响应式图像</h2>
@@ -227,15 +219,11 @@ h1 {
 
 <p>移动端，标题变小了：</p>
 
-<figure><img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A stacked layout with a small heading size." src="mdn-rwd-font-mobile.png">
 
 <p>但在桌面端，我们看到了大点的标题：</p>
 
-<figure><img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png">
-<figcaption></figcaption>
-</figure>
+<img alt="A two column layout with a large heading." src="mdn-rwd-font-desktop.png">
 
 <div class="blockIndicator note">
 <p><strong>备注：</strong> 查看这个编排好的示例：<a href="https://mdn.github.io/css-examples/learn/rwd/type-rwd.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html">源代码</a>。</p>
@@ -262,7 +250,7 @@ h1 {
 <p>这就是说，我们只需要指定标题的字体大小一次，而不是为移动端设定它，然后再在媒介查询中重新定义它。字体会在你增加视口大小的时候逐渐增大。</p>
 
 <div class="blockIndicator note">
-<p>查看这种情况的一个编排好的示例： <a href="https://mdn.github.io/css-examples/learn/rwd/type-vw.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html">源代码</a>。</p>
+<p><strong>备注：</strong> 查看这种情况的一个编排好的示例： <a href="https://mdn.github.io/css-examples/learn/rwd/type-vw.html">示例</a>，<a href="https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html">源代码</a>。</p>
 </div>
 
 <h2 id="视口元标签">视口元标签</h2>

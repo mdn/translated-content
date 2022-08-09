@@ -1,15 +1,6 @@
 ---
 title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
-tags:
-  - HTML
-  - HTML 表单
-  - JavaScript
-  - Web 表单
-  - 示例
-  - 表单
-  - 高级
-translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}</div>
@@ -33,7 +24,7 @@ original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 <p>AJAX 技术主要依靠 {{domxref("XMLHttpRequest")}} (XHR) DOM 对象。它可以构造 HTTP 请求、发送它们，并获取请求结果。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 老旧的 AJAX 技术可能不依赖 {{domxref("XMLHttpRequest")}}。例如 <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a> 加 <a href="/en-US/docs/Core_JavaScript_1.5_Reference:Global_Functions:eval"><code>eval()</code></a> 函数。这也行得通，但是有严重的安全问题，不推荐使用它。使用它的唯一原因是为了不支持 {{domxref("XMLHttpRequest")}} 或 <a href="/en-US/docs/JSON">JSON</a>的过时浏览器；但是那些浏览器实在是太古老了！<strong>避免使用这种技术。</strong></p>
+<p><strong>备注：</strong> 老旧的 AJAX 技术可能不依赖 {{domxref("XMLHttpRequest")}}。例如 <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a> 加 <a href="/en-US/docs/Core_JavaScript_1.5_Reference:Global_Functions:eval"><code>eval()</code></a> 函数。这也行得通，但是有严重的安全问题，不推荐使用它。使用它的唯一原因是为了不支持 {{domxref("XMLHttpRequest")}} 或 <a href="/en-US/docs/JSON">JSON</a>的过时浏览器；但是那些浏览器实在是太古老了！<strong>避免使用这种技术。</strong></p>
 </div>
 
 <p>创建之初，{{domxref("XMLHttpRequest")}} 被设计用来将 <a href="/zh-CN/docs/XML">XML</a> 作为传输数据的格式获取和发送。不过，如今 JSON 已经取代了 XML，而且要常用的多，无论这是不是一件好事。</p>
@@ -55,7 +46,7 @@ original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 <p>{{domxref("XMLHttpRequest")}} 是进行 HTTP 请求的最安全和最可靠的方式。要使用{{domxref("XMLHttpRequest")}}发送表单数据，请通过对其进行 URL 编码来准备数据，并遵守表单数据请求的具体细节。</p>
 
 <div class="note">
-<p><strong>备注：</strong>如果想要了解更多关于 <code>XMLHttpRequest</code> 的知识，你可能会对两篇文章感兴趣：<a href="/zh-CN/docs/AJAX/Getting_Started">An introductory article to AJAX</a> 和更高级点的<a href="/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">using XMLHttpRequest</a>.</p>
+<p><strong>备注：</strong> 如果想要了解更多关于 <code>XMLHttpRequest</code> 的知识，你可能会对两篇文章感兴趣：<a href="/zh-CN/docs/AJAX/Getting_Started">An introductory article to AJAX</a> 和更高级点的<a href="/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">using XMLHttpRequest</a>.</p>
 </div>
 
 <p>让我们重建之前的这个例子：</p>
@@ -104,7 +95,7 @@ original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 <p>{{EmbedLiveSample("构建_xmlhttprequest", "100%", 50)}}</p>
 
 <div class="note">
-<p><strong>注：</strong> 当你想要往第三方网站传输数据时，使用{{domxref("XMLHttpRequest")}}会受到同源策略的影响。如果你需要执行跨域请求，你需要熟悉一下<a href="/zh-CN/docs/HTTP/Access_control_CORS">CORS 和 HTTP 访问控制</a>.</p>
+<p><strong>备注：</strong> 当你想要往第三方网站传输数据时，使用{{domxref("XMLHttpRequest")}}会受到同源策略的影响。如果你需要执行跨域请求，你需要熟悉一下<a href="/zh-CN/docs/HTTP/Access_control_CORS">CORS 和 HTTP 访问控制</a>.</p>
 </div>
 
 <h3 id="使用_XMLHttpRequest_和_the_FormData_object（表单数据对象）">使用 XMLHttpRequest 和 the FormData object（表单数据对象）</h3>
