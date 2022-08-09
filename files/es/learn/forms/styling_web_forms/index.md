@@ -199,7 +199,7 @@ Agregue el código anterior en el cuerpo de su HTML.
 
 ¡Aquí es donde la diversión comienza! Antes de iniciar a codificar, necesitamos tres recursos adicionales:
 
-1. [El fondo de la postal](/en-US/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
+1. [El fondo de la postal](/es/docs/Learn/Forms/Styling_web_forms/background.jpg): Descargue esta imagen y guárdela en el mismo directorio que su archivo HTML de trabajo.
 2. Una fuente de máquina de escribir: [La fuente "Secret Typewriter" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter): descargue el archivo TTF en el mismo directorio que el anterior.
 3. Una fuente dibujada a mano: [La fuente "Journal" de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal): Descargue el archivo TTF en el mismo directorio que el anterior.
 
