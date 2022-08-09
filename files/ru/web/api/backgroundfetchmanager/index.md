@@ -15,7 +15,7 @@ browser-compat: api.BackgroundFetchManager
 
 {{DefaultAPISidebar("Background Fetch API")}}
 
-**`BackgroundFetchManager`** является интерфейсом {{domxref('Background Fetch API','','',' ')}}, который представляет собой коллекцию ключ/значение, в которой ключами являются идентификаторы фоновых запросов, а значениями объекты {{domxref("BackgroundFetchRegistration")}}.
+**`BackgroundFetchManager`** является интерфейсом {{domxref('Background Fetch API','','',' ')}}, который представляет собой коллекцию ключ-значение, где ключами являются идентификаторы фоновых запросов, а значениями - объекты {{domxref("BackgroundFetchRegistration")}}.
 
 ## Свойства
 
