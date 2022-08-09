@@ -3,7 +3,6 @@ title: Enviar feedback sobre MDN
 slug: MDN/Community
 translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

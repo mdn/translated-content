@@ -7,7 +7,6 @@ tags:
   - MDN
   - TopicStub
 translation_of: MDN/Contribute/Howto
-htmlDate: 2020-12-08T19:41:45.000Z
 ---
 {{MDNSidebar}}{{IncludeSubnav("/es/docs/MDN")}}
 

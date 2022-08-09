@@ -8,7 +8,6 @@ tags:
   - Referencia
 translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
-htmlDate: 2022-08-04T00:16:37.000Z
 ---
 {{MDNSidebar}}
 

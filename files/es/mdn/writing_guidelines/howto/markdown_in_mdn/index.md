@@ -7,7 +7,6 @@ tags:
 translation_of: MDN/Guidelines/CSS_style_guide
 translation_of_original: MDN/Structures/Content_blocks
 original_slug: MDN/Contribute/Markdown_in_MDN
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

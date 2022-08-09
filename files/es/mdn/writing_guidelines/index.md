@@ -11,7 +11,6 @@ tags:
   - MDN Meta
 translation_of: MDN/About
 original_slug: MDN/About
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}{{IncludeSubNav("/es/docs/MDN")}}
 

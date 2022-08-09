@@ -5,7 +5,6 @@ tags:
   - MDN
 translation_of: MDN_at_ten
 original_slug: MDN_en_diez
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 Celebra 10 años documentando tu Web.
 

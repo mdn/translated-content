@@ -3,7 +3,6 @@ title: Introducción a KumaScript
 slug: MDN/Tools/KumaScript
 translation_of: MDN/Tools/KumaScript
 original_slug: MDN/Tools/Introduction_to_KumaScript
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

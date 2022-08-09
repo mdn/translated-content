@@ -6,7 +6,6 @@ tags:
   - Landing
   - MDN Meta
 translation_of: MDN
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

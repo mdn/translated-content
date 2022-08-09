@@ -7,7 +7,6 @@ tags:
   - Procesos
 translation_of: MDN/Contribute/Processes
 original_slug: MDN/Contribute/Procesos
-htmlDate: 2021-02-11T17:20:58.000Z
 ---
 {{MDNSidebar}}{{IncludeSubnav("/es/docs/MDN")}}
 

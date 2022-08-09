@@ -10,7 +10,6 @@ tags:
   - Principiante
 translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

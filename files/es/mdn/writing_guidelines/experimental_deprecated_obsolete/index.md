@@ -9,7 +9,6 @@ tags:
   - Meta MDN
 translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
-htmlDate: 2022-08-04T00:16:37.000Z
 ---
 {{MDNSidebar}}{{IncludeSubnav("/es/docs/MDN")}}
 

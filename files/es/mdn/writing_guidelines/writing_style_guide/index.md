@@ -6,7 +6,6 @@ tags:
   - Todas_las_Categorías
 translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

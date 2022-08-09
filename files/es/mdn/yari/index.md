@@ -3,7 +3,6 @@ title: Kuma
 slug: MDN/Yari
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

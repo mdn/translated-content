@@ -7,7 +7,6 @@ tags:
   - Sample
 translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
-htmlDate: 2022-08-04T19:05:08.000Z
 ---
 {{MDNSidebar}}
 

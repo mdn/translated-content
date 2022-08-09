@@ -11,7 +11,6 @@ tags:
   - tablas de compatibilidad
 translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
-htmlDate: 2022-08-04T00:16:37.000Z
 ---
 {{MDNSidebar}}
 
