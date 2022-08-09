@@ -27,7 +27,7 @@ get(id);
 ### Параметры
 
 - `id`
-  - : Идентификатор {{domxref("backgroundFetchRegistration")}} определяемый при вызове {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
+  - : Идентификатор {{domxref("backgroundFetchRegistration")}}, определяемый при вызове {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
 
 ### Возвращаемое значение
 
