@@ -81,7 +81,7 @@ Ali Spivak gère le contenu et la communauté du Mozilla Developer Network. Elle
 
 ## Kuma Le troisième (et actuel) moteur wiki
 
-[Kuma](https://github.com/mozilla/kuma), qui fut une fourche de [Kitsune](https://github.com/mozilla/kitsune) début 2011, fut lancé le 3 août 2012. C'est une plateforme construite par Mozilla pour gérer un wiki, celle-ci est basée sur Django et utilise son propre système de macro, appelé [KumaScript](/en-US/docs/MDN/Kuma/Introduction_to_KumaScript) et qui est basé sur Node.js.
+[Kuma](https://github.com/mozilla/kuma), qui fut une fourche de [Kitsune](https://github.com/mozilla/kitsune) début 2011, fut lancé le 3 août 2012. C'est une plateforme construite par Mozilla pour gérer un wiki, celle-ci est basée sur Django et utilise son propre système de macro, appelé [KumaScript](/fr/docs/MDN/Kuma/Introduction_to_KumaScript) et qui est basé sur Node.js.
 
 Le code étant disponible sur GitHub, la communauté commença également à contribuer au logiciel derrière MDN. Désormais, contribuer et bidouiller sur MDN concerne aussi bien la documentation que le développement sur Kuma.
 
@@ -119,7 +119,7 @@ Luke Crouch brasse sa propre bière, est fan de football et est développeur web
 
 ## Les communautés de localisation MDN sert un public mondial, dans de nombreuses langues
 
-La localisation est une pierre angulaire de la communauté Mozilla. Elle fait partie de presque tous les projets et tous les produits. Grâce à Kuma, MDN est localisable et répond aux besoin de [notre communauté l10n](/en-US/docs/MDN/Contribute/Localize). Les spécifications W3C et les autres ressources qui décrivent les fonctionnalités du Web n'ont parfois pas d'autres fins et sont donc uniquement disponibles en anglais. Pour les développeurs avancés mais aussi et surtout pour les débutants, MDN peut permettre d'explorer les technologies du Web. C'est donc notre but que d'être disponible pour tout le monde. MDN possède un public mondial et ne vise pas uniquement les anglophones. Grâce aux efforts de traduction et de localisation, MDN est apprécié tout autour du globe.
+La localisation est une pierre angulaire de la communauté Mozilla. Elle fait partie de presque tous les projets et tous les produits. Grâce à Kuma, MDN est localisable et répond aux besoin de [notre communauté l10n](/fr/docs/MDN/Contribute/Localize). Les spécifications W3C et les autres ressources qui décrivent les fonctionnalités du Web n'ont parfois pas d'autres fins et sont donc uniquement disponibles en anglais. Pour les développeurs avancés mais aussi et surtout pour les débutants, MDN peut permettre d'explorer les technologies du Web. C'est donc notre but que d'être disponible pour tout le monde. MDN possède un public mondial et ne vise pas uniquement les anglophones. Grâce aux efforts de traduction et de localisation, MDN est apprécié tout autour du globe.
 
 ## Julien (alias Sphinx) Localisation en français, MDN
 
@@ -135,7 +135,7 @@ Jean-Yves est écrivain technique sur MDN depuis 2010, il a rejoint Mozilla à p
 
 ## « Learning Area » ou Apprendre le Web
 
-La [Learning Area](https://developer.mozilla.org/en-US/Learn) est un nouveau projet de MDN pour enseigner les compétences de base autour du Web. Ces 10 dernières années, MDN a mis à disposition beaucoup de contenu avancé, permettant aux experts de travailler avec des informations précises. Ce projet est à destination des débutants et vise à combler les manques vis-à-vis de ce public.
+La [Learning Area](/fr/docs/Learn) est un projet de MDN pour enseigner les compétences de base autour du Web. Ces 10 dernières années, MDN a mis à disposition beaucoup de contenu avancé, permettant aux experts de travailler avec des informations précises. Ce projet est à destination des débutants et vise à combler les manques vis-à-vis de ce public.
 
 ## Jérémie Patonnier Écrivain technique, MDN
 

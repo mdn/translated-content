@@ -33,8 +33,8 @@ Par exemple, voici des choses que vous pourrez faire avec Feature Policy :
 
 - Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,
 - Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.
-- Permettre aux iframes d'utiliser l'[API plein écran](/en-US/docs/Web/API/Fullscreen_API).
-- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
+- Permettre aux iframes d'utiliser l'[API plein écran](/fr/docs/Web/API/Fullscreen_API).
+- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
 - Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.
 
 ## Concepts et utilisation
@@ -56,7 +56,7 @@ Feature Policy fournit deux manières d'appliquer des règles pour contrôler le
 
 La principale différence entre les deux est que que l'attribut ne contrôle les fonctionnalités que dans l'iframe tandis que l'en-tête les contrôle dans la réponse et chacun des contenus imbriqués dans la page.
 
-Pour plus de détails, voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
+Pour plus de détails, voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
 
 ### Déterminer la règle
 
@@ -97,7 +97,7 @@ La liste de ces fonctionnalités est :
 
 Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.
 
-Les fonctionnalités incluent (voir la [liste des Features](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#Directives)) :
+Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Headers/Feature-Policy#directives)) :
 
 - Accéléromètre
 - Capteur de luminosité ambiante
@@ -118,7 +118,7 @@ Les fonctionnalités incluent (voir la [liste des Features](https://developer.mo
 
 ## Exemples
 
-- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - Voir [Démonstrations de Feature Policy](http://feature-policy-demos.appspot.com/) pour un exemple d'utilisation de plusieurs règles.
 
 ## Spécifications
@@ -133,10 +133,10 @@ Les fonctionnalités incluent (voir la [liste des Features](https://developer.mo
 
 ## Voir aussi
 
-- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
 - [Introduction à Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
 - [Feature policies sur www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Feature-Policy Tester (extension Chrome Developer Tools)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
-- [Anonymat, permissions et informations sur la sécurité](/en-US/docs/Web/Privacy)
+- [Anonymat, permissions et informations sur la sécurité](/fr/docs/Web/Privacy)

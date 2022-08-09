@@ -28,4 +28,4 @@ Voici une liste de toutes les interfaces (c'est à dire, les types d'objets) dis
 
 ## Voir aussi
 
-- [Web API event reference](/en-US/docs/Web/Events)
+- [Web API event reference](/fr/docs/Web/Events)

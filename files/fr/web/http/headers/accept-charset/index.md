@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Accept-Charset
 ---
 {{HTTPSidebar}}
 
-L'en-tête HTTP de la requête**`Accept-Charset`** indique le jeu de caractères que le client est capable de comprendre. À l'aide de la [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), le serveur sélectionne l'une des propositions, l'utilise et informe le client de son choix dans l'en-tête de réponse {{HTTPHeader ("Content-Type")}}. Les navigateurs ne définissent généralement pas cet en-tête car la valeur par défaut de chaque type de contenu est généralement correcte et sa transmission permettrait une empreinte digitale plus facile.
+L'en-tête HTTP de la requête**`Accept-Charset`** indique le jeu de caractères que le client est capable de comprendre. À l'aide de la [content negotiation](/fr/docs/Web/HTTP/Content_negotiation), le serveur sélectionne l'une des propositions, l'utilise et informe le client de son choix dans l'en-tête de réponse {{HTTPHeader ("Content-Type")}}. Les navigateurs ne définissent généralement pas cet en-tête car la valeur par défaut de chaque type de contenu est généralement correcte et sa transmission permettrait une empreinte digitale plus facile.
 
 Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut théoriquement renvoyer un code d'erreur {{HTTPStatus ("406")}} (non acceptable). Cependant, pour une meilleure expérience utilisateur, cela est rarement fait et le moyen le plus courant consiste à ignorer l'en-tête `Accept-Charset` dans ce cas.
 
@@ -64,6 +64,6 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## Voir également
 
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/fr/docs/Web/HTTP/Content_negotiation)
 - Header avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Type")}}
 - Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

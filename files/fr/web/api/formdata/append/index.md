@@ -17,7 +17,7 @@ La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nou
 
 La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la clé existe, {{domxref("FormData.set")}} va remplacer les valeurs existantes avec la nouvelle alors qu' `append()` va rajouter celle-ci à la fin de l'ensemble des valeurs existantes.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 

@@ -59,7 +59,7 @@ La valeur `content-box` correspond à la forme définie par le bord extérieur d
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
-> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
 
 ## Quand utiliser les valeurs de boîte
 

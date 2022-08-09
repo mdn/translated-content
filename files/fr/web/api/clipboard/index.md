@@ -19,7 +19,7 @@ translation_of: Web/API/Clipboard
 >
 > Une application typique accède aux fonctionnalités du presse-papiers en associant des [entrées utilisateur](https://fr.wikipedia.org/wiki/Entr%C3%A9es-sorties) telles que des [raccourcis clavier](https://fr.wikipedia.org/wiki/Raccourci_clavier), des éléments de [menus](https://fr.wikipedia.org/wiki/Menu_(informatique)), etc. à ces interfaces.
 
-L’interface **`Clipboard`** implémente l’[API clipboard](/en-US/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
+L’interface **`Clipboard`** implémente l’[API clipboard](/fr/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
 
 Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 

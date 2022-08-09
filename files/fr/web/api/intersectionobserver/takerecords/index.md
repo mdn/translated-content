@@ -44,4 +44,4 @@ Un tableau d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionO
 
 ## Voir aussi
 
-- [L'API _Intersection Observer_](/en-US/docs/Web/API/Intersection_Observer_API)
+- [L'API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API)
