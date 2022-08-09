@@ -6,35 +6,34 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/break
 ---
-<p>{{jsSidebar("Statements")}}</p>
+{{jsSidebar("Statements")}}
 
-<p><strong>break 陳述句</strong>會中斷目前的迭代、{{jsxref("Statements/switch", "switch")}} 或 {{jsxref("Statements/label", "label")}} 陳述句，並將程式流程轉到被中斷之陳述句後的陳述句。</p>
+**break 陳述句**會中斷目前的迭代、{{jsxref("Statements/switch", "switch")}} 或 {{jsxref("Statements/label", "label")}} 陳述句，並將程式流程轉到被中斷之陳述句後的陳述句。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-break.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-break.html")}}
 
+## 語法
 
+```plain
+break [label];
+```
 
-<h2 id="語法">語法</h2>
+- `label`
+  - : 可選的。欲中斷陳述句的標籤 (label) 識別。若不是要中斷迭代或 {{jsxref("Statements/switch", "switch")}}，則需加此參數。
 
-<pre class="syntaxbox"><code>break [<em>label</em>];</code></pre>
+## 說明
 
-<dl>
- <dt><code>label</code></dt>
- <dd>可選的。欲中斷陳述句的標籤 (label) 識別。若不是要中斷迭代或 {{jsxref("Statements/switch", "switch")}}，則需加此參數。</dd>
-</dl>
+中斷陳述 `break` 可加上標籤 (label) 參數，使其跳出被標籤的陳述語句。此中斷陳述 `break` 必須被包含在被標籤的陳述語句中。被標籤的陳述語句可被添加於任一個區塊 ([block](/en-US/docs/JavaScript/Reference/Statements/block)) 前，而非限定在迴圈陳述。
 
-<h2 id="說明">說明</h2>
+## 範例
 
-<p>中斷陳述 <code>break</code> 可加上標籤 (label) 參數，使其跳出被標籤的陳述語句。此中斷陳述 <code>break</code> 必須被包含在被標籤的陳述語句中。被標籤的陳述語句可被添加於任一個區塊 (<a href="/en-US/docs/JavaScript/Reference/Statements/block">block</a>) 前，而非限定在迴圈陳述。</p>
+下面函式包含一個中斷陳述 `break` ，當 `i` 值為 3 時，中斷 `while` 迴圈，並回傳 `3 * x` 。
 
-<h2 id="範例">範例</h2>
-
-<p>下面函式包含一個中斷陳述 <code>break</code> ，當 <code>i</code> 值為 3 時，中斷 <code>while</code> 迴圈，並回傳 <code>3 * x</code> 。</p>
-
-<pre class="brush:js">function testBreak(x) {
+```js
+function testBreak(x) {
   var i = 0;
 
-  while (i &lt; 6) {
+  while (i < 6) {
     if (i == 3) {
       break;
     }
@@ -42,11 +41,13 @@ translation_of: Web/JavaScript/Reference/Statements/break
   }
 
   return i * x;
-}</pre>
+}
+```
 
-<p>The following code uses <code>break</code> statements with labeled blocks. A <code>break</code> statement must be nested within any label it references. Notice that <code>inner_block</code> is nested within <code>outer_block</code>.</p>
+The following code uses `break` statements with labeled blocks. A `break` statement must be nested within any label it references. Notice that `inner_block` is nested within `outer_block`.
 
-<pre class="brush:js">outer_block: {
+```js
+outer_block: {
   inner_block: {
     console.log('1');
     break outer_block; // breaks out of both inner_block and outer_block
@@ -54,11 +55,12 @@ translation_of: Web/JavaScript/Reference/Statements/break
   }
   console.log('2'); // skipped
 }
-</pre>
+```
 
-<p>The following code also uses <code>break</code> statements with labeled blocks but generates a Syntax Error because its <code>break</code> statement is within <code>block_1</code> but references <code>block_2</code>. A <code>break</code> statement must always be nested within any label it references.</p>
+The following code also uses `break` statements with labeled blocks but generates a Syntax Error because its `break` statement is within `block_1` but references `block_2`. A `break` statement must always be nested within any label it references.
 
-<pre class="brush:js">block_1: {
+```js
+block_1: {
   console.log('1');
   break block_2; // SyntaxError: label not found
 }
@@ -66,22 +68,18 @@ translation_of: Web/JavaScript/Reference/Statements/break
 block_2: {
   console.log('2');
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.statements.break")}}
 
+## 參見
 
-<p>{{Compat("javascript.statements.break")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/switch", "switch")}}

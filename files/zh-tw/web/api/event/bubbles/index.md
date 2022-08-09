@@ -3,26 +3,28 @@ title: Event.bubbles
 slug: Web/API/Event/bubbles
 translation_of: Web/API/Event/bubbles
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>表示事件是否會向上冒泡傳遞。</p>
+表示事件是否會向上冒泡傳遞。
 
-<h3 id="語法">語法</h3>
+### 語法
 
-<pre class="eval"><em>var bool</em> = event.bubbles;
-</pre>
+```plain
+var bool = event.bubbles;
+```
 
-<p>回傳一個布林值，若事件會向上冒泡傳遞則回傳 <code>true</code>。</p>
+回傳一個布林值，若事件會向上冒泡傳遞則回傳 `true`。
 
-<h3 id="Notes">備註</h3>
+### 備註
 
-<p>Only certain events can bubble. Events that do bubble have this property set to <code>true</code>. You can use this property to check if an event is allowed to bubble or not.</p>
+Only certain events can bubble. Events that do bubble have this property set to `true`. You can use this property to check if an event is allowed to bubble or not.
 
-<h3 id="Example">範例</h3>
+### 範例
 
-<pre class="brush: js"> function goInput(e) {
+```js
+ function goInput(e) {
   // checks bubbles and
   if (!e.bubbles) {
      // passes event along if it's not
@@ -31,8 +33,8 @@ translation_of: Web/API/Event/bubbles
   // already bubbling
   doOutput(e)
 }
-</pre>
+```
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}

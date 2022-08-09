@@ -3,23 +3,26 @@ title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 translation_of: Web/API/MediaSource/activeSourceBuffers
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><code><strong>activeSourceBuffers</strong></code> 是 {{domxref("MediaSource")}} 介面的唯讀屬性，回傳一個 {{domxref("SourceBufferList")}} 物件，含有在 {{domxref("SourceBuffers")}} 之中的 {{domxref("SourceBuffer")}} 物件子集合—物件的串列提供被選擇的影片軌 (video track), 啟用的音軌 (audio tracks), 以及顯示或隱藏的字軌。</p>
+**`activeSourceBuffers`** 是 {{domxref("MediaSource")}} 介面的唯讀屬性，回傳一個 {{domxref("SourceBufferList")}} 物件，含有在 {{domxref("SourceBuffers")}} 之中的 {{domxref("SourceBuffer")}} 物件子集合—物件的串列提供被選擇的影片軌 (video track), 啟用的音軌 (audio tracks), 以及顯示或隱藏的字軌。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var myActiveSourceBuffers = mediaSource.activeSourceBuffers;</pre>
+```js
+var myActiveSourceBuffers = mediaSource.activeSourceBuffers;
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個 {{domxref("SourceBufferList")}} 。</p>
+一個 {{domxref("SourceBufferList")}} 。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>以下的片段基於 Nick Desaulniers 所編纂的簡單範例（<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">觀看實際演示</a>，或者<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下載原始碼</a> 以利更進一步研究。）</p>
+以下的片段基於 Nick Desaulniers 所編纂的簡單範例（[觀看實際演示](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) 以利更進一步研究。）
 
-<pre class="brush: js  language-js"><code class="language-js">function sourceOpen (_) {
+```js
+function sourceOpen (_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
@@ -36,19 +39,18 @@ translation_of: Web/API/MediaSource/activeSourceBuffers
   });
 };
 
-...</code></pre>
+...
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="相容性表格">相容性表格</h2>
+## 相容性表格
 
 {{Compat("api.MediaSource.activeSourceBuffers")}}
 
-<h2 id="相關資料">相關資料</h2>
+## 相關資料
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

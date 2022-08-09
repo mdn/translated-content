@@ -3,31 +3,30 @@ title: FileReader.error
 slug: Web/API/FileReader/error
 translation_of: Web/API/FileReader/error
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<h2 id="總覽">總覽</h2>
+## 總覽
 
-<p>回傳讀取檔案時發生的錯誤。</p>
+回傳讀取檔案時發生的錯誤。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <var>error</var> = <em>instanceOfFileReader</em>.error
-</pre>
+```plain
+var error = instanceOfFileReader.error
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMError")}}</p>
+A {{domxref("DOMError")}}
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.FileReader.error")}}
 
-<h2 id="閱讀更多">閱讀更多</h2>
+## 閱讀更多
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

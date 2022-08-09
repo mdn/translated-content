@@ -3,89 +3,78 @@ title: CSS Selectors
 slug: Web/CSS/CSS_Selectors
 translation_of: Web/CSS/CSS_Selectors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>選擇器</strong>可以定義某組 CSS 樣式要套用到哪些元素上。</p>
+**選擇器**可以定義某組 CSS 樣式要套用到哪些元素上。
 
-<h2 id="基本選擇器">基本選擇器</h2>
+## 基本選擇器
 
-<dl>
- <dt><a href="/zh-TW/docs/Web/CSS/Universal_selectors">通用選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Universal_selectors">Universal selector</a>）</dt>
- <dd>用以選擇所有元素。（可選）可以將其限制為特定的名稱空間或所有名稱空間。<br>
- <strong>語法:</strong> <code>* ns|* *|*</code><br>
- <strong>範例:</strong> <code>*</code> 套用文檔中所有元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Type_selectors">標籤選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Type_selectors">Type selector</a>）</dt>
- <dd>用以選擇所有符合指定標籤的元素。<br>
- <strong>語法:</strong> <code><var>elementname</var></code><br>
- <strong>範例:</strong> <code>input</code> 可選出任一 <a href="/zh-TW/docs/Web/HTML/Element/input">&lt;input&gt;</a> 元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Class_selectors">類別選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Class_selectors">Class selector</a>）</dt>
- <dd>用以選擇所有符合指定 <code>class</code> 屬性值的元素。<br>
- <strong>語法:</strong> <code>.<var>classname</var></code><br>
- <strong>範例:</strong> <code>.index</code> 可選出任一含有 <code>index</code> 的 class 屬性值之元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/ID_selectors">ID選擇器</a>（<a href="/zh-TW/docs/Web/CSS/ID_selectors">ID selector</a>）</dt>
- <dd>用以選擇指定 <code>id</code> 屬性值的元素。（一個文件中，每個ID屬性都是唯一的。）<br>
- <strong>語法:</strong> <code>#<var>idname</var></code><br>
- <strong>範例:</strong> <code>#toc</code> 會比對含有 ID 是 toc 的元素(可以定義成 <code>id="toc"</code> 或其他類似的定義)。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Attribute_selectors">屬性選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Attribute_selectors">Attribute selector</a>）</dt>
- <dd>用以選擇所有符合指定屬性的元素。<br>
- <strong>語法:</strong> <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</code><br>
- <strong>範例:</strong> <code>[autoplay]</code> 將會套用含有 <code>autoplay</code> 屬性的元素。(不論這個屬性的值是什麼)。</dd>
-</dl>
+- [通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)（[Universal selector](/zh-TW/docs/Web/CSS/Universal_selectors)）
+  - : 用以選擇所有元素。（可選）可以將其限制為特定的名稱空間或所有名稱空間。
+    **語法:** `* ns|* *|*`
+    **範例:** `*` 套用文檔中所有元素。
+- [標籤選擇器](/zh-TW/docs/Web/CSS/Type_selectors)（[Type selector](/zh-TW/docs/Web/CSS/Type_selectors)）
+  - : 用以選擇所有符合指定標籤的元素。
+    **語法:** `elementname`
+    **範例:** `input` 可選出任一 [\<input>](/zh-TW/docs/Web/HTML/Element/input) 元素。
+- [類別選擇器](/zh-TW/docs/Web/CSS/Class_selectors)（[Class selector](/zh-TW/docs/Web/CSS/Class_selectors)）
+  - : 用以選擇所有符合指定 `class` 屬性值的元素。
+    **語法:** `.classname`
+    **範例:** `.index` 可選出任一含有 `index` 的 class 屬性值之元素。
+- [ID 選擇器](/zh-TW/docs/Web/CSS/ID_selectors)（[ID selector](/zh-TW/docs/Web/CSS/ID_selectors)）
+  - : 用以選擇指定 `id` 屬性值的元素。（一個文件中，每個 ID 屬性都是唯一的。）
+    **語法:** `#idname`
+    **範例:** `#toc` 會比對含有 ID 是 toc 的元素(可以定義成 `id="toc"` 或其他類似的定義)。
+- [屬性選擇器](/zh-TW/docs/Web/CSS/Attribute_selectors)（[Attribute selector](/zh-TW/docs/Web/CSS/Attribute_selectors)）
+  - : 用以選擇所有符合指定屬性的元素。
+    **語法:** `[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]`
+    **範例:** `[autoplay]` 將會套用含有 `autoplay` 屬性的元素。(不論這個屬性的值是什麼)。
 
-<h2 id="分組選擇器">分組選擇器</h2>
+## 分組選擇器
 
-<dl>
- <dt>選擇器列表（<a href="/zh-TW/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
- <dd><code>,</code> 用以將不同的選擇器組合起來的一種方法。<br>
- <strong>語法:</strong> <code><var>A</var>, <var>B</var></code><br>
- <strong>範例:</strong> <code>div, span</code> 將同時選擇 <code><a href="/zh-TW/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 和 <code><a href="/zh-TW/docs/Web/HTML/Element/span">&lt;span&gt;</a></code> 元素。</dd>
-</dl>
+- 選擇器列表（[Selector list](/zh-TW/docs/Web/CSS/Selector_list)）
+  - : `,` 用以將不同的選擇器組合起來的一種方法。
+    **語法:** `A, B`
+    **範例:** `div, span` 將同時選擇 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 和 [`<span>`](/zh-TW/docs/Web/HTML/Element/span) 元素。
 
-<h2 id="組合選擇器">組合選擇器</h2>
+## 組合選擇器
 
-<dl>
- <dt></dt>
- <dt><a href="/zh-TW/docs/Web/CSS/Descendant_combinator">後代選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
- <dd><code> </code> (空格) 用以選擇某個元素後代的元素。<br>
- <strong>語法:</strong> <code><var>A</var> <var>B</var></code><br>
- <strong>範例:</strong> <code>div span</code> 套用所有  <code><a href="/zh-TW/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 元素內部的所有 <code><a href="/en-US/docs/Web/HTML/Element/span">&lt;span&gt;</a></code> 元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Child_combinator">子代選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
- <dd><code>&gt;</code> 用以選擇某個元素後代的元素。<br>
- <strong>語法:</strong> <code><var>A</var> &gt; <var>B</var></code>（B元素不可在A元素的其他元素裡）<br>
- <strong>範例:</strong> <code>ul &gt; li</code> 套用所有 <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> 元素內部的 <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 子元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/General_sibling_combinator">一般兄弟選擇器</a>（<a href="/zh-TW/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
- <dd><code>~</code> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.<br>
- <strong>語法:</strong> <code><var>A</var> ~ <var>B</var></code><br>
- <strong>範例:</strong> <code>p ~ span</code> will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator">相鄰兄弟選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
- <dd><code>+</code> 選擇緊接在後的元素，並共享父元素。<br>
- <strong>語法:</strong> <code><var>A</var> + <var>B</var></code><br>
- <strong>範例:</strong> <code>h2 + p</code> 套用所有 緊接在 <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h2&gt;</a></code> 元素後的 <a href="/zh-TW/docs/Web/HTML/Element/p">&lt;p&gt;</a> 元素，並擁有 <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h2&gt;</a></code> 的父元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
- <dd>The <code>||</code> combinator selects nodes which belong to a column.<br>
- <strong>語法:</strong> <code><var>A</var> || <var>B</var></code><br>
- <strong>範例:</strong> <code>col || td</code> will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.</dd>
-</dl>
+- [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator)（[Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_combinator)）
 
-<h2 id="偽選擇器">偽選擇器</h2>
+  - : ``(空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:**`div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/en-US/docs/Web/HTML/Element/span) 元素。
 
-<dl>
- <dt><a href="/zh-TW/docs/Web/CSS/Pseudo-classes">Pseudo classes</a></dt>
- <dd>The <code>:</code> pseudo allow the selection of elements based on state information that is not contained in the document tree.<br>
- <strong>範例:</strong> <code>a:visited</code> will match all {{HTMLElement("a")}} elements that have been visited by the user.</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Pseudo-elements">Pseudo elements</a></dt>
- <dd>The <code>::</code> pseudo represent entities that are not included in HTML.<br>
- <strong>範例:</strong> <code>p::first-line</code> will match the first line of all {{HTMLElement("p")}} elements.</dd>
-</dl>
+- [子代選擇器](/zh-TW/docs/Web/CSS/Child_combinator)（[Child combinator](/zh-TW/docs/Web/CSS/Child_combinator)）
+  - : `>` 用以選擇某個元素後代的元素。
+    **語法:** `A > B`（B 元素不可在 A 元素的其他元素裡）
+    **範例:** `ul > li` 套用所有 [`<li>`](/en-US/docs/Web/HTML/Element/li) 元素內部的 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 子元素。
+- [一般兄弟選擇器](/zh-TW/docs/Web/CSS/General_sibling_combinator)（[General sibling combinator](/zh-TW/docs/Web/CSS/General_sibling_combinator)）
+  - : `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+    **語法:** `A ~ B`
+    **範例:** `p ~ span` will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.
+- [相鄰兄弟選擇器](/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator)（[Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator)）
+  - : `+` 選擇緊接在後的元素，並共享父元素。
+    **語法:** `A + B`
+    **範例:** `h2 + p` 套用所有 緊接在 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素後的 [\<p>](/zh-TW/docs/Web/HTML/Element/p) 元素，並擁有 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 的父元素。
+- [Column combinator](/zh-TW/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
+  - : The `||` combinator selects nodes which belong to a column.
+    **語法:** `A || B`
+    **範例:** `col || td` will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.
 
-<h2 id="規範">規範</h2>
+## 偽選擇器
+
+- [Pseudo classes](/zh-TW/docs/Web/CSS/Pseudo-classes)
+  - : The `:` pseudo allow the selection of elements based on state information that is not contained in the document tree.
+    **範例:** `a:visited` will match all {{HTMLElement("a")}} elements that have been visited by the user.
+- [Pseudo elements](/zh-TW/docs/Web/CSS/Pseudo-elements)
+  - : The `::` pseudo represent entities that are not included in HTML.
+    **範例:** `p::first-line` will match the first line of all {{HTMLElement("p")}} elements.
+
+## 規範
 
 {{Specifications}}
 
-<p>See the <a href="/zh-TW/docs/Web/CSS/Pseudo-classes#Specifications">pseudo-class</a> and <a href="/zh-TW/docs/Web/CSS/Pseudo-elements#Specifications">pseudo-element</a> specification tables for details on those.</p>
+See the [pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes#Specifications) and [pseudo-element](/zh-TW/docs/Web/CSS/Pseudo-elements#Specifications) specification tables for details on those.
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/CSS/Specificity">CSS Specificity</a></li>
-</ul>
+- [CSS Specificity](/zh-TW/docs/Web/CSS/Specificity)

@@ -3,28 +3,29 @@ title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-<p>{{ APIRef("Geolocation API") }}</p>
+{{ APIRef("Geolocation API") }}
 
-<p><strong><code>Geolocation.getCurrentPosition()</code></strong> 方法用來獲取設備當前的位置。</p>
+**`Geolocation.getCurrentPosition()`** 方法用來獲取設備當前的位置。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success[</em>, <em>error[</em>, <em>options]]</em>)</pre>
+```plain
+navigator.geolocation.getCurrentPosition(success[, error[, options]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>success</em></dt>
- <dd>一個回呼函式(callback function) 會被傳入一個{{domxref("Position")}} 的物件。</dd>
- <dt><em>error</em> {{optional_inline}}</dt>
- <dd>一個選擇性的錯誤回呼函式(callback function)，會被傳入一個 {{domxref("PositionError")}} 的物件。</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>一個選擇性的 {{domxref("PositionOptions")}} 的物件。</dd>
-</dl>
+- _success_
+  - : 一個回呼函式(callback function) 會被傳入一個{{domxref("Position")}} 的物件。
+- _error_ {{optional_inline}}
+  - : 一個選擇性的錯誤回呼函式(callback function)，會被傳入一個 {{domxref("PositionError")}} 的物件。
+- _options_ {{optional_inline}}
+  - : 一個選擇性的 {{domxref("PositionOptions")}} 的物件。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -44,19 +45,17 @@ function error(err) {
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.Geolocation.getCurrentPosition")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Navigator.geolocation")}}</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Navigator.geolocation")}}

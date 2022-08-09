@@ -3,29 +3,28 @@ title: Window.print()
 slug: Web/API/Window/print
 translation_of: Web/API/Window/print
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p>打開列印視窗來列印當前的文件。</p>
+打開列印視窗來列印當前的文件。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="eval">window.print()
-</pre>
+```plain
+window.print()
+```
 
-<h2 id="Specification">注釋</h2>
+## 注釋
 
-<p>Starting with Chrome V46.0 this method is blocked inside an {{htmlelement("iframe")}} unless its sandbox attribute has the value <code>allow-modals</code>.</p>
+Starting with Chrome V46.0 this method is blocked inside an {{htmlelement("iframe")}} unless its sandbox attribute has the value `allow-modals`.
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en/Printing">Printing</a></li>
- <li>{{ domxref("window.onbeforeprint") }}</li>
- <li>{{ domxref("window.onafterprint") }}</li>
-</ul>
+- [Printing](/en/Printing)
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}

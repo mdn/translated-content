@@ -3,15 +3,16 @@ title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
 translation_of: Web/API/XMLHttpRequest/status
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.status</strong> 屬性根據XMLHttpRequest的回應傳回數值化的狀況編碼。狀況編碼為一正短整數（<code>unsigned short）。</code>Before the request is complete, the value of <code>status</code> will be <code>0</code>. It is worth noting that browsers report a status of 0 in case of XMLHttpRequest errors too.</p>
+**XMLHttpRequest.status** 屬性根據 XMLHttpRequest 的回應傳回數值化的狀況編碼。狀況編碼為一正短整數（`unsigned short）。`Before the request is complete, the value of `status` will be `0`. It is worth noting that browsers report a status of 0 in case of XMLHttpRequest errors too.
 
-<p>The status codes returned are the standard <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP status codes</a>. For example, <code>status</code> <code>200</code> denotes a successful request. If the server response doesn't explicitly specify a status code, <code>XMLHttpRequest.status</code> will assume the default value of <code>200</code>.</p>
+The status codes returned are the standard [HTTP status codes](/en-US/docs/Web/HTTP/Response_codes). For example, `status` `200` denotes a successful request. If the server response doesn't explicitly specify a status code, `XMLHttpRequest.status` will assume the default value of `200`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.status);
 
 xhr.open('GET', '/server', true);
@@ -35,18 +36,16 @@ xhr.send(null);
  * LOADING 200
  * DONE 200
  */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.XMLHttpRequest.status")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>List of <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
-</ul>
+- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)

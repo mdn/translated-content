@@ -11,41 +11,42 @@ tags:
   - 屬性
 translation_of: Web/API/Blob/size
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><strong><code>Blob.size</code></strong> 屬性回傳以 byte 為單位的 {{domxref("Blob")}} 或一個 {{domxref("File")}} 的大小。</p>
+**`Blob.size`** 屬性回傳以 byte 為單位的 {{domxref("Blob")}} 或一個 {{domxref("File")}} 的大小。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var sizeInBytes = <em>blob</em>.size
-</pre>
+```plain
+var sizeInBytes = blob.size
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一個數字。</p>
+一個數字。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush:js">// fileInput 是個 HTMLInputElement: &lt;input type="file" multiple id="myfileinput"&gt;
+```js
+// fileInput 是個 HTMLInputElement: <input type="file" multiple id="myfileinput">
 var fileInput = document.getElementById("myfileinput");
 
 // files 是個 FileList 物件 （類似 NodeList）
 var files = fileInput.files;
 
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
   console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
-}</pre>
+}
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Blob.size")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

@@ -3,52 +3,52 @@ title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 translation_of: Web/API/Document/createTextNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>創建一個新的文字節點.</p>
+創建一個新的文字節點.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>var text</var> = document.createTextNode(<var>data</var>);
-</pre>
+```plain
+var text = document.createTextNode(data);
+```
 
-<ul>
- <li>文字屬於一個文字節點.</li>
- <li>將含有數據的串加入文字節點中.</li>
-</ul>
+- 文字屬於一個文字節點.
+- 將含有數據的串加入文字節點中.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;createTextNode example&lt;/title&gt;
-&lt;script&gt;
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>createTextNode example</title>
+<script>
 function addTextNode(text) {
   var newtext = document.createTextNode(text),
       p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
-  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
-  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
+<body>
+  <button onclick="addTextNode('YES! ');">YES!</button>
+  <button onclick="addTextNode('NO! ');">NO!</button>
+  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  &lt;hr /&gt;
+  <hr />
 
-  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  <p id="p1">First line of paragraph.</p>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Document.createTextNode")}}

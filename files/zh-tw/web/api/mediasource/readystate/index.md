@@ -3,29 +3,30 @@ title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 translation_of: Web/API/MediaSource/readyState
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>{{domxref("MediaSource")}} 介面的唯讀屬性 <code><strong>readyState</strong></code> 回傳表示當前 <code>MediaSource</code> 狀態的列舉值。三種可能的值為：</p>
+{{domxref("MediaSource")}} 介面的唯讀屬性 **`readyState`** 回傳表示當前 `MediaSource` 狀態的列舉值。三種可能的值為：
 
-<ul>
- <li><code>closed</code>: 來源 (source) 目前沒有附加到媒體元件 (media element) 。</li>
- <li><code>open</code>: 來源已經附加且可以接收 {{domxref("SourceBuffer")}} 物件。</li>
- <li><code>ended</code>: 來源已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束。</li>
-</ul>
+- `closed`: 來源 (source) 目前沒有附加到媒體元件 (media element) 。
+- `open`: 來源已經附加且可以接收 {{domxref("SourceBuffer")}} 物件。
+- `ended`: 來源已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var myReadyState = mediaSource.readyState;</pre>
+```js
+var myReadyState = mediaSource.readyState;
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個 {{domxref("DOMString")}}。</p>
+一個 {{domxref("DOMString")}}。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>以下片段是由 Nick Desaulniers 所撰寫的簡單範例（<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">在此實際觀看</a>，或者<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下載原始碼</a>以更進一步研究）</p>
+以下片段是由 Nick Desaulniers 所撰寫的簡單範例（[在此實際觀看](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以更進一步研究）
 
-<pre class="brush: js  language-js"><code class="language-js">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+```js
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -46,19 +47,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</code></pre>
+};
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="相容性表格">相容性表格</h2>
+## 相容性表格
 
 {{Compat("api.MediaSource.readyState")}}
 
-<h2 id="相關資料">相關資料</h2>
+## 相關資料
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

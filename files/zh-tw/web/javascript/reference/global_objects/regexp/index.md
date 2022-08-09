@@ -3,200 +3,194 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+**`RegExp`** 物件被用來比對符合自訂規則的文字。
 
+關於正規表達式(regular expressions)的介紹，可以閱讀 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)中的 [正規表達式章節](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)。
 
-<p><strong><code>RegExp</code></strong> 物件被用來比對符合自訂規則的文字。</p>
+## 說明
 
-<p>關於正規表達式(regular expressions)的介紹，可以閱讀 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript 指南</a>中的 <a href="/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions">正規表達式章節</a>。</p>
+建立 `RegExp` 物件有兩種方式：_文字表示法 (literal notation)_ 和 _建構子 (constructor)。_
 
-<h2 id="說明">說明</h2>
+- **文字表示法** 的參數，頭尾以斜線標註，且不使用引號標註。
+- **建構子函式** 的參數，頭尾不以斜線標註，但使用引號標註。
 
-<p>建立 <code>RegExp</code> 物件有兩種方式：<em>文字表示法 (literal notation)</em> 和 <em>建構子 (constructor)。</em></p>
+以下的表達式會建立出相同的正規表達式:
 
-<ul>
- <li><strong>文字表示法</strong> 的參數，頭尾以斜線標註，且不使用引號標註。</li>
- <li><strong>建構子函式</strong> 的參數，頭尾不以斜線標註，但使用引號標註。</li>
-</ul>
-
-<p>以下的表達式會建立出相同的正規表達式:</p>
-
-<pre class="brush: js">/ab+c/i
+```js
+/ab+c/i
 new RegExp(/ab+c/, 'i') // literal notation
 new RegExp('ab+c', 'i') // constructor
-</pre>
+```
 
-<p>The literal notation provides a compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.</p>
+The literal notation provides a compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.
 
-<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—provides runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
+The constructor of the regular expression object—for example, `new RegExp('ab+c')`—provides runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.
 
-<p>Starting with ECMAScript 6, <code>new RegExp(/ab+c/, 'i')</code> no longer throws a {{jsxref("TypeError")}} ("can't supply flags when constructing one RegExp from another") when the first argument is a <code>RegExp</code> and the second <code><var>flags</var></code> argument is present. A new <code>RegExp</code> from the arguments is created instead.</p>
+Starting with ECMAScript 6, `new RegExp(/ab+c/, 'i')` no longer throws a {{jsxref("TypeError")}} ("can't supply flags when constructing one RegExp from another") when the first argument is a `RegExp` and the second `flags` argument is present. A new `RegExp` from the arguments is created instead.
 
-<p>When using the constructor function, the normal string escape rules (preceding special characters with <code>\</code> when included in a string) are necessary.</p>
+When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 
-<p>For example, the following are equivalent:</p>
+For example, the following are equivalent:
 
-<pre class="brush: js">let re = /\w+/
+```js
+let re = /\w+/
 let re = new RegExp('\\w+')
-</pre>
+```
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp">RegExp()</a></code></dt>
- <dd>Creates a regular expression object.</dd>
-</dl>
+- [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
+  - : Creates a regular expression object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>RegExp.prototype</code></dt>
- <dd>Allows the addition of properties to all objects.</dd>
- <dt><code>RegExp.length</code></dt>
- <dd>The value of <code>RegExp.length</code> is <code>2</code>.</dd>
- <dt>{{jsxref("RegExp.@@species", "get RegExp[@@species]")}}</dt>
- <dd>The constructor function that is used to create derived objects.</dd>
- <dt>{{jsxref("RegExp.lastIndex")}}</dt>
- <dd>The index at which to start the next match.</dd>
-</dl>
+- `RegExp.prototype`
+  - : Allows the addition of properties to all objects.
+- `RegExp.length`
+  - : The value of `RegExp.length` is `2`.
+- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
+  - : The constructor function that is used to create derived objects.
+- {{jsxref("RegExp.lastIndex")}}
+  - : The index at which to start the next match.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The global <code>RegExp</code> object has no methods of its own. However, it does inherit some methods through the prototype chain.</p>
+The global `RegExp` object has no methods of its own. However, it does inherit some methods through the prototype chain.
 
-<h2 id="RegExp_prototype_objects_and_instances"><code>RegExp</code> prototype objects and instances</h2>
+## `RegExp` prototype objects and instances
 
-<h3 id="Properties_2">Properties</h3>
+### Properties
 
-<div>
-<p>See also <a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties">deprecated <code>RegExp</code> properties.</a></p>
+See also [deprecated `RegExp` properties.](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
 
-<p>Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. Perl is the programming language from which JavaScript modeled its regular expressions.</p>
+Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. Perl is the programming language from which JavaScript modeled its regular expressions.
 
-<dl>
- <dt><code>RegExp.prototype.constructor</code></dt>
- <dd>Specifies the function that creates an object's prototype.</dd>
- <dt>{{JSxRef("RegExp.prototype.flags")}}</dt>
- <dd>A string that contains the flags of the <code>RegExp</code> object.</dd>
- <dt>{{JSxRef("RegExp.prototype.dotAll")}}</dt>
- <dd>Whether <code>.</code> matches newlines or not.</dd>
- <dt>{{JSxRef("RegExp.prototype.global")}}</dt>
- <dd>Whether to test the regular expression against all possible matches in a string, or only against the first.</dd>
- <dt>{{JSxRef("RegExp.prototype.ignoreCase")}}</dt>
- <dd>Whether to ignore case while attempting a match in a string.</dd>
- <dt>{{JSxRef("RegExp.prototype.multiline")}}</dt>
- <dd>Whether or not to search in strings across multiple lines.</dd>
- <dt>{{JSxRef("RegExp.prototype.source")}}</dt>
- <dd>The text of the pattern.</dd>
- <dt>{{JSxRef("RegExp.prototype.sticky")}}</dt>
- <dd>Whether or not the search is sticky.</dd>
- <dt>{{JSxRef("RegExp.prototype.unicode")}}</dt>
- <dd>Whether or not Unicode features are enabled.</dd>
-</dl>
-</div>
+- `RegExp.prototype.constructor`
+  - : Specifies the function that creates an object's prototype.
+- {{JSxRef("RegExp.prototype.flags")}}
+  - : A string that contains the flags of the `RegExp` object.
+- {{JSxRef("RegExp.prototype.dotAll")}}
+  - : Whether `.` matches newlines or not.
+- {{JSxRef("RegExp.prototype.global")}}
+  - : Whether to test the regular expression against all possible matches in a string, or only against the first.
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+  - : Whether to ignore case while attempting a match in a string.
+- {{JSxRef("RegExp.prototype.multiline")}}
+  - : Whether or not to search in strings across multiple lines.
+- {{JSxRef("RegExp.prototype.source")}}
+  - : The text of the pattern.
+- {{JSxRef("RegExp.prototype.sticky")}}
+  - : Whether or not the search is sticky.
+- {{JSxRef("RegExp.prototype.unicode")}}
+  - : Whether or not Unicode features are enabled.
 
-<h3 id="Methods_2">Methods</h3>
+### Methods
 
-<div>
-<dl>
- <dt>{{JSxRef("RegExp.prototype.compile()")}}</dt>
- <dd>(Re-)compiles a regular expression during execution of a script.</dd>
- <dt>{{JSxRef("RegExp.prototype.exec()")}}</dt>
- <dd>Executes a search for a match in its string parameter.</dd>
- <dt>{{JSxRef("RegExp.prototype.test()")}}</dt>
- <dd>Tests for a match in its string parameter.</dd>
- <dt>{{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</dt>
- <dd>Performs match to given string and returns match result.</dd>
- <dt>{{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}</dt>
- <dd>Returns all matches of the regular expression against a string.</dd>
- <dt>{{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</dt>
- <dd>Replaces matches in given string with new substring.</dd>
- <dt>{{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</dt>
- <dd>Searches the match in given string and returns the index the pattern found in the string.</dd>
- <dt>{{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</dt>
- <dd>Splits given string into an array by separating the string into substring.</dd>
- <dt>{{JSxRef("RegExp.prototype.toSource()")}}</dt>
- <dd>Returns an object literal representing the specified object; you can use this value to create a new object. Overrides the {{JSxRef("Object.prototype.toSource()")}} method.</dd>
- <dt>{{JSxRef("RegExp.prototype.toString()")}}</dt>
- <dd>Returns a string representing the specified object. Overrides the {{JSxRef("Object.prototype.toString()")}} method.</dd>
-</dl>
-</div>
+- {{JSxRef("RegExp.prototype.compile()")}}
+  - : (Re-)compiles a regular expression during execution of a script.
+- {{JSxRef("RegExp.prototype.exec()")}}
+  - : Executes a search for a match in its string parameter.
+- {{JSxRef("RegExp.prototype.test()")}}
+  - : Tests for a match in its string parameter.
+- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+  - : Performs match to given string and returns match result.
+- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+  - : Returns all matches of the regular expression against a string.
+- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+  - : Replaces matches in given string with new substring.
+- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+  - : Searches the match in given string and returns the index the pattern found in the string.
+- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+  - : Splits given string into an array by separating the string into substring.
+- {{JSxRef("RegExp.prototype.toSource()")}}
+  - : Returns an object literal representing the specified object; you can use this value to create a new object. Overrides the {{JSxRef("Object.prototype.toSource()")}} method.
+- {{JSxRef("RegExp.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the {{JSxRef("Object.prototype.toString()")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_a_regular_expression_to_change_data_format">Using a regular expression to change data format</h3>
+### Using a regular expression to change data format
 
-<p>The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("Global_Objects/String", "String")}} instance to match a name in the format <em>first last</em> and output it in the format <em>last, first</em>.</p>
+The following script uses the {{jsxref("String.prototype.replace()", "replace()")}} method of the {{jsxref("Global_Objects/String", "String")}} instance to match a name in the format _first last_ and output it in the format _last, first_.
 
-<p>In the replacement text, the script uses <code>$1</code> and <code>$2</code> to indicate the results of the corresponding matching parentheses in the regular expression pattern.</p>
+In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
 
-<pre class="brush: js">let re = /(\w+)\s(\w+)/
+```js
+let re = /(\w+)\s(\w+)/
 let str = 'John Smith'
 let newstr = str.replace(re, '$2, $1')
 console.log(newstr)
-</pre>
+```
 
-<p>This displays <code>"Smith, John"</code>.</p>
+This displays `"Smith, John"`.
 
-<h3 id="Using_regular_expression_to_split_lines_with_different_line_endingsends_of_lineline_breaks">Using regular expression to split lines with different <strong>line endings/ends of line/line breaks</strong></h3>
+### Using regular expression to split lines with different **line endings/ends of line/line breaks**
 
-<p>The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.</p>
+The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
-<pre class="brush: js">let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+```js
+let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
 let lines = text.split(/\r\n|\r|\n/)
 console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
-</pre>
+```
 
-<p>Note that the order of the patterns in the regular expression matters.</p>
+Note that the order of the patterns in the regular expression matters.
 
-<h3 id="Using_regular_expression_on_multiple_lines">Using regular expression on multiple lines</h3>
+### Using regular expression on multiple lines
 
-<pre class="brush: js">let s = 'Please yes\nmake my day!'
+```js
+let s = 'Please yes\nmake my day!'
 
 s.match(/yes.*day/);
 // Returns null
 
 s.match(/yes[^]*day/);
 // Returns ["yes\nmake my day"]
-</pre>
+```
 
-<h3 id="Using_a_regular_expression_with_the_sticky_flag">Using a regular expression with the sticky flag</h3>
+### Using a regular expression with the sticky flag
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky">sticky flag</a> indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.</p>
+The [sticky flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
-<pre class="brush: js">let str = '#foo#'
+```js
+let str = '#foo#'
 let regex = /foo/y
 
 regex.lastIndex = 1
 regex.test(str)      // true
 regex.lastIndex = 5
 regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)</pre>
+regex.lastIndex      // 0 (reset after match failure)
+```
 
-<h3 id="The_difference_between_the_sticky_flag_and_the_global_flag">The difference between the sticky flag and the global flag</h3>
+### The difference between the sticky flag and the global flag
 
-<p>With the sticky flag y, the next match has to happen at the lastIndex position, while with the global flag g, the match can happen at the lastIndex position or later:</p>
+With the sticky flag y, the next match has to happen at the lastIndex position, while with the global flag g, the match can happen at the lastIndex position or later:
 
-<pre class="brush: js">re = /\d/y;
+```js
+re = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.</pre>
+//   ... and no more match.
+```
 
-<p>With the global flag g, all 6 digits would be matched, not just 3.</p>
+With the global flag g, all 6 digits would be matched, not just 3.
 
-<h3 id="Regular_expression_and_Unicode_characters">Regular expression and Unicode characters</h3>
+### Regular expression and Unicode characters
 
-<p>As mentioned above, <code>\w</code> or <code>\W</code> only matches ASCII based characters; for example, <code>a</code> to <code>z</code>, <code>A</code> to <code>Z</code>, <code>0</code> to <code>9</code>, and <code>_</code>.</p>
+As mentioned above, `\w` or `\W` only matches ASCII based characters; for example, `a` to `z`, `A` to `Z`, `0` to `9`, and `_`.
 
-<p>To match characters from other languages such as Cyrillic or Hebrew, use <code>\u<var>hhhh</var></code>, where <code><var>hhhh</var></code> is the character's Unicode value in hexadecimal.</p>
+To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh`, where `hhhh` is the character's Unicode value in hexadecimal.
 
-<p>This example demonstrates how one can separate out Unicode characters from a word.</p>
+This example demonstrates how one can separate out Unicode characters from a word.
 
-<pre class="brush: js">let text = 'Образец text на русском языке'
+```js
+let text = 'Образец text на русском языке'
 let regex = /[\u0400-\u04FF]+/g
 
 let match = regex.exec(text)
@@ -208,33 +202,31 @@ console.log(match2[0])       // logs 'на' [did not log 'text']
 console.log(regex.lastIndex) // logs '15'
 
 // and so on
-</pre>
+```
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a> feature introduces a solution, by allowing for a statement as simple as <code>\p{scx=Cyrl}</code>. One can also use an external resource for getting the complete Unicode block range for different scripts, such as <a href="http://kourge.net/projects/regexp-unicode-block">Regexp-Unicode-block</a>.</p>
+The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`. One can also use an external resource for getting the complete Unicode block range for different scripts, such as [Regexp-Unicode-block](http://kourge.net/projects/regexp-unicode-block).
 
-<h3 id="Extracting_sub-domain_name_from_URL">Extracting sub-domain name from URL</h3>
+### Extracting sub-domain name from URL
 
-<pre class="brush: js">let url = 'http://xxx.domain.com'
+```js
+let url = 'http://xxx.domain.com'
 console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("javascript.builtins.RegExp")}}
 
+### Firefox-specific notes
 
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
-</div>
+Starting with Firefox 34, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now `undefined` instead of an empty string:
 
-<h3 id="Firefox-specific_notes">Firefox-specific notes</h3>
-
-<p>Starting with Firefox 34, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
-
-<pre class="brush: js">// Firefox 33 or older
+```js
+// Firefox 33 or older
 'x'.replace(/x(.)?/g, function(m, group) {
   console.log("'group:" + group + "'");
 });
@@ -245,14 +237,12 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
   console.log("'group:" + group + "'");
 });
 // 'group:undefined'
-</pre>
+```
 
-<p>Note that due to web compatibility, <code>RegExp.$N</code> will still return an empty string instead of <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
+Note that due to web compatibility, `RegExp.$N` will still return an empty string instead of `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a> chapter in the <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a></li>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("String.prototype.replace()")}}</li>
-</ul>
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("String.prototype.replace()")}}

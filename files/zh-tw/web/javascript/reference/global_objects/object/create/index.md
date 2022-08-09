@@ -3,38 +3,39 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.create()</strong></code> 指定其原型物件與屬性，創建一個新物件。</p>
+**`Object.create()`** 指定其原型物件與屬性，創建一個新物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">Object.create(<var>proto</var>[, <var>propertiesObject</var>])</pre>
+```plain
+Object.create(proto[, propertiesObject])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>指定新物件的原型 (prototype) 物件。</dd>
- <dt><code>propertiesObject</code></dt>
- <dd>選用，為一物件。如有指定且非 {{jsxref("undefined")}}，則此參數物件中可列舉出的屬性 (即參數物件自身定義的屬性，並非指原型鏈上的 <code>enumerable</code> 特性 ) 對應其屬性名稱，根據其屬性敘述元 (property descriptors) 加進新創建的物件。這些屬性對應到 {{jsxref("Object.defineProperties()")}} 的第二個參數。</dd>
-</dl>
+- `proto`
+  - : 指定新物件的原型 (prototype) 物件。
+- `propertiesObject`
+  - : 選用，為一物件。如有指定且非 {{jsxref("undefined")}}，則此參數物件中可列舉出的屬性 (即參數物件自身定義的屬性，並非指原型鏈上的 `enumerable` 特性 ) 對應其屬性名稱，根據其屬性敘述元 (property descriptors) 加進新創建的物件。這些屬性對應到 {{jsxref("Object.defineProperties()")}} 的第二個參數。
 
-<h3 id="回傳">回傳</h3>
+### 回傳
 
-<p>具有指定原型物件與屬性的新物件。</p>
+具有指定原型物件與屬性的新物件。
 
-<h3 id="例外">例外</h3>
+### 例外
 
-<p> 如果 <code>proto</code> 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。</p>
+如果 `proto` 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_Object.create()_實現類別繼承">使用 <code>Object.create() </code>實現類別繼承</h3>
+### 使用 `Object.create() `實現類別繼承
 
-<p>下方是如何使用 <code>Object.create()</code> 去實現類別繼承的示範，此為 JavaScript 支援的單一繼承.。</p>
+下方是如何使用 `Object.create()` 去實現類別繼承的示範，此為 JavaScript 支援的單一繼承.。
 
-<pre class="brush: js">// Shape - 父類別
+```js
+// Shape - 父類別
 function Shape() {
   this.x = 0;
   this.y = 0;
@@ -61,11 +62,12 @@ var rect = new Rectangle();
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle);// true
 console.log('Is rect an instance of Shape?', rect instanceof Shape);// true
 rect.move(1, 1); // Outputs, 'Shape moved.'
-</pre>
+```
 
-<p>也可像 mixin 繼承多個物件。</p>
+也可像 mixin 繼承多個物件。
 
-<pre class="brush: js">function MyClass() {
+```js
+function MyClass() {
   SuperClass.call(this);
   OtherSuperClass.call(this);
 }
@@ -80,13 +82,14 @@ MyClass.prototype.constructor = MyClass;
 MyClass.prototype.myMethod = function() {
   // do a thing
 };
-</pre>
+```
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill">有 polyfill</a>。如需支援較舊的瀏覽器，可使用第三方套件實現如 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a> 或 <a href="https://lodash.com/docs/#assign">_.assign()</a> 。</p>
+[Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [\_.assign()](https://lodash.com/docs/#assign) 。
 
-<h3 id="propertiesObject_參數的使用"><code>propertiesObject</code> 參數的使用</h3>
+### `propertiesObject` 參數的使用
 
-<pre class="brush: js">var o;
+```js
+var o;
 
 // 建立以null為原型的物件
 o = Object.create(null);
@@ -148,15 +151,16 @@ o2 = Object.create({}, {
     configurable: true
   }
 });
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>此 polyfill 涵蓋了主要的使用情境：指定一個原型創建一個新的物件，第二個參數為選用。</p>
+此 polyfill 涵蓋了主要的使用情境：指定一個原型創建一個新的物件，第二個參數為選用。
 
-<p>要注意的是在 ES5 的<code>Object.create</code>中， <code>[[Prototype]]</code> 可以為 <code>null</code>，但在ECMAScript 5 以前的版本，polyfill 會因為繼承限制( limitation inherent )而不支援此情形。</p>
+要注意的是在 ES5 的`Object.create`中， `[[Prototype]]` 可以為 `null`，但在 ECMAScript 5 以前的版本，polyfill 會因為繼承限制( limitation inherent )而不支援此情形。
 
-<pre><code>if (typeof Object.create !== "function") {
+```plain
+if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {
         if (!(proto === null || typeof proto === "object" || typeof proto === "function")) {
             throw TypeError('Argument must be an object, or null');
@@ -167,21 +171,20 @@ o2 = Object.create({}, {
             Object.defineProperties(temp, propertiesObject);
         return temp;
     };
-}</code></pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參閱">參閱</h2>
+## 參閱
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>John Resig's post on <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)

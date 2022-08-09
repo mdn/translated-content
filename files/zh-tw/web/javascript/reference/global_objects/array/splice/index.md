@@ -9,112 +9,117 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>splice()</strong></code> 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。</p>
+**`splice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
 
-<div>{{EmbedInteractiveExample("pages/js/array-splice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>array</var>.splice(<var>start[</var>, <var>deleteCount[</var>, <var>item1[</var>, <var>item2[</var>, <em>...]]]]</em>)
-</pre>
+```plain
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>start</code></dt>
- <dd>陣列中要開始改動的元素索引（起始為 0）。若索引大於陣列長度，則實際開始的索引值會被設為陣列長度。若索引為負，則會從陣列中最後一個元素開始往前改動（起始為 -1）且若其絕對值大於陣列的長度，則會被設為 0。</dd>
- <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>一個表示欲刪除的原陣列元素數量的整數。若省略了 <code>deleteCount</code>，或假如其值大於 <code>array.length - start</code>（也就是 <code>deleteCount</code> 大於 <code>start</code> 算起的剩餘元素數量），則所有從 <code>start</code> 開始到陣列中最後一個元素都會被刪除。若 <code>deleteCount</code> 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。</dd>
- <dt><code>item1, item2, <em>...</em></code> {{optional_inline}}</dt>
- <dd>從 <code>start</code> 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 <code>splice()</code> 只會依照 <code>start</code> 和 <code>deleteCount</code> 刪除陣列的元素。</dd>
-</dl>
+- `start`
+  - : 陣列中要開始改動的元素索引（起始為 0）。若索引大於陣列長度，則實際開始的索引值會被設為陣列長度。若索引為負，則會從陣列中最後一個元素開始往前改動（起始為 -1）且若其絕對值大於陣列的長度，則會被設為 0。
+- `deleteCount` {{optional_inline}}
+  - : 一個表示欲刪除的原陣列元素數量的整數。若省略了 `deleteCount`，或假如其值大於 `array.length - start`（也就是 `deleteCount` 大於 `start` 算起的剩餘元素數量），則所有從 `start` 開始到陣列中最後一個元素都會被刪除。若 `deleteCount` 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。
+- `item1, item2, ...` {{optional_inline}}
+  - : 從 `start` 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 `splice()` 只會依照 `start` 和 `deleteCount` 刪除陣列的元素。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個包含被刪除的元素陣列。如果只有一個元素被刪除，依舊是回傳包含一個元素的陣列。 倘若沒有元素被刪除，則會回傳空陣列。</p>
+一個包含被刪除的元素陣列。如果只有一個元素被刪除，依舊是回傳包含一個元素的陣列。 倘若沒有元素被刪除，則會回傳空陣列。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>如果你插入的元素數量和刪除的數量不同，則回傳的陣列長度也會和原先的不同。</p>
+如果你插入的元素數量和刪除的數量不同，則回傳的陣列長度也會和原先的不同。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="從索引_2_的位置開始，刪除_0_個元素並插入「drum」">從索引 2 的位置開始，刪除 0 個元素並插入「drum」</h3>
+### 從索引 2 的位置開始，刪除 0 個元素並插入「drum」
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum');
 
 // myFish 為 ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed 為 [], 沒有元素被刪除
-</pre>
+```
 
-<h3 id="從索引_3_的位置開始，刪除_1_個元素">從索引 3 的位置開始，刪除 1 個元素</h3>
+### 從索引 3 的位置開始，刪除 1 個元素
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 
 // removed 為 ["mandarin"]
 // myFish 為 ["angel", "clown", "drum", "sturgeon"]
-</pre>
+```
 
-<h3 id="從索引_2_的位置開始，刪除_1_個元素並插入「trumpet」">從索引 2 的位置開始，刪除 1 個元素並插入「trumpet」</h3>
+### 從索引 2 的位置開始，刪除 1 個元素並插入「trumpet」
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, 'trumpet');
 
 // myFish 為 ["angel", "clown", "trumpet", "sturgeon"]
-// removed 為 ["drum"]</pre>
+// removed 為 ["drum"]
+```
 
-<h3 id="從索引_0_的位置開始，刪除_2_個元素並插入「parrot」、「anemone」和「blue」">從索引 0 的位置開始，刪除 2 個元素並插入「parrot」、「anemone」和「blue」</h3>
+### 從索引 0 的位置開始，刪除 2 個元素並插入「parrot」、「anemone」和「blue」
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // myFish 為 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// removed 為 ["angel", "clown"]</pre>
+// removed 為 ["angel", "clown"]
+```
 
-<h3 id="從索引_2_的位置開始，刪除_2_個元素">從索引 2 的位置開始，刪除 2 個元素</h3>
+### 從索引 2 的位置開始，刪除 2 個元素
 
-<pre class="brush: js">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+```js
+var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // myFish 為 ["parrot", "anemone", "sturgeon"]
-// removed 為 ["blue", "trumpet"]</pre>
+// removed 為 ["blue", "trumpet"]
+```
 
-<h3 id="從索引_-2_的位置開始，刪除_1_個元素">從索引 -2 的位置開始，刪除 1 個元素</h3>
+### 從索引 -2 的位置開始，刪除 1 個元素
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
 
 // myFish 為 ["angel", "clown", "sturgeon"]
-// removed 為 ["mandarin"]</pre>
+// removed 為 ["mandarin"]
+```
 
-<h3 id="從索引_2_的位置開始，刪除所有元素（含索引_2）">從索引 2 的位置開始，刪除所有元素（含索引 2）</h3>
+### 從索引 2 的位置開始，刪除所有元素（含索引 2）
 
-<pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);
 
 // myFish 為 ["angel", "clown"]
-// removed 為 ["mandarin", "sturgeon"]</pre>
+// removed 為 ["mandarin", "sturgeon"]
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.splice")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.splice")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — add/remove elements from the end of the array</li>
- <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — add/remove elements from the beginning of the array</li>
- <li>{{jsxref("Array.prototype.concat()", "concat()")}} — returns a new array comprised of this array joined with other array(s) and/or value(s)</li>
-</ul>
+- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — add/remove elements from the end of the array
+- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — add/remove elements from the beginning of the array
+- {{jsxref("Array.prototype.concat()", "concat()")}} — returns a new array comprised of this array joined with other array(s) and/or value(s)

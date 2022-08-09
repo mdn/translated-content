@@ -3,29 +3,31 @@ title: Event.type
 slug: Web/API/Event/type
 translation_of: Web/API/Event/type
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><code><strong>Event.type</strong></code> 唯讀屬性會回傳一個代表此事件物件類型的字串。<code>Event.type</code> 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。</p>
+**`Event.type`** 唯讀屬性會回傳一個代表此事件物件類型的字串。`Event.type` 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。
 
-<p>傳至 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法中，代表事件類型的參數 <em><code>event</code></em> 是不區分大小寫的。</p>
+傳至 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法中，代表事件類型的參數 _`event`_ 是不區分大小寫的。
 
-<p>可用的事件類型，可參考 <a href="/zh-TW/docs/Web/Events">event reference</a>。</p>
+可用的事件類型，可參考 [event reference](/zh-TW/docs/Web/Events)。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox">event.type
-</pre>
+```plain
+event.type
+```
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-    &lt;title&gt;Event.type Example&lt;/title&gt;
+    <title>Event.type Example</title>
 
-    &lt;script&gt;
+    <script>
         var currEvent = null;
         function getEvtType(evt) {
             console.log("//Start------------getEvtType(evt)------------ ");
@@ -51,22 +53,22 @@ translation_of: Web/API/Event/type
         document.addEventListener("mousedown", getEvtType, false); //first
         document.addEventListener("mouseup", getEvtType, false); //second
 
-    &lt;/script&gt;
-&lt;/head&gt;
+    </script>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;p&gt;Press any key or click the mouse to get the event type.&lt;/p&gt;
-&lt;p&gt;Event type: &lt;span id="Etype" style="color:red"&gt;-&lt;/span&gt;&lt;/p&gt;
+<p>Press any key or click the mouse to get the event type.</p>
+<p>Event type: <span id="Etype" style="color:red">-</span></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}

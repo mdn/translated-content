@@ -3,68 +3,45 @@ title: Event()
 slug: Web/API/Event/Event
 translation_of: Web/API/Event/Event
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>Event()</strong></code> constructor 能用來建立一個 {{domxref("Event", "事件")}} 。</p>
+**`Event()`** constructor 能用來建立一個 {{domxref("Event", "事件")}} 。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>event</em> = new Event(<em>typeArg</em>, <em>eventInit</em>);</pre>
+```plain
+event = new Event(typeArg, eventInit);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>為一 {{domxref("DOMString")}} ，用來表示事件名稱。</dd>
- <dt><em>eventInit</em>{{optional_inline}}</dt>
- <dd>一個 <code>EventInit</code> object，包含以下欄位
- <table>
-  <thead>
-   <tr>
-    <th>參數</th>
-    <th>可選</th>
-    <th>默認值</th>
-    <th>類型</th>
-    <th>說明</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>"bubbles"</code></td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td><code>{{jsxref("Boolean")}}</code></td>
-    <td>表示該事件是否懸浮（bubble up）。</td>
-   </tr>
-   <tr>
-    <td><code>"cancelable"</code></td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>表示該事件是否已取消（canale）。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- _typeArg_
+  - : 為一 {{domxref("DOMString")}} ，用來表示事件名稱。
+- _eventInit_{{optional_inline}}
 
-<h2 id="範例">範例</h2>
+  - : 一個 `EventInit` object，包含以下欄位
 
-<pre class="brush: js">// 建立一個 bubbles up 、並未被取消的事件 “look” 。
+    | 參數           | 可選 | 默認值  | 類型                           | 說明                              |
+    | -------------- | ---- | ------- | ------------------------------ | --------------------------------- |
+    | `"bubbles"`    | ●    | `false` | `{{jsxref("Boolean")}}` | 表示該事件是否懸浮（bubble up）。 |
+    | `"cancelable"` | ●    | `false` | {{jsxref("Boolean")}}   | 表示該事件是否已取消（canale）。  |
+
+## 範例
+
+```js
+// 建立一個 bubbles up 、並未被取消的事件 “look” 。
 var ev = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(ev);
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("api.Event.Event")}}</p>
+{{Compat("api.Event.Event")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Event")}}</li>
-</ul>
+- {{domxref("Event")}}

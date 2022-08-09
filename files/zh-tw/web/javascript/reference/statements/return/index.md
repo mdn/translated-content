@@ -3,77 +3,81 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 translation_of: Web/JavaScript/Reference/Statements/return
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>return</code> 表達式</strong>會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。</p>
+**`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-return.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
+## 語法
 
+```plain
+return [[expression]];
+```
 
-<h2 id="語法">語法</h2>
+- `expression`
+  - : 要被回傳的表達式。如果省略了表達式，函式就會回傳 `undefined`。
 
-<pre class="syntaxbox">return [[expression]]; </pre>
+## 敘述
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>要被回傳的表達式。如果省略了表達式，函式就會回傳 <code>undefined</code>。</dd>
-</dl>
+如果在 function body 內宣告 `return` 的話，函式執行就會終止。如果指定數值的話，函式呼叫器就會回傳給定的數值。例如說，以下函式會回傳 `x` 參數的次方數。
 
-<h2 id="敘述">敘述</h2>
-
-<p>如果在 function body 內宣告 <code>return</code> 的話，函式執行就會終止。如果指定數值的話，函式呼叫器就會回傳給定的數值。例如說，以下函式會回傳 <code>x</code> 參數的次方數。</p>
-
-<pre class="brush: js">function square(x) {
+```js
+function square(x) {
    return x * x;
 }
 var demo = square(3);
 // demo will equal 9
-</pre>
+```
 
-<p>如果省略了表達式，函式就會回傳 <code>undefined</code>。</p>
+如果省略了表達式，函式就會回傳 `undefined`。
 
-<p>以下所有的 return 宣告都會終止函式執行：</p>
+以下所有的 return 宣告都會終止函式執行：
 
-<pre class="brush: js">return;
+```js
+return;
 return true;
 return false;
 return x;
 return x + y / 3;
-</pre>
+```
 
-<h3 id="自動插入分號">自動插入分號</h3>
+### 自動插入分號
 
-<p><code>return</code> 宣告會受<a href="/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自動插入分號</a>（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the <code>return</code> keyword and the expression.</p>
+`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
 
-<pre class="brush: js">return
+```js
+return
 a + b;
-</pre>
+```
 
-<p>會因為 ASI 而變成：</p>
+會因為 ASI 而變成：
 
-<pre class="brush: js">return;
+```js
+return;
 a + b;
-</pre>
+```
 
-<p>主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。</p>
+主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
 
-<div class="notecard note"><p><strong>備註：</strong>從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。</p></div>
+> **備註：**從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
 
-<p>要避免 ASI 問題，可以添加括號：</p>
+要避免 ASI 問題，可以添加括號：
 
-<pre class="brush: js">return (
+```js
+return (
   a + b
 );
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="終止函式">終止函式</h3>
+### 終止函式
 
-<p>在到達呼叫 <code>return</code> 的地方後，函式會立即停止。</p>
+在到達呼叫 `return` 的地方後，函式會立即停止。
 
-<pre class="brush: js">function counter() {
+```js
+function counter() {
   for (var count = 1; ; count++) {  // 無限迴圈
     console.log(count + 'A'); // 直到 5
       if (count === 5) {
@@ -96,31 +100,30 @@ counter();
 // 4A
 // 4B
 // 5A
-</pre>
+```
 
-<h3 id="函式回傳">函式回傳</h3>
+### 函式回傳
 
-<p>請參見<a href="/zh-TW/docs/Web/JavaScript/Closures">閉包</a>。</p>
+請參見[閉包](/zh-TW/docs/Web/JavaScript/Closures)。
 
-<pre class="brush: js">function magic(x) {
+```js
+function magic(x) {
   return function calc(x) { return x * 42; };
 }
 
 var answer = magic();
 answer(1337); // 56154
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.statements.return")}}</p>
+{{Compat("javascript.statements.return")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope">函式</a></li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Closures">閉包</a></li>
-</ul>
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+- [閉包](/zh-TW/docs/Web/JavaScript/Closures)

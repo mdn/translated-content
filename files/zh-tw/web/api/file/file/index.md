@@ -3,47 +3,46 @@ title: File.File()
 slug: Web/API/File/File
 translation_of: Web/API/File/File
 ---
-<p>{{APIRef("File")}}</p>
+{{APIRef("File")}}
 
-<p><code><strong>File()</strong></code>  建構子建立一個新的 {{domxref("File")}} 物件實例</p>
+**`File()`** 建構子建立一個新的 {{domxref("File")}} 物件實例
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var myFile = new File(bits, name[, options]);</pre>
+```plain
+var myFile = new File(bits, name[, options]);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>bits</em></dt>
- <dd>An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, or {{domxref("DOMString")}} objects — 或是由這些物件組成的集合。這是以 UTF-8 編碼的檔案內容。</dd>
- <dt><em>name</em></dt>
- <dd>檔案名稱或檔案的路徑（{{domxref("USVString")}}）。</dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>物件選項，包含物件非必要的屬性，以下為可得到的屬性：
- <ul>
-  <li><code>type</code>: 物件的 MIME 類型（{{domxref("DOMString")}} ）將被放進檔案中，預設為 ""（空值）。</li>
-  <li><code>lastModified</code>: 檔案最後修改時間，格式為毫秒，預設為 {{jsxref("Date.now()")}}.</li>
- </ul>
- </dd>
-</dl>
+- _bits_
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, or {{domxref("DOMString")}} objects — 或是由這些物件組成的集合。這是以 UTF-8 編碼的檔案內容。
+- _name_
+  - : 檔案名稱或檔案的路徑（{{domxref("USVString")}}）。
+- _options_ {{optional_inline}}
 
-<h2 id="範例">範例</h2>
+  - : 物件選項，包含物件非必要的屬性，以下為可得到的屬性：
 
-<pre class="brush: js">var file = new File(["foo"], "foo.txt", {
+    - `type`: 物件的 MIME 類型（{{domxref("DOMString")}} ）將被放進檔案中，預設為 ""（空值）。
+    - `lastModified`: 檔案最後修改時間，格式為毫秒，預設為 {{jsxref("Date.now()")}}.
+
+## 範例
+
+```js
+var file = new File(["foo"], "foo.txt", {
   type: "text/plain",
-});</pre>
+});
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.File.File")}}
 
-<h2 id="看更多">看更多</h2>
+## 看更多
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("FileReader")}}
+- {{domxref("Blob")}}

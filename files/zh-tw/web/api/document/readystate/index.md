@@ -7,44 +7,44 @@ tags:
   - Reference
 translation_of: Web/API/Document/readyState
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary">總覽</h2>
+## 總覽
 
-<p>{{ domxref("document") }} 的 <strong>Document.readyState</strong> 屬性描述文件的讀取狀態。</p>
+{{ domxref("document") }} 的 **Document.readyState** 屬性描述文件的讀取狀態。
 
-<h3 id="數值">數值</h3>
+### 數值
 
-<p>文件的 <strong>readyState</strong> 數值如下：</p>
+文件的 **readyState** 數值如下：
 
-<dl>
- <dt>loading</dt>
- <dd>{{ domxref("document") }} 正在讀取中。</dd>
- <dt>interactive</dt>
- <dd>文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 {{event("DOMContentLoaded")}} 事件已經被觸發。</dd>
- <dt>complete</dt>
- <dd>文件及子資源都完成讀取。這個狀態表示 {{event("load")}} 事件即將被觸發。</dd>
-</dl>
+- loading
+  - : {{ domxref("document") }} 正在讀取中。
+- interactive
+  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 {{event("DOMContentLoaded")}} 事件已經被觸發。
+- complete
+  - : 文件及子資源都完成讀取。這個狀態表示 {{event("load")}} 事件即將被觸發。
 
-<p>當這個屬性的數值改變時， {{event("readystatechange")}} 事件在 {{ domxref("document") }} 上觸發。</p>
+當這個屬性的數值改變時， {{event("readystatechange")}} 事件在 {{ domxref("document") }} 上觸發。
 
-<h2 id="表達式">表達式</h2>
+## 表達式
 
-<pre class="brush: js"><em>var string</em> = document.readyState;
-</pre>
+```js
+var string = document.readyState;
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="不同的狀態">不同的狀態</h3>
+### 不同的狀態
 
-<pre class="brush: js">switch (document.readyState) {
+```js
+switch (document.readyState) {
   case "loading":
     // 文件讀取中。
     break;
   case "interactive":
     // 文件已經完成讀取。可以使用 DOM 元素。
     var span = document.createElement("span");
-    span.textContent = "A &lt;span&gt; element.";
+    span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
   case "complete":
@@ -52,34 +52,36 @@ translation_of: Web/API/Document/readyState
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
 }
-</pre>
+```
 
-<h3 id="readystatechange_替代_DOMContentLoaded">readystatechange 替代 DOMContentLoaded</h3>
+### readystatechange 替代 DOMContentLoaded
 
-<pre class="brush:js">// alternative to DOMContentLoaded event
+```js
+// alternative to DOMContentLoaded event
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h3 id="readystatechange_替代_load">readystatechange 替代 load</h3>
+### readystatechange 替代 load
 
-<pre class="brush: js">// alternative to load event
+```js
+// alternative to load event
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{event("readystatechange")}} event</li>
- <li>{{event("DOMContentLoaded")}} event</li>
- <li>{{event("load")}} event</li>
-</ul>
+- {{event("readystatechange")}} event
+- {{event("DOMContentLoaded")}} event
+- {{event("load")}} event

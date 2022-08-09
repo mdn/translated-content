@@ -3,58 +3,52 @@ title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
 translation_of: Web/API/Channel_Messaging_API
 ---
-<p>Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。</p>
+Channel Messaging API 讓同屬一份文件不同瀏覽環境的兩份程式腳本 (如兩個 IFrame、或主頁面和 IFrame、文件和 {{domxref("SharedWorker")}}、或兩個 worker)，也能夠經由雙向 channel (通道) 兩端的 port (連接阜) 直接傳遞訊息互相溝通。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Channel_訊息概念與使用情境">Channel 訊息概念與使用情境</h2>
+## Channel 訊息概念與使用情境
 
-<p>{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 建構子產生 channel， 一但生成了，便可以存取 channel 兩端的 port: {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}}，這兩個屬性會回傳 domxref("MessagePort")}} objects.)。建立 channel 的 app 使用 port1，另一端用 port2，利用 {{domxref("window.postMessage")}} 方法帶入參數，向 port2 傳送訊息以及移轉物件 (這裡也就是只 port)。</p>
+{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 建構子產生 channel， 一但生成了，便可以存取 channel 兩端的 port: {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}}，這兩個屬性會回傳 domxref("MessagePort")}} objects.)。建立 channel 的 app 使用 port1，另一端用 port2，利用 {{domxref("window.postMessage")}} 方法帶入參數，向 port2 傳送訊息以及移轉物件 (這裡也就是只 port)。
 
-<p>一但可移轉物件被移轉後，前任擁有者便失去所有權，例如當 port 移轉出去後，原本持有該 port 的環境便不能再使用之。目前可移轉物件只有 {{domxref("ArrayBuffer")}} 以及 {{domxref("MessagePort")}}。</p>
+一但可移轉物件被移轉後，前任擁有者便失去所有權，例如當 port 移轉出去後，原本持有該 port 的環境便不能再使用之。目前可移轉物件只有 {{domxref("ArrayBuffer")}} 以及 {{domxref("MessagePort")}}。
 
-<p>另一端的瀏覽環境則藉由 {{domxref("MessagePort.onmessage")}} 監聽訊息、從訊息事件物件的 data 屬性擷取訊息資料，然後再呼叫 {{domxref("MessagePort.postMessage")}} 回傳訊息。</p>
+另一端的瀏覽環境則藉由 {{domxref("MessagePort.onmessage")}} 監聽訊息、從訊息事件物件的 data 屬性擷取訊息資料，然後再呼叫 {{domxref("MessagePort.postMessage")}} 回傳訊息。
 
-<p>如果想關閉訊息 channel，則呼叫 {{domxref("MessagePort.close")}}。</p>
+如果想關閉訊息 channel，則呼叫 {{domxref("MessagePort.close")}}。
 
-<p>更多 API 使用細節請見<a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging"> Using channel messaging</a>。</p>
+更多 API 使用細節請見[ Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)。
 
-<h2 id="Channel_訊息介面">Channel 訊息介面</h2>
+## Channel 訊息介面
 
-<dl>
- <dt>{{domxref("MessageChannel")}}</dt>
- <dd>生成一個新的 message channel。</dd>
- <dt>{{domxref("MessagePort")}}</dt>
- <dd>控制 port，用來傳送和監聽訊息。</dd>
- <dt>{{domxref("PortCollection")}}</dt>
- <dd><code>MessagePort</code>s 陣列，實驗性質方案；用來同時廣播到多個訊息 port。</dd>
-</dl>
+- {{domxref("MessageChannel")}}
+  - : 生成一個新的 message channel。
+- {{domxref("MessagePort")}}
+  - : 控制 port，用來傳送和監聽訊息。
+- {{domxref("PortCollection")}}
+  - : `MessagePort`s 陣列，實驗性質方案；用來同時廣播到多個訊息 port。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<ul>
- <li>Github 上有<a href="https://github.com/mdn/channel-messaging-basic-demo"> channel messaging basic demo</a> (<a href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>)，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。</li>
- <li>還有 <a href="https://github.com/mdn/channel-messaging-multimessage">multimessaging demo</a> (<a href="http://mdn.github.io/channel-messaging-multimessage/">run this live</a>)，較為複雜的例子。</li>
-</ul>
+- Github 上有[ channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/))，一個簡單示範主頁和 {{htmlelement("iframe")}} 間的訊息溝通。
+- 還有 [multimessaging demo](https://github.com/mdn/channel-messaging-multimessage) ([run this live](http://mdn.github.io/channel-messaging-multimessage/))，較為複雜的例子。
 
-<h2 id="標準規範">標準規範</h2>
+## 標準規範
 
 {{Specifications("api.MessageChannel")}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<h3 id="MessageChannel"><code>MessageChannel</code></h3>
+### `MessageChannel`
 
 {{Compat("api.MessageChannel", 0)}}
-    
-<h3 id="MessagePort"><code>MessagePort</code></h3>
+
+### `MessagePort`
 
 {{Compat("api.MessagePort", 0)}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a></li>
- <li><a href="/en-US/docs/Web/API/Broadcast_Channel_API">Broadcast Channel API</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)

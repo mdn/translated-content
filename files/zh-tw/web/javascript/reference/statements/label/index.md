@@ -7,50 +7,46 @@ tags:
   - 陳述式
 translation_of: Web/JavaScript/Reference/Statements/label
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>標記陳述式</strong>可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。</p>
+**標記陳述式**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
+> **備註：**標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
 
+## 語法
 
-<div class="notecard note">
-<p><strong>備註：</strong>標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。</p>
-</div>
+```plain
+label :
+   statement
+```
 
-<h2 id="語法">語法</h2>
+- `label`
+  - : 任何不是保留字的 JavaScript 識別符號。
+- `statement`
+  - : 一個 JavaScript 陳述式。`break` 可用於任何標記陳述式，而 `continue` 可用於循環標記陳述式。
 
-<pre class="syntaxbox"><em>label</em> :
-   <em>statement</em>
-</pre>
+## 描述
 
-<dl>
- <dt><code>label</code></dt>
- <dd>任何不是保留字的 JavaScript 識別符號。</dd>
- <dt><code>statement</code></dt>
- <dd>一個 JavaScript 陳述式。<code>break</code> 可用於任何標記陳述式，而 <code>continue</code> 可用於循環標記陳述式。</dd>
-</dl>
+可使用一個標籤來唯一標記一個循環，然後使用 `break` 或 `continue` 陳述式來指示程式是否中斷循環或繼續執行。
 
-<h2 id="描述">描述</h2>
+需要注意的是 JavaScript **沒有** `goto` 陳述式，標記只能和 `break` 或 `continue` 一起使用。
 
-<p>可使用一個標籤來唯一標記一個循環，然後使用 <code>break</code> 或 <code>continue</code> 陳述式來指示程式是否中斷循環或繼續執行。</p>
+在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 “`let`” 作為標籤名稱。它會拋出一個[`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)（let 是一個保留的識別符號）。
 
-<p>需要注意的是 JavaScript <strong>沒有</strong> <code>goto</code> 陳述式，標記只能和 <code>break</code> 或 <code>continue</code> 一起使用。</p>
+## 範例
 
-<p>在<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>中，你不能使用 “<code>let</code>” 作為標籤名稱。它會拋出一個<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a>（let 是一個保留的識別符號）。</p>
+### 在 `for` 迴圈中使用帶標記的 `continue`
 
-<h2 id="範例">範例</h2>
-
-<h3 id="在_for_迴圈中使用帶標記的_continue">在 <code>for</code> 迴圈中使用帶標記的 <code>continue</code> </h3>
-
-<pre class="brush: js">var i, j;
+```js
+var i, j;
 
 loop1:
-for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
    loop2:
-   for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 &amp;&amp; j === 1) {
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
          continue loop1;
       }
       console.log('i = ' + i + ', j = ' + j);
@@ -66,35 +62,38 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 2, j = 1"
 //   "i = 2, j = 2"
 // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
-</pre>
+```
 
-<h3 id="使用帶標記的_continue_陳述式">使用帶標記的 <code>continue</code> 陳述式</h3>
+### 使用帶標記的 `continue` 陳述式
 
-<p>給定一組資料和一組測試，下面的例子可以統計通過測試的資料。</p>
+給定一組資料和一組測試，下面的例子可以統計通過測試的資料。
 
-<pre class="brush: js">var itemsPassed = 0;
+```js
+var itemsPassed = 0;
 var i, j;
 
 top:
-for (i = 0; i &lt; items.length; i++) {
-  for (j = 0; j &lt; tests.length; j++) {
+for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
     }
   }
 
   itemsPassed++;
-}</pre>
+}
+```
 
-<h3 id="在_for_迴圈中使用帶標記的_break">在 <code>for</code> 迴圈中使用帶標記的 <code>break</code></h3>
+### 在 `for` 迴圈中使用帶標記的 `break`
 
-<pre class="brush: js">var i, j;
+```js
+var i, j;
 
 loop1:
-for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
    loop2:
-   for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 &amp;&amp; j === 1) {
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i === 1 && j === 1) {
          break loop1;
       }
       console.log('i = ' + i + ', j = ' + j);
@@ -106,28 +105,32 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 0, j = 1"
 //   "i = 0, j = 2"
 //   "i = 1, j = 0"
-// Notice the difference with the previous continue example</pre>
+// Notice the difference with the previous continue example
+```
 
-<h3 id="使用帶標記_break_陳述式">使用帶標記 <code>break</code> 陳述式</h3>
+### 使用帶標記 `break` 陳述式
 
-<p>給定一組資料和一組測試，下面的例子判斷是否所有的資料均通過了測試。</p>
+給定一組資料和一組測試，下面的例子判斷是否所有的資料均通過了測試。
 
-<pre class="brush: js">var allPass = true;
+```js
+var allPass = true;
 var i, j;
 
 top:
 for (i = 0; items.length; i++)
-  for (j = 0; j &lt; tests.length; i++)
+  for (j = 0; j < tests.length; i++)
     if (!tests[j].pass(items[i])) {
       allPass = false;
       break top;
-    }</pre>
+    }
+```
 
-<h3 id="在標記的區塊中使用_break">在標記的區塊中使用 <code>break</code></h3>
+### 在標記的區塊中使用 `break`
 
-<p>你可以在程式碼區塊中使用標記，但只有 <code>break</code> 陳述式可以使用非迴圈的標記。</p>
+你可以在程式碼區塊中使用標記，但只有 `break` 陳述式可以使用非迴圈的標記。
 
-<pre class="brush: js">foo: {
+```js
+foo: {
   console.log('face');
   break foo;
   console.log('this will not be executed');
@@ -137,39 +140,41 @@ console.log('swap');
 // this will log:
 
 // "face"
-// "swap </pre>
+// "swap
+```
 
-<h3 id="標記的函式宣告式">標記的函式宣告式</h3>
+### 標記的函式宣告式
 
-<p>從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">Web 相容性附件</a>中的非嚴格程式碼進行了標準化。</p>
+從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
 
-<pre class="brush: js">L: function F() {}</pre>
-
-<p>在<a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式</a>中，這會拋出 {{jsxref("SyntaxError")}} 例外：</p>
-
-<pre class="brush: js">'use strict';
+```js
 L: function F() {}
-// SyntaxError: functions cannot be labelled</pre>
+```
 
-<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/function*">產生器函式</a>既不能在嚴格模式中標記，也不能在非嚴格模式中標記：</p>
+在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，這會拋出 {{jsxref("SyntaxError")}} 例外：
 
-<pre class="brush: js">L: function* F() {}
+```js
+'use strict';
+L: function F() {}
+// SyntaxError: functions cannot be labelled
+```
+
+[產生器函式](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)既不能在嚴格模式中標記，也不能在非嚴格模式中標記：
+
+```js
+L: function* F() {}
 // SyntaxError: generator functions cannot be labelled
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("javascript.statements.label")}}
 
+## 相關連結
 
-<p>{{Compat("javascript.statements.label")}}</p>
-
-<h2 id="相關連結">相關連結</h2>
-
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

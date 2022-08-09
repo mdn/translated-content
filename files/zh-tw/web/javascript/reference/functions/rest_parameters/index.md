@@ -3,38 +3,38 @@ title: 其餘參數
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong>其餘參數（rest parameter）</strong> 語法可以讓我們表示不確定數量的參數，並將其視為一個陣列。</p>
+**其餘參數（rest parameter）** 語法可以讓我們表示不確定數量的參數，並將其視為一個陣列。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">function f(a, b, ...theArgs) {
+```js
+function f(a, b, ...theArgs) {
   // ...
 }
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果函式的最後一個命名參數以 <code>...</code> 開頭，它會被視為一個陣列。該陣列的元素會被置於索引從 <code>0</code>（含）到的 <code>theArgs.length</code>（不含）位置，並且被視為一個函式的參數。</p>
+如果函式的最後一個命名參數以 `...` 開頭，它會被視為一個陣列。該陣列的元素會被置於索引從 `0`（含）到的 `theArgs.length`（不含）位置，並且被視為一個函式的參數。
 
-<p>在上面的範例中，<code>theArgs</code> 會將函式f中第三個(含)以後的參數收集起來。</p>
+在上面的範例中，`theArgs` 會將函式 f 中第三個(含)以後的參數收集起來。
 
-<h3 id="其餘參數和_arguments_物件的差異">其餘參數和 <code>arguments</code> 物件的差異</h3>
+### 其餘參數和 `arguments` 物件的差異
 
-<p>以下是其餘參數和 <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> 物件</code>三個主要的差異：</p>
+以下是其餘參數和 `arguments 物件`三個主要的差異：
 
-<ul>
- <li>其餘參數是 <code>arguments</code> 物件被傳入到函式的時候，還沒被指定變數名稱的引數。</li>
- <li><code>arguments</code> 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> 或 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a></code> 可以直接在其餘參數被調用。</li>
- <li><code>arguments</code> 物件自身有額外的功能，例如 <code>callee</code> 屬性。</li>
-</ul>
+- 其餘參數是 `arguments` 物件被傳入到函式的時候，還沒被指定變數名稱的引數。
+- `arguments` 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 [`sort`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或 [`pop`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 可以直接在其餘參數被調用。
+- `arguments` 物件自身有額外的功能，例如 `callee` 屬性。
 
-<h3 id="將參數轉成陣列">將參數轉成陣列</h3>
+### 將參數轉成陣列
 
-<p>其餘參數被介紹作為取代用 arguments 寫的範例程式。</p>
+其餘參數被介紹作為取代用 arguments 寫的範例程式。
 
-<pre class="brush: js">// 在有其餘參數之前，你可能見過下面的程式碼：
+```js
+// 在有其餘參數之前，你可能見過下面的程式碼：
 function f(a, b) {
   var args = Array.prototype.slice.call(arguments, f.length); // f.length 表示 arguments 的數量
 
@@ -46,36 +46,40 @@ function f(a, b) {
 function f(a, b, ...args) {
 
 }
-</pre>
+```
 
-<h3 id="解構其餘參數_rest_parameters">解構其餘參數 rest parameters</h3>
+### 解構其餘參數 rest parameters
 
-<p>其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解構賦值</a>。</p>
+其餘參數可以被解構，換句話說，可以把這個陣列解開，並將各個元素取出成為個別的變數。請參考[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
 
-<pre class="brush: js">function f(...[a, b, c]) {
+```js
+function f(...[a, b, c]) {
   return a + b + c;
 }
 
 f(1)          // NaN (b 和 c 都是 undefined)
 f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (第四個參數不會被解構，因為解構式只有三個定義好的變數名稱)</pre>
+f(1, 2, 3, 4) // 6 (第四個參數不會被解構，因為解構式只有三個定義好的變數名稱)
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>因為 <code>theArgs</code> 是一個陣列，所以它會有 <code>length</code> 屬性，作為表示參數數量：</p>
+因為 `theArgs` 是一個陣列，所以它會有 `length` 屬性，作為表示參數數量：
 
-<pre class="brush: js">function fun1(...theArgs) {
+```js
+function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
 fun1();  // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
-</pre>
+```
 
-<p>在接下來的範例中，其餘參數被用來收集第一個之後的所有引數並存在陣列中。 在這個陣列裡的每個元素(數字)，都會和第一個參數相乘後取代原本的元素，最後再將取代元素後的陣列回傳。</p>
+在接下來的範例中，其餘參數被用來收集第一個之後的所有引數並存在陣列中。 在這個陣列裡的每個元素(數字)，都會和第一個參數相乘後取代原本的元素，最後再將取代元素後的陣列回傳。
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
+```js
+function multiply(multiplier, ...theArgs) {
   return theArgs.map(function(element) {
     return multiplier * element;
   });
@@ -83,11 +87,12 @@ fun1(5, 6, 7); // 3
 
 var arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
-</pre>
+```
 
-<p>下列範例展示 <code>Array</code> 的方法可以在其餘參數上被使用，但 <code>arguments</code> 則不行。</p>
+下列範例展示 `Array` 的方法可以在其餘參數上被使用，但 `arguments` 則不行。
 
-<pre class="brush: js">function sortRestArgs(...theArgs) {
+```js
+function sortRestArgs(...theArgs) {
   var sortedArgs = theArgs.sort();
   return sortedArgs;
 }
@@ -100,38 +105,33 @@ function sortArguments() {
 }
 
 console.log(sortArguments(5, 3, 7, 1)); // 會拋出 TypeError (arguments.sort is not a function)
-</pre>
+```
 
-<p>為了要在 <code>arguments</code> 物件上使用 <code>Array</code> 的方法，可以將它轉換成真的 <code>Array</code> 實體，或者以 <code>apply()</code> 直接調用需要的方法。</p>
+為了要在 `arguments` 物件上使用 `Array` 的方法，可以將它轉換成真的 `Array` 實體，或者以 `apply()` 直接調用需要的方法。
 
-<pre class="brush: js">function sortArguments() {
+```js
+function sortArguments() {
   var args = Array.from(arguments);
   var sortedArgs = args.sort();
   return sortedArgs;
 }
 console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.functions.rest_parameters")}}
 
+## 參見
 
-<p>{{Compat("javascript.functions.rest_parameters")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operator</a> (also ‘<code>...</code>’)</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">Arguments object</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
- <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
- <li><a href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring assignment</a></li>
-</ul>
+- [Spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Arguments object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
+- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

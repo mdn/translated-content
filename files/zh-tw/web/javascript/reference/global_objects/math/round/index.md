@@ -8,32 +8,33 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.round()</code></strong> 函數回傳四捨五入後的近似值.</p>
+**`Math.round()`** 函數回傳四捨五入後的近似值.
 
-<h2 id="表達式">表達式</h2>
+## 表達式
 
-<pre class="syntaxbox"><code>Math.round(<var>x</var>)</code></pre>
+```plain
+Math.round(x)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>x</code></dt>
- <dd>數字.</dd>
-</dl>
+- `x`
+  - : 數字.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果小數位的部分值大於 0.5, 這個值將會進位. 如果小數位的部分值小於 0.5, 這個值將不會進位.</p>
+如果小數位的部分值大於 0.5, 這個值將會進位. 如果小數位的部分值小於 0.5, 這個值將不會進位.
 
-<p>由於 <code>round()</code> 是靜態的方法, 所以總是得這樣使用 <code>Math.round()</code>, 而非作為 <code>Math</code> 物件的一個方法 (<code>Math</code>並沒有建構子).</p>
+由於 `round()` 是靜態的方法, 所以總是得這樣使用 `Math.round()`, 而非作為 `Math` 物件的一個方法 (`Math`並沒有建構子).
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_Math.round()">使用 <code>Math.round()</code></h3>
+### 使用 `Math.round()`
 
-<pre class="brush: js">// Returns the value 20
+```js
+// Returns the value 20
 x = Math.round(20.49);
 
 // Returns the value 21
@@ -49,11 +50,12 @@ x = Math.round(-20.51);
 // Note the rounding error because of inaccurate floating point arithmetics
 // Compare this with Math.round10(1.005, -2) from the example below
 x = Math.round(1.005*100)/100;
-</pre>
+```
 
-<h3 id="十進位近似值">十進位近似值</h3>
+### 十進位近似值
 
-<pre class="brush: js">// 閉包含數
+```js
+// 閉包含數
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -71,7 +73,7 @@ x = Math.round(1.005*100)/100;
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -122,22 +124,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.sign()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.trunc()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.sign()")}} {{experimental_inline}}
+- {{jsxref("Math.trunc()")}} {{experimental_inline}}

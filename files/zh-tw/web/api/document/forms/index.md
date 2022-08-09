@@ -3,53 +3,55 @@ title: Document.forms
 slug: Web/API/Document/forms
 translation_of: Web/API/Document/forms
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>forms</code> 屬性會回傳一個包含目前頁面中所有 {{HTMLElement("form")}} 元素的集合物件（型別為 {{domxref("HTMLCollection")}}）。</p>
+`forms` 屬性會回傳一個包含目前頁面中所有 {{HTMLElement("form")}} 元素的集合物件（型別為 {{domxref("HTMLCollection")}}）。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>collection</var> = document.forms;</pre>
+```plain
+collection = document.forms;
+```
 
-<h2 id="Example">範例：取得表單資訊</h2>
+## 範例：取得表單資訊
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-&lt;head&gt;
-&lt;title&gt;document.forms example&lt;/title&gt;
-&lt;/head&gt;
+<head>
+<title>document.forms example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;form id="robby"&gt;
-  &lt;input type="button" onclick="alert(document.forms[0].id);" value="robby's form" /&gt;
-&lt;/form&gt;
+<form id="robby">
+  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
+</form>
 
-&lt;form id="dave"&gt;
-  &lt;input type="button" onclick="alert(document.forms[1].id);" value="dave's form" /&gt;
-&lt;/form&gt;
+<form id="dave">
+  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
+</form>
 
-&lt;form id="paul"&gt;
-  &lt;input type="button" onclick="alert(document.forms[2].id);" value="paul's form" /&gt;
-&lt;/form&gt;
+<form id="paul">
+  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="範例_2：取得表單內的元素">範例 2：取得表單內的元素</h2>
+## 範例 2：取得表單內的元素
 
-<pre class="brush: js">var selectForm = document.forms[index];
+```js
+var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
-</pre>
+```
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="See_Also">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("HTMLFormElement")}}</li>
-</ul>
+- {{domxref("HTMLFormElement")}}

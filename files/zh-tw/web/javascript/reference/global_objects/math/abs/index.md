@@ -8,42 +8,41 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.abs()</code></strong> 函式會回傳一個數字的絕對值，即為：</p>
+**`Math.abs()`** 函式會回傳一個數字的絕對值，即為：
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &amp; \text{if} \quad x \geq 0 \\ x &amp; \text{if} \quad x &lt; 0 \end{cases} </annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>></mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &#x26; \text{if} \quad x \geq 0 \\ x &#x26; \text{if} \quad x &#x3C; 0 \end{cases}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-abs.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-abs.html")}}
 
+## 語法
 
+```plain
+Math.abs(x)
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox">Math.abs(<var>x</var>)</pre>
+- `x`
+  - : 一個數字。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一個數字。</dd>
-</dl>
+給定數字的絕對值。
 
-<h3 id="回傳值">回傳值</h3>
+## 描述
 
-<p>給定數字的絕對值。</p>
+Because `abs()` is a static method of `Math`, you always use it as `Math.abs()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
-<h2 id="描述">描述</h2>
+## 範例
 
-<p>Because <code>abs()</code> is a static method of <code>Math</code>, you always use it as <code>Math.abs()</code>, rather than as a method of a <code>Math</code> object you created (<code>Math</code> is not a constructor).</p>
+### `Math.abs()` 的行為
 
-<h2 id="範例">範例</h2>
+Passing an empty object, an array with more than one member, a non-numeric string or {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing {{jsxref("null")}}, an empty string or an empty array returns 0.
 
-<h3 id="Math.abs()_的行為"><code>Math.abs()</code> 的行為</h3>
-
-<p>Passing an empty object, an array with more than one member, a non-numeric string or {{jsxref("undefined")}}/empty variable returns {{jsxref("NaN")}}. Passing {{jsxref("null")}}, an empty string or an empty array returns 0.</p>
-
-<pre class="brush: js">Math.abs('-1');     // 1
+```js
+Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
 Math.abs('');       // 0
@@ -53,22 +52,20 @@ Math.abs([1,2]);    // NaN
 Math.abs({});       // NaN
 Math.abs('string'); // NaN
 Math.abs();         // NaN
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Math.abs")}}</p>
+{{Compat("javascript.builtins.Math.abs")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

@@ -9,19 +9,20 @@ tags:
   - set
 translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
-<p>本章介紹用 “key” 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。</p>
+本章介紹用 “key” 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。
 
-<h2 id="Maps">Maps</h2>
+## Maps
 
-<h3 id="Map_object"><code>Map</code> object</h3>
+### `Map` object
 
-<p>ECMAScript 2015 引進了新的資料結構用以映射變量至變量。A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order</p>
+ECMAScript 2015 引進了新的資料結構用以映射變量至變量。A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order
 
-<p>The following code shows some basic operations with a <code>Map</code>. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of <code>[key, value]</code> for each iteration.</p>
+The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
 
-<pre class="brush: js">var sayings = new Map();
+```js
+var sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -39,38 +40,35 @@ for (var [key, value] of sayings) {
 
 sayings.clear();
 sayings.size; // 0
-</pre>
+```
 
-<h3 id="Object_and_Map_compared"><code>Object</code> and <code>Map</code> compared</h3>
+### `Object` and `Map` compared
 
-<p>Traditionally, {{jsxref("Object", "objects", "", 1)}} have been used to map strings to values. Objects allow you to set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. <code>Map</code> objects, however, have a few more advantages that make them better maps.</p>
+Traditionally, {{jsxref("Object", "objects", "", 1)}} have been used to map strings to values. Objects allow you to set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. `Map` objects, however, have a few more advantages that make them better maps.
 
-<ul>
- <li>The keys of an <code>Object</code> are {{jsxref("Global_Objects/String","Strings")}}, where they can be of any value for a <code>Map</code>.</li>
- <li>You can get the size of a <code>Map</code> easily while you have to manually keep track of size for an <code>Object</code>.</li>
- <li>The iteration of maps is in insertion order of the elements.</li>
- <li>An <code>Object</code> has a prototype, so there are default keys in the map. (this can be bypassed using <code>map = Object.create(null)</code>).</li>
-</ul>
+- The keys of an `Object` are {{jsxref("Global_Objects/String","Strings")}}, where they can be of any value for a `Map`.
+- You can get the size of a `Map` easily while you have to manually keep track of size for an `Object`.
+- The iteration of maps is in insertion order of the elements.
+- An `Object` has a prototype, so there are default keys in the map. (this can be bypassed using `map = Object.create(null)`).
 
-<p>These three tips can help you to decide whether to use a <code>Map</code> or an <code>Object</code>:</p>
+These three tips can help you to decide whether to use a `Map` or an `Object`:
 
-<ul>
- <li>Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.</li>
- <li>Use maps in case if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.</li>
- <li>Use objects when there is logic that operates on individual elements.</li>
-</ul>
+- Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.
+- Use maps in case if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.
+- Use objects when there is logic that operates on individual elements.
 
-<h3 id="WeakMap_object"><code>WeakMap</code> object</h3>
+### `WeakMap` object
 
-<p>The {{jsxref("WeakMap")}} object is a collection of key/value pairs in which the <strong>keys are objects only</strong> and the values can be arbitrary values. The object references in the keys are held <em>weakly</em>, meaning that they are a target of garbage collection (GC) if there is no other reference to the object anymore. The <code>WeakMap</code> API is the same as the <code>Map</code> API.</p>
+The {{jsxref("WeakMap")}} object is a collection of key/value pairs in which the **keys are objects only** and the values can be arbitrary values. The object references in the keys are held _weakly_, meaning that they are a target of garbage collection (GC) if there is no other reference to the object anymore. The `WeakMap` API is the same as the `Map` API.
 
-<p>One difference to <code>Map</code> objects is that <code>WeakMap</code> keys are not enumerable (i.e., there is no method giving you a list of the keys). If they were, the list would depend on the state of garbage collection, introducing non-determinism.</p>
+One difference to `Map` objects is that `WeakMap` keys are not enumerable (i.e., there is no method giving you a list of the keys). If they were, the list would depend on the state of garbage collection, introducing non-determinism.
 
-<p>For more information and example code, see also "Why <em>Weak</em>Map?" on the {{jsxref("WeakMap")}} reference page.</p>
+For more information and example code, see also "Why *Weak*Map?" on the {{jsxref("WeakMap")}} reference page.
 
-<p>One use case of <code>WeakMap</code> objects is to store private data for an object or to hide implementation details. The following example is from Nick Fitzgerald's blog post <a href="http://fitzgeraldnick.com/weblog/53/">"Hiding Implementation Details with ECMAScript 6 WeakMaps"</a>. The private data and methods belong inside the object and are stored in the <code>privates</code> WeakMap object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because <code>privates</code> is not exported from the module</p>
+One use case of `WeakMap` objects is to store private data for an object or to hide implementation details. The following example is from Nick Fitzgerald's blog post ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/). The private data and methods belong inside the object and are stored in the `privates` WeakMap object. Everything exposed on the instance and prototype is public; everything else is inaccessible from the outside world because `privates` is not exported from the module
 
-<pre class="brush: js">const privates = new WeakMap();
+```js
+const privates = new WeakMap();
 
 function Public() {
   const me = {
@@ -85,17 +83,18 @@ Public.prototype.method = function() {
 };
 
 module.exports = Public;
-</pre>
+```
 
-<h2 id="Sets">Sets</h2>
+## Sets
 
-<h3 id="Set_object"><code>Set</code> object</h3>
+### `Set` object
 
-<p>{{jsxref("Set")}} objects 是變數的集合。 You can iterate its elements in insertion order. A value in a <code>Set</code> may only occur once; it is unique in the <code>Set</code>'s collection.</p>
+{{jsxref("Set")}} objects 是變數的集合。 You can iterate its elements in insertion order. A value in a `Set` may only occur once; it is unique in the `Set`'s collection.
 
-<p>The following code shows some basic operations with a <code>Set</code>. See also the {{jsxref("Set")}} reference page for more examples and the complete API.</p>
+The following code shows some basic operations with a `Set`. See also the {{jsxref("Set")}} reference page for more examples and the complete API.
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add('some text');
 mySet.add('foo');
@@ -107,50 +106,45 @@ mySet.size; // 2
 for (let item of mySet) console.log(item);
 // 1
 // "some text"
-</pre>
+```
 
-<h3 id="Array_和_Set_之間的相互轉換">Array 和 Set 之間的相互轉換</h3>
+### Array 和 Set 之間的相互轉換
 
-<p>You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>. Also, the <code>Set</code> constructor accepts an <code>Array</code> to convert in the other direction. Note again that <code>Set</code> objects store unique values, so any duplicate elements from an Array are deleted when converting.</p>
+You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator). Also, the `Set` constructor accepts an `Array` to convert in the other direction. Note again that `Set` objects store unique values, so any duplicate elements from an Array are deleted when converting.
 
-<pre class="brush: js">Array.from(mySet);
+```js
+Array.from(mySet);
 [...mySet2];
 
 mySet2 = new Set([1, 2, 3, 4]);
-</pre>
+```
 
-<h3 id="比較_Array_和_Set"><code>比較 Array</code> 和 <code>Set</code> </h3>
+### `比較 Array` 和 `Set`
 
-<p>Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new <code>Set</code> object, however, has some advantages:</p>
+Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
 
-<ul>
- <li>Checking whether an element exists in a collection using {{jsxref("Array.indexOf", "indexOf")}} for arrays is slow.</li>
- <li><code>Set</code> objects let you delete elements by their value. With an array you would have to splice based on an element's index.</li>
- <li>The value {{jsxref("NaN")}} cannot be found with <code>indexOf</code> in an array.</li>
- <li><code>Set</code> objects store unique values; you don't have to keep track of duplicates by yourself.</li>
-</ul>
+- Checking whether an element exists in a collection using {{jsxref("Array.indexOf", "indexOf")}} for arrays is slow.
+- `Set` objects let you delete elements by their value. With an array you would have to splice based on an element's index.
+- The value {{jsxref("NaN")}} cannot be found with `indexOf` in an array.
+- `Set` objects store unique values; you don't have to keep track of duplicates by yourself.
 
-<h3 id="WeakSet_object"><code>WeakSet</code> object</h3>
+### `WeakSet` object
 
-<p>{{jsxref("WeakSet")}} objects are collections of objects. An object in the <code>WeakSet</code> may only occur once; it is unique in the <code>WeakSet</code>'s collection and objects are not enumerable.</p>
+{{jsxref("WeakSet")}} objects are collections of objects. An object in the `WeakSet` may only occur once; it is unique in the `WeakSet`'s collection and objects are not enumerable.
 
-<p>The main differences to the {{jsxref("Set")}} object are:</p>
+The main differences to the {{jsxref("Set")}} object are:
 
-<ul>
- <li>In contrast to <code>Sets</code>, <code>WeakSets</code> are <strong>collections of objects only</strong> and not of arbitrary values of any type.</li>
- <li>The <code>WeakSet</code> is <em>weak</em>: References to objects in the collection are held weakly. If there is no other reference to an object stored in the <code>WeakSet</code>, they can be garbage collected. That also means that there is no list of current objects stored in the collection. <code>WeakSets</code> are not enumerable.</li>
-</ul>
+- In contrast to `Sets`, `WeakSets` are **collections of objects only** and not of arbitrary values of any type.
+- The `WeakSet` is _weak_: References to objects in the collection are held weakly. If there is no other reference to an object stored in the `WeakSet`, they can be garbage collected. That also means that there is no list of current objects stored in the collection. `WeakSets` are not enumerable.
 
-<p>The use cases of <code>WeakSet</code> objects are limited. They will not leak memory so it can be safe to use DOM elements as a key and mark them for tracking purposes, for example.</p>
+The use cases of `WeakSet` objects are limited. They will not leak memory so it can be safe to use DOM elements as a key and mark them for tracking purposes, for example.
 
-<h2 id="Key_and_value_equality_of_Map_and_Set">Key and value equality of <code>Map</code> and <code>Set</code></h2>
+## Key and value equality of `Map` and `Set`
 
-<p>Both the key equality of <code>Map</code> objects and the value equality of <code>Set</code> objects, are based on the "<a href="https://tc39.github.io/ecma262/#sec-samevaluezero">same-value-zero algorithm</a>":</p>
+Both the key equality of `Map` objects and the value equality of `Set` objects, are based on the "[same-value-zero algorithm](https://tc39.github.io/ecma262/#sec-samevaluezero)":
 
-<ul>
- <li>Equality works like the identity comparison operator <code>===</code>.</li>
- <li><code>-0</code> and <code>+0</code> are considered equal.</li>
- <li>{{jsxref("NaN")}} is considered equal to itself (contrary to <code>===</code>).</li>
-</ul>
+- Equality works like the identity comparison operator `===`.
+- `-0` and `+0` are considered equal.
+- {{jsxref("NaN")}} is considered equal to itself (contrary to `===`).
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}

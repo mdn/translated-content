@@ -3,90 +3,56 @@ title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 translation_of: Web/API/HTMLMediaElement/readyState
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}**`HTMLMediaElement.readyState` **屬性回傳目前媒體的就緒狀態。
 
-<div><strong><code>HTMLMediaElement.readyState</code> </strong>屬性回傳目前媒體的就緒狀態。</div>
+## 語法
 
-<h2 id="Syntax">語法</h2>
+```plain
+var readyState = audioOrVideo.readyState;
+```
 
-<pre class="syntaxbox">var readyState = audioOrVideo.readyState;</pre>
+### 值
 
-<h3 id="值">值</h3>
+一個 `unsigned short`，可能的值有：
 
-<p>一個 <code>unsigned short</code>，可能的值有：</p>
+| 常數              | 值  | 描述                                                                                                 |
+| ----------------- | --- | ---------------------------------------------------------------------------------------------------- |
+| HAVE_NOTHING      | 0   | 沒有可用的媒體資源。                                                                                 |
+| HAVE_METADATA     | 1   | 已經取得足夠的媒體資源並已初始化元資料。繼續取得媒體資源不會導致例外。                               |
+| HAVE_CURRENT_DATA | 2   | 媒體資料已經足夠播放目前的時間，但沒有足夠的資料再播放一幀。                                         |
+| HAVE_FUTURE_DATA  | 3   | 資料已經足夠播放目前的時間，而且有至少一點點資料可以播放未來的時間（換句話說，可能只多了一到兩幀）。 |
+| HAVE_ENOUGH_DATA  | 4   | 資料足夠，且下載率夠高。媒體可以播放到結束而不被中斷。                                               |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">常數</th>
-   <th scope="col">值</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>HAVE_NOTHING</td>
-   <td>0</td>
-   <td>沒有可用的媒體資源。</td>
-  </tr>
-  <tr>
-   <td>HAVE_METADATA</td>
-   <td>1</td>
-   <td>已經取得足夠的媒體資源並已初始化元資料。繼續取得媒體資源不會導致例外。</td>
-  </tr>
-  <tr>
-   <td>HAVE_CURRENT_DATA</td>
-   <td>2</td>
-   <td>媒體資料已經足夠播放目前的時間，但沒有足夠的資料再播放一幀。</td>
-  </tr>
-  <tr>
-   <td>HAVE_FUTURE_DATA</td>
-   <td>3</td>
-   <td>資料已經足夠播放目前的時間，而且有至少一點點資料可以播放未來的時間（換句話說，可能只多了一到兩幀）。</td>
-  </tr>
-  <tr>
-   <td>HAVE_ENOUGH_DATA</td>
-   <td>4</td>
-   <td>資料足夠，且下載率夠高。媒體可以播放到結束而不被中斷。</td>
-  </tr>
- </tbody>
-</table>
+## 範例
 
-<h2 id="範例">範例</h2>
+下面這個例子會監聽 \`example\` 這個元素，並檢查是否已載入足夠的媒體資源。如果是的話，它會繼續播放。
 
-<p>下面這個例子會監聽 `example` 這個元素，並檢查是否已載入足夠的媒體資源。如果是的話，它會繼續播放。</p>
+```html
+<audio id="example" preload="auto">
+ <source src="sound.ogg" type="audio/ogg" />
+</audio>
+```
 
-<pre class="brush: html">&lt;audio id="example" preload="auto"&gt;
- &lt;source src="sound.ogg" type="audio/ogg" /&gt;
-&lt;/audio&gt;
-
-</pre>
-
-<pre class="brush: js">var obj = document.getElementById('example');
+```js
+var obj = document.getElementById('example');
 
 obj.addEventListener('loadeddata', function() {
 
-  if(obj.readyState &gt;= 2) {
+  if(obj.readyState >= 2) {
     obj.play();
   }
 
 });
-</pre>
+```
 
-<p> </p>
-
-<h2 id="標準">標準</h2>
+## 標準
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("api.HTMLMediaElement.readyState")}}
 
+## 也參考看看
 
-<p>{{Compat("api.HTMLMediaElement.readyState")}}</p>
-
-<h2 id="See_Also">也參考看看</h2>
-
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

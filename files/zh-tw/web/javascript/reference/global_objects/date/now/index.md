@@ -9,44 +9,45 @@ tags:
   - 方法補完
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Date.now()</code></strong> 方法回傳自 1970/01/01 00:00:00 UTC 起經過的毫秒數。</p>
+**`Date.now()`** 方法回傳自 1970/01/01 00:00:00 UTC 起經過的毫秒數。
 
-<h2 id="格式">格式</h2>
+## 格式
 
-<pre class="syntaxbox"><code>var timeInMs = Date.now();</code></pre>
+```plain
+var timeInMs = Date.now();
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個代表由經 UNIX 紀元起經過的毫秒數值（{{jsxref("Number")}}）。</p>
+一個代表由經 UNIX 紀元起經過的毫秒數值（{{jsxref("Number")}}）。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>由於 <code>now()</code> 是 {{jsxref("Date")}} 的靜態方法，你只能用 <code>Date.now()</code> 的方式呼叫它。</p>
+由於 `now()` 是 {{jsxref("Date")}} 的靜態方法，你只能用 `Date.now()` 的方式呼叫它。
 
-<h2 id="補完">補完</h2>
+## 補完
 
-<p>這個函數是 ECMA-262 第 5 版的標準。 對於未更新支援此方法的引擎，可以利用底下的程式補上：</p>
+這個函數是 ECMA-262 第 5 版的標準。 對於未更新支援此方法的引擎，可以利用底下的程式補上：
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="相關資源">相關資源</h2>
+## 相關資源
 
-<ul>
- <li>{{domxref("Performance.now()")}} — 提供亞毫秒級的時間戳記，作為評估網頁效能的解決方案。</li>
- <li>{{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}</li>
-</ul>
+- {{domxref("Performance.now()")}} — 提供亞毫秒級的時間戳記，作為評估網頁效能的解決方案。
+- {{domxref("console.time()")}} / {{domxref("console.timeEnd()")}}

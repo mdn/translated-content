@@ -10,48 +10,66 @@ tags:
   - 選擇器
 translation_of: Web/API/Document/querySelector
 ---
-<div>
- {{ApiRef()}}</div>
-<h2 id="Summary">摘要</h2>
-<p>回傳 document 第一個符合特定選擇器群組的元素（採用深度優先，前序追蹤 document 節點）。</p>
-<h2 id="Syntax">語法</h2>
-<pre><em>element</em> = document.querySelector(<em>selectors</em>);</pre>
-<p>其中</p>
-<ul>
- <li><code>element</code> 是<a href="/en-US/docs/DOM/element">元素</a>物件。</li>
- <li><code>selectors</code> 是以逗號分隔，包含一個或多個 CSS 選擇器的字串。</li>
-</ul>
-<h2 id="Example">範例</h2>
-<p>這個範例會回傳 document 選到的第一個 "<code>myclass</code>" class：</p>
-<pre class="brush: js">var el = document.querySelector(".myclass");
-</pre>
-<h2 id="Notes">注意事項</h2>
-<p>若找不到相應元素就會回傳 <code>null</code>，否則回傳第一個符合的元素。</p>
-<p>若選擇器符合某 ID，且該 ID 在 document 中誤用數次，就會回傳第一個符合的元素。</p>
-<p>當特定選擇器群組無效，會擲回 <code>SYNTAX_ERR</code> 例外狀況。</p>
-<p><code>querySelector()</code> 是由 Selectors API 引入的選擇器。</p>
-<p>傳入 <code>querySelector</code> 的字串參數必須遵循 CSS 語法。若要選取未遵循 CSS 語法的 ID 或選擇器（例如不當使用冒號或空格），必須強制加上兩個反斜線來跳脫錯誤的字元：</p>
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+{{ApiRef()}}
 
-&lt;script&gt;
+## 摘要
+
+回傳 document 第一個符合特定選擇器群組的元素（採用深度優先，前序追蹤 document 節點）。
+
+## 語法
+
+```plain
+element = document.querySelector(selectors);
+```
+
+其中
+
+- `element` 是[元素](/en-US/docs/DOM/element)物件。
+- `selectors` 是以逗號分隔，包含一個或多個 CSS 選擇器的字串。
+
+## 範例
+
+這個範例會回傳 document 選到的第一個 "`myclass`" class：
+
+```js
+var el = document.querySelector(".myclass");
+```
+
+## 注意事項
+
+若找不到相應元素就會回傳 `null`，否則回傳第一個符合的元素。
+
+若選擇器符合某 ID，且該 ID 在 document 中誤用數次，就會回傳第一個符合的元素。
+
+當特定選擇器群組無效，會擲回 `SYNTAX_ERR` 例外狀況。
+
+`querySelector()` 是由 Selectors API 引入的選擇器。
+
+傳入 `querySelector` 的字串參數必須遵循 CSS 語法。若要選取未遵循 CSS 語法的 ID 或選擇器（例如不當使用冒號或空格），必須強制加上兩個反斜線來跳脫錯誤的字元：
+
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
+
+<script>
 document.querySelector('#foo\bar')    // 甚麼都沒選到
 document.querySelector('#foo\\\\bar') // 選到第一個 div
 document.querySelector('#foo:bar')     // 甚麼都沒選到
 document.querySelector('#foo\\:bar')   // 選到第二個 div
-&lt;/script&gt;
-</pre>
-<h2 id="Browser_Compatibility">瀏覽器相容性</h2>
+</script>
+```
+
+## 瀏覽器相容性
+
 {{Compat("api.Document.querySelector")}}
 
-<h2 id="Specification">規格文件</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
-</ul>
-<h2 id="See_also">詳見</h2>
-<ul>
- <li>{{domxref("document.querySelectorAll()")}}</li>
- <li>{{domxref("element.querySelector()")}}</li>
- <li>{{domxref("element.querySelectorAll()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">querySelector 代碼片段</a></li>
-</ul>
+## 規格文件
+
+- [Selectors API](http://www.w3.org/TR/selectors-api/)
+
+## 詳見
+
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("element.querySelector()")}}
+- {{domxref("element.querySelectorAll()")}}
+- [querySelector 代碼片段](/en-US/docs/Code_snippets/QuerySelector)

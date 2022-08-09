@@ -5,71 +5,60 @@ tags:
   - 待翻譯
 translation_of: Web/API/UIEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>UIEvent</code></strong> 介面是使用者介面的事件的基本型態。</p>
+**`UIEvent`** 介面是使用者介面的事件的基本型態。
 
-<p><code>UIEvent</code> 是從 {{domxref("Event")}} 衍伸過來。 雖然為了相容性，仍留著 {{domxref("UIEvent.initUIEvent()")}} 方法，建立 <code>UIEvent</code> 物件最好是選擇以 {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor 建立。</p>
+`UIEvent` 是從 {{domxref("Event")}} 衍伸過來。 雖然為了相容性，仍留著 {{domxref("UIEvent.initUIEvent()")}} 方法，建立 `UIEvent` 物件最好是選擇以 {{domxref("UIEvent.UIEvent", "UIEvent()")}} constructor 建立。
 
-<p>許多介面直接或間接繼承此介面，例如：{{domxref("MouseEvent")}}、{{domxref("TouchEvent")}}、{{domxref("FocusEvent")}}、{{domxref("KeyboardEvent")}}、{{domxref("WheelEvent")}}、{{domxref("InputEvent")}} 和 {{domxref("CompositionEvent")}}。</p>
+許多介面直接或間接繼承此介面，例如：{{domxref("MouseEvent")}}、{{domxref("TouchEvent")}}、{{domxref("FocusEvent")}}、{{domxref("KeyboardEvent")}}、{{domxref("WheelEvent")}}、{{domxref("InputEvent")}} 和 {{domxref("CompositionEvent")}}。
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("UIEvent.UIEvent()", "UIEvent()")}}</dt>
- <dd>建立一個 <code>UIEvent</code> 物件 。</dd>
-</dl>
+- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
+  - : 建立一個 `UIEvent` 物件 。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>此介面亦繼承其父－－ {{domxref("Event")}} 的屬性：</em></p>
+_此介面亦繼承其父－－ {{domxref("Event")}} 的屬性：_
 
-<dl>
- <dt>{{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating whether the bubbling of the event has been canceled or not.</dd>
-</dl>
+- {{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}
+  - : Is a {{jsxref("Boolean")}} indicating whether the bubbling of the event has been canceled or not.
+- {{domxref("UIEvent.detail")}}{{readonlyinline}}
+  - : Returns a `long` with details about the event, depending on the event type.
+- {{domxref("UIEvent.isChar")}} {{Deprecated_Inline}} {{readonlyinline}}
+  - : Returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.
+- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the current layer.
+- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the horizontal coordinate of the event relative to the whole document.
+- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the vertical coordinate of the event relative to the whole document.
+- {{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}
+  - : Returns an instance of the InputDeviceCapabilities interface which provides information about the physical device responsible for generating a touch event.
+- {{domxref("UIEvent.view")}}{{readonlyinline}}
+  - : Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.
+- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
+  - : Returns the numeric `keyCode` of the key pressed, or the character code (`charCode`) for an alphanumeric key pressed.
 
-<dl>
- <dt>{{domxref("UIEvent.detail")}}{{readonlyinline}}</dt>
- <dd>Returns a <code>long</code> with details about the event, depending on the event type.</dd>
- <dt>{{domxref("UIEvent.isChar")}} {{Deprecated_Inline}} {{readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether the event produced a key character or not.</dd>
- <dt>{{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the horizontal coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the vertical coordinate of the event relative to the current layer.</dd>
- <dt>{{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the horizontal coordinate of the event relative to the whole document.</dd>
- <dt>{{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the vertical coordinate of the event relative to the whole document.</dd>
- <dt>{{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns an instance of the InputDeviceCapabilities interface which provides information about the physical device responsible for generating a touch event.</dd>
- <dt>{{domxref("UIEvent.view")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}} that contains the view that generated the event.</dd>
- <dt>{{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}</dt>
- <dd>Returns the numeric <code>keyCode</code> of the key pressed, or the character code (<code>charCode</code>) for an alphanumeric key pressed.</dd>
-</dl>
+## 方法
 
-<h2 id="方法">方法</h2>
+_此介面亦繼承其父－－ {{domxref("Event")}} 的方法：_
 
-<p><em>此介面亦繼承其父－－ {{domxref("Event")}} 的方法：</em></p>
+- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
+  - : 初始化 `UIEvent` 物件。若該事件已經觸發的話，此方法就不會執行任何東西。
 
-<dl>
- <dt>{{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}</dt>
- <dd>初始化 <code>UIEvent</code> 物件。若該事件已經觸發的話，此方法就不會執行任何東西。</dd>
-</dl>
-
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.UIEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Event")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Event")}}

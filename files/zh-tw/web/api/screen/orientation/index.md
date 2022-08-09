@@ -3,22 +3,24 @@ title: Screen.orientation
 slug: Web/API/Screen/orientation
 translation_of: Web/API/Screen/orientation
 ---
-<div>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-<p><code>Screen.orientation</code> 屬性可以取得螢幕目前的方向。</p>
+`Screen.orientation` 屬性可以取得螢幕目前的方向。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var orientation = window.screen.orientation.type;
-</pre>
+```plain
+var orientation = window.screen.orientation.type;
+```
 
-<h2 id="回傳值">回傳值</h2>
+## 回傳值
 
-<p>回傳值為一個代表螢幕方向的字串，可能是 <code>portrait-primary</code>、<code>portrait-secondary</code>、<code>landscape-primary</code> 或 <code>landscape-secondary</code>（請參考 {{domxref("window.screen.lockOrientation","lockOrientation")}} 以瞭解更多資訊）。</p>
+回傳值為一個代表螢幕方向的字串，可能是 `portrait-primary`、`portrait-secondary`、`landscape-primary` 或 `landscape-secondary`（請參考 {{domxref("window.screen.lockOrientation","lockOrientation")}} 以瞭解更多資訊）。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+```js
+var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
 
 if (orientation.type === "landscape-primary") {
   console.log("That looks good.");
@@ -27,21 +29,19 @@ if (orientation.type === "landscape-primary") {
 } else if (orientation.type === "portrait-secondary" || orientation.type === "portrait-primary") {
   console.log("Mmmh... you should rotate your device to landscape");
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Screen.orientation")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Screen.orientation")}}</li>
- <li>{{domxref("Screen.unlockOrientation()")}}</li>
- <li>{{domxref("Screen.onorientationchange")}}</li>
- <li><a href="/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">控制畫面方向</a></li>
-</ul>
+- {{domxref("Screen.orientation")}}
+- {{domxref("Screen.unlockOrientation()")}}
+- {{domxref("Screen.onorientationchange")}}
+- [控制畫面方向](/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

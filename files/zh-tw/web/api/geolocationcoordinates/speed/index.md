@@ -3,26 +3,25 @@ title: Coordinates.speed
 slug: Web/API/GeolocationCoordinates/speed
 translation_of: Web/API/GeolocationCoordinates/speed
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><code><strong>Coordinates.speed</strong></code> 回傳唯讀的正複數代表速度，單位為公尺/秒。 如果裝置無法測量這個值則回傳 null。</p>
+**`Coordinates.speed`** 回傳唯讀的正複數代表速度，單位為公尺/秒。 如果裝置無法測量這個值則回傳 null。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>speed</var> = <var>coordinates</var>.speed
-</pre>
+```plain
+speed = coordinates.speed
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.GeolocationCoordinates.speed")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>屬於 {{domxref("Coordinates")}} 介面。</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- 屬於 {{domxref("Coordinates")}} 介面。

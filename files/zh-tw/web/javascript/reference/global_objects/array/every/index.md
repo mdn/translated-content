@@ -10,79 +10,81 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>every()</strong></code> 方法會測試陣列中的所有元素是否都通過了由給定之函式所實作的測試。</p>
+**`every()`** 方法會測試陣列中的所有元素是否都通過了由給定之函式所實作的測試。
 
-<div>{{EmbedInteractiveExample("pages/js/array-every.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-every.html")}}
 
+## 語法
 
+```plain
+arr.every(callback[, thisArg])
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><var>arr</var>.every(<var>callback</var>[, <var>thisArg</var>])</pre>
+- `callback`
 
-<h3 id="參數">參數</h3>
+  - : 用來測試每一個元素的函式，它包含三個引數：
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>用來測試每一個元素的函式，它包含三個引數：
- <dl>
-  <dt><code>currentValue</code>（必要的）</dt>
-  <dd>目前正要被處理的陣列元素。</dd>
-  <dt><code>index</code>（可選的）</dt>
-  <dd>目前正要被處理的陣列元素之索引值。</dd>
-  <dt><code>array</code>（可選的）</dt>
-  <dd>呼叫 <code>every</code> 的陣列。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可選的。執行 <code>callback</code> 回呼函式的 <code>this</code> 值。</dd>
-</dl>
+    - `currentValue`（必要的）
+      - : 目前正要被處理的陣列元素。
+    - `index`（可選的）
+      - : 目前正要被處理的陣列元素之索引值。
+    - `array`（可選的）
+      - : 呼叫 `every` 的陣列。
 
-<h3 id="回傳值">回傳值</h3>
+- `thisArg`
+  - : 可選的。執行 `callback` 回呼函式的 `this` 值。
 
-<p>若回呼函式在處理每一個陣列元素時皆得到 {{Glossary("truthy")}} 值，則回傳 <code><strong>true</strong></code>。否則，回傳值為 <code><strong>false</strong></code>。</p>
+### 回傳值
 
-<h2 id="描述">描述</h2>
+若回呼函式在處理每一個陣列元素時皆得到 {{Glossary("truthy")}} 值，則回傳 **`true`**。否則，回傳值為 **`false`**。
 
-<p>The <code>every</code> method executes the provided <code>callback</code> function once for each element present in the array until it finds one where <code>callback</code> returns a {{Glossary("falsy")}} value. If such an element is found, the <code>every</code> method immediately returns <code>false</code>. Otherwise, if <code>callback</code> returns a {{Glossary("truthy")}} value for all elements, <code>every</code> returns <code>true</code>. <code>callback</code> is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values.</p>
+## 描述
 
-<p><code>callback</code> is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.</p>
+The `every` method executes the provided `callback` function once for each element present in the array until it finds one where `callback` returns a {{Glossary("falsy")}} value. If such an element is found, the `every` method immediately returns `false`. Otherwise, if `callback` returns a {{Glossary("truthy")}} value for all elements, `every` returns `true`. `callback` is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values.
 
-<p>If a <code>thisArg</code> parameter is provided to <code>every</code>, it will be used as callback's <code>this</code> value. Otherwise, the value <code>undefined</code> will be used as its <code>this</code> value.  The <code>this</code> value ultimately observable by <code>callback</code> is determined according to <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+`callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-<p><code>every</code> does not mutate the array on which it is called.</p>
+If a `thisArg` parameter is provided to `every`, it will be used as callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
-<p>The range of elements processed by <code>every</code> is set before the first invocation of <code>callback</code>. Elements which are appended to the array after the call to <code>every</code> begins will not be visited by <code>callback</code>. If existing elements of the array are changed, their value as passed to <code>callback</code> will be the value at the time <code>every</code> visits them; elements that are deleted are not visited.</p>
+`every` does not mutate the array on which it is called.
 
-<p><code>every</code> acts like the "for all" quantifier in mathematics. In particular, for an empty array, it returns true. (It is <a href="http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics">vacuously true</a> that all elements of the <a href="http://en.wikipedia.org/wiki/Empty_set#Common_problems">empty set</a> satisfy any given condition.)</p>
+The range of elements processed by `every` is set before the first invocation of `callback`. Elements which are appended to the array after the call to `every` begins will not be visited by `callback`. If existing elements of the array are changed, their value as passed to `callback` will be the value at the time `every` visits them; elements that are deleted are not visited.
 
-<h2 id="範例">範例</h2>
+`every` acts like the "for all" quantifier in mathematics. In particular, for an empty array, it returns true. (It is [vacuously true](http://en.wikipedia.org/wiki/Vacuous_truth#Vacuous_truths_in_mathematics) that all elements of the [empty set](http://en.wikipedia.org/wiki/Empty_set#Common_problems) satisfy any given condition.)
 
-<h3 id="Testing_size_of_all_array_elements">Testing size of all array elements</h3>
+## 範例
 
-<p>The following example tests whether all elements in the array are bigger than 10.</p>
+### Testing size of all array elements
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+The following example tests whether all elements in the array are bigger than 10.
+
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="Using_arrow_functions">Using arrow functions</h3>
+### Using arrow functions
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> provide a shorter syntax for the same test.</p>
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
-<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
-[12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
+```js
+[12, 5, 8, 130, 44].every(x => x >= 10); // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>every</code> was added to the ECMA-262 standard in the 5th edition; as such it may not be present in other implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of <code>every</code> in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming <code>Object</code> and <code>TypeError</code> have their original values and that <code>callbackfn.call</code> evaluates to the original value of {{jsxref("Function.prototype.call")}}</p>
+`every` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in other implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `every` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming `Object` and `TypeError` have their original values and that `callbackfn.call` evaluates to the original value of {{jsxref("Function.prototype.call")}}
 
-<pre class="brush: js">if (!Array.prototype.every) {
+```js
+if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -98,7 +100,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     // 2. Let lenValue be the result of calling the Get internal method
     //    of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
     if (typeof callbackfn !== 'function') {
@@ -106,15 +108,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Let k be 0.
     k = 0;
 
-    // 7. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 7. Repeat, while k < len
+    while (k < len) {
 
       var kValue;
 
@@ -145,24 +147,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.every")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.every")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

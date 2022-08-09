@@ -4,88 +4,52 @@ slug: Web/API/Window/load_event
 translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
-<p><code>load</code> 事件發生在加載完目標資源、該資源依賴的其他資源時。</p>
+`load` 事件發生在加載完目標資源、該資源依賴的其他資源時。
 
-<h2 id="一般資訊">一般資訊</h2>
+## 一般資訊
 
-<dl>
- <dt>規範</dt>
- <dd><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load">DOM L3</a></dd>
- <dt>介面</dt>
- <dd>UIEvent</dd>
- <dt>起泡事件</dt>
- <dd>No</dd>
- <dt>可取消</dt>
- <dd>No</dd>
- <dt>對象</dt>
- <dd>Window</dd>
- <dt>預設行為</dt>
- <dd>None.</dd>
-</dl>
+- 規範
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+- 介面
+  - : UIEvent
+- 起泡事件
+  - : No
+- 可取消
+  - : No
+- 對象
+  - : Window
+- 預設行為
+  - : None.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/WindowProxy"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>0.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                             | Description                                                                                   |
+| ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
+| `type` {{readonlyInline}}       | [`DOMString`](/en-US/docs/Web/API/DOMString)     | The type of event.                                                                            |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/en-US/docs/Web/API/Boolean)         | Whether the event is cancellable or not.                                                      |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (`window` of the document) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                                 | 0.                                                                                            |
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   window.addEventListener("load", function(event) {
     console.log("All resources finished loading!");
   });
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="相關事件">相關事件</h2>
+## 相關事件
 
-<ul>
- <li>{{event("DOMContentLoaded")}}</li>
- <li>{{event("readystatechange")}}</li>
- <li>{{event("load")}}</li>
- <li>{{event("beforeunload")}}</li>
- <li>{{event("unload")}}</li>
-</ul>
+- {{event("DOMContentLoaded")}}
+- {{event("readystatechange")}}
+- {{event("load")}}
+- {{event("beforeunload")}}
+- {{event("unload")}}

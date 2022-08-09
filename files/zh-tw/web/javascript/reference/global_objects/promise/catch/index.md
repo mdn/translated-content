@@ -9,48 +9,49 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>catch()</strong> 方法只處理 Promise 的被拒絕狀態，並回傳一個新的 <code>Promise</code> 物件。此方法的行為等同於呼叫 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}。</p>
+**catch()** 方法只處理 Promise 的被拒絕狀態，並回傳一個新的 `Promise` 物件。此方法的行為等同於呼叫 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>p.catch(onRejected)</var>;
+```plain
+p.catch(onRejected);
 
 p.catch(function(reason) {
    // rejection
 });
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt>onRejected</dt>
- <dd>一個 {{jsxref("Function")}} ，在 <code>Promise</code> 被拒絕時被呼叫。這個函式有一個引數：
- <dl>
-  <dt><code>reason</code></dt>
-  <dd>失敗訊息。</dd>
- </dl>
- 若 onRejected 拋出一個錯誤或回傳一個被拒絕的 Promise，則 catch() 回傳的 Promise 被拒絕；其他情形都是被實現。</dd>
-</dl>
+- onRejected
 
-<h3 id="回傳值">回傳值</h3>
+  - : 一個 {{jsxref("Function")}} ，在 `Promise` 被拒絕時被呼叫。這個函式有一個引數：
 
-<p>呼叫（<code>catch</code> 的 promise）物件，內部呼叫 <code>Promise.prototype.then</code>，傳入引數 undefined 及 onRejected；接著以之結果回傳（結果為 {{jsxref("Promise")}}）。</p>
+    - `reason`
+      - : 失敗訊息。
 
-<p><strong>內部呼叫演示：</strong></p>
+    若 onRejected 拋出一個錯誤或回傳一個被拒絕的 Promise，則 catch() 回傳的 Promise 被拒絕；其他情形都是被實現。
 
-<pre class="brush: js">// overriding original Promise.prototype.then/catch just to add some logs
+### 回傳值
+
+呼叫（`catch` 的 promise）物件，內部呼叫 `Promise.prototype.then`，傳入引數 undefined 及 onRejected；接著以之結果回傳（結果為 {{jsxref("Promise")}}）。
+
+**內部呼叫演示：**
+
+```js
+// overriding original Promise.prototype.then/catch just to add some logs
 (function(Promise){
     var originalThen = Promise.prototype.then;
     var originalCatch = Promise.prototype.catch;
 
     Promise.prototype.then = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .then on %o with arguments: %o', this, arguments);
+        console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
         return originalThen.apply(this, arguments);
     };
     Promise.prototype.catch = function(){
-        console.log('&gt; &gt; &gt; &gt; &gt; &gt; called .catch on %o with arguments: %o', this, arguments);
+        console.log('> > > > > > called .catch on %o with arguments: %o', this, arguments);
         return originalCatch.apply(this, arguments);
     };
 
@@ -62,19 +63,20 @@ p.catch(function(reason) {
 Promise.resolve().catch(function XXX(){});
 
 // logs:
-// &gt; &gt; &gt; &gt; &gt; &gt; called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
-// &gt; &gt; &gt; &gt; &gt; &gt; called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
-</pre>
+// > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
+// > > > > > > called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>catch</code> 方法在處理 promise 組合的錯誤時很有幫助。</p>
+`catch` 方法在處理 promise 組合的錯誤時很有幫助。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用及串接_catch_方法">使用及串接 <code>catch</code> 方法</h3>
+### 使用及串接 `catch` 方法
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
 });
 
@@ -100,11 +102,12 @@ p1.then(function(value) {
 }, function () {
   console.log('Not fired due to the catch');
 });
-</pre>
+```
 
-<h3 id="拋出例外時的陷阱">拋出例外時的陷阱</h3>
+### 拋出例外時的陷阱
 
-<pre class="brush: js">// Throwing an error will call the catch method most of the time
+```js
+// Throwing an error will call the catch method most of the time
 var p1 = new Promise(function(resolve, reject) {
   throw 'Uh-oh!';
 });
@@ -132,11 +135,13 @@ var p3 = new Promise(function(resolve, reject) {
 
 p3.catch(function(e) {
    console.log(e); // This is never called
-});</pre>
+});
+```
 
-<h3 id="如果_Promise_被實現">如果 Promise 被實現</h3>
+### 如果 Promise 被實現
 
-<pre class="brush: js">//Create a promise which would not call onReject
+```js
+//Create a promise which would not call onReject
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
@@ -151,19 +156,18 @@ p2.then(function (value) {
 }, function (reason) {
     console.log("next promise's onRejected");
     console.log(reason);
-});</pre>
+});
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Promise.catch")}}</p>
+{{Compat("javascript.builtins.Promise.catch")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}

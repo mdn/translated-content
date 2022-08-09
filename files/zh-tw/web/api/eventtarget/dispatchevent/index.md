@@ -3,55 +3,50 @@ title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>於此 {{domxref("EventTarget")}} 物件上觸發特定的 {{domxref("Event")}} 物件實體，相當於依照註冊的順序呼叫它的 {{domxref("EventListener")}}。一般事件處理規則（包含捕捉（capturing）和可選的冒泡（bubbling）階段）也適用於用 <code>dispatchEvent()</code> 手動觸發事件。</p>
+於此 {{domxref("EventTarget")}} 物件上觸發特定的 {{domxref("Event")}} 物件實體，相當於依照註冊的順序呼叫它的 {{domxref("EventListener")}}。一般事件處理規則（包含捕捉（capturing）和可選的冒泡（bubbling）階段）也適用於用 `dispatchEvent()` 手動觸發事件。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>cancelled</em> = !<em>target</em>.dispatchEvent(<em>event</em>)
-</pre>
+```plain
+cancelled = !target.dispatchEvent(event)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<ul>
- <li><code>event</code> 是要被觸發的事件（{{domxref("Event")}} 物件）。</li>
- <li><code>target</code> 會被初始化為事件的 {{domxref("Event", "", "target")}} 屬性，其也影響了要呼叫哪一個事件監聽器。</li>
-</ul>
+- `event` 是要被觸發的事件（{{domxref("Event")}} 物件）。
+- `target` 會被初始化為事件的 {{domxref("Event", "", "target")}} 屬性，其也影響了要呼叫哪一個事件監聽器。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<ul>
- <li>會在事件完成傳遞（捕捉、命中、冒泡三階段）之後才回傳其值。</li>
- <li>若事件在傳遞過程當中，事件是可被取消的（{{domxref("Event.cancelable")}} 屬性為 <code>true</code>）且曾於一個或一個以上的事件處理器中被執行了該事件的 {{domxref("Event.preventDefault()")}} 方法（且事件須確實已被取消了預設行為），即回傳 <code>false</code>。否則回傳 <code>true</code> 值。</li>
-</ul>
+- 會在事件完成傳遞（捕捉、命中、冒泡三階段）之後才回傳其值。
+- 若事件在傳遞過程當中，事件是可被取消的（{{domxref("Event.cancelable")}} 屬性為 `true`）且曾於一個或一個以上的事件處理器中被執行了該事件的 {{domxref("Event.preventDefault()")}} 方法（且事件須確實已被取消了預設行為），即回傳 `false`。否則回傳 `true` 值。
 
-<p>若遇到以下 3 種情況，<code>dispatchEvent </code>會拋出錯誤資訊－－  <code>UNSPECIFIED_EVENT_TYPE_ERR</code> ：</p>
+若遇到以下 3 種情況，`dispatchEvent `會拋出錯誤資訊－－ `UNSPECIFIED_EVENT_TYPE_ERR` ：
 
-<ol>
- <li>執行 <code>dispatchEvent</code> 前並未藉由初始化事件指定事件類型</li>
- <li>事件類型為 <code>null</code> 。</li>
- <li>事件類型是個空白字串。</li>
-</ol>
+1.  執行 `dispatchEvent` 前並未藉由初始化事件指定事件類型
+2.  事件類型為 `null` 。
+3.  事件類型是個空白字串。
 
-<p>這些異常，處理器會報告「異常未捕獲（uncaught exceptions）」；</p>
+這些異常，處理器會報告「異常未捕獲（uncaught exceptions）」；
 
-<p>事件處理器（event handlers）會在一群呼叫堆（nested callstack）上執行：事件的呼叫方（caller）會先由處理器會阻擋暫停執行，直到事件完成才繼續執行，但是要注意的是，事件若發生異常並不會傳回給呼叫方。</p>
+事件處理器（event handlers）會在一群呼叫堆（nested callstack）上執行：事件的呼叫方（caller）會先由處理器會阻擋暫停執行，直到事件完成才繼續執行，但是要注意的是，事件若發生異常並不會傳回給呼叫方。
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p><code>dispatchEvent</code> 是「建立→初始化→觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 <a href="/en-US/docs/DOM/event.initEvent">initEvent</a> 或其他特殊 methods ，像是 <a href="/en-US/docs/DOM/event.initMouseEvent">initMouseEvent</a> 或 <a href="/en-US/docs/DOM/event.initUIEvent">initUIEvent</a> 來初始化。</p>
+`dispatchEvent` 是「建立 → 初始化 → 觸發」的最後一步驟。這些步驟是用來觸發事件，讓事件完成。事件有多種建立方式，例如用 {{domxref("​document.createEvent")}} 並用 [initEvent](/en-US/docs/DOM/event.initEvent) 或其他特殊 methods ，像是 [initMouseEvent](/en-US/docs/DOM/event.initMouseEvent) 或 [initUIEvent](/en-US/docs/DOM/event.initUIEvent) 來初始化。
 
-<p>詳請可參考《{{domxref("Event")}}》。</p>
+詳請可參考《{{domxref("Event")}}》。
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<p>請參閱《<a href="/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events">建立或觸發事件</a>》。</p>
+請參閱《[建立或觸發事件](/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events)》。
 
-<h2 id="Specification">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">瀏覽器支援度</h2>
+## 瀏覽器支援度
 
 {{Compat("api.EventTarget.dispatchEvent")}}

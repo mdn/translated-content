@@ -3,43 +3,41 @@ title: Element.attributes
 slug: Web/API/Element/attributes
 translation_of: Web/API/Element/attributes
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p> </p>
+The **`Element.attributes`** property returns a live collection of all attribute nodes registered to the specified node. It is a {{domxref("NamedNodeMap")}}, not an `Array`, so it has no {{jsxref("Array")}} methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more specific, `attributes` is a key/value pair of strings that represents any information regarding that attribute.
 
-<p>The <strong><code>Element.attributes</code></strong> property returns a live collection of all attribute nodes registered to the specified node. It is a {{domxref("NamedNodeMap")}}, not an <code>Array</code>, so it has no {{jsxref("Array")}} methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more specific, <code>attributes</code> is a key/value pair of strings that represents any information regarding that attribute.</p>
+Element.attribute 特性會把特定節點裡所有的屬性變成一個集合,然後回傳出來. 這是一個 [NamedNodeMap](/en-US/docs/Web/API/NamedNodeMap), 而並非一個陣列. 所以它並沒有陣列的方法和在瀏覽器中 [Attr](/en-US/docs/Web/API/Attr)節點裡的索引值也可能不同. 更詳細的來說, attributes 是一個鍵/值的配對, 它包含了所有有關於這個節點屬性的資訊
 
-<p> </p>
+Syntax
 
-<p>Element.attribute 特性會把特定節點裡所有的屬性變成一個集合,然後回傳出來. 這是一個  <a href="/en-US/docs/Web/API/NamedNodeMap">NamedNodeMap</a>, 而並非一個陣列. 所以它並沒有陣列的方法和在瀏覽器中  <a href="/en-US/docs/Web/API/Attr">Attr</a>節點裡的索引值也可能不同. 更詳細的來說, attributes 是一個鍵/值的配對, 它包含了所有有關於這個節點屬性的資訊</p>
+```plain
+var attr = element.attributes;
+```
 
-<p> </p>
+## Example
 
-<p>Syntax</p>
+### Basic examples
 
-<pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
-</pre>
-
-<h2 id="Example">Example</h2>
-
-<h3 id="Basic_examples">Basic examples</h3>
-
-<pre class="brush: js">// Get the first &lt;p&gt; element in the document
+```js
+// Get the first <p> element in the document
 var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;</pre>
+var atts = para.attributes;
+```
 
-<h3 id="Enumerating_elements_attributes">Enumerating elements attributes</h3>
+### Enumerating elements attributes
 
-<p>Numerical indexing is useful for going through all of an element's attributes.<br>
- The following example runs through the attribute nodes for the element in the document with id "paragraph", and prints each attribute's value.</p>
+Numerical indexing is useful for going through all of an element's attributes.
+The following example runs through the attribute nodes for the element in the document with id "paragraph", and prints each attribute's value.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
+<html>
 
- &lt;head&gt;
-  &lt;title&gt;Attributes example&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+ <head>
+  <title>Attributes example</title>
+  <script type="text/javascript">
    function listAttributes() {
      var paragraph = document.getElementById("paragraph");
      var result = document.getElementById("result");
@@ -48,40 +46,39 @@ var atts = para.attributes;</pre>
      if (paragraph.hasAttributes()) {
        var attrs = paragraph.attributes;
        var output = "";
-       for(var i = attrs.length - 1; i &gt;= 0; i--) {
-         output += attrs[i].name + "-&gt;" + attrs[i].value;
+       for(var i = attrs.length - 1; i >= 0; i--) {
+         output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;
      } else {
        result.value = "No attributes to show";
      }
    }
-  &lt;/script&gt;
- &lt;/head&gt;
+  </script>
+ </head>
 
-&lt;body&gt;
- &lt;p id="paragraph" style="color: green;"&gt;Sample Paragraph&lt;/p&gt;
- &lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();"&gt;
-    &lt;input id="result" type="text" value=""&gt;
-  &lt;/p&gt;
- &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body>
+ <p id="paragraph" style="color: green;">Sample Paragraph</p>
+ <form action="">
+  <p>
+    <input type="button" value="Show first attribute name and value"
+      onclick="listAttributes();">
+    <input id="result" type="text" value="">
+  </p>
+ </form>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Element.attributes")}}</p>
+{{Compat("api.Element.attributes")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NamedNodeMap")}}, the interface of the returned object</li>
- <li>Cross-browser compatibility considerations: on <a href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
-</ul>
+- {{domxref("NamedNodeMap")}}, the interface of the returned object
+- Cross-browser compatibility considerations: on [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)

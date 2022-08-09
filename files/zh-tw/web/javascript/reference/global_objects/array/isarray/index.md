@@ -12,40 +12,42 @@ tags:
   - 陣列
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.isArray()</strong></code> 函式會檢查傳入的值是否為一個 {{jsxref("Array")}}。</p>
+**`Array.isArray()`** 函式會檢查傳入的值是否為一個 {{jsxref("Array")}}。
 
-<pre class="brush: js">Array.isArray([1, 2, 3]);  // true
+```js
+Array.isArray([1, 2, 3]);  // true
 Array.isArray({foo: 123}); // false
 Array.isArray('foobar');   // false
 Array.isArray(undefined);  // false
-</pre>
+```
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox">Array.isArray(<var>obj</var>)</pre>
+```plain
+Array.isArray(obj)
+```
 
-<h3 id="Parameters">參數</h3>
+### 參數
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>要檢查的物件。</dd>
-</dl>
+- `obj`
+  - : 要檢查的物件。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>若物件為 {{jsxref("Array")}} 回傳 <code>true</code>；否則回傳 <code>false</code>。</p>
+若物件為 {{jsxref("Array")}} 回傳 `true`；否則回傳 `false`。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>檢查傳入的物件是否為陣列（{{jsxref("Array")}}），如果是便回傳 <code>true</code>，否則回傳 <code>false</code>。</p>
+檢查傳入的物件是否為陣列（{{jsxref("Array")}}），如果是便回傳 `true`，否則回傳 `false`。
 
-<p>更多細節請參考 <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a>。</p>
+更多細節請參考 [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html)。
 
-<h2 id="Examples">範例</h2>
+## 範例
 
-<pre class="brush: js">// 下方都回傳 true
+```js
+// 下方都回傳 true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -64,13 +66,14 @@ Array.isArray('Array');
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h3 id="instanceof_vs_isArray"><code>instanceof</code> vs <code>isArray</code></h3>
+### `instanceof` vs `isArray`
 
-<p>當檢查 <code>Array</code> 實例時，<code>Array.isArray</code> 相較於 <code>instanceof</code> 更加推薦，因為它可以穿透 <code>iframes</code>。</p>
+當檢查 `Array` 實例時，`Array.isArray` 相較於 `instanceof` 更加推薦，因為它可以穿透 `iframes`。
 
-<pre class="brush: js">var iframe = document.createElement('iframe');
+```js
+var iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
 var arr = new xArray(1,2,3); // [1,2,3]
@@ -79,33 +82,28 @@ var arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // 有害地，因為它不能在 iframes 之間正常運作
 arr instanceof Array; // false
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>如果 <code>Array.isArray()</code> 不存在於您的環境，在其他程式碼前執行下列程式碼可建置 <code>Array.isArray()</code>。</p>
+如果 `Array.isArray()` 不存在於您的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
 
-<pre class="brush: js">if (!Array.isArray) {
+```js
+if (!Array.isArray) {
   Array.isArray = function(arg) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
-</pre>
+```
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.isArray")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.isArray")}}</p>
-</div>
-
-<h2 id="See_also">參見</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

@@ -3,29 +3,30 @@ title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
 translation_of: Web/API/Geolocation/clearWatch
 ---
-<p>{{ APIref("Geolocation API") }}</p>
+{{ APIref("Geolocation API") }}
 
-<p><strong><code>Geolocation.clearWatch()</code></strong> 這個函式是用來取消   {{domxref("Geolocation.watchPosition()")}} 註冊的函式。</p>
+**`Geolocation.clearWatch()`** 這個函式是用來取消 {{domxref("Geolocation.watchPosition()")}} 註冊的函式。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">navigator.geolocation.clearWatch(<em>id</em>);</pre>
+```plain
+navigator.geolocation.clearWatch(id);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>編號(id)</em></dt>
- <dd>這個編號(ID) 是由 {{domxref("Geolocation.watchPosition()")}} 這個函式所回傳，當你不再需要收到位置更新時，你可以用此編號，取消 {{domxref("Geolocation.watchPosition()")}} 的註冊。</dd>
-</dl>
+- _編號(id)_
+  - : 這個編號(ID) 是由 {{domxref("Geolocation.watchPosition()")}} 這個函式所回傳，當你不再需要收到位置更新時，你可以用此編號，取消 {{domxref("Geolocation.watchPosition()")}} 的註冊。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var id, target, option;
+```js
+var id, target, option;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulation, you reach the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -47,21 +48,19 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.Geolocation.clearWatch")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Geolocation")}}</li>
- <li>{{domxref("Geolocation.watchPosition()")}}</li>
- <li>{{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Geolocation")}}
+- {{domxref("Geolocation.watchPosition()")}}
+- {{domxref("Geolocation.getCurrentPosition()")}}

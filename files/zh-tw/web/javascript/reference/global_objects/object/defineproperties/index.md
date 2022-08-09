@@ -3,55 +3,55 @@ title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.defineProperties()</strong></code> 函式可定義新的或是修改已存在的物件屬性，並回傳修改後的物件。</p>
+**`Object.defineProperties()`** 函式可定義新的或是修改已存在的物件屬性，並回傳修改後的物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+```plain
+Object.defineProperties(obj, props)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>The object on which to define or modify properties.</dd>
- <dt><code>props</code></dt>
- <dd>An object whose own enumerable properties constitute descriptors for the properties to be defined or modified. Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors (see {{jsxref("Object.defineProperty()")}} for more details). Descriptors have the following keys:
-  <dl>
-    <dt><code>configurable</code></dt>
-    <dd><code>true</code> if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
-    <strong>預設為 <code>false</code>.</strong></dd>
-    <dt><code>enumerable</code></dt>
-    <dd><code>若該屬性設為 true，則該屬性可被物件所列舉。</code><br>
-    <strong>預設為 <code>false</code>.</strong></dd>
-    <dt><code>value</code></dt>
-    <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
-    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
-    <dt><code>writable</code></dt>
-    <dd><code>若該屬性為 true</code>，則該屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}所改變<br>
-    <strong>預設為 <code>false</code>.</strong></dd>
-    <dt><code>get</code></dt>
-    <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter. The function return will be used as the value of property.<br>
-    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
-    <dt><code>set</code></dt>
-    <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. The function will receive as only argument the new value being assigned to the property.<br>
-    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
-  </dl>
- </dd>
-</dl>
+- `obj`
+  - : The object on which to define or modify properties.
+- `props`
 
-<h3 id="回傳值">回傳值</h3>
+  - : An object whose own enumerable properties constitute descriptors for the properties to be defined or modified. Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors (see {{jsxref("Object.defineProperty()")}} for more details). Descriptors have the following keys:
 
-<p>The object that was passed to the function.</p>
+    - `configurable`
+      - : `true` if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.
+        **預設為 `false`.**
+    - `enumerable`
+      - : `若該屬性設為 true，則該屬性可被物件所列舉。`
+        **預設為 `false`.**
+    - `value`
+      - : The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).
+        **預設為 {{jsxref("undefined")}}.**
+    - `writable`
+      - : `若該屬性為 true`，則該屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}所改變
+        **預設為 `false`.**
+    - `get`
+      - : A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter. The function return will be used as the value of property.
+        **預設為 {{jsxref("undefined")}}.**
+    - `set`
+      - : A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. The function will receive as only argument the new value being assigned to the property.
+        **預設為 {{jsxref("undefined")}}.**
 
-<h2 id="描述">描述</h2>
+### 回傳值
 
-<p><code>Object.defineProperties</code>, in essence, defines all properties corresponding to the enumerable own properties of <code>props</code> on the object <code>obj</code> object.</p>
+The object that was passed to the function.
 
-<h2 id="範例">範例</h2>
+## 描述
 
-<pre class="brush: js">var obj = {};
+`Object.defineProperties`, in essence, defines all properties corresponding to the enumerable own properties of `props` on the object `obj` object.
+
+## 範例
+
+```js
+var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -63,13 +63,14 @@ Object.defineProperties(obj, {
   }
   // etc. etc.
 });
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>Assuming a pristine execution environment with all names and properties referring to their initial values, <code>Object.defineProperties</code> is almost completely equivalent (note the comment in <code>isCallable</code>) to the following reimplementation in JavaScript:</p>
+Assuming a pristine execution environment with all names and properties referring to their initial values, `Object.defineProperties` is almost completely equivalent (note the comment in `isCallable`) to the following reimplementation in JavaScript:
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+```js
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -96,18 +97,18 @@ Object.defineProperties(obj, {
     if (hasProperty(desc, 'get')) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; typeof g !== 'undefined')
+      if (!isCallable(g) && typeof g !== 'undefined')
         throw new TypeError('bad get');
       d.get = g;
     }
     if (hasProperty(desc, 'set')) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; typeof s !== 'undefined')
+      if (!isCallable(s) && typeof s !== 'undefined')
         throw new TypeError('bad set');
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &amp;&amp; ('value' in d || 'writable' in d))
+    if (('get' in d || 'set' in d) && ('value' in d || 'writable' in d))
       throw new TypeError('identity-confused descriptor');
 
     return d;
@@ -121,28 +122,26 @@ Object.defineProperties(obj, {
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &lt; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參閱">參閱</h2>
+## 參閱
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)

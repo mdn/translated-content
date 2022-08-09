@@ -3,33 +3,35 @@ title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
 translation_of: Web/HTTP/Status/101
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>101 Switching Protocols</strong></code> 回應碼表示伺服器正在切換到用戶端在請求標頭{{HTTPHeader("Upgrade")}} 中所要求的通訊協定。</p>
+HTTP **`101 Switching Protocols`** 回應碼表示伺服器正在切換到用戶端在請求標頭{{HTTPHeader("Upgrade")}} 中所要求的通訊協定。
 
-<p>伺服端將在回應中包含 {{HTTPHeader("Upgrade")}} 標頭以表明其所切換的通訊協定。此過程在文章 <a href="/zh-TW/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a> 中有更加詳細的描述。</p>
+伺服端將在回應中包含 {{HTTPHeader("Upgrade")}} 標頭以表明其所切換的通訊協定。此過程在文章 [Protocol upgrade mechanism](/zh-TW/docs/Web/HTTP/Protocol_upgrade_mechanism) 中有更加詳細的描述。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">101 Switching Protocols</pre>
+```plain
+101 Switching Protocols
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>通訊協定切換可能會用於 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> 中。</p>
+通訊協定切換可能會用於 [WebSockets](/en-US/docs/Web/API/WebSockets_API) 中。
 
-<pre>HTTP/1.1 101 Switching Protocols
+```plain
+HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
-Connection: Upgrade</pre>
+Connection: Upgrade
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></li>
- <li>{{HTTPHeader("Upgrade")}}</li>
- <li>{{HTTPStatus("426")}} <code>Upgrade Required</code></li>
-</ul>
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPStatus("426")}} `Upgrade Required`

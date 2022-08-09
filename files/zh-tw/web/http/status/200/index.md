@@ -3,35 +3,33 @@ title: 200 OK
 slug: Web/HTTP/Status/200
 translation_of: Web/HTTP/Status/200
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>200 OK</code></strong> 成功狀態碼表明請求成功。200 回應預設上是緩存的（cacheable）。</p>
+HTTP **`200 OK`** 成功狀態碼表明請求成功。200 回應預設上是緩存的（cacheable）。
 
-<p>所謂「成功」的定義，取決於 HTTP 的請求方法：</p>
+所謂「成功」的定義，取決於 HTTP 的請求方法：
 
-<ul>
- <li>{{HTTPMethod("GET")}}：資源已取得，並傳送到訊息內文（message body）。</li>
- <li>{{HTTPMethod("HEAD")}}：整個標已經放在訊息內文了。</li>
- <li>{{HTTPMethod("POST")}}: 描述動作結果的資源已經傳送到訊息內文。</li>
- <li>{{HTTPMethod("TRACE")}}：訊息內文包含了請求訊息，伺服器也接受了請求。</li>
-</ul>
+- {{HTTPMethod("GET")}}：資源已取得，並傳送到訊息內文（message body）。
+- {{HTTPMethod("HEAD")}}：整個標已經放在訊息內文了。
+- {{HTTPMethod("POST")}}: 描述動作結果的資源已經傳送到訊息內文。
+- {{HTTPMethod("TRACE")}}：訊息內文包含了請求訊息，伺服器也接受了請求。
 
-<p>{{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 的成功訊息，通常不是 <code>200 OK</code>，而是 {{HTTPStatus("204")}} <code>No Content</code>（或著在資源首次上傳時，{{HTTPStatus("201")}} <code>Created</code>）。</p>
+{{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 的成功訊息，通常不是 `200 OK`，而是 {{HTTPStatus("204")}} `No Content`（或著在資源首次上傳時，{{HTTPStatus("201")}} `Created`）。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">200 OK</pre>
+```plain
+200 OK
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.status.200")}}</p>
+{{Compat("http.status.200")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/HTTP/Methods">HTTP 請求方法</a></li>
-</ul>
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)

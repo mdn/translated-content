@@ -7,36 +7,33 @@ tags:
   - 運算子
 translation_of: Web/JavaScript/Reference/Operators/await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}await 運算子可被用來等待 {{jsxref("Promise")}}，只能在 {{jsxref("Statements/async_function", "async function")}}內使用。
 
-<div>await運算子可被用來等待 {{jsxref("Promise")}}，只能在 {{jsxref("Statements/async_function", "async function")}}內使用。</div>
+## 語法
 
-<h2 id="語法">語法</h2>
+```plain
+[rv] = await expression;
+```
 
-<pre class="syntaxbox">[<em>rv</em>] = await <em>expression</em>;</pre>
+- `expression`
+  - : 等待解析的 {{jsxref("Promise")}} 物件或任何值。
+- `rv = 回傳值`
+  - : 回傳 Promise 物件的 resolved 值，或當該值不是 Promise 物件時，回傳該值本身。
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>等待解析的 {{jsxref("Promise")}} 物件或任何值。</dd>
- <dt><code>rv = 回傳值</code></dt>
- <dd>
- <p>回傳 Promise 物件的 resolved 值，或當該值不是 Promise 物件時，回傳該值本身。</p>
- </dd>
-</dl>
+## 描述
 
-<h2 id="描述">描述</h2>
+此 await 表示法會暫停 async 函式執行，等待 Promise 物件的解析，並在 promise 物件的值被 resolve 時回復 async 函式的執行。await 接著回傳這個被 resolve 的值。如果回傳值不是一個 Promise 物件，則會被轉換為 resolved 狀態的 Promise 物件。
 
-<p>此 await 表示法會暫停 async 函式執行，等待 Promise 物件的解析，並在 promise 物件的值被 resolve 時回復 async 函式的執行。await 接著回傳這個被 resolve 的值。如果回傳值不是一個 Promise 物件，則會被轉換為 resolved 狀態的 Promise 物件。</p>
+如果 Promise 物件被 rejected，則 await 會丟出 rejected 的值。
 
-<p>如果 Promise 物件被 rejected，則 await 會丟出 rejected 的值。</p>
+## 範例
 
-<h2 id="範例">範例</h2>
+若將 Promise 物件傳給 await 運算式，它會等待 Promise 解析並回傳 resolve 後的值。
 
-<p>若將 Promise 物件傳給 await 運算式，它會等待 Promise 解析並回傳 resolve 後的值。</p>
-
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -47,39 +44,41 @@ async function f1() {
   console.log(x); // 10
 }
 f1();
-</pre>
+```
 
-<p>若傳給 await 的值並非一個 Promise 物件，它會將該值轉換為 resolved Promise，並等待之。</p>
+若傳給 await 的值並非一個 Promise 物件，它會將該值轉換為 resolved Promise，並等待之。
 
-<pre class="brush: js">async function f2() {
+```js
+async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
-f2();</pre>
+f2();
+```
 
-<p>若 Promise 被 reject，則丟出 reject 後的異常值。</p>
+若 Promise 被 reject，則丟出 reject 後的異常值。
 
-<pre class="brush: js">async function f3() {
+```js
+async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch(e) {
     console.log(e); // 30
   }
 }
-f3();</pre>
+f3();
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object

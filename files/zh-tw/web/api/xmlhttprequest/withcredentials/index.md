@@ -3,33 +3,29 @@ title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><code><strong>XMLHttpRequest.withCredentials</strong></code> 屬性是一個 {{jsxref("Boolean")}} 型別，它指出無論是否使用 <code>Access-Control</code> 標頭在跨站的要求上，都應該使用像 Cookies、Authorization 標頭或 TLS 用戶端憑證來進行驗證。在相同來源的要求設定 <code>withCredentials</code> 沒有任何效果。</p>
+**`XMLHttpRequest.withCredentials`** 屬性是一個 {{jsxref("Boolean")}} 型別，它指出無論是否使用 `Access-Control` 標頭在跨站的要求上，都應該使用像 Cookies、Authorization 標頭或 TLS 用戶端憑證來進行驗證。在相同來源的要求設定 `withCredentials` 沒有任何效果。
 
-<p>In addition, this flag is also used to indicate when cookies are to be ignored in the response. The default is <code>false</code>. <code>XMLHttpRequest</code> from a different domain cannot set cookie values for their own domain unless <code>withCredentials</code> is set to <code>true</code> before making the request. The third-party cookies obtained by setting <code>withCredentials</code> to true will still honor same-origin policy and hence can not be accessed by the requesting script through <a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a> or from response headers.</p>
+In addition, this flag is also used to indicate when cookies are to be ignored in the response. The default is `false`. `XMLHttpRequest` from a different domain cannot set cookie values for their own domain unless `withCredentials` is set to `true` before making the request. The third-party cookies obtained by setting `withCredentials` to true will still honor same-origin policy and hence can not be accessed by the requesting script through [document.cookie](/en-US/docs/Web/API/Document/cookie) or from response headers.
 
-<div class="note">
-<p><strong>Note:</strong> 永遠不會影響到同源請求。</p>
-</div>
+> **備註：** 永遠不會影響到同源請求。
 
-<div class="note">
-<p><strong>Note:</strong><strong> </strong><code>XMLHttpRequest</code> responses from a different domain <em>cannot</em> set cookie values for their own domain unless <code>withCredentials</code> is set to <code>true</code> before making the request, regardless of <code>Access-Control-</code> header values. </p>
-</div>
+> **備註：** `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-
-
-<p>{{Compat("api.XMLHttpRequest.withCredentials")}}</p>
+{{Compat("api.XMLHttpRequest.withCredentials")}}

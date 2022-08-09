@@ -3,61 +3,40 @@ title: PositionError
 slug: Web/API/GeolocationPositionError
 translation_of: Web/API/GeolocationPositionError
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><strong><code>PositionError</code></strong> 介面表示使用定位設備時發生錯誤的原因。</p>
+**`PositionError`** 介面表示使用定位設備時發生錯誤的原因。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em><code>PositionError</code> 介面沒有繼承任何屬性</em>。</p>
+_`PositionError` 介面沒有繼承任何屬性_。
 
-<dl>
- <dt>{{domxref("PositionError.code")}} {{readonlyInline}}</dt>
- <dd>回傳一個無符號整數<code>(unsigned short</code>)來表示錯誤碼。以下列出可能的值：
- <table>
-  <tbody>
-   <tr>
-    <th scope="col">值</th>
-    <th scope="col">相對應的常數</th>
-    <th scope="col">描述</th>
-   </tr>
-   <tr>
-    <td><code>1</code></td>
-    <td><code>PERMISSION_DENIED</code></td>
-    <td>取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。</td>
-   </tr>
-   <tr>
-    <td><code>2</code></td>
-    <td><code>POSITION_UNAVAILABLE</code></td>
-    <td>取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。</td>
-   </tr>
-   <tr>
-    <td><code>3</code></td>
-    <td><code>TIMEOUT</code></td>
-    <td>取得地理資訊超過時限，利用{{domxref("PositionOptions.timeout")}} 來定義取得地理資訊的時限。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("PositionError.message")}} {{readonlyInline}}</dt>
- <dd>回傳一個可讀的 {{domxref("DOMString")}} 來描述錯誤的詳細訊息。注意規格中指出此訊息是用來除錯而非直接顯示在使用者介面。</dd>
-</dl>
+- {{domxref("PositionError.code")}} {{readonlyInline}}
 
-<h2 id="方法">方法</h2>
+  - : 回傳一個無符號整數`(unsigned short`)來表示錯誤碼。以下列出可能的值：
 
-<p><em><em><code>PositionError</code> 介面沒有實作也沒有繼承任何方法</em></em>。</p>
+    | 值  | 相對應的常數           | 描述                                                                                                      |
+    | --- | ---------------------- | --------------------------------------------------------------------------------------------------------- |
+    | `1` | `PERMISSION_DENIED`    | 取得地理資訊失敗，因為此頁面沒有獲取地理位置信息的權限。                                                  |
+    | `2` | `POSITION_UNAVAILABLE` | 取得地理資訊失敗，因為至少有一個地理位置信息內的資訊回傳了錯誤。                                          |
+    | `3` | `TIMEOUT`              | 取得地理資訊超過時限，利用{{domxref("PositionOptions.timeout")}} 來定義取得地理資訊的時限。 |
 
-<h2 id="規格">規格</h2>
+- {{domxref("PositionError.message")}} {{readonlyInline}}
+  - : 回傳一個可讀的 {{domxref("DOMString")}} 來描述錯誤的詳細訊息。注意規格中指出此訊息是用來除錯而非直接顯示在使用者介面。
+
+## 方法
+
+**`PositionError` 介面沒有實作也沒有繼承任何方法**。
+
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.GeolocationPositionError")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Geolocation")}} 介面使用此物件。</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Geolocation")}} 介面使用此物件。

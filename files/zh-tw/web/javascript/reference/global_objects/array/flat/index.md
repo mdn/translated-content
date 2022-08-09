@@ -8,36 +8,33 @@ tags:
   - 陣列
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p><code><strong>flat()</strong></code> 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列</p>
+**`flat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
 
-<p>\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}</p>
+\\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}
 
+## 語法
 
+```plain
+var newArray = arr.flat([depth]);
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><var>var newArray = arr</var>.flat(<em>[depth]</em>);</pre>
+- `depth` {{optional_inline}}
+  - : 指定巢狀陣列展開的深度。預設為 1。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>指定巢狀陣列展開的深度。預設為1。</dd>
-</dl>
+函數將會回傳一個由原先陣列的子陣列串接而成的新陣列。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>函數將會回傳一個由原先陣列的子陣列串接而成的新陣列。</p>
+### 展開巢狀陣列
 
-
-
-<h2 id="範例">範例</h2>
-
-<h3 id="展開巢狀陣列">展開巢狀陣列</h3>
-
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -47,40 +44,41 @@ arr2.flat();
 
 var arr3 = [1, 2, [3, 4, [5, 6]]];
 arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]</pre>
+// [1, 2, 3, 4, 5, 6]
+```
 
-<h3 id="當遭遇空元素時">當遭遇空元素時</h3>
+### 當遭遇空元素時
 
-<p>flat()函數會自動清除陣列中空的元素</p>
+flat()函數會自動清除陣列中空的元素
 
-<pre class="brush: js">var arr4 = [1, 2, , 4, 5];
+```js
+var arr4 = [1, 2, , 4, 5];
 arr4.flat();
 // [1, 2, 4, 5]
-</pre>
+```
 
-<h2 id="替代方案">替代方案</h2>
+## 替代方案
 
-<h3 id="reduce_與_concat"><code>reduce</code> 與 <code>concat</code></h3>
+### `reduce` 與 `concat`
 
-<pre class="brush: js">var arr1 = [1, 2, [3, 4]];
+```js
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 //展開單層陣列
-arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
-</pre>
+arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+```
 
-
-
-<pre class="brush: js">//欲展開更深層的巢狀結構請使用reduce與concat的遞迴
+```js
+//欲展開更深層的巢狀結構請使用reduce與concat的遞迴
 function flattenDeep(arr1) {
-   return arr1.reduce((acc, val) =&gt; Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+   return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
 }
 flattenDeep(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-</pre>
+```
 
-
-
-<pre class="brush: js">//使用stack來實作非遞迴的展開
+```js
+//使用stack來實作非遞迴的展開
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 function flatten(input) {
   const stack = [...input];
@@ -99,9 +97,10 @@ function flatten(input) {
   return res.reverse();
 }
 flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-</pre>
+```
 
-<pre><code>// 递归版本的反嵌套
+```plain
+// 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
@@ -111,25 +110,20 @@ function flatten(array) {
     });
   })(array);
   return flattend;
-}</code></pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.flat")}}
 
+## See also
 
-<p>{{Compat("javascript.builtins.Array.flat")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.flatMap()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

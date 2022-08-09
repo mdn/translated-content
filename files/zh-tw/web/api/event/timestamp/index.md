@@ -3,52 +3,53 @@ title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 translation_of: Web/API/Event/timeStamp
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<h2 id="Summary">說明</h2>
+## 說明
 
-<p>回傳事件建立的時間（單位是毫秒；從 epoch 開始計算）。</p>
+回傳事件建立的時間（單位是毫秒；從 epoch 開始計算）。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">event.timeStamp
-</pre>
+```plain
+event.timeStamp
+```
 
-<h2 id="Examples">範例</h2>
+## 範例
 
-<pre><em>var number</em> = event.timeStamp;
-</pre>
+```plain
+var number = event.timeStamp;
+```
 
-<p>下面是一個較為完整的範例：</p>
+下面是一個較為完整的範例：
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
+```html
+<html>
+<head>
 
-&lt;title&gt;timeStamp example&lt;/title&gt;
+<title>timeStamp example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 function getTime(event) {
   document.getElementById("time").firstChild.nodeValue = event.timeStamp;
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="getTime(event)"&gt;
+<body onkeypress="getTime(event)">
 
-&lt;p&gt;Press any key to get the current timestamp
-for the onkeypress event.&lt;/p&gt;
-&lt;p&gt;timeStamp: &lt;span id="time"&gt;-&lt;/span&gt;&lt;/p&gt;
+<p>Press any key to get the current timestamp
+for the onkeypress event.</p>
+<p>timeStamp: <span id="time">-</span></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>這個 property 僅在瀏覽器支持該事件才會有用。</p>
+這個 property 僅在瀏覽器支持該事件才會有用。
 
-<h2 id="Specification">詳細資料</h2>
+## 詳細資料
 
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp">timestamp </a></li>
-</ul>
+- [timestamp](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)

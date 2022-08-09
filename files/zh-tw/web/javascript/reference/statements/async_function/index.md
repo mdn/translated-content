@@ -9,53 +9,49 @@ tags:
   - 陳述
 translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><code><strong>async function</strong></code> 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的<em>非同步函式</em> 。</p>
+**`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。
 
-<div class="noinclude">
-<p>你也可以使用 {{jsxref("Operators/async_function", "async function expression", "", 1)}} 來定義一個<em>非同步函式</em>。</p>
-</div>
+你也可以使用 {{jsxref("Operators/async_function", "async function expression", "", 1)}} 來定義一個*非同步函式*。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>statements</em>
+```plain
+async function name([param[, param[, ... param]]]) {
+   statements
 }
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>name</code></dt>
- <dd>函式名稱。</dd>
- <dt><code>param</code></dt>
- <dd>傳遞至函式的參數名稱。</dd>
- <dt><code>statements</code></dt>
- <dd>組成該函式主體的陳述。</dd>
-</dl>
+- `name`
+  - : 函式名稱。
+- `param`
+  - : 傳遞至函式的參數名稱。
+- `statements`
+  - : 組成該函式主體的陳述。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件，代表著一個非同步函式，該函式會執行該函式內的程式碼。</p>
+{{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件，代表著一個非同步函式，該函式會執行該函式內的程式碼。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>當 <code>async</code> 函式被呼叫時，它會回傳一個 {{jsxref("Promise")}}。如果該 <code>async</code> 函式回傳了一個值，<code>Promise</code> 的狀態將為一個帶有該回傳值的 resolved。如果 <code>async</code> 函式拋出例外或某個值，<code>Promise</code> 的狀態將為一個帶有被拋出值的 rejected。</p>
+當 `async` 函式被呼叫時，它會回傳一個 {{jsxref("Promise")}}。如果該 `async` 函式回傳了一個值，`Promise` 的狀態將為一個帶有該回傳值的 resolved。如果 `async` 函式拋出例外或某個值，`Promise` 的狀態將為一個帶有被拋出值的 rejected。
 
-<p>async 函式內部可以使用 {{jsxref("Operators/await", "await")}} 表達式，它會暫停此 async 函式的執行，並且等待傳遞至表達式的 Promise 的解析，解析完之後會回傳解析值，並繼續此 async 函式的執行。</p>
+async 函式內部可以使用 {{jsxref("Operators/await", "await")}} 表達式，它會暫停此 async 函式的執行，並且等待傳遞至表達式的 Promise 的解析，解析完之後會回傳解析值，並繼續此 async 函式的執行。
 
-<div class="notecard note">
-<p><strong>備註：</strong><code>async/await</code> 函式的目的在於簡化同步操作 promise 的表現，以及對多個 <code>Promise</code> 物件執行某些操作。就像 <code>Promise 類似於具結構性的回呼函式，同樣地，async/await 好比將 generator 與 promise 組合起來。</code></p>
-</div>
+> **備註：**`async/await` 函式的目的在於簡化同步操作 promise 的表現，以及對多個 `Promise` 物件執行某些操作。就像 `Promise 類似於具結構性的回呼函式，同樣地，async/await 好比將 generator 與 promise 組合起來。`
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="簡單範例">簡單範例</h3>
+### 簡單範例
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -68,7 +64,7 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v =&gt; {
+add1(10).then(v => {
   console.log(v);  // prints 60 after 4 seconds.
 });
 
@@ -79,35 +75,35 @@ async function add2(x) {
   return x + await p_a + await p_b;
 }
 
-add2(10).then(v =&gt; {
+add2(10).then(v => {
   console.log(v);  // prints 60 after 2 seconds.
 });
-</pre>
+```
 
-<div class="notecard warning">
-<p><strong>警告：</strong>不要誤解 <code>Promise.all</code> 的 <code>await</code></p>
+> **警告：**不要誤解 `Promise.all` 的 `await`
+>
+> 在 `add1` 裡，該執行為了第一個 `await` 而暫停了兩秒，接著為了第二個 `await` 又暫停了兩秒。在第一個計時器（timer）被觸發前，第二個計時器並不會被建立。而在 `add2` 裡，兩個計時器都被建立起來、也都執行 `await` 過了。這把它帶往了 resolve 所的 2 秒暫停、而不是 4 秒暫停。然而這兩個 `await` 呼叫都在連續運行，而非平行運行。`await` **並不是** `Promise.all` 的自動程式。如果你想讓兩個、甚至兩個以上的 `await` promises 同時執行（in parallel），你必須使用 `Promise.all`.
 
-<p>在 <code>add1</code> 裡，該執行為了第一個 <code>await</code> 而暫停了兩秒，接著為了第二個 <code>await</code> 又暫停了兩秒。在第一個計時器（timer）被觸發前，第二個計時器並不會被建立。而在 <code>add2</code> 裡，兩個計時器都被建立起來、也都執行 <code>await</code> 過了。這把它帶往了 resolve 所的 2 秒暫停、而不是 4 秒暫停。然而這兩個 <code>await</code> 呼叫都在連續運行，而非平行運行。<code>await</code> <strong>並不是</strong> <code>Promise.all</code> 的自動程式。如果你想讓兩個、甚至兩個以上的 <code>await</code> promises 同時執行（in parallel），你必須使用 <code>Promise.all</code>.</p>
-</div>
+### 使用 async function 改寫 promise 鏈
 
-<h3 id="使用_async_function_改寫_promise_鏈">使用 async function 改寫 promise 鏈</h3>
+一個 API 呼叫所回傳的 {{jsxref("Promise")}} 會導致一個 promise 鏈，將函式分隔成多個部份。考慮下列的程式碼：
 
-<p>一個 API 呼叫所回傳的 {{jsxref("Promise")}} 會導致一個 promise 鏈，將函式分隔成多個部份。考慮下列的程式碼：</p>
-
-<pre class="brush: js">function getProcessedData(url) {
+```js
+function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e =&gt; {
+    .catch(e => {
       return downloadFallbackData(url); // returns a promise
     })
-    .then(v =&gt; {
+    .then(v => {
       return processDataInWorker(v); // returns a promise
     });
 }
-</pre>
+```
 
-<p>它可以用一個簡單的 <code>async function</code> 來改寫成這樣：</p>
+它可以用一個簡單的 `async function` 來改寫成這樣：
 
-<pre class="brush: js">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -116,27 +112,21 @@ add2(10).then(v =&gt; {
   }
   return processDataInWorker(v);
 }
-</pre>
+```
 
-<p>注意上方的範例，在 return 陳述中沒有使用 await 陳述，這是因為 async function 的回傳值隱含地被包裝於 {{jsxref("Promise.resolve")}} 之中。</p>
+注意上方的範例，在 return 陳述中沒有使用 await 陳述，這是因為 async function 的回傳值隱含地被包裝於 {{jsxref("Promise.resolve")}} 之中。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.statements.async_function")}}
 
+## 參見
 
-<p>{{Compat("javascript.statements.async_function")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} 物件</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
- <li><a href="http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">"Decorating Async Javascript Functions" on "innolitics.com"</a></li>
-</ul>
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} 物件
+- {{jsxref("Operators/await", "await")}}
+- ["Decorating Async Javascript Functions" on "innolitics.com"](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

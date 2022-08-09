@@ -3,113 +3,121 @@ title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary">總覽</h2>
+## 總覽
 
-<p>Returns a non-live <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)</p>
+Returns a non-live [`NodeList`](/en-US/docs/DOM/NodeList) of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)
 
-<h2 id="Syntax">表達式</h2>
+## 表達式
 
-<pre class="syntaxbox"><em>elementList</em> = baseElement.querySelectorAll(<em>selectors</em>);</pre>
+```plain
+elementList = baseElement.querySelectorAll(selectors);
+```
 
-<dl>
- <dt><code>elementList</code></dt>
- <dd>is a non-live node list [<code> NodeList[elements]</code> <code>] </code>of <a href="/en-US/docs/DOM/element">element</a> objects.</dd>
- <dt><code>baseElement</code></dt>
- <dd>is an <a href="/en-US/docs/DOM/element">element</a> object.</dd>
- <dt><code>selectors</code></dt>
- <dd>is a group of <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> to match on or elements of the DOM. </dd>
-</dl>
+- `elementList`
+  - : is a non-live node list \[` NodeList[elements]` `] `of [element](/en-US/docs/DOM/element) objects.
+- `baseElement`
+  - : is an [element](/en-US/docs/DOM/element) object.
+- `selectors`
+  - : is a group of [selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors) to match on or elements of the DOM.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<p>下例是從整個網頁的 body 中，取得所有 <code>p</code> 元素：</p>
+下例是從整個網頁的 body 中，取得所有 `p` 元素：
 
-<pre class="brush: js">let matches = document.body.querySelectorAll('p');
-</pre>
+```js
+let matches = document.body.querySelectorAll('p');
+```
 
-<p>This example returns a list of <code>p</code> children elements under a container, whose parent is a <code>div</code> that has the class 'highlighted':</p>
+This example returns a list of `p` children elements under a container, whose parent is a `div` that has the class 'highlighted':
 
-<pre class="brush:js">let el = document.querySelector('#test');    //return an element with id='test'
-let matches = el.querySelectorAll('div.highlighted &gt; p'); // return a NodeList of p wrapped in a div with attribute class "highlighted"
-</pre>
+```js
+let el = document.querySelector('#test');    //return an element with id='test'
+let matches = el.querySelectorAll('div.highlighted > p'); // return a NodeList of p wrapped in a div with attribute class "highlighted"
+```
 
-<p>下例是取得所有有 attribute <code>data-src</code> 的 <code>iframe</code> 元素：</p>
+下例是取得所有有 attribute `data-src` 的 `iframe` 元素：
 
-<pre class="brush: js">let matches = el.querySelectorAll('iframe[data-src]');
-</pre>
+```js
+let matches = el.querySelectorAll('iframe[data-src]');
+```
 
-<h2 id="Notes">註</h2>
+## 註
 
-<p>If the specified “selectors” are not found inside the DOM of the page, the method <code>queryselectorAll</code> returns an empty NodeList as specified below:</p>
+If the specified “selectors” are not found inside the DOM of the page, the method `queryselectorAll` returns an empty NodeList as specified below:
 
-<pre class="brush: js">&gt; let x = document.body.querySelectorAll('.highlighted'); //case: if the class highlighted doesn't exist in any attribute "class" of the DOM the result is
-&gt; [] //empty NodeList</pre>
+```js
+> let x = document.body.querySelectorAll('.highlighted'); //case: if the class highlighted doesn't exist in any attribute "class" of the DOM the result is
+> [] //empty NodeList
+```
 
-<p><code>querySelectorAll()</code> was introduced in the WebApps API.</p>
+`querySelectorAll()` was introduced in the WebApps API.
 
-<p>The string argument pass to <code>querySelectorAll</code> must follow the CSS syntax. See {{domxref("document.querySelector")}} for a concrete example.</p>
+The string argument pass to `querySelectorAll` must follow the CSS syntax. See {{domxref("document.querySelector")}} for a concrete example.
 
-<p>We could access a single item inside the NodeList in the following way:</p>
+We could access a single item inside the NodeList in the following way:
 
-<pre class="brush: js">let x = document.body.querySelectorAll('.highlighted');
+```js
+let x = document.body.querySelectorAll('.highlighted');
 x.length; //return the size of x
 x[i_item]; //where i_item has a value between 0 and x.length-1. The operator "[]" return as in an array the element at index "i_item"
-</pre>
+```
 
-<p>We could iterate inside a NodeList with the construct <code>for(....) {...} </code>as in the following code:</p>
+We could iterate inside a NodeList with the construct `for(....) {...} `as in the following code:
 
-<pre class="brush: js"> let x = document.body.querySelectorAll('.highlighted');
+```js
+ let x = document.body.querySelectorAll('.highlighted');
  let index = 0;
- for( index=0; index &lt; x.length; index++ ) {
+ for( index=0; index < x.length; index++ ) {
        console.log(x[index]);
- }</pre>
+ }
+```
 
-<p>So in the above way, it is possible to manage and modify the behaviour of the page.</p>
+So in the above way, it is possible to manage and modify the behaviour of the page.
 
-<h2 id="Quirks">Quirks</h2>
+## Quirks
 
-<p><code>querySelectorAll()</code> behaves differently than most common JavaScript DOM libraries, which might lead to unexpected results:</p>
+`querySelectorAll()` behaves differently than most common JavaScript DOM libraries, which might lead to unexpected results:
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;div class="select"&gt;
-    &lt;div class="inner"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="outer">
+  <div class="select">
+    <div class="inner">
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: js">let select = document.querySelector('.select');
+```js
+let select = document.querySelector('.select');
 let inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
-</pre>
+```
 
-<p>In this example, when selecting <code>.outer .inner</code> in the context of <code>.select</code>, .<code>inner</code> is still found, even though <code>.outer</code> is not a descendant of the baseElement (<code>.select</code>).<br>
- <code>querySelectorAll() </code>only verifies that the last element in the selector is within the baseElement.</p>
+In this example, when selecting `.outer .inner` in the context of `.select`, .`inner` is still found, even though `.outer` is not a descendant of the baseElement (`.select`).
+`querySelectorAll() `only verifies that the last element in the selector is within the baseElement.
 
-<p>The <code><a href="/en-US/docs/Web/CSS/:scope">:scope</a></code> pseudo-class restores the expected behavior, only matching selectors on descendants of the baseElement:</p>
+The [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class restores the expected behavior, only matching selectors on descendants of the baseElement:
 
-<pre class="brush: js">let select = document.querySelector('.select');
+```js
+let select = document.querySelector('.select');
 let inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("api.Element.querySelectorAll")}}
 
+\[1] Supported in Opera 15+ by enabling the "**Enable \<style scoped>**" or "**Enable experimental Web Platform features**" flag in `chrome://flags`.
 
-<div>{{Compat("api.Element.querySelectorAll")}}</div>
+## 參見
 
-<p>[1] Supported in Opera 15+ by enabling the "<strong>Enable &lt;style scoped&gt;</strong>" or "<strong>Enable experimental Web Platform features</strong>" flag in <code>chrome://flags</code>.</p>
-
-<h2 id="See_also">參見</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/Document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for <code>querySelector</code></a></li>
-</ul>
+- [`document.querySelectorAll`](/en-US/docs/DOM/Document.querySelectorAll)
+- [`document.querySelector`](/en-US/docs/DOM/Document.querySelector)
+- [Code snippets for `querySelector`](/en-US/docs/Code_snippets/QuerySelector)

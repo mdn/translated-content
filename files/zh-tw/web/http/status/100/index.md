@@ -3,27 +3,27 @@ title: 100 Continue
 slug: Web/HTTP/Status/100
 translation_of: Web/HTTP/Status/100
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>100 Continue</code></strong> 訊息狀態回應碼表示，目前為止的一切完好，用戶端應該繼續完成請求，或當請求已經完成的狀態下應忽略此訊息。</p>
+HTTP **`100 Continue`** 訊息狀態回應碼表示，目前為止的一切完好，用戶端應該繼續完成請求，或當請求已經完成的狀態下應忽略此訊息。
 
-<p>若要使伺服器確認請求標頭，用戶端必須在最初請求的標頭中，傳送{{HTTPHeader("Expect")}}<code>: 100-continue</code> ，並且在傳送主體前，接收 <code>100 Continue</code> 狀態碼。</p>
+若要使伺服器確認請求標頭，用戶端必須在最初請求的標頭中，傳送{{HTTPHeader("Expect")}}`: 100-continue` ，並且在傳送主體前，接收 `100 Continue` 狀態碼。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">100 Continue</pre>
+```plain
+100 Continue
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.status.100")}}</p>
+{{Compat("http.status.100")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
- <li>{{HTTPStatus(417)}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

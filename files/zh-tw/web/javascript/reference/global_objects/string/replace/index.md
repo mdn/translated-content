@@ -3,184 +3,150 @@ title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>replace()</code></strong> 方法會傳回一個新字串，此新字串是透過將原字串與 <code>pattern</code> 比對，以 <code>replacement</code> 取代吻合處而生成。<code>pattern</code> 可以是字串或 {{jsxref("RegExp")}}，而 <code>replacement</code> 可以是字串或函式（會在每一次匹配時被呼叫）。</p>
+**`replace()`** 方法會傳回一個新字串，此新字串是透過將原字串與 `pattern` 比對，以 `replacement` 取代吻合處而生成。`pattern` 可以是字串或 {{jsxref("RegExp")}}，而 `replacement` 可以是字串或函式（會在每一次匹配時被呼叫）。
 
-<div class="notecard note">
-<p><strong>備註：</strong>原始的字串會保持不變。</p>
-</div>
+> **備註：**原始的字串會保持不變。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>str</var>.replace(<var>regexp</var>|<var>substr</var>, <var>newSubstr</var>|<var>function</var>)</pre>
+```plain
+str.replace(regexp|substr, newSubstr|function)
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>regexp</code> (pattern)</dt>
- <dd>{{jsxref("RegExp")}} 的物件或文字。 被比對出來的部分將會被取代為 <code>newSubStr</code> 或是取代為 <code>function</code> 的回傳值。</dd>
- <dt><code>substr</code> (pattern)</dt>
- <dd>要被 <code>newSubStr</code> 取代的 {{jsxref("String")}}。它被視為逐字字符串，並且不會被解釋為正則表達式。只會替換第一次出現。</dd>
- <dt><code>newSubStr</code> (replacement)</dt>
- <dd>The {{jsxref("String")}} that replaces the substring specified by the specified <code>regexp</code> or <code>substr</code> parameter. A number of special replacement patterns are supported; see the "<a href="#指定一個字串為參數">Specifying a string as a parameter</a>" section below.</dd>
- <dt><code>function</code> (replacement)</dt>
- <dd>A function to be invoked to create the new substring to be used to replace the matches to the given <code>regexp</code> or <code>substr</code>. The arguments supplied to this function are described in the "<a href="#指定一個函式為參數">Specifying a function as a parameter</a>" section below.</dd>
-</dl>
+- `regexp` (pattern)
+  - : {{jsxref("RegExp")}} 的物件或文字。 被比對出來的部分將會被取代為 `newSubStr` 或是取代為 `function` 的回傳值。
+- `substr` (pattern)
+  - : 要被 `newSubStr` 取代的 {{jsxref("String")}}。它被視為逐字字符串，並且不會被解釋為正則表達式。只會替換第一次出現。
+- `newSubStr` (replacement)
+  - : The {{jsxref("String")}} that replaces the substring specified by the specified `regexp` or `substr` parameter. A number of special replacement patterns are supported; see the "[Specifying a string as a parameter](#指定一個字串為參數)" section below.
+- `function` (replacement)
+  - : A function to be invoked to create the new substring to be used to replace the matches to the given `regexp` or `substr`. The arguments supplied to this function are described in the "[Specifying a function as a parameter](#指定一個函式為參數)" section below.
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>A new string with some or all matches of a pattern replaced by a replacement.</p>
+A new string with some or all matches of a pattern replaced by a replacement.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>這個方法不會變更所呼叫的 {{jsxref("String")}}。它只會回傳新的字串。</p>
+這個方法不會變更所呼叫的 {{jsxref("String")}}。它只會回傳新的字串。
 
-<p>To perform a global search and replace, include the <code>g</code> switch in the regular expression.</p>
+To perform a global search and replace, include the `g` switch in the regular expression.
 
-<h3 id="指定一個字串為參數">指定一個字串為參數</h3>
+### 指定一個字串為參數
 
-<p>The replacement string can include the following special replacement patterns:</p>
+The replacement string can include the following special replacement patterns:
 
-<table>
- <tbody>
-  <tr>
-   <th>Pattern</th>
-   <th>Inserts</th>
-  </tr>
-  <tr>
-   <td><code>$$</code></td>
-   <td>Inserts a "$".</td>
-  </tr>
-  <tr>
-   <td><code>$&amp;</code></td>
-   <td>Inserts the matched substring.</td>
-  </tr>
-  <tr>
-   <td><code>$`</code></td>
-   <td>Inserts the portion of the string that precedes the matched substring.</td>
-  </tr>
-  <tr>
-   <td><code>$'</code></td>
-   <td>Inserts the portion of the string that follows the matched substring.</td>
-  </tr>
-  <tr>
-   <td><code>$<em>n</em></code></td>
-   <td>Where <code><em>n</em></code> is a positive integer less than 100, inserts the <em>n</em>th parenthesized submatch string, provided the first argument was a {{jsxref("RegExp")}} object.</td>
-  </tr>
- </tbody>
-</table>
+| Pattern  | Inserts                                                                                                                                                                |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`     | Inserts a "$".                                                                                                                                                         |
+| `$&`     | Inserts the matched substring.                                                                                                                                         |
+| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                                 |
+| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                                  |
+| `$n`     | Where `n` is a positive integer less than 100, inserts the *n*th parenthesized submatch string, provided the first argument was a {{jsxref("RegExp")}} object. |
 
-<h3 id="指定一個函式為參數">指定一個函式為參數</h3>
+### 指定一個函式為參數
 
-<p>You can specify a function as the second parameter. In this case, the function will be invoked after the match has been performed. The function's result (return value) will be used as the replacement string. (Note: the above-mentioned special replacement patterns do <em>not</em> apply in this case.) Note that the function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global.</p>
+You can specify a function as the second parameter. In this case, the function will be invoked after the match has been performed. The function's result (return value) will be used as the replacement string. (Note: the above-mentioned special replacement patterns do _not_ apply in this case.) Note that the function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global.
 
-<p>The arguments to the function are as follows:</p>
+The arguments to the function are as follows:
 
-<table>
- <tbody>
-  <tr>
-   <th>Possible name</th>
-   <th>Supplied value</th>
-  </tr>
-  <tr>
-   <td><code>match</code></td>
-   <td>The matched substring. (Corresponds to <code>$&amp;</code> above.)</td>
-  </tr>
-  <tr>
-   <td><code>p1, p2, ...</code></td>
-   <td>The <em>n</em>th parenthesized submatch string, provided the first argument to <code>replace()</code> was a {{jsxref("RegExp")}} object. (Corresponds to <code>$1</code>, <code>$2</code>, etc. above.) For example, if <code>/(\a+)(\b+)/</code>, was given, <code>p1</code> is the match for <code>\a+</code>, and <code>p2</code> for <code>\b+</code>.</td>
-  </tr>
-  <tr>
-   <td><code>offset</code></td>
-   <td>The offset of the matched substring within the whole string being examined. (For example, if the whole string was <code>'abcd'</code>, and the matched substring was <code>'bc'</code>, then this argument will be 1.)</td>
-  </tr>
-  <tr>
-   <td><code>string</code></td>
-   <td>The whole string being examined.</td>
-  </tr>
- </tbody>
-</table>
+| Possible name | Supplied value                                                                                                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                 |
+| `p1, p2, ...` | The *n*th parenthesized submatch string, provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
+| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be 1.)                                                                    |
+| `string`      | The whole string being examined.                                                                                                                                                                                                                                    |
 
-<p>(The exact number of arguments will depend on whether the first argument was a {{jsxref("RegExp")}} object and, if so, how many parenthesized submatches it specifies.)</p>
+(The exact number of arguments will depend on whether the first argument was a {{jsxref("RegExp")}} object and, if so, how many parenthesized submatches it specifies.)
 
-<p>The following example will set <code>newString</code> to <code>'abc - 12345 - #$*%'</code>:</p>
+The following example will set `newString` to `'abc - 12345 - #$*%'`:
 
-<pre class="brush: js">function replacer(match, p1, p2, p3, offset, string) {
+```js
+function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
   return [p1, p2, p3].join(' - ');
 }
 var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString);  // abc - 12345 - #$*%
-</pre>
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="於_replace()_中定義正則表示式">於 <code>replace()</code> 中定義正則表示式</h3>
+### 於 `replace()` 中定義正則表示式
 
-<p>下例的正規表達式被定義為 <code>replace()</code>、並包含了忽略大小寫的 flag。</p>
+下例的正規表達式被定義為 `replace()`、並包含了忽略大小寫的 flag。
 
-<pre class="brush: js">var str = 'Twas the night before Xmas...';
+```js
+var str = 'Twas the night before Xmas...';
 var newstr = str.replace(/xmas/i, 'Christmas');
 console.log(newstr);  // Twas the night before Christmas...
-</pre>
+```
 
-<p>上例會顯示「Twas the night before Christmas...」</p>
+上例會顯示「Twas the night before Christmas...」
 
-<h3 id="使用_global_及_ignore_來配合_replace()">使用 <code>global</code> 及 <code>ignore</code> 來配合 <code>replace()</code></h3>
+### 使用 `global` 及 `ignore` 來配合 `replace()`
 
-<p>Global replace can only be done with a regular expression. In the following example, the regular expression includes the global and ignore case flags which permits <code>replace()</code> to replace each occurrence of 'apples' in the string with 'oranges'.</p>
+Global replace can only be done with a regular expression. In the following example, the regular expression includes the global and ignore case flags which permits `replace()` to replace each occurrence of 'apples' in the string with 'oranges'.
 
-<pre class="brush: js">var re = /apples/gi;
+```js
+var re = /apples/gi;
 var str = 'Apples are round, and apples are juicy.';
 var newstr = str.replace(re, 'oranges');
 console.log(newstr);  // oranges are round, and oranges are juicy.
-</pre>
+```
 
-<p>上例會顯示「oranges are round, and oranges are juicy」。</p>
+上例會顯示「oranges are round, and oranges are juicy」。
 
-<h3 id="替換字串中的單字">替換字串中的單字</h3>
+### 替換字串中的單字
 
-<p>下例程式將切換字串內的單字。對 replacement text 而言，程式會使用 <code>$1</code> and <code>$2</code> 的 replacement pattern。</p>
+下例程式將切換字串內的單字。對 replacement text 而言，程式會使用 `$1` and `$2` 的 replacement pattern。
 
-<pre class="brush: js">var re = /(\w+)\s(\w+)/;
+```js
+var re = /(\w+)\s(\w+)/;
 var str = 'John Smith';
 var newstr = str.replace(re, '$2, $1');
 console.log(newstr);  // Smith, John
-</pre>
+```
 
-<p>上例會顯示「Smith, John」。</p>
+上例會顯示「Smith, John」。
 
-<h3 id="使用行內函式來修改匹配的字元">使用行內函式來修改匹配的字元</h3>
+### 使用行內函式來修改匹配的字元
 
-<p>In this example, all occurrences of capital letters in the string are converted to lower case, and a hyphen is inserted just before the match location. The important thing here is that additional operations are needed on the matched item before it is given back as a replacement.</p>
+In this example, all occurrences of capital letters in the string are converted to lower case, and a hyphen is inserted just before the match location. The important thing here is that additional operations are needed on the matched item before it is given back as a replacement.
 
-<p>The replacement function accepts the matched snippet as its parameter, and uses it to transform the case and concatenate the hyphen before returning.</p>
+The replacement function accepts the matched snippet as its parameter, and uses it to transform the case and concatenate the hyphen before returning.
 
-<pre class="brush: js">function styleHyphenFormat(propertyName) {
+```js
+function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
     return (offset ? '-' : '') + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
-</pre>
+```
 
-<p>Given <code>styleHyphenFormat('borderTop')</code>, this returns 'border-top'.</p>
+Given `styleHyphenFormat('borderTop')`, this returns 'border-top'.
 
-<p>Because we want to further transform the <em>result</em> of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.</p>
+Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
-<pre class="brush: js">var newString = propertyName.replace(/[A-Z]/g, '-' + '$&amp;'.toLowerCase());  // won't work
-</pre>
+```js
+var newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // won't work
+```
 
-<p>This is because <code>'$&amp;'.toLowerCase()</code> would be evaluated first as a string literal (resulting in the same <code>'$&amp;'</code>) before using the characters as a pattern.</p>
+This is because `'$&'.toLowerCase()` would be evaluated first as a string literal (resulting in the same `'$&'`) before using the characters as a pattern.
 
-<h3 id="將華氏溫度置換成攝氏溫度">將華氏溫度置換成攝氏溫度</h3>
+### 將華氏溫度置換成攝氏溫度
 
-<p>The following example replaces a Fahrenheit degree with its equivalent Celsius degree. The Fahrenheit degree should be a number ending with F. The function returns the Celsius number ending with C. For example, if the input number is 212F, the function returns 100C. If the number is 0F, the function returns -17.77777777777778C.</p>
+The following example replaces a Fahrenheit degree with its equivalent Celsius degree. The Fahrenheit degree should be a number ending with F. The function returns the Celsius number ending with C. For example, if the input number is 212F, the function returns 100C. If the number is 0F, the function returns -17.77777777777778C.
 
-<p>The regular expression <code>test</code> checks for any number that ends with F. The number of Fahrenheit degree is accessible to the function through its second parameter, <code>p1</code>. The function sets the Celsius number based on the Fahrenheit degree passed in a string to the <code>f2c()</code> function. <code>f2c()</code> then returns the Celsius number. This function approximates Perl's <code>s///e</code> flag.</p>
+The regular expression `test` checks for any number that ends with F. The number of Fahrenheit degree is accessible to the function through its second parameter, `p1`. The function sets the Celsius number based on the Fahrenheit degree passed in a string to the `f2c()` function. `f2c()` then returns the Celsius number. This function approximates Perl's `s///e` flag.
 
-<pre class="brush: js">function f2c(x) {
+```js
+function f2c(x) {
   function convert(str, p1, offset, s) {
     return ((p1 - 32) * 5/9) + 'C';
   }
@@ -188,37 +154,40 @@ console.log(newstr);  // Smith, John
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
   return s.replace(test, convert);
 }
-</pre>
+```
 
-<h3 id="利用行內函式及正則表示式來避免使用_for_迴圈">利用行內函式及正則表示式來避免使用 <code>for</code> 迴圈</h3>
+### 利用行內函式及正則表示式來避免使用 `for` 迴圈
 
-<p>The following example takes a string pattern and converts it into an array of objects.</p>
+The following example takes a string pattern and converts it into an array of objects.
 
-<p><strong>Input:</strong></p>
+**Input:**
 
-<p>A string made out of the characters <code>x</code>, <code>-</code> and <code>_</code></p>
+A string made out of the characters `x`, `-` and `_`
 
-<pre>x-x_
+```plain
+x-x_
 x---x---x---x---
 x-xxx-xx-x-
 x_x_x___x___x___
-</pre>
+```
 
-<p><strong>Output:</strong></p>
+**Output:**
 
-<p>An array of objects. An <code>'x'</code> denotes an <code>'on'</code> state, a <code>'-'</code> (hyphen) denotes an <code>'off'</code> state and an <code>'_'</code> (underscore) denotes the length of an <code>'on'</code> state.</p>
+An array of objects. An `'x'` denotes an `'on'` state, a `'-'` (hyphen) denotes an `'off'` state and an `'_'` (underscore) denotes the length of an `'on'` state.
 
-<pre class="brush: json">[
+```json
+[
   { on: true, length: 1 },
   { on: false, length: 1 },
   { on: true, length: 2 }
   ...
 ]
-</pre>
+```
 
-<p><strong>Snippet:</strong></p>
+**Snippet:**
 
-<pre class="brush: js">var str = 'x-x_';
+```js
+var str = 'x-x_';
 var retArr = [];
 str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
   if (p1) { retArr.push({ on: true, length: p1.length }); }
@@ -226,31 +195,27 @@ str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
 });
 
 console.log(retArr);
-</pre>
+```
 
-<p>This snippet generates an array of 3 objects in the desired format without using a <code>for</code> loop.</p>
+This snippet generates an array of 3 objects in the desired format without using a `for` loop.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.String.replace")}}</p>
+{{Compat("javascript.builtins.String.replace")}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<ul>
- <li>Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When <code>replace()</code> is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to <code>0</code> ({{bug(501739)}}).</li>
- <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
- <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>
- <li>Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard <code>flags</code> argument is no longer supported ({{bug(1108382)}}).</li>
-</ul>
+- Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When `replace()` is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to `0` ({{bug(501739)}}).
+- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
+- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
+- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

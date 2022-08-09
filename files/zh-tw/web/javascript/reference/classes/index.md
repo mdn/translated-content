@@ -6,42 +6,44 @@ tags:
   - Constructors
 translation_of: Web/JavaScript/Reference/Classes
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
-  類別基於基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。</p>
+類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
+類別基於基於原型（prototype），但在語法和定義上，與 ES5 的類類別（class-like）有所不同。
 
+## 定義類別
 
+類別實際上是一種特別的函數([functions](/en-US/docs/Web/JavaScript/Reference/Functions))，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述([class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class))和類別宣告([class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class))。
 
-<h2 id="定義類別">定義類別</h2>
+### 類別宣告
 
-<p>類別實際上是一種特別的函數(<a href="/en-US/docs/Web/JavaScript/Reference/Functions">functions</a>)，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述(<a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">class expressions</a>)和類別宣告(<a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class declarations</a>)。</p>
+一個定義類別的方法是使用類別宣告(**class declaration**)，要宣告一個類別，你要使用關鍵字 `class` 搭配類別名稱(此例為 "Polygon")。
 
-<h3 id="類別宣告">類別宣告</h3>
-
-<p>一個定義類別的方法是使用類別宣告(<strong>class declaration</strong>)，要宣告一個類別，你要使用關鍵字 <code>class</code> 搭配類別名稱(此例為 "Polygon")。</p>
-
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
-}</pre>
+}
+```
 
-<h4 id="Hoisting">Hoisting</h4>
+#### Hoisting
 
-<p><strong>函數宣告</strong>和<strong>類別宣告</strong>的一個重要差別在於函數宣告是 {{Glossary("Hoisting", "hoisted")}} ，類別宣告則不是。 你需要先宣告你的類別，然後存取它，否則像是下面的程式碼就會丟出一個 {{jsxref("ReferenceError")}}:</p>
+**函數宣告**和**類別宣告**的一個重要差別在於函數宣告是 {{Glossary("Hoisting", "hoisted")}} ，類別宣告則不是。 你需要先宣告你的類別，然後存取它，否則像是下面的程式碼就會丟出一個 {{jsxref("ReferenceError")}}:
 
-<pre class="brush: js example-bad">var p = new Polygon(); // ReferenceError
+```js example-bad
+var p = new Polygon(); // ReferenceError
 
 class Polygon {}
-</pre>
+```
 
-<h3 id="類別敘述">類別敘述</h3>
+### 類別敘述
 
-<p><strong>類別敘述</strong>是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name">.name</a> 屬性存取。）</p>
+**類別敘述**是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 [.name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 屬性存取。）
 
-<pre class="brush: js">// unnamed
+```js
+// unnamed
 var Polygon = class {
   constructor(height, width) {
     this.height = height;
@@ -56,30 +58,30 @@ var Polygon = class Polygon {
     this.width = width;
   }
 };
+```
 
-</pre>
+注意：類別**敘述**跟上述提到的類別**宣告**一樣，都會受到 hoisting 的影響。
 
-<p>注意：類別<strong>敘述</strong>跟上述提到的類別<strong>宣告</strong>一樣，都會受到hoisting的影響。</p>
+## 類別主體與方法定義
 
-<h2 id="類別主體與方法定義">類別主體與方法定義</h2>
+類別的主體指的是被大括號(`{}`)包含的部分，你可以在這裡面定義類別成員(members)，例如方法(methods)或建構子(constructors)。
 
-<p>類別的主體指的是被大括號(<code>{}</code>)包含的部分，你可以在這裡面定義類別成員(members)，例如方法(methods)或建構子(constructors)。</p>
+### Strict mode
 
-<h3 id="Strict_mode">Strict mode</h3>
+*類別宣告*與*類別敘述*的主體都會以[嚴格模式(strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))執行，也就是說，建構子、靜態方法和原型方法、getter 及 setter 函數等都會以嚴格模式執行。
 
-<p><em>類別宣告</em>與<em>類別敘述</em>的主體都會以<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">嚴格模式(strict mode</a>)執行，也就是說，建構子、靜態方法和原型方法、getter及setter函數等都會以嚴格模式執行。</p>
+### 建構子
 
-<h3 id="建構子">建構子</h3>
+建構子(`constructor)`方法是一個特別的方法，用來建立和初始化一個`類別`的物件。一個類別只能有一個名為建構子(constructor)的特別方法。當類別中含有一個以上的`建構子`方法時，{{jsxref("SyntaxError")}} 將會被拋出。
 
-<p>建構子(<code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a>)</code>方法是一個特別的方法，用來建立和初始化一個<code>類別</code>的物件。一個類別只能有一個名為建構子(constructor)的特別方法。當類別中含有一個以上的<code>建構子</code>方法時，{{jsxref("SyntaxError")}} 將會被拋出。</p>
+一個建構子可以用關鍵字 `super` 來呼叫父類別的建構子。
 
-<p>一個建構子可以用關鍵字 <code>super</code> 來呼叫父類別的建構子。</p>
+### 原型方法
 
-<h3 id="原型方法">原型方法</h3>
+參見 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 
-<p>參見 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>。</p>
-
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -96,13 +98,15 @@ var Polygon = class Polygon {
 
 const square = new Polygon(10, 10);
 
-console.log(square.area); //100</pre>
+console.log(square.area); //100
+```
 
-<h3 id="靜態方法Static_methods">靜態方法(Static methods)</h3>
+### 靜態方法(Static methods)
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></code> 定義了一個類別的靜態方法，靜態方法不需要<a href="/zh-TW/docs/Learn/JavaScript/Objects">實體化</a>它所屬類別的實例就可以被呼叫，它也<strong>無法</strong>被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。</p>
+關鍵字 [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
 
-<pre class="brush: js">class Point {
+```js
+class Point {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -120,62 +124,75 @@ const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 
 console.log(Point.distance(p1, p2)); // 7.0710678118654755
-</pre>
-<h3 id="Instance_properties">Instance properties</h3>
+```
+
+### Instance properties
 
 Instance properties 必須在 class 內定義:
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
-}</pre>
+}
+```
 
-<h3 id="宣告欄位">宣告欄位</h3>
-<h4 id="宣告公共欄位">宣告公共欄位</h4>
+### 宣告欄位
 
-<p>在 JavaScript 以宣告欄位改寫上面的程式，可以寫成如下：</p>
-<pre class="brush: js">class Rectangle {
+#### 宣告公共欄位
+
+在 JavaScript 以宣告欄位改寫上面的程式，可以寫成如下：
+
+```js
+class Rectangle {
   height = 0;
   width;
   constructor(height, width) {
     this.height = height;
     this.width = width;
   }
-}</pre>
-<p>通過事前宣告欄位，類別定義變得更加self-documenting ，並且欄位會一直存在。
-<p>另外，如上面例子所示，聲明字段可以不用設定默認值。</p>
-<p>想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}。</p>
+}
+```
 
-<h4 id="宣告私有欄位">宣告私有欄位</h4>
+通過事前宣告欄位，類別定義變得更加 self-documenting ，並且欄位會一直存在。
 
-<p>私有欄位的宣告，可以參考下方例子：</p>
+另外，如上面例子所示，聲明字段可以不用設定默認值。
 
-<pre class="brush: js">class Rectangle {
+想知道更多資訊，可參閱 {{jsxref("Classes/Public_class_fields", "public class fields", "", "true")}}。
+
+#### 宣告私有欄位
+
+私有欄位的宣告，可以參考下方例子：
+
+```js
+class Rectangle {
   #height = 0;
   #width;
   constructor(height, width) {
     this.#height = height;
     this.#width = width;
   }
-}</pre>
+}
+```
 
+從類別外部使用私有欄位會出現錯誤；私有欄位只能在類別內讀寫。
 
-<p>從類別外部使用私有欄位會出現錯誤；私有欄位只能在類別內讀寫。</p>
-<p>通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。</p>
-<blockquote>
-<p><strong>注意：</strong>私有欄位只能在建立類別時事先宣告。</p>
-</blockquote>
-<p>私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。</p>
+通過宣告這些在類別以外不可見的東西，你可以確保類別的使用者不會倚賴類別的內部結構，畢竟一個類別的內部結構可能會隨著版本的更新而有所變化。
 
-<p>想知道更多資訊，可參閱 {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}。</p>
+> **注意：**私有欄位只能在建立類別時事先宣告。
 
-<h3 id="裝箱、原型方法及靜態方法">裝箱、原型方法及靜態方法</h3>
+私有欄位不像普通欄位一樣，可以在類別宣告完後才建立。
 
-<p>當一個靜態方法或原形方法被呼叫，但沒有一個物件的值與this綁定時，被呼叫的函數中this關鍵字會是<strong><code>undefined</code>。</strong>在此情況下，自動裝箱(autoboxing)不會發生<strong>。?</strong>即使我們在非嚴格模式中寫程式，此行為仍然會存在，這是因為所有的函式、定義方法、建構子、getters和setters都是在嚴格模式中執行。因此，若我們沒有定義this的值，this會是<strong><code>undefined</code></strong><code>。</code></p>
+想知道更多資訊，可參閱 {{jsxref("Classes/Private_class_fields", "private class features", "", "true")}}。
 
-<pre class="brush: js">class Animal {
+### 裝箱、原型方法及靜態方法
+
+當一個靜態方法或原形方法被呼叫，但沒有一個物件的值與 this 綁定時，被呼叫的函數中 this 關鍵字會是**`undefined`。**在此情況下，自動裝箱(autoboxing)不會發生**。?**即使我們在非嚴格模式中寫程式，此行為仍然會存在，這是因為所有的函式、定義方法、建構子、getters 和 setters 都是在嚴格模式中執行。因此，若我們沒有定義 this 的值，this 會是**`undefined`**`。`
+
+```js
+class Animal {
   speak() {
     return this;
   }
@@ -191,11 +208,13 @@ speak(); // undefined
 
 Animal.eat() // class Animal
 let eat = Animal.eat;
-eat(); // undefined</pre>
+eat(); // undefined
+```
 
-<p>若我們將上述程式用傳統的函式基礎類別(function based classes)表達，自動裝箱則會依據this在其被呼叫的函式中所綁定的值發生。</p>
+若我們將上述程式用傳統的函式基礎類別(function based classes)表達，自動裝箱則會依據 this 在其被呼叫的函式中所綁定的值發生。
 
-<pre class="brush: js">function Animal() { }
+```js
+function Animal() { }
 
 Animal.prototype.speak = function() {
   return this;
@@ -210,13 +229,15 @@ let speak = obj.speak;
 speak(); // 全域物件
 
 let eat = Animal.eat;
-eat(); // 全域物件</pre>
+eat(); // 全域物件
+```
 
-<h2 id="用_extends_建立子類別">用 <code>extends</code> 建立子類別</h2>
+## 用 `extends` 建立子類別
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 是在類別宣告或是類別敘述中建立子類別的方法。</p>
+關鍵字 [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) 是在類別宣告或是類別敘述中建立子類別的方法。
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   constructor(name) {
     this.name = name;
   }
@@ -234,13 +255,14 @@ class Dog extends Animal {
 
 var d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
-</pre>
+```
 
-<p>若在子類別中有建構子(constructor)，要使用this前則必須先呼叫super()函式。</p>
+若在子類別中有建構子(constructor)，要使用 this 前則必須先呼叫 super()函式。
 
-<p>你也可以擴充(extends)傳統的函式基礎"類別"。</p>
+你也可以擴充(extends)傳統的函式基礎"類別"。
 
-<pre class="brush: js">function Animal (name) {
+```js
+function Animal (name) {
   this.name = name;
 }
 
@@ -255,11 +277,13 @@ class Dog extends Animal {
 }
 
 var d = new Dog('Mitzie');
-d.speak(); // Mitzie barks.</pre>
+d.speak(); // Mitzie barks.
+```
 
-<p>注意類別並無法擴充一般(non-constructible不可建構的)物件。如果您想要繼承自一般的物件，可以使用{{jsxref("Object.setPrototypeOf()")}}來達成。</p>
+注意類別並無法擴充一般(non-constructible 不可建構的)物件。如果您想要繼承自一般的物件，可以使用{{jsxref("Object.setPrototypeOf()")}}來達成。
 
-<pre class="brush: js">var Animal = {
+```js
+var Animal = {
   speak() {
     console.log(this.name + ' makes a noise.');
   }
@@ -275,30 +299,34 @@ class Dog {
 Object.setPrototypeOf(Dog.prototype, Animal);
 
 var d = new Dog('Mitzie');
-d.speak(); // Mitzie makes a noise.</pre>
+d.speak(); // Mitzie makes a noise.
+```
 
-<h2 id="Species">Species</h2>
+## Species
 
-<p>你可能會希望在陣列的衍生類別 <code>MyArray</code> 中回傳陣列 ({{jsxref("Array")}}) ，Species 這個模式讓你能覆寫默認的建構子 (contructor)。</p>
+你可能會希望在陣列的衍生類別 `MyArray` 中回傳陣列 ({{jsxref("Array")}}) ，Species 這個模式讓你能覆寫默認的建構子 (contructor)。
 
-<p>舉例來說，當你使用像 {{jsxref("Array.map", "map()")}} 這類會回傳默認建構子的方法時，你希望能回傳父物件 <code>Array</code> ，而不是 <code>MyArray</code> 物件。 {{jsxref("Symbol.species")}} 符號讓你做到這件事：</p>
+舉例來說，當你使用像 {{jsxref("Array.map", "map()")}} 這類會回傳默認建構子的方法時，你希望能回傳父物件 `Array` ，而不是 `MyArray` 物件。 {{jsxref("Symbol.species")}} 符號讓你做到這件事：
 
-<pre class="brush: js">class MyArray extends Array {
+```js
+class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
 }
 
 var a = new MyArray(1,2,3);
-var mapped = a.map(x =&gt; x * x);
+var mapped = a.map(x => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true</pre>
+console.log(mapped instanceof Array);   // true
+```
 
-<h2 id="用_super_呼叫父類別">用 <code>super</code> 呼叫父類別</h2>
+## 用 `super` 呼叫父類別
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></code> 是用來提供一個類別呼叫其父類別的函數。</p>
+關鍵字 [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) 是用來提供一個類別呼叫其父類別的函數。
 
-<pre class="brush: js">class Cat {
+```js
+class Cat {
   constructor(name) {
     this.name = name;
   }
@@ -319,31 +347,29 @@ var l = new Lion('Fuzzy');
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
-</pre>
+```
 
-<h2 id="ES5_繼承語法與_ES6_類別語法的比較">ES5 繼承語法與 ES6 類別語法的比較</h2>
+## ES5 繼承語法與 ES6 類別語法的比較
 
-<p>TBD</p>
+TBD
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>TBD</p>
+TBD
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li>{{jsxref("Operators/super", "super")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-classes/">Blog post: "ES6 In Depth: Classes"</a></li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Classes/extends">extends</a></li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- {{jsxref("Operators/super", "super")}}
+- [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
+- [extends](/zh-TW/docs/Web/JavaScript/Reference/Classes/extends)

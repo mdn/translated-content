@@ -3,20 +3,22 @@ title: Document.defaultView
 slug: Web/API/Document/defaultView
 translation_of: Web/API/Document/defaultView
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>在瀏覽器中，<strong><code>document.defaultView</code></strong> 屬性會指向一個目前 {{Glossary("Browsing_context", "document")}} 所屬的 {{domxref("Window", "window")}} 物件，若無則為 <code>null</code>。</p>
+在瀏覽器中，**`document.defaultView`** 屬性會指向一個目前 {{Glossary("Browsing_context", "document")}} 所屬的 {{domxref("Window", "window")}} 物件，若無則為 `null`。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <var>win</var> = document.defaultView;</pre>
+```plain
+var win = document.defaultView;
+```
 
-<p>此為唯讀屬性。</p>
+此為唯讀屬性。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Document.defaultView")}}

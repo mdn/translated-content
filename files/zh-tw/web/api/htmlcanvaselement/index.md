@@ -11,56 +11,48 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLCanvasElement
 ---
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p><strong><code>HTMLCanvasElement</code></strong> 介面提供控制 canvas 元素的屬性和方法. <code>HTMLCanvasElement</code> 介面也繼承了 {{domxref("HTMLElement")}} 介面的屬性和方法.</p>
+**`HTMLCanvasElement`** 介面提供控制 canvas 元素的屬性和方法. `HTMLCanvasElement` 介面也繼承了 {{domxref("HTMLElement")}} 介面的屬性和方法.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>從父代繼承的屬性，</em><em>{{domxref("HTMLElement")}}.</em></p>
+_從父代繼承的屬性，{{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.height")}}</dt>
- <dd>Is a positive <code>integer</code> reflecting the {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of <code>150</code> is used.</dd>
- <dt>{{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.</dd>
- <dt>{{domxref("HTMLCanvasElement.width")}}</dt>
- <dd>Is a positive <code>integer</code> reflecting the {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of <code>300</code> is used.</dd>
- <dt>{{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}</dt>
- <dd>Is a <code>function</code> that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. <a href="https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/">See this blog post.</a></dd>
-</dl>
+- {{domxref("HTMLCanvasElement.height")}}
+  - : Is a positive `integer` reflecting the {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used.
+- {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
+  - : Is a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
+- {{domxref("HTMLCanvasElement.width")}}
+  - : Is a positive `integer` reflecting the {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used.
+- {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
+  - : Is a `function` that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>從父代繼承的方法, </em><em>{{domxref("HTMLElement")}}.</em></p>
+_從父代繼承的方法,_ _{{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}</dt>
- <dd>Returns a {{domxref("CanvasCaptureMediaStream")}} that is a real-time video capture of the surface of the canvas.</dd>
- <dt>{{domxref("HTMLCanvasElement.getContext()")}}</dt>
- <dd>Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with <code>"2d"</code> returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with <code>"experimental-webgl"</code> (or <code>"webgl"</code>) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement <a href="/en-US/docs/Web/WebGL">WebGL</a>.</dd>
- <dt>{{domxref("HTMLCanvasElement.toDataURL()")}}</dt>
- <dd>Returns a data-URL containing a representation of the image in the format specified by the <code>type</code> parameter (defaults to <code>png</code>). The returned image is in a resolution of 96dpi.</dd>
- <dt>{{domxref("HTMLCanvasElement.toBlob()")}}</dt>
- <dd>Creates a {{domxref("Blob")}} object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent.</dd>
- <dt>{{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("File")}} object representing the image contained in the canvas; this file is a memory-based file, with the specified <code>name</code>. If <code>type</code> is not specified, the image type is <code>image/png</code>.</dd>
-</dl>
+- {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
+  - : Returns a {{domxref("CanvasCaptureMediaStream")}} that is a real-time video capture of the surface of the canvas.
+- {{domxref("HTMLCanvasElement.getContext()")}}
+  - : Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with `"2d"` returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with `"experimental-webgl"` (or `"webgl"`) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/WebGL).
+- {{domxref("HTMLCanvasElement.toDataURL()")}}
+  - : Returns a data-URL containing a representation of the image in the format specified by the `type` parameter (defaults to `png`). The returned image is in a resolution of 96dpi.
+- {{domxref("HTMLCanvasElement.toBlob()")}}
+  - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent.
+- {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Returns a {{domxref("File")}} object representing the image contained in the canvas; this file is a memory-based file, with the specified `name`. If `type` is not specified, the image type is `image/png`.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.HTMLCanvasElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{HTMLElement("canvas")}}.</li>
-</ul>
+- HTML element implementing this interface: {{HTMLElement("canvas")}}.

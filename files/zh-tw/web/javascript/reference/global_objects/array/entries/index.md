@@ -12,27 +12,28 @@ tags:
   - 陣列
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>entries()</strong></code> 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（<code><strong>Array Iterator</strong></code>）物件。</p>
+**`entries()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（**`Array Iterator`**）物件。
 
-<div>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
+## 語法
 
+```plain
+a.entries()
+```
 
-<h2 id="語法">語法</h2>
+### 回傳值
 
-<pre class="syntaxbox"><var>a</var>.entries()</pre>
+一個新的 {{jsxref("Array")}} 迭代器物件。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>一個新的 {{jsxref("Array")}} 迭代器物件。</p>
+### 使用 [for…of](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 進行迭代
 
-<h2 id="範例">範例</h2>
-
-<h3 id="使用_for…of_進行迭代">使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 進行迭代</h3>
-
-<pre class="brush:js">var a = ['a', 'b', 'c'];
+```js
+var a = ['a', 'b', 'c'];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -41,28 +42,22 @@ for (let e of iterator) {
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.entries")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.entries")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols">迭代協議</a></li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- [for...of](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of)
+- [迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)

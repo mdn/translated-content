@@ -3,47 +3,48 @@ title: 元素選擇器
 slug: Web/CSS/Type_selectors
 translation_of: Web/CSS/Type_selectors
 ---
-<div>{{CSSRef}}<br>
-<strong>CSS 元素選擇器 （也稱 型態選擇器）</strong>依照 Node 節點名稱選取匹配的 Element 元素。換句話說，此選擇器選取在 Document 文件內所有指定該型態的元素。</div>
+{{CSSRef}}
+**CSS 元素選擇器 （也稱 型態選擇器）**依照 Node 節點名稱選取匹配的 Element 元素。換句話說，此選擇器選取在 Document 文件內所有指定該型態的元素。
 
-<div> </div>
-
-<pre class="brush: css no-line-numbers">/* 全部的 &lt;a&gt; 元素。*/
+```css
+/* 全部的 <a> 元素。*/
 a {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">element { <em>style properties</em> }
-</pre>
+```plain
+element { style properties }
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   background-color: skyblue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;Here's a span with some text.&lt;/span&gt;
-&lt;p&gt;Here's a p with some text.&lt;/p&gt;
-&lt;span&gt;Here's a span with more text.&lt;/span&gt;
-</pre>
+```html
+<span>Here's a span with some text.</span>
+<p>Here's a p with some text.</p>
+<span>Here's a span with more text.</span>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', '100%', 150)}}</p>
+{{EmbedLiveSample('Example', '100%', 150)}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("css.selectors.type")}}</p>
+{{Compat("css.selectors.type")}}

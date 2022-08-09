@@ -3,34 +3,29 @@ title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
-<p>{{JSRef}}{{SeeCompatTable}}</p>
+{{JSRef}}{{SeeCompatTable}}
 
-<p><code>BigInt</code> 是一個內建的物件，提供了表示大於2^53的整數的功能 (2^53是JavaScript原生的{{JSxRef("Number")}}能夠表示的最大值)</p>
+`BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">BigInt(value);
-</pre>
+```js
+BigInt(value);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>value</code></dt>
- <dd>欲創建的數值，可以為整數或字串。</dd>
-</dl>
+- `value`
+  - : 欲創建的數值，可以為整數或字串。
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>BigInt()</code> 不和 {{JSxRef("Operators/new", "new")}} 一起使用。</p>
-</div>
+> **備註：** `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
 
-<dl>
-</dl>
+## 說明
 
-<h2 id="說明">說明</h2>
+`BigInt` 是透過在一個數值後加上 `n` ，例如 `10n` ，或呼叫 `BigInt()` 所生成的。
 
-<p><code>BigInt</code> 是透過在一個數值後加上 <code>n</code> ，例如 <code>10n</code> ，或呼叫 <code>BigInt()</code> 所生成的。</p>
-
-<pre class="brush: js">const theBiggestInt = 9007199254740991n;
+```js
+const theBiggestInt = 9007199254740991n;
 
 const alsoHuge = BigInt(9007199254740991);
 // ↪ 9007199254740991n
@@ -43,34 +38,35 @@ const hugeHex = BigInt("0x1fffffffffffff");
 
 const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
 // ↪ 9007199254740991n
-</pre>
+```
 
-<p><code>BigInt</code> 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 <code>Number</code> 的實體混用運算子。</p>
+`BigInt` 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 `Number` 的實體混用運算子。
 
-<div class="notecard warning">
-<p><strong>警告：</strong> {{JSxRef("Number")}} 和 <code>BigInt</code> 不能混和計算 — 他們必須被轉換到同一個型態。</p>
+> **警告：** {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
+>
+> 然而，在相互轉換時要注意， `BigInt` 在被轉換成 `Number` 時可能會遺失部分精度的資訊。
 
-<p>然而，在相互轉換時要注意， <code>BigInt</code> 在被轉換成 <code>Number</code> 時可能會遺失部分精度的資訊。</p>
-</div>
+### 類別資訊
 
-<h3 id="類別資訊">類別資訊</h3>
+當使用 `typeof` 測試時，一個 `BigInt` 會回傳 "bigint"：
 
-<p>當使用 <code>typeof</code> 測試時，一個 <code>BigInt</code> 會回傳 "bigint"：</p>
-
-<pre class="brush: js">typeof 1n === 'bigint'; // true
+```js
+typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true
-</pre>
+```
 
-<p>當使用 <code>Object</code> 來包裹時，<code>BigInt</code> 會被看成是普通的 "object" 型態：</p>
+當使用 `Object` 來包裹時，`BigInt` 會被看成是普通的 "object" 型態：
 
-<pre class="brush: js">typeof Object(1n) === 'object'; // true
-</pre>
+```js
+typeof Object(1n) === 'object'; // true
+```
 
-<h3 id="Operators">Operators</h3>
+### Operators
 
-<p>下列的運算子可以被用在 <code>BigInt</code> 上 (或由object包裹的 <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
+下列的運算子可以被用在 `BigInt` 上 (或由 object 包裹的 `BigInt`): `+`, `*`, `-`, `**`, `%`.
 
-<pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+```js
+const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
 // ↪ 9007199254740991
 
 const maxPlusOne = previousMaxSafe + 1n;
@@ -93,72 +89,77 @@ const bigN = 2n ** 54n;
 
 bigN * -1n
 // ↪ –18014398509481984n
-</pre>
+```
 
-<p><code>/</code> 運算子也同樣的能夠運行。然而，因為型態是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。</p>
+`/` 運算子也同樣的能夠運行。然而，因為型態是 `BigInt` 而不是 `BigDecimal` ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。
 
-<div class="notecard warning">
-<p><strong>警告：</strong>回傳值帶小數的運算在使用<code>BigInt</code> 時小數部分會被捨去。</p>
-</div>
+> **警告：**回傳值帶小數的運算在使用`BigInt` 時小數部分會被捨去。
 
-<pre class="brush: js">const expected = 4n / 2n;
+```js
+const expected = 4n / 2n;
 // ↪ 2n
 
 const rounded = 5n / 2n;
 // ↪ 2n, not 2.5n
+```
 
-</pre>
+### 比較
 
-<h3 id="比較">比較</h3>
+一個 `BigInt` 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。
 
-<p>一個 <code>BigInt</code> 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。</p>
-
-<pre class="brush: js">0n === 0
+```js
+0n === 0
 // ↪ false
 
 0n == 0
-// ↪ true</pre>
+// ↪ true
+```
 
-<p>一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 可以像普通運算一樣比較。</p>
+一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 可以像普通運算一樣比較。
 
-<pre class="brush: js">1n &lt; 2
+```js
+1n < 2
 // ↪ true
 
-2n &gt; 1
+2n > 1
 // ↪ true
 
-2 &gt; 2
+2 > 2
 // ↪ false
 
-2n &gt; 2
+2n > 2
 // ↪ false
 
-2n &gt;= 2
-// ↪ true</pre>
+2n >= 2
+// ↪ true
+```
 
-<p>他們可以參雜在陣列中並照預期的被排序。</p>
+他們可以參雜在陣列中並照預期的被排序。
 
-<pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
+```js
+const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
 
 mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
-</pre>
+```
 
-<p>Note that comparisons with <code>Object</code>-wrapped <code>BigInt</code>s act as with other objects, only indicating equality when the same object instance is compared:</p>
+Note that comparisons with `Object`-wrapped `BigInt`s act as with other objects, only indicating equality when the same object instance is compared:
 
-<pre class="brush: js">0n === Object(0n); // false
+```js
+0n === Object(0n); // false
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
 o === o // true
-</pre>
+```
 
-<h3 id="Conditionals">Conditionals</h3>
+### Conditionals
 
-<p>A <code>BigInt</code> behaves like a {{JSxRef("Global_Objects/Number", "Number")}} in cases where it is converted to a {{JSxRef("Global_Objects/Boolean", "Boolean")}}: via the {{JSxRef("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} <code>||</code>, <code>&amp;&amp;</code>, and <code>!</code>; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.</p>
+A `BigInt` behaves like a {{JSxRef("Global_Objects/Number", "Number")}} in cases where it is converted to a {{JSxRef("Global_Objects/Boolean", "Boolean")}}: via the {{JSxRef("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, and `!`; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.
 
-<pre class="brush: js">if (0n) {
+```js
+if (0n) {
   console.log('Hello from the if!');
 } else {
   console.log('Hello from the else!');
@@ -169,7 +170,7 @@ o === o // true
 0n || 12n
 // ↪ 12n
 
-0n &amp;&amp; 12n
+0n && 12n
 // ↪ 0n
 
 Boolean(0n)
@@ -183,48 +184,45 @@ Boolean(12n)
 
 !0n
 // ↪ true
-</pre>
+```
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{JSxRef("BigInt.asIntN()")}}</dt>
- <dd>Clamps a BigInt value to a signed integer value, and returns that value.</dd>
- <dt>{{JSxRef("BigInt.asUintN()")}}</dt>
- <dd>Clamps a BigInt value to an unsigned integer value, and returns that value.</dd>
-</dl>
+- {{JSxRef("BigInt.asIntN()")}}
+  - : Clamps a BigInt value to a signed integer value, and returns that value.
+- {{JSxRef("BigInt.asUintN()")}}
+  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{JSxRef("BigInt.prototype")}}</dt>
- <dd>允許對一個 <code>BigInt</code> 物件增加其屬性。</dd>
-</dl>
+- {{JSxRef("BigInt.prototype")}}
+  - : 允許對一個 `BigInt` 物件增加其屬性。
 
-<h2 id="BigInt_物件實體"><code>BigInt</code> 物件實體</h2>
+## `BigInt` 物件實體
 
-<p>All <code>BigInt</code> instances inherit from <code>BigInt.prototype</code>. The prototype object of the <code>BigInt</code> constructor can be modified to affect all <code>BigInt</code> instances.</p>
+All `BigInt` instances inherit from `BigInt.prototype`. The prototype object of the `BigInt` constructor can be modified to affect all `BigInt` instances.
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<p>{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype", "Methods")}}</p>
+{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype", "Methods")}}
 
-<h2 id="建議用法">建議用法</h2>
+## 建議用法
 
-<h3 id="轉型">轉型</h3>
+### 轉型
 
-<p>因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 之間轉換可能造成精度遺失，建議當數值會超過2^53時只使用 <code>BigInt</code> ，而不要在兩者之間進行轉換。</p>
+因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 之間轉換可能造成精度遺失，建議當數值會超過 2^53 時只使用 `BigInt` ，而不要在兩者之間進行轉換。
 
-<h3 id="加密">加密</h3>
+### 加密
 
-<p><code>BigInt</code> 支援的運算並非常數時間。因此 <code>BigInt</code> <a href="https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html">不適用在加密學上</a>。</p>
+`BigInt` 支援的運算並非常數時間。因此 `BigInt` [不適用在加密學上](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="計算質數">計算質數</h3>
+### 計算質數
 
-<pre class="brush: js">function isPrime(p) {
-  for (let i = 2n; i * i &lt;= p; i++) {
+```js
+function isPrime(p) {
+  for (let i = 2n; i * i <= p; i++) {
     if (p % i === 0n) return false;
   }
   return true;
@@ -235,7 +233,7 @@ function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;
 
-  while (nth &gt;= 0n) {
+  while (nth >= 0n) {
     if (isPrime(maybePrime)) {
       nth -= 1n;
       prime = maybePrime;
@@ -247,18 +245,17 @@ function nthPrime(nth) {
 }
 
 nthPrime(20n)
-// ↪ 73n</pre>
+// ↪ 73n
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="另見">另見</h2>
+## 另見
 
-<ul>
- <li>{{JSxRef("Number")}}</li>
-</ul>
+- {{JSxRef("Number")}}

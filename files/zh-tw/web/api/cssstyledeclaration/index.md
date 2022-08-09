@@ -3,49 +3,44 @@ title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 translation_of: Web/API/CSSStyleDeclaration
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p><code>CSSStyleDeclaration</code> 表示了一個 CSS 屬性名值對（property-value pairs）的集合。它被用於幾個 API 當中：</p>
+`CSSStyleDeclaration` 表示了一個 CSS 屬性名值對（property-value pairs）的集合。它被用於幾個 API 當中：
 
-<ul>
- <li>{{domxref("HTMLElement.style")}} - to manipulate the style of a single element (&lt;elem style="..."&gt;);</li>
- <li>(TODO: reword) is an interface to the <a href="http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> returned by the <code><a href="/en/DOM/cssRule.style">style</a></code> property of a <code><a href="/en/DOM/cssRule">cssRule</a></code> in a <a href="/en/DOM/stylesheet">stylesheet</a>, when the rule is a <a href="/en/DOM/cssRule#CSSStyleRule">CSSStyleRule</a>.</li>
- <li><code>CSSStyleDeclaration</code> is also a <strong>read-only</strong> interface to the result of <a href="/en/DOM/window.getComputedStyle">window.getComputedStyle</a>().</li>
-</ul>
+- {{domxref("HTMLElement.style")}} - to manipulate the style of a single element (\<elem style="...">);
+- (TODO: reword) is an interface to the [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) returned by the [`style`](/en/DOM/cssRule.style) property of a [`cssRule`](/en/DOM/cssRule) in a [stylesheet](/en/DOM/stylesheet), when the rule is a [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule).
+- `CSSStyleDeclaration` is also a **read-only** interface to the result of [window.getComputedStyle](/en/DOM/window.getComputedStyle)().
 
-<h2 id="Syntax">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.cssText")}}</dt>
- <dd>Textual representation of the declaration block. Setting this attribute changes the style.</dd>
- <dt>{{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}</dt>
- <dd>The number of properties. See the {{domxref("CSSStyleDeclaration.item", 'item()')}} method below.</dd>
- <dt>{{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}</dt>
- <dd>The containing {{domxref("CSSRule")}}.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.cssText")}}
+  - : Textual representation of the declaration block. Setting this attribute changes the style.
+- {{domxref("CSSStyleDeclaration.length")}} {{readonlyInline}}
+  - : The number of properties. See the {{domxref("CSSStyleDeclaration.item", 'item()')}} method below.
+- {{domxref("CSSStyleDeclaration.parentRule")}} {{readonlyInline}}
+  - : The containing {{domxref("CSSRule")}}.
 
-<h2 id="Syntax">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyPriority()")}}</dt>
- <dd>Returns the optional priority, "important".</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyValue()")}}</dt>
- <dd>Returns the property value given a property name.</dd>
- <dt>{{domxref("CSSStyleDeclaration.item()")}}</dt>
- <dd>Returns a property name.</dd>
- <dt>{{domxref("CSSStyleDeclaration.removeProperty()")}}</dt>
- <dd>Removes a property from the CSS declaration block.</dd>
- <dt>{{domxref("CSSStyleDeclaration.setProperty()")}}</dt>
- <dd>Modifies an existing CSS property or creates a new CSS property in the declaration block/.</dd>
- <dt>{{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}</dt>
- <dd>Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or <code>null</code> for <a href="/en/CSS/Shorthand_properties">shorthand properties</a>.</dd>
-</dl>
+- {{domxref("CSSStyleDeclaration.getPropertyPriority()")}}
+  - : Returns the optional priority, "important".
+- {{domxref("CSSStyleDeclaration.getPropertyValue()")}}
+  - : Returns the property value given a property name.
+- {{domxref("CSSStyleDeclaration.item()")}}
+  - : Returns a property name.
+- {{domxref("CSSStyleDeclaration.removeProperty()")}}
+  - : Removes a property from the CSS declaration block.
+- {{domxref("CSSStyleDeclaration.setProperty()")}}
+  - : Modifies an existing CSS property or creates a new CSS property in the declaration block/.
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{Deprecated_Inline}}
+  - : Only supported via getComputedStyle in Firefox. Returns the property value as a {{ domxref("CSSPrimitiveValue") }} or `null` for [shorthand properties](/en/CSS/Shorthand_properties).
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush: js">var styleObj = document.styleSheets[0].cssRules[0].style;
+```js
+var styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
 for (var i = styleObj.length; i--;) {
@@ -53,18 +48,17 @@ for (var i = styleObj.length; i--;) {
   styleObj.removeProperty(nameString);
 }
 
-console.log(styleObj.cssText);</pre>
+console.log(styleObj.cssText);
+```
 
-<h2 id="Notes">備註</h2>
+## 備註
 
-<p>The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).</p>
+The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">DOM CSS Properties</a></li>
-</ul>
+- [DOM CSS Properties](/en-US/docs/Web/CSS/CSS_Properties_Reference)
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}

@@ -11,91 +11,90 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>findIndex()</strong></code> 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 <strong>index</strong>（索引）。如果沒有符合的對象，將返回 -1 。</p>
+**`findIndex()`** 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 **index**（索引）。如果沒有符合的對象，將返回 -1 。
 
-<div>{{EmbedInteractiveExample("pages/js/array-findindex.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
+另請參見 {{jsxref("Array.find", "find()")}} 方法，它返回陣列中找到的元素的**值**，而不是其索引。
 
+## 語法
 
-<div> </div>
+```plain
+arr.findIndex(callback[, thisArg])
+```
 
-<p>另請參見 {{jsxref("Array.find", "find()")}} 方法，它返回陣列中找到的元素的<strong>值</strong>，而不是其索引。</p>
+### 參數
 
-<h2 id="語法">語法</h2>
+- `callback`
 
-<pre class="syntaxbox"><var>arr</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</pre>
+  - : 針對陣列中的每個元素，都會執行該回呼函式，執行時會自動傳入下面三個參數：
 
-<h3 id="參數">參數</h3>
+    - `element`
+      - : 當前元素。
+    - `index`{{optional_inline}}
+      - : 當前元素的索引。
+    - `array`{{optional_inline}}
+      - : 呼叫 `findIndex` 的陣列。
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>針對陣列中的每個元素，都會執行該回呼函式，執行時會自動傳入下面三個參數：
- <dl>
-  <dt><code>element</code></dt>
-  <dd>當前元素。</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>當前元素的索引。</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>呼叫 <code>findIndex</code> 的陣列。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>可選的。執行 <strong>callback</strong> 時作為 this 對象的值。</dd>
-</dl>
+- `thisArg`{{optional_inline}}
+  - : 可選的。執行 **callback** 時作為 this 對象的值。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>An index in the array if an element passes the test; otherwise, <strong>-1</strong>.</p>
+An index in the array if an element passes the test; otherwise, **-1**.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>findIndex</code> 方法對陣列中的每一個索引：<code>0..length-1</code>（含）的元素執行一次 <code>callback</code> 直到有一個 <code>callback</code> 返回 truthy 值（一個可強制轉型（coerces）為 <code>true</code> 的值）。如果找到了一個這樣的元素，則 <code>findIndex</code> 將會立刻返回此次迭代的索引。若回呼函式從未回傳一個 truthy 值，或陣列的 <code>length</code> 為 0，則 <code>findIndex</code> 將會返回 -1。不像其他的陣列方法如 <code>some</code> 那樣，於稀疏（sparse）陣列上 <code>callback</code> <strong>仍會</strong>被呼叫，即使該索引的項目在陣列中並不存在。</p>
+`findIndex` 方法對陣列中的每一個索引：`0..length-1`（含）的元素執行一次 `callback` 直到有一個 `callback` 返回 truthy 值（一個可強制轉型（coerces）為 `true` 的值）。如果找到了一個這樣的元素，則 `findIndex` 將會立刻返回此次迭代的索引。若回呼函式從未回傳一個 truthy 值，或陣列的 `length` 為 0，則 `findIndex` 將會返回 -1。不像其他的陣列方法如 `some` 那樣，於稀疏（sparse）陣列上 `callback` **仍會**被呼叫，即使該索引的項目在陣列中並不存在。
 
-<p><code>callback</code> 被呼叫時會傳入三個參數：元素的值、元素的索引，以及被迭代的陣列物件。</p>
+`callback` 被呼叫時會傳入三個參數：元素的值、元素的索引，以及被迭代的陣列物件。
 
-<p>如果一個 <code>thisArg</code> 參數被提供給 <code>findIndex</code>，它將會被當作 <code>this</code> 使用在每次回呼函式被調用的時候。如果沒有被提供，將會使用 {{jsxref("undefined")}}。</p>
+如果一個 `thisArg` 參數被提供給 `findIndex`，它將會被當作 `this` 使用在每次回呼函式被調用的時候。如果沒有被提供，將會使用 {{jsxref("undefined")}}。
 
-<p><code>findIndex</code> 不會修改呼叫此方法的陣列。</p>
+`findIndex` 不會修改呼叫此方法的陣列。
 
-<p>在第一次呼叫 <code>callback</code> 函式時會確定元素的索引範圍，因此在 <code>findIndex</code> 方法開始執行之後添加到陣列的新元素將不會被 <code>callback</code> 函式訪問到。如果陣列中一個尚未被 <code>callback</code> 函式訪問到的元素的值被 <code>callback</code> 函式所改變，那麼當 <code>callback</code> 函式訪問到它時，它的值是將是根據它在陣列中的索引所訪問到的當前值；被刪除的元素仍然會被訪問到。</p>
+在第一次呼叫 `callback` 函式時會確定元素的索引範圍，因此在 `findIndex` 方法開始執行之後添加到陣列的新元素將不會被 `callback` 函式訪問到。如果陣列中一個尚未被 `callback` 函式訪問到的元素的值被 `callback` 函式所改變，那麼當 `callback` 函式訪問到它時，它的值是將是根據它在陣列中的索引所訪問到的當前值；被刪除的元素仍然會被訪問到。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="尋找陣列中首個質數元素的索引">尋找陣列中首個質數元素的索引</h3>
+### 尋找陣列中首個質數元素的索引
 
-<p>以下的範例演示了如何查找一個陣列中首個質數元素的索引，找不到則返回 -1。</p>
+以下的範例演示了如何查找一個陣列中首個質數元素的索引，找不到則返回 -1。
 
-<pre class="brush: js">function isPrime(element, index, array) {
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
-</pre>
+```
 
-<h3 id="使用箭頭函式尋找索引">使用箭頭函式尋找索引</h3>
+### 使用箭頭函式尋找索引
 
-<p>以下範例為使用箭頭函式尋找水果的索引。</p>
+以下範例為使用箭頭函式尋找水果的索引。
 
-<pre class="brush: js">const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
+```js
+const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit =&gt; fruit === "blueberries");
+const index = fruits.findIndex(fruit => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
@@ -107,7 +106,7 @@ if (!Array.prototype.findIndex) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
       if (typeof predicate !== 'function') {
@@ -120,8 +119,8 @@ if (!Array.prototype.findIndex) {
       // 5. Let k be 0.
       var k = 0;
 
-      // 6. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 6. Repeat, while k < len
+      while (k < len) {
         // a. Let Pk be ! ToString(k).
         // b. Let kValue be ? Get(O, Pk).
         // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
@@ -139,25 +138,19 @@ if (!Array.prototype.findIndex) {
     }
   });
 }
-</pre>
+```
 
-<p>如果您需要相容過時的不支援 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code> 的 JavaScript 引擎，最好不要使用 polyfill 來填充 <code>Array.prototype</code> 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。</p>
+如果您需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.findIndex")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.findIndex")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

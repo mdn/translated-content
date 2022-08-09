@@ -3,19 +3,22 @@ title: Event.target
 slug: Web/API/Event/target
 translation_of: Web/API/Event/target
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>指向最初觸發事件的 DOM 物件。與 {{domxref("event.currentTarget")}} 屬性不同的是，<code>event.currentTarget</code> 屬性總會指向目前於冒泡或捕捉階段正在處理該事件之事件處理器所註冊的 DOM 物件，而 <code>event.target</code> 屬性則是永遠指向觸發事件的 DOM 物件。</p>
+指向最初觸發事件的 DOM 物件。與 {{domxref("event.currentTarget")}} 屬性不同的是，`event.currentTarget` 屬性總會指向目前於冒泡或捕捉階段正在處理該事件之事件處理器所註冊的 DOM 物件，而 `event.target` 屬性則是永遠指向觸發事件的 DOM 物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">theTarget = event.target</pre>
+```plain
+theTarget = event.target
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>The <code>event.target</code> property can be used in order to implement <strong>event delegation</strong>.</p>
+The `event.target` property can be used in order to implement **event delegation**.
 
-<pre class="brush: js">// Make a list
+```js
+// Make a list
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -25,37 +28,36 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(e){
-  // e.target refers to the clicked &lt;li&gt; element
-  // This is different than e.currentTarget which would refer to the parent &lt;ul&gt; in this context
+  // e.target refers to the clicked <li> element
+  // This is different than e.currentTarget which would refer to the parent <ul> in this context
   e.target.style.visibility = 'hidden';
 }
 
 // Attach the listener to the list
-// It will fire when each &lt;li&gt; is clicked
+// It will fire when each <li> is clicked
 ul.addEventListener('click', hide, false);
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Event.target")}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<p>On IE 6-8 the event model is different. Event listeners are attached with the non-standard {{domxref('EventTarget.attachEvent')}} method. In this model, the event object has a {{domxref('Event.srcElement')}} property, instead of the <code>target</code> property, and it has the same semantics as <code>event.target</code>.</p>
+On IE 6-8 the event model is different. Event listeners are attached with the non-standard {{domxref('EventTarget.attachEvent')}} method. In this model, the event object has a {{domxref('Event.srcElement')}} property, instead of the `target` property, and it has the same semantics as `event.target`.
 
-<pre class="brush: js">function hide(e) {
+```js
+function hide(e) {
   // Support IE6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';
 }
-</pre>
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
-</ul>
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

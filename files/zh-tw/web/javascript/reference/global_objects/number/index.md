@@ -9,113 +9,110 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number</code></strong> JavaScript 物件是允許你操作數值的包覆物件. <code>Number</code> 物件是以 <code>Number()</code> 建構子來建立的。</p>
+**`Number`** JavaScript 物件是允許你操作數值的包覆物件. `Number` 物件是以 `Number()` 建構子來建立的。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">new Number(value);</pre>
+```plain
+new Number(value);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>value</code></dt>
- <dd>用來建立物件的數值。</dd>
-</dl>
+- `value`
+  - : 用來建立物件的數值。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p><code>Number</code> 物件主要的用途：</p>
+`Number` 物件主要的用途：
 
-<ul>
- <li>如果參數沒辦法被轉換成數字，則它會回傳 {{jsxref("NaN")}} 。</li>
- <li>在不是使用建構式的情境中(即不用 {{jsxref("Operators/new", "new")}} 運算子), <code>Number</code> 可以被用來轉換型別.</li>
-</ul>
+- 如果參數沒辦法被轉換成數字，則它會回傳 {{jsxref("NaN")}} 。
+- 在不是使用建構式的情境中(即不用 {{jsxref("Operators/new", "new")}} 運算子), `Number` 可以被用來轉換型別.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("Number.EPSILON")}}</dt>
- <dd>介於1和大於1的最小值之可表示的差。</dd>
- <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中 IEEE-754 雙精度範圍間的最大整數 (<code>2^53 - 1</code>) 。</dd>
- <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
- <dd>可表示的最大正整數。</dd>
- <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中 IEEE-754 雙精度範圍間的最小整數 (<code>-(2^53 - 1)</code>) 。</dd>
- <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
- <dd>可表示的最小值，即最靠近0的正整數?(<code><math><semantics><mrow><mn>5.00</mn><mo>×</mo><msup><mn>10</mn><mn>324</mn></msup></mrow><annotation encoding="TeX">5.00\times10^{324}</annotation></semantics></math></code>)。</dd>
- <dt>{{jsxref("Number.NaN")}}</dt>
- <dd>特別用來表示<strong>非數值</strong>的物件。</dd>
- <dt>{{jsxref("Number.NEGATIVE_INFINITY")}}</dt>
- <dd>特別用來表示<strong>負無窮</strong>的數值。</dd>
- <dt>{{jsxref("Number.POSITIVE_INFINITY")}}</dt>
- <dd>特別用來表示<strong>正無窮</strong>的數值。</dd>
- <dt>{{jsxref("Number.prototype")}}</dt>
- <dd>允許被添加到 <code>Number</code> 物件的屬性。</dd>
-</dl>
+- {{jsxref("Number.EPSILON")}}
+  - : 介於 1 和大於 1 的最小值之可表示的差。
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+  - : JavaScript 中 IEEE-754 雙精度範圍間的最大整數 (`2^53 - 1`) 。
+- {{jsxref("Number.MAX_VALUE")}}
+  - : 可表示的最大正整數。
+- {{jsxref("Number.MIN_SAFE_INTEGER")}}
+  - : JavaScript 中 IEEE-754 雙精度範圍間的最小整數 (`-(2^53 - 1)`) 。
+- {{jsxref("Number.MIN_VALUE")}}
+  - : 可表示的最小值，即最靠近 0 的正整數?(`5.00×103245.00\times10^{324}`)。
+- {{jsxref("Number.NaN")}}
+  - : 特別用來表示**非數值**的物件。
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+  - : 特別用來表示**負無窮**的數值。
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+  - : 特別用來表示**正無窮**的數值。
+- {{jsxref("Number.prototype")}}
+  - : 允許被添加到 `Number` 物件的屬性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("Number.isNaN()")}}</dt>
- <dd>判斷傳入的值是不是 NaN.</dd>
- <dt>{{jsxref("Number.isFinite()")}}</dt>
- <dd>判斷傳入的值是不是一個有限的數值。</dd>
- <dt>{{jsxref("Number.isInteger()")}}</dt>
- <dd>判斷傳入的值是不是一個整數。</dd>
- <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 <code>-(2^53 - 1)</code> 和 <code>2^53 - 1</code>之前)。</dd>
- <dt>{{jsxref("Number.parseFloat()")}}</dt>
- <dd>這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。</dd>
- <dt>{{jsxref("Number.parseInt()")}}</dt>
- <dd>這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。</dd>
-</dl>
+- {{jsxref("Number.isNaN()")}}
+  - : 判斷傳入的值是不是 NaN.
+- {{jsxref("Number.isFinite()")}}
+  - : 判斷傳入的值是不是一個有限的數值。
+- {{jsxref("Number.isInteger()")}}
+  - : 判斷傳入的值是不是一個整數。
+- {{jsxref("Number.isSafeInteger()")}}
+  - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
+- {{jsxref("Number.parseFloat()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+- {{jsxref("Number.parseInt()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
 
-<h2 id="Number_實體"><code>Number</code> 實體</h2>
+## `Number` 實體
 
-<p>所有 <code>Number</code> 實體都會繼承其建構式的 {{jsxref("Number.prototype")}}。<code>Number</code> 的原型物件可以被修改並作用在所有 <code>Number</code> 實體。</p>
+所有 `Number` 實體都會繼承其建構式的 {{jsxref("Number.prototype")}}。`Number` 的原型物件可以被修改並作用在所有 `Number` 實體。
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', '方法')}}</div>
+{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', '方法')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_Number_物件去指派值給數值變數">使用 <code>Number</code> 物件去指派值給數值變數</h3>
+### 使用 `Number` 物件去指派值給數值變數
 
-<p>下列的範例使用 <code>Number</code> 物件的屬性去指派值給數個數值變數：</p>
+下列的範例使用 `Number` 物件的屬性去指派值給數個數值變數：
 
-<pre class="brush: js">var biggestNum = Number.MAX_VALUE;
+```js
+var biggestNum = Number.MAX_VALUE;
 var smallestNum = Number.MIN_VALUE;
 var infiniteNum = Number.POSITIVE_INFINITY;
 var negInfiniteNum = Number.NEGATIVE_INFINITY;
 var notANum = Number.NaN;
-</pre>
+```
 
-<h3 id="Number_的整數範圍"><code>Number</code> 的整數範圍</h3>
+### `Number` 的整數範圍
 
-<p>下面的範例展示了最小和最大的整數，其可以被表示成 <code>Number</code> 物件(細節請參考 ECMAScript standard, chapter <em>8.5 The Number Type</em>)：</p>
+下面的範例展示了最小和最大的整數，其可以被表示成 `Number` 物件(細節請參考 ECMAScript standard, chapter _8.5 The Number Type_)：
 
-<pre class="brush: js">var biggestInt = 9007199254740992;
+```js
+var biggestInt = 9007199254740992;
 var smallestInt = -9007199254740992;
-</pre>
+```
 
-<p>當在解析已經被序列化的 JSON 的資料時，填入這個範圍之外的整數並且 JSON 剖析器強制將其轉成 <code>Number</code> 型別造成損壞是可預期的。將範圍之外的正數換成以 {{jsxref("String")}} 表示反倒是一個可行的替代方案。</p>
+當在解析已經被序列化的 JSON 的資料時，填入這個範圍之外的整數並且 JSON 剖析器強制將其轉成 `Number` 型別造成損壞是可預期的。將範圍之外的正數換成以 {{jsxref("String")}} 表示反倒是一個可行的替代方案。
 
-<h3 id="使用_Number_轉換_Date_物件為_Unix_時間戳記">使用 <code>Number</code> 轉換 <code>Date</code> 物件為 Unix 時間戳記</h3>
+### 使用 `Number` 轉換 `Date` 物件為 Unix 時間戳記
 
-<p>下面的範例將 <code>Number</code> 視為函式，並且使用它將 {{jsxref("Date")}} 轉換成時間戳記：</p>
+下面的範例將 `Number` 視為函式，並且使用它將 {{jsxref("Date")}} 轉換成時間戳記：
 
-<pre class="brush: js">var d = new Date('December 17, 1995 03:24:00');
+```js
+var d = new Date('December 17, 1995 03:24:00');
 console.log(Number(d)); // 819199440000
+```
 
-</pre>
+### 轉換數值字串成數值
 
-<h3 id="轉換數值字串成數值">轉換數值字串成數值</h3>
-
-<pre class="brush: js">Number("123")     // 123
+```js
+Number("123")     // 123
 Number("12.3")    // 12.3
 Number("")        // 0
 Number("0x11")    // 17
@@ -123,19 +120,17 @@ Number("0b11")    // 3
 Number("0o11")    // 9
 Number("foo")     // NaN
 Number("100a")    // NaN
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("NaN")}}</li>
- <li>The {{jsxref("Math")}} global object</li>
-</ul>
+- {{jsxref("NaN")}}
+- The {{jsxref("Math")}} global object

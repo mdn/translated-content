@@ -6,79 +6,80 @@ tags:
   - 隨機
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>函數 <strong><code>Math.random()</code></strong> 會回傳一個偽隨機小數 (pseudo-random) 介於0到1之間(包含 0，不包含1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，您可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}</p>
+函數 **`Math.random()`** 會回傳一個偽隨機小數 (pseudo-random) 介於 0 到 1 之間(包含 0，不包含 1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，您可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}
 
-<div class="notecard note">
-<p><strong>備註：</strong><code>Math.random()</code> 所產生的偽隨機小數不符合加密學安全性要求。<em>請勿使用於任何加密、資安相關領域。</em></p>
+> **備註：**`Math.random()` 所產生的偽隨機小數不符合加密學安全性要求。_請勿使用於任何加密、資安相關領域。_
+>
+> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/en-US/docs/Web/API/RandomSource/getRandomValues)
 
-<p><em>如有加密需求建議參考Web Crypto API</em><a href="/en-US/docs/Web/API/RandomSource/getRandomValues"><code>window.crypto.getRandomValues()</code></a></p>
-</div>
+## 語法
 
-<h2 id="語法">語法</h2>
+```plain
+Math.random()
+```
 
-<pre class="syntaxbox">Math.random()</pre>
+### 回傳值 Return value
 
-<h3 id="回傳值_Return_value">回傳值 Return value</h3>
+回傳一個偽隨機小數 (pseudo-random)，小數也稱浮點數； 介於 0 到 1 之間(包含 0，不包含 1) 。
 
-<p>回傳一個偽隨機小數 (pseudo-random)，小數也稱浮點數； 介於0到1之間(包含 0，不包含1) 。</p>
+## 範例
 
-<h2 id="範例">範例</h2>
+請留意 JavaScript 中的數字與許多語言一樣使用 IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. If extremely large bounds are chosen (2^53 or higher), it's possible in _extremely_ rare cases to calculate the usually-excluded upper bound.
 
-<p>請留意JavaScript中的數字與許多語言一樣使用 IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for <code>Math.random()</code> itself) aren't exact. If extremely large bounds are chosen (2^53 or higher), it's possible in <em>extremely</em> rare cases to calculate the usually-excluded upper bound.</p>
+### Getting a random number between 0 (inclusive) and 1 (exclusive)
 
-<h3 id="Getting_a_random_number_between_0_inclusive_and_1_exclusive">Getting a random number between 0 (inclusive) and 1 (exclusive)</h3>
-
-<pre class="brush: js">function getRandom() {
+```js
+function getRandom() {
   return Math.random();
 }
-</pre>
+```
 
-<h3 id="Getting_a_random_number_between_two_values">Getting a random number between two values</h3>
+### Getting a random number between two values
 
-<p>This example returns a random number between the specified values. The returned value is no lower than (and may possibly equal) <code>min</code>, and is less than (and not equal) <code>max</code>.</p>
+This example returns a random number between the specified values. The returned value is no lower than (and may possibly equal) `min`, and is less than (and not equal) `max`.
 
-<pre class="brush: js">function getRandomArbitrary(min, max) {
+```js
+function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
-</pre>
+```
 
-<h3 id="Getting_a_random_integer_between_two_values">Getting a random integer between two values</h3>
+### Getting a random integer between two values
 
-<p>This example returns a random <em>integer</em> between the specified values. The value is no lower than <code>min</code> (or the next integer greater than <code>min</code> if <code>min</code> isn't an integer), and is less than (but not equal to) <code>max</code>.</p>
+This example returns a random _integer_ between the specified values. The value is no lower than `min` (or the next integer greater than `min` if `min` isn't an integer), and is less than (but not equal to) `max`.
 
-<pre class="brush: js">function getRandomInt(min, max) {
+```js
+function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
-</pre>
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> might be tempting to use <code>Math.round()</code> to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.</p>
-</div>
+> **備註：** might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
-<h3 id="Getting_a_random_integer_between_two_values_inclusive">Getting a random integer between two values, inclusive</h3>
+### Getting a random integer between two values, inclusive
 
-<p>While the <code>getRandomInt()</code> function above is inclusive at the minimum, it's exclusive at the maximum. What if you need the results to be inclusive at both the minimum and the maximum? The <code>getRandomIntInclusive()</code> function below accomplishes that.</p>
+While the `getRandomInt()` function above is inclusive at the minimum, it's exclusive at the maximum. What if you need the results to be inclusive at both the minimum and the maximum? The `getRandomIntInclusive()` function below accomplishes that.
 
-<pre class="brush: js">function getRandomIntInclusive(min, max) {
+```js
+function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="其他參考資料">其他參考資料</h2>
+## 其他參考資料
 
-<ul>
- <li><a href="/en-US/docs/Web/API/RandomSource/getRandomValues"><code>window.crypto.getRandomValues()</code></a></li>
-</ul>
+- [`window.crypto.getRandomValues()`](/en-US/docs/Web/API/RandomSource/getRandomValues)

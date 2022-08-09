@@ -3,44 +3,43 @@ title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
 translation_of: Web/API/Element/getAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p><code>getAttribute()</code> 函式會回傳該網頁元素的屬性。 如果該屬性不存在，其回傳值會是<code>null或</code> <code>""</code> (空字串); 詳見 <a href="#notes">Notes</a> 。</p>
+`getAttribute()` 函式會回傳該網頁元素的屬性。 如果該屬性不存在，其回傳值會是`null或` `""` (空字串); 詳見 [Notes](#notes) 。
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>var </em><code><em>attribute</em></code> = element.getAttribute(<code><em>attributeName</em></code>);
-</pre>
+```plain
+var attribute = element.getAttribute(attributeName);
+```
 
-<p>where</p>
+where
 
-<ul>
- <li><code><em>attribute</em></code> is a string containing the value of <code><em>attributeName</em></code>.</li>
- <li><code><em>attributeName</em></code> is the name of the attribute whose value you want to get.</li>
-</ul>
+- `attribute` is a string containing the value of `attributeName`.
+- `attributeName` is the name of the attribute whose value you want to get.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var div1 = document.getElementById("div1");
+```js
+var div1 = document.getElementById("div1");
 var align = div1.getAttribute("align");
 
-alert(align); // shows the value of align for the element with id="div1"</pre>
+alert(align); // shows the value of align for the element with id="div1"
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When called on an HTML element in a DOM flagged as an HTML document, <code>getAttribute()</code> lower-cases its argument before proceeding.</p>
+When called on an HTML element in a DOM flagged as an HTML document, `getAttribute()` lower-cases its argument before proceeding.
 
-<p>Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera, Safari, Konqueror, and iCab, as a non-exhaustive list) return <code>null</code> when the specified attribute does not exist on the specified element and this is what <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">the current DOM specification draft</a> specifies. The old DOM 3 Core specification, on the other hand, says that the correct return value in this case is actually the <em>empty string</em>, and some DOM implementations implement this behavior. The implementation of getAttribute in XUL (Gecko) actually follows the DOM 3 Core specification and returns an empty string. Consequently, you should use {{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to calling <code>getAttribute()</code> if it is possible that the requested attribute does not exist on the specified element.</p>
+Essentially all web browsers (Firefox, Internet Explorer, recent versions of Opera, Safari, Konqueror, and iCab, as a non-exhaustive list) return `null` when the specified attribute does not exist on the specified element and this is what [the current DOM specification draft](http://dom.spec.whatwg.org/#dom-element-getattribute) specifies. The old DOM 3 Core specification, on the other hand, says that the correct return value in this case is actually the _empty string_, and some DOM implementations implement this behavior. The implementation of getAttribute in XUL (Gecko) actually follows the DOM 3 Core specification and returns an empty string. Consequently, you should use {{domxref("element.hasAttribute()")}} to check for an attribute's existence prior to calling `getAttribute()` if it is possible that the requested attribute does not exist on the specified element.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Element.getAttribute")}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9">DOM Level 2 Core: getAttribute</a> (introduced in <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute">DOM Level 1 Core</a>)</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+- [DOM Level 2 Core: getAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-666EE0F9) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute))
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

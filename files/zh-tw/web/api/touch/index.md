@@ -3,84 +3,68 @@ title: Touch
 slug: Web/API/Touch
 translation_of: Web/API/Touch
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p><strong><code>Touch</code></strong> 介面表示了一個於觸控裝置上接觸的單一觸碰點。觸碰點通常是由手指或觸控筆所接觸，而裝置可能為觸控螢幕或觸控板。</p>
+**`Touch`** 介面表示了一個於觸控裝置上接觸的單一觸碰點。觸碰點通常是由手指或觸控筆所接觸，而裝置可能為觸控螢幕或觸控板。
 
-<p>{{ domxref("Touch.radiusX") }}、{{ domxref("Touch.radiusY") }} 及 {{ domxref("Touch.rotationAngle") }} 描述了使用者與螢幕之間接觸的區域—<em>觸碰區（touch area）</em>，這對處理不精確的指向設備（如手指）來說相當有幫助。這些數值被用來描述一個盡可能與整個接觸面積相匹配的橢圓（如使用者的指尖）。{{experimental_inline}}</p>
+{{ domxref("Touch.radiusX") }}、{{ domxref("Touch.radiusY") }} 及 {{ domxref("Touch.rotationAngle") }} 描述了使用者與螢幕之間接觸的區域—_觸碰區（touch area）_，這對處理不精確的指向設備（如手指）來說相當有幫助。這些數值被用來描述一個盡可能與整個接觸面積相匹配的橢圓（如使用者的指尖）。{{experimental_inline}}
 
-<div class="note">
-<p><strong>Note:</strong> Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the <code>force</code> value will always be 0. This may also be the case for <code>radiusX</code> and <code>radiusY</code>; if the hardware reports only a single point, these values will be 1.</p>
-</div>
+> **備註：** Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the `force` value will always be 0. This may also be the case for `radiusX` and `radiusY`; if the hardware reports only a single point, these values will be 1.
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("Touch.Touch", "Touch()")}} {{experimental_inline}}</dt>
- <dd>Creates a Touch object.</dd>
-</dl>
+- {{domxref("Touch.Touch", "Touch()")}} {{experimental_inline}}
+  - : Creates a Touch object.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>This interface has no parent, and doesn't inherits or implements any other property.</em></p>
+_This interface has no parent, and doesn't inherits or implements any other property._
 
-<h3 id="基本屬性">基本屬性</h3>
+### 基本屬性
 
-<dl>
- <dt>{{ domxref("Touch.identifier") }} {{readonlyInline}}</dt>
- <dd>Returns a unique identifier for this <code>Touch</code> object. A given touch point (say, by a finger) will have the same identifier for the duration of its movement around the surface. This lets you ensure that you're tracking the same touch all the time.</dd>
- <dt><strong>{{ domxref("Touch.screenX") }} </strong>{{readonlyInline}}</dt>
- <dd>Returns the X coordinate of the touch point relative to the left edge of the screen.</dd>
- <dt><strong>{{ domxref("Touch.screenY") }} </strong>{{readonlyInline}}</dt>
- <dd>Returns the Y coordinate of the touch point relative to the top edge of the screen.</dd>
- <dt><strong>{{ domxref("Touch.clientX") }} </strong>{{readonlyInline}}</dt>
- <dd>Returns the X coordinate of the touch point relative to the left edge of the browser viewport, not including any scroll offset.</dd>
- <dt><strong>{{ domxref("Touch.clientY") }} </strong>{{readonlyInline}}</dt>
- <dd>Returns the Y coordinate of the touch point relative to the top edge of the browser viewport, not including any scroll offset.</dd>
- <dt>{{ domxref("Touch.pageX") }} {{readonlyInline}}</dt>
- <dd>Returns the X coordinate of the touch point relative to the left edge of the document. Unlike <code>clientX</code>, this value includes the horizontal scroll offset, if any.</dd>
- <dt>{{ domxref("Touch.pageY") }} {{readonlyInline}}</dt>
- <dd>Returns the Y coordinate of the touch point relative to the top of the document. Unlike <code>clientY,</code> this value includes the vertical scroll offset, if any.</dd>
- <dt>{{ domxref("Touch.target") }} {{readonlyInline}}</dt>
- <dd>Returns the {{ domxref("Element")}} on which the touch point started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document.</dd>
-</dl>
+- {{ domxref("Touch.identifier") }} {{readonlyInline}}
+  - : Returns a unique identifier for this `Touch` object. A given touch point (say, by a finger) will have the same identifier for the duration of its movement around the surface. This lets you ensure that you're tracking the same touch all the time.
+- **{{ domxref("Touch.screenX") }}** {{readonlyInline}}
+  - : Returns the X coordinate of the touch point relative to the left edge of the screen.
+- **{{ domxref("Touch.screenY") }}** {{readonlyInline}}
+  - : Returns the Y coordinate of the touch point relative to the top edge of the screen.
+- **{{ domxref("Touch.clientX") }}** {{readonlyInline}}
+  - : Returns the X coordinate of the touch point relative to the left edge of the browser viewport, not including any scroll offset.
+- **{{ domxref("Touch.clientY") }}** {{readonlyInline}}
+  - : Returns the Y coordinate of the touch point relative to the top edge of the browser viewport, not including any scroll offset.
+- {{ domxref("Touch.pageX") }} {{readonlyInline}}
+  - : Returns the X coordinate of the touch point relative to the left edge of the document. Unlike `clientX`, this value includes the horizontal scroll offset, if any.
+- {{ domxref("Touch.pageY") }} {{readonlyInline}}
+  - : Returns the Y coordinate of the touch point relative to the top of the document. Unlike `clientY,` this value includes the vertical scroll offset, if any.
+- {{ domxref("Touch.target") }} {{readonlyInline}}
+  - : Returns the {{ domxref("Element")}} on which the touch point started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document.
 
-<h3 id="觸碰區（Touch_area）">觸碰區（Touch area）</h3>
+### 觸碰區（Touch area）
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<dl>
- <dt>{{ domxref("Touch.radiusX") }} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the X radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as <code>screenX</code>.</dd>
- <dt>{{ domxref("Touch.radiusY") }} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as <code>screenY</code>.</dd>
- <dt>{{ domxref("Touch.rotationAngle") }} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the angle (in degrees) that the ellipse described by radiusX and radiusY must be rotated, clockwise, to most accurately cover the area of contact between the user and the surface.</dd>
- <dt>{{ domxref("Touch.force") }}{{readonlyInline}} {{experimental_inline}}</dt>
- <dd>Returns the amount of pressure being applied to the surface by the user, as a <code>float</code> between <code>0.0</code> (no pressure) and <code>1.0</code> (maximum pressure).</dd>
-</dl>
+- {{ domxref("Touch.radiusX") }} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the X radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenX`.
+- {{ domxref("Touch.radiusY") }} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the screen. The value is in pixels of the same scale as `screenY`.
+- {{ domxref("Touch.rotationAngle") }} {{readonlyInline}} {{experimental_inline}}
+  - : Returns the angle (in degrees) that the ellipse described by radiusX and radiusY must be rotated, clockwise, to most accurately cover the area of contact between the user and the surface.
+- {{ domxref("Touch.force") }}{{readonlyInline}} {{experimental_inline}}
+  - : Returns the amount of pressure being applied to the surface by the user, as a `float` between `0.0` (no pressure) and `1.0` (maximum pressure).
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>This interface has no method and no parent, and doesn't inherits or implements any method.</em></p>
+_This interface has no method and no parent, and doesn't inherits or implements any method._
 
-<dl>
-</dl>
-
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Touch")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Touch_events","Touch Events Overview")}}</li>
- <li>{{ domxref("Document.createTouch()") }}</li>
-</ul>
-
-<dl>
-</dl>
+- {{domxref("Touch_events","Touch Events Overview")}}
+- {{ domxref("Document.createTouch()") }}

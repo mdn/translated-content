@@ -3,36 +3,36 @@ title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.ownerDocument</strong></code> 唯讀屬性會回傳一個此節點所屬的的頂層 <code>document</code> 物件。</p>
+**`Node.ownerDocument`** 唯讀屬性會回傳一個此節點所屬的的頂層 `document` 物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>document</var> = <var>element</var>.ownerDocument
-</pre>
+```plain
+document = element.ownerDocument
+```
 
-<ul>
- <li><code>document</code> is the {{domxref("Document", "document")}} object parent of the current element.</li>
-</ul>
+- `document` is the {{domxref("Document", "document")}} object parent of the current element.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush:js">// given a node "p", get the top-level HTML child
+```js
+// given a node "p", get the top-level HTML child
 // of the document object
 
 var d = p.ownerDocument;
 var html = d.documentElement;
-</pre>
+```
 
-<h2 id="備註">備註</h2>
+## 備註
 
-<p>The <code>document</code> object returned by this property is the main object with which all the child nodes in the actual HTML document are created. If this property is used on a node that is itself a document, the result is <code>null</code>.</p>
+The `document` object returned by this property is the main object with which all the child nodes in the actual HTML document are created. If this property is used on a node that is itself a document, the result is `null`.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Node.ownerDocument")}}

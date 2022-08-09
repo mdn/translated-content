@@ -12,54 +12,46 @@ tags:
   - TopicStub
 translation_of: Web/API/AnimationEvent
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Animations API")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong><code>AnimationEvent</code></strong> 介面表現提供<a href="/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations">動畫</a>相關資訊的事件。</p>
+**`AnimationEvent`** 介面表現提供[動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)相關資訊的事件。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="性能">性能</h2>
+## 性能
 
-<p><em>另外從其父 {{domxref("Event")}} 繼承屬性</em>。</p>
+_另外從其父 {{domxref("Event")}} 繼承屬性_。
 
-<dl>
- <dt>{{domxref("AnimationEvent.animationName")}} {{readonlyInline}}</dt>
- <dd>是一個{{domxref("DOMString")}}包含的值 {{cssxref("animation-name")}} CSS屬性與過渡有關。</dd>
- <dt>{{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}</dt>
- <dd>是一個<code>float</code>給予時間的動畫已經運行，以秒為單位，當該事件燒製，不含動畫被暫停的任何時間量。為一個<code>"animationstart"</code>事件，<code>elapsedTime</code>是<code>0.0</code>，除非有一個負值{{cssxref("animation-delay")}}，在這種情況下，該事件將與燒製<code>elapsedTime</code>含有 <code>(-1 * </code><em>delay</em><code>)</code>。</dd>
- <dt>{{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}</dt>
- <dd>是一個{{domxref("DOMString")}}，從<code>"::"</code>，包含的名字<a href="/zh-TW/docs/Web/CSS/Pseudo-elements">虛擬元素</a>的動畫運行。如果動畫上不偽元素，但該元素，一個空字符串上運行<code>：''。</code></dd>
-</dl>
+- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
+  - : 是一個{{domxref("DOMString")}}包含的值 {{cssxref("animation-name")}} CSS 屬性與過渡有關。
+- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
+  - : 是一個`float`給予時間的動畫已經運行，以秒為單位，當該事件燒製，不含動畫被暫停的任何時間量。為一個`"animationstart"`事件，`elapsedTime`是`0.0`，除非有一個負值{{cssxref("animation-delay")}}，在這種情況下，該事件將與燒製`elapsedTime`含有 `(-1 * `_delay_`)`。
+- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
+  - : 是一個{{domxref("DOMString")}}，從`"::"`，包含的名字[虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)的動畫運行。如果動畫上不偽元素，但該元素，一個空字符串上運行`：''。`
 
-<h2 id="構造函數">構造函數</h2>
+## 構造函數
 
-<dl>
- <dt>{{domxref("AnimationEvent.AnimationEvent","AnimationEvent()")}}</dt>
- <dd>創建一個<code>AnimationEvent</code>事件具有給定參數。</dd>
-</dl>
+- {{domxref("AnimationEvent.AnimationEvent","AnimationEvent()")}}
+  - : 創建一個`AnimationEvent`事件具有給定參數。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>同時繼承其父{{domxref("事件")}}方法</em>。</p>
+_同時繼承其父{{domxref("事件")}}方法_。
 
-<dl>
- <dt>{{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
- <dd>初始化<code>AnimationEvent</code> 使用過時的創建 {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} 方法。</dd>
-</dl>
+- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
+  - : 初始化`AnimationEvent` 使用過時的創建 {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} 方法。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
+## 瀏覽器兼容性
 
 {{Compat("api.AnimationEvent")}}
 
-<h2 id="另請參見">另請參見</h2>
+## 另請參見
 
-<ul>
- <li><a href="/zh-TW/docs/CSS/Using_CSS_animations">使用CSS動畫</a></li>
- <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
-</ul>
+- [使用 CSS 動畫](/zh-TW/docs/CSS/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

@@ -3,36 +3,32 @@ title: Position
 slug: Web/API/GeolocationPosition
 translation_of: Web/API/GeolocationPosition
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><strong><code>Position</code></strong> 介面表示在給定時間相關裝置的位置。這個位置用一個 {{domxref("Coordinates")}} 物件表示，包括裝置在地球上的二維位置，以及裝置的海拔高度和速度。</p>
+**`Position`** 介面表示在給定時間相關裝置的位置。這個位置用一個 {{domxref("Coordinates")}} 物件表示，包括裝置在地球上的二維位置，以及裝置的海拔高度和速度。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em><code>Position</code> 介面沒有繼承任何屬性</em></p>
+_`Position` 介面沒有繼承任何屬性_
 
-<dl>
- <dt>{{domxref("Position.coords")}} {{readonlyInline}}</dt>
- <dd>回傳一個定義當前位置的 {{domxref("Coordinates")}} 物件。</dd>
- <dt>{{domxref("Position.timestamp")}} {{readonlyInline}}</dt>
- <dd>回傳一個時間戳 {{domxref("DOMTimeStamp")}} ，這個時間戳表示獲取到位置的時間。</dd>
-</dl>
+- {{domxref("Position.coords")}} {{readonlyInline}}
+  - : 回傳一個定義當前位置的 {{domxref("Coordinates")}} 物件。
+- {{domxref("Position.timestamp")}} {{readonlyInline}}
+  - : 回傳一個時間戳 {{domxref("DOMTimeStamp")}} ，這個時間戳表示獲取到位置的時間。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em><em><code>Position 介面沒有實作或繼承任何方法</code> </em></em></p>
+**`Position 介面沒有實作或繼承任何方法`**
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器的相容性">瀏覽器的相容性</h2>
+## 瀏覽器的相容性
 
 {{Compat("api.GeolocationPosition")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Geolocation")}} 介面使用此物件。</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Geolocation")}} 介面使用此物件。

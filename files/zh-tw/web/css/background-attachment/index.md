@@ -8,17 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>background-attachment</code></strong> 這個 <a href="/en-US/docs/CSS">CSS</a> 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。</p>
+**`background-attachment`** 這個 [CSS](/en-US/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
 
-<div>{{EmbedInteractiveExample("pages/css/background-attachment.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
+## 語法
 
-
-<h2 id="Syntax">語法</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -27,57 +26,59 @@ background-attachment: local;
 background-attachment: inherit;
 background-attachment: initial;
 background-attachment: unset;
-</pre>
+```
 
-<p><code>background-attachment</code> 屬性的值，可以是下方清單中的其中之一。</p>
+`background-attachment` 屬性的值，可以是下方清單中的其中之一。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>讓背景相對於 viewport（視圖）的移動是固定的。即便元素中的內容是可滾動的，背景也不會在滾動元素內容時跟著移動。(這個屬性與 {{cssxref("background-clip", "background-clip: text", "#text")}} 不相容。)</dd>
- <dt><code>local</code></dt>
- <dd>讓背景相對於元素的內容是固定的，且背景在滾動元素的內容時會跟著移動。另外，背景的繪製與定位區域是相對於元素的可滾動區域，而不是包裹著它們的邊框。</dd>
- <dt><code>scroll</code></dt>
- <dd>讓背景相對於元素本身是固定的，使背景在滾動元素的內容時不會跟著移動。（It is effectively attached to the element's border.）</dd>
-</dl>
+- `fixed`
+  - : 讓背景相對於 viewport（視圖）的移動是固定的。即便元素中的內容是可滾動的，背景也不會在滾動元素內容時跟著移動。(這個屬性與 {{cssxref("background-clip", "background-clip: text", "#text")}} 不相容。)
+- `local`
+  - : 讓背景相對於元素的內容是固定的，且背景在滾動元素的內容時會跟著移動。另外，背景的繪製與定位區域是相對於元素的可滾動區域，而不是包裹著它們的邊框。
+- `scroll`
+  - : 讓背景相對於元素本身是固定的，使背景在滾動元素的內容時不會跟著移動。（It is effectively attached to the element's border.）
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Simple_example")}}</p>
+{{EmbedLiveSample("Simple_example")}}
 
-<h3 id="Multiple_background_images">Multiple background images</h3>
+### Multiple background images
 
-<p>這個屬性支援多個背景圖片。你可以對每個背景設定不同的 <code>&lt;attachment&gt;</code>。每個背景圖片會依序對應在 <code>&lt;attachment&gt;</code> 設定的類型。</p>
+這個屬性支援多個背景圖片。你可以對每個背景設定不同的 `<attachment>`。每個背景圖片會依序對應在 `<attachment>` 設定的類型。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -91,35 +92,34 @@ background-attachment: unset;
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css; highlight:[3];">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
       url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Multiple_background_images")}}</p>
+{{EmbedLiveSample("Multiple_background_images")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.background-attachment")}}
 
+## See also
 
-<p>{{Compat("css.properties.background-attachment")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Using multiple backgrounds</a></li>
-</ul>
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

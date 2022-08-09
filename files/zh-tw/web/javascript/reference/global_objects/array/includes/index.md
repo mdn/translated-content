@@ -10,55 +10,56 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>includes()</strong></code> 方法會判斷陣列是否包含特定的元素，並以此來回傳 <code>true</code> 或 <code>false</code>。</p>
+**`includes()`** 方法會判斷陣列是否包含特定的元素，並以此來回傳 `true` 或 `false`。
 
-<div>{{EmbedInteractiveExample("pages/js/array-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
+## 語法
 
+```plain
+arr.includes(searchElement[, fromIndex])
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox"><var>arr</var>.includes(<var>searchElement[</var>, <var>fromIndex]</var>)
-</pre>
+- `searchElement`
+  - : 要搜尋的元素。
+- `fromIndex` {{optional_inline}}
+  - : 要於此陣列中開始搜尋 `searchElement` 的位置。如為負數值，則自 `array.length + fromIndex` 開始向後搜尋。預設值為 0。
 
-<h3 id="參數">參數</h3>
+### 回傳值
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>要搜尋的元素。</dd>
- <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>要於此陣列中開始搜尋 <code>searchElement</code> 的位置。如為負數值，則自 <code>array.length + fromIndex</code> 開始向後搜尋。預設值為 0。</dd>
-</dl>
+布林值（{{jsxref("Boolean")}}）。
 
-<h3 id="回傳值">回傳值</h3>
+## 範例
 
-<p>布林值（{{jsxref("Boolean")}}）。</p>
-
-<h2 id="範例">範例</h2>
-
-<pre class="brush: js">[1, 2, 3].includes(2);     // true
+```js
+[1, 2, 3].includes(2);     // true
 [1, 2, 3].includes(4);     // false
 [1, 2, 3].includes(3, 3);  // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
-</pre>
+```
 
-<h3 id="fromIndex_大於或等於陣列長度"><code>fromIndex</code> 大於或等於陣列長度</h3>
+### `fromIndex` 大於或等於陣列長度
 
-<p>如果 <code>fromIndex</code>大於或等於陣列長度, 會回傳<code>false</code>. 此陣列將不會被搜尋.</p>
+如果 `fromIndex`大於或等於陣列長度, 會回傳`false`. 此陣列將不會被搜尋.
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 
 arr.includes('c', 3);   // false
-arr.includes('c', 100); // false</pre>
+arr.includes('c', 100); // false
+```
 
-<h3 id="Computed_index_is_less_than_0">Computed index is less than 0</h3>
+### Computed index is less than 0
 
-<p>If <code>fromIndex</code> is negative, the computed index is calculated to be used as a position in the array at which to begin searching for <code>searchElement</code>. If the computed index is less than 0, the entire array will be searched.</p>
+If `fromIndex` is negative, the computed index is calculated to be used as a position in the array at which to begin searching for `searchElement`. If the computed index is less than 0, the entire array will be searched.
 
-<pre class="brush: js">// array length is 3
+```js
+// array length is 3
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
@@ -66,20 +67,24 @@ var arr = ['a', 'b', 'c'];
 
 arr.includes('a', -100); // true
 arr.includes('b', -100); // true
-arr.includes('c', -100); // true</pre>
+arr.includes('c', -100); // true
+```
 
-<h3 id="includes_used_as_a_generic_method"><code>includes()</code> used as a generic method</h3>
+### `includes()` used as a generic method
 
-<p><code>includes()</code> method is intentionally generic. It does not require <code>this</code> value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates <code>includes()</code> method called on the function's <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object.</p>
+`includes()` method is intentionally generic. It does not require `this` value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates `includes()` method called on the function's [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   console.log([].includes.call(arguments, 'a')); // true
   console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');</pre>
+})('a','b','c');
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.includes
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
   Object.defineProperty(Array.prototype, 'includes', {
     value: function(searchElement, fromIndex) {
@@ -92,7 +97,7 @@ if (!Array.prototype.includes) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If len is 0, return false.
       if (len === 0) {
@@ -105,17 +110,17 @@ if (!Array.prototype.includes) {
 
       // 5. If n ≥ 0, then
       //  a. Let k be n.
-      // 6. Else n &lt; 0,
+      // 6. Else n < 0,
       //  a. Let k be len + n.
-      //  b. If k &lt; 0, let k be 0.
-      var k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+      //  b. If k < 0, let k be 0.
+      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' &amp;&amp; typeof y === 'number' &amp;&amp; isNaN(x) &amp;&amp; isNaN(y));
+        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
       }
 
-      // 7. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 7. Repeat, while k < len
+      while (k < len) {
         // a. Let elementK be the result of ? Get(O, ! ToString(k)).
         // b. If SameValueZero(searchElement, elementK) is true, return true.
         if (sameValueZero(o[k], searchElement)) {
@@ -130,28 +135,22 @@ if (!Array.prototype.includes) {
     }
   });
 }
-</pre>
+```
 
-<p>If you need to support truly obsolete JavaScript engines that don't support <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, it's best not to polyfill <code>Array.prototype</code> methods at all, as you can't make them non-enumerable.</p>
+If you need to support truly obsolete JavaScript engines that don't support [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), it's best not to polyfill `Array.prototype` methods at all, as you can't make them non-enumerable.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.includes")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.includes")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

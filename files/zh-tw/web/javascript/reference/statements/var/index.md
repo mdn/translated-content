@@ -3,38 +3,39 @@ title: var
 slug: Web/JavaScript/Reference/Statements/var
 translation_of: Web/JavaScript/Reference/Statements/var
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>宣告一個變數, 同時可以非強制性地賦予一初始值。</p>
+宣告一個變數, 同時可以非強制性地賦予一初始值。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <em>varname1 [</em>= <em>value1 [</em>, <em>varname2 [</em>, <em>varname3 ... [</em>, <em>varnameN]]]]</em>;</pre>
+```plain
+var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
+```
 
-<dl>
- <dt><code>varnameN</code></dt>
- <dd>變數名稱。可以是任何合法的識別字符 (identifier)。</dd>
- <dt><code>valueN</code></dt>
- <dd>變數的初始值。可以是任何合法的表示式 (expression)。</dd>
-</dl>
+- `varnameN`
+  - : 變數名稱。可以是任何合法的識別字符 (identifier)。
+- `valueN`
+  - : 變數的初始值。可以是任何合法的表示式 (expression)。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>以 <code>var</code> 宣告的變數, 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, 其作用範圍則為全域性 (global) (亦即包納於全域物件之內)。</p>
+以 `var` 宣告的變數, 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, 其作用範圍則為全域性 (global) (亦即包納於全域物件之內)。
 
-<p>在函數之外使用以 <code>var</code> 宣告的變數是非強制的 (optional); 如果對一個未經宣告的變數賦值, 它會被暗中 (implicitly) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, 已宣告的變數是全域物件裡的一個無法變更 (non-configurable) 的屬性, 而未宣告的變數則是可變更的 (configurable)。</p>
+在函數之外使用以 `var` 宣告的變數是非強制的 (optional); 如果對一個未經宣告的變數賦值, 它會被暗中 (implicitly) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, 已宣告的變數是全域物件裡的一個無法變更 (non-configurable) 的屬性, 而未宣告的變數則是可變更的 (configurable)。
 
-<p>因此, 建議你一定要宣告你的變數, 不管你要將它使用於全域範圍內或者函數內。</p>
+因此, 建議你一定要宣告你的變數, 不管你要將它使用於全域範圍內或者函數內。
 
-<p>若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a> 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。</p>
+若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 [strict mode](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。
 
-<p>Variable declarations, wherever they occur, are processed before any code is executed. The scope of a variable declared with <code>var</code> is its current <em>execution context</em>, which is either the enclosing function or, for variables declared outside any function, global.</p>
+Variable declarations, wherever they occur, are processed before any code is executed. The scope of a variable declared with `var` is its current _execution context_, which is either the enclosing function or, for variables declared outside any function, global.
 
-<p>Assigning a value to an undeclared variable implicitly creates it as a global variable (it becomes a property of the global object) when the assignment is executed. The differences between declared and undeclared variables are:</p>
+Assigning a value to an undeclared variable implicitly creates it as a global variable (it becomes a property of the global object) when the assignment is executed. The differences between declared and undeclared variables are:
 
-<p>1. Declared variables are constrained in the execution context in which they are declared. Undeclared variables are always global.</p>
+1\. Declared variables are constrained in the execution context in which they are declared. Undeclared variables are always global.
 
-<pre class="brush: js">function x() {
+```js
+function x() {
   y = 1;   // Throws a ReferenceError in strict mode
   var z = 2;
 }
@@ -43,39 +44,46 @@ x();
 
 console.log(y); // logs "1"
 console.log(z); // Throws a ReferenceError: z is not defined outside x
-</pre>
+```
 
-<p>2. Declared variables are created before any code is executed. Undeclared variables do not exist until the code assigning to them is executed.</p>
+2\. Declared variables are created before any code is executed. Undeclared variables do not exist until the code assigning to them is executed.
 
-<pre class="brush: js">console.log(a);                // Throws a ReferenceError.
-console.log('still going...'); // Never executes.</pre>
+```js
+console.log(a);                // Throws a ReferenceError.
+console.log('still going...'); // Never executes.
+```
 
-<pre class="brush: js">var a;
+```js
+var a;
 console.log(a);                // logs "undefined" or "" depending on browser.
-console.log('still going...'); // logs "still going...".</pre>
+console.log('still going...'); // logs "still going...".
+```
 
-<p>3. Declared variables are a non-configurable property of their execution context (function or global). Undeclared variables are configurable (e.g. can be deleted).</p>
+3\. Declared variables are a non-configurable property of their execution context (function or global). Undeclared variables are configurable (e.g. can be deleted).
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 b = 2;
 
 delete this.a; // Throws a TypeError in strict mode. Fails silently otherwise.
 delete this.b;
 
 console.log(a, b); // Throws a ReferenceError.
-// The 'b' property was deleted and no longer exists.</pre>
+// The 'b' property was deleted and no longer exists.
+```
 
-<p>Because of these three differences, failure to declare variables will very likely lead to unexpected results. Thus <strong>it is recommended to always declare variables, regardless of whether they are in a function or global scope.</strong> And in ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>, assigning to an undeclared variable throws an error.</p>
+Because of these three differences, failure to declare variables will very likely lead to unexpected results. Thus **it is recommended to always declare variables, regardless of whether they are in a function or global scope.** And in ECMAScript 5 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), assigning to an undeclared variable throws an error.
 
-<h3 id="var_hoisting">var hoisting</h3>
+### var hoisting
 
-<p>在 JavaScript 中, 變數可以先使用再宣告。</p>
+在 JavaScript 中, 變數可以先使用再宣告。
 
-<p>因此, 建議你永遠都把變數的宣告放在函數的最頂端。否則可能導致混亂的情況。</p>
+因此, 建議你永遠都把變數的宣告放在函數的最頂端。否則可能導致混亂的情況。
 
-<p>Because variable declarations (and declarations in general) are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called "hoisting", as it appears that the variable declaration is moved to the top of the function or global code.</p>
+Because variable declarations (and declarations in general) are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called "hoisting", as it appears that the variable declaration is moved to the top of the function or global code.
 
-<pre class="brush: js">bla = 2
+```js
+bla = 2
 var bla;
 // ...
 
@@ -83,38 +91,42 @@ var bla;
 
 var bla;
 bla = 2;
-</pre>
+```
 
-<p>For that reason, it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.</p>
+For that reason, it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Declaring_and_initializing_two_variables">Declaring and initializing two variables</h3>
+### Declaring and initializing two variables
 
-<pre class="brush: js">var a = 0, b = 0;
-</pre>
+```js
+var a = 0, b = 0;
+```
 
-<h3 id="Assigning_two_variables_with_single_string_value">Assigning two variables with single string value</h3>
+### Assigning two variables with single string value
 
-<pre class="brush: js">var a = "A";
+```js
+var a = "A";
 var b = a;
 
 // Equivalent to:
 
 var a, b = a = "A";
-</pre>
+```
 
-<p>Be mindful of the order:</p>
+Be mindful of the order:
 
-<pre class="brush: js">var x = y, y = 'A';
+```js
+var x = y, y = 'A';
 console.log(x + y); // undefinedA
-</pre>
+```
 
-<p>Here, <code>x</code> and <code>y</code> are declared before any code is executed, the assignments occur later. At the time "<code>x = y</code>" is evaluated, <code>y</code> exists so no <code>ReferenceError</code> is thrown and its value is '<code>undefined</code>'. So, <code>x</code> is assigned the undefined value. Then, <code>y</code> is assigned a value of 'A'. Consequently, after the first line, <code>x === undefined &amp;&amp; y === 'A'</code>, hence the result.</p>
+Here, `x` and `y` are declared before any code is executed, the assignments occur later. At the time "`x = y`" is evaluated, `y` exists so no `ReferenceError` is thrown and its value is '`undefined`'. So, `x` is assigned the undefined value. Then, `y` is assigned a value of 'A'. Consequently, after the first line, `x === undefined && y === 'A'`, hence the result.
 
-<h3 id="Initialization_of_several_variables">Initialization of several variables</h3>
+### Initialization of several variables
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 
 function f(){
   var x = y = 1; // x is declared locally. y is not!
@@ -124,13 +136,15 @@ f();
 console.log(x, y); // Throws a ReferenceError in strict mode (y is not defined). 0, 1 otherwise.
 // In non-strict mode:
 // x is the global one as expected
-// y leaked outside of the function, though!</pre>
+// y leaked outside of the function, though!
+```
 
-<h3 id="Implicit_globals_and_outer_function_scope">Implicit globals and outer function scope</h3>
+### Implicit globals and outer function scope
 
-<p>Variables that appear to be implicit globals may be references to variables in an outer function scope:</p>
+Variables that appear to be implicit globals may be references to variables in an outer function scope:
 
-<pre class="brush: js">var x = 0;  // x is declared global, then assigned a value of 0
+```js
+var x = 0;  // x is declared global, then assigned a value of 0
 
 console.log(typeof z); // undefined, since z doesn't exist yet
 
@@ -151,19 +165,18 @@ function a() { // when a is called,
 
 a();                   // calling a also calls b
 console.log(x, z);     // 3 5
-console.log(typeof y); // undefined as y is local to function a</pre>
+console.log(typeof y); // undefined as y is local to function a
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
-</ul>
+- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)

@@ -3,84 +3,62 @@ title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 translation_of: Web/API/Event/eventPhase
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>表示事件物件目前於事件流（Event Flow）中傳遞的進度為哪一個階段。</p>
+表示事件物件目前於事件流（Event Flow）中傳遞的進度為哪一個階段。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js"><em>var phase</em> = event.eventPhase;
-</pre>
+```js
+var phase = event.eventPhase;
+```
 
-<p>回傳一個整數值以代表目前事件於事件流中的傳遞階段，可能的值將於<a href="#事件傳遞階段常數">事件傳遞階段常數</a>說明。</p>
+回傳一個整數值以代表目前事件於事件流中的傳遞階段，可能的值將於[事件傳遞階段常數](#事件傳遞階段常數)說明。
 
-<h2 id="常數">常數</h2>
+## 常數
 
-<h3 id="事件傳遞階段常數">事件傳遞階段常數</h3>
+### 事件傳遞階段常數
 
-<p>These values describe which phase the event flow is currently being evaluated.</p>
+These values describe which phase the event flow is currently being evaluated.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">常數</th>
-   <th scope="col">值</th>
-   <th scope="col">說明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("Event.NONE")}} {{readonlyinline}}</td>
-   <td>0</td>
-   <td>No event is being processed at this time.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Event.CAPTURING_PHASE")}} {{readonlyinline}}</td>
-   <td>1</td>
-   <td>The event is being propagated through the target's ancestor objects. This process starts with the {{domxref("Window")}}, then {{domxref("Document")}}, then the {{domxref("HTMLHtmlElement")}}, and so on through the elements until the target's parent is reached. {{domxref("EventListener", "Event listeners", "", 1)}} registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was called are triggered during this phase.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Event.AT_TARGET")}} {{readonlyinline}}</td>
-   <td>2</td>
-   <td>The event has arrived at {{domxref("EventTarget", "the event's target", "", 1)}}. Event listeners registered for this phase are called at this time. If {{domxref("Event.bubbles")}} is false, processing the event is finished after this phase is complete.</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Event.BUBBLING_PHASE")}} {{readonlyinline}}</td>
-   <td>3</td>
-   <td>The event is propagating back up through the target's ancestors in reverse order, starting with the parent, and eventually reaching the containing {{domxref("Window")}}. This is known as bubbling, and occurs only if {{domxref("Event.bubbles")}} is <code>true</code>. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.</td>
-  </tr>
- </tbody>
-</table>
+| 常數                                                                      | 值  | 說明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("Event.NONE")}} {{readonlyinline}}                 | 0   | No event is being processed at this time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| {{domxref("Event.CAPTURING_PHASE")}} {{readonlyinline}} | 1   | The event is being propagated through the target's ancestor objects. This process starts with the {{domxref("Window")}}, then {{domxref("Document")}}, then the {{domxref("HTMLHtmlElement")}}, and so on through the elements until the target's parent is reached. {{domxref("EventListener", "Event listeners", "", 1)}} registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was called are triggered during this phase. |
+| {{domxref("Event.AT_TARGET")}} {{readonlyinline}}         | 2   | The event has arrived at {{domxref("EventTarget", "the event's target", "", 1)}}. Event listeners registered for this phase are called at this time. If {{domxref("Event.bubbles")}} is false, processing the event is finished after this phase is complete.                                                                                                                                                                                                                            |
+| {{domxref("Event.BUBBLING_PHASE")}} {{readonlyinline}} | 3   | The event is propagating back up through the target's ancestors in reverse order, starting with the parent, and eventually reaching the containing {{domxref("Window")}}. This is known as bubbling, and occurs only if {{domxref("Event.bubbles")}} is `true`. {{domxref("EventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.                                                                                              |
 
-<p>For more details, see <a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">section 3.1, Event dispatch and DOM event flow</a>, of the DOM Level 3 Events specification.</p>
+For more details, see [section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;h4&gt;Event Propagation Chain&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Click 'd1'&lt;/li&gt;
-  &lt;li&gt;Analyse event propagation chain&lt;/li&gt;
-  &lt;li&gt;Click next div and repeat the experience&lt;/li&gt;
-  &lt;li&gt;Change Capturing mode&lt;/li&gt;
-  &lt;li&gt;Repeat the experience&lt;/li&gt;
-&lt;/ul&gt;
-&lt;input type="checkbox" id="chCapture" /&gt;
-&lt;label for="chCapture"&gt;Use Capturing&lt;/label&gt;
- &lt;div id="d1"&gt;d1
-  &lt;div id="d2"&gt;d2
-      &lt;div id="d3"&gt;d3
-          &lt;div id="d4"&gt;d4&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;
- &lt;div id="divInfo"&gt;&lt;/div&gt;
-</pre>
+```html
+<h4>Event Propagation Chain</h4>
+<ul>
+  <li>Click 'd1'</li>
+  <li>Analyse event propagation chain</li>
+  <li>Click next div and repeat the experience</li>
+  <li>Change Capturing mode</li>
+  <li>Repeat the experience</li>
+</ul>
+<input type="checkbox" id="chCapture" />
+<label for="chCapture">Use Capturing</label>
+ <div id="d1">d1
+  <div id="d2">d2
+      <div id="d3">d3
+          <div id="d4">d4</div>
+      </div>
+  </div>
+ </div>
+ <div id="divInfo"></div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">div {
+```css
+div {
   margin: 20px;
   padding: 4px;
   border: thin black solid;
@@ -91,11 +69,13 @@ translation_of: Web/API/Event/eventPhase
   padding: 8px;
   background-color:white;
   font-size:80%;
-}</pre>
+}
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">var clear = false, divInfo = null, divs = null, useCapture = false;
+```js
+var clear = false, divInfo = null, divs = null, useCapture = false;
 window.onload = function () {
   divInfo = document.getElementById("divInfo");
   divs = document.getElementsByTagName('div');
@@ -109,7 +89,7 @@ window.onload = function () {
 }
 
 function RemoveListeners() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     var d = divs[i];
     if (d.id != "divInfo") {
       d.removeEventListener("click", OnDivClick, true);
@@ -119,7 +99,7 @@ function RemoveListeners() {
 }
 
 function AddListeners() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     var d = divs[i];
     if (d.id != "divInfo") {
       d.addEventListener("click", OnDivClick, false);
@@ -137,20 +117,20 @@ function OnDivClick(e) {
   if (e.eventPhase == 2)
     e.currentTarget.style.backgroundColor = 'red';
   var level = e.eventPhase == 0 ? "none" : e.eventPhase == 1 ? "capturing" : e.eventPhase == 2 ? "target" : e.eventPhase == 3 ? "bubbling" : "error";
-  divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "&lt;br/&gt;";
+  divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
 }
 
 function Clear() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     if (divs[i].id != "divInfo")
-      divs[i].style.backgroundColor = (i &amp; 1) ? "#f6eedb" : "#cceeff";
+      divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff";
   }
   divInfo.innerHTML = '';
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}</p>
+{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}

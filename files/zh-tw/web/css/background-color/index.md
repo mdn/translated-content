@@ -3,13 +3,14 @@ title: background-color
 slug: Web/CSS/background-color
 translation_of: Web/CSS/background-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>background-color</code></strong> <a href="/en/CSS">CSS</a> property 是用來設定HTML元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ <code>transparent</code>.</p>
+**`background-color`** [CSS](/en/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: css">background-color: red;
+```css
+background-color: red;
 background-color: rgb(255, 255, 128);
 background-color: hsla(50, 33%, 25%, 0.75);
 background-color: currentColor;
@@ -17,38 +18,39 @@ background-color: transparent;
 background-color: #bbff00;
 
 background-color: inherit;
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>一個 CSS {{cssxref("&lt;color&gt;")}} 用來表示一致的背景顏色。即便設定了一個或多個 {{cssxref("background-image")}} ，背景渲染上依舊會渲染這顏色，若是圖片並非不透明圖，在透明區域就能看見。在 CSS 中， <code>transparent</code> 是一種顏色</dd>
-</dl>
+- `<color>`
+  - : 一個 CSS {{cssxref("&lt;color&gt;")}} 用來表示一致的背景顏色。即便設定了一個或多個 {{cssxref("background-image")}} ，背景渲染上依舊會渲染這顏色，若是圖片並非不透明圖，在透明區域就能看見。在 CSS 中， `transparent` 是一種顏色
 
-<h3 id="正式語法">正式語法</h3>
+### 正式語法
 
 {{csssyntax}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exampleone"&gt;
+```html
+<div class="exampleone">
  Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="exampletwo"&gt;
+<div class="exampletwo">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;
+</div>
 
-&lt;div class="examplethree"&gt;
+<div class="examplethree">
   Lorem ipsum dolor sit amet, consectetuer
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[2,7,12,17];">.exampleone {
+```css
+.exampleone {
   background-color: teal;
   color: white;
 }
@@ -62,27 +64,22 @@ background-color: inherit;
   background-color: #777799;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("範例","200","150")}}</p>
+{{EmbedLiveSample("範例","200","150")}}
 
-<h2 id="規格定義">規格定義</h2>
+## 規格定義
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.background-color")}}
 
+## 延伸閱讀
 
-<p>{{Compat("css.properties.background-color")}}</p>
-<h2 id="延伸閱讀">延伸閱讀</h2>
-
-<ul>
- <li>
-  <p><a href="/en/CSS/Multiple_backgrounds">複數背景</a></p>
- </li>
-</ul>
+- [複數背景](/en/CSS/Multiple_backgrounds)

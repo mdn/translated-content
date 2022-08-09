@@ -8,57 +8,56 @@ tags:
   - RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>RangeError</strong></code>物件在一個給定的值不在允許的集合或範圍內時被作為一個錯誤拋出</p>
+**`RangeError`**物件在一個給定的值不在允許的集合或範圍內時被作為一個錯誤拋出
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code>new RangeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new RangeError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>message</code></dt>
- <dd>可選。具人類可讀性的錯誤說明</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>可選。包含造成錯誤發生的程式碼的檔案名稱</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>可選。造成錯誤發生的程式碼行號</dd>
-</dl>
+- `message`
+  - : 可選。具人類可讀性的錯誤說明
+- `fileName` {{non-standard_inline}}
+  - : 可選。包含造成錯誤發生的程式碼的檔案名稱
+- `lineNumber` {{non-standard_inline}}
+  - : 可選。造成錯誤發生的程式碼行號
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>當試著往一個 function 傳入一個不被其允許的值作為參數時，一個<code>RangeError</code>被拋出。這可在多種情況遭遇到，例如傳入一個不被允許的字串值到 {{jsxref("String.prototype.normalize()")}}，或試著透過 {{jsxref("Array")}} constructor 用一個不合法的長度來創建一個陣列，或往數值方法像是{{jsxref("Number.toExponential()")}}、{{jsxref("Number.toFixed()")}}、{{jsxref("Number.toPrecision()")}} 傳進糟糕的值。</p>
+當試著往一個 function 傳入一個不被其允許的值作為參數時，一個`RangeError`被拋出。這可在多種情況遭遇到，例如傳入一個不被允許的字串值到 {{jsxref("String.prototype.normalize()")}}，或試著透過 {{jsxref("Array")}} constructor 用一個不合法的長度來創建一個陣列，或往數值方法像是{{jsxref("Number.toExponential()")}}、{{jsxref("Number.toFixed()")}}、{{jsxref("Number.toPrecision()")}} 傳進糟糕的值。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{jsxref("RangeError.prototype")}}</dt>
- <dd>允許對一個 <code>RangeError</code> 物件增加其屬性。</dd>
-</dl>
+- {{jsxref("RangeError.prototype")}}
+  - : 允許對一個 `RangeError` 物件增加其屬性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>普遍的 <code>RangeError</code> 自身沒有包含方法，儘管他的確從原型鍊中繼承了一些。</p>
+普遍的 `RangeError` 自身沒有包含方法，儘管他的確從原型鍊中繼承了一些。
 
-<h2 id="RangeError_物件實體"><code>RangeError</code> 物件實體</h2>
+## `RangeError` 物件實體
 
-<h3 id="屬性_2">屬性</h3>
+### 屬性
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_RangeError_(數值)">使用 <code>RangeError</code> (數值)</h3>
+### 使用 `RangeError` (數值)
 
-<pre class="brush: js">function check(n)
+```js
+function check(n)
 {
-    if(!(n &gt;= -500 &amp;&amp; n &lt;= 500))
+    if(!(n >= -500 && n <= 500))
     {
         throw new RangeError("The argument must be between -500 and 500.");
     }
@@ -74,11 +73,13 @@ catch(error)
     {
         // Handle the error.
     }
-}</pre>
+}
+```
 
-<h3 id="使用_RangeError_(非數值)">使用 <code>RangeError</code> (非數值)</h3>
+### 使用 `RangeError` (非數值)
 
-<pre class="brush: js">function check(value)
+```js
+function check(value)
 {
     if(["apple", "banana", "carrot"].includes(value) === false)
     {
@@ -97,28 +98,22 @@ catch(error)
         // Handle the error.
     }
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.RangeError")}}
 
+## 另見
 
-<p>{{Compat("javascript.builtins.RangeError")}}</p>
-</div>
-
-<h2 id="另見">另見</h2>
-
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("RangeError.prototype")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
- <li>{{jsxref("String.prototype.normalize()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("RangeError.prototype")}}
+- {{jsxref("Array")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

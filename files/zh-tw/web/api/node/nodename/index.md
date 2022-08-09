@@ -3,96 +3,55 @@ title: Node.nodeName
 slug: Web/API/Node/nodeName
 translation_of: Web/API/Node/nodeName
 ---
-<div>
-<div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.nodeName</strong></code> 唯讀屬性會回傳目前節點名稱的字串。</p>
+**`Node.nodeName`** 唯讀屬性會回傳目前節點名稱的字串。
 
-<p>不同類型節點之回傳值：</p>
+不同類型節點之回傳值：
 
-<table>
- <tbody>
-  <tr>
-   <th>介面</th>
-   <th>nodeName 值</th>
-  </tr>
-  <tr>
-   <td>{{domxref("Attr")}}</td>
-   <td>The value of {{domxref("Attr.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("CDATASection")}}</td>
-   <td><code>"#cdata-section"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Comment")}}</td>
-   <td><code>"#comment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("Document")}}</td>
-   <td><code>"#document"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentFragment")}}</td>
-   <td><code>"#document-fragment"</code></td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentType")}}</td>
-   <td>The value of {{domxref("DocumentType.name")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Element")}}</td>
-   <td>The value of {{domxref("Element.tagName")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Entity")}}</td>
-   <td>The entity name</td>
-  </tr>
-  <tr>
-   <td>{{domxref("EntityReference")}}</td>
-   <td>The name of entity reference</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Notation")}}</td>
-   <td>The notation name</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ProcessingInstruction")}}</td>
-   <td>The value of {{domxref("ProcessingInstruction.target")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Text")}}</td>
-   <td><code>"#text"</code></td>
-  </tr>
- </tbody>
-</table>
+| 介面                                             | nodeName 值                                                           |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| {{domxref("Attr")}}                         | The value of {{domxref("Attr.name")}}                         |
+| {{domxref("CDATASection")}}             | `"#cdata-section"`                                                    |
+| {{domxref("Comment")}}                     | `"#comment"`                                                          |
+| {{domxref("Document")}}                 | `"#document"`                                                         |
+| {{domxref("DocumentFragment")}}         | `"#document-fragment"`                                                |
+| {{domxref("DocumentType")}}             | The value of {{domxref("DocumentType.name")}}             |
+| {{domxref("Element")}}                     | The value of {{domxref("Element.tagName")}}                 |
+| {{domxref("Entity")}}                     | The entity name                                                       |
+| {{domxref("EntityReference")}}         | The name of entity reference                                          |
+| {{domxref("Notation")}}                 | The notation name                                                     |
+| {{domxref("ProcessingInstruction")}} | The value of {{domxref("ProcessingInstruction.target")}} |
+| {{domxref("Text")}}                         | `"#text"`                                                             |
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <em>str</em> = <em>node</em>.nodeName;
-</pre>
+```plain
+var str = node.nodeName;
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>Given the following markup:</p>
+Given the following markup:
 
-<pre class="brush:html">&lt;div id="d1"&gt;hello world&lt;/div&gt;
-&lt;input type="text" id="t"/&gt;
-</pre>
+```html
+<div id="d1">hello world</div>
+<input type="text" id="t"/>
+```
 
-<p>and the following script:</p>
+and the following script:
 
-<pre class="brush:js">var div1 = document.getElementById("d1");
+```js
+var div1 = document.getElementById("d1");
 var text_field = document.getElementById("t");
 
 text_field.value = div1.nodeName;
-</pre>
+```
 
-<p>In XHTML (or any other XML format), <code>text_field</code>'s value would read "div". However, in HTML, <code>text_field</code>'s value would read "DIV", because <code>nodeName</code> and <code>tagName</code> return in upper case on HTML elements in DOMs flagged as HTML documents. Read more <a href="http://ejohn.org/blog/nodename-case-sensitivity/">details on nodeName case sensitivity in different browsers</a>.</p>
+In XHTML (or any other XML format), `text_field`'s value would read "div". However, in HTML, `text_field`'s value would read "DIV", because `nodeName` and `tagName` return in upper case on HTML elements in DOMs flagged as HTML documents. Read more [details on nodeName case sensitivity in different browsers](http://ejohn.org/blog/nodename-case-sensitivity/).
 
-<p>Note that <code><a href="/en-US/docs/DOM/element.tagName">tagName</a></code> property could have been used instead, since <code>nodeName</code> has the same value as <code>tagName</code> for an element. Bear in mind, however, that <code>nodeName</code> will return <code>#text</code> for text nodes while <code>tagName</code> will return <code>undefined</code>.</p>
+Note that [`tagName`](/en-US/docs/DOM/element.tagName) property could have been used instead, since `nodeName` has the same value as `tagName` for an element. Bear in mind, however, that `nodeName` will return `#text` for text nodes while `tagName` will return `undefined`.
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}

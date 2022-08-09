@@ -3,59 +3,51 @@ title: FormData
 slug: Web/API/FormData
 translation_of: Web/API/FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p><strong><code>FormData</code></strong> 介面可為表單資料中的欄位/值建立相對應的的鍵/值對（key/value）集合，之後便可使用 {{domxref("XMLHttpRequest.send()")}} 方法來送出資料。它在編碼類型設定為 <code>multipart/form-data</code> 時會採用與表單相同的格式送出。</p>
+**`FormData`** 介面可為表單資料中的欄位/值建立相對應的的鍵/值對（key/value）集合，之後便可使用 {{domxref("XMLHttpRequest.send()")}} 方法來送出資料。它在編碼類型設定為 `multipart/form-data` 時會採用與表單相同的格式送出。
 
-<p>實作 <code>FormData</code> 的物件可以直接利用 {{jsxref("Statements/for...of", "for...of")}} 語法結構來替代 {{domxref('FormData.entries()', 'entries()')}}：<code>for (var p of myFormData)</code> 等同於 <code>for (var p of myFormData.entries())</code>。</p>
+實作 `FormData` 的物件可以直接利用 {{jsxref("Statements/for...of", "for...of")}} 語法結構來替代 {{domxref('FormData.entries()', 'entries()')}}：`for (var p of myFormData)` 等同於 `for (var p of myFormData.entries())`。
 
-<div class="note">
-<p><strong>備註：</strong>此特性適用於 <a href="/zh-TW/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
-</div>
+> **備註：**此特性適用於 [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API)。
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>建立一個新的 <code>FormData</code> 物件。</dd>
-</dl>
+- {{domxref("FormData.FormData","FormData()")}}
+  - : 建立一個新的 `FormData` 物件。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("FormData.append()")}}</dt>
- <dd>追加新值到 <code>FormData</code> 物件已有的對應鍵上；若該鍵不存在，則為其追加新的鍵。</dd>
- <dt>{{domxref("FormData.delete()")}}</dt>
- <dd>刪除指定的鍵值對。</dd>
- <dt>{{domxref("FormData.entries()")}}</dt>
- <dd>回傳 {{jsxref("Iteration_protocols","iterator")}}，可用來處理物件中所有的鍵值對。</dd>
- <dt>{{domxref("FormData.get()")}}</dt>
- <dd>回傳指定的鍵在 <code>FormData</code> 物件中找到的第一個對應值。</dd>
- <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd>回傳指定的鍵在 <code>FormData</code> 物件中所有對應值的陣列。</dd>
- <dt>{{domxref("FormData.has()")}}</dt>
- <dd>回傳 <code>FormData</code> 物件是否含有指定鍵值對的布林值。</dd>
- <dt>{{domxref("FormData.keys()")}}</dt>
- <dd>回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的鍵。</dd>
- <dt>{{domxref("FormData.set()")}}</dt>
- <dd>為 <code>FormData</code> 物件已有的鍵設定新值；若該鍵不存在，則為其追加新的鍵。</dd>
- <dt>{{domxref("FormData.values()")}}</dt>
- <dd>回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的值。</dd>
-</dl>
+- {{domxref("FormData.append()")}}
+  - : 追加新值到 `FormData` 物件已有的對應鍵上；若該鍵不存在，則為其追加新的鍵。
+- {{domxref("FormData.delete()")}}
+  - : 刪除指定的鍵值對。
+- {{domxref("FormData.entries()")}}
+  - : 回傳 {{jsxref("Iteration_protocols","iterator")}}，可用來處理物件中所有的鍵值對。
+- {{domxref("FormData.get()")}}
+  - : 回傳指定的鍵在 `FormData` 物件中找到的第一個對應值。
+- {{domxref("FormData.getAll()")}}
+  - : 回傳指定的鍵在 `FormData` 物件中所有對應值的陣列。
+- {{domxref("FormData.has()")}}
+  - : 回傳 `FormData` 物件是否含有指定鍵值對的布林值。
+- {{domxref("FormData.keys()")}}
+  - : 回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的鍵。
+- {{domxref("FormData.set()")}}
+  - : 為 `FormData` 物件已有的鍵設定新值；若該鍵不存在，則為其追加新的鍵。
+- {{domxref("FormData.values()")}}
+  - : 回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的值。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.FormData")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
- <li><a href="/zh-TW/docs/Web/API/FormData/Using_FormData_Objects">使用 FormData 物件</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 FormData 物件](/zh-TW/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

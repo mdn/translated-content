@@ -9,72 +9,69 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.of()</strong></code> 方法會由引數（arguments）的數量來建立一個新的 <code>Array</code> 實體，而不管引數的數量或類型為何。</p>
+**`Array.of()`** 方法會由引數（arguments）的數量來建立一個新的 `Array` 實體，而不管引數的數量或類型為何。
 
-<p><code><strong>Array.of()</strong></code> 與 <code><strong>Array</strong></code> 建構式之間的不同在於如何處理整數引數：<code><strong>Array.of(7)</strong></code> 會建立一個擁有單個元素—<code>7</code>—的陣列，而 <code><strong>Array(7)</strong></code> 會建立一個 <code>length</code> 屬性值為 7 的空陣列（<strong>註：</strong>這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 <code>undefined</code> 的欄位）。</p>
+**`Array.of()`** 與 **`Array`** 建構式之間的不同在於如何處理整數引數：**`Array.of(7)`** 會建立一個擁有單個元素—`7`—的陣列，而 **`Array(7)`** 會建立一個 `length` 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 `undefined` 的欄位）。
 
-<pre class="brush: js">Array.of(7);       // [7]
+```js
+Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
 Array(7);          // [ , , , , , , ]
 Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+```
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</pre>
+```plain
+Array.of(element0[, element1[, ...[, elementN]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>要用來成為新建立之陣列的元素。</dd>
-</dl>
+- `elementN`
+  - : 要用來成為新建立之陣列的元素。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個新的 {{jsxref("Array")}} 實體。</p>
+一個新的 {{jsxref("Array")}} 實體。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>此函式是 ECMAScript 2015 標準的一部分。更多資訊可參考 <a href="https://gist.github.com/rwaldron/1074126"><code>Array.of</code> and <code>Array.from</code> proposal</a> 以及 <a href="https://gist.github.com/rwaldron/3186576"><code>Array.of</code> polyfill</a>。</p>
+此函式是 ECMAScript 2015 標準的一部分。更多資訊可參考 [`Array.of` and `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 以及 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>若所有執行環境沒有原生支援，可以在其他程式之前先執行以下程式碼來建立 <code>Array.of()</code>。</p>
+若所有執行環境沒有原生支援，可以在其他程式之前先執行以下程式碼來建立 `Array.of()`。
 
-<pre class="brush: js">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
   };
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("javascript.builtins.Array.of")}}
 
+## 參見
 
-<p>{{Compat("javascript.builtins.Array.of")}}</p>
-</div>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

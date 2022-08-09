@@ -3,36 +3,35 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 translation_of: Web/JavaScript/Reference/Statements/let
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>let</code></strong>用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。</p>
+**`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-let.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
+## 語法
 
+```plain
+let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
+```
 
-<h2 id="語法">語法</h2>
+### 參數
 
-<pre class="syntaxbox">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
+- `var1`, `var2`, …, `varN`
+  - : 變數名稱。
+- `value1`, `value2`, …, `valueN`
+  - : 變數的初始值，可以是任何合法的表達式。
 
-<h3 id="參數">參數</h3>
+## 描述
 
-<dl>
- <dt><code>var1</code>, <code>var2</code>, …, <code>varN</code></dt>
- <dd>變數名稱。</dd>
- <dt><code>value1</code>, <code>value2</code>, …, <code>valueN</code></dt>
- <dd>變數的初始值，可以是任何合法的表達式。</dd>
-</dl>
+`let` 可以宣告只能在目前區塊、階段或表達式中作用的變數。而 `var 則是定義了一個全域變數，或是在整個 function 而不管該區塊範圍。`
 
-<h2 id="描述">描述</h2>
+### Scoping rules
 
-<p><code>let</code> 可以宣告只能在目前區塊、階段或表達式中作用的變數。而 <code><a href="/zh-TW/docs/JavaScript/Reference/Statements/var">var</a> 則是定義了一個全域變數，或是在整個 function 而不管該區塊範圍。</code></p>
+宣告 `let` 的作用範圍是它們被定義的區塊，以及該區塊包含的子區塊。這樣看起來功能跟 **`var`** 很相似。主要不同的地方在於 **`var`** 作用範圍是「整個」function：
 
-<h3 id="Scoping_rules">Scoping rules</h3>
-
-<p>宣告 <code>let</code> 的作用範圍是它們被定義的區塊，以及該區塊包含的子區塊。這樣看起來功能跟 <strong><code>var</code></strong> 很相似。主要不同的地方在於 <strong><code>var</code></strong> 作用範圍是「整個」function：</p>
-
-<pre class="brush:js">function varTest() {
+```js
+function varTest() {
   var x = 1;
   {
     var x = 2;  // 這裡的 x 與 function 區塊內部的 x 是一樣的，因此會影響 function 區塊內所有的 x
@@ -48,21 +47,24 @@ function letTest() {
     console.log(x);  // 2
   }
   console.log(x);  // 1
-}</pre>
+}
+```
 
-<p>在上列例子裡的最前行 <code>let</code> 和 <code>var</code> 不同，<code>let</code> 並不會在全域物件中建立變數。舉例來說：</p>
+在上列例子裡的最前行 `let` 和 `var` 不同，`let` 並不會在全域物件中建立變數。舉例來說：
 
-<pre class="brush:js">var x = 'global';
+```js
+var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
-</pre>
+```
 
-<h3 id="Emulating_private_members">Emulating private members</h3>
+### Emulating private members
 
-<p>In dealing with <a href="/en-US/docs/Glossary/Constructor">constructors</a> it is possible to use the <strong><code>let</code></strong> bindings to share one or more private members without using <a href="/en-US/docs/Web/JavaScript/Closures">closures</a>:</p>
+In dealing with [constructors](/en-US/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/en-US/docs/Web/JavaScript/Closures):
 
-<pre class="brush:js">var Thing;
+```js
+var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -98,27 +100,32 @@ thing.showPublic();
 
 thing.showPrivate();
 // 1
-</pre>
+```
 
-<h3 id="Temporal_Dead_Zone_and_errors_with_let">Temporal Dead Zone and errors with <code>let</code></h3>
+### Temporal Dead Zone and errors with `let`
 
-<p>Redeclaring the same variable within the same function or block scope raises a {{jsxref("SyntaxError")}}.</p>
+Redeclaring the same variable within the same function or block scope raises a {{jsxref("SyntaxError")}}.
 
-<pre class="brush: js example-bad">if (x) {
+```js example-bad
+if (x) {
   let foo;
   let foo; // SyntaxError thrown.
-}</pre>
+}
+```
 
-<p>In ECMAScript 2015, <strong><code>let</code></strong> bindings are not subject to <strong>Variable Hoisting</strong>, which means that <strong><code>let</code></strong> declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code> (contrary to a variable declared with <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var</a>, which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.</p>
+In ECMAScript 2015, **`let`** bindings are not subject to **Variable Hoisting**, which means that **`let`** declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a [`ReferenceError`](/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError) (contrary to a variable declared with [var](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting), which will just have the undefined value). The variable is in a "temporal dead zone" from the start of the block until the initialization is processed.
 
-<pre class="brush: js">function do_something() {
+```js
+function do_something() {
   console.log(foo); // ReferenceError
   let foo = 2;
-}</pre>
+}
+```
 
-<p>你可能會在 <a href="/zh-TW/docs/JavaScript/Reference/Statements/switch"><code>switch</code></a> 中遇到錯誤，因為所有的 <code>case</code> 都屬於同樣的區塊中。</p>
+你可能會在 [`switch`](/zh-TW/docs/JavaScript/Reference/Statements/switch) 中遇到錯誤，因為所有的 `case` 都屬於同樣的區塊中。
 
-<pre class="brush: js">switch (x) {
+```js
+switch (x) {
   case 0:
     let foo;
     break;
@@ -126,21 +133,24 @@ thing.showPrivate();
   case 1:
     let foo; // SyntaxError for redeclaration.
     break;
-}</pre>
+}
+```
 
-<h3 id="let_於_for_迴圈的宣告範圍"><code>let</code> 於 <code>for</code> 迴圈的宣告範圍</h3>
+### `let` 於 `for` 迴圈的宣告範圍
 
-<p>You can use the <code>let</code> keyword to bind variables locally in the scope of <code>for</code> loops. This is different from the var keyword in the head of a for loop, which makes the variables visible in the whole function containing the loop.</p>
+You can use the `let` keyword to bind variables locally in the scope of `for` loops. This is different from the var keyword in the head of a for loop, which makes the variables visible in the whole function containing the loop.
 
-<pre class="brush:js">var i=0;
-for ( let i=i ; i &lt; 10 ; i++ ) {
+```js
+var i=0;
+for ( let i=i ; i < 10 ; i++ ) {
   console.log(i);
 }
-</pre>
+```
 
-<p>However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.</p>
+However, it's important to point out that a block nested inside a case clause will create a new block scoped lexical environment, which will not produce the redeclaration errors shown above.
 
-<pre class="brush: js">let x = 1;
+```js
+let x = 1;
 
 switch(x) {
   case 0: {
@@ -151,34 +161,40 @@ switch(x) {
     let foo;
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="The_temporal_dead_zone_and_typeof">The temporal dead zone and <code>typeof</code></h3>
+### The temporal dead zone and `typeof`
 
-<p>Unlike with simply undeclared variables and variables that hold a value of <code>undefined</code>, using the <code>typeof</code> operator to check for the type of a variable in that variable's TDZ will throw a <code>ReferenceError</code>:</p>
+Unlike with simply undeclared variables and variables that hold a value of `undefined`, using the `typeof` operator to check for the type of a variable in that variable's TDZ will throw a `ReferenceError`:
 
-<pre class="brush: js">// prints out 'undefined'
+```js
+// prints out 'undefined'
 console.log(typeof undeclaredVariable);
 // results in a 'ReferenceError'
 console.log(typeof i);
-let i = 10;</pre>
+let i = 10;
+```
 
-<h3 id="Another_example_of_temporal_dead_zone_combined_with_lexical_scoping">Another example of temporal dead zone combined with lexical scoping</h3>
+### Another example of temporal dead zone combined with lexical scoping
 
-<p>Due to lexical scoping, the identifier<strong> "foo"</strong> inside the expression <code>(foo + 55)</code> evaluates to the <em>if block's foo</em>, and <strong>not</strong> the <em>overlying variable foo</em> with the value of 33.<br>
- In that very line, the <em>if block's "foo"</em> has already been created in the lexical environment, but has not yet reached (and <strong>terminated</strong>) its initialization (which is part of the statement itself): it's still in the temporal dead zone.</p>
+Due to lexical scoping, the identifier **"foo"** inside the expression `(foo + 55)` evaluates to the _if block's foo_, and **not** the _overlying variable foo_ with the value of 33.
+In that very line, the _if block's "foo"_ has already been created in the lexical environment, but has not yet reached (and **terminated**) its initialization (which is part of the statement itself): it's still in the temporal dead zone.
 
-<pre class="brush: js example-bad">function test(){
+```js example-bad
+function test(){
    var foo = 33;
    {
       let foo = (foo + 55); // ReferenceError
    }
 }
-test();</pre>
+test();
+```
 
-<p>This phenomenon may confuse you in a situation like the following. The instruction <code>let n of n.a</code> is already inside the private scope of the <em>for loop's block</em>, hence the identifier<strong> "n.a"</strong> is resolved to the property 'a' of the <em>'n' object located in the first part of the instruction itself</em> ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and <strong>terminated</strong>.</p>
+This phenomenon may confuse you in a situation like the following. The instruction `let n of n.a` is already inside the private scope of the _for loop's block_, hence the identifier **"n.a"** is resolved to the property 'a' of the _'n' object located in the first part of the instruction itself_ ("let n"), which is still in the temporal dead zone since its declaration statement has not been reached and **terminated**.
 
-<pre class="brush: js example-bad">function go(n) {
+```js example-bad
+function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -188,13 +204,14 @@ test();</pre>
 }
 
 go({a: [1, 2, 3]});
-</pre>
+```
 
-<h2 id="Other_situations">Other situations</h2>
+## Other situations
 
-<p>When used inside a block, <strong><code>let</code></strong> limits the variable's scope to that block. Note the difference between <code><strong>var</strong></code><em> </em>whose scope is inside the function where it is declared.</p>
+When used inside a block, **`let`** limits the variable's scope to that block. Note the difference between **`var`** whose scope is inside the function where it is declared.
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 
 if (a === 1) {
@@ -206,21 +223,20 @@ if (a === 1) {
 }
 
 console.log(a); // 11
-console.log(b); // 2</pre>
+console.log(b); // 2
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.statements.let")}}</p>
+{{Compat("javascript.statements.let")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
- <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a></li>
- <li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44.</a></li>
-</ul>
+- [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
+- [Breaking changes in `let` and `const` in Firefox 44.](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)

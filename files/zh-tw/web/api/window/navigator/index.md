@@ -3,56 +3,62 @@ title: Window.navigator
 slug: Web/API/Window/navigator
 translation_of: Web/API/Window/navigator
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>Window.navigator</code> read-only property returns a reference to the {{domxref("Navigator")}} object, which can be queried for information about the application running the script.</p>
+The `Window.navigator` read-only property returns a reference to the {{domxref("Navigator")}} object, which can be queried for information about the application running the script.
 
-<h2 id="Example">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>navigatorObject<code> = window.navigator</code></em></pre>
+```plain
+navigatorObject = window.navigator
+```
 
-<h2 id="Specification">範例</h2>
+## 範例
 
-<h3 id="Example_1_Browser_detect_and_return_a_string">Example #1: Browser detect and return a string</h3>
+### Example #1: Browser detect and return a string
 
-<pre class="brush: js">var sBrowser, sUsrAg = navigator.userAgent;
+```js
+var sBrowser, sUsrAg = navigator.userAgent;
 
-if(sUsrAg.indexOf("Chrome") &gt; -1) {
+if(sUsrAg.indexOf("Chrome") > -1) {
     sBrowser = "Google Chrome";
-} else if (sUsrAg.indexOf("Safari") &gt; -1) {
+} else if (sUsrAg.indexOf("Safari") > -1) {
     sBrowser = "Apple Safari";
-} else if (sUsrAg.indexOf("Opera") &gt; -1) {
+} else if (sUsrAg.indexOf("Opera") > -1) {
     sBrowser = "Opera";
-} else if (sUsrAg.indexOf("Firefox") &gt; -1) {
+} else if (sUsrAg.indexOf("Firefox") > -1) {
     sBrowser = "Mozilla Firefox";
-} else if (sUsrAg.indexOf("MSIE") &gt; -1) {
+} else if (sUsrAg.indexOf("MSIE") > -1) {
     sBrowser = "Microsoft Internet Explorer";
 }
 
-alert("You are using: " + sBrowser);</pre>
+alert("You are using: " + sBrowser);
+```
 
-<h3 id="Example_2_Browser_detect_and_return_an_index">Example #2: Browser detect and return an index</h3>
+### Example #2: Browser detect and return an index
 
-<pre class="brush: js">function getBrowserId () {
+```js
+function getBrowserId () {
 
     var
         aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
         sUsrAg = navigator.userAgent, nIdx = aKeys.length - 1;
 
-    for (nIdx; nIdx &gt; -1 &amp;&amp; sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+    for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
 
     return nIdx
 
 }
 
-console.log(getBrowserId());</pre>
+console.log(getBrowserId());
+```
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">參見</h2>
+## 參見

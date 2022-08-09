@@ -3,50 +3,50 @@ title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.reject(reason)</strong></code><strong> </strong>方法回傳一個以 <code>reason</code> 拒絕的 <code>Promise</code> 物件。</p>
+**`Promise.reject(reason)`** 方法回傳一個以 `reason` 拒絕的 `Promise` 物件。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><var>Promise.reject(reason)</var>;</pre>
+```plain
+Promise.reject(reason);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt>reason</dt>
- <dd><code>Promise</code> 的失敗訊息。</dd>
-</dl>
+- reason
+  - : `Promise` 的失敗訊息。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個以 <code>reason</code> 拒絕的 {{jsxref("Promise")}}。</p>
+一個以 `reason` 拒絕的 {{jsxref("Promise")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>靜態函式 <code>Promise.reject</code> 回傳一個被拒絕的 <code>Promise。由於除錯目的及選擇性錯誤捕捉（selective error catching），使</code>用一個 <code>instanceof</code> {{jsxref("Error")}} 作為 reason 是很有幫助的。</p>
+靜態函式 `Promise.reject` 回傳一個被拒絕的 `Promise。由於除錯目的及選擇性錯誤捕捉（selective error catching），使`用一個 `instanceof` {{jsxref("Error")}} 作為 reason 是很有幫助的。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用靜態方法_Promise.reject()">使用靜態方法 Promise.reject()</h3>
+### 使用靜態方法 Promise.reject()
 
-<pre class="brush: js">Promise.reject(new Error('fail')).then(function(error) {
+```js
+Promise.reject(new Error('fail')).then(function(error) {
   // not called
 }, function(error) {
   console.log(error); // Stacktrace
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.builtins.Promise.reject")}}</p>
+{{Compat("javascript.builtins.Promise.reject")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://github.com/petkaantonov/bluebird#error-handling">Selective error catching using the BlueBird Promise library</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Selective error catching using the BlueBird Promise library](https://github.com/petkaantonov/bluebird#error-handling)

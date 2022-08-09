@@ -3,54 +3,56 @@ title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Promise.resolve(value)</strong></code> 方法回傳一個以 value 判定結果的 {{jsxref("Promise")}} 物件。若 value 是個 thenable (例如，具有 {{jsxref("Promise.then", "\"then\"方法")}})，則回傳的 promise 將依其結果採取其最終狀態；若 value 是 promise，則作為呼叫 Promise.resolve 之結果；其他情形都將回傳以 value 實現的 promise。</p>
+**`Promise.resolve(value)`** 方法回傳一個以 value 判定結果的 {{jsxref("Promise")}} 物件。若 value 是個 thenable (例如，具有 {{jsxref("Promise.then", "\"then\"方法")}})，則回傳的 promise 將依其結果採取其最終狀態；若 value 是 promise，則作為呼叫 Promise.resolve 之結果；其他情形都將回傳以 value 實現的 promise。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">Promise.resolve(value);
+```js
+Promise.resolve(value);
 Promise.resolve(promise);
 Promise.resolve(thenable);
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt>value</dt>
- <dd>將被 <code>Promise</code> 實現的引數（argument）。可以是個 <code>Promise</code> 或待解決的 thenable。</dd>
-</dl>
+- value
+  - : 將被 `Promise` 實現的引數（argument）。可以是個 `Promise` 或待解決的 thenable。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>以 value 或作為 value 的 promise 解決的 {{jsxref("Promise")}}。</p>
+以 value 或作為 value 的 promise 解決的 {{jsxref("Promise")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>靜態函式</code> <code>Promise.resolve</code> 回傳判定後的 <code>Promise。</code></p>
+`靜態函式` `Promise.resolve` 回傳判定後的 `Promise。`
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_Promise.resolve_靜態方法">使用 <code>Promise.resolve</code> 靜態方法</h3>
+### 使用 `Promise.resolve` 靜態方法
 
-<pre class="brush: js">Promise.resolve('Success').then(function(value) {
+```js
+Promise.resolve('Success').then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // not called
 });
-</pre>
+```
 
-<h3 id="判定陣列">判定陣列</h3>
+### 判定陣列
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="判定另一個_Promise">判定另一個 <code>Promise</code></h3>
+### 判定另一個 `Promise`
 
-<pre class="brush: js">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('value: ' + value);
@@ -60,13 +62,14 @@ console.log('original === cast ? ' + (original === cast));
 // logs, in order:
 // original === cast ? true
 // value: 33
-</pre>
+```
 
-<p>由於 handlers 是非同步地被調用而導致相反的紀錄順序。經由<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#回傳值">這篇文章</a>了解 then 如何運作。</p>
+由於 handlers 是非同步地被調用而導致相反的紀錄順序。經由[這篇文章](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#回傳值)了解 then 如何運作。
 
-<h3 id="判定_thenables_及拋出_Errors">判定 thenables 及拋出 Errors</h3>
+### 判定 thenables 及拋出 Errors
 
-<pre class="brush: js">// Resolving a thenable object
+```js
+// Resolving a thenable object
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill('fulfilled!'); }
 });
@@ -105,18 +108,16 @@ p3.then(function(v) {
 }, function(e) {
   // not called
 });
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("javascript.builtins.Promise.resolve")}}</p>
+{{Compat("javascript.builtins.Promise.resolve")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

@@ -3,25 +3,24 @@ title: 300 Multiple Choices
 slug: Web/HTTP/Status/300
 translation_of: Web/HTTP/Status/300
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <code><strong>300 Multiple Choices</strong></code> 重定向回應碼代表該請求具有超過一種可能的回應。用戶代理或使用者應該從中挑選一個。由於不存在標準化的選擇回應方式，此回應碼非常少被使用。</p>
+HTTP **`300 Multiple Choices`** 重定向回應碼代表該請求具有超過一種可能的回應。用戶代理或使用者應該從中挑選一個。由於不存在標準化的選擇回應方式，此回應碼非常少被使用。
 
-<p>若是伺服端有偏好的選擇，則應該產生 {{HTTPHeader("Location")}} 標頭。</p>
+若是伺服端有偏好的選擇，則應該產生 {{HTTPHeader("Location")}} 標頭。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">300 Multiple Choices
-</pre>
+```plain
+300 Multiple Choices
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPStatus("301")}} <code>Moved Permanently</code></li>
- <li>{{HTTPStatus("302")}} <code>Found</code>, the temporary redirect</li>
- <li>{{HTTPStatus("308")}} <code>Permanent Redirect</code></li>
-</ul>
+- {{HTTPStatus("301")}} `Moved Permanently`
+- {{HTTPStatus("302")}} `Found`, the temporary redirect
+- {{HTTPStatus("308")}} `Permanent Redirect`
