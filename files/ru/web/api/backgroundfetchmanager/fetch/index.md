@@ -16,7 +16,7 @@ browser-compat: api.BackgroundFetchManager.fetch
 
 {{DefaultAPISidebar("Background Fetch API")}}
 
-Метод **`fetch()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}} для предоставленного массива URL-адресов и объектов {{domxref("Request")}}.
+Метод **`fetch()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}} для переданного массива URL-адресов или объектов {{domxref("Request")}}.
 
 ## Синтаксис
 
