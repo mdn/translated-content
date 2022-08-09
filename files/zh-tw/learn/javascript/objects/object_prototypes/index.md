@@ -3,183 +3,211 @@ title: 物件原型
 slug: Learn/JavaScript/Objects/Object_prototypes
 translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}</div>
-
-<p>JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。</p>
+JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">必備條件：</th>
-   <td>基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a>〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>〉以及 OOJS 基礎概念 (參閱〈<a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction to objects</a>〉。</td>
-  </tr>
-  <tr>
-   <th scope="row">主旨：</th>
-   <td>了解 JavaScript 的物件原型、原型鍊的運作方式、應如何將新的函式加入原型屬性之中。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">必備條件：</th>
+      <td>
+        基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a
+          href="/en-US/docs/Learn/JavaScript/First_steps"
+          >First steps</a
+        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+          >Building blocks</a
+        >〉以及 OOJS 基礎概念 (參閱〈<a
+          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          >Introduction to objects</a
+        >〉。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">主旨：</th>
+      <td>
+        了解 JavaScript
+        的物件原型、原型鍊的運作方式、應如何將新的函式加入原型屬性之中。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="「原型」架構的程式語言？">「原型」架構的程式語言？</h2>
+## 「原型」架構的程式語言？
 
-<p>常有人說 JavaScript 是<strong>原型架構的程式語言 </strong>— 各個物件均具備 1 組<strong>原型物件</strong>作為範本物件，用以繼承函式與屬性。物件的原型物件可能也具備原型物件，並繼承了其上的函式與屬性。這就是我們所謂的「<strong>原型鍊 (Prototype chain)</strong>」，同時正好說明為何 A 物件的屬性與函式是透過 B 物件的屬性與函式所定義。</p>
+常有人說 JavaScript 是**原型架構的程式語言** — 各個物件均具備 1 組**原型物件**作為範本物件，用以繼承函式與屬性。物件的原型物件可能也具備原型物件，並繼承了其上的函式與屬性。這就是我們所謂的「**原型鍊 (Prototype chain)**」，同時正好說明為何 A 物件的屬性與函式是透過 B 物件的屬性與函式所定義。
 
-<p>精確點說，這些屬性與函式都是透過物件的建構子函式所定義，並非物件實例本身。</p>
+精確點說，這些屬性與函式都是透過物件的建構子函式所定義，並非物件實例本身。
 
-<p>傳統的 OOP 都是先定義了類別，接著在建立物件實例之後，在類型上定義的所有屬性與函式均複製到此實例。但 JavaScript 不會複製這些屬性與函式，卻是在物件實例與其建構子之間設定連結 (原型鍊中的連結)，只要順著原型鍊就能在建構子之中找到屬性與函式。</p>
+傳統的 OOP 都是先定義了類別，接著在建立物件實例之後，在類型上定義的所有屬性與函式均複製到此實例。但 JavaScript 不會複製這些屬性與函式，卻是在物件實例與其建構子之間設定連結 (原型鍊中的連結)，只要順著原型鍊就能在建構子之中找到屬性與函式。
 
-<p>先看個範例會比較清楚點。</p>
+先看個範例會比較清楚點。
 
-<h2 id="了解原型物件">了解原型物件</h2>
+## 了解原型物件
 
-<p>先回到我們寫過的 <code>Person()</code> 建構子範例。在你的瀏覽器裡載入範例。如果你還沒看完前篇文章並製作出此範例，可先使用 <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> 這個範例 (可看到<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">原始碼</a>)。</p>
+先回到我們寫過的 `Person()` 建構子範例。在你的瀏覽器裡載入範例。如果你還沒看完前篇文章並製作出此範例，可先使用 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 這個範例 (可看到[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html))。
 
-<p>我們在此範例中定義了建構子函式：</p>
+我們在此範例中定義了建構子函式：
 
-<pre class="brush: js">function Person(first, last, age, gender, interests) {
+```js
+function Person(first, last, age, gender, interests) {
 
   // property and method definitions
 
-};</pre>
+};
+```
 
-<p>接著建立如下的物件實例：</p>
+接著建立如下的物件實例：
 
-<pre class="brush: js">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
+```js
+var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+```
 
-<p>如果你在自己的 JavaScript 主控台中鍵入「<code>person1.」，應該會看到瀏覽器根據此物件可用的成員名稱開始自動補完：</code></p>
+如果你在自己的 JavaScript 主控台中鍵入「`person1.」，應該會看到瀏覽器根據此物件可用的成員名稱開始自動補完：`
 
-<p><img src="object-available-members.png"></p>
+![](object-available-members.png)
 
-<p>在此列表中，可以看到 <code>person1</code> 原型物件上所定義的成員，也就是 <code>Person()</code> 建構子 — <code>name</code>、<code>age</code>、<code>gender</code>、<code>interests</code>、<code>bio</code>、<code>greeting</code>。你也會看到其他如 <code>watch</code>、<code>valueOf 等，同樣也是定義在</code> <code>Person()</code> 建構子原型物件之上的成員，如此構成 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>。下圖顯示原型鍊的運作方式。</p>
+在此列表中，可以看到 `person1` 原型物件上所定義的成員，也就是 `Person()` 建構子 — `name`、`age`、`gender`、`interests`、`bio`、`greeting`。你也會看到其他如 `watch`、`valueOf 等，同樣也是定義在` `Person()` 建構子原型物件之上的成員，如此構成 [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。下圖顯示原型鍊的運作方式。
 
-<p><img src="mdn-graphics-person-person-object-2.png"></p>
+![](mdn-graphics-person-person-object-2.png)
 
-<p>所以當你在 <code>person1 上呼叫了「實際上是定義於 Object 上的函式」，會發生什麼事呢？舉例來說：</code></p>
+所以當你在 `person1 上呼叫了「實際上是定義於 Object 上的函式」，會發生什麼事呢？舉例來說：`
 
-<pre class="brush: js">person1.valueOf()</pre>
+```js
+person1.valueOf()
+```
 
-<p>此函式僅回傳所呼叫的物件數值。此範例所將發生的是：</p>
+此函式僅回傳所呼叫的物件數值。此範例所將發生的是：
 
-<ul>
- <li>瀏覽器先檢查 <code>person1</code> 物件上是否有可用的 <code>valueOf()</code> 函式。</li>
- <li>其實沒有，所以瀏覽器接著檢查 <code>person1</code> 物件的原型物件 (<code>Person</code>) 上是否有可用的 <code>valueOf()</code> 函式。</li>
- <li>同樣沒有，所以瀏覽器再檢查 <code>Person()</code> 建構子的原型物件 (<code>Object</code>) 上是否有可用的 <code>valueOf()</code> 函式。這次有，所以就會呼叫。</li>
-</ul>
+- 瀏覽器先檢查 `person1` 物件上是否有可用的 `valueOf()` 函式。
+- 其實沒有，所以瀏覽器接著檢查 `person1` 物件的原型物件 (`Person`) 上是否有可用的 `valueOf()` 函式。
+- 同樣沒有，所以瀏覽器再檢查 `Person()` 建構子的原型物件 (`Object`) 上是否有可用的 `valueOf()` 函式。這次有，所以就會呼叫。
 
-<div class="note">
-<p><strong>備註：</strong> 再次重申，在原型鍊中的函式與屬性並<strong>不是</strong>從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。</p>
-</div>
+> **備註：** 再次重申，在原型鍊中的函式與屬性並**不是**從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。
 
-<div class="note">
-<p><strong>備註：</strong> 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 <code>[[prototype]]</code> (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「<code>person1.__proto__」</code>與「<code>person1.__proto__.__proto__</code>」看看程式碼中的鍊會是什麼樣子！</p>
-</div>
+> **備註：** 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 `[[prototype]]` (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「[`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「`person1.__proto__」`與「`person1.__proto__.__proto__`」看看程式碼中的鍊會是什麼樣子！
 
-<h2 id="原型屬性也定義所要繼承的成員">原型屬性也定義所要繼承的成員</h2>
+## 原型屬性也定義所要繼承的成員
 
-<p>所以該在哪裡定義所要繼承的屬性與函式呢？若看一下 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> 參考頁面，你就會看到左邊列出許多屬性與函式，遠超過上方擷圖所列 <code>person1</code> 物件所繼承的成員數量。有些繼承了，有些則無？為什麼呢？</p>
+所以該在哪裡定義所要繼承的屬性與函式呢？若看一下 [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) 參考頁面，你就會看到左邊列出許多屬性與函式，遠超過上方擷圖所列 `person1` 物件所繼承的成員數量。有些繼承了，有些則無？為什麼呢？
 
-<p>原因在於，繼承的成員就是在 <code>prototype</code> 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「<code>Object.prototype.」開頭的成員；並非只以「</code><code>Object.」開頭的成員。</code><code>prototype</code> 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。</p>
+原因在於，繼承的成員就是在 `prototype` 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「` Object.prototype.」開頭的成員；並非只以「``Object.」開頭的成員。``prototype ` 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。
 
-<p>所以如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf()</a></code> 等等，均可用於繼承自 <code>Object()</code> 的任何物件類型，包含以建構子建立的新物件實例。</p>
+所以如 [`Object.prototype.watch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)、[`Object.prototype.valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等，均可用於繼承自 `Object()` 的任何物件類型，包含以建構子建立的新物件實例。
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>，及其他未於 <code>prototype</code> 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 <code>Object() 繼承而來的物件類型。</code>這些函式＼屬性都只能用於 <code>Object()</code> 建構子本身。</p>
+[`Object.is()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object() 繼承而來的物件類型。`這些函式＼屬性都只能用於 `Object()` 建構子本身。
 
-<div class="note">
-<p><strong>備註：</strong> 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> 建構子參考以進一步了解。</p>
-</div>
+> **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
 
-<ol>
- <li>你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
-  <pre class="brush: js">Person.prototype</pre>
- </li>
- <li>輸出結果很平淡，畢竟我們並未在自定的建構子原型上定義任何東西。依預設值，建構子的 <code>prototype</code> 都是從空白開始。現在可嘗試下列：
-  <pre class="brush: js">Object.prototype</pre>
- </li>
-</ol>
+1.  你可自行檢查現有的原型屬性。回到我們之前的範例，試著於 JavaScript 主控台中輸入：
 
-<p>這樣就會看到 <code>Object</code> 的 <code>prototype</code> 屬性中所定義的許多函式，而繼承自 <code>Object</code> 的物件也能找到這些函式。</p>
+    ```js
+    Person.prototype
+    ```
 
-<p>只要試著尋找如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> 等全域物件的原型上定義的函式與屬性，就會看到 JavaScript 中的其他原型鍊繼承範例。這些物件都在其原型上定義了多個成員，因此可作為你建立字串時的範例：</p>
+2.  輸出結果很平淡，畢竟我們並未在自定的建構子原型上定義任何東西。依預設值，建構子的 `prototype` 都是從空白開始。現在可嘗試下列：
 
-<pre class="brush: js">var myString = 'This is my string.';</pre>
+    ```js
+    Object.prototype
+    ```
 
-<p><code>myString</code> 上立刻就有多個有用的函式，如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code> 等。</p>
+這樣就會看到 `Object` 的 `prototype` 屬性中所定義的許多函式，而繼承自 `Object` 的物件也能找到這些函式。
 
-<div class="warning">
-<p><strong>警告：</strong> <code>prototype</code> 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為<code>this</code>屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 <code>__proto__</code> 存取的內部物件(internal object)才對，記得上面說過的嗎？)。<code>prototype</code>是一個物件(object)，內含了你定義所應該繼承的成員。</p>
-</div>
+只要試著尋找如 [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)、[`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)、[`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)、[`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 等全域物件的原型上定義的函式與屬性，就會看到 JavaScript 中的其他原型鍊繼承範例。這些物件都在其原型上定義了多個成員，因此可作為你建立字串時的範例：
 
-<h2 id="再次溫習_create()">再次溫習 create()</h2>
+```js
+var myString = 'This is my string.';
+```
 
-<p>我們先前講過用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code> 函式建立新物件實例的方法。</p>
+`myString` 上立刻就有多個有用的函式，如 [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)、[`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)、[`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 等。
 
-<ol>
- <li>舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
-  <pre class="brush: js">var person2 = Object.create(person1);</pre>
- </li>
- <li><code>create()</code> 實際上是透過特定的原型物件，來建立新的物件。我們在這裡將 <code>person1</code> 作為原型物件，建立了 <code>person2</code>。你可於主控台輸入下列以測試之：
-  <pre class="brush: js">person2.__proto__</pre>
- </li>
-</ol>
+> **警告：** `prototype` 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為`this`屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 `__proto__` 存取的內部物件(internal object)才對，記得上面說過的嗎？)。`prototype`是一個物件(object)，內含了你定義所應該繼承的成員。
 
-<p>如此將回傳 <code>person1</code> 物件。</p>
+## 再次溫習 create()
 
-<h2 id="建構子的屬性">建構子的屬性</h2>
+我們先前講過用 [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 函式建立新物件實例的方法。
 
-<p>每個物件實例都具備 1 個<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">建構子</a></code>屬性，指向「用以建立實例」的原始建構子函式。</p>
+1.  舉例來說，你可先在前面的 JavaScript 主控台範例中試著輸入：
 
-<ol>
- <li>舉例來說，若在主控台中輸入下列指令：
-  <pre class="brush: js">person1.constructor
-person2.constructor</pre>
+    ```js
+    var person2 = Object.create(person1);
+    ```
 
-  <p>應該兩者都會回傳 <code>Person()</code> 建構子，因為此建構子包含這些實例的原始定義。</p>
+2.  `create()` 實際上是透過特定的原型物件，來建立新的物件。我們在這裡將 `person1` 作為原型物件，建立了 `person2`。你可於主控台輸入下列以測試之：
 
-  <p>偷吃步的方法，是將圓括弧加到 <code>constructor</code> 屬性 (須包含任何必要參數) 末端，以從該建構子建立其他物件實例。畢竟建構子也是函式 (Function)，所以可透過圓括弧將之觸發。你只要納入 <code>new</code> 這個關鍵字，即可將此函式作為建構子。</p>
- </li>
- <li>在主控台中輸入：
-  <pre class="brush: js">var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
- </li>
- <li>現在可試著存取新物件的功能，例如：
-  <pre class="brush: js">person3.name.first
-person3.age
-person3.bio()</pre>
- </li>
-</ol>
+    ```js
+    person2.__proto__
+    ```
 
-<p>這樣運作得還不差。你不需常常用這方法，但當你要建立新的實例，又因為某些原因找不到原始建構子的參照，這就特別有用了。</p>
+如此將回傳 `person1` 物件。
 
-<p>此外，<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code> 屬性還有其他用處。舉例來說，如果你有個物件實例，並要回傳建構子 (本身就是實例) 的名稱，就透過：</p>
+## 建構子的屬性
 
-<pre class="brush: js">instanceName.constructor.name</pre>
+每個物件實例都具備 1 個[`建構子`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)屬性，指向「用以建立實例」的原始建構子函式。
 
-<p>也可嘗試：</p>
+1.  舉例來說，若在主控台中輸入下列指令：
 
-<pre class="brush: js">person1.constructor.name</pre>
+    ```js
+    person1.constructor
+    person2.constructor
+    ```
 
-<h2 id="修改原型">修改原型</h2>
+    應該兩者都會回傳 `Person()` 建構子，因為此建構子包含這些實例的原始定義。
 
-<p>先看看建構子的 <code>prototype</code> 屬性的修改範例：</p>
+    偷吃步的方法，是將圓括弧加到 `constructor` 屬性 (須包含任何必要參數) 末端，以從該建構子建立其他物件實例。畢竟建構子也是函式 (Function)，所以可透過圓括弧將之觸發。你只要納入 `new` 這個關鍵字，即可將此函式作為建構子。
 
-<ol>
- <li>回到 <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> 範例，先在本機儲存 1 份<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">原始碼</a>的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 <code>prototype</code> 屬性：
+2.  在主控台中輸入：
 
-  <pre class="brush: js">Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
-}</pre>
- </li>
- <li>儲存程式碼並在瀏覽器中載入頁面，再輸入下列程式碼：
-  <pre class="brush: js">person1.farewell();</pre>
- </li>
-</ol>
+    ```js
+    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
+    ```
 
-<p>這時應該會看到警示訊息且內含了建構子所定義的人名。這樣很有用，但如果能動態更新整個繼承鍊，且從建構子分割出來的所有物件實例都能使用此新的函式，就會更有用！</p>
+3.  現在可試著存取新物件的功能，例如：
 
-<p>花個 1 分鐘想想，我們的程式碼中定義了建構子，然後根據建構子建立實例物件，接著將新函式添增到建構子的原型：</p>
+    ```js
+    person3.name.first
+    person3.age
+    person3.bio()
+    ```
 
-<pre class="brush: js">function Person(first, last, age, gender, interests) {
+這樣運作得還不差。你不需常常用這方法，但當你要建立新的實例，又因為某些原因找不到原始建構子的參照，這就特別有用了。
+
+此外，[`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 屬性還有其他用處。舉例來說，如果你有個物件實例，並要回傳建構子 (本身就是實例) 的名稱，就透過：
+
+```js
+instanceName.constructor.name
+```
+
+也可嘗試：
+
+```js
+person1.constructor.name
+```
+
+## 修改原型
+
+先看看建構子的 `prototype` 屬性的修改範例：
+
+1.  回到 [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) 範例，先在本機儲存 1 份[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)的副本。在現成的 JavaScript 中加入下列程式碼，即是將新函式新增到建構子的 `prototype` 屬性：
+
+    ```js
+    Person.prototype.farewell = function() {
+      alert(this.name.first + ' has left the building. Bye for now!');
+    }
+    ```
+
+2.  儲存程式碼並在瀏覽器中載入頁面，再輸入下列程式碼：
+
+    ```js
+    person1.farewell();
+    ```
+
+這時應該會看到警示訊息且內含了建構子所定義的人名。這樣很有用，但如果能動態更新整個繼承鍊，且從建構子分割出來的所有物件實例都能使用此新的函式，就會更有用！
+
+花個 1 分鐘想想，我們的程式碼中定義了建構子，然後根據建構子建立實例物件，接著將新函式添增到建構子的原型：
+
+```js
+function Person(first, last, age, gender, interests) {
 
   // property and method definitions
 
@@ -189,27 +217,31 @@ var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'k
 
 Person.prototype.farewell = function() {
   alert(this.name.first + ' has left the building. Bye for now!');
-}</pre>
+}
+```
 
-<p>但是 <code>farewell()</code> 函式仍可用於 <code>person1</code> 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。</p>
+但是 `farewell()` 函式仍可用於 `person1` 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。
 
-<div class="note">
-<p><strong>備註：</strong> 如果你在讓此範例運作時感覺有點困難，可參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> 範例 (也可看<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">即時運作</a>的情形)。</p>
-</div>
+> **備註：** 如果你在讓此範例運作時感覺有點困難，可參閱 [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) 範例 (也可看[即時運作](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)的情形)。
 
-<p>你很少會看到在 <code>prototype</code> 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：</p>
+你很少會看到在 `prototype` 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：
 
-<pre class="brush: js">Person.prototype.fullName = 'Bob Smith';</pre>
+```js
+Person.prototype.fullName = 'Bob Smith';
+```
 
-<p>但因為幾乎不會有人取這名字，所以就沒什麼彈性。最好可以在 <code>name.first</code> 與 <code>name.last 之外建立 fullName：</code></p>
+但因為幾乎不會有人取這名字，所以就沒什麼彈性。最好可以在 `name.first` 與 `name.last 之外建立 fullName：`
 
-<pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
+```js
+Person.prototype.fullName = this.name.first + ' ' + this.name.last;
+```
 
-<p>但因為這樣會參照全域範圍，而非函式範圍，所以也不適用。若呼叫此屬性，則將回傳 <code>undefined undefined</code>。這種模式適合我們先前於原型中定義的函式，因為該函式就是在功能範圍之內，且可成功轉移至物件實例的的範圍。因此你可能會在原型中定義常數屬性 (也就是永遠不需更改的屬性)，但一般來說會比較適合在建構子中定義屬性。</p>
+但因為這樣會參照全域範圍，而非函式範圍，所以也不適用。若呼叫此屬性，則將回傳 `undefined undefined`。這種模式適合我們先前於原型中定義的函式，因為該函式就是在功能範圍之內，且可成功轉移至物件實例的的範圍。因此你可能會在原型中定義常數屬性 (也就是永遠不需更改的屬性)，但一般來說會比較適合在建構子中定義屬性。
 
-<p>事實上，許多物件定義較常見的模式，就是在建構子中定義屬性，而在原型中定義函式。這樣一來，建構子只有屬性定義；函式則切分到不同的區塊，讓整個程式碼較清楚易讀。舉例來說：</p>
+事實上，許多物件定義較常見的模式，就是在建構子中定義屬性，而在原型中定義函式。這樣一來，建構子只有屬性定義；函式則切分到不同的區塊，讓整個程式碼較清楚易讀。舉例來說：
 
-<pre class="brush: js">// Constructor with property definitions
+```js
+// Constructor with property definitions
 
 function Test(a,b,c,d) {
   // property definitions
@@ -223,14 +255,15 @@ Test.prototype.x = function () { ... }
 
 Test.prototype.y = function () { ... }
 
-// etc.</pre>
+// etc.
+```
 
-<p>你可在 Piotr Zalewa 的「<a href="https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js">school plan app</a>」範例中看到實際運作的範例。</p>
+你可在 Piotr Zalewa 的「[school plan app](https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js)」範例中看到實際運作的範例。
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p>本文說明了 JavaScript 物件原型，包含原型物件鍊是如何讓物件能互相繼承其特性、原型屬性的本質、原型屬性又是如何能將函式新增至建構子，以及其他相關概念。</p>
+本文說明了 JavaScript 物件原型，包含原型物件鍊是如何讓物件能互相繼承其特性、原型屬性的本質、原型屬性又是如何能將函式新增至建構子，以及其他相關概念。
 
-<p>接著我們將讓你在自己的任 2 個自訂物件之間，實作功能的繼承。</p>
+接著我們將讓你在自己的任 2 個自訂物件之間，實作功能的繼承。
 
-<p>{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}</p>
+{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
