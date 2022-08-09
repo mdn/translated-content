@@ -2,280 +2,332 @@
 title: Introducing asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
 translation_of: Learn/JavaScript/Asynchronous/Introducing
+tags:
+  - JavaScript
+  - Learn
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</div>
+이 글에선 비동기 프로그래밍이 무엇인지, 왜 필요한지 설명하고 역사상 JavaScript에서 비동기 함수가 구현된 몇 가지 방법에 대해 간략하게 설명 할 것입니다.
 
-<p class="summary">이 문서에선 JavaScript의 동기식 처리와 관련된 문제를 간략하게 요약하고, 앞으로 접하게 될 다른 비동기 기술들을 살펴보며, 어떻게 우리에게 도움이 될 수 있는지 살펴봅니다.</p>
-
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">준비:</th>
-   <td>Basic computer literacy, a reasonable understanding of JavaScript fundamentals.</td>
-  </tr>
-  <tr>
-   <th scope="row">목표:</th>
-   <td>
-    <p>비동기 자바스크립트에 대해 더 알기 위해, 동기 스크립트와 어떤 부분이 다른지 그리고 사용 사례를 알 수 있다.</p>
-   </td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">필요한 사전 지식</th>
+      <td>
+        기본적인 컴퓨터 사용능력, 함수와 이벤트 처리기를 포함한 JavaScript 기초에 대한 이해
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">목적</th>
+      <td>
+        비동기 JavaScript가 무엇인지, 동기 JavaScript와 어떻게 다른지, 그리고 왜 필요한지에 대한 익숙함을 얻기 위함
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Synchronous_JavaScript">Synchronous JavaScript</h2>
+비동기 프로그래밍은 작업이 완료될 때까지 기다리지 않고 잠재적으로 오래 실행되는 작업을 시작하여 해당 작업이 실행되는 동안에도 다른 이벤트에 응답할 수 있게 하는 기술입니다. 작업이 완료되면 프로그램이 결과를 제공합니다.
 
-<p><strong>{{Glossary("asynchronous")}}</strong> JavaScript가 무엇인지 이해하려면, 우리는 <strong>{{Glossary("synchronous")}}</strong> JavaScript가 무엇인지 알아야 합니다. 이 문서에선 이전 문서에서 본 정보의 일부를 요약하겠습니다.</p>
+브라우저가 제공하는 많은 기능, 특히 가장 흥미로운 것들은 시간이 오래 걸릴 가능성이 있으므로 비동기적입니다. 예를 들어 다음과 같습니다.
 
-<p>이전의 학습 모듈에서 살펴본 많은 기능들은 동기식 입니다. — 약간의 코드를 실행하면, 브라우저가 할 수 있는 한 빠르게 결과를 보여줍니다. 다음 예제를 살펴볼까요 (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html">see it live here</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html">see the source</a>):</p>
+- {{domxref("fetch", "fetch()")}}를 이용해 HTTP 요청 만들기
+- {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}를 사용해 사용자의 카메라 또는 마이크에 접근하기
+- {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}를 통해 사용자에게 파일 선택을 요청
 
-<pre class="brush: js notranslate">const btn = document.querySelector('button');
-btn.addEventListener('click', () =&gt; {
-  alert('You clicked me!');
+따라서 여러분만의 비동기 함수를 자주 _구현_ 할 필요는 없지만 올바르게 _사용_ 해야 할 경우가 많습니다.
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
+이 글에서는 비동기 함수를 필요하게 하는 장기 실행 동기 함수의 문제점을 살펴보는 것으로 시작하겠습니다.
+
+## 동기 프로그래밍
+
+아래 코드를 한번 보세요.
+
+```js
+const name = 'Miriam';
+const greeting = `Hello, my name is ${name}!`;
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
+
+이 코드는
+
+1. `name`이라는 문자열을 선언합니다.
+2. `name`을 사용하여 `greeting`이란 또다른 문자열을 선언합니다.
+3. greeting을 JavaScript 콘솔에 출력합니다.
+
+여기서 브라우저는 실질적으로 프로그램을 작성한 순서대로 한 줄씩 실행한다는 점에 주목해야 합니다. 브라우저는 각 지점에서 다음 줄로 넘어가기 전까지 현재 라인의 작업이 끝날 때까지 기다립니다. 각 라인들은 이전 라인에 의존하고 있으니 이렇게 해야 하죠.
+
+따라서 **동기 프로그래밍**이 됩니다. 이렇게 별도의 함수로 호출해도 동기입니다.
+
+```js
+function makeGreeting(name) {
+  return `Hello, my name is ${name}!`;
+}
+
+const name = 'Miriam';
+const greeting = makeGreeting(name);
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
+
+`makeGreeting()`은 **동기 함수**입니다. 왜냐하면 호출자는 함수의 작업이 완료될 때까지 기다렸다가 값을 반환해야 계속 진행할 수 있기 때문입니다.
+
+## 장기 실행 동기 함수
+
+동기 함수가 오랜 시간에 걸쳐 실행되면 어떨까요?
+
+아래 프로그램은 매우 비효율적인 알고리즘을 사용하여 "Generate primes" 버튼을 클릭할 때 여러 개의 큰 소수를 생성합니다. 사용자가 입력하는 숫자가 커질수록 작업 시간도 더 오래 걸립니다.
+
+```html
+<label for="quota">Number of primes:</label>
+<input type="text" id="quota" name="quota" value="1000000">
+
+<button id="generate">Generate primes</button>
+<button id="reload">Reload</button>
+
+<div id="output"></div>
+```
+
+```js
+function generatePrimes(quota) {
+
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+          return false;
+       }
+    }
+    return true;
+  }
+
+  const primes = [];
+  const maximum = 1000000;
+
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+
+  return primes;
+}
+
+document.querySelector('#generate').addEventListener('click', () => {
+  const quota = document.querySelector('#quota').value;
+  const primes = generatePrimes(quota);
+  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
 });
-</pre>
 
-<p>이 블럭에서 코드는 위에서 아래로 차례대로 실행됩니다. :</p>
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload()
+});
+```
 
-<ol>
- <li>DOM에 미리 정의된 {{htmlelement("button")}} element 를 참조합니다.</li>
- <li><code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> 이벤트 리스너를 만들어 버튼이 클릭됐을 때 아래 기능을 차례로 실행합니다. :
-  <ol>
-   <li><code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 메시지가 나타납니다.</li>
-   <li>메시지가 사라지면 {{htmlelement("p")}} element를 만듭니다.</li>
-   <li>그리고 text content를 만듭니다.</li>
-   <li>마지막으로 docuent body에 문장을 추가합니다.</li>
-  </ol>
- </li>
-</ol>
+{{EmbedLiveSample("A long-running synchronous function", 600, 120)}}
 
-<p>각 작업이 처리되는 동안 렌더링은 일시 중지됩니다. <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">앞에서 말한 문서와 같이</a>, <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_is_single_threaded">JavaScript 는 single threaded</a>이기 때문입니다. 한 번에 한 작업만, 하나의 main thread에서 처리될 수 있습니다. 그리고 다른 작업은 앞선 작업이 끝나야 수행됩니다.</p>
+"Generate primes"를 클릭해보세요. 여러분의 컴퓨터가 얼마나 빠른지에 따라 달라지겠지만, 프로그램이 "Finished!" 메시지를 출력하기 전 아마 몇 초가 걸릴 것입니다.
 
-<p>따라서 앞의 예제는 사용자가 OK 버튼을 누를 때까지 문장이 나타나지 않습니다. :</p>
+## 장기 실행 동기 함수의 문제점
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">button</span>&gt;Click me&lt;/<span class="pl-ent">button</span>&gt;</pre>
-</div>
+다음 예제는 입력할 수 있는 텍스트 상자를 추가한 것을 제외하고는 이전 예제와 같습니다. 이번에는 "Generate primes"를 누른 후 바로 텍스트 상자에 아무 글이나 입력해보세요.
 
-<p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
+`generatePrimes()` 함수가 실행 중인 동안 프로그램이 완전히 응답하지 않는 것을 확인할 수 있을 겁니다. 아무것도 입력할 수 없고 클릭도 안될 것이며 그 외 다른 것도 할 수 없습니다.
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: 기억해두세요. <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code> 는 동기 블럭을 설명하는데 아주 유용하지만, 실제 어플리케이션에서 사용하기엔 아주 끔찍합니다.</p>
-</div>
+```html hidden
+<label for="quota">Number of primes:</label>
+<input type="text" id="quota" name="quota" value="1000000">
 
-<h2 id="Asynchronous_JavaScript">Asynchronous JavaScript</h2>
+<button id="generate">Generate primes</button>
+<button id="reload">Reload</button>
 
-<p>앞서 설명된 이유들 (e.g. related to blocking) 때문에 많은 웹 API기능은 현재 비동기 코드를 사용하여 실행되고 있습니다. 특히 외부 디바이스에서 어떤 종류의 리소스에 액세스 하거나 가져오는 기능들에 많이 사용합니다. 예를 들어 네트워크에서 파일을 가져오거나, 데이터베이스에 접속해 특정 데이터를 가져오는 일, 웹 캠에서 비디오 스트림에 엑세스 하거나, 디스플레이를 VR 헤드셋으로 브로드캐스팅 하는것 입니다.</p>
+<textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"
+</textarea>
 
-<p>동기적 코드를 사용하여 작업을 처리하는데 왜 이렇게 어려울까요? 다음 예제를 살펴보겠습니다. 서버에서 이미지를 가져오면 네트워크 환경, 다운로드 속도 등의 영향을 받아 이미지를 즉시 확인할 수 없습니다. 이 말은 아래 코드가 (pseudocode) 실행되지 않는다는 의미 입니다. :</p>
+<div id="output"></div>
 
-<pre class="brush: js notranslate">let response = fetch('myImage.png');
-let blob = response.blob();
-// display your image blob in the UI somehow</pre>
+```
 
-<p>왜냐하면 앞서 설명했듯이 이미지를 다운로드 받는데 얼마나 걸릴지 모르기 때문입니다. 그래서 두 번째 줄을 실행하면 에러가 발생할 것 입니다. (이미지의 크키가 아주 작다면 에러가 발생하지 않을 수도 있습니다. 반대로 이미지의 크기가 크면 매번 발생할 것 입니다.) 왜냐하면 <code>response</code> 가 아직 제공되지 않았기 때문입니다. 따라서 개발자는 <code>response</code> 가 반환되기 전 까지 기다리게 처리를 해야합니다.</p>
+```css hidden
+textarea {
+  display: block;
+  margin: 1rem 0;
+}
+```
 
-<p>JavaScript에서 볼 수 있는 비동기 스타일은 두 가지 유형이 있습니다, 예전 방식인 callbacks 그리고 새로운 방식인 promise-style 코드 입니다. 이제부터 차례대로 살펴보겠습니다.</p>
+```js hidden
+function generatePrimes(quota) {
 
-<h2 id="Async_callbacks">Async callbacks</h2>
+  function isPrime(n) {
+    for (let c = 2; c <= Math.sqrt(n); ++c) {
+      if (n % c === 0) {
+          return false;
+       }
+    }
+    return true;
+  }
 
-<p>Async callbacks은 백그라운드에서 코드 실행을 시작할 함수를 호출할 때 인수로 지정된 함수입니다. 백그라운드 코드 실행이 끝나면 callback 함수를 호출하여 작업이 완료됐음을 알리거나, 다음 작업을 실행하게 할 수 있습니다. callbacks을 사용하는 것은 지금은 약간 구식이지만, 여전히 다른 곳에서 사용이 되고있음을 확인할 수 있습니다.</p>
+  const primes = [];
+  const maximum = 1000000;
 
-<p>Async callback 의 예시는 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 'click' 옆의 두 번째 매개변수 입니다. :</p>
+  while (primes.length < quota) {
+    const candidate = Math.floor(Math.random() * (maximum + 1));
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
 
-<pre class="brush: js notranslate">btn.addEventListener('click', () =&gt; {
-  alert('You clicked me!');
+  return primes;
+}
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
-});</pre>
+document.querySelector('#generate').addEventListener('click', () => {
+  const quota = document.querySelector('#quota').value;
+  const primes = generatePrimes(quota);
+  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+});
 
-<p>첫 번째 매개 변수는 이벤트 리스너 유형이며, 두 번째 매개 변수는 이벤트가 실행 될 때 호출되는 콜백 함수입니다.</p>
+document.querySelector('#reload').addEventListener('click', () => {
+  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+  document.location.reload();
+});
+```
 
-<p>callback 함수를 다른 함수의 인수로 전달할 때, 함수의 참조를 인수로 전달할 뿐이지 즉시 실행되지 않고, 함수의 body에서 “called back”됩니다. 정의된 함수는 때가 되면 callback 함수를 실행하는 역할을 합니다.</p>
+{{EmbedLiveSample("The trouble with long-running synchronous functions", 600, 200)}}
 
-<p><a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>)를 불러오는 예제를 통해 callback 함수를 쉽게 사용해봅시다. :</p>
+이는 장기 실행 동기 함수의 기본적인 문제입니다. 우리의 프로그램이 필요로 하는 것은 다음과 같습니다.
 
-<pre class="brush: js notranslate">function loadAsset(url, type, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.responseType = type;
+1. 함수를 호출함으로써 장기적으로 실행되는 작업을 시작한다.
+2. 이 함수로 작업을 시작하고 즉시 복귀하여 다른 이벤트에 계속 응답할 수 있게 한다.
+3. 작업이 완료되면 결과를 알려준다.
 
-  xhr.onload = function() {
-    callback(xhr.response);
-  };
+이것이 바로 비동기 함수가 할 수 있는 일입니다. 이 글의 나머지 부분에서는 비동기 함수가 JavaScript에서 구현되는 방법에 관해 설명합니다.
 
+## 이벤트 처리기
+
+방금 들은 비동기 함수에 대한 설명으로 여러분은 이벤트 처리기를 떠올릴 수 있습니다. 만약 떠올랐다면 맞습니다. 이벤트 처리기는 실제로 비동기 프로그래밍의 한 형태입니다. 이벤트가 발생할 때마다 호출되는 함수(이벤트 처리기)를 제공하는 것으로 말이죠. "이벤트"가 "비동기 작업 완료"인 경우, 이 이벤트를 사용하여 호출자에게 비동기 함수 호출의 결과를 알릴 수 있습니다.
+
+일부 초기 비동기 API는 이러한 이벤트 방식을 사용했습니다. {{domxref("XMLHttpRequest")}} 는 JavaScript를 사용하여 원격 서버에 HTTP 요청을 할 수 있는 API입니다. HTTP 요청은 시간이 걸릴 수 있는 작업이라 비동기 API이며 이벤트 수신기를 `XMLHttpRequest` 객체에 연결해 요청의 진행 상태 및 최종 완료에 대한 알림을 받습니다.
+
+다음 예제에서는 이를 실제로 보여 줍니다. "Click to start request"를 클릭하여 요청을 보내보세요. 새로운 {{domxref("XMLHttpRequest")}}를 생성하고 이것의 {{domxref("XMLHttpRequest/loadend_event", "loadend")}} 이벤트를 수신합니다. 처리기는 상태 코드와 함께 "Finished!" 메시지를 기록합니다.
+
+이벤트 수신기를 추가한 후 요청을 보냅니다. 이때 요청이 시작된 이후 "Started XHR request"를 기록할 수 있는데, 이는 요청이 진행되는 동안 프로그램이 계속 실행되고 있음을 뜻하며 요청이 완료될 때 이벤트 처리기가 호출됩니다.
+
+```html
+<button id="xhr">Click to start request</button>
+<button id="reload">Reload</button>
+
+<pre readonly class="event-log"></pre>
+```
+
+```css hidden
+pre {
+  display: block;
+  margin: 1rem 0;
+}
+```
+
+```js
+const log = document.querySelector('.event-log');
+
+document.querySelector('#xhr').addEventListener('click', () => {
+  log.textContent = '';
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('loadend', () => {
+    log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
+  });
+
+  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
   xhr.send();
+  log.textContent = `${log.textContent}Started XHR request\n`;});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  log.textContent = '';
+  document.location.reload();
+});
+```
+
+{{EmbedLiveSample("Event handlers", 600, 120)}}
+
+[이전에 접한 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events)와 유사하지만, 이벤트가 버튼 클릭과 같은 사용자 행동이 아닌 어떤 객체의 상태 변화라는 점이 다릅니다.
+
+## 콜백
+
+이벤트 핸들러는 콜백의 특정 유형입니다. 콜백은 그냥 적절한 시점에 호출될 것으로 예상하여 다른 함수로 전달되는 함수입니다. 방금 살펴본 것처럼 콜백은 JavaScript에서 비동기 함수를 구현하는 주요 방식이었습니다.
+
+그러나 콜백 기반 코드는 콜백이 콜백을 가지는 함수를 호출하는 경우 이해하기 어려울 수 있습니다. 이것은 일련의 비동기 함수로 분해되는 작업을 수행해야 하는 일반적인 상황입니다. 예를 들어, 다음을 한번 보겠습니다.
+
+```js
+function doStep1(init) {
+  return init + 1;
 }
 
-function displayImage(blob) {
-  let objectURL = URL.createObjectURL(blob);
-
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
+function doStep2(init) {
+  return init + 2;
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);</pre>
+function doStep3(init) {
+  return init + 3;
+}
 
-<p><code>displayImage()</code>함수는 Object URL로 전달되는 Blob을 전달받아, URL이 나탸내는 이미지를 만들어 <code>&lt;body&gt;</code>에 그립니다. 그러나, 우리는 <code>loadAsset()</code> 함수를 만들고 "url", "type" 그리고 "callback"을 매개변수로 받습니다. <code>XMLHttpRequest</code> (줄여서 "XHR") 를 사용하여 전달받은 URL에서 리소스를 가져온 다음 callback으로 응답을 전달하여 작업을 수행합니다. 이 경우 callback은 callback 함수로 넘어가기 전, 리소스 다운로드를 완료하기 위해 XHR 요청이 진행되는 동안 대기합니다. (<code><a href="/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code> 이벤트 핸들러 사용)</p>
+function doOperation() {
+  let result = 0;
+  result = doStep1(result);
+  result = doStep2(result);
+  result = doStep3(result);
+  console.log(`result: ${result}`);
+}
 
-<p>Callbacks은 다재다능 합니다. 함수가 실행되는 순서, 함수간에 어떤 데이터가 전달되는지를 제어할 수 있습니다. 또한 상황에 따라 다른 함수로 데이터를 전달할 수 있습니다. 따라서 응답받은 데이터에 따라 (<code>processJSON()</code>, <code>displayText()</code>등) 어떤 작업을 수행할지 지정할 수 있습니다.</p>
+doOperation();
+```
 
-<p>모든 callback이 비동기인 것은 아니라는 것에 유의하세요 예를 들어 {{jsxref("Array.prototype.forEach()")}} 를 사용하여 배열의 항목을 탐색할 때가 있습니다. (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">see it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">the source</a>):</p>
+여기서는 세 단계로 나뉘는 단일 작업이 있습니다. 각 단계는 마지막 단계에 의존합니다. 이 예제에서 첫 번째 단계는 입력값에 1을 추가하고, 두 번째 단계는 2를 추가하고, 세 번째 단계는 3을 추가합니다. 0의 입력부터 시작하여 최종 결과는 6(0 + 1 + 2 + 3)입니다. 동기식 프로그램으로서, 이것은 매우 간단합니다. 하지만 콜백을 사용하여 단계를 구현하면 어떨까요?
 
-<pre class="brush: js notranslate">const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+```js
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
 
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
-});</pre>
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
 
-<p>이 예제에선 그리스 신들의 배열을 탐색하여 인덱스 넘버와 그 값을 콘솔에 출력합니다. <code>forEach()</code> 매개변수는 callback 함수이며, callback 함수는 배열 이름과 인덱스 총 두 개의 매개변수가 있습니다. 그러나, 여기선 비동기로 처리되지 않고 즉시 실행됩니다..</p>
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
 
-<h2 id="Promises">Promises</h2>
+function doOperation() {
+  doStep1(0, result1 => {
+    doStep2(result1, result2 => {
+      doStep3(result2, result3 => {
+        console.log(`result: ${result3}`);
+      });
+    });
+  });
 
-<p>Promises 모던 Web APIs에서 보게 될 새로운 코드 스타일 입니다. 좋은 예는 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API 입니다. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>는 {{domxref("XMLHttpRequest")}}보다 좀 더 현대적인 버전 입니다. 아래 <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> 예제에서 빠르게 살펴볼까요?  :</p>
+}
 
-<pre class="brush: js notranslate">fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  products = json;
-  initialize();
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});</pre>
+doOperation();
+```
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: You can find the finished version on GitHub (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">see the source here</a>, and also <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">see it running live</a>).</p>
-</div>
+콜백 내부에서 콜백을 호출하기 때문에 깊게 중첩된 `doOperation()` 함수가 생깁니다. 이 함수는 읽고 디버깅하기 훨씬 어렵습니다. 이것은 때때로 "콜백 지옥(callback hell)" 또는 "파라미드 오브 둠(pyramid of doom)"이라고 불립니다. (왜냐하면 들여 써진 부분이 옆에서 봤을 때 피라미드처럼 보이거든요.)
 
-<p><code>fetch</code><code>()</code> 는 단일 매개변수만 전달받습니다. — 네트워크에서 가지고 오고 싶은 리소스의 URL — 그리고 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>로 응답합니다. promise 는 비동기 작업이 성공 했는지 혹은 실패했는지를 나타내는 하나의 오브젝트 입니다. 즉 성공/실패 의 분기점이 되는 중간의 상태라고 표현할 수 있죠. 왜 promise라는 이름이 붙었는지 잠깐 살펴보자면.. "내가 할수 있는 한 빨리 너의 요청의 응답을 가지고 돌아간다고 약속(promise)할게" 라는 브라우저의 표현방식 이어서 그렇습니다.</p>
+이렇게 콜백을 중첩하면 오류 처리도 매우 어려워질 수 있습니다. 상위 레벨에서 한 번만 오류를 처리하는 대신 "피라미드"의 각 레벨에서 오류를 처리해야 하는 경우가 많습니다.
 
-<p>이 개념에 익숙해 지기 위해서는 연습이 필요합니다.; 마치 <a href="https://ko.wikipedia.org/wiki/%EC%8A%88%EB%A2%B0%EB%94%A9%EA%B1%B0%EC%9D%98_%EA%B3%A0%EC%96%91%EC%9D%B4">슈뢰딩거의 고양이</a> 처럼 느껴질 수 있습니다. 위의 예제에서도 발생 가능한 결과 중 아직 아무것도 발생하지 않았기 때문에, 미래에 어떤 시점에서 <code>fetch()</code>작업이 끝났을때 어떤 작업을 수행 시키기 위해 두 가지 작업이 필요합니다. 예제에선 <code>fetch()</code> 마지막에 세 개의 코드 블럭이 더 있는데 이를 살펴보겠습니다. :</p>
+이러한 이유로 대부분의 최신 비동기 API는 콜백을 사용하지 않습니다. 대신 JavaScript에서 비동기 프로그래밍의 토대는 다음에 소개할 {{jsxref("Promise")}} 입니다.
 
-<ul>
- <li>두 개의 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 블럭: 두 함수 모두 이전 작업이 성공했을때 수행할 작업을 나타내는 callback 함수 입니다. 그리고 각 callback함수는 인수로 이전 작업의 성공 결과를 전달받습니다. 따라서 성공했을때의 코드를 callback 함수 안에 작성하면 됩니다. 각 <code>.then()</code> 블럭은 서로 다른 promise를 반환합니다. 이 말은 <code>.then()</code> 을 여러개 사용하여 연쇄적으로 작업을 수행하게 할 수 있음을 말합니다. 따라서 여러 비동기 작업을 차례대로 수행할 수 있습니다.</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> 블럭은 <code>.then()</code> 이 하나라도 실패하면 동작합니다. — 이는 동기 방식의 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 블럭과 유사합니다. error 오브젝트는 <code>catch()</code>블럭 안에서 사용할 수 있으며, 발생한 오류를 보고하는 용도로 사용할 수 있습니다. 그러나 <code>try...catch</code> 는 나중에 배울 <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>에서는 동작하지만, promise와 함께 동작할 수 없음을 알아두세요.</li>
-</ul>
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: You'll learn a lot more about promises later on in the module, so don't worry if you don't understand them fully yet.</p>
-</div>
+## 이번 과정
 
-<h3 id="The_event_queue">The event queue</h3>
-
-<p>promise와 같은 비동기 작업은 <strong>event queue</strong>에 들어갑니다. 그리고 main thread가 끝난 후 실행되어 후속 JavaScript 코드가 차단되는것을 방지합니다. queued 작업은 가능한 빨리 완료되어 JavaScript 환경으로 결과를 반환해줍니다.</p>
-
-<h3 id="Promises_vs_callbacks">Promises vs callbacks</h3>
-
-<p>Promises 는 old-style callbacks과 유사한 점이 있습니다. 기본적으로 callback을 함수로 전달하는 것이 아닌 callback함수를 장착하고 있는 returned된 오브젝트 입니다.</p>
-
-<p>그러나 Promise는 비동기 작업을 처리함에 있어서 old-style callbacks 보다 더 많은 이점을 가지고 있습니다. :</p>
-
-<ul>
- <li>여러 개의 연쇄 비동기 작업을 할 때 앞서 본 예제처럼 <code>.then()</code> 을 사용하여 결과값을 다음 작업으로 넘길 수 있습니다. callbacks으로 이를 사용하려면 더 어렵습니다. 또한 "파멸의 피라미드" (<a href="http://callbackhell.com/">callback hell</a>로 잘 알려진)을 종종 마주칠 수 있습니다.</li>
- <li>Promise callbacks은 event queue에 배치되는 엄격한 순서로 호출됩니다.</li>
- <li>에러 처리가 더 간결해집니다. — 모든 에러를 코드 블럭의 마지막 부분에 있는 단 한개의 <code>.catch()</code> 블럭으로 처리할 수 있습니다. 이 방법은 피라미드의 각 단계에서 에러를 핸들링하는 것 보다 더 간단합니다..</li>
- <li>구식 callback은 써드파티 라이브러리에 전달될 때 함수가 어떻게 실행되어야 하는 방법을 상실하는 반면 Promise는 그렇지 않습니다.</li>
-</ul>
-
-<h2 id="The_nature_of_asynchronous_code">The nature of asynchronous code</h2>
-
-<p>코드 실행 순서를 완전히 알지 못할 때 발생하는 현상과 비동기 코드를 동기 코드처럼 취급하려고 하는 문제를 살펴보면서 비동기 코드의 특성을 더 살펴봅시다 아래 예제는 이전에 봤던 예제와 유사합니다. (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html">see it live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">the source</a>). 한가지 다른 점은 코드가 실행순서를 보여주기 위해 {{domxref("console.log()")}} 를 추가했습니다.</p>
-
-<pre class="brush: js notranslate">console.log ('Starting');
-let image;
-
-fetch('coffee.jpg').then((response) =&gt; {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) =&gt; {
-  let objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) =&gt; {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
-
-console.log ('All done!');</pre>
-
-<p>브라우저는 코드를 실행하기 시작할 것이고, 맨 처음 나타난 (<code>Starting</code>) 글씨가 써진 <code>console.log()</code> 후 <code>image</code> 변수를 만들 것 입니다.</p>
-
-<p>다음으로 <code>fetch()</code> block 으로 이동하여 코드를 실행하려고 할 것 입니다. <code>fetch()</code> 덕분에 blocking없이 비동기 적으로 코드가 실행되겠죠. 블럭 내에서 promise와 관련된 작업이 끝나면 다음 작업으로 이어질 것 입니다. 그리고 마지막으로 (<code>All done!</code>) 가 적혀있는 <code>console.log()</code> 에서 메시지를 출력할 것 입니다.</p>
-
-<p><code>fetch()</code> 블럭 작업이 작업을 완전히 끝내고 마지막 <code>.then()</code> 블럭에 도달해야 <code>console.log()</code> 의 (<code>It worked :)</code>) 메시지가 나타납니다. 그래서 메시지의 순서는 코드에 적혀있는 대로 차례대로 나타나는게 아니라 순서가 약간 바뀌어서 나타납니다 :</p>
-
-<ul>
- <li>Starting</li>
- <li>All done!</li>
- <li>It worked :)</li>
-</ul>
-
-<p>이 예가 어렵다면 아래의 다른 예를 살펴보세요 :</p>
-
-<pre class="brush: js notranslate">console.log("registering click handler");
-
-button.addEventListener('click', () =&gt; {
-  console.log("get click");
-});
-
-console.log("all done");</pre>
-
-<p>이전 예제와 매우 유사한 예제 입니다. — 첫 번째와 세 번째<code>console.log()</code> 메시지는 콘솔창에 바로 출력됩니다. 그러나 두 번째 메시지는 누군가가 버튼을 클릭하기 전엔 콘솔에 표시되지 않죠. 위의 예제의 차이라면 두 번쩨 메시지가 어떻게 잠시 blocking이 되는지 입니다. 첫 예제는 Promise 체이닝 때문에 발생하지만 두 번째 메시지는 클릭 이벤트를 대기하느라고 발생합니다.</p>
-
-<p>less trivial 코드 예제에서 이러한 설정을 문제를 유발할 수 있습니다. — 비동기 코드 블럭에서 반환된 결과를 동기화 코드 블럭에 사용할 수 없습니다. 위의 에시에서 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">image</span></font> 변수가 그 예시 입니다. 브라우저가 동기화 코드 블럭을 처리하기 전에 비동기 코드 블럭 작업이 완료됨을 보장할 수 없습니다.</p>
-
-<p>어떤 의미인지 확인을 하려면 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html">our example</a>을 컴퓨터에 복사한 후 마지막 <code>console.log()</code> 를 아래처럼 고쳐보세요:</p>
-
-<pre class="brush: js notranslate">console.log ('All done! ' + image.src + 'displayed.');</pre>
-
-<p>고치고 나면 콘솔창에서 아래와 같은 에러가 뜨는것을 확인할 수 있습니다. :</p>
-
-<pre class="notranslate"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
-
-<p>브라우저가 마지막 <code>console.log()</code> 를 처리할 때, <code>fetch()</code> 블럭이 완료되지 않아 <code>image</code> 변수에 결과가 반환되지 않았기 때문입니다.</p>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: For security reasons, you can't <code>fetch()</code> files from your local filesystem (or run other such operations locally); to run the above example locally you'll have to run the example through a <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">local webserver</a>.</p>
-</div>
-
-<h2 id="Active_learning_make_it_all_async!">Active learning: make it all async!</h2>
-
-<p>위의 <code>fetch()</code> 예시에서 마지막<code>console.log()</code>도 순서대로 나타나도록 고칠 수 있습니다. 마지막 <code>console.log()</code> 도 비동기로 작동시키면 됩니다. 마지막 <code>.then()</code> 블럭의 마지막에 다시 작성하거나, 새로운 블럭을 만들면 콘솔에 순서대로 나타날 것 입니다. 지금 바로 고쳐보세요!</p>
-
-<div class="blockIndicator note">
-<p><strong>Note</strong>: If you get stuck, you can <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">find an answer here</a> (see it <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">running live</a> also). You can also find a lot more information on promises in our <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a> guide, later on in the module.</p>
-</div>
-
-<h2 id="Conclusion">Conclusion</h2>
-
-<p>In its most basic form, JavaScript is a synchronous, blocking, single-threaded language, in which only one operation can be in progress at a time. But web browsers define functions and APIs that allow us to register functions that should not be executed synchronously, and should instead be invoked asynchronously when some kind of event occurs (the passage of time, the user's interaction with the mouse, or the arrival of data over the network, for example). This means that you can let your code do several things at the same time without stopping or blocking your main thread.</p>
-
-<p>Whether we want to run code synchronously or asynchronously will depend on what we're trying to do.</p>
-
-<p>There are times when we want things to load and happen right away. For example when applying some user-defined styles to a webpage you'll want the styles to be applied as soon as possible.</p>
-
-<p>If we're running an operation that takes time however, like querying a database and using the results to populate templates, it is better to push this off the main thread and complete the task asynchronously. Over time, you'll learn when it makes more sense to choose an asynchronous technique over a synchronous one.</p>
-
-<ul>
-</ul>
-
-<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}</p>
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
-</ul>
+- **Introducing asynchronous JavaScript**
+- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
