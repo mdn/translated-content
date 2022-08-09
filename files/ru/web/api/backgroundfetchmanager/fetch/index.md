@@ -36,7 +36,7 @@ fetch(id, requests, options);
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}}.
+{{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}}.
 
 ### Исключения
 
