@@ -3,7 +3,6 @@ title: Cómo crear widgets de formularios personalizados
 slug: Learn/Forms/How_to_build_custom_form_controls
 translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 

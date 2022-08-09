@@ -10,7 +10,6 @@ tags:
   - Web
   - l10n:priority
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
 

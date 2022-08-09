@@ -3,7 +3,6 @@ title: Tablas HTML
 slug: Learn/HTML/Tables
 translation_of: Learn/HTML/Tables
 original_slug: Learn/HTML/Tablas
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

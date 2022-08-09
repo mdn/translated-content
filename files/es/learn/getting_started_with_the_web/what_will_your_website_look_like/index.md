@@ -16,7 +16,6 @@ tags:
   - Tipos de Letra
   - paso a paso
 translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-htmlDate: 2022-03-02
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

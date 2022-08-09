@@ -17,7 +17,6 @@ tags:
   - depurar
   - l10n:priority
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
-htmlDate: 2022-12-08
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 

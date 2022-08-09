@@ -2,7 +2,6 @@
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
 translation_of: Learn/Accessibility/Mobile
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 

@@ -11,7 +11,6 @@ tags:
   - introducción
 translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/Primeros_pasos/Introducción
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 

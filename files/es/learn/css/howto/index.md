@@ -3,7 +3,6 @@ title: Usa CSS para resolver problemas comunes
 slug: Learn/CSS/Howto
 translation_of: Learn/CSS/Howto
 original_slug: Learn/CSS/Sábercomo
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

@@ -11,7 +11,6 @@ tags:
   - lado del servidor
   - nodejs
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Aprendizaje/Lado-Servidor/Express_Nodejs/Ambiente-Desarrollo", "Aprendizaje/Lado-Servidor/Express_Nodejs")}}
 

@@ -9,7 +9,6 @@ tags:
   - Texto
 translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
 original_slug: Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Texto_básico_HTML
-htmlDate: 2022-08-04
 ---
 {{learnsidebar}}
 

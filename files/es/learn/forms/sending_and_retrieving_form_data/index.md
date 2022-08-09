@@ -3,7 +3,6 @@ title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}} {{PreviousMenuNext("Aprende / HTML / Formularios / The_native_form_widgets", "Aprender / html / Formularios / Form_validation", "Aprender / html / Forms")}}
 

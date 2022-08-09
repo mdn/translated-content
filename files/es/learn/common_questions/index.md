@@ -10,7 +10,6 @@ tags:
   - Web
   - WebMechanics
 translation_of: Learn/Common_questions
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

@@ -2,7 +2,6 @@
 title: Cuadrículas
 slug: Learn/CSS/CSS_layout/Grids
 translation_of: Learn/CSS/CSS_layout/Grids
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 

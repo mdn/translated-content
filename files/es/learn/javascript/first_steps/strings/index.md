@@ -15,7 +15,6 @@ tags:
   - l10n:priority
   - strings
 translation_of: Learn/JavaScript/First_steps/Strings
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

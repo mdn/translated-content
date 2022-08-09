@@ -2,7 +2,6 @@
 title: 'Tutorial de Django Parte 10: Probando una aplicación web Django'
 slug: Learn/Server-side/Django/Testing
 translation_of: Learn/Server-side/Django/Testing
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 

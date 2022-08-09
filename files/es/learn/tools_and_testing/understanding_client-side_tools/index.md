@@ -14,7 +14,6 @@ tags:
   - lado del cliente
 translation_of: Learn/Tools_and_testing/Understanding_client-side_tools
 original_slug: Learn/Herramientas_y_pruebas/Understanding_client-side_tools
-htmlDate: 2022-04-20
 ---
 {{LearnSidebar}}
 

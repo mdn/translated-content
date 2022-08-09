@@ -2,7 +2,6 @@
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
 translation_of: Learn/CSS/CSS_layout/Flexbox
-htmlDate: 2022-12-16
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

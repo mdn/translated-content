@@ -9,7 +9,6 @@ tags:
   - Orientado a objetos
   - Principiante
 translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 

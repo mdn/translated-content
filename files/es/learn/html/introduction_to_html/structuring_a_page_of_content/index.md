@@ -13,7 +13,6 @@ tags:
   - semántica
 translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Learn/HTML/Introduccion_a_HTML/Estructuración_de_una_página_de_contenido
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 

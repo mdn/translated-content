@@ -2,7 +2,6 @@
 title: Servidor Node sin framework
 slug: Learn/Server-side/Node_server_without_framework
 translation_of: Learn/Server-side/Node_server_without_framework
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

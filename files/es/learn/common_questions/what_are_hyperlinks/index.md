@@ -2,7 +2,6 @@
 title: Qué son los hipervínculos?
 slug: Learn/Common_questions/What_are_hyperlinks
 translation_of: Learn/Common_questions/What_are_hyperlinks
-htmlDate: 2022-08-04
 ---
 En este artículo, repasaremos qué son los hipervínculos y por qué son importantes.
 

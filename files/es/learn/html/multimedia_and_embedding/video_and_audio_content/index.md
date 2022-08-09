@@ -2,7 +2,6 @@
 title: Contenido de audio y video
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 

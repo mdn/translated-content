@@ -11,7 +11,6 @@ tags:
   - strings
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 original_slug: Learn/JavaScript/First_steps/Prueba_tus_habilidades:_Strings
-htmlDate: 2022-05-23
 ---
 {{learnsidebar}}
 

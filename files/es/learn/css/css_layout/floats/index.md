@@ -2,7 +2,6 @@
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
 translation_of: Learn/CSS/CSS_layout/Floats
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 

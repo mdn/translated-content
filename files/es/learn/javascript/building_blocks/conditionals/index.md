@@ -9,7 +9,6 @@ tags:
   - JavaScript
   - Principiante
 translation_of: Learn/JavaScript/Building_blocks/conditionals
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

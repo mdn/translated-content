@@ -8,7 +8,6 @@ tags:
   - modulo
   - primeros pasos
 translation_of: Learn/CSS/First_steps
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

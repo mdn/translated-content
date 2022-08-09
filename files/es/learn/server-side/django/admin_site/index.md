@@ -13,7 +13,6 @@ tags:
   - django_admin
   - programacion
 translation_of: Learn/Server-side/Django/Admin_site
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 

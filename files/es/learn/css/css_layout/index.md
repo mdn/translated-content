@@ -17,7 +17,6 @@ tags:
   - flexbox
   - float
 translation_of: Learn/CSS/CSS_layout
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

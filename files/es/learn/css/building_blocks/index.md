@@ -7,7 +7,6 @@ tags:
   - Principiante
   - bloques de construcción
 translation_of: Learn/CSS/Building_blocks
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

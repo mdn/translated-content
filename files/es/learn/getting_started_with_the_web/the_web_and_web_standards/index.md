@@ -11,7 +11,6 @@ tags:
   - aprende
 translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Learn/Getting_started_with_the_web/La_web_y_los_estandares_web
-htmlDate: 2022-02-11
 ---
 {{learnsidebar}}
 

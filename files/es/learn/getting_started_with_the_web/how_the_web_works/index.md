@@ -15,7 +15,6 @@ tags:
   - Web
 translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Learn/Getting_started_with_the_web/Cómo_funciona_la_Web
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar()}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 

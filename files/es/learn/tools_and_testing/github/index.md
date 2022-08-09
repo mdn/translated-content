@@ -9,7 +9,6 @@ tags:
   - git
 translation_of: Learn/Tools_and_testing/GitHub
 original_slug: Learn/Herramientas_y_pruebas/GitHub
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

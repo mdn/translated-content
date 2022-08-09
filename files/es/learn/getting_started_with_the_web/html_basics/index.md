@@ -7,7 +7,6 @@ tags:
   - Principiante
   - Web
 translation_of: Learn/Getting_started_with_the_web/HTML_basics
-htmlDate: 2022-12-11
 ---
 {{LearnSideBar}}
 

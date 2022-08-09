@@ -2,7 +2,6 @@
 title: JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous
 translation_of: Learn/JavaScript/Asynchronous
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

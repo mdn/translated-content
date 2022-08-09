@@ -13,7 +13,6 @@ tags:
   - django autenticación
   - permisos
 translation_of: Learn/Server-side/Django/Authentication
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 

@@ -3,7 +3,6 @@ title: Bucles
 slug: Learn/JavaScript/Building_blocks/Looping_code
 translation_of: Learn/JavaScript/Building_blocks/Looping_code
 original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

@@ -6,7 +6,6 @@ tags:
   - Principiante
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 original_slug: Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}
 

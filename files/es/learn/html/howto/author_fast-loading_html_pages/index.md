@@ -8,7 +8,6 @@ tags:
   - Tips
 translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida
-htmlDate: 2022-08-04
 ---
 ## Consejos para la creación de páginas HTML de carga rápida
 

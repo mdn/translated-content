@@ -15,7 +15,6 @@ tags:
   - eventos
   - l10n:priority
 translation_of: Learn/JavaScript/First_steps/A_first_splash
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 

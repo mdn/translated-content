@@ -10,7 +10,6 @@ translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 original_slug: >-
   Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

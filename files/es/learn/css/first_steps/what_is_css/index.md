@@ -11,7 +11,6 @@ tags:
   - Syntax
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qué_es_CSS
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 

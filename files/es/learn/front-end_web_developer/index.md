@@ -15,7 +15,6 @@ tags:
   - Principiante
 translation_of: Learn/Front-end_web_developer
 original_slug: Learn/Desarrollo_web_Front-end
-htmlDate: 2022-02-11
 ---
 {{learnsidebar}}
 

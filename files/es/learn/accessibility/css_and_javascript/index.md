@@ -2,7 +2,6 @@
 title: Buenas prácticas de accesibilidad CSS y JavaScript
 slug: Learn/Accessibility/CSS_and_JavaScript
 translation_of: Learn/Accessibility/CSS_and_JavaScript
-htmlDate: 2022-08-04
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
