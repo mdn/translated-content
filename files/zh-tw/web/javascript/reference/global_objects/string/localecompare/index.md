@@ -28,14 +28,16 @@ localeCompare(compareString, locales, options)
 
 ### 參數
 
-The `locales` and `options` parameters customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
+`locales` 和 `options` 參數可以調整函數的回傳結果，並且能指定要依照哪種語言來進行比較。
 
-In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), these parameters correspond exactly to the [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) constructor's parameters. Implementations without `Intl.Collator` support are asked to ignore both parameters, making the comparison result returned entirely implementation-dependent — it's only required to be _consistent_.
+在實現 [`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)的環境中，這些參數與 [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) 的參數互相對應；
+若環境沒有實現 `Intl.Collator` ，則這兩個參數就會被忽略，其回傳結果完全看該環境是如何實現此方法的。唯一能確定回傳結果的情況是比較的結果相等時。
+
 
 - `compareString`
   - : 要和`referenceStr`進行比較的字串
 - `locales` {{optional_inline}}
-  - : 「BCP 47 語言標籤」的字串或是陣列。相當於`Intl.Collator()`的[`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 參數.
+  - : 「BCP 47 語言標籤」的字串或是陣列。相當於`Intl.Collator()`的[`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 參數。
 
     如果使用的環境並未實現 `Intl.Collator`，此參數會被忽略，並且視同採用當前主機的語言環境
 - `options` {{optional_inline}}
@@ -74,17 +76,17 @@ In implementations that support the [`Intl.Collator` API](/en-US/docs/Web/JavaSc
 ### 使用 `localeCompare()`
 
 ```js
-// The letter "a" is before "c" yielding a negative value
-'a'.localeCompare('c'); // -2 or -1 (or some other negative value)
-// Alphabetically the word "check" comes after "against" yielding a positive value
-'check'.localeCompare('against'); // 2 or 1 (or some other positive value)
-// "a" and "a" are equivalent yielding a neutral value of zero
+// "a" 在 "c" 之前，所以會回傳負數
+'a'.localeCompare('c'); // -2 、 -1 或是其他負數值
+// 按字母順序，“check”的順序在“against”之後，所以回傳正數
+'check'.localeCompare('against'); // 2 、 1 或其他證數值
+// "a" 和 "a" 相同，所以回傳 0
 'a'.localeCompare('a'); // 0
 ```
 
 ### 陣列排序
 
-`localeCompare()` enables case-insensitive sorting for an array.
+`localeCompare()` 用來進行「不分大小寫」的排序
 
 ```js
 let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
@@ -94,12 +96,9 @@ items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 
 ### 檢查瀏覽器對額外參數的支援度
 
-The `locales` and `options` arguments are
-not supported in all browsers yet.
+並不是所有瀏覽器都支援 `locales` 和 `options` 參數。
 
-To check whether an implementation supports them, use the `"i"` argument (a
-requirement that illegal language tags are rejected) and look for a
-{{jsxref("RangeError")}} exception:
+要檢查是否支援，可以使用 `"i"` 參數（正常情況下，非正常的語言標籤會回報錯誤）並檢查是否有 {{jsxref("RangeError")}} exception：
 
 ```js
 function localeCompareSupportsLocales() {
@@ -114,10 +113,9 @@ function localeCompareSupportsLocales() {
 
 ### 使用 `locales`
 
-The results provided by `localeCompare()` vary between languages. In order
-to get the sort order of the language used in the user interface of your application,
-make sure to specify that language (and possibly some fallback languages) using the
-`locales` argument:
+`localeCompare()`回傳的結果會因為語言而有所不同。
+
+為了讓回傳結果依照特定語言來排序，請確保使用 `locales` 參數指定該語言（可能還要再加上其他後備語言）：
 
 ```js
 console.log('ä'.localeCompare('z', 'de')); // 回傳負數：在德文, ä 的順序在 z 之前
@@ -126,8 +124,7 @@ console.log('ä'.localeCompare('z', 'sv')); // 回傳正數：在瑞典文， ä
 
 ### 使用 `options`
 
-The results provided by `localeCompare()` can be customized using the
-`options` argument:
+`localeCompare()` 可以藉由 `options` 參數來調整：
 
 ```js
 // 在德文， ä 和 a 是相同字母
