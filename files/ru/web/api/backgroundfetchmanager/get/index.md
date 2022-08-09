@@ -35,7 +35,7 @@ get(id);
 
 ## Примеры
 
-Следующие примеры показывают как использовать `get()` для получения {{domxref("BackgroundFetchRegistration")}}. При активном {{domxref('ServiceWorker', 'service worker')}} используйте {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `get()`.
+Следующие примеры показывают, как использовать `get()` для получения {{domxref("BackgroundFetchRegistration")}}. При активном {{domxref('ServiceWorker', 'сервис-воркере')}} используйте {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `get()`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
