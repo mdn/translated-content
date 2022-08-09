@@ -75,7 +75,7 @@ if (name === 'Adam') {
 <p>變量的另一個特性就是它們能夠存儲任何的東西 — 不只是字符串和數字。變量可以存儲更複雜的數據，甚至是函數。你將在後續的內容中體驗到這些用法。</p>
 
 <div class="note">
-<p><strong>提示</strong>：變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。</p>
+<p><strong>備註：</strong> 變量是用來儲存數值的，而變量和數值是兩個不同的概念。變量不是數值本身，它們僅僅是一個用於儲存數值的容器。你可以把變量想像成一個個用來裝東西的紙皮箱。</p>
 </div>
 
 <p><img src="boxes.png"></p>
@@ -91,7 +91,7 @@ let myAge;
 <p>在這裡我們定義了兩個變量  <code>myName</code> 和 <code>myAge</code>。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。</p>
 
 <div class="note">
-<p><strong>提示</strong>：在 JavaScript 中，所有代碼指令都會以分號結尾（ <code>;</code>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</p>
+<p><strong>備註：</strong> 在 JavaScript 中，所有代碼指令都會以分號結尾（ <code>;</code>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</p>
 </div>
 
 <p>你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（execution environment）中已經存在。例如，</p>
@@ -105,7 +105,7 @@ myAge;
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
 <div class="note">
-<p><strong>提示：</strong>千萬不要把兩個概念弄混淆了，「一個變量<strong>存在，但是沒有數值</strong>」和「一個變量<strong>並不存在</strong>」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著<strong>有</strong>一個「盒子」，但是它裡面沒有任何數值。</p>
+<p><strong>備註：</strong> 千萬不要把兩個概念弄混淆了，「一個變量<strong>存在，但是沒有數值</strong>」和「一個變量<strong>並不存在</strong>」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著<strong>有</strong>一個「盒子」，但是它裡面沒有任何數值。</p>
 </div>
 
 <h2 id="初始化變量_Initializing_a_variable">初始化變量 (Initializing a variable)</h2>
@@ -147,7 +147,7 @@ logName();
 var myName;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.</p>
+<p><strong>備註：</strong> This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.</p>
 </div>
 
 <p>This works because of <strong>hoisting</strong> — read <a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> for more detail on the subject.</p>
@@ -174,7 +174,7 @@ myName = 'Bob';</pre>
 <p>For these reasons and more, we recommend that you use <code>let</code> as much as possible in your code, rather than <code>var</code>. There is no reason to use <code>var</code>, unless you need to support old versions of Internet Explorer with your code (it doesn't support <code>let</code> until version 11; the modern Windows Edge browser supports <code>let</code> just fine).</p>
 
 <div class="note">
-<p><strong>Note</strong>: We are currently in the process of updating the course to use <code>let</code> rather than <code>var</code>. Bear with us!</p>
+<p><strong>備註：</strong> We are currently in the process of updating the course to use <code>let</code> rather than <code>var</code>. Bear with us!</p>
 </div>
 
 <h2 id="Updating_a_variable">Updating a variable</h2>
@@ -199,7 +199,7 @@ myAge = 40;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">Lexical grammar — keywords</a>.</p>
+<p><strong>備註：</strong> You can find a fairly complete list of reserved keywords to avoid at <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">Lexical grammar — keywords</a>.</p>
 </div>
 
 <p>良好的命名範例：</p>
@@ -226,7 +226,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <p>Error-prone name examples:</p>
 
-<pre class="example-invalid notranslate">var
+<pre class="example-bad">var
 Document
 </pre>
 

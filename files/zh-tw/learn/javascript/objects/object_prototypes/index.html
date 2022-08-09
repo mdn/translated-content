@@ -69,11 +69,11 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>再次重申，在原型鍊中的函式與屬性並<strong>不是</strong>從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。</p>
+<p><strong>備註：</strong> 再次重申，在原型鍊中的函式與屬性並<strong>不是</strong>從任一物件複製到另一個物件，而是如上述的，沿著該原型鍊向上存取而得。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 <code>[[prototype]]</code> (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「<code>person1.__proto__」</code>與「<code>person1.__proto__.__proto__</code>」看看程式碼中的鍊會是什麼樣子！</p>
+<p><strong>備註：</strong> 直接存取物件的原型物件，並沒有一定的方式。原型鍊中，項目之間的「連結」均定義於內部屬性之內，即 JavaScript 規格中的 <code>[[prototype]]</code> (可參閱 {{glossary("ECMAScript")}})。新版瀏覽器均具備所謂的「<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> (兩邊都是 2 個底線)」屬性，其中就包含了物件的原型物件。舉例來說，你可嘗試「<code>person1.__proto__」</code>與「<code>person1.__proto__.__proto__</code>」看看程式碼中的鍊會是什麼樣子！</p>
 </div>
 
 <h2 id="原型屬性也定義所要繼承的成員">原型屬性也定義所要繼承的成員</h2>
@@ -87,7 +87,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>，及其他未於 <code>prototype</code> 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 <code>Object() 繼承而來的物件類型。</code>這些函式＼屬性都只能用於 <code>Object()</code> 建構子本身。</p>
 
 <div class="note">
-<p><strong>注意：</strong>這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> 建構子參考以進一步了解。</p>
+<p><strong>備註：</strong> 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code> 建構子參考以進一步了解。</p>
 </div>
 
 <ol>
@@ -108,7 +108,7 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 <p><code>myString</code> 上立刻就有多個有用的函式，如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf()</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a></code> 等。</p>
 
 <div class="warning">
-<p><strong>重要：</strong><code>prototype</code> 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為<code>this</code>屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 <code>__proto__</code> 存取的內部物件(internal object)才對，記得上面說過的嗎？)。<code>prototype</code>是一個物件(object)，內含了你定義所應該繼承的成員。</p>
+<p><strong>警告：</strong> <code>prototype</code> 這個屬性，是 JavaScript 中最讓人混淆的名稱之一。你可能會認為<code>this</code>屬性即指目前物件(current object)的原型物件(prototype object)，但它其實不是原型 (應該是可透過 <code>__proto__</code> 存取的內部物件(internal object)才對，記得上面說過的嗎？)。<code>prototype</code>是一個物件(object)，內含了你定義所應該繼承的成員。</p>
 </div>
 
 <h2 id="再次溫習_create()">再次溫習 create()</h2>
@@ -194,7 +194,7 @@ Person.prototype.farewell = function() {
 <p>但是 <code>farewell()</code> 函式仍可用於 <code>person1</code> 物件實例，其可用的功能已自動更新過。如此證明了我們之前對原型鍊的說明，也代表瀏覽器會沿著鍊往上找「尚未於物件實例上定義的函式」，而非「複製到實例中的函式」。如此可建構強大且靈活的系統。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果你在讓此範例運作時感覺有點困難，可參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> 範例 (也可看<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">即時運作</a>的情形)。</p>
+<p><strong>備註：</strong> 如果你在讓此範例運作時感覺有點困難，可參閱 <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> 範例 (也可看<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">即時運作</a>的情形)。</p>
 </div>
 
 <p>你很少會看到在 <code>prototype</code> 屬性上定義的屬性，因為照此範例定義的屬性彈性較低，舉例來說，你可新增如下的屬性：</p>

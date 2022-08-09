@@ -43,7 +43,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 你也許是想修復你自己寫的遊戲中的錯誤！這是件好事，但我們還是建議你在學習這篇文章時先使用我們的版本，這樣你才可以學到我們接下來要教的技巧。在這之後再回去修正你自己的遊戲也不遲！</p>
+<p><strong>備註：</strong> 你也許是想修復你自己寫的遊戲中的錯誤！這是件好事，但我們還是建議你在學習這篇文章時先使用我們的版本，這樣你才可以學到我們接下來要教的技巧。在這之後再回去修正你自己的遊戲也不遲！</p>
 </div>
 
 <p>現在，先讓我們來看看開發者主控台有沒有提示我們任何錯誤，然後試著修正他們。你會在接下來的段落中學到如何修正這些錯誤。</p>
@@ -53,7 +53,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>在前篇文章中我們讓你在<a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">開發者工具JavaScript console</a>中輸入了一些JavaScript指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的JavaScript引擎讀取到有語法錯誤的JavaScript時會提示一些錯誤訊息。現在讓我們來看看：</p>
 
 <ol>
- <li>切換到你開啟了<code>number-game-errors.html</code> 的分頁，然後打開你的JavaScript主控台。你應該會看到如下的幾行錯誤訊息：<img alt="" src="not-a-function.png" style="display: block; margin: 0 auto;"></li>
+ <li>切換到你開啟了<code>number-game-errors.html</code> 的分頁，然後打開你的JavaScript主控台。你應該會看到如下的幾行錯誤訊息：<img alt="" src="not-a-function.png"></li>
  <li>這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是Firefox的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
   <ul>
    <li>一個紅色的「X」代表這是一個錯誤訊息。</li>
@@ -71,18 +71,18 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 看看這個<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a>連結來了解更多有關這類錯誤的資訊。</p>
+<p><strong>備註：</strong> 看看這個<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function">TypeError: "x" is not a function</a>連結來了解更多有關這類錯誤的資訊。</p>
 </div>
 
 <h3 id="Syntax_errors_round_two">語法錯誤：第二回合</h3>
 
 <ol>
  <li>將你的頁面存檔並重整，你現在應該會看到剛剛的錯誤消失了。</li>
- <li>現在試著輸入一個猜測並按下Submit guess按鈕，你會發現...另一個錯誤！<img alt="" src="variable-is-null.png" style="display: block; margin: 0 auto;"></li>
+ <li>現在試著輸入一個猜測並按下Submit guess按鈕，你會發現...另一個錯誤！<img alt="" src="variable-is-null.png"></li>
  <li>這次的錯誤是「TypeError: lowOrHi is null（TypeError: lowOrHi 為 null）」，在第78行的位置。
-  <div class="note"><strong>Note</strong>：<code><a href="/zh-TW/docs/Glossary/Null">Null</a></code>是一個特別的值，代表著「空」、「什麼都沒有」。<code>lowOrHi</code>被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。</div>
+  <div class="note"><p><strong>備註：</strong> <code><a href="/zh-TW/docs/Glossary/Null">Null</a></code>是一個特別的值，代表著「空」、「什麼都沒有」。<code>lowOrHi</code>被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。</p></div>
 
-  <div class="note"><strong>Note</strong>:這個錯誤並沒有在頁面載入完成後就發生，因為這個錯誤發生在一個函式中（在<code>checkGuess() { ... }</code>區塊中）。在之後詳細介紹函式的文章中，你會學到在函式中的程式碼與在函式外的程式碼其實是執行在不同範疇中的。在我們的這個情況裡，有錯誤的程式碼在<code>checkGuess()</code>在86行被執行前都並沒有執行，也因此錯誤並沒有在頁面一載入就發生。</div>
+  <div class="note"><p><strong>備註：</strong> 這個錯誤並沒有在頁面載入完成後就發生，因為這個錯誤發生在一個函式中（在<code>checkGuess() { ... }</code>區塊中）。在之後詳細介紹函式的文章中，你會學到在函式中的程式碼與在函式外的程式碼其實是執行在不同範疇中的。在我們的這個情況裡，有錯誤的程式碼在<code>checkGuess()</code>在86行被執行前都並沒有執行，也因此錯誤並沒有在頁面一載入就發生。</p></div>
  </li>
  <li>看看第78行，你會看到：
   <pre class="brush: js notranslate">lowOrHi.textContent = 'Last guess was too high!';</pre>
@@ -94,10 +94,10 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>Note</strong>:<code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code>是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第48行賦值給<code>lowOrHi</code>後，將它的值印出至主控台中。</p>
+  <p><strong>備註：</strong> <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code>是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第48行賦值給<code>lowOrHi</code>後，將它的值印出至主控台中。</p>
   </div>
  </li>
- <li>存檔並重整，你應該會在主控台中看到<code>console.log()</code>輸出的結果。<img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;">在這個時間點，<code>lowOrHi</code>的值是<code>null</code>。所以很明顯的，第 48 行一定出了什麼問題。</li>
+ <li>存檔並重整，你應該會在主控台中看到<code>console.log()</code>輸出的結果。<img alt="" src="console-log-output.png">在這個時間點，<code>lowOrHi</code>的值是<code>null</code>。所以很明顯的，第 48 行一定出了什麼問題。</li>
  <li>讓我們思考一下發生了什麼問題。第48行呼叫了 <code><a href="/zh-TW/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法來透過CSS選擇器取得一個HTML元素參照。打開我們的網頁看看我們想要取得的段落元素：
   <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
@@ -106,7 +106,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 看看這個<a href="/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> 連結來了解更多有關這類錯誤的資訊。</p>
+<p><strong>備註：</strong> 看看這個<a href="/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> 連結來了解更多有關這類錯誤的資訊。</p>
 </div>
 
 <h3 id="Syntax_errors_round_three">語法錯誤：第三回合</h3>
@@ -172,7 +172,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>此時程式碼會回報錯誤，因為瀏覽器會認為你想設定不同的東西；我們需要確保自己沒有誤用、混用指派運算子(<code>=</code>)：用於賦予變數值跟嚴格比較運算子(<code>===</code>)：用於比較兩個值是否完全相等，並回覆<code>true</code>/<code>false</code>布林值。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多細節請參考右方關於<em>缺少分號的語法錯誤</em>文章頁面： <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> 。</p>
+<p><strong>備註：</strong> 更多細節請參考右方關於<em>缺少分號的語法錯誤</em>文章頁面： <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement">SyntaxError: missing ; before statement</a> 。</p>
 </div>
 
 <h3 id="The_program_always_says_youve_won_regardless_of_the_guess_you_enter">無論輸入什麼，程式總是顯示「你贏了」</h3>
@@ -192,7 +192,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>給完函式或方法參數時別忘了放上<code>)</code>右括號（請注意不要打成中文輸入法）。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多細節請參考右方關於<em>缺少右括號的語法錯誤</em>文章頁面：<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a>。</p>
+<p><strong>備註：</strong> 更多細節請參考右方關於<em>缺少右括號的語法錯誤</em>文章頁面：<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list">SyntaxError: missing ) after argument list</a>。</p>
 </div>
 
 <h3 id="SyntaxError_missing_after_property_id">語法錯誤：屬性ID後缺少「:」<br>
@@ -223,7 +223,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 <p>對於這些錯誤，先思考我們在範例中是如何逐項解決的。當出現錯誤資訊時，先查看該行程式碼行號，按照行號到該行程式碼察看，你可以觀察哪裡出錯了。請記住，錯誤不一定出現在該行程式碼上，而且錯誤原因也可能和我們文章上描述的問題不同！</p>
 
 <div class="note">
-<p><strong>Note</strong>：有關這些錯誤的詳細資訊，可參閱<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a>與<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a></p>
+<p><strong>備註：</strong> 有關這些錯誤的詳細資訊，可參閱<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token">SyntaxError: Unexpected token</a>與<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal">SyntaxError: unterminated string literal</a></p>
 </div>
 
 <h2 id="Summary">小結</h2>

@@ -60,7 +60,7 @@ var random = ['tree', 795, [0, 1, 2]];</pre>
 shopping;
 // shopping 回傳 [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
 
-  <div class="note"><strong>注：</strong>前面有說過，但還是提醒下：電腦從 0 開始數！</div>
+  <div class="note"><p><strong>備註：</strong> 前面有說過，但還是提醒下：電腦從 0 開始數！</p></div>
  </li>
  <li>請注意，陣列裡面的陣列稱為多維陣列（multidimensional array）。你可以撰寫兩組方括弧，來存取陣列裡面的陣列單位。例如說，存取前述 <code>random</code> 變數內的陣列單位就可以這麼寫：
   <pre class="brush: js notranslate">random[2][2];</pre>
@@ -99,7 +99,7 @@ for (var i = 0; i &lt; sequence.length; i++) {
 <p>通常你會看到一組含有原始資料的長字串，而你可能會希望將有用的單元拆分、組成更好用的形式，對他進行操作。為了達成這個目的，我們可以使用 {{jsxref("String.prototype.split()","split()")}} 方法。它最簡單的形式是只使用一個參數，你想分離的字串位置的字元（分隔符），而後它會返回陣列中在分隔符之間的子字串。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 好的，在技術上它屬於字串的方法，而非陣列的方法。但因為它可以很順利地對陣列進行操作，因此我們把它列在這邊。</p>
+<p><strong>備註：</strong> 好的，在技術上它屬於字串的方法，而非陣列的方法。但因為它可以很順利地對陣列進行操作，因此我們把它列在這邊。</p>
 </div>
 
 <ol>
@@ -173,7 +173,7 @@ removedItem;</pre>
  </li>
 </ol>
 
-<h2 id="Active_learning_Printing_those_products!">Active learning: Printing those products!</h2>
+<h2 id="Active_learning_Printing_those_products">Active learning: Printing those products</h2>
 
 <p>Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:</p>
 
@@ -186,10 +186,7 @@ removedItem;</pre>
  <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 150px;"&gt;
 
@@ -240,7 +237,7 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -320,7 +317,7 @@ textarea.onkeyup = function(){
 
 
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -339,9 +336,8 @@ body {
   margin: 10px;
   background-color: #f5f9fa;
 }</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active learning: Printing those products', '100%', 730) }}</p>
 
 <h2 id="Active_learning_Top_5_searches">Active learning: Top 5 searches</h2>
 
@@ -350,7 +346,7 @@ body {
 <p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
+<p><strong>備註：</strong> In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
 </div>
 
 <p>To complete the app, we need you to:</p>
@@ -360,10 +356,7 @@ body {
  <li>Add a line below the <code>// number 2</code> comment that removes the value currently at the end of the array.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 150px;"&gt;
 
 &lt;input type="text"&gt;&lt;button&gt;Search&lt;/button&gt;
@@ -427,7 +420,7 @@ searchBtn.onclick = function() {
 
 
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -453,7 +446,7 @@ body {
 
 
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -530,14 +523,7 @@ textarea.onkeyup = function(){
   updateCode();
 };</pre>
 
-
-
-
-
-
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Active learning: Top 5 searches', '100%', 700) }}</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 

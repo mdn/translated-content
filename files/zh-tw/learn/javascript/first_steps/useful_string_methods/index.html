@@ -36,10 +36,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <p>Let's enter some examples into a fresh console. We've provided one below (you can also <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this console</a> in a separate tab or window, or use the <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a> if you'd prefer).</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -140,9 +137,8 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
   &lt;/script&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('把字串當作物件', '100%', 300) }}</p>
 
 <h3 id="找出字串的長度（length）">找出字串的長度（length）</h3>
 
@@ -172,9 +168,6 @@ browserType.length;</pre>
  <li>
   <pre class="brush: js notranslate">browserType.indexOf('zilla');</pre>
   結果會傳回2，因為子字串 "zilla" 在 "mozilla" 中是從位置2開始的。（依然要記得電腦計數是從0開始）。這個方法可以用篩選字串，舉例來說：我們有一串網址的清單，而我們只想印出那些包含 "mozilla" 的網址。</li>
-</ol>
-
-<ol start="2">
  <li>This can be done in another way, which is possibly even more effective. Try the following:
   <pre class="brush: js notranslate">browserType.indexOf('vanilla');</pre>
   This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
@@ -195,7 +188,7 @@ browserType.length;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: The second parameter of <code>slice()</code> is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.</p>
+<p><strong>備註：</strong> The second parameter of <code>slice()</code> is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.</p>
 </div>
 
 <h3 id="改變大小寫">改變大小寫</h3>
@@ -234,10 +227,7 @@ radData.toUpperCase();</pre>
  <li>Hint: In this case it is probably more useful to test whether the method call <em>isn't</em> equal to a certain result.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -278,7 +268,7 @@ for (var i = 0; i &lt; greetings.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -298,7 +288,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -374,9 +364,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 590, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Filtering greeting messages', '100%', 590) }}</p>
 
 <h3 id="Fixing_capitalization">Fixing capitalization</h3>
 
@@ -390,13 +379,10 @@ textarea.onkeyup = function(){
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.</p>
+<p><strong>備註：</strong> A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.</p>
 </div>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -430,7 +416,7 @@ for(var i = 0; i &lt; cities.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -450,7 +436,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -526,9 +512,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 550, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Fixing capitalization', '100%', 550) }}</p>
 
 <h3 id="Making_new_strings_from_old_parts">Making new strings from old parts</h3>
 
@@ -550,10 +535,7 @@ textarea.onkeyup = function(){
  <li>Change the value of the <code>result</code> variable to equal to the final string, not the <code>input</code>.</li>
 </ol>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 125px;"&gt;
 
@@ -592,7 +574,7 @@ for (var i = 0; i &lt; stations.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -613,7 +595,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -689,9 +671,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', '100%', 585, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('Making new strings from old parts', '100%', 585) }}</p>
 
 <h2 id="結語">結語</h2>
 
