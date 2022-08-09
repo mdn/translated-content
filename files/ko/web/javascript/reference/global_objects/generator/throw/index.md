@@ -8,72 +8,79 @@ tags:
   - Method
   - Prototype
   - Reference
+browser-compat: javascript.builtins.Generator.throw
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>throw()</strong></code> 메서드는 Generator의 실행을 재개시키고 Generator 함수의 실행 문맥 속으로 error를 주입한다. <code>done</code>과 <code>value</code> 프로퍼티를 가진 객체를 반환한다.</p>
+제너레이터의 **`throw()`** 메서드는 현재 중단 된 위치에서 제너레이터에 `throw` 문이 삽입되는 것처럼 작동하여 제너레이터의 오류 조건을 알려주고 오류를 처리하거나 정리 작업을 수행하며 제너레이터를 종료할 수 있도록 합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><var>gen</var>.throw(exception)</pre>
+<!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+```js
+generatorObject.throw(exception)
+```
 
-<h3 id="매개변수">매개변수</h3>
+## 매개변수
 
-<dl>
- <dt><code>exception</code></dt>
- <dd>Generator 함수의 실행 문맥 속으로 주입할 예외. 디버깅의 목적이라면 <code>instanceof</code> {{jsxref("Error")}} 인 것이 유용하다.</dd>
-</dl>
+- `exception`
+  - : 발생시킬 예외입니다. 디버깅을 위해 {{jsxref("Error")}} 인스턴스(`instanceof` {{jsxref("Error")}})로 만드는 것이 유용합니다.
 
-<h3 id="반환_값">반환 값</h3>
 
-<p>두 개의 프로퍼티를 가진 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">객체</a></code></p>
+## 반환 값
 
-<ul>
- <li><code>done</code> (boolean)
+예외가 [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch)에서 발생하고 제너레이터가 재개하여 더 많은 값을 yield하면 다음 두 가지 속성을 가진 객체를 반환합니다.
 
-  <ul>
-   <li>Iterator(반복자)가 마지막 반복 작업을 마쳤을 경우 <code>true</code>. 만약 iterator(반복자)에 <em>return 값</em>이 있다면 <code>value</code>의 값으로 지정된다.</li>
-   <li>Iterator(반복자)의 작업이 남아있을 경우 <code>false</code>. Iterator(반복자)에 <code>done</code> 프로퍼티 자체를 특정짓지 않은 것과 동일하다.</li>
-  </ul>
- </li>
- <li><code>value</code> - Iterator(반복자)으로부터 반환되는 모든 자바스크립트 값이며 <code>done</code>이 <code>true</code>일 경우 생략될 수 있다.</li>
-</ul>
+- `done`
+  - : 불리언 값입니다.
+    - 제너레이터가 제어 흐름의 끝에 도달한 경우 `true`입니다.
+    - 제너레이터가 더 많은 값을 생성 할 수 있다면 `false`입니다.
+- `value`
+  - : 다음 yield 식에서 산출된 값입니다.
 
-<h2 id="예제">예제</h2>
+### 예외
 
-<h3 id="throw()_사용하기"><code>throw()</code> 사용하기</h3>
+예외가 `try...catch`에서 발생하지 않으면 `throw()`로 전달 된 `exception`은 제너레이터에서 취급하지 않습니다.
 
-<p>다음의 예시는 간단한 Generator 함수와 throw 메소드를 통해서 주입된 에러를 보여준다. 에러는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>블록을 통해서 핸들링 할 수 있다.</p>
+## 설명
 
-<pre class="brush: js">function* gen() {
-  while(true) {
+`throw()` 메소드는 호출 될 때, 이는 현재 중단 된 위치의 제너레이터에 삽입된 `throw exception;` 문 처럼 보일 수 있습니다. `exception`은 `throw()` 메서드에 전달 된 예외입니다. 따라서 일반적인 흐름에서 `throw(exception)`을 호출하면 제너레이터가 throw됩니다. 그러나 yield 식이 `try...catch` 블록으로 감싸졌 다면, 오류를 포착할 수 있으며 제어 흐름은 오류 처리 후 재개하거나 정상적으로 종료 하도록 진행됩니다.
+
+## 예제
+
+### throw() 사용하기
+
+다음 예제에서는 간단한 제너레이터와 `throw` 메서드를 사용하여 오류를 발생시키는 것을 보여 줍니다. 오류는 보통 {{jsxref("Statements/try...catch", "try...catch")}} 블록으로 처리합니다.
+
+```js
+function* gen() {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
-      console.log("Error caught!");
+      yield 42;
+    } catch (e) {
+      console.log('Error caught!');
     }
   }
 }
 
-var g = gen();
+const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error("Something went wrong"));
+g.throw(new Error('Something went wrong'));
 // "Error caught!"
 // { value: 42, done: false }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
+>>>>>>> aa72b95ba0 (update: sync with en-us on 7/27/22)
 
-<p>{{Compat("javascript.builtins.Generator.throw")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><code><a href="/ko/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
-</ul>
+- {{jsxref("Statements/function*", "function*")}}
