@@ -227,7 +227,7 @@ let x = 3;
 
 ### 함수 호이스팅
 
-함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/en-US/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
+함수에서는 [함수 선언](/ko/docs/Web/JavaScript/Reference/Statements/function)으로는 호이스팅되지만 [함수 표현식](/ko/docs/Web/JavaScript/Reference/Operators/function)으로는 호이스팅 되지 않습니다.
 
 ```js
 /* 함수 선언 */
@@ -609,7 +609,7 @@ var re = /ab+c/;
 console.log("John's cat".length)// 여기서는, 10.
 ```
 
-[템플릿 리터럴](/en-US/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
+[템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
 
 템플릿 리터럴은 문자열 구성을 위한 달콤한 구문을 제공합니다. (이는 Perl, Python 등에 있는 문자열 삽입(interpolation) 기능과 비슷합니다.)
 

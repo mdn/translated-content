@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 
 ## 생성자
 
-- [`WebAssembly.Instance()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
+- [`WebAssembly.Instance()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance)
   - : Creates a new `Instance` object.
 
 ## 인스턴스 속성

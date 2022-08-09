@@ -51,7 +51,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 - **2진수** — 10진수를 0과 1를 이용해 나타내는 데이터 타입입니다.
 - **8진수** —  10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
-- **16진수** — 10진수를 0부터 15까지의 수를 이용해 나타내는 데이터 타입입니다.(1\~10, A\~F) . [CSS의 색상](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
+- **16진수** — 10진수를 0부터 15까지의 수를 이용해 나타내는 데이터 타입입니다.(1\~10, A\~F) . [CSS의 색상](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
 
 **어려워서 힘들다고 느끼기 전에, 잠시 멈추세요!** 시작하기 위해서 우리는 이제부터 10진수만 사용하도록 하겠습니다. 다른 유형에 대해 생각할 필요가 없습니다.
 
@@ -59,7 +59,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 ### 나를 위한 숫자들
 
-우리가 필요한 기본 구문을 다시 익히기 위해 몇 가지 숫자를 빠르게 생각해 봅시다. [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 들어가서 아래의 나열된 명령어를 입력해주세요.
+우리가 필요한 기본 구문을 다시 익히기 위해 몇 가지 숫자를 빠르게 생각해 봅시다. [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 들어가서 아래의 나열된 명령어를 입력해주세요.
 
 1. 먼저, 두 개의 변수를 선언합니다. 그리고 두 개의 변수를 정수와 실수로 초기화해줍니다. 각각 변수명을 콘솔 창에 입력해주세요. 그리고 어떤 값이 나오는지 확인해주세요.
 
@@ -132,7 +132,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 <div class="note"><p><strong>팁</strong>:  연산에 관계된 수를 피연산자라고 부릅니다.<br>참고 - {{Glossary("Operand", "operands")}}.</p></div>
 
-아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
+아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
 
 1. 아래의 명령어를 콘솔창에 입력해주세요.
 
@@ -183,11 +183,11 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **참고:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#연산자_우선순위).
+> **참고:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#연산자_우선순위).
 
 ## Increment and decrement operators
 
-Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our  "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our  "Guess the number" game back in our [first splash into JavaScript](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;
@@ -298,7 +298,7 @@ var y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **참고:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자), but these are the basic ones you should learn now.
+> **참고:** There are lots of [other assignment operators available](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -379,18 +379,18 @@ In this article we have covered the fundamental information you need to know abo
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 ## In this module
 
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
+- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

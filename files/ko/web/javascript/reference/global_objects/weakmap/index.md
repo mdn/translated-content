@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 **`WeakMap`** 은 키에 대한 강력한 참조를 생성하지 않는 키/값 쌍의 모음으로 키는 반드시 객체이며, 값은 임의의 [JavaScript 타입](/ko/docs/Web/JavaScript/Data_structures#javascript_types)입니다. 강력한 참조를 생성하지 않는 이유는 객체가 `WeakMap`의 키로 존재한다고 해도 가비지 컬렉터로 수집되는 것을 막을 수 없기에 키로 사용되던 객체가 수집되면 `WeakMap`의 해당 값도 다른 곳에서 강력하게 참조되지 않는 한 수집의 대상이 되기 때문입니다.
 
-`WeakMap`을 사용하면 값이 키를 참조하더라도 키 객체가 가비지 컬렉터에 수집되는 것을 방지하지 않는 방식으로 데이터를 객체에 연결할 수 있습니다. 그러나 `WeakMap`은 키의 활성을 관찰하는 것이 허용되지 않으므로 키 열거를 할 수 없습니다. `WeakMap`이 키 목록을 얻을 수 있는 어떤 메서드를 제공한다면, 가비지 컬렉터의 상태에 따라 키 목록이 달라지므로 비결정성이 발생합니다. 키 목록을 갖고 싶다면 `WeakMap` 대신 [`Map`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Map)을 사용해야 합니다.
+`WeakMap`을 사용하면 값이 키를 참조하더라도 키 객체가 가비지 컬렉터에 수집되는 것을 방지하지 않는 방식으로 데이터를 객체에 연결할 수 있습니다. 그러나 `WeakMap`은 키의 활성을 관찰하는 것이 허용되지 않으므로 키 열거를 할 수 없습니다. `WeakMap`이 키 목록을 얻을 수 있는 어떤 메서드를 제공한다면, 가비지 컬렉터의 상태에 따라 키 목록이 달라지므로 비결정성이 발생합니다. 키 목록을 갖고 싶다면 `WeakMap` 대신 [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)을 사용해야 합니다.
 
 [키기반의 컬렉션](/ko/docs/Web/JavaScript/Guide/Keyed_collections) 가이드의 [WeakMap 객체](/ko/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) 섹션에서 `WeakMap`에 대해 자세히 알아볼 수 있습니다.
 
@@ -39,11 +39,11 @@ JavaScript의 맵 API는 4개의 API 메서드와 이들이 공유하는 두 개
 
 `WeakMap`은 _오직_ 가비지 컬렉션이 되지 않은 키에 대한 정보를 매핑할 때 특히 유용한 구조가 될 수 있습니다.
 
-그러나 `WeakMap`은 키의 활성을 관찰하는 것이 허용되지 않기 때문에 키를 열거할 수 없으며, 키 목록을 얻을 수 있는 방법은 존재하지 않습니다. 만약 열거한다면, 키 목록은 가비지 컬렉션 상태에 따라 달라지기에 비결정성이 발생합니다. 키 목록을 얻고 싶다면 [`Map`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Map)을 사용해야 합니다.
+그러나 `WeakMap`은 키의 활성을 관찰하는 것이 허용되지 않기 때문에 키를 열거할 수 없으며, 키 목록을 얻을 수 있는 방법은 존재하지 않습니다. 만약 열거한다면, 키 목록은 가비지 컬렉션 상태에 따라 달라지기에 비결정성이 발생합니다. 키 목록을 얻고 싶다면 [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)을 사용해야 합니다.
 
 ## 생성자
 
-- [`WeakMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap)
+- [`WeakMap()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap)
   - : 새로운 `WeakMap` 객체를 생성합니다.
 
 ## 인스턴스 메서드
@@ -121,7 +121,7 @@ class ClearableWeakMap {
 
 개발자는 {{jsxref("WeakMap")}}을 사용하여 개인 데이터를 객체에 연결할 수 있으며, 이는 다음과 같은 이점이 있습니다.
 
-- [`Map`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Map)과 대비하여 WeakMap은 키로 사용되는 객체에 대한 강력한 참조를 보유하지 않으므로 메타데이터는 객체 자체와 동일한 수명을 공유하여 메모리 누수를 방지할 수 있습니다.
+- [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)과 대비하여 WeakMap은 키로 사용되는 객체에 대한 강력한 참조를 보유하지 않으므로 메타데이터는 객체 자체와 동일한 수명을 공유하여 메모리 누수를 방지할 수 있습니다.
 - 열거할 수 없거나 {{jsxref("Symbol")}} 속성을 사용하는 것과 비교하여 WeakMap은 객체 외부에 있으며 {{jsxref("Object.getOwnPropertySymbols")}}와 같은 검색 메서드를 통해 메타데이터를 찾을 수 없습니다.
 - [클로저](/ko/docs/Web/JavaScript/Closures)와 비교할 때 동일한 WeakMap은 생성자에서 생성된 모든 인스턴스에 재사용될 수 있으므로 메모리 효율성이 더 높고 동일한 클래스의 다른 인스턴스가 서로의 private 멤버를 읽을 수 있습니다.
 
@@ -205,6 +205,6 @@ thing.showPrivate();
 - [`core-js`의 `WeakMap` 폴리필](https://github.com/zloirock/core-js#weakmap)
 - [키기반의 컬렉션](/ko/docs/Web/JavaScript/Guide/Keyed_collections) 가이드의 [WeakMap object](/ko/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
 - [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
-- [`Map`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

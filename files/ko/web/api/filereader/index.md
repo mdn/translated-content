@@ -22,7 +22,7 @@ File 객체는 {{ HTMLElement("input") }} 태그를 이용하여 유저가 선�
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : Returns a newly constructed `FileReader`.
 
-See [Using files from web applications](https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications) for details and examples.
+See [Using files from web applications](/ko/docs/Using_files_from_web_applications) for details and examples.
 
 ## 속성
 
@@ -82,4 +82,4 @@ See [Using files from web applications](https://developer.mozilla.org/en-US/docs
 - [Using files from web applications](/en/Using_files_from_web_applications 'en/Using files from web applications')
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
-- [nsIDOMFileReader \[en-US\]](/en-US/docs/nsIDOMFileReader) - For addons/privelaged scope
+- [nsIDOMFileReader \[en-US\]](/ko/docs/nsIDOMFileReader) - For addons/privelaged scope
