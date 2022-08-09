@@ -29,9 +29,25 @@ Para detalles y preguntas frecuentes sobre KumaScript, mira el [KumaScript Fires
 
 KumaScript funciona permitiendo a _wiki de confianza_ escribir [plantillas JavaScript ensambladas](https://github.com/visionmedia/ejs). Estas plantillas pueden ser invocadas en el contenido del documento por cualquier editor _wiki_ mediante el uso de [macros](/es/docs/KumaTests/hello_test?raw=1).
 
-| Una [plantilla](/es/docs/Template:hello) se vé así:          | Una [macro](/es/docs/KumaTests/hello_test?raw=1) se vé así: | El [resultado de una macro](/es/docs/KumaTests/hello_test) sale así: |
-| ------------------------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------- |
-| `<% for (var i = 0; i < $0; i++) { %> Hello #<%= i %> <% } %>` | \{{ hello("3") }} | Hello #0 Hello #1 Hello #2 |
+Una [plantilla](/es/docs/Template:hello) se vé así:
+
+```ejs
+<% for (var i = 0; i < $0; i++) { %>
+Hello #<%= i %>
+<% } %>
+```
+
+Una [macro](/es/docs/KumaTests/hello_test?raw=1) se vé así:
+
+`\{{ hello("3") }}`
+
+El [resultado de una macro](/es/docs/KumaTests/hello_test) sale así:
+
+```
+Hello #0
+Hello #1
+Hello #2
+```
 
 ### Sintaxis de una macro
 
