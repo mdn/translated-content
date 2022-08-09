@@ -33,11 +33,6 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
   - `\{{Glossary("HTML", "", 1)}}` produce {{Glossary("HTML", "", 1)}}
 
-- {{TemplateLink("anch")}} — crea un enlace a una sección en la página:
-
-  - `\Enlace a páginas en referencias`;
-  - Demo: [Enlace a páginas en referencias](#enlace_a_páginas_en_referencias)
-
 ### Enlace a páginas en referencias
 
 Hay varias macros para vincular páginas en áreas de referencia específicas de MDN.
