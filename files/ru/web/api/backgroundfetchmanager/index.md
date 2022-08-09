@@ -19,7 +19,7 @@ browser-compat: api.BackgroundFetchManager
 
 ## Свойства
 
-Нет.
+Отсутствуют.
 
 ## Методы
 
