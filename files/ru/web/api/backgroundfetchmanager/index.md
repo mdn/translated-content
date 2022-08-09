@@ -24,7 +24,7 @@ browser-compat: api.BackgroundFetchManager
 ## Методы
 
 - {{domxref('BackgroundFetchManager.fetch','fetch()' )}}
-  - : Возвращает {{jsxref("Promise")}} который разрешается с объектом {{domxref("BackgroundFetchRegistration")}} для предоставленного массива URL-адресов и объектов {{domxref("Request")}}.
+  - : Возвращает {{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}} для переданного массива URL-адресов или объектов {{domxref("Request")}}.
 - {{domxref('BackgroundFetchManager.get','get()')}}
   - : Возвращает {{jsxref("Promise")}} который разрешается с {{domxref("BackgroundFetchRegistration")}} связанного с предоставленным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
 - {{domxref('BackgroundFetchManager.getIDs','getIDs()')}}
