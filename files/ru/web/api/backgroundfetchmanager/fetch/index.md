@@ -49,10 +49,7 @@ fetch(id, requests, options);
 
 ## Примеры
 
-Следующие примеры показывают как использовать `fetch()` чтобы создать {{domxref("BackgroundFetchRegistration")}}. При активном
-{{domxref('ServiceWorker', 'service worker')}}, используйте свойство
-{{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту
-`BackgroundFetchManager` и вызовите его метод `fetch()`.
+Следующие примеры показывают, как использовать `fetch()`, чтобы создать {{domxref("BackgroundFetchRegistration")}}. При активном {{domxref('ServiceWorker', 'сервис-воркере')}}, используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `fetch()`.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
