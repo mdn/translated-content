@@ -5,9 +5,9 @@ slug: >-
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-假设我们的任务是在React中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
+假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
-> **注意：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的React应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
+> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的React应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
 
 <table>
   <tbody>
@@ -15,14 +15,11 @@ slug: >-
       <th scope="row">条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a>，和
-          <a href="/zh-CN/docs/Learn/JavaScript"> JavaScript</a> 语言，
-          了解
-          <a
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a>
+          和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            > terminal/command line</a
-          >.
+            >终端/命令行</a
+          >。
         </p>
       </td>
     </tr>
@@ -46,7 +43,7 @@ slug: >-
 - 使用鼠标或键盘，将任何任务标记为已完成。
 - 使用鼠标或键盘，删除任何任务。
 - 使用鼠标或键盘，编辑任何任务。
-- 查看一个特定的任务子集：所有的任务，只有活动中的任务，或只有已完成的任务。
+- 查看一个特定的任务子集：所有的任务、仅活动中的任务，或只有已完成的任务。
 
 我们将逐一处理这些故事。
 
@@ -57,7 +54,7 @@ create-react-app 添加了一些我们在项目中完全不会用到的文件。
 - 我们不打算写每个组件的样式表，所以首先从 `App.js` 的顶部删除 `App.css` 的导入。
 - 我们也不打算使用 `logo.svg` 文件，所以也要删除这个导入。
 
-然后，复制并粘贴以下命令到你的终端，删除一些不需要的文件。确保你是在应用程序的根目录下开始的!
+然后，复制并粘贴以下命令到你的终端，删除一些不需要的文件。确保你是在应用程序的根目录下开始的！
 
 ```bash
 # Move into the src directory of your project
@@ -68,14 +65,14 @@ rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
 cd ..
 ```
 
-注意:
+注意：
 
 - 我们要删除的两个文件是用来测试应用程序的。我们在这里不涉及测试。
 - 如果你停止了你的服务器来做上面提到的终端任务，你必须用 `npm start` 再次启动它。
 
 ## 项目启动代码
 
-作为这个项目的起点，我们将提供两样东西。一个 `App()` 函数来代替你现在的函数，还有一些CSS来改变你的应用程序的样式。
+作为这个项目的起点，我们将提供两样东西。一个 `App()` 函数来代替你现在的函数，还有一些 CSS 来改变你的应用程序的样式。
 
 ### JSX
 
@@ -182,7 +179,7 @@ function App(props) {
 }
 ```
 
-现在打开 `public/index.html` ，把 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素的文本改为 `TodoMatic` 。这样，它将与我们应用程序顶部的 [`<h1>`]（/zh-CN/docs/Web/HTML/Element/Heading_Elements）相匹配。
+现在打开 `public/index.html`，把 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素的文本改为 `TodoMatic` 。这样，它将与我们应用程序顶部的 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 相匹配。
 
 ```html
 <title>TodoMatic</title>
@@ -192,14 +189,14 @@ function App(props) {
 
 ![todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons](unstyled-app.png)
 
-它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的JSX，以及它是如何与我们的用户故事相对应的。
+它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 JSX，以及它是如何与我们的用户故事相对应的。
 
 - 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
-- 我们有一个按钮组，用于过滤我们的任务。
+- 我们有一组按钮，用于筛选我们的任务。
 - 我们有一个标题，用于告诉我们还有多少任务。
-- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项 ([`<li>`](/zh-CN/docs/Web/HTML/Element/li)) ，有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
+- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
 
-这些表格将允许我们 _添加_ 任务；按钮让我们可以对任务进行 _过滤_；我们通过标题和列表 _阅读_ 任务。用于 _编辑_ 任务的UI目前很缺乏。这没关系——我们以后再写。
+这些表格将允许我们*添加*任务；按钮让我们可以对任务进行*筛选*；我们通过标题和列表*查看*任务。用于*编辑*任务的 UI 目前很缺乏。这没关系——我们以后再写。
 
 ### 无障碍功能
 
@@ -215,7 +212,7 @@ function App(props) {
 
 这里的 `aria-pressed` 告诉辅助技术（比如屏幕阅读器），该按钮可以有两种状态。`按压` 或 `未按压` 。可以把它们看作 `开` 和 `关` 。设置为 `true` 意味着该按钮默认是被按下的。
 
-`visually-hidden` 这个类还没有效果，因为我们还没有包含任何CSS。一旦我们把样式写好，任何带有这个类的元素都会被隐藏起来，视力正常的用户不会看到，而屏幕阅读器用户仍然可以使用——这是因为视力正常的用户不需要这些词；它们的存在是为了给没有额外视觉环境帮助的屏幕阅读器用户提供更多关于这个按钮的信息。
+`visually-hidden` 这个类还没有效果，因为我们还没有包含任何 CSS。一旦我们把样式写好，任何带有这个类的元素都会被隐藏起来，视力正常的用户不会看到，而屏幕阅读器用户仍然可以使用——这是因为视力正常的用户不需要这些词；它们的存在是为了给没有额外视觉环境帮助的屏幕阅读器用户提供更多关于这个按钮的信息。
 
 
 再往下，你可以找到我们的 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素：
@@ -232,7 +229,7 @@ function App(props) {
 
 `aria-labelledby` 属性告诉辅助技术，我们把列表标题当作标签，用来描述它下面的列表的目的。这种关联能让列表包含更多信息，这可以帮助屏幕阅读器用户更好地理解它的目的。
 
-最后，我们列表项中的标签和输入有一些JSX特有的属性：
+最后，我们列表项中的标签和输入有一些 JSX 特有的属性：
 
 ```html
 <input id="todo-0" type="checkbox" defaultChecked={true} />
@@ -241,19 +238,18 @@ function App(props) {
 </label>
 ```
 
-`<input/ >` 标签中的 `defaultChecked` 属性告诉React最初要检查这个复选框。如果我们像在普通的HTML中那样使用 `checked` ，React会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
+`<input/ >` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的HTML中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
 
-`htmlFor` 属性对应于HTML中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在JSX中使用 `for` 作为属性，所以React使用 `htmlFor` 代替。
+`htmlFor` 属性对应于HTML中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在JSX中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
 
 说明:
 
-- 要在JSX属性中使用布尔值（ `true` 和 `false` ），你必须用大括号把它们括起来。如果你写 `defaultChecked="true"` ， `defaultChecked` 的值将是 `"true"`  ——一个字符串字面。记住——这实际上是JavaScript，而不是HTML!
-- 在前面的代码片段中使用的 `aria-pressed` 属性的值是 `"true"` ，因为 `aria-pressed` 不是像 `checked` 那样是一个真正的布尔属性。
-
+- 要在JSX属性中使用布尔值（`true` 和 `false`），你必须用大括号把它们括起来。如果你写 `defaultChecked="true"`，`defaultChecked` 的值将是 `"true"`——一个字符串字面。记住——这实际上是 JavaScript，而不是 HTML!
+- 在前面的代码片段中使用的 `aria-pressed` 属性的值是 `"true"`，因为 `aria-pressed` 不是像 `checked` 那样是一个真正的布尔属性。
 
 ### 实现样式
 
-将下面的CSS代码粘贴到 `src/index.css` 中，使其取代当前的内容：
+将下面的 CSS 代码粘贴到 `src/index.css` 中，使其取代当前的内容：
 
 ```css
 /* RESETS */
