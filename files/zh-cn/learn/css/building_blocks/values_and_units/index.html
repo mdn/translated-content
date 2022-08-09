@@ -25,11 +25,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如<code>&lt;color&gt;</code>或<code>&lt;length&gt;</code>。当您看到值<code>&lt;color&gt;</code>对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>参考页面所列。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：您还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。</p>
+<p><strong>备注：</strong> 您还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
+<p><strong>备注：</strong> 是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
 </div>
 
 <p>在下面的例子中，我们使用关键字设置标题的颜色，使用<code>rgb()</code>函数设置背景：</p>
@@ -238,7 +238,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 当您在 CSS 中使用数字作为值时，它不应该用引号括起来。</p>
+<p><strong>备注：</strong> 当您在 CSS 中使用数字作为值时，它不应该用引号括起来。</p>
 </div>
 
 <h2 id="颜色">颜色</h2>
@@ -248,7 +248,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>现代计算机的标准颜色系统是 24 位的，它允许通过不同的红、绿、蓝通道的组合显示大约 1670 万种不同的颜色，每个通道有 256 个不同的值 (256 x 256 x 256 = 16,777,216)。让我们来看看在 CSS 中指定颜色的一些方法。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong> 在本教程中，我们将研究具有良好浏览器支持的常用指定颜色的方法；虽然还有其他的，但是他们没有很好的支持，也不太常见。</p>
+<p><strong>备注：</strong> 在本教程中，我们将研究具有良好浏览器支持的常用指定颜色的方法；虽然还有其他的，但是他们没有很好的支持，也不太常见。</p>
 </div>
 
 <h3 id="颜色关键词">颜色关键词</h3>
@@ -278,7 +278,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>您还可以使用 RGBA 颜色——它们的工作方式与 RGB 颜色完全相同，因此您可以使用任何 RGB 值，但是有第四个值表示颜色的 alpha 通道，它控制不透明度。如果将这个值设置为<code>0</code>，它将使颜色完全透明，而设置为<code>1</code>将使颜色完全不透明。介于两者之间的值提供了不同级别的透明度。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 在颜色上设置 alpha 通道与使用我们前面看到的{{cssxref("opacity")}}属性有一个关键区别。当你使用不透明度时，你让元素和它里面的所有东西都不透明，而使用 RGBA 颜色只让你指定的颜色不透明。</p>
+<p><strong>备注：</strong> 在颜色上设置 alpha 通道与使用我们前面看到的{{cssxref("opacity")}}属性有一个关键区别。当你使用不透明度时，你让元素和它里面的所有东西都不透明，而使用 RGBA 颜色只让你指定的颜色不透明。</p>
 </div>
 
 <p>在下面的例子中，我添加了一个背景图片到我们的彩色方块的包含块中。然后我设置了不同的不透明度值——注意当 alpha 通道值较小时，背景如何显示的。</p>
@@ -288,7 +288,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p><strong>在本例中，尝试更改 alpha 通道值，看看它如何影响颜色输出。</strong><strong> </strong></p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>在某种程度上，现代浏览器得到了更新，从而让<code>rgba()</code> 和<code>rgb()</code> （以及 <code>hsl()</code>和 <code>hsla()</code>;见下文）成为彼此的纯别名并开始表现完全相同，因此<code>rgba()</code>  和<code>rgb()</code> 接受带有和不带有 alpha 通道值的颜色。尝试将上面示例的<code>rgba()</code> 函数更改为<code>rgb()</code> ，看看颜色是否仍然有效！使用哪种样式由您决定，但是将非透明和透明的颜色定义分开使用不同的功能可以（非常）更好地支持浏览器，并且可以直观地指示代码中定义透明颜色的位置。</p>
+<p><strong>备注：</strong> 在某种程度上，现代浏览器得到了更新，从而让<code>rgba()</code> 和<code>rgb()</code> （以及 <code>hsl()</code>和 <code>hsla()</code>;见下文）成为彼此的纯别名并开始表现完全相同，因此<code>rgba()</code>  和<code>rgb()</code> 接受带有和不带有 alpha 通道值的颜色。尝试将上面示例的<code>rgba()</code> 函数更改为<code>rgb()</code> ，看看颜色是否仍然有效！使用哪种样式由您决定，但是将非透明和透明的颜色定义分开使用不同的功能可以（非常）更好地支持浏览器，并且可以直观地指示代码中定义透明颜色的位置。</p>
 </div>
 
 <h3 id="HSL_和_HSLA_的值">HSL 和 HSLA 的值</h3>
@@ -320,7 +320,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>&lt;image&gt;</code>还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果您想了解<code>&lt;image&gt;</code>数据类型，请查看 MDN 页面。</p>
+<p><strong>备注：</strong> <code>&lt;image&gt;</code>还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果您想了解<code>&lt;image&gt;</code>数据类型，请查看 MDN 页面。</p>
 </div>
 
 <h2 id="位置">位置</h2>

@@ -52,7 +52,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>你可以看到这个页面有一个含有顶级标题的 {{htmlelement("header")}} 元素，和一个包含三个 {{htmlelement("article")}} 的 {{htmlelement("section")}} 元素。我们将使用这些来创建一个非常的标准三列布局，如下所示：</p>
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png"></p>
 
 <h2 id="指定元素的布局为_flexible">指定元素的布局为 flexible</h2>
 
@@ -65,23 +65,23 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 <p>结果如下：</p>
 
 <p><br>
- <img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
+ <img alt="" src="flexbox-example2.png"></p>
 
 <p>所以，就这样一个简单的声明就给了我们所需要的一切—非常不可思议，对吧？我们的多列布局具有大小相等的列，并且列的高度都是一样。这是因为这样的 flex 项（flex 容器的子项）的默认值是可以解决这些的常见问题的。后面还有更多内容。</p>
 
 <div class="note">
-<p><strong>注意：</strong>假如你想设置行内元素为 flexible box，也可以置 {{cssxref("display")}} 属性的值为 <code>inline-flex。</code></p>
+<p><strong>备注：</strong> 假如你想设置行内元素为 flexible box，也可以置 {{cssxref("display")}} 属性的值为 <code>inline-flex。</code></p>
 </div>
 
 <h2 id="flex_模型说明">flex 模型说明</h2>
 
 <p>当元素表现为 flex 框时，它们沿着两个轴来布局：</p>
 
-<p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
+<p><img alt="flex_terms.png" src="flex_terms.png"></p>
 
 <ul>
- <li><strong>主轴（main axis）</strong>是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为<strong> main start</strong> 和<strong> main end</strong>。</li>
- <li><strong>交叉轴（cross axis）</strong>是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 <strong>cross start</strong> 和<strong> cross end</strong>。</li>
+ <li><strong>主轴</strong>（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为<strong> main start</strong> 和<strong> main end</strong>。</li>
+ <li><strong>交叉轴</strong>（cross axis）是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 <strong>cross start</strong> 和<strong> cross end</strong>。</li>
  <li>设置了 <code>display: flex</code> 的父元素（在本例中是 {{htmlelement("section")}}）被称之为 <strong>flex 容器（flex container）。</strong></li>
  <li>在 flex 容器中表现为柔性的盒子的元素被称之为 <strong>flex 项</strong>（<strong>flex item</strong>）（本例中是 {{htmlelement("article")}} 元素。</li>
 </ul>
@@ -99,14 +99,14 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 <p>你会看到，这会将那些元素设置为列布局，就像我们添加这些 CSS 之前。在继续之前，请从示例中删除此规则。</p>
 
 <div class="note">
-<p><strong>注意：</strong>你还可以使用 <code>row-reverse </code>和 <code>column-reverse </code>值反向排列 flex 项目。用这些值试试看吧！</p>
+<p><strong>备注：</strong> 你还可以使用 <code>row-reverse </code>和 <code>column-reverse </code>值反向排列 flex 项目。用这些值试试看吧！</p>
 </div>
 
 <h2 id="换行">换行</h2>
 
 <p>当你在布局中使用定宽或者定高的时候，可能会出现问题即处于容器中的 弹性盒子子元素会溢出，破坏了布局。你可以看一下 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html">弹性盒子-wrap0.html</a> 示例（你也可以拷贝到本地），如下所示：</p>
 
-<p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example3.png"></p>
 
 <p>在这里我们看到，子代确实超出了它们的容器。解决此问题的一种方法是将以下声明添加到 section css 规则中：</p>
 
@@ -118,7 +118,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>现在尝试一下吧；你会看到布局比原来好多了：</p>
 
-<p><img alt="" src="flexbox-example4.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;">现在我们有了多行 弹性盒子— 任何溢出的元素将被移到下一行。在 article 元素上设置的 flex: 200px 规则，意味着每个元素的宽度至少是 200px；我们将在后面更详细地讨论这个属性。你可能还注意到，最后一行上的最后几个项每个都变得更宽，以便把整个行填满。</p>
+<p><img alt="" src="flexbox-example4.png">现在我们有了多行 弹性盒子— 任何溢出的元素将被移到下一行。在 article 元素上设置的 flex: 200px 规则，意味着每个元素的宽度至少是 200px；我们将在后面更详细地讨论这个属性。你可能还注意到，最后一行上的最后几个项每个都变得更宽，以便把整个行填满。</p>
 
 <p>但是这里我们可以做得更多。首先，改变 {{cssxref("flex-direction")}} 属性值为 <code>row-reverse</code> — 你会看到仍然有多行布局，但是每一行元素排列的方向和原来是相反的了。</p>
 
@@ -165,7 +165,7 @@ article:nth-of-type(3) {
 
 <p>这表示“每个 flex 项将首先给出 200px 的可用空间，然后，剩余的可用空间将根据分配的比例共享“。尝试刷新，你会看到分配空间的差别。</p>
 
-<p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="flexbox-example1.png"></p>
 
 <p>弹性盒子的真正价值可以体现在它的灵活性/响应性，如果你调整浏览器窗口的大小，或者增加一个 {{htmlelement("article")}} 元素，这时的布局仍旧是好的。</p>
 
@@ -185,7 +185,7 @@ article:nth-of-type(3) {
 
 <p>还可以使用 弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。让我们一起看一下新例子 — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">flex-align0.html</a>（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">在线浏览</a>）— 我们将会有一个整洁，灵活的按钮/工具栏。此时，你看到了一个水平菜单栏，其中一些按钮卡在左上角，就像下面这样：</p>
 
-<p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="" src="flexbox-example5.png"></p>
 
 <p>首先，拷贝一份到本地。</p>
 
@@ -256,7 +256,7 @@ article:nth-of-type(3) {
 
 <p>弹性盒子也能创建一些颇为复杂的布局。设置一个元素为 flex 项目，那么他同样成为一个 flex 容器，它的孩子 (直接子节点) 也表现为 flexible box。看一下 <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-弹性盒子.html</a>（<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">在线浏览</a>）。</p>
 
-<p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="flexbox-example7.png"></p>
 
 <p>这个例子的 HTML 是相当简单的。我们用一个 {{htmlelement("section")}} 元素包含了三个 {{htmlelement("article")}}元素。第三个 {{htmlelement("article")}} 元素包含了三个 {{htmlelement("div")}}：</p>
 

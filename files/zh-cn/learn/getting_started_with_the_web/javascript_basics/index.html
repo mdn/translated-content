@@ -1,13 +1,6 @@
 ---
 title: JavaScript 基础
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - JavaScript
-  - Web
-  - 初学者
-  - 学习
-  - 脚本
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 <p>{{LearnSidebar}}</p>
 
@@ -42,7 +35,7 @@ translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 <p>然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个“Hello world!”示例（<a href="https://zh.wikipedia.org/wiki/Hello_World">一切始于 Hello World</a>）。</p>
 
 <div class="warning">
-<p><strong>重要：</strong>如果你没有完成之前的课程实践，可下载 <a href="https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip">上一章节示例的压缩包</a> 并在本地解压作出发点。</p>
+<p><strong>警告：</strong> 如果你没有完成之前的课程实践，可下载 <a href="https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip">上一章节示例的压缩包</a> 并在本地解压作出发点。</p>
 </div>
 
 <ol>
@@ -58,7 +51,7 @@ myHeading.textContent = 'Hello world!';</pre>
  <li>最后，保存 HTML 和 JavaScript 文件，用浏览器打开 <code>index.html</code>。可以看到如下内容：<img src="hello-world.png"></li>
 </ol>
 
-<div class="note"><strong>注：</strong>我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。</div>
+<div class="note"><p><strong>备注：</strong> 我们将 {{htmlelement("script")}} 放在 HTML 文件的底部附近的原因是浏览器会按照代码在文件中的顺序加载 HTML。如果先加载的 JavaScript 期望修改其下方的 HTML，那么它可能由于 HTML 尚未被加载而失效。因此，将 JavaScript 代码放在 HTML 页面的底部附近通常是最好的策略。</p></div>
 
 <h3 id="发生了什么？">发生了什么？</h3>
 
@@ -67,7 +60,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>之后，把 <code>myHeading</code> 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为“Hello world!” 。</p>
 
 <div class="note">
-<p><strong>注：</strong>上面用到的两个函数都来自 <a href="/zh-CN/docs/Web/API/Document_Object_Model">文档对象模型 (DOM) API</a>，均用于控制文档。</p>
+<p><strong>备注：</strong> 上面用到的两个函数都来自 <a href="/zh-CN/docs/Web/API/Document_Object_Model">文档对象模型 (DOM) API</a>，均用于控制文档。</p>
 </div>
 
 <h2 id="JavaScript_快速入门">JavaScript 快速入门</h2>
@@ -75,7 +68,7 @@ myHeading.textContent = 'Hello world!';</pre>
 <p>我们来学习一些 JavaScript 的核心特性，从而更好地理解它的运行机制。学习这些知识很有意义，因为这些原理普遍适用于所有编程语言，掌握好它们，可以做到融会贯通。</p>
 
 <div class="warning">
-<p><strong>重要：</strong>学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。JavaScript 控制台的更多信息请查看 <a href="/zh-CN/Learn/Discover_browser_developer_tools">浏览器开发者工具</a>。</p>
+<p><strong>警告：</strong> 学习本节时，请尝试将示例代码输入到 JavaScript 控制台里看看会发生什么。JavaScript 控制台的更多信息请查看 <a href="/zh-CN/Learn/Discover_browser_developer_tools">浏览器开发者工具</a>。</p>
 </div>
 
 <h3 id="变量（Variable）">变量（Variable）</h3>
@@ -85,19 +78,19 @@ myHeading.textContent = 'Hello world!';</pre>
 <pre class="brush: js notranslate">let myVariable;</pre>
 
 <div class="note">
-<p><strong>注：</strong>行末的分号表示当前语句结束，不过只有在单行内需要分割多条语句时，这个分号才是必须的。然而，一些人认为每条语句末尾加分号是一种好的风格。分号使用规则的更多细节请参阅 <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">JavaScript 分号使用指南</a>（英文页面）。</p>
+<p><strong>备注：</strong> 行末的分号表示当前语句结束，不过只有在单行内需要分割多条语句时，这个分号才是必须的。然而，一些人认为每条语句末尾加分号是一种好的风格。分号使用规则的更多细节请参阅 <a href="http://news.codecademy.com/your-guide-to-semicolons-in-javascript/">JavaScript 分号使用指南</a>（英文页面）。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>几乎任何内容都可以作为变量名，但还是有一些限制（请参阅 <a href="/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#变量">变量命名规则</a>）。如果你不确定，还可以 <a href="https://mothereff.in/js-variables">验证变量名</a> 是否有效。</p>
+<p><strong>备注：</strong> 几乎任何内容都可以作为变量名，但还是有一些限制（请参阅 <a href="/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#变量">变量命名规则</a>）。如果你不确定，还可以 <a href="https://mothereff.in/js-variables">验证变量名</a> 是否有效。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>JavaScript 对大小写敏感，<code>myVariable</code> 和 <code>myvariable</code> 是不同的。如果代码出现问题了，先检查一下大小写！</p>
+<p><strong>备注：</strong> JavaScript 对大小写敏感，<code>myVariable</code> 和 <code>myvariable</code> 是不同的。如果代码出现问题了，先检查一下大小写！</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>想要了解更多关于 <code>var</code> 和 <code>let</code> 的不同点，可以参阅 <a href="/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_与_let_的区别">var 与 let 的区别</a>。</p>
+<p><strong>备注：</strong> 想要了解更多关于 <code>var</code> 和 <code>let</code> 的不同点，可以参阅 <a href="/zh-CN/docs/Learn/JavaScript/First_steps/Variables#var_与_let_的区别">var 与 let 的区别</a>。</p>
 </div>
 
 <p>变量定义后可以进行赋值：</p>
@@ -180,7 +173,7 @@ myVariable = '韩梅梅';</pre>
 <p>{{Glossary("Operator","运算符")}} 是一类数学符号，可以根据两个值（或变量）产生结果。以下表格中介绍了一些最简单的运算符，可以在浏览器控制台里尝试一下后面的示例。</p>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>这里说“根据<strong>两个</strong>值（或变量）产生结果”是不严谨的，计算两个变量的运算符称为“二元运算符”，还有一元运算符和三元运算符，下表中的“取非”就是一元运算符。</p>
+<p><strong>备注：</strong> 这里说“根据<strong>两个</strong>值（或变量）产生结果”是不严谨的，计算两个变量的运算符称为“二元运算符”，还有一元运算符和三元运算符，下表中的“取非”就是一元运算符。</p>
 </div>
 
 <table>
@@ -242,7 +235,7 @@ myVariable = '韩梅梅';</pre>
 <p>运算符种类远不止这些，不过目前上表已经够用了。完整列表请参阅 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators">表达式和运算符</a>。</p>
 
 <div class="note">
-<p><strong>注：</strong>不同类型数据之间的计算可能出现奇怪的结果，因此必须正确引用变量，才能得出预期结果。比如在控制台输入 <code>"35" + "25"</code>，为什么不能得到 <code>60</code>？因为引号将数字转换成了字符串，所以结果是连接两个字符串而不是把两个数字相加。输入 <code>35 + 25</code> 才能得到正确结果。</p>
+<p><strong>备注：</strong> 不同类型数据之间的计算可能出现奇怪的结果，因此必须正确引用变量，才能得出预期结果。比如在控制台输入 <code>"35" + "25"</code>，为什么不能得到 <code>60</code>？因为引号将数字转换成了字符串，所以结果是连接两个字符串而不是把两个数字相加。输入 <code>35 + 25</code> 才能得到正确结果。</p>
 </div>
 
 <h3 id="条件语句">条件语句</h3>
@@ -291,7 +284,7 @@ multiply(20, 20);
 multiply(0.5, 3);</pre>
 
 <div class="note">
-<p><strong>注：</strong><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 语句告诉浏览器当前函数返回 <code>result</code> 变量。这是一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的 {{Glossary("Scope", "作用域")}}。（详见 <a href="/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope">变量作用域</a>。）</p>
+<p><strong>备注：</strong> <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 语句告诉浏览器当前函数返回 <code>result</code> 变量。这是一点很有必要，因为函数内定义的变量只能在函数内使用。这叫做变量的 {{Glossary("Scope", "作用域")}}。（详见 <a href="/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope">变量作用域</a>。）</p>
 </div>
 
 <h3 id="事件">事件</h3>
@@ -365,7 +358,7 @@ myImage.onclick = function() {
 <p>下面来添加另一段代码，在用户初次进入站点时将网页的标题改成一段个性化欢迎信息（即在标题中添加用户的名字）。名字信息会由 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage API</a> 保存下来，即使用户关闭页面之后再重新打开，仍可得到之前的信息。还会添加一个选项，可以根据需要改变用户名字以更新欢迎信息。</p>
 
 <ol>
- <li>打开 <code>index.html</code>，在 {{htmlelement("script")}} 标签<u><strong>前</strong></u>添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
+ <li>打开 <code>index.html</code>，在 {{htmlelement("script")}} 标签<strong>前</strong>添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
 
   <pre class="brush: html notranslate">&lt;button&gt;切换用户&lt;/button&gt;</pre>
  </li>
@@ -421,7 +414,7 @@ let myHeading = document.querySelector('h1');</pre>
 
 <p>如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 <a href="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-scripted/">查看我们的版本</a>）：</p>
 
-<p><img alt="测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。" src="https://mdn.mozillademos.org/files/16484/beginner-site-scripted.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。" src="https://mdn.mozillademos.org/files/16484/beginner-site-scripted.png"></p>
 
 <p>若遇到问题，可以参考 GitHub 上的 <a href="https://github.com/roy-tian/learning-area/tree/master/extras/getting-started-web/beginner-html-site-scripted">完整示例代码</a> 进行对比。</p>
 

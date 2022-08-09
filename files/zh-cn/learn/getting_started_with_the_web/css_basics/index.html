@@ -1,13 +1,6 @@
 ---
 title: CSS 基础
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Web
-  - 初学者
-  - 学习
-  - 层叠样式表
-  - 样式
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 <div>{{LearnSidebar}}</div>
 
@@ -133,7 +126,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <h2 id="字体和文本">字体和文本</h2>
 
 <div class="blockIndicator note">
-<p>译注：再一次说明，中文字体文件较大，不适合直接用于 Web Font。</p>
+<p><strong>备注：</strong> 再一次说明，中文字体文件较大，不适合直接用于 Web Font。</p>
 </div>
 
 <p>在探索了一些 CSS 基础后，我们来把更多规则和信息添加至 <code>style.css</code> 中，从而让示例更美观。首先，让字体和文本变得更漂亮。</p>
@@ -155,11 +148,11 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 }</pre>
 
   <div class="note">
-  <p><strong>注：</strong>CSS 文档中所有位于 <code>/*</code> 和 <code>*/</code> 之间的内容都是 CSS 注释，它会被浏览器在渲染代码时忽略。你可以在这里写下对你现在要做的事情有帮助的笔记。</p>
+  <p><strong>备注：</strong> CSS 文档中所有位于 <code>/*</code> 和 <code>*/</code> 之间的内容都是 CSS 注释，它会被浏览器在渲染代码时忽略。你可以在这里写下对你现在要做的事情有帮助的笔记。</p>
   </div>
 
   <div class="note">
-  <p><strong>译注：</strong><code>/*</code><code>*/</code> 不可嵌套，<code>/*这样的注释是/*不行*/的*/</code>。CSS 不接受 <code>//</code> 注释。</p>
+  <p><strong>备注：</strong> <code>/*</code><code>*/</code> 不可嵌套，<code>/*这样的注释是/*不行*/的*/</code>。CSS 不接受 <code>//</code> 注释。</p>
   </div>
  </li>
  <li>接下来为文档体内的元素（{{htmlelement("h1")}}、{{htmlelement("li")}} 和 {{htmlelement("p")}}）设置字号。将标题居中显示，并为正文设置行高和字间距，从而提高页面的可读性。
@@ -271,13 +264,13 @@ p, li {
 <p>最后，我们把图像居中来使页面更美观。可以复用 body 的 <code>margin: 0 auto</code> ，但是需要一点点调整。 {{htmlelement("body")}} 元素是<strong>块级</strong>元素，意味着它占据了页面的空间并且能够赋予外边距和其他改变间距的值。而图片是<strong>内联</strong>元素，不具备块级元素的一些功能。所以为了使图像有外边距，我们必须使用 <code>display: block</code> 给予其块级行为。</p>
 
 <div class="note">
-<p><strong>注：</strong>以上说明假定所选图片小于页面宽度（600 pixels）。更大的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：<br>
+<p><strong>备注：</strong> 以上说明假定所选图片小于页面宽度（600 pixels）。更大的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：<br>
  1）使用 <a href="https://en.wikipedia.org/wiki/Raster_graphics_editor">图片编辑器</a> 来减小图片宽度；<br>
  2）用 CSS 限制图片大小，即减小 <code>&lt;img&gt;</code> 元素 {{cssxref("width")}} 属性的值（比如 <code>400 px</code>）。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>如果你暂时不能理解 <code>display: block</code> 和块级元素与行内元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。<code>display</code> 属性的更多信息请查看 <a href="/zh-CN/docs/Web/CSS/display">参考页面</a> 。</p>
+<p><strong>备注：</strong> 如果你暂时不能理解 <code>display: block</code> 和块级元素与行内元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。<code>display</code> 属性的更多信息请查看 <a href="/zh-CN/docs/Web/CSS/display">参考页面</a> 。</p>
 </div>
 
 <h2 id="小结">小结</h2>
