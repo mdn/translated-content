@@ -7,26 +7,29 @@ tags:
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 ---
-<p>这是第一个<a href="/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets">如果构建自定义表单小部件</a>的代码解释事例。</p>
+这是第一个[如果构建自定义表单小部件](/en-US/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets)的代码解释事例。
 
-<h2 id="Basic_state">基本状态</h2>
+## 基本状态
 
-<h3 id="Basic_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="select"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Basic_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -140,30 +143,33 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
   background: #000;
   color: #FFFFFF;
 }
-</pre>
+```
 
-<h3 id="基本状态结果">基本状态结果</h3>
+### 基本状态结果
 
-<div>{{ EmbedLiveSample('Basic_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Basic_state', 120, 130) }}
 
-<h2 id="Active_state">活动状态</h2>
+## 活动状态
 
-<h3 id="Active_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList hidden"&gt;
-    &lt;li class="option"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList hidden">
+    <li class="option">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Active_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -276,30 +282,34 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="活动状态结果">活动状态结果</h3>
+### 活动状态结果
 
-<div>{{ EmbedLiveSample('Active_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Active_state', 120, 130) }}
 
-<h2 id="Open_state">展开状态</h2>
+## 展开状态
 
-<h3 id="Open_state_HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="select active"&gt;
-  &lt;span class="value"&gt;Cherry&lt;/span&gt;
-  &lt;ul class="optList"&gt;
-    &lt;li class="option highlight"&gt;Cherry&lt;/li&gt;
-    &lt;li class="option"&gt;Lemon&lt;/li&gt;
-    &lt;li class="option"&gt;Banana&lt;/li&gt;
-    &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-    &lt;li class="option"&gt;Apple&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="select active">
+  <span class="value">Cherry</span>
+  <ul class="optList">
+    <li class="option highlight">Cherry</li>
+    <li class="option">Lemon</li>
+    <li class="option">Banana</li>
+    <li class="option">Strawberry</li>
+    <li class="option">Apple</li>
+  </ul>
+</div>
+```
 
-<h3 id="Open_state_CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">/* --------------- */
+```css
+/* --------------- */
 /* Required Styles */
 /* --------------- */
 
@@ -412,8 +422,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 .select .highlight {
   background: #000;
   color: #FFF;
-}</pre>
+}
+```
 
-<h3 id="展开状态结果">展开状态结果</h3>
+### 展开状态结果
 
-<div>{{ EmbedLiveSample('Open_state', 120, 130) }}</div>
+{{ EmbedLiveSample('Open_state', 120, 130) }}

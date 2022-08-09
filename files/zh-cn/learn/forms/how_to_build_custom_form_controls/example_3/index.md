@@ -7,36 +7,39 @@ tags:
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_3
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_3
 ---
-<p>这是解释 <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">如何构建自定义表单小部件</a> 的第三个示例。</p>
+这是解释 [如何构建自定义表单小部件](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets) 的第三个示例。
 
-<h2 id="Change_states">Change states</h2>
+## Change states
 
-<h3 id="HTML_内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;form class="no-widget"&gt;
-  &lt;select name="myFruit" tabindex="-1"&gt;
-      &lt;option&gt;Cherry&lt;/option&gt;
-      &lt;option&gt;Lemon&lt;/option&gt;
-      &lt;option&gt;Banana&lt;/option&gt;
-      &lt;option&gt;Strawberry&lt;/option&gt;
-      &lt;option&gt;Apple&lt;/option&gt;
-  &lt;/select&gt;
+```html
+<form class="no-widget">
+  <select name="myFruit" tabindex="-1">
+      <option>Cherry</option>
+      <option>Lemon</option>
+      <option>Banana</option>
+      <option>Strawberry</option>
+      <option>Apple</option>
+  </select>
 
-  &lt;div class="select" tabindex="0"&gt;
-    &lt;span class="value"&gt;Cherry&lt;/span&gt;
-    &lt;ul class="optList hidden"&gt;
-      &lt;li class="option"&gt;Cherry&lt;/li&gt;
-      &lt;li class="option"&gt;Lemon&lt;/li&gt;
-      &lt;li class="option"&gt;Banana&lt;/li&gt;
-      &lt;li class="option"&gt;Strawberry&lt;/li&gt;
-      &lt;li class="option"&gt;Apple&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <div class="select" tabindex="0">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden">
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
 
-<h3 id="CSS_内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css">.widget select,
+```css
+.widget select,
 .no-widget .select {
   position : absolute;
   left     : -5000em;
@@ -157,11 +160,13 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_3
 .select .highlight {
   background: #000;
   color: #FFFFFF;
-}</pre>
+}
+```
 
-<h3 id="JavaScript_内容">JavaScript 内容</h3>
+### JavaScript 内容
 
-<pre class="brush: js">// ------- //
+```js
+// ------- //
 // HELPERS //
 // ------- //
 
@@ -240,8 +245,9 @@ window.addEventListener('load', function () {
       deactivateSelect(select);
     });
   });
-});</pre>
+});
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Change_states') }}</p>
+{{ EmbedLiveSample('Change_states') }}

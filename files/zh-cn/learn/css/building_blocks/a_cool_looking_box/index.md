@@ -4,84 +4,72 @@ slug: Learn/CSS/Building_blocks/A_cool_looking_box
 translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
-<div>{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</div>
-
-<p>在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。</p>
+在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件：</th>
-   <td>在开始这个评估之前你应该已经学习过这个模块里的所有其他文章。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的：</th>
-   <td>测试对 CSS 盒模型和其他盒相关特性的掌握程度，比如背景和边框。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件：</th>
+      <td>在开始这个评估之前你应该已经学习过这个模块里的所有其他文章。</td>
+    </tr>
+    <tr>
+      <th scope="row">目的：</th>
+      <td>测试对 CSS 盒模型和其他盒相关特性的掌握程度，比如背景和边框。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="起点">起点</h2>
+## 起点
 
-<p>在开始评估之前，你需要：</p>
+在开始评估之前，你需要：
 
-<ul>
- <li>复制一份<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html">HTML</a>和<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css">CSS</a>代码，并在一个新的目录下把它们保存为<code>index.html</code> 和 <code>style.css</code>。</li>
-</ul>
+- 复制一份[HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html)和[CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css)代码，并在一个新的目录下把它们保存为`index.html` 和 `style.css`。
 
-<div class="note">
-<p><strong>备注：</strong> 或者你也可以用<a href="http://jsbin.com/">JSBin</a>或<a href="https://glitch.com/">Glitch</a>这样的网站来做这个评估，把链接里的 HTML 和 CSS 代码贴到这些在线编辑器里就行。如果你在用的在线编辑器没有独立的 CSS 面板的话，把 CSS 代码放到 HTML 文档头部的<code>&lt;style&gt;</code>元素里就好。</p>
-</div>
+> **备注：** 或者你也可以用[JSBin](http://jsbin.com/)或[Glitch](https://glitch.com/)这样的网站来做这个评估，把链接里的 HTML 和 CSS 代码贴到这些在线编辑器里就行。如果你在用的在线编辑器没有独立的 CSS 面板的话，把 CSS 代码放到 HTML 文档头部的`<style>`元素里就好。
 
-<h2 id="项目简介">项目简介</h2>
+## 项目简介
 
-<p>你的任务是创建一个酷炫的盒子，并探索 CSS 的乐趣。</p>
+你的任务是创建一个酷炫的盒子，并探索 CSS 的乐趣。
 
-<h3 id="一般任务">一般任务</h3>
+### 一般任务
 
-<ul>
- <li>把 CSS 链接到 HTML 里。</li>
-</ul>
+- 把 CSS 链接到 HTML 里。
 
-<h3 id="样式化盒子">样式化盒子</h3>
+### 样式化盒子
 
-<p>给 {{htmlelement("p")}} 添加样式：</p>
+给 {{htmlelement("p")}} 添加样式：
 
-<ul>
- <li>一个对于大按钮来说合理的宽度，200 像素左右。</li>
- <li>一个对于大按钮来说合理的高度，并使文本纵向居中。</li>
- <li>居中文本。</li>
- <li>用 <code>rem</code> 使字体稍大一点，大约 17-18 像素，在注释里说说你的值是怎么算出来的。</li>
- <li>给你的设计定一个基础颜色，把它作为盒子的背景颜色。</li>
- <li>把字体颜色设为同一个颜色，使用黑色的文字阴影增加可读性。</li>
- <li>一个精巧的圆角边框。</li>
- <li>一个跟基础颜色相近、1 像素宽的实线边框，颜色要稍深一点。</li>
- <li>一个指向右下角的黑色半透明线性渐变，让它在开始的时候完全透明，在 30% 的处渐变到 0.2 的不透明度，然后保持相同颜色到最后。</li>
- <li>多个盒阴影：一个标准的盒阴影，使它看起来稍微从页面上浮起来；另外两个是内嵌（inset）的盒阴影，一个是左上角附近的白色半透明阴影和另一个是右下角附近的黑色半透明阴影，让盒子有一个漂亮的 3D 外观。</li>
-</ul>
+- 一个对于大按钮来说合理的宽度，200 像素左右。
+- 一个对于大按钮来说合理的高度，并使文本纵向居中。
+- 居中文本。
+- 用 `rem` 使字体稍大一点，大约 17-18 像素，在注释里说说你的值是怎么算出来的。
+- 给你的设计定一个基础颜色，把它作为盒子的背景颜色。
+- 把字体颜色设为同一个颜色，使用黑色的文字阴影增加可读性。
+- 一个精巧的圆角边框。
+- 一个跟基础颜色相近、1 像素宽的实线边框，颜色要稍深一点。
+- 一个指向右下角的黑色半透明线性渐变，让它在开始的时候完全透明，在 30% 的处渐变到 0.2 的不透明度，然后保持相同颜色到最后。
+- 多个盒阴影：一个标准的盒阴影，使它看起来稍微从页面上浮起来；另外两个是内嵌（inset）的盒阴影，一个是左上角附近的白色半透明阴影和另一个是右下角附近的黑色半透明阴影，让盒子有一个漂亮的 3D 外观。
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<p>完成之后的盒子可能会像下面的截图这样：</p>
+完成之后的盒子可能会像下面的截图这样：
 
-<p><img src="fancy-box2.png"></p>
+![](fancy-box2.png)
 
-<h2 id="评估">评估</h2>
+## 评估
 
-<p>如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。 如果你是自学，可以很容易地在<a href="https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294">Learning Area Discourse thread</a>或<a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>的<a href="irc://irc.mozilla.org/mdn">#mdn</a> IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！</p>
+如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。 如果你是自学，可以很容易地在[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
-<p>{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}</p>
+{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
-<h2 id="在这个模块里">在这个模块里</h2>
+## 在这个模块里
 
-<ul>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap">盒模型概要</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Backgrounds">背景</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Borders">边框</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables">样式化表格</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">高级盒效果</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">创建精美的信纸</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">一个漂亮的盒子</a></li>
-</ul>
+- [盒模型概要](/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap)
+- [背景](/zh-CN/docs/Learn/CSS/Styling_boxes/Backgrounds)
+- [边框](/zh-CN/docs/Learn/CSS/Styling_boxes/Borders)
+- [样式化表格](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables)
+- [高级盒效果](/zh-CN/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
+- [创建精美的信纸](/zh-CN/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
+- [一个漂亮的盒子](/zh-CN/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
