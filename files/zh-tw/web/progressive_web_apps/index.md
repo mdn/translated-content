@@ -9,63 +9,53 @@ tags:
   - TopicStub
 translation_of: Web/Progressive_web_apps
 ---
-<p>漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。</p>
+漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。
 
-<h2 id="PWA_優勢">PWA 優勢</h2>
+## PWA 優勢
 
-<p>PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進、可接合、響應式、以及安全（discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, safe）。需要有關這方面的理解，請參閱<a href="/zh-TW/docs/Web/Apps/Progressive/Advantages">漸進式網絡應用程式的優勢</a>。如果需要實作細節，請參考以下章節表列的教學。</p>
+PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進、可接合、響應式、以及安全（discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, safe）。需要有關這方面的理解，請參閱[漸進式網絡應用程式的優勢](/zh-TW/docs/Web/Apps/Progressive/Advantages)。如果需要實作細節，請參考以下章節表列的教學。
 
-<h2 id="PWA_核心教學">PWA 核心教學</h2>
+## PWA 核心教學
 
-<p>以下教學將以簡單例子告訴你，在實作 PWA 時所需要的東西，並講述一切如何運行。</p>
+以下教學將以簡單例子告訴你，在實作 PWA 時所需要的東西，並講述一切如何運行。
 
-<ol>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Introduction">漸進式網絡應用程式簡介</a></li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/App_structure">漸進式網絡應用程式架構</a></li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers">使用 Service worker 讓 PWA 能離線工作</a></li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Installable_PWAs">如何令 PWA 可安裝</a></li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push">如何使用 Notifications 與 Push 令 PWA 可重連線</a></li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Loading">漸進式載入</a></li>
-</ol>
+1.  [漸進式網絡應用程式簡介](/zh-TW/docs/Web/Apps/Progressive/Introduction)
+2.  [漸進式網絡應用程式架構](/zh-TW/docs/Web/Apps/Progressive/App_structure)
+3.  [使用 Service worker 讓 PWA 能離線工作](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
+4.  [如何令 PWA 可安裝](/zh-TW/docs/Web/Apps/Progressive/Installable_PWAs)
+5.  [如何使用 Notifications 與 Push 令 PWA 可重連線](/zh-TW/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
+6.  [漸進式載入](/zh-TW/docs/Web/Apps/Progressive/Loading)
 
-<h2 id="技術教學">技術教學</h2>
+## 技術教學
 
-<ul>
- <li><a href="/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage">用戶端儲存</a>：展示如何與何時使用 web storage、IndexedDB、service worker 的長篇教學。</li>
- <li><a href="/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers">使用 service worker</a>：涵蓋 Service Worker API 的深入教學</li>
- <li><a href="/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB">使用 IndexedDB</a>：詳細解釋 IndexedDB 的基礎。</li>
- <li><a href="/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a>：讓 Web storage API 變得簡單。</li>
- <li><a href="https://developers.google.com/web/updates/2015/11/app-shell">Instant Loading Web Apps with An Application Shell Architecture</a>：使用 App Shell 程式模式加快 app 的載入速度。</li>
- <li><a href="/zh-TW/docs/Web/API/Push_API/Using_the_Push_API">使用 Push API</a>：了解 Web Push API 所需的一切。</li>
- <li><a href="/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API">使用 Notifications API</a>：web notification 簡介。</li>
- <li><a href="/zh-TW/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks">構建響應式設計</a>：了解當今 app 佈局的關鍵——響應式設計——的基本。</li>
- <li><a href="/zh-TW/docs/Web/Apps/Modern/Responsive/Mobile_first">行動優先</a>：建立響應式設計很常見，預設以行動裝置的佈局優先、接著設計更寬廣的佈局，是相當合理的。</li>
- <li><a href="/zh-TW/docs/Web/Apps/Progressive/Add_to_home_screen">Add to home screen guide</a> — learn how your apps can take advantage of Add to home screen (A2HS).</li>
-</ul>
+- [用戶端儲存](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)：展示如何與何時使用 web storage、IndexedDB、service worker 的長篇教學。
+- [使用 service worker](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers)：涵蓋 Service Worker API 的深入教學
+- [使用 IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)：詳細解釋 IndexedDB 的基礎。
+- [使用 Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)：讓 Web storage API 變得簡單。
+- [Instant Loading Web Apps with An Application Shell Architecture](https://developers.google.com/web/updates/2015/11/app-shell)：使用 App Shell 程式模式加快 app 的載入速度。
+- [使用 Push API](/zh-TW/docs/Web/API/Push_API/Using_the_Push_API)：了解 Web Push API 所需的一切。
+- [使用 Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)：web notification 簡介。
+- [構建響應式設計](/zh-TW/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks)：了解當今 app 佈局的關鍵——響應式設計——的基本。
+- [行動優先](/zh-TW/docs/Web/Apps/Modern/Responsive/Mobile_first)：建立響應式設計很常見，預設以行動裝置的佈局優先、接著設計更寬廣的佈局，是相當合理的。
+- [Add to home screen guide](/zh-TW/docs/Web/Apps/Progressive/Add_to_home_screen) — learn how your apps can take advantage of Add to home screen (A2HS).
 
-<h2 id="工具">工具</h2>
+## 工具
 
-<ul>
- <li><a href="https://localforage.github.io/localForage/">localForage</a>：讓用戶端儲存變簡單的輕量化 JavaScript 函式庫。預設上使用 IndexedDB，必要時則改用 SQL/Web 儲存。</li>
- <li><a href="https://github.com/fxos-components/serviceworkerware">ServiceWorkerWare</a> — an <em>Express-like</em> microframework for easy Service Worker development.</li>
- <li><a href="https://github.com/mozilla/oghliner">oghliner</a> — not only a template but a tool for deploying Offline Web Apps to GitHub Pages.</li>
- <li><a href="https://github.com/GoogleChrome/sw-precache">sw-precache</a> — a node module to generate service worker code that will precache specific resources.</li>
- <li><a href="https://github.com/GoogleChrome/workbox">workbox</a> — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.</li>
- <li><a href="https://www.talater.com/upup/">upup</a> — a tiny script that makes sure your site is always there for your users.</li>
- <li><a href="https://serviceworke.rs/">The service worker cookbook</a> — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.</li>
-</ul>
+- [localForage](https://localforage.github.io/localForage/)：讓用戶端儲存變簡單的輕量化 JavaScript 函式庫。預設上使用 IndexedDB，必要時則改用 SQL/Web 儲存。
+- [ServiceWorkerWare](https://github.com/fxos-components/serviceworkerware) — an _Express-like_ microframework for easy Service Worker development.
+- [oghliner](https://github.com/mozilla/oghliner) — not only a template but a tool for deploying Offline Web Apps to GitHub Pages.
+- [sw-precache](https://github.com/GoogleChrome/sw-precache) — a node module to generate service worker code that will precache specific resources.
+- [workbox](https://github.com/GoogleChrome/workbox) — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.
+- [upup](https://www.talater.com/upup/) — a tiny script that makes sure your site is always there for your users.
+- [The service worker cookbook](https://serviceworke.rs/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>Google Developers 的 <a href="https://developers.google.com/web/progressive-web-apps">Progressive web apps</a></li>
- <li>Alex Russell 寫的 <a href="https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh">Progressive Web Apps: Escaping Tabs Without Losing Our Soul</a></li>
- <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">Progressive Web Apps Check List</a></li>
- <li>Google 的 <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">The Lighthouse Tool</a></li>
- <li><a href="https://github.com/angular/mobile-toolkit">Tools for building progressive web apps with Angular</a></li>
- <li><a href="https://github.com/codebusking/react-pwa-guide-kit">React PWA Guide Kit</a></li>
- <li><a href="https://www.pokedex.org/">Offline-capable Pokédex web site</a></li>
- <li>
-  <p><a href="https://hnpwa.com/">Hacker News readers as Progressive Web Apps</a></p>
- </li>
-</ul>
+- Google Developers 的 [Progressive web apps](https://developers.google.com/web/progressive-web-apps)
+- Alex Russell 寫的 [Progressive Web Apps: Escaping Tabs Without Losing Our Soul](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
+- [Progressive Web Apps Check List](https://developers.google.com/web/progressive-web-apps/checklist)
+- Google 的 [The Lighthouse Tool](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+- [Tools for building progressive web apps with Angular](https://github.com/angular/mobile-toolkit)
+- [React PWA Guide Kit](https://github.com/codebusking/react-pwa-guide-kit)
+- [Offline-capable Pokédex web site](https://www.pokedex.org/)
+- [Hacker News readers as Progressive Web Apps](https://hnpwa.com/)
