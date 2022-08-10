@@ -143,11 +143,13 @@ new Promise((resolve, reject) => {
 
 그러면 다음 텍스트가 출력됩니다.
 
+```
     Initial
     Do that
     Do this, whatever happened before
+```
 
-**참고:** "Do this" 텍스트가 출력되지 않은 것을 주의깊게 보십시오. "Something failed" 에러가 rejection을 발생시켰기 때문입니다.
+> **참고:** "Do this" 텍스트가 출력되지 않은 것을 주의깊게 보십시오. "Something failed" 에러가 rejection을 발생시켰기 때문입니다.
 
 ## Error propagation
 

@@ -28,6 +28,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 여기에 실습할 수 있는 예제가 있습니다. `start`에서 `end`까지 `step` 수 만큼 띄어진 정수 시퀀스를 정의하는 간단한 범위 반복자를 만들 수 있습니다. 최종적으로 시퀀스의 크기가 반환됩니다.
 
+```javascript
     function makeRangeIterator(start = 0, end = Infinity, step = 1) {
         var nextIndex = start;
         var n = 0;
@@ -49,9 +50,11 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
         };
         return rangeIterator;
     }
+```
 
 위의 반복자를 사용하면 아래와 같습니다:
 
+```javascript
     var it = makeRangeIterator(1, 4);
 
     var result = it.next();
@@ -61,8 +64,9 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
     }
 
     console.log("Iterated over sequence of size: ", result.value);
+```
 
-<div class="note"><p>It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators$edit#Iterables">Iterables</a>.</p></div>
+It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators$edit#Iterables).
 
 ## Generator functions
 
@@ -72,6 +76,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 위의 예제 코드에 생성자를 적용한 것입니다. 두 코드의 행위는 동일하지만, 생성자를 사용한 쪽이 쓰거나 읽기가 훨씬 쉽습니다.
 
+```javascript
     function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
         let n = 0;
         for (let i = start; i < end; i += step) {
@@ -80,6 +85,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
         }
         return n;
     }
+```
 
 ## Iterables
 
@@ -93,6 +99,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 이와 같이 자신의 반복가능 객체를 만들 수 있습니다:
 
+```javascript
     var myIterable = {
         *[Symbol.iterator]() {
             yield 1;
@@ -111,6 +118,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
     or
 
     [...myIterable]; // [1, 2, 3]
+```
 
 ### 내장 iterable
 
