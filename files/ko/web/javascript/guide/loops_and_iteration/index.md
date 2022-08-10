@@ -3,74 +3,71 @@ title: 루프와 반복
 slug: Web/JavaScript/Guide/Loops_and_iteration
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-<p >루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.</p>
+루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.
 
-<p>반복문을 게임의 컴퓨터화된 버전이라고 생각해 보세요. 누군가에게 한 방향으로 X만큼 가게 시키고 다른 방향으로 Y만큼 더 가게 한다고 생각해 보십시오. 예를들어, "동쪽으로 5만큼 가세요"는 다음과 같이 반복문으로 표현 될 수 있습니다.</p>
+반복문을 게임의 컴퓨터화된 버전이라고 생각해 보세요. 누군가에게 한 방향으로 X만큼 가게 시키고 다른 방향으로 Y만큼 더 가게 한다고 생각해 보십시오. 예를들어, "동쪽으로 5만큼 가세요"는 다음과 같이 반복문으로 표현 될 수 있습니다.
 
-<pre class="brush: js">var step;
-for (step = 0; step &lt; 5; step++) {
+```js
+var step;
+for (step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
   console.log('Walking east one step');
 }
-</pre>
+```
 
-<p>반복문은 매우 다양한 종류가 있습니다. 하지만 반복문이 기본적으로 하는일은 모두 같습니다. 반복문은 한 동작을 여러 번 반복합니다. (사실 0회 반복하는 것도 가능합니다.) 다양한 반복문 메커니즘은 다양한 방법으로 반복문의 시작점과 끝나는 점을 정할 수 있습니다.</p>
+반복문은 매우 다양한 종류가 있습니다. 하지만 반복문이 기본적으로 하는일은 모두 같습니다. 반복문은 한 동작을 여러 번 반복합니다. (사실 0회 반복하는 것도 가능합니다.) 다양한 반복문 메커니즘은 다양한 방법으로 반복문의 시작점과 끝나는 점을 정할 수 있습니다.
 
-<p>자바스크립트가 지원하는 반복문은 다음과 같습니다:</p>
+자바스크립트가 지원하는 반복문은 다음과 같습니다:
 
-<ul>
- <li><a href="#for_문">for 문</a></li>
- <li><a href="#do...while_문">do...while 문</a></li>
- <li><a href="#while_문">while 문</a></li>
- <li><a href="#레이블_문">레이블 문</a></li>
- <li><a href="#break_문">break 문</a></li>
- <li><a href="#continue_문">continue 문</a></li>
- <li><a href="#for...in_문">for...in 문</a></li>
- <li><a href="#for...of_문">for...of 문</a></li>
-</ul>
+- [for 문](#for_문)
+- [do...while 문](#do...while_문)
+- [while 문](#while_문)
+- [레이블 문](#레이블_문)
+- [break 문](#break_문)
+- [continue 문](#continue_문)
+- [for...in 문](#for...in_문)
+- [for...of 문](#for...of_문)
 
-<h2 id="for_문"><code>for</code> 문</h2>
+## `for` 문
 
-<p>for 반복문은 어떤 특정한 조건이 거짓으로 판별될 때까지 반복합니다. 자바스크립트의 반복문은 C의 반복문과 비슷합니다. for 반복문은 다음과 같습니다.</p>
+for 반복문은 어떤 특정한 조건이 거짓으로 판별될 때까지 반복합니다. 자바스크립트의 반복문은 C의 반복문과 비슷합니다. for 반복문은 다음과 같습니다.
 
-<pre class="syntaxbox">for ([초기문]; [조건문]; [증감문])
-  문장
-</pre>
+    for ([초기문]; [조건문]; [증감문])
+      문장
 
-<p>for문이 실행될 때, 다음과 같이 실행됩니다.:</p>
+for문이 실행될 때, 다음과 같이 실행됩니다.:
 
-<ol>
- <li>초기화 구문인 초기문이 존재한다면 초기문이 실행됩니다. 이 표현은 보통 1이나 반복문 카운터로 초기 설정이 됩니다. 그러나 복잡한 구문으로 표현 될 때도 있습니다. 또한 변수로 선언 되기도 합니다.</li>
- <li>조건문은 조건을 검사합니다. 만약 조건문이 참이라면, 그 반복문은 실행됩니다. 만약 조건문이 거짓이라면, 그 for문은 종결됩니다. 만약 그 조건문이 생략된다면, 그 조건문은 참으로 추정됩니다.</li>
- <li>문장이 실행됩니다. 많은 문장을 실행할 경우엔, { } 를 써서 문장들을 묶어 줍니다.</li>
- <li>갱신 구문인 증감문이 존재한다면 실행되고 2번째 단계로 돌아갑니다.</li>
-</ol>
+1.  초기화 구문인 초기문이 존재한다면 초기문이 실행됩니다. 이 표현은 보통 1이나 반복문 카운터로 초기 설정이 됩니다. 그러나 복잡한 구문으로 표현 될 때도 있습니다. 또한 변수로 선언 되기도 합니다.
+2.  조건문은 조건을 검사합니다. 만약 조건문이 참이라면, 그 반복문은 실행됩니다. 만약 조건문이 거짓이라면, 그 for문은 종결됩니다. 만약 그 조건문이 생략된다면, 그 조건문은 참으로 추정됩니다.
+3.  문장이 실행됩니다. 많은 문장을 실행할 경우엔, { } 를 써서 문장들을 묶어 줍니다.
+4.  갱신 구문인 증감문이 존재한다면 실행되고 2번째 단계로 돌아갑니다.
 
-<h3 id="예시"><strong>예시</strong></h3>
+### **예시**
 
-<p>다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}). 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가  &lt;select&gt; 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.</p>
+다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}). 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가 \<select> 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.
 
-<pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
-    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;Jazz&lt;/option&gt;
-      &lt;option&gt;Blues&lt;/option&gt;
-      &lt;option&gt;New Age&lt;/option&gt;
-      &lt;option&gt;Classical&lt;/option&gt;
-      &lt;option&gt;Opera&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+```html
+<form name="selectForm">
+  <p>
+    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="How many are selected?" /></p>
+</form>
 
-&lt;script&gt;
+<script>
 function howMany(selectObject) {
   var numberSelected = 0;
-  for (var i = 0; i &lt; selectObject.options.length; i++) {
+  for (var i = 0; i < selectObject.options.length; i++) {
     if (selectObject.options[i].selected) {
       numberSelected++;
     }
@@ -82,127 +79,127 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
   alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
 });
-&lt;/script&gt;
+</script>
+```
 
-</pre>
+## `do...while` 문
 
-<h2 id="do...while_문"><code>do...while</code> 문</h2>
+do...while 문은 특정한 조건이 거짓으로 판별될 때까지 반복합니다. do...while 문은 다음과 같습니다.
 
-<p>do...while 문은 특정한 조건이 거짓으로 판별될 때까지 반복합니다. do...while 문은 다음과 같습니다.</p>
+    do
+      문장
+    while (조건문);
 
-<pre class="syntaxbox">do
-  문장
-while (조건문);
-</pre>
+`조건문을 확인하기 전에 문장은 한번 실행됩니다. 많은 문장을 실행하기 위해선 { }를 써서 문장들을 묶어줍니다. 만약 조건이 참이라면, 그 문장은 다시 실행됩니다. 매 실행 마지막마다 조건문이 확인됩니다. 만약 조건문이 거짓일 경우, 실행을 멈추고 do...while 문 바로 아래에 있는 문장으로 넘어가게 합니다.`
 
-<p><code>조건문을 확인하기 전에 문장은 한번 실행됩니다. 많은 문장을 실행하기 위해선 { }를 써서 문장들을 묶어줍니다. 만약 조건이 참이라면, 그 문장은 다시 실행됩니다. 매 실행 마지막마다 조건문이 확인됩니다. 만약 조건문이 거짓일 경우, 실행을 멈추고 do...while 문 바로 아래에 있는 문장으로 넘어가게 합니다.</code></p>
+### **예시**
 
-<h3 id="예시_2"><strong>예시</strong></h3>
+다음 예제에서, do 반복문은 최소 한번은 반복됩니다. 그리고 i 가 5보다 작지 않을 때까지 계속 반복됩니다.
 
-<p>다음 예제에서, do 반복문은 최소 한번은 반복됩니다. 그리고 i 가 5보다 작지 않을 때까지 계속 반복됩니다.</p>
-
-<pre class="brush: js">do {
+```js
+do {
   i += 1;
   console.log(i);
-} while (i &lt; 5);</pre>
+} while (i < 5);
+```
 
-<h2 id="while_문"><code>while</code> 문</h2>
+## `while` 문
 
-<p>while 문은 어떤 조건문이 참이기만 하면 문장을 계속해서 수행합니다. while 문은 다음과 같습니다.</p>
+while 문은 어떤 조건문이 참이기만 하면 문장을 계속해서 수행합니다. while 문은 다음과 같습니다.
 
-<pre class="syntaxbox">while (조건문)
-  문장
-</pre>
+    while (조건문)
+      문장
 
-<p>만약 조건문이 거짓이 된다면, 그 반복문 안의 문장은 실행을 멈추고 반복문 바로 다음의 문장으로 넘어갑니다.</p>
+만약 조건문이 거짓이 된다면, 그 반복문 안의 문장은 실행을 멈추고 반복문 바로 다음의 문장으로 넘어갑니다.
 
-<p>조건문은 반복문 안의 문장이 실행되기 전에 확인 됩니다. 만약 조건문이 참으로 리턴된다면, 문장은 실행되고 그 조건문은 다시 판별됩니다. 만약 조건문이 거짓으로 리턴된다면, 실행을 멈추고 while문 바로 다음의 문장으로 넘어가게 됩니다.</p>
+조건문은 반복문 안의 문장이 실행되기 전에 확인 됩니다. 만약 조건문이 참으로 리턴된다면, 문장은 실행되고 그 조건문은 다시 판별됩니다. 만약 조건문이 거짓으로 리턴된다면, 실행을 멈추고 while문 바로 다음의 문장으로 넘어가게 됩니다.
 
-<p>많은 문장들을 실행하기 위해선, { }를 써서 문장들을 묶어줍니다.</p>
+많은 문장들을 실행하기 위해선, { }를 써서 문장들을 묶어줍니다.
 
-<h3 id="예시_1"><strong>예시 1</strong></h3>
+### **예시 1**
 
-<p>다음 while 반복문은 n이 3보다 작은 한, 계속 반복됩니다.</p>
+다음 while 반복문은 n이 3보다 작은 한, 계속 반복됩니다.
 
-<pre class="brush: js">n = 0;
+```js
+n = 0;
 x = 0;
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
 }
-</pre>
+```
 
-<p>매 반복과 함께, n이 증가하고 x에 더해집니다. 그러므로, x와 n은 다음과 같은 값을 갖습니다.</p>
+매 반복과 함께, n이 증가하고 x에 더해집니다. 그러므로, x와 n은 다음과 같은 값을 갖습니다.
 
-<ul>
- <li>첫번째 경과 후: <code>n</code> = 1 and <code>x</code> = 1</li>
- <li>두번째 경과 후: <code>n</code> = 2 and <code>x</code> = 3</li>
- <li>세번째 경과 후: <code>n</code> = 3 and <code>x</code> = 6</li>
-</ul>
+- 첫번째 경과 후: `n` = 1 and `x` = 1
+- 두번째 경과 후: `n` = 2 and `x` = 3
+- 세번째 경과 후: `n` = 3 and `x` = 6
 
-<p>세번째 경과 후에, n &lt; 3 은 더이상 참이 아니므로, 반복문은 종결됩니다.</p>
+세번째 경과 후에, n < 3 은 더이상 참이 아니므로, 반복문은 종결됩니다.
 
-<h3 id="예시_2_2"><strong>예시 2</strong></h3>
+### **예시 2**
 
-<p>조건문은 항상 거짓이 될지라도 무한 루프는 피해야 합니다. 그렇지 않으면 그 반복문은 영원히 끝나지 않을 것입니다. 아래의 while 문은 조건문이 절대 거짓이 될 수 없으므로 영원히 반복될 것입니다.</p>
+조건문은 항상 거짓이 될지라도 무한 루프는 피해야 합니다. 그렇지 않으면 그 반복문은 영원히 끝나지 않을 것입니다. 아래의 while 문은 조건문이 절대 거짓이 될 수 없으므로 영원히 반복될 것입니다.
 
-<pre class="brush: js">// 다음과 같은 코드는 피하세요.
+```js
+// 다음과 같은 코드는 피하세요.
 while (true) {
   console.log("Hello, world");
-}</pre>
+}
+```
 
-<h2 id="레이블_문">레이블 문</h2>
+## 레이블 문
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/label">레이블</a>은 여러분이 프로그램에서 다른 곳으로 참조할 수 있도록 식별자로 문을 제공합니다. 예를 들어, 여러분은 루프를 식별하기 위해 레이블을 사용하고, 프로그램이 루프를 방해하거나 실행을 계속할지 여부를 나타내기 위해 break나 continue 문을 사용할 수 있습니다.</p>
+[레이블](/en-US/docs/Web/JavaScript/Reference/Statements/label)은 여러분이 프로그램에서 다른 곳으로 참조할 수 있도록 식별자로 문을 제공합니다. 예를 들어, 여러분은 루프를 식별하기 위해 레이블을 사용하고, 프로그램이 루프를 방해하거나 실행을 계속할지 여부를 나타내기 위해 break나 continue 문을 사용할 수 있습니다.
 
-<p>레이블 문의 구문은 다음과 같습니다:</p>
+레이블 문의 구문은 다음과 같습니다:
 
-<pre class="syntaxbox">label :
-   statement
-</pre>
+    label :
+       statement
 
-<p>레이블 값은 예약어가 아닌 임의의 JavaScript 식별자일 수 있습니다. 여러분이 레이블을 가지고 식별하는 문은 어떠한 문이 될 수 있습니다.</p>
+레이블 값은 예약어가 아닌 임의의 JavaScript 식별자일 수 있습니다. 여러분이 레이블을 가지고 식별하는 문은 어떠한 문이 될 수 있습니다.
 
-<h3 id="예시_3"><strong>예시</strong></h3>
+### **예시**
 
-<p>이 예에서, 레이블 markLoop는 while 루프를 식별합니다.</p>
+이 예에서, 레이블 markLoop는 while 루프를 식별합니다.
 
-<pre class="brush: js">markLoop:
+```js
+markLoop:
 while (theMark == true) {
    doSomething();
-}</pre>
+}
+```
 
-<h2 id="break_문"><code>break</code> 문</h2>
+## `break` 문
 
-<p>break문은 반복문, switch문, 레이블 문과 결합한 문장을 빠져나올  때 사용합니다.</p>
+break문은 반복문, switch문, 레이블 문과 결합한 문장을 빠져나올 때 사용합니다.
 
-<ul>
- <li>레이블 없이 break문을 쓸 때: 가장 가까운 <code>while</code>, <code>do-while</code>, <code>for</code>, 또는 <code>switch</code>문을 종료하고 다음 명령어로 넘어갑니다.</li>
- <li>레이블 문을 쓸 때: 특정 레이블 문에서 끝납니다.</li>
-</ul>
+- 레이블 없이 break문을 쓸 때: 가장 가까운 `while`, `do-while`, `for`, 또는 `switch`문을 종료하고 다음 명령어로 넘어갑니다.
+- 레이블 문을 쓸 때: 특정 레이블 문에서 끝납니다.
 
-<p>break문의 문법은 다음과 같습니다.</p>
+break문의 문법은 다음과 같습니다.
 
-<ol>
- <li><code>break;</code></li>
- <li><code>break <em>[레이블]</em>;</code></li>
-</ol>
+1.  `break;`
+2.  `break [레이블];`
 
-<p>break문의 첫번째 형식은 가장 안쪽의 반복문이나 switch문을 빠져나옵니다. 두번째 형식는 특정한 레이블 문을 빠져나옵니다.</p>
+break문의 첫번째 형식은 가장 안쪽의 반복문이나 switch문을 빠져나옵니다. 두번째 형식는 특정한 레이블 문을 빠져나옵니다.
 
-<h3 id="예시_1_2"><strong>예시</strong> <strong>1</strong></h3>
+### **예시** **1**
 
-<p>다음 예</p>
+다음 예
 
-<pre class="brush: js">for (i = 0; i &lt; a.length; i++) {
+```js
+for (i = 0; i < a.length; i++) {
   if (a[i] == theValue) {
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="예시_2_Breaking_to_a_label"><strong>예시 2: </strong>Breaking to a label</h3>
+### **예시 2:** Breaking to a label
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 var z = 0
 labelCancelLoops: while (true) {
   console.log("Outer loops: " + x);
@@ -211,58 +208,56 @@ labelCancelLoops: while (true) {
   while (true) {
     console.log("Inner loops: " + z);
     z += 1;
-    if (z === 10 &amp;&amp; x === 10) {
+    if (z === 10 && x === 10) {
       break labelCancelLoops;
     } else if (z === 10) {
       break;
     }
   }
 }
-</pre>
+```
 
-<h2 id="continue_문">continue 문</h2>
+## continue 문
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a></code> 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.</p>
+[`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.
 
-<ul>
- <li>레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.</li>
- <li>레이블과 함께 continue를 사용하는 경우, continue는 그 레이블로 식별되는 루프 문에 적용됩니다.</li>
-</ul>
+- 레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.
+- 레이블과 함께 continue를 사용하는 경우, continue는 그 레이블로 식별되는 루프 문에 적용됩니다.
 
-<p>continue 문의 구문은 다음과 같습니다:</p>
+continue 문의 구문은 다음과 같습니다:
 
-<ol>
- <li><code>continue;</code></li>
- <li><code>continue </code><em><code>label;</code></em></li>
-</ol>
+1.  `continue;`
+2.  `continue `_`label;`_
 
-<h3 id="예시_1_3"><strong>예시 1</strong></h3>
+### **예시 1**
 
-<p>다음의 예는 i 값이 3일 때 실행하는 continue 문과 함께 while 루프를 보여줍니다. 따라서, n은 값 1, 3, 7, 12를 취합니다.</p>
+다음의 예는 i 값이 3일 때 실행하는 continue 문과 함께 while 루프를 보여줍니다. 따라서, n은 값 1, 3, 7, 12를 취합니다.
 
-<pre class="brush: js">i = 0;
+```js
+i = 0;
 n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i == 3) {
     continue;
   }
   n += i;
 }
-</pre>
+```
 
-<h3 id="예시_2_3"><strong>예시 2</strong></h3>
+### **예시 2**
 
-<p>checkiandj 레이블 문은 checkj 레이블 문을 포함합니다. continue가 발생하는 경우, 프로그램은 checkj의 현재 반복을 종료하고, 다음 반복을 시작합니다. 그 조건이 false를 반환 할 때까지 continue가 발생할 때마다, checkj는 반복합니다. false가 반환될 때, checkiandj 문의 나머지 부분은 완료되고, 그 조건이 false를 반환 할 때까지 checkiandj는 반복합니다. false가 반환될 때, 이 프로그램은 다음 checkiandj 문에서 계속됩니다.</p>
+checkiandj 레이블 문은 checkj 레이블 문을 포함합니다. continue가 발생하는 경우, 프로그램은 checkj의 현재 반복을 종료하고, 다음 반복을 시작합니다. 그 조건이 false를 반환 할 때까지 continue가 발생할 때마다, checkj는 반복합니다. false가 반환될 때, checkiandj 문의 나머지 부분은 완료되고, 그 조건이 false를 반환 할 때까지 checkiandj는 반복합니다. false가 반환될 때, 이 프로그램은 다음 checkiandj 문에서 계속됩니다.
 
-<p>continue가 checkiandj의 레이블을 가지고 있다면, 프로그램은 checkiandj 문 상단에서 계속될 것입니다.</p>
+continue가 checkiandj의 레이블을 가지고 있다면, 프로그램은 checkiandj 문 상단에서 계속될 것입니다.
 
-<pre class="brush: js">checkiandj:
-  while (i &lt; 4) {
+```js
+checkiandj:
+  while (i < 4) {
     console.log(i);
     i += 1;
     checkj:
-      while (j &gt; 4) {
+      while (j > 4) {
         console.log(j);
         j -= 1;
         if ((j % 2) == 0) {
@@ -272,52 +267,55 @@ while (i &lt; 5) {
       }
       console.log("i = " + i);
       console.log("j = " + j);
-  }</pre>
+  }
+```
 
-<h2 id="for...in_문"><code>for...in</code> 문</h2>
+## `for...in` 문
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a>  문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:</p>
+[`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:
 
-<pre class="syntaxbox">for (variable in object) {
-  statements
-}
-</pre>
+    for (variable in object) {
+      statements
+    }
 
-<h3 id="예시_4"><strong>예시</strong></h3>
+### **예시**
 
-<p>다음 함수는 객체와 객체의 이름을 함수의 인수로 취합니다. 그런 다음 모든 객체의 속성을 반복하고 속성 이름과 값을 나열하는 문자열을 반환합니다.</p>
+다음 함수는 객체와 객체의 이름을 함수의 인수로 취합니다. 그런 다음 모든 객체의 속성을 반복하고 속성 이름과 값을 나열하는 문자열을 반환합니다.
 
-<pre class="brush: js">function dump_props(obj, obj_name) {
+```js
+function dump_props(obj, obj_name) {
   var result = "";
   for (var i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "&lt;br&gt;";
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += "&lt;hr&gt;";
+  result += "<hr>";
   return result;
 }
-</pre>
+```
 
-<p>속성 make와 model을 가진 객체 car의 경우, 결과는 다음과 같습니다:</p>
+속성 make와 model을 가진 객체 car의 경우, 결과는 다음과 같습니다:
 
-<pre class="brush: js">car.make = Ford
+```js
+car.make = Ford
 car.model = Mustang
-</pre>
+```
 
-<h3 id="배열"><strong>배열</strong></h3>
+### **배열**
 
-<p>{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, <strong>for...in</strong> 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 <strong>for...in</strong> 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 전통적인 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> 루프를 사용하는 것이 좋습니다.</p>
+{{jsxref("배열")}} 요소를 반복하는 방법으로 이를 사용하도록 유도될 수 있지만, **for...in** 문은 숫자 인덱스에 추가하여 사용자 정의 속성의 이름을 반환합니다. 따라서 만약 여러분이 사용자 정의 속성 또는 메서드를 추가하는 등 Array 객체를 수정한다면, 배열 요소 이외에도 사용자 정의 속성을 통해 **for...in** 문을 반복하기 때문에, 배열을 통해 반복할 때 숫자 인덱스와 전통적인 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 루프를 사용하는 것이 좋습니다.
 
-<h2 id="for...of_문"><code>for...of</code> 문</h2>
+## `for...of` 문
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">반복 가능한 객체</a>({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">인수</a> 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.</p>
+[`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
-<pre class="syntaxbox">for (<em>variable</em> of <em>object</em>) {
-  <em>statement
-</em>}</pre>
+    for (variable of object) {
+      statement
+    }
 
-<p>다음 예는 for...of 루프와 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="en-US/docs/JavaScript/Reference/Statements/for...in">for...in</a></code> 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:</p>
+다음 예는 for...of 루프와 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in "en-US/docs/JavaScript/Reference/Statements/for...in") 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
 
-<pre class="brush:js">let arr = [3, 5, 7];
+```js
+let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
@@ -327,6 +325,6 @@ for (let i in arr) {
 for (let i of arr) {
    console.log(i); // logs "3", "5", "7"
 }
-</pre>
+```
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
