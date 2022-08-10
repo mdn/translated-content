@@ -11,41 +11,42 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
+Доступное только для чтения свойство **`failureReason`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, значение которой указывает на причину неудачного выполнения фонового запроса.
 
-If the value of this property changes, the [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event) event is fired at the associated {{domxref("BackgroundFetchRegistration")}} object.
+Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event).
 
-## Value
+## Значение
 
-One of the following strings:
+Может принимать одну из следующих строк:
 
 - `""`
-  - : The background fetch has not completed, or was successful.
+  - : Фоновый запрос не завершён, либо завершён успешно.
 - `"aborted"`
-  - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+  - : Операция была прервана пользователем, либо был вызван {{domxref("BackgroundFetchRegistration.abort()","abort()")}}.
 - `"bad-status"`
-  - : A response had a not-ok status (a status outside the range 200-299).
+  - : Статус ответа не-ok (статус находится за пределами диапазона 200-299).
 - `"fetch-error"`
-  - : A fetch failed for other reasons, for example CORS, or a network failure.
+  - : Запрос провалился по другим причинам, например CORS, или ошибки сети.
 - `"quota-exceeded"`
-  - : Storage quota was reached during the operation.
+  - : Во время операции была достигнута квота хранения.
 - `"download-total-exceeded"`
-  - : The provided `downloadTotal` was exceeded. This value was set when the background fetch was registered.
+  - : Было превышено указанное значение `downloadTotal`. Это значение было установлено при регистрациии фонового запроса.
 
-## Examples
+## Примеры
 
-Logging this property to the console prints the reason the fetch failed, or an empty string if it was successful or has not yet completed.
+Логирование этого свойства в консоль печатает причину завершения запроса с ошибкой, или пустую строку, если запрос был завершён успешно, либо ещё не завершён.
 
 ```js
 console.log(bgFetch.failureReason);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

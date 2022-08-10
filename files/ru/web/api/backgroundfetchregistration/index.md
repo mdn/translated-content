@@ -57,11 +57,11 @@ browser-compat: api.BackgroundFetchRegistration
 ## Методы
 
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}}
-  - : Прерывает фоновый запрос. Возвращает {{jsxref("Promise")}}, который разрешается с `true` если запрос был успешно прерван.
+  - : Прерывает фоновый запрос. Возвращает {{jsxref("Promise")}}, результатом обработки которого является `true`, если запрос был успешно прерван.
 - {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}}
   - : Возвращает один объект {{domxref("BackgroundFetchRecord")}}, который является первым совпадением по аргументам.
 - {{domxref("BackgroundFetchRegistration.matchAll","BackgroundFetchRegistration.matchAll()")}}
-  - : Возвращает {{jsxref("Promise")}}, который разрешается с массивом объектов {{domxref("BackgroundFetchRecord")}}, содержащих запросы и ответы.
+  - : Возвращает {{jsxref("Promise")}}, результатом обработки которого является массив объектов {{domxref("BackgroundFetchRecord")}}, содержащих запросы и ответы.
 
 ## События
 
@@ -82,15 +82,15 @@ browser-compat: api.BackgroundFetchRegistration
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch(
-    "my-fetch",
-    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+    'my-fetch',
+    ['/ep-5.mp3', 'ep-5-artwork.jpg'],
     {
-      title: "Episode 5: Interesting things.",
+      title: 'Episode 5: Interesting things.',
       icons: [
         {
-          sizes: "300x300",
-          src: "/ep-5-icon.png",
-          type: "image/png",
+          sizes: '300x300',
+          src: '/ep-5-icon.png',
+          type: 'image/png',
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
@@ -108,9 +108,9 @@ console.log(bgFetch.id); // "my-fetch"
 Метод {{domxref("BackgroundFetchRegistration.match","match()")}} можно использовать для поиска конкретного {{domxref("BackgroundFetchRecord")}} из тех, что были зарегистрированы.
 
 ```js
-bgFetch.match("/ep-5.mp3").then(async (record) => {
+bgFetch.match('/ep-5.mp3').then(async (record) => {
   if (!record) {
-    console.log("No record found");
+    console.log('No record found');
     return;
   }
 
@@ -124,6 +124,6 @@ bgFetch.match("/ep-5.mp3").then(async (record) => {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

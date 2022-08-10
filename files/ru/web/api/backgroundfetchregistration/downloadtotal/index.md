@@ -14,7 +14,7 @@ browser-compat: api.BackgroundFetchRegistration.downloadTotal
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total size in bytes of this download. This is set when the background fetch was registered, or `0` if not set.
+Доступное только для чтения свойство **`downloadTotal`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0` если не установлено.
 
 ## Значение
 
@@ -22,7 +22,7 @@ The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegi
 
 ## Примеры
 
-Logging this property to the console returns the total size in bytes of this download.
+Логирование этого свойства в консоль возвращает общий размер загрузки в байтах.
 
 ```js
 console.log(bgFetch.downloadTotal);
@@ -32,6 +32,6 @@ console.log(bgFetch.downloadTotal);
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

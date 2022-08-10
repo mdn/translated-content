@@ -34,6 +34,6 @@ console.log(bgFetch.downloaded);
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
