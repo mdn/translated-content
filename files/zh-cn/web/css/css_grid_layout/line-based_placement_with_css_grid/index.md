@@ -1,27 +1,23 @@
 ---
 title: CSS 网格中基于线的定位
 slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-tags:
-  - CSS
-  - CSS 网格
-  - 指南
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
-<p>在<a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">探讨网格布局的基础概念</a>一文中，我们了解了如何使用线编号来排列元素，本文则会全面探索这个基础特性如何工作。</p>
+{{CSSRef}}
 
-<p>了解编号线是最好的探索网格布局方式的起点，当你使用网格布局时，编号线总是存在。这些线从 1 开始按行和列编号。要注意的是网格是根据书写方向来编号的。在像英文这样从左至右书写的语言中，网格线的 1 是最左边的线。当使用从右至左书写的语言时，网格线 1 就是最右边的线。我们会在之后的文章中深入探讨书写模式和网格间的交互。</p>
+在[探讨网格布局的基础概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)一文中，我们了解了如何使用线编号来排列元素，本文则会全面探索这个基础特性如何工作。
 
-<h2 id="基础例子">基础例子</h2>
+了解编号线是最好的探索网格布局方式的起点，当你使用网格布局时，编号线总是存在。这些线从 1 开始按行和列编号。要注意的是网格是根据书写方向来编号的。在像英文这样从左至右书写的语言中，网格线的 1 是最左边的线。当使用从右至左书写的语言时，网格线 1 就是最右边的线。我们会在之后的文章中深入探讨书写模式和网格间的交互。
 
-<p>在这个非常简单的例子中，我们使用了 3 行 3 列的导轨，从而每个方向上我们有 4 条线。</p>
+## 基础示例
 
-<p>网格容器中有 4 个子元素。如果我们不定义它们的位置，它们会按照自动定位规则布局，即前 4 个单元格中各 1 个元素。你可使用<a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a>查看网格是如何定义行和列的。</p>
+在这个非常简单的例子中，我们使用了 3 行 3 列的导轨，从而每个方向上我们有 4 条线。
 
-<p><img alt="Our Grid highlighted in DevTools" src="3_hilighted_grid.png"></p>
+网格容器中有 4 个子元素。如果我们不定义它们的位置，它们会按照自动定位规则布局，即前 4 个单元格中各 1 个元素。你可使用 [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) 查看网格是如何定义行和列的。
 
-<div id="A_basic_example">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+![在开发者工具中突出显示的网格](3_hilighted_grid.png)
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
@@ -29,85 +25,89 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
     background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 100px);
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<p> </p>
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<p>{{ EmbedLiveSample('A_basic_example', '300', '330') }}</p>
+{{ EmbedLiveSample('基础示例', '300', '330') }}
 
-<h2 id="使用线编号定位元素">使用线编号定位元素</h2>
+## 使用线编号定位元素
 
-<p>我们可以使用基于线的定位控制元素在网格上的位置。比如我想要第一个元素从网格的最左开始，占 1 个列导轨。它还应该从第 1 行线开始，延伸至第 4 行线：</p>
+我们可以使用基于线的定位控制元素在网格上的位置。比如我想要第一个元素从网格的最左开始，占 1 个列导轨。它还应该从第 1 行线开始，延伸至第 4 行线：
 
-<div id="Line_Number">
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
    grid-row-start: 1;
    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>当你为某些元素定位，剩下的元素会继续按照自动定位规则定位。我们会在以后的文章中介绍这些规则，但现在你可以看到网格开始把未定位的元素放入空的单元格。</p>
+当你为某些元素定位，剩下的元素会继续按照自动定位规则定位。我们会在以后的文章中介绍这些规则，但现在你可以看到网格开始把未定位的元素放入空的单元格。
 
-<p>在逐个定义元素后，我们把所有 4 个元素都填充到了网格中。注意，我们可以留空一些单元格。网格布局的一个优势是：无需给元素周围加上 margin 来阻止文档流自动填补空白，就能实现设计中的留白区域。</p>
+在逐个定义元素后，我们把所有 4 个元素都填充到了网格中。注意，我们可以留空一些单元格。网格布局的一个优势是：无需给元素周围加上 margin 来阻止文档流自动填补空白，就能实现设计中的留白区域。
 
-<div id="Line_Number">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box2 {
+```css
+.box1 {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end: 4;
+}
+.box2 {
    grid-column-start: 3;
    grid-column-end: 4;
    grid-row-start: 1;
@@ -125,48 +125,46 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
    grid-row-start: 3;
    grid-row-end: 4;
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Line_Number', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('使用线编号定位元素', '300', '330') }}
 
-<div id="Grid_Shorthands">
-<h2 id="grid-column_和_grid-row_缩写"><code>grid-column</code> 和 <code>grid-row</code> 缩写</h2>
+## `grid-column` 和 `grid-row` 的简写
 
-<p>我们用了不少代码定位每个元素，你应该不会惊讶有 {{glossary("shorthand properties", "shorthand")}}缩写。{{cssxref("grid-column-start")}}和{{cssxref("grid-column-end")}}属性可以合并为 {{cssxref("grid-column")}}，{{cssxref("grid-row-start")}}和{{cssxref("grid-row-end")}}则合并为{{cssxref("grid-row")}}。</p>
+我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 / 2;
    grid-row: 1 / 4;
 }
@@ -182,47 +180,50 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
    grid-column: 2 / 4;
    grid-row: 3 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Grid_Shorthands', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('grid-column 和 grid-row 的简写', '300', '330') }}
 
-<h3 id="默认跨度">默认跨度</h3>
+## 默认跨度
 
-<p>在上例中，为了展示这些属性，我指定了每个结束行线和列线，但实际上如果一个元素只延伸一个轨道的话，你可以省略 <code>grid-column-end</code> 或 <code>grid-row-end</code> 值。元素默认延伸一个轨道。我们最初的例子的普通写法会是这样：</p>
+在上例中，为了展示这些属性，我们指定了每个结束行线和列线，但实际上如果一个元素只延伸一个轨道的话，你可以省略 `grid-column-end` 或 `grid-row-end` 值。元素默认延伸一个轨道。
 
-<div id="End_Lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+### 默认跨度的普通写法
+
+我们最初的示例的普通写法会是这样：
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: 1;
    grid-row-start: 1;
    grid-row-end: 4;
@@ -241,45 +242,46 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
    grid-column-end: 4;
    grid-row-start: 3;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('End_Lines', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('默认跨度的普通写法', '300', '330') }}
 
-<p>当省略了跨越一个轨道的元素的／和第二个值，我们的缩写则会是这样</p>
+### 默认跨度的简写
 
-<div id="New_Shorthand">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+当省略了跨越一个轨道的元素的斜杠和第二个值，我们的简写则会是这样：
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column: 1 ;
    grid-row: 1 / 4;
 }
@@ -295,53 +297,51 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
    grid-column: 2 / 4;
    grid-row: 3 ;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('New_Shorthand', '300', '330') }}</p>
-</div>
+{{ EmbedLiveSample('默认跨度的简写', '300', '330') }}
 
-<h2 id="grid-area属性"><code>grid-area属性</code></h2>
+## `grid-area` 属性
 
-<p>我们可以更进一步，给每个元素只定义一个属性 {{cssxref("grid-area")}}。值的顺序如下</p>
+我们可以更进一步，给每个元素只定义一个属性 {{cssxref("grid-area")}}。值的顺序如下
 
-<ul>
- <li>grid-row-start</li>
- <li>grid-column-start</li>
- <li>grid-row-end</li>
- <li>grid-column-end</li>
-</ul>
+- grid-row-start
+- grid-column-start
+- grid-row-end
+- grid-column-end
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
@@ -353,61 +353,59 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 .box4 {
    grid-area: 3 / 2 / 4 / 4;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}</p>
+{{ EmbedLiveSample('grid-area 属性', '300', '330') }}
 
-<p><code>grid-area</code> 的值的顺序看起来可能有点奇怪，比如说它正好和定义 margin 和 padding 的缩写的值的顺序相反。但如果说是因为它与 CSS 书写模式规范中的书写方向相关就不难理解了。我们会在之后的文章中探讨网格与书写模式的关系，但我们有 4 个书写流关联的方向：</p>
+`grid-area` 的值的顺序看起来可能有点奇怪，比如说它正好和定义 margin 和 padding 的简写的值的顺序相反。但如果说是因为它与 CSS 书写模式规范中的书写方向相关就不难理解了。我们会在之后的文章中探讨网格与书写模式的关系，但我们有 4 个书写流关联的方向：
 
-<ul>
- <li>块起始（block-start）</li>
- <li>块结束（block-end）</li>
- <li>行起始（inline-start）</li>
- <li>行结束（inline-end）</li>
-</ul>
+- 块起始（block-start）
+- 块结束（block-end）
+- 行起始（inline-start）
+- 行结束（inline-end）
 
-<p>我们现在的工作语言是英语，一种从左至右书写的语言。块起始 就是网格容器的顶端行线，块结束 就是底端行线。行起始 是左端列线，因为 行起始 与当前书写模式的起点一致，行结束 就是网格右端列线。</p>
+我们现在使用的是英语，一种从左至右书写的语言。块起始就是网格容器的顶端行线，块结束就是底端行线。行起始是左端列线，因为行起始与当前书写模式的起点一致，行结束就是网格右端列线。
 
-<p>当我们用 <code>grid-area</code> 属性来定义网格区域时，我们先定义 <code>块起始（block-start）</code> 和 <code>行起始（inline-start）</code>, 然后再定义 <code>块结束（block-end）</code> 和 <code>行结束（inline-end）</code>。起初，我们可能会因为习惯了顶、右、底、左的属性定义顺序，觉得这个顺序奇怪，但当从网站的书写模式有多个方向的角度思考，这就显得合理了。</p>
+当我们用 `grid-area` 属性来定义网格区域时，我们先定义块起始（`block-start`）和行起始（`inline-start`），然后再定义块结束（`block-end`）和行结束（`inline-end`）。起初，我们可能会因为习惯了顶、右、底、左的属性定义顺序，觉得这个顺序奇怪，但当从网站的书写模式有多个方向的角度思考，这就显得合理了。
 
-<h2 id="反方向计数">反方向计数</h2>
+## 反方向计数
 
-<div id="counting_backwards">
-<p>我们也可以从行和块结束线开始反方向计数，对于英语来说就是右端的列线和底端的行线。这些线会被记为 <code>-1</code>，然后你可以从这往前数，所以倒数第 2 条线会被记为 <code>-2</code>。值得注意的是最后一条线是指显式定义网格的最后一条线，即由 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 定义的网格，并不把隐式定义网格的加入的行和列纳入考虑。</p>
+我们也可以从行和块结束线开始反方向计数，对于英语来说就是右端的列线和底端的行线。这些线会被记为 `-1`，然后你可以从这往前数，所以倒数第 2 条线会被记为 `-2`。值得注意的是最后一条线是指显式定义网格的最后一条线，即由 `grid-template-columns` 和 `grid-template-rows` 定义的网格，并不把隐式定义网格的加入的行和列纳入考虑。
 
-<p>下面这个例子中，我通过从右端和底端开始定义布局，把之前的例子的布局翻转了</p>
+下面这个示例中，我们通过从右端和底端开始定义布局，把之前的示例的布局翻转了。
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
+```css
+.box1 {
    grid-column-start: -1;
    grid-column-end: -2;
    grid-row-start: -1;
@@ -431,229 +429,178 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
    grid-row-start: -3;
    grid-row-end: -4;
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Counting_backwards', '300', '330') }}</p>
+{{ EmbedLiveSample('反方向计数', '300', '330') }}
 
-<h3 id="使元素跨越整个网格">使元素跨越整个网格</h3>
+### 使元素跨越整个网格
 
-<p>拥有从开始计数和从末尾计数这两种定位方法使得使一个元素跨越整个网格变得很方便：</p>
+拥有从开始计数和从末尾计数这两种定位方法使得使一个元素跨越整个网格变得很方便：
 
-<pre class="brush: css">.item {
-  grid-column: 1 / -1;
+```css
+.item {
+    grid-column: 1 / -1;
 }
-</pre>
+```
 
-<h2 id="间距">间距</h2>
+## 间距
 
-<div id="Gutters_or_Alleys">
-<p>CSS 网格规范加入了用 {{cssxref("grid-column-gap")}}和{{cssxref("grid-row-gap")}}属性定义列间距和行间距的能力。这两个属性的行为和多列布局中的{{cssxref("column-gap")}}属性很像。</p>
+CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}} 属性定义列间距和行间距的能力。这两个属性的行为和多列布局中的 {{cssxref("column-gap")}} 属性很像。
 
-<p>间距只出现在网格轨道与轨道之间，它们并不会出现在网格容器的四周。通过在网格容器上定义这些属性，我们给上例加上了间距：</p>
+> **备注：** 在浏览器首次引入网格属性 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 和 {{cssxref("gap")}} 时，具有 `grid-` 前缀。分别是 `grid-column-gap`、`grid-row-gap` 和 `grid-gap`。
+>
+> 浏览器正在更新它们的渲染引擎，以删除这一前缀，但是携带有前缀的版本将以别名的形式进行维护，使得它们可以被安全地使用。
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+间距只出现在网格轨道与轨道之间，它们并不会出现在网格容器的四周。通过在网格容器上定义这些属性，我们给上例加上了间距：
+
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+```css
+.box1 {
+    grid-column: 1 ;
+    grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+    grid-column: 3 ;
+    grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+    grid-column: 2 ;
+    grid-row: 1 ;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+    grid-column: 2 / 4;
+    grid-row: 3 ;
 }
 .wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-column-gap: 20px;
-     grid-row-gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    column-gap: 20px;
+    row-gap: 1em;
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Gutters_or_Alleys', '300', '350') }}</p>
+{{ EmbedLiveSample('间距', '300', '350') }}
 
-<h3 id="网格间距缩写">网格间距缩写</h3>
+### 网格间距简写
 
-<p>这两个属性可以用{{cssxref("grid-gap")}}简写。如果你只给出一个值，那这个值会同时应用于行间距和列间距。如果你给了两个值，第一个会被用于<code>grid-row-gap，第二个则会被用于</code><code>grid-column-gap</code>.</p>
+这两个属性可以用 {{cssxref("gap")}} 简写。如果你只给出一个值，那这个值会同时应用于行间距和列间距。如果你给了两个值，第一个会被用于 `row-gap`，第二个则会被用于 `column-gap`。
 
-<pre class="brush: css">.wrapper {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
-     grid-gap: 1em 20px;
+```css
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 1em 20px;
 }
-</pre>
+```
 
-<p>从基于线定位的角度来说，间距的行为就像是使基线变得特别宽。所有从这条线开始的东西会从间距结束的地方开始，你并不能定位也不能放任何东西到这个间距的空间中。如果你希望得到行为和轨道行为相似的间距，你当然可以定义轨道来作为间距。</p>
+从基于线定位的角度来说，间距的行为就像是使基线变得特别宽。所有从这条线开始的东西会从间距结束的地方开始，你并不能定位也不能放任何东西到这个间距的空间中。如果你希望得到行为和轨道行为相似的间距，你当然可以定义轨道来作为间距。
 
-<h2 id="使用_span_关键字">使用 <code>span</code> 关键字</h2>
+## 使用 `span` 关键字
 
-<div id="using_the_span_keyword">
-<p>除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法</p>
+除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
     border: 2px solid #f76707;
     border-radius: 5px;
     background-color: #fff4e6;
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(3, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
 }
 
-.wrapper &gt; div {
+.wrapper > div {
     border: 2px solid #ffa94d;
     border-radius: 5px;
     background-color: #ffd8a8;
     padding: 1em;
     color: #d9480f;
 }
-</pre>
+```
+
+```html
+<div class="wrapper">
+   <div class="box1">One</div>
+   <div class="box2">Two</div>
+   <div class="box3">Three</div>
+   <div class="box4">Four</div>
 </div>
+```
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-   &lt;div class="box1"&gt;One&lt;/div&gt;
-   &lt;div class="box2"&gt;Two&lt;/div&gt;
-   &lt;div class="box3"&gt;Three&lt;/div&gt;
-   &lt;div class="box4"&gt;Four&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css">.box1 {
-   grid-column: 1;
-   grid-row: 1 / span 3;
+```css
+.box1 {
+    grid-column: 1;
+    grid-row: 1 / span 3;
 }
 .box2 {
-   grid-column: 3;
-   grid-row: 1 / span 2;
+    grid-column: 3;
+    grid-row: 1 / span 2;
 }
 .box3 {
-   grid-column: 2;
-   grid-row: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / span 2;
-   grid-row: 3;
+    grid-column: 2 / span 2;
+    grid-row: 3;
 }
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('using_the_span_keyword', '300', '330') }}</p>
+{{ EmbedLiveSample('使用 span 关键字', '300', '330') }}
 
-<p>你也可以在 <code>grid-row-start</code>/<code>grid-row-end</code> 和 <code>grid-column-start</code>/<code>grid-column-end</code> 属性中使用 <code>span</code> 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越 3 个线之后。那这个元素就会从 1 号线开始，跨越 3 个线，到 4 号线结束。</p>
+你也可以在 `grid-row-start`/`grid-row-end` 和 `grid-column-start`/`grid-column-end` 属性中使用 `span` 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越 3 条线之后。那这个元素就会从 1 号线开始，跨越 3 条线，到 4 号线结束。
 
-<pre class="brush: css">.box1 {
-    grid-column: 1;
-    grid-row: 1 /  span 3;
+```css
+.box1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 3;
 }
-</pre>
+```
 
-<p>第二个例子中，我们定义了结束行线，然后设置起始线为跨越 3 个线。意味着这个元素会从指定的线往上跨越 3 个线。这个元素会从 4 号线开始，跨越 3 个线到 1 号线。</p>
+第二个例子中，我们定义了结束行线，然后设置起始线为跨越 3 条线。意味着这个元素会从指定的线往上跨越 3 条线。这个元素会从 4 号线开始，跨越 3 条线到 1 号线。
 
-<pre class="brush: css">.box1 {
-    grid-column: 1;
-    grid-row: span 3 / 4;
+```css
+.box1 {
+    grid-column-start: 1;
+    grid-row-start: span 3;
+    grid-row-end: 4;
 }
-</pre>
+```
 
-<p>为了熟悉基于线的定位方式，你可以尝试用网格布置几个列宽不同的元素来实现一些常见布局。记住，如果你没有给所有元素定位，那些没被定位的元素就会按照自动定位规则定位。这么做的结果可能恰好和你的目标一样，但如果一些元素在你预料之外的地方出现，先检查一下你有没有给它定位。</p>
+为了熟悉基于线的定位方式，你可以尝试用网格布置几个列宽不同的元素来实现一些常见布局。记住，如果你没有给所有元素定位，那些没被定位的元素就会按照自动定位规则定位。这么做的结果可能恰好和你的目标一样，但如果一些元素在你预料之外的地方出现，先检查一下你有没有给它定位。
 
-<p>再者，记住你明确定位的元素是可以互相重叠的。有时你能用这点创造一些有趣的效果，但有时也会因为你定位错了线而导致不正确的重叠。<a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> 可以在你学习时给你帮助，特别是当你的网格比较复杂时。</p>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 索引</strong></a></li>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
- <li><a href="#"><strong>指南</strong></a>
-  <ol>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">与其他布局方法的关系</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">基于线的定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">网格模板区域</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">使用命名线布局</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">网格布局中的自动定位</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">网格布局中的盒模型对齐</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">网格、逻辑值和书写模式</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 网格布局和可及性</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 网格布局和渐进增强</a></li>
-   <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>属性</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">grid-column</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">grid-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">grid-row</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
-  </ol>
- </li>
- <li><a href="#"><strong>词汇</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">Grid tracks</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">Grid areas</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">Gutters</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">Grid column</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+再者，记住你明确定位的元素是可以互相重叠的。有时你能用这点创造一些有趣的效果，但有时也会因为你定位错了线而导致不正确的重叠。[Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) 可以在你学习时给你帮助，特别是当你的网格比较复杂时。
