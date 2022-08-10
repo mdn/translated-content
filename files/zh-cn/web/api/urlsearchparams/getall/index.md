@@ -10,44 +10,41 @@ tags:
   - getAll
 translation_of: Web/API/URLSearchParams/getAll
 ---
-<p>{{ApiRef("URL API")}}{{SeeCompatTable}} </p>
+{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-<p>{{domxref("URLSearchParams")}}接口的 getAll() 方法，以数组的形式返回与指定搜索参数对应的所有值。</p>
+{{domxref("URLSearchParams")}}接口的 getAll() 方法，以数组的形式返回与指定搜索参数对应的所有值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">URLSearchParams.getAll(name)</pre>
+```plain
+URLSearchParams.getAll(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>要返回的参数的名称。</dd>
-</dl>
+- name
+  - : 要返回的参数的名称。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("USVString")}}数组。</p>
+一个{{domxref("USVString")}}数组。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre>let url = new URL('https://example.com?foo=1&amp;bar=2');
+```plain
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 //为 foo 参数添加第二个值
 params.append('foo', 4);
 
 console.log(params.getAll('foo')) //输出 ["1","4"].
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.getAll")}}</p>
-</div>
+{{Compat("api.URLSearchParams.getAll")}}

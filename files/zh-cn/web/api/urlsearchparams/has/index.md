@@ -3,41 +3,38 @@ title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
 translation_of: Web/API/URLSearchParams/has
 ---
-<p>{{ApiRef("URL API")}}{{SeeCompatTable}} </p>
+{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-<p>{{domxref("URLSearchParams")}} 的<strong>has() </strong>方法返回一个 {{jsxref("Boolean")}} 表示一个指定的键名对应的值是否存在。</p>
+{{domxref("URLSearchParams")}} 的**has()** 方法返回一个 {{jsxref("Boolean")}} 表示一个指定的键名对应的值是否存在。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>hasName</em> = URLSearchParams.has(<em>name</em>)</pre>
+```plain
+var hasName = URLSearchParams.has(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>键名</dt>
- <dd>要查找的参数的键名。</dd>
-</dl>
+- 键名
+  - : 要查找的参数的键名。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{jsxref("Boolean")}}.</p>
+一个 {{jsxref("Boolean")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 params.has('bar') === true; //true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.URLSearchParams.has")}}</p>
-</div>
+{{Compat("api.URLSearchParams.has")}}

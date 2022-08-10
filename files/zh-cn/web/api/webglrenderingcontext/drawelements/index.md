@@ -8,76 +8,70 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLRenderingContext/drawElements
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>该 <strong><code>WebGLRenderingContext.drawElements()</code></strong> 方法 在 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 从数组数据渲染图元。</p>
+该 **`WebGLRenderingContext.drawElements()`** 方法 在 [WebGL API](/en-US/docs/Web/API/WebGL_API) 从数组数据渲染图元。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">void <var>gl</var>.drawElements(<var>mode</var>, <var>count</var>, <var>type</var>, <var>offset</var>);
-</pre>
+```plain
+void gl.drawElements(mode, count, type, offset);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>mode</code></dt>
- <dd>{{domxref("枚举类型")}} 指定要渲染的图元类型。可以是以下类型：
- <ul>
-  <li><code>gl.POINTS</code>: 画单独的点。</li>
-  <li><code>gl.LINE_STRIP</code>: 画一条直线到下一个顶点。</li>
-  <li><code>gl.LINE_LOOP</code>: 绘制一条直线到下一个顶点，并将最后一个顶点返回到第一个顶点。</li>
-  <li><code>gl.LINES</code>: 在一对顶点之间画一条线。</li>
-  <li><code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code></li>
-  <li><code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code></li>
-  <li><code>gl.TRIANGLES</code>: 为一组三个顶点绘制一个三角形。</li>
- </ul>
- </dd>
- <dt>count</dt>
- <dd>{{domxref("整数型")}} 指定要渲染的元素数量。</dd>
- <dt>type</dt>
- <dd>{{domxref("枚举类型")}} 指定元素数组缓冲区中的值的类型。可能的值是：
- <ul>
-  <li><code>gl.UNSIGNED_BYTE</code></li>
-  <li><code>gl.UNSIGNED_SHORT</code></li>
-  <li>当使用 {{domxref("OES_element_index_uint")}} 扩展时：
-   <ul>
-    <li><code>gl.UNSIGNED_INT</code></li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>offset</dt>
- <dd> {{domxref("字节单位")}} 指定元素数组缓冲区中的偏移量。必须是给定类型大小的有效倍数。</dd>
-</dl>
+- `mode`
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("枚举类型")}} 指定要渲染的图元类型。可以是以下类型：
 
-<p>None.</p>
+    - `gl.POINTS`: 画单独的点。
+    - `gl.LINE_STRIP`: 画一条直线到下一个顶点。
+    - `gl.LINE_LOOP`: 绘制一条直线到下一个顶点，并将最后一个顶点返回到第一个顶点。
+    - `gl.LINES`: 在一对顶点之间画一条线。
+    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
+    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
+    - `gl.TRIANGLES`: 为一组三个顶点绘制一个三角形。
 
-<h3 id="异常">异常</h3>
+- count
+  - : {{domxref("整数型")}} 指定要渲染的元素数量。
+- type
 
-<ul>
- <li>如果 <code>mode</code> 不是正确值， <code>gl.INVALID_ENUM</code> 将会抛出错误异常。</li>
- <li>如果<code>offset</code> 不是给定类型大小的有效倍数，<code>gl.INVALID_OPERATION</code> 将会抛出错误异常。</li>
- <li>如果 <code>count</code> 是负的， <code>gl.INVALID_VALUE</code> 将会抛出错误异常。</li>
-</ul>
+  - : {{domxref("枚举类型")}} 指定元素数组缓冲区中的值的类型。可能的值是：
 
-<h2 id="例子">例子</h2>
+    - `gl.UNSIGNED_BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - 当使用 {{domxref("OES_element_index_uint")}} 扩展时：
 
-<pre class="brush: js notranslate">gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_BYTE, 0);
-</pre>
+      - `gl.UNSIGNED_INT`
 
-<h2 id="规范">规范</h2>
+- offset
+  - : {{domxref("字节单位")}} 指定元素数组缓冲区中的偏移量。必须是给定类型大小的有效倍数。
+
+### 返回值
+
+None.
+
+### 异常
+
+- 如果 `mode` 不是正确值， `gl.INVALID_ENUM` 将会抛出错误异常。
+- 如果`offset` 不是给定类型大小的有效倍数，`gl.INVALID_OPERATION` 将会抛出错误异常。
+- 如果 `count` 是负的， `gl.INVALID_VALUE` 将会抛出错误异常。
+
+## 例子
+
+```js
+gl.drawElements(gl.POINTS, 8, gl.UNSIGNED_BYTE, 0);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关参考">相关参考</h2>
+## 相关参考
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.drawArrays()")}}</li>
- <li>{{domxref("OES_element_index_uint")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxref("OES_element_index_uint")}}

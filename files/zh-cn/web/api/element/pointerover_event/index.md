@@ -11,28 +11,28 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onpointerover
 original_slug: Web/API/GlobalEventHandlers/onpointerover
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointerover")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointerover")}} event.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>overHandler</var> = <var>targetElement</var>.onpointerover;
-</pre>
+```plain
+var overHandler = targetElement.onpointerover;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>overHandler</code></dt>
- <dd> pointerover 事件处理器返回目标元素的<code>overHandler.</code></dd>
-</dl>
+- `overHandler`
+  - : pointerover 事件处理器返回目标元素的`overHandler.`
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<p>这里使用两种方式展示了如何去使用 <em>onpointerover</em> 去设置一个元素的 <em>pointerover </em>事件处理器</p>
+这里使用两种方式展示了如何去使用 _onpointerover_ 去设置一个元素的 _pointerover_ 事件处理器
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function overHandler(ev) {
  // Process the pointerover event
 }
@@ -40,26 +40,22 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointerover = overHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" onpointerover="overHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" onpointerover="overHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.GlobalEventHandlers.onpointerover")}}
 
+## 参见
 
-<p>{{Compat("api.GlobalEventHandlers.onpointerover")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{event("pointerover")}}</li>
-</ul>
+- {{event("pointerover")}}

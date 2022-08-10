@@ -3,40 +3,36 @@ title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 translation_of: Web/API/MouseEvent/getModifierState
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.getModifierState()</code></strong> method returns the current state of the specified modifier key: <code>true</code> if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
+The **`MouseEvent.getModifierState()`** method returns the current state of the specified modifier key: `true` if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, `false`.
 
-<p>See the document of {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for details.</p>
+See the document of {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for details.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <code><em>active</em> =​ <em>event</em>.getModifierState(<em>keyArg</em>);</code></pre>
+```plain
+var active =​ event.getModifierState(keyArg);
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{jsxref("Boolean")}}</p>
+A {{jsxref("Boolean")}}
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>keyArg</code></em></dt>
- <dd>A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or <code>"Accel"</code>. This is case-sensitive.</dd>
-</dl>
+- _`keyArg`_
+  - : A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`. This is case-sensitive.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MouseEvent.getModifierState")}}
 
+## See also
 
-<p>{{Compat("api.MouseEvent.getModifierState")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("MouseEvent")}} this method belongs to.</li>
- <li>{{domxref("KeyboardEvent.getModifierState")}}</li>
-</ul>
+- The {{domxref("MouseEvent")}} this method belongs to.
+- {{domxref("KeyboardEvent.getModifierState")}}

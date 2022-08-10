@@ -9,60 +9,54 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensible
 ---
-<div>{{JSRef}}<br>
-<strong>handler.isExtensible() </strong>方法用于拦截对对象的 Object.isExtensible()。</div>
+{{JSRef}}
+**handler.isExtensible()** 方法用于拦截对对象的 Object.isExtensible()。
 
-<div>
-<p>{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}</p>
-</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   isExtensible: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>下列参数将会被传递给 <code>isExtensible</code>方法。 this 绑定在 handler 对象上。</p>
+下列参数将会被传递给 `isExtensible`方法。 this 绑定在 handler 对象上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
-</dl>
+- `target`
+  - : 目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>isExtensible</code>方法必须返回一个 Boolean 值或可转换成 Boolean 的值。</p>
+`isExtensible`方法必须返回一个 Boolean 值或可转换成 Boolean 的值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。</p>
+handler.isExtensible() 用于拦截对对象的 Object.isExtensible()。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该方法会拦截目标对象的以下操作：</p>
+该方法会拦截目标对象的以下操作：
 
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违背了以下的约束，proxy 会抛出 TypeError:</p>
+如果违背了以下的约束，proxy 会抛出 TypeError:
 
-<ul>
- <li><code>Object.isExtensible(proxy)</code> 必须同 <code>Object.isExtensible(target)</code> 返回相同值。</li>
-</ul>
+- `Object.isExtensible(proxy)` 必须同 `Object.isExtensible(target)` 返回相同值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示{{jsxref("Object.isExtensible()")}}.</p>
+以下代码演示{{jsxref("Object.isExtensible()")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   isExtensible: function(target) {
     console.log('called');
     return true; // 也可以 return 1; 等表示为 true 的值
@@ -71,32 +65,31 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensibl
 
 console.log(Object.isExtensible(p)); // "called"
                                      // true
-</pre>
+```
 
-<p>以下代码演示违反约束的情况。</p>
+以下代码演示违反约束的情况。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   isExtensible: function(target) {
     return false; // return 0; return NaN 等都会报错
   }
 });
 
 Object.isExtensible(p); // TypeError is thrown
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}

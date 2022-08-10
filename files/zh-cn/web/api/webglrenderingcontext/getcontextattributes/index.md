@@ -3,35 +3,40 @@ title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 translation_of: Web/API/WebGLRenderingContext/getContextAttributes
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code><strong>WebGLRenderingContext.getContextAttributes()</strong></code> 方法返回一个包含实际上下文参数的 <code>WebGLContextAttributes</code> 对象。如果上下文丢失，可能返回 {{jsxref("null")}}。</p>
+**`WebGLRenderingContext.getContextAttributes()`** 方法返回一个包含实际上下文参数的 `WebGLContextAttributes` 对象。如果上下文丢失，可能返回 {{jsxref("null")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>gl</em></var>.getContextAttributes();</pre>
+```plain
+gl.getContextAttributes();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个包含实际上下文参数的 <code>WebGLContextAttributes</code> 的对象，或 {{jsxref("null")}}（如果上下文丢失）。</p>
+一个包含实际上下文参数的 `WebGLContextAttributes` 的对象，或 {{jsxref("null")}}（如果上下文丢失）。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<p>给定 {{HTMLElement("canvas")}} 元素</p>
+给定 {{HTMLElement("canvas")}} 元素
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>和给定 WebGL 上下文</p>
+和给定 WebGL 上下文
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.getContextAttributes();
-</pre>
+```
 
-<p><code>getContextAttributes</code> 方法返回描述在此上下文中设置的属性的对象，例如：</p>
+`getContextAttributes` 方法返回描述在此上下文中设置的属性的对象，例如：
 
-<pre class="brush: js">{
+```js
+{
   alpha: true,
   antialias: true,
   depth: true,
@@ -39,26 +44,27 @@ gl.getContextAttributes();
   premultipliedAlpha: true,
   preserveDrawingBuffer: false,
   stencil: false
-}</pre>
+}
+```
 
-<p>上下文的属性可以在用 {{domxref("HTMLCanvasElement.getContext()")}} 方法创建上下文时设置：</p>
+上下文的属性可以在用 {{domxref("HTMLCanvasElement.getContext()")}} 方法创建上下文时设置：
 
-<pre class="brush: js">canvas.getContext('webgl',
+```js
+canvas.getContext('webgl',
                  { antialias: false,
-                   depth: false });</pre>
+                   depth: false });
+```
 
-<p>有关各个属性的更多信息，请参阅 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}}。</p>
+有关各个属性的更多信息，请参阅 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.getContextAttributes")}}</p>
+{{Compat("api.WebGLRenderingContext.getContextAttributes")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{domxref("WebGLRenderingContext")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext")}}

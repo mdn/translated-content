@@ -1,5 +1,5 @@
 ---
-title: 'get Set[@@species]'
+title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 tags:
   - ECMAScript2015
@@ -7,42 +7,44 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Set[@@species]</strong></code> 访问器属性返回<code>Set</code>的构造函数。</p>
+**`Set[@@species]`** 访问器属性返回`Set`的构造函数。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>species 访问属性返回 <code>Set</code> 对象的默认构造函数。子构造函数或许会重载这个属性以至改变构造函数的赋值。</p>
+species 访问属性返回 `Set` 对象的默认构造函数。子构造函数或许会重载这个属性以至改变构造函数的赋值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="普通对象中的_Species">普通对象中的 Species</h3>
+### 普通对象中的 Species
 
-<p>species 属性返回默认的构造函数，它是<code>Set</code> 对象的构造函数：</p>
+species 属性返回默认的构造函数，它是`Set` 对象的构造函数：
 
-<pre class="brush: js">Set[Symbol.species]; // function Set()</pre>
+```js
+Set[Symbol.species]; // function Set()
+```
 
-<h3 id="派生对象中的_Species">派生对象中的 Species</h3>
+### 派生对象中的 Species
 
-<p>在一个派生集合对象中 (比如你自定义的<code>MySet</code>集合),  <code>MySet</code> 的 species 属性 是 <code>MySet</code> 构造函数。又或者，你想要重写它，让它能在你派生的类方法中能返回父级<code>Set</code> 对象：</p>
+在一个派生集合对象中 (比如你自定义的`MySet`集合), `MySet` 的 species 属性 是 `MySet` 构造函数。又或者，你想要重写它，让它能在你派生的类方法中能返回父级`Set` 对象：
 
-<pre class="brush: js">class MySet extends Set {
+```js
+class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
   static get [Symbol.species]() { return Set; }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Symbol.species")}}

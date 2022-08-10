@@ -9,53 +9,51 @@ tags:
   - 媒体特性
 translation_of: Web/CSS/@media/any-hover
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong><code>any-hover</code></strong> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">媒体特性</a> 可以用来测试是否有<em>任意</em>可用的输入机制可以在元素上 hover。</p>
+**`any-hover`** [CSS](/en-US/docs/CSS) [媒体特性](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试是否有*任意*可用的输入机制可以在元素上 hover。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>any-hover</code> 使用下面列表的值作为关键字。</p>
+`any-hover` 使用下面列表的值作为关键字。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>可用的输入机制里没有机制可以方便地 hover，或者不存在定点输入机制。</dd>
- <dt><code>hover</code></dt>
- <dd>一个或多个可用的输入机制可以方便地在元素上 hover。</dd>
-</dl>
+- `none`
+  - : 可用的输入机制里没有机制可以方便地 hover，或者不存在定点输入机制。
+- `hover`
+  - : 一个或多个可用的输入机制可以方便地在元素上 hover。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="测试是否有输入机制可以_hover">测试是否有输入机制可以 hover</h3>
+### 测试是否有输入机制可以 hover
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">@media (any-hover: hover) {
+```css
+@media (any-hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}</p>
+{{EmbedLiveSample("Testing_whether_input_methods_can_hover")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.media.any-hover")}}
 
+## 更多资料
 
-<p>{{Compat("css.at-rules.media.any-hover")}}</p>
-
-<h2 id="更多资料">更多资料</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/hover">the <code>hover</code> media feature</a></li>
-</ul>
+- [the `hover` media feature](/en-US/docs/Web/CSS/@media/hover)

@@ -12,53 +12,48 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 browser-compat: javascript.builtins.Map.delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>delete()</code> 方法用于移除 <code>Map</code> 对象中指定的元素。</p>
+`delete()` 方法用于移除 `Map` 对象中指定的元素。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
+## 语法
 
+```js
+myMap.delete(key);
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="brush: js">myMap.delete(key);</pre>
+- key
+  - : 必须。从 `Map` 对象中移除的元素的键。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>key</dt>
- <dd>必须。从 <code>Map</code> 对象中移除的元素的键。</dd>
-</dl>
+- Boolean
+  - : 如果 `Map` 对象中存在该元素，则移除它并返回* `true`*；否则如果该元素不存在则返回 `false`。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<dl>
- <dt>Boolean</dt>
- <dd>如果 <code>Map</code> 对象中存在该元素，则移除它并返回<em> <code>true</code></em>；否则如果该元素不存在则返回 <code><em>false</em></code>。</dd>
-</dl>
+### 使用 `delete` 方法
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_delete_方法">使用 <code>delete</code> 方法</h3>
-
-<pre class="brush: js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("bar", "foo");
 
 myMap.delete("bar"); // 返回 true。成功地移除元素
 myMap.has("bar");    // 返回 false。"bar" 元素将不再存在于 Map 实例中
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

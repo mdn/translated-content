@@ -3,33 +3,33 @@ title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 translation_of: Web/API/CacheStorage/has
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>{{domxref("CacheStorage")}} 对象的 <strong><code>has()</code></strong>方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 <code>cacheName</code>  时被处理为  <code>true</code> 。</p>
+{{domxref("CacheStorage")}} 对象的 **`has()`**方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 `cacheName` 时被处理为 `true` 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">caches.has(<em>cacheName</em>).then(function(<em>boolean</em>) {
+```plain
+caches.has(cacheName).then(function(boolean) {
   // true: 缓存存在
 });
-</pre>
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Promise")}} 对象，缓存存在时 resolve 的布尔值为 <code>true</code> 否则为 <code>false</code> 。</p>
+返回一个 {{jsxref("Promise")}} 对象，缓存存在时 resolve 的布尔值为 `true` 否则为 `false` 。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>cacheName</dt>
- <dd>一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.</dd>
-</dl>
+- cacheName
+  - : 一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的例子中首先检测是否有名为 v1 的缓存存在， 如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。</p>
+在下面的例子中首先检测是否有名为 v1 的缓存存在， 如果存在我们会向其添加内容，，如果不存在我们会做些对应的初始化动作。
 
-<pre class="brush: js">caches.has('v1').then(function(hasCache) {
+```js
+caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
     someCacheSetupfunction();
   } else {
@@ -39,20 +39,19 @@ translation_of: Web/API/CacheStorage/has
   }
 }).catch(function() {
   // 处理异常
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CacheStorage.has")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

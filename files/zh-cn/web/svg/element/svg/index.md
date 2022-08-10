@@ -7,85 +7,81 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/svg
 ---
-<ul>
- <li>如果 svg 不是根元素，<code>svg</code> 元素可以用于在当前文档（比如说，一个 HTML 文档）内嵌套一个独立的 svg 片段 。 这个独立片段拥有独立的视口和坐标系统。</li>
-</ul>
+- 如果 svg 不是根元素，`svg` 元素可以用于在当前文档（比如说，一个 HTML 文档）内嵌套一个独立的 svg 片段 。 这个独立片段拥有独立的视口和坐标系统。
 
-<dl>
-</dl>
+<!---->
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>思考下下面的 svg 图片（代表意大利国旗）：</p>
+思考下下面的 svg 图片（代表意大利国旗）：
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2"&gt;
+```xml
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="150" height="100" viewBox="0 0 3 2">
 
-  &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
-  &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
-  &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
-&lt;/svg&gt;</pre>
+  <rect width="1" height="2" x="0" fill="#008d46" />
+  <rect width="1" height="2" x="1" fill="#ffffff" />
+  <rect width="1" height="2" x="2" fill="#d2232c" />
+</svg>
+```
 
-<p>它可以包含在 html5 文档里，如下所示：</p>
+它可以包含在 html5 文档里，如下所示：
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;HTML/SVG Example&lt;/title&gt;
-&lt;/head&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML/SVG Example</title>
+</head>
 
-&lt;body&gt;
+<body>
 
-  &lt;svg width="150" height="100" viewBox="0 0 3 2"&gt;
-    &lt;rect width="1" height="2" x="0" fill="#008d46" /&gt;
-    &lt;rect width="1" height="2" x="1" fill="#ffffff" /&gt;
-    &lt;rect width="1" height="2" x="2" fill="#d2232c" /&gt;
-  &lt;/svg&gt;
+  <svg width="150" height="100" viewBox="0 0 3 2">
+    <rect width="1" height="2" x="0" fill="#008d46" />
+    <rect width="1" height="2" x="1" fill="#ffffff" />
+    <rect width="1" height="2" x="2" fill="#d2232c" />
+  </svg>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
+## 属性
 
-<h2 id="属性">属性</h2>
+### 全局属性
 
-<h3 id="全局属性">全局属性</h3>
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
+- [文档事件属性](/zh-CN/docs/SVG/Attribute#DocumentEvent) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<ul>
- <li><a href="/zh-CN/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/zh-CN/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/zh-CN/docs/SVG/Attribute#DocumentEvent">文档事件属性</a> »</li>
- <li><a href="/zh-CN/docs/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/zh-CN/docs/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+### 专有属性
 
-<h3 id="专有属性">专有属性</h3>
+- {{ SVGAttr("version") }}
+- {{ SVGAttr("baseProfile") }}
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("preserveAspectRatio") }}
+- {{ SVGAttr("contentScriptType") }}
+- {{ SVGAttr("contentStyleType") }}
+- {{ SVGAttr("viewBox") }}
 
-<ul>
- <li>{{ SVGAttr("version") }}</li>
- <li>{{ SVGAttr("baseProfile") }}</li>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
- <li>{{ SVGAttr("contentScriptType") }}</li>
- <li>{{ SVGAttr("contentStyleType") }}</li>
- <li>{{ SVGAttr("viewBox") }}</li>
-</ul>
+## DOM 接口
 
-<h2 id="DOM_接口">DOM 接口</h2>
+该元素实现了[`SVGSVGElement`](/en-US/docs/DOM/SVGSVGElement) 接口。
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGSVGElement">SVGSVGElement</a></code> 接口。</p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.svg")}}

@@ -1,17 +1,18 @@
 ---
-title: 'get TypedArray[@@species]'
+title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>TypedArray[@@species]</strong></code> 访问器属性返回<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a>的构造器。</p>
+**`TypedArray[@@species]`** 访问器属性返回[类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)的构造器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>TypedArray</em>[Symbol.species]
+```plain
+TypedArray[Symbol.species]
 
-其中<em>TypedArray</em>是下列类型之一：
+其中TypedArray是下列类型之一：
 
 Int8Array
 Uint8Array
@@ -22,39 +23,40 @@ Int32Array
 Uint32Array
 Float32Array
 Float64Array
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>species</code> 访问器属性返回<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a>对象的构造器。 子类的构造器可能会覆盖它来修改构造器的赋值。</p>
+`species` 访问器属性返回[类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象的构造器。 子类的构造器可能会覆盖它来修改构造器的赋值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><code>species</code> 属性返回默认的构造器函数，对于给定的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a>对象，它是类型化数组构造器之一：</p>
+`species` 属性返回默认的构造器函数，对于给定的[类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象，它是类型化数组构造器之一：
 
-<pre class="brush: js">Int8Array[Symbol.species];    // function Int8Array()
+```js
+Int8Array[Symbol.species];    // function Int8Array()
 Uint8Array[Symbol.species];   // function Uint8Array()
 Float32Array[Symbol.species]; // function Float32Array()
-</pre>
+```
 
-<p>在派生的集合对象中（也就是你自己定义的类型化数组<code>MyTypedArray</code>）， <code>MyTypedArray</code> 的 species 是 <code>MyTypedArray</code> 构造器。但是，你可能希望覆盖它，以便在你的派生类方法中返回<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a>的基类对象：</p>
+在派生的集合对象中（也就是你自己定义的类型化数组`MyTypedArray`）， `MyTypedArray` 的 species 是 `MyTypedArray` 构造器。但是，你可能希望覆盖它，以便在你的派生类方法中返回[类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)的基类对象：
 
-<pre class="brush: js">class MyTypedArray extends Uint8Array {
+```js
+class MyTypedArray extends Uint8Array {
   // 将 MyTypedArray species 覆盖为 Uint8Array 基类构造器
   static get [Symbol.species]() { return Uint8Array; }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}
+- {{jsxref("Symbol.species")}}

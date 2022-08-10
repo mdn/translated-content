@@ -3,30 +3,31 @@ title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>sort()</strong></code>方法<em>原地</em>排序类型化数组的元素，并且返回类型化数组。这个方法的算法和{{jsxref("Array.prototype.sort()")}}<em>相同。</em> <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+**`sort()`**方法*原地*排序类型化数组的元素，并且返回类型化数组。这个方法的算法和{{jsxref("Array.prototype.sort()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarray</var>.sort([<var>compareFunction</var>])</pre>
+```plain
+typedarray.sort([compareFunction])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>指定定义排序顺序的函数</dd>
-</dl>
+- `compareFunction` {{optional_inline}}
+  - : 指定定义排序顺序的函数
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>排序后的类型化数组。</p>
+排序后的类型化数组。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>更多示例请参考 {{jsxref("Array.prototype.sort()")}} 方法。</p>
+更多示例请参考 {{jsxref("Array.prototype.sort()")}} 方法。
 
-<pre class="brush: js">var numbers = new Uint8Array([40, 1, 5, 200]);
+```js
+var numbers = new Uint8Array([40, 1, 5, 200]);
 numbers.sort();
 // Uint8Array [ 1, 5, 40, 200 ]
 // 在这里，按数值排序数值时，
@@ -43,18 +44,16 @@ function compareNumbers(a, b) {
 
 numbers.sort(compareNumbers);
 // [ 1, 5, 40, 200 ]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.sort()")}}

@@ -3,32 +3,34 @@ title: window.opener
 slug: Web/API/Window/opener
 translation_of: Web/API/Window/opener
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>返回打开当前窗口的那个窗口的引用，例如：在 window A 中打开了 window B，B.opener 返回 A.</p>
+返回打开当前窗口的那个窗口的引用，例如：在 window A 中打开了 window B，B.opener 返回 A.
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval"><em>var objRef</em> = window.opener;
-</pre>
+```plain
+var objRef = window.opener;
+```
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: js"> if (window.opener != indexWin) {
+```js
+ if (window.opener != indexWin) {
      referToTop(window.opener);
  }
-</pre>
+```
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>如果当前窗口是由另一个窗口打开的，<strong>window.opener</strong>保留了那个窗口的引用。如果当前窗口不是由其他窗口打开的，则该属性返回 null.</p>
+如果当前窗口是由另一个窗口打开的，**window\.opener**保留了那个窗口的引用。如果当前窗口不是由其他窗口打开的，则该属性返回 null.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

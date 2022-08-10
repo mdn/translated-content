@@ -3,48 +3,45 @@ title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>requestAnimationFrame()</strong></code> method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the <code>VRDisplay</code> presentation is rendered:</p>
+The **`requestAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered:
 
-<ul>
- <li>When the <code>VRDisplay</code> is not presenting a scene, this is functionally equivalent to {{domxref("Window.requestAnimationFrame")}}.</li>
- <li>When the VRDisplay is presenting, the callback is called at the native refresh rate of the <code>VRDisplay</code>.</li>
-</ul>
+- When the `VRDisplay` is not presenting a scene, this is functionally equivalent to {{domxref("Window.requestAnimationFrame")}}.
+- When the VRDisplay is presenting, the callback is called at the native refresh rate of the `VRDisplay`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var handle = vrDisplayInstance.requestAnimationFrame(<em>callback</em>);
-</pre>
+```js
+var handle = vrDisplayInstance.requestAnimationFrame(callback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>callback</dt>
- <dd>A callback function that will be called every time a new frame of the <code>VRDisplay</code> presentation is rendered.</dd>
-</dl>
+- callback
+  - : A callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A long representing the handle of the <code>requestAnimationFrame()</code> call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.</p>
+A long representing the handle of the `requestAnimationFrame()` call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>TBD.</pre>
+```plain
+TBD.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>该 API 在旧的 <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>（已被 <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a> 取代）中定义。它不再有望成为标准。</p>
+该 API 在旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/)（已被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代）中定义。它不再有望成为标准。
 
-<p>在所有浏览器都实现新的 <a href="/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR API</a> 之前，建议使用框架（如：<a href="https://aframe.io/">A-Frame</a>、<a href="https://www.babylonjs.com/">Babylon.js</a> 或 <a href="https://threejs.org/">Three.js</a>）或 <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a> 来开发适用于所有浏览器的 WebXR 应用程序。<a href="https://developer.oculus.com/documentation/web/port-vr-xr/">[1]</a></p>
+在所有浏览器都实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，建议使用框架（如：[A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发适用于所有浏览器的 WebXR 应用程序。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.VRDisplay.requestAnimationFrame")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.

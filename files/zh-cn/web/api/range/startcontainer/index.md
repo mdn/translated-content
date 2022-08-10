@@ -3,37 +3,31 @@ title: Range.startContainer
 slug: Web/API/Range/startContainer
 translation_of: Web/API/Range/startContainer
 ---
-<p> </p>
+Range.startContainer 是只读属性，返回 Range 开始的节点。要更改节点的起始位置，请使用 Range.setStart() 方法。
 
-<p> </p>
+## Syntax
 
-<p>Range.startContainer 是只读属性，返回 Range 开始的节点。要更改节点的起始位置，请使用 Range.setStart() 方法。</p>
+```plain
+startRangeNode = range.startContainer;
+```
 
-<p> </p>
+## Example
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="syntaxbox"><em>startRangeNode</em> = <em>range</em>.startContainer;
-</pre>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 startRangeNode = range.startContainer;
-</pre>
+```
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Range.startContainer")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

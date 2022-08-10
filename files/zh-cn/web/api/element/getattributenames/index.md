@@ -5,31 +5,33 @@ tags:
   - getAttributeNames
 translation_of: Web/API/Element/getAttributeNames
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>Element.getAttributeNames()</code> 返回一个{{jsxref("Array")}}，该数组包含指定元素（Element）的所有属性名称，如果该元素不包含任何属性，则返回一个空数组。</p>
+`Element.getAttributeNames()` 返回一个{{jsxref("Array")}}，该数组包含指定元素（Element）的所有属性名称，如果该元素不包含任何属性，则返回一个空数组。
 
-<p>将 <code>getAttributeNames()</code> 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用， 是一种有效替代 {{domxref("Element.attributes")}} 的使用方法。</p>
+将 `getAttributeNames()` 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用， 是一种有效替代 {{domxref("Element.attributes")}} 的使用方法。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>let attributeNames</em> = element.getAttributeNames();
-</pre>
+```plain
+let attributeNames = element.getAttributeNames();
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:js">// 遍历 elements 的元素
+```js
+// 遍历 elements 的元素
 for(let name of element.getAttributeNames())
 {
 	let value = element.getAttribute(name);
 	console.log(name, value);
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.getAttributeNames")}}

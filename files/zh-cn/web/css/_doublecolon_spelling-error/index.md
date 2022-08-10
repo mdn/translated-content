@@ -1,49 +1,45 @@
 ---
 title: '::spelling-error'
-slug: 'Web/CSS/::spelling-error'
-translation_of: 'Web/CSS/::spelling-error'
+slug: Web/CSS/::spelling-error
+translation_of: Web/CSS/::spelling-error
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>::spelling-error</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en/CSS/Pseudo-elements">伪元素</a> 表示浏览器标记为不正确拼写的文本段。</p>
+**`::spelling-error`** [CSS](/en-US/docs/Web/CSS) [伪元素](/en/CSS/Pseudo-elements) 表示浏览器标记为不正确拼写的文本段。
 
-<pre class="brush: css no-line-numbers">::spelling-error {
+```css
+::spelling-error {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="可用的属性">可用的属性</h2>
+## 可用的属性
 
-<p>只有一小部分 CSS 属性可用于 <code>::spelling-error</code> 伪元素选择器：</p>
+只有一小部分 CSS 属性可用于 `::spelling-error` 伪元素选择器：
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("cursor")}}</li>
- <li>{{cssxref("caret-color")}}</li>
- <li>{{cssxref("outline")}} and its longhands</li>
- <li>{{cssxref("text-decoration")}} and its associated properties</li>
- <li>{{cssxref("text-emphasis-color")}}</li>
- <li>{{cssxref("text-shadow")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("background-color")}}
+- {{cssxref("cursor")}}
+- {{cssxref("caret-color")}}
+- {{cssxref("outline")}} and its longhands
+- {{cssxref("text-decoration")}} and its associated properties
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-shadow")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">::spelling-error</pre>
+```plain
+::spelling-error
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.spelling-error")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.spelling-error")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref("::grammar-error")}}</li>
-</ul>
+- {{cssxref("::grammar-error")}}

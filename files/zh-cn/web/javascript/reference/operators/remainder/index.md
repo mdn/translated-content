@@ -9,65 +9,62 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Remainder
 original_slug: Web/JavaScript/Reference/Operators/取余
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>当一个操作数除以第二个操作数时，取余运算符（％）返回剩余的余数。它与被除数的符号保持一致。</p>
+当一个操作数除以第二个操作数时，取余运算符（％）返回剩余的余数。它与被除数的符号保持一致。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
+## 语法
 
+```plain
+Operator: var1 % var2
+```
 
+## 示例
 
+### 被除数为正数
 
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox"><strong>Operator:</strong> <var>var1</var> % <var>var2</var>
-</pre>
-
-<h2 id="示例">示例</h2>
-
-<h3 id="被除数为正数">被除数为正数</h3>
-
-<pre class="brush: js"> 12 % 5  //  2
+```js
+ 12 % 5  //  2
  1 % -2 //  1
  1 % 2  //  1
  2 % 3  //  2
 5.5 % 2 // 1.5
-</pre>
+```
 
-<h3 id="被除数为负数">被除数为负数</h3>
+### 被除数为负数
 
-<pre class="brush: js">-12 % 5 // -2
+```js
+-12 % 5 // -2
 -1 % 2  // -1
--4 % 2  // -0</pre>
+-4 % 2  // -0
+```
 
-<h3 id="被除数为NaN">被除数为 NaN</h3>
+### 被除数为 NaN
 
-<pre class="brush: js">NaN % 2 // NaN</pre>
+```js
+NaN % 2 // NaN
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
+<!---->
 
-<h2 id="See_also">相关链接</h2>
-
-<ul>
-</ul>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

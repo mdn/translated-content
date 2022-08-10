@@ -1,55 +1,51 @@
 ---
 title: ':valid'
-slug: 'Web/CSS/:valid'
+slug: Web/CSS/:valid
 tags:
   - CSS
   - Layout
   - Pesudo-class
   - Reference
   - Web
-translation_of: 'Web/CSS/:valid'
+translation_of: Web/CSS/:valid
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p><code>:valid</code> CSS <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>表示内容<a href="/zh-CN/docs/Web/HTML/HTML5/Constraint_validation">验证</a>正确的{{ HTMLElement("input") }} 或其他 {{ HTMLElement("form") }} 元素。这能简单地将校验字段展示为一种能让用户辨别出其输入数据的正确性的样式。</p>
+`:valid` CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示内容[验证](/zh-CN/docs/Web/HTML/HTML5/Constraint_validation)正确的{{ HTMLElement("input") }} 或其他 {{ HTMLElement("form") }} 元素。这能简单地将校验字段展示为一种能让用户辨别出其输入数据的正确性的样式。
 
-<pre class="brush: css no-line-numbers">/* Selects any valid &lt;input&gt; */
+```css
+/* Selects any valid <input> */
 input:valid {
   background-color: powderblue;
-}</pre>
+}
+```
 
-<p>该伪类对于高亮正确字段是很有用的。</p>
+该伪类对于高亮正确字段是很有用的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>参见 {{cssxref(":invalid")}}。</p>
+参见 {{cssxref(":invalid")}}。
 
-<p> </p>
+## Accessibility concerns
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+绿色常用于表示有效输入。但某些色盲的人将无法确定输入的状态（颜色），除非使用不依赖于颜色来传达意义的附加指示器。 通常，指示器使用描述性文本和（或）图标。
 
-<p>绿色常用于表示有效输入。但某些色盲的人将无法确定输入的状态（颜色），除非使用不依赖于颜色来传达意义的附加指示器。 通常，指示器使用描述性文本和（或）图标。</p>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">Understanding Success Criterion 1.4.1  | W3C Understanding WCAG 2.0</a></li>
-</ul>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
-</ul>
+- {{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}
+- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)

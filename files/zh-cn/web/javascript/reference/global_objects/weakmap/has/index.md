@@ -3,51 +3,48 @@ title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <code><strong>has()</strong></code> 方法根据 WeakMap 对象的元素中是否存在 key 键返回一个 boolean 值。</p>
+**`has()`** 方法根据 WeakMap 对象的元素中是否存在 key 键返回一个 boolean 值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>wm</em>.has(key);</code></pre>
+```plain
+wm.has(key);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>key</dt>
- <dd>必须的。用来检测 WeakMap 对象中是否存在元素的键为 key。</dd>
-</dl>
+- key
+  - : 必须的。用来检测 WeakMap 对象中是否存在元素的键为 key。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
- <dt>Boolean</dt>
- <dd>如果指定的 key 存在于某个元素中则返回 true，否则返回 flase。</dd>
-</dl>
+- Boolean
+  - : 如果指定的 key 存在于某个元素中则返回 true，否则返回 flase。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用_has_方法">使用 <code>has</code> 方法</h3>
+### 使用 `has` 方法
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // returns true
 wm.has("baz");  // returns false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.prototype.set()")}}</li>
- <li>{{jsxref("WeakMap.prototype.get()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.get()")}}

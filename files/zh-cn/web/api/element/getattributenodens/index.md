@@ -6,31 +6,30 @@ tags:
   - DOM
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p>通过命名空间 URI 和名称来获取属性节点。</p>
+通过命名空间 URI 和名称来获取属性节点。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>attributeNode</em> = element.getAttributeNodeNS(<em>namespace</em>,<em>nodeName</em>)
-</pre>
+```plain
+attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+```
 
-<ul>
- <li><code>attributeNode</code> 获取的属性节点。</li>
- <li><code>namespace</code> 命名空间字符串</li>
- <li><code>nodeName</code> 属性节点的名称。</li>
-</ul>
+- `attributeNode` 获取的属性节点。
+- `namespace` 命名空间字符串
+- `nodeName` 属性节点的名称。
 
-<p>== Example == TBD The example needs to be fixed pre&gt; // html: &lt;div id="top" /&gt; t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<a href="http://www.mozilla.org/ns/specialspace">http://www.mozilla.org/ns/specialspace</a>", "id"); // iNode.value = "full-top" &lt;/pre</p>
+\== Example == TBD The example needs to be fixed pre> // html: \<div id="top" /> t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<http://www.mozilla.org/ns/specialspace>", "id"); // iNode.value = "full-top" \</pre
 
-<h2 id="Notes">笔记</h2>
+## 笔记
 
-<p><code>getAttributeNodeNS</code> 相比 <a href="en/DOM/element.getAttributeNode">getAttributeNode</a> 更加具体，允许你在特定的命名空间里获取属性。对应的 setter 方法是 <a href="en/DOM/element.setAttributeNodeNS">setAttributeNodeNS</a>.</p>
+`getAttributeNodeNS` 相比 [getAttributeNode](en/DOM/element.getAttributeNode) 更加具体，允许你在特定的命名空间里获取属性。对应的 setter 方法是 [setAttributeNodeNS](en/DOM/element.setAttributeNodeNS).
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">规格</h2>
+## 规格
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS">DOM Level 2 Core: getAttributeNodeNS</a></p>
+[DOM Level 2 Core: getAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)

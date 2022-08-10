@@ -3,38 +3,39 @@ title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>buffer</code></strong>访问器属性表示由<em>TypedArray</em>在构造期间引用的{{jsxref("ArrayBuffer")}}。</p>
+**`buffer`**访问器属性表示由*TypedArray*在构造期间引用的{{jsxref("ArrayBuffer")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedArray</var>.buffer</pre>
+```plain
+typedArray.buffer
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>buffer</code> 属性是一个访问器属性，它的 set 访问器函数是<code>undefined</code>，意思是你只能够读取这个属性。它的值在<em>TypedArray</em>构造时建立，不能被修改。<em>TypedArray</em>是这里的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a>之一。</p>
+`buffer` 属性是一个访问器属性，它的 set 访问器函数是`undefined`，意思是你只能够读取这个属性。它的值在*TypedArray*构造时建立，不能被修改。*TypedArray*是这里的[类型化数组](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_buffer_属性">使用 <code>buffer</code> 属性</h3>
+### 使用 `buffer` 属性
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint16 = new Uint16Array(buffer);
 uint16.buffer; // ArrayBuffer { byteLength: 8 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

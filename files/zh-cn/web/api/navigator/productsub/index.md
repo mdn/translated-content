@@ -8,42 +8,42 @@ tags:
   - 属性
 translation_of: Web/API/Navigator/productSub
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p><code><strong>Navigator.productSub</strong></code> 只读属性返回当前浏览器的编译版本号。 </p>
+**`Navigator.productSub`** 只读属性返回当前浏览器的编译版本号。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>prodSub</em> = window.navigator.productSub</pre>
+```plain
+prodSub = window.navigator.productSub
+```
 
-<ul>
- <li><code>prodSub</code>是一个字符串。</li>
-</ul>
+- `prodSub`是一个字符串。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:js">&lt;script&gt;
+```js
+<script>
 function prodsub() {
   var dt = document.getElementById("d").childNodes[0];
   dt.data = window.navigator.productSub;
 }
-&lt;/script&gt;
+</script>
 
-&lt;button onclick="prodsub();"&gt;productSub&lt;/button&gt;
-// returns: 20010725</pre>
+<button onclick="prodsub();">productSub</button>
+// returns: 20010725
+```
 
-<h2 id="Notes">注释</h2>
+## 注释
 
-<p>在 IE 上，这个属性返回 undefined。</p>
+在 IE 上，这个属性返回 undefined。
 
-<p>在苹果 Safari 上和 Google 的 Ghrome 上这个属性总是返回 20030107。</p>
+在苹果 Safari 上和 Google 的 Ghrome 上这个属性总是返回 20030107。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Navigator.productSub")}}</p>
+{{Compat("api.Navigator.productSub")}}

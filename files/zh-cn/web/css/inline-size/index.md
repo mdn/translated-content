@@ -3,23 +3,20 @@ title: inline-size
 slug: Web/CSS/inline-size
 translation_of: Web/CSS/inline-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
+**`inline-size`** [CSS](/en-US/docs/Web/CSS) 属性影响一个元素的{{cssxref("width")}} 或 {{cssxref("height")}}，以改变一个元素的盒模型的水平或垂直大小（是 width 还是 height 取决于该元素的{{cssxref("writing-mode")}}）。
 
+{{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
-<p><strong><code>inline-size</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性影响一个元素的{{cssxref("width")}} 或 {{cssxref("height")}}，以改变一个元素的盒模型的水平或垂直大小（是 width 还是 height 取决于该元素的{{cssxref("writing-mode")}}）。</p>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/css/inline-size.html")}}</div>
-
-
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 inline-size: 300px;
 inline-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 inline-size: 75%;
 
 /* Keyword values */
@@ -32,54 +29,51 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: unset;
-</pre>
+```
 
+如果元素的 writing-mode 是垂直方向的它会影响 height，否则默认是影响 width。
 
+有一个与 inline-size 属性有关的{{cssxref("block-size")}}，它定义了元素的其他尺寸。
 
-<p>如果元素的 writing-mode 是垂直方向的它会影响 height，否则默认是影响 width。</p>
+{{cssinfo}}
 
-<p>有一个与 inline-size 属性有关的{{cssxref("block-size")}}，它定义了元素的其他尺寸。</p>
+### 值
 
-<p>{{cssinfo}}</p>
+`inline-size`属性的可选值与{{cssxref("width")}}和{{cssxref("height")}}的可选值一样。
 
-<h3 id="值">值</h3>
-
-<p><code>inline-size</code>属性的可选值与{{cssxref("width")}}和{{cssxref("height")}}的可选值一样。</p>
-
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.inline-size")}}
 
+## 参阅
 
-<p>{{Compat("css.properties.inline-size")}}</p>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li>The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

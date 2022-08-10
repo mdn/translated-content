@@ -10,37 +10,39 @@ tags:
   - 验证凭证
 translation_of: Web/HTTP/Status/407
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <strong><code>407 Proxy Authentication Required </code></strong> 代表客户端错误，指的是由于缺乏位于浏览器与可以访问所请求资源的服务器之间的代理服务器（{{Glossary("proxy server")}} ）要求的身份验证凭证，发送的请求尚未得到满足。</p>
+状态码 **`407 Proxy Authentication Required `**代表客户端错误，指的是由于缺乏位于浏览器与可以访问所请求资源的服务器之间的代理服务器（{{Glossary("proxy server")}} ）要求的身份验证凭证，发送的请求尚未得到满足。
 
-<p>这个状态码会与 {{HTTPHeader("Proxy-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。</p>
+这个状态码会与 {{HTTPHeader("Proxy-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">407 Proxy Authentication Required </pre>
+```plain
+407 Proxy Authentication Required
+```
 
-<h2 id="响应示例">响应示例</h2>
+## 响应示例
 
-<pre>HTTP/1.1 407 Proxy Authentication Required
+```plain
+HTTP/1.1 407 Proxy Authentication Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"</pre>
+Proxy-Authenticate: Basic realm="Access to internal site"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}

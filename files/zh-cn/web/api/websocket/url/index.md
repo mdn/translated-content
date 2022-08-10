@@ -9,26 +9,26 @@ tags:
   - WebSocket
 translation_of: Web/API/WebSocket/url
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.url</code></strong> read-only property returns the absolute URL of the {{domxref("WebSocket")}} as resolved by the constructor.</p>
+The **`WebSocket.url`** read-only property returns the absolute URL of the {{domxref("WebSocket")}} as resolved by the constructor.
 
-<p><strong><code>WebSocket.url</code></strong>是一个只读属性，返回值为当构造函数创建{{domxref("WebSocket")}}实例对象时 URL 的绝对路径。</p>
+**`WebSocket.url`**是一个只读属性，返回值为当构造函数创建{{domxref("WebSocket")}}实例对象时 URL 的绝对路径。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>var url</em> = aWebSocket.url;</pre>
+```plain
+var url = aWebSocket.url;
+```
 
-<h2 id="返回值">返回值</h2>
+## 返回值
 
-<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
+A [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.WebSocket.url")}}</p>
+{{Compat("api.WebSocket.url")}}

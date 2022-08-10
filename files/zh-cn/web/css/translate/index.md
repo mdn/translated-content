@@ -10,13 +10,14 @@ tags:
   - 平移
 translation_of: Web/CSS/translate
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>translate</code></strong> 允许你单独声明平移变换，并独立于 {{cssxref("transform")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 <code>transform</code> 中声明该函数并记住转换函数的确切顺序了。</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`translate`** 允许你单独声明平移变换，并独立于 {{cssxref("transform")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 `transform` 中声明该函数并记住转换函数的确切顺序了。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 translate: none;
 
 /* Single values */
@@ -29,36 +30,37 @@ translate: 50% 105px;
 
 /* Three values */
 translate: 50% 105px 5rem;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>单个长度/百分比值</dt>
- <dd>一个长度值或百分比，表示二维平移，与声明了 X 轴和 Y 轴的平移一样（此时省略的第二个值默认为 0）。等同于在 <code>translate()</code> 函数（2D 平移）中指定单个值。</dd>
- <dt>两个长度/百分比值</dt>
- <dd>两个长度值或百分比表示在二维上分别按照指定 X 轴和 Y 轴的值进行的平移。等同于在 <code>translate()</code> 函数（2D 平移）中函数指定两个值。</dd>
- <dt>三个长度/百分比值</dt>
- <dd>三个长度值或百分比，表示分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于<code>translate3d()</code> 函数（3D 平移）。</dd>
- <dt><code>none</code></dt>
- <dd>表示不应用平移效果。</dd>
-</dl>
+- 单个长度/百分比值
+  - : 一个长度值或百分比，表示二维平移，与声明了 X 轴和 Y 轴的平移一样（此时省略的第二个值默认为 0）。等同于在 `translate()` 函数（2D 平移）中指定单个值。
+- 两个长度/百分比值
+  - : 两个长度值或百分比表示在二维上分别按照指定 X 轴和 Y 轴的值进行的平移。等同于在 `translate()` 函数（2D 平移）中函数指定两个值。
+- 三个长度/百分比值
+  - : 三个长度值或百分比，表示分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于`translate3d()` 函数（3D 平移）。
+- `none`
+  - : 表示不应用平移效果。
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="translate"&gt;Translation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="translate">Translation</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -87,30 +89,26 @@ p {
 div:hover .translate {
   translate: 200px 50px;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
+- {{cssxref('scale')}}
+- {{cssxref('rotate')}}
+- {{cssxref('transform')}}
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref('scale')}}</li>
- <li>{{cssxref('rotate')}}</li>
- <li>{{cssxref('transform')}}</li>
-</ul>
-
-<p>注意：skew 不是一个独立的变换属性。</p>
+注意：skew 不是一个独立的变换属性。

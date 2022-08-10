@@ -3,27 +3,27 @@ title: Element.setAttributeNodeNS()
 slug: Web/API/Element/setAttributeNodeNS
 translation_of: Web/API/Element/setAttributeNodeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNodeNS</code> 可以给一个元素添加一个新的命名空间的属性节点。</p>
+`setAttributeNodeNS` 可以给一个元素添加一个新的命名空间的属性节点。
 
-<p>                                                                                                                               （如果对中文有疑惑，请直接阅读原文）</p>
+（如果对中文有疑惑，请直接阅读原文）
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>replacedAttr</em> = element.setAttributeNodeNS(<em>attributeNode</em>)
-</pre>
+```plain
+replacedAttr = element.setAttributeNodeNS(attributeNode)
+```
 
-<ul>
- <li><code>replacedAttr</code> 是被替换的节点， 如果存在， 由此函数返回。</li>
- <li><code>attributeNode</code> 是一个属性节点。</li>
-</ul>
+- `replacedAttr` 是被替换的节点， 如果存在， 由此函数返回。
+- `attributeNode` 是一个属性节点。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>// &lt;div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
-            myNS:special-align="utterleft"&gt;one&lt;/div&gt;
-// &lt;div id="two"&gt;two&lt;/div&gt;
+```plain
+// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
+            myNS:special-align="utterleft">one</div>
+// <div id="two">two</div>
 
 
 var myns = "http://www.mozilla.org/ns/specialspace";
@@ -32,16 +32,16 @@ var d2 = document.getElementById("two");
 var a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
 alert(d2.attributes[1].value) // returns: `utterleft'
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>如果指定的属性在元素上存在， 接着此属性被新的属性替换的话被替换的属性会被返回。</p>
+如果指定的属性在元素上存在， 接着此属性被新的属性替换的话被替换的属性会被返回。
 
-<p>注意：如果你尝试设置的时候没有克隆那个节点，Mozia 会抛出一个 NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR ："Attribute already in use" 错误， 因为 DOM 需要克隆属性之后才能重复使用 ( 不像其他节点一样可以被删除 ) 。</p>
+注意：如果你尝试设置的时候没有克隆那个节点，Mozia 会抛出一个 NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR ："Attribute already in use" 错误， 因为 DOM 需要克隆属性之后才能重复使用 ( 不像其他节点一样可以被删除 ) 。
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">DOM Level 2 Core: setAttributeNodeNS</a></p>
+[DOM Level 2 Core: setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)

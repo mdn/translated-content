@@ -3,47 +3,47 @@ title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
-<p>{{JSRef("Global_Objects", "Date")}}</p>
+{{JSRef("Global_Objects", "Date")}}
 
-<p>getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。</p>
+getMilliseconds() 方法，根据本地时间，返回一个指定的日期对象的毫秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html")}}
 
+## 语法
 
+```js
+dateObj.getMilliseconds()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="brush: js"><var>dateObj</var>.getMilliseconds()</pre>
+无
 
-<h3 id="Parameters">参数</h3>
+### 描述
 
-<p>无</p>
+`getMilliseconds()` 方法返回一个 0 到 999 的整数。
 
-<h3 id="Description">描述</h3>
+## 例子
 
-<p><code>getMilliseconds()</code> 方法返回一个 0 到 999 的整数。</p>
+### 例子：使用`getMilliseconds`方法
 
-<h2 id="Examples">例子</h2>
+下例中，将当前时间的毫秒数赋值给变量 `ms`。
 
-<h3 id="Example:_Using_getMilliseconds">例子：使用<code>getMilliseconds</code>方法</h3>
-
-<p>下例中，将当前时间的毫秒数赋值给变量 <code>ms</code>。</p>
-
-<pre class="brush: js">var ms;
+```js
+var ms;
 Today = new Date();
-ms = Today.getMilliseconds();</pre>
+ms = Today.getMilliseconds();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+- {{jsxref("Date.prototype.setMilliseconds()")}}

@@ -1,7 +1,6 @@
 ---
 title: Element.replaceChildren()
 slug: Web/API/Element/replaceChildren
-translation_of: Web/API/Element/replaceChildren
 tags:
   - API
   - DOM
@@ -10,87 +9,90 @@ tags:
   - Element
   - Reference
   - replaceChildren
+translation_of: Web/API/Element/replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
-<div>{{APIRef("DOM")}}{{seecompattable}}</div>
+{{APIRef("DOM")}}{{seecompattable}}
 
-<p><strong><code>Element.replaceChildren()</code></strong> 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。</p>
+**`Element.replaceChildren()`** 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">// [Throws, Unscopable]
-Element.replaceChildren(...<var>nodesOrDOMStrings</var>) // 返回 undefined
-</pre>
+```plain
+// [Throws, Unscopable]
+Element.replaceChildren(...nodesOrDOMStrings) // 返回 undefined
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>nodesOrDOMStrings</var></code></dt>
- <dd>一组用于替换 <code>Element</code> 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，<code>Element</code> 的所有后代都将被清空。</dd>
-</dl>
+- `nodesOrDOMStrings`
+  - : 一组用于替换 `Element` 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，`Element` 的所有后代都将被清空。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}: 当违反了<a href="https://dom.spec.whatwg.org/#concept-node-tree">节点树的约束条件</a>时抛出。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="清空一个节点">清空一个节点</h3>
+### 清空一个节点
 
-<p><code>replaceChildren()</code> 为清空一个节点的后代提供了非常方便的机制，您只需在父节点不指定任何实参调用该方法即可。</p>
+`replaceChildren()` 为清空一个节点的后代提供了非常方便的机制，您只需在父节点不指定任何实参调用该方法即可。
 
-<pre class="brush: js notranslate">myNode.replaceChildren();</pre>
+```js
+myNode.replaceChildren();
+```
 
-<h3 id="在父节点之间转移节点">在父节点之间转移节点</h3>
+### 在父节点之间转移节点
 
-<p><code>replaceChildren()</code> 允许您更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让您选择您派对上的食物。它的 HTML 可能如下：</p>
+`replaceChildren()` 允许您更轻松地在父节点之间转移节点，而无需依赖冗余的循环代码。例如，有一个简单的应用程序让您选择您派对上的食物。它的 HTML 可能如下：
 
-<pre class="brush: html notranslate">&lt;h2&gt;派对食物列表&lt;/h2&gt;
+```html
+<h2>派对食物列表</h2>
 
-&lt;main&gt;
-  &lt;div&gt;
-    &lt;label for="no"&gt;不，谢谢了！&lt;/label&gt;
+<main>
+  <div>
+    <label for="no">不，谢谢了！</label>
 
-    &lt;select id="no" multiple size="10"&gt;
-      &lt;option&gt;苹果&lt;/option&gt;
-      &lt;option&gt;橘子&lt;/option&gt;
-      &lt;option&gt;葡萄&lt;/option&gt;
-      &lt;option&gt;香蕉&lt;/option&gt;
-      &lt;option&gt;奇异果&lt;/option&gt;
-      &lt;option&gt;巧克力饼干&lt;/option&gt;
-      &lt;option&gt;花生饼干&lt;/option&gt;
-      &lt;option&gt;巧克力棒&lt;/option&gt;
-      &lt;option&gt;火腿三明治&lt;/option&gt;
-      &lt;option&gt;乳酪三明治&lt;/option&gt;
-      &lt;option&gt;沙拉三明治&lt;/option&gt;
-      &lt;option&gt;冰淇淋&lt;/option&gt;
-      &lt;option&gt;果冻&lt;/option&gt;
-      &lt;option&gt;胡萝卜和鹰嘴豆泥&lt;/option&gt;
-      &lt;option&gt;玛格丽特披萨&lt;/option&gt;
-      &lt;option&gt;腊肠比萨&lt;/option&gt;
-      &lt;option&gt;素比萨&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/div&gt;
+    <select id="no" multiple size="10">
+      <option>苹果</option>
+      <option>橘子</option>
+      <option>葡萄</option>
+      <option>香蕉</option>
+      <option>奇异果</option>
+      <option>巧克力饼干</option>
+      <option>花生饼干</option>
+      <option>巧克力棒</option>
+      <option>火腿三明治</option>
+      <option>乳酪三明治</option>
+      <option>沙拉三明治</option>
+      <option>冰淇淋</option>
+      <option>果冻</option>
+      <option>胡萝卜和鹰嘴豆泥</option>
+      <option>玛格丽特披萨</option>
+      <option>腊肠比萨</option>
+      <option>素比萨</option>
+    </select>
+  </div>
 
-  &lt;div class="buttons"&gt;
-    &lt;button id="to-yes"&gt;转移到"是" --&amp;gt;&lt;/button&gt;
-    &lt;button id="to-no"&gt;&amp;lt;-- 转移到 "否"&lt;/button&gt;
-  &lt;/div&gt;
+  <div class="buttons">
+    <button id="to-yes">转移到"是" --&gt;</button>
+    <button id="to-no">&lt;-- 转移到 "否"</button>
+  </div>
 
-  &lt;div&gt;
-    &lt;label for="yes"&gt;是的，请！&lt;/label&gt;
+  <div>
+    <label for="yes">是的，请！</label>
 
-    &lt;select id="yes" multiple size="10"&gt;
+    <select id="yes" multiple size="10">
 
-    &lt;/select&gt;
-  &lt;/div&gt;
-&lt;/main&gt;</pre>
+    </select>
+  </div>
+</main>
+```
 
-<p>使用一些简单的 CSS 将两个选择列表排成一行，并将控制按钮放置在它们之间是很有意义的：</p>
+使用一些简单的 CSS 将两个选择列表排成一行，并将控制按钮放置在它们之间是很有意义的：
 
-<pre class="brush: css notranslate">main {
+```css
+main {
   display: flex;
 }
 
@@ -110,48 +112,47 @@ label, button {
 
 select {
   width: 200px;
-}</pre>
+}
+```
 
-<p>我们要做的是，当按下 “是” 按钮时，将 “否” 列表中的所有选定选项都转移到 “是” 列表中，然后当按下“否”按钮时，将 “是” 列表中的所有选定选项都转移到 “否” 列表中。</p>
+我们要做的是，当按下 “是” 按钮时，将 “否” 列表中的所有选定选项都转移到 “是” 列表中，然后当按下“否”按钮时，将 “是” 列表中的所有选定选项都转移到 “否” 列表中。
 
-<p>为此，我们为每个按钮提供一个 click 事件处理句柄，该事件句柄将所选选项赋值到第一个常量中，将要转移到的列表中的现有的选项赋值到第二个常量中。然后，它会调用列表的 <code>replaceChildren()</code> 方法，使用延展运算符传入两个常量，进而将两个常量中包含的所有选项转移到目标列表。</p>
+为此，我们为每个按钮提供一个 click 事件处理句柄，该事件句柄将所选选项赋值到第一个常量中，将要转移到的列表中的现有的选项赋值到第二个常量中。然后，它会调用列表的 `replaceChildren()` 方法，使用延展运算符传入两个常量，进而将两个常量中包含的所有选项转移到目标列表。
 
-<pre class="brush: js notranslate">const noSelect = document.getElementById('no');
+```js
+const noSelect = document.getElementById('no');
 const yesSelect = document.getElementById('yes');
 const noBtn = document.getElementById('to-no');
 const yesBtn = document.getElementById('to-yes');
 
-yesBtn.addEventListener('click', () =&gt; {
+yesBtn.addEventListener('click', () => {
   const selectedTransferOptions = document.querySelectorAll('#no option:checked');
   const existingYesOptions = document.querySelectorAll('#yes option');
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () =&gt; {
+noBtn.addEventListener('click', () => {
   const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
   const existingNoOptions = document.querySelectorAll('#no option');
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
-});</pre>
+});
+```
 
-<p>最终结果如下：</p>
+最终结果如下：
 
-<p>{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}</p>
+{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Element.replaceChildren")}}
 
+## 相关链接
 
-<p>{{Compat("api.Element.replaceChildren")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("Element.prepend()")}}</li>
- <li>{{domxref("Element.append()")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element")}} and {{domxref("ChildNode")}}
+- {{domxref("Element.prepend()")}}
+- {{domxref("Element.append()")}}
+- {{domxref("NodeList")}}

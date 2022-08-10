@@ -4,21 +4,21 @@ slug: Web/API/Element/lostpointercapture_event
 translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onlostpointercapture</code></strong> {{event("Event_handlers", "event handler")}} property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the {{event("lostpointercapture")}} event type.</p>
+The **`onlostpointercapture`** {{event("Event_handlers", "event handler")}} property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the {{event("lostpointercapture")}} event type.
 
-<p><strong>语法</strong></p>
+**语法**
 
-<pre class="syntaxbox">window.onlostpointercapture = functionReference
-</pre>
+```plain
+window.onlostpointercapture = functionReference
+```
 
-<p> </p>
+## 例子
 
-<h2 id="Example">例子</h2>
-
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function overHandler(ev) {
  // Determine the target event's lostpointercapture handler
  var lostCaptureHandler = ev.target.onlostpointercapture;
@@ -27,25 +27,21 @@ function init() {
  var el=document.getElementById("target");
  el.onlostpointercapture = overHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target"> Touch me ... </div>
+</body>
+</html>
+```
 
-<p><strong>规范</strong></p>
+**规范**
 
 {{Specifications}}
 
-<p> </p>
-
-<p><strong>浏览器兼容性</strong></p>
+**浏览器兼容性**
 
 {{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("lostpointercapture") }}</li>
-</ul>
+- {{ event("lostpointercapture") }}

@@ -5,27 +5,26 @@ tags:
   - defaultView
 translation_of: Web/API/Document/defaultView
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>在浏览器中，该属性返回当前 <code>document </code>对象所关联的 <code><a href="/zh-cn/DOM/window">window</a></code> 对象，如果没有，会返回 <code>null</code>。</p>
+在浏览器中，该属性返回当前 `document `对象所关联的 [`window`](/zh-cn/DOM/window) 对象，如果没有，会返回 `null`。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">var win = document.defaultView;
-</pre>
+```plain
+var win = document.defaultView;
+```
 
-<p>该属性只读。</p>
+该属性只读。
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>根据 <a href="http://www.quirksmode.org/dom/w3c_html.html">quirksmode</a>，IE 9 以下版本不支持 <code>defaultView</code>。</p>
+根据 [quirksmode](http://www.quirksmode.org/dom/w3c_html.html)，IE 9 以下版本不支持 `defaultView`。
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<ul>
- <li><a href="/zh-cn/HTML/HTML5">HTML5: defaultView</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView">DOM Level 2 Views: defaultView</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Views/">DOM Level 3 Views</a> (Only developed to Working Group Note and not implemented)</li>
-</ul>
+- [HTML5: defaultView](/zh-cn/HTML/HTML5)
+- [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
+- [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Only developed to Working Group Note and not implemented)

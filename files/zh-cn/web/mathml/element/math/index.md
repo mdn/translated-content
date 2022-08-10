@@ -4,137 +4,136 @@ slug: Web/MathML/Element/math
 tags:
   - MathML
   - MathML Reference
-  - 'MathML:Element'
+  - MathML:Element
 translation_of: Web/MathML/Element/math
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML 的顶级元素是<code>&lt;math&gt;</code>。所有有效的 MathML 实例必须被包括在 <code>&lt;math&gt;</code> 标记中。另外不可以在一个 <code>&lt;math&gt;</code> 元素中嵌套第二个 <code>&lt;math&gt;</code> 元素，但是 <code>&lt;math&gt;</code> 元素中可以有任意多的子元素 。</p>
+MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括在 `<math>` 标记中。另外不可以在一个 `<math>` 元素中嵌套第二个 `<math>` 元素，但是 `<math>` 元素中可以有任意多的子元素 。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>除了以下提到的属性， <code>&lt;math&gt;</code> 元素接受所有 {{ MathMLElement("mstyle") }} 元素的属性。</p>
+除了以下提到的属性， `<math>` 元素接受所有 {{ MathMLElement("mstyle") }} 元素的属性。
 
-<dl>
- <dt>class, id, style</dt>
- <dd>用于配合<a href="/en-US/docs/CSS">样式表</a>使用。</dd>
- <dt>dir</dt>
- <dd>公式的整体方向。取值可以是 <code>ltr</code> (从左到右) 或者 <code>rtl</code> (从右到左).</dd>
- <dt>href</dt>
- <dd>用于给公式设置一个超链接的 URI。</dd>
- <dt>mathbackground</dt>
- <dd>背景颜色<code>。你可以使用#rgb</code>格式、 <code>#rrggbb</code> 格式和 <a href="/zh-CN/docs/CSS/color_value#Color_Keywords">HTML 颜色名</a>。</dd>
- <dt>mathcolor</dt>
- <dd>公式的文本颜色。<code>你可以使用#rgb</code>格式、 <code>#rrggbb</code> 格式和 <a href="/zh-CN/docs/CSS/color_value#Color_Keywords">HTML 颜色名</a>。</dd>
- <dt>display</dt>
- <dd>这个枚举属性指定本标记所括的 MathML 代码应该如何被显示。该属性有如下取值：
- <ul>
-  <li><code>block</code>, 使用该值会使该 MathML 元素显示于文本之外，成为一个独立的块元素，不受其所在的文本的影响。</li>
-  <li><code>inline</code>, 使用该值使这段 MathML 显示为行内元素，放置于当前文本的区域中。除非改变文本的显示，否则无法移动这个 MathML 的显示位置。</li>
- </ul>
+- class, id, style
+  - : 用于配合[样式表](/en-US/docs/CSS)使用。
+- dir
+  - : 公式的整体方向。取值可以是 `ltr` (从左到右) 或者 `rtl` (从右到左).
+- href
+  - : 用于给公式设置一个超链接的 URI。
+- mathbackground
+  - : 背景颜色`。你可以使用#rgb`格式、 `#rrggbb` 格式和 [HTML 颜色名](/zh-CN/docs/CSS/color_value#Color_Keywords)。
+- mathcolor
+  - : 公式的文本颜色。`你可以使用#rgb`格式、 `#rrggbb` 格式和 [HTML 颜色名](/zh-CN/docs/CSS/color_value#Color_Keywords)。
+- display
 
- <p>如果没有指定该属性值，默认值采用 <code>inline</code>。</p>
- </dd>
- <dt>mod {{deprecated_inline}}</dt>
- <dd>因为<a href="/en-US/docs/MathML/Element/math#attr-display">display 属性</a>的出现而废弃。<br>
- 可用取值为：<code>display</code> (效果和<code>display="block"</code>一样) 和 and <code>inline</code>.</dd>
- <dt>overflow</dt>
- <dd>指定当该数学公式超过了其运行的范围时应该如何表现。<br>
- 可能的取值为： <code>linebreak</code> (默认值), <code>scroll</code>, <code>elide</code>, <code>truncate</code>, <code>scale</code>.</dd>
-</dl>
+  - : 这个枚举属性指定本标记所括的 MathML 代码应该如何被显示。该属性有如下取值：
 
-<h2 id="范例">范例</h2>
+    - `block`, 使用该值会使该 MathML 元素显示于文本之外，成为一个独立的块元素，不受其所在的文本的影响。
+    - `inline`, 使用该值使这段 MathML 显示为行内元素，放置于当前文本的区域中。除非改变文本的显示，否则无法移动这个 MathML 的显示位置。
 
-<p><img alt="Theorem of Pythagoras" src="/files/3157/math.jpg"></p>
+    如果没有指定该属性值，默认值采用 `inline`。
 
-<h3 id="HTML5_记号">HTML5 记号</h3>
+- mod {{deprecated_inline}}
+  - : 因为[display 属性](/en-US/docs/MathML/Element/math#attr-display)的出现而废弃。
+    可用取值为：`display` (效果和`display="block"`一样) 和 and `inline`.
+- overflow
+  - : 指定当该数学公式超过了其运行的范围时应该如何表现。
+    可能的取值为： `linebreak` (默认值), `scroll`, `elide`, `truncate`, `scale`.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;MathML in HTML5&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+## 范例
 
-  &lt;math&gt;
-    &lt;mrow&gt;
-      &lt;mrow&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;a&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-        &lt;mo&gt;+&lt;/mo&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;b&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-      &lt;/mrow&gt;
-      &lt;mo&gt;=&lt;/mo&gt;
-      &lt;msup&gt;
-        &lt;mi&gt;c&lt;/mi&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msup&gt;
-    &lt;/mrow&gt;
-  &lt;/math&gt;
+![Theorem of Pythagoras](/files/3157/math.jpg)
 
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+### HTML5 记号
 
-<h3 id="XHTML_记号">XHTML 记号</h3>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
- &lt;title&gt;MathML in XHTML&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  <math>
+    <mrow>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mo>=</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </math>
 
-  &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-    &lt;mrow&gt;
-      &lt;mrow&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;a&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-        &lt;mo&gt;+&lt;/mo&gt;
-        &lt;msup&gt;
-          &lt;mi&gt;b&lt;/mi&gt;
-          &lt;mn&gt;2&lt;/mn&gt;
-        &lt;/msup&gt;
-      &lt;/mrow&gt;
-      &lt;mo&gt;=&lt;/mo&gt;
-      &lt;msup&gt;
-        &lt;mi&gt;c&lt;/mi&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msup&gt;
-    &lt;/mrow&gt;
-  &lt;/math&gt;
+  </body>
+</html>
+```
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+### XHTML 记号
 
-<p><strong>注意：</strong> XHTML 文档如果带有 MathML，必须将文档的 MIME 类型设置为<code>application/xhtml+xml</code>进行发送。一般来说可以通过将扩展名改为<code>.xhtml</code> 来实现对本地文件的修改。对于 Apache 服务器，你可以<a href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">配置<code>.htaccess</code>文件</a> 来达到映射扩展名为正确的 MIME 类型的目的。因为 MathML 被放在一个 XML 文件中，你必须编写一个严格符合 XML 格式的文档。</p>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>MathML in XHTML</title>
+</head>
+<body>
 
-<h2 id="规范">规范</h2>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </mrow>
+      <mo>=</mo>
+      <msup>
+        <mi>c</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </math>
+
+</body>
+</html>
+```
+
+**注意：** XHTML 文档如果带有 MathML，必须将文档的 MIME 类型设置为`application/xhtml+xml`进行发送。一般来说可以通过将扩展名改为`.xhtml` 来实现对本地文件的修改。对于 Apache 服务器，你可以[配置`.htaccess`文件](http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype) 来达到映射扩展名为正确的 MIME 类型的目的。因为 MathML 被放在一个 XML 文件中，你必须编写一个严格符合 XML 格式的文档。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="Gecko-specific_注释">Gecko-specific 注释</h2>
+## Gecko-specific 注释
 
-<p>Gecko 7.0 {{ geckoRelease("7.0") }} 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，<code>displaystyle</code> 属性直到 Gecko 8.0 {{ geckoRelease("8.0") }} 才 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">被添加进实现</a>。</p>
+Gecko 7.0 {{ geckoRelease("7.0") }} 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，`displaystyle` 属性直到 Gecko 8.0 {{ geckoRelease("8.0") }} 才 [被添加进实现](https://bugzilla.mozilla.org/show_bug.cgi?id=669719)。
 
-<p>纯文本的 fall-back (<code>alttext</code>) 或者指定替代图像的属性<code>altimg</code>, <code>altimg-width</code>, <code>altimg-height</code> 或 <code>altimg-valign</code> 目前都还没有在 Gecko 中实现。</p>
+纯文本的 fall-back (`alttext`) 或者指定替代图像的属性`altimg`, `altimg-width`, `altimg-height` 或 `altimg-valign` 目前都还没有在 Gecko 中实现。
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>HTML top-level element: {{ HTMLElement("html") }}</li>
- <li>SVG top-level element: {{ SVGElement("svg") }}</li>
- <li>MathML browser test: For <a href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> and <a href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></li>
-</ul>
+- HTML top-level element: {{ HTMLElement("html") }}
+- SVG top-level element: {{ SVGElement("svg") }}
+- MathML browser test: For [XHTML](https://www.eyeasme.com/Joe/MathML/MathML_browser_test) and [HTML5](https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test)

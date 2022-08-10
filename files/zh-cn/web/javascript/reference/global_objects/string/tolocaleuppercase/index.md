@@ -3,71 +3,66 @@ title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toLocaleUpperCase()</code></strong> 方法根据本地主机语言环境把字符串转换为大写格式，并返回转换后的字符串。</p>
+**`toLocaleUpperCase()`** 方法根据本地主机语言环境把字符串转换为大写格式，并返回转换后的字符串。
 
-<div>{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
 
+## 语法
 
+```plain
+str.toLocaleUpperCase()
+str.toLocaleUpperCase(locale)
+str.toLocaleUpperCase([locale, locale, ...])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>str</var>.toLocaleUpperCase()
-<var>str</var>.toLocaleUpperCase(locale)
-<var>str</var>.toLocaleUpperCase([locale, locale, ...])
-</pre>
+- `locale` {{optional_inline}}
+  - : The `locale` parameter indicates the locale to be used to convert to upper case according to any locale-specific case mappings. If multiple locales are given in an {{jsxref("Array")}}, the [best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment’s current locale.
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>locale</code> {{optional_inline}}</dt>
- <dd>The <code>locale</code> parameter indicates the locale to be used to convert to upper case according to any locale-specific case mappings. If multiple locales are given in an {{jsxref("Array")}}, the <a href="https://tc39.github.io/ecma402/#sec-bestavailablelocale">best available locale</a> is used. The default locale is the host environment’s current locale.</dd>
-</dl>
+A new string representing the calling string converted to upper case, according to any locale-specific case mappings.
 
-<h3 id="返回值">返回值</h3>
+### Exceptions
 
-<p>A new string representing the calling string converted to upper case, according to any locale-specific case mappings.</p>
+- A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a `locale` argument isn't a valid language tag.
+- A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an array element isn't of type string.
 
-<h3 id="Exceptions">Exceptions</h3>
+## 描述
 
-<ul>
- <li>A {{jsxref("RangeError")}} ("invalid language tag: xx_yy") is thrown if a <code>locale</code> argument isn't a valid language tag.</li>
- <li>A {{jsxref("TypeError")}} ("invalid element in locales argument") is thrown if an array element isn't of type string.</li>
-</ul>
+The `toLocaleUpperCase()` method returns the value of the string converted to upper case according to any locale-specific case mappings. `toLocaleUpperCase()` does not affect the value of the string itself. In most cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not follow the default case mappings in Unicode, there may be a different result.
 
-<h2 id="描述">描述</h2>
+Also notice that conversion is not necessarily a 1:1 character mapping, as some characters might result in two (or even more) characters when transformed to upper-case. Therefore the length of the result string can differ from the input length. This also implies that the conversion is not stable, so i.E. the following can return `false`:
+`x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 
-<p>The <code>toLocaleUpperCase()</code> method returns the value of the string converted to upper case according to any locale-specific case mappings. <code>toLocaleUpperCase()</code> does not affect the value of the string itself. In most cases, this will produce the same result as {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}, but for some locales, such as Turkish, whose case mappings do not follow the default case mappings in Unicode, there may be a different result.</p>
+## 例子
 
-<p>Also notice that conversion is not necessarily a 1:1 character mapping, as some characters might result in two (or even more) characters when transformed to upper-case. Therefore the length of the result string can differ from the input length. This also implies that the conversion is not stable, so i.E. the following can return <code>false</code>:<br>
- <code>x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()</code></p>
+### 使用 `toLocaleUpperCase()`
 
-<h2 id="例子">例子</h2>
-
-<h3 id="使用_toLocaleUpperCase">使用 <code>toLocaleUpperCase()</code></h3>
-
-<pre class="brush: js">'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+```js
+'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
 
 'Gesäß'.toLocaleUpperCase(); // 'GESÄSS'
 
 'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
 
 let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'</pre>
+'i\u0307'.toLocaleUpperCase(locales); // 'I'
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

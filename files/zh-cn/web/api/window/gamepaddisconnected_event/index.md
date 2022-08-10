@@ -4,36 +4,35 @@ slug: Web/API/Window/gamepaddisconnected_event
 translation_of: Web/API/Window/ongamepaddisconnected
 original_slug: Web/API/Window/ongamepaddisconnected
 ---
-<div>{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>ongamepaddisconnected</code></strong> property of the {{domxref("Window")}} interface represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).</p>
+The **`ongamepaddisconnected`** property of the {{domxref("Window")}} interface represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 
-<p>The event object is of type {{domxref("GamepadEvent")}}.</p>
+The event object is of type {{domxref("GamepadEvent")}}.
 
-<h2 id="解析">解析</h2>
+## 解析
 
-<pre class="syntaxbox">window.ongamepaddisconnected = function() { ... };
-</pre>
+```plain
+window.ongamepaddisconnected = function() { ... };
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js; line-numbers  language-js"><code class="language-js">window.ongamepaddisconnected = function() {
+```js
+window.ongamepaddisconnected = function() {
   // A gamepad has been disconnected
-};</code></pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Window.ongamepaddisconnected")}}
 
+## See also
 
-<p>{{Compat("api.Window.ongamepaddisconnected")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://hacks.mozilla.org/2013/12/the-gamepad-api/">The Gamepad API</a> by Ted Mielczarek and Robert Nyman</li>
- <li><a href="http://luser.github.io/gamepadtest/">Simple API demo page</a> (<a href="https://github.com/luser/gamepadtest">source</a>)</li>
-</ul>
+- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
+- [Simple API demo page](http://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

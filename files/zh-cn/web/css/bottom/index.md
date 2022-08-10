@@ -3,30 +3,29 @@ title: bottom
 slug: Web/CSS/bottom
 translation_of: Web/CSS/bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>bottom</code></strong><a href="/zh-CN/docs/Web/CSS">样式</a>属性定义了定位元素下外边距边界与其包含块下边界之间的偏移，非定位元素设置此属性无效。</p>
+**`bottom`**[样式](/zh-CN/docs/Web/CSS)属性定义了定位元素下外边距边界与其包含块下边界之间的偏移，非定位元素设置此属性无效。
 
-<p><code>bottom</code>的效果取决于元素的<code>position</code>属性：</p>
+`bottom`的效果取决于元素的`position`属性：
 
-<ul>
- <li>当<code>position</code>设置为<code>absolute</code>或<code>fixed</code>时，<code>bottom</code>属性指定了定位元素下外边距边界与其包含块下边界之间的偏移。</li>
- <li>当<code>position</code>设置为<code>relative</code>时，<code>bottom</code>属性指定了元素的下边界离开其正常位置的偏移。</li>
- <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在 viewport 里面，<code>bottom</code>属性的效果和 position 为<code>relative</code>等同；如果元素在 viewport 外面，<code>bottom</code>属性的效果和 position 为<code>fixed</code>等同。</li>
- <li>当<code>position</code>设置为<code>static</code>时，<code>bottom</code>属性无效。</li>
-</ul>
+- 当`position`设置为`absolute`或`fixed`时，`bottom`属性指定了定位元素下外边距边界与其包含块下边界之间的偏移。
+- 当`position`设置为`relative`时，`bottom`属性指定了元素的下边界离开其正常位置的偏移。
+- 当`position`设置为`sticky`时，如果元素在 viewport 里面，`bottom`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`bottom`属性的效果和 position 为`fixed`等同。
+- 当`position`设置为`static`时，`bottom`属性无效。
 
-<p>当 {{cssxref("top")}}和<code>bottom</code>同时指定时，并且 {{cssxref("height")}}没有被指定或者指定为<code>auto</code>或<code>100%</code>的时候，{{cssxref("top")}}和<code>bottom</code>都会生效，在其他情况下，如果 {{cssxref("height")}}被限制，则{{cssxref("top")}}属性会优先设置，<code>bottom</code>属性则会被忽略。</p>
+当 {{cssxref("top")}}和`bottom`同时指定时，并且 {{cssxref("height")}}没有被指定或者指定为`auto`或`100%`的时候，{{cssxref("top")}}和`bottom`都会生效，在其他情况下，如果 {{cssxref("height")}}被限制，则{{cssxref("top")}}属性会优先设置，`bottom`属性则会被忽略。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>/* &lt;length&gt; values */<code>
+```plain
+/* <length> values */
 bottom: 3px;
 bottom: 2.4em;
 
-/* &lt;percentage&gt;s of the height of the containing block */
+/* <percentage>s of the height of the containing block */
 bottom: 10%;
 
 /* Keyword value */
@@ -35,49 +34,48 @@ bottom: auto;
 /* Global values */
 bottom: inherit;
 bottom: initial;
-bottom: unset;</code></pre>
+bottom: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<ul>
- <li>对于<strong>绝对定位的元素</strong>，元素下外边距边界与其包含块下边界之间的偏移。</li>
- <li>对于<strong>相对定位定位的元素，</strong>元素的下边界离开其正常位置的偏移。</li>
-</ul>
+- 对于**绝对定位的元素**，元素下外边距边界与其包含块下边界之间的偏移。
+- 对于**相对定位定位的元素**，元素的下边界离开其正常位置的偏移。
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>一个负值、空值或正值，代表了：</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>包含块高度的百分比{{cssxref("&lt;percentage&gt;")}}。</dd>
- <dt><code>auto</code></dt>
- <dd>规定：
- <ul>
-  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("top") }}属性为准，如果此时设置<code>height: auto</code>，将基于内容需要的高度设置宽度；如果<code>top</code>也为<code>auto</code>的话，元素的垂直位置就是它假如作为静态 (即 static) 元素时该在的位置。</li>
-  <li>对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("top") }}属性；如果<code>top</code>也为<code>auto</code>的话，元素将不会有偏移。</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>指代有明确计算结果的父级元素的值，（需要注意的是，父级元素并不一定是包裹该子元素的块级元素）。该值会根据父级元素的具体情况被处理为{{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}或者<code>auto</code>。</dd>
-</dl>
+- `<length>`
+  - : 一个负值、空值或正值，代表了：
+- `<percentage>`
+  - : 包含块高度的百分比{{cssxref("&lt;percentage&gt;")}}。
+- `auto`
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : 规定：
+
+    - 对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("top") }}属性为准，如果此时设置`height: auto`，将基于内容需要的高度设置宽度；如果`top`也为`auto`的话，元素的垂直位置就是它假如作为静态 (即 static) 元素时该在的位置。
+    - 对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("top") }}属性；如果`top`也为`auto`的话，元素将不会有偏移。
+
+- `inherit`
+  - : 指代有明确计算结果的父级元素的值，（需要注意的是，父级元素并不一定是包裹该子元素的块级元素）。该值会根据父级元素的具体情况被处理为{{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}或者`auto`。
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子分别展示了<code>bottom</code>属性在<code>position</code>为<code>absolute</code>和<code>fixed</code>的不同行为。</p>
+下面的例子分别展示了`bottom`属性在`position`为`absolute`和`fixed`的不同行为。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;p&gt;This&lt;br&gt;is&lt;br&gt;some&lt;br&gt;tall,&lt;br&gt;tall,&lt;br&gt;tall,&lt;br&gt;tall,&lt;br&gt;tall&lt;br&gt;content.&lt;/p&gt;
-&lt;div class="fixed"&gt;&lt;p&gt;Fixed&lt;/p&gt;&lt;/div&gt;
-&lt;div class="absolute"&gt;&lt;p&gt;Absolute&lt;/p&gt;&lt;/div&gt;</code>
-</pre>
+```html
+<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<div class="fixed"><p>Fixed</p></div>
+<div class="absolute"><p>Absolute</p></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   font-size: 30px;
   line-height: 2em;
 }
@@ -99,16 +97,17 @@ div {
   position: fixed;
   bottom: 0;
   right: 0;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例','500','250')}}</p>
+{{EmbedLiveSample('示例','500','250')}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

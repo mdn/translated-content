@@ -8,23 +8,19 @@ tags:
   - 接口
 translation_of: Web/API/DOMStringMap
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>DOMStringMap</code></strong> 接口在 {{ domxref("HTMLElement.dataset") }} 属性中被用到，被用于容纳和展示元素的自定义属性。</p>
+**`DOMStringMap`** 接口在 {{ domxref("HTMLElement.dataset") }} 属性中被用到，被用于容纳和展示元素的自定义属性。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DOMStringMap")}}
 
+## 参见
 
-<p>{{Compat("api.DOMStringMap")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{ domxref("HTMLElement.dataset") }}</li>
- <li>HTML <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>中的 <a href="/zh-CN/docs/Web/HTML/Global_attributes#attr-data-*">data-*</a></li>
-</ul>
+- {{ domxref("HTMLElement.dataset") }}
+- HTML [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)中的 [data-\*](/zh-CN/docs/Web/HTML/Global_attributes#attr-data-*)

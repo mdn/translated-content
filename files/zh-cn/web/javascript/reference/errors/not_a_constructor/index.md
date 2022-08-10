@@ -7,11 +7,12 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">TypeError: "x" is not a constructor
+```plain
+TypeError: "x" is not a constructor
 
 TypeError: Math is not a constructor
 TypeError: JSON is not a constructor
@@ -20,25 +21,26 @@ TypeError: Reflect is not a constructor
 TypeError: Intl is not a constructor
 TypeError: SIMD is not a constructor
 TypeError: Atomics is not a constructor
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>是因为尝试将不是构造器的对象或者变量来作为构造器使用。参考 {{Glossary("constructor")}} 或者 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> 来了解什么是构造器。</p>
+是因为尝试将不是构造器的对象或者变量来作为构造器使用。参考 {{Glossary("constructor")}} 或者 [`new` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来了解什么是构造器。
 
-<p>有很多的全局对象比如 {{jsxref("String")}}、{{jsxref("Array")}} 等等都是可以使用 <code>new</code> 操作符的构造器。但是有一些全局对象并不是，且其属性和方法都是<a href="https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods">静态</a>的。下面的 JavaScript 标准内置对象都不是构造器：{{jsxref("Math")}}，{{jsxref("JSON")}}，{{jsxref("Symbol")}}，{{jsxref("Reflect")}}，{{jsxref("Intl")}}，{{jsxref("SIMD")}}，{{jsxref("Atomics")}}。</p>
+有很多的全局对象比如 {{jsxref("String")}}、{{jsxref("Array")}} 等等都是可以使用 `new` 操作符的构造器。但是有一些全局对象并不是，且其属性和方法都是[静态](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>)的。下面的 JavaScript 标准内置对象都不是构造器：{{jsxref("Math")}}，{{jsxref("JSON")}}，{{jsxref("Symbol")}}，{{jsxref("Reflect")}}，{{jsxref("Intl")}}，{{jsxref("SIMD")}}，{{jsxref("Atomics")}}。
 
-<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">Generator functions</a> 也不能作为构造器来使用。</p>
+[Generator functions](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 也不能作为构造器来使用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="无效的">无效的</h3>
+### 无效的
 
-<pre class="brush: js example-bad">var Car = 1;
+```js example-bad
+var Car = 1;
 new Car();
 // TypeError: Car is not a constructor
 
@@ -51,45 +53,48 @@ new Symbol();
 function* f() {};
 var obj = new f;
 // TypeError: f is not a constructor
-</pre>
+```
 
-<h3 id="一个构造器">一个构造器</h3>
+### 一个构造器
 
-<p>假设你想为汽车创建一个对象类型。 你希望此类型的对象被称为 <code>car</code>，并且您希望它具有 make，model 和 year 属性。 为此，你编写以下函数：</p>
+假设你想为汽车创建一个对象类型。 你希望此类型的对象被称为 `car`，并且您希望它具有 make，model 和 year 属性。 为此，你编写以下函数：
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
 }
-</pre>
+```
 
-<p>现在你可以创建一个名为 <code>mycar</code> 的对象，如下所示：</p>
+现在你可以创建一个名为 `mycar` 的对象，如下所示：
 
-<pre class="brush: js">var mycar = new Car("Eagle", "Talon TSi", 1993);</pre>
+```js
+var mycar = new Car("Eagle", "Talon TSi", 1993);
+```
 
-<h3 id="关于_Promises">关于 Promises </h3>
+### 关于 Promises
 
-<p>当返回了一个 immediately-resolved 或者 immediately-rejected Promise 的时候，你根本不需要去创建、操作一个新的 Promise 对象。</p>
+当返回了一个 immediately-resolved 或者 immediately-rejected Promise 的时候，你根本不需要去创建、操作一个新的 Promise 对象。
 
-<p>这是不合法的（<a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor">Promise constructor</a> 被错误的调用了）且会抛出一个 错误 <code>TypeError: this is not a constructor</code> exception:</p>
+这是不合法的（[Promise constructor](/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) 被错误的调用了）且会抛出一个 错误 `TypeError: this is not a constructor` exception:
 
-<pre class="brush: js example-bad">return new Promise.resolve(true);
-</pre>
+```js example-bad
+return new Promise.resolve(true);
+```
 
-<p>使用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"> Promise.resolve()</a> 或者 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> 静态方法来代替：</p>
+使用[ Promise.resolve()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 或者 [Promise.reject()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 静态方法来代替：
 
-<pre class="brush: js">// 这是合法的，但是没必要这么长：
-return new Promise((resolve, reject) =&gt; { resolve(true); })
+```js
+// 这是合法的，但是没必要这么长：
+return new Promise((resolve, reject) => { resolve(true); })
 
 // 用静态方法来代替：
 return Promise.resolve(true);
 return Promise.reject(false);
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{Glossary("constructor")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a></li>
-</ul>
+- {{Glossary("constructor")}}
+- [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)

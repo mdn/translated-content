@@ -6,66 +6,68 @@ tags:
   - Math
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Math.max()</strong></code> 函数返回一组数中的最大值。</p>
+**`Math.max()`** 函数返回一组数中的最大值。
 
-<p>{{EmbedInteractiveExample("pages/js/math-max.html")}}</p>
+{{EmbedInteractiveExample("pages/js/math-max.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.max(<em>value1</em>[,<em>value2</em>, ...]) </code></pre>
+```plain
+Math.max(value1[,value2, ...])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value1, value2, ...</code></dt>
- <dd>一组数值</dd>
-</dl>
+- `value1, value2, ...`
+  - : 一组数值
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回给定的一组数字中的最大值。如果给定的参数中至少有一个参数无法被转换成数字，则会返回 {{jsxref("NaN")}}。</p>
+返回给定的一组数字中的最大值。如果给定的参数中至少有一个参数无法被转换成数字，则会返回 {{jsxref("NaN")}}。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>由于 <code>max</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.max()</code>，而不是创建的 <code>Math</code> 实例的方法（<code>Math</code> 不是构造函数）。</p>
+由于 `max` 是 `Math` 的静态方法，所以应该像这样使用：`Math.max()`，而不是创建的 `Math` 实例的方法（`Math` 不是构造函数）。
 
-<p>如果没有参数，则结果为 - {{jsxref("Infinity")}}。</p>
+如果没有参数，则结果为 - {{jsxref("Infinity")}}。
 
-<p>如果有任一参数不能被转换为数值，则结果为 {{jsxref("NaN")}}。</p>
+如果有任一参数不能被转换为数值，则结果为 {{jsxref("NaN")}}。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_Math.max">使用 <code>Math.max()</code></h3>
+### 使用 `Math.max()`
 
-<pre>Math.max(10, 20);   //  20
+```plain
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20</pre>
+Math.max(-10, 20);  //  20
+```
 
-<p>下面的方法使用 {{jsxref("Global_Objects/Function/apply", "apply")}} 方法寻找一个数值数组中的最大元素。<code>getMaxOfArray([1,2,3])</code> 等价于 <code>Math.max(1, 2, 3)</code>，但是你可以使用 <code>getMaxOfArray()</code> 作用于任意长度的数组上。</p>
+下面的方法使用 {{jsxref("Global_Objects/Function/apply", "apply")}} 方法寻找一个数值数组中的最大元素。`getMaxOfArray([1,2,3])` 等价于 `Math.max(1, 2, 3)`，但是你可以使用 `getMaxOfArray()` 作用于任意长度的数组上。
 
-<pre class="brush:js">function getMaxOfArray(numArray) {
+```js
+function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);
 }
-</pre>
+```
 
-<p>或者通过使用最新的扩展语句{{jsxref("Operators/Spread_operator", "spread operator")}}，获得数组中的最大值变得更容易。</p>
+或者通过使用最新的扩展语句{{jsxref("Operators/Spread_operator", "spread operator")}}，获得数组中的最大值变得更容易。
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = Math.max(...arr);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- {{jsxref("Math.min()")}}

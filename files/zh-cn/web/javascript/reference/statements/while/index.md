@@ -6,60 +6,55 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>while 语句</strong>可以在某个条件表达式为真的前提下，循环执行指定的一段代码，直到那个表达式不为真时结束循环。</p>
+**while 语句**可以在某个条件表达式为真的前提下，循环执行指定的一段代码，直到那个表达式不为真时结束循环。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-while.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-while.html")}}
 
+## 语法
 
+```plain
+while (condition)
+  statement
+```
 
-<h2 id="语法">语法</h2>
+- `condition`
+  - : 条件表达式，在每次循环前被求值。如果求值为真，`statement`就会被执行。如果求值为假，则跳出`while`循环执行后面的语句。
+- `statement`
+  - : 只要条件表达式求值为真，该语句就会一直被执行。要在循环中执行多条语句，可以使用块语句（`{ ... }`）包住多条语句。注意：使用`break`语句在`condition`计算结果为真之前停止循环。
 
-<pre class="syntaxbox">while (<em>condition</em>)
-  <em>statement</em>
-</pre>
+## 示例
 
-<dl>
- <dt><code>condition</code></dt>
- <dd>条件表达式，在每次循环前被求值。如果求值为真，<code>statement</code>就会被执行。如果求值为假，则跳出<code>while</code>循环执行后面的语句。</dd>
- <dt><code>statement</code></dt>
- <dd>只要条件表达式求值为真，该语句就会一直被执行。要在循环中执行多条语句，可以使用块语句（<code>{ ... }</code>）包住多条语句。注意：使用<code>break</code>语句在<code>condition</code>计算结果为真之前停止循环。</dd>
-</dl>
+下面的 `while` 循环会一直循环若干次，直到 `n` 等于 `3`。
 
-<h2 id="示例">示例</h2>
-
-<p>下面的 <code>while</code> 循环会一直循环若干次，直到 <code>n</code> 等于 <code>3</code>。</p>
-
-<pre class="brush:js">var n = 0;
+```js
+var n = 0;
 var x = 0;
 
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
-}</pre>
+}
+```
 
-<p>在每次循环中，<code>n</code> 都会自增 <code>1</code>，然后再把 <code>n</code> 加到 <code>x</code> 上。因此，在每轮循环结束后，<code>x</code> 和 <code>n</code> 的值分别是：</p>
+在每次循环中，`n` 都会自增 `1`，然后再把 `n` 加到 `x` 上。因此，在每轮循环结束后，`x` 和 `n` 的值分别是：
 
-<ul>
- <li>第一轮后：<code>n</code> = 1，<code>x</code> = 1</li>
- <li>第二轮后：<code>n</code> = 2，<code>x</code> = 3</li>
- <li>第三轮后：<code>n</code> = 3，<code>x</code> = 6</li>
-</ul>
+- 第一轮后：`n` = 1，`x` = 1
+- 第二轮后：`n` = 2，`x` = 3
+- 第三轮后：`n` = 3，`x` = 6
 
-<p>当完成第三轮循环后，条件表达式<code>n</code>&lt; 3 不再为真，因此循环终止。</p>
+当完成第三轮循环后，条件表达式`n`< 3 不再为真，因此循环终止。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Statements/do...while", "do...while")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for", "for")}}

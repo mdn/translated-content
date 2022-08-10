@@ -10,25 +10,28 @@ tags:
   - 构造函数
 translation_of: Web/API/MessageChannel/MessageChannel
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("MessageChannel")}} 接口的 <code>MessageChannel()</code> 构造函数返回一个新的 {{domxref("MessageChannel")}} 对象，返回的对象中包含两个 {{domxref("MessagePort")}} 对象。</p>
+{{domxref("MessageChannel")}} 接口的 `MessageChannel()` 构造函数返回一个新的 {{domxref("MessageChannel")}} 对象，返回的对象中包含两个 {{domxref("MessagePort")}} 对象。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var channel = new MessageChannel();</pre>
+```plain
+var channel = new MessageChannel();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新创建的 {{domxref("MessageChannel")}} 对象。</p>
+一个新创建的 {{domxref("MessageChannel")}} 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的代码块中，你会看到一个由 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}}  构造函数创建的新 Channel. 当 IFrame 被加载后，我们使用 {{domxref("MessagePort.postMessage")}} 把 <code>port2</code> 和一条消息一起发送给 IFrame. 然后 <code>handleMessage</code> 回调响应 IFrame 发回的消息（使用 {{domxref("MessagePort.onmessage")}}），并把它渲染到页面段落中。{{domxref("MessageChannel.port1")}} 用来监听，当消息到达时，会进行处理。</p>
+在下面的代码块中，你会看到一个由 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} 构造函数创建的新 Channel. 当 IFrame 被加载后，我们使用 {{domxref("MessagePort.postMessage")}} 把 `port2` 和一条消息一起发送给 IFrame. 然后 `handleMessage` 回调响应 IFrame 发回的消息（使用 {{domxref("MessagePort.onmessage")}}），并把它渲染到页面段落中。{{domxref("MessageChannel.port1")}} 用来监听，当消息到达时，会进行处理。
 
-<pre class="brush: js notranslate">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -43,24 +46,19 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>要查看完整可运行的例子，参考我们在 Github 上的 <a href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a> (<a href="http://mdn.github.io/channel-messaging-basic-demo/">在线运行</a>)。</p>
+要查看完整可运行的例子，参考我们在 Github 上的 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([在线运行](http://mdn.github.io/channel-messaging-basic-demo/))。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.MessageChannel.MessageChannel")}}
 
+## 参见
 
-<p>{{Compat("api.MessageChannel.MessageChannel")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">使用 channel messaging</a></li>
-</ul>
+- [使用 channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

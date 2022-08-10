@@ -6,48 +6,48 @@ tags:
   - 布局
 translation_of: Web/CSS/number
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">语法</h2>
+## 语法
 
-<p><code>&lt;数字&gt;</code> <a href="/en-US/docs/CSS">CSS</a> 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，&lt;number&gt;没有任何单位，并不是一个 CSS 尺寸。</p>
+`<数字>` [CSS](/en-US/docs/CSS) 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，\<number>没有任何单位，并不是一个 CSS 尺寸。
 
-<h2 id="Interpolation">插值</h2>
+## 插值
 
-<p> <code>&lt;number&gt;</code> CSS 数据类型的值可以被插值，用于动画。这种情况下，它们的插值是浮点实数。插值的速度取决于动画的 <a href="/en-US/docs/CSS/timing-function">timing function</a>。</p>
+`<number>` CSS 数据类型的值可以被插值，用于动画。这种情况下，它们的插值是浮点实数。插值的速度取决于动画的 [timing function](/en-US/docs/CSS/timing-function)。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<p>合法值示例：</p>
+合法值示例：
 
-<pre class="notranslate">12          A raw <a href="/en-US/docs/CSS/integer">&lt;integer&gt;</a> is also a &lt;number&gt;
-4.01        正非整 &lt;数字&gt;
--456.8      负非整 &lt;数字&gt;
+```plain
+12          A raw <integer> is also a <number>
+4.01        正非整 <数字>
+-456.8      负非整 <数字>
 0.0         零
 +0.0        带正号的零
 -0.0        带负号的零 (尽管奇怪，但合法)
 .60         点前的数字可以省略
 10e3        科学计数法
 -3.4e-2     科学计数法最复杂的情况
-</pre>
+```
 
-<p>非法值示例：</p>
+非法值示例：
 
-<pre class="notranslate">12.         点后需有数字
+```plain
+12.         点后需有数字
 +-12.2      只能有一个符号
 12.1.1      只能有一个点
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.types.number")}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/CSS/CSS_Reference">CSS Reference</a> index</li>
-</ul>
+- [CSS Reference](/en-US/docs/CSS/CSS_Reference) index

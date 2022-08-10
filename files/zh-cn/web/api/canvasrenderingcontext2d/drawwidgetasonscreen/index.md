@@ -5,37 +5,30 @@ tags:
   - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen
 ---
-<div>{{APIRef}} {{non-standard_header}}</div>
+{{APIRef}} {{non-standard_header}}这个内部使用非标准的 Canvas 2D API 的方法**`CanvasRenderingContext2D.drawWidgetAsOnScreen() 为 Canvas（画布）上的窗口提供了根部件。不像`**{{domxref("CanvasRenderingContext2D.drawWindow", "drawWindow()")}}这个 API，它使用操作系统来获取屏幕上部件的快照而不是从 Gecko 自己的组合中读取
 
-<div>这个内部使用非标准的 Canvas 2D API 的方法<code><strong>CanvasRenderingContext2D.drawWidgetAsOnScreen() 为 Canvas（画布）上的窗口提供了根部件。不像</strong></code>{{domxref("CanvasRenderingContext2D.drawWindow", "drawWindow()")}}这个 API，它使用操作系统来获取屏幕上部件的快照而不是从 Gecko 自己的组合中读取</div>
+这个 API 用在 Web 内容上。它只支持 Windows 系统中 Chrome 进程中使用 OMTC 的小部件
 
-<p> </p>
+## 句法
 
-<p>这个 API 用在 Web 内容上。它只支持 Windows 系统中 Chrome 进程中使用 OMTC 的小部件</p>
+```plain
+void ctx.drawWidgetAsOnScreen(window);
+```
 
-<h2 id="句法">句法</h2>
+### 参数
 
-<pre class="syntaxbox">void <var><em>ctx</em>.</var>drawWidgetAsOnScreen<var>(window);</var>
-</pre>
+- `window`
+  - : {{domxref("Window")}} 提供。
 
-<h3 id="参数">参数</h3>
+## 说明
 
-<dl>
- <dt><code>window</code></dt>
- <dd> {{domxref("Window")}} 提供。</dd>
-</dl>
+不是当前规范或者草案的一部分。这是一个内部使用的无标准的 API.
 
-<h2 id="说明">说明</h2>
-
-<p>不是当前规范或者草案的一部分。这是一个内部使用的无标准的 API.</p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasRenderingContext2D.drawWidgetAsOnScreen")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}。</li>
- <li>{{domxref("CanvasRenderingContext2D.drawWindow()")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}。
+- {{domxref("CanvasRenderingContext2D.drawWindow()")}}

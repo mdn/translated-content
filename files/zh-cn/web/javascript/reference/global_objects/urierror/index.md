@@ -8,55 +8,54 @@ tags:
   - 对象
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>URIError 对象用来表示以一种错误的方式使用全局 URI 处理函数而产生的错误。</p>
+URIError 对象用来表示以一种错误的方式使用全局 URI 处理函数而产生的错误。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new URIError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message</code></dt>
- <dd>选填。易于理解的错误描述。</dd>
- <dt><code>fileName</code> 【非标准内联】</dt>
- <dd>选填。包含造成异常的代码的文件名称。</dd>
- <dt><code>lineNumber</code> 【非标准内联】</dt>
- <dd>选填。造成异常的代码行号。</dd>
-</dl>
+- `message`
+  - : 选填。易于理解的错误描述。
+- `fileName` 【非标准内联】
+  - : 选填。包含造成异常的代码的文件名称。
+- `lineNumber` 【非标准内联】
+  - : 选填。造成异常的代码行号。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>当向全局 URI 处理函数传递一个不合法的 URI 时，URIError 错误会被抛出。</p>
+当向全局 URI 处理函数传递一个不合法的 URI 时，URIError 错误会被抛出。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("URIError.prototype")}}</dt>
- <dd>允许向一个 URIError 对象添加额外的属性。</dd>
-</dl>
+- {{jsxref("URIError.prototype")}}
+  - : 允许向一个 URIError 对象添加额外的属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>虽然全局 URIError 对象没有任何自己的方法，但是它能通过原型链继承一些方法。</p>
+虽然全局 URIError 对象没有任何自己的方法，但是它能通过原型链继承一些方法。
 
-<h2 id="URIError_实例"><code>URIError 实例</code></h2>
+## `URIError 实例`
 
-<h3 id="属性_2">属性</h3>
+### 属性
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', '属性')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', '属性')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', '方法')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', '方法')}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="捕获一个_URIError_实例">捕获一个 <code>URIError 实例</code></h3>
+### 捕获一个 `URIError 实例`
 
-<pre class="brush: js">try {
+```js
+try {
   decodeURIComponent('%');
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -67,11 +66,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 2
   console.log(e.stack);               // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="创建一个_URIError_实例">创建一个 <code>URIError 实例</code></h3>
+### 创建一个 `URIError 实例`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new URIError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof URIError); // true
@@ -82,23 +82,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
   console.log(e.columnNumber);        // 0
   console.log(e.stack);               // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("URIError.prototype")}}</li>
- <li>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</li>
- <li>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("URIError.prototype")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}

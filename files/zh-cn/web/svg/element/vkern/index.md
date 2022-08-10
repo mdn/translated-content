@@ -10,51 +10,45 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/vkern
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>在自上而下的字体中，<code>vkern</code> 元素可以精确地调整两个字符（glyph）间的垂直距离。这个处理被称为<a href="http://en.wikipedia.org/wiki/Kerning">字距处理</a>。</p>
+在自上而下的字体中，`vkern` 元素可以精确地调整两个字符（glyph）间的垂直距离。这个处理被称为[字距处理](http://en.wikipedia.org/wiki/Kerning)。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("u1") }}</li>
- <li>{{ SVGAttr("g1") }}</li>
- <li>{{ SVGAttr("u2") }}</li>
- <li>{{ SVGAttr("g2") }}</li>
- <li>{{ SVGAttr("k") }}</li>
-</ul>
+- {{ SVGAttr("u1") }}
+- {{ SVGAttr("g1") }}
+- {{ SVGAttr("u2") }}
+- {{ SVGAttr("g2") }}
+- {{ SVGAttr("k") }}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了 {{domxref("SVGVKernElement")}} 接口。</p>
+该元素实现了 {{domxref("SVGVKernElement")}} 接口。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("hkern") }}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("hkern") }}
+- [SVG 教程：SVG 字体](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

@@ -3,63 +3,58 @@ title: DataView.prototype.getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getBigUint64()</code></strong> 方法，从 {{jsxref("DataView")}} 的指定偏移量位置获取一个无符号 64 位整数 (unsigned long long)。</p>
+**`getBigUint64()`** 方法，从 {{jsxref("DataView")}} 的指定偏移量位置获取一个无符号 64 位整数 (unsigned long long)。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>dataview</var>.getBigUint64(byteOffset [, littleEndian])</pre>
+```plain
+dataview.getBigUint64(byteOffset [, littleEndian])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>byteOffset</dt>
- <dd>偏移量，按<strong>字节</strong>偏移，从 DataView 读取一个整数</dd>
- <dt>littleEndian</dt>
- <dd>{{optional_inline}} 指出 64 位整数以 {{Glossary("Endianness", "little- or big-endian")}} 类型存储。如果值为 <code>false</code> or <code>undefined</code>, 读取一个大端数值。</dd>
-</dl>
+- byteOffset
+  - : 偏移量，按**字节**偏移，从 DataView 读取一个整数
+- littleEndian
+  - : {{optional_inline}} 指出 64 位整数以 {{Glossary("Endianness", "little- or big-endian")}} 类型存储。如果值为 `false` or `undefined`, 读取一个大端数值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{jsxref("BigInt")}}.</p>
+A {{jsxref("BigInt")}}.
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Thrown if the <code>byteOffset</code> is set such that it would read beyond the end of the view.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Thrown if the `byteOffset` is set such that it would read beyond the end of the view.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>There is no alignment constraint; multi-byte values may be fetched from any offset.</p>
+There is no alignment constraint; multi-byte values may be fetched from any offset.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_getBigUint64_method">Using the <code>getBigUint64</code> method</h3>
+### Using the `getBigUint64` method
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getBigUint64(0); // 0n
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("BigInt")}}

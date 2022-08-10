@@ -10,28 +10,29 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
-<p>{{ APIRef("Geolocation API") }}</p>
+{{ APIRef("Geolocation API") }}
 
-<p><strong><code>Geolocation.getCurrentPosition()</code></strong> 方法用来获取设备当前位置。</p>
+**`Geolocation.getCurrentPosition()`** 方法用来获取设备当前位置。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">navigator.geolocation.getCurrentPosition(<em>success</em>, <em>error</em>, <em>options</em>)</pre>
+```plain
+navigator.geolocation.getCurrentPosition(success, error, options)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>success</em></dt>
- <dd>成功得到位置信息时的回调函数，使用{{domxref("Position")}} 对象作为唯一的参数。 </dd>
- <dt><em>error</em> {{optional_inline}}</dt>
- <dd>获取位置信息失败时的回调函数，使用 {{domxref("PositionError")}} 对象作为唯一的参数，这是一个可选项。 </dd>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>一个可选的{{domxref("PositionOptions")}} 对象。</dd>
-</dl>
+- _success_
+  - : 成功得到位置信息时的回调函数，使用{{domxref("Position")}} 对象作为唯一的参数。
+- _error_ {{optional_inline}}
+  - : 获取位置信息失败时的回调函数，使用 {{domxref("PositionError")}} 对象作为唯一的参数，这是一个可选项。
+- _options_ {{optional_inline}}
+  - : 一个可选的{{domxref("PositionOptions")}} 对象。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0
@@ -51,19 +52,17 @@ function error(err) {
 };
 
 navigator.geolocation.getCurrentPosition(success, error, options);
-</pre>
+```
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Geolocation.getCurrentPosition")}}
 
-<h2 id="请参考">请参考</h2>
+## 请参考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>{{domxref("Navigator.geolocation")}}</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Navigator.geolocation")}}

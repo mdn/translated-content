@@ -7,13 +7,10 @@ tags:
   - css 文本
 translation_of: Web/CSS/hanging-punctuation
 ---
-<div>{{cssref}}</div>
+{{cssref}}**`hanging-punctuation `**CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
 
-<div><strong><code>hanging-punctuation </code></strong>CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。</div>
-
-
-
-<pre class="brush:css no-line-numbers notranslate">/* Keyword values */
+```css
+/* Keyword values */
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
@@ -35,67 +32,62 @@ hanging-punctuation: first allow-end last;
 hanging-punctuation: inherit;
 hanging-punctuation: initial;
 hanging-punctuation: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>这个属性可被指定多个值，可以是一个值，也可以是两个值，或者是三个值。</p>
+这个属性可被指定多个值，可以是一个值，也可以是两个值，或者是三个值。
 
-<ul>
- <li>一个值 语法：在下面列表中的任意一个值。</li>
- <li>两个值 语法：
-  <ul>
-   <li>或者与以下任何一个一起使用，并以它们结尾：last，allow-end 或 force-end</li>
-   <li>或者与以下任何一个一起使用，并以它们开头：first，allow-end 或 force-end。</li>
-  </ul>
- </li>
- <li>三个值 语法：
-  <ul>
-   <li>或者<code>first</code>, <code>allow-end</code>, 和<code>last</code></li>
-   <li>或者 <code>first</code>, <code>force-end</code>, 和 <code>last</code>.</li>
-  </ul>
- </li>
-</ul>
+- 一个值 语法：在下面列表中的任意一个值。
+- 两个值 语法：
 
-<h3 id="取值">取值</h3>
+  - 或者与以下任何一个一起使用，并以它们结尾：last，allow-end 或 force-end
+  - 或者与以下任何一个一起使用，并以它们开头：first，allow-end 或 force-end。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>无悬挂字符。</dd>
- <dt><code>first</code></dt>
- <dd>显示元素的第一个格式化行开头的括号或引号。</dd>
- <dt><code>last</code></dt>
- <dd>显示元素的最后一个格式化行结尾的括号或引号。</dd>
- <dt><code>force-end</code></dt>
- <dd>显示行结尾处的句号或逗号。</dd>
- <dt><code>allow-end</code></dt>
- <dd>如果预先没有其它适合的来适应的，则在行尾显示句号或逗号。</dd>
-</dl>
+- 三个值 语法：
 
-<h3 id="正式语法">正式语法</h3>
+  - 或者`first`, `allow-end`, 和`last`
+  - 或者 `first`, `force-end`, 和 `last`.
+
+### 取值
+
+- `none`
+  - : 无悬挂字符。
+- `first`
+  - : 显示元素的第一个格式化行开头的括号或引号。
+- `last`
+  - : 显示元素的最后一个格式化行结尾的括号或引号。
+- `force-end`
+  - : 显示行结尾处的句号或逗号。
+- `allow-end`
+  - : 如果预先没有其它适合的来适应的，则在行尾显示句号或逗号。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”&lt;/p&gt;</pre>
+```html
+<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   hanging-punctuation: first;
   margin: .5rem;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/css-text-3/#hanging-punctuation-property">CSS Text Module Level 3 (Working Draft, 10-Oct-2013)</a></li>
- <li><a href="https://drafts.csswg.org/css-text-3/#hanging-punctuation-property">CSS Text Module Level 3 (Editor’s Draft, 03-May-2017)</a></li>
-</ul>
+- [CSS Text Module Level 3 (Working Draft, 10-Oct-2013)](https://www.w3.org/TR/css-text-3/#hanging-punctuation-property)
+- [CSS Text Module Level 3 (Editor’s Draft, 03-May-2017)](https://drafts.csswg.org/css-text-3/#hanging-punctuation-property)

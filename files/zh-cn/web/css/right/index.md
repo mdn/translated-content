@@ -3,15 +3,16 @@ title: right
 slug: Web/CSS/right
 translation_of: Web/CSS/right
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>right</code></strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">样式</a>属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。</p>
+**`right`**[样式](https://developer.mozilla.org/zh-CN/docs/Web/CSS)属性定义了定位元素的右外边距边界与其包含块右边界之间的偏移，非定位元素设置此属性无效。
 
-<pre class="brush: css"><code>/* &lt;length&gt; values */
+```css
+/* <length> values */
 right: 3px;
 right: 2.4em;
 
-/* &lt;percentage&gt;s of the width of the containing block */
+/* <percentage>s of the width of the containing block */
 right: 10%;
 
 /* Keyword value */
@@ -20,54 +21,51 @@ right: auto;
 /* Global values */
 right: inherit;
 right: initial;
-right: unset;</code>
-</pre>
+right: unset;
+```
 
-<p><code>right</code>的效果取决于元素的<code>position</code>属性：</p>
+`right`的效果取决于元素的`position`属性：
 
-<ul>
- <li>当<code>position</code>设置为<code>absolute</code>或<code>fixed</code>时，<code>right</code>属性指定了定位元素右外边距边界与其包含块右边界之间的偏移。</li>
- <li>当<code>position</code>设置为<code>relative</code>时，<code>right</code>属性指定了元素的右边界离开其正常位置的偏移。</li>
- <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在 viewport 里面，<code>right</code>属性的效果和 position 为<code>relative</code>等同；如果元素在 viewport 外面，<code>right</code>属性的效果和 position 为<code>fixed</code>等同。</li>
- <li>当<code>position</code>设置为<code>static</code>时，<code>right</code>属性无效。</li>
-</ul>
+- 当`position`设置为`absolute`或`fixed`时，`right`属性指定了定位元素右外边距边界与其包含块右边界之间的偏移。
+- 当`position`设置为`relative`时，`right`属性指定了元素的右边界离开其正常位置的偏移。
+- 当`position`设置为`sticky`时，如果元素在 viewport 里面，`right`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`right`属性的效果和 position 为`fixed`等同。
+- 当`position`设置为`static`时，`right`属性无效。
 
-<p>当{{cssxref("left")}}​​​​​​和 right 同时指定时，元素的位置会被重复指定。当容器是从左到右时，<code>left</code>的值会被优先设定；当容器是从右到左时，<code>right</code>的值会被优先设定。</p>
+当{{cssxref("left")}}​​​​​​ 和 right 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
- <ul>
-  <li>对于<strong>绝对定位的元素</strong>，元素右外边距边界与其包含块右边界之间的偏移。</li>
-  <li>对于<strong>相对定位定位的元素，</strong>元素的右边界离开其正常位置的偏移。</li>
- </ul>
- </dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。</dd>
- <dt><code>auto</code></dt>
- <dd>这个关键字表示：
- <ul>
-  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("left") }}属性为准，如果此时设置<code>width: auto</code>，将基于内容需要的宽度设置宽度；如果<code>left</code>也为<code>auto</code>的话，元素的水平位置就是它假如作为静态 (即 static) 元素时该在的位置。</li>
-  <li>对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("left") }}属性；如果<code>left</code>也为 <code>auto</code>的话，元素将不会有偏移。</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>这个关键字表示该值与其父元素 (可能不是它的包含块) 的计算值相同。对这个计算值的处理将和它原本为 {{cssxref("&lt;length&gt;")}}， {{cssxref("&lt;percentage&gt;")}} 或 <code>auto</code> 一样。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - : 可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
+
+    - 对于**绝对定位的元素**，元素右外边距边界与其包含块右边界之间的偏移。
+    - 对于**相对定位定位的元素，**元素的右边界离开其正常位置的偏移。
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。
+- `auto`
+
+  - : 这个关键字表示：
+
+    - 对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("left") }}属性为准，如果此时设置`width: auto`，将基于内容需要的宽度设置宽度；如果`left`也为`auto`的话，元素的水平位置就是它假如作为静态 (即 static) 元素时该在的位置。
+    - 对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("left") }}属性；如果`left`也为 `auto`的话，元素将不会有偏移。
+
+- `inherit`
+  - : 这个关键字表示该值与其父元素 (可能不是它的包含块) 的计算值相同。对这个计算值的处理将和它原本为 {{cssxref("&lt;length&gt;")}}， {{cssxref("&lt;percentage&gt;")}} 或 `auto` 一样。
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples"><strong>示例</strong></h2>
+## **示例**
 
-<pre class="brush: css; highlight:[16]">#example_3 {
+```css
+#example_3 {
   width: 100px;
   height: 100px;
   background-color: #FFC7E4;
@@ -83,18 +81,20 @@ right: unset;</code>
   position: absolute;
   bottom: 10px;
   right: 20px;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div id="example_3"&gt;Example 3&lt;/div&gt;
-&lt;div id="example_4"&gt;Example 4&lt;/div&gt;
-</pre>
+```html
+<div id="example_3">Example 3</div>
+<div id="example_4">Example 4</div>
+```
 
-<p>{{ EmbedLiveSample('Examples', 500, 220) }}</p>
+{{ EmbedLiveSample('Examples', 500, 220) }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

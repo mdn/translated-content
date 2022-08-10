@@ -3,69 +3,68 @@ title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 translation_of: Web/JavaScript/Reference/Statements/continue
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>continue 声明</strong>终止当前循环或标记循环的当前迭代中的语句执行，并在下一次迭代时继续执行循环。</p>
+**continue 声明**终止当前循环或标记循环的当前迭代中的语句执行，并在下一次迭代时继续执行循环。
 
-<p>{{EmbedInteractiveExample("pages/js/statement-continue.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">continue [ label ];</pre>
+```plain
+continue [ label ];
+```
 
-<dl>
- <dt><code>label</code></dt>
- <dd>标识标号关联的语句</dd>
-</dl>
+- `label`
+  - : 标识标号关联的语句
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>与 {{jsxref("Statements/break", "break")}} 语句的区别在于， continue 并不会终止循环的迭代，而是：</p>
+与 {{jsxref("Statements/break", "break")}} 语句的区别在于， continue 并不会终止循环的迭代，而是：
 
-<ul>
- <li>在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；</li>
-</ul>
+- 在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；
 
-<ul>
- <li>在 {{jsxref("Statements/for", "for")}} 循环中，控制流跳转到更新语句。</li>
-</ul>
+<!---->
 
-<p><code>continue</code> 语句可以包含一个可选的标号以控制程序跳转到指定循环的下一次迭代，而非当前循环。此时要求 <code>continue</code> 语句在对应的循环内部。</p>
+- 在 {{jsxref("Statements/for", "for")}} 循环中，控制流跳转到更新语句。
 
-<h2 id="Examples">示例</h2>
+`continue` 语句可以包含一个可选的标号以控制程序跳转到指定循环的下一次迭代，而非当前循环。此时要求 `continue` 语句在对应的循环内部。
 
-<h3 id="Example_Using_continue_with_while">在 <code>while</code> 语句中使用 <code>continue</code></h3>
+## 示例
 
-<p>下述例子展示了一个在<code>i</code> 为 3 时执行<code>continue</code> 语句的 {{jsxref("Statements/while", "while")}} 循环。因此，<code>n</code> 的值在几次迭代后分别为 1, 3, 7 和 12 ．</p>
+### 在 `while` 语句中使用 `continue`
 
-<pre class="brush: js">i = 0;
+下述例子展示了一个在`i` 为 3 时执行`continue` 语句的 {{jsxref("Statements/while", "while")}} 循环。因此，`n` 的值在几次迭代后分别为 1, 3, 7 和 12 ．
+
+```js
+i = 0;
 n = 0;
-while (i &lt; 5) {
+while (i < 5) {
    i++;
    if (i === 3) {
       continue;
    }
    n += i;
-}</pre>
+}
+```
 
-<h3 id="使用带_label_的_continue">使用带 label 的 continue</h3>
+### 使用带 label 的 continue
 
-<p>在下面的例子中，被标记为 <code>checkiandj</code> 的语句包含一个被标记为 <code>checkj</code> 的语句。当遇到<code>continue</code> 语句时，程序回到 <code>checkj</code> 语句的开始继续执行。每次遇到 <code>continue</code> 时，再次执行 <code>checkj</code> ，直到条件判断返回 false 。之后完成 <code>checkiandj</code> 语句剩下的部分。</p>
+在下面的例子中，被标记为 `checkiandj` 的语句包含一个被标记为 `checkj` 的语句。当遇到`continue` 语句时，程序回到 `checkj` 语句的开始继续执行。每次遇到 `continue` 时，再次执行 `checkj` ，直到条件判断返回 false 。之后完成 `checkiandj` 语句剩下的部分。
 
-<p>但如果 <code>continue</code> 的标号被改为 <code>checkiandj</code> ，那程序将会从 <code>checkiandj</code> 语句的开始继续运行。</p>
+但如果 `continue` 的标号被改为 `checkiandj` ，那程序将会从 `checkiandj` 语句的开始继续运行。
 
-<p>参考 {{jsxref("Statements/label", "label")}} 。</p>
+参考 {{jsxref("Statements/label", "label")}} 。
 
-<pre class="brush: js">var i = 0,
+```js
+var i = 0,
     j = 8;
 
-checkiandj: while (i &lt; 4) {
+checkiandj: while (i < 4) {
    console.log("i: " + i);
    i += 1;
 
-   checkj: while (j &gt; 4) {
+   checkj: while (j > 4) {
       console.log("j: "+ j);
       j -= 1;
       if ((j % 2) == 0)
@@ -74,11 +73,13 @@ checkiandj: while (i &lt; 4) {
    }
    console.log("i = " + i);
    console.log("j = " + j);
-}</pre>
+}
+```
 
-<p>输出：</p>
+输出：
 
-<pre class="brush: js">"i: 0"
+```js
+"i: 0"
 
 // start checkj
 "j: 8"
@@ -102,19 +103,18 @@ checkiandj: while (i &lt; 4) {
 
 "i: 3"
 "i = 4"
-"j = 4"</pre>
+"j = 4"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/label", "label")}}

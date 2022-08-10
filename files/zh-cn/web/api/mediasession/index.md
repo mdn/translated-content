@@ -12,31 +12,28 @@ tags:
   - 音频
 translation_of: Web/API/MediaSession
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p><a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> 的 <strong><code>MediaSession</code></strong> 接口允许页面为标准媒体交互提供自定义行为。</p>
+[Media Session API](/en-US/docs/Web/API/Media_Session_API) 的 **`MediaSession`** 接口允许页面为标准媒体交互提供自定义行为。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("MediaSession.metadata")}}</dt>
- <dd>指向一个 {{domxref("MediaMetadata")}} 的实例，其包含富媒体的元数据。该数据将用于平台显示。</dd>
- <dt>{{domxref("MediaSession.playbackState")}}</dt>
- <dd>展示当前 mediasession 是否处于播放状态。有效值为<code>"none"</code>, <code>"paused"</code>,  <code>"playing"</code>.</dd>
-</dl>
+- {{domxref("MediaSession.metadata")}}
+  - : 指向一个 {{domxref("MediaMetadata")}} 的实例，其包含富媒体的元数据。该数据将用于平台显示。
+- {{domxref("MediaSession.playbackState")}}
+  - : 展示当前 mediasession 是否处于播放状态。有效值为`"none"`, `"paused"`, `"playing"`.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("MediaSession.setActionHandler()")}}</dt>
- <dd>设置一个监听 mediasession 动作 (如 play 或者 pause) 的事件句柄。浏览方法页以获取所有动作的列表。</dd>
-</dl>
+- {{domxref("MediaSession.setActionHandler()")}}
+  - : 设置一个监听 mediasession 动作 (如 play 或者 pause) 的事件句柄。浏览方法页以获取所有动作的列表。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子创建了一个新的 media session，并且给其绑定了一些动作句柄：</p>
+下面的例子创建了一个新的 media session，并且给其绑定了一些动作句柄：
 
-<pre class="brush: js">if ('mediaSession' in navigator){
+```js
+if ('mediaSession' in navigator){
   navigator.mediaSession.metadata = new MediaMetadata({
     title: "Podcast Episode Title",
     artist: "Podcast Host",
@@ -49,11 +46,13 @@ translation_of: Web/API/MediaSession
   navigator.mediaSession.setActionHandler('seekforward', function() {});
   navigator.mediaSession.setActionHandler('previoustrack', function() {});
   navigator.mediaSession.setActionHandler('nexttrack', function() {});
-}</pre>
+}
+```
 
-<p>下面例子为暂停和播放设置了时间句柄：</p>
+下面例子为暂停和播放设置了时间句柄：
 
-<pre class="brush: js">var audio = document.querySelector("#player");
+```js
+var audio = document.querySelector("#player");
 audio.src = "song.mp3";
 
 navigator.mediaSession.setActionHandler('play', play);
@@ -67,12 +66,13 @@ function play() {
 function pause() {
    audio.pause();
    navigator.mediaSession.playbackState = "Paused";
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MediaSession")}}

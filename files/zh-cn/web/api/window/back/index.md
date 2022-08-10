@@ -3,24 +3,24 @@ title: Window.back()
 slug: Web/API/Window/back
 translation_of: Web/API/Window/back
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
-<div>{{ Non-standard_header() }}</div>
+## 总结
 
-<div>{{deprecated_header}}</div>
+跳转窗口到 history 中的前一个地址， 这曾是 Gecko 的方法。请使用标准的 history.back 替代它。
 
-<h2 id="Summary">总结</h2>
+## Syntax
 
-<p>跳转窗口到 history 中的前一个地址， 这曾是 Gecko 的方法。请使用标准的 history.back 替代它。</p>
+```plain
+window.back()
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Example
 
-<pre class="syntaxbox"><code>window.back()</code></pre>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush:js">function goBack() {
+```js
+function goBack() {
    if ( canGoBack ) window.back();
-}</pre>
+}
+```
 
-<h2 id="Specification"> </h2>
+##

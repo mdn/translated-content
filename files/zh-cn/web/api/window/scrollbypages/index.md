@@ -3,36 +3,36 @@ title: window.scrollByPages
 slug: Web/API/Window/scrollByPages
 translation_of: Web/API/Window/scrollByPages
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>在当前文档页面按照指定的页数翻页。</p>
+在当前文档页面按照指定的页数翻页。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">window.scrollByPages(<em>pages</em>)
-</pre>
+```plain
+window.scrollByPages(pages)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>pages</code> 翻页数，正数向下翻，负数向上翻<code>.</code></li>
-</ul>
+- `pages` 翻页数，正数向下翻，负数向上翻`.`
 
-<h3 id="Example"><code>例子</code></h3>
+### `例子`
 
-<pre><code>// 当前文档向下翻一页
+```plain
+// 当前文档向下翻一页
 window.scrollByPages(1);
 
 // 当前文档向上翻一页
 window.scrollByPages(-1);
-</code></pre>
+```
 
-<h3 id="Notes"><code>备注</code></h3>
+### `备注`
 
-<p><code>查看 <a href="/zh-cn/DOM/window.scrollBy">window.scrollBy</a>, <a href="/zh-cn/DOM/window.scrollByLines">window.scrollByLines</a>, <a href="/zh-cn/DOM/window.scroll">window.scroll</a>, <a href="/zh-cn/DOM/window.scrollTo">window.scrollTo</a>.</code></p>
+`查看 window.scrollBy, window.scrollByLines, window.scroll, window.scrollTo.`
 
-<h3 id="Specification"><code>规范</code></h3>
+### `规范`
 
-<p><code>DOM Level 0 不属于任何标准</code></p>
+`DOM Level 0 不属于任何标准`

@@ -7,31 +7,27 @@ tags:
   - HTMLTableElement.rows
 translation_of: Web/API/HTMLTableElement/rows
 ---
-<div>
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}表中所有行的
 
-<div>表中所有行的</div>
-</div>
-</div>
+**`HTMLTableElement.rows`** 只读属性返回表中所有行的一个活的 {{domxref("HTMLCollection")}}。**`HTMLTableElement.rows`** 包括与之相关的{{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} 和 {{HTMLElement("tbody")}} 元素.
 
-<p><code><strong>HTMLTableElement.rows</strong></code> 只读属性返回表中所有行的一个活的 {{domxref("HTMLCollection")}}。<code><strong>HTMLTableElement.rows</strong></code> 包括与之相关的{{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} 和 {{HTMLElement("tbody")}} 元素.</p>
+Although the property is read-only, the returned object is live and allows the modification of its content.
 
-<p>Although the property is read-only, the returned object is live and allows the modification of its content.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```plain
+HTMLCollectionObject = table.rows
+```
 
-<pre class="syntaxbox"><em>HTMLCollectionObject</em> = table.rows</pre>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush:js">myrows = mytable.rows;
+```js
+myrows = mytable.rows;
 firstRow = mytable.rows[0];
-lastRow = mytable.rows[mytable.rows.length-1];</pre>
+lastRow = mytable.rows[mytable.rows.length-1];
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6156016">rows</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506">HTMLcollection</a></li>
-</ul>
+- [rows](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6156016)
+- [HTMLcollection](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)

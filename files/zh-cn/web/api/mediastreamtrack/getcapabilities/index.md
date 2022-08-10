@@ -10,30 +10,30 @@ tags:
   - 媒体 API
 translation_of: Web/API/MediaStreamTrack/getCapabilities
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStreamTrack")}} 接口的 <strong><code>getCapabilities()</code></strong> 方法返回一个  {{domxref('MediaTrackCapabilities')}} 对象，此对象表示每个可调节属性的值或者范围，该特性依赖于平台和{{Glossary("user agent")}}.</p>
+{{domxref("MediaStreamTrack")}} 接口的 **`getCapabilities()`** 方法返回一个 {{domxref('MediaTrackCapabilities')}} 对象，此对象表示每个可调节属性的值或者范围，该特性依赖于平台和{{Glossary("user agent")}}.
 
-<p>一旦你知道了浏览器的功能，你的脚本可以通过调用 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 来请求配置为匹配理想或可接受的设置。参考{{SectionOnPage("/zh-CN/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 以了解受限制属性的具体细节。</p>
+一旦你知道了浏览器的功能，你的脚本可以通过调用 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 来请求配置为匹配理想或可接受的设置。参考{{SectionOnPage("/zh-CN/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 以了解受限制属性的具体细节。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>capabilities</em> = <em>MediaStreamTrack</em>.getCapabilities();</pre>
+```plain
+var capabilities = MediaStreamTrack.getCapabilities();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>没有参数。</p>
+没有参数。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties.</p>
+A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.MediaStreamTrack.getCapabilities")}}</p>
+{{Compat("api.MediaStreamTrack.getCapabilities")}}

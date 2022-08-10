@@ -5,31 +5,31 @@ tags:
   - API
 translation_of: Web/API/HTMLElement/contextMenu
 ---
-<div>{{APIRef("HTML DOM")}}{{deprecated_header()}}</div>
+{{APIRef("HTML DOM")}}{{deprecated_header()}}
 
-<p><code><strong>HTMLElement.contextMenu</strong></code> 特性指的是某一元素用{{htmlattrxref("contextmenu")}} 特性所创建的右键快捷菜单。该菜单本身源于 {{HTMLElement("menu")}} 元素所构建。</p>
+**`HTMLElement.contextMenu`** 特性指的是某一元素用{{htmlattrxref("contextmenu")}} 特性所创建的右键快捷菜单。该菜单本身源于 {{HTMLElement("menu")}} 元素所构建。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>elementContextMenu</var> = <var>element</var>.contextMenu;
-</pre>
+```plain
+var elementContextMenu = element.contextMenu;
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var contextMenu = document.getElementById("element").contextMenu;
+```js
+var contextMenu = document.getElementById("element").contextMenu;
 
 // 修改条目 1 的标签
 contextMenu.firstElementChild.label = "New label";
-</pre>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLElement.contextMenu")}}</p>
+{{Compat("api.HTMLElement.contextMenu")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{htmlattrxref("contextmenu")}}</li>
- <li>{{HTMLElement("menu")}}</li>
- <li>{{HTMLElement("menuitem")}}</li>
-</ul>
+- {{htmlattrxref("contextmenu")}}
+- {{HTMLElement("menu")}}
+- {{HTMLElement("menuitem")}}

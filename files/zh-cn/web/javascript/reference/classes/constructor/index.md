@@ -7,33 +7,36 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p><strong> <code>constructor </code></strong>是一种用于创建和初始化<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a></code>创建的对象的特殊方法。</p>
+**`constructor `**是一种用于创建和初始化[`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。
 
-<p>{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}</p>
+{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">constructor([arguments]) { ... }</pre>
+```plain
+constructor([arguments]) { ... }
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>在一个类中只能有一个名为 “constructor” 的特殊方法。 一个类中出现多次构造函数 (<code>constructor)</code>方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。</p>
+在一个类中只能有一个名为 “constructor” 的特殊方法。 一个类中出现多次构造函数 (`constructor)`方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。
 
-<p>在一个构造方法中可以使用<code>super</code>关键字来调用一个父类的构造方法。</p>
+在一个构造方法中可以使用`super`关键字来调用一个父类的构造方法。
 
-<p>如果没有显式指定构造方法，则会添加默认的 constructor 方法。</p>
+如果没有显式指定构造方法，则会添加默认的 constructor 方法。
 
-<p>如果不指定一个构造函数 (constructor) 方法，则使用一个默认的构造函数 (constructor)。</p>
+如果不指定一个构造函数 (constructor) 方法，则使用一个默认的构造函数 (constructor)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用constructor方法">使用<code>constructor</code>方法</h3>
+### 使用`constructor`方法
 
-<p>以下代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">类的实例</a>（<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线 demo</a>）。</p>
+以下代码片段来自 [类的实例](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)（[在线 demo](https://googlechrome.github.io/samples/classes-es6/index.html)）。
 
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
     constructor(length) {
         // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
         super(length, length);
@@ -50,14 +53,14 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
         this._area = value;
     }
 }
+```
 
-</pre>
+### 另一个例子
 
-<h3 id="另一个例子">另一个例子</h3>
+看看这个代码片段
 
-<p>看看这个代码片段</p>
-
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
     constructor() {
         this.name = "Polygon";
     }
@@ -78,35 +81,37 @@ console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //
 
 let newInstance = new Square();
 console.log(newInstance.name); //Polygon
-</pre>
+```
 
-<p>这里，<strong>Square</strong>类的原型被改变，但是在正在创建一个新的正方形实例时，仍然调用前一个基类<strong>Polygon</strong>的构造函数。</p>
+这里，**Square**类的原型被改变，但是在正在创建一个新的正方形实例时，仍然调用前一个基类**Polygon**的构造函数。
 
-<h3 id="默认构造方法">默认构造方法</h3>
+### 默认构造方法
 
-<p>如前所述，如果不指定构造方法，则使用默认构造函数。对于基类，默认构造函数是：</p>
+如前所述，如果不指定构造方法，则使用默认构造函数。对于基类，默认构造函数是：
 
-<pre class="brush: js">constructor() {}</pre>
+```js
+constructor() {}
+```
 
-<p>对于派生类，默认构造函数是：</p>
+对于派生类，默认构造函数是：
 
-<pre class="brush: js">constructor(...args) {
+```js
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [super()](/en-US/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

@@ -3,40 +3,36 @@ title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 translation_of: Web/API/DataTransferItemList
 ---
-<p>{{APIRef("HTML Drag and Drop API")}}</p>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><code><strong>DataTransferItemList</strong></code> 对象是一组代表被拖动项的{{domxref("DataTransferItem")}} 对象的列表。在拖动操作期间，每个{{domxref("DragEvent")}} 都有一个 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，该属性是 <code>DataTransferItemList</code>.</p>
+**`DataTransferItemList`** 对象是一组代表被拖动项的{{domxref("DataTransferItem")}} 对象的列表。在拖动操作期间，每个{{domxref("DragEvent")}} 都有一个 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，该属性是 `DataTransferItemList`.
 
-<p>该接口没有构造函数</p>
+该接口没有构造函数
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("DataTransferItemList.length")}} {{readonlyInline}}</dt>
- <dd> <code>无符号长整型</code> ：列表中拖动项的数量。</dd>
-</dl>
+- {{domxref("DataTransferItemList.length")}} {{readonlyInline}}
+  - : `无符号长整型` ：列表中拖动项的数量。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("DataTransferItemList.add()")}}</dt>
- <dd>向拖动项列表中添加新项 ({{domxref("File")}}对象或{{domxref("DOMString","string")}})，该方法返回一个 {{domxref("DataTransferItem")}} 对象。</dd>
- <dt>{{domxref("DataTransferItemList.remove()")}}</dt>
- <dd>根据索引删除拖动项列表中的对象。</dd>
- <dt>{{domxref("DataTransferItemList.clear()")}}</dt>
- <dd>清空拖动项列表。</dd>
- <dt>{{domxref("DataTransferItemList.DataTransferItem()")}}</dt>
- <dd>取值方法：返回给定下标的{{domxref("DataTransferItem")}}对象。</dd>
-</dl>
+- {{domxref("DataTransferItemList.add()")}}
+  - : 向拖动项列表中添加新项 ({{domxref("File")}}对象或{{domxref("DOMString","string")}})，该方法返回一个 {{domxref("DataTransferItem")}} 对象。
+- {{domxref("DataTransferItemList.remove()")}}
+  - : 根据索引删除拖动项列表中的对象。
+- {{domxref("DataTransferItemList.clear()")}}
+  - : 清空拖动项列表。
+- {{domxref("DataTransferItemList.DataTransferItem()")}}
+  - : 取值方法：返回给定下标的{{domxref("DataTransferItem")}}对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>每个方法或属性都有其引用页面，每一个引用页对应也有使用示例。</p>
+每个方法或属性都有其引用页面，每一个引用页对应也有使用示例。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

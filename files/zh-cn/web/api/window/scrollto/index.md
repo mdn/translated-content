@@ -3,54 +3,50 @@ title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
 translation_of: Web/API/Window/scrollTo
 ---
-<div>{{ APIRef }}</div>
+{{ APIRef }}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p>滚动到文档中的某个坐标。</p>
+滚动到文档中的某个坐标。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="notranslate"><code>window.scrollTo(x<em>-coord</em>,<em>y-coord</em> )</code>
+```plain
+window.scrollTo(x-coord,y-coord )
 
-<code>window.scrollTo(options)</code></pre>
+window.scrollTo(options)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>x-coord</code> 是文档中的横轴坐标。</li>
- <li><code>y-coord</code> 是文档中的纵轴坐标。</li>
- <li><code>options</code> 是一个包含三个属性的对象：</li>
-</ul>
+- `x-coord` 是文档中的横轴坐标。
+- `y-coord` 是文档中的纵轴坐标。
+- `options` 是一个包含三个属性的对象：
 
-<ol>
- <li><code><em>top</em></code> 等同于  <code><em>y-coord</em></code></li>
- <li>left 等同于  <code>x<em>-coord</em></code></li>
- <li><code><em>behavior</em></code><em>  类型 String，表示滚动行为，支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值 auto</em></li>
-</ol>
+1.  `top` 等同于 `y-coord`
+2.  left 等同于 `x-coord`
+3.  `behavior` _类型 String，表示滚动行为，支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值 auto_
 
-<dl>
-</dl>
+## 例子
 
-<h2 id="Example">例子</h2>
+```plain
+window.scrollTo( 0, 1000 );
 
-<pre class="notranslate">window.scrollTo( 0, 1000 );
-
-<code>// 设置滚动行为改为平滑的滚动
+// 设置滚动行为改为平滑的滚动
 window.scrollTo({
     top: 1000,
     behavior: "smooth"
-});</code>
-</pre>
+});
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>该函数实际上和 <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a>是一样的。 相对滚动可以参考 <a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a>，<a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>，和 <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a>。</p>
+该函数实际上和 [window.scroll](/en-US/docs/DOM/Window.scroll)是一样的。 相对滚动可以参考 [window.scrollBy](/en-US/docs/DOM/Window.scrollBy)，[window.scrollByLines](/en-US/docs/DOM/Window.scrollByLines)，和 [window.scrollByPages](/en-US/docs/DOM/Window.scrollByPages)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

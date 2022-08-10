@@ -6,66 +6,66 @@ tags:
   - viewport
 translation_of: Web/API/WebGLRenderingContext/viewport
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.viewport()</code></strong> 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.viewport()`** 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>void gl</em>.viewport</var><var>(x, y, width, height);</var>
-</pre>
+```plain
+void gl.viewport(x, y, width, height);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>{{domxref("GLint")}}，用来设定视口的左下角水平坐标。默认值：0。</dd>
- <dt><code>y</code></dt>
- <dd>{{domxref("GLint")}}，用来设定视口的左下角垂直坐标。默认值：0。</dd>
- <dt>width</dt>
- <dd>非负数{{domxref("Glsizei")}}，用来设定视口的宽度。默认值：canvas 的宽度。</dd>
- <dt>height</dt>
- <dd>非负数{{domxref("Glsizei")}}，用来设定视口的高度。默认值：canvas 的高度。</dd>
-</dl>
+- `x`
+  - : {{domxref("GLint")}}，用来设定视口的左下角水平坐标。默认值：0。
+- `y`
+  - : {{domxref("GLint")}}，用来设定视口的左下角垂直坐标。默认值：0。
+- width
+  - : 非负数{{domxref("Glsizei")}}，用来设定视口的宽度。默认值：canvas 的宽度。
+- height
+  - : 非负数{{domxref("Glsizei")}}，用来设定视口的高度。默认值：canvas 的高度。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h3 id="异常错误">异常错误</h3>
+### 异常错误
 
-<p>只要宽度或高度有一个为负值，<code>gl.INVALID_VALUE</code> 错误将被抛出。</p>
+只要宽度或高度有一个为负值，`gl.INVALID_VALUE` 错误将被抛出。
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<p>当你第一次创建 WebGL 上下文的时候，视口的大小将和 canvas 的大小是匹配的。然而，如果你重新改变了 canvas 的大小，你需要告诉 WebGL 上下文设定新的视口。在这里，你可以使用<code>gl.viewport。</code></p>
+当你第一次创建 WebGL 上下文的时候，视口的大小将和 canvas 的大小是匹配的。然而，如果你重新改变了 canvas 的大小，你需要告诉 WebGL 上下文设定新的视口。在这里，你可以使用`gl.viewport。`
 
-<pre class="brush: js">gl.viewport(0, 0, canvas.width, canvas.height);
-</pre>
+```js
+gl.viewport(0, 0, canvas.width, canvas.height);
+```
 
-<p>视口的宽度和高度的设定范围是依赖于底层如何实现的。如果你要获取这个范围，你可以查询<code>MAX_VIEWPORT_DIMS</code> 常量，它将返回 {{jsxref("Int32Array")}}。</p>
+视口的宽度和高度的设定范围是依赖于底层如何实现的。如果你要获取这个范围，你可以查询`MAX_VIEWPORT_DIMS` 常量，它将返回 {{jsxref("Int32Array")}}。
 
-<pre class="brush: js">gl.getParameter(gl.MAX_VIEWPORT_DIMS);
+```js
+gl.getParameter(gl.MAX_VIEWPORT_DIMS);
 // e.g. Int32Array[16384, 16384]
-</pre>
+```
 
-<p>如果要获取当前的视口，则可以查询<code>VIEWPORT</code> 常量。</p>
+如果要获取当前的视口，则可以查询`VIEWPORT` 常量。
 
-<pre class="brush: js">gl.getParameter(gl.VIEWPORT);
+```js
+gl.getParameter(gl.VIEWPORT);
 // e.g. Int32Array[0, 0, 640, 480]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.viewport")}}</p>
+{{Compat("api.WebGLRenderingContext.viewport")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.scissor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.scissor()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

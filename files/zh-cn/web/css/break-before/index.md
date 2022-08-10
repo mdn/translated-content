@@ -5,11 +5,12 @@ tags:
   - break-before
 translation_of: Web/CSS/break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The<strong> <code>break-before</code></strong> <a href="/en-US/docs/CSS">CSS</a> 属性定义页面，列或区域在生成的盒子之前应如何处理中断。如果没有生成的盒子，则忽略该属性。</p>
+The** `break-before`** [CSS](/en-US/docs/CSS) 属性定义页面，列或区域在生成的盒子之前应如何处理中断。如果没有生成的盒子，则忽略该属性。
 
-<pre class="brush:css">/* Generic break values */
+```css
+/* Generic break values */
 break-before: auto;
 break-before: avoid;
 
@@ -34,85 +35,71 @@ break-before: region;
 break-before: inherit;
 break-before: initial;
 break-before: unset;
-</pre>
+```
 
-<p>Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the <code>break-before</code> value of the next element, and the {{cssxref("break-inside")}} value of the containing element.</p>
+Each possible break point (in other words, each element boundary) is affected by three properties: the {{cssxref("break-after")}} value of the previous element, the `break-before` value of the next element, and the {{cssxref("break-inside")}} value of the containing element.
 
-<p>To determine if a break must be done, the following rules are applied:</p>
+To determine if a break must be done, the following rules are applied:
 
-<ol>
- <li>If any of the three concerned values is a <em>forced break value</em> (<code>always</code>, <code>left</code>, <code>right</code>, <code>page</code>, <code>column</code>, or <code>region</code>), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the <code>break-before</code> value has precedence over the <code>break-after</code> value, which itself has precedence over the <code>break-inside</code> value).</li>
- <li>If any of the three concerned values is an <em>avoid break value</em> (<code>avoid</code>, <code>avoid-page</code>, <code>avoid-region</code>, or <code>avoid-column</code>), no such break will be applied at that point.</li>
-</ol>
+1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
+2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
-<p>Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding avoid value.</p>
+Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding avoid value.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>break-before</code> property is specified as one of the keyword values from the list below.</p>
+The `break-before` property is specified as one of the keyword values from the list below.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<h4 id="General_break_values">General break values</h4>
+#### General break values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Allows, but does not force, any break (page, column, or region) to be inserted right before the principal box.</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoids any break (page, column, or region) from being inserted right before the principal box.</dd>
-</dl>
+- `auto`
+  - : Allows, but does not force, any break (page, column, or region) to be inserted right before the principal box.
+- `avoid`
+  - : Avoids any break (page, column, or region) from being inserted right before the principal box.
 
-<h4 id="Page_break_values">Page break values</h4>
+#### Page break values
 
-<dl>
- <dt><code>avoid-page</code></dt>
- <dd>Avoids any page break right before the principal box.</dd>
- <dt><code>page</code></dt>
- <dd>Forces a page break right before the principal box.</dd>
- <dt><code>always</code></dt>
- <dd>Forces a page break right before the principal box. (This is an alias of <code>page</code>, and has been kept to facilitate the transition from {{cssxref("page-break-after")}}, which is a subset of this property.)</dd>
- <dt><code>left</code></dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a left page.</dd>
- <dt><code>right</code></dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a right page.</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a left right in a right-to-left spread.)</dd>
-</dl>
+- `avoid-page`
+  - : Avoids any page break right before the principal box.
+- `page`
+  - : Forces a page break right before the principal box.
+- `always`
+  - : Forces a page break right before the principal box. (This is an alias of `page`, and has been kept to facilitate the transition from {{cssxref("page-break-after")}}, which is a subset of this property.)
+- `left`
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a left page.
+- `right`
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a right page.
+- `recto` {{experimental_inline}}
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
+- `verso` {{experimental_inline}}
+  - : Forces one or two page breaks right before the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a left right in a right-to-left spread.)
 
-<h4 id="Column_break_values">Column break values</h4>
+#### Column break values
 
-<dl>
- <dt><code>avoid-column</code></dt>
- <dd>Avoids any column break right before the principal box.</dd>
- <dt><code>column</code></dt>
- <dd>Forces a column break right before the principal box.</dd>
-</dl>
+- `avoid-column`
+  - : Avoids any column break right before the principal box.
+- `column`
+  - : Forces a column break right before the principal box.
 
-<h4 id="Region_break_values">Region break values</h4>
+#### Region break values
 
-<dl>
- <dt><code>avoid-region</code> {{experimental_inline}}</dt>
- <dd>Avoids any region break right before the principal box.</dd>
- <dt><code>region</code> {{experimental_inline}}</dt>
- <dd>Forces a region break right before the principal box.</dd>
-</dl>
+- `avoid-region` {{experimental_inline}}
+  - : Avoids any region break right before the principal box.
+- `region` {{experimental_inline}}
+  - : Forces a region break right before the principal box.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-
-<p>{{Compat("css.properties.break-before")}}</p>
-</div>
+{{Compat("css.properties.break-before")}}

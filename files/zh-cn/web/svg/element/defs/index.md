@@ -7,60 +7,57 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/defs
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG 允许我们定义以后需要重复使用的图形元素。 建议把所有需要再次使用的引用元素定义在<code>defs</code>元素里面。这样做可以增加 SVG 内容的易读性和可访问性。 在<code>defs</code>元素中定义的图形元素不会直接呈现。 你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。</p>
+SVG 允许我们定义以后需要重复使用的图形元素。 建议把所有需要再次使用的引用元素定义在`defs`元素里面。这样做可以增加 SVG 内容的易读性和可访问性。 在`defs`元素中定义的图形元素不会直接呈现。 你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```xml
+<svg width="80px" height="30px" viewBox="0 0 80 30"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient01"&gt;
-      &lt;stop offset="20%" stop-color="#39F" /&gt;
-      &lt;stop offset="90%" stop-color="#F3F" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="Gradient01">
+      <stop offset="20%" stop-color="#39F" />
+      <stop offset="90%" stop-color="#F3F" />
+    </linearGradient>
+  </defs>
 
-  &lt;rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  /&gt;
-&lt;/svg&gt;
-</pre>
+  <rect x="10" y="10" width="60" height="10"
+        fill="url(#Gradient01)"  />
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>没有专有属性</em></p>
+_没有专有属性_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>这个元素实现了<code><a href="/en/DOM/SVGDefsElement">SVGDefsElement</a></code> 接口。</p>
+这个元素实现了[`SVGDefsElement`](/en/DOM/SVGDefsElement) 接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.defs")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("use") }}</li>
-</ul>
+- {{ SVGElement("use") }}

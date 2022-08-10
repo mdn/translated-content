@@ -10,30 +10,30 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>values()</strong></code> 方法按照元素插入顺序返回一个具有 <code>Set</code> 对象每个元素值的全新 <code>Iterator</code> 对象。</p>
+**`values()`** 方法按照元素插入顺序返回一个具有 `Set` 对象每个元素值的全新 `Iterator` 对象。
 
-<p><strong><code>keys()</code></strong> 方法是这个方法的别名（与 {{jsxref("Map")}} 对象相似）；他们的行为一致，都是返回<code>Set</code> 对象中的元素值。</p>
+**`keys()`** 方法是这个方法的别名（与 {{jsxref("Map")}} 对象相似）；他们的行为一致，都是返回`Set` 对象中的元素值。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
+## 语法
 
+```plain
+mySet.values();
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><em>mySet</em>.values();
-</code></pre>
+按照元素插入顺序返回一个包含给定的 `Set` 对象中每个元素值的全新 **`Iterator`** 对象。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>按照元素插入顺序返回一个包含给定的 <code>Set</code> 对象中每个元素值的全新 <code><strong>Iterator</strong></code> 对象。</p>
+### 使用 `values()`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_values">使用 <code>values()</code></h3>
-
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 mySet.add('bar');
 mySet.add('baz');
@@ -42,20 +42,17 @@ var setIter = mySet.values();
 
 console.log(setIter.next().value); // "foo"
 console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"</pre>
+console.log(setIter.next().value); // "baz"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}

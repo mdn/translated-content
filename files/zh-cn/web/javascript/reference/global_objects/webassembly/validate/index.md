@@ -3,54 +3,53 @@ title: WebAssembly.validate()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.validate()</code></strong> 方法用于验证包含 WebAssembly 二进制码的一个 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 是否合法，返回 <code>true</code> 如果这些字节能构成一个合法的 wasm 模块，否则返回 <code>false</code>。</p>
+**`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">WebAssembly.validate(bufferSource);</pre>
+```plain
+WebAssembly.validate(bufferSource);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>bufferSource</code></dt>
- <dd>一个包含 WebAssembly 二进制码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 或 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>。</dd>
-</dl>
+- `bufferSource`
+  - : 一个包含 WebAssembly 二进制码的 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个布尔值，用来表示给定的 <code>bufferSource</code> 是合法 wasm 代码（<code>true</code>）或者不是（<code>false</code>）。</p>
+一个布尔值，用来表示给定的 `bufferSource` 是合法 wasm 代码（`true`）或者不是（`false`）。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果给定的 <code>bufferSource</code> 不是 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> 或 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a> 类型，将会抛出 {{jsxref("TypeError")}} 异常。</p>
+如果给定的 `bufferSource` 不是 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 类型，将会抛出 {{jsxref("TypeError")}} 异常。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子（查看 validate.html <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html">源代码</a>，或者<a href="https://mdn.github.io/webassembly-examples/js-api-examples/validate.html">在线预览</a>）通过 <code>fetch</code> 获取了一个 .wasm 模块并将其转换为一个 typed array。接下来用 <code>validate()</code> 方法来验证这个模块是否合法。</p>
+下面的例子（查看 validate.html [源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)，或者[在线预览](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)）通过 `fetch` 获取了一个 .wasm 模块并将其转换为一个 typed array。接下来用 `validate()` 方法来验证这个模块是否合法。
 
-<pre class="brush: js">fetch('simple.wasm').then(response =&gt;
+```js
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
 ).then(function(bytes) {
   var valid = WebAssembly.validate(bytes);
   console.log("The given bytes are "
     + (valid ? "" : "not ") + "a valid wasm module");
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

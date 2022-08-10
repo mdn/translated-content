@@ -3,94 +3,71 @@ title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-<p><strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
-</div>
+**`deleteObjectStore()`** 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。
 
-<p>与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法<em>只能</em>在<a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a>事务中调用。</p>
+与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE)事务中调用。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>dbInstance</em>.deleteObjectStore(<em>name</em>);</pre>
+```plain
+dbInstance.deleteObjectStore(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>将要删除的对象存储的名字</dd>
-</dl>
+- `name`
+  - : 将要删除的对象存储的名字
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>此方法可能会引发下列 {{domxref("DOMException")}}  异常：</p>
+此方法可能会引发下列 {{domxref("DOMException")}} 异常：
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>Occurs if the method was not called from a <code>versionchange</code> transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.</td>
-  </tr>
-  <tr>
-   <td><code>TransactionInactiveError</code></td>
-   <td>Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an <code>InvalidStateError</code> was raised in this case as well, which was misleading; this has now been fixed (see {{Bug("1176165")}}.)</td>
-  </tr>
-  <tr>
-   <td><code>NotFoundError</code></td>
-   <td>You are trying to delete an object store that does not exist. Names are case sensitive.</td>
-  </tr>
- </tbody>
-</table>
+| Exception                  | Description                                                                                                                                                                                                                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                |
+| `TransactionInactiveError` | Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an `InvalidStateError` was raised in this case as well, which was misleading; this has now been fixed (see {{Bug("1176165")}}.) |
+| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                          |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var dbName = "sampleDB";
+```js
+var dbName = "sampleDB";
 var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
 request.onupgradeneeded = function(e) {
   var db = request.result;
-  if (e.oldVersion &lt; 1) {
+  if (e.oldVersion < 1) {
     db.createObjectStore("store1");
   }
 
-  if (e.oldVersion &lt; 2) {
+  if (e.oldVersion < 2) {
     db.deleteObjectStore("store1");
     db.createObjectStore("store2");
   }
 
-  // etc. for version &lt; 3, 4...
-};</pre>
+  // etc. for version < 3, 4...
+};
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

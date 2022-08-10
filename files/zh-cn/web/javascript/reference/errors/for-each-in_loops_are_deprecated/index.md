@@ -5,117 +5,128 @@ tags:
   - Warning
 translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+## 消息
 
-<pre class="syntaxbox">警告: JavaScript 1.6's 版本的 for-each-in 遍历不再赞成使用; 建议用 ES6 的 for-of 替换
-</pre>
+```plain
+警告: JavaScript 1.6's 版本的 for-each-in 遍历不再赞成使用; 建议用 ES6 的 for-of 替换
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>警告</p>
+警告
 
-<h2 id="出了什么问题">出了什么问题？</h2>
+## 出了什么问题？
 
-<p>JavaScript 1.6's {{jsxref("Statements/for_each...in", "for each (variable in obj)")}}语法不赞成使用，将在未来版本移除它。</p>
+JavaScript 1.6's {{jsxref("Statements/for_each...in", "for each (variable in obj)")}}语法不赞成使用，将在未来版本移除它。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<h3 id="遍历对象">遍历对象</h3>
+### 遍历对象
 
-<p>{{jsxref("Statements/for_each...in", "for each...in")}} 用来遍历指定对象。</p>
+{{jsxref("Statements/for_each...in", "for each...in")}} 用来遍历指定对象。
 
-<h4 id="不赞成这么使用">不赞成这么使用</h4>
+#### 不赞成这么使用
 
-<div class="warning">
-<p><strong>警告：</strong></p>
-<pre class="brush: js example-bad">var object = { a: 10, b: 20 };</pre>
+> **警告：**
+>
+> ```js example-bad
+> var object = { a: 10, b: 20 };
+> ```
+>
+> ```js example-bad
+> for each (var x in object) {
+>    console.log(x);        // 10
+>                           // 20
+>  }
+> ```
 
-<pre class="brush: js example-bad">for each (var x in object) {
-   console.log(x);        // 10
-                          // 20
- }
-</pre>
-</div>
+#### 替换语法
 
-<h4 id="替换语法">替换语法</h4>
+你可以使用 {{jsxref("Statements/for...in", "for...in")}} 遍历指定对象，获取每次循环的值：
 
-<p>你可以使用 {{jsxref("Statements/for...in", "for...in")}} 遍历指定对象，获取每次循环的值：</p>
-
-<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+```js example-good
+var object = { a: 10, b: 20 };
 
 for (var key in object) {
   var x = object[key];
   console.log(x);        // 10
                          // 20
 }
-</pre>
+```
 
-<p>也可以使用{jsxref("Statements/for...of", "for...of")}} (ES2015) 和 {{jsxref("Object.values")}} (ES2017), 你可以获取指定对象的值得数组然后像这样遍历它：</p>
+也可以使用{jsxref("Statements/for...of", "for...of")}} (ES2015) 和 {{jsxref("Object.values")}} (ES2017), 你可以获取指定对象的值得数组然后像这样遍历它：
 
-<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+```js example-good
+var object = { a: 10, b: 20 };
 
 for (var x of Object.values(object)) {
   console.log(x);        // 10
                          // 20
 }
-</pre>
+```
 
-<h3 id="数组遍历">数组遍历</h3>
+### 数组遍历
 
-<p>{{jsxref("Statements/for_each...in", "for each...in")}} 被用于遍历制定数组。</p>
+{{jsxref("Statements/for_each...in", "for each...in")}} 被用于遍历制定数组。
 
-<h4 id="不赞成这么使用_2">不赞成这么使用</h4>
+#### 不赞成这么使用
 
-<div class="warning">
-<p><strong>警告：</strong></p>
-<pre class="brush: js example-bad">var array = [10, 20, 30];</pre>
+> **警告：**
+>
+> ```js example-bad
+> var array = [10, 20, 30];
+> ```
+>
+> ```js example-bad
+> for each (var x in array) {
+>    console.log(x);        // 10
+>                           // 20
+>                           // 30
+>  }
+> ```
 
-<pre class="brush: js example-bad">for each (var x in array) {
-   console.log(x);        // 10
-                          // 20
-                          // 30
- }</pre>
-</div>
+#### 替换语法
 
-<h4 id="替换语法_2">替换语法</h4>
+现在最好用{{jsxref("Statements/for...of", "for...of")}} (ES2015) 替换
 
-<p>现在最好用{{jsxref("Statements/for...of", "for...of")}} (ES2015) 替换</p>
-
-<pre class="brush: js example-good">var array = [10, 20, 30];
+```js example-good
+var array = [10, 20, 30];
 
 for (var x of array) {
   console.log(x);        // 10
                          // 20
                          // 30
 }
-</pre>
+```
 
-<h3 id="遍历一个空数组">遍历一个空数组</h3>
+### 遍历一个空数组
 
-<p>{{jsxref("Statements/for_each...in", "for each...in")}} 如果指定值是 <code>null</code> o 或 <code>undefined 什么都遍历不出来。</code> {{jsxref("Statements/for...of", "for...of")}} 在这种情况会抛出异常。</p>
+{{jsxref("Statements/for_each...in", "for each...in")}} 如果指定值是 `null` o 或 `undefined 什么都遍历不出来。` {{jsxref("Statements/for...of", "for...of")}} 在这种情况会抛出异常。
 
-<h4 id="不赞成这么使用_3">不赞成这么使用</h4>
+#### 不赞成这么使用
 
-<div class="warning">
-<p><strong>警告：</strong></p>
-<pre class="brush: js example-bad">function func(array) {
-   for each (var x in array) {
-     console.log(x);
-   }
- }
- func([10, 20]);        // 10
-                        // 20
- func(null);            // prints nothing
- func(undefined);       // prints nothing</pre>
-</div>
+> **警告：**
+>
+> ```js example-bad
+> function func(array) {
+>    for each (var x in array) {
+>      console.log(x);
+>    }
+>  }
+>  func([10, 20]);        // 10
+>                         // 20
+>  func(null);            // prints nothing
+>  func(undefined);       // prints nothing
+> ```
 
-<h4 id="替换语法_3">替换语法</h4>
+#### 替换语法
 
-<p>用{{jsxref("Statements/for...of", "for...of")}} 重写{{jsxref("Statements/for_each...in", "for each...in")}} 后值可以为 <code>null</code> 和 <code>undefined</code>  ，同时你需要警惕{{jsxref("Statements/for...of", "for...of")}}抛出的异常。</p>
+用{{jsxref("Statements/for...of", "for...of")}} 重写{{jsxref("Statements/for_each...in", "for each...in")}} 后值可以为 `null` 和 `undefined` ，同时你需要警惕{{jsxref("Statements/for...of", "for...of")}}抛出的异常。
 
-<pre class="brush: js example-good">function func(array) {
+```js example-good
+function func(array) {
   if (array) {
     for (var x of array) {
       console.log(x);
@@ -126,51 +137,54 @@ func([10, 20]);        // 10
                        // 20
 func(null);            // prints nothing
 func(undefined);       // prints nothing
-</pre>
+```
 
-<h3 id="遍历对象键值对">遍历对象键值对</h3>
+### 遍历对象键值对
 
-<h4 id="不赞成这么使用_4">不赞成这么使用</h4>
+#### 不赞成这么使用
 
-<p> 不赞成使用{{jsxref("Statements/for_each...in", "for each...in")}}和{{jsxref("Iterator")}} 对象来遍历指定对象的键值对。</p>
+不赞成使用{{jsxref("Statements/for_each...in", "for each...in")}}和{{jsxref("Iterator")}} 对象来遍历指定对象的键值对。
 
-<div class="warning">
-<p><strong>警告：</strong></p>
-<pre class="brush: js example-bad">var object = { a: 10, b: 20 };</pre>
+> **警告：**
+>
+> ```js example-bad
+> var object = { a: 10, b: 20 };
+> ```
+>
+> ```js example-bad
+> for each (var [key, value] in Iterator(object)) {
+>    console.log(key, value);  // "a", 10
+>                              // "b", 20
+>  }
+> ```
 
-<pre class="brush: js example-bad">for each (var [key, value] in Iterator(object)) {
-   console.log(key, value);  // "a", 10
-                             // "b", 20
- }</pre>
-</div>
+#### 替换语法
 
-<h4 id="替换语法_4">替换语法</h4>
+你可以使用 {{jsxref("Statements/for...in", "for...in")}} 遍历指定对象，获取每次循环的值：
 
-<p>你可以使用 {{jsxref("Statements/for...in", "for...in")}} 遍历指定对象，获取每次循环的值：</p>
-
-<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+```js example-good
+var object = { a: 10, b: 20 };
 
 for (var key in object) {
   var value = object[key];
   console.log(key, value);  // "a", 10
                             // "b", 20
 }
-</pre>
+```
 
-<p>也可以使用{jsxref("Statements/for...of", "for...of")}} (ES2015) 和 {{jsxref("Object.values")}} (ES2017), 你可以获取指定对象的值得数组然后像这样遍历它：</p>
+也可以使用{jsxref("Statements/for...of", "for...of")}} (ES2015) 和 {{jsxref("Object.values")}} (ES2017), 你可以获取指定对象的值得数组然后像这样遍历它：
 
-<pre class="brush: js example-good">var object = { a: 10, b: 20 };
+```js example-good
+var object = { a: 10, b: 20 };
 
 for (var [key, value] of Object.entries(object)) {
   console.log(key, value);  // "a", 10
                             // "b", 20
 }
-</pre>
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Statements/for...of", "for...of")}}</li>
- <li>{{jsxref("Object.values")}}</li>
- <li>{{jsxref("Object.entries")}}</li>
-</ul>
+- {{jsxref("Statements/for...of", "for...of")}}
+- {{jsxref("Object.values")}}
+- {{jsxref("Object.entries")}}

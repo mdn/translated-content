@@ -9,54 +9,46 @@ tags:
   - 接口
 translation_of: Web/API/DocumentType
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>DocumentType</code></strong> 接口表示了一个包含文档类型的节点 {{domxref("Node")}} .</p>
+**`DocumentType`** 接口表示了一个包含文档类型的节点 {{domxref("Node")}} .
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承自父节点 {{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} 接口。</em></p>
+_继承自父节点 {{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} 接口。_
 
-<dl>
- <dt>{{domxref("DocumentType.entities")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>一个在文档类型定义 (DTD) 中声明的实体{{domxref("NamedNodeMap")}}，在这个映射（map）中的每个节点实现了{{domxref("Entity")}}接口</dd>
- <dt>{{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>一个表示内部子集的{{domxref("DOMString")}}，如果没有的话则为<code>null</code> ，例：<code>"&lt;!ELEMENT foo (bar)&gt;"</code></dd>
- <dt>{{domxref("DocumentType.name")}} {{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}}，文档类型的名称，例：<code>&lt;!DOCTYPE HTML&gt;</code>中的“<code>html</code>”</dd>
- <dt>{{domxref("DocumentType.notations")}} {{readonlyInline}} {{Deprecated_Inline}}</dt>
- <dd>在文档类型定义（DTD）中声明符号的{{domxref("NamedNodeMap")}}，在这个映射（map）中的所有节点实现了{{domxref("Notation")}}接口</dd>
- <dt>{{domxref("DocumentType.publicId")}} {{readonlyInline}}</dt>
- <dd>一个{{domxref("DOMString")}}，例：HTML5 中的空字符串——<code>"-//W3C//DTD HTML 4.01//EN"</code>。</dd>
- <dt>{{domxref("DocumentType.systemId")}} {{readonlyInline}}</dt>
- <dd>一个{{domxref("DOMString")}}，例：HTML5 中的空字符串—— <code>"http://www.w3.org/TR/html4/strict.dtd"</code>。</dd>
-</dl>
+- {{domxref("DocumentType.entities")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : 一个在文档类型定义 (DTD) 中声明的实体{{domxref("NamedNodeMap")}}，在这个映射（map）中的每个节点实现了{{domxref("Entity")}}接口
+- {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : 一个表示内部子集的{{domxref("DOMString")}}，如果没有的话则为`null` ，例：`"<!ELEMENT foo (bar)>"`
+- {{domxref("DocumentType.name")}} {{readonlyInline}}
+  - : {{domxref("DOMString")}}，文档类型的名称，例：`<!DOCTYPE HTML>`中的“`html`”
+- {{domxref("DocumentType.notations")}} {{readonlyInline}} {{Deprecated_Inline}}
+  - : 在文档类型定义（DTD）中声明符号的{{domxref("NamedNodeMap")}}，在这个映射（map）中的所有节点实现了{{domxref("Notation")}}接口
+- {{domxref("DocumentType.publicId")}} {{readonlyInline}}
+  - : 一个{{domxref("DOMString")}}，例：HTML5 中的空字符串——`"-//W3C//DTD HTML 4.01//EN"`。
+- {{domxref("DocumentType.systemId")}} {{readonlyInline}}
+  - : 一个{{domxref("DOMString")}}，例：HTML5 中的空字符串—— `"http://www.w3.org/TR/html4/strict.dtd"`。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>继承方法自父节点，{{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} 接口。</em></p>
+_继承方法自父节点，{{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} 接口。_
 
-<dl>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>从父节点的子节点的列表中移除这个对象。</dd>
-</dl>
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : 从父节点的子节点的列表中移除这个对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DocumentType")}}
 
+## 参见
 
-<p>{{Compat("api.DocumentType")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Document_Object_Model#DOM_%E6%8E%A5%E5%8F%A3">DOM 接口索引</a></li>
- <li>{{domxref("Entity")}}</li>
- <li>{{domxref("Notation")}}</li>
-</ul>
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#DOM_%E6%8E%A5%E5%8F%A3)
+- {{domxref("Entity")}}
+- {{domxref("Notation")}}

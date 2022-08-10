@@ -1,49 +1,48 @@
 ---
 title: ':left'
-slug: 'Web/CSS/:left'
+slug: Web/CSS/:left
 tags:
   - '@page'
   - CSS
   - Pseudo-class
-translation_of: 'Web/CSS/:left'
+translation_of: Web/CSS/:left
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p><strong><code>:left</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>, 需要和<a href="/zh-CN/docs/Web/CSS/At-rule">@规则</a>  {{cssxref("@page")}} 配套使用，对打印文档的左侧页设置 CSS 样式。</p>
+**`:left`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes), 需要和[@规则](/zh-CN/docs/Web/CSS/At-rule) {{cssxref("@page")}} 配套使用，对打印文档的左侧页设置 CSS 样式。
 
-<pre class="brush: css no-line-numbers">/* 设置打印时的左侧文档样式 */
+```css
+/* 设置打印时的左侧文档样式 */
 @page :left {
   margin: 2in 3in;
-}</pre>
+}
+```
 
-<p>打印文档的"左"或"右"是由书写方向相关的。举个栗子，"从左到右"的书写方向中第一页应当使用 {{Cssxref(":right")}} 配置; "从右至左"的书写方向中第一页应当使用 <code>:left</code> 配置。</p>
+打印文档的"左"或"右"是由书写方向相关的。举个栗子，"从左到右"的书写方向中第一页应当使用 {{Cssxref(":right")}} 配置; "从右至左"的书写方向中第一页应当使用 `:left` 配置。
 
-<div class="note">
-<p><strong>Note:</strong> 并不是所有样式属性都能应用在此选择器内。仅仅 {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, 和 {{ Cssxref("background") }} 等打印时需要的属性可以使用。其他属性将直接忽略，并且可以使用的属性也只会在打印时生效，显示时不会生效。</p>
-</div>
+> **备注：** 并不是所有样式属性都能应用在此选择器内。仅仅 {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, 和 {{ Cssxref("background") }} 等打印时需要的属性可以使用。其他属性将直接忽略，并且可以使用的属性也只会在打印时生效，显示时不会生效。
 
-<h2 id="参数">参数</h2>
+## 参数
 
 {{csssyntax}}
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<pre class="brush: css">@page :left {
+```css
+@page :left {
   margin: 2in 3in;
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.left")}}</p>
+{{Compat("css.selectors.left")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ Cssxref("@page") }}</li>
- <li>Other page-related pseudo-classes: {{ Cssxref(":first") }}, {{ Cssxref(":right") }}</li>
-</ul>
+- {{ Cssxref("@page") }}
+- Other page-related pseudo-classes: {{ Cssxref(":first") }}, {{ Cssxref(":right") }}

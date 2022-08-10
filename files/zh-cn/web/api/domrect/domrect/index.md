@@ -3,49 +3,46 @@ title: DOMRect.DOMRect()
 slug: Web/API/DOMRect/DOMRect
 translation_of: Web/API/DOMRect/DOMRect
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p><strong><code>DOMRect()</code></strong> 构造函数生成一个新的 {{domxref("DOMRect")}} 对象。</p>
+**`DOMRect()`** 构造函数生成一个新的 {{domxref("DOMRect")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var myDOMRect = new DOMRect(x, y, width, height);</pre>
+```js
+var myDOMRect = new DOMRect(x, y, width, height);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd><code>DOMRect</code> 原点的 <code>x</code> 坐标。</dd>
- <dt>y</dt>
- <dd><code>DOMRect</code> 原点的 y 坐标。</dd>
- <dt>width</dt>
- <dd><code>DOMRect</code> 的宽度。</dd>
- <dt>height</dt>
- <dd><code>DOMRect</code> 的高度。</dd>
-</dl>
+- x
+  - : `DOMRect` 原点的 `x` 坐标。
+- y
+  - : `DOMRect` 原点的 y 坐标。
+- width
+  - : `DOMRect` 的宽度。
+- height
+  - : `DOMRect` 的高度。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>想生成一个新 <code>DOMRect</code>，你可以运行一行这样的代码：</p>
+想生成一个新 `DOMRect`，你可以运行一行这样的代码：
 
-<pre class="brush: js">myDOMRect = new DOMRect(0,0,100,100);
+```js
+myDOMRect = new DOMRect(0,0,100,100);
 // running 'myDOMRect' in the console would then return
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DOMRect.DOMRect")}}
 
+## 更多
 
-<p>{{Compat("api.DOMRect.DOMRect")}}</p>
-
-<h2 id="更多">更多</h2>
-
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}

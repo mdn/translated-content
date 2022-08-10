@@ -3,26 +3,25 @@ title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 translation_of: Web/API/GeolocationCoordinates/latitude
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p><code><strong>Coordinates.latitude</strong></code> 只读属性，十进制双精度浮点数来表示纬度坐标</p>
+**`Coordinates.latitude`** 只读属性，十进制双精度浮点数来表示纬度坐标
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>lat</em> = <code><em>coordinates</em><code>.latitude</code></code>
-</pre>
+```plain
+lat = coordinates.latitude
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>The {{domxref("Coordinates")}} interface it belongs to.</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- The {{domxref("Coordinates")}} interface it belongs to.

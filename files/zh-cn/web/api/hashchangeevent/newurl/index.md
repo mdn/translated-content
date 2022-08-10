@@ -9,26 +9,28 @@ tags:
   - Web API
 translation_of: Web/API/HashChangeEvent/newURL
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
+**`newURL`** 为 {{domxref("HashChangeEvent")}} 接口的只读属性，其值为窗口导航改变后的 URL。
 
+## 语法
 
-<p><code><strong>newURL</strong></code> 为 {{domxref("HashChangeEvent")}} 接口的只读属性，其值为窗口导航改变后的 URL。</p>
+```plain
+let newEventUrl = event.newURL;
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox notranslate">let <em>newEventUrl</em> = <em>event</em>.newURL;</pre>
+{{domxref("DOMString")}}.
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>{{domxref("DOMString")}}.</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js notranslate">window.addEventListener('hashchange', function(event) {
+```js
+window.addEventListener('hashchange', function(event) {
   console.log('Hash changed to ' + event.newURL);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

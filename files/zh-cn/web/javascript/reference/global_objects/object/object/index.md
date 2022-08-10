@@ -3,63 +3,64 @@ title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object</code> 构造函数将给定的值包装为一个新对象。</strong></p>
+**`Object` 构造函数将给定的值包装为一个新对象。**
 
-<ul>
- <li>如果给定的值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}, 它会创建并返回一个空对象。</li>
- <li>否则，它将返回一个和给定的值相对应的类型的对象。</li>
- <li>如果给定值是一个已经存在的对象，则会返回这个已经存在的值（相同地址）。</li>
-</ul>
+- 如果给定的值是 {{jsxref("null")}} 或 {{jsxref("undefined")}}, 它会创建并返回一个空对象。
+- 否则，它将返回一个和给定的值相对应的类型的对象。
+- 如果给定值是一个已经存在的对象，则会返回这个已经存在的值（相同地址）。
 
-<p>在非构造函数上下文中调用时， <code>Object</code> 和 <code>new Object()</code>表现一致。</p>
+在非构造函数上下文中调用时， `Object` 和 `new Object()`表现一致。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">new Object()
-new Object(<var>value</var>)</pre>
+```plain
+new Object()
+new Object(value)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>任意值</dd>
-</dl>
+- `value`
+  - : 任意值
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="创建一个新对象">创建一个新对象</h3>
+### 创建一个新对象
 
-<pre>let o = new Object()
+```plain
+let o = new Object()
 o.foo = 42
 
 console.log(o)
 // Object { foo: 42 }
-</pre>
+```
 
-<h3 id="使用_Object_创建_undefined_和_null_类型">使用 <code>Object</code> 创建 <code>undefined</code> 和 <code>null</code> 类型</h3>
+### 使用 `Object` 创建 `undefined` 和 `null` 类型
 
-<p>下面的例子保存了一个空 <code>Object</code> 对象在 <code>o</code>:</p>
+下面的例子保存了一个空 `Object` 对象在 `o`:
 
-<pre class="brush: js">let o = new Object()
-</pre>
+```js
+let o = new Object()
+```
 
-<pre class="brush: js">let o = new Object(undefined)
-</pre>
+```js
+let o = new Object(undefined)
+```
 
-<pre class="brush: js">let o = new Object(null)</pre>
+```js
+let o = new Object(null)
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a></li>
-</ul>
+- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)

@@ -3,51 +3,48 @@ title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 translation_of: Web/API/DOMTokenList/length
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p> </p>
+**`length`**是**`DOMTokenList`**接口的一个只读属性，以整数来表示，代表着当前对象中值的个数。
 
-<p><strong><code>length</code></strong>是<strong><code>DOMTokenList</code></strong>接口的一个只读属性，以整数来表示，代表着当前对象中值的个数。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+tokenList.length;
+```
 
-<pre class="syntaxbox">tokenList.length;</pre>
+### 数值
 
-<h3 id="数值">数值</h3>
+一个整数。
 
-<p>一个整数。</p>
+## 示范例子
 
-<h2 id="示范例子">示范例子</h2>
+在示范例子里我们编写了一个 span 元素，使用{{domxref("Element.classList")}}去检索元素{{htmlelement("span")}}拥有的类，放回一个实时的`DOMTokenList`集合，然后把该集合中的数值个数写进 `<span>`的 {{domxref("Node.textContent")}} 属性中。
 
-<p> </p>
+HTML 代码：
 
-<p>在示范例子里我们编写了一个 span 元素，使用{{domxref("Element.classList")}}去检索元素{{htmlelement("span")}}拥有的类，放回一个实时的<code>DOMTokenList</code>集合，然后把该集合中的数值个数写进 <code>&lt;span&gt;</code>的 {{domxref("Node.textContent")}} 属性中。</p>
+```html
+<span class="a b c"></span>
+```
 
-<p>HTML 代码：</p>
+JavaScript 代码：
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
-
-<p>JavaScript 代码：</p>
-
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var length = classes.length;
 
 span.textContent = 'classList length = ' + length;
-</pre>
+```
 
-<p>运行得出的结果如下：</p>
+运行得出的结果如下：
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.DOMTokenList.length")}}</p>
-</div>
+{{Compat("api.DOMTokenList.length")}}

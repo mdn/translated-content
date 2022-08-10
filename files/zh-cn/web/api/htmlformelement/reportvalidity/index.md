@@ -3,33 +3,36 @@ title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 translation_of: Web/API/HTMLFormElement/reportValidity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>方法 <strong><code>HTMLFormElement.reportValidity()</code></strong> 返回布尔值，如果 form 表单的子表单控件满足验证限制条件，则该方法返回 <code>true</code> ，否则返回<code>false</code>。当返回 <code>false</code> 时，每个不合法的子控件的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid">invalid</a></code> 事件将会被触发，并且验证中存在的问题会报告该用户。 </p>
+方法 **`HTMLFormElement.reportValidity()`** 返回布尔值，如果 form 表单的子表单控件满足验证限制条件，则该方法返回 `true` ，否则返回`false`。当返回 `false` 时，每个不合法的子控件的 [`invalid`](https://developer.mozilla.org/en-US/docs/Web/Events/invalid) 事件将会被触发，并且验证中存在的问题会报告该用户。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>HTMLFormElement</em>.reportValidity()
-</pre>
+```plain
+HTMLFormElement.reportValidity()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("布尔")}}</p>
+{{domxref("布尔")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.forms['myform'].addEventListener('invalid', function() {
+```js
+document.forms['myform'].addEventListener('invalid', function() {
   // Optional response here
 }, false);
 
 document.forms['myform'].addEventListener('submit', function() {
   document.forms['myform'].reportValidity();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.HTMLFormElement.reportValidity")}}</p>
+{{Compat("api.HTMLFormElement.reportValidity")}}

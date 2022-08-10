@@ -9,34 +9,33 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>flat()</strong></code> 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。</p>
+**`flat()`** 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
 
-<div>{{EmbedInteractiveExample("pages/js/array-flat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
+## 语法
 
+```plain
+var newArray = arr.flat([depth])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>var newArray = arr</var>.flat([<var>depth]</var>)</pre>
+- `depth` {{optional_inline}}
+  - : 指定要提取嵌套数组的结构深度，默认值为 1。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>指定要提取嵌套数组的结构深度，默认值为 1。</dd>
-</dl>
+一个包含将数组与子数组中所有元素的新数组。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>一个包含将数组与子数组中所有元素的新数组。</p>
+### 扁平化嵌套数组
 
-<h2 id="示例">示例</h2>
-
-<h3 id="扁平化嵌套数组">扁平化嵌套数组</h3>
-
-<pre>var arr1 = [1, 2, [3, 4]];
+```plain
+var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
@@ -49,55 +48,63 @@ arr3.flat(2);
 // [1, 2, 3, 4, 5, 6]
 
 //使用 Infinity，可展开任意深度的嵌套数组
-<code>var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</code></pre>
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
 
-<h3 id="扁平化与数组空项">扁平化与数组空项</h3>
+### 扁平化与数组空项
 
-<p><code>flat()</code> 方法会移除数组中的空项：</p>
+`flat()` 方法会移除数组中的空项：
 
-<pre class="brush: js">var arr4 = [1, 2, , 4, 5];
+```js
+var arr4 = [1, 2, , 4, 5];
 arr4.flat();
-// [1, 2, 4, 5]</pre>
+// [1, 2, 4, 5]
+```
 
-<h2 id="替代方案">替代方案</h2>
+## 替代方案
 
-<h3 id="使用_reduce_与_concat">使用 <code>reduce</code> 与 <code>concat</code></h3>
+### 使用 `reduce` 与 `concat`
 
-<pre><code>var arr = [1, 2, [3, 4]];
+```plain
+var arr = [1, 2, [3, 4]];
 
 // 展开一层数组
 arr.flat();
 // 等效于
-arr.reduce((acc, val) =&gt; acc.concat(val), []);
+arr.reduce((acc, val) => acc.concat(val), []);
 // [1, 2, 3, 4]
 
 // 使用扩展运算符 ...
-const flattened = arr =&gt; [].concat(...arr);</code></pre>
+const flattened = arr => [].concat(...arr);
+```
 
-<h3 id="reduce_concat_isArray_recursivity">reduce + concat + isArray + recursivity</h3>
+### reduce + concat + isArray + recursivity
 
-<pre class="brush: js">// 使用 reduce、concat 和递归展开无限多层嵌套的数组
+```js
+// 使用 reduce、concat 和递归展开无限多层嵌套的数组
   var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
 function flatDeep(arr, d = 1) {
-   return d &gt; 0 ? arr.reduce((acc, val) =&gt; acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
+   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
                 : arr.slice();
 };
 flatDeep(arr1, Infinity);
-// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
+// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+```
 
-<h3 id="forEachisArraypushrecursivity">forEach+isArray+push+recursivity</h3>
+### forEach+isArray+push+recursivity
 
-<pre class="brush: js">// forEach 遍历数组会自动跳过空元素
-const eachFlat = (arr = [], depth = 1) =&gt; {
+```js
+// forEach 遍历数组会自动跳过空元素
+const eachFlat = (arr = [], depth = 1) => {
   const result = []; // 缓存递归结果
   // 开始递归
   (function flat(arr, depth) {
     // forEach 会自动去除数组空位
-    arr.forEach((item) =&gt; {
+    arr.forEach((item) => {
       // 控制递归深度
-      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
+      if (Array.isArray(item) && depth > 0) {
         // 递归数组
         flat(item, depth - 1)
       } else {
@@ -111,25 +118,26 @@ const eachFlat = (arr = [], depth = 1) =&gt; {
 }
 
 // for of 循环不能去除数组空位，需要手动去除
-const forFlat = (arr = [], depth = 1) =&gt; {
+const forFlat = (arr = [], depth = 1) => {
   const result = [];
   (function flat(arr, depth) {
     for (let item of arr) {
-      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
+      if (Array.isArray(item) && depth > 0) {
         flat(item, depth - 1)
       } else {
         // 去除空元素，添加非 undefined 元素
-        item !== void 0 &amp;&amp; result.push(item);
+        item !== void 0 && result.push(item);
       }
     }
   })(arr, depth)
   return result;
 }
-</pre>
+```
 
-<h3 id="使用堆栈_stack">使用堆栈 stack</h3>
+### 使用堆栈 stack
 
-<pre>// 无递归数组扁平化，使用堆栈
+```plain
+// 无递归数组扁平化，使用堆栈
 // 注意：深度的控制比较低效，因为需要检查每一个值的深度
 // 也可能在 shift / unshift 上进行 w/o 反转，但是末端的数组 OPs 更快
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
@@ -149,9 +157,11 @@ function flatten(input) {
   // 反转恢复原数组的顺序
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
+flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+```
 
-<pre>// 递归版本的反嵌套
+```plain
+// 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
@@ -161,11 +171,13 @@ function flatten(array) {
     });
   })(array);
   return flattend;
-}</pre>
+}
+```
 
-<h3 id="Use_Generator_function">Use <code>Generator</code> function</h3>
+### Use `Generator` function
 
-<pre><code>function* flatten(array) {
+```plain
+function* flatten(array) {
     for (const item of array) {
         if (Array.isArray(item)) {
             yield* flatten(item);
@@ -177,40 +189,24 @@ function flatten(array) {
 
 var arr = [1, 2, [3, 4, [5, 6]]];
 const flattened = [...flatten(arr)];
-// [1, 2, 3, 4, 5, 6]</code></pre>
+// [1, 2, 3, 4, 5, 6]
+```
 
-<p>Please do not add polyfills on this article. For reference, please check: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
+Please do not add polyfills on this article. For reference, please check: <https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><a href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flat">ECMAScript 2019</a></td>
-   <td>Finished</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                           | Status   | Comment            |
+| ------------------------------------------------------------------------------------------------------- | -------- | ------------------ |
+| [ECMAScript 2019](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flat) | Finished | Initial definition |
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("javascript.builtins.Array.flat")}}
 
+## 参见
 
-<p>{{Compat("javascript.builtins.Array.flat")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.flatMap()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.flatMap()")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Array.prototype.concat()")}}

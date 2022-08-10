@@ -1,49 +1,50 @@
 ---
 title: ':last-child'
-slug: 'Web/CSS/:last-child'
-translation_of: 'Web/CSS/:last-child'
+slug: Web/CSS/:last-child
+translation_of: Web/CSS/:last-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>:last-child</code> CSS <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 代表父元素的最后一个子元素。</p>
+`:last-child` CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表父元素的最后一个子元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML_内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;此元素背景色不是 lime&lt;/li&gt;
-  &lt;li&gt;我的也不是 lime。&lt;/li&gt;
-  &lt;li&gt;我的才是 lime！ :)&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li>此元素背景色不是 lime</li>
+  <li>我的也不是 lime。</li>
+  <li>我的才是 lime！ :)</li>
+</ul>
+```
 
-<h3 id="CSS_内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css">li:last-child {
+```css
+li:last-child {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('示例', '100%', 100)}}</p>
+{{EmbedLiveSample('示例', '100%', 100)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref(":first-child")}}</li>
- <li>{{cssxref(":nth-child")}}</li>
- <li>{{cssxref(":last-of-type")}}</li>
-</ul>
+- {{cssxref(":first-child")}}
+- {{cssxref(":nth-child")}}
+- {{cssxref(":last-of-type")}}

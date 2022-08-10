@@ -3,58 +3,51 @@ title: quotes
 slug: Web/CSS/quotes
 translation_of: Web/CSS/quotes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}**`quotes`** [CSS](/en-US/docs/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
 
-<div><code><strong>quotes</strong></code> <a href="/en-US/docs/CSS">CSS</a> 属性用于设置引号的样式。</div>
+## 语法
 
-
-
-<div>{{EmbedInteractiveExample("pages/css/quotes.html")}}</div>
-
-
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 quotes: none;
 
-/* &lt;string&gt; values */
-quotes: "«" "»";           /* Set <em>open-quote</em> and <em>close-quote</em> to the French quotation marks */
+/* <string> values */
+quotes: "«" "»";           /* Set open-quote and close-quote to the French quotation marks */
 quotes: "«" "»" "‹" "›";   /* Set two levels of quotation marks */
 
 /* Global values */
 quotes: inherit;
 quotes: initial;
 quotes: unset;
-</pre>
+```
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd> {{cssxref("content")}} 属性的值 <code>open-quote</code> 和 <code>close-quote</code> 将不会展示引号。</dd>
- <dt><code>auto</code></dt>
- <dd>用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 {{htmlattrxref("lang")}} 属性）。</dd>
- <dt><code>[&lt;string&gt; &lt;string&gt;]+</code></dt>
- <dd>一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 <code>open-quote</code> and <code>close-quote</code>. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。</dd>
-</dl>
+- `none`
+  - : {{cssxref("content")}} 属性的值 `open-quote` 和 `close-quote` 将不会展示引号。
+- `auto`
+  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 {{htmlattrxref("lang")}} 属性）。
+- `[<string> <string>]+`
+  - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 
-<h3 id="语法格式">语法格式</h3>
+### 语法格式
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基本用法">基本用法</h3>
+### 基本用法
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;q&gt;To be or not to be. That's the question!&lt;/q&gt;
-</pre>
+```html
+<q>To be or not to be. That's the question!</q>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   quotes: '"' '"' "'" "'";
 }
 q::before {
@@ -62,63 +55,62 @@ q::before {
 }
 q:after {
   content: close-quote;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}</p>
+{{EmbedLiveSample('Basic_quote_marks', "100%", 60)}}
 
-<h3 id="自动选择引号">自动选择引号</h3>
+### 自动选择引号
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre>&lt;div lang="fr"&gt;
-  &lt;q&gt;Ceci est une citation française.&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="ru"&gt;
-  &lt;q&gt;Это русская цитата&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="de"&gt;
-  &lt;q&gt;Dies ist ein deutsches Zitat&lt;/q&gt;
-&lt;div&gt;
-&lt;hr&gt;
-&lt;div lang="en"&gt;
-  &lt;q&gt;This is an English quote.&lt;/q&gt;
-&lt;div&gt;</pre>
+```plain
+<div lang="fr">
+  <q>Ceci est une citation française.</q>
+<div>
+<hr>
+<div lang="ru">
+  <q>Это русская цитата</q>
+<div>
+<hr>
+<div lang="de">
+  <q>Dies ist ein deutsches Zitat</q>
+<div>
+<hr>
+<div lang="en">
+  <q>This is an English quote.</q>
+<div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre>/*q {
+```plain
+/*q {
   quotes: auto;
-}*/</pre>
+}*/
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Auto_quotes', "100%", 200)}}</p>
+{{EmbedLiveSample('Auto_quotes', "100%", 200)}}
 
-<h2 id="Notes">备注</h2>
+## 备注
 
-<ul>
- <li>对于大多数浏览器，引号的默认值始终为 auto（Firefox 70+），否则浏览器具有此默认行为（Chromiums，Safari，Edge），因此上面的示例可以在不显式设置的情况下工作。</li>
- <li>从 Firefox 3.5 开始，可以使用 <code>-moz-<a href="/en-US/docs/CSS/initial">initial</a></code>读取 quotes 属性的初始值，这在 Firefox 的早期版本中是不可能的。</li>
-</ul>
+- 对于大多数浏览器，引号的默认值始终为 auto（Firefox 70+），否则浏览器具有此默认行为（Chromiums，Safari，Edge），因此上面的示例可以在不显式设置的情况下工作。
+- 从 Firefox 3.5 开始，可以使用 `-moz-initial`读取 quotes 属性的初始值，这在 Firefox 的早期版本中是不可能的。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.quotes")}}
 
+## 参考
 
-<p>{{Compat("css.properties.quotes")}}</p>
-
-<h2 id="See_also">参考</h2>
-
-<ul>
- <li>{{ Cssxref("content") }}</li>
-</ul>
+- {{ Cssxref("content") }}

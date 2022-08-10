@@ -3,40 +3,43 @@ title: HTMLMediaElement.audioTracks
 slug: Web/API/HTMLMediaElement/audioTracks
 translation_of: Web/API/HTMLMediaElement/audioTracks
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p> <strong><code>HTMLMediaElement.audioTracks</code></strong> 获得可用音频轨道的数量</p>
+**`HTMLMediaElement.audioTracks`** 获得可用音频轨道的数量
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>audio|video.audioTracks</pre>
+```plain
+audio|video.audioTracks
+```
 
-<h2 id="返回值">返回值</h2>
+## 返回值
 
-<p>AudioTrackList    对象 表示音频/视频的可用音频轨道</p>
+AudioTrackList 对象 表示音频/视频的可用音频轨道
 
-<h2 id="用例">用例</h2>
+## 用例
 
-<p>以 audio 标签为例</p>
+以 audio 标签为例
 
-<pre class="brush: html">&lt;audio id='audio'&gt;&lt;/audio&gt;
-</pre>
+```html
+<audio id='audio'></audio>
+```
 
-<p>调用</p>
+调用
 
-<pre>myVid=document.getElementById("audio");
-alert(<code>myVid.audioTracks</code>.length);</pre>
+```plain
+myVid=document.getElementById("audio");
+alert(myVid.audioTracks.length);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.HTMLMediaElement.audioTracks")}}
 
-<h2 id="See_Also">还可以看看</h2>
+## 还可以看看
 
-<ul>
- <li>定义它的接口，{{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 定义它的接口，{{domxref("HTMLMediaElement")}}.

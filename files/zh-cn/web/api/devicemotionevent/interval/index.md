@@ -9,31 +9,30 @@ tags:
   - 需要示例
 translation_of: Web/API/DeviceMotionEvent/interval
 ---
-<p>{{ apiref("Device Orientation Events") }}</p>
+{{ apiref("Device Orientation Events") }}
 
-<p>返回从底层硬件获取数据的时间间隔（单位：毫秒）。 您可以使用它来确定运动事件的粒度。</p>
+返回从底层硬件获取数据的时间间隔（单位：毫秒）。 您可以使用它来确定运动事件的粒度。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var interval = <em>instanceOfDeviceMotionEvent</em>.interval;
-</pre>
+```plain
+var interval = instanceOfDeviceMotionEvent.interval;
+```
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DeviceMotionEvent.interval")}}
 
-<h2 id="推荐浏览">推荐浏览</h2>
+## 推荐浏览
 
-<ul>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("window.ondevicemotion") }}</li>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en-US/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
-</ul>
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- {{ domxref("window.ondevicemotion") }}
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en-US/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)

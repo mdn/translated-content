@@ -7,72 +7,69 @@ tags:
   - CSS3
 translation_of: Web/CSS/-webkit-text-stroke
 ---
+## 摘要
 
+**`-webkit-text-stroke`** [CSS](/en-US/docs/Web/CSS)属性为文本字符指定了[宽](/en-US/docs/Web/CSS/length) 和 [颜色](/en-US/docs/Web/CSS/color_value) . 它是{{cssxref("-webkit-text-stroke-width")}} 和{{cssxref("-webkit-text-stroke-color")}}属性的缩写。
 
-<h2 id="摘要">摘要</h2>
+## 语法
 
-<p> <strong><code>-webkit-text-stroke</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性为文本字符指定了<a href="/en-US/docs/Web/CSS/length">宽</a> 和 <a href="/en-US/docs/Web/CSS/color_value">颜色</a> . 它是{{cssxref("-webkit-text-stroke-width")}} 和{{cssxref("-webkit-text-stroke-color")}}属性的缩写。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css notranslate">/* 宽度和颜色属性 */
+```css
+/* 宽度和颜色属性 */
 -webkit-text-stroke: 4px navy;
 
 /* 全局属性 */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
 -webkit-text-stroke: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>文本宽。</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>文本颜色。</dd>
-</dl>
+- `<length>`
+  - : 文本宽。
+- `<color>`
+  - : 文本颜色。
 
-<h3 id="常规用法">常规用法</h3>
+### 常规用法
 
-<pre class="syntaxbox notranslate">/* 设置宽度和颜色 */
--webkit-text-stroke: &lt;length&gt; &lt;color&gt;;
+```plain
+/* 设置宽度和颜色 */
+-webkit-text-stroke: <length> <color>;
 
 /* 默认设置 */
 -webkit-text-stroke: inherit/initial/unset;
-</pre>
+```
 
+## 用例
 
+### HTML
 
-<h2 id="用例">用例</h2>
+```html
+<p id="example">The stroke of this text is red.</p>
+```
 
-<h3 id="HTML">HTML</h3>
+### CSS
 
-<pre class="brush: html notranslate">&lt;p id="example"&gt;The stroke of this text is red.&lt;/p&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css; highlight[4] notranslate">#example {
+```css
+#example {
   font-size: 3em;
   margin: 0;
   -webkit-text-stroke: 2px red;
 }
-</pre>
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考文档">参考文档</h2>
+## 参考文档
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Surfin' Safari blog post announcing this feature</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">CSS-Tricks article explaining this feature</a></li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
-</ul>
+- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-fill-color")}}

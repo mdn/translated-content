@@ -9,69 +9,62 @@ tags:
   - 全局对象
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
-<div>{{ JSRef }}</div>
+{{ JSRef }}
 
-<p><strong><code>Set</code></strong> 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。</p>
+**`Set`** 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。
 
-<h2 id="简述">简述</h2>
+## 简述
 
-<p><code>Set</code>对象是值的集合，你可以按照插入的顺序迭代它的元素。Set 中的元素只会<strong>出现一次</strong>，即 Set 中的元素是唯一的。</p>
+`Set`对象是值的集合，你可以按照插入的顺序迭代它的元素。Set 中的元素只会**出现一次**，即 Set 中的元素是唯一的。
 
-<h3 id="值的相等">值的相等</h3>
+### 值的相等
 
-<p>因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于  -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅<a href="#浏览器兼容性">浏览器兼容性</a>表中的 “<em>Key equality for -0 and 0</em>”。</p>
+因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于 -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的 “_Key equality for -0 and 0_”。
 
-<p>另外，<code>NaN</code> 和 <code>undefined</code> 都可以被存储在 Set 中，<code>NaN</code> 之间被视为相同的值（NaN 被认为是相同的，尽管 NaN !== NaN）。</p>
+另外，`NaN` 和 `undefined` 都可以被存储在 Set 中，`NaN` 之间被视为相同的值（NaN 被认为是相同的，尽管 NaN !== NaN）。
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Set"><code>Set()</code></a></dt>
- <dd>创建一个新的 <code>Set</code> 对象。</dd>
-</dl>
+- [`Set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
+  - : 创建一个新的 `Set` 对象。
 
-<h2 id="静态属性">静态属性</h2>
+## 静态属性
 
-<dl>
- <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
- <dd>构造函数用来创建派生对象。</dd>
-</dl>
+- {{jsxref("Set.@@species", "get Set[@@species]")}}
+  - : 构造函数用来创建派生对象。
 
-<h2 id="Properties">实例属性</h2>
+## 实例属性
 
-<dl>
- <dt>{{jsxref("Set.prototype.size")}}</dt>
- <dd>返回 Set 对象中的值的个数</dd>
-</dl>
+- {{jsxref("Set.prototype.size")}}
+  - : 返回 Set 对象中的值的个数
 
-<h2 id="实例方法">实例方法</h2>
+## 实例方法
 
-<dl>
- <dt>{{jsxref("Set.add", "Set.prototype.add(<em>value</em>)")}}</dt>
- <dd>在<code>Set</code>对象尾部添加一个元素。返回该 <code>Set</code> 对象。</dd>
- <dt>{{jsxref("Set.prototype.clear()")}}</dt>
- <dd>移除<code>Set</code>对象内的所有元素。</dd>
- <dt>{{jsxref("Set.delete", "Set.prototype.delete(<em>value</em>)")}}</dt>
- <dd>移除值为 <code>value</code> 的元素，并返回一个布尔值来表示是否移除成功。<code>Set.prototype.has(value)</code> 会在此之后返回 <code>false</code>。</dd>
- <dt>{{jsxref("Set.prototype.entries()")}}</dt>
- <dd>返回一个新的迭代器对象，该对象包含 <code>Set</code> 对象中的按插入顺序排列的所有元素的值的 <code>[value, value]</code> 数组。为了使这个方法和 <code>Map</code> 对象保持相似， 每个值的键和值相等。</dd>
- <dt>{{jsxref("Set.forEach", "Set.prototype.forEach(<em>callbackFn</em>[, <em>thisArg</em>])")}}</dt>
- <dd>按照插入顺序，为 Set 对象中的每一个值调用一次 callBackFn。如果提供了<code>thisArg</code>参数，回调中的 <code>this</code> 会是这个参数。</dd>
- <dt>{{jsxref("Set.has", "Set.prototype.has(<em>value</em>)")}}</dt>
- <dd>返回一个布尔值，表示该值在 <code>Set</code> 中存在与否。</dd>
- <dt>{{jsxref("Set.prototype.keys()")}}</dt>
- <dd>与 <strong><code>values()</code></strong> 方法相同，返回一个新的迭代器对象，该对象包含 <code>Set</code> 对象中的按插入顺序排列的所有元素的值。</dd>
- <dt>{{jsxref("Set.prototype.values()")}}</dt>
- <dd>返回一个新的迭代器对象，该对象包含 <code>Set</code> 对象中的按插入顺序排列的所有元素的值。</dd>
- <dt>{{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}</dt>
- <dd>返回一个新的迭代器对象，该对象包含 <code>Set</code> 对象中的按插入顺序排列的所有元素的值。</dd>
-</dl>
+- {{jsxref("Set.add", "Set.prototype.add(<em>value</em>)")}}
+  - : 在`Set`对象尾部添加一个元素。返回该 `Set` 对象。
+- {{jsxref("Set.prototype.clear()")}}
+  - : 移除`Set`对象内的所有元素。
+- {{jsxref("Set.delete", "Set.prototype.delete(<em>value</em>)")}}
+  - : 移除值为 `value` 的元素，并返回一个布尔值来表示是否移除成功。`Set.prototype.has(value)` 会在此之后返回 `false`。
+- {{jsxref("Set.prototype.entries()")}}
+  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值的 `[value, value]` 数组。为了使这个方法和 `Map` 对象保持相似， 每个值的键和值相等。
+- {{jsxref("Set.forEach", "Set.prototype.forEach(<em>callbackFn</em>[, <em>thisArg</em>])")}}
+  - : 按照插入顺序，为 Set 对象中的每一个值调用一次 callBackFn。如果提供了`thisArg`参数，回调中的 `this` 会是这个参数。
+- {{jsxref("Set.has", "Set.prototype.has(<em>value</em>)")}}
+  - : 返回一个布尔值，表示该值在 `Set` 中存在与否。
+- {{jsxref("Set.prototype.keys()")}}
+  - : 与 **`values()`** 方法相同，返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值。
+- {{jsxref("Set.prototype.values()")}}
+  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值。
+- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_set_对象">使用 <code>Set</code> 对象</h3>
+### 使用 `Set` 对象
 
-<pre class="brush: js">let mySet = new Set();
+```js
+let mySet = new Set();
 
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
@@ -98,11 +91,13 @@ mySet.size; // 4，刚刚移除一个值
 
 console.log(mySet);
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
-// logs Set(4) { 1, "some text", {…}, {…} } in Chrome</pre>
+// logs Set(4) { 1, "some text", {…}, {…} } in Chrome
+```
 
-<h3 id="迭代_set">迭代 Set</h3>
+### 迭代 Set
 
-<pre class="brush: js">// 迭代整个 set
+```js
+// 迭代整个 set
 // 按顺序输出：1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
 for (let item of mySet) console.log(item);
 
@@ -129,10 +124,10 @@ mySet2.size;               // 4
 [...mySet2];               // [1,2,3,4]
 
 // 可以通过如下代码模拟求交集
-let intersection = new Set([...set1].filter(x =&gt; set2.has(x)));
+let intersection = new Set([...set1].filter(x => set2.has(x)));
 
 // 可以通过如下代码模拟求差集
-let difference = new Set([...set1].filter(x =&gt; !set2.has(x)));
+let difference = new Set([...set1].filter(x => !set2.has(x)));
 
 // 用 forEach 迭代
 mySet.forEach(function(value) {
@@ -143,11 +138,12 @@ mySet.forEach(function(value) {
 // 2
 // 3
 // 4
-</pre>
+```
 
-<h3 id="实现基本集合操作">实现基本集合操作</h3>
+### 实现基本集合操作
 
-<pre class="brush: js">function isSuperset(set, subset) {
+```js
+function isSuperset(set, subset) {
     for (let elem of subset) {
         if (!set.has(elem)) {
             return false;
@@ -174,7 +170,7 @@ function intersection(setA, setB) {
     return _intersection;
 }
 
-<code>function symmetricDifference(setA, setB) {
+function symmetricDifference(setA, setB) {
     let _difference = new Set(setA);
     for (let elem of setB) {
         if (_difference.has(elem)) {
@@ -184,7 +180,7 @@ function intersection(setA, setB) {
         }
     }
     return _difference;
-}</code>
+}
 
 function difference(setA, setB) {
     let _difference = new Set(setA);
@@ -199,16 +195,17 @@ let setA = new Set([1, 2, 3, 4]),
     setB = new Set([2, 3]),
     setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB);          // =&gt; true
-union(setA, setC);               // =&gt; Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC);        // =&gt; Set [3, 4]
-symmetricDifference(setA, setC); // =&gt; Set [1, 2, 5, 6]
-difference(setA, setC);          // =&gt; Set [1, 2]
-</pre>
+isSuperset(setA, setB);          // => true
+union(setA, setC);               // => Set [1, 2, 3, 4, 5, 6]
+intersection(setA, setC);        // => Set [3, 4]
+symmetricDifference(setA, setC); // => Set [1, 2, 5, 6]
+difference(setA, setC);          // => Set [1, 2]
+```
 
-<h3 id="Array_相关"> <code>Array</code> 相关</h3>
+### `Array` 相关
 
-<pre class="brush: js">let myArray = ["value1", "value2", "value3"];
+```js
+let myArray = ["value1", "value2", "value3"];
 
 // 用 Set 构造器将 Array 转换为 Set
 let mySet = new Set(myArray);
@@ -217,40 +214,40 @@ mySet.has("value1"); // returns true
 
 // 用...(展开操作符) 操作符将 Set 转换为 Array
 console.log([...mySet]); // 与 myArray 完全一致
-</pre>
+```
 
-<h3 id="数组去重">数组去重</h3>
+### 数组去重
 
-<pre class="brush: js">// Use to remove duplicate elements from the array
+```js
+// Use to remove duplicate elements from the array
 const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 console.log([...new Set(numbers)])
 // [2, 3, 4, 5, 6, 7, 32]
-</pre>
+```
 
-<h3 id="String_相关"><code>String</code> 相关</h3>
+### `String` 相关
 
-<pre class="brush: js">let text = 'India';
+```js
+let text = 'India';
 
 let mySet = new Set(text);  // Set {'I', 'n', 'd', 'i', 'a'}
 mySet.size;  // 5
 
-// 大小写敏感 &amp; duplicate ommision
+// 大小写敏感 & duplicate ommision
 new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ jsxref('Map') }}</li>
- <li>{{ jsxref('WeakMap') }}</li>
- <li>{{ jsxref('WeakSet') }}</li>
-</ul>
+- {{ jsxref('Map') }}
+- {{ jsxref('WeakMap') }}
+- {{ jsxref('WeakSet') }}

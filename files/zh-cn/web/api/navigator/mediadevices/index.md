@@ -13,32 +13,27 @@ tags:
   - 属性
 translation_of: Web/API/Navigator/mediaDevices
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}mediaDevices 是 Navigator 只读属性，返回一个 {{domxref("MediaDevices")}} 对象，该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。
 
-<div> </div>
+## 语法
 
-<div>mediaDevices 是 Navigator 只读属性，返回一个 {{domxref("MediaDevices")}} 对象，该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。</div>
+```plain
+var mediaDevices = navigator.mediaDevices;
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox">var <em>mediaDevices</em> = navigator.mediaDevices;
-</pre>
+{{domxref("MediaDevices")}} 是一个单例对象。通常，您只需直接使用此对象的成员，例如通过调用{{domxref("navigator.mediaDevices.getUserMedia()")}}。
 
-<h3 id="返回值"> 返回值</h3>
-
-<p>{{domxref("MediaDevices")}} 是一个单例对象。通常，您只需直接使用此对象的成员，例如通过调用{{domxref("navigator.mediaDevices.getUserMedia()")}}。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Navigator.mediaDevices")}}
 
-<h2 id="参考阅读">参考阅读</h2>
+## 参考阅读
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>: The entry point to the documentation about the entire media stream API.</li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>: Documentation about the WebRTC API, which is closely related.</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API): The entry point to the documentation about the entire media stream API.
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.

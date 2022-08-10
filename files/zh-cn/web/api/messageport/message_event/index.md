@@ -4,21 +4,24 @@ slug: Web/API/MessagePort/message_event
 translation_of: Web/API/MessagePort/onmessage
 original_slug: Web/API/MessagePort/onmessage
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p> {{domxref("MessagePort")}} 接口的 <code><strong>onmessage</strong></code> 事件处理程序是一个 {{domxref("EventListener")}}, 当在端口上触发一个类型为 <strong>message</strong> 的{{domxref("MessageEvent")}} 时被调用 - 即，当端口接收到消息时。</p>
+{{domxref("MessagePort")}} 接口的 **`onmessage`** 事件处理程序是一个 {{domxref("EventListener")}}, 当在端口上触发一个类型为 **message** 的{{domxref("MessageEvent")}} 时被调用 - 即，当端口接收到消息时。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">channel.onmessage = function() { ... };</pre>
+```plain
+channel.onmessage = function() { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code block, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the IFrame has loaded, we pass {{domxref("MessageChannel.port2")}} to the IFrame using {{domxref("MessagePort.postMessage")}} along with a message. The <code>handleMessage</code> handler then responds to a message being sent back from the IFrame using <code>onmessage</code>, putting it into a paragraph — {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.</p>
+In the following code block, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the IFrame has loaded, we pass {{domxref("MessageChannel.port2")}} to the IFrame using {{domxref("MessagePort.postMessage")}} along with a message. The `handleMessage` handler then responds to a message being sent back from the IFrame using `onmessage`, putting it into a paragraph — {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -33,20 +36,19 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>For a full working example, see our <a href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a> on Github (<a href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) on Github ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.MessagePort.onmessage")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

@@ -3,23 +3,26 @@ title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>entries() 方法返回一个新的迭代器对象 ，这个对象的元素是类似 [value, value] 形式的数组，value 是集合对象中的每个元素，迭代器对象元素的顺序即集合对象中元素插入的顺序。由于集合对象不像 Map 对象那样拥有 key，然而，为了与 Map 对象的 API 形式保持一致，故使得每一个 entry 的 key 和 value 都拥有相同的值，因而最终返回一个 [value, value] 形式的数组。</p>
+entries() 方法返回一个新的迭代器对象 ，这个对象的元素是类似 \[value, value] 形式的数组，value 是集合对象中的每个元素，迭代器对象元素的顺序即集合对象中元素插入的顺序。由于集合对象不像 Map 对象那样拥有 key，然而，为了与 Map 对象的 API 形式保持一致，故使得每一个 entry 的 key 和 value 都拥有相同的值，因而最终返回一个 \[value, value] 形式的数组。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>mySet</em>.entries()</code></pre>
+```plain
+mySet.entries()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的包含 [value, value] 形式的数组迭代器对象，value 是给定集合中的每个元素，迭代器 对象元素的顺序即集合对象中元素插入的顺序。</p>
+一个新的包含 \[value, value] 形式的数组迭代器对象，value 是给定集合中的每个元素，迭代器 对象元素的顺序即集合对象中元素插入的顺序。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_entries()">使用 <code>entries()</code></h3>
+### 使用 `entries()`
 
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add("foobar");
 mySet.add(1);
 mySet.add("baz");
@@ -29,19 +32,17 @@ var setIter = mySet.entries();
 console.log(setIter.next().value); // ["foobar", "foobar"]
 console.log(setIter.next().value); // [1, 1]
 console.log(setIter.next().value); // ["baz", "baz"]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

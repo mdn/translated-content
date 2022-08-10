@@ -3,55 +3,55 @@ title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>big()</code></strong>方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。</p>
+**`big()`**方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。
 
-<div class="note">
-<p><strong>备注：</strong> &lt;big&gt; 元素在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用<a href="/en-US/docs/Web/CSS">CSS</a> 属性。</p>
-</div>
+> **备注：** \<big> 元素在[HTML5](/en-US/docs/Web/Guide/HTML/HTML5)中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用[CSS](/en-US/docs/Web/CSS) 属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.big()</code></pre>
+```plain
+str.big()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>带有 {{HTMLElement("big")}}标签的字符串。</p>
+带有 {{HTMLElement("big")}}标签的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>big()</code> 方法会将一个字符串嵌入到 <code>&lt;big&gt;</code> 标签中：<code>"&lt;big&gt;str&lt;/big&gt;"</code>。</p>
+`big()` 方法会将一个字符串嵌入到 `<big>` 标签中：`"<big>str</big>"`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_big_函数">使用 <code>big()</code> 函数</h3>
+### 使用 `big()` 函数
 
-<p>下面的例子使用了字符串方法来改变一个字符串的字体大小：</p>
+下面的例子使用了字符串方法来改变一个字符串的字体大小：
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;fontsize=7&gt;Hello, world&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <fontsize=7>Hello, world</fontsize>
+```
 
-<p>使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的 style 属性，比如：</p>
+使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的 style 属性，比如：
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '2em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '2em';
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.fontsize()")}}</li>
- <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.small()")}}

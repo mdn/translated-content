@@ -3,23 +3,26 @@ title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 translation_of: Web/API/BaseAudioContext/createOscillator
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>{{domxref("BaseAudioContext")}} 接口的 createOscillator() 方法创建一个 {{domxref("OscillatorNode")}}，它是一个表示周期性波形的源。它基本上产生一个不变的音调。</p>
+{{domxref("BaseAudioContext")}} 接口的 createOscillator() 方法创建一个 {{domxref("OscillatorNode")}}，它是一个表示周期性波形的源。它基本上产生一个不变的音调。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>oscillatorNode</em> = <em>audioCtx</em>.createOscillator();</pre>
+```plain
+var oscillatorNode = audioCtx.createOscillator();
+```
 
-<h3 id="Description">Returns</h3>
+### Returns
 
-<p>An {{domxref("OscillatorNode")}}.</p>
+An {{domxref("OscillatorNode")}}.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<p>以下示例显示了用于创建振荡器节点的 AudioContext 的基本用法。有关应用示例/信息，请查看我们的<a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a>（有关相关代码，请参阅<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a>）; 另请参阅我们的 OscillatorNode 页面以获取更多信息。</p>
+以下示例显示了用于创建振荡器节点的 AudioContext 的基本用法。有关应用示例/信息，请查看我们的[Violent Theremin demo](http://mdn.github.io/violent-theremin/)（有关相关代码，请参阅[see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js)）; 另请参阅我们的 OscillatorNode 页面以获取更多信息。
 
-<pre class="brush: js">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -28,24 +31,17 @@ var oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
+{{Compat("api.BaseAudioContext.createOscillator")}}
 
+## See also
 
-<p>{{Compat("api.BaseAudioContext.createOscillator")}}</p>
-</div>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

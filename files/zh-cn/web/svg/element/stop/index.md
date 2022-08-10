@@ -9,70 +9,65 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/stop
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>一个渐变上的颜色坡度，是用<code>stop</code>元素定义的。<code>stop</code>元素可以是{{SVGElement("linearGradient")}}元素或者{{SVGElement("radialGradient")}}元素的子元素。</p>
+一个渐变上的颜色坡度，是用`stop`元素定义的。`stop`元素可以是{{SVGElement("linearGradient")}}元素或者{{SVGElement("radialGradient")}}元素的子元素。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="100%" height="100%" viewBox="0 0 80 40"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;defs&gt;
-    &lt;linearGradient id="MyGradient"&gt;
-      &lt;stop offset="5%" stop-color="#F60" /&gt;
-      &lt;stop offset="95%" stop-color="#FF6" /&gt;
-    &lt;/linearGradient&gt;
-  &lt;/defs&gt;
+  <defs>
+    <linearGradient id="MyGradient">
+      <stop offset="5%" stop-color="#F60" />
+      <stop offset="95%" stop-color="#FF6" />
+    </linearGradient>
+  </defs>
 
-  &lt;!-- Outline the drawing area in black --&gt;
-  &lt;rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/&gt;
+  <!-- Outline the drawing area in black -->
+  <rect fill="none" stroke="black"
+        x="0.5" y="0.5" width="79" height="39"/>
 
-  &lt;!-- The rectangle is filled using a linear gradient --&gt;
-  &lt;rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- The rectangle is filled using a linear gradient -->
+  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
+        x="10" y="10" width="60" height="20"/>
+</svg>
+```
 
-<p>示例输出：</p>
+示例输出：
 
-<p>{{EmbedLiveSample("Example",160,95)}}</p>
+{{EmbedLiveSample("Example",160,95)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
+- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("offset")}}</li>
- <li>{{SVGAttr("stop-color")}}</li>
- <li>{{SVGAttr("stop-opacity")}}</li>
-</ul>
+- {{SVGAttr("offset")}}
+- {{SVGAttr("stop-color")}}
+- {{SVGAttr("stop-opacity")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/Web/API/SVGStopElement">SVGStopElement</a></code>接口。</p>
+该元素实现了[`SVGStopElement`](/en-US/docs/Web/API/SVGStopElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.stop")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{SVGElement("linearGradient")}}</li>
- <li>{{SVGElement("radialGradient")}}</li>
-</ul>
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("radialGradient")}}

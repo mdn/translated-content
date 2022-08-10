@@ -3,19 +3,20 @@ title: '-webkit-device-pixel-ratio'
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p><strong><code>-webkit-device-pixel-ratio</code></strong> 是一个非标准的布尔类型 CSS 媒体类型，是标准 <a href="/en-US/docs/Web/CSS/@media/resolution"><code>resolution</code></a> 媒体类型的一个替代方案。</p>
+**`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/en-US/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。
 
-<p>Its value is the number of device pixels used to represent each <a href="/en-US/docs/Web/CSS/length#Absolute_length_units">CSS <code>px</code></a>. Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is <a href="/en-US/docs/Web/CSS/resolution#dppx"><code>dppx</code></a>.</p>
+Its value is the number of device pixels used to represent each [CSS `px`](/en-US/docs/Web/CSS/length#Absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/en-US/docs/Web/CSS/resolution#dppx).
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<p><strong><code>-webkit-device-pixel-ratio</code></strong> is a range value meaning the prefixed <strong><code>-webkit-min-device-pixel-ratio</code></strong> and <strong><code>-webkit-max-device-pixel-ratio</code></strong> are also available.</p>
+**`-webkit-device-pixel-ratio`** is a range value meaning the prefixed **`-webkit-min-device-pixel-ratio`** and **`-webkit-max-device-pixel-ratio`** are also available.
 
-<pre class="brush: css">@media (-webkit-min-device-pixel-ratio: 2) { ... }
+```css
+@media (-webkit-min-device-pixel-ratio: 2) { ... }
 /* is equivalent to */
 @media (min-resolution: 2dppx) { ... }
 
@@ -23,17 +24,15 @@ translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 @media (-webkit-max-device-pixel-ratio: 2) { ... }
 /* is equivalent to */
 @media (max-resolution: 2dppx) { ... }
-</pre>
+```
 
-<h3 id="Specifications">Specifications</h3>
+### Specifications
 
 {{Specifications}}
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-2d"><code>-webkit-transform-2d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transform-3d"><code>-webkit-transform-3d</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-transition"><code>-webkit-transition</code></a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/-webkit-animation"><code>-webkit-animation</code></a></li>
-</ul>
+- [`-webkit-transform-2d`](/en-US/docs/Web/CSS/@media/-webkit-transform-2d)
+- [`-webkit-transform-3d`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d)
+- [`-webkit-transition`](/en-US/docs/Web/CSS/@media/-webkit-transition)
+- [`-webkit-animation`](/en-US/docs/Web/CSS/@media/-webkit-animation)

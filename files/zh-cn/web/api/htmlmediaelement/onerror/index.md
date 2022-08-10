@@ -3,31 +3,31 @@ title: HTMLMediaElement.onerror
 slug: Web/API/HTMLMediaElement/onerror
 translation_of: Web/API/HTMLMediaElement/onerror
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>onerror</code></strong> property of the {{domxref("HTMLMediaElement")}} interface is the {{event("Event_handlers", "event handler")}} for processing {{event("error")}} events.</p>
+The **`onerror`** property of the {{domxref("HTMLMediaElement")}} interface is the {{event("Event_handlers", "event handler")}} for processing {{event("error")}} events.
 
-<p>The <code>error</code> event fires when some form of error occurs while attempting to load or perform the media.</p>
+The `error` event fires when some form of error occurs while attempting to load or perform the media.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>HTMLMediaElement</em>.onerror = <em>EventListener</em>;</pre>
+```plain
+HTMLMediaElement.onerror = EventListener;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("function")}} which serves as the event handler for the {{event("error")}} event. When an error occurs, the specified function will be called. If <code>null</code>, no error handler is in effect.</p>
+A {{jsxref("function")}} which serves as the event handler for the {{event("error")}} event. When an error occurs, the specified function will be called. If `null`, no error handler is in effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLMediaElement")}}</li>
- <li>{{HTMLElement("audio")}} and {{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLMediaElement")}}
+- {{HTMLElement("audio")}} and {{HTMLElement("video")}}

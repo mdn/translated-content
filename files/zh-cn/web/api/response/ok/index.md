@@ -3,25 +3,28 @@ title: Response.ok
 slug: Web/API/Response/ok
 translation_of: Web/API/Response/ok
 ---
-<div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
+{{APIRef("Fetch")}}{{SeeCompatTable}}
 
-<p>{{domxref("Response")}} 接口的只读属性  <code><strong>ok</strong></code> 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）.</p>
+{{domxref("Response")}} 接口的只读属性 **`ok`** 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>myOK</var> = <var>response</var>.ok;</pre>
+```plain
+var myOK = response.ok;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p> {{domxref("Boolean")}}.</p>
+{{domxref("Boolean")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> (see <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
-<p>Note that at the top of the <code>fetch()</code> block we log the response <code>ok</code> value to the console.</p>
+Note that at the top of the `fetch()` block we log the response `ok` value to the console.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -31,20 +34,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Response.ok")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

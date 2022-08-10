@@ -4,30 +4,30 @@ slug: Web/API/HTMLFormElement/formdata_event
 translation_of: Web/API/GlobalEventHandlers/onformdata
 original_slug: Web/API/GlobalEventHandlers/onformdata
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
+{{domxref("GlobalEventHandlers")}} 混入对象 (mixin) 的属性**`onformdata`** 是用于处理 {{event("formdata")}} 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxref("FormData.FormData", "FormData()")}} 结构体的调用所触发。`onformdata` 在 {{domxref("HTMLFormElement")}}上有效。
 
+## 语法
 
-<p>{{domxref("GlobalEventHandlers")}} 混入对象 (mixin) 的属性<code><strong>onformdata</strong></code> 是用于处理 {{event("formdata")}} 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxref("FormData.FormData", "FormData()")}} 结构体的调用所触发。<code>onformdata</code> 在 {{domxref("HTMLFormElement")}}上有效。</p>
+```plain
+target.onformdata = functionRef;
+```
 
-<h2 id="语法">语法</h2>
+### Value
 
-<pre class="syntaxbox"><em>target</em>.onformdata = <em>functionRef</em>;
-</pre>
+`functionRef` 是一个函数名或者称为 [function expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/function). 此函数接受一个{{domxref("FormDataEvent")}}对象作为其唯一表达式参数。
 
-<h3 id="Value">Value</h3>
+## 示例
 
-<p><code>functionRef</code> 是一个函数名或者称为 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. 此函数接受一个{{domxref("FormDataEvent")}}对象作为其唯一表达式参数。</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">// grab reference to form
+```js
+// grab reference to form
 
 const formElem = document.querySelector('form');
 
 // submit handler
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -37,7 +37,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // formdata handler to retrieve data
 
-formElem.onformdata = (e) =&gt; {
+formElem.onformdata = (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -50,22 +50,19 @@ formElem.onformdata = (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> event</a></li>
- <li>{{domxref("FormDataEvent")}}</li>
- <li>
-  <p><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData Objects</a></p>
- </li>
-</ul>
+- [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- {{domxref("FormDataEvent")}}
+- [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)

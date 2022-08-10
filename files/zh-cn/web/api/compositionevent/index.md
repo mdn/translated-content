@@ -9,55 +9,45 @@ tags:
   - 参考
 translation_of: Web/API/CompositionEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>DOM 接口 <strong><code>CompositionEvent</code></strong> 表示用户间接输入文本（如使用输入法）时发生的事件。此接口的常用事件有{{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}} 和 {{domxref("Element/compositionend_event", "compositionend")}}</p>
+DOM 接口 **`CompositionEvent`** 表示用户间接输入文本（如使用输入法）时发生的事件。此接口的常用事件有{{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}} 和 {{domxref("Element/compositionend_event", "compositionend")}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}</dt>
- <dd>创建一个新的 <code>CompositionEvent</code> 对象实例。</dd>
-</dl>
+- {{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}
+  - : 创建一个新的 `CompositionEvent` 对象实例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>这个接口也从{{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。</em></p>
+_这个接口也从{{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
 
-<dl>
- <dt>{{domxref("CompositionEvent.data")}} {{readonlyinline}}</dt>
- <dd>返回触发事件的输入方法所产生的字符；取决于生成 <code>CompositionEvent</code> 对象的事件类型，结果会有所不同。</dd>
- <dt>{{domxref("CompositionEvent.locale")}} {{readonlyinline}} {{deprecated_inline}}</dt>
- <dd>返回当前输入方法的场景（例如，使用输入法编辑器进行输入合成时，场景就是键盘布局）。</dd>
-</dl>
+- {{domxref("CompositionEvent.data")}} {{readonlyinline}}
+  - : 返回触发事件的输入方法所产生的字符；取决于生成 `CompositionEvent` 对象的事件类型，结果会有所不同。
+- {{domxref("CompositionEvent.locale")}} {{readonlyinline}} {{deprecated_inline}}
+  - : 返回当前输入方法的场景（例如，使用输入法编辑器进行输入合成时，场景就是键盘布局）。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法。</em></p>
+_这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法。_
 
-<dl>
- <dt>{{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}</dt>
- <dd>初始化 <code>CompositionEvent</code> 对象的所有属性。</dd>
-</dl>
+- {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
+  - : 初始化 `CompositionEvent` 对象的所有属性。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CompositionEvent")}}
 
+## 参见
 
-<p>{{Compat("api.CompositionEvent")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Element/compositionstart_event">compositionstart</a></li>
- <li><a href="/en-US/docs/Web/API/Element/compositionend_event">compositionend</a></li>
- <li><a href="/en-US/docs/Web/API/Element/compositionupdate_event">compositionupdate</a></li>
- <li><a href="/en-US/docs/DOM/Event/UIEvent">UIEvent</a></li>
- <li><a href="/en-US/docs/DOM/event">Event</a></li>
-</ul>
+- [compositionstart](/en-US/docs/Web/API/Element/compositionstart_event)
+- [compositionend](/en-US/docs/Web/API/Element/compositionend_event)
+- [compositionupdate](/en-US/docs/Web/API/Element/compositionupdate_event)
+- [UIEvent](/en-US/docs/DOM/Event/UIEvent)
+- [Event](/en-US/docs/DOM/event)

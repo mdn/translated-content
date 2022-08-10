@@ -11,62 +11,63 @@ tags:
   - promise.all
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Promise.all() 方法接收一个 promise 的 iterable 类型（注：Array，Map，Set 都属于 ES6 的 iterable 类型）的输入，并且只返回一个{{jsxref("Promise")}}实例， 那个输入的所有 promise 的 resolve 回调的结果是一个数组。这个{{jsxref("Promise")}}的 resolve 回调执行是在所有输入的 promise 的 resolve 回调都结束，或者输入的 iterable 里没有 promise 了的时候。它的 reject 回调执行是，只要任何一个输入的 promise 的 reject 回调执行或者输入不合法的 promise 就会立即抛出错误，并且 reject 的是第一个抛出的错误信息。</p>
+Promise.all() 方法接收一个 promise 的 iterable 类型（注：Array，Map，Set 都属于 ES6 的 iterable 类型）的输入，并且只返回一个{{jsxref("Promise")}}实例， 那个输入的所有 promise 的 resolve 回调的结果是一个数组。这个{{jsxref("Promise")}}的 resolve 回调执行是在所有输入的 promise 的 resolve 回调都结束，或者输入的 iterable 里没有 promise 了的时候。它的 reject 回调执行是，只要任何一个输入的 promise 的 reject 回调执行或者输入不合法的 promise 就会立即抛出错误，并且 reject 的是第一个抛出的错误信息。
 
-<div>{{EmbedInteractiveExample("pages/js/promise-all.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-all.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>Promise.all(iterable)</var>;</pre>
+```plain
+Promise.all(iterable);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>iterable</dt>
- <dd>一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">可迭代</a>对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。</dd>
-</dl>
+- iterable
+  - : 一个[可迭代](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<ul>
- <li>如果传入的参数是一个空的可迭代对象，则返回一个<strong>已完成（already resolved）</strong>状态的 {{jsxref("Promise")}}。</li>
- <li>如果传入的参数不包含任何 <code>promise</code>，则返回一个<strong>异步完成（asynchronously resolved）</strong> {{jsxref("Promise")}}。注意：Google Chrome 58 在这种情况下返回一个<strong>已完成（already resolved）</strong>状态的 {{jsxref("Promise")}}。</li>
- <li>其它情况下返回一个<strong>处理中（pending）</strong>的{{jsxref("Promise")}}。这个返回的 <code>promise</code> 之后会在所有的 <code>promise</code> 都完成或有一个 <code>promise</code> 失败时<strong>异步</strong>地变为完成或失败。 见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 <code>promise</code> 顺序排列，而不是由调用 <code>promise</code> 的完成顺序决定。</li>
-</ul>
+- 如果传入的参数是一个空的可迭代对象，则返回一个**已完成（already resolved）**状态的 {{jsxref("Promise")}}。
+- 如果传入的参数不包含任何 `promise`，则返回一个**异步完成（asynchronously resolved）** {{jsxref("Promise")}}。注意：Google Chrome 58 在这种情况下返回一个**已完成（already resolved）**状态的 {{jsxref("Promise")}}。
+- 其它情况下返回一个**处理中（pending）**的{{jsxref("Promise")}}。这个返回的 `promise` 之后会在所有的 `promise` 都完成或有一个 `promise` 失败时**异步**地变为完成或失败。 见下方关于“Promise.all 的异步或同步”示例。返回值将会按照参数内的 `promise` 顺序排列，而不是由调用 `promise` 的完成顺序决定。
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p>此方法在集合多个 <code>promise</code> 的返回结果时很有用。</p>
+此方法在集合多个 `promise` 的返回结果时很有用。
 
-<p>完成（Fulfillment）：<br>
- 如果传入的可迭代对象为空，<code>Promise.all</code> 会同步地返回一个已完成（resolved）状态的<code>promise</code>。<br>
- 如果所有传入的 <code>promise</code> 都变为完成状态，或者传入的可迭代对象内没有 <code>promise</code>，<code>Promise.all</code> 返回的 <code>promise</code> 异步地变为完成。<br>
- 在任何情况下，<code>Promise.all</code> 返回的 <code>promise</code> 的完成状态的结果都是一个数组，它包含所有的传入迭代参数对象的值（也包括非 <code>promise</code> 值）。</p>
+完成（Fulfillment）：
+如果传入的可迭代对象为空，`Promise.all` 会同步地返回一个已完成（resolved）状态的`promise`。
+如果所有传入的 `promise` 都变为完成状态，或者传入的可迭代对象内没有 `promise`，`Promise.all` 返回的 `promise` 异步地变为完成。
+在任何情况下，`Promise.all` 返回的 `promise` 的完成状态的结果都是一个数组，它包含所有的传入迭代参数对象的值（也包括非 `promise` 值）。
 
-<p>失败/拒绝（Rejection）：<br>
- 如果传入的 <code>promise</code> 中有一个失败（rejected），<code>Promise.all</code> 异步地将失败的那个结果给失败状态的回调函数，而不管其它 <code>promise</code> 是否完成。</p>
+失败/拒绝（Rejection）：
+如果传入的 `promise` 中有一个失败（rejected），`Promise.all` 异步地将失败的那个结果给失败状态的回调函数，而不管其它 `promise` 是否完成。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Promise.all_的使用"><code>Promise.all</code> 的使用</h3>
+### `Promise.all` 的使用
 
-<p><code>Promise.all</code> 等待所有都完成（或第一个失败）。</p>
+`Promise.all` 等待所有都完成（或第一个失败）。
 
-<pre class="brush: js">var p1 = Promise.resolve(3);
+```js
+var p1 = Promise.resolve(3);
 var p2 = 1337;
-var p3 = new Promise((resolve, reject) =&gt; {
+var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, 'foo');
 });
 
-Promise.all([p1, p2, p3]).then(values =&gt; {
+Promise.all([p1, p2, p3]).then(values => {
   console.log(values); // [3, 1337, "foo"]
-});</pre>
+});
+```
 
-<p>如果参数中包含非 <code>promise</code> 值，这些值将被忽略，但仍然会被放在返回数组中（如果 <code>promise</code> 完成的话）：</p>
+如果参数中包含非 `promise` 值，这些值将被忽略，但仍然会被放在返回数组中（如果 `promise` 完成的话）：
 
-<pre class="brush: js">// this will be counted as if the iterable passed is empty, so it gets fulfilled
+```js
+// this will be counted as if the iterable passed is empty, so it gets fulfilled
 var p = Promise.all([1,2,3]);
 // this will be counted as if the iterable passed contains only the resolved promise with value "444", so it gets fulfilled
 var p2 = Promise.all([1,2,3, Promise.resolve(444)]);
@@ -81,15 +82,17 @@ setTimeout(function(){
 });
 
 // logs
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[3] }
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[4] }
-// Promise { &lt;state&gt;: "rejected", &lt;reason&gt;: 555 }</pre>
+// Promise { <state>: "fulfilled", <value>: Array[3] }
+// Promise { <state>: "fulfilled", <value>: Array[4] }
+// Promise { <state>: "rejected", <reason>: 555 }
+```
 
-<h3 id="Promise.all_的异步和同步"><code>Promise.all</code> 的异步和同步</h3>
+### `Promise.all` 的异步和同步
 
-<p>下面的例子中演示了 <code>Promise.all</code> 的异步性（如果传入的可迭代对象是空的，就是同步）：</p>
+下面的例子中演示了 `Promise.all` 的异步性（如果传入的可迭代对象是空的，就是同步）：
 
-<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
+```js
+// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.all as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -104,14 +107,15 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[2] }
-</pre>
+// Promise { <state>: "fulfilled", <value>: Array[2] }
+```
 
-<p>如果 <code>Promise.all</code> 失败，也是一样的：</p>
+如果 `Promise.all` 失败，也是一样的：
 
-<pre class="brush: js">var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
+```js
+var mixedPromisesArray = [Promise.resolve(33), Promise.reject(44)];
 var p = Promise.all(mixedPromisesArray);
 console.log(p);
 setTimeout(function(){
@@ -120,14 +124,15 @@ setTimeout(function(){
 });
 
 // logs
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "rejected", &lt;reason&gt;: 44 }
-</pre>
+// Promise { <state>: "rejected", <reason>: 44 }
+```
 
-<p>但是，<code>Promise.all</code> <strong>当且仅当</strong>传入的可迭代对象为空时为同步：</p>
+但是，`Promise.all` **当且仅当**传入的可迭代对象为空时为同步：
 
-<pre class="brush: js">var p = Promise.all([]); // will be immediately resolved
+```js
+var p = Promise.all([]); // will be immediately resolved
 var p2 = Promise.all([1337, "hi"]); // non-promise values will be ignored, but the evaluation will be done asynchronously
 console.log(p);
 console.log(p2)
@@ -137,35 +142,36 @@ setTimeout(function(){
 });
 
 // logs
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[0] }
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "fulfilled", <value>: Array[0] }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: Array[2] }
-</pre>
+// Promise { <state>: "fulfilled", <value>: Array[2] }
+```
 
-<h3 id="Promise.all_的快速返回失败行为"><code>Promise.all</code> 的快速返回失败行为</h3>
+### `Promise.all` 的快速返回失败行为
 
-<p><code>Promise.all</code> 在任意一个传入的 <code>promise</code> 失败时返回失败。例如，如果你传入的 <code>promise</code>中，有四个 <code>promise</code> 在一定的时间之后调用成功函数，有一个立即调用失败函数，那么 <code>Promise.all</code> 将立即变为失败。</p>
+`Promise.all` 在任意一个传入的 `promise` 失败时返回失败。例如，如果你传入的 `promise`中，有四个 `promise` 在一定的时间之后调用成功函数，有一个立即调用失败函数，那么 `Promise.all` 将立即变为失败。
 
-<pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
+```js
+var p1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 1000, 'one');
 });
-var p2 = new Promise((resolve, reject) =&gt; {
+var p2 = new Promise((resolve, reject) => {
   setTimeout(resolve, 2000, 'two');
 });
-var p3 = new Promise((resolve, reject) =&gt; {
+var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 3000, 'three');
 });
-var p4 = new Promise((resolve, reject) =&gt; {
+var p4 = new Promise((resolve, reject) => {
   setTimeout(resolve, 4000, 'four');
 });
-var p5 = new Promise((resolve, reject) =&gt; {
+var p5 = new Promise((resolve, reject) => {
   reject('reject');
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(values =&gt; {
+Promise.all([p1, p2, p3, p4, p5]).then(values => {
   console.log(values);
-}, reason =&gt; {
+}, reason => {
   console.log(reason)
 });
 
@@ -173,27 +179,25 @@ Promise.all([p1, p2, p3, p4, p5]).then(values =&gt; {
 //"reject"
 
 //You can also use .catch
-Promise.all([p1, p2, p3, p4, p5]).then(values =&gt; {
+Promise.all([p1, p2, p3, p4, p5]).then(values => {
   console.log(values);
-}).catch(reason =&gt; {
+}).catch(reason => {
   console.log(reason)
 });
 
 //From console:
 //"reject"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.race()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.race()")}}

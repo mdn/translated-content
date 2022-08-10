@@ -5,43 +5,41 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.ownKeys()</code></strong> 返回一个由目标对象自身的属性键组成的数组。</p>
+静态方法 **`Reflect.ownKeys()`** 返回一个由目标对象自身的属性键组成的数组。
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 
+## 语法
 
+```plain
+Reflect.ownKeys(target)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Reflect.ownKeys(target)
-</pre>
+- `target`
+  - : 获取自身属性键的目标对象。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>target</code></dt>
- <dd>获取自身属性键的目标对象。</dd>
-</dl>
+由目标对象的自身属性键组成的 {{jsxref("Array")}}。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>由目标对象的自身属性键组成的 {{jsxref("Array")}}。 </p>
+如果目标不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}}。
 
-<h3 id="异常">异常</h3>
+## 描述
 
-<p>如果目标不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}}。</p>
+`Reflect.ownKeys` 方法返回一个由目标对象自身的属性键组成的数组。它的返回值等同于`{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))。`
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p><code>Reflect.ownKeys</code> 方法返回一个由目标对象自身的属性键组成的数组。它的返回值等同于<code>{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))。</code></p>
+### 使用 `Reflect.ownKeys()`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_Reflect.ownKeys()">使用 <code>Reflect.ownKeys()</code></h3>
-
-<pre class="brush: js">Reflect.ownKeys({z: 3, y: 2, x: 1}); // [ "z", "y", "x" ]
+```js
+Reflect.ownKeys({z: 3, y: 2, x: 1}); // [ "z", "y", "x" ]
 Reflect.ownKeys([]); // ["length"]
 
 var sym = Symbol.for("comet");
@@ -53,19 +51,17 @@ Reflect.ownKeys(obj);
 // Indexes in numeric order,
 // strings in insertion order,
 // symbols in insertion order
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

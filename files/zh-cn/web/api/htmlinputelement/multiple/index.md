@@ -3,18 +3,19 @@ title: HTMLInputElement.multiple
 slug: Web/API/HTMLInputElement/multiple
 translation_of: Web/API/HTMLInputElement/multiple
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLInputElement.multiple</code></strong> 属性表示一个input是否可以有多个值。目前只有火狐支持 <code>&lt;input type="file"&gt;</code>存有多个值。</p>
+**`HTMLInputElement.multiple`** 属性表示一个 input 是否可以有多个值。目前只有火狐支持 `<input type="file">`存有多个值。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<pre class="brush:js">// fileInput is a &lt;input type=file multiple&gt;
+```js
+// fileInput is a <input type=file multiple>
 let fileInput = document.getElementById('myfileinput');
 
 if (fileInput.multiple == true) {
 
-  for (let i = 0; i &lt; fileInput.files.length; i++) {
+  for (let i = 0; i < fileInput.files.length; i++) {
     // Loop fileInput.files
   }
 
@@ -22,23 +23,17 @@ if (fileInput.multiple == true) {
 } else {
   let file = fileInput.files.item(0);
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/DOM/FileList">FileList</a></li>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=523771">Bug 523771</a> -  Support &lt;input type=file multiple&gt; </li>
-</ul>
+- [FileList](/en/DOM/FileList)
+- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple">The multiple attribute</a> (HTML 5 working draft)</li>
-</ul>
+- [The multiple attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.HTMLInputElement.multiple")}}</p>
+{{Compat("api.HTMLInputElement.multiple")}}

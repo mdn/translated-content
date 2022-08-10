@@ -12,25 +12,24 @@ tags:
   - Property
 translation_of: Web/API/Document/embeds
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>{{domxref("Document")}}接口的只读属性<code>embeds</code> 返回当前文档内的&lt;embed&gt;<strong>HTML </strong>{{htmlelement("object")}}元素列表</p>
+{{domxref("Document")}}接口的只读属性`embeds` 返回当前文档内的\<embed>**HTML** {{htmlelement("object")}}元素列表
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>nodeList</em> = document.embeds
-</pre>
+```plain
+nodeList = document.embeds
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("HTMLCollection")}}类型的值</p>
+一个 {{domxref("HTMLCollection")}}类型的值
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Document.embeds")}}</p>
+{{Compat("api.Document.embeds")}}

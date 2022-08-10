@@ -13,34 +13,35 @@ tags:
   - 属性
 translation_of: Web/API/Document/readyState
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Document.readyState</code> </strong>属性描述了{{ domxref("document") }} 的加载状态。</p>
+**`Document.readyState` **属性描述了{{ domxref("document") }} 的加载状态。
 
-<p>当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 {{event("readystatechange")}} 事件。</p>
+当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 {{event("readystatechange")}} 事件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var <var>string</var> = <var>document</var>.readyState;</pre>
+```plain
+var string = document.readyState;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个文档的 <code><strong>readyState</strong></code> 可以是以下之一：</p>
+一个文档的 **`readyState`** 可以是以下之一：
 
-<dl>
- <dt><code>loading</code>（正在加载）</dt>
- <dd>{{ domxref("document") }} 仍在加载。</dd>
- <dt><code>interactive</code>（可交互）</dt>
- <dd>文档已被解析，"<strong>正在加载</strong>"状态结束，但是诸如图像，样式表和框架之类的子资源仍在加载。</dd>
- <dt><code>complete</code>（完成）</dt>
- <dd>文档和所有子资源已完成加载。表示 {{event("load")}} 状态的事件即将被触发。</dd>
-</dl>
+- `loading`（正在加载）
+  - : {{ domxref("document") }} 仍在加载。
+- `interactive`（可交互）
+  - : 文档已被解析，"**正在加载**"状态结束，但是诸如图像，样式表和框架之类的子资源仍在加载。
+- `complete`（完成）
+  - : 文档和所有子资源已完成加载。表示 {{event("load")}} 状态的事件即将被触发。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="不同的准备状态">不同的准备状态</h3>
+### 不同的准备状态
 
-<pre class="brush:js ">switch (document.readyState) {
+```js
+switch (document.readyState) {
   case "loading":
     // 表示文档还在加载中，即处于“正在加载”状态。
     break;
@@ -48,7 +49,7 @@ translation_of: Web/API/Document/readyState
     // 文档已经结束了“正在加载”状态，DOM 元素可以被访问。
     // 但是像图像，样式表和框架等资源依然还在加载。
     var span = document.createElement("span");
-    span.textContent = "A &lt;span&gt; element.";
+    span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
   case "complete":
@@ -56,29 +57,35 @@ translation_of: Web/API/Document/readyState
     let CSS_rule = document.styleSheets[0].cssRules[0].cssText;
     console.log(`The first CSS rule is: ${CSS_rule }`);
     break;
-}</pre>
+}
+```
 
-<h3 id="模拟_DOMContentLoaded_事件的_readystatechange">模拟 DOMContentLoaded 事件的 readystatechange</h3>
+### 模拟 DOMContentLoaded 事件的 readystatechange
 
-<pre class="brush:js ">// 模拟 DOMContentLoaded/ jquery ready
+```js
+// 模拟 DOMContentLoaded/ jquery ready
 document.onreadystatechange = function () {
   if (document.readyState === "interactive") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h3 id="模拟_load_事件的_readystatechange">模拟 load 事件的 readystatechange</h3>
+### 模拟 load 事件的 readystatechange
 
-<pre class="brush: js ">// 模拟 load 事件
+```js
+// 模拟 load 事件
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h3 id="在_DOMContentLoaded_之前使用_readystatechange_作为事件处理程序以插入或修改DOM">在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM</h3>
+### 在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM
 
-<pre>document.addEventListener('readystatechange', event =&gt; {
+```plain
+document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
     initLoader();
   }
@@ -86,20 +93,18 @@ document.onreadystatechange = function () {
     initApp();
   }
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{event("readystatechange")}} event</li>
- <li>{{event("DOMContentLoaded")}} event</li>
- <li>{{event("load")}} event</li>
-</ul>
+- {{event("readystatechange")}} event
+- {{event("DOMContentLoaded")}} event
+- {{event("load")}} event

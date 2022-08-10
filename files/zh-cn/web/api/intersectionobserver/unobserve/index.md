@@ -11,53 +11,48 @@ tags:
 translation_of: Web/API/IntersectionObserver/unobserve
 browser-compat: api.IntersectionObserver.unobserve
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>{{domxref("IntersectionObserver")}}的<code>unobserve()</code>
-  方法命令<code>IntersectionObserver</code>停止对一个元素的观察。
-</p>
+{{domxref("IntersectionObserver")}}的`unobserve()`
+方法命令`IntersectionObserver`停止对一个元素的观察。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre
-  class="brush: js"><em>IntersectionObserver</em>.unobserve(<em>target</em>);</pre>
+```js
+IntersectionObserver.unobserve(target);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>要取消观察的目标，如果没有提供，方法不做任何事情，也不会抛出异常。</dd>
-</dl>
+- `target`
+  - : 要取消观察的目标，如果没有提供，方法不做任何事情，也不会抛出异常。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<dl>
-</dl>
+## 例子
 
-<h2 id="例子">例子</h2>
+下面代码段展示了一个观察器被创建，一个元素被观察，以及取消观察的过程。
 
-<p>下面代码段展示了一个观察器被创建，一个元素被观察，以及取消观察的过程。</p>
-
-<pre class="brush: js">var observer = new IntersectionObserver(callback);
+```js
+var observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById("elementToObserve"));
 
 /* ... */
 
-observer.unobserve(document.getElementById("elementToObserve"));</pre>
+observer.unobserve(document.getElementById("elementToObserve"));
+```
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
- <li>{{domxref("IntersectionObserver.observe()")}}</li>
-</ul>
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
+- {{domxref("IntersectionObserver.observe()")}}

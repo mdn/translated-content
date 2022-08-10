@@ -8,32 +8,30 @@ tags:
   - 属性
 translation_of: Web/API/Navigator/cookieEnabled
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p><code>navigator.cookieEnabled</code> 返回一个布尔值，来表示当前页面是否启用了 cookie。本属性为只读属性。</p>
+`navigator.cookieEnabled` 返回一个布尔值，来表示当前页面是否启用了 cookie。本属性为只读属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">let cookieEnabled = navigator.cookieEnabled;
-</pre>
+```js
+let cookieEnabled = navigator.cookieEnabled;
+```
 
-<ul>
- <li><code>cookieEnabled</code> 是个<a href="/zh-CN/docs/Glossary/Boolean">布尔值</a>： <code>true</code> 或 <code>false</code>。</li>
-</ul>
+- `cookieEnabled` 是个[布尔值](/zh-CN/docs/Glossary/Boolean)： `true` 或 `false`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">if (!navigator.cookieEnabled) {
+```js
+if (!navigator.cookieEnabled) {
   // 浏览器不支持 cookie，或者用户禁用了 cookie。
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Navigator.cookieEnabled")}}</p>
+{{Compat("api.Navigator.cookieEnabled")}}

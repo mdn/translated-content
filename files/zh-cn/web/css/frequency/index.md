@@ -7,53 +7,49 @@ tags:
   - 参考
 translation_of: Web/CSS/frequency
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>&lt;frequency&gt;</code> <a href="/en-US/docs/Web/CSS">CSS</a>数据类型表示频率维度，例如语音的音高。目前它未在任何 CSS 属性中被使用。</p>
+`<frequency>` [CSS](/en-US/docs/Web/CSS)数据类型表示频率维度，例如语音的音高。目前它未在任何 CSS 属性中被使用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>The <code>&lt;frequency&gt;</code> data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.</p>
+The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.
 
-<h3 id="单位">单位</h3>
+### 单位
 
-<p>可以使用以下单位：</p>
+可以使用以下单位：
 
-<dl>
- <dt><code><a id="Hz" name="Hz">Hz</a></code></dt>
- <dd>表示以赫兹（hertz）为单位的频率。例如：<code>0Hz</code>、<code>1500Hz</code>、<code>10000Hz</code>。</dd>
- <dt><code><a id="kHz" name="kHz">kHz</a></code></dt>
- <dd>表示以千赫兹（kilohertz）为单位的频率。例如：<code>0kHz</code>、<code>1.5kHz</code>、<code>10kHz</code>。</dd>
-</dl>
+- [`Hz`]()
+  - : 表示以赫兹（hertz）为单位的频率。例如：`0Hz`、`1500Hz`、`10000Hz`。
+- [`kHz`]()
+  - : 表示以千赫兹（kilohertz）为单位的频率。例如：`0kHz`、`1.5kHz`、`10kHz`。
 
-<div class="note">
-<p><strong>Note:</strong> Although the number <code>0</code> is always the same regardless of unit, the unit may not be omitted. In other words, <code>0</code> is invalid and does not represent <code>0Hz</code> or <code>0kHz</code>. Though the units are case-insensitive, it is good practice to use a capital "H" for <code>Hz</code> and <code>kHz</code>, as specified in the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">SI</a>.</p>
-</div>
+> **备注：** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0Hz` or `0kHz`. Though the units are case-insensitive, it is good practice to use a capital "H" for `Hz` and `kHz`, as specified in the [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>12Hz     Positive integer
+```plain
+12Hz     Positive integer
 4.3Hz    Non-integer
 14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
 +0Hz     Zero, with a leading + and a unit
--0kHz    Zero, with a leading - and a unit</pre>
+-0kHz    Zero, with a leading - and a unit
+```
 
-<h3 id="Invalid_frequency_values">Invalid frequency values</h3>
+### Invalid frequency values
 
-<pre class="example-bad">12.0     This is a &lt;number&gt;, not an &lt;frequency&gt;, because it is missing a unit.
+```plain example-bad
+12.0     This is a <number>, not an <frequency>, because it is missing a unit.
 7 Hz     No space is allowed between the number and the unit.
-0        Although unitless zero is an allowable &lt;length&gt;, it's an invalid &lt;frequency&gt;.</pre>
+0        Although unitless zero is an allowable <length>, it's an invalid <frequency>.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<div class="note">
-<p><strong>Note:</strong> This data type was initially introduced in <a href="https://www.w3.org/TR/CSS2/aural.html#q19.0">CSS Level 2</a> for the now-obsolete <a href="/en-US/docs/Web/CSS/@media/aural">aural</a> <a href="/en-US/docs/Web/CSS/@media#Media_types">media type</a>, where it was used to define the pitch of the voice. However, the <code>&lt;frequency&gt;</code> data type has been reintroduced in CSS3, though no CSS property is using it at the moment.</p>
-</div>
+> **备注：** This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/en-US/docs/Web/CSS/@media/aural) [media type](/en-US/docs/Web/CSS/@media#Media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.types.frequency")}}</p>
+{{Compat("css.types.frequency")}}

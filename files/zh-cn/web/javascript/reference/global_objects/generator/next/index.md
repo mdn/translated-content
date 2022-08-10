@@ -11,43 +11,40 @@ tags:
   - 生成器
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>next</strong></code><strong><code>()</code></strong> 方法返回一个包含属性 <code>done</code> 和 <code>value</code> 的对象。该方法也可以通过接受一个参数用以向生成器传值。</p>
+**`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。该方法也可以通过接受一个参数用以向生成器传值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>gen</var>.next(value)</code></pre>
+```plain
+gen.next(value)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>向生成器传递的值。</dd>
-</dl>
+- `value`
+  - : 向生成器传递的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">对象</a>包含两个属性：</p>
+返回的[对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
 
-<ul>
- <li><code>done</code> (布尔类型)
+- `done` (布尔类型)
 
-  <ul>
-   <li>如果迭代器超过迭代序列的末尾，则值为 <code>true</code>。 在这种情况下，<code>value</code> 可选地指定迭代器的返回值。</li>
-   <li>如果迭代器能够生成序列中的下一个值，则值为 <code>false</code>。 这相当于没有完全指定 <code>done</code> 属性。</li>
-  </ul>
- </li>
- <li><code>value</code> - 迭代器返回的任意的 JavaScript 值。当 <code>done</code> 的值为 <code>true</code> 时可以忽略该值。</li>
-</ul>
+  - 如果迭代器超过迭代序列的末尾，则值为 `true`。 在这种情况下，`value` 可选地指定迭代器的返回值。
+  - 如果迭代器能够生成序列中的下一个值，则值为 `false`。 这相当于没有完全指定 `done` 属性。
 
-<h2 id="示例">示例</h2>
+- `value` - 迭代器返回的任意的 JavaScript 值。当 `done` 的值为 `true` 时可以忽略该值。
 
-<h3 id="Example_Using_test">使用 <code>next()</code> 方法</h3>
+## 示例
 
-<p>下面的例子展示了一个简单的生成器，以及调用 <code>next</code> 后方法的返回值：</p>
+### 使用 `next()` 方法
 
-<pre class="brush: js">function* gen() {
+下面的例子展示了一个简单的生成器，以及调用 `next` 后方法的返回值：
+
+```js
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
@@ -58,13 +55,14 @@ g.next();      // "Object { value: 1, done: false }"
 g.next();      // "Object { value: 2, done: false }"
 g.next();      // "Object { value: 3, done: false }"
 g.next();      // "Object { value: undefined, done: true }"
-</pre>
+```
 
-<h3 id="向生成器传值">向生成器传值</h3>
+### 向生成器传值
 
-<p>在此示例中，使用值调用 <code>next</code>。请注意，第一次调用没有记录任何内容，因为生成器最初没有产生任何结果。</p>
+在此示例中，使用值调用 `next`。请注意，第一次调用没有记录任何内容，因为生成器最初没有产生任何结果。
 
-<pre><code>function* gen() {
+```plain
+function* gen() {
   while(true) {
     var value = yield null;
     console.log(value);
@@ -76,20 +74,18 @@ g.next(1);
 // "{ value: null, done: false }"
 g.next(2);
 // 2
-// "{ value: null, done: false }"</code>
-</pre>
+// "{ value: null, done: false }"
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a></li>
-</ul>
+- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)

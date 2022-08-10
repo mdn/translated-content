@@ -10,29 +10,31 @@ tags:
   - 属性
 translation_of: Web/API/Event/type
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>只读属性<strong> Event.type </strong>会返回一个字符串，表示该事件对象的事件类型。</p>
+只读属性 **Event.type** 会返回一个字符串，表示该事件对象的事件类型。
 
-<p>传给 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法的 event 参数的值是忽略大小写的。</p>
+传给 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法的 event 参数的值是忽略大小写的。
 
-<p>要了解所有的事件类型，请查看 <a href="/en-US/docs/Mozilla_event_reference">Mozilla 事件类型参考</a>.</p>
+要了解所有的事件类型，请查看 [Mozilla 事件类型参考](/en-US/docs/Mozilla_event_reference).
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">event.type
-</pre>
+```plain
+event.type
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 
-    &lt;title&gt;Event.type Example&lt;/title&gt;
+    <title>Event.type Example</title>
 
-    &lt;script&gt;
+    <script>
         var currEvent = null;
         function getEvtType(evt) {
             console.log("//Start------------getEvtType(evt)------------ ");
@@ -58,22 +60,22 @@ translation_of: Web/API/Event/type
         document.addEventListener("mousedown", getEvtType, false); //first
         document.addEventListener("mouseup", getEvtType, false); //second
 
-    &lt;/script&gt;
-&lt;/head&gt;
+    </script>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;p&gt;Press any key or click the mouse to get the event type.&lt;/p&gt;
-&lt;p&gt;Event type: &lt;span id="Etype" style="color:red"&gt;-&lt;/span&gt;&lt;/p&gt;
+<p>Press any key or click the mouse to get the event type.</p>
+<p>Event type: <span id="Etype" style="color:red">-</span></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('示例')}}</p>
+{{EmbedLiveSample('示例')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

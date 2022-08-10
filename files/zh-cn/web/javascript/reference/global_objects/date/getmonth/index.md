@@ -10,50 +10,48 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。</p>
+根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
 
+## 语法
 
+```js
+dateObj.getMonth()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="brush: js">dateObj.getMonth()</pre>
+无
 
-<h3 id="Parameters">参数</h3>
+### 返回值
 
-<p>无</p>
+`getMonth`返回一个 0 到 11 的整数值： 0 代表一月份，1 代表二月份， 2 代表三月份，依次类推。
 
-<h3 id="Description">返回值</h3>
+## 例子
 
-<p><code>getMonth</code>返回一个 0 到 11 的整数值： 0 代表一月份，1 代表二月份， 2 代表三月份，依次类推。</p>
+### 使用 `getMonth()`
 
-<h2 id="Examples">例子</h2>
+下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 `month。`
 
-<h3 id="Example:_Using_getMonth">使用 <code>getMonth()</code></h3>
-
-<p>下面第二条语句，基于 {{jsxref("Date")}} 对象 Xmas95 的值，把 11 赋值给变量 <code>month。</code></p>
-
-<pre class="brush:js">var Xmas95 = new Date('December 25, 1995 23:15:30');
+```js
+var Xmas95 = new Date('December 25, 1995 23:15:30');
 var month = Xmas95.getMonth();
 
-console.log(month); // 11</pre>
+console.log(month); // 11
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

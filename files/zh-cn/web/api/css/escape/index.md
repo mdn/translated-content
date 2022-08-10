@@ -8,53 +8,56 @@ tags:
   - 方法
 translation_of: Web/API/CSS/escape
 ---
-<p>{{APIRef("CSSOM")}}{{SeeCompatTable}}</p>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p> <code><strong>CSS.escape()</strong></code> 静态方法返回 {{domxref("DOMString")}} 包含作为参数传递的转义字符串，主要用作 CSS 选择器的一部分。</p>
+**`CSS.escape()`** 静态方法返回 {{domxref("DOMString")}} 包含作为参数传递的转义字符串，主要用作 CSS 选择器的一部分。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>escapedStr</em> = CSS.escape(str);
-</pre>
+```plain
+escapedStr = CSS.escape(str);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>str</em></dt>
- <dd>The {{domxref("DOMString")}} to be escaped.</dd>
-</dl>
+- _str_
+  - : The {{domxref("DOMString")}} to be escaped.
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<h3 id="基本结果">基本结果</h3>
+### 基本结果
 
-<pre class="brush: js">CSS.escape(".foo#bar")        // "\.foo\#bar"
+```js
+CSS.escape(".foo#bar")        // "\.foo\#bar"
 CSS.escape("()[]{}")          // "\(\)\[\]\\{\\}"
 CSS.escape('--a')             // "--a"
 CSS.escape(0)                 // "\30 ",  Unicode 代码点“0”是 30
-CSS.escape('\0')              // "\ufffd",  Unicode 替换字符 </pre>
+CSS.escape('\0')              // "\ufffd",  Unicode 替换字符
+```
 
-<h3 id="在上下文使用">在上下文使用</h3>
+### 在上下文使用
 
-<p>要转义一个字符串作为选择器使用， <code>escape()</code>方法可以用于：</p>
+要转义一个字符串作为选择器使用， `escape()`方法可以用于：
 
-<pre class="brush: js">var element = document.querySelector('#' + CSS.escape(id) + ' &gt; img');</pre>
+```js
+var element = document.querySelector('#' + CSS.escape(id) + ' > img');
+```
 
-<p><code>escape()</code>方法也可以用于转义字符串，它也转义了不严格需要转义的字符：</p>
+`escape()`方法也可以用于转义字符串，它也转义了不严格需要转义的字符：
 
-<pre class="brush: js">var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');</pre>
+```js
+var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CSS.escape")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>The {{domxref("CSS")}} interface where this static method resides.</li>
- <li><a href="https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js">A polyfill for the CSS.escape</a></li>
-</ul>
+- The {{domxref("CSS")}} interface where this static method resides.
+- [A polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)

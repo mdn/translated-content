@@ -3,28 +3,27 @@ title: Document.origin
 slug: Web/API/Document/origin
 translation_of: Web/API/Document/origin
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p><strong><code>Document.origin</code></strong> （只读属性） 返回文档的来源。通常该属性与 <code>document.defaultView.location.origin </code>相等。</p>
+**`Document.origin`** （只读属性） 返回文档的来源。通常该属性与 `document.defaultView.location.origin `相等。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var origin = document.origin;
+```js
+var origin = document.origin;
 // On this page, returns:'https://developer.mozilla.org'
 
 var origin = document.origin;
 // On "about:blank", returns:'null'
 
 var origin = document.origin;
-// On "data:text/html,&lt;b&gt;foo&lt;/b&gt;", returns:'null'
-</pre>
+// On "data:text/html,<b>foo</b>", returns:'null'
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.origin")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li> {{domxref("URLUtils.origin")}} 属性。</li>
-</ul>
+- {{domxref("URLUtils.origin")}} 属性。

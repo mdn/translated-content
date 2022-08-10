@@ -7,86 +7,48 @@ tags:
   - Unary
 translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
-<p>{{jsSidebar("Operators")}}</p>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>typeof</code> </strong>操作符返回一个字符串，表示未经计算的操作数的类型。</p>
+**`typeof` **操作符返回一个字符串，表示未经计算的操作数的类型。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
 
+## 语法
 
+`typeof` 运算符后接操作数：
 
-<h2 id="语法">语法</h2>
+```plain
+typeof operand
+typeof(operand)
+```
 
-<p><code>typeof</code> 运算符后接操作数：</p>
+### 参数
 
-<pre class="syntaxbox">typeof <em>operand
-typeof(operand)</em>
-</pre>
+**`operand`**
 
-<h3 id="参数">参数</h3>
+一个表示对象或{{Glossary("Primitive", "原始值")}}的表达式，其类型将被返回。
 
-<p><strong><code>operand</code></strong></p>
+## 描述
 
-<p>一个表示对象或{{Glossary("Primitive", "原始值")}}的表达式，其类型将被返回。</p>
+下表总结了 `typeof` 可能的返回值。有关类型和原始值的更多信息，可查看 [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) 页面。
 
-<h2 id="描述">描述</h2>
+| 类型                                                                    | 结果                                |
+| ----------------------------------------------------------------------- | ----------------------------------- |
+| {{glossary("Undefined")}}                                        | `"undefined"`                       |
+| {{glossary("Null")}}                                            | `"object"` (见[下文](#typeof_null)) |
+| {{glossary("Boolean")}}                                        | `"boolean"`                         |
+| {{glossary("Number")}}                                            | `"number"`                          |
+| {{glossary("BigInt")}}(ECMAScript 2020 新增)                      | `"bigint"`                          |
+| {{glossary("String")}}                                            | `"string"`                          |
+| {{glossary("Symbol")}} (ECMAScript 2015 新增)                     | `"symbol"`                          |
+| 宿主对象（由 JS 环境提供）                                              | _取决于具体实现_                    |
+| {{glossary("Function")}} 对象 (按照 ECMA-262 规范实现 [[Call]]) | `"function"`                        |
+| 其他任何对象                                                            | `"object"`                          |
 
-<p>下表总结了 <code>typeof</code> 可能的返回值。有关类型和原始值的更多信息，可查看 <a href="/zh-CN/docs/Web/JavaScript/Data_structures">JavaScript 数据结构</a> 页面。</p>
+## 示例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">类型</th>
-   <th scope="col">结果</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{glossary("Undefined")}}</td>
-   <td><code>"undefined"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Null")}}</td>
-   <td><code>"object"</code> (见<a href="#typeof_null">下文</a>)</td>
-  </tr>
-  <tr>
-   <td>{{glossary("Boolean")}}</td>
-   <td><code>"boolean"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Number")}}</td>
-   <td><code>"number"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("BigInt")}}(ECMAScript 2020 新增)</td>
-   <td><code>"bigint"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("String")}}</td>
-   <td><code>"string"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Symbol")}} (ECMAScript 2015 新增)</td>
-   <td><code>"symbol"</code></td>
-  </tr>
-  <tr>
-   <td>宿主对象（由 JS 环境提供）</td>
-   <td><em>取决于具体实现</em></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Function")}} 对象 (按照 ECMA-262 规范实现 [[Call]])</td>
-   <td><code>"function"</code></td>
-  </tr>
-  <tr>
-   <td>其他任何对象</td>
-   <td><code>"object"</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">// 数值
+```js
+// 数值
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
@@ -146,20 +108,23 @@ typeof new String('abc') === 'object';
 typeof function() {} === 'function';
 typeof class C {} === 'function'
 typeof Math.sin === 'function';
-</pre>
+```
 
-<h3 id="typeof_null"><code>typeof null</code></h3>
+### `typeof null`
 
-<pre class="brush: js"><code>// JavaScript 诞生以来便如此
-typeof null === 'object';</code></pre>
+```js
+// JavaScript 诞生以来便如此
+typeof null === 'object';
+```
 
-<p>在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 <code>null</code> 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，<code>typeof null</code> 也因此返回 <code>"object"</code>。（<a href="http://www.2ality.com/2013/10/typeof-null.html">参考来源</a>）</p>
+在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 `null` 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，`typeof null` 也因此返回 `"object"`。（[参考来源](http://www.2ality.com/2013/10/typeof-null.html)）
 
-<p>曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但<a href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">被拒绝了</a>。该提案会导致 <code>typeof null === 'null'</code>。</p>
+曾有一个 ECMAScript 的修复提案（通过选择性加入的方式），但[被拒绝了](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null)。该提案会导致 `typeof null === 'null'`。
 
-<h3 id="使用_new_操作符">使用 <code>new</code> 操作符</h3>
+### 使用 `new` 操作符
 
-<pre class="brush: js">// 除 Function 外的所有构造函数的类型都是 'object'
+```js
+// 除 Function 外的所有构造函数的类型都是 'object'
 var str = new String('String');
 var num = new Number(100);
 
@@ -168,31 +133,36 @@ typeof num; // 返回 'object'
 
 var func = new Function();
 
-typeof func; // 返回 'function'</pre>
+typeof func; // 返回 'function'
+```
 
-<h3 id="语法中的括号">语法中的括号</h3>
+### 语法中的括号
 
-<pre class="brush: js">// 括号有无将决定表达式的类型。
+```js
+// 括号有无将决定表达式的类型。
 var iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
-typeof (iData + ' Wisen'); // 'string'</pre>
+typeof (iData + ' Wisen'); // 'string'
+```
 
-<h3 id="正则表达式">正则表达式</h3>
+### 正则表达式
 
-<p>对正则表达式字面量的类型判断在某些浏览器中不符合标准：</p>
+对正则表达式字面量的类型判断在某些浏览器中不符合标准：
 
-<pre class="brush: js">typeof /s/ === 'function'; // Chrome 1-12 , 不符合 ECMAScript 5.1
+```js
+typeof /s/ === 'function'; // Chrome 1-12 , 不符合 ECMAScript 5.1
 typeof /s/ === 'object'; // Firefox 5+ , 符合 ECMAScript 5.1
-</pre>
+```
 
-<h3 id="错误">错误</h3>
+### 错误
 
-<p>在 ECMAScript 2015 之前，<code>typeof</code> 总能保证对任何所给的操作数返回一个字符串。即便是没有声明的标识符，<code>typeof</code> 也能返回 <code>'undefined'</code>。使用 <code>typeof</code> 永远不会抛出错误。</p>
+在 ECMAScript 2015 之前，`typeof` 总能保证对任何所给的操作数返回一个字符串。即便是没有声明的标识符，`typeof` 也能返回 `'undefined'`。使用 `typeof` 永远不会抛出错误。
 
-<p>但在加入了块级作用域的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let">let</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const">const</a> 之后，在其被声明之前对块中的 <code>let</code> 和 <code>const</code> 变量使用 <code>typeof</code> 会抛出一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a>。块作用域变量在块的头部处于“<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">暂存死区</a>”，直至其被初始化，在这期间，访问变量将会引发错误。</p>
+但在加入了块级作用域的 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 之后，在其被声明之前对块中的 `let` 和 `const` 变量使用 `typeof` 会抛出一个 [ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)。块作用域变量在块的头部处于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)”，直至其被初始化，在这期间，访问变量将会引发错误。
 
-<pre class="brush: js">typeof undeclaredVariable === 'undefined';
+```js
+typeof undeclaredVariable === 'undefined';
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
@@ -200,24 +170,27 @@ typeof newClass; // ReferenceError
 
 let newLetVariable;
 const newConstVariable = 'hello';
-class newClass{};</pre>
+class newClass{};
+```
 
-<h3 id="例外">例外</h3>
+### 例外
 
-<p>当前所有的浏览器都暴露了一个类型为 <code>undefined</code> 的非标准宿主对象 {{domxref("document.all")}}。</p>
+当前所有的浏览器都暴露了一个类型为 `undefined` 的非标准宿主对象 {{domxref("document.all")}}。
 
-<pre class="brush: js">typeof document.all === 'undefined';
-</pre>
+```js
+typeof document.all === 'undefined';
+```
 
-<p>尽管规范允许为非标准的外来对象自定义类型标签，但它要求这些类型标签与已有的不同。<code>document.all</code> 的类型标签为 <code>'undefined'</code> 的例子在 Web 领域中被归类为对原 ECMA JavaScript 标准的“故意侵犯”。</p>
+尽管规范允许为非标准的外来对象自定义类型标签，但它要求这些类型标签与已有的不同。`document.all` 的类型标签为 `'undefined'` 的例子在 Web 领域中被归类为对原 ECMA JavaScript 标准的“故意侵犯”。
 
-<h3 id="Real-world_usage">Real-world usage</h3>
+### Real-world usage
 
-<p><code>typeof</code> is very useful, but it's not as versatile as might be required. For example, <code>typeof([])</code> , is <code>'object'</code>, as well as <code>typeof(new Date())</code>, <code>typeof(/abc/)</code>, etc.</p>
+`typeof` is very useful, but it's not as versatile as might be required. For example, `typeof([])` , is `'object'`, as well as `typeof(new Date())`, `typeof(/abc/)`, etc.
 
-<p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in production-level code would be as follows (provided <code>obj</code> exists):</p>
+For greater specificity in checking types, a `typeof` wrapper for usage in production-level code would be as follows (provided `obj` exists):
 
-<pre class="brush: js">  function type(obj, fullClass) {
+```js
+  function type(obj, fullClass) {
 
     // get toPrototypeString() of obj (handles all types)
     // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
@@ -230,28 +203,27 @@ class newClass{};</pre>
     if (deepType === 'generatorfunction') { return 'function' }
 
     // Prevent overspecificity (for example, [object HTMLDivElement], etc).
-    // Account for functionish Regexp (Android &lt;=2.3), functionish &lt;object&gt; element (Chrome &lt;=57, Firefox &lt;=52), etc.
+    // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
     // String.prototype.match is universally supported.
 
     return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
        (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
-  }</pre>
+  }
+```
 
-<p>For checking non-existent variables that would otherwise throw a {{JSxRef("ReferenceError")}}, use <code>typeof nonExistentVar === 'undefined'</code>.</p>
+For checking non-existent variables that would otherwise throw a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === 'undefined'`.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></code></li>
- <li><a href="http://es-discourse.com/t/why-typeof-is-no-longer-safe/15">Why typeof is no longer "safe"</a></li>
- <li><a href="https://github.com/tc39/ecma262/issues/668">document.all willful violation of the standard</a></li>
- <li><a href="https://2ality.com/2013/10/typeof-null.html">The history of “typeof null”</a></li>
-</ul>
+- [`instanceof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [Why typeof is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15)
+- [document.all willful violation of the standard](https://github.com/tc39/ecma262/issues/668)
+- [The history of “typeof null”](https://2ality.com/2013/10/typeof-null.html)

@@ -4,31 +4,31 @@ slug: Web/API/Document/elementsFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
-<p>{{APIRef("Shadow DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>elementsFromPoint()</code></strong> 是 {{domxref("DocumentOrShadowRoot")}} 下的一个函数，该函数返还在特定坐标点下的 HTML 元素数组。</p>
+**`elementsFromPoint()`** 是 {{domxref("DocumentOrShadowRoot")}} 下的一个函数，该函数返还在特定坐标点下的 HTML 元素数组。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var elements = document.elementsFromPoint(x, y);</pre>
+```plain
+var elements = document.elementsFromPoint(x, y);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd>坐标点的水平坐标值</dd>
- <dt>y</dt>
- <dd>坐标点的垂向坐标值</dd>
-</dl>
+- x
+  - : 坐标点的水平坐标值
+- y
+  - : 坐标点的垂向坐标值
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个包含 {{domxref('element')}} 对象的数组。</p>
+一个包含 {{domxref('element')}} 对象的数组。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

@@ -8,38 +8,40 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">RangeError: repeat count must be non-negative (Firefox)
+```plain
+RangeError: repeat count must be non-negative (Firefox)
 RangeError: Invalid count value (Chrome)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="发生了什么">发生了什么？</h2>
+## 发生了什么？
 
-<p>代码中使用了 {{jsxref("String.prototype.repeat()")}}方法。它有一个计数参数，表示重复该字符串的次数。该参数必须在 0 及正 {{jsxref("Infinity")}} 之间，且不能为负数。该值的合法范围可以这样表示： [0, +∞)。</p>
+代码中使用了 {{jsxref("String.prototype.repeat()")}}方法。它有一个计数参数，表示重复该字符串的次数。该参数必须在 0 及正 {{jsxref("Infinity")}} 之间，且不能为负数。该值的合法范围可以这样表示： \[0, +∞)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="无效的">无效的</h3>
+### 无效的
 
-<pre class="brush: js example-bad">'abc'.repeat(-1); // RangeError </pre>
+```js example-bad
+'abc'.repeat(-1); // RangeError
+```
 
-<h3 id="有效的">有效的</h3>
+### 有效的
 
-<pre class="brush: js example-good">'abc'.repeat(0);    // ''
+```js example-good
+'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.prototype.repeat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.repeat()")}}

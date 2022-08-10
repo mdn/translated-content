@@ -8,43 +8,39 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.matchAll</strong></code> 返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxref("String.prototype.matchAll()")}} 方法调用。</p>
+**`Symbol.matchAll`** 返回一个迭代器，该迭代器根据字符串生成正则表达式的匹配项。此函数可以被 {{jsxref("String.prototype.matchAll()")}} 方法调用。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
 
+## 描述
 
+此 Symbol 用于 {{jsxref("String.prototype.matchAll()")}} 特别是 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。下面两个例子返回相同的结果：
 
-<h2 id="描述">描述</h2>
+```js
+'abc'.matchAll(/a/);
 
-<div>
-<p>此 Symbol 用于 {{jsxref("String.prototype.matchAll()")}} 特别是 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。下面两个例子返回相同的结果：</p>
+/a/[Symbol.matchAll]('abc');
+```
 
-<pre class="brush: js">'abc'.matchAll(/a/);
+此方法用于自定义 {{jsxref("RegExp")}} 子类中的匹配行为。
 
-/a/[Symbol.matchAll]('abc');</pre>
+{{js_property_attributes(0,0,0)}}
 
-<p>此方法用于自定义 {{jsxref("RegExp")}} 子类中的匹配行为。</p>
+## 示例
 
-<p>{{js_property_attributes(0,0,0)}}</p>
-</div>
+更多示例请查阅 {{jsxref("String.prototype.matchAll()")}} 和 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。
 
-<h2 id="示例">示例</h2>
-
-<p>更多示例请查阅 {{jsxref("String.prototype.matchAll()")}} 和 {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.matchAll()")}}</li>
- <li>{{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}</li>
-</ul>
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}

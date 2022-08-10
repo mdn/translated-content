@@ -6,74 +6,79 @@ tags:
   - CSS 数据类型
 translation_of: Web/CSS/custom-ident
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>&lt;custom-ident&gt;</code> </strong>指用户自定义字符串标识符。一种<a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/CSS_Types">数据类型</a>；要区分大小写，值不能有任何歧义。</p>
+**`<custom-ident>` **指用户自定义字符串标识符。一种[CSS](/en-US/docs/Web/CSS) [数据类型](/en-US/docs/Web/CSS/CSS_Types)；要区分大小写，值不能有任何歧义。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>&lt;custom-ident&gt;</code> 语法同 CSS 属性名相似，但它是区分大小写的。可以由以下字符组成：</p>
+`<custom-ident>` 语法同 CSS 属性名相似，但它是区分大小写的。可以由以下字符组成：
 
-<ul>
- <li>字母 (<code>A</code> - <code>Z</code>,  <code>a</code> - <code>z</code>),</li>
- <li>十进制数 (<code>0</code> - <code>9</code>),</li>
- <li>连字符 (<code>-</code>),</li>
- <li>下划线 (<code>_</code>),</li>
- <li>转义字符 ( <code>\</code>),</li>
- <li><a href="http://en.wikipedia.org/wiki/Unicode">Unicode</a> 编码（格式：转义字符（<code>\</code>）后跟 1 到 6 位十六进制数）</li>
-</ul>
+- 字母 (`A` - `Z`, `a` - `z`),
+- 十进制数 (`0` - `9`),
+- 连字符 (`-`),
+- 下划线 (`_`),
+- 转义字符 ( `\`),
+- [Unicode](http://en.wikipedia.org/wiki/Unicode) 编码（格式：转义字符（`\`）后跟 1 到 6 位十六进制数）
 
-<p>注意：<code>id1</code>, <code>Id1</code>, <code>iD1</code>和<code>ID1</code>都是不同标识符，因为标识符是区分大小写的。另一方面，因为可以解码，所以 <code>toto\?</code> 和 <code>toto\3F</code> 是相同的。</p>
+注意：`id1`, `Id1`, `iD1`和`ID1`都是不同标识符，因为标识符是区分大小写的。另一方面，因为可以解码，所以 `toto\?` 和 `toto\3F` 是相同的。
 
-<h3 id="禁用值">禁用值</h3>
+### 禁用值
 
-<p><code>&lt;custom-ident&gt;</code> 不能用单引号或双引号包起来。此外，第一个字符不能为数字，字符串开头不能是连字符 (<code>-</code>) 后跟数字或连字符。</p>
+`<custom-ident>` 不能用单引号或双引号包起来。此外，第一个字符不能为数字，字符串开头不能是连字符 (`-`) 后跟数字或连字符。
 
-<p>为避免歧义，各个属性对应的<code>&lt;custom-ident&gt;</code> 禁止使用以下特殊值：</p>
+为避免歧义，各个属性对应的`<custom-ident>` 禁止使用以下特殊值：
 
-<dl>
- <dt>{{cssxref("animation-name")}}</dt>
- <dd>禁用 CSS 关键字 <code>unset</code>, <code>initial</code>,  <code>inherit</code>, <code>none</code></dd>
- <dt>{{cssxref("counter-reset")}}</dt>
- <dt>{{cssxref("counter-increment")}}</dt>
- <dd>禁止使用<code>unset</code>, <code>initial</code>,  <code>inherit</code>,  <code>none</code>.</dd>
- <dt>{{cssxref("@counter-style")}}</dt>
- <dt>{{cssxref("list-style-type")}}</dt>
- <dd>禁止使用<code>unset</code>, <code>initial</code>,  <code>inherit</code>, <code>none</code>, <code>inline</code>, <code>outside</code>. 同时不同浏览器预定义的值如：<code>disc</code>, <code>circle</code>, <code>square</code>, <code>decimal</code>, <code>cjk-decimal</code>, <code>decimal-leading-zero</code>, <code>lower-roman</code>, <code>upper-roman</code>, <code>lower-greek</code>, <code>lower-alpha</code>, <code>lower-latin</code>, <code>upper-alpha</code>, <code>upper-latin</code>, <code>arabic-indic</code>, <code>armenian</code>, <code>bengali</code>, <code>cambodian</code>, <code>cjk-earthly-branch</code>, <code>cjk-heavenly-stem</code>, <code>cjk-ideographic</code>, <code>devanagari</code>, <code>ethiopic-numeric</code>, <code>georgian</code>, <code>gujarati</code>, <code>gurmukhi</code>, <code>hebrew</code>, <code>hiragana</code>, <code>hiragana-iroha</code>, <code>japanese-formal</code>, <code>japanese-informal</code>, <code>kannada</code>, <code>katakana</code>, <code>katakana-iroha</code>, <code>khmer</code>, <code>korean-hangul-formal</code>, <code>korean-hanja-formal</code>, <code>korean-hanja-informal</code>, <code>lao</code>, <code>lower-armenian</code>, <code>malayalam</code>, <code>mongolian</code>, <code>myanmar</code>, <code>oriya</code>, <code>persian</code>, <code>simp-chinese-formal</code>, <code>simp-chinese-informal</code>, <code>tamil</code>, <code>telugu</code>, <code>thai</code>, <code>tibetan</code>, <code>trad-chinese-formal</code>, <code>trad-chinese-informal</code>, <code>upper-armenian</code>, <code>disclosure-open</code>, 和 <code>disclosure-close</code>也不能使用。</dd>
- <dt>{{cssxref("grid-row-start")}}<br>
- {{cssxref("grid-row-end")}}<br>
- {{cssxref("grid-column-start")}}<br>
- {{cssxref("grid-column-end")}}</dt>
- <dd>禁止使用 <code>span</code> 。</dd>
- <dt>{{cssxref("will-change")}}</dt>
- <dd>禁止使用<code>unset</code>, <code>initial</code>,  <code>inherit</code>, 以及 <code>will-change</code>, <code>auto</code>, <code>scroll-position</code>, and <code>contents</code>.</dd>
-</dl>
+- {{cssxref("animation-name")}}
+  - : 禁用 CSS 关键字 `unset`, `initial`, `inherit`, `none`
+- {{cssxref("counter-reset")}}
 
-<h2 id="示例">示例</h2>
+  {{cssxref("counter-increment")}}
 
-<h3 id="有效标识符">有效标识符</h3>
+  - : 禁止使用`unset`, `initial`, `inherit`, `none`.
 
-<pre>nono79            字母数字混合
+- {{cssxref("@counter-style")}}
+
+  {{cssxref("list-style-type")}}
+
+  - : 禁止使用`unset`, `initial`, `inherit`, `none`, `inline`, `outside`. 同时不同浏览器预定义的值如：`disc`, `circle`, `square`, `decimal`, `cjk-decimal`, `decimal-leading-zero`, `lower-roman`, `upper-roman`, `lower-greek`, `lower-alpha`, `lower-latin`, `upper-alpha`, `upper-latin`, `arabic-indic`, `armenian`, `bengali`, `cambodian`, `cjk-earthly-branch`, `cjk-heavenly-stem`, `cjk-ideographic`, `devanagari`, `ethiopic-numeric`, `georgian`, `gujarati`, `gurmukhi`, `hebrew`, `hiragana`, `hiragana-iroha`, `japanese-formal`, `japanese-informal`, `kannada`, `katakana`, `katakana-iroha`, `khmer`, `korean-hangul-formal`, `korean-hanja-formal`, `korean-hanja-informal`, `lao`, `lower-armenian`, `malayalam`, `mongolian`, `myanmar`, `oriya`, `persian`, `simp-chinese-formal`, `simp-chinese-informal`, `tamil`, `telugu`, `thai`, `tibetan`, `trad-chinese-formal`, `trad-chinese-informal`, `upper-armenian`, `disclosure-open`, 和 `disclosure-close`也不能使用。
+
+- {{cssxref("grid-row-start")}}
+  {{cssxref("grid-row-end")}}
+  {{cssxref("grid-column-start")}}
+  {{cssxref("grid-column-end")}}
+  - : 禁止使用 `span` 。
+- {{cssxref("will-change")}}
+  - : 禁止使用`unset`, `initial`, `inherit`, 以及 `will-change`, `auto`, `scroll-position`, and `contents`.
+
+## 示例
+
+### 有效标识符
+
+```plain
+nono79            字母数字混合
 ground-level      字母 - 字母
 -test             连字符后跟字母
 _internal         下划线后跟字母
 \22 toto          Unicode 编码后跟字母
 bili\.bob         转义的句号
-</pre>
+```
 
-<h3 id="无效标识符">无效标识符</h3>
+### 无效标识符
 
-<pre class="example-bad">34rem             第一个字符不能是数字
+```plain example-bad
+34rem             第一个字符不能是数字
 -12rad            第一个字符连字符后不能跟数字
 bili.bob          只有字母数字、连字符-、下划线_不需要转义
 --toto            第一个字符不能为连字符后跟连字符
 'bilibob'         不能用单引号包起来，这是一个字符串类型
-"bilibob"         不能用双引号包起来，这是一个字符串类型</pre>
+"bilibob"         不能用双引号包起来，这是一个字符串类型
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>由于这种类型不是真正的类型，而是用于简化允许值描述的便利类型，因此没有浏览器兼容性信息。</p>
+由于这种类型不是真正的类型，而是用于简化允许值描述的便利类型，因此没有浏览器兼容性信息。

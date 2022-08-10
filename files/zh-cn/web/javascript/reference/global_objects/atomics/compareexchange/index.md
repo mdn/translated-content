@@ -8,64 +8,59 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p><code><strong>Atomics</strong></code><strong><code>.compareExchange()</code></strong> 静态方法会在数组的值与期望值相等的时候，将给定的替换值替换掉数组上的值，然后返回旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。</p>
+**`Atomics.compareExchange()`** 静态方法会在数组的值与期望值相等的时候，将给定的替换值替换掉数组上的值，然后返回旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
 
+## 语法
 
+```plain
+Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
-</pre>
+- `typedArray`
+  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。
+- `index`
+  - : `typedArray` 的索引。
+- `expectedValue`
+  - : 用于比较的值。
+- replacementValue
+  - : 将要替换上的值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。</dd>
- <dt><code>index</code></dt>
- <dd><code>typedArray</code> 的索引。</dd>
- <dt><code>expectedValue</code></dt>
- <dd>用于比较的值。</dd>
- <dt>replacementValue</dt>
- <dd>将要替换上的值。</dd>
-</dl>
+给定位置的旧值（`typedArray[index]`）。
 
-<h3 id="返回值">返回值</h3>
+### 错误
 
-<p>给定位置的旧值（<code>typedArray[index]</code>）。</p>
+- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
+- `假如 typedArray` 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。
+- 如果 `index` 超出了 `typedArray 的边界，则抛出` {{jsxref("RangeError")}}。
 
-<h3 id="错误">错误</h3>
+## 示例
 
-<ul>
- <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
- <li><code>假如 typedArray</code> 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray 的边界，则抛出</code> {{jsxref("RangeError")}}。</li>
-</ul>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 ta[0] = 7;
 
 Atomics.compareExchange(ta, 0, 7, 12); // returns 7, the old value
-Atomics.load(ta, 0); // 12</pre>
+Atomics.load(ta, 0); // 12
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.exchange()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.exchange()")}}

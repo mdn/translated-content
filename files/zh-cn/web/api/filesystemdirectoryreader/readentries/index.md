@@ -3,51 +3,46 @@ title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 translation_of: Web/API/FileSystemDirectoryReader/readEntries
 ---
-<div>{{APIRef("File System API")}}</div>
+{{APIRef("File System API")}}
 
-<p>{{SeeCompatTable}}{{Non-standard_header}}</p>
+{{SeeCompatTable}}{{Non-standard_header}}
 
-<p>The {{domxref("FileSystemDirectoryReader")}} interface's <strong><code>readEntries()</code></strong> method retrieves the directory entries within the directory being read and delivers them in an array to a provided callback function. The objects in the array are all based upon {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories.</p>
+The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries within the directory being read and delivers them in an array to a provided callback function. The objects in the array are all based upon {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">readEntries(<em>successCallback</em>[, <em>errorCallback</em>]);
-</pre>
+```plain
+readEntries(successCallback[, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>successCallback</code></dt>
- <dd>A function which is called when the directory's contents have been retrieved. The function receives a single input parameter: an array of file system entry objects, each based on {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories. If there are no files left, or you've already called <code>readEntries()</code> on this {{domxref("FileSystemDirectoryReader")}}, the array is empty.</dd>
- <dt><code>errorCallback</code> {{optional_inline}}</dt>
- <dd>A callback function which is called if an error occurs while reading from the directory. It receives one input parameter: a {{domxref("FileError")}} object describing the error which occurred.</dd>
-</dl>
+- `successCallback`
+  - : A function which is called when the directory's contents have been retrieved. The function receives a single input parameter: an array of file system entry objects, each based on {{domxref("FileSystemEntry")}}. Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories. If there are no files left, or you've already called `readEntries()` on this {{domxref("FileSystemDirectoryReader")}}, the array is empty.
+- `errorCallback` {{optional_inline}}
+  - : A callback function which is called if an error occurs while reading from the directory. It receives one input parameter: a {{domxref("FileError")}} object describing the error which occurred.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>{{page("/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry", "Example")}}</p>
+{{page("/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry", "Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.FileSystemDirectoryReader.readEntries")}}
 
+## See also
 
-<p>{{Compat("api.FileSystemDirectoryReader.readEntries")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemDirectoryEntry")}}</li>
- <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystem")}}

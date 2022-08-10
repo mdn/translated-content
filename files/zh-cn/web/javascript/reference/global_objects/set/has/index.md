@@ -7,35 +7,34 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
-<div>{{JSRef("Global_Objects", "Set")}}</div>
+{{JSRef("Global_Objects", "Set")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong>has()</strong> 方法返回一个布尔值来指示对应的值 value 是否存在 Set 对象中。</p>
+**has()** 方法返回一个布尔值来指示对应的值 value 是否存在 Set 对象中。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>mySet</em>.has(value);</code></pre>
+```plain
+mySet.has(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>value</dt>
- <dd>必需。用以测试该值是否存在于 Set 对象中。</dd>
-</dl>
+- value
+  - : 必需。用以测试该值是否存在于 Set 对象中。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>Boolean</dt>
- <dd>如果指定的值（value）存在于 Set 对象当中，返回<code>true</code>；否则返回 <code>false</code>。</dd>
-</dl>
+- Boolean
+  - : 如果指定的值（value）存在于 Set 对象当中，返回`true`；否则返回 `false`。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example:_Testing_size_of_all_array_elements">使用 <code>has</code> 方法</h3>
+### 使用 `has` 方法
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add('foo');
 
 mySet.has('foo');  // 返回 true
@@ -47,20 +46,19 @@ set1.add(obj1);
 
 set1.has(obj1);        // 返回 true
 set1.has({'key1': 1}); // 会返回 false，因为其是另一个对象的引用
-set1.add({'key1': 1}); // 现在 set1 中有 2 条（不同引用的）对象了</pre>
+set1.add({'key1': 1}); // 现在 set1 中有 2 条（不同引用的）对象了
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.add()")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.add()")}}
+- {{jsxref("Set.prototype.delete()")}}

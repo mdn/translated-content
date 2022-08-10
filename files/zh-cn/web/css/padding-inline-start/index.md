@@ -3,51 +3,54 @@ title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 translation_of: Web/CSS/padding-inline-start
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>The<strong> <code>padding-inline-start</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+The** `padding-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<p>It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.</p>
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="brush:css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 padding-inline-start: 10px;   /* An absolute length */
 padding-inline-start: 1em;    /* A length relative to the text size */
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 padding-inline-start: 5%;     /* A padding relative to the block container's width */
 
 /* Global values */
 padding-inline-start: inherit;
 padding-inline-start: initial;
 padding-inline-start: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>padding-inline-start</code> property takes the same values as the {{cssxref("padding-left")}} property.</p>
+The `padding-inline-start` property takes the same values as the {{cssxref("padding-left")}} property.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -57,21 +60,20 @@ padding-inline-start: unset;
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
   background-color: #C8C800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.padding-inline-start")}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

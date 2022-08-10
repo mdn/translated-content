@@ -14,40 +14,34 @@ tags:
   - TopicStub
 translation_of: Web/API/Client
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><code>Client</code> 接口表示一个可执行的上下文，如{{domxref("Worker")}}或{{domxref("SharedWorker")}}。{{domxref("Window")}} 客户端由更具体的{{domxref("WindowClient")}}表示。你可以从{{domxref("Clients.matchAll","Clients.matchAll()")}} 和{{domxref("Clients.get","Clients.get()")}}等方法获取<code>Client</code>/<code>WindowClient</code>对象。</p>
+`Client` 接口表示一个可执行的上下文，如{{domxref("Worker")}}或{{domxref("SharedWorker")}}。{{domxref("Window")}} 客户端由更具体的{{domxref("WindowClient")}}表示。你可以从{{domxref("Clients.matchAll","Clients.matchAll()")}} 和{{domxref("Clients.get","Clients.get()")}}等方法获取`Client`/`WindowClient`对象。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Client.postMessage()")}}</dt>
- <dd>向 client 发送一条消息。</dd>
-</dl>
+- {{domxref("Client.postMessage()")}}
+  - : 向 client 发送一条消息。
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Client.id")}} {{readonlyInline}}</dt>
- <dd>客户端的唯一通用标识符，字符串形式。</dd>
- <dt>{{domxref("Client.type")}} {{readonlyInline}}</dt>
- <dd>客户端的类型，字符串形式。可能是"<code>window"</code>, "<code>worker"</code>, 或 "<code>sharedworker"。</code></dd>
- <dt>{{domxref("Client.url")}} {{readonlyInline}}</dt>
- <dd>客户端的 URL，字符串形式。</dd>
-</dl>
+- {{domxref("Client.id")}} {{readonlyInline}}
+  - : 客户端的唯一通用标识符，字符串形式。
+- {{domxref("Client.type")}} {{readonlyInline}}
+  - : 客户端的类型，字符串形式。可能是"`window"`, "`worker"`, 或 "`sharedworker"。`
+- {{domxref("Client.url")}} {{readonlyInline}}
+  - : 客户端的 URL，字符串形式。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>使用<a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Service Workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker 准备好了么？</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
-</ul>
+- 使用[Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [ServiceWorker 准备好了么？](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

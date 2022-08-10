@@ -1,39 +1,33 @@
 ---
 title: ':where()'
-slug: 'Web/CSS/:where'
+slug: Web/CSS/:where
 tags:
   - CSS
   - Web
   - 伪类
   - 参考
   - 选择器
-translation_of: 'Web/CSS/:where'
+translation_of: Web/CSS/:where
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>:where()</code></strong> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">CSS 伪类</a>函数接受<a href="/zh-CN/docs/Web/CSS/Selector_list">选择器列表</a>作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。</p>
+**`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
 
-<p><code>:where()</code> 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，<code>:where()</code> 的<a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a>总是为 0 ，但是 <code>:is()</code> 的优先级是由它的选择器列表中优先级最高的<a href="/zh-CN/docs/Glossary/CSS_Selector">选择器</a>决定的。</p>
+`:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/Specificity)总是为 0 ，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.where")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.where")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
- <li><a href="/zh-CN/docs/Web/CSS/Selector_list">选择器列表</a></li>
-</ul>
+- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
+- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)

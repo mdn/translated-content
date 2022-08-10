@@ -3,51 +3,51 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>blink()</code></strong>方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。</p>
+**`blink()`**方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。
 
-<div class="warning">
-<p><strong>警告：</strong>闪烁文本被多种普及标准否决。 <code>&lt;blink&gt;</code>元素自身是非标准的，并且已废弃！</p>
-</div>
+> **警告：**闪烁文本被多种普及标准否决。 `<blink>`元素自身是非标准的，并且已废弃！
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.blink()</code></pre>
+```plain
+str.blink()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>包含  {{HTMLElement("blink")}} HTML 元素的字符串。</p>
+包含 {{HTMLElement("blink")}} HTML 元素的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>blink()</code>方法将字符串嵌入 <code>&lt;blink&gt;</code> 标签中： <code>"&lt;blink&gt;str&lt;/blink&gt;"</code>.</p>
+`blink()`方法将字符串嵌入 `<blink>` 标签中： `"<blink>str</blink>"`.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_blink_函数">使用 <code>blink()</code> 函数</h3>
+### 使用 `blink()` 函数
 
-<p>下面的示例使用了字符串方法来修改字符串格式：</p>
+下面的示例使用了字符串方法来修改字符串格式：
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.blink());   // &lt;blink&gt;Hello, world&lt;/blink&gt;
-console.log(worldString.bold());    // &lt;b&gt;Hello, world&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Hello, world&lt;/i&gt;
-console.log(worldString.strike());  // &lt;strike&gt;Hello, world&lt;/strike&gt;</pre>
+console.log(worldString.blink());   // <blink>Hello, world</blink>
+console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.italics()); // <i>Hello, world</i>
+console.log(worldString.strike());  // <strike>Hello, world</strike>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

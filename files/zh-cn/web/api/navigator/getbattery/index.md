@@ -3,26 +3,26 @@ title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
 translation_of: Web/API/Navigator/getBattery
 ---
-<p>{{ ApiRef("Battery API") }}</p>
+{{ ApiRef("Battery API") }}
 
-<p><code>getBattery() 方法提供了系统的电量信息，返回一个 battery 的 promise 对象，然后 resolve 后得到</code>{{domxref("BatteryManager")}}对象，它提供了一些新的事件，以及方法供您监控电池的状态。这个方法实现了 <a href="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a>（查看更多细节以及使用方法和实例代码）</p>
+`getBattery() 方法提供了系统的电量信息，返回一个 battery 的 promise 对象，然后 resolve 后得到`{{domxref("BatteryManager")}}对象，它提供了一些新的事件，以及方法供您监控电池的状态。这个方法实现了 [Battery Status API](/en-US/docs/WebAPI/Battery_Status)（查看更多细节以及使用方法和实例代码）
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">navigator.getBattery().then(funcRef);</pre>
+```plain
+navigator.getBattery().then(funcRef);
+```
 
-<p><code><em>funcRef</em></code> 是{{domxref("navigator.getBattery")}} 返回的 battery promise 对象被 resolve 后执行的函数，即回调函数。</p>
+`funcRef` 是{{domxref("navigator.getBattery")}} 返回的 battery promise 对象被 resolve 后执行的函数，即回调函数。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Navigator.getBattery")}}
 
-<h2 id="请参见">请参见</h2>
+## 请参见
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a></li>
-</ul>
+- [Battery Status API](/en-US/docs/WebAPI/Battery_Status)

@@ -3,59 +3,54 @@ title: <mspace>
 slug: Web/MathML/Element/mspace
 translation_of: Web/MathML/Element/mspace
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML&lt;mspace&gt;元素用来表示一段空白，空白的大小由它自身的属性决定。</p>
+MathML\<mspace>元素用来表示一段空白，空白的大小由它自身的属性决定。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>class, id, style</dt>
- <dd>用来供<a href="/en-US/docs/CSS">样式表</a>使用。</dd>
- <dt>depth</dt>
- <dd>空白在基线下方的高度 (参阅 <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a>).</dd>
- <dt>height</dt>
- <dd>空白在基线上方的高度 (参阅 <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a>).</dd>
- <dt>linebreak</dt>
- <dd>Indicates a line-break at the space. Possible values: <code>auto</code> (default value), <code>newline</code>, <code>nobreak</code>, <code>goodbreak</code>, <code>badbreak</code>.<br>
- Starting with MathML 3, it is preferred to use {{ MathMLElement("mo") }} to control linebreaking.</dd>
- <dt>mathbackground</dt>
- <dd>用来设置背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
- <dt>width</dt>
- <dd>空白的宽度 (参阅 <a href="/en-US/docs/MathML/Attributes/Values#Lengths">length</a>).</dd>
-</dl>
+- class, id, style
+  - : 用来供[样式表](/en-US/docs/CSS)使用。
+- depth
+  - : 空白在基线下方的高度 (参阅 [length](/en-US/docs/MathML/Attributes/Values#Lengths)).
+- height
+  - : 空白在基线上方的高度 (参阅 [length](/en-US/docs/MathML/Attributes/Values#Lengths)).
+- linebreak
+  - : Indicates a line-break at the space. Possible values: `auto` (default value), `newline`, `nobreak`, `goodbreak`, `badbreak`.
+    Starting with MathML 3, it is preferred to use {{ MathMLElement("mo") }} to control linebreaking.
+- mathbackground
+  - : 用来设置背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+- width
+  - : 空白的宽度 (参阅 [length](/en-US/docs/MathML/Attributes/Values#Lengths)).
 
-<p>注意，一些像<code>mathcolor</code>、<code>mathvariant</code>或<code>dir</code>这种常用的属性在<code>&lt;mspace&gt;</code>上是无效的。</p>
+注意，一些像`mathcolor`、`mathvariant`或`dir`这种常用的属性在`<mspace>`上是无效的。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;mspace depth="40px" height="20px" /&gt;
+  <mspace depth="40px" height="20px" />
 
-  &lt;mspace width="100px" /&gt;
+  <mspace width="100px" />
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="Gecko说明">Gecko 说明</h2>
+## Gecko 说明
 
-<ul>
- <li><a href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">Indentation attributes</a> 暂时没有实现 (for Gecko see {{ bug("534962") }}).</li>
- <li>从 Gecko 23.0 {{geckoRelease("23.0")}}开始实现了对<code>width</code>属性负值的支持。</li>
-</ul>
+- [Indentation attributes](http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) 暂时没有实现 (for Gecko see {{ bug("534962") }}).
+- 从 Gecko 23.0 {{geckoRelease("23.0")}}开始实现了对`width`属性负值的支持。
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ MathMLElement("mpadded") }}</li>
- <li>{{ MathMLElement("mphantom") }}</li>
-</ul>
+- {{ MathMLElement("mpadded") }}
+- {{ MathMLElement("mphantom") }}

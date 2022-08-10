@@ -7,74 +7,70 @@ tags:
   - Web Share
 translation_of: Web/API/Navigator/share
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}
 
-<p><strong><code>Navigator.share()</code></strong> 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 <code>undefined</code>。</p>
+**`Navigator.share()`** 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 `undefined`。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">const sharePromise = window.navigator.share(<var>data</var>);
-</pre>
+```plain
+const sharePromise = window.navigator.share(data);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><var>data</var></dt>
- <dd>包含要共享的数据的对象。必须至少指定以下字段之一。可用选项包括：</dd>
-</dl>
+- _data_
+  - : 包含要共享的数据的对象。必须至少指定以下字段之一。可用选项包括：
 
-<ul>
- <li><code>url</code>: 要共享的 URL（ {{domxref("USVString")}} ）</li>
- <li><code>text</code>: 要共享的文本（ {{domxref("USVString")}} ）</li>
- <li><code>title</code>: 要共享的标题（ {{domxref("USVString")}}）</li>
- <li><code>files</code>: 要共享的文件（“FrozenArray”）</li>
-</ul>
+    - `url`: 要共享的 URL（ {{domxref("USVString")}} ）
+    - `text`: 要共享的文本（ {{domxref("USVString")}} ）
+    - `title`: 要共享的标题（ {{domxref("USVString")}}）
+    - `files`: 要共享的文件（“FrozenArray”）
 
-<dl>
-</dl>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受 。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。
 
-<p>该方法将会返回一个{{jsxref("Promise")}}。一旦用户完成分享，这个 promise 将会接受 。如果指定的共享数据格式不正确，promise 将会立即拒绝；如果用户取消了分享，promise 也会拒绝。</p>
+例如，在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。
 
-<p>例如，在 Android 的 Chrome 上，将在用户选择要共享的应用程序后将会解析共享的内容。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js notranslate">navigator.share({
+```js
+navigator.share({
   title: document.title,
   text: 'Hello World',
   url: 'https://developer.mozilla.org',
-}); // 分享 MDN 的 URL</pre>
+}); // 分享 MDN 的 URL
+```
 
-<h4 id="分享文件"><strong>分享文件</strong></h4>
+#### **分享文件**
 
-<p>分享文件之前，先使用 <code>navigator.canShare()</code> 判断这个文件能否被分享，Then include an array of files in the call to <code>navigator.share():</code></p>
+分享文件之前，先使用 `navigator.canShare()` 判断这个文件能否被分享，Then include an array of files in the call to `navigator.share():`
 
-<p>Notice: That the sample handles feature detection by testing for <code>navigator.canShare()</code> rather than for <code>navigator.share()</code>. The data object passed to <code>canShare()</code> only supports the <code>files</code> property. Image, video, audio, and text files can be shared.</p>
+Notice: That the sample handles feature detection by testing for `navigator.canShare()` rather than for `navigator.share()`. The data object passed to `canShare()` only supports the `files` property. Image, video, audio, and text files can be shared.
 
-<pre class="brush: js notranslate">if (navigator.canShare &amp;&amp; navigator.canShare({ files: filesArray })) {
+```js
+if (navigator.canShare && navigator.canShare({ files: filesArray })) {
   navigator.share({
     files: filesArray,
     title: 'Pictures',
     text: 'Our Pictures.',
   })
-  .then(() =&gt; console.log('Share was successful.'))
-  .catch((error) =&gt; console.log('Sharing failed', error));
+  .then(() => console.log('Share was successful.'))
+  .catch((error) => console.log('Sharing failed', error));
 } else {
   console.log(`Your system doesn't support sharing files.`);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("navigator.canShare()")}}</li>
-</ul>
+- {{domxref("navigator.canShare()")}}

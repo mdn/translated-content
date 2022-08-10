@@ -3,49 +3,46 @@ title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toFixed()</strong></code> 方法使用定点表示法来格式化一个数值。</p>
+**`toFixed()`** 方法使用定点表示法来格式化一个数值。
 
-<div>{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-tofixed.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>numObj</em>.toFixed(<em>digits</em>)</code></pre>
+```plain
+numObj.toFixed(digits)
+```
 
-<h3 id="Parameter">参数</h3>
+### 参数
 
-<dl>
- <dt>digits</dt>
- <dd>小数点后数字的个数；介于 0 到 20（包括）之间，实现环境可能支持更大范围。如果忽略该参数，则默认为 0。</dd>
-</dl>
+- digits
+  - : 小数点后数字的个数；介于 0 到 20（包括）之间，实现环境可能支持更大范围。如果忽略该参数，则默认为 0。
 
-<h3 id="Returns">返回值</h3>
+### 返回值
 
-<p>使用定点表示法表示给定数字的字符串。</p>
+使用定点表示法表示给定数字的字符串。
 
-<h3 id="Throws">抛出异常</h3>
+### 抛出异常
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 <em>digits</em> 参数太小或太大。0 到 20（包括）之间的值不会引起 {{jsxref("RangeError")}}。实现环境（implementations）也可以支持更大或更小的值。</dd>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>如果该方法在一个非{{jsxref( "Number")}}类型的对象上调用。</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : 如果 _digits_ 参数太小或太大。0 到 20（包括）之间的值不会引起 {{jsxref("RangeError")}}。实现环境（implementations）也可以支持更大或更小的值。
+- {{jsxref("TypeError")}}
+  - : 如果该方法在一个非{{jsxref( "Number")}}类型的对象上调用。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>一个数值的字符串表现形式，不使用指数记数法，而是在小数点后有 digits（注：digits 具体值取决于传入参数）位数字。该数值在必要时进行四舍五入，另外在必要时会用 0 来填充小数部分，以便小数部分有指定的位数。 如果数值大于 1e+21，该方法会简单调用 {{jsxref("Number.prototype.toString()")}}并返回一个指数记数法格式的字符串。</p>
+一个数值的字符串表现形式，不使用指数记数法，而是在小数点后有 digits（注：digits 具体值取决于传入参数）位数字。该数值在必要时进行四舍五入，另外在必要时会用 0 来填充小数部分，以便小数部分有指定的位数。 如果数值大于 1e+21，该方法会简单调用 {{jsxref("Number.prototype.toString()")}}并返回一个指数记数法格式的字符串。
 
-<div class="warning">
-<p><strong>警告：</strong>浮点数不能精确地用二进制表示所有小数。这可能会导致意外的结果，例如 <code>0.1 + 0.2 === 0.3</code> 返回 <code>false</code> .</p>
-</div>
+> **警告：**浮点数不能精确地用二进制表示所有小数。这可能会导致意外的结果，例如 `0.1 + 0.2 === 0.3` 返回 `false` .
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="使用_toFixed">使用 <code>toFixed</code></h3>
+### 使用 `toFixed`
 
-<pre class="brush: js">var numObj = 12345.6789;
+```js
+var numObj = 12345.6789;
 
 numObj.toFixed();         // 返回 "12346"：进行四舍六入五看情况，不包括小数部分
 numObj.toFixed(1);        // 返回 "12345.7"：进行四舍六入五看情况
@@ -65,21 +62,18 @@ numObj.toFixed(6);        // 返回 "12345.678900"：用 0 填充
 -2.34.toFixed(1);         // 返回 -2.3（由于操作符优先级，负数不会返回字符串）
 
 (-2.34).toFixed(1);       // 返回 "-2.3"（若用括号提高优先级，则返回字符串）
+```
 
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toPrecision()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("Number.prototype.toString()")}}

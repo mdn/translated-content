@@ -6,50 +6,50 @@ tags:
   - 深度清除值
 translation_of: Web/API/WebGLRenderingContext/clearDepth
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的<strong><code>WebGLRenderingContext.clearDepth()</code></strong> 方法用于设置深度缓冲区的深度清除值。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.clearDepth()`** 方法用于设置深度缓冲区的深度清除值。
 
-<p>这个深度清除值的设定，是为了调用{{domxref("WebGLRenderingContext.clear", "clear()")}} 的时候使用，这个值的范围是 0 到 1。</p>
+这个深度清除值的设定，是为了调用{{domxref("WebGLRenderingContext.clear", "clear()")}} 的时候使用，这个值的范围是 0 到 1。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.clearDepth(<var>depth</var>);
-</pre>
+```plain
+void gl.clearDepth(depth);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>depth</code></dt>
- <dd>类型：{{domxref("GLclampf")}}。 深度值的设定，是当清除深度缓冲区的时候使用。默认值为 1。</dd>
-</dl>
+- `depth`
+  - : 类型：{{domxref("GLclampf")}}。 深度值的设定，是当清除深度缓冲区的时候使用。默认值为 1。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<pre class="brush: js">gl.clearDepth(0.5);
-</pre>
+```js
+gl.clearDepth(0.5);
+```
 
-<p>若要获取当前深度清除值，查询<code>DEPTH_CLEAR_VALUE</code> 常量。</p>
+若要获取当前深度清除值，查询`DEPTH_CLEAR_VALUE` 常量。
 
-<pre class="brush: js">gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-// 0.5</pre>
+```js
+gl.getParameter(gl.DEPTH_CLEAR_VALUE);
+// 0.5
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.clearDepth")}}</p>
+{{Compat("api.WebGLRenderingContext.clearDepth")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

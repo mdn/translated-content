@@ -9,42 +9,40 @@ tags:
   - URL
 translation_of: Web/API/URL/search
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>{{domxref("URL")}} 接口的<strong><code>search</code></strong> 属性是一个搜索字符串， 也称为查询字符串，这是一个{{domxref("USVString")}}包含一个 <code>'?'</code>后面跟着 URL 的参数</p>
+{{domxref("URL")}} 接口的**`search`** 属性是一个搜索字符串， 也称为查询字符串，这是一个{{domxref("USVString")}}包含一个 `'?'`后面跟着 URL 的参数
 
-<p>现代浏览器提供{{domxref("URL.searchParams")}}属性，以便轻松解析查询字符串中的参数。</p>
+现代浏览器提供{{domxref("URL.searchParams")}}属性，以便轻松解析查询字符串中的参数。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+```plain
+string = object.search;
+object.search = string;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("USVString")}}.</p>
+一个 {{domxref("USVString")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+```js
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
 var queryString = url.search; // Returns:"?q=123"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.URL.search")}}
 
+## 参考
 
-<p>{{Compat("api.URL.search")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li>它所属的{{domxref("URL")}}接口。</li>
-</ul>
+- 它所属的{{domxref("URL")}}接口。

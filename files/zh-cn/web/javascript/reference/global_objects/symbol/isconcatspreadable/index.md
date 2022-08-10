@@ -6,53 +6,54 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>内置的<strong><code>Symbol.isConcatSpreadable</code></strong><code>符号用于配置某对象作为</code>{{jsxref("Array.prototype.concat()")}}方法的参数时是否展开其数组元素。</p>
+内置的**`Symbol.isConcatSpreadable`**`符号用于配置某对象作为`{{jsxref("Array.prototype.concat()")}}方法的参数时是否展开其数组元素。
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>@@isConcatSpreadable</code> 符号 (<code>Symbol.isConcatSpreadable</code>) 可以直接定义为对象属性或继承而来，它是布尔类型。它可以控制数组或类似数组（array-like）的对象的行为：</p>
+`@@isConcatSpreadable` 符号 (`Symbol.isConcatSpreadable`) 可以直接定义为对象属性或继承而来，它是布尔类型。它可以控制数组或类似数组（array-like）的对象的行为：
 
-<ul>
- <li>对于数组对象，默认情况下，用于 concat 时，会按数组元素展开然后进行连接（数组元素作为新数组的元素）。重置<code>Symbol.isConcatSpreadable</code>可以改变默认行为。</li>
- <li>对于类似数组的对象，用于 concat 时，该对象整体作为新数组的元素，重置<code>Symbol.isConcatSpreadable</code>可改变默认行为。</li>
-</ul>
+- 对于数组对象，默认情况下，用于 concat 时，会按数组元素展开然后进行连接（数组元素作为新数组的元素）。重置`Symbol.isConcatSpreadable`可以改变默认行为。
+- 对于类似数组的对象，用于 concat 时，该对象整体作为新数组的元素，重置`Symbol.isConcatSpreadable`可改变默认行为。
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="数组">数组</h3>
+### 数组
 
-<p>默认情况下，{{jsxref("Array.prototype.concat()")}} 展开其元素连接到结果中：</p>
+默认情况下，{{jsxref("Array.prototype.concat()")}} 展开其元素连接到结果中：
 
-<pre class="brush: js">var alpha = ['a', 'b', 'c'],
+```js
+var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
 
 var alphaNumeric = alpha.concat(numeric);
 
 console.log(alphaNumeric); // 结果: ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<p>设置<code>Symbol.isConcatSpreadable</code>为<code>false</code>：</p>
+设置`Symbol.isConcatSpreadable`为`false`：
 
-<pre class="brush: js">var alpha = ['a', 'b', 'c'],
+```js
+var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
 
 numeric[Symbol.isConcatSpreadable] = false;
 var alphaNumeric = alpha.concat(numeric);
 
 console.log(alphaNumeric); // 结果: ['a', 'b', 'c', [1, 2, 3] ]
-</pre>
+```
 
-<h3 id="Array-like_对象">Array-like 对象</h3>
+### Array-like 对象
 
-<p>对于类数组 (array-like) 对象，默认不展开。期望展开其元素用于连接，需要设置 <code>Symbol.isConcatSpreadable</code> 为 true：</p>
+对于类数组 (array-like) 对象，默认不展开。期望展开其元素用于连接，需要设置 `Symbol.isConcatSpreadable` 为 true：
 
-<pre class="brush: js">var x = [1, 2, 3];
+```js
+var x = [1, 2, 3];
 
 var fakeArray = {
   [Symbol.isConcatSpreadable]: true,
@@ -62,18 +63,16 @@ var fakeArray = {
 }
 
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}

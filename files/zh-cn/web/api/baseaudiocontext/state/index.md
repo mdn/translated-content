@@ -4,46 +4,43 @@ slug: Web/API/BaseAudioContext/state
 translation_of: Web/API/BaseAudioContext/state
 original_slug: Web/API/AudioContext/state
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}的<code>state属性是只读的，</code>返回<code>AudioContext</code>的当前状态。</p>
-</div>
+{{ domxref("AudioContext") }}的`state属性是只读的，`返回`AudioContext`的当前状态。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var myState = audioCtx.state;</pre>
+```js
+var audioCtx = new AudioContext();
+var myState = audioCtx.state;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("DOMString")}}，可能的值如下：</p>
+{{domxref("DOMString")}}，可能的值如下：
 
-<ul>
- <li><code>suspended</code>: audio context 被阻塞了 (用{{domxref("AudioContext.suspend()")}} 方法)</li>
- <li><code>running</code>: audio context 正常运行</li>
- <li><code>closed</code>: audio context 被关闭了 (用{{domxref("AudioContext.close()")}}方法)</li>
-</ul>
+- `suspended`: audio context 被阻塞了 (用{{domxref("AudioContext.suspend()")}} 方法)
+- `running`: audio context 正常运行
+- `closed`: audio context 被关闭了 (用{{domxref("AudioContext.close()")}}方法)
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面这段代码是<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (直接运行) 中的，其中{{domxref("AudioContext.onstatechange")}}处理器会在每次当前状态发生变化时把它输出到控制台。</p>
+下面这段代码是[AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) (直接运行) 中的，其中{{domxref("AudioContext.onstatechange")}}处理器会在每次当前状态发生变化时把它输出到控制台。
 
-<pre class="brush: js">audioCtx.onstatechange = function() {
+```js
+audioCtx.onstatechange = function() {
   console.log(audioCtx.state);
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.state")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

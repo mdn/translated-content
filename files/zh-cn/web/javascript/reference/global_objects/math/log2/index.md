@@ -3,50 +3,47 @@ title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
-<div>
-<div>{{JSRef("Global_Objects", "Math")}}</div>
-</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.log2()</strong></code> 函数返回一个数字以 2 为底的对数。</p>
+**`Math.log2()`** 函数返回一个数字以 2 为底的对数。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.log2(<em>x</em>)</code></pre>
+```plain
+Math.log2(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+- `x`
+  - : 任意数字。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果传入的参数小于 0，则返回 <code>NaN</code>.</p>
+如果传入的参数小于 0，则返回 `NaN`.
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:js">Math.log2(2)     // 1
+```js
+Math.log2(2)     // 1
 Math.log2(1024)  // 10
 Math.log2(1)     // 0
 Math.log2(0)     // -Infinity
 Math.log2(-2)    // NaN
 Math.log2("1024")// 10
 Math.log2("foo") // NaN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}} 对象。</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}} 对象。

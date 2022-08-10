@@ -3,37 +3,39 @@ title: Request.method
 slug: Web/API/Request/method
 translation_of: Web/API/Request/method
 ---
-<div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
+{{APIRef("Fetch")}}{{SeeCompatTable}}
 
-<p>{{domxref("Request")}}的只读属性<strong>method</strong>包含请求的方法 (<code>GET</code>, <code>POST</code>, etc.)</p>
+{{domxref("Request")}}的只读属性**method**包含请求的方法 (`GET`, `POST`, etc.)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>myMethod</var> = <var>request</var>.method;</pre>
+```plain
+var myMethod = request.method;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ByteString")}} indicating the method of the request.</p>
+A {{domxref("ByteString")}} indicating the method of the request.
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:</p>
+In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the method of the request in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myMethod = myRequest.method; // GET</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myMethod = myRequest.method; // GET
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Request.method")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

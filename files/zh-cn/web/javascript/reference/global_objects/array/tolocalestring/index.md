@@ -7,53 +7,54 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<p><code><strong>toLocaleString()</strong></code> 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 <code>toLocaleString</code> 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ","）隔开。</p>
+**`toLocaleString()`** 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 `toLocaleString` 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ","）隔开。
 
-<div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>arr.toLocaleString([locales[,options]]);</code></pre>
+```plain
+arr.toLocaleString([locales[,options]]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>locales</code> {{optional_inline}}</dt>
- <dd>带有 BCP 47 语言标记的字符串或字符串数组，关于<code>locales</code>参数的形式与解释，请看{{jsxref("Intl")}}页面。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>一个可配置属性的对象，对于数字 {{jsxref("Number.prototype.toLocaleString()")}}，对于日期{{jsxref("Date.prototype.toLocaleString()")}}.</dd>
-</dl>
+- `locales` {{optional_inline}}
+  - : 带有 BCP 47 语言标记的字符串或字符串数组，关于`locales`参数的形式与解释，请看{{jsxref("Intl")}}页面。
+- `options` {{optional_inline}}
+  - : 一个可配置属性的对象，对于数字 {{jsxref("Number.prototype.toLocaleString()")}}，对于日期{{jsxref("Date.prototype.toLocaleString()")}}.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>表示数组元素的字符串。</p>
+表示数组元素的字符串。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用locales和options">使用<code>locales</code>和<code>options</code></h3>
+### 使用`locales`和`options`
 
-<p>数组中的元素将会使用各自的 toLocaleString 方法：</p>
+数组中的元素将会使用各自的 toLocaleString 方法：
 
-<ul>
- <li><code>Object</code>: {{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li><code>Number</code>: {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li><code>Date</code>: {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
+- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
+- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
 
-<p>总是在<code>prices</code>数组中显示字符串和数字的货币符号：</p>
+总是在`prices`数组中显示字符串和数字的货币符号：
 
-<pre class="brush: js">var prices = ['￥7', 500, 8123, 12];
+```js
+var prices = ['￥7', 500, 8123, 12];
 prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
-// "￥7,￥500,￥8,123,￥12"</pre>
+// "￥7,￥500,￥8,123,￥12"
+```
 
-<p>更多实例请看 {{jsxref("Intl")}}，{{jsxref("NumberFormat")}}和{{jsxref("DateTimeFormat")}}页面。</p>
+更多实例请看 {{jsxref("Intl")}}，{{jsxref("NumberFormat")}}和{{jsxref("DateTimeFormat")}}页面。
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
+```js
+// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
   Object.defineProperty(Array.prototype, 'toLocaleString', {
     value: function(locales, options) {
@@ -65,7 +66,7 @@ if (!Array.prototype.toLocaleString) {
       var a = Object(this);
 
       // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length &gt;&gt;&gt; 0;
+      var len = a.length >>> 0;
 
       // 3. Let separator be the String value for the
       //    list-separator String appropriate for the
@@ -98,8 +99,8 @@ if (!Array.prototype.toLocaleString) {
       // 8. Let k be 1.
       var k = 1;
 
-      // 9. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 9. Repeat, while k < len
+      while (k < len) {
         // a. Let S be a String value produced by
         //   concatenating R and separator.
         var s = r + separator;
@@ -134,26 +135,22 @@ if (!Array.prototype.toLocaleString) {
     }
   });
 }
-</pre>
+```
 
-<p>如果你需要支持真正不支持<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，最好不要对<code>Array.prototype</code>方法进行填充，因为你不能使它们不可枚举。</p>
+如果你需要支持真正不支持[`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，最好不要对`Array.prototype`方法进行填充，因为你不能使它们不可枚举。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">参见</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
- <li>{{jsxref("Intl")}}</li>
- <li>{{jsxref("Object.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("Intl")}}
+- {{jsxref("Object.prototype.toLocaleString()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}

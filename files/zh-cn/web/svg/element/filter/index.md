@@ -7,89 +7,85 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/filter
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>filter</code>元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。</p>
+`filter`元素作用是作为原子滤镜操作的容器。它不能直接呈现。可以利用目标 SVG 元素上的{{ SVGAttr("filter") }}属性引用一个滤镜。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#XLink">XLink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- [外观属性](/en-US/SVG/Attribute#Presentation) »
+- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("filterRes") }}</li>
- <li>{{ SVGAttr("filterUnits") }}</li>
- <li>{{ SVGAttr("primitiveUnits") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("filterRes") }}
+- {{ SVGAttr("filterUnits") }}
+- {{ SVGAttr("primitiveUnits") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGFilterElement">SVGFilterElement</a>接口。</code></p>
+该元素实现了`SVGFilterElement接口。`
 
-<h2 id="示例：">示例：</h2>
+## 示例：
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="notranslate">&lt;svg width="230" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
- &lt;filter id="blurMe"&gt;
-   &lt;feGaussianBlur stdDeviation="5"/&gt;
- &lt;/filter&gt;
+```plain
+<svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
+ <filter id="blurMe">
+   <feGaussianBlur stdDeviation="5"/>
+ </filter>
 
- &lt;circle cx="60" cy="60" r="50" fill="green" /&gt;
+ <circle cx="60" cy="60" r="50" fill="green" />
 
- &lt;circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" /&gt;
-&lt;/svg&gt;</pre>
+ <circle cx="170" cy="60" r="50" fill="green"
+          filter="url(#blurMe)" />
+</svg>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Example",232,124,"/files/4227/feGaussianBlur.png")}}</p>
+{{EmbedLiveSample("Example",232,124,"/files/4227/feGaussianBlur.png")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en-US/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en-US/SVG/Tutorial/Filter_effects)

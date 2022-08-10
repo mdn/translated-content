@@ -8,29 +8,26 @@ tags:
   - REC
 translation_of: Web/API/Window/applicationCache
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p>返回该 window 中的应用缓存对象的一个引用。</p>
+返回该 window 中的应用缓存对象的一个引用。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>cache</var> = window.applicationCache
-</pre>
+```plain
+cache = window.applicationCache
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>cache</code> 对象是一个 {{domxref("OfflineResourceList")}} 的引用。</li>
-</ul>
+- `cache` 对象是一个 {{domxref("OfflineResourceList")}} 的引用。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/HTML/Using_the_application_cache">使用应用缓存</a></li>
-</ul>
+- [使用应用缓存](/en-US/docs/HTML/Using_the_application_cache)

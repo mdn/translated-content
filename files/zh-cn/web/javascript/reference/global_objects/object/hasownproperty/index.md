@@ -12,74 +12,76 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>hasOwnProperty()</strong></code> 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。</p>
+**`hasOwnProperty()`** 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
+## 语法
 
+```plain
+obj.hasOwnProperty(prop)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>obj</var>.hasOwnProperty(<var>prop</var>)</pre>
+- _prop_
+  - : 要检测的属性的 {{jsxref("String")}} 字符串形式表示的名称，或者 {{jsxref("Symbol")}}。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><var>prop</var></dt>
- <dd>要检测的属性的 {{jsxref("String")}} 字符串形式表示的名称，或者 {{jsxref("Symbol")}}。</dd>
-</dl>
+用来判断某个对象是否含有指定的属性的布尔值 {{jsxref("Boolean")}}。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>用来判断某个对象是否含有指定的属性的布尔值 {{jsxref("Boolean")}}。</p>
+所有继承了 {{jsxref("Object")}} 的对象都会继承到 `hasOwnProperty` 方法。这个方法可以用来检测一个对象是否含有特定的自身属性；和 {{jsxref("Operators/in", "in")}} 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。
 
-<h2 id="描述">描述</h2>
+## 备注
 
-<p>所有继承了 {{jsxref("Object")}} 的对象都会继承到 <code>hasOwnProperty</code> 方法。这个方法可以用来检测一个对象是否含有特定的自身属性；和 {{jsxref("Operators/in", "in")}} 运算符不同，该方法会忽略掉那些从原型链上继承到的属性。</p>
+即使属性的值是 `null` 或 `undefined`，只要属性存在，`hasOwnProperty` 依旧会返回 `true`。
 
-<h2 id="备注">备注</h2>
-
-<p>即使属性的值是 <code>null</code> 或 <code>undefined</code>，只要属性存在，<code>hasOwnProperty</code> 依旧会返回 <code>true</code>。</p>
-
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.propOne = null;
 o.hasOwnProperty('propOne'); // 返回 true
 o.propTwo = undefined;
 o.hasOwnProperty('propTwo'); // 返回 true
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_hasOwnProperty_方法判断属性是否存在">使用 <code>hasOwnProperty</code> 方法判断属性是否存在</h3>
+### 使用 `hasOwnProperty` 方法判断属性是否存在
 
-<p>下面的例子检测了对象 <code>o</code> 是否含有自身属性 <code>prop</code>：</p>
+下面的例子检测了对象 `o` 是否含有自身属性 `prop`：
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.hasOwnProperty('prop'); // 返回 false
 o.prop = 'exists';
 o.hasOwnProperty('prop'); // 返回 true
 delete o.prop;
 o.hasOwnProperty('prop'); // 返回 false
-</pre>
+```
 
-<h3 id="自身属性与继承属性">自身属性与继承属性</h3>
+### 自身属性与继承属性
 
-<p>下面的例子演示了 <code>hasOwnProperty</code> 方法对待自身属性和继承属性的区别：</p>
+下面的例子演示了 `hasOwnProperty` 方法对待自身属性和继承属性的区别：
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 o.hasOwnProperty('prop');             // 返回 true
 o.hasOwnProperty('toString');         // 返回 false
 o.hasOwnProperty('hasOwnProperty');   // 返回 false
-</pre>
+```
 
-<h3 id="遍历一个对象的所有自身属性">遍历一个对象的所有自身属性</h3>
+### 遍历一个对象的所有自身属性
 
-<p>下面的例子演示了如何在遍历一个对象的所有属性时忽略掉继承属性，注意这里 {{jsxref("Statements/for...in", "for...in")}}  循环只会遍历可枚举属性，所以不应该基于这个循环中没有不可枚举的属性而得出 <code>hasOwnProperty</code> 是严格限制于可枚举项目的（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。</p>
+下面的例子演示了如何在遍历一个对象的所有属性时忽略掉继承属性，注意这里 {{jsxref("Statements/for...in", "for...in")}} 循环只会遍历可枚举属性，所以不应该基于这个循环中没有不可枚举的属性而得出 `hasOwnProperty` 是严格限制于可枚举项目的（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。
 
-<pre class="brush: js">var buz = {
+```js
+var buz = {
   fog: 'stack'
 };
 
@@ -92,13 +94,14 @@ for (var name in buz) {
     console.log(name); // toString or something else
   }
 }
-</pre>
+```
 
-<h3 id="使用_hasOwnProperty_作为属性名">使用 <code>hasOwnProperty</code> 作为属性名</h3>
+### 使用 `hasOwnProperty` 作为属性名
 
-<p>JavaScript 并没有保护 <code>hasOwnProperty</code> 这个属性名，因此，当某个对象可能自有一个占用该属性名的属性时，就需要使用外部的 <code>hasOwnProperty</code> 获得正确的结果：</p>
+JavaScript 并没有保护 `hasOwnProperty` 这个属性名，因此，当某个对象可能自有一个占用该属性名的属性时，就需要使用外部的 `hasOwnProperty` 获得正确的结果：
 
-<pre class="brush: js">var foo = {
+```js
+var foo = {
   hasOwnProperty: function() {
     return false;
   },
@@ -113,26 +116,22 @@ foo.hasOwnProperty('bar'); // 始终返回 false
 
 // 也可以使用 Object 原型上的 hasOwnProperty 属性
 Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
-</pre>
+```
 
-<p>注意，只有在最后一种情况下，才不会新建任何对象。</p>
+注意，只有在最后一种情况下，才不会新建任何对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Operators/in", "in")}}</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a></li>
-</ul>
+- [属性的可枚举性和所有权](/zh-CN/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Operators/in", "in")}}
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

@@ -3,43 +3,47 @@ title: document.images
 slug: Web/API/Document/images
 translation_of: Web/API/Document/images
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 <a href="/zh-cn/DOM/Image">image</a> 元素的集合。</p>
+{{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 [image](/zh-cn/DOM/Image) 元素的集合。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>var imageCollection</em> = document.images;</pre>
+```plain
+var imageCollection = document.images;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。 集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}</p>
+一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。 集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>你可以在返回的结果中使用 JavaScript 数组符号 ('[]'，译注)，或者{{domxref("HTMLCollection.item", "item()")}} 方法去获取集合中的每个元素。下面方法是等价的：</p>
+你可以在返回的结果中使用 JavaScript 数组符号 ('\[]'，译注)，或者{{domxref("HTMLCollection.item", "item()")}} 方法去获取集合中的每个元素。下面方法是等价的：
 
-<pre class="brush: js">firstImage = imageCollection.item(0);
+```js
+firstImage = imageCollection.item(0);
 
-firstImage = imageCollection[0];</pre>
+firstImage = imageCollection[0];
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<p>该例是一次通过遍历图片列表找到名称为<code>"banner.gif"</code>的图片。</p>
+该例是一次通过遍历图片列表找到名称为`"banner.gif"`的图片。
 
-<pre class="brush: js">var ilist = document.images;
-for(var i = 0; i &lt; ilist.length; i++) {
+```js
+var ilist = document.images;
+for(var i = 0; i < ilist.length; i++) {
     if(ilist[i].src == "banner.gif") {
          // 发现了 banner 图片
     }
-}</pre>
+}
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Document.images")}}</p>
+{{Compat("api.Document.images")}}

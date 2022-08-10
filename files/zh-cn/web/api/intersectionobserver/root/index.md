@@ -3,17 +3,18 @@ title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
 translation_of: Web/API/IntersectionObserver/root
 ---
-<p><code>root</code> 属性用来获取当前 <code>intersectionObserver</code> 实例的根元素。</p>
+`root` 属性用来获取当前 `intersectionObserver` 实例的根元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>intersectionObserver</var>.root;
-</pre>
+```plain
+intersectionObserver.root;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.IntersectionObserver.root")}}

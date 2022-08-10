@@ -3,23 +3,23 @@ title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 translation_of: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="原因">原因</h2>
+## 原因
 
-<pre class="syntaxbox">原因：不允许出现多个 ‘Access-Control-Allow-Origin’ CORS 头信息。</pre>
+```plain
+原因：不允许出现多个 ‘Access-Control-Allow-Origin’ CORS 头信息。
+```
 
-<h2 id="为什么会出现该问题">为什么会出现该问题？</h2>
+## 为什么会出现该问题？
 
-<p>服务器返回了超过一个 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头信息，因此被认为是错误的。</p>
+服务器返回了超过一个 {{HTTPHeader("Access-Control-Allow-Origin")}} 标头信息，因此被认为是错误的。
 
-<p>如果您正在管理该服务，请改正只返回一个 <code>Access-Control-Allow-Origin</code> 标头信息。同时需要注意，服务器返回的 <code>Access-Control-Allow-Origin</code> 值不应该是一个列表，因为浏览器只会接受一个值，并且不能为空。</p>
+如果您正在管理该服务，请改正只返回一个 `Access-Control-Allow-Origin` 标头信息。同时需要注意，服务器返回的 `Access-Control-Allow-Origin` 值不应该是一个列表，因为浏览器只会接受一个值，并且不能为空。
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS </a>错误</li>
- <li>Glossary: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS </a>介绍</li>
- <li><a href="https://enable-cors.org/server.html">启用 CORS: 我想让自己的服务支持 CORS</a></li>
-</ul>
+- [CORS ](/en-US/docs/Web/HTTP/CORS/Errors)错误
+- Glossary: {{Glossary("CORS")}}
+- [CORS ](/en-US/docs/Web/HTTP/CORS)介绍
+- [启用 CORS: 我想让自己的服务支持 CORS](https://enable-cors.org/server.html)

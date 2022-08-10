@@ -5,28 +5,26 @@ tags:
   - screen
 translation_of: Web/API/Window/screen
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p>返回当前 window 的 screen 对象。screen 对象实现了{{domxref("Screen")}}接口，它是个特殊的对象，返回当前渲染窗口中和屏幕有关的属性。</p>
+返回当前 window 的 screen 对象。screen 对象实现了{{domxref("Screen")}}接口，它是个特殊的对象，返回当前渲染窗口中和屏幕有关的属性。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>screenObj</var> = <var>window</var>.screen;
-</pre>
+```plain
+screenObj = window.screen;
+```
 
-<p> </p>
+## 示例
 
-<h2 id="Example">示例</h2>
-
-<p> </p>
-
-<pre class="brush:js">if (screen.pixelDepth &lt; 8) {
+```js
+if (screen.pixelDepth < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
 }
-</pre>
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>TBD</p>
+TBD

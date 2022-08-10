@@ -7,51 +7,48 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLTexture
 ---
-<div><strong>WebGLTexture</strong>接口是<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的一部分，为不透明的纹理对象提供储存和状态等纹理操作。</div>
+**WebGLTexture**接口是[WebGL API](/en-US/docs/Web/API/WebGL_API)的一部分，为不透明的纹理对象提供储存和状态等纹理操作。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>WebGLTexture</code>对象自身未定义任何属性或方法， 其内容无法被直接访问。当使用<code>WebGLTexture</code>对象时， {{domxref("WebGLRenderingContext")}} 里的这些方法会很有用：</p>
+`WebGLTexture`对象自身未定义任何属性或方法， 其内容无法被直接访问。当使用`WebGLTexture`对象时， {{domxref("WebGLRenderingContext")}} 里的这些方法会很有用：
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="创建一个纹理">创建一个纹理</h3>
+### 创建一个纹理
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLTexture")}}</p>
+{{Compat("api.WebGLTexture")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.generateMipmap()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texParameterf()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texParameteri()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameteri()")}}

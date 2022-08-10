@@ -3,22 +3,22 @@ title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLElement.accessKeyLabel</code></strong> 只读属性返回一个 {{jsxref("String")}} 表示这个元素分配的访问密钥 (如果有的话); 否则返回一个空字符串。</p>
+**`HTMLElement.accessKeyLabel`** 只读属性返回一个 {{jsxref("String")}} 表示这个元素分配的访问密钥 (如果有的话); 否则返回一个空字符串。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>label</em> = <em>element</em>.accessKeyLabel
-</pre>
+```plain
+label = element.accessKeyLabel
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var node = document.getElementById('btn1');
+```js
+var node = document.getElementById('btn1');
 if (node.accessKeyLabel) {
   node.title += ' [' + node.accessKeyLabel + ']';
 } else {
@@ -30,32 +30,27 @@ node.onclick = function () {
   p.textContent = 'Clicked!';
   node.parentNode.appendChild(p);
 };
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
-</pre>
+```html
+<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<div>
+{{Compat("api.HTMLElement.accessKeyLabel")}}
 
+## See also
 
-<p>{{Compat("api.HTMLElement.accessKeyLabel")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("element.accessKey")}}</li>
- <li>The <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> global attribute.</li>
-</ul>
+- {{domxref("element.accessKey")}}
+- The [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) global attribute.

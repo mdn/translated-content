@@ -3,63 +3,61 @@ title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.NumberFormat.prototype.format</code></strong> 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。</p>
+**`Intl.NumberFormat.prototype.format`** 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}
 
+## 语法
 
+```plain
+numberFormat.format(number)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>numberFormat</var>.format(<var>number</var>)</code></pre>
+- `number`
+  - : 要格式化的数值。
 
-<h3 id="参数">参数</h3>
+## 描述
 
-<dl>
- <dt><code>number</code></dt>
- <dd>要格式化的数值。</dd>
-</dl>
+该函数返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来`format` 一个数字的函数。
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p>该函数返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来<code>format</code> 一个数字的函数。</p>
+### 使用 `format`
 
-<h2 id="示例">示例</h2>
+使用 `format` 格式化一个单一的货币值，以俄罗斯为例：
 
-<h3 id="使用_format">使用 <code>format</code></h3>
-
-<p>使用 <code>format</code> 格式化一个单一的货币值，以俄罗斯为例：</p>
-
-<pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
+```js
+var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."
-</pre>
+```
 
-<h3 id="使用_format_和_map">使用 <code>format</code> 和 <code>map</code></h3>
+### 使用 `format` 和 `map`
 
-<p>使用 <code>format</code> 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。</p>
+使用 `format` 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。
 
-<pre class="brush: js">var a = [123456.789, 987654.321, 456789.123];
+```js
+var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
 var formatted = a.map(numberFormat.format);
 console.log(formatted.join('; '));
 // → "123.456,789; 987.654,321; 456.789,123"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
- <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

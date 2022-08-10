@@ -1,62 +1,60 @@
 ---
 title: '::backdrop'
-slug: 'Web/CSS/::backdrop'
+slug: Web/CSS/::backdrop
 tags:
   - API
   - CSS
   - 伪元素
   - 参考
-translation_of: 'Web/CSS/::backdrop'
+translation_of: Web/CSS/::backdrop
 ---
-<div>{{CSSRef}} {{SeeCompatTable}}</div>
+{{CSSRef}} {{SeeCompatTable}}
 
-<p><strong><code>::backdrop</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a> 是在任何处于<a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏模式</a>的元素下的即刻渲染的盒子（并且在所有其他在堆中的层级更低的元素之上）。</p>
+**`::backdrop`** [CSS](/en-US/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是在任何处于[全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)的元素下的即刻渲染的盒子（并且在所有其他在堆中的层级更低的元素之上）。
 
-<pre class="brush: css no-line-numbers">/* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */
+```css
+/* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */
 dialog::backdrop {
   background: rgba(255,0,0,.25);
-}</pre>
+}
+```
 
-<p>所有处于全屏模式下的元素都被放在顶级渲染层中的一个后进先出（LIFO）栈里。在视区内容被绘制在屏幕上之前，这一特殊的渲染层总是最后被渲染（因此是最上层）。当一个元素在这个栈的栈顶时，<code>::backdrop</code> 伪元素允许我们遮盖，装饰或完全隐藏该元素的下层文档。</p>
+所有处于全屏模式下的元素都被放在顶级渲染层中的一个后进先出（LIFO）栈里。在视区内容被绘制在屏幕上之前，这一特殊的渲染层总是最后被渲染（因此是最上层）。当一个元素在这个栈的栈顶时，`::backdrop` 伪元素允许我们遮盖，装饰或完全隐藏该元素的下层文档。
 
-<p><code>::backdrop</code> 不继承任何元素，同时也不被任何元素继承。没有规定什么属性不能应用于该伪元素。</p>
+`::backdrop` 不继承任何元素，同时也不被任何元素继承。没有规定什么属性不能应用于该伪元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在示例中，backdrop 样式用于将视频全屏显示时的背景颜色改为蓝灰色而不是大多数浏览器默认的黑色。</p>
+在示例中，backdrop 样式用于将视频全屏显示时的背景颜色改为蓝灰色而不是大多数浏览器默认的黑色。
 
-<pre class="brush: css">video::backdrop {
+```css
+video::backdrop {
   background-color: #448;
-}</pre>
+}
+```
 
-<p>效果如下：</p>
+效果如下：
 
-<p><img src="bbb-backdrop.png"></p>
+![](bbb-backdrop.png)
 
-<p>注意当 backdrop 可见时，上下两部分的暗蓝灰色的信箱效果。这个区域一般是黑色的，但上面的 CSS 语句修改了它的外观。</p>
+注意当 backdrop 可见时，上下两部分的暗蓝灰色的信箱效果。这个区域一般是黑色的，但上面的 CSS 语句修改了它的外观。
 
-<p>You can <a href="https://fullscreen-requestfullscreen-demo.glitch.me/">see this example in action</a> or <a href="https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo">view or remix the code</a> on <a href="http://glitch.com/">Glitch</a>.</p>
+You can [see this example in action](https://fullscreen-requestfullscreen-demo.glitch.me/) or [view or remix the code](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo) on [Glitch](http://glitch.com/).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.backdrop")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.backdrop")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref(":fullscreen")}} pseudo-class</li>
- <li>{{HTMLElement("dialog")}} HTML element</li>
- <li><a href="/zh-CN/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
-</ul>
+- {{cssxref(":fullscreen")}} pseudo-class
+- {{HTMLElement("dialog")}} HTML element
+- [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)

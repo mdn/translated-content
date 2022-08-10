@@ -3,56 +3,55 @@ title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toString()</strong></code> 方法返回一个字符串，表示该{{jsxref("Date")}}对象。</p>
+**`toString()`** 方法返回一个字符串，表示该{{jsxref("Date")}}对象。
 
-<div>{{EmbedInteractiveExample("pages/js/date-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
 
+## 语法
 
+```plain
+dateObj.toString()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>dateObj</var>.toString()</pre>
+无
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<p>无</p>
+{{jsxref("Date")}}对象覆盖了 {{jsxref("Object")}} 对象的 `toString() `方法；它不是继承自 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref("Date")}} 对象，`toString()` 方法返回一个表示该对象的字符串。
 
-<h2 id="Description">描述</h2>
+该 `toString` 方法总是返回一个美式英语日期格式的字符串。
 
-<p>{{jsxref("Date")}}对象覆盖了 {{jsxref("Object")}} 对象的 <code>toString() </code>方法；它不是继承自 {{jsxref("Object.prototype.toString()")}}。对于  {{jsxref("Date")}} 对象，<code>toString()</code> 方法返回一个表示该对象的字符串。</p>
+当一个日期对象被用来作为文本值或用来进行字符串连接时，`toString` 方法会被自动调用。
 
-<p>该 <code>toString</code> 方法总是返回一个美式英语日期格式的字符串。</p>
+`toString() `是通用函数。如果不是{{jsxref("Date")}}实例，则 返回"Invalid Date"。
 
-<p>当一个日期对象被用来作为文本值或用来进行字符串连接时，<code>toString</code> 方法会被自动调用。</p>
+## 例子
 
-<p><code>toString() </code>是通用函数。如果不是{{jsxref("Date")}}实例，则 返回"Invalid Date"。</p>
+### 例子： 使用 `toString` 方法
 
-<h2 id="Examples">例子</h2>
+下例把一个{{jsxref("Date")}}对象的 `toString` 返回值赋给 `myVar：`
 
-<h3 id="Example:_Using_toString">例子： 使用 <code>toString</code> 方法</h3>
-
-<p>下例把一个{{jsxref("Date")}}对象的 <code>toString</code> 返回值赋给 <code>myVar：</code></p>
-
-<pre class="brush:js">var x = new Date();
+```js
+var x = new Date();
 myVar = x.toString(); // 把类似于下面格式的值赋给 myVar，
 // Fri Apr 26 2019 11:46:17 GMT+0800 (中国标准时间)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}

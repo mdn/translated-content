@@ -3,15 +3,16 @@ title: 网络状况 API
 slug: Web/API/Network_Information_API
 translation_of: Web/API/Network_Information_API
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p>网络状态 API 可以获取到系统的网络连接信息，比如说连接方式是 WiFi 还是蜂窝。应用程序可以根据此信息为用户展现不同清晰度的内容。该 API 是由 {{domxref("NetworkInformation")}} 接口和 {{domxref("Navigator")}} 接口上新增的一个 {{domxref("Navigator.connection", "connection")}} 属性组成的。</p>
+网络状态 API 可以获取到系统的网络连接信息，比如说连接方式是 WiFi 还是蜂窝。应用程序可以根据此信息为用户展现不同清晰度的内容。该 API 是由 {{domxref("NetworkInformation")}} 接口和 {{domxref("Navigator")}} 接口上新增的一个 {{domxref("Navigator.connection", "connection")}} 属性组成的。
 
-<h2 id="侦测连接状态变化">侦测连接状态变化</h2>
+## 侦测连接状态变化
 
-<p>下面是一个侦测用户设备连接状态变化的例子。</p>
+下面是一个侦测用户设备连接状态变化的例子。
 
-<pre class="brush: js">var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+```js
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.type;
 
 function updateConnectionStatus() {
@@ -19,26 +20,24 @@ function updateConnectionStatus() {
 }
 
 connection.addEventListener('change', updateConnectionStatus);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<h3>NetworkInformation</h3>
+### NetworkInformation
 
 {{Compat("api.NetworkInformation")}}
 
-<h3>Navigator.connection</h3>
+### Navigator.connection
 
 {{Compat("api.Navigator.connection")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="http://w3c.github.io/netinfo/">Network Information API Specification</a></li>
- <li><a href="/en-US/docs/Online_and_offline_events">Online and offline events</a></li>
- <li>{{domxref("window.navigator.connection")}}</li>
-</ul>
+- [Network Information API Specification](http://w3c.github.io/netinfo/)
+- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- {{domxref("window.navigator.connection")}}

@@ -3,43 +3,38 @@ title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 translation_of: Web/API/IntersectionObserver/takeRecords
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>{{domxref("IntersectionObserver")}} 的方法<code><strong>takeRecords()</strong></code> 返回一个 {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象的目标元素都包含每次相交的信息，可以显式通过调用此方法或隐式地通过观察者的回调自动调用。</p>
+{{domxref("IntersectionObserver")}} 的方法**`takeRecords()`** 返回一个 {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象的目标元素都包含每次相交的信息，可以显式通过调用此方法或隐式地通过观察者的回调自动调用。
 
-<div class="note">
-<p><strong>Note:</strong> 如果使用回调来监视这些更改，则无需调用此方法。调用此方法会清除挂起的相交状态列表，因此不会运行回调。</p>
-</div>
+> **备注：** 如果使用回调来监视这些更改，则无需调用此方法。调用此方法会清除挂起的相交状态列表，因此不会运行回调。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>intersectionObserverEntries</em> = <em>intersectionObserver</em>.takeRecords();</pre>
+```plain
+intersectionObserverEntries = intersectionObserver.takeRecords();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+None.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p> {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象包含目标元素与根每次的相交信息。</p>
+{{domxref("IntersectionObserverEntry")}} 对象数组，每个对象包含目标元素与根每次的相交信息。
 
-<dl>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+<<<...>>>
 
-<p>&lt;&lt;&lt;...&gt;&gt;&gt;</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.IntersectionObserver.takeRecords")}}</p>
+{{Compat("api.IntersectionObserver.takeRecords")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
-</ul>
+- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)

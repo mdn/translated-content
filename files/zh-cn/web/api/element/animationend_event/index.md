@@ -4,37 +4,36 @@ slug: Web/API/Element/animationend_event
 translation_of: Web/API/GlobalEventHandlers/onanimationend
 original_slug: Web/API/GlobalEventHandlers/onanimationend
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>事件处理程序。 当 CSS 动画到达其活动期的结束时发送此事件</p>
+事件处理程序。 当 CSS 动画到达其活动期的结束时发送此事件
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
+```plain
+var animEndHandler = target.onanimationend;
 
-<em>target</em>.onanimationend = <em>事件处理函数</em>
-</pre>
+target.onanimationend = 事件处理函数
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>当<em><code>target</code></em>(HTML 元素， document 或者 window) 的 CSS 动画已经开始，{{event("animationend")}}事件会触发同时<code>事件处理函数</code>会被调用。<code>事件处理函数</code>会接收到唯一的参数：{{domxref("AnimationEvent")}} 描述发生的事件。</p>
+当*`target`*(HTML 元素， document 或者 window) 的 CSS 动画已经开始，{{event("animationend")}}事件会触发同时`事件处理函数`会被调用。`事件处理函数`会接收到唯一的参数：{{domxref("AnimationEvent")}} 描述发生的事件。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}</p>
+{{Page("/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart", "Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>The {{event("animationend")}} event this event handler is triggered by</li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>The {{event("animationstart")}} event</li>
-</ul>
+- The {{event("animationend")}} event this event handler is triggered by
+- {{domxref("AnimationEvent")}}
+- The {{event("animationstart")}} event

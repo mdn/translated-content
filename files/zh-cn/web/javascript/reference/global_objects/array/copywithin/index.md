@@ -10,51 +10,45 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`copyWithin()`** 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
-<div><code><strong>copyWithin()</strong></code> 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。</div>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}</div>
+```plain
+arr.copyWithin(target[, start[, end]])
+```
 
+### 参数
 
+- `target`
+  - : 0 为基底的索引，复制序列到该位置。如果是负数，`target` 将从末尾开始计算。如果 `target` 大于等于 `arr.length`，将不会发生拷贝。如果 `target` 在 `start` 之后，复制的序列将被修改以符合 `arr.length`。
+- `start`
+  - : 0 为基底的索引，开始复制元素的起始位置。如果是负数，`start` 将从末尾开始计算。如果 `start` 被忽略，`copyWithin` 将会从 0 开始复制。
+- `end`
+  - : 0 为基底的索引，开始复制元素的结束位置。`copyWithin` 将会拷贝到该位置，但不包括 `end` 这个位置的元素。如果是负数， `end` 将从末尾开始计算。如果 `end` 被忽略，`copyWithin` 方法将会一直复制至数组结尾（默认为 `arr.length`）。
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><var>arr</var>.copyWithin(<var>target[</var>, <var>start[</var>, <var>end]]</var>)
-</pre>
+改变后的数组。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>target</code></dt>
- <dd>0 为基底的索引，复制序列到该位置。如果是负数，<code>target</code> 将从末尾开始计算。如果 <code>target</code> 大于等于 <code>arr.length</code>，将不会发生拷贝。如果 <code>target</code> 在 <code>start</code> 之后，复制的序列将被修改以符合 <code>arr.length</code>。</dd>
- <dt><code>start</code></dt>
- <dd>0 为基底的索引，开始复制元素的起始位置。如果是负数，<code>start</code> 将从末尾开始计算。如果 <code>start</code> 被忽略，<code>copyWithin</code> 将会从 0 开始复制。</dd>
- <dt><code>end</code></dt>
- <dd>0 为基底的索引，开始复制元素的结束位置。<code>copyWithin</code> 将会拷贝到该位置，但不包括 <code>end</code> 这个位置的元素。如果是负数， <code>end</code> 将从末尾开始计算。如果 <code>end</code> 被忽略，<code>copyWithin</code> 方法将会一直复制至数组结尾（默认为 <code>arr.length</code>）。</dd>
-</dl>
+参数 target、start 和 end 必须为整数。
 
-<h3 id="返回值">返回值</h3>
+如果 start 为负，则其指定的索引位置等同于 length+start，length 为数组的长度。end 也是如此。
 
-<p>改变后的数组。</p>
+copyWithin 方法不要求其 this 值必须是一个数组对象；除此之外，copyWithin 是一个可变方法，它可以改变 this 对象本身，并且返回它，而不仅仅是它的拷贝。
 
-<h2 id="描述">描述</h2>
+`copyWithin` 就像 C 和 C++ 的 `memcpy` 函数一样，且它是用来移动 {{jsxref("Array")}} 或者 {{jsxref("TypedArray")}} 数据的一个高性能的方法。复制以及粘贴序列这两者是为一体的操作;即使复制和粘贴区域重叠，粘贴的序列也会有拷贝来的值。
 
-<p>参数 target、start 和 end 必须为整数。</p>
+`copyWithin` 函数被设计为通用式的，其不要求其 `this` 值必须是一个{{jsxref("Array", "数组")}}对象。
 
-<p>如果 start 为负，则其指定的索引位置等同于 length+start，length 为数组的长度。end 也是如此。</p>
+`copyWithin` 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。
 
-<p>copyWithin 方法不要求其 this 值必须是一个数组对象；除此之外，copyWithin 是一个可变方法，它可以改变 this 对象本身，并且返回它，而不仅仅是它的拷贝。</p>
+## 例子
 
-<p><code>copyWithin</code> 就像 C 和 C++ 的 <code>memcpy</code> 函数一样，且它是用来移动 {{jsxref("Array")}} 或者 {{jsxref("TypedArray")}} 数据的一个高性能的方法。复制以及粘贴序列这两者是为一体的操作;即使复制和粘贴区域重叠，粘贴的序列也会有拷贝来的值。</p>
-
-<p><code>copyWithin</code><strong> </strong>函数被设计为通用式的，其不要求其 <code>this</code> 值必须是一个{{jsxref("Array", "数组")}}对象。</p>
-
-<p><code>copyWithin</code> 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。</p>
-
-<h2 id="例子">例子</h2>
-
-<pre><code>[1, 2, 3, 4, 5].copyWithin(-2)
+```plain
+[1, 2, 3, 4, 5].copyWithin(-2)
 // [1, 2, 3, 1, 2]
 
 [1, 2, 3, 4, 5].copyWithin(0, 3)
@@ -64,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 // [4, 2, 3, 4, 5]
 
 [1, 2, 3, 4, 5].copyWithin(-2, -3, -1)
-// [1, 2, 3, 3, 4]</code>
+// [1, 2, 3, 3, 4]
 
 [].copyWithin.call({length: 5, 3: 1}, 0, 3);
 // {0: 1, 3: 1, length: 5}
@@ -78,11 +72,12 @@ i32a.copyWithin(0, 2);
 // On platforms that are not yet ES2015 compliant:
 [].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
 // Int32Array [4, 2, 3, 4, 5]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Array.prototype.copyWithin) {
+```js
+if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin = function(target, start/*, end*/) {
     // Steps 1-2.
     if (this == null) {
@@ -92,27 +87,27 @@ i32a.copyWithin(0, 2);
     var O = Object(this);
 
     // Steps 3-5.
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // Steps 6-8.
-    var relativeTarget = target &gt;&gt; 0;
+    var relativeTarget = target >> 0;
 
-    var to = relativeTarget &lt; 0 ?
+    var to = relativeTarget < 0 ?
       Math.max(len + relativeTarget, 0) :
       Math.min(relativeTarget, len);
 
     // Steps 9-11.
-    var relativeStart = start &gt;&gt; 0;
+    var relativeStart = start >> 0;
 
-    var from = relativeStart &lt; 0 ?
+    var from = relativeStart < 0 ?
       Math.max(len + relativeStart, 0) :
       Math.min(relativeStart, len);
 
     // Steps 12-14.
     var end = arguments[2];
-    var relativeEnd = end === undefined ? len : end &gt;&gt; 0;
+    var relativeEnd = end === undefined ? len : end >> 0;
 
-    var final = relativeEnd &lt; 0 ?
+    var final = relativeEnd < 0 ?
       Math.max(len + relativeEnd, 0) :
       Math.min(relativeEnd, len);
 
@@ -122,14 +117,14 @@ i32a.copyWithin(0, 2);
     // Steps 16-17.
     var direction = 1;
 
-    if (from &lt; to &amp;&amp; to &lt; (from + count)) {
+    if (from < to && to < (from + count)) {
       direction = -1;
       from += count - 1;
       to += count - 1;
     }
 
     // Step 18.
-    while (count &gt; 0) {
+    while (count > 0) {
       if (from in O) {
         O[to] = O[from];
       } else {
@@ -145,18 +140,16 @@ i32a.copyWithin(0, 2);
     return O;
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

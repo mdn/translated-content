@@ -3,31 +3,31 @@ title: ImageData.height
 slug: Web/API/ImageData/height
 translation_of: Web/API/ImageData/height
 ---
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p>只读的 <code><strong>ImageData.height</strong></code> 属性，返回在图像数据对象中的行的数量。</p>
+只读的 **`ImageData.height`** 属性，返回在图像数据对象中的行的数量。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>imagedata</em>.height
-</pre>
+```plain
+imagedata.height
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js  language-js">var imagedata = new ImageData(100, 100);
+```js
+var imagedata = new ImageData(100, 100);
 imagedata.height; // 100
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ImageData.height")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("ImageData.width")}}</li>
-</ul>
+- {{domxref("ImageData.width")}}

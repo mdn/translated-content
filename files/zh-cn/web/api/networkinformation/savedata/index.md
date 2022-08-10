@@ -3,24 +3,24 @@ title: NetworkInformation.saveData
 slug: Web/API/NetworkInformation/saveData
 translation_of: Web/API/NetworkInformation/saveData
 ---
-<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p><strong><code>NetworkInformation.saveData</code></strong> 是 {{domxref("NetworkInformation")}} 接口的只读属性， 如果用户设备上设置了减少数据使用的选项时返回 <code>true</code> .</p>
+**`NetworkInformation.saveData`** 是 {{domxref("NetworkInformation")}} 接口的只读属性， 如果用户设备上设置了减少数据使用的选项时返回 `true` .
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var saveData = NetworkInformation.saveData;</pre>
+```plain
+var saveData = NetworkInformation.saveData;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{jsxref('Boolean')}}.</p>
+A {{jsxref('Boolean')}}.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.NetworkInformation.saveData")}}</p>
+{{Compat("api.NetworkInformation.saveData")}}

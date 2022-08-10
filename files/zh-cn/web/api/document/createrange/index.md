@@ -6,31 +6,31 @@ tags:
   - Range
 translation_of: Web/API/Document/createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>返回一个 {{domxref("Range")}} 对象。</p>
+返回一个 {{domxref("Range")}} 对象。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">range = document.createRange();
-</pre>
+```plain
+range = document.createRange();
+```
 
-<p><code>range</code> 是一个 {{domxref("Range")}} 对象。</p>
+`range` 是一个 {{domxref("Range")}} 对象。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>一旦一个 Range 对象被建立，在使用他的大多数方法之前需要去设置他的临界点。</p>
+一旦一个 Range 对象被建立，在使用他的大多数方法之前需要去设置他的临界点。
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange">DOM Level 2 Range: DocumentRange.createRange</a></li>
-</ul>
+- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)

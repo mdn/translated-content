@@ -4,52 +4,54 @@ slug: Web/API/crypto_property
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Window.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。</p>
+Window\.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
-</pre>
+```plain
+var cryptoObj = window.crypto || window.msCrypto; // for IE 11
+```
 
-<h2 id="Example">范例</h2>
+## 范例
 
-<h4 id="使用_domxref(Window.crypto)_来访问getRandomValues()_方法.">使用 {{domxref("Window.crypto")}} 来访问<a href="/en-US/docs/Web/API/RandomSource/getRandomValues">getRandomValues()</a> 方法。</h4>
+#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/en-US/docs/Web/API/RandomSource/getRandomValues) 方法。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
+```js
+genRandomNumbers = function getRandomNumbers() {
   var array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
 
   var randText = document.getElementById("myRandText");
   randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     randText.innerHTML += array[i] + " ";
   }
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myRandText"&gt;随机数字：&lt;/p&gt;
-&lt;button type="button" onClick='genRandomNumbers()'&gt;生成 10 个随机数字&lt;/button&gt;</pre>
+```html
+<p id="myRandText">随机数字：</p>
+<button type="button" onClick='genRandomNumbers()'>生成 10 个随机数字</button>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.crypto")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>The {{domxref("Window")}} global object</li>
-</ul>
+- The {{domxref("Window")}} global object

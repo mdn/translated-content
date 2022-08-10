@@ -9,61 +9,61 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef("Global_Objects", "String")}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<div class="warning">
-<p><strong>警告：</strong>该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。</p>
-</div>
+> **警告：**该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
 
-<p><code><strong>anchor()</strong></code> 方法创建一个 {{HTMLElement("a")}} HTML 锚元素，被用作超文本靶标（hypertext target）。</p>
+**`anchor()`** 方法创建一个 {{HTMLElement("a")}} HTML 锚元素，被用作超文本靶标（hypertext target）。
 
-<h2>语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>str.anchor(<em>name</em>) </code></pre>
+```plain
+str.anchor(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>一个字符串，表示被创建的标签的 <code>name</code> 属性。</dd>
-</dl>
+- `name`
+  - : 一个字符串，表示被创建的标签的 `name` 属性。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p> 包含 {{HTMLElement("a")}} HTML 元素的一个字符串。</p>
+包含 {{HTMLElement("a")}} HTML 元素的一个字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>使用 <code>anchor</code> 方法能够以编程方式在一个文档中创建和展现一个锚链接。</p>
+使用 `anchor` 方法能够以编程方式在一个文档中创建和展现一个锚链接。
 
-<p>语法上来讲，字符串表示你想让用户看到的文本。<code>name</code> 字符串参数表示 {{HTMLElement("a")}} 元素的 <code>name</code> 属性。</p>
+语法上来讲，字符串表示你想让用户看到的文本。`name` 字符串参数表示 {{HTMLElement("a")}} 元素的 `name` 属性。
 
-<p>使用 anchor 方法创建的锚点（anchors）将会成为 {{domxref("document.anchors")}} 数组的元素。</p>
+使用 anchor 方法创建的锚点（anchors）将会成为 {{domxref("document.anchors")}} 数组的元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="例子：使用_anchor">例子：使用 <code>anchor</code></h3>
+### 例子：使用 `anchor`
 
-<pre class="brush:js">var myString = "Table of Contents";
+```js
+var myString = "Table of Contents";
 
-document.body.innerHTML = myString.anchor("contents_anchor");</pre>
+document.body.innerHTML = myString.anchor("contents_anchor");
+```
 
-<p>将会输出下面的 HTML：</p>
+将会输出下面的 HTML：
 
-<pre class="brush: html">&lt;a name="contents_anchor"&gt;Table of Contents&lt;/a&gt;</pre>
+```html
+<a name="contents_anchor">Table of Contents</a>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.link()")}}</li>
-</ul>
+- {{jsxref("String.prototype.link()")}}

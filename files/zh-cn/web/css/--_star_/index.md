@@ -7,44 +7,45 @@ tags:
   - CSS 参考
 translation_of: Web/CSS/--*
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>带有前缀<code>--</code>的属性名，比如<code>--example--name</code>，表示的是带有值的自定义属性，其可以通过 {{cssxref("var")}} 函数在全文档范围内复用的。</p>
+带有前缀`--`的属性名，比如`--example--name`，表示的是带有值的自定义属性，其可以通过 {{cssxref("var")}} 函数在全文档范围内复用的。
 
-<p>CSS 自定义属性是可以级联的：每一个自定义属性可以多次出现，并且变量的值将会借助级联算法和自定义属性值运算出来。</p>
+CSS 自定义属性是可以级联的：每一个自定义属性可以多次出现，并且变量的值将会借助级联算法和自定义属性值运算出来。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">--somekeyword: left;
+```css
+--somekeyword: left;
 --somecolor: #0000ff;
 --somecomplexvalue: 3px 6px rgb(20, 32, 54);
-</pre>
+```
 
-<dl>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。</dd>
-</dl>
+- `<declaration-value>`
+  - : 这个值将会由一个或者多个语法执行出来，只要这些语法是正确合理的，不包含非法语句。这个值就理应是有效语法执行出来的值。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<div>
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="firstParagraph"&gt;This paragraph should have a blue background and yellow text.&lt;/p&gt;
-&lt;p id="secondParagraph"&gt;This paragraph should have a yellow background and blue text.&lt;/p&gt;
-&lt;div id="container"&gt;
-  &lt;p id="thirdParagraph"&gt;This paragraph should have a green background and yellow text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p id="firstParagraph">This paragraph should have a blue background and yellow text.</p>
+<p id="secondParagraph">This paragraph should have a yellow background and blue text.</p>
+<div id="container">
+  <p id="thirdParagraph">This paragraph should have a green background and yellow text.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:root {
+```css
+:root {
   --first-color: #488cff;
   --second-color: #ffff8c;
 }
@@ -66,25 +67,21 @@ translation_of: Web/CSS/--*
 #thirdParagraph {
   background-color: var(--first-color);
   color: var(--second-color);
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', 500, 130)}}</p>
-</div>
+{{EmbedLiveSample('示例', 500, 130)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.custom-property")}}
 
+## 参阅
 
-<p>{{Compat("css.properties.custom-property")}}</p>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Using_CSS_variables">Using CSS variables</a></li>
-</ul>
+- [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_variables)

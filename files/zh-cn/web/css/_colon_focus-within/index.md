@@ -1,6 +1,6 @@
 ---
 title: ':focus-within'
-slug: 'Web/CSS/:focus-within'
+slug: Web/CSS/:focus-within
 tags:
   - ':focus-within'
   - CSS
@@ -9,42 +9,47 @@ tags:
   - 伪类
   - 参考
   - 选择器
-translation_of: 'Web/CSS/:focus-within'
+translation_of: Web/CSS/:focus-within
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:focus-within</code></strong> 是一个<a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> ，表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配 {{CSSxRef(":focus")}} 伪类。（<a href="/zh-CN/docs/Web/Web_Components/Shadow_DOM">shadow DOM 树</a>中的后代也包括在内）</p>
+**`:focus-within`** 是一个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) ，表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配 {{CSSxRef(":focus")}} 伪类。（[shadow DOM 树](/zh-CN/docs/Web/Web_Components/Shadow_DOM)中的后代也包括在内）
 
-<pre class="brush: css no-line-numbers">/* 当 &lt;div&gt; 的某个后代获得焦点时，匹配 &lt;div&gt; */
+```css
+/* 当 <div> 的某个后代获得焦点时，匹配 <div> */
 div:focus-within {
   background: cyan;
-}</pre>
+}
+```
 
-<p>该选择器非常实用。举个通俗的例子：表单中的某个 {{htmlElement("input")}} 字段获得焦点时，整个表单的 {{HTMLElement("form")}} 元素都可被高亮。</p>
+该选择器非常实用。举个通俗的例子：表单中的某个 {{htmlElement("input")}} 字段获得焦点时，整个表单的 {{HTMLElement("form")}} 元素都可被高亮。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>此例子中，当表单某个文本输入框获得焦点后，表单会被设置颜色样式。</p>
+此例子中，当表单某个文本输入框获得焦点后，表单会被设置颜色样式。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;试试在这个表单中输入点什么。&lt;/p&gt;
+```html
+<p>试试在这个表单中输入点什么。</p>
 
-&lt;form&gt;
-  &lt;label for="given_name"&gt;Given Name:&lt;/label&gt;
-  &lt;input id="given_name" type="text"&gt;
-  &lt;br&gt;
-  &lt;label for="family_name"&gt;Family Name:&lt;/label&gt;
-  &lt;input id="family_name" type="text"&gt;
-&lt;/form&gt;</pre>
+<form>
+  <label for="given_name">Given Name:</label>
+  <input id="given_name" type="text">
+  <br>
+  <label for="family_name">Family Name:</label>
+  <input id="family_name" type="text">
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">form {
+```css
+form {
   border: 1px solid;
   color: gray;
   padding: 4px;
@@ -58,25 +63,21 @@ form:focus-within {
 input {
   margin: 4px;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", 500, 150)}}</p>
+{{EmbedLiveSample("Example", 500, 150)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.focus-within")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.focus-within")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{CSSxRef(":focus")}}</li>
- <li>{{CSSxRef(":focus-visible")}} {{Experimental_Inline}}</li>
-</ul>
+- {{CSSxRef(":focus")}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}

@@ -12,52 +12,49 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/get
 browser-compat: javascript.builtins.Map.get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>get()</strong></code> 方法返回某个 <code>Map</code> 对象中的一个指定元素。</p>
+**`get()`** 方法返回某个 `Map` 对象中的一个指定元素。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
 
+## 语法
 
+```plain
+myMap.get(key);
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>myMap</em>.get(key);</code></pre>
+- key
+  - : 必须参数，也是它唯一的参数，要从目标 `Map` 对象中获取的元素的键。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>key</dt>
- <dd>必须参数，也是它唯一的参数，要从目标 <code>Map</code> 对象中获取的元素的键。</dd>
-</dl>
+返回一个 `Map` 对象中与指定键相关联的值，如果找不到这个键则返回 `undefined`。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>返回一个 <code>Map</code> 对象中与指定键相关联的值，如果找不到这个键则返回 <code>undefined</code>。</p>
+### 使用 `get` 方法
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_get_方法">使用 <code>get</code> 方法</h3>
-
-<pre class="brush: js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("bar", "foo");
 
 myMap.get("bar");  // 返回 "foo"
 myMap.get("baz");  // 返回 undefined
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.set()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.has()")}}

@@ -10,49 +10,48 @@ tags:
   - 方法
 translation_of: Web/API/WebGL2RenderingContext/bindBufferBase
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> 的 <strong><code>WebGL2RenderingContext.bindBufferBase()</code></strong> 方法将一个 {{domxref("WebGLBuffer")}} 绑定到某个点 (<code>target</code>) 的特定的 <code>index</code>上。</p>
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.bindBufferBase()`** 方法将一个 {{domxref("WebGLBuffer")}} 绑定到某个点 (`target`) 的特定的 `index`上。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.bindBufferBase(<var>target</var>, <var>index</var>, <var>buffer</var>);</pre>
+```plain
+void gl.bindBufferBase(target, index, buffer);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>{{domxref("Glenum")}} 指定绑定操作的目标。可能的值：
- <ul>
-  <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code></li>
-  <li><code>gl.UNIFORM_BUFFER</code></li>
- </ul>
- </dd>
- <dt><code>index</code></dt>
- <dd>{{domxref("GLuint")}} 指定目标（<code>target</code>）的 index 。</dd>
- <dt><code>buffer</code></dt>
- <dd>绑定到目标点（<code>target</code>）的 {{domxref("WebGLBuffer")}} 。</dd>
-</dl>
+- `target`
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("Glenum")}} 指定绑定操作的目标。可能的值：
 
-<p>无。</p>
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+    - `gl.UNIFORM_BUFFER`
 
-<h2 id="示例">示例</h2>
+- `index`
+  - : {{domxref("GLuint")}} 指定目标（`target`）的 index 。
+- `buffer`
+  - : 绑定到目标点（`target`）的 {{domxref("WebGLBuffer")}} 。
 
-<pre class="brush: js">gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, buffer);
-</pre>
+### 返回值
 
-<h2 id="规范">规范</h2>
+无。
+
+## 示例
+
+```js
+gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, buffer);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.bindBufferBase")}}</p>
+{{Compat("api.WebGL2RenderingContext.bindBufferBase")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.getIndexedParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}

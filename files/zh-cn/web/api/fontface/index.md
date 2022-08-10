@@ -3,55 +3,49 @@ title: FontFace
 slug: Web/API/FontFace
 translation_of: Web/API/FontFace
 ---
-<p>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-<p><code><strong>FontFace</strong></code> 接口表示一个可用的字体。它允许您控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许您控制字体的加载时间和字体当前的状态。</p>
+**`FontFace`** 接口表示一个可用的字体。它允许您控制字体的源文件，作为外部资源的 URL 或缓冲区; 它还允许您控制字体的加载时间和字体当前的状态。
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FontFace.FontFace", "FontFace()")}}</dt>
- <dd>使用 URL 指向的外部资源或{{domxref("ArrayBuffer")}}构造并返回一个新的 <code>FontFace</code> 对象。</dd>
-</dl>
+- {{domxref("FontFace.FontFace", "FontFace()")}}
+  - : 使用 URL 指向的外部资源或{{domxref("ArrayBuffer")}}构造并返回一个新的 `FontFace` 对象。
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>这个接口不继承任何属性。</em></p>
+_这个接口不继承任何属性。_
 
-<dl>
- <dt>{{domxref("FontFace.family")}}</dt>
- <dd>这是不是一个{{domxref("DOMString")}} ？是的话将表示该字体的 <em>family</em> 属性，相当于 {{cssxref("@font-face/family", "family")}} 。</dd>
- <dt>{{domxref("FontFace.style")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 <em>style</em> 属性，相当于 {{cssxref("@font-face/style", "style")}} 。</dd>
- <dt>{{domxref("FontFace.weight")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 <em>weight</em> 属性，相当于 {{cssxref("@font-face/weight", "weight")}}。</dd>
- <dt>{{domxref("FontFace.stretch")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 <em>stretches </em>属性，相当于 {{cssxref("@font-face/stretch", "stretch")}} 。</dd>
- <dt>{{domxref("FontFace.unicodeRange")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体涵盖的 <em>range of code</em> （字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。</dd>
- <dt>{{domxref("FontFace.variant")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 <em>variant </em>属性，相当于 {{cssxref("@font-face/range", "range")}} 。</dd>
- <dt>{{domxref("FontFace.featureSettings")}}</dt>
- <dd>这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 <em>features </em>属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。</dd>
- <dt>{{domxref("FontFace.status")}} {{readonlyinline}}</dt>
- <dd>返回一个表示字体当前状态的可枚举值，它可能是下列之一： <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>,  <code>"error"</code>。</dd>
- <dt>{{domxref("FontFace.loaded")}} {{readonlyinline}}</dt>
- <dd>当字体完全加载或加载失败时返回该 <code>FontFace</code> 的{{domxref("Promise")}} 。</dd>
-</dl>
+- {{domxref("FontFace.family")}}
+  - : 这是不是一个{{domxref("DOMString")}} ？是的话将表示该字体的 _family_ 属性，相当于 {{cssxref("@font-face/family", "family")}} 。
+- {{domxref("FontFace.style")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _style_ 属性，相当于 {{cssxref("@font-face/style", "style")}} 。
+- {{domxref("FontFace.weight")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _weight_ 属性，相当于 {{cssxref("@font-face/weight", "weight")}}。
+- {{domxref("FontFace.stretch")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _stretches_ 属性，相当于 {{cssxref("@font-face/stretch", "stretch")}} 。
+- {{domxref("FontFace.unicodeRange")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体涵盖的 _range of code_ （字符编码的范围），相当于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 。
+- {{domxref("FontFace.variant")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _variant_ 属性，相当于 {{cssxref("@font-face/range", "range")}} 。
+- {{domxref("FontFace.featureSettings")}}
+  - : 这是不是一个 {{domxref("DOMString")}} ？是的话将表示该字体的 _features_ 属性，相当于 {{cssxref("@font-face/feature-settings", "feature-settings")}} 。
+- {{domxref("FontFace.status")}} {{readonlyinline}}
+  - : 返回一个表示字体当前状态的可枚举值，它可能是下列之一： `"unloaded"`, `"loading"`, `"loaded"`, `"error"`。
+- {{domxref("FontFace.loaded")}} {{readonlyinline}}
+  - : 当字体完全加载或加载失败时返回该 `FontFace` 的{{domxref("Promise")}} 。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>这个接口不继承任何方法</em></p>
+_这个接口不继承任何方法_
 
-<dl>
- <dt>{{domxref("FontFace.load()")}}</dt>
- <dd>加载该字体，返回该字体完全加载或加载失败时的{{domxref("Promise")}} 。</dd>
-</dl>
+- {{domxref("FontFace.load()")}}
+  - : 加载该字体，返回该字体完全加载或加载失败时的{{domxref("Promise")}} 。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.FontFace")}}

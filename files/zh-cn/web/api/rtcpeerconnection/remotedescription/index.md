@@ -8,23 +8,26 @@ tags:
   - 中文
 translation_of: Web/API/RTCPeerConnection/remoteDescription
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>只读属性 <code><strong>RTCPeerConnection.remoteDescription</strong></code> 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了和远程对端之间的会话 (包括配置和媒体信息) ，如果还没有被设置过的话，它会是 <code>null</code>.</p>
+只读属性 **`RTCPeerConnection.remoteDescription`** 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了和远程对端之间的会话 (包括配置和媒体信息) ，如果还没有被设置过的话，它会是 `null`.
 
-<p>这个值通常是通过信令服务器接收的对端的会话描述（作为提议或应答），调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后生效。</p>
+这个值通常是通过信令服务器接收的对端的会话描述（作为提议或应答），调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}之后生效。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre> var <em>sessionDescription</em> = <em>peerConnection</em>.remoteDescription;</pre>
+```plain
+ var sessionDescription = peerConnection.remoteDescription;
+```
 
-<p>从更基础的层面上看，如果该属性不为<code>null</code>，则返回值为{{domxref("RTCPeerConnection.pendingRemoteDescription")}}的值，否则，返回{{domxref("RTCPeerConnection.currentRemoteDescription")}}的值。有关此算法的详细信息及其使用原因，请参阅{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。</p>
+从更基础的层面上看，如果该属性不为`null`，则返回值为{{domxref("RTCPeerConnection.pendingRemoteDescription")}}的值，否则，返回{{domxref("RTCPeerConnection.currentRemoteDescription")}}的值。有关此算法的详细信息及其使用原因，请参阅{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例查看<code>remoteDescription</code>并显示包含{{domxref("RTCSessionDescription")}}对象的 type 和<code>sdp</code>字段的警告。</p>
+此示例查看`remoteDescription`并显示包含{{domxref("RTCSessionDescription")}}对象的 type 和`sdp`字段的警告。
 
-<pre class="brush:js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 …
 var sd = pc.remoteDescription;
 if (sd) {
@@ -35,20 +38,18 @@ if (sd) {
 else {
   alert("No remote session yet.");
 }
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
- <li>{{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}</li>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.currentLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)

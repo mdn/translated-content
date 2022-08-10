@@ -14,12 +14,14 @@ tags:
   - Window
 translation_of: Web/API/Window/dialogArguments
 ---
-<p>{{ deprecated_header() }}{{APIRef}}</p>
+{{ deprecated_header() }}{{APIRef}}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p><code>dialogArguments</code> 属性返回{{domxref("window.showModalDialog()")}} 方法传递的参数。 这可以让你确定在创建模态对话框时指定了哪些参数。</p>
+`dialogArguments` 属性返回{{domxref("window.showModalDialog()")}} 方法传递的参数。 这可以让你确定在创建模态对话框时指定了哪些参数。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>value</var> = window.dialogArguments;</pre>
+```plain
+value = window.dialogArguments;
+```

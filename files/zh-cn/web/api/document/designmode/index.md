@@ -12,34 +12,34 @@ tags:
   - 编辑
 translation_of: Web/API/Document/designMode
 ---
-<div>{{ ApiRef()}}</div>
+{{ ApiRef()}}
 
-<p><strong><code>document.designMode</code></strong> 控制整个文档是否可编辑。有效值为 <code>"on"</code> 和 <code>"off"</code> 。根据规范，该属性默认为 <code>"off"</code> 。Firefox 遵循此标准。早期版本的 Chrome 和 IE 默认为 <code>"inherit"</code> 。从 Chrome 43 开始，默认值为 <code>"off"</code> ，并且不再支持  <code>"inherit"</code>。在 IE6 到 IE10 中，该值为大写。</p>
+**`document.designMode`** 控制整个文档是否可编辑。有效值为 `"on"` 和 `"off"` 。根据规范，该属性默认为 `"off"` 。Firefox 遵循此标准。早期版本的 Chrome 和 IE 默认为 `"inherit"` 。从 Chrome 43 开始，默认值为 `"off"` ，并且不再支持 `"inherit"`。在 IE6 到 IE10 中，该值为大写。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var mode = document.designMode;
-document.designMode = "on" || "off";</pre>
+```plain
+var mode = document.designMode;
+document.designMode = "on" || "off";
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>使一个 {{HTMLElement("iframe")}} 的文档可编辑：</p>
+使一个 {{HTMLElement("iframe")}} 的文档可编辑：
 
-<pre class="brush: js">iframeNode.contentDocument.designMode = "on";</pre>
+```js
+iframeNode.contentDocument.designMode = "on";
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Document.designMode")}}
 
+## 参见
 
-<p>{{Compat("api.Document.designMode")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Rich-Text_Editing_in_Mozilla">Mozilla 软件中的富文本编辑</a></li>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
-</ul>
+- [Mozilla 软件中的富文本编辑](/zh-CN/docs/Rich-Text_Editing_in_Mozilla)
+- {{domxref("HTMLElement.contentEditable")}}

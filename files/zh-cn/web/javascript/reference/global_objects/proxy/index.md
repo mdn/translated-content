@@ -7,85 +7,80 @@ tags:
   - Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Proxy</strong> 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。</p>
+**Proxy** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。
 
-<h2 id="术语">术语</h2>
+## 术语
 
-<dl>
- <dt>{{jsxref("Global_Objects/Proxy/handler", "<dfn>handler</dfn>")}}</dt>
- <dd>包含捕捉器（trap）的占位符对象，可译为处理器对象。</dd>
- <dt><dfn>traps</dfn></dt>
- <dd>提供属性访问的方法。这类似于操作系统中捕获器的概念。</dd>
- <dt><dfn>target</dfn></dt>
- <dd>被 Proxy 代理虚拟化的对象。它常被作为代理的存储后端。根据目标验证关于对象不可扩展性或不可配置属性的不变量（保持不变的语义）。</dd>
-</dl>
+- {{jsxref("Global_Objects/Proxy/handler", "<dfn>handler</dfn>")}}
+  - : 包含捕捉器（trap）的占位符对象，可译为处理器对象。
+- _traps_
+  - : 提供属性访问的方法。这类似于操作系统中捕获器的概念。
+- _target_
+  - : 被 Proxy 代理虚拟化的对象。它常被作为代理的存储后端。根据目标验证关于对象不可扩展性或不可配置属性的不变量（保持不变的语义）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, <var>handler</var>)</pre>
+```plain
+const p = new Proxy(target, handler)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>要使用 <code>Proxy</code> 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）。</dd>
- <dt><code><var>handler</var></code></dt>
- <dd>一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 <code><var>p</var></code> 的行为。</dd>
-</dl>
+- `target`
+  - : 要使用 `Proxy` 包装的目标对象（可以是任何类型的对象，包括原生数组，函数，甚至另一个代理）。
+- `handler`
+  - : 一个通常以函数作为属性的对象，各属性中的函数分别定义了在执行各种操作时代理 `p` 的行为。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("Proxy.revocable()")}}</dt>
- <dd>创建一个可撤销的<code>Proxy</code>对象。</dd>
-</dl>
+- {{jsxref("Proxy.revocable()")}}
+  - : 创建一个可撤销的`Proxy`对象。
 
-<h2 id="handler_对象的方法">handler 对象的方法</h2>
+## handler 对象的方法
 
-<p><code><var>handler</var></code> 对象是一个容纳一批特定属性的占位符对象。它包含有 <code>Proxy</code> 的各个捕获器（trap）。</p>
+`handler` 对象是一个容纳一批特定属性的占位符对象。它包含有 `Proxy` 的各个捕获器（trap）。
 
-<p>所有的捕捉器是可选的。如果没有定义某个捕捉器，那么就会保留源对象的默认行为。</p>
+所有的捕捉器是可选的。如果没有定义某个捕捉器，那么就会保留源对象的默认行为。
 
-<dl>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</dt>
- <dd>{{JSxRef("Object.getPrototypeOf")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</dt>
- <dd>{{JSxRef("Object.setPrototypeOf")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}</dt>
- <dd>{{JSxRef("Object.isExtensible")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</dt>
- <dd>{{JSxRef("Object.preventExtensions")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</dt>
- <dd>{{JSxRef("Object.getOwnPropertyDescriptor")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}</dt>
- <dd>{{JSxRef("Object.defineProperty")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/has", "handler.has()")}}</dt>
- <dd>{{JSxRef("Operators/in", "in")}} 操作符的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/get", "handler.get()")}}</dt>
- <dd>属性读取操作的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/set", "handler.set()")}}</dt>
- <dd>属性设置操作的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</dt>
- <dd>{{JSxRef("Operators/delete", "delete")}} 操作符的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}</dt>
- <dd>{{JSxRef("Object.getOwnPropertyNames")}} 方法和 {{JSxRef("Object.getOwnPropertySymbols")}} 方法的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/apply", "handler.apply()")}}</dt>
- <dd>函数调用操作的捕捉器。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/handler/construct", "handler.construct()")}}</dt>
- <dd>{{JSxRef("Operators/new", "new")}} 操作符的捕捉器。</dd>
-</dl>
+- {{JSxRef("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : {{JSxRef("Object.getPrototypeOf")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : {{JSxRef("Object.setPrototypeOf")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+  - : {{JSxRef("Object.isExtensible")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+  - : {{JSxRef("Object.preventExtensions")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+  - : {{JSxRef("Object.getOwnPropertyDescriptor")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+  - : {{JSxRef("Object.defineProperty")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/has", "handler.has()")}}
+  - : {{JSxRef("Operators/in", "in")}} 操作符的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/get", "handler.get()")}}
+  - : 属性读取操作的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/set", "handler.set()")}}
+  - : 属性设置操作的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+  - : {{JSxRef("Operators/delete", "delete")}} 操作符的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+  - : {{JSxRef("Object.getOwnPropertyNames")}} 方法和 {{JSxRef("Object.getOwnPropertySymbols")}} 方法的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
+  - : 函数调用操作的捕捉器。
+- {{JSxRef("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
+  - : {{JSxRef("Operators/new", "new")}} 操作符的捕捉器。
 
-<p>一些不标准的捕捉器已经被<a href="/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy">废弃并且移除</a>了。</p>
+一些不标准的捕捉器已经被[废弃并且移除](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy)了。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基础示例">基础示例</h3>
+### 基础示例
 
-<p>在以下简单的例子中，当对象中不存在属性名时，默认返回值为 <code>37</code>。下面的代码以此展示了 {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler 的使用场景。</p>
+在以下简单的例子中，当对象中不存在属性名时，默认返回值为 `37`。下面的代码以此展示了 {{jsxref("Global_Objects/Proxy/handler/get", "get")}} handler 的使用场景。
 
-<pre class="brush: js">const handler = {
+```js
+const handler = {
     get: function(obj, prop) {
         return prop in obj ? obj[prop] : 37;
     }
@@ -97,31 +92,33 @@ p.b = undefined;
 
 console.log(p.a, p.b);      // 1, undefined
 console.log('c' in p, p.c); // false, 37
-</pre>
+```
 
-<h3 id="无操作转发代理">无操作转发代理</h3>
+### 无操作转发代理
 
-<p>在以下例子中，我们使用了一个原生 JavaScript 对象，代理会将所有应用到它的操作转发到这个对象上。</p>
+在以下例子中，我们使用了一个原生 JavaScript 对象，代理会将所有应用到它的操作转发到这个对象上。
 
-<pre class="brush: js">let target = {};
+```js
+let target = {};
 let p = new Proxy(target, {});
 
 p.a = 37;   // 操作转发到目标
 
 console.log(target.a);    // 37. 操作已经被正确地转发
-</pre>
+```
 
-<h3 id="验证">验证</h3>
+### 验证
 
-<p>通过代理，你可以轻松地验证向一个对象的传值。下面的代码借此展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的作用。</p>
+通过代理，你可以轻松地验证向一个对象的传值。下面的代码借此展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的作用。
 
-<pre class="brush: js">let validator = {
+```js
+let validator = {
   set: function(obj, prop, value) {
     if (prop === 'age') {
       if (!Number.isInteger(value)) {
         throw new TypeError('The age is not an integer');
       }
-      if (value &gt; 200) {
+      if (value > 200) {
         throw new RangeError('The age seems invalid');
       }
     }
@@ -146,13 +143,14 @@ person.age = 'young';
 
 person.age = 300;
 // 抛出异常: Uncaught RangeError: The age seems invalid
-</pre>
+```
 
-<h3 id="扩展构造函数">扩展构造函数</h3>
+### 扩展构造函数
 
-<p>方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct"><code>construct</code></a>和<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply">apply</a></code>。</p>
+方法代理可以轻松地通过一个新构造函数来扩展一个已有的构造函数。这个例子使用了[`construct`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct)和[`apply`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply)。
 
-<pre class="brush: js">function extend(sup, base) {
+```js
+function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype, "constructor"
   );
@@ -187,13 +185,15 @@ Boy.prototype.sex = "M";
 var Peter = new Boy("Peter", 13);
 console.log(Peter.sex);  // "M"
 console.log(Peter.name); // "Peter"
-console.log(Peter.age);  // 13</pre>
+console.log(Peter.age);  // 13
+```
 
-<h3 id="操作_DOM_节点">操作 DOM 节点</h3>
+### 操作 DOM 节点
 
-<p>有时，我们可能需要互换两个不同的元素的属性或类名。下面的代码以此为目标，展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的使用场景。</p>
+有时，我们可能需要互换两个不同的元素的属性或类名。下面的代码以此为目标，展示了 {{jsxref("Global_Objects/Proxy/handler/set", "set")}} handler 的使用场景。
 
-<pre class="brush: js">let view = new Proxy({
+```js
+let view = new Proxy({
   selected: null
 }, {
   set: function(obj, prop, newval) {
@@ -222,13 +222,14 @@ console.log(i1.getAttribute('aria-selected')); // 'true'
 let i2 = view.selected = document.getElementById('item-2');
 console.log(i1.getAttribute('aria-selected')); // 'false'
 console.log(i2.getAttribute('aria-selected')); // 'true'
-</pre>
+```
 
-<h3 id="值修正及附加属性">值修正及附加属性</h3>
+### 值修正及附加属性
 
-<p>以下<code>products</code>代理会计算传值并根据需要转换为数组。这个代理对象同时支持一个叫做 <code>latestBrowser</code>的附加属性，这个属性可以同时作为 getter 和 setter。</p>
+以下`products`代理会计算传值并根据需要转换为数组。这个代理对象同时支持一个叫做 `latestBrowser`的附加属性，这个属性可以同时作为 getter 和 setter。
 
-<pre class="brush: js">let products = new Proxy({
+```js
+let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
 }, {
   get: function(obj, prop) {
@@ -262,18 +263,19 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
 products.browsers = 'Firefox';  // 如果不小心传入了一个字符串
-console.log(products.browsers); // ['Firefox'] &lt;- 也没问题，得到的依旧是一个数组
+console.log(products.browsers); // ['Firefox'] <- 也没问题，得到的依旧是一个数组
 
 products.latestBrowser = 'Chrome';
 console.log(products.browsers);      // ['Firefox', 'Chrome']
 console.log(products.latestBrowser); // 'Chrome'
-</pre>
+```
 
-<h3 id="通过属性查找数组中的特定对象">通过属性查找数组中的特定对象</h3>
+### 通过属性查找数组中的特定对象
 
-<p>以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 <code><a href="/zh-CN/docs/DOM/table.rows">table.rows</a></code>。</p>
+以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 [`table.rows`](/zh-CN/docs/DOM/table.rows)。
 
-<pre class="brush: js">let products = new Proxy([
+```js
+let products = new Proxy([
   { name: 'Firefox'    , type: 'browser' },
   { name: 'SeaMonkey'  , type: 'browser' },
   { name: 'Thunderbird', type: 'mailer' }
@@ -327,13 +329,14 @@ console.log(products['Chrome']); // undefined
 console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types); // ['browser', 'mailer']
 console.log(products.number); // 3
-</pre>
+```
 
-<h3 id="一个完整的_traps_列表示例">一个完整的 <code>traps</code> 列表示例</h3>
+### 一个完整的 `traps` 列表示例
 
-<p>出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 <a href="/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support">发布在 document.cookie 页面上的“小型框架”</a>创建的<code>docCookies</code>全局对象。</p>
+出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 [发布在 document.cookie 页面上的“小型框架”](/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)创建的`docCookies`全局对象。
 
-<pre class="brush: js">/*
+```js
+/*
   var docCookies = ... get the "docCookies" object here:
   https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
 */
@@ -360,7 +363,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   "defineProperty": function (oTarget, sKey, oDesc) {
-    if (oDesc &amp;&amp; "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && "value" in oDesc) { oTarget.setItem(sKey, oDesc.value); }
     return oTarget;
   },
   "getOwnPropertyDescriptor": function (oTarget, sKey) {
@@ -380,26 +383,25 @@ alert(docCookies.my_cookie1 = "First value");
 alert(docCookies.getItem("my_cookie1"));
 
 docCookies.setItem("my_cookie1", "Changed value");
-alert(docCookies.my_cookie1);</pre>
+alert(docCookies.my_cookie1);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="http://jsconf.eu/2010/speaker/be_proxy_objects.html">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> and <a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony proxy semantics page</a></li>
- <li><a href="http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
- <li><a href="/zh-CN/docs/JavaScript/Old_Proxy_API">SpiderMonkey specific Old Proxy API</a></li>
- <li>{{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.</li>
-</ul>
+- ["Proxies are awesome" Brendan Eich presentation at JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([slides](http://www.slideshare.net/BrendanEich/metaprog-5303821))
+- [ECMAScript Harmony Proxy proposal page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) and [ECMAScript Harmony proxy semantics page](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
+- [Tutorial on proxies](http://soft.vub.ac.be/~tvcutsem/proxies/)
+- [SpiderMonkey specific Old Proxy API](/zh-CN/docs/JavaScript/Old_Proxy_API)
+- {{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.
 
-<h2 id="版权声明">版权声明</h2>
+## 版权声明
 
-<p>一些内容（如文本、例子）是复制自或修改自<a href="http://wiki.ecmascript.org/doku.php">ECMAScript wiki</a>（版权声明 <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a>）。</p>
+一些内容（如文本、例子）是复制自或修改自[ECMAScript wiki](http://wiki.ecmascript.org/doku.php)（版权声明 [CC 2.0 BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/2.0/)）。

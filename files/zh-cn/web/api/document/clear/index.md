@@ -3,19 +3,18 @@ title: Document.clear()
 slug: Web/API/Document/clear
 translation_of: Web/API/Document/clear
 ---
-<p>{{APIRef("DOM")}}{{ Deprecated_header() }}</p>
+{{APIRef("DOM")}}{{ Deprecated_header() }}
 
-<p>这个方法用来在早期版本的 Mozilla 中清除整个指定文档。</p>
+这个方法用来在早期版本的 Mozilla 中清除整个指定文档。
 
-<p>在最近版本的基于 Mozilla 的应用以及 Internet Explorer 和 Netscape 4 中这个方法什么也不做</p>
+在最近版本的基于 Mozilla 的应用以及 Internet Explorer 和 Netscape 4 中这个方法什么也不做
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="eval">document.clear()
-</pre>
+```plain
+document.clear()
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#dom-document-clear">HTML5</a></li>
-</ul>
+- [HTML5](http://www.whatwg.org/html/#dom-document-clear)

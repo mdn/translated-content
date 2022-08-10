@@ -9,48 +9,42 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/font
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>font</code>元素定义了一个用于文字布局的字体。</p>
+`font`元素定义了一个用于文字布局的字体。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("horiz-origin-x") }}</li>
- <li>{{ SVGAttr("horiz-origin-y") }}</li>
- <li>{{ SVGAttr("horiz-adv-x") }}</li>
- <li>{{ SVGAttr("vert-origin-x") }}</li>
- <li>{{ SVGAttr("vert-origin-y") }}</li>
- <li>{{ SVGAttr("vert-adv-y") }}</li>
-</ul>
+- {{ SVGAttr("horiz-origin-x") }}
+- {{ SVGAttr("horiz-origin-y") }}
+- {{ SVGAttr("horiz-adv-x") }}
+- {{ SVGAttr("vert-origin-x") }}
+- {{ SVGAttr("vert-origin-y") }}
+- {{ SVGAttr("vert-adv-y") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现 <code><a href="/en/DOM/SVGFontElement">SVGFontElement</a></code> 接口。</p>
+该元素实现 [`SVGFontElement`](/en/DOM/SVGFontElement) 接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("font-face") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("text") }}</li>
- <li><a href="/en/SVG/Tutorial/SVG_Fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font-face") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("text") }}
+- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_Fonts)

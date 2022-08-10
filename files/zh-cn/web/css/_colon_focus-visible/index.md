@@ -1,40 +1,43 @@
 ---
 title: ':focus-visible'
-slug: 'Web/CSS/:focus-visible'
+slug: Web/CSS/:focus-visible
 tags:
   - CSS
   - Reference
   - Web
   - 伪类
   - 布局
-translation_of: 'Web/CSS/:focus-visible'
+translation_of: Web/CSS/:focus-visible
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>当元素匹配{{cssxref(":focus")}}伪类并且客户端 (UA) 的启发式引擎决定焦点应当可见 (在这种情况下很多浏览器默认显示“焦点框”。) 时，<strong><code>:focus-visible</code> </strong>伪类将生效。</p>
+当元素匹配{{cssxref(":focus")}}伪类并且客户端 (UA) 的启发式引擎决定焦点应当可见 (在这种情况下很多浏览器默认显示“焦点框”。) 时，**`:focus-visible` **伪类将生效。
 
-<p>这个选择器可以有效地根据用户的输入方式 (鼠标 vs 键盘) 展示不同形式的焦点。</p>
+这个选择器可以有效地根据用户的输入方式 (鼠标 vs 键盘) 展示不同形式的焦点。
 
-<p>请注意 Firefox 通过较旧的前缀伪类 <code>:-moz-focusring</code> 支持类似的功能。更多细节请参考{{cssxref(":-moz-focusring")}}页面。</p>
+请注意 Firefox 通过较旧的前缀伪类 `:-moz-focusring` 支持类似的功能。更多细节请参考{{cssxref(":-moz-focusring")}}页面。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基本示例">基本示例</h3>
+### 基本示例
 
-<p>在这个例子中，<code>:focus-visible</code> 选择器利用客户端 (UA) 的行为决定是否匹配。比较一下，当你用鼠标点击控件和用键盘 tab 切换控件有何不同。请注意元素的表现与具有 <code>:focus</code> 样式的元素的区别。</p>
+在这个例子中，`:focus-visible` 选择器利用客户端 (UA) 的行为决定是否匹配。比较一下，当你用鼠标点击控件和用键盘 tab 切换控件有何不同。请注意元素的表现与具有 `:focus` 样式的元素的区别。
 
-<pre class="brush: html">&lt;input value="Default styles"&gt;&lt;br&gt;
-&lt;button&gt;Default styles&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-only" value=":focus only"&gt;&lt;br&gt;
-&lt;button class="focus-only"&gt;:focus only&lt;/button&gt;&lt;br&gt;
-&lt;input class="focus-visible-only" value=":focus-visible only"&gt;&lt;br&gt;
-&lt;button class="focus-visible-only"&gt;:focus-visible only&lt;/button&gt;</pre>
+```html
+<input value="Default styles"><br>
+<button>Default styles</button><br>
+<input class="focus-only" value=":focus only"><br>
+<button class="focus-only">:focus only</button><br>
+<input class="focus-visible-only" value=":focus-visible only"><br>
+<button class="focus-visible-only">:focus-visible only</button>
+```
 
-<pre class="brush: css">input, button {
+```css
+input, button {
   margin: 10px;
 }
 
@@ -45,17 +48,20 @@ translation_of: 'Web/CSS/:focus-visible'
 .focus-visible-only:focus-visible {
   outline: 4px dashed darkorange;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Basic_example', '100%', '300')}}</p>
+{{EmbedLiveSample('Basic_example', '100%', '300')}}
 
-<h3 id="选择性地显示焦点">选择性地显示焦点</h3>
+### 选择性地显示焦点
 
-<p>自定义控件，比如按钮<a href="/zh-CN/docs/User:Andreas_Wuest/Custom_Elements">自定义元素</a>，可以使用 <code>:focus-visible</code> 使其仅在键盘操作时才显示焦点样式。这和{{htmlelement("button")}}一类的原生控件表现一致。</p>
+自定义控件，比如按钮[自定义元素](/zh-CN/docs/User:Andreas_Wuest/Custom_Elements)，可以使用 `:focus-visible` 使其仅在键盘操作时才显示焦点样式。这和{{htmlelement("button")}}一类的原生控件表现一致。
 
-<pre class="brush: html">&lt;custom-button tabindex="0" role="button"&gt;Click Me&lt;/custom-button&gt;</pre>
+```html
+<custom-button tabindex="0" role="button">Click Me</custom-button>
+```
 
-<pre class="brush: css">custom-button {
+```css
+custom-button {
   display: inline-block;
   margin: 10px;
 }
@@ -79,31 +85,30 @@ custom-button:focus-visible {
      :focus-visible */
   outline: 4px dashed darkorange;
   background: transparent;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Selectively_showing_the_focus_indicator', '100%', '300')}}</p>
+{{EmbedLiveSample('Selectively_showing_the_focus_indicator', '100%', '300')}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>你可以使用 <code>:focus-visible</code> 的 polyfill <a href="https://github.com/WICG/focus-visible">focus-visible.js</a> 。</p>
+你可以使用 `:focus-visible` 的 polyfill [focus-visible.js](https://github.com/WICG/focus-visible) 。
 
-<h2 id="可访问性关注点">可访问性关注点</h2>
+## 可访问性关注点
 
-<p>保证视觉焦点指示对低视力对人群可见。这对在强光环境下使用屏幕的人同样有益 (比如在户外的阳光下)。 <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">WCAG 2.1 SC 1.4.11 Non-Text Contrast</a> 要求视觉焦点指示至少在 3 到 1。</p>
+保证视觉焦点指示对低视力对人群可见。这对在强光环境下使用屏幕的人同样有益 (比如在户外的阳光下)。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) 要求视觉焦点指示至少在 3 到 1。
 
-<p>可访问的视觉焦点指示: <a href="https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/">给你的网站一些焦点！设计有效且可用的焦点指示的一些建议。</a></p>
+可访问的视觉焦点指示: [给你的网站一些焦点！设计有效且可用的焦点指示的一些建议。](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref(":focus")}}</li>
- <li>{{cssxref(":focus-within")}}</li>
-</ul>
+- {{cssxref(":focus")}}
+- {{cssxref(":focus-within")}}

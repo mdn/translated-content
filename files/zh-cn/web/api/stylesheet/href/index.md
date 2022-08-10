@@ -3,49 +3,49 @@ title: href
 slug: Web/API/StyleSheet/href
 translation_of: Web/API/StyleSheet/href
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>返回当前样式表文件的 URI 地址。</p>
+返回当前样式表文件的 URI 地址。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval"><em>uri</em> = stylesheet.href
-</pre>
+```plain
+uri = stylesheet.href
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>uri</code> 为一个字符串，包含了样式表文件的 URI 地址。</li>
-</ul>
+- `uri` 为一个字符串，包含了样式表文件的 URI 地址。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre> // 在本机环境下
- &lt;html&gt;
-  &lt;head&gt;
-   &lt;link rel="StyleSheet" href="example.css" type="text/css" /&gt;
-   &lt;script&gt;
+```plain
+ // 在本机环境下
+ <html>
+  <head>
+   <link rel="StyleSheet" href="example.css" type="text/css" />
+   <script>
     function sref() {
      alert(document.styleSheets[0].href);
     }
-   &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-   &lt;div class="thunder"&gt;Thunder&lt;/div&gt;
-   &lt;button onclick="sref()"&gt;ss&lt;/button&gt;
-  &lt;/body&gt;
- &lt;/html&gt;
+   </script>
+  </head>
+  <body>
+   <div class="thunder">Thunder</div>
+   <button onclick="sref()">ss</button>
+  </body>
+ </html>
 // 弹出 "file:////C:/Windows/Desktop/example.css
-</pre>
+```
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>如果该样式表是一个外链样式表文件，则它的 href 属性值为样式表文件的 URI. 但如果该样式表是一个内联样式表，则它的 href 属性值为<code>null</code>.</p>
+如果该样式表是一个外链样式表文件，则它的 href 属性值为样式表文件的 URI. 但如果该样式表是一个内联样式表，则它的 href 属性值为`null`.
 
-<p>该属性在 Firefox, Opera, Google Chrome, Safari 中为只读属性，在 Internet Explorer 中可读可写。</p>
+该属性在 Firefox, Opera, Google Chrome, Safari 中为只读属性，在 Internet Explorer 中可读可写。
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href">stylesheet.href </a></p>
+[stylesheet.href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)

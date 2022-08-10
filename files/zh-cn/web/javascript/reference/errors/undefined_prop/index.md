@@ -9,40 +9,43 @@ tags:
   - 严格模式
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">ReferenceError: reference to undefined property "x" (Firefox)
-</pre>
+```plain
+ReferenceError: reference to undefined property "x" (Firefox)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>仅在 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 下出现 {{jsxref("ReferenceError")}} 警告。</p>
+仅在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下出现 {{jsxref("ReferenceError")}} 警告。
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>脚本尝试去访问一个不存在的对象属性。<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> 页面描述了两种访问属性的方法。</p>
+脚本尝试去访问一个不存在的对象属性。[property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 页面描述了两种访问属性的方法。
 
-<p>引用未定义属性的错误仅出现在 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">strict mode </a>代码中。在非严格代码中，对不存在的属性的访问将被忽略。</p>
+引用未定义属性的错误仅出现在 [strict mode ](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)代码中。在非严格代码中，对不存在的属性的访问将被忽略。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="无效的">无效的</h3>
+### 无效的
 
-<p>本例中，<code>bar</code> 属性是未定义的，隐藏 <code>ReferenceError</code> 会出现。</p>
+本例中，`bar` 属性是未定义的，隐藏 `ReferenceError` 会出现。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
-</pre>
+```
 
-<h3 id="无效的_2">无效的</h3>
+### 无效的
 
-<p>为了避免错误，您需要向对象添加 <code>bar</code> 的定义或在尝试访问 <code>bar</code> 属性之前检查 <code>bar</code> 属性的存在；一种检查的方式是使用 {{jsxref("Object.prototype.hasOwnProperty()")}} 方法。如下所示：</p>
+为了避免错误，您需要向对象添加 `bar` 的定义或在尝试访问 `bar` 属性之前检查 `bar` 属性的存在；一种检查的方式是使用 {{jsxref("Object.prototype.hasOwnProperty()")}} 方法。如下所示：
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 
 var foo = {};
 
@@ -55,10 +58,9 @@ console.log(foo.bar); // "moon"
 
 if (foo.hasOwnProperty("bar") {
   console.log(foo.bar);
-}</pre>
+}
+```
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
-</ul>
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)

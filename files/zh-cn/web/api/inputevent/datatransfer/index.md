@@ -8,50 +8,54 @@ tags:
   - InputEvent
 translation_of: Web/API/InputEvent/dataTransfer
 ---
-<p>{{SeeCompatTable}}{{APIRef("DOM Events")}}</p>
+{{SeeCompatTable}}{{APIRef("DOM Events")}}
 
-<p>{{domxref("InputEvent")}} 接口中的只读属性 <strong><code>dataTransfer</code></strong> 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。</p>
+{{domxref("InputEvent")}} 接口中的只读属性 **`dataTransfer`** 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
+```plain
+var dataTransfer = inputEvent.dataTransfer
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("DataTransfer")}} 对象。</p>
+一个 {{domxref("DataTransfer")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在下面的简单示例中，我们在 <a href="/zh-CN/docs/Web/API/HTMLElement/input_event">input</a> 事件上设置了一个事件监听器，以便在将任何内容粘贴到 {{htmlelement("p")}} 元素时，通过 <code><a href="/zh-CN/docs/Web/API/DataTransfer/getData">InputEvent.dataTransfer.getData()</a></code> 方法检索其 HTML 源代码，并在输入框下面的段落中报告。</p>
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件上设置了一个事件监听器，以便在将任何内容粘贴到 {{htmlelement("p")}} 元素时，通过 [`InputEvent.dataTransfer.getData()`](/zh-CN/docs/Web/API/DataTransfer/getData) 方法检索其 HTML 源代码，并在输入框下面的段落中报告。
 
-<p>尝试复制并粘贴提供的部分内容以查看效果。注意，部分浏览器对其支持不佳。</p>
+尝试复制并粘贴提供的部分内容以查看效果。注意，部分浏览器对其支持不佳。
 
-<pre class="brush: html">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="font-weight: italic; color: red"&gt;Exciting: italic red text!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Boring normal text ;-(&lt;/p&gt;
+```html
+<p><span style="font-weight: bold; color: blue">Whoa, bold blue text!</span></p>
+<p><span style="font-weight: italic; color: red">Exciting: italic red text!</span></p>
+<p>Boring normal text ;-(</p>
 
-&lt;hr&gt;
+<hr>
 
-&lt;p contenteditable="true"&gt;Go on, try pasting some content into this editable paragraph and see what happens!&lt;/p&gt;
+<p contenteditable="true">Go on, try pasting some content into this editable paragraph and see what happens!</p>
 
-&lt;p class="result"&gt;&lt;/p&gt;</pre>
+<p class="result"></p>
+```
 
-<pre class="brush: js">var editable = document.querySelector('p[contenteditable]');
+```js
+var editable = document.querySelector('p[contenteditable]');
 var result = document.querySelector('.result')
 var dataTransferObj;
 
-editable.addEventListener('input', (e) =&gt; {
+editable.addEventListener('input', (e) => {
   result.textContent = e.dataTransfer.getData('text/html');
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 250)}}</p>
+{{EmbedLiveSample('Examples', '100%', 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.InputEvent.dataTransfer")}}</p>
-</div>
+{{Compat("api.InputEvent.dataTransfer")}}

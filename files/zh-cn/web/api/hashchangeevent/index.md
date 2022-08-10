@@ -11,67 +11,67 @@ tags:
   - 接口
 translation_of: Web/API/HashChangeEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HashChangeEvent</strong></code> 接口表示一个变化事件，当 URL 中的片段标识符发生改变时，会触发此事件。</p>
+**`HashChangeEvent`** 接口表示一个变化事件，当 URL 中的片段标识符发生改变时，会触发此事件。
 
-<p>片段标识符指 URL 中 <code>#</code> 号和它以后的部分。</p>
+片段标识符指 URL 中 `#` 号和它以后的部分。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em> 这个接口也从 {{domxref("Event")}} 中继承属性。</em></p>
+_这个接口也从 {{domxref("Event")}} 中继承属性。_
 
-<dl>
- <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}</dt>
- <dd>window 即将导航到达的新 URL。</dd>
- <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}</dt>
- <dd>window 此前导航到达过的 URL。</dd>
-</dl>
+- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+  - : window 即将导航到达的新 URL。
+- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+  - : window 此前导航到达过的 URL。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法</em></p>
+_这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="井号内容变化的语法选择">井号内容变化的语法选择</h3>
+### 井号内容变化的语法选择
 
-<p>你可以选择使用下述的任一方法监听 {{event("hashchange")}} 事件。</p>
+你可以选择使用下述的任一方法监听 {{event("hashchange")}} 事件。
 
-<pre class="brush: js">window.onhashchange = funcRef;
-</pre>
+```js
+window.onhashchange = funcRef;
+```
 
-<p><strong>或</strong></p>
+**或**
 
-<pre class="brush: html">&lt;body onhashchange="funcRef();"&gt;
-</pre>
+```html
+<body onhashchange="funcRef();">
+```
 
-<p><strong>或</strong></p>
+**或**
 
-<pre class="brush: js">window.addEventListener("hashchange", funcRef, false);
-</pre>
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
-<h3 id="基本示例">基本示例</h3>
+### 基本示例
 
-<pre class="brush:js">function locationHashChanged() {
+```js
+function locationHashChanged() {
   if (location.hash === '#somecoolfeature') {
     somecoolfeature();
   }
 }
 
 window.addEventListener('hashchange', locationHashChanged);
-</pre>
+```
 
-<dl>
-</dl>
+## 回落方法（Polyfill）
 
-<h2 id="回落方法（Polyfill）">回落方法（Polyfill）</h2>
+在 [Modernizr GitHub page](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) 中列出了几种回落（fallback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handler）绑定在 {{domxref("Window/hashchange_event", "onhashchange")}} 属性上：
 
-<p>在 <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a> 中列出了几种回落（fallback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handler）绑定在 {{domxref("Window/hashchange_event", "onhashchange")}} 属性上：</p>
-
-<pre class="brush:js;">(function(window) {
+```js
+(function(window) {
 
   // 如果浏览器已经实现了此事件，则退出函数
   if ( "onhashchange" in window.document.body ) return;
@@ -86,7 +86,7 @@ window.addEventListener('hashchange', locationHashChanged);
         newHash = location.hash;
 
     // 如果片段标识符有变化，且处理程序存在
-    if ( newHash != oldHash &amp;&amp; typeof window.onhashchange === "function" ) {
+    if ( newHash != oldHash && typeof window.onhashchange === "function" ) {
       // 执行处理程序
       window.onhashchange({
         type: "hashchange",
@@ -100,21 +100,17 @@ window.addEventListener('hashchange', locationHashChanged);
   }, 100);
 
 })(window);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HashChangeEvent")}}
 
+## 相关事件
 
-<p>{{Compat("api.HashChangeEvent")}}</p>
-
-<h2 id="相关事件">相关事件</h2>
-
-<ul>
- <li>{{event("hashchange")}}</li>
- <li>{{event("popstate")}}</li>
-</ul>
+- {{event("hashchange")}}
+- {{event("popstate")}}

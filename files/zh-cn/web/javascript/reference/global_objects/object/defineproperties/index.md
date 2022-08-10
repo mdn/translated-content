@@ -8,55 +8,55 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>Object.defineProperties()</code></strong> 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。</p>
+**`Object.defineProperties()`** 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+```plain
+Object.defineProperties(obj, props)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>在其上定义或修改属性的对象。</dd>
- <dt><code>props</code></dt>
- <dd>要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅 {{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
-  <strong>默认为 <code>false</code></strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> 只有在枚举相应对象上的属性时该属性显现。<br>
-  <strong>默认为 <code>false</code></strong></dd>
-  <dt><code>value</code></dt>
-  <dd>与属性关联的值。可以是任何有效的 JavaScript 值（数字，对象，函数等）。<br>
-  <strong>默认为 {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code>只有与该属性相关联的值被{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。<br>
-  <strong>默认为 <code>false</code></strong></dd>
-  <dt><code>get</code></dt>
-  <dd>作为该属性的 getter 函数，如果没有 getter 则为{{jsxref("undefined")}}。函数返回值将被用作属性的值。<br>
-  <strong>默认为 {{jsxref("undefined")}}</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>作为属性的 setter 函数，如果没有 setter 则为{{jsxref("undefined")}}。函数将仅接受参数赋值给该属性的新值。<br>
-  <strong>默认为 {{jsxref("undefined")}}</strong></dd>
- </dl>
- </dd>
-</dl>
+- `obj`
+  - : 在其上定义或修改属性的对象。
+- `props`
 
-<h3 id="返回值">返回值</h3>
+  - : 要定义其可枚举属性或修改的属性描述符的对象。对象中存在的属性描述符主要有两种：数据描述符和访问器描述符（更多详情，请参阅 {{jsxref("Object.defineProperty()")}}）。描述符具有以下键：
 
-<p>传递给函数的对象。</p>
+    - `configurable`
+      - : `true` 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。
+        **默认为 `false`**
+    - `enumerable`
+      - : `true` 只有在枚举相应对象上的属性时该属性显现。
+        **默认为 `false`**
+    - `value`
+      - : 与属性关联的值。可以是任何有效的 JavaScript 值（数字，对象，函数等）。
+        **默认为 {{jsxref("undefined")}}.**
+    - `writable`
+      - : `true`只有与该属性相关联的值被{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。
+        **默认为 `false`**
+    - `get`
+      - : 作为该属性的 getter 函数，如果没有 getter 则为{{jsxref("undefined")}}。函数返回值将被用作属性的值。
+        **默认为 {{jsxref("undefined")}}**
+    - `set`
+      - : 作为属性的 setter 函数，如果没有 setter 则为{{jsxref("undefined")}}。函数将仅接受参数赋值给该属性的新值。
+        **默认为 {{jsxref("undefined")}}**
 
-<h2 id="描述">描述</h2>
+### 返回值
 
-<p><code>Object.defineProperties</code> 本质上定义了 <code>obj</code> 对象上 <code>props</code> 的可枚举属性相对应的所有属性。</p>
+传递给函数的对象。
 
-<h2 id="例子">例子</h2>
+## 描述
 
-<pre class="brush: js">var obj = {};
+`Object.defineProperties` 本质上定义了 `obj` 对象上 `props` 的可枚举属性相对应的所有属性。
+
+## 例子
+
+```js
+var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -67,13 +67,15 @@ Object.defineProperties(obj, {
     writable: false
   }
   // etc. etc.
-});</pre>
+});
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code> 几乎完全等同于（注意 <code>isCallable</code> 中的注释）以下 JavaScript 中的重新实现：</p>
+假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，`Object.defineProperties` 几乎完全等同于（注意 `isCallable` 中的注释）以下 JavaScript 中的重新实现：
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+```js
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -100,18 +102,18 @@ Object.defineProperties(obj, {
     if (hasProperty(desc, 'get')) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; typeof g !== 'undefined')
+      if (!isCallable(g) && typeof g !== 'undefined')
         throw new TypeError('bad get');
       d.get = g;
     }
     if (hasProperty(desc, 'set')) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; typeof s !== 'undefined')
+      if (!isCallable(s) && typeof s !== 'undefined')
         throw new TypeError('bad set');
       d.set = s;
     }
 
-    if (('get' in d || 'set' in d) &amp;&amp; ('value' in d || 'writable' in d))
+    if (('get' in d || 'set' in d) && ('value' in d || 'writable' in d))
       throw new TypeError('identity-confused descriptor');
 
     return d;
@@ -125,27 +127,26 @@ Object.defineProperties(obj, {
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &lt; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

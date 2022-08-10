@@ -3,48 +3,45 @@ title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
 translation_of: Web/API/DeviceOrientationEvent
 ---
-<p>{{apiref("Device Orientation Events")}}{{SeeCompatTable}}</p>
+{{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
-<p><code>DeviceOrientationEvent</code> 提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。</p>
+`DeviceOrientationEvent` 提供给网页开发者当设备（指手机，平板等移动设备）在浏览页面时物理旋转的信息。
 
-<div class="warning">
-<p><strong>警告：</strong> 当前，火狐浏览器和谷歌浏览器并未能用同一种方式实现，在使用请注意。（见后文） </p>
-</div>
+> **警告：** 当前，火狐浏览器和谷歌浏览器并未能用同一种方式实现，在使用请注意。（见后文）
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}</dt>
- <dd>用来说明设备是提供的旋转数据是否是绝对定位的布尔值。</dd>
- <dt>{{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕 z 轴旋转的角度（范围在 0-360 之间）的数字</dd>
- <dt> </dt>
- <dt>{{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕 x 轴旋转（范围在－180 到 180 之间）的数字，从前到后的方向为正方向。</dd>
- <dt>{{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}</dt>
- <dd>一个表示设备绕 y 轴旋转（范围在－90 到 90 之间）的数字，从左向右为正方向。</dd>
-</dl>
+- {{domxref("DeviceOrientationEvent.absolute")}} {{readonlyinline}}
+  - : 用来说明设备是提供的旋转数据是否是绝对定位的布尔值。
+- {{domxref("DeviceOrientationEvent.alpha")}} {{readonlyinline}}
+  - : 一个表示设备绕 z 轴旋转的角度（范围在 0-360 之间）的数字
+- {{domxref("DeviceOrientationEvent.beta")}} {{readonlyinline}}
 
-<h2 id="例子">例子</h2>
+  - : 一个表示设备绕 x 轴旋转（范围在－180 到 180 之间）的数字，从前到后的方向为正方向。
 
-<pre class="brush: js">window.addEventListener('deviceorientation', function(event) {
+- {{domxref("DeviceOrientationEvent.gamma")}} {{readonlyinline}}
+  - : 一个表示设备绕 y 轴旋转（范围在－90 到 90 之间）的数字，从左向右为正方向。
+
+## 例子
+
+```js
+window.addEventListener('deviceorientation', function(event) {
   console.log(event.alpha + ' : ' + event.beta + ' : ' + event.gamma);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.DeviceOrientationEvent")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li><a href="/en-US/docs/WebAPI/Detecting_device_orientation">监测设备方向</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">转动与运动的数据说明</a></li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- [监测设备方向](/en-US/docs/WebAPI/Detecting_device_orientation)
+- [转动与运动的数据说明](/en/DOM/Orientation_and_motion_data_explained)

@@ -3,50 +3,53 @@ title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误信息">错误信息</h2>
+## 错误信息
 
-<pre class="syntaxbox">SyntaxError: return not in function
+```plain
+SyntaxError: return not in function
 SyntaxError: yield not in function
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="什么地方出错了？">什么地方出错了？</h2>
+## 什么地方出错了？
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 返回的或者 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 语句在函数 <a href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a> 外被调用。或许是少了一个花括号， <code>return</code> 返回的和 <code>yield</code> 语句必须是在一个函数里，因为它们会停止（暂停或恢复）函数的继续执行，然后返回。</p>
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) 返回的或者 [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) 语句在函数 [function](/en-US/docs/Web/JavaScript/Guide/Functions) 外被调用。或许是少了一个花括号， `return` 返回的和 `yield` 语句必须是在一个函数里，因为它们会停止（暂停或恢复）函数的继续执行，然后返回。
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre class="brush: js example-bad">var cheer = function(score) {
+```js example-bad
+var cheer = function(score) {
   if (score === 147)
     return "Maximum!";
   };
-  if (score &gt; 100) {
+  if (score > 100) {
     return "Century!";
   }
 }
 
 // SyntaxError: return not in function
-// 语法错误：不是在函数里返回</pre>
+// 语法错误：不是在函数里返回
+```
 
-<p>初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个 “ { ”。正确的应该如下：</p>
+初次看好像没什么错误，但是上面这段代码在第一个 if 后面少了一个 “ { ”。正确的应该如下：
 
-<pre class="brush: js example-good">var cheer = function(score) {
+```js example-good
+var cheer = function(score) {
   if (score === 147) {
     return "Maximum!";
   }
-  if (score &gt; 100) {
+  if (score > 100) {
     return "Century!";
   }
-};</pre>
+};
+```
 
-<h2 id="相关信息">相关信息</h2>
+## 相关信息
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code></li>
-</ul>
+- [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)

@@ -7,39 +7,39 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+## 消息
 
-<pre class="syntaxbox">Error: Permission denied to access property "x"
-</pre>
+```plain
+Error: Permission denied to access property "x"
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("Error","错误")}}.</p>
+{{jsxref("Error","错误")}}.
 
-<h2 id="什么地方出错了">什么地方出错了？</h2>
+## 什么地方出错了？
 
-<p>尝试访问无权访问的对象。这很可能出现在使用{{HTMLElement("iframe")}}元素时加载了一个不同域名下的页面，这在访问子页面时会违背<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>。</p>
+尝试访问无权访问的对象。这很可能出现在使用{{HTMLElement("iframe")}}元素时加载了一个不同域名下的页面，这在访问子页面时会违背[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
       console.log(document.getElementById('myframe').contentWindow.document);
       // Error: Permission denied to access property "document"
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body></body>
+</html>
+```
 
-<p>可以参考</p>
+可以参考
 
-<ul>
- <li>{{HTMLElement("iframe")}}</li>
- <li><a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a></li>
-</ul>
+- {{HTMLElement("iframe")}}
+- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)

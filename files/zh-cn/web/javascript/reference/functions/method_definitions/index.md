@@ -9,73 +9,73 @@ tags:
   - 语法
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>从 ECMAScript 2015 开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式。</p>
+从 ECMAScript 2015 开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式。
 
-<div>{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var obj = {
-  <var>property</var>( <var>parameters…</var> ) {},
-  *<var>generator</var>( <var>parameters…</var> ) {},
-  async property( <var>parameters…</var> ) {},
-  async* generator( <var>parameters…</var> ) {},
+```plain
+var obj = {
+  property( parameters… ) {},
+  *generator( parameters… ) {},
+  async property( parameters… ) {},
+  async* generator( parameters… ) {},
 
   // with computed keys:
-  [property]( <var>parameters…</var> ) {},
-  *[generator]( <var>parameters…</var> ) {},
-  async [property]( <var>parameters…</var> ) {},
+  [property]( parameters… ) {},
+  *[generator]( parameters… ) {},
+  async [property]( parameters… ) {},
 
   // compare getter/setter syntax:
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {}
+  get property() {},
+  set property(value) {}
 };
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>该简写语法与 ECMAScript 2015 的<a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a>和<a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>语法类似。</p>
+该简写语法与 ECMAScript 2015 的[getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)和[setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)语法类似。
 
-<p>如下代码：</p>
+如下代码：
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: function() {
     /* code */
   },
   bar: function() {
     /* code */
   }
-};</pre>
+};
+```
 
-<p>现可被简写为：</p>
+现可被简写为：
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo() {
     /* code */
   },
   bar() {
     /* code */
   }
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>备注：</strong>简写语法使用命名函数而不是匿名函数（如…<code>foo: function() {}</code>…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。</p>
-</div>
+> **备注：**简写语法使用命名函数而不是匿名函数（如…`foo: function() {}`…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。
 
-<h3 id="生成器方法">生成器方法</h3>
+### 生成器方法
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">生成器方法</a>也可以用这种简写语法定义。使用它们时，</p>
+[生成器方法](/en-US/docs/Web/JavaScript/Reference/Statements/function*)也可以用这种简写语法定义。使用它们时，
 
-<ul>
- <li>简写语法中的星号（*）必须出现在生成器名前，也就是说<code>* g(){}</code>可以正常工作，而<code>g *(){}</code>不行。</li>
- <li>
-  <p>非生成器方法定义可能不包含<code>yield</code>关键字。这意味着<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">遗留的生成器函数</a>也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用<code>yield</code>与星号（*）结合使用。</p>
- </li>
-</ul>
+- 简写语法中的星号（\*）必须出现在生成器名前，也就是说`* g(){}`可以正常工作，而`g *(){}`不行。
+- 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
 
-<pre class="brush: js">// 用有属性名的语法定义方法（ES6 之前）：
+```js
+// 用有属性名的语法定义方法（ES6 之前）：
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -95,13 +95,15 @@ var obj2 = {
 
 var it = obj2.g();
 console.log(it.next().value); // 0
-console.log(it.next().value); // 1</pre>
+console.log(it.next().value); // 1
+```
 
-<h3 id="Async_方法">Async 方法</h3>
+### Async 方法
 
-<p>{{jsxref("Statements/async_function", "Async 方法", "", 1)}}也可以使用简写语法来定义。</p>
+{{jsxref("Statements/async_function", "Async 方法", "", 1)}}也可以使用简写语法来定义。
 
-<pre class="brush: js">// 用有属性名的语法定义方法（ES6 之前）：
+```js
+// 用有属性名的语法定义方法（ES6 之前）：
 var obj3 = {
   f: async function () {
     await some_promise;
@@ -113,13 +115,15 @@ var obj3 = {
   async f() {
     await some_promise;
   }
-};</pre>
+};
+```
 
-<h3 id="Async_生成器方法">Async 生成器方法</h3>
+### Async 生成器方法
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">生成器方法</a>也能成为 {{jsxref("Statements/async_function", "async", "", 1)}}.</p>
+[生成器方法](/en-US/docs/Web/JavaScript/Reference/Statements/function*)也能成为 {{jsxref("Statements/async_function", "async", "", 1)}}.
 
-<pre class="brush: js">var obj4 = {
+```js
+var obj4 = {
   f: async function* () {
     yield 1;
     yield 2;
@@ -131,16 +135,18 @@ var obj3 = {
 var obj4 = {
   async* f() {
    yield 1;
-   yield 2;<code>
+   yield 2;
    yield 3;
   }
-};</code></pre>
+};
+```
 
-<h3 id="方法定义不是构造函数">方法定义不是构造函数</h3>
+### 方法定义不是构造函数
 
-<p>所有方法定义不是构造函数，如果您尝试实例化它们，将抛出{{jsxref("TypeError")}}。</p>
+所有方法定义不是构造函数，如果您尝试实例化它们，将抛出{{jsxref("TypeError")}}。
 
-<pre class="brush: js example-bad">var obj = {
+```js example-bad
+var obj = {
   method() {}
 };
 new obj.method; // TypeError: obj.method is not a constructor
@@ -149,24 +155,26 @@ var obj = {
   * g() {}
 };
 new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="简单示例">简单示例</h3>
+### 简单示例
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   a : "foo",
   b(){ return this.a; }
 };
 console.log(obj.b()); // "foo"
-</pre>
+```
 
-<h3 id="计算的属性名">计算的属性名</h3>
+### 计算的属性名
 
-<p>该简写语法还支持计算的属性名称作为方法名。</p>
+该简写语法还支持计算的属性名称作为方法名。
 
-<pre class="brush: js">var bar = {
+```js
+var bar = {
   foo0: function() { return 0; },
   foo1() { return 1; },
   ['foo' + 2]() { return 2; }
@@ -174,20 +182,19 @@ console.log(obj.b()); // "foo"
 
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2</pre>
+console.log(bar.foo2()); // 2
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
-</ul>
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

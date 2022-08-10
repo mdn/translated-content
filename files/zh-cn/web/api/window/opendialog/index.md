@@ -5,72 +5,95 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/Window/openDialog
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id=".E7.AE.80.E4.BB.8B">简介</h3>
-<p><code>window.openDialog</code> 是对<a href="cn/DOM/window.open">window.open</a>的扩展。和它一样，可以传递<code>windowFeatures</code>参数，但是 <code>windowFeatures</code> 的方式有变化。</p>
-<p>The optional parameters, if present, will be bundled up in a JavaScript Array object and added to the newly created window as a property named <a href="cn/DOM/window.arguments">window.arguments</a>. They may be referenced in the JavaScript of the window at any time, including during the execution of a <code>load</code> handler. These parameters may be used, then, to pass arguments to and from the dialog window.</p>
-<p>Note that the call to <code>openDialog()</code> returns immediately. If you want the call to block until the user has closed the dialog, supply <code>modal</code> as a <code>windowFeatures</code> parameter. Note that this also means the user won't be able to interact with the opener window until he closes the modal dialog.</p>
-<h3 id=".E8.AF.AD.E6.B3.95">语法</h3>
-<pre class="eval"><i>newWindow</i> = openDialog(<i>url</i>,<i>name</i>,<i>features</i>,<i>arg1</i>,<i>arg2</i>, ...)
-</pre>
-<dl>
- <dt>
-  newWindow </dt>
- <dd>
-  打开的窗口对象。</dd>
- <dt>
-  url </dt>
- <dd>
-  要在新窗口里打开的地址。</dd>
- <dt>
-  name </dt>
- <dd>
-  The window name (optional). See <a href="cn/DOM/window.open">window.open</a> description for detailed information.</dd>
- <dt>
-  features </dt>
- <dd>
-  See <a href="cn/DOM/window.open">window.open</a> description for description.</dd>
- <dt>
-  arg1, arg2, ... </dt>
- <dd>
-  The arguments to be passed to the new window (optional).</dd>
-</dl>
-<h3 id=".E4.BE.8B.E5.AD.90">例子</h3>
-<pre class="eval">var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
-</pre>
-<h3 id=".E6.B3.A8.E6.84.8F">注意</h3>
-<h4 id="New_Features">New Features</h4>
-<p><code>all</code> - Initially activates (or deactivates <code>("all=no")</code>) all chrome (except the behaviour flags <code>chrome</code>, <code>dialog</code> and <code>modal</code>). These can be overridden (so <code>"menubar=no,all"</code> turns on all chrome except the menubar.) This feature is explicitly ignored by <a href="cn/Window.open">window.open</a>. <code>window.openDialog</code> finds it useful because of its different default assumptions.</p>
-<h4 id="Default_behaviour">Default behaviour</h4>
-<p>The <code>chrome</code> and <code>dialog</code> features are always assumed on, unless explicitly turned off ("<code>chrome=no</code>"). <code>openDialog</code> treats the absence of the features parameter as does <a href="cn/Window.open">window.open</a>, (that is, an empty string sets all features to off) except <code>chrome</code> and <code>dialog</code>, which default to on. If the <code>features</code> parameter is a zero-length string, or contains only one or more of the behaviour features (<code>chrome</code>, <code>dependent</code>, <code>dialog</code> and <code>modal</code>) the chrome features are assumed "OS' choice." That is, window creation code is not given specific instructions, but is instead allowed to select the chrome that best fits a dialog on that operating system.</p>
-<h4 id="Passing_extra_parameters_to_the_dialog">Passing extra parameters to the dialog</h4>
-<p>To pass extra parameters into the dialog, you can simply supply them after the &lt;tt&gt;windowFeatures&lt;/tt&gt; parameter:</p>
-<pre class="eval">openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
-</pre>
-<p>The extra parameters will then get packed into a property named &lt;tt&gt;arguments&lt;/tt&gt; of type <a href="cn/Core_JavaScript_1.5_Reference/Global_Objects/Array">Array</a>, and this property gets added to the newly opened dialog window.</p>
-<p>To access these extra parameters from within dialog code, use the following scheme:</p>
-<pre class="eval">var food  = window.arguments[0];
+{{ ApiRef() }}
+
+### 简介
+
+`window.openDialog` 是对[window.open](cn/DOM/window.open)的扩展。和它一样，可以传递`windowFeatures`参数，但是 `windowFeatures` 的方式有变化。
+
+The optional parameters, if present, will be bundled up in a JavaScript Array object and added to the newly created window as a property named [window.arguments](cn/DOM/window.arguments). They may be referenced in the JavaScript of the window at any time, including during the execution of a `load` handler. These parameters may be used, then, to pass arguments to and from the dialog window.
+
+Note that the call to `openDialog()` returns immediately. If you want the call to block until the user has closed the dialog, supply `modal` as a `windowFeatures` parameter. Note that this also means the user won't be able to interact with the opener window until he closes the modal dialog.
+
+### 语法
+
+```plain
+newWindow = openDialog(url,name,features,arg1,arg2, ...)
+```
+
+- newWindow
+  - : 打开的窗口对象。
+- url
+  - : 要在新窗口里打开的地址。
+- name
+  - : The window name (optional). See [window.open](cn/DOM/window.open) description for detailed information.
+- features
+  - : See [window.open](cn/DOM/window.open) description for description.
+- arg1, arg2, ...
+  - : The arguments to be passed to the new window (optional).
+
+### 例子
+
+```plain
+var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+```
+
+### 注意
+
+#### New Features
+
+`all` - Initially activates (or deactivates `("all=no")`) all chrome (except the behaviour flags `chrome`, `dialog` and `modal`). These can be overridden (so `"menubar=no,all"` turns on all chrome except the menubar.) This feature is explicitly ignored by [window.open](cn/Window.open). `window.openDialog` finds it useful because of its different default assumptions.
+
+#### Default behaviour
+
+The `chrome` and `dialog` features are always assumed on, unless explicitly turned off ("`chrome=no`"). `openDialog` treats the absence of the features parameter as does [window.open](cn/Window.open), (that is, an empty string sets all features to off) except `chrome` and `dialog`, which default to on. If the `features` parameter is a zero-length string, or contains only one or more of the behaviour features (`chrome`, `dependent`, `dialog` and `modal`) the chrome features are assumed "OS' choice." That is, window creation code is not given specific instructions, but is instead allowed to select the chrome that best fits a dialog on that operating system.
+
+#### Passing extra parameters to the dialog
+
+To pass extra parameters into the dialog, you can simply supply them after the \<tt>windowFeatures\</tt> parameter:
+
+```plain
+openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
+```
+
+The extra parameters will then get packed into a property named \<tt>arguments\</tt> of type [Array](cn/Core_JavaScript_1.5_Reference/Global_Objects/Array), and this property gets added to the newly opened dialog window.
+
+To access these extra parameters from within dialog code, use the following scheme:
+
+```plain
+var food  = window.arguments[0];
 var price = window.arguments[1];
-</pre>
-<p>Note that you can access this property from within anywhere in the dialog code. (<a href="cn/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Another example</a>).</p>
-<h4 id="Returning_values_from_the_dialog">Returning values from the dialog</h4>
-<p>Since &lt;tt&gt;window.close()&lt;/tt&gt; erases all properties associated with the dialog window (i.e. the variables specified in the JavaScript code which gets loaded from the dialog), it is not possible to pass return values back past the close operation using globals (or any other constructs).</p>
-<p>To be able to pass values back to the caller, you have to supply some object via the extra parameters. You can then access this object from within the dialog code and set properties on it, containing the values you want to return or preserve past the &lt;tt&gt;window.close()&lt;/tt&gt; operation.</p>
-<pre class="eval">var retVals = { address: null, delivery: null };
+```
+
+Note that you can access this property from within anywhere in the dialog code. ([Another example](cn/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+
+#### Returning values from the dialog
+
+Since \<tt>window\.close()\</tt> erases all properties associated with the dialog window (i.e. the variables specified in the JavaScript code which gets loaded from the dialog), it is not possible to pass return values back past the close operation using globals (or any other constructs).
+
+To be able to pass values back to the caller, you have to supply some object via the extra parameters. You can then access this object from within the dialog code and set properties on it, containing the values you want to return or preserve past the \<tt>window\.close()\</tt> operation.
+
+```plain
+var retVals = { address: null, delivery: null };
 openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);
-</pre>
-<p>If you set the properties of the &lt;tt&gt;retVals&lt;/tt&gt; object in the dialog code as described below, you can now access them via the &lt;tt&gt;retVals&lt;/tt&gt; array after the &lt;tt&gt;openDialog()&lt;/tt&gt; call returns.</p>
-<p>Inside the dialog code, you can set the properties as follows:</p>
-<pre class="eval">var retVals = window.arguments[2];
+```
+
+If you set the properties of the \<tt>retVals\</tt> object in the dialog code as described below, you can now access them via the \<tt>retVals\</tt> array after the \<tt>openDialog()\</tt> call returns.
+
+Inside the dialog code, you can set the properties as follows:
+
+```plain
+var retVals = window.arguments[2];
 retVals.address  = enteredAddress;
 retVals.delivery = "immediate";
-</pre>
-<p>See also <a href="http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40">. (</a><a href="cn/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Another example</a>).</p>
+```
 
-<h2 id="规范">规范</h2>
+See also [. (](http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40)[Another example](cn/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog)).
+
+## 规范
 
 不属于任何规范。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

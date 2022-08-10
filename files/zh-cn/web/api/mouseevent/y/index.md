@@ -7,14 +7,14 @@ tags:
   - 鼠标事件
 translation_of: Web/API/MouseEvent/y
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><strong><code>MouseEvent.y</code></strong> 属性是 {{domxref("MouseEvent.clientY")}} 属性的别称。</p>
+**`MouseEvent.y`** 属性是 {{domxref("MouseEvent.clientY")}} 属性的别称。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MouseEvent.y")}}

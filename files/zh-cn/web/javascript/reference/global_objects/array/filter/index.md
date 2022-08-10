@@ -10,76 +10,74 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>filter()</strong></code> 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。 </p>
+**`filter()`** 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。
 
-<p>{{EmbedInteractiveExample("pages/js/array-filter.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-filter.html")}}
 
+## 语法
 
+```plain
+var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>var newArray = arr</var>.filter(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+- `callback`
 
-<h3 id="参数">参数</h3>
+  - : 用来测试数组的每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它接受以下三个参数：
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>用来测试数组的每个元素的函数。返回 <code>true</code> 表示该元素通过测试，保留该元素，<code>false</code> 则不保留。它接受以下三个参数：
-  <dl>
-    <dt><code>element</code></dt>
-    <dd>数组中当前正在处理的元素。</dd>
-    <dt><code>index</code>{{optional_inline}}</dt>
-    <dd>正在处理的元素在数组中的索引。</dd>
-    <dt><code>array</code>{{optional_inline}}</dt>
-    <dd>调用了 <code>filter</code> 的数组本身。</dd>
-  </dl>
- </dd>
- <dt><code>thisArg</code>{{optional_inline}}</dt>
- <dd>执行 <code>callback</code> 时，用于 <code>this</code> 的值。</dd>
-</dl>
+    - `element`
+      - : 数组中当前正在处理的元素。
+    - `index`{{optional_inline}}
+      - : 正在处理的元素在数组中的索引。
+    - `array`{{optional_inline}}
+      - : 调用了 `filter` 的数组本身。
 
-<h3 id="返回值">返回值</h3>
+- `thisArg`{{optional_inline}}
+  - : 执行 `callback` 时，用于 `this` 的值。
 
-<p>一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。</p>
+### 返回值
 
-<h2 id="描述">描述</h2>
+一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
 
-<p><code>filter</code> 为数组中的每个元素调用一次 <code>callback</code> 函数，并利用所有使得 <code>callback</code> 返回 true 或<a href="/zh-CN/docs/Glossary/Truthy">等价于 true 的值</a>的元素创建一个新数组。<code>callback</code> 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 <code>callback</code> 测试的元素会被跳过，不会被包含在新数组中。</p>
+## 描述
 
-<p><code>callback</code> 被调用时传入三个参数：</p>
+`filter` 为数组中的每个元素调用一次 `callback` 函数，并利用所有使得 `callback` 返回 true 或[等价于 true 的值](/zh-CN/docs/Glossary/Truthy)的元素创建一个新数组。`callback` 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 `callback` 测试的元素会被跳过，不会被包含在新数组中。
 
-<ol>
- <li>元素的值</li>
- <li>元素的索引</li>
- <li>被遍历的数组本身</li>
-</ol>
+`callback` 被调用时传入三个参数：
 
-<p>如果为 <code>filter</code> 提供一个 <code>thisArg</code> 参数，则它会被作为 <code>callback</code> 被调用时的 <code>this</code> 值。否则，<code>callback</code> 的 <code>this</code> 值在非严格模式下将是全局对象，严格模式下为 <code>undefined</code>。<code>callback</code> 函数最终观察到的 <code>this</code> 值是根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">通常函数所看到的 "this"的规则</a>确定的。</p>
+1.  元素的值
+2.  元素的索引
+3.  被遍历的数组本身
 
-<p><code>filter</code> 不会改变原数组，它返回过滤后的新数组。</p>
+如果为 `filter` 提供一个 `thisArg` 参数，则它会被作为 `callback` 被调用时的 `this` 值。否则，`callback` 的 `this` 值在非严格模式下将是全局对象，严格模式下为 `undefined`。`callback` 函数最终观察到的 `this` 值是根据[通常函数所看到的 "this"的规则](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)确定的。
 
-<p><code>filter</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已经确定了。在调用 <code>filter</code> 之后被添加到数组中的元素不会被 <code>filter</code> 遍历到。如果已经存在的元素被改变了，则他们传入 <code>callback</code> 的值是 <code>filter</code> 遍历到它们那一刻的值。被删除或从来未被赋值的元素不会被遍历到。</p>
+`filter` 不会改变原数组，它返回过滤后的新数组。
 
-<h2 id="示例">示例</h2>
+`filter` 遍历的元素范围在第一次调用 `callback` 之前就已经确定了。在调用 `filter` 之后被添加到数组中的元素不会被 `filter` 遍历到。如果已经存在的元素被改变了，则他们传入 `callback` 的值是 `filter` 遍历到它们那一刻的值。被删除或从来未被赋值的元素不会被遍历到。
 
-<h3 id="筛选排除所有较小的值">筛选排除所有较小的值</h3>
+## 示例
 
-<p>下例使用 <code>filter</code> 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。</p>
+### 筛选排除所有较小的值
 
-<pre class="brush: js">function isBigEnough(element) {
-  return element &gt;= 10;
+下例使用 `filter` 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。
+
+```js
+function isBigEnough(element) {
+  return element >= 10;
 }
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
-</pre>
+```
 
-<h3 id="过滤_JSON_中的无效条目">过滤 JSON 中的无效条目</h3>
+### 过滤 JSON 中的无效条目
 
-<p>以下示例使用 <code>filter()</code> 创建具有非零 <code>id</code> 的元素的 json。</p>
+以下示例使用 `filter()` 创建具有非零 `id` 的元素的 json。
 
-<pre class="brush: js">var arr = [
+```js
+var arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -94,11 +92,11 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 var invalidEntries = 0;
 
 function isNumber(obj) {
-  return obj !== undefined &amp;&amp; typeof(obj) === 'number' &amp;&amp; !isNaN(obj);
+  return obj !== undefined && typeof(obj) === 'number' && !isNaN(obj);
 }
 
 function filterByID(item) {
-  if (isNumber(item.id) &amp;&amp; item.id !== 0) {
+  if (isNumber(item.id) && item.id !== 0) {
     return true;
   }
   invalidEntries++;
@@ -113,55 +111,58 @@ console.log('Filtered Array\n', arrByID);
 
 console.log('Number of Invalid Entries = ', invalidEntries);
 // Number of Invalid Entries = 5
-</pre>
+```
 
-<h3 id="在数组中搜索">在数组中搜索</h3>
+### 在数组中搜索
 
-<p>下例使用 <code>filter()</code> 根据搜索条件来过滤数组内容。</p>
+下例使用 `filter()` 根据搜索条件来过滤数组内容。
 
-<pre class="brush: js">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Array filters items based on search criteria (query)
  */
 function filterItems(query) {
   return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1;
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
   })
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
+console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-<h4 id="ES2015_实现">ES2015 实现</h4>
+#### ES2015 实现
 
-<pre class="brush: js">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+```js
+const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Array filters items based on search criteria (query)
  */
-const filterItems = (query) =&gt; {
-  return fruits.filter((el) =&gt;
-    el.toLowerCase().indexOf(query.toLowerCase()) &gt; -1
+const filterItems = (query) => {
+  return fruits.filter((el) =>
+    el.toLowerCase().indexOf(query.toLowerCase()) > -1
   );
 }
 
 console.log(filterItems('ap')); // ['apple', 'grapes']
 console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+```
 
-</pre>
+## Polyfill
 
-<h2 id="Polyfill">Polyfill</h2>
+`filter` 被添加到 ECMA-262 标准第 5 版中，因此在某些实现环境中不被支持。可以把下面的代码插入到脚本的开头来解决此问题，该代码允许在那些没有原生支持 `filter` 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 `fn.call` 等价于 {{jsxref("Function.prototype.call")}} 的初始值，且 {{jsxref("Array.prototype.push")}} 拥有它的初始值。
 
-<p><code>filter</code> 被添加到 ECMA-262 标准第 5 版中，因此在某些实现环境中不被支持。可以把下面的代码插入到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>filter</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 <code>fn.call</code> 等价于 {{jsxref("Function.prototype.call")}} 的初始值，且 {{jsxref("Array.prototype.push")}} 拥有它的初始值。</p>
-
-<pre class="brush: js">if (!Array.prototype.filter){
+```js
+if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
         throw new TypeError();
 
-    var len = this.length &gt;&gt;&gt; 0,
+    var len = this.length >>> 0,
         res = new Array(len), // preallocate array
         t = this, c = 0, i = -1;
     if (thisArg === undefined){
@@ -188,21 +189,20 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
     res.length = c; // shrink down array to proper size
     return res;
   };
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.reduce()")}}

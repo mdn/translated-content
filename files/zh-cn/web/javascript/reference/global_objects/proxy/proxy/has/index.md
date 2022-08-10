@@ -4,72 +4,60 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>handler.has()</code></strong> 方法是针对 {{jsxref("Operators/in", "in")}} 操作符的代理方法。</p>
+**`handler.has()`** 方法是针对 {{jsxref("Operators/in", "in")}} 操作符的代理方法。
 
+{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
+## 语法
 
-
-
-<p>{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}</p>
-
-
-
-
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   has: function(target, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><code>下面是传递给 has</code> 方法的参数。<code>this</code> is bound to the handler.</p>
+`下面是传递给 has` 方法的参数。`this` is bound to the handler.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>prop</code></dt>
- <dd>需要检查是否存在的属性。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `prop`
+  - : 需要检查是否存在的属性。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>has</code> 方法返回一个 boolean 属性的值。</p>
+`has` 方法返回一个 boolean 属性的值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.has</strong></code> 方法可以看作是针对 {{jsxref("Operators/in", "in")}} 操作的钩子。</p>
+**`handler.has`** 方法可以看作是针对 {{jsxref("Operators/in", "in")}} 操作的钩子。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>这个钩子可以拦截下面这些操作：</p>
+这个钩子可以拦截下面这些操作：
 
-<ul>
- <li>属性查询：<code>foo in proxy</code></li>
- <li>继承属性查询：<code>foo in Object.create(proxy)</code></li>
- <li><code>with</code> 检查<code>: with(proxy) { (foo); }</code></li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- 属性查询：`foo in proxy`
+- 继承属性查询：`foo in Object.create(proxy)`
+- `with` 检查`: with(proxy) { (foo); }`
+- {{jsxref("Reflect.has()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违反了下面这些规则，proxy 将会抛出 {{jsxref("TypeError")}}:</p>
+如果违反了下面这些规则，proxy 将会抛出 {{jsxref("TypeError")}}:
 
-<ul>
- <li>如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏。</li>
- <li>如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏</li>
-</ul>
+- 如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏。
+- 如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符。</p>
+下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   has: function(target, prop) {
     console.log('called: ' + prop);
     return true;
@@ -78,11 +66,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 
 console.log('a' in p); // "called: a"
                        // true
-</pre>
+```
 
-<p>下面的代码违反了约束。</p>
+下面的代码违反了约束。
 
-<pre class="brush: js">var obj = { a: 10 };
+```js
+var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
   has: function(target, prop) {
@@ -91,21 +80,19 @@ var p = new Proxy(obj, {
 });
 
 'a' in p; // TypeError is thrown
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="其他">其他</h2>
+## 其他
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/in", "in")}} operator</li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/in", "in")}} operator
+- {{jsxref("Reflect.has()")}}

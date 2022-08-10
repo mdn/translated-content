@@ -1,7 +1,6 @@
 ---
 title: Element.append()
 slug: Web/API/Element/append
-translation_of: Web/API/Element/append
 tags:
   - API
   - DOM
@@ -9,87 +8,81 @@ tags:
   - Node
   - Element
   - Reference
+translation_of: Web/API/Element/append
 browser-compat: api.Element.append
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}**`Element.append`** 方法在 `Element`的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。与 {{domxref("Node.appendChild()")}} 的差异：
 
-<div> <strong><code>Element.append</code></strong> 方法在 <code>Element</code>的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。</div>
+- `Element.append()`允许追加 {{domxref("DOMString")}} 对象，而` Node.appendChild()` 只接受 {{domxref("Node")}} 对象。
+- `Element.append()` [没有返回值](https://repl.it/FgPh/1)，而 `Node.appendChild()` 返回追加的 {{domxref("Node")}} 对象。
+- `Element.append()` 可以追加多个节点和字符串，而 `Node.appendChild()` 只能追加一个节点。
 
-<div>被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。</div>
+## 语法
 
-
-
-<div>与 {{domxref("Node.appendChild()")}} 的差异：</div>
-
-
-
-<ul>
- <li><code>Element.append()</code>允许追加  {{domxref("DOMString")}} 对象，而<code> Node.appendChild()</code> 只接受 {{domxref("Node")}} 对象。</li>
- <li><code>Element.append()</code> <a href="https://repl.it/FgPh/1">没有返回值</a>，而 <code>Node.appendChild()</code> 返回追加的 {{domxref("Node")}} 对象。</li>
- <li><code>Element.append()</code> 可以追加多个节点和字符串，而 <code>Node.appendChild()</code> 只能追加一个节点。</li>
-</ul>
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">[Throws, Unscopable]
+```plain
+[Throws, Unscopable]
 void Element.append((Node or DOMString)... nodes);
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>nodes</code></dt>
- <dd>一组要插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。</dd>
-</dl>
+- `nodes`
+  - : 一组要插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}: 在层次结构中的指定点不能插入节点。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: 在层次结构中的指定点不能插入节点。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="插入一个元素节点">插入一个元素节点</h3>
+### 插入一个元素节点
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 var p = document.createElement("p");
 parent.append(p);
 
-console.log(parent.childNodes); // NodeList [ &lt;p&gt; ]
-</pre>
+console.log(parent.childNodes); // NodeList [ <p> ]
+```
 
-<h3 id="插入文本">插入文本</h3>
+### 插入文本
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 parent.append("Some text");
 
-console.log(parent.textContent); // "Some text"</pre>
+console.log(parent.textContent); // "Some text"
+```
 
-<h3 id="插入一个节点，同时插入一些文本">插入一个节点，同时插入一些文本</h3>
+### 插入一个节点，同时插入一些文本
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 var p = document.createElement("p");
 parent.append("Some text", p);
 
-console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
+console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
+```
 
-<h3 id="Element.append_方法在_with_语句中不生效"><code>Element.append()</code> 方法在 with 语句中不生效</h3>
+### `Element.append()` 方法在 with 语句中不生效
 
-<p>为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。</p>
+为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 
 with(parent) {
   append("foo");
 }
-// ReferenceError: append is not defined </pre>
+// ReferenceError: append is not defined
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>下面的 Polyfill 只支持到 IE 9  及以上：</p>
+下面的 Polyfill 只支持到 IE 9 及以上：
 
-<pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
+```js
+// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('append')) {
@@ -112,24 +105,21 @@ with(parent) {
       }
     });
   });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);</pre>
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat("api.Element.append")}}
 
+## 相关链接
 
-<p>{{Compat("api.Element.append")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("Element.prepend()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("ChildNode.after()")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element")}} and {{domxref("ChildNode")}}
+- {{domxref("Element.prepend()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("ChildNode.after()")}}
+- {{domxref("NodeList")}}

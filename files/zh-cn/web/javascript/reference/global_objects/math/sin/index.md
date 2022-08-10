@@ -3,53 +3,53 @@ title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.sin()</strong></code> 函数返回一个数值的正弦值。</p>
+**`Math.sin()`** 函数返回一个数值的正弦值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Math.sin(<em>x</em>)</pre>
+```plain
+Math.sin(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一个数值（以弧度为单位）。</dd>
-</dl>
+- `x`
+  - : 一个数值（以弧度为单位）。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>sin</code> 方法返回一个 -1 到 1 之间的数值，表示给定角度（单位：弧度）的正弦值。</p>
+`sin` 方法返回一个 -1 到 1 之间的数值，表示给定角度（单位：弧度）的正弦值。
 
-<p>由于 <code>sin</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.sin()</code>，而不是作为你创建的 <code>Math</code> 实例的方法。</p>
+由于 `sin` 是 `Math` 的静态方法，所以应该像这样使用：`Math.sin()`，而不是作为你创建的 `Math` 实例的方法。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_Math.sin">例子：使用 <code>Math.sin</code></h3>
+### 例子：使用 `Math.sin`
 
-<pre class="brush:js">Math.sin(0);           // 0
+```js
+Math.sin(0);           // 0
 Math.sin(1);           // 0.8414709848078965
 
-Math.sin(Math.PI / 2); // 1</pre>
+Math.sin(Math.PI / 2); // 1
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.tan()")}}

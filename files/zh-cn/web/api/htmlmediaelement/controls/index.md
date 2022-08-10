@@ -3,35 +3,36 @@ title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
 translation_of: Web/API/HTMLMediaElement/controls
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.controls</code></strong> 这个负责控制 html 中的<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controls">controls</a></code>HTML 属性，它负责控制播放的媒体 (视频或音频) 的控制条是否显示。.</p>
+**`HTMLMediaElement.controls`** 这个负责控制 html 中的[`controls`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controls)HTML 属性，它负责控制播放的媒体 (视频或音频) 的控制条是否显示。.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>ctrls</em> = <em>video</em>.controls;
-<em>audio</em>.controls = true;</pre>
+```plain
+var ctrls = video.controls;
+audio.controls = true;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>类型 {{domxref("Boolean")}}. 是否成功</p>
+类型 {{domxref("Boolean")}}. 是否成功
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 obj.controls = true;
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.HTMLMediaElement.controls")}}
 
-<h2 id="See_Also">产考文档</h2>
+## 产考文档
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

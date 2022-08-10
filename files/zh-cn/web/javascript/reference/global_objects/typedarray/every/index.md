@@ -3,76 +3,78 @@ title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>every()</strong></code> 方法测试类型化数组的所有元素是否都能够通过由提供函数实现的测试。这个方法的算法与 {{jsxref("Array.prototype.every()")}}相同。 <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+**`every()`** 方法测试类型化数组的所有元素是否都能够通过由提供函数实现的测试。这个方法的算法与 {{jsxref("Array.prototype.every()")}}相同。 _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.<code>every(<var>callback</var>[, <var>thisArg</var>])</code></code></pre>
+```plain
+typedarray.every(callback[, thisArg])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>用于测试每个元素的函数，接受三个参数：
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>要处理的类型化数组的当前元素。</dd>
-  <dt><code>index</code></dt>
-  <dd>要处理的当前元素在类型化数组中的下标</dd>
-  <dt><code>array</code></dt>
-  <dd>every 在其上调用的类型化数组</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可选，执行 <code>callback </code>时的 <code>this</code> 值。</dd>
-</dl>
+- `callback`
 
-<h3 id="返回值">返回值</h3>
+  - : 用于测试每个元素的函数，接受三个参数：
 
-<p>如果函数对数组每个元素返回 {{Glossary("truthy")}} ，则为<code><strong>true</strong></code>，否则为 <code><strong>false</strong></code>。</p>
+    - `currentValue`
+      - : 要处理的类型化数组的当前元素。
+    - `index`
+      - : 要处理的当前元素在类型化数组中的下标
+    - `array`
+      - : every 在其上调用的类型化数组
 
-<h2 id="描述">描述</h2>
+- `thisArg`
+  - : 可选，执行 `callback `时的 `this` 值。
 
-<p><code>every</code> 方法为类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>false</em>（表示可转换为布尔值 false 的值）的元素。如果发现了一个这样的元素，<code>every</code> 方法将会立即返回 <code>false</code>。否则，<code>callback</code> 为每一个元素返回 <code>true</code>，<code>every</code> 就会返回 <code>true</code>。<code>callback</code> 只会为那些已经被赋值的索引调用。不会为那些被删除或从来没被赋值的索引调用。</p>
+### 返回值
 
-<p><code>callback</code> 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。</p>
+如果函数对数组每个元素返回 {{Glossary("truthy")}} ，则为**`true`**，否则为 **`false`**。
 
-<p>如果将<code>thisArg</code>参数提供给<code>every</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
+## 描述
 
-<p><code>every</code> 不修改在其上调用的类型化数组。</p>
+`every` 方法为类型化数组中的每个元素执行一次 `callback` 函数，直到它找到一个使 `callback` 返回 _false_（表示可转换为布尔值 false 的值）的元素。如果发现了一个这样的元素，`every` 方法将会立即返回 `false`。否则，`callback` 为每一个元素返回 `true`，`every` 就会返回 `true`。`callback` 只会为那些已经被赋值的索引调用。不会为那些被删除或从来没被赋值的索引调用。
 
-<h2 id="示例">示例</h2>
+`callback` 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。
 
-<h3 id="测试类型化数组所有元素的大小">测试类型化数组所有元素的大小</h3>
+如果将`thisArg`参数提供给`every`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
-<p>下面的示例测试了类型化数组所有元素是否大于 10。</p>
+`every` 不修改在其上调用的类型化数组。
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+## 示例
+
+### 测试类型化数组所有元素的大小
+
+下面的示例测试了类型化数组所有元素是否大于 10。
+
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 new Uint8Array([12, 5, 8, 130, 44]).every(isBigEnough);   // false
-new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true</pre>
+new Uint8Array([12, 54, 18, 130, 44]).every(isBigEnough); // true
+```
 
-<h3 id="使用箭头函数测试类型化数组的元素">使用箭头函数测试类型化数组的元素</h3>
+### 使用箭头函数测试类型化数组的元素
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>为相同测试提供了更短的语法。</p>
+[箭头函数](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)为相同测试提供了更短的语法。
 
-<pre class="brush: js">new Uint8Array([12, 5, 8, 130, 44]).every(elem =&gt; elem &gt;= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem =&gt; elem &gt;= 10); // true</pre>
+```js
+new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.every()")}}

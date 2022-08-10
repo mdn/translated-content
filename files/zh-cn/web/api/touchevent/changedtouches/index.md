@@ -3,32 +3,29 @@ title: TouchEvent.changedTouches
 slug: Web/API/TouchEvent/changedTouches
 translation_of: Web/API/TouchEvent/changedTouches
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>这个 {{ domxref("TouchList") }} 对象列出了和这个触摸事件对应的 {{ domxref("Touch") }} 对象。</p>
+这个 {{ domxref("TouchList") }} 对象列出了和这个触摸事件对应的 {{ domxref("Touch") }} 对象。
 
-<ul>
- <li>对于 <code>touchstart</code> 事件，这个 {{ domxref("TouchList") }} 对象列出在此次事件中新增加的触点。</li>
- <li>对于 <code>touchmove 事件，列出和上一次事件相比较，发生了变化的触点。</code></li>
- <li>对于 touchend 事件，<code><strong>changedTouches</strong></code> 是已经从触摸面的离开的触点的集合（也就是说，手指已经离开了屏幕/触摸面）。</li>
-</ul>
+- 对于 `touchstart` 事件，这个 {{ domxref("TouchList") }} 对象列出在此次事件中新增加的触点。
+- 对于 `touchmove 事件，列出和上一次事件相比较，发生了变化的触点。`
+- 对于 touchend 事件，**`changedTouches`** 是已经从触摸面的离开的触点的集合（也就是说，手指已经离开了屏幕/触摸面）。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">var <em>touches</em> = <em>touchEvent</em>.changedTouches;
-</pre>
+```plain
+var touches = touchEvent.changedTouches;
+```
 
-<p>这是一个只读属性。</p>
+这是一个只读属性。
 
-<h3 id="Return_Value">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>touches</code></dt>
- <dd>列出对应这个触摸事件的 {{ domxref("Touch") }} 对象的 {{ domxref("TouchList") }} 对象。</dd>
-</dl>
+- `touches`
+  - : 列出对应这个触摸事件的 {{ domxref("Touch") }} 对象的 {{ domxref("TouchList") }} 对象。
 
-<h3 id="Specification">标准定义</h3>
+### 标准定义
 
-<p><a href="http://www.w3.org/TR/touch-events/">Touch Events Specification</a></p>
+[Touch Events Specification](http://www.w3.org/TR/touch-events/)

@@ -5,30 +5,28 @@ title: >-
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="原因">原因</h2>
+## 原因
 
-<pre class="syntaxbox">在 CORS 中，Credential 不接受 http 响应首部中的‘Access-Control-Allow-Origin’设置为通配符‘*’</pre>
+```plain
+在 CORS 中，Credential 不接受 http 响应首部中的‘Access-Control-Allow-Origin’设置为通配符‘*’
+```
 
-<h2 id="出了什么问题？">出了什么问题？</h2>
+## 出了什么问题？
 
-<p>{{Glossary("CORS")}} 请求发出时，已经设定了 credentials，但服务端配置了 http 响应首部 {{HTTPHeader("Access-Control-Allow-Origin")}} 的值为通配符 (<code>"*"</code>) ，而这与使用 credentials 相悖。</p>
+{{Glossary("CORS")}} 请求发出时，已经设定了 credentials，但服务端配置了 http 响应首部 {{HTTPHeader("Access-Control-Allow-Origin")}} 的值为通配符 (`"*"`) ，而这与使用 credentials 相悖。
 
-<p>要在客户端改正这个问题，只需要确保发出 CORS 请求时将 credential 设置为 false。</p>
+要在客户端改正这个问题，只需要确保发出 CORS 请求时将 credential 设置为 false。
 
-<ul>
- <li>如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 <code>true。</code></li>
- <li>如果使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, 确保 {{domxref("EventSource.withCredentials")}} 的值为 <code>false</code> (false 为默认值)。</li>
- <li>如果使用 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>，确保 {{domxref("Request.credentials")}} 的值为 <code>"omit"</code>.</li>
-</ul>
+- 如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 `true。`
+- 如果使用 [Server-sent events](/en-US/docs/Web/API/Server-sent_events), 确保 {{domxref("EventSource.withCredentials")}} 的值为 `false` (false 为默认值)。
+- 如果使用 [Fetch API](/en-US/docs/Web/API/Fetch_API)，确保 {{domxref("Request.credentials")}} 的值为 `"omit"`.
 
-<p>如果还不成功，则需要修改服务端，可能需要修改 <code>Access-Control-Allow-Origin</code> 的值，来为客户端所能够加载资源的源予以授权。</p>
+如果还不成功，则需要修改服务端，可能需要修改 `Access-Control-Allow-Origin` 的值，来为客户端所能够加载资源的源予以授权。
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
- <li>术语: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
-</ul>
+- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- 术语: {{Glossary("CORS")}}
+- [CORS introduction](/en-US/docs/Web/HTTP/CORS)

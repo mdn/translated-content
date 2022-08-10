@@ -3,31 +3,29 @@ title: RTCPeerConnection.removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 translation_of: Web/API/RTCPeerConnection/removeStream
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><code><strong>RTCPeerConnection.removeStream()</strong></code> 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。</p>
+**`RTCPeerConnection.removeStream()`** 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。
 
-<p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 <code>"closed"</code> 时，将抛出<code>InvalidStateError</code> 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 <code>"stable"</code> 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。</p>
+当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 `"closed"` 时，将抛出`InvalidStateError` 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 `"stable"` 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>pc</em>.removeStream(<em>mediaStream</em>);
-</code></pre>
+```plain
+pc.removeStream(mediaStream);
+```
 
-<p>
- <i>此方法没有返回值。</i>
-</p>
+_此方法没有返回值。_
 
-<h3 id="Example">参数</h3>
+### 参数
 
-<dl>
- <dt><em>mediaStream</em></dt>
- <dd>是 {{domxref("MediaStream")}} 类型的表示要移除的媒体流</dd>
-</dl>
+- _mediaStream_
+  - : 是 {{domxref("MediaStream")}} 类型的表示要移除的媒体流
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush: js">var pc, videoStream;
+```js
+var pc, videoStream;
 navigator.getUserMedia({video: true}, function(stream) {
   pc = new RTCPeerConnection();
   videoStream = stream;
@@ -36,14 +34,13 @@ navigator.getUserMedia({video: true}, function(stream) {
 document.getElementById("closeButton").addEventListener("click", function(event) {
   pc.removeStream(videoStream);
   pc.close();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="扩展阅读">扩展阅读</h2>
+## 扩展阅读
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)

@@ -10,34 +10,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.getOwnPropertyNames()</code></strong>方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。</p>
+**`Object.getOwnPropertyNames()`**方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Object.getOwnPropertyNames(<em>obj</em>)</pre>
+```plain
+Object.getOwnPropertyNames(obj)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>一个对象，其自身的可枚举和不可枚举属性的名称被返回。</dd>
-</dl>
+- `obj`
+  - : 一个对象，其自身的可枚举和不可枚举属性的名称被返回。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>在给定对象上找到的自身属性对应的字符串数组。</p>
+在给定对象上找到的自身属性对应的字符串数组。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>Object.getOwnPropertyNames()</code> 返回一个数组，该数组对元素是 <code>obj</code>自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。</p>
+`Object.getOwnPropertyNames()` 返回一个数组，该数组对元素是 `obj`自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Object.getOwnPropertyNames()">使用 <code>Object.getOwnPropertyNames()</code></h3>
+### 使用 `Object.getOwnPropertyNames()`
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // ["0", "1", "2", "length"]
 
 // 类数组对象
@@ -46,12 +47,12 @@ console.log(Object.getOwnPropertyNames(obj).sort()); // ["0", "1", "2"]
 
 // 使用 Array.forEach 输出属性名和属性值
 Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
-  console.log(val + " -&gt; " + obj[val]);
+  console.log(val + " -> " + obj[val]);
 });
 // 输出
-// 0 -&gt; a
-// 1 -&gt; b
-// 2 -&gt; c
+// 0 -> a
+// 1 -> b
+// 2 -> c
 
 //不可枚举属性
 var my_obj = Object.create({}, {
@@ -63,13 +64,14 @@ var my_obj = Object.create({}, {
 my_obj.foo = 1;
 
 console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
-</pre>
+```
 
-<p>如果你只要获取到可枚举属性，查看{{jsxref("Object.keys")}}或用{{jsxref("Statements/for...in", "for...in")}}循环（还会获取到原型链上的可枚举属性，不过可以使用{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}方法过滤掉）。</p>
+如果你只要获取到可枚举属性，查看{{jsxref("Object.keys")}}或用{{jsxref("Statements/for...in", "for...in")}}循环（还会获取到原型链上的可枚举属性，不过可以使用{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}方法过滤掉）。
 
-<p>下面的例子演示了该方法不会获取到原型链上的属性：</p>
+下面的例子演示了该方法不会获取到原型链上的属性：
 
-<pre class="brush: js">function ParentClass() {}
+```js
+function ParentClass() {}
 ParentClass.prototype.inheritedMethod = function() {};
 
 function ChildClass() {
@@ -85,13 +87,14 @@ console.log(
     new ChildClass()  // ["prop", "method"]
   )
 );
-</pre>
+```
 
-<h3 id="只获取不可枚举的属性">只获取不可枚举的属性</h3>
+### 只获取不可枚举的属性
 
-<p>下面的例子使用了 {{jsxref("Array.prototype.filter()")}} 方法，从所有的属性名数组（使用<code>Object.getOwnPropertyNames()</code>方法获得）中去除可枚举的属性（使用{{jsxref("Object.keys()")}}方法获得），剩余的属性便是不可枚举的属性了：</p>
+下面的例子使用了 {{jsxref("Array.prototype.filter()")}} 方法，从所有的属性名数组（使用`Object.getOwnPropertyNames()`方法获得）中去除可枚举的属性（使用{{jsxref("Object.keys()")}}方法获得），剩余的属性便是不可枚举的属性了：
 
-<pre class="brush: js">var target = myObject;
+```js
+var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
@@ -105,40 +108,42 @@ var nonenum_only = enum_and_nonenum.filter(function(key) {
     }
 });
 
-console.log(nonenum_only);</pre>
+console.log(nonenum_only);
+```
 
-<pre>注：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Array.filter(filt_func) 方法</a>创建一个新数组，其包含通过所提供函数实现的测试的所有元素。</pre>
+```plain
+注：Array.filter(filt_func) 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。
+```
 
-<h2 id="Notes">提示</h2>
+## 提示
 
-<p>在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 {{jsxref("TypeError")}}  异常。在 ES2015 中，非对象参数被强制转换为对象 <strong>。</strong></p>
+在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 {{jsxref("TypeError")}} 异常。在 ES2015 中，非对象参数被强制转换为对象 **。**
 
-<pre class="brush: js">Object.getOwnPropertyNames('foo');
+```js
+Object.getOwnPropertyNames('foo');
 // TypeError: "foo" is not an object (ES5 code)
 
 Object.getOwnPropertyNames('foo');
 // ['length', '0', '1', '2']  (ES2015 code)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
+## Firefox-specific notes
 
-<p>Firefox 28 {{geckoRelease("28")}}之前，<code>Object.getOwnPropertyNames</code> 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。</p>
+Firefox 28 {{geckoRelease("28")}}之前，`Object.getOwnPropertyNames` 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable")}}</li>
- <li>{{jsxref("Object.create")}}</li>
- <li>{{jsxref("Object.keys")}}</li>
- <li>{{jsxref("Array.forEach()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.hasOwnProperty")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable")}}
+- {{jsxref("Object.create")}}
+- {{jsxref("Object.keys")}}
+- {{jsxref("Array.forEach()")}}

@@ -7,38 +7,36 @@ tags:
   - Method
   - Element
   - Reference
-browser-compat: api.Element.replaceWith
 translation_of: Web/API/Element/replaceWith
 original_slug: Web/API/ChildNode/replaceWith
+browser-compat: api.Element.replaceWith
 ---
-<div>{{APIRef("DOM")}} {{SeeCompatTable}}</div>
+{{APIRef("DOM")}} {{SeeCompatTable}}
 
-<p><code><strong>ChildNode</strong></code><strong><code>.replaceWith()</code></strong> 的方法用一套 {{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象，替换了该节点父节点下的子节点 。{{domxref("DOMString")}} 对象被当做等效的{{domxref("Text")}} 节点插入。</p>
+**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象，替换了该节点父节点下的子节点 。{{domxref("DOMString")}} 对象被当做等效的{{domxref("Text")}} 节点插入。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">[Throws, Unscopable]
+```plain
+[Throws, Unscopable]
 void ChildNode.replaceWith((Node or DOMString)... nodes);
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>节点</code></dt>
- <dd>一系列用来替换的{{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象。</dd>
-</dl>
+- `节点`
+  - : 一系列用来替换的{{domxref("Node")}} 对象或者 {{domxref("DOMString")}} 对象。
 
-<h3 id="例外">例外</h3>
+### 例外
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}: 无法在层次结构中的指定点插入节点。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: 无法在层次结构中的指定点插入节点。
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<h3 id="Using_replaceWith">Using <code>replaceWith()</code></h3>
+### Using `replaceWith()`
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 var child = document.createElement("p");
 parent.appendChild(child);
 var span = document.createElement("span");
@@ -46,23 +44,26 @@ var span = document.createElement("span");
 child.replaceWith(span);
 
 console.log(parent.outerHTML);
-// "&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
-</pre>
+// "<div><span></span></div>"
+```
 
-<h3 id="ChildNode.replaceWith_is_unscopable"><code>ChildNode.replaceWith()</code> is unscopable</h3>
+### `ChildNode.replaceWith()` is unscopable
 
-<p><code>replaceWith()</code>的方法并没有作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。</p>
+`replaceWith()`的方法并没有作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
 
-<pre class="brush: js">with(node) {
+```js
+with(node) {
   replaceWith("foo");
 }
-// ReferenceError: replaceWith is not defined </pre>
+// ReferenceError: replaceWith is not defined
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>你可以在 IE9 及更高级的浏览器中使用下面的代码向上兼容<code>replaceWith()</code>的方法：</p>
+你可以在 IE9 及更高级的浏览器中使用下面的代码向上兼容`replaceWith()`的方法：
 
-<pre class="brush: js">(function (arr) {
+```js
+(function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('replaceWith')) {
       return;
@@ -84,20 +85,19 @@ console.log(parent.outerHTML);
       }
     });
   });
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);</pre>
+})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{domxref("ChildNode")}} 和 {{domxref("ParentNode")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("ChildNode")}} 和 {{domxref("ParentNode")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("NodeList")}}

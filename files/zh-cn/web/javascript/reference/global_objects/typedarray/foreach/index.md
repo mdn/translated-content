@@ -3,61 +3,60 @@ title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>forEach()</strong></code>方法对类型化数组的每个元素调用提供的函数。 这个方法的算法和 {{jsxref("Array.prototype.forEach()")}}<em>相同。</em> <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+**`forEach()`**方法对类型化数组的每个元素调用提供的函数。 这个方法的算法和 {{jsxref("Array.prototype.forEach()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+```plain
+typedarray.forEach(callback[, thisArg])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>产生新的类型化数组的元素的函数，接受三个函数：
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>类型化数组中要处理的当前元素</dd>
-  <dt><code>index</code></dt>
-  <dd>类型化数组中要处理的当前元素的下标</dd>
-  <dt><code>array</code></dt>
-  <dd><code>forEach()</code>在其上调用的类型化数组</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可选，执行<code>callback</code>时作为<code>this</code>的值。</dd>
-</dl>
+- `callback`
 
-<h3 id="返回值">返回值</h3>
+  - : 产生新的类型化数组的元素的函数，接受三个函数：
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : 类型化数组中要处理的当前元素
+    - `index`
+      - : 类型化数组中要处理的当前元素的下标
+    - `array`
+      - : `forEach()`在其上调用的类型化数组
 
-<h2 id="描述">描述</h2>
+- `thisArg`
+  - : 可选，执行`callback`时作为`this`的值。
 
-<p><code>forEach</code>方法对类型化数组中的元素按升序调用提供的 <code>callback</code>函数。 它不会对删除或者省略的下标调用，但是会对存在并且值为{{jsxref("undefined")}}的元素调用。</p>
+### 返回值
 
-<p><code>callback</code> 以 <strong>三个参数</strong>调用：</p>
+{{jsxref("undefined")}}.
 
-<ul>
- <li>the <strong>元素的值</strong></li>
- <li>the <strong>元素下标</strong></li>
- <li>the <strong>被遍历的类型化数组</strong></li>
-</ul>
+## 描述
 
-<p>如果将<code>thisArg</code>参数提供给<code>forEach</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
+`forEach`方法对类型化数组中的元素按升序调用提供的 `callback`函数。 它不会对删除或者省略的下标调用，但是会对存在并且值为{{jsxref("undefined")}}的元素调用。
 
-<p>由 <code>forEach</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>forEach</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>forEach</code> 访问它们时候的值。已删除的元素不会被访问。</p>
+`callback` 以 **三个参数**调用：
 
-<p><code>forEach()</code>对每个数组元素执行一次<code>callback</code> 函数；不像 {{jsxref("TypedArray.prototype.every()", "every()")}} 和{{jsxref("TypedArray.prototype.some()", "some()")}}，它始终返回 {{jsxref("undefined")}}。</p>
+- the **元素的值**
+- the **元素下标**
+- the **被遍历的类型化数组**
 
-<h2 id="示例">示例</h2>
+如果将`thisArg`参数提供给`forEach`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
-<h3 id="记录类型化数组的内容">记录类型化数组的内容</h3>
+由 `forEach`处理的元素范围在`callback`调用之前就确定了。 在 `forEach`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`forEach` 访问它们时候的值。已删除的元素不会被访问。
 
-<p>下面的代码为数组中的每个元素记录一行日志：</p>
+`forEach()`对每个数组元素执行一次`callback` 函数；不像 {{jsxref("TypedArray.prototype.every()", "every()")}} 和{{jsxref("TypedArray.prototype.some()", "some()")}}，它始终返回 {{jsxref("undefined")}}。
 
-<pre class="brush:js">function logArrayElements(element, index, array) {
+## 示例
+
+### 记录类型化数组的内容
+
+下面的代码为数组中的每个元素记录一行日志：
+
+```js
+function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -67,21 +66,19 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 // a[1] = 1
 // a[2] = 2
 // a[3] = 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.map()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.map()")}}
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.forEach()")}}

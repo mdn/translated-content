@@ -8,48 +8,48 @@ tags:
   - 严格模式
 translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
+```plain
+Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
 Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>仅在 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 下出现 {{jsxref("SyntaxError")}} 警告。</p>
+仅在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下出现 {{jsxref("SyntaxError")}} 警告。
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>十进制字面量可以以零作为开始 (<code>0</code>)，后面跟着其他十进制数，但是假如前导 0 之后的所有数字都小于 8，那么这个数就会被解析为一个八进制的数。因为 08 和 09 不是这样的，所以 JavaScript 会发出警告。</p>
+十进制字面量可以以零作为开始 (`0`)，后面跟着其他十进制数，但是假如前导 0 之后的所有数字都小于 8，那么这个数就会被解析为一个八进制的数。因为 08 和 09 不是这样的，所以 JavaScript 会发出警告。
 
-<p>请注意，不推荐使用八进制字面值和八进制转义序列，并会产生另外的弃用警告。 在 ECMAScript 6 和更高版本里，语法使用前导零后跟小写或大写拉丁字母“O”（0o 或 0O）。更多信息请查看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal">lexical grammar</a>。</p>
+请注意，不推荐使用八进制字面值和八进制转义序列，并会产生另外的弃用警告。 在 ECMAScript 6 和更高版本里，语法使用前导零后跟小写或大写拉丁字母“O”（0o 或 0O）。更多信息请查看 [lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)。
 
-<div class="note">
-<p><strong>备注：</strong>现在仅 <strong>firefox</strong> 会产生此错误。</p>
-</div>
+> **备注：**现在仅 **firefox** 会产生此错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="无效的八进制数">无效的八进制数</h3>
+### 无效的八进制数
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 08;
 09;
 // SyntaxError: 08 is not a legal ECMA-262 octal constant
-// SyntaxError: octal literals and octal escape sequences are deprecated</pre>
+// SyntaxError: octal literals and octal escape sequences are deprecated
+```
 
-<h3 id="有效的八进制数">有效的八进制数</h3>
+### 有效的八进制数
 
-<p>Use a leading zero followed by the letter "o";</p>
+Use a leading zero followed by the letter "o";
 
-<pre class="brush: js example-good">0O755;
+```js example-good
+0O755;
 0o644;
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal">Lexical grammar</a></li>
-</ul>
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)

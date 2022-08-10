@@ -3,27 +3,29 @@ title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>flags</code></strong>属性返回一个字符串，由当前正则表达式对象的标志组成。</p>
+**`flags`**属性返回一个字符串，由当前正则表达式对象的标志组成。
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+{{js_property_attributes(0, 0, 1)}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>flags</code>属性中的标志以字典序排序（从左到右，即<code>"gimuy"</code>）。</p>
+`flags`属性中的标志以字典序排序（从左到右，即`"gimuy"`）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用flags">使用<code>flags</code></h3>
+### 使用`flags`
 
-<pre class="brush: js">/foo/ig.flags;   // "gi"
+```js
+/foo/ig.flags;   // "gi"
 /bar/myu.flags;  // "muy"
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
+```js
+if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {
@@ -31,18 +33,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
     }
   });
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.source")}}

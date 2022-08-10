@@ -3,64 +3,65 @@ title: TypedArray.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>如果某个元素满足所提供的测试函数，<code><strong>findIndex()</strong></code>方法返回类型化数组中的 <strong>下标</strong>。否则返回 -1。 <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+如果某个元素满足所提供的测试函数，**`findIndex()`**方法返回类型化数组中的 **下标**。否则返回 -1。 _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<p>同时请参见{{jsxref("TypedArray.findIndex", "find()")}}方法，它返回了类型化数组中所发现元素的 <strong>值</strong> ，而不是它的下标。</p>
+同时请参见{{jsxref("TypedArray.findIndex", "find()")}}方法，它返回了类型化数组中所发现元素的 **值** ，而不是它的下标。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+```plain
+typedarray.findIndex(callback[, thisArg])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>用于在类型化数组中的每个元素上执行的函数，接受三个参数：
- <dl>
-  <dt><code>element</code></dt>
-  <dd>要处理的类型化数组的当前元素。</dd>
-  <dt><code>index</code></dt>
-  <dd>要处理的当前元素在类型化数组中的下标</dd>
-  <dt><code>array</code></dt>
-  <dd><code>find</code> 在其上调用的类型化数组</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可选，执行<code>callback</code>时的<code>this</code>值。</dd>
-</dl>
+- `callback`
 
-<h3 id="返回值">返回值</h3>
+  - : 用于在类型化数组中的每个元素上执行的函数，接受三个参数：
 
-<p>如果元素通过了测试，则为数组下标，否则为 -1。</p>
+    - `element`
+      - : 要处理的类型化数组的当前元素。
+    - `index`
+      - : 要处理的当前元素在类型化数组中的下标
+    - `array`
+      - : `find` 在其上调用的类型化数组
 
-<h2 id="描述">描述</h2>
+- `thisArg`
+  - : 可选，执行`callback`时的`this`值。
 
-<p><code>findIndex</code> 方法对类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>true</em>的元素。如果发现了一个这样的元素，<code>find</code> 方法将会立即返回该元素的下标。否则，<code>findIndex</code> 方法会返回 -1。<code>callback</code> 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。</p>
+### 返回值
 
-<p><code>callback</code> 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。</p>
+如果元素通过了测试，则为数组下标，否则为 -1。
 
-<p>如果将<code>thisArg</code>参数提供给<code>findIndex</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。如果没有提供，会使用<code>undefined</code>。</p>
+## 描述
 
-<p><code>findIndex</code> 不修改在其上调用的类型化数组。</p>
+`findIndex` 方法对类型化数组中的每个元素执行一次 `callback` 函数，直到它找到一个使 `callback` 返回 *true*的元素。如果发现了一个这样的元素，`find` 方法将会立即返回该元素的下标。否则，`findIndex` 方法会返回 -1。`callback` 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。
 
-<p>由 <code>findIndex</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>findIndex</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>findIndex</code> 访问它们时候的值。已删除的元素不会被访问。</p>
+`callback` 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。
 
-<h2 id="示例">示例</h2>
+如果将`thisArg`参数提供给`findIndex`，它会在调用时传递给`callback`，作为它的 `this`值。如果没有提供，会使用`undefined`。
 
-<h3 id="在类型化数组中寻找质数的下标">在类型化数组中寻找质数的下标</h3>
+`findIndex` 不修改在其上调用的类型化数组。
 
-<p>下面的示例在类型化数组中寻找质数元素的下标（如果没有质数则返回 -1）.</p>
+由 `findIndex`处理的元素范围在`callback`调用之前就确定了。 在 `findIndex`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`findIndex` 访问它们时候的值。已删除的元素不会被访问。
 
-<pre class="brush: js">function isPrime(element, index, array) {
+## 示例
+
+### 在类型化数组中寻找质数的下标
+
+下面的示例在类型化数组中寻找质数元素的下标（如果没有质数则返回 -1）.
+
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 var uint8 = new Uint8Array([4, 6, 8, 12]);
@@ -68,11 +69,12 @@ var uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(isPrime)); // -1，未发现
 console.log(uint16.findIndex(isPrime)); // 2
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
+```js
+TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
         'use strict';
         if (!this) {
           throw new TypeError('Array.prototype.some called on null or undefined');
@@ -104,19 +106,18 @@ console.log(uint16.findIndex(isPrime)); // 2
             }
         }
         return -1;
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}

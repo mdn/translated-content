@@ -6,35 +6,35 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>HTMLHyperlinkElementUtils<strong><code>.password</code></strong> property 属性是一个{{domxref("USVString")}} ，包含域名前面指定的密码。</p>
+HTMLHyperlinkElementUtils**`.password`** property 属性是一个{{domxref("USVString")}} ，包含域名前面指定的密码。
 
-<p>如果在没有首先设置<code><a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">用户名</a></code>属性的情况下设置，则会静默失败。</p>
+如果在没有首先设置[`用户名`](/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username)属性的情况下设置，则会静默失败。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.password;
-<em>object</em>.password = <em>string</em>;
-</pre>
+```plain
+string = object.password;
+object.password = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Let's &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"&gt; be in the document
+```js
+// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"> be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.password; // Returns:'flabada'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLAnchorElement.password")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

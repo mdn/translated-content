@@ -11,78 +11,87 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>toString()</strong></code> 方法返回一个表示该对象的字符串。</p>
+**`toString()`** 方法返回一个表示该对象的字符串。
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
+## 语法
 
+```plain
+obj.toString()
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><var>obj</var>.toString()</code></pre>
+一个表示该对象的字符串。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>一个表示该对象的字符串。</p>
+每个对象都有一个 `toString()` 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用。默认情况下，`toString()` 方法被每个 `Object` 对象继承。如果此方法在自定义对象中未被覆盖，`toString()` 返回 "\[object _type_]"，其中 `type` 是对象的类型。以下代码说明了这一点：
 
-<h2 id="描述">描述</h2>
-
-<p>每个对象都有一个 <code>toString()</code> 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用。默认情况下，<code>toString()</code> 方法被每个 <code>Object</code> 对象继承。如果此方法在自定义对象中未被覆盖，<code>toString()</code> 返回 "[object <em>type</em>]"，其中 <code>type</code> 是对象的类型。以下代码说明了这一点：</p>
-
-<pre class="brush: js">var o = new Object();
+```js
+var o = new Object();
 o.toString(); // 返回 [object Object]
-</pre>
+```
 
-<div class="note">
-<p><strong>备注：</strong>如 ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，<code>toString()</code> 调用 {{jsxref("null")}} 返回<code>[object <em>Null</em>]</code>，{{jsxref("undefined")}} 返回 <code>[object Undefined]</code>。请参阅下面的<a href="#使用_tostring()_检测对象类型">使用 <code>toString()</code> 检测对象类型</a>。</p>
-</div>
+> **备注：**如 ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，`toString()` 调用 {{jsxref("null")}} 返回`[object Null]`，{{jsxref("undefined")}} 返回 `[object Undefined]`。请参阅下面的[使用 `toString()` 检测对象类型](<#使用_tostring()_检测对象类型>)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="覆盖默认的_toString_方法">覆盖默认的 <code>toString</code> 方法</h3>
+### 覆盖默认的 `toString` 方法
 
-<p>可以自定义一个方法，来取代默认的 <code>toString()</code> 方法。该 <code>toString()</code> 方法不能传入参数，并且必须返回一个字符串。自定义的 <code>toString()</code> 方法可以是任何我们需要的值，但如果它附带有关对象的信息，它将变得非常有用。</p>
+可以自定义一个方法，来取代默认的 `toString()` 方法。该 `toString()` 方法不能传入参数，并且必须返回一个字符串。自定义的 `toString()` 方法可以是任何我们需要的值，但如果它附带有关对象的信息，它将变得非常有用。
 
-<p>以下代码定义了 <code>Dog</code> 对象类型，并创建了一个 <code>Dog</code> 类型的 <code>theDog</code> 对象：</p>
+以下代码定义了 `Dog` 对象类型，并创建了一个 `Dog` 类型的 `theDog` 对象：
 
-<pre class="brush: js">function Dog(name,breed,color,sex) {
+```js
+function Dog(name,breed,color,sex) {
   this.name = name;
   this.breed = breed;
   this.color = color;
   this.sex = sex;
 }
 
-var theDog = new Dog("Gabby", "Lab", "chocolate", "female");</pre>
+var theDog = new Dog("Gabby", "Lab", "chocolate", "female");
+```
 
-<p>如果当前的对象调用了 <code>toString()</code> 方法，它将会返回从 {{jsxref("Object")}}继承而来的 <code>toString()</code> 方法的返回默认值：</p>
+如果当前的对象调用了 `toString()` 方法，它将会返回从 {{jsxref("Object")}}继承而来的 `toString()` 方法的返回默认值：
 
-<pre class="brush: js"><code>theDog.toString(); // 返回 [object Object]</code></pre>
+```js
+theDog.toString(); // 返回 [object Object]
+```
 
-<p>下面的代码中定义了一个叫做 <code>dogToString()</code> 的方法来覆盖默认的 <code>toString()</code> 方法。这个方法生成一个 "<code>property = value;</code>" 形式的字符串，该字符串包含了当前对象的 name、breed、color 和 sex 的值。</p>
+下面的代码中定义了一个叫做 `dogToString()` 的方法来覆盖默认的 `toString()` 方法。这个方法生成一个 "`property = value;`" 形式的字符串，该字符串包含了当前对象的 name、breed、color 和 sex 的值。
 
-<pre class="brush: js">Dog.prototype.toString = function dogToString() {
+```js
+Dog.prototype.toString = function dogToString() {
  var ret = "Dog " + this.name + " is a " + this.sex + " " + this.color + " " + this.breed;
  return ret;
-}</pre>
+}
+```
 
-<p>也可以这样写</p>
+也可以这样写
 
-<pre class="brush: js">Dog.prototype.toString = function dogToString() {
+```js
+Dog.prototype.toString = function dogToString() {
   return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
 }
-</pre>
+```
 
-<p>使用上述代码，任何时候在字符串上下文中使用 <code>theDog.toString()</code> 时，JavaScript 都会自动调用 <code>dogToString()</code> 方法（<code>dogToString()</code> 可以是一个匿名函数），并且返回以下字符串：</p>
+使用上述代码，任何时候在字符串上下文中使用 `theDog.toString()` 时，JavaScript 都会自动调用 `dogToString()` 方法（`dogToString()` 可以是一个匿名函数），并且返回以下字符串：
 
-<pre class="brush: js"><code>"Dog Gabby is a female chocolate Lab"</code></pre>
+```js
+"Dog Gabby is a female chocolate Lab"
+```
 
-<h3 id="使用_toString()_检测对象类型">使用 <code>toString()</code> 检测对象类型</h3>
+### 使用 `toString()` 检测对象类型
 
-<p>可以通过 <code>toString()</code> 来获取每个对象的类型。为了每个对象都能通过 <code>Object.prototype.toString()</code> 来检测，需要以 <code>Function.prototype.call()</code> 或者 <code>Function.prototype.apply()</code> 的形式来调用，传递要检查的对象作为第一个参数，称为 <code>thisArg</code>。</p>
+可以通过 `toString()` 来获取每个对象的类型。为了每个对象都能通过 `Object.prototype.toString()` 来检测，需要以 `Function.prototype.call()` 或者 `Function.prototype.apply()` 的形式来调用，传递要检查的对象作为第一个参数，称为 `thisArg`。
 
-<pre class="brush: js">var toString = Object.prototype.toString;
+```js
+var toString = Object.prototype.toString;
 
 toString.call(new Date); // [object Date]
 toString.call(new String); // [object String]
@@ -91,21 +100,19 @@ toString.call(Math); // [object Math]
 //Since JavaScript 1.8.5
 toString.call(undefined); // [object Undefined]
 toString.call(null); // [object Null]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("Symbol.toPrimitive")}}

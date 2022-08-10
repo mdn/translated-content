@@ -10,34 +10,31 @@ tags:
   - Method
 translation_of: Web/API/IntersectionObserver/disconnect
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}{{domxref("IntersectionObserver")}} 的`disconnect()`方法终止对所有目标元素可见性变化的观察。
 
-<div> {{domxref("IntersectionObserver")}} 的<code>disconnect()</code>方法终止对所有目标元素可见性变化的观察。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```js
+intersectionObserver.disconnect();
+```
 
-<pre
-  class="brush: js"><em>intersectionObserver</em>.disconnect();</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+None.
 
-<p>None.</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+`undefined`.
 
-<p><code>undefined</code>.</p>
-
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性 </h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("IntersectionObserver.observe", "observe()")}}</li>
- <li>{{domxref("IntersectionObserver.unobserve", "unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.observe", "observe()")}}
+- {{domxref("IntersectionObserver.unobserve", "unobserve()")}}

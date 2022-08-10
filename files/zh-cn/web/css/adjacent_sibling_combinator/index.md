@@ -6,54 +6,57 @@ tags:
   - Selectors
 translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p><strong>相邻兄弟选择器</strong> (<code>+</code>) 介于两个选择器之间，当第二个元素<em>紧跟在</em>第一个元素之后，并且两个元素都是属于同一个父{{domxref("元素")}}的子元素，则第二个元素将被选中。</p>
+**相邻兄弟选择器** (`+`) 介于两个选择器之间，当第二个元素*紧跟在*第一个元素之后，并且两个元素都是属于同一个父{{domxref("元素")}}的子元素，则第二个元素将被选中。
 
-<pre class="brush: css no-line-numbers">/* 图片后面紧跟着的段落将被选中 */
+```css
+/* 图片后面紧跟着的段落将被选中 */
 img + p {
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">former_element + target_element { <em>style properties</em> }</pre>
+```plain
+former_element + target_element { style properties }
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li:first-of-type + li {
+```css
+li:first-of-type + li {
   color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two!&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<h3 id="结果">结果</h3>
-
+```html
 <ul>
- <li>One</li>
- <li>Two!</li>
- <li>Three</li>
+  <li>One</li>
+  <li>Two!</li>
+  <li>Three</li>
 </ul>
+```
 
-<h2 id="规范">规范</h2>
+### 结果
+
+- One
+- Two!
+- Three
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.adjacent_sibling")}}</p>
+{{Compat("css.selectors.adjacent_sibling")}}
 
-<h2 id="See_also">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/General_sibling_selectors">通用兄弟选择器</a></li>
-</ul>
+- [通用兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_selectors)

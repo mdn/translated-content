@@ -3,26 +3,26 @@ title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
 translation_of: Web/API/AnimationEvent/animationName
 ---
-<p>{{SeeCompatTable}}{{ apiref("Web Animations API") }}</p>
+{{SeeCompatTable}}{{ apiref("Web Animations API") }}
 
-<p>The <code><strong>AnimationEvent.animationName</strong></code> read-only property is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition.</p>
+The **`AnimationEvent.animationName`** read-only property is a {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>name</em> = <em>AnimationEvent</em>.animationName</pre>
+```plain
+name = AnimationEvent.animationName
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.AnimationEvent.animationName")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_animations">Using CSS animations</a></li>
- <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.</li>
- <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Using CSS animations](/en-US/docs/CSS/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- The {{domxref("AnimationEvent")}} interface it belongs to.

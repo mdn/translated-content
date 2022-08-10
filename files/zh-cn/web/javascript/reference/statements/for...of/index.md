@@ -8,35 +8,31 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>for...of</code>语句</strong>在<a href="/zh-CN/docs/Web/JavaScript/Guide/iterable">可迭代对象</a>（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a> 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句</p>
+**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
 
-<div>{{EmbedInteractiveExample("pages/js/statement-forof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">for (variable of iterable) {
-    //<em>statements</em>
+```plain
+for (variable of iterable) {
+    //statements
 }
-</pre>
+```
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>在每次迭代中，将不同属性的值分配给变量。</dd>
- <dt><code>iterable</code></dt>
- <dd>被迭代枚举其属性的对象。</dd>
-</dl>
+- `variable`
+  - : 在每次迭代中，将不同属性的值分配给变量。
+- `iterable`
+  - : 被迭代枚举其属性的对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="迭代jsxrefArray">迭代{{jsxref("Array")}}</h3>
+### 迭代{{jsxref("Array")}}
 
-<pre class="brush: js">let iterable = [10, 20, 30];
+```js
+let iterable = [10, 20, 30];
 
 for (let value of iterable) {
     value += 1;
@@ -45,44 +41,50 @@ for (let value of iterable) {
 // 11
 // 21
 // 31
-</pre>
+```
 
-<p>如果你不想修改语句块中的变量 , 也可以使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a>代替<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>。</p>
+如果你不想修改语句块中的变量 , 也可以使用[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)。
 
-<pre class="brush: js">let iterable = [10, 20, 30];
+```js
+let iterable = [10, 20, 30];
 
 for (const value of iterable) {
   console.log(value);
 }
 // 10
 // 20
-// 30</pre>
+// 30
+```
 
-<h3 id="迭代jsxrefString">迭代{{jsxref("String")}}</h3>
+### 迭代{{jsxref("String")}}
 
-<pre class="brush: js">let iterable = "boo";
+```js
+let iterable = "boo";
 
 for (let value of iterable) {
   console.log(value);
 }
 // "b"
 // "o"
-// "o"</pre>
+// "o"
+```
 
-<h3 id="迭代_jsxrefTypedArray">迭代 {{jsxref("TypedArray")}}</h3>
+### 迭代 {{jsxref("TypedArray")}}
 
-<pre class="brush: js">let iterable = new Uint8Array([0x00, 0xff]);
+```js
+let iterable = new Uint8Array([0x00, 0xff]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 0
 // 255
-</pre>
+```
 
-<h3 id="迭代jsxrefMap">迭代{{jsxref("Map")}}</h3>
+### 迭代{{jsxref("Map")}}
 
-<pre class="brush: js">let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+```js
+let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -97,22 +99,25 @@ for (let [key, value] of iterable) {
 // 1
 // 2
 // 3
-</pre>
+```
 
-<h3 id="迭代_jsxrefSet">迭代 {{jsxref("Set")}}</h3>
+### 迭代 {{jsxref("Set")}}
 
-<pre class="brush: js">let iterable = new Set([1, 1, 2, 2, 3, 3]);
+```js
+let iterable = new Set([1, 1, 2, 2, 3, 3]);
 
 for (let value of iterable) {
   console.log(value);
 }
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="迭代_jsxrefarguments_对象">迭代 {{jsxref("arguments")}} 对象</h3>
+### 迭代 {{jsxref("arguments")}} 对象
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   for (let argument of arguments) {
     console.log(argument);
   }
@@ -120,25 +125,28 @@ for (let value of iterable) {
 
 // 1
 // 2
-// 3</pre>
+// 3
+```
 
-<h3 id="迭代_DOM_集合">迭代 DOM 集合</h3>
+### 迭代 DOM 集合
 
-<p>迭代 DOM 元素集合，比如一个{{domxref("NodeList")}}对象：下面的例子演示给每一个 article 标签内的 p 标签添加一个 "<code>read</code>" 类。</p>
+迭代 DOM 元素集合，比如一个{{domxref("NodeList")}}对象：下面的例子演示给每一个 article 标签内的 p 标签添加一个 "`read`" 类。
 
-<pre class="brush:js">//注意：这只能在实现了 NodeList.prototype[Symbol.iterator] 的平台上运行
-let articleParagraphs = document.querySelectorAll("article &gt; p");
+```js
+//注意：这只能在实现了 NodeList.prototype[Symbol.iterator] 的平台上运行
+let articleParagraphs = document.querySelectorAll("article > p");
 
 for (let paragraph of articleParagraphs) {
   paragraph.classList.add("read");
 }
-</pre>
+```
 
-<h3 id="关闭迭代器">关闭迭代器</h3>
+### 关闭迭代器
 
-<p>对于<code>for...of</code>的循环，可以由 <code>break</code>, <code>throw</code> 或 <code>return</code> 终止。在这些情况下，迭代器关闭。</p>
+对于`for...of`的循环，可以由 `break`, `throw` 或 `return` 终止。在这些情况下，迭代器关闭。
 
-<pre class="brush: js">function* foo(){
+```js
+function* foo(){
   yield 1;
   yield 2;
   yield 3;
@@ -148,13 +156,14 @@ for (let o of foo()) {
   console.log(o);
   break; // closes iterator, triggers return
 }
-</pre>
+```
 
-<h3 id="迭代生成器">迭代生成器</h3>
+### 迭代生成器
 
-<p>你还可以迭代一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">生成器</a>：</p>
+你还可以迭代一个[生成器](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)：
 
-<pre class="brush:js">function* fibonacci() { // 一个生成器函数
+```js
+function* fibonacci() { // 一个生成器函数
     let [prev, curr] = [0, 1];
     for (;;) { // while (true) {
         [prev, curr] = [curr, prev + curr];
@@ -165,15 +174,17 @@ for (let o of foo()) {
 for (let n of fibonacci()) {
      console.log(n);
     // 当 n 大于 1000 时跳出循环
-    if (n &gt;= 1000)
+    if (n >= 1000)
         break;
-}</pre>
+}
+```
 
-<h4 id="不要重用生成器">不要重用生成器</h4>
+#### 不要重用生成器
 
-<p>生成器不应该重用，即使<code>for...of</code>循环的提前终止，例如通过{{jsxref("Statements/break", "break")}}关键字。在退出循环后，生成器关闭，并尝试再次迭代，不会产生任何进一步的结果。</p>
+生成器不应该重用，即使`for...of`循环的提前终止，例如通过{{jsxref("Statements/break", "break")}}关键字。在退出循环后，生成器关闭，并尝试再次迭代，不会产生任何进一步的结果。
 
-<pre class="brush: js">var gen = (function *(){
+```js
+var gen = (function *(){
     yield 1;
     yield 2;
     yield 3;
@@ -187,19 +198,19 @@ for (let o of gen) {
 for (let o of gen) {
     console.log(o);
 }
+```
 
-</pre>
+### 迭代其他可迭代对象
 
-<h3 id="迭代其他可迭代对象">迭代其他可迭代对象</h3>
+你还可以迭代显式实现[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)协议的对象：
 
-<p>你还可以迭代显式实现<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">可迭代</a>协议的对象：</p>
-
-<pre class="brush: js">var iterable = {
+```js
+var iterable = {
   [Symbol.iterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
@@ -213,19 +224,21 @@ for (var value of iterable) {
 }
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<h3 id="for...of与for...in的区别"><code>for...of</code>与<code>for...in</code>的区别</h3>
+### `for...of`与`for...in`的区别
 
-<p>无论是<code>for...in</code>还是<code>for...of</code>语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。</p>
+无论是`for...in`还是`for...of`语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。
 
-<p>{{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的<a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">可枚举属性</a>。</p>
+{{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
-<p><code>for...of</code> 语句遍历<a href="/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">可迭代对象</a>定义要迭代的数据。</p>
+`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义要迭代的数据。
 
-<p>以下示例显示了与{{jsxref("Array")}}一起使用时，<code>for...of</code>循环和<code>for...in</code>循环之间的区别。</p>
+以下示例显示了与{{jsxref("Array")}}一起使用时，`for...of`循环和`for...in`循环之间的区别。
 
-<pre class="brush: js">Object.prototype.objCustom = function() {};
+```js
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 let iterable = [3, 5, 7];
@@ -243,51 +256,54 @@ for (let i in iterable) {
 
 for (let i of iterable) {
   console.log(i); // logs 3, 5, 7
-}</pre>
+}
+```
 
-<pre class="brush: js">Object.prototype.objCustom = function() {};
+```js
+Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
 
 let iterable = [3, 5, 7];
 iterable.foo = 'hello';
-</pre>
+```
 
-<p>每个对象将继承<code>objCustom</code>属性，并且作为{{jsxref("Array")}}的每个对象将继承<code>arrCustom</code>属性，因为将这些属性添加到{{jsxref("Object.prototype")}}和{{jsxref("Array.prototype")}}。由于<a href="/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承和原型链</a>，对象<code>iterable</code>继承属性<code>objCustom</code>和<code>arrCustom</code>。</p>
+每个对象将继承`objCustom`属性，并且作为{{jsxref("Array")}}的每个对象将继承`arrCustom`属性，因为将这些属性添加到{{jsxref("Object.prototype")}}和{{jsxref("Array.prototype")}}。由于[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)，对象`iterable`继承属性`objCustom`和`arrCustom`。
 
-<pre class="brush: js">for (let i in iterable) {
+```js
+for (let i in iterable) {
   console.log(i); // logs 0, 1, 2, "foo", "arrCustom", "objCustom"
 }
-</pre>
+```
 
-<p>此循环仅以原始插入顺序记录<code>iterable</code> 对象的<a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">可枚举属性</a>。它不记录数组<strong>元素</strong><code>3</code>, <code>5</code>, <code>7</code> 或<code>hello</code>，因为这些<strong>不是</strong>枚举属性。但是它记录了数组<strong>索引</strong>以及<code>arrCustom</code>和<code>objCustom</code>。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。</p>
+此循环仅以原始插入顺序记录`iterable` 对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不记录数组**元素**`3`, `5`, `7` 或`hello`，因为这些**不是**枚举属性。但是它记录了数组**索引**以及`arrCustom`和`objCustom`。如果你不知道为什么这些属性被迭代，{{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}}中有更多解释。
 
-<pre class="brush: js">for (let i in iterable) {
+```js
+for (let i in iterable) {
   if (iterable.hasOwnProperty(i)) {
     console.log(i); // logs 0, 1, 2, "foo"
   }
 }
-</pre>
+```
 
-<p>这个循环类似于第一个，但是它使用{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} 来检查，如果找到的枚举属性是对象自己的（不是继承的）。如果是，该属性被记录。记录的属性是<code>0</code>, <code>1</code>, <code>2</code>和<code>foo</code>，因为它们是自身的属性（<strong>不是继承的</strong>）。属性<code>arrCustom</code>和<code>objCustom</code>不会被记录，因为它们<strong>是继承的</strong>。</p>
+这个循环类似于第一个，但是它使用{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} 来检查，如果找到的枚举属性是对象自己的（不是继承的）。如果是，该属性被记录。记录的属性是`0`, `1`, `2`和`foo`，因为它们是自身的属性（**不是继承的**）。属性`arrCustom`和`objCustom`不会被记录，因为它们**是继承的**。
 
-<pre class="brush: js">for (let i of iterable) {
+```js
+for (let i of iterable) {
   console.log(i); // logs 3, 5, 7
 }
-</pre>
+```
 
-<p>该循环迭代并记录<code>iterable</code>作为<a href="/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">可迭代对象</a>定义的迭代值，这些是数组元素 <code>3</code>, <code>5</code>, <code>7</code>，而不是任何对象的<strong>属性</strong>。</p>
+该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Map.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Map.prototype.forEach()")}}

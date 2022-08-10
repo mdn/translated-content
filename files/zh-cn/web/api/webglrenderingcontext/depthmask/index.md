@@ -3,48 +3,47 @@ title: WebGLRenderingContext.depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
 translation_of: Web/API/WebGLRenderingContext/depthMask
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.depthMask()</code></strong> 方法设置是否启用写入深度缓冲。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthMask()`** 方法设置是否启用写入深度缓冲。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.depthMask(<var>flag</var>);
-</pre>
+```plain
+void gl.depthMask(flag);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>flag</code></dt>
- <dd>一个 {{domxref("GLboolean")}} ，用于设置是否启用写入深度缓冲。默认值：true，表示启用写入。</dd>
-</dl>
+- `flag`
+  - : 一个 {{domxref("GLboolean")}} ，用于设置是否启用写入深度缓冲。默认值：true，表示启用写入。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无。</p>
+无。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">gl.depthMask(false);
-</pre>
+```js
+gl.depthMask(false);
+```
 
-<p>要获得当前的深度遮罩值，传入 <code>DEPTH_WRITEMASK</code> 常量，返回  {{jsxref("Boolean")}}.</p>
+要获得当前的深度遮罩值，传入 `DEPTH_WRITEMASK` 常量，返回 {{jsxref("Boolean")}}.
 
-<pre class="brush: js">gl.getParameter(gl.DEPTH_WRITEMASK);
+```js
+gl.getParameter(gl.DEPTH_WRITEMASK);
 // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.depthMask")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.depthMask")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.colorMask()")}}</li>
- <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.colorMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}

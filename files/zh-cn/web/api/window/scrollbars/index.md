@@ -3,45 +3,45 @@ title: Window.scrollbars
 slug: Web/API/Window/scrollbars
 translation_of: Web/API/Window/scrollbars
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h3 id="概要">概要</h3>
+### 概要
 
-<p>返回可以检查其可见性的滚动条对象。</p>
+返回可以检查其可见性的滚动条对象。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre class="eval"><var>objRef</var> = window.scrollbars
-</pre>
+```plain
+objRef = window.scrollbars
+```
 
-<h3 id="示例">示例</h3>
+### 示例
 
-<p>下面的 HTML 示例展示了如何使用 window.scrollbars 对象的 visible 属性。</p>
+下面的 HTML 示例展示了如何使用 window\.scrollbars 对象的 visible 属性。
 
-<pre>&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Various DOM Tests&lt;/title&gt;
-  &lt;script&gt;
+```plain
+<!doctype html>
+<html>
+<head>
+  <title>Various DOM Tests</title>
+  <script>
     var visibleScrollbars = window.scrollbars.visible;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h3 id="规范">规范</h3>
+### 规范
 
 {{Specifications}}
 
-<h3 id="参见">参见</h3>
+### 参见
 
-<ul>
- <li><a href="/en/DOM/window.locationbar">window.locationbar</a></li>
- <li><a href="/en/DOM/window.menubar">window.menubar</a></li>
- <li><a href="/en/DOM/window.personalbar">window.personalbar</a></li>
- <li><a href="/en/DOM/window.statusbar">window.statusbar</a></li>
- <li><a href="/en/DOM/window.toolbar">window.toolbar</a></li>
-</ul>
+- [window.locationbar](/en/DOM/window.locationbar)
+- [window.menubar](/en/DOM/window.menubar)
+- [window.personalbar](/en/DOM/window.personalbar)
+- [window.statusbar](/en/DOM/window.statusbar)
+- [window.toolbar](/en/DOM/window.toolbar)

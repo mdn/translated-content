@@ -3,37 +3,37 @@ title: AnalyserNode.getByteTimeDomainData()
 slug: Web/API/AnalyserNode/getByteTimeDomainData
 translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 ---
-<p>{{ APIRef("Mountain View APIRef Project") }}</p>
+{{ APIRef("Mountain View APIRef Project") }}
 
-<p>{{ domxref("AnalyserNode") }} 接口的 <strong><code>getByteTimeDomainData()</code></strong> 方法复制当前波形或时域数据到传递给它的  {{domxref("Uint8Array")}} (无符号字节数组) 中。</p>
+{{ domxref("AnalyserNode") }} 接口的 **`getByteTimeDomainData()`** 方法复制当前波形或时域数据到传递给它的 {{domxref("Uint8Array")}} (无符号字节数组) 中。
 
-<p>如果该数组的元素少于 {{domxref("AnalyserNode.fftSize")}}, 多余的元素会被丢弃。如果它有多于所需的元素，则忽略多余的元素。</p>
+如果该数组的元素少于 {{domxref("AnalyserNode.fftSize")}}, 多余的元素会被丢弃。如果它有多于所需的元素，则忽略多余的元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.fftSize); // Uint8Array should be the same length as the fftSize
 analyser.getByteTimeDomainData(dataArray); // fill the Uint8Array with data returned from getByteTimeDomainData()
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>array</code></dt>
- <dd>时域数据将被复制到的 {{domxref("Uint8Array")}} 。<br>
- 如果数组中的元素少于 {{domxref("AnalyserNode.frequencyBinCount")}}, 则会删除多余的元素。如果它包含的元素多于需要的元素，则忽略多余的元素。</dd>
-</dl>
+- `array`
+  - : 时域数据将被复制到的 {{domxref("Uint8Array")}} 。
+    如果数组中的元素少于 {{domxref("AnalyserNode.frequencyBinCount")}}, 则会删除多余的元素。如果它包含的元素多于需要的元素，则忽略多余的元素。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><strong><code>void</code></strong> | None</p>
+**`void`** | None
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下的例子展示了 {{domxref("AudioContext")}} 生成一个 <code>AnalyserNode</code> 基础用法， 然后通过 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 重复的收集和绘制一个当前音频输入的“示波器样式”输出。 有关更完整的应用实例/信息，请查看我们的 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (有关代码请参阅 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>)。</p>
+以下的例子展示了 {{domxref("AudioContext")}} 生成一个 `AnalyserNode` 基础用法， 然后通过 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 重复的收集和绘制一个当前音频输入的“示波器样式”输出。 有关更完整的应用实例/信息，请查看我们的 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (有关代码请参阅 [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205))。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -60,7 +60,7 @@ function draw() {
       var x = 0;
 
       ctx.beginPath();
-      for(var i = 0; i &lt; bufferLength; i++) {
+      for(var i = 0; i < bufferLength; i++) {
         let v = dataArray[i]/128.0,
             y = v * HEIGHT/2;
 
@@ -77,22 +77,16 @@ function draw() {
     };
 
     draw();
-</pre>
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.AnalyserNode.getByteTimeDomainData")}}
 
+## See also
 
-<p>{{Compat("api.AnalyserNode.getByteTimeDomainData")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

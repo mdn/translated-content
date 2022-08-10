@@ -11,72 +11,77 @@ tags:
   - 需要浏览器的兼容性
 translation_of: Web/CSS/Column_combinator
 ---
-<div>{{CSSRef("Selectors")}}{{SeeCompatTable}}</div>
+{{CSSRef("Selectors")}}{{SeeCompatTable}}
 
-<p>通过<strong>列合并符</strong> (<code>||</code>) 链接两个元素时，它只会匹配被第二个 CSS 选择器匹配的元素，且此元素属于被第一个 CSS 选择器匹配的列元素。</p>
+通过**列合并符** (`||`) 链接两个元素时，它只会匹配被第二个 CSS 选择器匹配的元素，且此元素属于被第一个 CSS 选择器匹配的列元素。
 
-<pre class="brush: css; no-line-numbers">/* 属于"被选择"列的表单元格 */
+```css
+/* 属于"被选择"列的表单元格 */
 col.selected || td {
   background: gray;
 }
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><var>column-selector</var> || <var>cell-selector</var> {
-  <var>/* style properties */</var>
-}</pre>
+```plain
+column-selector || cell-selector {
+  /* style properties */
+}
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;table border="1"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2"/&gt;
-    &lt;col class="selected"/&gt;
-  &lt;/colgroup&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A
-      &lt;td&gt;B
-      &lt;td&gt;C
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;D&lt;/td&gt;
-      &lt;td&gt;E&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;F&lt;/td&gt;
-      &lt;td colspan="2"&gt;G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table border="1">
+  <colgroup>
+    <col span="2"/>
+    <col class="selected"/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>A
+      <td>B
+      <td>C
+    </tr>
+    <tr>
+      <td colspan="2">D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td colspan="2">G</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">col.selected || td {
+```css
+col.selected || td {
   background: gray;
   color: white;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples", "100%")}}</p>
+{{EmbedLiveSample("Examples", "100%")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.column")}}</p>
+{{Compat("css.selectors.column")}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}}</li>
- <li>{{CSSxRef("grid")}}</li>
-</ul>
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{CSSxRef("grid")}}

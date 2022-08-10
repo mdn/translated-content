@@ -7,81 +7,75 @@ tags:
   - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly</code></strong>JavaScript 对象是所有 <a href="/en-US/docs/WebAssembly">WebAssembly</a> 相关功能的命名空间。</p>
+**`WebAssembly`**JavaScript 对象是所有 [WebAssembly](/en-US/docs/WebAssembly) 相关功能的命名空间。
 
-<p>和大多数全局对象不一样，<code>WebAssembly</code>不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。</p>
+和大多数全局对象不一样，`WebAssembly`不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>WebAssembly</code>对象主要用于：</p>
+`WebAssembly`对象主要用于：
 
-<ul>
- <li>使用 {{jsxref("WebAssembly.instantiate()")}} 函数加载 WebAssembly 代码。</li>
- <li>通过 {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}  构造函数创建新的内存和表实例。</li>
- <li>由 {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} 构造函数来提供 WebAssembly 中的错误信息。</li>
-</ul>
+- 使用 {{jsxref("WebAssembly.instantiate()")}} 函数加载 WebAssembly 代码。
+- 通过 {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}} 构造函数创建新的内存和表实例。
+- 由 {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} 构造函数来提供 WebAssembly 中的错误信息。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
- <dd>用于编译和实例化 WebAssembly 代码的主 API，返回一个 <code>Module</code> 和它的第一个<code>Instance</code>实例。</dd>
- <dt>{{jsxref("WebAssembly.instantiateStreaming()")}}</dt>
- <dd>直接从流式底层源编译和实例化 WebAssembly 模块，同时返回<code>Module</code>及其第一个<code>Instance</code>实例。</dd>
- <dt>{{jsxref("WebAssembly.compile()")}}</dt>
- <dd>把 WebAssembly 二进制代码编译为一个 {{jsxref("WebAssembly.Module")}} ，不进行实例化。</dd>
- <dt>{{jsxref("WebAssembly.compileStreaming()")}}</dt>
- <dd>直接从流式底层源代码编译{{jsxref("WebAssembly.Module")}} ，将实例化作为一个单独的步骤。</dd>
- <dt>{{jsxref("WebAssembly.validate()")}}</dt>
- <dd>校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true ，否则返回 false 。</dd>
-</dl>
+- {{jsxref("WebAssembly.instantiate()")}}
+  - : 用于编译和实例化 WebAssembly 代码的主 API，返回一个 `Module` 和它的第一个`Instance`实例。
+- {{jsxref("WebAssembly.instantiateStreaming()")}}
+  - : 直接从流式底层源编译和实例化 WebAssembly 模块，同时返回`Module`及其第一个`Instance`实例。
+- {{jsxref("WebAssembly.compile()")}}
+  - : 把 WebAssembly 二进制代码编译为一个 {{jsxref("WebAssembly.Module")}} ，不进行实例化。
+- {{jsxref("WebAssembly.compileStreaming()")}}
+  - : 直接从流式底层源代码编译{{jsxref("WebAssembly.Module")}} ，将实例化作为一个单独的步骤。
+- {{jsxref("WebAssembly.validate()")}}
+  - : 校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true ，否则返回 false 。
 
-<h2 id="构造器">构造器</h2>
+## 构造器
 
-<dl>
- <dt>{{jsxref("WebAssembly.Global()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>Global</code> 全局对象。</dd>
- <dt>{{jsxref("WebAssembly.Module()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>Module</code>模块对象。</dd>
- <dt>{{jsxref("WebAssembly.Instance()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>Instance</code>实例对象。</dd>
- <dt>{{jsxref("WebAssembly.Memory()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>Memory</code>内存对象。</dd>
- <dt>{{jsxref("WebAssembly.Table()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>Table</code>表格对象。</dd>
- <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>CompileError</code>编译错误对象。</dd>
- <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>LinkError</code>链接错误对象。</dd>
- <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
- <dd>创建一个新的 WebAssembly <code>RuntimeError</code>运行时错误对象。</dd>
-</dl>
+- {{jsxref("WebAssembly.Global()")}}
+  - : 创建一个新的 WebAssembly `Global` 全局对象。
+- {{jsxref("WebAssembly.Module()")}}
+  - : 创建一个新的 WebAssembly `Module`模块对象。
+- {{jsxref("WebAssembly.Instance()")}}
+  - : 创建一个新的 WebAssembly `Instance`实例对象。
+- {{jsxref("WebAssembly.Memory()")}}
+  - : 创建一个新的 WebAssembly `Memory`内存对象。
+- {{jsxref("WebAssembly.Table()")}}
+  - : 创建一个新的 WebAssembly `Table`表格对象。
+- {{jsxref("WebAssembly.CompileError()")}}
+  - : 创建一个新的 WebAssembly `CompileError`编译错误对象。
+- {{jsxref("WebAssembly.LinkError()")}}
+  - : 创建一个新的 WebAssembly `LinkError`链接错误对象。
+- {{jsxref("WebAssembly.RuntimeError()")}}
+  - : 创建一个新的 WebAssembly `RuntimeError`运行时错误对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的示例（请参见 GitHub 上的<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">Instantiate-streaming.html</a>演示，并查看<a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">在线演示</a>）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过<code>ResultObject</code>实现 promise。 由于<code>instantiateStreaming()</code>函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递 {{domxref("fetch()")}} 调用，然后它将把返回的 response 传递给随后的函数。</p>
+下面的示例（请参见 GitHub 上的[Instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html)演示，并查看[在线演示](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从流式底层源传输.wasm 模块，然后对其进行编译和实例化，并通过`ResultObject`实现 promise。 由于`instantiateStreaming()`函数接受对 {{domxref("Response")}} 对象的 promise，因此您可以直接向其传递 {{domxref("fetch()")}} 调用，然后它将把返回的 response 传递给随后的函数。
 
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+```js
+var importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func())</pre>
+.then(obj => obj.instance.exports.exported_func())
+```
 
-<p>返回的<code>ResultObject</code>实例的成员可以被随后访问到，可以调用实例中被导出的方法。</p>
+返回的`ResultObject`实例的成员可以被随后访问到，可以调用实例中被导出的方法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

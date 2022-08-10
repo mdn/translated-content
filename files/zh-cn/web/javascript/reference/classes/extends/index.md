@@ -7,27 +7,30 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p><strong><code>extends</code></strong>关键字用于<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class">类声明</a>或者<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/class">类表达式</a>中，以创建一个类，该类是另一个类的子类。</p>
+**`extends`**关键字用于[类声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)或者[类表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)中，以创建一个类，该类是另一个类的子类。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">class ChildClass extends ParentClass { ... }</pre>
+```plain
+class ChildClass extends ParentClass { ... }
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>extends</code>关键字用来创建一个普通类或者内建对象的子类。</p>
+`extends`关键字用来创建一个普通类或者内建对象的子类。
 
-<p>继承的<code>.prototype</code>必须是一个{{jsxref("Object")}} 或者 {{jsxref("null")}}。</p>
+继承的`.prototype`必须是一个{{jsxref("Object")}} 或者 {{jsxref("null")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_extends">使用 <code>extends</code></h3>
+### 使用 `extends`
 
-<p>第一个例子是根据名为 <code>Polygon</code> 类创建一个名为<code>Square</code>的类。这个例子是从这个<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线演示</a>中提取出来的。</p>
+第一个例子是根据名为 `Polygon` 类创建一个名为`Square`的类。这个例子是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的。
 
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Here, it calls the parent class' constructor with lengths
     // provided for the Polygon's width and height
@@ -40,13 +43,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   get area() {
     return this.height * this.width;
   }
-}</pre>
+}
+```
 
-<h3 id="使用_extends与内置对象">使用 <code>extends</code>与内置对象</h3>
+### 使用 `extends`与内置对象
 
-<p>这个示例继承了内置的{{jsxref("Date")}}对象。这个例子是从这个<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线演示</a>中提取出来的。</p>
+这个示例继承了内置的{{jsxref("Date")}}对象。这个例子是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的。
 
-<pre class="brush: js">class myDate extends Date {
+```js
+class myDate extends Date {
   constructor() {
     super();
   }
@@ -55,32 +60,33 @@ translation_of: Web/JavaScript/Reference/Classes/extends
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     return this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear();
   }
-}</pre>
+}
+```
 
-<h3 id="扩展_null">扩展 <code>null</code></h3>
+### 扩展 `null`
 
-<p>可以像扩展普通类一样扩展{{jsxref("null")}}，但是新对象的原型将不会继承 {{jsxref("Object.prototype")}}。</p>
+可以像扩展普通类一样扩展{{jsxref("null")}}，但是新对象的原型将不会继承 {{jsxref("Object.prototype")}}。
 
-<pre class="brush: js">class nullExtends extends null {
+```js
+class nullExtends extends null {
   constructor() {}
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
 Object.getPrototypeOf(nullExtends.prototype) // null
 
-new nullExtends(); //ReferenceError: this is not defined</pre>
+new nullExtends(); //ReferenceError: this is not defined
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="扩展阅读">扩展阅读</h2>
+## 扩展阅读
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">类</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a></li>
-</ul>
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [super](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)

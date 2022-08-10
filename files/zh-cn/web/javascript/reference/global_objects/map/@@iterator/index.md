@@ -13,27 +13,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 browser-compat: javascript.builtins.Map.@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@iterator</strong></code><strong> </strong>属性的初始值与 {{jsxref("Map.prototype.entries()", "entries")}} 属性的初始值是同一个函数对象。</p>
+**`@@iterator`** 属性的初始值与 {{jsxref("Map.prototype.entries()", "entries")}} 属性的初始值是同一个函数对象。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
+## 语法
 
+```plain
+myMap[Symbol.iterator]
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><em>myMap</em>[Symbol.iterator]</code></pre>
+map 的 **iterator** 函数默认就是 {{jsxref("Map.prototype.entries()", "entries()")}} 函数。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>map 的 <strong>iterator</strong> 函数默认就是 {{jsxref("Map.prototype.entries()", "entries()")}} 函数。</p>
+### 使用 `[@@iterator]()`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_iterator()">使用 <code>[@@iterator]()</code></h3>
-
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set('0', 'foo');
 myMap.set(1, 'bar');
 myMap.set({}, 'baz');
@@ -43,11 +44,12 @@ var mapIter = myMap[Symbol.iterator]();
 console.log(mapIter.next().value); // ["0", "foo"]
 console.log(mapIter.next().value); // [1, "bar"]
 console.log(mapIter.next().value); // [Object, "baz"]
-</pre>
+```
 
-<h3 id="在_for..of_中使用_iterator">在 <code>for..of</code> 中使用 <code>[@@iterator]()</code></h3>
+### 在 `for..of` 中使用 `[@@iterator]()`
 
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set('0', 'foo');
 myMap.set(1, 'bar');
 myMap.set({}, 'baz');
@@ -65,20 +67,19 @@ for (var v of myMap) {
 
 // 0: foo
 // 1: bar
-// [Object]: baz</pre>
+// [Object]: baz
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

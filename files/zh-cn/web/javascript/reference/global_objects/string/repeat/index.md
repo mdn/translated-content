@@ -14,37 +14,36 @@ tags:
   - 填充
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>repeat()</code></strong> 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。</p>
+**`repeat()`** 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.repeat(<var>count</var>)</code></pre>
+```plain
+str.repeat(count)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>count</code></dt>
- <dd>介于 <code>0</code> 和 {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}} 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。</dd>
-</dl>
+- `count`
+  - : 介于 `0` 和 {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}} 之间的整数。表示在新构造的字符串中重复了多少遍原字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p> 包含指定字符串的指定数量副本的新字符串。</p>
+包含指定字符串的指定数量副本的新字符串。
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: 重复次数不能为负数。</li>
- <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: 重复次数必须小于 infinity，且长度不会大于最长的字符串。</li>
-</ul>
+- {{jsxref("Errors/Negative_repetition_count", "RangeError")}}: 重复次数不能为负数。
+- {{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: 重复次数必须小于 infinity，且长度不会大于最长的字符串。
 
-<h2 id="兼容补丁（polyfill）">兼容补丁（Polyfill）</h2>
+## 兼容补丁（Polyfill）
 
-<p>此方法已添加到 ECMAScript 2015 规范中，并且可能尚未在所有 JavaScript 实现中可用。然而，你可以使用以下代码段对 String.prototype.repeat() 进行填充：</p>
+此方法已添加到 ECMAScript 2015 规范中，并且可能尚未在所有 JavaScript 实现中可用。然而，你可以使用以下代码段对 String.prototype.repeat() 进行填充：
 
-<pre class="brush: js">if (!String.prototype.repeat) {
+```js
+if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {
     'use strict';
     if (this == null) {
@@ -55,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     if (count != count) {
       count = 0;
     }
-    if (count &lt; 0) {
+    if (count < 0) {
       throw new RangeError('repeat count must be non-negative');
     }
     if (count == Infinity) {
@@ -66,16 +65,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
       return '';
     }
     // 确保 count 是一个 31 位的整数。这样我们就可以使用如下优化的算法。
-    // 当前（2014 年 8 月），绝大多数浏览器都不能支持 1 &lt;&lt; 28 长的字符串，所以：
-    if (str.length * count &gt;= 1 &lt;&lt; 28) {
+    // 当前（2014 年 8 月），绝大多数浏览器都不能支持 1 << 28 长的字符串，所以：
+    if (str.length * count >= 1 << 28) {
       throw new RangeError('repeat count must not overflow maximum string size');
     }
     var rpt = '';
     for (;;) {
-      if ((count &amp; 1) == 1) {
+      if ((count & 1) == 1) {
         rpt += str;
       }
-      count &gt;&gt;&gt;= 1;
+      count >>>= 1;
       if (count == 0) {
         break;
       }
@@ -83,31 +82,31 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
     }
     return rpt;
   }
-}</pre>
+}
+```
 
+## 示例
 
-<h2 id="Examples">示例</h2>
-
-<pre class="brush:js">"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
+```js
+"abc".repeat(-1)     // RangeError: repeat count must be positive and less than inifinity
 "abc".repeat(0)      // ""
 "abc".repeat(1)      // "abc"
 "abc".repeat(2)      // "abcabc"
 "abc".repeat(3.5)    // "abcabcabc" 参数 count 将会被自动转换成整数。
 "abc".repeat(1/0)    // RangeError: repeat count must be positive and less than inifinity
 
-({toString : () =&gt; "abc", repeat : String.prototype.repeat}).repeat(2)
-//"abcabc",repeat 是一个通用方法，也就是它的调用者可以不是一个字符串对象。</pre>
+({toString : () => "abc", repeat : String.prototype.repeat}).repeat(2)
+//"abcabc",repeat 是一个通用方法，也就是它的调用者可以不是一个字符串对象。
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.concat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.concat()")}}

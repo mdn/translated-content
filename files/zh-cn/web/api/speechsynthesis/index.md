@@ -10,54 +10,49 @@ tags:
   - speech
 translation_of: Web/API/SpeechSynthesis
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p> <a href="/en-US/docs/Web/API/Web_Speech_API">网页语音 API</a> 的<strong><code>SpeechSynthesis</code></strong> 接口是语音服务的控制接口；它可以用于获取设备上关于可用的合成声音的信息，开始、暂停语音，或除此之外的其他命令。</p>
+[网页语音 API](/en-US/docs/Web/API/Web_Speech_API) 的**`SpeechSynthesis`** 接口是语音服务的控制接口；它可以用于获取设备上关于可用的合成声音的信息，开始、暂停语音，或除此之外的其他命令。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em><code>SpeechSynthesis</code> 也从它的父接口继承属性，{{domxref("EventTarget")}}.</em></p>
+_`SpeechSynthesis` 也从它的父接口继承属性，{{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}</dt>
- <dd>当<code>SpeechSynthesis</code> 处于暂停状态时， {{domxref("Boolean")}} 值返回 <code>true</code> 。</dd>
- <dt>{{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}</dt>
- <dd>当语音播放队列到目前为止保持没有说完的语音时， {{domxref("Boolean")}} 值返回 <code>true</code> 。</dd>
- <dt>{{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}</dt>
- <dd>当语音谈话正在进行的时候，即使<code>SpeechSynthesis</code>处于暂停状态， {{domxref("Boolean")}} 返回 <code>true</code> 。</dd>
-</dl>
+- {{domxref("SpeechSynthesis.paused")}} {{readonlyinline}}
+  - : 当`SpeechSynthesis` 处于暂停状态时， {{domxref("Boolean")}} 值返回 `true` 。
+- {{domxref("SpeechSynthesis.pending")}} {{readonlyinline}}
+  - : 当语音播放队列到目前为止保持没有说完的语音时， {{domxref("Boolean")}} 值返回 `true` 。
+- {{domxref("SpeechSynthesis.speaking")}} {{readonlyinline}}
+  - : 当语音谈话正在进行的时候，即使`SpeechSynthesis`处于暂停状态， {{domxref("Boolean")}} 返回 `true` 。
 
-<h3 id="事件操作">事件操作</h3>
+### 事件操作
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.onvoiceschanged")}}</dt>
- <dd>当由{{domxref("SpeechSynthesis.getVoices()")}}方法返回的{{domxref("SpeechSynthesisVoice")}}列表改变时触发。</dd>
-</dl>
+- {{domxref("SpeechSynthesis.onvoiceschanged")}}
+  - : 当由{{domxref("SpeechSynthesis.getVoices()")}}方法返回的{{domxref("SpeechSynthesisVoice")}}列表改变时触发。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em><code>SpeechSynthesis</code> 也从它的父接口继承方法， {{domxref("EventTarget")}}.</em></p>
+_`SpeechSynthesis` 也从它的父接口继承方法， {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("SpeechSynthesis.cancel()")}}</dt>
- <dd>移除所有语音谈话队列中的谈话。</dd>
- <dt>{{domxref("SpeechSynthesis.getVoices()")}}</dt>
- <dd>返回当前设备所有可用声音的 {{domxref("SpeechSynthesisVoice")}}列表。</dd>
- <dt>{{domxref("SpeechSynthesis.pause()")}}</dt>
- <dd>把 <code>SpeechSynthesis</code> 对象置为暂停状态。</dd>
- <dt>{{domxref("SpeechSynthesis.resume()")}}</dt>
- <dd>把 <code>SpeechSynthesis</code> 对象置为一个非暂停状态：如果已经暂停了则继续。</dd>
- <dt>{{domxref("SpeechSynthesis.speak()")}}</dt>
- <dd>添加一个 {{domxref("SpeechSynthesisUtterance", "utterance")}} 到语音谈话队列；它将会在其他语音谈话播放完之后播放。</dd>
-</dl>
+- {{domxref("SpeechSynthesis.cancel()")}}
+  - : 移除所有语音谈话队列中的谈话。
+- {{domxref("SpeechSynthesis.getVoices()")}}
+  - : 返回当前设备所有可用声音的 {{domxref("SpeechSynthesisVoice")}}列表。
+- {{domxref("SpeechSynthesis.pause()")}}
+  - : 把 `SpeechSynthesis` 对象置为暂停状态。
+- {{domxref("SpeechSynthesis.resume()")}}
+  - : 把 `SpeechSynthesis` 对象置为一个非暂停状态：如果已经暂停了则继续。
+- {{domxref("SpeechSynthesis.speak()")}}
+  - : 添加一个 {{domxref("SpeechSynthesisUtterance", "utterance")}} 到语音谈话队列；它将会在其他语音谈话播放完之后播放。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在我们基础的 <a href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser 演示中</a>，我们第一次用 <code>window.speechSynthesis</code>抓取了关于语音播放控制器的参考。在定义了一些必要的变量后，我们用 {{domxref("SpeechSynthesis.getVoices()")}}获取了一列可用的声音并且用它们生成一列可选表单，这样用户能够选择他们想要的声音。</p>
+在我们基础的 [Speech synthesiser 演示中](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)，我们第一次用 `window.speechSynthesis`抓取了关于语音播放控制器的参考。在定义了一些必要的变量后，我们用 {{domxref("SpeechSynthesis.getVoices()")}}获取了一列可用的声音并且用它们生成一列可选表单，这样用户能够选择他们想要的声音。
 
-<p> <code>inputForm.onsubmit</code> 的内部操作中，我们用<a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a>阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的 voice 属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。</p>
+`inputForm.onsubmit` 的内部操作中，我们用[preventDefault()](/en-US/docs/Web/API/Event/preventDefault)阻止了表单的提交，创建了一个从{{htmlelement("input")}}文本框获取文本的新{{domxref("SpeechSynthesisUtterance")}}实例，在{{htmlelement("select")}}元素可选的声音设置成语音谈话的 voice 属性，然后通过{{domxref("SpeechSynthesis.speak()")}}方法开始语音播放。
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('.txt');
@@ -73,7 +68,7 @@ var voices = [];
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -97,7 +92,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -107,18 +102,17 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("api.SpeechSynthesis")}}</div>
+{{Compat("api.SpeechSynthesis")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -11,48 +11,47 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>slice()</code></strong> 方法提取某个字符串的一部分，并返回一个新的字符串，且不会改动原字符串。</p>
+**`slice()`** 方法提取某个字符串的一部分，并返回一个新的字符串，且不会改动原字符串。
 
-<div>{{EmbedInteractiveExample("pages/js/string-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-slice.html")}}
 
+## 语法
 
+```plain
+str.slice(beginIndex[, endIndex])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</pre>
+- `beginIndex`
+  - : 从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 `strLength + beginIndex` 看待，这里的`strLength` 是字符串的长度（例如， 如果 `beginIndex` 是 -3 则看作是：`strLength - 3`）
+- `endIndex`
+  - : 可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，`slice()` 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度 (例如，如果 endIndex 是 -3，则是，strLength - 3)。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>beginIndex</code></dt>
- <dd>从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 <code>strLength + beginIndex</code> 看待，这里的<code>strLength</code> 是字符串的长度（例如， 如果 <code>beginIndex</code> 是 -3 则看作是：<code>strLength - 3</code>）</dd>
- <dt><code>endIndex</code></dt>
- <dd>可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，<code>slice()</code> 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度 (例如，如果 endIndex 是 -3，则是，strLength - 3)。</dd>
-</dl>
+返回一个从原字符串中提取出来的新字符串
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>返回一个从原字符串中提取出来的新字符串</p>
+`slice()` 从一个字符串中提取字符串并返回新字符串。在一个字符串中的改变不会影响另一个字符串。也就是说，`slice` 不会修改原字符串（只会返回一个包含了原字符串中部分字符的新字符串）。
 
-<h2 id="描述">描述</h2>
+`slice()` 提取的新字符串包括`beginIndex`但不包括 `endIndex`。下面有两个例子。
 
-<p><code>slice()</code> 从一个字符串中提取字符串并返回新字符串。在一个字符串中的改变不会影响另一个字符串。也就是说，<code>slice</code> 不会修改原字符串（只会返回一个包含了原字符串中部分字符的新字符串）。</p>
+例 1：`str.slice(1, 4)` 提取第二个字符到第四个字符（被提取字符的索引值（index）依次为 1、2，和 3）。
 
-<p><code>slice()</code> 提取的新字符串包括<code>beginIndex</code>但不包括 <code>endIndex</code>。下面有两个例子。</p>
+例 2：`str.slice(2, -1)` 提取第三个字符到倒数第一个字符。
 
-<p>例 1：<code>str.slice(1, 4)</code> 提取第二个字符到第四个字符（被提取字符的索引值（index）依次为 1、2，和 3）。</p>
+## 例子
 
-<p>例 2：<code>str.slice(2, -1)</code> 提取第三个字符到倒数第一个字符。</p>
+### 使用 `slice()` 创建一个新的字符串
 
-<h2 id="Examples">例子</h2>
+下面例子使用 `slice()` 创建了一个新字符串。
 
-<h3 id="使用_slice()_创建一个新的字符串">使用 <code>slice()</code> 创建一个新的字符串</h3>
-
-<p>下面例子使用 <code>slice()</code> 创建了一个新字符串。</p>
-
-<pre class="brush: js">var str1 = 'The morning is upon us.', // str1 的长度 length 是 23。
+```js
+var str1 = 'The morning is upon us.', // str1 的长度 length 是 23。
     str2 = str1.slice(1, 8),
     str3 = str1.slice(4, -2),
     str4 = str1.slice(12),
@@ -61,32 +60,29 @@ console.log(str2); // 输出：he morn
 console.log(str3); // 输出：morning is upon u
 console.log(str4); // 输出：is upon us.
 console.log(str5); // 输出：""
-</pre>
+```
 
-<h3 id="给_slice()_传入负值索引">给 <code>slice()</code> 传入负值索引</h3>
+### 给 `slice()` 传入负值索引
 
-<p>下面的例子在使用 <code>slice()</code> 时传入了负值作为索引。</p>
+下面的例子在使用 `slice()` 时传入了负值作为索引。
 
-<pre class="brush: js">var str = 'The morning is upon us.';
+```js
+var str = 'The morning is upon us.';
 str.slice(-3);     // 返回 'us.'
 str.slice(-3, -1); // 返回 'us'
 str.slice(0, -1);  // 返回 'The morning is upon us'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.substr()")}} {{deprecated_inline}}</li>
- <li>{{jsxref("String.prototype.substring()")}}</li>
- <li>{{jsxref("Array.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+- {{jsxref("String.prototype.substring()")}}
+- {{jsxref("Array.prototype.slice()")}}

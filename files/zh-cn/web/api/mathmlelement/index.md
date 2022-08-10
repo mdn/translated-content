@@ -9,49 +9,46 @@ tags:
   - 接口
 translation_of: Web/API/MathMLElement
 ---
-<div>{{APIRef("MathML")}}</div>
+{{APIRef("MathML")}}
 
-<p><strong><code>MathMLElement</code></strong> 接口表示任意 <a href="/zh-CN/docs/Web/MathML">MathML</a> 元素。</p>
+**`MathMLElement`** 接口表示任意 [MathML](/zh-CN/docs/Web/MathML) 元素。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>This interface has no properties, but inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}</em></p>
+_This interface has no properties, but inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}_
 
-<ul>
-</ul>
+## 方法
 
-<h2 id="方法">方法</h2>
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}_
 
-<p><em>This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}</em></p>
+## 示例
 
-<h2 id="示例">示例</h2>
+### MathML
 
-<h3 id="MathML">MathML</h3>
+```html
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+</math>
+```
 
-<pre class="brush: html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-  &lt;msqrt&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-  &lt;/msqrt&gt;
-&lt;/math&gt;</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+```js
+document.querySelector('msqrt').constructor.name; // MathMLElement
+```
 
-<pre class="brush: js">document.querySelector('msqrt').constructor.name; // MathMLElement</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MathMLElement")}}
 
+## 参见
 
-<p>{{Compat("api.MathMLElement")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{DOMxRef("Element")}}</li>
- <li>{{DOMxRef("HTMLElement")}}</li>
- <li>{{DOMxRef("SVGElement")}}</li>
-</ul>
+- {{DOMxRef("Element")}}
+- {{DOMxRef("HTMLElement")}}
+- {{DOMxRef("SVGElement")}}

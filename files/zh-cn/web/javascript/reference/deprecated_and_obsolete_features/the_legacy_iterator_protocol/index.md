@@ -12,46 +12,34 @@ tags:
 translation_of: >-
   Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
-<div>{{jsSidebar("More")}}</div>
+{{jsSidebar("More")}}
 
-<div class="warning">
-<p><strong>警告：</strong>非标准。旧式迭代器协议是一个特定于 SpiderMonkey 的功能，在 Firefox 58+ 中删除。对于面向未来的用法，请考虑使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> 循环与<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">迭代协议</a>。</p>
-</div>
+> **警告：**非标准。旧式迭代器协议是一个特定于 SpiderMonkey 的功能，在 Firefox 58+ 中删除。对于面向未来的用法，请考虑使用 [for..of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环与[迭代协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
-<h2 id="废弃的_Firefox_专用迭代器协议">废弃的 Firefox 专用迭代器协议</h2>
+## 废弃的 Firefox 专用迭代器协议
 
-<p>Firefox，在版本 26 之前实现了另一个迭代器协议，类似于标准的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">ES2015 迭代器协议</a>。</p>
+Firefox，在版本 26 之前实现了另一个迭代器协议，类似于标准的 [ES2015 迭代器协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
-<p>一个对象实现了 next() 方法，并在迭代结束时抛出 {{jsxref("Global_Objects/StopIteration", "StopIteration")}}，它就是一个旧式迭代器。</p>
+一个对象实现了 next() 方法，并在迭代结束时抛出 {{jsxref("Global_Objects/StopIteration", "StopIteration")}}，它就是一个旧式迭代器。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">值</th>
-  </tr>
-  <tr>
-   <td><code>next</code></td>
-   <td>返回值的零个参数函数。</td>
-  </tr>
- </tbody>
-</table>
+| 属性   | 值                     |
+| ------ | ---------------------- |
+| `next` | 返回值的零个参数函数。 |
 
-<h3 id="旧式迭代器与_ES2015_迭代器的区别">旧式迭代器与 ES2015 迭代器的区别</h3>
+### 旧式迭代器与 ES2015 迭代器的区别
 
-<ul>
- <li>在调用 <code>next</code> 的时候立即返回相应的值，不会返回一个占位符对象的值 (<code>value</code>) 属性。</li>
- <li>通过抛出 {{jsxref("Global_Objects/StopIteration", "StopIteration")}} 对象表示迭代结束。</li>
-</ul>
+- 在调用 `next` 的时候立即返回相应的值，不会返回一个占位符对象的值 (`value`) 属性。
+- 通过抛出 {{jsxref("Global_Objects/StopIteration", "StopIteration")}} 对象表示迭代结束。
 
-<h3 id="旧迭代器协议示例">旧迭代器协议示例</h3>
+### 旧迭代器协议示例
 
-<pre class="brush: js">function makeIterator(array){
+```js
+function makeIterator(array){
     var nextIndex = 0;
 
     return {
        next: function(){
-           if(nextIndex &lt; array.length){
+           if(nextIndex < array.length){
                return array[nextIndex++];
            else
                throw new StopIteration();
@@ -71,11 +59,9 @@ catch(e){
          // iteration over
     }
 }
-</pre>
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators">迭代器和生成器</a></li>
- <li>更多<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">弃用和过时的功能</a></li>
-</ul>
+- [迭代器和生成器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- 更多[弃用和过时的功能](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

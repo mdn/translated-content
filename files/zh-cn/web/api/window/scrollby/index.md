@@ -5,65 +5,60 @@ tags:
   - 全局方法
 translation_of: Web/API/Window/scrollBy
 ---
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p>在窗口中按指定的偏移量滚动文档。</p>
+在窗口中按指定的偏移量滚动文档。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>window.scrollBy(<em>x-coord</em>, <em>y-coord</em>);
-window.scrollBy(<em>options</em>)
-</pre>
+```plain
+window.scrollBy(x-coord, y-coord);
+window.scrollBy(options)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>X</code> 是水平滚动的偏移量，单位：像素。</li>
- <li><code>Y</code> 是垂直滚动的偏移量，单位：像素。</li>
-</ul>
+- `X` 是水平滚动的偏移量，单位：像素。
+- `Y` 是垂直滚动的偏移量，单位：像素。
 
-<p>正数坐标会朝页面的右下方滚动，负数坐标会滚向页面的左上方。</p>
+正数坐标会朝页面的右下方滚动，负数坐标会滚向页面的左上方。
 
-<ul>
- <li><code>options</code> 是一个包含三个属性的对象：</li>
-</ul>
+- `options` 是一个包含三个属性的对象：
 
-<ol>
- <li><code><em>top</em></code> 等同于  <code><em>y-coord</em></code></li>
- <li><code>left</code> 等同于  <code>x<em>-coord</em></code></li>
- <li><code><em>behavior</em></code><em>  表示滚动行为，支持参数：<code>smooth</code> (平滑滚动)，<code>instant</code> (瞬间滚动)，默认值 <code>auto</code>，效果等同于 <code>instant</code></em></li>
-</ol>
+1.  `top` 等同于 `y-coord`
+2.  `left` 等同于 `x-coord`
+3.  `behavior` _表示滚动行为，支持参数：`smooth` (平滑滚动)，`instant` (瞬间滚动)，默认值 `auto`，效果等同于 `instant`_
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<p>向下滚动一页：</p>
+向下滚动一页：
 
-<pre><code>window.scrollBy(0, window.innerHeight);</code>
-</pre>
+```plain
+window.scrollBy(0, window.innerHeight);
+```
 
+向上滚动一页：
 
+```plain
+window.scrollBy(0, -window.innerHeight);
+```
 
-<p>向上滚动一页：</p>
+使用 options：
 
-<pre><code>window.scrollBy(0, -window.innerHeight);</code></pre>
-
-
-
-<p>使用 options：</p>
-
-<pre><code>window.scrollBy({
+```plain
+window.scrollBy({
   top: 100,
   left: 100,
   behavior: "smooth"
-});</code>
-</pre>
+});
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p><a href="/en-US/docs/DOM/Window.scrollBy">window.scrollBy</a> 滚动指定的距离，而 <a href="/en-US/docs/DOM/Window.scroll">window.scroll</a> 滚动至文档中的绝对位置。另外还有 <a href="/en-US/docs/DOM/Window.scrollByLines">window.scrollByLines</a>, <a href="/en-US/docs/DOM/Window.scrollByPages">window.scrollByPages</a></p>
+[window.scrollBy](/en-US/docs/DOM/Window.scrollBy) 滚动指定的距离，而 [window.scroll](/en-US/docs/DOM/Window.scroll) 滚动至文档中的绝对位置。另外还有 [window.scrollByLines](/en-US/docs/DOM/Window.scrollByLines), [window.scrollByPages](/en-US/docs/DOM/Window.scrollByPages)
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}

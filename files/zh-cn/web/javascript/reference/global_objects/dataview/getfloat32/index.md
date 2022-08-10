@@ -6,60 +6,55 @@ tags:
   - getFloat32
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getFloat32()</code></strong>方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).</p>
+**`getFloat32()`**方法从相对于{{jsxref("DataView")}} 的起始位置偏移 n 个字节处获取一个 32-bit 浮点数 (单精度浮点数，4 个字节).
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getfloat32.html")}}
 
+## 语法
 
+```plain
+dataview.getFloat32(byteOffset [, littleEndian])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>dataview</var>.getFloat32(byteOffset [, littleEndian])</pre>
+- byteOffset
+  - : 偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。
+- littleEndian
+  - : {{optional_inline}} 表示这个 32 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。
 
-<h3 id="参数">参数</h3>
+### 返回
 
-<dl>
- <dt>byteOffset</dt>
- <dd>偏移量，单位为字节，为从视图的开始位置到读取数值的位置的偏移。</dd>
- <dt>littleEndian</dt>
- <dd>{{optional_inline}} 表示这个 32 位浮点数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储，如果设置为 false 或者不指定，将用 big-endian 格式读取数值。</dd>
-</dl>
+一个带符号的 32 位浮点数。
 
-<h3 id="返回">返回</h3>
+### 抛出错误
 
-<p>一个带符号的 32 位浮点数。</p>
+- {{jsxref("RangeError")}}
+  - : 如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。
 
-<h3 id="抛出错误">抛出错误</h3>
+## 说明
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 byteOffset 设置导致读数值时超出了视图的末尾就会抛出错误。</dd>
-</dl>
+没有对齐约束; 多字节值可以从任何偏移处获取。
 
-<h2 id="说明">说明</h2>
+## 例子
 
-<p>没有对齐约束; 多字节值可以从任何偏移处获取。</p>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getFloat32(1); // 0
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

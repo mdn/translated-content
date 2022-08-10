@@ -5,30 +5,32 @@ tags:
   - API
 translation_of: Web/API/Event/composedPath
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p><strong><code>composedPath()</code></strong> 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。</p>
+**`composedPath()`** 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>composed</em> = <em>Event</em>.composedPath();
-</pre>
+```plain
+var composed = Event.composedPath();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("EventTarget")}}对象数组，表示将在其上调用事件侦听器的对象。</p>
+一个 {{domxref("EventTarget")}}对象数组，表示将在其上调用事件侦听器的对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，<code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;，</code>两 个全都调用了它们文本属性的内容然后作为<code>&lt;p&gt;</code>  元素的文本内容将它们插入到元素的影子 DOM 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成<code>open</code> 和 <code>closed</code> 的情况下连接的。</p>
+在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，`<open-shadow>` 和 `<closed-shadow>，`两 个全都调用了它们文本属性的内容然后作为`<p>` 元素的文本内容将它们插入到元素的影子 DOM 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成`open` 和 `closed` 的情况下连接的。
 
-<p>第一个定义就像这样，比如：</p>
+第一个定义就像这样，比如：
 
-<pre class="brush: js">customElements.define('open-shadow',
+```js
+customElements.define('open-shadow',
   class extends HTMLElement {
     constructor() {
       super();
@@ -40,36 +42,43 @@ translation_of: Web/API/Event/composedPath
         .appendChild(pElem);
 
   }
-});</pre>
+});
+```
 
-<p>然后我们在我们的页面中插入其中一个元素：</p>
+然后我们在我们的页面中插入其中一个元素：
 
-<pre class="brush: html">&lt;open-shadow text="I have an open shadow root"&gt;&lt;/open-shadow&gt;
-&lt;closed-shadow text="I have a closed shadow root"&gt;&lt;/closed-shadow&gt;</pre>
+```html
+<open-shadow text="I have an open shadow root"></open-shadow>
+<closed-shadow text="I have a closed shadow root"></closed-shadow>
+```
 
-<p>然后在 <code>&lt;html&gt;</code> 元素中插入一个鼠标点击事件：</p>
+然后在 `<html>` 元素中插入一个鼠标点击事件：
 
-<pre class="brush: js">document.querySelector('html').addEventListener('click',function(e) {
+```js
+document.querySelector('html').addEventListener('click',function(e) {
   console.log(e.composed);
   console.log(e.composedPath());
-});</pre>
+});
+```
 
-<p>当你先后点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 这两个元素，你将会注意到两件事情。第一， <code>composed</code> 这个属性返回值为 <code>true</code> 因为 <code>click</code> 事件总能够在影子边界中传播。 第二，你将注意到两个元素中<code>composedPath</code> 的值的不同。 <code>&lt;open-shadow&gt;</code> 元素的组成路径是这个：</p>
+当你先后点击 `<open-shadow>` 和 `<closed-shadow>` 这两个元素，你将会注意到两件事情。第一， `composed` 这个属性返回值为 `true` 因为 `click` 事件总能够在影子边界中传播。 第二，你将注意到两个元素中`composedPath` 的值的不同。 `<open-shadow>` 元素的组成路径是这个：
 
-<pre class="brush: js">Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+```js
+Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```
 
-<p>尽管 <code>&lt;closed-shadow&gt;</code> 元素的组成路径是像下面这样：</p>
+尽管 `<closed-shadow>` 元素的组成路径是像下面这样：
 
-<pre class="brush: js">Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+```js
+Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+```
 
-<p>在第二个例子中，事件监听器仅能够传播到 <code>&lt;closed-shadow&gt;</code> 元素本身，但是不会到影子边界内的节点。</p>
+在第二个例子中，事件监听器仅能够传播到 `<closed-shadow>` 元素本身，但是不会到影子边界内的节点。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.Event.composedPath")}}</p>
-</div>
+{{Compat("api.Event.composedPath")}}

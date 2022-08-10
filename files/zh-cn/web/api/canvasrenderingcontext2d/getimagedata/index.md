@@ -3,81 +3,74 @@ title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.getImageData()</code></strong> 返回一个{{domxref("ImageData")}}对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为<em>(sx, sy)、</em>宽为<em>sw、</em>高为<em>sh。</em></p>
+**`CanvasRenderingContext2D.getImageData()`** 返回一个{{domxref("ImageData")}}对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为*(sx, sy)、*宽为*sw、*高为*sh。*
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">ImageData <var><em>ctx</em>.getImageData(sx, sy, sw, sh);</var>
-</pre>
+```plain
+ImageData ctx.getImageData(sx, sy, sw, sh);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>sx</code></dt>
- <dd>将要被提取的图像数据矩形区域的左上角 x 坐标。</dd>
- <dt><code>sy</code></dt>
- <dd>将要被提取的图像数据矩形区域的左上角 y 坐标。</dd>
- <dt><code>sw</code></dt>
- <dd>将要被提取的图像数据矩形区域的宽度。</dd>
- <dt><code>sh</code></dt>
- <dd>将要被提取的图像数据矩形区域的高度。</dd>
-</dl>
+- `sx`
+  - : 将要被提取的图像数据矩形区域的左上角 x 坐标。
+- `sy`
+  - : 将要被提取的图像数据矩形区域的左上角 y 坐标。
+- `sw`
+  - : 将要被提取的图像数据矩形区域的宽度。
+- `sh`
+  - : 将要被提取的图像数据矩形区域的高度。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("ImageData")}} 对象，包含 canvas 给定的矩形图像数据。</p>
+一个{{domxref("ImageData")}} 对象，包含 canvas 给定的矩形图像数据。
 
-<h3 id="错误抛出">错误抛出</h3>
+### 错误抛出
 
-<dl>
- <dt><code>IndexSizeError</code></dt>
- <dd>如果高度或者宽度变量为 0，则抛出错误。</dd>
-</dl>
+- `IndexSizeError`
+  - : 如果高度或者宽度变量为 0，则抛出错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_getImageData_方法">使用 <code>getImageData</code> 方法</h3>
+### 使用 `getImageData` 方法
 
-<p>这是一段使用 <code>getImageData</code> 方法的简单的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制 </a>和 {{domxref("ImageData")}} 对象。</p>
+这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制 ](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6] notranslate">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 console.log(ctx.getImageData(50, 50, 100, 100));
 // ImageData { width: 100, height: 100, data: Uint8ClampedArray[40000] }
-</pre>
+```
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CanvasRenderingContext2D.getImageData")}}
 
+### 兼容性注解
 
-<p>{{Compat("api.CanvasRenderingContext2D.getImageData")}}</p>
+- 从 {{Gecko("5.0")}}开始， `getImageData()` 可以正确地接受超出 canvas 边界的矩形；canvas 范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。
 
-<h3 id="兼容性注解">兼容性注解</h3>
+## 参见
 
-<ul>
- <li>从 {{Gecko("5.0")}}开始， <code>getImageData()</code> 可以正确地接受超出 canvas 边界的矩形；canvas 范围外的像素返回值是透明的，并且如果矩形小于一个像素，会返回至少一像素值的图像数据。</li>
-</ul>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation with canvas</a></li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

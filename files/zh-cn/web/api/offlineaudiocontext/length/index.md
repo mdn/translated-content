@@ -3,22 +3,24 @@ title: OfflineAudoContext.length
 slug: Web/API/OfflineAudioContext/length
 translation_of: Web/API/OfflineAudioContext/length
 ---
-<p>{{SeeCompatTable}}{{ APIRef("Web Audio API") }}</p>
+{{SeeCompatTable}}{{ APIRef("Web Audio API") }}
 
-<p>{{domxref("OfflineAudioContext")}} 接口的 <strong><code>length</code></strong> 属性返回一个代表采样帧的缓冲区大小的整数。</p>
+{{domxref("OfflineAudioContext")}} 接口的 **`length`** 属性返回一个代表采样帧的缓冲区大小的整数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var length = OfflineAudioContext.length;</pre>
+```plain
+var length = OfflineAudioContext.length;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个代表采样帧的缓冲区大小的整数。</p>
+一个代表采样帧的缓冲区大小的整数。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.OfflineAudioContext.length")}}

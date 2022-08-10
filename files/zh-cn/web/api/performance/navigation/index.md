@@ -7,26 +7,26 @@ tags:
   - Performance
 translation_of: Web/API/Performance/navigation
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>只读属性 <code><strong>Performance</strong></code><strong><code>.navigation </code></strong>会返回一个 {{domxref("PerformanceNavigation")}} 对象。这个对象表示出现在当前浏览上下文的 navigation 类型，比如获取某个资源所需要的重定向次数。</p>
+只读属性 **`Performance.navigation`** 会返回一个 {{domxref("PerformanceNavigation")}} 对象。这个对象表示出现在当前浏览上下文的 navigation 类型，比如获取某个资源所需要的重定向次数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>navObject</em> = <em>performance</em>.navigation;</pre>
+```plain
+navObject = performance.navigation;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>因为 <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing 规范</a>已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。</p>
+因为 [Navigation Timing 规范](https://w3c.github.io/navigation-timing/#obsolete)已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>这个功能属于接口 {{domxref("Performance")}} .</li>
-</ul>
+- 这个功能属于接口 {{domxref("Performance")}} .

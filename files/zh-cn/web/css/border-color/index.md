@@ -3,97 +3,98 @@ title: border-color
 slug: Web/CSS/border-color
 translation_of: Web/CSS/border-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概括">概括</h2>
+## 概括
 
-<p><code>CSS属性</code> <strong><code>border-color</code></strong> 是一个用于设置元素四个边框颜色的快捷属性： {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}</p>
+`CSS属性` **`border-color`** 是一个用于设置元素四个边框颜色的快捷属性： {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* border-color: <em>color;</em> 单值语法 */
+```css
+/* border-color: color; 单值语法 */
 border-color: red;
 
-/* border-color: <em>vertical horizontal;</em> 双值语法*/
+/* border-color: vertical horizontal; 双值语法*/
 border-color: red #f015ca;
 
-/* border-color: <em>top horizontal bottom; 三值语法</em> */
+/* border-color: top horizontal bottom; 三值语法 */
 border-color: red yellow green;
 
-/* border-color: <em>top right bottom left; 四值语法</em> */
+/* border-color: top right bottom left; 四值语法 */
 border-color: red yellow green blue;
 
 border-color: inherit
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>color</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示四个边框的颜色，仅用于单值语法。</dd>
- <dt><code>horizontal</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示水平（左边框和右边框）边框的颜色，仅用于双值语法。</dd>
- <dt><code>vertical</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示垂直（上边框和下边框）边框的颜色，仅用于双值或三值语法。</dd>
- <dt><code>top</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示上边框的颜色，仅用于三值或四值语法。</dd>
- <dt><code>bottom</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示下边框的颜色，仅用于三值或四值语法。</dd>
- <dt><code>right</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示右边框的颜色，仅用于四值语法。</dd>
- <dt><code>left</code></dt>
- <dd>使用 {{cssxref("&lt;color&gt;")}} 来表示左边框的颜色，仅用于四值语法。</dd>
- <dt><code>inherit</code></dt>
- <dd>这是一个关键词，用于指示四边的颜色值均继承自父元素的计算值。</dd>
-</dl>
+- `color`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示四个边框的颜色，仅用于单值语法。
+- `horizontal`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示水平（左边框和右边框）边框的颜色，仅用于双值语法。
+- `vertical`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示垂直（上边框和下边框）边框的颜色，仅用于双值或三值语法。
+- `top`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示上边框的颜色，仅用于三值或四值语法。
+- `bottom`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示下边框的颜色，仅用于三值或四值语法。
+- `right`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示右边框的颜色，仅用于四值语法。
+- `left`
+  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示左边框的颜色，仅用于四值语法。
+- `inherit`
+  - : 这是一个关键词，用于指示四边的颜色值均继承自父元素的计算值。
 
-<h3 id="语法定义">语法定义</h3>
+### 语法定义
 
 {{csssyntax}}
 
-<h2 id="Complete_border-color_usage2">Complete_border-color_usage2</h2>
+## Complete_border-color_usage2
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="justone"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: red;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: red;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="horzvert"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: gold red;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: red;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="topvertbott"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: red cyan gold;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: cyan;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: gold;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: cyan;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id="trbl"&gt;
-  &lt;p&gt;&lt;code&gt;border-color: cyan black gold;&lt;/code&gt; is equivalent to&lt;/p&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;code&gt;border-top-color: red;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-right-color: cyan;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-bottom-color: black;&lt;/code&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;code&gt;border-left-color: gold;&lt;/code&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="justone">
+  <p><code>border-color: red;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: red;</code></li>
+    <li><code>border-bottom-color: red;</code></li>
+    <li><code>border-left-color: red;</code></li>
+  </ul>
+</div>
+<div id="horzvert">
+  <p><code>border-color: gold red;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: gold;</code></li>
+    <li><code>border-right-color: red;</code></li>
+    <li><code>border-bottom-color: gold;</code></li>
+    <li><code>border-left-color: red;</code></li>
+  </ul>
+</div>
+<div id="topvertbott">
+  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: cyan;</code></li>
+    <li><code>border-bottom-color: gold;</code></li>
+    <li><code>border-left-color: cyan;</code></li>
+  </ul>
+</div>
+<div id="trbl">
+  <p><code>border-color: cyan black gold;</code> is equivalent to</p>
+  <ul><li><code>border-top-color: red;</code></li>
+    <li><code>border-right-color: cyan;</code></li>
+    <li><code>border-bottom-color: black;</code></li>
+    <li><code>border-left-color: gold;</code></li>
+  </ul>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#justone {
+```css
+#justone {
   border-color: red;
 }
 
@@ -120,21 +121,19 @@ ul {
   margin: 0;
   list-style: none;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Complete_border-color_usage2', 600, 300) }}</p>
+{{ EmbedLiveSample('Complete_border-color_usage2', 600, 300) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="其他参考">其他参考</h2>
+## 其他参考
 
-<ul>
- <li>与 border-color 相关的 CSS 属性：{{Cssxref("border")}}, {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}},</li>
- <li>与边框相关的其他 CSS 属性：{{Cssxref("border-width")}}, {{Cssxref("border-style")}}</li>
-</ul>
+- 与 border-color 相关的 CSS 属性：{{Cssxref("border")}}, {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}},
+- 与边框相关的其他 CSS 属性：{{Cssxref("border-width")}}, {{Cssxref("border-style")}}

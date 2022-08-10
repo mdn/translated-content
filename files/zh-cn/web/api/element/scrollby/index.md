@@ -9,49 +9,47 @@ tags:
   - scrollBy
 translation_of: Web/API/Element/scrollBy
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p> <strong><code>scrollBy()</code></strong> 方法是使得元素滚动一段特定距离的 {{domxref("Element")}} 接口。</p>
+**`scrollBy()`** 方法是使得元素滚动一段特定距离的 {{domxref("Element")}} 接口。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">element.scrollBy(<em>x-coord</em>, <em>y-coord</em>);
+```plain
+element.scrollBy(x-coord, y-coord);
 element.scrollBy(options)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>x-coord</code> 是元素要在横轴上滚动的距离。</li>
- <li><code>y-coord</code> 是元素要在纵轴上滚动的距离。</li>
-</ul>
+- `x-coord` 是元素要在横轴上滚动的距离。
+- `y-coord` 是元素要在纵轴上滚动的距离。
 
-<p>- or -</p>
+\- or -
 
-<ul>
- <li><code>options</code> 是一个 {{domxref("ScrollToOptions")}} 字典。</li>
-</ul>
+- `options` 是一个 {{domxref("ScrollToOptions")}} 字典。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">// 让元素滚动
+```js
+// 让元素滚动
 element.scrollBy(300, 300);
-</pre>
+```
 
-<p>使用 <code>options</code>:</p>
+使用 `options`:
 
-<pre class="brush: js">element.scrollBy({
+```js
+element.scrollBy({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性"> 浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.scrollBy")}}</p>
+{{Compat("api.Element.scrollBy")}}

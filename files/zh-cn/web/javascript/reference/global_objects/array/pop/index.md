@@ -9,59 +9,58 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>pop()</strong></code> 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。</p>
+**`pop()`** 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
 
-<div>{{EmbedInteractiveExample("pages/js/array-pop.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-pop.html")}}
 
+## 语法
 
+```plain
+arr.pop()
+```
 
-<h2 id="Syntax">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><em>arr</em>.pop()</code></pre>
+从数组中删除的元素（当数组为空时返回{{jsxref("undefined")}}）。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>从数组中删除的元素（当数组为空时返回{{jsxref("undefined")}}）。</p>
+`pop` 方法从一个数组中删除并返回最后一个元素。
 
-<h2 id="Description">描述</h2>
+`pop` 方法有意具有通用性。该方法和 {{jsxref("Function.call", "call()")}} 或 {{jsxref("Function.apply", "apply()")}} 一起使用时，可应用在类似数组的对象上。`pop` 方法根据 `length` 属性来确定最后一个元素的位置。如果不包含 `length` 属性或 `length` 属性不能被转成一个数值，会将 `length` 置为 0，并返回 `undefined`。
 
-<p><code>pop</code> 方法从一个数组中删除并返回最后一个元素。</p>
+如果你在一个空数组上调用 `pop()`，它将返回 {{jsxref("undefined")}}。
 
-<p><code>pop</code> 方法有意具有通用性。该方法和 {{jsxref("Function.call", "call()")}} 或 {{jsxref("Function.apply", "apply()")}} 一起使用时，可应用在类似数组的对象上。<code>pop</code> 方法根据 <code>length</code> 属性来确定最后一个元素的位置。如果不包含 <code>length</code> 属性或 <code>length</code> 属性不能被转成一个数值，会将 <code>length</code> 置为 0，并返回 <code>undefined</code>。</p>
+## 示例
 
-<p>如果你在一个空数组上调用 <code>pop()</code>，它将返回 {{jsxref("undefined")}}。</p>
+### 删除掉数组的最后一个元素
 
-<h2 id="Example">示例</h2>
+下面的代码首先创建了一个拥有四个元素的数组 `myFish`，然后删除掉它的最后一个元素。
 
-<h3 id="Example:_Removing_the_last_element_of_an_array">删除掉数组的最后一个元素</h3>
-
-<p>下面的代码首先创建了一个拥有四个元素的数组 <code>myFish</code>，然后删除掉它的最后一个元素。</p>
-
-<pre class="brush:js">const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+```js
+const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 
 const popped = myFish.pop();
 
 console.log(myFish); // ['angel', 'clown', 'mandarin']
 
 console.log(popped); // 'sturgeon'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Array.prototype.splice()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

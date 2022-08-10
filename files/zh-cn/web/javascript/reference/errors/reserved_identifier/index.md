@@ -7,73 +7,74 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息提示">消息提示</h2>
+## 消息提示
 
-<pre class="syntaxbox">SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)</pre>
+```plain
+SyntaxError: "x" is a reserved identifier (Firefox)
+SyntaxError: Unexpected reserved word (Chrome)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">保留字</a> 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：</p>
+[保留字](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 用作标记符将会出错。这些标记符在严格模式和非严格模式下保留：
 
-<ul>
- <li><code>enum</code></li>
-</ul>
+- `enum`
 
-<p>以下标记符只会在严格模式下才作为保留字：</p>
+以下标记符只会在严格模式下才作为保留字：
 
-<ul class="threecolumns">
- <li><code>implements</code></li>
- <li><code>interface</code></li>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li><code>package</code></li>
- <li><code>private</code></li>
- <li><code>protected</code></li>
- <li><code>public</code></li>
- <li><code>static</code></li>
-</ul>
+- `implements`
+- `interface`
+- {{jsxref("Statements/let", "let")}}
+- `package`
+- `private`
+- `protected`
+- `public`
+- `static`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="严格与非严格模式下的保留字">严格与非严格模式下的保留字</h3>
+### 严格与非严格模式下的保留字
 
-<p>在两种模式下，<code>enum</code> 标识符都会作为保留字。</p>
+在两种模式下，`enum` 标识符都会作为保留字。
 
-<pre class="brush: js example-bad">var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+```js example-bad
+var enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
-</pre>
+```
 
-<p>在严格模式下，会有更多的保留字。</p>
+在严格模式下，会有更多的保留字。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var package = ["potatoes", "rice", "fries"];
 // SyntaxError: package is a reserved identifier
-</pre>
+```
 
-<p>你需要对上述变量重新命名。</p>
+你需要对上述变量重新命名。
 
-<pre class="brush: js example-good">var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];</pre>
+```js example-good
+var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
+var list = ["potatoes", "rice", "fries"];
+```
 
-<h3 id="升级旧版本浏览器">升级旧版本浏览器</h3>
+### 升级旧版本浏览器
 
-<p>假如你还在使用尚未支持 let 或 class 等特性的旧版本浏览器，你应该将它们升级到支持这些新语言特性的版本。</p>
+假如你还在使用尚未支持 let 或 class 等特性的旧版本浏览器，你应该将它们升级到支持这些新语言特性的版本。
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 class DocArchiver {}
 
 // SyntaxError: class is a reserved identifier
 //（只会在旧版本浏览器中抛出，例如 Firefox 44 或更老的版本）
-</pre>
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="http://wiki.c2.com/?GoodVariableNames">Good variable names</a></li>
-</ul>
+- [Good variable names](http://wiki.c2.com/?GoodVariableNames)

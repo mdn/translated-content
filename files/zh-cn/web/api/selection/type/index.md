@@ -3,51 +3,46 @@ title: Selection.type
 slug: Web/API/Selection/type
 translation_of: Web/API/Selection/type
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p><code><strong>type</strong></code>是 {{domxref("Selection")}} 接口的只读属性，其返回的是{{domxref("DOMString")}}即描述当前选择的类型 。</p>
+**`type`**是 {{domxref("Selection")}} 接口的只读属性，其返回的是{{domxref("DOMString")}}即描述当前选择的类型 。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>value</em> =<em> sel</em>.type
-</pre>
+```plain
+value = sel.type
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{domxref("DOMString")}} 描述的是当前选择的类型。可能的值为：</p>
+{{domxref("DOMString")}} 描述的是当前选择的类型。可能的值为：
 
-<ul>
- <li><code>None</code>: 当前没有选择。</li>
- <li><code>Caret</code>: 选区已折叠（即 光标在字符之间，并未处于选中状态）。</li>
- <li><code>Range</code>: 选择的是一个范围。</li>
-</ul>
+- `None`: 当前没有选择。
+- `Caret`: 选区已折叠（即 光标在字符之间，并未处于选中状态）。
+- `Range`: 选择的是一个范围。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的示例中，回调函数将在每次进行新的选择时触发。 <code>console.log(selection.type)</code> 将会输出 <code>Caret</code> 或者 <code>Range</code> ，其输出值取决于插入标记是放置在文本中的单个点还是已选择范围。</p>
+在下面的示例中，回调函数将在每次进行新的选择时触发。 `console.log(selection.type)` 将会输出 `Caret` 或者 `Range` ，其输出值取决于插入标记是放置在文本中的单个点还是已选择范围。
 
-<pre class="syntaxbox notranslate">var selection;
+```plain
+var selection;
 
 document.onselectionchange = function() {
   console.log('New selection made');
   selection = document.getSelection();
   console.log(selection.type);
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Selection.type")}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{domxref("Selection")}}

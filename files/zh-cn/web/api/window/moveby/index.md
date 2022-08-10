@@ -3,47 +3,53 @@ title: Window.moveBy()
 slug: Web/API/Window/moveBy
 translation_of: Web/API/Window/moveBy
 ---
-<div>
- {{APIRef}}</div>
-<h2 id="概述">概述</h2>
-<p>根据指定的值，移动当前窗口。</p>
-<h2 id="语法">语法</h2>
-<pre class="syntaxbox">window.moveBy(<em>deltaX</em>, <em>deltaY</em>)
-</pre>
-<h3 id="参数">参数</h3>
-<ul>
- <li><code>deltaX</code> 表示窗口在水平方向移动的像素值。</li>
- <li><code>deltaY</code> 表示窗口在垂直方向移动的像素值。</li>
-</ul>
-<h2 id="示例">示例</h2>
-<pre class="brush:js">function budge() {
-  moveBy(10, -10);
-}</pre>
-<h2 id="备注">备注</h2>
-<p>可以使用负值作为该函数的参数。该函数产生相对移动，而 {{domxref("window.moveTo")}} 产生一个绝对移动。</p>
-<p>从 Firefox 7 开始，依据<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">下面的规则</a>，不能再移动一个浏览器里的窗口。</p>
-<ol>
- <li>不能移动非 window.open 创建的窗口或 Tab。</li>
- <li>当一个窗口里有多于一个 Tab 时，不能移动该窗口。</li>
-</ol>
+{{APIRef}}
 
-<h2 id="规范">规范</h2>
+## 概述
+
+根据指定的值，移动当前窗口。
+
+## 语法
+
+```plain
+window.moveBy(deltaX, deltaY)
+```
+
+### 参数
+
+- `deltaX` 表示窗口在水平方向移动的像素值。
+- `deltaY` 表示窗口在垂直方向移动的像素值。
+
+## 示例
+
+```js
+function budge() {
+  moveBy(10, -10);
+}
+```
+
+## 备注
+
+可以使用负值作为该函数的参数。该函数产生相对移动，而 {{domxref("window.moveTo")}} 产生一个绝对移动。
+
+从 Firefox 7 开始，依据[下面的规则](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)，不能再移动一个浏览器里的窗口。
+
+1.  不能移动非 window\.open 创建的窗口或 Tab。
+2.  当一个窗口里有多于一个 Tab 时，不能移动该窗口。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<p>从 Firefox 7 开始，网站在<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">以下情况下</a>将不能再移动浏览器窗口。</p>
+从 Firefox 7 开始，网站在[以下情况下](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)将不能再移动浏览器窗口。
 
-<ol>
- <li>不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。</li>
- <li>当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。</li>
-</ol>
+1.  不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。
+2.  当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("window.moveTo()")}}</li>
-</ul>
+- {{domxref("window.moveTo()")}}

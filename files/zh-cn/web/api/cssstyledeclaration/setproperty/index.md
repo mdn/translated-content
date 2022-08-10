@@ -3,56 +3,54 @@ title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 translation_of: Web/API/CSSStyleDeclaration/setProperty
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSStyleDeclaration.setProperty()</code></strong> 方法接口为一个声明了 CSS 样式的对象设置一个新的值 。</p>
+**`CSSStyleDeclaration.setProperty()`** 方法接口为一个声明了 CSS 样式的对象设置一个新的值 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><em>style</em>.setProperty(<em>propertyName</em>, <em>value, priority</em>);</pre>
+```plain
+style.setProperty(propertyName, value, priority);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><em><code>propertyName</code></em> 是一个 {{domxref('DOMString')}} ，代表被更改的 CSS 属性。</li>
- <li><em><code>value</code></em>{{optional_inline}} 是一个 {{domxref('DOMString')}} ，含有新的属性值。如果没有指定，则当作空字符串。
-  <ul>
-   <li>注意: <em><code>value</code></em> 不能包含 <code>"!important"</code> --那个应该使用 <em><code>priority</code></em> 参数。</li>
-  </ul>
- </li>
- <li><em><code>priority</code></em>{{optional_inline}} 是一个 {{domxref('DOMString')}} 允许设置 "important" CSS 优先级。如果没有指定，则当作空字符串。</li>
-</ul>
+- _`propertyName`_ 是一个 {{domxref('DOMString')}} ，代表被更改的 CSS 属性。
+- _`value`_{{optional_inline}} 是一个 {{domxref('DOMString')}} ，含有新的属性值。如果没有指定，则当作空字符串。
 
-<h3 id="返回值">返回值</h3>
+  - 注意: _`value`_ 不能包含 `"!important"` --那个应该使用 _`priority`_ 参数。
 
-<ul>
- <li>{{jsxref('undefined')}}</li>
-</ul>
+- _`priority`_{{optional_inline}} 是一个 {{domxref('DOMString')}} 允许设置 "important" CSS 优先级。如果没有指定，则当作空字符串。
 
-<h3 id="异常">异常</h3>
+### 返回值
 
-<ul>
- <li>{{domxref('DOMException')}} (NoModificationAllowedError)： 如果属性或装饰块为只读的，抛出此异常。</li>
-</ul>
+- {{jsxref('undefined')}}
 
-<p>JavaScript 有一个特别的，更简单的在 CSSStyleDeclaration 对象上设置 CSS 属性值的语法：</p>
+### 异常
 
-<pre class="syntaxbox"><em>style</em>.cssPropertyName = 'value';</pre>
+- {{domxref('DOMException')}} (NoModificationAllowedError)： 如果属性或装饰块为只读的，抛出此异常。
 
-<h2 id="示例">示例</h2>
+JavaScript 有一个特别的，更简单的在 CSSStyleDeclaration 对象上设置 CSS 属性值的语法：
 
-<p>下面的 Javascript 代码为一个选中元素样式的 <code>margin</code> 属性设置一个新的值：</p>
+```plain
+style.cssPropertyName = 'value';
+```
 
-<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
+## 示例
+
+下面的 Javascript 代码为一个选中元素样式的 `margin` 属性设置一个新的值：
+
+```js
+var declaration = document.styleSheets[0].rules[0].style;
 declaration.setProperty('margin', '1px 2px');
 // Equivalent to:
 // declaration.margin = '1px 2px';
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

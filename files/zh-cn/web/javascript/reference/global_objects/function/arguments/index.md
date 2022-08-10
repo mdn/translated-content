@@ -3,25 +3,26 @@ title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code>function.arguments</code> 属性代表传入函数的实参，它是一个类数组对象。</p>
+`function.arguments` 属性代表传入函数的实参，它是一个类数组对象。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><em>function</em>.arguments</code> 已经被废弃了，现在推荐的做法是使用函数内部可用的 {{jsxref("Functions/arguments", "arguments")}} 对象来访问函数的实参。</p>
+`function.arguments` 已经被废弃了，现在推荐的做法是使用函数内部可用的 {{jsxref("Functions/arguments", "arguments")}} 对象来访问函数的实参。
 
-<p>在函数递归调用的时候（在某一刻同一个函数运行了多次，也就是有多套实参），那么 <code>arguments</code> 属性的值是最近一次该函数调用时传入的实参，下面的示例有演示。</p>
+在函数递归调用的时候（在某一刻同一个函数运行了多次，也就是有多套实参），那么 `arguments` 属性的值是最近一次该函数调用时传入的实参，下面的示例有演示。
 
-<p>如果函数不在执行期间，那么该函数的 <code>arguments</code> 属性的值是 <code>null</code>。</p>
+如果函数不在执行期间，那么该函数的 `arguments` 属性的值是 `null`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">function f(n) { g(n - 1); }
+```js
+function f(n) { g(n - 1); }
 
 function g(n) {
   console.log('before: ' + g.arguments[0]);
-  if (n &gt; 0) { f(n); }
+  if (n > 0) { f(n); }
   console.log('after: ' + g.arguments[0]);
 }
 
@@ -36,19 +37,17 @@ console.log('函数退出后的 arguments 属性值：' + g.arguments);
 // after: 0
 // after: 1
 // 函数退出后的 arguments 属性值：null
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何规范。已弃用，推荐使用 ECMAScript 3 的 {{jsxref("Functions/arguments", "arguments")}}。</p>
+不属于任何规范。已弃用，推荐使用 ECMAScript 3 的 {{jsxref("Functions/arguments", "arguments")}}。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Functions/arguments", "arguments")}}</li>
- <li>{{jsxref("Functions", "函数和函数的作用域", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/arguments", "arguments")}}
+- {{jsxref("Functions", "函数和函数的作用域", "", 1)}}

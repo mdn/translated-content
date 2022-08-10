@@ -10,44 +10,44 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <code><strong>keys() </strong></code>方法返回一个包含数组中每个索引键的<code><strong>Array Iterator</strong></code>对象。</p>
+**`keys() `**方法返回一个包含数组中每个索引键的**`Array Iterator`**对象。
 
-<div>{{EmbedInteractiveExample("pages/js/array-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-keys.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>arr</var>.keys()</code>
-</pre>
+```plain
+arr.keys()
+```
 
-<h3 id="返回值">返回值 </h3>
+### 返回值
 
-<p>一个新的 {{jsxref("Array")}} 迭代器对象。</p>
+一个新的 {{jsxref("Array")}} 迭代器对象。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="索引迭代器会包含那些没有对应元素的索引">索引迭代器会包含那些没有对应元素的索引</h3>
+### 索引迭代器会包含那些没有对应元素的索引
 
-<pre class="brush: js">var arr = ["a", , "c"];
+```js
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
 console.log(denseKeys);  // [0, 1, 2]
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

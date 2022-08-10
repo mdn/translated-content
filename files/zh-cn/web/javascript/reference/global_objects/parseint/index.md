@@ -6,81 +6,74 @@ tags:
   - parseInt()
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<p><strong>parseInt(<em>string</em>, <em>radix</em>) </strong> 解析一个字符串并返回指定基数的十进制整数，<code>radix</code> 是 2-36 之间的整数，表示被解析字符串的基数。</p>
+**parseInt(_string_, _radix_)** 解析一个字符串并返回指定基数的十进制整数，`radix` 是 2-36 之间的整数，表示被解析字符串的基数。
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">parseInt(<em>string</em>, <em>radix</em>);</pre>
+```plain
+parseInt(string, radix);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>string</code></dt>
- <dd>要被解析的值。如果参数不是一个字符串，则将其转换为字符串 (使用 <code><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-tostring">ToString</a></code>抽象操作)。字符串开头的空白符将会被忽略。</dd>
- <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
- <dd>从 <code>2</code> 到 <code>36</code> 的整数，表示进制的基数。例如指定 <code>16</code> 表示被解析值是十六进制数。如果超出这个范围，将返回 <code>NaN</code>。假如指定 <code>0</code> 或未指定，基数将会根据字符串的值进行推算。注意，推算的结果不会永远是默认值 <code>10</code>！文章后面的描述解释了当参数 <code>radix</code> 不传时该函数的具体行为。</dd>
-</dl>
+- `string`
+  - : 要被解析的值。如果参数不是一个字符串，则将其转换为字符串 (使用 [`ToString`](http://www.ecma-international.org/ecma-262/6.0/#sec-tostring)抽象操作)。字符串开头的空白符将会被忽略。
+- `radix`_ {{optional_inline}}_
+  - : 从 `2` 到 `36` 的整数，表示进制的基数。例如指定 `16` 表示被解析值是十六进制数。如果超出这个范围，将返回 `NaN`。假如指定 `0` 或未指定，基数将会根据字符串的值进行推算。注意，推算的结果不会永远是默认值 `10`！文章后面的描述解释了当参数 `radix` 不传时该函数的具体行为。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>从给定的字符串中解析出的一个整数。</p>
+从给定的字符串中解析出的一个整数。
 
-<p>或者 {{jsxref("NaN")}}，当</p>
+或者 {{jsxref("NaN")}}，当
 
-<ul>
- <li><code>radix</code> 小于 <code>2</code> 或大于 <code>36</code>，或</li>
- <li>第一个非空格字符不能转换为数字。</li>
-</ul>
+- `radix` 小于 `2` 或大于 `36`，或
+- 第一个非空格字符不能转换为数字。
 
-<pre>parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 =&gt; 1*5^2 + 2*5^1 + 3*5^0 = 38</pre>
+```plain
+parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 => 1*5^2 + 2*5^1 + 3*5^0 = 38
+```
 
-<h2 id="描述_2">描述</h2>
+## 描述
 
-<p><code>parseInt</code>函数将其第一个参数转换为一个字符串，对该字符串进行解析，然后返回一个整数或 <code>NaN</code>。</p>
+`parseInt`函数将其第一个参数转换为一个字符串，对该字符串进行解析，然后返回一个整数或 `NaN`。
 
-<p>如果不是 <code>NaN</code>，返回值将是以第一个参数作为指定基数 radix 的转换后的十进制整数。(例如，<code>radix</code> 为 <code>10</code>，就是可以转换十进制数，为 <code>8</code> 可以转换八进制数 "07"，<code>16</code>可以转换十六进制数"0xff"，以此类推)。</p>
+如果不是 `NaN`，返回值将是以第一个参数作为指定基数 radix 的转换后的十进制整数。(例如，`radix` 为 `10`，就是可以转换十进制数，为 `8` 可以转换八进制数 "07"，`16`可以转换十六进制数"0xff"，以此类推)。
 
-<p>对于 <code>radix</code> 为 <code>10</code> 以上的，英文字母表示大于 <code>9</code> 的数字。例如，对于十六进制数（基数 <code>16</code>），则使用 <code>A</code> 到 <code>F</code>。</p>
+对于 `radix` 为 `10` 以上的，英文字母表示大于 `9` 的数字。例如，对于十六进制数（基数 `16`），则使用 `A` 到 `F`。
 
-<p>如果 <code>parseInt</code> 遇到的字符不是指定 <code>radix</code> 参数中的数字，它将忽略该字符以及所有后续字符，并返回到该点为止已解析的整数值。<code>parseInt</code> 将数字截断为整数值。允许前导和尾随空格。</p>
+如果 `parseInt` 遇到的字符不是指定 `radix` 参数中的数字，它将忽略该字符以及所有后续字符，并返回到该点为止已解析的整数值。`parseInt` 将数字截断为整数值。允许前导和尾随空格。
 
-<p>由于某些数字在其字符串表示形式中使用 e 字符（例如 <code>6.022×23</code> 表示 <code>6.022e23</code> ），因此当对非常大或非常小的数字使用数字时，使用 <code>parseInt</code> 截断数字将产生意外结果。<code>parseInt</code>不应替代 {{jsxref("Math.floor()")}}。</p>
+由于某些数字在其字符串表示形式中使用 e 字符（例如 `6.022×23` 表示 `6.022e23` ），因此当对非常大或非常小的数字使用数字时，使用 `parseInt` 截断数字将产生意外结果。`parseInt`不应替代 {{jsxref("Math.floor()")}}。
 
-<p><code>parseInt</code> 可以理解两个符号。<code>+</code> 表示正数，<code>-</code> 表示负数（从 ECMAScript 1 开始）。它是在去掉空格后作为解析的初始步骤进行的。如果没有找到符号，算法将进入下一步；否则，它将删除符号，并对字符串的其余部分进行数字解析。</p>
+`parseInt` 可以理解两个符号。`+` 表示正数，`-` 表示负数（从 ECMAScript 1 开始）。它是在去掉空格后作为解析的初始步骤进行的。如果没有找到符号，算法将进入下一步；否则，它将删除符号，并对字符串的其余部分进行数字解析。
 
-<p>如果 <code>radix</code> 是 <code>undefined</code>、<code>0</code> 或未指定的，JavaScript 会假定以下情况：</p>
+如果 `radix` 是 `undefined`、`0` 或未指定的，JavaScript 会假定以下情况：
 
-<ol>
- <li>如果输入的 <code>string</code> 以 <code>0x</code> 或 <code>0X</code>（一个 0，后面是小写或大写的 X）开头，那么 radix 被假定为 16，字符串的其余部分被当做十六进制数去解析。</li>
- <li>如果输入的 <code>string</code> 以 "<code>0</code>"（0）开头，<code>radix</code> 被假定为 <code>8</code>（八进制）或 <code>10</code>（十进制）。具体选择哪一个 radix 取决于实现。ECMAScript 5 澄清了应该使用 10 (十进制)，但不是所有的浏览器都支持。<strong>因此，在使用 <code>parseInt</code> 时，一定要指定一个 radix</strong>。</li>
- <li>如果输入的 <code>string</code> 以任何其他值开头，<code>radix</code> 是 <code>10</code> (十进制)。</li>
-</ol>
+1.  如果输入的 `string` 以 `0x` 或 `0X`（一个 0，后面是小写或大写的 X）开头，那么 radix 被假定为 16，字符串的其余部分被当做十六进制数去解析。
+2.  如果输入的 `string` 以 "`0`"（0）开头，`radix` 被假定为 `8`（八进制）或 `10`（十进制）。具体选择哪一个 radix 取决于实现。ECMAScript 5 澄清了应该使用 10 (十进制)，但不是所有的浏览器都支持。**因此，在使用 `parseInt` 时，一定要指定一个 radix**。
+3.  如果输入的 `string` 以任何其他值开头，`radix` 是 `10` (十进制)。
 
-<p>如果第一个字符不能转换为数字，<code>parseInt</code> 会返回 <code>NaN</code>。</p>
+如果第一个字符不能转换为数字，`parseInt` 会返回 `NaN`。
 
-<p>为了算术的目的，<code>NaN</code> 值不能作为任何 <code>radix</code> 的数字。你可以调用 {{jsxref("isNaN")}} 函数来确定 <code>parseInt</code> 的结果是否为 <code>NaN</code>。如果将 NaN 传递给算术运算，则运算结果也将是 <code>NaN</code>。</p>
+为了算术的目的，`NaN` 值不能作为任何 `radix` 的数字。你可以调用 {{jsxref("isNaN")}} 函数来确定 `parseInt` 的结果是否为 `NaN`。如果将 NaN 传递给算术运算，则运算结果也将是 `NaN`。
 
-<p>要将一个数字转换为特定的 <code>radix</code> 中的字符串字段，请使用 <code>thatNumber.toString(radix)</code> 函数。</p>
+要将一个数字转换为特定的 `radix` 中的字符串字段，请使用 `thatNumber.toString(radix)` 函数。
 
-<div class="warning">
-<p><strong>警告：</strong>{{jsxref("BigInt")}}。警告：<code>parseInt</code> 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。</p>
-</div>
+> **警告：**{{jsxref("BigInt")}}。警告：`parseInt` 将 {{jsxref("BigInt")}} 转换为 {{jsxref("Number")}}，并在这个过程中失去了精度。这是因为拖尾的非数字值，包括 "n"，会被丢弃。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="例子：使用_parseInt">例子：使用 <code>parseInt</code></h3>
+### 例子：使用 `parseInt`
 
-<p>以下例子均返回<code>15</code>:</p>
+以下例子均返回`15`:
 
-<pre class="brush: js">parseInt("0xF", 16);
+```js
+parseInt("0xF", 16);
 parseInt("F", 16);
 parseInt("17", 8);
 parseInt(021, 8);
@@ -92,17 +85,20 @@ parseInt("1111", 2);
 parseInt("15 * 3", 10);
 parseInt("15e2", 10);
 parseInt("15px", 10);
-parseInt("12", 13);</pre>
+parseInt("12", 13);
+```
 
-<p>以下例子均返回 <code>NaN</code>:</p>
+以下例子均返回 `NaN`:
 
-<pre class="brush: js">parseInt("Hello", 8); // 根本就不是数值
+```js
+parseInt("Hello", 8); // 根本就不是数值
 parseInt("546", 2);   // 除了 “0、1” 外，其它数字都不是有效二进制数字
-</pre>
+```
 
-<p>以下例子均返回 <code>-15</code>：</p>
+以下例子均返回 `-15`：
 
-<pre class="brush: js">parseInt("-F", 16);
+```js
+parseInt("-F", 16);
 parseInt("-0F", 16);
 parseInt("-0XF", 16);
 parseInt(-15.1, 10);
@@ -111,44 +107,50 @@ parseInt(" -15", 10);
 parseInt("-1111", 2);
 parseInt("-15e1", 10);
 parseInt("-12", 13);
-</pre>
+```
 
-<p>下例中全部返回 <code>4</code>:</p>
+下例中全部返回 `4`:
 
-<pre class="brush: js">parseInt(4.7, 10);
+```js
+parseInt(4.7, 10);
 parseInt(4.7 * 1e22, 10); // 非常大的数值变成 4
-parseInt(0.00000000000434, 10); // 非常小的数值变成 4</pre>
+parseInt(0.00000000000434, 10); // 非常小的数值变成 4
+```
 
-<p>下面的例子返回 <code>224</code></p>
+下面的例子返回 `224`
 
-<pre class="brush: js">parseInt("0e0",16);</pre>
+```js
+parseInt("0e0",16);
+```
 
-<h2 id="没有指定_radix_参数时的八进制解析">没有指定 <code>radix</code> 参数时的八进制解析</h2>
+## 没有指定 `radix` 参数时的八进制解析
 
-<p>尽管 ECMAScript 3 已经不赞成这种做法，且 ECMAScript 5 已经禁止了这种做法，但是仍然有很多实现环境仍然把以 0 开头的数值字符串（numeric string）解释为一个八进制数。下面的例子可能返回八进制的结果，也可能返回十进制的结果。<strong>总是指定一个基数（radix）可以避免这种不可靠的行为。</strong></p>
+尽管 ECMAScript 3 已经不赞成这种做法，且 ECMAScript 5 已经禁止了这种做法，但是仍然有很多实现环境仍然把以 0 开头的数值字符串（numeric string）解释为一个八进制数。下面的例子可能返回八进制的结果，也可能返回十进制的结果。**总是指定一个基数（radix）可以避免这种不可靠的行为。**
 
-<pre class="brush: js">parseInt("0e0");
+```js
+parseInt("0e0");
 // 0
 
 parseInt("08");
 // 0, '8' 不是八进制数字。
-</pre>
+```
 
-<h3 id="ECMAScript_5_移除了八进制解析">ECMAScript 5 移除了八进制解析</h3>
+### ECMAScript 5 移除了八进制解析
 
-<p>ECMAScript 5 规范不再允许 <code>parseInt</code> 函数的实现环境把以 <code>0</code> 字符开始的字符串作为八进制数值。ECMAScript 5 陈述如下：</p>
+ECMAScript 5 规范不再允许 `parseInt` 函数的实现环境把以 `0` 字符开始的字符串作为八进制数值。ECMAScript 5 陈述如下：
 
-<p>根据给定 radix，<code>parseInt</code>函数产生一个由字符串参数内容解析过来的整数值。字符串中开头的空白会被忽略。如果 radix 没有指定或者为 0，参数会被假定以 10 为基数来解析，如果数值以字符对 0x 或 0X 开头，会假定以 16 为基数来解析。</p>
+根据给定 radix，`parseInt`函数产生一个由字符串参数内容解析过来的整数值。字符串中开头的空白会被忽略。如果 radix 没有指定或者为 0，参数会被假定以 10 为基数来解析，如果数值以字符对 0x 或 0X 开头，会假定以 16 为基数来解析。
 
-<p>这与 ECMAScript 3 有所不同，ECMAScript 3 仅仅是不提倡这种做法但并没有禁止这种做法。</p>
+这与 ECMAScript 3 有所不同，ECMAScript 3 仅仅是不提倡这种做法但并没有禁止这种做法。
 
-<p>直至 2013 年，很多实现环境并没有采取新的规范所规定的做法，而且由于必须兼容旧版的浏览器，所以<strong>永远都要明确给出 radix 参数的值。</strong></p>
+直至 2013 年，很多实现环境并没有采取新的规范所规定的做法，而且由于必须兼容旧版的浏览器，所以**永远都要明确给出 radix 参数的值。**
 
-<h2 id="一个更严格的解析函数">一个更严格的解析函数</h2>
+## 一个更严格的解析函数
 
-<p>有时采用一个更严格的方法来解析整型值很有用。此时可以使用正则表达式：</p>
+有时采用一个更严格的方法来解析整型值很有用。此时可以使用正则表达式：
 
-<pre class="brush: js">filterInt = function (value) {
+```js
+filterInt = function (value) {
   if(/^(\-|\+)?([0-9]+|Infinity)$/.test(value))
     return Number(value);
   return NaN;
@@ -162,23 +164,21 @@ console.log(filterInt('421e+0'));            // NaN
 console.log(filterInt('421hop'));            // NaN
 console.log(filterInt('hop1.61803398875'));  // NaN
 console.log(filterInt('1.61803398875'));     // NaN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
- <li>{{jsxref("Number.toString()")}}</li>
- <li>{{jsxref("Object.valueOf")}}</li>
-</ul>
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("Number.toString()")}}
+- {{jsxref("Object.valueOf")}}

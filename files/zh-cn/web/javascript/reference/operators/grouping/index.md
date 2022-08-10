@@ -7,27 +7,30 @@ tags:
   - 操作符
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>圆括号运算符 <code>( )</code> 用于控制表达式中的运算优先级。</p>
+圆括号运算符 `( )` 用于控制表达式中的运算优先级。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>译者：下列语法是 MDN 上已知的最简单的之一。</p>
+译者：下列语法是 MDN 上已知的最简单的之一。
 
-<pre class="syntaxbox"> ( )</pre>
+```plain
+ ( )
+```
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p>圆括号运算符由一对圆括号组成，包裹表达式和子表达式用来覆盖常规的<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">运算符优先级</a>，达到低优先级的表达式比高优先级的表达式更早运算。</p>
+圆括号运算符由一对圆括号组成，包裹表达式和子表达式用来覆盖常规的[运算符优先级](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，达到低优先级的表达式比高优先级的表达式更早运算。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码展示了加法运算先于乘法运算的情况。</p>
+下面的代码展示了加法运算先于乘法运算的情况。
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var c = 3;
 
@@ -42,20 +45,18 @@ a + (b * c)   // 7
 
 // which is equivalent to
 a * c + b * c // 9
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">运算符优先级</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Operators/typeof", "typeof")}}</li>
-</ul>
+- [运算符优先级](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/typeof", "typeof")}}

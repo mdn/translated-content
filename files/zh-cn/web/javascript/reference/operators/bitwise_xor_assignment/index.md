@@ -3,26 +3,25 @@ title: 按位异或赋值 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>按位异或赋值操作符 (<code>^=</code>) 使用二进制表示操作数，进行一次按位异或操作并赋值。</p>
+按位异或赋值操作符 (`^=`) 使用二进制表示操作数，进行一次按位异或操作并赋值。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
 
+## 语法
 
+```plain
+Operator: x ^= y
+Meaning:  x  = x ^ y
+```
 
+## 例子
 
+### 使用按位异或赋值
 
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox"><strong>Operator:</strong> x ^= y
-<strong>Meaning:</strong>  x  = x ^ y</pre>
-
-<h2 id="例子">例子</h2>
-
-<h3 id="使用按位异或赋值">使用按位异或赋值</h3>
-
-<pre class="brush: js">let a = 5;      // 00000000000000000000000000000101
+```js
+let a = 5;      // 00000000000000000000000000000101
 a ^= 3;         // 00000000000000000000000000000011
 
 console.log(a); // 00000000000000000000000000000110
@@ -33,22 +32,17 @@ b ^= 0;         // 00000000000000000000000000000000
 
 console.log(b); // 00000000000000000000000000000101
 // 5
+```
 
-
-
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR">Bitwise XOR operator</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

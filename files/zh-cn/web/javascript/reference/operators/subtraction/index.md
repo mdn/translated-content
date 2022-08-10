@@ -3,52 +3,49 @@ title: Subtraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
 translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The subtraction operator (<code>-</code>) subtracts the two operands, producing their difference.</p>
+The subtraction operator (`-`) subtracts the two operands, producing their difference.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
+## 语法
 
+```plain
+Operator: x - y
+```
 
+## Examples
 
+### Subtraction with numbers
 
-<h2 id="语法">语法</h2>
+```js
+5 - 3     // 2
+3 - 5     // -2
+```
 
-<pre class="syntaxbox"><strong>Operator:</strong> <var>x</var> - <var>y</var>
-</pre>
+### Subtraction with non-numbers
 
-<h2 id="Examples">Examples</h2>
+```js
+'foo' - 3 // NaN
+```
 
-<h3 id="Subtraction_with_numbers">Subtraction with numbers</h3>
-
-<pre class="brush: js">5 - 3     // 2
-3 - 5     // -2</pre>
-
-<h3 id="Subtraction_with_non-numbers">Subtraction with non-numbers</h3>
-
-<pre class="brush: js">'foo' - 3 // NaN</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

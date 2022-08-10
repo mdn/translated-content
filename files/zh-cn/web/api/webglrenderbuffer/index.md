@@ -3,44 +3,41 @@ title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
 translation_of: Web/API/WebGLRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderbuffer</strong> 接口是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，它提供了一个用于保存一个图像的缓存，并且可以用于渲染操作的源或者目标。</p>
+**WebGLRenderbuffer** 接口是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它提供了一个用于保存一个图像的缓存，并且可以用于渲染操作的源或者目标。
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><code>WebGLRenderbuffer</code> 对象保存的内容不能被直接访问，因此这个对象没有提供任何用于操作其自身内容的方法和属性。当需要使用 <code>WebGLRenderbuffer</code> 对象的功能时，需要使用 {{domxref("WebGLRenderingContext")}} 对象的以下方法：</p>
+`WebGLRenderbuffer` 对象保存的内容不能被直接访问，因此这个对象没有提供任何用于操作其自身内容的方法和属性。当需要使用 `WebGLRenderbuffer` 对象的功能时，需要使用 {{domxref("WebGLRenderingContext")}} 对象的以下方法：
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="创建一个_render_buffer_对象">创建一个 render buffer 对象</h3>
+### 创建一个 render buffer 对象
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createRenderbuffer();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderbuffer")}}</p>
+{{Compat("api.WebGLRenderbuffer")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
- <li>其他缓冲: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- 其他缓冲: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

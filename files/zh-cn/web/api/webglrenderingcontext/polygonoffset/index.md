@@ -4,54 +4,53 @@ slug: Web/API/WebGLRenderingContext/polygonOffset
 translation_of: Web/API/WebGLRenderingContext/polygonOffset
 original_slug: Web/API/WebGLRenderingContext/多边形偏移 (polygonOffset)
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.polygonOffset()</code></strong> method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the scale factors and units to calculate depth values.</p>
+The **`WebGLRenderingContext.polygonOffset()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the scale factors and units to calculate depth values.
 
-<p>The offset is added before the depth test is performed and before the value is written into the depth buffer.</p>
+The offset is added before the depth test is performed and before the value is written into the depth buffer.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.polygonOffset(<var>factor</var>, <var>units</var>);
-</pre>
+```plain
+void gl.polygonOffset(factor, units);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>factor</dt>
- <dd>A {{domxref("GLfloat")}} which sets the scale factor for the variable depth offset for each polygon. 默认值为 0.</dd>
- <dt>units</dt>
- <dd>A {{domxref("GLfloat")}} which sets the multiplier by which an implementation-specific value is multiplied with to create a constant depth offset. 默认值为 0.</dd>
-</dl>
+- factor
+  - : A {{domxref("GLfloat")}} which sets the scale factor for the variable depth offset for each polygon. 默认值为 0.
+- units
+  - : A {{domxref("GLfloat")}} which sets the multiplier by which an implementation-specific value is multiplied with to create a constant depth offset. 默认值为 0.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>The polygon offset fill is disabled by default. To enable or disable polygon offset fill, use the {{domxref("WebGLRenderingContext.enable", "enable()")}} and {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument <code>gl.POLYGON_OFFSET_FILL</code>.</p>
+The polygon offset fill is disabled by default. To enable or disable polygon offset fill, use the {{domxref("WebGLRenderingContext.enable", "enable()")}} and {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument `gl.POLYGON_OFFSET_FILL`.
 
-<pre class="brush: js">gl.enable(gl.POLYGON_OFFSET_FILL);
+```js
+gl.enable(gl.POLYGON_OFFSET_FILL);
 gl.polygonOffset(2, 3);
-</pre>
+```
 
-<p>想要查看当前多边形偏移的 factor 或 units，查询 <code>POLYGON_OFFSET_FACTOR</code> 和<code>POLYGON_OFFSET_UNITS</code> 的内容即可。</p>
+想要查看当前多边形偏移的 factor 或 units，查询 `POLYGON_OFFSET_FACTOR` 和`POLYGON_OFFSET_UNITS` 的内容即可。
 
-<pre class="brush: js">gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
+```js
+gl.getParameter(gl.POLYGON_OFFSET_FACTOR); // 2
 gl.getParameter(gl.POLYGON_OFFSET_UNITS);  // 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.WebGLRenderingContext.polygonOffset")}}</p>
+{{Compat("api.WebGLRenderingContext.polygonOffset")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.depthFunc()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.depthFunc()")}}

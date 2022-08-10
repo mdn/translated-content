@@ -12,55 +12,54 @@ tags:
   - 类型错误
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>TypeError（类型错误）</strong></code> 对象用来表示值的类型非预期类型时发生的错误。</p>
+**`TypeError（类型错误）`** 对象用来表示值的类型非预期类型时发生的错误。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new TypeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new TypeError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message 消息</code></dt>
- <dd>可选。描述此错误</dd>
- <dt><code>fileName 文件名</code> {{non-standard_inline}}</dt>
- <dd>可选。引起该异常的代码所在的文件的名字。</dd>
- <dt><code>lineNumber 行号</code> {{non-standard_inline}}</dt>
- <dd>可选。引起该异常的代码的行号。</dd>
-</dl>
+- `message 消息`
+  - : 可选。描述此错误
+- `fileName 文件名` {{non-standard_inline}}
+  - : 可选。引起该异常的代码所在的文件的名字。
+- `lineNumber 行号` {{non-standard_inline}}
+  - : 可选。引起该异常的代码的行号。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>当传入函数的<strong>操作数</strong>或<strong>参数</strong>的类型并非操作符或函数所预期的类型时，将抛出一个 TypeError 类型错误。</p>
+当传入函数的**操作数**或**参数**的类型并非操作符或函数所预期的类型时，将抛出一个 TypeError 类型错误。
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("TypeError.prototype")}}</dt>
- <dd>允许为一个 TypeError 类型错误附加属性。</dd>
-</dl>
+- {{jsxref("TypeError.prototype")}}
+  - : 允许为一个 TypeError 类型错误附加属性。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p>全局 TypeError 不包含任何方法，不过，它将从原型链中继承一些方法。</p>
+全局 TypeError 不包含任何方法，不过，它将从原型链中继承一些方法。
 
-<h2 id="TypeError_instances"><code>TypeError</code> 类型错误实例</h2>
+## `TypeError` 类型错误实例
 
-<h3 id="Properties_of_TypeError_instances">属性</h3>
+### 属性
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', '属性')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', '属性')}}
 
-<h3 id="Methods_of_TypeError_instances">方法</h3>
+### 方法
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', '方法')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', '方法')}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example:_Catch_an_TypeError">示例：捕获类型错误</h3>
+### 示例：捕获类型错误
 
-<pre class="brush: js">try {
+```js
+try {
   null.f();
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -71,11 +70,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber);         // 2
   console.log(e.stack);                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_TypeError">示例：创建一个类型错误</h3>
+### 示例：创建一个类型错误
 
-<pre class="brush: js">try {
+```js
+try {
   throw new TypeError('Hello', "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -86,19 +86,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("TypeError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("TypeError.prototype")}}

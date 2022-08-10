@@ -3,21 +3,21 @@ title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
 translation_of: Web/HTTP/Status/405
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <code><strong>405 Method Not Allowed</strong></code> 表明服务器禁止了使用当前 HTTP 方法的请求。</p>
+状态码 **`405 Method Not Allowed`** 表明服务器禁止了使用当前 HTTP 方法的请求。
 
-<h2 id="状态码">状态码</h2>
+## 状态码
 
-<pre class="syntaxbox notranslate">405 Method Not Allowed</pre>
+```plain
+405 Method Not Allowed
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTTPHeader("Allow")}}</li>
-<li><a href="https://www.exai.com/blog/http-405-error">405 Method Not Allowed</a></li>
-</ul>
+- {{HTTPHeader("Allow")}}
+- [405 Method Not Allowed](https://www.exai.com/blog/http-405-error)

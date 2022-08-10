@@ -3,32 +3,34 @@ title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
 translation_of: Web/API/MouseEvent/pageX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>pageX</strong></code> 是一个由 {{domxref("MouseEvent")}} 接口返回的相对于整个文档的 x（水平）坐标以像素为单位的只读属性。</p>
+**`pageX`** 是一个由 {{domxref("MouseEvent")}} 接口返回的相对于整个文档的 x（水平）坐标以像素为单位的只读属性。
 
-<p>这个属性将基于文档的边缘，考虑任何页面的水平方向上的滚动。举个例子，如果页面向右滚动 200px 并出现了滚动条，这部分在窗口之外，然后鼠标点击距离窗口左边 100px 的位置，pageX 所返回的值将是 300。</p>
+这个属性将基于文档的边缘，考虑任何页面的水平方向上的滚动。举个例子，如果页面向右滚动 200px 并出现了滚动条，这部分在窗口之外，然后鼠标点击距离窗口左边 100px 的位置，pageX 所返回的值将是 300。
 
-<p> 起初这个属性被定义为长整型。 CSSOM 视图模块将它重新定位为双浮点数类型。请参阅浏览器兼容性部分了解详情。</p>
+起初这个属性被定义为长整型。 CSSOM 视图模块将它重新定位为双浮点数类型。请参阅浏览器兼容性部分了解详情。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>pos</em> = <em>event</em>.pageX</pre>
+```plain
+var pos = event.pageX
+```
 
-<h2 id="Syntax">例子</h2>
+## 例子
 
-<pre><em>var pageX</em> = <em>event</em>.pageX;</pre>
+```plain
+var pageX = event.pageX;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MouseEvent.pageX")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("UIEvent.pageX")}}</li>
-</ul>
+- {{domxref("UIEvent.pageX")}}

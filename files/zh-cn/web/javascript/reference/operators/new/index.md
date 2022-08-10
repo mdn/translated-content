@@ -8,63 +8,55 @@ tags:
   - 操作符
 translation_of: Web/JavaScript/Reference/Operators/new
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>new</code> 运算符</strong>创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例。</p>
+**`new` 运算符**创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例。
 
-<ol>
-</ol>
+{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+new constructor[([arguments])]
+```
 
-<pre class="syntaxbox">new <em>constructor</em>[([<em>arguments</em>])]</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `constructor`
+  - : 一个指定对象实例的类型的类或函数。
+- `arguments`
+  - : 一个用于被 `constructor` 调用的参数列表。
 
-<dl>
- <dt><code>constructor</code></dt>
- <dd>一个指定对象实例的类型的类或函数。</dd>
- <dt><code>arguments</code></dt>
- <dd>一个用于被 <code>constructor</code> 调用的参数列表。</dd>
-</dl>
+## 描述
 
-<h2 id="描述">描述</h2>
+**`new`** 关键字会进行如下的操作：
 
-<p><strong><code>new</code></strong> 关键字会进行如下的操作：</p>
+1.  创建一个空的简单 JavaScript 对象（即**`{}`**）；
+2.  为步骤 1 新创建的对象添加属性**`__proto__`**，将该属性链接至构造函数的原型对象 ；
+3.  将步骤 1 新创建的对象作为**`this`**的上下文 ；
+4.  如果该函数没有返回对象，则返回**`this`**。
 
-<ol>
- <li>创建一个空的简单 JavaScript 对象（即<code><strong>{}</strong></code>）；</li>
- <li>为步骤 1 新创建的对象添加属性<code><strong>__proto__</strong></code>，将该属性链接至构造函数的原型对象 ；</li>
- <li>将步骤 1 新创建的对象作为<code><strong>this</strong></code>的上下文 ；</li>
- <li>如果该函数没有返回对象，则返回<code><strong>this</strong></code>。</li>
-</ol>
+（译注：关于对象的 **`constructor`**，参见 **`Object.prototype.constructor`**）
 
-<p>（译注：关于对象的 <code><strong>constructor</strong></code>，参见 <code><strong>Object.prototype.constructor</strong></code>）</p>
+创建一个用户自定义的对象需要两步：
 
-<p>创建一个用户自定义的对象需要两步：</p>
+1.  通过编写函数来定义对象类型。
+2.  通过 `new` 来创建对象实例。
 
-<ol>
- <li>通过编写函数来定义对象类型。</li>
- <li>通过 <code>new</code> 来创建对象实例。</li>
-</ol>
+创建一个对象类型，需要创建一个指定其名称和属性的函数；对象的属性可以指向其他对象，看下面的例子：
 
-<p>创建一个对象类型，需要创建一个指定其名称和属性的函数；对象的属性可以指向其他对象，看下面的例子：</p>
+当代码 `new Foo(...)` 执行时，会发生以下事情：
 
-<p>当代码 <code>new <em>Foo</em>(...)</code> 执行时，会发生以下事情：</p>
+1.  一个继承自 `Foo.prototype` 的新对象被创建。
+2.  使用指定的参数调用构造函数 _`Foo`_，并将 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 绑定到新创建的对象。`new Foo` 等同于 _`new Foo`_`()`，也就是没有指定参数列表，_`Foo`_ 不带任何参数调用的情况。
+3.  由构造函数返回的对象就是 `new` 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤 1 创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）
 
-<ol>
- <li>一个继承自 <code><em>Foo</em>.prototype</code> 的新对象被创建。</li>
- <li>使用指定的参数调用构造函数 <em><code>Foo</code></em>，并将 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 绑定到新创建的对象。<code>new <em>Foo</em></code> 等同于 <em><code>new Foo</code></em><code>()</code>，也就是没有指定参数列表，<em><code>Foo</code></em> 不带任何参数调用的情况。</li>
- <li>由构造函数返回的对象就是 <code>new</code> 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤 1 创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）</li>
-</ol>
+你始终可以对已定义的对象添加新的属性。例如，`car1.color = "black"` 语句给 `car1` 添加了一个新的属性 `color`，并给这个属性赋值 "`black`"。但是，这不会影响任何其他对象。要将新属性添加到相同类型的所有对象，你必须将该属性添加到 `Car` 对象类型的定义中。
 
-<p>你始终可以对已定义的对象添加新的属性。例如，<code>car1.color = "black"</code> 语句给 <code>car1</code> 添加了一个新的属性 <code>color</code>，并给这个属性赋值 "<code>black</code>"。但是，这不会影响任何其他对象。要将新属性添加到相同类型的所有对象，你必须将该属性添加到 <code>Car</code> 对象类型的定义中。</p>
+你可以使用 [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性将共享属性添加到以前定义的对象类型。这定义了一个由该函数创建的所有对象共享的属性，而不仅仅是对象类型的其中一个实例。下面的代码将一个值为 `null` 的 `color` 属性添加到 `car` 类型的所有对象，然后仅在实例对象 `car1` 中用字符串 "`black`" 覆盖该值。详见 [prototype](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)。
 
-<p>你可以使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype">Function.prototype</a></code> 属性将共享属性添加到以前定义的对象类型。这定义了一个由该函数创建的所有对象共享的属性，而不仅仅是对象类型的其中一个实例。下面的代码将一个值为 <code>null</code> 的 <code>color</code> 属性添加到 <code>car</code> 类型的所有对象，然后仅在实例对象 <code>car1</code> 中用字符串 "<code>black</code>" 覆盖该值。详见 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype">prototype</a>。</p>
-
-<pre class="brush: js">function Car() {}
+```js
+function Car() {}
 car1 = new Car();
 car2 = new Car();
 
@@ -80,84 +72,91 @@ console.log(car1.__proto__.color) //original color
 console.log(car2.__proto__.color) //original color
 console.log(car1.color)  // black
 console.log(car2.color) // original color
-</pre>
+```
 
-<div class="note">
-<p><strong>备注：</strong>如果你没有使用 <code>new</code> 运算符， <strong>构造函数会像其他的常规函数一样被调用，</strong> 并<em>不会创建一个对象<strong>。</strong></em>在这种情况下， <code>this</code> 的指向也是不一样的。</p>
-</div>
+> **备注：** 如果你没有使用 `new` 运算符，构造函数会像其他的常规函数一样被调用，并不会创建一个对象。在这种情况下， `this` 的指向也是不一样的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="对象类型和对象实例">对象类型和对象实例</h3>
+### 对象类型和对象实例
 
-<p>假设你要创建一个汽车的对象类型。你希望这个类型叫做 car，这个类型具备 make, model, year 等属性，要做到这些，你需要写这样一个函数：</p>
+假设你要创建一个汽车的对象类型。你希望这个类型叫做 car，这个类型具备 make, model, year 等属性，要做到这些，你需要写这样一个函数：
 
-<pre class="brush: js">function Car(make, model, year) {
+```js
+function Car(make, model, year) {
    this.make = make;
    this.model = model;
    this.year = year;
 }
-</pre>
+```
 
-<p>现在，你可以如下所示创建一个 <code>mycar</code> 的对象：</p>
+现在，你可以如下所示创建一个 `mycar` 的对象：
 
-<pre class="brush: js">var mycar = new Car("Eagle", "Talon TSi", 1993);</pre>
+```js
+var mycar = new Car("Eagle", "Talon TSi", 1993);
+```
 
-<p>这段代码创建了 <code>mycar</code> 并给他的属性指定值，于是 <code>mycar.make</code> 的值为"<code>Eagle</code>"， <code>mycar.year</code> 的值为 1993，以此类推。</p>
+这段代码创建了 `mycar` 并给他的属性指定值，于是 `mycar.make` 的值为"`Eagle`"， `mycar.year` 的值为 1993，以此类推。
 
-<p>你可以通过调用 <code>new</code> 来创建任意个汽车对象。例如：</p>
+你可以通过调用 `new` 来创建任意个汽车对象。例如：
 
-<pre class="brush: js">var kenscar = new Car("Nissan", "300ZX", 1992);</pre>
+```js
+var kenscar = new Car("Nissan", "300ZX", 1992);
+```
 
-<h3 id="对象属性为其他对象">对象属性为其他对象</h3>
+### 对象属性为其他对象
 
-<p>假设你定义了一个对象叫做 <code>person</code>：</p>
+假设你定义了一个对象叫做 `person`：
 
-<pre class="brush: js">function Person(name, age, sex) {
+```js
+function Person(name, age, sex) {
    this.name = name;
    this.age = age;
    this.sex = sex;
 }
-</pre>
+```
 
-<p>然后实例化两个新的 <code>person</code> 对象如下：</p>
+然后实例化两个新的 `person` 对象如下：
 
-<pre class="brush: js">var rand = new Person("Rand McNally", 33, "M");
+```js
+var rand = new Person("Rand McNally", 33, "M");
 var ken = new Person("Ken Jones", 39, "M");
-</pre>
+```
 
-<p>然后你可以重写 <code>car</code> 的定义，添加一个值为 <code>person</code> 对象的 <code>owner</code> 属性，如下：</p>
+然后你可以重写 `car` 的定义，添加一个值为 `person` 对象的 `owner` 属性，如下：
 
-<pre class="brush: js">function Car(make, model, year, owner) {
+```js
+function Car(make, model, year, owner) {
    this.make = make;
    this.model = model;
    this.year = year;
    this.owner = owner;
 }
-</pre>
+```
 
-<p>为了实例化新的对象，你可以用如下代码：</p>
+为了实例化新的对象，你可以用如下代码：
 
-<pre class="brush: js">var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+```js
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
 var car2 = new Car("Nissan", "300ZX", 1992, ken);
-</pre>
+```
 
-<p>创建对象时，并没有传字符串或数字给 owner，而是传了对象 <code>rand</code> 和 <code>ken</code> 。这个时候，你可以这样来获取 <code>car2</code> 的 owner 的 name：</p>
+创建对象时，并没有传字符串或数字给 owner，而是传了对象 `rand` 和 `ken` 。这个时候，你可以这样来获取 `car2` 的 owner 的 name：
 
-<pre class="brush: js">car2.owner.name</pre>
+```js
+car2.owner.name
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
- <li>{{jsxref("Object.prototype")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Reflect.construct()")}}
+- {{jsxref("Object.prototype")}}

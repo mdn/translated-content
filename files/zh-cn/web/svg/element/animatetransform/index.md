@@ -8,61 +8,59 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/animateTransform
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>animateTransform</code>元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。</p>
+`animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"  viewBox="0 0 120 120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    &lt;polygon points="60,30 90,90 30,90"&gt;
-        &lt;animateTransform attributeName="transform"
+    <polygon points="60,30 90,90 30,90">
+        <animateTransform attributeName="transform"
                           attributeType="XML"
                           type="rotate"
                           from="0 60 70"
                           to="360 60 70"
                           dur="10s"
-                          repeatCount="indefinite"/&gt;
-    &lt;/polygon&gt;
-&lt;/svg&gt;</pre>
+                          repeatCount="indefinite"/>
+    </polygon>
+</svg>
+```
 
-<p><strong>示例输出</strong></p>
+**示例输出**
 
-<p>{{ EmbedLiveSample('Example','120','120') }}</p>
+{{ EmbedLiveSample('Example','120','120') }}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Conditional processing attributes">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core attributes">核心属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Animation event attributes">动画事件属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Xlink attributes">Xlink 属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Animation attribute target attributes">动画属性目标属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Animation timing attributes">动画定时属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Animation value attributes">动画值属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Animation addition attributes">A 动画累加属性</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](</en-US/docs/Web/SVG/Attribute#Conditional processing attributes>) »
+- [核心属性](</en-US/docs/Web/SVG/Attribute#Core attributes>) »
+- [动画事件属性](</en-US/docs/Web/SVG/Attribute#Animation event attributes>) »
+- [Xlink 属性](</en-US/docs/Web/SVG/Attribute#Xlink attributes>) »
+- [动画属性目标属性](</en-US/docs/Web/SVG/Attribute#Animation attribute target attributes>) »
+- [动画定时属性](</en-US/docs/Web/SVG/Attribute#Animation timing attributes>) »
+- [动画值属性](</en-US/docs/Web/SVG/Attribute#Animation value attributes>) »
+- [A 动画累加属性](</en-US/docs/Web/SVG/Attribute#Animation addition attributes>) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("by") }}</li>
- <li>{{ SVGAttr("from") }}</li>
- <li>{{ SVGAttr("to") }}</li>
- <li>{{ SVGAttr("type") }}</li>
-</ul>
+- {{ SVGAttr("by") }}
+- {{ SVGAttr("from") }}
+- {{ SVGAttr("to") }}
+- {{ SVGAttr("type") }}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGAnimateTransformElement">SVGAnimateTransformElement</a></code>接口。</p>
+该元素实现了[`SVGAnimateTransformElement`](/en-US/docs/DOM/SVGAnimateTransformElement)接口。

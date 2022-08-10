@@ -4,28 +4,28 @@ slug: Web/API/Element/pointercancel_event
 translation_of: Web/API/GlobalEventHandlers/onpointercancel
 original_slug: Web/API/GlobalEventHandlers/onpointercancel
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointercancel")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("pointercancel")}} event.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>cancelHandler</var> = <var>targetElement</var>.onpointercancel;
-</pre>
+```plain
+var cancelHandler = targetElement.onpointercancel;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>cancelHandler</code></dt>
- <dd>元素<code>targetElement</code> 的 <em>pointercancel</em> 事件处理器。</dd>
-</dl>
+- `cancelHandler`
+  - : 元素`targetElement` 的 _pointercancel_ 事件处理器。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>该示例展示使用 <em>onpointercancel 设置一个元素的</em> <em>pointercancel</em> 事件处理器的两个方法。</p>
+该示例展示使用 _onpointercancel 设置一个元素的_ _pointercancel_ 事件处理器的两个方法。
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function cancelHandler(ev) {
  // 处理 pointercancel 事件
 }
@@ -33,24 +33,22 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointercancel = cancelHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" onpointercancel="cancelHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" onpointercancel="cancelHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.GlobalEventHandlers.onpointercancel")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ event("pointercancel") }}</li>
-</ul>
+- {{ event("pointercancel") }}

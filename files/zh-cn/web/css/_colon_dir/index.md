@@ -1,54 +1,54 @@
 ---
 title: ':dir()'
-slug: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 tags:
   - CSS 伪类
   - 布局
   - 网络
   - 选择器 4
-translation_of: 'Web/CSS/:dir'
+translation_of: Web/CSS/:dir
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p><code>:dir()</code>伪类匹配特定文字书写方向的元素。在 HTML 中，文字方向由{{ htmlattrxref("dir", "html") }}属性决定。其他的文档类型可能有其他定义文字方向的方法。</p>
+`:dir()`伪类匹配特定文字书写方向的元素。在 HTML 中，文字方向由{{ htmlattrxref("dir", "html") }}属性决定。其他的文档类型可能有其他定义文字方向的方法。
 
-<p>值得注意的是用 CSS 伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr] 不会匹配到 dir 属性的值为 auto 的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。</p>
+值得注意的是用 CSS 伪类 `:dir()` 并不等于使用 `[dir=…]` 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， `[dir=rtl]` 或 `[dir=ltr] 不会匹配到 dir 属性的值为 auto 的元素。而` `:dir()`会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。
 
-<p>另外，:dir() 伪类仅考虑文档（大多数情况是 HTML）中定义的文字方向的语义值 (semantic value)，并不会考虑格式值 (styling value)，如 CSS 属性 {{ cssxref("direction") }} 的值。</p>
+另外，:dir() 伪类仅考虑文档（大多数情况是 HTML）中定义的文字方向的语义值 (semantic value)，并不会考虑格式值 (styling value)，如 CSS 属性 {{ cssxref("direction") }} 的值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">元素:dir(文字书写方向) { <em>style properties</em> } 文字书写方向为 ltr 或 rtl
-</pre>
+```plain
+元素:dir(文字书写方向) { style properties } 文字书写方向为 ltr 或 rtl
+```
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:html;">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
+</div>
+```
 
-<p>本例中 <code>:dir(rtl)</code> 会匹配最外层的 div，内容为<code>test1 的 span，</code>和有希伯来字符的 div。<code>:dir(ltr)</code> 会匹配到内容为<code>test2 的 div.</code></p>
+本例中 `:dir(rtl)` 会匹配最外层的 div，内容为`test1 的 span，`和有希伯来字符的 div。`:dir(ltr)` 会匹配到内容为`test2 的 div.`
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.dir")}}
 
-<h2 id="Related_Pages"> </h2>
+##
 
-<h2 id="Related_Pages">参见</h2>
+## 参见
 
-<ul>
- <li>语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}</li>
-</ul>
+- 语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}

@@ -8,22 +8,24 @@ tags:
   - Web API
 translation_of: Web/API/Notification/badge
 ---
-<p>{{SeeCompatTable}}{{APIRef("Notifications API")}}</p>
+{{SeeCompatTable}}{{APIRef("Notifications API")}}
 
-<p>当没有足够的空间来显示通知本身时，{{domxref("Notification")}}接口的 <strong><code>badge</code></strong> 属性返回用于表示通知的图像 URL。</p>
+当没有足够的空间来显示通知本身时，{{domxref("Notification")}}接口的 **`badge`** 属性返回用于表示通知的图像 URL。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>url</em> = Notification.<em>badge</em></pre>
+```plain
+var url = Notification.badge
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>包含一个 URL 的 {{domxref('USVString')}} 。</p>
+包含一个 URL 的 {{domxref('USVString')}} 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Notification.badge")}}

@@ -7,65 +7,67 @@ tags:
   - Files
 translation_of: Web/API/File/lastModified
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>只读属性 <code><strong>File.lastModified</strong></code> 返回所引用文件最后修改日期，为自 1970 年 1 月 1 日 0:00 以来的毫秒数。没有已知的最后修改时间则会返回当前时间。</p>
+只读属性 **`File.lastModified`** 返回所引用文件最后修改日期，为自 1970 年 1 月 1 日 0:00 以来的毫秒数。没有已知的最后修改时间则会返回当前时间。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js">var time = <em>instanceOfFile</em>.lastModified;
-</pre>
+```js
+var time = instanceOfFile.lastModified;
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>自 1970 年 1 月 1 日 0:00 以来的毫秒数。</p>
+自 1970 年 1 月 1 日 0:00 以来的毫秒数。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<h3 id="从INPUT标签读取文件">从 INPUT 标签读取文件</h3>
+### 从 INPUT 标签读取文件
 
-<pre class="brush: html">&lt;input type="file" multiple id="fileInput"&gt;
-</pre>
+```html
+<input type="file" multiple id="fileInput">
+```
 
-<pre class="brush:js">const fileInput = document.getElementById('fileInput');
+```js
+const fileInput = document.getElementById('fileInput');
 fileInput.addEventListener('change', function(event) {
   // files is a FileList object (simliar to NodeList)
   const files = event.target.files;
 
-  for (let i = 0; i &lt; files.length; i++) {
+  for (let i = 0; i < files.length; i++) {
     const date = new Date(files[i].lastModified);
     alert(files[i].name + ' has a last modified date of ' + date);
   }
 });
-</pre>
+```
 
-<p>结果：</p>
+结果：
 
-<p>{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}</p>
+{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}
 
-<h3 id="动态创建文件">动态创建文件</h3>
+### 动态创建文件
 
-<p>如果文件是动态创建的，可以在构造函数{{domxref("File.File()", "new File()")}} 中提供最后修改时间。如果未提供则会继承文件对象被创建时的{{jsxref("Date.now()")}} 。</p>
+如果文件是动态创建的，可以在构造函数{{domxref("File.File()", "new File()")}} 中提供最后修改时间。如果未提供则会继承文件对象被创建时的{{jsxref("Date.now()")}} 。
 
-<pre class="brush:js">var fileWithDate = new File([], 'file.bin', {
+```js
+var fileWithDate = new File([], 'file.bin', {
   lastModified: new Date(2017, 1, 1),
 });
 console.log(fileWithDate.lastModified); //returns 1485903600000
 
 var fileWithoutDate = new File([], 'file.bin');
 console.log(fileWithoutDate.lastModified); //returns current time
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.File.lastModified")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("File")}}</li>
-</ul>
+- {{domxref("File")}}

@@ -11,42 +11,44 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Array.isArray()</strong> 用于确定传递的值是否是一个 {{jsxref("Array")}}。</p>
+**Array.isArray()** 用于确定传递的值是否是一个 {{jsxref("Array")}}。
 
-<pre class="brush: js">Array.isArray([1, 2, 3]);  // true
+```js
+Array.isArray([1, 2, 3]);  // true
 Array.isArray({foo: 123}); // false
 Array.isArray('foobar');   // false
 Array.isArray(undefined);  // false
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>Array.isArray(<var>obj</var>)</pre>
+```plain
+Array.isArray(obj)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>需要检测的值。</dd>
-</dl>
+- `obj`
+  - : 需要检测的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果值是 {{jsxref("Array")}}，则为 <code>true</code>；否则为 <code>false</code>。</p>
+如果值是 {{jsxref("Array")}}，则为 `true`；否则为 `false`。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果对象是 {{jsxref("Array")}}，则返回 <code>true</code>，否则为 <code>false</code>。</p>
+如果对象是 {{jsxref("Array")}}，则返回 `true`，否则为 `false`。
 
-<p>有关更多详细信息，请参阅文章<a href="http://web.mit.edu/jwalden/www/isArray.html">严格判定 JavaScript 对象是否为数组</a>。</p>
+有关更多详细信息，请参阅文章[严格判定 JavaScript 对象是否为数组](http://web.mit.edu/jwalden/www/isArray.html)。
 
-<p>See the article <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a> for more details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always returned.</p>
+See the article [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html) for more details. Given a {{jsxref("TypedArray")}} instance, `false` is always returned.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// 下面的函数调用都返回 true
+```js
+// 下面的函数调用都返回 true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
@@ -65,13 +67,14 @@ Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32))
 Array.isArray({ __proto__: Array.prototype });
-</pre>
+```
 
-<h3 id="instanceof_和_isArray"><code>instanceof</code> VS <code>isArray</code></h3>
+### `instanceof` VS `isArray`
 
-<p>当检测 <code>Array</code> 实例时，<code>Array.isArray</code> 优于 <code>instanceof</code>，因为 <code>Array.isArray</code> 能检测 <code>iframes</code>。</p>
+当检测 `Array` 实例时，`Array.isArray` 优于 `instanceof`，因为 `Array.isArray` 能检测 `iframes`。
 
-<pre class="brush: js">const iframe = document.createElement('iframe');
+```js
+const iframe = document.createElement('iframe');
 document.body.appendChild(iframe);
 xArray = window.frames[window.frames.length-1].Array;
 const arr = new xArray(1,2,3); // [1,2,3]
@@ -80,29 +83,28 @@ const arr = new xArray(1,2,3); // [1,2,3]
 Array.isArray(arr);  // true
 // Considered harmful, because doesn't work through iframes
 arr instanceof Array; // false
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>假如不存在 Array.isArray()，则在其他代码之前运行下面的代码将创建该方法。</p>
+假如不存在 Array.isArray()，则在其他代码之前运行下面的代码将创建该方法。
 
-<pre class="brush: js">if (!Array.isArray) {
+```js
+if (!Array.isArray) {
   Array.isArray = function(arg) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

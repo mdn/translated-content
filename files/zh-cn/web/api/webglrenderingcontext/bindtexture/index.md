@@ -10,77 +10,71 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.bindTexture()</code></strong> 方法将给定的 {{domxref("WebGLTexture")}} 绑定到目标（绑定点）。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindTexture()`** 方法将给定的 {{domxref("WebGLTexture")}} 绑定到目标（绑定点）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.bindTexture(<var>target</var>, <var>texture</var>);
-</pre>
+```plain
+void gl.bindTexture(target, texture);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd>{{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
- <ul>
-  <li><code>gl.TEXTURE_2D</code>: 二维纹理。</li>
-  <li><code>gl.TEXTURE_CUBE_MAP</code>: 立方体映射纹理。</li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-   <ul>
-    <li><code>gl.TEXTURE_3D</code>: 三维纹理。</li>
-    <li><code>gl.TEXTURE_2D_ARRAY</code>: 二维数组纹理。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>texture</dt>
- <dd>要绑定的 {{domxref("WebGLTexture")}} 对象。</dd>
-</dl>
+- target
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
 
-<p>无。</p>
+    - `gl.TEXTURE_2D`: 二维纹理。
+    - `gl.TEXTURE_CUBE_MAP`: 立方体映射纹理。
+    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
 
-<h3 id="异常">异常</h3>
+      - `gl.TEXTURE_3D`: 三维纹理。
+      - `gl.TEXTURE_2D_ARRAY`: 二维数组纹理。
 
-<p>如果目标不是 gl.TEXTURE_2D ，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY ，则会抛出 gl.INVALID_ENUM 错误。</p>
+- texture
+  - : 要绑定的 {{domxref("WebGLTexture")}} 对象。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<h3 id="绑定纹理">绑定纹理</h3>
+无。
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+### 异常
+
+如果目标不是 gl.TEXTURE_2D ，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY ，则会抛出 gl.INVALID_ENUM 错误。
+
+## 示例
+
+### 绑定纹理
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);
-</pre>
+```
 
-<h3 id="获取当前绑定">获取当前绑定</h3>
+### 获取当前绑定
 
-<p>要检查当前纹理绑定，请查询 gl.TEXTURE_BINDING_2D 或 gl.TEXTURE_BINDING_CUBE_MAP 常量。</p>
+要检查当前纹理绑定，请查询 gl.TEXTURE_BINDING_2D 或 gl.TEXTURE_BINDING_CUBE_MAP 常量。
 
-<pre class="brush: js">gl.getParameter(gl.TEXTURE_BINDING_2D);
-</pre>
+```js
+gl.getParameter(gl.TEXTURE_BINDING_2D);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindTexture")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindTexture")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
-</ul>
-
-<ul>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

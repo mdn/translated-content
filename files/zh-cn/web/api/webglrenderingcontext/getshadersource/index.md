@@ -3,45 +3,42 @@ title: WebGLRenderingContext.getShaderSource()
 slug: Web/API/WebGLRenderingContext/getShaderSource
 translation_of: Web/API/WebGLRenderingContext/getShaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.getShaderSource()`** 方法以{{domxref("DOMString")}}的形式返回了一个{{domxref("WebGLShader")}}的源码。
 
-<div><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的 <strong><code>WebGLRenderingContext.getShaderSource()</code></strong> 方法以{{domxref("DOMString")}}的形式返回了一个{{domxref("WebGLShader")}}的源码。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+DOMString gl.getShaderSource(shader);
+```
 
-<pre class="syntaxbox">DOMString <var>gl</var>.getShaderSource(<var>shader</var>);
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- shader
+  - : 要获取源码的 {{domxref("WebGLShader")}} 对象
 
-<dl>
- <dt>shader</dt>
- <dd>要获取源码的 {{domxref("WebGLShader")}} 对象</dd>
-</dl>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+一个包含了指定着色器的源码的 {{domxref("DOMString")}} 。
 
-<p>一个包含了指定着色器的源码的 {{domxref("DOMString")}} 。</p>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);</pre>
+var source = gl.getShaderSource(shader);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.getShaderSource")}}</p>
+{{Compat("api.WebGLRenderingContext.getShaderSource")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}

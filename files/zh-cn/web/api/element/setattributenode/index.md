@@ -7,40 +7,40 @@ tags:
   - Element
 translation_of: Web/API/Element/setAttributeNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNode()</code> 为指定的 Element 添加属性节点。</p>
+`setAttributeNode()` 为指定的 Element 添加属性节点。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>var replacedAttr</em> = <em>element</em>.setAttributeNode(<em>attribute</em>);
-</pre>
+```plain
+var replacedAttr = element.setAttributeNode(attribute);
+```
 
-<ul>
- <li><code>attribute 是添加到 element 中的属性节点</code>.</li>
- <li><code>replacedAttr</code> 是被替换掉的属性节点。 如果存在原有属性，则函数返回原有属性节点. </li>
-</ul>
+- `attribute 是添加到 element 中的属性节点`.
+- `replacedAttr` 是被替换掉的属性节点。 如果存在原有属性，则函数返回原有属性节点.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>// &lt;div id="one" align="left"&gt;one&lt;/div&gt;
-// &lt;div id="two"&gt;two&lt;/div&gt;
+```plain
+// <div id="one" align="left">one</div>
+// <div id="two">two</div>
 var d1 = document.getElementById("one");
 var d2 = document.getElementById("two");
 var a = d1.getAttributeNode("align");
 d2.setAttributeNode(a.cloneNode(true));
 alert(d2.attributes[1].value)
 // returns: `left'
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>如果 element 中已经存在该属性名的属性，则函数使用新的属性替换掉原有的属性并将原有属性返回</p>
+如果 element 中已经存在该属性名的属性，则函数使用新的属性替换掉原有的属性并将原有属性返回
 
-<p>这个方法很少被用到，多数情况下使用函数 <code><a href="/en/DOM/element.setAttribute">setAttribute()</a></code> 修改 element 的属性。</p>
+这个方法很少被用到，多数情况下使用函数 [`setAttribute()`](/en/DOM/element.setAttribute) 修改 element 的属性。
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154">DOM Level 2 Core: setAttributeNode</a> (introduced in <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode">DOM Level 1 Core</a>)</p>
+[DOM Level 2 Core: setAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode))

@@ -6,33 +6,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/href
 original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.href </code></strong>属性是一个包含整个URL的 {{domxref("USVString")}}。</p>
+**`HTMLHyperlinkElementUtils.href `**属性是一个包含整个 URL 的 {{domxref("USVString")}}。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.href;
-<em>object<code>.href = </code></em><code><em>string</em>;</code>
-</pre>
+```plain
+string = object.href;
+object.href = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Lets imagine an &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"&gt; element is in the document
+```js
+// Lets imagine an <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href"> element is in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils/href'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLAnchorElement.href")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

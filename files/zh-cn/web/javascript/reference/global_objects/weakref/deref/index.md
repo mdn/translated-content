@@ -3,32 +3,30 @@ title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}`deref`方法返回{{jsxref("WeakRef")}} 实例的目标对象，如果目标对象已被垃圾收集，则返回`undefined` 。
 
+## 语法
 
+```plain
+obj = ref.deref();
+```
 
-<div><code>deref</code>方法返回{{jsxref("WeakRef")}} 实例的目标对象，如果目标对象已被垃圾收集，则返回<code>undefined</code> 。</div>
+### 返回值
 
-<h2 id="语法">语法</h2>
+返回 WeakRef 的目标对象，如果该对象已被垃圾收集，则返回`undefined` 。
 
-<pre class="syntaxbox"><code><var>obj</var> = <var>ref</var>.deref();</code>
-</pre>
+## 说明
 
-<h3 id="返回值">返回值</h3>
+有关一些重要说明，请参阅{{jsxref("WeakRef")}}页面上的[Notes on WeakRefs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Notes_on_WeakRefs) 。
 
-<p>返回 WeakRef 的目标对象，如果该对象已被垃圾收集，则返回<code>undefined</code> 。</p>
+## 例子
 
-<h2 id="说明">说明</h2>
+### 使用 deref
 
-<p>有关一些重要说明，请参阅{{jsxref("WeakRef")}}页面上的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Notes_on_WeakRefs">Notes on WeakRefs</a> 。</p>
+有关[完整示例](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples)，请参阅{{jsxref("WeakRef")}}页面的示例部分。
 
-<h2 id="例子">例子</h2>
-
-<h3 id="使用deref">使用 deref</h3>
-
-<p>有关<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples">完整示例</a>，请参阅{{jsxref("WeakRef")}}页面的示例部分。</p>
-
-<pre class="brush: js">const tick = () =&gt; {
+```js
+const tick = () => {
   // Get the element from the weak reference, if it still exists
   const element = this.ref.deref();
   if (element) {
@@ -39,20 +37,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
     this.stop();
     this.ref = null;
   }
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("WeakRef")}}</li>
-</ul>
+- {{jsxref("WeakRef")}}

@@ -7,88 +7,84 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/radialGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>radialGradient</code> 用来定义径向渐变，以对图形元素进行填充或描边。</p>
+`radialGradient` 用来定义径向渐变，以对图形元素进行填充或描边。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
+- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en-US/docs/Web/SVG/Attribute#XLink) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("gradientUnits")}}</li>
- <li>{{SVGAttr("gradientTransform")}}</li>
- <li>{{SVGAttr("cx")}}</li>
- <li>{{SVGAttr("cy")}}</li>
- <li>{{SVGAttr("r")}}</li>
- <li>{{SVGAttr("fx")}}</li>
- <li>{{SVGAttr("fy")}}</li>
- <li>{{SVGAttr("fr")}}</li>
- <li>{{SVGAttr("spreadMethod")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("gradientUnits")}}
+- {{SVGAttr("gradientTransform")}}
+- {{SVGAttr("cx")}}
+- {{SVGAttr("cy")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("fx")}}
+- {{SVGAttr("fy")}}
+- {{SVGAttr("fr")}}
+- {{SVGAttr("spreadMethod")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了 {{domxref("SVGRadialGradientElement")}} 接口。</p>
+该元素实现了 {{domxref("SVGRadialGradientElement")}} 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: xml"><code class="language-html">&lt;svg width="120" height="120" viewBox="0 0 240 120"
-   xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;radialGradient id="exampleGradient"&gt;
-      &lt;stop offset="10%" stop-color="gold"/&gt;
-      &lt;stop offset="95%" stop-color="green"/&gt;
-    &lt;/radialGradient&gt;
-    &lt;radialGradient spreadMethod="reflect"
+```xml
+<svg width="120" height="120" viewBox="0 0 240 120"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="exampleGradient">
+      <stop offset="10%" stop-color="gold"/>
+      <stop offset="95%" stop-color="green"/>
+    </radialGradient>
+    <radialGradient spreadMethod="reflect"
                     cx="50%"
                     cy="50%"
                     r="50%"
                     fx="25%"
                     fy="75%"
                     fr="10%"
-                   id="flameGradient"&gt;
-      &lt;stop offset="0%" stop-color="white"/&gt;
-      &lt;stop offset="10%" stop-color="yellow"/&gt;
-      &lt;stop offset="95%" stop-color="red"/&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
-  &lt;circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/&gt;
-  &lt;circle fill="url(#flameGradient)" cx="180" cy="60" r="50"/&gt;
-&lt;/svg&gt;</code></pre>
+                   id="flameGradient">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="10%" stop-color="yellow"/>
+      <stop offset="95%" stop-color="red"/>
+    </radialGradient>
+  </defs>
+  <circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/>
+  <circle fill="url(#flameGradient)" cx="180" cy="60" r="50"/>
+</svg>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 120, 120)}}</p>
+{{EmbedLiveSample("示例", 120, 120)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{SVGElement("linearGradient")}}</li>
-</ul>
+- {{SVGElement("linearGradient")}}

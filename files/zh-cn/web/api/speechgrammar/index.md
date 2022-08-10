@@ -12,31 +12,28 @@ tags:
   - 语音识别
 translation_of: Web/API/SpeechGrammar
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> 的 <strong><code>SpeechGrammar</code></strong> 接口 表示了语音识别对象服务想要识别的一系列词语或模式。</p>
+[Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口 表示了语音识别对象服务想要识别的一系列词语或模式。
 
-<p>文法通过 <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) 来定义，其他格式的文法会在以后支持。</p>
+文法通过 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) 来定义，其他格式的文法会在以后支持。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("SpeechGrammar.SpeechGrammar()")}}</dt>
- <dd>创建一个新的 <code>SpeechGrammar</code> 对象。</dd>
-</dl>
+- {{domxref("SpeechGrammar.SpeechGrammar()")}}
+  - : 创建一个新的 `SpeechGrammar` 对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("SpeechGrammar.src")}}</dt>
- <dd>设置或返回 <code>SpeechGrammar</code> 对象实例中包含文法的字符串。</dd>
- <dt>{{domxref("SpeechGrammar.weight")}} {{optional_inline}}</dt>
- <dd>设置或返回 <code>SpeechGrammar</code> 对象的权重。</dd>
-</dl>
+- {{domxref("SpeechGrammar.src")}}
+  - : 设置或返回 `SpeechGrammar` 对象实例中包含文法的字符串。
+- {{domxref("SpeechGrammar.weight")}} {{optional_inline}}
+  - : 设置或返回 `SpeechGrammar` 对象的权重。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
@@ -45,18 +42,16 @@ recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // 应该返回和上面语法变量一样的内容
 console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第四行所设置的权重一致
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.SpeechGrammar")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

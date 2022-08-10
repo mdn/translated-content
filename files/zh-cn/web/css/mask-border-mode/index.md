@@ -3,13 +3,14 @@ title: mask-border-mode
 slug: Web/CSS/mask-border-mode
 translation_of: Web/CSS/mask-border-mode
 ---
-<div>{{cssref}}{{SeeCompatTable}}</div>
+{{cssref}}{{SeeCompatTable}}
 
-<p>该<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>属性指定使用的混合模式<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask-border">面具边界</a>。<strong><code>mask-border-mode</code></strong></p>
+该[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)属性指定使用的混合模式[面具边界](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-border)。**`mask-border-mode`**
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 mask-border-mode: luminance;
 mask-border-mode: alpha;
 
@@ -17,27 +18,25 @@ mask-border-mode: alpha;
 mask-border-mode: inherit;
 mask-border-mode: initial;
 mask-border-mode: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>luminance</code></dt>
- <dd>掩模边界图像的亮度值用作掩模值。</dd>
- <dt><code>alpha</code></dt>
- <dd>掩模边界图像的亮度值用作掩模值。</dd>
-</dl>
+- `luminance`
+  - : 掩模边界图像的亮度值用作掩模值。
+- `alpha`
+  - : 掩模边界图像的亮度值用作掩模值。
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

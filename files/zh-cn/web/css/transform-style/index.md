@@ -3,21 +3,20 @@ title: transform-style
 slug: Web/CSS/transform-style
 translation_of: Web/CSS/transform-style
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>transform-style </code></strong>设置元素的子元素是位于 3D 空间中还是平面中。</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`transform-style `**设置元素的子元素是位于 3D 空间中还是平面中。
 
-<div>{{EmbedInteractiveExample("pages/css/transform-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-style.html")}}
 
+如果选择平面，元素的子元素将不会有 3D 的遮挡关系。
 
+由于这个属性不会被继承，因此必须为元素的所有非叶子子元素设置它。
 
-<p>如果选择平面，元素的子元素将不会有 3D 的遮挡关系。</p>
+## 语法
 
-<p>由于这个属性不会被继承，因此必须为元素的所有非叶子子元素设置它。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 transform-style: flat;
 transform-style: preserve-3d;
 
@@ -25,37 +24,31 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>flat</code></dt>
- <dd>设置元素的子元素位于该元素的平面中。</dd>
- <dt><code>preserve-3d</code></dt>
- <dd>指示元素的子元素应位于 3D 空间中。</dd>
-</dl>
+- `flat`
+  - : 设置元素的子元素位于该元素的平面中。
+- `preserve-3d`
+  - : 指示元素的子元素应位于 3D 空间中。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.transform-style")}}
 
+## 另见
 
-<p>{{Compat("css.properties.transform-style")}}</p>
+- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
 
-<h2 id="另见">另见</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
-</ul>
-
-<div>{{CSSRef}}</div>
+{{CSSRef}}

@@ -8,47 +8,58 @@ tags:
   - 运算符
 translation_of: Web/JavaScript/Reference/Operators/Inequality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>不等于运算符 (<code>!=</code>) 检查其两个操作数是否不相等，并返回布尔结果。 与严格的不等式运算符不同，它尝试转换和比较不同类型的操作数。</p>
+不等于运算符 (`!=`) 检查其两个操作数是否不相等，并返回布尔结果。 与严格的不等式运算符不同，它尝试转换和比较不同类型的操作数。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">x != y</pre>
+```plain
+x != y
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>不等式运算符检查其操作数是否不相等。这是<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于</a>运算符的取反，因此以下两行将始终给出相同的结果： </p>
+不等式运算符检查其操作数是否不相等。这是[等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的取反，因此以下两行将始终给出相同的结果：
 
-<pre class="brush: js">x != y
+```js
+x != y
 
-!(x == y)</pre>
+!(x == y)
+```
 
-<p>有关比较算法的详细信息，请参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于</a>运算符的页面。</p>
+有关比较算法的详细信息，请参见[等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符的页面。
 
-<p>与等于运算符一样，不等于运算符将尝试转换和比较不同类型的操作数：</p>
+与等于运算符一样，不等于运算符将尝试转换和比较不同类型的操作数：
 
-<pre class="brush: js">3 != "3"; // false</pre>
+```js
+3 != "3"; // false
+```
 
-<p>为避免这种情况，并要求将不同类型视为不同，请使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality">严格的不等于</a>运算符：</p>
+为避免这种情况，并要求将不同类型视为不同，请使用[严格的不等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符：
 
-<pre class="brush: js">3 !== "3"; // true</pre>
+```js
+3 !== "3"; // true
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="没有类型转换的比较">没有类型转换的比较</h3>
+### 没有类型转换的比较
 
-<pre class="brush: js">1 != 2;              // true
+```js
+1 != 2;              // true
 "hello" != "hola";   // true
 
 1 != 1;              // false
-"hello" != "hello";  // false</pre>
+"hello" != "hello";  // false
+```
 
-<h3 id="与类型转换比较">与类型转换比较</h3>
+### 与类型转换比较
 
-<pre class="brush: js">"1" !=  1;            // false
+```js
+"1" !=  1;            // false
 1 != "1";             // false
 0 != false;           // false
 0 != null;            // true
@@ -60,30 +71,29 @@ null != undefined;    // false
 const number1 = new Number(3);
 const number2 = new Number(3);
 number1 != 3;         // false
-number1 != number2;   // true</pre>
+number1 != number2;   // true
+```
 
-<h3 id="对象比较">对象比较</h3>
+### 对象比较
 
-<pre class="brush: js">const object1 = {"key": "value"}
+```js
+const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 != object2 // true
-object2 != object2 // false</pre>
+object2 != object2 // false
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">Equality operator</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality">Strict equality operator</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict inequality operator</a></li>
-</ul>
+- [Equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Strict equality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

@@ -3,56 +3,55 @@ title: ResizeObserver.observe()
 slug: Web/API/ResizeObserver/observe
 translation_of: Web/API/ResizeObserver/observe
 ---
-<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>observe()</code></strong> method of the {{domxref("ResizeObserver")}} interface initiates observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.<br>
- {{domxref("ResizeObserver")}} 接口的 <strong><code>observe()</code> </strong>方法用于观察一个指定{{domxref('Element')}} 或 {{domxref('SVGElement')}}。</p>
+The **`observe()`** method of the {{domxref("ResizeObserver")}} interface initiates observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.
+{{domxref("ResizeObserver")}} 接口的 **`observe()` **方法用于观察一个指定{{domxref('Element')}} 或 {{domxref('SVGElement')}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>resizeObserver</em>.observe(<em>target</em>);</pre>
+```plain
+resizeObserver.observe(target);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd>被观察的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 引用。</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>一个指定观察设置的可选参数对象。目前只有一个可设置的选项：
-    <dl>
-      <dt><code>box</code></dt>
-      <dd>设置观察者将以哪种盒子模型来观察变动。可以设置的值为
-        <code>content-box</code> (默认值)，<code>border-box</code>，和
-        <code>device-pixel-content-box</code>。</dd>
-    </dl>
-  </dd>
-</dl>
+- target
+  - : 被观察的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 引用。
+- options {{optional_inline}}
 
-<h3 id="返回值">返回值</h3>
+  - : 一个指定观察设置的可选参数对象。目前只有一个可设置的选项：
 
-<p>{{jsxref('undefined')}}</p>
+    - `box`
+      - : 设置观察者将以哪种盒子模型来观察变动。可以设置的值为
+        `content-box` (默认值)，`border-box`，和
+        `device-pixel-content-box`。
 
-<h3 id="异常">异常</h3>
+### 返回值
 
-<p>无</p>
+{{jsxref('undefined')}}
 
-<h2 id="示例">示例</h2>
+### 异常
 
-<p>以下示例通过观察 box 的尺寸变化从而改变其边框圆角半径。</p>
+无
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+## 示例
+
+以下示例通过观察 box 的尺寸变化从而改变其边框圆角半径。
+
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
   }
 });
-resizeObserver.observe(document.querySelector('.box:nth-child(2)'));</pre>
+resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.ResizeObserver.observe")}}</p>
+{{Compat("api.ResizeObserver.observe")}}

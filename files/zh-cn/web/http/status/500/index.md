@@ -7,29 +7,29 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/500
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>在 HTTP 协议中，<code><strong>500 Internal Server Error</strong></code> 是表示服务器端错误的响应状态码，意味着所请求的服务器遇到意外的情况并阻止其执行请求。</p>
+在 HTTP 协议中，**`500 Internal Server Error`** 是表示服务器端错误的响应状态码，意味着所请求的服务器遇到意外的情况并阻止其执行请求。
 
-<p>这个错误代码是一个通用的“万能”响应代码。有时候，对于类似于 500 这样的错误，服务器管理员会更加详细地记录相关的请求信息来防止以后同样错误的出现。</p>
+这个错误代码是一个通用的“万能”响应代码。有时候，对于类似于 500 这样的错误，服务器管理员会更加详细地记录相关的请求信息来防止以后同样错误的出现。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox notranslate">500 Internal Server Error</pre>
+```plain
+500 Internal Server Error
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions</a></li>
- <li><a href="https://kinsta.com/blog/500-internal-server-error/">HTTP Error 500 on WordPress</a></li>
-<li><a href="https://www.exai.com/blog/http-error-500-wordpress">500 server error</a></li>
- <li><a href="https://www.joomla-monster.com/documentation/joomla-tutorials/500-internal-server-error-on-joomla-website">500 server error on Joomla</a></li>
-</ul>
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Error 500 on WordPress](https://kinsta.com/blog/500-internal-server-error/)
+- [500 server error](https://www.exai.com/blog/http-error-500-wordpress)
+- [500 server error on Joomla](https://www.joomla-monster.com/documentation/joomla-tutorials/500-internal-server-error-on-joomla-website)

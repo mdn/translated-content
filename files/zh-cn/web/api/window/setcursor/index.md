@@ -3,30 +3,28 @@ title: Window.setCursor()
 slug: Web/API/Window/setCursor
 translation_of: Web/API/Window/setCursor
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<div>
-<p>{{Non-standard_header}}</p>
-</div>
+{{Non-standard_header}}
 
-<div> </div>
+## 概要
 
-<h2 id="Summary">概要</h2>
+在当前窗口中改变光标（鼠标）的样子
 
-<p>在当前窗口中改变光标（鼠标）的样子</p>
+## 例子
 
-<h2 id="Example">例子</h2>
-
-<pre class="syntaxbox">function setBusyCursor(enable) {
+```plain
+function setBusyCursor(enable) {
   window.setCursor(enable ? "wait" : "auto");
-}</pre>
+}
+```
 
-<h2 id="Notes">提示</h2>
+## 提示
 
-<p>鼠标样式不会自动重置，需要主动设置回 <code>auto</code> 属性。</p>
+鼠标样式不会自动重置，需要主动设置回 `auto` 属性。
 
-<p>这个函数方法是 <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow">ChromeWindow interface</a> 的一部分。这个方法在某些网页上不能用，可以使用 CSS {{cssxref("cursor")}} 代替。</p>
+这个函数方法是 [ChromeWindow interface](/en-US/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow) 的一部分。这个方法在某些网页上不能用，可以使用 CSS {{cssxref("cursor")}} 代替。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>这不是任何规范的一部分</p>
+这不是任何规范的一部分

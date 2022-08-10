@@ -1,5 +1,5 @@
 ---
-title: '初始值'
+title: 初始值
 slug: Web/CSS/@property/initial-value
 tags:
   - CSS
@@ -8,79 +8,84 @@ tags:
   - Property
   - Houdini
 ---
+{{CSSRef}}{{SeeCompatTable}}
 
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+**`initial-value`** [CSS](/en-US/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。 它为属性设置初始值。
 
-<p><strong><code>initial-value</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。 它为属性设置初始值。</p>
+被选定为`initial-value`的参数，依照`syntax`描述符定义，必须可以正确地解析。 因此，如果`syntax`描述符为`<color>`，那么初始值必须是一个有效的{{cssxref("color")}}值。
 
-<p>被选定为<code>initial-value</code>的参数，依照<code>syntax</code>描述符定义，必须可以正确地解析。 因此，如果<code>syntax</code>描述符为<code>&lt;color&gt;</code>，那么初始值必须是一个有效的{{cssxref("color")}}值。</p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush: css no-line-numbers">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '&lt;color&gt;';
+  syntax: '<color>';
   inherits: true;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<h2 id="Values">取值</h2>
+## 取值
 
-<p>对于设定的<code>syntax</code>，具有正确值的字符串。</p>
+对于设定的`syntax`，具有正确值的字符串。
 
-<h2 id="Formal_definition">标准定义</h2>
+## 标准定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">标准语法</h2>
+## 标准语法
 
-<pre class="brush: css">{{csssyntax}}</pre>
+```css
+{{csssyntax}}
+```
 
-<h2 id="Examples">实例</h2>
+## 实例
 
-<p>为 <code>--my-color</code> {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。</p>
+为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-<p>使用 <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">规则</a>:</p>
+使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [规则](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>使用 <a href="/en-US/docs/Web/JavaScript">JavaScript 中的</a> {{domxref('CSS.registerProperty')}}函数：</p>
+使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Formal_syntax">标准语法</h2>
+## 标准语法
 
-<pre class="brush: css">{{csssyntax}}</pre>
+```css
+{{csssyntax}}
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.at-rules.property")}}</p>
+{{Compat("css.at-rules.property")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Properties_and_Values_API">CSS 属性与值 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Painting_API">CSS 绘图 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Typed_OM_API">CSS 类型对象模型</a></li>
-    <li><a href="/zh-CN/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/zh-CN/docs/Web/Houdini)

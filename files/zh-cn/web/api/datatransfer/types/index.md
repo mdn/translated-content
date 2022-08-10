@@ -3,31 +3,32 @@ title: DataTransfer.types
 slug: Web/API/DataTransfer/types
 translation_of: Web/API/DataTransfer/types
 ---
-<div>
-<p>{{APIRef("HTML Drag and Drop API")}}</p>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransfer.types</code></strong> 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。  </p>
+**`DataTransfer.types`** 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。
 
-<p>这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。 一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。</p>
+这些格式是指定数据类型或格式的 Unicode 字符串，通常由 MIME 类型给出。 一些非 MIME 类型的值是由于历史遗留原因（例如“text”）而特殊设置的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><var>dataTransfer</var>.types;
-</pre>
+```plain
+dataTransfer.types;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>拖动操作中使用的数据格式数组。每种格式都是{{domxref("DOMString","字符串")}}类型。如果拖动操作不包含数据，则此数组列表将为空。如果拖动操作中包含任何文件，则其中一个类型将是<code>Files。</code></p>
+拖动操作中使用的数据格式数组。每种格式都是{{domxref("DOMString","字符串")}}类型。如果拖动操作不包含数据，则此数组列表将为空。如果拖动操作中包含任何文件，则其中一个类型将是`Files。`
 
-<h2 id="举个例子">举个例子</h2>
+## 举个例子
 
-<p>这个例子展示<code>types</code>和{{domxref("DataTransfer.items","items")}} 属性的用法</p>
+这个例子展示`types`和{{domxref("DataTransfer.items","items")}} 属性的用法
 
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of DataTransfer.{types,items} properties&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```plain
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of DataTransfer.{types,items} properties</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -35,8 +36,8 @@ translation_of: Web/API/DataTransfer/types
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart: target.id = " + ev.target.id);
  // 将这个元素的 id 添加到 drag 载荷中，
@@ -53,13 +54,13 @@ function drop_handler(ev) {
  ev.target.appendChild(document.getElementById(data));
  // 打印每种格式类型
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i &lt; ev.dataTransfer.types.length; i++) {
+   for (var i=0; i < ev.dataTransfer.types.length; i++) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // 打印每个 item 的“kind”和“type”属性值
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i &lt; ev.dataTransfer.items.length; i++) {
+   for (var i=0; i < ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }
@@ -71,29 +72,26 @@ function dragover_handler(ev) {
  // 设置 dropEffect 属性值为 move
  ev.dataTransfer.dropEffect = "move"
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;DataTransfer&lt;/code&gt;.{&lt;code&gt;types&lt;/code&gt;, &lt;code&gt;items&lt;/code&gt;} properties&lt;/h1&gt;
- &lt;ul&gt;
-   &lt;li id="i1" ondragstart="dragstart_handler(event);" draggable="true"&gt;Drag Item 1 to the Drop Zone&lt;/li&gt;
-   &lt;li id="i2" ondragstart="dragstart_handler(event);" draggable="true"&gt;Drag Item 2 to the Drop Zone&lt;/li&gt;
- &lt;/ul&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
+ <ul>
+   <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 1 to the Drop Zone</li>
+   <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 2 to the Drop Zone</li>
+ </ul>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考链接">参考链接</h2>
+## 参考链接
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
-</div>
-
-<p> </p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

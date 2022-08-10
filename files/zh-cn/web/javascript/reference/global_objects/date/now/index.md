@@ -11,31 +11,33 @@ tags:
   - 时间
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Date.now()</code></strong> 方法返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。</p>
+**`Date.now()`** 方法返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-now.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-now.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var timeInMs = Date.now();
-</pre>
+```plain
+var timeInMs = Date.now();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{jsxref("Number")}}，表示自 UNIX 纪元开始（1970 年 1 月 1 日 00:00:00 (UTC)）到当前时间的毫秒数。</p>
+一个 {{jsxref("Number")}}，表示自 UNIX 纪元开始（1970 年 1 月 1 日 00:00:00 (UTC)）到当前时间的毫秒数。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>因为 <code>now()</code> 是 {{jsxref("Date")}} 的一个静态函数，所以必须以 <code>Date.now()</code> 的形式来使用。</p>
+因为 `now()` 是 {{jsxref("Date")}} 的一个静态函数，所以必须以 `Date.now()` 的形式来使用。
 
-<h2 id="时间精度被降低">时间精度被降低</h2>
+## 时间精度被降低
 
-<p>为了提供针对定时攻击和指纹追踪的保护，<code>Date.now()</code> 的精度可能会根据浏览器的高级设置项目而被取整。<br>
- 在 Firefox 中，默认启用 <code>privacy.reduceTimerPrecision</code> 设置项，在 Firefox 59 中，默认被取整至 20 微秒；在 Firefox 60 中，则被取整至 2 毫秒。</p>
+为了提供针对定时攻击和指纹追踪的保护，`Date.now()` 的精度可能会根据浏览器的高级设置项目而被取整。
+在 Firefox 中，默认启用 `privacy.reduceTimerPrecision` 设置项，在 Firefox 59 中，默认被取整至 20 微秒；在 Firefox 60 中，则被取整至 2 毫秒。
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 Date.now()
 // 1519211809934
 // 1519211810362
@@ -49,32 +51,31 @@ Date.now();
 // 1519129858900
 // 1519129864400
 // ...
-</pre>
+```
 
-<p>在 Firefox 中，还可以通过启用 <code>privacy.resistFingerprinting</code> 来进一步降低精度。启用后，精度将为 100 毫秒或者 <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> 的值，取决于这两个值中哪一个更大，也就是，精度更低一些。</p>
+在 Firefox 中，还可以通过启用 `privacy.resistFingerprinting` 来进一步降低精度。启用后，精度将为 100 毫秒或者 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，取决于这两个值中哪一个更大，也就是，精度更低一些。
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>该方法在 ECMA-262 第五版中被标准化，可以通过下面的代码端来兼容那些不支持该方法的引擎：</p>
+该方法在 ECMA-262 第五版中被标准化，可以通过下面的代码端来兼容那些不支持该方法的引擎：
 
-<pre class="brush: js">if (!Date.now) {
+```js
+if (!Date.now) {
   Date.now = function now() {
     return new Date().getTime();
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("Performance.now()")}} — 提供了精确到亚毫秒（sub-millisecond）的时间戳，用于衡量网页性能。</li>
- <li>{{domxref("console.time")}} / {{domxref("console.timeEnd")}}</li>
-</ul>
+- {{domxref("Performance.now()")}} — 提供了精确到亚毫秒（sub-millisecond）的时间戳，用于衡量网页性能。
+- {{domxref("console.time")}} / {{domxref("console.timeEnd")}}

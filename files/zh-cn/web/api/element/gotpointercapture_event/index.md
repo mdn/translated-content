@@ -4,44 +4,44 @@ slug: Web/API/Element/gotpointercapture_event
 translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p><strong><code>ongotpointercapture</code></strong> 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。</p>
+**`ongotpointercapture`** 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>window.<strong><code>ongotpointercapture</code></strong> = functionReference
-</pre>
+```plain
+window.ongotpointercapture = functionReference
+```
 
-<h2 id="Return_Value">例子</h2>
+## 例子
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function overHandler(ev) {
  // Determine the target event's gotpointercapture handler
  var gotCaptureHandler = ev.target.ongotpointercapture;
 }
 function init() {
  var el=document.getElementById("target");
- el.<strong><code>ongotpointercapture</code></strong> = overHandler;
+ el.ongotpointercapture = overHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.GlobalEventHandlers.ongotpointercapture")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("gotpointercapture") }}</li>
-</ul>
+- {{ event("gotpointercapture") }}

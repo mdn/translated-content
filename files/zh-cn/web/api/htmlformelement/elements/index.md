@@ -3,19 +3,27 @@ title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 translation_of: Web/API/HTMLFormElement/elements
 ---
-<div>小结</div>
-<p><strong>elements</strong> 返回一个 {{domxref("HTMLFormControlsCollection")}} (<code><a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506">HTMLCollection</a></code>) 其中包含 FORM 的所有控件。需要注意的是，其中不包括 <code>type</code> 等于 <code>image</code> 的 <code><a href="/en-US/docs/HTML/Element/Input">input</a></code> 元素。</p>
-<p>你可以通过 <a href="/en-US/docs/DOM/element.name">name</a> 或 <a href="/en-US/docs/DOM/element.id">id</a>来访问对应的控件。</p>
-<h2 id="Syntax">语法</h2>
-<pre class="syntaxbox"><em>nodeList</em> = <em>HTMLFormElement</em>.elements
-</pre>
-<h2 id="Example">实例</h2>
-<pre class="brush:js">var inputs = document.getElementById("form1").elements;
+小结
+
+**elements** 返回一个 {{domxref("HTMLFormControlsCollection")}} ([`HTMLCollection`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)) 其中包含 FORM 的所有控件。需要注意的是，其中不包括 `type` 等于 `image` 的 [`input`](/en-US/docs/HTML/Element/Input) 元素。
+
+你可以通过 [name](/en-US/docs/DOM/element.name) 或 [id](/en-US/docs/DOM/element.id)来访问对应的控件。
+
+## 语法
+
+```plain
+nodeList = HTMLFormElement.elements
+```
+
+## 实例
+
+```js
+var inputs = document.getElementById("form1").elements;
 var inputByIndex = inputs[2];
 var inputByName = inputs["login"];
-</pre>
-<h2 id="Specification">规范</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/html5/forms.html#dom-form-elements">HTML5, Section 4.10.3, The form Element</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479">DOM Level 2 HTML: elements</a></li>
-</ul>
+```
+
+## 规范
+
+- [HTML5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-elements)
+- [DOM Level 2 HTML: elements](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76728479)

@@ -7,24 +7,26 @@ tags:
   - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">ReferenceError: invalid assignment left-hand side
-</pre>
+```plain
+ReferenceError: invalid assignment left-hand side
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("ReferenceError")}}.</p>
+{{jsxref("ReferenceError")}}.
 
-<h2 id="What_went_wrong">What went wrong?</h2>
+## What went wrong?
 
-<p>有时会出现不可预料的赋值情况。这可能是因为<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值运算符</a>或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>不匹配的缘故。正确的是，使用“=”号将值赋给一个变量，使用“==”或者“===”来比较一个值。</p>
+有时会出现不可预料的赋值情况。这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)或[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)不匹配的缘故。正确的是，使用“=”号将值赋给一个变量，使用“==”或者“===”来比较一个值。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js example-bad">if (Math.PI = 3 || Math.PI = 4) {
+```js example-bad
+if (Math.PI = 3 || Math.PI = 4) {
   console.log('no way!');
 }
 // ReferenceError: invalid assignment left-hand side
@@ -33,22 +35,21 @@ var str = 'Hello, '
 += 'is it me '
 += 'you\'re looking for?';
 // ReferenceError: invalid assignment left-hand side
-</pre>
+```
 
-<p>在 <code>if</code> 语句中，你要使用比较运算符 ("==")，而在字符串连接中，使用加号运算符 ("+")。</p>
+在 `if` 语句中，你要使用比较运算符 ("==")，而在字符串连接中，使用加号运算符 ("+")。
 
-<pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
+```js example-good
+if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
 }
 
 var str = 'Hello, '
 + 'from the '
 + 'other side!';
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值运算符</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a></li>
-</ul>
+- [赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

@@ -8,38 +8,35 @@ tags:
   - 接口
 translation_of: Web/API/CSSMediaRule
 ---
-<div>{{ APIRef("CSSOM") }}</div>
+{{ APIRef("CSSOM") }}
 
-<p><strong><code>CSSMediaRule</code></strong> 是一个表示单个 CSS {{cssxref("@media")}} 规则的接口。它实现了 {{domxref("CSSConditionRule")}} 接口，因此也是 {{domxref("CSSGroupingRule")}}，也相当于{{domxref("CSSRule")}}中类型值为 <code>4</code> 的规则类型（即<code>CSSRule.MEDIA_RULE</code>）。</p>
+**`CSSMediaRule`** 是一个表示单个 CSS {{cssxref("@media")}} 规则的接口。它实现了 {{domxref("CSSConditionRule")}} 接口，因此也是 {{domxref("CSSGroupingRule")}}，也相当于{{domxref("CSSRule")}}中类型值为 `4` 的规则类型（即`CSSRule.MEDIA_RULE`）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>下列语法是使用 <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 格式描述的。</p>
+下列语法是使用 [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式描述的。
 
-<pre>interface CSSMediaRule : CSSConditionRule {
+```plain
+interface CSSMediaRule : CSSConditionRule {
     readonly attribute MediaList media;
 }
-</pre>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，<code>CSSMediaRule</code> 也实现（继承）了来自这些接口的属性。它还有如下属性：</p>
+作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，`CSSMediaRule` 也实现（继承）了来自这些接口的属性。它还有如下属性：
 
-<dl>
- <dt>{{domxref("CSSMediaRule.media")}} {{readonlyinline}}</dt>
- <dd>声明了一个 {{domxref("MediaList")}}，表示指定目标媒体中的样式信息。</dd>
-</dl>
+- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
+  - : 声明了一个 {{domxref("MediaList")}}，表示指定目标媒体中的样式信息。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，<code>CSSMediaRule</code> 也实现（继承）了来自这些接口的方法。除此之外，没有其他方法。</p>
+作为一个 {{ domxref("CSSConditionRule") }}，同时也是 {{domxref("CSSGroupingRule")}} 和 {{ domxref("CSSRule") }}，`CSSMediaRule` 也实现（继承）了来自这些接口的方法。除此之外，没有其他方法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.CSSMediaRule")}}</p>
+{{Compat("api.CSSMediaRule")}}

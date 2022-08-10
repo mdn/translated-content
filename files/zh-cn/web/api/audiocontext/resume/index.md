@@ -7,27 +7,29 @@ tags:
   - resume
 translation_of: Web/API/AudioContext/resume
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AudioContext") }} 的 <code>resume()</code> 方法，恢复之前暂停播放的音频。</p>
+{{ domxref("AudioContext") }} 的 `resume()` 方法，恢复之前暂停播放的音频。
 
-<p>如果在 {{domxref("OfflineAudioContext")}} 上调用，会导致 <code>INVALID_STATE_ERR</code> 错误。</p>
+如果在 {{domxref("OfflineAudioContext")}} 上调用，会导致 `INVALID_STATE_ERR` 错误。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 audioCtx.resume().then(function() { ... });
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{jsxref("Promise")}}成功的话返回空值，返回失败是因为 context 已经关闭了。</p>
+{{jsxref("Promise")}}成功的话返回空值，返回失败是因为 context 已经关闭了。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码是 <a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (<a href="http://mdn.github.io/audiocontext-states/">see it running live</a>) 的一部分。当点击暂停／恢复按钮的时候，需要{{domxref("AudioContext.state")}}做判断：如果是运行状态，调用{{domxref("suspend()")}}，如果是暂停状态，调用<code>resume()。每次点击事件成功后，按钮的文字也会随着变成对应的状态</code>。</p>
+下面的代码是 [AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([see it running live](http://mdn.github.io/audiocontext-states/)) 的一部分。当点击暂停／恢复按钮的时候，需要{{domxref("AudioContext.state")}}做判断：如果是运行状态，调用{{domxref("suspend()")}}，如果是暂停状态，调用`resume()。每次点击事件成功后，按钮的文字也会随着变成对应的状态`。
 
-<pre class="brush: js">susresBtn.onclick = function() {
+```js
+susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -38,19 +40,17 @@ audioCtx.resume().then(function() { ... });
     });
   }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="兼容性">兼容性</h2>
+## 兼容性
 
 {{Compat("api.AudioContext.resume")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/zh-CN/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

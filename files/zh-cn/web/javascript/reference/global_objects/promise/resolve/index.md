@@ -7,15 +7,13 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`Promise.resolve(value)`**方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise ，那么将返回这个 promise ；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "\"then\" ")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。
 
-<div><code><strong>Promise.resolve(value)</strong></code>方法返回一个以给定值解析后的 {{jsxref("Promise")}} 对象。如果这个值是一个 promise ，那么将返回这个 promise ；如果这个值是 thenable（即带有 {{jsxref("Promise.then", "\"then\" ")}} 方法），返回的 promise 会“跟随”这个 thenable 的对象，采用它的最终状态；否则返回的 promise 将以此值完成。此函数将类 promise 对象的多层嵌套展平。</div>
+> **警告：**不要在解析为自身的 thenable 上调用`Promise.resolve`。这将导致无限递归，因为它试图展平无限嵌套的 promise。一个例子是将它与 Angular 中的异步管道一起使用。在[此处](https://angular.io/guide/template-syntax#avoid-side-effects)了解更多信息。
 
-<div class="warning">
-<p><strong>警告：</strong>不要在解析为自身的 thenable 上调用<code>Promise.resolve</code>。这将导致无限递归，因为它试图展平无限嵌套的 promise。一个例子是将它与 Angular 中的异步管道一起使用。在<a href="https://angular.io/guide/template-syntax#avoid-side-effects">此处</a>了解更多信息。</p>
-</div>
-<div>例如下例代码</div>
-<pre class="brush: js">
+例如下例代码
+
+```js
 let thenable = {
   then: (resolve, reject) => {
     resolve(thenable)
@@ -23,51 +21,55 @@ let thenable = {
 }
 
 Promise.resolve(thenable) //这会造成一个死循环
-</pre>
+```
 
-<div>{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>Promise.resolve(value)</var>;
-</pre>
+```plain
+Promise.resolve(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>value</p>
+value
 
-<p>将被 <code>Promise</code> 对象解析的参数，也可以是一个<code>Promise</code> 对象，或者是一个 thenable。</p>
+将被 `Promise` 对象解析的参数，也可以是一个`Promise` 对象，或者是一个 thenable。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个带着给定值解析过的 <code>Promise</code> 对象，如果参数本身就是一个 <code>Promise</code> 对象，则直接返回这个 <code>Promise</code> 对象。</p>
+返回一个带着给定值解析过的 `Promise` 对象，如果参数本身就是一个 `Promise` 对象，则直接返回这个 `Promise` 对象。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>静态方法 <code>Promise.resolve</code> 返回一个解析过的 <code>Promise</code> 对象。</p>
+静态方法 `Promise.resolve` 返回一个解析过的 `Promise` 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用静态_promise.resolve_方法">使用静态 <code>Promise.resolve</code> 方法</h3>
+### 使用静态 `Promise.resolve` 方法
 
-<pre class="brush: js">Promise.resolve("Success").then(function(value) {
+```js
+Promise.resolve("Success").then(function(value) {
   console.log(value); // "Success"
 }, function(value) {
   // 不会被调用
 });
-</pre>
+```
 
-<h3 id="resolve_一个数组">resolve 一个数组</h3>
+### resolve 一个数组
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="resolve_另一个_promise">resolve 另一个 promise</h3>
+### resolve 另一个 promise
 
-<pre class="brush: js">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log('value: ' + value);
@@ -78,13 +80,15 @@ console.log('original === cast ? ' + (original === cast));
 *  打印顺序如下，这里有一个同步异步先后执行的区别
 *  original === cast ? true
 *  value: 33
-*/</pre>
+*/
+```
 
-<p>日志顺序颠倒其实是由于异步地调用 <code>then</code> 方法。在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value">这里</a>查看 <code>then</code> 是如何工作的。</p>
+日志顺序颠倒其实是由于异步地调用 `then` 方法。在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)查看 `then` 是如何工作的。
 
-<h3 id="resolve_thenable_并抛出错误">resolve thenable 并抛出错误</h3>
+### resolve thenable 并抛出错误
 
-<pre class="brush: js">// Resolve 一个 thenable 对象
+```js
+// Resolve 一个 thenable 对象
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill("fulfilled!"); }
 });
@@ -123,18 +127,16 @@ p3.then(function(v) {
 }, function(e) {
   // 不会被调用
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

@@ -8,47 +8,46 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>delete()</strong></code> 方法可以从一个 <code>Set</code> 对象中删除指定的元素。</p>
+**`delete()`** 方法可以从一个 `Set` 对象中删除指定的元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>mySet</em>.delete(value);</code></pre>
+```plain
+mySet.delete(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>value</dt>
- <dd>将要删除的元素</dd>
-</dl>
+- value
+  - : 将要删除的元素
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>成功删除返回 <code>true</code>，否则返回 <code>false。</code></p>
+成功删除返回 `true`，否则返回 `false。`
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add("foo");
 
 mySet.delete("bar"); // 返回 false，不包含 "bar" 这个元素
 mySet.delete("foo"); // 返回 true，删除成功
 
 mySet.has("foo");    // 返回 false，"foo" 已经成功删除
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

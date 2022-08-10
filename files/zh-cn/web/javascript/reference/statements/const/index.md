@@ -9,42 +9,41 @@ tags:
   - constants
 translation_of: Web/JavaScript/Reference/Statements/const
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>常量是块级范围的，非常类似用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let">let</a> 语句定义的变量。但常量的值是无法（通过重新赋值）改变的，也不能被重新声明。</p>
+常量是块级范围的，非常类似用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 语句定义的变量。但常量的值是无法（通过重新赋值）改变的，也不能被重新声明。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-const.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
+## 语法
 
+```plain
+const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```
 
-<h2 id="语法">语法</h2>
+- `nameN`
+  - : 常量名称，可以是任意合法的{{Glossary("identifier","标识符")}}。
+- `valueN`
+  - : 常量值，可以是任意合法的[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)。
 
-<pre class="syntaxbox">const <em>name1 = <em>value1 [</em>, <em>name2</em> = <em>value2</em><em> [</em>, ... [</em>, <em>nameN</em> = <em>valueN]]]</em>;</pre>
+## 描述
 
-<dl>
- <dt><code>nameN</code></dt>
- <dd>常量名称，可以是任意合法的{{Glossary("identifier","标识符")}}。</dd>
- <dt><code>valueN</code></dt>
- <dd>常量值，可以是任意合法的<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">表达式</a>。</dd>
-</dl>
+此声明创建一个常量，其作用域可以是全局或本地声明的块。 与[`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)变量不同，全局常量不会变为 window 对象的属性。需要一个常数的初始化器；也就是说，您必须在声明的同一语句中指定它的值（这是有道理的，因为以后不能更改）。
 
-<h2 id="描述">描述</h2>
+**`const` 声明**创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。例如，在引用内容是对象的情况下，这意味着可以改变对象的内容（例如，其参数）。
 
-<p>此声明创建一个常量，其作用域可以是全局或本地声明的块。 与<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var">var</a></code>变量不同，全局常量不会变为 window 对象的属性。需要一个常数的初始化器；也就是说，您必须在声明的同一语句中指定它的值（这是有道理的，因为以后不能更改）。</p>
+关于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)”的所有讨论都适用于[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)和`const`。
 
-<p><strong><code>const</code></strong><strong>声明</strong>创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。例如，在引用内容是对象的情况下，这意味着可以改变对象的内容（例如，其参数）。</p>
+一个常量不能和它所在作用域内的其他变量或函数拥有相同的名称。
 
-<p>关于“<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">暂存死区</a>”的所有讨论都适用于<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let">let</a></code>和<code>const</code>。</p>
+## 示例
 
-<p>一个常量不能和它所在作用域内的其他变量或函数拥有相同的名称。</p>
+### const 基本用法
 
-<h2 id="示例">示例</h2>
+常量在声明的时候可以使用大小写，但通常情况下全部用大写字母。
 
-<h3 id="const_基本用法">const 基本用法</h3>
-
-<p>常量在声明的时候可以使用大小写，但通常情况下全部用大写字母。</p>
-
-<pre class="brush: js;">// 定义常量 MY_FAV 并赋值 7
+```js
+// 定义常量 MY_FAV 并赋值 7
 const MY_FAV = 7;
 
 // 报错 - Uncaught TypeError: Assignment to constant variable.
@@ -62,14 +61,14 @@ var MY_FAV = 20;
 
 // 也会报错
 let MY_FAV = 20;
+```
 
-</pre>
+### 块作用域
 
-<h3 id="块作用域">块作用域</h3>
+注意块作用域的性质很重要
 
-<p>注意块作用域的性质很重要</p>
-
-<pre class="brush: js">if (MY_FAV === 7) {
+```js
+if (MY_FAV === 7) {
   // 没问题，并且创建了一个块作用域变量 MY_FAV
   // (works equally well with let to declare a block scoped non const variable)
   let MY_FAV = 20;
@@ -83,21 +82,23 @@ let MY_FAV = 20;
 
 // MY_FAV 依旧为 7
 console.log('my favorite number is ' + MY_FAV);
-</pre>
+```
 
-<h3 id="常量要求一个初始值">常量要求一个初始值</h3>
+### 常量要求一个初始值
 
-<pre class="brush: js">// 报错
+```js
+// 报错
 // Uncaught SyntaxError: Missing initializer in const declaration
 
 const FOO;
-</pre>
+```
 
-<h3 id="常量可以定义成对象和数组">常量可以定义成对象和数组</h3>
+### 常量可以定义成对象和数组
 
-<p>常量可以定义成对象和数组</p>
+常量可以定义成对象和数组
 
-<pre class="brush: js">const MY_OBJECT = {'key': 'value'};
+```js
+const MY_OBJECT = {'key': 'value'};
 
 // 重写对象和上面一样会失败
 // Uncaught TypeError: Assignment to constant variable.
@@ -113,20 +114,19 @@ const MY_ARRAY = [];
 MY_ARRAY.push('A'); // ["A"]
 // 但是，将一个新数组赋给变量会引发错误
 // Uncaught TypeError: Assignment to constant variable.
-MY_ARRAY = ['B'];</pre>
+MY_ARRAY = ['B'];
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants">Constants in the JavaScript Guide</a></li>
-</ul>
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/let", "let")}}
+- [Constants in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Constants)

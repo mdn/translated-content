@@ -3,54 +3,53 @@ title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>link()</code></strong> 方法创建一个 HTML 元素 {{HTMLElement("a")}} ，用该字符串作为超链接的显示文本，参数作为指向另一个 URL 的超链接。</p>
+**`link()`** 方法创建一个 HTML 元素 {{HTMLElement("a")}} ，用该字符串作为超链接的显示文本，参数作为指向另一个 URL 的超链接。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.link(<var>url</var>)</code></pre>
+```plain
+str.link(url)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>url</code></dt>
- <dd>任何能够指定 <code>a</code> 标签的 <code>href</code> 属性的字符串；它应当是有效的 URL（相对或绝对），任何 <code>&amp;</code> 字符将会被转义为 <code>&amp;amp;</code>，任何 <code>"</code> 字符将会被转义为 <code>&amp;quot;</code>。</dd>
-</dl>
+- `url`
+  - : 任何能够指定 `a` 标签的 `href` 属性的字符串；它应当是有效的 URL（相对或绝对），任何 `&` 字符将会被转义为 `&amp;`，任何 `"` 字符将会被转义为 `&quot;`。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个带有一个 HTML 元素 {{HTMLElement("a")}} 的字符串。</p>
+一个带有一个 HTML 元素 {{HTMLElement("a")}} 的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>使用 <code>link</code> 方法创建一个超链接 HTML 片段。返回的字符串可以通过 {{ Domxref("document.write") }} 或 {{ Domxref("element.innerHTML") }} 方法添加到文档中。</p>
+使用 `link` 方法创建一个超链接 HTML 片段。返回的字符串可以通过 {{ Domxref("document.write") }} 或 {{ Domxref("element.innerHTML") }} 方法添加到文档中。
 
-<p>使用 <code>link</code> 方法创建的链接将会成为 document.links 数组中的元素。查看 {{ Domxref("document.links") }}。</p>
+使用 `link` 方法创建的链接将会成为 document.links 数组中的元素。查看 {{ Domxref("document.links") }}。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="例子：使用_link">例子：使用 <code>link</code></h3>
+### 例子：使用 `link`
 
-<p>下例显示一个单词 "MDN" 作为超链接，指向 Mozilla Developer Network。</p>
+下例显示一个单词 "MDN" 作为超链接，指向 Mozilla Developer Network。
 
-<pre class="brush:js">var hotText = 'MDN';
+```js
+var hotText = 'MDN';
 var URL = 'https://developer.mozilla.org/';
 
 document.write('Click to return to ' + hotText.link(URL));
-// Click to return to &lt;a href="https://developer.mozilla.org/"&gt;MDN&lt;/a&gt;
-</pre>
+// Click to return to <a href="https://developer.mozilla.org/">MDN</a>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.prototype.anchor()")}}</li>
-</ul>
+- {{jsxref("String.prototype.anchor()")}}

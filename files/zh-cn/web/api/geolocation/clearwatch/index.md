@@ -3,29 +3,30 @@ title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
 translation_of: Web/API/Geolocation/clearWatch
 ---
-<p>{{ APIref("Geolocation API") }}</p>
+{{ APIref("Geolocation API") }}
 
-<p><strong><code>Geolocation.clearWatch()</code></strong>这个方法主要用于使用 {{domxref("Geolocation.watchPosition()")}} 注册的 位置/错误 监听器。</p>
+**`Geolocation.clearWatch()`**这个方法主要用于使用 {{domxref("Geolocation.watchPosition()")}} 注册的 位置/错误 监听器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">navigator.geolocation.clearWatch(<em>id</em>);</pre>
+```plain
+navigator.geolocation.clearWatch(id);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>id</em></dt>
- <dd>希望移除的监听器所对应的 {{domxref("Geolocation.watchPosition()")}} 返回的 ID 数字。</dd>
-</dl>
+- _id_
+  - : 希望移除的监听器所对应的 {{domxref("Geolocation.watchPosition()")}} 返回的 ID 数字。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var id, target, option;
+```js
+var id, target, option;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulation, you reach the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -47,23 +48,21 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Geolocation.clearWatch")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">使用地理位置定位</a></li>
- <li>{{domxref("Geolocation")}}</li>
- <li>{{domxref("Geolocation.watchPosition()")}}</li>
- <li>{{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [使用地理位置定位](/en-US/docs/WebAPI/Using_geolocation)
+- {{domxref("Geolocation")}}
+- {{domxref("Geolocation.watchPosition()")}}
+- {{domxref("Geolocation.getCurrentPosition()")}}

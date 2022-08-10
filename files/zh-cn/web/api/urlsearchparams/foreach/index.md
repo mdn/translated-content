@@ -3,39 +3,38 @@ title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 translation_of: Web/API/URLSearchParams/forEach
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
+URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对
 
+{{availableinworkers}}
 
-<p>URLSearchParams 的实例对象上的方法 forEach 允许通过回调函数来遍历 URLSearchParams 实例对象上的键值对</p>
+## 语法
 
-<p>{{availableinworkers}}</p>
+```plain
+searchParams.forEach(callback(value,key,searchParams));
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">searchParams.forEach(callback(value,key,searchParams));</pre>
+- 回调函数
+  - : 该回调函数可以接收到 3 个参数 value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：
+- 1\. value
+  - : 当前遍历到的键值
+- 2\. key
+  - : 当前遍历到的键名
+- 3\. searchParams
+  - : 当前调用 forEach 方法的实例对象
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>回调函数</dt>
- <dd>    该回调函数可以接收到 3 个参数 value,key,searchParams，我们可以在回调函数中对接收到的参数进行处理。而三个参数的含义如下：</dd>
- <dt>    1.  value</dt>
- <dd>     当前遍历到的键值</dd>
- <dt>    2.  key</dt>
- <dd>     当前遍历到的键名</dd>
- <dt>    3.  searchParams</dt>
- <dd>     当前调用 forEach 方法的实例对象</dd>
-</dl>
+空
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>    空</p>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">// 创建 URLSearchParams 对象的实例对象，用于测试
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+```js
+// 创建 URLSearchParams 对象的实例对象，用于测试
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 let returnValue = searchParams.forEach(function(value, key,searchParams) {
      // 打印值
@@ -44,29 +43,24 @@ let returnValue = searchParams.forEach(function(value, key,searchParams) {
 
 // 输出返回值
 console.log(returnValue)
-</pre>
+```
 
-<p>结果是：</p>
+结果是：
 
-<pre>value1 key1 当前调用 forEach 方法的实例对象 (也就是 searchParams)
+```plain
+value1 key1 当前调用 forEach 方法的实例对象 (也就是 searchParams)
 value2 key2 当前调用 forEach 方法的实例对象 (也就是 searchParams)
 undefined  // 即没有返回值
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.URLSearchParams.forEach")}}
 
+## See also
 
-<p>{{Compat("api.URLSearchParams.forEach")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The {{domxref("URL")}} interface.</li>
-</ul>
+- The {{domxref("URL")}} interface.

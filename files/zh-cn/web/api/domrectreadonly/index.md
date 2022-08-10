@@ -3,62 +3,47 @@ title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 translation_of: Web/API/DOMRectReadOnly
 ---
-<p>{{APIRef("Geometry Interfaces")}}</p>
+{{APIRef("Geometry Interfaces")}}
 
-<p><strong><code>DOMRectReadOnly</code></strong> 接口通过详细列出 {{domxref("DOMRect")}} 所使用的标准属性来定义一个属性不可变的矩形。</p>
+**`DOMRectReadOnly`** 接口通过详细列出 {{domxref("DOMRect")}} 所使用的标准属性来定义一个属性不可变的矩形。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}</dt>
- <dd>用来创建新的 <code>DOMRectReadOnly</code> 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回 “Illegal constructor” 类型错误。</dd>
-</dl>
+- {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
+  - : 用来创建新的 `DOMRectReadOnly` 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回 “Illegal constructor” 类型错误。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
-</dl>
+- {{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}
+  - : `DOMRect` 原点的 x 坐标。
+- {{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}
+  - : `DOMRect` 原点的 y 坐标。
+- {{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}
+  - : `DOMRect` 的宽度。
+- {{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}
+  - : `DOMRect` 的高度。
+- {{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}
+  - : 返回 `DOMRect` 的顶部坐标值（通常与 `y` 相同）。
+- {{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}
+  - : 返回 `DOMRect` 的右坐标值（通常与 `x + width` 相同）。
+- {{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}
+  - : 返回 `DOMRect` 的底部坐标值（通常与 `y + height` 相同）。
+- {{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}
+  - : 返回 `DOMRect` 的左坐标值（通常与 `x​​​​​​​` 相同）。
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}</dt>
- <dd><code>DOMRect</code> 原点的 x 坐标。</dd>
- <dt>{{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}</dt>
- <dd><code>DOMRect</code> 原点的 y 坐标。</dd>
- <dt>{{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}</dt>
- <dd><code>DOMRect</code> 的宽度。</dd>
- <dt>{{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}</dt>
- <dd><code>DOMRect</code> 的高度。</dd>
- <dt>{{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}</dt>
- <dd>返回 <code>DOMRect</code> 的顶部坐标值（通常与 <code>y</code> 相同）。</dd>
- <dt>{{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}</dt>
- <dd>返回 <code>DOMRect</code> 的右坐标值（通常与 <code>x + width</code> 相同）。</dd>
- <dt>{{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}</dt>
- <dd>返回 <code>DOMRect</code> 的底部坐标值（通常与 <code>y + height</code> 相同）。</dd>
- <dt>{{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}</dt>
- <dd>返回 <code>DOMRect</code> 的左坐标值（通常与 <code>x​​​​​​​</code> 相同）。</dd>
-</dl>
+## 静态方法
 
-<h2 id="静态方法">静态方法</h2>
+- {{domxref("DOMRectReadOnly.fromRect()")}}
+  - : 使用指定的位置和尺寸创建一个新的 `DOMRect` 对象。
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.fromRect()")}}</dt>
- <dd>使用指定的位置和尺寸创建一个新的 <code>DOMRect</code> 对象。</dd>
-</dl>
-
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.DOMRectReadOnly")}}
 
+## 其他
 
-<p>{{Compat("api.DOMRectReadOnly")}}</p>
-</div>
-
-<h2 id="其他">其他</h2>
-
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}

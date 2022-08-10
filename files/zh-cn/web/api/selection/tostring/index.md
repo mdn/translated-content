@@ -3,49 +3,43 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 translation_of: Web/API/Selection/toString
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p><strong><code>Selection.toString()</code></strong>返回代表当前 selection 对象的字符串，例如当前选择的文本文字。</p>
+**`Selection.toString()`**返回代表当前 selection 对象的字符串，例如当前选择的文本文字。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>str</em> =<em> sel</em>.toString()
-</pre>
+```plain
+str = sel.toString()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<ul>
- <li><em><code>str</code></em> 代表 selection 的字符串。</li>
-</ul>
+- _`str`_ 代表 selection 的字符串。
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<p><em>无。</em></p>
+_无。_
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>此方法返回当前被选中的文本文字。</p>
+此方法返回当前被选中的文本文字。
 
-<p>在<a href="/zh-CN/docs/Web/JavaScript">JavaScript</a>中，当 selection 对象作为字符串类型使用时，此方法会被自动调用：</p>
+在[JavaScript](/zh-CN/docs/Web/JavaScript)中，当 selection 对象作为字符串类型使用时，此方法会被自动调用：
 
-<pre class="brush: js">alert(window.getSelection()) // 被调用时
+```js
+alert(window.getSelection()) // 被调用时
 alert(window.getSelection().toString())  // 真实情况
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Selection.toString")}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("Selection")}}, Selection 接口规范。</li>
-</ul>
+- {{domxref("Selection")}}, Selection 接口规范。

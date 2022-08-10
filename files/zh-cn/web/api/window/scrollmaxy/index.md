@@ -10,39 +10,37 @@ tags:
   - 非标准
 translation_of: Web/API/Window/scrollMaxY
 ---
-<div>{{APIRef}} {{Non-standard_header}}</div>
+{{APIRef}} {{Non-standard_header}}
 
-<p>只读属性<code><strong>Window.scrollMaxY</strong></code>返回<code>document</code>可以纵向滚动的最大像素数目</p>
+只读属性**`Window.scrollMaxY`**返回`document`可以纵向滚动的最大像素数目
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>yMax</em> = window.scrollMaxY
-</pre>
+```plain
+yMax = window.scrollMaxY
+```
 
-<ul>
- <li><code>yMax</code> 是像素数。</li>
-</ul>
+- `yMax` 是像素数。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush:js">// 滚动到页面的底部
+```js
+// 滚动到页面的底部
 let maxY = window.scrollMaxY;
 
 window.scrollTo(0, maxY);
-</pre>
+```
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>不要用 {{domxref("window.innerHeight")}} + window.scrollMaxY 来计算 document 的总高度，因为 {{domxref("window.innerHeight")}} 也包括了可见的水平滚动条的高度。正确的做法是使用 {{domxref("element.scrollHeight","document.body.scrollHeight")}} 。</p>
+不要用 {{domxref("window.innerHeight")}} + window\.scrollMaxY 来计算 document 的总高度，因为 {{domxref("window.innerHeight")}} 也包括了可见的水平滚动条的高度。正确的做法是使用 {{domxref("element.scrollHeight","document.body.scrollHeight")}} 。
 
-<p>参见{{domxref("window.scrollMaxX")}} 和 {{domxref("window.scrollTo")}} 。</p>
+参见{{domxref("window.scrollMaxX")}} 和 {{domxref("window.scrollTo")}} 。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>这不属于任何规范中的一部分。</p>
+这不属于任何规范中的一部分。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Window.scrollMaxY")}}</p>
+{{Compat("api.Window.scrollMaxY")}}

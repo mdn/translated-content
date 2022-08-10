@@ -4,26 +4,35 @@ slug: Web/API/HTMLElement/paste_event
 translation_of: Web/API/HTMLElement/onpaste
 original_slug: Web/API/HTMLElement/onpaste
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary">概述</h3>
-<p><strong>onpaste</strong> 属性用来获取或设置当前元素的<code>paste</code>事件的事件处理函数。</p>
-<h3 id="Syntax">语法</h3>
-<pre class="eval"><em>element</em>.onpaste = <em>functionRef</em>;
-</pre>
-<p><em>functionRef</em> 是一个函数名或者函数表达式。</p>
-<h3 id="Example">例子</h3>
-<pre>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;onpaste 示例演示&lt;/title&gt;
-&lt;/head&gt;
+{{ ApiRef() }}
 
-&lt;body&gt;
-&lt;h3&gt;按说明进行操作！&lt;/h3&gt;
-&lt;textarea id="editor" rows="3" cols="80"&gt;
+### 概述
+
+**onpaste** 属性用来获取或设置当前元素的`paste`事件的事件处理函数。
+
+### 语法
+
+```plain
+element.onpaste = functionRef;
+```
+
+_functionRef_ 是一个函数名或者函数表达式。
+
+### 例子
+
+```plain
+<html>
+<head>
+<title>onpaste 示例演示</title>
+</head>
+
+<body>
+<h3>按说明进行操作！</h3>
+<textarea id="editor" rows="3" cols="80">
 尝试在这里粘贴文本！
-&lt;/textarea&gt;
+</textarea>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   function log(txt)
   {
     document.getElementById("log").appendChild(document.createTextNode(txt + "\n"));
@@ -36,22 +45,29 @@ original_slug: Web/API/HTMLElement/onpaste
   }
 
   document.getElementById("editor").addEventListener("paste", pasteIntercept, false);
-&lt;/script&gt;
+</script>
 
-&lt;h3&gt;Log&lt;/h3&gt;
-&lt;textarea rows="15" cols="80" id="log" readonly="true"&gt;&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<p>上例演示了如何禁止向一个文本域内粘贴文本。</p>
-<h3 id="Notes">备注</h3>
-<p>当用户尝试粘贴文本时会触发<code>paste</code>事件。</p>
-<h3 id="Specification">规范</h3>
-<p>不属于任何公开的规范。</p>
-<h3 id="Notes_2">备注</h3>
-<p>没有任何 DOM 方法可以使用来获取将要粘贴的剪切板中的文字，你可以使用 XPCOM 接口<code>nsIClipboard</code>来进行这样的操作。</p>
-<h3 id="See_also">相关链接</h3>
-<ul>
- <li><code><a href="/zh-cn/DOM/element.oncopy">oncopy</a></code></li>
- <li><code><a href="/zh-cn/DOM/element.oncut">oncut</a></code></li>
-</ul>
+<h3>Log</h3>
+<textarea rows="15" cols="80" id="log" readonly="true"></textarea>
+</body>
+</html>
+```
+
+上例演示了如何禁止向一个文本域内粘贴文本。
+
+### 备注
+
+当用户尝试粘贴文本时会触发`paste`事件。
+
+### 规范
+
+不属于任何公开的规范。
+
+### 备注
+
+没有任何 DOM 方法可以使用来获取将要粘贴的剪切板中的文字，你可以使用 XPCOM 接口`nsIClipboard`来进行这样的操作。
+
+### 相关链接
+
+- [`oncopy`](/zh-cn/DOM/element.oncopy)
+- [`oncut`](/zh-cn/DOM/element.oncut)

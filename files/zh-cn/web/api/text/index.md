@@ -3,47 +3,39 @@ title: Text
 slug: Web/API/Text
 translation_of: Web/API/Text
 ---
-<p>{{ ApiRef() }}</p>
-<p>The <strong><code>Text</code></strong> interface represents the textual content of {{domxref("Element")}} or {{domxref("Attr")}}.  If an element has no markup within its content, it has a single child implementing <code>Text</code> that contains the element's text.  However, if the element contains markup, it is parsed into information items and <code>Text</code> nodes that form its children.</p>
-<p>New documents have a single <code>Text</code> node for each block of text. Over time, more <code>Text</code> nodes may be created as the document's content changes.  The {{domxref("Node.normalize()")}} method merges adjacent <code>Text</code> objects back into a single node for each block of text.</p>
-<h2 id="Properties">属性</h2>
-<dl>
- <dt>
-  {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{Deprecated_Inline}}</dt>
- <dd>
-  <p>Returns a {{domxref("Boolean")}} flag indicatingwhether or not the text node contains only whitespace.</p>
- </dd>
- <dt>
-  {{domxref("Text.wholeText")}} {{readonlyInline}}</dt>
- <dd>
-  Returns a {{domxref("DOMString")}} containing the text of all <code>Text</code> nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.</dd>
-</dl>
-<h2 id="Methods">构造函数</h2>
-<dl>
- <dt>
-  {{domxref("Text.Text", "Text()")}} {{experimental_inline}}</dt>
- <dd>
-  Returns a <code>Text</code> node with the parameter as its textual content.</dd>
-</dl>
-<h2 id="Methods">方法</h2>
-<dl>
- <dt>
-  {{domxref("Text.replaceWholeText")}} {{Deprecated_Inline}}</dt>
- <dd>
-  Replaces the text of the current node and all logically adjacent nodes with the specified text.</dd>
-</dl>
-<dl>
- <dt>
-  {{domxref("Text.splitText")}}</dt>
- <dd>
-  Breaks the node into two nodes at a specified offset.</dd>
-</dl>
-<h2 id="规范">规范</h2>
+{{ ApiRef() }}
+
+The **`Text`** interface represents the textual content of {{domxref("Element")}} or {{domxref("Attr")}}. If an element has no markup within its content, it has a single child implementing `Text` that contains the element's text. However, if the element contains markup, it is parsed into information items and `Text` nodes that form its children.
+
+New documents have a single `Text` node for each block of text. Over time, more `Text` nodes may be created as the document's content changes. The {{domxref("Node.normalize()")}} method merges adjacent `Text` objects back into a single node for each block of text.
+
+## 属性
+
+- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{Deprecated_Inline}}
+  - : Returns a {{domxref("Boolean")}} flag indicatingwhether or not the text node contains only whitespace.
+- {{domxref("Text.wholeText")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the text of all `Text` nodes logically adjacent to this {{domxref("Node")}}, concatenated in document order.
+
+## 构造函数
+
+- {{domxref("Text.Text", "Text()")}} {{experimental_inline}}
+  - : Returns a `Text` node with the parameter as its textual content.
+
+## 方法
+
+- {{domxref("Text.replaceWholeText")}} {{Deprecated_Inline}}
+  - : Replaces the text of the current node and all logically adjacent nodes with the specified text.
+- {{domxref("Text.splitText")}}
+  - : Breaks the node into two nodes at a specified offset.
+
+## 规范
+
 {{Specifications}}
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+## 浏览器兼容性
+
 {{Compat("api.Text")}}
 
-<h2 id="相关链接">相关链接</h2>
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a>.</li>
-</ul>
+## 相关链接
+
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference).

@@ -3,52 +3,50 @@ title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>setDate()</strong></code> 方法根据本地时间来指定一个日期对象的天数。</p>
+**`setDate()`** 方法根据本地时间来指定一个日期对象的天数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setdate.html")}}
 
+## 语法
 
+```plain
+dateObj.setDate(dayValue)
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setDate(<em>dayValue</em>)</code></pre>
+- `dayValue`
+  - : 一个整数，表示该月的第几天。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>dayValue</code></dt>
- <dd>一个整数，表示该月的第几天。</dd>
-</dl>
+如果 `dayValue` 超出了月份的合理范围，`setDate` 将会相应地更新 `Date` 对象。
 
-<h2 id="Description">描述</h2>
+例如，如果为 `dayValue` 指定 0，那么日期就会被设置为上个月的最后一天。
 
-<p>如果 <code>dayValue</code> 超出了月份的合理范围，<code>setDate</code> 将会相应地更新 <code>Date</code> 对象。</p>
+如果 dayValue 被设置为负数，日期会设置为上个月最后一天往前数这个负数绝对值天数后的日期。-1 会设置为上月最后一天的前一天（译者注：例如当前为 4 月，如果 setDate(-2),则为 3 月 29 日）
 
-<p>例如，如果为 <code>dayValue</code> 指定 0，那么日期就会被设置为上个月的最后一天。</p>
+## 例子
 
-<p>如果 dayValue 被设置为负数，日期会设置为上个月最后一天往前数这个负数绝对值天数后的日期。-1 会设置为上月最后一天的前一天（译者注：例如当前为 4 月，如果 setDate(-2),则为 3 月 29 日）</p>
+### 例子：使用`setDate`方法
 
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example_Using_setDate">例子：使用<code>setDate</code>方法</h3>
-
-<pre class="brush:js">var theBigDay = new Date(1962, 6, 7); // 1962-07-07
+```js
+var theBigDay = new Date(1962, 6, 7); // 1962-07-07
 theBigDay.setDate(24);  // 1962-07-24
-theBigDay.setDate(32);  // 1962-08-01</pre>
+theBigDay.setDate(32);  // 1962-08-01
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getDate()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getDate()")}}
+- {{jsxref("Date.prototype.setUTCDate()")}}

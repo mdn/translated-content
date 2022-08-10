@@ -3,42 +3,42 @@ title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Number.MAX_VALUE</strong></code> 属性表示在 JavaScript 里所能表示的最大数值。</p>
+**`Number.MAX_VALUE`** 属性表示在 JavaScript 里所能表示的最大数值。
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>MAX_VALUE</code> 属性值接近于 <code>1.79E+308</code>。大于 <code>MAX_VALUE</code> 的值代表 "<code>Infinity</code>"。</p>
+`MAX_VALUE` 属性值接近于 `1.79E+308`。大于 `MAX_VALUE` 的值代表 "`Infinity`"。
 
-<p>因为 <code>MAX_VALUE</code> 是 <code>Number</code> 对象的一个静态属性，所以你应该直接使用<code>Number.MAX_VALUE</code> ，而不是作为一个创建的 <code>Number</code> 实例的属性。</p>
+因为 `MAX_VALUE` 是 `Number` 对象的一个静态属性，所以你应该直接使用`Number.MAX_VALUE` ，而不是作为一个创建的 `Number` 实例的属性。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example:_Using_MAX_VALUE">例子：使用 <code>MAX_VALUE</code></h3>
+### 例子：使用 `MAX_VALUE`
 
-<p>下面的代码求两个数值的乘积。如果结果小于等于 <code>MAX_VALUE</code>，则调用 <code>func1</code> 函数；否则，调用 <code>func2</code> 函数。</p>
+下面的代码求两个数值的乘积。如果结果小于等于 `MAX_VALUE`，则调用 `func1` 函数；否则，调用 `func2` 函数。
 
-<pre class="brush: js">if (num1 * num2 &lt;= Number.MAX_VALUE) {
+```js
+if (num1 * num2 <= Number.MAX_VALUE) {
    func1();
 } else {
    func2();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.MIN_VALUE")}}</li>
-</ul>
+- {{jsxref("Number.MIN_VALUE")}}

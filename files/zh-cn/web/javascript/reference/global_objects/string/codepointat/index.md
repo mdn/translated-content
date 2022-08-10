@@ -3,46 +3,48 @@ title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>codePointAt()</code></strong> 方法返回 一个 Unicode 编码点值的非负整数。</p>
+**`codePointAt()`** 方法返回 一个 Unicode 编码点值的非负整数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.codePointAt(<var>pos</var>)</code></pre>
+```plain
+str.codePointAt(pos)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>pos</code></dt>
- <dd>这个字符串中需要转码的元素的位置。</dd>
-</dl>
+- `pos`
+  - : 这个字符串中需要转码的元素的位置。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回值是在字符串中的给定索引的编码单元体现的数字，如果在索引处没找到元素则返回 {{jsxref("undefined")}} 。</p>
+返回值是在字符串中的给定索引的编码单元体现的数字，如果在索引处没找到元素则返回 {{jsxref("undefined")}} 。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果在指定的位置没有元素则返回 {{jsxref("undefined")}}。如果在索引处开始没有 UTF-16 代理对，将直接返回在那个索引处的编码单元。</p>
+如果在指定的位置没有元素则返回 {{jsxref("undefined")}}。如果在索引处开始没有 UTF-16 代理对，将直接返回在那个索引处的编码单元。
 
-<p>Surrogate Pair 是 UTF-16 中用于扩展字符而使用的编码方式，是一种采用四个字节 (两个 UTF-16 编码) 来表示一个字符，称作代理对。</p>
+Surrogate Pair 是 UTF-16 中用于扩展字符而使用的编码方式，是一种采用四个字节 (两个 UTF-16 编码) 来表示一个字符，称作代理对。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用_codePointAt()">使用 <code>codePointAt()</code></h3>
+### 使用 `codePointAt()`
 
-<pre class="brush: js">'ABC'.codePointAt(1);          // 66
+```js
+'ABC'.codePointAt(1);          // 66
 '\uD800\uDC00'.codePointAt(0); // 65536
 
 'XYZ'.codePointAt(42); // undefined
-</pre>
+```
 
-<h2 id="替补支持（polyfill）">替补支持（Polyfill）</h2>
+## 替补支持（Polyfill）
 
-<p>给原生不支持 ECMAScript 6 的浏览器使用<code>codePointAt()</code>方法的的一个字符串扩展方法。</p>
+给原生不支持 ECMAScript 6 的浏览器使用`codePointAt()`方法的的一个字符串扩展方法。
 
-<pre class="brush: js">/*! http://mths.be/codepointat v0.1.0 by @mathias */
+```js
+/*! http://mths.be/codepointat v0.1.0 by @mathias */
 if (!String.prototype.codePointAt) {
   (function() {
     'use strict'; // 严格模式，needed to support `apply`/`call` with `undefined`/`null`
@@ -58,18 +60,18 @@ if (!String.prototype.codePointAt) {
         index = 0;
       }
       // 边界
-      if (index &lt; 0 || index &gt;= size) {
+      if (index < 0 || index >= size) {
         return undefined;
       }
       // 第一个编码单元
       var first = string.charCodeAt(index);
       var second;
       if ( // 检查是否开始 surrogate pair
-        first &gt;= 0xD800 &amp;&amp; first &lt;= 0xDBFF &amp;&amp; // high surrogate
-        size &gt; index + 1 // 下一个编码单元
+        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+        size > index + 1 // 下一个编码单元
       ) {
         second = string.charCodeAt(index + 1);
-        if (second &gt;= 0xDC00 &amp;&amp; second &lt;= 0xDFFF) { // low surrogate
+        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
         }
@@ -87,21 +89,19 @@ if (!String.prototype.codePointAt) {
     }
   }());
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.charAt()")}}

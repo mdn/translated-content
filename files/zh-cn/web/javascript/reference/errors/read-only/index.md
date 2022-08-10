@@ -3,34 +3,36 @@ title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
 translation_of: Web/JavaScript/Reference/Errors/Read-only
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="报错消息">报错消息</h2>
+## 报错消息
 
-<pre class="syntaxbox">TypeError: "x" is read-only (Firefox) //格式错误:"x"只读。(x 可以代表任意值)
+```plain
+TypeError: "x" is read-only (Firefox) //格式错误:"x"只读。(x 可以代表任意值)
 TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #&lt;Object&gt; (Chrome)
+TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
 //格式错误：对象的 x 属性是只读的不能设置（chrome）
 TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
-</pre>
+```
 
-<h2 id="错误格式">错误格式</h2>
+## 错误格式
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>全局变量或对象属性被设置为只读 (专业点讲，就是这条数据属性禁止写入.)</p>
+全局变量或对象属性被设置为只读 (专业点讲，就是这条数据属性禁止写入.)
 
-<p>这条错误值发生在<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode code</a>(俗称严格模式). 正常情况下，是没有报错的。</p>
+这条错误值发生在[strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode)(俗称严格模式). 正常情况下，是没有报错的。
 
-<h2 id="例如">例如</h2>
+## 例如
 
-<h3 id="无效例子（也就是下面这么做会导致报这种错）">无效例子（也就是下面这么做会导致报这种错）</h3>
+### 无效例子（也就是下面这么做会导致报这种错）
 
-<p>只读属性不能直接创建，但我们可以通过{{jsxref("Object.defineProperty()")}} 或 {{jsxref("Object.freeze()")}}设置。</p>
+只读属性不能直接创建，但我们可以通过{{jsxref("Object.defineProperty()")}} 或 {{jsxref("Object.freeze()")}}设置。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var obj = Object.freeze({name: "Elsa", score: 157});
 obj.score = 0;  // TypeError
 
@@ -45,32 +47,33 @@ frozenArray[0]++;  // TypeError
 还有几个 JavaScript 内置属性。如果你尝试修改一个常量。
 
 "use strict";
-Math.PI = 4;  // TypeError</pre>
+Math.PI = 4;  // TypeError
+```
 
-<p>傻了吧，报错了</p>
+傻了吧，报错了
 
-<p><code>全局变量 undefined 也是只读的</code>, 所以你不能忽视臭名昭著的"undefined is not a function"错误：</p>
+`全局变量 undefined 也是只读的`, 所以你不能忽视臭名昭著的"undefined is not a function"错误：
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 undefined = function () {};  // TypeError: "undefined" is read-only
-</pre>
+```
 
-<h3 id="下面这样都是有效，不报错的">下面这样都是有效，不报错的</h3>
+### 下面这样都是有效，不报错的
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 var obj = Object.freeze({name: "Score", points: 157});
 obj = {name: obj.name, points: 0};   // 用一个新对象替换原来的对象 (其实就是更改了对象的指针)
 
 "use strict";
 var LUNG_COUNT = 2;  //
 LUNG_COUNT = 3;  //
-</pre>
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li><a href="https://www.answers.com/Q/Which_animals_have_three_lungs">"Which animals have three lungs?" on answers.com</a></li>
- <li><a href="https://aliens.wikia.com/wiki/Klingon">Klingons</a> (another answer to that query)</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.freeze()")}}
+- ["Which animals have three lungs?" on answers.com](https://www.answers.com/Q/Which_animals_have_three_lungs)
+- [Klingons](https://aliens.wikia.com/wiki/Klingon) (another answer to that query)

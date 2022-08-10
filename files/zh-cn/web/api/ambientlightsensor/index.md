@@ -3,32 +3,30 @@ title: AmbientLightSensor
 slug: Web/API/AmbientLightSensor
 translation_of: Web/API/AmbientLightSensor
 ---
-<p>{{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}</p>
+{{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
 
-<p><strong><a href="/en-US/docs/Web/API/Ambient_Light_Sensor_API">环境光传感器 API</a>的``</strong><strong><code>AmbientLightSensor``返回一个用于访问</code></strong>{{domxref('AmbientLightSensorReading')}}的接口。</p>
+**[环境光传感器 API](/en-US/docs/Web/API/Ambient_Light_Sensor_API)** 的 `AmbientLightSensor` 返回一个用于访问 {{domxref('AmbientLightSensorReading')}} 的接口。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<dl>
- <dt>{{domxref("AmbientLightSensor.AmbientLightSensor()")}}</dt>
- <dd><code>创建一个新的 AmbientLightSensor</code> 对象。</dd>
-</dl>
+- {{domxref("AmbientLightSensor.AmbientLightSensor()")}}
+  - : `创建一个新的 AmbientLightSensor` 对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref('AmbientLightSensor.reading')}}</dt>
- <dd>返回一个 {{domxref('AmbientLightSensorReading')}} 接口，包含当前光的亮度级别。</dd>
-</dl>
+- {{domxref('AmbientLightSensor.reading')}}
+  - : 返回一个 {{domxref('AmbientLightSensorReading')}} 接口，包含当前光的亮度级别。
 
-<h3 id="Examples">Examples</h3>
+### Examples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AmbientLightSensor")}}

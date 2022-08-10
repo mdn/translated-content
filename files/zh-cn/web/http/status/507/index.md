@@ -7,16 +7,18 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/507
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议的 <code><strong>507 Insufficient Storage</strong></code> 响应状态码 可以在 WebDAV 协议（基于 web 的分布式创作和版本控制，参见 <a href="https://tools.ietf.org/html/rfc4918">RFC 4918</a>）中给出。</p>
+HTTP 协议的 **`507 Insufficient Storage`** 响应状态码 可以在 WebDAV 协议（基于 web 的分布式创作和版本控制，参见 [RFC 4918](https://tools.ietf.org/html/rfc4918)）中给出。
 
-<p>507 码表示服务器不能存储相关内容。准确地说，一个方法可能没有被执行，因为服务器不能存储其表达形式，这里的表达形式指：方法所附带的数据，而且其请求必需已经发送成功。</p>
+507 码表示服务器不能存储相关内容。准确地说，一个方法可能没有被执行，因为服务器不能存储其表达形式，这里的表达形式指：方法所附带的数据，而且其请求必需已经发送成功。
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">507 Insufficient Storage</pre>
+```plain
+507 Insufficient Storage
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

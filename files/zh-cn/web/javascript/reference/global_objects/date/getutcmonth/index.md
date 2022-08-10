@@ -3,47 +3,46 @@ title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><strong><code>getUTCMonth()</code></strong> 方法以世界时为标准，返回一个指定的日期对象的月份，它是从 0 开始计数的（0 代表一年的第一个月）。</p>
+**`getUTCMonth()`** 方法以世界时为标准，返回一个指定的日期对象的月份，它是从 0 开始计数的（0 代表一年的第一个月）。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}
 
+## 语法
 
+```plain
+dateObj.getUTCMonth()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCMonth()</code></pre>
+无。
 
-<h3 id="Parameters">参数</h3>
+### 返回值
 
-<p>无。</p>
+`getUTCMonth()` 返回一个 0 到 11 的整数，分别对应以下月份：0 代表一月，1 代表二月，2 代表三月，依次类推。
 
-<h3 id="Returns">返回值</h3>
+## 例子
 
-<p><code>getUTCMonth()</code> 返回一个 0 到 11 的整数，分别对应以下月份：0 代表一月，1 代表二月，2 代表三月，依次类推。</p>
+### 例子：使用 `getUTCMonth()` 方法
 
-<h2 id="Examples">例子</h2>
+下例将当前时间的月份赋值给变量 `month`。
 
-<h3 id="Example:_Using_getUTCMonth">例子：使用 <code>getUTCMonth()</code> 方法</h3>
-
-<p>下例将当前时间的月份赋值给变量 <code>month</code>。</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var month = today.getUTCMonth();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMonth()")}}
+- {{jsxref("Date.prototype.setUTCMonth()")}}

@@ -3,26 +3,26 @@ title: Notification.renotify
 slug: Web/API/notification/renotify
 translation_of: Web/API/Notification/renotify
 ---
-<div>
-<div>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</div>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p><code>renotify</code> 是 {{domxref("Notification")}} 接口的只读属性，如果有新的通知替换了一个旧的通知，这个属性指明用户是否应该重新收到通知。它也可以通过{{domxref("Notification.Notification","Notification()")}} 构造函数的 <code>renotify</code> option 来指定。</p>
-</div>
+`renotify` 是 {{domxref("Notification")}} 接口的只读属性，如果有新的通知替换了一个旧的通知，这个属性指明用户是否应该重新收到通知。它也可以通过{{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` option 来指定。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var renotify = Notification.renotify;
-</pre>
+```plain
+var renotify = Notification.renotify;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>{{domxref("Boolean")}}. 默认为<code>false</code>；设为 <code>true</code> 将会重新通知用户。</p>
+{{domxref("Boolean")}}. 默认为`false`；设为 `true` 将会重新通知用户。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下代码片段用于在一个通知被替换以后触发通报以重新通知用户；它创建一个简单的 <code>options</code> 对象，然后使用<code>Notification()</code> 构造函数触发通报。</p>
+以下代码片段用于在一个通知被替换以后触发通报以重新通知用户；它创建一个简单的 `options` 对象，然后使用`Notification()` 构造函数触发通报。
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   body: 'Do you like my body?',
   tag: 'renotify',
   renotify: true
@@ -30,24 +30,25 @@ translation_of: Web/API/Notification/renotify
 
 var n = new Notification('Test notification',options);
 
-n.renotify // should return true</pre>
+n.renotify // should return true
+```
 
-<h2 id="使用注意">使用注意</h2>
+## 使用注意
 
-<p>renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。</p>
+renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。
 
-<pre>Notifications which set the renotify flag must specify a non-empty tag.</pre>
+```plain
+Notifications which set the renotify flag must specify a non-empty tag.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">使用通知 API</a></li>
-</ul>
+- [使用通知 API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

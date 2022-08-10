@@ -3,48 +3,47 @@ title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的 <strong><code>WebGLRenderingContext.shaderSource()</code></strong> 方法用于设置 {{domxref("WebGLShader")}} 着色器（顶点着色器及片元着色器）的 GLSL 程序代码。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.shaderSource()`** 方法用于设置 {{domxref("WebGLShader")}} 着色器（顶点着色器及片元着色器）的 GLSL 程序代码。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.shaderSource(<var>shader</var>, <var>source</var>);
-</pre>
+```plain
+void gl.shaderSource(shader, source);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>shader</dt>
- <dd>用于设置程序代码的 {{domxref("WebGLShader")}}（着色器对象）。</dd>
- <dt>source</dt>
- <dd>包含 GLSL 程序代码的字符串。</dd>
-</dl>
+- shader
+  - : 用于设置程序代码的 {{domxref("WebGLShader")}}（着色器对象）。
+- source
+  - : 包含 GLSL 程序代码的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var shader = gl.createShader(gl.VERTEX_SHADER);
+```js
+var shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);</pre>
+var source = gl.getShaderSource(shader);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.shaderSource")}}</p>
+{{Compat("api.WebGLRenderingContext.shaderSource")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}

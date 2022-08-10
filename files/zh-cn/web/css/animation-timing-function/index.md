@@ -9,24 +9,25 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-timing-function
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><a href="/en-US/docs/CSS">CSS</a> <code>animation-timing-function属性定义CSS动画在每一动画周期中执行的节奏。</code>可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。</p>
+[CSS](/en-US/docs/CSS) `animation-timing-function属性定义CSS动画在每一动画周期中执行的节奏。`可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。
 
-<p>对于关键帧动画来说，timing function 作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。</p>
+对于关键帧动画来说，timing function 作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。
 
-<p>定义于一个关键帧区块的缓动函数 (animation timing function) 应用到改关键帧；另外，若该关键帧没有定义缓动函数，则使用定义于整个动画的缓动函数。</p>
+定义于一个关键帧区块的缓动函数 (animation timing function) 应用到改关键帧；另外，若该关键帧没有定义缓动函数，则使用定义于整个动画的缓动函数。
 
-<pre class="brush: css"><code>/* Keyword values */
+```css
+/* Keyword values */
 animation-timing-function: ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
 animation-timing-function: ease-in-out;
 animation-timing-function: linear;
 animation-timing-function: step-start;
-animation-timing-function: step-end;</code>
+animation-timing-function: step-end;
 
 /* Function values */
 animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
@@ -39,40 +40,37 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 /* Global values */
 animation-timing-function: inherit;
 animation-timing-function: initial;
-animation-timing-function: unset;</pre>
+animation-timing-function: unset;
+```
 
-<p>通常用{{cssxref("animation")}}简写定义整个动画属性更为方便。</p>
+通常用{{cssxref("animation")}}简写定义整个动画属性更为方便。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;timingfunction&gt;</code></dt>
- <dd>每个 {{cssxref("&lt;timing-function&gt;")}}代表了应用于动画的 timing function，定义于{{cssxref("animation-property")}}.</dd>
-</dl>
+- `<timingfunction>`
+  - : 每个 {{cssxref("&lt;timing-function&gt;")}}代表了应用于动画的 timing function，定义于{{cssxref("animation-property")}}.
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax("animation-timing-function")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>参见 <a href="/en-US/docs/CSS/CSS_animations">CSS animations</a></p>
+参见 [CSS animations](/en-US/docs/CSS/CSS_animations)
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.animation-timing-function")}}</p>
+{{Compat("css.properties.animation-timing-function")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_transitions">Using CSS animations</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

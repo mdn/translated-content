@@ -9,50 +9,48 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/isShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的 <strong><code>WebGLRenderingContext.isShader()</code></strong> 方法，在传入的 {{domxref("WebGLShader")}} 有效时返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.isShader()`** 方法，在传入的 {{domxref("WebGLShader")}} 有效时返回 `true` ，否则返回 `false` 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">GLboolean <var>gl</var>.isShader(<var>shader</var>);
-</pre>
+```plain
+GLboolean gl.isShader(shader);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>shader</dt>
- <dd>需要校验的 {{domxref("WebGLShader")}} </dd>
-</dl>
+- shader
+  - : 需要校验的 {{domxref("WebGLShader")}}
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>用来表明 shader 是否有效的 {{domxref("GLboolean")}} 对象</p>
+用来表明 shader 是否有效的 {{domxref("GLboolean")}} 对象
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="校验一个_Shader">校验一个 Shader</h3>
+### 校验一个 Shader
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var shader = gl.createShader(gl.VERTEX_SHADER);
 
 // ...
 
 gl.isShader(shader);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.isShader")}}</p>
+{{Compat("api.WebGLRenderingContext.isShader")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}

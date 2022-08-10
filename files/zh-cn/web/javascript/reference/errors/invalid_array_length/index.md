@@ -7,39 +7,39 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误信息">错误信息</h2>
+## 错误信息
 
-<pre class="syntaxbox">RangeError: invalid array length (Firefox)
+```plain
+RangeError: invalid array length (Firefox)
 RangeError: Invalid array length (Chrome)
 RangeError: Invalid array buffer length (Chrome)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="什么地方出错了">什么地方出错了？</h2>
+## 什么地方出错了？
 
-<p>无效的数组错误长度通常会在以下情形中出现：</p>
+无效的数组错误长度通常会在以下情形中出现：
 
-<ul>
- <li>当创建一个长度为负数或者长度大于等于 2^32 的{{jsxref("Array")}} 或者 {{jsxref("ArrayBuffer")}} 时。</li>
- <li>当设置 {{jsxref("Array.length")}} 属性为负数或者长度大于等于 2^32 时。</li>
-</ul>
+- 当创建一个长度为负数或者长度大于等于 2^32 的{{jsxref("Array")}} 或者 {{jsxref("ArrayBuffer")}} 时。
+- 当设置 {{jsxref("Array.length")}} 属性为负数或者长度大于等于 2^32 时。
 
-<p>为什么 Array（数组）和 ArrayBuffer（数组缓冲区）的长度会受到限制？因为 Array 和 ArrayBuffer 的 length（长度）属性被定义为一个 32 位无符号整形（unsigned 32-bit integer）的值，所以它只能存储 0 - 2^32 - 1 之间的数。</p>
+为什么 Array（数组）和 ArrayBuffer（数组缓冲区）的长度会受到限制？因为 Array 和 ArrayBuffer 的 length（长度）属性被定义为一个 32 位无符号整形（unsigned 32-bit integer）的值，所以它只能存储 0 - 2^32 - 1 之间的数。
 
-<p>当你使用构造函数来创建一个数组的时候，你可能想使用字面值的形式，第一个参数会被解释为数组的长度。</p>
+当你使用构造函数来创建一个数组的时候，你可能想使用字面值的形式，第一个参数会被解释为数组的长度。
 
-<p>或者说，你想要在设置数组之前确定它的长度，或把它作为一个构造函数的参数。</p>
+或者说，你想要在设置数组之前确定它的长度，或把它作为一个构造函数的参数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="错误的示例">错误的示例</h3>
+### 错误的示例
 
-<pre class="brush: js example-bad">new Array(Math.pow(2, 40))
+```js example-bad
+new Array(Math.pow(2, 40))
 new Array(-1)
 new ArrayBuffer(Math.pow(2, 32))
 new ArrayBuffer(-1)
@@ -49,11 +49,12 @@ a.length = a.length - 1;         // 将 length 属性的值设置为 -1
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // 将 length 属性的值设置为 2^32
-</pre>
+```
 
-<h3 id="正确的示例">正确的示例</h3>
+### 正确的示例
 
-<pre class="brush: js example-good">[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
+```js example-good
+[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1)
 new ArrayBuffer(0)
@@ -65,13 +66,11 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
 
 // 0xffffffff 是 2^32 - 1 的 十六进制 表示方式
-// 它也可以被写作 (-1 &gt;&gt;&gt; 0)
-</pre>
+// 它也可以被写作 (-1 >>> 0)
+```
 
-<h2 id="相关页面">相关页面</h2>
+## 相关页面
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.length")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.length")}}
+- {{jsxref("ArrayBuffer")}}

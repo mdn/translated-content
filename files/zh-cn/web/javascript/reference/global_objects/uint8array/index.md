@@ -3,123 +3,118 @@ title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Uint8Array</code></strong> 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。</p>
+**`Uint8Array`** 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。创建完后，可以以对象的方式或使用数组下标索引的方式引用数组中的元素。
 
-<h2 id="语法格式">语法格式</h2>
+## 语法格式
 
-<pre class="syntaxbox">new Uint8Array(); // ES2017 最新语法
+```plain
+new Uint8Array(); // ES2017 最新语法
 new Uint8Array(length); // 创建初始化为 0 的，包含 length 个元素的无符号整型数组
 new Uint8Array(typedArray);
 new Uint8Array(object);
-new Uint8Array(buffer [, byteOffset [, length]]);</pre>
+new Uint8Array(buffer [, byteOffset [, length]]);
+```
 
-<p>构造语法和参数的更多信息请参见 <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
+构造语法和参数的更多信息请参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回数组中元素的字节数，Uint8Array 中返回 1 字节。</dd>
- <dt>Uint8Array.length</dt>
- <dd>静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.</dd>
- <dt>{{jsxref("TypedArray.name", "Uint8Array.name")}}</dt>
- <dd>返回构造名的字符串，对 Uint8Array 类型而言返回 “Uint8Array”</dd>
- <dt>{{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}</dt>
- <dd><em>TypedArray</em> 对象的原型。</dd>
-</dl>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+  - : 返回数组中元素的字节数，Uint8Array 中返回 1 字节。
+- Uint8Array.length
+  - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
+- {{jsxref("TypedArray.name", "Uint8Array.name")}}
+  - : 返回构造名的字符串，对 Uint8Array 类型而言返回 “Uint8Array”
+- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+  - : _TypedArray_ 对象的原型。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("TypedArray.from", "Uint8Array.from()")}}</dt>
- <dd>从一个数组或可迭代的对象创建一个新的<code>Uint8Array</code>数组，可参见{{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of", "Uint8Array.of()")}}</dt>
- <dd>通过一个可变数目的参数创建一个新的<code>Uint8Array</code>数组，可参见{{jsxref("Array.of()")}}.</dd>
-</dl>
+- {{jsxref("TypedArray.from", "Uint8Array.from()")}}
+  - : 从一个数组或可迭代的对象创建一个新的`Uint8Array`数组，可参见{{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of", "Uint8Array.of()")}}
+  - : 通过一个可变数目的参数创建一个新的`Uint8Array`数组，可参见{{jsxref("Array.of()")}}.
 
-<h2 id="Boolean_instances"><code>Uint8Array</code> 原型声明</h2>
+## `Uint8Array` 原型声明
 
-<p>所有的<code>Uint8Array 对象继承自</code> {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+所有的`Uint8Array 对象继承自` {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
 
-<h3 id="属性_2">属性</h3>
+### 属性
 
-<dl>
- <dt><code>Uint8Array.prototype.constructor</code></dt>
- <dd>返回创建实例属性的函数，默认为 <code>Uint8Array</code> 构造器。</dd>
- <dt>{{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>返回由 <code>Uint8Array</code>引用的 {{jsxref("ArrayBuffer")}} ，在构造时期固定，所以是<strong>只读</strong>的。</dd>
- <dt>{{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>返回<code>Uint8Array</code>长度（字节数）。在构造时期固定，所以是 <strong>只读的</strong>。</dd>
- <dt>{{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>返回<code>Uint8Array</code> 距离其 {{jsxref("ArrayBuffer")}} 起始位置的偏移（字节数）。在构造时期固定，所以是 <strong>只读的</strong>。</dd>
- <dt>{{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>返回保存在 <code>Uint8Array</code>中的元素数量。 在构造时期固定，所以是 <strong>只读的</strong>。</dd>
-</dl>
+- `Uint8Array.prototype.constructor`
+  - : 返回创建实例属性的函数，默认为 `Uint8Array` 构造器。
+- {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
+  - : 返回由 `Uint8Array`引用的 {{jsxref("ArrayBuffer")}} ，在构造时期固定，所以是**只读**的。
+- {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
+  - : 返回`Uint8Array`长度（字节数）。在构造时期固定，所以是 **只读的**。
+- {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}
+  - : 返回`Uint8Array` 距离其 {{jsxref("ArrayBuffer")}} 起始位置的偏移（字节数）。在构造时期固定，所以是 **只读的**。
+- {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}
+  - : 返回保存在 `Uint8Array`中的元素数量。 在构造时期固定，所以是 **只读的**。
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<dl>
- <dt>{{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}</dt>
- <dd>复制数组中的元素序列，请参见 {{jsxref("Array.prototype.copyWithin()")}}。</dd>
- <dt>{{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}</dt>
- <dd>返回新的<code>Array Iterator</code> 对象，含有数组中每个下标处的键值对。请参见{{jsxref("Array.prototype.entries()")}}.</dd>
- <dt>{{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}</dt>
- <dd>测试数组中所有元素是否都能通过由函数提供的测试。请参见 {{jsxref("Array.prototype.every()")}}。</dd>
- <dt>{{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}</dt>
- <dd>使用静态值填充从起始下标到终止下标的数组元素。请参见 {{jsxref("Array.prototype.fill()")}}。</dd>
- <dt>{{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}</dt>
- <dd>创建新的数组，含有数组中给定过滤器返回 true 的所有元素。请参见{{jsxref("Array.prototype.filter()")}}.</dd>
- <dt>{{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}</dt>
- <dd>如果数组中的元素满足提供的测试函数，返回找到的值，如果没有找到则返回 <code>undefined</code>。请参见 {{jsxref("Array.prototype.find()")}}。</dd>
- <dt>{{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}</dt>
- <dd>如果数组中的元素满足提供的测试函数，返回找到的下标，如果没有找到则返回 -1。请参见 {{jsxref("Array.prototype.findIndex()")}}.</dd>
- <dt>{{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}</dt>
- <dd>对数组的每个元素调用字符串 {{jsxref("Array.prototype.forEach()")}}。</dd>
- <dt>{{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}} {{experimental_inline}}</dt>
- <dd>判断类型化数组是否包含特定值，如果包含返回 <code>true</code>，否则返回<code>false</code>。另见{{jsxref("Array.prototype.includes()")}}。</dd>
- <dt>{{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}</dt>
- <dd>返回数组中等于特定值的第一个元素（下标最小），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.indexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}</dt>
- <dd>将数组中所有元素连接为字符串。请参见 {{jsxref("Array.prototype.join()")}}。</dd>
- <dt>{{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}</dt>
- <dd>返回新的<code>Array Iterator</code> ，含有数组中每个下标的键，请参见 {{jsxref("Array.prototype.keys()")}}。</dd>
- <dt>{{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}</dt>
- <dd>返回数组中等于特定值的最后一个元素（下标最大），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.lastIndexOf()")}}。</dd>
- <dt>{{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}</dt>
- <dd>使用在该数组的每个元素上调用函数的结果创建新数组，请参见{{jsxref("Array.prototype.map()")}}。</dd>
- <dt>{{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
- <dd>{{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}的之前的非标准版本。</dd>
- <dt>{{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}</dt>
- <dd>对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduce()")}}。</dd>
- <dt>{{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}</dt>
- <dd>对累加器和数组的每个值应用函数（从右到左），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduceRight()")}}。</dd>
- <dt>{{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}</dt>
- <dd>翻转数组中的元素顺序 — 第一个变为最后，最后变为第一个。另见 {{jsxref("Array.prototype.reverse()")}}。</dd>
- <dt>{{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}</dt>
- <dd>在类型化数组中储存多个值，从特定数组中读取输入。</dd>
- <dt>{{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}</dt>
- <dd>提取数组的某个部分并返回新的数组，请参见 {{jsxref("Array.prototype.slice()")}}。</dd>
- <dt>{{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}</dt>
- <dd>如果数组中至少一个元素满足给定的测试函数，则返回<code>true</code>。请参见{{jsxref("Array.prototype.some()")}}。</dd>
- <dt>{{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}</dt>
- <dd>原地排序数组中的元素，并返回该数组，请参见 {{jsxref("Array.prototype.sort()")}}。</dd>
- <dt>{{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}</dt>
- <dd><code>从给定的元素起始和终止下标返回新的 Uint8Array</code> 。</dd>
- <dt>{{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}</dt>
- <dd>返回新的 <code>Array Iterator</code> 对象，含有数组每个下标处的值，请参见 {{jsxref("Array.prototype.values()")}}。</dd>
- <dt>{{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}</dt>
- <dd>返回表示数组及其元素的本地化字符串，请参见 {{jsxref("Array.prototype.toLocaleString()")}}。</dd>
- <dt>{{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}</dt>
- <dd>返回表示数组及其元素的字符串。请参见 {{jsxref("Array.prototype.toString()")}}。</dd>
- <dt>{{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}</dt>
- <dd><code>返回新的 Array Iterator</code> 对象，包含数组中每个下标处的值。</dd>
-</dl>
+- {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}
+  - : 复制数组中的元素序列，请参见 {{jsxref("Array.prototype.copyWithin()")}}。
+- {{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}
+  - : 返回新的`Array Iterator` 对象，含有数组中每个下标处的键值对。请参见{{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}
+  - : 测试数组中所有元素是否都能通过由函数提供的测试。请参见 {{jsxref("Array.prototype.every()")}}。
+- {{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}
+  - : 使用静态值填充从起始下标到终止下标的数组元素。请参见 {{jsxref("Array.prototype.fill()")}}。
+- {{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}
+  - : 创建新的数组，含有数组中给定过滤器返回 true 的所有元素。请参见{{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}
+  - : 如果数组中的元素满足提供的测试函数，返回找到的值，如果没有找到则返回 `undefined`。请参见 {{jsxref("Array.prototype.find()")}}。
+- {{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}
+  - : 如果数组中的元素满足提供的测试函数，返回找到的下标，如果没有找到则返回 -1。请参见 {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}
+  - : 对数组的每个元素调用字符串 {{jsxref("Array.prototype.forEach()")}}。
+- {{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}} {{experimental_inline}}
+  - : 判断类型化数组是否包含特定值，如果包含返回 `true`，否则返回`false`。另见{{jsxref("Array.prototype.includes()")}}。
+- {{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}
+  - : 返回数组中等于特定值的第一个元素（下标最小），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}
+  - : 将数组中所有元素连接为字符串。请参见 {{jsxref("Array.prototype.join()")}}。
+- {{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}
+  - : 返回新的`Array Iterator` ，含有数组中每个下标的键，请参见 {{jsxref("Array.prototype.keys()")}}。
+- {{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}
+  - : 返回数组中等于特定值的最后一个元素（下标最大），如果没有找到则返回 -1，请参见 {{jsxref("Array.prototype.lastIndexOf()")}}。
+- {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
+  - : 使用在该数组的每个元素上调用函数的结果创建新数组，请参见{{jsxref("Array.prototype.map()")}}。
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+  - : {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}的之前的非标准版本。
+- {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
+  - : 对累加器和数组的每个值应用函数（从左到右），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduce()")}}。
+- {{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}
+  - : 对累加器和数组的每个值应用函数（从右到左），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduceRight()")}}。
+- {{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}
+  - : 翻转数组中的元素顺序 — 第一个变为最后，最后变为第一个。另见 {{jsxref("Array.prototype.reverse()")}}。
+- {{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}
+  - : 在类型化数组中储存多个值，从特定数组中读取输入。
+- {{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}
+  - : 提取数组的某个部分并返回新的数组，请参见 {{jsxref("Array.prototype.slice()")}}。
+- {{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}
+  - : 如果数组中至少一个元素满足给定的测试函数，则返回`true`。请参见{{jsxref("Array.prototype.some()")}}。
+- {{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}
+  - : 原地排序数组中的元素，并返回该数组，请参见 {{jsxref("Array.prototype.sort()")}}。
+- {{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}
+  - : `从给定的元素起始和终止下标返回新的 Uint8Array` 。
+- {{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}
+  - : 返回新的 `Array Iterator` 对象，含有数组每个下标处的值，请参见 {{jsxref("Array.prototype.values()")}}。
+- {{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}
+  - : 返回表示数组及其元素的本地化字符串，请参见 {{jsxref("Array.prototype.toLocaleString()")}}。
+- {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
+  - : 返回表示数组及其元素的字符串。请参见 {{jsxref("Array.prototype.toString()")}}。
+- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
+  - : `返回新的 Array Iterator` 对象，包含数组中每个下标处的值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">// 来自长度
+```js
+// 来自长度
 var uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
@@ -143,33 +138,32 @@ var z = new Uint8Array(buffer, 1, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
+```
 
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 兼容性说明
 
-<p>{{Compat}}</p>
+从 ECMAScript 2015 开始，`Uint8Array` 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 `new` 调用 `Uint8Array` 的构造函数，将会抛出 {{jsxref("TypeError")}} 。
 
-<h2 id="兼容性说明">兼容性说明</h2>
-
-<p>从 ECMAScript 2015 开始，<code>Uint8Array</code> 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 <code>new</code> 调用 <code>Uint8Array</code> 的构造函数，将会抛出 {{jsxref("TypeError")}} 。</p>
-
-<pre class="brush: js example-bad">var dv = Uint8Array([1, 2, 3]);
+```js example-bad
+var dv = Uint8Array([1, 2, 3]);
 // TypeError: calling a builtin Uint8Array constructor
-// 不使用 new 将会被禁止</pre>
+// 不使用 new 将会被禁止
+```
 
-<pre class="brush: js example-good">var dv = new Uint8Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Uint8Array([1, 2, 3]);
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

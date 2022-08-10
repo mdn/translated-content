@@ -3,13 +3,14 @@ title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
 translation_of: Web/CSS/mask-border-repeat
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>mask-border-repeat</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性设置如何调整源图像的边缘区域以适应元素遮罩边框的尺寸。</p>
+**`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) 属性设置如何调整源图像的边缘区域以适应元素遮罩边框的尺寸。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 mask-border-repeat: stretch;
 mask-border-repeat: repeat;
 mask-border-repeat: round;
@@ -22,38 +23,32 @@ mask-border-repeat: round stretch;
 mask-border-repeat: inherit;
 mask-border-repeat: initial;
 mask-border-repeat: unset;
-</pre>
+```
 
-<p>可以从下面的列表中选择一个或两个值来指定 <code>mask-border-repeat</code> 属性。</p>
+可以从下面的列表中选择一个或两个值来指定 `mask-border-repeat` 属性。
 
-<ul>
- <li>指定一个值时，它会在<strong>四个边</strong>应用相同的行为。</li>
- <li>指定<strong>两个</strong>值时，第一个应用于<strong>顶部和底部</strong>，第二个应用于<strong>左侧和右侧</strong>。</li>
-</ul>
+- 指定一个值时，它会在**四个边**应用相同的行为。
+- 指定**两个**值时，第一个应用于**顶部和底部**，第二个应用于**左侧和右侧**。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>stretch</code></dt>
- <dd>拉伸源图像的边缘区域以填充每个边界之间的间隙。</dd>
- <dt><code>repeat</code></dt>
- <dd>源图像的边缘区域被平铺（重复）以填充每个边界之间的间隙，可以裁剪平铺图形以达到合适的贴合效果。</dd>
- <dt><code>round</code></dt>
- <dd>源图像的边缘区域被平铺（重复）以填充每个边界之间的间隙，可以拉伸平铺图形以实现适当的贴合。</dd>
- <dt><code>space</code></dt>
- <dd>源图像的边缘区域被平铺（重复）以填充每个边框之间的间隙。平铺图形之间将分配额外的空间，以实现适当的贴合。</dd>
-</dl>
+- `stretch`
+  - : 拉伸源图像的边缘区域以填充每个边界之间的间隙。
+- `repeat`
+  - : 源图像的边缘区域被平铺（重复）以填充每个边界之间的间隙，可以裁剪平铺图形以达到合适的贴合效果。
+- `round`
+  - : 源图像的边缘区域被平铺（重复）以填充每个边界之间的间隙，可以拉伸平铺图形以实现适当的贴合。
+- `space`
+  - : 源图像的边缘区域被平铺（重复）以填充每个边框之间的间隙。平铺图形之间将分配额外的空间，以实现适当的贴合。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
-{{Specifications}}
+{{Specifications}}{{cssinfo}}
 
-<div>{{cssinfo}}</div>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

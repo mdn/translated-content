@@ -8,40 +8,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}**`new.target`**属性允许你检测函数或构造方法是否是通过[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)运算符被调用的。在通过[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)运算符被初始化的函数或构造方法中，`new.target`返回一个指向构造方法或函数的引用。在普通的函数调用中，`new.target` 的值是{{jsxref("undefined")}}。
 
-<div><strong><code>new.target</code></strong>属性允许你检测函数或构造方法是否是通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被调用的。在通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被初始化的函数或构造方法中，<code>new.target</code>返回一个指向构造方法或函数的引用。在普通的函数调用中，<code>new.target</code> 的值是{{jsxref("undefined")}}。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+new.target
+```
 
-<pre class="syntaxbox">new.target</pre>
+## 描述
 
-<h2 id="描述">描述</h2>
+`new.target`语法由一个关键字"`new`"，一个点，和一个属性名"`target`"组成。通常"`new.`"`的`作用是提供属性访问的上下文，但这里"`new.`"其实不是一个真正的对象。不过在构造方法调用中，`new.target`指向被`new`调用的构造函数，所以"`new.`"成为了一个虚拟上下文。
 
-<p><code>new.target</code>语法由一个关键字"<code>new</code>"，一个点，和一个属性名"<code>target</code>"组成。通常"<code>new.</code>"<code>的</code>作用是提供属性访问的上下文，但这里"<code>new.</code>"其实不是一个真正的对象。不过在构造方法调用中，<code>new.target</code>指向被<code>new</code>调用的构造函数，所以"<code>new.</code>"成为了一个虚拟上下文。</p>
+`new.target`属性适用于所有函数访问的元属性。在 [arrow functions](http://www.javascripttutorial.net/es6/javascript-arrow-function/) 中，`new.target` 指向最近的外层函数的`new.target`（An arrow function expression does not have its own this, arguments, super , or new\.target) 。
 
-<p><code>new.target</code>属性适用于所有函数访问的元属性。在  <a href="http://www.javascripttutorial.net/es6/javascript-arrow-function/">arrow functions</a> 中，<code>new.target</code> 指向最近的外层函数的<code>new.target</code>（An arrow function expression does not have its own this, arguments, super , or new.target) 。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 函数调用中的 new\.target
 
-<h3 id="函数调用中的_new.target">函数调用中的 new.target</h3>
+在普通的函数调用中（和作为构造函数来调用相对），`new.target`的值是{{jsxref("undefined")}}。这使得你可以检测一个函数是否是作为构造函数通过[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)被调用的。
 
-<p>在普通的函数调用中（和作为构造函数来调用相对），<code>new.target</code>的值是{{jsxref("undefined")}}。这使得你可以检测一个函数是否是作为构造函数通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>被调用的。</p>
-
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   if (!new.target) throw "Foo() must be called with new";
   console.log("Foo instantiated with new");
 }
 
 Foo(); // throws "Foo() must be called with new"
 new Foo(); // logs "Foo instantiated with new"
-</pre>
+```
 
-<h3 id="构造方法中的_new.target">构造方法中的 new.target</h3>
+### 构造方法中的 new\.target
 
-<p>在类的构造方法中，<code>new.target</code>指向直接被<code>new</code>执行的构造函数。并且当一个父类构造方法在子类构造方法中被调用时，情况与之相同。</p>
+在类的构造方法中，`new.target`指向直接被`new`执行的构造函数。并且当一个父类构造方法在子类构造方法中被调用时，情况与之相同。
 
-<pre class="brush: js">class A {
+```js
+class A {
   constructor() {
     console.log(new.target.name);
   }
@@ -57,23 +59,21 @@ class D extends C { constructor() { super(); } }
 
 var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
-</pre>
+```
 
-<p>从上面类 C 和 D 的例子可以看出来，new.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。</p>
+从上面类 C 和 D 的例子可以看出来，new\.target 指向的是初始化类的类定义。比如当 D 通过 new 初始化的时候，打印出了 D 的类定义，C 的例子与之类似，打印出的是 C 的类定义。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions">Functions</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a></code></li>
- <li><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code></li>
-</ul>
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)

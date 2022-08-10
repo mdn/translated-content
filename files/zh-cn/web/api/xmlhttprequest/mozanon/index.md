@@ -11,6 +11,6 @@ tags:
   - mozAnon
 translation_of: Web/API/XMLHttpRequest/mozAnon
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong><code>XMLHttpRequest.mozAnon</code></strong> 是布尔类型。如果这个变量为真，则这次请求将不携带 Cookies 或头部认证信息来发送。</p>
+**`XMLHttpRequest.mozAnon`** 是布尔类型。如果这个变量为真，则这次请求将不携带 Cookies 或头部认证信息来发送。

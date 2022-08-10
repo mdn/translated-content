@@ -6,42 +6,44 @@ tags:
   - 四舍五入
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>Math.round()</strong></code> 函数返回一个数字四舍五入后最接近的整数。</p>
+**`Math.round()`** 函数返回一个数字四舍五入后最接近的整数。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.round(<em>x</em>) </code></pre>
+```plain
+Math.round(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一个数值。</dd>
-</dl>
+- `x`
+  - : 一个数值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给定数字的值四舍五入到最接近的整数。</p>
+给定数字的值四舍五入到最接近的整数。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果参数的小数部分大于 0.5，则舍入到相邻的绝对值更大的整数。 如果参数的小数部分小于 0.5，则舍入到相邻的绝对值更小的整数。如果参数的小数部分恰好等于 0.5，则舍入到相邻的在正无穷（+∞）方向上的整数。<strong>注意，与很多其他语言中的<code>round()</code> 函数不同，<code>Math.round()</code> 并不总是舍入到远离 0 的方向（尤其是在负数的小数部分恰好等于 0.5 的情况下）。</strong></p>
+如果参数的小数部分大于 0.5，则舍入到相邻的绝对值更大的整数。 如果参数的小数部分小于 0.5，则舍入到相邻的绝对值更小的整数。如果参数的小数部分恰好等于 0.5，则舍入到相邻的在正无穷（+∞）方向上的整数。**注意，与很多其他语言中的`round()` 函数不同，`Math.round()` 并不总是舍入到远离 0 的方向（尤其是在负数的小数部分恰好等于 0.5 的情况下）。**
 
-<p>因为 <code>round()</code> 是 <code>Math</code> 的静态方法，你应该直接使用 <code>Math.round()</code>，而不是作为你创建的 <code>Math</code> 对象的一个实例方法来使用（<code>Math</code>没有构造函数）。</p>
+因为 `round()` 是 `Math` 的静态方法，你应该直接使用 `Math.round()`，而不是作为你创建的 `Math` 对象的一个实例方法来使用（`Math`没有构造函数）。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:js">x = Math.round(20.49);   //20
+```js
+x = Math.round(20.49);   //20
 x = Math.round(20.5);    //21
 x = Math.round(-20.5);   //-20
 x = Math.round(-20.51);  //-21
-</pre>
+```
 
-<h3 id="Example:_Decimal_rounding">小数舍入</h3>
+### 小数舍入
 
-<pre class="brush: js">// 闭包
+```js
+// 闭包
 (function(){
 
   /**
@@ -60,7 +62,7 @@ x = Math.round(-20.51);  //-21
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -112,33 +114,30 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<p>或：</p>
+或：
 
-<pre class="brush: js">function round(number, precision) {
+```js
+function round(number, precision) {
     return Math.round(+number + 'e' + precision) / Math.pow(10, precision);
     //same as:
     //return Number(Math.round(+number + 'e' + precision) + 'e-' + precision);
 }
 
 round(1.005, 2);    //1.01
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-
-
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}

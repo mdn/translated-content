@@ -1,49 +1,53 @@
 ---
 title: '::slotted()'
-slug: 'Web/CSS/::slotted'
-translation_of: 'Web/CSS/::slotted'
+slug: Web/CSS/::slotted
+translation_of: Web/CSS/::slotted
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong><code>:slotted()</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a> 用于选定那些被放在 HTML 模板中的元素 (更多请查看 <a href="/zh-CN/docs/Web/Web_Components/Using_templates_and_slots">使用模板和插槽</a>)。</p>
+**`:slotted()`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于选定那些被放在 HTML 模板中的元素 (更多请查看 [使用模板和插槽](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots))。
 
-<p>这个伪类选择器仅仅适用于 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">影子节点树 (Shadow Dom)</a>。并且只会选择实际的元素节点， 而不包括文本节点。</p>
+这个伪类选择器仅仅适用于 [影子节点树 (Shadow Dom)](/en-US/docs/Web/Web_Components/Using_shadow_DOM)。并且只会选择实际的元素节点， 而不包括文本节点。
 
-<pre class="brush: css no-line-numbers">/* Selects any element placed inside a slot */
+```css
+/* Selects any element placed inside a slot */
 ::slotted(*) {
   font-weight: bold;
 }
 
-/* Selects any &lt;span&gt; placed inside a slot */
+/* Selects any <span> placed inside a slot */
 ::slotted(span) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<p>下面的小片段是关于 <a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">插槽伪类元素</a> 小 demo (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">点击查看实例</a>).</p>
+下面的小片段是关于 [插槽伪类元素](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) 小 demo ([点击查看实例](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
-<p>在这个小 demo 中，我们使用一个带有 3 个插槽的 HTML 模板：</p>
+在这个小 demo 中，我们使用一个带有 3 个插槽的 HTML 模板：
 
-<pre class="brush: html">&lt;template id="person-template"&gt;
-  &lt;div&gt;
-    &lt;h2&gt;Personal ID Card&lt;/h2&gt;
-    &lt;slot name="person-name"&gt;NAME MISSING&lt;/slot&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;slot name="person-age"&gt;AGE MISSING&lt;/slot&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;slot name="person-occupation"&gt;OCCUPATION MISSING&lt;/slot&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```html
+<template id="person-template">
+  <div>
+    <h2>Personal ID Card</h2>
+    <slot name="person-name">NAME MISSING</slot>
+    <ul>
+      <li><slot name="person-age">AGE MISSING</slot></li>
+      <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
+    </ul>
+  </div>
+</template>
+```
 
-<p>自定义元素 <code>&lt;person-details&gt;</code> 的定义如下：</p>
+自定义元素 `<person-details>` 的定义如下：
 
-<pre class="brush: js">customElements.define('person-details',
+```js
+customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -62,30 +66,29 @@ translation_of: 'Web/CSS/::slotted'
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
   }
-})</pre>
+})
+```
 
-<p>为了更好地区分<strong>未被成功填充的插槽</strong>和<strong>成功填充的插槽</strong>, 我们在 CSS 中选择了所有的插槽元素 (<code>::slotted(*)</code>), 并填充了不一样的颜色和字体。结果也是如此。</p>
+为了更好地区分**未被成功填充的插槽**和**成功填充的插槽**, 我们在 CSS 中选择了所有的插槽元素 (`::slotted(*)`), 并填充了不一样的颜色和字体。结果也是如此。
 
-<p>元素就像如下被填充了起来：</p>
+元素就像如下被填充了起来：
 
-<pre class="brush: html">&lt;person-details&gt;
-  &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
-  &lt;span slot="person-age"&gt;Immortal&lt;/span&gt;
-  &lt;span slot="person-occupation"&gt;Superhero&lt;/span&gt;
-&lt;/person-details&gt;</pre>
+```html
+<person-details>
+  <p slot="person-name">Dr. Shazaam</p>
+  <span slot="person-age">Immortal</span>
+  <span slot="person-occupation">Superhero</span>
+</person-details>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.slotted")}}
 
+## 参考
 
-<p>{{Compat("css.selectors.slotted")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- [Web components](/en-US/docs/Web/Web_Components)

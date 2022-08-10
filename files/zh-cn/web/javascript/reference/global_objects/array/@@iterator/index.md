@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@iterator]()'
+title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
   - Array
@@ -15,46 +15,51 @@ tags:
   - 迭代
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@iterator</strong></code> 属性和 {{jsxref("Array.prototype.values()", "Array.prototype.values()")}} 属性的初始值是同一个函数对象。</p>
+**`@@iterator`** 属性和 {{jsxref("Array.prototype.values()", "Array.prototype.values()")}} 属性的初始值是同一个函数对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><var>arr</var>[Symbol.iterator]()</pre>
+```js
+arr[Symbol.iterator]()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>数组的 <strong>iterator </strong>方法，默认情况下，与 {{jsxref("Array.prototype.values()", "values()")}} 返回值相同， <code>arr[Symbol.iterator]</code> 则会返回 {{jsxref("Array.prototype.values()", "values()")}} 函数。</p>
+数组的 **iterator** 方法，默认情况下，与 {{jsxref("Array.prototype.values()", "values()")}} 返回值相同， `arr[Symbol.iterator]` 则会返回 {{jsxref("Array.prototype.values()", "values()")}} 函数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_for...of_循环进行迭代">使用 <code>for...of</code> 循环进行迭代</h3>
+### 使用 `for...of` 循环进行迭代
 
-<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
+```js
+var arr = ['a', 'b', 'c', 'd', 'e'];
 var eArr = arr[Symbol.iterator]();
 // 浏览器必须支持 for...of 循环
 for (let letter of eArr) {
   console.log(letter);
 }
-</pre>
+```
 
-<h3 id="另一种迭代方式">另一种迭代方式</h3>
+### 另一种迭代方式
 
-<pre class="brush: js">var arr = ['a', 'b', 'c', 'd', 'e'];
+```js
+var arr = ['a', 'b', 'c', 'd', 'e'];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // a
 console.log(eArr.next().value); // b
 console.log(eArr.next().value); // c
 console.log(eArr.next().value); // d
 console.log(eArr.next().value); // e
-</pre>
+```
 
-<h3 id="Use_Case_for_brace_notation">Use Case for brace notation</h3>
+### Use Case for brace notation
 
-<p>The use case for this syntax over using the dot notation (<code>Array.prototype.values()</code>) is in a case where you don't know what object is going to be ahead of time. If you have a function that takes an iterator and then iterate over the value, but don't know if that Object is going to have a [Iterable].prototype.values method. This could be a built-in object like <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> object or a custom object.</p>
+The use case for this syntax over using the dot notation (`Array.prototype.values()`) is in a case where you don't know what object is going to be ahead of time. If you have a function that takes an iterator and then iterate over the value, but don't know if that Object is going to have a \[Iterable].prototype.values method. This could be a built-in object like [String](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) object or a custom object.
 
-<pre class="brush: js">function logIterable(it) {
+```js
+function logIterable(it) {
   var iterator = it[Symbol.iterator]();
   // 浏览器必须支持 for...of 循环
   for (let letter of iterator) {
@@ -72,23 +77,22 @@ logIterable(['a', 'b', 'c']);
 logIterable('abc');
 // a
 // b
-// c</pre>
+// c
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}

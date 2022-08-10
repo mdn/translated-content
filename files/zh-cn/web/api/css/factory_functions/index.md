@@ -3,85 +3,87 @@ title: CSS 数字工厂函数
 slug: Web/API/CSS/factory_functions
 translation_of: Web/API/CSS/factory_functions
 ---
-<p>{{SeeCompatTable}}<strong>CSS numeric factory functions</strong>，例如 <code>CSS.em()</code> 和 <code>CSS.turn()</code>，是一组使用传入的数字参数以及所指定的单位（单位名称即所用方法名称）来返回 <a href="/en-US/docs/Web/API/CSSUnitValue">CSSUnitValues</a> 的方法。这些函数创建新的数字值，与使用 {{domxref('CSSUnitValue.CSSUnitValue()')}} 构造函数相比，没有后者那么冗长。</p>
+{{SeeCompatTable}}**CSS numeric factory functions**，例如 `CSS.em()` 和 `CSS.turn()`，是一组使用传入的数字参数以及所指定的单位（单位名称即所用方法名称）来返回 [CSSUnitValues](/en-US/docs/Web/API/CSSUnitValue) 的方法。这些函数创建新的数字值，与使用 {{domxref('CSSUnitValue.CSSUnitValue()')}} 构造函数相比，没有后者那么冗长。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">CSS.number(<var>number</var>);
-CSS.percent(<var>number</var>);
+```plain
+CSS.number(number);
+CSS.percent(number);
 
-// &lt;length&gt;
-CSS.em(<var>number</var>);
-CSS.ex(<var>number</var>);
-CSS.ch(<var>number</var>);
-CSS.ic(<var>number</var>);
-CSS.rem(<var>number</var>);
-CSS.lh(<var>number</var>);
-CSS.rlh(<var>number</var>);
-CSS.vw(<var>number</var>);
-CSS.vh(<var>number</var>);
-CSS.vi(<var>number</var>);
-CSS.vb(<var>number</var>);
-CSS.vmin(<var>number</var>);
-CSS.vmax(<var>number</var>);
-CSS.cm(<var>number</var>);
-CSS.mm(<var>number</var>);
-CSS.Q(<var>number</var>);
-CSS.in(<var>number</var>);
-CSS.pt(<var>number</var>);
-CSS.pc(<var>number</var>);
-CSS.px(<var>number</var>);
+// <length>
+CSS.em(number);
+CSS.ex(number);
+CSS.ch(number);
+CSS.ic(number);
+CSS.rem(number);
+CSS.lh(number);
+CSS.rlh(number);
+CSS.vw(number);
+CSS.vh(number);
+CSS.vi(number);
+CSS.vb(number);
+CSS.vmin(number);
+CSS.vmax(number);
+CSS.cm(number);
+CSS.mm(number);
+CSS.Q(number);
+CSS.in(number);
+CSS.pt(number);
+CSS.pc(number);
+CSS.px(number);
 
-// &lt;angle&gt;
-CSS.deg(<var>number</var>);
-CSS.grad(<var>number</var>);
-CSS.rad(<var>number</var>);
-CSS.turn(<var>number</var>);
+// <angle>
+CSS.deg(number);
+CSS.grad(number);
+CSS.rad(number);
+CSS.turn(number);
 
-// &lt;time&gt;
-CSS.s(<var>number</var>);
-CSS.ms(<var>number</var>);
+// <time>
+CSS.s(number);
+CSS.ms(number);
 
-// &lt;frequency&gt;
-CSS.Hz(<var>number</var>);
-CSS.kHz(<var>number</var>);
+// <frequency>
+CSS.Hz(number);
+CSS.kHz(number);
 
-// &lt;resolution&gt;
-CSS.dpi(<var>number</var>);
-CSS.dpcm(<var>number</var>);
-CSS.dppx(<var>number</var>);
+// <resolution>
+CSS.dpi(number);
+CSS.dpcm(number);
+CSS.dppx(number);
 
-// &lt;flex&gt;
-CSS.fr(<var>number</var>);</pre>
+// <flex>
+CSS.fr(number);
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>我们使用 <code>CSS.vmax()</code> 数字工厂函数来创建一个 {{domxref('CSSUnitValue')}}：</p>
+我们使用 `CSS.vmax()` 数字工厂函数来创建一个 {{domxref('CSSUnitValue')}}：
 
-<pre class="brush: js notranslate">let height = CSS.vmax(50);
+```js
+let height = CSS.vmax(50);
 
 console.log( height );       // CSSUnitValue {value: 50, unit: "vmax"}
 console.log( height.value )  // 50
-console.log( height.unit )   // vmax</pre>
+console.log( height.unit )   // vmax
+```
 
-<p>在这个例子中，我们给元素设定 margin 属性值，使用 <code>CSS.px()</code> 函数：</p>
+在这个例子中，我们给元素设定 margin 属性值，使用 `CSS.px()` 函数：
 
-<pre class="brush: js notranslate">myElement.attributeStyleMap.set('margin', CSS.px(40));
+```js
+myElement.attributeStyleMap.set('margin', CSS.px(40));
 let currentMargin = myElement.attributeStyleMap.get('margin');
-console.log(currentMargin.value, currentMargin.unit); // 40, 'px'</pre>
+console.log(currentMargin.value, currentMargin.unit); // 40, 'px'
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CSS")}}
 
+## 另请参阅
 
-<p>{{Compat("api.CSS")}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{domxref('CSSUnitValue.CSSUnitValue()')}}</li>
-</ul>
+- {{domxref('CSSUnitValue.CSSUnitValue()')}}

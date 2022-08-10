@@ -12,17 +12,12 @@ tags:
   - status
 translation_of: Web/API/XMLHttpRequest/status
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}只读属性 **`XMLHttpRequest.status`** 返回了 `XMLHttpRequest` 响应中的数字状态码。`status` 的值是一个`无符号短整型`。在请求完成前，`status` 的值为 `0`。值得注意的是，如果 XMLHttpRequest 出错，浏览器返回的 status 也为 0。status 码是标准的 [HTTP status codes](/en-US/docs/Web/HTTP/Response_codes)。举个例子，`status` `200` 代表一个成功的请求。如果服务器响应中没有明确指定 status 码，`XMLHttpRequest.status` 将会默认为 `200`。
 
-<div>只读属性 <code><strong>XMLHttpRequest.status</strong></code> 返回了 <code>XMLHttpRequest</code> 响应中的数字状态码。<code>status</code> 的值是一个<code>无符号短整型</code>。在请求完成前，<code>status</code> 的值为 <code>0</code>。值得注意的是，如果 XMLHttpRequest 出错，浏览器返回的 status 也为 0。</div>
+## 例子
 
-<div> </div>
-
-<div>status 码是标准的 <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP status codes</a>。举个例子，<code>status</code> <code>200</code> 代表一个成功的请求。如果服务器响应中没有明确指定 status 码，<code>XMLHttpRequest.status</code> 将会默认为 <code>200</code>。</div>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.status);
 
 xhr.open('GET', '/server', true);
@@ -46,19 +41,17 @@ xhr.send(null);
  * LOADING（载入中）200
  * DONE（完成）200
  */
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.XMLHttpRequest.status")}}</p>
+{{Compat("api.XMLHttpRequest.status")}}
 
-<h2 id="其他相关资料">其他相关资料</h2>
+## 其他相关资料
 
-<ul>
- <li>HTTP 响应代码（<a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a>）列表</li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- HTTP 响应代码（[HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)）列表
+- [HTTP](/en-US/docs/Web/HTTP)

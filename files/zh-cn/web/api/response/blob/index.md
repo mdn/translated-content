@@ -1,7 +1,6 @@
 ---
 title: Response.blob()
 slug: Web/API/Response/blob
-translation_of: Web/API/Response/blob
 tags:
   - API
   - Blob
@@ -9,33 +8,35 @@ tags:
   - Method
   - Reference
   - Response
+translation_of: Web/API/Response/blob
 browser-compat: api.Response.blob
 ---
-<p>{{APIRef("Fetch")}}</p>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}}  mixin 的 <strong><code>blob()</code></strong>方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。</p>
+{{domxref("Response")}} mixin 的 **`blob()`**方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="brush: js">response.blob().then(function(myBlob) {
+```js
+response.blob().then(function(myBlob) {
   // do something with myBlob
-});</pre>
+});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+None.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A promise that resolves with a {{domxref("Blob")}}.</p>
+A promise that resolves with a {{domxref("Blob")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在我们 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch request example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>) 中，我们使用<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter">Request.Request</a>构造方法创建了一个新的 request 对象，然后使用它来获取一个 JPG 文件。当 fetch 成功的时候，我们使用 blob() 从 response 中读取一个<a href="/zh-CN/docs/Web/API/Blob">Blob</a>对象，并使用<a href="/zh-CN/docs/Web/API/URL/createObjectURL">URL.createObjectURL</a> 将它放入一个 object URL ，然后把 URL 设置为<a href="/zh-CN/docs/Web/HTML/Element/img">img</a>元素的 src 属性以显示这张图片。</p>
+在我们 [fetch request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (run [fetch request live](http://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用[Request.Request](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter)构造方法创建了一个新的 request 对象，然后使用它来获取一个 JPG 文件。当 fetch 成功的时候，我们使用 blob() 从 response 中读取一个[Blob](/zh-CN/docs/Web/API/Blob)对象，并使用[URL.createObjectURL](/zh-CN/docs/Web/API/URL/createObjectURL) 将它放入一个 object URL ，然后把 URL 设置为[img](/zh-CN/docs/Web/HTML/Element/img)元素的 src 属性以显示这张图片。
 
-<p> </p>
-
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -47,20 +48,18 @@ fetch(myRequest)
   var objectURL = URL.createObjectURL(myBlob);
   myImage.src = objectURL;
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Response.blob")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

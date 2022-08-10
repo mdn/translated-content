@@ -8,80 +8,83 @@ tags:
 translation_of: Web/CSS/counters()
 original_slug: Web/CSS/counters()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 函数  <code><strong>counters()</strong></code> 是一个嵌套计数器，返回表示指定计数器当前值的连接字符串。<code>counters()</code> 函数有两种形式：<code>counters(<var>name</var>, <var>string</var>)</code> 或 <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>。它通常和伪元素搭配使用，但是理论上可以在支持<code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a></code>值的任何地方使用。生成的文本是具有给定名称的所有计数器的值，从最外层到最内层，之间由指定字符串分隔。计数器以指示的样式呈现，如果未指定样式，则默认为十进制。</p>
+[CSS](/en-US/docs/Web/CSS) 函数 **`counters()`** 是一个嵌套计数器，返回表示指定计数器当前值的连接字符串。`counters()` 函数有两种形式：`counters(name, string)` 或 `counters(name, string, style)`。它通常和伪元素搭配使用，但是理论上可以在支持[`<string>`](/en-US/docs/Web/CSS/string)值的任何地方使用。生成的文本是具有给定名称的所有计数器的值，从最外层到最内层，之间由指定字符串分隔。计数器以指示的样式呈现，如果未指定样式，则默认为十进制。
 
-<pre class="brush: css">/* Simple usage  - style defaults to decimal */
+```css
+/* Simple usage  - style defaults to decimal */
 counters(countername, '-');
 
 /* changing the counter display */
-counters(countername, '.', upper-roman)</pre>
+counters(countername, '.', upper-roman)
+```
 
-<p>一个<a href="/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">计数器</a>本身没有可见的效果，而是通过<code>counter()</code>函数（和<code><a href="/zh-CN/docs/Web/CSS/counters">counters()</a></code>函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。</p>
+一个[计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>counter()</code> 函数可以与任何 CSS 属性一起使用，但是对<code><a href="/zh-CN/docs/Web/CSS/content">"content"</a></code>以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。</p>
+> **备注：** `counter()` 函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
+>
+> 在使用此功能之前，请仔细检查[浏览器兼容性表](/zh-CN/docs/Web/CSS/counter#Browser_compatibility) 。
 
-<p>在使用此功能之前，请仔细检查<a href="/zh-CN/docs/Web/CSS/counter#Browser_compatibility">浏览器兼容性表</a> 。</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+### Values
 
-<h3 id="Values">Values</h3>
+- `<custom-ident> 自定义标识`
+  - : 一个标识计数器的名称，区分大小写，并且与[`counter-reset`](/zh-CN/docs/Web/CSS/counter-reset)和[`counter-increment`](/zh-CN/docs/Web/CSS/counter-increment)中的“名称”相同。名称不能以两个破折号开头，并且不能为`none`, `unset`, `initial`, 或 `inherit`。
+- `<counter-style> 计数器样式`
+  - : 计数器样式名称或 [`symbols()`](/zh-CN/docs/Web/CSS/symbols) 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他[预定义计数器样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。如果省略，则计数器样式默认为十进制。
+- `<string> 字符串`
+  - : 任意数量的文本字符。非拉丁字符必须使用其 Unicode 转义序列进行编码：例如，`\ 000A9`表示版权符号。
 
-<dl>
- <dt><code><a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a> 自定义标识</code></dt>
- <dd>一个标识计数器的名称，区分大小写，并且与<a href="/zh-CN/docs/Web/CSS/counter-reset"><code>counter-reset</code></a>和<a href="/zh-CN/docs/Web/CSS/counter-increment"><code>counter-increment</code></a>中的“名称”相同。名称不能以两个破折号开头，并且不能为<code>none</code>, <code>unset</code>, <code>initial</code>, 或 <code>inherit</code>。</dd>
- <dt><code>&lt;counter-style&gt; 计数器样式</code></dt>
- <dd>计数器样式名称或 <code><a href="/zh-CN/docs/Web/CSS/symbols">symbols()</a></code> 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他<a href="/zh-CN/docs/Web/CSS/CSS_Counter_Styles">预定义计数器样式</a>。如果省略，则计数器样式默认为十进制。</dd>
- <dt><code><a href="/en-US/docs/Web/CSS/string">&lt;string&gt;</a> 字符串</code></dt>
- <dd>任意数量的文本字符。非拉丁字符必须使用其 Unicode 转义序列进行编码：例如，<code>\ 000A9</code>表示版权符号。</dd>
-</dl>
+### Formal syntax
 
-<h3 id="Formal_syntax">Formal syntax</h3>
-
-<pre class="syntaxbox">counters( <a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a>, <a href="/zh-CN/docs/Web/CSS/string">&lt;string&gt;</a>, <a href="/zh-CN/docs/Web/CSS/counters#counter-style">&lt;counter-style&gt;</a><a href="/zh-CN/docs/CSS/Value_definition_syntax#Question_mark_()">?</a> )
+```plain
+counters( <custom-ident>, <string>, <counter-style>? )
 
 where
-<code>&lt;counter-style&gt; = <a href="/zh-CN/docs/Web/CSS/counters#counter-style-name">&lt;counter-style-name&gt;</a> <a href="/zh-CN/docs/CSS/Value_definition_syntax#Single_bar">|</a> symbols()</code>
+<counter-style> = <counter-style-name> | symbols()
 
 where
-<code>&lt;counter-style-name&gt; = <a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a></code></pre>
+<counter-style-name> = <custom-ident>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="default_value_compared_to_upper_Roman">default value compared to upper Roman</h3>
+### default value compared to upper Roman
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;ol&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;
-           &lt;ol&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-           &lt;/ol&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+     <ol>
+        <li></li>
+        <li>
+           <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ol>
+        </li>
+      </ol>
+  </li>
+</ol>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[2]">ol {
+```css
+ol {
   counter-reset: listCounter;
 }
 li {
@@ -92,43 +95,47 @@ li::marker {
 }
 li::before {
   content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}</p>
+{{EmbedLiveSample("default_value_compared_to_upper_Roman", "100%", 150)}}
 
-<h3 id="decimal-leading-zero_compared_to_lower-alpha"><dfn>decimal-leading-zero</dfn> compared to lower-alpha</h3>
+### _decimal-leading-zero_ compared to lower-alpha
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;ol&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-  &lt;li&gt;
-     &lt;ol&gt;
-        &lt;li&gt;&lt;/li&gt;
-        &lt;li&gt;
-           &lt;ol&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;/li&gt;
-           &lt;/ol&gt;
-        &lt;/li&gt;
-      &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>
+     <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+  </li>
+  <li></li>
+  <li></li>
+  <li>
+     <ol>
+        <li></li>
+        <li>
+           <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+           </ol>
+        </li>
+      </ol>
+  </li>
+</ol>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[2]">ol {
+```css
+ol {
   counter-reset: count;
 }
 li {
@@ -138,31 +145,28 @@ li::marker {
    content: counters(count, '.', upper-alpha) ') ';
 }
 li::before {
-  content: counters(count, ".", <dfn>decimal-leading-zero</dfn>) " == " counters(count, ".", lower-alpha);
-}</pre>
+  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}</p>
+{{EmbedLiveSample("decimal-leading-zero_compared_to_lower-alpha", "100%", 150)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.types.counters")}}
 
+## See also
 
-<p>{{Compat("css.types.counters")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS Counters</a></li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>CSS <code><a href="/en-US/docs/Web/CSS/counter_function">counter()</a></code> function</li>
- <li>{{cssxref("::marker")}}</li>
-</ul>
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- {{cssxref("counter-set")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}
+- CSS [`counter()`](/en-US/docs/Web/CSS/counter_function) function
+- {{cssxref("::marker")}}

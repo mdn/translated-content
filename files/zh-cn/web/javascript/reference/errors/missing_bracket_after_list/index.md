@@ -7,26 +7,28 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">SyntaxError: missing ] after element list
-</pre>
+```plain
+SyntaxError: missing ] after element list
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>数组初始化在某处出现了语法错误。比如缺少了右中括号 ("<code>]</code>") 或一个逗号 ("<code>,</code>")。</p>
+数组初始化在某处出现了语法错误。比如缺少了右中括号 ("`]`") 或一个逗号 ("`,`")。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="不正确的数组初始化">不正确的数组初始化</h3>
+### 不正确的数组初始化
 
-<pre class="brush: js example-bad">var list = [1, 2,
+```js example-bad
+var list = [1, 2,
 
 var instruments = [
   "Ukulele",
@@ -35,11 +37,12 @@ var instruments = [
 };
 
 var data = [{foo: "bar"} {bar: "foo"}];
-</pre>
+```
 
-<p>正确的是：</p>
+正确的是：
 
-<pre class="brush: js example-good">var list = [1, 2];
+```js example-good
+var list = [1, 2];
 
 var instruments = [
  "Ukulele",
@@ -47,10 +50,9 @@ var instruments = [
  "Piano"
 ];
 
-var data = [{foo: "bar"}, {bar: "foo"}];</pre>
+var data = [{foo: "bar"}, {bar: "foo"}];
+```
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

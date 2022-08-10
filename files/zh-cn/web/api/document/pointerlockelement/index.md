@@ -4,31 +4,30 @@ slug: Web/API/Document/pointerLockElement
 translation_of: Web/API/DocumentOrShadowRoot/pointerLockElement
 original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code>pointerLockElement 特性规定了如在鼠标事件中当目标被锁定时的元素集和。如果指针处于锁定等待中、指针没有被锁定，或者目标在另外一个文档中这几种情况，返回的值 null。</code></p>
+`pointerLockElement 特性规定了如在鼠标事件中当目标被锁定时的元素集和。如果指针处于锁定等待中、指针没有被锁定，或者目标在另外一个文档中这几种情况，返回的值 null。`
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var element = document.pointerLockElement;
-</pre>
+```plain
+var element = document.pointerLockElement;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>An {{domxref("Element")}} or <code>null</code>.</p>
+An {{domxref("Element")}} or `null`.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Document.pointerLockElement")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("Document.exitPointerLock()") }}</li>
- <li>{{ domxref("Element.requestPointerLock()") }}</li>
- <li><a href="/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock</a></li>
-</ul>
+- {{ domxref("Document.exitPointerLock()") }}
+- {{ domxref("Element.requestPointerLock()") }}
+- [Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock)

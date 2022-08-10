@@ -8,30 +8,30 @@ tags:
   - Web Notifications API
 translation_of: Web/API/Notification/actions
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>{{domxref("Notification")}}接口的只读属性<strong><code>actions</code></strong>返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。</p>
+{{domxref("Notification")}}接口的只读属性**`actions`**返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>actions</em>[] = <em>Notification</em>.actions;</pre>
+```plain
+var actions[] = Notification.actions;
+```
 
-<h3 id="Return_Value">值</h3>
+### 值
 
-<p>{{domxref("NotificationAction")}}对象的只读数组。用户在通知中选择每项的单一的功能。</p>
+{{domxref("NotificationAction")}}对象的只读数组。用户在通知中选择每项的单一的功能。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Notification.actions")}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

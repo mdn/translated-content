@@ -5,40 +5,41 @@ tags:
   - Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Promise.race(iterable)</code> </strong>方法返回一个 promise，一旦迭代器中的某个 promise 解决或拒绝，返回的 promise 就会解决或拒绝。</p>
+**`Promise.race(iterable)` **方法返回一个 promise，一旦迭代器中的某个 promise 解决或拒绝，返回的 promise 就会解决或拒绝。
 
-<div>{{EmbedInteractiveExample("pages/js/promise-race.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-race.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>Promise.race(iterable)</var>;</pre>
+```plain
+Promise.race(iterable);
+```
 
-<h3 id="参数"><strong>参数</strong></h3>
+### **参数**
 
-<dl>
- <dt>iterable</dt>
- <dd>可迭代对象，类似{{jsxref("Array")}}。详见 <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>。</dd>
-</dl>
+- iterable
+  - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/en-US/docs/Web/JavaScript/Guide/iterable)。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个<strong>待定的</strong> {{jsxref("Promise")}} 只要给定的迭代中的一个 promise 解决或拒绝，就采用第一个 promise 的值作为它的值，从而<strong>异步</strong>地解析或拒绝（一旦堆栈为空）。</p>
+一个**待定的** {{jsxref("Promise")}} 只要给定的迭代中的一个 promise 解决或拒绝，就采用第一个 promise 的值作为它的值，从而**异步**地解析或拒绝（一旦堆栈为空）。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>race</code> 函数返回一个 <code>Promise</code>，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。</p>
+`race` 函数返回一个 `Promise`，它将与第一个传递的 promise 相同的完成方式被完成。它可以是完成（ resolves），也可以是失败（rejects），这要取决于第一个完成的方式是两个中的哪个。
 
-<p>如果传的迭代是空的，则返回的 promise 将永远等待。</p>
+如果传的迭代是空的，则返回的 promise 将永远等待。
 
-<p>如果迭代包含一个或多个非承诺值和/或已解决/拒绝的承诺，则<code> Promise.race</code> 将解析为迭代中找到的第一个值。</p>
+如果迭代包含一个或多个非承诺值和/或已解决/拒绝的承诺，则` Promise.race` 将解析为迭代中找到的第一个值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Promise.race_的异步性">Promise.race 的异步性</h3>
+### Promise.race 的异步性
 
-<pre class="brush: js">// we are passing as argument an array of promises that are already resolved,
+```js
+// we are passing as argument an array of promises that are already resolved,
 // to trigger Promise.race as soon as possible
 var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
 
@@ -53,13 +54,15 @@ setTimeout(function(){
 });
 
 // logs, in order:
-// Promise { &lt;state&gt;: "pending" }
+// Promise { <state>: "pending" }
 // the stack is now empty
-// Promise { &lt;state&gt;: "fulfilled", &lt;value&gt;: 33 }</pre>
+// Promise { <state>: "fulfilled", <value>: 33 }
+```
 
-<h3 id="使用_Promise.race_–_setTimeout_的示例">使用 Promise.race –  setTimeout 的示例</h3>
+### 使用 Promise.race – setTimeout 的示例
 
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
     setTimeout(resolve, 500, "one");
 });
 var p2 = new Promise(function(resolve, reject) {
@@ -98,19 +101,17 @@ Promise.race([p5, p6]).then(function(value) {
   console.log(reason); // "six"
   // p6 更快，所以它失败了
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.all()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}

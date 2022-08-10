@@ -3,37 +3,31 @@ title: Navigator.canShare
 slug: Web/API/Navigator/canShare
 translation_of: Web/API/Navigator/canShare
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{securecontext_header}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{securecontext_header}}如果对 [`Navigator.share()`](/zh-CN/docs/Web/API/Navigator/share) 的调用成功，则 Web Share API 的 **`Navigator.canShare()`** 方法将返回 true。
 
+## 语法
 
+```plain
+var canShare = navigator.canShare(data);
+```
 
-<div>如果对 <code><a href="/zh-CN/docs/Web/API/Navigator/share">Navigator.share()</a></code> 的调用成功，则 Web Share API 的 <strong><code>Navigator.canShare()</code></strong> 方法将返回 true。</div>
+### 参数
 
-<h2 id="语法">语法</h2>
+- `data` {{optional_inline}}
+  - : 包含要共享的数据的对象，该对象要与 {{domxref("Navigator.share()")}} 方法传递的数据相匹配。
 
-<pre class="syntaxbox">var canShare = <em>navigator</em>.canShare(<em>data</em>);</pre>
+### 返回值
 
-<h3 id="参数">参数</h3>
+{{jsxref('Boolean')}}值。{{domxref("Navigator.share()")}} 若返回 True 则表示内容可以被成功分享。
 
-<dl>
- <dt><code>data</code> {{optional_inline}}</dt>
- <dd>包含要共享的数据的对象，该对象要与 {{domxref("Navigator.share()")}} 方法传递的数据相匹配。</dd>
-</dl>
-
-<h3 id="返回值">返回值</h3>
-
-<p>{{jsxref('Boolean')}}值。{{domxref("Navigator.share()")}} 若返回 True 则表示内容可以被成功分享。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Navigator.canShare")}}
 
+## 相关连接
 
-<p>{{Compat("api.Navigator.canShare")}}</p>
-
-<h2 id="相关连接">相关连接</h2>
-
-<p>{{domxref('navigator.share', 'navigator.share()')}}</p>
+{{domxref('navigator.share', 'navigator.share()')}}

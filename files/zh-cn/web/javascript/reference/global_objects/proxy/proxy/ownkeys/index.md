@@ -4,68 +4,60 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.ownKeys()</code></strong> 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.</p>
+**`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.
 
+{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
+## 语法
 
-<p>{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}</p>
-
-
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   ownKeys: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>下面的参数被传递给 ownKeys。<code>this</code> 被绑定在 <code>handler</code> 上。</p>
+下面的参数被传递给 ownKeys。`this` 被绑定在 `handler` 上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
-</dl>
+- `target`
+  - : 目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>ownKeys</code> 方法必须返回一个可枚举对象。</p>
+`ownKeys` 方法必须返回一个可枚举对象。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.ownKeys()</strong></code> 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.</p>
+**`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该拦截器可以拦截以下操作::</p>
+该拦截器可以拦截以下操作::
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Reflect.ownKeys()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违反了下面的约束，proxy 将抛出错误 {{jsxref("TypeError")}}:</p>
+如果违反了下面的约束，proxy 将抛出错误 {{jsxref("TypeError")}}:
 
-<ul>
- <li><code>ownKeys</code> 的结果必须是一个数组。</li>
- <li>数组的元素类型要么是一个 {{jsxref("String")}} ，要么是一个 {{jsxref("Symbol")}}.</li>
- <li>结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的 key.</li>
- <li>如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的 key，不能有其它值。</li>
-</ul>
+- `ownKeys` 的结果必须是一个数组。
+- 数组的元素类型要么是一个 {{jsxref("String")}} ，要么是一个 {{jsxref("Symbol")}}.
+- 结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的 key.
+- 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的 key，不能有其它值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码拦截 {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+下面的代码拦截 {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   ownKeys: function(target) {
     console.log('called');
     return ['a', 'b', 'c'];
@@ -73,11 +65,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/ownKeys
 });
 
 console.log(Object.getOwnPropertyNames(p)); // "called"
-                                            // [ 'a', 'b', 'c' ]</pre>
+                                            // [ 'a', 'b', 'c' ]
+```
 
-<p>下面的代码违反了约定</p>
+下面的代码违反了约定
 
-<pre class="brush: js example-bad">var obj = {};
+```js example-bad
+var obj = {};
 Object.defineProperty(obj, 'a', {
   configurable: false,
   enumerable: true,
@@ -94,22 +88,19 @@ console.log(Object.getOwnPropertyNames(p));
 
 // TypeError: proxy [[OwnPropertyKeys]] 必须返回一个数组
 // 数组元素类型只能是 String 或 Symbol
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
+## 另见
 
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Reflect.ownKeys()")}}

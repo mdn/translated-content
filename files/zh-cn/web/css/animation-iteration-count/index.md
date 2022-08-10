@@ -3,23 +3,22 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 translation_of: Web/CSS/animation-iteration-count
 ---
-<div>{{CSSRef}} {{ SeeCompatTable() }}</div>
+{{CSSRef}} {{ SeeCompatTable() }}
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p><strong><code>animation-iteration-count</code></strong> <a href="/en/CSS">CSS</a> 属性   定义动画在结束前运行的次数 可以是 1 次 无限循环。</p>
+**`animation-iteration-count`** [CSS](/en/CSS) 属性 定义动画在结束前运行的次数 可以是 1 次 无限循环。
 
-<p>如果指定了多个值，每次播放动画时，将使用列表中的下一个值，在使用最后一个值后循环回第一个值。</p>
+如果指定了多个值，每次播放动画时，将使用列表中的下一个值，在使用最后一个值后循环回第一个值。
 
-<p>通常情况下，使用<code>animation</code>简写属性，来一次性设置所有动画属性会更方便。</p>
+通常情况下，使用`animation`简写属性，来一次性设置所有动画属性会更方便。
 
-<div>{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
 
+## 语法
 
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css">/* 值为关键字 */
+```css
+/* 值为关键字 */
 animation-iteration-count: infinite;
 
 /* 值为数字 */
@@ -28,38 +27,34 @@ animation-iteration-count: 2.4;
 
 /* 指定多个值 */
 animation-iteration-count: 2, 0, infinite;
-</pre>
+```
 
-<p><code>animation-iteration-count</code> 属性可以指定一个或多个以逗号分隔的值。</p>
+`animation-iteration-count` 属性可以指定一个或多个以逗号分隔的值。
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>infinite</code></dt>
- <dd>无限循环播放动画。</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>动画播放的次数；默认值为<code>1</code>。可以用小数定义循环，来播放动画周期的一部分：例如，<code>0.5</code> 将播放到动画周期的一半。不可为负值。</dd>
-</dl>
+- `infinite`
+  - : 无限循环播放动画。
+- `<number>`
+  - : 动画播放的次数；默认值为`1`。可以用小数定义循环，来播放动画周期的一部分：例如，`0.5` 将播放到动画周期的一半。不可为负值。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<p>去看 <a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> for examples. 点击链接去看栗（例）子</p>
+去看 [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for examples. 点击链接去看栗（例）子
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{ domxref("AnimationEvent", "AnimationEvent") }}

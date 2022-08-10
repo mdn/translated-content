@@ -3,28 +3,28 @@ title: DeviceOrientationEvent.beta
 slug: Web/API/DeviceOrientationEvent/beta
 translation_of: Web/API/DeviceOrientationEvent/beta
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>返回设备旋转时 X 轴的值。即: 角度的数值，范围介于-180 ------ 180 之间  表示设备正在向前或向后倾斜。更多信息见  <a href="/en/DOM/Orientation_and_motion_data_explained">方向和运动数据详解</a></p>
+返回设备旋转时 X 轴的值。即: 角度的数值，范围介于-180 ------ 180 之间 表示设备正在向前或向后倾斜。更多信息见 [方向和运动数据详解](/en/DOM/Orientation_and_motion_data_explained)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var beta = <em>instanceOfDeviceOrientationEvent</em>.beta;</pre>
+```plain
+var beta = instanceOfDeviceOrientationEvent.beta;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器的兼容性">浏览器的兼容性</h2>
+## 浏览器的兼容性
 
 {{Compat("api.DeviceOrientationEvent.beta")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li>{{ domxref("window.ondeviceorientation") }}</li>
- <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

@@ -8,53 +8,50 @@ tags:
   - 方法
 translation_of: Web/API/Document/createAttribute
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p><code><strong>Document.createAttribute()</strong></code> 方法创建并返回一个新的属性节点。这个对象创建一个实现了 {{domxref("Attr")}} 接口的节点。这个方式下 DOM 不限制节点能够添加的属性种类。</p>
+**`Document.createAttribute()`** 方法创建并返回一个新的属性节点。这个对象创建一个实现了 {{domxref("Attr")}} 接口的节点。这个方式下 DOM 不限制节点能够添加的属性种类。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>attribute</em> = document.createAttribute(name)</pre>
+```plain
+attribute = document.createAttribute(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>name</code> ，属性的属性名。</li>
-</ul>
+- `name` ，属性的属性名。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("Attr")}} 节点。</p>
+一个 {{domxref("Attr")}} 节点。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li><code>INVALID_CHARACTER_ERR</code> 如果参数含有非法的 XML 属性字符。</li>
-</ul>
+- `INVALID_CHARACTER_ERR` 如果参数含有非法的 XML 属性字符。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush:js">var node = document.getElementById("div1");
+```js
+var node = document.getElementById("div1");
 var a = document.createAttribute("my_attrib");
 a.value = "newVal";
 node.setAttributeNode(a);
 console.log(node.getAttribute("my_attrib")); // "newVal"
-</pre>
+```
 
-<h2 id="备注">备注</h2>
+## 备注
 
-<p>该方法的返回值是一个类型为 <code>Attr</code> 的节点。你可以通过为该节点的 <code>nodeValue</code> 属性赋值来设置该属性节点的属性值，也可以使用常用的 <a href="/zh-CN/docs/Web/API/Element/setAttribute">setAttribute()</a> 方法来替代该方法。</p>
+该方法的返回值是一个类型为 `Attr` 的节点。你可以通过为该节点的 `nodeValue` 属性赋值来设置该属性节点的属性值，也可以使用常用的 [setAttribute()](/zh-CN/docs/Web/API/Element/setAttribute) 方法来替代该方法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("Document.createElement()")}}</li>
-</ul>
+- {{domxref("Document.createElement()")}}

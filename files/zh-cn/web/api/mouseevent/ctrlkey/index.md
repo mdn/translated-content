@@ -3,26 +3,28 @@ title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 translation_of: Web/API/MouseEvent/ctrlKey
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.ctrlKey</code></strong> 是只读属性，可返回一个布尔值，当 ctrl 键被按下，返回 true，否则返回 false。</p>
+**`MouseEvent.ctrlKey`** 是只读属性，可返回一个布尔值，当 ctrl 键被按下，返回 true，否则返回 false。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>ctrlKeyPressed</em> = <em>instanceOfMouseEvent</em>.ctrlKey
-</pre>
+```plain
+var ctrlKeyPressed = instanceOfMouseEvent.ctrlKey
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A boolean</p>
+A boolean
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;ctrlKey example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>ctrlKey example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function showChar(e){
   alert(
@@ -32,26 +34,24 @@ function showChar(e){
   );
 }
 
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onkeypress="showChar(event);"&gt;
-&lt;p&gt;Press any character key, with or without holding down the CTRL key.&lt;br /&gt;
-You can also use the SHIFT key together with the CTRL key.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onkeypress="showChar(event);">
+<p>Press any character key, with or without holding down the CTRL key.<br />
+You can also use the SHIFT key together with the CTRL key.</p>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MouseEvent.ctrlKey")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

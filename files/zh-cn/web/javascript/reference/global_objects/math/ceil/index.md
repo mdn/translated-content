@@ -9,42 +9,41 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.ceil()</code></strong> 函数返回大于或等于一个给定数字的最小整数。</p>
+**`Math.ceil()`** 函数返回大于或等于一个给定数字的最小整数。
 
-<p><strong>Note: </strong><code>Math.ceil({{jsxref("null")}})</code> returns integer 0 and does not give a {{jsxref("NaN")}} error.</p>
+**Note:** `Math.ceil({{jsxref("null")}})` returns integer 0 and does not give a {{jsxref("NaN")}} error.
 
-<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
+## 语法
 
+```plain
+Math.ceil(x)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+- `x`
+  - : 一个数值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一个数值。</dd>
-</dl>
+大于或等于给定数字的最小整数。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>大于或等于给定数字的最小整数。</p>
+由于 `ceil` 是 `Math` 的静态方法，所以应该像这样使用：`Math.ceil()`，而不是作为你创建的 `Math` 实例的方法。
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p>由于 <code>ceil</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.ceil()</code>，而不是作为你创建的 <code>Math</code> 实例的方法。</p>
+### 使用 `Math.ceil`
 
-<h2 id="示例">示例</h2>
+下例展示了 `Math.ceil()` 的使用：
 
-<h3 id="使用_Math.ceil">使用 <code>Math.ceil</code></h3>
-
-<p>下例展示了 <code>Math.ceil()</code> 的使用：</p>
-
-<pre class="brush: js">// Closure
+```js
+// Closure
 (function() {
   /**
    * Decimal adjustment of a number.
@@ -62,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
     value = +value;
     exp = +exp;
     // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
       return NaN;
     }
     // Shift
@@ -112,22 +111,20 @@ Math.ceil10(55.51, -1);    // 55.6
 Math.ceil10(51, 1);        // 60
 Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

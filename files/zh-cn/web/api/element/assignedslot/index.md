@@ -4,22 +4,24 @@ slug: Web/API/Element/assignedSlot
 translation_of: Web/API/Slottable/assignedSlot
 translation_of_original: Web/API/Element/assignedSlot
 ---
-<p>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>assignedSlot</code></strong> property of the {{domxref("Element")}} interface returns the {{domxref("HTMLSlotElement")}} interface associated with the element.</p>
+The **`assignedSlot`** property of the {{domxref("Element")}} interface returns the {{domxref("HTMLSlotElement")}} interface associated with the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>htmlSlotElement</em> = <em>element</em>.assignedSlot</pre>
+```plain
+var htmlSlotElement = element.assignedSlot
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An instance of {{domxref("HTMLSlotElement")}}.</p>
+An instance of {{domxref("HTMLSlotElement")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.Element.assignedSlot")}}

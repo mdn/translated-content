@@ -3,39 +3,39 @@ title: element.setCapture
 slug: Web/API/Element/setCapture
 translation_of: Web/API/Element/setCapture
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概要</h3>
+### 概要
 
-<p>在处理一个 mousedown 事件过程中调用这个方法来把全部的鼠标事件重新定向到这个元素，直到鼠标按钮被释放或者 {{ domxref("document.releaseCapture()") }} 被调用。</p>
+在处理一个 mousedown 事件过程中调用这个方法来把全部的鼠标事件重新定向到这个元素，直到鼠标按钮被释放或者 {{ domxref("document.releaseCapture()") }} 被调用。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">element.setCapture(<em>retargetToElement</em>);
-</pre>
+```plain
+element.setCapture(retargetToElement);
+```
 
-<dl>
- <dt><code>retargetToElement</code></dt>
- <dd>如果被设置为 <code>true</code>, 所有事件被直接定向到这个元素; 如果是 <code>false</code>, 事件也可以在这个元素的子元素上触发。</dd>
-</dl>
+- `retargetToElement`
+  - : 如果被设置为 `true`, 所有事件被直接定向到这个元素; 如果是 `false`, 事件也可以在这个元素的子元素上触发。
 
-<h3 id="Example">示例</h3>
+### 示例
 
-<p>在这个例子中，当你在一个元素中点击并且按住鼠标，然后再使用鼠标拖动的时候，当前鼠标位置的坐标就会被绘制出来。</p>
+在这个例子中，当你在一个元素中点击并且按住鼠标，然后再使用鼠标拖动的时候，当前鼠标位置的坐标就会被绘制出来。
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;鼠标捕捉示例&lt;/title&gt;
-  &lt;style type="text/css"&gt;
+```html
+<html>
+<head>
+  <title>鼠标捕捉示例</title>
+  <style type="text/css">
     #myButton {
       border: solid black 1px;
       color: black;
       padding: 2px;
       -moz-box-shadow:black 2px 2px;
     }
-  &lt;/style&gt;
+  </style>
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript">
     function init() {
       var btn = document.getElementById("myButton");
       btn.addEventListener("mousedown", mouseDown, false);
@@ -55,28 +55,26 @@ translation_of: Web/API/Element/setCapture
       var output = document.getElementById("output");
       output.innerHTML = "鼠标的当前位置: " + e.clientX + ", " + e.clientY;
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-  &lt;p&gt;这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。&lt;/p&gt;
-  &lt;p&gt;&lt;a id="myButton" href="javascript:buttonClicked()"&gt;点我并且按住鼠标滑动&lt;/a&gt;&lt;/p&gt;
-  &lt;div id="output"&gt;还没有任何事件哦！&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body onload="init()">
+  <p>这是一个关于如何在 Gecko 2.0 中针对元素使用鼠标捕捉的示例。</p>
+  <p><a id="myButton" href="javascript:buttonClicked()">点我并且按住鼠标滑动</a></p>
+  <div id="output">还没有任何事件哦！</div>
+</body>
+</html>
+```
 
-<p><a href="/samples/domref/mousecapture.html">查看在线演示</a></p>
+[查看在线演示](/samples/domref/mousecapture.html)
 
-<h3 id="Notes">注意</h3>
+### 注意
 
-<p>这个元素可能不会完全被滚动到顶部或者底部，这取决于其他元素的布局。</p>
+这个元素可能不会完全被滚动到顶部或者底部，这取决于其他元素的布局。
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p>无</p>
+无
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ domxref("document.releaseCapture()") }}</li>
-</ul>
+- {{ domxref("document.releaseCapture()") }}

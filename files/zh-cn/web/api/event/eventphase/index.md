@@ -3,84 +3,62 @@ title: Event.eventPhase
 slug: Web/API/Event/eventPhase
 translation_of: Web/API/Event/eventPhase
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>表示事件流当前处于哪一个阶段。</p>
+表示事件流当前处于哪一个阶段。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><em>var phase</em> = event.eventPhase;
-</pre>
+```js
+var phase = event.eventPhase;
+```
 
-<p>返回一个代表当前执行阶段的 整数值，下面列出了不同的执行阶段<a href="#事件阶段常量">事件阶段常量</a>.</p>
+返回一个代表当前执行阶段的 整数值，下面列出了不同的执行阶段[事件阶段常量](#事件阶段常量).
 
-<h2 id="常量">常量</h2>
+## 常量
 
-<h3 id="事件阶段常量">事件阶段常量</h3>
+### 事件阶段常量
 
-<h3 id="下面这些值表示了事件流当前执行的阶段。">下面这些值表示了事件流当前执行的阶段。</h3>
+### 下面这些值表示了事件流当前执行的阶段。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">常量</th>
-   <th scope="col">值</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>Event.NONE</code></td>
-   <td>0</td>
-   <td>这个时间，没有事件正在被处理</td>
-  </tr>
-  <tr>
-   <td><code>Event.CAPTURING_PHASE</code></td>
-   <td>1</td>
-   <td>事件正在被目标元素的祖先对象处理。这个处理过程从{{domxref("Window")}}开始，然后{{domxref("Document")}}, 然后是{{domxref("HTMLHtmlElement")}}, 一直这样，直到目标元素的父元素。 通过{{domxref("EventTarget.addEventListener()")}} 注册为捕获模式的{{domxref("EventListener", "Event listeners", "", 1)}} 被调用。</td>
-  </tr>
-  <tr>
-   <td><code>Event.AT_TARGET</code></td>
-   <td>2</td>
-   <td>事件对象已经抵达{{domxref("EventTarget", "the event's target", "", 1)}}. 为这个阶段注册的事件监听被调用。 如果 {{domxref("Event.bubbles")}} 的值为 false，对事件对象的处理在这个阶段后就会结束。</td>
-  </tr>
-  <tr>
-   <td><code>Event.BUBBLING_PHASE</code></td>
-   <td>3</td>
-   <td>事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。 为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。</td>
-  </tr>
- </tbody>
-</table>
+| 常量                    | 值  | 描述                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Event.NONE`            | 0   | 这个时间，没有事件正在被处理                                                                                                                                                                                                                                                                                                                                                |
+| `Event.CAPTURING_PHASE` | 1   | 事件正在被目标元素的祖先对象处理。这个处理过程从{{domxref("Window")}}开始，然后{{domxref("Document")}}, 然后是{{domxref("HTMLHtmlElement")}}, 一直这样，直到目标元素的父元素。 通过{{domxref("EventTarget.addEventListener()")}} 注册为捕获模式的{{domxref("EventListener", "Event listeners", "", 1)}} 被调用。 |
+| `Event.AT_TARGET`       | 2   | 事件对象已经抵达{{domxref("EventTarget", "the event's target", "", 1)}}. 为这个阶段注册的事件监听被调用。 如果 {{domxref("Event.bubbles")}} 的值为 false，对事件对象的处理在这个阶段后就会结束。                                                                                                                                                   |
+| `Event.BUBBLING_PHASE`  | 3   | 事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。 为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。                                                              |
 
-<p>更多细节，请看<a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-flow">section 3.1, Event dispatch and DOM event flow</a>, DOM 级别 3 的事件说明。</p>
+更多细节，请看[section 3.1, Event dispatch and DOM event flow](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), DOM 级别 3 的事件说明。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<h3 id="HTML_内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;h4&gt;Event Propagation Chain&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Click 'd1'&lt;/li&gt;
-  &lt;li&gt;Analyse event propagation chain&lt;/li&gt;
-  &lt;li&gt;Click next div and repeat the experience&lt;/li&gt;
-  &lt;li&gt;Change Capturing mode&lt;/li&gt;
-  &lt;li&gt;Repeat the experience&lt;/li&gt;
-&lt;/ul&gt;
-&lt;input type="checkbox" id="chCapture" /&gt;
-&lt;label for="chCapture"&gt;Use Capturing&lt;/label&gt;
- &lt;div id="d1"&gt;d1
-  &lt;div id="d2"&gt;d2
-      &lt;div id="d3"&gt;d3
-          &lt;div id="d4"&gt;d4&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;
- &lt;div id="divInfo"&gt;&lt;/div&gt;
-</pre>
+```html
+<h4>Event Propagation Chain</h4>
+<ul>
+  <li>Click 'd1'</li>
+  <li>Analyse event propagation chain</li>
+  <li>Click next div and repeat the experience</li>
+  <li>Change Capturing mode</li>
+  <li>Repeat the experience</li>
+</ul>
+<input type="checkbox" id="chCapture" />
+<label for="chCapture">Use Capturing</label>
+ <div id="d1">d1
+  <div id="d2">d2
+      <div id="d3">d3
+          <div id="d4">d4</div>
+      </div>
+  </div>
+ </div>
+ <div id="divInfo"></div>
+```
 
-<h3 id="CSS_内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css">div {
+```css
+div {
   margin: 20px;
   padding: 4px;
   border: thin black solid;
@@ -91,11 +69,13 @@ translation_of: Web/API/Event/eventPhase
   padding: 8px;
   background-color:white;
   font-size:80%;
-}</pre>
+}
+```
 
-<h3 id="JavaScript_内容">JavaScript 内容</h3>
+### JavaScript 内容
 
-<pre class="brush: js">var clear = false, divInfo = null, divs = null, useCapture = false;
+```js
+var clear = false, divInfo = null, divs = null, useCapture = false;
 window.onload = function () {
   divInfo = document.getElementById("divInfo");
   divs = document.getElementsByTagName('div');
@@ -109,7 +89,7 @@ window.onload = function () {
 }
 
 function RemoveListeners() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     var d = divs[i];
     if (d.id != "divInfo") {
       d.removeEventListener("click", OnDivClick, true);
@@ -119,7 +99,7 @@ function RemoveListeners() {
 }
 
 function AddListeners() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     var d = divs[i];
     if (d.id != "divInfo") {
       d.addEventListener("click", OnDivClick, false);
@@ -137,20 +117,20 @@ function OnDivClick(e) {
   if (e.eventPhase == 2)
     e.currentTarget.style.backgroundColor = 'red';
   var level = e.eventPhase == 0 ? "none" : e.eventPhase == 1 ? "capturing" : e.eventPhase == 2 ? "target" : e.eventPhase == 3 ? "bubbling" : "error";
-  divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "&lt;br/&gt;";
+  divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
 }
 
 function Clear() {
-  for (var i = 0; i &lt; divs.length; i++) {
+  for (var i = 0; i < divs.length; i++) {
     if (divs[i].id != "divInfo")
-      divs[i].style.backgroundColor = (i &amp; 1) ? "#f6eedb" : "#cceeff";
+      divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff";
   }
   divInfo.innerHTML = '';
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}</p>
+{{ EmbedLiveSample('Example', '', '700', '', 'Web/API/Event/eventPhase') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

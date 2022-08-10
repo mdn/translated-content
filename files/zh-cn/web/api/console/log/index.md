@@ -3,45 +3,42 @@ title: console.log
 slug: Web/API/Console/log
 translation_of: Web/API/Console/log
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>向 Web 控制台输出一条消息。</p>
+向 Web 控制台输出一条消息。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval notranslate">console.log(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN]</em>);
-console.log(<em>msg</em> [, <em>subst1</em>, ..., <em>substN]</em>);
+```plain
+console.log(obj1 [, obj2, ..., objN]);
+console.log(msg [, subst1, ..., substN]);
 console.log('String: %s, Int: %d,Float: %f, Object: %o', str, ints, floats, obj)
 console.log(`temp 的值为：${temp}`)
-</pre>
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>一个用于输出的 JavaScript 对象列表。其中每个对象会以字符串的形式按照顺序依次输出到控制台。</dd>
- <dt><code>msg</code></dt>
- <dd>一个 JavaScript 字符串，其中包含零个或多个替代字符串。</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>JavaScript 对象，用来依次替换<code>msg</code>中的替代字符串。你可以在替代字符串中指定对象的输出格式。</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 一个用于输出的 JavaScript 对象列表。其中每个对象会以字符串的形式按照顺序依次输出到控制台。
+- `msg`
+  - : 一个 JavaScript 字符串，其中包含零个或多个替代字符串。
+- `subst1` ... `substN`
+  - : JavaScript 对象，用来依次替换`msg`中的替代字符串。你可以在替代字符串中指定对象的输出格式。
 
-<p>查看<a href="/zh-CN/docs/Web/API/Console#Outputting_text_to_the_console">向控制台输出文本</a>来了解更多{{ domxref("console") }}对象的用法。</p>
+查看[向控制台输出文本](/zh-CN/docs/Web/API/Console#Outputting_text_to_the_console)来了解更多{{ domxref("console") }}对象的用法。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.console.log")}}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p>不属于任何公开的规范</p>
+不属于任何公开的规范
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="http://nodejs.org/docs/latest/api/console.html#console_console_log_data">NodeJS: Console API</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [NodeJS: Console API](http://nodejs.org/docs/latest/api/console.html#console_console_log_data)

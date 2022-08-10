@@ -3,34 +3,34 @@ title: Range.cloneRange()
 slug: Web/API/Range/cloneRange
 translation_of: Web/API/Range/cloneRange
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code><strong>Range.cloneRange()</strong></code>方法返回一个 range 对象，并且该对象的范围边界点与被克隆的 range 对象相同。</p>
+**`Range.cloneRange()`**方法返回一个 range 对象，并且该对象的范围边界点与被克隆的 range 对象相同。
 
-<p>克隆的对象是复制过来的，而非引用，所以这两个对象双方各自做出的改变，都不会影响另一方。</p>
+克隆的对象是复制过来的，而非引用，所以这两个对象双方各自做出的改变，都不会影响另一方。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>clone</em> = range.cloneRange();
-</pre>
+```plain
+clone = range.cloneRange();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 clone = range.cloneRange();
-</pre>
+```
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Range.cloneRange")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

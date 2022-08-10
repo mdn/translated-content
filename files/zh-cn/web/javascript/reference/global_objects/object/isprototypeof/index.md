@@ -11,45 +11,42 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>isPrototypeOf()</strong></code> 方法用于测试一个对象是否存在于另一个对象的原型链上。</p>
+**`isPrototypeOf()`** 方法用于测试一个对象是否存在于另一个对象的原型链上。
 
-<div class="note">
-<p><strong>备注：</strong><code>isPrototypeOf()</code> 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "<code>object instanceof AFunction</code>"中，<code>object</code> 的原型链是针对 <code>AFunction.prototype</code> 进行检查的，而不是针对 <code>AFunction</code> 本身。</p>
-</div>
+> **备注：**`isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "`object instanceof AFunction`"中，`object` 的原型链是针对 `AFunction.prototype` 进行检查的，而不是针对 `AFunction` 本身。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</code></pre>
+```plain
+prototypeObj.isPrototypeOf(object)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>object</code></dt>
- <dd>在该对象的原型链上搜寻</dd>
-</dl>
+- `object`
+  - : 在该对象的原型链上搜寻
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("Boolean")}}，表示调用对象是否在另一个对象的原型链上。</p>
+{{jsxref("Boolean")}}，表示调用对象是否在另一个对象的原型链上。
 
-<h3 id="报错">报错</h3>
+### 报错
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>如果 <code><var>prototypeObj</var></code> 为 undefined 或 null，会抛出 {{jsxref("TypeError")}}。</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : 如果 `prototypeObj` 为 undefined 或 null，会抛出 {{jsxref("TypeError")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>isPrototypeOf()</code> 方法允许你检查一个对象是否存在于另一个对象的原型链上。</p>
+`isPrototypeOf()` 方法允许你检查一个对象是否存在于另一个对象的原型链上。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>本示例展示了 <code>Baz.prototype</code>, <code>Bar.prototype</code>, <code>Foo.prototype</code> 和 <code>Object.prototype</code> 在 <code>baz</code> 对象的原型链上：</p>
+本示例展示了 `Baz.prototype`, `Bar.prototype`, `Foo.prototype` 和 `Object.prototype` 在 `baz` 对象的原型链上：
 
-<pre class="brush: js">function Foo() {}
+```js
+function Foo() {}
 function Bar() {}
 function Baz() {}
 
@@ -62,32 +59,29 @@ console.log(Baz.prototype.isPrototypeOf(baz)); // true
 console.log(Bar.prototype.isPrototypeOf(baz)); // true
 console.log(Foo.prototype.isPrototypeOf(baz)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
-</pre>
+```
 
-<p>如果你有段代码只在需要操作继承自一个特定的原型链的对象的情况下执行，同 {{jsxref("Operators/instanceof", "instanceof")}} 操作符一样 <code>isPrototypeOf()</code> 方法就会派上用场，例如，为了确保某些方法或属性将位于对象上。</p>
+如果你有段代码只在需要操作继承自一个特定的原型链的对象的情况下执行，同 {{jsxref("Operators/instanceof", "instanceof")}} 操作符一样 `isPrototypeOf()` 方法就会派上用场，例如，为了确保某些方法或属性将位于对象上。
 
-<p>例如，检查 <code>baz</code> 对象是否继承自 <code>Foo.prototype</code>：</p>
+例如，检查 `baz` 对象是否继承自 `Foo.prototype`：
 
-<pre class="brush: js">if (Foo.prototype.isPrototypeOf(baz)) {
+```js
+if (Foo.prototype.isPrototypeOf(baz)) {
   // do something safe
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>
-  <div>{{jsxref("Object.setPrototypeOf()")}}</div>
- </li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

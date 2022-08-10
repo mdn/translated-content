@@ -4,28 +4,29 @@ slug: Web/API/BaseAudioContext/createConvolver
 translation_of: Web/API/BaseAudioContext/createConvolver
 original_slug: Web/API/AudioContext/createConvolver
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }}的方法<code>createConvolver()能创建一个</code>{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 <a href="http://webaudio.github.io/web-audio-api/#background-3">Convolution 规范定义</a> 中查看更多信息。</p>
-</div>
+{{ domxref("AudioContext") }}的方法`createConvolver()能创建一个`{{ domxref("ConvolverNode") }}，通常用来对你的音频应用混响效果。在 [Convolution 规范定义](http://webaudio.github.io/web-audio-api/#background-3) 中查看更多信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();</pre>
+```js
+var audioCtx = new AudioContext();
+var convolver = audioCtx.createConvolver();
+```
 
-<h3 id="Description">返回值</h3>
+### 返回值
 
-<p>{{domxref("ConvolverNode")}}对象。</p>
+{{domxref("ConvolverNode")}}对象。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<p>下面的例子展示了一个 AudioContext 创建一个 混响器节点 的基本使用方法。基本前提是你创建一个包含声音样本的 AudioBuffer 用作混响环境 (称之为<em>脉冲响应</em>,) 和在混响器中应用。 下面的例子使用了一个简短的示例音乐厅人群效果，所以混响效果应用深度和回声。</p>
+下面的例子展示了一个 AudioContext 创建一个 混响器节点 的基本使用方法。基本前提是你创建一个包含声音样本的 AudioBuffer 用作混响环境 (称之为*脉冲响应*,) 和在混响器中应用。 下面的例子使用了一个简短的示例音乐厅人群效果，所以混响效果应用深度和回声。
 
-<p>更多完整例子请查看 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic demo</a> (中 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">app.js</a> 的代码)。</p>
+更多完整例子请查看 [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) (中 [app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) 的代码)。
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();
 
   ...
@@ -51,18 +52,17 @@ ajaxRequest.send();
 
   ...
 
-convolver.buffer = concertHallBuffer;</pre>
+convolver.buffer = concertHallBuffer;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.BaseAudioContext.createConvolver")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

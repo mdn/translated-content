@@ -3,66 +3,67 @@ title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 translation_of: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The logical AND assignment (<code>x &amp;&amp;= y</code>) operator only assigns if <code>x</code> is {{Glossary("truthy")}}.</p>
+The logical AND assignment (`x &&= y`) operator only assigns if `x` is {{Glossary("truthy")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>expr1</em> &amp;&amp;= <em>expr2</em>
-</pre>
+```plain
+expr1 &&= expr2
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="Short-circuit_evaluation">Short-circuit evaluation</h3>
+### Short-circuit evaluation
 
-<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">logical AND</a> operator is evaluated left to right, it is tested for possible short-circuit evaluation using the following rule:</p>
+The [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator is evaluated left to right, it is tested for possible short-circuit evaluation using the following rule:
 
-<p><code>(some falsy expression) &amp;&amp; expr</code> is short-circuit evaluated to the falsy expression;</p>
+`(some falsy expression) && expr` is short-circuit evaluated to the falsy expression;
 
-<p>Short circuit means that the <code><em>expr</em></code> part above is <strong>not evaluated</strong>, hence any side effects of doing so do not take effect (e.g., if <code><em>expr</em></code> is a function call, the calling never takes place).</p>
+Short circuit means that the `expr` part above is **not evaluated**, hence any side effects of doing so do not take effect (e.g., if `expr` is a function call, the calling never takes place).
 
-<p>Logical AND assignment short-circuits as well meaning that <code>x &amp;&amp;= y</code> is equivalent to:</p>
+Logical AND assignment short-circuits as well meaning that `x &&= y` is equivalent to:
 
-<pre class="brush: js">x &amp;&amp; (x = y);</pre>
+```js
+x && (x = y);
+```
 
-<p>And not equivalent to the following which would always perform an assignment:</p>
+And not equivalent to the following which would always perform an assignment:
 
-<pre class="brush: js example-bad">x = x &amp;&amp; y;
-</pre>
+```js example-bad
+x = x && y;
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="Using_logical_AND_assignment">Using logical AND assignment</h3>
+### Using logical AND assignment
 
-<pre class="brush: js">let x = 0;
+```js
+let x = 0;
 let y = 1;
 
-x &amp;&amp;= 0; // 0
-x &amp;&amp;= 1; // 0
-y &amp;&amp;= 1; // 1
-y &amp;&amp;= 0; // 0
-</pre>
+x &&= 0; // 0
+x &&= 1; // 0
+y &&= 1; // 1
+y &&= 0; // 0
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND">Logical AND (&amp;&amp;)</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">The nullish coalescing operator (<code>??</code>)</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment">Bitwise AND assignment (<code>&amp;=</code>)</a></li>
- <li>{{jsxref("Boolean")}}</li>
- <li>{{Glossary("Truthy")}}</li>
- <li>{{Glossary("Falsy")}}</li>
-</ul>
+- [Logical AND (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- {{jsxref("Boolean")}}
+- {{Glossary("Truthy")}}
+- {{Glossary("Falsy")}}

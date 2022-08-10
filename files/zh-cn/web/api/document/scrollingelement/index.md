@@ -3,26 +3,29 @@ title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
 translation_of: Web/API/Document/scrollingElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>scrollingElement</code></strong> （ {{domxref("Document")}} 的只读属性）返回滚动文档的 {{domxref("Element")}} 对象的引用。 在标准模式下，这是文档的根元素， {{domxref("document.documentElement")}}.</p>
+**`scrollingElement`** （ {{domxref("Document")}} 的只读属性）返回滚动文档的 {{domxref("Element")}} 对象的引用。 在标准模式下，这是文档的根元素， {{domxref("document.documentElement")}}.
 
-<p>当在怪异模式下， <code>scrollingElement</code> 属性返回 HTML <code>body</code> 元素（若不存在返回 null ）。</p>
+当在怪异模式下， `scrollingElement` 属性返回 HTML `body` 元素（若不存在返回 null ）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>element</var> = document.scrollingElement;</pre>
+```plain
+var element = document.scrollingElement;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var scrollElm = document.scrollingElement;
+```js
+var scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.scrollingElement")}}

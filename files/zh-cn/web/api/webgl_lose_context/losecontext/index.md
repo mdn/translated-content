@@ -9,21 +9,24 @@ tags:
   - WebGL extension
 translation_of: Web/API/WEBGL_lose_context/loseContext
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WEBGL_lose_context.loseContext()</strong>属于 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>， 一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文丢失。</p>
+**WEBGL_lose_context.loseContext()**属于 [WebGL API](/en-US/docs/Web/API/WebGL_API)， 一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文丢失。
 
-<p>这个方法会触发 WebGL 规范中上下文丢失的相关事件。通过这个方法丢失的上下文可以通过 {{domxref("WEBGL_lose_context.restoreContext()")}} 恢复。</p>
+这个方法会触发 WebGL 规范中上下文丢失的相关事件。通过这个方法丢失的上下文可以通过 {{domxref("WEBGL_lose_context.restoreContext()")}} 恢复。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">gl.getExtension('WEBGL_lose_context').loseContext();</pre>
+```plain
+gl.getExtension('WEBGL_lose_context').loseContext();
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>你可以用这个方法模拟 <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code> 事件：</p>
+你可以用这个方法模拟 [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 事件：
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextlost', function(e) {
@@ -33,19 +36,17 @@ canvas.addEventListener('webglcontextlost', function(e) {
 gl.getExtension('WEBGL_lose_context').loseContext();
 
 // webglcontextlost 事件被触发。
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WEBGL_lose_context.loseContext")}}</p>
+{{Compat("api.WEBGL_lose_context.loseContext")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>事件： <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></li>
-</ul>
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- 事件： [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

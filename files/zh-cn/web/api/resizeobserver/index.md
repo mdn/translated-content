@@ -3,64 +3,58 @@ title: ResizeObserver
 slug: Web/API/ResizeObserver
 translation_of: Web/API/ResizeObserver
 ---
-<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-<p><strong><code>ResizeObserver</code></strong> 接口可以监听到 {{domxref('Element')}} 的内容区域或 {{domxref('SVGElement')}}的边界框改变。内容区域则需要减去内边距 padding。（有关内容区域、内边距资料见<a href="https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model">盒子模型</a> ）</p>
+**`ResizeObserver`** 接口可以监听到 {{domxref('Element')}} 的内容区域或 {{domxref('SVGElement')}}的边界框改变。内容区域则需要减去内边距 padding。（有关内容区域、内边距资料见[盒子模型](https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model) ）
 
-<p>ResizeObserver 避免了在自身回调中调整大小，从而触发的无限回调和循环依赖。它仅通过在后续帧中处理 DOM 中更深层次的元素来实现这一点。如果（浏览器）遵循规范，只会在绘制前或布局后触发调用。</p>
+ResizeObserver 避免了在自身回调中调整大小，从而触发的无限回调和循环依赖。它仅通过在后续帧中处理 DOM 中更深层次的元素来实现这一点。如果（浏览器）遵循规范，只会在绘制前或布局后触发调用。
 
-<h2 id="构造器">构造器</h2>
+## 构造器
 
-<dl>
- <dt>{{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}</dt>
- <dd>创建并返回一个<code>ResizeObserver</code>对象。</dd>
-</dl>
+- {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
+  - : 创建并返回一个`ResizeObserver`对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>无。</p>
+无。
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>无。</p>
+无。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref('ResizeObserver.disconnect()')}}</dt>
- <dd>取消和结束目标对象上所有对 {{domxref('Element')}}或 {{domxref('SVGElement')}} 观察。</dd>
- <dt>{{domxref('ResizeObserver.observe()')}}</dt>
- <dd>开始观察指定的 {{domxref('Element')}}或 {{domxref('SVGElement')}}。</dd>
- <dt>{{domxref('ResizeObserver.unobserve()')}}</dt>
- <dd>结束观察指定的{{domxref('Element')}}或 {{domxref('SVGElement')}}。</dd>
-</dl>
+- {{domxref('ResizeObserver.disconnect()')}}
+  - : 取消和结束目标对象上所有对 {{domxref('Element')}}或 {{domxref('SVGElement')}} 观察。
+- {{domxref('ResizeObserver.observe()')}}
+  - : 开始观察指定的 {{domxref('Element')}}或 {{domxref('SVGElement')}}。
+- {{domxref('ResizeObserver.unobserve()')}}
+  - : 结束观察指定的{{domxref('Element')}}或 {{domxref('SVGElement')}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下示例通过观察 box 的宽度变化从而改变其边框圆角半径。</p>
+以下示例通过观察 box 的宽度变化从而改变其边框圆角半径。
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
   }
 });
-resizeObserver.observe(document.querySelector('.box:nth-child(2)'));</pre>
+resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.ResizeObserver")}}
 
+## 参考
 
-<p>{{Compat("api.ResizeObserver")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model">The box model</a></li>
- <li>{{domxref('PerformanceObserver')}}</li>
- <li>{{domxref('MutationObserver')}}</li>
- <li>{{domxref('IntersectionObserver')}} (part of the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>)</li>
-</ul>
+- [The box model](https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model)
+- {{domxref('PerformanceObserver')}}
+- {{domxref('MutationObserver')}}
+- {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))

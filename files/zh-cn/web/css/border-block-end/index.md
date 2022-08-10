@@ -3,55 +3,55 @@ title: border-block-end
 slug: Web/CSS/border-block-end
 translation_of: Web/CSS/border-block-end
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>border-block-end</code></strong>  属性是一个简写属性，用于在样式表中的单个位置设置各个逻辑块结尾边界属性值。</p>
+**`border-block-end`** 属性是一个简写属性，用于在样式表中的单个位置设置各个逻辑块结尾边界属性值。
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-end.html")}}
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:css no-line-numbers">border-block-end: 1px;
+```css
+border-block-end: 1px;
 border-block-end: 2px dotted;
 border-block-end: medium dashed blue;
-</pre>
+```
 
-<p><code>border-block-end</code> can be used to set the values for one or more of {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-block-end-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.</p>
+`border-block-end` can be used to set the values for one or more of {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-block-end-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-<p>Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.</p>
+Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>border-block-end</code> is specified with one or more of the following, in any order:</p>
+The `border-block-end` is specified with one or more of the following, in any order:
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>The width of the border. See {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>The line style of the border. See {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>The color of the border. See {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : The width of the border. See {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : The line style of the border. See {{cssxref("border-style")}}.
+- `<'color'>`
+  - : The color of the border. See {{cssxref("color")}}.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -60,23 +60,20 @@ border-block-end: medium dashed blue;
 .exampleText {
   writing-mode: vertical-rl;
   border-block-end: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.border-block-end")}}
 
+## See also
 
-<p>{{Compat("css.properties.border-block-end")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

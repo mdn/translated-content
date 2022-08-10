@@ -4,33 +4,31 @@ slug: Web/CSS/filter-function/grayscale
 translation_of: Web/CSS/filter-function/grayscale()
 original_slug: Web/CSS/filter-function/grayscale()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><code><strong>grayscale()</strong></code> : 对图片进行灰度转换，它是 {{cssxref("&lt;filter-function&gt;")}} 的子属性。</p>
+**`grayscale()`** : 对图片进行灰度转换，它是 {{cssxref("&lt;filter-function&gt;")}} 的子属性。
 
-<div>{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
 
+## 语法
 
+```plain
+grayscale(amount)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox notranslate">grayscale(<em>amount</em>)</pre>
+- `amount`
+  - : 转换值的大小，可以是{{cssxref("&lt;number&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}. 当值为 100% 时，灰度最大。0% 时与原图没有区别。0% 到 100% 之间的值会使灰度线性变化。amount 为空时使用值为`1`.
 
-<h3 id="参数">参数</h3>
+## 例子
 
-<dl>
- <dt><code>amount</code></dt>
- <dd>转换值的大小，可以是{{cssxref("&lt;number&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}. 当值为 100% 时，灰度最大。0% 时与原图没有区别。0% 到 100% 之间的值会使灰度线性变化。amount 为空时使用值为<code>1</code>.</dd>
-</dl>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: css notranslate">grayscale(0)     /* 无效果 */
+```css
+grayscale(0)     /* 无效果 */
 grayscale(.7)    /* 70% 灰度 */
-grayscale(100%)  /* 灰度最大 */</pre>
+grayscale(100%)  /* 灰度最大 */
+```
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

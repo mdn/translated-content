@@ -4,24 +4,26 @@ slug: Web/API/Element/mouseover_event
 translation_of: Web/API/GlobalEventHandlers/onmouseover
 original_slug: Web/API/GlobalEventHandlers/onmouseover
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<h3 id="概述">概述</h3>
+### 概述
 
-<p><strong>onmouseover</strong>属性用来获取或设置当前元素的 mouseover 事件的事件处理函数。</p>
+**onmouseover**属性用来获取或设置当前元素的 mouseover 事件的事件处理函数。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre class="eval">element.onmouseover = <em>event handling code</em>
-</pre>
+```plain
+element.onmouseover = event handling code
+```
 
-<h3 id="例子">例子</h3>
+### 例子
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;onmouseover/onmouseout event example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<title>onmouseover/onmouseout event example</title>
+<script type="text/javascript">
     function initElement()
     {
         var p = document.getElementById("foo");
@@ -43,23 +45,24 @@ original_slug: Web/API/GlobalEventHandlers/onmouseover
     }
 
 
-&lt;/script&gt;
-&lt;style type="text/css"&gt;
+</script>
+<style type="text/css">
     #foo {
     border: solid blue 2px;
     }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body onload="initElement()";&gt;
-    &lt;span id="foo"&gt;移动鼠标，在该元素上移进移出&lt;/span&gt;
-    &lt;div id="notice"&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;  </pre>
+</style>
+</head>
+<body onload="initElement()";>
+    <span id="foo">移动鼠标，在该元素上移进移出</span>
+    <div id="notice"></div>
+</body>
+</html>
+```
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<p>当鼠标移动到一个元素上时，会在这个元素上触发 mouseover 事件。</p>
+当鼠标移动到一个元素上时，会在这个元素上触发 mouseover 事件。
 
-<h3 id="规范">规范</h3>
+### 规范
 
-<p>DOM Level 0 不属于任何规范。</p>
+DOM Level 0 不属于任何规范。

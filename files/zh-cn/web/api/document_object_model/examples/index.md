@@ -6,17 +6,18 @@ tags:
   - DOM 参考
 translation_of: Web/API/Document_Object_Model/Examples
 ---
-<p>本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。</p>
+本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。
 
-<h2 id="Example_1:_height_and_width">示例 1: 高度和宽度</h2>
+## 示例 1: 高度和宽度
 
-<p>下面的例子展示了在不同尺寸的图片时使用其 height 和 width 属性的情况：</p>
+下面的例子展示了在不同尺寸的图片时使用其 height 和 width 属性的情况：
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;width/height example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>width/height example</title>
+<script type="text/javascript">
 function init()
 {
   var arrImages = new Array(3);
@@ -26,149 +27,155 @@ function init()
   arrImages[2] = document.getElementById("image3");
 
   var objOutput = document.getElementById("output");
-  var strHtml = "&lt;ul&gt;";
+  var strHtml = "<ul>";
 
-  for (var i = 0; i &lt; arrImages.length; i++) {
-    strHtml += "&lt;li&gt;image" + (i+1) +
+  for (var i = 0; i < arrImages.length; i++) {
+    strHtml += "<li>image" + (i+1) +
             ": height=" + arrImages[i].height +
             ", width=" + arrImages[i].width +
             ", style.height=" + arrImages[i].style.height +
             ", style.width=" + arrImages[i].style.width +
-            "&lt;\/li&gt;";
+            "<\/li>";
   }
 
-  strHtml += "&lt;\/ul&gt;";
+  strHtml += "<\/ul>";
 
   objOutput.innerHTML = strHtml;
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init();"&gt;
+</script>
+</head>
+<body onload="init();">
 
-&lt;p&gt;Image 1: no height, width, or style
-    &lt;img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif"&gt;
-&lt;/p&gt;
+<p>Image 1: no height, width, or style
+    <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif">
+</p>
 
-&lt;p&gt;Image 2: height="50", width="500", but no style
-    &lt;img id="image2" src="http://www.mozilla.org/images/mozilla-banner.gif"
-         height="50" width="500"&gt;
-&lt;/p&gt;
+<p>Image 2: height="50", width="500", but no style
+    <img id="image2" src="http://www.mozilla.org/images/mozilla-banner.gif"
+         height="50" width="500">
+</p>
 
-&lt;p&gt;Image 3: no height, width, but style="height: 50px; width: 500px;"
-    &lt;img id="image3" src="http://www.mozilla.org/images/mozilla-banner.gif"
-         style="height: 50px; width: 500px;"&gt;
-&lt;/p&gt;
+<p>Image 3: no height, width, but style="height: 50px; width: 500px;"
+    <img id="image3" src="http://www.mozilla.org/images/mozilla-banner.gif"
+         style="height: 50px; width: 500px;">
+</p>
 
-&lt;div id="output"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<div id="output"> </div>
+</body>
+</html>
+```
 
-<h2 id="Example_2:_Image_Attributes">示例 2: 图片属性</h2>
+## 示例 2: 图片属性
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Modifying an image border&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Modifying an image border</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 function setBorderWidth(width) {
   document.getElementById("img1").style.borderWidth = width + "px";
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p&gt;
-  &lt;img id="img1"
+<body>
+<p>
+  <img id="img1"
        src="image1.gif"
        style="border: 5px solid green;"
-       width="100" height="100" alt="border test"&gt;
-&lt;/p&gt;
+       width="100" height="100" alt="border test">
+</p>
 
-&lt;form name="FormName"&gt;
-  &lt;input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" /&gt;
-  &lt;input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" /&gt;
-&lt;/form&gt;
+<form name="FormName">
+  <input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" />
+  <input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_3:_Manipulating_Styles">示例 3: 操作样式</h2>
+## 示例 3: 操作样式
 
-<p>在下面这个简单的例子中，使用的 element(DOM 元素) 的 style 对象即对象的 CSS 样式属性来获取一个 HTML 段落元素的一些基本样式属性，DOM 可以检索和设置 CSS 样式。在本例中，你可以直接控制单个样式属性。在下一个的例子里（见例 4），你可以使用 stylesheets 对象 (样式表) 及其 cssRules 对象改变整个文档的样式。</p>
+在下面这个简单的例子中，使用的 element(DOM 元素) 的 style 对象即对象的 CSS 样式属性来获取一个 HTML 段落元素的一些基本样式属性，DOM 可以检索和设置 CSS 样式。在本例中，你可以直接控制单个样式属性。在下一个的例子里（见例 4），你可以使用 stylesheets 对象 (样式表) 及其 cssRules 对象改变整个文档的样式。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Changing color and font-size example&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Changing color and font-size example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 function changeText() {
   var p = document.getElementById("pid");
 
   p.style.color = "blue"
   p.style.fontSize = "18pt"
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
+</script>
+</head>
+<body>
 
-&lt;p id="pid" onclick="window.location.href = 'http://www.cnn.com/';"&gt;linker&lt;/p&gt;
+<p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">linker</p>
 
-&lt;form&gt;
-  &lt;p&gt;&lt;input value="rec" type="button" onclick="changeText();"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form>
+  <p><input value="rec" type="button" onclick="changeText();"></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_4:_Using_Stylesheets">示例 4: 使用样式表</h2>
+## 示例 4: 使用样式表
 
-<p>styleSheets 是 document 对象的一个属性，返回的是载入文档的样式列表。你可以通过 styleSheets、style 和 CSSRule 对象来获取样式表和每条样式规则，下面的例子把所有的样式规则中的选择器文本（字符串）打印到控制台中。</p>
+styleSheets 是 document 对象的一个属性，返回的是载入文档的样式列表。你可以通过 styleSheets、style 和 CSSRule 对象来获取样式表和每条样式规则，下面的例子把所有的样式规则中的选择器文本（字符串）打印到控制台中。
 
-<pre>ss = document.styleSheets;
+```plain
+ss = document.styleSheets;
 
-for(i=0; i&lt;ss.length; i++) {
-  for(j=0; j&lt;ss[i].cssRules.length; j++) {
+for(i=0; i<ss.length; i++) {
+  for(j=0; j<ss[i].cssRules.length; j++) {
     dump( ss[i].cssRules[j].selectorText + "\n" );
   }
 }
-</pre>
+```
 
-<p>下面的是一个只定义了三条样式规则的单个样式表的文档：</p>
+下面的是一个只定义了三条样式规则的单个样式表的文档：
 
-<pre class="eval">BODY { background-color: darkblue; }
+```plain
+BODY { background-color: darkblue; }
 P { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
-</pre>
+```
 
-<p>该脚本的输出是这样的：</p>
+该脚本的输出是这样的：
 
-<pre class="eval">BODY
+```plain
+BODY
 P
 #LUMPY
-</pre>
+```
 
-<h2 id="Example_5:_Event_Propagation">示例 5: 冒泡事件</h2>
+## 示例 5: 冒泡事件
 
-<p>本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。</p>
+本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。
 
-<p>然而，stopEvent 同时也会调用一个事件对象的方法，<a href="/zh-cn/DOM/event.stopPropagation">event.stopPropagation</a>，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。</p>
+然而，stopEvent 同时也会调用一个事件对象的方法，[event.stopPropagation](/zh-cn/DOM/event.stopPropagation)，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Event Propagation&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Propagation</title>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
  #t-daddy { border: 1px solid red }
  #c1 { background-color: pink; }
-&lt;/style&gt;
+</style>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 function stopEvent(ev) {
   c2 = document.getElementById("c2");
@@ -183,37 +190,38 @@ function load() {
   elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="load();"&gt;
+<body onload="load();">
 
-&lt;table id="t-daddy" onclick="alert('hi');"&gt;
- &lt;tr id="tbl1"&gt;
-  &lt;td id="c1"&gt;one&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td id="c2"&gt;two&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
+<table id="t-daddy" onclick="alert('hi');">
+ <tr id="tbl1">
+  <td id="c1">one</td>
+ </tr>
+ <tr>
+  <td id="c2">two</td>
+ </tr>
+</table>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_6:_getComputedStyle">示例 6: getComputedStyle</h2>
+## 示例 6: getComputedStyle
 
-<p>这个例子演示了如何用{{domxref("window.getComputedStyle")}}方法来获取一个元素的样式而不是使用 style 属性或 JavaScript 的（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列举在 <a href="/zh-CN/docs/Web/CSS/Reference">DOM CSS Properties List</a> 后面的类型的样式可以用更直接{{domxref("element.style", "elt.style")}} 属性获取。</p>
+这个例子演示了如何用{{domxref("window.getComputedStyle")}}方法来获取一个元素的样式而不是使用 style 属性或 JavaScript 的（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列举在 [DOM CSS Properties List](/zh-CN/docs/Web/CSS/Reference) 后面的类型的样式可以用更直接{{domxref("element.style", "elt.style")}} 属性获取。
 
-<p><code>getComputedStyle()</code> 返回了一个 <code>ComputedCSSStyleDeclaration</code> 对象，其独立的样式属性可以用该对象的 getPropertyValue() 方法引用，如同下面的例子一样：</p>
+`getComputedStyle()` 返回了一个 `ComputedCSSStyleDeclaration` 对象，其独立的样式属性可以用该对象的 getPropertyValue() 方法引用，如同下面的例子一样：
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-&lt;title&gt;getComputedStyle example&lt;/title&gt;
+<title>getComputedStyle example</title>
 
-&lt;script&gt;
+<script>
 function cStyles() {
   var RefDiv    = document.getElementById("d1");
   var txtHeight = document.getElementById("t1");
@@ -231,58 +239,59 @@ function cStyles() {
 
   txtBackgroundColor.value = b_style;
 }
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
 #d1 {
   margin-left: 10px;
   background-color: rgb(173, 216, 230);
   height: 20px;
   max-width: 20px; }
-&lt;/style&gt;
+</style>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;div id="d1"&gt;&amp;nbsp;&lt;/div&gt;
+<div id="d1">&nbsp;</div>
 
-&lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
-    height&lt;input id="t1" type="text" value="1"&gt;
-    max-width&lt;input id="t2" type="text" value="2"&gt;
-    bg-color&lt;input id="t3" type="text" value="3"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form action="">
+  <p>
+    <button type="button" onclick="cStyles();">getComputedStyle</button>
+    height<input id="t1" type="text" value="1">
+    max-width<input id="t2" type="text" value="2">
+    bg-color<input id="t3" type="text" value="3"></p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Example_7:_Displaying_Event_Object_Properties">示例 7: 显示事件对象的属性</h2>
+## 示例 7: 显示事件对象的属性
 
-<p>这个例子使用 DOM 方法来显示{{domxref("window.onload")}} {{domxref("event")}}对象的属性及其在 table 中的值。这个方法也展示一个有用的技术即使用了{{jsxref("Statements/for...in", "for...in")}} 循环来遍历一个对象的属性，以得到他们的值。</p>
+这个例子使用 DOM 方法来显示{{domxref("window.onload")}} {{domxref("event")}}对象的属性及其在 table 中的值。这个方法也展示一个有用的技术即使用了{{jsxref("Statements/for...in", "for...in")}} 循环来遍历一个对象的属性，以得到他们的值。
 
-<p>不同浏览器之间事件对象的属性有很大不同，<a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3C DOM2 事件规范</a>规定了事件的标准属性，然而，许多浏览器都大大扩展了这些。</p>
+不同浏览器之间事件对象的属性有很大不同，[W3C DOM2 事件规范](http://www.w3.org/TR/DOM-Level-2-Events/events.html)规定了事件的标准属性，然而，许多浏览器都大大扩展了这些。
 
-<p>将下面的代码放到一个空白的文本文件，并将其加载到各种浏览器，你一定会对各种浏览器之间的不一致（事件属性的名称及其数量）感到惊讶。你可能还喜欢在这个页面加入一些元素，并调用不同的事件处理函数。</p>
+将下面的代码放到一个空白的文本文件，并将其加载到各种浏览器，你一定会对各种浏览器之间的不一致（事件属性的名称及其数量）感到惊讶。你可能还喜欢在这个页面加入一些元素，并调用不同的事件处理函数。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="utf8"/&gt;
-&lt;title&gt;Show Event properties&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf8"/>
+<title>Show Event properties</title>
 
-&lt;style&gt;
+<style>
 table {border-collapse: collapse;}
 thead {font-weight: bold;}
 td {padding: 2px 10px 2px 10px;}
 
 .odd {background-color: #efdfef;}
 .even {background-color: #ffffff;}
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 
 function showEventProperties(e) {
   function addCell(row, text) {
@@ -299,7 +308,7 @@ function showEventProperties(e) {
   var lableList = ['#', 'Property', 'Value'];
   var len = lableList.length;
 
-  for (var i=0; i&lt;len; i++) {
+  for (var i=0; i<len; i++) {
     addCell(row, lableList[i]);
   }
 
@@ -319,57 +328,54 @@ function showEventProperties(e) {
 window.onload = function(event){
   showEventProperties(event);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;h1&gt;Properties of the DOM &lt;span id="eventType"&gt;&lt;/span&gt; Event Object&lt;/h1&gt;
-&lt;/body&gt;
+<body>
+<h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
+</body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<h2 id="Example_8:_Using_the_DOM_Table_Interface">示例 8: 使用 DOM Table 接口 (Interface)</h2>
+## 示例 8: 使用 DOM Table 接口 (Interface)
 
-<p>DOM HTMLTableElement 接口提供了一些方便的方法用于创建和操作表。两种常用的方法是{{domxref("HTMLTableElement.insertRow")}}和{{domxref("tableRow.insertCell")}}。</p>
+DOM HTMLTableElement 接口提供了一些方便的方法用于创建和操作表。两种常用的方法是{{domxref("HTMLTableElement.insertRow")}}和{{domxref("tableRow.insertCell")}}。
 
-<p>增加一行和一些单元到现有的表：</p>
+增加一行和一些单元到现有的表：
 
-<pre>&lt;table id="table0"&gt;
- &lt;tr&gt;
-  &lt;td&gt;Row 0 Cell 0&lt;/td&gt;
-  &lt;td&gt;Row 0 Cell 1&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
+```plain
+<table id="table0">
+ <tr>
+  <td>Row 0 Cell 0</td>
+  <td>Row 0 Cell 1</td>
+ </tr>
+</table>
 
-&lt;script&gt;
+<script>
 
 var table = document.getElementById('table0');
 var row = table.insertRow(-1);
 var cell,
     text;
 
-for (var i=0; i&lt;2; i++) {
+for (var i=0; i<2; i++) {
   cell = row.insertCell(-1);
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Notes">注意</h3>
+### 注意
 
-<ul>
- <li>表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。</li>
- <li>如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。</li>
- <li><a href="/en-US/docs/Web/API/HTMLTableElement#Methods">表接口</a>还有一些可用于创建和修改的表的便利方法。</li>
-</ul>
+- 表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。
+- 如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。
+- [表接口](/en-US/docs/Web/API/HTMLTableElement#Methods)还有一些可用于创建和修改的表的便利方法。
 
-<h2 id="Subnav">Subnav</h2>
+## Subnav
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM Reference</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Events">Events and the DOM</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">Examples</a></li>
-</ul>
+- [DOM Reference](/en-US/docs/Web/API/Document_Object_Model)
+- [Introduction to the DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction)
+- [Events and the DOM](/en-US/docs/Web/API/Document_Object_Model/Events)
+- [Examples](/en-US/docs/Web/API/Document_Object_Model/Examples)

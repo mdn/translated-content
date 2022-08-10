@@ -3,22 +3,24 @@ title: ServiceWorkerContainer.controller
 slug: Web/API/ServiceWorkerContainer/controller
 translation_of: Web/API/ServiceWorkerContainer/controller
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>当状态为<code>activated</code> 时， {{domxref("ServiceWorkerContainer")}} 接口的只读属性 <strong><code>controller</code></strong> 返回一个 {{domxref("ServiceWorker")}} 对象（与 {{domxref("ServiceWorkerRegistration.active")}} 返回的对象是同一个）。当页面强制刷新 (<em>Shift</em> + refresh) 或不存在 active worder 时，该属性返回 <code>null</code> 。</p>
+当状态为`activated` 时， {{domxref("ServiceWorkerContainer")}} 接口的只读属性 **`controller`** 返回一个 {{domxref("ServiceWorker")}} 对象（与 {{domxref("ServiceWorkerRegistration.active")}} 返回的对象是同一个）。当页面强制刷新 (_Shift_ + refresh) 或不存在 active worder 时，该属性返回 `null` 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var myController = navigator.serviceWorker.controller;
-</pre>
+```plain
+var myController = navigator.serviceWorker.controller;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个{{domxref("ServiceWorker")}}对象。</p>
+一个{{domxref("ServiceWorker")}}对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Do a one-off check to see if a service worker's in control.
   if (navigator.serviceWorker.controller) {
     console.log('This page is currently controlled by:',
@@ -29,14 +31,13 @@ translation_of: Web/API/ServiceWorkerContainer/controller
   }
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.ServiceWorkerContainer.controller")}}</p>
-</div>
+{{Compat("api.ServiceWorkerContainer.controller")}}

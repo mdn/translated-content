@@ -3,46 +3,42 @@ title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
 translation_of: Web/API/HTMLMediaElement/controlsList
 ---
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a>接口的<strong><code>controlsList</code></strong> 属性返回 DOMTokenList，帮助用户在显示其自己的控件集时选择要在媒体元素上显示的控件。DOMTokenList 可以设置以下三个可能值中的一个或多个：nodownload，nofullscreen 和 noremoteplayback（值是一组<a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens">无序的空格分隔标记</a>，这些<a href="https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens">标记</a>是<a href="https://infra.spec.whatwg.org/#ascii-case-insensitive">ASCII 不区分大小写的</a>）。</p>
+[`HTMLMediaElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)接口的**`controlsList`** 属性返回 DOMTokenList，帮助用户在显示其自己的控件集时选择要在媒体元素上显示的控件。DOMTokenList 可以设置以下三个可能值中的一个或多个：nodownload，nofullscreen 和 noremoteplayback（值是一组[无序的空格分隔标记](https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens)，这些[标记](https://wicg.github.io/controls-list/html-output/multipage/infrastructure.html#unordered-set-of-unique-space-separated-tokens)是[ASCII 不区分大小写的](https://infra.spec.whatwg.org/#ascii-case-insensitive)）。
 
-<ol>
- <li><code id="user-interface:attr-media-controlslist-nodownload"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nodownload">nodownload</a></code>关键字暗示的下载控制应使用用户代理自己的一套媒体元素控件时被隐藏。</li>
- <li><code id="user-interface:attr-media-controlslist-nofullscreen"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nofullscreen">nofullscreen</a></code>关键字暗示在使用用户代理自己的媒体元素控件集时，应隐藏全屏模式控件。</li>
- <li><code id="user-interface:attr-media-controlslist-noremoteplayback"><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-noremoteplayback">noremoteplayback</a></code>关键字暗示当使用用户代理自己的媒体元素控件集时，应隐藏远程播放控件。</li>
-</ol>
+1.  [`nodownload`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nodownload)关键字暗示的下载控制应使用用户代理自己的一套媒体元素控件时被隐藏。
+2.  [`nofullscreen`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-nofullscreen)关键字暗示在使用用户代理自己的媒体元素控件集时，应隐藏全屏模式控件。
+3.  [`noremoteplayback`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist-noremoteplayback)关键字暗示当使用用户代理自己的媒体元素控件集时，应隐藏远程播放控件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var domTokenList = HTMLMediaElement.controlsList;</pre>
+```plain
+var domTokenList = HTMLMediaElement.controlsList;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMTokenList")}}.</p>
+A {{domxref("DOMTokenList")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="syntaxbox">&lt;video controls controlslist="nodownload" id="video" src=""&gt;&lt;/video&gt;
-</pre>
+```plain
+<video controls controlslist="nodownload" id="video" src=""></video>
+```
 
-<pre class="syntaxbox">&lt;video controls controlslist="nodownload nofullscreen noremoteplayback" id="video" src=""&gt;&lt;/video&gt;
-</pre>
+```plain
+<video controls controlslist="nodownload nofullscreen noremoteplayback" id="video" src=""></video>
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
-<p><a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist">https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist</a>.</p>
+<https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist>.
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.HTMLMediaElement.controlsList")}}
 
+## 参阅
 
-<p>{{Compat("api.HTMLMediaElement.controlsList")}}</p>
-</div>
-
-<h2 id="参阅">参阅</h2>
-
-<ul>
- <li><a href="https://googlechrome.github.io/samples/media/controlslist.html">Chrome HTMLMediaElement controlsList Sample</a>  示例</li>
-</ul>
+- [Chrome HTMLMediaElement controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html) 示例

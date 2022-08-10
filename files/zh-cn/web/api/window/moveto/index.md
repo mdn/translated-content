@@ -3,59 +3,54 @@ title: window.moveTo
 slug: Web/API/Window/moveTo
 translation_of: Web/API/Window/moveTo
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>将当前窗口移动到指定的坐标位置。</p>
+将当前窗口移动到指定的坐标位置。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">window.moveTo(<var>x</var>, <var>y</var>)
-</pre>
+```plain
+window.moveTo(x, y)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>x</code> 是要移动到的位置横坐标</li>
- <li><code>y </code>是要移动到的位置纵坐标</li>
-</ul>
+- `x` 是要移动到的位置横坐标
+- `y `是要移动到的位置纵坐标
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js notranslate">function origin() {
+```js
+function origin() {
   // 把窗口移动到左上角
   window.moveTo(0, 0);
-}</pre>
+}
+```
 
-<h2 id="附注">附注</h2>
+## 附注
 
-<p>本函数按照指定的绝对位置移动当前窗口，而{{domxref("window.moveBy")}}函数按照与当前位置相对的距离移动当前窗口。</p>
+本函数按照指定的绝对位置移动当前窗口，而{{domxref("window.moveBy")}}函数按照与当前位置相对的距离移动当前窗口。
 
-<p>从 Firefox 7 开始，如果符合<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">下列情况</a>,则普通网页中的 JavaScript 无法通过调用该函数来移动浏览器窗口</p>
+从 Firefox 7 开始，如果符合[下列情况](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24),则普通网页中的 JavaScript 无法通过调用该函数来移动浏览器窗口
 
-<ol>
- <li>当前窗口或标签页不是由{{domxref("window.open")}}方法创建的</li>
- <li>当前标签页所在的窗口包含有多个标签页</li>
-</ol>
+1.  当前窗口或标签页不是由{{domxref("window.open")}}方法创建的
+2.  当前标签页所在的窗口包含有多个标签页
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<p>从 Firefox 7 开始，网站在<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">以下情况下</a>将不能再移动浏览器窗口。</p>
+从 Firefox 7 开始，网站在[以下情况下](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)将不能再移动浏览器窗口。
 
-<ol>
- <li>不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。</li>
- <li>当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。</li>
-</ol>
+1.  不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。
+2.  当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("window.moveBy()")}}</li>
-</ul>
+- {{domxref("window.moveBy()")}}

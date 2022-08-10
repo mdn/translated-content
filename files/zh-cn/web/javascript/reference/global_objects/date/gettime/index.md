@@ -8,65 +8,66 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>getTime()</strong></code> 方法返回一个时间的格林威治时间数值。</p>
+**`getTime()`** 方法返回一个时间的格林威治时间数值。
 
-<p>你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。</p>
+你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。
 
-<div>{{EmbedInteractiveExample("pages/js/date-gettime.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
 
+## 语法
 
+```plain
+dateObj.getTime()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code>dateObj.getTime() </code></pre>
+无。
 
-<h3 id="Parameters">参数</h3>
+### 返回值
 
-<p>无。</p>
+`getTime` 方法的返回值一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该日期对象所代表时间的毫秒数。
 
-<h3 id="Description">返回值</h3>
+## 例子
 
-<p><code>getTime</code> 方法的返回值一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该日期对象所代表时间的毫秒数。</p>
+### 使用 getTime() 复制日期对象
 
-<h2 id="Examples">例子</h2>
+创建一个拥有相同时间值的日期对象。
 
-<h3 id="使用_getTime()_复制日期对象">使用 getTime() 复制日期对象</h3>
-
-<p>创建一个拥有相同时间值的日期对象。</p>
-
-<pre class="brush: js">var birthday = new Date(1991, 9, 17);
+```js
+var birthday = new Date(1991, 9, 17);
 var copy = new Date();
 copy.setTime(birthday.getTime());
-</pre>
+```
 
-<h3 id="测量代码执行时间">测量代码执行时间</h3>
+### 测量代码执行时间
 
-<p>连续调用两个新生成的日期对象的 getTime 方法，根据两次调用的返回值求得时间差。这可以用于计算某些操作的执行时间。避免生成不必要的{{jsxref("Date")}}对象另见{{jsxref("Date.now()")}} </p>
+连续调用两个新生成的日期对象的 getTime 方法，根据两次调用的返回值求得时间差。这可以用于计算某些操作的执行时间。避免生成不必要的{{jsxref("Date")}}对象另见{{jsxref("Date.now()")}}
 
-<pre class="brush:js">var end, start, i;
+```js
+var end, start, i;
 
 start = new Date();
-for (i = 0; i &lt; 1000; i++) {
+for (i = 0; i < 1000; i++) {
   Math.sqrt(i);
 }
 end = new Date();
 
-console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");</pre>
+console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.setTime()")}}</li>
- <li>{{jsxref("Date.prototype.valueOf()")}}</li>
- <li>{{jsxref("Date.now()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.setTime()")}}
+- {{jsxref("Date.prototype.valueOf()")}}
+- {{jsxref("Date.now()")}}

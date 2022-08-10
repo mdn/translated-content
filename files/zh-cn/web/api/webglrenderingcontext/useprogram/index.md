@@ -3,29 +3,29 @@ title: WebGLRenderingContext.useProgram()
 slug: Web/API/WebGLRenderingContext/useProgram
 translation_of: Web/API/WebGLRenderingContext/useProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p> <strong><code>WebGLRenderingContext.useProgram()</code></strong> 方法将定义好的{{domxref("WebGLProgram")}} 对象添加到当前的渲染状态中。</p>
+**`WebGLRenderingContext.useProgram()`** 方法将定义好的{{domxref("WebGLProgram")}} 对象添加到当前的渲染状态中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.useProgram(<var>program</var>);
-</pre>
+```plain
+void gl.useProgram(program);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>program</dt>
- <dd>需要添加的{{domxref("WebGLProgram")}}对象</dd>
-</dl>
+- program
+  - : 需要添加的{{domxref("WebGLProgram")}}对象
 
-<h3 id="返回参数">返回参数</h3>
+### 返回参数
 
-<p>无。</p>
+无。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var program = gl.createProgram();
+```js
+var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -33,24 +33,22 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 gl.useProgram(program);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关资料">相关资料</h2>
+## 相关资料
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

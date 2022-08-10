@@ -8,43 +8,35 @@ tags:
   - 错误码
 translation_of: Web/HTTP/Status/402
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p><strong><code>402 Payment Required</code></strong> 是一个被保留使用的非标准客户端错误状态响应码。</p>
+**`402 Payment Required`** 是一个被保留使用的非标准客户端错误状态响应码。
 
-<p>有时， 这个状态码表明直到客户端付费之后请求才会被处理。402 状态码被创建最初目的是用于数字现金或微型支付系统， 表明客户端请求的内容只有付费之后才能获取。目前还不存在标准的使用约定， 不同的实体可以在不同的环境下使用。</p>
+有时， 这个状态码表明直到客户端付费之后请求才会被处理。402 状态码被创建最初目的是用于数字现金或微型支付系统， 表明客户端请求的内容只有付费之后才能获取。目前还不存在标准的使用约定， 不同的实体可以在不同的环境下使用。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre>402 Payment Required</pre>
+```plain
+402 Payment Required
+```
 
-<h2 id="响应样例">响应样例</h2>
+## 响应样例
 
-<pre>HTTP/1.1 402 Payment Required
+```plain
+HTTP/1.1 402 Payment Required
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table>
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">标题</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "402 Payment Required" , "6.5.2")}}</td>
-   <td>HTTP/1.1: Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| 规范                                                             | 标题                            |
+| ---------------------------------------------------------------- | ------------------------------- |
+| {{RFC("7231", "402 Payment Required" , "6.5.2")}} | HTTP/1.1: Semantics and Content |
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("http.status.402")}}</p>
+{{Compat("http.status.402")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)

@@ -3,45 +3,45 @@ title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.set()</code></strong> 工作方式就像在一个对象上设置一个属性。</p>
+静态方法 **`Reflect.set()`** 工作方式就像在一个对象上设置一个属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.set(target, propertyKey, value[, receiver])
-</pre>
+```plain
+Reflect.set(target, propertyKey, value[, receiver])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>设置属性的目标对象。</dd>
- <dt><code>propertyKey</code></dt>
- <dd>设置的属性的名称。</dd>
- <dt><code>value</code></dt>
- <dd>设置的值。</dd>
- <dt><code>receiver</code></dt>
- <dd>如果遇到 <code>setter</code>，<code>receiver</code>则为<code>setter</code>调用时的<code>this</code>值。</dd>
-</dl>
+- `target`
+  - : 设置属性的目标对象。
+- `propertyKey`
+  - : 设置的属性的名称。
+- `value`
+  - : 设置的值。
+- `receiver`
+  - : 如果遇到 `setter`，`receiver`则为`setter`调用时的`this`值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Boolean")}} 值表明是否成功设置属性。</p>
+返回一个 {{jsxref("Boolean")}} 值表明是否成功设置属性。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>抛出一个 {{jsxref("TypeError")}}，如果目标不是 {{jsxref("Object")}}。</p>
+抛出一个 {{jsxref("TypeError")}}，如果目标不是 {{jsxref("Object")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.set</code> 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a> 语法一样，但是它是以函数的方式。 </p>
+`Reflect.set` 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法一样，但是它是以函数的方式。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.set">使用 <code>Reflect.set()</code></h3>
+### 使用 `Reflect.set()`
 
-<pre class="brush: js">// Object
+```js
+// Object
 var obj = {};
 Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
@@ -60,21 +60,17 @@ var obj = {};
 Reflect.set(obj); // true
 Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

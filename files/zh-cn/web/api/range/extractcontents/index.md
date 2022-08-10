@@ -3,40 +3,37 @@ title: Range.extractContents()
 slug: Web/API/Range/extractContents
 translation_of: Web/API/Range/extractContents
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Range.extractContents()</code></strong> 方法移动了{{ domxref("Range") }} 中的内容从文档树到{{ domxref("DocumentFragment") }}（文档片段对象）。</p>
+**`Range.extractContents()`** 方法移动了{{ domxref("Range") }} 中的内容从文档树到{{ domxref("DocumentFragment") }}（文档片段对象）。
 
-<p>使用 DOM 事件添加的事件侦听器在提取期间不会保留。 HTML 属性事件将按{{domxref("Node.cloneNode()")}}方法的原样保留或复制。 HTML id 属性也会被克隆，如果提取了部分选定的节点并将其附加到文档中，则可能导致无效的文档。</p>
+使用 DOM 事件添加的事件侦听器在提取期间不会保留。 HTML 属性事件将按{{domxref("Node.cloneNode()")}}方法的原样保留或复制。 HTML id 属性也会被克隆，如果提取了部分选定的节点并将其附加到文档中，则可能导致无效的文档。
 
-<p>克隆了部分选定的节点，以包括使文档片段有效所需的父标记。</p>
+克隆了部分选定的节点，以包括使文档片段有效所需的父标记。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>documentFragment</em> = <em>range</em>.extractContents();
-</pre>
+```plain
+documentFragment = range.extractContents();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var range = document.createRange();
+```js
+var range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 var documentFragment = range.extractContents();
 document.body.appendChild(documentFragment);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Range.extractContents")}}
 
+## See also
 
-<p>{{Compat("api.Range.extractContents")}}</p>
-
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

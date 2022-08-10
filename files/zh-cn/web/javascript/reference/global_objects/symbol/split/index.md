@@ -3,25 +3,26 @@ title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.split</strong></code> 指向 一个正则表达式的索引处分割字符串的方法。 这个方法通过 {{jsxref("String.prototype.split()")}} 调用。</p>
+**`Symbol.split`** 指向 一个正则表达式的索引处分割字符串的方法。 这个方法通过 {{jsxref("String.prototype.split()")}} 调用。
 
-<p>详情请参阅{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} 和{{jsxref("String.prototype.split()")}}.</p>
+详情请参阅{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} 和{{jsxref("String.prototype.split()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-split.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+\[Symbol.split] 指向‘aba’.split(/a/)
 
-<p>[Symbol.split] 指向‘aba’.split(/a/)</p>
+```js
+/a/[Symbol.split]('aba',3)
+```
 
-<pre class="brush: js">/a/[Symbol.split]('aba',3)</pre>
+"dayinlove".split(exp) 调用 \[Symbol.split]\(str) 处理，并把实参"dayinlove"传给形参 str
 
-<p>"dayinlove".split(exp) 调用 [Symbol.split](str) 处理，并把实参"dayinlove"传给形参 str</p>
-
-<pre class="brush: js">var exp =  {
+```js
+var exp =  {
         pat:'in',
         [Symbol.split](str) {
           return str.split(this.pat);
@@ -29,21 +30,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
     }
 
     "dayinlove".split(exp);
-//["day", "love"]</pre>
+//["day", "love"]
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.search")}}</li>
- <li>{{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}

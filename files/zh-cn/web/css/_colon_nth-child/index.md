@@ -1,112 +1,110 @@
 ---
 title: ':nth-child'
-slug: 'Web/CSS/:nth-child'
+slug: Web/CSS/:nth-child
 tags:
   - ':nth-child'
   - CSS
   - CSS 伪类
-translation_of: 'Web/CSS/:nth-child'
+translation_of: Web/CSS/:nth-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong><code>:nth-child(an+b)</code></strong> 这个 <a href="/zh-CN/docs/CSS/Pseudo-classes">CSS 伪类</a>首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从 1 开始排序，选择的结果为 CSS 伪类:nth-child 括号中表达式（an+b）匹配到的元素集合（n=0，1，2，3...）。示例：</p>
+**`:nth-child(an+b)`** 这个 [CSS 伪类](/zh-CN/docs/CSS/Pseudo-classes)首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从 1 开始排序，选择的结果为 CSS 伪类:nth-child 括号中表达式（an+b）匹配到的元素集合（n=0，1，2，3...）。示例：
 
-<ul>
- <li><code>0n+3</code> 或简单的 <code>3</code> 匹配第三个元素。</li>
- <li><code>1n+0</code> 或简单的 <code>n</code> 匹配每个元素。（兼容性提醒：在 Android 浏览器 4.3 以下的版本 <code>n</code> 和 <code>1n</code> 的匹配方式不一致。<code>1n</code> 和 <code>1n+0</code> 是一致的，可根据喜好任选其一来使用。）</li>
- <li><code>2n+0</code> 或简单的 <code>2n</code> 匹配位置为 2、4、6、8...的元素（n=0 时，2n+0=0，第 0 个元素不存在，因为是从 1 开始排序)。你可以使用关键字 <strong><code>even</code></strong> 来替换此表达式。</li>
- <li><code>2n+1</code> 匹配位置为 1、3、5、7...的元素。你可以使用关键字 <strong><code>odd</code></strong> 来替换此表达式。</li>
- <li><code>3n+4</code> 匹配位置为 4、7、10、13...的元素。</li>
-</ul>
+- `0n+3` 或简单的 `3` 匹配第三个元素。
+- `1n+0` 或简单的 `n` 匹配每个元素。（兼容性提醒：在 Android 浏览器 4.3 以下的版本 `n` 和 `1n` 的匹配方式不一致。`1n` 和 `1n+0` 是一致的，可根据喜好任选其一来使用。）
+- `2n+0` 或简单的 `2n` 匹配位置为 2、4、6、8...的元素（n=0 时，2n+0=0，第 0 个元素不存在，因为是从 1 开始排序)。你可以使用关键字 **`even`** 来替换此表达式。
+- `2n+1` 匹配位置为 1、3、5、7...的元素。你可以使用关键字 **`odd`** 来替换此表达式。
+- `3n+4` 匹配位置为 4、7、10、13...的元素。
 
-<p><code><em>a</em></code> 和 <code><em>b</em></code> 都必须为整数，并且元素的第一个子元素的下标为 1。换言之就是，该伪类匹配所有下标在集合 { an + b; n = 0, 1, 2, ...} 中的子元素。另外需要特别注意的是，<code><em>an</em></code> 必须写在 <code><em>b</em></code> 的前面，不能写成 <code><em>b+an</em></code> 的形式。</p>
+`a` 和 `b` 都必须为整数，并且元素的第一个子元素的下标为 1。换言之就是，该伪类匹配所有下标在集合 { an + b; n = 0, 1, 2, ...} 中的子元素。另外需要特别注意的是，`an` 必须写在 `b` 的前面，不能写成 `b+an` 的形式。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="选择器示例">选择器示例</h3>
+### 选择器示例
 
-<dl>
- <dt><code>tr:nth-child(2n+1)</code></dt>
- <dd>表示 HTML 表格中的奇数行。</dd>
- <dt><code>tr:nth-child(odd)</code></dt>
- <dd>表示 HTML 表格中的奇数行。</dd>
- <dt><code>tr:nth-child(2n)</code></dt>
- <dd>表示 HTML 表格中的偶数行。</dd>
- <dt><code>tr:nth-child(even)</code></dt>
- <dd>表示 HTML 表格中的偶数行。</dd>
- <dt><code>span:nth-child(0n+1)</code></dt>
- <dd>表示子元素中第一个且为 span 的元素，与 {{Cssxref(":first-child")}} 选择器作用相同。</dd>
- <dt><code>span:nth-child(1)</code></dt>
- <dd>表示父元素中子元素为第一的并且名字为 span 的标签被选中</dd>
- <dt><code>span:nth-child(-n+3)</code></dt>
- <dd>匹配前三个子元素中的 span 元素。</dd>
-</dl>
+- `tr:nth-child(2n+1)`
+  - : 表示 HTML 表格中的奇数行。
+- `tr:nth-child(odd)`
+  - : 表示 HTML 表格中的奇数行。
+- `tr:nth-child(2n)`
+  - : 表示 HTML 表格中的偶数行。
+- `tr:nth-child(even)`
+  - : 表示 HTML 表格中的偶数行。
+- `span:nth-child(0n+1)`
+  - : 表示子元素中第一个且为 span 的元素，与 {{Cssxref(":first-child")}} 选择器作用相同。
+- `span:nth-child(1)`
+  - : 表示父元素中子元素为第一的并且名字为 span 的标签被选中
+- `span:nth-child(-n+3)`
+  - : 匹配前三个子元素中的 span 元素。
 
-<h3 id="Detailed_example">Detailed example</h3>
+### Detailed example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, WITHOUT an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 3, 5, and 7 are selected.&lt;/p&gt;
-&lt;div class="first"&gt;
-  &lt;span&gt;Span 1!&lt;/span&gt;
-  &lt;span&gt;Span 2&lt;/span&gt;
-  &lt;span&gt;Span 3!&lt;/span&gt;
-  &lt;span&gt;Span 4&lt;/span&gt;
-  &lt;span&gt;Span 5!&lt;/span&gt;
-  &lt;span&gt;Span 6&lt;/span&gt;
-  &lt;span&gt;Span 7!&lt;/span&gt;
-&lt;/div&gt;
+```html
+<h3><code>span:nth-child(2n+1)</code>, WITHOUT an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 3, 5, and 7 are selected.</p>
+<div class="first">
+  <span>Span 1!</span>
+  <span>Span 2</span>
+  <span>Span 3!</span>
+  <span>Span 4</span>
+  <span>Span 5!</span>
+  <span>Span 6</span>
+  <span>Span 7!</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;, WITH an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 5, and 7 are selected.&lt;br&gt;
+<h3><code>span:nth-child(2n+1)</code>, WITH an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 5, and 7 are selected.<br>
    3 is used in the counting because it is a child, but it isn't
-   selected because it isn't a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="second"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;This is an `em`.&lt;/em&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-&lt;/div&gt;
+   selected because it isn't a <code>&lt;span&gt;</code>.</p>
+<div class="second">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>This is an `em`.</em>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+</div>
 
-&lt;br&gt;
+<br>
 
-&lt;h3&gt;&lt;code&gt;span:nth-of-type(2n+1)&lt;/code&gt;, WITH an
-   &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; among the child elements.&lt;/h3&gt;
-&lt;p&gt;Children 1, 4, 6, and 8 are selected.&lt;br&gt;
-   3 isn't used in the counting or selected because it is an &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;,
-   not a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;, and &lt;code&gt;nth-of-type&lt;/code&gt; only selects
-   children of that type. The &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; is completely skipped
-   over and ignored.&lt;/p&gt;
-&lt;div class="third"&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;em&gt;This is an `em`.&lt;/em&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-  &lt;span&gt;Span&lt;/span&gt;
-  &lt;span&gt;Span!&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<h3><code>span:nth-of-type(2n+1)</code>, WITH an
+   <code>&lt;em&gt;</code> among the child elements.</h3>
+<p>Children 1, 4, 6, and 8 are selected.<br>
+   3 isn't used in the counting or selected because it is an <code>&lt;em&gt;</code>,
+   not a <code>&lt;span&gt;</code>, and <code>nth-of-type</code> only selects
+   children of that type. The <code>&lt;em&gt;</code> is completely skipped
+   over and ignored.</p>
+<div class="third">
+  <span>Span!</span>
+  <span>Span</span>
+  <em>This is an `em`.</em>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+  <span>Span</span>
+  <span>Span!</span>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -122,30 +120,25 @@ div em {
 .second span:nth-child(2n+1),
 .third span:nth-of-type(2n+1) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="最终效果：">最终效果：</h4>
+#### 最终效果：
 
-<p>{{EmbedLiveSample('Detailed_example', 550, 550)}}</p>
+{{EmbedLiveSample('Detailed_example', 550, 550)}}
 
-
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<ul>
- <li>Opera 不能处理动态插入的元素。</li>
-</ul>
+- Opera 不能处理动态插入的元素。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}</li>
-</ul>
+- {{ Cssxref(":nth-of-type") }}, {{ Cssxref(":nth-last-child") }}

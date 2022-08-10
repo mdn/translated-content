@@ -3,28 +3,30 @@ title: Animation.play()
 slug: Web/API/Animation/play
 translation_of: Web/API/Animation/play
 ---
-<div>{{ APIRef("Web Animations") }}{{SeeCompatTable}}</div>
+{{ APIRef("Web Animations") }}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>的{{ domxref("Animation") }}接口中的<strong><code>play()</code></strong> 方法 可开始或恢复动画的播放。如果动画结束，则调用<code>play()</code>重新启动动画，从头开始播放。</p>
+[Web Animations API](/en-US/docs/Web/API/Web_Animations_API)的{{ domxref("Animation") }}接口中的**`play()`** 方法 可开始或恢复动画的播放。如果动画结束，则调用`play()`重新启动动画，从头开始播放。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">animation.play();
-</pre>
+```plain
+animation.play();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在 <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (<code>aliceChange</code>) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：</p>
+在 [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) 示例中，单击或点击蛋糕会导致 Alice 的增长动画 (`aliceChange`) 播放，导致她体型变大并触发蛋糕的动画。在以下示例中，使用了一个事件监听器来触发两者的动画：
 
-<pre class="brush: js">// 蛋糕拥有其自己的动画：
+```js
+// 蛋糕拥有其自己的动画：
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -52,27 +54,21 @@ var growAlice = function() {
 // 当用户持续按下或点击时，调用 growAlice 函数使得所有的动画播放。
 cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
-</pre>
+```
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.Animation.play")}}
 
+## 了解更多
 
-<p>{{Compat("api.Animation.play")}}</p>
-</div>
-
-<h2 id="了解更多">了解更多</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li>{{domxref("Animation.pause()")}} to pause an animation.</li>
- <li>{{domxref("Animation.reverse()")}} to play an animation backwards.</li>
- <li>{{domxref("Animation.finish()")}} to finish an animation.</li>
- <li>{{domxref("Animation.cancel()")}} to cancel an animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.pause()")}} to pause an animation.
+- {{domxref("Animation.reverse()")}} to play an animation backwards.
+- {{domxref("Animation.finish()")}} to finish an animation.
+- {{domxref("Animation.cancel()")}} to cancel an animation.

@@ -3,48 +3,45 @@ title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>setMilliseconds()</strong></code> 方法会根据本地时间设置一个日期对象的豪秒数。</p>
+**`setMilliseconds()`** 方法会根据本地时间设置一个日期对象的豪秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
 
+## 语法
 
+```plain
+dateObj.setMilliseconds(millisecondsValue)
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>dateObj</var>.setMilliseconds(<em>millisecondsValue</em>)</pre>
+- `millisecondsValue`
+  - : 一个 0 到 999 的数字，表示豪秒数。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>millisecondsValue</code></dt>
- <dd>一个 0 到 999 的数字，表示豪秒数。</dd>
-</dl>
+如果指定的数字超出了合理范围，则日期对象的时间信息会被相应地更新。例如，如果指定了 1005，则秒数加 1，豪秒数为 5。
 
-<h2 id="Description">描述</h2>
+## 例子
 
-<p>如果指定的数字超出了合理范围，则日期对象的时间信息会被相应地更新。例如，如果指定了 1005，则秒数加 1，豪秒数为 5。</p>
+### 例子：使用`setMilliseconds`
 
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example:_Using_setMilliseconds">例子：使用<code>setMilliseconds</code></h3>
-
-<pre class="brush:js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMilliseconds(100);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}

@@ -8,31 +8,34 @@ tags:
   - innerWidth
 translation_of: Web/API/Window/innerWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>只读的 {{domxref("Window")}} 属性 <code><strong>innerWidth</strong></code> 返回以像素为单位的窗口的内部宽度。如果垂直滚动条存在，则这个属性将包括它的宽度。</p>
+只读的 {{domxref("Window")}} 属性 **`innerWidth`** 返回以像素为单位的窗口的内部宽度。如果垂直滚动条存在，则这个属性将包括它的宽度。
 
-<p>更确切地说，<code>innerWidth</code> 返回窗口的 {{Glossary("layout viewport")}} 的宽度。 窗口的内部高度——布局视口的高度——可以从 {{domxref("Window.innerHeight", "innerHeight")}} 属性中获取到。</p>
+更确切地说，`innerWidth` 返回窗口的 {{Glossary("layout viewport")}} 的宽度。 窗口的内部高度——布局视口的高度——可以从 {{domxref("Window.innerHeight", "innerHeight")}} 属性中获取到。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">let <var>intViewportWidth</var> = window.innerWidth;</pre>
+```plain
+let intViewportWidth = window.innerWidth;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个整数型的值表示窗口的布局视口宽度是以像素为单位的。这个属性是只读的，并且没有默认值。</p>
+一个整数型的值表示窗口的布局视口宽度是以像素为单位的。这个属性是只读的，并且没有默认值。
 
-<p>若要更改窗口的宽度，请使用 {{domxref("Window")}} 的方法来调整窗口的大小，例如{{domxref("Window.resizeBy", "resizeBy()")}} 或者 {{domxref("Window.resizeTo", "resizeTo()")}}。</p>
+若要更改窗口的宽度，请使用 {{domxref("Window")}} 的方法来调整窗口的大小，例如{{domxref("Window.resizeBy", "resizeBy()")}} 或者 {{domxref("Window.resizeTo", "resizeTo()")}}。
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<p>如果你需要获取除去滚动条和边框的窗口宽度，请使用根元素 {{HTMLElement("html")}}  的{{domxref("Element.clientWidth", "clientWidth")}} 属性。</p>
+如果你需要获取除去滚动条和边框的窗口宽度，请使用根元素 {{HTMLElement("html")}} 的{{domxref("Element.clientWidth", "clientWidth")}} 属性。
 
-<p><code>innerWidth</code> 属性在任何表现类似于窗口的任何窗口或对象（例如框架或选项卡）上都是可用的。</p>
+`innerWidth` 属性在任何表现类似于窗口的任何窗口或对象（例如框架或选项卡）上都是可用的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// 返回视口的宽度
+```js
+// 返回视口的宽度
 var intFrameWidth = window.innerWidth;
 
 // 返回一个框架集内的框架的视口宽度
@@ -42,20 +45,19 @@ var intFrameWidth = self.innerWidth;
 var intFramesetWidth = parent.innerWidth;
 
 // 返回最外层框架集的视口宽度
-var intOuterFramesetWidth = top.innerWidth;</pre>
+var intOuterFramesetWidth = top.innerWidth;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Window.innerWidth")}}</p>
+{{Compat("api.Window.innerWidth")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("window.outerWidth")}}</li>
- <li>{{domxref("window.innerHeight")}}</li>
- <li>{{domxref("window.outerHeight")}}</li>
-</ul>
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.outerHeight")}}

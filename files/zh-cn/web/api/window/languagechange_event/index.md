@@ -3,53 +3,47 @@ title: languagechange
 slug: Web/API/Window/languagechange_event
 translation_of: Web/API/Window/languagechange_event
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>当用户首选语言更改时，将在全局范围对象上触发 languagechange 事件。</p>
+当用户首选语言更改时，将在全局范围对象上触发 languagechange 事件。
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt>Interface</dt>
- <dd>{{domxref("Event")}}</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a>.</dd>
- <dt>Default Action</dt>
- <dd>None</dd>
-</dl>
+- Interface
+  - : {{domxref("Event")}}
+- Bubbles
+  - : No
+- Cancelable
+  - : No
+- Target
+  - : The default window scope, being {{domxref("Window")}} on Web pages and {{domxref("WorkerGlobalScope")}} in [Web Workers](/en-US/docs/Web/Guide/Performance/Using_web_workers).
+- Default Action
+  - : None
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Being of type {{domxref("Event")}}, this event implements the properties of this interface.</em></p>
+_Being of type {{domxref("Event")}}, this event implements the properties of this interface._
 
-<dl>
- <dt>{{domxref("Event.target")}} {{ReadonlyInline}}</dt>
- <dd>Returns an {{domxref("EventTarget")}} that is the topmost target in the DOM tree of the event.</dd>
- <dt>{{domxref("Event.type")}} {{ReadonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the type of event, here <code>"languagechange"</code>.</dd>
- <dt>{{domxref("Event.bubbles")}}{{ReadonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating if the event normally bubbles or not.</dd>
- <dt>{{domxref("Event.cancelable")}}{{ReadonlyInline}}</dt>
- <dd>Returns a {{domxref("Boolean")}} indicating if it is possible to cancel the event.</dd>
-</dl>
+- {{domxref("Event.target")}} {{ReadonlyInline}}
+  - : Returns an {{domxref("EventTarget")}} that is the topmost target in the DOM tree of the event.
+- {{domxref("Event.type")}} {{ReadonlyInline}}
+  - : Returns a {{domxref("DOMString")}} representing the type of event, here `"languagechange"`.
+- {{domxref("Event.bubbles")}}{{ReadonlyInline}}
+  - : Returns a {{domxref("Boolean")}} indicating if the event normally bubbles or not.
+- {{domxref("Event.cancelable")}}{{ReadonlyInline}}
+  - : Returns a {{domxref("Boolean")}} indicating if it is possible to cancel the event.
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NavigatorLanguage.language","navigator.language")}}</li>
- <li>{{domxref("NavigatorLanguage.languages","navigator.languages")}}</li>
- <li>{{domxref("Navigator")}}</li>
- <li>{{domxref("Window.onlanguagechange")}}</li>
-</ul>
+- {{domxref("NavigatorLanguage.language","navigator.language")}}
+- {{domxref("NavigatorLanguage.languages","navigator.languages")}}
+- {{domxref("Navigator")}}
+- {{domxref("Window.onlanguagechange")}}

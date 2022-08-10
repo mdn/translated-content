@@ -1,5 +1,5 @@
 ---
-title: 'WebGLRenderingContext.uniformMatrix[234]fv()'
+title: WebGLRenderingContext.uniformMatrix[234]fv()
 slug: Web/API/WebGLRenderingContext/uniformMatrix
 tags:
   - WebGL
@@ -11,51 +11,48 @@ tags:
   - 矩阵
 translation_of: Web/API/WebGLRenderingContext/uniformMatrix
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.uniformMatrix[234]fv()</code></strong> 方法为 uniform variables 指定了矩阵值 .</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.uniformMatrix[234]fv()`** 方法为 uniform variables 指定了矩阵值 .
 
-<p>该方法的 3 个版本 (<code>uniformMatrix2fv()</code>, <code>uniformMatrix3fv()</code>, 和<code>unifomMatrix4fv()</code>) ,分别以二阶，三阶，和四阶方阵作为输入值，它们应是分别具有 4,9,16 个浮点数的数组。</p>
+该方法的 3 个版本 (`uniformMatrix2fv()`, `uniformMatrix3fv()`, 和`unifomMatrix4fv()`) ,分别以二阶，三阶，和四阶方阵作为输入值，它们应是分别具有 4,9,16 个浮点数的数组。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>WebGLRenderingContext</em>.uniformMatrix2fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-<em>WebGLRenderingContext</em>.uniformMatrix3fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-<em>WebGLRenderingContext</em>.uniformMatrix4fv(<em>location</em>, <em>transpose</em>, <em>value</em>);
-</pre>
+```plain
+WebGLRenderingContext.uniformMatrix2fv(location, transpose, value);
+WebGLRenderingContext.uniformMatrix3fv(location, transpose, value);
+WebGLRenderingContext.uniformMatrix4fv(location, transpose, value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>location</code></dt>
- <dd>{{domxref("WebGLUniformLocation")}} 对象包含了要修改的 uniform attribute 位置。位置使用 {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}获得。</dd>
- <dt><code>transpose</code></dt>
- <dd>{{domxref("GLboolean")}} 指定是否转置矩阵。必须为 <code>false</code>.</dd>
- <dt><code>value</code></dt>
- <dd>
- <p> {{jsxref("Float32Array")}} 型或者是 <code>GLfloat</code> 序列值。假定值以列主要顺序提供。</p>
- </dd>
-</dl>
+- `location`
+  - : {{domxref("WebGLUniformLocation")}} 对象包含了要修改的 uniform attribute 位置。位置使用 {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}获得。
+- `transpose`
+  - : {{domxref("GLboolean")}} 指定是否转置矩阵。必须为 `false`.
+- `value`
+  - : {{jsxref("Float32Array")}} 型或者是 `GLfloat` 序列值。假定值以列主要顺序提供。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);</pre>
+```js
+gl.uniformMatrix2fv(loc, false, [2,1, 2,2]);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}</p>
+{{Compat("api.WebGLRenderingContext.uniformMatrix2fv")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.uniformMatrix()")}} – WebGL 2 versions of these methods.</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniform()")}}
+- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – WebGL 2 versions of these methods.

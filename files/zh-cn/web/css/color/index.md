@@ -14,32 +14,27 @@ tags:
   - 布局
 translation_of: Web/CSS/color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}`color`CSS 属性设置[颜色值](/zh-CN/docs/Web/CSS/color_value)的前景色以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)，并设置{{cssxref("currentcolor")}}值。`currentcolor`可以对其他颜色属性用作不直接的值，比如{{cssxref("border-color")}}。{{EmbedInteractiveExample("pages/css/color.html")}}对于在 HTML 中使用颜色的概述，参考[使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/)。
 
-<div><code>color</code>CSS 属性设置<a href="/zh-CN/docs/Web/CSS/color_value">颜色值</a>的前景色以及<a href="/zh-CN/docs/Web/CSS/text-decoration">文本装饰</a>，并设置{{cssxref("currentcolor")}}值。<code>currentcolor</code>可以对其他颜色属性用作不直接的值，比如{{cssxref("border-color")}}。</div>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/css/color.html")}}</div>
-
-<div>对于在 HTML 中使用颜色的概述，参考<a href="/zh-CN/docs/">使用 CSS 对 HTML 元素实现颜色</a>。</div>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* 关键词 */
+```css
+/* 关键词 */
 color: currentcolor;
 
-/* &lt;named-color&gt;值 */
+/* <named-color>值 */
 color: red;
 color: orange;
 color: tan;
 color: rebeccapurple;
 
-/* &lt;hex-color&gt;值 */
+/* <hex-color>值 */
 color: #090;
 color: #009900;
 color: #090a;
 color: #009900aa;
 
-/* &lt;rgb()&gt;值 */
+/* <rgb()>值 */
 color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
@@ -47,7 +42,7 @@ color: rgba(34 12 64 / 0.3);
 color: rgb(34.0 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
-/* &lt;hsl()&gt;值 */
+/* <hsl()>值 */
 color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
@@ -58,46 +53,44 @@ color: hsla(30.2 100% 50% / 60%);
 /* 全局值 */
 color: inherit;
 color: initial;
-color: unset;</pre>
+color: unset;
+```
 
-<p><code>color</code> 属性被指定为一个单个的 {{cssxref("&lt;color&gt;")}}值。</p>
+`color` 属性被指定为一个单个的 {{cssxref("&lt;color&gt;")}}值。
 
-<p>注意值必须是规则的 {{cssxref("color")}}。它不可以是{{cssxref("&lt;gradient&gt;")}}（实际上为{{cssxref("&lt;image&gt;")}}的一部分）。</p>
+注意值必须是规则的 {{cssxref("color")}}。它不可以是{{cssxref("&lt;gradient&gt;")}}（实际上为{{cssxref("&lt;image&gt;")}}的一部分）。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>设置元素的文本或装饰的颜色。</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 设置元素的文本或装饰的颜色。
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>It is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.</p>
+It is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
-<p>Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a>, a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and <a href="/zh-CN/docs/Web/CSS/font-weight">bold</a> or larger, or 24px or larger.</p>
+Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/zh-CN/docs/Web/CSS/font-weight) or larger, or 24px or larger.
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="正规定义">正规定义</h2>
+## 正规定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="正规语法">正规语法</h2>
+## 正规语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使文本为红色">使文本为红色</h3>
+### 使文本为红色
 
-<p>以下方式可以使得文本显示为红色：</p>
+以下方式可以使得文本显示为红色：
 
-<pre class="brush: css notranslate">p { color: red; }
+```css
+p { color: red; }
 p { color: #f00; }
 p { color: #ff0000; }
 p { color: rgb(255,0,0); }
@@ -107,20 +100,19 @@ p { color: hsl(0, 100%, 50%); }
 /* 50% 透明 */
 p { color: #ff000080; }
 p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }</pre>
+p { color: hsla(0, 100%, 50%, 0.5); }
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.color")}}</p>
+{{Compat("css.properties.color")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>颜色 {{cssxref("&lt;color&gt;")}} 数据类型</li>
- <li>其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}}和{{cssxref("color-adjust")}}</li>
- <li><a href="/zh-CN/docs/Web/HTML/Applying_color">使用 CSS 对 HTML 元素应用颜色</a></li>
-</ul>
+- 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
+- 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("column-rule-color")}}和{{cssxref("color-adjust")}}
+- [使用 CSS 对 HTML 元素应用颜色](/zh-CN/docs/Web/HTML/Applying_color)

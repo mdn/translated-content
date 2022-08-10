@@ -3,31 +3,31 @@ title: ImageData.width
 slug: Web/API/ImageData/width
 translation_of: Web/API/ImageData/width
 ---
-<p>{{APIRef("Canvas API")}}</p>
+{{APIRef("Canvas API")}}
 
-<p>只读的 <code><strong>ImageData.width</strong></code> 属性，返回在图像数据对象中每一行像素的数量。</p>
+只读的 **`ImageData.width`** 属性，返回在图像数据对象中每一行像素的数量。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>imagedata</em>.width
-</pre>
+```plain
+imagedata.width
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js  language-js">var imagedata = new ImageData(100, 100);
+```js
+var imagedata = new ImageData(100, 100);
 imagedata.width // 100
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ImageData.width")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("ImageData.height")}}</li>
-</ul>
+- {{domxref("ImageData.height")}}

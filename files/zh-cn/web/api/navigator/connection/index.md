@@ -3,28 +3,28 @@ title: Navigator.connection
 slug: Web/API/Navigator/connection
 translation_of: Web/API/Navigator/connection
 ---
-<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p><code><strong>Navigator.connection</strong></code> 是只读的，提供一个 {{domxref("NetworkInformation")}} 对象来获取设备的网络连接信息。例如用户设备的当前带宽或连接是否被计量，这可以用于基于用户的连接来选择高清晰度内容或低清晰度内容。</p>
+**`Navigator.connection`** 是只读的，提供一个 {{domxref("NetworkInformation")}} 对象来获取设备的网络连接信息。例如用户设备的当前带宽或连接是否被计量，这可以用于基于用户的连接来选择高清晰度内容或低清晰度内容。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>connectionInfo</em> = navigator.connection</pre>
+```plain
+connectionInfo = navigator.connection
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>返回网络连接状态 NetworkInformation 对象，包括 downlink（网络下行速度）effectiveType（网络类型）onchange（有值代表网络状态变更）rtt（估算的往返时间）saveData（打开/请求数据保护模式）</p>
+返回网络连接状态 NetworkInformation 对象，包括 downlink（网络下行速度）effectiveType（网络类型）onchange（有值代表网络状态变更）rtt（估算的往返时间）saveData（打开/请求数据保护模式）
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容情况">浏览器兼容情况</h2>
+## 浏览器兼容情况
 
-<p>{{Compat("api.Navigator.connection")}}</p>
+{{Compat("api.Navigator.connection")}}
 
-<h2 id="参考资料">参考资料</h2>
+## 参考资料
 
-<ul>
- <li><a href="/en-US/docs/Online_and_offline_events">Online and offline events</a></li>
-</ul>
+- [Online and offline events](/en-US/docs/Online_and_offline_events)

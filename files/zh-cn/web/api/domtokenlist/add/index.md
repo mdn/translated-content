@@ -3,58 +3,58 @@ title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 translation_of: Web/API/DOMTokenList/add
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}} 接口的 <code><strong>add()</strong></code> 方法将给定的标记添加到列表中。 </p>
+{{domxref("DOMTokenList")}} 接口的 **`add()`** 方法将给定的标记添加到列表中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>tokenList</var>.add(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
+```plain
+tokenList.add(token1[, token2[, ...tokenN]]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>token<em>N</em></dt>
- <dd>一个 {{domxref("DOMString")}}，表示你要添加到列表里的标记。</dd>
-</dl>
+- token*N*
+  - : 一个 {{domxref("DOMString")}}，表示你要添加到列表里的标记。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的例子中，我们使用 {{domxref("Element.classList")}} 将 {{htmlelement("span")}} 元素上设置的类列表检索为 <code>DOMTokenList</code>。然后，我们将新标记添加到列表中，并将列表写入 <code>&lt;span&gt;</code> 元素的{{domxref("Node.textContent")}}。</p>
+在下面的例子中，我们使用 {{domxref("Element.classList")}} 将 {{htmlelement("span")}} 元素上设置的类列表检索为 `DOMTokenList`。然后，我们将新标记添加到列表中，并将列表写入 `<span>` 元素的{{domxref("Node.textContent")}}。
 
-<p>HTML:</p>
+HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>JavaScript:</p>
+JavaScript:
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 classes.add("d");
 span.textContent = classes;
-</pre>
+```
 
-<p>结果如下：</p>
+结果如下：
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<p>你也可以添加多个标记：</p>
+你也可以添加多个标记：
 
-<pre class="brush: js">span.classList.add("d", "e", "f");
-</pre>
+```js
+span.classList.add("d", "e", "f");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.DOMTokenList.add")}}</p>
-</div>
+{{Compat("api.DOMTokenList.add")}}

@@ -7,38 +7,37 @@ tags:
   - Math.sign()
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<div> </div>
+**`Math.sign()`** 函数返回一个数字的符号，指示数字是正数，负数还是零。
 
-<p><strong><code>Math.sign()</code></strong> 函数返回一个数字的符号，指示数字是正数，负数还是零。</p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+Math.sign(x);
+```
 
-<pre class="syntaxbox"><code>Math.sign(<em>x</em>);</code></pre>
+### 参数
 
-<h3 id="Parameters">参数</h3>
+- `x`
+  - : 任意数字。
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+## 描述
 
-<h2 id="Description">描述</h2>
+因为 `sign` 是 `Math` 的一个静态方法，所以你应该使用 Math.sign()，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。
 
-<p>因为 <code>sign</code> 是 <code>Math</code> 的一个静态方法，所以你应该使用 Math.sign()，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。</p>
+而不是作为您创建的 Math 对象的一种方法（Math 不是构造函数）。
 
-<p>而不是作为您创建的 Math 对象的一种方法（Math 不是构造函数）。</p>
+此函数共有 5 种返回值，分别是 **1, -1, 0, -0, NaN.** 代表的各是**正数，负数，正零，负零，NaN**。
 
-<p>此函数共有 5 种返回值，分别是<strong> 1, -1, 0, -0, NaN.</strong> 代表的各是<strong>正数，负数，正零，负零，NaN</strong>。</p>
+传入该函数的参数会被**隐式转换**成数字类型。
 
-<p>传入该函数的参数会被<strong>隐式转换</strong>成数字类型。</p>
+## 示例
 
-<h2 id="Examples">示例</h2>
+### 使用 Math.sign()
 
-<h3 id="使用_math.sign">使用 Math.sign()</h3>
-
-<pre class="brush:js">Math.sign(3);     //  1
+```js
+Math.sign(3);     //  1
 Math.sign(-3);    // -1
 Math.sign("-3");  // -1
 Math.sign(0);     //  0
@@ -46,20 +45,21 @@ Math.sign(-0);    // -0
 Math.sign(NaN);   // NaN
 Math.sign("foo"); // NaN
 Math.sign();      // NaN
-</pre>
+```
 
-<h2 id="Compatibility">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">function sign(x) {
+```js
+function sign(x) {
     x = +x ;// convert to a number
     if (x === 0 || isNaN(x))
         return x;
-    return x &gt; 0 ? 1 : -1;
-}</pre>
+    return x > 0 ? 1 : -1;
+}
+```
 
-<p> </p>
-
-<pre><code>if (!Math.sign) {
+```plain
+if (!Math.sign) {
   Math.sign = function(x) {
     // If x is NaN, the result is NaN.
     // If x is -0, the result is -0.
@@ -70,20 +70,19 @@ Math.sign();      // NaN
     if (x === 0 || isNaN(x)) {
       return Number(x);
     }
-    return x &gt; 0 ? 1 : -1;
+    return x > 0 ? 1 : -1;
   };
-}</code></pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}} 对象</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}} 对象

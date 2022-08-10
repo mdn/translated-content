@@ -4,69 +4,39 @@ slug: Web/API/Window/pageshow_event
 translation_of: Web/API/Window/pageshow_event
 original_slug: Web/Events/pageshow
 ---
-<p>当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)</p>
+当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>规范</dt>
- <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow">HTML5</a></dd>
- <dt>接口</dt>
- <dd><a href="/en-US/docs/Web/API/PageTransitionEvent">PageTransitionEvent</a></dd>
- <dt>事件冒泡</dt>
- <dd>No</dd>
- <dt>事件取消</dt>
- <dd>No</dd>
- <dt>事件源</dt>
- <dd>Document (dispatched on Window)</dd>
- <dt>默认操作</dt>
- <dd>None</dd>
-</dl>
+- 规范
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
+- 接口
+  - : [PageTransitionEvent](/en-US/docs/Web/API/PageTransitionEvent)
+- 事件冒泡
+  - : No
+- 事件取消
+  - : No
+- 事件源
+  - : Document (dispatched on Window)
+- 默认操作
+  - : None
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
-  <tr>
-   <td><code>persisted</code> {{readonlyInline}}</td>
-   <td>{{jsxref("boolean")}}</td>
-   <td>表示网页是否是来自缓存。</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}         | 表示网页是否是来自缓存。                               |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下示例将会在控制台打印由前进/后退按钮以及 load 事件触发后引起的 pageshow 事件：</p>
+以下示例将会在控制台打印由前进/后退按钮以及 load 事件触发后引起的 pageshow 事件：
 
-<pre>window.addEventListener('pageshow', function(event) {
+```plain
+window.addEventListener('pageshow', function(event) {
     console.log('after , pageshow :',event);
 });
 
@@ -74,27 +44,23 @@ original_slug: Web/Events/pageshow
 window.addEventListener('load', function() {
     console.log('before');
 });
-</pre>
+```
 
+不规范的写法，你同样可以将这个事件当做一个属性添加到 body 标签，类似于 onload
 
+```plain
+<body onload="myonload()" onpageshow="mypageshowcode()">
+```
 
-
-
-<p>不规范的写法，你同样可以将这个事件当做一个属性添加到 body 标签，类似于 onload</p>
-
-<pre>&lt;body onload="myonload()" onpageshow="mypageshowcode()"&gt;</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Window.pageshow_event")}}
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/pagehide"><code>pagehide</code></a></li>
- <li><a href="/en-US/docs/Using_Firefox_1.5_caching#pageshow_event">Using Firefox 1.5 caching — pageshow event</a></li>
-</ul>
+- [`pagehide`](/en-US/docs/Mozilla_event_reference/pagehide)
+- [Using Firefox 1.5 caching — pageshow event](/en-US/docs/Using_Firefox_1.5_caching#pageshow_event)

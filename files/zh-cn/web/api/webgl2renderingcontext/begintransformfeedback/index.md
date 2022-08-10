@@ -10,50 +10,47 @@ tags:
   - 方法
 translation_of: Web/API/WebGL2RenderingContext/beginTransformFeedback
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> 的 <strong><code>WebGL2RenderingContext.beginTransformFeedback()</code></strong> 方法开始一个变换回传（Transform Feedback）操作。</p>
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.beginTransformFeedback()`** 方法开始一个变换回传（Transform Feedback）操作。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.beginTransformFeedback(<var>primitiveMode</var>);
-</pre>
+```plain
+void gl.beginTransformFeedback(primitiveMode);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>primitiveMode</code></dt>
- <dd>A {{domxref("GLenum")}} specifying the output type of the primitives that will be recorded into the buffer objects that are bound for transform feedback. 可能的值：
- <ul>
-  <li><code>gl.POINTS</code></li>
-  <li><code>gl.LINES</code></li>
-  <li><code>gl.TRIANGLES</code></li>
- </ul>
- </dd>
-</dl>
+- `primitiveMode`
 
-<h3 id="返回值">返回值</h3>
+  - : A {{domxref("GLenum")}} specifying the output type of the primitives that will be recorded into the buffer objects that are bound for transform feedback. 可能的值：
 
-<p>无。</p>
+    - `gl.POINTS`
+    - `gl.LINES`
+    - `gl.TRIANGLES`
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<pre class="brush: js">var transformFeedback = gl.createTransformFeedback();
+无。
+
+## 示例
+
+```js
+var transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 gl.beginTransformFeedback(gl.TRIANGLES);
 gl.drawArrays(gl.TRIANGLES, 0, 3);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.beginTransformFeedback")}}</p>
+{{Compat("api.WebGL2RenderingContext.beginTransformFeedback")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLTransformFeedback")}}</li>
-</ul>
+- {{domxref("WebGLTransformFeedback")}}

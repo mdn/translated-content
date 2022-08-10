@@ -3,13 +3,14 @@ title: rotate
 slug: Web/CSS/rotate
 translation_of: Web/CSS/rotate
 ---
-<div>{{CSSRef}}{{seecompattable}}</div>
+{{CSSRef}}{{seecompattable}}
 
-<p><strong><code>rotate</code></strong>属性允许你单独设置<code><strong>transform</strong></code>的旋转属性。这种映射方式可以让我们更方便的设置我们想要的效果，并且避免了简写形式需要记忆属性顺序的不方便之处。</p>
+**`rotate`**属性允许你单独设置**`transform`**的旋转属性。这种映射方式可以让我们更方便的设置我们想要的效果，并且避免了简写形式需要记忆属性顺序的不方便之处。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css notranslate">/* Keyword values */
+```css
+/* Keyword values */
 scale: none;
 
 /* Angle value */
@@ -23,36 +24,38 @@ rotate: y 0.25turn;
 rotate: z 1.57rad;
 
 /* Vector plus angle value */
-rotate: 1 1 1 90deg;</pre>
+rotate: 1 1 1 90deg;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>角度值</dt>
- <dd>An {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a <code>rotate()</code> (2D rotation) function.</dd>
- <dt>x, y 或者 z 轴名称加上角度值</dt>
- <dd>The name of the axis you want to rotate the affected element around (<code>"x"</code>, "<code>y</code>", or "<code>z"</code>), plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotateX()</code>/<code>rotateY()</code>/<code>rotateZ()</code> (3D rotation) function.</dd>
- <dt>向量加上角度值</dt>
- <dd>Three {{cssxref("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a <code>rotate3d()</code> (3D rotation) function.</dd>
- <dt><code>none</code></dt>
- <dd>指定不应用旋转</dd>
-</dl>
+- 角度值
+  - : An {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
+- x, y 或者 z 轴名称加上角度值
+  - : The name of the axis you want to rotate the affected element around (`"x"`, "`y`", or "`z"`), plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
+- 向量加上角度值
+  - : Three {{cssxref("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
+- `none`
+  - : 指定不应用旋转
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div&gt;
-  &lt;p class="rotate"&gt;Rotation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="rotate">Rotation</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -80,22 +83,19 @@ p {
 
 div:hover .rotate {
   rotate: 1 -0.5 1 180deg;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.rotate")}}</p>
+{{Compat("css.properties.rotate")}}

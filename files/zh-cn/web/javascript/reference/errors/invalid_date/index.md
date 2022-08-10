@@ -7,48 +7,52 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+## 消息
 
-<pre class="syntaxbox">范围错误：非法数据 (Firefox)
+```plain
+范围错误：非法数据 (Firefox)
 范围错误：非法时间值 (Chrome)
 范围错误：提供的数据不是有效的 (Chrome)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>为 {{jsxref("Date")}} 或 {{jsxref("Date.parse()")}} 提供了一个会导致无效日期的字符串。</p>
+为 {{jsxref("Date")}} 或 {{jsxref("Date.parse()")}} 提供了一个会导致无效日期的字符串。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="错误示例">错误示例</h3>
+### 错误示例
 
-<p>ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出<code> RangeError: invalid date</code>，比如在火狐浏览器中有以下情形：</p>
+ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出` RangeError: invalid date`，比如在火狐浏览器中有以下情形：
 
-<pre class="brush: js example-bad">new Date('foo-bar 2014');
+```js example-bad
+new Date('foo-bar 2014');
 new Date('2014-25-23').toISOString();
 new Date('foo-bar 2014').toString();
-</pre>
+```
 
-<p>然而下面这种情形会返回 {{jsxref("NaN")}} ：</p>
+然而下面这种情形会返回 {{jsxref("NaN")}} ：
 
-<pre class="brush: js example-bad">Date.parse('foo-bar 2014'); // NaN</pre>
+```js example-bad
+Date.parse('foo-bar 2014'); // NaN
+```
 
-<p>参见 {{jsxref("Date.parse()")}} 文档，了解更多详情。</p>
+参见 {{jsxref("Date.parse()")}} 文档，了解更多详情。
 
-<h3 id="正确示例">正确示例</h3>
+### 正确示例
 
-<pre class="brush: js example-good">new Date('05 October 2011 14:48 UTC');</pre>
+```js example-good
+new Date('05 October 2011 14:48 UTC');
+```
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Date")}}</li>
- <li>{{jsxref("Date.prototype.parse()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date")}}
+- {{jsxref("Date.prototype.parse()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

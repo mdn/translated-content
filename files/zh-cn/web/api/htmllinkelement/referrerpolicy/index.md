@@ -3,42 +3,37 @@ title: HTMLLinkElement.referrerPolicy
 slug: Web/API/HTMLLinkElement/referrerPolicy
 translation_of: Web/API/HTMLLinkElement/referrerPolicy
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p> </p>
+HTMLLinkElement.referrerPolicy 反映了 {{HTMLElement("link")}} 元素的 HTML 属性 {{htmlattrxref("referrerpolicy","link")}} 的定义，这个属性定义了{{HTMLElement("link")}} 元素在获取资源时的引用方式。
 
-<p>HTMLLinkElement.referrerPolicy 反映了 {{HTMLElement("link")}} 元素的HTML属性 {{htmlattrxref("referrerpolicy","link")}} 的定义，这个属性定义了{{HTMLElement("link")}} 元素在获取资源时的引用方式。</p>
+详情请参考 HTTP header 中的 {{HTTPHeader("Referrer-Policy")}} 。
 
-<p>详情请参考HTTP header中的  {{HTTPHeader("Referrer-Policy")}} 。</p>
+## 语法
 
-<p> </p>
+```plain
+DOMString HTMLLinkElement.referrerPolicy
+```
 
-<h2 id="语法">语法</h2>
+## 例子
 
-<pre class="syntaxbox">DOMString HTMLLinkElement.referrerPolicy</pre>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js;">var links = document.getElementsByTagName("link");
+```js
+var links = document.getElementsByTagName("link");
 links[0].referrerPolicy; // "no-referrer"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLLinkElement.referrerPolicy")}}
 
+## 相关
 
-<p>{{Compat("api.HTMLLinkElement.referrerPolicy")}}</p>
-
-<h2 id="相关">相关</h2>
-
-<ul>
- <li>HTTP header {{HTTPHeader("Referrer-Policy")}}</li>
- <li>{{domxref("HTMLAnchorElement.referrerPolicy")}}</li>
- <li>{{domxref("HTMLAreaElement.referrerPolicy")}}</li>
- <li>{{domxref("HTMLIFrameElement.referrerPolicy")}}</li>
- <li>{{domxref("HTMLImageElement.referrerPolicy")}}</li>
-</ul>
+- HTTP header {{HTTPHeader("Referrer-Policy")}}
+- {{domxref("HTMLAnchorElement.referrerPolicy")}}
+- {{domxref("HTMLAreaElement.referrerPolicy")}}
+- {{domxref("HTMLIFrameElement.referrerPolicy")}}
+- {{domxref("HTMLImageElement.referrerPolicy")}}

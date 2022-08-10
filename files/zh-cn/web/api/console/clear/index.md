@@ -3,31 +3,30 @@ title: clear()
 slug: Web/API/Console/clear
 translation_of: Web/API/Console/clear
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>清空控制台。</p>
+清空控制台。
 
-<p>控制台显示的内容将会被一些信息替换，比如‘Console was cleared’这样的信息。</p>
+控制台显示的内容将会被一些信息替换，比如‘Console was cleared’这样的信息。
 
-<p>需要的注意的一点是在 Google Chrome 浏览器中，如果用户在<a href="https://developers.google.cn/web/tools/chrome-devtools/console#preserve-log">设置</a>中勾选了“Preserve log”选项，console.clear() 将不会起作用。 </p>
+需要的注意的一点是在 Google Chrome 浏览器中，如果用户在[设置](https://developers.google.cn/web/tools/chrome-devtools/console#preserve-log)中勾选了“Preserve log”选项，console.clear() 将不会起作用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.clear();
-</pre>
+```plain
+console.clear();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.console.clear")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="https://developer.chrome.com/devtools/docs/console#assertions">Chrome Developer Tools: Using the Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
+- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)

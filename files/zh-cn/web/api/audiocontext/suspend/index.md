@@ -3,27 +3,29 @@ title: AudioContext.suspend()
 slug: Web/API/AudioContext/suspend
 translation_of: Web/API/AudioContext/suspend
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("AudioContext") }} 接口的<code>suspend()</code> 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。 当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。</p>
+{{ domxref("AudioContext") }} 接口的`suspend()` 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。 当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。
 
-<p>若对{{domxref("OfflineAudioContext")}} 调用此方法，将会抛出 <code>INVALID_STATE_ERR</code> 错误。</p>
+若对{{domxref("OfflineAudioContext")}} 调用此方法，将会抛出 `INVALID_STATE_ERR` 错误。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 audioCtx.suspend().then(function() { ... });
-</pre>
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves with void. The promise is rejected if the context has already been closed.</p>
+A {{jsxref("Promise")}} that resolves with void. The promise is rejected if the context has already been closed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is taken from our <a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (<a href="http://mdn.github.io/audiocontext-states/">see it running live</a>.) When the suspend/resume button is clicked, the {{domxref("AudioContext.state")}} is queried — if it is <code>running</code>, <code>suspend()</code> is called; if it is <code>suspended</code>, {{domxref("resume")}} is called. In each case, the text label of the button is updated as appropriate once the promise resolves.</p>
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([see it running live](http://mdn.github.io/audiocontext-states/).) When the suspend/resume button is clicked, the {{domxref("AudioContext.state")}} is queried — if it is `running`, `suspend()` is called; if it is `suspended`, {{domxref("resume")}} is called. In each case, the text label of the button is updated as appropriate once the promise resolves.
 
-<pre class="brush: js notranslate">susresBtn.onclick = function() {
+```js
+susresBtn.onclick = function() {
   if(audioCtx.state === 'running') {
     audioCtx.suspend().then(function() {
       susresBtn.textContent = 'Resume context';
@@ -34,19 +36,17 @@ audioCtx.suspend().then(function() { ... });
     });
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.AudioContext.suspend")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

@@ -10,60 +10,59 @@ tags:
   - Primary Expression
 translation_of: Web/JavaScript/Reference/Operators/function*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>function*</code></strong>关键字可以在表达式内部定义一个生成器函数。</p>
+**`function*`**关键字可以在表达式内部定义一个生成器函数。
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}</p>
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">function* [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>statements</em>
-}</pre>
+```plain
+function* [name]([param1[, param2[, ..., paramN]]]) {
+   statements
+}
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd>函数名。在声明<em>匿名函数</em>时可以省略。函数名称只是函数体中的一个本地变量。</dd>
- <dt><code>paramN</code></dt>
- <dd>传入函数的一个参数名。一个函数最多有 255 个参数。</dd>
- <dt><code>statements</code></dt>
- <dd>函数体。</dd>
-</dl>
+- `name`
+  - : 函数名。在声明*匿名函数*时可以省略。函数名称只是函数体中的一个本地变量。
+- `paramN`
+  - : 传入函数的一个参数名。一个函数最多有 255 个参数。
+- `statements`
+  - : 函数体。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>function*</code>表达式和{{jsxref('Statements/function*', 'function* 声明')}}比较相似，并具有几乎相同的语法。<code>function*</code>表达式和<code>function*</code>声明之间主要区别就是函数名，即在创建匿名函数时，<code>function*</code>表达式可以省略函数名。阅读{{jsxref('Function', '函数')}}章节了解更多信息。</p>
+`function*`表达式和{{jsxref('Statements/function*', 'function* 声明')}}比较相似，并具有几乎相同的语法。`function*`表达式和`function*`声明之间主要区别就是函数名，即在创建匿名函数时，`function*`表达式可以省略函数名。阅读{{jsxref('Function', '函数')}}章节了解更多信息。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的示例定义了一个未命名的生成器函数并把它赋值给<code>x</code>。函数产出它的传入参数的平方：</p>
+下面的示例定义了一个未命名的生成器函数并把它赋值给`x`。函数产出它的传入参数的平方：
 
-<pre class="brush: js">var x = function*(y) {
+```js
+var x = function*(y) {
    yield y * y;
 };
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("GeneratorFunction")}} 对象</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
- <li>{{jsxref("Operators/yield*", "yield*")}}</li>
- <li>{{jsxref("Function")}} 对象</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
-</ul>
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("GeneratorFunction")}} 对象
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
+- {{jsxref("Function")}} 对象
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}

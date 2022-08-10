@@ -9,31 +9,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onloadedmetadata
 original_slug: Web/API/GlobalEventHandlers/onloadedmetadata
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>{{domxref("GlobalEventHandlers")}} mixin 的<strong><code>onloadedmetadata</code></strong>属性是处理{{event("loadedmetadata")}}事件的{{event("Event_handlers", "event handler")}}。</p>
+{{domxref("GlobalEventHandlers")}} mixin 的**`onloadedmetadata`**属性是处理{{event("loadedmetadata")}}事件的{{event("Event_handlers", "event handler")}}。
 
-<p><code>loadedmetadata</code>事件在元数据（metadata）被加载完成后触发。</p>
+`loadedmetadata`事件在元数据（metadata）被加载完成后触发。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em><var>element</var></em>.onloadedmetadata = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onloadedmetadata;
-</pre>
+```plain
+element.onloadedmetadata = handlerFunction;
+var handlerFunction = element.onloadedmetadata;
+```
 
-<p><code>handlerFunction</code>应当是<code>null</code>或是由<a href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript 函数</a>声明的事件 handler。</p>
+`handlerFunction`应当是`null`或是由[JavaScript 函数](/en-US/docs/Web/JavaScript/Reference/Functions)声明的事件 handler。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{event("loadedmetadata")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM 事件句柄</a></li>
-</ul>
+- {{event("loadedmetadata")}}
+- [DOM 事件句柄](/en-US/docs/Web/Guide/Events/Event_handlers)

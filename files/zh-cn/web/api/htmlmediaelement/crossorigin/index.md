@@ -3,22 +3,18 @@ title: HTMLMediaElement.crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
 translation_of: Web/API/HTMLMediaElement/crossOrigin
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.crossOrigin</code></strong> 属性是当前图片元素的跨域资源共享 (CORS) 设置，详情可参考 <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS</a> 设置。</p>
+**`HTMLMediaElement.crossOrigin`** 属性是当前图片元素的跨域资源共享 (CORS) 设置，详情可参考 [CORS](/en-US/docs/HTML/CORS_settings_attributes) 设置。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLMediaElement.crossOrigin")}}
 
+## 更多
 
-<p>{{Compat("api.HTMLMediaElement.crossOrigin")}}</p>
-
-<h2 id="更多">更多</h2>
-
-<ul>
- <li>定义该属性的接口 {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 定义该属性的接口 {{domxref("HTMLMediaElement")}}.

@@ -3,56 +3,56 @@ title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.expm1()</strong></code> 函数返回 <code>E^x - 1</code>, 其中 <code>x</code> 是该函数的参数，<code>E</code> 是自然对数的底数 <code>2.718281828459045</code>。</p>
+**`Math.expm1()`** 函数返回 `E^x - 1`, 其中 `x` 是该函数的参数，`E` 是自然对数的底数 `2.718281828459045`。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Math.expm1(<em>x</em>)</pre>
+```plain
+Math.expm1(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+- `x`
+  - : 任意数字。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>参数 <code>x</code> 会被自动类型转换成 <code>number</code> 类型。</p>
+参数 `x` 会被自动类型转换成 `number` 类型。
 
-<p><code>expm1</code> 是 "exponent minus 1" 的缩写。</p>
+`expm1` 是 "exponent minus 1" 的缩写。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:js">Math.expm1(1)     // 1.7182818284590453
+```js
+Math.expm1(1)     // 1.7182818284590453
 Math.expm1(-38)   // -1
 Math.expm1("-38") // -1
 Math.expm1("foo") // NaN
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>因为我们已经有了 <code>Math.exp</code> 函数，所以很容易 polyfill。</p>
+因为我们已经有了 `Math.exp` 函数，所以很容易 polyfill。
 
-<pre class="brush: js">Math.expm1 = Math.expm1 || function (x) {
+```js
+Math.expm1 = Math.expm1 || function (x) {
     return Math.exp(x) - 1
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}} 对象。</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}} 对象。

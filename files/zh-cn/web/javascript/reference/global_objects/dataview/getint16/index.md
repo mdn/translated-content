@@ -6,60 +6,55 @@ tags:
   - 类型化数组
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>getInt16()</code></strong> 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。</p>
+**`getInt16()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
 
+## 语法
 
+```plain
+dataview.getInt16(byteOffset [, littleEndian])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>dataview</var>.getInt16(byteOffset [, littleEndian])</pre>
+- byteOffset
+  - : 偏移量，单位为字节，从头开始计算。
+- littleEndian
+  - : {{optional_inline}} 表示该 16 位整数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 `true`，就表示使用 little-endian（低字节序），如果传入的值为 `false` 或者 `undefined`，则会使用 big-endian（高字节序）方式读值。
 
-<h3 id="参数">参数</h3>
+### 返回
 
-<dl>
- <dt>byteOffset</dt>
- <dd>偏移量，单位为字节，从头开始计算。</dd>
- <dt>littleEndian</dt>
- <dd>{{optional_inline}} 表示该 16 位整数是否以 {{Glossary("Endianness", "little- or big-endian")}} 格式存储的（就是使用的字节序格式，具体参考链接页面）；如果传入的值为 <code>true</code>，就表示使用 little-endian（低字节序），如果传入的值为 <code>false</code> 或者 <code>undefined</code>，则会使用 big-endian（高字节序）方式读值。</dd>
-</dl>
+一个短整型 16 位数。
 
-<h3 id="返回">返回</h3>
+### 抛出错误
 
-<p>一个短整型 16 位数。</p>
+- {{jsxref("RangeError")}}
+  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-<h3 id="抛出错误">抛出错误</h3>
+## 描述
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误。</dd>
-</dl>
+没有对齐约束; 多字节值可以从任何偏移量获取。
 
-<h2 id="描述">描述</h2>
+## 例子
 
-<p> 没有对齐约束; 多字节值可以从任何偏移量获取。</p>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.getInt16(1); // 0
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

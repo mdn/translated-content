@@ -8,67 +8,66 @@ tags:
   - 统一资源标识符
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
+**`decodeURI()`** 函数能解码由{{jsxref("encodeURI")}} 创建或其它流程得到的统一资源标识符（URI）。
 
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
-<p><code><strong>decodeURI()</strong></code> 函数能解码由{{jsxref("encodeURI")}} 创建或其它流程得到的统一资源标识符（URI）。</p>
+## 语法
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</p>
+```plain
+decodeURI(encodedURI)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code>decodeURI(<em>encodedURI</em>)</code></pre>
+- `encodedURI`
+  - : 一个完整的编码过的 URI
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>一个完整的编码过的 URI</dd>
-</dl>
+返回一个给定编码统一资源标识符 (URI) 的未编码版本的新字符串。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>返回一个给定编码统一资源标识符 (URI) 的未编码版本的新字符串。</p>
+当`encodedURI` 包含无效字符序列时，引发{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。
 
-<h3 id="异常">异常</h3>
+## 描述
 
-<p>当<code><em>encodedURI</em></code> 包含无效字符序列时，引发{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。</p>
+将已编码 URI 中所有能识别的转义序列转换成原字符，但不能解码那些不会被 {{jsxref("encodeURI")}} 编码的内容（例如 "`#`"）。
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p>将已编码 URI 中所有能识别的转义序列转换成原字符，但不能解码那些不会被 {{jsxref("encodeURI")}} 编码的内容（例如 "<code>#</code>"）。</p>
+### 解码一个西里尔字母（Cyrillic）URL
 
-<h2 id="示例">示例</h2>
-
-<h3 id="解码一个西里尔字母（Cyrillic）URL">解码一个西里尔字母（Cyrillic）URL</h3>
-
-<pre class="brush: js">decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="捕捉异常">捕捉异常</h3>
+### 捕捉异常
 
-<pre>try {
+```plain
+try {
   var a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("decodeURIComponent")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURIComponent")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

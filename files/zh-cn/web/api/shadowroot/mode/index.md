@@ -3,24 +3,26 @@ title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
 translation_of: Web/API/ShadowRoot/mode
 ---
-<div>{{APIRef("Shadow DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>mode</code></strong> 是 {{domxref("ShadowRoot")}}  的只读属性，它返回 <code>ShadowRoot</code> 创建时的模式 ("<code>open</code>" 或者 "<code>closed</code>") 。</p>
+**`mode`** 是 {{domxref("ShadowRoot")}} 的只读属性，它返回 `ShadowRoot` 创建时的模式 ("`open`" 或者 "`closed`") 。
 
-<p>当 <code>ShadowRoot</code> 的 <code>mode</code> 是 "<code>closed</code>" 时， <code>ShadowRoot</code> 的内部实现无法被 JavaScript 访问及修改 — 也就是说将该实现不公开，例如，<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> 标签内部实现无法被 JavaScript 访问及修改。</p>
+当 `ShadowRoot` 的 `mode` 是 "`closed`" 时， `ShadowRoot` 的内部实现无法被 JavaScript 访问及修改 — 也就是说将该实现不公开，例如，[`<video>`](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video) 标签内部实现无法被 JavaScript 访问及修改。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>mode</em> = <em>shadowRoot</em>.mode</pre>
+```plain
+var mode = shadowRoot.mode
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>值为 "<code>open</code>"  或者  "<code>closed</code>".</p>
+值为 "`open`" 或者 "`closed`".
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.ShadowRoot.mode")}}

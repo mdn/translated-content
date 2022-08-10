@@ -8,55 +8,54 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>SyntaxError</strong></code> 对象代表尝试解析语法上不合法的代码的错误。</p>
+**`SyntaxError`** 对象代表尝试解析语法上不合法的代码的错误。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>当 Javascript 语言解析代码时，JavaScript 引擎发现了不符合语法规范的 tokens 或 token 顺序时抛出<code>SyntaxError</code>.</p>
+当 Javascript 语言解析代码时，JavaScript 引擎发现了不符合语法规范的 tokens 或 token 顺序时抛出`SyntaxError`.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new SyntaxError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message</code></dt>
- <dd>可选的。可阅读的错误描述信息</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>可选的。包含引发异常的代码的文件名</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>可选的。包含引发异常的代码的行号</dd>
-</dl>
+- `message`
+  - : 可选的。可阅读的错误描述信息
+- `fileName` {{non-standard_inline}}
+  - : 可选的。包含引发异常的代码的文件名
+- `lineNumber` {{non-standard_inline}}
+  - : 可选的。包含引发异常的代码的行号
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("SyntaxError.prototype")}}</dt>
- <dd>允许 <code>SyntaxError</code>对象添加属性。</dd>
-</dl>
+- {{jsxref("SyntaxError.prototype")}}
+  - : 允许 `SyntaxError`对象添加属性。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p>全局 <code>SyntaxError</code> 自身不包含任何方法，但从原型链中继承了一些方法。</p>
+全局 `SyntaxError` 自身不包含任何方法，但从原型链中继承了一些方法。
 
-<h2 id="SyntaxError_instances"><code>SyntaxError</code> 实例</h2>
+## `SyntaxError` 实例
 
-<h3 id="Properties_of_SyntaxError_instances">属性</h3>
+### 属性
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '属性')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '属性')}}
 
-<h3 id="Methods_of_SyntaxError_instances">方法</h3>
+### 方法
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '方法')}}</div>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '方法')}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example:_Catch_an_SyntaxError">捕获 <code>SyntaxError</code></h3>
+### 捕获 `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   eval('hoo bar');
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -67,11 +66,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
   console.log(e.columnNumber);           // 4
   console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_SyntaxError">创建 <code>SyntaxError</code></h3>
+### 创建 `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -82,19 +82,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
   console.log(e.columnNumber);           // 0
   console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("SyntaxError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("SyntaxError.prototype")}}

@@ -14,44 +14,43 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**Object.setPrototypeOf()** 方法设置一个指定的对象的原型 ( 即，内部 \[\[Prototype]] 属性）到另一个对象或 {{jsxref("null")}}。
 
-<div><strong>Object.setPrototypeOf() </strong>方法设置一个指定的对象的原型 ( 即，内部 [[Prototype]] 属性）到另一个对象或  {{jsxref("null")}}。</div>
+> **警告：**由于现代 JavaScript 引擎优化属性访问所带来的特性的关系，更改对象的 `[[Prototype]]` 在**_各个_**浏览器和 JavaScript 引擎上都是一个很慢的操作。其在更改继承的性能上的影响是微妙而又广泛的，这不仅仅限于 `obj.__proto__ = ...` 语句上的时间花费，而且可能会延伸到**_任何_**代码，那些可以访问**_任何_** `[[Prototype]]` 已被更改的对象的代码。如果你关心性能，你应该避免设置一个对象的 `[[Prototype]]`。相反，你应该使用 {{jsxref("Object.create()")}} 来创建带有你想要的 `[[Prototype]]` 的新对象。
 
-<div class="warning">
-<p><strong>警告：</strong>由于现代 JavaScript 引擎优化属性访问所带来的特性的关系，更改对象的 <code>[[Prototype]]</code> 在<em><strong>各个</strong></em>浏览器和 JavaScript 引擎上都是一个很慢的操作。其在更改继承的性能上的影响是微妙而又广泛的，这不仅仅限于 <code>obj.__proto__ = ...</code> 语句上的时间花费，而且可能会延伸到<em><strong>任何</strong></em>代码，那些可以访问<em><strong>任何</strong></em> <code>[[Prototype]]</code> 已被更改的对象的代码。如果你关心性能，你应该避免设置一个对象的 <code>[[Prototype]]</code>。相反，你应该使用 {{jsxref("Object.create()")}} 来创建带有你想要的 <code>[[Prototype]]</code> 的新对象。</p>
-</div>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+Object.setPrototypeOf(obj, prototype)
+```
 
-<pre class="syntaxbox"><code>Object.setPrototypeOf(<em>obj, prototype</em>)</code></pre>
+### 参数
 
-<h3 id="Parameters">参数</h3>
+- obj
+  - : 要设置其原型的对象。
+- prototype
+  - : 该对象的新原型 (一个对象 或 {{jsxref("null")}}).
 
-<dl>
- <dt>obj</dt>
- <dd>要设置其原型的对象。</dd>
- <dt>prototype</dt>
- <dd>该对象的新原型 (一个对象 或 {{jsxref("null")}}).</dd>
-</dl>
+## 描述
 
-<h2 id="Description">描述</h2>
+如果对象的 \[\[Prototype]] 被修改成不可扩展 (通过 {{jsxref("Object.isExtensible()")}}查看)，就会抛出 {{jsxref("TypeError")}} 异常。如果 `prototype` 参数不是一个对象或者 {{jsxref("null")}} (例如，数字，字符串，boolean，或者 {{jsxref("undefined")}})，则什么都不做。否则，该方法将 `obj` 的 `[[Prototype]]` 修改为新的值。
 
-<p>如果对象的 [[Prototype]] 被修改成不可扩展 (通过 {{jsxref("Object.isExtensible()")}}查看)，就会抛出 {{jsxref("TypeError")}} 异常。如果 <code>prototype</code> 参数不是一个对象或者 {{jsxref("null")}} (例如，数字，字符串，boolean，或者 {{jsxref("undefined")}})，则什么都不做。否则，该方法将 <code>obj</code> 的 <code>[[Prototype]]</code> 修改为新的值。</p>
+`Object.setPrototypeOf()` 是 ECMAScript 6 最新草案中的方法，相对于 {{jsxref("Object.prototype.__proto__")}}，它被认为是修改对象原型更合适的方法
 
-<p><code>Object.setPrototypeOf()</code> 是 ECMAScript 6 最新草案中的方法，相对于 {{jsxref("Object.prototype.__proto__")}}，它被认为是修改对象原型更合适的方法</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+```plain
+var dict = Object.setPrototypeOf({}, null);
+```
 
-<pre><code>var dict = Object.setPrototypeOf({}, null);</code></pre>
+## Polyfill
 
-<h2 id="Notes">Polyfill</h2>
+我们必须借助非标准的
 
-<p>我们必须借助非标准的  </p>
+使用较旧的 {{jsxref("Object.prototype.__proto__")}} 属性，我们可以很容易地定义 Object.setPrototypeOf 如果它不可用：
 
-<p>使用较旧的 {{jsxref("Object.prototype.__proto__")}} 属性，我们可以很容易地定义 Object.setPrototypeOf 如果它不可用：</p>
-
-<pre>if (!Object.setPrototypeOf) {
+```plain
+if (!Object.setPrototypeOf) {
     // 仅适用于 Chrome 和 FireFox，在 IE 中不工作：
      Object.prototype.setPrototypeOf = function(obj, proto) {
          if(obj.__proto__) {
@@ -71,15 +70,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
          }
      }
 }
-</pre>
+```
 
+## 附加原型链
 
+通过 `Object.getPrototypeOf()` 和 {{jsxref("Object.proto", "Object.prototype.__proto__")}} 的组合允许将一个原型链完整的附加到一个新的原型对象上：
 
-<h2 id="附加原型链">附加原型链</h2>
-
-<p>通过 <code>Object.getPrototypeOf()</code> 和 {{jsxref("Object.proto", "Object.prototype.__proto__")}} 的组合允许将一个原型链完整的附加到一个新的原型对象上：</p>
-
-<pre class="brush: js">/**
+```js
+/**
 *** Object.appendChain(@object, @prototype)
 *
 * Appends the first non-native prototype of a chain to a new prototype.
@@ -95,7 +93,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 **/
 
 Object.appendChain = function(oChain, oProto) {
-  if (arguments.length &lt; 2) {
+  if (arguments.length < 2) {
     throw new TypeError('Object.appendChain - Not enough arguments');
   }
   if (typeof oProto === 'number' || typeof oProto === 'boolean') {
@@ -110,7 +108,7 @@ Object.appendChain = function(oChain, oProto) {
   oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
 
   for (var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype &amp;&amp; o1st !== Function.prototype;
+    o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
     o2nd = o1st;
@@ -124,13 +122,15 @@ Object.appendChain = function(oChain, oProto) {
 
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
-}</pre>
+}
+```
 
-<h2 id="使用">使用</h2>
+## 使用
 
-<p>例子一：向一个原型附加一个链</p>
+例子一：向一个原型附加一个链
 
-<pre class="brush: js">function Mammal() {
+```js
+function Mammal() {
   this.isMammal = 'yes';
 }
 
@@ -153,11 +153,13 @@ function Animal() {
 Object.appendChain(oCat, new Animal());
 
 console.log(oCat.breathing);
-// 'yes'</pre>
+// 'yes'
+```
 
-<p>例子二：将一个基本类型转化为对应的对象类型并添加到原型链上</p>
+例子二：将一个基本类型转化为对应的对象类型并添加到原型链上
 
-<pre class="brush: js">function Symbol() {
+```js
+function Symbol() {
   this.isSymbol = 'yes';
 }
 
@@ -169,32 +171,33 @@ var oPrime = Object.appendChain(nPrime, new Symbol());
 
 console.log(oPrime); // '17'
 console.log(oPrime.isSymbol); // 'yes'
-console.log(typeof oPrime); // 'object'</pre>
+console.log(typeof oPrime); // 'object'
+```
 
-<p>例子三：给函数类型的对象添加一个链，并添加一个新的方法到那个链上</p>
+例子三：给函数类型的对象添加一个链，并添加一个新的方法到那个链上
 
-<pre class="brush: js">function Person(sName) {
+```js
+function Person(sName) {
   this.identity = sName;
 }
 
 var george = Object.appendChain(new Person('George'), 'console.log("Hello guys!!");');
 
 console.log(george.identity); // 'George'
-george(); // 'Hello guys!!'</pre>
+george(); // 'Hello guys!!'
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
-</ul>
+- {{jsxref("Reflect.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}

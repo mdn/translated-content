@@ -8,54 +8,48 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/ellipse
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>ellipse</code>元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的<code>x</code>半径和<code>y</code>半径。</p>
+`ellipse`元素是一个 SVG 基本形状，用来创建一个椭圆，基于一个中心坐标以及它们的`x`半径和`y`半径。
 
-<p>椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ SVGAttr("transform") }}属性实现旋转。</p>
+椭圆不能指定精确的椭圆倾向（假设，举个例子，你想画一个 45 度角倾斜的椭圆），但是可以利用{{ SVGAttr("transform") }}属性实现旋转。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3253/ellipse.svg">ellipse.svg</a></p>
+» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en-US/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- [图形事件属性](/en-US/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en-US/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("cx") }}</li>
- <li>{{ SVGAttr("cy") }}</li>
- <li>{{ SVGAttr("rx") }}</li>
- <li>{{ SVGAttr("ry") }}</li>
-</ul>
+- {{ SVGAttr("cx") }}
+- {{ SVGAttr("cy") }}
+- {{ SVGAttr("rx") }}
+- {{ SVGAttr("ry") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGEllipseElement">SVGEllipseElement</a></code>接口。</p>
+该元素实现了[`SVGEllipseElement`](/en-US/DOM/SVGEllipseElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.ellipse")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("circle") }}</li>
-</ul>
+- {{ SVGElement("circle") }}

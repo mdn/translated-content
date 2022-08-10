@@ -3,50 +3,47 @@ title: Math.log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log10
 ---
-<div>
-<div>{{JSRef("Global_Objects", "Math")}}</div>
-</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.log10()</strong></code> 函数返回一个数字以 10 为底的对数。</p>
+**`Math.log10()`** 函数返回一个数字以 10 为底的对数。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.log10(<em>x</em>)</code></pre>
+```plain
+Math.log10(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+- `x`
+  - : 任意数字。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果传入的参数小于 0，则返回 NaN.</p>
+如果传入的参数小于 0，则返回 NaN.
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:js">Math.log10(10)   // 1
+```js
+Math.log10(10)   // 1
 Math.log10(100)  // 2
 Math.log10("100")// 2
 Math.log10(1)    // 0
 Math.log10(0)    // -Infinity
 Math.log10(-2)   // NaN
 Math.log10("foo")// NaN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}} 对象。</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}} 对象。

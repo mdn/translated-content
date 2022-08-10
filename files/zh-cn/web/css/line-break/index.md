@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/line-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>设置 CSS 属性 <strong><code>line-break</code> </strong>可以用来处理如何断开（break lines）带有标点符号的中文、日文或韩文（CJK）文本的行。</p>
+设置 CSS 属性 **`line-break` **可以用来处理如何断开（break lines）带有标点符号的中文、日文或韩文（CJK）文本的行。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 line-break: auto;
 line-break: loose;
 line-break: normal;
@@ -23,38 +24,36 @@ line-break: anywhere;
 line-break: inherit;
 line-break: initial;
 line-break: unset;
-</pre>
+```
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>使用默认的断行规则分解文本。</dd>
- <dt><code>loose</code></dt>
- <dd>使用尽可能松散（least restrictive）的断行规则分解文本。一般用于短行的情况，如报纸。</dd>
- <dt><code>normal</code></dt>
- <dd>使用最一般（common）的断行规则分解文本。</dd>
- <dt><code>strict</code></dt>
- <dd>使用最严格（stringent）的断行原则分解文本。</dd>
- <dt><code>anywhere</code></dt>
- <dd>
- <p>在每个印刷字符单元（typographic character unit）的周围，都有一个自动换行（soft wrap）的机会，包括任何标点符号（punctuation character）或是保留的空白字符（preserved white spaces），或是单词之间。但忽略任何用于阻止换行的字符，即使是来自 GL、WJ 或 ZWJ 字符集的字符，或是由 word-break 属性强制的字符。不同的换行机会拥有相同的优先级。也不应用断字符（hyphenation，可能是 "-"）。</p>
-<p>英文原文：There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character class or mandated by the word-break property. The different wrapping opportunities must not be prioritized. Hyphenation is not applied.</p>
- </dd>
-</dl>
+- `auto`
+  - : 使用默认的断行规则分解文本。
+- `loose`
+  - : 使用尽可能松散（least restrictive）的断行规则分解文本。一般用于短行的情况，如报纸。
+- `normal`
+  - : 使用最一般（common）的断行规则分解文本。
+- `strict`
+  - : 使用最严格（stringent）的断行原则分解文本。
+- `anywhere`
 
-<h3 id="正式语法">正式语法</h3>
+  - : 在每个印刷字符单元（typographic character unit）的周围，都有一个自动换行（soft wrap）的机会，包括任何标点符号（punctuation character）或是保留的空白字符（preserved white spaces），或是单词之间。但忽略任何用于阻止换行的字符，即使是来自 GL、WJ 或 ZWJ 字符集的字符，或是由 word-break 属性强制的字符。不同的换行机会拥有相同的优先级。也不应用断字符（hyphenation，可能是 "-"）。
+
+    英文原文：There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ character class or mandated by the word-break property. The different wrapping opportunities must not be prioritized. Hyphenation is not applied.
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("css.properties.line-break")}}</div>
+{{Compat("css.properties.line-break")}}

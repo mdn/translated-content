@@ -3,40 +3,40 @@ title: WebGL2RenderingContext.createSampler()
 slug: Web/API/WebGL2RenderingContext/createSampler
 translation_of: Web/API/WebGL2RenderingContext/createSampler
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> 定义的 <code><strong>WebGL2RenderingContext.createSampler()</strong></code> 方法用于创建并初始化 {{domxref("WebGLSampler")}} 对象。</p>
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 定义的 **`WebGL2RenderingContext.createSampler()`** 方法用于创建并初始化 {{domxref("WebGLSampler")}} 对象。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">WebGLSampler <var>gl</var>.createSampler();
-</pre>
+```plain
+WebGLSampler gl.createSampler();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("WebGLSampler")}} 对象。</p>
+{{domxref("WebGLSampler")}} 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p><code>gl</code> 必须是 {{domxref("WebGL2RenderingContext")}} 类型. WebGL 1 不支持  <code>WebGLSampler</code> 对象。</p>
+`gl` 必须是 {{domxref("WebGL2RenderingContext")}} 类型. WebGL 1 不支持 `WebGLSampler` 对象。
 
-<pre class="brush: js">var sampler = gl.createSampler();
-</pre>
+```js
+var sampler = gl.createSampler();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.createSampler")}}</p>
+{{Compat("api.WebGL2RenderingContext.createSampler")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLSampler")}}</li>
-</ul>
+- {{domxref("WebGLSampler")}}

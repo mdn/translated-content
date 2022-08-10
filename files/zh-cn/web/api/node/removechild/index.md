@@ -5,93 +5,95 @@ tags:
   - Node.removeChild()
 translation_of: Web/API/Node/removeChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong>Node.removeChild() </strong>方法从 DOM 中删除一个子节点。返回删除的节点。</p>
+**Node.removeChild()** 方法从 DOM 中删除一个子节点。返回删除的节点。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>let oldChild</em> = node.removeChild(<em>child</em>);
+```plain
+let oldChild = node.removeChild(child);
 
-<strong>//OR
-</strong>
-<em>element</em>.removeChild(<em>child</em>);</pre>
+//OR
 
-<ul>
- <li><code>child</code> 是要移除的那个子节点。</li>
- <li><code>node</code> 是<code>child</code>的父节点。</li>
- <li>oldChild 保存对删除的子节点的引用。<code>oldChild</code> === <code>child</code>.</li>
-</ul>
+element.removeChild(child);
+```
 
-<p>被移除的这个子节点仍然存在于内存中，只是没有添加到当前文档的 DOM 树中，因此，你还可以把这个节点重新添加回文档中，当然，实现要用另外一个变量比如<code>上例中的 oldChild</code>来保存这个节点的引用。如果使用上述语法中的第二种方法，即没有使用 oldChild 来保存对这个节点的引用，则认为被移除的节点已经是无用的，在短时间内将会被<a href="/zh-CN/docs/Web/JavaScript/Memory_Management">内存管理</a>回收。</p>
+- `child` 是要移除的那个子节点。
+- `node` 是`child`的父节点。
+- oldChild 保存对删除的子节点的引用。`oldChild` === `child`.
 
-<p>如果上例中的<code>child 节点</code>不是<code>node</code>节点的子节点，则该方法会抛出异常。</p>
+被移除的这个子节点仍然存在于内存中，只是没有添加到当前文档的 DOM 树中，因此，你还可以把这个节点重新添加回文档中，当然，实现要用另外一个变量比如`上例中的 oldChild`来保存这个节点的引用。如果使用上述语法中的第二种方法，即没有使用 oldChild 来保存对这个节点的引用，则认为被移除的节点已经是无用的，在短时间内将会被[内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)回收。
 
-<h2 id="Example">示例</h2>
+如果上例中的`child 节点`不是`node`节点的子节点，则该方法会抛出异常。
 
-<pre><code>&lt;!--Sample HTML code--&gt;
-&lt;div id="top" align="center"&gt; &lt;/div&gt;
+## 示例
 
-&lt;script type="text/javascript"&gt;
+```plain
+<!--Sample HTML code-->
+<div id="top" align="center"> </div>
+
+<script type="text/javascript">
       var top = document.getElementById("top");
       var nested = document.getElementById("nested");
       var garbage = top.removeChild(nested);
       //Test Case 2: the method throws the exception (2)
-&lt;/script&gt;
+</script>
 
-&lt;!--Sample HTML code--&gt;
-&lt;div id="top" align="center"&gt;
- &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;
+<!--Sample HTML code-->
+<div id="top" align="center">
+ <div id="nested"></div>
+</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
       var top = document.getElementById("top");
       var nested = document.getElementById("nested");
       var garbage = top.removeChild(nested);
       // This first call remove correctly the node
       garbage = top.removeChild(nested);
       // Test Case 1: the method in the second call here, throws the exception (1)
-&lt;/script&gt;</code></pre>
+</script>
+```
 
-<pre>&lt;!--示例 HTML 代码--&gt;
+```plain
+<!--示例 HTML 代码-->
 
-&lt;div id="top" align="center"&gt;
-  &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div id="top" align="center">
+  <div id="nested"></div>
+</div>
+```
 
-<pre class="brush:js">// 先定位父节点，然后删除其子节点
+```js
+// 先定位父节点，然后删除其子节点
 var d = document.getElementById("top");
 var d_nested = document.getElementById("nested");
 var throwawayNode = d.removeChild(d_nested);
-</pre>
+```
 
-<pre class="brush:js">// 无须定位父节点，通过 parentNode 属性直接删除自身
+```js
+// 无须定位父节点，通过 parentNode 属性直接删除自身
 var node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
-</pre>
+```
 
-<pre class="brush:js">// 移除一个元素节点的所有子节点
+```js
+// 移除一个元素节点的所有子节点
 var element = document.getElementById("top");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild">DOM Level 1 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066">DOM Level 2 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066">DOM Level 3 Core: removeChild</a></li>
-</ul>
+- [DOM Level 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
+- [DOM Level 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
+- [DOM Level 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.parentNode")}}</li>
- <li>{{domxref("ChildNode.remove")}}</li>
-</ul>
+- {{domxref("Node.replaceChild")}}
+- {{domxref("Node.parentNode")}}
+- {{domxref("ChildNode.remove")}}

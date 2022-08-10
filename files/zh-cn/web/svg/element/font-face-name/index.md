@@ -10,37 +10,31 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/font-face-name
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>font-face-name</code>元素指向本地安装的字体副本，用字体名称识别。</p>
+`font-face-name`元素指向本地安装的字体副本，用字体名称识别。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGATTR("name") }}</li>
-</ul>
+- {{ SVGATTR("name") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该对象实现了<code><a href="/en/DOM/SVGFontFaceNameElement">SVGFontFaceNameElement</a></code>接口。</p>
+该对象实现了[`SVGFontFaceNameElement`](/en/DOM/SVGFontFaceNameElement)接口。
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("font-face-src") }}</li>
- <li><a href="/en/SVG/Tutorial/SVG_fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font-face-src") }}
+- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)

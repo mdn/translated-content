@@ -3,208 +3,113 @@ title: click
 slug: Web/API/Element/click_event
 translation_of: Web/API/Element/click_event
 ---
-<p>当定点设备的按钮（通常是鼠标左键）在一个元素上被按下和放开时，<code>click</code>事件就会被触发。</p>
+当定点设备的按钮（通常是鼠标左键）在一个元素上被按下和放开时，`click`事件就会被触发。
 
-<h2 id="一般信息">一般信息</h2>
+## 一般信息
 
-<dl>
- <dt>规范</dt>
- <dd><a href="http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click">DOM L3</a></dd>
- <dt>接口</dt>
- <dd>{{domxref("MouseEvent")}}</dd>
- <dt>是否冒泡</dt>
- <dd>Yes</dd>
- <dt>是否可取消</dt>
- <dd>Yes</dd>
- <dt>对象</dt>
- <dd>Element</dd>
- <dt>默认动作</dt>
- <dd>无定型</dd>
-</dl>
+- 规范
+  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+- 接口
+  - : {{domxref("MouseEvent")}}
+- 是否冒泡
+  - : Yes
+- 是否可取消
+  - : Yes
+- 对象
+  - : Element
+- 默认动作
+  - : 无定型
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
-   <td>事件对象 (位于 DOM 树最上面的元素).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
-   <td>事件类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>是否冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
-   <td>是否可被取消</td>
-  </tr>
-  <tr>
-   <td><code>view</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/WindowProxy"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (该文档的<code>window</code> 对象)</td>
-  </tr>
-  <tr>
-   <td><code>detail</code> {{readonlyInline}}</td>
-   <td><code>long</code> (<code>float</code>)</td>
-   <td>在短时间内发生的连续点击次数的计数。</td>
-  </tr>
-  <tr>
-   <td><code>currentTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>被事件监听触发的节点。</td>
-  </tr>
-  <tr>
-   <td><code>relatedTarget</code> {{readonlyInline}}</td>
-   <td>EventTarget</td>
-   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和<code>mouseleave</code> 事件：值为与其互补的事件 (比如<code>mouseenter</code> 就为<code>mouseleave</code>). 否则为<code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>screenX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕 x 轴坐标。</td>
-  </tr>
-  <tr>
-   <td><code>screenY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>点击事件发生时鼠标对应的屏幕 y 轴坐标。</td>
-  </tr>
-  <tr>
-   <td><code>clientX</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的 x 轴坐标。</td>
-  </tr>
-  <tr>
-   <td><code>clientY</code> {{readonlyInline}}</td>
-   <td>long</td>
-   <td>点击事件发生时鼠标对应的浏览器窗口的 y 轴坐标。</td>
-  </tr>
-  <tr>
-   <td><code>button</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>点击时按下的鼠标按钮：左键=0，中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。</td>
-  </tr>
-  <tr>
-   <td><code>buttons</code> {{readonlyInline}}</td>
-   <td>unsigned short</td>
-   <td>当鼠标事件被触发时按钮的 buttons: 左键=1，右键=2，中间按钮=4，第四个按钮 (通常是"返回")=8，第五个按钮 (通常是"前进")=16.若有两个或以上的按钮按下，返回以逻辑或运算形成的合并值。例如左键右键同时按下就返回 3 (=1 | 2). <a href="/zh-CN/docs/Web/API/MouseEvent">更多信息</a>.</td>
-  </tr>
-  <tr>
-   <td><code>mozPressure</code> {{readonlyInline}}</td>
-   <td>float</td>
-   <td>压力应用于接触或 tabdevice 时生成的事件的数量；该值介于 0（最小压力）和 1（最大压力）。</td>
-  </tr>
-  <tr>
-   <td><code>ctrlKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td>当事件被触发时 ctrl 按键被按下时为 true，否则为 false。</td>
-  </tr>
-  <tr>
-   <td><code>shiftKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td>当事件被触发时 shift 按键被按下时为 true，否则为 false。</td>
-  </tr>
-  <tr>
-   <td><code>altKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td>当事件被触发时 alt 按键被按下时为 true，否则为 false。</td>
-  </tr>
-  <tr>
-   <td><code>metaKey</code> {{readonlyInline}}</td>
-   <td>boolean</td>
-   <td>当事件被触发时 meta 按键被按下时为 true，否则为 false。</td>
-  </tr>
- </tbody>
-</table>
+| 属性                                     | 类型                                             | 描述                                                                                                                                                                                                                                                                |
+| ---------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}        | [`EventTarget`](/en-US/docs/Web/API/EventTarget) | 事件对象 (位于 DOM 树最上面的元素).                                                                                                                                                                                                                                 |
+| `type` {{readonlyInline}}          | [`DOMString`](/en-US/docs/Web/API/DOMString)     | 事件类型。                                                                                                                                                                                                                                                          |
+| `bubbles` {{readonlyInline}}       | [`Boolean`](/en-US/docs/Web/API/Boolean)         | 是否冒泡                                                                                                                                                                                                                                                            |
+| `cancelable` {{readonlyInline}}    | [`Boolean`](/en-US/docs/Web/API/Boolean)         | 是否可被取消                                                                                                                                                                                                                                                        |
+| `view` {{readonlyInline}}          | [`WindowProxy`](/en-US/docs/Web/API/WindowProxy) | [`document.defaultView`](/en-US/docs/Web/API/Document/defaultView) (该文档的`window` 对象)                                                                                                                                                                          |
+| `detail` {{readonlyInline}}        | `long` (`float`)                                 | 在短时间内发生的连续点击次数的计数。                                                                                                                                                                                                                                |
+| `currentTarget` {{readonlyInline}} | EventTarget                                      | 被事件监听触发的节点。                                                                                                                                                                                                                                              |
+| `relatedTarget` {{readonlyInline}} | EventTarget                                      | 对于 `mouseover`, `mouseout`, `mouseenter` 和`mouseleave` 事件：值为与其互补的事件 (比如`mouseenter` 就为`mouseleave`). 否则为`null`.                                                                                                                               |
+| `screenX` {{readonlyInline}}       | long                                             | 点击事件发生时鼠标对应的屏幕 x 轴坐标。                                                                                                                                                                                                                             |
+| `screenY` {{readonlyInline}}       | long                                             | 点击事件发生时鼠标对应的屏幕 y 轴坐标。                                                                                                                                                                                                                             |
+| `clientX` {{readonlyInline}}       | long                                             | 点击事件发生时鼠标对应的浏览器窗口的 x 轴坐标。                                                                                                                                                                                                                     |
+| `clientY` {{readonlyInline}}       | long                                             | 点击事件发生时鼠标对应的浏览器窗口的 y 轴坐标。                                                                                                                                                                                                                     |
+| `button` {{readonlyInline}}        | unsigned short                                   | 点击时按下的鼠标按钮：左键=0，中间按钮=1 (如果实现的话), 右键=2. 对于配置为左手使用按钮的操作被反转的鼠标，这些值从右向左读取。                                                                                                                                     |
+| `buttons` {{readonlyInline}}       | unsigned short                                   | 当鼠标事件被触发时按钮的 buttons: 左键=1，右键=2，中间按钮=4，第四个按钮 (通常是"返回")=8，第五个按钮 (通常是"前进")=16.若有两个或以上的按钮按下，返回以逻辑或运算形成的合并值。例如左键右键同时按下就返回 3 (=1 \| 2). [更多信息](/zh-CN/docs/Web/API/MouseEvent). |
+| `mozPressure` {{readonlyInline}}   | float                                            | 压力应用于接触或 tabdevice 时生成的事件的数量；该值介于 0（最小压力）和 1（最大压力）。                                                                                                                                                                             |
+| `ctrlKey` {{readonlyInline}}       | boolean                                          | 当事件被触发时 ctrl 按键被按下时为 true，否则为 false。                                                                                                                                                                                                             |
+| `shiftKey` {{readonlyInline}}      | boolean                                          | 当事件被触发时 shift 按键被按下时为 true，否则为 false。                                                                                                                                                                                                            |
+| `altKey` {{readonlyInline}}        | boolean                                          | 当事件被触发时 alt 按键被按下时为 true，否则为 false。                                                                                                                                                                                                              |
+| `metaKey` {{readonlyInline}}       | boolean                                          | 当事件被触发时 meta 按键被按下时为 true，否则为 false。                                                                                                                                                                                                             |
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<pre>&lt;div id="test"&gt;&lt;/div&gt;
+```plain
+<div id="test"></div>
 
-&lt;script&gt;
+<script>
   document.getElementById("test").addEventListener("click", function( event ) {
     // 在被点击的 div 内显示当前被点击次数
     event.target.textContent = "click count: " + event.detail;
   }, false);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<h3 id="Internet_Explorer">Internet Explorer</h3>
+### Internet Explorer
 
-<p>Internet Explorer 8 &amp; 9 存在一个漏洞，具有经{{cssxref("background-color")}}样式计算为<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a>的元素覆盖在其它元素顶端时，不会收到<code>click</code>事件。取而代之，所有<code>click</code>事件将被触发于其底下的元素。参见<a href="http://jsfiddle.net/YUKma/show/">this live example</a>样例。</p>
+Internet Explorer 8 & 9 存在一个漏洞，具有经{{cssxref("background-color")}}样式计算为[`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)的元素覆盖在其它元素顶端时，不会收到`click`事件。取而代之，所有`click`事件将被触发于其底下的元素。参见[this live example](http://jsfiddle.net/YUKma/show/)样例。
 
-<p>已知会触发此漏洞的情景：</p>
+已知会触发此漏洞的情景：
 
-<ul>
- <li>仅对于 IE9：
-  <ul>
-   <li>设置<code>{{cssxref("background-color")}}: <a href="/en-US/docs/Web/CSS/color_value#rgba()">rgba</a>(0,0,0,0)</code></li>
-   <li>设置<code>{{cssxref("opacity")}}: 0</code> 并且明确指定{{cssxref("background-color")}}而不是<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-  </ul>
- </li>
- <li>对于 IE8 和 IE9：设置<code><a href="http://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx">filter</a>: alpha(opacity=0);</code>并且明确指定{{cssxref("background-color")}}而不是<a href="/en-US/docs/Web/CSS/color_value#transparent_keyword"><code>transparent</code></a></li>
-</ul>
+- 仅对于 IE9：
 
-<h3 id="Safari手机版">Safari 手机版</h3>
+  - 设置`{{cssxref("background-color")}}: rgba(0,0,0,0)`
+  - 设置`{{cssxref("opacity")}}: 0` 并且明确指定{{cssxref("background-color")}}而不是[`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>safari 手机版会有一个 bug，当点击事件不是绑定在交互式的元素上（比如说 HTML 的 div），并且也没有直接的事件监听器绑定在他们自身。可以戳 <a href="http://jsfiddle.net/cvrhulu/k9t0sdnf/show/">链接</a> 查看演示。也可以看 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6">Safari 的可点击元素</a> 和 <a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7">点击元素的定义</a>.</p>
+- 对于 IE8 和 IE9：设置`filter: alpha(opacity=0);`并且明确指定{{cssxref("background-color")}}而不是[`transparent`](/en-US/docs/Web/CSS/color_value#transparent_keyword)
 
-<p>解决方法如下：</p>
+### Safari 手机版
 
-<ul>
- <li>为其元素或者祖先元素，添加 cursor: pointer 的样式，使元素具有交互式点击</li>
- <li>为需要交互式点击的元素添加<code>onclick="void(0)"的属性，但并不包括 body 元素</code></li>
- <li><code>使用可点击元素如&lt;a&gt;,代替不可交互式元素如 div</code></li>
- <li>不使用 click 的事件委托。</li>
-</ul>
+safari 手机版会有一个 bug，当点击事件不是绑定在交互式的元素上（比如说 HTML 的 div），并且也没有直接的事件监听器绑定在他们自身。可以戳 [链接](http://jsfiddle.net/cvrhulu/k9t0sdnf/show/) 查看演示。也可以看 [Safari 的可点击元素](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW6) 和 [点击元素的定义](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safariwebcontent/HandlingEvents/HandlingEvents.html#//apple_ref/doc/uid/TP40006511-SW7).
 
-<p>Safari 手机版里，以下元素不会受到上述 bug 的影响：</p>
+解决方法如下：
 
-<ul>
- <li>&lt;a&gt; 需要 href 链接</li>
- <li>&lt;area&gt; 需要 href</li>
- <li>&lt;button&gt;</li>
- <li>&lt;img&gt;</li>
- <li>&lt;input&gt;</li>
- <li>&lt;label&gt; 需要与 form 控制器连接</li>
- <li>这份清单并不完整，你可以帮助 MDN 做扩展</li>
-</ul>
+- 为其元素或者祖先元素，添加 cursor: pointer 的样式，使元素具有交互式点击
+- 为需要交互式点击的元素添加`onclick="void(0)"的属性，但并不包括 body 元素`
+- `使用可点击元素如<a>,代替不可交互式元素如 div`
+- 不使用 click 的事件委托。
 
-<h2 id="规范">规范</h2>
+Safari 手机版里，以下元素不会受到上述 bug 的影响：
+
+- \<a> 需要 href 链接
+- \<area> 需要 href
+- \<button>
+- \<img>
+- \<input>
+- \<label> 需要与 form 控制器连接
+- 这份清单并不完整，你可以帮助 MDN 做扩展
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.click_event")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("mousemove")}}</li>
- <li>{{event("click")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mouseover")}}</li>
- <li>{{event("mouseout")}}</li>
- <li>{{event("mouseenter")}}</li>
- <li>{{event("mouseleave")}}</li>
- <li>{{event("contextmenu")}}</li>
-</ul>
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("mousemove")}}
+- {{event("click")}}
+- {{event("dblclick")}}
+- {{event("mouseover")}}
+- {{event("mouseout")}}
+- {{event("mouseenter")}}
+- {{event("mouseleave")}}
+- {{event("contextmenu")}}

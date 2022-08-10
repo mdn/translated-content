@@ -3,47 +3,42 @@ title: WebGLActiveInfo
 slug: Web/API/WebGLActiveInfo
 translation_of: Web/API/WebGLActiveInfo
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLActiveInfo</strong>是<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，并且代表了调用 {{domxref("WebGLRenderingContext.getActiveAttrib()")}} 和{{domxref("WebGLRenderingContext.getActiveUniform()")}} 这两个方法后传回的信息。</p>
+**WebGLActiveInfo**是[WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，并且代表了调用 {{domxref("WebGLRenderingContext.getActiveAttrib()")}} 和{{domxref("WebGLRenderingContext.getActiveUniform()")}} 这两个方法后传回的信息。
 
-<h2 id="属性值">属性值</h2>
+## 属性值
 
-<dl>
- <dt>{{domxref("WebGLActiveInfo.name")}}</dt>
- <dd>请求变量的只读名称。</dd>
- <dt>{{domxref("WebGLActiveInfo.size")}}</dt>
- <dd>请求变量的只读尺寸。</dd>
- <dt>{{domxref("WebGLActiveInfo.type")}}</dt>
- <dd>请求变量的只读类型。</dd>
-</dl>
+- {{domxref("WebGLActiveInfo.name")}}
+  - : 请求变量的只读名称。
+- {{domxref("WebGLActiveInfo.size")}}
+  - : 请求变量的只读尺寸。
+- {{domxref("WebGLActiveInfo.type")}}
+  - : 请求变量的只读类型。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><code>WebGLActiveInfo</code> 对象可以通过以下方式返回：</p>
+`WebGLActiveInfo` 对象可以通过以下方式返回：
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}} </li>
- <li>{{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
 
-<pre class="brush: js">WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
+```js
+WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
 WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
 WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLActiveInfo.WebGLActiveInfo")}}</p>
+{{Compat("api.WebGLActiveInfo.WebGLActiveInfo")}}
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}

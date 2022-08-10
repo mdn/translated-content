@@ -10,59 +10,50 @@ tags:
   - 方法
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>{{domxref("WorkerGlobalScope")}} 接口的<code><strong>importScripts()</strong></code> 方法将一个或多个脚本同步导入到工作者的作用域中。</p>
+{{domxref("WorkerGlobalScope")}} 接口的**`importScripts()`** 方法将一个或多个脚本同步导入到工作者的作用域中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);</pre>
+```js
+self.importScripts('foo.js');
+self.importScripts('foo.js', 'bar.js', ...);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>{{domxref("DOMString")}} 对象的一个逗号分隔列表，表示要导入的脚本。</p>
+{{domxref("DOMString")}} 对象的一个逗号分隔列表，表示要导入的脚本。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><em>无。</em></p>
+_无。_
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">异常</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NetworkError</code></td>
-   <td>要导入的脚本不具有有效的 JavaScript MIME 类型（有效的类型如 <code>text/javascript</code>）。</td>
-  </tr>
- </tbody>
-</table>
+| 异常           | 描述                                                                              |
+| -------------- | --------------------------------------------------------------------------------- |
+| `NetworkError` | 要导入的脚本不具有有效的 JavaScript MIME 类型（有效的类型如 `text/javascript`）。 |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>如果您在一个名为 foo.js 的单独脚本中编写了一些您想在 worker.js 中使用的功能，则可以使用以下行导入它：</p>
+如果您在一个名为 foo.js 的单独脚本中编写了一些您想在 worker.js 中使用的功能，则可以使用以下行导入它：
 
-<pre class="brush: js">importScripts('foo.js');</pre>
+```js
+importScripts('foo.js');
+```
 
-<p><code>importScripts()</code> 和 <code>self.importScripts()</code> 实际上是等效的 — 都表示从工作者的内部范围内调用的 <code>importScripts()</code>。</p>
+`importScripts()` 和 `self.importScripts()` 实际上是等效的 — 都表示从工作者的内部范围内调用的 `importScripts()`。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>{{domxref("WorkerGlobalScope")}}</li>
- <li><a href="/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web workers</a></li>
-</ul>
+- {{domxref("WorkerGlobalScope")}}
+- [Using Web workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

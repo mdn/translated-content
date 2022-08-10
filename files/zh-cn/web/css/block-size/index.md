@@ -3,22 +3,16 @@ title: 块级尺寸
 slug: Web/CSS/block-size
 translation_of: Web/CSS/block-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}CSS 的 block-size 属性定义了元素区块的水平宽度和垂直高度，也就是{{cssxref("width")}}或{{cssxref("height")}}属性，它们的大小取决于写入模式，即{{cssxref("writing-mode")}}的值。{{EmbedInteractiveExample("pages/css/block-size.html")}}
 
-<div>CSS 的 block-size 属性定义了元素区块的水平宽度和垂直高度，也就是{{cssxref("width")}}或{{cssxref("height")}}属性，它们的大小取决于写入模式，即{{cssxref("writing-mode")}}的值。</div>
+## 语句
 
-<div>{{EmbedInteractiveExample("pages/css/block-size.html")}} </div>
-
-<div> </div>
-
-
-<h2 id="语句">语句</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 block-size: 300px;
 block-size: 25em;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 block-size: 75%;
 
 /* Keyword values */
@@ -33,49 +27,50 @@ block-size: auto;
 /* Global values */
 block-size: inherit;
 block-size: initial;
-block-size: unset;If the writing mode is vertically oriented, the value of <code style="font-size: 1rem; letter-spacing: -0.00278rem;">block-size</code> relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
-</pre>
+block-size: unset;If the writing mode is vertically oriented, the value of block-size relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
+```
 
-<p>如果写入模式为垂直方向，block-size 的值与元素的宽度有关，否则取决于元素的高度。相关的属性是定义了元素的其它大小的{{cssxref("inline-size")}}。</p>
+如果写入模式为垂直方向，block-size 的值与元素的宽度有关，否则取决于元素的高度。相关的属性是定义了元素的其它大小的{{cssxref("inline-size")}}。
 
-<h2 id="语句_2">语句</h2>
+## 语句
 
-<h3 id="值">值</h3>
+### 值
 
-<p> <code>block-size</code> <code>属性的值是</code>p{{cssxref("width")}} 属性与 {{cssxref("height")}} 属性的值的结合。</p>
+`block-size` `属性的值是`p{{cssxref("width")}} 属性与 {{cssxref("height")}} 属性的值的结合。
 
-<h3 id="正式语句">正式语句</h3>
+### 正式语句
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-</pre>
+```html
+<p class="exampleText">Example text</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exampleText {
+```css
+.exampleText {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 200px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性 </h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.block-size")}}</p>
+{{Compat("css.properties.block-size")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
+- {{cssxref("writing-mode")}}

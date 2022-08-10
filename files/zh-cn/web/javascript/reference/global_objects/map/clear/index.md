@@ -12,28 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/clear
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 browser-compat: javascript.builtins.Map.clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>clear()</code> 方法会移除 Map 对象中的所有元素。</p>
+`clear()` 方法会移除 Map 对象中的所有元素。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
+## 语法
 
+```plain
+myMap.clear();
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><em>myMap</em>.clear();</code>
-</pre>
+{{jsxref("undefined")}}.
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>{{jsxref("undefined")}}.</p>
+### 调用`clear`方法
 
-<h2 id="示例">示例</h2>
-
-<h3 id="调用clear方法">调用<code>clear</code>方法</h3>
-
-<pre class="brush: js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("bar", "baz");
 myMap.set(1, "foo");
 
@@ -44,18 +44,16 @@ myMap.clear();
 
 myMap.size;       // 0
 myMap.has("bar")  // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

@@ -7,62 +7,57 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>style</code>元素元素样式表直接在 SVG 内容中间嵌入。SVG 的<code>style</code>元素的属性与 HTML 中的相应的元素并无二致（请阅读 HTML 的 {{HTMLElement("style")}} 元素）。</p>
+`style`元素元素样式表直接在 SVG 内容中间嵌入。SVG 的`style`元素的属性与 HTML 中的相应的元素并无二致（请阅读 HTML 的 {{HTMLElement("style")}} 元素）。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
-    /* &lt;![CDATA[ */
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* <![CDATA[ */
     circle {
       fill: orange;
       stroke: black;
       stroke-width: 10px; // Note that the value of a pixel depend on the viewBox
     }
-    /* ]]&gt; */
-  &lt;/style&gt;
+    /* ]]> */
+  </style>
 
-  &lt;circle cx="50" cy="50" r="40" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="50" cy="50" r="40" />
+</svg>
+```
 
-<p>示例输出</p>
+示例输出
 
-<p>{{EmbedLiveSample("Example",150,165)}}</p>
+{{EmbedLiveSample("Example",150,165)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("media")}}</li>
- <li>{{SVGAttr("title")}}</li>
-</ul>
+- {{SVGAttr("type")}}
+- {{SVGAttr("media")}}
+- {{SVGAttr("title")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGStyleElement">SVGStyleElement</a></code>接口。</p>
+该元素实现了[`SVGStyleElement`](/en-US/DOM/SVGStyleElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.style")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/HTML/Element/style">HTML 中的<code>&lt;style&gt;</code>元素</a></li>
-</ul>
+- [HTML 中的`<style>`元素](/en-US/HTML/Element/style)

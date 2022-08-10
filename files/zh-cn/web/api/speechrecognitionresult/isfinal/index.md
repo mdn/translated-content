@@ -9,21 +9,24 @@ tags:
   - 语音识别
 translation_of: Web/API/SpeechRecognitionResult/isFinal
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>{{domxref("SpeechRecognitionResult")}} 接口的<code><strong>isFinal</strong></code>只读属性是一个布尔值，如果值是<code>true</code>, 则表示这是最后一次返回的结果 (语音识别结束)。如果为<code>false</code>, 表示识别尚未结束，这只是一个临时的数据，有可能会在稍后更新。</p>
+{{domxref("SpeechRecognitionResult")}} 接口的**`isFinal`**只读属性是一个布尔值，如果值是`true`, 则表示这是最后一次返回的结果 (语音识别结束)。如果为`false`, 表示识别尚未结束，这只是一个临时的数据，有可能会在稍后更新。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var myIsFinal = speechRecognitionResultInstance.isFinal;</pre>
+```plain
+var myIsFinal = speechRecognitionResultInstance.isFinal;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("Boolean")}} </p>
+{{domxref("Boolean")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // SpeechRecognitionResultList 对象包含 SpeechRecognitionResult 对象。
   // 它有一个 getter，所以它可以像数组一样被访问
@@ -37,18 +40,17 @@ translation_of: Web/API/SpeechRecognitionResult/isFinal
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.SpeechRecognitionResult.isFinal")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

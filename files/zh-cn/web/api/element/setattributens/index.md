@@ -4,34 +4,34 @@ slug: Web/API/Element/setAttributeNS
 tags:
   - Element.setAttributeNS()
   - SVG
-  - 'http://svgjs.com/'
+  - http://svgjs.com/
 translation_of: Web/API/Element/setAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNS</code> 添加一个新属性或更改具有给定命名空间和名称的一个属性的值。</p>
+`setAttributeNS` 添加一个新属性或更改具有给定命名空间和名称的一个属性的值。
 
-<h2 id="Syntax">句法</h2>
+## 句法
 
-<pre class="eval"><em>element</em>.setAttributeNS(<em>namespace</em>,<em>name</em>,<em>value</em>)
-</pre>
+```plain
+element.setAttributeNS(namespace,name,value)
+```
 
-<ul>
- <li><code>namespace</code> 是指定属性的命名空间的一个字符串。</li>
- <li><code>name</code> 是标识要设置的属性的一个字符串。</li>
- <li><code>value</code> 是新属性的所需字符串值。</li>
-</ul>
+- `namespace` 是指定属性的命名空间的一个字符串。
+- `name` 是标识要设置的属性的一个字符串。
+- `value` 是新属性的所需字符串值。
 
-<h2 id="Example">范例</h2>
+## 范例
 
-<pre class="eval">let d = document.getElementById("d1");
+```plain
+let d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
-</pre>
+```
 
-<h2 id="Notes">注释</h2>
+## 注释
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">DOM Level 2 Core: setAttributeNS</a></p>
+[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)

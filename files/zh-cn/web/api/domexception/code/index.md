@@ -3,26 +3,24 @@ title: DOMException.code
 slug: Web/API/DOMException/code
 translation_of: Web/API/DOMException/code
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>{{domxref("DOMException")}} 接口中的 <strong><code>code</code></strong> 是一个只读属性，他返回了一个包含了 <a href="/zh-CN/docs/Web/API/DOMException#Error_names">错误常量</a> 的<code>简短</code>数字 ，或者在没有匹配到时返回 <code>0</code> 。这个字段产生于历史原因，在新的 DOM 异常中已停止使用，改为在 {{domxref("DOMException.name")}} 属性中推送此信息。</p>
+{{domxref("DOMException")}} 接口中的 **`code`** 是一个只读属性，他返回了一个包含了 [错误常量](/zh-CN/docs/Web/API/DOMException#Error_names) 的`简短`数字 ，或者在没有匹配到时返回 `0` 。这个字段产生于历史原因，在新的 DOM 异常中已停止使用，改为在 {{domxref("DOMException.name")}} 属性中推送此信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var domExceptionCode = domExceptionInstance.code;
-</pre>
+```plain
+var domExceptionCode = domExceptionInstance.code;
+```
 
-<dl>
-</dl>
+### 值
 
-<h3 id="值">值</h3>
+一个数字
 
-<p>一个数字</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.DOMException.code")}}</p>
+{{Compat("api.DOMException.code")}}

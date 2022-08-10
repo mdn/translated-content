@@ -11,23 +11,19 @@ translation_of: Web/API/DeviceMotionEventAcceleration
 translation_of_original: Web/API/DeviceAcceleration
 original_slug: Web/API/DeviceAcceleration
 ---
-<div>{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}</div>
+{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
-<div> </div>
+设备加速对象可以提供有关设备沿三个轴（x、y、z）的加速度的信息。
 
-<p>设备加速对象可以提供有关设备沿三个轴（x、y、z）的加速度的信息。</p>
+## 属性
 
-<h2 id="属性">属性</h2>
+- {{domxref("DeviceAcceleration.x")}} {{readonlyInline}}
+  - : 沿 X 轴的加速度量（只读）
+- {{domxref("DeviceAcceleration.y")}} {{readonlyInline}}
+  - : 沿 Y 轴的加速度量（只读）
+- {{domxref("DeviceAcceleration.z")}} {{readonlyInline}}
+  - : 沿 Z 轴的加速度量（只读）
 
-<dl>
- <dt>{{domxref("DeviceAcceleration.x")}} {{readonlyInline}}</dt>
- <dd>沿 X 轴的加速度量（只读）</dd>
- <dt>{{domxref("DeviceAcceleration.y")}} {{readonlyInline}}</dt>
- <dd>沿 Y 轴的加速度量（只读）</dd>
- <dt>{{domxref("DeviceAcceleration.z")}} {{readonlyInline}}</dt>
- <dd>沿 Z 轴的加速度量（只读）</dd>
-</dl>
-
-<h2 id="Specifications">说明</h2>
+## 说明
 
 {{Specifications}}

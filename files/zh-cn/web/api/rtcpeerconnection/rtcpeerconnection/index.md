@@ -3,42 +3,40 @@ title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><strong><code>RTCPeerConnection()</code></strong> 构造函数，返回一个新建的 {{domxref("RTCPeerConnection")}} 实例，它代表了本地端机器与远端机器的一条连接。</p>
+**`RTCPeerConnection()`** 构造函数，返回一个新建的 {{domxref("RTCPeerConnection")}} 实例，它代表了本地端机器与远端机器的一条连接。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">pc = new RTCPeerConnection([<em>configuration</em>]);</pre>
+```plain
+pc = new RTCPeerConnection([configuration]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>configuration</code> {{optional_inline}}</dt>
- <dd>一个<a href="#RTCConfiguration_dictionary"><code>RTCConfiguration</code> dictionary</a> 提供了一条新建连接的可选参数。</dd>
-</dl>
+- `configuration` {{optional_inline}}
+  - : 一个[`RTCConfiguration` dictionary](#RTCConfiguration_dictionary) 提供了一条新建连接的可选参数。
 
-<h3 id="RTCConfiguration_dictionary">RTCConfiguration dictionary</h3>
+### RTCConfiguration dictionary
 
-<p>{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}</p>
+{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新生成的 {{domxref("RTCPeerConnection")}} 对象，如果指定了配置信息，它按照指定配置进行配置，否则，它将按照基本配置进行配置。</p>
+一个新生成的 {{domxref("RTCPeerConnection")}} 对象，如果指定了配置信息，它按照指定配置进行配置，否则，它将按照基本配置进行配置。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="引申阅读">引申阅读</h2>
+## 引申阅读
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Architecture">WebRTC architecture overview</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Architecture)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}

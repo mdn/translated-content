@@ -10,62 +10,65 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>propertyIsEnumerable()</strong></code> 方法返回一个布尔值，表示指定的属性是否可枚举。</p>
+**`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否可枚举。
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}
 
+## 语法
 
+```plain
+obj.propertyIsEnumerable(prop)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+- `prop`
+  - : 需要测试的属性名。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>需要测试的属性名。</dd>
-</dl>
+用来表示指定的属性名是否可枚举的{{jsxref("Boolean", "布尔值")}}。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>用来表示指定的属性名是否可枚举的{{jsxref("Boolean", "布尔值")}}。</p>
+每个对象都有一个 `propertyIsEnumerable` 方法。此方法可以确定对象中指定的属性是否可以被 {{jsxref("Statements/for...in", "for...in")}} 循环枚举，但是通过原型链继承的属性除外。如果对象没有指定的属性，则此方法返回 `false`。
 
-<h2 id="描述">描述</h2>
+## 例子
 
-<p>每个对象都有一个 <code>propertyIsEnumerable</code> 方法。此方法可以确定对象中指定的属性是否可以被 {{jsxref("Statements/for...in", "for...in")}} 循环枚举，但是通过原型链继承的属性除外。如果对象没有指定的属性，则此方法返回 <code>false</code>。</p>
+### `propertyIsEnumerable` 方法的基本用法
 
-<h2 id="例子">例子</h2>
+下面的例子演示了 `propertyIsEnumerable` 方法在普通对象和数组上的基本用法：
 
-<h3 id="propertyIsEnumerable_方法的基本用法"><code>propertyIsEnumerable</code> 方法的基本用法</h3>
-
-<p>下面的例子演示了 <code>propertyIsEnumerable</code> 方法在普通对象和数组上的基本用法：</p>
-
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 var a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
 o.propertyIsEnumerable('prop'); // 返回 true
-a.propertyIsEnumerable(0);      // 返回 true</pre>
+a.propertyIsEnumerable(0);      // 返回 true
+```
 
-<h3 id="用户自定义对象和内置对象">用户自定义对象和内置对象</h3>
+### 用户自定义对象和内置对象
 
-<p>下面的例子演示了用户自定义对象和内置对象上属性可枚举性的区别。</p>
+下面的例子演示了用户自定义对象和内置对象上属性可枚举性的区别。
 
-<pre class="brush: js">var a = ['is enumerable'];
+```js
+var a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);        // 返回 true
 a.propertyIsEnumerable('length'); // 返回 false
 
 Math.propertyIsEnumerable('random'); // 返回 false
-this.propertyIsEnumerable('Math');   // 返回 false</pre>
+this.propertyIsEnumerable('Math');   // 返回 false
+```
 
-<h3 id="自身属性和继承属性">自身属性和继承属性</h3>
+### 自身属性和继承属性
 
-<pre class="brush: js">var a = [];
+```js
+var a = [];
 a.propertyIsEnumerable('constructor'); // 返回 false
 
 function firstConstructor() {
@@ -96,21 +99,20 @@ o.propertyIsEnumerable('property');          // 返回 true
 // (尽管最后两个在 for-in 循环中可以被循环出来)。
 o.propertyIsEnumerable('prototype');   // 返回 false (根据 JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // 返回 false
-o.propertyIsEnumerable('firstMethod'); // 返回 false</pre>
+o.propertyIsEnumerable('firstMethod'); // 返回 false
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- [属性的可枚举性和所有权](/zh-CN/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.defineProperty()")}}

@@ -3,49 +3,50 @@ title: WebAssembly.compile()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p><strong><code>WebAssembly.compile()</code></strong> 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）</p>
+**`WebAssembly.compile()`** 方法编译 WebAssembly 二进制代码到一个{{jsxref("WebAssembly.Module")}} 对象。如果在实例化之前有必要去编译一个模块，那么这个方法是有用的（否则，将会使用{{jsxref("WebAssembly.instantiate()")}} 方法）
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Promise&lt;WebAssembly.Module&gt; WebAssembly.compile(bufferSource);</pre>
+```plain
+Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>bufferSource</em></dt>
- <dd>一个包含你想编译的 wasm 模块二进制代码的 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>(类型数组) or <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(数组缓冲区)</dd>
-</dl>
+- _bufferSource_
+  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays)(类型数组) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个解析为 {{jsxref("WebAssembly.Module")}} 的<code>Promise</code> 对象。</p>
+一个解析为 {{jsxref("WebAssembly.Module")}} 的`Promise` 对象。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li>如果 <code>bufferSource</code> 不是一个 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>, 将抛出一个 {{jsxref("TypeError")}} 。</li>
- <li>如果编译失败 promise 将会 reject 一个 {{jsxref("WebAssembly.CompileError")}}。</li>
-</ul>
+- 如果 `bufferSource` 不是一个 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
+- 如果编译失败 promise 将会 reject 一个 {{jsxref("WebAssembly.CompileError")}}。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子 (查看 GitHub 上的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html">index-compile.html</a> 例子，并且也能 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html">查看运行效果</a>) 使用 <code>compile()</code> 方法编译加载进来的 simple.wasm 二进制代码并且使用 <a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a> 发送给一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">worker</a>。</p>
+下面的例子 (查看 GitHub 上的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)) 使用 `compile()` 方法编译加载进来的 simple.wasm 二进制代码并且使用 [postMessage()](/en-US/docs/Web/API/Worker/postMessage) 发送给一个 [worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)。
 
-<pre class="brush: js">var worker = new Worker("wasm_worker.js");
+```js
+var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =&gt;
+fetch('simple.wasm').then(response =>
   response.arrayBuffer()
-).then(bytes =&gt;
+).then(bytes =>
   WebAssembly.compile(bytes)
-).then(mod =&gt;
+).then(mod =>
   worker.postMessage(mod)
-);</pre>
+);
+```
 
-<p>在线程中 (查看 <code><a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js">wasm_worker.js</a></code>) 我们定义了一个导入对象共模块使用，然后设置了一个事件处理函数来接收主线程发送过来的模块。当模块被接收之后，我们使用{{jsxref("WebAssembly.Instantiate()")}} 方法创建了一个实例，调用从它里面导出的一个方法，接下来展示了我们可以用 {{jsxref("WebAssembly.Module/exports", "WebAssembly.Module.exports")}} 属性来调用模块上返回的可用信息。</p>
+在线程中 (查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)) 我们定义了一个导入对象共模块使用，然后设置了一个事件处理函数来接收主线程发送过来的模块。当模块被接收之后，我们使用{{jsxref("WebAssembly.Instantiate()")}} 方法创建了一个实例，调用从它里面导出的一个方法，接下来展示了我们可以用 {{jsxref("WebAssembly.Module/exports", "WebAssembly.Module.exports")}} 属性来调用模块上返回的可用信息。
 
-<pre class="brush: js">var importObject = {
+```js
+var importObject = {
   imports: {
     imported_func: function(arg) {
       console.log(arg);
@@ -63,24 +64,19 @@ onmessage = function(e) {
 
   var exports = WebAssembly.Module.exports(mod);
   console.log(exports[0]);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

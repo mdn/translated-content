@@ -9,19 +9,20 @@ tags:
   - 集合
 translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
-<p>这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。</p>
+这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。
 
-<h2 id="映射">映射</h2>
+## 映射
 
-<h3 id="Map对象"><code>Map</code>对象</h3>
+### `Map`对象
 
-<p>ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一个值。一个{{jsxref("Map")}}对象就是一个简单的键值对映射集合，可以按照数据插入时的顺序遍历所有的元素。</p>
+ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一个值。一个{{jsxref("Map")}}对象就是一个简单的键值对映射集合，可以按照数据插入时的顺序遍历所有的元素。
 
-<p>下面的代码演示了使用<code>Map</code>进行的一些基本操作。请参考{{jsxref("Map")}}以获取更多的样例和完整的 API。你可以使用{{jsxref("Statements/for...of","for...of")}}循环来得到所有的<code>[key, value]</code>。</p>
+下面的代码演示了使用`Map`进行的一些基本操作。请参考{{jsxref("Map")}}以获取更多的样例和完整的 API。你可以使用{{jsxref("Statements/for...of","for...of")}}循环来得到所有的`[key, value]`。
 
-<pre class="brush: js">var sayings = new Map();
+```js
+var sayings = new Map();
 sayings.set('dog', 'woof');
 sayings.set('cat', 'meow');
 sayings.set('elephant', 'toot');
@@ -38,38 +39,36 @@ for (var [key, value] of sayings) {
 // "elephant goes toot"
 
 sayings.clear();
-sayings.size; // 0</pre>
+sayings.size; // 0
+```
 
-<h3 id="Object和Map的比较"><code>Object</code>和<code>Map</code>的比较</h3>
+### `Object`和`Map`的比较
 
-<p>一般地，{{jsxref("Object", "objects", "", 1)}}会被用于将字符串类型映射到数值。<code>Object</code>允许设置键值对、根据键获取值、删除键、检测某个键是否存在。而<code>Map</code>具有更多的优势。</p>
+一般地，{{jsxref("Object", "objects", "", 1)}}会被用于将字符串类型映射到数值。`Object`允许设置键值对、根据键获取值、删除键、检测某个键是否存在。而`Map`具有更多的优势。
 
-<ul>
- <li><code>Object</code>的键均为<code>Strings</code>类型，在<code>Map</code>里键可以是任意类型。</li>
- <li>必须手动计算<code>Object</code>的尺寸，但是可以很容易地获取使用<code>Map</code>的尺寸。</li>
- <li><code>Map</code>的遍历遵循元素的插入顺序。</li>
- <li><code>Object</code>有原型，所以映射中有一些缺省的键。（可以用 <code>map = Object.create(null) 回避</code>）。</li>
-</ul>
+- `Object`的键均为`Strings`类型，在`Map`里键可以是任意类型。
+- 必须手动计算`Object`的尺寸，但是可以很容易地获取使用`Map`的尺寸。
+- `Map`的遍历遵循元素的插入顺序。
+- `Object`有原型，所以映射中有一些缺省的键。（可以用 `map = Object.create(null) 回避`）。
 
-<p>这三条提示可以帮你决定用<code>Map</code>还是<code>Object</code>：</p>
+这三条提示可以帮你决定用`Map`还是`Object`：
 
-<ul>
- <li>如果键在运行时才能知道，或者所有的键类型相同，所有的值类型相同，那就使用<code>Map</code>。</li>
- <li>如果需要将原始值存储为键，则使用<code>Map</code>，因为<code>Object</code>将每个键视为字符串，不管它是一个数字值、布尔值还是任何其他原始值。</li>
- <li>如果需要对个别元素进行操作，使用<code>Object</code>。</li>
-</ul>
+- 如果键在运行时才能知道，或者所有的键类型相同，所有的值类型相同，那就使用`Map`。
+- 如果需要将原始值存储为键，则使用`Map`，因为`Object`将每个键视为字符串，不管它是一个数字值、布尔值还是任何其他原始值。
+- 如果需要对个别元素进行操作，使用`Object`。
 
-<h3 id="WeakMap对象"><code>WeakMap</code>对象</h3>
+### `WeakMap`对象
 
-<p>{{jsxref("WeakMap")}}对象也是键值对的集合。它的<strong>键必须是对象类型</strong>，值可以是任意类型。它的键被弱保持，也就是说，当其键所指对象没有其他地方引用的时候，它会被 GC 回收掉。<code>WeakMap</code>提供的接口与<code>Map</code>相同。</p>
+{{jsxref("WeakMap")}}对象也是键值对的集合。它的**键必须是对象类型**，值可以是任意类型。它的键被弱保持，也就是说，当其键所指对象没有其他地方引用的时候，它会被 GC 回收掉。`WeakMap`提供的接口与`Map`相同。
 
-<p>与<code>Map</code>对象不同的是，<code>WeakMap</code>的键是不可枚举的。不提供列出其键的方法。列表是否存在取决于垃圾回收器的状态，是不可预知的。</p>
+与`Map`对象不同的是，`WeakMap`的键是不可枚举的。不提供列出其键的方法。列表是否存在取决于垃圾回收器的状态，是不可预知的。
 
-<p>可以在"Why <em>Weak</em>Map?"{{jsxref("WeakMap")}}查看更多信息和示例。</p>
+可以在"Why *Weak*Map?"{{jsxref("WeakMap")}}查看更多信息和示例。
 
-<p><code>WeakMap</code>对象的一个用例是存储一个对象的私有数据或隐藏实施细节。Nick Fitzgerald 的博文<a href="http://fitzgeraldnick.com/weblog/53/">"Hiding Implementation Details with ECMAScript 6 WeakMaps"</a>提供了一个例子。对象内部的私有数据和方法被存储在<code>WeakMap</code>类型的<code>privates</code>变量中。所有暴露出的原型和情况都是公开的，而其他内容都是外界不可访问的，因为模块并未导出<code>privates</code>对象。</p>
+`WeakMap`对象的一个用例是存储一个对象的私有数据或隐藏实施细节。Nick Fitzgerald 的博文["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/)提供了一个例子。对象内部的私有数据和方法被存储在`WeakMap`类型的`privates`变量中。所有暴露出的原型和情况都是公开的，而其他内容都是外界不可访问的，因为模块并未导出`privates`对象。
 
-<pre class="brush: js">const privates = new WeakMap();
+```js
+const privates = new WeakMap();
 
 function Public() {
   const me = {
@@ -84,17 +83,18 @@ Public.prototype.method = function () {
 };
 
 module.exports = Public;
-</pre>
+```
 
-<h2 id="集合">集合</h2>
+## 集合
 
-<h3 id="Set对象"><code>Set</code>对象</h3>
+### `Set`对象
 
-<p>{{jsxref("Set")}}对象是一组值的集合，这些值是不重复的，可以按照添加顺序来遍历。</p>
+{{jsxref("Set")}}对象是一组值的集合，这些值是不重复的，可以按照添加顺序来遍历。
 
-<p>这里演示了<code>Set</code>的基本操作，更多示例和完整 API 可以参考{{jsxref("Set")}}。</p>
+这里演示了`Set`的基本操作，更多示例和完整 API 可以参考{{jsxref("Set")}}。
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add("some text");
 mySet.add("foo");
@@ -106,50 +106,45 @@ mySet.size; // 2
 for (let item of mySet) console.log(item);
 // 1
 // "some text"
-</pre>
+```
 
-<h3 id="数组和集合的转换">数组和集合的转换</h3>
+### 数组和集合的转换
 
-<p>可以使用{{jsxref("Array.from")}}或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">展开操作符</a>来完成集合到数组的转换。同样，<code>Set</code>的构造器接受数组作为参数，可以完成从<code>Array</code>到<code>Set</code>的转换。需要重申的是，<code>Set</code>对象中的值不重复，所以数组转换为集合时，所有重复值将会被删除。</p>
+可以使用{{jsxref("Array.from")}}或[展开操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)来完成集合到数组的转换。同样，`Set`的构造器接受数组作为参数，可以完成从`Array`到`Set`的转换。需要重申的是，`Set`对象中的值不重复，所以数组转换为集合时，所有重复值将会被删除。
 
-<pre class="brush: js">Array.from(mySet);
+```js
+Array.from(mySet);
 [...mySet2];
 
 mySet2 = new Set([1,2,3,4]);
-</pre>
+```
 
-<h3 id="Array和Set的对比"><code>Array</code>和<code>Set</code>的对比</h3>
+### `Array`和`Set`的对比
 
-<p>一般情况下，在 JavaScript 中使用数组来存储一组元素，而新的集合对象有这些优势：</p>
+一般情况下，在 JavaScript 中使用数组来存储一组元素，而新的集合对象有这些优势：
 
-<ul>
- <li>数组中用于判断元素是否存在的{{jsxref("Array.indexOf", "indexOf")}} 函数效率低下。</li>
- <li><code>Set</code>对象允许根据值删除元素，而数组中必须使用基于下标的 splice 方法。</li>
- <li>数组的<code>indexOf</code>方法无法找到{{jsxref("NaN")}}值。</li>
- <li><code>Set</code>对象存储不重复的值，所以不需要手动处理包含重复值的情况。</li>
-</ul>
+- 数组中用于判断元素是否存在的{{jsxref("Array.indexOf", "indexOf")}} 函数效率低下。
+- `Set`对象允许根据值删除元素，而数组中必须使用基于下标的 splice 方法。
+- 数组的`indexOf`方法无法找到{{jsxref("NaN")}}值。
+- `Set`对象存储不重复的值，所以不需要手动处理包含重复值的情况。
 
-<h3 id="WeakSet对象"><code>WeakSet</code>对象</h3>
+### `WeakSet`对象
 
-<p>{{jsxref("WeakSet")}}对象是一组对象的集合。<code>WeakSet</code>中的对象不重复且不可枚举。</p>
+{{jsxref("WeakSet")}}对象是一组对象的集合。`WeakSet`中的对象不重复且不可枚举。
 
-<p>与{{jsxref("Set")}}对象的主要区别有：</p>
+与{{jsxref("Set")}}对象的主要区别有：
 
-<ul>
- <li><code>WeakSets</code>中的值必须是对象类型，不可以是别的类型</li>
- <li><code>WeakSet</code>的“<em>weak</em>”指的是，对集合中的对象，如果不存在其他引用，那么该对象将可被垃圾回收。于是不存在一个当前可用对象组成的列表，所以<code>WeakSets</code>不可枚举</li>
-</ul>
+- `WeakSets`中的值必须是对象类型，不可以是别的类型
+- `WeakSet`的“_weak_”指的是，对集合中的对象，如果不存在其他引用，那么该对象将可被垃圾回收。于是不存在一个当前可用对象组成的列表，所以`WeakSets`不可枚举
 
-<p><code>WeakSet</code>的用例很有限，比如使用 DOM 元素作为键来追踪它们而不必担心内存泄漏。</p>
+`WeakSet`的用例很有限，比如使用 DOM 元素作为键来追踪它们而不必担心内存泄漏。
 
-<h2 id="Map的键和Set的值的等值判断"><code>Map</code>的键和<code>Set</code>的值的等值判断</h2>
+## `Map`的键和`Set`的值的等值判断
 
-<p><code>Map</code>的键和<code>Set</code>的值的等值判断都基于<a href="https://tc39.es/ecma262/#sec-samevaluezero">same-value-zero algorithm</a>：</p>
+`Map`的键和`Set`的值的等值判断都基于[same-value-zero algorithm](https://tc39.es/ecma262/#sec-samevaluezero)：
 
-<ul>
- <li>判断使用与<code>===</code>相似的规则。</li>
- <li><code>-0</code>和<code>+0</code>相等。</li>
- <li>{{jsxref("NaN")}}与自身相等（与<code>===</code>有所不同）。</li>
-</ul>
+- 判断使用与`===`相似的规则。
+- `-0`和`+0`相等。
+- {{jsxref("NaN")}}与自身相等（与`===`有所不同）。
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}

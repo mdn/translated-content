@@ -1,61 +1,58 @@
 ---
-title: 'WebGLRenderingContext.vertexAttrib[1234]f[v]()'
+title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
 translation_of: Web/API/WebGLRenderingContext/vertexAttrib
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p> <strong><code>WebGLRenderingContext.vertexAttrib[1234]f[v]()</code></strong> 是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的方法，可以为顶点 attibute 变量赋值。</p>
+**`WebGLRenderingContext.vertexAttrib[1234]f[v]()`** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的方法，可以为顶点 attibute 变量赋值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.vertexAttrib1f(<var>index</var>, <var>v0</var>);
-void <var>gl</var>.vertexAttrib2f(<var>index</var>, <var>v0</var>, <var>v1</var>);
-void <var>gl</var>.vertexAttrib3f(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>);
-void <var>gl</var>.vertexAttrib4f(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
+```plain
+void gl.vertexAttrib1f(index, v0);
+void gl.vertexAttrib2f(index, v0, v1);
+void gl.vertexAttrib3f(index, v0, v1, v2);
+void gl.vertexAttrib4f(index, v0, v1, v2, v3);
 
-void <var>gl</var>.vertexAttrib1fv(<var>index</var>, <var>value</var>);
-void <var>gl</var>.vertexAttrib2fv(<var>index</var>, <var>value</var>);
-void <var>gl</var>.vertexAttrib3fv(<var>index</var>, <var>value</var>);
-void <var>gl</var>.vertexAttrib4fv(<var>index</var>, <var>value</var>);
-</pre>
+void gl.vertexAttrib1fv(index, value);
+void gl.vertexAttrib2fv(index, value);
+void gl.vertexAttrib3fv(index, value);
+void gl.vertexAttrib4fv(index, value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>index</code></dt>
- <dd> {{domxref("GLuint")}} 类型，指定了待修改顶点 attribute 变量的存储位置。</dd>
- <dt><code>v0, v1, v2, v3</code></dt>
- <dd>浮点数类型{{jsxref("Number")}}，用于设置顶点 attibute 变量的各分量值。</dd>
- <dt><code>value</code></dt>
- <dd>
- <p>{{jsxref("Float32Array")}} 类型，用于设置顶点 attibute 变量的向量值。</p>
- </dd>
-</dl>
+- `index`
+  - : {{domxref("GLuint")}} 类型，指定了待修改顶点 attribute 变量的存储位置。
+- `v0, v1, v2, v3`
+  - : 浮点数类型{{jsxref("Number")}}，用于设置顶点 attibute 变量的各分量值。
+- `value`
+  - : {{jsxref("Float32Array")}} 类型，用于设置顶点 attibute 变量的向量值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无。</p>
+无。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">const a_foobar = gl.getAttribLocation(shaderProgram, 'foobar');
+```js
+const a_foobar = gl.getAttribLocation(shaderProgram, 'foobar');
 //either set each component individually:
 gl.vertexAttrib3f(a_foobar, 10.0, 5.0, 2.0);
 //or provide a Float32Array:
 const floatArray = new Float32Array([10.0, 5.0, 2.0]);
-gl.vertexAttrib3fv(a_foobar, floatArray);</pre>
+gl.vertexAttrib3fv(a_foobar, floatArray);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.vertexAttrib1f")}}</p>
+{{Compat("api.WebGLRenderingContext.vertexAttrib1f")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}

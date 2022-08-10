@@ -5,89 +5,86 @@ tags:
   - parseFloat()
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
-<div>
-<div>
-<div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
+{{jsSidebar("Objects")}}
 
-<p><strong><code>parseFloat()</code></strong> 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。</p>
+**`parseFloat()`** 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">parseFloat(<em>string)</em></pre>
+```plain
+parseFloat(string)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>string</code></dt>
- <dd>需要被解析成为浮点数的值。</dd>
-</dl>
+- `string`
+  - : 需要被解析成为浮点数的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。</p>
+给定值被解析成浮点数。如果给定值不能被转换成数值，则会返回 {{jsxref("NaN")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>parseFloat</code> 是个全局函数，不属于任何对象。</p>
+`parseFloat` 是个全局函数，不属于任何对象。
 
-<ul>
- <li>如果 <code>parseFloat</code> 在解析过程中遇到了正号（<code>+</code>）、负号（<code>-</code> U+002D HYPHEN-MINUS）、数字（<code>0</code>-<code>9</code>）、小数点（<code>.</code>）、或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。</li>
- <li>第二个小数点的出现也会使解析停止（在这之前的字符都会被解析）。</li>
- <li>参数首位和末位的空白符会被忽略。</li>
- <li>如果参数字符串的第一个字符不能被解析成为数字，<code>则</code> <code>parseFloat</code> 返回 <code>NaN</code>。</li>
- <li><code>parseFloat</code> 也可以解析并返回 {{jsxref("Infinity")}}。</li>
- <li><code>parseFloat</code> 解析 {{jsxref("BigInt")}} 为 {{jsxref("Number", "Numbers")}}, 丢失精度。因为末位 <code>n</code> 字符被丢弃。</li>
-</ul>
+- 如果 `parseFloat` 在解析过程中遇到了正号（`+`）、负号（`-` U+002D HYPHEN-MINUS）、数字（`0`-`9`）、小数点（`.`）、或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。
+- 第二个小数点的出现也会使解析停止（在这之前的字符都会被解析）。
+- 参数首位和末位的空白符会被忽略。
+- 如果参数字符串的第一个字符不能被解析成为数字，`则` `parseFloat` 返回 `NaN`。
+- `parseFloat` 也可以解析并返回 {{jsxref("Infinity")}}。
+- `parseFloat` 解析 {{jsxref("BigInt")}} 为 {{jsxref("Number", "Numbers")}}, 丢失精度。因为末位 `n` 字符被丢弃。
 
-<p>考虑使用 {{jsxref("Number", "Number(<em>value</em>)")}} 进行更严谨的解析，只要参数带有无效字符就会被转换为 {{jsxref("NaN")}} 。</p>
+考虑使用 {{jsxref("Number", "Number(<em>value</em>)")}} 进行更严谨的解析，只要参数带有无效字符就会被转换为 {{jsxref("NaN")}} 。
 
-<p><code>parseFloat</code> 也可以转换一个已经定义了 <code>toString</code> 或者 <code>valueOf</code> 方法的对象，它返回的值和在调用该方法的结果上调用 <code>parseFloat</code> 值相同。</p>
+`parseFloat` 也可以转换一个已经定义了 `toString` 或者 `valueOf` 方法的对象，它返回的值和在调用该方法的结果上调用 `parseFloat` 值相同。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="例子_parseFloat返回正常数字">例子：<code>parseFloat</code>返回正常数字</h3>
+### 例子：`parseFloat`返回正常数字
 
-<p>下面的例子都返回 <strong>3.14</strong></p>
+下面的例子都返回 **3.14**
 
-<pre class="brush: js">parseFloat(3.14);
+```js
+parseFloat(3.14);
 parseFloat('3.14');
 parseFloat('  3.14  ');
 parseFloat('314e-2');
 parseFloat('0.0314E+2');
 parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });</pre>
+parseFloat({ toString: function() { return "3.14" } });
+```
 
-<h3 id="parsefloat_返回_nan"><code>parseFloat</code> 返回 NaN</h3>
+### `parseFloat` 返回 NaN
 
-<p>下面的例子将返回<code>NaN</code></p>
+下面的例子将返回`NaN`
 
-<pre class="brush: js">parseFloat("FF2");
-</pre>
+```js
+parseFloat("FF2");
+```
 
-<h3 id="parseFloat_和_BigInt">parseFloat 和 BigInt</h3>
+### parseFloat 和 BigInt
 
-<p>以下例子均返回 <code>900719925474099300</code>，当整数太大以至于不能被转换时将失去精度。</p>
+以下例子均返回 `900719925474099300`，当整数太大以至于不能被转换时将失去精度。
 
-<pre class="brush: js">parseFloat(900719925474099267n);
-parseFloat('900719925474099267n');</pre>
+```js
+parseFloat(900719925474099267n);
+parseFloat('900719925474099267n');
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
-</ul>
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}

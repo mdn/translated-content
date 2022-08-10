@@ -3,49 +3,47 @@ title: Element.scroll()
 slug: Web/API/Element/scroll
 translation_of: Web/API/Element/scroll
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p> <strong><code>scroll()</code></strong> 方法是用于在给定的元素中滚动到某个特定坐标的 {{domxref("Element")}} 接口。</p>
+**`scroll()`** 方法是用于在给定的元素中滚动到某个特定坐标的 {{domxref("Element")}} 接口。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">element.scroll(<em>x-coord</em>, <em>y-coord</em>)
-element.scroll(<em>options</em>)
-</pre>
+```plain
+element.scroll(x-coord, y-coord)
+element.scroll(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>x-coord</code> 是指在元素左上方区域横轴方向上想要显示的像素。</li>
- <li><code>y-coord</code> 是指在元素左上方区域纵轴方向上想要显示的像素。</li>
-</ul>
+- `x-coord` 是指在元素左上方区域横轴方向上想要显示的像素。
+- `y-coord` 是指在元素左上方区域纵轴方向上想要显示的像素。
 
-<p>- or -</p>
+\- or -
 
-<ul>
- <li><code>options</code> 是一个 {{domxref("ScrollToOptions")}} 的字典。</li>
-</ul>
+- `options` 是一个 {{domxref("ScrollToOptions")}} 的字典。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush: js">// 在元素上方显示 1000 像素
+```js
+// 在元素上方显示 1000 像素
 element.scroll(0, 1000);
-</pre>
+```
 
-<p>使用 <code>options</code>:</p>
+使用 `options`:
 
-<pre class="brush: js">element.scroll({
+```js
+element.scroll({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Element.scroll")}}</p>
+{{Compat("api.Element.scroll")}}

@@ -8,139 +8,135 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/feColorMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值 (一个表示为 [红，绿，蓝，透明度] 的矢量) 都经过<a href="http://en.wikipedia.org/wiki/Matrix_multiplication">矩阵乘法 (matrix multiplated</a>) 计算出的新颜色。</p>
+该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值 (一个表示为 \[红，绿，蓝，透明度] 的矢量) 都经过[矩阵乘法 (matrix multiplated](http://en.wikipedia.org/wiki/Matrix_multiplication)) 计算出的新颜色。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 150 360"
+```html
+<svg width="100%" height="100%" viewBox="0 0 150 360"
  preserveAspectRatio="xMidYMid meet"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;text x="70" y="50"&gt;Reference&lt;/text&gt;
-  &lt;g&gt;
-    &lt;circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" /&gt;
-    &lt;circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" /&gt;
-    &lt;circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" /&gt;
-  &lt;/g&gt;
+  <text x="70" y="50">Reference</text>
+  <g>
+    <circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" />
+    <circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" />
+    <circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" />
+  </g>
 
 
-  &lt;text x="70" y="120"&gt;matrix&lt;/text&gt;
+  <text x="70" y="120">matrix</text>
 
-  &lt;filter id="colorMeMatrix"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <filter id="colorMeMatrix">
+    <feColorMatrix in="SourceGraphic"
       type="matrix"
       values="0 0 0 0 0
               1 1 1 1 0
               0 0 0 0 0
-              0 0 0 1 0" /&gt;
-  &lt;/filter&gt;
+              0 0 0 1 0" />
+  </filter>
 
-  &lt;g filter="url(#colorMeMatrix)"&gt;
-    &lt;circle cx="30" cy="100" r="20" fill="blue"  fill-opacity="0.5" /&gt;
-    &lt;circle cx="20" cy="120" r="20" fill="green" fill-opacity="0.5" /&gt;
-    &lt;circle cx="40" cy="120" r="20" fill="red"   fill-opacity="0.5" /&gt;
-  &lt;/g&gt;
+  <g filter="url(#colorMeMatrix)">
+    <circle cx="30" cy="100" r="20" fill="blue"  fill-opacity="0.5" />
+    <circle cx="20" cy="120" r="20" fill="green" fill-opacity="0.5" />
+    <circle cx="40" cy="120" r="20" fill="red"   fill-opacity="0.5" />
+  </g>
 
 
-  &lt;text x="70" y="190"&gt;saturate&lt;/text&gt;
+  <text x="70" y="190">saturate</text>
 
-  &lt;filter id="colorMeSaturate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <filter id="colorMeSaturate">
+    <feColorMatrix in="SourceGraphic"
       type="saturate"
-      values="0.2" /&gt;
-  &lt;/filter&gt;
+      values="0.2" />
+  </filter>
 
-  &lt;g filter="url(#colorMeSaturate)"&gt;
-    &lt;circle cx="30" cy="170" r="20" fill="blue" fill-opacity="0.5" /&gt;
-    &lt;circle cx="20" cy="190" r="20" fill="green" fill-opacity="0.5" /&gt;
-    &lt;circle cx="40" cy="190" r="20" fill="red" fill-opacity="0.5" /&gt;
-  &lt;/g&gt;
+  <g filter="url(#colorMeSaturate)">
+    <circle cx="30" cy="170" r="20" fill="blue" fill-opacity="0.5" />
+    <circle cx="20" cy="190" r="20" fill="green" fill-opacity="0.5" />
+    <circle cx="40" cy="190" r="20" fill="red" fill-opacity="0.5" />
+  </g>
 
 
-  &lt;text x="70" y="260"&gt;hueRotate&lt;/text&gt;
+  <text x="70" y="260">hueRotate</text>
 
-  &lt;filter id="colorMeHueRotate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <filter id="colorMeHueRotate">
+    <feColorMatrix in="SourceGraphic"
       type="hueRotate"
-      values="180" /&gt;
-  &lt;/filter&gt;
+      values="180" />
+  </filter>
 
-  &lt;g filter="url(#colorMeHueRotate)"&gt;
-    &lt;circle cx="30" cy="240" r="20" fill="blue"  fill-opacity="0.5" /&gt;
-    &lt;circle cx="20" cy="260" r="20" fill="green" fill-opacity="0.5" /&gt;
-    &lt;circle cx="40" cy="260" r="20" fill="red"   fill-opacity="0.5" /&gt;
-  &lt;/g&gt;
+  <g filter="url(#colorMeHueRotate)">
+    <circle cx="30" cy="240" r="20" fill="blue"  fill-opacity="0.5" />
+    <circle cx="20" cy="260" r="20" fill="green" fill-opacity="0.5" />
+    <circle cx="40" cy="260" r="20" fill="red"   fill-opacity="0.5" />
+  </g>
 
 
-  &lt;text x="70" y="320"&gt;luminanceToAlpha&lt;/text&gt;
+  <text x="70" y="320">luminanceToAlpha</text>
 
-  &lt;filter id="colorMeLTA"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
-      type="luminanceToAlpha" /&gt;
-  &lt;/filter&gt;
+  <filter id="colorMeLTA">
+    <feColorMatrix in="SourceGraphic"
+      type="luminanceToAlpha" />
+  </filter>
 
-  &lt;g filter="url(#colorMeLTA)"&gt;
-    &lt;circle cx="30" cy="310" r="20" fill="blue"  fill-opacity="0.5" /&gt;
-    &lt;circle cx="20" cy="330" r="20" fill="green" fill-opacity="0.5" /&gt;
-    &lt;circle cx="40" cy="330" r="20" fill="red"   fill-opacity="0.5" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+  <g filter="url(#colorMeLTA)">
+    <circle cx="30" cy="310" r="20" fill="blue"  fill-opacity="0.5" />
+    <circle cx="20" cy="330" r="20" fill="green" fill-opacity="0.5" />
+    <circle cx="40" cy="330" r="20" fill="red"   fill-opacity="0.5" />
+  </g>
+</svg>
+```
 
-<p>该示例渲染效果如下所示：</p>
+该示例渲染效果如下所示：
 
-<p>{{EmbedLiveSample("Example",300,700,"/files/4371/test.png")}}</p>
+{{EmbedLiveSample("Example",300,700,"/files/4371/test.png")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("type") }}</li>
- <li>{{ SVGAttr("values") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("type") }}
+- {{ SVGAttr("values") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现 <code><a href="/en/DOM/SVGFEColorMatrixElement">SVGFEColorMatrixElement</a></code> 接口。</p>
+该元素实现 [`SVGFEColorMatrixElement`](/en/DOM/SVGFEColorMatrixElement) 接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

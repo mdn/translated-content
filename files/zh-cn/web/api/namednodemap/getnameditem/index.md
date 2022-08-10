@@ -8,22 +8,20 @@ tags:
   - 方法
 translation_of: Web/API/NamedNodeMap/getNamedItem
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("NamedNodeMap")}} 接口的 <code><strong>NamedNodeMap.getNamedItem()</strong></code> 方法返回对应给定名称的{{domxref("Attr", "属性")}}，如果没有对应名称的属性则返回 <code>null</code></p>
+{{domxref("NamedNodeMap")}} 接口的 **`NamedNodeMap.getNamedItem()`** 方法返回对应给定名称的{{domxref("Attr", "属性")}}，如果没有对应名称的属性则返回 `null`
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>myAttr</em> = attrs.getNamedItem(<em>name</em>)</pre>
+```plain
+myAttr = attrs.getNamedItem(name)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>name</code> 是期望获取的属性名</li>
-</ul>
+- `name` 是期望获取的属性名
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.NamedNodeMap.getNamedItem")}}</p>
+{{Compat("api.NamedNodeMap.getNamedItem")}}

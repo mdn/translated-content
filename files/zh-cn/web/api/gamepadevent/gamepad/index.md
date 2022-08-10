@@ -3,36 +3,40 @@ title: GamepadEvent.gamepad
 slug: Web/API/GamepadEvent/gamepad
 translation_of: Web/API/GamepadEvent/gamepad
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p><strong>{{domxref("GamepadEvent")}} interface </strong>的 <code><strong>GamepadEvent.gamepad</strong></code> 属性返回一个 {{domxref("Gamepad")}} 对象，为触发 {{event("gamepadconnected")}} 和{{event("gamepaddisconnected")}} 事件提供相关联控制器数据的访问。</p>
+**{{domxref("GamepadEvent")}} interface** 的 **`GamepadEvent.gamepad`** 属性返回一个 {{domxref("Gamepad")}} 对象，为触发 {{event("gamepadconnected")}} 和{{event("gamepaddisconnected")}} 事件提供相关联控制器数据的访问。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">只读 属性 Gamepad gamepad;</pre>
+```plain
+只读 属性 Gamepad gamepad;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用 <code>gamepad</code> 属性。</p>
+在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用 `gamepad` 属性。
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一个 {{domxref("Gamepad")}} 对象。</p>
+一个 {{domxref("Gamepad")}} 对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.GamepadEvent.gamepad")}}</p>
+{{Compat("api.GamepadEvent.gamepad")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">使用 Gamepad API</a></p>
+[使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)

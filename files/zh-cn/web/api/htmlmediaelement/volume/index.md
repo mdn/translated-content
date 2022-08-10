@@ -3,37 +3,37 @@ title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
 translation_of: Web/API/HTMLMediaElement/volume
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.volume</code></strong> 属性可设置媒体播放时的音量。</p>
+**`HTMLMediaElement.volume`** 属性可设置媒体播放时的音量。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>volume</em> ​= <em>video</em>.volume; //1</pre>
+```plain
+var volume ​= video.volume; //1
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>取值为 0 到 1 的双精度值。0 为静音，1 为音量最大时的值。</p>
+取值为 0 到 1 的双精度值。0 为静音，1 为音量最大时的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>var obj = document.createElement('audio');
+```plain
+var obj = document.createElement('audio');
 console.log(obj.volume); // 1
-obj.volume = 0.75;</pre>
+obj.volume = 0.75;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLMediaElement.volume")}}
 
+## 更多
 
-<p>{{Compat("api.HTMLMediaElement.volume")}}</p>
-
-<h2 id="See_Also">更多</h2>
-
-<ul>
- <li>定义该属性的接口 {{domxref("HTMLMediaElement")}}.</li>
- <li>{{domxref("HTMLMediaElement.muted")}}</li>
-</ul>
+- 定义该属性的接口 {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.muted")}}

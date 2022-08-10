@@ -3,44 +3,41 @@ title: DataView.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/buffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>buffer</code></strong> 属性描述了在构造时被 DataView 引用的 {{jsxref("ArrayBuffer")}}。</p>
+**`buffer`** 属性描述了在构造时被 DataView 引用的 {{jsxref("ArrayBuffer")}}。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
 
+## 语法
 
+```plain
+dataview.buffer
+```
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox"><var>dataview</var>.buffer</pre>
+`buffer` 属性是一个访问器 (accessor) 属性，它的 set 属性为 undefined，这意味着它是只读的。值在 `DataView 被创建时就确定了，且不能改变。`
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p><code>buffer</code> 属性是一个访问器 (accessor) 属性，它的 set 属性为 undefined，这意味着它是只读的。值在 <code>DataView 被创建时就确定了，且不能改变。</code></p>
+### 使用 `buffer` 属性
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_buffer_属性">使用 <code>buffer</code> 属性</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.buffer; // ArrayBuffer { byteLength: 8 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

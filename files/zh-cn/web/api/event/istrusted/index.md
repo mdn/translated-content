@@ -9,36 +9,34 @@ tags:
   - 属性
 translation_of: Web/API/Event/isTrusted
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Event")}} 接口的 <strong><code>isTrusted</code></strong> 属性是一个只读属性，它是一个布尔值（{{domxref("Boolean")}}）。当事件是由用户行为生成的时候，这个属性的值为 <code>true</code> ，而当事件是由脚本创建、修改、通过 {{domxref("EventTarget.dispatchEvent()")}} 派发的时候，这个属性的值为 <code>false</code> 。</p>
+{{domxref("Event")}} 接口的 **`isTrusted`** 属性是一个只读属性，它是一个布尔值（{{domxref("Boolean")}}）。当事件是由用户行为生成的时候，这个属性的值为 `true` ，而当事件是由脚本创建、修改、通过 {{domxref("EventTarget.dispatchEvent()")}} 派发的时候，这个属性的值为 `false` 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>eventIsTrusted</em> = <em>event</em>.isTrusted;
-</pre>
+```plain
+var eventIsTrusted = event.isTrusted;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>{{domxref("Boolean")}}（布尔值）</p>
+{{domxref("Boolean")}}（布尔值）
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">if (e.isTrusted) {
+```js
+if (e.isTrusted) {
   /* Event 事件可信 */
 } else {
   /* Event 事件不可信 */
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
-<div>
-
-
-<p>{{Compat("api.Event.isTrusted")}}</p>
-</div>
+{{Compat("api.Event.isTrusted")}}

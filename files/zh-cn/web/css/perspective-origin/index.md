@@ -3,17 +3,16 @@ title: perspective-origin
 slug: Web/CSS/perspective-origin
 translation_of: Web/CSS/perspective-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/CSS">CSS</a> 属性 <strong><code>perspective-origin</code></strong> 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。</p>
+[CSS](/en-US/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
 
-<div>{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective-origin.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* One-value syntax */
+```css
+/* One-value syntax */
 perspective-origin: x-position;
 
 /* Two-value syntax */
@@ -27,202 +26,202 @@ perspective-origin: y-position x-position;
 perspective-origin: inherit;
 perspective-origin: initial;
 perspective-origin: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><em>x-position</em></dt>
- <dd>指定<em>消失点</em>的横坐标，其值有以下形式：
- <ul>
-  <li>{{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素宽度的百分比值，可为负值。</li>
-  <li><code>left</code>, 关键字，0 值的简记。</li>
-  <li><code>center</code>, 关键字，50% 的简记。</li>
-  <li><code>right</code>, 关键字，100% 的简记。</li>
- </ul>
- </dd>
- <dt><em>y-position</em></dt>
- <dd>指定<em>消失点</em>的纵坐标，其值有以下形式：
- <ul>
-  <li>{{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素高度的百分比值，可为负值。</li>
-  <li><code>top</code>, 关键字，0 值的简记。</li>
-  <li><code>center</code>, 关键字，50% 的简记。</li>
-  <li><code>bottom</code>, 关键字，100% 的简记。</li>
- </ul>
- </dd>
-</dl>
+- _x-position_
 
-<h3 id="正式语法">正式语法</h3>
+  - : 指定*消失点*的横坐标，其值有以下形式：
+
+    - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素宽度的百分比值，可为负值。
+    - `left`, 关键字，0 值的简记。
+    - `center`, 关键字，50% 的简记。
+    - `right`, 关键字，100% 的简记。
+
+- _y-position_
+
+  - : 指定*消失点*的纵坐标，其值有以下形式：
+
+    - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素高度的百分比值，可为负值。
+    - `top`, 关键字，0 值的简记。
+    - `center`, 关键字，50% 的简记。
+    - `bottom`, 关键字，100% 的简记。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="修改_perspective_origin">修改 perspective origin</h3>
+### 修改 perspective origin
 
-<p>这个例子展示了带有常用 <code>perspective-origin</code> 值的立方体。</p>
+这个例子展示了带有常用 `perspective-origin` 值的立方体。
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}</p>
+{{EmbedLiveSample('Changing_the_perspective_origin', '100%', 700)}}
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: top left;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: top;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: top right;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube potl"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube potm"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube potr"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: left;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: 50% 50%;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: right;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube poml"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pomm"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pomr"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: bottom left;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: bottom;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;
-        &lt;code&gt;perspective-origin: bottom right;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pobl"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pobm"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pobr"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <code>perspective-origin: top left;</code>
+      </th>
+      <th>
+        <code>perspective-origin: top;</code>
+      </th>
+      <th>
+        <code>perspective-origin: top right;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube potl">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube potm">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube potr">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <code>perspective-origin: left;</code>
+      </th>
+      <th>
+        <code>perspective-origin: 50% 50%;</code>
+      </th>
+      <th>
+        <code>perspective-origin: right;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube poml">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pomm">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pomr">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <code>perspective-origin: bottom left;</code>
+      </th>
+      <th>
+        <code>perspective-origin: bottom;</code>
+      </th>
+      <th>
+        <code>perspective-origin: bottom right;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pobl">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pobm">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pobr">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Shorthand classes for perspective-origin values */
+```css
+/* Shorthand classes for perspective-origin values */
 .potl {
   perspective-origin: top left;
   -webkit-perspective-origin: top left;
@@ -344,24 +343,19 @@ th, p, td {
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.properties.perspective-origin")}}
 
+## 相关连接
 
-<p>{{Compat("css.properties.perspective-origin")}}</p>
-</div>
-
-<h2 id="相关连接">相关连接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS Transforms</a></li>
-</ul>
+- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

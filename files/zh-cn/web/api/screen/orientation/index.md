@@ -8,23 +8,26 @@ tags:
   - screen
 translation_of: Web/API/Screen/orientation
 ---
-<p>{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}</p>
+{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
 
-<p><strong><code>orientation</code></strong> 是 {{DOMxRef("Screen")}} 接口的一个只读属性，返回屏幕当前的方向。</p>
+**`orientation`** 是 {{DOMxRef("Screen")}} 接口的一个只读属性，返回屏幕当前的方向。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>orientation</var> = window.screen.orientation;</pre>
+```plain
+var orientation = window.screen.orientation;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{DOMxRef("ScreenOrientation")}} 的实例，表示屏幕的方向。</p>
+一个 {{DOMxRef("ScreenOrientation")}} 的实例，表示屏幕的方向。
 
-<p>注意在更早的、有前缀的版本中会返回一个 {{DOMxRef("DOMString")}} 值，相当于 {{DOMxRef("ScreenOrientation.type")}} 的值。</p>
+注意在更早的、有前缀的版本中会返回一个 {{DOMxRef("DOMString")}} 值，相当于 {{DOMxRef("ScreenOrientation.type")}} 的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js;">var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+```js
+var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
@@ -35,20 +38,18 @@ if (orientation === "landscape-primary") {
 } else if (orientation === undefined) {
   console.log("The orientation API isn't supported in this browser :(");
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Screen.orientation")}}</p>
+{{Compat("api.Screen.orientation")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{DOMxRef("ScreenOrientation")}}</li>
- <li>{{DOMxRef("Screen.onorientationchange")}}</li>
- <li><a href="/en-US/docs/Managing_screen_orientation">Managing screen orientation</a></li>
-</ul>
+- {{DOMxRef("ScreenOrientation")}}
+- {{DOMxRef("Screen.onorientationchange")}}
+- [Managing screen orientation](/en-US/docs/Managing_screen_orientation)

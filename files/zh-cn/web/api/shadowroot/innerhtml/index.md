@@ -5,28 +5,29 @@ tags:
   - ShadowRoot.innerHTML
 translation_of: Web/API/ShadowRoot/innerHTML
 ---
-<p>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
-<p> {{domxref("ShadowRoot")}} 接口的 <strong><code>innerHTML</code></strong> 属性设置或返回 ShadowRoot 内的 DOM 树。</p>
+{{domxref("ShadowRoot")}} 接口的 **`innerHTML`** 属性设置或返回 ShadowRoot 内的 DOM 树。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">let <em>domString</em> = <em>shadowRoot</em>.innerHTML
+```plain
+let domString = shadowRoot.innerHTML
 // 返回
 
-<em>shadowRoot</em>.innerHTML = <em>domString;</em>
+shadowRoot.innerHTML = domString;
 
 // 设置
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("DOMString")}}.</p>
+一个 {{domxref("DOMString")}}.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ShadowRoot.innerHTML")}}

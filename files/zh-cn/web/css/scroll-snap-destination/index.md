@@ -3,77 +3,78 @@ title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
 translation_of: Web/CSS/scroll-snap-destination
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong><code>scroll-snap-destination</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素 snap 点的 x 和 y 坐标位置。</p>
+**`scroll-snap-destination`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器的可视化{{Glossary("viewport")}} 中元素 snap 点的 x 和 y 坐标位置。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* &lt;位置&gt;值 */
+```css
+/* <位置>值 */
 scroll-snap-destination: 400px 600px;
 
 /* 全局值 */
 scroll-snap-destination: inherit;
 scroll-snap-destination: initial;
 scroll-snap-destination: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>定义从滚动容器的可视视图边缘开始偏移的 snap 坐标。第一个值给定了 snap 坐标的 x 坐标，第二个值为它的 y 坐标。</dd>
-</dl>
+- `<position>`
+  - : 定义从滚动容器的可视视图边缘开始偏移的 snap 坐标。第一个值给定了 snap 坐标的 x 坐标，第二个值为它的 y 坐标。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (0, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination0"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+```html
+<div id="container">
+  <div>
+    <p>At coordinate (0, 0)</p>
+    <div class="scrollContainer destination0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (25, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination25"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <div>
+    <p>At coordinate (25, 0)</p>
+    <div class="scrollContainer destination25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;At coordinate (50, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer destination50"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  <div>
+    <p>At coordinate (50, 0)</p>
+    <div class="scrollContainer destination50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="CSS内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: flex;
 }
 
-#container &gt; div:nth-child(-n+2) {
+#container > div:nth-child(-n+2) {
   margin-right: 20px;
 }
 
@@ -99,7 +100,7 @@ scroll-snap-destination: unset;
   scroll-snap-destination: 50px 0;
 }
 
-.scrollContainer &gt; div {
+.scrollContainer > div {
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -108,20 +109,21 @@ scroll-snap-destination: unset;
   font-size: 50px;
 }
 
-.scrollContainer &gt; div:nth-child(even) {
+.scrollContainer > div:nth-child(even) {
   background-color: #87EA87;
 }
 
-.scrollContainer &gt; div:nth-child(odd) {
+.scrollContainer > div:nth-child(odd) {
   background-color: #87CCEA;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "170")}}</p>
+{{EmbedLiveSample("Example", "100%", "170")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何规范。</p>
+不属于任何规范。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

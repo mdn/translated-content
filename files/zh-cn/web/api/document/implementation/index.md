@@ -3,80 +3,54 @@ title: document.implementation
 slug: Web/API/Document/implementation
 translation_of: Web/API/Document/implementation
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>返回一个和当前文档相关联的{{domxref("DOMImplementation")}}对象。</p>
+返回一个和当前文档相关联的{{domxref("DOMImplementation")}}对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>DOMImpObj</var> = document.implementation;
-</pre>
+```plain
+DOMImpObj = document.implementation;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var modName = "HTML";
+```js
+var modName = "HTML";
 var modVer = "2.0";
 var conformTest = document.implementation.hasFeature( modName, modVer );
 
 alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
 
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
-</pre>
+```
 
-<p>可以在<a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2">一致性章节</a>中查看可用的一系列 DOM2 级模型名称（例如：Core, HTML, XML 等等）。</p>
+可以在[一致性章节](http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2)中查看可用的一系列 DOM2 级模型名称（例如：Core, HTML, XML 等等）。
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p>W3C 的 DOM1 级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——<code>hasFeature</code> 方法（请参考上边的例子以及这篇文章 <a href="http://www.w3.org/2003/02/06-dom-support.html">What does your user agent claim to support?</a>）。如果它可用的话，那么 <code>DOMImplementation</code> 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，<code>DOMImplementation</code> 接口包含一个 <code>createDocumentType</code> 方法，它可以为实例管理的文档创建对应的 DTD 文档定义。</p>
+W3C 的 DOM1 级建议值规定了一种检测浏览器对某个 DOM 模型是否支持的方法——`hasFeature` 方法（请参考上边的例子以及这篇文章 [What does your user agent claim to support?](http://www.w3.org/2003/02/06-dom-support.html)）。如果它可用的话，那么 `DOMImplementation` 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，`DOMImplementation` 接口包含一个 `createDocumentType` 方法，它可以为实例管理的文档创建对应的 DTD 文档定义。
 
-<h2 id="方法">方法</h2>
-<table>
- <tbody>
-  <tr>
-   <th>名称</th>
-   <th>动作</th>
-   <th>返回值</th>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMImplementation.createDocument","createDocument")}} (<code>namespaceURI</code>, <code>qualifiedNameStr</code>, {{domxref("DocumentType")}} )</td>
-   <td> </td>
-   <td>{{domxref("document")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( <code>qualifiedNameStr</code>, <code>publicId</code>, <code>systemId</code> )</td>
-   <td> </td>
-   <td>{{domxref("DocumentType")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( <code>title</code> )</td>
-   <td> </td>
-   <td>{{domxref("document")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMImplementation.getFeature","getFeature")}} ( <code>feature</code>, <code>version</code> )</td>
-   <td> </td>
-   <td>{{domxref("DOMObject")}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DOMImplementation.hasFeature","hasFeature")}} ( <code>feature</code>, <code>version</code> )</td>
-   <td> </td>
-   <td>{{domxref("Boolean")}}</td>
-  </tr>
- </tbody>
-</table>
+## 方法
 
-<h2 id="规范">规范</h2>
+| 名称                                                                                                                                                             | 动作 | 返回值                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------ |
+| {{domxref("DOMImplementation.createDocument","createDocument")}} (`namespaceURI`, `qualifiedNameStr`, {{domxref("DocumentType")}} ) |      | {{domxref("document")}}     |
+| {{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( `qualifiedNameStr`, `publicId`, `systemId` )                  |      | {{domxref("DocumentType")}} |
+| {{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( `title` )                                                     |      | {{domxref("document")}}     |
+| {{domxref("DOMImplementation.getFeature","getFeature")}} ( `feature`, `version` )                                                            |      | {{domxref("DOMObject")}}     |
+| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                            |      | {{domxref("Boolean")}}         |
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="Gecko引擎的特别说明">Gecko引擎的特别说明</h2>
+## Gecko 引擎的特别说明
 
-<ul>
- <li>从 Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。</li>
-</ul>
+- 从 Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。

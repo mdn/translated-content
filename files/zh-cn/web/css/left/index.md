@@ -8,15 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <strong><code>left</code></strong>属性定义了定位元素的左外边距边界与其包含块左边界之间的偏移，非定位元素设置此属性无效。</p>
+[CSS](/zh-CN/docs/Web/CSS) **`left`**属性定义了定位元素的左外边距边界与其包含块左边界之间的偏移，非定位元素设置此属性无效。
 
-<pre class="brush: css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 left: 3px;
 left: 2.4em;
 
-/* &lt;percentage&gt;s of the width of the containing block */
+/* <percentage>s of the width of the containing block */
 left: 10%;
 
 /* Keyword value */
@@ -26,55 +27,52 @@ left: auto;
 left: inherit;
 left: initial;
 left: unset;
-</pre>
+```
 
-<p><code>left</code>的效果取决于元素的<code>position</code>属性：</p>
+`left`的效果取决于元素的`position`属性：
 
-<ul>
- <li>当<code>position</code>设置为<code>absolute</code>或<code>fixed</code>时，<code>left</code>属性指定了定位元素左外边距边界与其包含块左边界之间的偏移。</li>
- <li>当<code>position</code>设置为<code>relative</code>时，<code>left</code>属性指定了元素的左边界离开其正常位置的偏移。</li>
- <li>当<code>position</code>设置为<code>sticky</code>时，如果元素在 viewport 里面，<code>left</code>属性的效果和 position 为<code>relative</code>等同；如果元素在 viewport 外面，<code>left</code>属性的效果和 position 为<code>fixed</code>等同。</li>
- <li>当<code>position</code>设置为<code>static</code>时，<code>left</code>属性无效。</li>
-</ul>
+- 当`position`设置为`absolute`或`fixed`时，`left`属性指定了定位元素左外边距边界与其包含块左边界之间的偏移。
+- 当`position`设置为`relative`时，`left`属性指定了元素的左边界离开其正常位置的偏移。
+- 当`position`设置为`sticky`时，如果元素在 viewport 里面，`left`属性的效果和 position 为`relative`等同；如果元素在 viewport 外面，`left`属性的效果和 position 为`fixed`等同。
+- 当`position`设置为`static`时，`left`属性无效。
 
-<p>当<code>left</code>和{{cssxref("right")}}​​​​​​同时指定时，元素的位置会被重复指定。当容器是从左到右时，<code>left</code>的值会被优先设定；当容器是从右到左时，<code>right</code>的值会被优先设定。</p>
+当`left`和{{cssxref("right")}}​​​​​​ 同时指定时，元素的位置会被重复指定。当容器是从左到右时，`left`的值会被优先设定；当容器是从右到左时，`right`的值会被优先设定。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
- <ul>
-  <li>对于绝对定位的元素，元素左外边距边界与其包含块左边界之间的偏移。</li>
-  <li>对于相对定位定位的元素，元素的左边界离开其正常位置的偏移。</li>
- </ul>
- </dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。</dd>
- <dt><code>auto</code></dt>
- <dd>这个关键字表示：
- <ul>
-  <li>对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("right") }}属性为准，如果此时设置<code>width: auto</code>，将基于内容需要的宽度设置宽度；如果<code>right</code>也为<code>auto</code>的话，元素的水平位置就是它假如作为静态 (即 static) 元素时该在的位置。</li>
-  <li>对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("right") }}属性；如果<code>right</code>也为<code>auto</code>的话，元素将不会有偏移。</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>这个关键字表示该值与其父元素 (可能不是它的包含块) 的计算值相同。对这个计算值的处理将和它原本为 {{cssxref("&lt;length&gt;")}}， {{cssxref("&lt;percentage&gt;")}} 或 <code>auto</code> 一样。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
 
-<h3 id="常用语法">常用语法</h3>
+  - : 可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
+
+    - 对于绝对定位的元素，元素左外边距边界与其包含块左边界之间的偏移。
+    - 对于相对定位定位的元素，元素的左边界离开其正常位置的偏移。
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。
+- `auto`
+
+  - : 这个关键字表示：
+
+    - 对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("right") }}属性为准，如果此时设置`width: auto`，将基于内容需要的宽度设置宽度；如果`right`也为`auto`的话，元素的水平位置就是它假如作为静态 (即 static) 元素时该在的位置。
+    - 对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("right") }}属性；如果`right`也为`auto`的话，元素将不会有偏移。
+
+- `inherit`
+  - : 这个关键字表示该值与其父元素 (可能不是它的包含块) 的计算值相同。对这个计算值的处理将和它原本为 {{cssxref("&lt;length&gt;")}}， {{cssxref("&lt;percentage&gt;")}} 或 `auto` 一样。
+
+### 常用语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#wrap {
+```css
+#wrap {
   width: 700px;
   margin: 0 auto;
   background: #5C5C5C;
@@ -121,63 +119,64 @@ pre {
   bottom:10px;
   right:20px;
   background-color:#FFC7E4;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="wrap"&gt;
-  &lt;div id="example_1"&gt;
-    &lt;pre&gt;
+```html
+<div id="wrap">
+  <div id="example_1">
+    <pre>
       position: absolute;
       left: 20px;
       top: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;The only containing element for this div is the main window, so it positions itself in relation to it.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+  </div>
 
-  &lt;div id="example_2"&gt;
-    &lt;pre&gt;
+  <div id="example_2">
+    <pre>
       position: relative;
       top: 0;
       right: 0;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative position in relation to its siblings.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>Relative position in relation to its siblings.</p>
+  </div>
 
-  &lt;div id="example_3"&gt;
-    &lt;pre&gt;
+  <div id="example_3">
+    <pre>
       float: right;
       position: relative;
       top: 20px;
       left: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;Relative to its sibling div above, but removed from flow of content.&lt;/p&gt;
+    </pre>
+    <p>Relative to its sibling div above, but removed from flow of content.</p>
 
-    &lt;div id="example_4"&gt;
-      &lt;pre&gt;
+    <div id="example_4">
+      <pre>
         position: absolute;
         bottom: 10px;
         right: 20px;
-      &lt;/pre&gt;
-      &lt;p&gt;Absolute position inside of a parent with relative position&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      </pre>
+      <p>Absolute position inside of a parent with relative position</p>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="案例">案例</h3>
+### 案例
 
-<p>{{EmbedLiveSample('示例',1200,650)}}</p>
+{{EmbedLiveSample('示例',1200,650)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("css.properties.left")}}</p>
+{{Compat("css.properties.left")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("position")}}, {{cssxref("right")}}, {{cssxref("top")}}, {{cssxref("bottom")}}</li>
-</ul>
+- {{cssxref("position")}}, {{cssxref("right")}}, {{cssxref("top")}}, {{cssxref("bottom")}}

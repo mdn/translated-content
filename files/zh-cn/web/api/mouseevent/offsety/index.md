@@ -7,29 +7,28 @@ tags:
   - 鼠标事件
 translation_of: Web/API/MouseEvent/offsetY
 ---
-<p>{{APIRef("DOM Events")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM Events")}}{{SeeCompatTable}}
 
-<p>MouseEvent 接口的只读属性 <strong>offsetY </strong>规定了事件对象与目标节点的内填充边（padding edge）在 Y 轴方向上的偏移量。</p>
+MouseEvent 接口的只读属性 **offsetY** 规定了事件对象与目标节点的内填充边（padding edge）在 Y 轴方向上的偏移量。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var yOffset = <em>instanceOfMouseEvent</em>.offsetY;
-</pre>
+```plain
+var yOffset = instanceOfMouseEvent.offsetY;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个<code>双精度</code> 浮点值。早期的规范将其规定为整数值。详见浏览器兼容性部分。</p>
+一个`双精度` 浮点值。早期的规范将其规定为整数值。详见浏览器兼容性部分。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MouseEvent.offsetY")}}
 
-<h2 id="See_also">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

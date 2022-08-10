@@ -12,20 +12,23 @@ tags:
   - customElements
 translation_of: Web/API/Window/customElements
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>customElements</code></strong> 是{{domxref("Window")}}对象上的一个只读属性，接口返回一个{{domxref("CustomElementRegistry")}} 对象的引用，可用于注册新的 <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a>，或者获取之前定义过的自定义元素的信息。</p>
+**`customElements`** 是{{domxref("Window")}}对象上的一个只读属性，接口返回一个{{domxref("CustomElementRegistry")}} 对象的引用，可用于注册新的 [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements)，或者获取之前定义过的自定义元素的信息。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>这个属性最常用的例子是用来获取使用{{domxref("CustomElementRegistry.define()")}}方法定义和注册的自定义元素，例如：</p>
+这个属性最常用的例子是用来获取使用{{domxref("CustomElementRegistry.define()")}}方法定义和注册的自定义元素，例如：
 
-<pre class="brush: js">let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
+```js
+let customElementRegistry = window.customElements;
+customElementRegistry.define('my-custom-element', MyCustomElement);
+```
 
-<p>However, it is usually shortened to something like the following:</p>
+However, it is usually shortened to something like the following:
 
-<pre class="brush: js">customElements.define('element-details',
+```js
+customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -35,14 +38,15 @@ customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
       const shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(template.cloneNode(true));
   }
-});</pre>
+});
+```
 
-<p>参阅我们的 <a href="https://github.com/mdn/web-components-examples/">web-components-examples</a> 获取更多有用的例子。</p>
+参阅我们的 [web-components-examples](https://github.com/mdn/web-components-examples/) 获取更多有用的例子。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Window.customElements")}}</p>
+{{Compat("api.Window.customElements")}}

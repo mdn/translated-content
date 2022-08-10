@@ -3,21 +3,24 @@ title: credentials
 slug: Web/API/Navigator/credentials
 translation_of: Web/API/Navigator/credentials
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>{{domxref("Navigator")}}接口的<strong><code>credentials</code></strong>属性返回{{domxref("CredentialsContainer")}}接口，该接口暴露了请求凭证的方法。 {{domxref("CredentialsContainer")}}接口还会在下相关事件发生时通知用户，例如登录或注销成功。该接口可用于特征检测。</p>
+{{domxref("Navigator")}}接口的**`credentials`**属性返回{{domxref("CredentialsContainer")}}接口，该接口暴露了请求凭证的方法。 {{domxref("CredentialsContainer")}}接口还会在下相关事件发生时通知用户，例如登录或注销成功。该接口可用于特征检测。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var credentialsContainer = navigator.credentials</pre>
+```plain
+var credentialsContainer = navigator.credentials
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("CredentialsContainer")}} 接口。</p>
+{{domxref("CredentialsContainer")}} 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">if ('credentials' in navigator) {
+```js
+if ('credentials' in navigator) {
   navigator.credentials.get({password: true})
   .then(function(creds) {
     //Do something with the credentials.
@@ -25,12 +28,12 @@ translation_of: Web/API/Navigator/credentials
 } else {
   //Handle sign-in the way you did before.
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Navigator.credentials")}}

@@ -3,31 +3,30 @@ title: FileReader.readyState
 slug: Web/API/FileReader/readyState
 translation_of: Web/API/FileReader/readyState
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>提供 FileReader 读取操作时的当前状态。</p>
+提供 FileReader 读取操作时的当前状态。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var state = <em>instanceOfFileReader</em>.readyState
-</pre>
+```plain
+var state = instanceOfFileReader.readyState
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一个数字，用来表示 {{domxref("FileReader")}} API 的三种可能状态。</p>
+一个数字，用来表示 {{domxref("FileReader")}} API 的三种可能状态。
 
-<p>{{page("/zh-CN/docs/Web/API/FileReader","State constants")}}</p>
+{{page("/zh-CN/docs/Web/API/FileReader","State constants")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileReader.readyState")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

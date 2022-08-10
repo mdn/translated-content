@@ -8,55 +8,59 @@ tags:
   - 属性
 translation_of: Web/API/Window/scrollY
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>返回文档在垂直方向已滚动的像素值。</p>
+返回文档在垂直方向已滚动的像素值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var y = window.scrollY;</pre>
+```plain
+var y = window.scrollY;
+```
 
-<ul>
- <li><code>y</code> 是文档从顶部开始滚动过的像素值。</li>
-</ul>
+- `y` 是文档从顶部开始滚动过的像素值。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js">// 保证刚好滚动到第二页
+```js
+// 保证刚好滚动到第二页
 if (window.scrollY) {
   window.scroll(0, 0);  // 重置滚动位置为文档的左上角
 }
 
-window.scrollByPages(1);</pre>
+window.scrollByPages(1);
+```
 
-<h2 id="Notes">备注</h2>
+## 备注
 
-<p>如果正在使用相对滚动函数，如 {{domxref("window.scrollBy")}}、{{domxref("window.scrollByLines")}} 或 {{domxref("window.scrollByPages")}}，则需要使用该属性来检测文档是否已被滚动了某段距离。</p>
+如果正在使用相对滚动函数，如 {{domxref("window.scrollBy")}}、{{domxref("window.scrollByLines")}} 或 {{domxref("window.scrollByPages")}}，则需要使用该属性来检测文档是否已被滚动了某段距离。
 
-<p><code>pageYOffset</code> 属性是 <code>scrollY</code> 属性的别名：</p>
+`pageYOffset` 属性是 `scrollY` 属性的别名：
 
-<pre>window.pageYOffset == window.scrollY; // 总是返回 true</pre>
+```plain
+window.pageYOffset == window.scrollY; // 总是返回 true
+```
 
-<p>为了跨浏览器兼容，请使用 <code>window.pageYOffset</code> 代替 <code>window.scrollY</code>。另外，旧版本 IE（&lt;9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：</p>
+为了跨浏览器兼容，请使用 `window.pageYOffset` 代替 `window.scrollY`。另外，旧版本 IE（<9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：
 
-<pre class="brush: js">var supportPageOffset = window.pageXOffset !== undefined;
+```js
+var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
 var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;</pre>
+var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("window.scrollX")}}</li>
-</ul>
+- {{domxref("window.scrollX")}}

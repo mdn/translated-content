@@ -9,80 +9,75 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/blendEquation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.blendEquation()</code></strong> 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendEquation()`** 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。
 
-<p>混合方程式确定新像素如何与 {{domxref("WebGLFramebuffer")}} 中的像素组合。</p>
+混合方程式确定新像素如何与 {{domxref("WebGLFramebuffer")}} 中的像素组合。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.blendEquation(<var>mode</var>);
-</pre>
+```plain
+void gl.blendEquation(mode);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>mode</code></dt>
- <dd>{{domxref("GLenum")}} 指定源和目标颜色的组合方式。 必须是：
- <ul>
-  <li><code>gl.FUNC_ADD</code>: 源 + 目的地（默认值），</li>
-  <li><code>gl.FUNC_SUBTRACT</code>: 源 - 目的地，</li>
-  <li><code>gl.FUNC_REVERSE_SUBTRACT</code>: 目的地 - 源</li>
-  <li>当使用 {{domxref("EXT_blend_minmax")}} 扩展名时：
-   <ul>
-    <li><code>ext.MIN_EXT</code>: 最小的源和目的地，</li>
-    <li><code>ext.MAX_EXT</code>: 最大源和目的地。</li>
-   </ul>
-  </li>
-  <li>当使用 {{domxref("WebGL2RenderingContex","WebGL 2 上下文","",1)}} 时，可以使用以下值：
-   <ul>
-    <li><code>gl.MIN</code>: 最小的源和目的地，</li>
-    <li><code>gl.MAX</code>: 最大源和目的地。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
-</dl>
+- `mode`
 
-<h3 id="异常">异常</h3>
+  - : {{domxref("GLenum")}} 指定源和目标颜色的组合方式。 必须是：
 
-<p>如果模式不是三个可能的值之一，则会抛出 gl.INVALID_ENUM 错误。</p>
+    - `gl.FUNC_ADD`: 源 + 目的地（默认值），
+    - `gl.FUNC_SUBTRACT`: 源 - 目的地，
+    - `gl.FUNC_REVERSE_SUBTRACT`: 目的地 - 源
+    - 当使用 {{domxref("EXT_blend_minmax")}} 扩展名时：
 
-<h3 id="返回值">返回值</h3>
+      - `ext.MIN_EXT`: 最小的源和目的地，
+      - `ext.MAX_EXT`: 最大源和目的地。
 
-<p>None.</p>
+    - 当使用 {{domxref("WebGL2RenderingContex","WebGL 2 上下文","",1)}} 时，可以使用以下值：
 
-<h2 id="示例">示例</h2>
+      - `gl.MIN`: 最小的源和目的地，
+      - `gl.MAX`: 最大源和目的地。
 
-<p>要设置混合方程式，请使用：</p>
+### 异常
 
-<pre class="brush: js">gl.blendEquation(gl.FUNC_ADD);
+如果模式不是三个可能的值之一，则会抛出 gl.INVALID_ENUM 错误。
+
+### 返回值
+
+None.
+
+## 示例
+
+要设置混合方程式，请使用：
+
+```js
+gl.blendEquation(gl.FUNC_ADD);
 gl.blendEquation(gl.FUNC_SUBTRACT);
 gl.blendEquation(gl.FUNC_REVERSE_SUBTRACT);
-</pre>
+```
 
-<p>要获得混合方程，请查询返回 gl.FUNC_ADD，gl.FUNC_SUBTRACT，gl.FUNC_REVERSE_SUBTRACT 或 {{domxref("EXT_blend_minmax")}} 的 BLEND_EQUATION，BLEND_EQUATION_RGB 和 BLEND_EQUATION_ALPHA 常量：ext.MIN_EXT 或 ext.MAX_EXT 。</p>
+要获得混合方程，请查询返回 gl.FUNC_ADD，gl.FUNC_SUBTRACT，gl.FUNC_REVERSE_SUBTRACT 或 {{domxref("EXT_blend_minmax")}} 的 BLEND_EQUATION，BLEND_EQUATION_RGB 和 BLEND_EQUATION_ALPHA 常量：ext.MIN_EXT 或 ext.MAX_EXT 。
 
-<pre class="brush: js">gl.getParameter(gl.BLEND_EQUATION_RGB) === gl.FUNC_ADD;
+```js
+gl.getParameter(gl.BLEND_EQUATION_RGB) === gl.FUNC_ADD;
 // true
 
 gl.getParameter(gl.BLEND_EQUATION_ALPHA) === gl.FUNC_ADD;
 // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendEquation")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendEquation")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.blendColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.blendFunc()")}}</li>
- <li>{{domxref("EXT_blend_minmax")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.blendColor()")}}
+- {{domxref("WebGLRenderingContext.blendFunc()")}}
+- {{domxref("EXT_blend_minmax")}}

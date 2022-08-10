@@ -3,35 +3,30 @@ title: CanvasPattern
 slug: Web/API/CanvasPattern
 translation_of: Web/API/CanvasPattern
 ---
-<div>{{APIRef("Canvas")}}</div>
+{{APIRef("Canvas")}}
 
-<p><code><strong>CanvasPattern</strong></code> 接口表示描述一个模板（基于 image, canvas 或 video）的不透明对象，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建。</p>
+**`CanvasPattern`** 接口表示描述一个模板（基于 image, canvas 或 video）的不透明对象，通过 {{domxref("CanvasRenderingContext2D.createPattern()")}} 方法创建。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>非透明对象，没有暴露出属性</em></p>
+_非透明对象，没有暴露出属性_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有继承来的方法</em></p>
-<dl>
- <dt>
-  {{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}</dt>
- <dd>
-  应用 {{domxref("SVGMatrix")}} 对模板做线性变换</dd>
-</dl>
+_没有继承来的方法_
 
-<h2 id="Specifications">标准</h2>
+- {{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}
+  - : 应用 {{domxref("SVGMatrix")}} 对模板做线性变换
+
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CanvasPattern")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.createPattern()")}}</li>
- <li>{{HTMLElement("canvas")}} 元素及和 canvas 相关接口 {{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.createPattern()")}}
+- {{HTMLElement("canvas")}} 元素及和 canvas 相关接口 {{domxref("HTMLCanvasElement")}}

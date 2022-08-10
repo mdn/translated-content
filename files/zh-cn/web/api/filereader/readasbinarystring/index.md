@@ -3,28 +3,27 @@ title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 translation_of: Web/API/FileReader/readAsBinaryString
 ---
-<div>{{APIRef("File API")}} {{non-standard_header}}</div>
+{{APIRef("File API")}} {{non-standard_header}}
 
-<div> </div>
+`readAsBinaryString` 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}} 会变成`DONE`（已完成），并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。
 
-<p><code>readAsBinaryString</code> 方法会读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象，当读取完成的时候，{{domxref("FileReader.readyState","readyState")}}  会变成<code>DONE</code>（已完成），并触发 {{event("loadend")}} 事件，同时 {{domxref("FileReader.result","result")}} 属性将包含所读取文件原始二进制格式。</p>
+注意：从 2012 年 7 月 12 日起，该方法已从 W3C 工作草案废除。
 
-<p>注意：从 2012 年 7 月 12 日起，该方法已从 W3C 工作草案废除。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.readAsBinaryString(blob);</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `blob`
+  - : 即将被读取的 {{domxref("Blob")}} 或者 {{domxref("File")}} 对象。
 
-<dl>
- <dt><code>blob</code></dt>
- <dd>即将被读取的 {{domxref("Blob")}} 或者 {{domxref("File")}} 对象。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var canvas = document.createElement('canvas');
+```js
+var canvas = document.createElement('canvas');
 var height = 200;
 var width  = 200;
 
@@ -46,18 +45,17 @@ canvas.toBlob(function (blob) {
   }
 
   reader.readAsBinaryString(blob);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>该方法已从 FileAPI 标准移除，请使用 {{domxref("FileReader.readAsArrayBuffer()")}} 代替。</p>
+该方法已从 FileAPI 标准移除，请使用 {{domxref("FileReader.readAsArrayBuffer()")}} 代替。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileReader.readAsBinaryString")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

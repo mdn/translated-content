@@ -3,47 +3,47 @@ title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 translation_of: Web/API/Document/caretRangeFromPoint
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}} </p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p>{{domxref("Document")}} 的 <code><strong>caretRangeFromPoint()</strong></code> 方法返回一个 Range 对象（指定坐标的文档片段）。</p>
+{{domxref("Document")}} 的 **`caretRangeFromPoint()`** 方法返回一个 Range 对象（指定坐标的文档片段）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var <em>range</em> = <em>document</em>.caretRangeFromPoint(float <em>x</em>, float <em>y</em>);
-</pre>
+```js
+var range = document.caretRangeFromPoint(float x, float y);
+```
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>其中一项：</p>
+其中一项：
 
-<ul>
- <li>A {{domxref("Range")}}.</li>
- <li><code>Null</code>, 若 <strong>x</strong> 或 <strong>y</strong> 不存在、在视图外或在没有文本节点的位置。</li>
-</ul>
+- A {{domxref("Range")}}.
+- `Null`, 若 **x** 或 **y** 不存在、在视图外或在没有文本节点的位置。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd>当前视图的横向位置。</dd>
- <dt>y</dt>
- <dd>当前视图的纵向位置。</dd>
-</dl>
+- x
+  - : 当前视图的横向位置。
+- y
+  - : 当前视图的纵向位置。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p>Basic demo: 点击文档，在点击的位置插入一行。</p>
+Basic demo: 点击文档，在点击的位置插入一行。
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</pre>
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">function insertBreakAtPoint(e) {
+```js
+function insertBreakAtPoint(e) {
 
     var range;
     var textNode;
@@ -61,7 +61,7 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
     }
 
     // only split TEXT_NODEs
-    if (textNode &amp;&amp; textNode.nodeType == 3) {
+    if (textNode && textNode.nodeType == 3) {
         var replacement = textNode.splitText(offset);
         var br = document.createElement('br');
         textNode.parentNode.insertBefore(br, replacement);
@@ -69,14 +69,13 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 }
 
 var paragraphs = document.getElementsByTagName("p");
-for (i=0 ; i &lt; paragraphs.length; i++) {
+for (i=0 ; i < paragraphs.length; i++) {
     paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
 
-<p> </p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Document.caretRangeFromPoint")}}

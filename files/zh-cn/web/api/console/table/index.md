@@ -9,29 +9,32 @@ tags:
   - 调试
 translation_of: Web/API/Console/table
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>将数据以表格的形式显示。</p>
+将数据以表格的形式显示。
 
-<p>这个方法需要一个必须参数 <code>data</code>，<code>data</code> 必须是一个数组或者是一个对象；还可以使用一个可选参数 <code>columns</code>。</p>
+这个方法需要一个必须参数 `data`，`data` 必须是一个数组或者是一个对象；还可以使用一个可选参数 `columns`。
 
-<p>它会把数据 <code>data</code> 以表格的形式打印出来。数组中的每一个元素（或对象中可枚举的属性）将会以行的形式显示在表格中。</p>
+它会把数据 `data` 以表格的形式打印出来。数组中的每一个元素（或对象中可枚举的属性）将会以行的形式显示在表格中。
 
-<p>表格的第一列是 <code>index</code>。如果数据 <code>data</code> 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）<code>console.table</code> 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。</p>
+表格的第一列是 `index`。如果数据 `data` 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）`console.table` 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h3 id="打印单一参数类型">打印单一参数类型</h3>
+### 打印单一参数类型
 
-<p>数据的参数类型可以是数组或是对象。</p>
+数据的参数类型可以是数组或是对象。
 
-<pre class="brush: js">// 打印一个由字符串组成的数组
+```js
+// 打印一个由字符串组成的数组
 
-console.table(["apples", "oranges", "bananas"]);</pre>
+console.table(["apples", "oranges", "bananas"]);
+```
 
-<p><img src="console-table-array.png"></p>
+![](console-table-array.png)
 
-<pre class="brush: js">// 打印一个属性值是字符串的对象
+```js
+// 打印一个属性值是字符串的对象
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -40,22 +43,26 @@ function Person(firstName, lastName) {
 
 var me = new Person("John", "Smith");
 
-console.table(me);</pre>
+console.table(me);
+```
 
-<p><img src="console-table-simple-object.png"></p>
+![](console-table-simple-object.png)
 
-<h3 id="打印复合的参数类型">打印复合的参数类型</h3>
+### 打印复合的参数类型
 
-<p>如果需要打印的元素在一个数组中，或者需要打印的属性在一个对象，并且他们本身就是一个数组或者对象，则将会把这个元素显示在同一行，每个元素占一列：</p>
+如果需要打印的元素在一个数组中，或者需要打印的属性在一个对象，并且他们本身就是一个数组或者对象，则将会把这个元素显示在同一行，每个元素占一列：
 
-<pre class="brush: js">// 二元数组的打印
+```js
+// 二元数组的打印
 
 var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
-console.table(people);</pre>
+console.table(people);
+```
 
-<p><img alt="Table displaying array of arrays" src="console-table-array-of-array.png"></p>
+![Table displaying array of arrays](console-table-array-of-array.png)
 
-<pre class="brush: js">// 打印一个包含对象的数组
+```js
+// 打印一个包含对象的数组
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -66,15 +73,17 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily]);</pre>
+console.table([john, jane, emily]);
+```
 
-<p>请注意，如果数组包含对象，则列将使用属性名称进行标记。</p>
+请注意，如果数组包含对象，则列将使用属性名称进行标记。
 
-<p>结果显示，如果数组中包含该对象，打印出来的列标签将是该对象的属性名</p>
+结果显示，如果数组中包含该对象，打印出来的列标签将是该对象的属性名
 
-<p><img alt="Table displaying array of objects" src="console-table-array-of-objects.png"></p>
+![Table displaying array of objects](console-table-array-of-objects.png)
 
-<pre class="brush: js">// 打印属性名是对象的对象
+```js
+// 打印属性名是对象的对象
 
 var family = {};
 
@@ -82,15 +91,17 @@ family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
 family.daughter = new Person("Emily", "Smith");
 
-console.table(family);</pre>
+console.table(family);
+```
 
-<p><img alt="Table displaying object of objects" src="console-table-object-of-objects.png"></p>
+![Table displaying object of objects](console-table-object-of-objects.png)
 
-<h3 id="选择要隐藏的列">选择要隐藏的列</h3>
+### 选择要隐藏的列
 
-<p><code>console.table()</code> 会把所有元素罗列在每一列，你可以使用 <code>columns</code> 参数选择要显示的列的子集：</p>
+`console.table()` 会把所有元素罗列在每一列，你可以使用 `columns` 参数选择要显示的列的子集：
 
-<pre class="brush: js">// 一个对象数组，只打印 firstName
+```js
+// 一个对象数组，只打印 firstName
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -101,32 +112,32 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily], ["firstName"]);</pre>
+console.table([john, jane, emily], ["firstName"]);
+```
 
-<p><img alt="Table displaying array of objects with filtered output" src="console-table-array-of-objects-firstname-only.png"></p>
+![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
 
-<h3 id="按列重新排序">按列重新排序</h3>
+### 按列重新排序
 
-<p>你可以点击每列的顶部标签来重排输出的表格。</p>
+你可以点击每列的顶部标签来重排输出的表格。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.table(data [, <em>columns</em>]);
-</pre>
+```plain
+console.table(data [, columns]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>data</code></dt>
- <dd>要显示的数据。必须是数组或对象。</dd>
- <dt><code>columns</code></dt>
- <dd>一个包含列的名称的数组。</dd>
-</dl>
+- `data`
+  - : 要显示的数据。必须是数组或对象。
+- `columns`
+  - : 一个包含列的名称的数组。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

@@ -7,42 +7,44 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">TypeError: Object.create requires more than 0 arguments
+```plain
+TypeError: Object.create requires more than 0 arguments
 TypeError: Object.setPrototypeOf requires more than 1 argument
 TypeError: Object.defineProperties requires more than 0 arguments
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>调用函数的时候出现了错误。需要提供更多的参数。</p>
+调用函数的时候出现了错误。需要提供更多的参数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>{{jsxref("Object.create()")}} 方法要求至少有一个参数，而 {{jsxref("Object.setPrototypeOf()")}} 方法要求至少有两个参数：</p>
+{{jsxref("Object.create()")}} 方法要求至少有一个参数，而 {{jsxref("Object.setPrototypeOf()")}} 方法要求至少有两个参数：
 
-<pre class="brush: js example-bad">var obj = Object.create();
+```js example-bad
+var obj = Object.create();
 // TypeError: Object.create requires more than 0 arguments
 
 var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
-</pre>
+```
 
-<p>你可以将 {{jsxref("null")}} 设置为原型：</p>
+你可以将 {{jsxref("null")}} 设置为原型：
 
-<pre class="brush: js example-good">var obj = Object.create(null);
+```js example-good
+var obj = Object.create(null);
 
-var obj = Object.setPrototypeOf({}, null);</pre>
+var obj = Object.setPrototypeOf({}, null);
+```
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)

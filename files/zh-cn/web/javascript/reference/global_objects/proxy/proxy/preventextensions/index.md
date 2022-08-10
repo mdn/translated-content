@@ -6,59 +6,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.preventExtensions()</code></strong> 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截</p>
+**`handler.preventExtensions()`** 方法用于设置对{{jsxref("Object.preventExtensions()")}}的拦截
 
-<p>{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}</p>
+{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   preventExtensions: function(target) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>以下参数传递给 <code>preventExtensions</code> 方法。它会绑定到这个 handler.</p>
+以下参数传递给 `preventExtensions` 方法。它会绑定到这个 handler.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>所要拦截的目标对象。</dd>
-</dl>
+- `target`
+  - : 所要拦截的目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>preventExtensions</code> 方法返回一个布尔值。</p>
+`preventExtensions` 方法返回一个布尔值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.preventExtensions()</strong></code> 拦截 {{jsxref("Object.preventExtensions()")}}返回一个布尔值。</p>
+**`handler.preventExtensions()`** 拦截 {{jsxref("Object.preventExtensions()")}}返回一个布尔值。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>这个 trap 可以拦截这些操作：</p>
+这个 trap 可以拦截这些操作：
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违反了下列规则，proxy 则会抛出一个 {{jsxref("TypeError")}}:</p>
+如果违反了下列规则，proxy 则会抛出一个 {{jsxref("TypeError")}}:
 
-<ul>
- <li>如果目标对象是可扩展的，那么只能返回 <code>false</code></li>
-</ul>
+- 如果目标对象是可扩展的，那么只能返回 `false`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示了如何拦截{{jsxref("Object.preventExtensions()")}}。</p>
+以下代码演示了如何拦截{{jsxref("Object.preventExtensions()")}}。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   preventExtensions: function(target) {
     console.log('called');
     Object.preventExtensions(target);
@@ -68,32 +64,31 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 console.log(Object.preventExtensions(p)); // "called"
                                           // false
-</pre>
+```
 
-<p>以下代码违反了约束。</p>
+以下代码违反了约束。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   preventExtensions: function(target) {
     return true;
   }
 });
 
 Object.preventExtensions(p); // 抛出类型错误
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

@@ -3,38 +3,41 @@ title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 translation_of: Web/API/GamepadButton/value
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>{{domxref("GamepadButton")}}接口下的 <code><strong>GamepadButton.value</strong></code> 属性返回一个双精浮点值来表示许多现代控制器上的模拟按钮的状态，比如说扳机键。</p>
+{{domxref("GamepadButton")}}接口下的 **`GamepadButton.value`** 属性返回一个双精浮点值来表示许多现代控制器上的模拟按钮的状态，比如说扳机键。
 
-<p>其值被规范于范围 <code>0.0</code> — <code>1.0</code> 内， <code>0.0</code> 表示按钮没有被按下，<code>1.0</code> 则表示按钮被完全按下。</p>
+其值被规范于范围 `0.0` — `1.0` 内， `0.0` 表示按钮没有被按下，`1.0` 则表示按钮被完全按下。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var pressState = navigator.getGamepads()[0].value;
+```js
+var pressState = navigator.getGamepads()[0].value;
 // 只读属性、双精浮点值
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
+```js
+var gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value &gt; 0) {
+if(gp.buttons[0].value > 0) {
   // 响应模拟按钮被按下
-} </pre>
+}
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一个 {{domxref("double")}} (双精浮点值)。</p>
+一个 {{domxref("double")}} (双精浮点值)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.GamepadButton.value")}}</p>
+{{Compat("api.GamepadButton.value")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">使用 Gamepad API</a></p>
+[使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)

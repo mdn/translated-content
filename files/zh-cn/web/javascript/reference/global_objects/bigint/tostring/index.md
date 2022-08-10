@@ -3,76 +3,73 @@ title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toString()</code></strong> 方法返回一个字符串，表示指定 {{jsxref("BigInt")}} 对象。 后面的 "n" 不是字符串的一部分。</p>
+**`toString()`** 方法返回一个字符串，表示指定 {{jsxref("BigInt")}} 对象。 后面的 "n" 不是字符串的一部分。
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
 
+## 语法
 
+```plain
+bigIntObj.toString([radix])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>bigIntObj</var>.toString([<var>radix</var>])</code></pre>
+- `radix`{{Optional_inline}}
+  - : 可选，介于 2 到 36 之间的整数，指定用于表示数值的基数。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>radix</code>{{Optional_inline}}</dt>
- <dd>可选，介于 2 到 36 之间的整数，指定用于表示数值的基数。</dd>
-</dl>
+表示指定 {{jsxref("BigInt")}} 对象的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>表示指定 {{jsxref("BigInt")}} 对象的字符串。</p>
+- {{jsxref("RangeError")}}
+  - : 如果 `toString()` 的基数小于 2 或大于 36, 则抛出 {{jsxref("RangeError")}}。
 
-<h3 id="异常">异常</h3>
+## 描述
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 <code>toString()</code> 的基数小于 2 或大于 36, 则抛出 {{jsxref("RangeError")}}。</dd>
-</dl>
+{{jsxref("BigInt")}} 对象重写 {{jsxref("Object")}} 对象的 `toString()` 方法；它不继承 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref( "BigInt")}} 对象，`toString()` 方法返回指定基数中对象的字符串表示形式。
 
-<h2 id="描述">描述</h2>
+`toString()` 方法解析其第一个参数，并尝试返回指定基数 (base) 的字符串表示形式。对于大于 10 的参数，使用字母表中的字母表示大于 9 的数字。例如，对于十六进制数（以 16 为基数），使用 a 到 f。
 
-<p>{{jsxref("BigInt")}} 对象重写 {{jsxref("Object")}} 对象的 <code>toString()</code> 方法；它不继承 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref( "BigInt")}} 对象，<code>toString()</code> 方法返回指定基数中对象的字符串表示形式。</p>
+如果未指定基数，则假定首选基数为 10。
 
-<p><code>toString()</code> 方法解析其第一个参数，并尝试返回指定基数 (base) 的字符串表示形式。对于大于 10 的参数，使用字母表中的字母表示大于 9 的数字。例如，对于十六进制数（以 16 为基数），使用 a 到 f。</p>
+如果 `bigIntObj` 为负，则保留符号。即使基数是 2，情况也是如此；返回的字符串是 `bigIntObj` 的正二进制表示，前面是一个 `-` 符号，而不是 `bigIntObj` 的两个补码。
 
-<p>如果未指定基数，则假定首选基数为 10。</p>
+## 例子
 
-<p>如果 <code>bigIntObj</code> 为负，则保留符号。即使基数是 2，情况也是如此；返回的字符串是 <code>bigIntObj</code> 的正二进制表示，前面是一个 <code>-</code> 符号，而不是 <code>bigIntObj</code> 的两个补码。</p>
+### Using `toString`
 
-<h2 id="例子">例子</h2>
-
-<h3 id="Using_toString">Using <code>toString</code></h3>
-
-<pre class="brush: js">17n.toString();      // '17'
+```js
+17n.toString();      // '17'
 66n.toString(2);     // '1000010'
 254n.toString(16);   // 'fe'
 -10n.toString(2);    // -1010'
 -0xffn.toString(2);  // '-11111111'
-</pre>
+```
 
-<h3 id="Negative-zero_BigInt">Negative-zero <code>BigInt</code></h3>
+### Negative-zero `BigInt`
 
-<p>没有负零 <code>BigInt</code>，因为整数中没有负零。<code>-0.0</code> 是一个 IEEE 浮点概念，只出现在 JavaScript {{jsxref("Number")}} 类型中。</p>
+没有负零 `BigInt`，因为整数中没有负零。`-0.0` 是一个 IEEE 浮点概念，只出现在 JavaScript {{jsxref("Number")}} 类型中。
 
-<pre class="brush: js">(-0n).toString();      // '0'
-BigInt(-0).toString(); // '0'</pre>
+```js
+(-0n).toString();      // '0'
+BigInt(-0).toString(); // '0'
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>{{jsxref("BigInt.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("BigInt.prototype.valueOf()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxref("BigInt.prototype.valueOf()")}}
+- {{jsxref("Number.prototype.toString()")}}

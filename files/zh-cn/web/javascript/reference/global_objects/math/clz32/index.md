@@ -3,39 +3,39 @@ title: Math.clz32()
 slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.clz32() </strong></code>函数返回一个数字在转换成 32 无符号整形数字的二进制形式后，开头的 0 的个数，比如 <code>1000000</code> 转换成 32 位无符号整形数字的二进制形式后是 <code>00000000000011110100001001000000</code>, 开头的 0 的个数是 12 个，则 <code>Math.clz32(1000000)</code> 返回 <code>12</code>.</p>
+**`Math.clz32() `**函数返回一个数字在转换成 32 无符号整形数字的二进制形式后，开头的 0 的个数，比如 `1000000` 转换成 32 位无符号整形数字的二进制形式后是 `00000000000011110100001001000000`, 开头的 0 的个数是 12 个，则 `Math.clz32(1000000)` 返回 `12`.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.clz32 (x)
-</code></pre>
+```plain
+Math.clz32 (x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt>x</dt>
- <dd>一个数字。</dd>
-</dl>
+- x
+  - : 一个数字。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>"clz32" 是 CountLeadingZeroes32 的缩写。</p>
+"clz32" 是 CountLeadingZeroes32 的缩写。
 
-<p>如果 <code>x</code> 不是数字类型，则它首先会被转换成数字类型，然后再转成 32 位无符号整形数字. </p>
+如果 `x` 不是数字类型，则它首先会被转换成数字类型，然后再转成 32 位无符号整形数字.
 
-<p>如果转换后的 32 位无符号整形数字是 <code>0</code>, 则返回 <code>32</code>, 因为此时所有位上都是 <code>0</code>.</p>
+如果转换后的 32 位无符号整形数字是 `0`, 则返回 `32`, 因为此时所有位上都是 `0`.
 
-<p><code>NaN</code>, <code>Infinity</code>,<code> -Infinity</code> 这三个数字转成 32 位无符号整形数字后都是 <code>0</code>.</p>
+`NaN`, `Infinity`,` -Infinity` 这三个数字转成 32 位无符号整形数字后都是 `0`.
 
-<p>这个函数主要用于那些编译目标为 JS 语言的系统中，比如 Emscripten.</p>
+这个函数主要用于那些编译目标为 JS 语言的系统中，比如 Emscripten.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">Math.clz32(1)                // 31
+```js
+Math.clz32(1)                // 31
 Math.clz32(1000)             // 22
 Math.clz32()                 // 32
 [NaN, Infinity, -Infinity, 0, -0, null, undefined, "foo", {}, []].filter(function (n) {
@@ -43,38 +43,43 @@ Math.clz32()                 // 32
 })                           // []
 Math.clz32(true)             // 31
 Math.clz32(3.5)              // 30
-</pre>
+```
 
-<h2 id="Compatibility">计算前导 1 的个数</h2>
+## 计算前导 1 的个数
 
-<p>目前 javascript 尚未提供 <code>Math.clon</code> 函数来计算前导 1 的个数（之所以叫“clon”而非“clo”，是因为“clo”与“clz”太过相似，特别对那些母语不是英语的人来说），但是你可以通过将一个数取反并将其作为 <code>Math.clz32</code> 的参数来实现 clon 函数。其中的原理非常简单，因为对 1 取反是 0，反之亦然，所以用 <code>Math.clz32</code> 计算前导 0 的个数就变成计算前导 1 的个数。</p>
+目前 javascript 尚未提供 `Math.clon` 函数来计算前导 1 的个数（之所以叫“clon”而非“clo”，是因为“clo”与“clz”太过相似，特别对那些母语不是英语的人来说），但是你可以通过将一个数取反并将其作为 `Math.clz32` 的参数来实现 clon 函数。其中的原理非常简单，因为对 1 取反是 0，反之亦然，所以用 `Math.clz32` 计算前导 0 的个数就变成计算前导 1 的个数。
 
-<p>先看以下代码：</p>
+先看以下代码：
 
-<pre>var a = 32776;   // 00000000000000001000000000001000 (16 个前导 0)
+```plain
+var a = 32776;   // 00000000000000001000000000001000 (16 个前导 0)
 Math.clz32(a);   // 16
 
 var b = ~32776;  // 11111111111111110111111111110111 (对 32776 取反，0 个前导 0)
-Math.clz32(b);   // 0 (相当于 0 个前导 1)</pre>
+Math.clz32(b);   // 0 (相当于 0 个前导 1)
+```
 
-<p>通过以上方法，<code>clon</code> 函数可以定义如下：</p>
+通过以上方法，`clon` 函数可以定义如下：
 
-<pre>var clz = Math.clz32;
+```plain
+var clz = Math.clz32;
 function clon(integer){
     return clz(~integer);
-}</pre>
+}
+```
 
-<p>现在，我们可以进一步实现计算“尾随 0”和“尾随 1”的个数了。下面的<code>ctrz</code>函数将第一个 1 之后的高数位全部置为 1 然后取反，再用<code>Math.clz32 求得</code>尾随 0 的个数。</p>
+现在，我们可以进一步实现计算“尾随 0”和“尾随 1”的个数了。下面的`ctrz`函数将第一个 1 之后的高数位全部置为 1 然后取反，再用`Math.clz32 求得`尾随 0 的个数。
 
-<pre>var clz = Math.clz32;
+```plain
+var clz = Math.clz32;
 function ctrz(integer){ // 计算尾随 0 个数
     // 1. 将第一个 1 之后的高数位全部置为 1
-    // 00000000000000001000000000001000 =&gt; 11111111111111111111111111111000
-    integer |= integer &lt;&lt; 16;
-    integer |= integer &lt;&lt; 8;
-    integer |= integer &lt;&lt; 4;
-    integer |= integer &lt;&lt; 2;
-    integer |= integer &lt;&lt; 1;
+    // 00000000000000001000000000001000 => 11111111111111111111111111111000
+    integer |= integer << 16;
+    integer |= integer << 8;
+    integer |= integer << 4;
+    integer |= integer << 2;
+    integer |= integer << 1;
     // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
     return 32 - clz(~integer) |0; // `|0`用于保证结果为整数
 }
@@ -84,30 +89,32 @@ function ctron(integer){ // 计算尾随 1 个数
     return ctrz(~integer);
     /* 为了看起来比较对称，你也可以使用以下代码：
        // 1. 将第一个 0 之后的高数位全部置为 0
-       integer &amp;= (integer &lt;&lt; 16) | 0xffff;
-       integer &amp;= (integer &lt;&lt; 8 ) | 0x00ff;
-       integer &amp;= (integer &lt;&lt; 4 ) | 0x000f;
-       integer &amp;= (integer &lt;&lt; 2 ) | 0x0003;
-       integer &amp;= (integer &lt;&lt; 1 ) | 0x0001;
+       integer &= (integer << 16) | 0xffff;
+       integer &= (integer << 8 ) | 0x00ff;
+       integer &= (integer << 4 ) | 0x000f;
+       integer &= (integer << 2 ) | 0x0003;
+       integer &= (integer << 1 ) | 0x0001;
        // 2. 然后，对该数取反，此时低位的 0 的个数即为所求
        return 32 - clon(~integer) |0;
     */
-}</pre>
+}
+```
 
-<p>将以上函数改写成 ASM.JS 模块——然后，你就可以去跟别人炫耀了！ASM.JS 就是用来干这个的。</p>
+将以上函数改写成 ASM.JS 模块——然后，你就可以去跟别人炫耀了！ASM.JS 就是用来干这个的。
 
-<pre>var countTrailsMethods = (function(stdlib, foreign, heap) {
+```plain
+var countTrailsMethods = (function(stdlib, foreign, heap) {
     "use asm";
     var clz = stdlib.Math.clz32;
     function ctrz(integer) { // 计算尾随 0 个数
         integer = integer | 0; // 确保是整数
         // 1. 将第一个 1 之后的高数位全部置为 1
-        // ASMjs 中不允许^=、&amp;=、和 |=
-        integer = integer | (integer &lt;&lt; 16);
-        integer = integer | (integer &lt;&lt; 8);
-        integer = integer | (integer &lt;&lt; 4);
-        integer = integer | (integer &lt;&lt; 2);
-        integer = integer | (integer &lt;&lt; 1);
+        // ASMjs 中不允许^=、&=、和 |=
+        integer = integer | (integer << 16);
+        integer = integer | (integer << 8);
+        integer = integer | (integer << 4);
+        integer = integer | (integer << 2);
+        integer = integer | (integer << 1);
         // 2. 然后，对该数取反，此时低位的 1 的个数即为所求
         return 32 - clz(~integer) |0;
     }
@@ -120,33 +127,34 @@ function ctron(integer){ // 计算尾随 1 个数
     return {a: ctrz, b: ctron};
 })(window, null, null);
 var ctrz = countTrailsMethods.a;
-var ctron = countTrailsMethods.b;</pre>
+var ctron = countTrailsMethods.b;
+```
 
-<h2 id="Compatibility">Polyfill</h2>
+## Polyfill
 
-<p>这个 polyfill 效率最高。</p>
+这个 polyfill 效率最高。
 
-<pre>if (!Math.clz32) Math.clz32 = (function(log, LN2){
+```plain
+if (!Math.clz32) Math.clz32 = (function(log, LN2){
   return function(x) {
-    var asUint = x &gt;&gt;&gt; 0; // 将 x 转换为 Uint32 类型
+    var asUint = x >>> 0; // 将 x 转换为 Uint32 类型
     if (asUint === 0) {
       return 32;
     }
     return 31 - (log(asUint) / LN2 | 0) |0; // "| 0"相当于 Math.floor
   };
-})(Math.log, Math.LN2);</pre>
+})(Math.log, Math.LN2);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math")}}</li>
- <li>{{jsxref("Math.imul")}}</li>
-</ul>
+- {{jsxref("Math")}}
+- {{jsxref("Math.imul")}}

@@ -8,87 +8,77 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/rect
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>rect</code>元素是 SVG 的一个基本形状，用来创建矩形，基于一个角位置以及它的宽和高。它还可以用来创建圆角矩形。</p>
+`rect`元素是 SVG 的一个基本形状，用来创建矩形，基于一个角位置以及它的宽和高。它还可以用来创建圆角矩形。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="简单矩形">简单矩形</h3>
+### 简单矩形
 
-<p> </p>
-
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```xml
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+  <rect x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<p> </p>
+» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
 
-<p>» <a href="https://mdn.mozillademos.org/files/8893/rect-1.svg">rect-1.svg</a></p>
+### 圆角矩形
 
-<h3 id="圆角矩形">圆角矩形</h3>
-
-<p> </p>
-
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```xml
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10"
+  <rect x="10" y="10"
         width="100" height="100"
-        rx="15" ry="15"/&gt;
+        rx="15" ry="15"/>
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<p> </p>
+» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
 
-<p>» <a href="https://mdn.mozillademos.org/files/8897/rect-2.svg">rect-2.svg</a></p>
+## 属性
 
-<h2 id="属性">属性</h2>
+### 全局属性
 
-<h3 id="全局属性">全局属性</h3>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+### 专有属性
 
-<h3 id="专有属性">专有属性</h3>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("rx") }}
+- {{ SVGAttr("ry") }}
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("rx") }}</li>
- <li>{{ SVGAttr("ry") }}</li>
-</ul>
+## DOM 接口
 
-<h2 id="DOM_接口">DOM 接口</h2>
+这个元素实现了 [`SVGRectElement`](/en/DOM/SVGRectElement) 接口。
 
-<p>这个元素实现了 <code><a href="/en/DOM/SVGRectElement">SVGRectElement</a></code> 接口。</p>
-
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("svg.elements.rect")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("path") }}</li>
-</ul>
+- {{ SVGElement("path") }}

@@ -3,47 +3,46 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
-<div>{{JSRef("Global_Objects", "WeakMap")}}</div>
+{{JSRef("Global_Objects", "WeakMap")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>delete()</strong></code> 方法可以从一个 <code>WeakMap</code> 对象中删除指定的元素。</p>
+**`delete()`** 方法可以从一个 `WeakMap` 对象中删除指定的元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>wm</em>.delete(key);</code></pre>
+```plain
+wm.delete(key);
+```
 
-<h3 id="Parameters参数">Parameters 参数</h3>
+### Parameters 参数
 
-<dl>
- <dt>key</dt>
- <dd>需要删除的元素的键</dd>
-</dl>
+- key
+  - : 需要删除的元素的键
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果成功删除，返回 <code>true</code>，否则返回 <code>false</code>。</p>
+如果成功删除，返回 `true`，否则返回 `false`。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js;">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.delete(window); // 返回 true，表示删除成功。
 
 wm.has(window);    // 返回 false，因为 window 对象已经被删除了。
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

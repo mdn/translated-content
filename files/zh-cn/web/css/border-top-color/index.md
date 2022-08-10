@@ -7,17 +7,16 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/border-top-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-top-color</code></strong> 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。</p>
+**`border-top-color`** 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-color.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers  language-css">/* &lt;color&gt; values */
+```css
+/* <color> values */
 border-top-color: red;
 border-top-color: #ffbb00;
 border-top-color: rgb(255, 0, 0);
@@ -29,36 +28,37 @@ border-top-color: transparent;
 border-top-color: inherit;
 border-top-color: initial;
 border-top-color: unset;
-</pre>
+```
 
-<p><code>border-top-color</code> 属性的值为单值。</p>
+`border-top-color` 属性的值为单值。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>上边框的颜色。</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 上边框的颜色。
 
-<h3 id="规范语法">规范语法</h3>
+### 规范语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="一个简单的带边框容器">一个简单的带边框容器</h3>
+### 一个简单的带边框容器
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="mybox"&gt;
-  &lt;p&gt;This is a box with a border around it.
+```html
+<div class="mybox">
+  <p>This is a box with a border around it.
      Note which side of the box is
-     &lt;span class="redtext"&gt;red&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="redtext">red</span>.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.mybox {
+```css
+.mybox {
   border: solid 0.3em gold;
   border-top-color: red;
   width: auto;
@@ -66,28 +66,25 @@ border-top-color: unset;
 
 .redtext {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.border-top-color")}}
 
+## See also
 
-<p>{{Compat("css.properties.border-top-color")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.</li>
- <li>The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.</li>
- <li>The other border-related CSS properties applying to the same border: {{cssxref("border-top-style")}} and {{cssxref("border-top-width")}}.</li>
-</ul>
+- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.
+- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.
+- The other border-related CSS properties applying to the same border: {{cssxref("border-top-style")}} and {{cssxref("border-top-width")}}.

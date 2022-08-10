@@ -4,19 +4,21 @@ slug: Web/API/Window/message_event
 translation_of: Web/API/WindowEventHandlers/onmessage
 original_slug: Web/API/WindowEventHandlers/onmessage
 ---
-<p>{{APIRef("HTML DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("HTML DOM")}}{{ SeeCompatTable() }}
 
-<p>{{domxref("WindowEventHandlers")}}的<code><strong>onmessage</strong></code><strong> 属性是当对象接收到</strong>{{event("message")}} <strong>事件时被调用的</strong>{{event("Event_handlers", "event handler")}} <strong>.</strong></p>
+{{domxref("WindowEventHandlers")}}的**`onmessage`** **属性是当对象接收到**{{event("message")}} **事件时被调用的**{{event("Event_handlers", "event handler")}} **.**
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.addEventListener('message', function(event) { ... })
-window.onmessage = function(event) { ... }</pre>
+```plain
+window.addEventListener('message', function(event) { ... })
+window.onmessage = function(event) { ... }
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.WindowEventHandlers.onmessage")}}

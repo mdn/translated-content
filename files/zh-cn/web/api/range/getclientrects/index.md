@@ -10,34 +10,32 @@ tags:
   - 范围
 translation_of: Web/API/Range/getClientRects
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Range.getClientRects()</code></strong><strong> </strong>方法返回一个 {{ domxref("DOMRect") }} 对象列表，表示 <a href="/en/DOM/range">range</a> 在屏幕上所占的区域。这个列表相当于汇集了范围中所有元素调用 {{ domxref("Element.getClientRects()") }} 方法所得的结果。</p>
+**`Range.getClientRects()`** 方法返回一个 {{ domxref("DOMRect") }} 对象列表，表示 [range](/en/DOM/range) 在屏幕上所占的区域。这个列表相当于汇集了范围中所有元素调用 {{ domxref("Element.getClientRects()") }} 方法所得的结果。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>rectList</em> = <em>range</em>.getClientRects()
-</pre>
+```plain
+rectList = range.getClientRects()
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">range = document.createRange();
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 rectList = range.getClientRects();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Range.getClientRects")}}
 
+## 参见
 
-<p>{{Compat("api.Range.getClientRects")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("Range")}}</li>
-</ul>
+- {{domxref("Range")}}

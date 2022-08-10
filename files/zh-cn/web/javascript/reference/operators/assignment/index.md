@@ -9,43 +9,40 @@ tags:
   - 赋值运算符
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>简单赋值操作符 (=) 用于为变量赋值。赋值表达式本身的值为要赋值的值。为了给多个变量赋一个值，可以链式使用赋值操作符。</p>
+简单赋值操作符 (=) 用于为变量赋值。赋值表达式本身的值为要赋值的值。为了给多个变量赋一个值，可以链式使用赋值操作符。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
+## 语法
 
+```plain
+Operator: x = y
+```
 
+## 示例
 
+### 简单赋值和链式赋值
 
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox"><strong>Operator:</strong> x = y
-</pre>
-
-<h2 id="示例">示例</h2>
-
-<h3 id="简单赋值和链式赋值">简单赋值和链式赋值</h3>
-
-<pre class="brush: js">// 假设已经存在以下变量
+```js
+// 假设已经存在以下变量
 //  x = 5
 //  y = 10
 //  z = 25
 
 x = y     // x 为 10
-x = y = z // x, y 都为 25</pre>
+x = y = z // x, y 都为 25
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)

@@ -3,15 +3,16 @@ title: File.getAsBinary
 slug: Web/API/File/getAsBinary
 translation_of: Web/API/File/getAsBinary
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>将文件内容按照原始二进制形式解析成字符串并返回。</p>
+将文件内容按照原始二进制形式解析成字符串并返回。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js;">// fileInput 是一个 HTMLInputElement 元素：&lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput 是一个 HTMLInputElement 元素：<input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files 是一个 FileList 对象 (类似于 NodeList)
@@ -25,18 +26,19 @@ var accept = {
 
 var file;
 
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
     file = files[i];
 
     // 如果文件的类型能够被检测到
     if (file !== null) {
-        if (accept.binary.indexOf(file.type) &gt; -1) {
+        if (accept.binary.indexOf(file.type) > -1) {
             // file 是个可接受的二进制文件
             var data = file.getAsBinary();
-        } else if (accept.text.indexOf(file.type) &gt; -1) {
+        } else if (accept.text.indexOf(file.type) > -1) {
             // file 是个可接受的文本文件
             var data = file.getAsText();
             // 使用字符串方法处理 data
         }
     }
-}</pre>
+}
+```

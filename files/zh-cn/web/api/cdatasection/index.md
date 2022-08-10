@@ -8,43 +8,44 @@ tags:
   - 接口
 translation_of: Web/API/CDATASection
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>CDATASection</strong></code> 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 <code>&lt;</code> 和 <code>&amp;</code>，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。</p>
+**`CDATASection`** 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 `<` 和 `&`，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。
 
-<p>在 XML 中，一个 CDATA 片段格式如下：</p>
+在 XML 中，一个 CDATA 片段格式如下：
 
-<pre class="syntaxbox">&lt;![CDATA[  ... ]]&gt;
-</pre>
+```plain
+<![CDATA[  ... ]]>
+```
 
-<p>例如：</p>
+例如：
 
-<pre class="brush:xml">&lt;foo&gt;这是一个CDATA section: &lt;![CDATA[  &lt; &gt; &amp; ]]&gt; 其中包含了一些没有转义的字符。 &lt;/foo&gt;
-</pre>
+```xml
+<foo>这是一个CDATA section: <![CDATA[  < > & ]]> 其中包含了一些没有转义的字符。 </foo>
+```
 
-<p>唯一的例外就是，在一个 CDATA 片段中不可以使用  CDATA 片段本身的闭合标签片段:</p>
+唯一的例外就是，在一个 CDATA 片段中不可以使用 CDATA 片段本身的闭合标签片段:
 
-<pre class="brush:xml">&lt;![CDATA[  ]]&gt; 会引发错误   ]]&gt;
-</pre>
+```xml
+<![CDATA[  ]]> 会引发错误   ]]>
+```
 
-<p>注意，CDATA 片段不应该在 HTML 中被使用；它只在 XML 中有效。</p>
+注意，CDATA 片段不应该在 HTML 中被使用；它只在 XML 中有效。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>这个接口没有特有的属性，但实现了父接口<em> {{domxref("Text")}}</em> 的属性。</p>
+这个接口没有特有的属性，但实现了父接口 _{{domxref("Text")}}_ 的属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>这个接口没有特有的方法，但实现了父接口<em> {{domxref("Text")}}</em> 的方法。</p>
+这个接口没有特有的方法，但实现了父接口 _{{domxref("Text")}}_ 的方法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.CDATASection")}}</p>
+{{Compat("api.CDATASection")}}

@@ -3,17 +3,12 @@ title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
 translation_of: Web/API/XMLHttpRequest/statusText
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}只读属性 **`XMLHttpRequest.statusText`** 返回了`XMLHttpRequest` 请求中由服务器返回的一个[`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString) 类型的文本信息，这则信息中也包含了响应的数字状态码。不同于使用一个数字来指示的状态码[`XMLHTTPRequest.status`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHTTPRequest/status)，这个属性包含了返回状态对应的文本信息，例如"OK"或是"Not Found"。如果请求的状态[`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState)的值为"UNSENT"或者"OPENED"，则这个属性的值将会是一个空字符串。如果服务器未明确指定一个状态文本信息，则`statusText`的值将会被自动赋值为"OK"。
 
-<div>只读属性 <code><strong>XMLHttpRequest.statusText</strong></code> 返回了<code>XMLHttpRequest</code> 请求中由服务器返回的一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString"><code>DOMString</code></a> 类型的文本信息，这则信息中也包含了响应的数字状态码。不同于使用一个数字来指示的状态码<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHTTPRequest/status">XMLHTTPRequest.status</a></code>，这个属性包含了返回状态对应的文本信息，例如"OK"或是"Not Found"。如果请求的状态<code><a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a></code>的值为"UNSENT"或者"OPENED"，则这个属性的值将会是一个空字符串。</div>
+## 例子
 
-
-
-<div>如果服务器未明确指定一个状态文本信息，则<code>statusText</code>的值将会被自动赋值为"OK"。</div>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);
@@ -37,19 +32,17 @@ xhr.send(null);
  * 3 LOADING OK
  * 4 DONE OK
  */
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.XMLHttpRequest.statusText")}}</p>
+{{Compat("api.XMLHttpRequest.statusText")}}
 
-<h2 id="参考内容">参考内容</h2>
+## 参考内容
 
-<ul>
- <li>List of <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- [HTTP](/en-US/docs/Web/HTTP)

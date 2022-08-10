@@ -3,52 +3,49 @@ title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>has()</strong></code> 方法根据 <code>WeakSet</code> 是否存在相应对象返回布尔值。</p>
+**`has()`** 方法根据 `WeakSet` 是否存在相应对象返回布尔值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>ws</em>.has(value);</code></pre>
+```plain
+ws.has(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>value</dt>
- <dd>必须。 测试 <code>WeakSet 中是否存在该对象。</code></dd>
-</dl>
+- value
+  - : 必须。 测试 `WeakSet 中是否存在该对象。`
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>Boolean</dt>
- <dd>如果 <code>WeakSet</code> 对象中存在指定的元素，返回 true；否则返回 <code>false。</code></dd>
-</dl>
+- Boolean
+  - : 如果 `WeakSet` 对象中存在指定的元素，返回 true；否则返回 `false。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_has_方法">使用 <code>has</code> 方法</h3>
+### 使用 `has` 方法
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
 mySet.has(window);  // 返回 true
 mySet.has(obj);     // 返回 false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.add()")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.delete()")}}

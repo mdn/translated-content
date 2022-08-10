@@ -3,24 +3,24 @@ title: Window.visualViewport
 slug: Web/API/Window/visualViewport
 translation_of: Web/API/Window/visualViewport
 ---
-<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
+{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
-<p> </p>
+{{domxref("Window")}} 接口的 visualViewport 只读属性返回一个{{domxref("VisualViewport")}}对象，该对象表示给定窗口的可视视口。
 
-<p>{{domxref("Window")}} 接口的 visualViewport 只读属性返回一个{{domxref("VisualViewport")}}对象，该对象表示给定窗口的可视视口。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+var visualViewport = Window.visualViewport
+```
 
-<pre class="syntaxbox">var <em>visualViewport</em> = Window.visualViewport</pre>
+### 值
 
-<h3 id="值">值</h3>
+一个 {{domxref("VisualViewport")}} 对象。
 
-<p>一个 {{domxref("VisualViewport")}} 对象。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Window.visualViewport")}}

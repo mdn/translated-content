@@ -3,29 +3,28 @@ title: DeviceOrientationEvent.gamma
 slug: Web/API/DeviceOrientationEvent/gamma
 translation_of: Web/API/DeviceOrientationEvent/gamma
 ---
-<p>{{ apiref("Device Orientation Events") }}</p>
+{{ apiref("Device Orientation Events") }}
 
-<p>返回设备旋转时 Y 轴的值;即，多少度，介于之间<code>-90</code>和<code>90</code>，通过该装置被接通向左或向右。见<a href="/en/DOM/Orientation_and_motion_data_explained">方向和运动数据解释</a>的细节。</p>
+返回设备旋转时 Y 轴的值;即，多少度，介于之间`-90`和`90`，通过该装置被接通向左或向右。见[方向和运动数据解释](/en/DOM/Orientation_and_motion_data_explained)的细节。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var gamma = <em>orientationEvent</em>.gamma;
-</pre>
+```plain
+var gamma = orientationEvent.gamma;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.DeviceOrientationEvent.gamma")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li>{{ domxref("window.ondeviceorientation") }}</li>
- <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

@@ -8,24 +8,25 @@ tags:
   - 表单
 translation_of: Web/API/HTMLFormElement/action
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLFormElement.action</code></strong> 这个 js 语句能够定义一个{{HTMLElement("form")}}元素中的 action 属性</p>
+**`HTMLFormElement.action`** 这个 js 语句能够定义一个{{HTMLElement("form")}}元素中的 action 属性
 
-<p>表单的 action 属性是在服务器上提交表单，这个属性可以被检索或者设置。</p>
+表单的 action 属性是在服务器上提交表单，这个属性可以被检索或者设置。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>string</em> = form.action
-form.action = <em>string </em>
-</pre>
+```plain
+string = form.action
+form.action = string
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<p>form.action = "/cgi-bin/publish";</p>
+form.action = "/cgi-bin/publish";
 
-<h2 id="Specification">详细说明</h2>
+## 详细说明
 
-<p><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184">DOM Level 2 HTML: action</a></p>
+[DOM Level 2 HTML: action](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)

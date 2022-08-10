@@ -8,33 +8,34 @@ tags:
   - 验证失败
 translation_of: Web/HTTP/Status/403
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <strong><code>403 Forbidden</code></strong> 代表客户端错误，指的是服务器端有能力处理该请求，但是拒绝授权访问。</p>
+状态码 **`403 Forbidden`** 代表客户端错误，指的是服务器端有能力处理该请求，但是拒绝授权访问。
 
-<p>这个状态类似于 {{HTTPStatus("401")}}，但进入 {{HTTPStatus("403")}}状态后即使重新验证也不会改变该状态。该访问是长期禁止的，并且与应用逻辑密切相关（例如没有足够的权限访问该资源）。</p>
+这个状态类似于 {{HTTPStatus("401")}}，但进入 {{HTTPStatus("403")}}状态后即使重新验证也不会改变该状态。该访问是长期禁止的，并且与应用逻辑密切相关（例如没有足够的权限访问该资源）。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">403 Forbidden</pre>
+```plain
+403 Forbidden
+```
 
-<h2 id="响应示例">响应示例</h2>
+## 响应示例
 
-<pre>HTTP/1.1 403 Forbidden
+```plain
+HTTP/1.1 403 Forbidden
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPStatus("401")}}</li>
- <li><a href="https://www.exai.com/blog/403-forbidden">403 forbidden error</a></li>
-</ul>
+- {{HTTPStatus("401")}}
+- [403 forbidden error](https://www.exai.com/blog/403-forbidden)

@@ -1,21 +1,24 @@
 ---
-title: 'arguments[@@iterator]()'
+title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><code><strong>@@iterator</strong></code> 属性的初始值是和 {{jsxref("Array.prototype.values")}} 属性的初始值相同的对象。</p>
+**`@@iterator`** 属性的初始值是和 {{jsxref("Array.prototype.values")}} 属性的初始值相同的对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>arguments</var>[Symbol.iterator]()</pre>
+```plain
+arguments[Symbol.iterator]()
+```
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<h3 id="使用for...of循环的迭代">使用<code>for...of</code>循环的迭代</h3>
+### 使用`for...of`循环的迭代
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   // 你的浏览器必须支持 for..of 循环
   // 以及 for 循环中的 let 区域变量
   for (let letter of arguments) {
@@ -23,18 +26,16 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
   }
 }
 f('w', 'y', 'k', 'o', 'p');
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}

@@ -3,28 +3,30 @@ title: AnalyserNode.frequencyBinCount
 slug: Web/API/AnalyserNode/frequencyBinCount
 translation_of: Web/API/AnalyserNode/frequencyBinCount
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p><strong><code>frequencyBinCount</code></strong> 的值固定为 {{ domxref("AnalyserNode") }} 接口中 fftSize 值的一半。该属性通常用于可视化的数据值的数量。</p>
+**`frequencyBinCount`** 的值固定为 {{ domxref("AnalyserNode") }} 接口中 fftSize 值的一半。该属性通常用于可视化的数据值的数量。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var bufferLength = analyser.frequencyBinCount;
-</pre>
+```
 
-<h3 id="值类型">值类型</h3>
+### 值类型
 
-<p>无符号长整形 (unsigned long).</p>
+无符号长整形 (unsigned long).
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子展示了 <a href="/zh-CN/docs/Web/API/AudioContext"><code>AudioContext</code></a> 创建一个 <code>AnalyserNode</code>, 然后用 <a href="/zh-CN/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> 去反复收集频率数据，并绘制为一个柱状风格的输出 (频谱).</p>
+下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集频率数据，并绘制为一个柱状风格的输出 (频谱).
 
-<p>更多的例子/信息，查看 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 演示 (相关代码在 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 的 128 行~205 行</a>).</p>
+更多的例子/信息，查看 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
@@ -50,7 +52,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -60,18 +62,17 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AnalyserNode.frequencyBinCount")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

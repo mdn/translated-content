@@ -3,51 +3,46 @@ title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 translation_of: Web/API/Blob/arrayBuffer
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p><code><strong>arrayBuffer()</strong></code> 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。</p>
+**`arrayBuffer()`** 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。
 
-<ul>
-</ul>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+var bufferPromise = blob.arrayBuffer();
 
-<pre class="syntaxbox">var <em>bufferPromise</em> = <em>blob</em>.arrayBuffer();
+blob.arrayBuffer().then(buffer => /* 处理 ArrayBuffer 数据的代码……*/);
 
-<em>blob</em>.arrayBuffer().then(<em>buffer</em> =&gt; /* 处理 ArrayBuffer 数据的代码……*/);
+var buffer = await blob.arrayBuffer();
+```
 
-var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+无须提供任何参数。
 
-<p>无须提供任何参数。</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+返回一个 promise 对象，在 resolved 状态中以二进制的形式包含 blob 中的数据，并呈现在 {{domxref("ArrayBuffer")}} 中。
 
-<p>返回一个 promise 对象，在 resolved 状态中以二进制的形式包含 blob 中的数据，并呈现在 {{domxref("ArrayBuffer")}} 中。</p>
+### 异常
 
-<h3 id="异常">异常</h3>
+当执行这个方法没有提示错误时，那么它可能会出现在 promise 的 reject 状态中。这是可能发生的，比如说在用于获取 blob 数据的一段代码抛出异常的时候。在读取数据时抛出的任何异常都会被放入 reject 状态中。
 
-<p>当执行这个方法没有提示错误时，那么它可能会出现在 promise 的 reject 状态中。这是可能发生的，比如说在用于获取 blob 数据的一段代码抛出异常的时候。在读取数据时抛出的任何异常都会被放入 reject 状态中。</p>
+## 使用须知
 
-<h2 id="使用须知">使用须知</h2>
+{{domxref("FileReader.readAsArrayBuffer()")}} 这个方法与之类似，但 `arrayBuffer()` 返回一个 promise 对象，而不是像 `FileReader` 一样返回一个基于事件的 API。
 
-<p>{{domxref("FileReader.readAsArrayBuffer()")}} 这个方法与之类似，但 <code>arrayBuffer()</code> 返回一个 promise 对象，而不是像 <code>FileReader</code> 一样返回一个基于事件的 API。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Blob.arrayBuffer")}}
 
+## 另见
 
-<p>{{Compat("api.Blob.arrayBuffer")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>{{domxref("Body.arrayBuffer()")}}</li>
- <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
- <li>{{domxref("FileReader.readAsArrayBuffer()")}}</li>
-</ul>
+- {{domxref("Body.arrayBuffer()")}}
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- {{domxref("FileReader.readAsArrayBuffer()")}}

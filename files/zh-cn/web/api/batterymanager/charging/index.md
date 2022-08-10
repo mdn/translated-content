@@ -7,42 +7,46 @@ translation_of: Web/API/BatteryManager/charging
 ---
 {{APIRef("Battery API")}}
 
-<p>指示设备电池当前是否正在充电的 Boolean 值</p>
+指示设备电池当前是否正在充电的 Boolean 值
 
-<h2 id="Syntax_句法">Syntax 句法</h2>
+## Syntax 句法
 
-<pre class="syntaxbox">var <em>charging</em> = battery.charging</pre>
+```plain
+var charging = battery.charging
+```
 
-<p>返回当前是否正在对 {{domxref("BatteryManager")}} 对象的设备充电，如果正在充电则返回 <code>true</code>，否则返回 <code>false</code>.</p>
+返回当前是否正在对 {{domxref("BatteryManager")}} 对象的设备充电，如果正在充电则返回 `true`，否则返回 `false`.
 
-<h2 id="Example">Example 例子</h2>
+## Example 例子
 
-<h3 id="HTML_Content_（内容）">HTML Content（内容）</h3>
+### HTML Content（内容）
 
-<pre class="brush: html">&lt;div id="charging"&gt;(charging state unknown)&lt;/div&gt;</pre>
+```html
+<div id="charging">(charging state unknown)</div>
+```
 
-<h3 id="JavaScript_内容">JavaScript 内容</h3>
+### JavaScript 内容
 
-<pre class="brush: js">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
     var charging = battery.charging;
 
     document.querySelector('#charging').textContent = charging ;
-});</pre>
+});
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Example', '100%', 30) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("BatteryManager")}}</li>
- <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

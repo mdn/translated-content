@@ -9,37 +9,38 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>shift()</strong></code> 方法从数组中删除<strong>第一个</strong>元素，并返回该元素的值。此方法更改数组的长度。</p>
+**`shift()`** 方法从数组中删除**第一个**元素，并返回该元素的值。此方法更改数组的长度。
 
-<div>{{EmbedInteractiveExample("pages/js/array-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-shift.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>arr</var>.shift()</code></pre>
+```plain
+arr.shift()
+```
 
+### 返回值
 
+从数组中删除的元素; 如果数组为空则返回{{jsxref("undefined")}} 。
 
-<h3 id="返回值">返回值 </h3>
+## 描述
 
-<p>从数组中删除的元素; 如果数组为空则返回{{jsxref("undefined")}} 。 </p>
+`shift` 方法移除索引为 0 的元素 (即第一个元素)，并返回被移除的元素，其他元素的索引值随之减 1。如果 {{jsxref("Array.length", "length")}} 属性的值为 0 (长度为 0)，则返回 {{jsxref("undefined")}}。
 
-<h2 id="描述">描述</h2>
+`shift` 方法并不局限于数组：这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类似数组的对象上。但是对于没有 length 属性（从 0 开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。
 
-<p><code>shift</code> 方法移除索引为 0 的元素 (即第一个元素)，并返回被移除的元素，其他元素的索引值随之减 1。如果 {{jsxref("Array.length", "length")}} 属性的值为 0 (长度为 0)，则返回 {{jsxref("undefined")}}。</p>
+{{jsxref("Array.prototype.pop()")}} 有着和 `shift`相似的行为，但是是作用在数组的最后一个元素上的。
 
-<p><code>shift</code> 方法并不局限于数组：这个方法能够通过 {{jsxref("Function.call", "call")}} 或 {{jsxref("Function.apply", "apply")}} 方法作用于类似数组的对象上。但是对于没有 length 属性（从 0 开始的一系列连续的数字属性的最后一个）的对象，调用该方法可能没有任何意义。</p>
+## 示例
 
-<p>{{jsxref("Array.prototype.pop()")}} 有着和 <code>shift</code>相似的行为，但是是作用在数组的最后一个元素上的。</p>
+### 移除数组中的一个元素
 
-<h2 id="示例">示例</h2>
+以下代码显示了删除其第一个元素之前和之后的 myFish 数组。它还显示已删除的元素：
 
-<h3 id="移除数组中的一个元素">移除数组中的一个元素</h3>
-
-<p>以下代码显示了删除其第一个元素之前和之后的 myFish 数组。它还显示已删除的元素：</p>
-
-<pre class="brush: js">let myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+```js
+let myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 
 console.log('调用 shift 之前: ' + myFish);
 // "调用 shift 之前: angel,clown,mandarin,surgeon"
@@ -50,9 +51,11 @@ console.log('调用 shift 之后: ' + myFish);
 // "调用 shift 之后: clown,mandarin,surgeon"
 
 console.log('被删除的元素: ' + shifted);
-// "被删除的元素: angel"</pre>
+// "被删除的元素: angel"
+```
 
-<pre><code>var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+```plain
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
 
 console.log('myFish before:', JSON.stringify(myFish));
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
@@ -63,31 +66,32 @@ console.log('myFish after:', myFish);
 // myFish after: ['clown', 'mandarin', 'surgeon']
 
 console.log('Removed this element:', shifted);
-// Removed this element: angel</code></pre>
+// Removed this element: angel
+```
 
-<h3 id="在while循环中使用shift">在 while 循环中使用 shift()</h3>
+### 在 while 循环中使用 shift()
 
-<p>shift() 方法经常用于 while loop 的环境中.。下例中每个循环将要从一个数组中移除下一项元素，直至它成为空数组。</p>
+shift() 方法经常用于 while loop 的环境中.。下例中每个循环将要从一个数组中移除下一项元素，直至它成为空数组。
 
-<pre><code>var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+```plain
+var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
 
 while( (i = names.shift()) !== undefined ) {
     console.log(i);
 }
-// Andrew, Edward, Paul, Chris, John</code></pre>
+// Andrew, Edward, Paul, Chris, John
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.pop()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.pop()")}}
+- {{jsxref("Array.prototype.unshift()")}}

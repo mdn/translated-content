@@ -3,29 +3,27 @@ title: URL.host
 slug: Web/API/URL/host
 translation_of: Web/API/URL/host
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>{{domxref("URL")}} 接口的 <strong><code>host</code></strong> 属性是一个 {{domxref("USVString")}} 值，包含了主机信息，也就是 <em>主机名（hostname）</em>，还有，如果 URL 接口不为空，也会包含冒号 <code>':'</code> 和 URL 的 <em>端口（port）</em>。</p>
+{{domxref("URL")}} 接口的 **`host`** 属性是一个 {{domxref("USVString")}} 值，包含了主机信息，也就是 _主机名（hostname）_，还有，如果 URL 接口不为空，也会包含冒号 `':'` 和 URL 的 _端口（port）_。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.host;
-<em>object.<code>host</code></em> = <em>string</em>;
-</pre>
+```plain
+string = object.host;
+object.host = string;
+```
 
-<p> </p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+{{domxref("USVString")}}.
 
-<p>{{domxref("USVString")}}.</p>
+## 示例
 
-<p> </p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+```js
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
 var result = url.host // "developer.mozilla.org"
 
 var url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
@@ -34,18 +32,16 @@ var result = url.host // "developer.mozilla.org"
 
 var url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
 var result = url.host // "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.URL.host")}}</p>
+{{Compat("api.URL.host")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>所属的 {{domxref("URL")}} 接口。</li>
-</ul>
+- 所属的 {{domxref("URL")}} 接口。

@@ -3,36 +3,38 @@ title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>{{domxref("ShadowRoot")}} 接口中的只读属性 <strong><code>delegatesFocus</code></strong> 返回一个布尔值表明 delegatesFocus 是否在 shadow 被附加的时候设置了。</p>
+{{domxref("ShadowRoot")}} 接口中的只读属性 **`delegatesFocus`** 返回一个布尔值表明 delegatesFocus 是否在 shadow 被附加的时候设置了。
 
-<p>这目前是一个实验的非标准特性，仅在 Chrome 中可用。</p>
+这目前是一个实验的非标准特性，仅在 Chrome 中可用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+```plain
+var df = shadowRoot.delegatesFocus
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个布尔值 — <code>true</code> 值表明 shadow root 已经 delegate focus, <code>false</code> 反之。</p>
+一个布尔值 — `true` 值表明 shadow root 已经 delegate focus, `false` 反之。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
   ...
 
 // Does it delegate focus?
-let hostElem = shadow.delegatesFocus;</pre>
+let hostElem = shadow.delegatesFocus;
+```
 
-<h2 id="标准">标准</h2>
+## 标准
 
-<p>这目前是个非标准特性。</p>
+这目前是个非标准特性。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.ShadowRoot.delegatesFocus")}}</p>
+{{Compat("api.ShadowRoot.delegatesFocus")}}

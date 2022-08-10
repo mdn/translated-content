@@ -2,61 +2,60 @@
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 tags:
-- API
-- HTML DOM
-- HTMLElement
-- Method
-- Reference
-browser-compat: api.HTMLElement.click
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Method
+  - Reference
 translation_of: Web/API/HTMLElement/click
+browser-compat: api.HTMLElement.click
 ---
-<div>
-  <div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLElement.click()</strong></code>方法可以用来模拟鼠标左键单击一个元素。</p>
+The **`HTMLElement.click()`**方法可以用来模拟鼠标左键单击一个元素。
 
-<p>当在支持 <code>click()</code> 方法的元素上使用该方法（例如
-  {{HTMLElement("input")}}) ，将会产生该元素的一个点击事件。这个事件会冒泡上升到文档树（或事件链）中更高的元素，并触发它们的点击事件。</p>
+当在支持 `click()` 方法的元素上使用该方法（例如
+{{HTMLElement("input")}}) ，将会产生该元素的一个点击事件。这个事件会冒泡上升到文档树（或事件链）中更高的元素，并触发它们的点击事件。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js"><em>element</em>.click()</pre>
+```js
+element.click()
+```
 
-<h2 id="Example">用例</h2>
+## 用例
 
-<p>当鼠标移动过复选框时模拟一个点击事件：</p>
+当鼠标移动过复选框时模拟一个点击事件：
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')">
+</form>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// 当鼠标滑过（mouse-over）执行 myFunction
+```js
+// 当鼠标滑过（mouse-over）执行 myFunction
 function myFunction() {
   document.getElementById("myCheck").click();
 }
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
-  <li>有关的事件处理
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onclick")}}</li>
-      <li>{{domxref("GlobalEventHandlers.ondblclick")}}</li>
-      <li>{{domxref("GlobalEventHandlers.onauxclick")}}</li>
-    </ul>
-  </li>
-</ul>
+- 有关的事件处理
+
+  - {{domxref("GlobalEventHandlers.onclick")}}
+  - {{domxref("GlobalEventHandlers.ondblclick")}}
+  - {{domxref("GlobalEventHandlers.onauxclick")}}

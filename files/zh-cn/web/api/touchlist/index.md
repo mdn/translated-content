@@ -7,41 +7,35 @@ tags:
   - Mobile
 translation_of: Web/API/TouchList
 ---
-<p>{{ ApiRef("Touch Events") }}</p>
+{{ ApiRef("Touch Events") }}
 
-<p><strong><code>TouchList</code></strong> 接口代表一个触摸平面上所有触点的列表。例如，如果一个用户用三根手指接触屏幕（或者触控板），与之对应的 <code>TouchList</code> 会包含每根手指的 {{ domxref("Touch") }} 对象，总共三个。</p>
+**`TouchList`** 接口代表一个触摸平面上所有触点的列表。例如，如果一个用户用三根手指接触屏幕（或者触控板），与之对应的 `TouchList` 会包含每根手指的 {{ domxref("Touch") }} 对象，总共三个。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{ domxref("TouchList.length") }} {{readonlyInline}}</dt>
- <dd>返回<code>TouchList</code>中 {{ domxref("Touch") }} 对象的数量。</dd>
-</dl>
+- {{ domxref("TouchList.length") }} {{readonlyInline}}
+  - : 返回`TouchList`中 {{ domxref("Touch") }} 对象的数量。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{ domxref("TouchList.identifiedTouch()") }}{{Deprecated_Inline}}</dt>
- <dd>列表中标示符与指定值匹配的第一个{{ domxref("Touch") }} 对象会被返回。</dd>
- <dt>{{ domxref("TouchList.item()") }}</dt>
- <dd>返回列表中以指定值作为索引的 {{ domxref("Touch") }} 对象。</dd>
-</dl>
+- {{ domxref("TouchList.identifiedTouch()") }}{{Deprecated_Inline}}
+  - : 列表中标示符与指定值匹配的第一个{{ domxref("Touch") }} 对象会被返回。
+- {{ domxref("TouchList.item()") }}
+  - : 返回列表中以指定值作为索引的 {{ domxref("Touch") }} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>参考这个<a href="/en/DOM/Touch_events#Example">主要 Touch 事件的示例</a>.</p>
+参考这个[主要 Touch 事件的示例](/en/DOM/Touch_events#Example).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.TouchList")}}</p>
+{{Compat("api.TouchList")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en/DOM/Touch_events">Touch 事件</a></li>
- <li>{{domxref("Document.createTouchList()")}}</li>
-</ul>
+- [Touch 事件](/en/DOM/Touch_events)
+- {{domxref("Document.createTouchList()")}}

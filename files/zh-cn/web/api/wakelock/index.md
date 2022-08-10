@@ -3,44 +3,37 @@ title: WakeLock
 slug: Web/API/WakeLock
 translation_of: Web/API/WakeLock
 ---
-<p>{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p><code><strong>WakeLock</strong></code> 接口允许一个文件获取屏幕唤醒锁定。</p>
+**`WakeLock`** 接口允许一个文件获取屏幕唤醒锁定。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("WakeLock.request","WakeLock.request()")}}</dt>
- <dd>返回一个决议为 {{DOMxRef("WakeLockSentinel")}} 的 {{JSxRef("Promise")}} 或当唤醒锁定不可访问的时候抛出异常。</dd>
-</dl>
+- {{domxref("WakeLock.request","WakeLock.request()")}}
+  - : 返回一个决议为 {{DOMxRef("WakeLockSentinel")}} 的 {{JSxRef("Promise")}} 或当唤醒锁定不可访问的时候抛出异常。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下例子获取一个唤醒锁定并在 10 分钟后释放它：</p>
+以下例子获取一个唤醒锁定并在 10 分钟后释放它：
 
-<pre class="notranslate">function tryKeepScreenAlive(minutes) {
-  navigator.wakeLock.request("screen").then(lock =&gt; {
-    setTimeout(() =&gt; lock.release(), minutes * 60 * 1000);
+```plain
+function tryKeepScreenAlive(minutes) {
+  navigator.wakeLock.request("screen").then(lock => {
+    setTimeout(() => lock.release(), minutes * 60 * 1000);
   });
 }
 
 tryKeepScreenAlive(10);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.WakeLock")}}
 
+## 相关链接
 
-<p>{{Compat("api.WakeLock")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{DOMxRef("Navigator.wakeLock")}}</li>
-</ul>
-</div>
+- {{DOMxRef("Navigator.wakeLock")}}

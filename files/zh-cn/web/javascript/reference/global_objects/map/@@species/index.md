@@ -10,43 +10,46 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 browser-compat: javascript.builtins.Map.@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Map[@@species]</strong></code> 访问器属性会返回一个 <code>Map</code> 构造函数。</p>
+**`Map[@@species]`** 访问器属性会返回一个 `Map` 构造函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Map[Symbol.species]
-</pre>
+```plain
+Map[Symbol.species]
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>The species accessor property returns the default constructor for <code>Map</code> objects. Subclass constructors may over-ride it to change the constructor assignment.</p>
+The species accessor property returns the default constructor for `Map` objects. Subclass constructors may over-ride it to change the constructor assignment.
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<p>The species property returns the default constructor function, which is the <code>Map</code> constructor for <code>Map</code> objects:</p>
+The species property returns the default constructor function, which is the `Map` constructor for `Map` objects:
 
-<pre class="brush: js">Map[Symbol.species]; // function Map()</pre>
+```js
+Map[Symbol.species]; // function Map()
+```
 
-<p>In a derived collection object (e.g. your custom map <code>MyMap</code>), the <code>MyMap</code> species is the <code>MyMap</code> constructor. However, you might want to overwrite this, in order to return parent <code>Map</code> objects in your derived class methods:</p>
+In a derived collection object (e.g. your custom map `MyMap`), the `MyMap` species is the `MyMap` constructor. However, you might want to overwrite this, in order to return parent `Map` objects in your derived class methods:
 
-<pre class="brush: js">class MyMap extends Map {
+```js
+class MyMap extends Map {
   // 重写覆盖 MyMap species to the parent Map constructor
   static get [Symbol.species]() { return Map; }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Symbol.species")}}

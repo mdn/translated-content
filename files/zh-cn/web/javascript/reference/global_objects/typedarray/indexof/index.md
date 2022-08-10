@@ -6,52 +6,51 @@ tags:
   - Uint8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>indexOf()</strong></code> 方法返回在类型数组中可以找到给定元素的第一个索引，如果不存在，则返回-1。 方法具有与 {{jsxref("Array.prototype.indexOf()")}} 相同的算法。 TypedArray 是这里的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a>之一。</p>
+**`indexOf()`** 方法返回在类型数组中可以找到给定元素的第一个索引，如果不存在，则返回-1。 方法具有与 {{jsxref("Array.prototype.indexOf()")}} 相同的算法。 TypedArray 是这里的[类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.<var>i<code>ndexOf(<var>searchElement</var>[, <var>fromIndex</var> = 0])</code></var></code></pre>
+```plain
+typedarray.indexOf(searchElement[, fromIndex = 0])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>需要在类型化数组中定位的元素</dd>
- <dt><code>fromIndex</code></dt>
- <dd>搜索的起始下标。如果下标大于等于类型化数组长度，则返回 -1，意思是类型化数组不会被搜索。如果提供的下标值是负数，则被当做距离类型化数组尾部的偏移。注：如果提供的下标是负数，类型化数组仍然从前到后搜索。如果计算出来的下标小于 0，则会搜索整个类型化数组。默认为 0（搜索整个类型化数组）。</dd>
-</dl>
+- `searchElement`
+  - : 需要在类型化数组中定位的元素
+- `fromIndex`
+  - : 搜索的起始下标。如果下标大于等于类型化数组长度，则返回 -1，意思是类型化数组不会被搜索。如果提供的下标值是负数，则被当做距离类型化数组尾部的偏移。注：如果提供的下标是负数，类型化数组仍然从前到后搜索。如果计算出来的下标小于 0，则会搜索整个类型化数组。默认为 0（搜索整个类型化数组）。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>数组中元素的第一个下标；没有找到则返回<strong>-1</strong> 。</p>
+数组中元素的第一个下标；没有找到则返回**-1** 。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>indexOf</code>使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">严格相等</a> （由 === 或三等号运算符使用的相同方法）比较<code>searchElement</code>和类型化数组的元素。</p>
+`indexOf`使用[严格相等](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) （由 === 或三等号运算符使用的相同方法）比较`searchElement`和类型化数组的元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">let uint8 = new Uint8Array([2, 5, 9]);
+```js
+let uint8 = new Uint8Array([2, 5, 9]);
 uint8.indexOf(2);     // 0
 uint8.indexOf(7);     // -1
 uint8.indexOf(9, 2);  // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

@@ -11,23 +11,22 @@ tags:
 translation_of: Web/API/UIEvent/view
 original_slug: Web/API/UIEvent/视图
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>UIEvent.view</code></strong> 只读属性返回的生成事件的 {{domxref("document.defaultView")}} (<code>window</code> of the document) 对象。在浏览器中，这是事件所在的 {{ domxref("Window") }} 对象。</p>
+The **`UIEvent.view`** 只读属性返回的生成事件的 {{domxref("document.defaultView")}} (`window` of the document) 对象。在浏览器中，这是事件所在的 {{ domxref("Window") }} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>view</em> = <em>event</em>.view;
-</pre>
+```plain
+var view = event.view;
+```
 
-<ul>
- <li><code>view</code> 是对 <code>AbstractView</code> 对象的引用。</li>
-</ul>
+- `view` 是对 `AbstractView` 对象的引用。
 
-<h2 id="技术参数">技术参数</h2>
+## 技术参数
 
 {{Specifications}}
 
-<h2 id="浏览器的兼容性">浏览器的兼容性</h2>
+## 浏览器的兼容性
 
-<p>{{Compat("api.UIEvent.view")}}</p>
+{{Compat("api.UIEvent.view")}}

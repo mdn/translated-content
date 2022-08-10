@@ -6,43 +6,43 @@ tags:
   - Promise.prototype.catch()
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>catch()</strong> 方法返回一个<a href="/zh-CN/docs/Web/API/Promise">Promise</a>，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling <code>obj.catch(onRejected)</code> 内部 calls <code>obj.then(undefined, onRejected)</code>).</p>
+**catch()** 方法返回一个[Promise](/zh-CN/docs/Web/API/Promise)，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling `obj.catch(onRejected)` 内部 calls `obj.then(undefined, onRejected)`).
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>p.catch(onRejected)</var>;
+```plain
+p.catch(onRejected);
 
 p.catch(function(reason) {
    // 拒绝
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><strong>onRejected</strong></dt>
- <dd>当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：<code>reason</code>    rejection 的原因。如果 <code>onRejected</code> 抛出一个错误或返回一个本身失败的 Promise ，  通过 <code>catch()</code> 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。</dd>
-</dl>
+- **onRejected**
+  - : 当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：`reason` rejection 的原因。如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise ， 通过 `catch()` 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{jsxref("Promise")}}.</p>
+一个{{jsxref("Promise")}}.
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>catch</code> 方法可以用于您的 promise 组合中的错误处理。</p>
+`catch` 方法可以用于您的 promise 组合中的错误处理。
 
-<p>Internally calls <code>Promise.prototype.then</code> on the object upon which is called, passing the parameters <code>undefined</code> and the <code>onRejected</code> handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).</p>
+Internally calls `Promise.prototype.then` on the object upon which is called, passing the parameters `undefined` and the `onRejected` handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用链式语句的_catch_方法">使用链式语句的 <code>catch</code> 方法</h3>
+### 使用链式语句的 `catch` 方法
 
-<pre class="brush: js"><code>var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
-});</code>
+});
 
 p1.then(function(value) {
   console.log(value); // "Success!"
@@ -65,11 +65,13 @@ p1.then(function(value) {
   console.log('after a catch the chain is restored');
 }, function () {
   console.log('Not fired due to the catch');
-});</pre>
+});
+```
 
-<h3 id="捕获抛出的错误">捕获抛出的错误</h3>
+### 捕获抛出的错误
 
-<pre class="brush: js"><code>// 抛出一个错误，大多数时候将调用 catch 方法
+```js
+// 抛出一个错误，大多数时候将调用 catch 方法
 var p1 = new Promise(function(resolve, reject) {
   throw 'Uh-oh!';
 });
@@ -97,11 +99,13 @@ var p3 = new Promise(function(resolve, reject) {
 
 p3.catch(function(e) {
    console.log(e); // 不会执行
-});</code></pre>
+});
+```
 
-<h3 id="如果已决议">如果已决议</h3>
+### 如果已决议
 
-<pre class="brush: js"><code>//创建一个新的 Promise，且已决议
+```js
+//创建一个新的 Promise，且已决议
 var p1 = Promise.resolve("calling next");
 
 var p2 = p1.catch(function (reason) {
@@ -116,19 +120,18 @@ p2.then(function (value) {
 }, function (reason) {
     console.log("next promise's onRejected");
     console.log(reason);
-});</code></pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.then()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.then()")}}

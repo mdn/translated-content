@@ -8,68 +8,61 @@ tags:
   - MathML 布局
 translation_of: Web/MathML/Element/mrow
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML <code>&lt;mrow&gt;</code> 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个<a href="/en-US/docs/MathML/Element/mo">操作符</a>与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。</p>
+MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个[操作符](/en-US/docs/MathML/Element/mo)与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
 
-<p>在编写 MathML 表达式时，您应该使用 <code>&lt;mrow&gt;</code> 将表达式中的元素分组，就像它们在数学解释时的分成一行行一样。正确的分组有助于表达式的呈现，具体体现在以下几个方面：</p>
+在编写 MathML 表达式时，您应该使用 `<mrow>` 将表达式中的元素分组，就像它们在数学解释时的分成一行行一样。正确的分组有助于表达式的呈现，具体体现在以下几个方面：
 
-<ul>
- <li>如果有需要，它会改变间距来改善显示效果。</li>
- <li>它允许采用更明智的断行和缩进算法。</li>
- <li>通过自动化系统，如计算机代数系统和音频渲染器（automated systems such as computer algebra systems and audio renderers），它能简化表达式的解释（interpretation）过程。</li>
-</ul>
+- 如果有需要，它会改变间距来改善显示效果。
+- 它允许采用更明智的断行和缩进算法。
+- 通过自动化系统，如计算机代数系统和音频渲染器（automated systems such as computer algebra systems and audio renderers），它能简化表达式的解释（interpretation）过程。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>class, id, style</dt>
- <dd>用来供<a href="/zh-CN/docs/Web/CSS">样式表</a>使用。</dd>
- <dt>dir</dt>
- <dd>行内公式的书写方向。可能的值为 <code>ltr</code>（自左向右）或 <code>rtl</code>（自右向左）。</dd>
- <dt>href</dt>
- <dd>用于设置一个指向指定的 URI 的超链接。</dd>
- <dt>mathbackground</dt>
- <dd>背景色。支持 <code>#rgb</code>、<code>#rrggbb</code> 和 <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML 颜色</a>。</dd>
- <dt>mathcolor</dt>
- <dd>文本颜色。支持 <code>#rgb</code>、<code>#rrggbb</code> 和 <a href="/en-US/docs/CSS/color_value#Color_Keywords">HTML 颜色</a>。</dd>
-</dl>
+- class, id, style
+  - : 用来供[样式表](/zh-CN/docs/Web/CSS)使用。
+- dir
+  - : 行内公式的书写方向。可能的值为 `ltr`（自左向右）或 `rtl`（自右向左）。
+- href
+  - : 用于设置一个指向指定的 URI 的超链接。
+- mathbackground
+  - : 背景色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/en-US/docs/CSS/color_value#Color_Keywords)。
+- mathcolor
+  - : 文本颜色。支持 `#rgb`、`#rrggbb` 和 [HTML 颜色](/en-US/docs/CSS/color_value#Color_Keywords)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;mrow&gt;
-    &lt;mn&gt; 1 &lt;/mn&gt;
-    &lt;mo&gt; + &lt;/mo&gt;
-    &lt;mn&gt; 1 &lt;/mn&gt;
-  &lt;/mrow&gt;
+  <mrow>
+    <mn> 1 </mn>
+    <mo> + </mo>
+    <mn> 1 </mn>
+  </mrow>
 
-  &lt;mrow&gt;
-    &lt;mo&gt; ( &lt;/mo&gt;
-    &lt;mrow&gt;
-      &lt;mi&gt; x &lt;/mi&gt;
-      &lt;mo&gt; , &lt;/mo&gt;
-      &lt;mi&gt; y &lt;/mi&gt;
-    &lt;/mrow&gt;
-    &lt;mo&gt; ) &lt;/mo&gt;
-  &lt;/mrow&gt;
+  <mrow>
+    <mo> ( </mo>
+    <mrow>
+      <mi> x </mi>
+      <mo> , </mo>
+      <mi> y </mi>
+    </mrow>
+    <mo> ) </mo>
+  </mrow>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>HTML 分组元素：{{ HTMLElement("div") }}</li>
-</ul>
+- HTML 分组元素：{{ HTMLElement("div") }}

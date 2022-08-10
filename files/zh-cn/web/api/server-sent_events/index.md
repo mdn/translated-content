@@ -9,55 +9,45 @@ tags:
 translation_of: Web/API/Server-sent_events
 original_slug: Server-sent_events
 ---
-<div>{{DefaultAPISidebar("Server Sent Events")}}</div>
+{{DefaultAPISidebar("Server Sent Events")}}
 
-<p>一个网页获取新的数据通常需要发送一个请求到服务器，也就是向服务器请求的页面。使用 server-sent 事件，服务器可以在任何时刻向我们的 Web 页面推送数据和信息。这些被推送进来的信息可以在这个页面上作为 <em><a href="/zh-CN/docs/DOM/event">Events</a> + data</em> 的形式来处理。</p>
+一个网页获取新的数据通常需要发送一个请求到服务器，也就是向服务器请求的页面。使用 server-sent 事件，服务器可以在任何时刻向我们的 Web 页面推送数据和信息。这些被推送进来的信息可以在这个页面上作为 _[Events](/zh-CN/docs/DOM/event) + data_ 的形式来处理。
 
-<h2 id="概念与使用">概念与使用</h2>
+## 概念与使用
 
-<p>可以前往我们这篇文章 <a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">《使用 “server-sent events</a>”》学习怎么使用 server-sent events。</p>
+可以前往我们这篇文章 [《使用 “server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)”》学习怎么使用 server-sent events。
 
-<h2 id="接口">接口</h2>
+## 接口
 
-<dl>
- <dt>{{domxref("EventSource")}}</dt>
- <dd>Defines all the features that handle connecting to a server, receiving events/data, errors, closing a connection, etc.</dd>
-</dl>
+- {{domxref("EventSource")}}
+  - : Defines all the features that handle connecting to a server, receiving events/data, errors, closing a connection, etc.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<ul>
- <li><a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP</a></li>
-</ul>
+- [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<h3 id="Tools">Tools</h3>
+### Tools
 
-<ul>
- <li><a href="https://github.com/EventSource/eventsource">EventSource polyfill for Node.js</a></li>
- <li>Remy Sharp’s <a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource polyfill</a></li>
- <li>Yaffle’s <a href="https://github.com/Yaffle/EventSource">EventSource polyfill</a></li>
- <li>Rick Waldron’s <a href="https://github.com/rwldrn/jquery.eventsource">jquery plugin</a></li>
- <li>intercooler.js <a href="http://intercoolerjs.org/docs.html#sse">declarative SSE support</a></li>
-</ul>
+- [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
+- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- intercooler.js [declarative SSE support](http://intercoolerjs.org/docs.html#sse)
 
-<h3 id="相关话题">相关话题</h3>
+### 相关话题
 
-<ul>
- <li><a href="/en-US/docs/AJAX">AJAX</a></li>
- <li><a href="/en-US/docs/JavaScript">JavaScript</a></li>
- <li><a href="/en-US/docs/WebSockets">WebSockets</a></li>
-</ul>
+- [AJAX](/en-US/docs/AJAX)
+- [JavaScript](/en-US/docs/JavaScript)
+- [WebSockets](/en-US/docs/WebSockets)
 
-<h3 id="其他资源">其他资源</h3>
+### 其他资源
 
-<ul>
- <li>一个使用 server-sent events 的、类似 <a href="http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/">Twitter</a> 的应用程序，代码存放在这里：<a href="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline">Github</a>.</li>
- <li><a href="http://dsheiko.com/weblog/html5-and-server-sent-events">HTML5 和 Server-sent events</a></li>
- <li>使用<a href="http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Asp.Net</a> 的 <a href="http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Server-sent events</a> 的指南</li>
-</ul>
+- 一个使用 server-sent events 的、类似 [Twitter](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) 的应用程序，代码存放在这里：[Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
+- [HTML5 和 Server-sent events](http://dsheiko.com/weblog/html5-and-server-sent-events)
+- 使用[Asp.Net](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html) 的 [Server-sent events](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html) 的指南

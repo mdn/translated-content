@@ -7,50 +7,46 @@ tags:
   - 语句
 translation_of: Web/JavaScript/Reference/Statements/label
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>标记语句</strong>可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句一起使用。标记就是在一条语句前面加个可以引用的标识符（identifier）。</p>
+**标记语句**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句一起使用。标记就是在一条语句前面加个可以引用的标识符（identifier）。
 
-<div>  {{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
+> **备注：**使用标记的循环或语句块非常罕见。通常情况下，可以使用函数调用而不是（基于标记的）循环跳转。
 
+## 语法
 
-<div class="note">
-<p><strong>备注：</strong>使用标记的循环或语句块非常罕见。通常情况下，可以使用函数调用而不是（基于标记的）循环跳转。</p>
-</div>
+```plain
+label :
+   statement
+```
 
-<h2 id="语法">语法</h2>
+- `label`
+  - : 任何不属于保留关键字的 JavaScript 标识符。
+- `statement`
+  - : JavaScript 语句。`break` 可用于任何标记语句，而 `continue` 可用于循环标记语句。
 
-<pre class="syntaxbox"><em>label</em> :
-   <em>statement</em>
-</pre>
+## 描述
 
-<dl>
- <dt><code>label</code></dt>
- <dd>任何不属于保留关键字的 JavaScript 标识符。</dd>
- <dt><code>statement</code></dt>
- <dd>JavaScript 语句。<code>break</code> 可用于任何标记语句，而 <code>continue</code> 可用于循环标记语句。</dd>
-</dl>
+可使用一个标签来唯一标记一个循环，然后使用 `break` 或 `continue` 语句来指示程序是否中断循环或继续执行。
 
-<h2 id="描述">描述</h2>
+需要注意的是，JavaScript 没有 `goto` 语句，标记只能和 `break` 或 `continue` 一起使用。
 
-<p>可使用一个标签来唯一标记一个循环，然后使用 <code>break</code> 或 <code>continue</code> 语句来指示程序是否中断循环或继续执行。</p>
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 “`let`” 作为标签名称。它会抛出一个 {{jsxref("SyntaxError")}}（因为 let 是一个保留的标识符）。
 
-<p>需要注意的是，JavaScript 没有 <code>goto</code> 语句，标记只能和 <code>break</code> 或 <code>continue</code> 一起使用。</p>
+## 示例
 
-<p>在<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中，你不能使用 “<code>let</code>” 作为标签名称。它会抛出一个 {{jsxref("SyntaxError")}}（因为 let 是一个保留的标识符）。</p>
+### 在 `for` 循环中使用带标记的 `continue` 语句
 
-<h2 id="示例">示例</h2>
-
-<h3 id="在_for_循环中使用带标记的_continue_语句">在 <code>for</code> 循环中使用带标记的 <code>continue</code> 语句</h3>
-
-<pre class="brush: js">    var i, j;
+```js
+    var i, j;
 
     loop1:
-    for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+    for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
        loop2:
-       for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-          if (i === 1 &amp;&amp; j === 1) {
+       for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+          if (i === 1 && j === 1) {
              continue loop1;
           }
           console.log('i = ' + i + ', j = ' + j);
@@ -66,35 +62,38 @@ translation_of: Web/JavaScript/Reference/Statements/label
 //   "i = 2, j = 1"
 //   "i = 2, j = 2"
 // Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
-</pre>
+```
 
-<h3 id="使用带标记的_continue_语句">使用带标记的 <code>continue</code> 语句</h3>
+### 使用带标记的 `continue` 语句
 
-<p>若给定一个数据数组和一个测试数组，则下面的例子会统计通过测试的数据的数量。</p>
+若给定一个数据数组和一个测试数组，则下面的例子会统计通过测试的数据的数量。
 
-<pre class="brush: js">var itemsPassed = 0;
+```js
+var itemsPassed = 0;
 var i, j;
 
 top:
-for (i = 0; i &lt; items.length; i++) {
-  for (j = 0; j &lt; tests.length; j++) {
+for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
     }
   }
 
   itemsPassed++;
-}</pre>
+}
+```
 
-<h3 id="在_for_循环中使用带标记的_break">在 <code>for</code> 循环中使用带标记的 <code>break</code></h3>
+### 在 `for` 循环中使用带标记的 `break`
 
-<pre class="brush: js">var i, j;
+```js
+var i, j;
 
 loop1:
-for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
+for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
    loop2:
-   for (j = 0; j &lt; 3; j++) {   //The second for statement is labeled "loop2"
-      if (i == 1 &amp;&amp; j == 1) {
+   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
+      if (i == 1 && j == 1) {
          break loop1;
       }
       console.log("i = " + i + ", j = " + j);
@@ -106,28 +105,32 @@ for (i = 0; i &lt; 3; i++) {      //The first for statement is labeled "loop1"
 //   "i = 0, j = 1"
 //   "i = 0, j = 2"
 //   "i = 1, j = 0"
-// Notice the difference with the previous continue example</pre>
+// Notice the difference with the previous continue example
+```
 
-<h3 id="Example_3">使用带标记的 <code>break</code> 语句</h3>
+### 使用带标记的 `break` 语句
 
-<p>若给定一个数据数组和一个测试数组，则下面的例子会判断是否所有数据均通过了测试。</p>
+若给定一个数据数组和一个测试数组，则下面的例子会判断是否所有数据均通过了测试。
 
-<pre class="brush: js">var allPass = true;
+```js
+var allPass = true;
 var i, j;
 
 top:
 for (i = 0; items.length; i++)
-  for (j = 0; j &lt; tests.length; i++)
+  for (j = 0; j < tests.length; i++)
     if (!tests[j].pass(items[i])){
       allPass = false;
       break top;
-    }</pre>
+    }
+```
 
-<h3 id="在标记块中使用_break">在标记块中使用 <code>break</code></h3>
+### 在标记块中使用 `break`
 
-<p>你可以在代码块中使用标记，但只有 <code>break</code> 语句可以使用非循环标记。</p>
+你可以在代码块中使用标记，但只有 `break` 语句可以使用非循环标记。
 
-<pre class="brush: js">foo: {
+```js
+foo: {
   console.log('face');
   break foo;
   console.log('this will not be executed');
@@ -137,39 +140,41 @@ console.log('swap');
 // this will log:
 
 // "face"
-// "swap</pre>
+// "swap
+```
 
-<h3 id="标记函数声明">标记函数声明</h3>
+### 标记函数声明
 
-<p>从 ECMAScript 2015 开始，标准的函数声明现在对规范的 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations">Web 兼容性附件</a>中的非严格代码进行了标准化。</p>
+从 ECMAScript 2015 开始，标准的函数声明现在对规范的 [Web 兼容性附件](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations)中的非严格代码进行了标准化。
 
-<pre class="brush: js">L: function F() {}</pre>
+```js
+L: function F() {}
+```
 
-<p>在<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中，这会抛出 {{jsxref("SyntaxError")}}：</p>
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，这会抛出 {{jsxref("SyntaxError")}}：
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 L: function F() {}
 // SyntaxError: functions cannot be labelled
-</pre>
+```
 
-<p>无论是否处于严格模式下，<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/function*">生成器函数</a>都不能被标记：</p>
+无论是否处于严格模式下，[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)都不能被标记：
 
-<pre class="brush: js">L: function* F() {}
-// SyntaxError: generator functions cannot be labelled</pre>
+```js
+L: function* F() {}
+// SyntaxError: generator functions cannot be labelled
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
-</ul>
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

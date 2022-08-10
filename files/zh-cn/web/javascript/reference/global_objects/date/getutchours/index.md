@@ -3,47 +3,46 @@ title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><strong><code>getUTCHours()</code></strong> 方法以世界时为标准，返回一个指定的日期对象的小时数。</p>
+**`getUTCHours()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutchours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutchours.html")}}
 
+## 语法
 
+```plain
+dateObj.getUTCHours()
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCHours()</code></pre>
+无。
 
-<h3 id="Parameters">参数</h3>
+### 返回值
 
-<p>无。</p>
+`getUTCHours()` 返回一个 0 到 23 的整数。
 
-<h3 id="Returns">返回值</h3>
+## 例子
 
-<p><code>getUTCHours()</code> 返回一个 0 到 23 的整数。</p>
+### 例子：使用 `getUTCHours()` 方法
 
-<h2 id="Examples">例子</h2>
+下例将当前时间的小时部分赋值给变量 `hours`。
 
-<h3 id="Example:_Using_getUTCHours">例子：使用 <code>getUTCHours()</code> 方法</h3>
-
-<p>下例将当前时间的小时部分赋值给变量 <code>hours</code>。</p>
-
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var hours = today.getUTCHours();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

@@ -1,7 +1,6 @@
 ---
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
-translation_of: Web/API/Response/bodyUsed
 tags:
   - API
   - Fetch
@@ -9,34 +8,39 @@ tags:
   - Reference
   - bodyUsed
   - Response
+translation_of: Web/API/Response/bodyUsed
 browser-compat: api.Response.bodyUsed
 ---
-<p>{{APIRef("Fetch")}}{{ SeeCompatTable }}</p>
+{{APIRef("Fetch")}}{{ SeeCompatTable }}
 
-<p><strong><code>bodyUsed</code></strong> 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。</p>
+**`bodyUsed`** 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var myBodyUsed = response.bodyUsed;</pre>
+```js
+var myBodyUsed = response.bodyUsed;
+```
 
-<h3 id="可能的值">可能的值</h3>
+### 可能的值
 
-<p>{{domxref("Boolean")}}.</p>
+{{domxref("Boolean")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在以下<a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">fetch 请求示例</a>（运行 <a href="http://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>）。通过{{domxref("Request.Request")}}构造器创建了一个 fetch 请求，来获得一张 JPG 图片。当 fetch 成功后，通过{{domxref("Blob")}} 来使用了 fetch 返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的 URL，并作为 {{htmlelement("img")}}元素的 src 源来显示图片。</p>
+在以下[fetch 请求示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request)（运行 [fetch request live](http://mdn.github.io/fetch-examples/fetch-request/)）。通过{{domxref("Request.Request")}}构造器创建了一个 fetch 请求，来获得一张 JPG 图片。当 fetch 成功后，通过{{domxref("Blob")}} 来使用了 fetch 返回的资源--{{domxref("URL.createObjectURL")}}创建该资源的 URL，并作为 {{htmlelement("img")}}元素的 src 源来显示图片。
 
-<p>注意：在 <code>response.blob()</code> 被调用前后，输出 <code>response.bodyUsed</code> 的差异。</p>
+注意：在 `response.blob()` 被调用前后，输出 `response.bodyUsed` 的差异。
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png"&gt;
-</pre>
+```html
+<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+```
 
-<h3 id="JS_Content">JS Content</h3>
+### JS Content
 
-<pre class="brush: js">var myImage = document.querySelector('.my-image');
+```js
+var myImage = document.querySelector('.my-image');
 fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
     console.log(response.bodyUsed);
     var res = response.blob();
@@ -45,22 +49,21 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 }).then(function(response) {
     var objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample('示例', '100%', '250px')}}</p>
+{{EmbedLiveSample('示例', '100%', '250px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Response.bodyUsed")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

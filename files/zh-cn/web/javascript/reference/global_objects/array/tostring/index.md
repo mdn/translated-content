@@ -7,46 +7,41 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
-<div>{{JSRef("Global_Objects", "Array")}}</div>
+{{JSRef("Global_Objects", "Array")}}
 
-<p><code><strong>toString()</strong></code> 返回一个字符串，表示指定的数组及其元素。</p>
+**`toString()`** 返回一个字符串，表示指定的数组及其元素。
 
-<div>{{EmbedInteractiveExample("pages/js/array-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-tostring.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js">arr.toString()
-</pre>
+```js
+arr.toString()
+```
 
-<h3 id="Parameters">返回值</h3>
+### 返回值
 
-<p>一个表示指定的数组及其元素的字符串。</p>
+一个表示指定的数组及其元素的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>{{jsxref("Array")}}对象覆盖了{{jsxref("Object")}}的 <code>toString</code> 方法。对于数组对象，<code>toString</code> 方法连接数组并返回一个字符串，其中包含用逗号分隔的每个数组元素。</p>
+{{jsxref("Array")}}对象覆盖了{{jsxref("Object")}}的 `toString` 方法。对于数组对象，`toString` 方法连接数组并返回一个字符串，其中包含用逗号分隔的每个数组元素。
 
-<p>当一个数组被作为文本值或者进行字符串连接操作时，将会自动调用其 <code>toString</code> 方法。</p>
+当一个数组被作为文本值或者进行字符串连接操作时，将会自动调用其 `toString` 方法。
 
-<h3 id="ECMAScript_5_semantics">ECMAScript 5 semantics</h3>
+### ECMAScript 5 semantics
 
-<p>从 JavaScript 1.8.5 (Firefox 4) 开始，和 ECMAScript 第 5 版语义（semantics）一致，<code>toString()</code> 方法是通用的，可被用于任何对象。将调用{{jsxref("Object.prototype.toString()")}}，并返回结果值。</p>
+从 JavaScript 1.8.5 (Firefox 4) 开始，和 ECMAScript 第 5 版语义（semantics）一致，`toString()` 方法是通用的，可被用于任何对象。将调用{{jsxref("Object.prototype.toString()")}}，并返回结果值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_Also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.join()")}}</li>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Object.prototype.toSource()")}}

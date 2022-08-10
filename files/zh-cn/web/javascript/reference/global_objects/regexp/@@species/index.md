@@ -1,45 +1,48 @@
 ---
-title: 'get RegExp[@@species]'
+title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>RegExp[@@species]</strong></code> 访问器属性返回<code>RegExp</code> 的构造器。</p>
+**`RegExp[@@species]`** 访问器属性返回`RegExp` 的构造器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">RegExp[Symbol.species]
-</pre>
+```plain
+RegExp[Symbol.species]
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>species</code> 访问器属性返回 <code>RegExp</code> 对象的默认构造器。子类构造器可能会覆盖它，来修改构造器的指派。</p>
+`species` 访问器属性返回 `RegExp` 对象的默认构造器。子类构造器可能会覆盖它，来修改构造器的指派。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><code>species</code>属性返回默认构造器函数，它是用于<code>RegExp</code> 对象的<code>RegExp</code>构造器：</p>
+`species`属性返回默认构造器函数，它是用于`RegExp` 对象的`RegExp`构造器：
 
-<pre class="brush: js">RegExp[Symbol.species]; // 函数 RegExp()</pre>
+```js
+RegExp[Symbol.species]; // 函数 RegExp()
+```
 
-<p>在派生的正则类（也就是你自定义的正则类 <code>MyRegExp</code>）中，<code>MyRegExp</code> 的 species 是 <code>MyRegExp</code> 构造器。但是，你可能希望覆盖它，以便在你的派生类方法中，返回 <code>RegExp</code> 父类对象：</p>
+在派生的正则类（也就是你自定义的正则类 `MyRegExp`）中，`MyRegExp` 的 species 是 `MyRegExp` 构造器。但是，你可能希望覆盖它，以便在你的派生类方法中，返回 `RegExp` 父类对象：
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   // 将 MyRegExp species 覆盖为 RegExp 父类构造器
   static get [Symbol.species]() { return RegExp; }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("RegExp")}}
+- {{jsxref("Symbol.species")}}

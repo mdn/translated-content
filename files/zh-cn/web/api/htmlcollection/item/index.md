@@ -3,34 +3,31 @@ title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 translation_of: Web/API/HTMLCollection/item
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><code>HTMLCollection.item()</code> 由位置获取元素.</p>
+`HTMLCollection.item()` 由位置获取元素.
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>index</dt>
- <dd>想要被返回的Node的位置. 元素在HTML Collection中的顺序和他们在源文档的顺序保持一致。</dd>
-</dl>
+- index
+  - : 想要被返回的 Node 的位置. 元素在 HTML Collection 中的顺序和他们在源文档的顺序保持一致。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>指定的index的{{domxref("Node")}} , 如果index小于0或者不小于它的长度属性则返回null。</p>
+指定的 index 的{{domxref("Node")}} , 如果 index 小于 0 或者不小于它的长度属性则返回 null。
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>HTMLCollection中item( )方法返回一个编号的元素 ，在JavaScript中把HTMLCollection当成是一个是数组并用数组符号去索引十分简单。</p>
+HTMLCollection 中 item( )方法返回一个编号的元素 ，在 JavaScript 中把 HTMLCollection 当成是一个是数组并用数组符号去索引十分简单。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var c = document.images;  // This is an HTMLCollection
+```js
+var c = document.images;  // This is an HTMLCollection
 var img0 = c.item(0);     // You can use the item( ) method this way
 var img1 = c[1];          // But this notation is easier and more common
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NodeList.item()")}}</li>
-</ul>
+- {{domxref("NodeList.item()")}}

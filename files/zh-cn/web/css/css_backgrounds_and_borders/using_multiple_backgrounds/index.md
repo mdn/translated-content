@@ -9,30 +9,34 @@ tags:
   - 指导
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>你可以应用多个背景到元素，这些背景在你添加的第一个背景的上方和最后一个背景的下方分层叠加，只有最后的背景可以包含背景颜色。</p>
+你可以应用多个背景到元素，这些背景在你添加的第一个背景的上方和最后一个背景的下方分层叠加，只有最后的背景可以包含背景颜色。
 
-<p>指定多个背景很简单：</p>
+指定多个背景很简单：
 
-<pre class="brush: css">.myclass {
+```css
+.myclass {
   background: background1, background 2, ..., backgroundN;
 }
-</pre>
+```
 
-<p>除了{{ cssxref("background-color") }}之外，你可以用简写{{ cssxref("background") }} 属性和它的各个属性来做到这一点。也就是说，以下背景属性可以被指定为一个列表，每个背景一个： {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
+除了{{ cssxref("background-color") }}之外，你可以用简写{{ cssxref("background") }} 属性和它的各个属性来做到这一点。也就是说，以下背景属性可以被指定为一个列表，每个背景一个： {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
-<h2 id="Example">实例</h2>
+## 实例
 
-<p>在这个例子中，三个背景叠加在一起：Firefox 标志，气泡图像和线性渐变：</p>
+在这个例子中，三个背景叠加在一起：Firefox 标志，气泡图像和线性渐变：
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="multi-bg-example"&gt;&lt;/div&gt;</pre>
+```html
+<div class="multi-bg-example"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.multi-bg-example {
+```css
+.multi-bg-example {
   width: 100%;
   height: 400px;
   background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
@@ -44,18 +48,17 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
   background-position: bottom right,
       left,
       right;
-}</pre>
+}
+```
 
-<h3 id="结论">结论</h3>
+### 结论
 
-<p>（如果在 CodePen 中图像没有出现，点击 CSS 模块的 TIdy 按钮）</p>
+（如果在 CodePen 中图像没有出现，点击 CSS 模块的 TIdy 按钮）
 
-<p>{{EmbedLiveSample('Example','600','400')}}</p>
+{{EmbedLiveSample('Example','600','400')}}
 
-<p>正如您在这里看到的，Firefox 徽标（在{{ cssxref("background-image") }}中首先列出）位于气泡图形正上方，接着是位于所有先前“images”下方的渐变（最后列出）。每个后续的子属性（{{ cssxref("background-repeat") }}和{{ cssxref("background-position") }}）适用于相应的背景。因此，background-repeat 的第一个列出的值适用于第一个（最前面的）背景，依此类推。</p>
+正如您在这里看到的，Firefox 徽标（在{{ cssxref("background-image") }}中首先列出）位于气泡图形正上方，接着是位于所有先前“images”下方的渐变（最后列出）。每个后续的子属性（{{ cssxref("background-repeat") }}和{{ cssxref("background-position") }}）适用于相应的背景。因此，background-repeat 的第一个列出的值适用于第一个（最前面的）背景，依此类推。
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients">Using CSS gradients</a></li>
-</ul>
+- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients)

@@ -11,17 +11,16 @@ tags:
   - 赋值
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>解构赋值</strong>语法是一种 Javascript 表达式。通过<strong>解构赋值，</strong>可以将属性/值从对象/数组中取出，赋值给其他变量。</p>
+**解构赋值**语法是一种 Javascript 表达式。通过**解构赋值，**可以将属性/值从对象/数组中取出，赋值给其他变量。
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}</p>
+{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: js">var a, b, rest;
+```js
+var a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
 console.log(b); // 20
@@ -41,75 +40,87 @@ console.log(b); // 20
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>对象和数组逐个对应表达式，或称对象字面量和数组字面量，提供了一种简单的定义一个特定的数据组的方法。</p>
+对象和数组逐个对应表达式，或称对象字面量和数组字面量，提供了一种简单的定义一个特定的数据组的方法。
 
-<pre class="brush: js">var x = [1, 2, 3, 4, 5];</pre>
+```js
+var x = [1, 2, 3, 4, 5];
+```
 
-<p>解构赋值使用了相同的语法，不同的是在表达式左边定义了要从原变量中取出什么变量。</p>
+解构赋值使用了相同的语法，不同的是在表达式左边定义了要从原变量中取出什么变量。
 
-<pre class="brush: js">var x = [1, 2, 3, 4, 5];
+```js
+var x = [1, 2, 3, 4, 5];
 var [y, z] = x;
 console.log(y); // 1
 console.log(z); // 2
-</pre>
+```
 
-<p>JavaScript 中，解构赋值的作用类似于 Perl 和 Python 语言中的相似特性。</p>
+JavaScript 中，解构赋值的作用类似于 Perl 和 Python 语言中的相似特性。
 
-<h2 id="解构数组">解构数组</h2>
+## 解构数组
 
-<h3 id="变量声明并赋值时的解构">变量声明并赋值时的解构</h3>
+### 变量声明并赋值时的解构
 
-<pre class="brush: js">var foo = ["one", "two", "three"];
+```js
+var foo = ["one", "two", "three"];
 
 var [one, two, three] = foo;
 console.log(one); // "one"
 console.log(two); // "two"
-console.log(three); // "three"</pre>
+console.log(three); // "three"
+```
 
-<h3 id="变量先声明后赋值时的解构">变量先声明后赋值时的解构</h3>
+### 变量先声明后赋值时的解构
 
-<p>通过解构分离变量的声明，可以为一个变量赋值。</p>
+通过解构分离变量的声明，可以为一个变量赋值。
 
-<pre class="brush: js">var a, b;
+```js
+var a, b;
 
 [a, b] = [1, 2];
 console.log(a); // 1
-console.log(b); // 2</pre>
+console.log(b); // 2
+```
 
-<h3 id="默认值">默认值</h3>
+### 默认值
 
-<p>为了防止从数组中取出一个值为<code>undefined</code>的对象，可以在表达式左边的数组中为任意对象预设默认值。</p>
+为了防止从数组中取出一个值为`undefined`的对象，可以在表达式左边的数组中为任意对象预设默认值。
 
-<pre class="brush: js">var a, b;
+```js
+var a, b;
 
 [a=5, b=7] = [1];
 console.log(a); // 1
-console.log(b); // 7</pre>
+console.log(b); // 7
+```
 
-<h3 id="交换变量">交换变量</h3>
+### 交换变量
 
-<p>在一个解构表达式中可以交换两个变量的值。</p>
+在一个解构表达式中可以交换两个变量的值。
 
-<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap 技巧</a>）。</p>
+没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的[XOR-swap 技巧](http://en.wikipedia.org/wiki/XOR_swap)）。
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 var b = 3;
 
 [a, b] = [b, a];
 console.log(a); // 3
-console.log(b); // 1</pre>
+console.log(b); // 1
+```
 
-<h3 id="解析一个从函数返回的数组">解析一个从函数返回的数组</h3>
+### 解析一个从函数返回的数组
 
-<p>从一个函数返回一个数组是十分常见的情况。解构使得处理返回值为数组时更加方便。</p>
+从一个函数返回一个数组是十分常见的情况。解构使得处理返回值为数组时更加方便。
 
-<p>在下面例子中，要让 <code>[1, 2]</code> 成为函数的 <code>f()</code> 的输出值，可以使用解构在一行内完成解析。</p>
+在下面例子中，要让 `[1, 2]` 成为函数的 `f()` 的输出值，可以使用解构在一行内完成解析。
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   return [1, 2];
 }
 
@@ -117,43 +128,51 @@ var a, b;
 [a, b] = f();
 console.log(a); // 1
 console.log(b); // 2
-</pre>
+```
 
-<h3 id="忽略某些返回值">忽略某些返回值</h3>
+### 忽略某些返回值
 
-<p>你也可以忽略你不感兴趣的返回值：</p>
+你也可以忽略你不感兴趣的返回值：
 
-<pre class="brush:js">function f() {
+```js
+function f() {
   return [1, 2, 3];
 }
 
 var [a, , b] = f();
 console.log(a); // 1
-console.log(b); // 3</pre>
+console.log(b); // 3
+```
 
-<p>你也可以忽略全部返回值：</p>
+你也可以忽略全部返回值：
 
-<pre class="brush:js">[,,] = f();
-</pre>
+```js
+[,,] = f();
+```
 
-<h3 id="将剩余数组赋值给一个变量">将剩余数组赋值给一个变量</h3>
+### 将剩余数组赋值给一个变量
 
-<p>当解构一个数组时，可以使用剩余模式，将数组剩余部分赋值给一个变量。</p>
+当解构一个数组时，可以使用剩余模式，将数组剩余部分赋值给一个变量。
 
-<pre class="brush: js">var [a, ...b] = [1, 2, 3];
+```js
+var [a, ...b] = [1, 2, 3];
 console.log(a); // 1
-console.log(b); // [2, 3]</pre>
+console.log(b); // [2, 3]
+```
 
-<p>注意：如果剩余元素右侧有逗号，会抛出 {{jsxref("SyntaxError")}}，因为剩余元素必须是数组的最后一个元素。</p>
+注意：如果剩余元素右侧有逗号，会抛出 {{jsxref("SyntaxError")}}，因为剩余元素必须是数组的最后一个元素。
 
-<pre class="brush: js example-bad">var [a, ...b,] = [1, 2, 3];
-// SyntaxError: rest element may not have a trailing comma</pre>
+```js example-bad
+var [a, ...b,] = [1, 2, 3];
+// SyntaxError: rest element may not have a trailing comma
+```
 
-<h3 id="用正则表达式匹配提取值">用正则表达式匹配提取值</h3>
+### 用正则表达式匹配提取值
 
-<p>用正则表达式的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec()</a></code> 方法匹配字符串会返回一个数组，该数组第一个值是完全匹配正则表达式的字符串，然后的值是匹配正则表达式括号内内容部分。解构赋值允许你轻易地提取出需要的部分，忽略完全匹配的字符串——如果不需要的话。</p>
+用正则表达式的 [`exec()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 方法匹配字符串会返回一个数组，该数组第一个值是完全匹配正则表达式的字符串，然后的值是匹配正则表达式括号内内容部分。解构赋值允许你轻易地提取出需要的部分，忽略完全匹配的字符串——如果不需要的话。
 
-<pre class="brush: js">function parseProtocol(url) {
+```js
+function parseProtocol(url) {
   var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
@@ -165,73 +184,78 @@ console.log(b); // [2, 3]</pre>
 }
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
-</pre>
+```
 
-<h2 id="解构对象">解构对象</h2>
+## 解构对象
 
-<h3 id="基本赋值">基本赋值</h3>
+### 基本赋值
 
-<pre class="brush: js">var o = {p: 42, q: true};
+```js
+var o = {p: 42, q: true};
 var {p, q} = o;
 
 console.log(p); // 42
 console.log(q); // true
-</pre>
+```
 
-<h3 id="无声明赋值">无声明赋值</h3>
+### 无声明赋值
 
-<p>一个变量可以独立于其声明进行解构赋值。</p>
+一个变量可以独立于其声明进行解构赋值。
 
-<pre class="brush: js">var a, b;
+```js
+var a, b;
 
 ({a, b} = {a: 1, b: 2});
-</pre>
+```
 
-<div class="note">
-<p><strong>备注：</strong>赋值语句周围的圆括号 <code>( ... )</code> 在使用对象字面量无声明解构赋值时是必须的。</p>
+> **备注：**赋值语句周围的圆括号 `( ... )` 在使用对象字面量无声明解构赋值时是必须的。
+>
+> `{a, b} = {a: 1, b: 2}` 不是有效的独立语法，因为左边的 `{a, b}` 被认为是一个块而不是对象字面量。
+>
+> 然而，`({a, b} = {a: 1, b: 2})` 是有效的，正如 `var {a, b} = {a: 1, b: 2}`
+>
+> 你的 `( ... )` 表达式之前需要有一个分号，否则它可能会被当成上一行中的函数执行。
 
-<p><code>{a, b} = {a: 1, b: 2}</code> 不是有效的独立语法，因为左边的 <code>{a, b}</code> 被认为是一个块而不是对象字面量。</p>
+### 给新的变量名赋值
 
-<p>然而，<code>({a, b} = {a: 1, b: 2})</code> 是有效的，正如 <code>var {a, b} = {a: 1, b: 2}</code></p>
+可以从一个对象中提取变量并赋值给和对象属性名不同的新的变量名。
 
-<p>你的 <code>( ... )</code> 表达式之前需要有一个分号，否则它可能会被当成上一行中的函数执行。</p>
-</div>
-
-<h3 id="给新的变量名赋值">给新的变量名赋值</h3>
-
-<p>可以从一个对象中提取变量并赋值给和对象属性名不同的新的变量名。</p>
-
-<pre class="brush: js">var o = {p: 42, q: true};
+```js
+var o = {p: 42, q: true};
 var {p: foo, q: bar} = o;
 
 console.log(foo); // 42
-console.log(bar); // true </pre>
+console.log(bar); // true
+```
 
-<h3 id="默认值_2">默认值</h3>
+### 默认值
 
-<p>变量可以先赋予默认值。当要提取的对象对应属性解析为 undefined，变量就被赋予默认值。</p>
+变量可以先赋予默认值。当要提取的对象对应属性解析为 undefined，变量就被赋予默认值。
 
-<pre class="brush: js">var {a = 10, b = 5} = {a: 3};
+```js
+var {a = 10, b = 5} = {a: 3};
 
 console.log(a); // 3
 console.log(b); // 5
-</pre>
+```
 
-<h3 id="给新的变量命名并提供默认值">给新的变量命名并提供默认值</h3>
+### 给新的变量命名并提供默认值
 
-<p>一个属性可以同时 1）从一个对象解构，并分配给一个不同名称的变量 2）分配一个默认值，以防未解构的值是 <code>undefined</code>。</p>
+一个属性可以同时 1）从一个对象解构，并分配给一个不同名称的变量 2）分配一个默认值，以防未解构的值是 `undefined`。
 
-<pre class="brush: js">var {a:aa = 10, b:bb = 5} = {a: 3};
+```js
+var {a:aa = 10, b:bb = 5} = {a: 3};
 
 console.log(aa); // 3
 console.log(bb); // 5
-</pre>
+```
 
-<h3 id="函数参数默认值">函数参数默认值</h3>
+### 函数参数默认值
 
-<h4 id="ES5_版本">ES5 版本</h4>
+#### ES5 版本
 
-<pre class="brush: js">function drawES5Chart(options) {
+```js
+function drawES5Chart(options) {
   options = options === undefined ? {} : options;
   var size = options.size === undefined ? 'big' : options.size;
   var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
@@ -243,11 +267,13 @@ console.log(bb); // 5
 drawES5Chart({
   cords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<h4 id="ES2015_版本">ES2015 版本</h4>
+#### ES2015 版本
 
-<pre class="brush: js">function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {})
+```js
+function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {})
 {
   console.log(size, cords, radius);
   // do some chart drawing
@@ -256,15 +282,15 @@ drawES5Chart({
 drawES2015Chart({
   cords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>备注：</strong>在上面的 <strong><code>drawES2015Chart</code></strong> 的函数签名中，解构的左手边被分配给右手边的空对象字面值：<code>{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}</code>。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 <code><strong>drawES2015Chart()</strong></code> 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。</p>
-</div>
+> **备注：**在上面的 **`drawES2015Chart`** 的函数签名中，解构的左手边被分配给右手边的空对象字面值：`{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}`。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 **`drawES2015Chart()`** 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。
 
-<h3 id="解构嵌套对象和数组">解构嵌套对象和数组</h3>
+### 解构嵌套对象和数组
 
-<pre class="brush:js">const metadata = {
+```js
+const metadata = {
   title: 'Scratchpad',
   translations: [
     {
@@ -288,11 +314,13 @@ let {
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"</pre>
+console.log(localeTitle);  // "JavaScript-Umgebung"
+```
 
-<h3 id="For_of_迭代和解构">For of 迭代和解构</h3>
+### For of 迭代和解构
 
-<pre class="brush: js">var people = [
+```js
+var people = [
   {
     name: 'Mike Smith',
     family: {
@@ -318,11 +346,13 @@ for (var {name: n, family: {father: f}} of people) {
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
-// "Name: Tom Jones, Father: Richard Jones"</pre>
+// "Name: Tom Jones, Father: Richard Jones"
+```
 
-<h3 id="从作为函数实参的对象中提取数据">从作为函数实参的对象中提取数据</h3>
+### 从作为函数实参的对象中提取数据
 
-<pre class="brush:js">function userId({id}) {
+```js
+function userId({id}) {
   return id;
 }
 
@@ -340,72 +370,75 @@ var user = {
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"
-whois(user); // "jdoe is John"</pre>
+whois(user); // "jdoe is John"
+```
 
-<p>这段代码从 user 对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
+这段代码从 user 对象中提取并输出` id、``displayName ` 和 `firstName`。
 
-<h3 id="对象属性计算名和解构">对象属性计算名和解构</h3>
+### 对象属性计算名和解构
 
-<p>计算属性名，如 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">object literals</a>，可以被解构。</p>
+计算属性名，如 [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)，可以被解构。
 
-<pre class="brush: js">let key = "z";
+```js
+let key = "z";
 let { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
-</pre>
+```
 
-<h3 id="对象解构中的_Rest">对象解构中的 Rest</h3>
+### 对象解构中的 Rest
 
-<p><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread Properties for ECMAScript</a> 提案（阶段 4）将 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest</a> 语法添加到解构中。Rest 属性收集那些尚未被解构模式拾取的剩余可枚举属性键。</p>
+[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 提案（阶段 4）将 [rest](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters) 语法添加到解构中。Rest 属性收集那些尚未被解构模式拾取的剩余可枚举属性键。
 
-<pre class="brush: js">let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+```js
+let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
 a; // 10
 b; // 20
-rest; // { c: 30, d: 40 }</pre>
+rest; // { c: 30, d: 40 }
+```
 
-<h3 id="无效的_JavaScript_标识符作为属性名称">无效的 JavaScript 标识符作为属性名称</h3>
+### 无效的 JavaScript 标识符作为属性名称
 
-<p>通过提供有效的替代标识符，解构可以与不是有效的 JavaScript<a href="/zh-CN/docs/Glossary/Identifier">标识符</a>的属性名称一起使用。</p>
+通过提供有效的替代标识符，解构可以与不是有效的 JavaScript[标识符](/zh-CN/docs/Glossary/Identifier)的属性名称一起使用。
 
-<pre class="brush: js">const foo = { 'fizz-buzz': true };
+```js
+const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
 console.log(fizzBuzz); // true
-</pre>
+```
 
-<h3 id="解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）">解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）</h3>
+### 解构对象时会查找原型链（如果属性不在对象自身，将从原型链中查找）
 
-<pre class="brush: js">// 声明对象 和 自身 self 属性
+```js
+// 声明对象 和 自身 self 属性
 var obj = {self: '123'};
 // 在原型链中定义一个属性 prot
 obj.__proto__.prot = '456';
 // test
 const {self, prot} = obj;
 // self "123"
-// prot "456"（访问到了原型链）</pre>
+// prot "456"（访问到了原型链）
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值操作符</a></li>
- <li><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/">"ES6 in Depth: Destructuring" on hacks.mozilla.org</a></li>
-</ul>
+- [赋值操作符](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
 
-<h3 id="译者注：关于_42">译者注：关于 42</h3>
+### 译者注：关于 42
 
-<p>为什么在示例代码中出现了那么多 42？如果有什么特别的原因的话，以下是译者的猜测。</p>
+为什么在示例代码中出现了那么多 42？如果有什么特别的原因的话，以下是译者的猜测。
 
-<ul>
- <li><a href="https://zh.wikipedia.org/wiki/42#%E5%9C%A8%E4%BA%BA%E7%B1%BB%E6%96%87%E5%8C%96%E4%B8%AD">42#在人类文化中 - 维基百科</a></li>
- <li><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD%E3%80%81%E5%AE%87%E5%AE%99%E4%BB%A5%E5%8F%8A%E4%BB%BB%E4%BD%95%E4%BA%8B%E6%83%85%E7%9A%84%E7%B5%82%E6%A5%B5%E7%AD%94%E6%A1%88">生命、宇宙以及任何事情的终极答案 - 维基百科</a></li>
- <li><a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy">42_(number)#The Hitchhiker's Guide to the Galaxy - Wikipedia</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)">Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42) - Wikipedia</a></li>
-</ul>
+- [42#在人类文化中 - 维基百科](https://zh.wikipedia.org/wiki/42#%E5%9C%A8%E4%BA%BA%E7%B1%BB%E6%96%87%E5%8C%96%E4%B8%AD)
+- [生命、宇宙以及任何事情的终极答案 - 维基百科](https://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD%E3%80%81%E5%AE%87%E5%AE%99%E4%BB%A5%E5%8F%8A%E4%BB%BB%E4%BD%95%E4%BA%8B%E6%83%85%E7%9A%84%E7%B5%82%E6%A5%B5%E7%AD%94%E6%A1%88)
+- [42\_(number)#The Hitchhiker's Guide to the Galaxy - Wikipedia](<https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy>)
+- [Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,\_the_Universe,\_and_Everything\_(42) - Wikipedia](<https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)>)

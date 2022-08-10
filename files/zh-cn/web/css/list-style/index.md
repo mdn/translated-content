@@ -3,75 +3,74 @@ title: list-style
 slug: Web/CSS/list-style
 translation_of: Web/CSS/list-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}**`list-style`** CSS 属性是一个简写对属性集合，包括{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}}, 和 {{cssxref("list-style-position")}}。
 
-<div><strong><code>list-style</code></strong> CSS 属性是一个简写对属性集合，包括{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}}, 和 {{cssxref("list-style-position")}}。</div>
+## 概要
 
-<h2 id="Summary">概要</h2>
+CSS list-style 属性是设置{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}} 和 {{cssxref("list-style-position")}} 的简写属性。
 
-<p>CSS list-style 属性是设置{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}} 和 {{cssxref("list-style-position")}}  的简写属性。</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+Formal syntax: {{csssyntax("list-style")}}
+```
 
-<pre class="syntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("list-style")}}</pre>
+### 值
 
-<h3 id="Values">值</h3>
+以任何顺序接受一个，二个或者三个关键词
 
-<p>以任何顺序接受一个，二个或者三个关键词</p>
+- `<'list-style-type'>`
+  - : 参看 {{cssxref("list-style-type")}}
+- `<'list-style-image'>`
+  - : 参看 {{cssxref("list-style-image")}}
+- `<'list-style-position'>`
+  - : 参看 {{cssxref("list-style-position")}}
 
-<dl>
- <dt><code>&lt;'list-style-type'&gt;</code></dt>
- <dd>参看 {{cssxref("list-style-type")}}</dd>
- <dt><code>&lt;'list-style-image'&gt;</code></dt>
- <dd>参看 {{cssxref("list-style-image")}}</dd>
- <dt><code>&lt;'list-style-position'&gt;</code></dt>
- <dd>参看 {{cssxref("list-style-position")}}</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+### HTML
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">List 1
-&lt;ul class="one"&gt;
-  &lt;li&gt;List Item1&lt;/li&gt;
-  &lt;li&gt;List Item2&lt;/li&gt;
-  &lt;li&gt;List Item3&lt;/li&gt;
-&lt;/ul&gt;
+```html
+List 1
+<ul class="one">
+  <li>List Item1</li>
+  <li>List Item2</li>
+  <li>List Item3</li>
+</ul>
 List 2
-&lt;ul class="two"&gt;
-  &lt;li&gt;List Item A&lt;/li&gt;
-  &lt;li&gt;List Item B&lt;/li&gt;
-  &lt;li&gt;List Item C&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="two">
+  <li>List Item A</li>
+  <li>List Item B</li>
+  <li>List Item C</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.one {
+```css
+.one {
   list-style: circle;
 }
 
 .two {
   list-style: square inside;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('示例')}}</p>
+{{EmbedLiveSample('示例')}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.list-style")}}
 
-<h2 id="See_also">另参见</h2>
+## 另参见
 
-<ul>
- <li>{{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
-</ul>
+- {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}

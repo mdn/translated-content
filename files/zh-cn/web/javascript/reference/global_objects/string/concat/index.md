@@ -8,42 +8,43 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>concat()</code></strong> 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。</p>
+**`concat()`** 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><code><var>str</var>.concat(<var>str2</var>, [, ...<var>strN</var>])</code></pre>
+```plain
+str.concat(str2, [, ...strN])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>str2</var> [, ...<var>strN</var>]</code></dt>
- <dd>需要连接到 <code><var>str</var></code> 的字符串。</dd>
-</dl>
+- `str2 [, ...strN]`
+  - : 需要连接到 `str` 的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的字符串，包含参数所提供的连接字符串。</p>
+一个新的字符串，包含参数所提供的连接字符串。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>concat</code> 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。 <code>concat</code> 方法并不影响原字符串。</p>
+`concat` 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。 `concat` 方法并不影响原字符串。
 
-<p>如果参数不是字符串类型，它们在连接之前将会被转换成字符串。</p>
+如果参数不是字符串类型，它们在连接之前将会被转换成字符串。
 
-<h2 id="性能">性能</h2>
+## 性能
 
-<p>强烈建议使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">赋值操作符</a>（<code>+</code>, <code>+=</code>）代替 <code>concat</code> 方法。</p>
+强烈建议使用[赋值操作符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)（`+`, `+=`）代替 `concat` 方法。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Examples">使用 <code>concat</code></h3>
+### 使用 `concat`
 
-<p>下面的例子演示如何将多个字符串与原字符串合并为一个新字符串</p>
+下面的例子演示如何将多个字符串与原字符串合并为一个新字符串
 
-<pre class="brush: js">let hello = 'Hello, '
+```js
+let hello = 'Hello, '
 console.log(hello.concat('Kevin', '. Have a nice day.'))
 // Hello, Kevin. Have a nice day.
 
@@ -54,19 +55,18 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 "".concat([])    // ""
 "".concat(null)  // "null"
 "".concat(true)  // "true"
-"".concat(4, 5)  // "45"</pre>
+"".concat(4, 5)  // "45"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}

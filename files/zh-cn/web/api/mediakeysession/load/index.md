@@ -3,29 +3,29 @@ title: load()
 slug: Web/API/MediaKeySession/load
 translation_of: Web/API/MediaKeySession/load
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}} {{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}} {{SeeCompatTable}}
 
-<p>该<code>MediaKeySession.load()</code>方法返回一个{{jsxref("Promise")}}，它在加载指定的会话对象的数据后解析为一个布尔值。</p>
+该`MediaKeySession.load()`方法返回一个{{jsxref("Promise")}}，它在加载指定的会话对象的数据后解析为一个布尔值。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox"><var>mediaKeySession .load(</var><var>sessionId)</var><var>.then(</var>function(<var>booleanValue</var>){...});</pre>
+```plain
+mediaKeySession .load(sessionId).then(function(booleanValue){...});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>sessionId</dt>
- <dd>由当前媒体对象及其相关键或许可证的内容解析模块生成的唯一字符串。</dd>
-</dl>
+- sessionId
+  - : 由当前媒体对象及其相关键或许可证的内容解析模块生成的唯一字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{jsxref("Promise")}}解析为一个布尔值，指示加载是成功还是失败。</p>
+一个{{jsxref("Promise")}}解析为一个布尔值，指示加载是成功还是失败。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.MediaKeySession.load")}}

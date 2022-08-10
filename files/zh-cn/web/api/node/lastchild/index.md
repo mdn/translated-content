@@ -5,15 +5,25 @@ tags:
   - Property
 translation_of: Web/API/Node/lastChild
 ---
-<p>{{APIRef()}}</p>
-<h2 id="Summary">概述</h2>
-<p><code><strong>Node.lastChild</strong></code> 是一个只读属性，返回当前节点的最后一个子节点。如果父节点为一个元素节点，则子节点通常为一个元素节点，或一个文本节点，或一个注释节点。如果没有子节点，则返回 <code>null</code>。</p>
-<h2 id="语法">语法</h2>
-<pre class="syntaxbox">var last_child = element.lastChild</pre>
-<h2 id="Example">示例</h2>
-<pre class="brush: js">var tr = document.getElementById("row1");
+{{APIRef()}}
+
+## 概述
+
+**`Node.lastChild`** 是一个只读属性，返回当前节点的最后一个子节点。如果父节点为一个元素节点，则子节点通常为一个元素节点，或一个文本节点，或一个注释节点。如果没有子节点，则返回 `null`。
+
+## 语法
+
+```plain
+var last_child = element.lastChild
+```
+
+## 示例
+
+```js
+var tr = document.getElementById("row1");
 var corner_td = tr.lastChild;
-</pre>
-<h2 id="Specification">规范</h2>
+```
+
+## 规范
 
 {{Specifications}}

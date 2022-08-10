@@ -3,16 +3,28 @@ title: form.reset
 slug: Web/API/HTMLFormElement/reset
 translation_of: Web/API/HTMLFormElement/reset
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary">概述</h3>
-<p><code>reset</code> 方法可以重置一个表单内的所有表单控件的值到初始状态。</p>
-<h3 id="Syntax">语法</h3>
-<pre class="eval"><em>HTMLFormElement</em>.reset()
-</pre>
-<h3 id="Example">例子</h3>
-<pre class="eval">document.forms["myform"].reset();
-</pre>
-<h3 id="Notes">备注</h3>
-<p>运行该方法和点击表单的重置按钮是一样的效果。</p>
-<h3 id="Specification">规范</h3>
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767677">DOM Level 2 HTML: reset</a></p>
+{{ ApiRef() }}
+
+### 概述
+
+`reset` 方法可以重置一个表单内的所有表单控件的值到初始状态。
+
+### 语法
+
+```plain
+HTMLFormElement.reset()
+```
+
+### 例子
+
+```plain
+document.forms["myform"].reset();
+```
+
+### 备注
+
+运行该方法和点击表单的重置按钮是一样的效果。
+
+### 规范
+
+[DOM Level 2 HTML: reset](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767677)

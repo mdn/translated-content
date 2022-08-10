@@ -4,63 +4,59 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>handler.construct()</strong></code> 方法用于拦截 {{jsxref("Operators/new", "new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 [[Construct]] 内部方法（即 <code>new target</code> 必须是有效的）。</p>
+**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}} 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 \[\[Construct]] 内部方法（即 `new target` 必须是有效的）。
 
-<p>{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}</p>
+{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   construct: function(target, argumentsList, newTarget) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>下面的参数将会传递给 <code>construct</code> 方法，<code>this</code> 绑定在 handler 上。</p>
+下面的参数将会传递给 `construct` 方法，`this` 绑定在 handler 上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>argumentsList</code></dt>
- <dd>constructor 的参数列表。</dd>
- <dt><code>newTarget</code></dt>
- <dd>最初被调用的构造函数，就上面的例子而言是 p。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `argumentsList`
+  - : constructor 的参数列表。
+- `newTarget`
+  - : 最初被调用的构造函数，就上面的例子而言是 p。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>construct</code> 方法必须返回一个对象。</p>
+`construct` 方法必须返回一个对象。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.construct()</strong></code> 方法用于拦截 {{jsxref("Operators/new", "new")}}操作符。</p>
+**`handler.construct()`** 方法用于拦截 {{jsxref("Operators/new", "new")}}操作符。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该拦截器可以拦截以下操作：</p>
+该拦截器可以拦截以下操作：
 
-<ul>
- <li><code>new proxy(...args)</code></li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- `new proxy(...args)`
+- {{jsxref("Reflect.construct()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违反以下约定，代理将会抛出错误 {{jsxref("TypeError")}}:</p>
+如果违反以下约定，代理将会抛出错误 {{jsxref("TypeError")}}:
 
-<ul>
- <li>必须返回一个对象。</li>
-</ul>
+- 必须返回一个对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面代码演示如何拦截 {{jsxref("Operators/new", "new")}} 操作。</p>
+下面代码演示如何拦截 {{jsxref("Operators/new", "new")}} 操作。
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     console.log('called: ' + argumentsList.join(', '));
     return { value: argumentsList[0] * 10 };
@@ -69,43 +65,43 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct
 
 console.log(new p(1).value); // "called: 1"
                              // 10
-</pre>
+```
 
-<p>下面的代码违反了约定。</p>
+下面的代码违反了约定。
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   construct: function(target, argumentsList, newTarget) {
     return 1;
   }
 });
 
 new p(); // TypeError is thrown
-</pre>
+```
 
-<p>下面的代码未能正确的初始化 Proxy。Proxy 初始化时，传给它的 <code>target</code> 必须具有一个有效的 constructor 供 <code>new</code> 操作符调用。</p>
+下面的代码未能正确的初始化 Proxy。Proxy 初始化时，传给它的 `target` 必须具有一个有效的 constructor 供 `new` 操作符调用。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   construct: function(target, argumentsList, newTarget) {
     return {};
   }
 });
 
 new p(); // TypeError is thrown, "p" is not a constructor
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="相关主题">相关主题</h2>
+## 相关主题
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/new", "new")}} operator.</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/new", "new")}} operator.
+- {{jsxref("Reflect.construct()")}}

@@ -6,50 +6,47 @@ tags:
   - 去重
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.getCanonicalLocales()</code></strong> 方法返回一个数组，数组包含规范的区域语言代码，重复的元素将会被去除，每一个元素都会被验证为格式有效的区域语言代码。</p>
+**`Intl.getCanonicalLocales()`** 方法返回一个数组，数组包含规范的区域语言代码，重复的元素将会被去除，每一个元素都会被验证为格式有效的区域语言代码。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
 
+## Syntax
 
+```plain
+Intl.getCanonicalLocales(locales)
+```
 
-<h2 id="Syntax">Syntax</h2>
+### 参数
 
-<pre class="syntaxbox">Intl.getCanonicalLocales(locales)</pre>
+- `locales`
+  - : 想要规范化的字符串数组。
 
-<h3 id="参数">参数</h3>
+### Return value
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>想要规范化的字符串数组。</dd>
-</dl>
+一个包含规范区域语言代码的数组。
 
-<h3 id="Return_value">Return value</h3>
+## 例子
 
-<p>一个包含规范区域语言代码的数组。</p>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">Intl.getCanonicalLocales('EN-US'); // ["en-US"]
+```js
+Intl.getCanonicalLocales('EN-US'); // ["en-US"]
 Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales('EN_US');
 // RangeError:'EN_US' is not a structurally valid language tag
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</li>
-</ul>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

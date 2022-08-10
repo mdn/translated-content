@@ -11,40 +11,34 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/feMergeNode
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>feMergeNode 元素拿另一个滤镜的结果，让它的父</code>{{ SVGElement("feMerge") }}元素处理。</p>
+`feMergeNode 元素拿另一个滤镜的结果，让它的父`{{ SVGElement("feMerge") }}元素处理。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFEMergeNodeElement">SVGFEMergeNodeElement</a></code>接口。</p>
+该元素实现了[`SVGFEMergeNodeElement`](/en/DOM/SVGFEMergeNodeElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feMerge") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

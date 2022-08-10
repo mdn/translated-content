@@ -3,8 +3,8 @@ title: XMLHttpRequest.channel
 slug: Web/API/XMLHttpRequest/channel
 translation_of: Web/API/XMLHttpRequest/channel
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>创建请求的时候，XMLHttpRequest.channel 是一个被对象使用的 <code><a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel">nsIChannel</a></code>。如果管道（channel）还没被创建的话，它的值是 <code>null</code>。在一个 multi-part 请求案例中，它是初始化的管道，不是 multi-part 请求中的不同部分。</p>
+创建请求的时候，XMLHttpRequest.channel 是一个被对象使用的 [`nsIChannel`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel)。如果管道（channel）还没被创建的话，它的值是 `null`。在一个 multi-part 请求案例中，它是初始化的管道，不是 multi-part 请求中的不同部分。
 
-<p><strong>需要权限提升。</strong></p>
+**需要权限提升。**

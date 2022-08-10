@@ -8,29 +8,26 @@ tags:
   - 属性
 translation_of: Web/API/Document/referrer
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Document.referrer</code></strong> 返回的是一个 <a href="http://www.w3.org/Addressing/#background">URI</a>, 当前页面就是从这个 URI 所代表的页面 跳转或打开的。</p>
+**`Document.referrer`** 返回的是一个 [URI](http://www.w3.org/Addressing/#background), 当前页面就是从这个 URI 所代表的页面 跳转或打开的。
 
+## 语法
 
+```plain
+var referrer = document.referrer;
+```
 
-<h2 id="语法">语法</h2>
+### 值
 
-<pre class="syntaxbox notranslate">var <var>referrer</var> = <var>document</var>.referrer;
-</pre>
+如果用户直接打开了这个页面（不是通过页面跳转，而是通过地址栏或者书签等打开的），则该属性为空字符串。由于该属性只是返回一个字符串，所以不能够通过该属性引用页面的 DOM。
 
-<h3 id="值">值</h3>
+在{{HTMLElement("iframe")}}中，**`Document.referrer`** 会初始化为父窗口{{domxref("Window/location", "Window.location")}}的{{domxref("HTMLHyperlinkElementUtils/href", "href")}}。
 
-<p>如果用户直接打开了这个页面（不是通过页面跳转，而是通过地址栏或者书签等打开的），则该属性为空字符串。由于该属性只是返回一个字符串，所以不能够通过该属性引用页面的 DOM。</p>
+## 规范
 
-<p>在{{HTMLElement("iframe")}}中，<strong><code>Document.referrer</code></strong> 会初始化为父窗口{{domxref("Window/location", "Window.location")}}的{{domxref("HTMLHyperlinkElementUtils/href", "href")}}。</p>
+- [DOM Level 2: referrer](https://www.w3.org/TR/2009/REC-DOM-Level-2-HTML-20090303/html.html#ID-95229140)
 
-<h2 id="规范">规范</h2>
+## 浏览器兼容性
 
-<ul>
- <li><a href="https://www.w3.org/TR/2009/REC-DOM-Level-2-HTML-20090303/html.html#ID-95229140">DOM Level 2: referrer</a></li>
-</ul>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div>{{Compat("api.Document.referrer")}}</div>
+{{Compat("api.Document.referrer")}}

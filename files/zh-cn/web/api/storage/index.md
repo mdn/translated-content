@@ -10,42 +10,36 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>作为 Web Storage API 的接口，<strong><code>Storage</code> </strong>提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。</p>
+作为 Web Storage API 的接口，**`Storage` **提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。
 
-<p>如果你想要操作一个域名的会话存储，可以使用 {{domxref("Window.sessionStorage")}}；如果想要操作一个域名的本地存储，可以使用 {{domxref("Window.localStorage")}}。</p>
+如果你想要操作一个域名的会话存储，可以使用 {{domxref("Window.sessionStorage")}}；如果想要操作一个域名的本地存储，可以使用 {{domxref("Window.localStorage")}}。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("Storage.length")}} {{readonlyInline}}</dt>
- <dd>返回一个整数，表示存储在 <code>Storage</code> 对象中的数据项数量。</dd>
-</dl>
+- {{domxref("Storage.length")}} {{readonlyInline}}
+  - : 返回一个整数，表示存储在 `Storage` 对象中的数据项数量。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("Storage.key()")}}</dt>
- <dd>该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名。</dd>
-</dl>
+- {{domxref("Storage.key()")}}
+  - : 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名。
+- {{domxref("Storage.getItem()")}}
+  - : 该方法接受一个键名作为参数，返回键名对应的值。
+- {{domxref("Storage.setItem()")}}
+  - : 该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值。
+- {{domxref("Storage.removeItem()")}}
+  - : 该方法接受一个键名作为参数，并把该键名从存储中删除。
+- {{domxref("Storage.clear()")}}
+  - : 调用该方法会清空存储中的所有键名。
 
-<dl>
- <dt>{{domxref("Storage.getItem()")}}</dt>
- <dd>该方法接受一个键名作为参数，返回键名对应的值。</dd>
- <dt>{{domxref("Storage.setItem()")}}</dt>
- <dd>该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值。</dd>
- <dt>{{domxref("Storage.removeItem()")}}</dt>
- <dd>该方法接受一个键名作为参数，并把该键名从存储中删除。</dd>
- <dt>{{domxref("Storage.clear()")}}</dt>
- <dd>调用该方法会清空存储中的所有键名。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+这里我们通过调用 `localStorage` 来访问一个 `Storage` 对象。首先，使用 `!localStorage.getItem('bgcolor')` 测试本地存储中是否包含该数据项。如果包含，则运行 `setStyles()` 函数，该函数使用 `localStorage.getItem()` 来获取数据项，并使用这些值更新页面样式。如果不包含，我们运行另一个函数 `populateStorage()`，该函数使用 `localStorage.setItem()` 设置数据项，然后运行 `setStyles()`。
 
-<p>这里我们通过调用 <code>localStorage</code> 来访问一个 <code>Storage</code> 对象。首先，使用 <code>!localStorage.getItem('bgcolor')</code> 测试本地存储中是否包含该数据项。如果包含，则运行 <code>setStyles()</code> 函数，该函数使用 <code>localStorage.getItem()</code> 来获取数据项，并使用这些值更新页面样式。如果不包含，我们运行另一个函数 <code>populateStorage()</code>，该函数使用 <code>localStorage.setItem()</code> 设置数据项，然后运行 <code>setStyles()</code>。</p>
-
-<pre class="brush: js">if(!localStorage.getItem('bgcolor')) {
+```js
+if(!localStorage.getItem('bgcolor')) {
   populateStorage();
 } else {
   setStyles();
@@ -71,25 +65,22 @@ function setStyles() {
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong>要运行完整的例子，可查看 <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>。</p>
-</div>
+> **备注：**要运行完整的例子，可查看 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Storage")}}</p>
+{{Compat("api.Storage")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a></li>
- <li>{{domxref("Window.localStorage")}}</li>
- <li>{{domxref("Window.sessionStorage")}}</li>
- <li>{{domxref("CacheStorage")}}</li>
-</ul>
+- [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("Window.localStorage")}}
+- {{domxref("Window.sessionStorage")}}
+- {{domxref("CacheStorage")}}

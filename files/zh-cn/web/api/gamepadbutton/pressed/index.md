@@ -3,37 +3,38 @@ title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
 translation_of: Web/API/GamepadButton/pressed
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>{{domxref("GamepadButton")}}接口下的 <code><strong>GamepadButton.pressed</strong></code> 属性返回一个表示按钮当然是被按下了 (<code>true</code>) 还是没有被按下 (<code>false</code>) 的布尔值。</p>
+{{domxref("GamepadButton")}}接口下的 **`GamepadButton.pressed`** 属性返回一个表示按钮当然是被按下了 (`true`) 还是没有被按下 (`false`) 的布尔值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var isPressed = navigator.getGamepads()[0].pressed;
-</pre>
+```plain
+var isPressed = navigator.getGamepads()[0].pressed;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0]; // 获取第一个控制器对象
+```js
+var gp = navigator.getGamepads()[0]; // 获取第一个控制器对象
 
 if(gp.buttons[0].pressed == true) {
   // 响应按钮按下
-}</pre>
+}
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一个 {{domxref("boolean")}} (布尔值)。</p>
+一个 {{domxref("boolean")}} (布尔值)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.GamepadButton.pressed")}}</p>
+{{Compat("api.GamepadButton.pressed")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/API/Gamepad">使用 Gamepad API</a></li>
-</ul>
+- [使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)

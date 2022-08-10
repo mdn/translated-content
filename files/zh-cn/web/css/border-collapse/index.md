@@ -9,25 +9,20 @@ tags:
   - 边框
 translation_of: Web/CSS/border-collapse
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-collapse</code></strong> <a href="/zh-CN/docs/CSS">CSS</a> 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。</p>
+**`border-collapse`** [CSS](/zh-CN/docs/CSS) 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
 
-<div>{{EmbedInteractiveExample("pages/css/border-collapse.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
 
+合并（_collapsed_ ）模式下，表格中相邻单元格共享边框。在这种模式下，CSS 属性{{ Cssxref("border-style") }} 的值 inset 表现为槽，值 outset 表现为脊。
 
+分隔（*separated）*模式是 HTML 表格的传统模式。相邻单元格都拥有不同的边框。边框之间的距离是通过 CSS 属性 {{cssxref("border-spacing")}} 来确定的。
 
+## 语法
 
-
-<p>合并（<em>collapsed</em> ）模式下，表格中相邻单元格共享边框。在这种模式下，CSS 属性{{ Cssxref("border-style") }} 的值 inset 表现为槽，值 outset 表现为脊。</p>
-
-
-
-<p>分隔（<em>separated）</em>模式是 HTML 表格的传统模式。相邻单元格都拥有不同的边框。边框之间的距离是通过 CSS 属性 {{cssxref("border-spacing")}} 来确定的。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 border-collapse: collapse;
 border-collapse: separate;
 
@@ -35,59 +30,60 @@ border-collapse: separate;
 border-collapse: inherit;
 border-collapse: initial;
 border-collapse: unset;
-</pre>
+```
 
-<p><code>border-collapse</code> 的属性值被定义为一个单独的关键词，可为下面两个值中的一个。</p>
+`border-collapse` 的属性值被定义为一个单独的关键词，可为下面两个值中的一个。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>collapse</code></dt>
- <dd>相邻的单元格共用同一条边框（采用 collapsed-border 表格渲染模型）。</dd>
- <dt><code>separate</code></dt>
- <dd>默认值。每个单元格拥有独立的边框（采用 separated-border 表格渲染模型）。</dd>
-</dl>
+- `collapse`
+  - : 相邻的单元格共用同一条边框（采用 collapsed-border 表格渲染模型）。
+- `separate`
+  - : 默认值。每个单元格拥有独立的边框（采用 separated-border 表格渲染模型）。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="查看独立的例子">查看独立的例子</h3>
+### 查看独立的例子
 
-<p><a href="/samples/cssref/border-collapse.html">查看在线演示</a></p>
+[查看在线演示](/samples/cssref/border-collapse.html)
 
-<h3 id="各个浏览器引擎的多彩表格">各个浏览器引擎的多彩表格</h3>
+### 各个浏览器引擎的多彩表格
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table class="separate"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: separate&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt; &lt;th&gt;Layout Engine&lt;/th&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ed"&gt;Edge&lt;/td&gt; &lt;td class="tr"&gt;EdgeHTML&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class="collapse"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: collapse&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt; &lt;th&gt;Layout Engine&lt;/th&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ed"&gt;Edge&lt;/td&gt; &lt;td class="tr"&gt;EdgeHTML&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table class="separate">
+  <caption><code>border-collapse: separate</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
+</table>
+<table class="collapse">
+  <caption><code>border-collapse: collapse</code></caption>
+  <tbody>
+    <tr><th>Browser</th> <th>Layout Engine</th></tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td></tr>
+    <tr><td class="ed">Edge</td> <td class="tr">EdgeHTML</td></tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td></tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td></tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td></tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.collapse {
+```css
+.collapse {
     border-collapse: collapse;
 }
 .separate {
@@ -110,25 +106,22 @@ table th, table td {
 .wk { border-color: gold blue; }
 .ch { border-color: red yellow green blue; }
 .bk { border-color: navy blue teal aqua; }
-.op { border-color: red; }</pre>
+.op { border-color: red; }
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}</p>
+{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.border-collapse")}}
 
+## 参见
 
-<p>{{Compat("css.properties.border-collapse")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{cssxref("border-spacing")}}、{{cssxref("border-style")}}</li>
- <li>The <code>border-collapse</code> property alters the appearance of the {{htmlelement("table")}} HTML element.</li>
-</ul>
+- {{cssxref("border-spacing")}}、{{cssxref("border-style")}}
+- The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.

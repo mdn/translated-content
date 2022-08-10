@@ -3,25 +3,24 @@ title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+**`Symbol.toPrimitive`** 是一个内置的 Symbol 值，它是作为对象的函数值属性存在的，当一个对象转换为对应的原始值时，会调用此函数。
 
+{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
 
-<p><code><strong>Symbol.toPrimitive</strong></code> 是一个内置的 Symbol 值，它是作为对象的函数值属性存在的，当一个对象转换为对应的原始值时，会调用此函数。</p>
+## 描述
 
-<div>{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}</div>
+在 `Symbol.toPrimitive` 属性 (用作函数值) 的帮助下，一个对象可被转换为原始值。该函数被调用时，会被传递一个字符串参数 `hint` ，表示要转换到的原始值的预期类型。 `hint` 参数的取值是 `"number"`、`"string"` 和 `"default"` 中的任意一个。
 
-<h2 id="描述">描述</h2>
+{{js_property_attributes(0,0,0)}}
 
-<p>在 <code>Symbol.toPrimitive</code> 属性 (用作函数值) 的帮助下，一个对象可被转换为原始值。该函数被调用时，会被传递一个字符串参数 <code>hint</code> ，表示要转换到的原始值的预期类型。 <code>hint</code> 参数的取值是 <code>"number"</code>、<code>"string"</code> 和 <code>"default"</code> 中的任意一个。</p>
+## 示例
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+下面的例子展示了， `Symbol.toPrimitive` 属性是如何干扰一个对象转换为原始值时输出的结果的。
 
-<h2 id="示例">示例</h2>
-
-<p>下面的例子展示了， <code>Symbol.toPrimitive</code> 属性是如何干扰一个对象转换为原始值时输出的结果的。</p>
-
-<pre class="brush: js">// 一个没有提供 Symbol.toPrimitive 属性的对象，参与运算时的输出结果
+```js
+// 一个没有提供 Symbol.toPrimitive 属性的对象，参与运算时的输出结果
 var obj1 = {};
 console.log(+obj1);     // NaN
 console.log(`${obj1}`); // "[object Object]"
@@ -42,21 +41,19 @@ var obj2 = {
 console.log(+obj2);     // 10      -- hint 参数值是 "number"
 console.log(`${obj2}`); // "hello" -- hint 参数值是 "string"
 console.log(obj2 + ""); // "true"  -- hint 参数值是 "default"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="其他资料">其他资料</h2>
+## 其他资料
 
-<ul>
- <li>{{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}</li>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
+- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

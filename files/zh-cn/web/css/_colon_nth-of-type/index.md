@@ -1,51 +1,56 @@
 ---
 title: ':nth-of-type'
-slug: 'Web/CSS/:nth-of-type'
+slug: Web/CSS/:nth-of-type
 tags:
   - ':nth-of-type'
   - CSS
   - CSS 伪类
-  - 'no :nth-of-type(0)'
+  - no :nth-of-type(0)
   - 布局
-translation_of: 'Web/CSS/:nth-of-type'
+translation_of: Web/CSS/:nth-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:nth-of-type()</code></strong> 这个 <a href="/zh-CN/docs/CSS/Pseudo-classes">CSS 伪类</a>是针对具有一组兄弟节点的标签，用 n 来筛选出在一组兄弟节点的位置。</p>
+**`:nth-of-type()`** 这个 [CSS 伪类](/zh-CN/docs/CSS/Pseudo-classes)是针对具有一组兄弟节点的标签，用 n 来筛选出在一组兄弟节点的位置。
 
-<pre class="brush: css no-line-numbers  language-css">/* 在每组兄弟元素中选择第四个 &lt;p&gt; 元素 */
+```css
+/* 在每组兄弟元素中选择第四个 <p> 元素 */
 p:nth-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><strong><code>nth-of-type</code></strong>伪类指定一个实际参数，这个参数使用一种模式来匹配哪些元素应该被选中。</p>
+**`nth-of-type`**伪类指定一个实际参数，这个参数使用一种模式来匹配哪些元素应该被选中。
 
-<p>详细语法参见 {{Cssxref(":nth-child")}} 。</p>
+详细语法参见 {{Cssxref(":nth-child")}} 。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div&gt;这段不参与计数。&lt;/div&gt;
-  &lt;p&gt;这是第一段。&lt;/p&gt;
-  &lt;p&gt;这是第二段。&lt;/p&gt;
-  &lt;div&gt;这段不参与计数。&lt;/div&gt;
-  &lt;p&gt;这是第三段。&lt;/p&gt;
-  &lt;p&gt;这是第四段。&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <div>这段不参与计数。</div>
+  <p>这是第一段。</p>
+  <p>这是第二段。</p>
+  <div>这段不参与计数。</div>
+  <p>这是第三段。</p>
+  <p>这是第四段。</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* 奇数段 */
+```css
+/* 奇数段 */
 p:nth-of-type(2n+1) {
   color: red;
 }
@@ -59,26 +64,20 @@ p:nth-of-type(2n) {
 p:nth-of-type(1) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h4 id="最终效果">最终效果</h4>
+#### 最终效果
 
-<p>{{EmbedLiveSample('Basic_example', 250, 200)}}</p>
+{{EmbedLiveSample('Basic_example', 250, 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.nth-of-type")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.nth-of-type")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

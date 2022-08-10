@@ -9,33 +9,32 @@ tags:
   - 实验性
 translation_of: Web/API/WebGLSampler
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API 的 <strong><code>WebGLSampler</code></strong> 接口存储一系列采样参数，供 {{domxref("WebGLTexture")}} 在着色器中访问。</p>
+[WebGL 2](/en-US/docs/Web/API/WebGL_API) API 的 **`WebGLSampler`** 接口存储一系列采样参数，供 {{domxref("WebGLTexture")}} 在着色器中访问。
 
-<p>当使用 <code>WebGLSampler</code> 对象时，有以下 {{domxref("WebGL2RenderingContext")}} 相关方法：</p>
+当使用 `WebGLSampler` 对象时，有以下 {{domxref("WebGL2RenderingContext")}} 相关方法：
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.bindSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getSamplerParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createSampler()")}}
+- {{domxref("WebGL2RenderingContext.deleteSampler()")}}
+- {{domxref("WebGL2RenderingContext.isSampler()")}}
+- {{domxref("WebGL2RenderingContext.bindSampler()")}}
+- {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="创建_WebGLSampler_对象">创建 <code>WebGLSampler</code> 对象</h3>
+### 创建 `WebGLSampler` 对象
 
-<p>在本例中，<code>gl</code> 必须是一个 {{domxref("WebGL2RenderingContext")}} 对象。因为 <code>WebGLSampler</code> 在 WebGL 1 中是不可用的。</p>
+在本例中，`gl` 必须是一个 {{domxref("WebGL2RenderingContext")}} 对象。因为 `WebGLSampler` 在 WebGL 1 中是不可用的。
 
-<pre class="brush: js">var sampler = gl.createSampler();
-</pre>
+```js
+var sampler = gl.createSampler();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLSampler")}}</p>
+{{Compat("api.WebGLSampler")}}

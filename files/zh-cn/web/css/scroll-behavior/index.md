@@ -7,22 +7,20 @@ tags:
   - 参考
 translation_of: Web/CSS/scroll-behavior
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p>当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，<a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <strong><code>scroll-behavior</code></strong> 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。</p>
+当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，[CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-behavior`** 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
+{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}</div>
+用户代理可以忽略此属性。
 
+## 语法
 
-
-<p>用户代理可以忽略此属性。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -30,39 +28,40 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>滚动框立即滚动。</dd>
- <dt><code>smooth</code></dt>
- <dd>滚动框通过一个用户代理预定义的时长、使用预定义的时间函数，来实现平稳的滚动，用户代理应遵循其平台的约定，如果有的话。</dd>
-</dl>
+- `auto`
+  - : 滚动框立即滚动。
+- `smooth`
+  - : 滚动框通过一个用户代理预定义的时长、使用预定义的时间函数，来实现平稳的滚动，用户代理应遵循其平台的约定，如果有的话。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#page-1"&gt;1&lt;/a&gt;
-  &lt;a href="#page-2"&gt;2&lt;/a&gt;
-  &lt;a href="#page-3"&gt;3&lt;/a&gt;
-&lt;/nav&gt;
-&lt;scroll-container&gt;
-  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
-&lt;/scroll-container&gt;</pre>
+```html
+<nav>
+  <a href="#page-1">1</a>
+  <a href="#page-2">2</a>
+  <a href="#page-3">3</a>
+</nav>
+<scroll-container>
+  <scroll-page id="page-1">1</scroll-page>
+  <scroll-page id="page-2">2</scroll-page>
+  <scroll-page id="page-3">3</scroll-page>
+</scroll-container>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -91,16 +90,16 @@ scroll-page {
   height: 100%;
   font-size: 5em;
 }
-</pre>
+```
 
-<h3 id="输出">输出</h3>
+### 输出
 
-<p>{{ EmbedLiveSample('Example', "100%", 250) }}</p>
+{{ EmbedLiveSample('Example', "100%", 250) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.scroll-behavior")}}</p>
+{{Compat("css.properties.scroll-behavior")}}

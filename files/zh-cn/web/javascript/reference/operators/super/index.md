@@ -8,32 +8,34 @@ tags:
   - Operator
 translation_of: Web/JavaScript/Reference/Operators/super
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>super</strong>关键字用于访问和调用一个对象的父对象上的函数。</p>
+**super**关键字用于访问和调用一个对象的父对象上的函数。
 
-<p><code>super.prop</code>和<code>super[expr]</code>表达式在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">类</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象字面量</a>任何<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a>中都是有效的。</p>
+`super.prop`和`super[expr]`表达式在[类](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)和[对象字面量](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)任何[方法定义](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)中都是有效的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">super([arguments]);
+```plain
+super([arguments]);
 // 调用 父对象/父类 的构造函数
 
 super.functionOnParent([arguments]);
 // 调用 父对象/父类 上的方法
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>在构造函数中使用时，<code>super</code>关键字将单独出现，并且必须在使用<code>this</code>关键字之前使用。<code>super</code>关键字也可以用来调用父对象上的函数。</p>
+在构造函数中使用时，`super`关键字将单独出现，并且必须在使用`this`关键字之前使用。`super`关键字也可以用来调用父对象上的函数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="在类中使用super">在类中使用<code>super</code></h3>
+### 在类中使用`super`
 
-<p>以下代码片段来自于 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a>。</p>
+以下代码片段来自于 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Rectangle';
     this.height = height;
@@ -63,13 +65,14 @@ class Square extends Polygon {
     this.name = 'Square';
   }
 }
-</pre>
+```
 
-<h3 id="调用父类上的静态方法">调用父类上的静态方法</h3>
+### 调用父类上的静态方法
 
-<p>你也可以用 super 调用父类的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static">静态方法</a>。</p>
+你也可以用 super 调用父类的[静态方法](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)。
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor() {}
   static logNbSides() {
     return 'I have 4 sides';
@@ -82,13 +85,15 @@ class Square extends Rectangle {
     return super.logNbSides() + ' which are all equal';
   }
 }
-Square.logDescription(); // 'I have 4 sides which are all equal'</pre>
+Square.logDescription(); // 'I have 4 sides which are all equal'
+```
 
-<h3 id="删除_super_上的属性将抛出异常">删除 super 上的属性将抛出异常</h3>
+### 删除 super 上的属性将抛出异常
 
-<p>你不能使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete 操作符</a> 加 <code>super.prop</code> 或者 <code>super[expr]</code> 去删除父类的属性，这样做会抛出 {{jsxref("ReferenceError")}}。</p>
+你不能使用 [delete 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) 加 `super.prop` 或者 `super[expr]` 去删除父类的属性，这样做会抛出 {{jsxref("ReferenceError")}}。
 
-<pre class="brush: js">class Base {
+```js
+class Base {
   constructor() {}
   foo() {}
 }
@@ -99,13 +104,15 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'.</pre>
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+```
 
-<h3 id="super.prop_不能覆写不可写属性"><code>super.prop</code> 不能覆写不可写属性</h3>
+### `super.prop` 不能覆写不可写属性
 
-<p>当使用 {{jsxref("Object.defineProperty")}} 定义一个属性为不可写时，<code>super</code>将不能重写这个属性的值。</p>
+当使用 {{jsxref("Object.defineProperty")}} 定义一个属性为不可写时，`super`将不能重写这个属性的值。
 
-<pre class="brush: js">class X {
+```js
+class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -126,13 +133,15 @@ class Y extends X {
 
 var y = new Y();
 y.foo(); // TypeError: "prop" is read-only
-console.log(y.prop); // 1</pre>
+console.log(y.prop); // 1
+```
 
-<h3 id="在对象字面量中使用super.prop">在对象字面量中使用<code>super.prop</code></h3>
+### 在对象字面量中使用`super.prop`
 
-<p><code>Super</code>也可以在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用<code>super</code>调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置<code>obj2</code>的原型为<code>obj1</code>，然后才能够使用<code>super</code>调用 <code>obj1</code>上的<code>method1</code>。</p>
+`Super`也可以在[object initializer / literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用`super`调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置`obj2`的原型为`obj1`，然后才能够使用`super`调用 `obj1`上的`method1`。
 
-<pre class="brush: js">var obj1 = {
+```js
+var obj1 = {
   method1() {
     console.log("method 1");
   }
@@ -146,19 +155,17 @@ var obj2 = {
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
- <li><a href="https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420">Anurag Majumdar - Super &amp; Extends in JavaScript</a></li>
-</ul>
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)

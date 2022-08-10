@@ -11,45 +11,43 @@ tags:
   - 粘贴
 translation_of: Web/API/Clipboard/readText
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}**{{domxref("Clipboard")}}** 接口的**`readText()`**方法解析系统剪贴板的文本内容返回一个{{jsxref("Promise")}} 。
 
-<div><strong>{{domxref("Clipboard")}}</strong> 接口的<strong><code>readText()</code></strong>方法解析系统剪贴板的文本内容返回一个{{jsxref("Promise")}} 。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+var promise = navigator.clipboard.readText()
+```
 
-<pre class="syntaxbox">var <em>promise</em> = navigator.clipboard.readText()</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+None.
 
-<p>None.</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the textual contents of the clipboard. Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the {{domxref("DataTransfer")}} objects representing the clipboard's contents.
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the textual contents of the clipboard. Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the {{domxref("DataTransfer")}} objects representing the clipboard's contents.</p>
+要从剪贴板中读取非文本内容，请改用{{domxref("Clipboard.read", "read()")}}方法。您可以使用 {{domxref("Clipboard.writeText", "writeText()")}}将文本写入剪贴板
 
-<p>要从剪贴板中读取非文本内容，请改用{{domxref("Clipboard.read", "read()")}}方法。您可以使用 {{domxref("Clipboard.writeText", "writeText()")}}将文本写入剪贴板</p>
+## 例子
 
-<h2 id="例子">例子</h2>
+此示例检索剪贴板的文本内容，并将返回的文本插入元素的内容中。
 
-<p>此示例检索剪贴板的文本内容，并将返回的文本插入元素的内容中。</p>
+```js
+navigator.clipboard.readText().then(
+  clipText => document.getElementById("outbox").innerText = clipText);
+```
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.getElementById("outbox").innerText = clipText);</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Clipboard.readText")}}
 
+## See also
 
-<p>{{Compat("api.Clipboard.readText")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
- <li>{{domxref("Clipboard.writeText()")}}</li>
- <li>{{domxref("Clipboard.write()")}}</li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- {{domxref("Clipboard.writeText()")}}
+- {{domxref("Clipboard.write()")}}

@@ -3,59 +3,60 @@ title: border-spacing
 slug: Web/CSS/border-spacing
 translation_of: Web/CSS/border-spacing
 ---
-<p>{{ CSSRef("CSS Tables") }}</p>
+{{ CSSRef("CSS Tables") }}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code>border-spacing</code> 属性指定相邻单元格边框之间的距离（只适用于 <a href="/zh-CN/docs/Web/CSS/border-collapse">边框分离模式</a> ）。相当于 HTML 中的 <code>cellspacing</code> 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。</p>
+`border-spacing` 属性指定相邻单元格边框之间的距离（只适用于 [边框分离模式](/zh-CN/docs/Web/CSS/border-collapse) ）。相当于 HTML 中的 `cellspacing` 属性，但是第二个可选的值可以用来设置不同于水平间距的垂直间距。
 
-<p><code>border-spacing</code> 值也适用于表格的外层边框上，即表格的边框和第一行的、第一列的、最后一行的、最后一列的单元格之间的间距是由表格相应的（水平的或垂直的）边框间距（border-spacing）和相应的（上，右，下或左）内边距之和。</p>
+`border-spacing` 值也适用于表格的外层边框上，即表格的边框和第一行的、第一列的、最后一行的、最后一列的单元格之间的间距是由表格相应的（水平的或垂直的）边框间距（border-spacing）和相应的（上，右，下或左）内边距之和。
 
-<p>该属性只适用于 {{ Cssxref("border-collapse") }} 值是 <code>separate</code> 的时候。</p>
+该属性只适用于 {{ Cssxref("border-collapse") }} 值是 `separate` 的时候。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><code>/* &lt;length&gt; */
+```plain
+/* <length> */
 border-spacing: 2px;
 
-/* horizontal &lt;length&gt; | vertical &lt;length&gt; */
+/* horizontal <length> | vertical <length> */
 border-spacing: 1cm 2em;
 
 /* Global values */
 border-spacing: inherit;
 border-spacing: initial;
-border-spacing: unset;</code></pre>
+border-spacing: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><em>length</em></dt>
- <dd>描述单元格之间的水平和垂直距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在单值语法下使用。</dd>
- <dt><em>horizontal</em></dt>
- <dd>描述相邻两列的单元格之间的水平距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在双值语法下使用。</dd>
- <dt><em>vertical</em></dt>
- <dd>描述相邻两行的单元格之间的垂直距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在双值语法下使用。</dd>
- <dt><code>inherit</code></dt>
- <dd>一个表示父元素的 <code>border-spacing</code> 的计算值的关键字，其父元素必须应用了 <code>border-spacing</code> 。</dd>
-</dl>
+- _length_
+  - : 描述单元格之间的水平和垂直距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在单值语法下使用。
+- _horizontal_
+  - : 描述相邻两列的单元格之间的水平距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在双值语法下使用。
+- _vertical_
+  - : 描述相邻两行的单元格之间的垂直距离的一个 {{cssxref("&lt;length&gt;")}} 值。它只在双值语法下使用。
+- `inherit`
+  - : 一个表示父元素的 `border-spacing` 的计算值的关键字，其父元素必须应用了 `border-spacing` 。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><a href="/samples/cssref/border-spacing.html">查看在线演示</a></p>
+[查看在线演示](/samples/cssref/border-spacing.html)
 
-<pre class="brush: css">table { border-spacing: 10px 5px; }
-</pre>
+```css
+table { border-spacing: 10px 5px; }
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.border-spacing")}}

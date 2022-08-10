@@ -10,38 +10,35 @@ tags:
   - 非标准
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}**`__lookupSetter__`** 方法是用来返回一个对象的某个属性上绑定了 setter（设置器）的钩子函数的引用。
 
-<div><code><strong>__lookupSetter__</strong></code> 方法是用来返回一个对象的某个属性上绑定了 setter（设置器）的钩子函数的引用。</div>
+## 语法
 
-<div> </div>
+```plain
+obj.__lookupSetter__(sprop)
+```
 
-<h2 id="语法">语法</h2>
+### 参数说明
 
-<pre class="syntaxbox"><code><var>obj</var>.__lookupSetter__(<var>sprop</var>)</code></pre>
+- `sprop`
+  - : 一个字符串类型，表示要返回的 setter 钩子的函数名。
 
-<h3 id="参数说明">参数说明</h3>
+### 返回值
 
-<dl>
- <dt><code>sprop</code></dt>
- <dd>一个字符串类型，表示要返回的 setter 钩子的函数名。</dd>
-</dl>
+一个绑定了 setter 的特殊属性的函数引用。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>一个绑定了 setter 的特殊属性的函数引用。</p>
+如果一个 setter 被定义在了一个对象的属性上，则不能直接通过该属性来获取引用 setter 所设置的钩子的函数，因为该属性是该函数的返回值，但，\_\_lookupSetter\_\_ 可以被用来获取对 setter 函数的引用。
 
-<h2 id="描述">描述</h2>
+不过现在可以使用标准的方法：
 
-<p>如果一个 setter 被定义在了一个对象的属性上，则不能直接通过该属性来获取引用 setter 所设置的钩子的函数，因为该属性是该函数的返回值，但，__lookupSetter__ 可以被用来获取对 setter 函数的引用。</p>
+{{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
-<p>不过现在可以使用标准的方法：</p>
+## 示例
 
-<p>{{jsxref("Object.getOwnPropertyDescriptor()")}}.</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   set foo(value) {
     this.bar = value;
   }
@@ -56,23 +53,21 @@ obj.__lookupSetter__('foo')
 // 标准且推荐使用的方式。
 Object.getOwnPropertyDescriptor(obj, 'foo').set;
 // (function(value) { this.bar = value; })
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
- <li>{{jsxref("Functions/set", "set")}} operator</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__defineGetter__()")}}</li>
- <li>{{jsxref("Object.prototype.__defineSetter__()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">JS Guide: Defining Getters and Setters</a></li>
-</ul>
+- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- {{jsxref("Functions/set", "set")}} operator
+- {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.prototype.__defineGetter__()")}}
+- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

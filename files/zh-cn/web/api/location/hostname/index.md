@@ -3,28 +3,29 @@ title: 'Location: hostname'
 slug: Web/API/Location/hostname
 translation_of: Web/API/Location/hostname
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>{{domxref("Location")}}的 <strong><code>hostname</code></strong> 属性是包含了域名的一段 {{domxref("USVString")}}。</p>
+{{domxref("Location")}}的 **`hostname`** 属性是包含了域名的一段 {{domxref("USVString")}}。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><em>string</em> = <em>object</em>.hostname;
-<em>object.</em>hostname = <em>string</em>;
-</pre>
+```plain
+string = object.hostname;
+object.hostname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js notranslate">// 在文档流中声明了一个元素： &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.hostname"&gt;
+```js
+// 在文档流中声明了一个元素： <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.hostname">
 var anchor = document.getElementById("myAnchor");
-var result = anchor.hostname; // Returns:'developer.mozilla.org'</pre>
+var result = anchor.hostname; // Returns:'developer.mozilla.org'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.Location.hostname")}}</p>
+{{Compat("api.Location.hostname")}}

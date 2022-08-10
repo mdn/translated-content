@@ -8,25 +8,26 @@ tags:
   - clear()
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code><strong>clear()</strong></code>用来从 <code>WeakMap</code> 对象中移除所有元素。但不再是 ECMAScript 和它的实现部分。</p>
+**`clear()`**用来从 `WeakMap` 对象中移除所有元素。但不再是 ECMAScript 和它的实现部分。
 
-<div class="warning">
-<p><strong>警告：</strong>Warning:</p>
+> **警告：**Warning:
+>
+> ![WeakMap(no clear() any more).png](<https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png>)
 
-<p><img alt="WeakMap(no clear() any more).png" src="https://mdn.mozillademos.org/files/15608/WeakMap(no%20clear()%20any%20more).png"></p>
-</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+wm.clear();
+```
 
-<pre class="syntaxbox"><em>wm</em>.clear();</pre>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 使用 `clear` 方法
 
-<h3 id="使用_clear_方法">使用 <code>clear</code> 方法</h3>
-
-<pre class="brush: js example-bad">var wm = new WeakMap();
+```js example-bad
+var wm = new WeakMap();
 var obj = {};
 
 wm.set(obj, "foo");
@@ -39,18 +40,16 @@ wm.clear();
 
 wm.has(obj)  // false
 wm.has(window)  // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>当前版本或者起草中没有这个方法，这个方法在版本 28（2014 年 10 月 14）之前是 ECMAScript 6 起草规范的一部分，但是在起草之后的版本中被移除了。它不在是最终标准的一部分了 。</p>
+当前版本或者起草中没有这个方法，这个方法在版本 28（2014 年 10 月 14）之前是 ECMAScript 6 起草规范的一部分，但是在起草之后的版本中被移除了。它不在是最终标准的一部分了 。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相近">相近</h2>
+## 相近
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

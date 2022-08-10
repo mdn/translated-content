@@ -3,31 +3,30 @@ title: Console.groupEnd()
 slug: Web/API/Console/groupEnd
 translation_of: Web/API/Console/groupEnd
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>在 <a href="/en-US/docs/Tools/Web_Console">Web 控制台</a>中退出一格缩进 (结束分组). 请参阅 {{domxref("console")}} 中的<a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> 来获取它的用法和示例。</p>
+在 [Web 控制台](/en-US/docs/Tools/Web_Console)中退出一格缩进 (结束分组). 请参阅 {{domxref("console")}} 中的[Using groups in the console](/en-US/docs/Web/API/console#Using_groups_in_the_console) 来获取它的用法和示例。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.groupEnd();
-</pre>
+```plain
+console.groupEnd();
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.console.groupEnd")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

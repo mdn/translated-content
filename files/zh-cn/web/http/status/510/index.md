@@ -7,16 +7,18 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/510
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议的 <code><strong>510 Not Extended</strong></code> 响应状态码在 HTTP 扩展框架协议（参见 <a href="https://tools.ietf.org/html/rfc2774">RFC 2774</a>）中发送。</p>
+HTTP 协议的 **`510 Not Extended`** 响应状态码在 HTTP 扩展框架协议（参见 [RFC 2774](https://tools.ietf.org/html/rfc2774)）中发送。
 
-<p>在 HTTP 扩展框架协议中 ，一个客户端可以发送一个包含扩展声明的请求，该声明描述了要使用的扩展。如果服务器接收到这样的请求，但是请求不支持任何所描述的扩展，那么服务器将使用 510 状态码进行响应。</p>
+在 HTTP 扩展框架协议中 ，一个客户端可以发送一个包含扩展声明的请求，该声明描述了要使用的扩展。如果服务器接收到这样的请求，但是请求不支持任何所描述的扩展，那么服务器将使用 510 状态码进行响应。
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">510 Not Extended</pre>
+```plain
+510 Not Extended
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

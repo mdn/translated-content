@@ -3,31 +3,33 @@ title: DataTransferItemList.length
 slug: Web/API/DataTransferItemList/length
 translation_of: Web/API/DataTransferItemList/length
 ---
-<p>{{domxref("DataTransferItemList")}} 接口的只读属性<code><strong>length</strong></code> 返回当前拖动项列表中项目的数量。</p>
+{{domxref("DataTransferItemList")}} 接口的只读属性**`length`** 返回当前拖动项列表中项目的数量。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>length</em> = <em>DataTransferItemList</em>.length;
-</pre>
+```plain
+length = DataTransferItemList.length;
+```
 
-<h3 id="Return_Value">值</h3>
+### 值
 
-<p>列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的{{domxref("DataTransfer")}}对象未与拖动数据存储关联，则认为拖动列表被禁用。</p>
+列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的{{domxref("DataTransfer")}}对象未与拖动数据存储关联，则认为拖动列表被禁用。
 
-<h2 id="Example_Drag_and_Drop">示例</h2>
+## 示例
 
-<p>这个例子演示了<code>length</code> 属性的用法。</p>
+这个例子演示了`length` 属性的用法。
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function dragstart_handler(ev) {
+```js
+function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   var dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
+  dataList.add("<p>... paragraph ...</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -36,18 +38,18 @@ function drop_handler(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i &lt; data.length; i++) {
-    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
+  for (var i = 0; i < data.length; i++) {
+    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
       data[i].getAsString(function (s){
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
         console.log("... Drop: HTML = " + s);
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
         console.log("... Drop: URI = " + s);
@@ -69,21 +71,22 @@ function dragend_handler(ev) {
   // Clear any remaining drag data
   dataList.clear();
 }
+```
 
-</pre>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<div>
+  <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+</div>
+<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+```
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">div {
+```css
+div {
   margin: 0em;
   padding: 2em;
 }
@@ -96,22 +99,20 @@ function dragend_handler(ev) {
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example_Drag_and_Drop')}}</p>
+{{EmbedLiveSample('Example_Drag_and_Drop')}}
 
-<p>{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}</p>
+{{LiveSampleLink('Example_Drag_and_Drop', 'Drag and Drop demo link')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.DataTransferItemList.length")}}
 
-
-<p>{{Compat("api.DataTransferItemList.length")}}</p>
-
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}

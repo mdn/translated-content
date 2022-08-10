@@ -9,46 +9,48 @@ tags:
   - Regular Expressions
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>test()</strong></code> 方法执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 <code>true</code> 或 <code>false</code>。</p>
+**`test()`** 方法执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 `true` 或 `false`。
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-test.html", "taller")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><var>regexObj</var>.test(str)</pre>
+```plain
+regexObj.test(str)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>str</code></dt>
- <dd>用来与正则表达式匹配的字符串</dd>
-</dl>
+- `str`
+  - : 用来与正则表达式匹配的字符串
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果正则表达式与指定的字符串匹配 ，返回<code>true</code>；否则<code>false</code>。</p>
+如果正则表达式与指定的字符串匹配 ，返回`true`；否则`false`。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
+当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 `test()`（类似于` `{{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用`test`将会越过之前的匹配。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_test">使用 <code>test()</code></h3>
+### 使用 `test()`
 
-<p>一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。</p>
+一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。
 
-<pre class="brush: js">let str = 'hello world!';
+```js
+let str = 'hello world!';
 let result = /^hello/.test(str);
 console.log(result);
 // true
-</pre>
+```
 
-<p>下例打印一条信息，该信息内容取决于是否成功通过指定测试：</p>
+下例打印一条信息，该信息内容取决于是否成功通过指定测试：
 
-<pre class="brush: js">function testinput(re, str){
+```js
+function testinput(re, str){
     var midstring;
     if (re.test(str)) {
         midstring = " contains ";
@@ -57,34 +59,33 @@ console.log(result);
     }
     console.log(str + midstring + re.source);
 }
-</pre>
+```
 
-<h3 id="当设置全局标志的正则使用test">当设置全局标志的正则使用<code>test()</code></h3>
+### 当设置全局标志的正则使用`test()`
 
-<p>如果正则表达式设置了全局标志，<code>test() </code>的执行会改变正则表达式   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex"><code>lastIndex</code></a>属性。连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex">lastIndex</a>属性值</code>).</p>
+如果正则表达式设置了全局标志，`test() `的执行会改变正则表达式 [`lastIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)属性。连续的执行`test()`方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 `lastIndex属性值`).
 
-<p>下面的实例表现了这种行为： </p>
+下面的实例表现了这种行为：
 
-<pre class="brush: js">var regex = /foo/g;
+```js
+var regex = /foo/g;
 
 // regex.lastIndex is at 0
 regex.test('foo'); // true
 
 // regex.lastIndex is now at 3
 regex.test('foo'); // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>在<a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式</a>章节</li>
- <li>{{jsxref("RegExp")}}</li>
-</ul>
+- 在[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)章节
+- {{jsxref("RegExp")}}

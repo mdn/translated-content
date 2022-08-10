@@ -8,32 +8,33 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Object.isSealed()</code></strong> 方法判断一个对象是否被密封。</p>
+**`Object.isSealed()`** 方法判断一个对象是否被密封。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Object.isSealed(<em>obj</em>)</code></pre>
+```plain
+Object.isSealed(obj)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>要被检查的对象。</dd>
-</dl>
+- `obj`
+  - : 要被检查的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>表示给定对象是否被密封的一个{{jsxref("Boolean")}} 。</p>
+表示给定对象是否被密封的一个{{jsxref("Boolean")}} 。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果这个对象是密封的，则返回 <code>true</code>，否则返回 <code>false</code>。密封对象是指那些不可 {{jsxref("Object.isExtensible", "扩展")}} 的，且所有自身属性都不可配置且因此不可删除（但不一定是不可写）的对象。</p>
+如果这个对象是密封的，则返回 `true`，否则返回 `false`。密封对象是指那些不可 {{jsxref("Object.isExtensible", "扩展")}} 的，且所有自身属性都不可配置且因此不可删除（但不一定是不可写）的对象。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<pre class="brush: js">// 新建的对象默认不是密封的。
+```js
+// 新建的对象默认不是密封的。
 var empty = {};
 Object.isSealed(empty); // === false
 
@@ -66,32 +67,33 @@ var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false， 属性"p"可写
 
 var s3 = Object.seal({ get p() { return 0; } });
-Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写，只考虑是否可配置</pre>
+Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写，只考虑是否可配置
+```
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>在 ES5 中，如果这个方法的参数不是一个对象（一个原始类型），那么它会导致{{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为是一个密封的普通对象，只返回<code>true</code>。</p>
+在 ES5 中，如果这个方法的参数不是一个对象（一个原始类型），那么它会导致{{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为是一个密封的普通对象，只返回`true`。
 
-<pre class="brush: js">Object.isSealed(1);
+```js
+Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.isSealed(1);
-// true                          (ES2015 code)</pre>
+// true                          (ES2015 code)
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

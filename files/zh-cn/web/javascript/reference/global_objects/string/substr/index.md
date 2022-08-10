@@ -5,40 +5,41 @@ tags:
   - String.prototype.substr()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<div class="warning"><p><strong>警告：</strong>尽管 <code>String.prototype.substr(…)</code> 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code> 替代它。</p></div>
+> **警告：**尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 替代它。
 
-<p><code><strong>substr()</strong></code> 方法返回一个字符串中从指定位置开始到指定字符数的字符。</p>
+**`substr()`** 方法返回一个字符串中从指定位置开始到指定字符数的字符。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>str</em>.substr(<em>start</em>[, <em>length</em>])</code></pre>
+```plain
+str.substr(start[, length])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>start</code></dt>
- <dd>开始提取字符的位置。如果为负值，则被看作 <code>strLength + </code><code>start，其中</code> <code>strLength</code> 为字符串的长度（例如，如果 <code>start</code> 为 <code>-3，则被看作</code> <code>strLength + (-3)）。</code></dd>
- <dt><code>length</code></dt>
- <dd>可选。提取的字符数。</dd>
-</dl>
+- `start`
+  - : 开始提取字符的位置。如果为负值，则被看作 ` strLength + ``start，其中` `strLength` 为字符串的长度（例如，如果 `start` 为 `-3，则被看作` `strLength + (-3)）。`
+- `length`
+  - : 可选。提取的字符数。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>start</code> 是一个字符的索引。首字符的索引为 0，最后一个字符的索引为 字符串的长度减去 1。<code>substr</code> 从 <code>start</code> 位置开始提取字符，提取 <code>length</code> 个字符（或直到字符串的末尾）。</p>
+`start` 是一个字符的索引。首字符的索引为 0，最后一个字符的索引为 字符串的长度减去 1。`substr` 从 `start` 位置开始提取字符，提取 `length` 个字符（或直到字符串的末尾）。
 
-<p>如果 <code>start</code> 为正值，且大于或等于字符串的长度，则 <code>substr</code> 返回一个空字符串。</p>
+如果 `start` 为正值，且大于或等于字符串的长度，则 `substr` 返回一个空字符串。
 
-<p>如果 <code>start</code> 为负值，则 <code>substr</code> 把它作为从字符串末尾开始的一个字符索引。如果 <code>start</code> 为负值且 <code>abs(start)</code> 大于字符串的长度，则 <code>substr</code> 使用 0 作为开始提取的索引。注意负的 <code>start</code> 参数不被 Microsoft JScript 所支持。</p>
+如果 `start` 为负值，则 `substr` 把它作为从字符串末尾开始的一个字符索引。如果 `start` 为负值且 `abs(start)` 大于字符串的长度，则 `substr` 使用 0 作为开始提取的索引。注意负的 `start` 参数不被 Microsoft JScript 所支持。
 
-<p>如果 <code>length</code> 为 0 或负值，则 <code>substr</code> 返回一个空字符串。如果忽略 <code>length</code>，则 <code>substr</code> 提取字符，直到字符串末尾。</p>
+如果 `length` 为 0 或负值，则 `substr` 返回一个空字符串。如果忽略 `length`，则 `substr` 提取字符，直到字符串末尾。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Example:_Using_substr">例子：使用 <code>substr</code></h3>
+### 例子：使用 `substr`
 
-<pre class="brush: js">var str = "abcdefghij";
+```js
+var str = "abcdefghij";
 
 console.log("(1,2): "    + str.substr(1,2));   // (1,2): bc
 console.log("(-3,2): "   + str.substr(-3,2));  // (-3,2): hi
@@ -46,13 +47,14 @@ console.log("(-3): "     + str.substr(-3));    // (-3): hij
 console.log("(1): "      + str.substr(1));     // (1): bcdefghij
 console.log("(-20, 2): " + str.substr(-20,2)); // (-20, 2): ab
 console.log("(20, 2): "  + str.substr(20,2));  // (20, 2):
-</pre>
+```
 
-<h2 id="Description">兼容旧环境（Polyfill）</h2>
+## 兼容旧环境（Polyfill）
 
-<p>Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该方法的功能，则需要使用下面的兼容性代码修复此 bug：</p>
+Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该方法的功能，则需要使用下面的兼容性代码修复此 bug：
 
-<pre class="brush: js">// only run when the substr function is broken
+```js
+// only run when the substr function is broken
 if ('ab'.substr(-1) != 'b')
 {
   /**
@@ -65,25 +67,24 @@ if ('ab'.substr(-1) != 'b')
     return function(start, length) {
       // did we get a negative start, calculate how much it is
       // from the beginning of the string
-      if (start &lt; 0) start = this.length + start;
+      if (start < 0) start = this.length + start;
 
       // call the original function
       return substr.call(this, start, length);
     }
   }(String.prototype.substr);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.slice()")}}</li>
- <li>{{jsxref("String.prototype.substring()")}}</li>
-</ul>
+- {{jsxref("String.prototype.slice()")}}
+- {{jsxref("String.prototype.substring()")}}

@@ -8,53 +8,57 @@ tags:
   - 属性
 translation_of: Web/API/WebGLRenderingContext/canvas
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code><strong>WebGLRenderingContext.canvas</strong></code> 只读属性，对 {{domxref("HTMLCanvasElement")}} 和 {{domxref("OffscreenCanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{HTMLElement("canvas")}} 元素或 {{domxref("OffscreenCanvas")}} 对象，值为 {{jsxref("null")}}。</p>
+**`WebGLRenderingContext.canvas`** 只读属性，对 {{domxref("HTMLCanvasElement")}} 和 {{domxref("OffscreenCanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{HTMLElement("canvas")}} 元素或 {{domxref("OffscreenCanvas")}} 对象，值为 {{jsxref("null")}}。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>gl</em></var>.canvas;</pre>
+```plain
+gl.canvas;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("HTMLCanvasElement")}} 或 {{domxref("OffscreenCanvas")}} 或 {{jsxref("null")}}。</p>
+{{domxref("HTMLCanvasElement")}} 或 {{domxref("OffscreenCanvas")}} 或 {{jsxref("null")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Canvas_元素">Canvas 元素</h3>
+### Canvas 元素
 
-<p>指定 {{HTMLElement("canvas")}} 元素：</p>
+指定 {{HTMLElement("canvas")}} 元素：
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>你可以通过 canvas 得到一个从 <code>WebGLRenderingContext </code>返回的引用：</p>
+你可以通过 canvas 得到一个从 `WebGLRenderingContext `返回的引用：
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
 gl.canvas; // HTMLCanvasElement
-</pre>
+```
 
-<h3 id="离屏Canvas">离屏 Canvas</h3>
+### 离屏 Canvas
 
-<p>下面是一个使用试验阶段 {{domxref("OffscreenCanvas")}} 对象的示例：</p>
+下面是一个使用试验阶段 {{domxref("OffscreenCanvas")}} 对象的示例：
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
-gl.canvas; // OffscreenCanvas</pre>
+gl.canvas; // OffscreenCanvas
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.canvas")}}</p>
+{{Compat("api.WebGLRenderingContext.canvas")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.canvas")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.canvas")}}
+- {{domxref("OffscreenCanvas")}}

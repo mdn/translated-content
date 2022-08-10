@@ -3,30 +3,31 @@ title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>includes()</strong></code>方法判断类型化数组中是否含有特定元素，并相应返回<code>true</code> 或者<code>false</code> ，这个方法的算法和{{jsxref("Array.prototype.includes()")}}<em>相同。</em> <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组</a> 之一。</p>
+**`includes()`**方法判断类型化数组中是否含有特定元素，并相应返回`true` 或者`false` ，这个方法的算法和{{jsxref("Array.prototype.includes()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarray</var>.includes(<var>searchElement</var>[, <var>fromIndex</var>]);</pre>
+```plain
+typedarray.includes(searchElement[, fromIndex]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>searchElement</code></dt>
- <dd>要搜索的元素。</dd>
- <dt><code>fromIndex</code></dt>
- <dd>可选，数组中的位置，在这里开始搜索 <code>searchElement</code>；默认为 0。</dd>
-</dl>
+- `searchElement`
+  - : 要搜索的元素。
+- `fromIndex`
+  - : 可选，数组中的位置，在这里开始搜索 `searchElement`；默认为 0。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("Boolean")}}。</p>
+{{jsxref("Boolean")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var uint8 = new Uint8Array([1,2,3]);
+```js
+var uint8 = new Uint8Array([1,2,3]);
 uint8.includes(2);     // true
 uint8.includes(4);     // false
 uint8.includes(3, 3);  // false
@@ -35,20 +36,18 @@ uint8.includes(3, 3);  // false
 new Uint8Array([NaN]).includes(NaN); // false，因为 NaN 传递给构造器时转换为 0
 new Float32Array([NaN]).includes(NaN); // true;
 new Float64Array([NaN]).includes(NaN); // true;
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Array.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}

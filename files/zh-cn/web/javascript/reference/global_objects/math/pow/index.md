@@ -3,53 +3,53 @@ title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Math.pow()</strong></code> 函数返回基数（<code>base</code>）的指数（<code>exponent</code>）次幂，即 <code>base^exponent</code>。</p>
+**`Math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
 
-<p>{{EmbedInteractiveExample("pages/js/math-pow.html")}}</p>
+{{EmbedInteractiveExample("pages/js/math-pow.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.pow(<em>base</em>, <em>exponent</em>) </code></pre>
+```plain
+Math.pow(base, exponent)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>base</code></dt>
- <dd>基数</dd>
- <dt><code>exponent</code></dt>
- <dd>指数</dd>
-</dl>
+- `base`
+  - : 基数
+- `exponent`
+  - : 指数
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>由于 <code>pow</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.pow()</code>，而不是作为你创建的 <code>Math</code> 对象的方法。</p>
+由于 `pow` 是 `Math` 的静态方法，所以应该像这样使用：`Math.pow()`，而不是作为你创建的 `Math` 对象的方法。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_Math.pow">使用 <code>Math.pow</code></h3>
+### 使用 `Math.pow`
 
-<pre class="brush:js">function raisePower(x,y) {
+```js
+function raisePower(x,y) {
    return Math.pow(x,y)
-}</pre>
+}
+```
 
-<p>如果 <code>x</code> 是 2 ，且 <code>y</code> 是 7，则 raisePower 函数返回 128（2 的 7 次幂）。</p>
+如果 `x` 是 2 ，且 `y` 是 7，则 raisePower 函数返回 128（2 的 7 次幂）。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.cbrt()")}}</li>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Exponentiation operator</a> {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.cbrt()")}}
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.sqrt()")}}
+- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation) {{experimental_inline}}

@@ -8,48 +8,43 @@ tags:
   - Interface
 translation_of: Web/API/EventTarget
 ---
-<p>{{ApiRef("DOM Events")}}</p>
+{{ApiRef("DOM Events")}}
 
-<p><code>EventTarget</code> 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现。</p>
+`EventTarget` 是一个 DOM 接口，由可以接收事件、并且可以创建侦听器的对象实现。
 
-<p>{{domxref("Element")}}，{{domxref("document")}} 和 {{domxref("window")}} 是最常见的 event targets ，但是其他对象也可以作为 event targets，比如 {{domxref("XMLHttpRequest")}}，{{domxref("AudioNode")}}，{{domxref("AudioContext")}}  等等。</p>
+{{domxref("Element")}}，{{domxref("document")}} 和 {{domxref("window")}} 是最常见的 event targets ，但是其他对象也可以作为 event targets，比如 {{domxref("XMLHttpRequest")}}，{{domxref("AudioNode")}}，{{domxref("AudioContext")}} 等等。
 
-<p>许多 event targets（包括 elements， documents 和 windows）支持通过 <code>onevent</code> 特性和属性设置<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">事件处理程序</a> (<a href="/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers">event handlers</a>)。</p>
+许多 event targets（包括 elements， documents 和 windows）支持通过 `onevent` 特性和属性设置[事件处理程序](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers) ([event handlers](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers))。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("EventTarget.EventTarget()","EventTarget()")}}</dt>
- <dd>创建一个新的 <code>EventTarget</code> 对象实例。</dd>
-</dl>
+- {{domxref("EventTarget.EventTarget()","EventTarget()")}}
+  - : 创建一个新的 `EventTarget` 对象实例。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>在 EventTarget 上注册特定事件类型的事件处理程序。</dd>
- <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>EventTarget 中删除事件侦听器。</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>将事件分派到此 EventTarget。</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()")}}
+  - : 在 EventTarget 上注册特定事件类型的事件处理程序。
+- {{domxref("EventTarget.removeEventListener()")}}
+  - : EventTarget 中删除事件侦听器。
+- {{domxref("EventTarget.dispatchEvent()")}}
+  - : 将事件分派到此 EventTarget。
 
-<h3 id="Mozilla_chrome_代码的其他方法">Mozilla chrome 代码的其他方法</h3>
+### Mozilla chrome 代码的其他方法
 
-<p>Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on* 属性。另见 <a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a> 绑定。</p>
+Mozilla 扩展，供 JS 实现的事件目标使用以 实现 on\* 属性。另见 [WebIDL bindings](/en-US/docs/Mozilla/WebIDL_bindings) 绑定。
 
-<ul>
- <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) {{non-standard_inline}}</li>
- <li>EventHandler <strong>getEventHandler</strong>(DOMString type) {{non-standard_inline}}</li>
-</ul>
+- void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
+- EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="EventTarget_的简单实现">EventTarget 的简单实现</h3>
+### EventTarget 的简单实现
 
-<pre class="brush: js">var EventTarget = function() {
+```js
+var EventTarget = function() {
   this.listeners = {};
 };
 
@@ -66,7 +61,7 @@ EventTarget.prototype.removeEventListener = function(type, callback) {
     return;
   }
   var stack = this.listeners[type];
-  for(var i = 0, l = stack.length; i &lt; l; i++) {
+  for(var i = 0, l = stack.length; i < l; i++) {
     if(stack[i] === callback){
       stack.splice(i, 1);
       return this.removeEventListener(type, callback);
@@ -80,26 +75,22 @@ EventTarget.prototype.dispatchEvent = function(event) {
   }
   var stack = this.listeners[event.type];
   event.target = this;
-  for(var i = 0, l = stack.length; i &lt; l; i++) {
+  for(var i = 0, l = stack.length; i < l; i++) {
       stack[i].call(this, event);
   }
 };
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.EventTarget")}}
 
+## 相关链接
 
-<p>{{Compat("api.EventTarget")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/Reference/Events">Event reference</a> - the events available in the platform.</li>
- <li><a href="/en-US/docs/Web/Guide/DOM/Events">Event developer guide</a></li>
- <li>{{domxref("Event")}} interface</li>
-</ul>
+- [Event reference](/en-US/docs/Web/Reference/Events) - the events available in the platform.
+- [Event developer guide](/en-US/docs/Web/Guide/DOM/Events)
+- {{domxref("Event")}} interface

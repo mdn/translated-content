@@ -3,24 +3,24 @@ title: Element.scrollTopMax
 slug: Web/API/Element/scrollTopMax
 translation_of: Web/API/Element/scrollTopMax
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p><code><strong>Element.scrollTopMax</strong></code> 返回一个只读 Number 表示元素所能滚动的最大高度</p>
+**`Element.scrollTopMax`** 返回一个只读 Number 表示元素所能滚动的最大高度
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var <em>pxl</em> = <em>elt</em>.scrollTopMax;</pre>
+```plain
+var pxl = elt.scrollTopMax;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>此属性不在当前规范中</p>
+此属性不在当前规范中
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Element.scrollTopMax")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Element.scrollLeftMax")}} giving the same information for the other axis.</li>
-</ul>
+- {{domxref("Element.scrollLeftMax")}} giving the same information for the other axis.

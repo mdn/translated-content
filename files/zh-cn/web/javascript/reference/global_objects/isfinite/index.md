@@ -6,32 +6,33 @@ tags:
   - isFinite
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>该全局 <strong><code>isFinite()</code></strong> 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。</p>
+该全局 **`isFinite()`** 函数用来判断被传入的参数值是否为一个有限数值（finite number）。在必要情况下，参数会首先转为一个数值。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">isFinite(<em>testValue</em>)</pre>
+```js
+isFinite(testValue)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>testValue</code></dt>
- <dd>用于检测有限性（finiteness）的值。</dd>
-</dl>
+- `testValue`
+  - : 用于检测有限性（finiteness）的值。
 
-<h3 id="Description">描述</h3>
+### 描述
 
-<p>isFinite 是全局的方法，不与任何对象有关系。</p>
+isFinite 是全局的方法，不与任何对象有关系。
 
-<p>你可以用这个方法来判定一个数字是否是有限数字。<code>isFinite</code> 方法检测它参数的数值。如果参数是 <code>NaN</code>，正无穷大或者负无穷大，会返回<code>false</code>，其他返回 <code>true</code>。</p>
+你可以用这个方法来判定一个数字是否是有限数字。`isFinite` 方法检测它参数的数值。如果参数是 `NaN`，正无穷大或者负无穷大，会返回`false`，其他返回 `true`。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -39,21 +40,20 @@ isFinite(0);         // true
 isFinite(2e64);      // true，在更强壮的 Number.isFinite(null) 中将会得到 false
 
 
-isFinite("0");       // true，在更强壮的 Number.isFinite('0') 中将会得到 false</pre>
+isFinite("0");       // true，在更强壮的 Number.isFinite('0') 中将会得到 false
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Number.NaN()")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN()")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

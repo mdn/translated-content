@@ -6,39 +6,39 @@ tags:
   - 接口
 translation_of: Web/API/Window/defaultStatus
 ---
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p>{{ APIRef() }}</p>
+{{ APIRef() }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>获取或设置给定窗口的状态栏文本。</p>
+获取或设置给定窗口的状态栏文本。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>var sMsg</em> = window.defaultStatus;
-window.defaultStatus = <em>sMsg;</em>
-</pre>
+```plain
+var sMsg = window.defaultStatus;
+window.defaultStatus = sMsg;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>sMsg</code>   是一个保存了状态栏默认显示文本的字符串。</li>
-</ul>
+- `sMsg` 是一个保存了状态栏默认显示文本的字符串。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>&lt;html&gt;
- &lt;body onload="window.defaultStatus='hello!';"/&gt;
-  &lt;button onclick="window.confirm('你确定要退出？');"&gt;confirm&lt;/button&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```plain
+<html>
+ <body onload="window.defaultStatus='hello!';"/>
+  <button onclick="window.confirm('你确定要退出？');">confirm</button>
+ </body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>页面 HTML 加载完成后要设置状态栏内容可以使用  <a href="/en/Gecko_DOM_Reference/window/status">window.status</a>.</p>
+页面 HTML 加载完成后要设置状态栏内容可以使用 [window.status](/en/Gecko_DOM_Reference/window/status).
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>HTML5</p>
+HTML5

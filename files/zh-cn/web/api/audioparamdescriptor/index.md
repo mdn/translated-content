@@ -3,35 +3,31 @@ title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
 translation_of: Web/API/AudioParamDescriptor
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>AudioParamDescriptor</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> specifies properties for an {{domxref("AudioParam")}} objects. It is used to create custom <code>AudioParam</code>s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by <code>AudioWorkletNode</code> constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.</p>
+The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) specifies properties for an {{domxref("AudioParam")}} objects. It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt><code>name</code></dt>
- <dd>The {{domxref("DOMString")}} which represents the name of the <code>AudioParam</code>. Under this name the <code>AudioParam</code> will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this <code>AudioParam</code>.</dd>
- <dt><code>automationRate</code> {{optional_inline}}</dt>
- <dd>Either <code><a href="/en-US/docs/Web/API/AudioParam#a-rate">"a-rate"</a></code>, or <code><a href="/en-US/docs/Web/API/AudioParam#k-rate">"k-rate"</a></code> string which represents an automation rate of this <code>AudioParam</code>. Defaults to <code>"a-rate"</code>.</dd>
- <dt><code>minValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents minimum value of the <code>AudioParam</code>. Defaults to <code>-3.4028235e38</code>.</dd>
- <dt><code>maxValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents maximum value of the <code>AudioParam</code>. Defaults to <code>3.4028235e38</code>.</dd>
- <dt><code>defaultValue</code> {{optional_inline}}</dt>
- <dd>A <code>float</code> which represents initial value of the <code>AudioParam</code>. Defaults to <code>0</code>.</dd>
-</dl>
+- `name`
+  - : The {{domxref("DOMString")}} which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
+- `automationRate` {{optional_inline}}
+  - : Either [`"a-rate"`](/en-US/docs/Web/API/AudioParam#a-rate), or [`"k-rate"`](/en-US/docs/Web/API/AudioParam#k-rate) string which represents an automation rate of this `AudioParam`. Defaults to `"a-rate"`.
+- `minValue` {{optional_inline}}
+  - : A `float` which represents minimum value of the `AudioParam`. Defaults to `-3.4028235e38`.
+- `maxValue` {{optional_inline}}
+  - : A `float` which represents maximum value of the `AudioParam`. Defaults to `3.4028235e38`.
+- `defaultValue` {{optional_inline}}
+  - : A `float` which represents initial value of the `AudioParam`. Defaults to `0`.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>{{page("/en-US/docs/Web/API/AudioWorkletNode/parameters", "Examples")}}</p>
+{{page("/en-US/docs/Web/API/AudioWorkletNode/parameters", "Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.AudioParamDescriptor")}}</p>
+{{Compat("api.AudioParamDescriptor")}}

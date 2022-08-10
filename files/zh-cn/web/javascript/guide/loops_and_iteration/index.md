@@ -8,75 +8,74 @@ tags:
   - 语法
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
-<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
-<p>循环提供了一种快速和简单的方式去做一些重复的事。<a href="/en-US/docs/Web/JavaScript/Guide">JavaScript 入门</a>的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。</p>
+循环提供了一种快速和简单的方式去做一些重复的事。[JavaScript 入门](/en-US/docs/Web/JavaScript/Guide)的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。
 
-<p>你可以把循环想成一种计算机化的游戏，告诉某人在一个方向上走 X 步，然后在另一个方向上走 Y 步；例如，“向东走 5 步”可以用一个循环来这样表达：</p>
+你可以把循环想成一种计算机化的游戏，告诉某人在一个方向上走 X 步，然后在另一个方向上走 Y 步；例如，“向东走 5 步”可以用一个循环来这样表达：
 
-<pre class="brush: js">var step;
-for (step = 0; step &lt; 5; step++) {
+```js
+var step;
+for (step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
   console.log('Walking east one step');
 }
-</pre>
+```
 
-<p>循环有很多种类，但本质上它们都做的是同一件事：它们把一个动作重复了很多次（实际上重复的次数有可能为 0）。各种循环机制提供了不同的方法去确定循环的开始和结束。不同情况下，某一种类型循环会比其它的循环用起来更简单。</p>
+循环有很多种类，但本质上它们都做的是同一件事：它们把一个动作重复了很多次（实际上重复的次数有可能为 0）。各种循环机制提供了不同的方法去确定循环的开始和结束。不同情况下，某一种类型循环会比其它的循环用起来更简单。
 
-<p>JavaScript 中提供了这些循环语句：</p>
+JavaScript 中提供了这些循环语句：
 
-<ul>
- <li><a href="#for_语句">for 语句</a></li>
- <li><a href="#do...while_语句">do...while 语句</a></li>
- <li><a href="#while_语句">while 语句</a></li>
- <li><a href="#label_语句">label 语句</a></li>
- <li><a href="#break_语句">break 语句</a></li>
- <li><a href="#continue_语句">continue 语句</a></li>
- <li><a href="#for...in_语句">for...in 语句</a></li>
- <li><a href="#for...of_语句">for...of 语句</a></li>
-</ul>
+- [for 语句](#for_语句)
+- [do...while 语句](#do...while_语句)
+- [while 语句](#while_语句)
+- [label 语句](#label_语句)
+- [break 语句](#break_语句)
+- [continue 语句](#continue_语句)
+- [for...in 语句](#for...in_语句)
+- [for...of 语句](#for...of_语句)
 
-<h2 id="for_语句"><code>for</code> 语句</h2>
+## `for` 语句
 
-<p>一个 {{jsxref("statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。 JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：</p>
+一个 {{jsxref("statements/for","for")}} 循环会一直重复执行，直到指定的循环条件为 false。 JavaScript 的 for 循环，和 Java、C 的 for 循环，是很相似的。一个 for 语句是这个样子的：
 
-<pre class="syntaxbox">for ([initialExpression]; [condition]; [incrementExpression])
+```plain
+for ([initialExpression]; [condition]; [incrementExpression])
   statement
-</pre>
+```
 
-<p>当一个 <code>for</code> 循环执行的时候，会发生以下过程：</p>
+当一个 `for` 循环执行的时候，会发生以下过程：
 
-<ol>
- <li>如果有初始化表达式 <code>initialExpression</code>，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。</li>
- <li>计算 <code>condition</code> 表达式的值。如果 <code>condition</code> 的值是 true，循环中的语句会被执行。如果 <code>condition</code> 的值是 false，<code>for</code> 循环终止。如果 <code>condition</code> 表达式整个都被省略掉了，condition 的值会被认为是 true。</li>
- <li>循环中的 <code>statement</code> 被执行。如果需要执行多条语句，可以使用块（<code>{ ... }</code>）来包裹这些语句。</li>
- <li>如果有更新表达式 <code>incrementExpression</code>，执行更新表达式。</li>
- <li>回到步骤 2。</li>
-</ol>
+1.  如果有初始化表达式 `initialExpression`，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。
+2.  计算 `condition` 表达式的值。如果 `condition` 的值是 true，循环中的语句会被执行。如果 `condition` 的值是 false，`for` 循环终止。如果 `condition` 表达式整个都被省略掉了，condition 的值会被认为是 true。
+3.  循环中的 `statement` 被执行。如果需要执行多条语句，可以使用块（`{ ... }`）来包裹这些语句。
+4.  如果有更新表达式 `incrementExpression`，执行更新表达式。
+5.  回到步骤 2。
 
-<h3 id="例子"><strong>例子</strong></h3>
+### **例子**
 
-<p>下面的函数包含一个含有 <code>for</code> 循环去计算一个滑动列表中被选中项目的个数（一个 {{HTMLElement("select")}} 元素允许选择多项）。<code>for</code> 循环声明了变量 i 并将它的初始值设为 0。它检查 <code>i</code> 是否比 <code>&lt;select&gt;</code> 元素中的选项数量少，执行了随后的 <code>if</code> 语句，然后在每次完成循环后，<code>i</code> 的值增加 1。</p>
+下面的函数包含一个含有 `for` 循环去计算一个滑动列表中被选中项目的个数（一个 {{HTMLElement("select")}} 元素允许选择多项）。`for` 循环声明了变量 i 并将它的初始值设为 0。它检查 `i` 是否比 `<select>` 元素中的选项数量少，执行了随后的 `if` 语句，然后在每次完成循环后，`i` 的值增加 1。
 
-<pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
-    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;爵士&lt;/option&gt;
-      &lt;option&gt;布鲁斯&lt;/option&gt;
-      &lt;option&gt;新纪元&lt;/option&gt;
-      &lt;option&gt;古典&lt;/option&gt;
-      &lt;option&gt;歌剧&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="选择了多少个选项？" /&gt;&lt;/p&gt;
-&lt;/form&gt;
+```html
+<form name="selectForm">
+  <p>
+    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>爵士</option>
+      <option>布鲁斯</option>
+      <option>新纪元</option>
+      <option>古典</option>
+      <option>歌剧</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="选择了多少个选项？" /></p>
+</form>
 
-&lt;script&gt;
+<script>
 function howMany(selectObject) {
   var numberSelected = 0;
-  for (var i = 0; i &lt; selectObject.options.length; i++) {
+  for (var i = 0; i < selectObject.options.length; i++) {
     if (selectObject.options[i].selected) {
       numberSelected++;
     }
@@ -88,119 +87,129 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
   alert('选择选项的数量是: ' + howMany(document.selectForm.musicTypes))
 });
-&lt;/script&gt;
+</script>
+```
 
-</pre>
+## `do...while` 语句
 
-<h2 id="do...while_语句"><code>do...while</code> 语句</h2>
+{{jsxref("statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。 一个 do...while 语句看起来像这样：
 
-<p>{{jsxref("statements/do...while", "do...while")}} 语句一直重复直到指定的条件求值得到假值（false）。 一个 do...while 语句看起来像这样：</p>
-
-<pre class="syntaxbox">do
+```plain
+do
   statement
 while (condition);
-</pre>
+```
 
-<p><code>statement</code> 在检查条件之前会执行一次。要执行多条语句（语句块），要使用块语句（<code>{ ... }</code>）包括起来。 如果 <code>condition</code> 为真（true），<code>statement</code> 将再次执行。 在每个执行的结尾会进行条件的检查。当 <code>condition</code> 为假（false），执行会停止并且把控制权交回给 <code>do...while</code> 后面的语句。</p>
+`statement` 在检查条件之前会执行一次。要执行多条语句（语句块），要使用块语句（`{ ... }`）包括起来。 如果 `condition` 为真（true），`statement` 将再次执行。 在每个执行的结尾会进行条件的检查。当 `condition` 为假（false），执行会停止并且把控制权交回给 `do...while` 后面的语句。
 
-<h3 id="例子_2"><strong>例子</strong></h3>
+### **例子**
 
-<p>在下面的例子中， 这个 <code>do</code> 循环将至少重复一次，并且一直重复直到 <code>i</code> 不再小于 5。</p>
+在下面的例子中， 这个 `do` 循环将至少重复一次，并且一直重复直到 `i` 不再小于 5。
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 do {
   i += 1;
   console.log(i);
-} while (i &lt; 5);</pre>
+} while (i < 5);
+```
 
-<h2 id="while_语句"><code>while</code> 语句</h2>
+## `while` 语句
 
-<p>一个 {{jsxref("statements/while","while")}} 语句只要指定的条件求值为真（true）就会一直执行它的语句块。一个 <code>while</code> 语句看起来像这样：</p>
+一个 {{jsxref("statements/while","while")}} 语句只要指定的条件求值为真（true）就会一直执行它的语句块。一个 `while` 语句看起来像这样：
 
-<pre class="syntaxbox">while (condition)
+```plain
+while (condition)
   statement
-</pre>
+```
 
-<p>如果这个条件变为假，循环里的 <code>statement</code> 将会停止执行并把控制权交回给 <code>while</code> 语句后面的代码。</p>
+如果这个条件变为假，循环里的 `statement` 将会停止执行并把控制权交回给 `while` 语句后面的代码。
 
-<p>条件检测会在每次 <code>statement</code> 执行之前发生。如果条件返回为真， <code>statement</code> 会被执行并紧接着再次测试条件。如果条件返回为假，执行将停止并把控制权交回给 while 后面的语句。</p>
+条件检测会在每次 `statement` 执行之前发生。如果条件返回为真， `statement` 会被执行并紧接着再次测试条件。如果条件返回为假，执行将停止并把控制权交回给 while 后面的语句。
 
-<p>要执行多条语句（语句块），要使用语句块 (<code>{ ... }</code>) 包括起来。</p>
+要执行多条语句（语句块），要使用语句块 (`{ ... }`) 包括起来。
 
-<h3 id="例子_1"><strong>例子 1</strong></h3>
+### **例子 1**
 
-<p>只要 <code>n</code> 小于 3，下面的 <code>while</code> 循环就会一直执行：</p>
+只要 `n` 小于 3，下面的 `while` 循环就会一直执行：
 
-<pre class="brush: js">var n = 0;
+```js
+var n = 0;
 var x = 0;
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
 }
-</pre>
+```
 
-<p>在每次循环里， <code>n</code> 会增加 1，并被加到 <code>x</code> 上。所以， x 和 n 的变化是：</p>
+在每次循环里， `n` 会增加 1，并被加到 `x` 上。所以， x 和 n 的变化是：
 
-<ul>
- <li>第一次完成后：<code>n</code> = 1，<code>x</code> = 1</li>
- <li>第二次完成后：<code>n</code> = 2，<code>x</code> = 3</li>
- <li>第三次完成后：<code>n</code> = 3，<code>x</code> = 6</li>
-</ul>
+- 第一次完成后：`n` = 1，`x` = 1
+- 第二次完成后：`n` = 2，`x` = 3
+- 第三次完成后：`n` = 3，`x` = 6
 
-<p>在三次完成后， 条件 <code>n &lt; 3</code> 的结果不再为真，所以循环终止了。</p>
+在三次完成后， 条件 `n < 3` 的结果不再为真，所以循环终止了。
 
-<h3 id="例子_2_2"><strong>例子 2</strong></h3>
+### **例子 2**
 
-<p>避免无穷循环（无限循环）。保证循环的条件结果最终会变成假；否则，循环永远不会停止。因为条件永远不会变成假值，下面这个 while 循环将会永远执行：</p>
+避免无穷循环（无限循环）。保证循环的条件结果最终会变成假；否则，循环永远不会停止。因为条件永远不会变成假值，下面这个 while 循环将会永远执行：
 
-<pre class="brush: js">while (true) {
+```js
+while (true) {
   console.log("Hello, world");
-}</pre>
+}
+```
 
-<h2 id="label_语句"><code>label</code> 语句</h2>
+## `label` 语句
 
-<p>一个 {{jsxref("statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环， 然后使用 <code>break</code> 或者 <code>continue</code> 来指出程序是否该停止循环还是继续循环。</p>
+一个 {{jsxref("statements/label","label")}} 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 label 标识一个循环， 然后使用 `break` 或者 `continue` 来指出程序是否该停止循环还是继续循环。
 
-<p>label 语句的语法看起来像这样：</p>
+label 语句的语法看起来像这样：
 
-<pre class="syntaxbox">label :
+```plain
+label :
    statement
-</pre>
+```
 
-<p><code>label</code> 的值可以是任何的非保留字的 JavaScript 标识符， <code>statement</code> 可以是任意你想要标识的语句（块）。</p>
+`label` 的值可以是任何的非保留字的 JavaScript 标识符， `statement` 可以是任意你想要标识的语句（块）。
 
-<h3 id="例子_3"><strong>例子</strong></h3>
+### **例子**
 
-<p>在这个例子里，标记 <code>markLoop</code> 标识了一个 <code>while</code> 循环。</p>
+在这个例子里，标记 `markLoop` 标识了一个 `while` 循环。
 
-<pre class="brush: js">markLoop:
+```js
+markLoop:
 while (theMark == true) {
    doSomething();
-}</pre>
+}
+```
 
-<p>举一个比较典型的例子，看完后即明白 Label 的应用：</p>
+举一个比较典型的例子，看完后即明白 Label 的应用：
 
-<p>未添加 Label：</p>
+未添加 Label：
 
-<pre class="brush: js">var num = 0;
-for (var i = 0 ; i &lt; 10 ; i++) {   // i 循环
-  for (var j = 0 ; j &lt; 10 ; j++) { // j 循环
-    if( i == 5 &amp;&amp; j == 5 ) {
+```js
+var num = 0;
+for (var i = 0 ; i < 10 ; i++) {   // i 循环
+  for (var j = 0 ; j < 10 ; j++) { // j 循环
+    if( i == 5 && j == 5 ) {
        break; // i = 5，j = 5 时，会跳出 j 循环
     } // 但 i 循环会继续执行，等于跳出之后又继续执行更多次 j 循环
   num++;
   }
 }
 
-alert(num); // 输出 95</pre>
+alert(num); // 输出 95
+```
 
-<p>添加 Label 后：</p>
+添加 Label 后：
 
-<pre class="brush: js">var num = 0;
+```js
+var num = 0;
 outPoint:
-for (var i = 0 ; i &lt; 10 ; i++){
-  for (var j = 0 ; j &lt; 10 ; j++){
-    if( i == 5 &amp;&amp; j == 5 ){
+for (var i = 0 ; i < 10 ; i++){
+  for (var j = 0 ; j < 10 ; j++){
+    if( i == 5 && j == 5 ){
       break outPoint; // 在 i = 5，j = 5 时，跳出所有循环，
                       // 返回到整个 outPoint 下方，继续执行
     }
@@ -208,52 +217,58 @@ for (var i = 0 ; i &lt; 10 ; i++){
   }
 }
 
-alert(num); // 输出 55</pre>
+alert(num); // 输出 55
+```
 
-<p>使用 continue 语句，则可达到与未添加 label 相同的效果，但在这种有多层循环的情况下，循环的跳出进入流程更为明晰一些：</p>
+使用 continue 语句，则可达到与未添加 label 相同的效果，但在这种有多层循环的情况下，循环的跳出进入流程更为明晰一些：
 
-<pre class="brush: js">var num = 0;
+```js
+var num = 0;
 outPoint:
-for(var i = 0; i &lt; 10; i++) {
-  for(var j = 0; j &lt; 10; j++) {
-    if(i == 5 &amp;&amp; j == 5) {
+for(var i = 0; i < 10; i++) {
+  for(var j = 0; j < 10; j++) {
+    if(i == 5 && j == 5) {
       continue outPoint;
     }
     num++;
   }
 }
-alert(num);  // 95</pre>
+alert(num);  // 95
+```
 
-<p>从 alert(num) 的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到 outPoint（标签）下的 for 循环继续执行。</p>
+从 alert(num) 的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到 outPoint（标签）下的 for 循环继续执行。
 
-<h2 id="break_语句"><code>break</code> 语句</h2>
+## `break` 语句
 
-<p>使用 {{jsxref("statements/break","break")}} 语句来终止循环，<code>switch</code>， 或者是链接到 label 语句。</p>
+使用 {{jsxref("statements/break","break")}} 语句来终止循环，`switch`， 或者是链接到 label 语句。
 
-<ul>
- <li>当你使用不带 label 的 <code>break</code> 时， 它会立即终止当前所在的 <code>while</code>，<code>do-while</code>，<code>for</code>，或者 <code>switch</code> 并把控制权交回这些结构后面的语句。</li>
- <li>当你使用带 label 的 <code>break</code> 时，它会终止指定的带标记（label）的语句。</li>
-</ul>
+- 当你使用不带 label 的 `break` 时， 它会立即终止当前所在的 `while`，`do-while`，`for`，或者 `switch` 并把控制权交回这些结构后面的语句。
+- 当你使用带 label 的 `break` 时，它会终止指定的带标记（label）的语句。
 
-<p><code>break</code> 语句的语法看起来像这样：</p>
+`break` 语句的语法看起来像这样：
 
-<pre class="syntaxbox">break [label];</pre>
+```plain
+break [label];
+```
 
-<p>在语法中，被 <code>[]</code> 包裹的内容是可省略的，也就是 <code>label</code> 可以省略。若省略，则终止当前所在的循环或 <code>switch</code>；若不省略，则终止指定的 label 语句。</p>
+在语法中，被 `[]` 包裹的内容是可省略的，也就是 `label` 可以省略。若省略，则终止当前所在的循环或 `switch`；若不省略，则终止指定的 label 语句。
 
-<h3 id="例子_1_2"><strong>例子</strong> <strong>1</strong></h3>
+### **例子** **1**
 
-<p>下面的例子循环数组里的元素，直到找到一个等于 <code>theValue</code> 的值：</p>
+下面的例子循环数组里的元素，直到找到一个等于 `theValue` 的值：
 
-<pre class="brush: js">for (i = 0; i &lt; a.length; i++) {
+```js
+for (i = 0; i < a.length; i++) {
   if (a[i] == theValue) {
     break;
   }
-}</pre>
+}
+```
 
-<h3 id="例子_2_终止一个_label"><strong>例子 2: </strong>终止一个 label</h3>
+### **例子 2:** 终止一个 label
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 var z = 0
 labelCancelLoops: while (true) {
   console.log("外部循环: " + x);
@@ -262,36 +277,36 @@ labelCancelLoops: while (true) {
   while (true) {
     console.log("内部循环: " + z);
     z += 1;
-    if (z === 10 &amp;&amp; x === 10) {
+    if (z === 10 && x === 10) {
       break labelCancelLoops;
     } else if (z === 10) {
       break;
     }
   }
 }
-</pre>
+```
 
-<h2 id="continue_语句"><code>continue</code> 语句</h2>
+## `continue` 语句
 
-<p>{{jsxref("statements/continue","continue")}} 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 <code>while</code>、<code>do-while</code>、<code>for</code>，或者 <code>label</code> 语句。</p>
+{{jsxref("statements/continue","continue")}} 语句可以用来继续执行（跳过代码块的剩余部分并进入下一循环）一个 `while`、`do-while`、`for`，或者 `label` 语句。
 
-<ul>
- <li>当你使用不带 label 的 <code>continue</code> 时， 它终止当前 <code>while</code>，<code>do-while</code>，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。</li>
- <li>当你使用带 label 的 <code>continue</code> 时， 它会应用被 label 标识的循环语句。</li>
-</ul>
+- 当你使用不带 label 的 `continue` 时， 它终止当前 `while`，`do-while`，或者 for 语句到结尾的这次的循环并且继续执行下一次循环。
+- 当你使用带 label 的 `continue` 时， 它会应用被 label 标识的循环语句。
 
-<p><code>continue</code> 语句的语法看起来像这样：</p>
+`continue` 语句的语法看起来像这样：
 
-<pre class="syntaxbox">continue [label];
-</pre>
+```plain
+continue [label];
+```
 
-<h3 id="例子_1_3"><strong>例子 1</strong></h3>
+### **例子 1**
 
-<p>The following example shows a <code>while</code> loop with a <code>continue</code> statement that executes when the value of <code>i</code> is three. Thus, <code>n</code> takes on the values one, three, seven, and twelve.</p>
+The following example shows a `while` loop with a `continue` statement that executes when the value of `i` is three. Thus, `n` takes on the values one, three, seven, and twelve.
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i == 3) {
     continue;
@@ -300,11 +315,12 @@ while (i &lt; 5) {
   console.log(n);
 }
 //1,3,7,12
-</pre>
+```
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var n = 0;
-while (i &lt; 5) {
+while (i < 5) {
   i++;
   if (i == 3) {
      // continue;
@@ -312,30 +328,32 @@ while (i &lt; 5) {
   n += i;
   console.log(n);
 }
-// 1,3,6,10,15</pre>
+// 1,3,6,10,15
+```
 
-<h3 id="例子_2_3"><strong>例子 2</strong></h3>
+### **例子 2**
 
-<p>一个被标签为 <code>checkiandj</code> 的语句包含了一个标签为 <code>checkj</code> 的语句。</p>
+一个被标签为 `checkiandj` 的语句包含了一个标签为 `checkj` 的语句。
 
-<p>如果遇到 <code>continue</code> 语句，程序会结束当前 <code>chechj</code> 的迭代并开始下一轮的迭代。</p>
+如果遇到 `continue` 语句，程序会结束当前 `chechj` 的迭代并开始下一轮的迭代。
 
-<p>每次遇到 <code>continue</code> 语句时，<code>checkj</code> 语句会一直重复执行，直到 <code>checkj</code> 语句的条件为 <code>false</code>。</p>
+每次遇到 `continue` 语句时，`checkj` 语句会一直重复执行，直到 `checkj` 语句的条件为 `false`。
 
-<p>当返回<code> false</code> 后，将会执行 <code>checkiandj</code> 的剩余语句，<code>checkiandj</code> 会一直执行，直到 <code>checkiandj</code> 的条件为 <code>false</code>。</p>
+当返回` false` 后，将会执行 `checkiandj` 的剩余语句，`checkiandj` 会一直执行，直到 `checkiandj` 的条件为 `false`。
 
-<p>当 <code>checkiandj</code> 的返回值为 <code>false</code> 时，将会执行 <code>checkiandj</code> 的下面的语句。</p>
+当 `checkiandj` 的返回值为 `false` 时，将会执行 `checkiandj` 的下面的语句。
 
-<p>如果 <code>continue</code> 有一个标记 <code>checkiandj</code>， 程序将会从 <code>checkiandj</code> 语句块的顶部继续执行。</p>
+如果 `continue` 有一个标记 `checkiandj`， 程序将会从 `checkiandj` 语句块的顶部继续执行。
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 var j = 10;
 checkiandj:
-  while (i &lt; 4) {
+  while (i < 4) {
     console.log(i);
     i += 1;
     checkj:
-      while (j &gt; 4) {
+      while (j > 4) {
         console.log(j);
         j -= 1;
         if ((j % 2) == 0) {
@@ -345,53 +363,59 @@ checkiandj:
       }
       console.log('i = ' + i);
       console.log('j = ' + j);
-  }</pre>
+  }
+```
 
-<h2 id="for...in_语句"><code>for...in</code> 语句</h2>
+## `for...in` 语句
 
-<p>{{jsxref("statements/for...in","for...in")}} 语句循环一个指定的变量来循环一个对象所有可枚举的属性。JavaScript 会为每一个不同的属性执行指定的语句。</p>
+{{jsxref("statements/for...in","for...in")}} 语句循环一个指定的变量来循环一个对象所有可枚举的属性。JavaScript 会为每一个不同的属性执行指定的语句。
 
-<pre class="syntaxbox">for (variable in object) {
+```plain
+for (variable in object) {
   statements
 }
-</pre>
+```
 
-<h3 id="例子_4"><strong>例子</strong></h3>
+### **例子**
 
-<p>下面的函数通过它的参数得到一个对象和这个对象的名字。然后循环这个对象的所有属性并且返回一个列出属性名和该属性值的字符串。</p>
+下面的函数通过它的参数得到一个对象和这个对象的名字。然后循环这个对象的所有属性并且返回一个列出属性名和该属性值的字符串。
 
-<pre class="brush: js">function dump_props(obj, obj_name) {
+```js
+function dump_props(obj, obj_name) {
   var result = "";
   for (var i in obj) {
-    result += obj_name + "." + i + " = " + obj[i] + "&lt;br&gt;";
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += "&lt;hr&gt;";
+  result += "<hr>";
   return result;
 }
-</pre>
+```
 
-<p>对于一个拥有 <code>make</code> 和 <code>model</code> 属性的 <code>car</code> 对象来说，执行结果 <code>result</code> 是：</p>
+对于一个拥有 `make` 和 `model` 属性的 `car` 对象来说，执行结果 `result` 是：
 
-<pre class="brush: js">car.make = Ford
+```js
+car.make = Ford
 car.model = Mustang
-</pre>
+```
 
-<h3 id="数组"><strong>数组</strong></h3>
+### **数组**
 
-<p>虽然使用 <strong>for...in </strong>来迭代数组 {{jsxref("Array")}} 元素听起来很诱人，但是它返回的东西除了数字索引外，还有可能是你自定义的属性名字。因此还是用带有数字索引的传统的 {{jsxref("statements/for","for")}} 循环来迭代一个数组比较好，因为，如果你想改变数组对象，比如添加属性或者方法，<strong>for...in </strong>语句迭代的是自定义的属性，而不是数组的元素。（译者注：下面的 <code>for...of</code> 语句，和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach()</a></code>，也是理想的选择。）</p>
+虽然使用 **for...in** 来迭代数组 {{jsxref("Array")}} 元素听起来很诱人，但是它返回的东西除了数字索引外，还有可能是你自定义的属性名字。因此还是用带有数字索引的传统的 {{jsxref("statements/for","for")}} 循环来迭代一个数组比较好，因为，如果你想改变数组对象，比如添加属性或者方法，**for...in** 语句迭代的是自定义的属性，而不是数组的元素。（译者注：下面的 `for...of` 语句，和 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)，也是理想的选择。）
 
-<h2 id="for...of_语句"><code>for...of</code> 语句</h2>
+## `for...of` 语句
 
-<p>{{jsxref("statements/for...of","for...of")}} 语句在<a href="/zh-CN/docs/Web/JavaScript/Guide/iterable">可迭代对象</a>（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。</p>
+{{jsxref("statements/for...of","for...of")}} 语句在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} 等等）上创建了一个循环，对值的每一个独特属性调用一次迭代。
 
-<pre class="syntaxbox">for (<em>variable</em> of <em>object</em>) {
-  <em>statement
-</em>}
-</pre>
+```plain
+for (variable of object) {
+  statement
+}
+```
 
-<p>下面的这个例子展示了 <code>for...of</code> 和 {{jsxref("statements/for...in","for...in")}} 两种循环语句之间的区别。 <code>for...in</code> 循环遍历的结果是数组元素的下标，而 <code>for...of</code> 遍历的结果是元素的值：</p>
+下面的这个例子展示了 `for...of` 和 {{jsxref("statements/for...in","for...in")}} 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
 
-<pre class="brush:js">let arr = [3, 5, 7];
+```js
+let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
@@ -404,6 +428,6 @@ for (let i of arr) {
 
 // 注意 for...of 的输出没有出现 "hello"
 // 译者：官方文档不知为何在此使用三个空格来缩进…
-</pre>
+```
 
-<p>{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</p>
+{{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}

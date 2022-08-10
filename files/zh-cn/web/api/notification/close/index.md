@@ -5,27 +5,30 @@ tags:
   - Notification.close()
 translation_of: Web/API/Notification/close
 ---
-<div>{{APIRef("Web Notifications")}}</div>
+{{APIRef("Web Notifications")}}
 
-<p>{{domxref("Notification")}} 接口的 <code>close()</code> 的方法用于关闭一个以前显示的通知。</p>
+{{domxref("Notification")}} 接口的 `close()` 的方法用于关闭一个以前显示的通知。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Notification.close();</pre>
+```plain
+Notification.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>以下是 <a href="https://github.com/mdn/emogotchi">Emogotchi 示例</a>（<a href="http://mdn.github.io/emogotchi/">在线演示</a>）中的一段代码 ，定义了一个简单的函数 spawnNotification，当 spawnNotification 被调用时会创建一个对象并生成一个新的 Notification。在函数的最后，它在{{domxref("WindowTimers.setTimeout","setTimeout()")}} 中调用了 close() 函数来实现在 4s 后关闭 Notification（有些浏览器会自动关闭弹出的 Notification，但有些不是，例如 Chrome,Opera）。还要注意 bind() 的使用，来确保 close() 方法绑定到 Notification 的实例上。</p>
+以下是 [Emogotchi 示例](https://github.com/mdn/emogotchi)（[在线演示](http://mdn.github.io/emogotchi/)）中的一段代码 ，定义了一个简单的函数 spawnNotification，当 spawnNotification 被调用时会创建一个对象并生成一个新的 Notification。在函数的最后，它在{{domxref("WindowTimers.setTimeout","setTimeout()")}} 中调用了 close() 函数来实现在 4s 后关闭 Notification（有些浏览器会自动关闭弹出的 Notification，但有些不是，例如 Chrome,Opera）。还要注意 bind() 的使用，来确保 close() 方法绑定到 Notification 的实例上。
 
-<pre class="brush: js">function spawnNotification(theBody,theIcon,theTitle) {
+```js
+function spawnNotification(theBody,theIcon,theTitle) {
   var options = {
       body: theBody,
       icon: theIcon
@@ -34,18 +37,16 @@ translation_of: Web/API/Notification/close
   var n = new Notification(theTitle,options);
   setTimeout(n.close.bind(n), 4000);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Notification.close")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

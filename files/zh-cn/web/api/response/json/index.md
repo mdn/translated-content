@@ -1,7 +1,6 @@
 ---
 title: Response.json()
 slug: Web/API/Response/json
-translation_of: Web/API/Response/json
 tags:
   - API
   - Fetch
@@ -9,36 +8,38 @@ tags:
   - Method
   - Reference
   - Response
+translation_of: Web/API/Response/json
 browser-compat: api.Response.json
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}{{domxref("Response")}} mixin 的 **`json()`** 方法接收一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个 Promise，Promise 的解析 resolve 结果是将文本体解析为 {{jsxref("JSON")}}。
 
-<div>{{domxref("Response")}}  mixin 的 <strong><code>json()</code></strong> 方法接收一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个 Promise，Promise 的解析 resolve 结果是将文本体解析为 {{jsxref("JSON")}}。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush: js">response.json().then(data =&gt; {
+```js
+response.json().then(data => {
   // do something with your data
-});</pre>
+});
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>没有。</p>
+没有。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个被解析为 <a href="/zh-CN/docs/Web/API/JSON"><code>JSON</code></a> 格式的 promise 对象，这可以是任何可以由 JSON 表示的东西 - 一个 object，一个 array，一个 string，一个 number...</p>
+返回一个被解析为 [`JSON`](/zh-CN/docs/Web/API/JSON) 格式的 promise 对象，这可以是任何可以由 JSON 表示的东西 - 一个 object，一个 array，一个 string，一个 number...
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在我们的  <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch json 示例</a> 中 (运行 <a href="http://mdn.github.io/fetch-examples/fetch-json/">fetch json live</a>), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 <code>.json</code> 文件。当获取成功时，我们使用 <code>json()</code> 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。</p>
+在我们的 [fetch json 示例](https://github.com/mdn/fetch-examples/tree/master/fetch-json) 中 (运行 [fetch json live](http://mdn.github.io/fetch-examples/fetch-json/)), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 `.json` 文件。当获取成功时，我们使用 `json()` 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。
 
-<pre class="brush: js highlight[5]">const myList = document.querySelector('ul');
+```js
+const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response =&gt; response.json())
-  .then(data =&gt; {
+  .then(response => response.json())
+  .then(data => {
     for (const product of data.products) {
       let listItem = document.createElement('li');
       listItem.appendChild(
@@ -54,23 +55,19 @@ fetch(myRequest)
       ).textContent = `£${product.Price}`;
       myList.appendChild(listItem);
     }
-  });</pre>
+  });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Compat("api.Response.json")}}
 
+## 相关链接
 
-
-<p>{{Compat("api.Response.json")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

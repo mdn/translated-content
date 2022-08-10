@@ -3,44 +3,41 @@ title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.cbrt()</strong></code> 函数返回任意数字的立方根。</p>
+**`Math.cbrt()`** 函数返回任意数字的立方根。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Math.cbrt(<em>x</em>)</pre>
+```plain
+Math.cbrt(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+- `x`
+  - : 任意数字。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
+给定数字的立方根
 
+## 描述
 
-<p>给定数字的立方根</p>
+该方法为 Math 的静态方法，因此请直接通过 Math.cbrt() 方式调用。
 
+而不是作为您创建的 Math 对象的方法 (Math 不是构造函数)。
 
+cbrt 是 "cube root" 的缩写，意思是立方根。
 
-<h2 id="Description">描述</h2>
+## 示例
 
-<p>该方法为 Math 的静态方法，因此请直接通过 Math.cbrt() 方式调用。</p>
+### 使用 Math.cbrt()
 
-<p>而不是作为您创建的 Math 对象的方法 (Math 不是构造函数)。</p>
-
-<p>cbrt 是 "cube root" 的缩写，意思是立方根。</p>
-
-<h2 id="Examples">示例</h2>
-
-<h3 id="使用_Math.cbrt">使用 Math.cbrt()</h3>
-
-<pre class="brush: js">Math.cbrt(NaN); // NaN
+```js
+Math.cbrt(NaN); // NaN
 Math.cbrt(-1); // -1
 Math.cbrt(-0); // -0
 Math.cbrt(-Infinity); // -Infinity
@@ -48,30 +45,31 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948734</pre>
+Math.cbrt(2);  // 1.2599210498948734
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>为了与旧版浏览器兼容，可使用下方函数模拟 cbrt():</p>
+为了与旧版浏览器兼容，可使用下方函数模拟 cbrt():
 
-<pre class="brush: js">if (!Math.cbrt) {
+```js
+if (!Math.cbrt) {
   Math.cbrt = function(x) {
     var y = Math.pow(Math.abs(x), 1/3);
-    return x &lt; 0 ? -y : y;
+    return x < 0 ? -y : y;
   };
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li>{{jsxref("Math.pow()")}}</li>
- <li>{{jsxref("Math.sqrt()")}}</li>
-</ul>
+- {{jsxref("Math.pow()")}}
+- {{jsxref("Math.sqrt()")}}

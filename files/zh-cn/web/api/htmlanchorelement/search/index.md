@@ -6,37 +6,37 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/search
 original_slug: Web/API/HTMLHyperlinkElementUtils/search
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.search</code></strong> 属性是一个搜索字符串，也叫做查询字符串， 它是一个 {{domxref("USVString")}} ，包含 <code>'?'</code> 和随后的 URL 参数。</p>
+**`HTMLHyperlinkElementUtils.search`** 属性是一个搜索字符串，也叫做查询字符串， 它是一个 {{domxref("USVString")}} ，包含 `'?'` 和随后的 URL 参数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+```plain
+string = object.search;
+object.search = string;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// 让一个
-// &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123" /&gt;
+```js
+// 让一个
+// <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123" />
 //  元素在文档里
 
 let anchor = document.getElementById("myAnchor");
 let result = anchor.search;
 // 返回:'?q=123'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLAnchorElement.search")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>它属于{{domxref("HTMLHyperlinkElementUtils")}} mixin 。</li>
-</ul>
+- 它属于{{domxref("HTMLHyperlinkElementUtils")}} mixin 。

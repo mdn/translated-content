@@ -7,56 +7,54 @@ tags:
   - DOM Events
 translation_of: Web/API/MouseEvent/clientX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.clientX</code></strong> 是只读属性， 它提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)。例如，不论页面是否有水平滚动，当你点击客户端区域的左上角时，鼠标事件的 <code>clientX</code> 值都将为 0 。最初这个属性被定义为长整型（long integer），如今 <strong>CSSOM </strong>视图模块将其重新定义为双精度浮点数（double float）。你可以查阅浏览器兼容性部分的文档来进一步了解有关信息。</p>
+**`MouseEvent.clientX`** 是只读属性， 它提供事件发生时的应用客户端区域的水平坐标 (与页面坐标不同)。例如，不论页面是否有水平滚动，当你点击客户端区域的左上角时，鼠标事件的 `clientX` 值都将为 0 。最初这个属性被定义为长整型（long integer），如今 **CSSOM** 视图模块将其重新定义为双精度浮点数（double float）。你可以查阅浏览器兼容性部分的文档来进一步了解有关信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>
-var <em>x</em> = <em>instanceOfMouseEvent</em>.clientX
-</code></pre>
+```plain
 
-<h3 id="返回值"><code>返回值</code></h3>
+var x = instanceOfMouseEvent.clientX
+```
 
-<p>被 CSSOM View Module 重新定义为一个 <code>double</code> 类型的浮点值。原来这个属性是被定义为一个 <code>long</code> 整数。可以在 "浏览器兼容性" 那里查看详细内容。</p>
+### `返回值`
 
-<h2 id="Example">示例</h2>
+被 CSSOM View Module 重新定义为一个 `double` 类型的浮点值。原来这个属性是被定义为一个 `long` 整数。可以在 "浏览器兼容性" 那里查看详细内容。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;clientX/clientY example&lt;/title&gt;
+## 示例
 
-    &lt;script&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>clientX/clientY example</title>
+
+    <script>
       function showCoords(evt){
         alert(
           "clientX value: " + evt.clientX + "\n" +
           "clientY value: " + evt.clientY + "\n"
         );
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body onmousedown="showCoords(event)"&gt;
-    &lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </head>
+  <body onmousedown="showCoords(event)">
+    <p>To display the mouse coordinates click anywhere on the page.</p>
+  </body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MouseEvent.clientX")}}
 
+## 相关
 
-<p>{{Compat("api.MouseEvent.clientX")}}</p>
-
-<h2 id="See_also">相关</h2>
-
-<ul>
- <li><code><code>{{ domxref("MouseEvent") }}</code></code></li>
- <li><code><code>{{domxref("event.clientY","clientY")}}</code></code></li>
- <li><code><code>{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}</code></code></li>
-</ul>
+- `{{ domxref("MouseEvent") }}`
+- `{{domxref("event.clientY","clientY")}}`
+- `{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}`

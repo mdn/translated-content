@@ -9,45 +9,46 @@ tags:
   - toLowerCase()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toLowerCase()</strong></code> 会将调用该方法的字符串值转为小写形式，并返回。</p>
+**`toLowerCase()`** 会将调用该方法的字符串值转为小写形式，并返回。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">str.toLowerCase()
-</pre>
+```js
+str.toLowerCase()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的字符串，表示转换为小写的调用字符串。</p>
+一个新的字符串，表示转换为小写的调用字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>toLowerCase</code> 会将调用该方法的字符串值转为小写形式，并返回。<code>toLowerCase</code> 不会影响字符串本身的值。</p>
+`toLowerCase` 会将调用该方法的字符串值转为小写形式，并返回。`toLowerCase` 不会影响字符串本身的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="例子：使用_toLowerCase">例子：使用 <code>toLowerCase()</code></h3>
+### 例子：使用 `toLowerCase()`
 
-<pre class="brush: js">console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
+```js
+console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
 // 中文简体 zh-cn || zh-hans
 
 ​console.log( "ALPHABET".toLowerCase() );
-// "alphabet"</pre>
+// "alphabet"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toUpperCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toUpperCase()")}}

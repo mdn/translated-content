@@ -3,36 +3,37 @@ title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 translation_of: Web/API/HTMLMediaElement/paused
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code>属性 (只读)<strong>HTMLMediaElement.paused</strong></code> 告诉视频是否正在暂停</p>
+`属性 (只读)HTMLMediaElement.paused` 告诉视频是否正在暂停
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>isPaused</em> = <em>audioOrVideo</em>.paused</pre>
+```plain
+var isPaused = audioOrVideo.paused
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>类型{{domxref("Boolean")}}。<code>true</code> 暂停中 <code>false</code> 没有暂停</p>
+类型{{domxref("Boolean")}}。`true` 暂停中 `false` 没有暂停
 
-<p><em>仅限暂停状态 因网络原因造成的缓冲状态仍然会告诉你不在暂停状态</em></p>
+_仅限暂停状态 因网络原因造成的缓冲状态仍然会告诉你不在暂停状态_
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.paused); // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLMediaElement.paused")}}
 
-<h2 id="See_Also">参考文档</h2>
+## 参考文档
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

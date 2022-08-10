@@ -3,17 +3,18 @@ title: transform-box
 slug: Web/CSS/transform-box
 translation_of: Web/CSS/transform-box
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>transform-box</code></strong>属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。</p>
+**`transform-box`**属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 transform-box: border-box;
 transform-box: fill-box;
 transform-box: view-box;
@@ -22,35 +23,31 @@ transform-box: view-box;
 transform-box: inherit;
 transform-box: initial;
 transform-box: unset;
-</pre>
+```
 
-<p><code>transform-box</code>属性被指定为以下所列出的关键字值之一。</p>
+`transform-box`属性被指定为以下所列出的关键字值之一。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>border box 是用作引用框，一个表格（table）的 border-box 是 table 包装盒的边框，而不是表的边框。</dd>
- <dt><code>fill-box</code></dt>
- <dd>Uses the object bounding box as reference box.</dd>
- <dt><code>view-box</code></dt>
- <dd>Uses the nearest {{Glossary("SVG")}} viewport as reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the <code>viewBox</code> attribute and the dimension of the reference box is set to the width and height values of the <code>viewBox</code> attribute.</dd>
-</dl>
+- `border-box`
+  - : border box 是用作引用框，一个表格（table）的 border-box 是 table 包装盒的边框，而不是表的边框。
+- `fill-box`
+  - : Uses the object bounding box as reference box.
+- `view-box`
+  - : Uses the nearest {{Glossary("SVG")}} viewport as reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.transform-box")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS Transforms</a></li>
-</ul>
+- [Using CSS Transforms](/en-US/docs/CSS/Using_CSS_transforms)

@@ -3,25 +3,28 @@ title: window.print
 slug: Web/API/Window/print
 translation_of: Web/API/Window/print
 ---
-<p>{{ ApiRef() }}</p>
-<h2 id="Summary">概述</h2>
-<p>打开打印对话框打印当前文档。</p>
-<h2 id="Syntax">语法</h2>
-<pre class="eval">window.print()
-</pre>
+{{ ApiRef() }}
 
-<h2 id="规范">规范</h2>
+## 概述
+
+打开打印对话框打印当前文档。
+
+## 语法
+
+```plain
+window.print()
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ol>
- <li><a href="/zh-cn/Printing">Printing</a></li>
- <li><a href="/zh-cn/DOM/window.onbeforeprint"><code>window.onbeforeprint</code></a></li>
- <li><a href="/zh-cn/DOM/window.onafterprint"><code>window.onafterprint</code></a></li>
-</ol>
+1.  [Printing](/zh-cn/Printing)
+2.  [`window.onbeforeprint`](/zh-cn/DOM/window.onbeforeprint)
+3.  [`window.onafterprint`](/zh-cn/DOM/window.onafterprint)

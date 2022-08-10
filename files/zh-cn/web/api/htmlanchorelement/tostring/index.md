@@ -7,36 +7,37 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.toString()</code></strong> 方法返回一个包含整个URL的 {{domxref("USVString")}} 。它是{{domxref("HTMLHyperlinkElementUtils.href")}} 的一个只读版本。</p>
+**`HTMLHyperlinkElementUtils.toString()`** 方法返回一个包含整个 URL 的 {{domxref("USVString")}} 。它是{{domxref("HTMLHyperlinkElementUtils.href")}} 的一个只读版本。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.toString();</pre>
+```plain
+string = object.toString();
+```
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre class="brush: js">/*
+```js
+/*
 Let's imagine an
-&lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString"&gt;
+<a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
  element is in the document
 */
 var anchor = document.getElementById("myAnchor");
 var result = anchor.toString();
 // Returns: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLAnchorElement.toString")}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

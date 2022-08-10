@@ -6,36 +6,40 @@ tags:
   - History
 translation_of: Web/API/History/back
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>back()</code>方法会在会话历史记录中向后移动一页。如果没有上一页，则此方法调用不执行任何操作。</p>
+`back()`方法会在会话历史记录中向后移动一页。如果没有上一页，则此方法调用不执行任何操作。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window.history.back()</code></pre>
+```js
+window.history.back()
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下述简短示例使页面上的按钮导航页面至会话历史的后一项。</p>
+下述简短示例使页面上的按钮导航页面至会话历史的后一项。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id="go-back"&gt;Go back!&lt;/button&gt;</pre>
+```html
+<button id="go-back">Go back!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.onload = function(e) {
-  document.getElementById('go-back').addEventListener('click', e =&gt; {
+```js
+window.onload = function(e) {
+  document.getElementById('go-back').addEventListener('click', e => {
     window.history.back();
   })
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.History.back")}}</p>
+{{Compat("api.History.back")}}

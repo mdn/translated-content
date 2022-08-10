@@ -7,70 +7,66 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/linearGradient
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>linearGradient</code>元素用来定义线性渐变，用于图形元素的填充或描边。</p>
+`linearGradient`元素用来定义线性渐变，用于图形元素的填充或描边。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="120" height="120"  viewBox="0 0 120 120"
+```html
+<svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-    &lt;defs&gt;
-        &lt;linearGradient id="MyGradient"&gt;
-            &lt;stop offset="5%"  stop-color="green"/&gt;
-            &lt;stop offset="95%" stop-color="gold"/&gt;
-        &lt;/linearGradient&gt;
-    &lt;/defs&gt;
+    <defs>
+        <linearGradient id="MyGradient">
+            <stop offset="5%"  stop-color="green"/>
+            <stop offset="95%" stop-color="gold"/>
+        </linearGradient>
+    </defs>
 
-    &lt;rect fill="url(#MyGradient)"
-          x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+    <rect fill="url(#MyGradient)"
+          x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", 120, 120, "https://mdn.mozillademos.org/files/10061/svg-lineargradient.png")}}</p>
+{{EmbedLiveSample("Example", 120, 120, "https://mdn.mozillademos.org/files/10061/svg-lineargradient.png")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="Global_属性">Global 属性</h3>
+### Global 属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("gradientUnits") }}</li>
- <li>{{ SVGAttr("gradientTransform") }}</li>
- <li>{{ SVGAttr("x1") }}</li>
- <li>{{ SVGAttr("y1") }}</li>
- <li>{{ SVGAttr("x2") }}</li>
- <li>{{ SVGAttr("y2") }}</li>
- <li>{{ SVGAttr("spreadMethod") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("gradientUnits") }}
+- {{ SVGAttr("gradientTransform") }}
+- {{ SVGAttr("x1") }}
+- {{ SVGAttr("y1") }}
+- {{ SVGAttr("x2") }}
+- {{ SVGAttr("y2") }}
+- {{ SVGAttr("spreadMethod") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGLinearGradientElement">SVGLinearGradientElement</a></code>接口。</p>
+该元素实现了[`SVGLinearGradientElement`](/en/DOM/SVGLinearGradientElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.linearGradient")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("radialGradient") }}</li>
- <li>{{ SVGElement("stop") }}</li>
-</ul>
+- {{ SVGElement("radialGradient") }}
+- {{ SVGElement("stop") }}

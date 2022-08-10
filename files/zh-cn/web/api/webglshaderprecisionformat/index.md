@@ -3,39 +3,36 @@ title: WebGLShaderPrecisionFormat
 slug: Web/API/WebGLShaderPrecisionFormat
 translation_of: Web/API/WebGLShaderPrecisionFormat
 ---
-<div><strong>WebGLShaderPrecisionFormat</strong> 接口是<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，它表示通过调用{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}返回信息的信息。</div>
+**WebGLShaderPrecisionFormat** 接口是[WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，它表示通过调用{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}返回信息的信息。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("WebGLShaderPrecisionFormat.rangeMin")}}</dt>
- <dd>以 2 为底的最小值的绝对值的对数。</dd>
- <dt>{{domxref("WebGLShaderPrecisionFormat.rangeMax")}}</dt>
- <dd>可以表示的最大值的绝对值的底数为 2 的对数。</dd>
- <dt>{{domxref("WebGLShaderPrecisionFormat.precision")}}</dt>
- <dd>可以表示的精度位的数目。对于整数类型，这个值总是 0。</dd>
-</dl>
+- {{domxref("WebGLShaderPrecisionFormat.rangeMin")}}
+  - : 以 2 为底的最小值的绝对值的对数。
+- {{domxref("WebGLShaderPrecisionFormat.rangeMax")}}
+  - : 可以表示的最大值的绝对值的底数为 2 的对数。
+- {{domxref("WebGLShaderPrecisionFormat.precision")}}
+  - : 可以表示的精度位的数目。对于整数类型，这个值总是 0。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><code>WebGLShaderPrecisionFormat</code> 对象通过{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} 方法来返回。</p>
+`WebGLShaderPrecisionFormat` 对象通过{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} 方法来返回。
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
-</pre>
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLShaderPrecisionFormat")}}</p>
+{{Compat("api.WebGLShaderPrecisionFormat")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}

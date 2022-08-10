@@ -3,68 +3,52 @@ title: WebAssembly.Module
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`WebAssembly.Module`** 对象包含已经由浏览器编译的无状态 WebAssembly 代码，可以高效地[与 Workers 共享](https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage)、[缓存在 IndexedDB 中](https://developer.mozilla.org/en-US/docs/WebAssembly/Caching_modules)，和多次实例化。`WebAssembly.Module()` 构造函数可以用来同步编译给定的 WebAssembly 二进制代码。不过，获取 `Module` 对象的主要方法是通过异步编译函数，如 {{jsxref("WebAssembly.compile()")}}，或者是[通过 IndexedDB 读取 Module 对象](/en-US/docs/WebAssembly/Caching_modules).
 
-<div><strong><code>WebAssembly.Module</code></strong> 对象包含已经由浏览器编译的无状态 WebAssembly 代码，可以高效地<a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage">与 Workers 共享</a>、<a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Caching_modules">缓存在 IndexedDB 中</a>，和多次实例化。</div>
+## 构造函数语法
 
-<div> </div>
+> **警告：**由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 `Module()` 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。
 
-<div><code>WebAssembly.Module()</code> 构造函数可以用来同步编译给定的 WebAssembly 二进制代码。不过，获取 <code>Module</code> 对象的主要方法是通过异步编译函数，如 {{jsxref("WebAssembly.compile()")}}，或者是<a href="/en-US/docs/WebAssembly/Caching_modules">通过 IndexedDB 读取 Module 对象</a>.</div>
+```plain
+var myModule = new WebAssembly.Module(bufferSource);
+```
 
-<div> </div>
+### 参数
 
-<h2 id="构造函数语法">构造函数语法</h2>
+- _bufferSource_
+  - : 一个 [类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，包含要编译的 .wasm 模块的二进制代码。
 
-<div class="warning">
-<p><strong>警告：</strong>由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 <code>Module()</code> 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。</p>
-</div>
+## `Module` 构造函数的方法属性
 
-<pre class="syntaxbox">var myModule = new WebAssembly.Module(bufferSource);</pre>
+- {{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
+  - : 给定 `Module` 对象和字符串，通过该字符串，返回 Module 对象中所有自定义部分的内容的副本。
+- {{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
+  - : 给定 `Module` 对象，返回一个数组，内容是所有已声明的接口的描述。
+- {{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
+  - : 给定 `Module` 对象，返回一个数组，内容是所有已声明的引用的描述。
 
-<h3 id="参数">参数</h3>
+## `Module` 实例
 
-<dl>
- <dt><em>bufferSource</em></dt>
- <dd>一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">类型化数组</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>，包含要编译的 .wasm 模块的二进制代码。</dd>
-</dl>
+所有 `Module` 实例继承自 `Module()` 构造函数的[原型对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype) —— 修改它会影响所有 `Module` 实例。
 
-<h2 id="Module_构造函数的方法属性"><code>Module</code> 构造函数的方法属性</h2>
+### 实例属性
 
-<dl>
- <dt>{{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}</dt>
- <dd>给定 <code>Module</code> 对象和字符串，通过该字符串，返回 Module 对象中所有自定义部分的内容的副本。</dd>
- <dt>{{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}</dt>
- <dd>给定 <code>Module</code> 对象，返回一个数组，内容是所有已声明的接口的描述。</dd>
- <dt>{{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}</dt>
- <dd>给定 <code>Module</code> 对象，返回一个数组，内容是所有已声明的引用的描述。</dd>
-</dl>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype', 'Properties')}}
 
-<h2 id="Module_实例"><code>Module</code> 实例</h2>
+### 实例方法
 
-<p>所有 <code>Module</code> 实例继承自 <code>Module()</code> 构造函数的<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype">原型对象</a> —— 修改它会影响所有 <code>Module</code> 实例。</p>
+Module 实例没有自己的默认方法。
 
-<h3 id="实例属性">实例属性</h3>
-
-<p>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype', 'Properties')}}</p>
-
-<h3 id="实例方法">实例方法</h3>
-
-<p>Module 实例没有自己的默认方法。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="另请查阅">另请查阅</h2>
+## 另请查阅
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> 概览页面</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly 概念</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">使用 WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) 概览页面
+- [WebAssembly 概念](/en-US/docs/WebAssembly/Concepts)
+- [使用 WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

@@ -3,29 +3,26 @@ title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
 translation_of: Web/API/BroadcastChannel/postMessage
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>可以使用 <strong><code>BroadcastChannel.postMessage()</code></strong> 发送一条任意 {{jsxref("Object")}} 类型的消息，给所有同{{glossary("origin", "源")}}下监听了该频道的所有{{glossary("browsing context", "浏览器上下文")}}。消息以 {{event("message")}} 事件的形式发送给每一个绑定到该频道的广播频道。</p>
+可以使用 **`BroadcastChannel.postMessage()`** 发送一条任意 {{jsxref("Object")}} 类型的消息，给所有同{{glossary("origin", "源")}}下监听了该频道的所有{{glossary("browsing context", "浏览器上下文")}}。消息以 {{event("message")}} 事件的形式发送给每一个绑定到该频道的广播频道。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>str</em> = <em>channe<code>l</code></em><code>.postMessage(<em>object</em>);</code>
-</pre>
+```plain
+var str = channel.postMessage(object);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.BroadcastChannel.postMessage")}}
 
+## 另见
 
-<p>{{Compat("api.BroadcastChannel.postMessage")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>所属接口：{{domxref("BroadcastChannel")}}</li>
-</ul>
+- 所属接口：{{domxref("BroadcastChannel")}}

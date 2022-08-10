@@ -7,48 +7,42 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/mask
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>在 SVG 中，你可以指一个透明的遮罩层和当前对象合成，形成背景。透明遮罩层可以是任何其他图形对象或者{{ SVGElement("g") }}元素。<code>mask</code>元素用于定义这样的遮罩元素。属性{{ SVGAttr("mask") }}用来引用一个遮罩元素。</p>
+在 SVG 中，你可以指一个透明的遮罩层和当前对象合成，形成背景。透明遮罩层可以是任何其他图形对象或者{{ SVGElement("g") }}元素。`mask`元素用于定义这样的遮罩元素。属性{{ SVGAttr("mask") }}用来引用一个遮罩元素。
 
-<h2 id="使用场景">使用场景</h2>
+## 使用场景
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3269/mask.svg">mask.svg</a></p>
+» [mask.svg](https://developer.mozilla.org/files/3269/mask.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("maskUnits") }}</li>
- <li>{{ SVGAttr("maskContentUnits") }}</li>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
-</ul>
+- {{ SVGAttr("maskUnits") }}
+- {{ SVGAttr("maskContentUnits") }}
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGMaskElement">SVGMaskElement</a></code>接口。</p>
+该元素实现了[`SVGMaskElement`](/en/DOM/SVGMaskElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("clipPath") }}</li>
-</ul>
+- {{ SVGElement("clipPath") }}

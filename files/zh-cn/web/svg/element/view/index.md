@@ -9,34 +9,30 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/view
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>view</code>元素是查看图片的一个限定方法，就像一个缩放级别或者一个详细视图。</p>
+`view`元素是查看图片的一个限定方法，就像一个缩放级别或者一个详细视图。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("viewBox") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
- <li>{{ SVGAttr("zoomAndPan") }}</li>
- <li>{{ SVGAttr("viewTarget") }}</li>
-</ul>
+- {{ SVGAttr("viewBox") }}
+- {{ SVGAttr("preserveAspectRatio") }}
+- {{ SVGAttr("zoomAndPan") }}
+- {{ SVGAttr("viewTarget") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGViewElement">SVGViewElement</a></code>接口。</p>
+该元素实现了[`SVGViewElement`](/en/DOM/SVGViewElement)接口。

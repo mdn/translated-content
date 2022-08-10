@@ -3,31 +3,31 @@ title: Storage.getItem()
 slug: Web/API/Storage/getItem
 translation_of: Web/API/Storage/getItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><code>getItem()</code> 作为 {{domxref("Storage")}} 接口的方法，接受一个键名（key name）作为参数，并返回对应键名的值（key's value）。</p>
+`getItem()` 作为 {{domxref("Storage")}} 接口的方法，接受一个键名（key name）作为参数，并返回对应键名的值（key's value）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>aValue</em> = <em>storage</em>.getItem(<em>keyName</em>);
-</pre>
+```plain
+var aValue = storage.getItem(keyName);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>keyName</code></em></dt>
- <dd>一个包含键名的 {{domxref("DOMString")}}。</dd>
-</dl>
+- _`keyName`_
+  - : 一个包含键名的 {{domxref("DOMString")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("DOMString")}}，键名对应的值。如果键名不存在于存储中，则返回 <code>null</code>。</p>
+一个 {{domxref("DOMString")}}，键名对应的值。如果键名不存在于存储中，则返回 `null`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的函数从本地存储中获取三个数据项，然后使用他们在页面上设置自定义样式：</p>
+下面的函数从本地存储中获取三个数据项，然后使用他们在页面上设置自定义样式：
 
-<pre class="brush: js">function setStyles() {
+```js
+function setStyles() {
   var currentColor = localStorage.getItem('bgcolor');
   var currentFont = localStorage.getItem('font');
   var currentImage = localStorage.getItem('image');
@@ -39,20 +39,19 @@ translation_of: Web/API/Storage/getItem
   htmlElem.style.backgroundColor = '#' + currentColor;
   pElem.style.fontFamily = currentFont;
   imgElem.setAttribute('src', currentImage);
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong>一个实际的例子 <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>。</p>
-</div>
+> **备注：**一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Storage.getItem")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<p><a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a></p>
+[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

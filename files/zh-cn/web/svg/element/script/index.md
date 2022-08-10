@@ -8,22 +8,23 @@ tags:
   - 脚本
 translation_of: Web/SVG/Element/script
 ---
-<p>一个 SVG 脚本元素等同于 HTML 中的<code><a href="/en-US/HTML/Element/Script">script</a>元素，因此这个位置是面向脚本的（例如，ECMAScript）。</code></p>
+一个 SVG 脚本元素等同于 HTML 中的`script元素，因此这个位置是面向脚本的（例如，ECMAScript）。`
 
-<p>任何定义在<code>script</code>元素中的函数拥有一个跨当前文档的全局范围。</p>
+任何定义在`script`元素中的函数拥有一个跨当前文档的全局范围。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码片段演示了 SVG <code>script</code>标签的作用。在代码中，我们使用 JavaScript 改变 SVG {{SVGElement("circle")}} 元素的半径。</p>
+下面的代码片段演示了 SVG `script`标签的作用。在代码中，我们使用 JavaScript 改变 SVG {{SVGElement("circle")}} 元素的半径。
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;script type="text/javascript"&gt;
-    // &lt;![CDATA[
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg">
+  <script type="text/javascript">
+    // <![CDATA[
     function change(evt) {
       var target = evt.target;
       var radius = target.getAttribute("r");
@@ -36,47 +37,41 @@ translation_of: Web/SVG/Element/script
 
       target.setAttribute("r",radius);
    }
-   // ]]&gt;
-  &lt;/script&gt;
+   // ]]>
+  </script>
 
-  &lt;circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" /&gt;
-&lt;/svg&gt;
-</pre>
+  <circle cx="50" cy="50" r="45" fill="green"
+          onclick="change(evt)" />
+</svg>
+```
 
-<p>示例输出：</p>
+示例输出：
 
-<p>{{EmbedLiveSample("Example",150,165)}}</p>
+{{EmbedLiveSample("Example",150,165)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- [Xlink 属性](/en-US/SVG/Attribute#XLink) »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("type")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGScriptElement">SVGScriptElement</a></code>接口。</p>
+该元素实现了[`SVGScriptElement`](/en-US/DOM/SVGScriptElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.script")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/HTML/Element/Script">HTML 中的<code>script</code>元素</a></li>
-</ul>
+- [HTML 中的`script`元素](/en-US/HTML/Element/Script)
 
-<p>{{SVGRef}}</p>
+{{SVGRef}}

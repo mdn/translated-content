@@ -12,36 +12,36 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>class 声明</strong>创建一个基于原型继承的具有给定名称的新类。</p>
+**class 声明**创建一个基于原型继承的具有给定名称的新类。
 
-<p>{{EmbedInteractiveExample("pages/js/statement-class.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
-<div class="noinclude">
-<p>你也可以使用{{jsxref("Operators/class", "类表达式", "", 1)}}定义类。但是不同于类表达式，类声明不允许再次声明已经存在的类，否则将会抛出一个类型错误。</p>
-</div>
+你也可以使用{{jsxref("Operators/class", "类表达式", "", 1)}}定义类。但是不同于类表达式，类声明不允许再次声明已经存在的类，否则将会抛出一个类型错误。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">class <em>name</em> [extends] {
+```js
+class name [extends] {
   // class body
 }
-</pre>
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>和类表达式一样，类声明体在<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下运行。构造函数是可选的。</p>
+和类表达式一样，类声明体在[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下运行。构造函数是可选的。
 
-<p>类声明不可以提升（这与<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function">函数声明</a>不同）。</p>
+类声明不可以提升（这与[函数声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function)不同）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="声明一个类">声明一个类</h3>
+### 声明一个类
 
-<p>在下面的例子中，我们首先定义一个名为 Polygon 的类，然后继承它来创建一个名为 Square 的类。注意，构造函数中使用的 super() 只能在构造函数中使用，并且必须在使用 this 关键字前调用。</p>
+在下面的例子中，我们首先定义一个名为 Polygon 的类，然后继承它来创建一个名为 Square 的类。注意，构造函数中使用的 super() 只能在构造函数中使用，并且必须在使用 this 关键字前调用。
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -54,37 +54,39 @@ class Square extends Polygon {
     super(length, length);
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<div class="warning">
-<p><strong>警告：</strong></p>
-<h3 id="重复定义类">重复定义类</h3>
+> **警告：**
+>
+> ### 重复定义类
+>
+> 重复声明一个类会引起类型错误。
+>
+> ```js
+> class Foo {};
+> class Foo {};
+> // Uncaught TypeError: Identifier 'Foo' has already been declared
+> ```
+>
+> 若之前使用类表达式定义了一个类，则再次声明这个类同样会引起类型错误。
+>
+> ```js
+> let Foo = class {};
+> class Foo {};
+> // Uncaught TypeError: Identifier 'Foo' has already been declared
+> ```
 
-<p>重复声明一个类会引起类型错误。</p>
-
-<pre class="brush: js">class Foo {};
-class Foo {};
-// Uncaught TypeError: Identifier 'Foo' has already been declared</pre>
-
-<p>若之前使用类表达式定义了一个类，则再次声明这个类同样会引起类型错误。</p>
-
-<pre class="brush: js">let Foo = class {};
-class Foo {};
-// Uncaught TypeError: Identifier 'Foo' has already been declared</pre>
-</div>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function"><code>function</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)

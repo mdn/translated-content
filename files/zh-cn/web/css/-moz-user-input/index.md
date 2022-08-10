@@ -3,21 +3,22 @@ title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
 translation_of: Web/CSS/-moz-user-input
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>在 Mozilla 应用程序中，<code><strong>-moz-user-input</strong></code> 决定元素是否将接受用户输入。 A 类似的属性 <strong><code>user-focus</code></strong> 是在<a href="http://www.w3.org/TR/2000/WD-css3-userint-20000216">CSS3 UI 规范的前身的早期草案</a>中提出的，但被工作组拒绝。</p>
+在 Mozilla 应用程序中，**`-moz-user-input`** 决定元素是否将接受用户输入。 A 类似的属性 **`user-focus`** 是在[CSS3 UI 规范的前身的早期草案](http://www.w3.org/TR/2000/WD-css3-userint-20000216)中提出的，但被工作组拒绝。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p><code>-moz-user-input</code> was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations).</p>
+`-moz-user-input` was one of the proposals leading to the proposed CSS 3 {{cssxref("user-input")}} property, which has not yet reached Candidate Recommendation (call for implementations).
 
-<p>For elements that normally take user input, such as a {{HTMLElement("textarea")}}, the initial value of <code>-moz-user-input</code> is <code>enabled</code>.</p>
+For elements that normally take user input, such as a {{HTMLElement("textarea")}}, the initial value of `-moz-user-input` is `enabled`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 -moz-user-input: none;
 -moz-user-input: enabled;
 -moz-user-input: disabled;
@@ -26,35 +27,32 @@ translation_of: Web/CSS/-moz-user-input
 -moz-user-input: inherit;
 -moz-user-input: initial;
 -moz-user-input: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>none</dt>
- <dd>The element does not respond to user input, and it does not become {{Cssxref(":active")}}.</dd>
- <dt>enabled</dt>
- <dd>The element accepts user input. For textboxes, this is the default behavior.</dd>
- <dt>disabled</dt>
- <dd>The element does not accept user input. However, this is not the same as setting {{XULAttr("disabled")}} to true, in that the element is drawn normally.</dd>
-</dl>
+- none
+  - : The element does not respond to user input, and it does not become {{Cssxref(":active")}}.
+- enabled
+  - : The element accepts user input. For textboxes, this is the default behavior.
+- disabled
+  - : The element does not accept user input. However, this is not the same as setting {{XULAttr("disabled")}} to true, in that the element is drawn normally.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:css">input.example {
+```css
+input.example {
   /* the user will be able to select the text, but not change it. */
   -moz-user-input: disabled;
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("-moz-user-focus")}}</li>
- <li>{{cssxref("-moz-user-modify")}}</li>
- <li>{{cssxref("-moz-user-select")}}</li>
-</ul>
+- {{cssxref("-moz-user-focus")}}
+- {{cssxref("-moz-user-modify")}}
+- {{cssxref("-moz-user-select")}}

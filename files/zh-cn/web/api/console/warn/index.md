@@ -3,46 +3,41 @@ title: Console.warn()
 slug: Web/API/Console/warn
 translation_of: Web/API/Console/warn
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>向 Web 控制台输出一条警告信息。</p>
+向 Web 控制台输出一条警告信息。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="note">
- <p><strong>备注：</strong>在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。</p>
-</div>
+> **备注：**在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">console.warn(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.warn(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```plain
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>要输出的 Javascript 对象列表。其中每个对象会以字符串的形式按照顺序依次输出到控制台。</dd>
- <dt><code>msg</code></dt>
- <dd>一个 JavaScript 字符串，其中包含零个或多个替代字符串。</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>零个或多个 Javascript 对象 依次替换 msg 中的替代字符串，你可以在替代字符串中指定对象的输出格式。</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 要输出的 Javascript 对象列表。其中每个对象会以字符串的形式按照顺序依次输出到控制台。
+- `msg`
+  - : 一个 JavaScript 字符串，其中包含零个或多个替代字符串。
+- `subst1` ... `substN`
+  - : 零个或多个 Javascript 对象 依次替换 msg 中的替代字符串，你可以在替代字符串中指定对象的输出格式。
 
-<p>查看 <a href="/zh-CN/docs/Web/API/Console">向控制台输出文本</a> 来了解更多 {{domxref("console")}} 的用法。</p>
+查看 [向控制台输出文本](/zh-CN/docs/Web/API/Console) 来了解更多 {{domxref("console")}} 的用法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.console.warn")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly 文档：控制台</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN：使用 F12 工具控制台来查看错误和状态</a></li>
-</ul>
+- [Opera Dragonfly 文档：控制台](http://www.opera.com/dragonfly/documentation/console/)
+- [MSDN：使用 F12 工具控制台来查看错误和状态](http://msdn.microsoft.com/library/gg589530)

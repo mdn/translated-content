@@ -9,107 +9,78 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p><code><strong>Atomics</strong></code><strong><code>.and()</code></strong> 静态方法会将给定的值与数组上的值进行按位与操作，并将结果赋值给数组，然后返回数组该位置上的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。</p>
+**`Atomics.and()`** 静态方法会将给定的值与数组上的值进行按位与操作，并将结果赋值给数组，然后返回数组该位置上的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-and.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
 
+## 语法
 
+```plain
+Atomics.and(typedArray, index, value)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Atomics.and(typedArray, index, value)
-</pre>
+- `typedArray`
+  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。
+- `index`
+  - : `按位与操作的 typedArray 的值在数组`上的索引。
+- `value`
+  - : 给定的按位与操作的值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。</dd>
- <dt><code>index</code></dt>
- <dd><code>按位与操作的 typedArray 的值在数组</code>上的索引。</dd>
- <dt><code>value</code></dt>
- <dd>给定的按位与操作的值。</dd>
-</dl>
+给定位置的旧值（`typedArray[index]）。`
 
-<h3 id="返回值">返回值</h3>
+### 错误
 
-<p>给定位置的旧值（<code>typedArray[index]）。</code></p>
+- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
+- `假如 typedArray` 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。
+- 如果 `index` 超出了 `typedArray 的边界，则抛出` {{jsxref("RangeError")}}。
 
-<h3 id="错误">错误</h3>
+## 描述
 
-<ul>
- <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
- <li><code>假如 typedArray</code> 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray 的边界，则抛出</code> {{jsxref("RangeError")}}。</li>
-</ul>
+假如 a 和 b 都是 1，那么按位与运算（ a & b）仅产生 1。与操作的真值表为：
 
-<h2 id="描述">描述</h2>
+| `a` | `b` | `a & b` |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
-<p>假如 a 和 b 都是 1，那么按位与运算（ a &amp; b）仅产生 1。与操作的真值表为：</p>
+比如，一个按位与如 `5 & 1` 的结果是 `0001，其十进制就是`1`。`
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th><code>a</code></th>
-   <th><code>b</code></th>
-   <th><code>a &amp; b</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>1</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
- </tbody>
-</table>
-
-<p>比如，一个按位与如 <code>5 &amp; 1</code> 的结果是 <code>0001，其十进制就是</code>1<code>。</code></p>
-
-<pre>5  0101
+```plain
+5  0101
 1  0001
    ----
-1  0001</pre>
+1  0001
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 0, the old value
 Atomics.load(ta, 0);  // 1
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.or()")}}</li>
- <li>{{jsxref("Atomics.xor()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.or()")}}
+- {{jsxref("Atomics.xor()")}}

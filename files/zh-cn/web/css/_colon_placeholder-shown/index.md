@@ -1,77 +1,85 @@
 ---
 title: ':placeholder-shown'
-slug: 'Web/CSS/:placeholder-shown'
-translation_of: 'Web/CSS/:placeholder-shown'
+slug: Web/CSS/:placeholder-shown
+translation_of: Web/CSS/:placeholder-shown
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>:placeholder-shown</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/CSS/Pseudo-classes">伪类</a> 在 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素显示 <a href="/zh-CN/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a> 时生效。</p>
+**`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 在 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素显示 [placeholder text](/zh-CN/docs/Web/HTML/Element/input#attr-placeholder) 时生效。
 
-<pre class="brush: css no-line-numbers">/* 选择所有显示占位符 (placeholder) 的元素 */
+```css
+/* 选择所有显示占位符 (placeholder) 的元素 */
 :placeholder-shown {
   border: 2px solid silver;
-}</pre>
+}
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<pre class="syntaxbox">:placeholder-shown</pre>
+```plain
+:placeholder-shown
+```
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<h3 id="基础样例">基础样例</h3>
+### 基础样例
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Type something here!"&gt;</pre>
+```html
+<input placeholder="Type something here!">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[6]">input {
+```css
+input {
   border: 2px solid black;
   padding: 3px;
 }
 
 input:placeholder-shown {
   border-color: silver;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Basic_example', 200, 60)}}</p>
+{{EmbedLiveSample('Basic_example', 200, 60)}}
 
-<h3 id="超出文本">超出文本</h3>
+### 超出文本
 
-<p>在分辨率较小的设备上，输入框或者其他表单控件可能会变的很窄。这个选择器可以使得占位符文本缩短. 这个选择器经常和 {{cssxref("text-overflow")}} 一起使用。</p>
+在分辨率较小的设备上，输入框或者其他表单控件可能会变的很窄。这个选择器可以使得占位符文本缩短. 这个选择器经常和 {{cssxref("text-overflow")}} 一起使用。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Enter something into this field, if you please!"&gt;</pre>
+```html
+<input placeholder="Enter something into this field, if you please!">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input:placeholder-shown {
+```css
+input:placeholder-shown {
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Overflowing_text", 200, 60)}}</p>
+{{EmbedLiveSample("Overflowing_text", 200, 60)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.placeholder-shown")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.placeholder-shown")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>The {{cssxref("::placeholder")}} pseudo-element styles the placeholder <em>itself</em>.</li>
- <li>Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}</li>
- <li>{{cssxref(":-moz-placeholder")}}, {{cssxref("::-moz-placeholder")}}</li>
- <li><a href="/zh-CN/docs/Learn/HTML/Forms">HTML forms</a></li>
-</ul>
+- The {{cssxref("::placeholder")}} pseudo-element styles the placeholder _itself_.
+- Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
+- {{cssxref(":-moz-placeholder")}}, {{cssxref("::-moz-placeholder")}}
+- [HTML forms](/zh-CN/docs/Learn/HTML/Forms)

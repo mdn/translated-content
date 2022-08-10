@@ -7,22 +7,24 @@ tags:
   - 属性
 translation_of: Web/API/Navigator/permissions
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p><code><strong>permissions</strong></code> 是 <code><strong>Navigator</strong></code> 读属性，返回一个可用于查询或更新某些 APIs（由 <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> 覆盖）的权限状态的对象。</p>
+**`permissions`** 是 **`Navigator`** 读属性，返回一个可用于查询或更新某些 APIs（由 [Permissions API](/en-US/docs/Web/API/Permissions_API) 覆盖）的权限状态的对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>permissionsObj</em> = <em>globalObj</em>.navigator.permissions
-</pre>
+```plain
+permissionsObj = globalObj.navigator.permissions
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>一个 {{domxref("Permissions")}} 对象。</p>
+一个 {{domxref("Permissions")}} 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(result) {
+```js
+navigator.permissions.query({name:'geolocation'}).then(function(result) {
   if (result.state === 'granted') {
     showMap();
   } else if (result.state === 'prompt') {
@@ -30,19 +32,17 @@ translation_of: Web/API/Navigator/permissions
   }
   // 如果被拒绝，请不要做任何操作。
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.Navigator.permissions")}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a></li>
- <li>{{domxref("Navigator")}}</li>
-</ul>
+- [Permissions API](/en-US/docs/Web/API/Permissions_API)
+- {{domxref("Navigator")}}

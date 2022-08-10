@@ -3,41 +3,41 @@ title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>静态方法 <strong>Reflect</strong></code><strong><code>.isExtensible()</code></strong> 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 <a href="#与_object.isextensible()_的不同点">与 Object.isExtensible() 的不同点</a>。</p>
+`静态方法 Reflect`**`.isExtensible()`** 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 [与 Object.isExtensible() 的不同点](<#与_object.isextensible()_的不同点>)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.isExtensible(target)
-</pre>
+```plain
+Reflect.isExtensible(target)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>检查是否可扩展的目标对象。</dd>
-</dl>
+- `target`
+  - : 检查是否可扩展的目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Boolean")}} 值表明该对象是否可扩展。</p>
+返回一个 {{jsxref("Boolean")}} 值表明该对象是否可扩展。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>抛出一个 {{jsxref("TypeError")}}，如果对象不是 {{jsxref("Object")}}。</p>
+抛出一个 {{jsxref("TypeError")}}，如果对象不是 {{jsxref("Object")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.isExtensible 判断</code>一个对象是否可扩展（即是否能够添加新的属性）。它与 {{jsxref("Object.isExtensible()")}} 方法一样。</p>
+`Reflect.isExtensible 判断`一个对象是否可扩展（即是否能够添加新的属性）。它与 {{jsxref("Object.isExtensible()")}} 方法一样。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.isExtensible()">使用 <code>Reflect.isExtensible()</code></h3>
+### 使用 `Reflect.isExtensible()`
 
-<p>详情可见 {{jsxref("Object.isExtensible()")}}。</p>
+详情可见 {{jsxref("Object.isExtensible()")}}。
 
-<pre class="brush: js">// New objects are extensible.
+```js
+// New objects are extensible.
 var empty = {};
 Reflect.isExtensible(empty); // === true
 
@@ -52,30 +52,29 @@ Reflect.isExtensible(sealed); // === false
 // Frozen objects are also by definition non-extensible.
 var frozen = Object.freeze({});
 Reflect.isExtensible(frozen); // === false
-</pre>
+```
 
-<h3 id="与_Object.isExtensible()_的不同点">与 <code>Object.isExtensible() 的不同点</code></h3>
+### 与 `Object.isExtensible() 的不同点`
 
-<p>如果该方法的第一个参数不是一个对象（原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于 {{jsxref("Object.isExtensible()")}}，非对象的第一个参数会被强制转换为一个对象。</p>
+如果该方法的第一个参数不是一个对象（原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于 {{jsxref("Object.isExtensible()")}}，非对象的第一个参数会被强制转换为一个对象。
 
-<pre class="brush: js">Reflect.isExtensible(1);
+```js
+Reflect.isExtensible(1);
 // TypeError: 1 is not an object
 
 Object.isExtensible(1);
 // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

@@ -11,32 +11,33 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p> <strong><code>yield*</code> 表达式</strong>用于委托给另一个{{jsxref("Statements/function*", "generator")}} 或可迭代对象。</p>
+**`yield*` 表达式**用于委托给另一个{{jsxref("Statements/function*", "generator")}} 或可迭代对象。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> yield* [[expression]];</pre>
+```plain
+ yield* [[expression]];
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>返回一个可迭代对象的表达式。</dd>
-</dl>
+- `expression`
+  - : 返回一个可迭代对象的表达式。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>yield*</code> 表达式迭代操作数，并产生它返回的每个值。</p>
+`yield*` 表达式迭代操作数，并产生它返回的每个值。
 
-<p><code>yield*</code> 表达式本身的值是当迭代器关闭时返回的值（即<code>done</code>为<code>true</code>时）。</p>
+`yield*` 表达式本身的值是当迭代器关闭时返回的值（即`done`为`true`时）。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="委托给其他生成器">委托给其他生成器</h3>
+### 委托给其他生成器
 
-<p>以下代码中，<code>g1()</code> <code>yield</code> 出去的每个值都会在 <code>g2()</code> 的 <code>next()</code> 方法中返回，就像那些 <code>yield</code> 语句是写在 <code>g2()</code> 里一样。</p>
+以下代码中，`g1()` `yield` 出去的每个值都会在 `g2()` 的 `next()` 方法中返回，就像那些 `yield` 语句是写在 `g2()` 里一样。
 
-<pre class="brush: js">function* g1() {
+```js
+function* g1() {
   yield 2;
   yield 3;
   yield 4;
@@ -56,13 +57,14 @@ console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: 4, done: false }
 console.log(iterator.next()); // { value: 5, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="委托给其他可迭代对象">委托给其他可迭代对象</h3>
+### 委托给其他可迭代对象
 
-<p>除了生成器对象这一种可迭代对象，<code>yield*</code> 还可以 <code>yield</code> 其它任意的可迭代对象，比如说数组、字符串、<code>arguments</code> 对象等等。</p>
+除了生成器对象这一种可迭代对象，`yield*` 还可以 `yield` 其它任意的可迭代对象，比如说数组、字符串、`arguments` 对象等等。
 
-<pre class="brush: js">function* g3() {
+```js
+function* g3() {
   yield* [1, 2];
   yield* "34";
   yield* arguments;
@@ -77,13 +79,14 @@ console.log(iterator.next()); // { value: "4", done: false }
 console.log(iterator.next()); // { value: 5, done: false }
 console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
-</pre>
+```
 
-<h3 id="yield*_表达式的值"><code>yield*</code> 表达式的值</h3>
+### `yield*` 表达式的值
 
-<p><code>yield*</code> 是一个表达式，不是语句，所以它会有自己的值。</p>
+`yield*` 是一个表达式，不是语句，所以它会有自己的值。
 
-<pre class="brush: js">function* g4() {
+```js
+function* g4() {
   yield* [1, 2, 3];
   return "foo";
 }
@@ -103,21 +106,19 @@ console.log(iterator.next()); // { value: undefined, done: true },
                               // 此时 g4() 返回了 { value: "foo", done: true }
 
 console.log(result);          // "foo"
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol">迭代器协议</a></li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("Operators/yield", "yield")}}</li>
-</ul>
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("Operators/yield", "yield")}}

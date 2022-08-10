@@ -7,32 +7,30 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/metadata
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>metadata</code>是数据的结构化数据。SVG 内容里面包含的元数据必须放在<code>metadata</code>元素里面。<code>medatata</code>的内容物必须是来自其它 XML 命名空间的元素，比如说 RDF、FOAT，等等。</p>
+`metadata`是数据的结构化数据。SVG 内容里面包含的元数据必须放在`metadata`元素里面。`medatata`的内容物必须是来自其它 XML 命名空间的元素，比如说 RDF、FOAT，等等。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>没有专有属性</em></p>
+_没有专有属性_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGMetadataElement">SVGMetadataElement</a></code>接口。</p>
+该元素实现了[`SVGMetadataElement`](/en-US/DOM/SVGMetadataElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.metadata")}}

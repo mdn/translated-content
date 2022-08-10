@@ -6,349 +6,322 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderingContext</strong> 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。 </p>
+**WebGLRenderingContext** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
 
-<p>要获得这个接口的对象，可以通过在 <code>&lt;canvas&gt; 元素上调用 </code>{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：</p>
+要获得这个接口的对象，可以通过在 `<canvas> 元素上调用 `{{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入 “webgl” 参数：
 
-<pre class="brush: js">var canvas = document.getElementById('myCanvas');
+```js
+var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl');
-</pre>
+```
 
-<p>当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。</p>
+当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。
 
-<p>点击 <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a> 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。</p>
+点击 [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。
 
-<blockquote>
-<p>补充：以下内容很多函数都没有提供参数，所以最好还是参见具体 API。</p>
-</blockquote>
+> 补充：以下内容很多函数都没有提供参数，所以最好还是参见具体 API。
 
-<h2 id="常量">常量</h2>
+## 常量
 
-<p>请参考 <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a> 。</p>
+请参考 [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) 。
 
-<h2 id="WebGL上下文">WebGL 上下文</h2>
+## WebGL 上下文
 
-<p>以下的属性和方法提供只读的关于上下文的信息：</p>
+以下的属性和方法提供只读的关于上下文的信息：
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.canvas")}}</dt>
- <dd>只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("null")}}。</dd>
- <dt>{{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}</dt>
- <dd>
- <p>如果上下文没有指定的 canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。</p>
- </dd>
- <dt>{{domxref("WebGLRenderingContext.drawingBufferWidth")}}</dt>
- <dd>只读属性，当前绘图缓冲区的宽度，等于和该上下文相联系的 canvas 元素的宽度。</dd>
- <dt>{{domxref("WebGLRenderingContext.drawingBufferHeight")}}</dt>
- <dd>只读属性，当前绘图缓冲区的高度，等于和该上下文相联系的 canvas 元素的高度。</dd>
- <dt>{{domxref("WebGLRenderingContext.getContextAttributes()")}}</dt>
- <dd>返回 <code>WebGLContextAttributes 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回</code> {{jsxref("null")}}。</dd>
- <dt>{{domxref("WebGLRenderingContext.isContextLost()")}}</dt>
- <dd>如果上下文丢失，返回 true；否则，返回 false。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.canvas")}}
+  - : 只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("null")}}。
+- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
+  - : 如果上下文没有指定的 canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。
+- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
+  - : 只读属性，当前绘图缓冲区的宽度，等于和该上下文相联系的 canvas 元素的宽度。
+- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
+  - : 只读属性，当前绘图缓冲区的高度，等于和该上下文相联系的 canvas 元素的高度。
+- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
+  - : 返回 `WebGLContextAttributes 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回` {{jsxref("null")}}。
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+  - : 如果上下文丢失，返回 true；否则，返回 false。
 
-<h2 id="视野和裁剪">视野和裁剪</h2>
+## 视野和裁剪
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.scissor()")}}</dt>
- <dd>设置裁剪框。</dd>
- <dt>{{domxref("WebGLRenderingContext.viewport()")}}</dt>
- <dd>设置视口。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.scissor()")}}
+  - : 设置裁剪框。
+- {{domxref("WebGLRenderingContext.viewport()")}}
+  - : 设置视口。
 
-<h2 id="状态信息">状态信息</h2>
+## 状态信息
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.activeTexture()")}}</dt>
- <dd>选择要激活的纹理单元。</dd>
- <dt>{{domxref("WebGLRenderingContext.blendColor()")}}</dt>
- <dd>设置源和目标的混和因子。</dd>
- <dt>{{domxref("WebGLRenderingContext.blendEquation()")}}</dt>
- <dd>用同一个表达式设置 RGB 混和表达式和 alpha 混和表达式。</dd>
- <dt>{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}</dt>
- <dd>分开设置 RGB 混和表达式和 alpha 混和表达式。</dd>
- <dt>{{domxref("WebGLRenderingContext.blendFunc()")}}</dt>
- <dd>定义用于像素混合算法的函数。</dd>
- <dt>{{domxref("WebGLRenderingContext.blendFuncSeparate()")}}</dt>
- <dd>分别定义混合像素 RGB 通道和透明通道的函数。</dd>
- <dt>{{domxref("WebGLRenderingContext.clearColor()")}}</dt>
- <dd>设置用于清空用的颜色。</dd>
- <dt>{{domxref("WebGLRenderingContext.clearDepth()")}}</dt>
- <dd>设置清除深度缓存时的深度值。</dd>
- <dt>{{domxref("WebGLRenderingContext.clearStencil()")}}</dt>
- <dd>设置清除模板缓冲区时的模板值。</dd>
- <dt>{{domxref("WebGLRenderingContext.colorMask()")}}</dt>
- <dd>设置在绘制或渲染{{domxref("WebGLFramebuffer")}}时要开启或关闭的颜色分量。</dd>
- <dt>{{domxref("WebGLRenderingContext.cullFace()")}}</dt>
- <dd>设置多边形的正面和/或反面是否要被排除。</dd>
- <dt>{{domxref("WebGLRenderingContext.depthFunc()")}}</dt>
- <dd>设置比较输入像素深度和深度缓存值得函数。</dd>
- <dt>{{domxref("WebGLRenderingContext.depthMask()")}}</dt>
- <dd>设置是否写入深度缓存。</dd>
- <dt>{{domxref("WebGLRenderingContext.depthRange()")}}</dt>
- <dd>设置从规范化设备坐标映射到窗口或视口坐标时的深度范围。</dd>
- <dt>{{domxref("WebGLRenderingContext.disable()")}}</dt>
- <dd>禁用这个上下文的 WebGL 功能。</dd>
- <dt>{{domxref("WebGLRenderingContext.enable()")}}</dt>
- <dd>启用这个上下文的 WebGL 功能。</dd>
- <dt>{{domxref("WebGLRenderingContext.frontFace()")}}</dt>
- <dd>设置多边形的正面使用顺时针还是逆时针绘制表示。</dd>
- <dt>{{domxref("WebGLRenderingContext.getParameter()")}}</dt>
- <dd>返回给入参数名的值。</dd>
- <dt>{{domxref("WebGLRenderingContext.getError()")}}</dt>
- <dd>返回错误信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.hint()")}}</dt>
- <dd>给某些行为设置建议使用的模式。具体建议需要看执行的情况。</dd>
- <dt>{{domxref("WebGLRenderingContext.isEnabled()")}}</dt>
- <dd>测试这个上下文的 WebGL 功能是否开启。</dd>
- <dt>{{domxref("WebGLRenderingContext.lineWidth()")}}</dt>
- <dd>设置线宽。</dd>
- <dt>{{domxref("WebGLRenderingContext.pixelStorei()")}}</dt>
- <dd>设置像素存储模式。</dd>
- <dt>{{domxref("WebGLRenderingContext.polygonOffset()")}}</dt>
- <dd>设置多边形偏移的比例和单位，从而计算深度值。（补充：解决深度冲突）</dd>
- <dt>{{domxref("WebGLRenderingContext.sampleCoverage()")}}</dt>
- <dd>为抗锯齿效果设置多重取样覆盖参数。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilFunc()")}}</dt>
- <dd>同时设置前面和背面的模板测试函数，及其引用值。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}</dt>
- <dd>可分开设置前面或背面的模板测试函数，及其引用值。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilMask()")}}</dt>
- <dd>同时启用或禁用，前面和背面的模板测试掩码。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}</dt>
- <dd>可分开启用或禁用，前面和背面的模板测试掩码。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilOp()")}}</dt>
- <dd>同时设置，在前面和背面的模板缓冲区上执行的操作。</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilOpSeparate()")}}</dt>
- <dd>可分开设置，在前面和背面的模板缓冲区上执行的操作。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.activeTexture()")}}
+  - : 选择要激活的纹理单元。
+- {{domxref("WebGLRenderingContext.blendColor()")}}
+  - : 设置源和目标的混和因子。
+- {{domxref("WebGLRenderingContext.blendEquation()")}}
+  - : 用同一个表达式设置 RGB 混和表达式和 alpha 混和表达式。
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
+  - : 分开设置 RGB 混和表达式和 alpha 混和表达式。
+- {{domxref("WebGLRenderingContext.blendFunc()")}}
+  - : 定义用于像素混合算法的函数。
+- {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
+  - : 分别定义混合像素 RGB 通道和透明通道的函数。
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+  - : 设置用于清空用的颜色。
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+  - : 设置清除深度缓存时的深度值。
+- {{domxref("WebGLRenderingContext.clearStencil()")}}
+  - : 设置清除模板缓冲区时的模板值。
+- {{domxref("WebGLRenderingContext.colorMask()")}}
+  - : 设置在绘制或渲染{{domxref("WebGLFramebuffer")}}时要开启或关闭的颜色分量。
+- {{domxref("WebGLRenderingContext.cullFace()")}}
+  - : 设置多边形的正面和/或反面是否要被排除。
+- {{domxref("WebGLRenderingContext.depthFunc()")}}
+  - : 设置比较输入像素深度和深度缓存值得函数。
+- {{domxref("WebGLRenderingContext.depthMask()")}}
+  - : 设置是否写入深度缓存。
+- {{domxref("WebGLRenderingContext.depthRange()")}}
+  - : 设置从规范化设备坐标映射到窗口或视口坐标时的深度范围。
+- {{domxref("WebGLRenderingContext.disable()")}}
+  - : 禁用这个上下文的 WebGL 功能。
+- {{domxref("WebGLRenderingContext.enable()")}}
+  - : 启用这个上下文的 WebGL 功能。
+- {{domxref("WebGLRenderingContext.frontFace()")}}
+  - : 设置多边形的正面使用顺时针还是逆时针绘制表示。
+- {{domxref("WebGLRenderingContext.getParameter()")}}
+  - : 返回给入参数名的值。
+- {{domxref("WebGLRenderingContext.getError()")}}
+  - : 返回错误信息。
+- {{domxref("WebGLRenderingContext.hint()")}}
+  - : 给某些行为设置建议使用的模式。具体建议需要看执行的情况。
+- {{domxref("WebGLRenderingContext.isEnabled()")}}
+  - : 测试这个上下文的 WebGL 功能是否开启。
+- {{domxref("WebGLRenderingContext.lineWidth()")}}
+  - : 设置线宽。
+- {{domxref("WebGLRenderingContext.pixelStorei()")}}
+  - : 设置像素存储模式。
+- {{domxref("WebGLRenderingContext.polygonOffset()")}}
+  - : 设置多边形偏移的比例和单位，从而计算深度值。（补充：解决深度冲突）
+- {{domxref("WebGLRenderingContext.sampleCoverage()")}}
+  - : 为抗锯齿效果设置多重取样覆盖参数。
+- {{domxref("WebGLRenderingContext.stencilFunc()")}}
+  - : 同时设置前面和背面的模板测试函数，及其引用值。
+- {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
+  - : 可分开设置前面或背面的模板测试函数，及其引用值。
+- {{domxref("WebGLRenderingContext.stencilMask()")}}
+  - : 同时启用或禁用，前面和背面的模板测试掩码。
+- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}
+  - : 可分开启用或禁用，前面和背面的模板测试掩码。
+- {{domxref("WebGLRenderingContext.stencilOp()")}}
+  - : 同时设置，在前面和背面的模板缓冲区上执行的操作。
+- {{domxref("WebGLRenderingContext.stencilOpSeparate()")}}
+  - : 可分开设置，在前面和背面的模板缓冲区上执行的操作。
 
-<h2 id="缓冲区">缓冲区</h2>
+## 缓冲区
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindBuffer()")}}</dt>
- <dd>把 <code>WebGLBuffer</code> 对象绑定到指定目标上。</dd>
- <dt>{{domxref("WebGLRenderingContext.bufferData()")}}</dt>
- <dd>更新缓冲数据。</dd>
- <dt>{{domxref("WebGLRenderingContext.bufferSubData()")}}</dt>
- <dd>更新从给入偏移量开始的缓冲数据。</dd>
- <dt>{{domxref("WebGLRenderingContext.createBuffer()")}}</dt>
- <dd>创建 <code>WebGLBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</dt>
- <dd>删除 <code>WebGLBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.getBufferParameter()")}}</dt>
- <dd>返回缓冲信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.isBuffer()")}}</dt>
- <dd>返回给入的缓冲是否有效。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+  - : 把 `WebGLBuffer` 对象绑定到指定目标上。
+- {{domxref("WebGLRenderingContext.bufferData()")}}
+  - : 更新缓冲数据。
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
+  - : 更新从给入偏移量开始的缓冲数据。
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+  - : 创建 `WebGLBuffer` 对象。
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+  - : 删除 `WebGLBuffer` 对象。
+- {{domxref("WebGLRenderingContext.getBufferParameter()")}}
+  - : 返回缓冲信息。
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+  - : 返回给入的缓冲是否有效。
 
-<h2 id="帧缓冲区">帧缓冲区</h2>
+## 帧缓冲区
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</dt>
- <dd>把 <code>WebGLFrameBuffer</code> 对象绑定到指定对象上。</dd>
- <dt>{{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}</dt>
- <dd>返回帧缓冲区的状态。</dd>
- <dt>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</dt>
- <dd>创建 <code>WebGLFrameBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</dt>
- <dd>删除 <code>WebGLFrameBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}</dt>
- <dd>把 <code>WebGLRenderingBuffer</code> 对象附加到 <code>WebGLFrameBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.framebufferTexture2D()")}}</dt>
- <dd>把纹理图像附加到 <code>WebGLFrameBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}</dt>
- <dd>返回帧缓冲区的信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</dt>
- <dd>返回 Boolean 值，表示给入的 <code>WebGLFrameBuffer</code> 对象是否有效。</dd>
- <dt>{{domxref("WebGLRenderingContext.readPixels()")}}</dt>
- <dd>读取 <code>WebGLFrameBuffer 的像素。</code></dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+  - : 把 `WebGLFrameBuffer` 对象绑定到指定对象上。
+- {{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}
+  - : 返回帧缓冲区的状态。
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+  - : 创建 `WebGLFrameBuffer` 对象。
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+  - : 删除 `WebGLFrameBuffer` 对象。
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+  - : 把 `WebGLRenderingBuffer` 对象附加到 `WebGLFrameBuffer` 对象。
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
+  - : 把纹理图像附加到 `WebGLFrameBuffer` object.
+- {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
+  - : 返回帧缓冲区的信息。
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+  - : 返回 Boolean 值，表示给入的 `WebGLFrameBuffer` 对象是否有效。
+- {{domxref("WebGLRenderingContext.readPixels()")}}
+  - : 读取 `WebGLFrameBuffer 的像素。`
 
-<h2 id="渲染缓冲区">渲染缓冲区</h2>
+## 渲染缓冲区
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</dt>
- <dd>把 <code>WebGLRenderBuffer</code> 对象绑定到指定的对象上。</dd>
- <dt>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</dt>
- <dd>创建 <code>WebGLRenderBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</dt>
- <dd>删除 <code>WebGLRenderBuffer</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}</dt>
- <dd>返回渲染缓冲区的信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.isBuffer()")}}</dt>
- <dd>返回 Boolean 值，表示给入的 <code>WebGLRenderingBuffer</code> 是否有效。</dd>
- <dt>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</dt>
- <dd>创建渲染缓冲区数据存储。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+  - : 把 `WebGLRenderBuffer` 对象绑定到指定的对象上。
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+  - : 创建 `WebGLRenderBuffer` 对象。
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+  - : 删除 `WebGLRenderBuffer` 对象。
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
+  - : 返回渲染缓冲区的信息。
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+  - : 返回 Boolean 值，表示给入的 `WebGLRenderingBuffer` 是否有效。
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+  - : 创建渲染缓冲区数据存储。
 
-<h2 id="纹理">纹理</h2>
+## 纹理
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindTexture()")}}</dt>
- <dd>把 <code>WebGLTexture</code> 对象绑定到指定对象上。</dd>
- <dt>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</dt>
- <dd>指定一个为压缩格式的 2D 纹理图片。</dd>
- <dt>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</dt>
- <dd>指定一个为压缩格式的 2D 纹理子图片。</dd>
- <dt>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</dt>
- <dd>复制 2D 纹理图片。</dd>
- <dt>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</dt>
- <dd>复制 2D 纹理子图片。</dd>
- <dt>{{domxref("WebGLRenderingContext.createTexture()")}}</dt>
- <dd>创建 <code>WebGLTexture</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteTexture()")}}</dt>
- <dd>删除 <code>WebGLTexture</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.generateMipmap()")}}</dt>
- <dd>为 <code>WebGLTexture</code> 对象生成一组纹理映射。</dd>
- <dt>{{domxref("WebGLRenderingContext.getTexParameter()")}}</dt>
- <dd>返回纹理信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.isTexture()")}}</dt>
- <dd>返回 Boolean 值，表示给入的 <code>WebGLTexture</code> 是否有效。</dd>
- <dt>{{domxref("WebGLRenderingContext.texImage2D()")}}</dt>
- <dd>指定 2D 纹理图片。</dd>
- <dt>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</dt>
- <dd>更新当前 <code>WebGLTexture 的子矩形。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.texParameterf()")}}</dt>
- <dd>设置纹理参数。</dd>
- <dt>{{domxref("WebGLRenderingContext.texParameteri()")}}</dt>
- <dd>设置纹理参数。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+  - : 把 `WebGLTexture` 对象绑定到指定对象上。
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+  - : 指定一个为压缩格式的 2D 纹理图片。
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+  - : 指定一个为压缩格式的 2D 纹理子图片。
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+  - : 复制 2D 纹理图片。
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+  - : 复制 2D 纹理子图片。
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+  - : 创建 `WebGLTexture` 对象。
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+  - : 删除 `WebGLTexture` 对象。
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+  - : 为 `WebGLTexture` 对象生成一组纹理映射。
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+  - : 返回纹理信息。
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+  - : 返回 Boolean 值，表示给入的 `WebGLTexture` 是否有效。
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+  - : 指定 2D 纹理图片。
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+  - : 更新当前 `WebGLTexture 的子矩形。`
+- {{domxref("WebGLRenderingContext.texParameterf()")}}
+  - : 设置纹理参数。
+- {{domxref("WebGLRenderingContext.texParameteri()")}}
+  - : 设置纹理参数。
 
-<h2 id="程序对象和着色器对象">程序对象和着色器对象</h2>
+## 程序对象和着色器对象
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.attachShader()")}}</dt>
- <dd>把 <code>WebGLShader</code> 添加到 <code>WebGLProgram。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.bindAttribLocation()")}}</dt>
- <dd>绑定一个普通顶点索引到一个命名的 attribute 变量</dd>
- <dt>{{domxref("WebGLRenderingContext.compileShader()")}}</dt>
- <dd>编译 <code>WebGLShader。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.createProgram()")}}</dt>
- <dd>创建 <code>WebGLProgram。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.createShader()")}}</dt>
- <dd>创建 <code>WebGLShader。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.deleteProgram()")}}</dt>
- <dd>删除 <code>WebGLProgram。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.deleteShader()")}}</dt>
- <dd>删除 <code>WebGLShader。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.detachShader()")}}</dt>
- <dd>分离 <code>WebGLShader。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</dt>
- <dd>返回附加在 <code>WebGLProgram 上的</code> <code>WebGLShader</code> 对象的列表。</dd>
- <dt>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</dt>
- <dd>返回程序对象的信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</dt>
- <dd>返回 <code>WebGLProgram </code>对象的信息日志。</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</dt>
- <dd>返回着色器的信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</dt>
- <dd>返回一个描述着色器数字类型精度的<code>WebGLShaderPrecisionFormat</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</dt>
- <dd>返回 <code>WebGLShader</code> 对象的信息日志。</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderSource()")}}</dt>
- <dd>以字符串形式返回 <code>WebGLShader</code> 的源码。</dd>
- <dt>{{domxref("WebGLRenderingContext.isProgram()")}}</dt>
- <dd>返回一个 Boolean 值，表示给入的 <code>WebGLProgram</code> 是否有效。</dd>
- <dt>{{domxref("WebGLRenderingContext.isShader()")}}</dt>
- <dd>返回一个 Boolean 值，表示给入的 <code>WebGLShader</code> 是否有效。</dd>
- <dt>{{domxref("WebGLRenderingContext.linkProgram()")}}</dt>
- <dd>链接给入的 <code>WebGLProgram</code> 对象。</dd>
- <dt>{{domxref("WebGLRenderingContext.shaderSource()")}}</dt>
- <dd>设置一个 <code>WebGLShader 的源码。</code></dd>
- <dt>{{domxref("WebGLRenderingContext.useProgram()")}}</dt>
- <dd>使用指定的 <code>WebGLProgram</code> 作为当前渲染状态的一部分。</dd>
- <dt>{{domxref("WebGLRenderingContext.validateProgram()")}}</dt>
- <dd>使 <code>WebGLProgram 生效。</code></dd>
-</dl>
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+  - : 把 `WebGLShader` 添加到 `WebGLProgram。`
+- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
+  - : 绑定一个普通顶点索引到一个命名的 attribute 变量
+- {{domxref("WebGLRenderingContext.compileShader()")}}
+  - : 编译 `WebGLShader。`
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+  - : 创建 `WebGLProgram。`
+- {{domxref("WebGLRenderingContext.createShader()")}}
+  - : 创建 `WebGLShader。`
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+  - : 删除 `WebGLProgram。`
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+  - : 删除 `WebGLShader。`
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+  - : 分离 `WebGLShader。`
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+  - : 返回附加在 `WebGLProgram 上的` `WebGLShader` 对象的列表。
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+  - : 返回程序对象的信息。
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+  - : 返回 `WebGLProgram `对象的信息日志。
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+  - : 返回着色器的信息。
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+  - : 返回一个描述着色器数字类型精度的`WebGLShaderPrecisionFormat` 对象。
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+  - : 返回 `WebGLShader` 对象的信息日志。
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+  - : 以字符串形式返回 `WebGLShader` 的源码。
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+  - : 返回一个 Boolean 值，表示给入的 `WebGLProgram` 是否有效。
+- {{domxref("WebGLRenderingContext.isShader()")}}
+  - : 返回一个 Boolean 值，表示给入的 `WebGLShader` 是否有效。
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+  - : 链接给入的 `WebGLProgram` 对象。
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+  - : 设置一个 `WebGLShader 的源码。`
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+  - : 使用指定的 `WebGLProgram` 作为当前渲染状态的一部分。
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+  - : 使 `WebGLProgram 生效。`
 
-<h2 id="Uniform_和_Attribute">Uniform 和 Attribute</h2>
+## Uniform 和 Attribute
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}</dt>
- <dd>在给定的位置，禁用顶点 attribute 数组。</dd>
- <dt>{{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}</dt>
- <dd>在给定的位置，启用顶点 attribute 数组。</dd>
- <dt>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</dt>
- <dd>返回激活状态的 attribute 变量信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</dt>
- <dd>返回激活状态的 uniform 变量信息。</dd>
- <dt>{{domxref("WebGLRenderingContext.getAttribLocation()")}}</dt>
- <dd>返回 attribute 变量的指针位置。</dd>
- <dt>{{domxref("WebGLRenderingContext.getUniform()")}}</dt>
- <dd>返回指定位置的 uniform 变量。</dd>
- <dt>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</dt>
- <dd>返回 uniform 变量的指针位置。</dd>
- <dt>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</dt>
- <dd>返回指定位置的顶点 attribute 变量。</dd>
- <dt>{{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}</dt>
- <dd>获取给定索引的顶点 attribute 位置。</dd>
- <dt>{{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}</dt>
- <dd>指定一个 uniform 变量。</dd>
- <dt>{{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}</dt>
- <dd>指定一个 uniform 矩阵变量。</dd>
- <dt>{{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}</dt>
- <dd>指定一个普通顶点 attribute 的值。</dd>
- <dt>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</dt>
- <dd>指定一个顶点 attributes 数组中，顶点 attributes 变量的数据格式和位置。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}
+  - : 在给定的位置，禁用顶点 attribute 数组。
+- {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}
+  - : 在给定的位置，启用顶点 attribute 数组。
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+  - : 返回激活状态的 attribute 变量信息。
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+  - : 返回激活状态的 uniform 变量信息。
+- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
+  - : 返回 attribute 变量的指针位置。
+- {{domxref("WebGLRenderingContext.getUniform()")}}
+  - : 返回指定位置的 uniform 变量。
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+  - : 返回 uniform 变量的指针位置。
+- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
+  - : 返回指定位置的顶点 attribute 变量。
+- {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
+  - : 获取给定索引的顶点 attribute 位置。
+- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+  - : 指定一个 uniform 变量。
+- {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
+  - : 指定一个 uniform 矩阵变量。
+- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}
+  - : 指定一个普通顶点 attribute 的值。
+- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
+  - : 指定一个顶点 attributes 数组中，顶点 attributes 变量的数据格式和位置。
 
-<h2 id="绘制缓冲区">绘制缓冲区</h2>
+## 绘制缓冲区
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.clear()")}}</dt>
- <dd>把指定的缓冲区清空为预设的值。</dd>
- <dt>{{domxref("WebGLRenderingContext.drawArrays()")}}</dt>
- <dd>渲染数组中的原始数据。</dd>
- <dt>{{domxref("WebGLRenderingContext.drawElements()")}}</dt>
- <dd>渲染元素数组中的原始数据。</dd>
- <dt>{{domxref("WebGLRenderingContext.finish()")}}</dt>
- <dd>阻断执行，直到之前所有的操作都完成。</dd>
- <dt>{{domxref("WebGLRenderingContext.flush()")}}</dt>
- <dd>清空缓冲的命令，这会导致所有命令尽快执行完。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.clear()")}}
+  - : 把指定的缓冲区清空为预设的值。
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+  - : 渲染数组中的原始数据。
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+  - : 渲染元素数组中的原始数据。
+- {{domxref("WebGLRenderingContext.finish()")}}
+  - : 阻断执行，直到之前所有的操作都完成。
+- {{domxref("WebGLRenderingContext.flush()")}}
+  - : 清空缓冲的命令，这会导致所有命令尽快执行完。
 
-<h2 id="使用扩展插件">使用扩展插件</h2>
+## 使用扩展插件
 
-<p>这些方法管理 WebGL 扩展：</p>
+这些方法管理 WebGL 扩展：
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.getSupportedExtensions()")}}</dt>
- <dd>返回一个包含 {{domxref("DOMString")}} 的 {{jsxref("Array")}} ，每个元素都为支持的 WebGL 扩展。</dd>
- <dt>{{domxref("WebGLRenderingContext.getExtension()")}}</dt>
- <dd>返回一个扩展对象。</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
+  - : 返回一个包含 {{domxref("DOMString")}} 的 {{jsxref("Array")}} ，每个元素都为支持的 WebGL 扩展。
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+  - : 返回一个扩展对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="检测_WebGL_上下文特性支持">检测 WebGL 上下文特性支持</h3>
+### 检测 WebGL 上下文特性支持
 
-<p>{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "summary")}}</p>
+{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "summary")}}
 
-<p>{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "detect-webgl-source")}}</p>
+{{page("/zh-CN/Learn/WebGL/By_example/Detect_WebGL", "detect-webgl-source")}}
 
-<p>{{EmbedLiveSample("detect-webgl-source", 660,150 ,"" , "Learn/WebGL/By_example/Detect_WebGL")}}</p>
+{{EmbedLiveSample("detect-webgl-source", 660,150 ,"" , "Learn/WebGL/By_example/Detect_WebGL")}}
 
-<h3 id="Canvas_尺寸对使用_WebGL_渲染的影响">Canvas 尺寸对使用 WebGL 渲染的影响</h3>
+### Canvas 尺寸对使用 WebGL 渲染的影响
 
-<p>{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-intro")}}</p>
+{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-intro")}}
 
-<p>{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-source")}}</p>
+{{page("/zh-CN/Learn/WebGL/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-source")}}
 
-<p>{{EmbedLiveSample("canvas-size-and-webgl-source", 660,180 ,"" , "Learn/WebGL/By_example/Canvas_size_and_WebGL")}}</p>
+{{EmbedLiveSample("canvas-size-and-webgl-source", 660,180 ,"" , "Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}

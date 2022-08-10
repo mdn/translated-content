@@ -11,33 +11,32 @@ tags:
 translation_of: Web/API/Window/ondevicemotion
 original_slug: Web/API/Window/ondevicemotion
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">摘要</h2>
+## 摘要
 
-<p>一个发送到窗口的{{ event("devicemotion")}}事件处理程序。</p>
+一个发送到窗口的{{ event("devicemotion")}}事件处理程序。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>window.ondevicemotion = funcRef;
-</pre>
+```plain
+window.ondevicemotion = funcRef;
+```
 
-<p>Where <code>funcRef</code> is a reference to a function. This function receives a {{ domxref("DeviceMotionEvent") }} object describing the motion that occurred.</p>
+Where `funcRef` is a reference to a function. This function receives a {{ domxref("DeviceMotionEvent") }} object describing the motion that occurred.
 
-<p>这里的<code>funcRef</code>是一个函数的引用。这个函数接收一个{{ domxref("DeviceMotionEvent") }} 对象类型的参数描述发生的动作。</p>
+这里的`funcRef`是一个函数的引用。这个函数接收一个{{ domxref("DeviceMotionEvent") }} 对象类型的参数描述发生的动作。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ event("devicemotion") }}</li>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
-</ul>
+- {{ event("devicemotion") }}
+- {{ domxref("DeviceMotionEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)

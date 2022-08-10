@@ -12,36 +12,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
 browser-compat: javascript.builtins.Map.set
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>set()</strong></code> 方法为 <code>Map</code> 对象添加或更新一个指定了键（<code>key</code>）和值（<code>value</code>）的（新）键值对。</p>
+**`set()`** 方法为 `Map` 对象添加或更新一个指定了键（`key`）和值（`value`）的（新）键值对。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
+## 语法
 
+```plain
+myMap.set(key, value);
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>myMap</em>.set(key, value);</code></pre>
+- key
+  - : 要添加至相应 `Map` 对象的元素的键。
+- value
+  - : 要添加至相应 `Map` 对象的元素的值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>key</dt>
- <dd>要添加至相应 <code>Map</code> 对象的元素的键。</dd>
- <dt>value</dt>
- <dd>要添加至相应 <code>Map</code> 对象的元素的值。</dd>
-</dl>
+`Map` 对象
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p><code>Map</code> 对象</p>
+### 使用 `set` 方法
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_set_方法">使用 <code>set</code> 方法</h3>
-
-<pre class="brush: js">var myMap = new Map();
+```js
+var myMap = new Map();
 
 // 将一个新元素添加到 Map 对象
 myMap.set("bar", "foo");
@@ -49,32 +48,29 @@ myMap.set(1, "foobar");
 
 // 在 Map 对象中更新某个元素的值
 myMap.set("bar", "baz");
-</pre>
+```
 
-<h3 id="链式使用_set_方法">链式使用 <code>set</code> 方法</h3>
+### 链式使用 `set` 方法
 
-<p>因为 Set() 方法返回 Map 对象本身，所以你可以像下面这样链式调用它：</p>
+因为 Set() 方法返回 Map 对象本身，所以你可以像下面这样链式调用它：
 
-<pre class="brush: js">// Add new elements to the map with chaining.
+```js
+// Add new elements to the map with chaining.
 myMap.set('bar', 'foo')
      .set(1, 'foobar')
      .set(2, 'baz');
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.get()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.has()")}}

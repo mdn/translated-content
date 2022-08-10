@@ -9,40 +9,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isFinite()</code></strong> 方法用来检测传入的参数是否是一个有穷数。</p>
+**`Number.isFinite()`** 方法用来检测传入的参数是否是一个有穷数。
 
-<p>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</p>
+{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Number.isFinite(v<var>alue</var>)</code></pre>
+```plain
+Number.isFinite(value)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>要被检测有穷性的值。</dd>
-</dl>
+- `value`
+  - : 要被检测有穷性的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{jsxref("Boolean", "布尔值")}} 表示给定的值是否是一个有穷数。</p>
+一个 {{jsxref("Boolean", "布尔值")}} 表示给定的值是否是一个有穷数。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>和全局的 {{jsxref("Global_Objects/isFinite", "isFinite()")}} 函数相比，这个方法不会强制将一个非数值的参数转换成数值，这就意味着，只有数值类型的值，且是有穷的（finite），才返回 <code>true</code>。</p>
+和全局的 {{jsxref("Global_Objects/isFinite", "isFinite()")}} 函数相比，这个方法不会强制将一个非数值的参数转换成数值，这就意味着，只有数值类型的值，且是有穷的（finite），才返回 `true`。
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
-}</pre>
+```js
+if (Number.isFinite === undefined) Number.isFinite = function(value) {
+    return typeof value === 'number' && isFinite(value);
+}
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -53,19 +56,17 @@ Number.isFinite('0');       // false, would've been true with
                             // global isFinite('0')
 Number.isFinite(null);      // false, would've been true with
                             // global isFinite(null)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>The {{jsxref("Number")}} object it belongs to.</li>
- <li>The global function {{jsxref("isFinite")}}.</li>
-</ul>
+- The {{jsxref("Number")}} object it belongs to.
+- The global function {{jsxref("isFinite")}}.

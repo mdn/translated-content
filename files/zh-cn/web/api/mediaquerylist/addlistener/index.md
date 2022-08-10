@@ -3,30 +3,31 @@ title: MediaQueryList.addListener()
 slug: Web/API/MediaQueryList/addListener
 translation_of: Web/API/MediaQueryList/addListener
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>{{DOMxRef("MediaQueryList")}}接口的<code><strong>addListener()</strong></code>方法向<code>MediaQueryListener</code>添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。</p>
+{{DOMxRef("MediaQueryList")}}接口的**`addListener()`**方法向`MediaQueryListener`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
 
-<p>从本质上讲，这是{{DOMxRef("EventTarget.addEventListener()")}}的别名，用于向后兼容。 较旧的浏览器应使用<code>addListener</code>而不是<code>addEventListener</code>，因为 MediaQueryList 仅从较新的浏览器中的 EventTarget 继承。</p>
+从本质上讲，这是{{DOMxRef("EventTarget.addEventListener()")}}的别名，用于向后兼容。 较旧的浏览器应使用`addListener`而不是`addEventListener`，因为 MediaQueryList 仅从较新的浏览器中的 EventTarget 继承。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>MediaQueryList.addListener(func)</em></pre>
+```plain
+MediaQueryList.addListener(func)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>func</dt>
- <dd>表示您要在媒体查询状态更改时运行的回调函数的函数或函数引用。 在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。 在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。</dd>
-</dl>
+- func
+  - : 表示您要在媒体查询状态更改时运行的回调函数的函数或函数引用。 在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。 在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>Void.</p>
+Void.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
+```js
+var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -40,24 +41,21 @@ function screenTest(e) {
   }
 }
 
-mql.addListener(screenTest);</pre>
+mql.addListener(screenTest);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MediaQueryList.addListener")}}
 
+## 参见
 
-<p>{{Compat("api.MediaQueryList.addListener")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
- <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/CSS/Media_queries)
+- [Using media queries from code](/en-US/docs/CSS/Using_media_queries_from_code)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

@@ -3,20 +3,20 @@ title: outline-color
 slug: Web/CSS/outline-color
 translation_of: Web/CSS/outline-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>outline-color</code></strong> CSS 属性 被用于设置一个元素轮廓的颜色。</p>
+**`outline-color`** CSS 属性 被用于设置一个元素轮廓的颜色。
 
-<div>{{EmbedInteractiveExample("pages/css/outline-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
+大多时候使用{{cssxref("outline")}}而不是` outline-style`,` outline-width 和 `` outline-color`会更方便。
 
-<p>大多时候使用{{cssxref("outline")}}而不是<code> outline-style</code>,<code> outline-width 和</code><code> outline-color</code>会更方便。</p>
+元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出。不像 border，轮廓在元素的 frame 外绘制并且可能与其他元素重叠。而 border 不会出现这种现象 (除非故意).
 
-<p>元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出。不像 border，轮廓在元素的 frame 外绘制并且可能与其他元素重叠。而 border 不会出现这种现象 (除非故意).</p>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;color&gt; values */
+```css
+/* <color> values */
 outline-color: #f92525;
 outline-color: rgb(30,222,121);
 outline-color: blue;
@@ -28,69 +28,63 @@ outline-color: invert;
 outline-color: inherit;
 outline-color: initial;
 outline-color: unset;
-</pre>
+```
 
-<p><code>outline-color</code>可用以下这些值。</p>
+`outline-color`可用以下这些值。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>轮廓颜色，规则同 <code>&lt;color&gt;</code>.</dd>
- <dt><code>invert</code></dt>
- <dd><code>反色,用于确认轮廓的显示.注意不是所有浏览器都支持该属性,若不则该属性无效.</code></dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : 轮廓颜色，规则同 `<color>`.
+- `invert`
+  - : `反色,用于确认轮廓的显示.注意不是所有浏览器都支持该属性,若不则该属性无效.`
 
-<h3 id="正规语法">正规语法</h3>
+### 正规语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;p&gt;My outline is blue, as you can see.&lt;/p&gt;</pre>
+```html
+<p>My outline is blue, as you can see.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[3]">p {
+```css
+p {
   outline: 2px solid;      /* Set the outline width and style */
   outline-color: #0000FF;  /* Make the outline blue */
   margin: 5px;
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Accessibility_concerns">Accessibility concerns</h2>
+## Accessibility concerns
 
-<p>Custom <a href="/zh-CN/docs/Web/CSS/:focus">focus styles</a> commonly involve making adjustments to the {{cssxref("outline")}} property. If the color of the outline is adjusted, it is important to ensure that the contrast ratio between it and the background the outline is placed over is high enough that people experiencing low vision conditions will be able to perceive it.</p>
+Custom [focus styles](/zh-CN/docs/Web/CSS/:focus) commonly involve making adjustments to the {{cssxref("outline")}} property. If the color of the outline is adjusted, it is important to ensure that the contrast ratio between it and the background the outline is placed over is high enough that people experiencing low vision conditions will be able to perceive it.
 
-<p>Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a>, a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and <a href="/en-US/docs/Web/CSS/font-weight">bold</a> or larger, or 24px or larger.</p>
+Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/en-US/docs/Web/CSS/font-weight) or larger, or 24px or larger.
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">WebAIM: Color Contrast Checker</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.properties.outline-color")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.outline-color")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{cssxref("&lt;color&gt;")}} 数据类型</li>
- <li>其他与颜色有关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和{{cssxref("column-rule-color")}}</li>
- <li><a href="/zh-CN/docs/Web/HTML/Applying_color">Applying color to HTML elements using CSS</a></li>
-</ul>
+- {{cssxref("&lt;color&gt;")}} 数据类型
+- 其他与颜色有关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和{{cssxref("column-rule-color")}}
+- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/HTML/Applying_color)

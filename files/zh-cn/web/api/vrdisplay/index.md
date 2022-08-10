@@ -3,75 +3,71 @@ title: VRDisplay
 slug: Web/API/VRDisplay
 translation_of: Web/API/VRDisplay
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> 中的 <strong><code>VRDisplay </code></strong>代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。</p>
+[WebVR API](/en-US/docs/Web/API/WebVR_API) 中的 **`VRDisplay `**代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。
 
-<p>可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。</p>
+可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("VRDisplay.capabilities")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("VRDisplayCapabilities")}} 对象，用于指示 VRDisplay 的各种功能。</dd>
- <dt>{{domxref("VRDisplay.depthFar")}}</dt>
- <dd>获取或设置<a href="https://en.wikipedia.org/wiki/Viewing_frustum">眼睛可视锥</a>的最远深度。</dd>
- <dt>{{domxref("VRDisplay.depthNear")}}</dt>
- <dd>获取或设置<a href="https://en.wikipedia.org/wiki/Viewing_frustum">眼睛可视锥</a>的最近深度。</dd>
- <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}}</dt>
- <dd>返回此 VRDisplay 的标识符，它也用作与 <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> 的关联（详见 {{domxref("Gamepad.displayId")}}）。</dd>
- <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}}</dt>
- <dd>返回一个不反人类的名称来标识此 <code>VRDisplay。</code></dd>
- <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 是否连接到计算机。</dd>
- <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 当前是否由内容被呈现。</dd>
- <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}}</dt>
- <dd>如果 VR 设备支持房间规模测验，则返回一个包含房间尺寸参数的 {{domxref("VRStageParameters")}} 对象。</dd>
-</dl>
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("VRDisplayCapabilities")}} 对象，用于指示 VRDisplay 的各种功能。
+- {{domxref("VRDisplay.depthFar")}}
+  - : 获取或设置[眼睛可视锥](https://en.wikipedia.org/wiki/Viewing_frustum)的最远深度。
+- {{domxref("VRDisplay.depthNear")}}
+  - : 获取或设置[眼睛可视锥](https://en.wikipedia.org/wiki/Viewing_frustum)的最近深度。
+- {{domxref("VRDisplay.displayId")}} {{readonlyInline}}
+  - : 返回此 VRDisplay 的标识符，它也用作与 [Gamepad API](/en-US/docs/Web/API/Gamepad_API) 的关联（详见 {{domxref("Gamepad.displayId")}}）。
+- {{domxref("VRDisplay.displayName")}} {{readonlyInline}}
+  - : 返回一个不反人类的名称来标识此 `VRDisplay。`
+- {{domxref("VRDisplay.isConnected")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 是否连接到计算机。
+- {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("Boolean")}} 值，指示 `VRDisplay` 当前是否由内容被呈现。
+- {{domxref("VRDisplay.stageParameters")}} {{readonlyInline}}
+  - : 如果 VR 设备支持房间规模测验，则返回一个包含房间尺寸参数的 {{domxref("VRStageParameters")}} 对象。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("VRDisplay.getEyeParameters()")}}</dt>
- <dd>返回指定一侧眼睛参数的 {{domxref("VREyeParameters")}} 对象。</dd>
- <dt>{{domxref("VRDisplay.getLayers()")}}</dt>
- <dd>返回 VRDisplay 当前显示的图层。</dd>
- <dt>{{domxref("VRDisplay.getPose()")}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the future predicted pose of the <code>VRDisplay</code> as it will be when the current frame is actually presented.</dd>
- <dt>{{domxref("VRDisplay.getImmediatePose()")}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the current pose of the <code>VRDisplay</code>, with no prediction applied.</dd>
- <dt>{{domxref("VRDisplay.resetPose()")}}</dt>
- <dd>Resets the pose for this <code>VRDisplay</code>, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.</dd>
- <dt>{{domxref("VRDisplay.cancelAnimationFrame()")}}</dt>
- <dd>A special implementation of {{domxref("Window.cancelAnimationFrame")}} that allows callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}} to be unregistered.</dd>
- <dt>{{domxref("VRDisplay.requestAnimationFrame()")}}</dt>
- <dd>A special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the <code>VRDisplay</code> presentation is rendered.</dd>
- <dt>{{domxref("VRDisplay.requestPresent()")}}</dt>
- <dd>Starts the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.exitPresent()")}}</dt>
- <dd>Stops the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.submitFrame()")}}</dt>
- <dd>Captures the current state of the {{domxref("VRLayer")}} currently being presented and displays it on the <code>VRDisplay</code>.</dd>
-</dl>
+- {{domxref("VRDisplay.getEyeParameters()")}}
+  - : 返回指定一侧眼睛参数的 {{domxref("VREyeParameters")}} 对象。
+- {{domxref("VRDisplay.getLayers()")}}
+  - : 返回 VRDisplay 当前显示的图层。
+- {{domxref("VRDisplay.getPose()")}}
+  - : Returns a {{domxref("VRPose")}} object defining the future predicted pose of the `VRDisplay` as it will be when the current frame is actually presented.
+- {{domxref("VRDisplay.getImmediatePose()")}}
+  - : Returns a {{domxref("VRPose")}} object defining the current pose of the `VRDisplay`, with no prediction applied.
+- {{domxref("VRDisplay.resetPose()")}}
+  - : Resets the pose for this `VRDisplay`, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.
+- {{domxref("VRDisplay.cancelAnimationFrame()")}}
+  - : A special implementation of {{domxref("Window.cancelAnimationFrame")}} that allows callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}} to be unregistered.
+- {{domxref("VRDisplay.requestAnimationFrame()")}}
+  - : A special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered.
+- {{domxref("VRDisplay.requestPresent()")}}
+  - : Starts the `VRDisplay` presenting a scene.
+- {{domxref("VRDisplay.exitPresent()")}}
+  - : Stops the `VRDisplay` presenting a scene.
+- {{domxref("VRDisplay.submitFrame()")}}
+  - : Captures the current state of the {{domxref("VRLayer")}} currently being presented and displays it on the `VRDisplay`.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>TBD.</pre>
+```plain
+TBD.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>该 API 在旧的 <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>（已被 <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a> 取代）中定义。它不再有望成为标准。</p>
+该 API 在旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/)（已被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代）中定义。它不再有望成为标准。
 
-<p>在所有浏览器都实现新的 <a href="/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR API</a> 之前，建议使用框架（如：<a href="https://aframe.io/">A-Frame</a>、<a href="https://www.babylonjs.com/">Babylon.js</a> 或 <a href="https://threejs.org/">Three.js</a>）或 <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a> 来开发适用于所有浏览器的 WebXR 应用程序。<a href="https://developer.oculus.com/documentation/web/port-vr-xr/">[1]</a></p>
+在所有浏览器都实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，建议使用框架（如：[A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发适用于所有浏览器的 WebXR 应用程序。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API 主页</a>。</li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — 来源于 Mozilla VR 团队的演示、下载以及其他资源。</li>
-</ul>
+- [WebVR API 主页](/en-US/docs/Web/API/WebVR_API)。
+- [MozVr.com](http://mozvr.com/) — 来源于 Mozilla VR 团队的演示、下载以及其他资源。

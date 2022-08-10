@@ -3,38 +3,38 @@ title: URL.href
 slug: Web/API/URL/href
 translation_of: Web/API/URL/href
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>{{domxref("URL")}} 接口的 <strong><code>href</code></strong> 属性是一个包含完整 URL 的 {{domxref("USVString")}} 值。</p>
+{{domxref("URL")}} 接口的 **`href`** 属性是一个包含完整 URL 的 {{domxref("USVString")}} 值。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.href;
-<em>object<code>.href = </code></em><code><em>string</em>;</code>
-</pre>
+```plain
+string = object.href;
+object.href = string;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("USVString")}}.</p>
+{{domxref("USVString")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
+```js
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
 var result = url.href; // Returns: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.URL.href")}}</p>
+{{Compat("api.URL.href")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>所属的 {{domxref("URL")}} 接口。</li>
-</ul>
+- 所属的 {{domxref("URL")}} 接口。

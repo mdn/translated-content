@@ -9,37 +9,35 @@ tags:
   - 接口
 translation_of: Web/API/Window/scrollMaxX
 ---
-<div>{{APIRef}} {{Non-standard_header}}</div>
+{{APIRef}} {{Non-standard_header}}
 
-<p><code><strong>Window.scrollMaxX</strong></code> 只读属性，返回有关文档可水平滚动的最大像素数。</p>
+**`Window.scrollMaxX`** 只读属性，返回有关文档可水平滚动的最大像素数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>xMax</em> = window.scrollMaxX
-</pre>
+```plain
+xMax = window.scrollMaxX
+```
 
-<ul>
- <li><code>xMax</code> 是像素数。</li>
-</ul>
+- `xMax` 是像素数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">// 滚动到页面的右边缘
+```js
+// 滚动到页面的右边缘
 let maxX = window.scrollMaxX;
 
 window.scrollTo(maxX, 0);
-</pre>
+```
 
-<h2 id="提示">提示</h2>
+## 提示
 
-<p>不要用这个属性来获得文档总宽度，文档总宽度不等于<a href="/en-US/docs/DOM/window.innerWidth">window.innerWidth</a> + window.scrollMaxX。因为 {{domxref("window.innerWidth")}}包含所有可见的垂直滚动条的宽度，所以结果会超出文档总宽度，多出所有可见的垂直滚动条的宽度。作为替代，可使用{{domxref("element.scrollWidth","document.body.scrollWidth")}}。查看相关：{{domxref("window.scrollMaxY")}}。</p>
+不要用这个属性来获得文档总宽度，文档总宽度不等于[window.innerWidth](/en-US/docs/DOM/window.innerWidth) + window\.scrollMaxX。因为 {{domxref("window.innerWidth")}}包含所有可见的垂直滚动条的宽度，所以结果会超出文档总宽度，多出所有可见的垂直滚动条的宽度。作为替代，可使用{{domxref("element.scrollWidth","document.body.scrollWidth")}}。查看相关：{{domxref("window.scrollMaxY")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何规范。</p>
+不属于任何规范。
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-
-
-<p>{{Compat("api.Window.scrollMaxX")}}</p>
+{{Compat("api.Window.scrollMaxX")}}

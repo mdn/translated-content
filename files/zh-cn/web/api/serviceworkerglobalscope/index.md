@@ -3,75 +3,68 @@ title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 translation_of: Web/API/ServiceWorkerGlobalScope
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> 的<code>ServiceWorkerGlobalScope</code> 接口，代表一个 service worker 的全局执行上下文。</p>
+[ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
 
-<p>开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。</p>
+开发者应该知道， ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
 
-<p>一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
+一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。 一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.
 
-<p>此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。</p>
+此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。
 
-<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}.</p>
+该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}.
 
-<p>{{InheritanceDiagram(700, 85, 20)}}</p>
+{{InheritanceDiagram(700, 85, 20)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}</dt>
- <dd>Contains the {{domxref("Clients")}} object associated with the service worker.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}</dt>
- <dd>Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}</dt>
- <dd>Contains the {{domxref("CacheStorage")}} object associated with the service worker.</dd>
-</dl>
+- {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
+  - : Contains the {{domxref("Clients")}} object associated with the service worker.
+- {{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}
+  - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
+- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
+  - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("ServiceWorkerGlobalScope.onactivate")}}</dt>
- <dd>An event handler fired whenever an {{Event("activate")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onfetch")}}</dt>
- <dd>An event handler fired whenever a {{Event("fetch")}} event occurs — when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.oninstall")}}</dt>
- <dd>An event handler fired whenever an {{Event("install")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onmessage")}}</dt>
- <dd>An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in <a href="https://html.spec.whatwg.org/multipage/comms.html#messageport"><code>event.data.port</code></a>, corresponding to the controlled page.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onnotificationclick")}}</dt>
- <dd>An event handler fired whenever a {{Event("notificationclick")}} event occurs — when a user clicks on a displayed notification.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onnotificationclose")}}</dt>
- <dd>An event handler fired whenever a {{Event("notificationclose")}} event occurs — when a user closes a displayed notification.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onpush")}}</dt>
- <dd>An event handler fired whenever a {{Event("push")}} event occurs — when a server push notification is received.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}</dt>
- <dd>An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs — when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onsync")}}</dt>
- <dd>An event handler fired whenever a {{Event("SyncEvent")}} event occurs. This is triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available. </dd>
-</dl>
+- {{domxref("ServiceWorkerGlobalScope.onactivate")}}
+  - : An event handler fired whenever an {{Event("activate")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
+- {{domxref("ServiceWorkerGlobalScope.onfetch")}}
+  - : An event handler fired whenever a {{Event("fetch")}} event occurs — when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.
+- {{domxref("ServiceWorkerGlobalScope.oninstall")}}
+  - : An event handler fired whenever an {{Event("install")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
+- {{domxref("ServiceWorkerGlobalScope.onmessage")}}
+  - : An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
+- {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}}
+  - : An event handler fired whenever a {{Event("notificationclick")}} event occurs — when a user clicks on a displayed notification.
+- {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}}
+  - : An event handler fired whenever a {{Event("notificationclose")}} event occurs — when a user closes a displayed notification.
+- {{domxref("ServiceWorkerGlobalScope.onpush")}}
+  - : An event handler fired whenever a {{Event("push")}} event occurs — when a server push notification is received.
+- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
+  - : An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs — when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
+- {{domxref("ServiceWorkerGlobalScope.onsync")}}
+  - : An event handler fired whenever a {{Event("SyncEvent")}} event occurs. This is triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}</dt>
- <dd>Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.</dd>
-</dl>
+- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
+  - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
 
-<p><code>ServiceWorkerGlobalScope</code> implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("GlobalFetch")}}. Therefore it also has the following property available to it:</p>
+`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("GlobalFetch")}}. Therefore it also has the following property available to it:
 
-<dl>
- <dt>{{domxref("GlobalFetch.fetch()")}}</dt>
- <dd>Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.</dd>
-</dl>
+- {{domxref("GlobalFetch.fetch()")}}
+  - : Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (see <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a>.) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the <code>fetch</code> event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.</p>
+This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the `fetch` event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.
 
-<p>The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.</p>
+The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
@@ -94,22 +87,21 @@ translation_of: Web/API/ServiceWorkerGlobalScope
       });
     })
   );
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ServiceWorkerGlobalScope")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)

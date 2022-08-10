@@ -10,76 +10,75 @@ tags:
   - 方法
 translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLInputElement.setSelectionRange</code> </strong>方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。</p>
+**`HTMLInputElement.setSelectionRange` **方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。
 
-<p>在较新的浏览器中，你可以通过一个可选的 selectionDirection 来指定文本选中的方向。比如通过点击和拖动从结束位置往起始位置选中一个字符串。</p>
+在较新的浏览器中，你可以通过一个可选的 selectionDirection 来指定文本选中的方向。比如通过点击和拖动从结束位置往起始位置选中一个字符串。
 
-<p>每次调用这个这个方法都会更新 <code>HTMLInputElement</code> 的 <code>selectionStart</code>, <code>selectionEnd</code> 和 <code>selectionDirection</code> 属性。</p>
+每次调用这个这个方法都会更新 `HTMLInputElement` 的 `selectionStart`, `selectionEnd` 和 `selectionDirection` 属性。
 
-<p>要注意的是，在 <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> 中，<code>selectionStart</code>, <code>selectionEnd</code> 属性和 <code>setSelectionRange</code> 方法只能应用于类型为文本、搜索、链接、电话号码和密码的输入。Chrome 从版本 33 开始会在访问其余类型的这些属性和方法时抛出异常。例如，输入类型为数字时会抛出：“不能从'HTMLInputElement'中读取'selectionStart'属性：输入元素的类型('number')不支持选择（Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection）”。</p>
+要注意的是，在 [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) 中，`selectionStart`, `selectionEnd` 属性和 `setSelectionRange` 方法只能应用于类型为文本、搜索、链接、电话号码和密码的输入。Chrome 从版本 33 开始会在访问其余类型的这些属性和方法时抛出异常。例如，输入类型为数字时会抛出：“不能从'HTMLInputElement'中读取'selectionStart'属性：输入元素的类型('number')不支持选择（Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection）”。
 
-<p>如果你希望<strong>全选</strong>输入元素中的文本，你可以使用 <a href="/zh-CN/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</a> 方法。</p>
+如果你希望**全选**输入元素中的文本，你可以使用 [HTMLInputElement.select()](/zh-CN/docs/Web/API/HTMLInputElement/select) 方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><em>element</em>.setSelectionRange(<em>selectionStart</em>, <em>selectionEnd</em> [, <em>selectionDirection</em>]);</pre>
+```plain
+element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>如果 <code>selectionEnd</code> 小于 <code>selectionStart</code>，则二者都会被看作 <code>selectionEnd</code>。</p>
+如果 `selectionEnd` 小于 `selectionStart`，则二者都会被看作 `selectionEnd`。
 
-<dl>
- <dt><code>selectionStart</code></dt>
- <dd>被选中的第一个字符的位置索引，从0开始。如果这个值比元素的 <code>value</code> 长度还大，则会被看作 <code>value</code> 最后一个位置的索引。</dd>
- <dt><code>selectionEnd</code></dt>
- <dd>被选中的最后一个字符的 <em>下一个</em> 位置索引。如果这个值比元素的value长度还大，则会被看作value最后一个位置的索引。</dd>
- <dt><code>selectionDirection</code> {{optional_inline}}</dt>
- <dd>一个表示选择方向的字符串，可能的值有：</dd>
-</dl>
+- `selectionStart`
+  - : 被选中的第一个字符的位置索引，从 0 开始。如果这个值比元素的 `value` 长度还大，则会被看作 `value` 最后一个位置的索引。
+- `selectionEnd`
+  - : 被选中的最后一个字符的 _下一个_ 位置索引。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
+- `selectionDirection` {{optional_inline}}
+  - : 一个表示选择方向的字符串，可能的值有：
 
-<ul>
- <li><code>"forward"</code></li>
- <li><code>"backward"</code></li>
- <li><code>"none"</code> 默认值，表示方向未知或不相关。</li>
-</ul>
+- `"forward"`
+- `"backward"`
+- `"none"` 默认值，表示方向未知或不相关。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在这个示例中，按下按钮以选择文本框中第三、四、五个字符（即“Mozilla”中的“zil”）。</p>
+在这个示例中，按下按钮以选择文本框中第三、四、五个字符（即“Mozilla”中的“zil”）。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre>&lt;input type="text" id="text-box" size="20" value="Mozilla"&gt;
-&lt;button onclick="selectText()"&gt;Select text&lt;/button&gt;
-</pre>
+```plain
+<input type="text" id="text-box" size="20" value="Mozilla">
+<button onclick="selectText()">Select text</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre>function selectText() {
+```plain
+function selectText() {
   const input = document.getElementById('text-box');
   input.focus();
   input.setSelectionRange(2, 5);
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLInputElement.setSelectionRange")}}</p>
+{{Compat("api.HTMLInputElement.setSelectionRange")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("textarea")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("Selection")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{HTMLElement("textarea")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Selection")}}

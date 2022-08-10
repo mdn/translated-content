@@ -3,67 +3,66 @@ title: TypedArray.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>reduce()</strong></code> 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。<em>TypedArray</em> 是一个 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型数组</a>.</p>
+**`reduce()`** 方法接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值。这个方法和{{jsxref("Array.prototype.reduce()")}}使用了同样的算法。_TypedArray_ 是一个 [类型数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.reduce(<var>callback</var>[, <var>initialValue</var>])</code></pre>
+```plain
+typedarray.reduce(callback[, initialValue])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>对类型数组的每一个值应用的函数，它接受以下参数：
- <dl>
-  <dt><code>previousValue</code></dt>
-  <dd>在上一次迭代中，调用 callback 的返回值， 或者是提供的 <code>initialValue。</code>.</dd>
-  <dt><code>currentValue</code></dt>
-  <dd>类型化数组中当前要处理的值。</dd>
-  <dt><code>index</code></dt>
-  <dd>类型化数组中要处理的当前元素的下标</dd>
-  <dt><code>array</code></dt>
-  <dd><code>reduce</code> 在其上调用的类型化数组。</dd>
- </dl>
- </dd>
- <dt><code>initialValue</code></dt>
- <dd><code>可选。用作 callback</code> <code>首次调用</code>的第一个参数的对象。</dd>
-</dl>
+- `callback`
 
-<h3 id="返回值">返回值</h3>
+  - : 对类型数组的每一个值应用的函数，它接受以下参数：
 
-<p>由归约返回的结果。</p>
+    - `previousValue`
+      - : 在上一次迭代中，调用 callback 的返回值， 或者是提供的 `initialValue。`.
+    - `currentValue`
+      - : 类型化数组中当前要处理的值。
+    - `index`
+      - : 类型化数组中要处理的当前元素的下标
+    - `array`
+      - : `reduce` 在其上调用的类型化数组。
 
-<h2 id="描述">描述</h2>
+- `initialValue`
+  - : `可选。用作 callback` `首次调用`的第一个参数的对象。
 
-<p><code>reduce</code>方法对类型化数组中出现的每个元素执行<code>callback</code>函数，除了类型化数组的空隙。它接受四个参数：初始值（或者来自之前<code>callback</code>调用的值），当前元素的值，当前下标，以及被遍历的类型化数组。</p>
+### 返回值
 
-<p>第一次调用回调函数的时候， <code>previousValue</code> 和 <code>currentValue</code> 可以是两个值之一。如果 <code>initialValue</code> 在<code>reduce</code>的调用中提供， <code>previousValue</code> 会等于<code>initialValue</code> 并且<code>currentValue</code> 会等于类型化数组的第一个值。 如果 <code>initialValue</code> 没有提供，则<code>previousValue</code>等于类型化数组的第一个值，<code>currentValue</code>会等于第二个值。</p>
+由归约返回的结果。
 
-<p>如果类型化数组为空并且没有提供 <code>initialValue</code>，会抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}} 。如果类型化数组中只有一个元素（无论位置）并且没有提供<code>initialValue</code> ，或者如果提供了<code>initialValue</code> 但是类型化数组为空，会返回唯一的值，但不会调用 <code>callback</code>。</p>
+## 描述
 
-<h2 id="示例">示例</h2>
+`reduce`方法对类型化数组中出现的每个元素执行`callback`函数，除了类型化数组的空隙。它接受四个参数：初始值（或者来自之前`callback`调用的值），当前元素的值，当前下标，以及被遍历的类型化数组。
 
-<h3 id="累加数组中的所有值">累加数组中的所有值</h3>
+第一次调用回调函数的时候， `previousValue` 和 `currentValue` 可以是两个值之一。如果 `initialValue` 在`reduce`的调用中提供， `previousValue` 会等于`initialValue` 并且`currentValue` 会等于类型化数组的第一个值。 如果 `initialValue` 没有提供，则`previousValue`等于类型化数组的第一个值，`currentValue`会等于第二个值。
 
-<pre class="brush: js">var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+如果类型化数组为空并且没有提供 `initialValue`，会抛出 {{jsxref("Global_Objects/TypeError", "TypeError")}} 。如果类型化数组中只有一个元素（无论位置）并且没有提供`initialValue` ，或者如果提供了`initialValue` 但是类型化数组为空，会返回唯一的值，但不会调用 `callback`。
+
+## 示例
+
+### 累加数组中的所有值
+
+```js
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
   return a + b;
 });
 // total == 6
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.reduceRight()")}}</li>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Array.prototype.reduce()")}}

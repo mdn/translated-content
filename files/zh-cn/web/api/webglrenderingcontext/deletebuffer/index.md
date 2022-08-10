@@ -3,53 +3,48 @@ title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
 translation_of: Web/API/WebGLRenderingContext/deleteBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}[WebGL API](/en-US/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.deleteBuffer()`**用于删除给定的{{domxref("WebGLBuffer")}}对象；若给定的{{domxref("WebGLBuffer")}}对象已经被删除了，调用该方法将不会产生任何效果。
 
-<div><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的<strong><code>WebGLRenderingContext.deleteBuffer()</code></strong>用于删除给定的{{domxref("WebGLBuffer")}}对象；若给定的{{domxref("WebGLBuffer")}}对象已经被删除了，调用该方法将不会产生任何效果。</div>
+## 语法
 
-<p> </p>
+```plain
+void gl.deleteBuffer(buffer);
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">void <var>gl</var>.deleteBuffer(<var>buffer</var>);
-</pre>
+- buffer
+  - : 要删除的{{domxref("WebGLBuffer")}} 对象。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>buffer</dt>
- <dd>要删除的{{domxref("WebGLBuffer")}} 对象。</dd>
-</dl>
+None.
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>None.</p>
+### 删除一个 buffer
 
-<h2 id="例子">例子</h2>
-
-<h3 id="删除一个buffer">删除一个 buffer</h3>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
 // ...
 
-gl.deleteBuffer(buffer);</pre>
+gl.deleteBuffer(buffer);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.deleteBuffer")}}</p>
+{{Compat("api.WebGLRenderingContext.deleteBuffer")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

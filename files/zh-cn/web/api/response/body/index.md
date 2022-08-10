@@ -1,7 +1,6 @@
 ---
 title: Response.body
 slug: Web/API/Response/body
-translation_of: Web/API/Response/body
 tags:
   - API
   - Fetch
@@ -9,31 +8,35 @@ tags:
   - Reference
   - Streams
   - Response
+translation_of: Web/API/Response/body
 browser-compat: api.Response.body
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}} mixin 的只读 getter 属性 <strong><code>body</code></strong> 用于暴露其 body 内容的{{domxref("ReadableStream")}}（流读取）。</p>
+{{domxref("Response")}} mixin 的只读 getter 属性 **`body`** 用于暴露其 body 内容的{{domxref("ReadableStream")}}（流读取）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var stream = responseInstance.body;</pre>
+```js
+var stream = responseInstance.body;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>一个 {{domxref("ReadableStream")}}.</p>
+一个 {{domxref("ReadableStream")}}.
 
-<h2 id="例程">例程</h2>
+## 例程
 
-<p>在我们的 <a href="https://mdn.github.io/dom-examples/streams/simple-pump.html">simple stream pump</a> 例程中我们 fetch 一个图片地址，使用<code>response.body</code>暴露响应的流，用{{domxref("Response.getReader()", "ReadableStream.getReader()")}}创建一个读取器，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。</p>
+在我们的 [simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump.html) 例程中我们 fetch 一个图片地址，使用`response.body`暴露响应的流，用{{domxref("Response.getReader()", "ReadableStream.getReader()")}}创建一个读取器，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
 
-<pre class="brush: js">const image = document.getElementById('target');
+```js
+const image = document.getElementById('target');
 
 // 请求原始图片
 fetch('./tortoise.png')
 // 取出 body
-.then(response =&gt; response.body)
-.then(body =&gt; {
+.then(response => response.body)
+.then(body => {
   const reader = Response.getReader();
 
   return new ReadableStream({
@@ -41,7 +44,7 @@ fetch('./tortoise.png')
       return pump();
 
       function pump() {
-        return reader.read().then(({ done, value }) =&gt; {
+        return reader.read().then(({ done, value }) => {
           // 读不到更多数据就关闭流
           if (done) {
             controller.close();
@@ -56,26 +59,23 @@ fetch('./tortoise.png')
     }
   })
 })
-.then(stream =&gt; new Response(stream))
-.then(response =&gt; response.blob())
-.then(blob =&gt; URL.createObjectURL(blob))
-.then(url =&gt; console.log(image.src = url))
-.catch(err =&gt; console.error(err));</pre>
+.then(stream => new Response(stream))
+.then(response => response.blob())
+.then(blob => URL.createObjectURL(blob))
+.then(url => console.log(image.src = url))
+.catch(err => console.error(err));
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("api.Response.body")}}</div>
+{{Compat("api.Response.body")}}
 
-<p> </p>
+## 相关链接
 
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
- <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)

@@ -3,35 +3,35 @@ title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 translation_of: Web/API/Navigator/doNotTrack
 ---
-<p>{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}</p>
+{{ ApiRef("HTML DOM") }}{{SeeCompatTable}}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>返回用户的 do-not-track 设置，如果用户不允许网站，内容和广告等进行跟踪，则该值为 yes。</p>
+返回用户的 do-not-track 设置，如果用户不允许网站，内容和广告等进行跟踪，则该值为 yes。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval"><em>dnt</em> = <em>navigator</em>.doNotTrack;
-</pre>
+```plain
+dnt = navigator.doNotTrack;
+```
 
-<p><strong><code>navigator.doNotTrack</code></strong> 的值并不是 <strong>HTTP 请求中 do-not-track 请求头的值</strong>。当 do-not-track 请求头发送的值为 "1", <code>navigator.doNotTrack</code> 的值为 "yes"。当 do-not-track 请求头发送的值为 unset，<code>navigator.doNotTrack</code> 的值为 "unspecified"。当 do-not-track 请求头发送的值为 "0" (Firefox 目前不支持)，<code>navigator.doNotTrack</code> 的值为 "no"。</p>
+**`navigator.doNotTrack`** 的值并不是 **HTTP 请求中 do-not-track 请求头的值**。当 do-not-track 请求头发送的值为 "1", `navigator.doNotTrack` 的值为 "yes"。当 do-not-track 请求头发送的值为 unset，`navigator.doNotTrack` 的值为 "unspecified"。当 do-not-track 请求头发送的值为 "0" (Firefox 目前不支持)，`navigator.doNotTrack` 的值为 "no"。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="eval">dump(window.navigator.doNotTrack);
+```plain
+dump(window.navigator.doNotTrack);
 // Firefox 中：如果开启了 DNT，输出"yes"；否则输出"unspecified"。
-</pre>
+```
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p><a href="http://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression</a> (工作草案)</p>
+[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (工作草案)
 
-<h3 id="相关链接">相关链接</h3>
+### 相关链接
 
-<ul>
- <li><a href="/zh-cn/The_Do_Not_Track_Field_Guide">The Do Not Track field guide</a></li>
-</ul>
+- [The Do Not Track field guide](/zh-cn/The_Do_Not_Track_Field_Guide)
 
-<h3 id="浏览器兼容性">浏览器兼容性</h3>
+### 浏览器兼容性
 
 {{Compat("api.Navigator.doNotTrack")}}

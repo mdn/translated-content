@@ -5,44 +5,47 @@ tags:
   - Vibration API
 translation_of: Web/API/Vibration_API
 ---
-<p>{{DefaultAPISidebar("Vibration API")}}</p>
+{{DefaultAPISidebar("Vibration API")}}
 
-<p>大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。</p>
+大多数现代移动设备包括振动硬件，其允许软件代码通过使设备摇动来向用户提供物理反馈。Vibration API 为 Web 应用程序提供访问此硬件（如果存在）的功能，如果设备不支持此功能，则不会执行任何操作。
 
-<h2 id="振动描述">振动描述</h2>
+## 振动描述
 
-<p>振动被抽象成【开 - 关】脉冲的模式，且可以具有变化的长度。?参数可以是单个整数，表示持续振动的毫秒数 (ms)；或可由多个整数组成的数组，达到振动和暂停循环的效果。只要单一 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a> 函式即可控制振动。</p>
+振动被抽象成【开 - 关】脉冲的模式，且可以具有变化的长度。?参数可以是单个整数，表示持续振动的毫秒数 (ms)；或可由多个整数组成的数组，达到振动和暂停循环的效果。只要单一 [`window.navigator.vibrate()`](https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate) 函式即可控制振动。
 
-<h3 id="一个单次振动">一个单次振动</h3>
+### 一个单次振动
 
-<p>你可以通过指定单个值或仅由一个值组成的数组来一次振荡振动硬件：</p>
+你可以通过指定单个值或仅由一个值组成的数组来一次振荡振动硬件：
 
-<pre class="brush:js">window.navigator.vibrate(200);
+```js
+window.navigator.vibrate(200);
 window.navigator.vibrate([200]);
-</pre>
+```
 
-<p>以上两个例子都可以使设备振动 200 ms.</p>
+以上两个例子都可以使设备振动 200 ms.
 
-<h3 id="振动模式"><strong>振动模式</strong></h3>
+### **振动模式**
 
-<p>一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如：</p>
+一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如：
 
-<pre class="brush: js">window.navigator.vibrate([200, 100, 200]);
-</pre>
+```js
+window.navigator.vibrate([200, 100, 200]);
+```
 
-<p>这会使设备振动 200 ms，然后暂停 100 ms，然后再次振动设备 200 ms。</p>
+这会使设备振动 200 ms，然后暂停 100 ms，然后再次振动设备 200 ms。
 
-<p>您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个； 值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。</p>
+您可以根据需要设定多个振动/暂停对，数组的值可以是偶数或奇数个； 值得注意的是，由于振动在每个振动周期结束时自动停止，因此您不必提供最后一个值去暂停，换句话说，数组长度只需要设置奇数个。
 
-<h3 id="停止振动">停止振动</h3>
+### 停止振动
 
-<p>当调用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate"><code>window.navigator.vibrate()</code></a><code> 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。</code></p>
+当调用 [`window.navigator.vibrate()`](https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.vibrate)` 的参数为「0」、空白？数组，或？数组全为「0」时，即可取消目前？进行中的振动。`
 
-<h3 id="持续振动">持续振动</h3>
+### 持续振动
 
-<p>一些基于 setInterval 和 clearInterval 操作将允许您创建持续的振动：</p>
+一些基于 setInterval 和 clearInterval 操作将允许您创建持续的振动：
 
-<pre class="brush: js">var vibrateInterval;
+```js
+var vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
@@ -62,20 +65,19 @@ function startPeristentVibrate(duration, interval) {
     vibrateInterval = setInterval(function() {
         startVibrate(duration);
     }, interval);
-}</pre>
+}
+```
 
-<p>当然上面的代码片段没有考虑到振动参数为数组情况; 基于阵列的持久性振动将需要计算数组项的和，并基于该数量创建周期（可能具有额外的延迟）。</p>
+当然上面的代码片段没有考虑到振动参数为数组情况; 基于阵列的持久性振动将需要计算数组项的和，并基于该数量创建周期（可能具有额外的延迟）。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Navigator.vibrate")}}
 
-<h2 id="也可以参考">也可以参考</h2>
+## 也可以参考
 
-<ul>
- <li>{{domxref("Navigator.vibrate()")}}</li>
-</ul>
+- {{domxref("Navigator.vibrate()")}}

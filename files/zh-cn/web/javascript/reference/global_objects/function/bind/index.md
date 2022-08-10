@@ -10,60 +10,51 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>bind()</strong></code> 方法创建一个新的函数，在 <code>bind()</code> 被调用时，这个新函数的 <code>this</code> 被指定为 <code>bind()</code> 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+**`bind()`** 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
 
-<div>{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
 
+## 语法
 
+```plain
+function.bind(thisArg[, arg1[, arg2[, ...]]])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>function</var></code>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</pre>
+- `thisArg`
+  - : 调用绑定函数时作为 `this` 参数传递给目标函数的值。 如果使用{{jsxref("Operators/new", "new")}}运算符构造绑定函数，则忽略该值。当使用 `bind` 在 `setTimeout` 中创建一个函数（作为回调提供）时，作为 `thisArg` 传递的任何原始值都将转换为 `object`。如果 `bind` 函数的参数列表为空，或者`thisArg`是`null`或`undefined`，执行作用域的 `this` 将被视为新函数的 `thisArg`。
+- `arg1, arg2, ...`
+  - : 当目标函数被调用时，被预置入绑定函数的参数列表中的参数。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>thisArg</code></dt>
- <dd>调用绑定函数时作为 <code>this</code> 参数传递给目标函数的值。 如果使用{{jsxref("Operators/new", "new")}}运算符构造绑定函数，则忽略该值。当使用 <code>bind</code> 在 <code>setTimeout</code> 中创建一个函数（作为回调提供）时，作为 <code>thisArg</code> 传递的任何原始值都将转换为 <code>object</code>。如果 <code>bind</code> 函数的参数列表为空，或者<code>thisArg</code>是<code>null</code>或<code>undefined</code>，执行作用域的 <code>this</code> 将被视为新函数的 <code>thisArg</code>。</dd>
- <dt><code>arg1, arg2, ...</code></dt>
- <dd>当目标函数被调用时，被预置入绑定函数的参数列表中的参数。</dd>
-</dl>
+返回一个原函数的拷贝，并拥有指定的 **`this`** 值和初始参数。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>返回一个原函数的拷贝，并拥有指定的 <strong><code>this</code></strong> 值和初始参数。</p>
+**bind()** 函数会创建一个新的**绑定函数**（**bound function**，BF）。绑定函数是一个 exotic function object（怪异函数对象，ECMAScript 2015 中的术语），它包装了原函数对象。调用**绑定函数**通常会导致执行**包装函数**。
+**绑定函数**具有以下内部属性：
 
-<h2 id="描述">描述</h2>
+- **\[\[BoundTargetFunction]]** - 包装的函数对象
+- **\[\[BoundThis]]** - 在调用包装函数时始终作为 **this** 值传递的值。
+- **\[\[BoundArguments]]** - 列表，在对包装函数做任何调用都会优先用列表元素填充参数列表。
+- **\[\[Call]]** - 执行与此对象关联的代码。通过函数调用表达式调用。内部方法的参数是一个**this**值和一个包含通过调用表达式传递给函数的参数的列表。
 
-<div><strong>bind()</strong> 函数会创建一个新的<strong>绑定函数</strong>（<strong>bound function</strong>，BF）。绑定函数是一个 exotic function object（怪异函数对象，ECMAScript 2015 中的术语），它包装了原函数对象。调用<strong>绑定函数</strong>通常会导致执行<strong>包装函数</strong>。<br>
-<strong>绑定函数</strong>具有以下内部属性：</div>
+当调用绑定函数时，它调用 **\[\[BoundTargetFunction]]** 上的内部方法 **\[\[Call]]**，就像这样 **Call(_boundThis_, _args_)**。其中，**boundThis** 是 **\[\[BoundThis]]**，**args** 是 **\[\[BoundArguments]]** 加上通过函数调用传入的参数列表。
 
+绑定函数也可以使用 {{jsxref("Operators/new", "new")}} 运算符构造，它会表现为目标函数已经被构建完毕了似的。提供的 `this` 值会被忽略，但前置参数仍会提供给模拟函数。
 
+## 示例
 
-<div>
-<ul>
- <li><strong>[[BoundTargetFunction]]</strong> - 包装的函数对象</li>
- <li><strong>[[BoundThis]]</strong> - 在调用包装函数时始终作为 <strong>this</strong> 值传递的值。</li>
- <li><strong>[[BoundArguments]]</strong> - 列表，在对包装函数做任何调用都会优先用列表元素填充参数列表。</li>
- <li><strong>[[Call]]</strong> - 执行与此对象关联的代码。通过函数调用表达式调用。内部方法的参数是一个<strong>this</strong>值和一个包含通过调用表达式传递给函数的参数的列表。</li>
-</ul>
+### 创建绑定函数
 
-<p>当调用绑定函数时，它调用 <strong>[[BoundTargetFunction]]</strong> 上的内部方法 <strong>[[Call]]</strong>，就像这样 <strong>Call(<em>boundThis</em>, <em>args</em>)</strong>。其中，<strong>boundThis</strong> 是 <strong>[[BoundThis]]</strong>，<strong>args</strong> 是 <strong>[[BoundArguments]]</strong> 加上通过函数调用传入的参数列表。</p>
-</div>
+`bind()` 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 **`this`** 值。JavaScript 新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 `this` 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：
 
-<div>
-<p>绑定函数也可以使用 {{jsxref("Operators/new", "new")}} 运算符构造，它会表现为目标函数已经被构建完毕了似的。提供的 <code>this</code> 值会被忽略，但前置参数仍会提供给模拟函数。</p>
-</div>
-
-<h2 id="示例">示例</h2>
-
-<h3 id="创建绑定函数">创建绑定函数</h3>
-
-<p><code>bind()</code> 最简单的用法是创建一个函数，不论怎么调用，这个函数都有同样的 <strong><code>this</code></strong> 值。JavaScript 新手经常犯的一个错误是将一个方法从对象中拿出来，然后再调用，期望方法中的 <code>this</code> 是原来的对象（比如在回调中传入这个方法）。如果不做特殊处理的话，一般会丢失原来的对象。基于这个函数，用原始的对象创建一个绑定函数，巧妙地解决了这个问题：</p>
-
-<pre class="brush: js">this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
+```js
+this.x = 9;    // 在浏览器中，this 指向全局的 "window" 对象
 var module = {
   x: 81,
   getX: function() { return this.x; }
@@ -79,13 +70,14 @@ retrieveX();
 // 新手可能会将全局变量 x 与 module 的属性 x 混淆
 var boundGetX = retrieveX.bind(module);
 boundGetX(); // 81
-</pre>
+```
 
-<h3 id="偏函数">偏函数</h3>
+### 偏函数
 
-<p><code>bind()</code> 的另一个最简单的用法是使一个函数拥有预设的初始参数。只要将这些参数（如果有的话）作为 <code>bind()</code> 的参数写在 <code>this</code> 后面。当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们后面。</p>
+`bind()` 的另一个最简单的用法是使一个函数拥有预设的初始参数。只要将这些参数（如果有的话）作为 `bind()` 的参数写在 `this` 后面。当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们后面。
 
-<pre class="brush: js">function list() {
+```js
+function list() {
   return Array.prototype.slice.call(arguments);
 }
 
@@ -114,13 +106,14 @@ var result2 = addThirtySeven(5);
 
 var result3 = addThirtySeven(5, 10);
 // 37 + 5 = 42 ，第二个参数被忽略
-</pre>
+```
 
-<h3 id="配合_setTimeout">配合 <code>setTimeout</code></h3>
+### 配合 `setTimeout`
 
-<p>在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，<code>this</code> 关键字会指向 {{ domxref("window") }}（或 <code>global</code>）对象。当类的方法中需要 <code>this</code> 指向类的实例时，你可能需要显式地把 <code>this</code> 绑定到回调函数，就不会丢失该实例的引用。</p>
+在默认情况下，使用 {{ domxref("window.setTimeout()") }} 时，`this` 关键字会指向 {{ domxref("window") }}（或 `global`）对象。当类的方法中需要 `this` 指向类的实例时，你可能需要显式地把 `this` 绑定到回调函数，就不会丢失该实例的引用。
 
-<pre class="brush: js"><code>function LateBloomer() {
+```js
+function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
 }
 
@@ -135,17 +128,17 @@ LateBloomer.prototype.declare = function() {
 };
 
 var flower = new LateBloomer();
-flower.bloom();  // 一秒钟后，调用 'declare' 方法</code></pre>
+flower.bloom();  // 一秒钟后，调用 'declare' 方法
+```
 
-<h3 id="作为构造函数使用的绑定函数">作为构造函数使用的绑定函数</h3>
+### 作为构造函数使用的绑定函数
 
-<div class="warning">
-<p><strong>警告：</strong>这部分演示了 JavaScript 的能力并且记录了 <code>bind()</code> 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。</p>
-</div>
+> **警告：**这部分演示了 JavaScript 的能力并且记录了 `bind()` 的超前用法。以下展示的方法并不是最佳的解决方案，且可能不应该用在任何生产环境中。
 
-<p>绑定函数自动适应于使用 {{jsxref("Operators/new", "new")}} 操作符去构造一个由目标函数创建的新实例。当一个绑定函数是用来构建一个值的，原来提供的 <code>this</code> 就会被忽略。不过提供的参数列表仍然会插入到构造函数调用时的参数列表之前。</p>
+绑定函数自动适应于使用 {{jsxref("Operators/new", "new")}} 操作符去构造一个由目标函数创建的新实例。当一个绑定函数是用来构建一个值的，原来提供的 `this` 就会被忽略。不过提供的参数列表仍然会插入到构造函数调用时的参数列表之前。
 
-<pre class="brush: js">function Point(x, y) {
+```js
+function Point(x, y) {
   this.x = x;
   this.y = y;
 }
@@ -174,11 +167,13 @@ axisPoint.toString(); // '0,5'
 
 axisPoint instanceof Point; // true
 axisPoint instanceof YAxisPoint; // true
-new YAxisPoint(17, 42) instanceof Point; // true</pre>
+new YAxisPoint(17, 42) instanceof Point; // true
+```
 
-<p>请注意，你不需要做特别的处理就可以创建一个和 {{jsxref("Operators/new", "new")}} 操作符一起使用的绑定函数。也就是说，你不需要做特别处理就可以创建一个可以被直接调用的绑定函数，即使你更希望绑定函数是用 {{jsxref("Operators/new", "new")}} 操作符来调用。</p>
+请注意，你不需要做特别的处理就可以创建一个和 {{jsxref("Operators/new", "new")}} 操作符一起使用的绑定函数。也就是说，你不需要做特别处理就可以创建一个可以被直接调用的绑定函数，即使你更希望绑定函数是用 {{jsxref("Operators/new", "new")}} 操作符来调用。
 
-<pre class="brush: js">// ...接着上面的代码继续的话，
+```js
+// ...接着上面的代码继续的话，
 // 这个例子可以直接在你的 JavaScript 控制台运行
 
 // 仍然能作为一个普通函数来调用
@@ -186,47 +181,47 @@ new YAxisPoint(17, 42) instanceof Point; // true</pre>
 YAxisPoint(13);
 
 emptyObj.x + ',' + emptyObj.y;   //  '0,13'
-</pre>
+```
 
-<p>如果你希望一个绑定函数要么只能用 {{jsxref("Operators/new", "new")}} 操作符，要么只能直接调用，那你必须在目标函数上显式规定这个限制。</p>
+如果你希望一个绑定函数要么只能用 {{jsxref("Operators/new", "new")}} 操作符，要么只能直接调用，那你必须在目标函数上显式规定这个限制。
 
-<h3 id="快捷调用">快捷调用</h3>
+### 快捷调用
 
-<p>在你想要为一个需要特定的 <strong><code>this</code></strong> 值的函数创建一个捷径（shortcut）的时候，<code>bind()</code> 也很好用。</p>
+在你想要为一个需要特定的 **`this`** 值的函数创建一个捷径（shortcut）的时候，`bind()` 也很好用。
 
-<p>你可以用 {{jsxref("Array.prototype.slice")}} 来将一个类似于数组的对象（array-like object）转换成一个真正的数组，就拿它来举例子吧。你可以简单地这样写：</p>
+你可以用 {{jsxref("Array.prototype.slice")}} 来将一个类似于数组的对象（array-like object）转换成一个真正的数组，就拿它来举例子吧。你可以简单地这样写：
 
-<pre class="brush: js">var slice = Array.prototype.slice;
+```js
+var slice = Array.prototype.slice;
 
 // ...
 
-slice.apply(arguments);</pre>
+slice.apply(arguments);
+```
 
-<p>用 <code>bind()</code>可以使这个过程变得简单。在下面这段代码里面，<code>slice</code> 是 {{jsxref("Function.prototype")}} 的 {{jsxref("Function.prototype.apply()", "apply()")}} 方法的绑定函数，并且将 {{jsxref("Array.prototype")}} 的 {{jsxref("Array.prototype.slice()", "slice()")}} 方法作为 <strong><code>this</code></strong> 的值。这意味着我们压根儿用不着上面那个 <code>apply()</code>调用了。</p>
+用 `bind()`可以使这个过程变得简单。在下面这段代码里面，`slice` 是 {{jsxref("Function.prototype")}} 的 {{jsxref("Function.prototype.apply()", "apply()")}} 方法的绑定函数，并且将 {{jsxref("Array.prototype")}} 的 {{jsxref("Array.prototype.slice()", "slice()")}} 方法作为 **`this`** 的值。这意味着我们压根儿用不着上面那个 `apply()`调用了。
 
-<pre class="brush: js">// 与前一段代码的 "slice" 效果相同
+```js
+// 与前一段代码的 "slice" 效果相同
 var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.apply.bind(unboundSlice);
 
 // ...
 
-slice(arguments);</pre>
+slice(arguments);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><code>Function.prototype.bind</code> 的 polyfill 可以参考 <a href="https://github.com/zloirock/core-js#ecmascript-function">core-js</a></li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Functions", "函数")}}</li>
-</ul>
+- `Function.prototype.bind` 的 polyfill 可以参考 [core-js](https://github.com/zloirock/core-js#ecmascript-function)
+- {{jsxref("Function.prototype.apply()")}}
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Functions", "函数")}}

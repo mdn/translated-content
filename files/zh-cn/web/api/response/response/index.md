@@ -3,60 +3,57 @@ title: Response()
 slug: Web/API/Response/Response
 translation_of: Web/API/Response/Response
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
+**`Response()`** 构造函数创建了一个新的 {{domxref("Response")}} 对象。
 
+## 语法
 
-<p><code><strong>Response()</strong></code> 构造函数创建了一个新的  {{domxref("Response")}} 对象。</p>
+```plain
+let myResponse = new Response(body, init);
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox notranslate">let <var>myResponse</var> = new Response(<var>body</var>, <var>init</var>);</pre>
+- _body_ {{optional_inline}}
 
-<h3 id="参数">参数</h3>
+  - : 一个定义 response 中 body 的对象。可以为 `null` ，或是以下其中一个：
 
-<dl>
- <dt><em>body</em> {{optional_inline}}</dt>
- <dd>一个定义 response 中 body 的对象。可以为 <code>null</code> ，或是以下其中一个：
- <ul>
-  <li>{{domxref("Blob")}}</li>
-  <li>{{domxref("BufferSource")}}</li>
-  <li>{{domxref("FormData")}}</li>
-  <li>{{domxref("ReadableStream")}}</li>
-  <li>{{domxref("URLSearchParams")}}</li>
-  <li>{{domxref("USVString")}}</li>
- </ul>
- </dd>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：
- <ul>
-  <li><code>status</code>: response 的状态码，例如：<code>200</code>.</li>
-  <li><code>statusText</code>: 和状态码关联的状态消息，例如: <code>OK</code>.</li>
-  <li><code>headers</code>: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>).</li>
- </ul>
- </dd>
-</dl>
+    - {{domxref("Blob")}}
+    - {{domxref("BufferSource")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{domxref("USVString")}}
 
-<h2 id="例子">例子</h2>
+- _init_ {{optional_inline}}
 
-<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response 示例</a>中 (参见<a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 <code>status</code> 和<code>statusText</code>的 init 对象：</p>
+  - : 一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：
 
-<pre class="brush: js notranslate">var myBlob = new Blob();
+    - `status`: response 的状态码，例如：`200`.
+    - `statusText`: 和状态码关联的状态消息，例如: `OK`.
+    - `headers`: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 [HTTP headers](/en-US/docs/Web/HTTP/Headers)).
+
+## 例子
+
+在我们的 [Fetch Response 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response)中 (参见[Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) 我们使用构造函数创建了一个新的 Response 对象，传递一个新的 {{domxref("Blob")}} 作为 body，和一个包含自定义 `status` 和`statusText`的 init 对象：
+
+```js
+var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);</pre>
+var myResponse = new Response(myBlob,init);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Response.Response")}}</p>
+{{Compat("api.Response.Response")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

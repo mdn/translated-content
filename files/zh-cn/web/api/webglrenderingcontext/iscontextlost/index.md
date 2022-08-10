@@ -5,39 +5,41 @@ tags:
   - WebGL 上下文丢失
 translation_of: Web/API/WebGLRenderingContext/isContextLost
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code><strong>WebGLRenderingContext.isContextLost()</strong></code> 方法返回一个{{jsxref("Boolean")}} 标记 WebGL 的上下文是否已经丢失。</p>
+**`WebGLRenderingContext.isContextLost()`** 方法返回一个{{jsxref("Boolean")}} 标记 WebGL 的上下文是否已经丢失。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>gl</em></var>.isContextLost();</pre>
+```plain
+gl.isContextLost();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p> {{jsxref("Boolean")}}。如果上下文丢失则返回 true，否则返回 false。</p>
+{{jsxref("Boolean")}}。如果上下文丢失则返回 true，否则返回 false。
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<p>比如，当检查程序链接成功时，你也可以检查是否上下文已经丢失。</p>
+比如，当检查程序链接成功时，你也可以检查是否上下文已经丢失。
 
-<pre class="brush: js">gl.linkProgram(program);
+```js
+gl.linkProgram(program);
 
-if (!gl.getProgramParameter(program, gl.LINK_STATUS) &amp;&amp; !gl.isContextLost()) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
   var info = gl.getProgramInfoLog(program);
   console.log('Error linking program:\n' + info);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.isContextLost")}}</p>
+{{Compat("api.WebGLRenderingContext.isContextLost")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>The {{domxref("WebGLContextEvent")}} signals changes in the context state.</li>
-</ul>
+- The {{domxref("WebGLContextEvent")}} signals changes in the context state.

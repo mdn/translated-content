@@ -9,34 +9,35 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number.isInteger()</code></strong> 方法用来判断给定的参数是否为整数。</p>
+**`Number.isInteger()`** 方法用来判断给定的参数是否为整数。
 
-<p>{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}</p>
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Number.isInteger(v<var>alue</var>)</code></pre>
+```plain
+Number.isInteger(value)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>要判断此参数是否为整数</dd>
-</dl>
+- `value`
+  - : 要判断此参数是否为整数
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>判断给定值是否是整数的 {{jsxref("Boolean")}} 值。</p>
+判断给定值是否是整数的 {{jsxref("Boolean")}} 值。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果被检测的值是整数，则返回 <code>true</code>，否则返回 <code>false</code>。注意 {{jsxref("Global_Objects/NaN", "NaN")}} 和正负 {{jsxref("Global_Objects/Infinity", "Infinity")}} 不是整数。</p>
+如果被检测的值是整数，则返回 `true`，否则返回 `false`。注意 {{jsxref("Global_Objects/NaN", "NaN")}} 和正负 {{jsxref("Global_Objects/Infinity", "Infinity")}} 不是整数。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js">Number.isInteger(0);         // true
+```js
+Number.isInteger(0);         // true
 Number.isInteger(1);         // true
 Number.isInteger(-100000);   // true
 
@@ -48,27 +49,27 @@ Number.isInteger(-Infinity); // false
 Number.isInteger("10");      // false
 Number.isInteger(true);      // false
 Number.isInteger(false);     // false
-Number.isInteger([1]);       // false</pre>
+Number.isInteger([1]);       // false
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
-    return typeof value === "number" &amp;&amp;
-           isFinite(value) &amp;&amp;
+```js
+Number.isInteger = Number.isInteger || function(value) {
+    return typeof value === "number" &&
+           isFinite(value) &&
            Math.floor(value) === value;
 };
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Number", "Number")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Number", "Number")}}

@@ -4,37 +4,38 @@ slug: Web/API/HTMLInputElement/selectionchange_event
 translation_of: Web/API/GlobalEventHandlers/onselectionchange
 original_slug: Web/API/GlobalEventHandlers/onselectionchange
 ---
-<div>{{ApiRef('DOM')}}{{SeeCompatTable}}</div>
+{{ApiRef('DOM')}}{{SeeCompatTable}}
 
-<p><code><strong>GlobalEventHandlers.onselectionchange</strong></code>  属性表示当一个 {{event("selectstart")}} 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器</p>
+**`GlobalEventHandlers.onselectionchange`** 属性表示当一个 {{event("selectstart")}} 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>obj</em>.onselectionchange = <em>function</em>;
-</pre>
+```plain
+obj.onselectionchange = function;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var selection;
+```js
+var selection;
 
 document.onselectionchange = function() {
   console.log('New selection made');
   selection = document.getSelection();
-};</pre>
+};
+```
 
-<p>完整例子请参阅<a href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key quote generator</a> demo.</p>
+完整例子请参阅[Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{event("selectionchange")}}</li>
- <li>{{domxref("GlobalEventHandlers.onselectstart")}}</li>
-</ul>
+- {{event("selectionchange")}}
+- {{domxref("GlobalEventHandlers.onselectstart")}}

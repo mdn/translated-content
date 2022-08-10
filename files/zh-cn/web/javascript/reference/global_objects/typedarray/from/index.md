@@ -6,80 +6,68 @@ tags:
   - 类型数组
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>TypedArray.from()</code> 方法 从一个类数组或者可迭代对象中创建一个新<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型数组</a>。 这个方法和 {{jsxref("Array.from()")}} 类似。</p>
+`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。 这个方法和 {{jsxref("Array.from()")}} 类似。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><code><em>TypedArray</em>.from(source[, mapFn[, thisArg]])</code>
-</pre>
+```js
+TypedArray.from(source[, mapFn[, thisArg]])
+```
 
-<p>上面代码中的 <code>TypedArray</code> 需要替换为下面的任何一个构造函数：</p>
+上面代码中的 `TypedArray` 需要替换为下面的任何一个构造函数：
 
-<div class="threecolumns">
-<ul>
- <li>
-  <p>{{jsxref("Int8Array")}}</p>
- </li>
- <li>{{jsxref("Uint8Array")}}</li>
- <li>{{jsxref("Uint8ClampedArray")}}</li>
- <li>{{jsxref("Int16Array")}}</li>
- <li>{{jsxref("Uint16Array")}}</li>
- <li>{{jsxref("Int32Array")}}</li>
- <li>{{jsxref("Uint32Array")}}</li>
- <li>{{jsxref("Float32Array")}}</li>
- <li>{{jsxref("Float64Array")}}</li>
- <li>{{jsxref("BigInt64Array")}}</li>
- <li>{{jsxref("BigUint64Array")}}</li>
-</ul>
-</div>
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
+- {{jsxref("BigInt64Array")}}
+- {{jsxref("BigUint64Array")}}
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>source</code></em></dt>
- <dd>想要转换为类型数组的类数组或者可迭代对象。</dd>
- <dt><em><code>mapFn</code></em></dt>
- <dd>可选参数。如果指定了该参数，则最后生成的类型数组会经过该函数的加工处理后再返回。</dd>
- <dt><em><code>thisArg</code></em></dt>
- <dd>可选参数。执行 <code>mapFn</code> 函数时 <code>this</code> 的值。</dd>
-</dl>
+- _`source`_
+  - : 想要转换为类型数组的类数组或者可迭代对象。
+- _`mapFn`_
+  - : 可选参数。如果指定了该参数，则最后生成的类型数组会经过该函数的加工处理后再返回。
+- _`thisArg`_
+  - : 可选参数。执行 `mapFn` 函数时 `this` 的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的 {{jsxref("TypedArray")}} 实例。</p>
+一个新的 {{jsxref("TypedArray")}} 实例。
 
-<h2 id="描述"> 描述</h2>
+## 描述
 
-<p><code><em>TypedArray</em>.from()</code> 允许你从下面两者来创建数组：</p>
+`TypedArray.from()` 允许你从下面两者来创建数组：
 
-<ul>
- <li>类数组对象（拥有一个 <code>length</code> 属性和若干索引属性的任意对象）</li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Guide/iterable">可迭代对象</a>（你可以从它身上迭代出若干个元素的对象，比如有 {{jsxref("Map")}} 和 {{jsxref("Set")}} 等）。</li>
-</ul>
+- 类数组对象（拥有一个 `length` 属性和若干索引属性的任意对象）
+- [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（你可以从它身上迭代出若干个元素的对象，比如有 {{jsxref("Map")}} 和 {{jsxref("Set")}} 等）。
 
-<p><code><em>TypedArray</em>.from()</code> 方法有一个可选参数 <code>mapFn</code>, 让你可以在最后生成的类型数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说以下两种形式是等价的：</p>
+`TypedArray.from()` 方法有一个可选参数 `mapFn`, 让你可以在最后生成的类型数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说以下两种形式是等价的：
 
-<ul>
- <li><code><em>TypedArray</em>.from(obj, mapFn, thisArg)</code> </li>
- <li><code><em>TypedArray</em>.from(Array.prototype.map.call(obj, mapFn, thisArg))</code></li>
-</ul>
+- `TypedArray.from(obj, mapFn, thisArg)`
+- `TypedArray.from(Array.prototype.map.call(obj, mapFn, thisArg))`
 
-<p> <code>from()</code> 的 <code>length</code> 属性值为 <code>1</code>。</p>
+`from()` 的 `length` 属性值为 `1`。
 
-<p>{{jsxref("Array.from()")}} 和 <code><em>TypedArray</em>.from()</code> 之间有一些微妙的区别：</p>
+{{jsxref("Array.from()")}} 和 `TypedArray.from()` 之间有一些微妙的区别：
 
-<ul>
- <li>如果 <code>|this|</code> 的值传递给 <code><em>TypedArray</em>.from</code> 不是一个构造器，<code><em>TypedArray</em>.from</code> 将抛出{jsxref("TypeError")}}, 而 <code>Array.from</code> 默认将创建一个 {{jsxref("Array")}}.</li>
- <li><code><em>TypedArray</em>.from</code> 使用<code>[Put]</code> 而 <code>rray.from</code> 使用<code>[DefineProperty]]</code>. 因此， 当和 {{jsxref("Proxy")}} 对象一起时， 它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建一个新的元素而非 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.</li>
- <li>当 <code>from</code> 获得一个迭代器时，<code><em>TypedArray</em></code> 一开始收集迭代器中的所有值， 此时创建一个 <code>|this|</code> 的实例用于计数， 然后在实例中设置值。 <code>Array.from</code> 设置每个从迭代器其中获取的值，最后设置它的长度。</li>
- <li>当 <code>Array.from</code> 获得一个不可迭代的类数组时，it respects holes, 而 <code><em>TypedArray</em>.from</code> 将确保结果是 dense.</li>
-</ul>
+- 如果 `|this|` 的值传递给 `TypedArray.from` 不是一个构造器，`TypedArray.from` 将抛出{jsxref("TypeError")}}, 而 `Array.from` 默认将创建一个 {{jsxref("Array")}}.
+- `TypedArray.from` 使用`[Put]` 而 `rray.from` 使用`[DefineProperty]]`. 因此， 当和 {{jsxref("Proxy")}} 对象一起时， 它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建一个新的元素而非 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}.
+- 当 `from` 获得一个迭代器时，`TypedArray` 一开始收集迭代器中的所有值， 此时创建一个 `|this|` 的实例用于计数， 然后在实例中设置值。 `Array.from` 设置每个从迭代器其中获取的值，最后设置它的长度。
+- 当 `Array.from` 获得一个不可迭代的类数组时，it respects holes, 而 `TypedArray.from` 将确保结果是 dense.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// 使用 Set (可迭代对象)
+```js
+// 使用 Set (可迭代对象)
 var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
@@ -91,20 +79,21 @@ Int16Array.from('123');
 
 
 // 使用箭头函数对数组元素进行映射
-Float32Array.from([1, 2, 3], x =&gt; x + x);
+Float32Array.from([1, 2, 3], x => x + x);
 // Float32Array [ 2, 4, 6 ]
 
 
 // 生成一个数字序列
-Uint8Array.from({length: 5}, (v, k) =&gt; k);
+Uint8Array.from({length: 5}, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill </h2>
+## Polyfill
 
-<p>在不支持 <code>from()</code> 的环境中，你可以在你代码的起始位置插入以下代码，来实现对其功能的大部分支持。</p>
+在不支持 `from()` 的环境中，你可以在你代码的起始位置插入以下代码，来实现对其功能的大部分支持。
 
-<pre class="brush: js">if (!Int8Array.__proto__.from) {
+```js
+if (!Int8Array.__proto__.from) {
     (function () {
         Int8Array.__proto__.from = function (obj, func, thisObj) {
 
@@ -129,33 +118,32 @@ Uint8Array.from({length: 5}, (v, k) =&gt; k);
                 return new this(0);
             }
             var copy_data = [];
-            for(var i = 0; i &lt; obj.length; i++) {
+            for(var i = 0; i < obj.length; i++) {
                 copy_data.push(obj[i]);
             }
 
             copy_data = copy_data.map(func, thisObj);
 
             var typed_array = new this(copy_data.length);
-            for(var i = 0; i &lt; typed_array.length; i++) {
+            for(var i = 0; i < typed_array.length; i++) {
                 typed_array[i] = copy_data[i];
             }
             return typed_array;
         }
     })();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.of()")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
-</ul>
+- {{jsxref("TypedArray.of()")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("Array.prototype.map()")}}

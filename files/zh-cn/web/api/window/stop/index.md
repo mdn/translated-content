@@ -9,26 +9,26 @@ tags:
   - 方法
 translation_of: Web/API/Window/stop
 ---
-<div> {{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>window.stop()</code></strong> 方法的效果相当于点击了浏览器的停止按钮。由于脚本的加载顺序，该方法不能阻止已经包含在加载中的文档，但是它能够阻止图片、新窗口、和一些会延迟加载的对象的加载。</p>
+**`window.stop()`** 方法的效果相当于点击了浏览器的停止按钮。由于脚本的加载顺序，该方法不能阻止已经包含在加载中的文档，但是它能够阻止图片、新窗口、和一些会延迟加载的对象的加载。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.stop()
-</pre>
+```plain
+window.stop()
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">window.stop();
-</pre>
+```js
+window.stop();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.Window.stop")}}</p>
+{{Compat("api.Window.stop")}}

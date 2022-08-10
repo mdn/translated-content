@@ -3,48 +3,49 @@ title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.getPrototypeOf()</code></strong> 与 {{jsxref("Object.getPrototypeOf()")}} 方法几乎是一样的。都是返回指定对象的原型（即内部的 <code>[[Prototype]]</code> 属性的值）。</p>
+静态方法 **`Reflect.getPrototypeOf()`** 与 {{jsxref("Object.getPrototypeOf()")}} 方法几乎是一样的。都是返回指定对象的原型（即内部的 `[[Prototype]]` 属性的值）。
 
-<p>{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}</p>
+{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.getPrototypeOf(target)
-</pre>
+```plain
+Reflect.getPrototypeOf(target)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>获取原型的目标对象。</dd>
-</dl>
+- `target`
+  - : 获取原型的目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxref("null")}}。</p>
+给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxref("null")}}。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果 <code><var>target</var></code> 不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}} 异常。</p>
+如果 `target` 不是 {{jsxref("Object")}}，抛出一个 {{jsxref("TypeError")}} 异常。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.getPrototypeOf</code> 返回指定对象的原型 (即内部的 <code>[[Prototype]]</code> 属性的值) 。</p>
+`Reflect.getPrototypeOf` 返回指定对象的原型 (即内部的 `[[Prototype]]` 属性的值) 。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.getPrototypeOf">使用 <code>Reflect.getPrototypeOf()</code></h3>
+### 使用 `Reflect.getPrototypeOf()`
 
-<pre class="brush: js">Reflect.getPrototypeOf({}); // Object.prototype
+```js
+Reflect.getPrototypeOf({}); // Object.prototype
 Reflect.getPrototypeOf(Object.prototype); // null
 Reflect.getPrototypeOf(Object.create(null)); // null
-</pre>
+```
 
-<h3 id="与_Object.getPrototypeOf_比较">与 <code>Object.getPrototypeOf()</code> 比较</h3>
+### 与 `Object.getPrototypeOf()` 比较
 
-<pre>// 如果参数为 Object，返回结果相同
+```plain
+// 如果参数为 Object，返回结果相同
 Object.getPrototypeOf({})   // Object.prototype
 Reflect.getPrototypeOf({})  // Object.prototype
 
@@ -57,19 +58,18 @@ Object.getPrototypeOf('foo')   // String.prototype
 Reflect.getPrototypeOf('foo')  // Throws TypeError
 
 // 如果想要模拟 Object 在 ES2015 规范下的表现，需要强制类型转换
-Reflect.getPrototypeOf(Object('foo'))  // String.prototype</pre>
+Reflect.getPrototypeOf(Object('foo'))  // String.prototype
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getPrototypeOf()")}}

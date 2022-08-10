@@ -17,35 +17,34 @@ tags:
   - 读取数据
 translation_of: Web/API/XMLHttpRequest/response
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>{{domxref("XMLHttpRequest")}} <code><strong>response</strong></code> 属性返回响应的正文。返回的类型为 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}} 、 {{domxref("Document")}}、JavaScript {{jsxref("Object")}} 或 {{domxref("DOMString")}} 中的一个。这取决于 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性。</p>
+{{domxref("XMLHttpRequest")}} **`response`** 属性返回响应的正文。返回的类型为 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}} 、 {{domxref("Document")}}、JavaScript {{jsxref("Object")}} 或 {{domxref("DOMString")}} 中的一个。这取决于 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>body</em> = <em>XMLHttpRequest</em>.response;
-</pre>
+```plain
+var body = XMLHttpRequest.response;
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<p>一个对象，其类型取决于 {{domxref("XMLHttpRequest.responseType", "responseType")}} 的值。你可以尝试设置 <code>responseType</code> 的值，以便通过特定的类型请求数据。 <code>responseType</code> 要在调用 {{domxref("XMLHttpRequest.open", "open()")}} 初始化请求之后调用，并且要在调用 {{domxref("XMLHttpRequest.send", "send()")}} 发送请求到服务器之前调用。</p>
+一个对象，其类型取决于 {{domxref("XMLHttpRequest.responseType", "responseType")}} 的值。你可以尝试设置 `responseType` 的值，以便通过特定的类型请求数据。 `responseType` 要在调用 {{domxref("XMLHttpRequest.open", "open()")}} 初始化请求之后调用，并且要在调用 {{domxref("XMLHttpRequest.send", "send()")}} 发送请求到服务器之前调用。
 
-<p>如果请求尚未完成或未成功，则取值是 <code>null</code>。例外的，读取文本数据时如果将 <code>responseType</code> 的值设置成 <code>"text"</code> 或空字符串（<code>""</code>）且当请求状态还在是 <code>LOADING</code> {{domxref("XMLHttpRequest.readyState", "readyState")}} (3) 时，response 包含到目前为止该请求已经取得的内容。</p>
+如果请求尚未完成或未成功，则取值是 `null`。例外的，读取文本数据时如果将 `responseType` 的值设置成 `"text"` 或空字符串（`""`）且当请求状态还在是 `LOADING` {{domxref("XMLHttpRequest.readyState", "readyState")}} (3) 时，response 包含到目前为止该请求已经取得的内容。
 
-<p>响应的类型如下所示。</p>
+响应的类型如下所示。
 
-<p>{{page("/zh-CN/docs/Web/API/XMLHttpRequestResponseType", "取值")}}</p>
+{{page("/zh-CN/docs/Web/API/XMLHttpRequestResponseType", "取值")}}
 
-<dl>
-</dl>
+## 例子
 
-<h2 id="例子">例子</h2>
+此例子提供了一个方法—— `load()` ，它可以从服务器加载和处理页面。它通过创建一个 {{domxref("XMLHttpRequest")}} 对象并为 {{event("readystatechange")}} 事件创建一个监听器。这样的话，当 `readyState` 变成 `DONE` (4) 时就会获取 `response` 并将其传递给 `load()` 中提供的回调函数。
 
-<p>此例子提供了一个方法—— <code>load()</code> ，它可以从服务器加载和处理页面。它通过创建一个 {{domxref("XMLHttpRequest")}} 对象并为 {{event("readystatechange")}} 事件创建一个监听器。这样的话，当 <code>readyState</code> 变成 <code>DONE</code> (4) 时就会获取 <code>response</code> 并将其传递给 <code>load()</code> 中提供的回调函数。</p>
+返回的内容会被作为原始文本数据处理（因为这里没有覆盖 {{domxref("XMLHttpRequest.responseType", "responseType")}} 的默认值）。
 
-<p>返回的内容会被作为原始文本数据处理（因为这里没有覆盖 {{domxref("XMLHttpRequest.responseType", "responseType")}} 的默认值）。</p>
-
-<pre class="brush: js">var url = 'somePage.html'; // 一个本地页面
+```js
+var url = 'somePage.html'; // 一个本地页面
 
 function load(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -59,20 +58,17 @@ function load(url, callback) {
   xhr.open('GET', url, true);
   xhr.send('');
 }
+```
 
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.XMLHttpRequest.response")}}</p>
+{{Compat("api.XMLHttpRequest.response")}}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
- <li>获取文本和 HTML/XML 数据：{{domxref("XMLHttpRequest.responseText")}} 和 {{domxref("XMLHttpRequest.responseXML")}}</li>
-</ul>
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- 获取文本和 HTML/XML 数据：{{domxref("XMLHttpRequest.responseText")}} 和 {{domxref("XMLHttpRequest.responseXML")}}

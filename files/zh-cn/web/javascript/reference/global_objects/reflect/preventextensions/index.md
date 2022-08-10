@@ -3,73 +3,72 @@ title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.preventExtensions()</code></strong> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 <a href="#与_object.preventextensions_的不同点">differences</a>。</p>
+静态方法 **`Reflect.preventExtensions()`** 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 [differences](#与_object.preventextensions_的不同点)。
 
-<p>{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}</p>
+{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.preventExtensions(target)
-</pre>
+```plain
+Reflect.preventExtensions(target)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>阻止扩展的目标对象。</dd>
-</dl>
+- `target`
+  - : 阻止扩展的目标对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Boolean")}} 值表明目标对象是否成功被设置为不可扩展。</p>
+返回一个 {{jsxref("Boolean")}} 值表明目标对象是否成功被设置为不可扩展。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>抛出一个 {{jsxref("TypeError")}} 错误，如果 <code>target</code> 不是 {{jsxref("Object")}}。</p>
+抛出一个 {{jsxref("TypeError")}} 错误，如果 `target` 不是 {{jsxref("Object")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.preventExtensions</code> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与  {{jsxref("Object.preventExtensions()")}} 方法相似。</p>
+`Reflect.preventExtensions` 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}} 方法相似。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.preventExtensions">使用 <code>Reflect.preventExtensions()</code></h3>
+### 使用 `Reflect.preventExtensions()`
 
-<p>详情可见 {{jsxref("Object.preventExtensions()")}}.</p>
+详情可见 {{jsxref("Object.preventExtensions()")}}.
 
-<pre class="brush: js">// Objects are extensible by default.
+```js
+// Objects are extensible by default.
 var empty = {};
 Reflect.isExtensible(empty); // === true
 
 // ...but that can be changed.
 Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty); // === false
-</pre>
+```
 
-<h3 id="与_Object.preventExtensions_的不同点">与 <code>Object.preventExtensions()</code> 的不同点</h3>
+### 与 `Object.preventExtensions()` 的不同点
 
-<p>如果该方法的 <em><code>target</code></em> 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。 对于{{jsxref("Object.preventExtensions()")}} 方法， 非对象的 <em><code>target</code></em> 参数将被强制转换为对象。</p>
+如果该方法的 _`target`_ 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。 对于{{jsxref("Object.preventExtensions()")}} 方法， 非对象的 _`target`_ 参数将被强制转换为对象。
 
-<pre class="brush: js">Reflect.preventExtensions(1);
+```js
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
 Object.preventExtensions(1);
 // 1
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

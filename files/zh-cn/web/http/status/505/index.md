@@ -6,20 +6,20 @@ tags:
   - 服务器端错误
 translation_of: Web/HTTP/Status/505
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>505 HTTP Version Not Supported</code></strong> 是一种 HTTP 协议的服务器端错误状态代码，表示服务器不支持请求所使用的 HTTP 版本。</p>
+**`505 HTTP Version Not Supported`** 是一种 HTTP 协议的服务器端错误状态代码，表示服务器不支持请求所使用的 HTTP 版本。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">505 HTTP Version Not Supported</pre>
+```plain
+505 HTTP Version Not Supported
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Upgrade")}}</li>
-</ul>
+- {{HTTPHeader("Upgrade")}}
