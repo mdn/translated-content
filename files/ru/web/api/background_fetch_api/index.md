@@ -78,7 +78,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 
