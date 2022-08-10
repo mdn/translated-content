@@ -13,6 +13,7 @@ tags:
   - hasReading
 browser-compat: api.Sensor.hasReading
 ---
+
 {{APIRef("Sensor API")}}
 
 Свойство **`hasReading`** интерфейса {{domxref("Sensor")}} возвращает boolean значение, определяющее считывает ли датчик показания. Только для чтения.
@@ -27,6 +28,6 @@ Boolean значение.
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.reading_event
 ---
+
 {{APIRef("Sensor API")}}
 
 Событие **`reading`** происходит когда на датчике доступны новые показания.
@@ -23,9 +24,9 @@ browser-compat: api.Sensor.reading_event
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
-addEventListener('reading', event => { })
+addEventListener('reading', (event) => {});
 
-onreading = event => { }
+onreading = (event) => {};
 ```
 
 ## Тип события
@@ -39,11 +40,11 @@ onreading = event => { }
 Этот пример добавляет слушатель, который получает значения ускорения из {{domxref("Accelerometer")}}. Слушатель читает данные шестьдесят раз в секунду.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
+const acl = new Accelerometer({ frequency: 60 });
 acl.addEventListener('reading', () => {
-  console.log("Ускорение по оси X " + acl.x);
-  console.log("Ускорение по оси Y " + acl.y);
-  console.log("Ускорение по оси Z " + acl.z);
+  console.log('Ускорение по оси X ' + acl.x);
+  console.log('Ускорение по оси Y ' + acl.y);
+  console.log('Ускорение по оси Z ' + acl.z);
 });
 acl.start();
 ```
@@ -52,7 +53,7 @@ acl.start();
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

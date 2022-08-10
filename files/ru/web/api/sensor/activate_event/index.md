@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.activate_event
 ---
+
 {{APIRef("Sensor API")}}
 
 Событие **`activate`** происходит, когда датчик переходит в активное состояние. Это значит, что он начинает собирать показания.
@@ -23,9 +24,9 @@ browser-compat: api.Sensor.activate_event
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
-addEventListener('activate', event => { })
+addEventListener('activate', (event) => {});
 
-onactivate = event => { }
+onactivate = (event) => {};
 ```
 
 ## Тип события
@@ -39,7 +40,7 @@ onactivate = event => { }
 Этот пример добавляет слушатель события, который логирует активацию {{domxref("Accelerometer")}}.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
+const acl = new Accelerometer({ frequency: 60 });
 acl.addEventListener('activate', () => console.log('Готов к измерениям.'));
 acl.start();
 ```
@@ -48,7 +49,7 @@ acl.start();
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

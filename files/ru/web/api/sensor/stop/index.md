@@ -13,6 +13,7 @@ tags:
   - stop()
 browser-compat: api.Sensor.stop
 ---
+
 {{APIRef("Sensor API")}}
 
 Метод **`stop`** интерфейса {{domxref("Sensor")}} деактивирует датчик.
@@ -20,7 +21,7 @@ browser-compat: api.Sensor.stop
 ## Синтаксис
 
 ```js
-stop()
+stop();
 ```
 
 ### Параметры
@@ -41,6 +42,6 @@ stop()
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

@@ -13,6 +13,7 @@ tags:
   - timeStamp
 browser-compat: api.Sensor.timestamp
 ---
+
 {{APIRef("Sensor API")}}
 
 Свойство **`timestamp`** интерфейса {{domxref("Sensor")}} возвращает время последнего считывания данных. Только для чтения.
@@ -27,6 +28,6 @@ browser-compat: api.Sensor.timestamp
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

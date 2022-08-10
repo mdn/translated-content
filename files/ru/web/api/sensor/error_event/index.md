@@ -12,6 +12,7 @@ tags:
   - Event
 browser-compat: api.Sensor.error_event
 ---
+
 {{APIRef("Sensor API")}}
 
 Событие **`error`** происходит когда на датчике возникает исключение.
@@ -25,9 +26,9 @@ browser-compat: api.Sensor.error_event
 Можно использовать как название события в {{domxref("EventTarget.addEventListener", "addEventListener()")}}, так и как свойство - обработчик события.
 
 ```js
-addEventListener('error', event => { })
+addEventListener('error', (event) => {});
 
-onerror = event => { }
+onerror = (event) => {};
 ```
 
 ## Тип события
@@ -38,10 +39,10 @@ onerror = event => { }
 
 ## Свойства события
 
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+_В дополнение к свойствам описанным ниже, также доступны свойства из родительского интерфейса {{domxref("Event")}}._
 
 - {{domxref('SensorErrorEvent.error', 'error')}} {{readonlyinline}}
-  - : Returns the {{domxref('DOMException')}} that has been thrown.
+  - : Возвращает исключение {{domxref('DOMException')}}.
 
 ## Примеры
 
@@ -50,8 +51,8 @@ _In addition to the properties listed below, properties from the parent interfac
 Этот пример добавляет слушатель события, который логирует ошибку, возникшую при работе {{domxref("Accelerometer")}}.
 
 ```js
-const acl = new Accelerometer({frequency: 60});
-acl.addEventListener('error', error => console.log(`Error: ${error.name}`));
+const acl = new Accelerometer({ frequency: 60 });
+acl.addEventListener('error', (error) => console.log(`Error: ${error.name}`));
 acl.start();
 ```
 
@@ -59,7 +60,7 @@ acl.start();
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

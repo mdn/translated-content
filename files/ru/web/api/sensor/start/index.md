@@ -13,6 +13,7 @@ tags:
   - start()
 browser-compat: api.Sensor.start
 ---
+
 {{APIRef("Sensor API")}}
 
 Метод **`start`** активирует один из датчиков, наследованных от `Sensor`.
@@ -20,7 +21,7 @@ browser-compat: api.Sensor.start
 ## Синтаксис
 
 ```js
-start()
+start();
 ```
 
 ### Параметры
@@ -35,6 +36,6 @@ start()
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

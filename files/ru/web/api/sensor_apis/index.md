@@ -12,13 +12,14 @@ tags:
   - Sensors
 browser-compat: api.Sensor
 ---
+
 {{APIRef("Sensor API")}}
 
 **Sensor APIs** - это набор интерфейсов, построенных по общему дизайну, которые последовательно предоставляют доступ к датчикам устройств на веб-платформе.
 
 ## Концепции и использование Sensor APIs
 
-Несмотря на то, что спецификация Generic Sensor API определяет интерфейс {{domxref('Sensor')}}, вам, как веб-разработчику, не придётся его использовать. Вместо него, для получения данных с конкретных датчиков, вы будете использовать один из его подклассов. Например, интерфейс {{domxref('accelerometer')}} возвращает ускорение устройства по всем трём осям на момент его считывания. 
+Несмотря на то, что спецификация Generic Sensor API определяет интерфейс {{domxref('Sensor')}}, вам, как веб-разработчику, не придётся его использовать. Вместо него, для получения данных с конкретных датчиков, вы будете использовать один из его подклассов. Например, интерфейс {{domxref('accelerometer')}} возвращает ускорение перемещения устройства по всем трём осям на момент его считывания.
 
 Данные с датчиков могут точно соответствовать данным с физических датчиков устройства, либо не соответствовать им. Например, интерфейс датчика {{domxref('Gyroscope')}} точно соответствует интерфейсу физического датчика. В качестве альтернативы, интерфейс {{domxref('AbsoluteOrientationSensor')}} предоставляет информацию, которая алгоритмически объединяет данные с двух и более датчиков устройста. Два эти типа датчиков называются _низкоуровневыми_ и _высокоуровневыми_ соответственно. Второй тип так же называют объединяющим датчиком (либо, виртуальным или, синтетическим).
 
@@ -26,27 +27,27 @@ browser-compat: api.Sensor
 
 Интерфейсы датчиков - это только прокси для датчиков устройства. Как следствие, задача определения возможности использования датчиков гораздо сложнее, чем для других API. Наличие API датчика не значит, что этот API подключен к реальному аппаратному датчику, работает ли он, подключен или, даже, предоставил ли пользователь к нему доступ. Обеспечение постоянного доступа ко всей этой информации приводит к снижению производительности и разряду батареи.
 
-Таким образом, определение возможности использования API датчиков должно включать определение наличия самого этого API и [стратегии оборонительного программирования (см. ниже)](#defensive_programming). 
+Таким образом, определение возможности использования API датчиков должно включать определение наличия самого этого API и [стратегии оборонительного программирования (см. ниже)](#defensive_programming).
 
 Пример ниже показывает три метода определения API датчика. Кроме того, вы можете обернуть создание экземпляра объекта в блок {{jsxref('statements/try...catch', 'try...catch')}}. Обратите внимание, что определение через интерфейс {{domxref('Navigator')}} не единственный возможный путь.
 
 ```js
-if (typeof Gyroscope === "function") {
-    // бег по кругу...
+if (typeof Gyroscope === 'function') {
+  // бег по кругу...
 }
 
-if ("ProximitySensor" in window) {
-    // берегись!
+if ('ProximitySensor' in window) {
+  // берегись!
 }
 
 if (window.AmbientLightSensor) {
-    // погрузись во тьму...
+  // погрузись во тьму...
 }
 ```
 
 ### Оборонительное программирование
 
-Как указано в разделе Возможность использования, проверить наличие конкретного API датчика недостаточно. Наличие фактического датчика также должно быть подтверждено. Как раз здесь и необходимо оборонительное программированиею Оно требует три стратегии.
+Как указано в разделе Возможность использования, проверить наличие конкретного API датчика недостаточно. Наличие фактического датчика также должно быть подтверждено. Как раз здесь и необходимо оборонительное программирование. Оно включает три стратегии.
 
 - Проверка на наличие ошибок при создании экземпляра объекта датчика.
 - Прослушивание ошибок, возникающих во время его использования.
@@ -54,34 +55,34 @@ if (window.AmbientLightSensor) {
 
 Приведенный ниже пример кода иллюстрирует эти принципы. Блок {{jsxref('statements/try...catch', 'try...catch')}} ловит ошибки, возникающие при создании объекта датчика. Этот объект слушает события {{domxref('Sensor.error_event', 'error')}}, чтобы поймать ошибки, возникающие во время использования датчика. Единственный раз, когда что-либо показывается пользователю, это когда необходимо запросить [разрешения](/ru/docs/Web/API/Permissions_API) и когда датчик не поддерживается устройством.
 
-
 > **Note:** Если функциональная политика блокирует использование функции, то это происходит потому, что ваш код не соответствует политикам, установленным на вашем сервере. Это не то, что когда-либо будет показано пользователю. Статья о HTTP заголовке {{httpheader('Feature-Policy')}} содержит инструкцию по реализации.
-
 
 ```js
 let accelerometer = null;
 try {
-    accelerometer = new Accelerometer({ referenceFrame: 'device' });
-    accelerometer.addEventListener('error', event => {
-        // Обработчик ошибок времени исполнения.
-        if (event.error.name === 'NotAllowedError') {
-            // Переход к коду для запроса разрешения.
-        } else if (event.error.name === 'NotReadableError' ) {
-            console.log('Не могу подключиться к датчику.');
-        }
-    });
-    accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
-    accelerometer.start();
-} catch (error) {
-    // Обработчик ошибок создания объекта.
-    if (error.name === 'SecurityError') {
-        // Смотри заметку о функциональных политиках.
-        console.log('Создание экземпляра объекта датчика было задлокировано по функциональным политикам.');
-    } else if (error.name === 'ReferenceError') {
-        console.log('Датчик не поддерживается в User agent.');
-    } else {
-        throw error;
+  accelerometer = new Accelerometer({ referenceFrame: 'device' });
+  accelerometer.addEventListener('error', (event) => {
+    // Обработчик ошибок времени исполнения.
+    if (event.error.name === 'NotAllowedError') {
+      // Переход к коду для запроса разрешения.
+    } else if (event.error.name === 'NotReadableError') {
+      console.log('Не могу подключиться к датчику.');
     }
+  });
+  accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
+  accelerometer.start();
+} catch (error) {
+  // Обработчик ошибок создания объекта.
+  if (error.name === 'SecurityError') {
+    // Смотри заметку о функциональных политиках.
+    console.log(
+      'Создание экземпляра объекта датчика было задлокировано по функциональным политикам.'
+    );
+  } else if (error.name === 'ReferenceError') {
+    console.log('Датчик не поддерживается в User agent.');
+  } else {
+    throw error;
+  }
 }
 ```
 
@@ -90,8 +91,7 @@ try {
 Показания датчиков могут сниматься только в том случае, если пользователь дает разрешение на определенный тип датчика. Сделать это можно используя [Permissions API](/ru/docs/Web/API/Permissions_API). Короткий пример, показанный ниже, запрашивает у пользователя разрешение перед попыткой использовать датчик.
 
 ```js
-navigator.permissions.query({ name: 'accelerometer' })
-.then(result => {
+navigator.permissions.query({ name: 'accelerometer' }).then((result) => {
   if (result.state === 'denied') {
     console.log('Использование датчика не разрешено.');
     return;
@@ -105,44 +105,42 @@ navigator.permissions.query({ name: 'accelerometer' })
 ```js
 const sensor = new AbsoluteOrientationSensor();
 sensor.start();
-sensor.addEventListener('error', error => {
+sensor.addEventListener('error', (error) => {
   if (event.error.name === 'SecurityError')
-    console.log("Нет разрешения использовать AbsoluteOrientationSensor.");
+    console.log('Нет разрешения использовать AbsoluteOrientationSensor.');
 });
 ```
 
 В следующей таблице для каждого типа датчика описано имя, требуемое для Permissions API, атрибут `allow` элемента {{HTMLElement('iframe')}} и директива {{httpheader('Feature-Policy')}}.
 
-
-| Датчик                      | Разрешение/Имя Feature Policy                          |
-| --------------------------- | ------------------------------------------------------ |
-| `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, и `'magnetometer'`   |
-| `Accelerometer`             | `'accelerometer'`                                      |
-| `AmbientLightSensor`        | `'ambient-light-sensor'`                               |
-| `GravitySensor`             | `'accelerometer'`                                      |
-| `Gyroscope`                 | `'gyroscope'`                                          |
-| `LinearAccelerationSensor`  | `'accelerometer'`                                      |
-| `Magnetometer`              | `'magnetometer'`                                       |
-| `RelativeOrientationSensor` | `'accelerometer'`, и   `'gyroscope'`                   |
+| Датчик                      | Разрешение/Имя Feature Policy                        |
+| --------------------------- | ---------------------------------------------------- |
+| `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, и `'magnetometer'` |
+| `Accelerometer`             | `'accelerometer'`                                    |
+| `AmbientLightSensor`        | `'ambient-light-sensor'`                             |
+| `GravitySensor`             | `'accelerometer'`                                    |
+| `Gyroscope`                 | `'gyroscope'`                                        |
+| `LinearAccelerationSensor`  | `'accelerometer'`                                    |
+| `Magnetometer`              | `'magnetometer'`                                     |
+| `RelativeOrientationSensor` | `'accelerometer'`, и `'gyroscope'`                   |
 
 ### Показания
 
 Показания датчиков принимаются через событие {{domxref('Sensor.reading_event', 'reading')}}, которое унаследовано для всех типов датчиков. Частота получения данных зависит от вас и указывается как параметр объекта, переданного в конструктор класса. Этот параметр определяет количество опросов датчика в секунду. Можно использовать целое или десятичное число, последнее для частот менее секунды. Фактическая частота считывания зависит от аппаратного обеспечения устройства и, следовательно, может быть меньше запрошенной.
 
-Пример ниже иллюстрирует это используя {{domxref('Magnetometer')}}. 
-
+Пример ниже иллюстрирует это используя {{domxref('Magnetometer')}}.
 
 ```js
-let magSensor = new Magnetometer({frequency: 60});
+let magSensor = new Magnetometer({ frequency: 60 });
 
-magSensor.addEventListener('reading', e => {
-  console.log("Магнитное поле вдоль оси X " + magSensor.x);
-  console.log("Магнитное поле вдоль оси Y " + magSensor.y);
-  console.log("Магнитное поле вдоль оси Z " + magSensor.z);
-})
-magSensor.addEventListener('error', event => {
+magSensor.addEventListener('reading', (e) => {
+  console.log('Магнитное поле вдоль оси X ' + magSensor.x);
+  console.log('Магнитное поле вдоль оси Y ' + magSensor.y);
+  console.log('Магнитное поле вдоль оси Z ' + magSensor.z);
+});
+magSensor.addEventListener('error', (event) => {
   console.log(event.error.name, event.error.message);
-})
+});
 magSensor.start();
 ```
 
@@ -175,6 +173,6 @@ magSensor.start();
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
