@@ -10,51 +10,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 browser-compat: javascript.functions.method_definitions
 ---
-<div>{{JsSidebar("Functions")}}</div>
+{{JsSidebar("Functions")}}
 
-<p>ECMAScript 2015 를 시작으로, 객체 초기자(initializer)에 메서드 정의를 위한 더 짧은 구문이 도입되었습니다. 이는 메서드 명에 할당된 함수를 위한 단축입니다.</p>
+ECMAScript 2015 를 시작으로, 객체 초기자(initializer)에 메서드 정의를 위한 더 짧은 구문이 도입되었습니다. 이는 메서드 명에 할당된 함수를 위한 단축입니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">var obj = {
-  <var>property</var>( <var>parameters…</var> ) {},
-  *<var>generator</var>( <var>parameters…</var> ) {},
-// 키(속성) 계산값과도 함께:
-  [property]( <var>parameters…</var> ) {},
-  *[generator]( <var>parameters…</var> ) {},
-// ES5 getter/setter 구문과 비교해 보세요:
-  get <var>property</var>() {},
-  set <var>property</var>(<var>value</var>) {}
-};
-</pre>
+```js
+    var obj = {
+      property( parameters… ) {},
+      *generator( parameters… ) {},
+    // 키(속성) 계산값과도 함께:
+      [property]( parameters… ) {},
+      *[generator]( parameters… ) {},
+    // ES5 getter/setter 구문과 비교해 보세요:
+      get property() {},
+      set property(value) {}
+    };
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>단축 구문은 ECMAScript 5에 도입된 <a href="/ko/docs/Web/JavaScript/Reference/Functions/get">getter</a> 및 <a href="/ko/docs/Web/JavaScript/Reference/Functions/set">setter</a> 구문과 비슷합니다.</p>
+단축 구문은 ECMAScript 5에 도입된 [getter](/ko/docs/Web/JavaScript/Reference/Functions/get) 및 [setter](/ko/docs/Web/JavaScript/Reference/Functions/set) 구문과 비슷합니다.
 
-<p>다음 코드가 주어지면:</p>
+다음 코드가 주어지면:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo: function() {},
   bar: function() {}
-};</pre>
+};
+```
 
-<p>이제 이를 아래로 줄일 수 있습니다:</p>
+이제 이를 아래로 줄일 수 있습니다:
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   foo() {},
   bar() {}
-};</pre>
+};
+```
 
-<div class="note">
-<p><strong>주의 :</strong> 단축 구문은 익명(anonymous) 함수 (…<code>foo: function() {}</code>… 에서처럼) 대신 유명(named) 함수를 사용합니다. 유명 함수는 함수 본체에서 호출될 수 있습니다 (이는 참조할 식별자가 없기에 익명 함수에게는 불가능합니다). 자세한 사항은, {{jsxref("Operators/function","function","#Examples")}} 참조.</p>
-</div>
+<div class="note"><p><strong>주의 :</strong> 단축 구문은 익명(anonymous) 함수 (…<code>foo: function() {}</code>… 에서처럼) 대신 유명(named) 함수를 사용합니다. 유명 함수는 함수 본체에서 호출될 수 있습니다 (이는 참조할 식별자가 없기에 익명 함수에게는 불가능합니다). 자세한 사항은, {{jsxref("Operators/function","function","#Examples")}} 참조.</p></div>
 
-<h3 id="단축_생성기_메서드">단축 생성기 메서드</h3>
+### 단축 생성기 메서드
 
-<p><a href="/ko/docs/Web/JavaScript/Reference/Statements/function*">생성기 메서드</a>는 단축 구문을 사용해서도 정의될 수 있습니다. 단축 구문 내 별표(*)는 생성기 속성명 앞에 와야 함을 주의하세요. 즉, <code>* g(){}</code>는 작동하지만 <code>g *(){}</code>는 아닙니다.</p>
+[생성기 메서드](/ko/docs/Web/JavaScript/Reference/Statements/function*)는 단축 구문을 사용해서도 정의될 수 있습니다. 단축 구문 내 별표(\*)는 생성기 속성명 앞에 와야 함을 주의하세요. 즉, `* g(){}`는 작동하지만 `g *(){}`는 아닙니다.
 
-<pre class="brush: js;highlight[12]">// 유명 속성 사용 (ES2015 이전)
+```js
+// 유명 속성 사용 (ES2015 이전)
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -74,13 +78,15 @@ var obj2 = {
 
 var it = obj2.g();
 console.log(it.next().value); // 0
-console.log(it.next().value); // 1</pre>
+console.log(it.next().value); // 1
+```
 
-<h3 id="메서드_정의는_생성_불가능합니다">메서드 정의는 생성 불가능합니다</h3>
+### 메서드 정의는 생성 불가능합니다
 
-<p>모든 메서드 정의는 생성자가 아니고 인스턴스화하려고 하는 경우 {{jsxref("TypeError")}} 예외가 발생합니다.</p>
+모든 메서드 정의는 생성자가 아니고 인스턴스화하려고 하는 경우 {{jsxref("TypeError")}} 예외가 발생합니다.
 
-<pre class="brush: js example-bad">var obj = {
+```js example-bad
+var obj = {
   method() {},
 };
 new obj.method; // TypeError: obj.method는 생성자가 아닙니다
@@ -89,11 +95,11 @@ var obj = {
   * g() {}
 };
 new obj.g; // TypeError: obj.g는 생성자가 아닙니다 (ES2016에서 바뀜)
-</pre>
+```
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="간단한_테스트_사례">간단한 테스트 사례</h3>
+### 간단한 테스트 사례
 
 <pre class="brush: js;highlight[3]">var obj = {
   a : "foo",
@@ -102,11 +108,12 @@ new obj.g; // TypeError: obj.g는 생성자가 아닙니다 (ES2016에서 바뀜
 console.log(obj.b()); // "foo"
 </pre>
 
-<h3 id="속성_계산명">속성 계산명</h3>
+### 속성 계산명
 
-<p>단축 구문은 속성 계산명(computed property name)도 지원합니다.</p>
+단축 구문은 속성 계산명(computed property name)도 지원합니다.
 
-<pre class="brush: js;highlight[4]">var bar = {
+```js
+var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},
@@ -115,19 +122,18 @@ console.log(obj.b()); // "foo"
 console.log(bar.foo0()); // 0
 console.log(bar.foo1()); // 1
 console.log(bar.foo2()); // 2</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li><code><a href="/ko/docs/Web/JavaScript/Reference/Functions/get">get</a></code></li>
- <li><code><a href="/ko/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar">어휘 문법</a></li>
-</ul>
+- [`get`](/ko/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/ko/docs/Web/JavaScript/Reference/Functions/set)
+- [어휘 문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
