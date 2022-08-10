@@ -1,31 +1,35 @@
 ---
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
+tags:
+  - Errors
+  - JavaScript
+  - Strict Mode
+  - 严格模式
+  - 警告
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
 {{jsSidebar("Errors")}}
 
-## 메시지
+## 信息
 
-```
     Warning: ReferenceError: deprecated caller usage (Firefox)
     Warning: ReferenceError: deprecated arguments usage (Firefox)
     TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
-```
 
-## 에러 형식
+## 错误类型
 
-엄격 모드에서만 {{jsxref("ReferenceError")}} 경고가 발생합니다. JavaScript 실행이 중단되지는 않을 것입니다.
+仅在严格模式下出现的 {{jsxref("ReferenceError")}} 警告。JavaScript 的执行将不会停止。
 
-## 무엇이 잘못되었을까?
+## 发生了什么？
 
-엄격모드에서, {{jsxref("Function.caller")}} 나 {{jsxref("Function.arguments")}} 속성이 사용되었고, 그러지 말아야 했습니다. 이 속성들은 사라지게 되었는데, 함수 호출자를 흘려보내거나, 비 표준이었으며, 최적화 하기 어렵고, 잠재적으로 퍼포먼스에 무리를 주었기 때문입니다.
+在 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。
 
-## 예
+## 实力
 
-### `function.caller` or `arguments.callee.caller`
+### 废弃的 `function.caller` or `arguments.callee.caller`
 
-{{jsxref("Function.caller")}} 와 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 는 사라지게 되었습니다. (자세한 정보는 레퍼런스 문서를 확인해 보세요.)
+{{jsxref("Function.caller")}} 和 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 都是已废弃的 (详见参考文章)。
 
 ```js example-bad
 "use strict";
@@ -45,7 +49,7 @@ myFunc();
 
 ### `Function.arguments`
 
-{{jsxref("Function.arguments")}} 는 사라졌습니다. (자세한 정보는 레퍼런스 문서를 확인해 주세요.)
+{{jsxref("Function.arguments")}} 已被废弃。 (详见参考文章)。
 
 ```js example-bad
 "use strict";
@@ -64,7 +68,7 @@ console.log('returned: ' + g.arguments);
 // Warning: ReferenceError: deprecated arguments usage
 ```
 
-## 참조
+## 相关
 
 - [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)

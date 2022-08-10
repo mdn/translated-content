@@ -1,30 +1,33 @@
 ---
 title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
+tags:
+  - Erros
+  - JavaScript
+  - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 {{jsSidebar("Errors")}}
 
-## Message
+## Mensagem
 
-```
+    ReferenceError: Use before delaration (Edge)
     ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
     ReferenceError: 'x' is not defined (Chrome)
-```
 
-## Error type
+## Tipo de Erro
 
 {{jsxref("ReferenceError")}}
 
-## 무엇이 잘못 되었을까요?
+## O que está errado:
 
-변수가 초기화 되기 전에 엑세스가 되어버립니다. 이 문제는 let 또는 const 선언이 정의 되기 전에 엑세스되는 모든 block 문에서 발생합니다.
+Uma variável léxica foi acessada antes de ser inicializada. Isso acontece dentro de qualquer declaração de bloco, quando as declarações `let` ou `const` são acessadas antes de serem definidas.
 
-## Examples
+## Exemplos
 
-### 잘못된 경우
+### Errado
 
-이 경우에 변수 "foo"는 `let` 을 사용하여 block 문에서 다시 선언됩니다.
+Neste caso, a variável "foo" é redeclarada usando `let`.
 
 ```js example-bad
 function test() {
@@ -38,9 +41,9 @@ function test() {
 test();
 ```
 
-### 올바른 경우
+### Certo
 
-if 문에서 "foo"를 변경하려면 재 선언을 발생시키는 `let` 을 제거해야합니다.
+Para mudar "foo" dentro do bloco if você precisa remover o `let` que causa a redeclaração.
 
 ```js example-good
 function test(){
@@ -52,6 +55,6 @@ function test(){
 test();
 ```
 
-## 그밖에 볼 것
+## Veja também
 
-- [Temporal Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
+- [Temporal Dead Zone e erros com let.](/pt-BR/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
