@@ -8,147 +8,124 @@ tags:
   - 初学者
 translation_of: Web/XML/XML_introduction
 ---
-<p>Summary: This article introduces the 'eXtensible Markup Language' (XML) and tells of it's uses.XML (Extensible Markup Language)  是一种类似于  {{Glossary("HTML")}} 的标记语言，但是 XML 没有使用预定义的标记。因此，您可以根据自己的设计需求定义专属于您的标记。这是一种十分有用的可存储、可搜索和可共享的格式存储数据的方法。最重要的是，因为 XML 的基本格式是标准化的，所以如果您跨系统或平台共享或传输 XML ，无论是在本地还是在互联网上，接收方仍然可以根据标准化的 XML 语法解析数据。</p>
+Summary: This article introduces the 'eXtensible Markup Language' (XML) and tells of it's uses.XML (Extensible Markup Language) 是一种类似于 {{Glossary("HTML")}} 的标记语言，但是 XML 没有使用预定义的标记。因此，您可以根据自己的设计需求定义专属于您的标记。这是一种十分有用的可存储、可搜索和可共享的格式存储数据的方法。最重要的是，因为 XML 的基本格式是标准化的，所以如果您跨系统或平台共享或传输 XML ，无论是在本地还是在互联网上，接收方仍然可以根据标准化的 XML 语法解析数据。
 
-<p>有许多基于 XML 的语言；一些示例是  <a href="https://developer.mozilla.org/en-US/docs/Glossary/XHTML">XHTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL">XUL</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XBL">XBL</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/RSS">RSS</a>, 和 <a href="https://developer.mozilla.org/en-US/docs/Web/RDF">RDF</a>。你也可以创建自己的。</p>
+有许多基于 XML 的语言；一些示例是 [XHTML](/zh-CN/docs/Glossary/XHTML), [MathML](/zh-CN/docs/Web/MathML), [SVG](/zh-CN/docs/Web/SVG), [XUL](/zh-CN/docs/Mozilla/Tech/XUL), [XBL](/zh-CN/docs/Mozilla/Tech/XBL), [RSS](/zh-CN/docs/Web/RSS), 和 [RDF](/zh-CN/docs/Web/RDF)。你也可以创建自己的。
 
-<h2 id="结构XML文档">结构 XML 文档</h2>
+## 结构 XML 文档
 
-<p>XML 整体结构和 XML 是基于{{Glossary("tag")}}语言的。</p>
+XML 整体结构和 XML 是基于{{Glossary("tag")}}语言的。
 
-<h3 id="XML_声明">XML 声明</h3>
+### XML 声明
 
-<p><strong>XML - 声明</strong>并非是一种标签，其用来传播文档的元数据。</p>
+**XML - 声明**并非是一种标签，其用来传播文档的元数据。
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+```
 
-<h4 id="属性：">属性：</h4>
+#### 属性：
 
-<dl>
- <dt>版本：</dt>
- <dd>当前文档使用的版本。</dd>
- <dt>编码：</dt>
- <dd>当前文档使用的编码。</dd>
-</dl>
+- 版本：
+  - : 当前文档使用的版本。
+- 编码：
+  - : 当前文档使用的编码。
 
-<h3 id="注释">注释</h3>
+### 注释
 
-<pre class="brush: xml">&lt;!-- Comment --&gt;
-</pre>
+```xml
+<!-- Comment -->
+```
 
-<h2 id=".E4.BB.80.E4.B9.88.E6.98.AFXML.3F">"标准的" XML (有效且格式良好)</h2>
+## "标准的" XML (有效且格式良好)
 
-<h3 id="XML_.E7.A4.BA.E4.BE.8B">设计规则的标准</h3>
+### 设计规则的标准
 
-<p>判定一个 XML 文档正确的标准是：</p>
+判定一个 XML 文档正确的标准是：
 
-<ul>
- <li>文档必须是一个格式良好的文档。</li>
- <li>文档遵循 XML 所有的语法规则并且有效。</li>
- <li>文档遵循特定语义的规则，这些规则通常规定在 XML 或 DTD 规范中（<a href="/zh-CN/docs/Glossary/DTD">Document Type Definition</a>）。</li>
-</ul>
+- 文档必须是一个格式良好的文档。
+- 文档遵循 XML 所有的语法规则并且有效。
+- 文档遵循特定语义的规则，这些规则通常规定在 XML 或 DTD 规范中（[Document Type Definition](/zh-CN/docs/Glossary/DTD)）。
 
-<h3 id="XML_.E7.A4.BA.E4.BE.8B">XML 示例</h3>
+### XML 示例
 
-<pre class="brush: xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;message&gt;
-    &lt;warning&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    <warning>
         Hello World
-    &lt;!--missing &lt;/warning&gt; --&gt;
-&lt;/message&gt;</code>
-</pre>
+    <!--missing </warning> -->
+</message>
+```
 
-<p>然后我们来看一看这个文档的正确版本：</p>
+然后我们来看一看这个文档的正确版本：
 
-<pre class="brush: xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;message&gt;
-    &lt;warning&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+    <warning>
          Hello World
-    &lt;/warning&gt;
-&lt;/message&gt;</code></pre>
+    </warning>
+</message>
+```
 
-<p>一个包含没有定义标签的文档是无效的。例如，如果我们没有定义<code>&lt;warning&gt;</code>标签，这个文件将是无效的。</p>
+一个包含没有定义标签的文档是无效的。例如，如果我们没有定义`<warning>`标签，这个文件将是无效的。
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 大多数浏览器都提供了可以识别格式不正确的 XML 文档的调试器。</p>
-</div>
+> **备注：** 大多数浏览器都提供了可以识别格式不正确的 XML 文档的调试器。
 
-<h2 id="实体">实体</h2>
+## 实体
 
-<p>像 HTML 一样，XML 为一些特别预留的符号定义了一些方法，称为实体（entities），（例如用于标记的大于号）。下面是五个你必须知道的符号：</p>
+像 HTML 一样，XML 为一些特别预留的符号定义了一些方法，称为实体（entities），（例如用于标记的大于号）。下面是五个你必须知道的符号：
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>方法</td>
-   <td>符号</td>
-   <td>描述</td>
-  </tr>
-  <tr>
-   <td>&amp;lt;</td>
-   <td>&lt;</td>
-   <td>小于符号</td>
-  </tr>
-  <tr>
-   <td>&amp;gt;</td>
-   <td>&gt;</td>
-   <td>大于符号</td>
-  </tr>
-  <tr>
-   <td>&amp;amp;</td>
-   <td>&amp;</td>
-   <td>和</td>
-  </tr>
-  <tr>
-   <td>&amp;quot;</td>
-   <td>"</td>
-   <td>一个双引号</td>
-  </tr>
-  <tr>
-   <td>&amp;apos;</td>
-   <td>'</td>
-   <td>一个单引号</td>
-  </tr>
- </tbody>
-</table>
+| 方法   | 符号 | 描述       |
+| ------ | ---- | ---------- |
+| &lt;   | <    | 小于符号   |
+| &gt;   | >    | 大于符号   |
+| &amp;  | &    | 和         |
+| &quot; | "    | 一个双引号 |
+| &apos; | '    | 一个单引号 |
 
-<p>这里只有五个声明的方法，更多的方法可以借助 <a href="/zh-CN/docs/Glossary/DTD">Document Type Definition</a> （文档的类定义）被引入。例如，为了创建一个<code>&amp;warning 实体</code>，你可以这样做：</p>
+这里只有五个声明的方法，更多的方法可以借助 [Document Type Definition](/zh-CN/docs/Glossary/DTD) （文档的类定义）被引入。例如，为了创建一个`&warning 实体`，你可以这样做：
 
-<pre class="brush: xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE body [
-  &lt;!ENTITY warning "Warning: Something bad happened... please refresh and try again."&gt;
-]&gt;
-&lt;body&gt;
-  &lt;message&gt; &amp;warning; &lt;/message&gt;
-&lt;/body&gt;</code></pre>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+  <!ENTITY warning "Warning: Something bad happened... please refresh and try again.">
+]>
+<body>
+  <message> &warning; </message>
+</body>
+```
 
-<p>你可以用数字和一些符号去表示一些特殊字符；例如，&amp;#xA9 代表符号 "©" 。 </p>
+你可以用数字和一些符号去表示一些特殊字符；例如，\&#xA9 代表符号 "©" 。
 
-<h2 id="展示_XML">展示 XML</h2>
+## 展示 XML
 
-<p>XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如果你不定义一个让 XML 展示的特别方式，那么原始的 XML 会被展现在浏览器上。</p>
+XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如果你不定义一个让 XML 展示的特别方式，那么原始的 XML 会被展现在浏览器上。
 
-<p>一个展示 XML 输出的方法是将 <a href="/zh-CN/docs/Web/CSS">CSS</a> 应用于文档，用 <code>xml-stylesheet </code>去处理指令。</p>
+一个展示 XML 输出的方法是将 [CSS](/zh-CN/docs/Web/CSS) 应用于文档，用 `xml-stylesheet `去处理指令。
 
-<pre><code>&lt;?xml-stylesheet type="text/css" href="stylesheet.css"?&gt;</code></pre>
+```plain
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```
 
-<p>当然，也有其他更有效的方法去展示 XML：the <strong>Extensible Stylesheet Language Transformations</strong> (<a href="https://developer.mozilla.org/en-US/docs/Web/XSLT">XSLT</a>) ，这个可以被用作将 XML 转换为其他语言例如 HTML。这使得 XML 非常地有力。</p>
+当然，也有其他更有效的方法去展示 XML：the **Extensible Stylesheet Language Transformations** ([XSLT](/zh-CN/docs/Web/XSLT)) ，这个可以被用作将 XML 转换为其他语言例如 HTML。这使得 XML 非常地有力。
 
-<pre><code>&lt;?xml-stylesheet type="text/xsl" href="transform.xsl"?&gt;</code></pre>
+```plain
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```
 
-<h2>推荐</h2>
+## 推荐
 
-<p>这篇文章明显是一篇非常简略的 XML 介绍，其中有一些例子和参考来帮助你入门。关于 XML 的更多细节，你可以在 Web 中查找更深入的文章。</p>
+这篇文章明显是一篇非常简略的 XML 介绍，其中有一些例子和参考来帮助你入门。关于 XML 的更多细节，你可以在 Web 中查找更深入的文章。
 
-<p>学习超文本标记语言 (<a href="/zh-CN/docs/Web/HTML">HTML</a>) 将帮助您更好的理解 XML。</p>
+学习超文本标记语言 ([HTML](/zh-CN/docs/Web/HTML)) 将帮助您更好的理解 XML。
 
-<h2>另见</h2>
+## 另见
 
-<ul>
- <li><a href="http://www.xml.com/">XML.com</a></li>
- <li><a href="https://www.w3.org/XML/">Extensible Markup Language (XML) @ W3.org</a></li>
- <li><a href="http://www.alistapart.com/d/usingxml/xml_uses_a.html">XML Example: A List Apart</a></li>
- <li><a href="http://www.alistapart.com/articles/usingxml/">Using XML: A List Apart</a></li>
-</ul>
+- [XML.com](http://www.xml.com/)
+- [Extensible Markup Language (XML) @ W3.org](https://www.w3.org/XML/)
+- [XML Example: A List Apart](http://www.alistapart.com/d/usingxml/xml_uses_a.html)
+- [Using XML: A List Apart](http://www.alistapart.com/articles/usingxml/)
 
-<p>上述这篇 <a href="http://www.alistapart.com/articles/usingxml/">Using XML</a> 文章对于转换和创造你自己的语言是一个很好的资源。</p>
+上述这篇 [Using XML](http://www.alistapart.com/articles/usingxml/) 文章对于转换和创造你自己的语言是一个很好的资源。

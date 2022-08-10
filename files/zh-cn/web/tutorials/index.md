@@ -6,150 +6,126 @@ tags:
   - 网页设计
 translation_of: Web/Tutorials
 ---
-<div class="warning">
-<p><strong>警告：</strong> 本页面上的链接通向各式各样的入门指导和培训教材。不管你是仅仅开始入门、学过些基础或者是个网站开发老手，你都能在这里找到有用的资源加以绝佳的练习。这些资源都来自卓有远见的公司和乐于接受开放标准网站开发人员。这是网站开发的绝佳练习而且使用一种开放内容授权，比如<a href="https://www.mozilla.org/foundation/licensing/website-content.html">知识共享许可协议</a>来提供并允许进行翻译。</p>
-</div>
+> **警告：** 本页面上的链接通向各式各样的入门指导和培训教材。不管你是仅仅开始入门、学过些基础或者是个网站开发老手，你都能在这里找到有用的资源加以绝佳的练习。这些资源都来自卓有远见的公司和乐于接受开放标准网站开发人员。这是网站开发的绝佳练习而且使用一种开放内容授权，比如[知识共享许可协议](https://www.mozilla.org/foundation/licensing/website-content.html)来提供并允许进行翻译。
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 id="Documentation">对于学习 Web 的新手</h2>
+## 对于学习 Web 的新手
 
-<p><a href="/zh-CN/docs/Learn/Getting_started_with_the_web">开始学习 Web</a></p>
+[开始学习 Web](/zh-CN/docs/Learn/Getting_started_with_the_web)
 
-<p>一系列介绍帮助你开始学习 Web 开发。你需要准备工具去创建一个简单的网页并发布你自己简单的代码。</p>
+一系列介绍帮助你开始学习 Web 开发。你需要准备工具去创建一个简单的网页并发布你自己简单的代码。
 
-<h2 id="Documentation">HTML 入门</h2>
+## HTML 入门
 
-<h3 id="初级课程">初级课程</h3>
+### 初级课程
 
-<dl>
- <dt><a href="/zh-CN/docs/Web/Guide/HTML/Introduction">HTML 简介</a></dt>
- <dd>HTML 是什么，干什么，以及其简要历史，还有一个 HTML 文档的结构是什么样子的。其后的文章会更深入 HTML 的每一个部分。</dd>
- <dt><a href="http://reference.sitepoint.com/html/page-structure">网页的基本构架</a> <em>（由出版社提供）</em></dt>
- <dd>学习 HTML 元素是如何组装在一起从而构成一个更大的图块的。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element">MDN 的 HTML 元素参考</a></dt>
- <dd>一个 HTML 元素综合性性参考，还有不同浏览器对它们的支持。</dd>
- <dt><a href="http://wikiversity.org/wiki/Web_Design/HTML_Challenges">HTML 挑战</a><em>（来自维基大学）</em></dt>
- <dd>参与这些挑战来巩固你的 HTML 技能。（例如，“我到底是应该使用一个 &lt;h2&gt; 元素还是用 &lt;strong&gt; 呢？”）专注于有意义的小点滴。</dd>
-</dl>
+- [HTML 简介](/zh-CN/docs/Web/Guide/HTML/Introduction)
+  - : HTML 是什么，干什么，以及其简要历史，还有一个 HTML 文档的结构是什么样子的。其后的文章会更深入 HTML 的每一个部分。
+- [网页的基本构架](http://reference.sitepoint.com/html/page-structure) _（由出版社提供）_
+  - : 学习 HTML 元素是如何组装在一起从而构成一个更大的图块的。
+- [MDN 的 HTML 元素参考](/zh-CN/docs/HTML/Element)
+  - : 一个 HTML 元素综合性性参考，还有不同浏览器对它们的支持。
+- [HTML 挑战](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)_（来自维基大学）_
+  - : 参与这些挑战来巩固你的 HTML 技能。（例如，“我到底是应该使用一个 \<h2> 元素还是用 \<strong> 呢？”）专注于有意义的小点滴。
 
-<h3 id="高级课程">高级课程</h3>
+### 高级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages">编写出能够快速加载 HTML 页面的小贴士</a></dt>
- <dd>优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。</dd>
- <dt><a href="http://www.html5rocks.com/tutorials/">HTML5 入门</a><em>（HTML5 Rocks）</em></dt>
- <dd>通过指南来指导使用 HTML5 特征来写代码。</dd>
- <dt><a href="http://www.alistapart.com/articles/semanticsinhtml5/">HTML5 语法</a> <em>(分开的列表)</em></dt>
- <dd>学习那些可扩展和向后和向前兼容的有意义的标签语法。</dd>
- <dt><a href="/zh-CN/docs/Canvas_tutorial">Canvas 入门</a></dt>
- <dd>学习如何使用脚本和 canvas 标签来画图。</dd>
- <dt><a href="http://html5doctor.com/">HTML5 博士</a></dt>
- <dd>HTML5 应用前线上的文章。</dd>
- <dt><a href="http://www.elated.com/articles/html5-audio/">HTML5 声音标签的乐趣</a><em>（兴趣勃勃啊）</em></dt>
- <dd>学习如何使用 HTML audio 标签简简单单地来把声音文件放到你的网页里去。在这里包含了很多代码范例。</dd>
-</dl>
+- [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)
+  - : 优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
+- [HTML5 入门](http://www.html5rocks.com/tutorials/)_（HTML5 Rocks）_
+  - : 通过指南来指导使用 HTML5 特征来写代码。
+- [HTML5 语法](http://www.alistapart.com/articles/semanticsinhtml5/) _(分开的列表)_
+  - : 学习那些可扩展和向后和向前兼容的有意义的标签语法。
+- [Canvas 入门](/zh-CN/docs/Canvas_tutorial)
+  - : 学习如何使用脚本和 canvas 标签来画图。
+- [HTML5 博士](http://html5doctor.com/)
+  - : HTML5 应用前线上的文章。
+- [HTML5 声音标签的乐趣](http://www.elated.com/articles/html5-audio/)_（兴趣勃勃啊）_
+  - : 学习如何使用 HTML audio 标签简简单单地来把声音文件放到你的网页里去。在这里包含了很多代码范例。
 
-<h2 id="Documentation">Javascript 入门</h2>
+## Javascript 入门
 
-<h3 id="初级课程_2">初级课程</h3>
+### 初级课程
 
-<dl>
- <dt><a href="http://www.codecademy.com/">Codecademy</a> <em>（<em>来自 Codecademy 网站</em>）</em></dt>
- <dd>Codecademy 是学习如何编写 JavaScript 最容易的方式。它互动、有趣，你能够和你的朋友们一起来学习。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Getting_Started">开始使用 JavaScript</a></dt>
- <dd>JavaScript 是什么以及它如何帮助你？</dd>
- <dt><a href="http://dev.opera.com/articles/view/javascript-best-practices/">JavaScript 最佳实践</a><a href="http://docs.webplatform.org/wiki/tutorials/javascript_best_practices"> </a><em>（来自 WebPlatform.org 网站）</em></dt>
- <dd>学习一些明显或者不是很明显的编写 JavaScript 最佳实践。</dd>
- <dt><a href="http://codeavengers.com/">CodeAvengers</a><em>（来自 CodeAvengers.com 网站）</em></dt>
- <dd>Code Avengers（代码复仇者联盟）是一个有趣且高效的学习使用 HTML, CSS, and JavaScript 编写网络 apps 和游戏代码的好地方。</dd>
-</dl>
+- [Codecademy](http://www.codecademy.com/) *（*来自 Codecademy 网站*）*
+  - : Codecademy 是学习如何编写 JavaScript 最容易的方式。它互动、有趣，你能够和你的朋友们一起来学习。
+- [开始使用 JavaScript](/zh-CN/docs/JavaScript/Getting_Started)
+  - : JavaScript 是什么以及它如何帮助你？
+- [JavaScript 最佳实践](http://dev.opera.com/articles/view/javascript-best-practices/)[ ](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)_（来自 WebPlatform.org 网站）_
+  - : 学习一些明显或者不是很明显的编写 JavaScript 最佳实践。
+- [CodeAvengers](http://codeavengers.com/)_（来自 CodeAvengers.com 网站）_
+  - : Code Avengers（代码复仇者联盟）是一个有趣且高效的学习使用 HTML, CSS, and JavaScript 编写网络 apps 和游戏代码的好地方。
 
-<h3 id="中级课程">中级课程</h3>
+### 中级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/A_re-introduction_to_JavaScript">JavaScrit 再深入</a></dt>
- <dd>针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。</dd>
- <dt><a href="http://eloquentjavascript.net/contents.html">Eloquent JavaScript</a></dt>
- <dd>一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）</dd>
- <dt><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/">必要的 JavaScript 设计模式</a> <em>(Addy Osmani)</em></dt>
- <dd>介绍基本的 JavaScript 设计模式。</dd>
- <dt><a href="http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/">JavaScript 编程语言</a><em> (YUI Blog)</em></dt>
- <dd>Douglas Crockford 探讨了如今这个语言的情况，还有如何来实现。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Introduction_to_Object-Oriented_JavaScript">介绍面向对象的 JavaScript</a></dt>
- <dd>学习 JavaScript 的面向对象编程模型。</dd>
-</dl>
-</div>
+- [JavaScrit 再深入](/zh-CN/docs/A_re-introduction_to_JavaScript)
+  - : 针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。
+- [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
+  - : 一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）
+- [必要的 JavaScript 设计模式](http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) _(Addy Osmani)_
+  - : 介绍基本的 JavaScript 设计模式。
+- [JavaScript 编程语言](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) _(YUI Blog)_
+  - : Douglas Crockford 探讨了如今这个语言的情况，还有如何来实现。
+- [介绍面向对象的 JavaScript](/zh-CN/docs/Introduction_to_Object-Oriented_JavaScript)
+  - : 学习 JavaScript 的面向对象编程模型。
 
-<div class="section">
-<h3 id="高级课程_2">高级课程</h3>
+### 高级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide">JavaScript 指南</a></dt>
- <dd>一个为所有的学习者从初级到高级的全面、定期更新的 JavaScript 指南。</dd>
- <dt><a href="http://ejohn.org/apps/learn/">学习高级别的 JavaScript</a><em> (John Resig)</em></dt>
- <dd>John Resig 的高级 JavaScript 指南。</dd>
- <dt><a href="http://www.elated.com/articles/javascript-dom-intro/">介绍 JavaScript DOM</a> (Elated)</dt>
- <dd>DOM 是什么，以及为什么有用？这篇文章将向你介绍 Javascript 这一强大功能。</dd>
- <dt><a href="http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/">一个麻烦的 API : DOM 理论 </a> (YUI Blog)</dt>
- <dd>Douglas Crockford 解释文件对象模型。</dd>
- <dt><a href="http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/"> Javascript 进阶</a> (YUI Blog)</dt>
- <dd>Douglas Crockford 审视代码的模式，以便程序员在创建应用的时候可以选择。</dd>
- <dt><a href="http://bonsaiden.github.com/JavaScript-Garden/">JavaScript 花园</a></dt>
- <dd>关于 Javascript 最古怪部分的资料。</dd>
- <dt><a href="https://web.archive.org/web/20140101004220/http://stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs"> 哪个 JavaScript 框架？</a> (StackOverflow)</dt>
- <dd>  选择 JavaScript 框架的建议。</dd>
- <dt><a href="http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/">非阻塞 JavaScript 加载</a> (YUI Blog)</dt>
- <dd>提高含 Javascript 页面加载性能的一些提示。</dd>
-</dl>
+- [JavaScript 指南](/zh-CN/docs/JavaScript/Guide)
+  - : 一个为所有的学习者从初级到高级的全面、定期更新的 JavaScript 指南。
+- [学习高级别的 JavaScript](http://ejohn.org/apps/learn/) _(John Resig)_
+  - : John Resig 的高级 JavaScript 指南。
+- [介绍 JavaScript DOM](http://www.elated.com/articles/javascript-dom-intro/) (Elated)
+  - : DOM 是什么，以及为什么有用？这篇文章将向你介绍 Javascript 这一强大功能。
+- [一个麻烦的 API : DOM 理论 ](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/)(YUI Blog)
+  - : Douglas Crockford 解释文件对象模型。
+- [Javascript 进阶](http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/) (YUI Blog)
+  - : Douglas Crockford 审视代码的模式，以便程序员在创建应用的时候可以选择。
+- [JavaScript 花园](http://bonsaiden.github.com/JavaScript-Garden/)
+  - : 关于 Javascript 最古怪部分的资料。
+- [哪个 JavaScript 框架？](https://web.archive.org/web/20140101004220/http://stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs) (StackOverflow)
+  - : 选择 JavaScript 框架的建议。
+- [非阻塞 JavaScript 加载](http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/) (YUI Blog)
+  - : 提高含 Javascript 页面加载性能的一些提示。
 
-<h2 id="Documentation">CSS 入门</h2>
+## CSS 入门
 
-<h3 id="初级课程_3">初级课程</h3>
+### 初级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/CSS/Getting_Started">CSS 入门</a></dt>
- <dd>这个教程向您介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/CSS_Classes">CSS 类选择器</a> (来自维基大学)</dt>
- <dd>在 CSS 里类是什么？</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/External_CSS">外部 CSS</a> (来自维基大学)</dt>
- <dd>从外部样式表使用 CSS。</dd>
- <dt><a href="http://www.w3.org/MarkUp/Guide/Style">添加一点样式</a> (W3C)</dt>
- <dd>入门介绍使用 CSS 样式化网页。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/Common_CSS_Questions">常见 CSS 问题</a></dt>
- <dd>初学者一些常见问题和解答。</dd>
- <dt><a href="http://codeavengers.com/">代码复仇者</a> (CodeAvengers.com)</dt>
- <dd>代码复仇者用有趣、高效的方式学习使用 HTML，CSS，JavaScript 开发 Web 应用和游戏。</dd>
-</dl>
+- [CSS 入门](/zh-CN/docs/CSS/Getting_Started)
+  - : 这个教程向您介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
+- [CSS 类选择器](http://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (来自维基大学)
+  - : 在 CSS 里类是什么？
+- [外部 CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (来自维基大学)
+  - : 从外部样式表使用 CSS。
+- [添加一点样式](http://www.w3.org/MarkUp/Guide/Style) (W3C)
+  - : 入门介绍使用 CSS 样式化网页。
+- [常见 CSS 问题](/zh-CN/docs/Common_CSS_Questions)
+  - : 初学者一些常见问题和解答。
+- [代码复仇者](http://codeavengers.com/) (CodeAvengers.com)
+  - : 代码复仇者用有趣、高效的方式学习使用 HTML，CSS，JavaScript 开发 Web 应用和游戏。
 
-<h3 id="中级课程_2">中级课程</h3>
+### 中级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/CSS/CSS_Reference">CSS 参考</a></dt>
- <dd>CSS 完整参考，包含 Firefox 和另外浏览器支持的详细信息。</dd>
- <dt><a href="http://en.wikiversity.org/wiki/Web_Design/CSS_challenges">CSS 挑战</a> (维基大学)</dt>
- <dd>让你的 CSS 技巧更灵活，看你是否需要更多的练习。</dd>
- <dt><a href="http://www.html.net/tutorials/css/"> 中级 CSS 概念 </a> (HTML.net)</dt>
- <dd>分组，伪类等等。</dd>
- <dt><a href="http://www.alistapart.com/articles/css-positioning-101/">CSS 定位 101</a> (A List Apart)</dt>
- <dd>使用符合标准的定位，无表布局。</dd>
- <dt><a href="http://www.alistapart.com/articles/progressiveenhancementwithcss/">CSS 渐进增强</a> (A List Apart)</dt>
- <dd>把 CSS 渐进增强结合到你的网页。</dd>
- <dt><a href="http://www.alistapart.com/articles/fluidgrids/">流体网格</a> (A List Apart)</dt>
- <dd>设计根据浏览器窗口自适应布局，同时使用一个字体网格。</dd>
-</dl>
+- [CSS 参考](/zh-CN/docs/CSS/CSS_Reference)
+  - : CSS 完整参考，包含 Firefox 和另外浏览器支持的详细信息。
+- [CSS 挑战](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (维基大学)
+  - : 让你的 CSS 技巧更灵活，看你是否需要更多的练习。
+- [中级 CSS 概念 ](http://www.html.net/tutorials/css/)(HTML.net)
+  - : 分组，伪类等等。
+- [CSS 定位 101](http://www.alistapart.com/articles/css-positioning-101/) (A List Apart)
+  - : 使用符合标准的定位，无表布局。
+- [CSS 渐进增强](http://www.alistapart.com/articles/progressiveenhancementwithcss/) (A List Apart)
+  - : 把 CSS 渐进增强结合到你的网页。
+- [流体网格](http://www.alistapart.com/articles/fluidgrids/) (A List Apart)
+  - : 设计根据浏览器窗口自适应布局，同时使用一个字体网格。
 
-<h3 id="高级课程_3">高级课程</h3>
+### 高级课程
 
-<dl>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/CSS/Using_CSS_transforms"> 应用 CSS 转换</a></dt>
- <dd>使用 CSS 旋转、倾斜、缩放和变换。</dd>
- <dt><a href="https://developer.mozilla.org/zh-CN/docs/CSS/CSS_transitions">CSS 过渡</a></dt>
- <dd>CSS 过渡是 CSS3 草案规范的一部分，提供了渐变动画来改变 CSS 属性，而不是突变生效。</dd>
- <dt><a href="http://www.html5rocks.com/tutorials/webfonts/quick/"> 应用网页字体快速指南 - 使用 @font-face</a> (HTML5 Rocks)</dt>
- <dd>来自 CSS3 的 @font-face 功能，允许你以可访问的，可操作的，易扩展的方式使用 web 上的自定义字体。</dd>
- <dt><a href="http://davidwalsh.name/starting-css">开始写 CSS</a> (David Walsh)</dt>
- <dd>介绍工具和方法来写更简洁，易维护和可扩展的 CSS。</dd>
-</dl>
-</div>
-</div>
+- [应用 CSS 转换](/zh-CN/docs/CSS/Using_CSS_transforms)
+  - : 使用 CSS 旋转、倾斜、缩放和变换。
+- [CSS 过渡](/zh-CN/docs/CSS/CSS_transitions)
+  - : CSS 过渡是 CSS3 草案规范的一部分，提供了渐变动画来改变 CSS 属性，而不是突变生效。
+- [应用网页字体快速指南 - 使用 @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
+  - : 来自 CSS3 的 @font-face 功能，允许你以可访问的，可操作的，易扩展的方式使用 web 上的自定义字体。
+- [开始写 CSS](http://davidwalsh.name/starting-css) (David Walsh)
+  - : 介绍工具和方法来写更简洁，易维护和可扩展的 CSS。

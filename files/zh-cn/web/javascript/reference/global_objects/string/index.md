@@ -177,9 +177,6 @@ console.log(eval(s2.valueOf())); // returns the number 4
   - : **通过一串 Unicode 创建字符串。**
 - {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
   - : 通过一串 码点 创建字符串。
-
-<!---->
-
 - {{jsxref("String.raw()")}} {{experimental_inline}}
   - : 通过模板字符串创建字符串。
 
