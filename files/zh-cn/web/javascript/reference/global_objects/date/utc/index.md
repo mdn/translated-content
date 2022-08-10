@@ -7,73 +7,68 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>Date.UTC()</strong></code> 方法接受的参数同日期构造函数接受最多参数时一样，返回从 1970-1-1 00:00:00 UTC 到指定日期的的毫秒数。</p>
+**`Date.UTC()`** 方法接受的参数同日期构造函数接受最多参数时一样，返回从 1970-1-1 00:00:00 UTC 到指定日期的的毫秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-utc.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-utc.html")}}
 
+## 语法
 
+```plain
+Date.UTC(year,month[,date[,hrs[,min[,sec{{mediawiki.external(',<em>ms</em>')}}]]]])
+```
 
-<h2 id="Syntax">语法</h2>
+## 参数
 
-<pre class="syntaxbox"><code>Date.UTC(<em>year</em>,<em>month</em>[,<em>date</em>[,<em>hrs</em>[,<em>min</em>[,<em>sec</em>{{mediawiki.external(',<em>ms</em>')}}]]]]) </code></pre>
+- `year`
+  - : 1900 年后的某一年份。
+- `month`
+  - : 0 到 11 之间的一个整数，表示月份。
+- `date`
+  - : 1 到 31 之间的一个整数，表示某月当中的第几天。
+- `hrs`
+  - : 0 到 23 之间的一个整数，表示小时。
+- `min`
+  - : 0 到 59 之间的一个整数，表示分钟。
+- `sec`
+  - : 0 到 59 之间的一个整数，表示秒。
+- `ms`
+  - : 0 到 999 之间的一个整数，表示毫秒。
 
-<h2 id="Parameters">参数</h2>
+## 描述
 
-<dl>
- <dt><code>year</code></dt>
- <dd>1900 年后的某一年份。</dd>
- <dt><code>month</code></dt>
- <dd>0 到 11 之间的一个整数，表示月份。</dd>
- <dt><code>date</code></dt>
- <dd>1 到 31 之间的一个整数，表示某月当中的第几天。</dd>
- <dt><code>hrs</code></dt>
- <dd>0 到 23 之间的一个整数，表示小时。</dd>
- <dt><code>min</code></dt>
- <dd>0 到 59 之间的一个整数，表示分钟。</dd>
- <dt><code>sec</code></dt>
- <dd>0 到 59 之间的一个整数，表示秒。</dd>
- <dt><code>ms</code></dt>
- <dd>0 到 999 之间的一个整数，表示毫秒。</dd>
-</dl>
+`UTC` 方法接受以逗号隔开的日期参数，返回 1970-1-1 00:00:00 UTC 到指定的日期之间的毫秒数。
 
-<h2 id="Description">描述</h2>
+你应该指定一个完整格式的年份，如 1998。如果年份被指定为 0 到 99 之间，则该方法会将年份转换为 20 世纪的一个年份（即 1900 + year），例如，指定为 95， 则年份为 1995。
 
-<p><code>UTC</code> 方法接受以逗号隔开的日期参数，返回 1970-1-1 00:00:00 UTC 到指定的日期之间的毫秒数。</p>
+`UTC` 方法与 `Date` 有两点不同：
 
-<p>你应该指定一个完整格式的年份，如 1998。如果年份被指定为 0 到 99 之间，则该方法会将年份转换为 20 世纪的一个年份（即 1900 + year），例如，指定为 95， 则年份为 1995。</p>
+- `Date.UTC` 方法使用协调世界时代替本地时间。
+- `Date.UTC` 方法返回一个时间数值，而不是一个日期对象。
 
-<p><code>UTC</code> 方法与 <code>Date</code> 有两点不同：</p>
+如果有一个指定的参数超出其合理范围，则 UTC 方法会通过更新其他参数直到该参数在合理范围内。例如，为月份指定 15，则年份将会加 1，然后月份将会使用 3。
 
-<ul>
- <li><code>Date.UTC</code> 方法使用协调世界时代替本地时间。</li>
- <li><code>Date.UTC</code> 方法返回一个时间数值，而不是一个日期对象。</li>
-</ul>
+由于 `UTC` 是 `Date`（日期对象）的一个静态方法，所以应该在 `Date `上直接调用，就像 `Date.UTC()`，而不要把它作为创建的日期对象的方法。
 
-<p>如果有一个指定的参数超出其合理范围，则 UTC 方法会通过更新其他参数直到该参数在合理范围内。例如，为月份指定 15，则年份将会加 1，然后月份将会使用 3。</p>
+## 例子
 
-<p>由于 <code>UTC</code> 是 <code>Date</code>（日期对象）的一个静态方法，所以应该在 <code>Date </code>上直接调用，就像 <code>Date.UTC()</code>，而不要把它作为创建的日期对象的方法。</p>
+### 例子：使用 `Date.UTC`
 
-<h2 id="Examples">例子</h2>
+下面的语句使用 UTC 时间代替本地时间创建了一个日期对象。
 
-<h3 id="Example:_Using_Date.UTC">例子：使用 <code>Date.UTC</code></h3>
+```js
+var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+```
 
-<p>下面的语句使用 UTC 时间代替本地时间创建了一个日期对象。</p>
-
-<pre class="brush:js">var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.parse()")}}</li>
-</ul>
+- {{jsxref("Date.parse()")}}

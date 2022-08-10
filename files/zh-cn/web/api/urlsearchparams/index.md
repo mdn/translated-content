@@ -6,56 +6,55 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URLSearchParams
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><strong><code>URLSearchParams</code></strong> 接口定义了一些实用的方法来处理 URL 的查询字符串。</p>
+**`URLSearchParams`** 接口定义了一些实用的方法来处理 URL 的查询字符串。
 
-<p>一个实现了 <code>URLSearchParams</code> 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，例如下面两行是相等的：</p>
+一个实现了 `URLSearchParams` 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，例如下面两行是相等的：
 
-<pre class="brush: js">for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}</pre>
+```js
+for (const [key, value] of mySearchParams) {}
+for (const [key, value] of mySearchParams.entries()) {}
+```
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}</dt>
- <dd>返回一个 <code>URLSearchParams </code>对象。</dd>
-</dl>
+- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
+  - : 返回一个 `URLSearchParams `对象。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>该接口不继承任何属性。</p>
+该接口不继承任何属性。
 
-<dl>
- <dt>{{domxref("URLSearchParams.append()")}}</dt>
- <dd> 插入一个指定的键/值对作为新的搜索参数。</dd>
- <dt>{{domxref("URLSearchParams.delete()")}}</dt>
- <dd> 从搜索参数列表里删除指定的搜索参数及其对应的值。</dd>
- <dt>{{domxref("URLSearchParams.entries()")}}</dt>
- <dd> 返回一个{{jsxref("Iteration_protocols","iterator")}}可以遍历所有键/值对的对象。</dd>
- <dt>{{domxref("URLSearchParams.get()")}}</dt>
- <dd> 获取指定搜索参数的第一个值。</dd>
- <dt>{{domxref("URLSearchParams.getAll()")}}</dt>
- <dd> 获取指定搜索参数的所有值，返回是一个数组。</dd>
- <dt>{{domxref("URLSearchParams.has()")}}</dt>
- <dd> 返回 {{jsxref("Boolean")}} 判断是否存在此搜索参数。</dd>
- <dt>{{domxref("URLSearchParams.keys()")}}</dt>
- <dd>返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有键名。</dd>
- <dt>{{domxref("URLSearchParams.set()")}}</dt>
- <dd> 设置一个搜索参数的新值，假如原来有多个值将删除其他所有的值。</dd>
- <dt>{{domxref("URLSearchParams.sort()")}}</dt>
- <dd> 按键名排序。</dd>
- <dt>{{domxref("URLSearchParams.toString()")}}</dt>
- <dd> 返回搜索参数组成的字符串，可直接使用在 URL 上。</dd>
- <dt>{{domxref("URLSearchParams.values()")}}</dt>
- <dd> 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有值。</dd>
-</dl>
+- {{domxref("URLSearchParams.append()")}}
+  - : 插入一个指定的键/值对作为新的搜索参数。
+- {{domxref("URLSearchParams.delete()")}}
+  - : 从搜索参数列表里删除指定的搜索参数及其对应的值。
+- {{domxref("URLSearchParams.entries()")}}
+  - : 返回一个{{jsxref("Iteration_protocols","iterator")}}可以遍历所有键/值对的对象。
+- {{domxref("URLSearchParams.get()")}}
+  - : 获取指定搜索参数的第一个值。
+- {{domxref("URLSearchParams.getAll()")}}
+  - : 获取指定搜索参数的所有值，返回是一个数组。
+- {{domxref("URLSearchParams.has()")}}
+  - : 返回 {{jsxref("Boolean")}} 判断是否存在此搜索参数。
+- {{domxref("URLSearchParams.keys()")}}
+  - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有键名。
+- {{domxref("URLSearchParams.set()")}}
+  - : 设置一个搜索参数的新值，假如原来有多个值将删除其他所有的值。
+- {{domxref("URLSearchParams.sort()")}}
+  - : 按键名排序。
+- {{domxref("URLSearchParams.toString()")}}
+  - : 返回搜索参数组成的字符串，可直接使用在 URL 上。
+- {{domxref("URLSearchParams.values()")}}
+  - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var paramsString = "q=URLUtils.searchParams&amp;topic=api"
+```js
+var paramsString = "q=URLUtils.searchParams&topic=api"
 var searchParams = new URLSearchParams(paramsString);
 
 for (let p of searchParams) {
@@ -67,17 +66,19 @@ searchParams.get("topic") === "api"; // true
 searchParams.getAll("topic"); // ["api"]
 searchParams.get("foo") === null; // true
 searchParams.append("topic", "webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
+searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
 searchParams.set("topic", "More webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=More+webdev"
+searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
 searchParams.delete("topic");
-searchParams.toString(); // "q=URLUtils.searchParams"</pre>
+searchParams.toString(); // "q=URLUtils.searchParams"
+```
 
-<h3 id="Gotchas">Gotchas</h3>
+### Gotchas
 
-<p><code>URLSearchParams</code> 构造函数<em>不会</em>解析完整 URL，但是如果字符串起始位置有 <code>?</code> 的话会被去除。</p>
+`URLSearchParams` 构造函数*不会*解析完整 URL，但是如果字符串起始位置有 `?` 的话会被去除。
 
-<pre class="brush: js">var paramsString1 = "http://example.com/search?query=%40";
+```js
+var paramsString1 = "http://example.com/search?query=%40";
 var searchParams1 = new URLSearchParams(paramsString1);
 
 searchParams1.has("query"); // false
@@ -92,19 +93,18 @@ searchParams2.has("query"); // true
 
 var url = new URL("http://example.com/search?query=%40");
 var searchParams3 = new URLSearchParams(url.search);
-searchParams3.has("query") // true</pre>
+searchParams3.has("query") // true
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.URLSearchParams")}}</p>
+{{Compat("api.URLSearchParams")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>The {{domxref("URL")}} interface.</li>
- <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: Easy URL manipulation with URLSearchParams</a></li>
-</ul>
+- The {{domxref("URL")}} interface.
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

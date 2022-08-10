@@ -10,35 +10,33 @@ tags:
   - 属性
 translation_of: Web/API/MediaStreamTrack/readyState
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaStreamTrack.readyState</code></strong>只读属性返回一个枚举的值，该值给出了轨道的状态。</p>
+**`MediaStreamTrack.readyState`**只读属性返回一个枚举的值，该值给出了轨道的状态。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">const <em>state</em> = <em>track</em>.readyState</pre>
+```plain
+const state = track.readyState
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>它采用以下值之一：</p>
+它采用以下值之一：
 
-<ul>
- <li><code>"live"</code>表示输入已连接，并尽最大努力提供实时数据。 在这种情况下，可以使用{{domxref("MediaStreamTrack.enabled")}}属性打开或关闭数据输出。</li>
- <li><code>"ended"</code>表示输入不再提供任何数据，也永远不会提供新数据。</li>
-</ul>
+- `"live"`表示输入已连接，并尽最大努力提供实时数据。 在这种情况下，可以使用{{domxref("MediaStreamTrack.enabled")}}属性打开或关闭数据输出。
+- `"ended"`表示输入不再提供任何数据，也永远不会提供新数据。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="看看别的">看看别的</h2>
+## 看看别的
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>{{domxref("MediaStreamTrack.onended")}}</li>
-</ul>
+- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaStreamTrack.onended")}}

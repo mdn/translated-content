@@ -7,26 +7,26 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/428
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>在 HTTP 协议中，响应状态码 <code><strong>428 Precondition Required</strong></code> 表示服务器端要求发送<a href="/en-US/docs/Web/HTTP/Conditional_requests">条件</a>请求。</p>
+在 HTTP 协议中，响应状态码 **`428 Precondition Required`** 表示服务器端要求发送[条件](/en-US/docs/Web/HTTP/Conditional_requests)请求。
 
-<p>一般的，这种情况意味着必要的条件首部——如 {{HTTPHeader("If-Match")}} ——的<strong>缺失。</strong>.</p>
+一般的，这种情况意味着必要的条件首部——如 {{HTTPHeader("If-Match")}} ——的**缺失。**.
 
-<p>当一个条件首部的值<strong>不能匹配</strong>服务器端的状态的时候，应答的状态码应该是 {{HTTPStatus(412)}} <code>Precondition Failed</code>，前置条件验证失败。</p>
+当一个条件首部的值**不能匹配**服务器端的状态的时候，应答的状态码应该是 {{HTTPStatus(412)}} `Precondition Failed`，前置条件验证失败。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">428 Precondition Required</pre>
+```plain
+428 Precondition Required
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Conditional_requests">HTTP conditional requests</a></li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPStatus(412)}}</li>
-</ul>
+- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)
+- {{HTTPHeader("If-Match")}}
+- {{HTTPStatus(412)}}

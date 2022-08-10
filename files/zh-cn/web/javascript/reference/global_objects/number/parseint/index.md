@@ -8,55 +8,58 @@ tags:
   - Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong><code>Number.parseInt()</code></strong> 方法依据指定基数 [ 参数 <strong>radix </strong>的值]，把字符串 [ 参数 <strong>string</strong> 的值] 解析成整数。</p>
+**`Number.parseInt()`** 方法依据指定基数 \[ 参数 **radix** 的值]，把字符串 \[ 参数 **string** 的值] 解析成整数。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Number.parseInt(<var>string</var>[, <var>radix</var>])</code>
-</pre>
+```plain
+Number.parseInt(string[, radix])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Parameters")}} </p>
+{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Parameters")}}
 
-<p>参数 string：要解析的值。 如果此参数不是字符串，则使用 ToString 抽象操作将其转换为字符串。忽略此参数中的前导空格。<br>
- 参数 radix：一个介于 2 到 36 之间的整数，代表字符串的基数 (数学数字系统中的基)。小心 - 这并不是默认为 10。</p>
+参数 string：要解析的值。 如果此参数不是字符串，则使用 ToString 抽象操作将其转换为字符串。忽略此参数中的前导空格。
+参数 radix：一个介于 2 到 36 之间的整数，代表字符串的基数 (数学数字系统中的基)。小心 - 这并不是默认为 10。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Return value")}}</p>
+{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt", "Return value")}}
 
-<p>从给定字符串中解析的整数。如果基数小于 11，且第一个非空白字符不能转换为数字，则返回 NaN。</p>
+从给定字符串中解析的整数。如果基数小于 11，且第一个非空白字符不能转换为数字，则返回 NaN。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能：</p>
+这个方法和全局的 {{jsxref("parseInt", "parseInt()")}} 函数具有一样的函数功能：
 
-<pre><code>Number.parseInt === parseInt; // true</code></pre>
+```plain
+Number.parseInt === parseInt; // true
+```
 
-<p>ECMAScript 2015 添加了这部分 (其目的是对全局变量进行模块化). 请另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。</p>
+ECMAScript 2015 添加了这部分 (其目的是对全局变量进行模块化). 请另见 {{jsxref("parseInt", "parseInt()")}} 获取更多详情和示例。
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre><code>if (Number.parseInt === undefined) {
+```plain
+if (Number.parseInt === undefined) {
     Number.parseInt = window.parseInt;
-}</code></pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code>{{jsxref("Global_Objects/Number", "Number()")}}</code></li>
- <li>全局的 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 函数</li>
-</ul>
+- `{{jsxref("Global_Objects/Number", "Number()")}}`
+- 全局的 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 函数

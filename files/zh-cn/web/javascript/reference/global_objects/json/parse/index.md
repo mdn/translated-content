@@ -9,53 +9,53 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>JSON.parse()</strong></code> 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 <strong>reviver</strong> 函数用以在返回之前对所得到的对象执行变换 (操作)。</p>
+**`JSON.parse()`** 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 **reviver** 函数用以在返回之前对所得到的对象执行变换 (操作)。
 
-<div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-parse.html")}}
 
+## 语法
 
+```plain
+JSON.parse(text[, reviver])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">JSON.parse(<var>text</var>[, <var>reviver</var>])</pre>
+- `text`
+  - : 要被解析成 JavaScript 值的字符串，关于 JSON 的语法格式，请参考：{{jsxref("JSON")}}。
+- `reviver` {{optional_inline()}}
+  - : 转换器，如果传入该参数 (函数)，可以用来修改解析生成的原始值，调用时机在 parse 函数返回之前。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>text</code></dt>
- <dd>要被解析成 JavaScript 值的字符串，关于 JSON 的语法格式，请参考：{{jsxref("JSON")}}。</dd>
- <dt><code>reviver</code> {{optional_inline()}}</dt>
- <dd>转换器，如果传入该参数 (函数)，可以用来修改解析生成的原始值，调用时机在 parse 函数返回之前。</dd>
-</dl>
+{{jsxref("Object")}} 类型，对应给定 JSON 文本的对象/值。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>{{jsxref("Object")}} 类型，对应给定 JSON 文本的对象/值。</p>
+若传入的字符串不符合 JSON 规范，则会抛出 {{jsxref("SyntaxError")}} 异常。
 
-<h3 id="异常">异常</h3>
+## 示例
 
-<p>若传入的字符串不符合 JSON 规范，则会抛出 {{jsxref("SyntaxError")}} 异常。</p>
+### 使用 `JSON.parse()`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_JSON.parse">使用 <code>JSON.parse()</code></h3>
-
-<pre class="brush: js">JSON.parse('{}');              // {}
+```js
+JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
-</pre>
+```
 
-<h3 id="使用_reviver_函数">使用 <code>reviver</code> 函数</h3>
+### 使用 `reviver` 函数
 
-<p>如果指定了 <code>reviver</code> 函数，则解析出的 JavaScript 值（解析值）会经过一次转换后才将被最终返回（返回值）。更具体点讲就是：解析值本身以及它所包含的所有属性，会按照一定的顺序（从最最里层的属性开始，一级级往外，最终到达顶层，也就是解析值本身）分别的去调用 <code>reviver</code> 函数，在调用过程中，当前属性所属的对象会作为 <code>this</code> 值，当前属性名和属性值会分别作为第一个和第二个参数传入 <code>reviver</code> 中。如果 <code>reviver</code> 返回 <code>undefined</code>，则当前属性会从所属对象中删除，如果返回了其他值，则返回的值会成为当前属性新的属性值。</p>
+如果指定了 `reviver` 函数，则解析出的 JavaScript 值（解析值）会经过一次转换后才将被最终返回（返回值）。更具体点讲就是：解析值本身以及它所包含的所有属性，会按照一定的顺序（从最最里层的属性开始，一级级往外，最终到达顶层，也就是解析值本身）分别的去调用 `reviver` 函数，在调用过程中，当前属性所属的对象会作为 `this` 值，当前属性名和属性值会分别作为第一个和第二个参数传入 `reviver` 中。如果 `reviver` 返回 `undefined`，则当前属性会从所属对象中删除，如果返回了其他值，则返回的值会成为当前属性新的属性值。
 
-<p>当遍历到最顶层的值（解析值）时，传入 <code>reviver</code> 函数的参数会是空字符串 <code>""</code>（因为此时已经没有真正的属性）和当前的解析值（有可能已经被修改过了），当前的 <code>this</code> 值会是 <code>{"": 修改过的解析值}</code>，在编写 <code>reviver</code> 函数时，要注意到这个特例。（这个函数的遍历顺序依照：从最内层开始，按照层级顺序，依次向外遍历）</p>
+当遍历到最顶层的值（解析值）时，传入 `reviver` 函数的参数会是空字符串 `""`（因为此时已经没有真正的属性）和当前的解析值（有可能已经被修改过了），当前的 `this` 值会是 `{"": 修改过的解析值}`，在编写 `reviver` 函数时，要注意到这个特例。（这个函数的遍历顺序依照：从最内层开始，按照层级顺序，依次向外遍历）
 
-<pre class="brush: js">JSON.parse('{"p": 5}', function (k, v) {
+```js
+JSON.parse('{"p": 5}', function (k, v) {
     if(k === '') return v;     // 如果到了最顶层，则直接返回属性值，
     return v * 2;              // 否则将属性值变为原来的 2 倍。
 });                            // { p: 10 }
@@ -73,18 +73,20 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 // 5
 // 3
 // ""
-</pre>
+```
 
-<h3 id="JSON.parse_不允许用逗号作为结尾"><code>JSON.parse()</code> 不允许用逗号作为结尾</h3>
+### `JSON.parse()` 不允许用逗号作为结尾
 
-<pre class="example-bad brush: js">// both will throw a SyntaxError
+```js example-bad
+// both will throw a SyntaxError
 JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
+```js
+// From https://github.com/douglascrockford/JSON-js/blob/master/json2.js
 if (typeof JSON.parse !== "function") {
     var rx_one = /^[\],:{}\s]*$/;
     var rx_two = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g;
@@ -106,7 +108,7 @@ if (typeof JSON.parse !== "function") {
             var k;
             var v;
             var value = holder[key];
-            if (value &amp;&amp; typeof value === "object") {
+            if (value && typeof value === "object") {
                 for (k in value) {
                     if (Object.prototype.hasOwnProperty.call(value, k)) {
                         v = walk(value, k);
@@ -180,18 +182,17 @@ if (typeof JSON.parse !== "function") {
 
         throw new SyntaxError("JSON.parse");
     };
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON.stringify()")}}

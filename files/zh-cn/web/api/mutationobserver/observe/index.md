@@ -11,67 +11,62 @@ tags:
   - 方法
 translation_of: Web/API/MutationObserver/observe
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>{{domxref("MutationObserver")}} 的 <code><strong>observe()</strong></code> 方法配置了 <code>MutationObserver</code> 对象的回调方法以开始接收与给定选项匹配的 DOM 变化的通知。根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。</p>
+{{domxref("MutationObserver")}} 的 **`observe()`** 方法配置了 `MutationObserver` 对象的回调方法以开始接收与给定选项匹配的 DOM 变化的通知。根据配置，观察者会观察 DOM 树中的单个 {{domxref("Node")}}，也可能会观察被指定节点的部分或者所有的子孙节点。
 
-<p>要停止 <code>MutationObserver</code>（以便不再触发它的回调方法），需要调用 {{domxref("MutationObserver.disconnect()")}} 方法。</p>
+要停止 `MutationObserver`（以便不再触发它的回调方法），需要调用 {{domxref("MutationObserver.disconnect()")}} 方法。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>mutationObserver</em>.observe(<em>target</em>[, <em>options</em>])
-</pre>
+```plain
+mutationObserver.observe(target[, options])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>一个可选的 {{domxref("MutationObserverInit")}} 对象，此对象的配置项描述了 DOM 的哪些变化应该提供给当前观察者的 <code>callback</code>。</dd>
-</dl>
+- `target`
+  - : DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。
+- `options` {{optional_inline}}
+  - : 一个可选的 {{domxref("MutationObserverInit")}} 对象，此对象的配置项描述了 DOM 的哪些变化应该提供给当前观察者的 `callback`。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>。</p>
+`undefined`。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt><code>TypeError</code></dt>
- <dd>以下任一情况都会抛出异常：
- <ul>
-  <li>配置选项使得实际上不会监视任何内容（例如，如果 {{domxref("MutationObserverInit.childList")}}，{{domxref("MutationObserverInit.attributes")}} 和 {{domxref("MutationObserverInit.characterData")}} 都为 <code>false</code>）。</li>
-  <li><code>attributes</code> 选项为 <code>false</code>（表示不监视属性更改）但是<code>attributeOldValue</code> 为 <code>true</code> 并且/或者 <code>attributeFilter</code> 配置存在。</li>
-  <li>{{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} 选项为 <code>true</code> 但是 {{domxref("MutationObserverInit.characterData")}} 为 <code>false</code>（表示不跟踪字符更改）。</li>
- </ul>
- </dd>
-</dl>
+- `TypeError`
 
-<h2 id="使用说明">使用说明</h2>
+  - : 以下任一情况都会抛出异常：
 
-<h3 id="复用_MutationObserver">复用 MutationObserver</h3>
+    - 配置选项使得实际上不会监视任何内容（例如，如果 {{domxref("MutationObserverInit.childList")}}，{{domxref("MutationObserverInit.attributes")}} 和 {{domxref("MutationObserverInit.characterData")}} 都为 `false`）。
+    - `attributes` 选项为 `false`（表示不监视属性更改）但是`attributeOldValue` 为 `true` 并且/或者 `attributeFilter` 配置存在。
+    - {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} 选项为 `true` 但是 {{domxref("MutationObserverInit.characterData")}} 为 `false`（表示不跟踪字符更改）。
 
-<p>你可以多次调用同一个 <code>MutationObserver</code> 对象的 <code>observe()</code> 方法，来观察 DOM 树中不同部分的变化，和/或不同类型的变化。有一些需要注意的注意事项：</p>
+## 使用说明
 
-<ul>
- <li>如果在已经被同一 <code>MutationObserver</code> 观察的节点上调用 <code>observe()</code> 方法，则在激活新观察者之前，所有现有观察者将自动从所有正在观察的目标中移除。</li>
- <li>如果同一个 <code>MutationObserver</code> 还没有作用在 target 上，则保留现有观察者并添加新观察者。</li>
-</ul>
+### 复用 MutationObserver
 
-<h3 id="当节点断开连接时继续观察节点">当节点断开连接时继续观察节点</h3>
+你可以多次调用同一个 `MutationObserver` 对象的 `observe()` 方法，来观察 DOM 树中不同部分的变化，和/或不同类型的变化。有一些需要注意的注意事项：
 
-<p><code>MutationObserver</code> 旨在让您能够随着时间的推移观察所需的节点集，即使这些节点之间的直接连接被切断。如果你开始观察节点的子树，并且该子树的一部分被分离并移动到 DOM 中的其他位置，你将继续观察分离的节点段，接收与节点从原始子树分离之前相同的回调。</p>
+- 如果在已经被同一 `MutationObserver` 观察的节点上调用 `observe()` 方法，则在激活新观察者之前，所有现有观察者将自动从所有正在观察的目标中移除。
+- 如果同一个 `MutationObserver` 还没有作用在 target 上，则保留现有观察者并添加新观察者。
 
-<p>换句话说，在你收到有关节点从被观察子树中拆分的通知之前，你将收到有关该拆分子树及其节点的更改的通知。这可以防止你丢失在切断连接之后以及在你有机会专门开始观察已移动的节点或子树之前发生的变化。</p>
+### 当节点断开连接时继续观察节点
 
-<p>这意味着理论上如果你跟踪描述发生的变化的 {{domxref("MutationRecord")}} 对象，你就可以 “撤销” 这些改动，将 DOM 恢复到初始状态。</p>
+`MutationObserver` 旨在让您能够随着时间的推移观察所需的节点集，即使这些节点之间的直接连接被切断。如果你开始观察节点的子树，并且该子树的一部分被分离并移动到 DOM 中的其他位置，你将继续观察分离的节点段，接收与节点从原始子树分离之前相同的回调。
 
-<h2 id="示例">示例</h2>
+换句话说，在你收到有关节点从被观察子树中拆分的通知之前，你将收到有关该拆分子树及其节点的更改的通知。这可以防止你丢失在切断连接之后以及在你有机会专门开始观察已移动的节点或子树之前发生的变化。
 
-<p>在此例子中，将为你演示如何在实例 {{domxref("MutationObserver")}} 中调用 <strong><code>observe()</code></strong> 方法，一旦设置后，会传给他一个目标元素和一个 {{domxref("MutationObserverInit")}} 配置对象。</p>
+这意味着理论上如果你跟踪描述发生的变化的 {{domxref("MutationRecord")}} 对象，你就可以 “撤销” 这些改动，将 DOM 恢复到初始状态。
 
-<pre class="brush: js">// 得到要观察的元素
+## 示例
+
+在此例子中，将为你演示如何在实例 {{domxref("MutationObserver")}} 中调用 **`observe()`** 方法，一旦设置后，会传给他一个目标元素和一个 {{domxref("MutationObserverInit")}} 配置对象。
+
+```js
+// 得到要观察的元素
 var elementToObserve = document.querySelector("#targetElementId");
 
 // 创建一个叫 `observer` 的新 `MutationObserver` 实例，
@@ -82,12 +77,13 @@ var observer = new MutationObserver(function() {
 
 // 在 MutationObserver 实例上调用 `observe` 方法，
 // 并将要观察的元素与选项传给此方法
-observer.observe(elementToObserve, {subtree: true, childList: true});</pre>
+observer.observe(elementToObserve, {subtree: true, childList: true});
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.MutationObserver.observe")}}</p>
+{{Compat("api.MutationObserver.observe")}}

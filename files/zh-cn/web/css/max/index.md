@@ -4,103 +4,105 @@ slug: Web/CSS/max
 translation_of: Web/CSS/max()
 original_slug: Web/CSS/max()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code><strong>max</strong></code><strong><code>()</code></strong> 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . <code>max()</code> 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。</p>
+**`max()`** 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . `max()` 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。
 
-<pre class="brush: css; no-line-numbers notranslate">/* property: max(expression [, expression]) */
+```css
+/* property: max(expression [, expression]) */
 width: max(10vw, 4em, 80px);
-</pre>
+```
 
-<p>在上面这个例子中，宽度最小会是 80px，除非视图宽度大于 800px 或者是一个 em 比 20px 宽。简单来说，最小宽度是 80px。你也可以认为 max() 的值提供了一个属性最小可能的值。</p>
+在上面这个例子中，宽度最小会是 80px，除非视图宽度大于 800px 或者是一个 em 比 20px 宽。简单来说，最小宽度是 80px。你也可以认为 max() 的值提供了一个属性最小可能的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>max()</code> 方法接受一个或多个用逗号分隔的表达式作为他的参数，数值最大的表达式的值将会作为指定的属性的值。</p>
+`max()` 方法接受一个或多个用逗号分隔的表达式作为他的参数，数值最大的表达式的值将会作为指定的属性的值。
 
-<p>表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值，或者是其他表达式，例如 attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的  {{CSSxRef("min", "min()")}} 和 <code>max()</code> 函数。</p>
+表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值，或者是其他表达式，例如 attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的 {{CSSxRef("min", "min()")}} 和 `max()` 函数。
 
-<p>你可以使用你的表达式中分别使用不同的单位。需要时，你也可以使用小括号来设定运算顺序。</p>
+你可以使用你的表达式中分别使用不同的单位。需要时，你也可以使用小括号来设定运算顺序。
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<ul>
- <li>Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables <em>may</em> be treated as if <code>auto</code> had been specified.</li>
- <li>It is permitted to nest <code>min()</code> and other <code>max()</code> functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.</li>
- <li>The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any &lt;length&gt; syntax value. </li>
- <li>Oftentimes you will want to combine <code>min()</code> and <code>max()</code> values, or use <code>max()</code> within a <code>clamp()</code> or <code>calc()</code> function.</li>
-</ul>
+- Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` had been specified.
+- It is permitted to nest `min()` and other `max()` functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.
+- The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
+- Oftentimes you will want to combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{CSSSyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使图片保持一个最小的尺寸">使图片保持一个最小的尺寸</h3>
+### 使图片保持一个最小的尺寸
 
-<p><code>max()</code> makes it easy to set a <strong>minimum</strong> width for an image. In this example, the CSS creates a logo that stretches half way across the window on larger devices, but does not not exceed 300px on wider devices, without the use of media queries:</p>
+`max()` makes it easy to set a **minimum** width for an image. In this example, the CSS creates a logo that stretches half way across the window on larger devices, but does not not exceed 300px on wider devices, without the use of media queries:
 
-<pre class="brush: css; notranslate">.logo {
+```css
+.logo {
   width: max(50vw, 300px);
 }
-</pre>
+```
 
-<pre class="brush: html; notranslate">&lt;img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo"&gt;</pre>
+```html
+<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+```
 
-<p>{{EmbedLiveSample("Making_images_at_least_a_minimum_size", "100%", "60")}}</p>
+{{EmbedLiveSample("Making_images_at_least_a_minimum_size", "100%", "60")}}
 
-<p>In this example, the logo will be at least 300px wide, but wider if the viewport grows above 600px, at which point it will grow as the viewport grows, always being 50% of the width of the viewport.</p>
+In this example, the logo will be at least 300px wide, but wider if the viewport grows above 600px, at which point it will grow as the viewport grows, always being 50% of the width of the viewport.
 
-<h3 id="为字体设定一个最小字号">为字体设定一个最小字号</h3>
+### 为字体设定一个最小字号
 
-<p>Another use case for CSS functions is allow a font size to grow while ensuring it is at least a mimum size, enabling responsive font sizes while ensuring legibility.</p>
+Another use case for CSS functions is allow a font size to grow while ensuring it is at least a mimum size, enabling responsive font sizes while ensuring legibility.
 
-<p>Let's look at some CSS:</p>
+Let's look at some CSS:
 
-<pre class="brush: css; notranslate">h1 {
+```css
+h1 {
   font-size: 2rem;
 }
 h1.responsive {
   font-size: max(4vw, 2em, 2rem);
 }
-</pre>
+```
 
-<p>The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensure it is legible and ensures accessibility</p>
+The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensure it is legible and ensures accessibility
 
-<pre class="brush: html; notranslate">&lt;h1&gt;This text is always legible, but doesn't change size&lt;/h1&gt;
-&lt;h1 class="responsive"&gt;This text is always legible, and is responsive, to a point&lt;/h1&gt;
-</pre>
+```html
+<h1>This text is always legible, but doesn't change size</h1>
+<h1 class="responsive">This text is always legible, and is responsive, to a point</h1>
+```
 
-<p>{{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}</p>
+{{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}
 
-<p>Think of the <code>max()</code> function as finding the minimum value allowed for a property.</p>
+Think of the `max()` function as finding the minimum value allowed for a property.
 
-<h2 id="无障碍">无障碍</h2>
+## 无障碍
 
-<p>When <code>max()</code> is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a <code>max()</code> that has as its second value a <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a> that is always large enough to read. For example:</p>
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#Relative_length_units) that is always large enough to read. For example:
 
-<pre class="brush: css; notranslate">small {
+```css
+small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
-}</pre>
+}
+```
 
-<p>This ensures a minimum size of <em>1rem</em>, with a text size that scales if the page is zoomed.</p>
+This ensures a minimum size of _1rem_, with a text size that scales if the page is zoomed.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.types.max")}}
 
+## 也可以看看
 
-<p>{{Compat("css.types.max")}}</p>
-
-<h2 id="也可以看看">也可以看看</h2>
-
-<ul>
- <li>{{CSSxRef("calc", "calc()")}}</li>
- <li>{{CSSxRef("clamp", "clamp()")}}</li>
- <li>{{CSSxRef("min", "min()")}}</li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
-</ul>
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("clamp", "clamp()")}}
+- {{CSSxRef("min", "min()")}}
+- [CSS Values](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

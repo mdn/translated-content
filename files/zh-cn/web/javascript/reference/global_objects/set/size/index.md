@@ -8,38 +8,37 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Size</strong>属性将会返回{{jsxref("Set")}}对象中元素的个数。</p>
+**Size**属性将会返回{{jsxref("Set")}}对象中元素的个数。
 
-<p>{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}</p>
+{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>size</code>的值是一个整数，表示<code>Set</code>对象有多少条目。<code>size</code>的集合访问函数是<code>undefined</code>; 你不能改变这个属性。</p>
+`size`的值是一个整数，表示`Set`对象有多少条目。`size`的集合访问函数是`undefined`; 你不能改变这个属性。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用size">使用<code>size</code></h3>
+### 使用`size`
 
-<pre class="brush:js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
 mySet.add("some text")
 
 mySet.size; // 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}

@@ -3,42 +3,37 @@ title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
 translation_of: Web/API/Document/createNSResolver
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>创建一个 <code>XPathNSResolver</code> which resolves namespaces with respect to the definitions in scope for 指定节点</p>
+创建一个 `XPathNSResolver` which resolves namespaces with respect to the definitions in scope for 指定节点
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>nsResolver</em> = document.createNSResolver(<em>node</em>);
-</pre>
+```plain
+nsResolver = document.createNSResolver(node);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>node</code> is the node to be used as a context for namespace resolution.</li>
-</ul>
+- `node` is the node to be used as a context for namespace resolution.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<ul>
- <li><code>nsResolver</code> is an XPathNSResolver object.</li>
-</ul>
+- `nsResolver` is an XPathNSResolver object.
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>Adapts any DOM node to resolve namespaces so that an <a href="/en/XPath">XPath</a> expression can be easily evaluated relative to the context of the node where it appeared within the document. This adapter works like the DOM Level 3 method <code>lookupNamespaceURI</code> on nodes in resolving the <code>namespaceURI</code> from a given prefix using the current information available in the node's hierarchy at the time <code>lookupNamespaceURI</code> is called. Also correctly resolves the implicit <code>xml</code> prefix.</p>
+Adapts any DOM node to resolve namespaces so that an [XPath](/en/XPath) expression can be easily evaluated relative to the context of the node where it appeared within the document. This adapter works like the DOM Level 3 method `lookupNamespaceURI` on nodes in resolving the `namespaceURI` from a given prefix using the current information available in the node's hierarchy at the time `lookupNamespaceURI` is called. Also correctly resolves the implicit `xml` prefix.
 
-<p>Note, XPath defines QNames without prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., <code>p[@id='_myid'</code>] for <code>xmlns='http://www.w3.org/1999/xhtml'</code>). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as <code>*namespace-uri()=http://www.w3.org/1999/xhtml and name()=p[@id='_myid']</code> (<a href="/en/Introduction_to_using_XPath_in_JavaScript#Using_XPath_functions_to_reference_elements_with_its_default_namespace">this approach</a> works well for dynamic XPath expressions where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on <a href="/en/Introduction_to_using_XPath_in_JavaScript#Implementing_a_User_Defined_Namespace_Resolver">how to create a user defined namespace resolver</a> if you wish to take the latter approach.</p>
+Note, XPath defines QNames without prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., `p[@id='_myid'`] for `xmlns='http://www.w3.org/1999/xhtml'`). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as `*namespace-uri()=http://www.w3.org/1999/xhtml and name()=p[@id='_myid']` ([this approach](/en/Introduction_to_using_XPath_in_JavaScript#Using_XPath_functions_to_reference_elements_with_its_default_namespace) works well for dynamic XPath expressions where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on [how to create a user defined namespace resolver](/en/Introduction_to_using_XPath_in_JavaScript#Implementing_a_User_Defined_Namespace_Resolver) if you wish to take the latter approach.
 
-<p><code>createNSResolver</code> was introduced in DOM Level 3.</p>
+`createNSResolver` was introduced in DOM Level 3.
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en/DOM/document.evaluate">document.evaluate</a></li>
- <li><a href="/en/Introduction_to_using_XPath_in_JavaScript">Introduction to using XPath in JavaScript</a></li>
-</ul>
+- [document.evaluate](/en/DOM/document.evaluate)
+- [Introduction to using XPath in JavaScript](/en/Introduction_to_using_XPath_in_JavaScript)
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver">DOM Level 3 XPath Specification: createNSResolver</a></p>
+[DOM Level 3 XPath Specification: createNSResolver](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver)

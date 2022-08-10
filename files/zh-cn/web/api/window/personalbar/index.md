@@ -3,53 +3,53 @@ title: Window.personalbar
 slug: Web/API/Window/personalbar
 translation_of: Web/API/Window/personalbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>返回 <code>personalbar</code> 对象，其可见性可以在窗口中切换。</p>
+返回 `personalbar` 对象，其可见性可以在窗口中切换。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>objRef</em> =<em>window</em>.personalbar
-</pre>
+```plain
+objRef =window.personalbar
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}</p>
+{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
 
-<p>{{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to <a href="https://developer.mozilla.org/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code">deprecation of enablePrivilege</a> this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.</p>
+{{deprecated_inline}} The following complete HTML example shows the way that the visible property of the various "bar" objects is used, and also the change to the privileges necessary to write to the visible property of any of the bars on an existing window. Due to [deprecation of enablePrivilege](https://developer.mozilla.org/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege is disabled in Firefox 15 and will be removed in Firefox 17.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Various DOM Tests</title>
 
-&lt;script&gt;
+<script>
 // changing bar states on the existing window
 netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
 window.personalbar.visible = !window.personalbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="笔记">笔记</h2>
+## 笔记
 
-<p>When you load the example page above, the browser displays the following dialog: <img src="modify_any_open_window_dialog.png"></p>
+When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
 
-<p>To toggle the visibility of these bars, you must either sign your scripts or enable the appropriate privileges, as in the example above. Also be aware that dynamically updating the visibilty of the various toolbars can change the size of the window rather dramatically, and may affect the layout of your page.</p>
+To toggle the visibility of these bars, you must either sign your scripts or enable the appropriate privileges, as in the example above. Also be aware that dynamically updating the visibilty of the various toolbars can change the size of the window rather dramatically, and may affect the layout of your page.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}</li>
-</ul>
+- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

@@ -3,47 +3,46 @@ title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> 方法返回  {{jsxref("String")}}  对象的原始值</p>
+**`valueOf()`** 方法返回 {{jsxref("String")}} 对象的原始值
 
-<div>{{EmbedInteractiveExample("pages/js/string-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.valueOf()</code></pre>
+```plain
+str.valueOf()
+```
 
-<h3 id="返回结果">返回结果</h3>
+### 返回结果
 
-<p>A string representing the primitive value of a given {{jsxref("String")}} object.</p>
+A string representing the primitive value of a given {{jsxref("String")}} object.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>The <code>valueOf()</code> method of {{jsxref("String")}} returns the primitive value of a {{jsxref("String")}} object as a string data type. This value is equivalent to {{jsxref("String.prototype.toString()")}}.</p>
+The `valueOf()` method of {{jsxref("String")}} returns the primitive value of a {{jsxref("String")}} object as a string data type. This value is equivalent to {{jsxref("String.prototype.toString()")}}.
 
-<p>此方法通常由 JavaScript 在内部调用，而不是在代码中显式调用。</p>
+此方法通常由 JavaScript 在内部调用，而不是在代码中显式调用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_valueOf">使用 <code>valueOf()</code></h3>
+### 使用 `valueOf()`
 
-<pre class="brush: js">var x = new String('Hello world');
+```js
+var x = new String('Hello world');
 console.log(x.valueOf()); // Displays 'Hello world'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

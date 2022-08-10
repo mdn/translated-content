@@ -3,17 +3,16 @@ title: border-right-color
 slug: Web/CSS/border-right-color
 translation_of: Web/CSS/border-right-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-right-color</code></strong> CSS 属性用来设置元素右边的 {{cssxref("border")}}. 这个属性的值也可以通过简写的 CSS 属性 {{cssxref("border-color")}} 或{{cssxref("border-right")}}来设置。</p>
+**`border-right-color`** CSS 属性用来设置元素右边的 {{cssxref("border")}}. 这个属性的值也可以通过简写的 CSS 属性 {{cssxref("border-color")}} 或{{cssxref("border-right")}}来设置。
 
-<div>{{EmbedInteractiveExample("pages/css/border-right-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-right-color.html")}}
 
+## Syntax
 
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: css no-line-numbers  language-css">/* &lt;color&gt; values */
+```css
+/* <color> values */
 border-right-color: red;
 border-right-color: #ffbb00;
 border-right-color: rgb(255, 0, 0);
@@ -25,36 +24,37 @@ border-right-color: transparent;
 border-right-color: inherit;
 border-right-color: initial;
 border-right-color: unset;
-</pre>
+```
 
-<p>The <code>border-right-color</code> property is specified as a single value.</p>
+The `border-right-color` property is specified as a single value.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>The color of the right border.</dd>
-</dl>
+- {{cssxref("&lt;color&gt;")}}
+  - : The color of the right border.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="A_simple_div_with_a_border">A simple div with a border</h3>
+### A simple div with a border
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="mybox"&gt;
-  &lt;p&gt;This is a box with a border around it.
+```html
+<div class="mybox">
+  <p>This is a box with a border around it.
     Note which side of the box is
-    &lt;span class="redtext"&gt;red&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+    <span class="redtext">red</span>.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.mybox {
+```css
+.mybox {
   border: solid 0.3em gold;
   border-right-color: red;
   width: auto;
@@ -62,28 +62,25 @@ border-right-color: unset;
 
 .redtext {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('A_simple_div_with_a_border')}}</p>
+{{EmbedLiveSample('A_simple_div_with_a_border')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.border-right-color")}}
 
+## See also
 
-<p>{{Compat("css.properties.border-right-color")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The border-related CSS shorthand properties: {{cssxref("border")}}, {{cssxref("border-right")}}, and {{cssxref("border-color")}}.</li>
- <li>The color-related CSS properties for the other borders: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, and {{cssxref("border-top-color")}}.</li>
- <li>The other border-related CSS properties applying to the same border: {{cssxref("border-right-style")}} and {{cssxref("border-right-width")}}.</li>
-</ul>
+- The border-related CSS shorthand properties: {{cssxref("border")}}, {{cssxref("border-right")}}, and {{cssxref("border-color")}}.
+- The color-related CSS properties for the other borders: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, and {{cssxref("border-top-color")}}.
+- The other border-related CSS properties applying to the same border: {{cssxref("border-right-style")}} and {{cssxref("border-right-width")}}.

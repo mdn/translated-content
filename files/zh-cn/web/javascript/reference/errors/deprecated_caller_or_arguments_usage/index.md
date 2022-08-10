@@ -9,30 +9,32 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">Warning: ReferenceError: deprecated caller usage (Firefox)
+```plain
+Warning: ReferenceError: deprecated caller usage (Firefox)
 Warning: ReferenceError: deprecated arguments usage (Firefox)
 TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>仅在严格模式下出现的 {{jsxref("ReferenceError")}} 警告。JavaScript 的执行将不会停止。</p>
+仅在严格模式下出现的 {{jsxref("ReferenceError")}} 警告。JavaScript 的执行将不会停止。
 
-<h2 id="发生了什么">发生了什么？</h2>
+## 发生了什么？
 
-<p>在 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。</p>
+在 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 中，{{jsxref("Function.caller")}} 和 {{jsxref("Function.arguments")}} 属性是不该使用的。它们都是已经被废弃的了，因为这两者泄露了函数的调用者，是不标准的，难于优化和有这潜在的性能问题。
 
-<h2 id="实力">实力</h2>
+## 实力
 
-<h3 id="废弃的_function.caller_or_arguments.callee.caller">废弃的 <code>function.caller</code> or <code>arguments.callee.caller</code></h3>
+### 废弃的 `function.caller` or `arguments.callee.caller`
 
-<p>{{jsxref("Function.caller")}} 和 <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee.caller</a></code> 都是已废弃的 (详见参考文章)。</p>
+{{jsxref("Function.caller")}} 和 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 都是已废弃的 (详见参考文章)。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 function myFunc() {
   if (myFunc.caller == null) {
@@ -44,19 +46,21 @@ function myFunc() {
 
 myFunc();
 // Warning: ReferenceError: deprecated caller usage
-// "The function was called from the top!"</pre>
+// "The function was called from the top!"
+```
 
-<h3 id="Function.arguments"><code>Function.arguments</code></h3>
+### `Function.arguments`
 
-<p>{{jsxref("Function.arguments")}} 已被废弃。 (详见参考文章)。</p>
+{{jsxref("Function.arguments")}} 已被废弃。 (详见参考文章)。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 function f(n) { g(n - 1); }
 
 function g(n) {
   console.log('before: ' + g.arguments[0]);
-  if (n &gt; 0) { f(n); }
+  if (n > 0) { f(n); }
   console.log('after: ' + g.arguments[0]);
 }
 
@@ -64,13 +68,11 @@ f(2);
 
 console.log('returned: ' + g.arguments);
 // Warning: ReferenceError: deprecated arguments usage
-</pre>
+```
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">Deprecated and obsolete features</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
- <li>{{jsxref("Function.arguments")}}</li>
- <li>{{jsxref("Function.caller")}} and <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee.caller</a></code></li>
-</ul>
+- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- {{jsxref("Function.arguments")}}
+- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)

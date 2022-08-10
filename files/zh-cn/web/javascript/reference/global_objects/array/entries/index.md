@@ -5,38 +5,43 @@ tags:
   - Array.prototype.entries()
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>entries()</strong></code> 方法返回一个新的<strong>Array Iterator</strong>对象，该对象包含数组中每个索引的键/值对。</p>
+**`entries()`** 方法返回一个新的**Array Iterator**对象，该对象包含数组中每个索引的键/值对。
 
-<p>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>arr</em>.entries()</code></pre>
+```plain
+arr.entries()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的 {{jsxref("Array")}} 迭代器对象。<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-createarrayiterator">Array Iterator</a>是对象，它的原型（__proto__:Array Iterator）上有一个<a href="http://www.ecma-international.org/ecma-262/6.0/#sec-%arrayiteratorprototype%.next">next</a>方法，可用用于遍历迭代器取得原数组的 [key,value]。</p>
+一个新的 {{jsxref("Array")}} 迭代器对象。[Array Iterator](http://www.ecma-international.org/ecma-262/6.0/#sec-createarrayiterator)是对象，它的原型（\_\_proto\_\_:Array Iterator）上有一个[next](http://www.ecma-international.org/ecma-262/6.0/#sec-%arrayiteratorprototype%.next)方法，可用用于遍历迭代器取得原数组的 \[key,value]。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="1、_Array_Iterator">1、 Array Iterator</h3>
+### 1、 Array Iterator
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 var iterator = arr.entries();
 console.log(iterator);
 
-/*<em>Array Iterator {}</em>
+/*Array Iterator {}
          __proto__:Array Iterator
-         next:<em>ƒ next()</em>
+         next:ƒ next()
          Symbol(Symbol.toStringTag):"Array Iterator"
-         __proto__:<em>Object</em>
-*/</pre>
+         __proto__:Object
+*/
+```
 
-<h3 id="2、iterator.next()">2、iterator.next()</h3>
+### 2、iterator.next()
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 var iterator = arr.entries();
 console.log(iterator.next());
 
@@ -50,16 +55,17 @@ console.log(iterator.next());
 // next.done 用于指示迭代器是否完成：在每次迭代时进行更新而且都是 false，
 // 直到迭代器结束 done 才是 true。
 // next.value 是一个 ["key","value"] 的数组，是返回的迭代器中的元素值。
-</pre>
+```
 
-<h3 id="3、iterator.next方法运行">3、iterator.next 方法运行</h3>
+### 3、iterator.next 方法运行
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 var iter = arr.entries();
 var a = [];
 
-// for(var i=0; i&lt; arr.length; i++){   // 实际使用的是这个
-for(var i=0; i&lt; arr.length+1; i++){    // 注意，是 length+1，比数组的长度大
+// for(var i=0; i< arr.length; i++){   // 实际使用的是这个
+for(var i=0; i< arr.length+1; i++){    // 注意，是 length+1，比数组的长度大
     var tem = iter.next();             // 每次迭代时更新 next
     console.log(tem.done);             // 这里可以看到更新后的 done 都是 false
     if(tem.done !== true){             // 遍历迭代器结束 done 才是 true
@@ -68,17 +74,19 @@ for(var i=0; i&lt; arr.length+1; i++){    // 注意，是 length+1，比数组�
     }
 }
 
-console.log(a);                         // 遍历完毕，输出 next.value 的数组</pre>
+console.log(a);                         // 遍历完毕，输出 next.value 的数组
+```
 
-<h3 id="4、二维数组按行排序">4、二维数组按行排序</h3>
+### 4、二维数组按行排序
 
-<pre class="brush: js">function sortArr(arr) {
+```js
+function sortArr(arr) {
     var goNext = true;
     var entries = arr.entries();
     while (goNext) {
         var result = entries.next();
         if (result.done !== true) {
-            result.value[1].sort((a, b) =&gt; a - b);
+            result.value[1].sort((a, b) => a - b);
             goNext = true;
         } else {
             goNext = false;
@@ -98,11 +106,12 @@ sortArr(arr);
     length:4
     __proto__:Array(0)
 */
-</pre>
+```
 
-<h3 id="5、使用for…of_循环">5、使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 循环</h3>
+### 5、使用[for…of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环
 
-<pre class="brush:js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 var iterator = arr.entries();
 // undefined
 
@@ -113,23 +122,21 @@ for (let e of iterator) {
 // [0, "a"]
 // [1, "b"]
 // [2, "c"]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- [for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

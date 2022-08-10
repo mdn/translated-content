@@ -12,46 +12,46 @@ tags:
   - kind
 translation_of: Web/API/DataTransferItem/kind
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p><strong><code>DataTransferItem.kind</code></strong> 是一个只读属性，它返回一个 {{domxref("DataTransferItem")}} 用来表示拖拽项 (<em>drag data item) 的类型</em>: 一些文本或者一些文件。</p>
+**`DataTransferItem.kind`** 是一个只读属性，它返回一个 {{domxref("DataTransferItem")}} 用来表示拖拽项 (_drag data item) 的类型_: 一些文本或者一些文件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>itemKind</em> = <em>DataTransferItem</em>.kind;
-</pre>
+```plain
+var itemKind = DataTransferItem.kind;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p> {{domxref("DOMString")}} 用来表示拖拽项 (<em>drag data item) 的类型</em>. 它的值必须是以下值中的一个：</p>
+{{domxref("DOMString")}} 用来表示拖拽项 (_drag data item) 的类型_. 它的值必须是以下值中的一个：
 
-<dl>
- <dt><code>'file'</code></dt>
- <dd>拖拽项是一个文件。</dd>
- <dt><code>'string'</code></dt>
- <dd>拖拽项是一个普通的 Unicode 字符。</dd>
-</dl>
+- `'file'`
+  - : 拖拽项是一个文件。
+- `'string'`
+  - : 拖拽项是一个普通的 Unicode 字符。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面这个例子是 <code>kind</code> 属性的用法。</p>
+下面这个例子是 `kind` 属性的用法。
 
-<pre class="brush: js">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = event.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      var f = data[i].getAsFile();
@@ -59,16 +59,16 @@ translation_of: Web/API/DataTransferItem/kind
    }
  }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.DataTransferItem.kind")}}</p>
+{{Compat("api.DataTransferItem.kind")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

@@ -9,70 +9,65 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/tref
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p> {{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据 ，也可以是引用元素的字符数据内容，<code>tref</code>元素用来指定的包含文本内容的引用元素。</p>
+{{ SVGElement("text") }} 的文本内容既可以是直接嵌入在{{SVGElement("text")}}元素中的的字符数据 ，也可以是引用元素的字符数据内容，`tref`元素用来指定的包含文本内容的引用元素。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;svg width="100%" height="100%" viewBox="0 0 1000 300"
+```xml
+<svg width="100%" height="100%" viewBox="0 0 1000 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;text id="ReferencedText"&gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <text id="ReferencedText">
       Referenced character data
-    &lt;/text&gt;
-  &lt;/defs&gt;
+    </text>
+  </defs>
 
-  &lt;text x="100" y="100" font-size="45" &gt;
+  <text x="100" y="100" font-size="45" >
     Inline character data
-  &lt;/text&gt;
+  </text>
 
-  &lt;text x="100" y="200" font-size="45" fill="red" &gt;
-    &lt;tref xlink:href="#ReferencedText"/&gt;
-  &lt;/text&gt;
+  <text x="100" y="200" font-size="45" fill="red" >
+    <tref xlink:href="#ReferencedText"/>
+  </text>
 
-  &lt;!-- Show outline of canvas using 'rect' element --&gt;
-  &lt;rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x="1" y="1" width="998" height="298"
+        fill="none" stroke-width="2" />
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGTRefElement">SVGTRefElement</a></code>接口。</p>
+该元素实现了[`SVGTRefElement`](/en/DOM/SVGTRefElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.tref")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("text") }}</li>
-</ul>
+- {{ SVGElement("text") }}

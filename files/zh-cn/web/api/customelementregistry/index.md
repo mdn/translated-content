@@ -8,28 +8,27 @@ tags:
   - Web Components
 translation_of: Web/API/CustomElementRegistry
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p><strong><code>CustomElementRegistry</code></strong>接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。</p>
+**`CustomElementRegistry`**接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>定义一个新的<a href="/zh-CN/docs/Web/Web_Components/Custom_Elements">自定义元素</a>。</dd>
- <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>返回指定自定义元素的构造函数，如果未定义自定义元素，则返回<code>undefined</code>。</dd>
- <dt>{{domxref("CustomElementRegistry.upgrade()")}}</dt>
- <dd>Upgrades a custom element directly, even before it is connected to its shadow root.</dd>
- <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
- <dd>返回当使用给定名称定义自定义元素时将会执行的 {{jsxref("Promise", "promise")}}。（如果已经定义了这样一个自定义元素，那么立即执行返回的 promise。）</dd>
-</dl>
+- {{domxref("CustomElementRegistry.define()")}}
+  - : 定义一个新的[自定义元素](/zh-CN/docs/Web/Web_Components/Custom_Elements)。
+- {{domxref("CustomElementRegistry.get()")}}
+  - : 返回指定自定义元素的构造函数，如果未定义自定义元素，则返回`undefined`。
+- {{domxref("CustomElementRegistry.upgrade()")}}
+  - : Upgrades a custom element directly, even before it is connected to its shadow root.
+- {{domxref("CustomElementRegistry.whenDefined()")}}
+  - : 返回当使用给定名称定义自定义元素时将会执行的 {{jsxref("Promise", "promise")}}。（如果已经定义了这样一个自定义元素，那么立即执行返回的 promise。）
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。请注意我们如何使用 {{domxref("CustomElementRegistry.define()")}} 方法在创建其类后定义自定义元素。</p>
+以下代码来自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 示例（[see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)）。请注意我们如何使用 {{domxref("CustomElementRegistry.define()")}} 方法在创建其类后定义自定义元素。
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -66,14 +65,13 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.CustomElementRegistry")}}</p>
+{{Compat("api.CustomElementRegistry")}}

@@ -11,37 +11,38 @@ tags:
   - 生成器
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
-<div>{{JSRef}} </div>
+{{JSRef}}
 
-<p><strong>生成器</strong>对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的，并且它符合<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable">可迭代协议</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator">迭代器协议</a>。</p>
+**生成器**对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的，并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">function* gen() {
+```plain
+function* gen() {
   yield 1;
   yield 2;
   yield 3;
 }
 
 let g = gen();
-// "Generator { }"</pre>
+// "Generator { }"
+```
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("Generator.prototype.next()")}}</dt>
- <dd>返回一个由 {{jsxref("Operators/yield", "yield")}}表达式生成的值。</dd>
- <dt>{{jsxref("Generator.prototype.return()")}}</dt>
- <dd>返回给定的值并结束生成器。</dd>
- <dt>{{jsxref("Generator.prototype.throw()")}}</dt>
- <dd>向生成器抛出一个错误。</dd>
-</dl>
+- {{jsxref("Generator.prototype.next()")}}
+  - : 返回一个由 {{jsxref("Operators/yield", "yield")}}表达式生成的值。
+- {{jsxref("Generator.prototype.return()")}}
+  - : 返回给定的值并结束生成器。
+- {{jsxref("Generator.prototype.throw()")}}
+  - : 向生成器抛出一个错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="一个无限迭代器">一个无限迭代器</h3>
+### 一个无限迭代器
 
-<pre class="brush: js">function* idMaker(){
+```js
+function* idMaker(){
     let index = 0;
     while(true)
         yield index++;
@@ -55,28 +56,28 @@ console.log(gen.next().value);
 // 1
 console.log(gen.next().value);
 // 2
-// ...</pre>
+// ...
+```
 
-<h2 id="传统的生成器对象">传统的生成器对象</h2>
+## 传统的生成器对象
 
-<p>Firefox (SpiderMonkey) 在 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a> 中也实现了一个较早版本的生成器，其中函数声明中的星号（*）不是必需的 (只需在函数体中使用<code>yield</code> 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除  ({{bug(1083482)}})。</p>
+Firefox (SpiderMonkey) 在 [JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7) 中也实现了一个较早版本的生成器，其中函数声明中的星号（\*）不是必需的 (只需在函数体中使用`yield` 关键字)。但是，旧式生成器已弃用。不要使用它们;他们将被删除 ({{bug(1083482)}})。
 
-<h3 id="传统的生成器方法">传统的生成器方法</h3>
+### 传统的生成器方法
 
-<dl>
- <dt><code>Generator.prototype.next() </code>{{non-standard_inline}}</dt>
- <dd>返回 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。与 ES2015 生成器对象的 next() 方法对应。</dd>
- <dt><code>Generator.prototype.close()</code> {{non-standard_inline}}</dt>
- <dd>关闭生成器，因此执行该函数后调用<code>next() 函数时将会抛出</code> {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..</dd>
- <dt><code>Generator.prototype.send()</code> {{non-standard_inline}}</dt>
- <dd>用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。<code>send(x)</code> 对应于 ES2015 生成器对象中的 <code>next(x)</code></dd>
- <dt><strong><code>Generator.</code></strong><code>prototype.</code><strong><code>throw()</code> </strong> {{non-standard_inline}}</dt>
- <dd>向生成器抛出错误。与 ES2015 生成器对象的 throw() 方法对应。</dd>
-</dl>
+- `Generator.prototype.next() `{{non-standard_inline}}
+  - : 返回 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。与 ES2015 生成器对象的 next() 方法对应。
+- `Generator.prototype.close()` {{non-standard_inline}}
+  - : 关闭生成器，因此执行该函数后调用`next() 函数时将会抛出` {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..
+- `Generator.prototype.send()` {{non-standard_inline}}
+  - : 用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。`send(x)` 对应于 ES2015 生成器对象中的 `next(x)`
+- **`Generator.`**`prototype.`**`throw()` **{{non-standard_inline}}
+  - : 向生成器抛出错误。与 ES2015 生成器对象的 throw() 方法对应。
 
-<h3 id="旧生成器对象示例">旧生成器对象示例</h3>
+### 旧生成器对象示例
 
-<pre class="brush: js">function fibonacci() {
+```js
+function fibonacci() {
   var a = yield 1;
   yield a * 2;
 }
@@ -87,38 +88,32 @@ console.log(it.next());   // 1
 console.log(it.send(10)); // 20
 console.log(it.close());  // undefined
 console.log(it.next());   // throws StopIteration (as the generator is now closed)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
+### Legacy generators
 
-<h2 id="See_also">相关链接</h2>
+- {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
+- {{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}
+- {{jsxref("StopIteration")}}
+- [The legacy Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol)
 
-<h3 id="Legacy_generators">Legacy generators</h3>
+### ES2015 generators
 
-<ul>
- <li>{{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}</li>
- <li>{{jsxref("Operators/Legacy_generator_function", "The legacy generator function expression", "", 1)}}</li>
- <li>{{jsxref("StopIteration")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol">The legacy Iterator protocol</a></li>
-</ul>
-
-<h3 id="ES2015_generators">ES2015 generators</h3>
-
-<ul>
- <li>{{jsxref("Functions", "Functions", "", 1)}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Statements/function*", "function*")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol">The Iterator protocol</a></li>
-</ul>
+- {{jsxref("Functions", "Functions", "", 1)}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}}
+- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)

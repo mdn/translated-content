@@ -3,24 +3,24 @@ title: VisualViewport.offsetleft
 slug: Web/API/VisualViewport/offsetleft
 translation_of: Web/API/VisualViewport/offsetleft
 ---
-<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
+{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>offsetLeft</code></strong> read-only property of the {{domxref("VisualViewport")}} interface returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.</p>
+The **`offsetLeft`** read-only property of the {{domxref("VisualViewport")}} interface returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>offsetLeft</em> = VisualViewport.offsetLeft</pre>
+```plain
+var offsetLeft = VisualViewport.offsetLeft
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.VisualViewport.offsetLeft")}}</p>
+{{Compat("api.VisualViewport.offsetLeft")}}

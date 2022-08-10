@@ -3,82 +3,90 @@ title: 大于运算符 (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
 translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>当左边操作数大于右边的时候，大于 (<code>&gt;</code>) 运算符返回<code>true</code>，否则返回<code>false</code></p>
+当左边操作数大于右边的时候，大于 (`>`) 运算符返回`true`，否则返回`false`
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
 
+## 语法
 
+```plain
+x > y
+```
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox">x &gt; y</pre>
+操作数之间按照 [Abstract Relational Comparison](https://tc39.es/ecma262/#sec-abstract-relational-comparison) 算法进行比较。进一步了解该算法，请参考 [小于](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) 运算符的相关文档。
 
-<h2 id="描述">描述</h2>
+## 例子
 
-<p>操作数之间按照 <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> 算法进行比较。进一步了解该算法，请参考 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">小于</a> 运算符的相关文档。</p>
+### 字符串的比较
 
-<h2 id="例子">例子</h2>
+```js
+console.log("a" > "b");        // false
+console.log("a" > "a");        // false
+console.log("a" > "3");        // true
+```
 
-<h3 id="字符串的比较">字符串的比较</h3>
+### 字符串和数字的比较
 
-<pre class="brush: js">console.log("a" &gt; "b");        // false
-console.log("a" &gt; "a");        // false
-console.log("a" &gt; "3");        // true</pre>
+```js
+console.log("5" > 3);          // true
+console.log("3" > 3);          // false
+console.log("3" > 5);          // false
 
-<h3 id="字符串和数字的比较">字符串和数字的比较</h3>
+console.log("hello" > 5);      // false
+console.log(5 > "hello");      // false
 
-<pre class="brush: js">console.log("5" &gt; 3);          // true
-console.log("3" &gt; 3);          // false
-console.log("3" &gt; 5);          // false
+console.log("5" > 3n);         // true
+console.log("3" > 5n);         // false
+```
 
-console.log("hello" &gt; 5);      // false
-console.log(5 &gt; "hello");      // false
+### 数字间的比较
 
-console.log("5" &gt; 3n);         // true
-console.log("3" &gt; 5n);         // false</pre>
+```js
+console.log(5 > 3);            // true
+console.log(3 > 3);            // false
+console.log(3 > 5);            // false
+```
 
-<h3 id="数字间的比较">数字间的比较</h3>
+### 数字和 BigInt 数据的比较
 
-<pre class="brush: js">console.log(5 &gt; 3);            // true
-console.log(3 &gt; 3);            // false
-console.log(3 &gt; 5);            // false</pre>
+```js
+console.log(5n > 3);           // true
+console.log(3 > 5n);           // false
+```
 
-<h3 id="数字和_BigInt_数据的比较">数字和 BigInt 数据的比较</h3>
+### Boolean, null, undefined, NaN 的比较
 
-<pre class="brush: js">console.log(5n &gt; 3);           // true
-console.log(3 &gt; 5n);           // false</pre>
+```js
+console.log(true > false);     // true
+console.log(false > true);     // false
 
-<h3 id="Boolean_null_undefined_NaN的比较">Boolean, null, undefined, NaN 的比较</h3>
+console.log(true > 0);         // true
+console.log(true > 1);         // false
 
-<pre class="brush: js">console.log(true &gt; false);     // true
-console.log(false &gt; true);     // false
+console.log(null > 0);         // false
+console.log(1 > null);         // true
 
-console.log(true &gt; 0);         // true
-console.log(true &gt; 1);         // false
+console.log(undefined > 3);    // false
+console.log(3 > undefined);    // false
 
-console.log(null &gt; 0);         // false
-console.log(1 &gt; null);         // true
+console.log(3 > NaN);          // false
+console.log(NaN > 3);          // false
+```
 
-console.log(undefined &gt; 3);    // false
-console.log(3 &gt; undefined);    // false
-
-console.log(3 &gt; NaN);          // false
-console.log(NaN &gt; 3);          // false</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Greater than or equal operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal operator</a></li>
-</ul>
+- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

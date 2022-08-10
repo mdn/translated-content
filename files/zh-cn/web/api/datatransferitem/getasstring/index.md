@@ -3,61 +3,59 @@ title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
 translation_of: Web/API/DataTransferItem/getAsString
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p> <strong><code>DataTransferItem.getAsString()</code></strong>  当 DataTransferItem 对象的 kind 属性是一个普通 Unicode 字符串时，该方法会用 DataTransferItem 对象的 kind 属性作为入参来执行传入的回调函数 (i.e. <code>kind</code> is <code>string</code>).</p>
+**`DataTransferItem.getAsString()`** 当 DataTransferItem 对象的 kind 属性是一个普通 Unicode 字符串时，该方法会用 DataTransferItem 对象的 kind 属性作为入参来执行传入的回调函数 (i.e. `kind` is `string`).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="syntaxbox notranslate"><em>dataTransferItem</em>.getAsString(callback);
-</pre>
+```plain
+dataTransferItem.getAsString(callback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>A callback function that has access to the {{domxref("DataTransferItem","data transfer item's")}} string data. See <a href="#callback">Callback</a> below for details.</dd>
-</dl>
+- `callback`
+  - : A callback function that has access to the {{domxref("DataTransferItem","data transfer item's")}} string data. See [Callback](#callback) below for details.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Callback">Callback</h2>
+## Callback
 
-<p>The callback parameter is a callback function which accepts one parameter:</p>
+The callback parameter is a callback function which accepts one parameter:
 
-<dl>
- <dt>{{domxref("DOMString")}}</dt>
- <dd>The drag data item's string data.</dd>
-</dl>
+- {{domxref("DOMString")}}
+  - : The drag data item's string data.
 
-<p>The callback return value is <code>undefined</code>.</p>
+The callback return value is `undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>getAsString()</code> method as an <em>inline function</em> in a {{event("drop")}} event handler.</p>
+This example shows the use of the `getAsString()` method as an _inline function_ in a {{event("drop")}} event handler.
 
-<pre class="brush: js notranslate">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = ev.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // Drag data item is URI
      console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      var f = data[i].getAsFile();
@@ -65,20 +63,16 @@ translation_of: Web/API/DataTransferItem/getAsString
    }
  }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.DataTransferItem.getAsString")}}
 
+## See also
 
-<p>{{Compat("api.DataTransferItem.getAsString")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("DataTransfer.getData()")}}</li>
-</ul>
+- {{domxref("DataTransfer.getData()")}}

@@ -4,28 +4,28 @@ slug: Web/API/Element/touchmove_event
 translation_of: Web/API/GlobalEventHandlers/ontouchmove
 original_slug: Web/API/GlobalEventHandlers/ontouchmove
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval">var moveHandler = someElement.ontouchmove;
-</pre>
+```plain
+var moveHandler = someElement.ontouchmove;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>moveHandler</code></dt>
- <dd><code>someElement</code>元素的 <em>touchmove 事件处理句柄/函数。</em></dd>
-</dl>
+- `moveHandler`
+  - : `someElement`元素的 _touchmove 事件处理句柄/函数。_
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>这个例子展示了两种通过 <em>ontouchmove </em>设置元素的 <em>touchmove 事件处理句柄/函数的方式。</em></p>
+这个例子展示了两种通过 _ontouchmove_ 设置元素的 _touchmove 事件处理句柄/函数的方式。_
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 
 function moveTouch(ev) {
  // 处理事件
@@ -36,23 +36,21 @@ function init() {
  el.ontouchmove = moveTouch;
 }
 
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" ontouchmove="moveTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" ontouchmove="moveTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("touchmove") }}</li>
-</ul>
+- {{ event("touchmove") }}

@@ -6,26 +6,25 @@ tags:
 translation_of: Web/API/Notification/onclose
 original_slug: Web/API/notification/onclose
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>{{domxref("Notification")}}  接口的 <strong>onclose</strong>属性指定一个事件侦听器来接收 {{event("close")}}事件。</p>
+{{domxref("Notification")}} 接口的 **onclose**属性指定一个事件侦听器来接收 {{event("close")}}事件。
 
-<p>当一个{{domxref("Notification")}}关闭时，会发生这些事件。</p>
+当一个{{domxref("Notification")}}关闭时，会发生这些事件。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">Notification.onclose = function() { ... };
-</pre>
+```plain
+Notification.onclose = function() { ... };
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Using the Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

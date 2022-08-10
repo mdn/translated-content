@@ -1,37 +1,36 @@
 ---
-title: 'Symbol.prototype[@@toPrimitive]'
+title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>[@@toPrimitive]()</strong></code> 方法可将 Symbol 对象转换为原始值。</p>
+**`[@@toPrimitive]()`** 方法可将 Symbol 对象转换为原始值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>Symbol()[Symbol.toPrimitive](hint);
-</var></pre>
+```plain
+Symbol()[Symbol.toPrimitive](hint);
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>该原始值为指定的 {{jsxref("Symbol")}} 对象</p>
+该原始值为指定的 {{jsxref("Symbol")}} 对象
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p> {{jsxref("Symbol")}} 的 <code>[@@toPrimitive]()</code> 方法返回该 Symbol 对象原始值作为 Symbol 数据形式。 <code>hint</code> 参数未被使用。</p>
+{{jsxref("Symbol")}} 的 `[@@toPrimitive]()` 方法返回该 Symbol 对象原始值作为 Symbol 数据形式。 `hint` 参数未被使用。
 
-<p>JavaScript 调用 <code>[@@toPrimitive]() </code>方法将一个对象转换为原始值表示。你不需要自己调用 <code>[@@toPrimitive]()</code> 方法；当对象需要被转换为原始值时，JavaScript 会自动地调用该方法。</p>
+JavaScript 调用 `[@@toPrimitive]() `方法将一个对象转换为原始值表示。你不需要自己调用 `[@@toPrimitive]()` 方法；当对象需要被转换为原始值时，JavaScript 会自动地调用该方法。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考资料">参考资料</h2>
+## 参考资料
 
-<ul>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Symbol.toPrimitive")}}

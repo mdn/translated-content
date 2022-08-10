@@ -9,62 +9,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.apply()</code></strong> 方法用于拦截函数的调用。</p>
+**`handler.apply()`** 方法用于拦截函数的调用。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   apply: function(target, thisArg, argumentsList) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>以下是传递给 apply 方法的参数，<code>this</code> 上下文绑定在 handler 对象上。</p>
+以下是传递给 apply 方法的参数，`this` 上下文绑定在 handler 对象上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象（函数）。</dd>
- <dt><code>thisArg</code></dt>
- <dd>被调用时的上下文对象。</dd>
- <dt><code>argumentsList</code></dt>
- <dd>被调用时的参数数组。</dd>
-</dl>
+- `target`
+  - : 目标对象（函数）。
+- `thisArg`
+  - : 被调用时的上下文对象。
+- `argumentsList`
+  - : 被调用时的参数数组。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>apply 方法可以返回任何值。</code></p>
+`apply 方法可以返回任何值。`
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><strong><code>handler.apply</code></strong> 方法用于拦截函数的调用。</p>
+**`handler.apply`** 方法用于拦截函数的调用。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该方法会拦截目标对象的以下操作：</p>
+该方法会拦截目标对象的以下操作：
 
-<ul>
- <li><code>proxy(...args)</code></li>
- <li>{{jsxref("Function.prototype.apply()")}} 和 {{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- `proxy(...args)`
+- {{jsxref("Function.prototype.apply()")}} 和 {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违反了以下约束，代理将抛出一个 TypeError：</p>
+如果违反了以下约束，代理将抛出一个 TypeError：
 
-<p><code>target</code> 必须是可被调用的。也就是说，它必须是一个函数对象。</p>
+`target` 必须是可被调用的。也就是说，它必须是一个函数对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示如何捕获函数的调用。</p>
+以下代码演示如何捕获函数的调用。
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log('called: ' + argumentsList.join(', '));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -73,24 +71,20 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
                          // 6
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Function.prototype.apply")}}</li>
- <li>{{jsxref("Function.prototype.call")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Function.prototype.apply")}}
+- {{jsxref("Function.prototype.call")}}
+- {{jsxref("Reflect.apply()")}}

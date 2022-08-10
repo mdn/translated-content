@@ -3,54 +3,53 @@ title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
 translation_of: Web/API/HTMLMediaElement/load
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p> <code><strong>load()</strong></code> 方法重置媒体成初始化状态，选择一个播放源， 为载入媒体重新播放做准备。 媒体预播放的信息是由 <code><strong>preload</strong></code> 这个参数决定的。</p>
+**`load()`** 方法重置媒体成初始化状态，选择一个播放源， 为载入媒体重新播放做准备。 媒体预播放的信息是由 **`preload`** 这个参数决定的。
 
-<p>此方法只在对媒体做动态更改时管用，要么更改<code>src</code>属性，要么添加或删除<code>source</code> 。 <code>load()</code> 将会重置元素重新扫描可用的源，从而让改动生效。</p>
+此方法只在对媒体做动态更改时管用，要么更改`src`属性，要么添加或删除`source` 。 `load()` 将会重置元素重新扫描可用的源，从而让改动生效。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>mediaElement</em>.load();</pre>
+```plain
+mediaElement.load();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+None.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>调用 <code>load()</code> 会使媒体上所有正在进行的操作中止，然后根据 <code>audio</code> 或者 <code>video</code> 元素的 <code>src</code> 或者 <code>source</code> 属性里寻找合适的播放源并重新加载媒体内容。 更多查看  <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Supporting_multiple_formats">Supporting multiple formats</a> 和 <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> 。</p>
+调用 `load()` 会使媒体上所有正在进行的操作中止，然后根据 `audio` 或者 `video` 元素的 `src` 或者 `source` 属性里寻找合适的播放源并重新加载媒体内容。 更多查看 [Supporting multiple formats](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#Supporting_multiple_formats) 和 [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 。
 
-<p>The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an <code>"AbortError"</code> {{domxref("DOMException")}}.</p>
+The process of aborting any ongoing activities will cause any outstanding {{jsxref("Promise")}}s returned by {{domxref("HTMLMediaElement.play", "play()")}} being resolved or rejected as appropriate based on their status before the loading of new media can begin. Pending play promises are aborted with an `"AbortError"` {{domxref("DOMException")}}.
 
-<p>在 load 过程中 合适的事件会发生并通知给媒体本身，包括：</p>
+在 load 过程中 合适的事件会发生并通知给媒体本身，包括：
 
-<ul>
- <li>如果已经是 <code>load</code> 过了，则 <code>abort</code> 事件发送给媒体。</li>
- <li>If the element has already been initialized with media, the <strong>{{event("emptied")}}</strong> event is sent.</li>
- <li>如果重置播放位置到开始，通常指修改播放位置，<strong>timeupdate</strong> 事件触发。</li>
- <li>当已经选择了源并且已经准备加载内容了，<strong>loadstart</strong> 事件触发。</li>
- <li>之前的几点，媒体加载并且事件已经送达</li>
-</ul>
+- 如果已经是 `load` 过了，则 `abort` 事件发送给媒体。
+- If the element has already been initialized with media, the **{{event("emptied")}}** event is sent.
+- 如果重置播放位置到开始，通常指修改播放位置，**timeupdate** 事件触发。
+- 当已经选择了源并且已经准备加载内容了，**loadstart** 事件触发。
+- 之前的几点，媒体加载并且事件已经送达
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>例子中有一个 {{HTMLElement("video")}} 元素然后重置它 <code>load()</code>.</p>
+例子中有一个 {{HTMLElement("video")}} 元素然后重置它 `load()`.
 
-<pre class="brush: js">var mediaElem = document.querySelector("video");
+```js
+var mediaElem = document.querySelector("video");
 mediaElem.load();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.HTMLMediaElement.load")}}</p>
+{{Compat("api.HTMLMediaElement.load")}}

@@ -3,43 +3,44 @@ title: Window.locationbar
 slug: Web/API/Window/locationbar
 translation_of: Web/API/Window/locationbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>返回一个可以检查 visibility 属性的 <code>locationbar</code> 对象。</p>
+返回一个可以检查 visibility 属性的 `locationbar` 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>objRef</var> = window.locationbar </pre>
+```plain
+objRef = window.locationbar
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下完整的 HTML 示例显示了使用 locationbar 对象的 visible 属性的方式。</p>
+以下完整的 HTML 示例显示了使用 locationbar 对象的 visible 属性的方式。
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Various DOM Tests</title>
 
-&lt;script&gt;
+<script>
 var visible = window.locationbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}</li>
-</ul>
+- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}

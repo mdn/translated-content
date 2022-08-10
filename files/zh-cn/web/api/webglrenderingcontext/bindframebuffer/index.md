@@ -9,74 +9,70 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindFramebuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.bindFramebuffer()</code></strong> 方法将给定的 {{domxref("WebGLFramebuffer")}} 绑定到目标。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindFramebuffer()`** 方法将给定的 {{domxref("WebGLFramebuffer")}} 绑定到目标。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.bindFramebuffer(<var>target</var>, <var>framebuffer</var>);
-</pre>
+```plain
+void gl.bindFramebuffer(target, framebuffer);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd>{{domxref("GLenum")}} 指定绑定点 (目标)。可能的值为：
- <ul>
-  <li><code>gl.FRAMEBUFFER</code>: 收集用于渲染图像的颜色，alpha，深度和模板缓冲区的缓冲区数据存储。</li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-   <ul>
-    <li><code>gl.DRAW_FRAMEBUFFER</code>: 相当于<code>gl.FRAMEBUFFER</code>， 用作绘图，渲染，清除和写入操作。</li>
-    <li><code>gl.READ_FRAMEBUFFER</code>: 用作读取操作的资源。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>framebuffer</dt>
- <dd>要绑定的 {{domxref("WebGLFramebuffer")}} 对象。</dd>
-</dl>
+- target
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 指定绑定点 (目标)。可能的值为：
 
-<p>None.</p>
+    - `gl.FRAMEBUFFER`: 收集用于渲染图像的颜色，alpha，深度和模板缓冲区的缓冲区数据存储。
+    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
 
-<h3 id="异常">异常</h3>
+      - `gl.DRAW_FRAMEBUFFER`: 相当于`gl.FRAMEBUFFER`， 用作绘图，渲染，清除和写入操作。
+      - `gl.READ_FRAMEBUFFER`: 用作读取操作的资源。
 
-<p>如果目标不是 <code>gl.FRAMEBUFFER</code> ，<code>gl.DRAW_FRAMEBUFFER</code> 或 <code>gl.READ_FRAMEBUFFER</code> ，则抛出 <code>gl.INVALID_ENUM</code> 错误。</p>
+- framebuffer
+  - : 要绑定的 {{domxref("WebGLFramebuffer")}} 对象。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<h3 id="绑定帧缓冲区">绑定帧缓冲区</h3>
+None.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+### 异常
+
+如果目标不是 `gl.FRAMEBUFFER` ，`gl.DRAW_FRAMEBUFFER` 或 `gl.READ_FRAMEBUFFER` ，则抛出 `gl.INVALID_ENUM` 错误。
+
+## 示例
+
+### 绑定帧缓冲区
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-</pre>
+```
 
-<h3 id="获取当前绑定">获取当前绑定</h3>
+### 获取当前绑定
 
-<p>要检查当前帧缓冲区绑定，请查询 <code>FRAMEBUFFER_BINDING</code> 常量。</p>
+要检查当前帧缓冲区绑定，请查询 `FRAMEBUFFER_BINDING` 常量。
 
-<pre class="brush: js">gl.getParameter(gl.FRAMEBUFFER_BINDING);
-</pre>
+```js
+gl.getParameter(gl.FRAMEBUFFER_BINDING);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindFramebuffer")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindFramebuffer")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}<br>
-   </li>
-</ul>
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

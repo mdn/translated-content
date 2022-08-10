@@ -3,28 +3,30 @@ title: DataTransfer.items
 slug: Web/API/DataTransfer/items
 translation_of: Web/API/DataTransfer/items
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{domxref("DataTransfer")}}的<code>items</code> 属性只读，是拖动操作中 {{domxref("DataTransferItem","数据传输项")}}的{{domxref("DataTransferItemList","列表")}}。该列表包含了操作中每一项目的对应项，如果操作没有项目，则列表为空。</p>
+{{domxref("DataTransfer")}}的`items` 属性只读，是拖动操作中 {{domxref("DataTransferItem","数据传输项")}}的{{domxref("DataTransferItemList","列表")}}。该列表包含了操作中每一项目的对应项，如果操作没有项目，则列表为空。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>itemList</em> = <em>dataTransfer</em>.items;
-</pre>
+```plain
+itemList = dataTransfer.items;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("DataTransferItemList")}} 对象，包含了表示拖动操作中被拖动项的{{domxref("DataTransferItem")}}对象，每一个拖动项对应一个列表项。如果拖动操作中没有数据，则列表为空。</p>
+一个{{domxref("DataTransferItemList")}} 对象，包含了表示拖动操作中被拖动项的{{domxref("DataTransferItem")}}对象，每一个拖动项对应一个列表项。如果拖动操作中没有数据，则列表为空。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子演示了 <code>items</code> 和 {{domxref("DataTransfer.types","types")}} 属性的用法。</p>
+这个例子演示了 `items` 和 {{domxref("DataTransfer.types","types")}} 属性的用法。
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of DataTransfer.{types,items} properties&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of DataTransfer.{types,items} properties</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -32,8 +34,8 @@ translation_of: Web/API/DataTransfer/items
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart: target.id = " + ev.target.id);
  // Add this element's id to the drag payload so the drop handler will
@@ -50,13 +52,13 @@ function drop_handler(ev) {
  ev.target.appendChild(document.getElementById(data));
  // Print each format type
  if (ev.dataTransfer.types != null) {
-   for (var i=0; i &lt; ev.dataTransfer.types.length; i++) {
+   for (var i=0; i < ev.dataTransfer.types.length; i++) {
      console.log("... types[" + i + "] = " + ev.dataTransfer.types[i]);
    }
  }
  // Print each item's "kind" and "type"
  if (ev.dataTransfer.items != null) {
-   for (var i=0; i &lt; ev.dataTransfer.items.length; i++) {
+   for (var i=0; i < ev.dataTransfer.items.length; i++) {
      console.log("... items[" + i + "].kind = " + ev.dataTransfer.items[i].kind + " ; type = " + ev.dataTransfer.items[i].type);
    }
  }
@@ -68,28 +70,26 @@ function dragover_handler(ev) {
  // Set the dropEffect to move
  ev.dataTransfer.dropEffect = "move"
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;DataTransfer&lt;/code&gt;.{&lt;code&gt;types&lt;/code&gt;, &lt;code&gt;items&lt;/code&gt;} properties&lt;/h1&gt;
- &lt;ul&gt;
-   &lt;li id="i1" ondragstart="dragstart_handler(event);" draggable="true"&gt;Drag Item 1 to the Drop Zone&lt;/li&gt;
-   &lt;li id="i2" ondragstart="dragstart_handler(event);" draggable="true"&gt;Drag Item 2 to the Drop Zone&lt;/li&gt;
- &lt;/ul&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
+ <ul>
+   <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 1 to the Drop Zone</li>
+   <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 2 to the Drop Zone</li>
+ </ul>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DataTransfer.items")}}
 
+## 另见
 
-<p>{{Compat("api.DataTransfer.items")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

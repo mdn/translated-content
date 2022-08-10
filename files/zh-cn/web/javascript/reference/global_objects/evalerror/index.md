@@ -3,53 +3,52 @@ title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>本对象代表了一个关于 <a href="/en/Core_JavaScript_1.5_Reference/Global_Functions/eval">eval</a> 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。</p>
+本对象代表了一个关于 [eval](/en/Core_JavaScript_1.5_Reference/Global_Functions/eval) 函数的错误。此异常不再会被 JavaScript 抛出，但是 EvalError 对象仍然保持兼容性。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new EvalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new EvalError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt>message</dt>
- <dd>可选参数：可阅读的关于错误的描述。</dd>
- <dt>fileName (非标准)</dt>
- <dd>可选参数：代码中导致异常的文件的文件名。</dd>
- <dt>lineNumber (非标准)</dt>
- <dd>可选参数：代码中导致异常的代码的行号。</dd>
-</dl>
+- message
+  - : 可选参数：可阅读的关于错误的描述。
+- fileName (非标准)
+  - : 可选参数：代码中导致异常的文件的文件名。
+- lineNumber (非标准)
+  - : 可选参数：代码中导致异常的代码的行号。
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<dl>
- <dt><a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype">prototype</a></dt>
- <dd>允许向 EvalError 对象中添加自定义属性。</dd>
-</dl>
+- [prototype](/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)
+  - : 允许向 EvalError 对象中添加自定义属性。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p>全局的 EvalError 对象本身不包含任何方法，然而它通过原型链继承了一些方法。</p>
+全局的 EvalError 对象本身不包含任何方法，然而它通过原型链继承了一些方法。
 
-<h2 id="EvalError_实例"><code>EvalError</code> 实例</h2>
+## `EvalError` 实例
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<p>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}</p>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Properties')}}
 
-<h3 id="方法">方法</h3>
+### 方法
 
-<p>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}</p>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError/prototype', 'Methods')}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p><code>EvalError</code> 不在当前 ECMAScript 规范中使用，因此不会被运行时抛出。但是对象本身仍然与规范的早期版本向后兼容。</p>
+`EvalError` 不在当前 ECMAScript 规范中使用，因此不会被运行时抛出。但是对象本身仍然与规范的早期版本向后兼容。
 
-<h3 id="创建_EvalError">创建 <code>EvalError</code></h3>
+### 创建 `EvalError`
 
-<pre><code>try {
+```plain
+try {
   throw new EvalError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
@@ -59,20 +58,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
   console.log(e.lineNumber);           // 10
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
-}</code></pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Error">Error</a></li>
- <li><a href="/en/Core_JavaScript_1.5_Reference/Global_Functions/eval">eval</a></li>
- <li><a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype">EvalError.prototype</a></li>
-</ul>
+- [Error](/en/Core_JavaScript_1.5_Reference/Global_Objects/Error)
+- [eval](/en/Core_JavaScript_1.5_Reference/Global_Functions/eval)
+- [EvalError.prototype](/en/Core_JavaScript_1.5_Reference/Global_Objects/EvalError/prototype)

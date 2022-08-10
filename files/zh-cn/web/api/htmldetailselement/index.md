@@ -3,42 +3,32 @@ title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 translation_of: Web/API/HTMLDetailsElement
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLDetailsElement</code></strong> 接口提供了特殊的属性 (除了常规的 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承获得这些属性) 用于操作 {{HTMLElement("details")}} 元素.</p>
+**`HTMLDetailsElement`** 接口提供了特殊的属性 (除了常规的 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承获得这些属性) 用于操作 {{HTMLElement("details")}} 元素.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从其父级 {{domxref("HTMLElement")}} 继承属性.</em></p>
+_从其父级 {{domxref("HTMLElement")}} 继承属性._
 
-<dl>
- <dt>{{domxref("HTMLDetailsElement.open")}}</dt>
- <dd>是一个 {{domxref("boolean")}} 反射 {{htmlattrxref("open", "details")}} HTML属性, 指示是否向用户显示元素的内容 (不包括 {{HTMLElement("summary")}})</dd>
-</dl>
+- {{domxref("HTMLDetailsElement.open")}}
+  - : 是一个 {{domxref("boolean")}} 反射 {{htmlattrxref("open", "details")}} HTML 属性, 指示是否向用户显示元素的内容 (不包括 {{HTMLElement("summary")}})
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}.</em></p>
+_没有特定的方法；继承其父方法 {{domxref("HTMLElement")}}._
 
-<h2 id="规格">规格</h2>
+## 规格
 
-<ul>
- <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement">HTML Living Standard</a></li>
- <li><a href="https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement">HTML 5.2 (W3C Proposed Recommendation)</a></li>
-</ul>
+- [HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#htmldetailselement)
+- [HTML 5.2 (W3C Proposed Recommendation)](https://www.w3.org/TR/html52/interactive-elements.html#htmldetailselement)
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.HTMLDetailsElement")}}
 
+## 另见
 
-<p>{{Compat("api.HTMLDetailsElement")}}</p>
-</div>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>实现此接口的HTML元素： {{HTMLElement("details")}}</li>
-</ul>
+- 实现此接口的 HTML 元素： {{HTMLElement("details")}}

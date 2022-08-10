@@ -10,35 +10,31 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/font-face-src
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>font-face-src</code>元素相当于 CSS 规范中的 @font-face 属性。它可以作为{{ SVGElement("font-face-name") }}元素的容器使用，指向本地安装的字体副本，{{ SVGElement("font-face-uri") }}元素则是利用远程定义字体。</p>
+`font-face-src`元素相当于 CSS 规范中的 @font-face 属性。它可以作为{{ SVGElement("font-face-name") }}元素的容器使用，指向本地安装的字体副本，{{ SVGElement("font-face-uri") }}元素则是利用远程定义字体。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>无</em></p>
+_无_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFontFaceSrcElement">SVGFontFaceSrcElement</a></code>接口。</p>
+该元素实现了[`SVGFontFaceSrcElement`](/en/DOM/SVGFontFaceSrcElement)接口。
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("font-face") }}</li>
- <li><a href="/en/SVG/Tutorial/SVG_fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font-face") }}
+- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)

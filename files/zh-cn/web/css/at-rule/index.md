@@ -5,40 +5,34 @@ tags:
   - At-rule
 translation_of: Web/CSS/At-rule
 ---
-<p>一个<strong> at-rule</strong> 是一个<a href="https://developer.mozilla.org/en/CSS/Syntax#CSS_statements">CSS 语句，</a>以 at 符号开头， '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), 后跟一个标识符，并包括直到下一个分号的所有内容， '<code>;</code>' (<code>U+003B SEMICOLON</code>), 或下一个 CSS 块，以先到者为准。</p>
+一个 **at-rule** 是一个[CSS 语句，](https://developer.mozilla.org/en/CSS/Syntax#CSS_statements)以 at 符号开头， '`@`' (`U+0040 COMMERCIAL AT`), 后跟一个标识符，并包括直到下一个分号的所有内容， '`;`' (`U+003B SEMICOLON`), 或下一个 CSS 块，以先到者为准。
 
-<p>下面是一些 @规则，由它们的标示符指定，每种规则都有不同的语法：</p>
+下面是一些 @规则，由它们的标示符指定，每种规则都有不同的语法：
 
-<ul>
- <li>{{ cssxref("@charset") }}, 定义样式表使用的字符集。</li>
- <li>{{ cssxref("@import") }}, 告诉 CSS 引擎引入一个外部样式表。</li>
- <li>{{ cssxref("@namespace") }}, 告诉 CSS 引擎必须考虑 XML 命名空间。</li>
- <li>嵌套 @规则，是嵌套语句的子集，不仅可以作为样式表里的一个语句，也可以用在条件规则组里：
-  <ul>
-   <li>{{ cssxref("@media") }}, 如果满足媒介查询的条件则条件规则组里的规则生效。</li>
-   <li>{{ cssxref("@page") }}, 描述打印文档时布局的变化。</li>
-   <li>{{ cssxref("@font-face") }}, 描述将下载的外部的字体。 {{ experimental_inline() }}</li>
-   <li>{{ cssxref("@keyframes") }}, 描述 CSS 动画的中间步骤 . {{ experimental_inline() }}</li>
-   <li>{{ cssxref("@supports") }}, 如果满足给定条件则条件规则组里的规则生效。 {{ experimental_inline() }}</li>
-   <li>{{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。 <em>(推延至 CSS Level 4 规范)</em></li>
-  </ul>
- </li>
-</ul>
+- {{ cssxref("@charset") }}, 定义样式表使用的字符集。
+- {{ cssxref("@import") }}, 告诉 CSS 引擎引入一个外部样式表。
+- {{ cssxref("@namespace") }}, 告诉 CSS 引擎必须考虑 XML 命名空间。
+- 嵌套 @规则，是嵌套语句的子集，不仅可以作为样式表里的一个语句，也可以用在条件规则组里：
 
-<h2 id="条件规则组">条件规则组</h2>
+  - {{ cssxref("@media") }}, 如果满足媒介查询的条件则条件规则组里的规则生效。
+  - {{ cssxref("@page") }}, 描述打印文档时布局的变化。
+  - {{ cssxref("@font-face") }}, 描述将下载的外部的字体。 {{ experimental_inline() }}
+  - {{ cssxref("@keyframes") }}, 描述 CSS 动画的中间步骤 . {{ experimental_inline() }}
+  - {{ cssxref("@supports") }}, 如果满足给定条件则条件规则组里的规则生效。 {{ experimental_inline() }}
+  - {{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。 _(推延至 CSS Level 4 规范)_
 
-<p>就像属性值那样，每条 @规则都有不同的语法。不过一些 @规则可以归为一类： <strong>条件规则组</strong>. 这些语句使用相同的语法。它们都嵌套语句，或者是<em>规则</em>或者是<em>@规则</em>。它们都表达：它们所指的条件 (类型不同) 总等效于 <strong>true</strong> 或者 <strong>false</strong>，如果为 <strong>true</strong> 那么它们里面的语句生效。</p>
+## 条件规则组
 
-<p>条件规则组由 CSS Conditionals Level 3 定义：</p>
+就像属性值那样，每条 @规则都有不同的语法。不过一些 @规则可以归为一类： **条件规则组**. 这些语句使用相同的语法。它们都嵌套语句，或者是*规则*或者是*@规则*。它们都表达：它们所指的条件 (类型不同) 总等效于 **true** 或者 **false**，如果为 **true** 那么它们里面的语句生效。
 
-<ul>
- <li>{{ cssxref("@media") }},</li>
- <li>{{ cssxref("@supports") }},</li>
- <li>{{ cssxref("@document") }}. <em>(推迟至 CSS Level 4 规范) </em></li>
-</ul>
+条件规则组由 CSS Conditionals Level 3 定义：
 
-<p>既然条件规则组可以嵌套语句，那么嵌套层级不定。</p>
+- {{ cssxref("@media") }},
+- {{ cssxref("@supports") }},
+- {{ cssxref("@document") }}. _(推迟至 CSS Level 4 规范)_
 
-<h2 id="规范">规范</h2>
+既然条件规则组可以嵌套语句，那么嵌套层级不定。
+
+## 规范
 
 {{Specifications}}

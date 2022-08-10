@@ -8,76 +8,77 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>findIndex()</strong></code>方法返回数组中满足提供的测试函数的第一个元素的<strong>索引</strong>。若没有找到对应元素则返回-1。</p>
+**`findIndex()`**方法返回数组中满足提供的测试函数的第一个元素的**索引**。若没有找到对应元素则返回-1。
 
-<div>{{EmbedInteractiveExample("pages/js/array-findindex.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
+另请参见 {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的**值**，而不是其索引。
 
+## 语法
 
-<p>另请参见  {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的<strong>值</strong>，而不是其索引。</p>
+```plain
+arr.findIndex(callback[, thisArg])
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>arr</em>.findIndex(<em>callback</em>[, <em>thisArg</em>])</code></pre>
+- `callback`
 
-<h3 id="Parameters">参数</h3>
+  - : 针对数组中的每个元素，都会执行该回调函数，执行时会自动传入下面三个参数：
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>针对数组中的每个元素，都会执行该回调函数，执行时会自动传入下面三个参数：
- <dl>
-  <dt><code>element</code></dt>
-  <dd>当前元素。</dd>
-  <dt><code>index</code></dt>
-  <dd>当前元素的索引。</dd>
-  <dt><code>array</code></dt>
-  <dd>调用<code>findIndex</code>的数组。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可选。执行<code>callback</code>时作为<code>this</code>对象的值。</dd>
-</dl>
+    - `element`
+      - : 当前元素。
+    - `index`
+      - : 当前元素的索引。
+    - `array`
+      - : 调用`findIndex`的数组。
 
-<h3 id="返回值">返回值</h3>
+- `thisArg`
+  - : 可选。执行`callback`时作为`this`对象的值。
 
-<p>    数组中通过提供测试函数的第一个元素的<strong>索引</strong>。否则，返回-1</p>
+### 返回值
 
-<h2 id="Description">描述</h2>
+数组中通过提供测试函数的第一个元素的**索引**。否则，返回-1
 
-<p><code>findIndex</code>方法对数组中的每个数组索引<code>0..length-1</code>（包括）执行一次<code>callback</code>函数，直到找到一个<code>callback</code>函数返回真实值（强制为<code>true</code>）的值。如果找到这样的元素，<code>findIndex</code>会立即返回该元素的索引。如果回调从不返回真值，或者数组的<code>length</code>为 0，则<code>findIndex</code>返回-1。 与某些其他数组方法（如 Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。</p>
+## 描述
 
-<p>回调函数调用时有三个参数：元素的值，元素的索引，以及被遍历的数组。</p>
+`findIndex`方法对数组中的每个数组索引`0..length-1`（包括）执行一次`callback`函数，直到找到一个`callback`函数返回真实值（强制为`true`）的值。如果找到这样的元素，`findIndex`会立即返回该元素的索引。如果回调从不返回真值，或者数组的`length`为 0，则`findIndex`返回-1。 与某些其他数组方法（如 Array#some）不同，在稀疏数组中，即使对于数组中不存在的条目的索引也会调用回调函数。
 
-<p>如果一个 <code>thisArg</code> 参数被提供给 <code>findIndex</code>, 它将会被当作<code>this</code>使用在每次回调函数被调用的时候。如果没有被提供，将会使用{{jsxref("undefined")}}。</p>
+回调函数调用时有三个参数：元素的值，元素的索引，以及被遍历的数组。
 
-<p><code>findIndex</code>不会修改所调用的数组。</p>
+如果一个 `thisArg` 参数被提供给 `findIndex`, 它将会被当作`this`使用在每次回调函数被调用的时候。如果没有被提供，将会使用{{jsxref("undefined")}}。
 
-<p>在第一次调用<code>callback</code>函数时会确定元素的索引范围，因此在<code>findIndex</code>方法开始执行之后添加到数组的新元素将不会被<code>callback</code>函数访问到。如果数组中一个尚未被<code>callback</code>函数访问到的元素的值被<code>callback</code>函数所改变，那么当<code>callback</code>函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍然会被访问到。</p>
+`findIndex`不会修改所调用的数组。
 
-<h2 id="Examples">示例</h2>
+在第一次调用`callback`函数时会确定元素的索引范围，因此在`findIndex`方法开始执行之后添加到数组的新元素将不会被`callback`函数访问到。如果数组中一个尚未被`callback`函数访问到的元素的值被`callback`函数所改变，那么当`callback`函数访问到它时，它的值是将是根据它在数组中的索引所访问到的当前值。被删除的元素仍然会被访问到。
 
-<h3 id="Example_Testing_size_of_all_array_elements">查找数组中首个质数元素的索引</h3>
+## 示例
 
-<p>以下示例查找数组中素数的元素的索引（如果不存在素数，则返回-1）。</p>
+### 查找数组中首个质数元素的索引
 
-<pre class="brush: js">function isPrime(element, index, array) {
+以下示例查找数组中素数的元素的索引（如果不存在素数，则返回-1）。
+
+```js
+function isPrime(element, index, array) {
   var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
       return false;
     }
   }
-  return element &gt; 1;
+  return element > 1;
 }
 
 console.log([4, 6, 8, 12].findIndex(isPrime)); // -1, not found
-console.log([4, 6, 7, 12].findIndex(isPrime)); // 2</pre>
+console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
@@ -89,7 +90,7 @@ if (!Array.prototype.findIndex) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
       if (typeof predicate !== 'function') {
@@ -102,8 +103,8 @@ if (!Array.prototype.findIndex) {
       // 5. Let k be 0.
       var k = 0;
 
-      // 6. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 6. Repeat, while k < len
+      while (k < len) {
         // a. Let Pk be ! ToString(k).
         // b. Let kValue be ? Get(O, Pk).
         // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
@@ -121,23 +122,21 @@ if (!Array.prototype.findIndex) {
     }
   });
 }
-</pre>
+```
 
-<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
+如果您需要兼容不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的 JavaScript 引擎，那么最好不要对`Array.prototype`方法进行 polyfill ，因为您无法使其成为不可枚举的。
 
-<p>使用此方法需要注意你是否在 uc 浏览器环境，如果你的页面在支付宝上使用尤其注意，因为支付宝使用的就是 uc 浏览器环境。</p>
+使用此方法需要注意你是否在 uc 浏览器环境，如果你的页面在支付宝上使用尤其注意，因为支付宝使用的就是 uc 浏览器环境。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.indexOf()")}}

@@ -10,39 +10,35 @@ tags:
   - Web Animations
 translation_of: Web/API/Animation/finish
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<div>
-<p>The <strong><code>finish()</code> </strong>method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction. That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.</p>
-</div>
+The **`finish()` **method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} Interface sets the current playback time to the end of the animation corresponding to the current playback direction. That is, if the animation is playing forward, it sets the playback time to the length of the animation sequence, and if the animation is playing in reverse (having had its {{domxref("Animation.reverse", "reverse()")}} method called), it sets the playback time to 0.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>Animation</em>.finish(); </pre>
+```plain
+Animation.finish();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+None.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<dl>
-</dl>
+### 异常
 
-<h3 id="异常">异常</h3>
+- `InvalidState`
+  - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
 
-<dl>
- <dt><code>InvalidState</code></dt>
- <dd>The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.</dd>
-</dl>
+## **例子**
 
-<h2 id="例子"><strong>例子</strong></h2>
+The following example shows how to use the `finish()` method and catch an `InvalidState` error.
 
-<p>The following example shows how to use the <code>finish()</code> method and catch an <code>InvalidState</code> error.</p>
-
-<pre class="brush: js">interfaceElement.addEventListener("mousedown", function() {
+```js
+interfaceElement.addEventListener("mousedown", function() {
   try {
     player.finish();
   } catch(e if e instanceof InvalidState) {
@@ -51,34 +47,29 @@ translation_of: Web/API/Animation/finish
     logMyErrors(e); //pass exception object to error handler
   }
 });
-</pre>
+```
 
-<p>The following example finishes all the animations on a single element, regardless of their direction of playback.</p>
+The following example finishes all the animations on a single element, regardless of their direction of playback.
 
-<pre class="brush: js">elem.getAnimations().forEach(
+```js
+elem.getAnimations().forEach(
   function(animation){
     return animation.finish();
   }
 );
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.Animation.finish")}}
 
+## 更多参考
 
-<p>{{Compat("api.Animation.finish")}}</p>
-</div>
-
-<h2 id="更多参考">更多参考</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li>{{domxref("Animation.play()")}} to play an animation forward.</li>
- <li>{{domxref("Animation.reverse()")}} to play an animation backward.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.play()")}} to play an animation forward.
+- {{domxref("Animation.reverse()")}} to play an animation backward.

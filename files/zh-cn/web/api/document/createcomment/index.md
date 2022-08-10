@@ -3,30 +3,40 @@ title: document.createComment
 slug: Web/API/Document/createComment
 translation_of: Web/API/Document/createComment
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary">概述</h3>
-<p><code>createComment()</code> 方法用来创建并返回一个注释节点。</p>
-<h3 id="Syntax">语法</h3>
-<pre class="eval"><em>var commentNode</em> = document.createComment(data)
-</pre>
-<h3 id="Parameters">参数</h3>
-<ul>
- <li><code>commentNode</code> 是一个注释节点。</li>
- <li><code>data</code> 是一个字符串，包含了注释的内容。</li>
-</ul>
-<h3 id="Example">例子</h3>
-<pre>var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml")
+{{ ApiRef() }}
+
+### 概述
+
+`createComment()` 方法用来创建并返回一个注释节点。
+
+### 语法
+
+```plain
+var commentNode = document.createComment(data)
+```
+
+### 参数
+
+- `commentNode` 是一个注释节点。
+- `data` 是一个字符串，包含了注释的内容。
+
+### 例子
+
+```plain
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
 
 var comment = docu.createComment('这是注释内容');
 
 docu.getElementsByTagName('xml')[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 弹出 &lt;xml&gt;&lt;!--这是注释内容--&gt;&lt;/xml&gt;
-</pre>
-<h3 id="Notes">备注</h3>
-<ul>
- <li>如果 data 字符串包含了 "--" ,则会抛出 <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code>异常，这种情况需要对"--" 字符串进行转义。</li>
-</ul>
-<h3 id="Specification">规范</h3>
-<p><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment">createComment</a></p>
+// 弹出 <xml><!--这是注释内容--></xml>
+```
+
+### 备注
+
+- 如果 data 字符串包含了 "--" ,则会抛出 `NS_ERROR_DOM_INVALID_CHARACTER_ERR`异常，这种情况需要对"--" 字符串进行转义。
+
+### 规范
+
+[createComment](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)

@@ -3,41 +3,40 @@ title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与相等运算符不同，全等运算符总是认为不同类型的操作数是不同的。</p>
+全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与相等运算符不同，全等运算符总是认为不同类型的操作数是不同的。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">x === y</pre>
+```plain
+x === y
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>全等运算符（<code>===</code>和 <code>!==</code>）使用<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6">全等比较算法</a>来比较两个操作数。</p>
+全等运算符（`===`和 `!==`）使用[全等比较算法](http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6)来比较两个操作数。
 
-<ul>
- <li>如果操作数的类型不同，则返回 <code>false</code>。</li>
- <li>如果两个操作数都是对象，只有当它们指向同一个对象时才返回 <code>true</code>。</li>
- <li>如果两个操作数都为 <code>null</code>，或者两个操作数都为 <code>undefined</code>，返回 <code>true</code>。</li>
- <li>如果两个操作数有任意一个为 <code>NaN</code>，返回 <code>false</code>。</li>
- <li>否则，比较两个操作数的值：
-  <ul>
-   <li>数字类型必须拥有相同的数值。<code>+0</code> 和 <code>-0</code> 会被认为是相同的值。</li>
-   <li>字符串类型必须拥有相同顺序的相同字符。</li>
-   <li>布尔运算符必须同时为 <code>true</code> 或同时为 <code>false</code>。</li>
-  </ul>
- </li>
-</ul>
+- 如果操作数的类型不同，则返回 `false`。
+- 如果两个操作数都是对象，只有当它们指向同一个对象时才返回 `true`。
+- 如果两个操作数都为 `null`，或者两个操作数都为 `undefined`，返回 `true`。
+- 如果两个操作数有任意一个为 `NaN`，返回 `false`。
+- 否则，比较两个操作数的值：
 
-<p>全等运算符与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">相等运算符</a>（<code>==</code>）最显著的区别是，如果操作数的类型不同，<code>== </code>运算符会在比较之前尝试将它们转换为相同的类型。</p>
+  - 数字类型必须拥有相同的数值。`+0` 和 `-0` 会被认为是相同的值。
+  - 字符串类型必须拥有相同顺序的相同字符。
+  - 布尔运算符必须同时为 `true` 或同时为 `false`。
 
-<h2 id="例子">例子</h2>
+全等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`== `运算符会在比较之前尝试将它们转换为相同的类型。
 
-<h3 id="比较相同类型的操作数">比较相同类型的操作数</h3>
+## 例子
 
-<pre class="brush: js">console.log("hello" === "hello");   // true
+### 比较相同类型的操作数
+
+```js
+console.log("hello" === "hello");   // true
 console.log("hello" === "hola");    // false
 
 console.log(3 === 3);               // true
@@ -46,19 +45,23 @@ console.log(3 === 4);               // false
 console.log(true === true);         // true
 console.log(true === false);        // false
 
-console.log(null === null);         // true</pre>
+console.log(null === null);         // true
+```
 
-<h3 id="比较不同类型的操作数">比较不同类型的操作数</h3>
+### 比较不同类型的操作数
 
-<pre class="brush: js">console.log("3" === 3);           // false
+```js
+console.log("3" === 3);           // false
 
 console.log(true === 1);          // false
 
-console.log(null === undefined);  // false</pre>
+console.log(null === undefined);  // false
+```
 
-<h3 id="比较对象">比较对象</h3>
+### 比较对象
 
-<pre class="brush: js">const object1 = {
+```js
+const object1 = {
   name: "hello"
 }
 
@@ -67,22 +70,19 @@ const object2 = {
 }
 
 console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true</pre>
+console.log(object1 === object1);  // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict inequality operator</a></li>
-</ul>
+- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

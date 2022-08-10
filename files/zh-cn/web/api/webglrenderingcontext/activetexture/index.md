@@ -3,59 +3,59 @@ title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
 translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.activeTexture() </code></strong>是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 方法之一，用来激活指定的纹理单元。</p>
+**`WebGLRenderingContext.activeTexture() `**是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 方法之一，用来激活指定的纹理单元。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox"><var><em>void gl</em>.activeTexture</var><var>(texture);</var>
-</pre>
+```plain
+void gl.activeTexture(texture);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>texture</code></dt>
- <dd>需要激活的纹理单元。其值是 <code>gl.TEXTURE<em>I</em></code> ，其中的 <em>I</em> 在 0 到 <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 </code>范围内。</dd>
-</dl>
+- `texture`
+  - : 需要激活的纹理单元。其值是 `gl.TEXTUREI` ，其中的 _I_ 在 0 到 `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 `范围内。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无返回值。</p>
+无返回值。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果 <em>texture </em>不是 <code>gl.TEXTURE<em>I(</em></code> <em>I </em>在 0 到 <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 </code>范围内)，一个 <code>gl.INVALID_ENUM</code> 错误将被抛出。</p>
+如果 _texture_ 不是 `gl.TEXTUREI(` _I_ 在 0 到 `gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 `范围内)，一个 `gl.INVALID_ENUM` 错误将被抛出。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>接下来调用 <code>gl.TEXTURE1</code> 作为当前纹理，随后对纹理状态的更改将会影响到这个纹理。</p>
+接下来调用 `gl.TEXTURE1` 作为当前纹理，随后对纹理状态的更改将会影响到这个纹理。
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
-</pre>
+```js
+gl.activeTexture(gl.TEXTURE1);
+```
 
-<p>纹理单元的数量视实现而定， 你可以通过访问常量 <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code> 来获取这个值。按照规范来说，最少是 8 个。</p>
+纹理单元的数量视实现而定， 你可以通过访问常量 `MAX_COMBINED_TEXTURE_IMAGE_UNITS` 来获取这个值。按照规范来说，最少是 8 个。
 
-<pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
-</pre>
+```js
+gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+```
 
-<p>想要获取激活的纹理，可以查询常量 <code>ACTIVE_TEXTURE</code><code>。</code></p>
+想要获取激活的纹理，可以查询常量 ` ACTIVE_TEXTURE``。 `
 
-<pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
+```js
+gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);
 // returns "33984" (0x84C0, gl.TEXUTURE0 enum value)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.WebGLRenderingContext.activeTexture")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getParameter()")}}

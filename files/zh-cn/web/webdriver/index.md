@@ -5,34 +5,33 @@ tags:
   - WebDriver
 translation_of: Web/WebDriver
 ---
-<p>WebDriver 是远程控制接口，可以对用户代理进行控制. 它提供了一个平台和语言中性线协议，作为进程外程序远程指导 web 浏览器行为的方法</p>
+WebDriver 是远程控制接口，可以对用户代理进行控制. 它提供了一个平台和语言中性线协议，作为进程外程序远程指导 web 浏览器行为的方法
 
-<p>能够编写可在不同平台上的许多浏览器中交替运行的指令集，对于向用户提供一致的体验至关重要。随着 web 平台上新一轮的开发浪潮、设备的多样化以及对技术之间真正的互操作性的需求，WebDriver 为跨浏览器测试提供了工具。</p>
+能够编写可在不同平台上的许多浏览器中交替运行的指令集，对于向用户提供一致的体验至关重要。随着 web 平台上新一轮的开发浪潮、设备的多样化以及对技术之间真正的互操作性的需求，WebDriver 为跨浏览器测试提供了工具。
 
-<p>提供了一组接口，用于发现和操作 web 文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是允许 web 作者编写从单独的控制过程中自动执行用户代理的测试，但也可以这样使用，允许浏览器内脚本控制一个（可能是单独的）浏览器。</p>
+提供了一组接口，用于发现和操作 web 文档中的 DOM 元素，并控制用户代理的行为。它的主要目的是允许 web 作者编写从单独的控制过程中自动执行用户代理的测试，但也可以这样使用，允许浏览器内脚本控制一个（可能是单独的）浏览器。
 
-<h2 id="概念">概念</h2>
+## 概念
 
-<p>要使用 WebDriver，您需要 ... 提供如何使用它的高级描述，而不是低级的细节，然后链接到提供安装细节的其他页面。</p>
+要使用 WebDriver，您需要 ... 提供如何使用它的高级描述，而不是低级的细节，然后链接到提供安装细节的其他页面。
 
-<p>WebDriver 主要涉及四个方面：</p>
+WebDriver 主要涉及四个方面：
 
-<ul>
- <li>a</li>
- <li>b</li>
- <li>c</li>
- <li>d</li>
-</ul>
+- a
+- b
+- c
+- d
 
-<p>这些东西一起工作就像 ... 解释命令、动作等的工作流程。</p>
+这些东西一起工作就像 ... 解释命令、动作等的工作流程。
 
-<h2 id="使用">使用</h2>
+## 使用
 
-<p>那么 WebDriver 允许你做什么？它看起来是什么样子？因为 WebDriver 是编程语言中立的，所以这个问题的答案取决于您使用的是哪个 WebDriver 客户端和语言的选择。</p>
+那么 WebDriver 允许你做什么？它看起来是什么样子？因为 WebDriver 是编程语言中立的，所以这个问题的答案取决于您使用的是哪个 WebDriver 客户端和语言的选择。
 
-<p>但是使用 Python 编写的流行客户端，您与 WebDriver 的交互可能如下所示：</p>
+但是使用 Python 编写的流行客户端，您与 WebDriver 的交互可能如下所示：
 
-<pre class="notranslate">from selenium import webdriver
+```plain
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -44,60 +43,55 @@ with webdriver.Firefox() as driver:
     driver.get("http://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
 
-    wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3&gt;a")))
+    wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
 
-    results = driver.find_elements_by_css_selector("h3&gt;a")
+    results = driver.find_elements_by_css_selector("h3>a")
     for i, result in results.iteritems():
-        print("#{}: {} ({})".format(i, result.text, result.get_property("href")))</pre>
+        print("#{}: {} ({})".format(i, result.text, result.get_property("href")))
+```
 
-<p>这可能会产生与此类似的输出：</p>
+这可能会产生与此类似的输出：
 
-<pre class="notranslate">#1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
-</pre>
+```plain
+#1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
+```
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Commands"><a href="/en-US/docs/Web/WebDriver/Commands">Commands</a></h3>
+### [Commands](/en-US/docs/Web/WebDriver/Commands)
 
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}</p>
+{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}
 
-<h3 id="Types"><a href="/en-US/docs/Web/WebDriver/Types">Types</a></h3>
+### [Types](/en-US/docs/Web/WebDriver/Types)
 
-<ul>
- <li><a href="/en-US/docs/Web/WebDriver/Errors#payload">Error object</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/Timeouts">Timeouts object</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a></li>
- <li><a href="/en-US/docs/Web/WebDriver/WebWindow">WebWindow</a></li>
-</ul>
+- [Error object](/en-US/docs/Web/WebDriver/Errors#payload)
+- [Timeouts object](/en-US/docs/Web/WebDriver/Timeouts)
+- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
+- [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
 
-<h3 id="Capabilities"><a href="/en-US/docs/Web/WebDriver/Capabilities">Capabilities</a></h3>
+### [Capabilities](/en-US/docs/Web/WebDriver/Capabilities)
 
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}</p>
+{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
 
-<h3 id="Errors"><a href="/en-US/docs/Web/WebDriver/Errors">Errors</a></h3>
+### [Errors](/en-US/docs/Web/WebDriver/Errors)
 
-<p>{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}</p>
+{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}
 
-<ul>
-</ul>
+## Tutorials
 
-<h2 id="Tutorials">Tutorials</h2>
+List of links to tutorials? We could delete this for now, or link to tutorial elsewhere, until ours are written.
 
-<p>List of links to tutorials? We could delete this for now, or link to tutorial elsewhere, until ours are written.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+Include list of links to examples, preferrably in different languages. Don't include actual code blocks here.
 
-<p>Include list of links to examples, preferrably in different languages. Don't include actual code blocks here.</p>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+[WebDriver](https://w3c.github.io/webdriver/)
 
-<p><a href="https://w3c.github.io/webdriver/">WebDriver</a></p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Selenium documentation](https://seleniumhq.github.io/docs/) (work in progress)
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a></li>
- <li><a href="https://seleniumhq.github.io/docs/">Selenium documentation</a> (work in progress)</li>
-</ul>
-
-<p>{{QuickLinksWithSubpages}}</p>
+{{QuickLinksWithSubpages}}

@@ -1,57 +1,59 @@
 ---
-title: 'RegExp.prototype[@@search]()'
+title: RegExp.prototype[@@search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>[@@search]()</code></strong> 方法执行了一个在给定字符串中的一个搜索以取得匹配正则模式的项。</p>
+**`[@@search]()`** 方法执行了一个在给定字符串中的一个搜索以取得匹配正则模式的项。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.search](str)</pre>
+```plain
+regexp[Symbol.search](str)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>str</code></dt>
- <dd>搜索的目标 {{jsxref("String")}}。</dd>
-</dl>
+- `str`
+  - : 搜索的目标 {{jsxref("String")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>整数</dt>
- <dd>如果成功的话，<code>[@@search]()</code> 返回该正则模式的第一个匹配项的在字符串中的位置索引。否则将返回-1。</dd>
-</dl>
+- 整数
+  - : 如果成功的话，`[@@search]()` 返回该正则模式的第一个匹配项的在字符串中的位置索引。否则将返回-1。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>这个方法在 {{jsxref("String.prototype.search()")}} 的内部调用。例如，下面的两个方法返回相同结果。</p>
+这个方法在 {{jsxref("String.prototype.search()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
-<pre class="brush: js">'abc'.search(/a/);
+```js
+'abc'.search(/a/);
 
-/a/[Symbol.search]('abc');</pre>
+/a/[Symbol.search]('abc');
+```
 
-<p>这个方法为自定义 <code>RegExp</code> 子类中的匹配行为而存在。</p>
+这个方法为自定义 `RegExp` 子类中的匹配行为而存在。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="直接调用">直接调用</h3>
+### 直接调用
 
-<p>这个方法的使用方式和 {{jsxref("String.prototype.search()")}} 相同，不同之处是 <code>this</code> 和参数顺序。</p>
+这个方法的使用方式和 {{jsxref("String.prototype.search()")}} 相同，不同之处是 `this` 和参数顺序。
 
-<pre class="brush: js">var re = /-/g;
+```js
+var re = /-/g;
 var str = '2016-01-02';
 var result = re[Symbol.search](str);
 console.log(result);  // 4
-</pre>
+```
 
-<h3 id="在子类中使用search">在子类中使用<code>@@search</code></h3>
+### 在子类中使用`@@search`
 
-<p>{jsxref("RegExp")}} 的子类可以覆写 <code>[@@search]()</code>方法来修改默认行为。</p>
+{jsxref("RegExp")}} 的子类可以覆写 `[@@search]()`方法来修改默认行为。
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   constructor(str) {
     super(str)
     this.pattern = str;
@@ -65,23 +67,21 @@ var re = new MyRegExp('a+b');
 var str = 'ab a+b';
 var result = str.search(re); // String.prototype.search calls re[@@search].
 console.log(result); // 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("String.prototype.search()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.search()")}}
+- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

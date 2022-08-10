@@ -3,30 +3,31 @@ title: WebGLRenderingContext.getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
 translation_of: Web/API/WebGLRenderingContext/getProgramInfoLog
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLRenderingContext.getProgramInfoLog</strong>  返回参数中指定的{{domxref("WebGLProgram")}} object 的信息。这些信息包括在 linking 过程中的错误以及 <code>WebGLProgram</code> objects 合法性检查的错误。</p>
+**WebGLRenderingContext.getProgramInfoLog** 返回参数中指定的{{domxref("WebGLProgram")}} object 的信息。这些信息包括在 linking 过程中的错误以及 `WebGLProgram` objects 合法性检查的错误。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">gl.getProgramInfoLog(program);</pre>
+```plain
+gl.getProgramInfoLog(program);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>program</dt>
- <dd>A {{domxref("WebGLProgram")}} to query.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} to query.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>返回 {{domxref("DOMString")}} 包含 diagnostic , warning ...等等关于上一次 linking 和 valiadation 操作的信息. 对于刚刚创建的{{domxref("WebGLProgram")}} object , 返回一个空字符串。</p>
+返回 {{domxref("DOMString")}} 包含 diagnostic , warning ...等等关于上一次 linking 和 valiadation 操作的信息. 对于刚刚创建的{{domxref("WebGLProgram")}} object , 返回一个空字符串。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_program_errors">Checking program errors</h3>
+### Checking program errors
 
-<pre class="brush: js">var canvas = document.getElementsById('canvas');
+```js
+var canvas = document.getElementsById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
@@ -42,19 +43,17 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 
 gl.getProgramInfoLog(program);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.WebGLRenderingContext.getProgramInfoLog")}}</p>
+{{Compat("api.WebGLRenderingContext.getProgramInfoLog")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getError()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getError()")}}

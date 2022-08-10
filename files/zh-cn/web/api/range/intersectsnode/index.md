@@ -3,41 +3,38 @@ title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
 translation_of: Web/API/Range/intersectsNode
 ---
-<div>{{ApiRef("DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("DOM")}} {{SeeCompatTable}}
 
-<p><strong><code>Range.intersectsNode()</code> </strong>方法返回一个布尔值，表明其给定的 {{domxref("Node")}} 节点是否与{{domxref("Range")}}的范围相交</p>
+**`Range.intersectsNode()` **方法返回一个布尔值，表明其给定的 {{domxref("Node")}} 节点是否与{{domxref("Range")}}的范围相交
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>bool</em> = <em>range</em>.intersectsNode( <em>referenceNode</em> )
-</pre>
+```plain
+bool = range.intersectsNode( referenceNode )
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>referenceNode</em></dt>
- <dd>与{{domxref("Range")}}做比较的{{domxref("Node")}}节点</dd>
-</dl>
+- _referenceNode_
+  - : 与{{domxref("Range")}}做比较的{{domxref("Node")}}节点
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));</pre>
+var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Range.intersectsNode")}}
 
+## See also
 
-<p>{{Compat("api.Range.intersectsNode")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

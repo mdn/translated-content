@@ -8,34 +8,34 @@ tags:
   - Range
 translation_of: Web/API/Range/deleteContents
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Range.deleteContents()</code></strong> 移除来自 {{ domxref("Document") }}的{{ domxref("Range") }} 内容。</p>
+**`Range.deleteContents()`** 移除来自 {{ domxref("Document") }}的{{ domxref("Range") }} 内容。
 
-<p>不像{{ domxref("Range.extractContents") }}一样，本方法不会返回一个包含删除内容的文本片段{{domxref("DocumentFragment")}} 。</p>
+不像{{ domxref("Range.extractContents") }}一样，本方法不会返回一个包含删除内容的文本片段{{domxref("DocumentFragment")}} 。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>range</em>.deleteContents()
-</pre>
+```plain
+range.deleteContents()
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 range.deleteContents();
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Range.deleteContents")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

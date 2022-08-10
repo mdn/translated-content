@@ -3,36 +3,36 @@ title: Navigator.activeVRDisplays
 slug: Web/API/Navigator/activeVRDisplays
 translation_of: Web/API/Navigator/activeVRDisplays
 ---
-<div>{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
-<p><strong><code>activeVRDisplays</code></strong> 是 {{domxref("Navigator")}} 接口返回的数组中每个 {{domxref("VRDisplay")}} 对象中的的只读属性 ({{domxref("VRDisplay.ispresenting")}}为<code>true</code>).</p>
+**`activeVRDisplays`** 是 {{domxref("Navigator")}} 接口返回的数组中每个 {{domxref("VRDisplay")}} 对象中的的只读属性 ({{domxref("VRDisplay.ispresenting")}}为`true`).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var myActiveDisplays = navigator.activeVRDisplays;</pre>
+```plain
+var myActiveDisplays = navigator.activeVRDisplays;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("VRDisplay")}} 对象数组。</p>
+{{domxref("VRDisplay")}} 对象数组。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">function showActive() {
+```js
+function showActive() {
   var displays = navigator.activeVRDisplays;
-  for(var i = 0; i &lt; displays.length; i++) {
+  for(var i = 0; i < displays.length; i++) {
     console.log('Display ' + displays[i].displayId + ' is active.');
   }
 }
+```
 
-</pre>
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Compat("api.Navigator.activeVRDisplays")}}
 
-<p>{{Compat("api.Navigator.activeVRDisplays")}}</p>
+## 相关链接
 
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="http://mozvr.com/">MozVr.com</a> — 示例，下载和其他在 Mozilla VR 团队的资源。</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- [MozVr.com](http://mozvr.com/) — 示例，下载和其他在 Mozilla VR 团队的资源。

@@ -5,69 +5,65 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 中的<strong><code>WebGLRenderingContext.drawArrays()</code></strong>方法用于从向量数组中绘制图元。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的**`WebGLRenderingContext.drawArrays()`**方法用于从向量数组中绘制图元。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.drawArrays(<var>mode</var>, <var>first</var>, <var>count</var>);
-</pre>
+```plain
+void gl.drawArrays(mode, first, count);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>mode</code></dt>
- <dd>{{domxref("GLenum")}} 类型，指定绘制图元的方式，可能值如下。
- <ul>
-  <li><code>gl.POINTS</code>: 绘制一系列点。</li>
-  <li><code>gl.LINE_STRIP</code>: 绘制一个线条。即，绘制一系列线段，上一点连接下一点。</li>
-  <li><code>gl.LINE_LOOP</code>: 绘制一个线圈。即，绘制一系列线段，上一点连接下一点，并且最后一点与第一个点相连。</li>
-  <li><code>gl.LINES</code>: 绘制一系列单独线段。每两个点作为端点，线段之间不连接。</li>
-  <li><code>gl.TRIANGLE_STRIP</code>：绘制一个<a href="https://en.wikipedia.org/wiki/Triangle_strip">三角带</a>。</li>
-  <li><code>gl.TRIANGLE_FAN</code>：绘制一个<a href="https://en.wikipedia.org/wiki/Triangle_fan">三角扇</a>。</li>
-  <li><code>gl.TRIANGLES</code>: 绘制一系列三角形。每三个点作为顶点。</li>
- </ul>
- </dd>
- <dt>first</dt>
- <dd>{{domxref("GLint")}} 类型 ，指定从哪个点开始绘制。</dd>
- <dt>count</dt>
- <dd>{{domxref("GLsizei")}} 类型，指定绘制需要使用到多少个点。</dd>
-</dl>
+- `mode`
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 类型，指定绘制图元的方式，可能值如下。
 
-<p>无。</p>
+    - `gl.POINTS`: 绘制一系列点。
+    - `gl.LINE_STRIP`: 绘制一个线条。即，绘制一系列线段，上一点连接下一点。
+    - `gl.LINE_LOOP`: 绘制一个线圈。即，绘制一系列线段，上一点连接下一点，并且最后一点与第一个点相连。
+    - `gl.LINES`: 绘制一系列单独线段。每两个点作为端点，线段之间不连接。
+    - `gl.TRIANGLE_STRIP`：绘制一个[三角带](https://en.wikipedia.org/wiki/Triangle_strip)。
+    - `gl.TRIANGLE_FAN`：绘制一个[三角扇](https://en.wikipedia.org/wiki/Triangle_fan)。
+    - `gl.TRIANGLES`: 绘制一系列三角形。每三个点作为顶点。
 
-<h3 id="异常">异常</h3>
+- first
+  - : {{domxref("GLint")}} 类型 ，指定从哪个点开始绘制。
+- count
+  - : {{domxref("GLsizei")}} 类型，指定绘制需要使用到多少个点。
 
-<ul>
- <li>如果 <code>mode</code> 不是一个可接受值，将会抛出 <code>gl.INVALID_ENUM</code> 异常。</li>
- <li>如果 <code>first</code> 或者 <code>count</code> 是负值，会抛出 <code>gl.INVALID_VALUE</code> 异常。</li>
- <li>如果 <code>gl.CURRENT_PROGRAM</code> 为 {{jsxref("null")}}，会抛出 <code>gl.INVALID_OPERATION</code> 异常。</li>
-</ul>
+### 返回值
 
-<h2 id="示例">示例</h2>
+无。
 
-<pre class="brush: js">gl.drawArrays(gl.POINTS, 0, 8);
-</pre>
+### 异常
 
-<h2 id="规范">规范</h2>
+- 如果 `mode` 不是一个可接受值，将会抛出 `gl.INVALID_ENUM` 异常。
+- 如果 `first` 或者 `count` 是负值，会抛出 `gl.INVALID_VALUE` 异常。
+- 如果 `gl.CURRENT_PROGRAM` 为 {{jsxref("null")}}，会抛出 `gl.INVALID_OPERATION` 异常。
+
+## 示例
+
+```js
+gl.drawArrays(gl.POINTS, 0, 8);
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.drawArrays")}}</p>
+{{Compat("api.WebGLRenderingContext.drawArrays")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

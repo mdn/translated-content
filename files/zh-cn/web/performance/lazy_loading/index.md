@@ -9,91 +9,88 @@ tags:
   - 懒加载
 translation_of: Web/Performance/Lazy_loading
 ---
-<p><strong>延迟加载 (懒加载) </strong>是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。 这是一种缩短<a href="/zh-CN/docs/Web/Performance/Critical_rendering_path">关键渲染路径</a>长度的方法，可以缩短页面加载时间。</p>
+**延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。 这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
-<p>延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。</p>
+延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。
 
-<h2 id="概览">概览</h2>
+## 概览
 
-<p>随着网络的发展，我们已经看到发送给用户的资产数量和规模都在急剧增加。从 2011 年到 2019 年，台式机的资源中位数从 <strong>~100KB </strong>增至 <strong>~400KB</strong>，移动版的资源中位数从 <strong>~50KB</strong> 增至<strong>~350KB</strong>。图像大小已从台式机上的<strong>~250KB </strong>增至 <strong>~900KB</strong>，而移动设备上的 <strong>~100KB</strong>增至<strong>~850KB</strong>。</p>
+随着网络的发展，我们已经看到发送给用户的资产数量和规模都在急剧增加。从 2011 年到 2019 年，台式机的资源中位数从 **\~100KB** 增至 **\~400KB**，移动版的资源中位数从 **\~50KB** 增至**\~350KB**。图像大小已从台式机上的**\~250KB** 增至 **\~900KB**，而移动设备上的 **\~100KB**增至**\~850KB**。
 
-<p>解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短<a href="/zh-CN/docs/Web/Performance/Critical_rendering_path">关键渲染路径</a>的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且<strong>只有</strong>在用户导航到购物车页面/区域时才会下载其所有资源（JS、CSS、images……）。</p>
+解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且**只有**在用户导航到购物车页面/区域时才会下载其所有资源（JS、CSS、images……）。
 
-<h2 id="策略">策略</h2>
+## 策略
 
-<p>延迟加载可以通过多种策略应用于多个资源。</p>
+延迟加载可以通过多种策略应用于多个资源。
 
-<h3 id="综述">综述</h3>
+### 综述
 
-<p><strong>代码拆分</strong><br>
- 可以将 JavaScript、CSS 和 HTML 分割成小块，以发送最少的代码提供关键信息，以优化页面加载时间。其余的部分可以在需要时加载。</p>
+**代码拆分**
+可以将 JavaScript、CSS 和 HTML 分割成小块，以发送最少的代码提供关键信息，以优化页面加载时间。其余的部分可以在需要时加载。
 
-<ul>
- <li>    Entry point splitting: separates code by entry point(s) in the app</li>
- <li>    Dynamic splitting: separates code where <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">dynamic import()</a> statements are used</li>
-</ul>
+- Entry point splitting: separates code by entry point(s) in the app
+- Dynamic splitting: separates code where [dynamic import()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statements are used
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>脚本类型模块<br>
- 任何类型为 <code>type="module" </code>的脚本标签都被视为一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules">JavaScript 模块</a>，并且默认情况下会被延迟。</p>
+脚本类型模块
+任何类型为 `type="module" `的脚本标签都被视为一个 [JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
 
-<h3 id="CSS">    CSS</h3>
+### CSS
 
-<p>默认情况下，CSS 被视为<a href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/Critical_rendering_path">渲染阻塞</a>资源，因此，在 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model">CSSOM</a> 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。</p>
+默认情况下，CSS 被视为[渲染阻塞](https://developer.mozilla.org/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Object_Model) 被构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须很薄，才能尽快交付，建议使用媒体类型和查询实现非阻塞渲染。
 
-<pre class="notranslate">&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
-&lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
-&lt;link href="print.css"    rel="stylesheet" media="print"&gt;
-</pre>
+```plain
+<link href="style.css"    rel="stylesheet" media="all">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+```
 
-<p>可以执行一些 <a href="/zh-CN/docs/Learn/Performance/CSS">CSS 优化</a>来实现这一目标。</p>
+可以执行一些 [CSS 优化](/zh-CN/docs/Learn/Performance/CSS)来实现这一目标。
 
-<h3 id="Fonts">Fonts</h3>
+### Fonts
 
-<p>默认情况下，字体请求会延迟到构造渲染树之前，这可能会导致文本渲染延迟。</p>
+默认情况下，字体请求会延迟到构造渲染树之前，这可能会导致文本渲染延迟。
 
-<p>It is possible to override the default behaviour and preload web font resources using <code>&lt;link rel="preload"&gt;</code>, the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display">CSS font-display property</a>, and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API">Font Loading API</a>.<br>
- <br>
- See also: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">Element Link</a></p>
+It is possible to override the default behaviour and preload web font resources using `<link rel="preload">`, the [CSS font-display property](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Font_Loading_API).
 
-<h3 id="Images_and_iframes">Images and iframes</h3>
+See also: [Element Link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link)
 
-<p>Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">non-critical</a>), requiring user interaction (an example being scroll) in order to view them.</p>
+### Images and iframes
 
-<p><strong>Loading </strong>属性<br>
- The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.</p>
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path)), requiring user interaction (an example being scroll) in order to view them.
 
-<pre class="notranslate">&lt;img src="image.jpg" alt="..." loading="lazy"&gt;
-&lt;iframe src="video-player.html" title="..." loading="lazy"&gt;&lt;/iframe&gt;</pre>
+**Loading** 属性
+The {{htmlattrxref("loading", "img")}} attribute on an {{HTMLElement("img")}} element (or the {{htmlattrxref("loading", "iframe")}} attribute on an {{HTMLElement("iframe")}}) can be used to instruct the browser to defer loading of images/iframes that are off-screen until the user scrolls near them.
 
-<p>The <code>load</code> event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.</p>
+```plain
+<img src="image.jpg" alt="..." loading="lazy">
+<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+```
 
-<p>You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.</p>
+The `load` event fires when the eagerly-loaded content has all been loaded; at that time, it's entirely possible (or even likely) that there may be lazily-loaded images that are within the {{Glossary("visual viewport")}} that haven't yet loaded.
 
-<p><strong>Polyfill</strong><br>
- Include this polyfill to provide support for older and currently incompatible browsers:<br>
- <a href="https://github.com/mfranzke/loading-attribute-polyfill">loading-attribute-polyfill</a></p>
+You can determine if a given image has finished loading by examining the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property.
 
-<p><strong>交叉观察者 API</strong><br>
- <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">Intersection Observers</a> allow the user to know when an observed element enters or exits the browser’s viewport.</p>
+**Polyfill**
+Include this polyfill to provide support for older and currently incompatible browsers:
+[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
-<p><strong>事件处理程序</strong><br>
- 当浏览器的兼容性至关重要时，有以下几种选择：</p>
+**交叉观察者 API**
+[Intersection Observers](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
 
-<ul>
- <li><a href="https://github.com/w3c/IntersectionObserver">polyfill intersection observer</a></li>
- <li>后退以滚动，调整大小或改变方向的事件处理程序，以确定特定元素是否在视口中</li>
-</ul>
+**事件处理程序**
+当浏览器的兼容性至关重要时，有以下几种选择：
 
-<h2 id="规范">规范</h2>
+- [polyfill intersection observer](https://github.com/w3c/IntersectionObserver)
+- 后退以滚动，调整大小或改变方向的事件处理程序，以确定特定元素是否在视口中
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css">Render blocking CSS</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering">Optimizing loading and rendering</a></li>
- <li><a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video">Lazy loading images and video</a></li>
-</ul>
+- [Render blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
+- [Optimizing loading and rendering](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering)
+- [Lazy loading images and video](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)

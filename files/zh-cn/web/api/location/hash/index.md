@@ -3,30 +3,33 @@ title: 'Location: hash'
 slug: Web/API/Location/hash
 translation_of: Web/API/Location/hash
 ---
-<div>{{ APIRef("Location") }}</div>
+{{ APIRef("Location") }}
 
-<p>{{domxref("Location")}} 接口的 <strong><code>hash</code></strong> 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 <code>'#'</code> 和 后面 URL 片段标识符。</p>
+{{domxref("Location")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 后面 URL 片段标识符。
 
-<p>这里 fragment 不会经过<a href="/en-US/docs/Glossary/percent-encoding">百分比编码</a>（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串，<code>""</code></p>
+这里 fragment 不会经过[百分比编码](/en-US/docs/Glossary/percent-encoding)（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串，`""`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+```plain
+string = object.hash;
+object.hash = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html notranslate">&lt;a id="myAnchor" href="/en-US/docs/Location.href#Examples"&gt;Examples&lt;/a&gt;
-&lt;script&gt;
+```html
+<a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
+<script>
   var anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // 返回'#Examples'
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Location.hash")}}</p>
+{{Compat("api.Location.hash")}}

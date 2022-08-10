@@ -3,29 +3,28 @@ title: Window.onpaint
 slug: Web/API/Window/onpaint
 translation_of: Web/API/Window/onpaint
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>{{Non-standard_header}}</p>
+{{Non-standard_header}}
 
-<h2 id="Summary">总结</h2>
+## 总结
 
-<p>window 中的 paint 事件处理，目前在 Gecko-based（火狐）应用中不被支持，参见【注意事项】部分的说明。</p>
+window 中的 paint 事件处理，目前在 Gecko-based（火狐）应用中不被支持，参见【注意事项】部分的说明。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval">window.onpaint =<em>funcRef</em>;
-</pre>
+```plain
+window.onpaint =funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> 是处理函数。</li>
-</ul>
+- `funcRef` 是处理函数。
 
-<h2 id="Notes">注意事项</h2>
+## 注意事项
 
-<p><code>onpaint</code> 现在没有生效，并且这个事件是否会生效也是一个问题，参见{{Bug(239074)}}.</p>
+`onpaint` 现在没有生效，并且这个事件是否会生效也是一个问题，参见{{Bug(239074)}}.
 
-<p>window 渲染时 paint 事件会触发。此事件在 window 的 load 事件之后触发，并且每次 window 需要重绘时都会再次触发，当另一个 window 出现使原先的 window 不处于激活状态时，原 window 的 onpaint 事件则被清理。</p>
+window 渲染时 paint 事件会触发。此事件在 window 的 load 事件之后触发，并且每次 window 需要重绘时都会再次触发，当另一个 window 出现使原先的 window 不处于激活状态时，原 window 的 onpaint 事件则被清理。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p>不是任何规范的一部分。</p>
+不是任何规范的一部分。

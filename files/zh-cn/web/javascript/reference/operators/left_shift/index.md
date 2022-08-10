@@ -3,53 +3,52 @@ title: 左移 (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 translation_of: Web/JavaScript/Reference/Operators/Left_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>左移操作符 (<code>&lt;&lt;</code>)</strong> 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。</p>
+**左移操作符 (`<<`)** 将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>a</var> &lt;&lt; <var>b</var></code>
-</pre>
+```plain
+a << b
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>左移操作符将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。</p>
+左移操作符将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
 
-<p>例如， <code>9 &lt;&lt; 2</code> 得出 36：</p>
+例如， `9 << 2` 得出 36：
 
-<pre class="brush: js">     9 (十进制): 00000000000000000000000000001001 (二进制)
+```js
+     9 (十进制): 00000000000000000000000000001001 (二进制)
                  --------------------------------
-9 &lt;&lt; 2 (十进制): 00000000000000000000000000100100 (二进制) = 36 (十进制)
-</pre>
+9 << 2 (十进制): 00000000000000000000000000100100 (二进制) = 36 (十进制)
+```
 
-<p>移动任意数字 <code>x</code> 至左边 <code>y</code> 位，得出 <code>x * 2 ** y</code>。<br>
- 所以例如：<code>9 &lt;&lt; 3</code> 等价于 <code>9 * 2³ = 9 * 8 = 72</code>。</p>
+移动任意数字 `x` 至左边 `y` 位，得出 `x * 2 ** y`。
+所以例如：`9 << 3` 等价于 `9 * 2³ = 9 * 8 = 72`。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用左移">使用左移</h3>
+### 使用左移
 
-<pre class="brush: js">9 &lt;&lt; 3; // 72
+```js
+9 << 3; // 72
 
 // 9 * 2³ = 9 * 8 = 72
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment">Left shift assignment operator</a></li>
-</ul>
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Left shift assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

@@ -3,65 +3,53 @@ title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`Atomics.sub()`** 静态方法在数组中的给定位置减去给定值，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
 
-<div><code><strong>Atomics.sub()</strong></code> 静态方法在数组中的给定位置减去给定值，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。</div>
+## 语法
 
+```plain
+Atomics.sub(typedArray, index, value)
+```
 
+### 参数
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}</div>
+- `typedArray`
+  - : 一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+- `index`
+  - : 要被 `value` 值减去的 `typedArray` 索引位置。
+- `value`
+  - : 要减去的数字。
 
+### 返回值
 
+给定位置的旧值 (`typedArray[index]`)。
 
-<h2 id="语法">语法</h2>
+### 异常
 
-<pre class="syntaxbox">Atomics.sub(typedArray, index, value)
-</pre>
+- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
+- 假如 `typedArray` 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。
+- 如果 `index` 超出了 `typedArray` 的边界，则抛出 {{jsxref("RangeError")}}。
 
-<h3 id="参数">参数</h3>
+## 例子
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>要被 <code>value</code> 值减去的 <code>typedArray</code> 索引位置。</dd>
- <dt><code>value</code></dt>
- <dd>要减去的数字。</dd>
-</dl>
-
-<h3 id="返回值">返回值</h3>
-
-<p>给定位置的旧值 (<code>typedArray[index]</code>)。</p>
-
-<h3 id="异常">异常</h3>
-
-<ul>
- <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
- <li>假如 <code>typedArray</code> 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray</code> 的边界，则抛出 {{jsxref("RangeError")}}。</li>
-</ul>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 48;
 
 Atomics.sub(ta, 0, 12); // returns 48, the old value
 Atomics.load(ta, 0); // 36
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.add()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.add()")}}

@@ -3,36 +3,33 @@ title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>Symbol.hasInstance</code></strong>用于判断某对象是否为某构造器的实例。因此你可以用它自定义 {{jsxref("Operators/instanceof", "instanceof")}} 操作符在某个类上的行为。</p>
+**`Symbol.hasInstance`**用于判断某对象是否为某构造器的实例。因此你可以用它自定义 {{jsxref("Operators/instanceof", "instanceof")}} 操作符在某个类上的行为。
 
-<div>
-<div>{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}</div>
+{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}{{js_property_attributes(0,0,0)}}
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## 示例
 
-<h2 id="示例">示例</h2>
+你可实现一个自定义的`instanceof` 行为，例如：
 
-<p>你可实现一个自定义的<code>instanceof</code> 行为，例如：</p>
-
-<pre class="brush: js">class MyArray {
+```js
+class MyArray {
   static [Symbol.hasInstance](instance) {
     return Array.isArray(instance);
   }
 }
-console.log([] instanceof MyArray); // true</pre>
+console.log([] instanceof MyArray); // true
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}

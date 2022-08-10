@@ -3,97 +3,95 @@ title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>这个 <code><strong>some()</strong></code> 方法检测 <em>TypedArray</em> 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}}<em> 相同。</em> <em>TypedArray</em> 是 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> 之一。</p>
+这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 
-<div> </div>
+## 语法
 
+```plain
+typedarray.some(callback[, thisArg])
+```
 
+### 参数
 
-<h2 id="语法">语法</h2>
+- `callback`
 
-<pre class="syntaxbox"><code><var>typedarray</var>.<code>some(<var>callback</var>[, <var>thisArg</var>])</code></code></pre>
+  - : 一个测试每个元素的函数，有 3 个参数：
 
-<h3 id="参数">参数</h3>
+    - `currentValue`
+      - : 在 typed array 中，正在被测试的元素。
+    - `index`
+      - : 在 typed array 中，正在被测试元素的索引。
+    - `array`
+      - : 正在被调用的 typed array 本身。
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>一个测试每个元素的函数，有 3 个参数：
- <dl>
-  <dt><code>currentValue</code></dt>
-  <dd>在 typed array 中，正在被测试的元素。</dd>
-  <dt><code>index</code></dt>
-  <dd>在 typed array 中，正在被测试元素的索引。</dd>
-  <dt><code>array</code></dt>
-  <dd>正在被调用的 typed array 本身。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>可选的. <code>callback</code>  回调函数的 <code>this</code> 值 .</dd>
-</dl>
+- `thisArg`
+  - : 可选的. `callback` 回调函数的 `this` 值 .
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code><strong>true</strong></code> 如果 callback 函数以任一数组元素为参数调用时，返回 {{Glossary("truthy")}}; 否则，<code><strong>false</strong></code>.</p>
+**`true`** 如果 callback 函数以任一数组元素为参数调用时，返回 {{Glossary("truthy")}}; 否则，**`false`**.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>对于 typed array 中的每个元素，<code>some</code>方法执行一次 <code>callback</code>，直到找到一个<code>callback </code>返回 true 的元素。如果一个元素被找到，<code>some</code> 立即返回 <code>true</code>. 否则，<code>some</code> 返回 <code>false</code>.</p>
+对于 typed array 中的每个元素，`some`方法执行一次 `callback`，直到找到一个`callback `返回 true 的元素。如果一个元素被找到，`some` 立即返回 `true`. 否则，`some` 返回 `false`.
 
-<p><code>callback</code> 期望 3 个参数：元素的值，元素的索引，和被遍历的数组对象。</p>
+`callback` 期望 3 个参数：元素的值，元素的索引，和被遍历的数组对象。
 
-<p>如果 <code>some</code> 提供 <code>thisArg</code>, 那么<code>thisArg</code>会作为 <code>callback</code> 调用时的<code>this 值</code>. 否则，<code>callback</code> 调用时的 <code>this</code> 是 <code>undefined</code>.  <code>callback</code> 最终可观测的<code>this</code> 是根据  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">确定函数 this 的通常规则</a> 所确定的。</p>
+如果 `some` 提供 `thisArg`, 那么`thisArg`会作为 `callback` 调用时的`this 值`. 否则，`callback` 调用时的 `this` 是 `undefined`. `callback` 最终可观测的`this` 是根据 [确定函数 this 的通常规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) 所确定的。
 
-<p><code>some</code> 被调用不会改变 typed array .</p>
+`some` 被调用不会改变 typed array .
 
-<h3 id="示例">示例</h3>
+### 示例
 
-<h3 id="Testing_size_of_all_typed_array_elements">Testing size of all typed array elements</h3>
+### Testing size of all typed array elements
 
-<p>以下示例测试 typed array 中的所有元素都大于 10.</p>
+以下示例测试 typed array 中的所有元素都大于 10.
 
-<pre class="brush: js">function isBiggerThan10(element, index, array) {
-  return element &gt; 10;
+```js
+function isBiggerThan10(element, index, array) {
+  return element > 10;
 }
 new Uint8Array([2, 5, 8, 1, 4]).some(isBiggerThan10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
-</pre>
+```
 
-<h3 id="Testing_typed_array_elements_using_arrow_functions">Testing typed array elements using arrow functions</h3>
+### Testing typed array elements using arrow functions
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> 提供更段的语法做相同的测试。</p>
+[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 提供更段的语法做相同的测试。
 
-<pre class="brush: js">new Uint8Array([2, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem =&gt; elem &gt; 10); // true</pre>
+```js
+new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>由于没有名为 <em>TypedArray 的全局对象</em>, 必须在“as needed”的基础上进行填充。</p>
+由于没有名为 _TypedArray 的全局对象_, 必须在“as needed”的基础上进行填充。
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
   Object.defineProperty(Uint8Array.prototype, 'some', {
     value: Array.prototype.some
   });
 }
-</pre>
+```
 
-<p>假如你需要支持的过时 JavaScript 引擎不支持<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>，最好不要使用<code>Array.prototype</code>方法填充，因为你不能让它们不可枚举。</p>
+假如你需要支持的过时 JavaScript 引擎不支持[`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要使用`Array.prototype`方法填充，因为你不能让它们不可枚举。
 
-<h2 id="标准">标准</h2>
+## 标准
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}

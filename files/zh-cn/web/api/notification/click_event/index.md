@@ -6,39 +6,40 @@ tags:
 translation_of: Web/API/Notification/onclick
 original_slug: Web/API/notification/onclick
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>{{domxref("Notification")}} 接口的 onclick 属性指定一个事件侦听器来接收 {{event("click")}} 事件。</p>
+{{domxref("Notification")}} 接口的 onclick 属性指定一个事件侦听器来接收 {{event("click")}} 事件。
 
-<p>当用户点击一个显示的{{domxref("Notification")}}时，会发生这些事件。</p>
+当用户点击一个显示的{{domxref("Notification")}}时，会发生这些事件。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">Notification.onclick = function(event) { ... };
-</pre>
+```plain
+Notification.onclick = function(event) { ... };
+```
 
-<p>该方法的默认行为是将焦点移到与该通知相关联的 <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</a> 的窗口。如果你不希望这样，可以在 event 对象上调用 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>.</p>
+该方法的默认行为是将焦点移到与该通知相关联的 [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) 的窗口。如果你不希望这样，可以在 event 对象上调用 [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件，并在新窗口 (通过包含一个参数<code>'_blank'</code>) 打开一个页面：</p>
+在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件，并在新窗口 (通过包含一个参数`'_blank'`) 打开一个页面：
 
-<pre class="brush: js">notification.onclick = function(event) {
+```js
+notification.onclick = function(event) {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
   window.open('http://www.mozilla.org', '_blank');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Notification")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Using the Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

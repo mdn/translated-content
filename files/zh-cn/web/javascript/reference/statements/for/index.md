@@ -9,80 +9,83 @@ tags:
   - for
 translation_of: Web/JavaScript/Reference/Statements/for
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>for</code> 语句</strong>用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">块语句</a>）。</p>
+**`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-for.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-for.html")}}
 
+## 语法
 
+```plain
+for ([initialization]; [condition]; [final-expression])
+   statement
+```
 
-<h2 id="语法">语法</h2>
+- `initialization`
+  - : 一个表达式 (包含赋值语句) 或者变量声明。典型地被用于初始化一个计数器。该表达式可以使用 `var` 或 `let` 关键字声明新的变量，使用 `var` 声明的变量不是该循环的局部变量，而是与 `for` 循环处在同样的作用域中。用 `let` 声明的变量是语句的局部变量。该表达式的结果无意义。
+- `condition`
+  - : 一个条件表达式被用于确定每一次循环是否能被执行。如果该表达式的结果为 true，`statement` 将被执行。这个表达式是可选的。如果被忽略，那么就被认为永远为真。如果计算结果为假，那么执行流程将被跳到 `for` 语句结构后面的第一条语句。
+- `final-expression`
+  - : 每次循环的最后都要执行的表达式。执行时机是在下一次 `condition` 的计算之前。通常被用于更新或者递增计数器变量。
+- `statement`
+  - : 只要`condition`的结果为 true 就会被执行的语句。要在循环体内执行多条语句，使用一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)（`{ ... }`）来包含要执行的语句。没有任何语句要执行，使用一个[空语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)（`;`）。
 
-<pre class="syntaxbox">for ([<em>initialization</em>]; [<em>condition</em>]; [<em>final-expression</em>])
-   <em>statement</em>
-</pre>
+## 示例
 
-<dl>
- <dt><code>initialization</code></dt>
- <dd>一个表达式 (包含赋值语句) 或者变量声明。典型地被用于初始化一个计数器。该表达式可以使用 <code>var</code> 或 <code>let</code> 关键字声明新的变量，使用 <code>var</code> 声明的变量不是该循环的局部变量，而是与 <code>for</code> 循环处在同样的作用域中。用 <code>let</code> 声明的变量是语句的局部变量。该表达式的结果无意义。</dd>
- <dt><code>condition</code></dt>
- <dd>一个条件表达式被用于确定每一次循环是否能被执行。如果该表达式的结果为 true，<code>statement</code> 将被执行。这个表达式是可选的。如果被忽略，那么就被认为永远为真。如果计算结果为假，那么执行流程将被跳到 <code>for</code> 语句结构后面的第一条语句。</dd>
- <dt><code>final-expression</code></dt>
- <dd>每次循环的最后都要执行的表达式。执行时机是在下一次 <code>condition</code> 的计算之前。通常被用于更新或者递增计数器变量。</dd>
- <dt><code>statement</code></dt>
- <dd>只要<code>condition</code>的结果为 true 就会被执行的语句。要在循环体内执行多条语句，使用一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">块语句</a>（<code>{ ... }</code>）来包含要执行的语句。没有任何语句要执行，使用一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty">空语句</a>（<code>;</code>）。</dd>
-</dl>
+### 使用 `for`
 
-<h2 id="示例">示例</h2>
+以下例子声明了变量 `i` 并被初始赋值为 `0`，`for` 语句检查 `i` 的值是否小于 9，如果小于 9，则执行语句块内的语句，并且最后将 `i` 的值增加 1。
 
-<h3 id="使用_for">使用 <code>for</code></h3>
-
-<p>以下例子声明了变量 <code>i</code> 并被初始赋值为 <code>0</code>，<code>for</code> 语句检查 <code>i</code> 的值是否小于 9，如果小于 9，则执行语句块内的语句，并且最后将 <code>i</code> 的值增加 1。</p>
-
-<pre class="brush: js">for (var i = 0; i &lt; 9; i++) {
+```js
+for (var i = 0; i < 9; i++) {
    console.log(i);
    // more statements
 }
-</pre>
+```
 
-<h3 id="可选的_for_表达式">可选的 <code>for</code> 表达式</h3>
+### 可选的 `for` 表达式
 
-<p><code>for</code> 语句头部圆括号中的所有三个表达式都是可选的。</p>
+`for` 语句头部圆括号中的所有三个表达式都是可选的。
 
-<p>例如，初始化块中的表达式没有被指定：</p>
+例如，初始化块中的表达式没有被指定：
 
-<pre class="brush: js">var i = 0;
-for (; i &lt; 9; i++) {
+```js
+var i = 0;
+for (; i < 9; i++) {
     console.log(i);
     // more statements
 }
-</pre>
+```
 
-<p>像初始化块一样，条件块也是可选的。如果省略此表达式，则必须确保在循环体内跳出，以防创建死循环。</p>
+像初始化块一样，条件块也是可选的。如果省略此表达式，则必须确保在循环体内跳出，以防创建死循环。
 
-<pre class="brush: js">for (var i = 0;; i++) {
+```js
+for (var i = 0;; i++) {
    console.log(i);
-   if (i &gt; 3) break;
+   if (i > 3) break;
    // more statements
-}</pre>
+}
+```
 
-<p>你当然可以忽略所有的表达式。同样的，确保使用了 {{jsxref("Statements/break", "break")}} &gt;语句来跳出循环并且还要修改（增加）一个变量，使得 break 语句的条件在某个时候是真的。</p>
+你当然可以忽略所有的表达式。同样的，确保使用了 {{jsxref("Statements/break", "break")}} >语句来跳出循环并且还要修改（增加）一个变量，使得 break 语句的条件在某个时候是真的。
 
-<pre class="brush: js">var i = 0;
+```js
+var i = 0;
 
 for (;;) {
-  if (i &gt; 3) break;
+  if (i > 3) break;
   console.log(i);
   i++;
 }
-</pre>
+```
 
-<h3 id="使用无语句的_for">使用无语句的 <code>for</code></h3>
+### 使用无语句的 `for`
 
-<p>以下 <code>for</code> 循环计算 <em>final-expression</em> 部分中节点的偏移位置，它不需要执行一个 <code>statement</code> 或者一组 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">block</a> statement</code> ，因此使用了空语句。</p>
+以下 `for` 循环计算 _final-expression_ 部分中节点的偏移位置，它不需要执行一个 `statement` 或者一组 `block statement` ，因此使用了空语句。
 
-<pre class="brush: js">function showOffsetPos(sId) {
+```js
+function showOffsetPos(sId) {
 
   var nLeft = 0, nTop = 0;
 
@@ -107,30 +110,25 @@ showOffsetPos('content');
 // Output:
 // "Offset position of "content" element:
 // left: 0px;
-// top: 153px;"</pre>
+// top: 153px;"
+```
 
-<div class="note">
-<p><strong>备注：</strong> <strong>这里的分号是强制性的</strong>，是 JavaScript 中的少数几种强制分号的情况。如果没有分号，循环声明之后的行将被视为循环语句。</p>
-</div>
+> **备注：** **这里的分号是强制性的**，是 JavaScript 中的少数几种强制分号的情况。如果没有分号，循环声明之后的行将被视为循环语句。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另请参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{jsxref("Statements/empty", "empty statement", "", 0)}}</li>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/do...while", "do...while")}}</li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Statements/for...of", "for...of")}}</li>
-</ul>
+- {{jsxref("Statements/empty", "empty statement", "", 0)}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Statements/for...of", "for...of")}}

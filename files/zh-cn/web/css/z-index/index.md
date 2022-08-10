@@ -7,23 +7,21 @@ tags:
   - CSS 属性
 translation_of: Web/CSS/z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><code>z-index</code> 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。</p>
+`z-index` 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。
 
-<p>{{EmbedInteractiveExample("pages/css/z-index.html")}}</p>
+{{EmbedInteractiveExample("pages/css/z-index.html")}}
 
+对于一个已经定位的盒子（即其 `position` 属性值不是 `static`，这里要注意的是 CSS 把元素看作盒子），`z-index` 属性指定：
 
-<p>对于一个已经定位的盒子（即其 <code>position</code> 属性值不是 <code>static</code>，这里要注意的是 CSS 把元素看作盒子），<code>z-index</code> 属性指定：</p>
+1.  盒子在当前堆叠上下文中的堆叠层级。
+2.  盒子是否创建一个本地堆叠上下文。
 
-<ol>
- <li>盒子在当前堆叠上下文中的堆叠层级。</li>
- <li>盒子是否创建一个本地堆叠上下文。</li>
-</ol>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css  language-css notranslate">/* 字符值 */
+```css
+/* 字符值 */
 z-index: auto;
 
 /* 整数值 */
@@ -35,36 +33,38 @@ z-index: -1;/* 使用负值降低优先级 */
 /* 全局值 */
 z-index: inherit;
 z-index: initial;
-z-index: unset;</pre>
+z-index: unset;
+```
 
-<p><code>z-index</code> 属性可以被设定为关键词 <code><a href="/zh-CN/docs/Web/CSS/z-index$edit#auto">auto</a></code> 或 <code><a href="/zh-CN/docs/Web/CSS/z-index$edit#&lt;integer>">&lt;integer&gt;</a></code>。</p>
+`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index$edit#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index$edit#<integer>)。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>盒子不会创建一个新的本地堆叠上下文。在当前堆叠上下文中生成的盒子的堆叠层级和父级盒子相同。</dd>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>{{cssxref("&lt;integer&gt;")}}（整型数字）是生成的盒子在当前堆叠上下文中的堆叠层级。此盒子也会创建一个堆叠层级为 0 的本地堆叠上下文。这意味着后代（元素）的 z-indexes 不与此元素的外部元素的 z-indexes 进行对比。</dd>
-</dl>
+- `auto`
+  - : 盒子不会创建一个新的本地堆叠上下文。在当前堆叠上下文中生成的盒子的堆叠层级和父级盒子相同。
+- `<integer>`
+  - : {{cssxref("&lt;integer&gt;")}}（整型数字）是生成的盒子在当前堆叠上下文中的堆叠层级。此盒子也会创建一个堆叠层级为 0 的本地堆叠上下文。这意味着后代（元素）的 z-indexes 不与此元素的外部元素的 z-indexes 进行对比。
 
-<h3 id="格式化语法">格式化语法</h3>
+### 格式化语法
 
 {{csssyntax("z-index")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
-  &lt;div class="dashed-box"&gt;Dashed box&lt;/div&gt;
-  &lt;div class="gold-box"&gt;Gold box&lt;/div&gt;
-  &lt;div class="green-box"&gt;Green box&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="wrapper">
+  <div class="dashed-box">Dashed box</div>
+  <div class="gold-box">Gold box</div>
+  <div class="green-box">Green box</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">.wrapper {
+```css
+.wrapper {
   position: relative;
 }
 
@@ -93,23 +93,22 @@ z-index: unset;</pre>
   top: -25px;
   height: 7em;
   opacity: 0.9;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('示例', '550', '200', '') }}</p>
+{{ EmbedLiveSample('示例', '550', '200', '') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.z-index")}}</p>
+{{Compat("css.properties.z-index")}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>CSS {{Cssxref("position")}} 属性</li>
- <li><a href="/en-US/docs/CSS/Understanding_z-index">理解 CSS z-indexes</a></li>
-</ul>
+- CSS {{Cssxref("position")}} 属性
+- [理解 CSS z-indexes](/en-US/docs/CSS/Understanding_z-index)

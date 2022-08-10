@@ -6,37 +6,34 @@ tags:
   - 缓冲区
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>ArrayBuffer.isView()</strong></code> 方法用来判断传入的参数值是否是一种 <code>ArrayBuffer</code> 视图（view），比如类型化数组对象（<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">typed array objects</a>）或者数据视图（ {{jsxref("DataView")}}）。</p>
+**`ArrayBuffer.isView()`** 方法用来判断传入的参数值是否是一种 `ArrayBuffer` 视图（view），比如类型化数组对象（[typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)）或者数据视图（ {{jsxref("DataView")}}）。
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
 
+## 语法
 
+```js
+ArrayBuffer.isView(value)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="brush: js"><code>ArrayBuffer.isView(<var>value</var>)</code></pre>
+- `value`
+  - : 被检测的值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>value</code></dt>
- <dd>被检测的值。</dd>
-</dl>
+- `true`
+  - : 如果提供的参数是一种 {{jsxref("ArrayBuffer")}} 视图；
+- `false`
+  - : 提供的参数不是一种 {{jsxref("ArrayBuffer")}} 视图类型；
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<dl>
- <dt><code>true</code></dt>
- <dd>如果提供的参数是一种 {{jsxref("ArrayBuffer")}} 视图；</dd>
- <dt><code>false</code></dt>
- <dd>提供的参数不是一种 {{jsxref("ArrayBuffer")}} 视图类型；</dd>
-</dl>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">ArrayBuffer.isView();                    // false
+```js
+ArrayBuffer.isView();                    // false
 ArrayBuffer.isView([]);                  // false
 ArrayBuffer.isView({});                  // false
 ArrayBuffer.isView(null);                // false
@@ -50,20 +47,16 @@ ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 var buffer = new ArrayBuffer(2);
 var dv = new DataView(buffer);
 ArrayBuffer.isView(dv); // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另见
 
-<p>{{Compat}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)

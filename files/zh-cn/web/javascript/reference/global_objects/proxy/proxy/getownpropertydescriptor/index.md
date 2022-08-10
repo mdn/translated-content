@@ -4,64 +4,60 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescript
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.getOwnPropertyDescriptor()</code></strong> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}}  的钩子。</p>
+**`handler.getOwnPropertyDescriptor()`** 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的钩子。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   getOwnPropertyDescriptor: function(target, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><code>下列参数会被传入 getOwnPropertyDescriptor</code> 方法中。这是绑定到 handler 上。 </p>
+`下列参数会被传入 getOwnPropertyDescriptor` 方法中。这是绑定到 handler 上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>prop</code></dt>
- <dd>返回属性名称的描述。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `prop`
+  - : 返回属性名称的描述。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>getOwnPropertyDescriptor</code> 方法必须返回一个 object 或 <code>undefined</code>。</p>
+`getOwnPropertyDescriptor` 方法必须返回一个 object 或 `undefined`。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.getOwnPropertyDescriptor()</strong></code> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的陷阱。</p>
+**`handler.getOwnPropertyDescriptor()`** 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的陷阱。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>这个陷阱可以拦截这些操作：</p>
+这个陷阱可以拦截这些操作：
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
 
-<h3 id="不变量">不变量</h3>
+### 不变量
 
-<p>如果下列不变量被违反，代理将抛出一个 {{jsxref("TypeError")}}：</p>
+如果下列不变量被违反，代理将抛出一个 {{jsxref("TypeError")}}：
 
-<ul>
- <li><code>getOwnPropertyDescriptor</code> 必须返回一个 object 或 <code>undefined</code>。</li>
- <li>如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在。</li>
- <li>如果属性作为目标对象的属性存在，并且目标对象不可扩展，则该属性无法报告为不存在。</li>
- <li>如果属性不存在作为目标对象的属性，并且目标对象不可扩展，则不能将其报告为存在。</li>
- <li>属性不能被报告为不可配置，如果它不作为目标对象的自身属性存在，或者作为目标对象的可配置的属性存在。</li>
- <li>Object.getOwnPropertyDescriptor（target）的结果可以使用 Object.defineProperty 应用于目标对象，也不会抛出异常。</li>
-</ul>
+- `getOwnPropertyDescriptor` 必须返回一个 object 或 `undefined`。
+- 如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在。
+- 如果属性作为目标对象的属性存在，并且目标对象不可扩展，则该属性无法报告为不存在。
+- 如果属性不存在作为目标对象的属性，并且目标对象不可扩展，则不能将其报告为存在。
+- 属性不能被报告为不可配置，如果它不作为目标对象的自身属性存在，或者作为目标对象的可配置的属性存在。
+- Object.getOwnPropertyDescriptor（target）的结果可以使用 Object.defineProperty 应用于目标对象，也不会抛出异常。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：</p>
+以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：
 
-<pre class="brush: js">var p = new Proxy({ a: 20}, {
+```js
+var p = new Proxy({ a: 20}, {
   getOwnPropertyDescriptor: function(target, prop) {
     console.log('called: ' + prop);
     return { configurable: true, enumerable: true, value: 10 };
@@ -70,11 +66,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
                                                             // 10
-</pre>
+```
 
-<p>以下代码则违反了不变量。</p>
+以下代码则违反了不变量。
 
-<pre class="brush: js">var obj = { a: 10 };
+```js
+var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
   getOwnPropertyDescriptor: function(target, prop) {
@@ -83,21 +80,19 @@ var p = new Proxy(obj, {
 });
 
 Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

@@ -5,40 +5,42 @@ tags:
   - PushMessageData.json()
 translation_of: Web/API/PushMessageData/json
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>{{domxref("PushMessageData")}} 接口的 <code><strong>json()</strong></code>方法将推送消息数据提取为 一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> 对象。</p>
+{{domxref("PushMessageData")}} 接口的 **`json()`**方法将推送消息数据提取为 一个 [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let massage_Json = PushEvent.data.json();</pre>
+```js
+let massage_Json = PushEvent.data.json();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a> object.</p>
+A [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var jsonObj = event.data.json();
 
   // do something with your JSON
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.PushMessageData.json")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
-</ul>
+- [Using the Push API](/en-US/docs/Web/API/Push_API/Using_the_Push_API)

@@ -6,55 +6,60 @@ tags:
   - Headers 构造函数
 translation_of: Web/API/Headers/Headers
 ---
-<p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
-<p><code>使用<strong>Headers()</strong></code> 构造方法创建一个新的{{domxref("Headers")}} 对象。</p>
+`使用Headers()` 构造方法创建一个新的{{domxref("Headers")}} 对象。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myHeaders = new Headers(init);</pre>
+```js
+var myHeaders = new Headers(init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>init</em> {{optional_inline}}</dt>
- <dd>通过一个包含任意 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> 的对象来预设你的 <code>Headers</code>. 可以是一个{{domxref("ByteString")}} 对象; 或者是一个已存在的 <code>Headers</code> 对象. </dd>
-</dl>
+- _init_ {{optional_inline}}
+  - : 通过一个包含任意 [HTTP headers](/en-US/docs/Web/HTTP/Headers) 的对象来预设你的 `Headers`. 可以是一个{{domxref("ByteString")}} 对象; 或者是一个已存在的 `Headers` 对象.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>创建一个空的 <code>Headers</code> 对象：</p>
+创建一个空的 `Headers` 对象：
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>你可以使用{{domxref("Headers.append")}}方法添加一个 header 并赋值：</p>
+你可以使用{{domxref("Headers.append")}}方法添加一个 header 并赋值：
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>或者你可以在 Headers 对象创建时添加多个 header. 在下面的示例中我们创建了一个新的{{domxref("Headers")}} 对象，并通过 Headers 构造函数中 init 属性来添加多个 header:</p>
+或者你可以在 Headers 对象创建时添加多个 header. 在下面的示例中我们创建了一个新的{{domxref("Headers")}} 对象，并通过 Headers 构造函数中 init 属性来添加多个 header:
 
-<pre class="brush: js">var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
-var myHeaders = new Headers(httpHeaders);</pre>
+```js
+var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
+var myHeaders = new Headers(httpHeaders);
+```
 
-<p><code>你可以通过 init 属性将一个已存在的 Headers 对象来创建另一个新的 Headers 对象</code>:</p>
+`你可以通过 init 属性将一个已存在的 Headers 对象来创建另一个新的 Headers 对象`:
 
-<pre class="brush: js">var secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object</pre>
+```js
+var secondHeadersObj = new Headers(myHeaders);
+secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Headers.Headers")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

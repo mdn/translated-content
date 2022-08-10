@@ -7,39 +7,37 @@ tags:
 translation_of: Web/API/Document/onafterscriptexecute
 original_slug: Web/API/Document/onafterscriptexecute
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>当 HTML 文档中的{{HTMLElement("script")}}标签内的代码执行完毕时触发该事件，如果这个<code>script</code>标签是用<code>appendChild()</code>等方法动态添加上去的，则不会触发该事件。</p>
+当 HTML 文档中的{{HTMLElement("script")}}标签内的代码执行完毕时触发该事件，如果这个`script`标签是用`appendChild()`等方法动态添加上去的，则不会触发该事件。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>document.onafterscriptexecute = funcRef;</em>
-</pre>
+```plain
+document.onafterscriptexecute = funcRef;
+```
 
-<p>当<code>afterscriptexecute</code>事件触发时，<code>funcRef</code>函数就会被调用。传入参数<code>event</code>的<code>target</code>属性指向触发该事件的那个<code>script</code>元素。</p>
+当`afterscriptexecute`事件触发时，`funcRef`函数就会被调用。传入参数`event`的`target`属性指向触发该事件的那个`script`元素。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush:js">function finished(e) {
+```js
+function finished(e) {
   logMessage("Finished script with ID: " + e.target.id);
 }
 
 document.addEventListener("afterscriptexecute", finished, true);
-</pre>
+```
 
-<p><a href="/samples/html/currentScript.html">查看在线演示</a></p>
+[查看在线演示](/samples/html/currentScript.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#the-script-element">HTML5</a></li>
-</ul>
+- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("element.onbeforescriptexecute")}}</li>
- <li>{{domxref("document.currentScript")}}</li>
-</ul>
+- {{domxref("element.onbeforescriptexecute")}}
+- {{domxref("document.currentScript")}}

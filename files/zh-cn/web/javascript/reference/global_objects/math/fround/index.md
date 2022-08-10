@@ -3,93 +3,99 @@ title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong><code>Math.fround()</code></strong> 可以将任意的数字转换为离它最近的<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">单精度浮点数</a>形式的数字。</p>
+**`Math.fround()`** 可以将任意的数字转换为离它最近的[单精度浮点数](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)形式的数字。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js"><code>Math.fround(<var>doubleFloat</var>)</code></pre>
+```js
+Math.fround(doubleFloat)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>doubleFloat</code></dt>
- <dd>一个 {{jsxref("Number")}}。若参数为非数字类型，则会被转投成数字。无法转换时，设置成{{jsxref("NaN")}}。</dd>
-</dl>
+- `doubleFloat`
+  - : 一个 {{jsxref("Number")}}。若参数为非数字类型，则会被转投成数字。无法转换时，设置成{{jsxref("NaN")}}。
 
-<h3 id="Parameters">返回值</h3>
+### 返回值
 
-<p>指定数字最接近的 <a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">32 位单精度</a>浮点数表示。</p>
+指定数字最接近的 [32 位单精度](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)浮点数表示。
 
-<h2 id="Examples">描述</h2>
+## 描述
 
-<p>JavaScript 内部使用 64 位的双浮点数字，支持很高的精度。但是，有时你需要用 32 位浮点数字，比如你从一个{{jsxref("Float32Array")}} 读取值时。这时会产生混乱：检查一个 64 位浮点数和一个 32 位浮点数是否相等会失败，即使二个数字几乎一模一样。</p>
+JavaScript 内部使用 64 位的双浮点数字，支持很高的精度。但是，有时你需要用 32 位浮点数字，比如你从一个{{jsxref("Float32Array")}} 读取值时。这时会产生混乱：检查一个 64 位浮点数和一个 32 位浮点数是否相等会失败，即使二个数字几乎一模一样。
 
-<p>要解决这个问题，可以使用 <code>Math.fround()</code> 来将 64 位的浮点数转换为 32 位浮点数。在内部，JavaScript 继续把这个数字作为 64 位浮点数看待，仅仅是在尾数部分的第 23 位执行了“舍入到偶数”的操作，并将后续的尾数位设置为 0。如果数字超出 32 位浮点数的范围，则返回 {{jsxref("Infinity")}} 或 <code>-Infinity</code>。</p>
+要解决这个问题，可以使用 `Math.fround()` 来将 64 位的浮点数转换为 32 位浮点数。在内部，JavaScript 继续把这个数字作为 64 位浮点数看待，仅仅是在尾数部分的第 23 位执行了“舍入到偶数”的操作，并将后续的尾数位设置为 0。如果数字超出 32 位浮点数的范围，则返回 {{jsxref("Infinity")}} 或 `-Infinity`。
 
-<p>因为<code>fround()</code> 是<code>Math</code> 的静态方法，你必须通过 <code>Math.fround()</code> 来使用，而不是调用你创建的<code>Math</code> 对象的一个实例方法（<code>Math</code>不是一个构造函数）。</p>
+因为`fround()` 是`Math` 的静态方法，你必须通过 `Math.fround()` 来使用，而不是调用你创建的`Math` 对象的一个实例方法（`Math`不是一个构造函数）。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="使用_Math.fround()">使用 Math.fround()</h3>
+### 使用 Math.fround()
 
-<p>数字 1.5 可以在二进制数字系统中精确表示，32 位和 64 位的值相同：</p>
+数字 1.5 可以在二进制数字系统中精确表示，32 位和 64 位的值相同：
 
-<pre class="brush: js">Math.fround(1.5); // 1.5
-Math.fround(1.5) === 1.5; // true</pre>
+```js
+Math.fround(1.5); // 1.5
+Math.fround(1.5) === 1.5; // true
+```
 
-<p>但是，数字 1.337 却无法在二进制数字系统中精确表示，所以 32 位和 64 位的值是不同的：</p>
+但是，数字 1.337 却无法在二进制数字系统中精确表示，所以 32 位和 64 位的值是不同的：
 
-<pre class="brush: js">Math.fround(1.337); // 1.3370000123977661
+```js
+Math.fround(1.337); // 1.3370000123977661
 Math.fround(1.337) === 1.337; // false
-</pre>
+```
 
-<p>2^150 超出 32 位浮点，所以返回<code>Infinity</code>：</p>
+2^150 超出 32 位浮点，所以返回`Infinity`：
 
-<pre class="brush: js">2 ** 150; // 1.42724769270596e+45
+```js
+2 ** 150; // 1.42724769270596e+45
 Math.fround(2 ** 150); // Infinity
-</pre>
+```
 
-<p>如果参数无法转换成数字，或者为 {{jsxref("NaN")}}（<code>NaN</code>），<code>Math.fround()</code> 会返回 <code>NaN</code>：</p>
+如果参数无法转换成数字，或者为 {{jsxref("NaN")}}（`NaN`），`Math.fround()` 会返回 `NaN`：
 
-<pre class="brush: js">Math.fround('abc'); // NaN
+```js
+Math.fround('abc'); // NaN
 Math.fround(NaN); // NaN
-</pre>
+```
 
-<p>在某些精度不高的场合下，可以通过将二个浮点数转换成 32 位浮点数进行比较，以解决 64 位浮点数比较结果不正确的问题：</p>
+在某些精度不高的场合下，可以通过将二个浮点数转换成 32 位浮点数进行比较，以解决 64 位浮点数比较结果不正确的问题：
 
-<pre class="brush: js">0.1 + 0.2 == 0.3;    //false
+```js
+0.1 + 0.2 == 0.3;    //false
 
 function equal(v1, v2) {
     return Math.fround(v1) == Math.fround(v2);
 }
 
 equal(0.1 + 0.2, 0.3);   //true
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>下面的函数可以模拟这个 API，前提是浏览器必须已经支持 {{jsxref("Float32Array")}}：</p>
+下面的函数可以模拟这个 API，前提是浏览器必须已经支持 {{jsxref("Float32Array")}}：
 
-<pre class="brush: js">Math.fround = Math.fround || (function (array) {
+```js
+Math.fround = Math.fround || (function (array) {
   return function(x) {
     return array[0] = x, array[0];
   };
-})(new Float32Array(1));</pre>
+})(new Float32Array(1));
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- {{jsxref("Math.round()")}}

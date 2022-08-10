@@ -4,28 +4,28 @@ slug: Web/API/Element/pointerup_event
 translation_of: Web/API/GlobalEventHandlers/onpointerup
 original_slug: Web/API/GlobalEventHandlers/onpointerup
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code>pointerup</code>是一个全局的事件处理函数。</p>
+`pointerup`是一个全局的事件处理函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>upHandler</var> = <var>targetElement</var>.onpointerup;
-</pre>
+```plain
+var upHandler = targetElement.onpointerup;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>upHandler</code></dt>
- <dd>返回 <code>targetElement</code> 元素的<code>pointerup</code>事件处理函数。</dd>
-</dl>
+- `upHandler`
+  - : 返回 `targetElement` 元素的`pointerup`事件处理函数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>如下是两种设置元素<code>pointerup</code>事件处理函数的方法。</p>
+如下是两种设置元素`pointerup`事件处理函数的方法。
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function upHandler(ev) {
  // 这里添加元素的 pointup 事件处理函数
 }
@@ -33,24 +33,22 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointerup = upHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" onpointerup="upHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" onpointerup="upHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.GlobalEventHandlers.onpointerup")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/Events/pointerup">{{event("pointerup")}}</a></li>
-</ul>
+- [{{event("pointerup")}}](/en-US/docs/Web/Events/pointerup)

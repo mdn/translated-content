@@ -3,36 +3,35 @@ title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
 translation_of: Web/API/CSSSupportsRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>该 <strong><code>CSSSupportsRule</code></strong> 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. 它实现了 {{domxref("CSSConditionRule")}} 接口，因此 {{domxref("CSSRule 指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 <code>12</code> (<code>CSSRule.SUPPORTS_RULE</code>).</p>
+该 **`CSSSupportsRule`** 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule). 它实现了 {{domxref("CSSConditionRule")}} 接口，因此 {{domxref("CSSRule 指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 `12` (`CSSRule.SUPPORTS_RULE`).
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<p>该语法使用所描述的<a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 格式。</p>
+该语法使用所描述的[WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) 格式。
 
-<pre class="syntaxbox">接口 CSSSupportsRule : CSSConditionRule {
+```plain
+接口 CSSSupportsRule : CSSConditionRule {
 }
-</pre>
+```
 
-<h2 id="性能">性能</h2>
+## 性能
 
-<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}} and 和一{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 还实现了，这些接口的属性。它没有特定的属性</p>
+作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}} and 和一{{domxref("CSSGroupingRule")}}, `CSSSupportsRule` 还实现了，这些接口的属性。它没有特定的属性
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p>作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}}和{{domxref("CSSGroupingRule")}}, <code>CSSSupportsRule</code> 也实现了这个接口的方法。他没有具体属性的方法</p>
+作为{{domxref("CSSConditionRule")}} 因此一个 {{domxref("CSSRule 指定规则")}}和{{domxref("CSSGroupingRule")}}, `CSSSupportsRule` 也实现了这个接口的方法。他没有具体属性的方法
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="游览器兼容性">游览器兼容性</h2>
+## 游览器兼容性
 
 {{Compat("api.CSSSupportsRule")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("@supports")}}</li>
-</ul>
+- {{cssxref("@supports")}}

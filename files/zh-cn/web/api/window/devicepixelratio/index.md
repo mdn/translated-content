@@ -3,36 +3,40 @@ title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 translation_of: Web/API/Window/devicePixelRatio
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>{{domxref("Window")}} 接口的<code><strong>devicePixelRatio</strong></code>返回当前显示设备的<em>物理像素</em>分辨率与<em>CSS 像素</em>分辨率之比。 此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小。 简单来说，它告诉浏览器应使用多少屏幕实际像素来绘制单个 CSS 像素。</p>
+{{domxref("Window")}} 接口的**`devicePixelRatio`**返回当前显示设备的*物理像素*分辨率与*CSS 像素*分辨率之比。 此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小。 简单来说，它告诉浏览器应使用多少屏幕实际像素来绘制单个 CSS 像素。
 
-<p>当处理标准显示器与 HiDPI 或 Retina 显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。</p>
+当处理标准显示器与 HiDPI 或 Retina 显示器之间的差异时，这很有用，后者使用更多的屏幕像素绘制相同的对象，从而获得更清晰的图像。
 
-<p>您可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查<code>devicePixelRatio</code>的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。 请参阅<a href="#监视屏幕分辨率或缩放级别的更改">下面的例子</a>。</p>
+您可以使用{{domxref("Window.matchMedia", "window.matchMedia()")}} 检查`devicePixelRatio`的值是否发生更改（例如，如果用户将窗口拖动到带有 不同的像素密度）。 请参阅[下面的例子](#监视屏幕分辨率或缩放级别的更改)。
 
-<h2 id="Summary">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em><var>value</var></em> = window.devicePixelRatio;
-</pre>
+```plain
+value = window.devicePixelRatio;
+```
 
-<h3 id="值Value">值 Value</h3>
+### 值 Value
 
-<p>一个双精度浮点值，指示显示器的物理像素分辨率与 CSS 像素分辨率之比。 值 1 表示经典 96 DPI（在某些平台上为 76 DPI）显示，而对于 HiDPI / Retina 显示屏则期望值为 2。 在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将 96 或 76 DPI 的标准分辨率提高一倍时，可能还会返回其他值。</p>
+一个双精度浮点值，指示显示器的物理像素分辨率与 CSS 像素分辨率之比。 值 1 表示经典 96 DPI（在某些平台上为 76 DPI）显示，而对于 HiDPI / Retina 显示屏则期望值为 2。 在异常低分辨率的显示器中，或更常见的是，当屏幕的像素深度比简单地将 96 或 76 DPI 的标准分辨率提高一倍时，可能还会返回其他值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="在_&lt;canvas>_中更正分辨率">在 <code>&lt;canvas&gt;</code> 中更正分辨率</h3>
+### 在 `<canvas>` 中更正分辨率
 
-<p>{{htmlelement("canvas")}}可能在视网膜屏幕上显得太模糊。 使用<code>window.devicePixelRatio</code>确定应添加多少额外的像素密度以使图像更清晰。</p>
+{{htmlelement("canvas")}}可能在视网膜屏幕上显得太模糊。 使用`window.devicePixelRatio`确定应添加多少额外的像素密度以使图像更清晰。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
@@ -59,22 +63,24 @@ var x = size / 2;
 var y = size / 2;
 
 var textString = "I love MDN";
-ctx.fillText(textString, x, y);</pre>
+ctx.fillText(textString, x, y);
+```
 
-<img alt="This image describe the impact of different value on retina display. " src="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png">
+![This image describe the impact of different value on retina display. ](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)
 
-<h3 id="监视屏幕分辨率或缩放级别的更改">监视屏幕分辨率或缩放级别的更改</h3>
+### 监视屏幕分辨率或缩放级别的更改
 
-<p>在此示例中，我们将设置一个媒体查询并观看它以查看设备分辨率何时更改，以便我们可以检查<code>devicePixelRatio</code>的值来处理所需的任何更新。</p>
+在此示例中，我们将设置一个媒体查询并观看它以查看设备分辨率何时更改，以便我们可以检查`devicePixelRatio`的值来处理所需的任何更新。
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>JavaScript 代码创建媒体查询，以监控设备分辨率并在每次更改时检查<code>devicePixelRatio</code>的值。</p>
+JavaScript 代码创建媒体查询，以监控设备分辨率并在每次更改时检查`devicePixelRatio`的值。
 
-<pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
+```js
+let pixelRatioBox = document.querySelector(".pixel-ratio");
 let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
 
-const updatePixelRatio = () =&gt; {
+const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
@@ -83,31 +89,34 @@ const updatePixelRatio = () =&gt; {
 updatePixelRatio();
 
 matchMedia(mqString).addListener(updatePixelRatio);
-</pre>
+```
 
-<p>字符串<code>mqString</code>设置为媒体查询本身。 媒体查询以<code>(resolution: 1dppx)</code>（对于标准显示）或<code>(resolution: 2dppx)</code>（对于 Retina / HiDPI 显示）开始，检查当前显示分辨率是否与每个像素<code>px</code>的实际设备像素点匹配。</p>
+字符串`mqString`设置为媒体查询本身。 媒体查询以`(resolution: 1dppx)`（对于标准显示）或`(resolution: 2dppx)`（对于 Retina / HiDPI 显示）开始，检查当前显示分辨率是否与每个像素`px`的实际设备像素点匹配。
 
-<p><code>updatePixelRatio()</code>函数获取<code>devicePixelRatio</code>的当前值，然后将<code>pixelRatioBox</code>的 {{domxref("HTMLElement.innerText", "innerText")}}设置为一个字符串，该字符串同时显示百分比和原始十进制值比率，最多两位小数。</p>
+`updatePixelRatio()`函数获取`devicePixelRatio`的当前值，然后将`pixelRatioBox`的 {{domxref("HTMLElement.innerText", "innerText")}}设置为一个字符串，该字符串同时显示百分比和原始十进制值比率，最多两位小数。
 
-<p>然后，调用<code>updatePixelRatio()</code>函数一次以显示起始值，然后使用{{domxref("Window.matchMedia", "matchMedia()")}} 和 {{domxref("EventTarget.addEventListener", "addEventListener()")}}来将<code>updatePixelRatio()</code>设置为<code>change</code>事件的处理程序。</p>
+然后，调用`updatePixelRatio()`函数一次以显示起始值，然后使用{{domxref("Window.matchMedia", "matchMedia()")}} 和 {{domxref("EventTarget.addEventListener", "addEventListener()")}}来将`updatePixelRatio()`设置为`change`事件的处理程序。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<p>HTML 将创建包含说明的框和将显示当前像素比率信息的<code>pixel-ratio</code> 框。</p>
+HTML 将创建包含说明的框和将显示当前像素比率信息的`pixel-ratio` 框。
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="inner-container"&gt;
-    &lt;p&gt;This example demonstrates the effect of zooming the page in
+```html
+<div class="container">
+  <div class="inner-container">
+    <p>This example demonstrates the effect of zooming the page in
        and out (or moving it to a screen with a different scaling
-       factor) on the value of the property &lt;code&gt;Window.devicePixelRatio&lt;/code&gt;.
-       Try it and watch what happens!&lt;/p&gt;
-  &lt;/div&gt;
-    &lt;div class="pixel-ratio"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+       factor) on the value of the property <code>Window.devicePixelRatio</code>.
+       Try it and watch what happens!</p>
+  </div>
+    <div class="pixel-ratio"></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   font: 22px arial, sans-serif;
 }
 
@@ -135,26 +144,24 @@ matchMedia(mqString).addListener(updatePixelRatio);
   bottom: 0;
   right: 1em;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}</p>
+{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## 参见
 
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/Media_Queries">Media queries</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
- <li><a href="/zh-CN/docs/Web/CSS/@media/resolution">CSS <code>resolution</code> media query</a></li>
- <li></li>
-</ul>
+- [Media queries](/zh-CN/docs/Web/CSS/Media_Queries)
+- [Using media queries](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS `resolution` media query](/zh-CN/docs/Web/CSS/@media/resolution)
+-

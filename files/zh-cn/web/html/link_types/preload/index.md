@@ -10,16 +10,14 @@ tags:
   - 链接类型
 translation_of: Web/HTML/Link_types/preload
 ---
-<p>关键字 <strong><code>preload</code></strong> 作为元素 {{HTMLElement("link")}} 的属性 {{HTMLAttrxRef("rel", "link")}} 的值，表示用户十分有可能需要在当前浏览中加载目标资源，所以浏览器必须预先获取和缓存对应资源。 </p>
+关键字 **`preload`** 作为元素 {{HTMLElement("link")}} 的属性 {{HTMLAttrxRef("rel", "link")}} 的值，表示用户十分有可能需要在当前浏览中加载目标资源，所以浏览器必须预先获取和缓存对应资源。
 
-<p>更多细节见<a href="/zh-CN/docs/Web/HTML/Preloading_content">通过 rel="preload"进行内容预加载</a>。</p>
+更多细节见[通过 rel="preload"进行内容预加载](/zh-CN/docs/Web/HTML/Preloading_content)。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

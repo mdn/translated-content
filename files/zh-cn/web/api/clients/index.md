@@ -3,28 +3,27 @@ title: Clients
 slug: Web/API/Clients
 translation_of: Web/API/Clients
 ---
-<p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p><code>Clients</code> 接口提供对 {{domxref("Client")}} 对象的访问。通过在  <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a> 中使用 <code>{{domxref("ServiceWorkerGlobalScope", "self")}}.clients</code> 访问它。</p>
+`Clients` 接口提供对 {{domxref("Client")}} 对象的访问。通过在 [service worker](/en-US/docs/Web/API/ServiceWorker_API) 中使用 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` 访问它。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("Clients.get()")}}</dt>
- <dd>返回一个匹配给定 {{domxref("Client.id", "id")}} 的 {{domxref("Client")}} 的 {{jsxref("Promise")}} .</dd>
- <dt>{{domxref("Clients.matchAll()")}}</dt>
- <dd>返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许您控制返回的 clients 类型. </dd>
- <dt>{{domxref("Clients.openWindow()")}}</dt>
- <dd>打开给定 URL 的新浏览器窗口，并返回新 {{domxref("WindowClient")}} a 的 {{jsxref("Promise")}} .</dd>
- <dt>{{domxref("Clients.claim()")}}</dt>
- <dd>允许一个激活的 service worker 将自己设置为其{{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有 clients 的 {{domxref("ServiceWorkerContainer.controller", "controller")}} . </dd>
-</dl>
+- {{domxref("Clients.get()")}}
+  - : 返回一个匹配给定 {{domxref("Client.id", "id")}} 的 {{domxref("Client")}} 的 {{jsxref("Promise")}} .
+- {{domxref("Clients.matchAll()")}}
+  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许您控制返回的 clients 类型.
+- {{domxref("Clients.openWindow()")}}
+  - : 打开给定 URL 的新浏览器窗口，并返回新 {{domxref("WindowClient")}} a 的 {{jsxref("Promise")}} .
+- {{domxref("Clients.claim()")}}
+  - : 允许一个激活的 service worker 将自己设置为其{{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有 clients 的 {{domxref("ServiceWorkerContainer.controller", "controller")}} .
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面示例显示一个已有的聊天窗口，或者当用户点击通知时创建新的窗口。</p>
+下面示例显示一个已有的聊天窗口，或者当用户点击通知时创建新的窗口。
 
-<pre class="brush: js">addEventListener('notificationclick', event =&gt; {
+```js
+addEventListener('notificationclick', event => {
   event.waitUntil(async function() {
     const allClients = await clients.matchAll({
       includeUncontrolled: true
@@ -54,24 +53,18 @@ translation_of: Web/API/Clients
     chatClient.postMessage("New chat messages!");
   }());
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.Clients")}}
 
+## See also
 
-<p>{{Compat("api.Clients")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}

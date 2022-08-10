@@ -6,28 +6,26 @@ tags:
   - 客户端错误
 translation_of: Web/HTTP/Status/414
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>响应码 <code><strong>414 URI Too Long</strong></code> 表示客户端所请求的 URI 超过了服务器允许的范围。</p>
+响应码 **`414 URI Too Long`** 表示客户端所请求的 URI 超过了服务器允许的范围。
 
-<p>以下是造成这种罕见情况的几种可能原因：</p>
+以下是造成这种罕见情况的几种可能原因：
 
-<ul>
- <li>当客户端误将 {{HTTPMethod("POST")}} 请求当作 {{HTTPMethod("GET")}} 请求时，会带有一个较长的查询字符串 (query)；</li>
- <li>当客户端堕入重定向循环黑洞时，例如，指向自身后缀的重定向 URI 前缀 (a redirected URI prefix that points to a suffix of itself)；</li>
- <li>当客户端对服务器进行攻击，试图寻找潜在的漏洞时。</li>
-</ul>
+- 当客户端误将 {{HTTPMethod("POST")}} 请求当作 {{HTTPMethod("GET")}} 请求时，会带有一个较长的查询字符串 (query)；
+- 当客户端堕入重定向循环黑洞时，例如，指向自身后缀的重定向 URI 前缀 (a redirected URI prefix that points to a suffix of itself)；
+- 当客户端对服务器进行攻击，试图寻找潜在的漏洞时。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">414 URI Too Long</pre>
+```plain
+414 URI Too Long
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{Glossary("URI")}}</li>
-</ul>
+- {{Glossary("URI")}}

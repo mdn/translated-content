@@ -9,183 +9,186 @@ tags:
   - Regular Expressions
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>RegExp</code></strong> 对象用于将文本与一个模式匹配。</p>
+**`RegExp`** 对象用于将文本与一个模式匹配。
 
-<p>有关正则表达式的介绍，请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/">JavaScript 指南</a>中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式章节</a>。</p>
+有关正则表达式的介绍，请阅读 [JavaScript 指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="字面量和构造函数">字面量和构造函数</h3>
+### 字面量和构造函数
 
-<p>有两种方法可以创建一个 <code>RegExp</code> 对象：一种是字面量，另一种是构造函数。</p>
+有两种方法可以创建一个 `RegExp` 对象：一种是字面量，另一种是构造函数。
 
-<dl>
- <dt>字面量</dt>
- <dd>由斜杠 (/) 包围而不是引号包围。</dd>
- <dt>构造函数的字符串参数</dt>
- <dd>由引号而不是斜杠包围。</dd>
-</dl>
+- 字面量
+  - : 由斜杠 (/) 包围而不是引号包围。
+- 构造函数的字符串参数
+  - : 由引号而不是斜杠包围。
 
-<p>以下三种表达式都会创建相同的正则表达式：</p>
+以下三种表达式都会创建相同的正则表达式：
 
-<pre class="brush: js">/ab+c/i; //字面量形式
+```js
+/ab+c/i; //字面量形式
 new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
-new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数</pre>
+new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数
+```
 
-<p>当表达式被赋值时，字面量形式提供正则表达式的编译（compilation）状态，当正则表达式保持为常量时使用字面量。例如当你在循环中使用字面量构造一个正则表达式时，正则表达式不会在每一次迭代中都被重新编译（recompiled）。</p>
+当表达式被赋值时，字面量形式提供正则表达式的编译（compilation）状态，当正则表达式保持为常量时使用字面量。例如当你在循环中使用字面量构造一个正则表达式时，正则表达式不会在每一次迭代中都被重新编译（recompiled）。
 
-<p>而正则表达式对象的构造函数，如 <code>new RegExp('ab+c')</code> 提供了正则表达式运行时编译（runtime compilation）。如果你知道正则表达式模式将会改变，或者你事先不知道什么模式，而是从另一个来源获取，如用户输入，这些情况都可以使用构造函数。</p>
+而正则表达式对象的构造函数，如 `new RegExp('ab+c')` 提供了正则表达式运行时编译（runtime compilation）。如果你知道正则表达式模式将会改变，或者你事先不知道什么模式，而是从另一个来源获取，如用户输入，这些情况都可以使用构造函数。
 
-<h3 id="构造函数中的标志参数flags">构造函数中的标志参数 (flags)</h3>
+### 构造函数中的标志参数 (flags)
 
-<p>从 ECMAScript 6 开始，当第一个参数为正则表达式而第二个标志参数存在时，<code>new RegExp(/ab+c/, 'i')</code> 不再抛出 {{jsxref("TypeError")}}（<code>"从另一个 RegExp 构造一个 RegExp 时无法提供标志"</code>）的异常，取而代之，将使用这些参数创建一个新的正则表达式。</p>
+从 ECMAScript 6 开始，当第一个参数为正则表达式而第二个标志参数存在时，`new RegExp(/ab+c/, 'i')` 不再抛出 {{jsxref("TypeError")}}（`"从另一个 RegExp 构造一个 RegExp 时无法提供标志"`）的异常，取而代之，将使用这些参数创建一个新的正则表达式。
 
-<p>当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 <code>\</code>）。</p>
+当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 `\`）。
 
-<p>比如，以下是等价的：</p>
+比如，以下是等价的：
 
-<pre class="brush: js">var re = new RegExp("\\w+");
-var re = /\w+/;</pre>
+```js
+var re = new RegExp("\\w+");
+var re = /\w+/;
+```
 
-<h3 id="Perl-like_RegExp_属性">Perl-like RegExp 属性</h3>
+### Perl-like RegExp 属性
 
-<p>请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见<a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties">不推荐使用的 RegExp 属性。</a></p>
+请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见[不推荐使用的 RegExp 属性。](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{jsxref("RegExp/RegExp", "RegExp()")}}</dt>
- <dd>创建一个新的 <code>RegExp</code> 对象。</dd>
-</dl>
+- {{jsxref("RegExp/RegExp", "RegExp()")}}
+  - : 创建一个新的 `RegExp` 对象。
 
-<h2 id="静态属性">静态属性</h2>
+## 静态属性
 
-<dl>
- <dt>{{jsxref("RegExp.@@species", "get RegExp[@@species]")}}</dt>
- <dd>该构造函数用于创建派生对象。</dd>
- <dt>{{jsxref("RegExp.lastIndex")}}</dt>
- <dd>该索引表示从哪里开始下一个匹配</dd>
-</dl>
+- {{jsxref("RegExp.@@species", "get RegExp[@@species]")}}
+  - : 该构造函数用于创建派生对象。
+- {{jsxref("RegExp.lastIndex")}}
+  - : 该索引表示从哪里开始下一个匹配
 
-<h2 id="实例属性">实例属性</h2>
+## 实例属性
 
-<dl>
- <dt>{{JSxRef("RegExp.prototype.flags")}}</dt>
- <dd>含有 <code>RegExp</code> 对象 flags 的字符串。</dd>
- <dt>{{JSxRef("RegExp.prototype.dotAll")}}</dt>
- <dd><code>.</code> 是否要匹配新行（newlines）。</dd>
- <dt>{{JSxRef("RegExp.prototype.global")}}</dt>
- <dd>针对字符串中所有可能的匹配项测试正则表达式，还是仅针对第一个匹配项。</dd>
- <dt>{{JSxRef("RegExp.prototype.ignoreCase")}}</dt>
- <dd>匹配文本的时候是否忽略大小写。</dd>
- <dt>{{JSxRef("RegExp.prototype.multiline")}}</dt>
- <dd>是否进行多行搜索。</dd>
- <dt>{{JSxRef("RegExp.prototype.source")}}</dt>
- <dd>正则表达式的文本。</dd>
- <dt>{{JSxRef("RegExp.prototype.sticky")}}</dt>
- <dd>搜索是否是 sticky。</dd>
- <dt>{{JSxRef("RegExp.prototype.unicode")}}</dt>
- <dd>Unicode 功能是否开启。</dd>
-</dl>
+- {{JSxRef("RegExp.prototype.flags")}}
+  - : 含有 `RegExp` 对象 flags 的字符串。
+- {{JSxRef("RegExp.prototype.dotAll")}}
+  - : `.` 是否要匹配新行（newlines）。
+- {{JSxRef("RegExp.prototype.global")}}
+  - : 针对字符串中所有可能的匹配项测试正则表达式，还是仅针对第一个匹配项。
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+  - : 匹配文本的时候是否忽略大小写。
+- {{JSxRef("RegExp.prototype.multiline")}}
+  - : 是否进行多行搜索。
+- {{JSxRef("RegExp.prototype.source")}}
+  - : 正则表达式的文本。
+- {{JSxRef("RegExp.prototype.sticky")}}
+  - : 搜索是否是 sticky。
+- {{JSxRef("RegExp.prototype.unicode")}}
+  - : Unicode 功能是否开启。
 
-<h2 id="实例方法">实例方法</h2>
+## 实例方法
 
-<dl>
- <dt>{{JSxRef("RegExp.prototype.compile()")}}</dt>
- <dd>运行脚本的期间（重新）编译正则表达式。</dd>
- <dt>{{JSxRef("RegExp.prototype.exec()")}}</dt>
- <dd>在该字符串中执行匹配项的搜索。</dd>
- <dt>{{JSxRef("RegExp.prototype.test()")}}</dt>
- <dd>该正则在字符串里是否有匹配。</dd>
- <dt>{{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}</dt>
- <dd>对给定字符串执行匹配并返回匹配结果。</dd>
- <dt>{{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}</dt>
- <dd>对给定字符串执行匹配，返回所有匹配结果。</dd>
- <dt>{{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</dt>
- <dd>给定新的子串，替换所有匹配结果。</dd>
- <dt>{{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</dt>
- <dd>在给定字符串中搜索匹配项，并返回在字符串中找到字符索引。</dd>
- <dt>{{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</dt>
- <dd>通过将给定字符串拆分为子字符串，并返回字符串形成的数组。</dd>
- <dt>{{JSxRef("RegExp.prototype.toString()")}}</dt>
- <dd>返回表示指定对象的字符串。重写{{jsxref("Object.prototype.toString()")}}方法。</dd>
-</dl>
+- {{JSxRef("RegExp.prototype.compile()")}}
+  - : 运行脚本的期间（重新）编译正则表达式。
+- {{JSxRef("RegExp.prototype.exec()")}}
+  - : 在该字符串中执行匹配项的搜索。
+- {{JSxRef("RegExp.prototype.test()")}}
+  - : 该正则在字符串里是否有匹配。
+- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+  - : 对给定字符串执行匹配并返回匹配结果。
+- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+  - : 对给定字符串执行匹配，返回所有匹配结果。
+- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+  - : 给定新的子串，替换所有匹配结果。
+- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+  - : 在给定字符串中搜索匹配项，并返回在字符串中找到字符索引。
+- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+  - : 通过将给定字符串拆分为子字符串，并返回字符串形成的数组。
+- {{JSxRef("RegExp.prototype.toString()")}}
+  - : 返回表示指定对象的字符串。重写{{jsxref("Object.prototype.toString()")}}方法。
 
-<h2 id="Syntax">示例</h2>
+## 示例
 
-<h3 id="Using_a_regular_expression_to_change_data_format">使用正则改变数据结构</h3>
+### 使用正则改变数据结构
 
-<p>下例使用  {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 <em>first last </em>输出新的格式 <em>last</em>, <em>first</em>。</p>
+下例使用 {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 _first last_ 输出新的格式 _last_, _first_。
 
-<p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配。</p>
+在替换的文本中，脚本中使用 `$1` 和 `$2` 指明括号里先前的匹配。
 
-<pre class="brush: js">let re = /(\w+)\s(\w+)/;
+```js
+let re = /(\w+)\s(\w+)/;
 let str = "John Smith";
 let newstr = str.replace(re, "$2, $1");
 console.log(newstr);
-</pre>
+```
 
-<p>这将显示 "Smith, John".</p>
+这将显示 "Smith, John".
 
-<h3 id="使用正则来划分带有多种行结束符和换行符的文本">使用正则来划分带有多种行结束符和换行符的文本</h3>
+### 使用正则来划分带有多种行结束符和换行符的文本
 
-<p>对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。</p>
+对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。
 
-<pre>let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+```plain
+let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
 let lines = text.split(/\r\n|\r|\n/)
 console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
-</pre>
+```
 
-<p>注意：在正则表达式中，以竖线分割的子模式的顺序会影响匹配结果。</p>
+注意：在正则表达式中，以竖线分割的子模式的顺序会影响匹配结果。
 
-<h3 id="在多行文本中使用正则表达式">在多行文本中使用正则表达式</h3>
+### 在多行文本中使用正则表达式
 
-<pre class="brush: js">let s = "Please yes\nmake my day!";
+```js
+let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
 
 s.match(/yes[^]*day/);
-// Returns 'yes\nmake my day'</pre>
+// Returns 'yes\nmake my day'
+```
 
-<h3 id="Using_a_regular_expression_with_the_sticky_flag">使用带有 sticky 标志的正则表达式</h3>
+### 使用带有 sticky 标志的正则表达式
 
-<p>带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。</p>
+带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。
 
-<pre class="brush: js">let str = '#foo#'
+```js
+let str = '#foo#'
 let regex = /foo/y
 
 regex.lastIndex = 1
 regex.test(str)      // true
 regex.lastIndex = 5
 regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)</pre>
+regex.lastIndex      // 0 (reset after match failure)
+```
 
-<h3 id="sticky_标志和_global_标志的不同点"> sticky 标志和 global 标志的不同点</h3>
+### sticky 标志和 global 标志的不同点
 
-<p>如果正则表达式有粘性 <code>y</code> 标志，下一次匹配一定在 <code>lastIndex</code> 位置开始；如果正则表达式有全局 <code>g</code> 标志，下一次匹配可能在 <code>lastIndex</code> 位置开始，也可能在这个位置的后面开始。</p>
+如果正则表达式有粘性 `y` 标志，下一次匹配一定在 `lastIndex` 位置开始；如果正则表达式有全局 `g` 标志，下一次匹配可能在 `lastIndex` 位置开始，也可能在这个位置的后面开始。
 
-<pre class="brush: js">re = /\d/y;
+```js
+re = /\d/y;
 while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
-//   ... and no more match.</pre>
+//   ... and no more match.
+```
 
-<p>如果使用带有全局标志<code>g</code>的正则表达式<code>re</code>，就会捕获字符串中的所有 6 个数字，而非 3 个</p>
+如果使用带有全局标志`g`的正则表达式`re`，就会捕获字符串中的所有 6 个数字，而非 3 个
 
-<h3 id="Browser_Compatibility">使用正则表达式和 Unicode 字符</h3>
+### 使用正则表达式和 Unicode 字符
 
-<p>正如上面表格提到的，<code>\w</code> 或 <code>\W</code> 只会匹配基本的 ASCII 字符；如 <code>a</code> 到 <code>z</code>、 <code>A</code> 到 <code>Z</code>、 <code>0</code> 到 <code>9</code> 及 <code>_</code>。</p>
+正如上面表格提到的，`\w` 或 `\W` 只会匹配基本的 ASCII 字符；如 `a` 到 `z`、 `A` 到 `Z`、 `0` 到 `9` 及 `_`。
 
-<p>为了匹配其他语言中的字符，如西里尔（Cyrillic）或 希伯来语（Hebrew），要使用 <code>\uhhhh</code>，<code>hhhh</code> 表示以十六进制表示的字符的 Unicode 值。</p>
+为了匹配其他语言中的字符，如西里尔（Cyrillic）或 希伯来语（Hebrew），要使用 `\uhhhh`，`hhhh` 表示以十六进制表示的字符的 Unicode 值。
 
-<p>下例展示了怎样从一个单词中分离出 Unicode 字符。</p>
+下例展示了怎样从一个单词中分离出 Unicode 字符。
 
-<pre class="brush: js">let text = "Образец text на русском языке";
+```js
+let text = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let match = regex.exec(text);
@@ -196,33 +199,30 @@ let match2 = regex.exec(text);
 console.log(match2[1]);  // prints "на" [did not print "text"]
 console.log(regex.lastIndex);  // prints "15"
 
-// and so on</pre>
+// and so on
+```
 
-<p><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode 属性转义特性</a>引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：<a href="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
+[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
 
-<h3 id="从_URL_中提取子域名">从 URL 中提取子域名</h3>
+### 从 URL 中提取子域名
 
-<pre class="brush: js">var url = "http://xxx.domain.com";
+```js
+var url = "http://xxx.domain.com";
 console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
+```
 
-</pre>
+> **备注：**使用浏览器内建的[URL API](/en-US/docs/Web/API/URL_API)而非正则表达式来解析 URL 是更好的做法
 
-<div class="note">
-<p><strong>备注：</strong>使用浏览器内建的<a href="/en-US/docs/Web/API/URL_API">URL API</a>而非正则表达式来解析 URL 是更好的做法</p>
-</div>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式</a>一节</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.prototype.match()</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></li>
-</ul>
+- [JavaScript 指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节
+- [String.prototype.match()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+- [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)

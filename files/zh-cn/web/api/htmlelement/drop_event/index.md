@@ -4,29 +4,29 @@ slug: Web/API/HTMLElement/drop_event
 translation_of: Web/API/GlobalEventHandlers/ondrop
 original_slug: Web/API/GlobalEventHandlers/ondrop
 ---
-<div>drop 事件的全局处理函数</div>
+drop 事件的全局处理函数
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>dropHandler</var> = <var>targetElement</var>.ondrop;
-</pre>
+```plain
+var dropHandler = targetElement.ondrop;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>dropHandler</code></dt>
- <dd>目标元素的 drop 事件处理函数。</dd>
-</dl>
+- `dropHandler`
+  - : 目标元素的 drop 事件处理函数。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>下面这个示例演示了 ondrop 属性的用法来指定 drop 事件的处理函数。</p>
+下面这个示例演示了 ondrop 属性的用法来指定 drop 事件的处理函数。
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of using the ondrag Global Event Attribute&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of using the ondrag Global Event Attribute</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -38,9 +38,9 @@ original_slug: Web/API/GlobalEventHandlers/ondrop
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;script&gt;
+</style>
+</head>
+<script>
 function drag_handler(ev) {
  console.log("Drag");
 }
@@ -63,28 +63,26 @@ function dragover_handler(ev) {
  console.log("dragOver");
  ev.preventDefault();
 }
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;ondrag&lt;/code&gt;, &lt;code&gt;ondrop&lt;/code&gt;, &lt;code&gt;ondragstart&lt;/code&gt;, &lt;code&gt;ondragover&lt;/code&gt;&lt;/h1&gt;
- &lt;div class="source"&gt;
-   &lt;p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body>
+<h1>Examples of <code>ondrag</code>, <code>ondrop</code>, <code>ondragstart</code>, <code>ondragover</code></h1>
+ <div class="source">
+   <p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.GlobalEventHandlers.ondrop")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{event("drop")}}</li>
-</ul>
+- {{event("drop")}}

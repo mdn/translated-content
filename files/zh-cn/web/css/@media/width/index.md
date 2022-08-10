@@ -9,23 +9,26 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/width
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><code>可以使用<strong>width</strong></code> <a href="/en-US/docs/CSS">CSS</a> {{cssxref("@media")}} 基于{{glossary("viewport")}}宽度 (或页面框，用于<a href="/en-US/docs/Web/CSS/Paged_media">paged media</a>) 应用样式。</p>
+`可以使用width` [CSS](/en-US/docs/CSS) {{cssxref("@media")}} 基于{{glossary("viewport")}}宽度 (或页面框，用于[paged media](/en-US/docs/Web/CSS/Paged_media)) 应用样式。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>该<code>width</code>特性被指定为{{cssxref("&lt;length&gt;")}}，表示 viewport 宽度的值。这是一个范围特性，也就是说，您也可以使用前缀<strong><code>min-width</code></strong>和<code><strong>max-width</strong></code>分别查询最小值和最大值。</p>
+该`width`特性被指定为{{cssxref("&lt;length&gt;")}}，表示 viewport 宽度的值。这是一个范围特性，也就是说，您也可以使用前缀**`min-width`**和**`max-width`**分别查询最小值和最大值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;改变 viewport 的宽度的同时，观察这个元素的变化。&lt;/div&gt;</pre>
+```html
+<div>改变 viewport 的宽度的同时，观察这个元素的变化。</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* 精确宽度 */
+```css
+/* 精确宽度 */
 @media (width: 360px) {
   div {
     color: red;
@@ -45,16 +48,16 @@ translation_of: Web/CSS/@media/width
     border: 2px solid blue;
   }
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例','90%')}}</p>
+{{EmbedLiveSample('示例','90%')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.at-rules.media.width")}}

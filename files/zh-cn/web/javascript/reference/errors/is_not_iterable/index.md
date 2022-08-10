@@ -6,50 +6,54 @@ tags:
   - 迭代器
 translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误信息">错误信息</h2>
+## 错误信息
 
-<pre class="syntaxbox">TypeError: 'x' is not iterable (Firefox, Chrome)
+```plain
+TypeError: 'x' is not iterable (Firefox, Chrome)
 TypeError: 'x' is not a function or its return value is not iterable (Chrome)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="发生了什么错误">发生了什么错误？</h2>
+## 发生了什么错误？
 
-<p>这个值作为 <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of  </a>的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">可迭代对象</a>.  一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">可迭代协议</a> 的对象</p>
+这个值作为 [for…of ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 的对象
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Iterating_over_Object_properties">Iterating over Object properties</h3>
+### Iterating over Object properties
 
-<p>在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了<a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">迭代协议</a>. 因此，你不能使用 <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of </a>来迭代对象的属性。</p>
+在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol). 因此，你不能使用 [for…of ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)来迭代对象的属性。
 
-<pre class="brush: js example-bad">var obj = { 'France': 'Paris', 'England': 'London' };
+```js example-bad
+var obj = { 'France': 'Paris', 'England': 'London' };
 for (let p of obj) { // TypeError: obj is not iterable
     // …
 }
-</pre>
+```
 
-<p>做为替代你必须使用 {{jsxref("Object.keys")}} 或 {{jsxref("Object.entries")}} 来迭代对象的属性或属性值。</p>
+做为替代你必须使用 {{jsxref("Object.keys")}} 或 {{jsxref("Object.entries")}} 来迭代对象的属性或属性值。
 
-<pre class="brush: js example-good">var obj = { 'France': 'Paris', 'England': 'London' };
+```js example-good
+var obj = { 'France': 'Paris', 'England': 'London' };
 // 迭代属性名称：
-for (let country of <code>Object</code>.keys(obj)) {
+for (let country of Object.keys(obj)) {
     var capital = obj[country];
     console.log(country, capital);
 }
 
-for (const [country, capital] of <code>Object</code>.entries(obj))
+for (const [country, capital] of Object.entries(obj))
     console.log(country, capital);
-</pre>
+```
 
-<p>这次 case 的另外一个选择是使用 {{jsxref("Map")}}:</p>
+这次 case 的另外一个选择是使用 {{jsxref("Map")}}:
 
-<pre class="brush: js example-good">var map = new Map;
+```js example-good
+var map = new Map;
 map.set('France', 'Paris');
 map.set('England', 'London');
 // Iterate over the property names:
@@ -63,64 +67,69 @@ for (let capital of map.values())
 
 for (const [country, capital] of map.entries())
     console.log(country, capital);
-</pre>
+```
 
-<h3 id="Iterating_over_a_generator">Iterating over a generator</h3>
+### Iterating over a generator
 
-<p><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators</a> 是用来生成可迭代对象的函数。</p>
+[Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators) 是用来生成可迭代对象的函数。
 
-<pre class="brush: js example-bad">function* generate(a, b) {
+```js example-bad
+function* generate(a, b) {
   yield a;
   yield b;
 }
 
 for (let x of generate) // TypeError: generate is not iterable
     console.log(x);
-</pre>
+```
 
-<p>当它没有被调用，这个 {{jsxref("Function")}} 相应的是可调用的，但是不可迭代。 调用 generator 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。</p>
+当它没有被调用，这个 {{jsxref("Function")}} 相应的是可调用的，但是不可迭代。 调用 generator 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。
 
-<pre class="brush: js example-good">function* generate(a, b) {
+```js example-good
+function* generate(a, b) {
     yield a;
     yield b;
 }
 
 for (let x of generate(1,2))
-    console.log(x);</pre>
+    console.log(x);
+```
 
-<h3 id="Iterating_over_a_custom_iterable">Iterating over a custom iterable</h3>
+### Iterating over a custom iterable
 
-<p>可以使用{{jsxref("Symbol.iterator")}} 方法去实现一个自定义迭代器。你必须确定自定义的迭代器方法返回一个迭代器对象，即它必须有一个 next()</p>
+可以使用{{jsxref("Symbol.iterator")}} 方法去实现一个自定义迭代器。你必须确定自定义的迭代器方法返回一个迭代器对象，即它必须有一个 next()
 
-<pre class="brush: js example-bad">const myEmptyIterable = {
+```js example-bad
+const myEmptyIterable = {
     [Symbol.iterator]() {
         return [] // [] is iterable, but it is not an iterator -- it has no next method.
     }
 }
 
 Array.from(myEmptyIterable);  // TypeError: myEmptyIterable is not iterable
-</pre>
+```
 
-<pre></pre>
+```plain
 
-<p>下面是正确用法</p>
+```
 
-<pre class="brush: js example-good">const myEmptyIterable = {
+下面是正确用法
+
+```js example-good
+const myEmptyIterable = {
     [Symbol.iterator]() {
         return [][Symbol.iterator]()
     }
 }
 
 Array.from(myEmptyIterable);  // []
-</pre>
+```
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a></li>
- <li>{{jsxref("Object.keys")}}</li>
- <li>{{jsxref("Object.entries")}}</li>
- <li>{{jsxref("Map")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">generators</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of</a></li>
-</ul>
+- [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
+- {{jsxref("Object.keys")}}
+- {{jsxref("Object.entries")}}
+- {{jsxref("Map")}}
+- [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators)
+- [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

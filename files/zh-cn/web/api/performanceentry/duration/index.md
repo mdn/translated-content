@@ -3,37 +3,38 @@ title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
 translation_of: Web/API/PerformanceEntry/duration
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>duration</code></strong> property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the {{domxref("PerformanceEntry","performance entry")}}.</p>
+The **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the {{domxref("PerformanceEntry","performance entry")}}.
 
-<p>The value returned by this property depends on the performance entry's {{domxref("PerformanceEntry.entryType","type")}}:</p>
+The value returned by this property depends on the performance entry's {{domxref("PerformanceEntry.entryType","type")}}:
 
-<ul>
- <li>"<code>frame</code>" - returns a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the difference between the <code>startTime</code>s of two successive frames.</li>
- <li>"<code>mark</code>" - returns "<code>0</code>" (a mark has no duration).</li>
- <li>"<code>measure</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.</li>
- <li>"<code>navigation</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceEntry.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.例如： entry.entryType "navigation"，entry.duration 3611.26, entry.loadEventEnd 3611.2672285754975, entry.startTime 0；</li>
- <li>"<code>resource</code>" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和  {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差。例如： entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68， 2527.82 - 1626.68 == 901.1400000000001；</li>
-</ul>
+- "`frame`" - returns a {{domxref("DOMHighResTimeStamp","timestamp")}} indicating the difference between the `startTime`s of two successive frames.
+- "`mark`" - returns "`0`" (a mark has no duration).
+- "`measure`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the duration of the measure.
+- "`navigation`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceEntry.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties, respectively.例如： entry.entryType "navigation"，entry.duration 3611.26, entry.loadEventEnd 3611.2672285754975, entry.startTime 0；
+- "`resource`" - 返回 resource 的{{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","timestamp")}} 和 {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","timestamp")}}的时间差。例如： entry.entryType "resource"，entry.duration 901.1400000000001, entry.responseEnd 2527.82, entry.startTime 1626.68， 2527.82 - 1626.68 == 901.1400000000001；
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>entry</em>.duration;</pre>
+```plain
+entry.duration;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't apply for a particular performance metric, the browser may choose to return a duration of 0.</p>
+A {{domxref("DOMHighResTimeStamp")}} representing the duration of the {{domxref("PerformanceEntry","performance entry")}}. If the duration concept doesn't apply for a particular performance metric, the browser may choose to return a duration of 0.
 
-<p>Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.</p>
+Note: if the performance entry has an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" (i.e. the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns the difference between the {{domxref("PerformanceEntry.responseEnd")}} and {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp","timestamps")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>duration</code> property.</p>
+The following example shows the use of the `duration` property.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -48,7 +49,7 @@ translation_of: Web/API/PerformanceEntry/duration
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -57,7 +58,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -65,7 +66,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -76,18 +77,12 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PerformanceEntry.duration")}}</p>
-</div>
-</div>
+{{Compat("api.PerformanceEntry.duration")}}

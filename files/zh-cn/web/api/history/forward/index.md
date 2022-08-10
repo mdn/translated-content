@@ -7,34 +7,38 @@ tags:
   - History
 translation_of: Web/API/History/forward
 ---
-<p>在会话历史中向前移动一页。它与使用<code>delta</code>参数为 1 时调用 <code>history.go(delta)</code>的效果相同。</p>
+在会话历史中向前移动一页。它与使用`delta`参数为 1 时调用 `history.go(delta)`的效果相同。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">window.history.forward();</pre>
+```js
+window.history.forward();
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下述例子创建了一个按钮，该按钮会在会话历史中向前移动一步。</p>
+下述例子创建了一个按钮，该按钮会在会话历史中向前移动一步。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id='go-forward'&gt;Go Forward!&lt;/button&gt;</pre>
+```html
+<button id='go-forward'>Go Forward!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">window.onload = function(e) {
-  document.getElementById('go-forward').addEventListener('click', e =&gt; {
+```js
+window.onload = function(e) {
+  document.getElementById('go-forward').addEventListener('click', e => {
     window.history.forward();
   })
-}</code></pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.History.forward")}}</p>
+{{Compat("api.History.forward")}}

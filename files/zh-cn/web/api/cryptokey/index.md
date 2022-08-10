@@ -3,41 +3,37 @@ title: CryptoKey
 slug: Web/API/CryptoKey
 translation_of: Web/API/CryptoKey
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p><strong><code>CryptoKey</code></strong> 接口表示从特定的密钥算法导出的{{glossary("密钥")}}。</p>
+**`CryptoKey`** 接口表示从特定的密钥算法导出的{{glossary("密钥")}}。
 
-<p>一个 <code>CryptoKey</code> 对象可以使用 {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} or {{domxref("SubtleCrypto.importKey()")}} 获得。</p>
+一个 `CryptoKey` 对象可以使用 {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} or {{domxref("SubtleCrypto.importKey()")}} 获得。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>这个接口不继承任何属性。</em></p>
+_这个接口不继承任何属性。_
 
-<dl>
- <dt>{{domxref("CryptoKey.type")}}</dt>
- <dd>返回一个表示密钥类型的枚举值，一个密钥（对称算法），一个公钥或一个私钥（非对称算法）。</dd>
- <dt>{{domxref("CryptoKey.extractable")}}</dt>
- <dd>返回一个{{jsxref("布尔值")}}，表示原始信息是否能导出到应用程序。</dd>
- <dt>{{domxref("CryptoKey.algorithm")}}</dt>
- <dd>返回一个不透明对象，表示必须与密钥一同使用的特定密码。</dd>
- <dt>{{domxref("CryptoKey.usages")}}</dt>
- <dd>返回一个可枚举的数组，来指出什么密钥可以使用。</dd>
-</dl>
+- {{domxref("CryptoKey.type")}}
+  - : 返回一个表示密钥类型的枚举值，一个密钥（对称算法），一个公钥或一个私钥（非对称算法）。
+- {{domxref("CryptoKey.extractable")}}
+  - : 返回一个{{jsxref("布尔值")}}，表示原始信息是否能导出到应用程序。
+- {{domxref("CryptoKey.algorithm")}}
+  - : 返回一个不透明对象，表示必须与密钥一同使用的特定密码。
+- {{domxref("CryptoKey.usages")}}
+  - : 返回一个可枚举的数组，来指出什么密钥可以使用。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>这个接口既不继承也不实现任何方法。</em></p>
+_这个接口既不继承也不实现任何方法。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.CryptoKey")}}
 
-<h2 id="其它相关">其它相关</h2>
+## 其它相关
 
-<ul>
- <li>{{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.</li>
-</ul>
+- {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.

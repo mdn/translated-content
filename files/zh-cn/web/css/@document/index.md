@@ -6,35 +6,35 @@ tags:
   - 参考
 translation_of: Web/CSS/@document
 ---
-<div>{{CSSRef}} {{ SeeCompatTable}}</div>
+{{CSSRef}} {{ SeeCompatTable}}
 
-<p><code>@document</code> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/At-rule">at-rule</a> 根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表（UserStyle）而设计的，但也可以在作者定义的样式表上使用。</p>
+`@document` [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 根据文档的 URL 限制其中包含的样式规则的作用范围。它主要是为用户定义的样式表（UserStyle）而设计的，但也可以在作者定义的样式表上使用。
 
-<pre class="brush: css no-line-numbers">@document url("https://www.example.com/") {
+```css
+@document url("https://www.example.com/") {
   h1 {
     color: green;
   }
 }
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>@document</code> 规则可以指定一个或多个匹配函数。如果任何功能适用于给定的 URL，则该规则将对该 URL 生效。可用的函数如下：</p>
+`@document` 规则可以指定一个或多个匹配函数。如果任何功能适用于给定的 URL，则该规则将对该 URL 生效。可用的函数如下：
 
-<ul>
- <li><code>url()</code>，匹配整个 URL。</li>
- <li><code>url-prefix()</code>，匹配文档的 URL 是否以参数指定的值开头。</li>
- <li><code>domain()</code>，匹配文档的域名是否为参数中指定的域名或者为它的子域名。</li>
- <li><code>regexp()</code>，匹配文档的 URL 是否和参数中指定的<a href="/zh-CN/JavaScript/Guide/Regular_Expressions">正则表达式</a>匹配。该表达式必须匹配整个 URL。</li>
-</ul>
+- `url()`，匹配整个 URL。
+- `url-prefix()`，匹配文档的 URL 是否以参数指定的值开头。
+- `domain()`，匹配文档的域名是否为参数中指定的域名或者为它的子域名。
+- `regexp()`，匹配文档的 URL 是否和参数中指定的[正则表达式](/zh-CN/JavaScript/Guide/Regular_Expressions)匹配。该表达式必须匹配整个 URL。
 
-<p>提供给 <code>url()</code>、<code>url-prefix()</code>，和 <code>domain()</code> 函数的参数可以不使用引号括起来。但提供给 <code>regexp()</code> 函数的参数必须用引号括起来。</p>
+提供给 `url()`、`url-prefix()`，和 `domain()` 函数的参数可以不使用引号括起来。但提供给 `regexp()` 函数的参数必须用引号括起来。
 
-<p>提供给 <code>regexp()</code> 函数的正则表达式中的转义字符必须再次进行一次 CSS 转义。例如，一个点号（<code>.</code>），在正则表达式中匹配任意换行符之外的字母。如果想要匹配一个正真的点号，必须首先按照正则表达式的规则转义一次（变为 <code>\.</code>）然后在使用 CSS 的规则再转义一次（转换为<code>\\.</code>）。</p>
+提供给 `regexp()` 函数的正则表达式中的转义字符必须再次进行一次 CSS 转义。例如，一个点号（`.`），在正则表达式中匹配任意换行符之外的字母。如果想要匹配一个正真的点号，必须首先按照正则表达式的规则转义一次（变为 `\.`）然后在使用 CSS 的规则再转义一次（转换为`\\.`）。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: css">@document url(http://www.w3.org/),
+```css
+@document url(http://www.w3.org/),
           url-prefix(http://www.w3.org/Style/),
           domain(mozilla.org),
           regexp("https:.*")
@@ -51,19 +51,17 @@ translation_of: Web/CSS/@document
     background: yellow;
   }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><code>@document</code> 在 Level 3 中<a href="https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document">被初始化</a>，并被<a href="https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes">推迟</a>到 Level 4，但随后被移除。</p>
+`@document` 在 Level 3 中[被初始化](https://www.w3.org/TR/2012/WD-css3-conditional-20120911/#at-document)，并被[推迟](https://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes)到 Level 4，但随后被移除。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://lists.w3.org/Archives/Public/www-style/2004Aug/0135">Per-site user style sheet rules</a> on the www-style mailing list.</li>
- <li>The file <code><a href="https://www.mozilla.org/support/firefox/edit#content">userContent.css</a></code> is a user stylesheet on Gecko-based browsers.</li>
-</ul>
+- [Per-site user style sheet rules](https://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
+- The file [`userContent.css`](https://www.mozilla.org/support/firefox/edit#content) is a user stylesheet on Gecko-based browsers.

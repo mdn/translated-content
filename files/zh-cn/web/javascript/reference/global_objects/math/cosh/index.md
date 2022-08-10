@@ -3,67 +3,68 @@ title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.cosh()</code></strong> 函数返回数值的双曲余弦函数，可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示：</p>
+**`Math.cosh()`** 函数返回数值的双曲余弦函数，可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示：
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code>Math.cosh(<var>x</var>)</code></pre>
+```plain
+Math.cosh(x)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>数值。</dd>
-</dl>
+- `x`
+  - : 数值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>由于<code>cosh()</code> 是 Math 的静态函数，只需通过<code>Math.cosh() </code>调用，而不用通过创建 Math 对象来调用。</p>
+由于`cosh()` 是 Math 的静态函数，只需通过`Math.cosh() `调用，而不用通过创建 Math 对象来调用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Math.cosh()">使用 <code>Math.cosh()</code></h3>
+### 使用 `Math.cosh()`
 
-<pre class="brush: js">Math.cosh(0);  // 1
+```js
+Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>可通过 {{jsxref("Math.exp()")}} 函数模拟实现：</p>
+可通过 {{jsxref("Math.exp()")}} 函数模拟实现：
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   return (Math.exp(x) + Math.exp(-x)) / 2;
 }
-</pre>
+```
 
-<p>或只调用一次 {{jsxref("Math.exp()")}} 函数：</p>
+或只调用一次 {{jsxref("Math.exp()")}} 函数：
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
   var y = Math.exp(x);
   return (y + 1 / y) / 2;
 };
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.acosh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.asinh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.atanh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.sinh()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Math.tanh()")}} {{experimental_inline}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}} {{experimental_inline}}
+- {{jsxref("Math.asinh()")}} {{experimental_inline}}
+- {{jsxref("Math.atanh()")}} {{experimental_inline}}
+- {{jsxref("Math.sinh()")}} {{experimental_inline}}
+- {{jsxref("Math.tanh()")}} {{experimental_inline}}

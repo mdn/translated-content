@@ -8,36 +8,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>值 <code>null</code> 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>。</p>
+值 `null` 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是[falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
 
+## 语法
 
+```plain
+null
+```
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox">null</pre>
+值 `null` 是一个字面量，不像 {{jsxref("Global_Objects/undefined","undefined")}}，它不是全局对象的一个属性。`null` 是表示缺少的标识，指示变量未指向任何对象。把 `null` 作为尚未创建的对象，也许更好理解。在 API 中，`null` 常在返回类型应是一个对象，但没有关联的值的地方使用。
 
-<h2 id="描述">描述</h2>
-
-<p>值 <code>null</code> 是一个字面量，不像 {{jsxref("Global_Objects/undefined","undefined")}}，它不是全局对象的一个属性。<code>null</code> 是表示缺少的标识，指示变量未指向任何对象。把 <code>null</code> 作为尚未创建的对象，也许更好理解。在 API 中，<code>null</code> 常在返回类型应是一个对象，但没有关联的值的地方使用。</p>
-
-<pre class="brush: js">// foo 不存在，它从来没有被定义过或者是初始化过：
+```js
+// foo 不存在，它从来没有被定义过或者是初始化过：
 foo;
 "ReferenceError: foo is not defined"
 
 // foo 现在已经是知存在的，但是它没有类型或者是值：
 var foo = null;
 foo;
-null</pre>
+null
+```
 
-<h3 id="null_与_undefined_的不同点："><code>null</code> 与 <code>undefined</code> 的不同点：</h3>
+### `null` 与 `undefined` 的不同点：
 
-<p>当检测 <code>null</code> 或 <code>undefined</code> 时，注意<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">相等（==）与全等（===）两个操作符的区别</a> ，前者会执行类型转换：</p>
+当检测 `null` 或 `undefined` 时，注意[相等（==）与全等（===）两个操作符的区别](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) ，前者会执行类型转换：
 
-<pre class="brush: js">typeof null        // "object" (因为一些以前的原因而不是'null')
+```js
+typeof null        // "object" (因为一些以前的原因而不是'null')
 typeof undefined   // "undefined"
 null === undefined // false
 null  == undefined // true
@@ -46,21 +49,17 @@ null == null // true
 !null //true
 isNaN(1 + null) // false
 isNaN(1 + undefined) // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("undefined")}}</li>
- <li>{{jsxref("NaN")}}</li>
-</ul>
+- {{jsxref("undefined")}}
+- {{jsxref("NaN")}}

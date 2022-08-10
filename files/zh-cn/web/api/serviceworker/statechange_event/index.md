@@ -4,20 +4,23 @@ slug: Web/API/ServiceWorker/statechange_event
 translation_of: Web/API/ServiceWorker/onstatechange
 original_slug: Web/API/ServiceWorker/onstatechange
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>一个 {{domxref("EventListener")}} 联动的属性，其会被任何 stagechange 类型事件抛出时联动; 它也基本上能在任何时候{{domxref("ServiceWorker.state")}} 改变时被抛出。</p>
+一个 {{domxref("EventListener")}} 联动的属性，其会被任何 stagechange 类型事件抛出时联动; 它也基本上能在任何时候{{domxref("ServiceWorker.state")}} 改变时被抛出。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+```plain
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这段代码出自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). 它会监听 {{domxref("ServiceWorker.state")}} 的改变并返回它的值。</p>
+这段代码出自 [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). 它会监听 {{domxref("ServiceWorker.state")}} 的改变并返回它的值。
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -34,11 +37,13 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<p>注意当<code>statechange</code> 抛出时，service worker 的引用可能已经改变。例如：</p>
+注意当`statechange` 抛出时，service worker 的引用可能已经改变。例如：
 
-<pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
+```js
+navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;
@@ -46,12 +51,13 @@ if (serviceWorker) {
     // event gets queued, meanwhile the underlying worker may have gone into the waiting
     // state and will be immediately activated if possible.
   }
-})</pre>
+})
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ServiceWorker.onstatechange")}}

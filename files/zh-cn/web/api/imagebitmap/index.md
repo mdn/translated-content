@@ -9,41 +9,33 @@ tags:
   - 绘图
 translation_of: Web/API/ImageBitmap
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><code><strong>ImageBitmap</strong></code> 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 <code>ImageBitmap</code>提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。</p>
+**`ImageBitmap`** 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 `ImageBitmap`提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("ImageBitmap.height")}} {{readonlyInline}}</dt>
- <dd>无符号长整型数值，表示 ImageData 的 CSS 像素单位的高度。</dd>
- <dt>{{domxref("ImageBitmap.width")}} {{readonlyInline}}</dt>
- <dd>无符号长整型数值， 表示 ImageData 的 CSS 像素单位的宽度。</dd>
-</dl>
+- {{domxref("ImageBitmap.height")}} {{readonlyInline}}
+  - : 无符号长整型数值，表示 ImageData 的 CSS 像素单位的高度。
+- {{domxref("ImageBitmap.width")}} {{readonlyInline}}
+  - : 无符号长整型数值， 表示 ImageData 的 CSS 像素单位的宽度。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("ImageBitmap.close()")}}</dt>
- <dd>
- <p>释放 ImageBitmap 所相关联的所有图形资源。</p>
- </dd>
-</dl>
+- {{domxref("ImageBitmap.close()")}}
+  - : 释放 ImageBitmap 所相关联的所有图形资源。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ImageBitmap")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("ImageBitmapFactories.createImageBitmap()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.drawImage()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("OffScreenCanvas.transferToImageBitmap()")}}</li>
-</ul>
+- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
+- {{domxref("CanvasRenderingContext2D.drawImage()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}

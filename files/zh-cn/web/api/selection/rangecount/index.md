@@ -6,58 +6,53 @@ tags:
   - Selection
 translation_of: Web/API/Selection/rangeCount
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.rangeCount</code></strong>是一个返回选区 (selection) 中 range 对象数量的只读属性。</p>
+The **`Selection.rangeCount`**是一个返回选区 (selection) 中 range 对象数量的只读属性。
 
-<p>在网页使用者点击一个加载完毕的新打开的页面之前，<strong>rangeCount</strong>的值是 0。在使用者点击页面之后，rangeCount 的值变为 1，即使并没有可视的选区 (selection)。</p>
+在网页使用者点击一个加载完毕的新打开的页面之前，**rangeCount**的值是 0。在使用者点击页面之后，rangeCount 的值变为 1，即使并没有可视的选区 (selection)。
 
-<p>使用者一般情况下在一次只能选择一个 range ，所以通常情况下<strong>rangeCount 属性</strong>的值总为 1。脚本 (如 javascript) 可以使选区包含多个 range。</p>
+使用者一般情况下在一次只能选择一个 range ，所以通常情况下**rangeCount 属性**的值总为 1。脚本 (如 javascript) 可以使选区包含多个 range。
 
-<p>Gecko 浏览器允许跨表格单元格获得多个选区 (此处可能翻译不准). Firefox allows to select multiple ranges in the document by using Ctrl+click (unless the click within an element with display: table-cell).</p>
+Gecko 浏览器允许跨表格单元格获得多个选区 (此处可能翻译不准). Firefox allows to select multiple ranges in the document by using Ctrl+click (unless the click within an element with display: table-cell).
 
-<h2 id="Syntax">用法</h2>
+## 用法
 
-<pre class="syntaxbox"><em>value</em> =<em> sel</em>.rangeCount
-</pre>
+```plain
+value = sel.rangeCount
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面这个例子会每隔一秒显示一次 rangeCount 的值。在浏览器中选择文本，然后看看他的改变。</p>
+下面这个例子会每隔一秒显示一次 rangeCount 的值。在浏览器中选择文本，然后看看他的改变。
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">//打开控制台看看 selection 中有多少 range 对象。
+```html
+//打开控制台看看 selection 中有多少 range 对象。
 //在 Gecko 浏览器，当你用鼠标在表格单元格中拖动的同时按住 Ctrl，你可以选择多个 range。
 
-&lt;table&gt;
-&lt;tr&gt;&lt;td&gt;a.1&lt;td&gt;a.2
-&lt;tr&gt;&lt;td&gt;b.1&lt;td&gt;b.2
+<table>
+<tr><td>a.1<td>a.2
+<tr><td>b.1<td>b.2
+```
 
+### JavaScript Content
 
-</pre>
-
-<h3 id="JavaScript_Content">JavaScript Content</h3>
-
-<pre class="brush: js">window.setInterval(function () {
+```js
+window.setInterval(function () {
   console.log(window.getSelection().rangeCount);
 }, 1000);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Selection.rangeCount")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

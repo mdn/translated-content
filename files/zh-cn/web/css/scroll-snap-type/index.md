@@ -6,17 +6,18 @@ tags:
   - css snap
 translation_of: Web/CSS/scroll-snap-type
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong><code>scroll-snap-type</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性定义在滚动容器中的一个临时点（snap point）如何被严格的执行。</p>
+**`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) 属性定义在滚动容器中的一个临时点（snap point）如何被严格的执行。
 
-<p>{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}</p>
+{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
 
-<p>此属性不能用来指定任何精确的动画或者物理运动效果来执行临时点，而是交给用户代理来处理。</p>
+此属性不能用来指定任何精确的动画或者物理运动效果来执行临时点，而是交给用户代理来处理。
 
-<pre class="brush: css"><code>/* 关键值 */
+```css
+/* 关键值 */
 scroll-snap-type: none;
 scroll-snap-type: x;
 scroll-snap-type: y;
@@ -34,110 +35,112 @@ scroll-snap-type: both mandatory;
 /* 全局值 */
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
-scroll-snap-type: unset;</code></pre>
+scroll-snap-type: unset;
+```
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>当这个滚动容器的可视的 {{Glossary("viewport")}} 是滚动的，它必须忽略临时点。</dd>
- <dt><code>x</code></dt>
- <dd>滚动容器只捕捉其水平轴上的捕捉位置。</dd>
- <dt><code>y</code></dt>
- <dd>滚动容器只捕捉其垂直轴上的捕捉位置。</dd>
- <dt><code>block</code></dt>
- <dd>滚动容器仅捕捉到其块轴上的捕捉位置。</dd>
- <dt><code>inline</code></dt>
- <dd>滚动容器仅捕捉到其内联轴上的捕捉位置。</dd>
- <dt><code>both</code></dt>
- <dd>滚动容器会独立捕捉到其两个轴上的位置（可能会捕捉到每个轴上的不同元素）</dd>
- <dt><code>mandatory</code></dt>
- <dd>如果它当前没有被滚动，这个滚动容器的可视视图将静止在临时点上。意思是当滚动动作结束，如果可能，它会临时在那个点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。</dd>
- <dt><code>proximity</code></dt>
- <dd>如果它当前没有被滚动，这个滚动容器的可视视图将基于基于用户代理滚动的参数去到临时点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。</dd>
-</dl>
+- `none`
+  - : 当这个滚动容器的可视的 {{Glossary("viewport")}} 是滚动的，它必须忽略临时点。
+- `x`
+  - : 滚动容器只捕捉其水平轴上的捕捉位置。
+- `y`
+  - : 滚动容器只捕捉其垂直轴上的捕捉位置。
+- `block`
+  - : 滚动容器仅捕捉到其块轴上的捕捉位置。
+- `inline`
+  - : 滚动容器仅捕捉到其内联轴上的捕捉位置。
+- `both`
+  - : 滚动容器会独立捕捉到其两个轴上的位置（可能会捕捉到每个轴上的不同元素）
+- `mandatory`
+  - : 如果它当前没有被滚动，这个滚动容器的可视视图将静止在临时点上。意思是当滚动动作结束，如果可能，它会临时在那个点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。
+- `proximity`
+  - : 如果它当前没有被滚动，这个滚动容器的可视视图将基于基于用户代理滚动的参数去到临时点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="HTML内容">HTML 内容</h3>
+### HTML 内容
 
-<pre><code>&lt;div class="holster"&gt;
-&lt;div class="container x mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Mand. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+```plain
+<div class="holster">
+<div class="container x mandatory-scroll-snapping" dir="ltr">
+  <div>X Mand. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;X Prox. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="ltr">
+  <div>X Prox. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Mand. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="ltr">
+  <div>Y Mand. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="ltr"&gt;
-  &lt;div&gt;Y Prox. LTR&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y proximity-scroll-snapping" dir="ltr">
+  <div>Y Prox. LTR</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Mand. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x mandatory-scroll-snapping" dir="rtl">
+  <div>X Mand. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container x proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;X Prox. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container x proximity-scroll-snapping" dir="rtl">
+  <div>X Prox. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y mandatory-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Mand. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
+<div class="container y mandatory-scroll-snapping" dir="rtl">
+  <div>Y Mand. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
 
-&lt;div class="container y proximity-scroll-snapping" dir="rtl"&gt;
-  &lt;div&gt;Y Prox. RTL&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-  &lt;div&gt;4&lt;/div&gt;
-  &lt;div&gt;5&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<div class="container y proximity-scroll-snapping" dir="rtl">
+  <div>Y Prox. RTL</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+</div>
+```
 
-<h3 id="CSS内容">CSS 内容</h3>
+### CSS 内容
 
-<pre><code>/* setup */
+```plain
+/* setup */
 html, body, .holster {
   height: 100%;
 }
@@ -184,45 +187,46 @@ html, body, .holster {
   scroll-snap-type: y proximity;
 }
 
-.container &gt; div {
+.container > div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
 }
 
-.x.container &gt; div {
+.x.container > div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
 
-.y.container &gt; div {
+.y.container > div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 100%;
 }
 /* appearance fixes */
-.y.container &gt; div:first-child {
+.y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
 /* coloration */
-.container &gt; div:nth-child(even) {
+.container > div:nth-child(even) {
   background-color: #87EA87;
 }
 
-.container &gt; div:nth-child(odd) {
+.container > div:nth-child(odd) {
   background-color: #87CCEA;
-}</code></pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", "100%", "260")}}</p>
+{{EmbedLiveSample("Example", "100%", "260")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.scroll-snap-type")}}</p>
+{{Compat("css.properties.scroll-snap-type")}}

@@ -3,49 +3,52 @@ title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议 {{HTTPHeader("Content-Security-Policy")}}头部的 require-sri-for 指令指示客户端在页面上对脚本或样式使用子资源完整性策略。</p>
+HTTP 协议 {{HTTPHeader("Content-Security-Policy")}}头部的 require-sri-for 指令指示客户端在页面上对脚本或样式使用子资源完整性策略。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Content-Security-Policy: require-sri-for script;
+```plain
+Content-Security-Policy: require-sri-for script;
 Content-Security-Policy: require-sri-for style;
 Content-Security-Policy: require-sri-for script style;
-</pre>
+```
 
-<dl>
- <dt><code>script</code></dt>
- <dd>要求脚本符合{{Glossary("SRI")}}。</dd>
- <dt><code>style</code></dt>
- <dd>要求样式资源满足 {{Glossary("SRI")}}。</dd>
- <dt><code>script style</code></dt>
- <dd>要求脚本和样式资源都满足{{Glossary("SRI")}}。</dd>
-</dl>
+- `script`
+  - : 要求脚本符合{{Glossary("SRI")}}。
+- `style`
+  - : 要求样式资源满足 {{Glossary("SRI")}}。
+- `script style`
+  - : 要求脚本和样式资源都满足{{Glossary("SRI")}}。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>如果你通过如下指令将站点设置为要求脚本和资源满足 SRI 策略: </p>
+如果你通过如下指令将站点设置为要求脚本和资源满足 SRI 策略:
 
-<pre>Content-Security-Policy: require-sri-for script style</pre>
+```plain
+Content-Security-Policy: require-sri-for script style
+```
 
-<p>{{HTMLElement("script")}} 元素会被加载，因为它们拥有有效的完整性属性。</p>
+{{HTMLElement("script")}} 元素会被加载，因为它们拥有有效的完整性属性。
 
-<pre class="brush: html; example-good">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"
+```html example-good
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"
         integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<p>但是，没有完整性属性的脚本将不会再加载：</p>
+但是，没有完整性属性的脚本将不会再加载：
 
-<pre class="brush: html; example-bad">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"&gt;&lt;/script&gt;</pre>
+```html example-bad
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)

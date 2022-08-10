@@ -12,51 +12,48 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/has
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 browser-compat: javascript.builtins.Map.has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>方法<code><strong>has()</strong></code> 返回一个 bool 值，用来表明 map 中是否存在指定元素。</p>
+方法**`has()`** 返回一个 bool 值，用来表明 map 中是否存在指定元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>myMap</em>.has(key);</code></pre>
+```plain
+myMap.has(key);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>key</dt>
- <dd>必填。用来检测是否存在指定元素的键值。</dd>
-</dl>
+- key
+  - : 必填。用来检测是否存在指定元素的键值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>Boolean</dt>
- <dd>如果指定元素存在于 Map 中，则返回 true。其他情况返回 false</dd>
-</dl>
+- Boolean
+  - : 如果指定元素存在于 Map 中，则返回 true。其他情况返回 false
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<h3 id="使用_has_方法">使用 has 方法</h3>
+### 使用 has 方法
 
-<pre class="brush: js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("bar", "foo");
 
 myMap.has("bar");  // returns true
 myMap.has("baz");  // returns false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.set()")}}</li>
- <li>{{jsxref("Map.prototype.get()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.get()")}}

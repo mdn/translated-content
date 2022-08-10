@@ -8,42 +8,44 @@ tags:
   - Property
 translation_of: Web/API/HTMLMediaElement/playbackRate
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.playbackRate</code></strong> 属性设置媒体文件播放时的速率。这用于实现让用户控制快放、慢放等。 正常播放速率乘以该值表示当前的播放速率，所以 1.0 表示一个正常的播放速率。</p>
+**`HTMLMediaElement.playbackRate`** 属性设置媒体文件播放时的速率。这用于实现让用户控制快放、慢放等。 正常播放速率乘以该值表示当前的播放速率，所以 1.0 表示一个正常的播放速率。
 
-<p>将 <code>playbackRate</code> 设为负值<strong>不可以</strong>实现倒播。</p>
+将 `playbackRate` 设为负值**不可以**实现倒播。
 
-<p>媒体文件倒着播放时，或者播放速率低于或高于浏览器内核规定的可用范围（比如，Gecko 约定范围是 0.25～5.0）时，播放过程将静音。</p>
+媒体文件倒着播放时，或者播放速率低于或高于浏览器内核规定的可用范围（比如，Gecko 约定范围是 0.25 ～ 5.0）时，播放过程将静音。
 
-<p>任意播放速率下，音频的音调将默认与其匹配。一些浏览器实现了非标准的 {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} 属性来进行音调控制。</p>
+任意播放速率下，音频的音调将默认与其匹配。一些浏览器实现了非标准的 {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}} 属性来进行音调控制。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js notranslate">// video
-<var>video</var>.playbackRate = 1.5;
+```js
+// video
+video.playbackRate = 1.5;
 // audio
-<var>audio</var>.playbackRate = 1.0;</pre>
+audio.playbackRate = 1.0;
+```
 
-<h3 id="赋值说明">赋值说明</h3>
+### 赋值说明
 
-<p>浮点数 1.0 是 "正常速度"， 比 1.0 小的值使媒体文件播放的慢于正常速度，比 1.0 大的值使播放变得快于正常速度。</p>
+浮点数 1.0 是 "正常速度"， 比 1.0 小的值使媒体文件播放的慢于正常速度，比 1.0 大的值使播放变得快于正常速度。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">var obj = document.createElement('video');
-console.log(obj.playbackRate); // 1</pre>
+```js
+var obj = document.createElement('video');
+console.log(obj.playbackRate); // 1
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLMediaElement.playbackRate")}}</p>
+{{Compat("api.HTMLMediaElement.playbackRate")}}
 
-<h2 id="See_Also">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>接口定义 {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 接口定义 {{domxref("HTMLMediaElement")}}.

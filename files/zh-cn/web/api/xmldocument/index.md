@@ -9,42 +9,34 @@ tags:
   - 接口
 translation_of: Web/API/XMLDocument
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong>XMLDocument</strong> interface represents an XML document. It inherits from the generic {{DOMxRef("Document")}} and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.</p>
+The **XMLDocument** interface represents an XML document. It inherits from the generic {{DOMxRef("Document")}} and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>Also inherits properties from: {{DOMxRef("Document")}}</em></p>
+_Also inherits properties from: {{DOMxRef("Document")}}_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.</dd>
-</dl>
+- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>Also inherits methods from: {{DOMxRef("Document")}}</em></p>
+_Also inherits methods from: {{DOMxRef("Document")}}_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Loads an XML document.</dd>
-</dl>
+- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Loads an XML document.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.XMLDocument")}}
 
+## 另请参见
 
-<p>{{Compat("api.XMLDocument")}}</p>
-
-<h2 id="另请参见">另请参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/API/Document_Object_Model">DOM 接口索引</a></li>
-</ul>
+- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

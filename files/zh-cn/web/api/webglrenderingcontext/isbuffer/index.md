@@ -3,50 +3,48 @@ title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
 translation_of: Web/API/WebGLRenderingContext/isBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.isBuffer() </code></strong>是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的方法之一。如果传递的 {{domxref("WebGLBuffer")}} 有效则返回 true，否则返回 false。</p>
+**`WebGLRenderingContext.isBuffer() `**是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的方法之一。如果传递的 {{domxref("WebGLBuffer")}} 有效则返回 true，否则返回 false。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">GLboolean <var>gl</var>.isBuffer(<var>buffer</var>);
-</pre>
+```plain
+GLboolean gl.isBuffer(buffer);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>buffer (缓冲区)</dt>
- <dd>需要检查的 {{domxref("WebGLBuffer")}} 。</dd>
-</dl>
+- buffer (缓冲区)
+  - : 需要检查的 {{domxref("WebGLBuffer")}} 。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("GLboolean")}} 指示 buffer 是否可用。</p>
+{{domxref("GLboolean")}} 指示 buffer 是否可用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="创建一个缓冲区_(buffer)">创建一个缓冲区 (buffer)</h3>
+### 创建一个缓冲区 (buffer)
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 
 gl.isBuffer(buffer);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.WebGLRenderingContext.isBuffer")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

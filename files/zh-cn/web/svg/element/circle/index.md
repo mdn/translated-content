@@ -4,62 +4,58 @@ slug: Web/SVG/Element/circle
 tags:
   - SVG
   - SVG 图形
-  - 'http://svgjs.com'
+  - http://svgjs.com
   - 元素
   - 参考
 translation_of: Web/SVG/Element/circle
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p> <strong><code>&lt;circle&gt; </code></strong><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。</p>
+**`<circle> `**[SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg viewBox="0 0 120 120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="60" cy="60" r="50"/&gt;
-&lt;/svg&gt;</pre>
+```xml
+<?xml version="1.0"?>
+<svg viewBox="0 0 120 120" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="50"/>
+</svg>
+```
 
-<p>» <a href="https://mdn.mozillademos.org/files/7707/circle2.svg">circle.svg</a></p>
+» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">展现属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [展现属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("cx") }}</li>
- <li>{{ SVGAttr("cy") }}</li>
- <li>{{ SVGAttr("r") }}</li>
-</ul>
+- {{ SVGAttr("cx") }}
+- {{ SVGAttr("cy") }}
+- {{ SVGAttr("r") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了 {{ domxref("SVGCircleElement") }} 接口。</p>
+该元素实现了 {{ domxref("SVGCircleElement") }} 接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.circle")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("ellipse") }}</li>
-</ul>
+- {{ SVGElement("ellipse") }}

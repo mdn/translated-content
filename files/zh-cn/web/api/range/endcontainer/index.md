@@ -3,35 +3,34 @@ title: Range.endContainer
 slug: Web/API/Range/endContainer
 translation_of: Web/API/Range/endContainer
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Range.endContainer</code></strong> 是一个只读属性。它会返回{{domxref("Range")}}对象结束的{{domxref("Node")}}。如果要改变一个节点结束的位置，使用方法{{domxref("Range.setEnd()")}}或者相似的方法。</p>
+**`Range.endContainer`** 是一个只读属性。它会返回{{domxref("Range")}}对象结束的{{domxref("Node")}}。如果要改变一个节点结束的位置，使用方法{{domxref("Range.setEnd()")}}或者相似的方法。
 
-<h2 id="Syntax"><strong>语法</strong></h2>
+## **语法**
 
-<pre class="syntaxbox"><em>endRangeNode</em> = <em>range</em>.endContainer;
-</pre>
+```plain
+endRangeNode = range.endContainer;
+```
 
-<h2 id="Example"><strong>示例</strong></h2>
+## **示例**
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 endRangeNode = range.endContainer;
+```
 
-</pre>
-
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Range.endContainer")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)

@@ -3,50 +3,52 @@ title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 translation_of: Web/API/DOMTokenList/item
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}}接口的<code><strong>item()</strong></code>方法返回一个在列表中的索引的项。</p>
+{{domxref("DOMTokenList")}}接口的**`item()`**方法返回一个在列表中的索引的项。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>tokenList</var>.item(<var>index</var>)</pre>
+```plain
+tokenList.item(index)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>index</var></code></dt>
- <dd> {{domxref("DOMString")}} 类型，一个表示要返回的项的索引。</dd>
-</dl>
+- `index`
+  - : {{domxref("DOMString")}} 类型，一个表示要返回的项的索引。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("DOMString")}}类型，一个表示要返回的项。如果数字大于或等于列表的<code>length</code>，则返回<code>null</code>。</p>
+{{domxref("DOMString")}}类型，一个表示要返回的项。如果数字大于或等于列表的`length`，则返回`null`。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取<code>DOMTokenList</code>对象。 然后使用<code>item(<var>tokenList</var>.length - 1)</code>检索列表中的最后的一个项，并将其写入&lt;span&gt;元素的 {{domxref("Node.textContent")}}。</p>
+在下面的列子中，我们通过{{domxref("Element.classList")}}方法从{{htmlelement("span")}}元素中获取`DOMTokenList`对象。 然后使用`item(tokenList.length - 1)`检索列表中的最后的一个项，并将其写入\<span>元素的 {{domxref("Node.textContent")}}。
 
-<p>首先， HTML：</p>
+首先， HTML：
 
-<pre class="brush: html notranslate">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>然后， JavaScript：</p>
+然后， JavaScript：
 
-<pre class="brush: js notranslate">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 let item = classes.item(classes.length-1);
-span.textContent = item;</pre>
+span.textContent = item;
+```
 
-<p>输出结果如下：</p>
+输出结果如下：
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.DOMTokenList.item")}}</p>
-</div>
+{{Compat("api.DOMTokenList.item")}}

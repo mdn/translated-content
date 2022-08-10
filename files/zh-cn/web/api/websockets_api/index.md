@@ -6,54 +6,46 @@ tags:
   - WebSockets
 translation_of: Web/API/WebSockets_API
 ---
-<p>{{DefaultAPISidebar("Websockets API")}}</p>
+{{DefaultAPISidebar("Websockets API")}}
 
-<p><strong>WebSockets</strong> 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。</p>
+**WebSockets** 是一种先进的技术。它可以在用户的浏览器和服务器之间打开交互式通信会话。使用此 API，您可以向服务器发送消息并接收事件驱动的响应，而无需通过轮询服务器的方式以获得响应。
 
-<h2 id="接口">接口</h2>
+## 接口
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebSocket"><code>WebSocket</code></a></dt>
- <dd>用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。</dd>
- <dt><code><a href="/en-US/docs/Web/API/CloseEvent">CloseEvent</a></code></dt>
- <dd>连接关闭时 WebSocket 对象发送的事件。</dd>
- <dt><a href="/en-US/docs/Web/API/MessageEvent"><code>MessageEvent</code></a></dt>
- <dd>当从服务器获取到消息的时候 WebSocket 对象触发的事件。</dd>
-</dl>
+- [`WebSocket`](/en-US/docs/Web/API/WebSocket)
+  - : 用于连接 WebSocket 服务器的主要接口，之后可以在这个连接上发送 和接受数据。
+- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
+  - : 连接关闭时 WebSocket 对象发送的事件。
+- [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
+  - : 当从服务器获取到消息的时候 WebSocket 对象触发的事件。
 
-<h2 id="Tools">工具</h2>
+## 工具
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/">HumbleNet</a>: 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。</li>
- <li><a href="https://github.com/uWebSockets/uWebSockets">µWebSockets</a>:由<a href="https://isocpp.org/">C++11</a>和<a href="http://nodejs.org/">Node.js</a> 实现的高度可扩展的 WebSocket 服务器和客户端.。</li>
- <li><a href="https://github.com/ClusterWS/ClusterWS">ClusterWS</a>:  轻量级、快速和强大的框架，用于在<a href="http://nodejs.org/">Node.js</a>.中构建可伸缩的 WebSocket 应用程序。</li>
- <li><a href="http://socket.io">Socket.IO</a>: 一个基于长轮询/WebSocket 的<a href="http://nodejs.org">Node.js</a>第三方传输协议。</li>
- <li><a href="http://socketcluster.io/">SocketCluster</a>: 一个用于<a href="http://nodejs.org">Node.js</a>的 pub/sub 专注于可伸缩 WebSocket 框架。</li>
- <li><a href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: 一个用 <a href="http://nodejs.org/">Node.js</a>实现 WebSocket 服务器 API。</li>
- <li><a href="http://www.totaljs.com/">Total.js</a>:一个用<a href="http://www.nodejs.org/">Node.js</a> 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。</li>
- <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: 一个 <a href="http://nodejs.org/">Node.js</a>的<a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (双向连接) 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (单向连接) 的服务器和客户端。</li>
- <li><a href="http://signalr.net/">SignalR</a>: SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。</li>
- <li><a href="https://caddyserver.com/docs/websocket">Caddy</a>: 能够将任意命令 (stdin/stdout) 代理为 websocket 的 web 服务器。</li>
- <li><a href="https://github.com/websockets/ws">ws</a>: 一个流行的 WebSocket 客户端和服务器 <a href="http://nodejs.org/">Node.js</a>库。</li>
- <li><a href="https://github.com/bigstepinc/jsonrpc-bidirectional">jsonrpc-bidirectional</a>: 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。</li>
- <li><a href="https://github.com/elpheria/rpc-websockets">rpc-websockets</a>: JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。</li>
-</ul>
+- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): 一个在浏览器中工作的跨平台网络库。它由一个围绕 websocket 和 WebRTC 的 C 包装器组成，抽象了跨浏览器的差异，方便了为游戏和其它应用程序创建多用户网络功能。
+- [µWebSockets](https://github.com/uWebSockets/uWebSockets):由[C++11](https://isocpp.org/)和[Node.js](http://nodejs.org/) 实现的高度可扩展的 WebSocket 服务器和客户端.。
+- [ClusterWS](https://github.com/ClusterWS/ClusterWS): 轻量级、快速和强大的框架，用于在[Node.js](http://nodejs.org/).中构建可伸缩的 WebSocket 应用程序。
+- [Socket.IO](http://socket.io): 一个基于长轮询/WebSocket 的[Node.js](http://nodejs.org)第三方传输协议。
+- [SocketCluster](http://socketcluster.io/): 一个用于[Node.js](http://nodejs.org)的 pub/sub 专注于可伸缩 WebSocket 框架。
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): 一个用 [Node.js](http://nodejs.org/)实现 WebSocket 服务器 API。
+- [Total.js](http://www.totaljs.com/):一个用[Node.js](http://www.nodejs.org/) 实现的的 Web 应用程序框架（例如:WebSocket 聊天）。
+- [Faye](https://www.npmjs.com/package/faye-websocket): 一个 [Node.js](http://nodejs.org/)的[WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (双向连接) 和 [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource/) (单向连接) 的服务器和客户端。
+- [SignalR](http://signalr.net/): SignalR 在可用时将隐藏使用 WebSockets，在不可用时将优雅地使用其他技术和技术，而应用程序代码保持不变。
+- [Caddy](https://caddyserver.com/docs/websocket): 能够将任意命令 (stdin/stdout) 代理为 websocket 的 web 服务器。
+- [ws](https://github.com/websockets/ws): 一个流行的 WebSocket 客户端和服务器 [Node.js](http://nodejs.org/)库。
+- [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): 易于使用异步 RPC 库，通过单个 WebSocket 或 RTCDataChannel (WebRTC) 连接支持双向调用。TCP / SCTP /等。客户端和服务器可以各自承载自己的 JSONRPC 和服务器端点。
+- [rpc-websockets](https://github.com/elpheria/rpc-websockets): JSON-RPC 2.0 在 websocket 上实现 Node.js 和 JavaScript。
 
-<h2 id="Related_Topics">相关话题</h2>
+## 相关话题
 
-<ul>
- <li><a href="/en-US/docs/AJAX">AJAX</a></li>
- <li><a href="/en-US/docs/JavaScript">JavaScript</a></li>
-</ul>
+- [AJAX](/en-US/docs/AJAX)
+- [JavaScript](/en-US/docs/JavaScript)
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="http://tools.ietf.org/html/rfc6455">RFC 6455 — The WebSocket Protocol</a></li>
- <li><a href="http://www.w3.org/TR/websockets/">WebSocket API Specification</a></li>
- <li><a href="/en-US/docs/Server-sent_events">Server-Sent Events</a></li>
-</ul>
+- [RFC 6455 — The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
+- [WebSocket API Specification](http://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/en-US/docs/Server-sent_events)
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.WebSocket")}}

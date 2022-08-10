@@ -3,55 +3,41 @@ title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}`subarray()` 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的的 _TypedArray_。开始的索引将会被包括，而结束的索引将不会被包括。_TypedArray_ 是指 [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 的其中之一。
 
-<div><code>subarray()</code> 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的的 <em>TypedArray</em>。开始的索引将会被包括，而结束的索引将不会被包括。<em>TypedArray </em>是指 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a> 的其中之一。</div>
+{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 
-<p> </p>
+## 用法
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}</div>
+```plain
+typedarray.subarray([begin [,end]])
+```
 
-<p> </p>
+### 参数
 
+- begin {{optional_inline}}
+  - : 元素开始的索引，开始索引的元素将会被包括。若该值没有传入，将会返回一个拥有全部元素的数组。
+- end {{optional_inline}}
+  - : 元素结束的索引，结束索引的元素将**不会**被包括。若该值没有传入，从 `begin` 所指定的那一个元素到数组末尾的所有元素都将会被包含进新数组中。
 
+### 返回值
 
-<h2 id="用法">用法</h2>
+一个新的 {{jsxref("TypedArray")}} 对象。
 
-<pre class="syntaxbox"><var>typedarr</var>ay.subarray([begin [,end]])
-</pre>
+## 说明
 
-<h3 id="参数">参数</h3>
+- 被 `begin` 和 `end` 指定的范围将会收束与当前数组的有效索引
+- 若计算后得出的长度是负数，将会被收束成 0
+- 若 `begin` 或 `end` 是负数，将会被当做成是从数组末端读取的索引
 
-<dl>
- <dt>begin {{optional_inline}}</dt>
- <dd>元素开始的索引，开始索引的元素将会被包括。若该值没有传入，将会返回一个拥有全部元素的数组。</dd>
- <dt>end {{optional_inline}}</dt>
- <dd>元素结束的索引，结束索引的元素将<strong>不会</strong>被包括。若该值没有传入，从 <code>begin</code> 所指定的那一个元素到数组末尾的所有元素都将会被包含进新数组中。</dd>
-</dl>
+需要注意的是，使用该方法返回的新数组还是建立在原有的 Buffer 之上的，所以，改动数组的内容将会影响到原数组，反之亦然。
 
-<h3 id="返回值">返回值</h3>
+## Examples
 
-<p>一个新的 {{jsxref("TypedArray")}} 对象。</p>
+### Using the `subarray` method
 
-<h2 id="说明">说明</h2>
-
-<ul>
- <li>被 <code>begin</code> 和 <code>end</code> 指定的范围将会收束与当前数组的有效索引</li>
- <li>若计算后得出的长度是负数，将会被收束成 0</li>
- <li>若 <code>begin</code> 或 <code>end</code> 是负数，将会被当做成是从数组末端读取的索引</li>
-</ul>
-
-<p>需要注意的是，使用该方法返回的新数组还是建立在原有的 Buffer 之上的，所以，改动数组的内容将会影响到原数组，反之亦然。</p>
-
-<p> </p>
-
-<h2 id="Examples">Examples</h2>
-
-<p> </p>
-
-<h3 id="Using_the_subarray_method">Using the <code>subarray</code> method</h3>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 uint8.set([1,2,3]);
 
@@ -60,22 +46,18 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 var sub = uint8.subarray(0,4);
 
 console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}

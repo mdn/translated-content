@@ -10,70 +10,65 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/mpath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>{{ SVGElement("animateMotion") }} 元素的<code>mpath</code>子元素使{{ SVGElement("animateMotion") }} 元素能够引用一个外部的{{ SVGElement("path") }}元素作为运动路径的定义。</p>
+{{ SVGElement("animateMotion") }} 元素的`mpath`子元素使{{ SVGElement("animateMotion") }} 元素能够引用一个外部的{{ SVGElement("path") }}元素作为运动路径的定义。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100%" height="100%"  viewBox="0 0 500 300"
+```html
+<svg width="100%" height="100%"  viewBox="0 0 500 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-  &lt;rect x="1" y="1" width="498" height="298"
-        fill="none" stroke="blue" stroke-width="2" /&gt;
+  <rect x="1" y="1" width="498" height="298"
+        fill="none" stroke="blue" stroke-width="2" />
 
-  &lt;!-- Draw the outline of the motion path in blue, along
-          with three small circles at the start, middle and end. --&gt;
-  &lt;path id="path1" d="M100,250 C 100,50 400,50 400,250"
-        fill="none" stroke="blue" stroke-width="7.06"  /&gt;
-  &lt;circle cx="100" cy="250" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="250" cy="100" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="400" cy="250" r="17.64" fill="blue"  /&gt;
+  <!-- Draw the outline of the motion path in blue, along
+          with three small circles at the start, middle and end. -->
+  <path id="path1" d="M100,250 C 100,50 400,50 400,250"
+        fill="none" stroke="blue" stroke-width="7.06"  />
+  <circle cx="100" cy="250" r="17.64" fill="blue"  />
+  <circle cx="250" cy="100" r="17.64" fill="blue"  />
+  <circle cx="400" cy="250" r="17.64" fill="blue"  />
 
-  &lt;!-- Here is a triangle which will be moved about the motion path.
+  <!-- Here is a triangle which will be moved about the motion path.
        It is defined with an upright orientation with the base of
-       the triangle centered horizontally just above the origin. --&gt;
-  &lt;path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-        fill="yellow" stroke="red" stroke-width="7.06"  &gt;
-    &lt;!-- Define the motion path animation --&gt;
-    &lt;animateMotion dur="6s" repeatCount="indefinite" rotate="auto" &gt;
-       &lt;mpath xlink:href="#path1"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/path&gt;
-&lt;/svg&gt;
-</pre>
+       the triangle centered horizontally just above the origin. -->
+  <path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
+        fill="yellow" stroke="red" stroke-width="7.06"  >
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" >
+       <mpath xlink:href="#path1"/>
+    </animateMotion>
+  </path>
+</svg>
+```
 
-<p>实时输出：</p>
+实时输出：
 
-<p>{{EmbedLiveSample("Example",250,165)}}</p>
+{{EmbedLiveSample("Example",250,165)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGMPathElement">SVGMPathElement</a></code>接口。</p>
+该元素实现了[`SVGMPathElement`](/en/DOM/SVGMPathElement)接口。
 
-<h2 id="相关的内容">相关的内容</h2>
+## 相关的内容
 
-<ul>
- <li>{{ SVGElement("animateMotion") }}</li>
-</ul>
+- {{ SVGElement("animateMotion") }}

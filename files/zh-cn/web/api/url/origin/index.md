@@ -3,39 +3,37 @@ title: URL.origin
 slug: Web/API/URL/origin
 translation_of: Web/API/URL/origin
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p><strong><code>URL.origin</code></strong> 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值，也就是：</p>
+**`URL.origin`** 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值，也就是：
 
-<ul>
- <li>对于使用 <code>http</code> 或者 <code>https</code> 协议的 URL, 返回协议名，然后是 <code>'://'</code>, 然后是域，然后是 <code>':'</code>, 最后是端口号 (默认端口是 <code>80</code> 和 <code>443</code>);</li>
- <li>对于使用 <code>file:</code> 协议的 URL，返回值因浏览器而异;</li>
- <li>对于使用 <code>blob:</code> 协议的 URL，返回值是 <code>blob:</code> 后跟随的源地址。例如 <code>"blob:https://mozilla.org"</code> 将会返回 <code>"https://mozilla.org".</code></li>
-</ul>
+- 对于使用 `http` 或者 `https` 协议的 URL, 返回协议名，然后是 `'://'`, 然后是域，然后是 `':'`, 最后是端口号 (默认端口是 `80` 和 `443`);
+- 对于使用 `file:` 协议的 URL，返回值因浏览器而异;
+- 对于使用 `blob:` 协议的 URL，返回值是 `blob:` 后跟随的源地址。例如 `"blob:https://mozilla.org"` 将会返回 `"https://mozilla.org".`
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>URLObject</em>.origin;
-</pre>
+```plain
+string = URLObject.origin;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var result = new URL("blob:https://mozilla.org:443/").origin;
+```js
+var result = new URL("blob:https://mozilla.org:443/").origin;
 // 返回:'https://developer.mozilla.org:443'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.URL.origin")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils.origin")}} property</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils.origin")}} property

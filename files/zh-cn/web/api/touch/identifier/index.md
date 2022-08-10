@@ -5,18 +5,23 @@ tags:
   - touch
 translation_of: Web/API/Touch/identifier
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary">概述</h3>
-<p>返回一个可以唯一地识别和触摸平面接触的点的值。这个值在这根手指（或触摸笔等）所引发的所有事件中保持一致，直到它离开触摸平面。</p>
-<h3 id="Syntax">语法</h3>
-<pre class="eval">var <em>id</em> = <em>touchItem</em>.identifier;
-</pre>
-<h3 id="Return_Value">返回值</h3>
-<dl>
- <dt>
-  <code>id</code></dt>
- <dd>
-  {{ domxref("Touch") }} 对象的唯一标识符。</dd>
-</dl>
-<h3 id="Specification">标准定义</h3>
-<p><a href="http://www.w3.org/TR/touch-events/">Touch Events Specification</a></p>
+{{ ApiRef() }}
+
+### 概述
+
+返回一个可以唯一地识别和触摸平面接触的点的值。这个值在这根手指（或触摸笔等）所引发的所有事件中保持一致，直到它离开触摸平面。
+
+### 语法
+
+```plain
+var id = touchItem.identifier;
+```
+
+### 返回值
+
+- `id`
+  - : {{ domxref("Touch") }} 对象的唯一标识符。
+
+### 标准定义
+
+[Touch Events Specification](http://www.w3.org/TR/touch-events/)

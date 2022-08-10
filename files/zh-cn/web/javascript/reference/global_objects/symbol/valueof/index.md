@@ -3,22 +3,24 @@ title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
-<div>{{JSRef("Global_Objects", "Symbol")}}</div>
+{{JSRef("Global_Objects", "Symbol")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>valueOf()</strong></code> 方法返回当前 symbol 对象所包含的 symbol 原始值。</p>
+**`valueOf()`** 方法返回当前 symbol 对象所包含的 symbol 原始值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>symbol.valueOf();
-</var></pre>
+```plain
+symbol.valueOf();
+```
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>在 JavaScript 中，虽然大多数类型的对象在某些操作下都会自动的隐式调用自身的 <code>valueOf()</code> 方法或者 <code>toString()</code> 方法来将自己转换成一个原始值，但 symbol 对象不会这么干，symbol 对象无法隐式转换成对应的原始值：</p>
+在 JavaScript 中，虽然大多数类型的对象在某些操作下都会自动的隐式调用自身的 `valueOf()` 方法或者 `toString()` 方法来将自己转换成一个原始值，但 symbol 对象不会这么干，symbol 对象无法隐式转换成对应的原始值：
 
-<pre class="brush: js">Object(Symbol("foo")) + "bar";
+```js
+Object(Symbol("foo")) + "bar";
 // TypeError: can't convert symbol object to primitive
 // 无法隐式的调用 valueOf() 方法
 
@@ -28,18 +30,16 @@ Object(Symbol("foo")).valueOf() + "bar";
 
 Object(Symbol("foo")).toString() + "bar";
 // "Symbol(foo)bar"，需要手动调用 toString() 方法才行
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

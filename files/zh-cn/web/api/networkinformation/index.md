@@ -3,57 +3,51 @@ title: NetworkInformation
 slug: Web/API/NetworkInformation
 translation_of: Web/API/NetworkInformation
 ---
-<div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p><code><strong>NetworkInformation</strong></code> 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。<code>NetworkInformation</code> 接口不能被是实例化， 而是通过 {{domxref("Navigator")}} 的 <code>connection</code> 属性进行访问。</p>
+**`NetworkInformation`** 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。`NetworkInformation` 接口不能被是实例化， 而是通过 {{domxref("Navigator")}} 的 `connection` 属性进行访问。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>这些属性接口继承自 {{domxref("EventTarget")}}.</em></p>
+_这些属性接口继承自 {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("NetworkInformation.type")}} {{readonlyinline}}</dt>
- <dd>返回设备正在与网络进行通信的连接类型。 它将是以下值之一：
- <ul>
-  <li><code>bluetooth</code></li>
-  <li><code>cellular</code></li>
-  <li><code>ethernet</code></li>
-  <li><code>none</code></li>
-  <li><code>wifi</code></li>
-  <li><code>wimax</code></li>
-  <li><code>other</code></li>
-  <li><code>unknown</code></li>
- </ul>
- </dd>
- <dt>{{domxref("NetworkInformation.downlinkMax")}} {{readonlyinline}}</dt>
- <dd>返回基础连接技术的最大下载速度（Mbps）。</dd>
-</dl>
+- {{domxref("NetworkInformation.type")}} {{readonlyinline}}
 
-<h3 id="Event_handlers">Event handlers</h3>
+  - : 返回设备正在与网络进行通信的连接类型。 它将是以下值之一：
 
-<dl>
- <dt>{{domxref("NetworkInformation.onchange")}}</dt>
- <dd>当连接信息更改并在此对象上触发更改时触发的 {{event("change")}}  。</dd>
-</dl>
+    - `bluetooth`
+    - `cellular`
+    - `ethernet`
+    - `none`
+    - `wifi`
+    - `wimax`
+    - `other`
+    - `unknown`
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("NetworkInformation.downlinkMax")}} {{readonlyinline}}
+  - : 返回基础连接技术的最大下载速度（Mbps）。
 
-<p><em>这些属性接口同样继承自 {{domxref("EventTarget")}}.</em></p>
+### Event handlers
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("NetworkInformation.onchange")}}
+  - : 当连接信息更改并在此对象上触发更改时触发的 {{event("change")}} 。
+
+## Methods
+
+_这些属性接口同样继承自 {{domxref("EventTarget")}}._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.NetworkInformation")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a></li>
- <li><a href="/en-US/docs/Online_and_offline_events">Online and offline events</a></li>
- <li>The {{domxref("Navigator")}} interface that implements it.</li>
-</ul>
+- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
+- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- The {{domxref("Navigator")}} interface that implements it.

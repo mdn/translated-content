@@ -8,34 +8,35 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.getOwnPropertySymbols()</strong></code> 方法返回一个给定对象自身的所有 Symbol 属性的数组。</p>
+**`Object.getOwnPropertySymbols()`** 方法返回一个给定对象自身的所有 Symbol 属性的数组。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Object.getOwnPropertySymbols(<em>obj</em>)</code></pre>
+```plain
+Object.getOwnPropertySymbols(obj)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>要返回 Symbol 属性的对象。</dd>
-</dl>
+- `obj`
+  - : 要返回 Symbol 属性的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>在给定对象自身上找到的所有 Symbol 属性的数组。</p>
+在给定对象自身上找到的所有 Symbol 属性的数组。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>与{{jsxref("Object.getOwnPropertyNames()")}}类似，您可以将给定对象的所有符号属性作为 Symbol 数组获取。 请注意，{{jsxref("Object.getOwnPropertyNames()")}}本身不包含对象的 Symbol 属性，只包含字符串属性。</p>
+与{{jsxref("Object.getOwnPropertyNames()")}}类似，您可以将给定对象的所有符号属性作为 Symbol 数组获取。 请注意，{{jsxref("Object.getOwnPropertyNames()")}}本身不包含对象的 Symbol 属性，只包含字符串属性。
 
-<p>因为所有的对象在初始化的时候不会包含任何的 Symbol，除非你在对象上赋值了 Symbol 否则<code>Object.getOwnPropertySymbols()</code>只会返回一个空的数组。</p>
+因为所有的对象在初始化的时候不会包含任何的 Symbol，除非你在对象上赋值了 Symbol 否则`Object.getOwnPropertySymbols()`只会返回一个空的数组。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var a = Symbol("a");
 var b = Symbol.for("b");
 
@@ -47,19 +48,17 @@ var objectSymbols = Object.getOwnPropertySymbols(obj);
 console.log(objectSymbols.length); // 2
 console.log(objectSymbols)         // [Symbol(a), Symbol(b)]
 console.log(objectSymbols[0])      // Symbol(a)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

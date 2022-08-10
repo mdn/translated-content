@@ -3,31 +3,32 @@ title: URLSearchParams()
 slug: Web/API/URLSearchParams/URLSearchParams
 translation_of: Web/API/URLSearchParams/URLSearchParams
 ---
-<p>{{ApiRef("URL API")}}{{SeeCompatTable}}</p>
+{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-<p><code><strong>URLSearchParams()</strong></code> 构造器创建并返回一个新的{{domxref("URLSearchParams")}} 对象。 开头的<code>'?'</code> 字符会被忽略。</p>
+**`URLSearchParams()`** 构造器创建并返回一个新的{{domxref("URLSearchParams")}} 对象。 开头的`'?'` 字符会被忽略。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>URLSearchParams</em> = new URLSearchParams(<em>init</em>);</pre>
+```plain
+var URLSearchParams = new URLSearchParams(init);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>init</code></em> {{optional_inline}}</dt>
- <dd>一个 {{domxref("USVString")}} 实例，一个 {{domxref("URLSearchParams")}} 实例，一个 {{domxref("USVString")}}，或者一个包含 {{domxref("USVString")}} 的记录。注意使用一个 <code>URLSearchParams</code> 实例作为参数已经被弃用了，以后的浏览器将会只使用一个 <code>USVString</code> 作为参数。</dd>
-</dl>
+- _`init`_ {{optional_inline}}
+  - : 一个 {{domxref("USVString")}} 实例，一个 {{domxref("URLSearchParams")}} 实例，一个 {{domxref("USVString")}}，或者一个包含 {{domxref("USVString")}} 的记录。注意使用一个 `URLSearchParams` 实例作为参数已经被弃用了，以后的浏览器将会只使用一个 `USVString` 作为参数。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("URLSearchParams")}} 实例。</p>
+一个 {{domxref("URLSearchParams")}} 实例。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的例子展示了用一个 URL 字符串创建一个 {{domxref("URLSearchParams")}} 对象。</p>
+下面的例子展示了用一个 URL 字符串创建一个 {{domxref("URLSearchParams")}} 对象。
 
-<pre class="brush: js">// Pass in a string literal
-var url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+// Pass in a string literal
+var url = new URL('https://example.com?foo=1&bar=2');
 // Retrieve from window.location
 var url2 = new URL(window.location);
 
@@ -40,8 +41,8 @@ var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
 
 // Pass in a record
 var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
-</pre>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.URLSearchParams.URLSearchParams")}}

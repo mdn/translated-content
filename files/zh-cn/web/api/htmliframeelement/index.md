@@ -3,176 +3,159 @@ title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 translation_of: Web/API/HTMLIFrameElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLIFrameElement</code></strong> 接口提供了除 {{domxref("HTMLElement")}} 之外的一些特殊属性和方法（当然也包括了继承自 {{domxref("HTMLElement")}} 的部分）。这些方法用于操作内联frame元素的布局和展示。</p>
+**`HTMLIFrameElement`** 接口提供了除 {{domxref("HTMLElement")}} 之外的一些特殊属性和方法（当然也包括了继承自 {{domxref("HTMLElement")}} 的部分）。这些方法用于操作内联 frame 元素的布局和展示。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承了来自父类的属性，{{domxref("HTMLElement")}}。</em></p>
+_继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 指定了相对于当前上下文的对齐方式。</dd>
- <dt>{{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}</dt>
- <dd>一个 {{domxref("Boolean")}} 标识了该内联frame是否愿意被全屏防止。详情请参考 <a href="/en-US/docs/DOM/Using_full-screen_mode">Using full-screen mode</a> 。</dd>
- <dt>{{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Document")}}，该内联frame嵌套的浏览上下文中活跃的document对象。</dd>
- <dt>{{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("WindowProxy")}}，该嵌套的浏览上下文中的window代理。</dd>
- <dt>{{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 标识了是否在frame之间创建边框。</dd>
- <dt>{{domxref("HTMLIFrameElement.height")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("height", "iframe")}} HTML 属性，标识了该frame的高度。</dd>
- <dt>{{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 包含着该frame的详细描述的URI。</dd>
- <dt>{{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} ，该frame的外边距高度。</dd>
- <dt>{{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} ，该frame的外边距宽度。</dd>
- <dt>{{domxref("HTMLIFrameElement.name")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("name", "iframe")}} HTML 属性，包含着用来引用该frame的名字。</dd>
- <dt>{{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("referrerPolicy", "iframe")}} HTML 属性，标识了获取关联资源时要使用哪个referrer。</dd>
- <dt>{{domxref("HTMLIFrameElement.sandbox")}}</dt>
- <dd>一个 {{domxref("DOMSettableTokenList")}} 反映着 {{htmlattrxref("sandbox", "iframe")}} HTML 属性，指示着对嵌套内容额外的限制。</dd>
- <dt>{{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("DOMString")}} 指示着浏览器是否应该为该frame提供滚动条。</dd>
- <dt>{{domxref("HTMLIFrameElement.src")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("src", "iframe")}} HTML 属性，包含被嵌入内容的地址。</dd>
- <dt>{{domxref("HTMLIFrameElement.srcdoc")}}</dt>
- <dd>一个 {{domxref("DOMString")}} ，表示该frame中要显示的内容。</dd>
- <dt>{{domxref("HTMLIFrameElement.width")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("width", "iframe")}} HTML 属性，标识着该frame的宽度。</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} 指定了相对于当前上下文的对齐方式。
+- {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
+  - : 一个 {{domxref("Boolean")}} 标识了该内联 frame 是否愿意被全屏防止。详情请参考 [Using full-screen mode](/en-US/docs/DOM/Using_full-screen_mode) 。
+- {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("Document")}}，该内联 frame 嵌套的浏览上下文中活跃的 document 对象。
+- {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("WindowProxy")}}，该嵌套的浏览上下文中的 window 代理。
+- {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} 标识了是否在 frame 之间创建边框。
+- {{domxref("HTMLIFrameElement.height")}}
+  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("height", "iframe")}} HTML 属性，标识了该 frame 的高度。
+- {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} 包含着该 frame 的详细描述的 URI。
+- {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} ，该 frame 的外边距高度。
+- {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} ，该 frame 的外边距宽度。
+- {{domxref("HTMLIFrameElement.name")}}
+  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("name", "iframe")}} HTML 属性，包含着用来引用该 frame 的名字。
+- {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
+  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("referrerPolicy", "iframe")}} HTML 属性，标识了获取关联资源时要使用哪个 referrer。
+- {{domxref("HTMLIFrameElement.sandbox")}}
+  - : 一个 {{domxref("DOMSettableTokenList")}} 反映着 {{htmlattrxref("sandbox", "iframe")}} HTML 属性，指示着对嵌套内容额外的限制。
+- {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
+  - : 一个 {{domxref("DOMString")}} 指示着浏览器是否应该为该 frame 提供滚动条。
+- {{domxref("HTMLIFrameElement.src")}}
+  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("src", "iframe")}} HTML 属性，包含被嵌入内容的地址。
+- {{domxref("HTMLIFrameElement.srcdoc")}}
+  - : 一个 {{domxref("DOMString")}} ，表示该 frame 中要显示的内容。
+- {{domxref("HTMLIFrameElement.width")}}
+  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("width", "iframe")}} HTML 属性，标识着该 frame 的宽度。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>继承了来自父类的属性，{{domxref("HTMLElement")}}。</em></p>
+_继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 
-<h3 id="浏览器_API_方法">浏览器 API 方法</h3>
+### 浏览器 API 方法
 
-<p>为支持浏览器{{HTMLElement("iframe")}}的需求，<code>HTMLIFrameElement</code>已经扩展了一些新的方法来让{{HTMLElement("iframe")}}有更多的能力。他们并未成为规范（参见 <a href="#browser_compatibility">Browser compatibility</a>）。</p>
+为支持浏览器{{HTMLElement("iframe")}}的需求，`HTMLIFrameElement`已经扩展了一些新的方法来让{{HTMLElement("iframe")}}有更多的能力。他们并未成为规范（参见 [Browser compatibility](#browser_compatibility)）。
 
-<h4 id="导航方法">导航方法</h4>
+#### 导航方法
 
-<p>以下导航方法允许通过{{HTMLElement("iframe")}}的浏览历史进行导航。他们对于后退、前进、停止和重新加载按钮的实现而言是非常必须的。</p>
+以下导航方法允许通过{{HTMLElement("iframe")}}的浏览历史进行导航。他们对于后退、前进、停止和重新加载按钮的实现而言是非常必须的。
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.reload()")}}</dt>
- <dd>重新加载{{HTMLElement("iframe")}}元素内容。</dd>
- <dt>{{domxref("HTMLIFrameElement.stop()")}}</dt>
- <dd>停止加载{{HTMLElement("iframe")}}元素内容。</dd>
- <dt>{{domxref("HTMLIFrameElement.getCanGoBack()")}}</dt>
- <dd>指示是否可以后退。</dd>
- <dt>{{domxref("HTMLIFrameElement.goBack()")}}</dt>
- <dd>改变{{HTMLElement("iframe")}}位置到上一个浏览历史记录的位置。</dd>
- <dt>{{domxref("HTMLIFrameElement.getCanGoForward()")}}</dt>
- <dd>指示是否可以前进。</dd>
- <dt>{{domxref("HTMLIFrameElement.goForward()")}}</dt>
- <dd>改变{{HTMLElement("iframe")}}位置到下一个浏览历史记录的位置。</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.reload()")}}
+  - : 重新加载{{HTMLElement("iframe")}}元素内容。
+- {{domxref("HTMLIFrameElement.stop()")}}
+  - : 停止加载{{HTMLElement("iframe")}}元素内容。
+- {{domxref("HTMLIFrameElement.getCanGoBack()")}}
+  - : 指示是否可以后退。
+- {{domxref("HTMLIFrameElement.goBack()")}}
+  - : 改变{{HTMLElement("iframe")}}位置到上一个浏览历史记录的位置。
+- {{domxref("HTMLIFrameElement.getCanGoForward()")}}
+  - : 指示是否可以前进。
+- {{domxref("HTMLIFrameElement.goForward()")}}
+  - : 改变{{HTMLElement("iframe")}}位置到下一个浏览历史记录的位置。
 
-<h4 id="管理方法">管理方法</h4>
+#### 管理方法
 
-<p>这个方法集管理浏览器{{HTMLElement("iframe")}}所用的资源。它们对于实现分页浏览程序非常有用。</p>
+这个方法集管理浏览器{{HTMLElement("iframe")}}所用的资源。它们对于实现分页浏览程序非常有用。
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.executeScript()")}}</dt>
- <dd>在浏览器{{HTMLElement("iframe")}}页面加载完成后执行指定的脚本。</dd>
- <dt>{{domxref("HTMLIFrameElement.purgeHistory()")}}</dt>
- <dd>清理所有与浏览器{{HTMLElement("iframe")}}有关的资源（不包括cookie）。</dd>
- <dt>{{domxref("HTMLIFrameElement.setVisible()")}}</dt>
- <dd>修改浏览器{{HTMLElement("iframe")}}的可见性。这会影响资源分配和一些函数的资源占用率，如{{domxref("window.requestAnimationFrame","requestAnimationFrame")}}。</dd>
- <dt>{{domxref("HTMLIFrameElement.getVisible()")}}</dt>
- <dd>指示当前浏览器{{HTMLElement("iframe")}}的可见性。</dd>
- <dt>{{domxref("HTMLIFrameElement.setActive()")}}</dt>
- <dd>设置当前{{HTMLElement("iframe")}}为活动frame，对进程管理器如何划分优先级有影响。</dd>
- <dt>{{domxref("HTMLIFrameElement.getActive()")}}</dt>
- <dd>指示当前浏览器{{htmlelement("iframe")}}是否为当前活动的frame。</dd>
- <dt>{{domxref("HTMLIFrameElement.setInputMethodActive()")}}</dt>
- <dd>设置当前浏览器{{HTMLElement("iframe")}}是活动的输入法编辑器窗口而其他不是。当一个顶层应用希望激活一个窗口作为输入法编辑器（如键盘）时有用。</dd>
- <dt>{{domxref("HTMLIFrameElement.setNfcFocus()")}}</dt>
- <dd>Firefox 操作系统 <a href="/en-US/docs/Web/API/NFC_API">NFC API</a> 的一部分，扩展了<a href="/en-US/docs/Web/API/Browser_API">Browser API</a>，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个<a href="/en-US/docs/Web/API/NFC_API">NFC</a>事件。</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.executeScript()")}}
+  - : 在浏览器{{HTMLElement("iframe")}}页面加载完成后执行指定的脚本。
+- {{domxref("HTMLIFrameElement.purgeHistory()")}}
+  - : 清理所有与浏览器{{HTMLElement("iframe")}}有关的资源（不包括 cookie）。
+- {{domxref("HTMLIFrameElement.setVisible()")}}
+  - : 修改浏览器{{HTMLElement("iframe")}}的可见性。这会影响资源分配和一些函数的资源占用率，如{{domxref("window.requestAnimationFrame","requestAnimationFrame")}}。
+- {{domxref("HTMLIFrameElement.getVisible()")}}
+  - : 指示当前浏览器{{HTMLElement("iframe")}}的可见性。
+- {{domxref("HTMLIFrameElement.setActive()")}}
+  - : 设置当前{{HTMLElement("iframe")}}为活动 frame，对进程管理器如何划分优先级有影响。
+- {{domxref("HTMLIFrameElement.getActive()")}}
+  - : 指示当前浏览器{{htmlelement("iframe")}}是否为当前活动的 frame。
+- {{domxref("HTMLIFrameElement.setInputMethodActive()")}}
+  - : 设置当前浏览器{{HTMLElement("iframe")}}是活动的输入法编辑器窗口而其他不是。当一个顶层应用希望激活一个窗口作为输入法编辑器（如键盘）时有用。
+- {{domxref("HTMLIFrameElement.setNfcFocus()")}}
+  - : Firefox 操作系统 [NFC API](/en-US/docs/Web/API/NFC_API) 的一部分，扩展了[Browser API](/en-US/docs/Web/API/Browser_API)，这个集合设置浏览器{{htmlelement("iframe")}}是否可以接收一个[NFC](/en-US/docs/Web/API/NFC_API)事件。
 
-<h4 id="音频相关方法">音频相关方法</h4>
+#### 音频相关方法
 
-<p>以下方法允许直接控制浏览器元素的声音。</p>
+以下方法允许直接控制浏览器元素的声音。
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.getVolume()")}}</dt>
- <dd>获取浏览器{{HTMLElement("iframe")}}当前音量。</dd>
- <dt>{{domxref("HTMLIFrameElement.setVolume()")}}</dt>
- <dd>设置浏览器{{HTMLElement("iframe")}}当前音量。</dd>
- <dt>{{domxref("HTMLIFrameElement.mute()")}}</dt>
- <dd>浏览器{{HTMLElement("iframe")}}播放的所有音频静音。</dd>
- <dt>{{domxref("HTMLIFrameElement.unmute()")}}</dt>
- <dd>取消浏览器{{HTMLElement("iframe")}}播放所有音频的静音。</dd>
- <dt>{{domxref("HTMLIFrameElement.getMuted()")}}</dt>
- <dd>指示当前浏览器{{HTMLElement("iframe")}}当前是否被静音。</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.getVolume()")}}
+  - : 获取浏览器{{HTMLElement("iframe")}}当前音量。
+- {{domxref("HTMLIFrameElement.setVolume()")}}
+  - : 设置浏览器{{HTMLElement("iframe")}}当前音量。
+- {{domxref("HTMLIFrameElement.mute()")}}
+  - : 浏览器{{HTMLElement("iframe")}}播放的所有音频静音。
+- {{domxref("HTMLIFrameElement.unmute()")}}
+  - : 取消浏览器{{HTMLElement("iframe")}}播放所有音频的静音。
+- {{domxref("HTMLIFrameElement.getMuted()")}}
+  - : 指示当前浏览器{{HTMLElement("iframe")}}当前是否被静音。
 
-<h4 id="Search_methods">Search methods</h4>
+#### Search methods
 
-<p>New methods are provided to allow programmatic searches of browser {{HTMLElement("iframe")}}s to be carried out.</p>
+New methods are provided to allow programmatic searches of browser {{HTMLElement("iframe")}}s to be carried out.
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.findAll()")}}</dt>
- <dd>Searches for a string in a browser {{HTMLElement("iframe")}}'s content; if found, the first instance of the string relative to the caret position will be highlighted.</dd>
- <dt>{{domxref("HTMLIFrameElement.findNext()")}}</dt>
- <dd>Highlights the next or previous instance of a search result after a {{domxref("HTMLIFrameElement.findAll","findAll()")}} search has been carried out.</dd>
- <dt>{{domxref("HTMLIFrameElement.clearMatch()")}}</dt>
- <dd>Clears any content highlighted by {{domxref("HTMLIFrameElement.findAll","findAll()")}} or {{domxref("HTMLIFrameElement.findNext","findNext()")}}.</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.findAll()")}}
+  - : Searches for a string in a browser {{HTMLElement("iframe")}}'s content; if found, the first instance of the string relative to the caret position will be highlighted.
+- {{domxref("HTMLIFrameElement.findNext()")}}
+  - : Highlights the next or previous instance of a search result after a {{domxref("HTMLIFrameElement.findAll","findAll()")}} search has been carried out.
+- {{domxref("HTMLIFrameElement.clearMatch()")}}
+  - : Clears any content highlighted by {{domxref("HTMLIFrameElement.findAll","findAll()")}} or {{domxref("HTMLIFrameElement.findNext","findNext()")}}.
 
-<h4 id="Event-related_methods">Event-related methods</h4>
+#### Event-related methods
 
-<p>In order to manage the browser {{HTMLElement("iframe")}}'s content, many new events were added (see below). The following methods are used to deal with those events:</p>
+In order to manage the browser {{HTMLElement("iframe")}}'s content, many new events were added (see below). The following methods are used to deal with those events:
 
-<dl>
- <dt>The {{HTMLElement("iframe")}} gains support for the methods of the {{domxref("EventTarget")}} interface</dt>
- <dd>{{domxref("EventTarget.addEventListener","addEventListener()")}}, {{domxref("EventTarget.removeEventListener","removeEventListener()")}}, and {{domxref("EventTarget.dispatchEvent","dispatchEvent()")}}.</dd>
- <dt>{{domxref("HTMLIFrameElement.sendMouseEvent()")}}</dt>
- <dd>Sends a {{domxref("MouseEvent")}} to the {{HTMLElement("iframe")}}'s content.</dd>
- <dt>{{domxref("HTMLIFrameElement.sendTouchEvent()")}}</dt>
- <dd>Sends a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.</dd>
- <dt>{{domxref("HTMLIFrameElement.addNextPaintListener()")}}</dt>
- <dd>Defines a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.</dd>
- <dt>{{domxref("HTMLIFrameElement.removeNextPaintListener()")}}</dt>
- <dd>Removes a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.</dd>
-</dl>
+- The {{HTMLElement("iframe")}} gains support for the methods of the {{domxref("EventTarget")}} interface
+  - : {{domxref("EventTarget.addEventListener","addEventListener()")}}, {{domxref("EventTarget.removeEventListener","removeEventListener()")}}, and {{domxref("EventTarget.dispatchEvent","dispatchEvent()")}}.
+- {{domxref("HTMLIFrameElement.sendMouseEvent()")}}
+  - : Sends a {{domxref("MouseEvent")}} to the {{HTMLElement("iframe")}}'s content.
+- {{domxref("HTMLIFrameElement.sendTouchEvent()")}}
+  - : Sends a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.
+- {{domxref("HTMLIFrameElement.addNextPaintListener()")}}
+  - : Defines a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.
+- {{domxref("HTMLIFrameElement.removeNextPaintListener()")}}
+  - : Removes a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.
 
-<h4 id="Utility_methods">Utility methods</h4>
+#### Utility methods
 
-<p>Last, there are some utility methods, useful for apps that host a browser {{HTMLElement("iframe")}}.</p>
+Last, there are some utility methods, useful for apps that host a browser {{HTMLElement("iframe")}}.
 
-<dl>
- <dt>{{domxref("HTMLIFrameElement.download()")}}</dt>
- <dd>Downloads a specified URL, storing it at the specified filename/path.</dd>
- <dt>{{domxref("HTMLIFrameElement.getContentDimensions()")}}</dt>
- <dd>Retrieves the X and Y dimensions of the content window.</dd>
- <dt>{{domxref("HTMLIFrameElement.getManifest()")}}</dt>
- <dd>Retrieves the manifest of an app loaded in the browser {{HTMLElement("iframe")}} and returns it as JSON.</dd>
- <dt>{{domxref("HTMLIFrameElement.getScreenshot()")}}</dt>
- <dd>Takes a screenshot of the browser {{HTMLElement("iframe")}}'s content. This is particularly useful to get thumbnails of tabs in a tabbed browser app.</dd>
- <dt>{{domxref("HTMLIFrameElement.getStructuredData()")}}</dt>
- <dd>Retrieves any structured microdata (and hCard and hCalendar microformat data) contained in the HTML loaded in the browser {{HTMLElement("iframe")}} and returns it as JSON.</dd>
- <dt>{{domxref("HTMLIFrameElement.zoom()")}}</dt>
- <dd>Changes the zoom factor of the browser {{HTMLElement("iframe")}}'s content. This is particularly useful for zooming in/out on non-touch-enabled devices.</dd>
-</dl>
+- {{domxref("HTMLIFrameElement.download()")}}
+  - : Downloads a specified URL, storing it at the specified filename/path.
+- {{domxref("HTMLIFrameElement.getContentDimensions()")}}
+  - : Retrieves the X and Y dimensions of the content window.
+- {{domxref("HTMLIFrameElement.getManifest()")}}
+  - : Retrieves the manifest of an app loaded in the browser {{HTMLElement("iframe")}} and returns it as JSON.
+- {{domxref("HTMLIFrameElement.getScreenshot()")}}
+  - : Takes a screenshot of the browser {{HTMLElement("iframe")}}'s content. This is particularly useful to get thumbnails of tabs in a tabbed browser app.
+- {{domxref("HTMLIFrameElement.getStructuredData()")}}
+  - : Retrieves any structured microdata (and hCard and hCalendar microformat data) contained in the HTML loaded in the browser {{HTMLElement("iframe")}} and returns it as JSON.
+- {{domxref("HTMLIFrameElement.zoom()")}}
+  - : Changes the zoom factor of the browser {{HTMLElement("iframe")}}'s content. This is particularly useful for zooming in/out on non-touch-enabled devices.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLIFrameElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("iframe")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("iframe")}}

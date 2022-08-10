@@ -3,31 +3,31 @@ title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
 translation_of: Web/API/HTMLTemplateElement/content
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p>The <code><strong>HTMLTemplateElement.content</strong></code>属性返回<code>&lt;template&gt;</code>元素的模板内容(一个 {{domxref("DocumentFragment")}}).</p>
+The **`HTMLTemplateElement.content`**属性返回`<template>`元素的模板内容(一个 {{domxref("DocumentFragment")}}).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>documentFragment</var> = <var>templateElement</var>.content</pre>
+```plain
+var documentFragment = templateElement.content
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var templateElement = document.querySelector("#foo");
-var documentFragment = templateElement.content.cloneNode(true);</pre>
+```js
+var templateElement = document.querySelector("#foo");
+var documentFragment = templateElement.content.cloneNode(true);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLTemplateElement.content")}}
 
+## 相关链接
 
-<p>{{Compat("api.HTMLTemplateElement.content")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("HTMLTemplateElement")}}</li>
-</ul>
+- {{domxref("HTMLTemplateElement")}}

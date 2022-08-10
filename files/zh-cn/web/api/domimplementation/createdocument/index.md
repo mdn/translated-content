@@ -3,53 +3,43 @@ title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
 translation_of: Web/API/DOMImplementation/createDocument
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p><strong><code>DOMImplementation.createDocument()</code>方法创建并返回一个</strong> {{domxref("XMLDocument")}}对象。</p>
+**`DOMImplementation.createDocument()`方法创建并返回一个** {{domxref("XMLDocument")}}对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>doc</em> = document.implementation.createDocument(<em>namespaceURI</em>, <em>qualifiedNameStr</em>, <em>documentType</em>);</pre>
+```plain
+doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>namespaceURI</em></dt>
- <dd>被创建的{{domxref("DOMString")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为<code>null</code>.</dd>
-</dl>
+- _namespaceURI_
+  - : 被创建的{{domxref("DOMString")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为`null`.
+- _qualifiedNameStr_
+  - : {{domxref("DOMString")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
+- _documentType_ {{optional_inline}}
+  - : 文档的 `DocumentType `默认为 null.
 
-<dl>
- <dt><em>qualifiedNameStr </em></dt>
- <dd> {{domxref("DOMString")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。</dd>
-</dl>
+## 例子
 
-<dl>
- <dt><em>documentType </em>{{optional_inline}}</dt>
- <dd>文档的 <code><a href="/En/DOM/DocumentType">DocumentType</a> </code>默认为 null.</dd>
-</dl>
-
-<ul>
-</ul>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
+```js
+var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
 var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
 body.setAttribute('id', 'abc');
 doc.documentElement.appendChild(body);
 alert(doc.getElementById('abc')); // [object HTMLBodyElement]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
-<p>{{Compat("api.DOMImplementation.createDocument")}}</p>
+{{Compat("api.DOMImplementation.createDocument")}}
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li>归属它的 {{domxref("DOMImplementation")}} 接口。</li>
-</ul>
+- 归属它的 {{domxref("DOMImplementation")}} 接口。

@@ -8,58 +8,56 @@ tags:
   - 运算符
 translation_of: Web/JavaScript/Reference/Operators/Division
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>除法运算符 (<code>/</code>) 计算了两个操作数的商，左边的数是被除数，右边的是除数</p>
+除法运算符 (`/`) 计算了两个操作数的商，左边的数是被除数，右边的是除数
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-division.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
+## 语法
 
+```plain
+Operator: x / y
+```
 
+## 例子
 
+### 基本除法
 
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox"><strong>Operator:</strong> <var>x</var> / <var>y</var>
-</pre>
-
-<h2 id="例子">例子</h2>
-
-<h3 id="基本除法">基本除法</h3>
-
-<pre class="brush: js">1 / 2              // 0.5
+```js
+1 / 2              // 0.5
 
 Math.floor(3 / 2) // 1
 
 1.0 / 2.0         // 0.5
-</pre>
+```
 
-<h3 id="除以0">除以 0</h3>
+### 除以 0
 
-<pre class="brush: js">2.0 / 0     // Infinity
+```js
+2.0 / 0     // Infinity
 
 2.0 / 0.0   // Infinity, because 0.0 === 0
 
-2.0 / -0.0  // -Infinity</pre>
+2.0 / -0.0  // -Infinity
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment">Increment operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Increment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

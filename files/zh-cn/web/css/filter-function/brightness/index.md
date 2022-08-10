@@ -4,34 +4,32 @@ slug: Web/CSS/filter-function/brightness
 translation_of: Web/CSS/filter-function/brightness()
 original_slug: Web/CSS/filter-function/brightness()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong><code>brightness()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.</p>
+**`brightness()`** [CSS](/en-US/docs/Web/CSS)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-brightness.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 
+## 语法
 
+```plain
+brightness(amount)
+```
 
-<h2 id="语法">语法</h2>
+### 值
 
-<pre class="syntaxbox notranslate">brightness(<em>amount</em>)</pre>
+- `amount`
+  - : 输出的亮度值取决于{{cssxref("&lt;number&gt;")}}或{{cssxref("&lt;percentage&gt;")}}的大小。低于`100%` 的值会使图片变暗， 超过`100%`的值将会使其变亮。当值为`0%`时将会创建一个全黑的图像，当值为`100%`时不会有任何变化。该值为空时默认为`1`.
 
-<h3 id="值">值</h3>
+## 例子
 
-<dl>
- <dt><code>amount</code></dt>
- <dd>输出的亮度值取决于{{cssxref("&lt;number&gt;")}}或{{cssxref("&lt;percentage&gt;")}}的大小。低于<code>100%</code> 的值会使图片变暗， 超过<code>100%</code>的值将会使其变亮。当值为<code>0%</code>时将会创建一个全黑的图像，当值为<code>100%</code>时不会有任何变化。该值为空时默认为<code>1</code>.</dd>
-</dl>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: css notranslate">brightness(0%)   /* 全黑 */
+```css
+brightness(0%)   /* 全黑 */
 brightness(0.4)  /* 40% 亮度 */
 brightness(1)    /* 无效果 */
-brightness(200%) /* 两倍亮度 */</pre>
+brightness(200%) /* 两倍亮度 */
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

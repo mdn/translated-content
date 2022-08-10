@@ -4,42 +4,40 @@ slug: Web/API/URL/password
 translation_of: Web/API/URL/password
 original_slug: Web/API/URL/密码
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p> {{domxref("URL")}}接口的<strong><code>password</code></strong>属性为{{domxref("USVString")}}，其中包含在域名之前指定的密码。</p>
+{{domxref("URL")}}接口的**`password`**属性为{{domxref("USVString")}}，其中包含在域名之前指定的密码。
 
-<p>如果在未设置<a href="/zh-CN/docs/Web/API/URL/username">username</a>属性的情况下进行调用，默认失败。</p>
+如果在未设置[username](/zh-CN/docs/Web/API/URL/username)属性的情况下进行调用，默认失败。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.password;
-<em>object</em>.password = <em>string</em>;
-</pre>
+```plain
+string = object.password;
+object.password = string;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
+```js
+var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
 var result = url.password; // Returns:"flabada"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.URL.password")}}
 
+## 参见
 
-<p>{{Compat("api.URL.password")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

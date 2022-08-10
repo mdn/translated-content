@@ -3,35 +3,35 @@ title: 'Location: search'
 slug: Web/API/Location/search
 translation_of: Web/API/Location/search
 ---
-<div>{{ApiRef("Location")}}</div>
+{{ApiRef("Location")}}
 
-<p>{{domxref("Location")}} 接口的 <strong><code>search</code></strong> 属性会返回一段 {{domxref("USVString")}}，其中包含一个 URL 标识中的 <code>'?'</code> 以及跟随其后的一串 URL 查询参数。</p>
+{{domxref("Location")}} 接口的 **`search`** 属性会返回一段 {{domxref("USVString")}}，其中包含一个 URL 标识中的 `'?'` 以及跟随其后的一串 URL 查询参数。
 
-<p>现代浏览器提供 <code><a href="/en-US/docs/Web/API/URLSearchParams/get#Examples">URLSearchParams</a></code> 和 <code><a href="/en-US/docs/Web/API/URL/searchParams#Examples">URL.searchParams</a></code> 两个接口，使得从查询字符串中解析出查询参数变得更加容易。</p>
+现代浏览器提供 [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#Examples) 和 [`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#Examples) 两个接口，使得从查询字符串中解析出查询参数变得更加容易。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><em>string</em> = <em>object</em>.search;
-<em>object</em>.search = <em>string</em>;
-</pre>
+```plain
+string = object.search;
+object.search = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js notranslate">// 声明了一个 &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.search?q=123"&gt; 元素在文档流中
+```js
+// 声明了一个 <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.search?q=123"> 元素在文档流中
 var anchor = document.getElementById("myAnchor");
 var queryString = anchor.search; // Returns:'?q=123'
 
 // 进一步解析：
 let params = new URLSearchParams(queryString);
 let q = parseInt(params.get("q")); // is the number 123
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.Location.search")}}</p>
+{{Compat("api.Location.search")}}

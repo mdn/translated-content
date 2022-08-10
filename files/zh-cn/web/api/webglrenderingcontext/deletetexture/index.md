@@ -3,53 +3,48 @@ title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
 translation_of: Web/API/WebGLRenderingContext/deleteTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}WebGLRenderingContext.deleteTexture() 方法删除指定的{{domxref("WebGLTexture")}}对象。如果纹理已被删除，则此方法无效。
 
-<div>WebGLRenderingContext.deleteTexture() 方法删除指定的{{domxref("WebGLTexture")}}对象。如果纹理已被删除，则此方法无效。</div>
+## Syntax
 
+```plain
+void gl.deleteTexture(texture);
+```
 
+### Parameters
 
-<h2 id="Syntax">Syntax</h2>
+- texture
+  - : 将要删除的{{domxref("WebGLTexture")}} 对象。
 
-<pre class="syntaxbox">void <var>gl</var>.deleteTexture(<var>texture</var>);
-</pre>
+### Return value
 
-<h3 id="Parameters">Parameters</h3>
+无。
 
-<dl>
- <dt>texture</dt>
- <dd>将要删除的{{domxref("WebGLTexture")}} 对象。</dd>
-</dl>
+## Examples
 
-<h3 id="Return_value">Return value</h3>
+### Deleting a texture
 
-<p>无。</p>
-
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Deleting_a_texture">Deleting a texture</h3>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
 // ...
 
-gl.deleteTexture(texture);</pre>
+gl.deleteTexture(texture);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.WebGLRenderingContext.deleteTexture")}}</p>
+{{Compat("api.WebGLRenderingContext.deleteTexture")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

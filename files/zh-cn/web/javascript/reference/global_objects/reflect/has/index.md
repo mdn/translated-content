@@ -3,41 +3,41 @@ title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.has()</code></strong> 作用与 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> 操作符</a> 相同。</p>
+静态方法 **`Reflect.has()`** 作用与 [`in` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) 相同。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">Reflect.has(target, propertyKey)
-</pre>
+```plain
+Reflect.has(target, propertyKey)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>propertyKey</code></dt>
- <dd>属性名，需要检查目标对象是否存在此属性。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `propertyKey`
+  - : 属性名，需要检查目标对象是否存在此属性。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{jsxref("Boolean")}} 类型的对象指示是否存在此属性。</p>
+一个 {{jsxref("Boolean")}} 类型的对象指示是否存在此属性。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果目标对象并非{{jsxref("Object")}} 类型，抛出{{jsxref("TypeError")}}。</p>
+如果目标对象并非{{jsxref("Object")}} 类型，抛出{{jsxref("TypeError")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.has</code> 用于检查一个对象是否拥有某个属性， 相当于<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> 操作符</a> 。</p>
+`Reflect.has` 用于检查一个对象是否拥有某个属性， 相当于[`in` 操作符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) 。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.has()">使用 <code>Reflect.has()</code></h3>
+### 使用 `Reflect.has()`
 
-<pre class="brush: js">Reflect.has({x: 0}, "x"); // true
+```js
+Reflect.has({x: 0}, "x"); // true
 Reflect.has({x: 0}, "y"); // false
 
 // 如果该属性存在于原型链中，返回 true
@@ -49,19 +49,17 @@ obj = new Proxy({}, {
 });
 Reflect.has(obj, "doorbell"); // true
 Reflect.has(obj, "dormitory"); // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关连接">相关连接</h2>
+## 相关连接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in</code> operator</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)

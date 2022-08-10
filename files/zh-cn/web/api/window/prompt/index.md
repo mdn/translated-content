@@ -3,26 +3,26 @@ title: window.prompt
 slug: Web/API/Window/prompt
 translation_of: Web/API/Window/prompt
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字。</p>
+显示一个对话框，对话框中包含一条文字信息，用来提示用户输入文字。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="brush: js">result = window.prompt(text, value);
-</pre>
+```js
+result = window.prompt(text, value);
+```
 
-<ul>
- <li><code>result</code> 用来存储用户输入文字的字符串，或者是 null。</li>
- <li><code>text</code> 用来提示用户输入文字的字符串，如果没有任何提示内容，该参数可以省略不写。</li>
- <li><code>value</code> 文本输入框中的默认值，该参数也可以省略不写。不过在 Internet Explorer 7 和 8 中，省略该参数会导致输入框中显示默认值"undefined"。</li>
-</ul>
+- `result` 用来存储用户输入文字的字符串，或者是 null。
+- `text` 用来提示用户输入文字的字符串，如果没有任何提示内容，该参数可以省略不写。
+- `value` 文本输入框中的默认值，该参数也可以省略不写。不过在 Internet Explorer 7 和 8 中，省略该参数会导致输入框中显示默认值"undefined"。
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: js">var sign = prompt("你是什么星座的？");
+```js
+var sign = prompt("你是什么星座的？");
 if (sign == "天蝎座"){
    alert("哇！我也是天蝎座的耶！");
 }
@@ -31,26 +31,24 @@ var sign = window.prompt(); // 打开空的提示窗口
 var sign = prompt();       // 打开空的提示窗口
 var sign = window.prompt('你觉得很幸运吗？'); // 打开显示提示文本为"你觉得很幸运吗？"的提示窗口
 var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示提示文本为"你觉得很幸运吗？"并且输入框默认值为"是的"的提示窗口
-</pre>
+```
 
-<p>当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空，则返回一个空字符串。如果用户点击"取消"按钮，则返回 null。</p>
+当用户点击"确定"按钮后，文本输入框中的文字被返回。如果文本输入框中为空，则返回一个空字符串。如果用户点击"取消"按钮，则返回 null。
 
-<h3 id="Notes">注意</h3>
+### 注意
 
-<div>一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。<br>
-<br>
-prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。</div>
+一个 prompt 对话框，包含一个单行文本框，一个“取消”按钮，一个“确定”按钮，在对话框关闭时，返回用户输入到文本框内的值 (可能为空)。
 
-<div>Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代 window.prompt。</div>
+prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM [nsIPromptService](/zh-cn/XPCOM_Interface_Reference/nsIPromptService) 来替代 window\.prompt。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h3 id="See_also">参见</h3>
+### 参见
 
-<p><a href="/zh-cn/DOM/window.alert">alert</a>, <a href="/zh-cn/DOM/window.confirm">confirm</a></p>
+[alert](/zh-cn/DOM/window.alert), [confirm](/zh-cn/DOM/window.confirm)

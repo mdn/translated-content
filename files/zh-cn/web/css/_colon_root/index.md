@@ -1,35 +1,36 @@
 ---
 title: ':root'
-slug: 'Web/CSS/:root'
+slug: Web/CSS/:root
 tags:
   - CSS
   - CSS 伪类
-translation_of: 'Web/CSS/:root'
+translation_of: Web/CSS/:root
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>:root</code></strong> 这个 CSS <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>匹配文档树的根元素。对于 HTML 来说，<strong><code>:root</code></strong> 表示 {{HTMLElement("html")}} 元素，除了<a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a>更高之外，与 <code>html</code> 选择器相同。</p>
+**`:root`** 这个 CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配文档树的根元素。对于 HTML 来说，**`:root`** 表示 {{HTMLElement("html")}} 元素，除了[优先级](/zh-CN/docs/Web/CSS/Specificity)更高之外，与 `html` 选择器相同。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在声明全局 <a href="/zh-CN/docs/Web/CSS/--*">CSS 变量</a>时 <strong><code>:root</code></strong> 会很有用：</p>
+在声明全局 [CSS 变量](/zh-CN/docs/Web/CSS/--*)时 **`:root`** 会很有用：
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-color: hotpink;
   --pane-padding: 5px 42px;
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.root")}}

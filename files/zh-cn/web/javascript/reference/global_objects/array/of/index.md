@@ -11,67 +11,69 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Array.of()</strong></code> 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。</p>
+**`Array.of()`** 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
 
-<p> <code><strong>Array.of()</strong></code> 和 <code><strong>Array</strong></code> 构造函数之间的区别在于处理整数参数：<code><strong>Array.of(7)</strong></code><strong> </strong>创建一个具有单个元素 <strong>7</strong> 的数组，而 <strong><code>Array(7)</code> </strong>创建一个长度为 7 的空数组（<strong>注意：</strong>这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个<code>undefined</code>组成的数组）。</p>
+**`Array.of()`** 和 **`Array`** 构造函数之间的区别在于处理整数参数：**`Array.of(7)`** 创建一个具有单个元素 **7** 的数组，而 **`Array(7)`** 创建一个长度为 7 的空数组（**注意**：这是指一个有 7 个空位 (empty) 的数组，而不是由 7 个`undefined`组成的数组）。
 
-<pre class="brush: js">Array.of(7);       // [7]
+```js
+Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
 Array(7);          // [ , , , , , , ]
 Array(1, 2, 3);    // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Array.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])</code></pre>
+```plain
+Array.of(element0[, element1[, ...[, elementN]]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt>element<em>N</em></dt>
- <dd>任意个参数，将按顺序成为返回数组中的元素。</dd>
-</dl>
+- element*N*
+  - : 任意个参数，将按顺序成为返回数组中的元素。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新的 {{jsxref("Array")}} 实例。</p>
+新的 {{jsxref("Array")}} 实例。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>此函数是 ECMAScript 2015 标准的一部分。详见 <a href="https://gist.github.com/rwaldron/1074126"><code>Array.of 和</code> <code>Array.from</code> proposal</a> 和 <a href="https://gist.github.com/rwaldron/3186576"><code>Array.of</code> polyfill</a>。</p>
+此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of 和` `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">Array.of(1);         // [1]
+```js
+Array.of(1);         // [1]
 Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
-</pre>
+```
 
-<h2 id="Compatibility">兼容旧环境</h2>
+## 兼容旧环境
 
-<p>如果原生不支持的话，在其他代码之前执行以下代码会创建 <code>Array.of()</code> 。</p>
+如果原生不支持的话，在其他代码之前执行以下代码会创建 `Array.of()` 。
 
-<pre class="brush: js">if (!Array.of) {
+```js
+if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
   };
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("TypedArray.of()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("TypedArray.of()")}}

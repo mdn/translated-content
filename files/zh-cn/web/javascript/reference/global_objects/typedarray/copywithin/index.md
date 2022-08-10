@@ -6,55 +6,54 @@ tags:
   - 类型数组
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>copyWithin()</strong></code><strong> </strong>方法将数组中元素的序列复制到以 <code>target</code> 起始的位置。拷贝的副本取自第二个参数（<code>start</code>）和第三个参数（<code>end</code>）的下标位置。<code>end</code> 参数是可选的，默认为数组长度。该方法与 {{jsxref("Array.prototype.copyWithin")}} 的算法相同<em>。</em> <em>TypedArray</em> 指的是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+**`copyWithin()`** 方法将数组中元素的序列复制到以 `target` 起始的位置。拷贝的副本取自第二个参数（`start`）和第三个参数（`end`）的下标位置。`end` 参数是可选的，默认为数组长度。该方法与 {{jsxref("Array.prototype.copyWithin")}} 的算法相同。_TypedArray_ 指的是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.copyWithin(<var>target</var>, <var>start</var>[, <var>end</var> = this.length])</code></pre>
+```plain
+typedarray.copyWithin(target, start[, end = this.length])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标起始位置的下标，复制元素到这里。</dd>
- <dt><code>start</code></dt>
- <dd>源起始位置的下标，在这里开始复制元素。</dd>
- <dt><code>end {{optional_inline}}</code></dt>
- <dd>可选。源终止位置的下标，在这里停止复制元素。</dd>
-</dl>
+- `target`
+  - : 目标起始位置的下标，复制元素到这里。
+- `start`
+  - : 源起始位置的下标，在这里开始复制元素。
+- `end {{optional_inline}}`
+  - : 可选。源终止位置的下标，在这里停止复制元素。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>修改后的类型化数组。</p>
+修改后的类型化数组。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>更多信息请见 {{jsxref("Array.prototype.copyWithin")}}。</p>
+更多信息请见 {{jsxref("Array.prototype.copyWithin")}}。
 
-<p>这个方法取代了实验性的 {{jsxref("TypedArray.prototype.move()")}}。</p>
+这个方法取代了实验性的 {{jsxref("TypedArray.prototype.move()")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);
 uint8.set([1,2,3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
 uint8.copyWithin(3,0,3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- {{jsxref("TypedArray")}}

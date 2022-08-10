@@ -6,13 +6,12 @@ tags:
 translation_of: Web/CSS/text-decoration-thickness
 original_slug: Web/CSS/文本装饰线厚度 (粗细)
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}[CSS](/en-US/docs/CSS) 属性 **`text-decoration-thickness`** 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触厚度。
 
-<div><a href="/en-US/docs/CSS">CSS</a> 属性 <strong><code>text-decoration-thickness</code></strong> 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触厚度。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* Single keyword */
+```css
+/* Single keyword */
 text-decoration-thickness: auto;
 text-decoration-thickness: from-font;
 
@@ -26,42 +25,44 @@ text-decoration-thickness: 10%;
 /* Global values */
 text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
-text-decoration-thickness: unset;</pre>
+text-decoration-thickness: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>由浏览器为文本装饰线选择合适的厚度。</dd>
- <dt><code>from-font</code></dt>
- <dd>如果字体文件中包含了首选的厚度值，则使用字体文件的厚度值。如果字体文件中没有包含首选的厚度值，则效果和设置为 <code>auto</code> 一样，由浏览器选择合适的厚度值。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>将文本装饰线的厚度设置为一个 {{cssxref('length')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Specifies the thickness of the text decoration line as a {{cssxref('percentage')}} of <strong>1em</strong> in the current font. A percentage inherits as a relative value, and so therefore scales with changes in the font. The browser must use a minimum of 1 device pixel. For a given application of this property, the thickness is constant across the whole box it is applied to, even if there are child elements with a different font size.</dd>
-</dl>
+- `auto`
+  - : 由浏览器为文本装饰线选择合适的厚度。
+- `from-font`
+  - : 如果字体文件中包含了首选的厚度值，则使用字体文件的厚度值。如果字体文件中没有包含首选的厚度值，则效果和设置为 `auto` 一样，由浏览器选择合适的厚度值。
+- `<length>`
+  - : 将文本装饰线的厚度设置为一个 {{cssxref('length')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。
+- `<percentage>`
+  - : Specifies the thickness of the text decoration line as a {{cssxref('percentage')}} of **1em** in the current font. A percentage inherits as a relative value, and so therefore scales with changes in the font. The browser must use a minimum of 1 device pixel. For a given application of this property, the thickness is constant across the whole box it is applied to, even if there are child elements with a different font size.
 
-<h2 id="Formal_definition">Formal definition</h2>
+## Formal definition
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Formal_syntax">Formal syntax</h2>
+## Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Varying_thickness">Varying thickness</h3>
+### Varying thickness
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p class="thin"&gt;Here's some text with a 1px red underline.&lt;/p&gt;
-&lt;p class="thick"&gt;This one has a 5px red underline.&lt;/p&gt;
-&lt;p class="shorthand"&gt;This uses the equivalent shorthand.&lt;/p&gt;</pre>
+```html
+<p class="thin">Here's some text with a 1px red underline.</p>
+<p class="thick">This one has a 5px red underline.</p>
+<p class="shorthand">This uses the equivalent shorthand.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">.thin {
+```css
+.thin {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-color: red;
@@ -77,25 +78,22 @@ text-decoration-thickness: unset;</pre>
 
 .shorthand {
   text-decoration: underline solid red 5px;
-}</pre>
+}
+```
 
-<h4 id="Results">Results</h4>
+#### Results
 
-<p>{{ EmbedLiveSample('Varying_thickness', '', '', '') }}</p>
+{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.text-decoration-thickness")}}
 
+## 相关链接
 
-<p>{{Compat("css.properties.text-decoration-thickness")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-underline-offset")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-underline-offset")}}

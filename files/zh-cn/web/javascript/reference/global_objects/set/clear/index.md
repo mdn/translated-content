@@ -10,22 +10,24 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>clear()</strong></code> 方法用来清空一个 <code>Set</code> 对象中的所有元素。</p>
+**`clear()`** 方法用来清空一个 `Set` 对象中的所有元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>mySet</em>.clear();</code>
-</pre>
+```plain
+mySet.clear();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
@@ -36,19 +38,17 @@ mySet.clear();
 
 mySet.size;       // 0
 mySet.has("bar")  // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}

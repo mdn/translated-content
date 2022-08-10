@@ -9,63 +9,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.get()</code></strong> 方法用于拦截对象的读取属性操作。</p>
+**`handler.get()`** 方法用于拦截对象的读取属性操作。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   get: function(target, property, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>以下是传递给 get 方法的参数，<code>this 上下文绑定在</code>handler 对象上。</p>
+以下是传递给 get 方法的参数，`this 上下文绑定在`handler 对象上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>property</code></dt>
- <dd>被获取的属性名。</dd>
- <dt><code>receiver</code></dt>
- <dd>Proxy 或者继承 Proxy 的对象</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `property`
+  - : 被获取的属性名。
+- `receiver`
+  - : Proxy 或者继承 Proxy 的对象
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>get 方法可以返回任何值。</p>
+get 方法可以返回任何值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><strong><code>handler.get</code></strong> 方法用于拦截对象的读取属性操作。</p>
+**`handler.get`** 方法用于拦截对象的读取属性操作。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该方法会拦截目标对象的以下操作：</p>
+该方法会拦截目标对象的以下操作：
 
-<ul>
- <li>访问属性：<code>proxy[foo] 和</code> <code>proxy.bar</code></li>
- <li>访问原型链上的属性：<code>Object.create(proxy)[foo]</code></li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- 访问属性：`proxy[foo] 和` `proxy.bar`
+- 访问原型链上的属性：`Object.create(proxy)[foo]`
+- {{jsxref("Reflect.get()")}}
 
-<h3 id="约束">约束</h3>
+### 约束
 
-<p>如果违背了以下的约束，proxy 会抛出 {{jsxref("TypeError")}}:</p>
+如果违背了以下的约束，proxy 会抛出 {{jsxref("TypeError")}}:
 
-<ul>
- <li>如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同。</li>
- <li>如果要访问的目标属性没有配置访问方法，即 get 方法是 undefined 的，则返回值必须为 undefined。</li>
-</ul>
+- 如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同。
+- 如果要访问的目标属性没有配置访问方法，即 get 方法是 undefined 的，则返回值必须为 undefined。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示如何拦截属性值的读取操作。</p>
+以下代码演示如何拦截属性值的读取操作。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   get: function(target, prop, receiver) {
     console.log("called: " + prop);
     return 10;
@@ -74,11 +70,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 
 console.log(p.a); // "called: a"
                   // 10
-</pre>
+```
 
-<p>以下代码演示违反约束的情况。</p>
+以下代码演示违反约束的情况。
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
@@ -93,20 +90,18 @@ var p = new Proxy(obj, {
 });
 
 p.a; //会抛出 TypeError
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.get()")}}

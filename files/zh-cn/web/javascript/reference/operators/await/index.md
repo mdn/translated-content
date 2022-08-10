@@ -9,38 +9,37 @@ tags:
   - 操作符
 translation_of: Web/JavaScript/Reference/Operators/await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><code>await</code>  操作符用于等待一个{{jsxref("Promise")}} 对象。它只能在异步函数 {{jsxref("Statements/async_function", "async function")}} 中使用。</p>
+`await` 操作符用于等待一个{{jsxref("Promise")}} 对象。它只能在异步函数 {{jsxref("Statements/async_function", "async function")}} 中使用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">[返回值] = await 表达式;</pre>
+```plain
+[返回值] = await 表达式;
+```
 
-<dl>
- <dt>表达式</dt>
- <dd>一个 {{jsxref("Promise")}} 对象或者任何要等待的值。</dd>
- <dt>返回值</dt>
- <dd>
- <p>返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。</p>
- </dd>
-</dl>
+- 表达式
+  - : 一个 {{jsxref("Promise")}} 对象或者任何要等待的值。
+- 返回值
+  - : 返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理 (fulfilled)，其回调的 resolve 函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。</p>
+await 表达式会暂停当前 {{jsxref("Statements/async_function", "async function")}} 的执行，等待 Promise 处理完成。若 Promise 正常处理 (fulfilled)，其回调的 resolve 函数参数作为 await 表达式的值，继续执行 {{jsxref("Statements/async_function", "async function")}}。
 
-<p>若 Promise 处理异常 (rejected)，await 表达式会把 Promise 的异常原因抛出。</p>
+若 Promise 处理异常 (rejected)，await 表达式会把 Promise 的异常原因抛出。
 
-<p>另外，如果 await 操作符后的表达式的值不是一个 Promise，则返回该值本身。</p>
+另外，如果 await 操作符后的表达式的值不是一个 Promise，则返回该值本身。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>如果一个 Promise 被传递给一个 await 操作符，await 将等待 Promise 正常处理完成并返回其处理结果。</p>
+如果一个 Promise 被传递给一个 await 操作符，await 将等待 Promise 正常处理完成并返回其处理结果。
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -51,41 +50,41 @@ async function f1() {
   console.log(x); // 10
 }
 f1();
+```
 
-</pre>
+如果该值不是一个 Promise，await 会把该值转换为已正常处理的 Promise，然后等待其处理结果。
 
-<p>如果该值不是一个 Promise，await 会把该值转换为已正常处理的 Promise，然后等待其处理结果。</p>
-
-<pre class="brush: js">async function f2() {
+```js
+async function f2() {
   var y = await 20;
   console.log(y); // 20
 }
 f2();
-</pre>
+```
 
-<p>如果 Promise 处理异常，则异常值被抛出。</p>
+如果 Promise 处理异常，则异常值被抛出。
 
-<pre class="brush: js">async function f3() {
+```js
+async function f3() {
   try {
     var z = await Promise.reject(30);
   } catch (e) {
     console.log(e); // 30
   }
 }
-f3();</pre>
+f3();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="查看更多">查看更多</h2>
+## 查看更多
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async 函数")}}</li>
- <li>{{jsxref("Operators/async_function", "async 函数表达式")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
-</ul>
+- {{jsxref("Statements/async_function", "async 函数")}}
+- {{jsxref("Operators/async_function", "async 函数表达式")}}
+- {{jsxref("AsyncFunction")}} object

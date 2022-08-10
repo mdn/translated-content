@@ -4,46 +4,49 @@ slug: Web/API/Element/previousElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p><strong>previousElementSibling</strong> 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回<code>null,</code>该属性是只读的。</p>
+**previousElementSibling** 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回`null,`该属性是只读的。
 
-<h3 id="Syntax_and_values">语法</h3>
+### 语法
 
-<pre class="eval">var <em>prevNode</em> = elementNodeReference.previousElementSibling;
-</pre>
+```plain
+var prevNode = elementNodeReference.previousElementSibling;
+```
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
-&lt;li&gt;This is a list item&lt;/li&gt;
-&lt;li&gt;This is another list item&lt;/li&gt;
-&lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
+<li>This is a list item</li>
+<li>This is another list item</li>
+<div id="div-03">Here is div-03</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var el = document.getElementById('div-03').previousElementSibling;
-  document.write('&lt;p&gt;Siblings of div-03&lt;/p&gt;&lt;ol&gt;');
+  document.write('<p>Siblings of div-03</p><ol>');
   while (el) {
-    document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+    document.write('<li>' + el.nodeName + '</li>');
     el = el.previousElementSibling;
   }
-  document.write('&lt;/ol&gt;');
-&lt;/script&gt;
-</pre>
+  document.write('</ol>');
+</script>
+```
 
-<p>上面的例子会输出以下内容：</p>
+上面的例子会输出以下内容：
 
-<pre>Siblings of div-03
+```plain
+Siblings of div-03
 
    1. LI
    2. LI
    3. DIV
    4. DIV
-</pre>
+```
 
-<h3 id="Specification">浏览器兼容性</h3>
+### 浏览器兼容性
 
 {{Compat("api.Element.previousElementSibling")}}

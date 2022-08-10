@@ -7,35 +7,33 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/200
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <strong><code>200 OK</code></strong> 表明请求已经成功。默认情况下状态码为 200 的响应可以被缓存。</p>
+状态码 **`200 OK`** 表明请求已经成功。默认情况下状态码为 200 的响应可以被缓存。
 
-<p>不同请求方式对于请求成功的意义如下：</p>
+不同请求方式对于请求成功的意义如下：
 
-<ul>
- <li>{{HTTPMethod("GET")}}: 已经取得资源，并将资源添加到响应的消息体中。</li>
- <li>{{HTTPMethod("HEAD")}}: 响应的消息体为头部信息。</li>
- <li>{{HTTPMethod("POST")}}: 响应的消息体中包含此次请求的结果。</li>
- <li>{{HTTPMethod("TRACE")}}: 响应的消息体中包含服务器接收到的请求信息。</li>
-</ul>
+- {{HTTPMethod("GET")}}: 已经取得资源，并将资源添加到响应的消息体中。
+- {{HTTPMethod("HEAD")}}: 响应的消息体为头部信息。
+- {{HTTPMethod("POST")}}: 响应的消息体中包含此次请求的结果。
+- {{HTTPMethod("TRACE")}}: 响应的消息体中包含服务器接收到的请求信息。
 
-<p>{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 的请求成功通常并不是响应<code>200</code> <code>OK</code>的状态码而是 {{HTTPStatus("204")}} <code>No Content</code> 表示无内容（或者 {{HTTPStatus("201")}} <code>Created</code>表示一个资源首次被创建成功）。</p>
+{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 的请求成功通常并不是响应`200` `OK`的状态码而是 {{HTTPStatus("204")}} `No Content` 表示无内容（或者 {{HTTPStatus("201")}} `Created`表示一个资源首次被创建成功）。
 
-<h2 id="状态码">状态码</h2>
+## 状态码
 
-<pre class="syntaxbox">200 OK</pre>
+```plain
+200 OK
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方法</a></li>
-</ul>
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)

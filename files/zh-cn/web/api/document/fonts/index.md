@@ -3,38 +3,39 @@ title: fonts
 slug: Web/API/Document/fonts
 translation_of: Web/API/Document/fonts
 ---
-<p>{{domxref("Document")}}的 <strong><code>fonts</code></strong> 属性接口返回文档的 {{domxref("FontFaceSet")}} 接口。</p>
+{{domxref("Document")}}的 **`fonts`** 属性接口返回文档的 {{domxref("FontFaceSet")}} 接口。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>let fontFaceSet</var> = <em>document</em>.fonts;</pre>
+```plain
+let fontFaceSet = document.fonts;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>返回值是文档的 {{domxref("FontFaceSet")}} 接口。<code>FontFaceSet</code> 接口对 加载新字体、检查已加载字体的加载状态 来说非常有用。</p>
+返回值是文档的 {{domxref("FontFaceSet")}} 接口。`FontFaceSet` 接口对 加载新字体、检查已加载字体的加载状态 来说非常有用。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<h3 id="在所有字体加载完成后进行操作">在所有字体加载完成后进行操作</h3>
+### 在所有字体加载完成后进行操作
 
-<pre class="brush: js">document.fonts.ready.then(function() {
+```js
+document.fonts.ready.then(function() {
   // 字体加载完成后的逻辑
 });
-</pre>
+```
 
-<h2 id="Specifications">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="See_Also">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Document.fonts")}}</p>
+{{Compat("api.Document.fonts")}}
 
-<h2 id="See_Also">参考资料</h2>
+## 参考资料
 
-<ul>
- <li>{{domxref("FontFaceSet")}} interface</li>
- <li>{{domxref("FontFace")}}</li>
-</ul>
+- {{domxref("FontFaceSet")}} interface
+- {{domxref("FontFace")}}
 
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}

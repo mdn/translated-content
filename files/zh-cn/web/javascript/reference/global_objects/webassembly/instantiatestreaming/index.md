@@ -3,64 +3,60 @@ title: WebAssembly.instantiateStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.instantiateStreaming()</code></strong> 方法直接从流式底层源编译和实例化 WebAssembly 模块。这是加载 wasm 代码一种非常有效的优化方式。</p>
+**`WebAssembly.instantiateStreaming()`** 方法直接从流式底层源编译和实例化 WebAssembly 模块。这是加载 wasm 代码一种非常有效的优化方式。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">Promise&lt;ResultObject&gt; WebAssembly.instantiateStreaming(<em>source</em>, <em>importObject</em>);</pre>
+```plain
+Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>source</em></dt>
- <dd>一个{{domxref("Response")}}对象 或 一个可以履行（fulfill）一个（Response）的 {{jsxref("Promise")}}，表示你想要传输、编译和实例化的 .wasm 模块基础源。</dd>
- <dt><em>importObject</em> {{optional_inline}}</dt>
- <dd>包含一些想要导入到新创建<code>Instance</code>中值的对象，例如方法 或  {{jsxref("WebAssembly.Memory")}} 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a> 异常。</dd>
-</dl>
+- _source_
+  - : 一个{{domxref("Response")}}对象 或 一个可以履行（fulfill）一个（Response）的 {{jsxref("Promise")}}，表示你想要传输、编译和实例化的 .wasm 模块基础源。
+- _importObject_ {{optional_inline}}
+  - : 包含一些想要导入到新创建`Instance`中值的对象，例如方法 或 {{jsxref("WebAssembly.Memory")}} 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 [WebAssembly.LinkError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>一个 <code>Promise</code>，通过 resolve 返回一个包含两个属性的 <code>ResultObject</code> ：</p>
+一个 `Promise`，通过 resolve 返回一个包含两个属性的 `ResultObject` ：
 
-<ul>
- <li><code>module</code>: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个<code>Module</code>能够再次被实例化 或 通过<a href="/en-US/docs/Web/API/Worker/postMessage">postMessage()</a>共享。</li>
- <li><code>instance</code>: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly functions</a>.</li>
-</ul>
+- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个`Module`能够再次被实例化 或 通过[postMessage()](/en-US/docs/Web/API/Worker/postMessage)共享。
+- `instance`: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li>如果任意参数的类型或结构错误，{{jsxref("TypeError")}} 抛出。</li>
- <li>如果操作失败，Promise 通过 reject 根据失败原因返回 {{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}} 或 {{jsxref("WebAssembly.RuntimeError")}}。</li>
-</ul>
+- 如果任意参数的类型或结构错误，{{jsxref("TypeError")}} 抛出。
+- 如果操作失败，Promise 通过 reject 根据失败原因返回 {{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}} 或 {{jsxref("WebAssembly.RuntimeError")}}。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>下面的示例 (在 GitHub 上查看 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html">instantiate-streaming.html</a> 示例，并且也可 <a href="https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html">view it live</a> ) 直接从基础源传输一个 .wasm 模块，然后进行编译和实例化，Promise 履行后返回一个 <code>ResultObject</code>. 因为 <code>instantiateStreaming()</code> 方法允许履行后返回{{domxref("Response")}}对象的 Promise，你可以直接传递一个 {{domxref("fetch()")}} 请求，它会在履行后将 response 传递给方法。</p>
+下面的示例 (在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 示例，并且也可 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) ) 直接从基础源传输一个 .wasm 模块，然后进行编译和实例化，Promise 履行后返回一个 `ResultObject`. 因为 `instantiateStreaming()` 方法允许履行后返回{{domxref("Response")}}对象的 Promise，你可以直接传递一个 {{domxref("fetch()")}} 请求，它会在履行后将 response 传递给方法。
 
-<pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
+```js
+var importObject = { imports: { imported_func: arg => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj =&gt; obj.instance.exports.exported_func());</pre>
+.then(obj => obj.instance.exports.exported_func());
+```
 
-<p>然后访问<code>ResultObject</code>的实例成员，并调用包含的公开函数。</p>
+然后访问`ResultObject`的实例成员，并调用包含的公开函数。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
- <li><a href="/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">使用 Fetch</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)

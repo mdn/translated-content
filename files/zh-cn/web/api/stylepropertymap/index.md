@@ -7,37 +7,33 @@ tags:
   - 接口
 translation_of: Web/API/StylePropertyMap
 ---
-<p>{{APIRef("CSS Typed Object Model API")}} {{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}} {{SeeCompatTable}}
 
-<p><a href="/zh-CN/docs/Web/API/CSS_Typed_Object_Model_API">CSS 类型对象模型 API</a> 的 <strong><code>StylePropertyMap</code></strong> 接口提供了 CSS 声明块的表示，该声明块可以替代 {{DOMxRef("CSSStyleDeclaration")}}。</p>
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_Object_Model_API) 的 **`StylePropertyMap`** 接口提供了 CSS 声明块的表示，该声明块可以替代 {{DOMxRef("CSSStyleDeclaration")}}。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承属性。</em></p>
+_从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承属性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承方法。</em></p>
+_从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承方法。_
 
-<dl>
- <dt>{{DOMxRef( "StylePropertyMap.append()")}}</dt>
- <dd>使用给定的属性和值向 <code>StylePropertyMap</code> 添加新的 CSS 声明。</dd>
- <dt>{{DOMxRef( "StylePropertyMap.clear()")}}</dt>
- <dd>删除 <code>StylePropertyMap</code> 中的所有声明。</dd>
- <dt>{{DOMxRef( "StylePropertyMap.delete()")}}</dt>
- <dd>使用给定属性删除 CSS 声明。</dd>
- <dt>{{DOMxRef( "StylePropertyMap.set()")}}</dt>
- <dd>使用给定属性更改 CSS 声明。</dd>
-</dl>
+- {{DOMxRef( "StylePropertyMap.append()")}}
+  - : 使用给定的属性和值向 `StylePropertyMap` 添加新的 CSS 声明。
+- {{DOMxRef( "StylePropertyMap.clear()")}}
+  - : 删除 `StylePropertyMap` 中的所有声明。
+- {{DOMxRef( "StylePropertyMap.delete()")}}
+  - : 使用给定属性删除 CSS 声明。
+- {{DOMxRef( "StylePropertyMap.set()")}}
+  - : 使用给定属性更改 CSS 声明。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.StylePropertyMap")}}</p>
+{{Compat("api.StylePropertyMap")}}

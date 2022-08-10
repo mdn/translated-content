@@ -4,24 +4,28 @@ slug: Web/API/Window/blur
 translation_of: Web/API/Window/blur
 original_slug: Web/API/Window/Window.blur()
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<h2 id="Summary">总结</h2>
+## 总结
 
-<p>将焦点移出顶层窗口。</p>
+将焦点移出顶层窗口。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>window.blur()</code></pre>
+```plain
+window.blur()
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js">window.blur();</pre>
+```js
+window.blur();
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>使用 window.blur() 方法与用户主动将焦点移出顶层窗口本质上是一样的。</p>
+使用 window\.blur() 方法与用户主动将焦点移出顶层窗口本质上是一样的。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}

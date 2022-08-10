@@ -6,56 +6,56 @@ tags:
   - 逗号操作符
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
-<div>
-<div>{{jsSidebar("Operators")}}</div>
-</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>逗号操作符 </strong> 对它的每个操作数求值（从左到右），并返回最后一个操作数的值。</p>
+**逗号操作符** 对它的每个操作数求值（从左到右），并返回最后一个操作数的值。
 
-<p>{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}</p>
+{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>expr1</em>, <em>expr2, expr3...</em></pre>
+```plain
+expr1, expr2, expr3...
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>expr1</code>, <code>expr2, expr3...</code></dt>
- <dd>任一表达式。</dd>
-</dl>
+- `expr1`, `expr2, expr3...`
+  - : 任一表达式。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>当你想要在期望一个表达式的位置包含多个表达式时，可以使用逗号操作符。这个操作符最常用的一种情况是：<code>for</code> 循环中提供多个参数。</p>
+当你想要在期望一个表达式的位置包含多个表达式时，可以使用逗号操作符。这个操作符最常用的一种情况是：`for` 循环中提供多个参数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>假设 <code>a</code> 是一个二维数组，每一维度包含 10 个元素，则下面的代码使用逗号操作符一次递增/递减两个变量。需要注意的是，<code>var</code> 语句中的逗号<em><strong>不是</strong></em>逗号操作符，因为它不是存在于一个表达式中。尽管从实际效果来看，那个逗号同逗号运算符的表现很相似。但确切地说，它是 <code>var</code> 语句中的一个特殊符号，用于把多个变量声明结合成一个。下面的代码打印一个二维数组中斜线方向的元素：</p>
+假设 `a` 是一个二维数组，每一维度包含 10 个元素，则下面的代码使用逗号操作符一次递增/递减两个变量。需要注意的是，`var` 语句中的逗号**_不是_**逗号操作符，因为它不是存在于一个表达式中。尽管从实际效果来看，那个逗号同逗号运算符的表现很相似。但确切地说，它是 `var` 语句中的一个特殊符号，用于把多个变量声明结合成一个。下面的代码打印一个二维数组中斜线方向的元素：
 
-<pre class="brush:js">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
-  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);</pre>
+```js
+for (var i = 0, j = 9; i <= 9; i++, j--)
+  document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);
+```
 
-<h3 id="处理后返回">处理后返回</h3>
+### 处理后返回
 
-<p>另一个使用逗号操作符的例子是在返回值前处理一些操作。如同下面的代码，只有最后一个表达式被返回，其他的都只是被求值。</p>
+另一个使用逗号操作符的例子是在返回值前处理一些操作。如同下面的代码，只有最后一个表达式被返回，其他的都只是被求值。
 
-<pre>function myFunc () {
+```plain
+function myFunc () {
   var x = 0;
 
   return (x += 1, x); // the same of return ++x;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a></li>
-</ul>
+- [for loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)

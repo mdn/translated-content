@@ -10,37 +10,35 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 browser-compat: javascript.builtins.Map.size
 ---
-<div>{{JSRef}}<br>
- </div>
+{{JSRef}}
 
-<p><code><strong>size</strong></code> 是可访问属性，用于返回 一个{{jsxref("Map")}} 对象的成员数量。</p>
+**`size`** 是可访问属性，用于返回 一个{{jsxref("Map")}} 对象的成员数量。
 
-<p>{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}</p>
+{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>size 属性的值是一个整数，表示 Map 对象有多少个键值对。size 是只读属性，用 set 方法修改 size 返回 undefined，即不能改变它的值。</p>
+size 属性的值是一个整数，表示 Map 对象有多少个键值对。size 是只读属性，用 set 方法修改 size 返回 undefined，即不能改变它的值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("a", "alpha");
 myMap.set("b", "beta");
 myMap.set("g", "gamma");
 
 myMap.size // 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关阅读">相关阅读</h2>
+## 相关阅读
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

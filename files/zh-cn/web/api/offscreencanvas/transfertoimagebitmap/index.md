@@ -3,41 +3,41 @@ title: OffscreenCanvas.transferToImageBitmap()
 slug: Web/API/OffscreenCanvas/transferToImageBitmap
 translation_of: Web/API/OffscreenCanvas/transferToImageBitmap
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p><strong><code>OffscreenCanvas.transferToImageBitmap()</code></strong> 方法使用<code>offscreenCanvas</code>最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象。</p>
+**`OffscreenCanvas.transferToImageBitmap()`** 方法使用`offscreenCanvas`最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">ImageBitmap OffscreenCanvas.transferToImageBitmap()</pre>
+```plain
+ImageBitmap OffscreenCanvas.transferToImageBitmap()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("ImageBitmap")}}对象。</p>
+一个{{domxref("ImageBitmap")}}对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext("webgl");
 
 //一些绘制要使用 gl 前后文
 
 offscreen.transferToImageBitmap();
-// ImageBitmap { width: 256, height: 256 }</pre>
+// ImageBitmap { width: 256, height: 256 }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat("api.OffscreenCanvas.transferToImageBitmap")}}
 
+## 浏览相关
 
-<p>{{Compat("api.OffscreenCanvas.transferToImageBitmap")}}</p>
-
-<h2 id="浏览相关">浏览相关</h2>
-
-<ul>
- <li>The interface defining this method, {{domxref("OffscreenCanvas")}}</li>
- <li>{{domxref("ImageBitmapRenderingContext.transferImageBitmap()")}}</li>
-</ul>
+- The interface defining this method, {{domxref("OffscreenCanvas")}}
+- {{domxref("ImageBitmapRenderingContext.transferImageBitmap()")}}

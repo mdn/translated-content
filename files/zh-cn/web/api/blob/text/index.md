@@ -6,53 +6,45 @@ tags:
   - 文本
 translation_of: Web/API/Blob/text
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p><code><strong>text()</strong></code> 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的内容，使用 UTF-8 格式编码。</p>
+**`text()`** 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的内容，使用 UTF-8 格式编码。
 
-<ul>
-</ul>
+## 语法
 
-<h2 id="语法">语法</h2>
+```js
+var textPromise = blob.text();
 
-<pre class="brush: js">var <em>textPromise</em> = <em>blob</em>.text();
+blob.text().then(text => /* 执行的操作…… */);
 
-<em>blob</em>.text().then(<em>text</em> =&gt; /* 执行的操作…… */);
+var text = await blob.text();
+```
 
-var <em>text</em> = await <em>blob</em>.text();
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+无须提供任何参数。
 
-<p>无须提供任何参数。</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+返回一个 promise 对象，以 resolve 状态返回一个以文本形式包含 blob 中数据的 {{domxref("USVString")}}。并且该数据**总是**被识别为 UTF-8 格式。
 
-<p>返回一个 promise 对象，以 resolve 状态返回一个以文本形式包含 blob 中数据的 {{domxref("USVString")}}。并且该数据<strong>总是</strong>被识别为 UTF-8 格式。</p>
+## 使用须知
 
-<h2 id="使用须知">使用须知</h2>
+{{domxref("FileReader")}} 的 {{domxref("FileReader.readAsText", "readAsText()")}} 方法是一个与之类似的方法，它对 `Blob` 和 {{domxref("File")}} 对象都适用。下面是两个主要的不同之处：
 
-<p>{{domxref("FileReader")}} 的 {{domxref("FileReader.readAsText", "readAsText()")}} 方法是一个与之类似的方法，它对 <code>Blob</code> 和 {{domxref("File")}} 对象都适用。下面是两个主要的不同之处：</p>
+- `Blob.text()` 返回的是一个 promise 对象，而 `FileReader.readAsText()` 是一个基于事件的 API。
+- `Blob.text()` 总是使用 UTF-8 进行编码，而 `FileReader.readAsText()` 可以使用不同编码方式，取决于 blob 的类型和一个指定的编码名称。
 
-<ul>
- <li><code>Blob.text()</code> 返回的是一个 promise 对象，而 <code>FileReader.readAsText()</code> 是一个基于事件的 API。</li>
- <li><code>Blob.text()</code> 总是使用 UTF-8 进行编码，而 <code>FileReader.readAsText()</code> 可以使用不同编码方式，取决于 blob 的类型和一个指定的编码名称。</li>
-</ul>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Blob.text")}}
 
+## 另见
 
-<p>{{Compat("api.Blob.text")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>{{domxref("Body.text()")}}</li>
- <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
- <li>{{domxref("FileReader.readAsText()")}}</li>
-</ul>
+- {{domxref("Body.text()")}}
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- {{domxref("FileReader.readAsText()")}}

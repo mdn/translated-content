@@ -7,95 +7,67 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>valueOf()</strong></code> 方法返回指定对象的原始值。</p>
+**`valueOf()`** 方法返回指定对象的原始值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre>object.valueOf()</pre>
+```plain
+object.valueOf()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回值为该对象的原始值。</p>
+返回值为该对象的原始值。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>JavaScript 调用 <code>valueOf</code> 方法将对象转换为原始值。你很少需要自己调用 <code>valueOf</code> 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。</p>
+JavaScript 调用 `valueOf` 方法将对象转换为原始值。你很少需要自己调用 `valueOf` 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。
 
-<p>默认情况下，<code>valueOf</code> 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 <code>valueOf</code> 将返回对象本身。</p>
+默认情况下，`valueOf` 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 `valueOf` 将返回对象本身。
 
-<p>JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。</p>
+JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。
 
-<table class="standard-table">
- <caption>不同类型对象的 valueOf() 方法的返回值</caption>
- <thead>
-  <tr>
-   <th scope="col"><strong>对象</strong></th>
-   <th scope="col"><strong>返回值</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Array</td>
-   <td>返回数组对象本身。</td>
-  </tr>
-  <tr>
-   <td>Boolean</td>
-   <td>布尔值。</td>
-  </tr>
-  <tr>
-   <td>Date</td>
-   <td>存储的时间是从 1970 年 1 月 1 日午夜开始计的毫秒数 UTC。</td>
-  </tr>
-  <tr>
-   <td>Function</td>
-   <td>函数本身。</td>
-  </tr>
-  <tr>
-   <td>Number</td>
-   <td>数字值。</td>
-  </tr>
-  <tr>
-   <td>Object</td>
-   <td>对象本身。这是默认情况。</td>
-  </tr>
-  <tr>
-   <td>String</td>
-   <td>字符串值。</td>
-  </tr>
-  <tr>
-   <td> </td>
-   <td>Math 和 Error 对象没有 valueOf 方法。</td>
-  </tr>
- </tbody>
-</table>
+| **对象** | **返回值**                                               |
+| -------- | -------------------------------------------------------- |
+| Array    | 返回数组对象本身。                                       |
+| Boolean  | 布尔值。                                                 |
+| Date     | 存储的时间是从 1970 年 1 月 1 日午夜开始计的毫秒数 UTC。 |
+| Function | 函数本身。                                               |
+| Number   | 数字值。                                                 |
+| Object   | 对象本身。这是默认情况。                                 |
+| String   | 字符串值。                                               |
+|          | Math 和 Error 对象没有 valueOf 方法。                    |
 
-<p>你可以在自己的代码中使用 <code>valueOf</code> 将内置对象转换为原始值。创建自定义对象时，可以覆盖 <code>Object.prototype.valueOf()</code> 来调用自定义方法，而不是默认 {{jsxref("Object")}} 方法。</p>
+你可以在自己的代码中使用 `valueOf` 将内置对象转换为原始值。创建自定义对象时，可以覆盖 `Object.prototype.valueOf()` 来调用自定义方法，而不是默认 {{jsxref("Object")}} 方法。
 
-<h3 id="覆盖自定义对象的_valueOf_方法">覆盖自定义对象的 <code>valueOf</code> 方法</h3>
+### 覆盖自定义对象的 `valueOf` 方法
 
-<p>你可以创建一个取代 <code>valueOf</code> 方法的函数，你的方法必须不能传入参数。</p>
+你可以创建一个取代 `valueOf` 方法的函数，你的方法必须不能传入参数。
 
-<p>假设你有个对象叫 <code>MyNumberType</code> 而你想为它创建一个 <code>valueOf</code> 方法。下面的代码为 <code>valueOf</code> 方法赋予了一个自定义函数：</p>
+假设你有个对象叫 `MyNumberType` 而你想为它创建一个 `valueOf` 方法。下面的代码为 `valueOf` 方法赋予了一个自定义函数：
 
-<pre class="brush: js">MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
+```js
+MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+```
 
-<p>有了这样的一个方法，下一次每当 <code>MyNumberType</code> 要被转换为原始类型值时，JavaScript 在此之前会自动调用自定义的 <code>valueOf</code> 方法。</p>
+有了这样的一个方法，下一次每当 `MyNumberType` 要被转换为原始类型值时，JavaScript 在此之前会自动调用自定义的 `valueOf` 方法。
 
-<p><code>valueOf</code> 方法一般都会被 JavaScript 自动调用，但你也可以像下面代码那样自己调用：</p>
+`valueOf` 方法一般都会被 JavaScript 自动调用，但你也可以像下面代码那样自己调用：
 
-<pre class="brush: js">myNumberType.valueOf()</pre>
+```js
+myNumberType.valueOf()
+```
 
-<div class="note">
-<p><strong>备注：</strong> 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “<code>[object <em>类型</em>]</code>” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
-</div>
+> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用`valueOf`转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “`[object 类型]`” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_valueOf">使用 <code>valueOf</code></h3>
+### 使用 `valueOf`
 
-<pre class="brush: js">// Array：返回数组对象本身
+```js
+// Array：返回数组对象本身
 var array = ["ABC", true, 12, -5];
 console.log(array.valueOf() === array);   // true
 
@@ -141,13 +113,13 @@ console.log( str.valueOf() === str );   // true
 // new 一个字符串对象
 var str2 = new String("http://www.xyz.com");
 // 两者的值相等，但不全等，因为类型不同，前者为 string 类型，后者为 object 类型
-console.log( str2.valueOf() === str2 );   // false</pre>
+console.log( str2.valueOf() === str2 );   // false
+```
 
-<p> </p>
+### 改写 .prototype.valueof
 
-<h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
-
-<pre class="brush: js">function MyNumberType(n) {
+```js
+function MyNumberType(n) {
     this.number = n;
 }
 
@@ -156,19 +128,18 @@ MyNumberType.prototype.valueOf = function() {
 };
 
 var myObj = new MyNumberType(4);
-myObj + 3; // 7</pre>
+myObj + 3; // 7
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
- <li>{{jsxref("parseInt", "parseInt()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}
+- {{jsxref("parseInt", "parseInt()")}}

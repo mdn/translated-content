@@ -3,32 +3,33 @@ title: Client.postMessage()
 slug: Web/API/Client/postMessage
 translation_of: Web/API/Client/postMessage
 ---
-<p>{{SeeCompatTable}}{{APIRef("Client")}}</p>
+{{SeeCompatTable}}{{APIRef("Client")}}
 
-<p>{{domxref("Client")}} 接口的 <code><strong>Client.postMessage()</strong></code> 方法允许一个 service worker 客户端向一个  {{domxref("ServiceWorker")}}发送一个消息，会触发 service worker 的 message 事件，通过监听这个事件，可以获取这个消息。</p>
+{{domxref("Client")}} 接口的 **`Client.postMessage()`** 方法允许一个 service worker 客户端向一个 {{domxref("ServiceWorker")}}发送一个消息，会触发 service worker 的 message 事件，通过监听这个事件，可以获取这个消息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">Client.postMessage(message[, transfer]);</pre>
+```js
+Client.postMessage(message[, transfer]);
+```
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>Void.</p>
+Void.
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message</code></dt>
- <dd>发送给 service worker 的消息内容。</dd>
- <dt><code>transfer {{optional_inline}}</code></dt>
- <dd>可转移的对象，例如对端口的引用。</dd>
-</dl>
+- `message`
+  - : 发送给 service worker 的消息内容。
+- `transfer {{optional_inline}}`
+  - : 可转移的对象，例如对端口的引用。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>从 service worker 向 client 发送消息：</p>
+从 service worker 向 client 发送消息：
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   event.waitUntil(async function() {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
@@ -47,18 +48,21 @@ translation_of: Web/API/Client/postMessage
     });
 
   }());
-});</code></pre>
+});
+```
 
-<p>接收 message:</p>
+接收 message:
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">navigator.serviceWorker.addEventListener('message', event =&gt; {
+```js
+navigator.serviceWorker.addEventListener('message', event => {
   console.log(event.data.msg, event.data.url);
-});</code> </pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Client.postMessage")}}

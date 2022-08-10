@@ -3,47 +3,44 @@ title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
 translation_of: Web/API/AuthenticatorResponse/clientDataJSON
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>clientDataJSON</code></strong> property of the {{domxref("AuthenticatorResponse")}} interface stores a <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of <code>AuthenticatorResponse</code>, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.</p>
+The **`clientDataJSON`** property of the {{domxref("AuthenticatorResponse")}} interface stores a [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of `AuthenticatorResponse`, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
+```plain
+var arrayBuffer = AuthenticatorAttestationResponse.clientDataJSON;
 var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("ArrayBuffer")}}.</p>
+An {{jsxref("ArrayBuffer")}}.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>After the <code>clientDataJSON</code> object is converted from an <code>ArrayBuffer</code> to a JavaScript object, it will have the following properties:</p>
+After the `clientDataJSON` object is converted from an `ArrayBuffer` to a JavaScript object, it will have the following properties:
 
-<dl>
- <dt><code>type</code></dt>
- <dd>A string which is either <code>"webauthn.get"</code> when an existing credential is retrieved or <code>"webauthn.create"</code> when a new credential is created.</dd>
- <dt><code>challenge</code></dt>
- <dd>The <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url</a> encoded version of the cryptographic challenge sent from the relying party's server. The original value is passed via {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.</dd>
- <dt><code>origin</code></dt>
- <dd>The fully qualified origin of the requester which has been given by the client/browser to the authenticator. We should expect the <a href="/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">relying party's id</a> to be a suffix of this value.</dd>
- <dt><code>tokenBindingId</code> {{optional_inline}}</dt>
- <dd>
- <p>An object describing the state of <a href="https://tools.ietf.org/html/rfc8471">the token binding protocol</a> for the communication with the relying party. It has two properties:</p>
+- `type`
+  - : A string which is either `"webauthn.get"` when an existing credential is retrieved or `"webauthn.create"` when a new credential is created.
+- `challenge`
+  - : The [base64url](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoded version of the cryptographic challenge sent from the relying party's server. The original value is passed via {{domxref("PublicKeyCredentialRequestOptions.challenge")}} or {{domxref("PublicKeyCredentialCreationOptions.challenge")}}.
+- `origin`
+  - : The fully qualified origin of the requester which has been given by the client/browser to the authenticator. We should expect the [relying party's id](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId) to be a suffix of this value.
+- `tokenBindingId` {{optional_inline}}
 
- <ul>
-  <li><code>status</code>: A string which is either <code>"supported"</code> which indicates the client support token binding but did not negotiate with the relying party or <code>"present"</code> when token binding was used already</li>
-  <li><code>id</code>: A {{domxref("DOMString")}} which is the <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64url</a> encoding of the token binding ID which was used for the communication.</li>
- </ul>
+  - : An object describing the state of [the token binding protocol](https://tools.ietf.org/html/rfc8471) for the communication with the relying party. It has two properties:
 
- <p>Should this property be absent, it would indicate that the client does not support token binding.</p>
- </dd>
-</dl>
+    - `status`: A string which is either `"supported"` which indicates the client support token binding but did not negotiate with the relying party or `"present"` when token binding was used already
+    - `id`: A {{domxref("DOMString")}} which is the [base64url](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) encoding of the token binding ID which was used for the communication.
 
-<h2 id="示例">示例</h2>
+    Should this property be absent, it would indicate that the client does not support token binding.
 
-<pre class="brush: js notranslate">function arrayBufferToStr(buf) {
+## 示例
+
+```js
+function arrayBufferToStr(buf) {
     return String.fromCharCode.apply(null, new Uint8Array(buf));
 }
 
@@ -54,14 +51,12 @@ var clientDataObj = JSON.parse(clientDataStr);
 console.log(clientDataObj.type);      // "webauthn.create" or "webauthn.get"
 console.log(clientDataObj.challenge); // base64 encoded String containing the original challenge
 console.log(clientDataObj.origin);    // the window.origin
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.AuthenticatorResponse.clientDataJSON")}}</p>
+{{Compat("api.AuthenticatorResponse.clientDataJSON")}}

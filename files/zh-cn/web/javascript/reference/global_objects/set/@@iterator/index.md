@@ -1,5 +1,5 @@
 ---
-title: 'Set.prototype[@@iterator]()'
+title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 tags:
   - ECMAScript2015
@@ -9,27 +9,28 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@iterator</strong></code> 属性的初始值和 {{jsxref("Set.prototype.values()", "values")}} 属性的初始值是同一个函数。</p>
+**`@@iterator`** 属性的初始值和 {{jsxref("Set.prototype.values()", "values")}} 属性的初始值是同一个函数。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
+## Syntax
 
+```plain
+mySet[Symbol.iterator]
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Return value
 
-<pre class="syntaxbox"><code><em>mySet</em>[Symbol.iterator]</code></pre>
+返回 `Set` **iterator** 函数，默认值是 {{jsxref("Set.prototype.values()", "values()")}} 函数。
 
-<h3 id="Return_value">Return value</h3>
+## Examples
 
-<p>返回 <code>Set</code> <strong>iterator</strong> 函数，默认值是 {{jsxref("Set.prototype.values()", "values()")}} 函数。</p>
+### Using `[@@iterator]()`
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_iterator">Using <code>[@@iterator]()</code></h3>
-
-<pre class="brush:js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -39,11 +40,12 @@ const setIter = mySet[Symbol.iterator]();
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // Object
-</pre>
+```
 
-<h3 id="Using_iterator_with_for..of">Using <code>[@@iterator]()</code> with <code>for..of</code></h3>
+### Using `[@@iterator]()` with `for..of`
 
-<pre class="brush:js">const mySet = new Set();
+```js
+const mySet = new Set();
 mySet.add('0');
 mySet.add(1);
 mySet.add({});
@@ -51,22 +53,18 @@ mySet.add({});
 for (const v of mySet) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
- <li>{{jsxref("Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

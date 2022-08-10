@@ -5,11 +5,12 @@ tags:
   - page-break-inside
 translation_of: Web/CSS/page-break-inside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>page-break-inside</code></strong> CSS 属性调整当前元素内的分页符。</p>
+**`page-break-inside`** CSS 属性调整当前元素内的分页符。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 page-break-inside: auto;
 page-break-inside: avoid;
 
@@ -17,50 +18,51 @@ page-break-inside: avoid;
 page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Initial value. Automatic page breaks (neither forced nor forbidden).</dd>
- <dt><code>avoid</code></dt>
- <dd>Avoid page breaks inside the element.</dd>
-</dl>
+- `auto`
+  - : Initial value. Automatic page breaks (neither forced nor forbidden).
+- `avoid`
+  - : Avoid page breaks inside the element.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="page"&gt;
-  &lt;p&gt;This is the first paragraph.&lt;/p&gt;
-  &lt;section class="list"&gt;
-    &lt;span&gt;A list&lt;/span&gt;
-    &lt;ol&gt;
-      &lt;li&gt;one&lt;/li&gt;
-&lt;!--       &lt;li&gt;two&lt;/li&gt; --&gt;
-    &lt;/ol&gt;
-  &lt;/section&gt;
-  &lt;ul&gt;
-    &lt;li&gt;one&lt;/li&gt;
-&lt;!--     &lt;li&gt;two&lt;/li&gt; --&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;This is the second paragraph.&lt;/p&gt;
-  &lt;p&gt;This is the third paragraph, it contains more text.&lt;/p&gt;
-  &lt;p&gt;This is the fourth paragraph. It has a little bit more text than the third one.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="page">
+  <p>This is the first paragraph.</p>
+  <section class="list">
+    <span>A list</span>
+    <ol>
+      <li>one</li>
+<!--       <li>two</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>one</li>
+<!--     <li>two</li> -->
+  </ul>
+  <p>This is the second paragraph.</p>
+  <p>This is the third paragraph, it contains more text.</p>
+  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.page {
+```css
+.page {
   background-color: #8cffa0;
   height: 90px;
   width: 200px;
@@ -84,23 +86,22 @@ ol, ul, .list {
 
 p:first-child {
   margin-top: 0;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 400, 160)}}</p>
+{{EmbedLiveSample("Example", 400, 160)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/CSS/page-break-after"><code>page-break-after</code></a>, <a href="/en-US/docs/CSS/page-break-before"><code>page-break-before</code></a></li>
- <li><a href="/en-US/docs/CSS/orphans"><code>orphans</code></a>, <a href="/en-US/docs/CSS/widows"><code>widows</code></a></li>
-</ul>
+- [`page-break-after`](/en-US/docs/CSS/page-break-after), [`page-break-before`](/en-US/docs/CSS/page-break-before)
+- [`orphans`](/en-US/docs/CSS/orphans), [`widows`](/en-US/docs/CSS/widows)

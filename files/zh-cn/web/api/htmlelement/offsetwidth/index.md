@@ -8,37 +8,34 @@ tags:
   - 属性
 translation_of: Web/API/HTMLElement/offsetWidth
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><code><strong>HTMLElement.offsetWidth</strong></code> 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的 offsetWidth 可能有所不同）offsetWidth 是测量包含元素的边框 (border)、水平线上的内边距 (padding)、竖直方向滚动条 (scrollbar)（如果存在的话）、以及 CSS 设置的宽度 (width) 的值。</p>
+**`HTMLElement.offsetWidth`** 是一个只读属性，返回一个元素的布局宽度。一个典型的（译者注：各浏览器的 offsetWidth 可能有所不同）offsetWidth 是测量包含元素的边框 (border)、水平线上的内边距 (padding)、竖直方向滚动条 (scrollbar)（如果存在的话）、以及 CSS 设置的宽度 (width) 的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var<var> offsetWidth</var> =<var>element</var>.offsetWidth;
-</pre>
+```plain
+var offsetWidth =element.offsetWidth;
+```
 
-<p><code>intElemOffsetWidth</code> is a variable storing an integer corresponding to the <code>offsetWidth</code> pixel value of the element. <code>offsetWidth</code> 是一个只读属性。</p>
+`intElemOffsetWidth` is a variable storing an integer corresponding to the `offsetWidth` pixel value of the element. `offsetWidth` 是一个只读属性。
 
-<div class="note">
-<p><strong>备注：</strong>这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **备注：**这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p><img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
+![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<p><code>offsetWidth</code> 是一个 <abbr>DHTML</abbr> 对象模型中的属性，由微软 IE 浏览器首次引入。有时候它也可以称为一个元素的物理或图形尺寸，或者 border-box（译者注：即 CSS3 中的 border-box 模型）的宽度。</p>
+`offsetWidth` 是一个 DHTML 对象模型中的属性，由微软 IE 浏览器首次引入。有时候它也可以称为一个元素的物理或图形尺寸，或者 border-box（译者注：即 CSS3 中的 border-box 模型）的宽度。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("Element.clientWidth")}}</li>
- <li>{{domxref("Element.scrollWidth")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- {{domxref("Element.clientWidth")}}
+- {{domxref("Element.scrollWidth")}}
+- [Determining the dimensions of elements](/en-US/docs/Determining_the_dimensions_of_elements)

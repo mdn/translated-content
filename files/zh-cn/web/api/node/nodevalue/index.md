@@ -8,89 +8,45 @@ tags:
   - Property
 translation_of: Web/API/Node/nodeValue
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Node")}} 的 <code><strong>nodeValue</strong></code> 属性返回或设置当前节点的值。</p>
+{{domxref("Node")}} 的 **`nodeValue`** 属性返回或设置当前节点的值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>str</var> = <var>node</var>.nodeValue;
-<em>node</em>.nodeValue = <em>str</em>;
-</pre>
+```plain
+str = node.nodeValue;
+node.nodeValue = str;
+```
 
-<p>value 是一个包含当前节点的值的字符串（如果有的话）。</p>
+value 是一个包含当前节点的值的字符串（如果有的话）。
 
-<h3 id="Notes">值</h3>
+### 值
 
-<p>对于文档节点来说，<code>nodeValue</code>返回<code>null</code>. 对于 text, comment，和 CDATA 节点来说，<code>nodeValue 返回该节点的文本内容</code>. 对于 attribute 节点来说，返回该属性的属性值。</p>
+对于文档节点来说，`nodeValue`返回`null`. 对于 text, comment，和 CDATA 节点来说，`nodeValue 返回该节点的文本内容`. 对于 attribute 节点来说，返回该属性的属性值。
 
-<p>下表就是不同类型的节点所返回的该属性的值。</p>
+下表就是不同类型的节点所返回的该属性的值。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Node</th>
-   <th scope="col">Value of nodeValue</th>
-  </tr>
- </thead>
- <tbody>
- </tbody>
- <tbody>
-  <tr>
-   <td>{{domxref("CDATASection")}}</td>
-   <td>CDATA 的文本内容</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Comment")}}</td>
-   <td>注释的文本内容</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Document")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentFragment")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("DocumentType")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Element")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("NamedNodeMap")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("EntityReference")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Notation")}}</td>
-   <td>null</td>
-  </tr>
-  <tr>
-   <td>{{domxref("ProcessingInstruction")}}</td>
-   <td>整个标签的文本内容</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Text")}}</td>
-   <td>文本节点的内容</td>
-  </tr>
- </tbody>
-</table>
+| Node                                             | Value of nodeValue |
+| ------------------------------------------------ | ------------------ |
+| {{domxref("CDATASection")}}             | CDATA 的文本内容   |
+| {{domxref("Comment")}}                     | 注释的文本内容     |
+| {{domxref("Document")}}                 | null               |
+| {{domxref("DocumentFragment")}}         | null               |
+| {{domxref("DocumentType")}}             | null               |
+| {{domxref("Element")}}                     | null               |
+| {{domxref("NamedNodeMap")}}             | null               |
+| {{domxref("EntityReference")}}         | null               |
+| {{domxref("Notation")}}                 | null               |
+| {{domxref("ProcessingInstruction")}} | 整个标签的文本内容 |
+| {{domxref("Text")}}                         | 文本节点的内容     |
 
-<p>如果<code>nodeValue 的值为</code><code>null</code>,则对它赋值也不会有任何效果。</p>
+如果` nodeValue 的值为``null `,则对它赋值也不会有任何效果。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.Node.nodeValue")}}</p>
+{{Compat("api.Node.nodeValue")}}

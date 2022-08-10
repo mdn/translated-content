@@ -3,28 +3,42 @@ title: Element.tagName
 slug: Web/API/Element/tagName
 translation_of: Web/API/Element/tagName
 ---
-<p>{{ APIRef() }}</p>
-<h2 id="概述">概述</h2>
-<p>返回当前元素的标签名</p>
-<h2 id="语法">语法</h2>
-<pre class="eval"><em>elementName</em> = element.tagName
-</pre>
-<ul>
- <li><code>elementName</code> 是一个字符串，包含了 element 元素的标签名。</li>
-</ul>
-<h2 id="备注">备注</h2>
-<p>在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，<code>tagName 的值会</code>保留原始的大小写。在 HTML 文档中，<code>tagName</code>会返回其大写形式。对于元素节点来说，<code>tagName 属性</code>的值和<a href="/zh-cn/DOM/Node.nodeName">nodeName</a>属性的值是相同的。</p>
-<h2 id="Example">例子</h2>
-<p>假设给定下面的源码</p>
-<pre class="eval">&lt;span id="born"&gt;When I was born...&lt;/span&gt;
-</pre>
-<p>然后运行下面的脚本</p>
-<pre class="eval">var span = document.getElementById("born");
+{{ APIRef() }}
+
+## 概述
+
+返回当前元素的标签名
+
+## 语法
+
+```plain
+elementName = element.tagName
+```
+
+- `elementName` 是一个字符串，包含了 element 元素的标签名。
+
+## 备注
+
+在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，`tagName 的值会`保留原始的大小写。在 HTML 文档中，`tagName`会返回其大写形式。对于元素节点来说，`tagName 属性`的值和[nodeName](/zh-cn/DOM/Node.nodeName)属性的值是相同的。
+
+## 例子
+
+假设给定下面的源码
+
+```plain
+<span id="born">When I was born...</span>
+```
+
+然后运行下面的脚本
+
+```plain
+var span = document.getElementById("born");
 alert(span.tagName);
-</pre>
-<p>在 XHTML 中 (或者其他的 XML 格式文件中), 会弹出小写的"span".而在 HTML 中，会弹出大写的"SPAN".</p>
-<h2 id="规范">规范</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815">DOM Level 2 Core: tagName</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+```
+
+在 XHTML 中 (或者其他的 XML 格式文件中), 会弹出小写的"span".而在 HTML 中，会弹出大写的"SPAN".
+
+## 规范
+
+- [DOM Level 2 Core: tagName](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
+- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

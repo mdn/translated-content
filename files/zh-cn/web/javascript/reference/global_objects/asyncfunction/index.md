@@ -8,68 +8,64 @@ tags:
   - 构造函数
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<div> </div>
+`AsyncFunction` 构造函数用来创建新的 {{jsxref("Statements/async_function", "异步函数")}} 对象，JavaScript 中每个异步函数都是 `AsyncFunction` 的对象。
 
-<p><code>AsyncFunction</code> 构造函数用来创建新的 {{jsxref("Statements/async_function", "异步函数")}} 对象，JavaScript 中每个异步函数都是  <code>AsyncFunction</code> 的对象。</p>
+注意，`AsyncFunction` 并不是一个全局对象，需要通过下面的方法来获取：
 
-<p>注意，<code>AsyncFunction</code> 并不是一个全局对象，需要通过下面的方法来获取：</p>
+```js
+Object.getPrototypeOf(async function(){}).constructor
+```
 
-<pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
-</pre>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
+```
 
-<pre class="syntaxbox"><code>new AsyncFunction([<var>arg1</var>[, <var>arg2</var>[, ...<var>argN</var>]],] <var>functionBody</var>)</code></pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `arg1, arg2, ... argN`
+  - : 函数的参数名，它们是符合 JavaScript 标示符规范的一个或多个用逗号隔开的字符串。例如 `x`、`theValue`、或 `a,b`。
+- `functionBody`
+  - : 一段字符串形式的 JavaScript 语句，这些语句组成了新函数的定义。
 
-<dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>函数的参数名，它们是符合 JavaScript 标示符规范的一个或多个用逗号隔开的字符串。例如 <code>x</code>、<code>theValue</code>、或 <code>a,b</code>。</dd>
- <dt><code>functionBody</code></dt>
- <dd>一段字符串形式的 JavaScript 语句，这些语句组成了新函数的定义。</dd>
-</dl>
+## 描述
 
-<h2 id="描述">描述</h2>
+执行 `AsyncFunction` 构造函数的时候，会创建一个 {{jsxref("Statements/async_function", "异步函数")}} 对象。但是这种方式不如先用 {{jsxref("Operators/async_function", "异步函数表达式")}} 定义一个异步函数，然后再调用其来创建 {{jsxref("Statements/async_function", "异步函数")}} 对象来的高效，因为第二种方式中异步函数是与其他代码一起被解释器解析的，而第一种方式的函数体是单独解析的。
 
-<p>执行 <code>AsyncFunction</code> 构造函数的时候，会创建一个 {{jsxref("Statements/async_function", "异步函数")}} 对象。但是这种方式不如先用 {{jsxref("Operators/async_function", "异步函数表达式")}} 定义一个异步函数，然后再调用其来创建 {{jsxref("Statements/async_function", "异步函数")}} 对象来的高效，因为第二种方式中异步函数是与其他代码一起被解释器解析的，而第一种方式的函数体是单独解析的。</p>
+传递给 `AsyncFunction` 构造函数的所有参数，都会成为新函数中的变量，变量的名称和定义顺序与各参数相同。
 
-<p>传递给 <code>AsyncFunction</code> 构造函数的所有参数，都会成为新函数中的变量，变量的名称和定义顺序与各参数相同。 </p>
+> **备注：** `AsyncFunction` 构造函数创建的{{jsxref("Statements/async_function", "异步函数")}} 并不会在当前上下文中创建闭包，其作用域始终是全局的。因此运行的时候只能访问它们自己的本地变量和全局变量，但不能访问构造函数被调用的那个作用域中的变量。这是它与 {{jsxref("Global_Objects/eval", "eval")}} 不同的地方。
 
-<div class="note">
-<p><strong>备注：</strong> <code>AsyncFunction</code> 构造函数创建的{{jsxref("Statements/async_function", "异步函数")}} 并不会在当前上下文中创建闭包，其作用域始终是全局的。因此运行的时候只能访问它们自己的本地变量和全局变量，但不能访问构造函数被调用的那个作用域中的变量。这是它与 {{jsxref("Global_Objects/eval", "eval")}} 不同的地方。</p>
-</div>
+调用 `AsyncFunction` 构造函数时可以省略 `new`，其效果是一样的。
 
-<p>调用 <code>AsyncFunction</code> 构造函数时可以省略 <code>new</code>，其效果是一样的。</p>
+## 属性
 
-<h2 id="属性">属性</h2>
+- **`AsyncFunction.length`**
+  - : `AsyncFunction` 构造函数的 length 属性，值为 1。
+- {{jsxref("AsyncFunction.prototype")}}
+  - : 通过原型对象可以为所有异步函数对象定义额外的属性。
 
-<dl>
- <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd><code>AsyncFunction</code> 构造函数的 length 属性，值为 1。</dd>
- <dt>{{jsxref("AsyncFunction.prototype")}}</dt>
- <dd>通过原型对象可以为所有异步函数对象定义额外的属性。</dd>
-</dl>
+## `AsyncFunction` 原型对象
 
-<h2 id="AsyncFunction_原型对象"><code>AsyncFunction</code> 原型对象</h2>
+### 属性
 
-<h3 id="属性_2">属性</h3>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', '属性')}}
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', '属性')}}</div>
+## `AsyncFunction` 实例
 
-<h2 id="AsyncFunction_实例"><code>AsyncFunction</code> 实例</h2>
+`AsyncFunction` 实例继承了 {{jsxref("AsyncFunction.prototype")}} 的方法和属性。和所有构造函数一样，修改 `AsyncFunction` 构造函数的原型对象会同时对所有 `AsyncFunction` 实例上生效。
 
-<p><code>AsyncFunction</code> 实例继承了 {{jsxref("AsyncFunction.prototype")}} 的方法和属性。和所有构造函数一样，修改 <code>AsyncFunction</code> 构造函数的原型对象会同时对所有 <code>AsyncFunction</code> 实例上生效。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 通过 `AsyncFunction` 构造器创建一个异步函数
 
-<h3 id="通过_AsyncFunction_构造器创建一个异步函数">通过 <code>AsyncFunction</code> 构造器创建一个异步函数</h3>
-
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -79,26 +75,24 @@ var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor;
 var a = new AsyncFunction('a',
                           'b',
                           'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
-a(10, 20).then(v =&gt; {
+a(10, 20).then(v => {
   console.log(v); // 4 秒后打印 30
 });
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("Global_Objects/Function", "Function")}}</li>
- <li>{{jsxref("Statements/function", "function statement")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Statements/function", "function statement")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}

@@ -9,66 +9,65 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
-<div>{{JSRef}} </div>
+{{JSRef}}
 
-<p><code><strong>includes()</strong></code> 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 <code>true</code>，否则返回 <code>false</code>。</p>
+**`includes()`** 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 `true`，否则返回 `false`。
 
-<div>{{EmbedInteractiveExample("pages/js/array-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-includes.html")}}
 
+## 语法
 
+```plain
+arr.includes(valueToFind[, fromIndex])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre><var>arr</var>.includes(<var>valueToFind[</var>, <var>fromIndex]</var>)</pre>
+- `valueToFind`
 
-<h3 id="参数">参数</h3>
+  - : 需要查找的元素值。
 
-<dl>
- <dt><code>valueToFind</code></dt>
- <dd>
- <p>需要查找的元素值。</p>
+    > **备注：** 使用 `includes()` 比较字符串和字符时是区分大小写的。
 
- <div class="note">
- <p><strong>备注：</strong>使用<strong> </strong><code>includes()</code>比较字符串和字符时是区分大小写的。</p>
- </div>
- </dd>
- <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>从<code>fromIndex</code> 索引处开始查找 <code>valueToFind</code>。如果为负值，则按升序从 <code>array.length + fromIndex</code> 的索引开始搜（即使从末尾开始往前跳 <code>fromIndex</code> 的绝对值个索引，然后往后搜寻）。默认为 0。</dd>
-</dl>
+- `fromIndex` {{optional_inline}}
+  - : 从`fromIndex` 索引处开始查找 `valueToFind`。如果为负值，则按升序从 `array.length + fromIndex` 的索引开始搜（即使从末尾开始往前跳 `fromIndex` 的绝对值个索引，然后往后搜寻）。默认为 0。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个布尔值 {{jsxref("Boolean")}} 。<br>如果在数组中（或 <code>fromIndex</code> 指定的范围中）找到了 <code>valueToFind</code>，则返回 <code>true</code>，否则返回 <code>false</code>。</p>
+返回一个布尔值 {{jsxref("Boolean")}} 。
+如果在数组中（或 `fromIndex` 指定的范围中）找到了 `valueToFind`，则返回 `true`，否则返回 `false`。
 
-<p>0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 <code>false</code> 不被认为与 0 相等。</p>
+0 的值将全部视为相等，与符号无关（即 -0 与 0 和 +0 相等），但 `false` 不被认为与 0 相等。
 
-<div class="note">
-<p><strong>备注：</strong> 技术上来讲，<code>includes()</code> 使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89">零值相等</a></code> 算法来确定是否找到给定的元素。</p>
-</div>
+> **备注：** 技术上来讲，`includes()` 使用 [`零值相等`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#%E9%9B%B6%E5%80%BC%E7%9B%B8%E7%AD%89) 算法来确定是否找到给定的元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">[1, 2, 3].includes(2);     // true
+```js
+[1, 2, 3].includes(2);     // true
 [1, 2, 3].includes(4);     // false
 [1, 2, 3].includes(3, 3);  // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
-</pre>
+```
 
-<h3 id="fromIndex_大于等于数组长度">fromIndex 大于等于数组长度</h3>
+### fromIndex 大于等于数组长度
 
-<p>如果 <code>fromIndex</code> 大于等于数组的长度，则将直接返回 <code>false</code>，且不搜索该数组。</p>
+如果 `fromIndex` 大于等于数组的长度，则将直接返回 `false`，且不搜索该数组。
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 
 arr.includes('c', 3);   // false
-arr.includes('c', 100); // false</pre>
+arr.includes('c', 100); // false
+```
 
-<h3 id="计算出的索引小于_0">计算出的索引小于 0</h3>
+### 计算出的索引小于 0
 
-<p>如果 <code>fromIndex</code> 为负值，计算出的索引将作为开始搜索<code>searchElement</code>的位置。如果计算出的索引小于 0，则整个数组都会被搜索。</p>
+如果 `fromIndex` 为负值，计算出的索引将作为开始搜索`searchElement`的位置。如果计算出的索引小于 0，则整个数组都会被搜索。
 
-<pre class="brush: js">// array length is 3
+```js
+// array length is 3
 // fromIndex is -100
 // computed index is 3 + (-100) = -97
 
@@ -77,20 +76,24 @@ var arr = ['a', 'b', 'c'];
 arr.includes('a', -100); // true
 arr.includes('b', -100); // true
 arr.includes('c', -100); // true
-arr.includes('a', -2); // false</pre>
+arr.includes('a', -2); // false
+```
 
-<h3 id="作为通用方法的_includes">作为通用方法的 includes()</h3>
+### 作为通用方法的 includes()
 
-<p><code>includes()</code> 方法有意设计为通用方法。它不要求<code>this</code>值是数组对象，所以它可以被用于其他类型的对象 (比如类数组对象)。下面的例子展示了 在函数的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> 对象上调用的 <code>includes()</code> 方法。</p>
+`includes()` 方法有意设计为通用方法。它不要求`this`值是数组对象，所以它可以被用于其他类型的对象 (比如类数组对象)。下面的例子展示了 在函数的 [arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象上调用的 `includes()` 方法。
 
-<pre class="brush: js">(function() {
+```js
+(function() {
   console.log([].includes.call(arguments, 'a')); // true
   console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');</pre>
+})('a','b','c');
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-array.prototype.includes
+```js
+// https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
   Object.defineProperty(Array.prototype, 'includes', {
     value: function(valueToFind, fromIndex) {
@@ -103,7 +106,7 @@ if (!Array.prototype.includes) {
       var o = Object(this);
 
       // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+      var len = o.length >>> 0;
 
       // 3. If len is 0, return false.
       if (len === 0) {
@@ -116,17 +119,17 @@ if (!Array.prototype.includes) {
 
       // 5. If n ≥ 0, then
       //  a. Let k be n.
-      // 6. Else n &lt; 0,
+      // 6. Else n < 0,
       //  a. Let k be len + n.
-      //  b. If k &lt; 0, let k be 0.
-      var k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+      //  b. If k < 0, let k be 0.
+      var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' &amp;&amp; typeof y === 'number' &amp;&amp; isNaN(x) &amp;&amp; isNaN(y));
+        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
       }
 
-      // 7. Repeat, while k &lt; len
-      while (k &lt; len) {
+      // 7. Repeat, while k < len
+      while (k < len) {
         // a. Let elementK be the result of ? Get(O, ! ToString(k)).
         // b. If SameValueZero(valueToFind, elementK) is true, return true.
         if (sameValueZero(o[k], valueToFind)) {
@@ -141,25 +144,22 @@ if (!Array.prototype.includes) {
     }
   });
 }
+```
 
-</pre>
+如果你需要支持那些不支持[`Object.defineProperty`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的废弃 JavaScript 引擎，你最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
 
-<p>如果你需要支持那些不支持<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的废弃 JavaScript 引擎，你最好不要 polyfill <code>Array.prototype</code> 方法，因为你不能使它们不可枚举。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("Array.prototype.indexOf()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("Array.prototype.findIndex()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}

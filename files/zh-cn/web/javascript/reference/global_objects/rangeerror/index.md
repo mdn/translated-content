@@ -3,56 +3,55 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>RangeError</strong>对象标明一个错误，当一个值不在其所允许的范围或者集合中。</p>
+**RangeError**对象标明一个错误，当一个值不在其所允许的范围或者集合中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new RangeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new RangeError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message</code></dt>
- <dd>可选，可读的错误描述</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>可选，包含造成异常代码的文件名</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>可选，造成异常的代码所在的行数</dd>
-</dl>
+- `message`
+  - : 可选，可读的错误描述
+- `fileName` {{non-standard_inline}}
+  - : 可选，包含造成异常代码的文件名
+- `lineNumber` {{non-standard_inline}}
+  - : 可选，造成异常的代码所在的行数
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>试图传递一个 number 参数给一个范围内不包含该 number 的函数时则会引发<strong>RangeError</strong>。当传递一个不合法的 length 值作为{{jsxref("Array")}} 构造器的参数创建数组，或者传递错误值到数值计算方法（{{jsxref("Number.toExponential()")}}，{{jsxref("Number.toFixed()")}} ，{{jsxref("Number.toPrecision()")}}），会出现<strong>RangeError</strong>。.</p>
+试图传递一个 number 参数给一个范围内不包含该 number 的函数时则会引发**RangeError**。当传递一个不合法的 length 值作为{{jsxref("Array")}} 构造器的参数创建数组，或者传递错误值到数值计算方法（{{jsxref("Number.toExponential()")}}，{{jsxref("Number.toFixed()")}} ，{{jsxref("Number.toPrecision()")}}），会出现**RangeError**。.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("RangeError.prototype")}}</dt>
- <dd><code>允许在<strong>RangeError</strong>对象上附加属性。</code></dd>
-</dl>
+- {{jsxref("RangeError.prototype")}}
+  - : `允许在RangeError对象上附加属性。`
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><code>RangeError</code>全局对象没有自带方法，但它通过可以原型链继承一些方法。</p>
+`RangeError`全局对象没有自带方法，但它通过可以原型链继承一些方法。
 
-<h2 id="RangeError实例"><code>RangeError</code>实例</h2>
+## `RangeError`实例
 
-<h3 id="属性_2">属性</h3>
+### 属性
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
 
-<h3 id="方法_2">方法</h3>
+### 方法
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用RangeError">使用<code>RangeError</code></h3>
+### 使用`RangeError`
 
-<pre class="brush: js">var check = function(num) {
-  if (num &lt; MIN || num &gt; MAX) {
+```js
+var check = function(num) {
+  if (num < MIN || num > MAX) {
     throw new RangeError('Parameter must be between ' + MIN + ' and ' + MAX);
   }
 };
@@ -65,23 +64,21 @@ catch (e) {
     // 处理越界错误
   }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关连接">相关连接</h2>
+## 相关连接
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("RangeError.prototype")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("RangeError.prototype")}}
+- {{jsxref("Array")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}

@@ -3,31 +3,32 @@ title: Notification.permission
 slug: Web/API/notification/permission
 translation_of: Web/API/Notification/permission
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p><code>Notification</code> 的只读属性 permission 用来表明用户是否允许当前域显示 Web Notification。</p>
+`Notification` 的只读属性 permission 用来表明用户是否允许当前域显示 Web Notification。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>permission</em> = Notification.permission;</pre>
+```plain
+var permission = Notification.permission;
+```
 
-<h3 id="Return_Value">Value</h3>
+### Value
 
-<p>permission 的类型为 {{domxref("DOMString")}} . 该属性的可能值为：</p>
+permission 的类型为 {{domxref("DOMString")}} . 该属性的可能值为：
 
-<ul>
- <li><code>granted</code>: 用户已经明确的授予了显示通知的权限。.</li>
- <li><code>denied</code>: 用户已经明确的拒绝了显示通知的权限。</li>
- <li><code>default</code>: 用户还未被询问是否授权; 这种情况下权限将视为 <code>denied</code>.</li>
-</ul>
+- `granted`: 用户已经明确的授予了显示通知的权限。.
+- `denied`: 用户已经明确的拒绝了显示通知的权限。
+- `default`: 用户还未被询问是否授权; 这种情况下权限将视为 `denied`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>下面的代码片段详细的说明了，当你首次检查浏览器是否支持 Notification，然后检查当前域是否被授予了发送 Notification 的权限，并且在发送一个通知前进行请求的用法．</p>
+下面的代码片段详细的说明了，当你首次检查浏览器是否支持 Notification，然后检查当前域是否被授予了发送 Notification 的权限，并且在发送一个通知前进行请求的用法．
 
-<pre class="brush: js">function notifyMe() {
+```js
+function notifyMe() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support desktop notification");
@@ -51,19 +52,18 @@ translation_of: Web/API/Notification/permission
 
   // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
- <li>{{domxref("Permissions_API","Permissions API")}}</li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxref("Permissions_API","Permissions API")}}

@@ -3,13 +3,14 @@ title: box-orient
 slug: Web/CSS/box-orient
 translation_of: Web/CSS/box-orient
 ---
-<div>{{CSSRef}}{{Non-standard_header}}
-<p>这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a> 了解现行标准。</p>
-</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>box-orient</code></strong> <a href="/en-US/docs/Web/CSS">CSS </a>属性用来设置一个元素是水平还是垂直布局其内容。</p>
+这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 了解现行标准。
 
-<pre class="brush:css notranslate">/* Keyword values */
+**`box-orient`** [CSS ](/en-US/docs/Web/CSS)属性用来设置一个元素是水平还是垂直布局其内容。
+
+```css
+/* Keyword values */
 box-orient: horizontal;
 box-orient: vertical;
 box-orient: inline-axis;
@@ -19,51 +20,52 @@ box-orient: block-axis;
 box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
-</pre>
+```
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<p><code>box-orient</code> 属性值需指定为以下关键字之一。</p>
+`box-orient` 属性值需指定为以下关键字之一。
 
-<h3 id="Values">值</h3>
+### 值
 
-<dl>
- <dt><code>horizontal</code></dt>
- <dd>盒子水平布局其内容。</dd>
- <dt><code>vertical</code></dt>
- <dd>盒子垂直布局其内容。</dd>
- <dt><code>inline-axis</code> (HTML)</dt>
- <dd>盒子沿内联轴展示其子元素。</dd>
- <dt><code>block-axis</code> (HTML)</dt>
- <dd>盒子沿块轴展示其子元素。</dd>
-</dl>
+- `horizontal`
+  - : 盒子水平布局其内容。
+- `vertical`
+  - : 盒子垂直布局其内容。
+- `inline-axis` (HTML)
+  - : 盒子沿内联轴展示其子元素。
+- `block-axis` (HTML)
+  - : 盒子沿块轴展示其子元素。
 
-<p>内联轴和块轴取决于写入模式的关键字，在英语中，分别对应水平和垂直方向。</p>
+内联轴和块轴取决于写入模式的关键字，在英语中，分别对应水平和垂直方向。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="正式语法">正式语法</h2>
+## 正式语法
 
 {{CSSSyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="设置盒子水平布局">设置盒子水平布局</h3>
+### 设置盒子水平布局
 
-<p>在这里，box-orient 属性会将两个 {{HTMLElement("p")}} 段落布局到同一行。</p>
+在这里，box-orient 属性会将两个 {{HTMLElement("p")}} 段落布局到同一行。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div class="example"&gt;
-  &lt;p&gt;I will be to the left of my sibling.&lt;/p&gt;
-  &lt;p&gt;I will be to the right of my sibling.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="example">
+  <p>I will be to the left of my sibling.</p>
+  <p>I will be to the right of my sibling.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">div.example {
+```css
+div.example {
   display: -moz-box;                /* Mozilla */
   display: -webkit-box;             /* WebKit */
   display: box;                     /* As specified */
@@ -73,27 +75,23 @@ box-orient: unset;
   -webkit-box-orient: horizontal;   /* WebKit */
   box-orient: horizontal;           /* As specified */
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Examples', 600, 50, '', 'Web/CSS/box-orient') }}</p>
+{{ EmbedLiveSample('Examples', 600, 50, '', 'Web/CSS/box-orient') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
-<p>不是任何标准的一部分。</p>
+不是任何标准的一部分。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.box-orient")}}
 
+## 参见
 
-<p>{{Compat("css.properties.box-orient")}}</p>
-
-<h2 id="See_Also">参见</h2>
-
-<ul>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
- <li>{{CSSxRef("box-align")}}</li>
- <li>{{CSSxRef("flex-direction")}}</li>
-</ul>
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-pack")}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("flex-direction")}}

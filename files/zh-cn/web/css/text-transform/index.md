@@ -7,47 +7,34 @@ tags:
   - uppercase
 translation_of: Web/CSS/text-transform
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="概要"><strong>概要</strong></h2>
+## **概要**
 
-<p><strong>text-transform</strong> CSS 属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。</p>
+**text-transform** CSS 属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。
 
-<p>text-transform 属性考虑特定于语言的案例映射规则，如：</p>
+text-transform 属性考虑特定于语言的案例映射规则，如：
 
-<ul>
- <li>
-  <p>in Turkic languages, like Turkish (<code>tr</code>), Azerbaijani (<code>az</code>), Crimean Tatar (<code>crh</code>), Volga Tatar (<code>tt</code>), and Bashkir (<code>ba</code>), there are two kinds of i, with and without the dot, and two case pairings: <code>i</code>/<code>İ</code> and <code>ı</code>/<code>I</code>.</p>
- </li>
- <li>
-  <p>In German (<code>de</code>), the <code>ß</code> becomes <code>SS</code> in uppercase.</p>
- </li>
- <li>
-  <p>In Dutch (<code>nl</code>), the <code>ij</code> digraph becomes <code>IJ</code>, even with <code>text-transform: capitalize</code>, which only put the first letter of a word in uppercase.</p>
- </li>
- <li>
-  <p>In Greek (<code>el</code>), vowels lose their accent when the whole word is in uppercase (<code>ά</code>/<code>Α</code>), except for the disjunctive eta (<code>ή</code>/<code>Ή</code>). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (<code>άι</code>/<code>ΑΪ</code>).</p>
- </li>
- <li>
-  <p>In Greek (<code>el</code>), the lowercase sigma character has two forms: <code>σ</code> and <code>ς</code>. <code>ς</code> is used only when sigma terminates a word. When applying <code>text-transform: lowercase</code> to an uppercase sigma (<code>Σ</code>), the browser needs to choose the right lowercase form based on context.</p>
- </li>
-</ul>
+- in Turkic languages, like Turkish (`tr`), Azerbaijani (`az`), Crimean Tatar (`crh`), Volga Tatar (`tt`), and Bashkir (`ba`), there are two kinds of i, with and without the dot, and two case pairings: `i`/`İ` and `ı`/`I`.
+- In German (`de`), the `ß` becomes `SS` in uppercase.
+- In Dutch (`nl`), the `ij` digraph becomes `IJ`, even with `text-transform: capitalize`, which only put the first letter of a word in uppercase.
+- In Greek (`el`), vowels lose their accent when the whole word is in uppercase (`ά`/`Α`), except for the disjunctive eta (`ή`/`Ή`). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (`άι`/`ΑΪ`).
+- In Greek (`el`), the lowercase sigma character has two forms: `σ` and `ς`. `ς` is used only when sigma terminates a word. When applying `text-transform: lowercase` to an uppercase sigma (`Σ`), the browser needs to choose the right lowercase form based on context.
 
-<p>在其他一些其他特定的情况下，映射规则不被任何浏览器考虑在内：</p>
+在其他一些其他特定的情况下，映射规则不被任何浏览器考虑在内：
 
-<ul>
- <li>in Gaelic (<code>ga</code>), a prefix letter remains in lowercase when the base initial is capitalised, so in this example the <code>h-</code> should not be capitalized: <code>text-transform: uppercase</code> will change <code>Meud na h-aplacaid</code> to <code>MEUD NA H-APLACAID</code> which violates the locale orthographic rules, as it ought to be <code>MEUD NA h-APLACAID.</code></li>
-</ul>
+- in Gaelic (`ga`), a prefix letter remains in lowercase when the base initial is capitalised, so in this example the `h-` should not be capitalized: `text-transform: uppercase` will change `Meud na h-aplacaid` to `MEUD NA H-APLACAID` which violates the locale orthographic rules, as it ought to be `MEUD NA h-APLACAID.`
 
-<p>语言由 lang HTML 属性或 <code>xml:lang</code>  XML 属性定义。</p>
+语言由 lang HTML 属性或 `xml:lang` XML 属性定义。
 
-<p>对于这些特定情况的支持因浏览器而异，因此请检查<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform$edit#Browser_compatibility">浏览器兼容性表</a>。 </p>
+对于这些特定情况的支持因浏览器而异，因此请检查[浏览器兼容性表](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform$edit#Browser_compatibility)。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre><code>/* Keyword values */
+```plain
+/* Keyword values */
 text-transform: capitalize;
 text-transform: uppercase;
 text-transform: lowercase;
@@ -57,168 +44,207 @@ text-transform: full-width;
 /* Global values */
 text-transform: inherit;
 text-transform: initial;
-text-transform: unset;</code></pre>
+text-transform: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>capitalize</code></dt>
- <dd>
- <p>这个关键字强制每个单词的首字母转换为大写。其他的字符保留不变（它们写在元素里的文本保留原始大小写）。字母是 Unicode 字符集或者数字里定义的字符 {{experimental_inline}}；因此单词开头的任何标点符号或者特殊符号将会被忽略。</p>
+- `capitalize`
 
- <p>Authors should not expect <code>capitalize</code> to follow language-specific titlecasing conventions (such as skipping articles in English).</p>
- </dd>
- <dt><code>uppercase</code></dt>
- <dd>这个关键字强制所有字符被转换为大写。</dd>
- <dt><code>lowercase</code></dt>
- <dd>这个关键字强制所有字符被转换为小写。</dd>
- <dt><code>none</code></dt>
- <dd>这个关键字阻止所有字符的大小写被转换。</dd>
- <dt><code>full-width</code> {{experimental_inline}}</dt>
- <dd>这个关键字强制字符 — 主要是表意字符和拉丁文字 — 书写进一个方形里，并允许它们按照一般的东亚文字（比如中文或日文）对齐。</dd>
-</dl>
+  - : 这个关键字强制每个单词的首字母转换为大写。其他的字符保留不变（它们写在元素里的文本保留原始大小写）。字母是 Unicode 字符集或者数字里定义的字符 {{experimental_inline}}；因此单词开头的任何标点符号或者特殊符号将会被忽略。
 
-<h3 id="正式语法">正式语法</h3>
+    Authors should not expect `capitalize` to follow language-specific titlecasing conventions (such as skipping articles in English).
+
+- `uppercase`
+  - : 这个关键字强制所有字符被转换为大写。
+- `lowercase`
+  - : 这个关键字强制所有字符被转换为小写。
+- `none`
+  - : 这个关键字阻止所有字符的大小写被转换。
+- `full-width` {{experimental_inline}}
+  - : 这个关键字强制字符 — 主要是表意字符和拉丁文字 — 书写进一个方形里，并允许它们按照一般的东亚文字（比如中文或日文）对齐。
+
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="none"><code>none</code></h3>
+### `none`
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt; &lt;/p&gt;</code>
-&lt;p&gt;text-transform: none &lt;strong&gt;&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;&lt;/strong&gt; &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong> </p>
+<p>text-transform: none <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: none;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates no text transformation.</p>
+This demonstrates no text transformation.
 
-<p>{{ EmbedLiveSample('none', '100%', '100px') }}</p>
+{{ EmbedLiveSample('none', '100%', '100px') }}
 
-<h3 id="capitalize_(General)">首字母大写<code>capitalize</code> (普通)</h3>
+### 首字母大写`capitalize` (普通)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong> </p> <p>text-transform: capitalize <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates text capitalization.</p>
+This demonstrates text capitalization.
 
-<p>{{ EmbedLiveSample('capitalize_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(General)', '100%', '100px') }}
 
-<h3 id="capitalize_(Punctuation)">首字母大写 (标点)</h3>
+### 首字母大写 (标点)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span&gt;<code>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong> </p> <p>text-transform: capitalize <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demostrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.</p>
+This demostrates how initial punctuations of a word are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
 
-<p>{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Punctuation)', '100%', '100px') }}
 
-<h3 id="capitalize_(Symbols)">首字母大写 (符号)</h3>
+### 首字母大写 (符号)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span&gt;<code>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</code>&lt;/span&gt;<code>&lt;/strong&gt;</code>&lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</strong> </p> <p>text-transform: capitalize <strong><span>ⓐⓑⓒ (ⓓⓔⓕ) —ⓖⓗⓘ— ⓙkl</span></strong></p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates how initial symbols are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.</p>
+This demonstrates how initial symbols are ignored. The keyword target the first letter, that is the first Unicode character part of the Letter or Number general category.
 
-<p>{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Symbols)', '100%', '100px') }}
 
-<h3 id="capitalize_(Dutch_ij_digraph)">首字母大写 (荷兰 ij 有向图)</h3>
+### 首字母大写 (荷兰 ij 有向图)
 
-<pre>&lt;p&gt;Initial String &lt;strong lang="nl"&gt;<code>The Dutch word: "ijsland" starts with a digraph.</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: capitalize <code>&lt;strong&gt;</code>&lt;span lang="nl"&gt;<code>The Dutch word: "ijsland" starts with a digraph.</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong lang="nl">The Dutch word: "ijsland" starts with a digraph.</strong> </p> <p>text-transform: capitalize <strong><span lang="nl">The Dutch word: "ijsland" starts with a digraph.</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: capitalize;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates how the Dutch <em>ij</em> digraph must be handled like one single letter.</p>
+This demonstrates how the Dutch _ij_ digraph must be handled like one single letter.
 
-<p>{{ EmbedLiveSample('capitalize_(Dutch_ij_digraph)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('capitalize_(Dutch_ij_digraph)', '100%', '100px') }}
 
-<h3 id="uppercase_(General)">大写字母<code>uppercase</code>  (普通)</h3>
+### 大写字母`uppercase` (普通)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: uppercase <code>&lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong> </p> <p>text-transform: uppercase <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: uppercase;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates transforming the text to uppercase.</p>
+This demonstrates transforming the text to uppercase.
 
-<p>{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('uppercase_(General)', '100%', '100px') }}
 
-<h3 id="uppercase_(Greek_Vowels)">大写字母 (希腊元音)</h3>
+### 大写字母 (希腊元音)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code><code>&lt;/strong&gt; &lt;/p&gt;</code>&lt;p&gt;text-transform: uppercase <code>&lt;strong&gt;</code>&lt;span&gt;<code>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</strong> </p><p>text-transform: uppercase <strong><span>Θα πάμε στο "Θεϊκό φαΐ" ή στη "Νεράιδα"</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: uppercase;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates how Greek vowels except disjunctive <em>eta</em> should have no accent, and the accent on the first vowel of a vowel pair becomes a diaeresis on the second vowel.</p>
+This demonstrates how Greek vowels except disjunctive _eta_ should have no accent, and the accent on the first vowel of a vowel pair becomes a diaeresis on the second vowel.
 
-<p>{{ EmbedLiveSample('uppercase_(Greek_Vowels)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('uppercase_(Greek_Vowels)', '100%', '100px') }}
 
-<h3 id="lowercase_(General)">小写字母<code>lowercase</code> (普通)</h3>
+### 小写字母`lowercase` (普通)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: lowercase <code>&lt;strong&gt;</code>&lt;span&gt;<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</strong> </p> <p>text-transform: lowercase <strong><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ...</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: lowercase;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates transforming the text to lowercase.</p>
+This demonstrates transforming the text to lowercase.
 
-<p>{{ EmbedLiveSample('lowercase_(General)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('lowercase_(General)', '100%', '100px') }}
 
-<h3 id="lowercase_(Greek_Σ)">小写字母 (希腊语Σ)</h3>
+### 小写字母 (希腊语 Σ)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;<code>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</code><code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: lowercase <code>&lt;strong&gt;</code>&lt;span&gt;<code>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</code>&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</strong> </p> <p>text-transform: lowercase <strong><span>Σ IS A greek LETTER that appears SEVERAL TIMES IN ΟΔΥΣΣΕΥΣ.</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: lowercase;
 }
-strong { float: right; }</code></pre>
+strong { float: right; }
+```
 
-<p>This demonstrates how the Greek character sigma (<code>Σ</code>) is transformed into the regular lowercase sigma (<code>σ</code>) or the word-final variant (<code>ς</code>), according the context.</p>
+This demonstrates how the Greek character sigma (`Σ`) is transformed into the regular lowercase sigma (`σ`) or the word-final variant (`ς`), according the context.
 
-<p>{{ EmbedLiveSample('lowercase_(Greek_Σ)', '100%', '100px') }}</p>
+{{ EmbedLiveSample('lowercase_(Greek_Σ)', '100%', '100px') }}
 
-<h3 id="full-width_(General)">全宽度<code>full-width</code> (普通)</h3>
+### 全宽度`full-width` (普通)
 
-<pre>&lt;p&gt;Initial String &lt;strong&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~<code>&lt;/strong&gt; &lt;/p&gt;</code> &lt;p&gt;text-transform: full-width <code>&lt;strong&gt;</code>&lt;span&gt;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;()*+,-./:;&lt;=&gt;?@{|}~&lt;/span&gt;<code>&lt;/strong&gt;</code> &lt;/p&gt;</pre>
+```plain
+<p>Initial String <strong>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong> </p> <p>text-transform: full-width <strong><span>0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span></strong> </p>
+```
 
-<pre><code>span {
+```plain
+span {
   text-transform: full-width;
 }
-strong { width: 100%; float: right; }</code></pre>
+strong { width: 100%; float: right; }
+```
 
-<p>Some characters exists in two formats, normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.</p>
+Some characters exists in two formats, normal width and a full-width, with different Unicode code points. The full-width version is used to mix them smoothly with Asian ideographic characters.
 
-<p>{{ EmbedLiveSample('full-width_(General)', '100%', '175px') }}</p>
+{{ EmbedLiveSample('full-width_(General)', '100%', '175px') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性 </h2>
+## 浏览器兼容性
 
 {{Compat}}

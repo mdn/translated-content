@@ -3,41 +3,41 @@ title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> 允许用于删除属性。它很像 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> ，但它是一个函数。</p>
+静态方法 **`Reflect.deleteProperty()`** 允许用于删除属性。它很像 [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) ，但它是一个函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.deleteProperty(target, propertyKey)
-</pre>
+```plain
+Reflect.deleteProperty(target, propertyKey)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>删除属性的目标对象。</dd>
- <dt><code>propertyKey</code></dt>
- <dd>需要删除的属性的名称。</dd>
-</dl>
+- `target`
+  - : 删除属性的目标对象。
+- `propertyKey`
+  - : 需要删除的属性的名称。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("Boolean")}} 值表明该属性是否被成功删除。</p>
+{{jsxref("Boolean")}} 值表明该属性是否被成功删除。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>抛出一个 {{jsxref("TypeError")}}，如果<code>target</code>不是 {{jsxref("Object")}}。</p>
+抛出一个 {{jsxref("TypeError")}}，如果`target`不是 {{jsxref("Object")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.deleteProperty</code> 允许你删除一个对象上的属性。返回一个 {{jsxref("Boolean")}} 值表示该属性是否被成功删除。它几乎与非严格的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> 相同。</p>
+`Reflect.deleteProperty` 允许你删除一个对象上的属性。返回一个 {{jsxref("Boolean")}} 值表示该属性是否被成功删除。它几乎与非严格的 [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 相同。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.deleteProperty()">使用 <code>Reflect.deleteProperty()</code></h3>
+### 使用 `Reflect.deleteProperty()`
 
-<pre class="brush: js">var obj = { x: 1, y: 2 };
+```js
+var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
@@ -50,19 +50,17 @@ Reflect.deleteProperty({}, "foo"); // true
 
 // 如果属性不可配置，返回 false
 Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)

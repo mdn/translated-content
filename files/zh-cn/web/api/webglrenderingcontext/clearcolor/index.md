@@ -3,57 +3,56 @@ title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.clearColor()</code></strong> 方法用于设置清空颜色缓冲时的颜色值。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clearColor()`** 方法用于设置清空颜色缓冲时的颜色值。
 
-<p>这指定调用 {{domxref("WebGLRenderingContext.clear", "clear()")}} 方法时使用的颜色值。这些值在 0 到 1 的范围间。</p>
+这指定调用 {{domxref("WebGLRenderingContext.clear", "clear()")}} 方法时使用的颜色值。这些值在 0 到 1 的范围间。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">void <var>gl</var>.clearColor(<var>red, green, blue, alpha</var>);
-</pre>
+```plain
+void gl.clearColor(red, green, blue, alpha);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>red</code></dt>
- <dd>一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的红色值。默认值：0。</dd>
- <dt><code>green</code></dt>
- <dd>一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的绿色值。默认值：0。</dd>
- <dt><code>blue</code></dt>
- <dd>一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的蓝色值。默认值：0。</dd>
- <dt><code>alpha</code></dt>
- <dd>一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的不透明度。默认值：0。</dd>
-</dl>
+- `red`
+  - : 一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的红色值。默认值：0。
+- `green`
+  - : 一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的绿色值。默认值：0。
+- `blue`
+  - : 一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的蓝色值。默认值：0。
+- `alpha`
+  - : 一个 {{domxref("GLclampf")}} 类型的值，指定清除缓冲时的不透明度。默认值：0。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无。</p>
+无。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">gl.clearColor(1, 0.5, 0.5, 3);
-</pre>
+```js
+gl.clearColor(1, 0.5, 0.5, 3);
+```
 
-<p>要获取当前的清除颜色，传入 <code>COLOR_CLEAR_VALUE</code> 常量，返回 {{jsxref("Float32Array")}}。</p>
+要获取当前的清除颜色，传入 `COLOR_CLEAR_VALUE` 常量，返回 {{jsxref("Float32Array")}}。
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 // Float32Array[1, 0.5, 0.5, 1]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clearColor")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clearColor")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

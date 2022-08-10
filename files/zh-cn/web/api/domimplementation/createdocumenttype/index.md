@@ -6,48 +6,41 @@ tags:
   - DOMImplementation
 translation_of: Web/API/DOMImplementation/createDocumentType
 ---
-<p>{{ ApiRef("DOM")}}</p>
+{{ ApiRef("DOM")}}
 
-<p><strong><code>DOMImplementation.createDocumentType()</code></strong> 方法返回一个 {{domxref("DocumentType")}} 对象，它可以在文档创建时用在 {{domxref("DOMImplementation.createDocument")}} ，或者通过{{domxref("Node.insertBefore()")}} 或 {{domxref("Node.replaceChild()")}} 等方法放在文档中。</p>
+**`DOMImplementation.createDocumentType()`** 方法返回一个 {{domxref("DocumentType")}} 对象，它可以在文档创建时用在 {{domxref("DOMImplementation.createDocument")}} ，或者通过{{domxref("Node.insertBefore()")}} 或 {{domxref("Node.replaceChild()")}} 等方法放在文档中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>doctype</em> = document.implementation.createDocumentType(<em>qualifiedNameStr</em>, <em>publicId</em>, <em>systemId</em>);</pre>
+```plain
+var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>qualifiedNameStr</code></dt>
- <dd> {{domxref("DOMString")}} 类型的值，包含一个合规的名称，如 <code>svg:svg</code>。</dd>
-</dl>
+- `qualifiedNameStr`
+  - : {{domxref("DOMString")}} 类型的值，包含一个合规的名称，如 `svg:svg`。
+- `publicId`
+  - : {{domxref("DOMString")}} 类型的值， 包含 `PUBLIC` 标识符。
+- `systemId`
+  - : {{domxref("DOMString")}} 类型的值，包含 `SYSTEM` 标识符。
 
-<dl>
- <dt><code>publicId</code></dt>
- <dd> {{domxref("DOMString")}} 类型的值， 包含 <code>PUBLIC</code> 标识符。</dd>
-</dl>
+## 示例
 
-<dl>
- <dt><code>systemId</code></dt>
- <dd> {{domxref("DOMString")}} 类型的值，包含 <code>SYSTEM</code> 标识符。</dd>
-</dl>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');
+```js
+var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');
 var d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'svg:svg', dt);
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.DOMImplementation.createDocumentType")}}</p>
+{{Compat("api.DOMImplementation.createDocumentType")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>该方法所属的接口 {{domxref("DOMImplementation")}}</li>
-</ul>
+- 该方法所属的接口 {{domxref("DOMImplementation")}}

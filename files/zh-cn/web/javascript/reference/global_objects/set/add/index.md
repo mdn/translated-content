@@ -10,34 +10,33 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
-<div>{{JSRef}} </div>
+{{JSRef}}
 
-<p><code><strong>add()</strong></code> 方法用来向一个 <code>Set</code> 对象的末尾添加一个指定的值。</p>
+**`add()`** 方法用来向一个 `Set` 对象的末尾添加一个指定的值。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
+## 语法
 
+```plain
+mySet.add(value);
+```
 
-<h2 id="Syntax">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>mySet</em>.add(value);</code></pre>
+- value
+  - : 必需。需要添加到 `Set `对象的元素的值。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt>value</dt>
- <dd>必需。需要添加到 <code>Set </code>对象的元素的值。</dd>
-</dl>
+`Set` 对象本身
 
-<h3 id="返回值">返回值</h3>
+注意：不能添加重复的值
 
-<p><code>Set</code> 对象本身</p>
+## 示例
 
-<p>注意：不能添加重复的值</p>
-
-<h2 id="Examples">示例</h2>
-
-<pre class="brush: js">var mySet = new Set();
+```js
+var mySet = new Set();
 
 mySet.add(1);
 mySet.add(5).add("some text"); // 可以链式调用
@@ -47,22 +46,19 @@ console.log(mySet);
 
 mySet.add(5).add(1);
 console.log(mySet);
-// Set [1, 5, "some text"]  // 重复的值没有被添加进去</pre>
+// Set [1, 5, "some text"]  // 重复的值没有被添加进去
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

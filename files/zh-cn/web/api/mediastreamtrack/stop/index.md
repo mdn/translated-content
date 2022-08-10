@@ -14,28 +14,30 @@ tags:
   - 视频流跟踪
 translation_of: Web/API/MediaStreamTrack/stop
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaStreamTrack.stop()</code></strong>方法停止跟踪。</p>
+**`MediaStreamTrack.stop()`**方法停止跟踪。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>track</em>.stop()
-</pre>
+```plain
+track.stop()
+```
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p>调用<code>stop()</code>告诉{{glossary("user agent")}} ，{{domxref("MediaStreamTrack")}}不再需要轨道的来源，无论该来源是什么，包括文件，网络流，本地摄像机或麦克风。由于多个音轨可能使用同一音源（例如，如果两个选项卡使用设备的麦克风），则音源本身并不一定会立即停止。 而是从轨道取消关联，并且停止跟踪对象。 一旦没有媒体轨道正在使用源，则实际上可能会完全停止该源。</p>
+调用`stop()`告诉{{glossary("user agent")}} ，{{domxref("MediaStreamTrack")}}不再需要轨道的来源，无论该来源是什么，包括文件，网络流，本地摄像机或麦克风。由于多个音轨可能使用同一音源（例如，如果两个选项卡使用设备的麦克风），则音源本身并不一定会立即停止。 而是从轨道取消关联，并且停止跟踪对象。 一旦没有媒体轨道正在使用源，则实际上可能会完全停止该源。
 
-<p>调用<code>stop()</code>之后，{{domxref("MediaStreamTrack.readyState", "readyState")}}属性立即设置为<code>ended</code>。</p>
+调用`stop()`之后，{{domxref("MediaStreamTrack.readyState", "readyState")}}属性立即设置为`ended`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="停止视频流">停止视频流</h3>
+### 停止视频流
 
-<p>在此示例中，我们看到一个函数，该函数通过在给定{{HTMLElement("video")}}的每个轨道上调用<code>stop()</code>来停止流式视频。</p>
+在此示例中，我们看到一个函数，该函数通过在给定{{HTMLElement("video")}}的每个轨道上调用`stop()`来停止流式视频。
 
-<pre class="brush: js notranslate">function stopStreamedVideo(videoElem) {
+```js
+function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
@@ -44,28 +46,25 @@ translation_of: Web/API/MediaStreamTrack/stop
   });
 
   videoElem.srcObject = null;
-}</pre>
+}
+```
 
-<p>这是通过从其{{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性获得视频元素的流来实现的。 然后，通过调用其{{domxref("MediaStream.getTracks", "getTracks()")}}方法来获取流的轨道列表。 从那里开始，剩下要做的就是使用{{jsxref("Array.forEach", "forEach()")}}遍历轨道列表并调用每个轨道的<code>stop()</code>方法。</p>
+这是通过从其{{domxref("HTMLMediaElement.srcObject", "srcObject")}} 属性获得视频元素的流来实现的。 然后，通过调用其{{domxref("MediaStream.getTracks", "getTracks()")}}方法来获取流的轨道列表。 从那里开始，剩下要做的就是使用{{jsxref("Array.forEach", "forEach()")}}遍历轨道列表并调用每个轨道的`stop()`方法。
 
-<p>最后，将<code>srcObject</code>设置为<code>null</code>以切断与{{domxref("MediaStream")}} 对象的链接，以便将其释放。</p>
+最后，将`srcObject`设置为`null`以切断与{{domxref("MediaStream")}} 对象的链接，以便将其释放。
 
-<p>Finally, <code>srcObject</code> is set to <code>null</code> to sever the link to the {{domxref("MediaStream")}} object so it can be released.</p>
+Finally, `srcObject` is set to `null` to sever the link to the {{domxref("MediaStream")}} object so it can be released.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MediaStreamTrack.stop")}}
 
+## 看看别的
 
-<p>{{Compat("api.MediaStreamTrack.stop")}}</p>
-
-<h2 id="看看别的">看看别的</h2>
-
-<ul>
- <li>{{domxref("MediaStreamTrack")}}，它所属的接口。</li>
- <li>{{domxref("MediaStreamTrack.readyState")}}</li>
- <li>{{event("ended")}}</li>
-</ul>
+- {{domxref("MediaStreamTrack")}}，它所属的接口。
+- {{domxref("MediaStreamTrack.readyState")}}
+- {{event("ended")}}

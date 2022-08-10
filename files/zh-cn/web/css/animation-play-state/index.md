@@ -3,19 +3,20 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 translation_of: Web/CSS/animation-play-state
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>animation-play-state</code></strong> <a href="/en-US/docs/CSS">CSS</a> 属性定义一个动画是否运行或者暂停。可以通过查询它来确定动画是否正在运行。另外，它的值可以被设置为暂停和恢复的动画的重放。</p>
+**`animation-play-state`** [CSS](/en-US/docs/CSS) 属性定义一个动画是否运行或者暂停。可以通过查询它来确定动画是否正在运行。另外，它的值可以被设置为暂停和恢复的动画的重放。
 
-<p>恢复一个已暂停的动画，将从它开始暂停的时候，而不是从动画序列的起点开始在动画。</p>
+恢复一个已暂停的动画，将从它开始暂停的时候，而不是从动画序列的起点开始在动画。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css notranslate">/* Single animation */
+```css
+/* Single animation */
 animation-play-state: running;
 animation-play-state: paused;
 
@@ -26,37 +27,34 @@ animation-play-state: paused, running, running;
 animation-play-state: inherit;
 animation-play-state: initial;
 animation-play-state: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>running</code></dt>
- <dd>当前动画正在运行。</dd>
- <dt><code>paused</code></dt>
- <dd>当前动画已被停止。</dd>
-</dl>
+- `running`
+  - : 当前动画正在运行。
+- `paused`
+  - : 当前动画已被停止。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
-<pre class="syntaxbox notranslate"><code>{{csssyntax}}</code>
-</pre>
+```plain
+{{csssyntax}}
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>参见实例<a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a> </p>
+参见实例[CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.animation-play-state")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

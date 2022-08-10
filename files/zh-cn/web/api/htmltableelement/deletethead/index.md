@@ -7,42 +7,45 @@ tags:
   - 参考
 translation_of: Web/API/HTMLTableElement/deleteTHead
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLTableElement.deleteTHead()</strong></code> 方法删除指定 {{HtmlElement("table")}} 的 {{HTMLElement("thead")}} 元素。</p>
+**`HTMLTableElement.deleteTHead()`** 方法删除指定 {{HtmlElement("table")}} 的 {{HTMLElement("thead")}} 元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>HTMLTableElement</var>.deleteTHead();
-</pre>
+```plain
+HTMLTableElement.deleteTHead();
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>本示例使用 JavaScript 删除表格的头部。</p>
+本示例使用 JavaScript 删除表格的头部。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html; highlight:[2]">&lt;table&gt;
-  &lt;thead&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Occupation&lt;/th&gt;&lt;/thead&gt;
-  &lt;tr&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;Plumber&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Jim&lt;/td&gt;&lt;td&gt;Roofer&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <thead><th>Name</th><th>Occupation</th></thead>
+  <tr><td>Bob</td><td>Plumber</td></tr>
+  <tr><td>Jim</td><td>Roofer</td></tr>
+</table>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js; highlight:[2]">let table = document.querySelector('table');
-table.deleteTHead();</pre>
+```js
+let table = document.querySelector('table');
+table.deleteTHead();
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.HTMLTableElement.deleteTHead")}}</p>
+{{Compat("api.HTMLTableElement.deleteTHead")}}

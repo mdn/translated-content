@@ -12,67 +12,69 @@ tags:
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>innerText</strong></code> 属性表示一个节点及其后代的“渲染”文本内容。 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.</p>
+**`innerText`** 属性表示一个节点及其后代的“渲染”文本内容。 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>innerText</code> 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，<code>innerText</code> 可操作已被渲染的内容， 而 <code>textContent</code> 则不会。</p>
-</div>
+> **备注：** `innerText` 很容易与{{domxref("Node.textContent")}}混淆，但这两个属性间实际上有很重要的区别。大体来说，`innerText` 可操作已被渲染的内容， 而 `textContent` 则不会。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>renderedText</em> = <em>HTMLElement</em>.innerText;
-<em>HTMLElement</em>.innerText = <em>string</em>;</pre>
+```plain
+var renderedText = HTMLElement.innerText;
+HTMLElement.innerText = string;
+```
 
-<h3 id="输出值">输出值</h3>
+### 输出值
 
-<p>一段 {{domxref("DOMString")}} 表示一个元素中已被渲染的内容。如果元素自身没有 <a href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">被渲染</a> (e.g 被从文档中删除或没有在视图中显示), 这时返回值与 {{domxref("Node.textContent")}} 属性相同。</p>
+一段 {{domxref("DOMString")}} 表示一个元素中已被渲染的内容。如果元素自身没有 [被渲染](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (e.g 被从文档中删除或没有在视图中显示), 这时返回值与 {{domxref("Node.textContent")}} 属性相同。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个示例对比了 <code>innerText</code> 和 {{domxref("Node.textContent")}}. 这时 <code>innerText</code> 代表的含义就像 {{htmlElement("br")}} 标签，并且忽略了隐藏的元素。</p>
+这个示例对比了 `innerText` 和 {{domxref("Node.textContent")}}. 这时 `innerText` 代表的含义就像 {{htmlElement("br")}} 标签，并且忽略了隐藏的元素。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h3&gt;Source element:&lt;/h3&gt;
-&lt;p id="source"&gt;
-  &lt;style&gt;#source { color: red; }&lt;/style&gt;
-Take a look at&lt;br&gt;how this text&lt;br&gt;is interpreted
+```html
+<h3>Source element:</h3>
+<p id="source">
+  <style>#source { color: red; }</style>
+Take a look at<br>how this text<br>is interpreted
        below.
-  &lt;span style="display:none"&gt;HIDDEN TEXT&lt;/span&gt;
-&lt;/p&gt;
-&lt;h3&gt;Result of textContent:&lt;/h3&gt;
-&lt;textarea id="textContentOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;
-&lt;h3&gt;Result of innerText:&lt;/h3&gt;
-&lt;textarea id="innerTextOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;</pre>
+  <span style="display:none">HIDDEN TEXT</span>
+</p>
+<h3>Result of textContent:</h3>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<h3>Result of innerText:</h3>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const source = document.getElementById('source');
+```js
+const source = document.getElementById('source');
 const textContentOutput = document.getElementById('textContentOutput');
 const innerTextOutput = document.getElementById('innerTextOutput');
 
 textContentOutput.innerHTML = source.textContent;
-innerTextOutput.innerHTML = source.innerText;</pre>
+innerTextOutput.innerHTML = source.innerText;
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("示例", 700, 450)}}</p>
+{{EmbedLiveSample("示例", 700, 450)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>此特性最初由 Internet Explorer 引入。 被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。</p>
+此特性最初由 Internet Explorer 引入。 被所有主要的浏览器供应商（vendor）采用后，它于 2016 年正式进入 HTML 标准。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>{{domxref("Element.innerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- {{domxref("Element.innerHTML")}}

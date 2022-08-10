@@ -7,28 +7,28 @@ tags:
   - DataTransfer
 translation_of: Web/API/DataTransfer/DataTransfer
 ---
-<p>{{APIRef("HTML Drag and Drop API")}}</p>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>通过构造函数 <strong><code>DataTransfer</code></strong> 创建一个新的 {{domxref("DataTransfer")}} 对象。注意，单独创建该对象没有意义，且 Internet Explorer 中 <code>DataTransfer</code> 不是一个构造函数。</p>
+通过构造函数 **`DataTransfer`** 创建一个新的 {{domxref("DataTransfer")}} 对象。注意，单独创建该对象没有意义，且 Internet Explorer 中 `DataTransfer` 不是一个构造函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>dataTrans</em> = new DataTransfer()</pre>
+```plain
+var dataTrans = new DataTransfer()
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个空的 <code>DataTransfer</code> 对象。</p>
+一个空的 `DataTransfer` 对象。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.DataTransfer.DataTransfer")}}</p>
+{{Compat("api.DataTransfer.DataTransfer")}}

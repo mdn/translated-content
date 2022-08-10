@@ -3,33 +3,33 @@ title: WebGLRenderingContext.detachShader()
 slug: Web/API/WebGLRenderingContext/detachShader
 translation_of: Web/API/WebGLRenderingContext/detachShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong>WebGLRenderingContext.detachShader()</strong>  方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的**WebGLRenderingContext.detachShader()** 方法：从一个 {{domxref("WebGLProgram")}}中分离一个先前附加的片段或者顶点着色器（{{domxref("WebGLShader")}} ）.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">void <var><em>gl</em>.detach</var>Shader<var>(program, shader);</var>
-</pre>
+```plain
+void gl.detachShader(program, shader);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>program</code></dt>
- <dd>一个 {{domxref("WebGLProgram")}} 对象。</dd>
- <dt><code>shader</code></dt>
- <dd>一个顶点或者片元着色器 {{domxref("WebGLShader")}}.</dd>
-</dl>
+- `program`
+  - : 一个 {{domxref("WebGLProgram")}} 对象。
+- `shader`
+  - : 一个顶点或者片元着色器 {{domxref("WebGLShader")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用detachShader方法分离一个顶点或片元着色器">使用 detachShader 方法分离一个顶点或片元着色器</h3>
+### 使用 detachShader 方法分离一个顶点或片元着色器
 
-<pre>//顶点着色器
+```plain
+//顶点着色器
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vertexShader, vertexSrc);
     gl.compileShader(vertexShader);
@@ -47,37 +47,33 @@ translation_of: Web/API/WebGLRenderingContext/detachShader
     gl.detachShader(program, fragmentShader);
     gl.deleteShader(vertexShader);
     gl.deleteShader(fragmentShader);
-</pre>
+```
 
-<p> </p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat("api.WebGLRenderingContext.detachShader")}}
 
-<p>{{Compat("api.WebGLRenderingContext.detachShader")}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("WebGLProgram")}}</li>
- <li>{{domxref("WebGLShader")}}</li>
- <li>{{domxref("WebGLRenderingContext.attachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compileShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.detachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.shaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-</ul>
+- {{domxref("WebGLProgram")}}
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+- {{domxref("WebGLRenderingContext.compileShader()")}}
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}

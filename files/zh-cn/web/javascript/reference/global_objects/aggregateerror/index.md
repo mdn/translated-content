@@ -3,66 +3,62 @@ title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
-<blockquote>
-<p>{{JSRef}}{{SeeCompatTable}}</p>
-</blockquote>
+> {{JSRef}}{{SeeCompatTable}}
 
-<p><code><strong>AggregateError</strong></code>当多个错误​​需要包装在一个错误中时，该对象表示一个错误。</p>
+**`AggregateError`**当多个错误 ​​ 需要包装在一个错误中时，该对象表示一个错误。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">new AggregateError(errors[, message])</pre>
+```plain
+new AggregateError(errors[, message])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>errors</code></dt>
- <dd>错误的描述，默认为空。</dd>
- <dt><code>message</code>{{Optional_Inline}}</dt>
- <dd>AggregateError 错误的提示信息。</dd>
-</dl>
+- `errors`
+  - : 错误的描述，默认为空。
+- `message`{{Optional_Inline}}
+  - : AggregateError 错误的提示信息。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>一个<code>AggregateError</code>当需要由操作报告多个错误被抛出，例如通过<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"><code>Promise.any()</code></a>，在传递给它的所有<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"><code>Promise</code></a>拒绝。</p>
+一个`AggregateError`当需要由操作报告多个错误被抛出，例如通过[`Promise.any()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)，在传递给它的所有[`Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)拒绝。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt><code>AggregateError.prototype</code></dt>
- <dd><code>AggregateError</code>的原型</dd>
-</dl>
+- `AggregateError.prototype`
+  - : `AggregateError`的原型
 
-<h2 id="AggregateError_实例">AggregateError 实例</h2>
+## AggregateError 实例
 
-<h3 id="实例属性">实例属性</h3>
+### 实例属性
 
-<dl>
- <dt><code>AggregateError.prototype.constructor</code></dt>
- <dd>指定创建实例原型的函数。</dd>
- <dt>{{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}</dt>
- <dd>错误消息，默认为<code>""</code>。</dd>
- <dt>{{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}</dt>
- <dd>错误名称，默认为<code>"AggregateError"</code>。</dd>
-</dl>
+- `AggregateError.prototype.constructor`
+  - : 指定创建实例原型的函数。
+- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
+  - : 错误消息，默认为`""`。
+- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
+  - : 错误名称，默认为`"AggregateError"`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="捕获一个AggregateError">捕获一个 AggregateError</h3>
+### 捕获一个 AggregateError
 
-<pre class="brush: js;">Promise.any([
+```js
+Promise.any([
   Promise.reject(new Error("some error")),
-]).catch(e =&gt; {
+]).catch(e => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "All Promises rejected"
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "some error" ]
 });
-</pre>
+```
 
-<h3 id="创建一个AggregateError">创建一个 AggregateError</h3>
+### 创建一个 AggregateError
 
-<pre class="brush: js;">try {
+```js
+try {
   throw new AggregateError([
     new Error("some error"),
   ], 'Hello');
@@ -72,18 +68,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "some error" ]
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{JSxRef("Error")}}</li>
-</ul>
+- {{JSxRef("Error")}}

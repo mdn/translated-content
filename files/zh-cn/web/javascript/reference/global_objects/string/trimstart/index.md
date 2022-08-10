@@ -12,74 +12,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimLeft
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`trimStart()` **方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
-<div><strong><code>trimStart()</code> </strong>方法从字符串的开头删除空格。<code>trimLeft()</code> 是此方法的别名。</div>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}</div>
+```plain
+str.trimStart();
+str.trimLeft();
+```
 
+### 返回值
 
+一个新字符串，表示从其开头（左端）除去空格的调用字符串。
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox"><var>str</var>.trimStart();
-<var>str</var>.trimLeft();</pre>
+`trimStart()` / `trimLeft()` 方法移除原字符串左端的连续空白符并返回一个新字符串，并不会直接修改原字符串本身。
 
-<h3 id="返回值">返回值</h3>
+### 别名
 
-<p>一个新字符串，表示从其开头（左端）除去空格的调用字符串。</p>
+为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。 但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
 
-<h2 id="描述">描述</h2>
+```js
+String.prototype.trimLeft.name === "trimStart";
+```
 
-<p><code>trimStart()</code> / <code>trimLeft()</code> 方法移除原字符串左端的连续空白符并返回一个新字符串，并不会直接修改原字符串本身。</p>
+## 示例
 
-<h3 id="别名">别名</h3>
+### 使用 `trimStart()`
 
-<p>为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为<code>trimStart</code>。 但是，出于 Web 兼容性原因，<code>trimLeft</code> 仍然是 <code>trimStart</code> 的别名。在某些引擎中，这意味着：</p>
+下面的例子输出了小写的字符串 `"foo "`：
 
-<pre class="brush: js">String.prototype.trimLeft.name === "trimStart";</pre>
-
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_trimStart">使用 <code>trimStart()</code></h3>
-
-<p>下面的例子输出了小写的字符串 <code>"foo  "</code>：</p>
-
-<pre class="brush:js">var str = "   foo  ";
+```js
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart()    // 等同于 str = str.trimLeft();
 console.log(str.length); // 5
 console.log(str);        // "foo  "
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend">String.prototype.{trimStart,trimEnd}</a></code>proposal</td>
-   <td>Stage 4</td>
-   <td>Expected to be part of ES2019</td>
-  </tr>
- </tbody>
-</table>
+| 规范                                                                                                                                                        | 状态    | 备注                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
+| [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend)proposal | Stage 4 | Expected to be part of ES2019 |
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("javascript.builtins.String.trimStart")}}</p>
+{{Compat("javascript.builtins.String.trimStart")}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">// https://github.com/FabioVergani/js-Polyfill_String-trimStart
+```js
+// https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
 (function(w){
     var String=w.String, Proto=String.prototype;
@@ -98,10 +85,10 @@ console.log(str);        // "foo  "
 
 /*
 ES6:
-(w=&gt;{
+(w=>{
     const String=w.String, Proto=String.prototype;
 
-    ((o,p)=&gt;{
+    ((o,p)=>{
         if(p in o?o[p]?false:true:true){
             const r=/^\s+/;
             o[p]=o.trimLeft||function(){
@@ -111,11 +98,10 @@ ES6:
     })(Proto,'trimStart');
 
 })(window);
-*/</pre>
+*/
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

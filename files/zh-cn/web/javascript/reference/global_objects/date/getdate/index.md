@@ -3,49 +3,49 @@ title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ---
-<p>{{JSRef("Global_Objects", "Date")}}</p>
+{{JSRef("Global_Objects", "Date")}}
 
-<p>根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）。</p>
+根据本地时间，返回一个指定的日期对象为一个月中的哪一日（从 1--31）。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getdate.html")}}
 
+## 语法
 
+```js
+dateObj.getDate()
+```
 
-<h2 id="Syntax">语法</h2>
+## 参数
 
-<pre class="brush: js">dateObj.getDate()</pre>
+无
 
-<h2 id="Parameters">参数</h2>
+## 描述
 
-<p>无</p>
+`getDate() `返回一个 1 到 31 的整数值。
 
-<h2 id="Description">描述</h2>
+## 例子
 
-<p><code>getDate() </code>返回一个 1 到 31 的整数值。</p>
+### 例子：使用 `getDate()` 方法
 
-<h2 id="Examples">例子</h2>
+下面第二条语句将值 25 赋给 day 变量，该值基于日期对象 `Xmax95`的值。
 
-<h3 id="Example:_Using_getDate">例子：使用 <code>getDate()</code> 方法</h3>
-
-<p>下面第二条语句将值 25 赋给 day 变量，该值基于日期对象 <code>Xmax95</code>的值。</p>
-
-<pre class="brush:js">var Xmas95 = new Date("December 25, 1995 23:15:00");
+```js
+var Xmas95 = new Date("December 25, 1995 23:15:00");
 var day = Xmas95.getDate();
 
-alert(day); // 25</pre>
+alert(day); // 25
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

@@ -7,11 +7,12 @@ tags:
   - CSS 表格
 translation_of: Web/CSS/empty-cells
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 中 <strong><code>empty-cells</code></strong> 属性定义了用户端 {{glossary("user agent")}} 应该怎么来渲染表格 {{htmlelement("table")}} 中没有可见内容的单元格的边框和背景。</p>
+CSS 中 **`empty-cells`** 属性定义了用户端 {{glossary("user agent")}} 应该怎么来渲染表格 {{htmlelement("table")}} 中没有可见内容的单元格的边框和背景。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 empty-cells: show;
 empty-cells: hide;
 
@@ -19,59 +20,59 @@ empty-cells: hide;
 empty-cells: inherit;
 empty-cells: initial;
 empty-cells: unset;
-</pre>
+```
 
-<p>只有当 {{cssxref("border-collapse")}} 属性值是 <code>separate</code> 时，才会生效。</p>
+只有当 {{cssxref("border-collapse")}} 属性值是 `separate` 时，才会生效。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<p><code>empty-cells</code> 的属性值必须是以下取值中的一个。</p>
+`empty-cells` 的属性值必须是以下取值中的一个。
 
-<h3 id="Values">取值</h3>
+### 取值
 
-<dl>
- <dt><code>show</code></dt>
- <dd>边框和背景正常渲染。与普通元素一样。</dd>
- <dt><code>hide</code></dt>
- <dd>边框和背景被隐藏。</dd>
-</dl>
+- `show`
+  - : 边框和背景正常渲染。与普通元素一样。
+- `hide`
+  - : 边框和背景被隐藏。
 
-<h3 id="语法形式">语法形式</h3>
+### 语法形式
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table class="table_1"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Moe&lt;/td&gt;
-    &lt;td&gt;Larry&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Curly&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;br&gt;
-&lt;table class="table_2"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Moe&lt;/td&gt;
-    &lt;td&gt;Larry&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Curly&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table class="table_1">
+  <tr>
+    <td>Moe</td>
+    <td>Larry</td>
+  </tr>
+  <tr>
+    <td>Curly</td>
+    <td></td>
+  </tr>
+</table>
+<br>
+<table class="table_2">
+  <tr>
+    <td>Moe</td>
+    <td>Larry</td>
+  </tr>
+  <tr>
+    <td>Curly</td>
+    <td></td>
+  </tr>
+</table>
+```
 
-<h3 id="Specifications">CSS</h3>
+### CSS
 
-<pre class="brush: css">.table_1 {
+```css
+.table_1 {
   empty-cells: show;
 }
 
@@ -83,20 +84,17 @@ td,
 th {
   border: 1px solid gray;
   padding: 0.5rem;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples', '100%', '200') }}</p>
+{{ EmbedLiveSample('Examples', '100%', '200') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("css.properties.empty-cells")}}</p>
-</div>
+{{Compat("css.properties.empty-cells")}}

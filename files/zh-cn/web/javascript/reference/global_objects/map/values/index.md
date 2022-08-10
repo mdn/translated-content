@@ -12,23 +12,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/values
 browser-compat: javascript.builtins.Map.values
 ---
-<div><code><strong>values()</strong></code> 方法返回一个新的 Iterator 对象。它包含按顺序插入 Map 对象中每个元素的 value 值。</div>
+**`values()`** 方法返回一个新的 Iterator 对象。它包含按顺序插入 Map 对象中每个元素的 value 值。
 
-<div> </div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+myMap.values()
+```
 
-<pre class="syntaxbox"><code><em>myMap</em>.values()</code></pre>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+一个新的 [`Map`](/zh-CN/docs/Web/JavaScript/Reference/Map) 可迭代对象。
 
-<p>一个新的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Map"><code>Map</code></a> 可迭代对象。</p>
+## 例子
 
-<h2 id="例子">例子</h2>
+### `使用 values()`
 
-<h3 id="使用_values()"><code>使用 values()</code></h3>
-
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
@@ -37,19 +38,18 @@ var mapIter = myMap.values();
 
 console.log(mapIter.next().value); // "foo"
 console.log(mapIter.next().value); // "bar"
-console.log(mapIter.next().value); // "baz"</pre>
+console.log(mapIter.next().value); // "baz"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="查看">查看</h2>
+## 查看
 
-<ul>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}

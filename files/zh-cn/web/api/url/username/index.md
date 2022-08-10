@@ -9,40 +9,38 @@ tags:
   - username
 translation_of: Web/API/URL/username
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p> {{domxref("URL")}}接口的 username 属性是{{domxref("USVString")}} ，其中包含域名前指定的<strong><code>username</code></strong> 。</p>
+{{domxref("URL")}}接口的 username 属性是{{domxref("USVString")}} ，其中包含域名前指定的**`username`** 。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.username;
-<em>object</em>.username = <em>string</em>;
-</pre>
+```plain
+string = object.username;
+object.username = string;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("USVString")}}.</p>
+一个 {{domxref("USVString")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var url = new URL("https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username");
+```js
+var url = new URL("https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username");
 var user = url.username; // 返回：“anonymous”
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.URL.username")}}
 
+## 参考
 
-<p>{{Compat("api.URL.username")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li>所属的 {{domxref("URL")}}接口。</li>
-</ul>
+- 所属的 {{domxref("URL")}}接口。

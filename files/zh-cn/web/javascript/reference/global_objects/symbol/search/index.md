@@ -3,21 +3,20 @@ title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
+`Symbol.search 指定了一个搜索方法，这个方法接受用户输入的正则表达式，返回该正则表达式在字符串中匹配到的下标，这个方法由以下的方法来调用 `{{jsxref("String.prototype.search()")}}。
 
+更多信息请参见 {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} 和{{jsxref("String.prototype.search()")}}.
 
-<p><code>Symbol.search 指定了一个搜索方法，这个方法接受用户输入的正则表达式，返回该正则表达式在字符串中匹配到的下标，这个方法由以下的方法来调用 </code>{{jsxref("String.prototype.search()")}}。</p>
+{{js_property_attributes(0,0,0)}}
 
-<p>更多信息请参见 {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} 和{{jsxref("String.prototype.search()")}}.</p>
+## 案例
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+### 自定义字符串搜索
 
-<h2 id="案例">案例</h2>
-
-<h3 id="自定义字符串搜索">自定义字符串搜索</h3>
-
-<pre>class caseInsensitiveSearch {
+```plain
+class caseInsensitiveSearch {
   constructor(value) {
     this.value = value.toLowerCase();
   }
@@ -27,21 +26,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 }
 
 console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
-// expected output: 3</pre>
+// expected output: 3
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Symbol.match")}}</li>
- <li>{{jsxref("Symbol.replace")}}</li>
- <li>{{jsxref("Symbol.split")}}</li>
- <li>{{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}</li>
-</ul>
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.split")}}
+- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}

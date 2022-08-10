@@ -8,39 +8,41 @@ tags:
   - 身份验证凭证
 translation_of: Web/HTTP/Status/401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>状态码 <strong><code>401 Unauthorized</code></strong> 代表客户端错误，指的是由于缺乏目标资源要求的身份验证凭证，发送的请求未得到满足。</p>
+状态码 **`401 Unauthorized`** 代表客户端错误，指的是由于缺乏目标资源要求的身份验证凭证，发送的请求未得到满足。
 
-<p>这个状态码会与   {{HTTPHeader("WWW-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。</p>
+这个状态码会与 {{HTTPHeader("WWW-Authenticate")}} 首部一起发送，其中包含有如何进行验证的信息。
 
-<p>这个状态类似于 {{HTTPStatus("403")}}， 但是在该情况下，依然可以进行身份验证。</p>
+这个状态类似于 {{HTTPStatus("403")}}， 但是在该情况下，依然可以进行身份验证。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">401 Unauthorized</pre>
+```plain
+401 Unauthorized
+```
 
-<h2 id="响应示例">响应示例</h2>
+## 响应示例
 
-<pre>HTTP/1.1 401 Unauthorized
+```plain
+HTTP/1.1 401 Unauthorized
 Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"</pre>
+WWW-Authenticate: Basic realm="Access to staging site"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

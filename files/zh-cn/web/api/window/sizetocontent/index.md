@@ -3,36 +3,32 @@ title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
 translation_of: Web/API/Window/sizeToContent
 ---
-<div>{{APIRef}}{{Non-standard_header}}</div>
+{{APIRef}}{{Non-standard_header}}
 
-<p>The <code><strong>Window.sizeToContent()</strong></code> 方法根据窗口内容调整窗口大小。 为了使其工作，在调用此函数时应加载 DOM 内容，例如，一旦抛出 {{event("DOMContentLoaded")}} 事件。</p>
+The **`Window.sizeToContent()`** 方法根据窗口内容调整窗口大小。 为了使其工作，在调用此函数时应加载 DOM 内容，例如，一旦抛出 {{event("DOMContentLoaded")}} 事件。
 
-<p>可以强行的调整窗口的最小尺寸。</p>
+可以强行的调整窗口的最小尺寸。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.sizeToContent()
-</pre>
+```plain
+window.sizeToContent()
+```
 
-<h2 id="Example"> 例子</h2>
+## 例子
 
-<pre class="brush:js">window.sizeToContent();
-</pre>
+```js
+window.sizeToContent();
+```
 
-<h2 id="Specification"> 规范说明</h2>
+## 规范说明
 
-<p>此功能不是任何规范的一部分</p>
+此功能不是任何规范的一部分
 
-<h2 id="浏览器兼容说明">浏览器兼容说明</h2>
+## 浏览器兼容说明
 
-<div>
+{{Compat("api.Window.sizeToContent")}}
 
+## 其他链接
 
-<p>{{Compat("api.Window.sizeToContent")}}</p>
-</div>
-
-<h2 id="其他链接">其他链接</h2>
-
-<ul>
- <li>{{domxref("Window")}}</li>
-</ul>
+- {{domxref("Window")}}

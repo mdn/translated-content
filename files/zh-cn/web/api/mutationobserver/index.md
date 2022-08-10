@@ -11,37 +11,34 @@ tags:
   - resize
 translation_of: Web/API/MutationObserver
 ---
-<p>{{APIRef("DOM WHATWG")}}</p>
+{{APIRef("DOM WHATWG")}}
 
-<p>{{domxref("MutationObserver")}} 接口提供了监视对 DOM 树所做更改的能力。它被设计为旧的 Mutation Events 功能的替代品，该功能是 DOM3 Events 规范的一部分。</p>
+{{domxref("MutationObserver")}} 接口提供了监视对 DOM 树所做更改的能力。它被设计为旧的 Mutation Events 功能的替代品，该功能是 DOM3 Events 规范的一部分。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
- <dd>创建并返回一个新的 <code>MutationObserver</code> 它会在指定的 DOM 发生变化时被调用。</dd>
-</dl>
+- {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
+  - : 创建并返回一个新的 `MutationObserver` 它会在指定的 DOM 发生变化时被调用。
 
-<h2 id="Instance_methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("MutationObserver.disconnect", "disconnect()")}}</dt>
- <dd>阻止 <code>MutationObserver</code> 实例继续接收的通知，直到再次调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法，该观察者对象包含的回调函数都不会再被调用。</dd>
- <dt>{{domxref("MutationObserver.observe", "observe()")}}</dt>
- <dd>配置 <code>MutationObserver</code> 在 DOM 更改匹配给定选项时，通过其回调函数开始接收通知。</dd>
- <dt>{{domxref("MutationObserver.takeRecords", "takeRecords()")}}</dt>
- <dd>从 MutationObserver 的通知队列中删除所有待处理的通知，并将它们返回到 {{domxref("MutationRecord")}} 对象的新 {{jsxref("Array")}} 中。</dd>
-</dl>
+- {{domxref("MutationObserver.disconnect", "disconnect()")}}
+  - : 阻止 `MutationObserver` 实例继续接收的通知，直到再次调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法，该观察者对象包含的回调函数都不会再被调用。
+- {{domxref("MutationObserver.observe", "observe()")}}
+  - : 配置 `MutationObserver` 在 DOM 更改匹配给定选项时，通过其回调函数开始接收通知。
+- {{domxref("MutationObserver.takeRecords", "takeRecords()")}}
+  - : 从 MutationObserver 的通知队列中删除所有待处理的通知，并将它们返回到 {{domxref("MutationRecord")}} 对象的新 {{jsxref("Array")}} 中。
 
-<h2 id="Mutation_Observer_customize_resize_event_listener_demo">Mutation Observer &amp; customize resize event listener &amp; demo</h2>
+## Mutation Observer & customize resize event listener & demo
 
-<p><a href="https://codepen.io/webgeeker/full/YjrZgg/">https://codepen.io/webgeeker/full/YjrZgg/</a></p>
+<https://codepen.io/webgeeker/full/YjrZgg/>
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下示例改编自<a href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">这篇博客</a>。</p>
+以下示例改编自[这篇博客](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)。
 
-<pre class="brush: js notranslate"> // 选择需要观察变动的节点
+```js
+ // 选择需要观察变动的节点
 const targetNode = document.getElementById('some-id');
 
 // 观察器的配置（需要观察什么变动）
@@ -68,26 +65,21 @@ observer.observe(targetNode, config);
 
 // 之后，可停止观察
 observer.disconnect();
-</pre>
+```
 
-<ul>
-</ul>
-
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.MutationObserver")}}</p>
+{{Compat("api.MutationObserver")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref('PerformanceObserver')}}</li>
- <li>{{domxref('ResizeObserver')}}</li>
- <li>{{domxref('IntersectionObserver')}}</li>
- <li><a href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
- <li><a href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
- <li><a href="http://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
-</ul>
+- {{domxref('PerformanceObserver')}}
+- {{domxref('ResizeObserver')}}
+- {{domxref('IntersectionObserver')}}
+- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)

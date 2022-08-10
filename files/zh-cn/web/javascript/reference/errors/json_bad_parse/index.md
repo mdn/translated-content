@@ -9,11 +9,12 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">SyntaxError: JSON.parse: unterminated string literal
+```plain
+SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal
 SyntaxError: JSON.parse: bad Unicode escape
@@ -44,68 +45,75 @@ SyntaxError: JSON.parse: property names must be double-quoted strings
 SyntaxError: JSON.parse: expected property name or '}'
 SyntaxError: JSON.parse: unexpected character
 SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>{{jsxref("JSON.parse()")}} 会把一个字符串解析成 JSON 对象。如果字符串书写正确，那么其将会被解析成一个有效的 JSON，但是这个字符串被检测出错误语法的时候将会抛出错误。</p>
+{{jsxref("JSON.parse()")}} 会把一个字符串解析成 JSON 对象。如果字符串书写正确，那么其将会被解析成一个有效的 JSON，但是这个字符串被检测出错误语法的时候将会抛出错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="JSON.parse()_不允许在末尾添加多余的逗号"><code>JSON.parse()</code> 不允许在末尾添加多余的逗号</h3>
+### `JSON.parse()` 不允许在末尾添加多余的逗号
 
-<p>下面两行代码都会抛出错误：</p>
+下面两行代码都会抛出错误：
 
-<pre class="brush: js example-bad">JSON.parse('[1, 2, 3, 4, ]');
+```js example-bad
+JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
-</pre>
+```
 
-<p>省略末尾多余的逗号解析 JSON 就是正确：</p>
+省略末尾多余的逗号解析 JSON 就是正确：
 
-<pre class="brush: js example-good">JSON.parse('[1, 2, 3, 4 ]');
-JSON.parse('{"foo" : 1 }');</pre>
+```js example-good
+JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse('{"foo" : 1 }');
+```
 
-<h3 id="JSON_的属性名必须使用双引号">JSON 的属性名必须使用双引号</h3>
+### JSON 的属性名必须使用双引号
 
-<p>属性名上不能使用单引号，例如： 'foo'。</p>
+属性名上不能使用单引号，例如： 'foo'。
 
-<pre class="brush: js example-bad">JSON.parse("{'foo' : 1 }");
+```js example-bad
+JSON.parse("{'foo' : 1 }");
 // SyntaxError: JSON.parse: expected property name or '}'
-// at line 1 column 2 of the JSON data</pre>
+// at line 1 column 2 of the JSON data
+```
 
-<p>取而代之，写成 "foo"：</p>
+取而代之，写成 "foo"：
 
-<pre class="brush: js example-good">JSON.parse('{"foo" : 1 }');</pre>
+```js example-good
+JSON.parse('{"foo" : 1 }');
+```
 
-<h3 id="前导_0_和小数点">前导 0 和小数点</h3>
+### 前导 0 和小数点
 
-<p>数字不能用 0 开头，比如 01，并且你的小数点后面必须跟着至少一个数字。</p>
+数字不能用 0 开头，比如 01，并且你的小数点后面必须跟着至少一个数字。
 
-<pre class="brush: js example-bad">JSON.parse('{"foo" : 01 }');
+```js example-bad
+JSON.parse('{"foo" : 01 }');
 // SyntaxError: JSON.parse: expected ',' or '}' after property value
 // in object at line 1 column 2 of the JSON data
 
 JSON.parse('{"foo" : 1. }');
 // SyntaxError: JSON.parse: unterminated fractional number
 // at line 1 column 2 of the JSON data
-</pre>
+```
 
-<p>正确的写法应该是只写一个 1，不书写前面的 0。在小数点的后面至少要跟上一个数字：</p>
+正确的写法应该是只写一个 1，不书写前面的 0。在小数点的后面至少要跟上一个数字：
 
-<pre class="brush: js example-good">JSON.parse('{"foo" : 1 }');
+```js example-good
+JSON.parse('{"foo" : 1 }');
 JSON.parse('{"foo" : 1.0 }');
-</pre>
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("JSON")}}</li>
- <li>{{jsxref("JSON.parse()")}}</li>
- <li>{{jsxref("JSON.stringify()")}}</li>
-</ul>
+- {{jsxref("JSON")}}
+- {{jsxref("JSON.parse()")}}
+- {{jsxref("JSON.stringify()")}}

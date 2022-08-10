@@ -8,17 +8,18 @@ tags:
   - is
 translation_of: Web/HTML/Global_attributes/is
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>is 全局属性 ( <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> ) 以获取更多详细信息）。</p>
+is 全局属性 ( [global attribute](/en-US/docs/Web/HTML/Global_attributes) ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) ) 以获取更多详细信息）。
 
-<p>只有在当前文档中已成功定义 ( <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。</p>
+只有在当前文档中已成功定义 ( [defined](/en-US/docs/Web/API/CustomElementRegistry/define) ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p> 以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。</p>
+以下代码来自我们的 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) 示例（[see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)）。
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -31,24 +32,21 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
-</ul>
-
-<p> </p>
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

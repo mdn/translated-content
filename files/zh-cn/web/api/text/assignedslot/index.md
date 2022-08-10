@@ -3,22 +3,24 @@ title: HTMLSlotElement.assignedSlot
 slug: Web/API/Text/assignedSlot
 translation_of: Web/API/Text/assignedSlot
 ---
-<p>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
-<p><code> <strong>assignedSlot</strong></code> 是 {{domxref("Text")}} 接口的属性，返回与该元素相关联的{{domxref("HTMLSlotElement")}} .</p>
+**`assignedSlot`** 是 {{domxref("Text")}} 接口的属性，返回与该元素相关联的{{domxref("HTMLSlotElement")}} .
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>htmlSlotElement</em> = text.assignedSlot</pre>
+```plain
+var htmlSlotElement = text.assignedSlot
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>一个 {{domxref("HTMLSlotElement")}} 对象.</p>
+一个 {{domxref("HTMLSlotElement")}} 对象.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.Text.assignedSlot")}}

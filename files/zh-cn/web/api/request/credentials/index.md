@@ -9,43 +9,43 @@ tags:
   - 请求
 translation_of: Web/API/Request/credentials
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code>credentials</code></strong> 是{{domxref("Request")}}接口的只读属性，用于表示用户代理是否应该在跨域请求的情况下从其他域发送 cookies。这与 XHR 的 withCredentials 标志相似，不同的是有三个可选值（后者是两个）：</p>
+**`credentials`** 是{{domxref("Request")}}接口的只读属性，用于表示用户代理是否应该在跨域请求的情况下从其他域发送 cookies。这与 XHR 的 withCredentials 标志相似，不同的是有三个可选值（后者是两个）：
 
-<ul>
- <li><code>omit</code>: 从不发送 cookies.</li>
- <li><code>same-origin</code>: 只有当 URL 与响应脚本同源才发送 cookies、 HTTP Basic authentication 等验证信息.(浏览器默认值，在旧版本浏览器，例如 safari 11 依旧是 omit，safari 12 已更改)</li>
- <li><code>include</code>: 不论是不是跨域的请求，总是发送请求资源域在本地的 cookies、 HTTP Basic authentication 等验证信息。</li>
-</ul>
+- `omit`: 从不发送 cookies.
+- `same-origin`: 只有当 URL 与响应脚本同源才发送 cookies、 HTTP Basic authentication 等验证信息.(浏览器默认值，在旧版本浏览器，例如 safari 11 依旧是 omit，safari 12 已更改)
+- `include`: 不论是不是跨域的请求，总是发送请求资源域在本地的 cookies、 HTTP Basic authentication 等验证信息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var myCred = request.credentials;</pre>
+```js
+var myCred = request.credentials;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("RequestCredentials")}} value.</p>
+A {{domxref("RequestCredentials")}} value.
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>在以下代码中，我们使用{{domxref("Request.Request()")}}创建了一个新的 request（为了一个与脚本在同一目录下的图片文件）， 接着将 request credentials 存入一个变量：</p>
+在以下代码中，我们使用{{domxref("Request.Request()")}}创建了一个新的 request（为了一个与脚本在同一目录下的图片文件）， 接着将 request credentials 存入一个变量：
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.credentials; // returns "same-origin" by default</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myCred = myRequest.credentials; // returns "same-origin" by default
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Request.credentials")}}</p>
+{{Compat("api.Request.credentials")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

@@ -5,42 +5,34 @@ tags:
   - 加密
 translation_of: Web/API/Crypto
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p><code><strong>Crypto</strong></code> 接口提供了基本的加密功能，可用于当前的上下文中。它允许访问一个密码强度的随机数生成器和 cryptographic primitives。</p>
+**`Crypto`** 接口提供了基本的加密功能，可用于当前的上下文中。它允许访问一个密码强度的随机数生成器和 cryptographic primitives。
 
-<p>该接口在 Web 中可以通过 {{domxref("Window.crypto")}} 属性来访问。</p>
+该接口在 Web 中可以通过 {{domxref("Window.crypto")}} 属性来访问。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>该接口实现的属性定义在 {{domxref("RandomSource")}} 中。</em></p>
+_该接口实现的属性定义在 {{domxref("RandomSource")}} 中。_
 
-<dl>
- <dt>{{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}</dt>
- <dd>返回一个 {{domxref("SubtleCrypto")}} 对象，用来访问公共的 cryptographic primitives，例如哈希、签名、加密以及解密。</dd>
-</dl>
+- {{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}
+  - : 返回一个 {{domxref("SubtleCrypto")}} 对象，用来访问公共的 cryptographic primitives，例如哈希、签名、加密以及解密。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>该接口实现的方法定义在 {{domxref("RandomSource")}} 中。</em></p>
+_该接口实现的方法定义在 {{domxref("RandomSource")}} 中。_
 
-<dl>
- <dt>{{ domxref("RandomSource.getRandomValues()") }}</dt>
- <dd>使用 cryptographically sound 随机数填充 {{ jsxref("TypedArray") }}。</dd>
-</dl>
+- {{ domxref("RandomSource.getRandomValues()") }}
+  - : 使用 cryptographically sound 随机数填充 {{ jsxref("TypedArray") }}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat("api.Crypto")}}
 
+## 参见
 
-<p>{{Compat("api.Crypto")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

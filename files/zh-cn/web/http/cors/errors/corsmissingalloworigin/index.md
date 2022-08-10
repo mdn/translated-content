@@ -7,45 +7,48 @@ tags:
   - HTTP
 translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="原因">原因</h2>
+## 原因
 
-<pre class="syntaxbox">原因：缺少 CORS “Access-Control-Allow-Origin”</pre>
+```plain
+原因：缺少 CORS “Access-Control-Allow-Origin”
+```
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>对 {{Glossary("CORS")}} 请求的响应缺少必需的{{HTTPHeader("Access-Control-Allow-Origin")}}头，其用于确定在当前源内操作的资源是否可以访问。</p>
+对 {{Glossary("CORS")}} 请求的响应缺少必需的{{HTTPHeader("Access-Control-Allow-Origin")}}头，其用于确定在当前源内操作的资源是否可以访问。
 
-<p>如果服务器在您的控制之下，请将请求站点的源添加到允许访问的域集，方法是将其添加到<code>Access-Control-Allow-Origin</code>头的值。</p>
+如果服务器在您的控制之下，请将请求站点的源添加到允许访问的域集，方法是将其添加到`Access-Control-Allow-Origin`头的值。
 
-<p>例如，要允许 https://amazing.site 上的站点使用 CORS 访问资源，这个 http 头应该为：</p>
+例如，要允许 https\://amazing.site 上的站点使用 CORS 访问资源，这个 http 头应该为：
 
-<pre>Access-Control-Allow-Origin: https://amazing.site
-</pre>
+```plain
+Access-Control-Allow-Origin: https://amazing.site
+```
 
-<p>您还可以使用<code>"*"</code>通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的 API。私有 API 永远不应使用<code>"*"</code>，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为<code>"anonymous"</code>的请求。</p>
+您还可以使用`"*"`通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的 API。私有 API 永远不应使用`"*"`，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为`"anonymous"`的请求。
 
-<pre>Access-Control-Allow-Origin: *</pre>
+```plain
+Access-Control-Allow-Origin: *
+```
 
-<div class="warning">
-<p><strong>警告：</strong> 使用通配符允许所有站点访问私有 API 是显而易见的坏主意。</p>
-</div>
+> **警告：** 使用通配符允许所有站点访问私有 API 是显而易见的坏主意。
 
-<p>例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的&lt;Directory&gt;，&lt;Location&gt;，&lt;Files&gt;或&lt;VirtualHost&gt;部分中）。 配置通常位于.conf 文件中（httpd.conf 和 apache.conf 是这些文件的通用名称），或者位于<code>.htaccess</code>文件中。</p>
+例如，在 Apache 服务器中，将下面一行添加到服务器的配置中（在相应的\<Directory>，\<Location>，\<Files>或\<VirtualHost>部分中）。 配置通常位于.conf 文件中（httpd.conf 和 apache.conf 是这些文件的通用名称），或者位于`.htaccess`文件中。
 
-<pre>Header set Access-Control-Allow-Origin '<em>origin-list</em>'
-</pre>
+```plain
+Header set Access-Control-Allow-Origin 'origin-list'
+```
 
-<p>对于 Nginx，设置此 http 头的命令是：</p>
+对于 Nginx，设置此 http 头的命令是：
 
-<pre>add_header 'Access-Control-Allow-Origin' '<em>origin-list</em>'
-</pre>
+```plain
+add_header 'Access-Control-Allow-Origin' 'origin-list'
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS errors</a></li>
- <li>Glossary: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">CORS introduction</a></li>
-</ul>
+- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- Glossary: {{Glossary("CORS")}}
+- [CORS introduction](/en-US/docs/Web/HTTP/CORS)

@@ -3,42 +3,44 @@ title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 translation_of: Web/API/HTMLMediaElement/autoplay
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.autoplay</code></strong> 属性等同于 HTML 属性中的 {{htmlattrxref("autoplay", "video")}}, 它表示当 player 下载到足够可以播放的媒体文件时，是否自动播放视频。</p>
+**`HTMLMediaElement.autoplay`** 属性等同于 HTML 属性中的 {{htmlattrxref("autoplay", "video")}}, 它表示当 player 下载到足够可以播放的媒体文件时，是否自动播放视频。
 
-<p>注意：一些版本的 Chrome 只支持<strong><code>autostart</code></strong>, 不支持<strong><code>autoplay</code></strong></p>
+注意：一些版本的 Chrome 只支持**`autostart`**, 不支持**`autoplay`**
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">...</pre>
+```plain
+...
+```
 
-<h3 id="参数类型">参数类型</h3>
+### 参数类型
 
-<p>{{domxref("Boolean")}}</p>
+{{domxref("Boolean")}}
 
-<h2 id="用例">用例</h2>
+## 用例
 
-<p>...</p>
+...
 
-<pre class="brush: html">&lt;...&gt;&lt;/...&gt;
-</pre>
+```html
+<...></...>
+```
 
-<p>...</p>
+...
 
-<pre class="brush: js">Xxx.xxx()
-</pre>
+```js
+Xxx.xxx()
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.HTMLMediaElement.autoplay")}}
 
-<h2 id="See_Also">看看这里</h2>
+## 看看这里
 
-<ul>
- <li>接口定义： {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- 接口定义： {{domxref("HTMLMediaElement")}}.

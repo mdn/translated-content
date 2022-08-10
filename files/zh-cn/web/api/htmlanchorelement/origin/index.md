@@ -6,39 +6,37 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
-<p>{{APIRef("URL API")}}</p>
+{{APIRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.origin</code></strong> 只读属性是一个 {{domxref("USVString")}} ，其中包含代表URL的原始码的Unicode序列化，即：</p>
+**`HTMLHyperlinkElementUtils.origin`** 只读属性是一个 {{domxref("USVString")}} ，其中包含代表 URL 的原始码的 Unicode 序列化，即：
 
-<ul>
- <li>for URL using the <code>http</code> or <code>https</code>, the scheme followed by <code>'://'</code>, followed by the domain, followed by <code>':'</code>, followed by the port (the default port, <code>80</code> and <code>443</code> respectively, if explicitely specified);</li>
- <li>for URL using <code>file:</code> scheme, the value is browser dependant;</li>
- <li>for URL using the <code>blob:</code> scheme, the origin of the URL following <code>blob:</code>. E.g <code>"blob:https://mozilla.org"</code> will have <code>"https://mozilla.org".</code></li>
-</ul>
+- for URL using the `http` or `https`, the scheme followed by `'://'`, followed by the domain, followed by `':'`, followed by the port (the default port, `80` and `443` respectively, if explicitely specified);
+- for URL using `file:` scheme, the value is browser dependant;
+- for URL using the `blob:` scheme, the origin of the URL following `blob:`. E.g `"blob:https://mozilla.org"` will have `"https://mozilla.org".`
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.origin;
-</pre>
+```plain
+string = object.origin;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// On this page, returns the origin
+```js
+// On this page, returns the origin
 var result = window.location.origin; // Returns:'https://developer.mozilla.org'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLAnchorElement.origin")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

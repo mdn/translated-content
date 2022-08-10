@@ -1,13 +1,14 @@
 ---
 title: ':defined'
-slug: 'Web/CSS/:defined'
-translation_of: 'Web/CSS/:defined'
+slug: Web/CSS/:defined
+translation_of: Web/CSS/:defined
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><strong><code>:defined</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。</p>
+**`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
 
-<pre class="brush: css no-line-numbers">/* 选择所有已定义的元素 */
+```css
+/* 选择所有已定义的元素 */
 :defined {
   font-style: italic;
 }
@@ -16,19 +17,20 @@ translation_of: 'Web/CSS/:defined'
 simple-custom:defined {
   display: block;
 }
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的片段摘自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">定义伪类</a> demo (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">点击查看源码</a>).</p>
+下面的片段摘自我们的 [定义伪类](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([点击查看源码](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
-<p>在这个 demo 中我们定义了一个非常简单的自定义元素：</p>
+在这个 demo 中我们定义了一个非常简单的自定义元素：
 
-<pre class="brush: js">customElements.define('simple-custom',
+```js
+customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -39,17 +41,21 @@ simple-custom:defined {
       let shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(divElem);
   }
-})</pre>
+})
+```
 
-<p>然后在文档中插入一个该元素的副本，以及一个标准的 <code>&lt;p&gt;</code> 标签：</p>
+然后在文档中插入一个该元素的副本，以及一个标准的 `<p>` 标签：
 
-<pre class="brush: html">&lt;simple-custom text="Custom element example text"&gt;&lt;/simple-custom&gt;
+```html
+<simple-custom text="Custom element example text"></simple-custom>
 
-&lt;p&gt;Standard paragraph example text&lt;/p&gt;</pre>
+<p>Standard paragraph example text</p>
+```
 
-<p>在 CSS 中我们首先包含以下规则：</p>
+在 CSS 中我们首先包含以下规则：
 
-<pre class="brush: css">// 为两个元素设置不同的背景色
+```css
+// 为两个元素设置不同的背景色
 p {
   background: yellow;
 }
@@ -61,38 +67,31 @@ simple-custom {
 // 将自定义元素和内置元素的字体都设为斜体
 :defined {
   font-style: italic;
-}</pre>
+}
+```
 
-<p> </p>
+然后提供以下两个规则来隐藏未定义的自定义元素的所有实例，并显示被定义为块级元素的实例：
 
-<p>然后提供以下两个规则来隐藏未定义的自定义元素的所有实例，并显示被定义为块级元素的实例：</p>
-
-<p> </p>
-
-<pre class="brush: css">simple-custom:not(:defined) {
+```css
+simple-custom:not(:defined) {
   display: none;
 }
 
 simple-custom:defined {
   display: block;
-}</pre>
+}
+```
 
-<p>这在你有一个复杂的自定义元素需要一段时间才能加载到页面中时非常有用 —— 你可能想要隐藏元素的实例直到定义完成为止，这样你就不会在页面上出现一些难看的元素。</p>
+这在你有一个复杂的自定义元素需要一段时间才能加载到页面中时非常有用 —— 你可能想要隐藏元素的实例直到定义完成为止，这样你就不会在页面上出现一些难看的元素。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.defined")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.defined")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/Web_Components">Web components</a></li>
-</ul>
+- [Web components](/zh-CN/docs/Web/Web_Components)

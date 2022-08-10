@@ -3,41 +3,41 @@ title: CSSStyleDeclaration.item()
 slug: Web/API/CSSStyleDeclaration/item
 translation_of: Web/API/CSSStyleDeclaration/item
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><code>CSSStyleDeclaration.item()</code> 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 <code>TypeError</code> 。</p>
+`CSSStyleDeclaration.item()` 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 `TypeError` 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>propertyName</em> = <em>style</em>.item(<em>index</em>);
-</pre>
+```plain
+var propertyName = style.item(index);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><em><code>index</code></em> 是需要查找节点的索引，索引下标从零开始。</li>
-</ul>
+- _`index`_ 是需要查找节点的索引，索引下标从零开始。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<ul>
- <li><em><code>propertyName</code></em> 是一个 {{domxref('DOMString')}} ，是在特定索引位置下的属性的名称。</li>
-</ul>
+- _`propertyName`_ 是一个 {{domxref('DOMString')}} ，是在特定索引位置下的属性的名称。
 
-<p>使用以下的 javascript 语法可以通过索引从 style 的节点列表中获取对应值：</p>
+使用以下的 javascript 语法可以通过索引从 style 的节点列表中获取对应值：
 
-<pre class="syntaxbox">var propertyName = style[index];
-</pre>
+```plain
+var propertyName = style[index];
+```
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre class="brush: js">var style = document.getElementById('div1').style;
-var propertyName = style.item(1); // or simply style[1] - returns the second style listed</pre>
+```js
+var style = document.getElementById('div1').style;
+var propertyName = style.item(1); // or simply style[1] - returns the second style listed
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

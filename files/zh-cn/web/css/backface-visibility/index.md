@@ -3,93 +3,94 @@ title: backface-visibility
 slug: Web/CSS/backface-visibility
 translation_of: Web/CSS/backface-visibility
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>backface-visibility</code></strong> 指定当元素背面朝向观察者时是否可见。</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
 
-<div>{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/backface-visibility.html")}}
 
+元素的背面是其正面的镜像。虽然在 2D 中不可见，但是当变换导致元素在 3D 空间中旋转时，背面可以变得可见。 （此属性对 2D 变换没有影响，它没有透视。）
 
+## 语法
 
-<p>元素的背面是其正面的镜像。虽然在 2D 中不可见，但是当变换导致元素在 3D 空间中旋转时，背面可以变得可见。 （此属性对 2D 变换没有影响，它没有透视。）</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 backface-visibility: visible;
 backface-visibility: hidden;
 
 /* Global values */
 backface-visibility: inherit;
 backface-visibility: initial;
-backface-visibility: unset;</pre>
+backface-visibility: unset;
+```
 
-<p><code>backface-visibility</code> 属性可以指定为下面列出的值</p>
+`backface-visibility` 属性可以指定为下面列出的值
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>背面朝向用户时可见。</dd>
- <dt><code>hidden</code></dt>
- <dd>背面朝向用户时不可见。</dd>
-</dl>
+- `visible`
+  - : 背面朝向用户时可见。
+- `hidden`
+  - : 背面朝向用户时不可见。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>这个示例展示了一个拥有透明表面的立方体。</p>
+这个示例展示了一个拥有透明表面的立方体。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: visible;&lt;/code&gt;&lt;/th&gt;
-    &lt;th&gt;&lt;code&gt;backface-visibility: hidden;&lt;/code&gt;&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube showbf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+```html
+<table>
+  <tr>
+    <th><code>backface-visibility: visible;</code></th>
+    <th><code>backface-visibility: hidden;</code></th>
+  </tr>
+  <tr>
+    <td>
+      <div class="container">
+        <div class="cube showbf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         Since all faces are partially transparent,
         the back faces (2, 4, 5) are visible
         through the front faces (1, 3, 6).
-      &lt;/p&gt;
-    &lt;/td&gt;
-    &lt;td&gt;
-      &lt;div class="container"&gt;
-        &lt;div class="cube hidebf"&gt;
-          &lt;div class="face front"&gt;1&lt;/div&gt;
-          &lt;div class="face back"&gt;2&lt;/div&gt;
-          &lt;div class="face right"&gt;3&lt;/div&gt;
-          &lt;div class="face left"&gt;4&lt;/div&gt;
-          &lt;div class="face top"&gt;5&lt;/div&gt;
-          &lt;div class="face bottom"&gt;6&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;p&gt;
+      </p>
+    </td>
+    <td>
+      <div class="container">
+        <div class="cube hidebf">
+          <div class="face front">1</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
+        </div>
+      </div>
+      <p>
         The three back faces (2, 4, 5) are
         hidden.
-      &lt;/p&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+      </p>
+    </td>
+  </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Classes that will show or hide the
+```css
+/* Classes that will show or hide the
    three back faces of the "cube" */
 .showbf div {
   backface-visibility: visible;
@@ -167,26 +168,23 @@ th, p, td {
   padding: 6px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Example', '100%', 360)}}</p>
+{{EmbedLiveSample('Example', '100%', 360)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.backface-visibility")}}
 
+## 相关连接
 
-<p>{{Compat("css.properties.backface-visibility")}}</p>
-
-<h2 id="相关连接">相关连接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a></li>
-</ul>
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

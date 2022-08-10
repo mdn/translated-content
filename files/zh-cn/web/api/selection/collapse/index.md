@@ -8,44 +8,39 @@ tags:
   - Selection
 translation_of: Web/API/Selection/collapse
 ---
-<div>{{ApiRef("DOM")}}{{SeeCompatTable}}</div>
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
-<p> <strong><code>Selection.collapse()</code></strong> 方法可以收起当前选区到一个点。文档不会发生改变。如果选区的内容是可编辑的并且焦点落在上面，则光标会在该处闪烁。</p>
+**`Selection.collapse()`** 方法可以收起当前选区到一个点。文档不会发生改变。如果选区的内容是可编辑的并且焦点落在上面，则光标会在该处闪烁。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>sel</var>.collapse(<var>parentNode</var>, <var>offset</var>);
-</pre>
+```plain
+sel.collapse(parentNode, offset);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>parentNode</code></em></dt>
- <dd>光标落在的目标节点。</dd>
-</dl>
+- _`parentNode`_
+  - : 光标落在的目标节点。
+- _`offset`_ {{optional_inline}}
+  - : 落在节点的偏移量。
 
-<dl>
- <dt><em><code>offset</code></em> {{optional_inline}}</dt>
- <dd>落在节点的偏移量。</dd>
-</dl>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">/* 将光标收起到文档 body 的开头 */
+```js
+/* 将光标收起到文档 body 的开头 */
 var body = document.getElementsByTagName("body")[0];
 window.getSelection().collapse(body,0);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="相关连接">相关连接</h2>
+## 相关连接
 
-<ul>
- <li>{{domxref("Selection")}}, 本方法所属的接口。</li>
-</ul>
+- {{domxref("Selection")}}, 本方法所属的接口。

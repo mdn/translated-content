@@ -4,83 +4,58 @@ slug: Web/API/Window/afterprint_event
 translation_of: Web/API/Window/afterprint_event
 original_slug: Web/Events/afterprint
 ---
-<p>在相关联的文档已开始打印或打印预览已关闭之后，触发 <code>afterprint</code>事件。</p>
+在相关联的文档已开始打印或打印预览已关闭之后，触发 `afterprint`事件。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>Specification</dt>
- <dd><a href="https://html.spec.whatwg.org/multipage/webappapis.html#printing">HTML5</a></dd>
- <dt>Interface</dt>
- <dd>Event</dd>
- <dt>Bubbles</dt>
- <dd>No</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>DefaultView (<code>&lt;window&gt;</code>)</dd>
- <dt>Default Action</dt>
- <dd>None</dd>
-</dl>
+- Specification
+  - : [HTML5](https://html.spec.whatwg.org/multipage/webappapis.html#printing)
+- Interface
+  - : Event
+- Bubbles
+  - : No
+- Cancelable
+  - : No
+- Target
+  - : DefaultView (`<window>`)
+- Default Action
+  - : None
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>使用 <code>addEventListener()</code>:</p>
+使用 `addEventListener()`:
 
-<pre class="brush: js notranslate">window.addEventListener('afterprint', (event) =&gt; {
+```js
+window.addEventListener('afterprint', (event) => {
   console.log('After print');
-});</pre>
+});
+```
 
-<p>使用 <code>onafterprint</code> 时间监听属性：</p>
+使用 `onafterprint` 时间监听属性：
 
-<pre class="brush: js notranslate">window.onafterprint = (event) =&gt; {
+```js
+window.onafterprint = (event) => {
   console.log('After print');
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/beforeprint">beforeprint</a></li>
-</ul>
+- [beforeprint](https://developer.mozilla.org/zh-CN/docs/Web/Events/beforeprint)

@@ -3,26 +3,25 @@ title: perspective
 slug: Web/CSS/perspective
 translation_of: Web/CSS/perspective
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>perspective</code></strong>指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z&gt;0 的三维元素比正常大，而 z&lt;0 时则比正常小，大小程度由该属性的值决定。</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`perspective`**指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z>0 的三维元素比正常大，而 z<0 时则比正常小，大小程度由该属性的值决定。
 
-<div>{{EmbedInteractiveExample("pages/css/perspective.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective.html")}}
 
+三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 `perspective` 属性值的部分。
 
+默认情况下，*消失点*位于元素的中心，但是可以通过设置 {{cssxref("perspective-origin")}} 属性来改变其位置。
 
-<p>三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 <code>perspective</code> 属性值的部分。</p>
+当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
 
-<p>默认情况下，<em>消失点</em>位于元素的中心，但是可以通过设置 {{cssxref("perspective-origin")}} 属性来改变其位置。</p>
+## 语法
 
-<p>当该属性值不为 <code>0</code> 和 <code>none</code> 时，会创建新的 <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">层叠上下文</a>。在这种情况下，容器内元素的层叠关系像是使用了 <code>position: fixed</code> 一样。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css">/* Keyword value */
+```css
+/* Keyword value */
 perspective: none;
 
-/* &lt;length&gt; values */
+/* <length> values */
 perspective: 20px;
 perspective: 3.5em;
 
@@ -30,110 +29,110 @@ perspective: 3.5em;
 perspective: inherit;
 perspective: initial;
 perspective: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>没有应用 perspective 样式时的默认值。</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>{{cssxref("&lt;length&gt;")}} 指定观察者距离 z=0 平面的距离，为元素及其内容应用透视变换。当值为 0 或负值时，无透视变换。</dd>
-</dl>
+- `none`
+  - : 没有应用 perspective 样式时的默认值。
+- `<length>`
+  - : {{cssxref("&lt;length&gt;")}} 指定观察者距离 z=0 平面的距离，为元素及其内容应用透视变换。当值为 0 或负值时，无透视变换。
 
-<h3 id="标准语法">标准语法</h3>
+### 标准语法
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="设置视角">设置视角</h3>
+### 设置视角
 
-<p>此示例显示了一个立方体，其 perspective 设置为不同的值。立方体的收缩由 {{ cssxref("perspective") }} 属性定义。它的值越小，视角越深。</p>
+此示例显示了一个立方体，其 perspective 设置为不同的值。立方体的收缩由 {{ cssxref("perspective") }} 属性定义。它的值越小，视角越深。
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('设置视角', 660, 700)}}</p>
+{{EmbedLiveSample('设置视角', 660, 700)}}
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>下面的 HTML 创建了同一个立方体的四个副本，perspective 设置为不同的值。</p>
+下面的 HTML 创建了同一个立方体的四个副本，perspective 设置为不同的值。
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 250px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 350px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers250"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers350"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 500px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 650px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers500"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers650"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>CSS 建立了不同透视距离的 class，还包括容器盒、立方体本身以及它的每个面的 class。</p>
+CSS 建立了不同透视距离的 class，还包括容器盒、立方体本身以及它的每个面的 class。
 
-<pre class="brush: css">/* Shorthand classes for different perspective values */
+```css
+/* Shorthand classes for different perspective values */
 .pers250 {
   perspective: 250px;
 }
@@ -217,22 +216,19 @@ th, p, td {
   padding: 10px;
   font-family: sans-serif;
   text-align: left;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.perspective")}}
 
+## 相关连接
 
-<p>{{Compat("css.properties.perspective")}}</p>
-
-<h2 id="相关连接">相关连接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS Transforms</a></li>
-</ul>
+- [Using CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)

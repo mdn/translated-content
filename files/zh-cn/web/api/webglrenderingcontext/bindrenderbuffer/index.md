@@ -9,67 +9,66 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindRenderbuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.bindRenderbuffer()</code></strong> 方法将给定的 {{domxref("WebGLRenderbuffer")}} 绑定到一个目标，它必须是 gl.RENDERBUFFER 。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindRenderbuffer()`** 方法将给定的 {{domxref("WebGLRenderbuffer")}} 绑定到一个目标，它必须是 gl.RENDERBUFFER 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.bindRenderbuffer(<var>target</var>, <var>renderbuffer</var>);
-</pre>
+```plain
+void gl.bindRenderbuffer(target, renderbuffer);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd>{{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
- <ul>
-  <li><code>gl.RENDERBUFFER</code>: 以可渲染的内部格式对单个图像进行缓冲数据存储。</li>
- </ul>
- </dd>
- <dt>renderbuffer</dt>
- <dd>要绑定的 {{domxref("WebGLRenderbuffer")}} 对象。</dd>
-</dl>
+- target
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
 
-<p>None.</p>
+    - `gl.RENDERBUFFER`: 以可渲染的内部格式对单个图像进行缓冲数据存储。
 
-<h3 id="抛出错误">抛出错误</h3>
+- renderbuffer
+  - : 要绑定的 {{domxref("WebGLRenderbuffer")}} 对象。
 
-<p>如果 <code>target</code> 不是 <code>gl.RENDERBUFFER</code>，则抛出 <code>gl.INVALID_ENUM </code>错误。</p>
+### 返回值
 
-<h2 id="示例">示例</h2>
+None.
 
-<h3 id="绑定一个渲染缓冲区">绑定一个渲染缓冲区</h3>
+### 抛出错误
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+如果 `target` 不是 `gl.RENDERBUFFER`，则抛出 `gl.INVALID_ENUM `错误。
+
+## 示例
+
+### 绑定一个渲染缓冲区
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var renderbuffer = gl.createRenderbuffer();
 
 gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);
-</pre>
+```
 
-<h3 id="获取当前绑定">获取当前绑定</h3>
+### 获取当前绑定
 
-<p>要检查当前的渲染缓冲区绑定，请查询 <code>RENDERBUFFER_BINDING </code>常量。</p>
+要检查当前的渲染缓冲区绑定，请查询 `RENDERBUFFER_BINDING `常量。
 
-<pre class="brush: js">gl.getParameter(gl.RENDERBUFFER_BINDING);
-</pre>
+```js
+gl.getParameter(gl.RENDERBUFFER_BINDING);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindRenderbuffer")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindRenderbuffer")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

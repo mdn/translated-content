@@ -9,42 +9,40 @@ tags:
 translation_of: Web/CSS/filter-function/blur()
 original_slug: Web/CSS/filter-function/blur()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><strong><code>blur()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 方法将<a href="https://en.wikipedia.org/wiki/Gaussian_blur">高斯模糊</a>应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.</p>
+**`blur()`** [CSS](/en-US/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-blur.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-blur.html")}}
 
+## 语法
 
+```plain
+blur(radius)
+```
 
-<h2 id="语法">语法</h2>
+### 值
 
-<pre class="syntaxbox notranslate">blur(<em>radius</em>)</pre>
+- `radius`
+  - : 模糊的半径，值为{{cssxref("&lt;length&gt;")}}。它定义了高斯函数的标准偏差值，即屏幕上有多少像素相互融合; 因此，较大的值会产生更多模糊。值为 0 会使输入保持不变。该值为空则为 0。
 
-<h3 id="值">值</h3>
+## 示例
 
-<dl>
- <dt><code>radius</code></dt>
- <dd>模糊的半径，值为{{cssxref("&lt;length&gt;")}}。它定义了高斯函数的标准偏差值，即屏幕上有多少像素相互融合; 因此，较大的值会产生更多模糊。值为 0 会使输入保持不变。该值为空则为 0。</dd>
-</dl>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: css notranslate">blur(0)        /* No effect */
+```css
+blur(0)        /* No effect */
 blur(8px)      /* Blur with 8px radius */
-blur(1.17rem)  /* Blur with 1.17rem radius */</pre>
+blur(1.17rem)  /* Blur with 1.17rem radius */
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("filter-function/brightness", "brightness()")}}</li>
- <li>{{cssxref("filter-function/contrast", "contrast()")}}</li>
- <li>{{cssxref("filter-function/drop-shadow", "drop-shadow()")}}</li>
- <li>{{cssxref("filter-function/grayscale", "grayscale()")}}</li>
- <li>{{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​</li>
- <li>{{cssxref("filter-function/invert", "invert()")}}</li>
- <li>{{cssxref("filter-function/opacity", "opacity()")}}</li>
- <li>{{cssxref("filter-function/saturate", "saturate()")}}</li>
- <li>{{cssxref("filter-function/sepia", "sepia()")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function/brightness", "brightness()")}}
+- {{cssxref("filter-function/contrast", "contrast()")}}
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}​​​​​​​
+- {{cssxref("filter-function/invert", "invert()")}}
+- {{cssxref("filter-function/opacity", "opacity()")}}
+- {{cssxref("filter-function/saturate", "saturate()")}}
+- {{cssxref("filter-function/sepia", "sepia()")}}

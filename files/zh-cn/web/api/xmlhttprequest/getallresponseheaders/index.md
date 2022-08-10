@@ -3,26 +3,30 @@ title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 translation_of: Web/API/XMLHttpRequest/getAllResponseHeaders
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.getAllResponseHeaders()</strong> 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 <code>null</code> 如果没有收到任何响应。<strong> 注意：</strong> 对于复合请求（ multipart requests ），这个方法返回当前请求的头部，而不是最初的请求的头部。</p>
+**XMLHttpRequest.getAllResponseHeaders()** 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 `null` 如果没有收到任何响应。 **注意：** 对于复合请求（ multipart requests ），这个方法返回当前请求的头部，而不是最初的请求的头部。
 
-<pre class="syntaxbox">DOMString getAllResponseHeaders();</pre>
+```plain
+DOMString getAllResponseHeaders();
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var headers = <var>XMLHttpRequest</var>.getAllResponseHeaders();
-</pre>
+```plain
+var headers = XMLHttpRequest.getAllResponseHeaders();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个原始的 Header 头例子：</p>
+一个原始的 Header 头例子：
 
-<pre><code>date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+```plain
+date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
 server: meinheld/0.6.1\r\n
@@ -32,14 +36,15 @@ connection: keep-alive\r\n
 strict-transport-security: max-age=63072000\r\n
 vary: Cookie, Accept-Encoding\r\n
 content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n</code>
-</pre>
+x-xss-protection: 1; mode=block\r\n
+```
 
-<p>每一行通过\r\n来进行分割。</p>
+每一行通过\r\n 来进行分割。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre><code>var request = new XMLHttpRequest();
+```plain
+var request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
@@ -62,12 +67,12 @@ request.onreadystatechange = function() {
       headerMap[header] = value;
     });
   }
-</code>
-</pre>
+```
 
-<p>上面的代码执行后，你可以：</p>
+上面的代码执行后，你可以：
 
-<pre><code>var contentType = headerMap["content-type"];</code>
-</pre>
+```plain
+var contentType = headerMap["content-type"];
+```
 
-<p>上面的变量 <code>contentType</code> 可以获取到 HTTP header 里的 <code>content-type</code> 字段值。</p>
+上面的变量 `contentType` 可以获取到 HTTP header 里的 `content-type` 字段值。

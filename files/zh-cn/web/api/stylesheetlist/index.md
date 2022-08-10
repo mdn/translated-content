@@ -3,23 +3,26 @@ title: StyleSheetList
 slug: Web/API/StyleSheetList
 translation_of: Web/API/StyleSheetList
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>StyleSheetLists 接口表示一个 StyleSheet 的列表。</p>
+StyleSheetLists 接口表示一个 StyleSheet 的列表。
 
-<p>这是一个像数组一样的对象，但是不能使用数组方法进行遍历。但是它可以通过 for 循环遍历其下标，或者把它转换成数组。</p>
+这是一个像数组一样的对象，但是不能使用数组方法进行遍历。但是它可以通过 for 循环遍历其下标，或者把它转换成数组。
 
-<h2 id="Example">范例</h2>
+## 范例
 
-<h3 id="使用for循环获取文档_styleSheet_对象">使用 for 循环获取文档 <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet">styleSheet</a> 对象</h3>
+### 使用 for 循环获取文档 [styleSheet](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet) 对象
 
-<pre><code>for (var i=0; i &lt; document.styleSheets.length; i++){
+```plain
+for (var i=0; i < document.styleSheets.length; i++){
   var styleSheet = document.styleSheets[i];
-}</code></pre>
+}
+```
 
-<h3 id="使用Array方法获取文档的所有CSS规则">使用 Array 方法获取文档的所有 CSS 规则</h3>
+### 使用 Array 方法获取文档的所有 CSS 规则
 
-<pre><code>var allCSS =
+```plain
+var allCSS =
     [].slice.call(document.styleSheets)
         .reduce(function (prev, styleSheet) {
             if (styleSheet.cssRules) {
@@ -31,5 +34,5 @@ translation_of: Web/API/StyleSheetList
             } else {
                 return prev;
             }
-        }, '');</code>
-</pre>
+        }, '');
+```

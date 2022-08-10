@@ -12,26 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 browser-compat: javascript.builtins.Map.entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>entries()</strong></code> 方法返回一个新的包含 <code>[key, value]</code> 对的 <code><strong>Iterator</strong></code> 对象，返回的迭代器的迭代顺序与 <code>Map</code> 对象的插入顺序相同。</p>
+**`entries()`** 方法返回一个新的包含 `[key, value]` 对的 **`Iterator`** 对象，返回的迭代器的迭代顺序与 `Map` 对象的插入顺序相同。
 
-<p>{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}</p>
+{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><code><var>myMap</var>.entries()</code>
-</pre>
+```plain
+myMap.entries()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的 {{jsxref("Map")}} 迭代器对象。</p>
+一个新的 {{jsxref("Map")}} 迭代器对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="entries()的使用"><code>entries()</code>的使用</h3>
+### `entries()`的使用
 
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
@@ -41,19 +43,17 @@ var mapIter = myMap.entries();
 console.log(mapIter.next().value); // ["0", "foo"]
 console.log(mapIter.next().value); // [1, "bar"]
 console.log(mapIter.next().value); // [Object, "baz"]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

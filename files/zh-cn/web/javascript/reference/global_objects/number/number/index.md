@@ -3,45 +3,42 @@ title: Number() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Number()</code> 构造函数创建一个</strong> {{jsxref("Number")}} 对象。</p>
+**`Number()` 构造函数创建一个** {{jsxref("Number")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">new Number(<var>value</var>)
-</pre>
+```js
+new Number(value)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>value</var></code></dt>
- <dd>创建的 <code>Number</code> 对象的数值。</dd>
-</dl>
+- `value`
+  - : 创建的 `Number` 对象的数值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="创建_Number_对象">创建 Number 对象</h3>
+### 创建 Number 对象
 
-<pre class="brush: js">const a = new Number('123'); // a === 123 is false
+```js
+const a = new Number('123'); // a === 123 is false
 const b = Number('123');     // b === 123 is true
 a instanceof Number;         // is true
-b instanceof Number;         // is false</pre>
+b instanceof Number;         // is false
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另请参阅
 
-<p>{{Compat}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{jsxref("NaN")}}</li>
- <li>全局对象 {{jsxref("Math")}}</li>
- <li>任意精度的整数 {{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("NaN")}}
+- 全局对象 {{jsxref("Math")}}
+- 任意精度的整数 {{jsxref("BigInt")}}

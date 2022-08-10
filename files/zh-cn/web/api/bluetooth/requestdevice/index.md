@@ -7,34 +7,34 @@ tags:
   - 蓝牙
 translation_of: Web/API/Bluetooth/requestDevice
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef()}}{{SeeCompatTable}}
 
-<p>{{domxref("Bluetooth")}}接口的<strong><code>Bluetooth.requestDevice()</code></strong>方法返回一个带有对应 options 的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象。如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。</p>
+{{domxref("Bluetooth")}}接口的**`Bluetooth.requestDevice()`**方法返回一个带有对应 options 的{{domxref("BluetoothDevice")}}对象的{{jsxref("Promise")}}对象。如果没有蓝牙设备选择界面，则此方法返回与条件匹配的第一个设备。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Bluetooth.requestDevice(options).then(function(bluetoothDevice) { ... })</pre>
+```plain
+Bluetooth.requestDevice(options).then(function(bluetoothDevice) { ... })
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>带有{{domxref("BluetoothDevice")}} 对象的{{jsxref("Promise")}} 对象。</p>
+带有{{domxref("BluetoothDevice")}} 对象的{{jsxref("Promise")}} 对象。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>options </dt>
- <dd>设置设备请求选项的对象. 可用的选项是：
- <ul>
-  <li><code>filters[]</code>: 一个 BluetoothScanFilters 数组。此过滤器由一个 BluetoothServiceUUID 数组，一个名称参数和一个 namePrefix 参数组成。</li>
-  <li><code>optionalServices[]</code>: 一个 BluetoothServiceUUID 数组。</li>
-  <li><code>acceptAllDevices</code>: boolean 表示请求脚本可以接受所有蓝牙设备。默认值为 false。</li>
- </ul>
- </dd>
-</dl>
+- options
 
-<h2 id="示例">示例</h2>
+  - : 设置设备请求选项的对象. 可用的选项是：
 
-<pre><code>//扫描选项匹配任何设备广播：
+    - `filters[]`: 一个 BluetoothScanFilters 数组。此过滤器由一个 BluetoothServiceUUID 数组，一个名称参数和一个 namePrefix 参数组成。
+    - `optionalServices[]`: 一个 BluetoothServiceUUID 数组。
+    - `acceptAllDevices`: boolean 表示请求脚本可以接受所有蓝牙设备。默认值为 false。
+
+## 示例
+
+```plain
+//扫描选项匹配任何设备广播：
 
 //. 标准心率服务。
 
@@ -69,14 +69,15 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 })
 .catch(function(error) {
   console.log("出现错误： " + error);
-});</code></pre>
+});
+```
 
-<p>查看<a href="https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services">详细示例</a> </p>
+查看[详细示例](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Bluetooth.requestDevice")}}

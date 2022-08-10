@@ -8,32 +8,33 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.values()</strong></code>方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用{{jsxref("Statements/for...in", "for...in")}}循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。</p>
+**`Object.values()`**方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用{{jsxref("Statements/for...in", "for...in")}}循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Object.values(<var>obj</var>)</code></pre>
+```plain
+Object.values(obj)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>被返回可枚举属性值的对象。</dd>
-</dl>
+- `obj`
+  - : 被返回可枚举属性值的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个包含对象自身的所有可枚举属性值的数组。</p>
+一个包含对象自身的所有可枚举属性值的数组。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Object.values()</code>返回一个数组，其元素是在对象上找到的可枚举属性值。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。</p>
+`Object.values()`返回一个数组，其元素是在对象上找到的可枚举属性值。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var obj = { foo: 'bar', baz: 42 };
+```js
+var obj = { foo: 'bar', baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // array like object
@@ -51,17 +52,17 @@ my_obj.foo = 'bar';
 console.log(Object.values(my_obj)); // ['bar']
 
 // non-object argument will be coerced to an object
-console.log(Object.values('foo')); // ['f', 'o', 'o']</pre>
+console.log(Object.values('foo')); // ['f', 'o', 'o']
+```
 
-<p> </p>
+## Polyfill
 
-<h2 id="Polyfill">Polyfill </h2>
+`如果要 Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill 。
 
-<p><code>如果要 Object.values</code>兼容不支持它的旧环境，可在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 或 <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> 中找到 Polyfill 。</p>
+根据**Object.keys()**的 Polyfill 仿写一个：
 
-<p>根据<strong>Object.keys()</strong>的 Polyfill 仿写一个：</p>
-
-<pre class="brush: js">if (!Object.values) Object.values = function(obj) {
+```js
+if (!Object.values) Object.values = function(obj) {
     if (obj !== Object(obj))
         throw new TypeError('Object.values called on a non-object');
     var val=[],key;
@@ -71,23 +72,22 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']</pre>
         }
     }
     return val;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

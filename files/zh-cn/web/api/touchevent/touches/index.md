@@ -8,33 +8,33 @@ tags:
   - touch
 translation_of: Web/API/TouchEvent/touches
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的  {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 <code>touchstart </code>阶段。</p>
+一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart `阶段。
 
-<p>此属性是 {{readonlyInline}}。</p>
+此属性是 {{readonlyInline}}。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval">var <em>touches</em> = <em>touchEvent</em>.touches;
-</pre>
+```plain
+var touches = touchEvent.touches;
+```
 
-<h3 id="Return_Value">返回值</h3>
+### 返回值
 
-<dl>
- <dt><code>touches</code></dt>
- <dd>一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的  {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 <code>touchstart </code>阶段。</dd>
-</dl>
+- `touches`
+  - : 一个 {{ domxref("TouchList") }}，其会列出所有当前在与触摸表面接触的 {{ domxref("Touch") }} 对象，不管触摸点是否已经改变或其目标元素是在处于 `touchstart `阶段。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>此示例说明 {{domxref("TouchEvent")}}<code> </code>对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。</p>
+此示例说明 {{domxref("TouchEvent")}}` `对象的 {{domxref("TouchEvent.touches")}} 属性。该{{domxref("TouchEvent.touches")}} 属性是一个 {{domxref("TouchList")}} 对象，并包含 {{domxref("Touch")}} 当前接触表面的每个接触点的对象列表。
 
-<p>在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}}<code> </code>列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。</p>
+在下面的代码片段中，{{event("touchstart")}} 事件处理程序会检查 {{domxref("TouchEvent.touches")}}` `列表的长度，以确定激活的触摸点的数量，然后根据触摸点的数量调用不同的处理程序。
 
-<pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
+```js
+someElement.addEventListener('touchstart', function(e) {
    // Invoke the appropriate handler depending on the
    // number of touch points.
    switch (e.touches.length) {
@@ -44,14 +44,12 @@ translation_of: Web/API/TouchEvent/touches
      default: console.log("Not supported"); break;
    }
  }, false);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.TouchEvent.touches")}}</p>
+{{Compat("api.TouchEvent.touches")}}

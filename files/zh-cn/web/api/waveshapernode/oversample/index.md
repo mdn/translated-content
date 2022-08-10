@@ -3,67 +3,43 @@ title: WaveShaperNode.oversample
 slug: Web/API/WaveShaperNode/oversample
 translation_of: Web/API/WaveShaperNode/oversample
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("WaveShaperNode") }} 接口的 <code>oversample</code> 属性是一个指示过采样是否必须使用的枚举值。 过采样是一个用于在将畸变应用到音频信号之前创建更多的采样（上采样）的技术。</p>
+{{ domxref("WaveShaperNode") }} 接口的 `oversample` 属性是一个指示过采样是否必须使用的枚举值。 过采样是一个用于在将畸变应用到音频信号之前创建更多的采样（上采样）的技术。
 
-<p>一旦被应用， 采样的数值会被还原为初始的数值。 这将通过避免一些混淆现象从而导致更好的结果， 代价则是在畸变曲线上会有较低的精确度。</p>
+一旦被应用， 采样的数值会被还原为初始的数值。 这将通过避免一些混淆现象从而导致更好的结果， 代价则是在畸变曲线上会有较低的精确度。
 
-<p>可用的<code>oversample</code> 值有：</p>
+可用的`oversample` 值有：
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Effect</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>'none'</code></td>
-   <td>不使用过采样。</td>
-  </tr>
-  <tr>
-   <td><code>'2x'</code></td>
-   <td>在应用畸变曲线前将采样的数量翻倍。</td>
-  </tr>
-  <tr>
-   <td><code>'4x'</code></td>
-   <td>在应用畸变曲线前将采样的数量翻 4 倍。</td>
-  </tr>
- </tbody>
-</table>
+| Value    | Effect                                |
+| -------- | ------------------------------------- |
+| `'none'` | 不使用过采样。                        |
+| `'2x'`   | 在应用畸变曲线前将采样的数量翻倍。    |
+| `'4x'`   | 在应用畸变曲线前将采样的数量翻 4 倍。 |
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><em>distortion</em>.oversample = <em>enumeratedValue</em>;
-</pre>
+```js
+distortion.oversample = enumeratedValue;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<ul>
- <li>畸变是一个{{domxref("WaveShaperNode")}}.</li>
- <li>枚举值<code>'none'</code>， <code>'2x'</code>， 或 <code>'4x'</code>。</li>
-</ul>
+- 畸变是一个{{domxref("WaveShaperNode")}}.
+- 枚举值`'none'`， `'2x'`， 或 `'4x'`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}</p>
+{{page("/en-US/docs/Web/API/AudioContext.createWaveShaper","Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 参考链接
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="参考链接">参考链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

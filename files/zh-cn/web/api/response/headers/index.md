@@ -3,25 +3,28 @@ title: Response.headers
 slug: Web/API/Response/headers
 translation_of: Web/API/Response/headers
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}} 接口的只读属性 <code><strong>headers</strong></code> 包含与响应关联的{{domxref("Headers")}}对象。</p>
+{{domxref("Response")}} 接口的只读属性 **`headers`** 包含与响应关联的{{domxref("Headers")}}对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <var>myHeaders</var> = <var>response</var>.headers;</pre>
+```plain
+var myHeaders = response.headers;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("Headers")}} 对象。</p>
+一个 {{domxref("Headers")}} 对象。
 
-<h2 id="例程">例程</h2>
+## 例程
 
-<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> 例程中（详见 <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>），我们使用{{domxref("Request.Request","Request()")}}构造函数创建了一个新的{{domxref("Request")}}对象，传入了一个 jpg 路径。我们接着使用{{domxref("GlobalFetch.fetch","fetch()")}}触发了请求，用{{domxref("Body.blob")}}从响应中提取了 blob 实例，使用{{domxref("URL.createObjectURL")}}创建了一个 URL 对象，然后显示在了{{htmlelement("img")}}中。</p>
+在我们的 [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) 例程中（详见 [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)），我们使用{{domxref("Request.Request","Request()")}}构造函数创建了一个新的{{domxref("Request")}}对象，传入了一个 jpg 路径。我们接着使用{{domxref("GlobalFetch.fetch","fetch()")}}触发了请求，用{{domxref("Body.blob")}}从响应中提取了 blob 实例，使用{{domxref("URL.createObjectURL")}}创建了一个 URL 对象，然后显示在了{{htmlelement("img")}}中。
 
-<p>注意，在<code>fetch()</code>的顶级块中我们输出了<code>headers</code>到控制台。</p>
+注意，在`fetch()`的顶级块中我们输出了`headers`到控制台。
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -31,20 +34,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Response.headers")}}</p>
+{{Compat("api.Response.headers")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

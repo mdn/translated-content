@@ -11,52 +11,54 @@ tags:
   - keys
 translation_of: Web/API/DOMTokenList/keys
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}}<strong> 的 </strong><code><strong>keys()</strong></code> 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}, 可以用来遍历这个对象中的所有的键，键的类型是<code>无符号整型</code>。</p>
+{{domxref("DOMTokenList")}} **的** **`keys()`** 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}, 可以用来遍历这个对象中的所有的键，键的类型是`无符号整型`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">tokenList.keys();</pre>
+```plain
+tokenList.keys();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Iteration_protocols","iterator")}}.</p>
+返回一个 {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>在下面的例子中，我们获取了一个使用 {{domxref("Element.classList")}}属性获取了一个 <code>DOMTokenList</code> ，在这里它表示了这个 {{htmlelement("span")}} 元素的所有 class 属性值的键（索引）。然后我们使用了它的  <code>keys()</code>方法获取了一个 iterator， 最后再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 <code>&lt;span&gt;</code> 标签内（ 使用{{domxref("Node.textContent")}}属性）显示。</p>
+在下面的例子中，我们获取了一个使用 {{domxref("Element.classList")}}属性获取了一个 `DOMTokenList` ，在这里它表示了这个 {{htmlelement("span")}} 元素的所有 class 属性值的键（索引）。然后我们使用了它的 `keys()`方法获取了一个 iterator， 最后再使用 [for ... of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 `<span>` 标签内（ 使用{{domxref("Node.textContent")}}属性）显示。
 
-<p>首先，例子使用的 HTML 代码为：</p>
+首先，例子使用的 HTML 代码为：
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>这是 JavaScript 代码：</p>
+这是 JavaScript 代码：
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.keys();
 
 for(var value of iterator) {
   span.textContent += value + ' ++ ';
-}</pre>
+}
+```
 
-<p>输出为：</p>
+输出为：
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.DOMTokenList.keys")}}</p>
-</div>
+{{Compat("api.DOMTokenList.keys")}}

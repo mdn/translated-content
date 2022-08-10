@@ -7,78 +7,72 @@ tags:
   - Reference
 translation_of: Web/CSS/height
 ---
-<div>{{CSSRef()}}</div>
+{{CSSRef()}}`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)）的高度。{{EmbedInteractiveExample("pages/css/height.html")}}{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
 
-<div><code>height</code> CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为  <code>border-box</code> , 这个属性决定的将是边框区域（<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area">border area</a>）的高度。</div>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/css/height.html")}}</div>
-
-<div>{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖  {{Cssxref("height")}}。</div>
-
-<h2 id="Syntax">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword value */
+```css
+/* Keyword value */
 height: auto;
 
-/* &lt;length&gt; values */
+/* <length> values */
 height: 120px;
 height: 10em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 height: 75%;
 
 /* Global values */
 height: inherit;
 height: initial;
-height: unset;</pre>
+height: unset;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>将高度定义为一个绝对值。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>将高度定义为相对包含块高度的百分比。</dd>
- <dt><code>border-box</code> {{experimental_inline}}</dt>
- <dd>如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 border box。</dd>
- <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 content box。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 将高度定义为一个绝对值。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 将高度定义为相对包含块高度的百分比。
+- `border-box` {{experimental_inline}}
+  - : 如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 border box。
+- `content-box` {{experimental_inline}}
+  - : 如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 content box。
+- `auto`
+  - : 由浏览器为元素计算并选择一个高度。
+- `fill` {{experimental_inline}}
+  - : 根据文字方向，使用 `fill-available` 作为行大小或者块大小。
+- `max-content` {{experimental_inline}}
+  - : 设置为允许的最大高度。
+- `min-content` {{experimental_inline}}
+  - : 设置为允许的最小高度。
+- `available` {{experimental_inline}}
+  - : 包含块高度减去当前元素的边距，边框和填充。
+- `fit-content` {{experimental_inline}}
+  - : 将 fill-content 公式中的可用位置替换为特定的参数以进行使用，如：min(max-content, max(min-content, ))
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>由浏览器为元素计算并选择一个高度。</dd>
- <dt><code>fill</code> {{experimental_inline}}</dt>
- <dd>根据文字方向，使用 <code>fill-available</code> 作为行大小或者块大小。</dd>
- <dt><code>max-content</code> {{experimental_inline}}</dt>
- <dd>设置为允许的最大高度。</dd>
- <dt><code>min-content</code> {{experimental_inline}}</dt>
- <dd>设置为允许的最小高度。</dd>
- <dt><code>available</code> {{experimental_inline}}</dt>
- <dd>包含块高度减去当前元素的边距，边框和填充。</dd>
- <dt><code>fit-content</code> {{experimental_inline}}</dt>
- <dd>将 fill-content 公式中的可用位置替换为特定的参数以进行使用，如：min(max-content, max(min-content, ))</dd>
-</dl>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="taller"&gt;I'm 50 pixels tall.&lt;/div&gt;
-&lt;div id="shorter"&gt;I'm 25 pixels tall.&lt;/div&gt;
-&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
+```html
+<div id="taller">I'm 50 pixels tall.</div>
+<div id="shorter">I'm 25 pixels tall.</div>
+<div id="parent">
+  <div id="child">
     I'm half the height of my parent.
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 250px;
   margin-bottom: 5px;
   border: 2px solid blue;
@@ -100,33 +94,29 @@ height: unset;</pre>
   height: 50%;
   width: 75%;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', 'auto', 240)}}</p>
+{{EmbedLiveSample('示例', 'auto', 240)}}
 
-<h2 id="无障碍问题">无障碍问题</h2>
+## 无障碍问题
 
-<p>确保设定了 <code>height</code> 的元素在显示上不会被截断，或者当页面放大时增大的字体大小不会遮挡其他内容。 </p>
+确保设定了 `height` 的元素在显示上不会被截断，或者当页面放大时增大的字体大小不会遮挡其他内容。
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4  | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/CSS/box_model">box model</a>, {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}</li>
-</ul>
+- [box model](https://developer.mozilla.org/en-US/docs/CSS/box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}

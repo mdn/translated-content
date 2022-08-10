@@ -6,33 +6,35 @@ tags:
   - 客户端错误
 translation_of: Web/HTTP/Status/426
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>426 Upgrade Required</strong></code> 是一种 HTTP 协议的错误状态代码，表示服务器拒绝处理客户端使用当前协议发送的请求，但是可以接受其使用升级后的协议发送的请求。</p>
+**`426 Upgrade Required`** 是一种 HTTP 协议的错误状态代码，表示服务器拒绝处理客户端使用当前协议发送的请求，但是可以接受其使用升级后的协议发送的请求。
 
-<p>服务器会在响应中使用 {{HTTPHeader("Upgrade")}} 首部来指定要求的协议。</p>
+服务器会在响应中使用 {{HTTPHeader("Upgrade")}} 首部来指定要求的协议。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">426 Upgrade Required</pre>
+```plain
+426 Upgrade Required
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>HTTP/1.1 426 Upgrade Required
+```plain
+HTTP/1.1 426 Upgrade Required
 Upgrade: HTTP/3.0
 Connection: Upgrade
 Content-Length: 53
 Content-Type: text/plain
 
-This service requires use of the HTTP/3.0 protocol</pre>
+This service requires use of the HTTP/3.0 protocol
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Upgrade")}}</li>
- <li>{{HTTPStatus("101")}} <code>Switching Protocol</code></li>
-</ul>
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPStatus("101")}} `Switching Protocol`

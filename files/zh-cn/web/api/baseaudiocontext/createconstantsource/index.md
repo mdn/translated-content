@@ -3,26 +3,28 @@ title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
 translation_of: Web/API/BaseAudioContext/createConstantSource
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p> <strong><code>createConstantSource()</code></strong> 是 {{domxref("BaseAudioContext")}} 接口的一个方法，用于生成一个 {{domxref("ConstantSourceNode")}} 对象，该对象是一个输出单信道（one-channel）音频信号的音频源，这些音频信号都拥有一个恒定的样本值。</p>
+**`createConstantSource()`** 是 {{domxref("BaseAudioContext")}} 接口的一个方法，用于生成一个 {{domxref("ConstantSourceNode")}} 对象，该对象是一个输出单信道（one-channel）音频信号的音频源，这些音频信号都拥有一个恒定的样本值。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var constantSourceNode = AudioContext.createConstantSource()</pre>
+```plain
+var constantSourceNode = AudioContext.createConstantSource()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref('ConstantSourceNode')}} instance.</p>
+A {{domxref('ConstantSourceNode')}} instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.BaseAudioContext.createConstantSource")}}

@@ -4,59 +4,55 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.deleteProperty()</code></strong> 方法用于拦截对对象属性的 {{jsxref("Operators/delete", "delete")}} 操作。</p>
+**`handler.deleteProperty()`** 方法用于拦截对对象属性的 {{jsxref("Operators/delete", "delete")}} 操作。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   deleteProperty: function(target, property) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><code>deleteProperty</code> 方法将会接受以下参数。<code>this</code> 被绑定在 handler 上。</p>
+`deleteProperty` 方法将会接受以下参数。`this` 被绑定在 handler 上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>property</code></dt>
- <dd>待删除的属性名。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `property`
+  - : 待删除的属性名。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>deleteProperty</code> 必须返回一个 {{jsxref("Boolean")}} 类型的值，表示了该属性是否被成功删除。</p>
+`deleteProperty` 必须返回一个 {{jsxref("Boolean")}} 类型的值，表示了该属性是否被成功删除。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.deleteProperty()</strong></code> 方法可以拦截 {{jsxref("Operators/delete", "delete")}} 操作。</p>
+**`handler.deleteProperty()`** 方法可以拦截 {{jsxref("Operators/delete", "delete")}} 操作。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该方法会拦截以下操作：</p>
+该方法会拦截以下操作：
 
-<ul>
- <li>删除属性：<code>delete proxy[foo]</code> 和 <code>delete proxy.foo</code></li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- 删除属性：`delete proxy[foo]` 和 `delete proxy.foo`
+- {{jsxref("Reflect.deleteProperty()")}}
 
-<h3 id="不变量">不变量</h3>
+### 不变量
 
-<p>如果违背了以下不变量，proxy 将会抛出一个 {{jsxref("TypeError")}}:</p>
+如果违背了以下不变量，proxy 将会抛出一个 {{jsxref("TypeError")}}:
 
-<ul>
- <li>如果目标对象的属性是不可配置的，那么该属性不能被删除。</li>
-</ul>
+- 如果目标对象的属性是不可配置的，那么该属性不能被删除。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示了对 {{jsxref("Operators/delete", "delete")}} 操作的拦截。</p>
+以下代码演示了对 {{jsxref("Operators/delete", "delete")}} 操作的拦截。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   deleteProperty: function(target, prop) {
     console.log('called: ' + prop);
     return true;
@@ -64,21 +60,19 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deletePrope
 });
 
 delete p.a; // "called: a"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Operators/delete", "delete")}} 操作符</li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Operators/delete", "delete")}} 操作符
+- {{jsxref("Reflect.deleteProperty()")}}

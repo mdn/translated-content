@@ -3,19 +3,18 @@ title: columns
 slug: Web/CSS/columns
 translation_of: Web/CSS/columns
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <strong><code>columns</code></strong> 用来设置元素的列宽和列数。</p>
+CSS 属性 **`columns`** 用来设置元素的列宽和列数。
 
-<div>{{EmbedInteractiveExample("pages/css/columns.html")}}</div>
+{{EmbedInteractiveExample("pages/css/columns.html")}}
 
+它是一个[简写属性](/en-US/docs/Web/CSS/Shorthand_properties)，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其[初始值](/en-US/docs/Web/CSS/initial_value)。
 
+## 语法
 
-<p>它是一个<a href="/en-US/docs/Web/CSS/Shorthand_properties">简写属性</a>，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其<a href="/en-US/docs/Web/CSS/initial_value">初始值</a>。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* Column width */
+```css
+/* Column width */
 columns: 18em;
 
 /* Column count */
@@ -30,52 +29,52 @@ columns: auto auto;
 /* Global values */
 columns: inherit;
 columns: initial;
-columns: unset;</pre>
+columns: unset;
+```
 
-<p><code>columns</code> 属性可以按任何顺序指定为下面列出的一个或两个值。</p>
+`columns` 属性可以按任何顺序指定为下面列出的一个或两个值。
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;'column-width'&gt;</code></dt>
- <dd>理想的列宽，定义为 {{cssxref("&lt;length&gt;")}} 或 <code>auto</code> 关键字。实际宽度可以更宽或更窄以适合可用空间。See {{cssxref("column-width")}}。</dd>
- <dt><code>&lt;'column-count'&gt;</code></dt>
- <dd>元素内容应分成的理想列数，定义为 {{cssxref("&lt;integer&gt;")}} 或 <code>auto</code> 关键字。如果此值和列的宽度都不是 <code>auto</code> ，则它仅指示允许的最大列数。请参阅 {{cssxref("column-count")}} 。</dd>
-</dl>
+- `<'column-width'>`
+  - : 理想的列宽，定义为 {{cssxref("&lt;length&gt;")}} 或 `auto` 关键字。实际宽度可以更宽或更窄以适合可用空间。See {{cssxref("column-width")}}。
+- `<'column-count'>`
+  - : 元素内容应分成的理想列数，定义为 {{cssxref("&lt;integer&gt;")}} 或 `auto` 关键字。如果此值和列的宽度都不是 `auto` ，则它仅指示允许的最大列数。请参阅 {{cssxref("column-count")}} 。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is a bunch of text split into three columns
   using the CSS `columns` property. The text
   is equally distributed over the columns.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">.content-box {
+```css
+.content-box {
   columns: 3 auto;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('例子', 'auto', 120)}}</p>
+{{EmbedLiveSample('例子', 'auto', 120)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.columns")}}</p>
+{{Compat("css.properties.columns")}}

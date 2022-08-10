@@ -3,27 +3,32 @@ title: WorkerGlobalScope.self
 slug: Web/API/WorkerGlobalScope/self
 translation_of: Web/API/WorkerGlobalScope/self
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p><code><strong>self</strong></code> 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 <code>WorkerGlobalScope</code> 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope 。</p>
+**`self`** 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 `WorkerGlobalScope` 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var selfRef = self;</pre>
+```js
+var selfRef = self;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>当前 worker 的全局 scope（值取决于你创建的 worker 类型）。</p>
+当前 worker 的全局 scope（值取决于你创建的 worker 类型）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在 worker 中运行这行代码：</p>
+在 worker 中运行这行代码：
 
-<pre class="brush: js">console.log(self);</pre>
+```js
+console.log(self);
+```
 
-<p>console 中会输出当前 worker 的全局 scope，如下所示：</p>
+console 中会输出当前 worker 的全局 scope，如下所示：
 
-<pre class="brush: js">DedicatedWorkerGlobalScope {
+```js
+DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
     Infinity: Infinity
     Array: function Array() { [native code] }
@@ -36,7 +41,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
       prototype: Array[0]
       unobserve: function unobserve() { [native code] }
       __proto__: function Empty() {}
-      &lt;function scope&gt;
+      <function scope>
     ArrayBuffer: function ArrayBuffer() { [native code] }
     Blob: function Blob() { [native code] }
     Boolean: function Boolean() { [native code] }
@@ -44,19 +49,19 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
     Date: function Date() { [native code] }
     DedicatedWorkerGlobalScope: function DedicatedWorkerGlobalScope() { [native code] }
     Error: function Error() { [native code] }
-<em>// etc. etc.</em>
-</pre>
+// etc. etc.
+```
 
-<p>这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。 详细列表也可查阅 <a href="/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to Web Workers</a>.</p>
+这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。 详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<p>{{domxref("WorkerGlobalScope")}}</p>
+{{domxref("WorkerGlobalScope")}}

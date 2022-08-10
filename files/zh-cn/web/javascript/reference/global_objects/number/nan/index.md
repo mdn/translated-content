@@ -3,27 +3,25 @@ title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Number.NaN</strong></code> 表示“非数字”（Not-A-Number）。和 {{jsxref("Global_Objects/NaN", "NaN")}} 相同。</p>
+**`Number.NaN`** 表示“非数字”（Not-A-Number）。和 {{jsxref("Global_Objects/NaN", "NaN")}} 相同。
 
-<p>不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例来访问该属性，使用 <code>Number.NaN</code> 来访问该静态属性。</p>
+不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例来访问该属性，使用 `Number.NaN` 来访问该静态属性。
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>全局对象 {{jsxref("Global_Objects/NaN", "NaN")}}</li>
- <li>{{jsxref("Global_Objects/Number", "Number")}}</li>
-</ul>
+- 全局对象 {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("Global_Objects/Number", "Number")}}

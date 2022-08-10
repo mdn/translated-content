@@ -3,51 +3,53 @@ title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toLocaleString()</code></strong> 方法返回一个字符串，该字符串具有此 <code>BigInt</code> 的 language-sensitive 表达形式。</p>
+**`toLocaleString()`** 方法返回一个字符串，该字符串具有此 `BigInt` 的 language-sensitive 表达形式。
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 
+## 语法
 
+```plain
+bigIntObj.toLocaleString([locales [, options]])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>bigIntObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+`locales` 和 `options` 参数可自定义函数的行为，并允许应用程序指定应使用其格式约定的语言。在忽略 `locales` 和 `options` 参数的实现中，使用的 `locale` 和返回的字符串形式完全依赖于实现。
 
-<h3 id="参数">参数</h3>
+{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', '参数')}}
 
-<p><code>locales</code> 和 <code>options</code> 参数可自定义函数的行为，并允许应用程序指定应使用其格式约定的语言。在忽略 <code>locales</code> 和 <code>options</code> 参数的实现中，使用的 <code>locale</code> 和返回的字符串形式完全依赖于实现。</p>
+### 返回值
 
-<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', '参数')}}</div>
+具有此 `BigInt` 的 language-sensitive 表示形式的字符串。
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>具有此 <code>BigInt</code> 的 language-sensitive 表示形式的字符串。</p>
+### Using `toLocaleString`
 
-<h2 id="例子">例子</h2>
+在不指定语言环境的基本用法中，将返回默认语言环境中带默认选项的格式化字符串。
 
-<h3 id="Using_toLocaleString">Using <code>toLocaleString</code></h3>
-
-<p>在不指定语言环境的基本用法中，将返回默认语言环境中带默认选项的格式化字符串。</p>
-
-<pre class="brush: js">var bigint = 3500n;
+```js
+var bigint = 3500n;
 
 bigint.toLocaleString();
 // Displays "3,500" if in U.S. English locale
-</pre>
+```
 
-<h3 id="Using_locales">Using <code>locales</code></h3>
+### Using `locales`
 
-<p>这个例子展示了本地化数字格式的一些变体。为了获得应用程序用户界面中使用的语言的格式，请确保使用 <code>locales</code> 参数指定该语言（可能还有一些备用语言）：</p>
+这个例子展示了本地化数字格式的一些变体。为了获得应用程序用户界面中使用的语言的格式，请确保使用 `locales` 参数指定该语言（可能还有一些备用语言）：
 
-<pre class="brush: js">var bigint = 123456789123456789n;
+```js
+var bigint = 123456789123456789n;
 
 // German uses period for thousands
 console.log(bigint.toLocaleString('de-DE'));
 // → 123.456.789.123.456.789
 
-// Arabic in most Arabic speaking countries uses <a href="https://en.wikipedia.org/wiki/Eastern_Arabic_numerals">Eastern Arabic</a> digits
+// Arabic in most Arabic speaking countries uses Eastern Arabic digits
 console.log(bigint.toLocaleString('ar-EG'));
 // → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
@@ -63,13 +65,14 @@ console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
 // Balinese, include a fallback language, in this case Indonesian
 console.log(bigint.toLocaleString(['ban', 'id']));
 // → 123.456.789.123.456.789
-</pre>
+```
 
-<h3 id="Using_options">Using <code>options</code></h3>
+### Using `options`
 
-<p><code>toLocaleString</code> 提供的结果可以使用 <code>options</code> 参数进行自定义：</p>
+`toLocaleString` 提供的结果可以使用 `options` 参数进行自定义：
 
-<pre class="brush: js">var bigint = 123456789123456789n;
+```js
+var bigint = 123456789123456789n;
 
 // request a currency format
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
@@ -82,22 +85,20 @@ console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' 
 // limit to three significant digits
 console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 // → 1,23,00,00,00,00,00,00,000
-</pre>
+```
 
-<h2 id="性能">性能</h2>
+## 性能
 
-<p>格式化大量数字时，最好创建 {{jsxref("NumberFormat")}} 对象并使用其 {{jsxref("NumberFormat.format")}} 属性提供的函数。</p>
+格式化大量数字时，最好创建 {{jsxref("NumberFormat")}} 对象并使用其 {{jsxref("NumberFormat.format")}} 属性提供的函数。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>{{jsxref("BigInt.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.toString()")}}

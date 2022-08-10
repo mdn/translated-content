@@ -3,58 +3,60 @@ title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>keys()</code></strong>方法返回新的 <code>Array Iterator</code> 对象，包含数组中每个下标的键。</p>
+**`keys()`**方法返回新的 `Array Iterator` 对象，包含数组中每个下标的键。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>arr</var>.keys()</code></pre>
+```plain
+arr.keys()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新的<code><strong>Array Iterator</strong></code>对象</p>
+新的**`Array Iterator`**对象
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用for...of循环的迭代">使用<code>for...of</code>循环的迭代</h3>
+### 使用`for...of`循环的迭代
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.keys();
 // 你的浏览器必须支持 for..of 循环
 // 以及 for 循环中的 let 区域变量
 for (let n of eArray) {
   console.log(n);
 }
-</pre>
+```
 
-<h3 id="备选的迭代">备选的迭代</h3>
+### 备选的迭代
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.keys();
 console.log(eArr.next().value); // 0
 console.log(eArr.next().value); // 1
 console.log(eArr.next().value); // 2
 console.log(eArr.next().value); // 3
 console.log(eArr.next().value); // 4
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.values()")}}</li>
- <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">迭代协议</a></li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.entries()")}}
+- {{jsxref("TypedArray.prototype.values()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -3,62 +3,60 @@ title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
 translation_of: Web/API/DataTransfer/getData
 ---
-<div>
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
+
+**`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
+
+数据类型有：`text/plain`，`text/uri-list。`
+
+## 语法
+
+```plain
+DOMString dataTransfer.getData(format);
+```
+
+### 参数
+
+- _format_
+  - : {{domxref("DOMString")}}类型
+
+### 返回值
+
+- {{domxref("DOMString")}}
+  - : 返回一个给定类型的{{domxref("DOMString")}}格式的数据。如果没有操作数据或者没有指定操作数据的类型，都会返回一个空字符串。
+
+### 注意
+
+[HTML5 拖放规范](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) 规定了一个 `drag data store mode`。这可能会导致预期外的结果，即 **`DataTransfer.getData()` **没有返回预期值。
+
+## 示例
+
+这个例子展示了 {{domxref("DataTransfer")}}对象的{{domxref("DataTransfer.getData()","getData()")}}和{{domxref("DataTransfer.setData()","setData()")}}方法。
+
+### HTML
+
+```html
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <span id="drag" draggable="true" ondragstart="drag(event)">drag me to the other box</span>
 </div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+```
 
-<p><strong><code>DataTransfer.getData()</code></strong> 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。</p>
+### CSS
 
-<p>数据类型有：<code>text/plain</code>，<code>text/uri-list。</code></p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">DOMString <var>dataTransfer</var>.getData(format);
-</pre>
-
-<h3 id="参数">参数</h3>
-
-<dl>
- <dt><em>format</em></dt>
- <dd>{{domxref("DOMString")}}类型</dd>
-</dl>
-
-<h3 id="返回值">返回值</h3>
-
-<dl>
- <dt>{{domxref("DOMString")}}</dt>
- <dd>返回一个给定类型的{{domxref("DOMString")}}格式的数据。如果没有操作数据或者没有指定操作数据的类型，都会返回一个空字符串。</dd>
-</dl>
-
-<h3 id="注意">注意</h3>
-
-<p><a href="https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode">HTML5 拖放规范</a> 规定了一个 <code>drag data store mode</code>。这可能会导致预期外的结果，即 <strong><code>DataTransfer.getData()</code> </strong>没有返回预期值。</p>
-
-<h2 id="示例">示例</h2>
-
-<p>这个例子展示了 {{domxref("DataTransfer")}}对象的{{domxref("DataTransfer.getData()","getData()")}}和{{domxref("DataTransfer.setData()","setData()")}}方法。</p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;
-    &lt;span id="drag" draggable="true" ondragstart="drag(event)"&gt;drag me to the other box&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#div1, #div2 {
+```css
+#div1, #div2 {
     width:100px;
     height:50px;
     padding:10px;
     border:1px solid #aaaaaa;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function allowDrop(allowdropevent) {
+```js
+function allowDrop(allowdropevent) {
     allowdropevent.target.style.color = 'blue';
     allowdropevent.preventDefault();
 }
@@ -74,20 +72,20 @@ function drop(dropevent) {
     dropevent.target.appendChild(document.getElementById(data));
     document.getElementById("drag").style.color = 'black';
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Example', 600) }}</p>
+{{ EmbedLiveSample('Example', 600) }}
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="兼容性">兼容性</h2>
+## 兼容性
 
-<p>{{Compat("api.DataTransfer.getData")}}</p>
+{{Compat("api.DataTransfer.getData")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
+{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}

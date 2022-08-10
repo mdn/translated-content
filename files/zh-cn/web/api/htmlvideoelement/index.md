@@ -9,71 +9,61 @@ tags:
   - Video
 translation_of: Web/API/HTMLVideoElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLVideoElement</code></strong> 接口提供了用于操作视频对象的特殊属性和方法。它同时还继承了{{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性与方法。</p>
+**`HTMLVideoElement`** 接口提供了用于操作视频对象的特殊属性和方法。它同时还继承了{{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性与方法。
 
-<p>在不同浏览器中 <a href="/en-US/docs/HTML/Supported_media_formats">支持的媒体格式</a> 是不一样的。因此在提供媒体文件的时候，或者提供一种所有浏览器都支持的格式，或者提供格式不同的多个视频源来支持不同浏览器，保证你想要支持的浏览器都能够播放。</p>
+在不同浏览器中 [支持的媒体格式](/en-US/docs/HTML/Supported_media_formats) 是不一样的。因此在提供媒体文件的时候，或者提供一种所有浏览器都支持的格式，或者提供格式不同的多个视频源来支持不同浏览器，保证你想要支持的浏览器都能够播放。
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承了其父对象 </em><em>{{domxref("HTMLMediaElement")}}和</em><em>{{domxref("HTMLElement")}}的属性。</em></p>
+_继承了其父对象 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性。_
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.height")}}</dt>
- <dd>表达HTML属性 {{htmlattrxref("height", "video")}}的值的一个{{domxref("DOMString")}} ，以CSS pixels的单位给出了显示区域的大小。</dd>
- <dt>{{domxref("HTMLVideoElement.poster")}}</dt>
- <dd>表达HTML属性 {{htmlattrxref("poster", "video")}}的值的一个{{domxref("DOMString")}} ，用于指定当视频无法播放时需要展示的图片。</dd>
- <dt>{{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}</dt>
- <dd>返回一个<code>unsigned long</code> 值，以CSS pixels的单位给出视频资源的实际高度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的ready state是 <code>HAVE_NOTHING</code>，这个属性的值为0。</dd>
- <dt>{{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}</dt>
- <dd>返回一个<code>unsigned long</code> 值，以CSS pixels的单位给出视频资源的实际宽度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的ready state是 <code>HAVE_NOTHING</code>，这个属性的值为0。</dd>
- <dt>{{domxref("HTMLVideoElement.width")}}</dt>
- <dd>表达HTML属性 {{htmlattrxref("width", "video")}}的值的一个{{domxref("DOMString")}} ，以CSS pixels的单位给出了显示区域的大小。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.height")}}
+  - : 表达 HTML 属性 {{htmlattrxref("height", "video")}}的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
+- {{domxref("HTMLVideoElement.poster")}}
+  - : 表达 HTML 属性 {{htmlattrxref("poster", "video")}}的值的一个{{domxref("DOMString")}} ，用于指定当视频无法播放时需要展示的图片。
+- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
+  - : 返回一个`unsigned long` 值，以 CSS pixels 的单位给出视频资源的实际高度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的 ready state 是 `HAVE_NOTHING`，这个属性的值为 0。
+- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
+  - : 返回一个`unsigned long` 值，以 CSS pixels 的单位给出视频资源的实际宽度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的 ready state 是 `HAVE_NOTHING`，这个属性的值为 0。
+- {{domxref("HTMLVideoElement.width")}}
+  - : 表达 HTML 属性 {{htmlattrxref("width", "video")}}的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
 
-<h3 id="Gecko特定属性">Gecko特定属性</h3>
+### Gecko 特定属性
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.mozParsedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 值，给出已经从媒体资源中解析的视频帧数。</dd>
- <dt>{{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 值，给出已经从媒体资源中解析，并解码为图像的视频帧数。</dd>
- <dt>{{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 值，给出被置入绘制队列(pipeline)等待绘制的视频帧数。</dd>
- <dt>{{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 值，给出已经被绘制的视频帧数。</dd>
- <dt>{{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个 <code>double</code> 值，表示到目前为止，距上一次绘制过去了多长时间，单位是秒。</dd>
- <dt>{{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}</dt>
- <dd>返回一个{{domxref("Boolean")}}值，表示这个视频是否有关联音频。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.mozParsedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个 `unsigned long` 值，给出已经从媒体资源中解析的视频帧数。
+- {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个 `unsigned long` 值，给出已经从媒体资源中解析，并解码为图像的视频帧数。
+- {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个 `unsigned long` 值，给出被置入绘制队列(pipeline)等待绘制的视频帧数。
+- {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个 `unsigned long` 值，给出已经被绘制的视频帧数。
+- {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个 `double` 值，表示到目前为止，距上一次绘制过去了多长时间，单位是秒。
+- {{domxref("HTMLVideoElement.mozHasAudio")}} {{readonlyInline}}{{non-standard_inline}}
+  - : 返回一个{{domxref("Boolean")}}值，表示这个视频是否有关联音频。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>继承了其父对象 </em><em>{{domxref("HTMLMediaElement")}}和 </em><em>{{domxref("HTMLElement")}}的方法。</em></p>
+_继承了其父对象_ _{{domxref("HTMLMediaElement")}}和_ _{{domxref("HTMLElement")}}的方法。_
 
-<dl>
- <dt>{{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}</dt>
- <dd>返回一个 {{domxref("VideoPlaybackQuality")}} 对象，包含了对当前播放引擎的量度信息。</dd>
-</dl>
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+  - : 返回一个 {{domxref("VideoPlaybackQuality")}} 对象，包含了对当前播放引擎的量度信息。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLVideoElement")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>HTML element implementing this interface: {{HTMLElement("video")}}.</li>
- <li><a href="http://people.mozilla.org/~cpearce/paint-stats-demo.html">Demo of video paint statistics</a></li>
- <li><a href="/en-US/docs/HTML/Supported_media_formats">Supported media formats</a></li>
-</ul>
+- HTML element implementing this interface: {{HTMLElement("video")}}.
+- [Demo of video paint statistics](http://people.mozilla.org/~cpearce/paint-stats-demo.html)
+- [Supported media formats](/en-US/docs/HTML/Supported_media_formats)

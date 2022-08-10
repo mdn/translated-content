@@ -7,30 +7,32 @@ tags:
   - 音频
 translation_of: Web/API/HTMLMediaElement/pause
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.pause()</code></strong> 方法可用来暂停媒体的播放，如果媒体已经处于暂停状态，该方法没有效果。</p>
+**`HTMLMediaElement.pause()`** 方法可用来暂停媒体的播放，如果媒体已经处于暂停状态，该方法没有效果。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>HTMLMediaElement</em>.pause()</pre>
+```plain
+HTMLMediaElement.pause()
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>无。</p>
+无。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>无。</p>
+无。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLMediaElement.pause")}}</p>
+{{Compat("api.HTMLMediaElement.pause")}}

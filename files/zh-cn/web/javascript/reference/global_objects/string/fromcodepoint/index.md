@@ -3,47 +3,44 @@ title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>String.fromCodePoint()</code> 静态方法返回使用指定的代码点序列创建的字符串。</strong></p>
+**`String.fromCodePoint()` 静态方法返回使用指定的代码点序列创建的字符串。**
 
-<div>{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}
 
+## 语法
 
+```plain
+String.fromCodePoint(num1[, ...[, numN]])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code>String.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
+- `num1, ..., numN`
+  - : 一串 Unicode 编码位置，即“代码点”。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>一串 Unicode 编码位置，即“代码点”。</dd>
-</dl>
+使用指定的 Unicode 编码位置创建的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>使用指定的 Unicode 编码位置创建的字符串。</p>
+- {{jsxref("RangeError")}}
+  - : 如果传入无效的 Unicode 编码，将会抛出一个{{jsxref("RangeError")}} (例如： "RangeError: NaN is not a valid code point")。
 
-<h3 id="异常">异常</h3>
+## 说明
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果传入无效的 Unicode 编码，将会抛出一个{{jsxref("RangeError")}} (例如： "RangeError: NaN is not a valid code point")。</dd>
-</dl>
+该方法返回一个字符串，而不是一个 {{jsxref("String")}} 对象。
 
-<h2 id="说明">说明</h2>
+因为 `fromCodePoint()` 是 {{jsxref("String")}} 的一个静态方法，所以只能通过 `String.fromCodePoint()` 这样的方式来使用，不能在你创建的 {{jsxref("String")}} 对象实例上直接调用。
 
-<p>该方法返回一个字符串，而不是一个 {{jsxref("String")}} 对象。</p>
+## 例子
 
-<p>因为 <code>fromCodePoint()</code> 是 {{jsxref("String")}} 的一个静态方法，所以只能通过 <code>String.fromCodePoint()</code> 这样的方式来使用，不能在你创建的 {{jsxref("String")}} 对象实例上直接调用。</p>
+### 使用 `fromCodePoint()`
 
-<h2 id="例子">例子</h2>
-
-<h3 id="使用_fromCodePoint()">使用 <code>fromCodePoint()</code></h3>
-
-<pre class="brush: js">String.fromCodePoint(42);       // "*"
+```js
+String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
 String.fromCodePoint(0x404);    // "\u0404"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
@@ -56,39 +53,41 @@ String.fromCodePoint(-1);       // RangeError
 String.fromCodePoint(3.14);     // RangeError
 String.fromCodePoint(3e-2);     // RangeError
 String.fromCodePoint(NaN);      // RangeError
-</pre>
+```
 
-<pre class="brush: js">// String.fromCharCode() 方法不能单独获取在高代码点位上的字符
+```js
+// String.fromCharCode() 方法不能单独获取在高代码点位上的字符
 // 另一方面，下列的示例中，可以返回 4 字节，也可以返回 2 字节的字符
 // (也就是说，它可以返回单独的字符，使用长度 2 代替 1!）
 console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>String.fromCodePoint</code> 方法是 ECMAScript2015（ES6）新增加的特性，所以一些老的浏览器可能还不支持。可以通过使用下面的 polyfill 代码来保证浏览器的支持：</p>
+`String.fromCodePoint` 方法是 ECMAScript2015（ES6）新增加的特性，所以一些老的浏览器可能还不支持。可以通过使用下面的 polyfill 代码来保证浏览器的支持：
 
-<pre class="brush: js">if (!String.fromCodePoint) (function(stringFromCharCode) {
+```js
+if (!String.fromCodePoint) (function(stringFromCharCode) {
     var fromCodePoint = function(_) {
       var codeUnits = [], codeLen = 0, result = "";
       for (var index=0, len = arguments.length; index !== len; ++index) {
         var codePoint = +arguments[index];
         // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
         // The surrounding `!(...)` is required to correctly handle `NaN` cases
-        // The (codePoint&gt;&gt;&gt;0) === codePoint clause handles decimals and negatives
-        if (!(codePoint &lt; 0x10FFFF &amp;&amp; (codePoint&gt;&gt;&gt;0) === codePoint))
+        // The (codePoint>>>0) === codePoint clause handles decimals and negatives
+        if (!(codePoint < 0x10FFFF && (codePoint>>>0) === codePoint))
           throw RangeError("Invalid code point: " + codePoint);
-        if (codePoint &lt;= 0xFFFF) { // BMP code point
+        if (codePoint <= 0xFFFF) { // BMP code point
           codeLen = codeUnits.push(codePoint);
         } else { // Astral code point; split in surrogate halves
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
           codeLen = codeUnits.push(
-            (codePoint &gt;&gt; 10) + 0xD800,  // highSurrogate
+            (codePoint >> 10) + 0xD800,  // highSurrogate
             (codePoint % 0x400) + 0xDC00 // lowSurrogate
           );
         }
-        if (codeLen &gt;= 0x3fff) {
+        if (codeLen >= 0x3fff) {
           result += stringFromCharCode.apply(null, codeUnits);
           codeUnits.length = 0;
         }
@@ -103,21 +102,19 @@ console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
       String.fromCodePoint = fromCodePoint;
     }
 }(String.fromCharCode));
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}

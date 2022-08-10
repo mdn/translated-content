@@ -10,17 +10,16 @@ tags:
   - 声明
 translation_of: Web/JavaScript/Reference/Statements/switch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>switch</code> 语句</strong>评估一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators">表达式</a>，将表达式的值与<code>case</code>子句匹配，并执行与该情况相关联的<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements">语句</a>。</p>
+**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
 
-<div>{{EmbedInteractiveExample("pages/js/statement-switch.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: js">switch (expression) {
+```js
+switch (expression) {
   case value1:
     // 当 expression 的结果与 value1 匹配时，执行此处语句
     [break;]
@@ -34,32 +33,32 @@ translation_of: Web/JavaScript/Reference/Statements/switch
   [default:
     // 如果 expression 与上面的 value 值都不匹配，执行此处语句
     [break;]]
-}</pre>
+}
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>一个用来与 case 子语句匹配的表达式。</dd>
- <dt><code>case valueN</code> {{optional_inline}}</dt>
- <dd>用于匹配 <code>expression</code> 的 <code>case</code> 子句。如果 <code>expression</code> 与给定的 <code>valueN</code> 相匹配，则执行该 case 子句中的语句直到该 <code>switch</code> 语句结束或遇到一个 <code>break</code> 。</dd>
- <dt><code>default</code> {{optional_inline}}</dt>
- <dd>一个 <code>default</code> 子句；如果给定，这条子句会在 <code>expression</code> 的值与任一 <code>case</code> 语句均不匹配时执行。</dd>
-</dl>
+- `expression`
+  - : 一个用来与 case 子语句匹配的表达式。
+- `case valueN` {{optional_inline}}
+  - : 用于匹配 `expression` 的 `case` 子句。如果 `expression` 与给定的 `valueN` 相匹配，则执行该 case 子句中的语句直到该 `switch` 语句结束或遇到一个 `break` 。
+- `default` {{optional_inline}}
+  - : 一个 `default` 子句；如果给定，这条子句会在 `expression` 的值与任一 `case` 语句均不匹配时执行。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>一个 switch 语句首先会计算其 expression 。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">严格运算符</a>，<code>===</code>）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）</p>
+一个 switch 语句首先会计算其 expression 。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
 
-<p>如果没有 <code>case</code> 子句相匹配，程序则会寻找那个可选的 <code>default</code> 子句，如果找到了，将控制权交给它，执行相关语句。若没有 <code>default</code> 子句，程序将继续执行直到 <code>switch</code> 结束。按照惯例，<code>default</code> 子句是最后一个子句，不过也不需要这样做。</p>
+如果没有 `case` 子句相匹配，程序则会寻找那个可选的 `default` 子句，如果找到了，将控制权交给它，执行相关语句。若没有 `default` 子句，程序将继续执行直到 `switch` 结束。按照惯例，`default` 子句是最后一个子句，不过也不需要这样做。
 
-<p>可选的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/break">break</a></code> 语句确保程序立即从相关的 case 子句中跳出 switch 并接着执行 switch 之后的语句。若 <code>break</code> 被省略，程序会继续执行 <code>switch</code> 语句中的下一条语句。</p>
+可选的 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句确保程序立即从相关的 case 子句中跳出 switch 并接着执行 switch 之后的语句。若 `break` 被省略，程序会继续执行 `switch` 语句中的下一条语句。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_switch">使用 <code>switch</code></h3>
+### 使用 `switch`
 
-<p>下面的例子中，如果 <code>expr</code> 计算为 "Bananas"，程序就会匹配值为 "Bananas" 的 case 然后执行相关语句。当遇到 <code>break</code> 时，程序就跳出 <code>switch</code> 然后执行 <code>switch</code> 后的语句。若 <code>break</code> 被省略，值为 "Cherries" 的 case 中的语句就也将被执行。</p>
+下面的例子中，如果 `expr` 计算为 "Bananas"，程序就会匹配值为 "Bananas" 的 case 然后执行相关语句。当遇到 `break` 时，程序就跳出 `switch` 然后执行 `switch` 后的语句。若 `break` 被省略，值为 "Cherries" 的 case 中的语句就也将被执行。
 
-<pre class="brush: js">switch (expr) {
+```js
+switch (expr) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.');
     break;
@@ -81,13 +80,14 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 }
 
 console.log("Is there anything else you'd like?");
-</pre>
+```
 
-<h3 id="如果忘记_break_会怎么样？">如果忘记 break 会怎么样？</h3>
+### 如果忘记 break 会怎么样？
 
-<p>如果你忘记添加 break，那么代码将会从值所匹配的 case 语句开始运行，然后持续执行下一个 case 语句而不论值是否匹配。例子如下：</p>
+如果你忘记添加 break，那么代码将会从值所匹配的 case 语句开始运行，然后持续执行下一个 case 语句而不论值是否匹配。例子如下：
 
-<pre class="brush: js">var foo = 0;
+```js
+var foo = 0;
 switch (foo) {
   case -1:
     console.log('negative 1');
@@ -103,13 +103,15 @@ switch (foo) {
     break;
   default:
     console.log('default');
-}</pre>
+}
+```
 
-<h3 id="我能把_default_放到_case_之间吗？">我能把 default 放到 case 之间吗？</h3>
+### 我能把 default 放到 case 之间吗？
 
-<p>可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：</p>
+可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：
 
-<pre class="brush: js">var foo = 5;
+```js
+var foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
@@ -120,23 +122,24 @@ switch (foo) {
   case 1:
     console.log('1');
 }
-</pre>
+```
 
-<p>即使你把 default 放到其它 case 之上，它仍有效。</p>
+即使你把 default 放到其它 case 之上，它仍有效。
 
-<h3 id="使用多准则_case_的方法">使用多准则 case 的方法</h3>
+### 使用多准则 case 的方法
 
-<p>这个技术来源于此：</p>
+这个技术来源于此：
 
-<p><a href="http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript">Switch statement multiple cases in JavaScript (Stack Overflow)</a></p>
+[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
-<h4 id="多_case_-_单一操作">多 case - 单一操作</h4>
+#### 多 case - 单一操作
 
-<p>这种方法利用这样一个事实：如果 case 语句之下没有 break ，它将继续执行下一个 case 语句，而不管 case 是否符合条件。 请看“如果忘记 break 会怎么样？”部分。</p>
+这种方法利用这样一个事实：如果 case 语句之下没有 break ，它将继续执行下一个 case 语句，而不管 case 是否符合条件。 请看“如果忘记 break 会怎么样？”部分。
 
-<p>这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。</p>
+这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。
 
-<pre class="brush: js">var Animal = 'Giraffe';
+```js
+var Animal = 'Giraffe';
 switch (Animal) {
   case 'Cow':
   case 'Giraffe':
@@ -147,13 +150,15 @@ switch (Animal) {
   case 'Dinosaur':
   default:
     console.log('This animal will not.');
-}</pre>
+}
+```
 
-<h4 id="多_case_-_关联操作">多 case - 关联操作</h4>
+#### 多 case - 关联操作
 
-<p>这是一个关联操作顺序的 switch 语句，其中，根据所输入的整数，你会得到不同的输出。这表示它将以你放置 case 语句的顺序遍历，并且不必是数字顺序的。在 JavaScript 中，你甚至可以将字符串定义到这些 case 语句里。</p>
+这是一个关联操作顺序的 switch 语句，其中，根据所输入的整数，你会得到不同的输出。这表示它将以你放置 case 语句的顺序遍历，并且不必是数字顺序的。在 JavaScript 中，你甚至可以将字符串定义到这些 case 语句里。
 
-<pre class="brush: js">var foo = 1;
+```js
+var foo = 1;
 var output = 'Output: ';
 switch (foo) {
   case 0:
@@ -175,54 +180,29 @@ switch (foo) {
     break;
   default:
     console.log('Please pick a number from 0 to 5!');
-}</pre>
+}
+```
 
-<p>这个例子的输出：</p>
+这个例子的输出：
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Log text</th>
-  </tr>
-  <tr>
-   <td>foo is NaN or not 1, 2, 3, 4, 5 or 0</td>
-   <td>Please pick a number from 0 to 5!</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>Output: So What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>Output: What Is Your Name?</td>
-  </tr>
-  <tr>
-   <td>2</td>
-   <td>Output: Your Name?</td>
-  </tr>
-  <tr>
-   <td>3</td>
-   <td>Output: Name?</td>
-  </tr>
-  <tr>
-   <td>4</td>
-   <td>Output: ?</td>
-  </tr>
-  <tr>
-   <td>5</td>
-   <td>Output: !</td>
-  </tr>
- </tbody>
-</table>
+| Value                                | Log text                          |
+| ------------------------------------ | --------------------------------- |
+| foo is NaN or not 1, 2, 3, 4, 5 or 0 | Please pick a number from 0 to 5! |
+| 0                                    | Output: So What Is Your Name?     |
+| 1                                    | Output: What Is Your Name?        |
+| 2                                    | Output: Your Name?                |
+| 3                                    | Output: Name?                     |
+| 4                                    | Output: ?                         |
+| 5                                    | Output: !                         |
 
-<h3 id="switch_语句内的块级作用域"><code>switch</code> 语句内的块级作用域</h3>
+### `switch` 语句内的块级作用域
 
-<p>随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> 和 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a> 语句，以在块级作用域内声明变量。</p>
+随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
 
-<p>以这段代码为例：</p>
+以这段代码为例：
 
-<pre class="brush: js">const action = 'say_hello';
+```js
+const action = 'say_hello';
 switch (action) {
   case 'say_hello':
     let message = 'hello';
@@ -235,15 +215,17 @@ switch (action) {
   default:
     console.log('Empty action received.');
     break;
-}</pre>
+}
+```
 
-<p>这个示例会导致意想不到的错误 <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code>.</p>
+这个示例会导致意想不到的错误 `Uncaught SyntaxError: Identifier 'message' has already been declared`.
 
-<p>这是因为第一个 <code>let message = 'hello';</code> 与第二个 <code>let message = 'hi';</code> 语句产生了冲突，虽然他们处于各自分隔的 case 语句中，即 <code>case 'say_hello':</code> 和 <code>case 'say_hi':</code>。导致这一问题的根本原因在于两个 <code>let</code> 语句处于同一个块级作用域，所以它们被认为是同一个变量名的重复声明。</p>
+这是因为第一个 `let message = 'hello';` 与第二个 `let message = 'hi';` 语句产生了冲突，虽然他们处于各自分隔的 case 语句中，即 `case 'say_hello':` 和 `case 'say_hi':`。导致这一问题的根本原因在于两个 `let` 语句处于同一个块级作用域，所以它们被认为是同一个变量名的重复声明。
 
-<p>通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。</p>
+通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。
 
-<pre class="brush: js">const action = 'say_hello';
+```js
+const action = 'say_hello';
 switch (action) {
   case 'say_hello': { // added brackets
     let message = 'hello';
@@ -259,20 +241,19 @@ switch (action) {
     console.log('Empty action received.');
     break;
   } // added brackets
-}</pre>
+}
+```
 
-<p>此时，这段代码就会在控制台输出 <code>hello</code>，不会再有任何报错。</p>
+此时，这段代码就会在控制台输出 `hello`，不会再有任何报错。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a></li>
-</ul>
+- [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)

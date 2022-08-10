@@ -8,54 +8,50 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Set</code> 构造函数</strong>能让你创建 <code>Set</code> 对象，其可以存储任意类型的唯一值，无论是 <a href="/en-US/docs/Glossary/Primitive">primitive values</a> 或者对象引用。</p>
+**`Set` 构造函数**能让你创建 `Set` 对象，其可以存储任意类型的唯一值，无论是 [primitive values](/en-US/docs/Glossary/Primitive) 或者对象引用。
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-constructor.html")}}
 
+## Syntax
 
+```plain
+new Set([iterable])
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="syntaxbox">new Set([<var>iterable</var>])</pre>
+- _`iterable`_ {{optional_inline}}
+  - : 如果传递一个[可迭代对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 **Set**中。如果不指定此参数或其值为`null`，则新的 **Set**为空。
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt><em><code>iterable</code></em> {{optional_inline}}</dt>
- <dd>如果传递一个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">可迭代对象</a>，它的所有元素将不重复地被添加到新的 <strong>Set</strong>中。如果不指定此参数或其值为<code>null</code>，则新的 <strong>Set</strong>为空。</dd>
-</dl>
+A new `Set` object.
 
-<h3 id="Return_value">Return value</h3>
+## Examples
 
-<p>A new <code>Set</code> object.</p>
+### Using the `Set` object
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="Using_the_Set_object">Using the <code>Set</code> object</h3>
-
-<pre class="brush: js">let mySet = new Set()
+```js
+let mySet = new Set()
 
 mySet.add(1)           // Set [ 1 ]
 mySet.add(5)           // Set [ 1, 5 ]
 mySet.add(5)           // Set [ 1, 5 ]
 mySet.add('some text') // Set [ 1, 5, 'some text' ]
 let o = {a: 1, b: 2}
-mySet.add(o)</pre>
+mySet.add(o)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
-</ul>
+- {{jsxref("Set")}}

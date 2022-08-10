@@ -3,35 +3,34 @@ title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p><code><strong>fileName</strong></code> 属性包含引发此错误的文件的路径。</p>
+**`fileName`** 属性包含引发此错误的文件的路径。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 Firefox Developer Tools，将会返回“debugger eval code”.</p>
+此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 Firefox Developer Tools，将会返回“debugger eval code”.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用_fileName">使用 <code>fileName</code></h3>
+### 使用 `fileName`
 
-<pre class="brush: js">var e = new Error('Could not parse input');
+```js
+var e = new Error('Could not parse input');
 throw e;
 // e.fileName could look like "file:///C:/example.html"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error.prototype.stack")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</li>
-</ul>
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}

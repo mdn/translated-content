@@ -11,61 +11,61 @@ tags:
   - shape-margin
 translation_of: Web/CSS/shape-margin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>shape-margin</code></strong> 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。
 
-<div>{{EmbedInteractiveExample("pages/css/shape-margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/shape-margin.html")}}
 
+这个外边距可以让你调整（浮动元素的）形状边缘与环绕内容之间的距离。
 
+## 语法
 
-<p>这个外边距可以让你调整（浮动元素的）形状边缘与环绕内容之间的距离。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 shape-margin: 10px;
 shape-margin: 20mm;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 shape-margin: 60%;
 
 /* Global values */
 shape-margin: inherit;
 shape-margin: initial;
 shape-margin: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>使用{{cssxref("&lt;length&gt;")}}值，或者相对于元素容纳块的{{cssxref("&lt;percentage&gt;")}}值来设定形状的外边距。</dd>
-</dl>
+- `<length-percentage>`
+  - : 使用{{cssxref("&lt;length&gt;")}}值，或者相对于元素容纳块的{{cssxref("&lt;percentage&gt;")}}值来设定形状的外边距。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<h3 id="Adding_a_margin_to_a_polygon">Adding a margin to a polygon</h3>
+### Adding a margin to a polygon
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-&lt;div class="shape"&gt;&lt;/div&gt;
+```html
+<section>
+<div class="shape"></div>
 We are not quite sure of any one thing in biology; our knowledge of geology
 is relatively very slight, and the economic laws of society are
 uncertain to every one except some individual who attempts to set them
 forth; but before the world was fashioned the square on the hypotenuse
 was equal to the sum of the squares on the other two sides of a right
 triangle, and it will be so after this world is dead; and the inhabitant
-of Mars, if one exists, probably knows its truth as we know it.&lt;/section&gt;</pre>
+of Mars, if one exists, probably knows its truth as we know it.</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   max-width: 400px;
 }
 
@@ -77,27 +77,27 @@ of Mars, if one exists, probably knows its truth as we know it.&lt;/section&gt;<
   clip-path: polygon(0 0, 150px 150px, 0 150px);
   shape-outside: polygon(0 0, 150px 150px, 0 150px);
   shape-margin: 20px;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Adding_a_margin_to_a_polygon", 500, 250)}}</p>
-<h2 id="规范">规范</h2>
+{{EmbedLiveSample("Adding_a_margin_to_a_polygon", 500, 250)}}
+
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes">CSS Shapes</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Overview of CSS Shapes</a></li>
- <li>{{cssxref("shape-outside")}}</li>
- <li>{{cssxref("shape-image-threshold")}}</li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
-</ul>
+- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- {{cssxref("shape-outside")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("&lt;basic-shape&gt;")}}

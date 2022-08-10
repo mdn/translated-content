@@ -3,31 +3,27 @@ title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 translation_of: Web/API/HTMLTemplateElement
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p>可以使用<code><strong>HTMLTemplateElement</strong></code> 接口来访问 HTML {{HTMLElement("template")}}元素的内容。</p>
+可以使用**`HTMLTemplateElement`** 接口来访问 HTML {{HTMLElement("template")}}元素的内容。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>这个接口继承了 {{domxref("HTMLElement")}}的属性</em></p>
+_这个接口继承了 {{domxref("HTMLElement")}}的属性_
 
-<dl>
- <dt>{{domxref("HTMLTemplateElement.content")}}{{readonlyinline}}</dt>
- <dd>{{domxref("DocumentFragment")}}对象，包裹了模板元素{{HTMLElement("template")}}的内容。这个属性是只读的DOM树。</dd>
-</dl>
+- {{domxref("HTMLTemplateElement.content")}}{{readonlyinline}}
+  - : {{domxref("DocumentFragment")}}对象，包裹了模板元素{{HTMLElement("template")}}的内容。这个属性是只读的 DOM 树。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>这个接口继承了 {{domxref("HTMLElement")}}的方法。</em></p>
+_这个接口继承了 {{domxref("HTMLElement")}}的方法。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.HTMLTemplateElement")}}</p>
+{{Compat("api.HTMLTemplateElement")}}

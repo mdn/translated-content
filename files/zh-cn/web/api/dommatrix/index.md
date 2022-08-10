@@ -3,106 +3,74 @@ title: DOMMatrix
 slug: Web/API/DOMMatrix
 translation_of: Web/API/DOMMatrix
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
+{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
 
-<p><code><strong>DOMMatrix</strong></code>接口代表 4x4 矩阵，适合 2D 和 3D 操作。</p>
+**`DOMMatrix`**接口代表 4x4 矩阵，适合 2D 和 3D 操作。
 
-<p>一个 4x4 矩阵适于描绘任何 3D 的旋转（rotation ）和过渡（translation）。</p>
+一个 4x4 矩阵适于描绘任何 3D 的旋转（rotation ）和过渡（translation）。
 
-<p>此接口在 Web workers 里应该是可用的，虽然某些实现现在还不允许。</p>
+此接口在 Web workers 里应该是可用的，虽然某些实现现在还不允许。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>此接口从{{domxref("DOMMatrixReadOnly")}}继承属性，虽然某些属性被修改为非只读的。</em></p>
+_此接口从{{domxref("DOMMatrixReadOnly")}}继承属性，虽然某些属性被修改为非只读的。_
 
-<dl>
- <dt><code>m11</code>, <code>m12</code>, <code>m13</code>, <code>m14</code>, <code>m21</code>, <code>m22</code>, <code>m23</code>, <code>m24</code>, <code>m31</code>, <code>m32</code>, <code>m33</code>, <code>m34</code>, <code>m41</code>, <code>m42</code>, <code>m43</code>, <code>m44</code></dt>
- <dd>代表一个 4x4 矩阵的每个组成部分的 double 值。</dd>
- <dt><code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, <code>f</code> {{ReadOnlyInline}}</dt>
- <dd>代表了 2D 旋转和过渡所需要的一个 4x4 矩阵的每个组成部分的 double 值。它们是这个矩阵的一些组成的别名：
- <table>
-  <thead>
-   <tr>
-    <th scope="col"><code>2D</code></th>
-    <th scope="col"><code>3D 等价值</code></th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>a</code></td>
-    <td><code>m11</code></td>
-   </tr>
-   <tr>
-    <td><code>b</code></td>
-    <td><code>m12</code></td>
-   </tr>
-   <tr>
-    <td><code>c</code></td>
-    <td><code>m21</code></td>
-   </tr>
-   <tr>
-    <td><code>d</code></td>
-    <td><code>m22</code></td>
-   </tr>
-   <tr>
-    <td><code>e</code></td>
-    <td><code>m41</code></td>
-   </tr>
-   <tr>
-    <td><code>f</code></td>
-    <td><code>m42</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+  - : 代表一个 4x4 矩阵的每个组成部分的 double 值。
+- `a`, `b`, `c`, `d`, `e`, `f` {{ReadOnlyInline}}
 
-<h2 id="方法">方法</h2>
+  - : 代表了 2D 旋转和过渡所需要的一个 4x4 矩阵的每个组成部分的 double 值。它们是这个矩阵的一些组成的别名：
 
-<p><em>此接口从{{domxref("DOMMatrixReadOnly")}}继承方法。</em></p>
+    | `2D` | `3D 等价值` |
+    | ---- | ----------- |
+    | `a`  | `m11`       |
+    | `b`  | `m12`       |
+    | `c`  | `m21`       |
+    | `d`  | `m22`       |
+    | `e`  | `m41`       |
+    | `f`  | `m42`       |
 
-<dl>
- <dt>{{domxref("DOMMatrixReadOnly.multiplySelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵乘以指定的矩阵{{domxref("DOMMatrix")}}的结果。</dd>
- <dt>{{domxref("DOMMatrixReadOnly.preMultiplySelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是指定的矩阵{{domxref("DOMMatrix")}}乘以原始矩阵的结果。</dd>
- <dt>{{domxref("DOMMatrix.translateSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵被指定向量转换后的结果。</dd>
- <dt>{{domxref("DOMMatrix.scaleSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x 和 y 维度被指定因子缩放后的结果，对齐指定原点。</dd>
- <dt>{{domxref("DOMMatrix.scale3dSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被指定因子缩放后的结果，对齐指定原点。</dd>
- <dt>{{domxref("DOMMatrix.scaleNonUniformSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被各自维度的指定因子缩放后的结果，对齐指定原点。</dd>
- <dt>{{domxref("DOMMatrix.rotateSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，对齐指定原点。</dd>
- <dt>{{domxref("DOMMatrix.rotateFromVectorSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，该角度在指定向量和 (1,0) 之间，对齐指定原点。</dd>
- <dt>{{domxref("DOMMatrix.rotateAxisAngleSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度和指定向量旋转后的结果。</dd>
- <dt>{{domxref("DOMMatrix.skewXSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 x 轴倾斜后的结果。</dd>
- <dt>{{domxref("DOMMatrix.skewYSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 y 轴倾斜后的结果。</dd>
- <dt>{{domxref("DOMMatrix.invertSelf()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵求逆后的结果。如果不能求逆，所有的组成部分会被设为 NaN，并且<code>is2D() 返回</code> <code>false</code>。</dd>
- <dt>{{domxref("DOMMatrix.setMatrixValue()")}}</dt>
- <dd>返回自身，一个{{domxref("DOMMatrix")}}，描述了一个矩阵，它的变换（transformation）和被参数指定的 CSS {{domxref("transform")}}函数一样。</dd>
-</dl>
+## 方法
 
-<h2 id="规范">规范</h2>
+_此接口从{{domxref("DOMMatrixReadOnly")}}继承方法。_
+
+- {{domxref("DOMMatrixReadOnly.multiplySelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵乘以指定的矩阵{{domxref("DOMMatrix")}}的结果。
+- {{domxref("DOMMatrixReadOnly.preMultiplySelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是指定的矩阵{{domxref("DOMMatrix")}}乘以原始矩阵的结果。
+- {{domxref("DOMMatrix.translateSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵被指定向量转换后的结果。
+- {{domxref("DOMMatrix.scaleSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x 和 y 维度被指定因子缩放后的结果，对齐指定原点。
+- {{domxref("DOMMatrix.scale3dSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被指定因子缩放后的结果，对齐指定原点。
+- {{domxref("DOMMatrix.scaleNonUniformSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是矩阵的 x, y 和 z 维度被各自维度的指定因子缩放后的结果，对齐指定原点。
+- {{domxref("DOMMatrix.rotateSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，对齐指定原点。
+- {{domxref("DOMMatrix.rotateFromVectorSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度旋转后的结果，该角度在指定向量和 (1,0) 之间，对齐指定原点。
+- {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定角度和指定向量旋转后的结果。
+- {{domxref("DOMMatrix.skewXSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 x 轴倾斜后的结果。
+- {{domxref("DOMMatrix.skewYSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵被指定因子沿 y 轴倾斜后的结果。
+- {{domxref("DOMMatrix.invertSelf()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，它的新内容是原始矩阵求逆后的结果。如果不能求逆，所有的组成部分会被设为 NaN，并且`is2D() 返回` `false`。
+- {{domxref("DOMMatrix.setMatrixValue()")}}
+  - : 返回自身，一个{{domxref("DOMMatrix")}}，描述了一个矩阵，它的变换（transformation）和被参数指定的 CSS {{domxref("transform")}}函数一样。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DOMMatrix")}}
-
 {{Compat("api.WebKitCSSMatrix")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>它的不可修改部分， {{domxref("DOMMatrixReadOnly")}}</li>
- <li>{{domxref("SVGMatrix")}}，SVG 矩阵计划被{{domxref("DOMMatrix")}}替代</li>
-</ul>
+- 它的不可修改部分， {{domxref("DOMMatrixReadOnly")}}
+- {{domxref("SVGMatrix")}}，SVG 矩阵计划被{{domxref("DOMMatrix")}}替代

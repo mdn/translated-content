@@ -7,29 +7,29 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>add()</strong></code> 方法在 <code>WeakSet</code> 对象的最后一个元素后添加新的对象。</p>
+**`add()`** 方法在 `WeakSet` 对象的最后一个元素后添加新的对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>ws</em>.add(value);</code>
-</pre>
+```plain
+ws.add(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>value</dt>
- <dd>必须。 将对象添加进 <code>WeakSet</code> 集合中。</dd>
-</dl>
+- value
+  - : 必须。 将对象添加进 `WeakSet` 集合中。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>WeakSet</code> 对象。</p>
+`WeakSet` 对象。
 
-<h2 id="使用_add_方法">使用 <code>add</code> 方法</h2>
+## 使用 `add` 方法
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 
 ws.add(window); // 添加 window 对象进 WeakSet 中
 
@@ -38,20 +38,19 @@ ws.has(window); // true
 // Weakset 仅取得对象作为参数
 ws.add(1);
 // 结果为 "TypeError: Invalid value used in weak set" 在 Chrome 浏览器中
-// 并且 "TypeError: 1 is not a non-null object" 在 Firefox 浏览器中</pre>
+// 并且 "TypeError: 1 is not a non-null object" 在 Firefox 浏览器中
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
- <li>{{jsxref("WeakSet.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

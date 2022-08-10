@@ -3,39 +3,38 @@ title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>toPrecision()</strong></code> 方法以指定的精度返回该数值对象的字符串表示。</p>
+**`toPrecision()`** 方法以指定的精度返回该数值对象的字符串表示。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>numObj</em>.toPrecision(<em>precision</em>)</code></pre>
+```plain
+numObj.toPrecision(precision)
+```
 
-<h3 id="Parameter">参数</h3>
+### 参数
 
-<dl>
- <dt><code>precision</code> {{optional_inline}}</dt>
- <dd>一个用来指定有效数个数的整数。</dd>
-</dl>
+- `precision` {{optional_inline}}
+  - : 一个用来指定有效数个数的整数。
 
-<h3 id="Returns">返回值</h3>
+### 返回值
 
-<p>以定点表示法或指数表示法表示的一个数值对象的字符串表示，四舍五入到 <code>precision</code> 参数指定的显示数字位数。查看 {{jsxref("Number.prototype.toFixed()")}} 方法关于四舍五入的讨论，同样应用于 <code>toPrecision</code> 方法。</p>
+以定点表示法或指数表示法表示的一个数值对象的字符串表示，四舍五入到 `precision` 参数指定的显示数字位数。查看 {{jsxref("Number.prototype.toFixed()")}} 方法关于四舍五入的讨论，同样应用于 `toPrecision` 方法。
 
-<p>如果忽略 <code>precision</code> 参数，则该方法表现类似于 {{jsxref("Number.prototype.toString()")}}。如果该参数是一个非整数值，将会向下舍入到最接近的整数。</p>
+如果忽略 `precision` 参数，则该方法表现类似于 {{jsxref("Number.prototype.toString()")}}。如果该参数是一个非整数值，将会向下舍入到最接近的整数。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
- <dd>如果 <em>precison</em> 参数不在 1 和 100（包括）之间，将会抛出一个 <code>RangeError</code> 。执行环境也可以支持更大或更小的范围。ECMA-262 只需要最多 21 位显示数字。</dd>
-</dl>
+- {{jsxref("Global_Objects/RangeError", "RangeError")}}
+  - : 如果 _precison_ 参数不在 1 和 100（包括）之间，将会抛出一个 `RangeError` 。执行环境也可以支持更大或更小的范围。ECMA-262 只需要最多 21 位显示数字。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush: js">let numObj = 5.123456
+```js
+let numObj = 5.123456
 
 console.log(numObj.toPrecision())    // 输出 '5.123456'
 console.log(numObj.toPrecision(5))   // 输出 '5.1235'
@@ -51,20 +50,18 @@ console.log(numObj.toPrecision(1))   // 输出 '0.0001'
 
 // 请注意，在某些情况下可能会返回科学计数法字符串
 console.log((1234.5).toPrecision(2)) // 输出 '1.2e+3'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.prototype.toFixed()")}}</li>
- <li>{{jsxref("Number.prototype.toExponential()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toString()")}}

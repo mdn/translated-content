@@ -3,13 +3,14 @@ title: font-variant-position
 slug: Web/CSS/font-variant-position
 translation_of: Web/CSS/font-variant-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>font-variant-position</code></strong> CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.</p>
+The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
 
-<p>The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in {{HTMLElement("sub")}} and {{HTMLElement("sup")}} elements.</p>
+The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in {{HTMLElement("sub")}} and {{HTMLElement("sup")}} elements.
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 font-variant-position: normal;
 font-variant-position: sub;
 font-variant-position: super;
@@ -18,45 +19,45 @@ font-variant-position: super;
 font-variant-position: inherit;
 font-variant-position: initial;
 font-variant-position: unset;
-</pre>
+```
 
-<p>When the usage of these alternate glyphs is activated, if one character in the run doesn't have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.</p>
+When the usage of these alternate glyphs is activated, if one character in the run doesn't have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.
 
-<p>These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.</p>
+These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>The <code>font-variant-position</code> property is specified as one of the keyword values listed below.</p>
+The `font-variant-position` property is specified as one of the keyword values listed below.
 
-<h3 id="可选值">可选值</h3>
+### 可选值
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Deactivates alternate superscript and subscript glyphs.</dd>
- <dt><code>sub</code></dt>
- <dd>Activates subscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.</dd>
- <dt><code>super</code></dt>
- <dd>Activates superscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.</dd>
-</dl>
+- `normal`
+  - : Deactivates alternate superscript and subscript glyphs.
+- `sub`
+  - : Activates subscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.
+- `super`
+  - : Activates superscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;p class="normal"&gt;Normal!&lt;/p&gt;
-&lt;p class="super"&gt;Super!&lt;/p&gt;
-&lt;p class="sub"&gt;Sub!&lt;/p&gt;
-</pre>
+```html
+<p class="normal">Normal!</p>
+<p class="super">Super!</p>
+<p class="sub">Sub!</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   display: inline;
 }
 
@@ -71,18 +72,16 @@ font-variant-position: unset;
 .sub {
   font-variant-position: sub;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.font-variant-position")}}</p>
+{{Compat("css.properties.font-variant-position")}}

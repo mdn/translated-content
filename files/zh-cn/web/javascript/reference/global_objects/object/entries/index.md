@@ -8,36 +8,35 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.entries()</strong></code>方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。</p>
+**`Object.entries()`**方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。
 
-<div>{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
 
+## 语法
 
+```plain
+Object.entries(obj)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Object.entries(<var>obj</var>)</pre>
+- `obj`
+  - : 可以返回其可枚举属性的键值对的对象。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>可以返回其可枚举属性的键值对的对象。</dd>
-</dl>
+给定对象自身可枚举属性的键值对数组。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>给定对象自身可枚举属性的键值对数组。</p>
+`Object.entries()`返回一个数组，其元素是与直接在`object`上找到的可枚举属性键值对相对应的数组。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p><code>Object.entries()</code>返回一个数组，其元素是与直接在<code>object</code>上找到的可枚举属性键值对相对应的数组。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">const obj = { foo: 'bar', baz: 42 };
+```js
+const obj = { foo: 'bar', baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // array like object
@@ -63,23 +62,27 @@ for (const [key, value] of Object.entries(obj)) {
 }
 
 // Or, using array extras
-Object.entries(obj).forEach(([key, value]) =&gt; {
+Object.entries(obj).forEach(([key, value]) => {
 console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
-});</pre>
+});
+```
 
-<h3 id="将Object转换为Map">将<code>Object</code>转换为<code>Map</code></h3>
+### 将`Object`转换为`Map`
 
-<p>{{jsxref("Map", "new Map()")}} 构造函数接受一个可迭代的<code>entries</code>。借助<code>Object.entries</code>方法你可以很容易的将{{jsxref("Object")}}转换为{{jsxref("Map")}}:</p>
+{{jsxref("Map", "new Map()")}} 构造函数接受一个可迭代的`entries`。借助`Object.entries`方法你可以很容易的将{{jsxref("Object")}}转换为{{jsxref("Map")}}:
 
-<pre class="brush: js">var obj = { foo: "bar", baz: 42 };
+```js
+var obj = { foo: "bar", baz: 42 };
 var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }</pre>
+console.log(map); // Map { foo: "bar", baz: 42 }
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>要在较旧环境中添加兼容的<code>Object.entries</code>支持，你可以在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。</p>
+要在较旧环境中添加兼容的`Object.entries`支持，你可以在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 [es-shims/Object.entries](https://github.com/es-shims/Object.entries) 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。
 
-<pre class="brush: js">if (!Object.entries)
+```js
+if (!Object.entries)
   Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
         i = ownProps.length,
@@ -88,25 +91,24 @@ console.log(map); // Map { foo: "bar", baz: 42 }</pre>
       resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
     return resArray;
-  };</pre>
+  };
+```
 
-<p>对于上述 polyfill 代码片段，如果你需要 IE9 以下的支持，那么你还需要一个 Object.keys polyfill（如 {{jsxref("Object.keys")}}页面上的）。</p>
+对于上述 polyfill 代码片段，如果你需要 IE9 以下的支持，那么你还需要一个 Object.keys polyfill（如 {{jsxref("Object.keys")}}页面上的）。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}} {{experimental_inline}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}} {{experimental_inline}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

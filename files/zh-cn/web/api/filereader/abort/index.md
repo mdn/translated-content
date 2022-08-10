@@ -3,31 +3,29 @@ title: FileReader.abort()
 slug: Web/API/FileReader/abort
 translation_of: Web/API/FileReader/abort
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>该方法可以取消 FileReader 的读取操作，触发之后 {{domxref("FileReader.readyState","readyState")}} 为已完成（DONE）。</p>
+该方法可以取消 FileReader 的读取操作，触发之后 {{domxref("FileReader.readyState","readyState")}} 为已完成（DONE）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>instanceOfFileReader</em>.abort();</pre>
+```plain
+instanceOfFileReader.abort();
+```
 
-<h3 id="例外情况">例外情况</h3>
+### 例外情况
 
-<dl>
- <dt><code>DOM_FILE_ABORT_ERR</code></dt>
- <dd>对一个没有正在进行读取操作（{{domxref("FileReader.readyState","readyState")}} 不是<code>LOADING</code>）的 FileReader 进行 abort 操作，会抛出 <code>DOM_FILE_ABORT_ERR 错误。</code></dd>
-</dl>
+- `DOM_FILE_ABORT_ERR`
+  - : 对一个没有正在进行读取操作（{{domxref("FileReader.readyState","readyState")}} 不是`LOADING`）的 FileReader 进行 abort 操作，会抛出 `DOM_FILE_ABORT_ERR 错误。`
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FileReader.abort")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

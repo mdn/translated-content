@@ -6,33 +6,28 @@ tags:
   - 陀螺仪
 translation_of: Web/API/DeviceOrientationEvent/alpha
 ---
-<p>{{ ApiRef("Device Orientation Events") }}</p>
+{{ ApiRef("Device Orientation Events") }}
 
-<p>返回设备旋转时 Z 轴的值；即：设备围绕屏幕中心扭转的角度。  详细信息请查看<a href="/en/DOM/Orientation_and_motion_data_explained">方向和运动数据</a>。</p>
+返回设备旋转时 Z 轴的值；即：设备围绕屏幕中心扭转的角度。 详细信息请查看[方向和运动数据](/en/DOM/Orientation_and_motion_data_explained)。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var alpha = <em>instanceOfDeviceOrientationEvent</em>.alpha;
-</pre>
+```plain
+var alpha = instanceOfDeviceOrientationEvent.alpha;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p> </p>
+{{Compat("api.DeviceOrientationEvent.alpha")}}
 
-<p>{{Compat("api.DeviceOrientationEvent.alpha")}}</p>
+## See also
 
-<p> </p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li>{{ domxref("window.ondeviceorientation") }}</li>
- <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

@@ -3,45 +3,47 @@ title: DataTransferItem.type
 slug: Web/API/DataTransferItem/type
 translation_of: Web/API/DataTransferItem/type
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>只读属性<strong><code>DataTransferItem.type</code></strong> 返回代表拖动数据项的 {{domxref("DataTransferItem")}} 对象的类型（格式）。  <code>type</code> 是一个 Unicode 字符串，通常由 MIME 给出，不过不需要 MIME 类型。</p>
+只读属性**`DataTransferItem.type`** 返回代表拖动数据项的 {{domxref("DataTransferItem")}} 对象的类型（格式）。 `type` 是一个 Unicode 字符串，通常由 MIME 给出，不过不需要 MIME 类型。
 
-<p>举例一些类型：<code>text/plain</code> 和 <code>text/html</code>.</p>
+举例一些类型：`text/plain` 和 `text/html`.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>dataItem</em>.type;
-</pre>
+```plain
+dataItem.type;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个代表拖动数据项类型的 {{domxref("DOMString")}}。</p>
+一个代表拖动数据项类型的 {{domxref("DOMString")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子演示了<code>type</code> 属性的用法。</p>
+这个例子演示了`type` 属性的用法。
 
-<pre class="brush: js">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = ev.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // Drag data item is URI
      console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      var f = data[i].getAsFile();
@@ -49,21 +51,17 @@ translation_of: Web/API/DataTransferItem/type
    }
  }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DataTransferItem.type")}}
 
+## 另见
 
-<p>{{Compat("api.DataTransferItem.type")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>{{domxref("DataTransfer.type()")}}</li>
- <li><a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">MIME 类型不完整列表</a></li>
-</ul>
+- {{domxref("DataTransfer.type()")}}
+- [MIME 类型不完整列表](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)

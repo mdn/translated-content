@@ -3,65 +3,36 @@ title: offline
 slug: Web/API/Window/offline_event
 translation_of: Web/API/Window/offline_event
 ---
-<p>当浏览器失去网络连接时，<code>offline</code>事件被触发。并且<code>navigator.onLine</code>的值变为 <code>false</code>。</p>
+当浏览器失去网络连接时，`offline`事件被触发。并且`navigator.onLine`的值变为 `false`。
 
-<h2 id="常规信息">常规信息</h2>
+## 常规信息
 
-<dl>
- <dt>规范</dt>
- <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#event-offline">HTML5 Offline</a></dd>
- <dt>接口</dt>
- <dd>Event</dd>
- <dt>是否冒泡</dt>
- <dd>否</dd>
- <dt>可取消默认行为</dt>
- <dd>否</dd>
- <dt>目标对象</dt>
- <dd>当前网页 (<code>&lt;window&gt;</code>)</dd>
- <dt>默认行为</dt>
- <dd>无</dd>
-</dl>
+- 规范
+  - : [HTML5 Offline](http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#event-offline)
+- 接口
+  - : Event
+- 是否冒泡
+  - : 否
+- 可取消默认行为
+  - : 否
+- 目标对象
+  - : 当前网页 (`<window>`)
+- 默认行为
+  - : 无
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>产生该事件的对象 (DOM 树中最顶级的那个对象).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否冒泡。</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>该事件是否可取消默认行为。</td>
-  </tr>
- </tbody>
-</table>
+| 属性                                  | 类型                                 | 描述                                         |
+| ------------------------------------- | ------------------------------------ | -------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 产生该事件的对象 (DOM 树中最顶级的那个对象). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件类型。                                   |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 该事件是否冒泡。                             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 该事件是否可取消默认行为。                   |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/online"><code>online</code></a></li>
-</ul>
+- [`online`](/en-US/docs/Mozilla_event_reference/online)

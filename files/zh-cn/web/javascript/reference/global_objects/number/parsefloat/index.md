@@ -3,42 +3,40 @@ title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong><code>Number.parseFloat()</code></strong> 方法可以把一个字符串解析成浮点数。该方法与全局的 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。</p>
+**`Number.parseFloat()`** 方法可以把一个字符串解析成浮点数。该方法与全局的 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Number.parseFloat(<var>string</var>)</code></pre>
+```plain
+Number.parseFloat(string)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>string</code></dt>
- <dd>被解析的字符串。</dd>
-</dl>
+- `string`
+  - : 被解析的字符串。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给定值被解析成浮点数，如果无法被解析成浮点数，则返回<code>NaN</code></p>
+给定值被解析成浮点数，如果无法被解析成浮点数，则返回`NaN`
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>请移步全局函数 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 页面查看更多的解释和示例。</p>
+请移步全局函数 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 页面查看更多的解释和示例。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Number", "Number")}}</li>
- <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Number", "Number")}}
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}

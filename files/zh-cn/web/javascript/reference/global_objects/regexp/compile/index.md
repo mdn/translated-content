@@ -6,60 +6,56 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code>已废弃的<strong>compile</strong></code><strong><code>()</code></strong> 方法被用于在脚本执行过程中（重新）编译正则表达式。与<code>RegExp</code>构造函数基本一样。</p>
+`已废弃的compile`**`()`** 方法被用于在脚本执行过程中（重新）编译正则表达式。与`RegExp`构造函数基本一样。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>regexObj</var>.compile(<var>pattern, flags</var>)</code></pre>
+```plain
+regexObj.compile(pattern, flags)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>pattern</code></dt>
- <dd>正则表达式的文本 。</dd>
- <dt><code>flags</code></dt>
- <dd>
- <p>如果指定，标志可以具有以下值的任意组合：</p>
+- `pattern`
+  - : 正则表达式的文本 。
+- `flags`
 
- <dl>
-  <dt><code>g</code></dt>
-  <dd>全局匹配</dd>
-  <dt><code>i</code></dt>
-  <dd>忽略大小写</dd>
-  <dt><code>m</code></dt>
-  <dd>多行;让开始和结束字符（^ 和 $）工作在多行模式工作（例如，^ 和 $ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。</dd>
-  <dt><code>y</code></dt>
-  <dd>黏度; 在目标字符串中，只从正则表达式的 lastIndex 属性指定的显示位置开始匹配（并且不试图从任何之后的索引匹配）。</dd>
- </dl>
- </dd>
-</dl>
+  - : 如果指定，标志可以具有以下值的任意组合：
 
-<h2 id="描述">描述</h2>
+    - `g`
+      - : 全局匹配
+    - `i`
+      - : 忽略大小写
+    - `m`
+      - : 多行;让开始和结束字符（^ 和 $）工作在多行模式工作（例如，^ 和 $ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。
+    - `y`
+      - : 黏度; 在目标字符串中，只从正则表达式的 lastIndex 属性指定的显示位置开始匹配（并且不试图从任何之后的索引匹配）。
 
-<p><code>不推荐 compile 方法。你可以使用</code> <code>RegExp</code> 构造函数来得到相同效果。</p>
+## 描述
 
-<h2 id="示例">示例</h2>
+`不推荐 compile 方法。你可以使用` `RegExp` 构造函数来得到相同效果。
 
-<h3 id="使用_compile"><code>使用 compile()</code></h3>
+## 示例
 
-<p>以下展示如何用新模式和新标志来重新编译正则表达式。</p>
+### `使用 compile()`
 
-<pre class="brush: js">var regexObj = new RegExp("foo", "gi");
+以下展示如何用新模式和新标志来重新编译正则表达式。
+
+```js
+var regexObj = new RegExp("foo", "gi");
 regexObj.compile("new foo", "g");
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
-</ul>
+- {{jsxref("RegExp")}}

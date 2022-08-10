@@ -1,6 +1,6 @@
 ---
 title: '::part()'
-slug: 'Web/CSS/::part'
+slug: Web/CSS/::part
 tags:
   - '::part'
   - CSS
@@ -11,27 +11,29 @@ tags:
   - Pseudo-element
   - Reference
   - Selector
-translation_of: 'Web/CSS/::part'
+translation_of: Web/CSS/::part
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>该 <strong><code>::part</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a> 表示在 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">阴影树</a> 中任何匹配 {{HTMLAttrxRef("part")}} 属性的元素。</p>
+该 **`::part`** [CSS](/en-US/docs/Web/CSS) [伪元素](/en-US/docs/Web/CSS/Pseudo-elements) 表示在 [阴影树](/en-US/docs/Web/Web_Components/Using_shadow_DOM) 中任何匹配 {{HTMLAttrxRef("part")}} 属性的元素。
 
-<pre class="brush: css no-line-numbers notranslate">custom-element::part(foo) {
+```css
+custom-element::part(foo) {
   /* 样式作用于 `foo` 部分 */
 }
-</pre>
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;template id="tabbed-custom-element"&gt;
-&lt;style type="text/css"&gt;
+```html
+<template id="tabbed-custom-element">
+<style type="text/css">
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 1rem;
@@ -39,17 +41,19 @@ translation_of: 'Web/CSS/::part'
 :host {
   display: flex;
 }
-&lt;/style&gt;
-&lt;div part="tab active"&gt;Tab 1&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 2&lt;/div&gt;
-&lt;div part="tab"&gt;Tab 3&lt;/div&gt;
-&lt;/template&gt;
+</style>
+<div part="tab active">Tab 1</div>
+<div part="tab">Tab 2</div>
+<div part="tab">Tab 3</div>
+</template>
 
-&lt;tabbed-custom-element&gt;&lt;/tabbed-custom-element&gt;</pre>
+<tabbed-custom-element></tabbed-custom-element>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">tabbed-custom-element::part(tab) {
+```css
+tabbed-custom-element::part(tab) {
   color: #0c0dcc;
   border-bottom: transparent solid 2px;
 }
@@ -74,11 +78,12 @@ tabbed-custom-element::part(active) {
   color: #0060df;
   border-color: #0a84ff !important;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">let template = document.querySelector("#tabbed-custom-element");
+```js
+let template = document.querySelector("#tabbed-custom-element");
 globalThis.customElements.define(template.id, class extends HTMLElement {
   constructor() {
     super();
@@ -86,24 +91,22 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
     this.shadowRoot.appendChild(template.content);
   }
 });
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('Examples')}}</p>
+{{EmbedLiveSample('Examples')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.part")}}</p>
+{{Compat("css.selectors.part")}}
 
-<h2 id="相关阅读">相关阅读</h2>
+## 相关阅读
 
-<ul>
- <li>{{HTMLAttrxRef("part")}} 属性 - 用于定义可以被 <code>::part()</code> 选取的选择器</li>
- <li>{{HTMLAttrxRef("exportparts")}} 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。</li>
- <li><a href="https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md">Explainer: CSS Shadow ::part and ::theme</a></li>
-</ul>
+- {{HTMLAttrxRef("part")}} 属性 - 用于定义可以被 `::part()` 选取的选择器
+- {{HTMLAttrxRef("exportparts")}} 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
+- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

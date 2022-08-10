@@ -3,15 +3,16 @@ title: mask-border
 slug: Web/CSS/mask-border
 translation_of: Web/CSS/mask-border
 ---
-<div>{{cssref}}{{SeeCompatTable}}</div>
+{{cssref}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 属性 <strong><code>mask-border</code></strong> 允许你创建一个紧贴元素边框边缘的 mask.</p>
+[CSS](/en-US/docs/Web/CSS) 属性 **`mask-border`** 允许你创建一个紧贴元素边框边缘的 mask.
 
-<p>该属性为以下属性的<a href="/en-US/docs/Web/CSS/Shorthand_properties">简写</a>: {{cssxref("mask-border-source")}}, {{cssxref("mask-border-slice")}}, {{cssxref("mask-border-width")}}, {{cssxref("mask-border-outset")}}, {{cssxref("mask-border-repeat")}}, and {{cssxref("mask-border-mode")}}. 与其他简写的属性一样，任何一个漏写的子属性，将会被设置为他们的<a href="/en-US/docs/Web/CSS/initial_value">初始值</a>.</p>
+该属性为以下属性的[简写](/en-US/docs/Web/CSS/Shorthand_properties): {{cssxref("mask-border-source")}}, {{cssxref("mask-border-slice")}}, {{cssxref("mask-border-width")}}, {{cssxref("mask-border-outset")}}, {{cssxref("mask-border-repeat")}}, and {{cssxref("mask-border-mode")}}. 与其他简写的属性一样，任何一个漏写的子属性，将会被设置为他们的[初始值](/en-US/docs/Web/CSS/initial_value).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css no-line-numbers">/* source | slice */
+```css
+/* source | slice */
 mask-border: url('border-mask.png') 25;
 
 /* source | slice | repeat */
@@ -22,46 +23,47 @@ mask-border: url('border-mask.png') 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
 mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;'mask-border-source'&gt;</code></dt>
- <dd>该属性为源图像。参见 {{cssxref("mask-border-source")}}.</dd>
- <dt><code>&lt;'mask-border-slice'&gt;</code></dt>
- <dd>将源图像切割后的区域的尺寸，最多可指定四个值。参见 {{cssxref("mask-border-slice")}}.</dd>
- <dt><code>&lt;'mask-border-width'&gt;</code></dt>
- <dd>边框 mask 的宽度。最多可指定四个值。参见 {{cssxref("mask-border-width")}}.</dd>
- <dt><code>&lt;'mask-border-outset'&gt;</code></dt>
- <dd>边框 mask 距离元素外边界的距离。最多可指定四个值。参见 {{cssxref("mask-border-outset")}}.</dd>
- <dt><code>&lt;'mask-border-repeat'&gt;</code></dt>
- <dd>定义如何调整源图像的边缘区域以适应边框 mask 的尺寸。最多可指定四个值。参见 {{cssxref("mask-border-repeat")}}.</dd>
- <dt><code>&lt;'mask-border-mode'&gt;</code></dt>
- <dd>定义是否将源图片设置为明亮度 mask，或者透明度 mask. 参见 {{cssxref("mask-border-mode")}}.</dd>
-</dl>
+- `<'mask-border-source'>`
+  - : 该属性为源图像。参见 {{cssxref("mask-border-source")}}.
+- `<'mask-border-slice'>`
+  - : 将源图像切割后的区域的尺寸，最多可指定四个值。参见 {{cssxref("mask-border-slice")}}.
+- `<'mask-border-width'>`
+  - : 边框 mask 的宽度。最多可指定四个值。参见 {{cssxref("mask-border-width")}}.
+- `<'mask-border-outset'>`
+  - : 边框 mask 距离元素外边界的距离。最多可指定四个值。参见 {{cssxref("mask-border-outset")}}.
+- `<'mask-border-repeat'>`
+  - : 定义如何调整源图像的边缘区域以适应边框 mask 的尺寸。最多可指定四个值。参见 {{cssxref("mask-border-repeat")}}.
+- `<'mask-border-mode'>`
+  - : 定义是否将源图片设置为明亮度 mask，或者透明度 mask. 参见 {{cssxref("mask-border-mode")}}.
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<h3 id="Bitmap">Bitmap</h3>
+### Bitmap
 
-<p>在此范例中，我们将使用钻石图案来给元素添加 mask. mask 的源文件是一个 ".png" 文件，大小为 90 像素 * 90 像素，三颗钻石垂直和水平交叉；</p>
+在此范例中，我们将使用钻石图案来给元素添加 mask. mask 的源文件是一个 ".png" 文件，大小为 90 像素 \* 90 像素，三颗钻石垂直和水平交叉；
 
-<p><img src="mask-border-diamonds.png"></p>
+![](mask-border-diamonds.png)
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="bitmap"&gt;This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?&lt;/div&gt;</pre>
+```html
+<div id="bitmap">This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>为了适应一个钻石的大小，我们使用 90/3 或者 30，用于设置将图像切割至边角以及边缘区域的值，并设置 repeat 属性为 <code>round</code> ，该属性使得切片均匀贴合，例如：没有裁剪和空隙。</p>
+为了适应一个钻石的大小，我们使用 90/3 或者 30，用于设置将图像切割至边角以及边缘区域的值，并设置 repeat 属性为 `round` ，该属性使得切片均匀贴合，例如：没有裁剪和空隙。
 
-<pre class="brush: css">div {
+```css
+div {
   width: 200px;
   background-color: lavender;
   border: 18px solid salmon;
@@ -73,18 +75,18 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
     36px 18px    /* width */
     round;       /* repeat */
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

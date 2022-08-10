@@ -3,41 +3,40 @@ title: document.anchors
 slug: Web/API/Document/anchors
 translation_of: Web/API/Document/anchors
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p> </p>
+{{deprecated_header()}}
 
-<p>{{deprecated_header()}}</p>
+### 概述
 
-<p> </p>
+`anchors`属性返回当前文档中的所有锚点元素。
 
-<h3 id="Summary">概述</h3>
+### 语法
 
-<p><code>anchors</code>属性返回当前文档中的所有锚点元素。</p>
+```plain
+nodeList = document.anchors
+```
 
-<h3 id="Syntax">语法</h3>
+### 例子
 
-<pre class="eval"><em>nodeList</em> = document.anchors
-</pre>
-
-<h3 id="Example">例子</h3>
-
-<pre class="brush: js">if ( document.anchors.length &gt;= 5 ) {
+```js
+if ( document.anchors.length >= 5 ) {
     dump("dump found too many anchors");
     window.location = "http://www.google.com";
 }
-</pre>
+```
 
-<p>下例自动生成一个目录列表，包含了到每个段落的锚点。</p>
+下例自动生成一个目录列表，包含了到每个段落的锚点。
 
-<pre class="brush: js">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;script type="text/javascript" charset="utf-8"&gt;
+```js
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript" charset="utf-8">
     function init() {
         var toc = document.getElementById("toc");
         var i, li, newAnchor;
-        for (i = 0; i &lt; document.anchors.length; i++) {
+        for (i = 0; i < document.anchors.length; i++) {
             li = document.createElement("li");
             newAnchor = document.createElement('a');
             newAnchor.href = "#" + document.anchors[i].name;
@@ -47,38 +46,38 @@ translation_of: Web/API/Document/anchors
         }
     }
 
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
+    </script>
+</head>
+<body onload="init()">
 
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;a name="contents"&gt;&lt;h2&gt;Contents&lt;/h2&gt;&lt;/a&gt;
-&lt;ul id="toc"&gt;&lt;/ul&gt;
+<h1>Title</h1>
+<a name="contents"><h2>Contents</h2></a>
+<ul id="toc"></ul>
 
-&lt;a name="plants"&gt;&lt;h2&gt;Plants&lt;/h2&gt;&lt;/a&gt;
-&lt;ol&gt;
-    &lt;li&gt;Apples&lt;/li&gt;
-    &lt;li&gt;Oranges&lt;/li&gt;
-    &lt;li&gt;Pears&lt;/li&gt;
-&lt;/ol&gt;
+<a name="plants"><h2>Plants</h2></a>
+<ol>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+</ol>
 
-&lt;a name="veggies"&gt;&lt;h2&gt;Veggies&lt;/h2&gt;&lt;/a&gt;
-&lt;ol&gt;
-    &lt;li&gt;Carrots&lt;/li&gt;
-    &lt;li&gt;Celery&lt;/li&gt;
-    &lt;li&gt;Beats&lt;/li&gt;
-&lt;/ol&gt;
+<a name="veggies"><h2>Veggies</h2></a>
+<ol>
+    <li>Carrots</li>
+    <li>Celery</li>
+    <li>Beats</li>
+</ol>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><a href="https://jsfiddle.net/S4yNp">在 JSFiddle 中查看</a></p>
+[在 JSFiddle 中查看](https://jsfiddle.net/S4yNp)
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>由于向后兼容的原因，该属性只返回那些拥有<code>name 属性的 a 元素，而不是那些拥有</code><code>id</code>属性的<code>a</code>元素。</p>
+由于向后兼容的原因，该属性只返回那些拥有` name 属性的 a 元素，而不是那些拥有``id `属性的`a`元素。
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272">DOM Level 2 HTML: anchors</a></p>
+[DOM Level 2 HTML: anchors](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)

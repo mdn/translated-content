@@ -3,33 +3,36 @@ title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 translation_of: Web/API/FetchEvent/respondWith
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>{{domxref("FetchEvent")}} 接口的 <strong><code>respondWith()</code></strong> 方法旨在包裹代码，这些代码为来自受控页面的 request 生成自定义的 response。这些代码通过返回一个 {{domxref("Response")}} 、 <a href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a> 或者 <code><a href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a>的方式</code>resolve。</p>
+{{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法旨在包裹代码，这些代码为来自受控页面的 request 生成自定义的 response。这些代码通过返回一个 {{domxref("Response")}} 、 [network error](http://fetch.spec.whatwg.org/#concept-network-error) 或者 `Fetch的方式`resolve。
 
-<p>有关跨域内容污染的渲染端安全检测与 {{domxref("Response")}} 体的透明度（或者不透明度）相关联，而不是 URL。如果 request 是一个顶级的导航，而返回值是一个类型属性不透明的 {{domxref("Response")}}（即不透明响应体），一个 <a href="https://fetch.spec.whatwg.org/#concept-network-error">network error</a> 将被返回给 <a href="https://fetch.spec.whatwg.org/#concept-fetch"><code>Fetch</code></a>。所有成功（非网络错误）响应的最终 URL 是请求的 URL。</p>
+有关跨域内容污染的渲染端安全检测与 {{domxref("Response")}} 体的透明度（或者不透明度）相关联，而不是 URL。如果 request 是一个顶级的导航，而返回值是一个类型属性不透明的 {{domxref("Response")}}（即不透明响应体），一个 [network error](https://fetch.spec.whatwg.org/#concept-network-error) 将被返回给 [`Fetch`](https://fetch.spec.whatwg.org/#concept-fetch)。所有成功（非网络错误）响应的最终 URL 是请求的 URL。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">FetchEvent.respondWith(
+```js
+FetchEvent.respondWith(
   //Promise that resolves to a Response or a network error.
-​)</pre>
+​)
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>Void.</p>
+Void.
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>任何自定义的响应生成代码。</p>
+任何自定义的响应生成代码。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>该代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>)。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} 事件处理程序侦听 {{event("fetch")}} 事件。当触发时，{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith(any value)")}} 返回一个 promise 给受控页面。该 promise 在 {{domxref("Cache")}} 对象中查询第一个匹配 URL 请求。如果没有发现匹配项，该代码将转而从网络获取响应。</p>
+该代码片段来自 [service worker fetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([run the fetch sample live](https://googlechrome.github.io/samples/service-worker/prefetch/))。 {{domxref("ServiceWorkerGlobalScope.onfetch")}} 事件处理程序侦听 {{event("fetch")}} 事件。当触发时，{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith(any value)")}} 返回一个 promise 给受控页面。该 promise 在 {{domxref("Cache")}} 对象中查询第一个匹配 URL 请求。如果没有发现匹配项，该代码将转而从网络获取响应。
 
-<p>该代码也处理从 {{domxref("ServiceWorkerGlobalScope.fetch")}} 操作中抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回具有相应错误代码集的正常响应对象。</p>
+该代码也处理从 {{domxref("ServiceWorkerGlobalScope.fetch")}} 操作中抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回具有相应错误代码集的正常响应对象。
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
@@ -52,23 +55,22 @@ translation_of: Web/API/FetchEvent/respondWith
       });
     })
   );
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.FetchEvent.respondWith")}}
 
-<h2 id="请参见">请参见</h2>
+## 请参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

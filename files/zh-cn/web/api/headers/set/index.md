@@ -3,65 +3,66 @@ title: Headers.set()
 slug: Web/API/Headers/set
 translation_of: Web/API/Headers/set
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><strong><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers">headers</a></code></strong>接口中 <strong><code>set()</code></strong> 方法在可以在已经声明中的<code><strong>headers</strong></code>对象修改已有的一组键值对或者创建一个新的键值对。</p>
+**[`headers`](https://developer.mozilla.org/en-US/docs/Web/API/Headers)**接口中 **`set()`** 方法在可以在已经声明中的**`headers`**对象修改已有的一组键值对或者创建一个新的键值对。
 
-<p><strong><code>set()</code></strong> 方法和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法不同的是声明的<strong><code>Headers</code></strong>对象是否已经存在对应的<strong><code>keys</code></strong>是否已经存在并且已经赋值。<strong><code>set()</code></strong> 方法将会覆盖之前的<strong><code>value</code></strong>，然而 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法只会在<strong><code>Headers</code></strong>对象的尾部添加一个新的键值对。</p>
+**`set()`** 方法和 [append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法不同的是声明的**`Headers`**对象是否已经存在对应的**`keys`**是否已经存在并且已经赋值。**`set()`** 方法将会覆盖之前的**`value`**，然而 [append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法只会在**`Headers`**对象的尾部添加一个新的键值对。
 
-<p>为了安全策略，一些 <strong><code>Headers</code></strong>对象中的键值对只能客户端去控制。这些<strong><code>key</code></strong>包括<a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name">Forbidden response header name</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name">Forbidden responese header names</a> 。</p>
+为了安全策略，一些 **`Headers`**对象中的键值对只能客户端去控制。这些**`key`**包括[Forbidden response header name](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name) 和 [Forbidden responese header names](https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_response_header_name) 。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>myHeaders</em>.set(<em>name</em>, <em>value</em>);</pre>
+```plain
+myHeaders.set(name, value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>name</code></dt>
- <dd><strong><code>name</code></strong>就是需要对 HTTP header 设置新值的 key，一般为字符串。如果设置的<strong><code>name</code></strong> 不是 HTTP header 规范里面规定的 name，那么将会抛出错误"TypeError"。</dd>
- <dt><code>value</code></dt>
- <dd> <strong><code>value </code></strong>就是 <strong><code>name </code></strong>对应的值。</dd>
-</dl>
+- `name`
+  - : **`name`**就是需要对 HTTP header 设置新值的 key，一般为字符串。如果设置的**`name`** 不是 HTTP header 规范里面规定的 name，那么将会抛出错误"TypeError"。
+- `value`
+  - : **`value `**就是 **`name `**对应的值。
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>创建一个新的 <code>Headers</code> 对象：</p>
+创建一个新的 `Headers` 对象：
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>你可以用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法给<code>Headers</code> 对象增添一个新的键值对，然后用<code><strong>set()</strong></code>方法去改变这个键值对：</p>
+你可以用[append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法给`Headers` 对象增添一个新的键值对，然后用**`set()`**方法去改变这个键值对：
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.set('Content-Type', 'text/html');
-</pre>
+```
 
-<p>如果这个键值对不存在，那么<strong><code>set()</code></strong>方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么<code><strong>set()</strong></code>方法将会覆盖之前的<strong><code>value</code></strong>值：</p>
+如果这个键值对不存在，那么**`set()`**方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么**`set()`**方法将会覆盖之前的**`value`**值：
 
-<pre class="brush: js">myHeaders.set('Accept-Encoding', 'deflate');
+```js
+myHeaders.set('Accept-Encoding', 'deflate');
 myHeaders.set('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'gzip'</pre>
+myHeaders.get('Accept-Encoding'); // Returns 'gzip'
+```
 
-<p>如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用<a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers/append">append()</a>方法。</p>
+如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用[append()](https://developer.mozilla.org/en-US/docs/Web/API/Headers/append)方法。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.Headers.set")}}
 
+## See also
 
-<p>{{Compat("api.Headers.set")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

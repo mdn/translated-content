@@ -3,39 +3,40 @@ title: DOMImplementation.createHTMLDocument
 slug: Web/API/DOMImplementation/createHTMLDocument
 translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
-<p>{{ApiRef("DOM")}}{{SeeCompatTable}}</p>
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
-<h3 id="概述">概述</h3>
+### 概述
 
-<p>该方法 (属于<a href="/zh-cn/DOM/document.implementation"><code>document.implementation</code></a>) 用来创建一个新的 HTML 文档。</p>
+该方法 (属于[`document.implementation`](/zh-cn/DOM/document.implementation)) 用来创建一个新的 HTML 文档。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre>var doc = document.implementation.createHTMLDocument(title);
-</pre>
+```plain
+var doc = document.implementation.createHTMLDocument(title);
+```
 
-<ul>
- <li><code>doc</code> 是新建的 HTML 文档。</li>
- <li><code>title</code> 是 doc 中的 title 标签中的文本。</li>
-</ul>
+- `doc` 是新建的 HTML 文档。
+- `title` 是 doc 中的 title 标签中的文本。
 
-<h3 id="例子">例子</h3>
+### 例子
 
-<p>下面的例子演示如何创建了一个新的 HTML 文档，并把它插入到当前文档的一个{{ HTMLElement("iframe") }}中。</p>
+下面的例子演示如何创建了一个新的 HTML 文档，并把它插入到当前文档的一个{{ HTMLElement("iframe") }}中。
 
-<p><a href="/samples/domref/createHTMLDocument.html">查看在线演示</a></p>
+[查看在线演示](/samples/domref/createHTMLDocument.html)
 
-<p>例子中的 HTML 代码如下：</p>
+例子中的 HTML 代码如下：
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;p&gt;Click &lt;a href="javascript:makeDocument()"&gt;here&lt;/a&gt; to create a new document and insert it below.&lt;/p&gt;
-  &lt;iframe id="theFrame" src="about:blank" /&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <iframe id="theFrame" src="about:blank" />
+</body>
+```
 
-<p>例子中用 JavaScript 实现的<code>makeDocument()</code>方法如下：</p>
+例子中用 JavaScript 实现的`makeDocument()`方法如下：
 
-<pre class="brush: js">function makeDocument() {
+```js
+function makeDocument() {
   var frame = document.getElementById("theFrame");
 
   var doc = document.implementation.createHTMLDocument("New Document");
@@ -56,35 +57,35 @@ translation_of: Web/API/DOMImplementation/createHTMLDocument
 
   destDocument.replaceChild(newNode, destDocument.documentElement);
 }
-</pre>
+```
 
-<p>代码 4-12 行创建了一个新的 HTML 文档，并在里面插入一些内容。第 4 行 <code>createHTMLDocument()</code>构造了一个标题为"New Document"的 HTML 文档. 5-6 行创建了一个段落元素并在里面插入了一些内容，8-12 行将新建的段落元素插入到 HTML 文档中。</p>
+代码 4-12 行创建了一个新的 HTML 文档，并在里面插入一些内容。第 4 行 `createHTMLDocument()`构造了一个标题为"New Document"的 HTML 文档. 5-6 行创建了一个段落元素并在里面插入了一些内容，8-12 行将新建的段落元素插入到 HTML 文档中。
 
-<p>16 行获取了 iframe 的<code>contentDocument</code> 属性。这是我们将要插入新建的 HTML 文档的地方。下面的两行将新建的 HTML 文档插入到了 iframe 的根元素中。这样，我们用 20 行代码实现了用一个新建的 HTML 文档替换 iframe 中原有文档的目的。</p>
+16 行获取了 iframe 的`contentDocument` 属性。这是我们将要插入新建的 HTML 文档的地方。下面的两行将新建的 HTML 文档插入到了 iframe 的根元素中。这样，我们用 20 行代码实现了用一个新建的 HTML 文档替换 iframe 中原有文档的目的。
 
-<h3 id="备注">备注</h3>
+### 备注
 
-<p>新生成的 HTML 文档有如下的初始结构：</p>
+新生成的 HTML 文档有如下的初始结构：
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;<em>title</em>&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!doctype html>
+<html>
+<head>
+<title>title</title>
+</head>
+<body>
+</body>
+</html>
+```
 
-<p>译者注：</p>
+译者注：
 
-<pre>alert(document.implementation.createHTMLDocument("myTitle").documentElement.outerHTML)
+```plain
+alert(document.implementation.createHTMLDocument("myTitle").documentElement.outerHTML)
 
-//&lt;html&gt;&lt;head&gt;&lt;title&gt;myTitle&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;
-</pre>
+//<html><head><title>myTitle</title></head><body></body></html>
+```
 
-<h3 id="规范">规范</h3>
+### 规范
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#dom-domhtmlimplementation-createhtmldocument"><code>createHTMLDocument</code> specification</a></li>
-</ul>
+- [`createHTMLDocument` specification](http://www.whatwg.org/html/#dom-domhtmlimplementation-createhtmldocument)

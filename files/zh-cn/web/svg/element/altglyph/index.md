@@ -8,58 +8,52 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/altGlyph
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>altGlyph</code>元素允许符号的复杂选区，用来呈现它的子字符数据。</p>
+`altGlyph`元素允许符号的复杂选区，用来呈现它的子字符数据。
 
-<h2 id="使用上下文">使用上下文</h2>
+## 使用上下文
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#XLink">XLink 属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- [条件处理属性](/en-US/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- [图形事件属性](/en-US/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en-US/SVG/Attribute#Presentation) »
+- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("dx")}}</li>
- <li>{{SVGAttr("dy")}}</li>
- <li>{{SVGAttr("rotate")}}</li>
- <li>{{SVGAttr("glyphRef")}}</li>
- <li>{{SVGAttr("format")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("dx")}}
+- {{SVGAttr("dy")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("glyphRef")}}
+- {{SVGAttr("format")}}
+- {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/Web/API/SVGAltGlyphElement">SVGAltGlyphElement</a></code> 接口。</p>
+该元素实现了[`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement) 接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.altGlyph")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{SVGElement("tspan")}}</li>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("altGlyphDef")}}</li>
-</ul>
+- {{SVGElement("tspan")}}
+- {{SVGElement("glyph")}}
+- {{SVGElement("altGlyphDef")}}
 
-<p>{{SVGRef}}</p>
+{{SVGRef}}

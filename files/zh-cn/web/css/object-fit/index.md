@@ -8,75 +8,73 @@ tags:
   - 图像缩放
 translation_of: Web/CSS/object-fit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>object-fit</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性指定<a href="/zh-CN/docs/Web/CSS/Replaced_element">可替换元素</a>的内容应该如何适应到其使用的高度和宽度确定的框。</p>
+**`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容应该如何适应到其使用的高度和宽度确定的框。
 
-<p>您可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。</p>
+您可以通过使用 {{cssxref("object-position")}} 属性来切换被替换元素的内容对象在元素框内的对齐方式。
 
-<div>{{EmbedInteractiveExample("pages/css/object-fit.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
+## 语法
 
+object-fit 属性由下列的值中的单独一个关键字来指定。
 
-<h2 id="Values">语法</h2>
+### 取值
 
-<p>object-fit 属性由下列的值中的单独一个关键字来指定。</p>
+- `contain`
+  - : 被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“[黑边](https://zh.wikipedia.org/wiki/%E9%BB%91%E9%82%8A)”。
+- `cover`
+  - : 被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。
+- `fill`
+  - : 被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。
+- `none`
+  - : 被替换的内容将保持其原有的尺寸。
+- `scale-down`
+  - : 内容的尺寸与 `none` 或 `contain` 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。
 
-<h3 id="Values">取值</h3>
-
-<dl>
- <dt><code>contain</code></dt>
- <dd>被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“<a href="https://zh.wikipedia.org/wiki/%E9%BB%91%E9%82%8A">黑边</a>”。</dd>
- <dt><code>cover</code></dt>
- <dd>被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。</dd>
- <dt><code>fill</code></dt>
- <dd>被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。</dd>
- <dt><code>none</code></dt>
- <dd>被替换的内容将保持其原有的尺寸。</dd>
- <dt><code>scale-down</code></dt>
- <dd>内容的尺寸与 <code>none</code> 或 <code>contain</code> 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。</dd>
-</dl>
-
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h2&gt;object-fit: fill&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/&gt;
+```html
+<div>
+  <h2>object-fit: fill</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
 
-  &lt;h2&gt;object-fit: contain&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/&gt;
+  <h2>object-fit: contain</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
 
-  &lt;h2&gt;object-fit: cover&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/&gt;
+  <h2>object-fit: cover</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
 
-  &lt;h2&gt;object-fit: none&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/&gt;
+  <h2>object-fit: none</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
 
-  &lt;h2&gt;object-fit: scale-down&lt;/h2&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/&gt;
+  <h2>object-fit: scale-down</h2>
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
 
-  &lt;img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/&gt;
+  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
 
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">h2 {
+```css
+h2 {
   font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
@@ -121,25 +119,21 @@ img {
 .scale-down {
   object-fit: scale-down;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Example', 500, 450) }}</p>
+{{ EmbedLiveSample('Example', 500, 450) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.object-fit")}}
 
+## 参见
 
-<p>{{Compat("css.properties.object-fit")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>其他与图像相关的 CSS 属性：{{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}。</li>
- <li>{{cssxref("background-size")}}</li>
-</ul>
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}。
+- {{cssxref("background-size")}}

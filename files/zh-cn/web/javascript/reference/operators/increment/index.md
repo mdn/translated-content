@@ -7,65 +7,62 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>自增运算符 (<code>++</code>) 将其操作数递增（加 1）并返回一个值。</p>
+自增运算符 (`++`) 将其操作数递增（加 1）并返回一个值。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
+## 语法
 
+```plain
+Operator: x++ or ++x
+```
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox"><strong>Operator:</strong> <var>x</var>++ or ++<var>x</var>
-</pre>
+如使用后置（Postfix）自增，操作符在操作数后（例如 `x++`）， 操作数会加一，然后返回加一之前的值。
 
-<h2 id="描述">描述</h2>
+如使用前置（Prefix）自增，操作符在操作数前（例如 `++x`）， 操作数会加一，然后返回加一之后的值。
 
-<p>如使用后置（Postfix）自增，操作符在操作数后（例如  <code><var>x</var>++</code>）， 操作数会加一，然后返回加一之前的值。</p>
+## 示例
 
-<p>如使用前置（Prefix）自增，操作符在操作数前（例如 <code>++<var>x</var></code>）， 操作数会加一，然后返回加一之后的值。</p>
+### 后置自增 (Postfix increment)
 
-<h2 id="示例">示例</h2>
-
-<h3 id="后置自增Postfix_increment">后置自增 (Postfix increment)</h3>
-
-<pre class="brush: js">let x = 3;
+```js
+let x = 3;
 y = x++;
 
 // y = 3
 // x = 4
-</pre>
+```
 
-<h3 id="前置自增Prefix_increment">前置自增 (Prefix increment)</h3>
+### 前置自增 (Prefix increment)
 
-<pre class="brush: js">let a = 2;
+```js
+let a = 2;
 b = ++a;
 
 // a = 3
 // b = 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition">Addition operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction">Subtraction operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication">Multiplication operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">Remainder operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation">Exponentiation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement">Decrement operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation">Unary negation operator</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus">Unary plus operator</a></li>
-</ul>
+- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

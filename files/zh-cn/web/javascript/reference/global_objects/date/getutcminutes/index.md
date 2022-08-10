@@ -3,45 +3,46 @@ title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><strong><code>getUTCMinutes()</code></strong> 方法以世界时为标准，返回一个指定的日期对象的分钟数。</p>
+**`getUTCMinutes()`** 方法以世界时为标准，返回一个指定的日期对象的分钟数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcminutes.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getUTCMinutes()</code></pre>
+```plain
+dateObj.getUTCMinutes()
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="Returns">返回值</h3>
+### 返回值
 
-<p><code>getUTCMinutes()</code> 返回一个 0 到 59 的整数。</p>
+`getUTCMinutes()` 返回一个 0 到 59 的整数。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<h3 id="Example:_Using_getUTCMinutes">例子：使用 <code>getUTCMinutes()</code> 方法</h3>
+### 例子：使用 `getUTCMinutes()` 方法
 
-<p>下例将当前时间的分钟部分赋值给变量 <code>minutes</code>。</p>
+下例将当前时间的分钟部分赋值给变量 `minutes`。
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var minutes = today.getUTCMinutes();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

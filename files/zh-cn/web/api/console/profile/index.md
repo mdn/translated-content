@@ -13,34 +13,31 @@ tags:
   - 非标准
 translation_of: Web/API/Console/profile
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>开始记录性能描述信息 (例如， <a href="/en-US/docs/Tools/Performance">Firefox performance tool</a>)。</p>
+开始记录性能描述信息 (例如， [Firefox performance tool](/en-US/docs/Tools/Performance))。
 
-<p>你可以选择提供一个参数来命名描述信息，这将允许你在有多个描述信息被记录时来选择只停止那个描述信息（被你命名的那个）。请查阅{{domxref("Console.profileEnd()")}}来确认这个参数是如何被解释的。</p>
+你可以选择提供一个参数来命名描述信息，这将允许你在有多个描述信息被记录时来选择只停止那个描述信息（被你命名的那个）。请查阅{{domxref("Console.profileEnd()")}}来确认这个参数是如何被解释的。
 
-<p>要停止记录，请调用{{domxref("Console.profileEnd()")}}。</p>
+要停止记录，请调用{{domxref("Console.profileEnd()")}}。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">console.profile(<em>profileName</em>);
-</pre>
+```plain
+console.profile(profileName);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>描述信息的名字。可选。</dd>
-</dl>
+- `profileName`
+  - : 描述信息的名字。可选。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.console.profile")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("Console.profileEnd()")}}</li>
-</ul>
+- {{domxref("Console.profileEnd()")}}

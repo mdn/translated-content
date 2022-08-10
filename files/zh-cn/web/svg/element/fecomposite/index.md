@@ -9,76 +9,69 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/feComposite
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件<code>arithmetic 操作（结果被压到 [0,1] 范围内）。</code></p>
+该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件`arithmetic 操作（结果被压到 [0,1] 范围内）。`
 
-<p><code>该 arithmetic 操作对组合来自</code>{{SVGElement("feDiffuseLighting")}}滤镜和来自{{SVGElement("feSpecularLighting")}} 滤镜的<code>输出以及组合纹理数据很有用</code>。如果选择了<code>arithmetic</code>操作，每个结果像素都要经过下面的方程式的计算：</p>
+`该 arithmetic 操作对组合来自`{{SVGElement("feDiffuseLighting")}}滤镜和来自{{SVGElement("feSpecularLighting")}} 滤镜的`输出以及组合纹理数据很有用`。如果选择了`arithmetic`操作，每个结果像素都要经过下面的方程式的计算：
 
-<pre>result = k1*i1*i2 + k2*i1 + k3*i2 + k4
-</pre>
+```plain
+result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+```
 
-<p>在这里：</p>
+在这里：
 
-<ul>
- <li><code>i1</code>和<code>i2 标</code>示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。</li>
- <li><code>k1、k2、k3</code>和<code>k4 标示了同名的属性值。</code></li>
-</ul>
+- `i1`和`i2 标`示了输入图像相应的像素通道值，分别映射到{{SVGAttr("in")}}和{{SVGAttr("in2")}}。
+- `k1、k2、k3`和`k4 标示了同名的属性值。`
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("in2") }}</li>
- <li>{{ SVGAttr("operator") }}</li>
- <li>{{ SVGAttr("k1") }}</li>
- <li>{{ SVGAttr("k2") }}</li>
- <li>{{ SVGAttr("k3") }}</li>
- <li>{{ SVGAttr("k4") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("in2") }}
+- {{ SVGAttr("operator") }}
+- {{ SVGAttr("k1") }}
+- {{ SVGAttr("k2") }}
+- {{ SVGAttr("k3") }}
+- {{ SVGAttr("k4") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFECompositeElement">SVGFECompositeElement</a></code>接口。</p>
+该元素实现了[`SVGFECompositeElement`](/en/DOM/SVGFECompositeElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

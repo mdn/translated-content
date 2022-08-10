@@ -8,42 +8,35 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`Object.seal()`**方法封闭一个对象，阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要原来是可写的就可以改变。{{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
-<div><code><strong>Object.seal()</strong></code>方法封闭一个对象，阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要原来是可写的就可以改变。</div>
+## 语法
 
+```plain
+Object.seal(obj)
+```
 
+### 参数
 
-<div>{{EmbedInteractiveExample("pages/js/object-seal.html")}}</div>
+- `obj`
+  - : 将要被密封的对象。
 
+### 返回值
 
+被密封的对象。
 
-<h2 id="Syntax">语法</h2>
+## 描述
 
-<pre class="syntaxbox"><code>Object.seal(<em>obj</em>)</code></pre>
+通常，一个对象是{{jsxref("Object.isExtensible()", "可扩展的", "", 1)}}（可以添加新的属性）。密封一个对象会让这个对象变的不能添加新属性，且所有已有属性会变的不可配置。属性不可配置的效果就是属性变的不可删除，以及一个数据属性不能被重新定义成为访问器属性，或者反之。但属性的值仍然可以修改。尝试删除一个密封对象的属性或者将某个密封对象的属性从数据属性转换成访问器属性，结果会静默失败或抛出{{jsxref("TypeError")}}（在{{jsxref("Strict_mode", "严格模式", "", 1)}} 中最常见的，但不唯一）。
 
-<h3 id="Parameters">参数</h3>
+不会影响从原型链上继承的属性。但 {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) 属性的值也会不能修改。
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>将要被密封的对象。</dd>
-</dl>
+返回被密封对象的引用。
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>被密封的对象。</p>
-
-<h2 id="Description">描述</h2>
-
-<p>通常，一个对象是{{jsxref("Object.isExtensible()", "可扩展的", "", 1)}}（可以添加新的属性）。密封一个对象会让这个对象变的不能添加新属性，且所有已有属性会变的不可配置。属性不可配置的效果就是属性变的不可删除，以及一个数据属性不能被重新定义成为访问器属性，或者反之。但属性的值仍然可以修改。尝试删除一个密封对象的属性或者将某个密封对象的属性从数据属性转换成访问器属性，结果会静默失败或抛出{{jsxref("TypeError")}}（在{{jsxref("Strict_mode", "严格模式", "", 1)}} 中最常见的，但不唯一）。</p>
-
-<p>不会影响从原型链上继承的属性。但 {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) 属性的值也会不能修改。</p>
-
-<p>返回被密封对象的引用。</p>
-
-<h2 id="Examples">例子</h2>
-
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function() {},
   foo: 'bar'
 };
@@ -89,36 +82,37 @@ Object.defineProperty(obj, 'ohai', {
 }); // throws a TypeError
 Object.defineProperty(obj, 'foo', {
   value: 'eit'
-}); // 通过 Object.defineProperty 修改属性值</pre>
+}); // 通过 Object.defineProperty 修改属性值
+```
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>在 ES5 中，如果这个方法的参数不是一个（原始）对象，那么它将导致{{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为已被密封的普通对象，会直接返回它。</p>
+在 ES5 中，如果这个方法的参数不是一个（原始）对象，那么它将导致{{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为已被密封的普通对象，会直接返回它。
 
-<pre class="brush: js">Object.seal(1);
+```js
+Object.seal(1);
 // TypeError: 1 is not an object (ES5 code)
 
 Object.seal(1);
-// 1                             (ES2015 code)</pre>
+// 1                             (ES2015 code)
+```
 
-<h3 id="对比_Object.freeze">对比 <code>Object.freeze()</code></h3>
+### 对比 `Object.freeze()`
 
-<p>使用<code>Object.freeze()</code>冻结的对象中的现有属性值是不可变的。用<code>Object.seal()</code>密封的对象可以改变其现有属性值。</p>
+使用`Object.freeze()`冻结的对象中的现有属性值是不可变的。用`Object.seal()`密封的对象可以改变其现有属性值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

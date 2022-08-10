@@ -3,50 +3,45 @@ title: Selection.getRangeAt()
 slug: Web/API/Selection/getRangeAt
 translation_of: Web/API/Selection/getRangeAt
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}**概述**
 
+返回一个包含当前选区内容的区域对象。
 
-<div><strong>概述</strong></div>
+## 语法
 
+```plain
+range = sel.getRangeAt(index)
+```
 
-<p>返回一个包含当前选区内容的区域对象。</p>
+### 参数
 
-<h2 id="语法">语法</h2>
+- _`range`_
+  - : 将返回 [range](/en-US/docs/DOM/range) 对象。
+- _`index`_
+  - : 该参数指定需要被处理的子集编号（从零开始计数）。如果该数值被错误的赋予了大于或等于 [rangeCount](/en-US/docs/DOM/Selection/rangeCount) 结果的数字，将会产生错误。
 
-<pre class="syntaxbox"><em>range</em> = <em>sel</em>.getRangeAt(<em>index</em>)
-</pre>
+## 例子
 
-<h3 id="参数">参数</h3>
-
-<dl>
- <dt><em><code>range</code></em></dt>
- <dd> 将返回 <a href="/en-US/docs/DOM/range">range</a> 对象。</dd>
- <dt><em><code>index</code></em></dt>
- <dd>该参数指定需要被处理的子集编号（从零开始计数）。如果该数值被错误的赋予了大于或等于 <a href="/en-US/docs/DOM/Selection/rangeCount">rangeCount</a> 结果的数字，将会产生错误。</dd>
-</dl>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush:js">let ranges = [];
+```js
+let ranges = [];
 
 sel = window.getSelection();
 
-for(var i = 0; i &lt; sel.rangeCount; i++) {
+for(var i = 0; i < sel.rangeCount; i++) {
  ranges[i] = sel.getRangeAt(i);
 }
 /* 在 ranges 数组的每一个元素都是一个 range 对象，
- * 对象的内容是当前选区中的一个。 */</pre>
+ * 对象的内容是当前选区中的一个。 */
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/XUL_Tutorial/Tree_Selection">Tree Selection</a> (for the <code>getRangeAt()</code> method on the <code>nsITreeSelection</code> interface)</li>
-</ul>
+- [Tree Selection](/en-US/docs/XUL_Tutorial/Tree_Selection) (for the `getRangeAt()` method on the `nsITreeSelection` interface)

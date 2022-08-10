@@ -6,15 +6,16 @@ tags:
   - CSS Scroll Anchoring
 translation_of: Web/CSS/overflow-anchor
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>overflow-anchor</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。</p>
+**`overflow-anchor`** [CSS](/en-US/docs/Web/CSS) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。
 
-<p>默认情况下，在任何支持滚动锚定行为的浏览器中都将其启用。因此，仅当您在文档或文档的一部分中遇到滚动锚定问题并且需要关闭行为时，才通常需要更改此属性的值。</p>
+默认情况下，在任何支持滚动锚定行为的浏览器中都将其启用。因此，仅当您在文档或文档的一部分中遇到滚动锚定问题并且需要关闭行为时，才通常需要更改此属性的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 overflow-anchor: auto;
 overflow-anchor: none;
 
@@ -22,44 +23,39 @@ overflow-anchor: none;
 overflow-anchor: inherit;
 overflow-anchor: initial;
 overflow-anchor: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>The element becomes a potential anchor when adjusting scroll position.</dd>
- <dt><code>none</code></dt>
- <dd>The element won't be selected as a potential anchor.</dd>
-</dl>
+- `auto`
+  - : The element becomes a potential anchor when adjusting scroll position.
+- `none`
+  - : The element won't be selected as a potential anchor.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<p>To prevent scroll anchoring in a document, use the <code>overflow-anchor</code> property.</p>
+To prevent scroll anchoring in a document, use the `overflow-anchor` property.
 
-<pre class="brush: css">body {
+```css
+body {
   overflow-anchor: none;
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.properties.overflow-anchor")}}
 
+## See also
 
-<p>{{Compat("css.properties.overflow-anchor")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring">Guide to scroll anchoring</a></li>
-</ul>
+- [Guide to scroll anchoring](/en-US/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)

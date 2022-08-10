@@ -3,35 +3,35 @@ title: Element.removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
 translation_of: Web/API/Element/removeAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttributeNS</code> 移除元素的指定属性</p>
+`removeAttributeNS` 移除元素的指定属性
 
-<p>在 Firefox 3 及更高版本中，此方法会将 DOM 值重置为其默认值。</p>
+在 Firefox 3 及更高版本中，此方法会将 DOM 值重置为其默认值。
 
-<h2 id="Syntax">用法</h2>
+## 用法
 
-<pre class="eval"><em>element</em>.removeAttributeNS(<em>namespace</em>,<em>attrName</em>);
-</pre>
+```plain
+element.removeAttributeNS(namespace,attrName);
+```
 
-<ul>
- <li><code>namespace</code> 包含当前属性的 namespace 字符串</li>
- <li><code>attrName</code> 当前移除的属性名字符串</li>
-</ul>
+- `namespace` 包含当前属性的 namespace 字符串
+- `attrName` 当前移除的属性名字符串
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre>// &lt;div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//      special:specialAlign="utterleft" width="200px" /&gt;
+```plain
+// <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//      special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
 d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// now: &lt;div id="div1" width="200px" /&gt;
-</pre>
+// now: <div id="div1" width="200px" />
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS">DOM Level 2 Core: removeAttributeNS</a></p>
+[DOM Level 2 Core: removeAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)

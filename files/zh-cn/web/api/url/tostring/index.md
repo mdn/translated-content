@@ -9,42 +9,41 @@ tags:
   - 方法
 translation_of: Web/API/URL/toString
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p><strong><code>URL.toString()</code></strong> 字符串化方法返回一个包含完整 URL 的 {{domxref("USVString")}}。它的作用等同于只读的 {{domxref("URL.href")}}。</p>
+**`URL.toString()`** 字符串化方法返回一个包含完整 URL 的 {{domxref("USVString")}}。它的作用等同于只读的 {{domxref("URL.href")}}。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>url</em>.toString();</pre>
+```plain
+string = url.toString();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("USVString")}}。</p>
+一个{{domxref("USVString")}}。
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<pre class="brush: js">const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
 url.toString() // 应当返回字符串形式的 URL
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.URL.toString")}}
 
+## 参见
 
-<p>{{Compat("api.URL.toString")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>父级接口 {{domxref("URL")}}。</li>
-</ul>
+- 父级接口 {{domxref("URL")}}。

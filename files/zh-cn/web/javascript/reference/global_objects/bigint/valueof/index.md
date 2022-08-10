@@ -3,40 +3,39 @@ title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>valueOf()</code></strong> 方法返回 {{jsxref("BigInt")}} 对象包装的原始值。</p>
+**`valueOf()`** 方法返回 {{jsxref("BigInt")}} 对象包装的原始值。
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-valueof.html")}}
 
+## 语法
 
+```plain
+bigIntObj.valueOf()
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><var>bigIntObj</var>.valueOf()</pre>
+表示指定 {{jsxref("BigInt")}} 对象的原始 BigInt 值。
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>表示指定 {{jsxref("BigInt")}} 对象的原始 BigInt 值。</p>
+### Using `valueOf`
 
-<h2 id="例子">例子</h2>
-
-<h3 id="Using_valueOf">Using <code>valueOf</code></h3>
-
-<pre class="brush: js">typeof Object(1n); // object
+```js
+typeof Object(1n); // object
 typeof Object(1n).valueOf(); // bigint
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li>{{jsxref("BigInt.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.prototype.toString()")}}

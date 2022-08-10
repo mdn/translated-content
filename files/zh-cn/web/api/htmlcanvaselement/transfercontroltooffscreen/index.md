@@ -7,21 +7,24 @@ tags:
   - 离屏 Canvas
 translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>方法 <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong> 将控制转移到一个在主线程或者 web worker 的 {{domxref("OffscreenCanvas")}} 对象上。</p>
+方法 **`HTMLCanvasElement.transferControlToOffscreen()`** 将控制转移到一个在主线程或者 web worker 的 {{domxref("OffscreenCanvas")}} 对象上。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<pre class="syntaxbox notranslate">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
+```plain
+OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 {{domxref("OffscreenCanvas")}} 对象。</p>
+一个 {{domxref("OffscreenCanvas")}} 对象。
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<pre class="brush: js notranslate">var htmlCanvas = document.createElement('canvas');
+```js
+var htmlCanvas = document.createElement('canvas');
 var offscreen = htmlCanvas.transferControlToOffscreen();
 var gl = offscreen.getContext('webgl');
 
@@ -29,24 +32,18 @@ var gl = offscreen.getContext('webgl');
 
 // Push frames back to the original HTMLCanvasElement
 gl.commit();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.HTMLCanvasElement.transferControlToOffscreen")}}
 
+## 查阅
 
-<p>{{Compat("api.HTMLCanvasElement.transferControlToOffscreen")}}</p>
-</div>
-
-<h2 id="查阅">查阅</h2>
-
-<ul>
- <li>The interface defining this method, {{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
- <li>{{domxref("WebGLRenderingContext.commit()")}}</li>
-</ul>
+- The interface defining this method, {{domxref("HTMLCanvasElement")}}
+- {{domxref("OffscreenCanvas")}}
+- {{domxref("WebGLRenderingContext.commit()")}}

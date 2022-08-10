@@ -7,27 +7,24 @@ tags:
   - CSS 盒对齐
 translation_of: Web/CSS/justify-self
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>justify-self</code></strong> 属性设置单个盒子在其布局容器适当轴中的对其方式。</p>
+[CSS](/en-US/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
 
-<div>{{EmbedInteractiveExample("pages/css/justify-self.html")}}</div>
+{{EmbedInteractiveExample("pages/css/justify-self.html")}}
 
+此属性的效果取决于我们所处的布局模式：
 
+- 在块级布局中，它对齐一个项目在其包含块的内联轴上。
+- 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
+- 在表格布局中，这个属性被忽略（[更多](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) 关于块、绝对定位以及表格布局中的对齐方式）
+- 在弹性布局中，这个属性被忽略（[更对](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox) 关于弹性布局中的对齐方式）
+- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
 
-<p>此属性的效果取决于我们所处的布局模式：</p>
+## 语法
 
-<ul>
- <li>在块级布局中，它对齐一个项目在其包含块的内联轴上。</li>
- <li>对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）</li>
- <li>在表格布局中，这个属性被忽略（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">更多</a> 关于块、绝对定位以及表格布局中的对齐方式）</li>
- <li>在弹性布局中，这个属性被忽略（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">更对</a> 关于弹性布局中的对齐方式）</li>
- <li>在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">更多</a> 关于栅格布局中的对齐方式）</li>
-</ul>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 基础关键字 */
+```css
+/* 基础关键字 */
 justify-self: auto;
 justify-self: normal;
 justify-self: stretch;
@@ -56,95 +53,91 @@ justify-self: unsafe center;
 justify-self: inherit;
 justify-self: initial;
 justify-self: unset;
-</pre>
+```
 
-<p>这个属性可以有三种不同的形式：</p>
+这个属性可以有三种不同的形式：
 
-<ul>
- <li>基本关键字： <code>normal</code>， <code>auto</code>，或者 <code>stretch</code>。</li>
- <li>基线对齐：<code>baseline</code> 关键字，加上可选的 <code>first</code> 或者 <code>last</code>。</li>
- <li>可定位对齐：
-  <ul>
-   <li><code>center</code>， <code>start</code>， <code>end</code>， <code>flex-start</code>， <code>flex-end</code>， <code>self-start</code>， <code>self-end</code>， <code>left</code>，或者 <code>right</code>。</li>
-   <li>加上可选的 <code>safe</code> 或者<code>unsafe</code>。</li>
-  </ul>
- </li>
-</ul>
+- 基本关键字： `normal`， `auto`，或者 `stretch`。
+- 基线对齐：`baseline` 关键字，加上可选的 `first` 或者 `last`。
+- 可定位对齐：
 
-<h3 id="Values">Values</h3>
+  - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
+  - 加上可选的 `safe` 或者`unsafe`。
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>该值使用其父级元素盒子的 <code>justify-items</code> 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，<code>auto</code> 代表了 <code>normal</code>。</dd>
- <dt><code>normal</code></dt>
- <dd>这个效果取决于我们所处的布局模式：
- <ul>
-  <li>在块级布局中，这个关键字是 <code>start</code> 的同义词。</li>
-  <li>在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 <code>start</code> 相似，在其他绝对定位的盒子中，其表现得与 <code>stretch</code> 相似。</li>
-  <li>在表格布局中，由于这个属性被忽略所以这个关键字没有作用。</li>
-  <li>在弹性布局中，由于这个属性被忽略所以这个关键字没有作用。</li>
-  <li>在栅格布局中，这个关键字会导致类似于 <code>stretch</code> 的行为，除了具有高宽比或固有大小的盒子，它的行为类似于 <code>start</code> 。</li>
- </ul>
- </dd>
- <dt><code>start</code></dt>
- <dd>项目被放置到适当的轴上，朝向对齐容器的起始边缘，彼此齐平。</dd>
- <dt><code>end</code></dt>
- <dd>项目被放置到适当的轴上，朝向对齐容器的末端边缘，彼此齐平。</dd>
- <dt><code>flex-start</code></dt>
- <dd>对于非弹性容器子元素的项目，这个值被视为 <code>start</code> 。</dd>
- <dt><code>flex-end</code></dt>
- <dd>对于非弹性容器子元素的项目，这个值被视为 <code>end</code>.</dd>
- <dt><code>self-start</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.</dd>
- <dt><code>self-end</code></dt>
- <dd>The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.</dd>
- <dt><code>center</code></dt>
- <dd>项目被放置在对齐容器的中心向彼此平齐。</dd>
- <dt><code>left</code></dt>
- <dd>项目在对齐容器的左边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于<code>start</code> 。</dd>
- <dt><code>right</code></dt>
- <dd>项目在对齐容器的右边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于 <code>start</code> 。</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.</dd>
- <dt><code>safe</code></dt>
- <dd>If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
-</dl>
+### Values
 
-<h2 id="形式化定义">形式化定义</h2>
+- `auto`
+  - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
+- `normal`
 
-<p>{{cssinfo}}</p>
+  - : 这个效果取决于我们所处的布局模式：
 
-<h2 id="形式化语法">形式化语法</h2>
+    - 在块级布局中，这个关键字是 `start` 的同义词。
+    - 在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 `start` 相似，在其他绝对定位的盒子中，其表现得与 `stretch` 相似。
+    - 在表格布局中，由于这个属性被忽略所以这个关键字没有作用。
+    - 在弹性布局中，由于这个属性被忽略所以这个关键字没有作用。
+    - 在栅格布局中，这个关键字会导致类似于 `stretch` 的行为，除了具有高宽比或固有大小的盒子，它的行为类似于 `start` 。
+
+- `start`
+  - : 项目被放置到适当的轴上，朝向对齐容器的起始边缘，彼此齐平。
+- `end`
+  - : 项目被放置到适当的轴上，朝向对齐容器的末端边缘，彼此齐平。
+- `flex-start`
+  - : 对于非弹性容器子元素的项目，这个值被视为 `start` 。
+- `flex-end`
+  - : 对于非弹性容器子元素的项目，这个值被视为 `end`.
+- `self-start`
+  - : The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+- `self-end`
+  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+- `center`
+  - : 项目被放置在对齐容器的中心向彼此平齐。
+- `left`
+  - : 项目在对齐容器的左边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于`start` 。
+- `right`
+  - : 项目在对齐容器的右边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于 `start` 。
+- `baseline first baseline`
+  `last baseline`
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+- `stretch`
+  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `safe`
+  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+- `unsafe`
+  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+
+## 形式化定义
+
+{{cssinfo}}
+
+## 形式化语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="简单演示">简单演示</h3>
+### 简单演示
 
-<p>In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a <code>justify-items</code> value of <code>stretch</code> — the default — which causes the grid items to stretch across the entire width of their cells.</p>
+In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
 
-<p>The second, third, and fourth grid items are then given different values of <code>justify-self</code>, to show how these override the <code>justify-items</code> value. These values cause the grid items to span only as wide as their content width, and align in different positions across their cells.</p>
+The second, third, and fourth grid items are then given different values of `justify-self`, to show how these override the `justify-items` value. These values cause the grid items to span only as wide as their content width, and align in different positions across their cells.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;article class="container"&gt;
-  &lt;span&gt;First child&lt;/span&gt;
-  &lt;span&gt;Second child&lt;/span&gt;
-  &lt;span&gt;Third child&lt;/span&gt;
-  &lt;span&gt;Fourth child&lt;/span&gt;
-&lt;/article&gt;</pre>
+```html
+<article class="container">
+  <span>First child</span>
+  <span>Second child</span>
+  <span>Third child</span>
+  <span>Fourth child</span>
+</article>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">html {
+```css
+html {
   font-family: helvetica, arial, sans-serif;
   letter-spacing: 1px;
 }
@@ -185,24 +178,23 @@ article, span {
 
 article {
   margin: 20px;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}</p>
+{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>CSS Grid Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in CSS Grid layouts</a></em></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">CSS Box Alignment</a></li>
- <li>The {{CSSxRef("justify-items")}} property</li>
-</ul>
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- The {{CSSxRef("justify-items")}} property

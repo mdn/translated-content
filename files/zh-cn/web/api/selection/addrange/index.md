@@ -3,48 +3,48 @@ title: Selection.addRange()
 slug: Web/API/Selection/addRange
 translation_of: Web/API/Selection/addRange
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>向选区（{{domxref("Selection")}}）中添加一个区域（{{domxref("Range")}}）。</p>
+向选区（{{domxref("Selection")}}）中添加一个区域（{{domxref("Range")}}）。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>sel</em>.addRange(<em>range</em>)</pre>
+```plain
+sel.addRange(range)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>range</code></em></dt>
- <dd>一个区域（{{ domxref("Range") }}）对象将被增加到选区（{{ domxref("Selection") }}）当中。</dd>
-</dl>
+- _`range`_
+  - : 一个区域（{{ domxref("Range") }}）对象将被增加到选区（{{ domxref("Selection") }}）当中。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<pre class="brush:js">/* 在一个 HTML 文档中选中所有<strong>加粗</strong>的文本。 */
+```js
+/* 在一个 HTML 文档中选中所有加粗的文本。 */
 
 var strongs = document.getElementsByTagName("strong");
 var s = window.getSelection();
 
-if(s.rangeCount &gt; 0) s.removeAllRanges();
+if(s.rangeCount > 0) s.removeAllRanges();
 
-for(var i = 0; i &lt; strongs.length; i++) {
+for(var i = 0; i < strongs.length; i++) {
   var range = document.createRange();
   range.selectNode(strongs[i]);
   s.addRange(range);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Selection.addRange")}}</p>
+{{Compat("api.Selection.addRange")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Selection")}}，此方法所属接口。</li>
-</ul>
+- {{domxref("Selection")}}，此方法所属接口。

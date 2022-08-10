@@ -10,63 +10,61 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>slice()</strong></code> 方法返回一个新的数组对象，这一对象是一个由 <code>begin</code> 和 <code>end</code> 决定的原数组的<strong>浅拷贝</strong>（包括 <code>begin</code>，不包括<code>end</code>）。原始数组不会被改变。</p>
+**`slice()`** 方法返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的**浅拷贝**（包括 `begin`，不包括`end`）。原始数组不会被改变。
 
-<div>{{EmbedInteractiveExample("pages/js/array-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-slice.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</pre>
+```plain
+arr.slice([begin[, end]])
+```
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<dl>
- <dt><code>begin</code> {{optional_inline}}</dt>
- <dd>提取起始处的索引（从 <code>0</code> 开始），从该索引开始提取原数组元素。如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，<code>slice(-2)</code> 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。如果省略 <code>begin</code>，则 <code>slice</code> 从索引 <code>0</code> 开始。如果 <code>begin</code> 超出原数组的索引范围，则会返回空数组。</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>提取终止处的索引（从 <code>0</code> 开始），在该索引处结束提取原数组元素。<code>slice</code> 会提取原数组中索引从 <code>begin</code> 到 <code>end</code> 的所有元素（包含 <code>begin</code>，但不包含 <code>end</code>）。<code>slice(1,4)</code> 会提取原数组中从第二个元素开始一直到第四个元素的所有元素（索引为 1, 2, 3 的元素）。如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 <code>slice(-2,-1)</code> 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。如果 <code>end</code> 被省略，则 <code>slice</code> 会一直提取到原数组末尾。如果 <code>end</code> 大于数组的长度，<code>slice</code> 也会一直提取到原数组末尾。</dd>
-</dl>
+- `begin` {{optional_inline}}
+  - : 提取起始处的索引（从 `0` 开始），从该索引开始提取原数组元素。如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，`slice(-2)` 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。如果省略 `begin`，则 `slice` 从索引 `0` 开始。如果 `begin` 超出原数组的索引范围，则会返回空数组。
+- `end` {{optional_inline}}
+  - : 提取终止处的索引（从 `0` 开始），在该索引处结束提取原数组元素。`slice` 会提取原数组中索引从 `begin` 到 `end` 的所有元素（包含 `begin`，但不包含 `end`）。`slice(1,4)` 会提取原数组中从第二个元素开始一直到第四个元素的所有元素（索引为 1, 2, 3 的元素）。如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 `slice(-2,-1)` 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。如果 `end` 被省略，则 `slice` 会一直提取到原数组末尾。如果 `end` 大于数组的长度，`slice` 也会一直提取到原数组末尾。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个含有被提取元素的新数组。</p>
+一个含有被提取元素的新数组。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>slice</code> 不会修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。原数组的元素会按照下述规则拷贝：</p>
+`slice` 不会修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。原数组的元素会按照下述规则拷贝：
 
-<ul>
- <li>如果该元素是个对象引用（不是实际的对象），<code>slice</code> 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。</li>
-</ul>
+- 如果该元素是个对象引用（不是实际的对象），`slice` 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。
 
-<ul>
- <li>对于字符串、数字及布尔值来说（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 或者 {{jsxref("Boolean")}} 对象），<code>slice</code> 会拷贝这些值到新的数组里。在别的数组里修改这些字符串或数字或是布尔值，将不会影响另一个数组。</li>
-</ul>
+- 对于字符串、数字及布尔值来说（不是 {{jsxref("Global_Objects/String", "String")}}、{{jsxref("Global_Objects/Number", "Number")}} 或者 {{jsxref("Boolean")}} 对象），`slice` 会拷贝这些值到新的数组里。在别的数组里修改这些字符串或数字或是布尔值，将不会影响另一个数组。
 
-<p>如果向两个数组任一中添加了新元素，则另一个不会受到影响。</p>
+如果向两个数组任一中添加了新元素，则另一个不会受到影响。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="返回现有数组的一部分">返回现有数组的一部分</h3>
+### 返回现有数组的一部分
 
-<pre class="brush: js">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+```js
+var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
-</pre>
+```
 
-<div class="callout">
-<p><strong>标注：</strong> citrus <em>[n.]</em> 柑橘类果实——译注</p>
-</div>
+> **标注：**
+>
+> **标注：** citrus _\[n.]_ 柑橘类果实——译注
 
-<h3 id="使用_slice">使用 <code>slice</code></h3>
+### 使用 `slice`
 
-<p>在下例中，<code>slice</code> 从 <code>myCar</code> 中创建了一个新数组<code>newCar</code>。两个数组都包含了一个 <code>myHonda</code> 对象的引用。当 <code>myHonda</code> 的 <code>color</code> 属性改变为 <code>purple</code>，则两个数组中的对应元素都会随之改变。</p>
+在下例中，`slice` 从 `myCar` 中创建了一个新数组`newCar`。两个数组都包含了一个 `myHonda` 对象的引用。当 `myHonda` 的 `color` 属性改变为 `purple`，则两个数组中的对应元素都会随之改变。
 
-<pre class="brush: js">// 使用 slice 方法从 myCar 中创建一个 newCar。
+```js
+// 使用 slice 方法从 myCar 中创建一个 newCar。
 var myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 var myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
 var newCar = myCar.slice(0, 2);
@@ -84,11 +82,12 @@ console.log('The new color of my Honda is ' + myHonda.color);
 //输出 myCar、newCar 中各自的 myHonda 对象引用的 color 属性。
 console.log(' myCar[0].color = ' + myCar[0].color);
 console.log('newCar[0].color = ' + newCar[0].color);
-</pre>
+```
 
-<p>上述代码输出：</p>
+上述代码输出：
 
-<pre class="brush: js"> myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
+```js
+ myCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2,
        'cherry condition', 'purchased 1997']
 newCar = [{color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}}, 2]
  myCar[0].color = red
@@ -96,22 +95,24 @@ newCar[0].color = red
 The new color of my Honda is purple
  myCar[0].color = purple
 newCar[0].color = purple
-</pre>
+```
 
-<h2 id="Array-like">类数组（Array-like）对象</h2>
+## 类数组（Array-like）对象
 
-<p><code>slice</code> 方法可以用来将一个类数组（Array-like）对象/集合转换成一个新数组。你只需将该方法绑定到这个对象上。 一个函数中的  {{jsxref("Functions/arguments", "arguments")}} 就是一个类数组对象的例子。</p>
+`slice` 方法可以用来将一个类数组（Array-like）对象/集合转换成一个新数组。你只需将该方法绑定到这个对象上。 一个函数中的 {{jsxref("Functions/arguments", "arguments")}} 就是一个类数组对象的例子。
 
-<pre class="brush: js">function list() {
+```js
+function list() {
   return Array.prototype.slice.call(arguments);
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<p>除了使用 <code>Array.prototype.slice.call(</code><code>arguments</code><code>)</code>，你也可以简单的使用 <code>[].slice.call(arguments)</code> 来代替。另外，你可以使用 <code>bind</code> 来简化该过程。</p>
+除了使用 ` Array.prototype.slice.call(``arguments``) `，你也可以简单的使用 `[].slice.call(arguments)` 来代替。另外，你可以使用 `bind` 来简化该过程。
 
-<pre class="brush: js">var unboundSlice = Array.prototype.slice;
+```js
+var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -119,18 +120,19 @@ function list() {
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<h2 id="精简跨浏览器行为">精简跨浏览器行为</h2>
+## 精简跨浏览器行为
 
-<p>根据规范，使用 <code>Array.prototype.slice</code> 转换宿主对象（如 DOM 对象）时，不必遵循 Mozilla 的默认行为，即可以转化任何符合条件的伪数组宿主对象为数组，IE &lt; 9 没有遵循，而 IE9 + 遵循这个行为，但是稍加改造可以使其在跨浏览器使用时更可靠。只要其他现代浏览器继续支持该行为，目前 IE 9+、FireFox、Chrome、Safari 以及 Opera 都支持，开发者在使用下面代码时遍历 DOM 时就不会被该方法的字面意义误导，即 IE &lt; 9 不能转化 DOM Collections。开发者可以安全地根据语义知道该方法的实际上的标准行为。（下面的代码还修正了 IE 中 <code>slice()</code> 方法第二个参数不允许为显式的 {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} 值的问题，其他现代浏览器，包括 IE9+ 都允许）。</p>
+根据规范，使用 `Array.prototype.slice` 转换宿主对象（如 DOM 对象）时，不必遵循 Mozilla 的默认行为，即可以转化任何符合条件的伪数组宿主对象为数组，IE < 9 没有遵循，而 IE9 + 遵循这个行为，但是稍加改造可以使其在跨浏览器使用时更可靠。只要其他现代浏览器继续支持该行为，目前 IE 9+、FireFox、Chrome、Safari 以及 Opera 都支持，开发者在使用下面代码时遍历 DOM 时就不会被该方法的字面意义误导，即 IE < 9 不能转化 DOM Collections。开发者可以安全地根据语义知道该方法的实际上的标准行为。（下面的代码还修正了 IE 中 `slice()` 方法第二个参数不允许为显式的 {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} 值的问题，其他现代浏览器，包括 IE9+ 都允许）。
 
-<pre class="brush: js">/**
- * Shim for "fixing" IE's lack of support (IE &lt; 9) for applying slice
+```js
+/**
+ * Shim for "fixing" IE's lack of support (IE < 9) for applying slice
  * on host objects like NamedNodeMap, NodeList, and HTMLCollection
  * (technically, since host objects have been implementation-dependent,
  * at least before ES2015, IE hasn't needed to work this way).
- * Also works on strings, fixes IE &lt; 9 to allow an explicit undefined
+ * Also works on strings, fixes IE < 9 to allow an explicit undefined
  * for the 2nd argument (as in Firefox), and prevents errors when
  * called on other DOM objects.
  */
@@ -139,15 +141,15 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
   var _slice = Array.prototype.slice;
 
   try {
-    // Can't be used with DOM elements in IE &lt; 9
+    // Can't be used with DOM elements in IE < 9
     _slice.call(document.documentElement);
-  } catch (e) { // Fails in IE &lt; 9
+  } catch (e) { // Fails in IE < 9
     // This will work for genuine arrays, array-like objects,
     // NamedNodeMap (attributes, entities, notations),
     // NodeList (e.g., getElementsByTagName), HTMLCollection (e.g., childNodes),
-    // and will not fail on other DOM objects (as do DOM elements in IE &lt; 9)
+    // and will not fail on other DOM objects (as do DOM elements in IE < 9)
     Array.prototype.slice = function(begin, end) {
-      // IE &lt; 9 gets unhappy with an undefined end argument
+      // IE < 9 gets unhappy with an undefined end argument
       end = (typeof end !== 'undefined') ? end : this.length;
 
       // For native Array objects, we use the native slice function
@@ -161,25 +163,25 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
       // Handle negative value for "begin"
       var start = begin || 0;
-      start = (start &gt;= 0) ? start : Math.max(0, len + start);
+      start = (start >= 0) ? start : Math.max(0, len + start);
 
       // Handle negative value for "end"
       var upTo = (typeof end == 'number') ? Math.min(end, len) : len;
-      if (end &lt; 0) {
+      if (end < 0) {
         upTo = len + end;
       }
 
       // Actual expected size of the slice
       size = upTo - start;
 
-      if (size &gt; 0) {
+      if (size > 0) {
         cloned = new Array(size);
         if (this.charAt) {
-          for (i = 0; i &lt; size; i++) {
+          for (i = 0; i < size; i++) {
             cloned[i] = this.charAt(start + i);
           }
         } else {
-          for (i = 0; i &lt; size; i++) {
+          for (i = 0; i < size; i++) {
             cloned[i] = this[start + i];
           }
         }
@@ -189,24 +191,18 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
     };
   }
 }());
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-</div>
-
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.splice()")}}</li>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.splice()")}}
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Function.prototype.bind()")}}

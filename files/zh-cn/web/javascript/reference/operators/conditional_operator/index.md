@@ -6,60 +6,60 @@ tags:
   - Operator
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>条件（三元）运算符</strong>是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> 语句的简捷形式来使用。</p>
+**条件（三元）运算符**是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
+## 语法
 
+```plain
+condition ? exprIfTrue : exprIfFalse
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><em>condition</em> ? <em>exprIfTrue</em> : <em>exprIfFalse</em></pre>
+- `condition`
+  - : 计算结果用作条件的表达式
+- `exprIfTrue`
+  - : 如果表达式 `condition` 的计算结果是 {{Glossary("truthy")}}（它和 `true` 相等或者可以转换成 `true` ），那么表达式 `exprIfTrue` 将会被求值。
+- `exprIfFalse`
+  - : 如果表达式 `condition` 的计算结果是 {{Glossary("falsy")}}（它可以转换成 `false` ），那么表达式 `exprIfFalse` 将会被执行。
 
-<h3 id="参数">参数</h3>
+## 描述
 
-<dl>
- <dt><code><var>condition</var></code></dt>
- <dd>计算结果用作条件的表达式</dd>
- <dt><code><var>exprIfTrue</var></code></dt>
- <dd>如果表达式 <code><var>condition</var></code> 的计算结果是 {{Glossary("truthy")}}（它和 <code>true</code> 相等或者可以转换成 <code>true</code> ），那么表达式 <code><var>exprIfTrue</var></code> 将会被求值。</dd>
- <dt><code><var>exprIfFalse</var></code></dt>
- <dd>如果表达式 <code><var>condition</var></code> 的计算结果是 {{Glossary("falsy")}}（它可以转换成 <code>false</code> ），那么表达式 <code><var>exprIfFalse</var></code> 将会被执行。</dd>
-</dl>
+除了 `false`，可能的假值表达式还有：`null` 、`NaN` 、
+`0` 、空字符串（ `""` ）、和 `undefined` 。如果 `condition` 是以上中的任何一个，那么条件表达式的结果就是 `exprIfFalse` 表达式执行的结果。
 
-<h2 id="描述">描述</h2>
+一个简单的例子：
 
-<p>除了 <code>false</code>，可能的假值表达式还有：<code>null</code> 、<code>NaN</code> 、
- <code>0</code> 、空字符串（ <code>""</code> ）、和 <code>undefined</code> 。如果 <code><var>condition</var></code> 是以上中的任何一个，那么条件表达式的结果就是 <code>exprIfFalse</code> 表达式执行的结果。</p>
-
-<p>一个简单的例子：</p>
-
-<pre class="brush: js">var age = 26;
-var beverage = (age &gt;= 21) ? "Beer" : "Juice";
+```js
+var age = 26;
+var beverage = (age >= 21) ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
-</pre>
+```
 
-<p>一个常见的用法是处理可能为 <code>null</code> 的值：</p>
+一个常见的用法是处理可能为 `null` 的值：
 
-<pre class="brush: js">function greeting(person) {
+```js
+function greeting(person) {
     var name = person ? person.name : "stranger";
     return "Howdy, " + name;
 }
 
 console.log(greeting({name: 'Alice'}));  // "Howdy, Alice"
 console.log(greeting(null));             // "Howdy, stranger"
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">The optional chaining operator</a> 设计用来处理这种使用场景。在本文档写成的时候 (2019.01)，这个运算符还处于实验阶段并且没有实现。</p>
-</div>
+> **备注：** [The optional chaining operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 设计用来处理这种使用场景。在本文档写成的时候 (2019.01)，这个运算符还处于实验阶段并且没有实现。
 
-<h3 id="条件链">条件链</h3>
+### 条件链
 
-<p>这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 <code>if … else if … else if … else</code> 链类似：</p>
-<pre class="brush: js">function example(…) {
+这个三元操作符是右结合的，也就是说你可以像这样把它链接起来， 和 `if … else if … else if … else` 链类似：
+
+```js
+function example(…) {
     return condition1 ? value1
          : condition2 ? value2
          : condition3 ? value3
@@ -74,21 +74,19 @@ function example(…) {
     else if (condition3) { return value3; }
     else { return value4; }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if statement</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Optional chaining</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a></li>
-</ul>
+- [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)

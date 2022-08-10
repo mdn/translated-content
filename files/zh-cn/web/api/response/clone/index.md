@@ -12,29 +12,32 @@ tags:
 translation_of: Web/API/Response/clone
 original_slug: Web/API/Response/克隆
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Response")}} 接口的 clone() 方法创建了一个响应对象的克隆，这个对象在所有方面都是相同的，但是存储在一个不同的变量中。</p>
+{{domxref("Response")}} 接口的 clone() 方法创建了一个响应对象的克隆，这个对象在所有方面都是相同的，但是存储在一个不同的变量中。
 
-<p>如果已经使用了响应 {{domxref("Body")}}，<code>clone()</code> 会抛出{{jsxref("TypeError")}}。 实际上，clone() 存在的主要原因是允许多次使用{{domxref("Body")}}对象 (当它们是一次性使用的时候)。</p>
+如果已经使用了响应 {{domxref("Body")}}，`clone()` 会抛出{{jsxref("TypeError")}}。 实际上，clone() 存在的主要原因是允许多次使用{{domxref("Body")}}对象 (当它们是一次性使用的时候)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var <var>response2</var> = <var>response1</var>.clone();</pre>
+```js
+var response2 = response1.clone();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>一个 {{domxref("Response")}} 对象。</p>
+一个 {{domxref("Response")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在我们的 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone">Fetch Response 克隆示例</a> (请参阅 <a href="http://mdn.github.io/fetch-examples/fetch-response-clone/">Fetch Response clone live</a>) 我们使用{{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。 然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。 当 fetch resolve 时，我们克隆它，使用两个{{domxref("Body.blob")}}调用从两个响应中提取 blob，使用{{domxref("URL.createObjectURL")}} 从 blob 创建对象 URL，并将它们显示在两个单独的{{htmlelement("img")}}元素中。</p>
+在我们的 [Fetch Response 克隆示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response-clone) (请参阅 [Fetch Response clone live](http://mdn.github.io/fetch-examples/fetch-response-clone/)) 我们使用{{domxref("Request.Request","Request()")}} 构造函数创建一个新的 {{domxref("Request")}} 来传递一个 JPG 路径。 然后我们使用 {{domxref("GlobalFetch.fetch","fetch()")}} 获取这个请求。 当 fetch resolve 时，我们克隆它，使用两个{{domxref("Body.blob")}}调用从两个响应中提取 blob，使用{{domxref("URL.createObjectURL")}} 从 blob 创建对象 URL，并将它们显示在两个单独的{{htmlelement("img")}}元素中。
 
-<pre class="brush: js">var image1 = document.querySelector('.img1');
+```js
+var image1 = document.querySelector('.img1');
 var image2 = document.querySelector('.img2');
 
 var myRequest = new Request('flowers.jpg');
@@ -51,20 +54,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     image2.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Response.clone")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

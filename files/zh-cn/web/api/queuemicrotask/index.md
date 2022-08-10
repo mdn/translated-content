@@ -12,83 +12,83 @@ tags:
 translation_of: Web/API/queueMicrotask
 original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 **`queueMicrotask()`** 方法，queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.microtask 是一个简短的函数，它将在当前任务（task）完成其工作之后运行，并且在执行上下文的控制返回到浏览器的事件循环之前，没有其他代码等待运行。The microtask is a short function which will run after the current task has completed its work and when there is no other code waiting to be run before control of the execution context is returned to the browser's event loop.
 
-<div>{{domxref("Window")}} 或 {{domxref("Worker")}} 接口的 <code><strong>queueMicrotask()</strong></code> 方法，queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.microtask 是一个简短的函数，它将在当前任务（task）完成其工作之后运行，并且在执行上下文的控制返回到浏览器的事件循环之前，没有其他代码等待运行。The microtask is a short function which will run after the current task has completed its work and when there is no other code waiting to be run before control of the execution context is returned to the browser's event loop.</div>
+This lets your code run without interfering with any other, potentially higher priority, code that is pending, but before the browser regains control over the execution context, potentially depending on work you need to complete. You can learn more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
-<p>This lets your code run without interfering with any other, potentially higher priority, code that is pending, but before the browser regains control over the execution context, potentially depending on work you need to complete. You can learn more about how to use microtasks and why you might choose to do so in our <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a>.</p>
+The importance of microtasks comes in its ability to perform tasks asynchronously but in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
-<p>The importance of microtasks comes in its ability to perform tasks asynchronously but in a specific order. See <a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with queueMicrotask()</a> for more details.</p>
+Microtasks are especially useful for libraries and frameworks that need to perform final cleanup or other just-before-rendering tasks.
 
-<p>Microtasks are especially useful for libraries and frameworks that need to perform final cleanup or other just-before-rendering tasks.</p>
+`queueMicrotask()` 处于 `WindowOrWorkerGlobalScope` mixin 之下。
 
-<p><code>queueMicrotask()</code> 处于 <code>WindowOrWorkerGlobalScope</code> mixin 之下。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+scope.queueMicrotask(function);
+```
 
-<pre class="syntaxbox"><em>scope</em>.queueMicrotask(<em>function</em>);
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `function`
+  - : A {{jsxref("function")}} to be executed when the browser engine determines it is safe to call your code.微任务（microtask）的执行顺序在所有挂起的任务（pending tasks）完成之后，在对浏览器的事件循环产生控制（yielding control to the browser's event loop）之前。
 
-<dl>
- <dt><code>function</code></dt>
- <dd>A {{jsxref("function")}} to be executed when the browser engine determines it is safe to call your code.微任务（microtask）的执行顺序在所有挂起的任务（pending tasks）完成之后，在对浏览器的事件循环产生控制（yielding control to the browser's event loop）之前。</dd>
-</dl>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+`undefined`。
 
-<p><code>undefined</code>。</p>
+## 示例
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">self.queueMicrotask(() =&gt; {
+```js
+self.queueMicrotask(() => {
   // 函数的内容
-})</pre>
+})
+```
 
-<p>来自 <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing"><code>queueMicrotask</code> 的规范文档：</a></p>
+来自 [`queueMicrotask` 的规范文档：](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)
 
-<pre class="brush: js">MyElement.prototype.loadData = function (url) {
+```js
+MyElement.prototype.loadData = function (url) {
   if (this._cache[url]) {
-    queueMicrotask(() =&gt; {
+    queueMicrotask(() => {
       this._setData(this._cache[url]);
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res =&gt; res.arrayBuffer()).then(data =&gt; {
+    fetch(url).then(res => res.arrayBuffer()).then(data => {
       this._cache[url] = data;
       this._setData(data);
       this.dispatchEvent(new Event("load"));
     });
   }
-};</pre>
+};
+```
 
-<h2 id="polyfill">polyfill</h2>
+## polyfill
 
-<p>下面的代码是一份 <code>queueMicrotask()</code> 的 polyfill。它通过使用立即 resolve 的 promise 创建一个微任务（microtask），如果无法创建 promise，则回落（fallback）到使用<code>setTimeout()</code>。</p>
+下面的代码是一份 `queueMicrotask()` 的 polyfill。它通过使用立即 resolve 的 promise 创建一个微任务（microtask），如果无法创建 promise，则回落（fallback）到使用`setTimeout()`。
 
-<pre class="brush: js">if (typeof window.queueMicrotask !== "function") {
+```js
+if (typeof window.queueMicrotask !== "function") {
   window.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e =&gt; setTimeout(() =&gt; { throw e; }));
+      .catch(e => setTimeout(() => { throw e; }));
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide">Using microtasks in JavaScript with queueMicrotask()</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous">Asynchronous JavaScript</a></li>
- <li><a href="https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md">queueMicrotask explainer</a></li>
- <li><a href="https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/">Tasks, microtasks, queues and schedules</a> by Jake Archibald</li>
-</ul>
+- [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

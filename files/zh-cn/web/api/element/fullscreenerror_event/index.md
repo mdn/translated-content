@@ -4,24 +4,26 @@ slug: Web/API/Element/fullscreenerror_event
 translation_of: Web/API/Element/onfullscreenerror
 original_slug: Web/API/Element/onfullscreenerror
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>{{domxref("Element")}} 接口的 <code><strong>onfullscreenerror</strong></code> 属性是在{{domxref("Element")}} 过渡到或退出全屏模式发生错误后处理事件{{event("fullscreenerror")}}的事件处理程序。</p>
+{{domxref("Element")}} 接口的 **`onfullscreenerror`** 属性是在{{domxref("Element")}} 过渡到或退出全屏模式发生错误后处理事件{{event("fullscreenerror")}}的事件处理程序。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>targetElement</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
-</pre>
+```plain
+targetElement.onfullscreenerror = fullscreenErrorHandler;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个处理事件{{event("fullscreenerror")}}的事件处理程序。</p>
+一个处理事件{{event("fullscreenerror")}}的事件处理程序。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>本示例尝试不从用户发起的事件 (如点击事件{{event("click")}}或键盘事件{{event("keypress")}}) 处理程序来触发全屏，由于全屏模式只允许由用户主动输入触发，因此该操作会发生错误，从而导致{{domxref("Element")}}会触发{{event("fullscreenerror")}}事件传递给错误处理程序</p>
+本示例尝试不从用户发起的事件 (如点击事件{{event("click")}}或键盘事件{{event("keypress")}}) 处理程序来触发全屏，由于全屏模式只允许由用户主动输入触发，因此该操作会发生错误，从而导致{{domxref("Element")}}会触发{{event("fullscreenerror")}}事件传递给错误处理程序
 
-<pre class="brush: js">let elem = document.querySelector("video")}}
+```js
+let elem = document.querySelector("video")}}
 
 elem.onfullscreenerror = function ( event ) {
   displayWarning("Unable to switch into full-screen mode.");
@@ -29,22 +31,21 @@ elem.onfullscreenerror = function ( event ) {
 
 //....
 
-elem.requestFullscreen();</pre>
+elem.requestFullscreen();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{event("fullscreenerror")}}</li>
- <li>{{domxref("Element.onfullscreenchange")}}</li>
- <li>{{domxref("Document.onfullscreenerror")}}</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{event("fullscreenerror")}}
+- {{domxref("Element.onfullscreenchange")}}
+- {{domxref("Document.onfullscreenerror")}}

@@ -3,23 +3,26 @@ title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>byteLength</code></strong>访问器属性表示类型化数组的长度（字节数）。</p>
+**`byteLength`**访问器属性表示类型化数组的长度（字节数）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarray</var>.byteLength</pre>
+```plain
+typedarray.byteLength
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>byteLength</code> 是一个访问器属性，它的 set 访问器函数是<code>undefined</code>，意思是你只能够读取这个属性。它的值在<em>TypedArray</em>构造时建立，不能被修改。如果 <em>TypedArray</em> 没有指定<code>byteOffset</code> 或者 <code>length</code>，会返回所引用的<code>ArrayBuffer</code> 的<code>length</code>。<em>TypedArray</em> 是这里的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">TypedArray 对象</a>之一。</p>
+`byteLength` 是一个访问器属性，它的 set 访问器函数是`undefined`，意思是你只能够读取这个属性。它的值在*TypedArray*构造时建立，不能被修改。如果 _TypedArray_ 没有指定`byteOffset` 或者 `length`，会返回所引用的`ArrayBuffer` 的`length`。_TypedArray_ 是这里的 [TypedArray 对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用byteLength_属性">使用<code>byteLength</code> 属性</h3>
+### 使用`byteLength` 属性
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteLength; // 8 (符合 buffer 的 byteLength)
@@ -29,19 +32,17 @@ uint8.byteLength; // 5 (在 Uint8Array 构造时指定)
 
 var uint8 = new Uint8Array(buffer, 2);
 uint8.byteLength; // 6 (根据被构造的 Uint8Array 的 offset)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

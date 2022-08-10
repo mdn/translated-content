@@ -3,30 +3,30 @@ title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
 translation_of: Web/HTTP/Status/416
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p> HTTP <code><strong>416</strong></code><strong><code> Range Not Satisfiable</code></strong> 错误状态码意味着服务器无法处理所请求的数据区间。最常见的情况是所请求的数据区间不在文件范围之内，也就是说，{{HTTPHeader("Range")}} 首部的值，虽然从语法上来说是没问题的，但是从语义上来说却没有意义。</p>
+HTTP **`416 Range Not Satisfiable`** 错误状态码意味着服务器无法处理所请求的数据区间。最常见的情况是所请求的数据区间不在文件范围之内，也就是说，{{HTTPHeader("Range")}} 首部的值，虽然从语法上来说是没问题的，但是从语义上来说却没有意义。
 
-<p><code>416</code> 响应报文包含一个  {{HTTPHeader("Content-Range")}} 首部，提示无法满足的数据区间（用星号 * 表示），后面紧跟着一个“/”，再后面是当前资源的长度。例如：Content-Range: */12777</p>
+`416` 响应报文包含一个 {{HTTPHeader("Content-Range")}} 首部，提示无法满足的数据区间（用星号 \* 表示），后面紧跟着一个“/”，再后面是当前资源的长度。例如：Content-Range: \*/12777
 
-<p>遇到这一错误状态码时，浏览器一般有两种策略：要么终止操作（例如，一项中断的下载操作被认为是不可恢复的），要么再次请求整个文件。</p>
+遇到这一错误状态码时，浏览器一般有两种策略：要么终止操作（例如，一项中断的下载操作被认为是不可恢复的），要么再次请求整个文件。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">416 Range Not Satisfiable</pre>
+```plain
+416 Range Not Satisfiable
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="更多内容">更多内容</h2>
+## 更多内容
 
-<ul>
- <li>{{HTTPStatus(206)}} <code>Partial Content</code></li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPStatus(206)}} `Partial Content`
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Range")}}

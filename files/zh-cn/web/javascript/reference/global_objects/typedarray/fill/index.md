@@ -3,66 +3,66 @@ title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>fill() </strong>方法将</code>类型化数组中的从起始索引到终止索引内的全部元素。这个方法的算法和 {{jsxref("Array.prototype.fill()")}} 相同。 <em>TypedArray</em> 是这里的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a>之一。</p>
+`fill() 方法将`类型化数组中的从起始索引到终止索引内的全部元素。这个方法的算法和 {{jsxref("Array.prototype.fill()")}} 相同。 _TypedArray_ 是这里的[类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>typedarray</var>.<code>fill(<var>value</var>[, <var>start<var> = 0[, <var>end</var> = this.length]])</var></var></code></code></pre>
+```plain
+typedarray.fill(value[, start = 0[, end = this.length]])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>用来填充类型化数组元素的值。</dd>
- <dt><code>start</code></dt>
- <dd>可选参数。起始索引，默认值为 0。</dd>
- <dt><code>end</code></dt>
- <dd>可选参数。终止索引（填充范围不包含此索引），默认值为 <code>this.length</code>。</dd>
-</dl>
+- `value`
+  - : 用来填充类型化数组元素的值。
+- `start`
+  - : 可选参数。起始索引，默认值为 0。
+- `end`
+  - : 可选参数。终止索引（填充范围不包含此索引），默认值为 `this.length`。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>修改后的类型化数组。</p>
+修改后的类型化数组。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>将被元素填充的区间是 [<code>start</code>, <code>end</code>)。</p>
+将被元素填充的区间是 \[`start`, `end`)。
 
-<p><strong><code>fill </code></strong>方法接受三个参数 <code>value</code>，<code>start</code> 以及 <code>end。</code><code>start</code> 和 <code>end</code> 参数是可选的，默认值分别为 <code>0</code> 和 <code>this.length。</code></p>
+**`fill `**方法接受三个参数 `value`，`start` 以及 ` end。``start ` 和 `end` 参数是可选的，默认值分别为 `0` 和 `this.length。`
 
-<p>如果 <code>start</code> 参数是负值，它会被视为 <code>length+start</code>，其中 <code>length</code> 是类型化数组的长度。如果 <code>end</code> 参数是负值，它会被视为 <code>length+end。</code></p>
+如果 `start` 参数是负值，它会被视为 `length+start`，其中 `length` 是类型化数组的长度。如果 `end` 参数是负值，它会被视为 `length+end。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
+```js
+new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
 new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
 new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
-</pre>
+```
 
-<h2 id="兼容实现">兼容实现</h2>
+## 兼容实现
 
-<p>由于并没有一个名为 <em>TypedArray</em> 的全局变量，我们必须“按需添加”兼容实现。请配合{{jsxref("Array.prototype.fill()")}}的兼容实现使用以下的“兼容实现”</p>
+由于并没有一个名为 _TypedArray_ 的全局变量，我们必须“按需添加”兼容实现。请配合{{jsxref("Array.prototype.fill()")}}的兼容实现使用以下的“兼容实现”
 
-<pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
+```js
+// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
 if (!Uint8Array.prototype.fill) {
   Uint8Array.prototype.fill = Array.prototype.fill;
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Array.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.fill()")}}

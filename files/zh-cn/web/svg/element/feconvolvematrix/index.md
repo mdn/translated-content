@@ -10,120 +10,120 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/feConvolveMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>feConvolveMatrix</code>元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。</p>
+`feConvolveMatrix`元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。
 
-<p>一个矩阵卷积是基于一个 nxm 矩阵 (卷积内核)，用来描述如何将给定的输入图像的像素值与相邻像素合并为一个输出像素值。每个输出像素是由应用的内核矩阵来处理相应的源像素和它的相邻像素。基本的卷积公式是对给定的每个像素进行如下应用：</p>
+一个矩阵卷积是基于一个 nxm 矩阵 (卷积内核)，用来描述如何将给定的输入图像的像素值与相邻像素合并为一个输出像素值。每个输出像素是由应用的内核矩阵来处理相应的源像素和它的相邻像素。基本的卷积公式是对给定的每个像素进行如下应用：
 
-<p>COLORX,Y = ( <br>
- SUM I=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute">orderY</a>-1] { <br>
- SUM J=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute">orderX</a>-1] { <br>
- SOURCE X-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute">targetY</a>+I * <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute">orderX</a>-J-1, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute">orderY</a>-I-1 <br>
- } <br>
- } <br>
- ) / <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute">divisor</a> + <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute">bias</a> * ALPHAX,Y </p>
+COLORX,Y = (
+SUM I=0 to \[[orderY](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute)-1] {
+SUM J=0 to \[[orderX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute)-1] {
+SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute)+J, Y-[targetY](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute)+I \* [kernelMatrix](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute)[orderX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute)-J-1, [orderY](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute)-I-1
+}
+}
+) / [divisor](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute) + [bias](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute) \* ALPHAX,Y
 
-<p>其中“orderX”和"orderY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute">‘order’</a> 的 x 和 y 值，"targetX"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute">‘targetX’</a> 属性的值，"targetY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute">‘targetY’</a> 的值，"kernelMatrix" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute">‘kernelMatrix’</a>属性的值，"divisor"表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute">‘divisor’</a>属性的值， "bias" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute">‘bias’</a>属性的值。</p>
+其中“orderX”和"orderY"表示[‘order’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute) 的 x 和 y 值，"targetX"表示[‘targetX’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 属性的值，"targetY"表示[‘targetY’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute) 的值，"kernelMatrix" 表示 [‘kernelMatrix’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute)属性的值，"divisor"表示 [‘divisor’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute)属性的值， "bias" 表示 [‘bias’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute)属性的值。
 
-<p>注意上述公式中内核矩阵的值是被旋转 180 度后被使用，这是为了符合许多计算机图形学教科书中的理论。</p>
+注意上述公式中内核矩阵的值是被旋转 180 度后被使用，这是为了符合许多计算机图形学教科书中的理论。
 
-<p>这里举例说明，假设你有一个 5x5 像素的输入图像，其中一个颜色通道的色值如下：</p>
+这里举例说明，假设你有一个 5x5 像素的输入图像，其中一个颜色通道的色值如下：
 
-<pre><code>  0  20  40 235 235
+```plain
+  0  20  40 235 235
   100 120 140 235 235
   200 220 240 235 235
   225 225 255 255 255
   225 225 255 255 255
-</code></pre>
+```
 
-<p>你定义一个 3*3 卷积核如下：</p>
+你定义一个 3\*3 卷积核如下：
 
-<pre><code> 1 2 3
+```plain
+ 1 2 3
   4 5 6
   7 8 9
-</code></pre>
+```
 
-<p>让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute">‘divisor’</a>, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute">‘targetX’</a> 和<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute">‘targetY’</a>都是默认值，那么输出色值将是：</p>
+让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,[‘divisor’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute), [‘targetX’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 和[‘targetY’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute)都是默认值，那么输出色值将是：
 
-<pre><code>(9*  0 + 8* 20 + 7* 40 +
+```plain
+(9*  0 + 8* 20 + 7* 40 +
 6*100 + 5*120 + 4*140 +
-3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)</code></pre>
+3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
+```
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre><code>&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;filter id="emboss"&gt;
-      &lt;feConvolveMatrix
+```plain
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="emboss">
+      <feConvolveMatrix
           kernelMatrix="3 0 0
                         0 0 0
-                        0 0 -3"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+                        0 0 -3"/>
+    </filter>
+  </defs>
 
-  &lt;image xlink:href="/files/12668/MDN.svg" x="0" y="0"
-      height="200" width="200" style="filter:url(#emboss);" /&gt;
-&lt;/svg&gt;</code></pre>
+  <image xlink:href="/files/12668/MDN.svg" x="0" y="0"
+      height="200" width="200" style="filter:url(#emboss);" />
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("order") }}</li>
- <li>{{ SVGAttr("kernelMatrix") }}</li>
- <li>{{ SVGAttr("divisor") }}</li>
- <li>{{ SVGAttr("bias") }}</li>
- <li>{{ SVGAttr("targetX") }}</li>
- <li>{{ SVGAttr("targetY") }}</li>
- <li>{{ SVGAttr("edgeMode") }}</li>
- <li>{{ SVGAttr("kernelUnitLength") }}</li>
- <li>{{ SVGAttr("preserveAlpha") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("order") }}
+- {{ SVGAttr("kernelMatrix") }}
+- {{ SVGAttr("divisor") }}
+- {{ SVGAttr("bias") }}
+- {{ SVGAttr("targetX") }}
+- {{ SVGAttr("targetY") }}
+- {{ SVGAttr("edgeMode") }}
+- {{ SVGAttr("kernelUnitLength") }}
+- {{ SVGAttr("preserveAlpha") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFEConvolveMatrixElement">SVGFEConvolveMatrixElement</a></code>接口。</p>
+该元素实现了[`SVGFEConvolveMatrixElement`](/en/DOM/SVGFEConvolveMatrixElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

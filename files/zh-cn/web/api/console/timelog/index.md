@@ -11,73 +11,75 @@ tags:
   - web console
 translation_of: Web/API/Console/timeLog
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
-<div>在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。</div>
+参阅文档中的 [Timers](/en-US/docs/Web/API/console#Timers) 部分获取详细说明和示例。
 
+{{AvailableInWorkers}}
 
+## 语法
 
-<p>参阅文档中的 <a href="/en-US/docs/Web/API/console#Timers">Timers</a> 部分获取详细说明和示例。 </p>
+```plain
+console.timeLog(label);
+```
 
-<p>{{AvailableInWorkers}}</p>
+### 参数
 
-<h2 id="语法">语法</h2>
+- `label`
+  - : 计时器索引。
 
-<pre class="syntaxbox">console.timeLog(<em>label</em>);
-</pre>
+### 返回值
 
-<h3 id="参数">参数</h3>
+如果没有传入 label 参数，则以 default: 作为引导返回数据：
 
-<dl>
- <dt><code>label</code></dt>
- <dd>计时器索引。</dd>
-</dl>
+```plain
+default: 1042ms
+```
 
-<h3 id="返回值">返回值</h3>
+如果传入了一个已经存在的 `label` ，则会以 `label: `作为引导返回数据：
 
-<p>如果没有传入 label 参数，则以 default: 作为引导返回数据：</p>
+```plain
+label: 1242ms
+```
 
-<pre>default: 1042ms</pre>
+### 异常
 
-<p>如果传入了一个已经存在的 <code>label</code> ，则会以 <code>label: </code> 作为引导返回数据：</p>
+如果计时器未启动， `timeLog()` 会返回一个警告：
 
-<pre>label: 1242ms</pre>
+```plain
+Timer “default” doesn’t exist.
+```
 
-<h3 id="异常">异常</h3>
+如果传入的 label 索引没有与之对应的计时器，则返回如下警告：
 
-<p>如果计时器未启动， <code>timeLog()</code> 会返回一个警告：</p>
+```plain
+Timer “timer name” doesn’t exist.
+```
 
-<pre>Timer “default” doesn’t exist.</pre>
+## 示例
 
-<p>如果传入的 label 索引没有与之对应的计时器，则返回如下警告：</p>
-
-<pre>Timer “timer name” doesn’t exist. </pre>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>上例中的输出分别显示了用户从打开页面到关闭第一个 alert 和第二个 alert 框的时间间隔：</p>
+上例中的输出分别显示了用户从打开页面到关闭第一个 alert 和第二个 alert 框的时间间隔：
 
-<p><a href="https://mdn.mozillademos.org/files/16741/timer_output.png"><img src="timer_output.png"></a></p>
+[![](timer_output.png)](https://mdn.mozillademos.org/files/16741/timer_output.png)
 
-<p>注意：使用 <code>timelog()</code> 输出计时器的值会显示计时器名称。使用 <code>timeEnd()</code> 停止也会显示计时器名称和输出计时器的值，并且，最后的 " - timer ended" 可以清楚的显示计时器不再计时的信息。</p>
+注意：使用 `timelog()` 输出计时器的值会显示计时器名称。使用 `timeEnd()` 停止也会显示计时器名称和输出计时器的值，并且，最后的 " - timer ended" 可以清楚的显示计时器不再计时的信息。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关文档">相关文档</h2>
+## 相关文档
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

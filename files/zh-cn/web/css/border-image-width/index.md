@@ -6,22 +6,21 @@ tags:
   - CSS Borders
   - CSS Property
   - Reference
-  - 'recipe:css-property'
+  - recipe:css-property
 translation_of: Web/CSS/border-image-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a>属性 <strong><code>border-image-width</code></strong> 指定了 <a href="/zh-CN/docs/Web/CSS/border-image">边界图像 (border image</a>) 的宽度</p>
+[CSS](/en-US/docs/Web/CSS)属性 **`border-image-width`** 指定了 [边界图像 (border image](/zh-CN/docs/Web/CSS/border-image)) 的宽度
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
 
+如果本属性值大于元素的 {{cssxref("border-width")}}，边界图像将会向 padding 边缘延展
 
+## 语法
 
-<p>如果本属性值大于元素的 {{cssxref("border-width")}}，边界图像将会向 padding 边缘延展</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers notranslate">/* 关键字 */
+```css
+/* 关键字 */
 border-image-width: auto;
 
 /* 长度 */
@@ -46,73 +45,70 @@ border-image-width: 5% 2em 10% auto;
 border-image-width: inherit;
 border-image-width: initial;
 border-image-width: unset;
-</pre>
+```
 
-<p><code>border-image-width</code> 属性的值可用以下方式进行设定：</p>
+`border-image-width` 属性的值可用以下方式进行设定：
 
-<ul>
- <li>当指定 <strong>一个</strong> 值时，它将作用到 <strong>四个方向 </strong>；</li>
- <li>当指定 <strong>两个</strong> 值时，它将分别作用到 <strong>垂直方向 </strong>和 <strong>水平方向 </strong>；</li>
- <li>当指定 <strong>三个</strong> 值时，它将分别作用到 <strong>上方</strong>、<strong>水平方向</strong>、和<strong>下方</strong>；</li>
- <li>当指定 <strong>四个</strong> 值时，它将分别作用到 <strong>上方</strong>、<strong>右方</strong>、<strong>下方和左方。</strong></li>
-</ul>
+- 当指定 **一个** 值时，它将作用到 **四个方向** ；
+- 当指定 **两个** 值时，它将分别作用到 **垂直方向** 和 **水平方向** ；
+- 当指定 **三个** 值时，它将分别作用到 **上方**、**水平方向**、和**下方**；
+- 当指定 **四个** 值时，它将分别作用到 **上方**、**右方**、**下方和左方。**
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;长度-百分比&gt;</code></dt>
- <dd>边界的宽度，可按 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 指定。百分比是相较于水平（垂直）方向上的边框图像区域宽度（高度）的偏移量，不能为负。</dd>
- <dt><code>&lt;数值&gt;</code></dt>
- <dd>边框宽度，指定为 {{cssxref("border-width")}} 的相应倍数，不能为负。</dd>
- <dt><code>auto</code></dt>
- <dd>将等同于内部对应的 {{cssxref("border-image-slice")}} 的宽或高（可用的话）。如果图像没有需要的相应的属性，将相对于 <code>border-width</code> 进行指定。</dd>
-</dl>
+- `<长度-百分比>`
+  - : 边界的宽度，可按 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 指定。百分比是相较于水平（垂直）方向上的边框图像区域宽度（高度）的偏移量，不能为负。
+- `<数值>`
+  - : 边框宽度，指定为 {{cssxref("border-width")}} 的相应倍数，不能为负。
+- `auto`
+  - : 将等同于内部对应的 {{cssxref("border-image-slice")}} 的宽或高（可用的话）。如果图像没有需要的相应的属性，将相对于 `border-width` 进行指定。
 
-<h2 id="正式定义">正式定义</h2>
+## 正式定义
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="正式语法">正式语法</h2>
+## 正式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Tiling_a_border_image">Tiling a border image</h3>
+### Tiling a border image
 
-<p>示例使用了下方 90*90 像素的 ".png" 图像。</p>
+示例使用了下方 90\*90 像素的 ".png" 图像。
 
-<p><img src="border.png"></p>
+![](border.png)
 
-<p>因此，每个圆圈为 30*30 像素。</p>
+因此，每个圆圈为 30\*30 像素。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
-</pre>
+   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">p {
+```css
+p {
   border: 20px solid;
   border-image: url("https://mdn.mozillademos.org/files/10470/border.png") 30 round;
   border-image-width: 16px;
   padding: 40px;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}</p>
+{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.properties.border-image-width")}}</p>
+{{Compat("css.properties.border-image-width")}}

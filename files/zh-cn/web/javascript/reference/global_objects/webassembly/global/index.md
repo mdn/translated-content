@@ -3,54 +3,51 @@ title: WebAssembly.Global
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>WebAssembly.Global</code></strong> 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问 ,跨越一个或多个{{jsxref("WebAssembly.Module")}} 实例。他允许被多个 modules 动态连接。</p>
+**`WebAssembly.Global`** 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问 ,跨越一个或多个{{jsxref("WebAssembly.Module")}} 实例。他允许被多个 modules 动态连接。
 
-<h2 id="构造函数语法">构造函数语法</h2>
+## 构造函数语法
 
-<p><strong><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global">WebAssembly.Global()</a></strong></p>
+**[WebAssembly.Global()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global)**
 
-<p>     创建一个新的<code>全局</code>对象。</p>
+创建一个新的`全局`对象。
 
-<h2 id="Global_实例">Global 实例</h2>
+## Global 实例
 
-<p>所有的 <code>Global</code> 实例 继承自 <code>Global()</code> 构造函数 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype">prototype object</a> — 修改会影响 所有 <code>Global</code> 实例。</p>
+所有的 `Global` 实例 继承自 `Global()` 构造函数 [prototype object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype) — 修改会影响 所有 `Global` 实例。
 
-<h3 id="实例属性">实例属性</h3>
+### 实例属性
 
-<dl>
- <dt><code>Global.prototype.constructor</code></dt>
- <dd>返回创建对象实例的函数。缺省为构造函数为 {{jsxref("WebAssembly.Global()")}}</dd>
- <dt><code>Global.prototype[@@toStringTag]</code></dt>
- <dd>属性 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag">@@toStringTag</a> 初始值为字符串 "WebAssembly.Global".</dd>
- <dt><code>Global.prototype.value</code></dt>
- <dd>全局变量包含的值 — 可以直接用于设置和获取全局变量的值。</dd>
-</dl>
+- `Global.prototype.constructor`
+  - : 返回创建对象实例的函数。缺省为构造函数为 {{jsxref("WebAssembly.Global()")}}
+- `Global.prototype[@@toStringTag]`
+  - : 属性 [@@toStringTag](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 初始值为字符串 "WebAssembly.Global".
+- `Global.prototype.value`
+  - : 全局变量包含的值 — 可以直接用于设置和获取全局变量的值。
 
-<h3 id="实例方法">实例方法</h3>
+### 实例方法
 
-<dl>
- <dt><code>Global.prototype.valueOf()</code></dt>
- <dd>旧式的方法，返回全局变量包含的值。</dd>
-</dl>
+- `Global.prototype.valueOf()`
+  - : 旧式的方法，返回全局变量包含的值。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="创建_Global_实例">创建 Global 实例 </h3>
+### 创建 Global 实例
 
-<p>以下例子展示了使用 <code>WebAssembly.Global()</code> 构造函数创建一个新的实例。它定义为可修饰的类型为<code>i32</code>，值为 0。</p>
+以下例子展示了使用 `WebAssembly.Global()` 构造函数创建一个新的实例。它定义为可修饰的类型为`i32`，值为 0。
 
-<p>global 的值发生改变，首先设置<code>Global.value</code> 为 42，然后使用导出函数 <code>incGlobal()</code> 增加为 43. 导出函数在 <code>global.wasm</code> 模块中 (它将参数的值加一并返回).</p>
+global 的值发生改变，首先设置`Global.value` 为 42，然后使用导出函数 `incGlobal()` 增加为 43. 导出函数在 `global.wasm` 模块中 (它将参数的值加一并返回).
 
-<pre class="brush: js">const output = document.getElementById('output');
+```js
+const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
     output.innerHTML += `Testing ${msg}: `;
     if (got !== expected)
-        output.innerHTML += `FAIL!&lt;br&gt;Got: ${got}&lt;br&gt;Expected: ${expected}&lt;br&gt;`;
+        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
     else
-        output.innerHTML += `SUCCESS! Got: ${got}&lt;br&gt;`;
+        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -58,31 +55,28 @@ assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 
 WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) =&gt; {
+.then(({instance}) => {
     assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
     global.value = 42;
     assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>备注：</strong>: 你可以在<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html">running live on GitHub</a> 查看例子; 也可以访问<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">source code</a>.</p>
-</div>
+> **备注：**: 你可以在[running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) 查看例子; 也可以访问[source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
- <li><a href="https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md">Import/Export mutable globals proposal</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

@@ -3,24 +3,24 @@ title: ServiceWorker.state
 slug: Web/API/ServiceWorker/state
 translation_of: Web/API/ServiceWorker/state
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}ServiceWorker 接口的这个只读的**state**属性返回一个代表 service worker 当前状态的字符串。值可以是以下这些：installing, installed, activating, activated，或者是 redundant.
 
-<div>ServiceWorker 接口的这个只读的<strong>state</strong>属性返回一个代表 service worker 当前状态的字符串。值可以是以下这些：installing, installed, activating, activated，或者是 redundant.</div>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+someURL = ServiceWorker.state
+```
 
-<pre class="syntaxbox">someURL = ServiceWorker.state
-</pre>
+### 值
 
-<h3 id="值">值</h3>
+一个 {{domxref("ServiceWorkerState")}} 的定义值 ([see the spec](http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum).)
 
-<p>一个 {{domxref("ServiceWorkerState")}} 的定义值 (<a href="http://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-state-enum">see the spec</a>.)</p>
+## 示例
 
-<h2 id="示例">示例</h2>
+这块代码出自 [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). 代码监听了任何{{domxref("ServiceWorker.state")}}中的改变，并返回它的值。
 
-<p>这块代码出自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). 代码监听了任何{{domxref("ServiceWorker.state")}}中的改变，并返回它的值。</p>
-
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -37,12 +37,13 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ServiceWorker.state")}}

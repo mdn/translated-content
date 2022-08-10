@@ -8,70 +8,69 @@ tags:
   - separator
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>join()</strong></code> 方法将一个数组（或一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的所有元素连接成一个字符串并返回这个字符串。如果数组只有一个项目，那么将返回该项目而不使用分隔符。</p>
+**`join()`** 方法将一个数组（或一个[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）的所有元素连接成一个字符串并返回这个字符串。如果数组只有一个项目，那么将返回该项目而不使用分隔符。
 
-<div>{{EmbedInteractiveExample("pages/js/array-join.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-join.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><var>arr</var>.join([<var>separator</var>])</pre>
+```plain
+arr.join([separator])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>separator</code> {{optional_inline}}</dt>
- <dd>指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（<code>,</code>）分隔。如果<code>separator</code>是空字符串 (<code>""</code>)，则所有元素之间都没有任何字符。</dd>
-</dl>
+- `separator` {{optional_inline}}
+  - : 指定一个字符串来分隔数组的每个元素。如果需要，将分隔符转换为字符串。如果缺省该值，数组元素用逗号（`,`）分隔。如果`separator`是空字符串 (`""`)，则所有元素之间都没有任何字符。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个所有数组元素连接的字符串。如果 <code>arr.length</code><strong> </strong>为 0，则返回空字符串。</p>
+一个所有数组元素连接的字符串。如果 `arr.length` 为 0，则返回空字符串。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。</p>
+所有的数组元素被转换成字符串，再用一个分隔符将这些字符串连接起来。
 
-<div class="warning">
-<p><strong>警告：</strong>如果一个元素为 <code>undefined</code> 或 <code>null</code>，它会被转换为空字符串。</p>
-</div>
+> **警告：**如果一个元素为 `undefined` 或 `null`，它会被转换为空字符串。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Joining_an_array_three_different_ways">使用四种不同的分隔符连接数组元素</h3>
+### 使用四种不同的分隔符连接数组元素
 
-<p>下例首先创建了一个数组 <code>a</code>，包含有三个元素，然后用四种不同的分隔符连接所有数组元素。首先是默认的分隔符逗号，然后是一个逗号加空格，接下来是一个加号前后加空格，最后是一个空字符串。</p>
+下例首先创建了一个数组 `a`，包含有三个元素，然后用四种不同的分隔符连接所有数组元素。首先是默认的分隔符逗号，然后是一个逗号加空格，接下来是一个加号前后加空格，最后是一个空字符串。
 
-<pre class="brush: js">var a = ['Wind', 'Rain', 'Fire'];
+```js
+var a = ['Wind', 'Rain', 'Fire'];
 var myVar1 = a.join();      // myVar1 的值变为"Wind,Rain,Fire"
 var myVar2 = a.join(', ');  // myVar2 的值变为"Wind, Rain, Fire"
 var myVar3 = a.join(' + '); // myVar3 的值变为"Wind + Rain + Fire"
 var myVar4 = a.join('');    // myVar4 的值变为"WindRainFire"
-</pre>
+```
 
-<h3 id="连接类数组对象">连接类数组对象</h3>
+### 连接类数组对象
 
-<p>下面的示例将连接类数组对象（arguments），通过在<code>Array.prototype.join</code>上调用{{jsxref("Function.prototype.call")}}。</p>
+下面的示例将连接类数组对象（arguments），通过在`Array.prototype.join`上调用{{jsxref("Function.prototype.call")}}。
 
-<pre class="brush: js"><code>function f(a, b, c) {
+```js
+function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);</code></pre>
+f(1, 'a', true);
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
- <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.join()")}}

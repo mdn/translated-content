@@ -6,33 +6,33 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/username
 original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p><strong><code>HTMLHyperlinkElementUtils.username</code></strong> 属性是一个 {{domxref("USVString")}}包含域名前面指定的用户名。</p>
+**`HTMLHyperlinkElementUtils.username`** 属性是一个 {{domxref("USVString")}}包含域名前面指定的用户名。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.username;
-<em>object</em>.username = <em>string</em>;
-</pre>
+```plain
+string = object.username;
+object.username = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Let's &lt;a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"&gt; be in the document
+```js
+// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"> be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Returns:'anonymous'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLAnchorElement.username")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLHyperlinkElementUtils")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLHyperlinkElementUtils")}} interface it belongs to.

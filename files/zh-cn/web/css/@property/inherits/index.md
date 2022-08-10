@@ -1,5 +1,5 @@
 ---
-title: '继承性'
+title: 继承性
 slug: Web/CSS/@property/inherits
 tags:
   - CSS
@@ -8,78 +8,79 @@ tags:
   - Property
   - Houdini
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>inherits</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 <code>@property</code>声明注册的自定义属性默认情况下是否会被继承。</p>
+**`inherits`** [CSS](/en-US/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 `@property`声明注册的自定义属性默认情况下是否会被继承。
 
-<h2 id="Syntax">Syntax（类型描述符）</h2>
+## Syntax（类型描述符）
 
-<pre class="brush: css no-line-numbers">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
 
 @property --property-name {
-  syntax: '&lt;color&gt;';
+  syntax: '<color>';
   inherits: true;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<h2 id="Values">取值</h2>
+## 取值
 
-<dl>
-  <dt><code>true</code></dt>
-  <dd>属性默认继承</dd>
-  <dt><code>false</code></dt>
-  <dd>属性默认不继承</dd>
-</dl>
+- `true`
+  - : 属性默认继承
+- `false`
+  - : 属性默认不继承
 
-<h2 id="Formal_definition">规范定义</h2>
+## 规范定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">标准语法</h2>
+## 标准语法
 
-<pre class="brush: css">{{csssyntax}}</pre>
+```css
+{{csssyntax}}
+```
 
-<h2 id="Examples">实例</h2>
+## 实例
 
-<p>为 <code>--my-color</code> {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。</p>
+为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-<p>使用 <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">@规则</a>:</p>
+使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [@规则](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>使用 <a href="/en-US/docs/Web/JavaScript">JavaScript 中的</a> {{domxref('CSS.registerProperty')}}函数：</p>
+使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.at-rules.property.inherits")}}</p>
+{{Compat("css.at-rules.property.inherits")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Properties_and_Values_API">CSS 属性与值 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Painting_API">CSS 绘图 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Typed_OM_API">CSS 类型对象模型</a></li>
-    <li><a href="/zh-CN/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
+- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/zh-CN/docs/Web/Houdini)

@@ -3,55 +3,53 @@ title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
 translation_of: Web/API/WebGLRenderingContext/isProgram
 ---
-<p>{{APIRef("WebGL")}}</p>
+{{APIRef("WebGL")}}
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>中的<strong><code>WebGLRenderingContext.isProgram()</code></strong> 函数 将会在{{domxref("WebGLProgram")}}是一个合法的着色器程序 (program) 时返回 <code>true</code> , 而在其他情况返回<code>false</code></p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API)中的**`WebGLRenderingContext.isProgram()`** 函数 将会在{{domxref("WebGLProgram")}}是一个合法的着色器程序 (program) 时返回 `true` , 而在其他情况返回`false`
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">GLboolean <var>gl</var>.isProgram(<var>program</var>);
-</pre>
+```plain
+GLboolean gl.isProgram(program);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>program</dt>
- <dd>一个要检查的 {{domxref("WebGLProgram")}}对象 .</dd>
-</dl>
+- program
+  - : 一个要检查的 {{domxref("WebGLProgram")}}对象 .
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个表示 program 是否有效的 {{domxref("GLboolean")}} 值。</p>
+一个表示 program 是否有效的 {{domxref("GLboolean")}} 值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="检查一个program是否有效">检查一个 program 是否有效</h3>
+### 检查一个 program 是否有效
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
 // ...
 
 gl.isProgram(program);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.isProgram")}}</p>
+{{Compat("api.WebGLRenderingContext.isProgram")}}
 
-<h2 id="另请参见">另请参见</h2>
+## 另请参见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

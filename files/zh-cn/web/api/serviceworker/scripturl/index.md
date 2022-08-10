@@ -3,23 +3,24 @@ title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
 translation_of: Web/API/ServiceWorker/scriptURL
 ---
-<div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-<p>作为<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration">ServiceWorkerRegistration</a>的一部分定义，会返回该 ServiceWorker 的序列化脚本 url</code>. 必须与 document 注册<code>ServiceWorker 的地址同源</code>.</p>
+作为`ServiceWorkerRegistration的一部分定义，会返回该 ServiceWorker 的序列化脚本 url`. 必须与 document 注册`ServiceWorker 的地址同源`.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">someURL = ServiceWorker.scriptURL
-</pre>
+```plain
+someURL = ServiceWorker.scriptURL
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("USVString")}} (另见 <a href="http://heycam.github.io/webidl/#idl-USVString">WebIDL definition of USVString</a>.)</p>
+一个 {{domxref("USVString")}} (另见 [WebIDL definition of USVString](http://heycam.github.io/webidl/#idl-USVString).)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.ServiceWorker.scriptURL")}}

@@ -3,36 +3,35 @@ title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
 translation_of: Web/API/HTMLMediaElement/currentSrc
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLMediaElement.currentSrc</code></strong> 属性包含所选媒体源的绝对 URL 路径。例如当程序会根据用户显示器分辨率选择不同媒体文件时会用到这个属性，显然它是只读的。当<code><strong>networkState</strong></code>值为<code><strong>EMPTY</strong></code>时，本属性值为空字符串（empty string）.</p>
+**`HTMLMediaElement.currentSrc`** 属性包含所选媒体源的绝对 URL 路径。例如当程序会根据用户显示器分辨率选择不同媒体文件时会用到这个属性，显然它是只读的。当**`networkState`**值为**`EMPTY`**时，本属性值为空字符串（empty string）.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>mediaUrl</em> = <em>audioObject</em>.currentSrc;</pre>
+```plain
+var mediaUrl = audioObject.currentSrc;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个 {{domxref("DOMString")}} 对象包含所选媒体源的绝对 URL 路径。当 <code>networkState</code> ＝＝ <code>EMPTY 时，其值为空字符串（empty string）</code>; 否则，它会是 {{domxref("HTMLSourceElement")}} 所包含媒体列表中的一个，或者是 {{HTMLElement("source")}} 标签的 src 值。</p>
+一个 {{domxref("DOMString")}} 对象包含所选媒体源的绝对 URL 路径。当 `networkState` ＝＝ `EMPTY 时，其值为空字符串（empty string）`; 否则，它会是 {{domxref("HTMLSourceElement")}} 所包含媒体列表中的一个，或者是 {{HTMLElement("source")}} 标签的 src 值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.currentSrc); // ""
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLMediaElement.currentSrc")}}
 
+## 参考
 
-<p>{{Compat("api.HTMLMediaElement.currentSrc")}}</p>
-
-<h2 id="See_Also">参考</h2>
-
-<ul>
- <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

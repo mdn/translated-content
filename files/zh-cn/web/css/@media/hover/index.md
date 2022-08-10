@@ -8,51 +8,49 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/hover
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>该<strong><code>hover</code></strong> <a href="/en-US/docs/CSS">CSS</a> {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。</p>
+该**`hover`** [CSS](/en-US/docs/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>悬停功能指定为从下面列表中选择的关键字值。</p>
+悬停功能指定为从下面列表中选择的关键字值。
 
-<dl>
- <dt><code>none</code></dt>
- <dd>主要输入机制无法悬停或不方便悬停（例如，当用户执行不方便的长按操作时，许多移动设备模拟悬停），或者没有主指示输入机制。</dd>
- <dt><code>hover</code></dt>
- <dd>主要输入机制可以方便地悬停在元素上。</dd>
-</dl>
+- `none`
+  - : 主要输入机制无法悬停或不方便悬停（例如，当用户执行不方便的长按操作时，许多移动设备模拟悬停），或者没有主指示输入机制。
+- `hover`
+  - : 主要输入机制可以方便地悬停在元素上。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Try hovering over me!&lt;/a&gt;</pre>
+```html
+<a href="#">Try hovering over me!</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (hover: hover) {
+```css
+@media (hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.media.hover")}}
 
+## See also
 
-<p>{{Compat("css.at-rules.media.hover")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@media/any-hover">the <code>any-hover</code> media feature</a></li>
-</ul>
+- [the `any-hover` media feature](/en-US/docs/Web/CSS/@media/any-hover)

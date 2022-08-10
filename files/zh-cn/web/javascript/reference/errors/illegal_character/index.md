@@ -6,68 +6,75 @@ tags:
   - 语法错误
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误提示">错误提示</h2>
+## 错误提示
 
-<pre class="syntaxbox">SyntaxError: illegal character (Firefox)
+```plain
+SyntaxError: illegal character (Firefox)
 SyntaxError: Invalid or unexpected token (Chrome)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>在代码中有非法的或者不期望出现的标记符号出现在不该出现的位置。请使用支持语法高亮功能的编辑器仔细检查你的代码，看看是否存在张冠李戴的情况，比如减号 (<code> - </code>) 与连接符 (<code> – </code>) ，或者是英文双引号 (<code> " </code>) 与中文双引号 (<code> “ </code>)。</p>
+在代码中有非法的或者不期望出现的标记符号出现在不该出现的位置。请使用支持语法高亮功能的编辑器仔细检查你的代码，看看是否存在张冠李戴的情况，比如减号 (` - `) 与连接符 (` – `) ，或者是英文双引号 (` " `) 与中文双引号 (` “ `)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="错配字符">错配字符</h3>
+### 错配字符
 
-<p>一些字符看起来会很相像，但是会导致于语法解析器解析代码失败。</p>
+一些字符看起来会很相像，但是会导致于语法解析器解析代码失败。
 
-<pre class="brush: js example-bad">“This looks like a string”;
+```js example-bad
+“This looks like a string”;
 // SyntaxError: illegal character
 
 42 – 13;
 // SyntaxError: illegal character
-</pre>
+```
 
-<p>下面这样是可以正常运行的：</p>
+下面这样是可以正常运行的：
 
-<pre class="brush: js example-good">"This is actually a string";
+```js example-good
+"This is actually a string";
 
 42 - 13;
-</pre>
+```
 
-<h3 id="遗漏的字符">遗漏的字符</h3>
+### 遗漏的字符
 
-<p>很容易就会在这里或那里遗漏一些字符。</p>
+很容易就会在这里或那里遗漏一些字符。
 
-<pre class="brush: js example-bad">var colors = ['#000', #333', '#666'];
+```js example-bad
+var colors = ['#000', #333', '#666'];
 // SyntaxError: illegal character
-</pre>
+```
 
-<p>把遗漏的引号给 '#333' 添加上。</p>
+把遗漏的引号给 '#333' 添加上。
 
-<pre class="brush: js example-good">var colors = ['#000', '#333', '#666'];</pre>
+```js example-good
+var colors = ['#000', '#333', '#666'];
+```
 
-<h3 id="隐藏字符">隐藏字符</h3>
+### 隐藏字符
 
-<p>当从外部复制粘贴代码的时候，有可能就有非法的隐藏字符的存在，需要引起注意！</p>
+当从外部复制粘贴代码的时候，有可能就有非法的隐藏字符的存在，需要引起注意！
 
-<pre class="brush: js example-bad">var foo = 'bar';​
+```js example-bad
+var foo = 'bar';​
 // SyntaxError: illegal character
-</pre>
+```
 
-<p>当使用文本编辑器如 VIM 进行探测的时候，可以发现这里存在一个零宽空格<a href="https://en.wikipedia.org/wiki/Zero-width_space"> (ZWSP) (U+200B)</a> 。</p>
+当使用文本编辑器如 VIM 进行探测的时候，可以发现这里存在一个零宽空格[ (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) 。
 
-<pre class="brush: js">var foo = 'bar';​&lt;200b&gt;</pre>
+```js
+var foo = 'bar';​<200b>
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
-</ul>
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

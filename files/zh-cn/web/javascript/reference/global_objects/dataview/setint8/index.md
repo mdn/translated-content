@@ -3,59 +3,52 @@ title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setInt8()</code></strong> 从 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView"><code>DataView</code></a> 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (一个字节)。</p>
+**`setInt8()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (一个字节)。
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setint8.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-setint8.html")}}
 
+## 语法
 
+```plain
+dataview.setInt8(byteOffset, value)
+```
 
-<h2 id="语法">语法</h2>
+## 参数
 
-<pre class="syntaxbox"><var>dataview</var>.setInt8(byteOffset, value)</pre>
+- byteOffset
+  - : 偏移量，从头开始计算，单位为字节
+- value
+  - : 设置的整数值
 
-<h2 id="参数">参数</h2>
+### 返回
 
-<dl>
- <dt>byteOffset</dt>
- <dd>偏移量，从头开始计算，单位为字节</dd>
- <dt>value</dt>
- <dd>设置的整数值</dd>
-</dl>
+{{jsxref("undefined")}}.
 
-<h3 id="返回">返回</h3>
+### 抛出的错误
 
-<p>{{jsxref("undefined")}}.</p>
+- {{jsxref("RangeError")}}
+  - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误
 
-<h3 id="抛出的错误">抛出的错误</h3>
+## 例子
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误</dd>
-</dl>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setInt8(1, 3);
 dataview.getInt8(1); // 3
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关内容
 
-<p>{{Compat}}</p>
-
-<h2 id="相关内容">相关内容</h2>
-
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

@@ -3,67 +3,65 @@ title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.clear()</code></strong> 方法使用预设值来清空缓冲。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.clear()`** 方法使用预设值来清空缓冲。
 
-<p>预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。</p>
+预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。
 
-<p>裁剪、抖动处理和缓冲写入遮罩会影响 <code>clear()</code> 方法。</p>
+裁剪、抖动处理和缓冲写入遮罩会影响 `clear()` 方法。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">void <var>gl</var>.clear(<var>mask</var>);
-</pre>
+```plain
+void gl.clear(mask);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>mask</code></dt>
- <dd>一个用于指定需要清除的缓冲区的 {{domxref("GLbitfield")}} 。可能的值有：
- <ul>
-  <li><code>gl.COLOR_BUFFER_BIT   //颜色缓冲区</code></li>
-  <li><code>gl.DEPTH_BUFFER_BIT   //深度缓冲区</code></li>
-  <li><code>gl.STENCIL_BUFFER_BIT  //模板缓冲区</code></li>
- </ul>
- </dd>
-</dl>
+- `mask`
 
-<h3 id="错误抛出">错误抛出</h3>
+  - : 一个用于指定需要清除的缓冲区的 {{domxref("GLbitfield")}} 。可能的值有：
 
-<p>如果 mask 不是以上列出的值，会抛出 <code>gl.INVALID_ENUM</code> 错误。</p>
+    - `gl.COLOR_BUFFER_BIT //颜色缓冲区`
+    - `gl.DEPTH_BUFFER_BIT //深度缓冲区`
+    - `gl.STENCIL_BUFFER_BIT //模板缓冲区`
 
-<h3 id="返回值">返回值</h3>
+### 错误抛出
 
-<p>无</p>
+如果 mask 不是以上列出的值，会抛出 `gl.INVALID_ENUM` 错误。
 
-<h2 id="示例">示例</h2>
+### 返回值
 
-<p><code>clear()</code> 方法可接受复合值，</p>
+无
 
-<pre class="brush: js">gl.clear(gl.DEPTH_BUFFER_BIT);
+## 示例
+
+`clear()` 方法可接受复合值，
+
+```js
+gl.clear(gl.DEPTH_BUFFER_BIT);
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
-</pre>
+```
 
-<p>要获得当前的清除值，传入 <code>COLOR_CLEAR_VALUE</code>、<code>DEPTH_CLEAR_VALUE</code> 或 <code>STENCIL_CLEAR_VALUE</code> 常量。</p>
+要获得当前的清除值，传入 `COLOR_CLEAR_VALUE`、`DEPTH_CLEAR_VALUE` 或 `STENCIL_CLEAR_VALUE` 常量。
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 gl.getParameter(gl.STENCIL_CLEAR_VALUE);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clear")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.clear")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.clearColor()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
- <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

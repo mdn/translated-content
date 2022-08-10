@@ -6,34 +6,36 @@ tags:
   - HTTP 状态码
 translation_of: Web/HTTP/Status/101
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP  <code><strong>101 Switching Protocol</strong></code>（协议切换）状态码表示服务器应客户端升级协议的请求（{{HTTPHeader("Upgrade")}}请求头）正在切换协议。</p>
+HTTP **`101 Switching Protocol`**（协议切换）状态码表示服务器应客户端升级协议的请求（{{HTTPHeader("Upgrade")}}请求头）正在切换协议。
 
-<p>服务器会发送一个{{HTTPHeader("Upgrade")}}响应头来表明其正在切换过去的协议。<br>
- 该过程在协议升级机制（<a href="/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a>）中详细描述。</p>
+服务器会发送一个{{HTTPHeader("Upgrade")}}响应头来表明其正在切换过去的协议。
+该过程在协议升级机制（[Protocol upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism)）中详细描述。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox notranslate">101 Switching Protocol</pre>
+```plain
+101 Switching Protocol
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在使用 <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a> 时会用到协议切换。</p>
+在使用 [WebSockets](/en-US/docs/Web/API/WebSockets_API) 时会用到协议切换。
 
-<pre class="notranslate">HTTP/1.1 101 Switching Protocols
+```plain
+HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
-Connection: Upgrade</pre>
+Connection: Upgrade
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism">Protocol upgrade mechanism</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></li>
- <li>{{HTTPHeader("Upgrade")}}</li>
- <li>{{HTTPStatus("426")}} <code>Upgrade Required</code></li>
-</ul>
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPStatus("426")}} `Upgrade Required`

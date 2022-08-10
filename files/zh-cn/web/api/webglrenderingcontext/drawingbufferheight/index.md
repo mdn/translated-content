@@ -10,39 +10,41 @@ tags:
   - 属性
 translation_of: Web/API/WebGLRenderingContext/drawingBufferHeight
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code><strong>WebGLRenderingContext.drawingBufferHeight</strong></code> 只读属性，指示当前绘图缓冲区的实际高度。它应当匹配与绘图上下文相关联的 {{HTMLElement("canvas")}} 元素的高度属性， 如果实现未能提供所要求的高度，其值将有所不同。</p>
+**`WebGLRenderingContext.drawingBufferHeight`** 只读属性，指示当前绘图缓冲区的实际高度。它应当匹配与绘图上下文相关联的 {{HTMLElement("canvas")}} 元素的高度属性， 如果实现未能提供所要求的高度，其值将有所不同。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>gl</em></var>.drawingBufferHeight;</pre>
+```plain
+gl.drawingBufferHeight;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>指定 {{HTMLElement("canvas")}} 元素：</p>
+指定 {{HTMLElement("canvas")}} 元素：
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>你可以通过下面几行代码来获取绘图缓冲区的高度：</p>
+你可以通过下面几行代码来获取绘图缓冲区的高度：
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
 gl.drawingBufferHeight; // 150
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.drawingBufferHeight")}}</p>
+{{Compat("api.WebGLRenderingContext.drawingBufferHeight")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.drawingBufferWidth")}}</li>
- <li>{{domxref("WebGLRenderingContext.viewport()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
+- {{domxref("WebGLRenderingContext.viewport()")}}

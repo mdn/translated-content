@@ -3,60 +3,33 @@ title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
 translation_of: Web/API/HTMLLabelElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLLabelElement</code></strong> interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits from {{domxref("HTMLElement")}}. </p>
+The **`HTMLLabelElement`** interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits from {{domxref("HTMLElement")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>accessKey</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Reflects the {{htmlattrxref("accesskey", "label")}} HTML attribute.</td>
-  </tr>
-  <tr>
-   <td><code>control</code> {{readonlyInline}}</td>
-   <td>{{domxref("HTMLElement")}}</td>
-   <td>The labeled control.</td>
-  </tr>
-  <tr>
-   <td><code>form</code> {{readonlyInline}}</td>
-   <td>{{domxref("HTMLFormElement")}}</td>
-   <td>The form owner of this label.</td>
-  </tr>
-  <tr>
-   <td><code>htmlFor </code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The ID of the labeled control. Reflects the {{htmlattrxref("for", "label")}} attribute.</td>
-  </tr>
- </tbody>
-</table>
+| Name                               | Type                                     | Description                                                                                         |
+| ---------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `accessKey`                        | {{domxref("DOMString")}}         | Reflects the {{htmlattrxref("accesskey", "label")}} HTML attribute.                   |
+| `control` {{readonlyInline}} | {{domxref("HTMLElement")}}     | The labeled control.                                                                                |
+| `form` {{readonlyInline}}    | {{domxref("HTMLFormElement")}} | The form owner of this label.                                                                       |
+| `htmlFor`                          | {{domxref("DOMString")}}         | The ID of the labeled control. Reflects the {{htmlattrxref("for", "label")}} attribute. |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.HTMLLabelElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("label")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("label")}}

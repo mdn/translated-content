@@ -8,37 +8,38 @@ tags:
   - 构造方法
 translation_of: Web/API/FileReader/FileReader
 ---
-<p>使用 <strong><code>FileReader()</code></strong> 构造器去创建一个新的 FileReader.</p>
+使用 **`FileReader()`** 构造器去创建一个新的 FileReader.
 
-<p>更多关于 <code>FileReader</code>,  查看<a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">在 Web 应用中使用 files</a>。</p>
+更多关于 `FileReader`, 查看[在 Web 应用中使用 files](/en-US/docs/Web/API/File/Using_files_from_web_applications)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var reader = new FileReader();</pre>
+```js
+var reader = new FileReader();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>None.</p>
+None.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>以下代码展示了如何使用 <code>FileReader()</code> 构造器创建 <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> 对象，和<code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code>对象的用法。</p>
+以下代码展示了如何使用 `FileReader()` 构造器创建 [`FileReader`](/en-US/docs/Web/API/FileReader) 对象，和[`FileReader`](/en-US/docs/Web/API/FileReader)对象的用法。
 
-<pre class="brush: js">function printFile(file) {
+```js
+function printFile(file) {
   var reader = new FileReader();
   reader.onload = function(evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
-</ul>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

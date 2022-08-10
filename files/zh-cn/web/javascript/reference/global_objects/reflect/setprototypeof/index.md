@@ -3,43 +3,43 @@ title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>除了返回类型以外，静态方法 <code><strong>Reflect</strong></code><strong><code>.setPrototypeOf()</code></strong> 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 <code>[[Prototype]]</code> 属性）为另一个对象或 {{jsxref("null")}}，如果操作成功返回 <code>true</code>，否则返回 <code>false</code>。</p>
+除了返回类型以外，静态方法 **`Reflect.setPrototypeOf()`** 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[Prototype]]` 属性）为另一个对象或 {{jsxref("null")}}，如果操作成功返回 `true`，否则返回 `false`。
 
-<p>{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}</p>
+{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.setPrototypeOf(<em>target</em>, <em>prototype</em>)
-</pre>
+```plain
+Reflect.setPrototypeOf(target, prototype)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>target</code></em></dt>
- <dd>设置原型的目标对象。</dd>
- <dt><em><code>prototype</code></em></dt>
- <dd>对象的新原型（一个对象或 {{jsxref("null")}}）。</dd>
-</dl>
+- _`target`_
+  - : 设置原型的目标对象。
+- _`prototype`_
+  - : 对象的新原型（一个对象或 {{jsxref("null")}}）。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>返回一个 {{jsxref("Boolean")}} 值表明是否原型已经成功设置。</p>
+返回一个 {{jsxref("Boolean")}} 值表明是否原型已经成功设置。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果 <em><code>target</code></em> 不是 {{jsxref("Object")}} ，或 <em><code>prototype</code> </em>既不是对象也不是 {{jsxref("null")}}，抛出一个 {{jsxref("TypeError")}} 异常。</p>
+如果 _`target`_ 不是 {{jsxref("Object")}} ，或 *`prototype` *既不是对象也不是 {{jsxref("null")}}，抛出一个 {{jsxref("TypeError")}} 异常。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.setPrototypeOf</code> 方法改变指定对象的原型（即，内部的 <code>[[Prototype]]</code> 属性值）。</p>
+`Reflect.setPrototypeOf` 方法改变指定对象的原型（即，内部的 `[[Prototype]]` 属性值）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Reflect.setPrototypeOf">使用 <code>Reflect.setPrototypeOf()</code></h3>
+### 使用 `Reflect.setPrototypeOf()`
 
-<pre class="brush: js">Reflect.setPrototypeOf({}, Object.prototype); // true
+```js
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // It can change an object's [[Prototype]] to null.
 Reflect.setPrototypeOf({}, null); // true
@@ -51,19 +51,17 @@ Reflect.setPrototypeOf(Object.freeze({}), null); // false
 var target = {};
 var proto = Object.create(target);
 Reflect.setPrototypeOf(target, proto); // false
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.setPrototypeOf()")}}

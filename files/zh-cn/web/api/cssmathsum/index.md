@@ -11,38 +11,32 @@ tags:
   - Reference
 translation_of: Web/API/CSSMathSum
 ---
-<div>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p> {{domxref('CSS Typed Object Model API','','',' ')}} 的  <strong><code>CSSMathSum</code></strong> 接口通过调用{{domxref('CSSNumericValue')}} 的 {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 方法获得结果。</p>
+{{domxref('CSS Typed Object Model API','','',' ')}} 的 **`CSSMathSum`** 接口通过调用{{domxref('CSSNumericValue')}} 的 {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 方法获得结果。
 
-<p></p>
+## 创建
 
-<h2 id="创建">创建</h2>
+- {{domxref("CSSMathSum.CSSMathSum()")}}
+  - : 创建一个新的 `CSSMathSum` 对象。
 
-<dl>
- <dt>{{domxref("CSSMathSum.CSSMathSum()")}}</dt>
- <dd>创建一个新的 <code>CSSMathSum</code> 对象。</dd>
-</dl>
+## 属性
 
-<h2 id="属性">属性</h2>
+- {{domxref('CSSMathSum.values')}}
+  - : 返回一个包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
 
-<dl>
- <dt>{{domxref('CSSMathSum.values')}}</dt>
- <dd>返回一个包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。</dd>
-</dl>
+### 事件处理
 
-<h3 id="事件处理">事件处理</h3>
+No
 
-<p>No</p>
+## 方法
 
-<h2 id="方法">方法</h2>
+None.
 
-<p>None.</p>
-
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CSSMathSum")}}</p>
+{{Compat("api.CSSMathSum")}}

@@ -10,35 +10,30 @@ tags:
   - web messaging
 translation_of: Web/API/MessageChannel
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>Channel Messaging API 的<strong><code>MessageChannel</code></strong> 接口允许我们创建一个新的消息通道，并通过它的两个{{domxref("MessagePort")}} 属性发送数据。</p>
+Channel Messaging API 的**`MessageChannel`** 接口允许我们创建一个新的消息通道，并通过它的两个{{domxref("MessagePort")}} 属性发送数据。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("MessageChannel.port1")}} {{readonlyInline}}</dt>
- <dd>返回 channel 的 port1。</dd>
- <dt>{{domxref("MessageChannel.port2")}} {{readonlyInline}}</dt>
- <dd>返回 channel 的 port2。</dd>
-</dl>
+- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
+  - : 返回 channel 的 port1。
+- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
+  - : 返回 channel 的 port2。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}</dt>
- <dd>
- <p>返回一个带有两个 MessagePort 属性的 MessageChannel 新对象。</p>
- </dd>
-</dl>
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : 返回一个带有两个 MessagePort 属性的 MessageChannel 新对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在以下代码块中，您可以看到使用 MessageChannel 构造函数实例化了一个 channel 对象。当 iframe 加载完毕，我们使用 MessagePort.postMessage 方法把一条消息和 MessageChannel.port2 传递给 iframe。handleMessage 处理程序将会从 iframe 中（使用 MessagePort.onmessage 监听事件）接收到信息，将数据其放入 innerHTML 中。</p>
+在以下代码块中，您可以看到使用 MessageChannel 构造函数实例化了一个 channel 对象。当 iframe 加载完毕，我们使用 MessagePort.postMessage 方法把一条消息和 MessageChannel.port2 传递给 iframe。handleMessage 处理程序将会从 iframe 中（使用 MessagePort.onmessage 监听事件）接收到信息，将数据其放入 innerHTML 中。
 
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -53,20 +48,19 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>一个完整的运行示例，可以在 GitHub 上查看 <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a>  (<a href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>).</p>
+一个完整的运行示例，可以在 GitHub 上查看 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("api.MessageChannel")}}</div>
+{{Compat("api.MessageChannel")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

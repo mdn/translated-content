@@ -6,92 +6,96 @@ tags:
   - Canvas
 translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeRect()</code></strong> 是 Canvas 2D API 在 canvas 中，使用当前的绘画样式，描绘一个起点在 <em>(x, y)</em> 、宽度为<em> w</em> 、高度为 <em>h</em> 的矩形的方法。</p>
+**`CanvasRenderingContext2D.strokeRect()`** 是 Canvas 2D API 在 canvas 中，使用当前的绘画样式，描绘一个起点在 _(x, y)_、宽度为 _w_、高度为 _h_ 的矩形的方法。
 
-<p>此方法直接绘制到画布而不修改当前路径，因此任何后续{{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}调用对它没有影响。</p>
+此方法直接绘制到画布而不修改当前路径，因此任何后续{{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}调用对它没有影响。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.strokeRect(x, y, width, height);</var>
-</pre>
+```plain
+void ctx.strokeRect(x, y, width, height);
+```
 
-<p><code>strokeRect()</code>方法绘制一个描边矩形，其起点为<code>(x, y)</code> ，其大小由宽度和高度指定。</p>
+`strokeRect()`方法绘制一个描边矩形，其起点为`(x, y)` ，其大小由宽度和高度指定。
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>矩形起点的 x 轴坐标。</dd>
- <dt><code>y</code></dt>
- <dd>矩形起点的 y 轴坐标。</dd>
- <dt><code>width</code></dt>
- <dd>矩形的宽度。正值在右侧，负值在左侧。</dd>
- <dt><code>height</code></dt>
- <dd>矩形的高度。正值在下，负值在上。</dd>
-</dl>
+- `x`
+  - : 矩形起点的 x 轴坐标。
+- `y`
+  - : 矩形起点的 y 轴坐标。
+- `width`
+  - : 矩形的宽度。正值在右侧，负值在左侧。
+- `height`
+  - : 矩形的高度。正值在下，负值在上。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="一个简单的填充矩形">一个简单的填充矩形</h3>
+### 一个简单的填充矩形
 
-<p>这是一段使用 <code>strokeRect</code> 方法的简单的代码片段。</p>
+这是一段使用 `strokeRect` 方法的简单的代码片段。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>矩形的左上角是（20,10）。它的宽度为 160，高度为 100。</p>
+矩形的左上角是（20,10）。它的宽度为 160，高度为 100。
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'green';
-ctx.strokeRect(20, 10, 160, 100);</pre>
+ctx.strokeRect(20, 10, 160, 100);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('一个简单的填充矩形', 700, 180) }}</p>
+{{ EmbedLiveSample('一个简单的填充矩形', 700, 180) }}
 
-<h3 id="应用多种上下文设置">应用多种上下文设置</h3>
+### 应用多种上下文设置
 
-<p>此示例绘制一个带有阴影和粗斜面轮廓的矩形。</p>
+此示例绘制一个带有阴影和粗斜面轮廓的矩形。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html"><code>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.shadowColor = '#d53';
 ctx.shadowBlur = 20;
 ctx.lineJoin = 'bevel';
 ctx.lineWidth = 15;
 ctx.strokeStyle = '#38f';
-ctx.strokeRect(30, 30, 160, 90);</pre>
+ctx.strokeRect(30, 30, 160, 90);
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('应用多种上下文设置', 700, 180) }}</p>
+{{ EmbedLiveSample('应用多种上下文设置', 700, 180) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.strokeRect")}}</p>
+{{Compat("api.CanvasRenderingContext2D.strokeRect")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
-</ul>
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}

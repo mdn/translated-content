@@ -3,33 +3,28 @@ title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 translation_of: Web/API/Selection/removeAllRanges
 ---
-<div>
-<div>
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-</div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p><strong><code>Selection.removeAllRanges()</code></strong> 方法会从当前 <code>selection</code> 对象中移除所有的 range 对象，取消所有的选择只 留下{{domxref("Selection.anchorNode", "anchorNode")}} 和{{domxref("Selection.focusNode","focusNode")}}属性并将其设置为 null。</p>
+**`Selection.removeAllRanges()`** 方法会从当前 `selection` 对象中移除所有的 range 对象，取消所有的选择只 留下{{domxref("Selection.anchorNode", "anchorNode")}} 和{{domxref("Selection.focusNode","focusNode")}}属性并将其设置为 null。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>sel</em>.removeAllRanges();
-</pre>
+```plain
+sel.removeAllRanges();
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<p><em>无。</em></p>
+_无。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Selection")}}，此方法所属接口。</li>
-</ul>
+- {{domxref("Selection")}}，此方法所属接口。

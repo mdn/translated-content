@@ -9,134 +9,148 @@ tags:
   - 模块
 translation_of: Web/JavaScript/Reference/Statements/export
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>在创建 JavaScript 模块时，<code><strong>export</strong></code> 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。</p>
+在创建 JavaScript 模块时，**`export`** 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。
 
-<p>无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。 export 语句不能用在嵌入式脚本中。</p>
+无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。 export 语句不能用在嵌入式脚本中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p>存在两种 exports 导出方式：</p>
+存在两种 exports 导出方式：
 
-<ol>
- <li>命名导出（每个模块包含任意数量）</li>
- <li>默认导出（每个模块包含一个）</li>
-</ol>
+1.  命名导出（每个模块包含任意数量）
+2.  默认导出（每个模块包含一个）
 
-<pre class="brush: js">// 导出单个特性
-export let <em>name1</em>, <em>name2</em>, …, <em>nameN</em>; // also var, const
-export let <em>name1</em> = …, <em>name2</em> = …, …, <em>nameN</em>; // also var, const
+```js
+// 导出单个特性
+export let name1, name2, …, nameN; // also var, const
+export let name1 = …, name2 = …, …, nameN; // also var, const
 export function FunctionName(){...}
 export class ClassName {...}
 
 // 导出列表
-export { <em>name1</em>, <em>name2</em>, …, <em>nameN</em> };
+export { name1, name2, …, nameN };
 
 // 重命名导出
-export { <em>variable1</em> as <em>name1</em>, <em>variable2</em> as <em>name2</em>, …, <em>nameN</em> };
+export { variable1 as name1, variable2 as name2, …, nameN };
 
 // 解构导出并重命名
-export const { <em>name1</em>, <em>name2</em>: <em>bar</em> } = o;
+export const { name1, name2: bar } = o;
 
 // 默认导出
 export default expression;
 export default function (…) { … } // also class, function*
 export default function name1(…) { … } // also class, function*
-export { <em>name1</em> as default, … };
+export { name1 as default, … };
 
 // 导出模块合集
 export * from …; // does not set the default export
 export * as name1 from …; // Draft ECMAScript® 2O21
-export { <em>name1</em>, <em>name2</em>, …, <em>nameN</em> } from …;
-export { <em>import1</em> as <em>name1</em>, <em>import2</em> as <em>name2</em>, …, <em>nameN</em> } from …;
-export { default } from …;</pre>
+export { name1, name2, …, nameN } from …;
+export { import1 as name1, import2 as name2, …, nameN } from …;
+export { default } from …;
+```
 
-<dl>
- <dt><code>nameN</code></dt>
- <dd>要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）.</dd>
-</dl>
+- `nameN`
+  - : 要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>有两种不同的导出方式，命名导出和默认导出。你能够在每一个模块中定义多个命名导出，但是只允许有一个默认导出。每种方式对应于上述的一种语法：</p>
+有两种不同的导出方式，命名导出和默认导出。你能够在每一个模块中定义多个命名导出，但是只允许有一个默认导出。每种方式对应于上述的一种语法：
 
-<p>命名导出：</p>
+命名导出：
 
-<pre class="brush: js">// 导出事先定义的特性
+```js
+// 导出事先定义的特性
 export { myFunction, myVariable };
 
 // 导出单个特性（可以导出 var，let，
 //const,function,class）
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };</pre>
+export function myFunction() { ... };
+```
 
-<p>默认导出：</p>
+默认导出：
 
-<pre class="brush: js">// 导出事先定义的特性作为默认值
+```js
+// 导出事先定义的特性作为默认值
 export { myFunction as default };
 
 // 导出单个特性作为默认值
 export default function () { ... }
 export default class { .. }
 
-// 每个导出都覆盖前一个导出</pre>
+// 每个导出都覆盖前一个导出
+```
 
-<p>在导出多个值时，命名导出非常有用。在导入期间，必须使用相应对象的相同名称。</p>
+在导出多个值时，命名导出非常有用。在导入期间，必须使用相应对象的相同名称。
 
-<p>但是，可以使用任何名称导入默认导出，例如：</p>
+但是，可以使用任何名称导入默认导出，例如：
 
-<pre class="brush: js">// 文件 test.js
-let k; export default k = 12; </pre>
+```js
+// 文件 test.js
+let k; export default k = 12;
+```
 
-<pre class="brush: js">// 另一个文件
+```js
+// 另一个文件
 import m from './test'; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
-console.log(m);        // 输出为 12 </pre>
+console.log(m);        // 输出为 12
+```
 
-<p> 你也可以重命名命名导出以避免命名冲突：</p>
+你也可以重命名命名导出以避免命名冲突：
 
-<pre class="brush: js">export { <var>myFunction</var> as <var>function1</var>,<var>
-         myVariable</var> as variable };</pre>
+```js
+export { myFunction as function1,
+         myVariable as variable };
+```
 
-<h3 id="重导出_聚合">重导出 / 聚合</h3>
+### 重导出 / 聚合
 
-<p>为了使模块导入变得可用，在一个父模块中“导入/导出”这些不同模块也是可行的。也就是说，你可以创建单个模块，集中多个模块的多个导出。</p>
+为了使模块导入变得可用，在一个父模块中“导入/导出”这些不同模块也是可行的。也就是说，你可以创建单个模块，集中多个模块的多个导出。
 
-<p>这个可以使用“export from”语法实现：</p>
+这个可以使用“export from”语法实现：
 
-<pre class="brush: js">export { default as function1,
+```js
+export { default as function1,
          function2 } from 'bar.js';
-</pre>
+```
 
-<p>与之形成对比的是联合使用导入和导出：</p>
+与之形成对比的是联合使用导入和导出：
 
-<pre class="brush: js">import { default as function1,
+```js
+import { default as function1,
          function2 } from 'bar.js';
 export { function1, function2 };
-</pre>
+```
 
-<p>但这里的 <code>function1</code> 和 <code>function2</code> 在当前模块中变得不可用。</p>
+但这里的 `function1` 和 `function2` 在当前模块中变得不可用。
 
-<div class="note">
-<p><strong>备注：</strong>尽管与 import 等效，但以下语法在语法上无效：</p>
-</div>
+> **备注：**尽管与 import 等效，但以下语法在语法上无效：
 
-<pre class="brush: js">import DefaultExport from 'bar.js'; // 有效的
-</pre>
+```js
+import DefaultExport from 'bar.js'; // 有效的
+```
 
-<pre class="brush: js">export DefaultExport from 'bar.js'; // 无效的</pre>
+```js
+export DefaultExport from 'bar.js'; // 无效的
+```
 
-<p>这里正确的做法是重命名这个导出：</p>
+这里正确的做法是重命名这个导出：
 
-<pre class="brush: js">export { default as DefaultExport } from 'bar.js';</pre>
+```js
+export { default as DefaultExport } from 'bar.js';
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用命名导出">使用命名导出</h3>
+### 使用命名导出
 
-<p>在模块 <code>my-module.js</code> 中，可能包含以下代码：</p>
+在模块 `my-module.js` 中，可能包含以下代码：
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 function cube(x) {
   return x * x * x;
 }
@@ -154,11 +168,12 @@ var graph = {
 }
 
 export { cube, foo, graph };
-</pre>
+```
 
-<p>然后，在你的 HTML 页面的顶级模块中：</p>
+然后，在你的 HTML 页面的顶级模块中：
 
-<pre class="brush: js">import { cube, foo, graph } from 'my-module.js';
+```js
+import { cube, foo, graph } from 'my-module.js';
 
 graph.options = {
     color:'blue',
@@ -167,84 +182,84 @@ graph.options = {
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888</pre>
+console.log(foo);    // 4.555806215962888
+```
 
-<p>着重注意以下几点：</p>
+着重注意以下几点：
 
-<ul>
- <li>在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理</li>
- <li>不能通过 <code>file://</code> URL 运行 JS 模块 — 这将导致 <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> 错误。你需要通过 HTTP 服务器运行。</li>
-</ul>
+- 在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理
+- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/en-US/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
 
-<h3 id="使用默认导出">使用默认导出</h3>
+### 使用默认导出
 
-<p>如果我们要导出一个值或得到模块中的返回值，就可以使用默认导出：</p>
+如果我们要导出一个值或得到模块中的返回值，就可以使用默认导出：
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 
 export default function cube(x) {
   return x * x * x;
 }
-</pre>
+```
 
-<p>然后，在另一个脚本中，可以直接导入默认导出：</p>
+然后，在另一个脚本中，可以直接导入默认导出：
 
-<pre class="brush: js">import cube from './my-module.js';
+```js
+import cube from './my-module.js';
 console.log(cube(3)); // 27
-</pre>
+```
 
-<h3 id="模块重定向">模块重定向</h3>
+### 模块重定向
 
-<p>举个例子，假如我们有如下层次结构：</p>
+举个例子，假如我们有如下层次结构：
 
-<ul>
- <li><code>childModule1.js</code>: 导出 <code>myFunction</code> 和 <code>myVariable</code></li>
- <li><code>childModule2.js</code>: 导出 <code>myClass</code></li>
- <li><code>parentModule.js</code>: 作为聚合器（不做其他事情）</li>
- <li>顶层模块：调用 <code>parentModule.js</code> 的导出项</li>
-</ul>
+- `childModule1.js`: 导出 `myFunction` 和 `myVariable`
+- `childModule2.js`: 导出 `myClass`
+- `parentModule.js`: 作为聚合器（不做其他事情）
+- 顶层模块：调用 `parentModule.js` 的导出项
 
-<p>你的代码看起来应该像这样：</p>
+你的代码看起来应该像这样：
 
-<pre class="brush: js">// childModule1.js 中
+```js
+// childModule1.js 中
 let myFunction = ...; // assign something useful to myFunction
 let myVariable = ...; // assign something useful to myVariable
-export {myFunction, myVariable};</pre>
+export {myFunction, myVariable};
+```
 
-<pre class="brush: js">// childModule2.js 中
+```js
+// childModule2.js 中
 let myClass = ...; // assign something useful to myClass
 export myClass;
-</pre>
+```
 
-<pre class="brush: js">// parentModule.js 中
+```js
+// parentModule.js 中
 // 仅仅聚合 childModule1 和 childModule2 中的导出
 // 以重新导出他们
 export { myFunction, myVariable } from 'childModule1.js';
 export { myClass } from 'childModule2.js';
-</pre>
+```
 
-<pre class="brush: js">// 顶层模块中
+```js
+// 顶层模块中
 // 我们可以从单个模块调用所有导出，因为 parentModule 事先
 // 已经将他们“收集”/“打包”到一起
 import { myFunction, myVariable, myClass } from 'parentModule.js'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Statements/import", "import")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide</li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
- <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
-</ul>
+- {{jsxref("Statements/import", "import")}}
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

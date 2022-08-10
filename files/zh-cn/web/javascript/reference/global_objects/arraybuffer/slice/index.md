@@ -3,55 +3,50 @@ title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>slice()</strong></code>方法返回一个新的 <code>ArrayBuffer</code> ，它的内容是这个 <code>ArrayBuffer</code> 的字节副本，从 begin（包括），到 end（不包括）。</p>
+**`slice()`**方法返回一个新的 `ArrayBuffer` ，它的内容是这个 `ArrayBuffer` 的字节副本，从 begin（包括），到 end（不包括）。
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
+## 语法
 
+```plain
+arraybuffer.slice(begin[, end])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">arraybuffer.slice(begin[, end])</pre>
+- `begin`
+  - : 从零开始的字节索引，切片从这开始。
+- `end`
+  - : 结束切片的字节索引。如果没指定 end，新的 `ArrayBuffer` 将包含这个 `ArrayBuffer` 从头到尾的所有字节。由 begin 和 end 指定的这个范围夹在当前数组的有效索引范围内。如果新`ArrayBuffer`的长度在计算后为负，它将强制为 0 。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>begin</code></dt>
- <dd>从零开始的字节索引，切片从这开始。</dd>
- <dt><code>end</code></dt>
- <dd>结束切片的字节索引。如果没指定 end，新的 <code>ArrayBuffer</code> 将包含这个 <code>ArrayBuffer</code> 从头到尾的所有字节。由 begin 和 end 指定的这个范围夹在当前数组的有效索引范围内。如果新<code>ArrayBuffer</code>的长度在计算后为负，它将强制为 0 。</dd>
-</dl>
+一个新的 `ArrayBuffer` 对象。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p> 一个新的 <code>ArrayBuffer</code> 对象。</p>
+`slice` 方法复制到但不包括由 end 参数指示的字节。如果 begin 或 end 是负数，则指的是从数组末尾开始的索引，而不是从头开始。
 
-<h2 id="描述">描述</h2>
+## 示例
 
-<p><code>slice</code> 方法复制到但不包括由 end 参数指示的字节。如果 begin 或 end 是负数，则指的是从数组末尾开始的索引，而不是从头开始。</p>
+### 复制一个 `ArrayBuffer`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="复制一个_ArrayBuffer">复制一个 <code>ArrayBuffer</code></h3>
-
-<pre class="brush: js">var buf1 = new ArrayBuffer(8);
+```js
+var buf1 = new ArrayBuffer(8);
 var buf2 = buf1.slice(0);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

@@ -3,43 +3,40 @@ title: WebGLQuery
 slug: Web/API/WebGLQuery
 translation_of: Web/API/WebGLQuery
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><strong><code>WebGLQuery</code></strong> 接口是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。</p>
+**`WebGLQuery`** 接口是 [WebGL 2](/en-US/docs/Web/API/WebGL_API) API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。
 
-<p>另一种查询是分离定时器查询，它可以允许你测量 GPU 的性能和能力。仅当存在 {{domxref("EXT_disjoint_timer_query")}} 扩展时分离定时器查询才是可用的。</p>
+另一种查询是分离定时器查询，它可以允许你测量 GPU 的性能和能力。仅当存在 {{domxref("EXT_disjoint_timer_query")}} 扩展时分离定时器查询才是可用的。
 
-<p>使用 <code>WebGLQuery</code> 对象时，{{domxref("WebGL2RenderingContext")}} 的下列方法是有用的：</p>
+使用 `WebGLQuery` 对象时，{{domxref("WebGL2RenderingContext")}} 的下列方法是有用的：
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.beginQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.endQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getQueryParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createQuery()")}}
+- {{domxref("WebGL2RenderingContext.deleteQuery()")}}
+- {{domxref("WebGL2RenderingContext.isQuery()")}}
+- {{domxref("WebGL2RenderingContext.beginQuery()")}}
+- {{domxref("WebGL2RenderingContext.endQuery()")}}
+- {{domxref("WebGL2RenderingContext.getQuery()")}}
+- {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="创建一个_WebGLQuery_对象">创建一个 <code>WebGLQuery</code> 对象</h3>
+### 创建一个 `WebGLQuery` 对象
 
-<p>在本例中，<code>gl</code> 必须是 {{domxref("WebGL2RenderingContext")}}. <code>WebGLQuery</code> 对象在 WebGL 1 中是不可用的。</p>
+在本例中，`gl` 必须是 {{domxref("WebGL2RenderingContext")}}. `WebGLQuery` 对象在 WebGL 1 中是不可用的。
 
-<pre class="brush: js">var query = gl.createQuery();
-</pre>
+```js
+var query = gl.createQuery();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLQuery")}}</p>
+{{Compat("api.WebGLQuery")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("EXT_disjoint_timer_query")}}

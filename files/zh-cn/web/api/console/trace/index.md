@@ -3,28 +3,29 @@ title: console.trace
 slug: Web/API/Console/trace
 translation_of: Web/API/Console/trace
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>{{domxref("console")}} 的 <strong><code>trace()</code> 方法</strong>向 <a href="/zh-cn/Tools/Web_Console">Web 控制台</a> 输出一个堆栈跟踪。</p>
+{{domxref("console")}} 的 **`trace()` 方法**向 [Web 控制台](/zh-cn/Tools/Web_Console) 输出一个堆栈跟踪。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>在页面{{ domxref("console") }}文档中查看<a href="/zh-CN/docs/Web/API/console#堆栈跟踪">堆栈跟踪</a>的详细介绍和示例。</p>
+在页面{{ domxref("console") }}文档中查看[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)的详细介绍和示例。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="notranslate">console.trace( [...<var>any</var>, ...<var>data</var> ]);</pre>
+```plain
+console.trace( [...any, ...data ]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>...<var>any</var>, ...<var>data</var></code> {{optional_inline}}</dt>
- <dd>Zero or more objects to be output to console along with the trace. These are assembled and formatted the same way they would be if passed to the {{domxref("console.log()")}} method.</dd>
-</dl>
+- `...any, ...data` {{optional_inline}}
+  - : Zero or more objects to be output to console along with the trace. These are assembled and formatted the same way they would be if passed to the {{domxref("console.log()")}} method.
 
-<h2 id="Syntax">Example</h2>
+## Example
 
-<pre class="notranslate">function foo() {
+```plain
+function foo() {
   function bar() {
     console.trace();
   }
@@ -32,24 +33,24 @@ translation_of: Web/API/Console/trace
 }
 
 foo();
-</pre>
+```
 
-<p>In the console, the following trace will be displayed:</p>
+In the console, the following trace will be displayed:
 
-<pre class="notranslate">bar
+```plain
+bar
 foo
-&lt;anonymous&gt;</pre>
+<anonymous>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)

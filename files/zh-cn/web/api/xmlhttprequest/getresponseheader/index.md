@@ -15,30 +15,31 @@ tags:
   - 方法
 translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.getResponseHeader()</strong>方法返回包含指定响应头文本的字符串。</p>
+**XMLHttpRequest.getResponseHeader()**方法返回包含指定响应头文本的字符串。
 
-<p>如果在返回的响应头中有多个一样的名称，那么返回的值就会是用逗号和空格将值分隔的字符串。<code>getResponseHeader()</code> 方法以 UTF 编码返回值。搜索的报文名是不区分大小写的。</p>
+如果在返回的响应头中有多个一样的名称，那么返回的值就会是用逗号和空格将值分隔的字符串。`getResponseHeader()` 方法以 UTF 编码返回值。搜索的报文名是不区分大小写的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="notranslate">var myHeader = XMLHttpRequest.getResponseHeader(name);</pre>
+```plain
+var myHeader = XMLHttpRequest.getResponseHeader(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>一个字符串，表示要返回的报文项名称。</dd>
-</dl>
+- name
+  - : 一个字符串，表示要返回的报文项名称。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>报文项值，如果连接未完成，响应中不存在报文项，或者被 W3C 限制，则返回 null。</p>
+报文项值，如果连接未完成，响应中不存在报文项，或者被 W3C 限制，则返回 null。
 
-<h2 id="示例：">示例：</h2>
+## 示例：
 
-<pre class="brush: js notranslate">var client = new XMLHttpRequest(); //新建 XMLHttpRequest 对象。
+```js
+var client = new XMLHttpRequest(); //新建 XMLHttpRequest 对象。
 client.open("GET", "somefile.txt", true); // 采用异步，GET 方式获取 somefile.txt。
 client.send(); // 发送空的 query string。
 client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
@@ -48,22 +49,21 @@ client.onreadystatechange = function() { //设定侦听器 onreadystatechange。
       client.abort(); // 终止连接
     }
   }
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.XMLHttpRequest.getResponseHeader")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>如何使用<a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XMLHttpRequest</a></li>
- <li><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP headers</a></li>
- <li>{{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}</li>
- <li>{{DOMxRef("XMLHttpRequest.response", "response")}}</li>
- <li>设置请求头: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}</li>
-</ul>
+- 如何使用[XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)
+- {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
+- {{DOMxRef("XMLHttpRequest.response", "response")}}
+- 设置请求头: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

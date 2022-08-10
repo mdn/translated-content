@@ -5,15 +5,16 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
-<p>{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
-<p>在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的 mp4 视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。</p>
+在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的 mp4 视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。
 
-<h2 id="获取视频">获取视频</h2>
+## 获取视频
 
-<p>第一步是创建 {{ HTMLElement("video") }} 将用于检索视频帧的元素：</p>
+第一步是创建 {{ HTMLElement("video") }} 将用于检索视频帧的元素：
 
-<pre class="brush: js">// will set to true when video can be copied to texture
+```js
+// will set to true when video can be copied to texture
 var copyVideo = false;
 
 function setupVideo(url) {
@@ -43,24 +44,25 @@ function setupVideo(url) {
   video.play();
 
   function checkReady() {
-    if (playing &amp;&amp; timeupdate) {
+    if (playing && timeupdate) {
       copyVideo = true;
     }
   }
 
   return video;
 }
-</pre>
+```
 
-<p>首先，我们创建一个视频元素。我们将其设置为自动播放，静音和循环播放视频。然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。我们需要进行这两项检查，因为如果将视频上传到 WebGL 尚无可用数据，它将产生错误。检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到 WebGL 纹理。在上面的代码中，我们确认是否同时发生了这两个事件。如果是这样，我们将全局变量设置 <code>copyVideo</code> 为 true，以表示可以安全地开始将视频复制到纹理。</p>
+首先，我们创建一个视频元素。我们将其设置为自动播放，静音和循环播放视频。然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。我们需要进行这两项检查，因为如果将视频上传到 WebGL 尚无可用数据，它将产生错误。检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到 WebGL 纹理。在上面的代码中，我们确认是否同时发生了这两个事件。如果是这样，我们将全局变量设置 `copyVideo` 为 true，以表示可以安全地开始将视频复制到纹理。
 
-<p>最后，我们将 <code>src</code> 属性设置为 start 并调用 <code>play</code> 以开始加载和播放视频。</p>
+最后，我们将 `src` 属性设置为 start 并调用 `play` 以开始加载和播放视频。
 
-<h2 id="用视频帧作为纹理">用视频帧作为纹理</h2>
+## 用视频帧作为纹理
 
-<p>接下来的更改是 <code>initTexture()</code>，它变得更加简单，因为它不再需要加载图像文件。相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件供以后使用：</p>
+接下来的更改是 `initTexture()`，它变得更加简单，因为它不再需要加载图像文件。相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件供以后使用：
 
-<pre class="brush: js">function initTexture(gl) {
+```js
+function initTexture(gl) {
   const texture = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -87,11 +89,13 @@ function setupVideo(url) {
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
   return texture;
-}</pre>
+}
+```
 
-<p>这里是 <code>updateTexture()</code> 方法，这是完成实际工作的地方：</p>
+这里是 `updateTexture()` 方法，这是完成实际工作的地方：
 
-<pre class="brush: js">function updateTexture(gl, texture, video) {
+```js
+function updateTexture(gl, texture, video) {
   const level = 0;
   const internalFormat = gl.RGBA;
   const srcFormat = gl.RGBA;
@@ -99,15 +103,17 @@ function setupVideo(url) {
   gl.bindTexture(gl.TEXTURE_2D, texture);
   gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
                 srcFormat, srcType, video);
-}</pre>
+}
+```
 
-<p>您之前已经看过此代码。它与上一个示例中的 image onload 函数几乎相同 - 除非我们调用 <code>texImage2D()</code>，不是传递 <code>Image</code> 对象，而是传递 {{ HTMLElement("video") }} 元素。WebGL 知道如何拉出当前帧并将其用作纹理。</p>
+您之前已经看过此代码。它与上一个示例中的 image onload 函数几乎相同 - 除非我们调用 `texImage2D()`，不是传递 `Image` 对象，而是传递 {{ HTMLElement("video") }} 元素。WebGL 知道如何拉出当前帧并将其用作纹理。
 
-<p>然后，在 <code>main()</code> 代替通话，以 <code>loadTexture()</code> 在前面的例子中，我们调用 <code>initTexture()</code> 之后 <code>setupVideo()</code>。</p>
+然后，在 `main()` 代替通话，以 `loadTexture()` 在前面的例子中，我们调用 `initTexture()` 之后 `setupVideo()`。
 
-<p>在 <code>render()</code> 是否 <code>copyVideo</code> 为真的定义中，则 <code>updateTexture()</code> 每次调用 <code>drawScene()</code> 函数之前都会调用一次。</p>
+在 `render()` 是否 `copyVideo` 为真的定义中，则 `updateTexture()` 每次调用 `drawScene()` 函数之前都会调用一次。
 
-<pre class="brush: js">  const texture = initTexture(gl);
+```js
+  const texture = initTexture(gl);
 
   const video = setupVideo('Firefox.mp4');
 
@@ -127,18 +133,17 @@ function setupVideo(url) {
 
     requestAnimationFrame(render);
   }
-  requestAnimationFrame(render);</pre>
+  requestAnimationFrame(render);
+```
 
-<p>下面是结果：</p>
+下面是结果：
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">查看完整的代码</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">在新页中打开这个 demo</a></p>
+[查看完整的代码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [在新页中打开这个 demo](https://mdn.github.io/webgl-examples/tutorial/sample8/)
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en/Using_HTML5_audio_and_video">Using audio and video in Firefox</a></li>
-</ul>
+- [Using audio and video in Firefox](/en/Using_HTML5_audio_and_video)
 
-<p>{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
+{{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

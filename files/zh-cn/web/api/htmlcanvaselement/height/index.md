@@ -3,46 +3,43 @@ title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
 translation_of: Web/API/HTMLCanvasElement/height
 ---
-<div>
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p><strong><code>HTMLCanvasElement.height</code></strong> 属性是一个正<code>整数</code> ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时， 将使用<code>150</code>作为它的默认值。</p>
+**`HTMLCanvasElement.height`** 属性是一个正`整数` ，使用了{{HTMLElement("canvas")}} 元素的 HTML 属性{{htmlattrxref("height", "canvas")}}来反映该元素高度的 CSS 像素值。当该属性没有被定义，或被定义为一个无效值（如负值）时， 将使用`150`作为它的默认值。
 
-<p>控制 canvas 元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。</p>
+控制 canvas 元素大小的属性有两个，这是其中一个，还有一个是{{domxref("HTMLCanvasElement.width")}}。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>var <em>pxl</em> = <em>canvas</em></var>.height;
-<em>canvas</em>.height = <em>pxl</em>;
-</pre>
+```plain
+var pxl = canvas.height;
+canvas.height = pxl;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>给出这样一个{{HTMLElement("canvas")}} 元素：</p>
+给出这样一个{{HTMLElement("canvas")}} 元素：
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
 
-<p>可以通过以下代码获得这个 canvas 元素的高度：</p>
+可以通过以下代码获得这个 canvas 元素的高度：
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 console.log(canvas.height); // 300
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLCanvasElement.height")}}
 
-<h2 id="See_Also">其他</h2>
+## 其他
 
-<ul>
- <li>定义的接口，{{domxref("HTMLCanvasElement")}}.</li>
- <li>另一个控制 canvas 大小的属性，{{domxref("HTMLCanvasElement.width")}}.</li>
-</ul>
+- 定义的接口，{{domxref("HTMLCanvasElement")}}.
+- 另一个控制 canvas 大小的属性，{{domxref("HTMLCanvasElement.width")}}.

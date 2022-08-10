@@ -3,30 +3,32 @@ title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
 translation_of: Web/API/CacheStorage/keys
 ---
-<p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-<p>{{domxref("CacheStorage")}} 接口的 <code><strong>keys</strong></code><strong><code>()</code></strong> 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组 resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}}  对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。</p>
+{{domxref("CacheStorage")}} 接口的 **`keys()`** 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组 resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}} 对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">caches.keys().then(function(<em>keyList</em>) {
+```plain
+caches.keys().then(function(keyList) {
   //对 keyList 做操作
 });
-</pre>
+```
 
-<h3 id="返回">返回</h3>
+### 返回
 
-<p>一个使用 {{domxref("CacheStorage")}} 对象中 {{domxref("Cache")}} 名称数组 resolve 的 {{jsxref("Promise")}} </p>
+一个使用 {{domxref("CacheStorage")}} 对象中 {{domxref("Cache")}} 名称数组 resolve 的 {{jsxref("Promise")}}
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的 cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 <code>keys() 方法</code> 来返回{{domxref("CacheStorage")}} 对象中的 keys 集合，然后检查缓存 key 是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。</p>
+在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的 cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 `keys() 方法` 来返回{{domxref("CacheStorage")}} 对象中的 keys 集合，然后检查缓存 key 是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。
 
-<pre class="brush: js">this.addEventListener('activate', function(event) {
+```js
+this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(
@@ -38,20 +40,19 @@ translation_of: Web/API/CacheStorage/keys
       });
     })
   );
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.CacheStorage.keys")}}
 
-<h2 id="亦可参考">亦可参考</h2>
+## 亦可参考
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li>{{domxref("Cache")}}</li>
- <li>{{domxref("WorkerGlobalScope.caches")}}</li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("WorkerGlobalScope.caches")}}

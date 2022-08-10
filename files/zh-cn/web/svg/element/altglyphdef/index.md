@@ -10,36 +10,32 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/altGlyphDef
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>altGlyphDef</code>元素定义了一个表达字形的替代物。</p>
+`altGlyphDef`元素定义了一个表达字形的替代物。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>无</em></p>
+_无_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGAltGlyphDefElement">SVGAltGlyphDefElement</a></code>接口。</p>
+该元素实现了[`SVGAltGlyphDefElement`](/en/DOM/SVGAltGlyphDefElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("glyphRef") }}</li>
- <li>{{ SVGElement("altGlyphDef") }}</li>
-</ul>
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("altGlyphDef") }}

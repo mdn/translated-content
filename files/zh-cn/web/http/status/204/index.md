@@ -9,26 +9,26 @@ tags:
   - 成功响应
 translation_of: Web/HTTP/Status/204
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>204 No Content </code></strong>成功状态响应码，表示该请求已经成功了，但是客户端客户不需要离开当前页面。默认情况下 204 响应是可缓存的。一个 {{HTTPHeader("ETag")}} 标头包含在此类响应中。 </p>
+HTTP **`204 No Content `**成功状态响应码，表示该请求已经成功了，但是客户端客户不需要离开当前页面。默认情况下 204 响应是可缓存的。一个 {{HTTPHeader("ETag")}} 标头包含在此类响应中。
 
-<p>使用惯例是，在 {{HTTPMethod("PUT")}} 请求中进行资源更新，但是不需要改变当前展示给用户的页面，那么返回 204 No Content。如果创建了资源，则返回 {{HTTPStatus("201")}} <code>Created</code> 。如果应将页面更改为新更新的页面，则应改用 {{HTTPStatus("200")}} 。</p>
+使用惯例是，在 {{HTTPMethod("PUT")}} 请求中进行资源更新，但是不需要改变当前展示给用户的页面，那么返回 204 No Content。如果创建了资源，则返回 {{HTTPStatus("201")}} `Created` 。如果应将页面更改为新更新的页面，则应改用 {{HTTPStatus("200")}} 。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">204 No Content</pre>
+```plain
+204 No Content
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-</ul>
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

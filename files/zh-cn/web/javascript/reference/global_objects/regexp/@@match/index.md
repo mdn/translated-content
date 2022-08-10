@@ -1,5 +1,5 @@
 ---
-title: 'RegExp.prototype[@@match]()'
+title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 tags:
   - JavaScript
@@ -7,54 +7,58 @@ tags:
   - 正则
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>对<em>正则表达式</em>匹配<em>字符串</em>时，<strong><code>[@@match]()</code></strong>方法用于获取匹配结果。</p>
+对*正则表达式*匹配*字符串*时，**`[@@match]()`**方法用于获取匹配结果。
 
-<p>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}</p>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.match](str)</pre>
+```plain
+regexp[Symbol.match](str)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>str</code></dt>
- <dd>match 的目标参数是{{jsxref("String")}}</dd>
-</dl>
+- `str`
+  - : match 的目标参数是{{jsxref("String")}}
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>match 方法会返回一个数组，它包括整个匹配结果，和通过捕获组匹配到的结果，如果没有匹配到则返回 null</p>
+match 方法会返回一个数组，它包括整个匹配结果，和通过捕获组匹配到的结果，如果没有匹配到则返回 null
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>这个方法在 {{jsxref("String.prototype.match()")}} 的内部调用。例如，下面的两个方法返回相同结果。</p>
+这个方法在 {{jsxref("String.prototype.match()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
-<pre class="brush: js">'abc'.match(/a/);
+```js
+'abc'.match(/a/);
 
-/a/[Symbol.match]('abc');</pre>
+/a/[Symbol.match]('abc');
+```
 
-<p>这个方法为自定义 <code>RegExp</code> 子类中的匹配行为而存在。</p>
+这个方法为自定义 `RegExp` 子类中的匹配行为而存在。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="直接调用">直接调用</h3>
+### 直接调用
 
-<p>这个方法的使用方式和 {{jsxref("String.prototype.match()")}} 相同，不同之处是 <code>this</code> 和参数顺序。</p>
+这个方法的使用方式和 {{jsxref("String.prototype.match()")}} 相同，不同之处是 `this` 和参数顺序。
 
-<pre class="brush: js">var re = /[0-9]+/g;
+```js
+var re = /[0-9]+/g;
 var str = '2016-01-02';
 var result = re[Symbol.match](str);
 console.log(result);  // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="在子类中使用match">在子类中使用<code>@@match</code></h3>
+### 在子类中使用`@@match`
 
-<p>{{jsxref("RegExp")}} 的子类可以覆写 <code>[@@match]()</code>方法来修改默认行为。</p>
+{{jsxref("RegExp")}} 的子类可以覆写 `[@@match]()`方法来修改默认行为。
 
-<pre class="brush: js">class MyRegExp extends RegExp {
+```js
+class MyRegExp extends RegExp {
   [Symbol.match](str) {
     var result = RegExp.prototype[Symbol.match].call(this, str);
     if (!result) return null;
@@ -72,25 +76,21 @@ var result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01
 console.log(result.group(3)); // 02
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat}}</p>
-</div>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

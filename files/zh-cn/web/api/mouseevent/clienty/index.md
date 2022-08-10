@@ -6,55 +6,53 @@ tags:
   - MouseEvent
 translation_of: Web/API/MouseEvent/clientY
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>MouseEvent.clientY</code></strong> 是只读属性， 它提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 <code>clientY</code> 值为 0 ，这一值与页面是否有垂直滚动无关。</p>
+**`MouseEvent.clientY`** 是只读属性， 它提供事件发生时的应用客户端区域的垂直坐标 (与页面坐标不同)。例如，当你点击客户端区域的左上角时，鼠标事件的 `clientY` 值为 0 ，这一值与页面是否有垂直滚动无关。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>y</em> = <em>instanceOfMouseEvent</em>.clientY
-</pre>
+```plain
+var y = instanceOfMouseEvent.clientY
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>被 CSSOM View Module 重新定义为一个 <code>double</code> 类型的浮点值。原来这个属性是被定义为一个 <code>long</code> 整数。可以在 "浏览器兼容性" 那里查看详细内容。</p>
+被 CSSOM View Module 重新定义为一个 `double` 类型的浮点值。原来这个属性是被定义为一个 `long` 整数。可以在 "浏览器兼容性" 那里查看详细内容。
 
-<h3 id="Example">Example</h3>
+### Example
 
-<pre class="brush: js">&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;clientX\clientY example&lt;/title&gt;
+```js
+<html>
+<head>
+<title>clientX\clientY example</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 function showCoords(evt){
   alert(
     "clientX value: " + evt.clientX + "\n"
     + "clientY value: " + evt.clientY + "\n"
   );
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onmousedown="showCoords(event)"&gt;
-&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onmousedown="showCoords(event)">
+<p>To display the mouse coordinates click anywhere on the page.</p>
+</body>
+</html>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.MouseEvent.clientY")}}
 
+## 查看更多
 
-<p>{{Compat("api.MouseEvent.clientY")}}</p>
-
-<h2 id="See_also">查看更多</h2>
-
-<ul>
- <li>{{ domxref("MouseEvent") }}</li>
- <li>{{domxref("MouseEvent.clientX","clientX")}}</li>
- <li>{{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}</li>
-</ul>
+- {{ domxref("MouseEvent") }}
+- {{domxref("MouseEvent.clientX","clientX")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}

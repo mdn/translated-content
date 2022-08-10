@@ -6,24 +6,24 @@ tags:
   - offsetTop
 translation_of: Web/API/VisualViewport/offsetTop
 ---
-<p>{{SeeCompatTable}}{{APIRef("Visual Viewport")}}</p>
+{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
-<p>{{domxref("VisualViewport")}} 接口的只读属性 <strong><code>offsetTop</code></strong> 返回视觉视口的顶部相对于布局视口的顶部的偏移量，以 CSS 像素为单位。</p>
+{{domxref("VisualViewport")}} 接口的只读属性 **`offsetTop`** 返回视觉视口的顶部相对于布局视口的顶部的偏移量，以 CSS 像素为单位。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>offsetTop</em> = VisualViewport.offsetTop</pre>
+```plain
+var offsetTop = VisualViewport.offsetTop
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个双精度值。</p>
+一个双精度值。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.VisualViewport.offsetTop")}}</p>
+{{Compat("api.VisualViewport.offsetTop")}}

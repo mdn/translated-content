@@ -1,56 +1,58 @@
 ---
 title: ':nth-last-of-type'
-slug: 'Web/CSS/:nth-last-of-type'
+slug: Web/CSS/:nth-last-of-type
 tags:
   - CSS
   - CSS 伪类
-translation_of: 'Web/CSS/:nth-last-of-type'
+translation_of: Web/CSS/:nth-last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong><code>:nth-last-of-type(an+b)</code></strong> 这个 CSS <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 匹配那些在它之后有 <code><em>a</em>n+<em>b</em>-1</code> 个相同类型兄弟节点的元素，其中 <code>n</code> 为正值或零值。它基本上和 {{Cssxref(":nth-of-type")}} 一样，只是它从<strong>结尾</strong>处反序计数，而不是从开头处。</p>
+**`:nth-last-of-type(an+b)`** 这个 CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 匹配那些在它之后有 `an+b-1` 个相同类型兄弟节点的元素，其中 `n` 为正值或零值。它基本上和 {{Cssxref(":nth-of-type")}} 一样，只是它从**结尾**处反序计数，而不是从开头处。
 
-<p>可以在 {{Cssxref(":nth-child")}} 中查看关于语法参数更详细的描述。</p>
+可以在 {{Cssxref(":nth-child")}} 中查看关于语法参数更详细的描述。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;This is a span.&lt;/span&gt;
-  &lt;span&gt;This is another span.&lt;/span&gt;
-  &lt;em&gt;This is emphasized.&lt;/em&gt;
-  &lt;span&gt;Wow, this span gets limed!!!&lt;/span&gt;
-  &lt;strike&gt;This is struck through.&lt;/strike&gt;
-  &lt;span&gt;Here is one last span.&lt;/span&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <span>This is a span.</span>
+  <span>This is another span.</span>
+  <em>This is emphasized.</em>
+  <span>Wow, this span gets limed!!!</span>
+  <strike>This is struck through.</strike>
+  <span>Here is one last span.</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span:nth-last-of-type(2) {
+```css
+span:nth-last-of-type(2) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example','100%', '60')}}</p>
+{{EmbedLiveSample('Example','100%', '60')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.selectors.nth-last-of-type")}}</p>
+{{Compat("css.selectors.nth-last-of-type")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-last-child")}}, {{Cssxref(":nth-of-type")}}

@@ -3,19 +3,19 @@ title: <nobr>
 slug: Web/HTML/Element/nobr
 translation_of: Web/HTML/Element/nobr
 ---
-<div>{{non-standard_header}}</div>
+{{non-standard_header}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p> HTML <code>&lt;nobr&gt;</code> 元素阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性 {{Cssxref("white-space")}}，像这样：</p>
+HTML `<nobr>` 元素阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性 {{Cssxref("white-space")}}，像这样：
 
-<pre class="brush:css">&lt;span style="white-space: nowrap"&gt;Long line with no breaks&lt;/span&gt;</pre>
+```css
+<span style="white-space: nowrap">Long line with no breaks</span>
+```
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
- <li>{{Cssxref("white-space")}}</li>
- <li>{{Cssxref("overflow")}}</li>
-</ul>
+- {{Cssxref("white-space")}}
+- {{Cssxref("overflow")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

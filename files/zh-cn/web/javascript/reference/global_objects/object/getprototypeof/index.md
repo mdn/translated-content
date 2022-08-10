@@ -8,43 +8,44 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.getPrototypeOf()</strong></code> 方法返回指定对象的原型（内部<code>[[Prototype]]</code>属性的值）。</p>
+**`Object.getPrototypeOf()`** 方法返回指定对象的原型（内部`[[Prototype]]`属性的值）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Object.getPrototypeOf(<em>object</em>)</code>
-</pre>
+```plain
+Object.getPrototypeOf(object)
+```
 
-<h3 id="参数">参数<code>obj</code></h3>
+### 参数`obj`
 
-<p>要返回其原型的对象。</p>
+要返回其原型的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给定对象的原型。如果没有继承属性，则返回 {{jsxref("null")}} 。</p>
+给定对象的原型。如果没有继承属性，则返回 {{jsxref("null")}} 。
 
-<p>{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}</p>
+{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">var proto = {};
+```js
+var proto = {};
 var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 
 var reg = /a/;
-Object.getPrototypeOf(reg) === RegExp.prototype; // true</pre>
+Object.getPrototypeOf(reg) === RegExp.prototype; // true
+```
 
-<h3 id="说明">说明</h3>
+### 说明
 
-<div class="note">
-<p><strong>备注：</strong></p>
-</div>
+> **备注：**
 
-JavaScript 中的 <strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></strong> 是构造函数（创建对象的包装器）。
+JavaScript 中的 **[Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)** 是构造函数（创建对象的包装器）。
 
-<pre class="brush: js">
+```js
 // 一般用法是：
 var obj = new Object();
 
@@ -57,36 +58,37 @@ Object.getPrototypeOf( Object ) === Function.prototype;        // true
 Object.getPrototypeOf( Object ) 是把 Object 这一构造函数看作对象，
 返回的当然是函数对象的原型，也就是 Function.prototype。
 
-正确的方法是，Object.prototype 是<strong>构造出来的对象的原型</strong>。
+正确的方法是，Object.prototype 是构造出来的对象的原型。
 var obj = new Object();
 Object.prototype === Object.getPrototypeOf( obj );              // true
 
-Object.prototype === Object.getPrototypeOf( {} );               // true</pre>
+Object.prototype === Object.getPrototypeOf( {} );               // true
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}<strong>。</strong></p>
+在 ES5 中，如果参数不是一个对象类型，将抛出一个{{jsxref("TypeError")}}异常。在 ES2015 中，参数会被强制转换为一个 {{jsxref("Object")}}**。**
 
-<pre class="brush: js">Object.getPrototypeOf('foo');
+```js
+Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
 Object.getPrototypeOf('foo');
-// String.prototype                  (ES2015 code)</pre>
+// String.prototype                  (ES2015 code)
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.isPrototypeOf")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig's post on <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a></li>
- <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
- <li>{{jsxref("AsyncFunction")}}</li>
-</ul>
+- {{jsxref("Object.prototype.isPrototypeOf")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Object.prototype.__proto__")}}
+- John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxref("Reflect.getPrototypeOf()")}}
+- {{jsxref("AsyncFunction")}}

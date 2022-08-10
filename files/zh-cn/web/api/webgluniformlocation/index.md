@@ -7,38 +7,36 @@ tags:
   - WebGLUniformLocation
 translation_of: Web/API/WebGLUniformLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebGLUniformLocation</strong> 接口是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，在一个着色器程序中表示一个统一变量的位置。</p>
+**WebGLUniformLocation** 接口是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，在一个着色器程序中表示一个统一变量的位置。
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p><code>WebGLUniformLocation</code> 对象未定义任何属于自己并能直接访问其内容的方法和属性。在使用 <code>WebGLUniformLocation</code> 对象时，{{domxref("WebGLRenderingContext")}} 的方法是有用的：</p>
+`WebGLUniformLocation` 对象未定义任何属于自己并能直接访问其内容的方法和属性。在使用 `WebGLUniformLocation` 对象时，{{domxref("WebGLRenderingContext")}} 的方法是有用的：
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
- <li>{{domxref("WebGLRenderingContext.uniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+- {{domxref("WebGLRenderingContext.uniform()")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="获取一个统一位置">获取一个统一位置</h3>
+### 获取一个统一位置
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");
 
-var location = gl.getUniformLocation(WebGLProgram, "uniformName");</pre>
+var location = gl.getUniformLocation(WebGLProgram, "uniformName");
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}

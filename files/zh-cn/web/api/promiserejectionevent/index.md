@@ -3,59 +3,53 @@ title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
 translation_of: Web/API/PromiseRejectionEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>PromiseRejectionEvent</code></strong> 接口表示出现在 JavaScript {{jsxref("Promise")}}s 被 rejecte (拒绝) 时触发的事件。这些事件对遥测 (远程测试) 和调试特别的有用。</p>
+**`PromiseRejectionEvent`** 接口表示出现在 JavaScript {{jsxref("Promise")}}s 被 rejecte (拒绝) 时触发的事件。这些事件对遥测 (远程测试) 和调试特别的有用。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}</dt>
- <dd>用给定的参数生成一个 <code>PromiseRejectionEvent</code> 事件。</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
+  - : 用给定的参数生成一个 `PromiseRejectionEvent` 事件。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>也从它的父级{{domxref("Event")}}继承属性。</em></p>
+_也从它的父级{{domxref("Event")}}继承属性。_
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.promise")}} {{readOnlyInline}}</dt>
- <dd>被 rejected 的 JavaScript {{jsxref("Promise")}} 。</dd>
- <dt>{{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>一个值或 {{jsxref("Object")}} 表明为什么 promise 被 rejected，并传递给{{jsxref("Promise.reject()")}}。</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.promise")}} {{readOnlyInline}}
+  - : 被 rejected 的 JavaScript {{jsxref("Promise")}} 。
+- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+  - : 一个值或 {{jsxref("Object")}} 表明为什么 promise 被 rejected，并传递给{{jsxref("Promise.reject()")}}。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有特定的方法; 从它的父级 {{domxref("Event")}}继承方法。</em></p>
+_没有特定的方法; 从它的父级 {{domxref("Event")}}继承方法。_
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{Event("unhandledrejection")}}</dt>
- <dd>在一个 JavaScript {{jsxref("Promise")}} 被 reject(拒绝) 但是没有 reject 处理函数来处理时触发。</dd>
- <dt>{{Event("rejectionhandled")}}</dt>
- <dd>在一个 JavaScript {{jsxref("Promise")}} 被 reject 时触发，在 reject 后由 promise 的 reject 处理函数处理。 </dd>
-</dl>
+- {{Event("unhandledrejection")}}
+  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject(拒绝) 但是没有 reject 处理函数来处理时触发。
+- {{Event("rejectionhandled")}}
+  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject 时触发，在 reject 后由 promise 的 reject 处理函数处理。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">window.onunhandledrejection = function(e) {
+```js
+window.onunhandledrejection = function(e) {
   console.log(e.reason);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.PromiseRejectionEvent")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{domxref("Window/rejectionhandled_event", "onrejectionhandled")}}</li>
- <li>{{domxref("Window/unhandledrejection_event", "onunhandledrejection")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{domxref("Window/rejectionhandled_event", "onrejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "onunhandledrejection")}}

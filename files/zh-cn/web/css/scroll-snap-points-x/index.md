@@ -6,17 +6,18 @@ tags:
   - css snap
 translation_of: Web/CSS/scroll-snap-points-x
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}</div>
+{{CSSRef}}{{SeeCompatTable}}{{deprecated_header}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong><code>scroll-snap-points-x</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a>属性定义滚动容器中内容的 snap 点的水平位置。</p>
+**`scroll-snap-points-x`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的水平位置。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* 关键值 */
+```css
+/* 关键值 */
 scroll-snap-points-x: none;
 
 /* 重复的 snap 点 */
@@ -26,34 +27,35 @@ scroll-snap-points-x: repeat(400px);
 scroll-snap-points-x: inherit;
 scroll-snap-points-x: initial;
 scroll-snap-points-x: unset;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>none</code></dt>
- <dd>滚动容器没有定义任何 snap 点。Elements within the scroll container may still define snap points of behalf of the scroll container.（i don't understand this statement）</dd>
- <dt><code>repeat(&lt;长度&gt;)</code></dt>
- <dd>定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。</dd>
-</dl>
+- `none`
+  - : 滚动容器没有定义任何 snap 点。Elements within the scroll container may still define snap points of behalf of the scroll container.（i don't understand this statement）
+- `repeat(<长度>)`
+  - : 定义 snap 点的一个间隔，从容器相关的边缘开始。仅允许正数长度。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<h3 id="HTML内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
 
-<h3 id="CSS内容">CSS 内容</h3>
+### CSS 内容
 
-<pre class="brush: css">#container {
+```css
+#container {
   width: 200px;
   overflow: auto;
   white-space: nowrap;
@@ -62,7 +64,7 @@ scroll-snap-points-x: unset;
   font-size: 0;
 }
 
-#container &gt; div {
+#container > div {
   width: 200px;
   height: 200px;
   display: inline-block;
@@ -71,20 +73,21 @@ scroll-snap-points-x: unset;
   font-size: 100px;
 }
 
-#container &gt; div:nth-child(even) {
+#container > div:nth-child(even) {
   background-color: #87ea87;
 }
 
-#container &gt; div:nth-child(odd) {
+#container > div:nth-child(odd) {
   background-color: #87ccea;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 220, 220)}}</p>
+{{EmbedLiveSample("Example", 220, 220)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>此属性曾定义在<a href="http://www.w3.org/TR/2015/WD-css-snappoints-1-20150326/#scroll-snap-points">early draft of CSS Scroll Snap Points Module</a>中，但是后来在<a href="https://lists.w3.org/Archives/Public/www-style/2015Nov/0266.html">in favor of element-based snapping</a>规范中被<a href="https://github.com/w3c/csswg-drafts/commit/922af86be789222b8490c92038d1a5142e1c1198">移除</a>。</p>
+此属性曾定义在[early draft of CSS Scroll Snap Points Module](http://www.w3.org/TR/2015/WD-css-snappoints-1-20150326/#scroll-snap-points)中，但是后来在[in favor of element-based snapping](https://lists.w3.org/Archives/Public/www-style/2015Nov/0266.html)规范中被[移除](https://github.com/w3c/csswg-drafts/commit/922af86be789222b8490c92038d1a5142e1c1198)。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.scroll-snap-points-x")}}

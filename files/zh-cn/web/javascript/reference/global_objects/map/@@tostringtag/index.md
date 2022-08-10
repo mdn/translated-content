@@ -12,25 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 browser-compat: javascript.builtins.Map.@@toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>Map[@@toStringTag]</code></strong> 的初始值是"Map".</p>
+**`Map[@@toStringTag]`** 的初始值是"Map".
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+{{js_property_attributes(0,0,1)}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Map[Symbol.toStringTag]</pre>
+```plain
+Map[Symbol.toStringTag]
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">Object.prototype.toString.call(new Map()) // "[object Map]"
-</pre>
+```js
+Object.prototype.toString.call(new Map()) // "[object Map]"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

@@ -9,26 +9,26 @@ tags:
   - WebSocket
 translation_of: Web/API/WebSocket/bufferedAmount
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.bufferedAmount</code>是一个只读属性，用于返回已经被</strong><a href="#send()"><code>send()</code></a>方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用<a href="#send()"><code>send()</code></a>，则该属性值会持续增长</p>
+**`WebSocket.bufferedAmount`是一个只读属性，用于返回已经被**[`send()`](<#send()>)方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用[`send()`](<#send()>)，则该属性值会持续增长
 
-<p>The <strong><code>WebSocket.bufferedAmount</code></strong> read-only property returns the number of bytes of data that have been queued using calls to <a href="#send()"><code>send()</code></a> but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling <a href="#send()"><code>send()</code></a>, this will continue to climb.</p>
+The **`WebSocket.bufferedAmount`** read-only property returns the number of bytes of data that have been queued using calls to [`send()`](<#send()>) but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling [`send()`](<#send()>), this will continue to climb.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>var bufferedAmount</em> = aWebSocket.bufferedAmount;</pre>
+```plain
+var bufferedAmount = aWebSocket.bufferedAmount;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An <code>unsigned long</code>.</p>
+An `unsigned long`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-
-<p>{{Compat("api.WebSocket.bufferedAmount")}}</p>
+{{Compat("api.WebSocket.bufferedAmount")}}

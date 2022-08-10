@@ -3,35 +3,37 @@ title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toISOString()</strong></code> 方法返回一个 ISO（<a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 Extended Format</a>）格式的字符串： <strong>YYYY-MM-DDTHH:mm:ss.sssZ</strong>。时区总是 UTC（协调世界时），加一个后缀“Z”标识。</p>
+**`toISOString()`** 方法返回一个 ISO（[ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)）格式的字符串： **YYYY-MM-DDTHH:mm:ss.sssZ**。时区总是 UTC（协调世界时），加一个后缀“Z”标识。
 
-<div>{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
 
+## 语法
 
+```plain
+dateObj.toISOString()
+```
 
-<h2 id="Syntax">语法</h2>
+## 例子
 
-<pre class="syntaxbox"><var>dateObj</var>.toISOString()</pre>
-
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var today = new Date("05 October 2011 14:48 UTC");
+```js
+var today = new Date("05 October 2011 14:48 UTC");
 alert(today.toISOString()); // 返回 2011-10-05T14:48:00.000Z
-</pre>
+```
 
-<p>上例使用了非标准字符串的解析，该字符串在某些旧的浏览器（如 IE）中可能无法被正确解析。</p>
+上例使用了非标准字符串的解析，该字符串在某些旧的浏览器（如 IE）中可能无法被正确解析。
 
-<h2 id="Description">Polyfill</h2>
+## Polyfill
 
-<p>该方法在 ECMA-262 第 5 版中被标准化。对于那些不支持此方法的 JS 引擎可以通过加上下面的代码实现：</p>
+该方法在 ECMA-262 第 5 版中被标准化。对于那些不支持此方法的 JS 引擎可以通过加上下面的代码实现：
 
-<pre class="brush:js">if ( !Date.prototype.toISOString ) {
+```js
+if ( !Date.prototype.toISOString ) {
   ( function() {
 
     function pad(number) {
-      if ( number &lt; 10 ) {
+      if ( number < 10 ) {
         return '0' + number;
       }
       return number;
@@ -49,20 +51,19 @@ alert(today.toISOString()); // 返回 2011-10-05T14:48:00.000Z
     };
 
   }() );
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

@@ -3,34 +3,32 @@ title: CSSStyleSheet.deleteRule()
 slug: Web/API/CSSStyleSheet/deleteRule
 translation_of: Web/API/CSSStyleSheet/deleteRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p><b>deleteRule</b>方法用来从当前样式表对象中删除指定的样式规则。</p>
+**deleteRule**方法用来从当前样式表对象中删除指定的样式规则。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval">stylesheet.deleteRule(<i>index</i>)
-</pre>
+```plain
+stylesheet.deleteRule(index)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<ul>
- <li><code>index 是一个数字，用来指定样式规则的位置</code>.</li>
-</ul>
+- `index 是一个数字，用来指定样式规则的位置`.
 
-<h3 id="Example">示例</h3>
+### 示例
 
-<pre> myStyles.deleteRule(0);
-</pre>
+```plain
+ myStyles.deleteRule(0);
+```
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/DOM/CSSStyleSheet/insertRule">insertRule</a></li>
-</ul>
+- [insertRule](/zh-CN/DOM/CSSStyleSheet/insertRule)
 
-<h3 id="Specification">规范</h3>
+### 规范
 
-<p><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule">deleteRule </a></p>
+[deleteRule](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)

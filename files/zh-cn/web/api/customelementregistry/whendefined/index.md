@@ -3,85 +3,67 @@ title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 translation_of: Web/API/CustomElementRegistry/whenDefined
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>当一个元素被定义时{{domxref("CustomElementRegistry")}} 中的方法<code><strong>whenDefined()</strong></code> 接口返回  {{jsxref("Promise")}}.</p>
+当一个元素被定义时{{domxref("CustomElementRegistry")}} 中的方法**`whenDefined()`** 接口返回 {{jsxref("Promise")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Promise&lt;&gt; customElements.whenDefined(<em>name</em>);</pre>
+```plain
+Promise<> customElements.whenDefined(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>自定义元素的名称</dd>
-</dl>
+- name
+  - : 自定义元素的名称
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>当自定义元素被定义时一个{{jsxref("Promise")}} 返回{jsxref("undefined")}}. 如果自定义元素已经被定义，则 resolve 立即执行。</p>
+当自定义元素被定义时一个{{jsxref("Promise")}} 返回{jsxref("undefined")}}. 如果自定义元素已经被定义，则 resolve 立即执行。
 
-<dl>
-</dl>
+### 例外
 
-<h3 id="例外">例外</h3>
+| Exception     | Description                                                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SyntaxError` | 如果提供的 **name** 不是一个有效的 [自定义元素名字](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name), promise 的 reject 回调会接收到一个 `SyntaxError`. |
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>SyntaxError</code></td>
-   <td>如果提供的 <strong>name</strong> 不是一个有效的 <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">自定义元素名字</a>, promise 的 reject 回调会接收到一个 <code>SyntaxError</code>.</td>
-  </tr>
- </tbody>
-</table>
+## 例子
 
-<h2 id="例子">例子</h2>
+`这个例子使用whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
 
-<p><code>这个例子使用whenDefined()</code> 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。</p>
-
-<pre class="brush: html">&lt;nav id="menu-container"&gt;
-  &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
-  &lt;nav-menu&gt;
-    &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
-    &lt;menu-item&gt;Item 2&lt;/menu-item&gt;
+```html
+<nav id="menu-container">
+  <div class="menu-placeholder">Loading...</div>
+  <nav-menu>
+    <menu-item>Item 1</menu-item>
+    <menu-item>Item 2</menu-item>
      ...
-    &lt;menu-item&gt;Item N&lt;/menu-item&gt;
-  &lt;/nav-menu&gt;
-&lt;/nav&gt;
-</pre>
+    <menu-item>Item N</menu-item>
+  </nav-menu>
+</nav>
+```
 
-<pre class="brush: js">const container = document.getElementById('menu-container');
+```js
+const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
 const undefinedElements = container.querySelectorAll(':not(:defined)');
 
 const promises = [...undefinedElements].map(
-  button =&gt; customElements.whenDefined(button.localName)
+  button => customElements.whenDefined(button.localName)
 );
 
 // Wait for all the children to be upgraded,
 // then remove the placeholder.
 await Promise.all(promises);
 container.removeChild(placeholder);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<div>
-
-
-<p>{{Compat("api.CustomElementRegistry.whenDefined")}}</p>
-</div>
-</div>
+{{Compat("api.CustomElementRegistry.whenDefined")}}

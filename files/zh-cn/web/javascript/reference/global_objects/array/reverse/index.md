@@ -10,70 +10,70 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>reverse()</strong></code> 方法将数组中元素的位置颠倒，并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。该方法会改变原数组。</p>
+**`reverse()`** 方法将数组中元素的位置颠倒，并返回该数组。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。该方法会改变原数组。
 
-<div>{{EmbedInteractiveExample("pages/js/array-reverse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
+## 语法
 
+```plain
+ arr.reverse()
+```
 
+### 返回值
 
+颠倒后的数组。
 
-<h2 id="语法">语法</h2>
+## 描述
 
-<pre class="syntaxbox"><code><var> arr</var>.reverse()</code></pre>
+`reverse` 方法颠倒数组中元素的位置，改变了数组，并返回该数组的引用。
 
-<h3 id="返回值">返回值</h3>
+reverse 方法是特意类化的；此方法可被 [called](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [applied](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)于类似数组对象。对象如果不包含反映一系列连续的、基于零的数值属性中的最后一个长度的属性，则该对象可能不会以任何有意义的方式运行。
 
-<p>颠倒后的数组。</p>
+## 示例
 
-<h2 id="描述">描述</h2>
+### 颠倒数组中的元素
 
-<p><code>reverse</code> 方法颠倒数组中元素的位置，改变了数组，并返回该数组的引用。</p>
+下例将会创建一个数组 sourceArray，其包含三个元素，然后颠倒该数组。
 
-<p>reverse 方法是特意类化的；此方法可被 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">called</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">applied</a>于类似数组对象。对象如果不包含反映一系列连续的、基于零的数值属性中的最后一个长度的属性，则该对象可能不会以任何有意义的方式运行。</p>
+`reverse()` 的调用返回了一个颠倒后的数组 `a`的引用。
 
-<h2 id="示例">示例</h2>
-
-<h3 id="颠倒数组中的元素">颠倒数组中的元素</h3>
-
-<p>下例将会创建一个数组 sourceArray，其包含三个元素，然后颠倒该数组。</p>
-
-<p> <code>reverse()</code> 的调用返回了一个颠倒后的数组 <code>a</code>的引用。</p>
-
-<pre><code>const a = [1, 2, 3];
+```plain
+const a = [1, 2, 3];
 
 console.log(a); // [1, 2, 3]
 
 a.reverse();
 
-console.log(a); // [3, 2, 1]</code></pre>
+console.log(a); // [3, 2, 1]
+```
 
-<h3 id="颠倒类数组中的元素">颠倒类数组中的元素</h3>
+### 颠倒类数组中的元素
 
-<p>下例创造了一个类数组对象 <code>a</code>, 包含 3 个元素和一个 length 属性，然后颠倒这个类数组对象。  <code>reverse()</code> 的调用返回一个颠倒后的类数组对象 <code>a</code>的引用。</p>
+下例创造了一个类数组对象 `a`, 包含 3 个元素和一个 length 属性，然后颠倒这个类数组对象。 `reverse()` 的调用返回一个颠倒后的类数组对象 `a`的引用。
 
-<pre><code>const a = {0: 1, 1: 2, 2: 3, length: 3};
+```plain
+const a = {0: 1, 1: 2, 2: 3, length: 3};
 
 console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
 
 Array.prototype.reverse.call(a); //same syntax for using apply()
 
-console.log(a); // {0: 3, 1: 2, 2: 1, length: 3}</code></pre>
+console.log(a); // {0: 3, 1: 2, 2: 1, length: 3}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.join()")}}</li>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
- <li>{{jsxref("TypedArray.prototype.reverse()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.join()")}}
+- {{jsxref("Array.prototype.sort()")}}
+- {{jsxref("TypedArray.prototype.reverse()")}}

@@ -6,39 +6,41 @@ tags:
   - Canvas
 translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.canvas</code></strong> 属性是 <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a> 的一部分，是对与给定上下文关联的{{domxref("HTMLCanvasElement")}}对象的只读引用。如果没有 {{HTMLElement("canvas")}} 元素与之对应，对象值为{{jsxref("null")}} 。</p>
+**`CanvasRenderingContext2D.canvas`** 属性是 [Canvas API](/en-US/docs/Web/API/Canvas_API) 的一部分，是对与给定上下文关联的{{domxref("HTMLCanvasElement")}}对象的只读引用。如果没有 {{HTMLElement("canvas")}} 元素与之对应，对象值为{{jsxref("null")}} 。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.canvas;</pre>
+```plain
+ctx.canvas;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>给出 {{HTMLElement("canvas")}} 元素：</p>
+给出 {{HTMLElement("canvas")}} 元素：
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>你可以通过 CanvasRenderingContext2D 调用内部的 canvas 属性，获取 canvas 的一个反向引用：</p>
+你可以通过 CanvasRenderingContext2D 调用内部的 canvas 属性，获取 canvas 的一个反向引用：
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.canvas // HTMLCanvasElement
-</pre>
+```
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.canvas")}}</p>
+{{Compat("api.CanvasRenderingContext2D.canvas")}}
 
-<h2 id="See_Also">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}} 接口</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}} 接口
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)

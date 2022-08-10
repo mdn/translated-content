@@ -11,61 +11,59 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>fontcolor()</code></strong>方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。</p>
+**`fontcolor()`**方法创建一个{{HTMLElement("font")}}的 HTML 元素让字符串被显示成指定的字体颜色。
 
-<div class="note">
-<p><strong>备注：</strong>&lt;font&gt;元素已经在在<a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5 中</a>被移除并且不应该在使用。替代的是，Web 开发者应该使用<a href="/en-US/docs/Web/CSS">CSS</a>属性。</p>
-</div>
+> **备注：**\<font>元素已经在在[HTML5 中](/en-US/docs/Web/Guide/HTML/HTML5)被移除并且不应该在使用。替代的是，Web 开发者应该使用[CSS](/en-US/docs/Web/CSS)属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.fontcolor(<var>color</var>)</code></pre>
+```plain
+str.fontcolor(color)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>color</code></dt>
- <dd>代表颜色的一个字符串，可以是三个一组的十六进制的 RGB 值，也可以是一个颜色名称的字符串字面量，颜色名称的字符串字面量被列在了这里 <a href="/en-US/docs/Web/CSS/color_value">CSS 颜色参考</a>。</dd>
-</dl>
+- `color`
+  - : 代表颜色的一个字符串，可以是三个一组的十六进制的 RGB 值，也可以是一个颜色名称的字符串字面量，颜色名称的字符串字面量被列在了这里 [CSS 颜色参考](/en-US/docs/Web/CSS/color_value)。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个包含一个{{HTMLElement("font")}} HTML 元素的字符串。</p>
+一个包含一个{{HTMLElement("font")}} HTML 元素的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果你表示的颜色为十六进制 RGB 三原色，则必须使用的格式<code>rrggbb</code>。例如，对于橙红色的十六进制 RGB 值是红色=FA，绿色=80，和蓝=72，所以橙红色的 RGB 三原色<code>"FA8072"</code>。</p>
+如果你表示的颜色为十六进制 RGB 三原色，则必须使用的格式`rrggbb`。例如，对于橙红色的十六进制 RGB 值是红色=FA，绿色=80，和蓝=72，所以橙红色的 RGB 三原色`"FA8072"`。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用_fontcolor()">使用 <code>fontcolor()</code></h3>
+### 使用 `fontcolor()`
 
-<p>下面的示例使用<code>fontcolor()</code>方法来改变字符串的颜色，通过产生一个被 HTML &lt;font&gt; 标签包裹的字符串。</p>
+下面的示例使用`fontcolor()`方法来改变字符串的颜色，通过产生一个被 HTML \<font> 标签包裹的字符串。
 
-<pre class="brush: js">var worldString = "Hello, world"
+```js
+var worldString = "Hello, world"
 console.log(worldString.fontcolor('red') + ' is red in this line');
-// &lt;font color="red"&gt;Hello, world &lt;/font&gt; is red in this line"
+// <font color="red">Hello, world </font> is red in this line"
 console.log（worldString.fontcolor('FF00') + ' is red in hexadecimal'
-// &lt;font color="FF00"&gt;Hello，world &lt;/font&gt; is red in hexadecimal
-</pre>
+// <font color="FF00">Hello，world </font> is red in hexadecimal
+```
 
-<p>和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的<code>style</code>属性，并且更随意的去操纵它，例如：</p>
+和{{domxref("HTMLElement.style","element.style")}}对象一起，你可以访问元素的`style`属性，并且更随意的去操纵它，例如：
 
-<pre class="brush: js">document.getElementById('yourElemId').style.color ='red';
-</pre>
+```js
+document.getElementById('yourElemId').style.color ='red';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>{{jsxref("String.prototype.fontsize()")}}</li>
-</ul>
+- {{jsxref("String.prototype.fontsize()")}}

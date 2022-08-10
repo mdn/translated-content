@@ -1,33 +1,29 @@
 ---
 title: ':link'
-slug: 'Web/CSS/:link'
-translation_of: 'Web/CSS/:link'
+slug: Web/CSS/:link
+translation_of: Web/CSS/:link
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p><code>:link</code>伪类选择器是用来选中元素当中的链接。它将会选中所有尚未访问的链接，包括那些已经给定了其他伪类选择器的链接（例如{{cssxref(":hover")}}选择器，{{cssxref(":active")}}选择器，{{cssxref(":visited")}}选择器）。为了可以正确地渲染链接元素的样式，:link 伪类选择器应当放在其他伪类选择器的前面，并且遵循 LVHA 的先后顺序，即：<code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>。<code>:focus</code>伪类选择器常伴随在<code>:hover</code>伪类选择器左右，需要根据你想要实现的效果确定它们的顺序。</p>
+`:link`伪类选择器是用来选中元素当中的链接。它将会选中所有尚未访问的链接，包括那些已经给定了其他伪类选择器的链接（例如{{cssxref(":hover")}}选择器，{{cssxref(":active")}}选择器，{{cssxref(":visited")}}选择器）。为了可以正确地渲染链接元素的样式，:link 伪类选择器应当放在其他伪类选择器的前面，并且遵循 LVHA 的先后顺序，即：`:link` — `:visited` — `:hover` — `:active`。`:focus`伪类选择器常伴随在`:hover`伪类选择器左右，需要根据你想要实现的效果确定它们的顺序。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: css">a:link {color: slategray;}
-.external:link {background-color: lightblue;}</pre>
+```css
+a:link {color: slategray;}
+.external:link {background-color: lightblue;}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("css.selectors.link")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.link")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}</li>
-</ul>
+- {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}

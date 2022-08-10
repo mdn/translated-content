@@ -6,45 +6,45 @@ tags:
   - WebGL2
 translation_of: Web/API/WebGL2RenderingContext/createVertexArray
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> 中的 <strong><code>WebGL2RenderingContext.createVertexArray()</code></strong>方法创建并初始化（creates and initializes）一个 {{domxref("WebGLVertexArrayObject")}} 的对象 (object) ，它代表一个指向顶点数组数据的顶点数组对象（vertex array object (VAO) ），并为不同的顶点数据集提供名称。</p>
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGL2RenderingContext.createVertexArray()`**方法创建并初始化（creates and initializes）一个 {{domxref("WebGLVertexArrayObject")}} 的对象 (object) ，它代表一个指向顶点数组数据的顶点数组对象（vertex array object (VAO) ），并为不同的顶点数据集提供名称。
 
-<h2 id="句法"><strong>句法</strong></h2>
+## **句法**
 
-<pre class="syntaxbox">WebGLVertexArrayObject <var>gl</var>.createVertexArray();
-</pre>
+```plain
+WebGLVertexArrayObject gl.createVertexArray();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>没有参数</p>
+没有参数
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个{{domxref("WebGLVertexArrayObject")}}对象 代表 一个顶点数组对象 (VAO) ，该对象指向顶点数据。</p>
+一个{{domxref("WebGLVertexArrayObject")}}对象 代表 一个顶点数组对象 (VAO) ，该对象指向顶点数据。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var vao = gl.createVertexArray();
+```js
+var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // ...
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
 // ...
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.createVertexArray")}}</p>
+{{Compat("api.WebGL2RenderingContext.createVertexArray")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLVertexArrayObject")}}</li>
- <li>{{domxref("bindVertexArray")}}</li>
-</ul>
+- {{domxref("WebGLVertexArrayObject")}}
+- {{domxref("bindVertexArray")}}

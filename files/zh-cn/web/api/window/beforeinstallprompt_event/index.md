@@ -7,21 +7,24 @@ tags:
 translation_of: Web/API/Window/onbeforeinstallprompt
 original_slug: Web/API/Window/onbeforeinstallprompt
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p><code><strong>Window.onbeforeinstallprompt</strong></code> 属性是一个事件处理程序，用于处理一个{{event("beforeinstallprompt")}}, 当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。</p>
+**`Window.onbeforeinstallprompt`** 属性是一个事件处理程序，用于处理一个{{event("beforeinstallprompt")}}, 当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox">window.addEventListener("beforeinstallprompt", function(event) { ... });
+```plain
+window.addEventListener("beforeinstallprompt", function(event) { ... });
 
-window.onbeforeinstallprompt = function(event) { ...};</pre>
+window.onbeforeinstallprompt = function(event) { ...};
+```
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<p>The following example uses the beforeinstallprompt function to verify that it is an appropriate time to display an installation prompt to the user. If it is not, the event is redispatched.</p>
+The following example uses the beforeinstallprompt function to verify that it is an appropriate time to display an installation prompt to the user. If it is not, the event is redispatched.
 
-<pre class="brush: js">let isTooSoon = true;
+```js
+let isTooSoon = true;
 window.addEventListener("beforeinstallprompt", function(e) {
   if (isTooSoon) {
     e.preventDefault(); // Prevents prompt display
@@ -34,15 +37,14 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
   // The event was re-dispatched in response to our request
   // ...
-});</pre>
+});
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>{{domxref("BeforeInstallPromptEvent.prompt")}}</li>
- <li>{{domxref("BeforeInstallPromptEvent")}}</li>
-</ul>
+- {{domxref("BeforeInstallPromptEvent.prompt")}}
+- {{domxref("BeforeInstallPromptEvent")}}

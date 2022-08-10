@@ -3,79 +3,85 @@ title: 'SyntaxError: missing ; before statement'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">SyntaxError: Expected ';' (Edge)</pre>
+```plain
+SyntaxError: Expected ';' (Edge)
+```
 
-<pre class="syntaxbox"> SyntaxError: missing ; before statement (Firefox)
-</pre>
+```plain
+ SyntaxError: missing ; before statement (Firefox)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>某个地方丢失了一个 (<code>;</code>)。 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a>必须以分号结束。 有一些是由 <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自动分号插入 (ASI)</a> 的使用所影响到的， 但在这种情况下，你需要提供一个分号，以便于 JavaScript 可以将源代码解析正确。然而，通常情况下，这个错误只是另一个错误一个导致的，如不正确转义字符串，使用 var 的错误。你也可能有太多的括号的地方。当出现此错误时，仔细检查语法。</p>
+某个地方丢失了一个 (`;`)。 [JavaScript 语句](/en-US/docs/Web/JavaScript/Reference/Statements)必须以分号结束。 有一些是由 [自动分号插入 (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion) 的使用所影响到的， 但在这种情况下，你需要提供一个分号，以便于 JavaScript 可以将源代码解析正确。然而，通常情况下，这个错误只是另一个错误一个导致的，如不正确转义字符串，使用 var 的错误。你也可能有太多的括号的地方。当出现此错误时，仔细检查语法。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p> </p>
+转义字符串
 
-<p>转义字符串</p>
+这个错误可能发生不正确时容易转义字符串 JavaScript 引擎是希望你的字符串的末尾已经。例如：
 
-<p>这个错误可能发生不正确时容易转义字符串 JavaScript 引擎是希望你的字符串的末尾已经。例如：</p>
+```js example-bad
+var foo = 'Tom's bar';
+// SyntaxError: missing ; before statement
+```
 
-<pre class="brush: js example-bad">var foo = 'Tom's bar';
-// SyntaxError: missing ; before statement</pre>
+你可以用双引号，或者用\转义：
 
-<p>你可以用双引号，或者用\转义：</p>
-
-<pre class="brush: js example-good">var foo = "Tom's bar";
+```js example-good
+var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
-</pre>
+```
 
-<h3 id="用var声明属性">用 var 声明属性</h3>
+### 用 var 声明属性
 
-<p>你不能将带有变量声明的对象或数组的属性用<code>var</code>来声明。</p>
+你不能将带有变量声明的对象或数组的属性用`var`来声明。
 
-<pre class="brush: js example-bad">var obj = {};
+```js example-bad
+var obj = {};
 var obj.foo = "hi"; // SyntaxError missing ; before statement
 
 var array = [];
 var array[0] = "there"; // SyntaxError missing ; before statement
-</pre>
+```
 
-<p>而是省略掉<code>var</code>关键词：</p>
+而是省略掉`var`关键词：
 
-<pre class="brush: js example-good">var obj = {};
+```js example-good
+var obj = {};
 obj.foo = "hi";
 
 var array = [];
 array[0] = "there";
-</pre>
+```
 
-<h3 id="不推荐使用的关键字">不推荐使用的关键字</h3>
+### 不推荐使用的关键字
 
-<p>如果你用的是另一种编程语言，那么在 javaScript 中使用不具有相同或完全没有意义的关键字也是很常见的：</p>
+如果你用的是另一种编程语言，那么在 javaScript 中使用不具有相同或完全没有意义的关键字也是很常见的：
 
-<pre class="brush: js example-bad">def print(info){
+```js example-bad
+def print(info){
   console.log(info);
-}; // SyntaxError missing ; before statement</pre>
+}; // SyntaxError missing ; before statement
+```
 
-<p>因此，建议使用<code>function</code>而不是<code>def</code>：</p>
+因此，建议使用`function`而不是`def`：
 
-<pre class="brush: js example-good">function print(info){
+```js example-good
+function print(info){
   console.log(info);
-};</pre>
+};
+```
 
-<p> </p>
+## 参考
 
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自动分号插入 (ASI)</a> </li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a></li>
-</ul>
+- [自动分号插入 (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
+- [JavaScript 语句](/en-US/docs/Web/JavaScript/Reference/Statements)

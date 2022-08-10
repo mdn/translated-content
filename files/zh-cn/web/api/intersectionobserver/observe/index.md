@@ -3,32 +3,31 @@ title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 translation_of: Web/API/IntersectionObserver/observe
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>{{domxref("IntersectionObserver")}} 对象的<code><strong>observe()</strong></code> 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根， 但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。</p>
+{{domxref("IntersectionObserver")}} 对象的**`observe()`** 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根， 但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。
 
-<p>当指定元素的可见区域超过监听者的可见区域阈值之一时（阈值列表{{domxref("IntersectionObserver.thresholds")}}），监听者的回调会被传入代表当前发生的交叉变化{{domxref("IntersectionObserverEntry")}}并执行。请注意，这种设计允许通过调用一次回调，给回调传入 IntersectionObserverEntry 对象数组，来实现同时处理多个被监听元素的交叉变化。</p>
+当指定元素的可见区域超过监听者的可见区域阈值之一时（阈值列表{{domxref("IntersectionObserver.thresholds")}}），监听者的回调会被传入代表当前发生的交叉变化{{domxref("IntersectionObserverEntry")}}并执行。请注意，这种设计允许通过调用一次回调，给回调传入 IntersectionObserverEntry 对象数组，来实现同时处理多个被监听元素的交叉变化。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre
-  class="brush: js"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
+```js
+IntersectionObserver.observe(targetElement);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>targetElement</code></dt>
- <dd>可见性区域被监控的元素{{domxref("element")}}。<br>
- 此元素必须是根元素的后代 (如果根元素为视窗，则该元素必须被当前文档包含)。</dd>
-</dl>
+- `targetElement`
+  - : 可见性区域被监控的元素{{domxref("element")}}。
+    此元素必须是根元素的后代 (如果根元素为视窗，则该元素必须被当前文档包含)。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: js">
+```js
 // Register IntersectionObserver
 const io = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -48,20 +47,16 @@ const boxElList = document.querySelectorAll('.box');
 boxElList.forEach((el) => {
     io.observe(el);
 })
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
+## 浏览器兼容性
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## 参考
 
-
-<h2 id="See_also">参考</h2>
-
-<ul>
- <li>{{domxref("IntersectionObserver.unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.unobserve()")}}

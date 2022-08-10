@@ -3,33 +3,33 @@ title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
 translation_of: Web/API/ResizeObserver/disconnect
 ---
-<div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>disconnect()</code></strong> method of the {{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}} or {{domxref('SVGElement')}} targets.<br>
- {{domxref("ResizeObserver")}} 接口的 <strong><code>disconnect()</code></strong> 方法会停止和取消目标对象上所有对{{domxref('Element')}} 或 {{domxref('SVGElement')}} 的监听。</p>
+The **`disconnect()`** method of the {{domxref("ResizeObserver")}} interface unobserves all observed {{domxref('Element')}} or {{domxref('SVGElement')}} targets.
+{{domxref("ResizeObserver")}} 接口的 **`disconnect()`** 方法会停止和取消目标对象上所有对{{domxref('Element')}} 或 {{domxref('SVGElement')}} 的监听。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>resizeObserver</var>.disconnect();</pre>
+```plain
+resizeObserver.disconnect();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>无。</p>
+无。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.ResizeObserver.disconnect")}}</p>
+{{Compat("api.ResizeObserver.disconnect")}}

@@ -6,44 +6,47 @@ tags:
   - Selectors
 translation_of: Web/CSS/Type_selectors
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>CSS 元素选择器 (也称为类型选择器) 通过 node 节点名称匹配元素。因此，在单独使用时，寻找特定类型的元素时，元素选择器都会匹配该文档中所有此类型的元素。</p>
+CSS 元素选择器 (也称为类型选择器) 通过 node 节点名称匹配元素。因此，在单独使用时，寻找特定类型的元素时，元素选择器都会匹配该文档中所有此类型的元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">元素 {<em>样式声明</em> }
-</pre>
+```plain
+元素 {样式声明 }
+```
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   background-color: DodgerBlue;
   color: #ffffff;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">  &lt;span&gt;这里是由 span 包裹的一些文字.&lt;/span&gt;
-  &lt;p&gt;这里是由 p 包裹的一些文字.&lt;/p&gt;
-</pre>
+```html
+  <span>这里是由 span 包裹的一些文字.</span>
+  <p>这里是由 p 包裹的一些文字.</p>
+```
 
-<h3 id="效果">效果</h3>
+### 效果
 
-<p>这里是由 span 包裹的一些文字。<br>
- 这里是由 p 包裹的一些文字。</p>
+这里是由 span 包裹的一些文字。
+这里是由 p 包裹的一些文字。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.type")}}
 
-<h2 id="See_also">See also</h2>
+## See also

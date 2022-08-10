@@ -3,71 +3,78 @@ title: Text.wholeText
 slug: Web/API/Text/wholeText
 translation_of: Web/API/Text/wholeText
 ---
-<p>{{ apiref("DOM") }}</p>
+{{ apiref("DOM") }}
 
-<p>该<strong><code>Text.wholeText</code></strong>只读属性返回<a href="https://developer.mozilla.org/en-US/docs/Web/API/Text"><code>Text</code></a>逻辑上相邻的节点的所有文本。文本按文档顺序连接。这允许指定任何文本节点并获取所有相邻文本作为单个字符串。</p>
+该**`Text.wholeText`**只读属性返回[`Text`](https://developer.mozilla.org/en-US/docs/Web/API/Text)逻辑上相邻的节点的所有文本。文本按文档顺序连接。这允许指定任何文本节点并获取所有相邻文本作为单个字符串。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate"><em>str</em> = <em>textnode</em>.wholeText;</pre>
+```plain
+str = textnode.wholeText;
+```
 
-<h2 id="Example">Notes and example</h2>
+## Notes and example
 
-<p>假设你的网页上有如下的简单文本(包括其中为了格式化代码而添加的一些空格), 其 DOM 节点 被储存在变量 <code>para</code> 中：</p>
+假设你的网页上有如下的简单文本(包括其中为了格式化代码而添加的一些空格), 其 DOM 节点 被储存在变量 `para` 中：
 
-<pre class="brush: html notranslate">&lt;p&gt;Thru-hiking is great!  &lt;strong&gt;No insipid election coverage!&lt;/strong&gt;
-  However, &lt;a href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
-  ballot&lt;/a&gt; is tricky.&lt;/p&gt;
-</pre>
+```html
+<p>Thru-hiking is great!  <strong>No insipid election coverage!</strong>
+  However, <a href="http://en.wikipedia.org/wiki/Absentee_ballot">casting a
+  ballot</a> is tricky.</p>
+```
 
-<p>你觉得你不喜欢中间的句子, 所以你移除了它:</p>
+你觉得你不喜欢中间的句子, 所以你移除了它:
 
-<pre class="brush: js notranslate">para.removeChild(para.childNodes[1]);
-</pre>
+```js
+para.removeChild(para.childNodes[1]);
+```
 
-<p>过了一会, 你又决定给“Thru-hiking is great, but casting a ballot is tricky.”这句换个说法， <em>同时保留超链接</em>。 所以你尝试以下代码:</p>
+过了一会, 你又决定给“Thru-hiking is great, but casting a ballot is tricky.”这句换个说法， _同时保留超链接_。 所以你尝试以下代码:
 
-<pre class="brush: js notranslate">para.firstChild.data = "Thru-hiking is great, but ";
-</pre>
+```js
+para.firstChild.data = "Thru-hiking is great, but ";
+```
 
-<p>一切妥当, 是么? <em>不!</em> 这会使你移除 <code>strong</code> 元素, 而被删掉的句子分隔了两个文本节点. 一个是第一句, 一个是最后一个单词. 相反, 你现在获得如下效果:</p>
+一切妥当, 是么? _不!_ 这会使你移除 `strong` 元素, 而被删掉的句子分隔了两个文本节点. 一个是第一句, 一个是最后一个单词. 相反, 你现在获得如下效果:
 
-<pre class="brush: html notranslate">&lt;p&gt;Thru-hiking is great, but However, &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
-  ballot&lt;/a&gt; is tricky.&lt;/p&gt;
-</pre>
+```html
+<p>Thru-hiking is great, but However, <a
+  href="http://en.wikipedia.org/wiki/Absentee_ballot">casting a
+  ballot</a> is tricky.</p>
+```
 
-<p>实际上，你更倾向于将这些相邻扽文本节点作为同一文本节点. 这就是 <code>wholeText</code> 的用武之地：如果你有许多相邻的文本节点, 你可以通过<code>wholeText</code>访问这些节点里的所有内容。让我们假设你从未犯过最后一个错误. 在这种情况下, 我们有:</p>
+实际上，你更倾向于将这些相邻扽文本节点作为同一文本节点. 这就是 `wholeText` 的用武之地：如果你有许多相邻的文本节点, 你可以通过`wholeText`访问这些节点里的所有内容。让我们假设你从未犯过最后一个错误. 在这种情况下, 我们有:
 
-<pre class="brush: js notranslate">assert(para.firstChild.wholeText == "Thru-hiking is great!    However, ");
-</pre>
+```js
+assert(para.firstChild.wholeText == "Thru-hiking is great!    However, ");
+```
 
-<p><code>wholeText</code> 只是文本节点的一个属性，特可以返回连接了所有相邻(i.e. 没有被其它元素边界分开) 文本节点数据的字符串 。</p>
+`wholeText` 只是文本节点的一个属性，特可以返回连接了所有相邻(i.e. 没有被其它元素边界分开) 文本节点数据的字符串 。
 
-<p>现在让我们回到最初的问题. 我们想做的是用新的文本替代旧的文本. 这就是 {{domxref("Text.replaceWholeText", "replaceWholeText()")}} 用处所在:</p>
+现在让我们回到最初的问题. 我们想做的是用新的文本替代旧的文本. 这就是 {{domxref("Text.replaceWholeText", "replaceWholeText()")}} 用处所在:
 
-<pre class="brush: js notranslate">para.firstChild.replaceWholeText("Thru-hiking is great, but ");
-</pre>
+```js
+para.firstChild.replaceWholeText("Thru-hiking is great, but ");
+```
 
-<p>我们移除了所有的相邻文本节点 (所有构成whole text的文本节点) 除了调用<code>replaceWholeText()</code> 的，并且把剩余的文本改成了新文本. 我们现在所得到的是这样的：</p>
+我们移除了所有的相邻文本节点 (所有构成 whole text 的文本节点) 除了调用`replaceWholeText()` 的，并且把剩余的文本改成了新文本. 我们现在所得到的是这样的：
 
-<pre class="brush: html notranslate">&lt;p&gt;Thru-hiking is great, but &lt;a
-  href="http://en.wikipedia.org/wiki/Absentee_ballot"&gt;casting a
-  ballot&lt;/a&gt; is tricky.&lt;/p&gt;
-</pre>
+```html
+<p>Thru-hiking is great, but <a
+  href="http://en.wikipedia.org/wiki/Absentee_ballot">casting a
+  ballot</a> is tricky.</p>
+```
 
-<p>有时候使用whole-text 功能同时使用<code>Node.textContent</code> 或长期支持的 {{domxref("Element.innerHTML")}}; 可以得到更好的处理。如果你需要处理一个元素内的混合内容, 正如本文所介绍的, <code>wholeText</code> 和 <code>replaceWholeText()</code> 是有用的。</p>
+有时候使用 whole-text 功能同时使用`Node.textContent` 或长期支持的 {{domxref("Element.innerHTML")}}; 可以得到更好的处理。如果你需要处理一个元素内的混合内容, 正如本文所介绍的, `wholeText` 和 `replaceWholeText()` 是有用的。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Text.wholeText")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Text")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("Text")}} interface it belongs to.

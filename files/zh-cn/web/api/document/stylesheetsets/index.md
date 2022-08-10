@@ -5,50 +5,49 @@ tags:
   - Document.styleSheetSets
 translation_of: Web/API/Document/styleSheetSets
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>返回一个所有当前可用样式表集的实时列表。</p>
+返回一个所有当前可用样式表集的实时列表。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>sets</em> = document.styleSheetSets
-</pre>
+```plain
+sets = document.styleSheetSets
+```
 
-<p>在返回时，sets 是一个可用的样式表集的列表。</p>
+在返回时，sets 是一个可用的样式表集的列表。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate it with the names of all the available style sheet sets with code like this:</p>
+Given an {{HTMLElement("ul")}} (list) element with the ID "sheetList", you can populate it with the names of all the available style sheet sets with code like this:
 
-<pre class="brush:js">var list = document.getElementById("sheetList");
+```js
+var list = document.getElementById("sheetList");
 var sheets = document.styleSheetSets;
 
 list.innerHTML = "";
 
-for (var i = 0; i &lt; sheets.length; i++) {
+for (var i = 0; i < sheets.length; i++) {
   var item = document.createElement("li");
 
   item.innerHTML = sheets[i];
   list.appendChild(item);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The list of available style sheet sets is constructed by enumerating all the style sheets available for the document, in the order in which they're listed in the {{domxref("document.styleSheets")}} attribute, adding the <code>title</code> of each style sheet that has a title to the list. Duplicates are dropped from the list (using a case-sensitive comparison).</p>
+The list of available style sheet sets is constructed by enumerating all the style sheets available for the document, in the order in which they're listed in the {{domxref("document.styleSheets")}} attribute, adding the `title` of each style sheet that has a title to the list. Duplicates are dropped from the list (using a case-sensitive comparison).
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets">HTML5: Alternate Style Sheets</a></li>
-</ul>
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Stylesheet")}}</li>
- <li>{{domxref("document.styleSheets")}}</li>
- <li>{{domxref("document.lastStyleSheetSet")}}</li>
- <li>{{domxref("document.preferredStyleSheetSet")}}</li>
- <li>{{domxref("document.selectedStyleSheetSet")}}</li>
- <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("Stylesheet")}}
+- {{domxref("document.styleSheets")}}
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

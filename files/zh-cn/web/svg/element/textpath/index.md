@@ -9,68 +9,66 @@ tags:
   - 需要兼容表
 translation_of: Web/SVG/Element/textPath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>除了笔直地绘制一行文字以外， SVG 也可以根据 {{ SVGElement("path") }} 元素的形状来放置文字。 只要在<code>textPath</code>元素内部放置文本，并通过其<code>xlink:href</code>属性值引用{{ SVGElement("path") }}元素，我们就可以让文字块呈现在{{ SVGElement("path") }}元素给定的路径上了。</p>
+除了笔直地绘制一行文字以外， SVG 也可以根据 {{ SVGElement("path") }} 元素的形状来放置文字。 只要在`textPath`元素内部放置文本，并通过其`xlink:href`属性值引用{{ SVGElement("path") }}元素，我们就可以让文字块呈现在{{ SVGElement("path") }}元素给定的路径上了。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 1000 300"
+```html
+<svg width="100%" height="100%" viewBox="0 0 1000 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;path id="MyPath"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="MyPath"
           d="M 100 200
              C 200 100 300   0 400 100
              C 500 200 600 300 700 200
-             C 800 100 900 100 900 100" /&gt;
-  &lt;/defs&gt;
+             C 800 100 900 100 900 100" />
+  </defs>
 
-  &lt;use xlink:href="#MyPath" fill="none" stroke="red"  /&gt;
+  <use xlink:href="#MyPath" fill="none" stroke="red"  />
 
-  &lt;text font-family="Verdana" font-size="42.5"&gt;
-    &lt;textPath xlink:href="#MyPath"&gt;
+  <text font-family="Verdana" font-size="42.5">
+    <textPath xlink:href="#MyPath">
       We go up, then we go down, then up again
-    &lt;/textPath&gt;
-  &lt;/text&gt;
+    </textPath>
+  </text>
 
-  &lt;!-- Show outline of the viewport using 'rect' element --&gt;
-  &lt;rect x="1" y="1" width="998" height="298"
-        fill="none" stroke="black" stroke-width="2" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Show outline of the viewport using 'rect' element -->
+  <rect x="1" y="1" width="998" height="298"
+        fill="none" stroke="black" stroke-width="2" />
+</svg>
+```
 
-<p>即时结果：</p>
+即时结果：
 
-<p>{{EmbedLiveSample("Example",500,175)}}</p>
+{{EmbedLiveSample("Example",500,175)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("startOffset") }}</li>
- <li>{{ SVGAttr("method") }}</li>
- <li>{{ SVGAttr("spacing") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("startOffset") }}
+- {{ SVGAttr("method") }}
+- {{ SVGAttr("spacing") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGTextPathElement">SVGTextPathElement</a></code>接口。</p>
+该元素实现了[`SVGTextPathElement`](/en/DOM/SVGTextPathElement)接口。

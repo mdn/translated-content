@@ -6,38 +6,41 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/throw
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>throw</code>语句</strong>用来抛出一个用户自定义的异常。当前函数的执行将被停止（<code>throw</code>之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a>块。如果调用者函数中没有<code>catch</code>块，程序将会终止。</p>
+**`throw`语句**用来抛出一个用户自定义的异常。当前函数的执行将被停止（`throw`之后的语句将不会执行），并且控制将被传递到调用堆栈中的第一个[`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)块。如果调用者函数中没有`catch`块，程序将会终止。
 
-<p>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">throw <em>expression</em>; </pre>
+```plain
+throw expression;
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>要抛出的表达式。</dd>
-</dl>
+- `expression`
+  - : 要抛出的表达式。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>使用<code>throw</code>语句来抛出一个异常。当你抛出异常时，<code>expression</code> 指定了异常的内容。下面的每行都抛出了一个异常：</p>
+使用`throw`语句来抛出一个异常。当你抛出异常时，`expression` 指定了异常的内容。下面的每行都抛出了一个异常：
 
-<pre class="brush: js">throw "Error2"; // 抛出了一个值为字符串的异常
+```js
+throw "Error2"; // 抛出了一个值为字符串的异常
 throw 42;       // 抛出了一个值为整数 42 的异常
-throw true;     // 抛出了一个值为 true 的异常</pre>
+throw true;     // 抛出了一个值为 true 的异常
+```
 
-<p>注意<code>throw</code>语句同样受到<a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">自动分号插入（ASI</a>）机制的控制，在<code>throw</code>关键字和值之间不允许有行终止符。</p>
+注意`throw`语句同样受到[自动分号插入（ASI](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)）机制的控制，在`throw`关键字和值之间不允许有行终止符。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="抛出一个对象">抛出一个对象</h3>
+### 抛出一个对象
 
-<p>你可以在抛出异常时指定一个对象。然后可以在<code>catch</code>块中引用对象的属性。以下示例创建一个类型为<code>UserException</code>的对象，并在<code>throw</code>语句中使用它。</p>
+你可以在抛出异常时指定一个对象。然后可以在`catch`块中引用对象的属性。以下示例创建一个类型为`UserException`的对象，并在`throw`语句中使用它。
 
-<pre class="brush: js">function UserException(message) {
+```js
+function UserException(message) {
    this.message = message;
    this.name = "UserException";
 }
@@ -60,13 +63,14 @@ try {
    var monthName = "unknown";
    console.log(e.message, e.name); // 传递异常对象到错误处理
 }
-</pre>
+```
 
-<h3 id="另一个抛出异常对象的示例">另一个抛出异常对象的示例</h3>
+### 另一个抛出异常对象的示例
 
-<p>下面的示例中测试一个字符串是否是美国邮政编码。如果邮政编码是无效的，那么<code>throw</code>语句将会抛出一个类型为 <code>ZipCodeFormatException</code>的异常对象实例。</p>
+下面的示例中测试一个字符串是否是美国邮政编码。如果邮政编码是无效的，那么`throw`语句将会抛出一个类型为 `ZipCodeFormatException`的异常对象实例。
 
-<pre class="brush: js">/*
+```js
+/*
  * 创建 ZipCode 示例。
  *
  * 可被接受的邮政编码格式：
@@ -128,34 +132,33 @@ b = verifyZipCode(9560);          // 返回 -1
 c = verifyZipCode("a");           // 返回 -1
 d = verifyZipCode("95060");       // 返回 95060
 e = verifyZipCode("95060 1234");  // 返回 95060 1234
-</pre>
+```
 
-<h3 id="重新抛出异常">重新抛出异常</h3>
+### 重新抛出异常
 
-<p>你可以使用<code>throw</code>来抛出异常。下面的例子捕捉了一个异常值为数字的异常，并在其值大于 50 后重新抛出异常。重新抛出的异常传播到闭包函数或顶层，以便用户看到它。</p>
+你可以使用`throw`来抛出异常。下面的例子捕捉了一个异常值为数字的异常，并在其值大于 50 后重新抛出异常。重新抛出的异常传播到闭包函数或顶层，以便用户看到它。
 
-<pre class="brush: js">try {
+```js
+try {
    throw n; // 抛出一个数值异常
 } catch (e) {
-   if (e &lt;= 50) {
+   if (e <= 50) {
       // 异常在 1-50 之间时，直接处理
    } else {
       // 异常无法处理，重新抛出
       throw e;
    }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>try...catch</code></a></li>
-</ul>
+- [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)

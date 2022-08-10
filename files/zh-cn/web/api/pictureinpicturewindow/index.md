@@ -3,41 +3,38 @@ title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 translation_of: Web/API/PictureInPictureWindow
 ---
-<div>{{APIRef("Picture-in-Picture API")}}</div>
+{{APIRef("Picture-in-Picture API")}}
 
-<p><code><strong>PictureInPictureWindow</strong></code>接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。</p>
+**`PictureInPictureWindow`**接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。
 
-<p>使用{{domxref("HTMLVideoElement.requestPictureInPicture()")}}返回一个具有此接口的 promise 值</p>
+使用{{domxref("HTMLVideoElement.requestPictureInPicture()")}}返回一个具有此接口的 promise 值
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em> <code>PictureInPictureWindow</code> 接口不继承任何属性。</em></p>
+_`PictureInPictureWindow` 接口不继承任何属性。_
 
-<dl>
- <dt>{{domxref("PictureInPictureWindow.width")}} {{ReadOnlyInline}}</dt>
- <dd>获取浮动视频窗宽度。</dd>
- <dt>{{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}</dt>
- <dd>获取浮动视频窗高度。</dd>
-</dl>
+- {{domxref("PictureInPictureWindow.width")}} {{ReadOnlyInline}}
+  - : 获取浮动视频窗宽度。
+- {{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}
+  - : 获取浮动视频窗高度。
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>PictureInPictureWindow</code> interface doesn't inherit any methods.</em></p>
+_The `PictureInPictureWindow` interface doesn't inherit any methods._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em><em>The <code>PictureInPictureWindow</code> interface doesn't inherit any events.</em></em></p>
+**The `PictureInPictureWindow` interface doesn't inherit any events.**
 
-<dl>
- <dt>{{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}</dt>
- <dd>Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.</dd>
-</dl>
+- {{domxref("PictureInPictureWindow.resize_event", "PictureInPictureWindow.resize")}}
+  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized. The associated event handler is {{domxref("PictureInPictureWindow.onresize")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given a <code>&lt;button&gt;</code> and a <code>&lt;video&gt;</code>, clicking the button will make the video enter the picture-in-picture mode; we then attach an event to print the floating video window dimensions to the console.</p>
+Given a `<button>` and a `<video>`, clicking the button will make the video enter the picture-in-picture mode; we then attach an event to print the floating video window dimensions to the console.
 
-<pre class="brush: js notranslate">const button = document.querySelector("button");
+```js
+const button = document.querySelector("button");
 const video = document.querySelector("video");
 
 function printPipWindowDimensions(evt) {
@@ -48,24 +45,20 @@ function printPipWindowDimensions(evt) {
 }
 
 button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow =&gt; {
+  video.requestPictureInPicture().then(pictureInPictureWindow => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.PictureInPictureWindow")}}
 
+## See also
 
-<p>{{Compat("api.PictureInPictureWindow")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{DOMxRef("Picture-in-Picture_API")}}</li>
-</ul>
+- {{DOMxRef("Picture-in-Picture_API")}}

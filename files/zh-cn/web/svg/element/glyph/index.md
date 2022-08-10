@@ -9,81 +9,74 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/glyph
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>一个<code>glyph</code>元素定义了 SVG 字体中的一个独立的字形。</p>
+一个`glyph`元素定义了 SVG 字体中的一个独立的字形。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;?xml version="1.0" standalone="yes"?&gt;
-&lt;svg width="400px" height="300px" version="1.1"
-  xmlns = 'http://www.w3.org/2000/svg'&gt;
-&lt;!-- Example copied from http://www.w3.org/TR/SVG/fonts.html#GlyphElement --&gt;
-  &lt;defs&gt;
+```xml
+<?xml version="1.0" standalone="yes"?>
+<svg width="400px" height="300px" version="1.1"
+  xmlns = 'http://www.w3.org/2000/svg'>
+<!-- Example copied from http://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
+  <defs>
 
-    &lt;font id="Font1" horiz-adv-x="1000"&gt;
-      &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+    <font id="Font1" horiz-adv-x="1000">
+      <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
           units-per-em="1000" cap-height="600" x-height="400"
           ascent="700" descent="300"
-          alphabetic="0" mathematical="350" ideographic="400" hanging="500"&gt;
-        &lt;font-face-src&gt;
-          &lt;font-face-name name="Super Sans Bold"/&gt;
-        &lt;/font-face-src&gt;
-      &lt;/font-face&gt;
+          alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+        <font-face-src>
+          <font-face-name name="Super Sans Bold"/>
+        </font-face-src>
+      </font-face>
 
-      &lt;missing-glyph&gt;&lt;path d="M0,0h200v200h-200z"/&gt;&lt;/missing-glyph&gt;
-      &lt;glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"&gt;&lt;/glyph&gt;
-      &lt;glyph unicode="@" d="M0,50l100,300l400,100z"&gt;&lt;/glyph&gt;
+      <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
+      <glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"></glyph>
+      <glyph unicode="@" d="M0,50l100,300l400,100z"></glyph>
 
-    &lt;/font&gt;
-  &lt;/defs&gt;
-  &lt;text x="100" y="100"
+    </font>
+  </defs>
+  <text x="100" y="100"
            style="font-family: 'Super Sans', Helvetica, sans-serif;
-                  font-weight: bold; font-style: normal"&gt;Text
-    using embe@dded font!&lt;/text&gt;
-&lt;/svg&gt;
+                  font-weight: bold; font-style: normal">Text
+    using embe@dded font!</text>
+</svg>
+```
 
+## 属性
 
-</pre>
+### 全局属性
 
-<h2 id="属性">属性</h2>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="全局属性">全局属性</h3>
+### 专有属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- {{ SVGAttr("d") }}
+- {{ SVGAttr("horiz-adv-x") }}
+- {{ SVGAttr("vert-origin-x") }}
+- {{ SVGAttr("vert-origin-y") }}
+- {{ SVGAttr("vert-adv-y") }}
+- {{ SVGAttr("unicode") }}
+- {{ SVGAttr("glyph-name") }}
+- {{ SVGAttr("orientation") }}
+- {{ SVGAttr("arabic-form") }}
+- {{ SVGAttr("lang") }}
 
-<h3 id="专有属性">专有属性</h3>
+## DOM 接口
 
-<ul>
- <li>{{ SVGAttr("d") }}</li>
- <li>{{ SVGAttr("horiz-adv-x") }}</li>
- <li>{{ SVGAttr("vert-origin-x") }}</li>
- <li>{{ SVGAttr("vert-origin-y") }}</li>
- <li>{{ SVGAttr("vert-adv-y") }}</li>
- <li>{{ SVGAttr("unicode") }}</li>
- <li>{{ SVGAttr("glyph-name") }}</li>
- <li>{{ SVGAttr("orientation") }}</li>
- <li>{{ SVGAttr("arabic-form") }}</li>
- <li>{{ SVGAttr("lang") }}</li>
-</ul>
+该元素实现了`SVGGlyphElement接口。`
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## 相关内容
 
-<p>该元素实现了<code><a href="/en/DOM/SVGGlyphElement">SVGGlyphElement</a>接口。</code></p>
-
-<h2 id="相关内容">相关内容</h2>
-
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("missing-glyph") }}</li>
- <li><a href="/en/SVG/Tutorial/SVG_fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("missing-glyph") }}
+- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)

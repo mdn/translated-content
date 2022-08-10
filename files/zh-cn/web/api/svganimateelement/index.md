@@ -3,30 +3,28 @@ title: SVGAnimateElement
 slug: Web/API/SVGAnimateElement
 translation_of: Web/API/SVGAnimateElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p> <strong><code>SVGAnimateElement</code></strong> 接口对应于 {{SVGElement("animate")}} 元素。</p>
+**`SVGAnimateElement`** 接口对应于 {{SVGElement("animate")}} 元素。
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>该接口没有属性，但从其父级继承属性，</em></p>
+_该接口没有属性，但从其父级继承属性，_
 
-<p><em>{{domxref("SVGAnimationElement")}}.</em></p>
+_{{domxref("SVGAnimationElement")}}._
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>该接口没有方法，但从其父级继承方法，</em></p>
+_该接口没有方法，但从其父级继承方法，_
 
-<p><em>{{domxref("SVGAnimationElement")}}.</em></p>
+_{{domxref("SVGAnimationElement")}}._
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.SVGAnimateElement")}}</p>
+{{Compat("api.SVGAnimateElement")}}

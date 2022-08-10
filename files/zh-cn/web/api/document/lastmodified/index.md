@@ -3,29 +3,29 @@ title: document.lastModified
 slug: Web/API/Document/lastModified
 translation_of: Web/API/Document/lastModified
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h3 id="Summary">概述</h3>
+### 概述
 
-<p>返回一个字符串，其中包含了当前文档的最后修改日期和时间。</p>
+返回一个字符串，其中包含了当前文档的最后修改日期和时间。
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="eval"><em>var string</em> = document.lastModified;
-</pre>
+```plain
+var string = document.lastModified;
+```
 
-<h3 id="Example">例子</h3>
+### 例子
 
-<pre class="eval">dump(document.lastModified);
+```plain
+dump(document.lastModified);
 // 返回: Tuesday, July 10, 2001 10:19:42
-</pre>
+```
 
-<h3 id="Notes">备注</h3>
+### 备注
 
-<p>需要注意的是，作为一个字符串，<code>lastModified</code> 不能很容易的被用于与该文档的修改日期做比较。</p>
+需要注意的是，作为一个字符串，`lastModified` 不能很容易的被用于与该文档的修改日期做比较。
 
-<p>Webkit 返回的时间为 UTC 时间;Gecko 和 IE 返回的时间为本地时区时间。</p>
+Webkit 返回的时间为 UTC 时间;Gecko 和 IE 返回的时间为本地时区时间。
 
-<p>{{Compat("api.Document.lastModified")}}</p>
-
-<p> </p>
+{{Compat("api.Document.lastModified")}}

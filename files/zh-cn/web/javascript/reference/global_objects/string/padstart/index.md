@@ -10,71 +10,72 @@ tags:
   - String.padStart()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>padStart()</code></strong> 方法用另一个字符串填充当前字符串 (如果需要的话，会重复多次)，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。</p>
+**`padStart()`** 方法用另一个字符串填充当前字符串 (如果需要的话，会重复多次)，以便产生的字符串达到给定的长度。从当前字符串的左侧开始填充。
 
-<div>{{EmbedInteractiveExample("pages/js/string-padstart.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>str</var>.padStart(<var>targetLength</var> [, <var>padString</var>])</pre>
+```plain
+str.padStart(targetLength [, padString])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>targetLength</code></dt>
- <dd>当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。</dd>
- <dt><code>padString</code> {{optional_inline}}</dt>
- <dd>填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。此参数的默认值为 " "（U+0020）。</dd>
-</dl>
+- `targetLength`
+  - : 当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
+- `padString` {{optional_inline}}
+  - : 填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。此参数的默认值为 " "（U+0020）。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。</p>
+在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">'abc'.padStart(10);         // "       abc"
+```js
+'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"</pre>
+'abc'.padStart(1);          // "abc"
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>如果原生环境不支持该方法，在其他代码之前先运行下面的代码，将创建 <code>String.prototype.padStart()</code> 方法。</p>
+如果原生环境不支持该方法，在其他代码之前先运行下面的代码，将创建 `String.prototype.padStart()` 方法。
 
-<pre class="brush: js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
+```js
+// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
     String.prototype.padStart = function padStart(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
+        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
         padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length &gt; targetLength) {
+        if (this.length > targetLength) {
             return String(this);
         }
         else {
             targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
+            if (targetLength > padString.length) {
                 padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
             }
             return padString.slice(0,targetLength) + String(this);
         }
     };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>{{jsxref("String.prototype.padEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.padEnd()")}}

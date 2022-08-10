@@ -3,51 +3,45 @@ title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
 translation_of: Web/API/SubtleCrypto/decrypt
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p><code><strong>SubtleCrypto.decrypt()</strong></code> 以加密数据、算法和密钥为参数返回一个包含明文的 {{jsxref("Promise")}} 对象。</p>
+**`SubtleCrypto.decrypt()`** 以加密数据、算法和密钥为参数返回一个包含明文的 {{jsxref("Promise")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>result</em> = crypto<code>.subtle.decrypt(<em>algorithm</em>, <em>key</em>, <em>data</em>)</code>;
-</pre>
+```plain
+var result = crypto.subtle.decrypt(algorithm, key, data);
+```
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<ul>
- <li><em><code>algorithm</code></em> 是一个对象，用于指定解密函数及其参数。当没有参数时，<em>algorithm</em> 也可以是包含了算法名称的 {{domxref("DOMString")}} 对象。支持的值<a href="https://www.w3.org/TR/WebCryptoAPI/#algorithm-overview">¹</a> 如下：
+- _`algorithm`_ 是一个对象，用于指定解密函数及其参数。当没有参数时，_algorithm_ 也可以是包含了算法名称的 {{domxref("DOMString")}} 对象。支持的值[¹](https://www.w3.org/TR/WebCryptoAPI/#algorithm-overview) 如下：
 
-  <ul>
-   <li><code>{"name": "<a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCbcParams">AES-CBC</a>", iv}</code> <code><em>iv</em></code> 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。</li>
-   <li><code>{"name": "<a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams">AES-CTR</a>", counter, length}</code> <code><em>counter</em></code> 和<code><em>length</em></code> 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同</li>
-   <li><code>{"name": "<a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams">AES-GCM</a>", iv[, additionalData, tagLength]}</code> <code><em>iv</em></code>， <code><em>additionalData</em></code>和 <code><em>tagLength</em></code> 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。</li>
-   <li><code>{"name": "<a href="https://www.w3.org/TR/WebCryptoAPI/#dfn-RsaOaepParams">RSA-OAEP</a>"[, label]}</code> <code><em>label</em></code> 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。</li>
-  </ul>
- </li>
- <li><code><em>key</em></code> 是一个包含了密钥的 {{domxref("CryptoKey")}} 对象，用于解密。</li>
- <li><em><code>data</code></em> 是一个包含了待解密的密文的 {{domxref("BufferSource")}} 对象。</li>
-</ul>
+  - `{"name": "AES-CBC", iv}` `iv` 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。
+  - `{"name": "AES-CTR", counter, length}` `counter` 和`length` 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同
+  - `{"name": "AES-GCM", iv[, additionalData, tagLength]}` `iv`， `additionalData`和 `tagLength` 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。
+  - `{"name": "RSA-OAEP"[, label]}` `label` 与 {{domxref("SubtleCrypto.encrypt()")}} 中描述的相同。
 
-<h3 id="返回值">返回值</h3>
+- `key` 是一个包含了密钥的 {{domxref("CryptoKey")}} 对象，用于解密。
+- _`data`_ 是一个包含了待解密的密文的 {{domxref("BufferSource")}} 对象。
 
-<ul>
- <li><code><em>result</em></code> 是一个 {{jsxref("Promise")}} 对象，它会返回由{{glossary("ciphertext")}} 解密的得来的 {{glossary("plaintext")}}。</li>
-</ul>
+### 返回值
 
-<h3 id="异常">异常</h3>
+- `result` 是一个 {{jsxref("Promise")}} 对象，它会返回由{{glossary("ciphertext")}} 解密的得来的 {{glossary("plaintext")}}。
 
-<p>Promise 将会在以下的异常被触发时返回 rejected：</p>
+### 异常
 
-<dl>
- <dt>InvalidAccessError</dt>
- <dd>当提供的密钥无法执行请求的操作时（如：解密算法无效，或对指定的解密算法提供了无效的密钥）。</dd>
- <dt>OperationError</dt>
- <dd>因特定的操作原因导致操作失败时（如：算法的参数大小无效，或解密结果失败）。</dd>
-</dl>
+Promise 将会在以下的异常被触发时返回 rejected：
 
-<h2 id="实例">实例</h2>
+- InvalidAccessError
+  - : 当提供的密钥无法执行请求的操作时（如：解密算法无效，或对指定的解密算法提供了无效的密钥）。
+- OperationError
+  - : 因特定的操作原因导致操作失败时（如：算法的参数大小无效，或解密结果失败）。
 
-<pre class="brush: js">const decryptText = async (ctBuffer, iv, password) =&gt; {
+## 实例
+
+```js
+const decryptText = async (ctBuffer, iv, password) => {
     const pwUtf8 = new TextEncoder().encode(password);
     const pwHash = await crypto.subtle.digest('SHA-256', pwUtf8);
 
@@ -59,23 +53,20 @@ translation_of: Web/API/SubtleCrypto/decrypt
     const plaintext = new TextDecoder().decode(ptBuffer);
 
     return plaintext;
-}</pre>
+}
+```
 
-<p><code><em>iv</em></code> 的含义在 {{domxref("SubtleCrypto.encrypt()")}} 中可以找到。<code><em>ctBuffer</em></code> 是 {{domxref("SubtleCrypto.encrypt()")}} 返回的密文。</p>
+`iv` 的含义在 {{domxref("SubtleCrypto.encrypt()")}} 中可以找到。`ctBuffer` 是 {{domxref("SubtleCrypto.encrypt()")}} 返回的密文。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
+{{Compat("api.SubtleCrypto.decrypt")}}
 
+## 另请参见
 
-<p>{{Compat("api.SubtleCrypto.decrypt")}}</p>
-
-<h2 id="另请参见">另请参见</h2>
-
-<ul>
- <li>{{domxref("Crypto")}} 与 {{domxref("Crypto.subtle")}}。</li>
- <li>{{domxref("SubtleCrypto")}} 包含了该接口。</li>
-</ul>
+- {{domxref("Crypto")}} 与 {{domxref("Crypto.subtle")}}。
+- {{domxref("SubtleCrypto")}} 包含了该接口。

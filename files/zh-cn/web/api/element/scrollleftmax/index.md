@@ -3,24 +3,24 @@ title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 translation_of: Web/API/Element/scrollLeftMax
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p>这个 <code><strong>Element.scrollLeftMax</strong></code>  是只读的属性返回一个 {{jsxref("Number")}} 表示一个元素横向滚动条可滚动的最大距离。</p>
+这个 **`Element.scrollLeftMax`** 是只读的属性返回一个 {{jsxref("Number")}} 表示一个元素横向滚动条可滚动的最大距离。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>var <em>pxl</em> = <em>elt</em>.scrollLeftMax;</pre>
+```plain
+var pxl = elt.scrollLeftMax;
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><em>这个属性还没纳入规范。</em></p>
+_这个属性还没纳入规范。_
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.Element.scrollLeftMax")}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li>{{domxref("Element.scrollTopMax")}} 纵坐标用法相同。</li>
-</ul>
+- {{domxref("Element.scrollTopMax")}} 纵坐标用法相同。

@@ -9,37 +9,39 @@ tags:
   - Reference
 translation_of: Web/API/Document/createDocumentFragment
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+创建一个新的空白的文档片段 ( [`DocumentFragment`](/en-US/docs/DOM/DocumentFragment))。
 
-<p>创建一个新的空白的文档片段 ( <a href="/en-US/docs/DOM/DocumentFragment"><code>DocumentFragment</code></a>)。</p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+let fragment = document.createDocumentFragment();
+```
 
-<pre class="syntaxbox">let fragment = document.createDocumentFragment();
-</pre>
+`fragment` 是一个指向空{{domxref("DocumentFragment")}}对象的引用。
 
-<p><code>fragment</code> 是一个指向空{{domxref("DocumentFragment")}}对象的引用。</p>
+## 描述
 
-<h2 id="描述">描述</h2>
+[`DocumentFragments`](/en-US/docs/DOM/DocumentFragment) 是 DOM 节点。它们不是主 DOM 树的一部分。通常的用例是创建文档片段，将元素附加到文档片段，然后将文档片段附加到 DOM 树。在 DOM 树中，文档片段被其所有的子元素所代替。
 
-<p><code><a href="/en-US/docs/DOM/DocumentFragment">DocumentFragments</a></code> 是 DOM 节点。它们不是主 DOM 树的一部分。通常的用例是创建文档片段，将元素附加到文档片段，然后将文档片段附加到 DOM 树。在 DOM 树中，文档片段被其所有的子元素所代替。</p>
+因为文档片段存在于**内存中**，并不在 DOM 树中，所以将子元素插入到文档片段时不会引起页面[回流](/zh-CN/docs/Glossary/Reflow)（对元素位置和几何上的计算）。因此，使用文档片段通常会带来更好的性能。
 
-<p>因为文档片段存在于<strong>内存中</strong>，并不在 DOM 树中，所以将子元素插入到文档片段时不会引起页面<a href="/zh-CN/docs/Glossary/Reflow">回流</a>（对元素位置和几何上的计算）。因此，使用文档片段通常会带来更好的性能。</p>
+## 示例
 
-<h2 id="Example">示例</h2>
+此示例创建主流 Web 浏览器的列表。
 
-<p>此示例创建主流 Web 浏览器的列表。</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<ul id="ul">
+</ul>
+```
 
-<pre class="brush: html">&lt;ul id="ul"&gt;
-&lt;/ul&gt;</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">var element  = document.getElementById('ul'); // assuming ul exists
+```js
+var element  = document.getElementById('ul'); // assuming ul exists
 var fragment = document.createDocumentFragment();
 var browsers = ['Firefox', 'Chrome', 'Opera',
     'Safari', 'Internet Explorer'];
@@ -50,23 +52,22 @@ browsers.forEach(function(browser) {
     fragment.appendChild(li);
 });
 
-element.appendChild(fragment);</pre>
+element.appendChild(fragment);
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Example", 600, 140)}}</p>
+{{EmbedLiveSample("Example", 600, 140)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.Document.createDocumentFragment")}}</p>
+{{Compat("api.Document.createDocumentFragment")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}</li>
- <li>{{domxref("documentFragment")}}</li>
-</ul>
+- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
+- {{domxref("documentFragment")}}

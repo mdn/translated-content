@@ -9,61 +9,57 @@ tags:
   - arguments.length
 translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
-<div>
-<div>
-<div>{{jsSidebar("Functions")}}</div>
-</div>
-</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>arguments</code></strong> 是一个对应于传递给函数的参数的类数组对象。</p>
+**`arguments`** 是一个对应于传递给函数的参数的类数组对象。
 
-<p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<div class="note">
-<p><strong>备注：</strong> 如果你编写兼容 ES6 的代码，那么优先推荐使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">剩余参数</a></p>
-</div>
+> **备注：** 如果你编写兼容 ES6 的代码，那么优先推荐使用 [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
-<div class="note">
-<p><strong>备注：</strong> “类数组” 意味着 <code>arguments</code> 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法， 例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description">§Description</a>.</p>
-</div>
+> **备注：** “类数组” 意味着 `arguments` 有 {{jsxref("Functions/arguments/length", "长度")}} 属性 并且属性的索引是从零开始的，但是它没有 {{JSxRef("Array")}}的 内置方法， 例如 {{jsxref("Array.forEach", "forEach()")}} 和 {{jsxref("Array.map", "map()")}}都是没有的。详情可以看 [§Description](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments$edit#Description).
 
-<p><code>arguments</code>对象是所有（非箭头）函数中都可用的<strong>局部变量</strong>。你可以使用<code>arguments</code>对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：</p>
+`arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
-<pre class="brush: js">arguments[0]
+```js
+arguments[0]
 arguments[1]
 arguments[2]
-</pre>
+```
 
-<p>参数也可以被设置：</p>
+参数也可以被设置：
 
-<pre class="brush: js">arguments[1] = 'new value';</pre>
+```js
+arguments[1] = 'new value';
+```
 
-<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
+`arguments`对象不是一个 {{jsxref("Array")}} 。它类似于`Array`，但除了 length 属性和索引元素之外没有任何`Array`属性。例如，它没有 [pop](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法。但是它可以被转换为一个真正的`Array`：
 
-<pre class="brush: js">var args = Array.prototype.slice.call(arguments);
+```js
+var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 
 // ES2015
 const args = Array.from(arguments);
 const args = [...arguments];
-</pre>
+```
 
-<div class="warning">
-<p><strong>警告：</strong>对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
+> **警告：**对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
+>
+> ```js
+> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> ```
 
-<pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
-</pre>
-</div>
+如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
 
-<p>如果调用的参数多于正式声明接受的参数，则可以使用<code>arguments</code>对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>来确定传递给函数参数的个数，然后使用<code>arguments</code>对象来处理每个参数。要确定函数<a href="/zh-CN/docs/Glossary/Signature/Function">签名</a>中（输入）参数的数量，请使用<code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>属性。</p>
+### 对参数使用 `typeof`
 
-<h3 id="对参数使用_typeof">对参数使用 <code>typeof</code></h3>
+typeof 参数返回 'object'。
 
-<p>typeof 参数返回 'object'。</p>
-
-<pre class="brush: js">console.log(typeof arguments);    // 'object'
+```js
+console.log(typeof arguments);    // 'object'
 // arguments 对象只能在函数内使用
 function test(a){
     console.log(a,Object.prototype.toString.call(arguments));
@@ -75,158 +71,174 @@ test(1);
 1 "[object Arguments]"
 1 undefined
 number
-*/</pre>
+*/
+```
 
-<p>可以使用索引确定单个参数的类型。</p>
+可以使用索引确定单个参数的类型。
 
-<pre class="brush: js">console.log(typeof arguments[0]); //this will return the typeof individual arguments.</pre>
+```js
+console.log(typeof arguments[0]); //this will return the typeof individual arguments.
+```
 
-<h3 id="对参数使用扩展语法">对参数使用扩展语法</h3>
+### 对参数使用扩展语法
 
-<p>您还可以使用{{jsxref("Array.from()")}}方法或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">扩展运算符</a>将参数转换为真实数组：</p>
+您还可以使用{{jsxref("Array.from()")}}方法或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)将参数转换为真实数组：
 
-<pre class="brush: js">var args = Array.from(arguments);
-var args = [...arguments];</pre>
+```js
+var args = Array.from(arguments);
+var args = [...arguments];
+```
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<dl>
- <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code></dt>
- <dd>指向参数所属的当前执行的函数。</dd>
- <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length">arguments.length</a></code></dt>
- <dd>传递给函数的参数数量。</dd>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
- <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>
-</dl>
+- [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+  - : 指向参数所属的当前执行的函数。
+- [`arguments.length`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length)
+  - : 传递给函数的参数数量。
+- [`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+  - : 返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。
 
-<div class="note">
-<p><strong>备注：</strong>在严格模式下，<code>arguments</code>对象已与过往不同。<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code>不再与函数的实际形参之间共享，同时 caller 属性也被移除。</p>
-</div>
+> **备注：**在严格模式下，`arguments`对象已与过往不同。[`arguments[@@iterator]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)不再与函数的实际形参之间共享，同时 caller 属性也被移除。
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<h3 id="遍历参数求和">遍历参数求和</h3>
+### 遍历参数求和
 
-<pre class="brush: js">function add() {
+```js
+function add() {
     var sum =0,
         len = arguments.length;
-    for(var i=0; i&lt;len; i++){
+    for(var i=0; i<len; i++){
         sum += arguments[i];
     }
     return sum;
 }
 add()                           // 0
 add(1)                          // 1
-add(1,2,3,4);                   // 10</pre>
+add(1,2,3,4);                   // 10
+```
 
-<h3 id="Example_Defining_function_that_concatenates_several_strings">定义连接字符串的函数</h3>
+### 定义连接字符串的函数
 
-<p>这个例子定义了一个函数来连接字符串。这个函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串。该函数定义如下：</p>
+这个例子定义了一个函数来连接字符串。这个函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串。该函数定义如下：
 
-<pre class="brush:js">function myConcat(separator) {
+```js
+function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
-}</pre>
+}
+```
 
-<p>你可以传递任意数量的参数到该函数，并使用每个参数作为列表中的项创建列表。</p>
+你可以传递任意数量的参数到该函数，并使用每个参数作为列表中的项创建列表。
 
-<pre class="brush:js">// returns "red, orange, blue"
+```js
+// returns "red, orange, blue"
 myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah"
 myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // returns "sage. basil. oregano. pepper. parsley"
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+```
 
-<h3 id="Example_Defining_a_function_that_creates_HTML_lists">定义创建 HTML 列表的方法</h3>
+### 定义创建 HTML 列表的方法
 
-<p>这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
+这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "`u`" 时，创建一个无序列表 (项目列表)；当该参数为 "`o`" 时，则创建一个有序列表 (编号列表)。该函数定义如下：
 
-<pre class="brush:js">function list(type) {
-  var result = "&lt;" + type + "l&gt;&lt;li&gt;";
+```js
+function list(type) {
+  var result = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join("&lt;/li&gt;&lt;li&gt;");
-  result += "&lt;/li&gt;&lt;/" + type + "l&gt;"; // end list
+  result += args.join("</li><li>");
+  result += "</li></" + type + "l>"; // end list
 
   return result;
-}</pre>
+}
+```
 
-<p>你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：</p>
+你可以传递任意数量的参数到该函数，并将每个参数作为一个项添加到指定类型的列表中。例如：
 
-<pre class="brush:js">var listHTML = list("u", "One", "Two", "Three");
+```js
+var listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML is:
 
-"&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;"
+"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
 
 */
-</pre>
+```
 
-<h3 id="剩余参数、默认参数和解构赋值参数">剩余参数、默认参数和解构赋值参数</h3>
+### 剩余参数、默认参数和解构赋值参数
 
-<p><code>arguments</code>对象可以与<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>参数结合使用。</p>
+`arguments`对象可以与[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数结合使用。
 
-<pre class="brush: js">function foo(...args) {
+```js
+function foo(...args) {
   return args;
 }
 foo(1, 2, 3);  // [1,2,3]
-</pre>
+```
 
-<p>在严格模式下，<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>参数的存在不会改变 <code>arguments</code>对象的行为，但是在非严格模式下就有所不同了。</p>
+在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
 
-<p>当非严格模式中的函数<strong>没有</strong>包含<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>，那么<code>arguments</code>对象中的值<strong>会</strong>跟踪参数的值（反之亦然）。看下面的代码：</p>
+当非严格模式中的函数**没有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**会**跟踪参数的值（反之亦然）。看下面的代码：
 
-<pre class="brush: js">function func(a) {
+```js
+function func(a) {
   arguments[0] = 99;   // 更新了 arguments[0] 同样更新了 a
   console.log(a);
 }
 func(10); // 99
-</pre>
+```
 
-<p>并且</p>
+并且
 
-<pre class="brush: js">function func(a) {
+```js
+function func(a) {
   a = 99;              // 更新了 a 同样更新了 arguments[0]
   console.log(arguments[0]);
 }
 func(10); // 99
-</pre>
+```
 
-<p>当非严格模式中的函数<strong>有</strong>包含<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>、<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解构赋值</a>，那么<code>arguments</code>对象中的值<strong>不会</strong>跟踪参数的值（反之亦然）。相反，<code>arguments</code>反映了调用时提供的参数：</p>
+当非严格模式中的函数**有**包含[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，那么`arguments`对象中的值**不会**跟踪参数的值（反之亦然）。相反，`arguments`反映了调用时提供的参数：
 
-<pre class="brush: js">function func(a = 55) {
+```js
+function func(a = 55) {
   arguments[0] = 99; // updating arguments[0] does not also update a
   console.log(a);
 }
-func(10); // 10</pre>
+func(10); // 10
+```
 
-<p>并且</p>
+并且
 
-<pre class="brush: js">function func(a = 55) {
+```js
+function func(a = 55) {
   a = 99; // updating a does not also update arguments[0]
   console.log(arguments[0]);
 }
-func(10); // 10</pre>
+func(10); // 10
+```
 
-<p>并且</p>
+并且
 
-<pre class="brush: js">function func(a = 55) {
+```js
+function func(a = 55) {
   console.log(arguments[0]);
 }
 func(); // undefined
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Function")}}</li>
-</ul>
+- {{jsxref("Function")}}

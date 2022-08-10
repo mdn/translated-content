@@ -8,35 +8,35 @@ tags:
   - cancelIdleCallback
 translation_of: Web/API/Window/cancelIdleCallback
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p> <strong><code>window.cancelIdleCallback()</code></strong> 方法用于取消之前调用{{domxref("window.requestIdleCallback()")}} 的回调。</p>
+**`window.cancelIdleCallback()`** 方法用于取消之前调用{{domxref("window.requestIdleCallback()")}} 的回调。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.cancelIdleCallback(<em>handle</em>);</pre>
+```plain
+window.cancelIdleCallback(handle);
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>handle</code></dt>
- <dd>调用 {{domxref("window.requestIdleCallback()")}}  时返回的 ID.</dd>
-</dl>
+- `handle`
+  - : 调用 {{domxref("window.requestIdleCallback()")}} 时返回的 ID.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在文章 <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a> 中可以查看<a href="/en-US/docs/Web/API/Background_Tasks_API#Example"> 完整示例</a> 。</p>
+在文章 [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API) 中可以查看[ 完整示例](/en-US/docs/Web/API/Background_Tasks_API#Example) 。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Window.cancelIdleCallback")}}

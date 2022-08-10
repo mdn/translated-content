@@ -8,47 +8,44 @@ tags:
 translation_of: Web/API/clearInterval
 original_slug: Web/API/clearInterval
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code>WindowOrWorkerGlobalScope</code> mixin 的 <strong><code>clearInterval()</code></strong> 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。</p>
+`WindowOrWorkerGlobalScope` mixin 的 **`clearInterval()`** 方法可取消先前通过 {{domxref("setInterval()")}} 设置的重复定时任务。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>scope</em>.clearInterval(<var>intervalID</var>)
-</pre>
+```plain
+scope.clearInterval(intervalID)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>intervalID</code></dt>
- <dd>要取消的定时器的 ID。是由 <code>setInterval()</code> 返回的。</dd>
-</dl>
+- `intervalID`
+  - : 要取消的定时器的 ID。是由 `setInterval()` 返回的。
 
-<p>值得一提的是，{{domxref("setInterval()")}} 和 {{domxref("setTimeout()")}} 共用其定义的 IDs，即可以使用 <code>clearInterval()</code> 和 {{domxref("clearTimeout()")}} 中的任意一个。然而，为了使代码可读性更强，你应该尽量避免这种用法。</p>
+值得一提的是，{{domxref("setInterval()")}} 和 {{domxref("setTimeout()")}} 共用其定义的 IDs，即可以使用 `clearInterval()` 和 {{domxref("clearTimeout()")}} 中的任意一个。然而，为了使代码可读性更强，你应该尽量避免这种用法。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>查看 <a href="/en-US/docs/DOM/window.setInterval#Example"><code>setInterval()</code> 的示例</a>。</p>
+查看 [`setInterval()` 的示例](/en-US/docs/DOM/window.setInterval#Example)。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Timers">JavaScript 定时器</a></li>
- <li>{{domxref("setTimeout")}}</li>
- <li>{{domxref("setInterval")}}</li>
- <li>{{domxref("clearTimeout")}}</li>
- <li>{{domxref("Window.requestAnimationFrame")}}</li>
- <li><a href="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- [JavaScript 定时器](/en-US/docs/JavaScript/Timers)
+- {{domxref("setTimeout")}}
+- {{domxref("setInterval")}}
+- {{domxref("clearTimeout")}}
+- {{domxref("Window.requestAnimationFrame")}}
+- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

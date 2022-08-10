@@ -9,45 +9,39 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/missing-glyph
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>如果对于给定的字符，字体没有定义一个合适的 {{ SVGElement("glyph") }}，那么就会呈现<code>missing-glyph</code>元素的内容。</p>
+如果对于给定的字符，字体没有定义一个合适的 {{ SVGElement("glyph") }}，那么就会呈现`missing-glyph`元素的内容。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("d") }}</li>
- <li>{{ SVGAttr("horiz-adv-x") }}</li>
- <li>{{ SVGAttr("vert-origin-x") }}</li>
- <li>{{ SVGAttr("vert-origin-y") }}</li>
- <li>{{ SVGAttr("vert-adv-y") }}</li>
-</ul>
+- {{ SVGAttr("d") }}
+- {{ SVGAttr("horiz-adv-x") }}
+- {{ SVGAttr("vert-origin-x") }}
+- {{ SVGAttr("vert-origin-y") }}
+- {{ SVGAttr("vert-adv-y") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGMissingGlyphElement">SVGMissingGlyphElement</a></code>接口。</p>
+该元素实现了[`SVGMissingGlyphElement`](/en/DOM/SVGMissingGlyphElement)接口。
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li><a href="/en/SVG/Tutorial/SVG_fonts">SVG 教程：SVG 字体</a></li>
-</ul>
+- {{ SVGElement("font") }}
+- {{ SVGElement("glyph") }}
+- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)

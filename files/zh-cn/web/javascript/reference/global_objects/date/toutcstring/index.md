@@ -3,49 +3,46 @@ title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>toUTCString()</strong></code> 方法把一个日期转换为一个字符串，使用 UTC 时区。</p>
+**`toUTCString()`** 方法把一个日期转换为一个字符串，使用 UTC 时区。
 
-<div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
 
+## 语法
 
+```plain
+dateObj.toUTCString()
+```
 
-<h2 id="Syntax">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><var>dateObj</var>.toUTCString()</pre>
+返回使用 UTC 时区表示给定日期的字符串
 
-<h3 id="Parameters">返回值</h3>
+## 描述
 
-<p>返回使用 UTC 时区表示给定日期的字符串</p>
+`toUTCString` 的返回值是一个使用 UTC 时区的易读格式字符串。返回值的格式可能随平台而变化。通常返回值是一个 RFC-1123 格式的时间戳，这是一个 RFC-822 时间戳的小幅更新版。
 
-<p> </p>
+## 例子
 
-<h2 id="Description">描述</h2>
+### 例子：使用`toUTCString`
 
-<p><code>toUTCString</code> 的返回值是一个使用 UTC 时区的易读格式字符串。返回值的格式可能随平台而变化。通常返回值是一个 RFC-1123 格式的时间戳，这是一个 RFC-822 时间戳的小幅更新版。</p>
-
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example:_Using_toUTCString">例子：使用<code>toUTCString</code></h3>
-
-<pre>var today = new Date();
+```plain
+var today = new Date();
 var UTCstring = today.toUTCString();
 // Mon, 03 Jul 2006 21:44:38 GMT
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

@@ -8,29 +8,29 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/validateProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong><code>WebGLRenderingContext.validateProgram()</code></strong> 是一种 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> ，主要是用来验证 {{domxref("WebGLProgram")}}。 它在检查 WebGLProgram 程序是否链接成功的同时还会检查其是否能在当前的 WebGL 中使用。</p>
+**`WebGLRenderingContext.validateProgram()`** 是一种 [WebGL API](/en-US/docs/Web/API/WebGL_API) ，主要是用来验证 {{domxref("WebGLProgram")}}。 它在检查 WebGLProgram 程序是否链接成功的同时还会检查其是否能在当前的 WebGL 中使用。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.validateProgram(<var>program</var>);
-</pre>
+```plain
+void gl.validateProgram(program);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>program</dt>
- <dd>待验证的 {{domxref("WebGLProgram")}}。</dd>
-</dl>
+- program
+  - : 待验证的 {{domxref("WebGLProgram")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var program = gl.createProgram();
+```js
+var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -45,24 +45,22 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 }
 
 gl.useProgram(program);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.validateProgram")}}</p>
+{{Compat("api.WebGLRenderingContext.validateProgram")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

@@ -3,26 +3,26 @@ title: 在 IE6 中使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
 ---
-<p><a href="/zh-CN/DOM/XMLHttpRequest">XMLHttpRequest</a> 在 Internet Explorer 5.0 上作为 ActiveX 控件第一次被 Microsoft 引入。然而，在 IE7 和其它浏览器上，XMLHttpRequest 作为本地 JavaScript 对象而存在。</p>
+[XMLHttpRequest](/zh-CN/DOM/XMLHttpRequest) 在 Internet Explorer 5.0 上作为 ActiveX 控件第一次被 Microsoft 引入。然而，在 IE7 和其它浏览器上，XMLHttpRequest 作为本地 JavaScript 对象而存在。
 
-<p>在现代的浏览器上，你可以使用下面的代码创建一个新的 XMLHttpRequest 对象：</p>
+在现代的浏览器上，你可以使用下面的代码创建一个新的 XMLHttpRequest 对象：
 
-<pre class="brush: js">var request = new XMLHttpRequest()
-</pre>
+```js
+var request = new XMLHttpRequest()
+```
 
-<p>如果你需要支持 Internet Explorer 6 和更老的浏览器，你需要像下方所示扩展你的代码：</p>
+如果你需要支持 Internet Explorer 6 和更老的浏览器，你需要像下方所示扩展你的代码：
 
-<pre class="brush: js">if (window.XMLHttpRequest) {
+```js
+if (window.XMLHttpRequest) {
     //Firefox、 Opera、 IE7 和其它浏览器使用本地 JavaScript 对象
     var request = new XMLHttpRequest();
 } else {
     //IE 5 和 IE 6 使用 ActiveX 控件
     var request = new ActiveXObject("Microsoft.XMLHTTP");
 }
-</pre>
+```
 
-<h3 id="更多">更多</h3>
+### 更多
 
-<ul>
- <li><a href="/zh-CN/DOM/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
-</ul>
+- [使用 XMLHttpRequest](/zh-CN/DOM/XMLHttpRequest/Using_XMLHttpRequest)

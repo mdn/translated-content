@@ -3,17 +3,20 @@ title: WebGLRenderingContext.commit()
 slug: Web/API/WebGLRenderingContext/commit
 translation_of: Web/API/WebGLRenderingContext/commit
 ---
-<p>{{APIRef("WebGL")}} {{SeeCompatTable}}</p>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p>当上下文不是直接固定到一个特定的画布时，<code><strong>WebGLRenderingContext</strong></code><strong><code>.commit()</code></strong> 方法将帧绘制到其原始的 {{domxref("HTMLCanvasElement")}} 上。</p>
+当上下文不是直接固定到一个特定的画布时，**`WebGLRenderingContext.commit()`** 方法将帧绘制到其原始的 {{domxref("HTMLCanvasElement")}} 上。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre>void WebGLRenderingContext.commit()</pre>
+```plain
+void WebGLRenderingContext.commit()
+```
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<pre>var htmlCanvas = document.createElement('canvas');
+```plain
+var htmlCanvas = document.createElement('canvas');
 var offscreen = htmlCanvas.transferControlToOffscreen();
 var gl = offscreen.getContext('webgl');
 
@@ -21,20 +24,18 @@ var gl = offscreen.getContext('webgl');
 
 // 将帧绘制到 htmlCanvas 上
 gl.commit();
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>目前在 <a href="https://wiki.whatwg.org/wiki/OffscreenCanvas">OffscreenCanvas</a> 规范中作为草案。</p>
+目前在 [OffscreenCanvas](https://wiki.whatwg.org/wiki/OffscreenCanvas) 规范中作为草案。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLRenderingContext.commit")}}</p>
+{{Compat("api.WebGLRenderingContext.commit")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<ul>
- <li>定义此方法的接口，{{domxref("WebGLRenderingContext")}}</li>
- <li>{{domxref("OffscreenCanvas")}}</li>
- <li>{{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}</li>
-</ul>
+- 定义此方法的接口，{{domxref("WebGLRenderingContext")}}
+- {{domxref("OffscreenCanvas")}}
+- {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}

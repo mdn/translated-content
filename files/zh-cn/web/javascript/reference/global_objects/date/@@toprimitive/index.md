@@ -1,41 +1,40 @@
 ---
-title: 'Date.prototype[@@toPrimitive]'
+title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>[@@toPrimitive]()</strong></code> 方法可以转换一个 <code>Date</code> 对象到一个原始值。</p>
+**`[@@toPrimitive]()`** 方法可以转换一个 `Date` 对象到一个原始值。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<pre class="syntaxbox"><var>Date()[Symbol.toPrimitive](hint);
-</var></pre>
+```plain
+Date()[Symbol.toPrimitive](hint);
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>给出的 {{jsxref("Date")}} 的原始值。根据传入参数的不同，可以返回 string 或 number 类型。</p>
+给出的 {{jsxref("Date")}} 的原始值。根据传入参数的不同，可以返回 string 或 number 类型。
 
-<h2 id="说明">说明</h2>
+## 说明
 
-<p>{{jsxref("Date")}} 对象的 <code>[@@toPrimitive]()</code> 方法可以返回一个原始值，或是 string，或是 number。</p>
+{{jsxref("Date")}} 对象的 `[@@toPrimitive]()` 方法可以返回一个原始值，或是 string，或是 number。
 
-<p>如果 <code>hint</code> 是 <code>"string"</code> 或 <code>"default"</code>，<code>[@@toPrimitive]()</code> 将会调用 {{jsxref("Object.prototype.toString()", "toString")}}。如果 <code>toString</code> 属性不存在，则调用 {{jsxref("Object.prototype.valueOf()", "valueOf")}}。如果 <code>valueOf</code> 也不存在，则抛出一个{{jsxref("TypeError")}}。</p>
+如果 `hint` 是 `"string"` 或 `"default"`，`[@@toPrimitive]()` 将会调用 {{jsxref("Object.prototype.toString()", "toString")}}。如果 `toString` 属性不存在，则调用 {{jsxref("Object.prototype.valueOf()", "valueOf")}}。如果 `valueOf` 也不存在，则抛出一个{{jsxref("TypeError")}}。
 
-<p>如果 <code>hint</code> 是 <code>"number"</code>，<code>[@@toPrimitive]()</code> 会首先尝试 <code>valueOf</code>，若失败再尝试 <code>toString</code>。</p>
+如果 `hint` 是 `"number"`，`[@@toPrimitive]()` 会首先尝试 `valueOf`，若失败再尝试 `toString`。
 
-<p>当期望一个原始值却收到一个对象时，JavaScript 可以自动的调用 <code>[@@toPrimitive]()</code> 方法来将一个对象转化成原始值，所以你很少会需要自己调用这个方法。</p>
+当期望一个原始值却收到一个对象时，JavaScript 可以自动的调用 `[@@toPrimitive]()` 方法来将一个对象转化成原始值，所以你很少会需要自己调用这个方法。
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Symbol.toPrimitive")}}

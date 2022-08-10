@@ -8,60 +8,51 @@ tags:
   - 接口
 translation_of: Web/API/CSSGroupingRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>任何实现了 <code>CSSGroupingRule</code> 接口的对象表示任何可以包含或嵌套其他规则的的 CSS @ 规则。</p>
+任何实现了 `CSSGroupingRule` 接口的对象表示任何可以包含或嵌套其他规则的的 CSS @ 规则。
 
-<p>从其派生的对象：</p>
+从其派生的对象：
 
-<ul>
- <li>{{domxref("CSSConditionRule")}} 及其派生的对象：{{domxref("CSSMediaRule")}}、{{domxref("CSSSupportsRule")}}，和 {{domxref("CSSDocumentRule")}}。</li>
- <li>{{domxref("CSSPageRule")}}</li>
-</ul>
+- {{domxref("CSSConditionRule")}} 及其派生的对象：{{domxref("CSSMediaRule")}}、{{domxref("CSSSupportsRule")}}，和 {{domxref("CSSDocumentRule")}}。
+- {{domxref("CSSPageRule")}}
 
-<h2 id="Properties">语法</h2>
+## 语法
 
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> format.</p>
+The syntax is described using the [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) format.
 
-<pre>interface CSSGroupingRule : CSSRule {
+```plain
+interface CSSGroupingRule : CSSRule {
     readonly attribute CSSRuleList cssRules;
     unsigned long insertRule (DOMString rule, unsigned long index);
     void deleteRule (unsigned long index);
 }
-</pre>
+```
 
-<h2 id="所有_CSSGroupingRule_实例共有的属性">所有 CSSGroupingRule 实例共有的属性</h2>
+## 所有 CSSGroupingRule 实例共有的属性
 
-<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all properties of this class. It has one specific property:</p>
+The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all properties of this class. It has one specific property:
 
-<dl>
- <dt>{{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
-</dl>
+- {{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}
+  - : Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.
 
-<h2 id="所有_CSSGroupingRule_实例共有的方法">所有 CSSGroupingRule 实例共有的方法</h2>
+## 所有 CSSGroupingRule 实例共有的方法
 
-<p>The <code>CSSGroupingRule</code> derives from {{domxref("CSSRule")}} and inherits all methods of this class. It has two specific methods:</p>
+The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all methods of this class. It has two specific methods:
 
-<dl>
- <dt>{{domxref("CSSGroupingRule.deleteRule")}}</dt>
- <dd>Deletes a rule from the style sheet.</dd>
- <dt>{{domxref("CSSGroupingRule.insertRule")}}</dt>
- <dd>Inserts a new style rule into the current style sheet.</dd>
-</dl>
+- {{domxref("CSSGroupingRule.deleteRule")}}
+  - : Deletes a rule from the style sheet.
+- {{domxref("CSSGroupingRule.insertRule")}}
+  - : Inserts a new style rule into the current style sheet.
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.CSSGroupingRule")}}
 
+## 参见
 
-<p>{{Compat("api.CSSGroupingRule")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en/DOM/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information)

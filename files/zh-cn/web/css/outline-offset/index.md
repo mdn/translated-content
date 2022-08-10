@@ -5,21 +5,22 @@ tags:
   - outline-offset
 translation_of: Web/CSS/outline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><strong><code>outline-offset</code></strong> CSS 属性用于设置 {{ cssxref("outline") }} 与一个元素边缘或边框之间的间隙。</p>
+**`outline-offset`** CSS 属性用于设置 {{ cssxref("outline") }} 与一个元素边缘或边框之间的间隙。
 
-<p>outline 是元素的轮廓，悬浮在元素边框之上。元素和其轮廓之间是透明的。也就是说，它们之间的颜色会继承父元素的背景色。</p>
+outline 是元素的轮廓，悬浮在元素边框之上。元素和其轮廓之间是透明的。也就是说，它们之间的颜色会继承父元素的背景色。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<p>The space will be transparent (the parent will determine the background).</p>
+The space will be transparent (the parent will determine the background).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:css">/* &lt;length&gt; values */
+```css
+/* <length> values */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
@@ -27,45 +28,46 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>元素和轮廓间的宽度。详见 {{cssxref("&lt;length&gt;")}} . 负值将轮廓绘制在元素之内。</dd>
-</dl>
+- `<length>`
+  - : 元素和轮廓间的宽度。详见 {{cssxref("&lt;length&gt;")}} . 负值将轮廓绘制在元素之内。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">p {
+```css
+p {
   outline: dashed thin;
   /* Move the outline 10px away from the border */
   outline-offset: 10px;
   border:1px solid black;
 }
-</pre>
+```
 
-<p>Html</p>
+Html
 
-<pre class="brush: html">&lt;p&gt;outline: offset 10px. Border is solid and outline is dashed&lt;/p&gt;</pre>
+```html
+<p>outline: offset 10px. Border is solid and outline is dashed</p>
+```
 
-<p>上面的代码将产生以下效果：</p>
+上面的代码将产生以下效果：
 
-<p>{{ EmbedLiveSample('Examples', '', '', '') }}</p>
+{{ EmbedLiveSample('Examples', '', '', '') }}
 
-<p>另一个例子：</p>
+另一个例子：
 
-<p>outline: multiple offsets;</p>
+outline: multiple offsets;
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.outline-offset")}}

@@ -10,31 +10,30 @@ tags:
   - 静态方法
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>类（class）通过 <strong>static </strong>关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。</p>
+类（class）通过 **static** 关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
 
-<p> </p>
+{{EmbedInteractiveExample("pages/js/classes-static.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</div>
+## 语法
 
+```plain
+static methodName() { ... }
+```
 
+## 描述
 
-<h2 id="语法">语法</h2>
+静态方法调用直接在类上进行，不能在类的实例上调用。静态方法通常用于创建实用程序函数。
 
-<pre class="syntaxbox">static methodName() { ... }</pre>
+## 调用静态方法
 
-<h2 id="描述">描述</h2>
+### 从另一个静态方法
 
-<p>静态方法调用直接在类上进行，不能在类的实例上调用。静态方法通常用于创建实用程序函数。</p>
+静态方法调用同一个类中的其他静态方法，可使用 `this `关键字。
 
-<h2 id="调用静态方法">调用静态方法</h2>
-
-<h3 id="从另一个静态方法">从另一个静态方法</h3>
-
-<p>静态方法调用同一个类中的其他静态方法，可使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a> </code>关键字。</p>
-
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
     static staticMethod() {
         return 'Static method has been called';
     }
@@ -47,13 +46,14 @@ StaticMethodCall.staticMethod();
 
 StaticMethodCall.anotherStaticMethod();
 // 'Static method has been called from another static method'
-</pre>
+```
 
-<h3 id="从类的构造函数和其他方法">从类的构造函数和其他方法</h3>
+### 从类的构造函数和其他方法
 
-<p>非静态方法中，不能直接使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 关键字来访问静态方法。而是要用类名来调用：<code>CLASSNAME.STATIC_METHOD_NAME()</code> ，或者用构造函数的属性来调用该方法： <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
+非静态方法中，不能直接使用 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字来访问静态方法。而是要用类名来调用：`CLASSNAME.STATIC_METHOD_NAME()` ，或者用构造函数的属性来调用该方法： `this.constructor.STATIC_METHOD_NAME()`.
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
     constructor() {
         console.log(StaticMethodCall.staticMethod());
         // 'static method has been called.'
@@ -63,21 +63,19 @@ StaticMethodCall.anotherStaticMethod();
     static staticMethod() {
         return 'static method has been called.';
     }
-}</pre>
+}
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子说明了这几点：</p>
+下面的例子说明了这几点：
 
-<ol>
- <li>静态方法如何在类上实现。</li>
- <li>具有静态成员的类，可以被子类化 。</li>
- <li>什么情况下静态方法可以调用，什么情况下不能调用。</li>
-</ol>
+1.  静态方法如何在类上实现。
+2.  具有静态成员的类，可以被子类化 。
+3.  什么情况下静态方法可以调用，什么情况下不能调用。
 
-<p> </p>
-
-<pre class="brush: js">class Tripple {
+```js
+class Tripple {
   static tripple(n = 1) {
     return n * 3;
   }
@@ -97,20 +95,19 @@ console.log(Tripple.tripple(6));// 18
 let tp = new Tripple();
 
 console.log(BiggerTripple.tripple(3));// 81（不会受父类实例化的影响）
-console.log(tp.tripple());// 'tp.tripple 不是一个函数'.</pre>
+console.log(tp.tripple());// 'tp.tripple 不是一个函数'.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/class"><code>class</code>表达式</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class"><code>class</code>声明</a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`class`表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [`class`声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

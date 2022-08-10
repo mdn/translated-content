@@ -3,22 +3,35 @@ title: window.content
 slug: Web/API/Window/content
 translation_of: Web/API/Window/content
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="Summary">概述</h3>
-<p>返回主内容窗口的<a href="zh-CN/DOM/window">Window 对象</a>.该属性只在包含有属性<code>type="content-primary"</code>的<code>&lt;browser&gt;</code> (或者 <code>tabbrowser</code> 或者 <code>&lt;iframe&gt;</code>) 标签的 XUL 窗口下才会用到。最常用到的地方就是 Firefox 的主窗口，<code>browser.xul</code>. 在这种情况下，<code>content</code> 返回一个浏览器中的当前页面的<code>Window 对象的引用</code>.相当于<code><var>browserRef</var>.contentWindow 的快捷方式</code>.</p>
-<p>在一个非特权的内容窗口中 (网页), <code>content</code> 等同于普通的 <a href="zh-CN/DOM/window.top">top</a> (除非网页是在侧边栏中加载的，<code>content</code>仍然会指向当前标签页中的<code>Window 对象</code>).</p>
-<p>一些旧的代码示例中使用了 <code>_content</code> 而不是 <code>content</code>.该形式的属性名已经被废弃很久了，你应该在新的代码中使用<code>content</code>.</p>
-<h3 id="Syntax">语法</h3>
-<pre class="eval">var <var>windowObject</var> = window.content;
-</pre>
-<h3 id="Example">例子</h3>
-<p>在一个拥有<code>&lt;browser type="content-primary"/&gt;标签的</code>chrome XUL 窗口下运行下面的代码。会在浏览器当前显示的页面上的第一个 div 标签上添加一个红色的边框：</p>
-<pre class="eval">content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
-</pre>
-<h3 id="Specification">规范</h3>
-<p>不属于 W3C 规范。</p>
-<h3 id="See_also">相关链接</h3>
-<ul>
- <li><a href="zh-CN/Working_with_windows_in_chrome_code">Working with windows in chrome code</a></li>
- <li>When accessing content documents from privileged code, be aware of <a href="zh-CN/XPCNativeWrapper">XPCNativeWrappers</a>.</li>
-</ul>
+{{ ApiRef() }}
+
+### 概述
+
+返回主内容窗口的[Window 对象](zh-CN/DOM/window).该属性只在包含有属性`type="content-primary"`的`<browser>` (或者 `tabbrowser` 或者 `<iframe>`) 标签的 XUL 窗口下才会用到。最常用到的地方就是 Firefox 的主窗口，`browser.xul`. 在这种情况下，`content` 返回一个浏览器中的当前页面的`Window 对象的引用`.相当于`browserRef.contentWindow 的快捷方式`.
+
+在一个非特权的内容窗口中 (网页), `content` 等同于普通的 [top](zh-CN/DOM/window.top) (除非网页是在侧边栏中加载的，`content`仍然会指向当前标签页中的`Window 对象`).
+
+一些旧的代码示例中使用了 `_content` 而不是 `content`.该形式的属性名已经被废弃很久了，你应该在新的代码中使用`content`.
+
+### 语法
+
+```plain
+var windowObject = window.content;
+```
+
+### 例子
+
+在一个拥有`<browser type="content-primary"/>标签的`chrome XUL 窗口下运行下面的代码。会在浏览器当前显示的页面上的第一个 div 标签上添加一个红色的边框：
+
+```plain
+content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+```
+
+### 规范
+
+不属于 W3C 规范。
+
+### 相关链接
+
+- [Working with windows in chrome code](zh-CN/Working_with_windows_in_chrome_code)
+- When accessing content documents from privileged code, be aware of [XPCNativeWrappers](zh-CN/XPCNativeWrapper).

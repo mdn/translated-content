@@ -7,122 +7,121 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Functions/get
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>get</code></strong>语法将对象属性绑定到查询该属性时将被调用的函数。</p>
+**`get`**语法将对象属性绑定到查询该属性时将被调用的函数。
 
-<div>{{EmbedInteractiveExample("pages/js/functions-getter.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
+## 语法
 
+```plain
+{get prop() { ... } }
 
-<h2 id="语法">语法</h2>
+{get [expression]() { ... } }
+```
 
-<pre class="syntaxbox">{get <em>prop</em>() { ... } }
+### 参数
 
-{get <em>[expression]</em>() { ... } }</pre>
+- `prop`
+  - : 要绑定到给定函数的属性名。
+- expression
+  - : 从 ECMAScript 2015 开始，还可以使用一个计算属性名的表达式绑定到给定的函数。
 
-<h3 id="参数">参数</h3>
+## 描述
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>要绑定到给定函数的属性名。</dd>
- <dt>expression</dt>
- <dd>从 ECMAScript 2015 开始，还可以使用一个计算属性名的表达式绑定到给定的函数。</dd>
-</dl>
+有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在 JavaScript 中，可以使用 _getter_ 来实现。
 
-<h2 id="描述">描述</h2>
+尽管可以结合使用 getter 和 setter 来创建一个伪属性，但是不可能同时将一个 getter 绑定到一个属性并且该属性实际上具有一个值。
 
-<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在 JavaScript 中，可以使用 <em>getter </em>来实现。</p>
+使用`get`语法时应注意以下问题：
 
-<p>尽管可以结合使用 getter 和 setter 来创建一个伪属性，但是不可能同时将一个 getter 绑定到一个属性并且该属性实际上具有一个值。</p>
+- 可以使用数值或字符串作为标识；
+- 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
+- 它不能与另一个 `get `或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
 
-<p>使用<code>get</code>语法时应注意以下问题：</p>
+## 示例
 
-<div>
-<ul>
- <li>可以使用数值或字符串作为标识；</li>
- <li>必须不带参数（请参考<a href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/">Incompatible <abbr>ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a>）；</li>
- <li>它不能与另一个 <code>get </code>或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 <code>{ get x() { }, get x() { } }</code> 和 <code>{ x: ..., get x() { } }</code>）。</li>
-</ul>
-</div>
+### 在新对象初始化时定义一个 getter
 
-<h2 id="示例">示例</h2>
+这会为`obj`创建一个伪属性`latest`，它会返回`log`数组的最后一个元素。
 
-<h3 id="Example_Defining_a_getter_with_the_get_operator">在新对象初始化时定义一个 getter</h3>
-
-<p>这会为<code>obj</code>创建一个伪属性<code>latest</code>，它会返回<code>log</code>数组的最后一个元素。</p>
-
-<pre class="brush: js">const obj = {
+```js
+const obj = {
   log: ['example','test'],
   get latest() {
     if (this.log.length == 0) return undefined;
     return this.log[this.log.length - 1];
   }
 }
-console.log(obj.latest); // "test".</pre>
+console.log(obj.latest); // "test".
+```
 
-<p>注意，尝试为<code>latest</code>分配一个值不会改变它。</p>
+注意，尝试为`latest`分配一个值不会改变它。
 
-<h3 id="Example_Deleting_a_getter_using_the_delete_operator">使用<code>delete</code>操作符删除 getter</h3>
+### 使用`delete`操作符删除 getter
 
-<p>只需使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>，就可删除 getter：</p>
+只需使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)，就可删除 getter：
 
-<pre class="brush: js">delete obj.latest;
-</pre>
+```js
+delete obj.latest;
+```
 
-<h3 id="使用defineProperty在现有对象上定义_getter">使用<code>defineProperty</code>在现有对象上定义 getter</h3>
+### 使用`defineProperty`在现有对象上定义 getter
 
-<p>要随时将 getter 添加到现有对象，使用 {{jsxref("Object.defineProperty()")}}.</p>
+要随时将 getter 添加到现有对象，使用 {{jsxref("Object.defineProperty()")}}.
 
-<pre class="brush: js">var o = { a:0 }
+```js
+var o = { a:0 }
 
 Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)</pre>
+console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+```
 
-<h3 id="使用计算出的属性名">使用计算出的属性名</h3>
+### 使用计算出的属性名
 
-<pre class="brush: js">var expr = 'foo';
+```js
+var expr = 'foo';
 
 var obj = {
   get [expr]() { return 'bar'; }
 };
 
-console.log(obj.foo); // "bar"</pre>
+console.log(obj.foo); // "bar"
+```
 
-<h3 id="智能_自我复写_懒加载_getters">智能 / 自我复写/ 懒加载 getters</h3>
+### 智能 / 自我复写/ 懒加载 getters
 
-<p>Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。 getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。</p>
+Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。 getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。
 
-<p>一种额外的优化技术是用<strong>智能 (或称<a href="https://en.wikipedia.org/wiki/Memoization">记忆化</a>)getters </strong>延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：</p>
+一种额外的优化技术是用**智能 (或称[记忆化](https://en.wikipedia.org/wiki/Memoization))getters** 延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：
 
-<ul>
- <li>如果属性值的计算是昂贵的（占用大量 RAM 或 CPU 时间，产生工作线程，检索远程文件等）。</li>
- <li>如果现在不需要该值。它将在稍后使用，或在某些情况下它根本不使用。</li>
- <li>如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。</li>
-</ul>
+- 如果属性值的计算是昂贵的（占用大量 RAM 或 CPU 时间，产生工作线程，检索远程文件等）。
+- 如果现在不需要该值。它将在稍后使用，或在某些情况下它根本不使用。
+- 如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。
 
-<div class="note">
-<p><strong>备注：</strong>这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。</p>
-</div>
+> **备注：**这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。
 
-<p>在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。</p>
+在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。
 
-<pre class="brush: js">get notifier() {
+```js
+get notifier() {
   delete this.notifier;
   return this.notifier = document.getElementById('bookmarked-notification-anchor');
 },
-</pre>
+```
 
-<p>对于 Firefox 代码，另请参阅定义<code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code>函数的<code>XPCOMUtils.jsm</code>代码模块。</p>
+对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>)函数的`XPCOMUtils.jsm`代码模块。
 
-<h3 id="get_vs._defineProperty"><code>get</code> vs. <code>defineProperty</code></h3>
+### `get` vs. `defineProperty`
 
-<p>当使用 <code>get</code> 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("classes")}}中使用时，二者有细微的差别。</p>
+当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("classes")}}中使用时，二者有细微的差别。
 
-<p>当使用 <code>get</code> 关键字时，属性将被定义在实例的原型上，当使用{{jsxref("Object.defineProperty()")}}时，属性将被定义在实例自身上。</p>
+当使用 `get` 关键字时，属性将被定义在实例的原型上，当使用{{jsxref("Object.defineProperty()")}}时，属性将被定义在实例自身上。
 
-<pre class="brush: js">class Example {
+```js
+class Example {
   get hello() {
     return 'world';
   }
@@ -140,23 +139,22 @@ console.log(
     Object.getPrototypeOf(obj), 'hello'
   )
 );
-// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }</pre>
+// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
- <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li>在 Javascript 指南中 <a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">定义 Getters 和 Setters</a></li>
-</ul>
+- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineGetter", "__defineGetter__")}}
+- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- 在 Javascript 指南中 [定义 Getters 和 Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

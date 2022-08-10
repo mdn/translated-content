@@ -3,23 +3,25 @@ title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
 translation_of: Web/API/HTMLDataElement/value
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("HTMLDataElement")}} 接口的 <strong><code>value</code></strong> 属性返回反映   {{htmlattrxref("value", "data")}} HTML 属性的{{domxref("DOMString")}} 。</p>
+{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 {{htmlattrxref("value", "data")}} HTML 属性的{{domxref("DOMString")}} 。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>aValue</em> = <em>htmlDataElement</em>.<em>value</em>
-<em>htmlDataElement</em>.<em>value</em> = <em>aValue</em></pre>
+```plain
+var aValue = htmlDataElement.value
+htmlDataElement.value = aValue
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.HTMLDataElement.value")}}</p>
+{{Compat("api.HTMLDataElement.value")}}

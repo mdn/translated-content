@@ -8,57 +8,59 @@ tags:
   - 参考
 translation_of: Web/CSS/border-bottom
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>border-bottom 简写属性把下边框的所有属性：{{Cssxref("border-bottom-color")}}，{{Cssxref("border-bottom-style")}} 与 {{Cssxref("border-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。</p>
+border-bottom 简写属性把下边框的所有属性：{{Cssxref("border-bottom-color")}}，{{Cssxref("border-bottom-style")}} 与 {{Cssxref("border-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
+与所有的简记属性相同， `border-bottom` 定义了它所有可以定义的属性，即使他们并没有被显式地定义。它把所有未被显式定义的参数都设置为了默认值，这意味着这些值将被定义为：
 
+```css
+border-bottom-style: dotted;
+border-bottom: thick green;
+```
 
-<p>与所有的简记属性相同， <code>border-bottom</code> 定义了它所有可以定义的属性，即使他们并没有被显式地定义。它把所有未被显式定义的参数都设置为了默认值，这意味着这些值将被定义为：</p>
+它和以下的代码是等价的：
 
-<pre class="brush: css">border-bottom-style: dotted;
-border-bottom: thick green;</pre>
+```css
+border-bottom-style: dotted;
+border-bottom: none thick green;
+```
 
-<p>它和以下的代码是等价的：</p>
+顺便一提，在 `border-bottom` 之前定义的 {{Cssxref("border-bottom-style")}} 的值因此被忽略了。由于 {{Cssxref("border-bottom-style")}} 并没有默认值，未被定义的 `border-style` 参数的值将被设置为 `none`，也就是无底边框。
 
-<pre class="brush: css">border-bottom-style: dotted;
-border-bottom: none thick green;</pre>
+## 语法
 
-
-
-<p>顺便一提，在 <code>border-bottom</code> 之前定义的 {{Cssxref("border-bottom-style")}} 的值因此被忽略了。由于 {{Cssxref("border-bottom-style")}} 并没有默认值，未被定义的 <code>border-style</code> 参数的值将被设置为 <code>none</code>，也就是无底边框。</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers">border-bottom: 1px;
+```css
+border-bottom: 1px;
 border-bottom: 2px dotted;
 border-bottom: medium dashed blue;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;br-width&gt; </code></dt>
- <dd>见 {{Cssxref("border-bottom-width")}}。</dd>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>见 {{Cssxref("border-bottom-style")}}。</dd>
- <dt>{{cssxref("&lt;color&gt;")}}</dt>
- <dd>见 {{Cssxref("border-bottom-color")}}。</dd>
-</dl>
+- `<br-width>`
+  - : 见 {{Cssxref("border-bottom-width")}}。
+- `<br-style>`
+  - : 见 {{Cssxref("border-bottom-style")}}。
+- {{cssxref("&lt;color&gt;")}}
+  - : 见 {{Cssxref("border-bottom-color")}}。
 
-<h3 id="形式化语法">形式化语法</h3>
+### 形式化语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the bottom side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-bottom: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -66,14 +68,14 @@ border-bottom: medium dashed blue;
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.border-bottom")}}</p>
+{{Compat("css.properties.border-bottom")}}

@@ -3,62 +3,36 @@ title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 translation_of: Web/API/Document/fullscreenchange_event
 ---
-<p>fullscreenchange 事件当浏览器进入或离开全屏时触发。</p>
+fullscreenchange 事件当浏览器进入或离开全屏时触发。
 
-<h2 id="General_info">General info</h2>
+## General info
 
-<dl>
- <dt>Specification</dt>
- <dd><a href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api">Fullscreen</a></dd>
- <dt>Interface</dt>
- <dd>Event</dd>
- <dt>Bubbles</dt>
- <dd>Yes</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>Document</dd>
- <dt>Default Action</dt>
- <dd>None</dd>
-</dl>
+- Specification
+  - : [Fullscreen](https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#api)
+- Interface
+  - : Event
+- Bubbles
+  - : Yes
+- Cancelable
+  - : No
+- Target
+  - : Document
+- Default Action
+  - : None
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                                            |
+| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js;">// Note that the API is still vendor-prefixed in browsers implementing it
+```js
+// Note that the API is still vendor-prefixed in browsers implementing it
 document.addEventListener("fullscreenchange", function( event ) {
 
     // The event object doesn't carry information about the fullscreen state of the browser,
@@ -70,20 +44,17 @@ document.addEventListener("fullscreenchange", function( event ) {
         document.fullscreenElement;
     }
 
-});</pre>
+});
+```
 
-<h2 id="Related_Events">Related Events</h2>
+## Related Events
 
-<ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/fullscreenerror"><code>fullscreenerror</code></a></li>
-</ul>
+- [`fullscreenerror`](/en-US/docs/Mozilla_event_reference/fullscreenerror)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/Using_full-screen_mode">Using fullscreen mode</a></li>
-</ul>
+- [Using fullscreen mode](/en-US/docs/DOM/Using_full-screen_mode)

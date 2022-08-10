@@ -6,20 +6,18 @@ tags:
   - CSSOM
 translation_of: Web/API/Window/pageYOffset
 ---
-<div>{{ APIRef("CSSOM View") }}</div>
+{{ APIRef("CSSOM View") }}
 
-<p>只读属性<code>pageYOffset</code>是 <code><a href="/en-US/docs/Web/API/Window/scrollY">scrollY</a> </code>的别名。</p>
+只读属性`pageYOffset`是 `scrollY `的别名。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/pageXOffset"><code>window.pageXOffset</code></a></li>
-</ul>
+- [`window.pageXOffset`](/en-US/docs/Web/API/Window/pageXOffset)

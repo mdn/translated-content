@@ -9,36 +9,33 @@ tags:
   - 方法
 translation_of: Web/API/Node/replaceChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Node.replaceChild()</code></strong> 方法用指定的节点替换当前节点的一个子节点，并返回被替换掉的节点。</p>
+**`Node.replaceChild()`** 方法用指定的节点替换当前节点的一个子节点，并返回被替换掉的节点。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>parentNode</var>.replaceChild(<var>newChild</var>, <var>oldChild</var>);
-</pre>
+```plain
+parentNode.replaceChild(newChild, oldChild);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><strong>newChild</strong></code></dt>
- <dd>用来替换 <code>oldChild</code> 的新节点。如果该节点已经存在于 DOM 树中，则它首先会被从原始位置删除。</dd>
- <dt><code><strong>oldChild</strong></code></dt>
- <dd>被替换掉的原始节点。</dd>
-</dl>
+- **`newChild`**
+  - : 用来替换 `oldChild` 的新节点。如果该节点已经存在于 DOM 树中，则它首先会被从原始位置删除。
+- **`oldChild`**
+  - : 被替换掉的原始节点。
 
-<ul>
-</ul>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+The returned value is the replaced node. This is the same node as `oldChild`.
 
-<p>The returned value is the replaced node. This is the same node as <code>oldChild</code>.</p>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">// &lt;div&gt;
-//  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
-// &lt;/div&gt;
+```js
+// <div>
+//  <span id="childSpan">foo bar</span>
+// </div>
 
 // 创建一个空的 span 元素节点
 // 没有 id，没有任何属性和内容
@@ -61,24 +58,20 @@ var parentDiv = sp2.parentNode;
 parentDiv.replaceChild(sp1, sp2);
 
 // 结果：
-// &lt;div&gt;
-//   &lt;span id="newSpan"&gt;新的 span 元素的内容.&lt;/span&gt;
-// &lt;/div&gt;
-</pre>
+// <div>
+//   <span id="newSpan">新的 span 元素的内容.</span>
+// </div>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Node.replaceChild")}}
 
+## 参见
 
-<p>{{Compat("api.Node.replaceChild")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
- <li>{{domxref("ChildNode.replaceWith")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("ChildNode.replaceWith")}}

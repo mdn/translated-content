@@ -9,32 +9,35 @@ translation_of: Web/API/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
 {{APIRef()}}{{SeeCompatTable}}
-  
-<p><code>WindowOrWorkerGlobalScope</code> 接口的 <code><strong>origin</strong></code> 只读属性返回全局范围的 <strong>origin</strong>, 序列化为一个字符串。</p>
 
-<h2 id="Syntax">Syntax</h2>
+`WindowOrWorkerGlobalScope` 接口的 **`origin`** 只读属性返回全局范围的 **origin**, 序列化为一个字符串。
 
-<pre class="syntaxbox">let <em>myOrigin</em> = self.origin; // or just origin
-</pre>
+## Syntax
 
-<h3 id="Value">Value</h3>
+```plain
+let myOrigin = self.origin; // or just origin
+```
 
-<p>A {{domxref("USVString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("USVString")}}.
 
-<p>Executed from inside a worker script, the following snippet will log the worker's global scope's origin to the console each time it receives a message</p>
+## Examples
 
-<pre class="brush: js">onmessage = function() {
+Executed from inside a worker script, the following snippet will log the worker's global scope's origin to the console each time it receives a message
+
+```js
+onmessage = function() {
   console.log(self.origin);
-};</pre>
+};
+```
 
-<p>If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via <code>file://</code> URL), <code>origin</code> will return the string <code>"null"</code>.</p>
+If the origin is not a scheme/host/port tuple (say you are trying to run it locally, i.e. via `file://` URL), `origin` will return the string `"null"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.origin")}}

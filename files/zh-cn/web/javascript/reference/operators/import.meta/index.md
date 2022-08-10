@@ -11,69 +11,78 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
-<div>{{JSSidebar("Statements")}}</div>
+{{JSSidebar("Statements")}}
 
-<p><code>import.meta</code>是一个给 JavaScript 模块暴露特定上下文的元数据属性的对象。它包含了这个模块的信息，比如说这个模块的 URL。</p>
+`import.meta`是一个给 JavaScript 模块暴露特定上下文的元数据属性的对象。它包含了这个模块的信息，比如说这个模块的 URL。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">import.meta</pre>
+```plain
+import.meta
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>import.meta</code>对象由一个关键字<code>"import"</code>,一个点符号和一个<code>meta</code>属性名组成。通常情况下<code>"import."</code>是作为一个属性访问的上下文，但是在这里<code>"import"</code>不是一个真正的对象。</p>
+`import.meta`对象由一个关键字`"import"`,一个点符号和一个`meta`属性名组成。通常情况下`"import."`是作为一个属性访问的上下文，但是在这里`"import"`不是一个真正的对象。
 
-<p><code>import.meta</code>对象是由 ECMAScript 实现的，它带有一个{{jsxref("null")}}的原型对象。这个对象可以扩展，并且它的属性都是可写，可配置和可枚举的。</p>
+`import.meta`对象是由 ECMAScript 实现的，它带有一个{{jsxref("null")}}的原型对象。这个对象可以扩展，并且它的属性都是可写，可配置和可枚举的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这里有一个 <code>my-module.mjs 模块</code></p>
+这里有一个 `my-module.mjs 模块`
 
-<pre class="brush: html">&lt;script type="module" src="my-module.mjs"&gt;&lt;/script&gt;
-</pre>
+```html
+<script type="module" src="my-module.mjs"></script>
+```
 
-<p>你可以通过 <code>import.meta</code> 对象获取这个模块的元数据信息。</p>
+你可以通过 `import.meta` 对象获取这个模块的元数据信息。
 
-<pre class="brush: js">console.log(import.meta); // { url: "file:///home/user/my-module.mjs" }</pre>
+```js
+console.log(import.meta); // { url: "file:///home/user/my-module.mjs" }
+```
 
-<p>它返回一个带有<code>url</code>属性的对象，指明模块的基本 URL。也可以是外部脚本的 URL，还可以是内联脚本所属文档的 URL。</p>
+它返回一个带有`url`属性的对象，指明模块的基本 URL。也可以是外部脚本的 URL，还可以是内联脚本所属文档的 URL。
 
-<p>注意，url 也可能包含参数或者哈希（比如后缀<code>?</code>或<code>#</code>）</p>
+注意，url 也可能包含参数或者哈希（比如后缀`?`或`#`）
 
-<p>以下面的 HTML 为例：</p>
+以下面的 HTML 为例：
 
-<pre>&lt;script type="module"&gt;
+```plain
+<script type="module">
 import './index.mjs?someURLInfo=5';
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>...下面的 JavaScript 会打印<code>someURLInfo</code>这个参数：</p>
+...下面的 JavaScript 会打印`someURLInfo`这个参数：
 
-<pre>// index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+```plain
+// index.mjs
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>在脚本中引入别的脚本同样生效：</p>
+在脚本中引入别的脚本同样生效：
 
-<pre>// index.mjs
+```plain
+// index.mjs
 import './index2.mjs?someURLInfo=5';
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
+new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+```
 
-<p>虽然在上述例子中，Node.js 允许携带参数（或哈希），但以 Node 14.1.0 为例，使用<code>node --experimental-modules index.mjs?someURLInfo=5</code> 执行脚本，查询 URL 参数将会报错（该环境下<code>index.mjs?someURLInfo=5</code> 被视作一个文件而不是 URL）</p>
+虽然在上述例子中，Node.js 允许携带参数（或哈希），但以 Node 14.1.0 为例，使用`node --experimental-modules index.mjs?someURLInfo=5` 执行脚本，查询 URL 参数将会报错（该环境下`index.mjs?someURLInfo=5` 被视作一个文件而不是 URL）
 
-<p>像这种特定于文件的参数传递可能是对应用范围内<code>location.href</code>（ps: 通过在 HTML 路径添加参数或哈希）（而在 Node.js 中是<code>process.env</code>）的补充</p>
+像这种特定于文件的参数传递可能是对应用范围内`location.href`（ps: 通过在 HTML 路径添加参数或哈希）（而在 Node.js 中是`process.env`）的补充
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
-<p>{{Compat("javascript.statements.import_meta")}}</p>
+{{Compat("javascript.statements.import_meta")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code></li>
-</ul>
+- [import](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)

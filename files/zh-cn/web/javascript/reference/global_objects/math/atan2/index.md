@@ -3,67 +3,66 @@ title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.atan2(</strong></code><code><strong>)</strong></code> 返回从原点 (0,0) 到 (x,y) 点的线段与 x 轴正方向之间的平面角度 (弧度值)，也就是 Math.atan2(y,x)</p>
+**`Math.atan2()`** 返回从原点 (0,0) 到 (x,y) 点的线段与 x 轴正方向之间的平面角度 (弧度值)，也就是 Math.atan2(y,x)
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Math.atan2(<em>y</em>, <em>x</em>) </pre>
+```plain
+Math.atan2(y, x)
+```
 
-<h2 id="Parameters">参数</h2>
+## 参数
 
-<dl>
- <dt><code>y, x</code></dt>
- <dd>数值</dd>
-</dl>
+- `y, x`
+  - : 数值
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>atan2</code> 方法返回一个 -pi 到 pi 之间的数值，表示点 (x, y) 对应的偏移角度。这是一个逆时针角度，以弧度为单位，正 X 轴和点 (x, y) 与原点连线 之间。注意此函数接受的参数：先传递 y 坐标，然后是 x 坐标。</p>
+`atan2` 方法返回一个 -pi 到 pi 之间的数值，表示点 (x, y) 对应的偏移角度。这是一个逆时针角度，以弧度为单位，正 X 轴和点 (x, y) 与原点连线 之间。注意此函数接受的参数：先传递 y 坐标，然后是 x 坐标。
 
-<p><code>atan2</code> 接受单独的 x 和 y 参数，而 <code>atan</code> 接受两个参数的比值。</p>
+`atan2` 接受单独的 x 和 y 参数，而 `atan` 接受两个参数的比值。
 
-<p>由于 <code>atan2</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.atan2()</code>，而不是作为你创建的 <code>Math</code> 实例的方法。</p>
+由于 `atan2` 是 `Math` 的静态方法，所以应该像这样使用：`Math.atan2()`，而不是作为你创建的 `Math` 实例的方法。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_Math.atan2">例子：使用 <code>Math.atan2</code></h3>
+### 例子：使用 `Math.atan2`
 
-<pre class="brush:js">Math.atan2(90, 15) // 1.4056476493802699
+```js
+Math.atan2(90, 15) // 1.4056476493802699
 Math.atan2(15, 90) // 0.16514867741462683
 
-<code>Math.atan2( ±0, -0 )</code>               // <code>±PI</code>.
-<code>Math.atan2( ±0, +0 )</code>               // <code>±0</code>.
-<code>Math.atan2( ±0, -x )</code>               // <code>±PI</code> for x &gt; 0.
-<code>Math.atan2( ±0, x )</code>                // <code>±0</code> for x &gt; 0.
-<code>Math.atan2( </code><code>-y, ±0 )</code>               // -<code>PI/2</code> for y &gt; 0.
-<code>Math.atan2( </code><code>y, ±0 )</code>                // <code>PI/2</code> for y &gt; 0.
-<code>Math.atan2( ±y, -Infinity )</code>        // <code>±PI</code> for finite y &gt; 0.
-<code>Math.atan2( ±y, +Infinity )</code>        // <code>±0</code> for finite y &gt; 0.
-<code>Math.atan2( ±Infinity, x )</code>         // <code>±PI/2</code> for finite x.
-<code>Math.atan2( ±Infinity, -Infinity )</code> // <code>±3*PI/4</code>.
-<code>Math.atan2( ±Infinity, +Infinity )</code> // <code>±PI/4</code>.
-</pre>
+Math.atan2( ±0, -0 )               // ±PI.
+Math.atan2( ±0, +0 )               // ±0.
+Math.atan2( ±0, -x )               // ±PI for x > 0.
+Math.atan2( ±0, x )                // ±0 for x > 0.
+Math.atan2( -y, ±0 )               // -PI/2 for y > 0.
+Math.atan2( y, ±0 )                // PI/2 for y > 0.
+Math.atan2( ±y, -Infinity )        // ±PI for finite y > 0.
+Math.atan2( ±y, +Infinity )        // ±0 for finite y > 0.
+Math.atan2( ±Infinity, x )         // ±PI/2 for finite x.
+Math.atan2( ±Infinity, -Infinity ) // ±3*PI/4.
+Math.atan2( ±Infinity, +Infinity ) // ±PI/4.
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.sin()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

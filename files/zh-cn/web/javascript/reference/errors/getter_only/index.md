@@ -8,27 +8,29 @@ tags:
   - 错误提示
 translation_of: Web/JavaScript/Reference/Errors/Getter_only
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误提示">错误提示</h2>
+## 错误提示
 
-<pre class="syntaxbox">TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #&lt;Object&gt; which has only a getter (Chrome)
-</pre>
+```plain
+TypeError: setting getter-only property "x" (Firefox)
+TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>仅在<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下报 {{jsxref("TypeError")}} 错误。</p>
+仅在[严格模式](/en-US/docs/Web/JavaScript/Reference/Strict_mode)下报 {{jsxref("TypeError")}} 错误。
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>该错误提示出现于试图给一个仅仅设置了 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> 特性的属性赋新值的时候。在非严格模式下会被静默忽略，而在<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下会报 {{jsxref("TypeError")}} 错误。</p>
+该错误提示出现于试图给一个仅仅设置了 [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) 特性的属性赋新值的时候。在非严格模式下会被静默忽略，而在[严格模式](/en-US/docs/Web/JavaScript/Reference/Strict_mode)下会报 {{jsxref("TypeError")}} 错误。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的例子展示了如何为一个属性设置 getter 特性。由于没有设置 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> 特性，所以在试图将 temperature 属性值设置为 30 的时候会报 TypeError 的错误。相关细节信息可以参考 {{jsxref("Object.defineProperty()")}} 页面。</p>
+下面的例子展示了如何为一个属性设置 getter 特性。由于没有设置 [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) 特性，所以在试图将 temperature 属性值设置为 30 的时候会报 TypeError 的错误。相关细节信息可以参考 {{jsxref("Object.defineProperty()")}} 页面。
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -44,11 +46,13 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
-// TypeError: setting getter-only property "temperature"</pre>
+// TypeError: setting getter-only property "temperature"
+```
 
-<p>至于修复问题的方法，可以将第 16 行的代码移除，因为它试图为 temperature 属性赋值，或者是为它添加一个 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a> 特性，就像下面这样：</p>
+至于修复问题的方法，可以将第 16 行的代码移除，因为它试图为 temperature 属性赋值，或者是为它添加一个 [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) 特性，就像下面这样：
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -72,11 +76,10 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}

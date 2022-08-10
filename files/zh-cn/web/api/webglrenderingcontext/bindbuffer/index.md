@@ -7,81 +7,78 @@ tags:
   - 绑定 Buffer
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API)的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.bindBuffer(<var>target</var>, <var>buffer</var>);
-</pre>
+```plain
+void gl.bindBuffer(target, buffer);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd> {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
- <ul>
-  <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
-  <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的 Buffer。</li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以使用以下值：
-   <ul>
-    <li><code>gl.COPY_READ_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
-    <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
-    <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback operations.</li>
-    <li><code>gl.UNIFORM_BUFFER</code>: 用于存储统一块的 Buffer。</li>
-    <li><code>gl.PIXEL_PACK_BUFFER</code>: 用于像素传输操作的 Buffer。</li>
-    <li><code>gl.PIXEL_UNPACK_BUFFER</code>: 用于像素传输操作的 Buffer。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
- <dt>buffer</dt>
- <dd>要绑定的 {{domxref("WebGLBuffer")}} 。</dd>
-</dl>
+- target
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
 
-<p>None.</p>
+    - `gl.ARRAY_BUFFER`: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
+    - `gl.ELEMENT_ARRAY_BUFFER`: 用于元素索引的 Buffer。
+    - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，可以使用以下值：
 
-<h3 id="异常">异常</h3>
+      - `gl.COPY_READ_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
+      - `gl.COPY_WRITE_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
+      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.
+      - `gl.UNIFORM_BUFFER`: 用于存储统一块的 Buffer。
+      - `gl.PIXEL_PACK_BUFFER`: 用于像素传输操作的 Buffer。
+      - `gl.PIXEL_UNPACK_BUFFER`: 用于像素传输操作的 Buffer。
 
-<p>只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 <code>INVALID_OPERATION</code> 错误，并且当前的缓冲区绑定将保持不变。</p>
+- buffer
+  - : 要绑定的 {{domxref("WebGLBuffer")}} 。
 
-<p>一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 <code>INVALID_OPERATION</code> 错误，并且当前绑定将保持不变。</p>
+### 返回值
 
-<h2 id="示例">示例</h2>
+None.
 
-<h3 id="将缓冲区绑定到目标">将缓冲区绑定到目标</h3>
+### 异常
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 `INVALID_OPERATION` 错误，并且当前的缓冲区绑定将保持不变。
+
+一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 `INVALID_OPERATION` 错误，并且当前绑定将保持不变。
+
+## 示例
+
+### 将缓冲区绑定到目标
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
 
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-</pre>
+```
 
-<h3 id="获取当前绑定">获取当前绑定</h3>
+### 获取当前绑定
 
-<p>要检查当前的缓冲区绑定，请查询 ARRAY_BUFFER_BINDING 和 ELEMENT_ARRAY_BUFFER_BINDING 常量。</p>
+要检查当前的缓冲区绑定，请查询 ARRAY_BUFFER_BINDING 和 ELEMENT_ARRAY_BUFFER_BINDING 常量。
 
-<pre class="brush: js">gl.getParameter(gl.ARRAY_BUFFER_BINDING);
+```js
+gl.getParameter(gl.ARRAY_BUFFER_BINDING);
 gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindBuffer")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindBuffer")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

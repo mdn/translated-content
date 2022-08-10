@@ -3,42 +3,41 @@ title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>unicode</code></strong> 属性表明正则表达式带有"<code>u</code>" 标志。 <code>unicode</code> 是正则表达式独立实例的只读属性。</p>
+**`unicode`** 属性表明正则表达式带有"`u`" 标志。 `unicode` 是正则表达式独立实例的只读属性。
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+{{js_property_attributes(0, 0, 1)}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>unicode</code> 的值是 {{jsxref("Boolean")}}，并且如果使用了 "<code>u</code>" 标志则为 <code>true</code>；否则为 <code>false</code>。"<code>u</code>" 标志开启了多种 Unicode 相关的特性。使用 "u" 标志，任何 Unicode 代码点的转义都会被解释。</p>
+`unicode` 的值是 {{jsxref("Boolean")}}，并且如果使用了 "`u`" 标志则为 `true`；否则为 `false`。"`u`" 标志开启了多种 Unicode 相关的特性。使用 "u" 标志，任何 Unicode 代码点的转义都会被解释。
 
-<p>你不能直接修改这个属性，它是只读的。</p>
+你不能直接修改这个属性，它是只读的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_unicode_属性">使用 <code>unicode</code> 属性</h3>
+### 使用 `unicode` 属性
 
-<pre class="brush: js">var regex = new RegExp('\u{61}', 'u');
+```js
+var regex = new RegExp('\u{61}', 'u');
 
 console.log(regex.unicode); // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

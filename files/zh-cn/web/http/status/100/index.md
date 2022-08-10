@@ -7,27 +7,27 @@ tags:
   - 状态码
 translation_of: Web/HTTP/Status/100
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>100 Continue</code></strong> 信息型状态响应码表示目前为止一切正常，客户端应该继续请求，如果已完成请求则忽略。</p>
+HTTP **`100 Continue`** 信息型状态响应码表示目前为止一切正常，客户端应该继续请求，如果已完成请求则忽略。
 
-<p>为了让服务器检查请求的首部，客户端必须在发送请求实体前，在初始化请求中发送 <code>Expect: 100-continue</code> 首部并接收 <code>100 Continue</code> 响应状态码。</p>
+为了让服务器检查请求的首部，客户端必须在发送请求实体前，在初始化请求中发送 `Expect: 100-continue` 首部并接收 `100 Continue` 响应状态码。
 
-<h2 id="状态码">状态码</h2>
+## 状态码
 
-<pre class="syntaxbox">100 Continue</pre>
+```plain
+100 Continue
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
- <li>{{HTTPStatus(417)}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}
+- {{HTTPStatus(417)}}

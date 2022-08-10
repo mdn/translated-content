@@ -9,22 +9,20 @@ tags:
   - 错误
 translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<h2 id="原因">原因</h2>
+## 原因
 
-<pre class="syntaxbox">原因: CORS 请求未成功</pre>
+```plain
+原因: CORS 请求未成功
+```
 
-<h2 id="哪里错了？">哪里错了？</h2>
+## 哪里错了？
 
-<p>使用 CORS 的{{Glossary("HTTP")}} 请求失败，因为 HTTP 连接在网络或协议级别失败。该错误与 CORS 没有直接关系，而是某种基本的网络错误。很多情况下，它是某个浏览器插件（比如广告拦截或隐私保护插件）阻止了请求而引起的。</p>
+使用 CORS 的{{Glossary("HTTP")}} 请求失败，因为 HTTP 连接在网络或协议级别失败。该错误与 CORS 没有直接关系，而是某种基本的网络错误。很多情况下，它是某个浏览器插件（比如广告拦截或隐私保护插件）阻止了请求而引起的。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-cn/docs/Web/HTTP/CORS/Errors">HTTP 访问控制（CORS）错误</a></li>
- <li>词汇: {{Glossary("CORS")}}</li>
- <li>
-  <p><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP 访问控制（CORS）</a></p>
- </li>
-</ul>
+- [HTTP 访问控制（CORS）错误](/zh-cn/docs/Web/HTTP/CORS/Errors)
+- 词汇: {{Glossary("CORS")}}
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)

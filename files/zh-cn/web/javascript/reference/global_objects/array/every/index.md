@@ -10,83 +10,83 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>every()</strong></code> 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。</p>
+**`every()`** 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。
 
-<div class="note">
-<p><strong>备注：</strong>若收到一个空数组，此方法在任何情况下都会返回 <code>true</code>。</p>
-</div>
+> **备注：**若收到一个空数组，此方法在任何情况下都会返回 `true`。
 
-<div>{{EmbedInteractiveExample("pages/js/array-every.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-every.html")}}
 
+## 语法
 
+```plain
+arr.every(callback(element[, index[, array]])[, thisArg])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre><var>arr</var>.every(<var>callback</var>(<var>element</var>[, <var>index</var>[, <var>array</var>]])[, <var>thisArg</var>])</pre>
+- `callback`
 
-<h3 id="参数">参数</h3>
+  - : 用来测试每个元素的函数，它可以接收三个参数：
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>用来测试每个元素的函数，它可以接收三个参数：
- <dl>
-  <dt><code>element</code></dt>
-  <dd>用于测试的当前值。</dd>
-  <dt><code>index</code>{{Optional_inline}}</dt>
-  <dd>用于测试的当前值的索引。</dd>
-  <dt><code>array</code>{{Optional_inline}}</dt>
-  <dd>调用 <code>every</code> 的当前数组。</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>执行 <code>callback</code> 时使用的 <code>this</code> 值。</dd>
-</dl>
+    - `element`
+      - : 用于测试的当前值。
+    - `index`{{Optional_inline}}
+      - : 用于测试的当前值的索引。
+    - `array`{{Optional_inline}}
+      - : 调用 `every` 的当前数组。
 
-<h3 id="返回值">返回值</h3>
+- `thisArg`
+  - : 执行 `callback` 时使用的 `this` 值。
 
-<p>如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 <code><strong>true</strong></code>，否则返回 <code><strong>false</strong></code>。</p>
+### 返回值
 
-<h2 id="描述">描述</h2>
+如果回调函数的每一次返回都为 {{Glossary("truthy")}} 值，返回 **`true`**，否则返回 **`false`**。
 
-<p><code>every</code> 方法为数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个会使 <code>callback</code> 返回 {{Glossary("falsy")}} 的元素。如果发现了一个这样的元素，<code>every</code> 方法将会立即返回 <code>false</code>。否则，<code>callback</code> 为每一个元素返回 <code>true</code>，<code>every</code> 就会返回 <code>true</code>。<code>callback</code> 只会为那些已经被赋值的索引调用。不会为那些被删除或从未被赋值的索引调用。</p>
+## 描述
 
-<p><code>callback</code> 在被调用时可传入三个参数：元素值，元素的索引，原数组。</p>
+`every` 方法为数组中的每个元素执行一次 `callback` 函数，直到它找到一个会使 `callback` 返回 {{Glossary("falsy")}} 的元素。如果发现了一个这样的元素，`every` 方法将会立即返回 `false`。否则，`callback` 为每一个元素返回 `true`，`every` 就会返回 `true`。`callback` 只会为那些已经被赋值的索引调用。不会为那些被删除或从未被赋值的索引调用。
 
-<p>如果为 <code>every</code> 提供一个 <code>thisArg</code> 参数，则该参数为调用 <code>callback</code> 时的 <code>this</code> 值。如果省略该参数，则 <code>callback</code> 被调用时的 <code>this</code> 值，在非严格模式下为全局对象，在严格模式下传入 <code>undefined</code>。详见 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 条目。</p>
+`callback` 在被调用时可传入三个参数：元素值，元素的索引，原数组。
 
-<p><code>every</code> 不会改变原数组。</p>
+如果为 `every` 提供一个 `thisArg` 参数，则该参数为调用 `callback` 时的 `this` 值。如果省略该参数，则 `callback` 被调用时的 `this` 值，在非严格模式下为全局对象，在严格模式下传入 `undefined`。详见 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 条目。
 
-<p><code>every</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已确定了。在调用 <code>every</code> 之后添加到数组中的元素不会被 <code>callback</code> 访问到。如果数组中存在的元素被更改，则他们传入 <code>callback</code> 的值是 <code>every</code> 访问到他们那一刻的值。那些被删除的元素或从来未被赋值的元素将不会被访问到。</p>
+`every` 不会改变原数组。
 
-<p><code>every</code> 和数学中的"所有"类似，当所有的元素都符合条件才会返回 <code>true</code>。正因如此，若传入一个空数组，无论如何都会返回 <code>true</code>。（这种情况属于<a href="http://en.wikipedia.org/wiki/Vacuous_truth">无条件正确</a>：正因为一个<a href="https://en.wikipedia.org/wiki/Empty_set#Properties">空集合</a>没有元素，所以它其中的所有元素都符合给定的条件。)</p>
+`every` 遍历的元素范围在第一次调用 `callback` 之前就已确定了。在调用 `every` 之后添加到数组中的元素不会被 `callback` 访问到。如果数组中存在的元素被更改，则他们传入 `callback` 的值是 `every` 访问到他们那一刻的值。那些被删除的元素或从来未被赋值的元素将不会被访问到。
 
-<h2 id="例子">例子</h2>
+`every` 和数学中的"所有"类似，当所有的元素都符合条件才会返回 `true`。正因如此，若传入一个空数组，无论如何都会返回 `true`。（这种情况属于[无条件正确](http://en.wikipedia.org/wiki/Vacuous_truth)：正因为一个[空集合](https://en.wikipedia.org/wiki/Empty_set#Properties)没有元素，所以它其中的所有元素都符合给定的条件。)
 
-<h3 id="检测所有数组元素的大小">检测所有数组元素的大小</h3>
+## 例子
 
-<p>下例检测数组中的所有元素是否都大于 10。</p>
+### 检测所有数组元素的大小
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+下例检测数组中的所有元素是否都大于 10。
+
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 [12, 5, 8, 130, 44].every(isBigEnough);   // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
-</pre>
+```
 
-<h3 id="使用箭头函数">使用箭头函数</h3>
+### 使用箭头函数
 
-<p><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>为上面的检测过程提供了更简短的语法。</p>
+[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)为上面的检测过程提供了更简短的语法。
 
-<pre class="brush: js">[12, 5, 8, 130, 44].every(x =&gt; x &gt;= 10); // false
-[12, 54, 18, 130, 44].every(x =&gt; x &gt;= 10); // true</pre>
+```js
+[12, 5, 8, 130, 44].every(x => x >= 10); // false
+[12, 54, 18, 130, 44].every(x => x >= 10); // true
+```
 
-<h2 id="兼容旧环境（Polyfill）">兼容旧环境（Polyfill）</h2>
+## 兼容旧环境（Polyfill）
 
-<p>在 ECMA-262 第 5 版时，<code>every</code> 被添加进 ECMA-262 标准；因此，在某些实现环境中，它尚未被支持。你可以把下面的代码放到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>every</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，它假定 <code>Object</code> 和 <code>TypeError</code> 拥有它们的初始值，且 <code>fun.call</code> 等价于 {{jsxref("Function.prototype.call")}}。</p>
+在 ECMA-262 第 5 版时，`every` 被添加进 ECMA-262 标准；因此，在某些实现环境中，它尚未被支持。你可以把下面的代码放到脚本的开头来解决此问题，该代码允许在那些没有原生支持 `every` 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，它假定 `Object` 和 `TypeError` 拥有它们的初始值，且 `fun.call` 等价于 {{jsxref("Function.prototype.call")}}。
 
-<pre class="brush: js">if (!Array.prototype.every) {
+```js
+if (!Array.prototype.every) {
   Array.prototype.every = function(callbackfn, thisArg) {
     'use strict';
     var T, k;
@@ -102,7 +102,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     // 2. Let lenValue be the result of calling the Get internal method
     //    of O with the argument "length".
     // 3. Let len be ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
+    var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
     if (typeof callbackfn !== 'function') {
@@ -110,15 +110,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-    if (arguments.length &gt; 1) {
+    if (arguments.length > 1) {
       T = thisArg;
     }
 
     // 6. Let k be 0.
     k = 0;
 
-    // 7. Repeat, while k &lt; len
-    while (k &lt; len) {
+    // 7. Repeat, while k < len
+    while (k < len) {
 
       var kValue;
 
@@ -149,21 +149,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
     return true;
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.every()")}}

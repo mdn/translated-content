@@ -3,34 +3,31 @@ title: Console.timeStamp()
 slug: Web/API/Console/timeStamp
 translation_of: Web/API/Console/timeStamp
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>向浏览器的 <a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance</a> 或者 <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> 工具添加一个标记。这样可以让你将代码中的一个点和其他在时间轴上已记录的事件相关联，例如布局事件和绘制事件等。</p>
+向浏览器的 [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) 或者 [Waterfall](/en-US/docs/Tools/Performance/Waterfall) 工具添加一个标记。这样可以让你将代码中的一个点和其他在时间轴上已记录的事件相关联，例如布局事件和绘制事件等。
 
-<p>你可以选择用一个参数来作为时间戳标签，然后标记旁边就会显示这个标签。</p>
+你可以选择用一个参数来作为时间戳标签，然后标记旁边就会显示这个标签。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">console.timeStamp(label);
-</pre>
+```plain
+console.timeStamp(label);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt><code>label</code></dt>
- <dd>Label for the timestamp. Optional.</dd>
-</dl>
+- `label`
+  - : Label for the timestamp. Optional.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.console.timeStamp")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Console.time()")}}</li>
- <li>{{domxref("Console.timeEnd()")}}</li>
- <li><a href="/en-US/docs/Tools/Performance/Waterfall#Timestamp_markers">Adding timestamps to the Waterfall</a></li>
-</ul>
+- {{domxref("Console.time()")}}
+- {{domxref("Console.timeEnd()")}}
+- [Adding timestamps to the Waterfall](/en-US/docs/Tools/Performance/Waterfall#Timestamp_markers)

@@ -3,42 +3,36 @@ title: URL.port
 slug: Web/API/URL/port
 translation_of: Web/API/URL/port
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}{{domxref("URL")}} 接口的端口属性是包含了 URL 的端口号信息的{{domxref("USVString")}}值，如果 URL 中不包含明确的端口号，这个属性将为`''`.
 
-<div>{{domxref("URL")}} 接口的端口属性是包含了 URL 的端口号信息的{{domxref("USVString")}}值，如果 URL 中不包含明确的端口号，这个属性将为<code>''</code>.</div>
+{{AvailableInWorkers}}
 
+## **语法**
 
+```plain
+string = object.port;
+object.port = string;
+```
 
-<p>{{AvailableInWorkers}}</p>
+### 参数
 
-<h2 id="语法"><strong>语法</strong></h2>
+A {{domxref("USVString")}}.
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.port;
-<em>object</em>.port = <em>string</em>;
-</pre>
+## 示例
 
-<h3 id="参数">参数</h3>
-
-<p>A {{domxref("USVString")}}.</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var url = new URL('https://mydomain.com:80/svn/Repos/');
+```js
+var url = new URL('https://mydomain.com:80/svn/Repos/');
 var result = url.port; // Returns:'80'
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.URL.port")}}
 
+## 相关链接
 
-<p>{{Compat("api.URL.port")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

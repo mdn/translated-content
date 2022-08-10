@@ -3,17 +3,18 @@ title: counter-increment
 slug: Web/CSS/counter-increment
 translation_of: Web/CSS/counter-increment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Summary">概要</h2>
+## 概要
 
-<p><code>counter-increment</code>属性用于将<a href="/en-US/docs/CSS_Counters">CSS Counters</a>的值增加给定值。可以使用 {{cssxref("counter-reset")}} 属性重置计数器的值。</p>
+`counter-increment`属性用于将[CSS Counters](/en-US/docs/CSS_Counters)的值增加给定值。可以使用 {{cssxref("counter-reset")}} 属性重置计数器的值。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush:css">/* Increment counter-name by 1 */
+```css
+/* Increment counter-name by 1 */
 counter-increment: counter-name;
 
 /* Decrement counter-name by 1 */
@@ -29,46 +30,41 @@ counter-increment: none;
 counter-increment: inherit;
 counter-increment: initial;
 counter-increment: unset;
-</pre>
+```
 
-<h3 id="Values">可选值</h3>
+### 可选值
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>递增的计数器的名称。该标识符由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（_）和/或短划线（ - ）的组合组成。第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号。）此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 none，unset，initial 或 inherit。</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>计数器的值。如果没有给出，默认为 1。</dd>
- <dt><code>none</code></dt>
- <dd>不得增加计数器。用作默认值，或取消更具体规则的增量。</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : 递增的计数器的名称。该标识符由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（\_）和/或短划线（ - ）的组合组成。第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号。）此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 none，unset，initial 或 inherit。
+- {{cssxref("&lt;integer&gt;")}}
+  - : 计数器的值。如果没有给出，默认为 1。
+- `none`
+  - : 不得增加计数器。用作默认值，或取消更具体规则的增量。
 
+你可以根据需要指定要递增的计数器，每个计数器用空格分隔。
 
-
-<p>你可以根据需要指定要递增的计数器，每个计数器用空格分隔。</p>
-
-<h3 id="语法形式">语法形式</h3>
+### 语法形式
 
 {{csssyntax}}
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   counter-increment: chapter section 2 page;
   /* Increases the value of the chapter and page counters by 1
      and the section counter by 2. */
 }
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.properties.counter-increment")}}
 
-<h2 id="See_also">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/CSS/Counters">CSS Counters</a>, {{Cssxref("counter-reset")}}</li>
-</ul>
+- [CSS Counters](/en-US/docs/CSS/Counters), {{Cssxref("counter-reset")}}

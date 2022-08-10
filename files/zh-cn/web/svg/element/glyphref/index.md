@@ -9,50 +9,44 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/glyphRef
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>glyphRef</code>元素为引用的{{ SVGElement("altGlyph") }} 替代物提供了一个唯一可能的字形。</p>
+`glyphRef`元素为引用的{{ SVGElement("altGlyph") }} 替代物提供了一个唯一可能的字形。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/SVG/Attribute#XLink">XLink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- [外观属性](/en-US/SVG/Attribute#Presentation) »
+- [XLink 属性](/en-US/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("dx") }}</li>
- <li>{{ SVGAttr("dy") }}</li>
- <li>{{ SVGAttr("glyphRef") }}</li>
- <li>{{ SVGAttr("format") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("dx") }}
+- {{ SVGAttr("dy") }}
+- {{ SVGAttr("glyphRef") }}
+- {{ SVGAttr("format") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGGlyphRefElement">SVGGlyphRefElement</a></code>接口。</p>
+该元素实现了[`SVGGlyphRefElement`](/en-US/DOM/SVGGlyphRefElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.glyphRef")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("altGlyph") }}</li>
-</ul>
+- {{ SVGElement("altGlyph") }}

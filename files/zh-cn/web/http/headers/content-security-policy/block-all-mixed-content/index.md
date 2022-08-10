@@ -3,41 +3,44 @@ title: 'CSP: block-all-mixed-content'
 slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 协议首部字段 {{HTTPHeader("Content-Security-Policy")}} (CSP) 中的 <code><strong>block-all-mixed-content</strong></code> 指令在当前页面为通过 HTTPS 协议加载的情况下禁止通过 HTTP 渠道加载任何资源。</p>
+HTTP 协议首部字段 {{HTTPHeader("Content-Security-Policy")}} (CSP) 中的 **`block-all-mixed-content`** 指令在当前页面为通过 HTTPS 协议加载的情况下禁止通过 HTTP 渠道加载任何资源。
 
-<p>任何<a href="/en-US/docs/Web/Security/Mixed_content">混合类型</a>的资源请求都是被禁止的，包括混合活动内容和混合被动内容。这一条也适用于 {{HTMLElement("iframe")}} 中的文档，确保整体页面都不包含混合内容。</p>
+任何[混合类型](/en-US/docs/Web/Security/Mixed_content)的资源请求都是被禁止的，包括混合活动内容和混合被动内容。这一条也适用于 {{HTMLElement("iframe")}} 中的文档，确保整体页面都不包含混合内容。
 
-<p>{{CSP("upgrade-insecure-requests")}} 指令会在 <code>block-all-mixed-content</code> 之前执行；如果前者执行成功，后者就不再发挥任何作用。推荐的做法是设置二者之一，而不是全部。</p>
+{{CSP("upgrade-insecure-requests")}} 指令会在 `block-all-mixed-content` 之前执行；如果前者执行成功，后者就不再发挥任何作用。推荐的做法是设置二者之一，而不是全部。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Content-Security-Policy: block-all-mixed-content;</pre>
+```plain
+Content-Security-Policy: block-all-mixed-content;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre>Content-Security-Policy: block-all-mixed-content;
+```plain
+Content-Security-Policy: block-all-mixed-content;
 
-&lt;meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"&gt;
-</pre>
+<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+```
 
-<p>为了在更细粒度上限制对 http 资源的访问，你可以将个别指令的值设置为 "https:"。例如，为了限制对不安全的走 http 协议的图片的访问，可以这么做：</p>
+为了在更细粒度上限制对 http 资源的访问，你可以将个别指令的值设置为 "https:"。例如，为了限制对不安全的走 http 协议的图片的访问，可以这么做：
 
-<pre>Content-Security-Policy: img-src https:</pre>
+```plain
+Content-Security-Policy: img-src https:
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>不属于任何现行的规范，曾在过时的 <a href="https://www.w3.org/TR/mixed-content/#block-all-mixed-content">Mixed Content Level 1</a> 规范中定义。</p>
+不属于任何现行的规范，曾在过时的 [Mixed Content Level 1](https://www.w3.org/TR/mixed-content/#block-all-mixed-content) 规范中定义。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("upgrade-insecure-requests")}}</li>
- <li><a href="/en-US/docs/Web/Security/Mixed_content">Mixed content</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("upgrade-insecure-requests")}}
+- [Mixed content](/en-US/docs/Web/Security/Mixed_content)

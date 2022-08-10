@@ -3,66 +3,55 @@ title: GestureEvent
 slug: Web/API/GestureEvent
 translation_of: Web/API/GestureEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>GestureEvent</strong></code> 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{event("gesturestart")}}, {{event("gesturechange")}} 和 {{event("gestureend")}}.</p>
+**`GestureEvent`** 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{event("gesturestart")}}, {{event("gesturechange")}} 和 {{event("gestureend")}}.
 
-<p><code>GestureEvent</code> 继承自 {{domxref("UIEvent")}}，后者又继承自{{domxref("Event")}}。</p>
+`GestureEvent` 继承自 {{domxref("UIEvent")}}，后者又继承自{{domxref("Event")}}。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}</dt>
- <dd>Creates a <code>GestureEvent</code> object.</dd>
-</dl>
+- {{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}
+  - : Creates a `GestureEvent` object.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("GestureEvent.rotation")}} {{readonlyinline}}</dt>
- <dd>Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation. Initial value: <code>0.0</code></dd>
- <dt>{{domxref("GestureEvent.scale")}} {{readonlyinline}}</dt>
- <dd>Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: <code>1.0</code></dd>
-</dl>
+- {{domxref("GestureEvent.rotation")}} {{readonlyinline}}
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate anticlockwise rotation. Initial value: `0.0`
+- {{domxref("GestureEvent.scale")}} {{readonlyinline}}
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the gesture. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}.</em></p>
+_This interface also inherits methods of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("GestureEvent.initGestureEvent()")}}</dt>
- <dd>Initializes the value of an <code>GestureEvent</code>. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+- {{domxref("GestureEvent.initGestureEvent()")}}
+  - : Initializes the value of an `GestureEvent`. If the event has already being dispatched, this method does nothing.
 
-<h2 id="手势事件类型">手势事件类型</h2>
+## 手势事件类型
 
-<ul>
- <li>{{event("gesturestart")}}</li>
- <li>{{event("gesturechange")}}</li>
- <li>{{event("gestureend")}}</li>
-</ul>
+- {{event("gesturestart")}}
+- {{event("gesturechange")}}
+- {{event("gestureend")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><em>不属于任何规范。苹果在<a href="https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html">Safari Developer Library</a>中描述了这个接口。</em></p>
+_不属于任何规范。苹果在[Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)中描述了这个接口。_
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p><br>
- {{Compat("api.GestureEvent")}}</p>
+{{Compat("api.GestureEvent")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("MSGestureEvent")}}</li>
- <li>{{event("MSGestureStart")}}</li>
- <li>{{event("MSGestureEnd")}}</li>
- <li>{{event("MSGestureTap")}}</li>
- <li>{{event("MSGestureHold")}}</li>
- <li>{{event("MSGestureChange")}}</li>
- <li>{{event("MSInertiaStart")}}</li>
-</ul>
+- {{domxref("MSGestureEvent")}}
+- {{event("MSGestureStart")}}
+- {{event("MSGestureEnd")}}
+- {{event("MSGestureTap")}}
+- {{event("MSGestureHold")}}
+- {{event("MSGestureChange")}}
+- {{event("MSInertiaStart")}}

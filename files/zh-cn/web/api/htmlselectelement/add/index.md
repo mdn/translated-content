@@ -9,33 +9,31 @@ tags:
   - 方法
 translation_of: Web/API/HTMLSelectElement/add
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLSelectElement.add()</strong></code> 方法用于向 <code>select</code> 元素的 <code>option</code> 元素集合中添加一个元素。</p>
+**`HTMLSelectElement.add()`** 方法用于向 `select` 元素的 `option` 元素集合中添加一个元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>collection</var>.add(item[, before]);
-</pre>
+```plain
+collection.add(item[, before]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><em>item</em> 是一个 {{domxref("HTMLOptionElement")}} 或 {{domxref("HTMLOptGroupElement")}}</li>
- <li><em>before</em> 是可选的，是集合中的一个元素或者类型为 <em>long </em>的一个索引，表示上面的 <em>item </em>在此之前插入。如果这个参数是 <code>null</code>（或索引不存在），新元素会添加在集合的末尾。</li>
-</ul>
+- _item_ 是一个 {{domxref("HTMLOptionElement")}} 或 {{domxref("HTMLOptGroupElement")}}
+- _before_ 是可选的，是集合中的一个元素或者类型为 _long_ 的一个索引，表示上面的 _item_ 在此之前插入。如果这个参数是 `null`（或索引不存在），新元素会添加在集合的末尾。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li>如果传入的 <em>item </em>是 <code>{{domxref("HTMLSelectElement")}}</code> 的祖先元素，<code>HierarchyRequestError</code> 类型的 {{domxref("DOMError")}} 会被抛出。</li>
-</ul>
+- 如果传入的 _item_ 是 `{{domxref("HTMLSelectElement")}}` 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="从零开始创建元素">从零开始创建元素</h3>
+### 从零开始创建元素
 
-<pre class="brush: js">var sel = document.createElement("select");
+```js
+var sel = document.createElement("select");
 var opt1 = document.createElement("option");
 var opt2 = document.createElement("option");
 
@@ -51,23 +49,26 @@ sel.add(opt2, null);
 /*
   概念上与下述代码相同：
 
-  &lt;select&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
-*/</pre>
+  <select>
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
+*/
+```
 
-<p>before 参数是可选的，因此也可以这样写：</p>
+before 参数是可选的，因此也可以这样写：
 
-<pre class="brush: js">...
+```js
+...
 sel.add(opt1);
 sel.add(opt2);
 ...
-</pre>
+```
 
-<h3 id="添加到已存在集合的末尾">添加到已存在集合的末尾</h3>
+### 添加到已存在集合的末尾
 
-<pre class="brush: js">var sel = document.getElementById("existingList");
+```js
+var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";
@@ -78,31 +79,33 @@ sel.add(opt, null);
 /*
   获取这个已存在的 select 对象：
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 
   将其变成这样：
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+    <option value="3">Option: Value 3</option>
+  </select>
 */
-</pre>
+```
 
-<p>同样，before 参数是可选的，因此也可以这样写：</p>
+同样，before 参数是可选的，因此也可以这样写：
 
-<pre class="brush:js">...
+```js
+...
 sel.add(opt);
 ...
-</pre>
+```
 
-<h3 id="插入到已存在的集合中间">插入到已存在的集合中间</h3>
+### 插入到已存在的集合中间
 
-<pre class="brush: js">var sel = document.getElementById("existingList");
+```js
+var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";
@@ -113,25 +116,25 @@ sel.add(opt, sel.options[1]);
 /*
   获取这个已存在的 select 对象：
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 
   将其变成这样：
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="3">Option: Value 3</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 */
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLSelectElement.add")}}</p>
+{{Compat("api.HTMLSelectElement.add")}}

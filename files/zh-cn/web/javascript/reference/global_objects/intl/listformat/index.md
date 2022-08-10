@@ -8,94 +8,84 @@ tags:
   - 列表格式化
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>Intl.ListFormat</code></strong> 是一个语言相关的列表格式化构造器。</p>
+**`Intl.ListFormat`** 是一个语言相关的列表格式化构造器。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}
 
+## 语法
 
+```plain
+new Intl.ListFormat([locales[, options]])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre><code>new Intl.ListFormat([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+- `locales`
+  - : 可选的.。符合 BCP 47 语言标注的字符串或字符串数组。`locales` 参数的一般形式和相关解释，请参阅 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.
+- `options`
 
-<h3 id="参数">参数</h3>
+  - : 可选的。 拥有下面所列属性中任意几个或全部的对象：
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>可选的.。符合 BCP 47 语言标注的字符串或字符串数组。<code>locales</code> 参数的一般形式和相关解释，请参阅 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
- </dd>
- <dt><code>options</code></dt>
- <dd>可选的。 拥有下面所列属性中任意几个或全部的对象：
- <ul>
-  <li><code>localeMatcher</code><br>
-   指定要使用的本地匹配算法。可选的值有<code>"lookup"</code> 和 <code>"best fit"</code>；默认情况下使用<code>"best fit"</code>。该参数的更多信息，请参考<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation"><code>Intl</code> page</a>.</li>
-  <li><code>type</code><br>
-   消息输出的格式。可选的值有用于替代基于“且”关系列表的<code>"conjunction"</code> (默认值， 例如： <code>A, B, and C</code>)， 或者用于替代基于“或”关系列表的 <code>"disjunction"</code>(例如： <code>A, B, or C</code>)，以及用于替代带计量单位的值列表的<code>"unit"</code> (例如： <code>5 pounds, 12 ounces</code>).</li>
-  <li><code>style</code><br>
-   被格式化消息的长度。可选值有：<code>"long"</code> (默认值，例如：<code>A, B, and C</code>)、<code>"short"</code> 或者 <code>"narrow"</code> (例如：<code>A, B, C</code>)。 当<code>style</code> 的值为<code>narrow</code> 时，type 属性的值只能取值<code>unit</code>。</li>
- </ul>
- </dd>
-</dl>
+    - `localeMatcher`
+      指定要使用的本地匹配算法。可选的值有`"lookup"` 和 `"best fit"`；默认情况下使用`"best fit"`。该参数的更多信息，请参考[`Intl` page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
+    - `type`
+      消息输出的格式。可选的值有用于替代基于“且”关系列表的`"conjunction"` (默认值， 例如： `A, B, and C`)， 或者用于替代基于“或”关系列表的 `"disjunction"`(例如： `A, B, or C`)，以及用于替代带计量单位的值列表的`"unit"` (例如： `5 pounds, 12 ounces`).
+    - `style`
+      被格式化消息的长度。可选值有：`"long"` (默认值，例如：`A, B, and C`)、`"short"` 或者 `"narrow"` (例如：`A, B, C`)。 当`style` 的值为`narrow` 时，type 属性的值只能取值`unit`。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="属性">属性</h3>
+### 属性
 
-<dl>
- <dt>{{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}</dt>
- <dd>允许增加一个属性到列表中的所有对象。</dd>
-</dl>
+- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+  - : 允许增加一个属性到列表中的所有对象。
 
-<h3 id="方法">方法</h3>
+### 方法
 
-<dl>
- <dt>{{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
- <dd>返回一个包含指定的被支持区域设置的数组，没有时使用运行环境默认区域设置</dd>
-</dl>
+- {{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+  - : 返回一个包含指定的被支持区域设置的数组，没有时使用运行环境默认区域设置
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_format">使用 <code>format</code></h3>
+### 使用 `format`
 
-<p>下面的例子展示了用英语语言怎么去创建一个列表格式化器。</p>
+下面的例子展示了用英语语言怎么去创建一个列表格式化器。
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
-// &gt; Motorcycle, Bus and Car
+// > Motorcycle, Bus and Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// &gt; Motorcycle, Bus or Car
+// > Motorcycle, Bus or Car
 
  console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// &gt; Motorcycle Bus Car
-</pre>
+// > Motorcycle Bus Car
+```
 
-<h3 id="使用_formatToParts">使用 <code>formatToParts</code></h3>
+### 使用 `formatToParts`
 
-<p>下面的例子展示了如何创建一个返回被格式化部分的列表格式化器。</p>
+下面的例子展示了如何创建一个返回被格式化部分的列表格式化器。
 
-<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
+```js
+const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
-// &gt; [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
-</pre>
+// > [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Intl")}}</li>
- <li><a href="https://formatjs.io/docs/polyfills/intl-listformat/">A polyfill of <code>Intl.ListFormat</code> in FormatJS</a></li>
-</ul>
+- {{jsxref("Intl")}}
+- [A polyfill of `Intl.ListFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-listformat/)

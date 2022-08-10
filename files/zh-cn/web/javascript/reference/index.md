@@ -8,365 +8,292 @@ tags:
   - 参考
 translation_of: Web/JavaScript/Reference
 ---
+{{JsSidebar}}在 MDN 的 JavaScript 分区中，这一部分被作为 Javascript 的资料库。阅读[关于该参考](/zh-CN/docs/Web/JavaScript/Reference/About)以了解更多。
 
-<div>{{JsSidebar}}</div>
-
-<div>
-  在 MDN 的 JavaScript 分区中，这一部分被作为 Javascript 的资料库。阅读<a href="/zh-CN/docs/Web/JavaScript/Reference/About">关于该参考</a
-  >以了解更多。
-</div>
-
-<h2 id="内置">内置</h2>
-
-<p>{{JSxRef("Global_Objects", "JavaScript 标准内置对象")}}, 以及他们的方法和属性。</p>
-
-<h3 id="值属性">值属性</h3>
-
-<ul>
-  <li>{{JSxRef("Infinity")}}</li>
-  <li>{{JSxRef("NaN")}}</li>
-  <li>{{JSxRef("undefined")}}</li>
-  <li>{{JSxRef("globalThis")}}</li>
-</ul>
-
-<h3 id="Function_属性">Function 属性</h3>
-
-<ul>
-  <li>{{JSxRef("Global_Objects/eval", "eval()")}}</li>
-  <li>{{JSxRef("Global_Objects/isFinite", "isFinite()")}}</li>
-  <li>{{JSxRef("Global_Objects/isNaN", "isNaN()")}}</li>
-  <li>{{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}</li>
-  <li>{{JSxRef("Global_Objects/parseInt", "parseInt()")}}</li>
-  <li>{{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}</li>
-  <li>{{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</li>
-  <li>{{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}</li>
-  <li>{{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</li>
-</ul>
-
-<h3 id="基本对象">基本对象</h3>
-
-<ul>
-  <li>{{JSxRef("Object")}}</li>
-  <li>{{JSxRef("Function")}}</li>
-  <li>{{JSxRef("Boolean")}}</li>
-  <li>{{JSxRef("Symbol")}}</li>
-</ul>
-
-<h3 id="错误对象">错误对象</h3>
-
-<ul>
-  <li>{{JSxRef("Error")}}</li>
-  <li>{{JSxRef("AggregateError")}}</li>
-  <li>{{JSxRef("EvalError")}}</li>
-  <li>{{JSxRef("InternalError")}}</li>
-  <li>{{JSxRef("RangeError")}}</li>
-  <li>{{JSxRef("ReferenceError")}}</li>
-  <li>{{JSxRef("SyntaxError")}}</li>
-  <li>{{JSxRef("TypeError")}}</li>
-  <li>{{JSxRef("URIError")}}</li>
-</ul>
-
-<h3 id="Numbers_dates">Numbers &amp; dates</h3>
-
-<ul>
-  <li>{{JSxRef("Number")}}</li>
-  <li>{{JSxRef("BigInt")}}</li>
-  <li>{{JSxRef("Math")}}</li>
-  <li>{{JSxRef("Date")}}</li>
-</ul>
-
-<h3 id="文本处理">文本处理</h3>
-
-<ul>
-  <li>{{JSxRef("String")}} {{JSxRef("RegExp")}}</li>
-</ul>
-
-<h3 id="索引集合类">索引集合类</h3>
-
-<ul>
-  <li>{{JSxRef("Array")}}</li>
-  <li>{{JSxRef("Int8Array")}}</li>
-  <li>{{JSxRef("Uint8Array")}}</li>
-  <li>{{JSxRef("Uint8ClampedArray")}}</li>
-  <li>{{JSxRef("Int16Array")}}</li>
-  <li>{{JSxRef("Uint16Array")}}</li>
-  <li>{{JSxRef("Int32Array")}}</li>
-  <li>{{JSxRef("Uint32Array")}}</li>
-  <li>{{JSxRef("Float32Array")}}</li>
-  <li>{{JSxRef("Float64Array")}}</li>
-  <li>{{JSxRef("BigInt64Array")}}</li>
-  <li>{{JSxRef("BigUint64Array")}}</li>
-</ul>
-
-<h3 id="Keyed_collections">Keyed collections</h3>
-
-<ul>
-  <li>{{JSxRef("Map")}}</li>
-  <li>{{JSxRef("Set")}}</li>
-  <li>{{JSxRef("WeakMap")}}</li>
-  <li>{{JSxRef("WeakSet")}}</li>
-</ul>
-
-<h3 id="结构化数据">结构化数据</h3>
-
-<ul>
-  <li>{{JSxRef("ArrayBuffer")}}</li>
-  <li>{{JSxRef("SharedArrayBuffer")}}</li>
-  <li>{{JSxRef("Atomics")}}</li>
-  <li>{{JSxRef("DataView")}}</li>
-  <li>{{JSxRef("JSON")}}</li>
-</ul>
-
-<h3 id="控制抽象化">控制抽象化</h3>
-
-<ul>
-  <li>{{JSxRef("Promise")}}</li>
-  <li>{{JSxRef("Generator")}}</li>
-  <li>{{JSxRef("GeneratorFunction")}}</li>
-  <li>{{JSxRef("AsyncFunction")}}</li>
-</ul>
-
-<h3 id="反射">反射</h3>
-
-<ul>
-  <li>{{JSxRef("Reflect")}}</li>
-  <li>{{JSxRef("Proxy")}}</li>
-</ul>
-
-<h3 id="国际化">国际化</h3>
-
-<ul>
-  <li>{{JSxRef("Intl")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}</li>
-  <li>{{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-</ul>
-
-<h3 id="WebAssembly">WebAssembly</h3>
-
-<ul>
-  <li>{{JSxRef("WebAssembly")}}</li>
-  <li>{{JSxRef("WebAssembly.Module")}}</li>
-  <li>{{JSxRef("WebAssembly.Instance")}}</li>
-  <li>{{JSxRef("WebAssembly.Memory")}}</li>
-  <li>{{JSxRef("WebAssembly.Table")}}</li>
-  <li>{{JSxRef("WebAssembly.CompileError")}}</li>
-  <li>{{JSxRef("WebAssembly.LinkError")}}</li>
-  <li>{{JSxRef("WebAssembly.RuntimeError")}}</li>
-</ul>
-
-<h2 id="语句">语句</h2>
-
-<p>{{JSxRef("Statements", "语句和声明")}}</p>
-
-<h3 id="控制流">控制流</h3>
-
-<ul>
-  <li>{{jsxref("Statements/block", "Block")}}</li>
-  <li>{{jsxref("Statements/break", "break")}}</li>
-  <li>{{jsxref("Statements/continue", "continue")}}</li>
-  <li>{{jsxref("Statements/Empty", "Empty")}}</li>
-  <li>{{jsxref("Statements/if...else", "if...else")}}</li>
-  <li>{{jsxref("Statements/switch", "switch")}}</li>
-  <li>{{jsxref("Statements/throw", "throw")}}</li>
-  <li>{{jsxref("Statements/try...catch", "try...catch")}}</li>
-</ul>
-
-<h3 id="声明">声明</h3>
-
-<ul>
-  <li>{{jsxref("Statements/var", "var")}}</li>
-  <li>{{jsxref("Statements/let", "let")}}</li>
-  <li>{{jsxref("Statements/const", "const")}}</li>
-</ul>
-
-<h3 id="函数和类">函数和类</h3>
-
-<ul>
-  <li>{{jsxref("Statements/function", "function")}}</li>
-  <li>{{jsxref("Statements/function*", "function*")}}</li>
-  <li>{{jsxref("Statements/async_function", "async function")}}</li>
-  <li>{{jsxref("Statements/return", "return")}}</li>
-  <li>{{jsxref("Statements/class", "class")}}</li>
-</ul>
-
-<h3 id="迭代">迭代</h3>
-
-<ul>
-  <li>{{jsxref("Statements/do...while", "do...while")}}</li>
-  <li>{{jsxref("Statements/for", "for")}}</li>
-  <li>{{jsxref("Statements/for_each...in", "for each...in")}}</li>
-  <li>{{jsxref("Statements/for...in", "for...in")}}</li>
-  <li>{{jsxref("Statements/for...of", "for...of")}}</li>
-  <li>{{jsxref("Statements/for-await...of", "for await...of")}}</li>
-  <li>{{jsxref("Statements/while", "while")}}</li>
-</ul>
-
-<h3 id="其他">其他</h3>
-
-<ul>
-  <li>{{jsxref("Statements/debugger", "debugger")}}</li>
-  <li>{{jsxref("Statements/import", "import")}}</li>
-  <li>{{jsxref("Statements/label", "label")}}</li>
-  <li>{{jsxref("Statements/with", "with")}}</li>
-</ul>
-
-
-<h2 id="表达式和运算符">表达式和运算符</h2>
-
-<p>{{JSxRef("Operators", "表达式和运算符")}}. </p>
-
-<h3 id="Primary_expressions">Primary expressions</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/this", "this")}}</li>
-  <li>{{JSxRef("Operators/function", "function")}}</li>
-  <li>{{JSxRef("Operators/class", "class")}}</li>
-  <li>{{JSxRef("Operators/function*", "function*")}}</li>
-  <li>{{JSxRef("Operators/yield", "yield")}}</li>
-  <li>{{JSxRef("Operators/yield*", "yield*")}}</li>
-  <li>{{JSxRef("Operators/async_function", "async function")}}</li>
-  <li>{{JSxRef("Operators/await", "await")}}</li>
-  <li>{{JSxRef("Global_Objects/Array", "[]")}}</li>
-  <li>{{JSxRef("Operators/Object_initializer", "{}")}}</li>
-  <li>{{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}</li>
-  <li>{{JSxRef("Operators/Grouping", "( )")}}</li>
-  <li>{{JSxRef("null")}}</li>
-</ul>
-
-<h3 id="Left-hand-side_expressions">Left-hand-side expressions</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}</li>
-  <li>{{JSxRef("Operators/new", "new")}}</li>
-  <li>{{JSxRef("Operators/new%2Etarget", "new.target")}}</li>
-  <li>{{JSxRef("Operators/super", "super")}}</li>
-  <li>{{JSxRef("Operators/Spread_syntax", "...obj")}}</li>
-</ul>
-
-<h3 id="Increment_decrement">Increment &amp; decrement</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}</li>
-</ul>
-
-<h3 id="一元运算符">一元运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/delete", "delete")}}</li>
-  <li>{{JSxRef("Operators/void", "void")}}</li>
-  <li>{{JSxRef("Operators/typeof", "typeof")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}</li>
-  <li>{{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}</li>
-</ul>
-
-<h3 id="算术运算符">算术运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}</li>
-  <li>{{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}</li>
-</ul>
-
-<h3 id="关系运算符">关系运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/in", "in")}}</li>
-  <li>{{JSxRef("Operators/instanceof", "instanceof")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</li>
-</ul>
-</li>
-
-<h3 id="相等运算符">相等运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}</li>
-  <li>{{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}</li>
-</ul>
-
-<h3 id="位移运算符">位移运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}</li>
-</ul>
-
-<h3 id="位运算">位运算</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}</li>
-  <li>{{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}</li>
-</ul>
-
-<h3 id="逻辑运算">逻辑运算</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}</li>
-  <li>{{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}</li>
-</ul>
-
-<h3 id="条件运算符">条件运算符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</li>
-</ul>
-
-<h3 id="赋值操作符">赋值操作符</h3>
-
-<ul>
-  <li>{{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}</li>
-  <li>{{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}</li>
-  <li>{{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}</li>
-  <li>{{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</li>
-</ul>
-
-
-<h2 id="函数">函数</h2>
-
-<p>本章介绍如何使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Functions">JavaScript 函数</a> 来开发应用程序。</p>
-
-<ul>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters">剩余参数</a></li>
-</ul>
-
-<h2 id="附加参考页面">附加参考页面</h2>
-
-<ul>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar">词法文法</a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Data_structures">数据类型和数据结构</a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a></li>
-  <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">过时的特性</a></li>
-</ul>
+## 内置
+
+{{JSxRef("Global_Objects", "JavaScript 标准内置对象")}}, 以及他们的方法和属性。
+
+### 值属性
+
+- {{JSxRef("Infinity")}}
+- {{JSxRef("NaN")}}
+- {{JSxRef("undefined")}}
+- {{JSxRef("globalThis")}}
+
+### Function 属性
+
+- {{JSxRef("Global_Objects/eval", "eval()")}}
+- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
+- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
+- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
+- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
+- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
+- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+
+### 基本对象
+
+- {{JSxRef("Object")}}
+- {{JSxRef("Function")}}
+- {{JSxRef("Boolean")}}
+- {{JSxRef("Symbol")}}
+
+### 错误对象
+
+- {{JSxRef("Error")}}
+- {{JSxRef("AggregateError")}}
+- {{JSxRef("EvalError")}}
+- {{JSxRef("InternalError")}}
+- {{JSxRef("RangeError")}}
+- {{JSxRef("ReferenceError")}}
+- {{JSxRef("SyntaxError")}}
+- {{JSxRef("TypeError")}}
+- {{JSxRef("URIError")}}
+
+### Numbers & dates
+
+- {{JSxRef("Number")}}
+- {{JSxRef("BigInt")}}
+- {{JSxRef("Math")}}
+- {{JSxRef("Date")}}
+
+### 文本处理
+
+- {{JSxRef("String")}} {{JSxRef("RegExp")}}
+
+### 索引集合类
+
+- {{JSxRef("Array")}}
+- {{JSxRef("Int8Array")}}
+- {{JSxRef("Uint8Array")}}
+- {{JSxRef("Uint8ClampedArray")}}
+- {{JSxRef("Int16Array")}}
+- {{JSxRef("Uint16Array")}}
+- {{JSxRef("Int32Array")}}
+- {{JSxRef("Uint32Array")}}
+- {{JSxRef("Float32Array")}}
+- {{JSxRef("Float64Array")}}
+- {{JSxRef("BigInt64Array")}}
+- {{JSxRef("BigUint64Array")}}
+
+### Keyed collections
+
+- {{JSxRef("Map")}}
+- {{JSxRef("Set")}}
+- {{JSxRef("WeakMap")}}
+- {{JSxRef("WeakSet")}}
+
+### 结构化数据
+
+- {{JSxRef("ArrayBuffer")}}
+- {{JSxRef("SharedArrayBuffer")}}
+- {{JSxRef("Atomics")}}
+- {{JSxRef("DataView")}}
+- {{JSxRef("JSON")}}
+
+### 控制抽象化
+
+- {{JSxRef("Promise")}}
+- {{JSxRef("Generator")}}
+- {{JSxRef("GeneratorFunction")}}
+- {{JSxRef("AsyncFunction")}}
+
+### 反射
+
+- {{JSxRef("Reflect")}}
+- {{JSxRef("Proxy")}}
+
+### 国际化
+
+- {{JSxRef("Intl")}}
+- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
+- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
+- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
+- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
+- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+
+### WebAssembly
+
+- {{JSxRef("WebAssembly")}}
+- {{JSxRef("WebAssembly.Module")}}
+- {{JSxRef("WebAssembly.Instance")}}
+- {{JSxRef("WebAssembly.Memory")}}
+- {{JSxRef("WebAssembly.Table")}}
+- {{JSxRef("WebAssembly.CompileError")}}
+- {{JSxRef("WebAssembly.LinkError")}}
+- {{JSxRef("WebAssembly.RuntimeError")}}
+
+## 语句
+
+{{JSxRef("Statements", "语句和声明")}}
+
+### 控制流
+
+- {{jsxref("Statements/block", "Block")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/Empty", "Empty")}}
+- {{jsxref("Statements/if...else", "if...else")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}
+
+### 声明
+
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
+
+### 函数和类
+
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Statements/class", "class")}}
+
+### 迭代
+
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/for_each...in", "for each...in")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Statements/for...of", "for...of")}}
+- {{jsxref("Statements/for-await...of", "for await...of")}}
+- {{jsxref("Statements/while", "while")}}
+
+### 其他
+
+- {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/with", "with")}}
+
+## 表达式和运算符
+
+{{JSxRef("Operators", "表达式和运算符")}}.
+
+### Primary expressions
+
+- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("Operators/function", "function")}}
+- {{JSxRef("Operators/class", "class")}}
+- {{JSxRef("Operators/function*", "function*")}}
+- {{JSxRef("Operators/yield", "yield")}}
+- {{JSxRef("Operators/yield*", "yield*")}}
+- {{JSxRef("Operators/async_function", "async function")}}
+- {{JSxRef("Operators/await", "await")}}
+- {{JSxRef("Global_Objects/Array", "[]")}}
+- {{JSxRef("Operators/Object_initializer", "{}")}}
+- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
+- {{JSxRef("Operators/Grouping", "( )")}}
+- {{JSxRef("null")}}
+
+### Left-hand-side expressions
+
+- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
+- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("Operators/new%2Etarget", "new.target")}}
+- {{JSxRef("Operators/super", "super")}}
+- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+
+### Increment & decrement
+
+- {{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+
+### 一元运算符
+
+- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("Operators/void", "void")}}
+- {{JSxRef("Operators/typeof", "typeof")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
+- {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
+- {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+
+### 算术运算符
+
+- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}
+- {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+
+### 关系运算符
+
+- {{JSxRef("Operators/in", "in")}}
+- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
+- {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
+- {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+- {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+
+### 相等运算符
+
+- {{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}
+- {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}
+- {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}
+- {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+
+### 位移运算符
+
+- {{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
+- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
+- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+
+### 位运算
+
+- {{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
+- {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
+- {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+
+### 逻辑运算
+
+- {{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
+- {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}
+
+### 条件运算符
+
+- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+
+### 赋值操作符
+
+- {{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+
+## 函数
+
+本章介绍如何使用 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions) 来开发应用程序。
+
+- [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
+- [箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+
+## 附加参考页面
+
+- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+- [过时的特性](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

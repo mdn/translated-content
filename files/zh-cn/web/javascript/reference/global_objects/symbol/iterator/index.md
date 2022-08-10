@@ -8,67 +8,65 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong>Symbol.iterator </strong>为每一个对象定义了默认的迭代器。该迭代器可以被 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 循环使用。</p>
+**Symbol.iterator** 为每一个对象定义了默认的迭代器。该迭代器可以被 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环使用。
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>当需要对一个对象进行迭代时（比如开始用于一个<code>for..of</code>循环中），它的<code>@@iterator</code>方法都会在不传参情况下被调用，返回的<strong>迭代器</strong>用于获取要迭代的值。</p>
+当需要对一个对象进行迭代时（比如开始用于一个`for..of`循环中），它的`@@iterator`方法都会在不传参情况下被调用，返回的**迭代器**用于获取要迭代的值。
 
-<p>一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。下表中的内置类型拥有默认的<code>@@iterator</code>方法：</p>
+一些内置类型拥有默认的迭代器行为，其他类型（如 {{jsxref("Object")}}）则没有。下表中的内置类型拥有默认的`@@iterator`方法：
 
-<ul>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
 
-<p>更多信息请参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">迭代协议</a>。</p>
+更多信息请参见[迭代协议](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="自定义迭代器">自定义迭代器</h3>
+### 自定义迭代器
 
-<p>我们可以像下面这样创建自定义的迭代器：</p>
+我们可以像下面这样创建自定义的迭代器：
 
-<pre class="brush: js">var myIterable = {}
+```js
+var myIterable = {}
 myIterable[Symbol.iterator] = function* () {
     yield 1;
     yield 2;
     yield 3;
 };
 [...myIterable] // [1, 2, 3]
-</pre>
+```
 
-<h3 id="不符合标准的迭代器">不符合标准的迭代器</h3>
+### 不符合标准的迭代器
 
-<p>如果一个迭代器 <code>@@iterator</code> 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器，这样的迭代器将会在运行期抛出异常，甚至非常诡异的 Bug。</p>
+如果一个迭代器 `@@iterator` 没有返回一个迭代器对象，那么它就是一个不符合标准的迭代器，这样的迭代器将会在运行期抛出异常，甚至非常诡异的 Bug。
 
-<pre class="brush: js">var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () =&gt; 1
+```js
+var nonWellFormedIterable = {}
+nonWellFormedIterable[Symbol.iterator] = () => 1
 [...nonWellFormedIterable] // TypeError: [] is not a function
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols">迭代协议</a></li>
- <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}</li>
- <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
-</ul>
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
+- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
+- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}

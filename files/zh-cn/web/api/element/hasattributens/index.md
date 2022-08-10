@@ -8,40 +8,40 @@ tags:
   - 方法
 translation_of: Web/API/Element/hasAttributeNS
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code>hasAttributeNS</code> 返回一个布尔值，指示该元素是否包含有指定的属性（attribute）。</p>
+`hasAttributeNS` 返回一个布尔值，指示该元素是否包含有指定的属性（attribute）。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>result</em> =<em>element</em>.hasAttributeNS(<em>namespace</em>,<em>localName</em>)
-</pre>
+```plain
+result =element.hasAttributeNS(namespace,localName)
+```
 
-<ul>
- <li><code>result</code> 为返回的布尔值：<code>true</code> 或 <code>false</code>。</li>
- <li><code>namespace</code> 是一个字符串，表示属性的命名空间。</li>
- <li><code>localName</code> 是一个字符串，表示属性的名称。</li>
-</ul>
+- `result` 为返回的布尔值：`true` 或 `false`。
+- `namespace` 是一个字符串，表示属性的命名空间。
+- `localName` 是一个字符串，表示属性的名称。
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre>// 在为属性设置值之前检测该属性是否存在
+```plain
+// 在为属性设置值之前检测该属性是否存在
 var d = document.getElementById("div1");
 if (d.hasAttributeNS(
         "http://www.mozilla.org/ns/specialspace/",
         "special-align")) {
    d.setAttribute("align", "center");
 }
-</pre>
+```
 
-<h2 id="Notes">备注</h2>
+## 备注
 
-<p>该方法与<a href="/zh-CN/docs/Web/API/element/hasAttribute"><code>hasAttribute</code></a>类似，只是要检查的属性由命名空间和名称指定。只有使用命名空间的 XML 文档才使用方法</p>
+该方法与[`hasAttribute`](/zh-CN/docs/Web/API/element/hasAttribute)类似，只是要检查的属性由命名空间和名称指定。只有使用命名空间的 XML 文档才使用方法
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS">DOM Level 2 Core: hasAttributeNS</a></p>
+[DOM Level 2 Core: hasAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)

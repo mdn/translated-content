@@ -3,66 +3,34 @@ title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 translation_of: Web/API/PerformanceEntry/entryType
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>entryType</code></strong>  返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "<code>mark</code>". 此属性只读。</p>
+The **`entryType`** 返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "`mark`". 此属性只读。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>type</em> = <em>entry</em>.entryType;</pre>
+```plain
+var type = entry.entryType;
+```
 
-<h3 id="Return_Value">返回值</h3>
+### 返回值
 
-<p>返回值取决于 <code>PerformanceEntry</code> 对象的 subtype， entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性， 具体如下表所示. </p>
+返回值取决于 `PerformanceEntry` 对象的 subtype， entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性， 具体如下表所示.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Subtype</th>
-   <th scope="col">Type of name property</th>
-   <th scope="col">Description of name property</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>frame</code>, <code>navigation</code></td>
-   <td>{{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}}</td>
-   <td>{{domxref("URL")}}</td>
-   <td>The document's address.</td>
-  </tr>
-  <tr>
-   <td><code>resource</code></td>
-   <td>{{domxref('PerformanceResourceTiming')}}</td>
-   <td>{{domxref("URL")}}</td>
-   <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
-  </tr>
-  <tr>
-   <td><code>mark</code></td>
-   <td>{{domxref('PerformanceMark')}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
-  </tr>
-  <tr>
-   <td><code>measure</code></td>
-   <td>{{domxref('PerformanceMeasure')}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}.</td>
-  </tr>
-  <tr>
-   <td><code>paint</code></td>
-   <td>{{domxref('PerformancePaintTiming')}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Either <code>'first-paint'</code> or <code>'first-contentful-paint'</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Value                 | Subtype                                                                                                    | Type of name property            | Description of name property                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | The document's address.                                                                                                         |
+| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.                        |
+| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.        |
+| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
+| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | Either `'first-paint'` or `'first-contentful-paint'`.                                                                           |
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<p>下面的代码说明了  <code>entryType</code> 属性的用法。</p>
+下面的代码说明了 `entryType` 属性的用法。
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
 
   // check for feature support before continuing
   if (performance.mark === undefined) {
@@ -84,18 +52,18 @@ translation_of: Web/API/PerformanceEntry/entryType
   //entriesNamedBegin[0].name
   //    "begin"
 
-  for (var i=0; i &lt; entriesNamedBegin.length; i++) {
+  for (var i=0; i < entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }
 
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

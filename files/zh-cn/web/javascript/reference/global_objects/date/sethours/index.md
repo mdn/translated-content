@@ -3,61 +3,59 @@ title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>setHours()</strong></code> 方法根据本地时间为一个日期对象设置小时数，返回从 1970-01-01 00:00:00 UTC 到更新后的 {{jsxref("Global_Objects/Date", "日期")}} 对象实例所表示时间的毫秒数。</p>
+**`setHours()`** 方法根据本地时间为一个日期对象设置小时数，返回从 1970-01-01 00:00:00 UTC 到更新后的 {{jsxref("Global_Objects/Date", "日期")}} 对象实例所表示时间的毫秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-sethours.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
 
+## 语法
 
+```plain
+dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+```
 
-<h2 id="Syntax">语法</h2>
+### JavaScript 1.3 版本之前
 
-<pre class="syntaxbox">dateObj.setHours(<em>hoursValue</em>[, <em>minutesValue</em>[, <em>secondsValue</em>[, <em>msValue</em>]]])
-</pre>
+```plain
+dateObj.setHours(hoursValue)
+```
 
-<h3 id="Versions_prior_to_JavaScript_1.3">JavaScript 1.3 版本之前</h3>
+### 参数
 
-<pre class="syntaxbox"><code>dateObj.setHours(<em>hoursValue</em>) </code></pre>
+- `hoursValue`
+  - : 一个 0 到 23 的整数，表示小时。
+- `minutesValue`
+  - : 一个 0 到 59 的整数，表示分钟。
+- `secondsValue`
+  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsValue` 参数，则必须同时指定 `minutesValue `参数。
+- `msValue`
+  - : 一个 0 到 999 的数字，表示微秒数，如果指定了 `msValue` 参数，则必须同时指定 `minutesValue` 和 `secondsValue` 参数。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>hoursValue</code></dt>
- <dd>一个 0 到 23 的整数，表示小时。</dd>
- <dt><code>minutesValue</code></dt>
- <dd>一个 0 到 59 的整数，表示分钟。</dd>
- <dt><code>secondsValue</code></dt>
- <dd>一个 0 到 59 的整数，表示秒数。如果指定了 <code>secondsValue</code> 参数，则必须同时指定 <code>minutesValue </code>参数。</dd>
- <dt><code>msValue</code></dt>
- <dd>一个 0 到 999 的数字，表示微秒数，如果指定了 <code>msValue</code> 参数，则必须同时指定 <code>minutesValue</code> 和 <code>secondsValue</code> 参数。</dd>
-</dl>
+如果不指定 `minutesValue`，`secondsValue` 和 `msValue` 参数，则会使用{{jsxref("Date.getMinutes", "getMinutes()")}}，{{jsxref("Date.getSeconds", "getSeconds()")}} 和{{jsxref("Date.getMilliseconds", "getMilliseconds()")}} 方法的返回值。
 
-<h2 id="Description">描述</h2>
+如果有一个参数超出了合理范围，`setHours` 会相应地更新日期对象中的日期信息。例如，如果为 `secondsValue` 指定了 100，则分钟会加 1，然后秒数使用 40。
 
-<p>如果不指定 <code>minutesValue</code>，<code>secondsValue</code> 和 <code>msValue</code> 参数，则会使用{{jsxref("Date.getMinutes", "getMinutes()")}}，{{jsxref("Date.getSeconds", "getSeconds()")}} 和{{jsxref("Date.getMilliseconds", "getMilliseconds()")}} 方法的返回值。</p>
+## 例子
 
-<p>如果有一个参数超出了合理范围，<code>setHours</code> 会相应地更新日期对象中的日期信息。例如，如果为 <code>secondsValue</code> 指定了 100，则分钟会加 1，然后秒数使用 40。</p>
+### 例子：使用 `setHours` 方法
 
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example:_Using_setHours">例子：使用 <code>setHours</code> 方法</h3>
-
-<pre class="brush:js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setHours(7);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getHours()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCHours()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getHours()")}}
+- {{jsxref("Date.prototype.setUTCHours()")}}

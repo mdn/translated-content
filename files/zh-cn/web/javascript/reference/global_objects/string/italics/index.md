@@ -3,41 +3,43 @@ title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>italics()</code></strong> method creates an {{HTMLElement("i")}} HTML element that causes a string to be italic.</p>
+The **`italics()`** method creates an {{HTMLElement("i")}} HTML element that causes a string to be italic.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><code><var>str</var>.italics()</code></pre>
+```plain
+str.italics()
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>italics()</code> method embeds a string in an <code>&lt;i&gt;</code> tag: <code>"&lt;i&gt;str&lt;/i&gt;"</code>.</p>
+The `italics()` method embeds a string in an `<i>` tag: `"<i>str</i>"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_italics()">Using <code>italics()</code></h3>
+### Using `italics()`
 
-<p>The following example uses string methods to change the formatting of a string:</p>
+The following example uses string methods to change the formatting of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world'; console.log(worldString.blink());  // Hello, world
-console.log(worldString.bold());  // <strong>Hello, world</strong>
-console.log(worldString.italics()); //<em>Hello, world</em>
-console.log(worldString.strike());  // <s>Hello, world</s></pre>
+```js
+var worldString = 'Hello, world'; console.log(worldString.blink());  // Hello, world
+console.log(worldString.bold());  // Hello, world
+console.log(worldString.italics()); //Hello, world
+console.log(worldString.strike());  // Hello, world
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("String.prototype.blink()")}}</li>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.strike()")}}

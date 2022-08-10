@@ -8,46 +8,45 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>valueOf()</strong></code> 方法返回一个{{jsxref("Boolean")}}对象的原始值。</p>
+**`valueOf()`** 方法返回一个{{jsxref("Boolean")}}对象的原始值。
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
 
+## 语法
 
+```plain
+bool.valueOf()
+```
 
-<h2 id="Syntax">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><var>bool</var>.valueOf()</code></pre>
+给定{{jsxref("Boolean")}}对象的原始值
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>给定{{jsxref("Boolean")}}对象的原始值</p>
+{{jsxref("Boolean")}}的 `valueOf` 方法返回一个{{jsxref("Boolean")}}对象或{{jsxref("Boolean")}}字面量的原始值作为布尔数据类型。
 
-<h2 id="Description">描述</h2>
+该方法通常在 JavaScript 内部调用，而不是在代码中显式调用。
 
-<p>{{jsxref("Boolean")}}的 <code>valueOf</code> 方法返回一个{{jsxref("Boolean")}}对象或{{jsxref("Boolean")}}字面量的原始值作为布尔数据类型。</p>
+## 示例
 
-<p>该方法通常在 JavaScript 内部调用，而不是在代码中显式调用。</p>
+### 使用 `valueOf`
 
-<h2 id="Examples">示例</h2>
-
-<h3 id="Example:_Using_valueOf">使用 <code>valueOf</code></h3>
-
-<pre class="brush: js">x = new Boolean();
+```js
+x = new Boolean();
 myVar = x.valueOf()      // assigns false to myVar
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

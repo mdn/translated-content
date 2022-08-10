@@ -3,39 +3,38 @@ title: AudioContext.baseLatency
 slug: Web/API/AudioContext/baseLatency
 translation_of: Web/API/AudioContext/baseLatency
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Audio API")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>baseLatency</code></strong> read-only property of the {{domxref("AudioContext")}} interface returns a double that represents the number of seconds of processing latency incurred by the <code>AudioContext</code> passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.</p>
+The **`baseLatency`** read-only property of the {{domxref("AudioContext")}} interface returns a double that represents the number of seconds of processing latency incurred by the `AudioContext` passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
 
-<p>You can request a certain latency during {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the <code>latencyHint</code> option but the browser may ignore the option.</p>
+You can request a certain latency during {{domxref("AudioContext.AudioContext()", "construction time", "", "true")}} with the `latencyHint` option but the browser may ignore the option.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>baseLatency</em> = <em>audioCtx</em>.baseLatency;</pre>
+```plain
+var baseLatency = audioCtx.baseLatency;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double representing the base latency in seconds.</p>
+A double representing the base latency in seconds.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">//default latency ("interactive")
+```js
+//default latency ("interactive")
 const audioCtx1 = new AudioContext();
 console.log(audioCtx1.baseLatency);//0.01
 
 //higher latency ("playback")
 const audioCtx2 = new AudioContext({ latencyHint: 'playback' });
 console.log(audioCtx2.baseLatency);//0.02
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
-<div>
-
-
-<p>{{Compat("api.AudioContext.baseLatency")}}</p>
-</div>
+{{Compat("api.AudioContext.baseLatency")}}

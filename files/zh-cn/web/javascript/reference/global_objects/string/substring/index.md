@@ -5,46 +5,45 @@ tags:
   - String.prototype.substring()
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><strong><code>substring() </code></strong>方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。</p>
+**`substring() `**方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.substring(<var>indexStart</var>[, <var>indexEnd</var>])</code></pre>
+```plain
+str.substring(indexStart[, indexEnd])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>indexStart</code></dt>
- <dd>需要截取的第一个字符的索引，该索引位置的字符作为返回的字符串的首字母。</dd>
- <dt><code>indexEnd</code></dt>
- <dd>可选。一个 0 到字符串长度之间的整数，以该数字为索引的字符不包含在截取的字符串内。</dd>
-</dl>
+- `indexStart`
+  - : 需要截取的第一个字符的索引，该索引位置的字符作为返回的字符串的首字母。
+- `indexEnd`
+  - : 可选。一个 0 到字符串长度之间的整数，以该数字为索引的字符不包含在截取的字符串内。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>包含给定字符串的指定部分的新字符串。</p>
+包含给定字符串的指定部分的新字符串。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>substring</code> 提取从 <code>indexStart</code> 到 <code>indexEnd</code>（不包括）之间的字符。特别地：</p>
+`substring` 提取从 `indexStart` 到 `indexEnd`（不包括）之间的字符。特别地：
 
-<ul>
- <li>如果 <code>indexStart</code> 等于 <code>indexEnd</code>，<code>substring</code> 返回一个空字符串。</li>
- <li>如果省略 <code>indexEnd</code>，<code>substring</code> 提取字符一直到字符串末尾。</li>
- <li>如果任一参数小于 0 或为 {{jsxref("NaN")}}，则被当作 0。</li>
- <li>如果任一参数大于 <code>stringName.length</code>，则被当作 <code>stringName.length</code>。</li>
- <li>如果 <code>indexStart</code> 大于 <code>indexEnd</code>，则 <code>substring</code> 的执行效果就像两个参数调换了一样。见下面的例子。</li>
-</ul>
+- 如果 `indexStart` 等于 `indexEnd`，`substring` 返回一个空字符串。
+- 如果省略 `indexEnd`，`substring` 提取字符一直到字符串末尾。
+- 如果任一参数小于 0 或为 {{jsxref("NaN")}}，则被当作 0。
+- 如果任一参数大于 `stringName.length`，则被当作 `stringName.length`。
+- 如果 `indexStart` 大于 `indexEnd`，则 `substring` 的执行效果就像两个参数调换了一样。见下面的例子。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_substring">例子：使用 <code>substring</code></h3>
+### 例子：使用 `substring`
 
-<p>下例使用 <code>substring</code> 输出字符串 "<code>Mozilla</code>" 中的字符：</p>
+下例使用 `substring` 输出字符串 "`Mozilla`" 中的字符：
 
-<pre class="brush:js">var anyString = "Mozilla";
+```js
+var anyString = "Mozilla";
 
 // 输出 "Moz"
 console.log(anyString.substring(0,3));
@@ -67,29 +66,32 @@ console.log(anyString.substring(0,6));
 // 输出 "Mozilla"
 console.log(anyString.substring(0,7));
 console.log(anyString.substring(0,10));
-</pre>
+```
 
-<h3 id="运用_length_属性来使用_substring"><strong>运用 length 属性来使用 substring()</strong></h3>
+### **运用 length 属性来使用 substring()**
 
-<p>下面一个例子运用了    String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。</p>
+下面一个例子运用了 String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。
 
-<pre class="brush: js"><code>// Displays 'illa' the last 4 characters
+```js
+// Displays 'illa' the last 4 characters
 var anyString = 'Mozilla';
 var anyString4 = anyString.substring(anyString.length - 4);
-console.log(anyString4);</code>
+console.log(anyString4);
 
 // Displays 'zilla' the last 5 characters
 var anyString = 'Mozilla';
 var anyString5 = anyString.substring(anyString.length - 5);
-console.log(anyString5);</pre>
+console.log(anyString5);
+```
 
-<h3 id="Example_Replacing_a_substring_within_a_string">例子：替换一个字符串的子字符串</h3>
+### 例子：替换一个字符串的子字符串
 
-<p>下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "<code>Brave New World</code>" 变成了 "<code>Brave New Web</code>"。</p>
+下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "`Brave New World`" 变成了 "`Brave New Web`"。
 
-<pre class="brush:js">function replaceString(oldS, newS, fullS) {
+```js
+function replaceString(oldS, newS, fullS) {
 // Replaces oldS with newS in the string fullS
-  for (var i = 0; i &lt; fullS.length; i++) {
+  for (var i = 0; i < fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
      fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
     }
@@ -97,27 +99,28 @@ console.log(anyString5);</pre>
   return fullS;
 }
 
-replaceString("World", "Web", "Brave New World");</pre>
+replaceString("World", "Web", "Brave New World");
+```
 
-<p>需要注意的是，如果 <code>oldS</code> 是 <code>newS</code> 的子字符串将会导致死循环。例如，尝试把 "Web" 替换成 "OtherWorld"。一个更好的方法如下：</p>
+需要注意的是，如果 `oldS` 是 `newS` 的子字符串将会导致死循环。例如，尝试把 "Web" 替换成 "OtherWorld"。一个更好的方法如下：
 
-<pre class="brush:js">function replaceString(oldS, newS,fullS){
+```js
+function replaceString(oldS, newS,fullS){
   return fullS.split(oldS).join(newS);
-}</pre>
+}
+```
 
-<p>上面的代码只是子字符串操作的一个例子。如果你需要替换子字符串，更多时候会用到 {{jsxref("String.prototype.replace()")}}。</p>
+上面的代码只是子字符串操作的一个例子。如果你需要替换子字符串，更多时候会用到 {{jsxref("String.prototype.replace()")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.substr()")}}</li>
- <li>{{jsxref("String.prototype.slice()")}}</li>
-</ul>
+- {{jsxref("String.prototype.substr()")}}
+- {{jsxref("String.prototype.slice()")}}

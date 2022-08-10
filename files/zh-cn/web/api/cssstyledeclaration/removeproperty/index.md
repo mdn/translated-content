@@ -8,44 +8,41 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleDeclaration/removeProperty
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p><code>CSSStyleDeclaration.removeProperty()</code> 方法移除 style 对象的一个属性。</p>
+`CSSStyleDeclaration.removeProperty()` 方法移除 style 对象的一个属性。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var <em>oldValue</em> = <em>style</em>.removeProperty(<em>property</em>);</pre>
+```js
+var oldValue = style.removeProperty(property);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><em><code>property</code></em> 是一个 {{domxref('DOMString')}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。</li>
-</ul>
+- _`property`_ 是一个 {{domxref('DOMString')}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<ul>
- <li><code><em>oldValue</em></code> 是一个 {{domxref('DOMString')}} ，等于被移除的属性在移除前的属性值。</li>
-</ul>
+- `oldValue` 是一个 {{domxref('DOMString')}} ，等于被移除的属性在移除前的属性值。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<ul>
- <li>{{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: 如果属性或声明块为只读，抛出此异常。</li>
-</ul>
+- {{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: 如果属性或声明块为只读，抛出此异常。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的 JavaScript 代码从样式表里移除了 <code>margin</code> 属性：</p>
+下面的 JavaScript 代码从样式表里移除了 `margin` 属性：
 
-<pre class="brush: js">var declaration = document.styleSheets[0].rules[0].style;
+```js
+var declaration = document.styleSheets[0].rules[0].style;
 var oldValue = declaration.removeProperty('margin');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

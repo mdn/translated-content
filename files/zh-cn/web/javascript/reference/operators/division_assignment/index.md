@@ -3,41 +3,41 @@ title: Division assignment (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
 translation_of: Web/JavaScript/Reference/Operators/Division_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The division assignment operator (<code>/=</code>) divides a variable by the value of the right operand and assigns the result to the variable.</p>
+The division assignment operator (`/=`) divides a variable by the value of the right operand and assigns the result to the variable.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><strong>Operator:</strong> x /= y
-<strong>Meaning:</strong>  x  = x / y</pre>
+```plain
+Operator: x /= y
+Meaning:  x  = x / y
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_division_assignment">Using division assignment</h3>
+### Using division assignment
 
-<pre class="brush: js">// Assuming the following variable
+```js
+// Assuming the following variable
 //  bar = 5
 
 bar /= 2     // 2.5
 bar /= 'foo' // NaN
-bar /= 0     // Infinity</pre>
+bar /= 0     // Infinity
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Division">Division operator</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)

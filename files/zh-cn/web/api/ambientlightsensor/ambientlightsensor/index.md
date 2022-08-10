@@ -3,29 +3,28 @@ title: AmbientLightSensor.AmbientLightSensor()
 slug: Web/API/AmbientLightSensor/AmbientLightSensor
 translation_of: Web/API/AmbientLightSensor/AmbientLightSensor
 ---
-<p>{{APIRef("Ambient Light Sensor API")}}{{Non-standard_header}}</p>
+{{APIRef("Ambient Light Sensor API")}}{{Non-standard_header}}
 
-<p>通过 <strong><code>AmbinentLightSensor()</code></strong> 构造函数可以创建一个 {{domxref("AmbientLightSensor")}} 的实例。</p>
+通过 **`AmbinentLightSensor()`** 构造函数可以创建一个 {{domxref("AmbientLightSensor")}} 的实例。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var ambientLightSensor = new AmbientLightSensor(options)</pre>
+```plain
+var ambientLightSensor = new AmbientLightSensor(options)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>以下是设置属性：
- <ul>
-  <li><code>frequency</code>:  TBD</li>
- </ul>
- </dd>
-</dl>
+- _options_ {{optional_inline}}
 
-<h2 id="规范">规范</h2>
+  - : 以下是设置属性：
+
+    - `frequency`: TBD
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.AmbientLightSensor.AmbientLightSensor")}}

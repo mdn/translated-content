@@ -7,27 +7,30 @@ tags:
   - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>toLocaleString()</strong></code>方法返回一个字符串，表明该类型化数组的元素。这些元素被转化为字符串并由一个区域设置指定的分隔符（例如逗号 “,”）分隔。这个方法与{{jsxref("Array.prototype.toLocaleString()")}}拥有相同的算法。同时，由于类型化数组的元素都是数，将每个元素转化为字符串的算法与{{jsxref("Number.prototype.toLocaleString()")}}是相同的。（类型化数组）的是<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">typed array types</a>中的其中一个。</p>
+**`toLocaleString()`**方法返回一个字符串，表明该类型化数组的元素。这些元素被转化为字符串并由一个区域设置指定的分隔符（例如逗号 “,”）分隔。这个方法与{{jsxref("Array.prototype.toLocaleString()")}}拥有相同的算法。同时，由于类型化数组的元素都是数，将每个元素转化为字符串的算法与{{jsxref("Number.prototype.toLocaleString()")}}是相同的。（类型化数组）的是[typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)中的其中一个。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarr</var>ay.toLocaleString([locales [, options]]);</pre>
+```plain
+typedarray.toLocaleString([locales [, options]]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个字符串，表明该类型化数组内的元素。</p>
+一个字符串，表明该类型化数组内的元素。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用toLocaleString">使用<code>toLocaleString</code></h3>
+### 使用`toLocaleString`
 
-<pre class="brush: js">var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+```js
+var uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
 // 如果在 de-DE 区域设置下运行
@@ -38,19 +41,17 @@ uint.toLocaleString('en-US');
 
 uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

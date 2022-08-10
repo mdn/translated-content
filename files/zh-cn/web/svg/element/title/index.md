@@ -8,53 +8,50 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/title
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG 绘图中的每个窗口元素或图形元素都可以提供一个<code>title</code>描述性字符串，该描述只能是纯文本。如果当前的 SVG 文档片段在可视媒体中呈现为 SVG，title 元素不会呈现为绘图的一部分。然而，一些用户代理可能会，举个例子，把<code>title</code>显示为一个提示冒泡。替代性提词既可以看到也可以听到，它显示了 title 元素但是不会显示路径元素或者别的图形元素。<code>title</code>元素通常提升了 SVG 文档的可访问性。</p>
+SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描述性字符串，该描述只能是纯文本。如果当前的 SVG 文档片段在可视媒体中呈现为 SVG，title 元素不会呈现为绘图的一部分。然而，一些用户代理可能会，举个例子，把`title`显示为一个提示冒泡。替代性提词既可以看到也可以听到，它显示了 title 元素但是不会显示路径元素或者别的图形元素。`title`元素通常提升了 SVG 文档的可访问性。
 
-<p>通常<code>title</code>元素必须是它的父元素的第一个子元素。注意，只有当<code>title</code>是它的父元素的第一个子元素的时候，那些编译器才会把<code>title</code>显示为一个提示冒泡。</p>
+通常`title`元素必须是它的父元素的第一个子元素。注意，只有当`title`是它的父元素的第一个子元素的时候，那些编译器才会把`title`显示为一个提示冒泡。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的代码片段显示了 SVG <code>&lt;title&gt;</code>标签的用法。</p>
+下面的代码片段显示了 SVG `<title>`标签的用法。
 
-<pre class="brush: xml">&lt;svg width="500" height="300" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g&gt;
-    &lt;title&gt;SVG Title Demo example&lt;/title&gt;
-    &lt;rect x="10" y="10" width="200" height="50"
-    style="fill:none; stroke:blue; stroke-width:1px"/&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>SVG Title Demo example</title>
+    <rect x="10" y="10" width="200" height="50"
+    style="fill:none; stroke:blue; stroke-width:1px"/>
+  </g>
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/SVG/Attribute#Core">核心属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en-US/SVG/Attribute#Core) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>没有专有属性</em></p>
+_没有专有属性_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/DOM/SVGTitleElement">SVGTitleElement</a></code>接口。</p>
+该元素实现了[`SVGTitleElement`](/en-US/DOM/SVGTitleElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.title")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("desc") }}</li>
-</ul>
+- {{ SVGElement("desc") }}

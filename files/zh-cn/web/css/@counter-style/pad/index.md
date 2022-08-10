@@ -3,43 +3,45 @@ title: pad
 slug: Web/CSS/@counter-style/pad
 translation_of: Web/CSS/@counter-style/pad
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>pad</code></strong>属性和自定义记数样式一起使用时，可以用来限定记数样式的最小长度。如果某个记数样式小于 pad 所指定的长度，那么会用 pad 指定的填充字符串来填充至指定长度。如果比 pad 所指定的长度长，则会正常显示. Pad 属性的第一个参数是最小长度，第二个参数是填充字符串。一个常见的用处是序号编号需要填充两位的时候，即需要编号"01","02","03",……, 而不仅仅是 1, 2, 3...</p>
+**`pad`**属性和自定义记数样式一起使用时，可以用来限定记数样式的最小长度。如果某个记数样式小于 pad 所指定的长度，那么会用 pad 指定的填充字符串来填充至指定长度。如果比 pad 所指定的长度长，则会正常显示. Pad 属性的第一个参数是最小长度，第二个参数是填充字符串。一个常见的用处是序号编号需要填充两位的时候，即需要编号"01","02","03",……, 而不仅仅是 1, 2, 3...
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="参数">参数</h2>
+## 参数
 
-<pre class="brush: css">pad: 3 "0";
-</pre>
+```css
+pad: 3 "0";
+```
 
-<h3 id="参数值">参数值</h3>
+### 参数值
 
-<dl>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;symbol&gt;</code></dt>
- <dd><code>&lt;integer&gt;</code> 表示所有计数样式必须达到的最小长度 (必须是非负整数). 如果指定的最小长度没有达到，将会用<code>&lt;symbol&gt;</code>来填充直到最小长度。</dd>
-</dl>
+- `<integer> && <symbol>`
+  - : `<integer>` 表示所有计数样式必须达到的最小长度 (必须是非负整数). 如果指定的最小长度没有达到，将会用`<symbol>`来填充直到最小长度。
 
-<h3 id="形式语法">形式语法</h3>
+### 形式语法
 
 {{csssyntax}}
 
-<h2 id="Example">样例</h2>
+## 样例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;One&lt;/li&gt;
-  &lt;li&gt;Two&lt;/li&gt;
-  &lt;li&gt;Three&lt;/li&gt;
-  &lt;li&gt;Four&lt;/li&gt;
-  &lt;li&gt;Five&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  <li>Five</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@counter-style pad-example {
+```css
+@counter-style pad-example {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5";
   pad: 2 "0";
@@ -47,25 +49,22 @@ translation_of: Web/CSS/@counter-style/pad
 
 .list {
   list-style: pad-example;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/pad') }}</p>
+{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/pad') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.at-rules.counter-style.pad")}}
 
+## 参见
 
-<p>{{Compat("css.at-rules.counter-style.pad")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}</li>
- <li>{{cssxref("symbols", "symbols()")}}, 该功能符号创建匿名计数器样式 .</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}}, 该功能符号创建匿名计数器样式 .

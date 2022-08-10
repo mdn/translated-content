@@ -7,52 +7,52 @@ tags:
   - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.measureText()</code></strong> 方法返回一个关于被测量文本{{domxref("TextMetrics")}} 对象包含的信息（例如它的宽度）。</p>
+**`CanvasRenderingContext2D.measureText()`** 方法返回一个关于被测量文本{{domxref("TextMetrics")}} 对象包含的信息（例如它的宽度）。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.measureText(text);</pre>
+```plain
+ctx.measureText(text);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>text</dt>
- <dd>需要测量的{{jsxref("String")}} 。</dd>
-</dl>
+- text
+  - : 需要测量的{{jsxref("String")}} 。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("TextMetrics")}} 对象。</p>
+{{domxref("TextMetrics")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>给出 {{HTMLElement("canvas")}} 元素：</p>
+给出 {{HTMLElement("canvas")}} 元素：
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>使用下面的代码，你能得到 {{domxref("TextMetrics")}} 对象：</p>
+使用下面的代码，你能得到 {{domxref("TextMetrics")}} 对象：
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var text = ctx.measureText("foo"); // TextMetrics object
 text.width; // 16;
-</pre>
+```
 
-<h2 id="规范描述">规范描述</h2>
+## 规范描述
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.CanvasRenderingContext2D.measureText")}}</p>
+{{Compat("api.CanvasRenderingContext2D.measureText")}}
 
-<h2 id="See_Also">参见</h2>
+## 参见
 
-<ul>
- <li>接口定义， {{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- 接口定义， {{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("TextMetrics")}}

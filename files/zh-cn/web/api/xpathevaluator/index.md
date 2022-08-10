@@ -15,61 +15,55 @@ tags:
   - XPathEvaluator
 translation_of: Web/API/XPathEvaluator
 ---
-<p>{{APIRef("DOM XPath")}}</p>
+{{APIRef("DOM XPath")}}
 
-<p> <code>XPathEvaluator</code>  接口能够对 {{Glossary("XPath")}} 表达式进行编译和求值。</p>
+`XPathEvaluator` 接口能够对 {{Glossary("XPath")}} 表达式进行编译和求值。
 
-<p>该接口实现自{{domxref("Document")}}的接口。</p>
+该接口实现自{{domxref("Document")}}的接口。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{DOMxRef("XPathEvaluator.createExpression()")}}</dt>
- <dd>创建一个解析过的 XPath 和解析后的 namespaces</dd>
- <dt>{{DOMxRef("XPathEvaluator.createNSResolver()")}}</dt>
- <dd>任意 DOM 节点能够通过该方法来解析 namespaces，允许通过节点出现在文档中的相对上下文对 XPath 表达式进行求值。</dd>
- <dt>{{DOMxRef("XPathEvaluator.evaluate()")}}</dt>
- <dd>对 XPath 字符串求值，返回可能的确切类型的匹配结果。</dd>
-</dl>
+- {{DOMxRef("XPathEvaluator.createExpression()")}}
+  - : 创建一个解析过的 XPath 和解析后的 namespaces
+- {{DOMxRef("XPathEvaluator.createNSResolver()")}}
+  - : 任意 DOM 节点能够通过该方法来解析 namespaces，允许通过节点出现在文档中的相对上下文对 XPath 表达式进行求值。
+- {{DOMxRef("XPathEvaluator.evaluate()")}}
+  - : 对 XPath 字符串求值，返回可能的确切类型的匹配结果。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面的实例展示了如何使用<code>XPathEvaluator</code>接口。</p>
+下面的实例展示了如何使用`XPathEvaluator`接口。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Number of &amp;lt;div&amp;gt;s: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Number of &lt;div&gt;s: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var evaluator = new XPathEvaluator();
 var expression = evaluator.createExpression("//div");
 var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
+{{EmbedLiveSample('Example', 400, 70)}}
 
-
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.XPathEvaluator")}}
 
+## 相关链接
 
-<p>{{Compat("api.XPathEvaluator")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("document.createExpression()")}}</li>
- <li>{{domxref("XPathExpression")}}</li>
-</ul>
+- {{domxref("document.createExpression()")}}
+- {{domxref("XPathExpression")}}

@@ -3,43 +3,40 @@ title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 translation_of: Web/API/BroadcastChannel/BroadcastChannel
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p><code><strong>BroadcastChannel()</strong></code> 构建函数用于创建一个 {{domxref("BroadcastChannel")}} 对象，并与对应的频道相关联。</p>
+**`BroadcastChannel()`** 构建函数用于创建一个 {{domxref("BroadcastChannel")}} 对象，并与对应的频道相关联。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> <em>channel</em> = new BroadcastChannel(<em>channel</em>);</pre>
+```plain
+ channel = new BroadcastChannel(channel);
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><em>channel</em></dt>
- <dd>频道名称，类型为 {{domxref("DOMString")}}；在相同的 {{glossary("origin", "源")}} 下，一个名称只对应一个频道，所有 {{glossary("browsing context", "浏览器上下文")}} 共用。 </dd>
-</dl>
+- _channel_
+  - : 频道名称，类型为 {{domxref("DOMString")}}；在相同的 {{glossary("origin", "源")}} 下，一个名称只对应一个频道，所有 {{glossary("browsing context", "浏览器上下文")}} 共用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">// create a new channel listening to the "internal_notification" channel.
+```js
+// create a new channel listening to the "internal_notification" channel.
 
 var bc = new BroadcastChannel('internal_notification');
 bc.postMessage('New listening connected!');
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.BroadcastChannel.BroadcastChannel")}}
 
+## 另见
 
-<p>{{Compat("api.BroadcastChannel.BroadcastChannel")}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>所属接口：{{domxref("BroadcastChannel")}}</li>
-</ul>
+- 所属接口：{{domxref("BroadcastChannel")}}

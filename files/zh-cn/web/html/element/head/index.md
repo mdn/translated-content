@@ -10,52 +10,47 @@ tags:
   - 参考
 translation_of: Web/HTML/Element/head
 ---
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><strong>HTML head 元素 </strong>规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。</p>
+**HTML head 元素** 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。
 
-<ul>
- <li><dfn><a href="/en-US/docs/HTML/Content_categories">内容类别</a></dfn> 无</li>
- <li><dfn>允许内容</dfn>至少包含一个{{HTMLElement("title")}} 元素来指定文档的标题信息，除非标题已经从更高等级协议中指定（{{HTMLElement("iframe")}} ）。</li>
- <li><dfn>允许父元素</dfn>{{HTMLElement("html")}} 元素</li>
- <li><dfn>DOM 接口</dfn> {{domxref("HTMLHeadElement")}}</li>
-</ul>
+- _[内容类别](/en-US/docs/HTML/Content_categories)_ 无
+- *允许内容*至少包含一个{{HTMLElement("title")}} 元素来指定文档的标题信息，除非标题已经从更高等级协议中指定（{{HTMLElement("iframe")}} ）。
+- _允许父元素_{{HTMLElement("html")}} 元素
+- _DOM 接口_ {{domxref("HTMLHeadElement")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>该元素包含<a href="https://developer.mozilla.org/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
+该元素包含[全局属性](https://developer.mozilla.org/zh-CN/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("profile")}} {{Deprecated_Inline}}</dt>
- <dd>一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的配置信息。</dd>
-</dl>
+- {{htmlattrdef("profile")}} {{Deprecated_Inline}}
+  - : 一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的配置信息。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;文档标题&lt;/title&gt;
-  &lt;/head&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+  <head>
+    <title>文档标题</title>
+  </head>
+</html>
+```
 
-<h2 id="附注">附注</h2>
+## 附注
 
-<p>如果在文档中忽略了 <code>&lt;head&gt;</code> 标签，则大部分浏览器会自动创建一个 <code>&lt;head&gt;</code> 元素。<a href="http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/">当然，有一些不会</a>。<br>
- 下面这些浏览器经测试不会自动创建一个 head 元素：Android &lt;=1.6, iPhone &lt;=3.1.3, Nokia 90, Opera &lt;=9.27, and Safari &lt;=3.2.1。</p>
+如果在文档中忽略了 `<head>` 标签，则大部分浏览器会自动创建一个 `<head>` 元素。[当然，有一些不会](http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)。
+下面这些浏览器经测试不会自动创建一个 head 元素：Android <=1.6, iPhone <=3.1.3, Nokia 90, Opera <=9.27, and Safari <=3.2.1。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>可用于&lt;head&gt;元素内的元素有: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}</li>
-</ul>
+- 可用于\<head>元素内的元素有: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

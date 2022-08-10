@@ -3,33 +3,31 @@ title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.isLockFree()</code></strong> 用于校验是否能够使用原子操作的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray</a></code> 的标准字节长度之一。若该字节长度为可处理的 TypedArray 标准字节长度之一则返回 <code>true</code>。TypedArray 的标准字节长度参见 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">BYTES_PER_ELEMENT</a></p>
+静态方法 **`Atomics.isLockFree()`** 用于校验是否能够使用原子操作的 [`TypedArray`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) 的标准字节长度之一。若该字节长度为可处理的 TypedArray 标准字节长度之一则返回 `true`。TypedArray 的标准字节长度参见 [BYTES_PER_ELEMENT](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}
 
+## 语法
 
+```plain
+Atomics.isLockFree(size)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Atomics.isLockFree(size)
-</pre>
+- `size`
+  - : 整形。字节长度，通常为[`TypedArray.BYTES_PER_ELEMENT`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>size</code></dt>
- <dd>整形。字节长度，通常为<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT"><code>TypedArray.BYTES_PER_ELEMENT</code></a></dd>
-</dl>
+{{jsxref("Boolean")}} 是否为能够使用原子操作的[`TypedArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)的标准字节长度之一。
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p> {{jsxref("Boolean")}} 是否为能够使用原子操作的<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray</a></code>的标准字节长度之一。</p>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">Atomics.isLockFree(1); // true
+```js
+Atomics.isLockFree(1); // true
 Atomics.isLockFree(2); // true
 Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
@@ -37,20 +35,17 @@ Atomics.isLockFree(5); // false
 Atomics.isLockFree(6); // false
 Atomics.isLockFree(7); // false
 Atomics.isLockFree(8); // false
-Atomics.isLockFree(<code>Float64Array.BYTES_PER_ELEMENT</code>); // false, Atomics 方法无法处理 Float64Array</pre>
+Atomics.isLockFree(Float64Array.BYTES_PER_ELEMENT); // false, Atomics 方法无法处理 Float64Array
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Atomics")}}</li>
-</ul>
+- {{jsxref("Atomics")}}

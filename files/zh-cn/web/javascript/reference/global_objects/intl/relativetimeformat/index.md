@@ -3,86 +3,75 @@ title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
-<div>
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.RelativeTimeFormat</code></strong>对象启用本地化的相对时间格式。</p>
+**`Intl.RelativeTimeFormat`**对象启用本地化的相对时间格式。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre><code>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])
-</code></pre>
+```plain
+new Intl.RelativeTimeFormat([locales[, options]])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>可选的。带有 BCP 47 语言标记的字符串，或此类字符串的数组。有关参数的一般形式和解释<code>locales</code>,请参阅{{jsxref("Global_Objects/Intl","Intl page","＃Locale_identification_and_negotiation",1)}}。</p>
- </dd>
- <dt><code>options</code></dt>
- <dd>可选的。具有以下部分或全部属性的对象：
- <ul>
-  <li><code>localeMatcher</code><br>
-   要使用的区域设置匹配算法。可能的值是<code>"lookup"</code>和<code>"best fit"</code>; 默认是<code>"best fit"</code>。有关此选项的信息，请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation"><code>Intl</code></a>。</li>
-  <li><code>numeric</code><br>
-   输出消息的格式。可能的值是：
-   <ul>
-    <li><code>"always"</code>(默认，例如，<code>1 day ago</code>),</li>
-    <li>或<code>"auto"</code>(例如<code>yesterday</code>)。该<code>"auto"</code>值允许不必总是在输出中使用数值。</li>
-   </ul>
-  </li>
-  <li><code>style</code><br>
-   国际化信息的长度。可能的值是：
-   <ul>
-    <li><code>"long"</code>(默认，例如，<code>in 1 month</code>)</li>
-    <li><code>"short"</code>(例如<code>in 1 mo.</code>),</li>
-    <li>或<code>"narrow"</code>(例如<code>in 1 mo.</code>)。狭窄的风格可能类似于某些语言环境的短风格。</li>
-   </ul>
-  </li>
- </ul>
- </dd>
-</dl>
+- `locales`
+  - : 可选的。带有 BCP 47 语言标记的字符串，或此类字符串的数组。有关参数的一般形式和解释`locales`,请参阅{{jsxref("Global_Objects/Intl","Intl page","＃Locale_identification_and_negotiation",1)}}。
+- `options`
 
-<h2 id="描述">描述</h2>
+  - : 可选的。具有以下部分或全部属性的对象：
 
-<h3 id="属性">属性</h3>
+    - `localeMatcher`
+      要使用的区域设置匹配算法。可能的值是`"lookup"`和`"best fit"`; 默认是`"best fit"`。有关此选项的信息，请参阅[`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation)。
+    - `numeric`
+      输出消息的格式。可能的值是：
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.prototype","Intl.RelativeTimeFormat.prototype")}}</dt>
- <dd>允许向所有对象添加属性。</dd>
-</dl>
+      - `"always"`(默认，例如，`1 day ago`),
+      - 或`"auto"`(例如`yesterday`)。该`"auto"`值允许不必总是在输出中使用数值。
 
-<h3 id="方法">方法</h3>
+    - `style`
+      国际化信息的长度。可能的值是：
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf","Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>返回一个数组，其中包含所支持的语言环境，而不必回退到运行时的默认语言环境。</dd>
-</dl>
+      - `"long"`(默认，例如，`in 1 month`)
+      - `"short"`(例如`in 1 mo.`),
+      - 或`"narrow"`(例如`in 1 mo.`)。狭窄的风格可能类似于某些语言环境的短风格。
 
-<h2 id="RelativeTimeFormat_实例"><code>RelativeTimeFormat</code> 实例</h2>
+## 描述
 
-<h3 id="属性_2">属性</h3>
+### 属性
 
-<p><code>RelativeTimeFormat</code> 实例从其原型继承以下属性：</p>
+- {{jsxref("RelativeTimeFormat.prototype","Intl.RelativeTimeFormat.prototype")}}
+  - : 允许向所有对象添加属性。
 
-<p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Properties')}}</p>
+### 方法
 
-<h3 id="方法_2">方法</h3>
+- {{jsxref("RelativeTimeFormat.supportedLocalesOf","Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+  - : 返回一个数组，其中包含所支持的语言环境，而不必回退到运行时的默认语言环境。
 
-<p><code>RelativeTimeFormat</code> 实例从其原型继承以下方法：</p>
+## `RelativeTimeFormat` 实例
 
-<p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Methods')}}</p>
+### 属性
 
-<h2 id="例子">例子</h2>
+`RelativeTimeFormat` 实例从其原型继承以下属性：
 
-<h3 id="基本format用法">基本<code>format</code>用法</h3>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Properties')}}
 
-<p>以下示例显示如何使用英语创建相对时间格式化程序。</p>
+### 方法
 
-<pre class="brush: js">//在语言环境中创建相对时间格式化程序
+`RelativeTimeFormat` 实例从其原型继承以下方法：
+
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype','Methods')}}
+
+## 例子
+
+### 基本`format`用法
+
+以下示例显示如何使用英语创建相对时间格式化程序。
+
+```js
+//在语言环境中创建相对时间格式化程序
 //显式传入默认值。
 const rtf = new Intl.RelativeTimeFormat("en",{
     localeMatcher: "bestfit",//其他值："lookup"
@@ -92,55 +81,56 @@ const rtf = new Intl.RelativeTimeFormat("en",{
 
 //使用负值 (-1) 格式化相对时间。
 rtf.format(-1,"day");
-//&gt;"1 day ago"
+//>"1 day ago"
 
 //使用正值 (1) 格式化相对时间。
 rtf.format(1,"day");
-//&gt;"in 1 day"</pre>
+//>"in 1 day"
+```
 
-<h3 id="使用auto选项">使用<code>auto</code>选项</h3>
+### 使用`auto`选项
 
-<p>如果<code>numeric:auto</code>选项被传递，它将生成字符串<code>yesterday</code>或<code>tomorrow</code>代替<code>1 day ago</code>或<code>in 1 day</code>。这允许不必总是在输出中使用数值。</p>
+如果`numeric:auto`选项被传递，它将生成字符串`yesterday`或`tomorrow`代替`1 day ago`或`in 1 day`。这允许不必总是在输出中使用数值。
 
-<pre class="brush: js">//在语言环境中创建相对时间格式化程序
+```js
+//在语言环境中创建相对时间格式化程序
 //使用数字：传入"auto"选项值。
 const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
 //使用负值 (-1) 格式化相对时间。
 rtf.format(-1,"day");
-//&gt;"yesterday"
+//>"yesterday"
 
 //使用正日单位 (1) 格式化相对时间。
 rtf.format(1,"day");
-//&gt;"tomorrow"
-</pre>
+//>"tomorrow"
+```
 
-<h3 id="运用_formatToParts">运用 <code>formatToParts</code></h3>
+### 运用 `formatToParts`
 
-<p>以下示例显示如何创建返回格式化部件的相对时间格式器</p>
+以下示例显示如何创建返回格式化部件的相对时间格式器
 
-<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
+```js
+const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
 
 //使用日期单位格式化相对时间。
 rtf.formatToParts(-1,"day");
-//&gt; [{type: "literal",value: "yesterday"}]
+//> [{type: "literal",value: "yesterday"}]
 
 rtf.formatToParts(100,"day");
-//&gt; [{type: "literal",value: "in"},
-//&gt; {type: "integer",value: "100",unit: "day"},
-//&gt; {type: "literal",value: "days"}]</pre>
-</div>
+//> [{type: "literal",value: "in"},
+//> {type: "integer",value: "100",unit: "day"},
+//> {type: "literal",value: "days"}]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">The Intl.RelativeTimeFormat API</a></li>
-</ul>
+- [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)

@@ -5,26 +5,28 @@ tags:
   - Response.status
 translation_of: Web/API/Response/status
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p><br>
- {{domxref("Response")}}  接口的<strong><code>status</code></strong> 只读属性包含响应的状态代码（例如，成功为 200）。</p>
+{{domxref("Response")}} 接口的**`status`** 只读属性包含响应的状态代码（例如，成功为 200）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">let <var>myStatus</var> = <var>response</var>.status;</pre>
+```plain
+let myStatus = response.status;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个数字（确切来讲是一个 unsigned short）</p>
+一个数字（确切来讲是一个 unsigned short）
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> (see <a href="http://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](http://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("GlobalFetch.fetch","fetch()")}}, extract a blob from the response using {{domxref("Body.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
-<p>Note that at the top of the <code>fetch()</code> block we log the response <code>status</code> value to the console.</p>
+Note that at the top of the `fetch()` block we log the response `status` value to the console.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -34,20 +36,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Response.status")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

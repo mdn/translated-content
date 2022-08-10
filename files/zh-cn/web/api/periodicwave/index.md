@@ -3,47 +3,37 @@ title: PeriodicWave
 slug: Web/API/PeriodicWave
 translation_of: Web/API/PeriodicWave
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><strong><code>PeriodicWave</code></strong> 接口定义了一个可用于对 {{domxref("OscillatorNode")}}(振荡节点) 的输出进行构造（描述）的周期性波形。</p>
-</div>
+**`PeriodicWave`** 接口定义了一个可用于对 {{domxref("OscillatorNode")}}(振荡节点) 的输出进行构造（描述）的周期性波形。
 
-<p><code>PeriodicWave</code> (周期波) 没有输入或输出；它用于调用 {{domxref("OscillatorNode.setPeriodicWave()")}} 时定义自定义振荡器。 <code>PeriodicWave</code> 自身由 {{domxref("AudioContext.createPeriodicWave()")}} 创建/返回。</p>
+`PeriodicWave` (周期波) 没有输入或输出；它用于调用 {{domxref("OscillatorNode.setPeriodicWave()")}} 时定义自定义振荡器。 `PeriodicWave` 自身由 {{domxref("AudioContext.createPeriodicWave()")}} 创建/返回。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("PeriodicWave.PeriodicWave()")}}</dt>
- <dd>使用所有属性的默认值创建一个新的 <code>PeriodicWave</code> 对象实例。如果你想一开始就建立自定义属性值，请使用 {{domxref("AudioContext.createPeriodicWave()")}} 工厂方法替代。</dd>
-</dl>
+- {{domxref("PeriodicWave.PeriodicWave()")}}
+  - : 使用所有属性的默认值创建一个新的 `PeriodicWave` 对象实例。如果你想一开始就建立自定义属性值，请使用 {{domxref("AudioContext.createPeriodicWave()")}} 工厂方法替代。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>None; 而且，<code>PeriodicWave</code> 不继承任何属性。</em></p>
+_None; 而且，`PeriodicWave` 不继承任何属性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>None; 而且，<code>PeriodicWave</code> 继承任何属性。</em></p>
+_None; 而且，`PeriodicWave` 继承任何属性。_
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>{{page("/zh-CN/docs/Web/API/BaseAudioContext/createPeriodicWave","例子")}}</p>
+{{page("/zh-CN/docs/Web/API/BaseAudioContext/createPeriodicWave","例子")}}
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.PeriodicWave")}}
 
+## 参见
 
-<p>{{Compat("api.PeriodicWave")}}</p>
-</div>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

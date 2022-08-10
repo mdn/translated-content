@@ -3,47 +3,45 @@ title: Request.clone()
 slug: Web/API/Request/clone
 translation_of: Web/API/Request/clone
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
+{{domxref("Request")}} 接口中的**`clone()`** 方法可以创建一个当前`Request` 对象的副本。
 
+如果响应体{{domxref("Body")}}已经被使用过，那么 `clone()` 会抛出一个 {{jsxref("TypeError")}}。实际上，`clone()` 的主要作用就是支持 {{domxref("Body")}} 对象的多次使用
 
-<p> {{domxref("Request")}} 接口中的<strong><code>clone()</code></strong> 方法可以创建一个当前<code>Request</code> 对象的副本。</p>
+## 语法
 
-<p> 如果响应体{{domxref("Body")}}已经被使用过，那么 <code>clone()</code> 会抛出一个 {{jsxref("TypeError")}}。实际上，<code>clone()</code> 的主要作用就是支持 {{domxref("Body")}} 对象的多次使用</p>
+```js
+var newRequest = request.clone();
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="brush: js">var newRequest = request.clone();</pre>
+无。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<p>无。</p>
+{{domxref("Request")}} 对象，也就是 `Request` 的完整拷贝
 
-<h3 id="返回值">返回值</h3>
+## 示例
 
-<p>{{domxref("Request")}} 对象，也就是 <code>Request</code> 的完整拷贝</p>
+在下面的代码中，我们使用 {{domxref("Request.Request()")}} 构造函数创建了一个新的 request 对象 (请求当前文件夹中的一个图片文件)，然后拷贝了这个 `request` 对象。
 
-<h2 id="示例">示例</h2>
+```js
+var myRequest = new Request('flowers.jpg');
+var newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest
+```
 
-<p>在下面的代码中，我们使用 {{domxref("Request.Request()")}} 构造函数创建了一个新的 request 对象 (请求当前文件夹中的一个图片文件)，然后拷贝了这个 <code>request</code> 对象。</p>
-
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.Request.clone")}}
 
+## 了解更多
 
-<p>{{Compat("api.Request.clone")}}</p>
-
-<h2 id="了解更多">了解更多</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

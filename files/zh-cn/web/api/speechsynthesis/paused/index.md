@@ -3,40 +3,40 @@ title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
 translation_of: Web/API/SpeechSynthesis/paused
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>  {{domxref("SpeechSynthesis")}} 接口的只读属性 <strong><code>paused</code></strong> 是一个  {{domxref("Boolean")}} 值，当<code>SpeechSynthesis</code>对象处于暂停状态时，返回<code>true</code> ，否则返回 <code>false。</code></p>
+{{domxref("SpeechSynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxref("Boolean")}} 值，当`SpeechSynthesis`对象处于暂停状态时，返回`true` ，否则返回 `false。`
 
-<p>它能被设置为 {{domxref("SpeechSynthesis.pause()", "暂停状态")}} 即使当前并没有语音在播放队列中。如果{{domxref("SpeechSynthesisUtterance","utterances")}} 被添加到语音播放队列，队列中的语音并不会播放直到使用 {{domxref("SpeechSynthesis.resume()")}}使<code>SpeechSynthesis</code>对象处于非暂停状态。</p>
+它能被设置为 {{domxref("SpeechSynthesis.pause()", "暂停状态")}} 即使当前并没有语音在播放队列中。如果{{domxref("SpeechSynthesisUtterance","utterances")}} 被添加到语音播放队列，队列中的语音并不会播放直到使用 {{domxref("SpeechSynthesis.resume()")}}使`SpeechSynthesis`对象处于非暂停状态。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var amIPaused = speechSynthesisInstance.paused;
-</pre>
+```plain
+var amIPaused = speechSynthesisInstance.paused;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>一个{{domxref("Boolean")}}。</p>
+一个{{domxref("Boolean")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 synth.pause();
 
 var amIPaused = synth.paused; // 将返回 true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.SpeechSynthesis.paused")}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

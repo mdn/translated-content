@@ -9,43 +9,45 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>toUpperCase()</code></strong> 方法将调用该方法的字符串转为大写形式并返回（如果调用该方法的值不是字符串类型会被强制转换）。</p>
+**`toUpperCase()`** 方法将调用该方法的字符串转为大写形式并返回（如果调用该方法的值不是字符串类型会被强制转换）。
 
-<div>{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>str</var>.toUpperCase()</pre>
+```plain
+str.toUpperCase()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的字符串，表示转换为大写的调用字符串。</p>
+一个新的字符串，表示转换为大写的调用字符串。
 
-<h3 id="错误处理">错误处理</h3>
+### 错误处理
 
-<dl>
- <dt>{{jsxref("TypeError(类型错误)")}}</dt>
- <dd>在 {{jsxref("null")}} 或 {{jsxref("undefined")}}类型上调用，例如：<code>String.prototype.toUpperCase.call(undefined)</code>.</dd>
-</dl>
+- {{jsxref("TypeError(类型错误)")}}
+  - : 在 {{jsxref("null")}} 或 {{jsxref("undefined")}}类型上调用，例如：`String.prototype.toUpperCase.call(undefined)`.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>toUpperCase()</code> 返回转为大写形式的字符串。此方法不会影响原字符串本身的值，因为 JavaScript 中字符串的值是不可改变的。</p>
+`toUpperCase()` 返回转为大写形式的字符串。此方法不会影响原字符串本身的值，因为 JavaScript 中字符串的值是不可改变的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="基本用法">基本用法</h3>
+### 基本用法
 
-<pre class="brush: js">console.log('alphabet'.toUpperCase()); // 'ALPHABET'
-</pre>
+```js
+console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+```
 
-<h3 id="将非字符串类型的_this_（上下文）转为字符串">将非字符串类型的 <code>this</code> （上下文）转为字符串</h3>
+### 将非字符串类型的 `this` （上下文）转为字符串
 
-<p>此方法会将任何非字符串类型的值转为字符串， 当你将其上下文 <code>this</code> 值设置为非字符串类型</p>
+此方法会将任何非字符串类型的值转为字符串， 当你将其上下文 `this` 值设置为非字符串类型
 
-<pre class="brush: js">const a = String.prototype.toUpperCase.call({
+```js
+const a = String.prototype.toUpperCase.call({
   toString: function toString() {
     return 'abcdef';
   }
@@ -55,22 +57,18 @@ const b = String.prototype.toUpperCase.call(true);
 
 // 输出 'ABCDEF TRUE'。
 console.log(a, b);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.toLocaleLowerCase()")}}</li>
- <li>{{jsxref("String.prototype.toLocaleUpperCase()")}}</li>
- <li>{{jsxref("String.prototype.toLowerCase()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()")}}
+- {{jsxref("String.prototype.toLowerCase()")}}

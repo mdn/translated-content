@@ -3,47 +3,44 @@ title: suspend
 slug: Web/API/OfflineAudioContext/suspend
 translation_of: Web/API/OfflineAudioContext/suspend
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>suspend()</code></strong> method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.</p>
+The **`suspend()`** method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.
 
-<p>Note that the maximum precision of suspension is the size of the render quantum and the specified suspension time will be rounded down to the nearest render quantum boundary. For this reason, it is not allowed to schedule multiple suspends at the same quantized frame. Also scheduling should be done while the context is not running to ensure the precise suspension.</p>
+Note that the maximum precision of suspension is the size of the render quantum and the specified suspension time will be rounded down to the nearest render quantum boundary. For this reason, it is not allowed to schedule multiple suspends at the same quantized frame. Also scheduling should be done while the context is not running to ensure the precise suspension.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">OfflineAudioContext.suspend(<em>suspendTime</em>).then(function() { ... });</pre>
+```plain
+OfflineAudioContext.suspend(suspendTime).then(function() { ... });
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>暂停时间</dt>
- <dd>A {{jsxref("double")}} 指定暂停的时间。</dd>
-</dl>
+- 暂停时间
+  - : A {{jsxref("double")}} 指定暂停的时间。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A {{jsxref("Promise")}} resolving to void.</p>
+A {{jsxref("Promise")}} resolving to void.
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>发生任何异常，promise 就会拒绝。</p>
+发生任何异常，promise 就会拒绝。
 
-<dl>
- <dt><code>InvalidStateError</code> {{domxref("DOMException")}}</dt>
- <dd>如果帧数出现下列情况，则抛出该异常：
-  <ul>
-   <li>一个负值</li>
-   <li>小于或等于当前时间</li>
-   <li>大于或等于渲染的总渲染时间</li>
-   <li>is scheduled by another suspend for the same time</li>
-  </ul>
- </dd>
-</dl>
+- `InvalidStateError` {{domxref("DOMException")}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : 如果帧数出现下列情况，则抛出该异常：
+
+    - 一个负值
+    - 小于或等于当前时间
+    - 大于或等于渲染的总渲染时间
+    - is scheduled by another suspend for the same time
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.OfflineAudioContext.suspend")}}

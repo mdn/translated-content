@@ -3,40 +3,39 @@ title: Selection.containsNode()
 slug: Web/API/Selection/containsNode
 translation_of: Web/API/Selection/containsNode
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p><strong><code>Selection.containsNode()</code></strong> 判断指定的节点是否包含在 Selection 中 (是否被选中).</p>
+**`Selection.containsNode()`** 判断指定的节点是否包含在 Selection 中 (是否被选中).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>sel</em>.containsNode(<em>aNode</em>,<em>aPartlyContained</em>)
-</pre>
+```plain
+sel.containsNode(aNode,aPartlyContained)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>aNode</code></em></dt>
- <dd>用于判断是否包含在 Selection 中的那个节点</dd>
- <dt><em><code>aPartlyContained</code></em></dt>
- <dd>当此参数为<code>true 时</code>, 当<code>selection 包含节点 aNode 的一部分或全部时，containsNode() 返回 true</code>.<br>
- 当此参数为<code>false 时</code>, 只有当 selection 完全包含节点 aNode 时，<code>containsNode()</code> 才返回 true.</dd>
-</dl>
+- _`aNode`_
+  - : 用于判断是否包含在 Selection 中的那个节点
+- _`aPartlyContained`_
+  - : 当此参数为`true 时`, 当`selection 包含节点 aNode 的一部分或全部时，containsNode() 返回 true`.
+    当此参数为`false 时`, 只有当 selection 完全包含节点 aNode 时，`containsNode()` 才返回 true.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="eval"> /* 检查 body 中是否有节点被选中 */
- console.log(window.getSelection().containsNode(document.body, true));</pre>
+```plain
+ /* 检查 body 中是否有节点被选中 */
+ console.log(window.getSelection().containsNode(document.body, true));
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Selection.containsNode")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("Selection")}}, Selection 接口规范。</li>
-</ul>
+- {{domxref("Selection")}}, Selection 接口规范。

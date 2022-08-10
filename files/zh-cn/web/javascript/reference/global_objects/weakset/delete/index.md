@@ -3,30 +3,31 @@ title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>delete()</strong></code> 方法从 <code>WeakSet 对象中</code>移除指定的元素。</p>
+**`delete()`** 方法从 `WeakSet 对象中`移除指定的元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><em>ws</em>.delete(value);</code></pre>
+```plain
+ws.delete(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>value</dt>
- <dd>必须。从 <code>WeakSet</code> 对象中移除的对象。</dd>
-</dl>
+- value
+  - : 必须。从 `WeakSet` 对象中移除的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果在 <code>WeakSet</code> 对象中成功移除元素则返回 true。如果 key 没有在 WeakSet 中找到或者 key 不是一个对象，则返回 false。</p>
+如果在 `WeakSet` 对象中成功移除元素则返回 true。如果 key 没有在 WeakSet 中找到或者 key 不是一个对象，则返回 false。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_delete_方法">使用 <code>delete</code> 方法</h3>
+### 使用 `delete` 方法
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 
 ws.add(window);
@@ -35,19 +36,17 @@ ws.delete(obj);    // 返回 false。因为找不到要删除的 obj
 ws.delete(window); // 返回 true。成功地移除了元素
 
 ws.has(window);    // 返回 false。因为 WeakSet 中已经不存在 window 对象
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.clear()")}}

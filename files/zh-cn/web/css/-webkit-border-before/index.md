@@ -4,17 +4,18 @@ slug: Web/CSS/-webkit-border-before
 tags:
   - '-webkit-border-before'
   - CSS
-  - 'CSS:WebKit Extensions'
+  - CSS:WebKit Extensions
   - CSS 属性
   - Reference
   - 非标准
 translation_of: Web/CSS/-webkit-border-before
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p><strong><code>-webkit-border-before</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。</p>
+**`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
 
-<pre class="brush:css no-line-numbers">/* Border values */
+```css
+/* Border values */
 -webkit-border-before: 1px;
 -webkit-border-before: 2px dotted;
 -webkit-border-before: medium dashed blue;
@@ -23,55 +24,53 @@ translation_of: Web/CSS/-webkit-border-before
 -webkit-border-before: inherit;
 -webkit-border-before: initial;
 -webkit-border-before: unset;
-</pre>
+```
 
-<p><code>-webkit-border-before</code> 可以使用以下一个或多个值：</p>
+`-webkit-border-before` 可以使用以下一个或多个值：
 
-<ol>
- <li>{{cssxref("-webkit-border-before-width")}}</li>
- <li>{{cssxref("-webkit-border-before-style")}}</li>
- <li>{{cssxref("-webkit-border-before-color")}}.</li>
-</ol>
+1.  {{cssxref("-webkit-border-before-width")}}
+2.  {{cssxref("-webkit-border-before-style")}}
+3.  {{cssxref("-webkit-border-before-color")}}.
 
-<p>它根据元素的书写模式、方向以及文本方向映射到 Border 上。对应到四个边框属性{{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}或{{cssxref("border-left")}} ，具体取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}三个属性定义的值。</p>
+它根据元素的书写模式、方向以及文本方向映射到 Border 上。对应到四个边框属性{{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}或{{cssxref("border-left")}} ，具体取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}三个属性定义的值。
 
-<p>这个属性和 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}}、{{cssxref("-webkit-border-end")}}三个属性用来定义元素的边界。</p>
+这个属性和 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}}、{{cssxref("-webkit-border-end")}}三个属性用来定义元素的边界。
 
-<p>此属性在相关标准上的命名为 {{cssxref("border-block-start")}}.</p>
+此属性在相关标准上的命名为 {{cssxref("border-block-start")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<h3 id="可选择的值">可选择的值</h3>
+### 可选择的值
 
-<p>按以下顺序，一个或多个值</p>
+按以下顺序，一个或多个值
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>参考 {{cssxref("border-width")}}</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>参考 {{cssxref("border-style")}}</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>参考 {{cssxref("color")}}</dd>
-</dl>
+- `<'border-width'>`
+  - : 参考 {{cssxref("border-width")}}
+- `<'border-style'>`
+  - : 参考 {{cssxref("border-style")}}
+- `<'color'>`
+  - : 参考 {{cssxref("color")}}
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -80,24 +79,21 @@ translation_of: Web/CSS/-webkit-border-before
 .exampleText {
   writing-mode: vertical-rl;
   -webkit-border-before: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>尽管它和 {{cssxref("border-block-start")}} 属性有关，但现在并不存在与任何一标准规范。</p>
+尽管它和 {{cssxref("border-block-start")}} 属性有关，但现在并不存在与任何一标准规范。
 
-<h2 id="兼容性">兼容性</h2>
+## 兼容性
 
+{{Compat("css.properties.-webkit-border-before")}}
 
+## 参考
 
-<p>{{Compat("css.properties.-webkit-border-before")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li>{{cssxref("border-block-start")}}</li>
- <li>The mapped physical properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, and {{cssxref("border-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("border-block-start")}}
+- The mapped physical properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, and {{cssxref("border-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

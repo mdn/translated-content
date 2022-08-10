@@ -9,52 +9,46 @@ tags:
   - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+{{JSRef}} {{SeeCompatTable}}
 
-<p><strong><code>WebAssembly.Instance</code></strong> 对象本身是有状态的，是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a> 的一个可执行实例。<code>实例</code>包含所有的 <a href="/zh-CN/docs/WebAssembly/Exported_functions">WebAssembly 导出函数</a>，允许从 JavaScript 调用 WebAssembly 代码。</p>
+**`WebAssembly.Instance`** 对象本身是有状态的，是 [WebAssembly.Module](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 的一个可执行实例。`实例`包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
 
-<p><code>WebAssembly.Instance()</code> 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .</p>
+`WebAssembly.Instance()` 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<div class="warning">
-<p><strong>警告：</strong>由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
-</div>
+> **警告：**由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用`Instance()`；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .
 
-<pre class="syntaxbox">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
+```plain
+var myInstance = new WebAssembly.Instance(module, importObject);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em>module</em></dt>
- <dd>要被实例化的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module"><code>WebAssembly.Module</code></a> 对象。</dd>
- <dt><em>importObject</em> {{optional_inline}}</dt>
- <dd>一个包含值的对象，导入到新创建的 <code>实例</code>, 比如函数或 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory"><code>WebAssembly.Memory</code></a> 对象. There must be one matching property for each declared import of <code>module</code> 否则抛出 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError">WebAssembly.LinkError</a> 异常。</dd>
-</dl>
+- _module_
+  - : 要被实例化的 [`WebAssembly.Module`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象。
+- _importObject_ {{optional_inline}}
+  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象. There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
 
-<h2 id="实例化">实例化</h2>
+## 实例化
 
-<p>所有的 <code>Instance</code> 实例继承自<code>Instance()</code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype">属性对象</a>— 修改它会影响所有的<code>Instance</code> 实例。</p>
+所有的 `Instance` 实例继承自`Instance()` [属性对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype)— 修改它会影响所有的`Instance` 实例。
 
-<h3 id="实例属性">实例属性</h3>
+### 实例属性
 
-<dl>
- <dt>{{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}</dt>
- <dd>返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。</dd>
-</dl>
+- {{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}
+  - : 返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly">WebAssembly</a> overview page</li>
- <li><a href="/en-US/docs/WebAssembly/Concepts">WebAssembly concepts</a></li>
- <li><a href="/en-US/docs/WebAssembly/Using_the_JavaScript_API">Using the WebAssembly JavaScript API</a></li>
-</ul>
+- [WebAssembly](/en-US/docs/WebAssembly) overview page
+- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)

@@ -8,90 +8,53 @@ tags:
   - Reference
 translation_of: Web/API/HTMLDialogElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<p><strong><code>HTMLDialogElement</code></strong>接口提供操作{{HTMLElement("dialog")}} 元素的方法.。此接口的方法和属性继承自 {{domxref("HTMLElement")}} 接口。</p>
+**`HTMLDialogElement`**接口提供操作{{HTMLElement("dialog")}} 元素的方法.。此接口的方法和属性继承自 {{domxref("HTMLElement")}} 接口。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>继承自父接口， {{domxref("HTMLElement")}}。</em></p>
+_继承自父接口， {{domxref("HTMLElement")}}。_
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">名称</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>open</code></td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>来自{{ htmlattrxref("open", "dialog") }} HTML 属性, 表示这个对话框可以进行互动.</td>
-  </tr>
-  <tr>
-   <td><code>returnValue</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>用户获取对话框的值</td>
-  </tr>
- </tbody>
-</table>
+| 名称          | 类型                             | 描述                                                                                        |
+| ------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
+| `open`        | {{domxref("Boolean")}}     | 来自{{ htmlattrxref("open", "dialog") }} HTML 属性, 表示这个对话框可以进行互动. |
+| `returnValue` | {{domxref("DOMString")}} | 用户获取对话框的值                                                                          |
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>继承自父接口 ， {{domxref("HTMLElement")}}。</em></p>
+_继承自父接口 ， {{domxref("HTMLElement")}}。_
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">名称和参数</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>close()</code></td>
-   <td><code>void</code></td>
-   <td>关闭对话框。 可选传入类型为 {{domxref("DOMString")}} 的参数，用来更新对话框的returnValue。</td>
-  </tr>
-  <tr>
-   <td><code>show()</code></td>
-   <td><code>void</code></td>
-   <td>非模式化的显示这个对话框, 即：打开这个对话框之后依然可以和其他内容进行交互。 可选传入类型为 {{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数，用来定义对话框的显示位置。</td>
-  </tr>
-  <tr>
-   <td><code>showModal()</code></td>
-   <td><code>void</code></td>
-   <td>模式化的显示这个对话框， 并且将会至于所有其他对话框的顶层（屏蔽其他对话框的交互）。 可选传入类型为{{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数， 用来定义对话框的显示位置。</td>
-  </tr>
- </tbody>
-</table>
+| 名称和参数    | 类型   | 描述                                                                                                                                                                                                     |
+| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `close()`     | `void` | 关闭对话框。 可选传入类型为 {{domxref("DOMString")}} 的参数，用来更新对话框的 returnValue。                                                                                                      |
+| `show()`      | `void` | 非模式化的显示这个对话框, 即：打开这个对话框之后依然可以和其他内容进行交互。 可选传入类型为 {{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数，用来定义对话框的显示位置。        |
+| `showModal()` | `void` | 模式化的显示这个对话框， 并且将会至于所有其他对话框的顶层（屏蔽其他对话框的交互）。 可选传入类型为{{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数， 用来定义对话框的显示位置。 |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example_1">Example 1</h3>
+### Example 1
 
-<pre class="brush: html">&lt;!-- Anchor point example --&gt;
-&lt;dialog id="bronteDialog"&gt;
-  &lt;p&gt;That was part of a poem by Emily Brontë!&lt;/p&gt;
-&lt;/dialog&gt;
+```html
+<!-- Anchor point example -->
+<dialog id="bronteDialog">
+  <p>That was part of a poem by Emily Brontë!</p>
+</dialog>
 
-&lt;blockquote&gt;
-  &lt;p&gt;"Then art thou glad to seek repose?&lt;br&gt;
-  Art glad to leave the sea,&lt;br&gt;
-  And &lt;strong id="anchor"&gt;anchor&lt;/strong&gt; all thy weary woes&lt;br&gt;
-  In calm Eternity?"&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>"Then art thou glad to seek repose?<br>
+  Art glad to leave the sea,<br>
+  And <strong id="anchor">anchor</strong> all thy weary woes<br>
+  In calm Eternity?"</p>
+</blockquote>
 
-&lt;menu&gt;
-  &lt;button id="showDialogButton"&gt;Show dialog&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="showDialogButton">Show dialog</button>
+</menu>
 
-&lt;script&gt;
+<script>
   (function() {
     var showDialogButton = document.getElementById('showDialogButton');
 
@@ -103,35 +66,36 @@ translation_of: Web/API/HTMLDialogElement
     });
 
   })();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Example_2">Example 2</h3>
+### Example 2
 
-<pre class="brush: html">&lt;!-- Simple pop-up dialog box, containing a form --&gt;
-&lt;dialog id="favDialog"&gt;
-  &lt;form method="dialog"&gt;
-    &lt;section&gt;
-      &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-      &lt;select id="favAnimal" name="favAnimal"&gt;
-        &lt;option&gt;&lt;/option&gt;
-        &lt;option&gt;Brine shrimp&lt;/option&gt;
-        &lt;option&gt;Red panda&lt;/option&gt;
-        &lt;option&gt;Spider monkey&lt;/option&gt;
-      &lt;/select&gt;&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;menu&gt;
-      &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-      &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-    &lt;/menu&gt;
-  &lt;/form&gt;
-&lt;/dialog&gt;
+```html
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal" name="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select></p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
 
-&lt;menu&gt;
-  &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-&lt;/menu&gt;
+<menu>
+  <button id="updateDetails">Update details</button>
+</menu>
 
-&lt;script&gt;
+<script>
   (function() {
     var updateButton = document.getElementById('updateDetails');
     var cancelButton = document.getElementById('cancel');
@@ -147,19 +111,17 @@ translation_of: Web/API/HTMLDialogElement
     });
 
   })();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLDialogElement")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

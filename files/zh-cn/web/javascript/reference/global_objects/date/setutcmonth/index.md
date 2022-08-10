@@ -3,56 +3,53 @@ title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>setUTCMonth()</code></strong> 方法根据通用的时间来设置一个准确的月份。</p>
+**`setUTCMonth()`** 方法根据通用的时间来设置一个准确的月份。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
 
+## 语法
 
+```plain
+dateObj.setUTCMonth(monthValue[, dayValue])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setUTCMonth(<var>monthValue</var>[, <var>dayValue</var>])</code></pre>
+- `monthValue`
+  - : 一个 0-11 的整数，代表 1 月到 12 月。
+- `dayValue`
+  - : 可选参数：一个 1-31 的整数，代表一个月的天数。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>monthValue</code></dt>
- <dd>一个 0-11 的整数，代表 1 月到 12 月。</dd>
- <dt><code>dayValue</code></dt>
- <dd>可选参数：一个 1-31 的整数，代表一个月的天数。</dd>
-</dl>
+这个数值是从 1970 年 1 月 1 号 00:00:00 到当前时间的毫秒数（国际通用时间）
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>这个数值是从 1970 年 1 月 1 号 00:00:00 到当前时间的毫秒数（国际通用时间）</p>
+如果你没有明确书写`dayValue` 这个参数，那么就会从{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} 方法返回对应的数值。
 
-<h2 id="描述">描述</h2>
+如果你写了一个超过在规定的范围内的参数. `setUTCMonth() 就会试图相应的更新时间信息在 Data 对象中。例如，如果你用 15 作为`monthValue 的值，那么年份就会加 1，并且月份会变成 3.（15=12+3）
 
-<p>如果你没有明确书写<code>dayValue</code> 这个参数，那么就会从{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} 方法返回对应的数值。</p>
+## 示例
 
-<p>如果你写了一个超过在规定的范围内的参数. <code>setUTCMonth() 就会试图相应的更新时间信息在 Data 对象中。例如，如果你用 15 作为</code>monthValue 的值，那么年份就会加 1，并且月份会变成 3.（15=12+3）</p>
+### 使用 `setUTCMonth()`
 
-<h2 id="示例">示例</h2>
-
-<h3 id="使用_setUTCMonth()">使用 <code>setUTCMonth()</code></h3>
-
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setUTCMonth(11);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="更多">更多</h2>
+## 更多
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCMonth()")}}</li>
- <li>{{jsxref("Date.prototype.setMonth()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+- {{jsxref("Date.prototype.setMonth()")}}

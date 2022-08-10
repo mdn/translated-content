@@ -8,106 +8,107 @@ tags:
   - Property
   - Houdini
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>syntax</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。</p>
+**`syntax`** [CSS](/en-US/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>如下是所有的有效 syntax 字符串：</p>
+如下是所有的有效 syntax 字符串：
 
-<pre class="brush: css no-line-numbers">syntax: '&lt;color&gt;'; /* 接收一个颜色值 */
+```css
+syntax: '<color>'; /* 接收一个颜色值 */
 
-syntax: '&lt;length&gt; | &lt;percentage&gt;'; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
+syntax: '<length> | <percentage>'; /* 接收长度或百分比参数，但是二者之间不进行计算合并 */
 
 syntax: 'small | medium | large'; /* 接收这些参数值之一作为自定义标识符 */
 
 syntax: '*'; /* 任何有效字符 */
-</pre>
+```
 
-<h2 id="值">取值</h2>
+## 取值
 
-<p>规范定义的、受语法支持的字符串。支持的语法是<a href="/en-US/docs/Web/CSS/CSS_Types">CSS types</a>的子集。 这些可以单独使用，一些类型也可以结合使用。</p>
+规范定义的、受语法支持的字符串。支持的语法是[CSS types](/en-US/docs/Web/CSS/CSS_Types)的子集。 这些可以单独使用，一些类型也可以结合使用。
 
-<dl>
-  <dt><code>"&lt;length&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;length&gt;")}} 值。</dd>
-  <dt><code>"&lt;number&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;number&gt;")}} 值。</dd>
-  <dt><code>"&lt;percentage&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;percentage&gt;")}} 值。</dd>
-  <dt><code>"&lt;length-percentage&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;length-percentage&gt;")}} 值。</dd>
-  <dt><code>"&lt;color&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;color&gt;")}} 值。</dd>
-  <dt><code>"&lt;image&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;image&gt;")}} 值。</dd>
-  <dt><code>"&lt;url&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("url()","url()")}} 值。</dd>
-  <dt><code>"&lt;integer&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;integer&gt;")}} 值。</dd>
-  <dt><code>"&lt;angle&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;angle&gt;")}} 值。</dd>
-  <dt><code>"&lt;time&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;time&gt;")}} 值。</dd>
-  <dt><code>"&lt;resolution&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;resolution&gt;")}} 值。</dd>
-  <dt><code>"&lt;transform-function&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;transform-function&gt;")}} 值。</dd>
-  <dt><code>"&lt;custom-ident&gt;"</code></dt>
-  <dd>任何有效的 {{cssxref("&lt;custom-ident&gt;")}} 值。</dd>
-  <dt><code>"&lt;transform-list&gt;"</code></dt>
-  <dd>A list of valid {{cssxref("&lt;transform-function&gt;")}} 值。</dd>
-</dl>
+- `"<length>"`
+  - : 任何有效的 {{cssxref("&lt;length&gt;")}} 值。
+- `"<number>"`
+  - : 任何有效的 {{cssxref("&lt;number&gt;")}} 值。
+- `"<percentage>"`
+  - : 任何有效的 {{cssxref("&lt;percentage&gt;")}} 值。
+- `"<length-percentage>"`
+  - : 任何有效的 {{cssxref("&lt;length-percentage&gt;")}} 值。
+- `"<color>"`
+  - : 任何有效的 {{cssxref("&lt;color&gt;")}} 值。
+- `"<image>"`
+  - : 任何有效的 {{cssxref("&lt;image&gt;")}} 值。
+- `"<url>"`
+  - : 任何有效的 {{cssxref("url()","url()")}} 值。
+- `"<integer>"`
+  - : 任何有效的 {{cssxref("&lt;integer&gt;")}} 值。
+- `"<angle>"`
+  - : 任何有效的 {{cssxref("&lt;angle&gt;")}} 值。
+- `"<time>"`
+  - : 任何有效的 {{cssxref("&lt;time&gt;")}} 值。
+- `"<resolution>"`
+  - : 任何有效的 {{cssxref("&lt;resolution&gt;")}} 值。
+- `"<transform-function>"`
+  - : 任何有效的 {{cssxref("&lt;transform-function&gt;")}} 值。
+- `"<custom-ident>"`
+  - : 任何有效的 {{cssxref("&lt;custom-ident&gt;")}} 值。
+- `"<transform-list>"`
+  - : A list of valid {{cssxref("&lt;transform-function&gt;")}} 值。
 
-<h2 id="Formal_definition">标准定义</h2>
+## 标准定义
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">标准语法</h2>
+## 标准语法
 
-<pre class="brush: css">{{csssyntax}}</pre>
+```css
+{{csssyntax}}
+```
 
-<h2 id="Examples">实例</h2>
+## 实例
 
-<p>为 <code>--my-color</code> {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。</p>
+为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-<p>使用 <a href="/en-US/docs/Web/CSS">CSS</a> {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">规则</a>:</p>
+使用 [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [规则](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<p>使用 <a href="/en-US/docs/Web/JavaScript">JavaScript 中的</a> {{domxref('CSS.registerProperty')}}函数：</p>
+使用 [JavaScript 中的](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<h2 id="Formal_syntax">标准语法</h2>
+## 标准语法
 
 {{csssyntax}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.at-rules.property")}}</p>
+{{Compat("css.at-rules.property")}}
 
-<h2 id="See_also">另见</h2>
+## 另见
 
-<ul>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Properties_and_值_API">CSS 属性与值 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Painting_API">CSS 绘图 API</a></li>
-    <li><a href="/zh-CN/docs/Web/API/CSS_Typed_OM_API">CSS 类型对象模型</a></li>
-    <li><a href="/zh-CN/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_值_API)
+- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
+- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/zh-CN/docs/Web/Houdini)

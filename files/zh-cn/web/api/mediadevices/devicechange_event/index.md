@@ -3,75 +3,46 @@ title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 translation_of: Web/API/MediaDevices/devicechange_event
 ---
-<p>每当媒体设备（例如相机，麦克风或扬声器）连接到系统或从系统中移除时，<code>devicechange </code>事件就会被发送到 {{domxref("MediaDevices")}}  实例。 这是一个没有附加属性的通用 {{domxref("Event")}} 。</p>
+每当媒体设备（例如相机，麦克风或扬声器）连接到系统或从系统中移除时，`devicechange `事件就会被发送到 {{domxref("MediaDevices")}} 实例。 这是一个没有附加属性的通用 {{domxref("Event")}} 。
 
-<h2 id="一般信息">一般信息</h2>
+## 一般信息
 
-<dl>
- <dt>接口</dt>
- <dd>Event</dd>
- <dt>是否冒泡</dt>
- <dd>No</dd>
- <dt>是否可取消</dt>
- <dd>No</dd>
- <dt>对象</dt>
- <dd>{{domxref('MediaDevices')}}</dd>
- <dt>默认动作</dt>
- <dd>None</dd>
-</dl>
+- 接口
+  - : Event
+- 是否冒泡
+  - : No
+- 是否可取消
+  - : No
+- 对象
+  - : {{domxref('MediaDevices')}}
+- 默认动作
+  - : None
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code>{{readonlyinline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件对象 (位于 DOM 树最上面的元素).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyinline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyinline}}</td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>是否冒泡</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyinline}}</td>
-   <td>{{domxref("Boolean")}}</td>
-   <td>是否可被取消</td>
-  </tr>
- </tbody>
-</table>
+| Property                              | Type                                 | Description                         |
+| ------------------------------------- | ------------------------------------ | ----------------------------------- |
+| `target`{{readonlyinline}}      | {{domxref("EventTarget")}} | 事件对象 (位于 DOM 树最上面的元素). |
+| `type` {{readonlyinline}}       | {{domxref("DOMString")}}     | 事件类型。                          |
+| `bubbles` {{readonlyinline}}    | {{domxref("Boolean")}}         | 是否冒泡                            |
+| `cancelable` {{readonlyinline}} | {{domxref("Boolean")}}         | 是否可被取消                        |
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<p><em>无</em>.</p>
+_无_.
 
-<h2 id="样例">样例</h2>
+## 样例
 
-<p>有关使用 <code>devicechange</code> 事件更新屏幕上设备列表的示例，请参阅 {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/ondevicechange", "Example")}}。</p>
+有关使用 `devicechange` 事件更新屏幕上设备列表的示例，请参阅 {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/ondevicechange", "Example")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaDevices.ondevicechange")}}</li>
-</ul>
+- {{domxref("MediaDevices.ondevicechange")}}

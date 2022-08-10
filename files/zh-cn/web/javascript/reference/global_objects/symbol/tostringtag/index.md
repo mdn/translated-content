@@ -3,61 +3,63 @@ title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Symbol.toStringTag</code></strong> 是一个内置 symbol，它通常作为对象的属性键使用，对应的属性值应该为字符串类型，这个字符串用来表示该对象的自定义类型标签，通常只有内置的 {{jsxref("Object.prototype.toString()")}} 方法会去读取这个标签并把它包含在自己的返回值里。</p>
+**`Symbol.toStringTag`** 是一个内置 symbol，它通常作为对象的属性键使用，对应的属性值应该为字符串类型，这个字符串用来表示该对象的自定义类型标签，通常只有内置的 {{jsxref("Object.prototype.toString()")}} 方法会去读取这个标签并把它包含在自己的返回值里。
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>许多内置的 JavaScript 对象类型即便没有 <code>toStringTag</code> 属性，也能被 <code>toString()</code> 方法识别并返回特定的类型标签，比如：</p>
+许多内置的 JavaScript 对象类型即便没有 `toStringTag` 属性，也能被 `toString()` 方法识别并返回特定的类型标签，比如：
 
-<pre class="brush: js">Object.prototype.toString.call('foo');     // "[object String]"
+```js
+Object.prototype.toString.call('foo');     // "[object String]"
 Object.prototype.toString.call([1, 2]);    // "[object Array]"
 Object.prototype.toString.call(3);         // "[object Number]"
 Object.prototype.toString.call(true);      // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
 Object.prototype.toString.call(null);      // "[object Null]"
 // ... and more
-</pre>
+```
 
-<p>另外一些对象类型则不然，<code>toString()</code> 方法能识别它们是因为引擎为它们设置好了 <code>toStringTag</code> 标签：</p>
+另外一些对象类型则不然，`toString()` 方法能识别它们是因为引擎为它们设置好了 `toStringTag` 标签：
 
-<pre class="brush: js">Object.prototype.toString.call(new Map());       // "[object Map]"
+```js
+Object.prototype.toString.call(new Map());       // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
-</pre>
+```
 
-<p>但你自己创建的类不会有这份特殊待遇，<code>toString() </code>找不到 <code>toStringTag</code> 属性时只好返回默认的 <code>Object</code> 标签：</p>
+但你自己创建的类不会有这份特殊待遇，`toString() `找不到 `toStringTag` 属性时只好返回默认的 `Object` 标签：
 
-<pre class="brush: js">class ValidatorClass {}
+```js
+class ValidatorClass {}
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
-</pre>
+```
 
-<p>加上 <code>toStringTag</code> 属性，你的类也会有自定义的类型标签了：</p>
+加上 `toStringTag` 属性，你的类也会有自定义的类型标签了：
 
-<pre class="brush: js">class ValidatorClass {
+```js
+class ValidatorClass {
   get [Symbol.toStringTag]() {
     return "Validator";
   }
 }
 
 Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

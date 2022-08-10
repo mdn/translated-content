@@ -7,43 +7,35 @@ tags:
   - 需要内容
 translation_of: Web/SVG/SVG_as_an_Image
 ---
-<p>SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器支持在下列环境中应用 SVG 图像：</p>
+SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器支持在下列环境中应用 SVG 图像：
 
-<ul>
- <li>HTML 的{{HTMLElement("img")}} 元素或 {{HTMLElement("svg")}} 元素</li>
- <li>CSS 的{{cssxref("background-image")}}属性</li>
-</ul>
+- HTML 的{{HTMLElement("img")}} 元素或 {{HTMLElement("svg")}} 元素
+- CSS 的{{cssxref("background-image")}}属性
 
-<h2 id="Gecko专有的环境">Gecko 专有的环境</h2>
+## Gecko 专有的环境
 
-<p>另外，Gecko 2.0 {{geckoRelease("2.0")}}引入了在以下环境中支持使用 SVG：</p>
+另外，Gecko 2.0 {{geckoRelease("2.0")}}引入了在以下环境中支持使用 SVG：
 
-<ul>
- <li>CSS 的{{cssxref("list-style-image")}}属性</li>
- <li>SVG 的{{SVGElement("image")}}元素</li>
- <li>SVG 的{{SVGElement("feImage")}}元素</li>
- <li>Canvas 的<a href="/zh-CN/docs/HTML/Canvas/Tutorial/Using_images#drawImage"><code>drawImage</code></a>函数</li>
-</ul>
+- CSS 的{{cssxref("list-style-image")}}属性
+- SVG 的{{SVGElement("image")}}元素
+- SVG 的{{SVGElement("feImage")}}元素
+- Canvas 的[`drawImage`](/zh-CN/docs/HTML/Canvas/Tutorial/Using_images#drawImage)函数
 
-<h3 id="局限">局限</h3>
+### 局限
 
-<p>如果 SVG 作为一个图像，出于安全目的，Gecko 在 SVG 环境上作了一些限制：</p>
+如果 SVG 作为一个图像，出于安全目的，Gecko 在 SVG 环境上作了一些限制：
 
-<ul>
- <li>禁用了<a href="/zh-CN/docs/JavaScript">JavaScript</a>。</li>
- <li>外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用<a href="/zh-CN/docs/DOM/BlobBuilder">BlobBuilder</a>对象 URL 或者 data: URI 属性）。</li>
- <li>链接的{{cssxref(":visited")}}伪类不能呈现。</li>
- <li>禁用了平台原生的小部件样式（基于操作系统主题）</li>
-</ul>
+- 禁用了[JavaScript](/zh-CN/docs/JavaScript)。
+- 外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用[BlobBuilder](/zh-CN/docs/DOM/BlobBuilder)对象 URL 或者 data: URI 属性）。
+- 链接的{{cssxref(":visited")}}伪类不能呈现。
+- 禁用了平台原生的小部件样式（基于操作系统主题）
 
-<p>注意上面的限制是对图像环境专有的；它们不能应用到直接看到的 SVG 上，也不能应用到嵌入在 HTML 的{{HTMLElement("iframe")}}元素、{{HTMLElement("object")}}元素和{{HTMLElement("embed")}}元素中的 SVG 上。</p>
+注意上面的限制是对图像环境专有的；它们不能应用到直接看到的 SVG 上，也不能应用到嵌入在 HTML 的{{HTMLElement("iframe")}}元素、{{HTMLElement("object")}}元素和{{HTMLElement("embed")}}元素中的 SVG 上。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/SVG_In_HTML_Introduction">SVG in HTML introduction</a></li>
-</ul>
+- [SVG in HTML introduction](/zh-CN/docs/SVG_In_HTML_Introduction)

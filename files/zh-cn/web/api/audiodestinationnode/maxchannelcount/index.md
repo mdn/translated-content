@@ -3,47 +3,46 @@ title: AudioDestinationNode.maxChannelCount
 slug: Web/API/AudioDestinationNode/maxChannelCount
 translation_of: Web/API/AudioDestinationNode/maxChannelCount
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioDestinationNode") }} 接口的 <code>maxchannelCount</code> 属性是一个表示物理设备能处理最大通道数的无符号长整型数。</p>
+{{ domxref("AudioDestinationNode") }} 接口的 `maxchannelCount` 属性是一个表示物理设备能处理最大通道数的无符号长整型数。
 
-<p> {{domxref("AudioNode.channelCount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 <code>maxChannelCount</code>为 <code>0</code>,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。</p>
-</div>
+{{domxref("AudioNode.channelCount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 `maxChannelCount`为 `0`,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var myDestination = audioCtx.destination;
 myDestination.maxChannelCount = 2;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个无符号长整型数</p>
+一个无符号长整型数
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面假设了一个简单的音频环境，设置其中 <code>AudioDestinationNode</code> 的 <code>maxChannelCount</code> 值为 2：</p>
+下面假设了一个简单的音频环境，设置其中 `AudioDestinationNode` 的 `maxChannelCount` 值为 2：
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
-gainNode.connect(audioCtx.destination);</pre>
+gainNode.connect(audioCtx.destination);
+```
 
-<p>为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 <a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> 或者 <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
+为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](http://mdn.github.io/violent-theremin/).
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.AudioDestinationNode.maxChannelCount")}}
 
-<h2 id="其他">其他</h2>
+## 其他
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

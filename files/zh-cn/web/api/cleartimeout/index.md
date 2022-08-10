@@ -7,32 +7,29 @@ tags:
 translation_of: Web/API/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p><code>WindowOrWorkerGlobalScope</code> 内置的<strong><code>clearTimeout()</code></strong>方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。</p>
+`WindowOrWorkerGlobalScope` 内置的**`clearTimeout()`**方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="notranslate"><em>scope</em>.clearTimeout(<em>timeoutID</em>)</pre>
+```plain
+scope.clearTimeout(timeoutID)
+```
 
+### Parameters
 
+- `timeoutID`
+  - : 您要取消定时器的标识符。该 ID 由相应的`setTimeout()`调用返回。
 
-<h3 id="Parameters">Parameters</h3>
+值得注意的是，{{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}} 使用共享的 ID 池，意味着在技术上可以混用 `clearTimeout()` 和 {{domxref("clearInterval()")}}。但是，为了清楚起见，你应该避免这样做。
 
-<dl>
- <dt><code>timeoutID</code></dt>
- <dd>您要取消定时器的标识符。该 ID 由相应的<code>setTimeout()</code>调用返回。</dd>
-</dl>
+## 示例
 
-<p>值得注意的是，{{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}} 使用共享的 ID 池，意味着在技术上可以混用 <code>clearTimeout()</code> 和 {{domxref("clearInterval()")}}。但是，为了清楚起见，你应该避免这样做。</p>
+在一个网页中运行如下脚本，并且点击一次页面。一秒钟后你会看见弹出一条信息。如果你在一秒内不停点击页面，弹出框将不再出现。
 
-<h2 id="Example">示例</h2>
-
-<p>在一个网页中运行如下脚本，并且点击一次页面。一秒钟后你会看见弹出一条信息。如果你在一秒内不停点击页面，弹出框将不再出现。</p>
-
-<pre class="brush: js notranslate">var alarm = {
+```js
+var alarm = {
   remind: function(aMessage) {
     alert(aMessage);
     delete this.timeoutID;
@@ -51,26 +48,25 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
     }
   }
 };
-window.onclick = function() { alarm.setup() };</pre>
+window.onclick = function() { alarm.setup() };
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>传入一个错误的 ID 给 <code>clearTimeout()</code>不会有任何影响；也不会抛出异常。</p>
+传入一个错误的 ID 给 `clearTimeout()`不会有任何影响；也不会抛出异常。
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
 {{Compat("api.clearTimeout")}}
 
-<h2 id="See_also">更多</h2>
+## 更多
 
-<ul>
- <li>{{domxref("WindowTimers.setTimeout()")}}</li>
- <li>{{domxref("WindowTimers.setInterval()")}}</li>
- <li>{{domxref("WindowTimers.clearInterval()")}}</li>
- <li>{{domxref("Window.requestAnimationFrame()")}}</li>
- <li><a href="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- {{domxref("WindowTimers.setTimeout()")}}
+- {{domxref("WindowTimers.setInterval()")}}
+- {{domxref("WindowTimers.clearInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
+- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

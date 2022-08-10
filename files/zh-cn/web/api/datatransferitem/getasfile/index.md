@@ -6,50 +6,50 @@ tags:
   - DataTransferItem
 translation_of: Web/API/DataTransferItem/getAsFile
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>如果<strong><code>DataTransferItem</code></strong>是一个文件，那 <strong><code>DataTransferItem.getAsFile()</code></strong>  方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 <code>null</code>.</p>
+如果**`DataTransferItem`**是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>File</em> = <em>DataTransferItem</em>.getAsFile();
-</pre>
+```plain
+File = DataTransferItem.getAsFile();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><em>无。</em></p>
+_无。_
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<dl>
- <dt>{{domxref("File")}}</dt>
- <dd>如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 <code>null</code> .</dd>
-</dl>
+- {{domxref("File")}}
+  - : 如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 `null` .
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面这个例子中使用 <code>getAsFile()</code> 。放在 {{event("drop")}} 事件处理里面。</p>
+下面这个例子中使用 `getAsFile()` 。放在 {{event("drop")}} 事件处理里面。
 
-<pre class="brush: js">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = event.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // 遍历拖拽项的内容
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // 拖拽项的数据是 HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // 拖拽项的数据是 URI
      console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // 拖拽项的数据是一个图片
      var f = data[i].getAsFile();
@@ -57,20 +57,16 @@ translation_of: Web/API/DataTransferItem/getAsFile
    }
  }
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
+{{Compat("api.DataTransferItem.getAsFile")}}
 
+## 查看更多
 
-<p>{{Compat("api.DataTransferItem.getAsFile")}}</p>
-
-<h2 id="查看更多">查看更多</h2>
-
-<ul>
- <li>{{domxref("DataTransfer.files()")}}</li>
-</ul>
+- {{domxref("DataTransfer.files()")}}

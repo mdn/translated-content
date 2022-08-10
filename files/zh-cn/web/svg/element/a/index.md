@@ -7,64 +7,62 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/a
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>使用 SVG 的锚元素 (&lt;a&gt;) 定义一个超链接。</p>
+使用 SVG 的锚元素 (\<a>) 定义一个超链接。
 
-<p>由于这个元素和 <a href="/en-US/docs/Web/HTML/Element/a">HTML 的 &lt;a&gt; 标签</a> 使用了相同的标签名，当使用 CSS 或 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a> 选择"a"时，可能应用到错误的元素上。 可以尝试使用 </code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@namespace"><code>@namespace</code>规则</a> 来区分两者</p>
+由于这个元素和 [HTML 的 \<a> 标签](/en-US/docs/Web/HTML/Element/a) 使用了相同的标签名，当使用 CSS 或 `querySelector 选择"a"时，可能应用到错误的元素上。 可以尝试使用 `[`@namespace`规则](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@namespace) 来区分两者
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="140" height="30"
+```html
+<svg width="140" height="30"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;a xlink:href="https://developer.mozilla.org/en-US/docs/SVG"
-     target="_blank"&gt;
-    &lt;rect height="30" width="120" y="0" x="0" rx="15"/&gt;
-    &lt;text fill="white" text-anchor="middle"
-          y="21" x="60"&gt;SVG on MDN&lt;/text&gt;
-  &lt;/a&gt;
+  <a xlink:href="https://developer.mozilla.org/en-US/docs/SVG"
+     target="_blank">
+    <rect height="30" width="120" y="0" x="0" rx="15"/>
+    <text fill="white" text-anchor="middle"
+          y="21" x="60">SVG on MDN</text>
+  </a>
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<p>示例结果：</p>
+示例结果：
 
-<p>{{EmbedLiveSample("示例",170,60)}}</p>
+{{EmbedLiveSample("示例",170,60)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件处理属性](/en-US/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en-US/docs/SVG/Attribute#Core) »
+- [图形事件属性](/en-US/docs/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en-US/docs/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en-US/docs/SVG/Attribute#XLink) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("xlink:show")}}</li>
- <li>{{SVGAttr("xlink:actuate")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
- <li>{{SVGAttr("target")}}</li>
-</ul>
+- {{SVGAttr("xlink:show")}}
+- {{SVGAttr("xlink:actuate")}}
+- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("target")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGAElement">SVGAElement</a></code>接口。</p>
+该元素实现了[`SVGAElement`](/en-US/docs/DOM/SVGAElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.a")}}

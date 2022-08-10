@@ -7,39 +7,40 @@ tags:
   - URL
 translation_of: Web/API/URL/hash
 ---
-<div>{{ APIRef("URL API") }}</div>
+{{ APIRef("URL API") }}
 
-<p>{{domxref("URL")}} 接口的 <strong><code>hash</code></strong> 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 <code>'#'</code> 和 fragment 标识符（fragment 即我们通常所说的 URL hash）。</p>
+{{domxref("URL")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 fragment 标识符（fragment 即我们通常所说的 URL hash）。
 
-<p>这里 fragment 不会经过<a href="/en-US/docs/Glossary/percent-encoding">百分比编码</a>（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串 —— <code>""</code>.</p>
+这里 fragment 不会经过[百分比编码](/en-US/docs/Glossary/percent-encoding)（URL 编码）。如果 URL 中没有 fragment，该属性会包含一个空字符串 —— `""`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>string</em> = <em>object</em>.hash;
-<em>object</em>.hash = <em>string</em>;
-</pre>
+```plain
+string = object.hash;
+object.hash = string;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("USVString")}}.</p>
+{{domxref("USVString")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // Returns '#Examples'</pre>
+```html
+var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
+url.hash // Returns '#Examples'
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.URL.hash")}}</p>
+{{Compat("api.URL.hash")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>所属的 {{domxref("URL")}} 接口。</li>
-</ul>
+- 所属的 {{domxref("URL")}} 接口。

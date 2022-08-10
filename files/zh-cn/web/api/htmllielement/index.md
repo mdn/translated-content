@@ -8,39 +8,33 @@ tags:
   - 接口
 translation_of: Web/API/HTMLLIElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLLIElement</code></strong> 接口公开了特定的属性和方法(超出了常规 {{domxref("HTMLElement")}} 接口所定义的接口，它通过继承可用于操作列表元素。</p>
+**`HTMLLIElement`** 接口公开了特定的属性和方法(超出了常规 {{domxref("HTMLElement")}} 接口所定义的接口，它通过继承可用于操作列表元素。
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从其父级 {{domxref("HTMLElement")}} 继承属性。</em></p>
+_从其父级 {{domxref("HTMLElement")}} 继承属性。_
 
-<dl>
- <dt>{{domxref("HTMLLIElement.type")}} {{Deprecated_Inline}}</dt>
- <dd>是{{domxref("DOMString")}}表示项目符号的类型 <code>"disc"</code>，<code>"square"</code> 或 <code>"circle"</code>。由于定义列表类型的标准方法是通过 CSS {{cssxref("list-style-type")}}属性，应当使用 CSSOM 方法通过脚本设置它。</dd>
- <dt>{{domxref( "HTMLLIElement.value")}}</dt>
- <dd>是<code>long</code>指示给定{{HTMLElement("ol")}}中<em>列表元素</em>的序号位置。它反映了HTML {{HTMLElement("li")}}元素的{{htmlattrxref("value","li")}}属性，并且可以小于<code>0</code>。如果{{HTMLElement("li")}}元素不是{{HTMLElement("ol")}}元素的子元素，则该属性没有意义。</dd>
-</dl>
+- {{domxref("HTMLLIElement.type")}} {{Deprecated_Inline}}
+  - : 是{{domxref("DOMString")}}表示项目符号的类型 `"disc"`，`"square"` 或 `"circle"`。由于定义列表类型的标准方法是通过 CSS {{cssxref("list-style-type")}}属性，应当使用 CSSOM 方法通过脚本设置它。
+- {{domxref( "HTMLLIElement.value")}}
+  - : 是`long`指示给定{{HTMLElement("ol")}}中*列表元素*的序号位置。它反映了 HTML {{HTMLElement("li")}}元素的{{htmlattrxref("value","li")}}属性，并且可以小于`0`。如果{{HTMLElement("li")}}元素不是{{HTMLElement("ol")}}元素的子元素，则该属性没有意义。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有具体方法; 从其父级 {{domxref("HTMLElement")}} 继承属性。</em></p>
+_没有具体方法; 从其父级 {{domxref("HTMLElement")}} 继承属性。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{COMPAT( "api.HTMLLIElement")}}</p>
-</div>
+{{COMPAT( "api.HTMLLIElement")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>实现了此接口的 HTML 元素：{{HTMLElement("li")}}</li>
-</ul>
+- 实现了此接口的 HTML 元素：{{HTMLElement("li")}}

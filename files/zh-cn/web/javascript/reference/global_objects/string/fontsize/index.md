@@ -3,62 +3,60 @@ title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>The <strong><code>fontsize()</code></strong> method creates a {{HTMLElement("font")}} HTML element that causes a string to be displayed in the specified font size.</p>
+The **`fontsize()`** method creates a {{HTMLElement("font")}} HTML element that causes a string to be displayed in the specified font size.
 
-<div class="note">
-<p><strong>备注：</strong> The &lt;font&gt; element has been removed in <a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a> and shouldn't be used anymore. Instead web developers should use <a href="/en-US/docs/Web/CSS">CSS</a> properties.</p>
-</div>
+> **备注：** The \<font> element has been removed in [HTML5](/en-US/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.fontsize(<var>size</var>)</code></pre>
+```plain
+str.fontsize(size)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>size</code></dt>
- <dd>An integer between 1 and 7, a string representing a signed integer between 1 and 7.</dd>
-</dl>
+- `size`
+  - : An integer between 1 and 7, a string representing a signed integer between 1 and 7.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A string containing a {{HTMLElement("font")}} HTML element.</p>
+A string containing a {{HTMLElement("font")}} HTML element.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>When you specify size as an integer, you set the font size of <code>str</code> to one of the 7 defined sizes. When you specify <code>size</code> as a string such as "-2", you adjust the font size of <code>str</code> relative to the size set in the {{HTMLElement("basefont")}} tag.</p>
+When you specify size as an integer, you set the font size of `str` to one of the 7 defined sizes. When you specify `size` as a string such as "-2", you adjust the font size of `str` relative to the size set in the {{HTMLElement("basefont")}} tag.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_fontsize_方法">使用 <code>fontsize()</code> 方法</h3>
+### 使用 `fontsize()` 方法
 
-<p>The following example uses string methods to change the size of a string:</p>
+The following example uses string methods to change the size of a string:
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.small());     // &lt;small&gt;Hello, world&lt;/small&gt;
-console.log(worldString.big());       // &lt;big&gt;Hello, world&lt;/big&gt;
-console.log(worldString.fontsize(7)); // &lt;font size="7"&gt;Hello, world&lt;/fontsize&gt;
-</pre>
+console.log(worldString.small());     // <small>Hello, world</small>
+console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+```
 
-<p>With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's <code>style</code> attribute and manipulate it more generically, for example:</p>
+With the {{domxref("HTMLElement.style", "element.style")}} object you can get the element's `style` attribute and manipulate it more generically, for example:
 
-<pre class="brush: js">document.getElementById('yourElemId').style.fontSize = '0.7em';
-</pre>
+```js
+document.getElementById('yourElemId').style.fontSize = '0.7em';
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.big()")}}</li>
- <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- {{jsxref("String.prototype.big()")}}
+- {{jsxref("String.prototype.small()")}}

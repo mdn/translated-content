@@ -3,77 +3,76 @@ title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>filter()</strong></code>创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}}<em>相同。</em> <em>TypedArray</em> 是这里的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">类型化数组类型</a> 之一。</p>
+**`filter()`**创建新的类型化数组，含有所有通过了测试的元素，测试由提供的函数实现。这个方法的算法和 {{jsxref("Array.prototype.filter()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组类型](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarray</var>.filter(<var>callback</var>[, <var>thisArg</var>])</pre>
+```plain
+typedarray.filter(callback[, thisArg])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>测试类型化数组每个元素的函数，以参数 <code>(element, index, typedarray)</code>调用。 如果返回 <code>true</code>则保留该元素，如果返回<code>false</code>则相反。</dd>
- <dt><code>thisArg {{optional_inline}}</code></dt>
- <dd>可选，执行<code>callback</code>时作为<code>this</code>的值。</dd>
-</dl>
+- `callback`
+  - : 测试类型化数组每个元素的函数，以参数 `(element, index, typedarray)`调用。 如果返回 `true`则保留该元素，如果返回`false`则相反。
+- `thisArg {{optional_inline}}`
+  - : 可选，执行`callback`时作为`this`的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新的类型化数组，含有通过测试的元素</p>
+新的类型化数组，含有通过测试的元素
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>filter</code>方法对类型化数组中的元素调用提供的 <code>callback</code>函数，并且会为<code>callback</code>返回 true 的那些元素构造新的类型化数组。 <code>callback</code> 只对拥有值的类型化数组下标调用。它不会对未定义的，被删除的或者没有赋值的下标调用。没有传给<code>callback</code>的类型化数组的元素只是简单跳过，不会包含在新数组中。</p>
+`filter`方法对类型化数组中的元素调用提供的 `callback`函数，并且会为`callback`返回 true 的那些元素构造新的类型化数组。 `callback` 只对拥有值的类型化数组下标调用。它不会对未定义的，被删除的或者没有赋值的下标调用。没有传给`callback`的类型化数组的元素只是简单跳过，不会包含在新数组中。
 
-<p><code>callback</code>以三个参数调用：</p>
+`callback`以三个参数调用：
 
-<ol>
- <li>元素的值</li>
- <li>元素下标</li>
- <li>被遍历的类型化数组对象</li>
-</ol>
+1.  元素的值
+2.  元素下标
+3.  被遍历的类型化数组对象
 
-<p>如果将<code>thisArg</code>参数提供给<code>filter</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
+如果将`thisArg`参数提供给`filter`，它会在调用时传递给`callback`，作为它的 `this`值。否则，会传递`undefined` 作为它的`this` 值。 `callback`最终观测到的`this`值由 [用于决定函数可见的`this`值的一般规则](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)来决定。
 
-<p><code>filter()</code>不改变在其上调用的类型化数组。</p>
+`filter()`不改变在其上调用的类型化数组。
 
-<p>由 <code>filter</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>filter</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>filter</code> 访问它们时候的值。已删除的元素不会被访问。</p>
+由 `filter`处理的元素范围在`callback`调用之前就确定了。 在 `filter`调用之后添加到数组的元素不会由 `callback`访问。 如果类型化数组的现有元素被改变，或被删除，它们传给`callback`的值是`filter` 访问它们时候的值。已删除的元素不会被访问。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="过滤所有较小的值">过滤所有较小的值</h3>
+### 过滤所有较小的值
 
-<p>下面的示例使用了 <code>filter()</code> 来创建过滤后的类型化数组，小于 10 的元素都被移除了。</p>
+下面的示例使用了 `filter()` 来创建过滤后的类型化数组，小于 10 的元素都被移除了。
 
-<pre class="brush: js">function isBigEnough(element, index, array) {
-  return element &gt;= 10;
+```js
+function isBigEnough(element, index, array) {
+  return element >= 10;
 }
 new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 // Uint8Array [ 12, 130, 44 ]
-</pre>
+```
 
-<h3 id="使用箭头函数过滤类型化数组的元素">使用箭头函数过滤类型化数组的元素</h3>
+### 使用箭头函数过滤类型化数组的元素
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a> 为相同测试提供了更短的语法。</p>
+[箭头函数](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 为相同测试提供了更短的语法。
 
-<pre class="brush: js">new Uint8Array([12, 5, 8, 130, 44]).filter(elem =&gt; elem &gt;= 10);
-// Uint8Array [ 12, 130, 44 ]</pre>
+```js
+new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
+// Uint8Array [ 12, 130, 44 ]
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.filter()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.filter()")}}

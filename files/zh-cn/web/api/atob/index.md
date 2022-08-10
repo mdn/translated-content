@@ -11,39 +11,40 @@ tags:
 translation_of: Web/API/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>atob()</code></strong> 对经过 base-64 编码的字符串进行解码。你可以使用 {{domxref("WindowBase64.btoa","window.btoa()")}} 方法来编码一个可能在传输过程中出现问题的数据，并且在接受数据之后，使用 atob() 方法再将数据解码。例如：你可以编码、传输和解码操作各种字符，比如 0-31 的 ASCII 码值。</p>
+**`atob()`** 对经过 base-64 编码的字符串进行解码。你可以使用 {{domxref("WindowBase64.btoa","window.btoa()")}} 方法来编码一个可能在传输过程中出现问题的数据，并且在接受数据之后，使用 atob() 方法再将数据解码。例如：你可以编码、传输和解码操作各种字符，比如 0-31 的 ASCII 码值。
 
-<p>关于针对 Unicode 或者 UTF-8 的应用方面，请查看 <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">this note at Base64 encoding and decoding</a> 和 <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings"><code>btoa()</code> 的备注</a>。</p>
+关于针对 Unicode 或者 UTF-8 的应用方面，请查看 [this note at Base64 encoding and decoding](/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22) 和 [`btoa()` 的备注](/en-US/docs/Web/API/window.btoa#Unicode_Strings)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var decodedData = scope.atob(<em>encodedData</em>);</pre>
+```plain
+var decodedData = scope.atob(encodedData);
+```
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果传入字符串不是有效的 base64 字符串，比如其长度不是 4 的倍数，则抛出{{jsxref("DOMException")}}。</p>
+如果传入字符串不是有效的 base64 字符串，比如其长度不是 4 的倍数，则抛出{{jsxref("DOMException")}}。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:js">let encodedData = window.btoa("Hello, world"); // 编码
+```js
+let encodedData = window.btoa("Hello, world"); // 编码
 let decodedData = window.atob(encodedData);    // 解码
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="/en-US/docs/data_URIs"><code>data</code> URIs</a></li>
- <li>{{domxref("btoa()")}}</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
-</ul>
+- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [`data` URIs](/en-US/docs/data_URIs)
+- {{domxref("btoa()")}}
+- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

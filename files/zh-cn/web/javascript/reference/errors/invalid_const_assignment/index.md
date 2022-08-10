@@ -7,84 +7,93 @@ tags:
   - 错误提示
 translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误提示">错误提示</h2>
+## 错误提示
 
-<pre class="syntaxbox">TypeError: invalid assignment to const "x" (Firefox)
+```plain
+TypeError: invalid assignment to const "x" (Firefox)
 TypeError: Assignment to constant variable. (Chrome)
 TypeError: Redeclaration of const 'x' (IE/Edge)
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 来声明。</p>
+常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) 来声明。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="不合法的二次声明">不合法的二次声明</h3>
+### 不合法的二次声明
 
-<p>在同一作用域内为相同的常量名进行赋值会报错。</p>
+在同一作用域内为相同的常量名进行赋值会报错。
 
-<pre class="brush: js example-bad">const COLUMNS = 80;
+```js example-bad
+const COLUMNS = 80;
 
 // ...
 
-COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'</pre>
+COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
+```
 
-<h3 id="问题修复">问题修复</h3>
+### 问题修复
 
-<p>修复的方式有很多种。可以根据你想要达到的目的来有针对性地对其进行处理。</p>
+修复的方式有很多种。可以根据你想要达到的目的来有针对性地对其进行处理。
 
-<h4 id="重新命名">重新命名</h4>
+#### 重新命名
 
-<p>如果想要声明另一个变量，那么请选择其他名称对其重新命名。原来的常量名在该作用域中已经被占有。</p>
+如果想要声明另一个变量，那么请选择其他名称对其重新命名。原来的常量名在该作用域中已经被占有。
 
-<pre class="brush: js example-good">const COLUMNS = 80;
-const WIDE_COLUMNS = 120;</pre>
+```js example-good
+const COLUMNS = 80;
+const WIDE_COLUMNS = 120;
+```
 
-<h4 id="const_let_or_var"><code>const</code>, <code>let</code> or <code>var</code>?</h4>
+#### `const`, `let` or `var`?
 
-<p>如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 关键字来声明一个拥有块作用域的变量，或者使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> </code>来声明一个全局变量。</p>
+如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 关键字来声明一个拥有块作用域的变量，或者使用 `var `来声明一个全局变量。
 
-<pre class="brush: js example-good">let columns = 80;
+```js example-good
+let columns = 80;
 
 // ...
 
 let columns = 120;
-</pre>
+```
 
-<h4 id="作用域">作用域</h4>
+#### 作用域
 
-<p>检查一下作用域是否正确。例如这个常量是否应该出现在当前作用域，还是应该出现在函数内部？</p>
+检查一下作用域是否正确。例如这个常量是否应该出现在当前作用域，还是应该出现在函数内部？
 
-<pre class="brush: js example-good">const COLUMNS = 80;
+```js example-good
+const COLUMNS = 80;
 
 function setupBigScreenEnvironment() {
   const COLUMNS = 120;
-}</pre>
+}
+```
 
-<h3 id="const与不可变性"><code>const 与不可变性</code></h3>
+### `const 与不可变性`
 
-<p>const 声明语句创建了一个对值的只读引用。这并<strong>不</strong>意味着它指向的值是不可变的，而是说这个变量标记符不能被再次分配。例如，在值是对象的情况下，引用的对象自身内容依然是可以改变的。不能改变该变量的引用：</p>
+const 声明语句创建了一个对值的只读引用。这并**不**意味着它指向的值是不可变的，而是说这个变量标记符不能被再次分配。例如，在值是对象的情况下，引用的对象自身内容依然是可以改变的。不能改变该变量的引用：
 
-<pre class="brush: js example-bad">const obj = {foo: 'bar'};
+```js example-bad
+const obj = {foo: 'bar'};
 obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
-</pre>
+```
 
-<p>但是可以改变它引用的值的属性： </p>
+但是可以改变它引用的值的属性：
 
-<pre class="brush: js example-good">obj.foo = 'baz';
-obj; // Object { foo: "baz" }</pre>
+```js example-good
+obj.foo = 'baz';
+obj; // Object { foo: "baz" }
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a></code></li>
-</ul>
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)

@@ -9,77 +9,66 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 original_slug: Web/JavaScript/Reference/Global_Objects/String/TrimRight
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>trimEnd()</strong> </code>方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。</p>
+`trimEnd() `方法从一个字符串的末端移除空白字符。trimRight() 是这个方法的别名。
 
-<p>{{EmbedInteractiveExample("pages/js/string-trimend.html")}}</p>
+{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
 
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.trimEnd();
-<var>str</var>.trimRight();</code></pre>
+```plain
+str.trimEnd();
+str.trimRight();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新字符串，表示从调用字串的末（右）端除去空白。</p>
+一个新字符串，表示从调用字串的末（右）端除去空白。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>trimEnd()</code> / <code>trimRight()</code>方法移除原字符串右端的连续空白符并返回，<code>trimEnd()</code> / <code>trimRight()</code>方法并不会直接修改原字符串本身。</p>
+`trimEnd()` / `trimRight()`方法移除原字符串右端的连续空白符并返回，`trimEnd()` / `trimRight()`方法并不会直接修改原字符串本身。
 
-<h3 id="别名">别名</h3>
+### 别名
 
-<p>为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为<code>trimEnd</code>。 但是，出于 Web 兼容性原因，<code>trimRight</code>仍然是<code>trimEnd</code>的别名。 在某些引擎中，这意味着：</p>
+为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。 但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。 在某些引擎中，这意味着：
 
-<pre class="brush: js"><code>String.prototype.trimRight.name === "trimEnd";</code>
-</pre>
+```js
+String.prototype.trimRight.name === "trimEnd";
+```
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="使用trimEnd">使用<code>trimEnd()</code></h3>
+### 使用`trimEnd()`
 
-<p>下面的例子输出了小写的字符串"   foo":</p>
+下面的例子输出了小写的字符串" foo":
 
-<pre class="brush:js">var str = "   foo  ";
+```js
+var str = "   foo  ";
 
 alert(str.length); // 8
 
 str = str.trimRight();  // 或写成 str = str.trimEnd();
 console.log(str.length); // 6
 console.log(str);       // '   foo'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code><a href="https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend">String.prototype.{trimStart,trimEnd}</a></code>proposal</td>
-   <td>Stage 4</td>
-   <td>Expected to be part of ES2019</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                               | Status  | Comment                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
+| [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend)proposal | Stage 4 | Expected to be part of ES2019 |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-<p>{{Compat("javascript.builtins.String.trimEnd")}}</p>
+{{Compat("javascript.builtins.String.trimEnd")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimStart()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimStart()")}}

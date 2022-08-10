@@ -3,46 +3,48 @@ title: Storage.clear()
 slug: Web/API/Storage/clear
 translation_of: Web/API/Storage/clear
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><code>clear()</code> 是 {{domxref("Storage")}} 接口的一个方法，调用它可以清空存储对象里所有的键值。</p>
+`clear()` 是 {{domxref("Storage")}} 接口的一个方法，调用它可以清空存储对象里所有的键值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js"><em>storage</em>.clear();</pre>
+```js
+storage.clear();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p><em>无。</em></p>
+_无。_
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><em>无。</em></p>
+_无。_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的函数在本地存储里面创建三个数据项，然后使用 <code>clear()</code> 把它们全部移除。</p>
+下面的函数在本地存储里面创建三个数据项，然后使用 `clear()` 把它们全部移除。
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
 
   localStorage.clear();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong>一个实际的例子 <a href="https://github.com/mdn/web-storage-demo">Web Storage Demo</a>。</p>
-</div>
+> **备注：**一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Storage.clear")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<p><a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">使用 Web Storage API</a></p>
+[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

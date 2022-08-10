@@ -6,20 +6,18 @@ tags:
   - CSSOM
 translation_of: Web/API/Window/pageXOffset
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>这是 <code><a href="/en-US/docs/Web/API/Window/scrollX">scrollX</a> 的别名</code></p>
+这是 `scrollX 的别名`
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/pageYOffset"><code>window.pageYOffset</code></a></li>
-</ul>
+- [`window.pageYOffset`](/en-US/docs/Web/API/Window/pageYOffset)

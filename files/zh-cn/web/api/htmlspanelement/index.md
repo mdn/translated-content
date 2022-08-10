@@ -8,36 +8,28 @@ tags:
   - Reference
 translation_of: Web/API/HTMLSpanElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLSpanElement</code></strong> interface represents a {{HTMLElement("span")}} element and derives from the {{ domxref("HTMLElement") }} interface, but without implementing any additional properties or methods.</p>
+The **`HTMLSpanElement`** interface represents a {{HTMLElement("span")}} element and derives from the {{ domxref("HTMLElement") }} interface, but without implementing any additional properties or methods.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>无特定属性；从其父元素{{domxref("HTMLElement")}}继承属性。</em></p>
+_无特定属性；从其父元素{{domxref("HTMLElement")}}继承属性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。</em></p>
+_无特定方法；从其父元素{{domxref("HTMLElement")}}继承方法。_
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.HTMLSpanElement")}}
 
+## 另请参阅
 
-<p>{{Compat("api.HTMLSpanElement")}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("span")}}.</li>
-</ul>
-
-<div> </div>
+- The HTML element implementing this interface: {{HTMLElement("span")}}.

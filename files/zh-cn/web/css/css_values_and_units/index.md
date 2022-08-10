@@ -3,434 +3,261 @@ title: CSS values and units
 slug: Web/CSS/CSS_Values_and_Units
 translation_of: Web/CSS/CSS_Values_and_Units
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。</p>
+所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
 
-<h2 id="文本数据类型">文本数据类型</h2>
+## 文本数据类型
 
-<ul>
- <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- <li>作为 <code>&lt;ident&gt;</code> 预定义的关键字</li>
- <li>{{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;url&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;custom-ident&gt;")}}
+- 作为 `<ident>` 预定义的关键字
+- {{cssxref("&lt;string&gt;")}}
+- {{cssxref("&lt;url&gt;")}}
 
-<p>文本数据类型要么是 <code>&lt;string&gt;</code>，要么是一系列字符的合集，或者是 <code>&lt;ident&gt;</code> —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 <code>&lt;string&gt;</code> 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 <code>&lt;ident&gt;</code> 或者 <code>&lt;custom-ident&gt;</code> 则必须不带引号。</p>
+文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>` —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
 
-<p>在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。</p>
+在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。
 
-<p>当允许使用带引号或者不带引号的两种用户定义的文本属性值时，标准列出为 <code>&lt;custom-ident&gt; | &lt;string&gt;</code>，也就是说引号是可选的。例如在指定动画的名称时：</p>
+当允许使用带引号或者不带引号的两种用户定义的文本属性值时，标准列出为 `<custom-ident> | <string>`，也就是说引号是可选的。例如在指定动画的名称时：
 
-<pre class="brush: css notranslate">@keyframe validIdent {
+```css
+@keyframe validIdent {
   /* keyframes go here */
 }
 @keyframe 'validString' {
   /* keyframes go here */
-}</pre>
+}
+```
 
-<p>有些文本属性值不允许被引号包围。例如， {{cssxref("grid-area")}} 属性对应的值可以是<code>&lt;custom-ident&gt;</code>，所以假设有一个栅格区域名为 <code>content</code> ，我们必须不带引号地使用：</p>
+有些文本属性值不允许被引号包围。例如， {{cssxref("grid-area")}} 属性对应的值可以是`<custom-ident>`，所以假设有一个栅格区域名为 `content` ，我们必须不带引号地使用：
 
-<pre class="brush: css notranslate">.item {
+```css
+.item {
   grid-area: content;
 }
-</pre>
+```
 
-<p>相比之下，另一种数据类型是 {{cssxref("&lt;string&gt;")}}，例如 {{cssxref("content")}} 属性的值则必须被引号包围：</p>
+相比之下，另一种数据类型是 {{cssxref("&lt;string&gt;")}}，例如 {{cssxref("content")}} 属性的值则必须被引号包围：
 
-<pre class="brush: css notranslate">.item::after {
+```css
+.item::after {
     content: "This is my content.";
 }
-</pre>
+```
 
-<p>大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 <code>none</code>，<code>unset</code>，<code>initial</code>， 或者 <code>inherit</code>，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。</p>
+大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 `none`，`unset`，`initial`， 或者 `inherit`，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。
 
-<h3 id="预定义的关键值">预定义的关键值</h3>
+### 预定义的关键值
 
-<p>预定义的关键值是由 CSS 标准为属性定义的文本值。这些关键字也属于 CSS 标识符，因此在使用时无需用引号包围。</p>
+预定义的关键值是由 CSS 标准为属性定义的文本值。这些关键字也属于 CSS 标识符，因此在使用时无需用引号包围。
 
-<p>当在 CSS 标准或者 MDN 属性页面中查看某个 CSS 属性时，该属性所有允许的取值都会以下面表格的形式列出。下面的值是 {{cssxref("float")}} 属性可以取的预定义值：</p>
+当在 CSS 标准或者 MDN 属性页面中查看某个 CSS 属性时，该属性所有允许的取值都会以下面表格的形式列出。下面的值是 {{cssxref("float")}} 属性可以取的预定义值：
 
-<pre class="syntaxbox notranslate">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar">|</a> inline-end</pre>
+```plain
+left | right | none | inline-start | inline-end
+```
 
-<p>这些值在使用时不需要引号：</p>
+这些值在使用时不需要引号：
 
-<pre class="brush: css notranslate"><code>.box {
+```css
+.box {
     float: left;
 }
-</code></pre>
+```
 
-<h3 id="CSS_全局范围内的值">CSS 全局范围内的值</h3>
+### CSS 全局范围内的值
 
-<p>预定义的关键值往往是针对某一个属性的。作为补充，所有 CSS 属性都可以接受 CSS 全局范围内的值：{{cssxref("initial")}}，{{cssxref("inherit")}} 和 {{cssxref("unset")}}。这些全局范围的值往往指定了一种默认的行为。</p>
+预定义的关键值往往是针对某一个属性的。作为补充，所有 CSS 属性都可以接受 CSS 全局范围内的值：{{cssxref("initial")}}，{{cssxref("inherit")}} 和 {{cssxref("unset")}}。这些全局范围的值往往指定了一种默认的行为。
 
-<p><code>initial</code>指定了当前值作为属性的初始值。<code>inherit</code>关键字则指定当前元素的属性值基于父元素进行计算，即继承。</p>
+`initial`指定了当前值作为属性的初始值。`inherit`关键字则指定当前元素的属性值基于父元素进行计算，即继承。
 
-<p><code>unset</code>关键字的作用是<code>inherit</code>或<code>initial</code>中的一者，取决于某个 CSS 属性是否可以自父元素继承。</p>
+`unset`关键字的作用是`inherit`或`initial`中的一者，取决于某个 CSS 属性是否可以自父元素继承。
 
-<p>{{cssxref("revert")}} 在 Cascade Level 4 标准中被引入，但这一属性值还没有较好的浏览器支持现状。</p>
+{{cssxref("revert")}} 在 Cascade Level 4 标准中被引入，但这一属性值还没有较好的浏览器支持现状。
 
-<h3 id="URLs">URLs</h3>
+### URLs
 
-<p>{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个<code>&lt;string&gt;</code>类型的 URL。这个 URL 可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：</p>
+{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个`<string>`类型的 URL。这个 URL 可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：
 
-<pre class="brush: css notranslate"><code>.box {
+```css
+.box {
   background-image: url("images/my-background.png");
-}</code>
+}
 
-<code>.box {
+.box {
   background-image: url("https://www.exammple.com/images/my-background.png");
-}</code>
-</pre>
+}
+```
 
-<p><code>url()</code>的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个<code>&lt;url-token&gt;</code>，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。</p>
+`url()`的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个`<url-token>`，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。
 
-<h2 id="数值数据类型">数值数据类型</h2>
+## 数值数据类型
 
-<ul>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
- <li>{{cssxref("&lt;number&gt;")}}</li>
- <li>{{cssxref("&lt;dimension&gt;")}}</li>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;integer&gt;")}}
+- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;dimension&gt;")}}
+- {{cssxref("&lt;percentage&gt;")}}
 
-<h3 id="整数">整数</h3>
+### 整数
 
-<p>一个整数包含 <code>0</code> 到 <code>9</code>的一个或多个十进制数字，例如 <code>1024</code> 或 <code>-55</code>。一个整数可能额外包含 <code>+</code> 或 <code>-</code> 前缀，在正负号和数值之间没有任何空格。</p>
+一个整数包含 `0` 到 `9`的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
 
-<h3 id="数值">数值</h3>
+### 数值
 
-<p>{{cssxref("&lt;number&gt;")}} 表示一个真正的数，有可能又或者没有小数点和小数部分。例如 <code>0.255</code>，<code>128</code> 或 <code>-1.2</code>。数值也可能包含前缀 <code>+</code> 或 <code>-</code> 标识正负。</p>
+{{cssxref("&lt;number&gt;")}} 表示一个真正的数，有可能又或者没有小数点和小数部分。例如 `0.255`，`128` 或 `-1.2`。数值也可能包含前缀 `+` 或 `-` 标识正负。
 
-<h3 id="尺寸">尺寸</h3>
+### 尺寸
 
-<p>{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 <code>&lt;number&gt;</code>，例如 <code>45deg</code>，<code>100ms</code>，或者 <code>10px</code>。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 <code>1 cm</code> 不是一个合法的值。</p>
+{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`，`100ms`，或者 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
 
-<p>CSS 使用尺寸来指定：</p>
+CSS 使用尺寸来指定：
 
-<ul>
- <li>{{cssxref("&lt;length&gt;")}} （距离单位）</li>
- <li>{{cssxref("&lt;angle&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li>{{cssxref("&lt;frequency&gt;")}}</li>
- <li>{{cssxref("&lt;resolution&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;length&gt;")}} （距离单位）
+- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;resolution&gt;")}}
 
-<p>这些都将在下面的部分里一一介绍。</p>
+这些都将在下面的部分里一一介绍。
 
-<h4 id="距离单位">距离单位</h4>
+#### 距离单位
 
-<p>一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。</p>
+一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。
 
-<p>相对长度单位基于其它元素的长度。例如 <code>em</code> 基于该元素的字号大小，<code>vh</code> 则与设备视口的高度有关。</p>
+相对长度单位基于其它元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
 
-<table class="standard-table">
- <caption>
- <h4 id="相对长度单位">相对长度单位</h4>
- </caption>
- <thead>
-  <tr>
-   <th scope="col">单位</th>
-   <th scope="col">基于...</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>em</code></td>
-   <td>元素的字号</td>
-  </tr>
-  <tr>
-   <td><code>ex</code></td>
-   <td>字体的 X 字高（x-height）</td>
-  </tr>
-  <tr>
-   <td><code>cap</code></td>
-   <td>字体中大写字母的标称高度</td>
-  </tr>
-  <tr>
-   <td><code>ch</code></td>
-   <td>Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.</td>
-  </tr>
-  <tr>
-   <td><code>ic</code></td>
-   <td>Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph.</td>
-  </tr>
-  <tr>
-   <td><code>rem</code></td>
-   <td>根元素的字体大小。</td>
-  </tr>
-  <tr>
-   <td><code>lh</code></td>
-   <td>元素的行高。</td>
-  </tr>
-  <tr>
-   <td><code>rlh</code></td>
-   <td>根元素的行高。</td>
-  </tr>
-  <tr>
-   <td><code>vw</code></td>
-   <td>1% of viewport's width.</td>
-  </tr>
-  <tr>
-   <td><code>vh</code></td>
-   <td>1% of viewport's height.</td>
-  </tr>
-  <tr>
-   <td><code>vi</code></td>
-   <td>1% of viewport's size in the root element's inline axis.</td>
-  </tr>
-  <tr>
-   <td><code>vb</code></td>
-   <td>1% of viewport's size in the root element's block axis.</td>
-  </tr>
-  <tr>
-   <td><code>vmin</code></td>
-   <td>1% of viewport's smaller dimension.</td>
-  </tr>
-  <tr>
-   <td><code>vmax</code></td>
-   <td>1% of viewport's larger dimension.</td>
-  </tr>
- </tbody>
-</table>
+| 单位   | 基于...                                                                                                                               |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`   | 元素的字号                                                                                                                            |
+| `ex`   | 字体的 X 字高（x-height）                                                                                                             |
+| `cap`  | 字体中大写字母的标称高度                                                                                                              |
+| `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                    |
+| `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph. |
+| `rem`  | 根元素的字体大小。                                                                                                                    |
+| `lh`   | 元素的行高。                                                                                                                          |
+| `rlh`  | 根元素的行高。                                                                                                                        |
+| `vw`   | 1% of viewport's width.                                                                                                               |
+| `vh`   | 1% of viewport's height.                                                                                                              |
+| `vi`   | 1% of viewport's size in the root element's inline axis.                                                                              |
+| `vb`   | 1% of viewport's size in the root element's block axis.                                                                               |
+| `vmin` | 1% of viewport's smaller dimension.                                                                                                   |
+| `vmax` | 1% of viewport's larger dimension.                                                                                                    |
 
-<p>Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, <code>mm</code> is a physical millimeter, 1/10th of a centimeter.</p>
+Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
-<table class="standard-table">
- <caption>
- <h4 id="Absolute_length_units">Absolute length units</h4>
- </caption>
- <thead>
-  <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Name</th>
-   <th scope="col">Equivalent to</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>cm</code></td>
-   <td>Centimeters</td>
-   <td>1cm = 96px/2.54</td>
-  </tr>
-  <tr>
-   <td><code>mm</code></td>
-   <td>Millimeters</td>
-   <td>1mm = 1/10th of 1cm</td>
-  </tr>
-  <tr>
-   <td><code>Q</code></td>
-   <td>Quarter-millimeters</td>
-   <td>1Q = 1/40th of 1cm</td>
-  </tr>
-  <tr>
-   <td><code>in</code></td>
-   <td>Inches</td>
-   <td>1in = 2.54cm = 96px</td>
-  </tr>
-  <tr>
-   <td><code>pc</code></td>
-   <td>Picas</td>
-   <td>1pc = 1/16th of 1in</td>
-  </tr>
-  <tr>
-   <td><code>pt</code></td>
-   <td>Points</td>
-   <td>1pt = 1/72th of 1in</td>
-  </tr>
-  <tr>
-   <td><code>px</code></td>
-   <td>Pixels</td>
-   <td>1px = 1/96th of 1in</td>
-  </tr>
- </tbody>
-</table>
+| Unit | Name                | Equivalent to       |
+| ---- | ------------------- | ------------------- |
+| `cm` | Centimeters         | 1cm = 96px/2.54     |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
+| `in` | Inches              | 1in = 2.54cm = 96px |
+| `pc` | Picas               | 1pc = 1/16th of 1in |
+| `pt` | Points              | 1pt = 1/72th of 1in |
+| `px` | Pixels              | 1px = 1/96th of 1in |
 
-<p>When including a length value, if the length is <code>0</code>, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.</p>
+When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
 
-<h4 id="Angle_units">Angle units</h4>
+#### Angle units
 
-<p>Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:</p>
+Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>deg</code></td>
-   <td>Degrees</td>
-   <td>There are 360 degrees in a full circle.</td>
-  </tr>
-  <tr>
-   <td><code>grad</code></td>
-   <td>Gradians</td>
-   <td>There are 400 gradians in a full circle.</td>
-  </tr>
-  <tr>
-   <td><code>rad</code></td>
-   <td>Radians</td>
-   <td>There are 2π radians in a full circle.</td>
-  </tr>
-  <tr>
-   <td><code>turn</code></td>
-   <td>Turns</td>
-   <td>There is 1 turn in a full circle.</td>
-  </tr>
- </tbody>
-</table>
+| Unit   | Name     | Description                              |
+| ------ | -------- | ---------------------------------------- |
+| `deg`  | Degrees  | There are 360 degrees in a full circle.  |
+| `grad` | Gradians | There are 400 gradians in a full circle. |
+| `rad`  | Radians  | There are 2π radians in a full circle.   |
+| `turn` | Turns    | There is 1 turn in a full circle.        |
 
-<h4 id="Time_units">Time units</h4>
+#### Time units
 
-<p>Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the <code>s</code> or <code>ms</code> -- is required. It accepts the following values.</p>
+Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier -- the `s` or `ms` -- is required. It accepts the following values.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>s</code></td>
-   <td>Seconds</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><code>ms</code></td>
-   <td>Milliseconds</td>
-   <td>There are 1,000 milliseconds in a second.</td>
-  </tr>
- </tbody>
-</table>
+| Unit | Name         | Description                               |
+| ---- | ------------ | ----------------------------------------- |
+| `s`  | Seconds      |                                           |
+| `ms` | Milliseconds | There are 1,000 milliseconds in a second. |
 
-<h4 id="Frequency_units">Frequency units</h4>
+#### Frequency units
 
-<p>Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. It accepts the following values.</p>
+Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. It accepts the following values.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>Hz</code></td>
-   <td>Hertz</td>
-   <td>Represents the number of occurrences per second.</td>
-  </tr>
-  <tr>
-   <td><code>kHz</code></td>
-   <td>KiloHertz</td>
-   <td>A kiloHertz is 1000 Hertz.</td>
-  </tr>
- </tbody>
-</table>
+| Unit  | Name      | Description                                      |
+| ----- | --------- | ------------------------------------------------ |
+| `Hz`  | Hertz     | Represents the number of occurrences per second. |
+| `kHz` | KiloHertz | A kiloHertz is 1000 Hertz.                       |
 
-<p><code>1Hz</code>, which can also be written as <code>1hz</code> or <code>1HZ</code>, is one cycle per second.</p>
+`1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
 
-<h4 id="Resolution_unit">Resolution unit</h4>
+#### Resolution unit
 
-<p>Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:</p>
+Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>dpi</code></td>
-   <td>Dots per inch.</td>
-  </tr>
-  <tr>
-   <td><code>dpcm</code></td>
-   <td>Dots per centimetre.</td>
-  </tr>
-  <tr>
-   <td><code>dppx</code>, <code>x</code></td>
-   <td>Dots per px unit.</td>
-  </tr>
- </tbody>
-</table>
+| Unit        | Description          |
+| ----------- | -------------------- |
+| `dpi`       | Dots per inch.       |
+| `dpcm`      | Dots per centimetre. |
+| `dppx`, `x` | Dots per px unit.    |
 
-<h3 id="Percentages">Percentages</h3>
+### Percentages
 
-<p>A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.</p>
+A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.
 
-<p>Percentage values are always relative to another quantity, for example a length. Each property that allows percentages also defines the quantity to which the percentage refers. This quantity can be a value of another property of the same element, the value of a property of an ancestor element, a measurement of a containing block, or something else.</p>
+Percentage values are always relative to another quantity, for example a length. Each property that allows percentages also defines the quantity to which the percentage refers. This quantity can be a value of another property of the same element, the value of a property of an ancestor element, a measurement of a containing block, or something else.
 
-<p>As an example, if you specify the {{cssxref("width")}} of a box as a percentage, it refers to the percentage of the box's parent's computed width:</p>
+As an example, if you specify the {{cssxref("width")}} of a box as a percentage, it refers to the percentage of the box's parent's computed width:
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   width: 50%;
-}</pre>
+}
+```
 
-<h3 id="Mixing_percentages_and_dimensions">Mixing percentages and dimensions</h3>
+### Mixing percentages and dimensions
 
-<p>Some properties accept a dimension that could be either one of two types, for example a <code>&lt;length&gt;</code> <strong>or</strong> a <code>&lt;percentage&gt;</code>. In this case the allowed value is detailed in the specification as a combination unit, e.g. {{cssxref("&lt;length-percentage&gt;")}}. Other possible combinations are as follows:</p>
+Some properties accept a dimension that could be either one of two types, for example a `<length>` **or** a `<percentage>`. In this case the allowed value is detailed in the specification as a combination unit, e.g. {{cssxref("&lt;length-percentage&gt;")}}. Other possible combinations are as follows:
 
-<ul>
- <li>{{cssxref("&lt;frequency-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;angle-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;time-percentage&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;frequency-percentage&gt;")}}
+- {{cssxref("&lt;angle-percentage&gt;")}}
+- {{cssxref("&lt;time-percentage&gt;")}}
 
-<h3 id="Special_data_types_defined_in_other_specs">Special data types (defined in other specs)</h3>
+### Special data types (defined in other specs)
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;position&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;color&gt;")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;position&gt;")}}
 
-<h4 id="Color">Color</h4>
+#### Color
 
-<p>The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g. it's background color), and is defined in the <a href="https://drafts.csswg.org/css-color-3/">CSS Color Module</a>.</p>
+The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g. it's background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
 
-<h4 id="Image">Image</h4>
+#### Image
 
-<p>The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the <a href="https://www.w3.org/TR/css-images-4/">CSS Image Values and Replaced Content Module</a>.</p>
+The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/).
 
-<h4 id="Position">Position</h4>
+#### Position
 
-<p>The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders specification</a>.</p>
+The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
 
-<h3 id="Functional_notation">Functional notation</h3>
+### Functional notation
 
-<ul>
- <li>{{cssxref("calc()")}}</li>
- <li>{{cssxref("min", "min()")}}</li>
- <li>{{cssxref("max", "max()")}}</li>
- <li>{{cssxref("clamp", "clamp()")}}</li>
- <li>{{cssxref("toggle", "toggle()")}}</li>
- <li>{{cssxref("attr", "attr()")}}</li>
-</ul>
+- {{cssxref("calc()")}}
+- {{cssxref("min", "min()")}}
+- {{cssxref("max", "max()")}}
+- {{cssxref("clamp", "clamp()")}}
+- {{cssxref("toggle", "toggle()")}}
+- {{cssxref("attr", "attr()")}}
 
-<p>Functional notation is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis <code>(</code> followed by the argument(s) to the notation followed by a right parenthesis <code>)</code>. Functions can take multiple arguments, which are formatted similarly to a CSS property value.</p>
+Functional notation is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
-<p>White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for <code>min()</code>, <code>max()</code> and <code>clamp()</code> functions.)</p>
+White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()` and `clamp()` functions.)
 
-<p>Some legacy functional notations such as <code>rgba()</code> use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.</p>
+Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
-</ul>
+- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)

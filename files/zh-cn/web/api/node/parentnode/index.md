@@ -3,26 +3,43 @@ title: Node.parentNode
 slug: Web/API/Node/parentNode
 translation_of: Web/API/Node/parentNode
 ---
-<p>{{ ApiRef() }}</p>
-<h2 id="Summary">概述</h2>
-<p>返回指定的节点在 DOM 树中的父节点。</p>
-<h2 id="Syntax">语法</h2>
-<pre class="eval"><em>parentNode</em> = <em>node</em>.parentNode
-</pre>
-<p><code>parentNode 是指定节点的父节点。一个元素节点的父节点可能是一个元素 (</code><code>Element</code> <code>) 节点，也可能是一个文档 (</code><code>Document</code> <code>) 节点，或者是个</code>文档碎片 (<code>DocumentFragment</code>) 节点。</p>
-<h2 id="Example">例子</h2>
-<pre class="eval">if (node.parentNode) {
+{{ ApiRef() }}
+
+## 概述
+
+返回指定的节点在 DOM 树中的父节点。
+
+## 语法
+
+```plain
+parentNode = node.parentNode
+```
+
+` parentNode 是指定节点的父节点。一个元素节点的父节点可能是一个元素 (``Element ` ` ) 节点，也可能是一个文档 (``Document ` `) 节点，或者是个`文档碎片 (`DocumentFragment`) 节点。
+
+## 例子
+
+```plain
+if (node.parentNode) {
   // 从 DOM 树中删除 node 节点，除非它已经被删除了。
   node.parentNode.removeChild(node);
 }
-</pre>
-<h2 id="Notes">备注</h2>
-<p>对于下面的<a href="/zh-cn/DOM/Node.nodeType">节点类型</a>: <code>Attr</code>, <code>Document</code>, <code>DocumentFragment</code>, <code>Entity</code>, <code>Notation</code>,其<code>parentNode</code>属性返回<code>null</code>.</p>
-<p>如果当前节点刚刚被建立，还没有被插入到 DOM 树中，则该节点的<code>parentNode 属性也返回</code><code>null.</code></p>
-<h2 id="See_also">相关链接</h2>
-<p>{{ Domxref("element.firstChild") }}, {{ Domxref("element.lastChild") }}, {{ Domxref("element.childNodes") }}, {{ Domxref("element.nextSibling") }}, {{ Domxref("element.previousSibling") }}.</p>
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+```
+
+## 备注
+
+对于下面的[节点类型](/zh-cn/DOM/Node.nodeType): `Attr`, `Document`, `DocumentFragment`, `Entity`, `Notation`,其`parentNode`属性返回`null`.
+
+如果当前节点刚刚被建立，还没有被插入到 DOM 树中，则该节点的` parentNode 属性也返回``null. `
+
+## 相关链接
+
+{{ Domxref("element.firstChild") }}, {{ Domxref("element.lastChild") }}, {{ Domxref("element.childNodes") }}, {{ Domxref("element.nextSibling") }}, {{ Domxref("element.previousSibling") }}.
+
+## 浏览器兼容性
+
 {{Compat("api.Node.parentNode")}}
 
-<h2 id="Specification">规范</h2>
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317">DOM Level 2 Core: Node.parentNode</a></p>
+## 规范
+
+[DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)

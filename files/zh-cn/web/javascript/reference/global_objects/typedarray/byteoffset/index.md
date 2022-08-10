@@ -3,42 +3,43 @@ title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>byteOffset</code></strong> 访问器属性表示类型化数组距离其{{jsxref("ArrayBuffer")}}起始位置的偏移（字节数）。</p>
+**`byteOffset`** 访问器属性表示类型化数组距离其{{jsxref("ArrayBuffer")}}起始位置的偏移（字节数）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>typedarray</var>.byteOffset</pre>
+```plain
+typedarray.byteOffset
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>byteOffset</code> 是一个访问器属性，它的 set 访问器函数是<code>undefined</code>，意思是你只能够读取这个属性。它的值在<em>TypedArray</em>构造时建立，不能被修改。<em>TypedArray</em> 是这里的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">TypedArray 对象</a>之一。</p>
+`byteOffset` 是一个访问器属性，它的 set 访问器函数是`undefined`，意思是你只能够读取这个属性。它的值在*TypedArray*构造时建立，不能被修改。_TypedArray_ 是这里的 [TypedArray 对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)之一。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用byteOffset_属性">使用<code>byteOffset</code> 属性</h3>
+### 使用`byteOffset` 属性
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(buffer);
 uint8.byteOffset; // 0 (没有指定 oddfet)
 
 var uint8 = new Uint8Array(buffer, 3);
 uint8.byteOffset; // 3 (在构造 Uint8Array 时指定)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

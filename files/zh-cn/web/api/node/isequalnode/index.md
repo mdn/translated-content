@@ -10,54 +10,55 @@ tags:
   - 节点
 translation_of: Web/API/Node/isEqualNode
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p> <code><strong>Node.isEqualNode() </strong></code>方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征 (defining characteristics) 相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。</p>
+**`Node.isEqualNode() `**方法可以判断两个节点是否相等。当两个节点的类型相同，定义特征 (defining characteristics) 相同（对元素来说，即 id，孩子节点的数量等等），属性一致等，这两个节点就是相等的。一些具体的数据指出：多数时候的比较是根据节点的类型来的。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre class="syntaxbox">var <em>isEqualNode</em> = <em>node</em>.isEqualNode(<var>otherNode</var>);
-</pre>
+```plain
+var isEqualNode = node.isEqualNode(otherNode);
+```
 
-<ul>
- <li>otherNode: 比较是否相等的节点。</li>
-</ul>
+- otherNode: 比较是否相等的节点。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在本例中，我们创建了三个 {{HTMLElement("div")}} 块。第一个和第三个 div 都拥有相同的内容和属性，第二个则不一样。然后我们运行 JavaScript ，使用 <code>isEqualNode()</code> 来比较这几个节点。</p>
+在本例中，我们创建了三个 {{HTMLElement("div")}} 块。第一个和第三个 div 都拥有相同的内容和属性，第二个则不一样。然后我们运行 JavaScript ，使用 `isEqualNode()` 来比较这几个节点。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;This is the first element.&lt;/div&gt;
-&lt;div&gt;This is the second element.&lt;/div&gt;
-&lt;div&gt;This is the first element.&lt;/div&gt;
+```html
+<div>This is the first element.</div>
+<div>This is the second element.</div>
+<div>This is the first element.</div>
 
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+<p id="output"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "&lt;br/&gt;";</pre>
+output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
+output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
+output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('示例', 480) }}</p>
+{{ EmbedLiveSample('示例', 480) }}
 
-<h3 id="规范">规范</h3>
+### 规范
 
 {{Specifications}}
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("api.Node.isEqualNode")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Node.isSameNode()")}}</li>
-</ul>
+- {{domxref("Node.isSameNode()")}}

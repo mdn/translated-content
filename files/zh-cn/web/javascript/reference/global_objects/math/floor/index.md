@@ -6,39 +6,37 @@ tags:
   - 向下取整
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
-<div>{{JSRef}}<br>
- </div>
+{{JSRef}}
 
-<p><code><strong>Math.floor()</strong></code> 返回小于或等于一个给定数字的最大整数。</p>
+**`Math.floor()`** 返回小于或等于一个给定数字的最大整数。
 
-<div class="note">
-<p><strong>备注：</strong>可以理解 <code><strong>Math.floor()</strong></code>为向下取整</p>
-</div>
+> **备注：**可以理解 **`Math.floor()`**为向下取整
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.floor(<em>x</em>) </code></pre>
+```plain
+Math.floor(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>一个数字。</dd>
-</dl>
+- `x`
+  - : 一个数字。
 
-<h3 id="返回值">返回值 </h3>
+### 返回值
 
-<p>一个表示小于或等于指定数字的最大整数的数字。</p>
+一个表示小于或等于指定数字的最大整数的数字。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>由于 <code>floor</code> 是 <code>Math</code> 的一个静态方法，你总是应该像这样使用它 <code>Math.floor()</code>，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。</p>
+由于 `floor` 是 `Math` 的一个静态方法，你总是应该像这样使用它 `Math.floor()`，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_Math.floor">例子：使用 <code>Math.floor</code></h3>
+### 例子：使用 `Math.floor`
 
-<pre class="brush:js">Math.floor( 45.95);
+```js
+Math.floor( 45.95);
 // 45
 Math.floor( 45.05);
 // 45
@@ -48,12 +46,12 @@ Math.floor(-45.05);
 // -46
 Math.floor(-45.95);
 // -46
+```
 
-</pre>
+### 例子：十进制调整
 
-<h3 id="Example_Decimal_adjustment">例子：十进制调整</h3>
-
-<pre class="brush:js">// Closure
+```js
+// Closure
 (function(){
 
 	/**
@@ -72,7 +70,7 @@ Math.floor(-45.95);
 		value = +value;
 		exp = +exp;
 		// If the value is not a number or the exp is not an integer...
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Shift
@@ -123,23 +121,21 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>
- <li>{{jsxref("Math.abs")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.abs")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}

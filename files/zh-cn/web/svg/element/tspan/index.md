@@ -9,54 +9,48 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/tspan
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>在 {{SVGElement("text")}}元素中，利用内含的<code>tspan</code>元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。</p>
+在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3338/tspan.svg">tspan.svg</a></p>
+» [tspan.svg](https://developer.mozilla.org/files/3338/tspan.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("dx") }}</li>
- <li>{{ SVGAttr("dy") }}</li>
- <li>{{ SVGAttr("rotate") }}</li>
- <li>{{ SVGAttr("textLength") }}</li>
- <li>{{ SVGAttr("lengthAdjust") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("dx") }}
+- {{ SVGAttr("dy") }}
+- {{ SVGAttr("rotate") }}
+- {{ SVGAttr("textLength") }}
+- {{ SVGAttr("lengthAdjust") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGTSpanElement">SVGTSpanElement</a></code>接口。</p>
+该元素实现了[`SVGTSpanElement`](/en/DOM/SVGTSpanElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.tspan")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("text") }}</li>
-</ul>
+- {{ SVGElement("text") }}

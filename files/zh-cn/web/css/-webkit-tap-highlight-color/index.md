@@ -3,33 +3,34 @@ title: '-webkit-tap-highlight-color'
 slug: Web/CSS/-webkit-tap-highlight-color
 translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<h2 id="简介">简介</h2>
+## 简介
 
-<p><strong><code>-webkit-tap-highlight-color</code></strong> 是一个没有标准化的属性，能够设置点击链接的时候出现的高亮颜色。显示给用户的高光是他们成功点击的标识，以及暗示了他们点击的元素。</p>
+**`-webkit-tap-highlight-color`** 是一个没有标准化的属性，能够设置点击链接的时候出现的高亮颜色。显示给用户的高光是他们成功点击的标识，以及暗示了他们点击的元素。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">-webkit-tap-highlight-color: red;
-</pre>
+```css
+-webkit-tap-highlight-color: red;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>A {{Cssxref("color value")}}.</p>
+A {{Cssxref("color value")}}.
 
-<h3 id="基本语法">基本语法</h3>
+### 基本语法
 
 {{csssyntax}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p><em>不属于规范的一部分。</em> Apple <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5">有自己的 safari web 内容指南的文档</a>。</p>
+_不属于规范的一部分。_ Apple [有自己的 safari web 内容指南的文档](https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW5)。
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>webkit/safari, Blink/Chrome，以及<a href="https://msdn.microsoft.com/en-us//library/dn806275(v=vs.85).aspx">IE 的一些版本。</a></p>
+webkit/safari, Blink/Chrome，以及[IE 的一些版本。](<https://msdn.microsoft.com/en-us//library/dn806275(v=vs.85).aspx>)

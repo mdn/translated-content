@@ -3,43 +3,43 @@ title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Reflect</strong></code><strong><code>.get()</code></strong>方法与从 对象 (<code>target[propertyKey]</code>) 中读取属性类似，但它是通过一个函数执行来操作的。</p>
+**`Reflect.get()`**方法与从 对象 (`target[propertyKey]`) 中读取属性类似，但它是通过一个函数执行来操作的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Reflect.get(target, propertyKey[, receiver])
-</pre>
+```plain
+Reflect.get(target, propertyKey[, receiver])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>target</code></dt>
- <dd>需要取值的目标对象</dd>
- <dt><code>propertyKey</code></dt>
- <dd>需要获取的值的键值</dd>
- <dt>receiver</dt>
- <dd>如果<code>target</code>对象中指定了<code>getter</code>，<code>receiver</code>则为<code>getter</code>调用时的<code>this</code>值。</dd>
-</dl>
+- `target`
+  - : 需要取值的目标对象
+- `propertyKey`
+  - : 需要获取的值的键值
+- receiver
+  - : 如果`target`对象中指定了`getter`，`receiver`则为`getter`调用时的`this`值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>属性的值。</p>
+属性的值。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>如果目标值类型不是 {{jsxref("Object")}}，则抛出一个 {{jsxref("TypeError")}}。</p>
+如果目标值类型不是 {{jsxref("Object")}}，则抛出一个 {{jsxref("TypeError")}}。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Reflect.get</code>方法允许你从一个对象中取属性值。就如同<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性访问器</a> 语法，但却是通过函数调用来实现。</p>
+`Reflect.get`方法允许你从一个对象中取属性值。就如同[属性访问器](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 语法，但却是通过函数调用来实现。
 
-<h2 id="实例">实例</h2>
+## 实例
 
-<h3 id="使用_Reflect.get"><code>使用 Reflect.get()</code></h3>
+### `使用 Reflect.get()`
 
-<pre class="brush: js">// Object
+```js
+// Object
 var obj = { x: 1, y: 2 };
 Reflect.get(obj, "x"); // 1
 
@@ -52,21 +52,17 @@ var obj = new Proxy(x, {
   get(t, k, r) { return k + "bar"; }
 });
 Reflect.get(obj, "foo"); // "foobar"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div></div>
+## 相关链接
 
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">Property accessors</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)

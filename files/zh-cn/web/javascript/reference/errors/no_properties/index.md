@@ -3,34 +3,34 @@ title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
 translation_of: Web/JavaScript/Reference/Errors/No_properties
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误信息">错误信息</h2>
+## 错误信息
 
-<pre class="syntaxbox">TypeError: null has no properties
+```plain
+TypeError: null has no properties
 TypeError: undefined has no properties
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="哪里出错了">哪里出错了？</h2>
+## 哪里出错了？
 
-<p> {{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。</p>
+{{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js example-bad">null.foo;
+```js example-bad
+null.foo;
 // 错误类型: null 没有这个属性
 
 undefined.bar;
 // 错误类型: undefined 没有这个属性
-</pre>
+```
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{jsxref("null")}}</li>
- <li>{{jsxref("undefined")}}</li>
-</ul>
+- {{jsxref("null")}}
+- {{jsxref("undefined")}}

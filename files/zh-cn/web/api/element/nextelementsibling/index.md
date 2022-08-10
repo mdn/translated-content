@@ -4,63 +4,68 @@ slug: Web/API/Element/nextElementSibling
 translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><strong>nextElementSibling</strong> 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回<code>null,</code>该属性是只读的。</p>
+**nextElementSibling** 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回`null,`该属性是只读的。
 
-<h2 id="Syntax_and_values">语法</h2>
+## 语法
 
-<pre class="eval">var <em>nextNode</em> = elementNodeReference.nextElementSibling;
-</pre>
+```plain
+var nextNode = elementNodeReference.nextElementSibling;
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre>&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+```plain
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   var el = document.getElementById('div-01').nextElementSibling;
-  document.write('&lt;p&gt;Siblings of div-01&lt;/p&gt;&lt;ol&gt;');
+  document.write('<p>Siblings of div-01</p><ol>');
   while (el) {
-    document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+    document.write('<li>' + el.nodeName + '</li>');
     el = el.nextElementSibling;
   }
-  document.write('&lt;/ol&gt;');
-&lt;/script&gt;
-</pre>
+  document.write('</ol>');
+</script>
+```
 
-<p>上面的例子会输出以下内容：</p>
+上面的例子会输出以下内容：
 
-<pre>Siblings of div-01
+```plain
+Siblings of div-01
 
    1. DIV
    2. SCRIPT
    3. P
-   4. OL</pre>
+   4. OL
+```
 
+## Internet Explorer 8 支持补丁
 
-<h2 id="Internet_Explorer_8_支持补丁">Internet Explorer 8 支持补丁</h2>
+该属性不支持 IE9 之前的版本，下面的代码片段可以增进对 IE8 的支持：
 
-<p>该属性不支持 IE9 之前的版本，下面的代码片段可以增进对 IE8 的支持：</p>
-
-<pre><code>// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
+```plain
+// Source: https://github.com/Alhadis/Snippets/blob/master/js/polyfills/IE8-child-elements.js
 if(!("nextElementSibling" in document.documentElement)){
     Object.defineProperty(Element.prototype, "nextElementSibling", {
         get: function(){
             var e = this.nextSibling;
-            while(e &amp;&amp; 1 !== e.nodeType)
+            while(e && 1 !== e.nodeType)
                 e = e.nextSibling;
             return e;
         }
     });
-}</code>
-</pre>
+}
+```
 
-<h2 id="Internet_Explorer_9_和_Safari支持补丁">Internet Explorer 9+ 和 Safari 支持补丁</h2>
+## Internet Explorer 9+ 和 Safari 支持补丁
 
-<pre><code>// Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
+```plain
+// Source: https://github.com/jserz/js_piece/blob/master/DOM/NonDocumentTypeChildNode/nextElementSibling/nextElementSibling.md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('nextElementSibling')) {
@@ -81,23 +86,22 @@ if(!("nextElementSibling" in document.documentElement)){
       set: undefined
     });
   });
-})([Element.prototype, CharacterData.prototype]);</code></pre>
+})([Element.prototype, CharacterData.prototype]);
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Specification">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.Element.nextElementSibling")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code><a href="/zh-cn/DOM/Node.nextSibling">nextSibling</a></code></li>
- <li><a href="/zh-cn/DOM/Element.childElementCount"><code>childElementCount</code></a></li>
- <li><a href="/zh-cn/DOM/Element.children"><code>children</code></a></li>
- <li><a href="/zh-cn/DOM/Element.firstElementChild"><code>firstElementChild</code></a></li>
- <li><a href="/zh-cn/DOM/Element.lastElementChild"><code>lastElementChild</code></a></li>
- <li><a href="/zh-cn/DOM/Element.previousElementSibling"><code>previousElementSibling</code></a></li>
-</ul>
+- [`nextSibling`](/zh-cn/DOM/Node.nextSibling)
+- [`childElementCount`](/zh-cn/DOM/Element.childElementCount)
+- [`children`](/zh-cn/DOM/Element.children)
+- [`firstElementChild`](/zh-cn/DOM/Element.firstElementChild)
+- [`lastElementChild`](/zh-cn/DOM/Element.lastElementChild)
+- [`previousElementSibling`](/zh-cn/DOM/Element.previousElementSibling)

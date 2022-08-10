@@ -3,57 +3,56 @@ title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>ReferenceError</strong></code>（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。</p>
+**`ReferenceError`**（引用错误）对象代表当一个不存在（或尚未初始化）的变量被引用时发生的错误。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>new ReferenceError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
+```plain
+new ReferenceError([message[, fileName[, lineNumber]]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>message</code></dt>
- <dd>可选。描述可读的错误信息</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>可选。包含引起异常代码的文件名</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>可选。引起异常的代码行号</dd>
-</dl>
+- `message`
+  - : 可选。描述可读的错误信息
+- `fileName` {{non-standard_inline}}
+  - : 可选。包含引起异常代码的文件名
+- `lineNumber` {{non-standard_inline}}
+  - : 可选。引起异常的代码行号
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>当你尝试引用一个未被定义的变量时，将会抛出一个 <code>ReferenceError</code> 。</p>
+当你尝试引用一个未被定义的变量时，将会抛出一个 `ReferenceError` 。
 
-<h2 id="Properties">属性</h2>
+## 属性
 
-<dl>
- <dt>{{jsxref("ReferenceError.prototype")}}</dt>
- <dd>Allows the addition of properties to an <code>ReferenceError</code> object.</dd>
-</dl>
+- {{jsxref("ReferenceError.prototype")}}
+  - : Allows the addition of properties to an `ReferenceError` object.
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p>全局的 <code>ReferenceError</code> 本身并不包含有方法，但是他可以从原型链上继承一些方法</p>
+全局的 `ReferenceError` 本身并不包含有方法，但是他可以从原型链上继承一些方法
 
-<h2 id="ReferenceError_instances"><code>ReferenceError</code> 实例</h2>
+## `ReferenceError` 实例
 
-<h3 id="Properties_of_ReferenceError_instances">属性</h3>
+### 属性
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Properties')}}
 
-<h3 id="Methods_of_ReferenceError_instances">方法</h3>
+### 方法
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype', 'Methods')}}
 
-<h2 id="Examples">例子</h2>
+## 例子
 
-<h3 id="Example:_Catch_an_ReferenceError">例：捕获一个 <code>ReferenceError</code></h3>
+### 例：捕获一个 `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   var a = undefinedVariable;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -64,11 +63,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 6
   console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
 }
-</pre>
+```
 
-<h3 id="Example:_Create_an_ReferenceError">例：创建一个 <code>ReferenceError</code></h3>
+### 例：创建一个 `ReferenceError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new ReferenceError('Hello', 'someFile.js', 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
@@ -79,19 +79,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
   console.log(e.columnNumber);              // 0
   console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("ReferenceError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("ReferenceError.prototype")}}

@@ -3,52 +3,53 @@ title: Headers.has()
 slug: Web/API/Headers/has
 translation_of: Web/API/Headers/has
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Headers")}} 接口的 <strong><code>has()</code></strong>方法返回一个布尔值来声明一个 <code>Headers</code>对象 是否包含特定的头信息。</p>
+{{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
 
-<p>考虑到安全因素，一些头信息只能被 user agent 来管理。这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+考虑到安全因素，一些头信息只能被 user agent 来管理。这些头信息包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myHeaders.has(name);</pre>
+```js
+myHeaders.has(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>name</em></dt>
- <dd>你要测试的 HTTP 头字段的名称。如果给出的名称不在 HTTP 头中，将爬出异常{{jsxref("TypeError")}}。</dd>
-</dl>
+- _name_
+  - : 你要测试的 HTTP 头字段的名称。如果给出的名称不在 HTTP 头中，将爬出异常{{jsxref("TypeError")}}。
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("Boolean")}}.</p>
+A {{domxref("Boolean")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>创建一个空的 Headers 对象是简单的：</p>
+创建一个空的 Headers 对象是简单的：
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 <code>has()</code> 方法来测试是否添加成功：</p>
+你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 `has()` 方法来测试是否添加成功：
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.has('Content-Type'); // Returns true
 myHeaders.has('Accept-Encoding'); // Returns false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Headers.has")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

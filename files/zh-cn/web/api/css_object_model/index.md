@@ -3,63 +3,59 @@ title: CSS Object Model
 slug: Web/API/CSS_Object_Model
 translation_of: Web/API/CSS_Object_Model
 ---
-<p><strong>CSS Object Model</strong> 是一组允许用 JavaScript 操纵 CSS 的 API。 它是继 DOM 和 HTML API 之后，又一个操纵 CSS 的接口，从而能够动态地读取和修改 CSS 样式。</p>
+**CSS Object Model** 是一组允许用 JavaScript 操纵 CSS 的 API。 它是继 DOM 和 HTML API 之后，又一个操纵 CSS 的接口，从而能够动态地读取和修改 CSS 样式。
 
-<h2 id="API参考">API 参考</h2>
+## API 参考
 
-<ul>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>{{domxref("CaretPosition")}}</li>
- <li>{{domxref("CSS")}}</li>
- <li>{{domxref("CSSCharsetRule")}}</li>
- <li>{{domxref("CSSConditionRule")}}</li>
- <li>{{domxref("CSSCounterStyleRule")}}</li>
- <li>{{domxref("CSSFontFaceRule")}}</li>
- <li>{{domxref("CSSFontFeatureValuesMap")}}</li>
- <li>{{domxref("CSSFontFeatureValuesRule")}}</li>
- <li>{{domxref("CSSGroupingRule")}}</li>
- <li>{{domxref("CSSImportRule")}}</li>
- <li>{{domxref("CSSKeyframeRule")}}</li>
- <li>{{domxref("CSSKeyframesRule")}}</li>
- <li>{{domxref("CSSMarginRule")}}</li>
- <li>{{domxref("CSSMediaRule")}}</li>
- <li>{{domxref("CSSNamespaceRule")}}</li>
- <li>{{domxref("CSSPageRule")}}</li>
- <li>{{domxref("CSSRule")}}</li>
- <li>{{domxref("CSSRuleList")}}</li>
- <li>{{domxref("CSSStylesheet")}}</li>
- <li>{{domxref("CSSStyleDeclaration")}}</li>
- <li>{{domxref("CSSSupportsRule")}}</li>
- <li>{{domxref("CSSVariablesMap")}}</li>
- <li>{{domxref("CSSViewportRule")}}</li>
- <li>{{domxref("ElementCSSInlineStyle")}}</li>
- <li>{{domxref("GeometryUtils")}}</li>
- <li>{{domxref("GetStyleUtils")}}</li>
- <li>{{domxref("LinkStyle")}}</li>
- <li>{{domxref("MediaList")}}</li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("PseudoElement")}}</li>
- <li>{{domxref("Screen")}}</li>
- <li>{{domxref("Stylesheet")}}</li>
- <li>{{domxref("StylesheetList")}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- {{domxref("AnimationEvent")}}
+- {{domxref("CaretPosition")}}
+- {{domxref("CSS")}}
+- {{domxref("CSSCharsetRule")}}
+- {{domxref("CSSConditionRule")}}
+- {{domxref("CSSCounterStyleRule")}}
+- {{domxref("CSSFontFaceRule")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
+- {{domxref("CSSFontFeatureValuesRule")}}
+- {{domxref("CSSGroupingRule")}}
+- {{domxref("CSSImportRule")}}
+- {{domxref("CSSKeyframeRule")}}
+- {{domxref("CSSKeyframesRule")}}
+- {{domxref("CSSMarginRule")}}
+- {{domxref("CSSMediaRule")}}
+- {{domxref("CSSNamespaceRule")}}
+- {{domxref("CSSPageRule")}}
+- {{domxref("CSSRule")}}
+- {{domxref("CSSRuleList")}}
+- {{domxref("CSSStylesheet")}}
+- {{domxref("CSSStyleDeclaration")}}
+- {{domxref("CSSSupportsRule")}}
+- {{domxref("CSSVariablesMap")}}
+- {{domxref("CSSViewportRule")}}
+- {{domxref("ElementCSSInlineStyle")}}
+- {{domxref("GeometryUtils")}}
+- {{domxref("GetStyleUtils")}}
+- {{domxref("LinkStyle")}}
+- {{domxref("MediaList")}}
+- {{domxref("MediaQueryList")}}
+- {{domxref("PseudoElement")}}
+- {{domxref("Screen")}}
+- {{domxref("Stylesheet")}}
+- {{domxref("StylesheetList")}}
+- {{domxref("TransitionEvent")}}
 
-<p>CSSOM 相关规范也扩展了其他几个接口：</p>
+CSSOM 相关规范也扩展了其他几个接口：
 
-<p>{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.</p>
+{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.
 
-<h2 id="教程">教程</h2>
+## 教程
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a>（这篇文档可能有点过时，因为它是在 DHTML/Ajax 时代写的）。</li>
- <li><a href="/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a></li>
-</ul>
+- [Determining the dimensions of elements](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)（这篇文档可能有点过时，因为它是在 DHTML/Ajax 时代写的）。
+- [Managing screen orientation](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>近几年所有的这些新特性正在一点一点的向不同的浏览器内添加，不过这确实是一个很复杂无法用简单表格总结的过程。如果具体项目中需要用到，请详细的检查接口的可用性。</p>
+近几年所有的这些新特性正在一点一点的向不同的浏览器内添加，不过这确实是一个很复杂无法用简单表格总结的过程。如果具体项目中需要用到，请详细的检查接口的可用性。

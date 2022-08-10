@@ -9,61 +9,55 @@ tags:
   - 线
 translation_of: Web/SVG/Element/line
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>line</code>元素是一个 SVG 基本形状，用来创建一条连接两个点的线。</p>
+`line`元素是一个 SVG 基本形状，用来创建一条连接两个点的线。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3254/line.svg">line.svg</a></p>
+» [line.svg](https://developer.mozilla.org/files/3254/line.svg)
 
-<p>你可以应用变形以得到同样的结果。从一条常见的线开始：</p>
+你可以应用变形以得到同样的结果。从一条常见的线开始：
 
-<p>» <a href="https://developer.mozilla.org/files/3345/line1.svg">line1.svg</a></p>
+» [line1.svg](https://developer.mozilla.org/files/3345/line1.svg)
 
-<p>添加变形选项以改变线的方向：</p>
+添加变形选项以改变线的方向：
 
-<p>» <a href="https://developer.mozilla.org/files/3346/line2.svg">line2.svg</a></p>
+» [line2.svg](https://developer.mozilla.org/files/3346/line2.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件处理属性](/en-US/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en-US/docs/Web/SVG/Attribute#Core) »
+- [图形事件属性](/en-US/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en-US/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("x1")}}</li>
- <li>{{SVGAttr("x2")}}</li>
- <li>{{SVGAttr("y1")}}</li>
- <li>{{SVGAttr("y2")}}</li>
-</ul>
+- {{SVGAttr("x1")}}
+- {{SVGAttr("x2")}}
+- {{SVGAttr("y1")}}
+- {{SVGAttr("y2")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/Web/API/SVGLineElement">SVGLineElement</a>接口</code></p>
+该元素实现了`SVGLineElement接口`
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.line")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{SVGElement("polygon")}}</li>
- <li>{{SVGElement("path")}}</li>
-</ul>
+- {{SVGElement("polygon")}}
+- {{SVGElement("path")}}

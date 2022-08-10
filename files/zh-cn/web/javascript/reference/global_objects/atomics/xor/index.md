@@ -3,109 +3,76 @@ title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<div><code><strong>Atomics</strong></code><strong><code>.xor()</code></strong> 静态方法会在数组中给定位置进行一次按位异或操作，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。</div>
+**`Atomics.xor()`** 静态方法会在数组中给定位置进行一次按位异或操作，并返回该位置的旧值。这个原子操作保证在修改后的值被写回之前不会发生其他写操作。{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
 
+## 语法
 
+```plain
+Atomics.xor(typedArray, index, value)
+```
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}</div>
+### 参数
 
+- `typedArray`
+  - : 一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.
+- `index`
+  - : `typedArray` 中需要进行按位异或的索引位置。
+- `value`
+  - : 要进行按位异或的数字。
 
+### 返回值
 
-<h2 id="语法">语法</h2>
+给定位置的旧值 (`typedArray[index]`)。
 
-<pre class="syntaxbox">Atomics.xor(typedArray, index, value)
-</pre>
+### 异常
 
-<h3 id="参数">参数</h3>
+- 假如 `typedArray` 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。
+- 假如 `typedArray` 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。
+- 如果 `index` 超出了 `typedArray` 的边界，则抛出 {{jsxref("RangeError")}}。
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd><code>typedArray</code> 中需要进行按位异或的索引位置。</dd>
- <dt><code>value</code></dt>
- <dd>要进行按位异或的数字。</dd>
-</dl>
+## 描述
 
-<h3 id="返回值">返回值</h3>
+如果 a 和 b 不同，则按位异或操作产生 1。异或操作的真值表如下：
 
-<p>给定位置的旧值 (<code>typedArray[index]</code>)。</p>
+| `a` | `b` | `a ^ b` |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 1       |
+| 1   | 0   | 1       |
+| 1   | 1   | 0       |
 
-<h3 id="异常">异常</h3>
+例如，按位异或 `5 & 1` 将返回 `0100`，而 `0100` 是十进制为 `4` 。
 
-<ul>
- <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
- <li>假如 <code>typedArray</code> 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray</code> 的边界，则抛出 {{jsxref("RangeError")}}。</li>
-</ul>
-
-<h2 id="描述">描述</h2>
-
-<p>如果 a 和 b 不同，则按位异或操作产生 1。异或操作的真值表如下：</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th><code>a</code></th>
-   <th><code>b</code></th>
-   <th><code>a ^ b</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>1</td>
-   <td>0</td>
-  </tr>
- </tbody>
-</table>
-
-<p>例如，按位异或 <code>5 &amp; 1</code> 将返回 <code>0100</code>，而 <code>0100</code> 是十进制为 <code>4</code> 。</p>
-
-<pre>5  0101
+```plain
+5  0101
 1  0001
    ----
 4  0100
-</pre>
+```
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+```js
+const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.xor(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 4</pre>
+Atomics.load(ta, 0);  // 4
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.and()")}}</li>
- <li>{{jsxref("Atomics.or()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.and()")}}
+- {{jsxref("Atomics.or()")}}

@@ -3,41 +3,31 @@ title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
 translation_of: Web/API/HTMLParagraphElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
+**`HTMLParagraphElement`** 接口可以提供超过其继承的{{domxref("HTMLElement")}} 对象额外的属性 ，用以操作 {{HTMLElement("p")}} 元素.
 
-</div>
+{{InheritanceDiagram(600, 120)}}
 
-<p><strong><code>HTMLParagraphElement</code></strong> 接口可以提供超过其继承的{{domxref("HTMLElement")}} 对象额外的属性 ，用以操作 {{HTMLElement("p")}} 元素.</p>
+## 属性
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="属性">属性</h2>
+- {{domxref("HTMLParagraphElement.align")}} {{Deprecated_Inline}}
+  - : A {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("HTMLParagraphElement.align")}} {{Deprecated_Inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
-</dl>
+_No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Methods">Methods</h2>
-
-<p><em>No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.HTMLParagraphElement")}}
 
+## See also
 
-<p>{{Compat("api.HTMLParagraphElement")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("p") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("p") }}.

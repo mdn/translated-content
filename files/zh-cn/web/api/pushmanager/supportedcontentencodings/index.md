@@ -3,28 +3,24 @@ title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 translation_of: Web/API/PushManager/supportedContentEncodings
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>{{domxref("PushManager")}}的只读方法 <strong><code>supportedContentEncodings</code></strong> 返回一组支持内容编码，可以用在加密信息中发送的消息。</p>
+{{domxref("PushManager")}}的只读方法 **`supportedContentEncodings`** 返回一组支持内容编码，可以用在加密信息中发送的消息。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>encodings</em>[] = PushManager.<em>supportedContentEncodings</em></pre>
+```plain
+var encodings[] = PushManager.supportedContentEncodings
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个字符串数组</p>
+一个字符串数组
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PushManager.supportedContentEncodings")}}</p>
-</div>
-</div>
+{{Compat("api.PushManager.supportedContentEncodings")}}

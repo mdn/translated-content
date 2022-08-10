@@ -10,43 +10,40 @@ tags:
   - 生成器
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>throw</strong></code><strong><code>()</code></strong> 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 <code>done</code> 及 <code>value</code> 两个属性的对象。</p>
+**`throw()`** 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 `done` 及 `value` 两个属性的对象。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>gen</var>.throw(exception)</code></pre>
+```plain
+gen.throw(exception)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>exception</code></dt>
- <dd>用于抛出的异常。 使用 {{jsxref("Error")}} 的实例对调试非常有帮助。</dd>
-</dl>
+- `exception`
+  - : 用于抛出的异常。 使用 {{jsxref("Error")}} 的实例对调试非常有帮助。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>带有两个属性的{{jsxref("Object", "对象")}}：</p>
+带有两个属性的{{jsxref("Object", "对象")}}：
 
-<ul>
- <li><code>done</code> (boolean)
+- `done` (boolean)
 
-  <ul>
-   <li>如果迭代器已经返回了迭代序列的末尾，则值为 <code>true</code>。在这种情况下，可以指定迭代器 <code>value</code> 的返回值。 </li>
-   <li>如果迭代能够继续生产在序列中的下一个值，则值为 <code>false</code>。 这相当与不指定 done 属性的值。</li>
-  </ul>
- </li>
- <li><code>value</code> - 迭代器返回的任何 JavaScript 值。当 done 是 true 的时候可以省略。</li>
-</ul>
+  - 如果迭代器已经返回了迭代序列的末尾，则值为 `true`。在这种情况下，可以指定迭代器 `value` 的返回值。
+  - 如果迭代能够继续生产在序列中的下一个值，则值为 `false`。 这相当与不指定 done 属性的值。
 
-<h2 id="示例">示例</h2>
+- `value` - 迭代器返回的任何 JavaScript 值。当 done 是 true 的时候可以省略。
 
-<h3 id="Example:_Using_test">使用 <code>throw()</code></h3>
+## 示例
 
-<p>下面的例子展示了一个简单的生成器并使用 throw 方法向该生成器抛出一个异常，该异常通常可以通过 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 块进行捕获。</p>
+### 使用 `throw()`
 
-<pre class="brush: js">function* gen() {
+下面的例子展示了一个简单的生成器并使用 throw 方法向该生成器抛出一个异常，该异常通常可以通过 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 块进行捕获。
+
+```js
+function* gen() {
   while(true) {
     try {
        yield 42;
@@ -59,18 +56,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 var g = gen();
 g.next(); // { value: 42, done: false }
 g.throw(new Error("Something went wrong")); // "Error caught!"
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>
-</ul>
+- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)

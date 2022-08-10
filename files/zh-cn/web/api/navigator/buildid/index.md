@@ -8,28 +8,30 @@ tags:
   - 属性
 translation_of: Web/API/Navigator/buildID
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p>返回所使用浏览器的构建标识符。现代浏览器中，这个属性返回一个固定的时间戳作为私有的计量方法，比如 Firefox 64 及以后的版本返回 <code>20181001000000</code>。</p>
+返回所使用浏览器的构建标识符。现代浏览器中，这个属性返回一个固定的时间戳作为私有的计量方法，比如 Firefox 64 及以后的版本返回 `20181001000000`。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js"><em>buildID</em> = <em>navigator</em>.buildID;
-</pre>
+```js
+buildID = navigator.buildID;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>一个字符串，用来表示当前应用的构建标识。构建 ID 的格式为：<code>YYYYMMDDHHMMSS</code>。</p>
+一个字符串，用来表示当前应用的构建标识。构建 ID 的格式为：`YYYYMMDDHHMMSS`。
 
-<h2 id="示例"><strong>示例</strong></h2>
+## **示例**
 
-<pre class="brush: js">console.log(window.navigator.buildID);
-</pre>
+```js
+console.log(window.navigator.buildID);
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p>未得到任何公共标准支持。</p>
+未得到任何公共标准支持。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Navigator.buildID")}}</p>
+{{Compat("api.Navigator.buildID")}}

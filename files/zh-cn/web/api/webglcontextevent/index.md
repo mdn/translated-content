@@ -3,34 +3,33 @@ title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
 translation_of: Web/API/WebGLContextEvent
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><strong>WebContextEvent</strong> 接口属于 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，同时也是生成用来对 WebGL 渲染上下文作响应的事件接口。</p>
+**WebContextEvent** 接口属于 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，同时也是生成用来对 WebGL 渲染上下文作响应的事件接口。
 
-<h2 id="继承">继承</h2>
+## 继承
 
-<p><em><em>此接口从它的父接口 {{domxref("Event")}}继承属性和方法。</em></em></p>
+**此接口从它的父接口 {{domxref("Event")}}继承属性和方法。**
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em><em>此接口从它的父接口 {{domxref("Event")}}继承属性。</em></em></p>
+**此接口从它的父接口 {{domxref("Event")}}继承属性。**
 
-<dl>
- <dt>{{domxref("WebGLContextEvent.statusMessage")}}</dt>
- <dd>一个包含事件额外信息的只读属性。</dd>
-</dl>
+- {{domxref("WebGLContextEvent.statusMessage")}}
+  - : 一个包含事件额外信息的只读属性。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>此接口本身并没有定义任何方法，而是<em>从它的父接口 {{domxref("Event")}}继承方法。</em></em></p>
+_此接口本身并没有定义任何方法，而是从它的父接口 {{domxref("Event")}} 继承方法。_
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>使用 {{domxref("WEBGL_lose_context")}} 插件， 你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：</p>
+使用 {{domxref("WEBGL_lose_context")}} 插件， 你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextlost', function(e) {
@@ -40,20 +39,18 @@ canvas.addEventListener('webglcontextlost', function(e) {
 gl.getExtension('WEBGL_lose_context').loseContext();
 
 // 记录了 "webglcontextlost" 类型的 WebGLContextEvent 事件
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGLContextEvent")}}</p>
+{{Compat("api.WebGLContextEvent")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}</li>
- <li>事件：<a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a>, <a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a>, <a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}
+- 事件：[webglcontextlost](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [webglcontextrestored](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [webglcontextcreationerror](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

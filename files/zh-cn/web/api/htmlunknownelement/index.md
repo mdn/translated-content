@@ -5,30 +5,26 @@ tags:
   - 无效 标签 未知
 translation_of: Web/API/HTMLUnknownElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLUnknownElement</code></strong> 代表着一个无效的HTML元素，派生自 {{domxref("HTMLElement")}} 接口,，但它没有任何可用的附加属性或方法.</p>
+**`HTMLUnknownElement`** 代表着一个无效的 HTML 元素，派生自 {{domxref("HTMLElement")}} 接口,，但它没有任何可用的附加属性或方法.
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>没有特效属性，继承自父级 {{domxref("HTMLElement")}}.</em></p>
+_没有特效属性，继承自父级 {{domxref("HTMLElement")}}._
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>没有指定方法;继承来自父级的属性, {{domxref("HTMLElement")}}.</em></p>
+_没有指定方法;继承来自父级的属性, {{domxref("HTMLElement")}}._
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLUnknownElement")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>Obsolete or non-standard HTML elements implementing this interface: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}</li>
-</ul>
+- Obsolete or non-standard HTML elements implementing this interface: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}

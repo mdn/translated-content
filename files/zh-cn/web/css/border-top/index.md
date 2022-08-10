@@ -7,54 +7,61 @@ tags:
   - CSS 边框
 translation_of: Web/CSS/border-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 属性 <strong>border-top</strong>是属性 {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, 和{{Cssxref("border-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border"><code>border</code></a>。</p>
+CSS 属性 **border-top**是属性 {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, 和{{Cssxref("border-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框[`border`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border)。
 
-<p>{{EmbedInteractiveExample("pages/css/border-top.html")}}</p>
+{{EmbedInteractiveExample("pages/css/border-top.html")}}
 
-<p>与所有缩写属性（shorthand properties）一样，<strong>border-top</strong>始终设置它可以设置的所有属性的值，即使未指定它们也是如此。它将未指定的那些设置为其默认值。这意味着</p>
+与所有缩写属性（shorthand properties）一样，**border-top**始终设置它可以设置的所有属性的值，即使未指定它们也是如此。它将未指定的那些设置为其默认值。这意味着
 
-<pre class="brush: css">border-top-style: dotted;
-border-top: thick green;</pre>
+```css
+border-top-style: dotted;
+border-top: thick green;
+```
 
-<p>和下面的代码效果相同：</p>
+和下面的代码效果相同：
 
-<pre class="brush: css">border-top-style: dotted;
-border-top: none thick green;</pre>
+```css
+border-top-style: dotted;
+border-top: none thick green;
+```
 
-<p>在<code>border-top</code>前指定的{{cssxref("border-top-style")}}将会失效。因为{{cssxref("border-top-style")}} 默认值为<code>none</code>,故没有边界即没有指定<code>border-style</code></p>
+在`border-top`前指定的{{cssxref("border-top-style")}}将会失效。因为{{cssxref("border-top-style")}} 默认值为`none`,故没有边界即没有指定`border-style`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">border-top: 1px;
+```css
+border-top: 1px;
 border-top: 2px dotted;
-border-top: medium dashed green;</pre>
+border-top: medium dashed green;
+```
 
-<p>这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。</p>
+这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;br-width&gt; </code></dt>
- <dd>请参阅 {{Cssxref("border-top-width")}}.</dd>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>请参阅 {{Cssxref("border-top-style")}}.</dd>
- <dt><code>{{cssxref("&lt;color&gt;")}}</code></dt>
- <dd>请参阅 {{Cssxref("border-top-color")}}.</dd>
-</dl>
+- `<br-width>`
+  - : 请参阅 {{Cssxref("border-top-width")}}.
+- `<br-style>`
+  - : 请参阅 {{Cssxref("border-top-style")}}.
+- `{{cssxref("&lt;color&gt;")}}`
+  - : 请参阅 {{Cssxref("border-top-color")}}.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;div&gt;
+```html
+<div>
   This box has a border on the top side.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border-top: 4px dashed blue;
   background-color: gold;
   height: 100px;
@@ -62,14 +69,14 @@ border-top: medium dashed green;</pre>
   font-weight: bold;
   text-align: center;
 }
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Applying_a_top_border') }}</p>
+{{ EmbedLiveSample('Applying_a_top_border') }}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

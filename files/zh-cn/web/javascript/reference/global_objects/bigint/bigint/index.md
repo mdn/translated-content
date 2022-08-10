@@ -3,44 +3,38 @@ title: BigInt() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <strong><code>BigInt()</code></strong> 构造函数用来创建 {{jsxref("BigInt")}} 对象。</p>
+**`BigInt()`** 构造函数用来创建 {{jsxref("BigInt")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">BigInt(<em>value</em>);
-</pre>
+```plain
+BigInt(value);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>被创建的对象的数值。 可以是字符串或整数。</dd>
-</dl>
+- `value`
+  - : 被创建的对象的数值。 可以是字符串或整数。
 
-<div class="note">
-<p><strong>备注：</strong>: <code>BigInt()</code> 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。</p>
-</div>
+> **备注：**: `BigInt()` 不与 {{JSxRef("Operators/new", "new")}} 运算符一起使用。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">BigInt(123);
+```js
+BigInt(123);
 // 123n
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("BigInt")}} class</li>
-</ul>
+- {{jsxref("BigInt")}} class

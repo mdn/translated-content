@@ -6,37 +6,36 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/break
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>break 语句</strong>中止当前循环，{{jsxref("Statements/switch", "switch")}}语句或{{jsxref("Statements/label", "label")}} 语句，并把程序控制流转到紧接着被中止语句后面的语句。</p>
+**break 语句**中止当前循环，{{jsxref("Statements/switch", "switch")}}语句或{{jsxref("Statements/label", "label")}} 语句，并把程序控制流转到紧接着被中止语句后面的语句。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>break [label];</code></pre>
+```plain
+break [label];
+```
 
-<dl>
-    <dt><code>label</code> {{optional_inline}}</dt>
- <dd>与语句标签相关联的标识符。如果 break 语句不在一个循环或 {{jsxref("Statements/switch", "switch")}} 语句中，则该项是必须的。</dd>
-</dl>
+- `label` {{optional_inline}}
+  - : 与语句标签相关联的标识符。如果 break 语句不在一个循环或 {{jsxref("Statements/switch", "switch")}} 语句中，则该项是必须的。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>break</code>语句包含一个可选的标签，可允许程序摆脱一个被标记的语句。<code>break</code>语句需要内嵌在引用的标签中。被标记的语句可以是任何 {{jsxref("Statements/block", "块")}}语句；不一定是循环语句。</p>
+`break`语句包含一个可选的标签，可允许程序摆脱一个被标记的语句。`break`语句需要内嵌在引用的标签中。被标记的语句可以是任何 {{jsxref("Statements/block", "块")}}语句；不一定是循环语句。
 
-<p>break 语句不能在 function 函数体中直接使用，break 语句应嵌套在要中断的当前循环、switch 或 label 语句中。</p>
+break 语句不能在 function 函数体中直接使用，break 语句应嵌套在要中断的当前循环、switch 或 label 语句中。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="break_in_while_loop">break in while loop</h3>
+### break in while loop
 
-<p>下面的函数里有个 <code>break</code> 语句，当 <code>i</code> 为 3 时，会中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 3 * <code>x</code> 的值。</p>
+下面的函数里有个 `break` 语句，当 `i` 为 3 时，会中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 3 \* `x` 的值。
 
-<pre class="brush: js">function testBreak(x) {
+```js
+function testBreak(x) {
   var i = 0;
 
-  while (i &lt; 6) {
+  while (i < 6) {
     if (i == 3) {
       break;
     }
@@ -44,13 +43,15 @@ translation_of: Web/JavaScript/Reference/Statements/break
   }
 
   return i * x;
-}</pre>
+}
+```
 
-<h3 id="break_in_switch_statements">break in switch statements</h3>
+### break in switch statements
 
-<p>在下面的代码中， <code>break</code> 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到 case 后，就会执行相应的代码并中断循环体。</p>
+在下面的代码中， `break` 使用在 {{jsxref("Statements/switch", "switch")}} 语句中，当遇到匹配到 case 后，就会执行相应的代码并中断循环体。
 
-<pre>const food = "sushi";
+```plain
+const food = "sushi";
 
 switch (food) {
   case "sushi":
@@ -62,13 +63,15 @@ switch (food) {
   default:
     console.log("I have never heard of that dish.");
     break;
-}</pre>
+}
+```
 
-<h3 id="break_in_labeled_blocks">break in labeled blocks</h3>
+### break in labeled blocks
 
-<p>下面的代码中一起使用 <code>break</code> 语句和被标记的块语句。一个 <code>break</code> 语句必须内嵌在它引用的标记中。注意，<code>inner_block</code> 内嵌在 <code>outer_block</code> 中。</p>
+下面的代码中一起使用 `break` 语句和被标记的块语句。一个 `break` 语句必须内嵌在它引用的标记中。注意，`inner_block` 内嵌在 `outer_block` 中。
 
-<pre class="brush:js;">outer_block:{
+```js
+outer_block:{
 
   inner_block:{
     console.log ('1');
@@ -78,13 +81,14 @@ switch (food) {
 
   console.log ('2');        // skipped
 }
-</pre>
+```
 
-<h3 id="break_in_labeled_blocks_that_throw">break in labeled blocks that throw</h3>
+### break in labeled blocks that throw
 
-<p>下面的代码同样使用了 <code>break</code> 语句和被标记的块语句，但是产生了一个语法错误，因为它的 <code>break</code> 语句在 <code>block_1</code> 中，但是引用了 <code>block_2</code>。<code>break</code> 语句必须内嵌在它引用的标签中。</p>
+下面的代码同样使用了 `break` 语句和被标记的块语句，但是产生了一个语法错误，因为它的 `break` 语句在 `block_1` 中，但是引用了 `block_2`。`break` 语句必须内嵌在它引用的标签中。
 
-<pre class="brush:js;">block_1:{
+```js
+block_1:{
   console.log ('1');
   break block_2;            // SyntaxError: label not found
 }
@@ -92,16 +96,17 @@ switch (food) {
 block_2:{
   console.log ('2');
 }
-</pre>
+```
 
-<h3 id="break_within_functions">break within functions</h3>
+### break within functions
 
-<p>在下面的代码同样会产生 SyntaxError，因为它并没被正确的使用在循环、switch 或 label 语句中。</p>
+在下面的代码同样会产生 SyntaxError，因为它并没被正确的使用在循环、switch 或 label 语句中。
 
-<pre>function testBreak(x) {
+```plain
+function testBreak(x) {
   var i = 0;
 
-  while (i &lt; 6) {
+  while (i < 6) {
     if (i == 3) {
       (function() {
         break;
@@ -114,27 +119,27 @@ return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
-</pre>
+```
 
-<pre>block_1: {
+```plain
+block_1: {
   console.log('1');
   ( function() {
     break block_1; // SyntaxError: Undefined label 'block_1'
   })();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Statements/continue", "continue")}}</li>
- <li>{{jsxref("Statements/label", "label")}}</li>
- <li>{{jsxref("Statements/switch", "switch")}}</li>
-</ul>
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/switch", "switch")}}

@@ -8,46 +8,43 @@ tags:
   - 方法
 translation_of: Web/API/URL/revokeObjectURL
 ---
-<div>{{ApiRef("URL")}}</div>
+{{ApiRef("URL")}}
 
-<p><strong><code>URL.revokeObjectURL()</code> </strong> 静态方法用来释放一个之前已经存在的、通过调用 {{domxref("URL.createObjectURL()")}} 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。</p>
+**`URL.revokeObjectURL()` **静态方法用来释放一个之前已经存在的、通过调用 {{domxref("URL.createObjectURL()")}} 创建的 URL 对象。当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。
 
-<p>你可以在 <code>sourceopen</code> 被处理之后的任何时候调用 <code>revokeObjectURL()</code>。这是因为 <code>createObjectURL()</code> 仅仅意味着将一个媒体元素的 <code>src</code> 属性关联到一个 {{domxref("MediaSource")}} 对象上去。调用<code>revokeObjectURL()</code> 使这个潜在的对象回到原来的地方，允许平台在合适的时机进行垃圾收集。</p>
+你可以在 `sourceopen` 被处理之后的任何时候调用 `revokeObjectURL()`。这是因为 `createObjectURL()` 仅仅意味着将一个媒体元素的 `src` 属性关联到一个 {{domxref("MediaSource")}} 对象上去。调用`revokeObjectURL()` 使这个潜在的对象回到原来的地方，允许平台在合适的时机进行垃圾收集。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">window.URL.revokeObjectURL(object<em>URL</em>);
-</pre>
+```plain
+window.URL.revokeObjectURL(objectURL);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>objectURL</code></dt>
- <dd>一个 {{domxref("DOMString")}}，表示通过调用 {{domxref("URL.createObjectURL()") }} 方法产生的 URL 对象。</dd>
-</dl>
+- `objectURL`
+  - : 一个 {{domxref("DOMString")}}，表示通过调用 {{domxref("URL.createObjectURL()") }} 方法产生的 URL 对象。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>undefined</p>
+undefined
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>查看<a href="/zh-CN/docs/Using_files_from_web_applications#Example.3a_Using_object_URLs_to_display_images">使用对象 URL 显示图片</a>。</p>
+查看[使用对象 URL 显示图片](/zh-CN/docs/Using_files_from_web_applications#Example.3a_Using_object_URLs_to_display_images)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Using_files_from_web_applications">在 Web 应用程序中使用文件</a></li>
- <li><a href="/zh-CN/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images">使用对象 URL 显示图像</a></li>
- <li>{{domxref("URL.createObjectURL()") }}</li>
-</ul>
+- [在 Web 应用程序中使用文件](/zh-CN/docs/Using_files_from_web_applications)
+- [使用对象 URL 显示图像](/zh-CN/docs/Using_files_from_web_applications#Example_Using_object_URLs_to_display_images)
+- {{domxref("URL.createObjectURL()") }}

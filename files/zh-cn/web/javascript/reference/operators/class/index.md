@@ -7,29 +7,32 @@ tags:
   - ES6
 translation_of: Web/JavaScript/Reference/Operators/class
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>类表达式</strong>是用来定义类的一种语法。和<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>相同的一点是，类表达式可以是命名也可以是匿名的。如果是命名类表达式，这个名字只能在类体内部才能访问到。JavaScript 的类也是基于原型继承的。</p>
+**类表达式**是用来定义类的一种语法。和[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)相同的一点是，类表达式可以是命名也可以是匿名的。如果是命名类表达式，这个名字只能在类体内部才能访问到。JavaScript 的类也是基于原型继承的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">const MyClass = class <em>[className]</em> [extends] {
+```plain
+const MyClass = class [className] [extends] {
   // class body
-};</pre>
+};
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>类表达式的语法和<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class">类语句</a>的语法很类似，只是在类表达式中，你可以省略掉类名，而类语句中不能。</p>
+类表达式的语法和[类语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)的语法很类似，只是在类表达式中，你可以省略掉类名，而类语句中不能。
 
-<p>和类声明一样，类表达式中的代码也是强制<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>的。</p>
+和类声明一样，类表达式中的代码也是强制[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)的。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用类表达式">使用类表达式</h3>
+### 使用类表达式
 
-<p>下面的代码使用类表达式语法创建了一个匿名类，然后赋值给变量 Foo。</p>
+下面的代码使用类表达式语法创建了一个匿名类，然后赋值给变量 Foo。
 
-<pre class="brush: js">let Foo = class {
+```js
+let Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -39,13 +42,14 @@ translation_of: Web/JavaScript/Reference/Operators/class
 let instance = new Foo();
 instance.bar();
 // "Hello World!"
-</pre>
+```
 
-<h3 id="命名类表达式">命名类表达式</h3>
+### 命名类表达式
 
-<p>如果你想在类体内部也能引用这个类本身，那么你就可以使用命名类表达式，并且这个类名只能在类体内部访问。</p>
+如果你想在类体内部也能引用这个类本身，那么你就可以使用命名类表达式，并且这个类名只能在类体内部访问。
 
-<pre class="brush: js">const Foo = class NamedFoo {
+```js
+const Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;
@@ -62,21 +66,18 @@ NamedFoo.name;
 
 Foo.name;
 // "NamedFoo"
+```
 
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function"><code>函数表达式</code></a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/class"><code>类语句</code></a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Classes">类</a></li>
-</ul>
+- [`函数表达式`](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
+- [`类语句`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)

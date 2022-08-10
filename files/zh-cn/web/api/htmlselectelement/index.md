@@ -11,99 +11,92 @@ tags:
   - 选择
 translation_of: Web/API/HTMLSelectElement
 ---
-<div>
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLSelectElement</strong></code> 接口表示一个 {{HTMLElement("select")}} HTML 元素。这个元素也通过 {{domxref("HTMLElement")}} 接口从其他 HTML 元素共享所有属性和方法。</p>
+**`HTMLSelectElement`** 接口表示一个 {{HTMLElement("select")}} HTML 元素。这个元素也通过 {{domxref("HTMLElement")}} 接口从其他 HTML 元素共享所有属性和方法。
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
-</div>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>这个接口从 {{domxref("HTMLElement")}}，{{domxref("Element")}} 和 {{domxref("Node")}} 继承属性。</em></p>
+_这个接口从 {{domxref("HTMLElement")}}，{{domxref("Element")}} 和 {{domxref("Node")}} 继承属性。_
 
-<dl>
- <dt>{{domxref("HTMLSelectElement.autofocus")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.</dd>
- <dt>{{domxref("HTMLSelectElement.disabled")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.</dd>
- <dt>{{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLFormElement")}} referencing the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns <code>null</code>.</dd>
- <dt>{{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.</dd>
- <dt>{{domxref("HTMLSelectElement.length")}}</dt>
- <dd>An <code>unsigned long</code> The number of {{HTMLElement("option")}} elements in this <code>select</code> element.</dd>
- <dt>{{domxref("HTMLSelectElement.multiple")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.</dd>
- <dt>{{domxref("HTMLSelectElement.name")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.</dd>
- <dt>{{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.</dd>
- <dt>{{domxref("HTMLSelectElement.required")}}</dt>
- <dd>A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.</dd>
- <dt>{{domxref("HTMLSelectElement.selectedIndex")}}</dt>
- <dd>A <code>long</code> reflecting the index of the first selected {{HTMLElement("option")}} element. The value <code>-1</code> indicates no element is selected.</dd>
- <dt>{{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLCollection")}} representing the set of {{HTMLElement("option")}} elements that are selected.</dd>
- <dt>{{domxref("HTMLSelectElement.size")}}</dt>
- <dd>A <code>long</code> reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless <code>multiple</code> is <code>true</code>, in which case it is 4.</dd>
- <dt>{{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} represeting the form control's type. When <code>multiple</code> is <code>true</code>, it returns <code>"select-multiple"</code>; otherwise, it returns <code>"select-one"</code>.</dd>
- <dt>{{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (<code>willValidate</code> is false), or it satisfies its constraints.</dd>
- <dt>{{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("ValidityState")}} reflecting the validity state that this control is in.</dd>
- <dt>{{domxref("HTMLSelectElement.value")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the value of the form control. Returns the <code>value</code> property of the first selected option element if there is one, otherwise the empty string.</dd>
- <dt>{{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}</dt>
- <dd>A {{jsxref("Boolean")}} that indicates whether the button is a candidate for constraint validation. It is <code>false</code> if any conditions bar it from constraint validation.</dd>
-</dl>
+- {{domxref("HTMLSelectElement.autofocus")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
+- {{domxref("HTMLSelectElement.disabled")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
+- {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
+  - : An {{domxref("HTMLFormElement")}} referencing the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns `null`.
+- {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
+  - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
+- {{domxref("HTMLSelectElement.length")}}
+  - : An `unsigned long` The number of {{HTMLElement("option")}} elements in this `select` element.
+- {{domxref("HTMLSelectElement.multiple")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
+- {{domxref("HTMLSelectElement.name")}}
+  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
+- {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
+  - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
+- {{domxref("HTMLSelectElement.required")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
+- {{domxref("HTMLSelectElement.selectedIndex")}}
+  - : A `long` reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
+- {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
+  - : An {{domxref("HTMLCollection")}} representing the set of {{HTMLElement("option")}} elements that are selected.
+- {{domxref("HTMLSelectElement.size")}}
+  - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
+- {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} represeting the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
+- {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
+- {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}
+  - : A {{domxref("ValidityState")}} reflecting the validity state that this control is in.
+- {{domxref("HTMLSelectElement.value")}}
+  - : A {{domxref("DOMString")}} reflecting the value of the form control. Returns the `value` property of the first selected option element if there is one, otherwise the empty string.
+- {{domxref("HTMLSelectElement.willValidate")}}{{ReadOnlyInline}}
+  - : A {{jsxref("Boolean")}} that indicates whether the button is a candidate for constraint validation. It is `false` if any conditions bar it from constraint validation.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>这个接口从 {{domxref("HTMLElement")}}，{{domxref("Element")}} 和 {{domxref("Node")}} 继承属性。</em></p>
+_这个接口从 {{domxref("HTMLElement")}}，{{domxref("Element")}} 和 {{domxref("Node")}} 继承属性。_
 
-<dl>
- <dt>{{domxref("HTMLSelectElement.add()")}}</dt>
- <dd>Adds an element to the collection of <code>option</code> elements for this <code>select</code> element.</dd>
- <dt>{{domxref("HTMLSelectElement.blur()")}}{{Deprecated_Inline}}</dt>
- <dd>Removes input focus from this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</dd>
- <dt>{{domxref("HTMLSelectElement.checkValidity()")}}</dt>
- <dd>Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns <code>false</code>).</dd>
- <dt>{{domxref("HTMLSelectElement.focus()")}}{{Deprecated_Inline}}</dt>
- <dd>Gives input focus to this element. <em>This method is now implemented on {{domxref("HTMLElement")}}</em>.</dd>
- <dt>{{domxref("HTMLSelectElement.item()")}}</dt>
- <dd>Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.</dd>
- <dt>{{domxref("HTMLSelectElement.namedItem()")}}</dt>
- <dd>Gets the item in the options collection with the specified name. The name string can match either the <code>id</code> or the <code>name</code> attribute of an option node. You can also access an item by specifying the name in array-style brackets or parentheses, without calling this method explicitly.</dd>
- <dt>{{domxref("HTMLSelectElement.remove()")}}</dt>
- <dd>Removes the element at the specified index from the options collection for this <code>select</code> element.</dd>
- <dt>{{domxref("HTMLSelectElement.reportValidity()")}}</dt>
- <dd>This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns <code>false</code>; if there are no problems, it returns <code>true</code>.</dd>
- <dt>{{domxref("HTMLSelectElement.setCustomValidity()")}}</dt>
- <dd>Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does <em>not</em> have a custom validity error.</dd>
-</dl>
+- {{domxref("HTMLSelectElement.add()")}}
+  - : Adds an element to the collection of `option` elements for this `select` element.
+- {{domxref("HTMLSelectElement.blur()")}}{{Deprecated_Inline}}
+  - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
+- {{domxref("HTMLSelectElement.checkValidity()")}}
+  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns `false`).
+- {{domxref("HTMLSelectElement.focus()")}}{{Deprecated_Inline}}
+  - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
+- {{domxref("HTMLSelectElement.item()")}}
+  - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.
+- {{domxref("HTMLSelectElement.namedItem()")}}
+  - : Gets the item in the options collection with the specified name. The name string can match either the `id` or the `name` attribute of an option node. You can also access an item by specifying the name in array-style brackets or parentheses, without calling this method explicitly.
+- {{domxref("HTMLSelectElement.remove()")}}
+  - : Removes the element at the specified index from the options collection for this `select` element.
+- {{domxref("HTMLSelectElement.reportValidity()")}}
+  - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns `false`; if there are no problems, it returns `true`.
+- {{domxref("HTMLSelectElement.setCustomValidity()")}}
+  - : Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<p>使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 或给下面接口的 <code>on<em>eventname</em></code> 属性分配一个监听程序来监听这些事件：</p>
+使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 或给下面接口的 `oneventname` 属性分配一个监听程序来监听这些事件：
 
-<dl>
- <dt>{{domxref("HTMLElement/input_event", "input")}} 事件</dt>
- <dd>当 {{HTMLElement("input")}}, {{HTMLElement("select")}}, 或 {{HTMLElement("textarea")}} 元素的 <code>value</code> 改变时触发该事件。</dd>
-</dl>
+- {{domxref("HTMLElement/input_event", "input")}} 事件
+  - : 当 {{HTMLElement("input")}}, {{HTMLElement("select")}}, 或 {{HTMLElement("textarea")}} 元素的 `value` 改变时触发该事件。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Get_information_about_the_selected_option">Get information about the selected option</h3>
+### Get information about the selected option
 
-<pre class="brush: js">/* assuming we have the following HTML
-&lt;select id='s'&gt;
-    &lt;option&gt;First&lt;/option&gt;
-    &lt;option selected&gt;Second&lt;/option&gt;
-    &lt;option&gt;Third&lt;/option&gt;
-&lt;/select&gt;
+```js
+/* assuming we have the following HTML
+<select id='s'>
+    <option>First</option>
+    <option selected>Second</option>
+    <option>Third</option>
+</select>
 */
 
 var select = document.getElementById('s');
@@ -113,20 +106,18 @@ console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
 console.log(select.options[select.selectedIndex].value) // Second
-</pre>
+```
 
-<p>A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the <code>&lt;select&gt;</code>. This will tell you when the value changes, and you can then update anything you need to. See <a href="/en-US/docs/Web/API/HTMLElement/change_event#&lt;select>_element">the example provided</a> in the documentation for the <code>change</code> event for details.</p>
+A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/en-US/docs/Web/API/HTMLElement/change_event#<select>_element) in the documentation for the `change` event for details.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.HTMLSelectElement")}}</p>
+{{Compat("api.HTMLSelectElement")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{HTMLElement("select")}} HTML 元素</li>
-</ul>
+- {{HTMLElement("select")}} HTML 元素

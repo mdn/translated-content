@@ -8,63 +8,64 @@ tags:
   - 解码
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>decodeURIComponent()</strong></code> 方法用于解码由 {{jsxref("encodeURIComponent")}} 方法或者其它类似方法编码的部分统一资源标识符（URI）。</p>
+**`decodeURIComponent()`** 方法用于解码由 {{jsxref("encodeURIComponent")}} 方法或者其它类似方法编码的部分统一资源标识符（URI）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>decodeURIComponent(<em>encodedURI</em>)</code></pre>
+```plain
+decodeURIComponent(encodedURI)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>编码后的部分 URI</dd>
-</dl>
+- `encodedURI`
+  - : 编码后的部分 URI
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个解码后的统一资源标识符（URI）字符串，处理前的 URI 经过了给定格式的编码。</p>
+一个解码后的统一资源标识符（URI）字符串，处理前的 URI 经过了给定格式的编码。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<p>当该方法使用不当时，将会抛出一个{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。</p>
+当该方法使用不当时，将会抛出一个{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>将已编码 URI 中所有能识别的转义序列转换成原字符。</p>
+将已编码 URI 中所有能识别的转义序列转换成原字符。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="解码一个西里尔字母的_url">解码一个西里尔字母的 URL</h3>
+### 解码一个西里尔字母的 URL
 
-<pre class="brush: js">decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="捕捉异常">捕捉异常</h3>
+### 捕捉异常
 
-<pre class="brush: js">try {
+```js
+try {
   var a = decodeURIComponent('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
-// URIError: malformed URI sequence</pre>
+// URIError: malformed URI sequence
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
-</ul>
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}

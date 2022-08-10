@@ -5,44 +5,44 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>全局属性 <code><strong>Infinity</strong></code> 是一个数值，表示无穷大。</p>
+全局属性 **`Infinity`** 是一个数值，表示无穷大。
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<p>{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}</p>
+{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>Infinity</code> 是<em>全局对象</em>（<em>global object</em>）的一个属性，即它是一个全局变量。</p>
+`Infinity` 是*全局对象*（_global object_）的一个属性，即它是一个全局变量。
 
-<p><code>Infinity</code> 的初始值是 {{jsxref("Number.POSITIVE_INFINITY")}}。<code>Infinity</code>（正无穷大）大于任何值。</p>
+`Infinity` 的初始值是 {{jsxref("Number.POSITIVE_INFINITY")}}。`Infinity`（正无穷大）大于任何值。
 
-<p>该值的意义与数学无穷大略有不同。 有关详细信息，请参见{{jsxref("Number.POSITIVE_INFINITY")}}。</p>
+该值的意义与数学无穷大略有不同。 有关详细信息，请参见{{jsxref("Number.POSITIVE_INFINITY")}}。
 
-<p>在 ECMAScript 5 的规范中， <code>Infinity</code> 是只读的（实现于 JavaScript 1.8.5 / Firefox 4）。</p>
+在 ECMAScript 5 的规范中， `Infinity` 是只读的（实现于 JavaScript 1.8.5 / Firefox 4）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">console.log(Infinity          ); /* Infinity */
+```js
+console.log(Infinity          ); /* Infinity */
 console.log(Infinity + 1      ); /* Infinity */
 console.log(Math.pow(10, 1000)); /* Infinity */
 console.log(Math.log(0)       ); /* -Infinity */
-console.log(1 / Infinity      ); /* 0 */</pre>
+console.log(1 / Infinity      ); /* 0 */
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite")}}

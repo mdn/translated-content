@@ -5,101 +5,97 @@ tags:
   - Element.querySelector()
 translation_of: Web/API/Element/querySelector
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}返回与指定的选择器组匹配的元素的后代的第一个元素。
 
-<div>返回与指定的选择器组匹配的元素的后代的第一个元素。</div>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```js
+element = baseElement.querySelector(selectors);
+```
 
-<pre class="brush:js"><var>element</var> = baseElement.querySelector(<em>selector</em>s);
-</pre>
+- `element` 和 `baseElement` 是 {{domxref("element")}} 对象。
+- `selectors` 是一个 CSS 选择器字符串 ( [selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors) )
 
-<ul>
- <li><code>element</code> 和 <code>baseElement</code> 是 {{domxref("element")}} 对象。</li>
- <li><code>selectors</code> 是一个 CSS 选择器字符串 ( <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a> )</li>
-</ul>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `selectors`
+  - : 一组用来匹配{{domxref("Element")}} `baseElement`后代元素的选择器[selectors](/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。
 
-<dl>
- <dt><code>selectors</code></dt>
- <dd>一组用来匹配{{domxref("Element")}} <code>baseElement</code>后代元素的选择器<a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">selectors</a>；必须是合法的 css 选择器，否则会引起语法错误。返回匹配指定选择器的第一个元素。</dd>
-</dl>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+基础元素（baseElement）的子元素中满足指定选择器组的第一个元素。匹配过程会对整个结构进行，包括基础元素和他的后代元素的集合以外的元素，也就是说，选择器首先会应用到整个文档，而不是基础元素，来创建一个可能有匹配元素的初始列表。然后从结果元素中检查它们是否是基础元素的后代元素。第一个匹配的元素将会被 querySelector() 方法返回。
 
-<p>基础元素（baseElement）的子元素中满足指定选择器组的第一个元素。匹配过程会对整个结构进行，包括基础元素和他的后代元素的集合以外的元素，也就是说，选择器首先会应用到整个文档，而不是基础元素，来创建一个可能有匹配元素的初始列表。然后从结果元素中检查它们是否是基础元素的后代元素。第一个匹配的元素将会被 querySelector() 方法返回。</p>
+如果没有找到匹配项，返回值为 null。
 
-<p>如果没有找到匹配项，返回值为 null。</p>
+### 异常
 
-<h3 id="异常">异常</h3>
+- `SyntaxError`
+  - : 指定的选择器无效。
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>指定的选择器无效。</dd>
-</dl>
+## 例子
 
-<h2 id="Example">例子</h2>
+我们来看几个例子。
 
-<p>我们来看几个例子。</p>
+### 查找一个具有特殊属性值的元素
 
-<h3 id="查找一个具有特殊属性值的元素">查找一个具有特殊属性值的元素</h3>
+在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为“text/css”的 type 属性的{{HTMLElement("style")}}元素：
 
-<p>在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为“text/css”的 type 属性的{{HTMLElement("style")}}元素：</p>
+```js
+let el = document.body.querySelector("style[type='text/css'], style:not([type])");
+```
 
-<pre class="brush:js">let el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+### 整个层次结构有效
 
-<h3 id="整个层次结构有效">整个层次结构有效</h3>
+下面的例子演示了在应用选择器时考虑整个文档的层次结构，因此在定位匹配时仍然考虑指定的 **baseElement** 之外的级别。
 
-<p>下面的例子演示了在应用选择器时考虑整个文档的层次结构，因此在定位匹配时仍然考虑指定的 <strong>baseElement</strong> 之外的级别。</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;h5&gt;Original content&lt;/h5&gt;
-  &lt;p&gt;
+```html
+<div>
+  <h5>Original content</h5>
+  <p>
     inside paragraph
-    &lt;span&gt;inside span&lt;/span&gt;
+    <span>inside span</span>
     inside paragraph
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;h5&gt;Output&lt;/h5&gt;
-  &lt;div id="output"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+<div>
+  <h5>Output</h5>
+  <div id="output"></div>
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush:js">var baseElement = document.querySelector("p");
+```js
+var baseElement = document.querySelector("p");
 document.getElementById("output").innerHTML =
-         (baseElement.querySelector("div span").innerHTML);</pre>
+         (baseElement.querySelector("div span").innerHTML);
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>结果是像这样的：</p>
+结果是像这样的：
 
-<p>{{ EmbedLiveSample('整个层次结构有效', 600, 160) }}</p>
+{{ EmbedLiveSample('整个层次结构有效', 600, 160) }}
 
-<p>注意，尽管基础元素没有包括选择器中含有的 {{domxref("div")}} 元素，选择器"<code>div span</code>"依旧匹配了其中的{{HTMLElement("span")}}元素。 </p>
+注意，尽管基础元素没有包括选择器中含有的 {{domxref("div")}} 元素，选择器"`div span`"依旧匹配了其中的{{HTMLElement("span")}}元素。
 
-<h3 id="更多例子">更多例子</h3>
+### 更多例子
 
-<p>{{domxref("Document.querySelector()")}} 查看更多正确格式选择器的例子。</p>
+{{domxref("Document.querySelector()")}} 查看更多正确格式选择器的例子。
 
-<h2 id="Notes">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specification">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/DOM/Element.querySelectorAll"><code>element.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelector"><code>document.querySelector</code></a></li>
- <li><a href="/en-US/docs/DOM/Document.querySelectorAll"><code>document.querySelectorAll</code></a></li>
- <li><a href="/en-US/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+- [`element.querySelectorAll`](/en-US/docs/DOM/Element.querySelectorAll)
+- [`document.querySelector`](/en-US/docs/DOM/Document.querySelector)
+- [`document.querySelectorAll`](/en-US/docs/DOM/Document.querySelectorAll)
+- [Code snippets for querySelector](/en-US/docs/Code_snippets/QuerySelector)

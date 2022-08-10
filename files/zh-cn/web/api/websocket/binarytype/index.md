@@ -10,33 +10,29 @@ tags:
 translation_of: Web/API/WebSocket/binaryType
 original_slug: Web/API/WebSocket/二进制类型
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.binaryType</code></strong> 返回 websocket 连接所传输二进制数据的类型。</p>
+**`WebSocket.binaryType`** 返回 websocket 连接所传输二进制数据的类型。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>var binaryType</em> = aWebSocket.binaryType;</pre>
+```plain
+var binaryType = aWebSocket.binaryType;
+```
 
-<h2 id="返回值">返回值</h2>
+## 返回值
 
-<p> 一条{{DOMXref("DOMString")}}:</p>
+一条{{DOMXref("DOMString")}}:
 
-<dl>
- <dt><code>"blob"</code></dt>
- <dd>如果传输的是 {{domxref("Blob")}} 类型的数据。</dd>
- <dt><code>"arraybuffer"</code></dt>
- <dd>如果传输的是 {{jsxref("ArrayBuffer")}} 类型的数据。
- <p> </p>
- </dd>
-</dl>
+- `"blob"`
+  - : 如果传输的是 {{domxref("Blob")}} 类型的数据。
+- `"arraybuffer"`
+  - : 如果传输的是 {{jsxref("ArrayBuffer")}} 类型的数据。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.WebSocket.binaryType")}}</p>
+{{Compat("api.WebSocket.binaryType")}}

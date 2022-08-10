@@ -7,71 +7,69 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/marker
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>marker</code>元素定义了在特定的{{ SVGElement("path") }}元素、{{ SVGElement("line") }}元素、{{ SVGElement("polyline") }}元素或者{{ SVGElement("polygon") }}元素上绘制的箭头或者多边标记图形。</p>
+`marker`元素定义了在特定的{{ SVGElement("path") }}元素、{{ SVGElement("line") }}元素、{{ SVGElement("polyline") }}元素或者{{ SVGElement("polygon") }}元素上绘制的箭头或者多边标记图形。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3267/marker.svg">marker.svg</a></p>
+» [marker.svg](https://developer.mozilla.org/files/3267/marker.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("viewBox") }}</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("viewBox") }}
+- {{ SVGAttr("preserveAspectRatio") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("markerUnits") }}</li>
- <li>{{ SVGAttr("refX") }}</li>
- <li>{{ SVGAttr("refY") }}</li>
- <li>{{ SVGAttr("markerWidth") }}</li>
- <li>{{ SVGAttr("markerHeight") }}</li>
- <li>{{ SVGAttr("orient") }}</li>
-</ul>
+- {{ SVGAttr("markerUnits") }}
+- {{ SVGAttr("refX") }}
+- {{ SVGAttr("refY") }}
+- {{ SVGAttr("markerWidth") }}
+- {{ SVGAttr("markerHeight") }}
+- {{ SVGAttr("orient") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGMarkerElement">SVGMarkerElement</a></code> 接口。</p>
+该元素实现了[`SVGMarkerElement`](/en/DOM/SVGMarkerElement) 接口。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre><code>&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120" viewBox="0 0 120 120"
-    xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+```plain
+<?xml version="1.0"?>
+<svg width="120" height="120" viewBox="0 0 120 120"
+    xmlns="http://www.w3.org/2000/svg" version="1.1">
 
-  &lt;defs&gt;
-    &lt;marker id="Triangle" viewBox="0 0 10 10" refX="1" refY="5"
-        markerWidth="6" markerHeight="6" orient="auto"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
+  <defs>
+    <marker id="Triangle" viewBox="0 0 10 10" refX="1" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
 
-  &lt;polyline points="10,90 50,80 90,20" fill="none" stroke="black"
-      stroke-width="2" marker-end="url(#Triangle)" /&gt;
-&lt;/svg&gt;</code></pre>
+  <polyline points="10,90 50,80 90,20" fill="none" stroke="black"
+      stroke-width="2" marker-end="url(#Triangle)" />
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.marker")}}

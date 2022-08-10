@@ -9,31 +9,32 @@ tags:
   - 键盘事件
 translation_of: Web/API/KeyboardEvent/isComposing
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>KeyboardEvent.isComposing</strong></code> 只读属性，返回一个 {{jsxref("Boolean")}} 值，表示该事件是否在 {{event("compositionstart")}} 之后和 {{event("compositionend")}} 之前被触发。</p>
+**`KeyboardEvent.isComposing`** 只读属性，返回一个 {{jsxref("Boolean")}} 值，表示该事件是否在 {{event("compositionstart")}} 之后和 {{event("compositionend")}} 之前被触发。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>bool</em> = <em>event</em>.isComposing;</pre>
+```plain
+var bool = event.isComposing;
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">var kbdEvent = new KeyboardEvent("syntheticKey", false);
+```js
+var kbdEvent = new KeyboardEvent("syntheticKey", false);
 console.log(kbdEvent.isComposing); // return false
-</pre>
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{ event("compositionstart") }} 与 {{ event("compositionend")}}</li>
- <li>{{domxref("KeyboardEvent")}}</li>
-</ul>
+- {{ event("compositionstart") }} 与 {{ event("compositionend")}}
+- {{domxref("KeyboardEvent")}}

@@ -3,15 +3,13 @@ title: Node.lookupPrefix
 slug: Web/API/Node/lookupPrefix
 translation_of: Web/API/Node/lookupPrefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>返回一个和指定命名空间 URI 绑定的命名空间前缀。如果没有，返回 <code>null</code>。如果有多个绑定的前缀，返回的结果根据浏览器实现而定。</p>
+返回一个和指定命名空间 URI 绑定的命名空间前缀。如果没有，返回 `null`。如果有多个绑定的前缀，返回的结果根据浏览器实现而定。
 
-<p>根据 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=312019">bug 312019</a>, 该方法对动态指定的命名空间不起作用.(也就是通过<a href="/en/DOM/Node.prefix">Node.prefix</a>指定的).</p>
+根据 [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), 该方法对动态指定的命名空间不起作用.(也就是通过[Node.prefix](/en/DOM/Node.prefix)指定的).
 
-<h3 id="相关链接">相关链接</h3>
+### 相关链接
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix">http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix</a></li>
- <li><a href="/En/Code_snippets/LookupPrefix">Code snippets: lookupPrefix</a></li>
-</ul>
+- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
+- [Code snippets: lookupPrefix](/En/Code_snippets/LookupPrefix)

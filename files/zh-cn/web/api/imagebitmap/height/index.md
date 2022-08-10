@@ -3,16 +3,14 @@ title: ImageBitmap.height
 slug: Web/API/ImageBitmap/height
 translation_of: Web/API/ImageBitmap/height
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p><code><strong>只读属性 ImageBitmap.height</strong></code> 返回 {{domxref("ImageBitmap")}} 对象的 CSS 像素高度。</p>
+**`只读属性 ImageBitmap.height`** 返回 {{domxref("ImageBitmap")}} 对象的 CSS 像素高度。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.ImageBitmap.height")}}</p>
+{{Compat("api.ImageBitmap.height")}}

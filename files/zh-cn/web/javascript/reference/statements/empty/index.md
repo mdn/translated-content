@@ -6,43 +6,45 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>空语句</strong>用来表明没有语句，尽管 JavaScript 语法希望有语句。</p>
+**空语句**用来表明没有语句，尽管 JavaScript 语法希望有语句。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">;
-</pre>
+```plain
+;
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>空语句是一个分号（;），表示不会执行任何语句，即使 JavaScript 语法需要一个语句。 相反，当你需要多行语句，但 JavaScript 只允许一个时，可以使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">语句块</a>；语句块可以将多条语句合并为一个。</p>
+空语句是一个分号（;），表示不会执行任何语句，即使 JavaScript 语法需要一个语句。 相反，当你需要多行语句，但 JavaScript 只允许一个时，可以使用[语句块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)；语句块可以将多条语句合并为一个。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>空语句有时与循环语句一起使用。以下示例使用空循环体：</p>
+空语句有时与循环语句一起使用。以下示例使用空循环体：
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i &lt; arr.length; arr[i++] = 0) /* empty statement */ ;
+for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
 
 console.log(arr)
 // [0, 0, 0]
-</pre>
+```
 
-<p><strong>提示：</strong>在使用空语句的情况下专门写上注释是个不错的主意，因为不是很容易区分空语句和普通的分号。下面的示例可能不是故意加上分号的：</p>
+**提示：**在使用空语句的情况下专门写上注释是个不错的主意，因为不是很容易区分空语句和普通的分号。下面的示例可能不是故意加上分号的：
 
-<pre class="brush: js">if (condition);       // Caution, this "if" does nothing!
+```js
+if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this gets always executed!!!
-</pre>
+```
 
-<p>另一个例子：<a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if...else</code></a> 语句不带花括号（<code>{}</code>）。如果<code>three</code>为<code>true</code>, 不会发生任何事，<code>four</code>不会执行，同时<code>else</code>从句中的<code>launchRocket()</code>函数也不会执行。</p>
+另一个例子：[`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句不带花括号（`{}`）。如果`three`为`true`, 不会发生任何事，`four`不会执行，同时`else`从句中的`launchRocket()`函数也不会执行。
 
-<pre class="brush: js">if (one)
+```js
+if (one)
   doOne();
 else if (two)
   doTwo();
@@ -51,20 +53,17 @@ else if (three)
 else if (four)
   doFour();
 else
-  launchRocket();</pre>
+  launchRocket();
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Statements/block", "块语句")}}</li>
-</ul>
+- {{jsxref("Statements/block", "块语句")}}

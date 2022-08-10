@@ -7,87 +7,99 @@ tags:
   - HTML5
 translation_of: Web/API/Document/getElementsByClassName
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。</p>
+返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // or:
-<var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
+```plain
+var elements = document.getElementsByClassName(names); // or:
+var elements = rootElement.getElementsByClassName(names);
+```
 
-<ul>
- <li><var>elements</var> 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。</li>
- <li><var>names</var> 是一个字符串，表示要匹配的类名列表；类名通过空格分隔</li>
- <li>getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。</li>
-</ul>
+- _elements_ 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。
+- _names_ 是一个字符串，表示要匹配的类名列表；类名通过空格分隔
+- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<p>获取所有 class 为 'test' 的元素：</p>
+获取所有 class 为 'test' 的元素：
 
-<pre class="brush: js">document.getElementsByClassName('test');</pre>
+```js
+document.getElementsByClassName('test');
+```
 
-<p>获取所有 class 同时包括 'red' 和 'test' 的元素。</p>
+获取所有 class 同时包括 'red' 和 'test' 的元素。
 
-<pre class="brush: js">document.getElementsByClassName('red test');</pre>
+```js
+document.getElementsByClassName('red test');
+```
 
-<p>在 id 为'main'的元素的子节点中，获取所有 class 为'test'的元素</p>
+在 id 为'main'的元素的子节点中，获取所有 class 为'test'的元素
 
-<pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
+```js
+document.getElementById('main').getElementsByClassName('test');
+```
 
-<p>我们还可以对任意的  {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递  <var>HTMLCollection</var> 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：</p>
+我们还可以对任意的 {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递 _HTMLCollection_ 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'DIV';
 });
-</pre>
+```
 
-<h3 id="获取第一个类名为_test_的元素">获取第一个类名为 test 的元素</h3>
+### 获取第一个类名为 test 的元素
 
-<p>这是 <code>getElementsByClassName()</code> 的通常用法：</p>
+这是 `getElementsByClassName()` 的通常用法：
 
-<pre class="brush: html">&lt;html&gt;
-&lt;body&gt;
+```html
+<html>
+<body>
 
-    &lt;div id="parent-id"&gt;
-        &lt;p&gt;hello world 1&lt;/p&gt;
-        &lt;p class="test"&gt;hello world 2&lt;/p&gt;
-        &lt;p&gt;hello world 3&lt;/p&gt;
-        &lt;p&gt;hello world 4&lt;/p&gt;
-    &lt;/div&gt;
+    <div id="parent-id">
+        <p>hello world 1</p>
+        <p class="test">hello world 2</p>
+        <p>hello world 3</p>
+        <p>hello world 4</p>
+    </div>
 
-    &lt;script&gt;
+    <script>
         var parentDOM = document.getElementById("parent-id");
 
         var test = parentDOM.getElementsByClassName("test"); // 匹配类名的元素集合，不是元素本身
         console.log(test); //HTMLCollection[1]
 
         var testTarget = parentDOM.getElementsByClassName("test")[0]; // 我们想要取到的第一个元素
-        console.log(testTarget); //&lt;p class="test"&gt;hello world 2&lt;/p&gt;
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        console.log(testTarget); //<p class="test">hello world 2</p>
+    </script>
+</body>
+</html>
+```
 
-<h2 id="多个_Class_示例">多个 Class 示例</h2>
+## 多个 Class 示例
 
-<p><code>document.getElementsByClassName</code> 的工作方式与 <code>document.querySelector</code> 和 <code>document.querySelectorAll</code> 很相似。 只有所有 className 都匹配的元素会被选择。</p>
+`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。 只有所有 className 都匹配的元素会被选择。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"><code>&lt;span class="orange fruit"&gt;Orange Fruit&lt;/span&gt;
-&lt;span class="orange juice"&gt;Orange Juice&lt;/span&gt;
-&lt;span class="apple juice"&gt;Apple Juice&lt;/span&gt;
-&lt;span class="foo bar"&gt;Something Random&lt;/span&gt;
-&lt;textarea id="resultArea" style="width:100%;height:7em"&gt;&lt;/textarea&gt;</code></pre>
+```html
+<span class="orange fruit">Orange Fruit</span>
+<span class="orange juice">Orange Juice</span>
+<span class="apple juice">Apple Juice</span>
+<span class="foo bar">Something Random</span>
+<textarea id="resultArea" style="width:100%;height:7em"></textarea>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js"><code>// getElementsByClassName selects partial matches
+```js
+// getElementsByClassName selects partial matches
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
@@ -95,20 +107,21 @@ for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {
 // querySelector only selects full complete matches
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
-document.getElementById("resultArea").value = result;</code></pre>
+document.getElementById("resultArea").value = result;
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('多个_Class_示例')}}</p>
+{{EmbedLiveSample('多个_Class_示例')}}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

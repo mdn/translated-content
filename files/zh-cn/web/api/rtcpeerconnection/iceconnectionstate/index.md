@@ -3,43 +3,43 @@ title: RTCPeerConnection.iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
 translation_of: Web/API/RTCPeerConnection/iceConnectionState
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><code><strong>RTCPeerConnection.iceConnectionState</strong></code> 是一个只读属性，用于描述连接的 ICE 连接状态，返回值为枚举类型。</p>
+**`RTCPeerConnection.iceConnectionState`** 是一个只读属性，用于描述连接的 ICE 连接状态，返回值为枚举类型。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"> var state = <em>peerConnection</em>.iceConnectionState;</pre>
+```plain
+ var state = peerConnection.iceConnectionState;
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>RTCIceConnectionState</code> 的返回值为下面列举中的一种：</p>
+`RTCIceConnectionState` 的返回值为下面列举中的一种：
 
-<ul>
- <li><code>"new"</code>: ICE 代理正在搜集地址或者等待远程候选可用。</li>
- <li><code>"checking"</code>: ICE 代理已收到至少一个远程候选，并进行校验，无论此时是否有可用连接。同时可能在继续收集候选。</li>
- <li><code>"connected"</code>: ICE 代理至少对每个候选发现了一个可用的连接，此时仍然会继续测试远程候选以便发现更优的连接。同时可能在继续收集候选。</li>
- <li><code>"completed"</code>: ICE 代理已经发现了可用的连接，不再测试远程候选。</li>
- <li><code>"failed"</code>: ICE 候选测试了所有远程候选没有发现匹配的候选。也可能有些候选中发现了一些可用连接。</li>
- <li><code>"disconnected"</code>: 测试不再活跃，这可能是一个暂时的状态，可以自我恢复。</li>
- <li><code>"closed"</code>: ICE 代理关闭，不再应答任何请求。</li>
-</ul>
+- `"new"`: ICE 代理正在搜集地址或者等待远程候选可用。
+- `"checking"`: ICE 代理已收到至少一个远程候选，并进行校验，无论此时是否有可用连接。同时可能在继续收集候选。
+- `"connected"`: ICE 代理至少对每个候选发现了一个可用的连接，此时仍然会继续测试远程候选以便发现更优的连接。同时可能在继续收集候选。
+- `"completed"`: ICE 代理已经发现了可用的连接，不再测试远程候选。
+- `"failed"`: ICE 候选测试了所有远程候选没有发现匹配的候选。也可能有些候选中发现了一些可用连接。
+- `"disconnected"`: 测试不再活跃，这可能是一个暂时的状态，可以自我恢复。
+- `"closed"`: ICE 代理关闭，不再应答任何请求。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre>var pc = new RTCPeerConnection();
-var state = pc.iceConnectionState;</pre>
+```plain
+var pc = new RTCPeerConnection();
+var state = pc.iceConnectionState;
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参考文档">参考文档</h2>
+## 参考文档
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)

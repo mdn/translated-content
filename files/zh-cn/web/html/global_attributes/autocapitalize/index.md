@@ -7,27 +7,23 @@ tags:
   - HTML
 translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
-<p>{{HTMLSidebar("Global_attributes")}}</p>
+{{HTMLSidebar("Global_attributes")}}
 
-<p>The <code><strong>autocapitalize</strong></code> <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a> 是一个枚举属性，它控制用户输入/编辑文本输入时文本输入是否自动大写，以及如何自动大写。属性必须取下列值之一：</p>
+The **`autocapitalize`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是一个枚举属性，它控制用户输入/编辑文本输入时文本输入是否自动大写，以及如何自动大写。属性必须取下列值之一：
 
-<ul>
- <li><code>off</code> or <code>none</code>: 没有应用自动大写（所有字母都默认为小写字母）。</li>
- <li><code>on</code> or <code>sentences</code>: 每个<strong>句子</strong>的第一个字母默认为大写字母；所有其他字母都默认为小写字母。</li>
- <li><code>words</code>: 每个<strong>单词</strong>的第一个字母默认为大写字母；所有其他字母都默认为小写字母。</li>
- <li><code>characters</code>: 所有的<strong>字母</strong>都默认为大写。</li>
-</ul>
+- `off` or `none`: 没有应用自动大写（所有字母都默认为小写字母）。
+- `on` or `sentences`: 每个**句子**的第一个字母默认为大写字母；所有其他字母都默认为小写字母。
+- `words`: 每个**单词**的第一个字母默认为大写字母；所有其他字母都默认为小写字母。
+- `characters`: 所有的**字母**都默认为大写。
 
-<p>在物理键盘上输入时，<code>autocapitalize</code> 属性不会影响行为。相反，它会影响其他输入机制的行为，比如移动设备的虚拟键盘和语音输入。这种机制的行为是，它们经常通过自动地将第一个句子的字母大写来帮助用户。<code>autocapitalize</code> 属性使作者能够覆盖每个元素的行为。</p>
+在物理键盘上输入时，`autocapitalize` 属性不会影响行为。相反，它会影响其他输入机制的行为，比如移动设备的虚拟键盘和语音输入。这种机制的行为是，它们经常通过自动地将第一个句子的字母大写来帮助用户。`autocapitalize` 属性使作者能够覆盖每个元素的行为。
 
-<p><code>autocapitalize</code> 属性永远不会为带有 {{htmlattrxref("type", "input")}}  属性，其值为  <code>url</code>, <code>email</code> 或 <code>password</code>的 {{HTMLElement("input")}} 元素启用自动大写。</p>
+`autocapitalize` 属性永远不会为带有 {{htmlattrxref("type", "input")}} 属性，其值为 `url`, `email` 或 `password`的 {{HTMLElement("input")}} 元素启用自动大写。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat}}</p>
+{{Compat}}

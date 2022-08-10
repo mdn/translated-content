@@ -8,15 +8,16 @@ tags:
   - TypedArray.from()
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>TypedArray.of()</code> 方法创建一个具有可变数量参数的新<a href="/en-US/docs/">类型数组</a> 。此方法几乎与{{jsxref("Array.of()")}} 相同。</p>
+`TypedArray.of()` 方法创建一个具有可变数量参数的新[类型数组](/en-US/docs/) 。此方法几乎与{{jsxref("Array.of()")}} 相同。
 
-<h2 id="句法">句法</h2>
+## 句法
 
-<pre class="syntaxbox"><code><em>TypedArray</em>.of(<var>element0</var>[, <var>element1</var>[, ...[, <var>elementN</var>]]])
-</code>
-where <em>TypedArray</em> is one of:
+```plain
+TypedArray.of(element0[, element1[, ...[, elementN]]])
+
+where TypedArray is one of:
 
 Int8Array
 Uint8Array
@@ -26,47 +27,43 @@ Uint16Array
 Int32Array
 Uint32Array
 Float32Array
-Float64Array</pre>
+Float64Array
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>element<em>N</em></code></dt>
- <dd>创建类型数组的元素。</dd>
-</dl>
+- `elementN`
+  - : 创建类型数组的元素。
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>一个新的 {{jsxref("TypedArray")}}  实例。</p>
+一个新的 {{jsxref("TypedArray")}} 实例。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>{{jsxref("Array.of()")}} 和 <code><em>TypedArray</em>.of()</code>之间的一些细微区别：</p>
+{{jsxref("Array.of()")}} 和 `TypedArray.of()`之间的一些细微区别：
 
-<ul>
- <li>如果传递给 TypedArray.of 的这个值不是构造函数，TypedArray.of 将抛出一个{{jsxref("TypeError")}} ，其中 Array.of 默认创建一个新的 {{jsxref("Array")}}。</li>
- <li><code><em>TypedArray</em>.of</code> 使用 [[Put]] 其中 Array.of 使用 [[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。</li>
-</ul>
+- 如果传递给 TypedArray.of 的这个值不是构造函数，TypedArray.of 将抛出一个{{jsxref("TypeError")}} ，其中 Array.of 默认创建一个新的 {{jsxref("Array")}}。
+- `TypedArray.of` 使用 \[\[Put]] 其中 Array.of 使用 \[\[DefineProperty]]。因此，当使用{{jsxref("Proxy")}} 对象时，它调用 {{jsxref("Global_Objects/Proxy/handler/set", "handler.set")}} 创建新的元素，而不是 {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty")}}。
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<pre class="brush: js">Uint8Array.of(1);            // Uint8Array [ 1 ]
+```js
+Uint8Array.of(1);            // Uint8Array [ 1 ]
 Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
 Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
 Int16Array.of(undefined);    // IntArray [ 0 ]
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="也可以看看">也可以看看</h2>
+## 也可以看看
 
-<ul>
- <li>{{jsxref("TypedArray.from()")}}</li>
- <li>{{jsxref("Array.of()")}}</li>
-</ul>
+- {{jsxref("TypedArray.from()")}}
+- {{jsxref("Array.of()")}}

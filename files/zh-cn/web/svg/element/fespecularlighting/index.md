@@ -10,65 +10,59 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/feSpecularLighting
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>该滤镜照亮一个源图形，使用 alpha 通道作为隆起映射。该结果图像是一个基于光色的 RGBA 图象。该光照计算遵守标准<a href="http://en.wikipedia.org/wiki/Phong_reflection_model">冯氏照明模式</a>的镜面组件。结果图像依赖于光色、光的位置以及输入隆起映射的表面几何形状。光照计算的结果是叠加的。该滤镜假定观察者在 X 方向无穷远处。</p>
+该滤镜照亮一个源图形，使用 alpha 通道作为隆起映射。该结果图像是一个基于光色的 RGBA 图象。该光照计算遵守标准[冯氏照明模式](http://en.wikipedia.org/wiki/Phong_reflection_model)的镜面组件。结果图像依赖于光色、光的位置以及输入隆起映射的表面几何形状。光照计算的结果是叠加的。该滤镜假定观察者在 X 方向无穷远处。
 
-<p>该滤镜制作了一个图像，图像包含光照计算的镜面反射部分。如此一个映射是为了与纹理相结合，使用算术{{SVGElement("feComposite")}}方法的叠加。利用在应用到纹理图像前添加多个光映射，可以模拟多个光源。</p>
+该滤镜制作了一个图像，图像包含光照计算的镜面反射部分。如此一个映射是为了与纹理相结合，使用算术{{SVGElement("feComposite")}}方法的叠加。利用在应用到纹理图像前添加多个光映射，可以模拟多个光源。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("surfaceScale") }}</li>
- <li>{{ SVGAttr("specularConstant") }}</li>
- <li>{{ SVGAttr("specularExponent") }}</li>
- <li>{{ SVGAttr("kernelUnitLength") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("surfaceScale") }}
+- {{ SVGAttr("specularConstant") }}
+- {{ SVGAttr("specularExponent") }}
+- {{ SVGAttr("kernelUnitLength") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFESpecularLightingElement">SVGFESpecularLightingElement</a>接口。</code></p>
+该元素实现了`SVGFESpecularLightingElement接口。`
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feDistantLight") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("fePointLight") }}</li>
- <li>{{ SVGElement("feSpotLight") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feDistantLight") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("fePointLight") }}
+- {{ SVGElement("feSpotLight") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

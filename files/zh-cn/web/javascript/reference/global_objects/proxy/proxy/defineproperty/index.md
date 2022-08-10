@@ -4,66 +4,62 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.defineProperty()</code></strong> 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。</p>
+**`handler.defineProperty()`** 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   defineProperty: function(target, property, descriptor) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>下列参数将会被传递给 <code>defineProperty</code> 方法。<code>this</code> 绑定在 handler 对象上。</p>
+下列参数将会被传递给 `defineProperty` 方法。`this` 绑定在 handler 对象上。
 
-<dl>
- <dt><code>target</code></dt>
- <dd>目标对象。</dd>
- <dt><code>property</code></dt>
- <dd>待检索其描述的属性名。</dd>
- <dt><code>descriptor</code></dt>
- <dd>待定义或修改的属性的描述符。</dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `property`
+  - : 待检索其描述的属性名。
+- `descriptor`
+  - : 待定义或修改的属性的描述符。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>defineProperty</code> 方法必须以一个 {{jsxref("Boolean")}} 返回，表示定义该属性的操作成功与否。</p>
+`defineProperty` 方法必须以一个 {{jsxref("Boolean")}} 返回，表示定义该属性的操作成功与否。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code><strong>handler.defineProperty()</strong></code> 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。</p>
+**`handler.defineProperty()`** 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>该方法会拦截目标对象的以下操作：</p>
+该方法会拦截目标对象的以下操作：
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
- <li>{{jsxref("proxy.property='value'")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}
+- {{jsxref("proxy.property='value'")}}
 
-<h3 id="不变量">不变量</h3>
+### 不变量
 
-<p>如果违背了以下的不变量，proxy 会抛出 {{jsxref("TypeError")}}:</p>
+如果违背了以下的不变量，proxy 会抛出 {{jsxref("TypeError")}}:
 
-<ul>
- <li>如果目标对象不可扩展， 将不能添加属性。</li>
- <li>不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。</li>
- <li>如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。</li>
- <li>如果一个属性在目标对象中存在对应的属性，那么 <code>Object.defineProperty(target, prop, descriptor)</code> 将不会抛出异常。</li>
- <li>在严格模式下，<code>false</code> 作为 <code>handler.defineProperty</code> 方法的返回值的话将会抛出 {{jsxref("TypeError")}} 异常。</li>
-</ul>
+- 如果目标对象不可扩展， 将不能添加属性。
+- 不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。
+- 如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。
+- 如果一个属性在目标对象中存在对应的属性，那么 `Object.defineProperty(target, prop, descriptor)` 将不会抛出异常。
+- 在严格模式下，`false` 作为 `handler.defineProperty` 方法的返回值的话将会抛出 {{jsxref("TypeError")}} 异常。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下代码演示如何拦截对目标对象的 {{jsxref("Object.defineProperty()")}} 操作。</p>
+以下代码演示如何拦截对目标对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   defineProperty: function(target, prop, descriptor) {
     console.log('called: ' + prop);
     return true;
@@ -72,20 +68,19 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "called: a"
-</pre>
+```
 
-<p>当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 <code>defineProperty</code> 的 <code>descriptor</code>   有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：</p>
+当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 `defineProperty` 的 `descriptor` 有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：
 
-<ul>
- <li><code>enumerable</code></li>
- <li><code>configurable</code></li>
- <li><code>writable</code></li>
- <li><code>value</code></li>
- <li><code>get</code></li>
- <li><code>set</code></li>
-</ul>
+- `enumerable`
+- `configurable`
+- `writable`
+- `value`
+- `get`
+- `set`
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
     console.log(descriptor);
     return Reflect.defineProperty(target, prop, descriptor);
@@ -96,21 +91,19 @@ Object.defineProperty(p, 'name', {
   value: 'proxy',
   type: 'custom'
 });  // { value: 'proxy' }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}

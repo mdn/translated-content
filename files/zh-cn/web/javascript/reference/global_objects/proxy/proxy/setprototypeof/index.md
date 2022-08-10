@@ -4,61 +4,57 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>handler.setPrototypeOf()</code></strong> 方法主要用来拦截 {{jsxref("Object.setPrototypeOf()")}}.</p>
+**`handler.setPrototypeOf()`** 方法主要用来拦截 {{jsxref("Object.setPrototypeOf()")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var p = new Proxy(target, {
+```js
+var p = new Proxy(target, {
   setPrototypeOf: function(target, prototype) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>以下参数传递给 <code>setPrototypeOf</code> 方法. </p>
+以下参数传递给 `setPrototypeOf` 方法.
 
-<dl>
- <dt><code>target</code></dt>
- <dd>被拦截目标对象。</dd>
- <dt><code>prototype</code></dt>
- <dd>对象新原型或为<code>null</code>.</dd>
-</dl>
+- `target`
+  - : 被拦截目标对象。
+- `prototype`
+  - : 对象新原型或为`null`.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>如果成功修改了<code>[[Prototype]]</code>, <code>setPrototypeOf</code> 方法返回 <code>true</code>,否则返回 <code>false</code>.</p>
+如果成功修改了`[[Prototype]]`, `setPrototypeOf` 方法返回 `true`,否则返回 `false`.
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>这个 <code><strong>handler.setPrototypeOf</strong></code> 方法用于拦截 {{jsxref("Object.setPrototypeOf()")}}.</p>
+这个 **`handler.setPrototypeOf`** 方法用于拦截 {{jsxref("Object.setPrototypeOf()")}}.
 
-<h3 id="拦截">拦截</h3>
+### 拦截
 
-<p>这个方法可以拦截以下操作：</p>
+这个方法可以拦截以下操作：
 
-<ul>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>如果违反了下列规则，则 proxy 将抛出一个 {{jsxref("TypeError")}}：</p>
+如果违反了下列规则，则 proxy 将抛出一个 {{jsxref("TypeError")}}：
 
-<ul>
- <li><code>如果 target</code> 不可扩展，原型参数必须与 <code>Object.getPrototypeOf(target)</code> 的值相同。</li>
-</ul>
+- `如果 target` 不可扩展，原型参数必须与 `Object.getPrototypeOf(target)` 的值相同。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>如果你不想为你的对象设置一个新的原型，你的 handler 的 <code>setPrototypeOf</code> 方法可以返回 false，也可以抛出异常。</p>
+如果你不想为你的对象设置一个新的原型，你的 handler 的 `setPrototypeOf` 方法可以返回 false，也可以抛出异常。
 
-<p>The former approach means that any operation that performs such mutation, that throws an exception on failure to mutate, will have to create the exception itself.  For example, {{jsxref("Object.setPrototypeOf()")}} will create and throw a <code>TypeError</code> itself.  If the mutation is performed by an operation that <em>doesn't</em> ordinarily throw in case of failure, such as {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.</p>
+The former approach means that any operation that performs such mutation, that throws an exception on failure to mutate, will have to create the exception itself. For example, {{jsxref("Object.setPrototypeOf()")}} will create and throw a `TypeError` itself. If the mutation is performed by an operation that _doesn't_ ordinarily throw in case of failure, such as {{jsxref("Reflect.setPrototypeOf()")}}, no exception will be thrown.
 
-<pre class="brush: js">var handlerReturnsFalse = {
+```js
+var handlerReturnsFalse = {
     setPrototypeOf(target, newProto) {
         return false;
     }
@@ -69,11 +65,12 @@ var newProto = {}, target = {};
 var p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
 Reflect.setPrototypeOf(p1, newProto); // returns false
-</pre>
+```
 
-<p>The latter approach will cause <em>any</em> operation that attempts to mutate, to throw.  This approach is required if you want even non-throwing operations to throw on failure, or you want to throw a custom exception value.</p>
+The latter approach will cause _any_ operation that attempts to mutate, to throw. This approach is required if you want even non-throwing operations to throw on failure, or you want to throw a custom exception value.
 
-<pre class="brush: js">var handlerThrows = {
+```js
+var handlerThrows = {
     setPrototypeOf(target, newProto) {
         throw new Error('custom error');
     }
@@ -83,21 +80,20 @@ var newProto = {}, target = {};
 
 var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
-Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")</pre>
+Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}

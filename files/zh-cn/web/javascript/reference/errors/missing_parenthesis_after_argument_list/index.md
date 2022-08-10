@@ -7,36 +7,38 @@ tags:
   - 错误
 translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+## 消息
 
-<pre class="syntaxbox">语法错误：参数列表后面缺少 )
-</pre>
+```plain
+语法错误：参数列表后面缺少 )
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="什么地方出错了">什么地方出错了？</h2>
+## 什么地方出错了？
 
-<p>有一个函数在调用时出现错误。这可能是一个错误，丢失运算符或者转义字符等。</p>
+有一个函数在调用时出现错误。这可能是一个错误，丢失运算符或者转义字符等。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>因为没有使用 ”+“ 操作符来连接字符串，JavaScript 认为 <code>log</code> 函数的参数的值只是 “<code>PI: ”，在这种情况下，它应该用一个右括号作为结束。</code></p>
+因为没有使用 ”+“ 操作符来连接字符串，JavaScript 认为 `log` 函数的参数的值只是 “`PI: ”，在这种情况下，它应该用一个右括号作为结束。`
 
-<pre class="brush: js example-bad">console.log("PI: " Math.PI);
+```js example-bad
+console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
-</pre>
+```
 
-<p>你可以正确的调用 <code>log</code> 函数通过加上 ”+“ 操作符。</p>
+你可以正确的调用 `log` 函数通过加上 ”+“ 操作符。
 
-<pre class="brush: js example-good">console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"</pre>
+```js example-good
+console.log("PI: " + Math.PI);
+// "PI: 3.141592653589793"
+```
 
-<h2 id="相关页面">相关页面</h2>
+## 相关页面
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)

@@ -3,60 +3,61 @@ title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
-<div>{{JSRef("Global_Objects", "Math")}}</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p> <code><strong>Math.sinh()</strong></code> 函数返回一个数字 (单位为角度) 的双曲正弦值。</p>
+**`Math.sinh()`** 函数返回一个数字 (单位为角度) 的双曲正弦值。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Math.sinh(<em>x</em>)</pre>
+```plain
+Math.sinh(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字 (单位为度).</dd>
-</dl>
+- `x`
+  - : 任意数字 (单位为度).
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>双曲正弦的图像如下：</p>
+双曲正弦的图像如下：
 
-<p><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/1/17/Sinh.png"></p>
+![](http://upload.wikimedia.org/wikipedia/commons/1/17/Sinh.png)
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<pre class="brush:js">Math.sinh(0)      // 0
+```js
+Math.sinh(0)      // 0
 Math.sinh(1)      // 1.1752011936438014
 Math.sinh("-1")   // -1.1752011936438014
 Math.sinh("foo")  // NaN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>该函数可以使用 {{jsxref("Math.exp()")}}<code> 函数来实现</code>:</p>
+该函数可以使用 {{jsxref("Math.exp()")}}` 函数来实现`:
 
-<pre class="brush: js">function sinh(x){
+```js
+function sinh(x){
     return  (Math.exp(x) - Math.exp(-x)) / 2;
-}</pre>
+}
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Math.acos()")}}</li>
- <li>{{jsxref("Math.asin()")}}</li>
- <li>{{jsxref("Math.atan()")}}</li>
- <li>{{jsxref("Math.atan2()")}}</li>
- <li>{{jsxref("Math.cos()")}}</li>
- <li>{{jsxref("Math.tan()")}}</li>
-</ul>
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.cos()")}}
+- {{jsxref("Math.tan()")}}

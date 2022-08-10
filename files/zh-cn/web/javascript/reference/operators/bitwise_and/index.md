@@ -4,89 +4,68 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND
 original_slug: Web/JavaScript/Reference/Operators/按位与
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>按位与运算符 (<code>&amp;</code>) 在两个操作数对应的二进位都为 <code>1</code> 时，该位的结果值才为 <code>1</code>，否则为 <code>0</code>。</p>
+按位与运算符 (`&`) 在两个操作数对应的二进位都为 `1` 时，该位的结果值才为 `1`，否则为 `0`。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>a</var> &amp; <var>b</var></code>
-</pre>
+```plain
+a & b
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>操作数被转换为 32 位整数，并由一系列位（0 和 1）表示。 超过 32 位的数字将丢弃其最高有效位。 例如，以下大于 32 位的整数将被转换为 32 位整数：</p>
+操作数被转换为 32 位整数，并由一系列位（0 和 1）表示。 超过 32 位的数字将丢弃其最高有效位。 例如，以下大于 32 位的整数将被转换为 32 位整数：
 
-<pre class="brush: js">Before: 11100110111110100000000000000110000000000001
-After:              10100000000000000110000000000001</pre>
+```js
+Before: 11100110111110100000000000000110000000000001
+After:              10100000000000000110000000000001
+```
 
-<p>第一个操作数中的每个位都与第二个操作数中的相应位配对：第一位到第一位，第二位到第二位，依此类推。</p>
+第一个操作数中的每个位都与第二个操作数中的相应位配对：第一位到第一位，第二位到第二位，依此类推。
 
-<p>将运算符应用于每对位，然后按位构造结果。</p>
+将运算符应用于每对位，然后按位构造结果。
 
-<p>与运算的真值表：</p>
+与运算的真值表：
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">a</th>
-   <th scope="col">b</th>
-   <th scope="col">a AND b</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>1</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
- </tbody>
-</table>
+| a   | b   | a AND b |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
-<pre class="brush: js">.    9 (base 10) = 00000000000000000000000000001001 (base 2)
+```js
+.    9 (base 10) = 00000000000000000000000000001001 (base 2)
     14 (base 10) = 00000000000000000000000000001110 (base 2)
                    --------------------------------
-14 &amp; 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
-</pre>
+14 & 9 (base 10) = 00000000000000000000000000001000 (base 2) = 8 (base 10)
+```
 
-<p>将任何数字<code>x</code>与<code>0</code>进行按位与运算将得出<code>0</code>。</p>
+将任何数字`x`与`0`进行按位与运算将得出`0`。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用按位与">使用按位与</h3>
+### 使用按位与
 
-<pre class="brush: js">// 5: 00000000000000000000000000000101
+```js
+// 5: 00000000000000000000000000000101
 // 2: 00000000000000000000000000000010
-5 &amp; 2; // 0</pre>
+5 & 2; // 0
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment">Bitwise AND assignment operator</a></li>
-</ul>
+- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise AND assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

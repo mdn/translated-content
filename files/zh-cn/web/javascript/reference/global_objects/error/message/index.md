@@ -3,37 +3,36 @@ title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
-<div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
+{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>message</strong></code> 属性是有关错误信息，人类易读的（human-readable）描述。</p>
+**`message`** 属性是有关错误信息，人类易读的（human-readable）描述。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果该属性已经被设置，则该属性包含了错误的一个简短描述。<a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> 大量应用 <code>message</code> 属性在异常方面。 <code>message</code> 属性结合 {{jsxref("Error.prototype.name", "name")}} 属性一起被  {{jsxref("Error.prototype.toString()")}} 方法用来创建错误的字符串形式。</p>
+如果该属性已经被设置，则该属性包含了错误的一个简短描述。[SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) 大量应用 `message` 属性在异常方面。 `message` 属性结合 {{jsxref("Error.prototype.name", "name")}} 属性一起被 {{jsxref("Error.prototype.toString()")}} 方法用来创建错误的字符串形式。
 
-<p>默认情况下，<code>message</code> 属性是一个空字符串，但是可以通过指定一段信息作为 {{jsxref("Error", "Error constructor")}} 的第一个参数创建一个实例来改变该属性值。</p>
+默认情况下，`message` 属性是一个空字符串，但是可以通过指定一段信息作为 {{jsxref("Error", "Error constructor")}} 的第一个参数创建一个实例来改变该属性值。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example:_Throwing_a_custom_error">例子：抛出一个自定义错误</h3>
+### 例子：抛出一个自定义错误
 
-<pre class="brush: js">var e = new Error("Could not parse input"); // e.message is "Could not parse input"
+```js
+var e = new Error("Could not parse input"); // e.message is "Could not parse input"
 throw e;
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error.prototype.name")}}</li>
- <li>{{jsxref("Error.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Error.prototype.toString()")}}

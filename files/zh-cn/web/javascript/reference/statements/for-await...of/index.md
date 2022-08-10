@@ -14,44 +14,40 @@ tags:
   - 迭代
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
-<p>{{jsSidebar("Statements")}}</p>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>for await...of</code> 语句</strong>创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: 内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。</p>
+**`for await...of` 语句**创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: 内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。
 
-<p>类似于 {{jsxref("Operators/await", "await")}} 运算符一样，该语句只能在一个{{jsxref("Statements/async_function", "async function", "异步函数", 1)}} 内部使用。</p>
+类似于 {{jsxref("Operators/await", "await")}} 运算符一样，该语句只能在一个{{jsxref("Statements/async_function", "async function", "异步函数", 1)}} 内部使用。
 
-<div class="note">
-<p><strong>备注：</strong><code>for await...of</code> 不适用于不是异步可迭代的异步迭代器。</p>
-</div>
+> **备注：**`for await...of` 不适用于不是异步可迭代的异步迭代器。
 
+## 语法
 
+```plain
+for await (variable of iterable) {
+  statement
+}
+```
 
-<h2 id="语法">语法</h2>
+- `variable`
+  - : 在每次迭代中，将不同属性的值分配给变量。变量有可能以`const`, `let`, 或者 `var`来声明。
+- `iterable`
+  - : 被迭代枚举其属性的对象。与 for...of 相比，这里的对象可以返回 `Promise`，如果是这样，那么 `variable` 将是 `Promise` 所包含的值，否则是值本身。
 
-<pre class="syntaxbox">for await (<em>variable</em> of <em>iterable</em>) {
-  <em>statement
-</em>}
-</pre>
+## 例子
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>在每次迭代中，将不同属性的值分配给变量。变量有可能以<code>const</code>, <code>let</code>, 或者 <code>var</code>来声明。</dd>
- <dt><code>iterable</code></dt>
- <dd>被迭代枚举其属性的对象。与 for...of 相比，这里的对象可以返回 <code>Promise</code>，如果是这样，那么 <code>variable</code> 将是 <code>Promise</code> 所包含的值，否则是值本身。</dd>
-</dl>
+### 迭代异步可迭代对象
 
-<h2 id="例子">例子</h2>
+你还可以迭代一个明确实现异步迭代协议的对象：
 
-<h3 id="迭代异步可迭代对象">迭代异步可迭代对象</h3>
-
-<p>你还可以迭代一个明确实现异步迭代协议的对象：</p>
-
-<pre class="brush:js">var asyncIterable = {
+```js
+var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -70,15 +66,16 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="迭代异步生成器">迭代异步生成器 </h3>
+### 迭代异步生成器
 
-<p>异步生成器已经实现了异步迭代器协议，所以可以用 <code>for await...of</code>循环。</p>
+异步生成器已经实现了异步迭代器协议，所以可以用 `for await...of`循环。
 
-<pre class="brush: js">async function* asyncGenerator() {
+```js
+async function* asyncGenerator() {
   var i = 0;
-  while (i &lt; 3) {
+  while (i < 3) {
     yield i++;
   }
 }
@@ -90,11 +87,13 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 })();
 // 0
 // 1
-// 2</pre>
+// 2
+```
 
-<p>有关使用<code>for await... of</code>考虑迭代 API 中获取数据的异步 generator 更具体的例子。这个例子首先为一个数据流创建了一个异步 generator，然后使用它来获得这个 API 的响应值的大小。</p>
+有关使用`for await... of`考虑迭代 API 中获取数据的异步 generator 更具体的例子。这个例子首先为一个数据流创建了一个异步 generator，然后使用它来获得这个 API 的响应值的大小。
 
-<pre class="brush: js">async function* streamAsyncIterator(stream) {
+```js
+async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -123,21 +122,18 @@ async function getResponseSize(url) {
   // expected output: "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}</li>
- <li>{{jsxref("Statements/for...of")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
+- {{jsxref("Statements/for...of")}}

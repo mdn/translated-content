@@ -3,23 +3,26 @@ title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 translation_of: Web/API/CustomEvent/detail
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>接口 {{domxref("CustomEvent")}} 的只读属性 <code><strong>detail</strong></code> （详情）返回在初始化事件对象时传递过来的任何类型数据。</p>
+接口 {{domxref("CustomEvent")}} 的只读属性 **`detail`** （详情）返回在初始化事件对象时传递过来的任何类型数据。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"> let myDetail = <em>customEventInstance.detail</em>;</pre>
+```plain
+ let myDetail = customEventInstance.detail;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>事件对象初始化时传递的任何类型数据。</p>
+事件对象初始化时传递的任何类型数据。
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// add an appropriate event listener
+```js
+// add an appropriate event listener
 obj.addEventListener("cat", function(e) { process(e.detail) });
 
 // create and dispatch the event
@@ -31,23 +34,17 @@ let event = new CustomEvent("cat", {
 obj.dispatchEvent(event);
 
 // Will return an object contaning the hazcheeseburger property
-let myDetail = <em>event.detail</em>;
-</pre>
+let myDetail = event.detail;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("CustomEvent")}}</li>
-</ul>
-
-<p> </p>
+- {{domxref("CustomEvent")}}

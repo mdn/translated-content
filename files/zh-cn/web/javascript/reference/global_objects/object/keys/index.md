@@ -9,32 +9,33 @@ tags:
   - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>Object.keys()</strong></code> 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致。</p>
+**`Object.keys()`** 方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Object.keys(<var>obj</var>)</code></pre>
+```plain
+Object.keys(obj)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt>obj</dt>
- <dd>要返回其枚举自身属性的对象。</dd>
-</dl>
+- obj
+  - : 要返回其枚举自身属性的对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个表示给定对象的所有可枚举属性的字符串数组。</p>
+一个表示给定对象的所有可枚举属性的字符串数组。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><code>Object.keys</code> 返回一个所有元素为字符串的数组，其元素来自于从给定的 <code>object</code> 上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。</p>
+`Object.keys` 返回一个所有元素为字符串的数组，其元素来自于从给定的 `object` 上面可直接枚举的属性。这些属性的顺序与手动遍历该对象属性时的一致。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">// simple array
+```js
+// simple array
 var arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
@@ -53,25 +54,29 @@ var myObj = Object.create({}, {
   }
 });
 myObj.foo = 1;
-console.log(Object.keys(myObj)); // console: ['foo']</pre>
+console.log(Object.keys(myObj)); // console: ['foo']
+```
 
-<p>如果你想获取一个对象的所有属性，甚至包括不可枚举的，请查看 {{jsxref("Object.getOwnPropertyNames")}}。</p>
+如果你想获取一个对象的所有属性，甚至包括不可枚举的，请查看 {{jsxref("Object.getOwnPropertyNames")}}。
 
-<h2 id="注意">注意</h2>
+## 注意
 
-<p>在 ES5 里，如果此方法的参数不是对象（而是一个原始值），那么它会抛出 TypeError。在 ES2015 中，非对象的参数将被强制转换为一个对象。</p>
+在 ES5 里，如果此方法的参数不是对象（而是一个原始值），那么它会抛出 TypeError。在 ES2015 中，非对象的参数将被强制转换为一个对象。
 
-<pre class="brush: js">Object.keys("foo");
+```js
+Object.keys("foo");
 // TypeError: "foo" is not an object (ES5 code)
 
 Object.keys("foo");
-// ["0", "1", "2"]                   (ES2015 code)</pre>
+// ["0", "1", "2"]                   (ES2015 code)
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>要在原生不支持的旧环境中添加兼容的 <code>Object.keys</code>，请复制以下代码段：</p>
+要在原生不支持的旧环境中添加兼容的 `Object.keys`，请复制以下代码段：
 
-<pre class="brush: js">if (!Object.keys) {
+```js
+if (!Object.keys) {
   Object.keys = (function () {
     var hasOwnProperty = Object.prototype.hasOwnProperty,
         hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
@@ -87,7 +92,7 @@ Object.keys("foo");
         dontEnumsLength = dontEnums.length;
 
     return function (obj) {
-      if (typeof obj !== 'object' &amp;&amp; typeof obj !== 'function' || obj === null) throw new TypeError('Object.keys called on non-object');
+      if (typeof obj !== 'object' && typeof obj !== 'function' || obj === null) throw new TypeError('Object.keys called on non-object');
 
       var result = [];
 
@@ -96,7 +101,7 @@ Object.keys("foo");
       }
 
       if (hasDontEnumBug) {
-        for (var i=0; i &lt; dontEnumsLength; i++) {
+        for (var i=0; i < dontEnumsLength; i++) {
           if (hasOwnProperty.call(obj, dontEnums[i])) result.push(dontEnums[i]);
         }
       }
@@ -104,27 +109,25 @@ Object.keys("foo");
     }
   })()
 };
-</pre>
+```
 
-<p>上面的代码在 IE7（也许 IE8 也是）下有个问题，就是如果传入一个来自其他 window 对象下的对象时，不可枚举的属性也会获取到。</p>
+上面的代码在 IE7（也许 IE8 也是）下有个问题，就是如果传入一个来自其他 window 对象下的对象时，不可枚举的属性也会获取到。
 
-<p>另一个简单的实现，参见<a href="http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>。</p>
+另一个简单的实现，参见[Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
-</ul>
+- [Enumerability and ownership of properties](https://developer.mozilla.org/en-US/docs/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.entries()")}}

@@ -6,11 +6,12 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_String_generics
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误提示">错误提示</h2>
+## 错误提示
 
-<pre class="syntaxbox">Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
+```plain
+Warning: String.charAt            is deprecated; use String.prototype.charAt            instead
 Warning: String.charCodeAt        is deprecated; use String.prototype.charCodeAt        instead
 Warning: String.concat            is deprecated; use String.prototype.concat            instead
 Warning: String.contains          is deprecated; use String.prototype.contains          instead
@@ -35,36 +36,40 @@ Warning: String.toUpperCase       is deprecated; use String.prototype.toUpperCas
 Warning: String.trim              is deprecated; use String.prototype.trim              instead
 Warning: String.trimLeft          is deprecated; use String.prototype.trimLeft          instead
 Warning: String.trimRight         is deprecated; use String.prototype.trimRight         instead
-</pre>
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>警告。JavaScript 引擎不会停止运行。</p>
+警告。JavaScript 引擎不会停止运行。
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>非标准的泛型  {{jsxref("String")}} 方法已经被废弃，将来会被移除（这些方法仅在 Firefox 浏览器中得到实现）。String 泛型在 String 对象上提供了一系列的 String 实例方法，使得这些 String 方法可以应用于任何类型的对象。</p>
+非标准的泛型 {{jsxref("String")}} 方法已经被废弃，将来会被移除（这些方法仅在 Firefox 浏览器中得到实现）。String 泛型在 String 对象上提供了一系列的 String 实例方法，使得这些 String 方法可以应用于任何类型的对象。
 
-<p>Firefox {{bug(1222552)}} 对 String 泛型方法的移除进行了追踪。</p>
+Firefox {{bug(1222552)}} 对 String 泛型方法的移除进行了追踪。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="废弃的语法">废弃的语法</h3>
+### 废弃的语法
 
-<pre class="brush: js example-bad">var num = 15;
-String.replace(num, /5/, '2');</pre>
+```js example-bad
+var num = 15;
+String.replace(num, /5/, '2');
+```
 
-<h3 id="标准语法">标准语法</h3>
+### 标准语法
 
-<pre class="brush: js example-good">var num = 15;
+```js example-good
+var num = 15;
 String(num).replace(/5/, '2');
-</pre>
+```
 
-<h2 id="垫片">垫片</h2>
+## 垫片
 
-<p>以下是一个垫片脚本来为不支持 String 泛型方法浏览器提供支持：</p>
+以下是一个垫片脚本来为不支持 String 泛型方法浏览器提供支持：
 
-<pre class="brush: js">/*globals define*/
+```js
+/*globals define*/
 // Assumes all supplied String instance methods already present
 // (one may use shims for these if not available)
 (function() {
@@ -91,14 +96,13 @@ String(num).replace(/5/, '2');
       };
     };
 
-  for (i = 0; i &lt; methodCount; i++) {
+  for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());</pre>
+}());
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{jsxref("String")}}</li>
- <li>{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 同样存在于 {{jsxref("Array")}} 的方法中（也同样被废弃了）。</li>
-</ul>
+- {{jsxref("String")}}
+- {{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 同样存在于 {{jsxref("Array")}} 的方法中（也同样被废弃了）。

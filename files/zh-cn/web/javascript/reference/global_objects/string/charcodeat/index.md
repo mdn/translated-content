@@ -10,64 +10,63 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>charCodeAt()</strong></code> 方法返回 <code>0</code> 到 <code>65535</code> 之间的整数，表示给定索引处的 UTF-16 代码单元</p>
+**`charCodeAt()`** 方法返回 `0` 到 `65535` 之间的整数，表示给定索引处的 UTF-16 代码单元
 
-<div>{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
+UTF-16 编码单元匹配能用一个 UTF-16 编码单元表示的 Unicode 码点。如果 Unicode 码点不能用一个 UTF-16 编码单元表示（因为它的值大于`0xFFFF`），则所返回的编码单元会是这个码点代理对的第一个编码单元) 。如果你想要整个码点的值，使用 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}。
 
+## 语法
 
-<p>UTF-16 编码单元匹配能用一个 UTF-16 编码单元表示的 Unicode 码点。如果 Unicode 码点不能用一个 UTF-16 编码单元表示（因为它的值大于<code>0xFFFF</code>），则所返回的编码单元会是这个码点代理对的第一个编码单元) 。如果你想要整个码点的值，使用 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}。</p>
+```plain
+str.charCodeAt(index)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><code><em>str</em>.charCodeAt(<em>index</em>)</code></pre>
+- `index`
+  - : 一个大于等于 `0`，小于字符串长度的整数。如果不是一个数值，则默认为 `0`。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>index</code></dt>
- <dd>一个大于等于 <code>0</code>，小于字符串长度的整数。如果不是一个数值，则默认为 <code>0</code>。</dd>
-</dl>
+指定 `index` 处字符的 UTF-16 代码单元值的一个数字；如果 `index` 超出范围，`charCodeAt()` 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>指定 <code>index</code> 处字符的 UTF-16 代码单元值的一个数字；如果 <code>index</code> 超出范围，<code>charCodeAt()</code> 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。</p>
+Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 [JavaScript Guide](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)。）
 
-<h2 id="描述">描述</h2>
+> **备注：**，`charCodeAt` 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。
+>
+> 因此，为了检查（或重现）`65536` 及以上编码字符的完整字符，需要在获取 `charCodeAt(i)` 的值的同时获取 `charCodeAt(i+1)` 的值（如同用两个字母操纵一个字符串），或者改为获取 `codePointAt(i)` 的值。参看下面例 2 和例 3。
 
-<p>Unicode 码点（code points）的范围从 <code>0</code> 到 <code>1114111</code> <code>(0x10FFFF）</code>。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">JavaScript Guide</a>。）</p>
+如果指定的 `index` 小于 `0` 、等于或大于字符串的长度，则 `charCodeAt` 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。
 
-<div class="note">
-<p><strong>备注：</strong>，<code>charCodeAt</code> 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。</p>
+向后兼容：在历史版本中（如 JavaScript 1.2），`charCodeAt` 返回一个数字，表示给定 index 处字符的 ISO-Latin-1 编码值。ISO-Latin-1 编码集范围从 `0` 到 `255`。开头的 `0` 到 `127` 直接匹配 ASCII 字符集。
 
-<p>因此，为了检查（或重现）<code>65536</code> 及以上编码字符的完整字符，需要在获取 <code>charCodeAt(i)</code> 的值的同时获取 <code>charCodeAt(i+1)</code> 的值（如同用两个字母操纵一个字符串），或者改为获取 <code>codePointAt(i)</code> 的值。参看下面例 2 和例 3。</p>
-</div>
+## 示例
 
-<p>如果指定的 <code>index</code> 小于 <code>0</code> 、等于或大于字符串的长度，则 <code>charCodeAt</code> 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。</p>
+### 使用 `charCodeAt()`
 
-<p>向后兼容：在历史版本中（如 JavaScript 1.2），<code>charCodeAt</code> 返回一个数字，表示给定 index 处字符的 ISO-Latin-1 编码值。ISO-Latin-1 编码集范围从 <code>0</code> 到 <code>255</code>。开头的 <code>0</code> 到 <code>127</code> 直接匹配 ASCII 字符集。</p>
+下例介绍了不同索引情况下返回的 Unicode 值：
 
-<h2 id="Examples">示例</h2>
-
-<h3 id="Example_Using_charCodeAt">使用 <code>charCodeAt()</code></h3>
-
-<p>下例介绍了不同索引情况下返回的 Unicode 值：</p>
-
-<pre class="brush: js">"ABC".charCodeAt(0) // returns 65:"A"
+```js
+"ABC".charCodeAt(0) // returns 65:"A"
 
 "ABC".charCodeAt(1) // returns 66:"B"
 
 "ABC".charCodeAt(2) // returns 67:"C"
 
-"ABC".charCodeAt(3) // returns NaN</pre>
+"ABC".charCodeAt(3) // returns NaN
+```
 
-<h3 id="使用_charCodeAt_修复字符串中出现的未知的非基本多语言范围（非_bmp，non-basic-multilingual-plane）字符">使用 <code>charCodeAt()</code> 修复字符串中出现的未知的非基本多语言范围（非 BMP，non-Basic-Multilingual-Plane）字符</h3>
+### 使用 `charCodeAt()` 修复字符串中出现的未知的非基本多语言范围（非 BMP，non-Basic-Multilingual-Plane）字符
 
-<p>这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非 BMP 字符存在时。</p>
+这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非 BMP 字符存在时。
 
-<pre class="brush:js">function fixedCharCodeAt (str, idx) {
+```js
+function fixedCharCodeAt (str, idx) {
     // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
     // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
     idx = idx || 0;
@@ -76,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
     // High surrogate (could change last hex to 0xDB7F to treat high
     // private surrogates as single characters)
-    if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+    if (0xD800 <= code && code <= 0xDBFF) {
         hi = code;
         low = str.charCodeAt(idx+1);
         if (isNaN(low)) {
@@ -84,7 +83,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
         }
         return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
     }
-    if (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF) { // Low surrogate
+    if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
         // We return false to allow loops to skip this iteration since should have
         // already handled high surrogate above in the previous iteration
         return false;
@@ -94,11 +93,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
     return code;
 }
-</pre>
+```
 
-<h3 id="使用_charcodeat_修复字符串中出现的已知的非_bmp_字符">使用 <code>charCodeAt()</code> 修复字符串中出现的已知的非 BMP 字符</h3>
+### 使用 `charCodeAt()` 修复字符串中出现的已知的非 BMP 字符
 
-<pre class="brush:js">function knownCharCodeAt (str, idx) {
+```js
+function knownCharCodeAt (str, idx) {
     str += '';
     var code,
         end = str.length;
@@ -106,7 +106,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
     while ((surrogatePairs.exec(str)) != null) {
         var li = surrogatePairs.lastIndex;
-        if (li - 2 &lt; idx) {
+        if (li - 2 < idx) {
             idx++;
         }
         else {
@@ -114,14 +114,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
         }
     }
 
-    if (idx &gt;= end || idx &lt; 0) {
+    if (idx >= end || idx < 0) {
         return NaN;
     }
 
     code = str.charCodeAt(idx);
 
     var hi, low;
-    if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
+    if (0xD800 <= code && code <= 0xDBFF) {
         hi = code;
         low = str.charCodeAt(idx+1);
         // Go one further, since one of the "characters" is part of a surrogate pair
@@ -129,22 +129,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
     }
     return code;
 }
+```
 
-</pre>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.codePointAt()")}}

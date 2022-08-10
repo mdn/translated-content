@@ -3,31 +3,30 @@ title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
 translation_of: Web/API/DeviceOrientationEvent/absolute
 ---
-<p>{{ apiref("Device Orientation Events") }}</p>
+{{ apiref("Device Orientation Events") }}
 
-<p>表示该设备是否提供绝对定位数据 (这个数据是关于地球的坐标系) 或者使用了由设备决定的专门的坐标系。查看更多关于 <a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a> 的细节。</p>
+表示该设备是否提供绝对定位数据 (这个数据是关于地球的坐标系) 或者使用了由设备决定的专门的坐标系。查看更多关于 [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained) 的细节。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var absolute = <em>instanceOfDeviceOrientationEvent</em>.absolute;
-</pre>
+```plain
+var absolute = instanceOfDeviceOrientationEvent.absolute;
+```
 
-<p>如果方向数据跟地球坐标系和设备坐标系有差异，则<code>absolute</code>为<code>true</code>，如果方向数据由设备本身的坐标系提供，则<code>absolute</code>为<code>false</code>。</p>
+如果方向数据跟地球坐标系和设备坐标系有差异，则`absolute`为`true`，如果方向数据由设备本身的坐标系提供，则`absolute`为`false`。
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DeviceOrientationEvent.absolute")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="/en/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
- <li>{{ domxref("window.ondeviceorientation") }}</li>
- <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

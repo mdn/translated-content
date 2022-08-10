@@ -3,27 +3,28 @@ title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
 translation_of: Web/API/MessageChannel/port2
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>{{domxref("MessageChannel")}}接口的 <code><strong>port2</strong></code> 是一个只读属性，返回消息通道的第二个端口，该端口连接到通道另一端的上下文，也就是发送消息时的目的地。</p>
+{{domxref("MessageChannel")}}接口的 **`port2`** 是一个只读属性，返回消息通道的第二个端口，该端口连接到通道另一端的上下文，也就是发送消息时的目的地。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">channel.port2;</pre>
+```plain
+channel.port2;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>表示通道第二个端口的一个{{domxref("MessagePort")}}对象，该端口附加到通道另一端的上下文。</p>
+表示通道第二个端口的一个{{domxref("MessagePort")}}对象，该端口附加到通道另一端的上下文。
 
-<p> </p>
+## 示例
 
-<h2 id="示例">示例</h2>
+如下代码所示，通过{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}}构造函数创建了一个新的通道。当 IFrame 加载完毕，我们使用{{domxref("MessagePort.postMessage")}}将一条消息以及 port2 传递给 IFrame。handleMessage 处理程序响应从 IFrame 发回的消息（使用 {{domxref("MessagePort.onmessage")}}），将其放入段落中。{{domxref("MessageChannel.port1")}}已经监听，以检测消息何时到达。
 
-<p>如下代码所示，通过{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}}构造函数创建了一个新的通道。当 IFrame 加载完毕，我们使用{{domxref("MessagePort.postMessage")}}将一条消息以及 port2 传递给 IFrame。handleMessage 处理程序响应从 IFrame 发回的消息（使用 {{domxref("MessagePort.onmessage")}}），将其放入段落中。{{domxref("MessageChannel.port1")}}已经监听，以检测消息何时到达。</p>
-
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var para = document.querySelector('p');
 
 var ifr = document.querySelector('iframe');
@@ -38,20 +39,19 @@ function iframeLoaded() {
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
-}   </pre>
+}
+```
 
-<p>有关完整的运行示例，请参阅我们在 GitHub 的 <a href="https://github.com/mdn/channel-messaging-basic-demo">channel messaging basic demo</a>  (<a href="http://mdn.github.io/channel-messaging-basic-demo/">run it live too</a>).</p>
+有关完整的运行示例，请参阅我们在 GitHub 的 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([run it live too](http://mdn.github.io/channel-messaging-basic-demo/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.MessageChannel.port2")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

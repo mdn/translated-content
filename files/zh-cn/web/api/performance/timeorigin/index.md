@@ -3,22 +3,24 @@ title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
 translation_of: Web/API/Performance/timeOrigin
 ---
-<p>{{SeeCompatTable}}{{APIRef("High Resolution Time")}}</p>
+{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
-<p>接口 {{domxref("Performance")}} 的只读属性  <strong><code>timeOrigin</code></strong> 返回一个表示 the performance measurement 开始时间的高精度 timestamp</p>
+接口 {{domxref("Performance")}} 的只读属性 **`timeOrigin`** 返回一个表示 the performance measurement 开始时间的高精度 timestamp
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>timeOrigin</em> = performance.timeOrigin</pre>
+```plain
+var timeOrigin = performance.timeOrigin
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>高精度 timestamp，例如 1518354643295.86</p>
+高精度 timestamp，例如 1518354643295.86
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser Compatibility</h2>
+## Browser Compatibility
 
 {{Compat("api.Performance.timeOrigin")}}

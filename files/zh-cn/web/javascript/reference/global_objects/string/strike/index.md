@@ -3,48 +3,49 @@ title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>strike()</code></strong>方法创建{{HTMLElement("strike")}} HTML 元素，使字符串展示为被删除的文本。</p>
+**`strike()`**方法创建{{HTMLElement("strike")}} HTML 元素，使字符串展示为被删除的文本。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>str</var>.strike()</code></pre>
+```plain
+str.strike()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>包含{{HTMLElement("strike")}} HTML 元素的字符串。</p>
+包含{{HTMLElement("strike")}} HTML 元素的字符串。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>strike()</code>方法将字符串嵌入<code>&lt;strike&gt;</code>标签： <code>"&lt;strike&gt;str&lt;/strike&gt;"</code>.</p>
+`strike()`方法将字符串嵌入`<strike>`标签： `"<strike>str</strike>"`.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用strike()">使用<code>strike()</code></h3>
+### 使用`strike()`
 
-<p>下面的示例使用字符串方法来修改字符串的格式：</p>
+下面的示例使用字符串方法来修改字符串的格式：
 
-<pre class="brush: js">var worldString = 'Hello, world';
+```js
+var worldString = 'Hello, world';
 
-console.log(worldString.blink()); // &lt;blink&gt;Hello, world&lt;/blink&gt;
-console.log(worldString.bold()); // &lt;b&gt;Hello, world&lt;/b&gt;
-console.log(worldString.italics()); // &lt;i&gt;Hello, world&lt;/i&gt;
-console.log(worldString.strike()); // &lt;strike&gt;Hello, world&lt;/strike&gt;
-</pre>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
+console.log(worldString.italics()); // <i>Hello, world</i>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{jsxref("String.prototype.blink()")}}</li>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
-</ul>
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}

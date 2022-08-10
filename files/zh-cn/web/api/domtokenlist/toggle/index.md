@@ -7,38 +7,41 @@ tags:
   - classList
 translation_of: Web/API/DOMTokenList/toggle
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}} 接口的 <code><strong>toggle()</strong></code> 方法从列表中删除一个给定的<em>标记 </em>并返回 <code>false</code> 。 如果<em>标记 </em>不存在，则添加并且函数返回 <code>true</code>。</p>
+{{domxref("DOMTokenList")}} 接口的 **`toggle()`** 方法从列表中删除一个给定的*标记* 并返回 `false` 。 如果*标记* 不存在，则添加并且函数返回 `true`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">tokenList.toggle(token, force);</pre>
+```plain
+tokenList.toggle(token, force);
+```
 
-<h3 id="参数列表">参数列表</h3>
+### 参数列表
 
-<dl>
- <dt>token</dt>
- <dd>标记列表中你想探查并切换的 {{domxref("DOMString")}} .</dd>
- <dt>force {{optional_inline}}</dt>
- <dd>一个{{domxref("Boolean")}} 值，设置后会将方法变成单向操作。如设置为<code>false</code>, 则会删除标记列表中匹配的给定标记，且不会再度添加。如设置为 <code>true</code>, 则将在标记列表中添加给定标记，且不会再度删除。</dd>
-</dl>
+- token
+  - : 标记列表中你想探查并切换的 {{domxref("DOMString")}} .
+- force {{optional_inline}}
+  - : 一个{{domxref("Boolean")}} 值，设置后会将方法变成单向操作。如设置为`false`, 则会删除标记列表中匹配的给定标记，且不会再度添加。如设置为 `true`, 则将在标记列表中添加给定标记，且不会再度删除。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>该方法返回一个{{domxref("Boolean")}}值 — 如给定标记不存在于列表中返回<code>false</code> , 标记存在则返回<code>true</code> 。</p>
+该方法返回一个{{domxref("Boolean")}}值 — 如给定标记不存在于列表中返回`false` , 标记存在则返回`true` 。
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a <code>DOMTokenList</code> using {{domxref("Element.classList")}}. We then replace a token in the list, and write the list into the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a `DOMTokenList` using {{domxref("Element.classList")}}. We then replace a token in the list, and write the list into the `<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b"&gt;classList is 'a b'&lt;/span&gt;</pre>
+```html
+<span class="a b">classList is 'a b'</span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">var span = document.querySelector("span");
+```js
+var span = document.querySelector("span");
 var classes = span.classList;
 span.onclick = function() {
   var result = classes.toggle("c");
@@ -48,16 +51,16 @@ span.onclick = function() {
     span.textContent = "'c' removed; classList is now '" + classes + "'.";
   }
 }
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.DOMTokenList.toggle")}}

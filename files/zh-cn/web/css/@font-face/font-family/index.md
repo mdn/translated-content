@@ -3,47 +3,45 @@ title: font-family
 slug: Web/CSS/@font-face/font-family
 translation_of: Web/CSS/@font-face/font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}**`font-family`**`属性允许我们为页面上的字体指定一个由`{{cssxref("@font-face")}} 规则定义的字体族
 
-<div><strong><code>font-family</code></strong><code>属性允许我们为页面上的字体指定一个由</code>{{cssxref("@font-face")}} 规则定义的字体族</div>
+The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.
 
-<p>The <strong><code>font-family</code></strong> CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.</p>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css">/* &lt;string&gt; values */
+```css
+/* <string> values */
 font-family: "font family";
 font-family: 'another font family';
 
-/* &lt;IDENT&gt; value */
+/* <IDENT> value */
 font-family: examplefont;
-</pre>
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>指定字体族名称</dd>
-</dl>
+- `<family-name>`
+  - : 指定字体族名称
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: examplefont;
   src: url('examplefont.ttf');
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.at-rules.font-face.font-family")}}

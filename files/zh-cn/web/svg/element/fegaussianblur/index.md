@@ -8,100 +8,98 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/feGaussianBlur
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>该滤镜对输入图像进行高斯模糊，属性{{ SVGAttr("stdDeviation") }}中指定的数量定义了钟形。</p>
+该滤镜对输入图像进行高斯模糊，属性{{ SVGAttr("stdDeviation") }}中指定的数量定义了钟形。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="简单示例">简单示例</h3>
+### 简单示例
 
-<pre class="brush: html">&lt;svg width="230" height="120"
+```html
+<svg width="230" height="120"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;filter id="blurMe"&gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" /&gt;
-  &lt;/filter&gt;
+  <filter id="blurMe">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
 
-  &lt;circle cx="60"  cy="60" r="50" fill="green" /&gt;
+  <circle cx="60"  cy="60" r="50" fill="green" />
 
-  &lt;circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="170" cy="60" r="50" fill="green"
+          filter="url(#blurMe)" />
+</svg>
+```
 
-<p>该示例的结果如下所示：</p>
+该示例的结果如下所示：
 
-<p>{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}</p>
+{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
 
-<h3 id="投影示例">投影示例</h3>
+### 投影示例
 
-<pre class="brush: html">&lt;svg width="120" height="120"
+```html
+<svg width="120" height="120"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;filter id="dropShadow"&gt;
-    &lt;feGaussianBlur in="SourceAlpha" stdDeviation="3" /&gt;
-    &lt;feOffset dx="2" dy="4" /&gt;
-    &lt;feMerge&gt;
-        &lt;feMergeNode /&gt;
-        &lt;feMergeNode in="SourceGraphic" /&gt;
-    &lt;/feMerge&gt;
-  &lt;/filter&gt;
+  <filter id="dropShadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+    <feOffset dx="2" dy="4" />
+    <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
 
-  &lt;circle cx="60"  cy="60" r="50" fill="green"
-          filter="url(#dropShadow)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="60"  cy="60" r="50" fill="green"
+          filter="url(#dropShadow)" />
+</svg>
+```
 
-<p>该示例的结果如下所示：</p>
+该示例的结果如下所示：
 
-<p>{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}</p>
+{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("stdDeviation") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("stdDeviation") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFEGaussianBlurElement">SVGFEGaussianBlurElement</a></code>接口。</p>
+该元素实现了[`SVGFEGaussianBlurElement`](/en/DOM/SVGFEGaussianBlurElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en-US/docs/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en-US/docs/SVG/Tutorial/Filter_effects)

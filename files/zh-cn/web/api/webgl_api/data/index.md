@@ -17,23 +17,24 @@ tags:
   - 需要示例
 translation_of: Web/API/WebGL_API/Data
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。</p>
+GLSL 为 Shader 提供了三种不同作用的数据存储，每种都有一个特定的用例。每种数据依作用不同可以被一种或者全部 shader 访问（取决于数据存储类型），也可能通过站点的 Javascript 代码进行访问，这取决于变量的特定类型。
 
-<h2 id="GLSL_数据类型">GLSL 数据类型</h2>
+## GLSL 数据类型
 
-<p>&lt;&lt;关于 基本数据类型，向量等，参见 Khronos WebGL Wiki 的文档：<a href="https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)">Data Type (GLSL)</a> &gt;&gt;</p>
+<<关于 基本数据类型，向量等，参见 Khronos WebGL Wiki 的文档：[Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) >>
 
-<h2 id="GLSL_变量">GLSL 变量</h2>
+## GLSL 变量
 
-<p>GLSL 中有三种类型的“变量”或者说数据存储类型。每一种类型都有特定的目标和使用方法：: <strong><a href="#attributes">attributes</a></strong>、<strong><a href="#varyings">varyings</a></strong>和<strong><a href="#uniforms">uniforms</a></strong>.</p>
+GLSL 中有三种类型的“变量”或者说数据存储类型。每一种类型都有特定的目标和使用方法：: **[attributes](#attributes)**、**[varyings](#varyings)**和**[uniforms](#uniforms)**.
 
-<h3 id="Attributes">Attributes</h3>
+### Attributes
 
-<p><strong>Attributes</strong> 可以被 JavaScript 代码操作，也可以在 vertex shader 中被作为变量访问。Attributes 通常被用于存储颜色、纹理坐标以及其他需要在 JavaScript 代码和 vertex shader 之间互相传递的数据。</p>
+**Attributes** 可以被 JavaScript 代码操作，也可以在 vertex shader 中被作为变量访问。Attributes 通常被用于存储颜色、纹理坐标以及其他需要在 JavaScript 代码和 vertex shader 之间互相传递的数据。
 
-<pre class="brush: js notranslate">//init colors
+```js
+//init colors
     var vertexColors = [
         vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
         vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
@@ -45,9 +46,10 @@ translation_of: Web/API/WebGL_API/Data
         vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
     ];
     var cBuffer = gl.createBuffer();
-</pre>
+```
 
-<pre class="brush: js notranslate">//continued
+```js
+//continued
 //create buffer to store colors and reference it to "vColor" which is in GLSL
     gl.bindBuffer( gl.ARRAY_BUFFER, cBuffer );
     gl.bufferData( gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW );
@@ -55,9 +57,10 @@ translation_of: Web/API/WebGL_API/Data
     var vColor = gl.getAttribLocation( program, "vColor" );
     gl.vertexAttribPointer( vColor, 4, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vColor );
-</pre>
+```
 
-<pre class="brush: cpp notranslate">//glsl
+```cpp
+//glsl
 attribute  vec4 vColor;
 
 void main()
@@ -65,25 +68,24 @@ void main()
 
 fColor = vColor;
 }
+```
 
-</pre>
+### Varyings
 
-<h3 id="Varyings">Varyings</h3>
+**Varyings** 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 [normal vector](<https://zh.wikipedia.org/wiki/Normal_(geometry)>) 等在 vertex shader 中计算生成的数据会使用 varying。
 
-<p><strong>Varyings</strong> 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 <a href="https://zh.wikipedia.org/wiki/Normal_(geometry)">normal vector</a> 等在 vertex shader 中计算生成的数据会使用 varying。</p>
+<\<how to use>>
 
-<p>&lt;&lt;how to use&gt;&gt;</p>
+### Uniforms
 
-<h3 id="Uniforms">Uniforms</h3>
+**Uniform** 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。
 
-<p><strong>Uniform</strong> 通常是由 JavaScript 代码设置并且在 vertex shader 和 fragment shader 中都能够访问。 使用 uniform 设定在一帧的所有绘制中相同的数据，例如光源颜色、亮度、全局变换以及透视数据等等。</p>
+<<添加细节>>
 
-<p>&lt;&lt;添加细节&gt;&gt;</p>
+## Buffers
 
-<h2 id="Buffers">Buffers</h2>
+<<添加信息>>
 
-<p>&lt;&lt;添加信息&gt;&gt;</p>
+## Textures
 
-<h2 id="Textures">Textures</h2>
-
-<p>&lt;&lt;添加信息&gt;&gt;</p>
+<<添加信息>>

@@ -13,73 +13,71 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>endsWith()</strong></code>方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 <code>true</code> 或 <code>false</code>。</p>
+**`endsWith()`**方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`。
 
-<div>{{EmbedInteractiveExample("pages/js/string-endswith.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
 
+## 语法
 
+```plain
+str.endsWith(searchString[, length])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>str</var>.endsWith(<var>searchString</var>[, <var>length</var>])</pre>
+- `searchString`
+  - : 要搜索的子字符串。
+- `length` {{optional_inline}}
+  - : 作为 `str` 的长度。默认值为 `str.length`。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>searchString</code></dt>
- <dd>要搜索的子字符串。</dd>
- <dt><code><var>length</var></code> {{optional_inline}}</dt>
- <dd>作为 <code>str</code> 的长度。默认值为 <code>str.length</code>。</dd>
-</dl>
+如果传入的子字符串在搜索字符串的末尾则返回**`true`**；否则将返回 **`false`**。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>如果传入的子字符串在搜索字符串的末尾则返回<strong><code>true</code></strong>；否则将返回 <strong><code>false</code></strong>。</p>
+这个方法帮助你确定一个字符串是否在另一个字符串的末尾。这个方法是大小写敏感的。
 
-<h2 id="描述">描述</h2>
+## Polyfill
 
-<p>这个方法帮助你确定一个字符串是否在另一个字符串的末尾。这个方法是大小写敏感的。</p>
+这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的 JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 `String.prototype.endsWith()` 实现兼容：
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的  JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 <code>String.prototype.endsWith()</code> 实现兼容：</p>
-
-<pre class="brush: js">if (!String.prototype.endsWith) {
+```js
+if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(search, this_len) {
-		if (this_len === undefined || this_len &gt; this.length) {
+		if (this_len === undefined || this_len > this.length) {
 			this_len = this.length;
 		}
 		return this.substring(this_len - search.length, this_len) === search;
 	};
 }
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_endsWith">使用 <code>endsWith()</code></h3>
+### 使用 `endsWith()`
 
-<pre class="brush:js;">var str = "To be, or not to be, that is the question.";
+```js
+var str = "To be, or not to be, that is the question.";
 
 alert( str.endsWith("question.") );  // true
 alert( str.endsWith("to be") );      // false
 alert( str.endsWith("to be", 19) );  // true
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.prototype.startsWith()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

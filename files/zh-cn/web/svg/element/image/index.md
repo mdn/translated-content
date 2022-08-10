@@ -8,68 +8,65 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>SVG 文档中的 SVG 元素包含图像信息。它表现为图像文件或者其他 SVG 文件。</p>
+SVG 文档中的 SVG 元素包含图像信息。它表现为图像文件或者其他 SVG 文件。
 
-<p>SVG 图像格式转换软件支持 JPEG、PNG 格式，是否支持动图 GIF 不明确。</p>
+SVG 图像格式转换软件支持 JPEG、PNG 格式，是否支持动图 GIF 不明确。
 
-<p>SVG 文件是这样的一种图像：不被当做外部资源加载，不可以用 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:visited">:visited</a> 样式，不能有交互。使用动态 SVG 元素，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">&lt;use&gt;</a>引入外部的 URL。使用 SVG 文件并添加 scripts 在里面，可以用<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 放在 <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject">&lt;foreignObject&gt;</a>中。</p>
+SVG 文件是这样的一种图像：不被当做外部资源加载，不可以用 [:visited](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited) 样式，不能有交互。使用动态 SVG 元素，可以用[\<use>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use)引入外部的 URL。使用 SVG 文件并添加 scripts 在里面，可以用[\<object>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object) 放在 [\<foreignObject>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject)中。
 
-<p>注意：HTML 规范中定义&lt;image&gt;和&lt;img&gt;在解析时是等效的。这种规范只适用于 SVG 文件或 SVG 区块内。</p>
+注意：HTML 规范中定义\<image>和\<img>在解析时是等效的。这种规范只适用于 SVG 文件或 SVG 区块内。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}：图像水平方向上到原点的距离</li>
- <li>{{ SVGAttr("y") }}：图像竖直方向上到原点的距离</li>
- <li>{{ SVGAttr("width") }}：图像宽度。和 HTML 的 &lt;img&gt; 不同，该属性是必须的</li>
- <li>{{ SVGAttr("height") }}：图像高度。和 HTML 的 &lt;img&gt; 不同，该属性是必须的</li>
- <li>{{ SVGAttr("href") }} 或 {{ SVGAttr("xlink:href") }}：图像的 URL 指向</li>
- <li>{{ SVGAttr("preserveAspectRatio") }}：控制图像比例</li>
-</ul>
+- {{ SVGAttr("x") }}：图像水平方向上到原点的距离
+- {{ SVGAttr("y") }}：图像竖直方向上到原点的距离
+- {{ SVGAttr("width") }}：图像宽度。和 HTML 的 \<img> 不同，该属性是必须的
+- {{ SVGAttr("height") }}：图像高度。和 HTML 的 \<img> 不同，该属性是必须的
+- {{ SVGAttr("href") }} 或 {{ SVGAttr("xlink:href") }}：图像的 URL 指向
+- {{ SVGAttr("preserveAspectRatio") }}：控制图像比例
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现<code><a href="/en/DOM/SVGImageElement">SVGImageElement</a></code> 接口。</p>
+该元素实现[`SVGImageElement`](/en/DOM/SVGImageElement) 接口。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在 SVG 对象中基本呈现 PNG 图像：</p>
+在 SVG 对象中基本呈现 PNG 图像：
 
-<pre class="brush: html">&lt;svg width="100%" height="100%" viewBox="0 0 100 100"
+```html
+<svg width="100%" height="100%" viewBox="0 0 100 100"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" /&gt;
-&lt;/svg&gt;
-</pre>
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", 250, 260)}}</p>
+{{EmbedLiveSample("Example", 250, 260)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

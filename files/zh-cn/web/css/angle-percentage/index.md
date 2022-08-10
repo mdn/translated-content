@@ -3,30 +3,22 @@ title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 translation_of: Web/CSS/angle-percentage
 ---
-<div> </div>
+{{CSSRef}}
 
-<div> </div>
+[CSS 数据类型](/en-US/docs/Web/CSS) **`<angle-percentage>`**[ ](/en-US/docs/Web/CSS)代表了一种既可以是 {{Cssxref("angle")}} ，也可以是{{Cssxref("percentage")}}的数据类型
 
-<div>{{CSSRef}}</div>
+## 语法
 
-<p><a href="/en-US/docs/Web/CSS">CSS 数据类型</a> <strong><code>&lt;angle-percentage&gt;</code></strong><a href="/en-US/docs/Web/CSS"> </a>代表了一种既可以是 {{Cssxref("angle")}} ，也可以是{{Cssxref("percentage")}}的数据类型</p>
+有关此类型的详细文档，请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}}
 
-<p> </p>
+## 在 calc() 中使用这个类型
 
-<h2 id="语法">语法</h2>
+当 `<angle-percentage>` 被正确定义后，它就代表了一个可以被 {{Cssxref("calc()")}} 表达式解析的角度
 
-<p>有关此类型的详细文档，请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}} </p>
-
-<h2 id="在calc()中使用这个类型">在 calc() 中使用这个类型</h2>
-
-<p>当 <code>&lt;angle-percentage&gt;</code> 被正确定义后，它就代表了一个可以被 {{Cssxref("calc()")}} 表达式解析的角度 </p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("css.types.angle-percentage")}}</p>
+{{Compat("css.types.angle-percentage")}}

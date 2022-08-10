@@ -9,64 +9,56 @@ tags:
 translation_of: Web/API/LockedFile
 original_slug: Web/API/LockedFile
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><code>LockedFile</code> 接口提供了处理给定文件的所有必要锁定工具</p>
+`LockedFile` 接口提供了处理给定文件的所有必要锁定工具
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("LockedFile.fileHandle")}} {{readonlyinline}}</dt>
- <dd>从被打开的锁定文件返回一个 {{domxref("FileHandle")}} 对象。</dd>
- <dt>{{domxref("LockedFile.mode")}} {{readonlyinline}}</dt>
- <dd>访问文件的方式; 返回<code>readonly</code> 或 <code>readwrite。</code></dd>
- <dt>{{domxref("LockedFile.active")}} {{readonlyinline}}</dt>
- <dd>指示文件是否可以访问，返回 true 或 false。</dd>
- <dt>{{domxref("LockedFile.location")}}</dt>
- <dd>读/写指针在文件中的位置。</dd>
-</dl>
+- {{domxref("LockedFile.fileHandle")}} {{readonlyinline}}
+  - : 从被打开的锁定文件返回一个 {{domxref("FileHandle")}} 对象。
+- {{domxref("LockedFile.mode")}} {{readonlyinline}}
+  - : 访问文件的方式; 返回`readonly` 或 `readwrite。`
+- {{domxref("LockedFile.active")}} {{readonlyinline}}
+  - : 指示文件是否可以访问，返回 true 或 false。
+- {{domxref("LockedFile.location")}}
+  - : 读/写指针在文件中的位置。
 
-<h3 id="事件处理">事件处理</h3>
+### 事件处理
 
-<dl>
- <dt>{{domxref("LockedFile.oncomplete")}}</dt>
- <dd>每次读取或写入操作成功时触发 {{event("complete")}} 事件。</dd>
- <dt>{{domxref("LockedFile.onabort")}}</dt>
- <dd>每次调用{{domxref("LockedFile.abort()","abort()")}} 方法时会触发{{event("abort")}}事件。</dd>
- <dt>{{domxref("LockedFile.onerror")}}</dt>
- <dd>在每次出现问题时触发{{event("error")}}事件。</dd>
-</dl>
+- {{domxref("LockedFile.oncomplete")}}
+  - : 每次读取或写入操作成功时触发 {{event("complete")}} 事件。
+- {{domxref("LockedFile.onabort")}}
+  - : 每次调用{{domxref("LockedFile.abort()","abort()")}} 方法时会触发{{event("abort")}}事件。
+- {{domxref("LockedFile.onerror")}}
+  - : 在每次出现问题时触发{{event("error")}}事件。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("LockedFile.getMetadata()")}}</dt>
- <dd>允许检索文件元数据（上次修改的大小和日期）。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.readAsArrayBuffer()")}}</dt>
- <dd>允许以{{domxref("ArrayBuffer")}}形式检索文件内容的一部分。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.readAsText()")}}</dt>
- <dd>允许以字符串形式检索文件内容的一部分。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.write()")}}</dt>
- <dd>允许从{{domxref("LockedFile.location","location")}} 偏移量开始在文件中写入一些数据。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.append()")}}</dt>
- <dd>允许从文件末尾写入一些数据。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.truncate()")}}</dt>
- <dd>允许截断文件的内容。返回{{domxref("FileRequest")}}对象。</dd>
- <dt>{{domxref("LockedFile.flush()")}}</dt>
- <dd>允许保证任何缓冲的数据已被传输到磁盘。</dd>
- <dt>{{domxref("LockedFile.abort()")}}</dt>
- <dd>使 LockedFile 无效并取消所有正在进行的操作。</dd>
-</dl>
+- {{domxref("LockedFile.getMetadata()")}}
+  - : 允许检索文件元数据（上次修改的大小和日期）。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.readAsArrayBuffer()")}}
+  - : 允许以{{domxref("ArrayBuffer")}}形式检索文件内容的一部分。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.readAsText()")}}
+  - : 允许以字符串形式检索文件内容的一部分。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.write()")}}
+  - : 允许从{{domxref("LockedFile.location","location")}} 偏移量开始在文件中写入一些数据。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.append()")}}
+  - : 允许从文件末尾写入一些数据。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.truncate()")}}
+  - : 允许截断文件的内容。返回{{domxref("FileRequest")}}对象。
+- {{domxref("LockedFile.flush()")}}
+  - : 允许保证任何缓冲的数据已被传输到磁盘。
+- {{domxref("LockedFile.abort()")}}
+  - : 使 LockedFile 无效并取消所有正在进行的操作。
 
-<h2 id="标准">标准</h2>
+## 标准
 
-<p>不属于任何现行的规范，也不再有望成为标准。</p>
+不属于任何现行的规范，也不再有望成为标准。
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("FileHandle")}}</li>
- <li>{{domxref("FileRequest")}}</li>
-</ul>
+- {{domxref("FileHandle")}}
+- {{domxref("FileRequest")}}

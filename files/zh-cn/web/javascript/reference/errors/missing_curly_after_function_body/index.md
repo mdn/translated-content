@@ -7,60 +7,65 @@ tags:
   - 错误提示
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="错误提示">错误提示</h2>
+## 错误提示
 
-<pre class="syntaxbox">SyntaxError: missing } after function body
-</pre>
+```plain
+SyntaxError: missing } after function body
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>在创建函数的时候出现了语法错误。检查一下闭合花括号以及括号的顺序是否正确。将代码进行缩进或者美化可以让你更容易找到问题之所在。</p>
+在创建函数的时候出现了语法错误。检查一下闭合花括号以及括号的顺序是否正确。将代码进行缩进或者美化可以让你更容易找到问题之所在。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="遗漏的闭合花括号">遗漏的闭合花括号</h3>
+### 遗漏的闭合花括号
 
-<p>通常是因为在函数声明中遗漏了花括号：</p>
+通常是因为在函数声明中遗漏了花括号：
 
-<pre class="brush: js example-bad">var charge = function() {
+```js example-bad
+var charge = function() {
   if (sunny) {
     useSolarCells();
   } else {
     promptBikeRide();
 };
-</pre>
+```
 
-<p>正确的应该是这样的：</p>
+正确的应该是这样的：
 
-<pre class="brush: js example-good">var charge = function() {
+```js example-good
+var charge = function() {
   if (sunny) {
     useSolarCells();
   } else {
     promptBikeRide();
   }
-};</pre>
+};
+```
 
-<p>当使用立即调用函数表达式（{{Glossary("IIFE")}}）、<a href="/en-US/docs/Web/JavaScript/Closures">闭包</a>或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。</p>
+当使用立即调用函数表达式（{{Glossary("IIFE")}}）、[闭包](/en-US/docs/Web/JavaScript/Closures)或者其他使用了大量的花括号以及括号的结构体的时候，问题会更加隐蔽。
 
-<pre class="brush: js example-bad">(function() { if (true) { return false; } );
-</pre>
+```js example-bad
+(function() { if (true) { return false; } );
+```
 
-<p>通常将代码语句按照层级缩进以及对缩进进行复核会有助于错误的发现。</p>
+通常将代码语句按照层级缩进以及对缩进进行复核会有助于错误的发现。
 
-<pre class="brush: js example-good">(function() {
+```js example-good
+(function() {
   if (true) {
     return false;
   }
-});</pre>
+});
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Functions">Functions</a></li>
-</ul>
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)

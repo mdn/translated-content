@@ -9,45 +9,43 @@ tags:
   - 语句
 translation_of: Web/JavaScript/Reference/Statements/function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong>函数声明</strong>定义一个具有指定参数的函数。</p>
+**函数声明**定义一个具有指定参数的函数。
 
-<div class="noinclude">
-<p>你还可以使用  {{jsxref("Function")}} 构造函数和 一个{{jsxref("Operators/function", "function expression")}} 定义函数。</p>
-</div>
+你还可以使用 {{jsxref("Function")}} 构造函数和 一个{{jsxref("Operators/function", "function expression")}} 定义函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="eval">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
-   [<em>statements</em>]
+```plain
+function name([param,[, param,[..., param]]]) {
+   [statements]
 }
-</pre>
+```
 
-<dl>
- <dt><code>name</code></dt>
- <dd>函数名</dd>
- <dt><code>param</code></dt>
- <dd>要传递给函数的参数的名称。不同引擎中的最大参数数量不同。</dd>
- <dt><code>statements</code></dt>
- <dd>包含函数体的语句。</dd>
-</dl>
+- `name`
+  - : 函数名
+- `param`
+  - : 要传递给函数的参数的名称。不同引擎中的最大参数数量不同。
+- `statements`
+  - : 包含函数体的语句。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>一个被函数声明创建的函数是一个 Function 对象，具有 Function 对象的所有属性、方法和行为。查看 <a href="/en/JavaScript/Reference/Global_Objects/Function">Function</a> 以获取 function 的详细信息。</p>
+一个被函数声明创建的函数是一个 Function 对象，具有 Function 对象的所有属性、方法和行为。查看 [Function](/en/JavaScript/Reference/Global_Objects/Function) 以获取 function 的详细信息。
 
-<p>函数也可以被表达式创建（ <a href="/en/JavaScript/Reference/Operators/function">function expression</a> ）</p>
+函数也可以被表达式创建（ [function expression](/en/JavaScript/Reference/Operators/function) ）
 
-<p>函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是 true 还是 false，浏览器都会创建函数。因此，它们不应该被使用。</p>
+函数可以被有条件来声明，这意味着，在一个 if 语句里，函数声明是可以嵌套的。有的浏览器会将这种有条件的声明看成是无条件的声明，无论这里的条件是 true 还是 false，浏览器都会创建函数。因此，它们不应该被使用。
 
-<p>默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 <a href="/en/JavaScript/Reference/Statements/return">return</a> 语句指定返回值。</p>
+默认情况下，函数是返回 undefined 的。想要返回一个其他的值，函数必须通过一个 [return](/en/JavaScript/Reference/Statements/return) 语句指定返回值。
 
-<h3 id="有条件的创建函数">有条件的创建函数</h3>
+### 有条件的创建函数
 
-<p>函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生产环境代码中使用这种声明方式，应该使用函数表达式来代替。</p>
+函数可以被有条件来声明，这意味着，函数声明可能出现在一个 if 语句里，但是，这种声明方式在不同的浏览器里可能有不同的效果。因此，不应该在生产环境代码中使用这种声明方式，应该使用函数表达式来代替。
 
-<pre class="brush: js"><code>var hoisted = "foo" in this;
+```js
+var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (false) {
   function foo(){ return 1; }
@@ -63,11 +61,13 @@ if (false) {
 // 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
 // 在 Safari 里：
-// 'foo' 变量名被提升。而且 typeof foo 为 function</code></pre>
+// 'foo' 变量名被提升。而且 typeof foo 为 function
+```
 
-<p>注意，即使把上面代码中的 if(false) 改为 if(true)，结果也是一样的</p>
+注意，即使把上面代码中的 if(false) 改为 if(true)，结果也是一样的
 
-<pre class="brush: js"><code>var hoisted = "foo" in this;
+```js
+var hoisted = "foo" in this;
 console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
 if (true) {
   function foo(){ return 1; }
@@ -83,58 +83,56 @@ if (true) {
 // 'foo' 变量名未被提升。而且 typeof foo 为 undefined
 //
 // 在 Safari 里：
-// 'foo' 变量名被提升。而且 typeof foo 为 function</code>
-</pre>
+// 'foo' 变量名被提升。而且 typeof foo 为 function
+```
 
-<h3 id="函数声明提升">函数声明提升</h3>
+### 函数声明提升
 
-<p>JavaScript 中的<strong>函数声明</strong>被提升到了<strong>函数定义</strong>。你可以在函数声明之前使用该函数：</p>
+JavaScript 中的**函数声明**被提升到了**函数定义**。你可以在函数声明之前使用该函数：
 
-<pre class="brush: js">hoisted(); // logs "foo"
+```js
+hoisted(); // logs "foo"
 
 function hoisted() {
   console.log('foo');
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>备注：</strong><strong>函数表达式</strong>{{jsxref("Operators/function", "function expressions")}} 不会被提升：</p>
-</div>
+> **备注：** 函数表达式 {{jsxref("Operators/function", "function expressions")}} 不会被提升：
 
-<pre class="brush: js">notHoisted(); // TypeError: notHoisted is not a function
+```js
+notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
   console.log('bar');
 };
-</pre>
+```
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Example_Using_function">使用函数</h3>
+### 使用函数
 
-<p>下面的代码声明了一个函数，该函数返回了销售的总金额，参数是产品 a,b,c 分别的销售的数量。</p>
+下面的代码声明了一个函数，该函数返回了销售的总金额，参数是产品 a,b,c 分别的销售的数量。
 
-<pre class="brush: js">function calc_sales(units_a, units_b, units_c) {
+```js
+function calc_sales(units_a, units_b, units_c) {
    return units_a * 79 + units_b * 129 + units_c * 699;
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Operators/function", "function expression")}}</li>
- <li>{{jsxref("Statements/function*", "function* statement")}}</li>
- <li>{{jsxref("Operators/function*", "function* expression")}}</li>
- <li>{{jsxref("GeneratorFunction")}}</li>
-</ul>
+- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Function")}}
+- {{jsxref("Operators/function", "function expression")}}
+- {{jsxref("Statements/function*", "function* statement")}}
+- {{jsxref("Operators/function*", "function* expression")}}
+- {{jsxref("GeneratorFunction")}}

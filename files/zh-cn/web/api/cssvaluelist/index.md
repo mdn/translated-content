@@ -9,45 +9,39 @@ tags:
   - 接口
 translation_of: Web/API/CSSValueList
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>CSSValueList</strong></code> 接口继承自 {{domxref("CSSValue")}} 接口，提供一个经过排序的 CSS 值的抽象集合。</p>
+The **`CSSValueList`** 接口继承自 {{domxref("CSSValue")}} 接口，提供一个经过排序的 CSS 值的抽象集合。
 
-<p>一些属性允许在它们的语法中使用空的列表。这时，these properties take the <code>none</code> identifier. So, an empty list means that the property has the value <code>none</code>.</p>
+一些属性允许在它们的语法中使用空的列表。这时，these properties take the `none` identifier. So, an empty list means that the property has the value `none`.
 
-<p>The items in the <code>CSSValueList</code> are accessible via an integral index, starting from 0.</p>
+The items in the `CSSValueList` are accessible via an integral index, starting from 0.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>从它的父接口 {{domxref("CSSValue")}} 继承属性。</em></p>
+_从它的父接口 {{domxref("CSSValue")}} 继承属性。_
 
-<dl>
- <dt>{{domxref("CSSValueList.length")}} {{readonlyInline}}</dt>
- <dd>一个 <code>unsigned long</code> 数值，表示此列表中 <code>CSSValues</code> 的个数。</dd>
-</dl>
+- {{domxref("CSSValueList.length")}} {{readonlyInline}}
+  - : 一个 `unsigned long` 数值，表示此列表中 `CSSValues` 的个数。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("CSSValueList.item()")}}</dt>
- <dd>This method is used to retrieve a {{domxref("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns <code>null</code>.</dd>
-</dl>
+- {{domxref("CSSValueList.item()")}}
+  - : This method is used to retrieve a {{domxref("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns `null`.
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>该特性最初在 <a href="https://www.w3.org/TR/DOM-Level-2-Style/">DOM Style Level 2</a> 中定义，但从那时起已从标准化工作中移除。</p>
+该特性最初在 [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) 中定义，但从那时起已从标准化工作中移除。
 
-<p>它已被现代、不兼容的 <a href="/zh-CN/docs/Web/API/CSS_Typed_OM_API">CSS 类型对象模型 API</a> 取代，该 API 已被标准化。</p>
+它已被现代、不兼容的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 取代，该 API 已被标准化。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{domxref("CSSPrimitiveValue")}}</li>
- <li>{{domxref("CSSValue")}}</li>
-</ul>
+- {{domxref("CSSPrimitiveValue")}}
+- {{domxref("CSSValue")}}

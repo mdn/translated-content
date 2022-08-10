@@ -8,65 +8,66 @@ tags:
   - Selectors
 translation_of: Web/CSS/Attribute_selectors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS <strong>属性选择器</strong>通过已经存在的属性名或属性值匹配元素。</p>
+CSS **属性选择器**通过已经存在的属性名或属性值匹配元素。
 
-<pre class="brush: css">/* 存在 title 属性的&lt;a&gt; 元素 */
+```css
+/* 存在 title 属性的<a> 元素 */
 a[title] {
   color: purple;
 }
 
-/* 存在 href 属性并且属性值匹配"https://example.org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值匹配"https://example.org"的<a> 元素 */
 a[href="https://example.org"] {
   color: green;
 }
 
-/* 存在 href 属性并且属性值包含"example"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值包含"example"的<a> 元素 */
 a[href*="example"] {
   font-size: 2em;
 }
 
-/* 存在 href 属性并且属性值结尾是".org"的&lt;a&gt; 元素 */
+/* 存在 href 属性并且属性值结尾是".org"的<a> 元素 */
 a[href$=".org"] {
   font-style: italic;
 }
 
-/* 存在 class 属性并且属性值包含以空格分隔的"logo"的&lt;a&gt;元素 */
+/* 存在 class 属性并且属性值包含以空格分隔的"logo"的<a>元素 */
 a[class~="logo"] {
   padding: 2px;
-}</pre>
+}
+```
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<dl>
- <dt><code>[<var>attr</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性的元素。</dd>
- <dt><code>[<var>attr</var>=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性，且属性值为 <var>value</var> 的元素。</dd>
- <dt><code>[<var>attr</var>~=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少有一个值为 <var>value</var>。</dd>
- <dt><code>[<var>attr</var>|=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性的元素，属性值为“value”或是以“value-”为前缀（"<code>-</code>"为连字符，Unicode 编码为 U+002D）开头。典型的应用场景是用来匹配语言简写代码（如 zh-CN，zh-TW 可以用 zh 作为 value）。</dd>
- <dt><code>[<var>attr</var>^=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性，且属性值是以 <var>value </var>开头的元素。</dd>
- <dt><code>[<var>attr</var>$=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性，且属性值是以 <var>value </var>结尾的元素。</dd>
- <dt><code>[<var>attr</var>*=<var>value</var>]</code></dt>
- <dd>表示带有以 <var>attr</var> 命名的属性，且属性值至少包含一个 <var>value </var>值的元素。</dd>
- <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
- <dd>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</dd>
- <dt><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
- <dd>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</dd>
-</dl>
+- `[attr]`
+  - : 表示带有以 _attr_ 命名的属性的元素。
+- `[attr=value]`
+  - : 表示带有以 _attr_ 命名的属性，且属性值为 _value_ 的元素。
+- `[attr~=value]`
+  - : 表示带有以 _attr_ 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少有一个值为 _value_。
+- `[attr|=value]`
+  - : 表示带有以 _attr_ 命名的属性的元素，属性值为“value”或是以“value-”为前缀（"`-`"为连字符，Unicode 编码为 U+002D）开头。典型的应用场景是用来匹配语言简写代码（如 zh-CN，zh-TW 可以用 zh 作为 value）。
+- `[attr^=value]`
+  - : 表示带有以 _attr_ 命名的属性，且属性值是以 *value *开头的元素。
+- `[attr$=value]`
+  - : 表示带有以 _attr_ 命名的属性，且属性值是以 *value *结尾的元素。
+- `[attr*=value]`
+  - : 表示带有以 _attr_ 命名的属性，且属性值至少包含一个 *value *值的元素。
+- `[attr operator value i]`
+  - : 在属性选择器的右方括号前添加一个用空格隔开的字母 `i`（或 `I`），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。
+- `[attr operator value s]` {{Experimental_Inline}}
+  - : 在属性选择器的右方括号前添加一个用空格隔开的字母 `s`（或 `S`），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="链接">链接</h3>
+### 链接
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">a {
+```css
+a {
   color: blue;
 }
 
@@ -93,73 +94,79 @@ a[href*="cAsE" s] {
 /* 以 ".org" 结尾的链接 */
 a[href$=".org"] {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#internal"&gt;Internal link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://example.com"&gt;Example link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#InSensitive"&gt;Insensitive internal link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://example.org"&gt;Example org link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a href="#internal">Internal link</a></li>
+  <li><a href="http://example.com">Example link</a></li>
+  <li><a href="#InSensitive">Insensitive internal link</a></li>
+  <li><a href="http://example.org">Example org link</a></li>
+</ul>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Links")}}</p>
+{{EmbedLiveSample("Links")}}
 
-<h3 id="多语言">多语言</h3>
+### 多语言
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">/* 将所有包含 `lang` 属性的 &lt;div&gt; 元素的字重设为 bold */
+```css
+/* 将所有包含 `lang` 属性的 <div> 元素的字重设为 bold */
 div[lang] {
   font-weight: bold;
 }
 
-/* 将所有语言为美国英语的 &lt;div&gt; 元素的文本颜色设为蓝色 */
+/* 将所有语言为美国英语的 <div> 元素的文本颜色设为蓝色 */
 div[lang~="en-us"] {
   color: blue;
 }
 
-/* 将所有语言为葡萄牙语的 &lt;div&gt; 元素的文本颜色设为绿色 */
+/* 将所有语言为葡萄牙语的 <div> 元素的文本颜色设为绿色 */
 div[lang="pt"] {
   color: green;
 }
 
-/* 将所有语言为中文的 &lt;div&gt; 元素的文本颜色设为红色
+/* 将所有语言为中文的 <div> 元素的文本颜色设为红色
    无论是简体中文（zh-CN）还是繁体中文（zh-TW） */
 div[lang|="zh"] {
   color: red;
 }
 
-/* 将所有 `data-lang` 属性的值为 "zh-TW" 的 &lt;div&gt; 元素的文本颜色设为紫色 */
+/* 将所有 `data-lang` 属性的值为 "zh-TW" 的 <div> 元素的文本颜色设为紫色 */
 /* 备注：和 JS 不同，CSS 可以在不使用双引号的情况下直接使用带连字符的属性名 */
 div[data-lang="zh-TW"] {
   color: purple;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div lang="en-us en-gb en-au en-nz"&gt;Hello World!&lt;/div&gt;
-&lt;div lang="pt"&gt;Olá Mundo!&lt;/div&gt;
-&lt;div lang="zh-CN"&gt;世界您好！&lt;/div&gt;
-&lt;div lang="zh-TW"&gt;世界您好！&lt;/div&gt;
-&lt;div data-lang="zh-TW"&gt;世界您好！&lt;/div&gt;
-</pre>
+```html
+<div lang="en-us en-gb en-au en-nz">Hello World!</div>
+<div lang="pt">Olá Mundo!</div>
+<div lang="zh-CN">世界您好！</div>
+<div lang="zh-TW">世界您好！</div>
+<div data-lang="zh-TW">世界您好！</div>
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("Languages")}}</p>
+{{EmbedLiveSample("Languages")}}
 
-<h3 id="HTML_有序列表">HTML 有序列表</h3>
+### HTML 有序列表
 
-<p>由于 {{htmlattrxref("type", "input")}} 属性主要用于 {{HTMLElement("input")}} 元素，因此 HTML 规范要求 {{htmlattrxref("type", "input")}} 属性的匹配不区分大小写，如果使用属性选择器且添加了 <a href="#case-sensitive">大小写敏感</a> 的修饰符，那么将无法与 {{HTMLElement("ol", "有序列表")}} 的 {{htmlattrxref("type", "ol")}} 属性进行匹配。</p>
+由于 {{htmlattrxref("type", "input")}} 属性主要用于 {{HTMLElement("input")}} 元素，因此 HTML 规范要求 {{htmlattrxref("type", "input")}} 属性的匹配不区分大小写，如果使用属性选择器且添加了 [大小写敏感](#case-sensitive) 的修饰符，那么将无法与 {{HTMLElement("ol", "有序列表")}} 的 {{htmlattrxref("type", "ol")}} 属性进行匹配。
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">/* 列表类型不需要大小写敏感标志，这是由于 HTML 处理 type 属性的一个怪癖。 */
+```css
+/* 列表类型不需要大小写敏感标志，这是由于 HTML 处理 type 属性的一个怪癖。 */
 ol[type="a"] {
   list-style-type: lower-alpha;
   background: red;
@@ -173,33 +180,32 @@ ol[type="a" s] {
 ol[type="A" s] {
   list-style-type: upper-alpha;
   background: lime;
-}</pre>
+}
+```
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html; notranslate">&lt;ol type="A"&gt;
-  &lt;li&gt;Example list&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol type="A">
+  <li>Example list</li>
+</ol>
+```
 
-<h4 id="结果_3">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample("HTML_ordered_lists")}}</p>
+{{EmbedLiveSample("HTML_ordered_lists")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("css.selectors.attribute")}}
 
+## 参见
 
-<p>{{Compat("css.selectors.attribute")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{CSSxRef("attr")}}</li>
- <li>Selecting a single element: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, or {{DOMxRef("Element.querySelector()")}}</li>
- <li>Selecting all matching elements: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, or {{DOMxRef("Element.querySelectorAll()")}}</li>
- <li>The above methods are all implemented based on the {{DOMxRef("ParentNode")}} mixin; see {{DOMxRef("ParentNode.querySelector()")}} and {{DOMxRef("ParentNode.querySelectorAll()")}}</li>
-</ul>
+- {{CSSxRef("attr")}}
+- Selecting a single element: {{DOMxRef("Document.querySelector()")}}, {{DOMxRef("DocumentFragment.querySelector()")}}, or {{DOMxRef("Element.querySelector()")}}
+- Selecting all matching elements: {{DOMxRef("Document.querySelectorAll()")}}, {{DOMxRef("DocumentFragment.querySelectorAll()")}}, or {{DOMxRef("Element.querySelectorAll()")}}
+- The above methods are all implemented based on the {{DOMxRef("ParentNode")}} mixin; see {{DOMxRef("ParentNode.querySelector()")}} and {{DOMxRef("ParentNode.querySelectorAll()")}}

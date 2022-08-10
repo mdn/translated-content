@@ -10,33 +10,34 @@ tags:
   - 构造器
 translation_of: Web/API/MutationObserver/MutationObserver
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>DOM 规范中的 <code>MutationObserver()</code> 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。</p>
+DOM 规范中的 `MutationObserver()` 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>observer</em> = new MutationObserver(<em>callback</em>);</pre>
+```plain
+var observer = new MutationObserver(callback);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>一个回调函数，每当被指定的节点或子树以及配置项有 DOM 变动时会被调用。回调函数拥有两个参数：一个是描述所有被触发改动的 {{domxref("MutationRecord")}} 对象数组，另一个是调用该函数的 <code>MutationObserver</code> 对象。参见下方的<a href="#示例">示例</a>了解更多细节</dd>
-</dl>
+- `callback`
+  - : 一个回调函数，每当被指定的节点或子树以及配置项有 DOM 变动时会被调用。回调函数拥有两个参数：一个是描述所有被触发改动的 {{domxref("MutationRecord")}} 对象数组，另一个是调用该函数的 `MutationObserver` 对象。参见下方的[示例](#示例)了解更多细节
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的、包含监听 DOM 变化回调函数的 {{domxref("MutationObserver")}} 对象。</p>
+一个新的、包含监听 DOM 变化回调函数的 {{domxref("MutationObserver")}} 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子简单地创建了一个新的 <code>MutationObserver</code>，监视一个节点及其全部子节点树的添加、移除元素，以及任何属性变化的事件。</p>
+这个例子简单地创建了一个新的 `MutationObserver`，监视一个节点及其全部子节点树的添加、移除元素，以及任何属性变化的事件。
 
-<h3 id="回调函数">回调函数</h3>
+### 回调函数
 
-<pre class="brush: js">function callback(mutationList, observer) {
-  mutationList.forEach((mutation) =&gt; {
+```js
+function callback(mutationList, observer) {
+  mutationList.forEach((mutation) => {
     switch(mutation.type) {
       case 'childList':
         /* 从树上添加或移除一个或更多的子节点；参见 mutation.addedNodes 与
@@ -49,17 +50,18 @@ translation_of: Web/API/MutationObserver/MutationObserver
     }
   });
 }
-</pre>
+```
 
-<p>调用 {{domxref("MutationObserver.observe", "observe()")}} 即可开始观察 DOM。当观察者 observer 发现匹配观察请求中指定的配置项的更改时，<code>callback()</code> 方法便会被调用。</p>
+调用 {{domxref("MutationObserver.observe", "observe()")}} 即可开始观察 DOM。当观察者 observer 发现匹配观察请求中指定的配置项的更改时，`callback()` 方法便会被调用。
 
-<p>使用 {{domxref("MutationRecord.type", "mutation.type")}} 获取发生的变动类别（无论是子节点的变动，还是节点属性的变动）。</p>
+使用 {{domxref("MutationRecord.type", "mutation.type")}} 获取发生的变动类别（无论是子节点的变动，还是节点属性的变动）。
 
-<h3 id="创建并使用_observer">创建并使用 observer</h3>
+### 创建并使用 observer
 
-<p>使用以下代码设置一个观察进程。</p>
+使用以下代码设置一个观察进程。
 
-<pre class="brush: js">var targetNode = document.querySelector("#someElement");
+```js
+var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,  // 观察目标子节点的变化，是否有添加或者删除
   attributes: true, // 观察属性变动
@@ -67,18 +69,19 @@ var observerOptions = {
 }
 
 var observer = new MutationObserver(callback);
-observer.observe(targetNode, observerOptions);</pre>
+observer.observe(targetNode, observerOptions);
+```
 
-<p>使用 ID <code>someElement</code> 来获取目标节点树。<code>observerOptions</code> 中设定了观察者的选项，通过设定 <code>childList</code> 和 <code>attributes</code> 为 <code>true</code> 来获取所需信息。</p>
+使用 ID `someElement` 来获取目标节点树。`observerOptions` 中设定了观察者的选项，通过设定 `childList` 和 `attributes` 为 `true` 来获取所需信息。
 
-<p>当 observer 实例化时，指定 <code>callback()</code> 函数。之后指定目标节点与记录选项，我们开始观察使用 <code>observe()</code> 指定的 DOM 节点。</p>
+当 observer 实例化时，指定 `callback()` 函数。之后指定目标节点与记录选项，我们开始观察使用 `observe()` 指定的 DOM 节点。
 
-<p>从现在开始直到调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} ，每次以 <code>targetNode</code> 为根节点的 DOM 树添加或移除元素时，以及这些元素的任意属性改变时，<em><code>callback()</code> 都会被调用。</em></p>
+从现在开始直到调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} ，每次以 `targetNode` 为根节点的 DOM 树添加或移除元素时，以及这些元素的任意属性改变时，_`callback()` 都会被调用。_
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.MutationObserver.MutationObserver")}}</p>
+{{Compat("api.MutationObserver.MutationObserver")}}

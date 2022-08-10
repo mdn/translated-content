@@ -3,31 +3,33 @@ title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
 translation_of: Web/API/SpeechSynthesisUtterance/voice
 ---
-<div>{{APIRef("Web Speech API")}}</div>
+{{APIRef("Web Speech API")}}
 
-<p>The <strong><code>voice</code></strong> property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.</p>
+The **`voice`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.
 
-<p>This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.</p>
+This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var myVoice = speechSynthesisUtteranceInstance.voice;
+```plain
+var myVoice = speechSynthesisUtteranceInstance.voice;
 speechSynthesisUtteranceInstance.voice = speechSynthesisVoiceInstance;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("SpeechSynthesisVoice")}} object.</p>
+A {{domxref("SpeechSynthesisVoice")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js notranslate"><code class="language-js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
 var voiceSelect = document.querySelector('select');
 
-var voices = synth.getVoices();</code>
+var voices = synth.getVoices();
 
   ...
 
@@ -36,29 +38,24 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat("api.SpeechSynthesisUtterance.voice")}}
 
+## See also
 
-<p>{{Compat("api.SpeechSynthesisUtterance.voice")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

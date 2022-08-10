@@ -5,55 +5,56 @@ tags:
   - Document.forms
 translation_of: Web/API/Document/forms
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>forms</strong></code> 返回当前文档中的 {{HTMLElement("form")}}元素的一个集合 (一个 {{domxref("HTMLCollection")}})。</p>
+**`forms`** 返回当前文档中的 {{HTMLElement("form")}}元素的一个集合 (一个 {{domxref("HTMLCollection")}})。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><code>let collection</code> = document.forms;
-</pre>
+```plain
+let collection = document.forms;
+```
 
-<h2 id="Example">例子：获取表单信息</h2>
+## 例子：获取表单信息
 
-<pre class="brush: html">&lt;html&gt;
+```html
+<html>
 
-&lt;head&gt;
-&lt;title&gt; document.forms example&lt;/title&gt;
-&lt;/head&gt;
+<head>
+<title> document.forms example</title>
+</head>
 
-&lt;body&gt;
-&lt;form id="robby"&gt;
- &lt;input type="button" onclick="alert(document.forms[0].id);"
- value="robby's form" /&gt;
-&lt;/form&gt;
+<body>
+<form id="robby">
+ <input type="button" onclick="alert(document.forms[0].id);"
+ value="robby's form" />
+</form>
 
-&lt;form id="dave"&gt;
- &lt;input type="button" onclick="alert(document.forms[1].id);"
- value="dave's form" /&gt;
-&lt;/form&gt;
+<form id="dave">
+ <input type="button" onclick="alert(document.forms[1].id);"
+ value="dave's form" />
+</form>
 
-&lt;form id="paul"&gt;
- &lt;input type="button" onclick="alert(document.forms[2].id);"
- value="paul's form" /&gt;
-&lt;/form&gt;
+<form id="paul">
+ <input type="button" onclick="alert(document.forms[2].id);"
+ value="paul's form" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="例子_获取表单内的元素"> 例子：获取表单内的元素</h2>
+## 例子：获取表单内的元素
 
-<pre class="brush: js">var selectForm = document.forms[index];
+```js
+var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064">forms DOM Level 2 HTML: forms</a></p>
+[forms DOM Level 2 HTML: forms](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-cn/DOM/HTMLFormElement">DOM:form</a></li>
-</ul>
+- [DOM:form](/zh-cn/DOM/HTMLFormElement)

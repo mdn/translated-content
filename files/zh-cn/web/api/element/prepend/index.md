@@ -1,7 +1,6 @@
 ---
 title: Element.prepend()
 slug: Web/API/Element/prepend
-translation_of: Web/API/Element/prepend
 tags:
   - API
   - DOM
@@ -10,79 +9,85 @@ tags:
   - Element
   - Reference
   - prepend
+translation_of: Web/API/Element/prepend
 browser-compat: api.Element.prepend
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是 HTML 代码）。</p>
+**`Element.prepend`** 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是 HTML 代码）。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">Element.prepend((Node or DOMString)... nodes);
-</pre>
+```plain
+Element.prepend((Node or DOMString)... nodes);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>nodes</code></dt>
- <dd>要插入的一系列{{domxref("Node")}}或者{{domxref("DOMString")}}。</dd>
-</dl>
+- `nodes`
+  - : 要插入的一系列{{domxref("Node")}}或者{{domxref("DOMString")}}。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="错误">错误</h3>
+### 错误
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}：节点不能插入当前层级内。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}：节点不能插入当前层级内。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="Prepending_an_element">Prepending an element</h3>
+### Prepending an element
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 var p = document.createElement("p");
 var span = document.createElement("span");
 parent.append(p);
 parent.prepend(span);
 
-console.log(parent.childNodes); // NodeList [ &lt;span&gt;, &lt;p&gt; ]
-</pre>
+console.log(parent.childNodes); // NodeList [ <span>, <p> ]
+```
 
-<h3 id="Prepending_text">Prepending text</h3>
+### Prepending text
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 parent.append("Some text");
 parent.prepend("Headline: ");
 
-console.log(parent.textContent); // "Headline: Some text"</pre>
+console.log(parent.textContent); // "Headline: Some text"
+```
 
-<h3 id="Appending_an_element_and_text">Appending an element and text</h3>
+### Appending an element and text
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 var p = document.createElement("p");
 parent.prepend("Some text", p);
 
-console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
+console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
+```
 
-<h3 id="Element.prepend_is_unscopable"><code>Element.prepend()</code> is unscopable</h3>
+### `Element.prepend()` is unscopable
 
-<p><code>prepend() 不能在 with 语句内使用，详情参考</code>{{jsxref("Symbol.unscopables")}}。</p>
+`prepend() 不能在 with 语句内使用，详情参考`{{jsxref("Symbol.unscopables")}}。
 
-<pre class="brush: js">var parent = document.createElement("div");
+```js
+var parent = document.createElement("div");
 
 with(parent) {
   prepend("foo");
 }
-// ReferenceError: prepend is not defined </pre>
+// ReferenceError: prepend is not defined
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>使用下面的代码在 IE9 或更高版本中模拟<code>prepend()</code>方法：</p>
+使用下面的代码在 IE9 或更高版本中模拟`prepend()`方法：
 
-<pre class="brush: js">// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
+```js
+// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
 (function (arr) {
     arr.forEach(function (item) {
         item.prepend = item.prepend || function () {
@@ -97,25 +102,22 @@ with(parent) {
             this.insertBefore(docFrag, this.firstChild);
         };
     });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);</pre>
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+```
 
-<h2 id="说明">说明</h2>
+## 说明
 
 {{Specifications}}
 
-<h2 id="兼容性">兼容性</h2>
+## 兼容性
 
+{{Compat("api.Element.prepend")}}
 
+## See also
 
-<p>{{Compat("api.Element.prepend")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("Element.append()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("ChildNode.before()")}}</li>
- <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element")}} and {{domxref("ChildNode")}}
+- {{domxref("Element.append()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("ChildNode.before()")}}
+- {{domxref("NodeList")}}

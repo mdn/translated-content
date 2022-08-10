@@ -3,30 +3,28 @@ title: DOMPoint.y
 slug: Web/API/DOMPoint/y
 translation_of: Web/API/DOMPoint/y
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>DOMPoint</strong></code> 的 <code><strong>y</strong></code> 属性表示该点的垂直坐标。<code>y</code> 值增加表示向下偏移，减小表示向上偏移，除非改变了默认轴方向。</p>
+**`DOMPoint`** 的 **`y`** 属性表示该点的垂直坐标。`y` 值增加表示向下偏移，减小表示向上偏移，除非改变了默认轴方向。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>yPos</em> = <em>DOMPoint</em>.y;</pre>
+```plain
+var yPos = DOMPoint.y;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>双精度浮点值，表示该点的 y 坐标值。这个值的类型并没有严格限制，意味着它可以是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±Infinity")}}。</p>
+双精度浮点值，表示该点的 y 坐标值。这个值的类型并没有严格限制，意味着它可以是 {{jsxref("NaN")}} 或 {{jsxref("Infinity", "±Infinity")}}。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat("api.DOMPointReadOnly.y")}}
 
+## 相关链接
 
-<p>{{Compat("api.DOMPointReadOnly.y")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>其他坐标属性： {{domxref("DOMPoint.x", "x")}}, {{domxref("DOMPoint.z", "z")}}, 透视值 {{domxref("DOMPoint.w", "w")}}。</li>
-</ul>
+- 其他坐标属性： {{domxref("DOMPoint.x", "x")}}, {{domxref("DOMPoint.z", "z")}}, 透视值 {{domxref("DOMPoint.w", "w")}}。

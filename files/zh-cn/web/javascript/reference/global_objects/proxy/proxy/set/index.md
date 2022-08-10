@@ -10,79 +10,70 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>handler.set()</strong></code> 方法是设置属性值操作的捕获器。</p>
+**`handler.set()`** 方法是设置属性值操作的捕获器。
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-set.html", "taller")}}
 
+## 语法
 
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox">const <var>p</var> = new Proxy(<var>target</var>, {
-  set: function(<var>target</var>, <var>property</var>, <var>value</var>, <var>receiver</var>) {
+```plain
+const p = new Proxy(target, {
+  set: function(target, property, value, receiver) {
   }
 });
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>以下是传递给 <code>set()</code> 方法的参数。<code>this</code> 绑定在 handler 对象上。</p>
+以下是传递给 `set()` 方法的参数。`this` 绑定在 handler 对象上。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd>目标对象。</dd>
- <dt><code><var>property</var></code></dt>
- <dd>将被设置的属性名或 {{jsxref("Symbol")}}。</dd>
- <dt><code><var>value</var></code></dt>
- <dd>新属性值。</dd>
- <dt><code><var>receiver</var></code></dt>
- <dd>最初被调用的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
- <div class="note">
- <p><strong>备注：</strong>假设有一段代码执行 <code>obj.name = "jen"</code>， <code><var>obj</var></code> 不是一个 proxy，且自身不含 <code>name</code> 属性，但是它的原型链上有一个 proxy，那么，那个 proxy 的 <code>set()</code> 处理器会被调用，而此时，<code><var>obj</var></code> 会作为 receiver 参数传进来。</p>
- </div>
- </dd>
-</dl>
+- `target`
+  - : 目标对象。
+- `property`
+  - : 将被设置的属性名或 {{jsxref("Symbol")}}。
+- `value`
+  - : 新属性值。
+- `receiver`
 
-<h3 id="返回值">返回值</h3>
+  - : 最初被调用的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
 
-<p><code>set()</code> 方法应当返回一个布尔值。</p>
+    > **备注：**假设有一段代码执行 `obj.name = "jen"`， `obj` 不是一个 proxy，且自身不含 `name` 属性，但是它的原型链上有一个 proxy，那么，那个 proxy 的 `set()` 处理器会被调用，而此时，`obj` 会作为 receiver 参数传进来。
 
-<ul>
- <li>返回 <code>true</code> 代表属性设置成功。</li>
- <li>在严格模式下，如果 <code>set()</code> 方法返回 <code>false</code>，那么会抛出一个 {{jsxref("TypeError")}} 异常。</li>
-</ul>
+### 返回值
 
-<h2 id="描述">描述</h2>
+`set()` 方法应当返回一个布尔值。
 
-<p><code>handler.set()</code> 方法用于拦截设置属性值的操作。</p>
+- 返回 `true` 代表属性设置成功。
+- 在严格模式下，如果 `set()` 方法返回 `false`，那么会抛出一个 {{jsxref("TypeError")}} 异常。
 
-<h3 id="拦截">拦截</h3>
+## 描述
 
-<p>该方法会拦截目标对象的以下操作：</p>
+`handler.set()` 方法用于拦截设置属性值的操作。
 
-<ul>
- <li>指定属性值：<code>proxy[foo] = bar</code> 和 <code>proxy.foo = bar</code></li>
- <li>指定继承者的属性值：<code>Object.create(proxy)[foo] = bar</code></li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+### 拦截
 
-<h3 id="约束">约束</h3>
+该方法会拦截目标对象的以下操作：
 
-<p>如果违背以下的约束条件，proxy 会抛出一个 {{jsxref("TypeError")}} 异常：</p>
+- 指定属性值：`proxy[foo] = bar` 和 `proxy.foo = bar`
+- 指定继承者的属性值：`Object.create(proxy)[foo] = bar`
+- {{jsxref("Reflect.set()")}}
 
-<ul>
- <li>若目标属性是一个不可写及不可配置的数据属性，则不能改变它的值。</li>
- <li>如果目标属性没有配置存储方法，即 <code>[[Set]]</code> 属性的是 <code>undefined</code>，则不能设置它的值。</li>
- <li>在严格模式下，如果 <code>set()</code> 方法返回 <code>false</code>，那么也会抛出一个 {{jsxref("TypeError")}} 异常。</li>
-</ul>
+### 约束
 
-<h2 id="示例">示例</h2>
+如果违背以下的约束条件，proxy 会抛出一个 {{jsxref("TypeError")}} 异常：
 
-<p>以下代码演示如何捕获属性的设置操作。</p>
+- 若目标属性是一个不可写及不可配置的数据属性，则不能改变它的值。
+- 如果目标属性没有配置存储方法，即 `[[Set]]` 属性的是 `undefined`，则不能设置它的值。
+- 在严格模式下，如果 `set()` 方法返回 `false`，那么也会抛出一个 {{jsxref("TypeError")}} 异常。
 
-<pre class="brush: js">var p = new Proxy({}, {
+## 示例
+
+以下代码演示如何捕获属性的设置操作。
+
+```js
+var p = new Proxy({}, {
   set: function(target, prop, value, receiver) {
     target[prop] = value;
     console.log('property set: ' + prop + ' = ' + value);
@@ -94,22 +85,19 @@ console.log('a' in p);  // false
 
 p.a = 10;               // "property set: a = 10"
 console.log('a' in p);  // true
-console.log(p.a);       // 10</pre>
+console.log(p.a);       // 10
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 另见
 
-<p>{{Compat}}</p>
-
-<h2 id="另见">另见</h2>
-
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.set()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.set()")}}

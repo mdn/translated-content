@@ -6,46 +6,42 @@ tags:
   - Geolocation API
 translation_of: Web/API/GeolocationCoordinates
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><strong><code>Coordinates</code></strong> （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。</p>
+**`Coordinates`** （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p><em>The <code>Coordinates</code> interface </em><em><em>doesn't inherit any property</em></em>.</p>
+_The `Coordinates` interface_ **doesn't inherit any property**.
 
-<dl>
- <dt>{{domxref("Coordinates.latitude")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the position's latitude in decimal degrees.</dd>
- <dt>{{domxref("Coordinates.longitude")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the position's longitude in decimal degrees.</dd>
- <dt>{{domxref("Coordinates.altitude")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the position's altitude in metres, relative to sea level. This value can be <code>null</code> if the implementation cannot provide the data.</dd>
- <dt>{{domxref("Coordinates.accuracy")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the accuracy of the <code>latitude</code> and <code>longitude</code> properties, expressed in meters.</dd>
- <dt>{{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the accuracy of the <code>altitude</code> expressed in meters. This value can be <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.heading")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. <code>0</code> degrees represents true true north, and the direction is determined clockwise (which means that east is <code>90</code> degrees and west is <code>270</code> degrees). If <code>speed</code> is <code>0</code>, <code>heading</code> is <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>. If the device is unable to provide <code>heading</code> information, this value is <code>null</code>.</dd>
- <dt>{{domxref("Coordinates.speed")}} {{readonlyInline}}</dt>
- <dd>Returns a <code>double</code> representing the velocity of the device in meters per second. This value can be <code>null</code>.</dd>
-</dl>
+- {{domxref("Coordinates.latitude")}} {{readonlyInline}}
+  - : Returns a `double` representing the position's latitude in decimal degrees.
+- {{domxref("Coordinates.longitude")}} {{readonlyInline}}
+  - : Returns a `double` representing the position's longitude in decimal degrees.
+- {{domxref("Coordinates.altitude")}} {{readonlyInline}}
+  - : Returns a `double` representing the position's altitude in metres, relative to sea level. This value can be `null` if the implementation cannot provide the data.
+- {{domxref("Coordinates.accuracy")}} {{readonlyInline}}
+  - : Returns a `double` representing the accuracy of the `latitude` and `longitude` properties, expressed in meters.
+- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
+  - : Returns a `double` representing the accuracy of the `altitude` expressed in meters. This value can be `null`.
+- {{domxref("Coordinates.heading")}} {{readonlyInline}}
+  - : Returns a `double` representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. `0` degrees represents true true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/en-US/docs/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
+- {{domxref("Coordinates.speed")}} {{readonlyInline}}
+  - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em><em>The <code>Coordinates</code> interface <em>neither implements, nor inherits any method.</em></em></em></p>
+**The `Coordinates` interface _neither implements, nor inherits any method._**
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.GeolocationCoordinates")}}
 
-<h2 id="请参见">请参见</h2>
+## 请参见
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
- <li>The {{domxref("Geolocation")}} interface that uses it.</li>
-</ul>
+- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- The {{domxref("Geolocation")}} interface that uses it.

@@ -8,50 +8,44 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/polyline
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>polyline</code>元素是 SVG 的一个基本形状，用来创建一系列直线连接多个点。典型的一个<code>polyline</code>是用来创建一个开放的形状，最后一点不与第一点相连。欲了解闭合形状，请看{{SVGElement("polygon")}} 元素。</p>
+`polyline`元素是 SVG 的一个基本形状，用来创建一系列直线连接多个点。典型的一个`polyline`是用来创建一个开放的形状，最后一点不与第一点相连。欲了解闭合形状，请看{{SVGElement("polygon")}} 元素。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>» <a href="https://developer.mozilla.org/files/3260/polyline.svg">polyline.svg</a></p>
+» [polyline.svg](https://developer.mozilla.org/files/3260/polyline.svg)
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("points") }}</li>
-</ul>
+- {{ SVGAttr("points") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGPolylineElement">SVGPolylineElement</a></code>接口。</p>
+该元素实现了[`SVGPolylineElement`](/en/DOM/SVGPolylineElement)接口。
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("svg.elements.polyline")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("line") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
-</ul>
+- {{ SVGElement("line") }}
+- {{ SVGElement("polygon") }}

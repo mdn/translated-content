@@ -3,35 +3,28 @@ title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
 translation_of: Web/API/CSSRule/cssText
 ---
-<div>
-<div>{{ APIRef("CSSOM") }}</div>
-</div>
+{{ APIRef("CSSOM") }}概述
 
-<div> </div>
+**cssText** 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看[使用动态样式信息。](/en-US/docs/DOM/Using_dynamic_styling_information)
 
-<div>概述</div>
+## 语法
 
-<p><strong>cssText</strong> 返回样式规则所包含的实际文本。想要能够动态的设置一个样式表规则，查看<a href="/en-US/docs/DOM/Using_dynamic_styling_information">使用动态样式信息。</a></p>
+```plain
+string = cssRule.cssText
+```
 
-<h2 id="Syntax">语法</h2>
+## 例子
 
-<pre class="syntaxbox"><em>string</em> = cssRule.cssText
-</pre>
-
-<h2 id="Example">例子</h2>
-
-<pre class="brush:html;">&lt;style&gt;
+```html
+<style>
 body { background-color: darkblue; }
-&lt;/style&gt;
-&lt;script&gt;
+</style>
+<script>
   var stylesheet = document.styleSheets[0];
   alert(stylesheet.cssRules[0].cssText); // body { background-color: darkblue; }
-&lt;/script&gt;
+</script>
+```
 
-</pre>
+## 规范
 
-<h2 id="Specification">规范</h2>
-
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule">DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)</a></li>
-</ul>
+- [DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)

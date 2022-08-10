@@ -4,32 +4,30 @@ slug: Web/API/RTCPeerConnection/addstream_event
 translation_of: Web/API/RTCPeerConnection/onaddstream
 original_slug: Web/API/RTCPeerConnection/onaddstream
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p><code><strong>当类型为</strong></code>{{domxref("MediaStreamEvent")}}的{{event("addstream")}} 事件发生时，通过{{domxref("RTCPeerConnection")}}触发<code><strong>RTCPeerConnection.onaddstream</strong></code> 事件处理函数。当远程媒体流{{domxref("MediaStream")}} 添加到连接后发送事件。当{{domxref("RTCPeerConnection.setRemoteDescription()")}} 后此事件立即被调用而不需要等待 SDP 交换完成。</p>
+**`当类型为`**{{domxref("MediaStreamEvent")}}的{{event("addstream")}} 事件发生时，通过{{domxref("RTCPeerConnection")}}触发**`RTCPeerConnection.onaddstream`** 事件处理函数。当远程媒体流{{domxref("MediaStream")}} 添加到连接后发送事件。当{{domxref("RTCPeerConnection.setRemoteDescription()")}} 后此事件立即被调用而不需要等待 SDP 交换完成。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="eval"><em>peerconnection</em>.onaddstream = <em>function</em>;
-</pre>
+```plain
+peerconnection.onaddstream = function;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<ul>
- <li><code>function</code> 是用户自定义的一个函数，写法上不带 <code>()</code> 和任何参数，也可以是一个匿名函数，例如 <code>function(event) {...}</code>。事件处理函数通常有个 event 做参数，类型为 {{domxref("MediaStreamEvent")}}.</li>
-</ul>
+- `function` 是用户自定义的一个函数，写法上不带 `()` 和任何参数，也可以是一个匿名函数，例如 `function(event) {...}`。事件处理函数通常有个 event 做参数，类型为 {{domxref("MediaStreamEvent")}}.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">pc.onaddstream = function(ev) { alert("onaddstream event detected!"); };
-</pre>
+```js
+pc.onaddstream = function(ev) { alert("onaddstream event detected!"); };
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="扩展阅读">扩展阅读</h2>
+## 扩展阅读
 
-<ul>
- <li>The {{event("addstream")}} event and its type, {{domxref("MediaStreamEvent")}}.</li>
-</ul>
+- The {{event("addstream")}} event and its type, {{domxref("MediaStreamEvent")}}.

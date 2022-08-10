@@ -3,46 +3,43 @@ title: Document.height
 slug: Web/API/Document/height
 translation_of: Web/API/Document/height
 ---
-<div>{{APIRef("DOM")}} {{deprecated_header}}</div>
+{{APIRef("DOM")}} {{deprecated_header}}
 
-<div class="note">
-<p><strong>Note:</strong> 在 Gecko 的 6.0 版本之后， <code>document.height</code> 不再被支持。 使用 <code>document.body.clientHeight 来代替</code>. 详见 {{domxref("element.clientHeight")}}.</p>
-</div>
+> **备注：** 在 Gecko 的 6.0 版本之后， `document.height` 不再被支持。 使用 `document.body.clientHeight 来代替`. 详见 {{domxref("element.clientHeight")}}.
 
-<p>返回 {{domxref("document")}} 对象的高度。在大多数场景中， 它相当于当前文档的 {{HTMLElement("body")}} 元素。</p>
+返回 {{domxref("document")}} 对象的高度。在大多数场景中， 它相当于当前文档的 {{HTMLElement("body")}} 元素。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><var>pixels</var> = document.height
-</pre>
+```plain
+pixels = document.height
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">// alert document height
+```js
+// alert document height
 alert(document.height);
-</pre>
+```
 
-<h2 id="可选操作">可选操作</h2>
+## 可选操作
 
-<pre class="syntaxbox notranslate">document.body.clientHeight
+```plain
+document.body.clientHeight
 document.documentElement.clientHeight
 document.documentElement.scrollHeight
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<p>HTML5</p>
+HTML5
 
-<h2 id="兼容性">兼容性</h2>
+## 兼容性
 
+{{Compat("api.Document.height")}}
 
+## 另请参阅
 
-<p>{{Compat("api.Document.height")}}</p>
-
-<h2 id="另请参阅">另请参阅</h2>
-
-<ul>
- <li>{{domxref("document.width")}}</li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
-</ul>
+- {{domxref("document.width")}}
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.scrollHeight")}}

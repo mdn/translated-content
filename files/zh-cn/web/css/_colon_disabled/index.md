@@ -1,59 +1,62 @@
 ---
 title: ':disabled'
-slug: 'Web/CSS/:disabled'
-translation_of: 'Web/CSS/:disabled'
+slug: Web/CSS/:disabled
+translation_of: Web/CSS/:disabled
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p><code>:disabled</code>  CSS <a href="/zh-CN/CSS/Pseudo-classes">伪类</a>表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态（enabled state），在启用状态下，元素可以被激活或获取焦点。</p>
+`:disabled` CSS [伪类](/zh-CN/CSS/Pseudo-classes)表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态（enabled state），在启用状态下，元素可以被激活或获取焦点。
 
-<p> </p>
-
-<pre class="brush: css no-line-numbers">/* Selects any disabled &lt;input&gt; */
+```css
+/* Selects any disabled <input> */
 input:disabled {
   background: #ccc;
-}</pre>
+}
+```
 
-<p> </p>
-
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>这个例子显示基本的购物表单。通过使用 <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a> {{event("change")}} 事件让用户启用/禁用付款字段。</p>
+这个例子显示基本的购物表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{event("change")}} 事件让用户启用/禁用付款字段。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form action="#"&gt;
-  &lt;fieldset id="shipping"&gt;
-    &lt;legend&gt;Shipping address&lt;/legend&gt;
-    &lt;input type="text" placeholder="Name"&gt;
-    &lt;input type="text" placeholder="Address"&gt;
-    &lt;input type="text" placeholder="Zip Code"&gt;
-  &lt;/fieldset&gt;
-  &lt;br&gt;
-  &lt;fieldset id="billing"&gt;
-    &lt;legend&gt;Billing address&lt;/legend&gt;
-    &lt;label for="billing_is_shipping"&gt;Same as shipping address:&lt;/label&gt;
-    &lt;input type="checkbox" id="billing-checkbox" checked&gt;
-    &lt;br&gt;
-    &lt;input type="text" placeholder="Name" disabled&gt;
-    &lt;input type="text" placeholder="Address" disabled&gt;
-    &lt;input type="text" placeholder="Zip Code" disabled&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="#">
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Address">
+    <input type="text" placeholder="Zip Code">
+  </fieldset>
+  <br>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <label for="billing_is_shipping">Same as shipping address:</label>
+    <input type="checkbox" id="billing-checkbox" checked>
+    <br>
+    <input type="text" placeholder="Name" disabled>
+    <input type="text" placeholder="Address" disabled>
+    <input type="text" placeholder="Zip Code" disabled>
+  </fieldset>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="text"]:disabled {
+```css
+input[type="text"]:disabled {
   background: #ccc;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// Wait for the page to finish loading
+```js
+// Wait for the page to finish loading
 document.addEventListener('DOMContentLoaded', function () {
   // Attach `change` event listener to checkbox
   document.getElementById('billing-checkbox').onchange = toggleBilling;
@@ -64,27 +67,24 @@ function toggleBilling() {
   var billingItems = document.querySelectorAll('#billing input[type="text"]');
 
   // Toggle the billing text fields
-  for (var i = 0; i &lt; billingItems.length; i++) {
+  for (var i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
   }
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例', 300, 250)}}</p>
+{{EmbedLiveSample('示例', 300, 250)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.disabled")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>
-  <p>{{ Cssxref(":enabled") }}</p>
- </li>
-</ul>
+- {{ Cssxref(":enabled") }}

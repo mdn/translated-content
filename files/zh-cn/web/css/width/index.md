@@ -8,22 +8,22 @@ tags:
   - 宽度
 translation_of: Web/CSS/width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>width</code></strong> 属性用于设置元素的宽度。<code>width</code> 默认设置<a href="/en-US/docs/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">内容区域</a>的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 <code>border-box</code>，就转而设置<a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area">边框区域</a>的宽度。</p>
+**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/en-US/docs/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)的宽度。
 
-<div>{{EmbedInteractiveExample("pages/css/width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/width.html")}}
 
+{{ cssxref("min-width") }} 和 {{ cssxref("max-width") }} 属性的优先级高于 {{ cssxref("width") }}。
 
-<p>{{ cssxref("min-width") }} 和 {{ cssxref("max-width") }} 属性的优先级高于 {{ cssxref("width") }}。</p>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 width: 300px;
 width: 25em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 width: 75%;
 
 /* Keyword values */
@@ -36,56 +36,58 @@ width: auto;
 width: inherit;
 width: initial;
 width: unset;
-</pre>
+```
 
-<p><code>width</code> 属性也指定为：</p>
+`width` 属性也指定为：
 
-<ul>
- <li>下面关键字值之一：<code><a href="/zh-CN/docs/Web/CSS/width$edit#min-content">min-content</a></code>，<code><a href="/zh-CN/docs/Web/CSS/width$edit#max-content">max-content</a></code>，<code><a href="/zh-CN/docs/Web/CSS/width$edit#fit-content">fit-content</a></code>，<code><a href="/zh-CN/docs/Web/CSS/width$edit#auto">auto</a></code>。</li>
- <li>一个长度值 <code><a href="/zh-CN/docs/Web/CSS/width$edit#%3Clength%3E">&lt;length&gt;</a></code> 或者百分比值 <code><a href="/zh-CN/docs/Web/CSS/width$edit#%3Cpercentage%3E">&lt;percentage&gt;</a></code>。</li>
-</ul>
+- 下面关键字值之一：[`min-content`](/zh-CN/docs/Web/CSS/width$edit#min-content)，[`max-content`](/zh-CN/docs/Web/CSS/width$edit#max-content)，[`fit-content`](/zh-CN/docs/Web/CSS/width$edit#fit-content)，[`auto`](/zh-CN/docs/Web/CSS/width$edit#auto)。
+- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width$edit#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width$edit#%3Cpercentage%3E)。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>使用绝对值定义宽度。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>使用外层元素的容纳区块宽度（the containing block's width）的百分比定义宽度。</dd>
- <dt><code>auto</code></dt>
- <dd>浏览器将会为指定的元素计算并选择一个宽度。</dd>
- <dt><code>max-content</code> {{ experimental_inline }}</dt>
- <dd>元素内容固有的（intrinsic）合适宽度。</dd>
- <dt><code>min-content</code> {{ experimental_inline }}</dt>
- <dd>元素内容固有的最小宽度。</dd>
- <dt><code>fit-content</code> {{ experimental_inline }}</dt>
- <dd>取以下两种值中的较大值：
- <ul>
-  <li>固有的最小宽度</li>
-  <li>固有首选宽度（max-content）和可用宽度（available）两者中的较小值</li>
- </ul>
- 可表示为：<code>min(max-content, max(min-content, &lt;length-percentage&gt;))</code></dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 使用绝对值定义宽度。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 使用外层元素的容纳区块宽度（the containing block's width）的百分比定义宽度。
+- `auto`
+  - : 浏览器将会为指定的元素计算并选择一个宽度。
+- `max-content` {{ experimental_inline }}
+  - : 元素内容固有的（intrinsic）合适宽度。
+- `min-content` {{ experimental_inline }}
+  - : 元素内容固有的最小宽度。
+- `fit-content` {{ experimental_inline }}
 
-<h3 id="形式化语法">形式化语法</h3>
+  - : 取以下两种值中的较大值：
+
+    - 固有的最小宽度
+    - 固有首选宽度（max-content）和可用宽度（available）两者中的较小值
+
+    可表示为：`min(max-content, max(min-content, <length-percentage>))`
+
+### 形式化语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="默认宽度">默认宽度</h3>
+### 默认宽度
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
+{{EmbedLiveSample('Default_width', '500px', '64px')}}
 
-<h3 id="像素_px_和字高_em">像素 px 和字高 em</h3>
+### 像素 px 和字高 em
 
-<pre class="brush: css">.px_length {
+```css
+.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -98,75 +100,85 @@ width: unset;
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="px_length"&gt;以 px 度量的宽度&lt;/div&gt;
-&lt;div class="em_length"&gt;以 em 度量的宽度&lt;/div&gt;</pre>
+```html
+<div class="px_length">以 px 度量的宽度</div>
+<div class="em_length">以 em 度量的宽度</div>
+```
 
-<p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
+{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
 
-<h3 id="百分比">百分比</h3>
+### 百分比
 
-<pre class="brush: css">.percent {
+```css
+.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="percent"&gt;按照百分比度量的宽度&lt;/div&gt;</pre>
+```html
+<div class="percent">按照百分比度量的宽度</div>
+```
 
-<p>{{EmbedLiveSample('百分比', '500px', '64px')}}</p>
+{{EmbedLiveSample('百分比', '500px', '64px')}}
 
-<h3 id="max-content_使用示例"><code>max-content</code> 使用示例</h3>
+### `max-content` 使用示例
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit 使用了非标准的名称 */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('max-content_使用示例', '500px', '64px')}}</p>
+{{EmbedLiveSample('max-content_使用示例', '500px', '64px')}}
 
-<h3 id="min-content_使用示例"><code>min-content</code> 使用示例</h3>
+### `min-content` 使用示例
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('min-content_使用示例', '500px', '155px')}}</p>
+{{EmbedLiveSample('min-content_使用示例', '500px', '155px')}}
 
-<h2 id="无障碍考虑">无障碍考虑</h2>
+## 无障碍考虑
 
-<p>当页面放大以增加文本大小时，请确保 <code>width</code> 设置的元素不会被截断并且不会遮挡其他内容。</p>
+当页面放大以增加文本大小时，请确保 `width` 设置的元素不会被截断并且不会遮挡其他内容。
 
-<ul>
- <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0</a></li>
-</ul>
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">框盒模型</a></li>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("min-width")}}</li>
- <li>{{cssxref("max-width")}}</li>
-</ul>
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- {{cssxref("height")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-width")}}
+- {{cssxref("max-width")}}

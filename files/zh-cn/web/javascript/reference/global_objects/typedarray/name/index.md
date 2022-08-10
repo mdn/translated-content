@@ -9,23 +9,26 @@ tags:
   - 构造函数
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code>TypedArray.name</code> ?属性是描述类型数组构造名的字符串值。</p>
+`TypedArray.name` ?属性是描述类型数组构造名的字符串值。
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">TypedArray.name;</pre>
+```plain
+TypedArray.name;
+```
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>TypedArray ?对象中，每个元素所含的字节数都与其它元素不同，因此其字节数需要被描述。<code>name</code> 属性描述了数组所包含的数据类型。其命名的第一部分可以是 Int(整型)、Uint(无符整型) 或 Float(浮点)；?其第二部分是一个描述数组所包含位数的数字；最后一部分为对象属性 Array(ClampedArray 为特例)。更多信息参见{{jsxref("Uint8ClampedArray")}}。</p>
+TypedArray ?对象中，每个元素所含的字节数都与其它元素不同，因此其字节数需要被描述。`name` 属性描述了数组所包含的数据类型。其命名的第一部分可以是 Int(整型)、Uint(无符整型) 或 Float(浮点)；?其第二部分是一个描述数组所包含位数的数字；最后一部分为对象属性 Array(ClampedArray 为特例)。更多信息参见{{jsxref("Uint8ClampedArray")}}。
 
-<h2 id="例子">?例子</h2>
+## ?例子
 
-<pre class="brush:js">Int8Array.name;         // "Int8Array"
+```js
+Int8Array.name;         // "Int8Array"
 Uint8Array.name;        // "Uint8Array"
 Uint8ClampedArray.name; // "Uint8ClampedArray"
 Int16Array.name;        // "Int16Array"
@@ -33,19 +36,18 @@ Uint16Array.name;       // "Uint16Array"
 Int32Array.name;        // "Int32Array"
 Uint32Array.name;       // "Uint32Array"
 Float32Array.name;      // "Float32Array"
-Float64Array.name;      // "Float64Array"</pre>
+Float64Array.name;      // "Float64Array"
+```
 
-<h2 id="规范">?规范</h2>
+## ?规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}

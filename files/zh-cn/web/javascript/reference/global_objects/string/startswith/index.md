@@ -11,74 +11,73 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>startsWith()</strong></code> 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 <code>true</code> 或 <code>false</code>。</p>
+**`startsWith()`** 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 `true` 或 `false`。
 
-<div>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 
+## 语法
 
+```plain
+str.startsWith(searchString[, position])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>str</var>.startsWith(<var>searchString</var>[, <var>position</var>])</pre>
+- `searchString`
+  - : 要搜索的子字符串。
+- `position` {{optional_inline}}
+  - : 在 `str` 中搜索 `searchString` 的开始位置，默认值为 0。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>searchString</code></dt>
- <dd>要搜索的子字符串。</dd>
- <dt><code>position</code> {{optional_inline}}</dt>
- <dd>在 <code>str</code> 中搜索 <code><var>searchString</var></code> 的开始位置，默认值为 0。</dd>
-</dl>
+如果在字符串的开头找到了给定的字符则返回**`true`**；否则返回**`false`**。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>如果在字符串的开头找到了给定的字符则返回<strong><code>true</code></strong>；否则返回<strong><code>false</code></strong>。</p>
+这个方法能够让你确定一个字符串是否以另一个字符串开头。这个方法区分大小写。
 
-<h2 id="描述">描述</h2>
+## Polyfill
 
-<p>这个方法能够让你确定一个字符串是否以另一个字符串开头。这个方法区分大小写。</p>
+此方法已被添加至 ECMAScript 2015 规范之中，但可能不能在所有的现行 JavaScript 实现中使用。不过，你可以用以下的代码段为 `String.prototype.startsWith()` 制作 Polyfill：
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>此方法已被添加至 ECMAScript 2015 规范之中，但可能不能在所有的现行 JavaScript 实现中使用。不过，你可以用以下的代码段为 <code>String.prototype.startsWith()</code> 制作 Polyfill：</p>
-
-<pre class="brush: js">if (!String.prototype.startsWith) {
+```js
+if (!String.prototype.startsWith) {
     Object.defineProperty(String.prototype, 'startsWith', {
         value: function(search, pos) {
-            pos = !pos || pos &lt; 0 ? 0 : +pos;
+            pos = !pos || pos < 0 ? 0 : +pos;
             return this.substring(pos, pos + search.length) === search;
         }
     });
 }
-</pre>
+```
 
-<p>Mathias Bynens 在 Github 上提供了<a href="https://github.com/mathiasbynens/String.prototype.startsWith">一份更为稳定有效（完全符合 ES2015 规范），但性能略差、代码紧凑性微减的 PolyFill</a>。</p>
+Mathias Bynens 在 Github 上提供了[一份更为稳定有效（完全符合 ES2015 规范），但性能略差、代码紧凑性微减的 PolyFill](https://github.com/mathiasbynens/String.prototype.startsWith)。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_startsWith">使用 <code>startsWith()</code></h3>
+### 使用 `startsWith()`
 
-<pre class="brush:js;">var str = "To be, or not to be, that is the question.";
+```js
+var str = "To be, or not to be, that is the question.";
 
 alert(str.startsWith("To be"));         // true
 alert(str.startsWith("not to be"));     // false
-alert(str.startsWith("not to be", 10)); // true</pre>
+alert(str.startsWith("not to be", 10)); // true
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.endsWith()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

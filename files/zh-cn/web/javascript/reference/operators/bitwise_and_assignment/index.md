@@ -7,42 +7,35 @@ tags:
   - 操作符运算
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}按位与赋值运算符（＆=）表示两个操作数的二进制，对它们进行按位 AND 运算并将结果分配给变量。{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 
-<div>按位与赋值运算符（＆=）表示两个操作数的二进制，对它们进行按位 AND 运算并将结果分配给变量。</div>
+## 语法
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}</div>
+```plain
+Operator: x &= y
+Meaning:  x  = x & y
+```
 
+## 例子
 
+### 按位与赋值运算
 
-
-
-<h2 id="语法">语法</h2>
-
-<pre class="syntaxbox"><strong>Operator:</strong> x &amp;= y
-<strong>Meaning:</strong>  x  = x &amp; y
-</pre>
-
-<h2 id="例子">例子</h2>
-
-<h3 id="按位与赋值运算">按位与赋值运算</h3>
-
-<pre class="brush: js">let a = 5;
+```js
+let a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
-a &amp;= 2; // 0</pre>
+a &= 2; // 0
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">Assignment operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">Bitwise AND operator</a></li>
-</ul>
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

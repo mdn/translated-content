@@ -3,29 +3,27 @@ title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
 translation_of: Web/API/Document/adoptNode
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+从其他的 document 文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。 之后你可以把这个节点插入到当前文档中。
 
-<p>从其他的 document 文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的<code><a href="/en-US/docs/DOM/Node.ownerDocument">ownerDocument</a></code> 属性会变成当前的 document 文档。 之后你可以把这个节点插入到当前文档中。</p>
+**从 Gecko 1.9 (Firefox 3) 开始支持**
 
-<p><strong>从 Gecko 1.9 (Firefox 3) 开始支持</strong></p>
+## 语法
 
-<h2 id="Syntax">语法</h2>
+```plain
+node = document.adoptNode(externalNode);
+```
 
-<pre class="syntaxbox"><var>node</var> = <em>document</em>.adoptNode(<var>externalNode</var>);
-</pre>
+- `node`
+  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-cn/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态.
+- `externalNode`
+  - : 将要从外部文档导入的节点。
 
-<dl>
- <dt><code>   node</code></dt>
- <dd>导入当前文档的新节点。新节点的 <code><a href="/zh-cn/DOM/Node.parentNode">parentNode</a></code> 是 <code>null</code>, 因为它还没有插入当前文档的文档树中，属于游离状态.   </dd>
- <dt><code>externalNode</code></dt>
- <dd>将要从外部文档导入的节点。</dd>
-</dl>
+## 例子
 
-<h2 id="Example">例子</h2>
-
-<pre class="brush: js">// 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
+```js
+// 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
 // 并插入到当前文档树中
 function getEle(){
     var iframe = document.getElementsByTagName("iframe")[0],
@@ -37,62 +35,57 @@ function getEle(){
         }
 }
 document.getElementById("move").onclick = getEle
-</pre>
+```
 
-<p>HTML 文档</p>
+HTML 文档
 
-<pre class="brush: html">// index.html
+```html
+// index.html
 
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;index.html&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;iframe src="iframe.html"&gt;&lt;/iframe&gt;
-    &lt;button id="move"&gt;移动元素&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index.html</title>
+</head>
+<body>
+    <iframe src="iframe.html"></iframe>
+    <button id="move">移动元素</button>
+</body>
+</html>
 
 // iframe.html
 
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;iframe.html&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello&lt;/h1&gt;&lt;h3&gt;My world!&lt;/h3&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iframe.html</title>
+</head>
+<body>
+    <h1>Hello</h1><h3>My world!</h3>
+</body>
+</html>
+```
 
-<h2 id="Notes">笔记</h2>
+## 笔记
 
-<p>有时候调用 adopNode 可能会失败因为节点资源来自不同的源，但是这不应该是浏览器的实现问题。</p>
+有时候调用 adopNode 可能会失败因为节点资源来自不同的源，但是这不应该是浏览器的实现问题。
 
-<p>In general the <code>adoptNode</code> call may fail due to the source node coming from a different implementation, however this should not be a problem with browser implementations.</p>
+In general the `adoptNode` call may fail due to the source node coming from a different implementation, however this should not be a problem with browser implementations.
 
-<blockquote>
-<p>译者注：</p>
+> 译者注：
+>
+> 该方法不但可以从 iframe 中获取 adopt 元素，在同一 document 文档下的不同两个元素中也可以使用，该方法可以实现从左边栏列表中选取某些元素加载到右边栏的功能。
 
-<p>该方法不但可以从 iframe 中获取 adopt 元素，在同一 document 文档下的不同两个元素中也可以使用，该方法可以实现从左边栏列表中选取某些元素加载到右边栏的功能。</p>
-</blockquote>
+将外部文档的节点插入当前文档之前，你必须使用 [`document.importNode()`](/zh-CN/docs/Web/API/Document/importNode) 从外部文档导入源节点，或者使用 [`document.adoptNode()`](/zh-CN/docs/Web/API/Document/adoptNode)导入源节点，
+想要了解更多的 [`Node.ownerDocument`](/zh-CN/docs/Web/API/Node/ownerDocument) 问题，请参考 [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
+即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
+我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。
 
-<p>将外部文档的节点插入当前文档之前，你必须使用 <a href="/zh-CN/docs/Web/API/Document/importNode"><code>document.importNode()</code></a> 从外部文档导入源节点，或者使用 <a href="/zh-CN/docs/Web/API/Document/adoptNode"><code>document.adoptNode()</code></a>导入源节点，
-    想要了解更多的 <a href="/zh-CN/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a> 问题，请参考 <a href="http://www.w3.org/DOM/faq.html#ownerdoc">W3C DOM FAQ</a>.</p>
+## 规范
 
-    <p>即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
-    我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。</p>
+- [DOM Level 3 Core: Document.adoptNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
 
-<h2 id="Specification">规范</h2>
+## 参见
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode">DOM Level 3 Core: Document.adoptNode</a></li>
-</ul>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/DOM/document.importNode">document.importNode</a></li>
-</ul>
+- [document.importNode](/en-US/docs/DOM/document.importNode)

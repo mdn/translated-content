@@ -6,63 +6,60 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
-<div>
-<div>{{jsSidebar("Statements")}}</div>
-</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>do...while</code> 语句</strong>创建一个执行指定语句的循环，直到<code>condition</code>值为 false。在执行<code>statement</code> 后检测<code>condition</code>，所以指定的<code>statement</code>至少执行一次。</p>
+**`do...while` 语句**创建一个执行指定语句的循环，直到`condition`值为 false。在执行`statement` 后检测`condition`，所以指定的`statement`至少执行一次。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">do
-   <em>statement</em>
-while (<em>condition</em>);
-</pre>
+```plain
+do
+   statement
+while (condition);
+```
 
-<dl>
- <dt><code>statement</code></dt>
- <dd>执行至少一次的语句，并在每次 <code>condition</code> 值为真时重新执行。想执行多行语句，可使用{{jsxref("Statements/block", "block")}}语句（<code>{ ... }</code>）包裹这些语句。</dd>
- <dt><code>condition</code></dt>
- <dd>循环中每次都会计算的表达式。如果 <code>condition</code> 值为真， <code>statement</code> 会再次执行。当 <code>condition</code> 值为假，则跳到<code>do...while</code>之后的语句。</dd>
-</dl>
+- `statement`
+  - : 执行至少一次的语句，并在每次 `condition` 值为真时重新执行。想执行多行语句，可使用{{jsxref("Statements/block", "block")}}语句（`{ ... }`）包裹这些语句。
+- `condition`
+  - : 循环中每次都会计算的表达式。如果 `condition` 值为真， `statement` 会再次执行。当 `condition` 值为假，则跳到`do...while`之后的语句。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Example:_Using_do...while">使用 <code>do...while</code></h3>
+### 使用 `do...while`
 
-<p>下面的例子中，<code>do...while</code> 循环至少迭代一次，并且继续迭代直到 <code>i</code>不再小于 5 时结束。</p>
+下面的例子中，`do...while` 循环至少迭代一次，并且继续迭代直到 `i`不再小于 5 时结束。
 
-<h3 id="HTML_内容">HTML 内容</h3>
+### HTML 内容
 
-<pre class="brush: html">&lt;div id="example"&gt;&lt;/div&gt;</pre>
+```html
+<div id="example"></div>
+```
 
-<h3 id="JavaScript_内容">JavaScript 内容</h3>
+### JavaScript 内容
 
-<pre class="brush: js">var result = '';
+```js
+var result = '';
 var i = 0;
 do {
    i += 1;
    result += i + ' ';
-} while (i &lt; 5);
-document.getElementById('example').innerHTML = result;</pre>
+} while (i < 5);
+document.getElementById('example').innerHTML = result;
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('示例') }}</p>
+{{ EmbedLiveSample('示例') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Statements/while", "while")}}</li>
- <li>{{jsxref("Statements/for", "for")}}</li>
-</ul>
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/for", "for")}}

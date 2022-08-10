@@ -6,32 +6,31 @@ tags:
   - Text
 translation_of: Web/API/Text/Text
 ---
-<p>{{ Apiref("DOM")}}{{seeCompatTable}}</p>
+{{ Apiref("DOM")}}{{seeCompatTable}}
 
-<p><code><strong> Text()</strong></code> 构造方法返回一个最新创建的{{domxref("Text")}} 对象，该对象带有可选参数 {{domxref("DOMString")}} 作为文本节点的文本内容(textual content)。</p>
+**`Text()`** 构造方法返回一个最新创建的{{domxref("Text")}} 对象，该对象带有可选参数 {{domxref("DOMString")}} 作为文本节点的文本内容(textual content)。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>text1</em> = new Text(); // 创建一个空的文本节点(text node),即它的textContent 为空字符
-<em>text2</em> = new Text("This is a text node");//该构造方法参数作为文本节点的textContent 的值。
-</pre>
+```plain
+text1 = new Text(); // 创建一个空的文本节点(text node),即它的textContent 为空字符
+text2 = new Text("This is a text node");//该构造方法参数作为文本节点的textContent 的值。
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js"><code class="language-js">text = new Text("Test");</code></pre>
+```js
+text = new Text("Test");
+```
 
-<h2 id="Specification">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Text.Text")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
-
-<p> </p>
+- [The DOM interfaces index.](/en-US/docs/DOM/DOM_Reference)

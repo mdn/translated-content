@@ -3,11 +3,12 @@ title: margin-block-start
 slug: Web/CSS/margin-block-start
 translation_of: Web/CSS/margin-block-start
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><strong><code>margin-block-start</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 属性定义了一个元素的逻辑块的开始边距，是用来根据元素的书写模式，方向和文本方向进行实际边界的衡量。</p>
+**`margin-block-start`** [CSS](/en-US/docs/Web/CSS) 属性定义了一个元素的逻辑块的开始边距，是用来根据元素的书写模式，方向和文本方向进行实际边界的衡量。
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 margin-block-start: 10px;  /* 绝对长度 */
 margin-block-start: 1em;   /* 文本的相对大小 */
 margin-block-start: 5%;    /* 相对于最近块容器的大小 */
@@ -19,36 +20,38 @@ margin-block-start: auto;
 margin-block-start: inherit;
 margin-block-start: initial;
 margin-block-start: unset
-</pre>
+```
 
-<p>{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} 属性对应于 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, 和{{cssxref("text-orientation")}}属性定义的值。</p>
+{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} 属性对应于 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, 和{{cssxref("text-orientation")}}属性定义的值。
 
-<p>它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其它元素的边界。</p>
+它涉及到 {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}},和 {{cssxref("margin-inline-end")}}属性，这些属性是用来定义其它元素的边界。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p><code>margin-block-start</code> 属性有着和 {{cssxref("margin-left")}} 属性一样的值。</p>
+`margin-block-start` 属性有着和 {{cssxref("margin-left")}} 属性一样的值。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="案例">案例</h2>
+## 案例
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS_Content">CSS Content</h3>
+### CSS Content
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -58,23 +61,20 @@ margin-block-start: unset
   writing-mode: vertical-lr;
   margin-block-start: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Example", 140, 140)}}
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.margin-block-start")}}
 
+## 同样推荐
 
-<p>{{Compat("css.properties.margin-block-start")}}</p>
-
-<h2 id="同样推荐">同样推荐</h2>
-
-<ul>
- <li>标记的物理属性：{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- 标记的物理属性：{{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

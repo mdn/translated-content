@@ -5,25 +5,28 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/abort
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>如果该请求已被发出，<strong>XMLHttpRequest.abort()</strong> 方法将终止该请求。当一个请求被终止，它的  {{domxref("XMLHttpRequest.readyState", "readyState")}} 将被置为 {{domxref("XMLHttpRequest.UNSENT")}} (0)，并且请求的 {{domxref("XMLHttpRequest.status", "status")}} 置为 0。</p>
+如果该请求已被发出，**XMLHttpRequest.abort()** 方法将终止该请求。当一个请求被终止，它的 {{domxref("XMLHttpRequest.readyState", "readyState")}} 将被置为 {{domxref("XMLHttpRequest.UNSENT")}} (0)，并且请求的 {{domxref("XMLHttpRequest.status", "status")}} 置为 0。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">xhrInstance.abort();</pre>
+```plain
+xhrInstance.abort();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js notranslate">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
@@ -32,18 +35,17 @@ xhr.send();
 
 if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
   xhr.abort();
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat("api.XMLHttpRequest.abort")}}</div>
+{{Compat("api.XMLHttpRequest.abort")}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
-</ul>
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

@@ -7,55 +7,54 @@ tags:
   - 日期
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><strong><code>setYear()</code></strong> 方法根据一个本地时间为一个确定的日期对象设置年份。由于<code>setYear()</code> 并不设置完整年份（"正是千年虫问题"），本方法已经完全被{{jsxref("Date.prototype.setFullYear()","setFullYear()")}} 方法所取代。</p>
+**`setYear()`** 方法根据一个本地时间为一个确定的日期对象设置年份。由于`setYear()` 并不设置完整年份（"正是千年虫问题"），本方法已经完全被{{jsxref("Date.prototype.setFullYear()","setFullYear()")}} 方法所取代。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>dateObj</var>.setYear(<var>yearValue</var>)</code></pre>
+```plain
+dateObj.setYear(yearValue)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>yearValue</code></dt>
- <dd>一个整数。</dd>
-</dl>
+- `yearValue`
+  - : 一个整数。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>介于 1970 年 1 月 1 日 00:00:00 UTC 时间与更新后日期的毫秒数。</p>
+介于 1970 年 1 月 1 日 00:00:00 UTC 时间与更新后日期的毫秒数。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>如果<code>yearValue</code> 是介于 0 到 99(包含 99) 之间的整数，则目标对象 <code>dateObj</code> 的年份被设置为 <code>1900 + yearValue</code>。否则，目标对象 <code>dateObj</code> 的年份被设置为 <code>yearValue</code>.</p>
+如果`yearValue` 是介于 0 到 99(包含 99) 之间的整数，则目标对象 `dateObj` 的年份被设置为 `1900 + yearValue`。否则，目标对象 `dateObj` 的年份被设置为 `yearValue`.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="使用_setYear">使用 <code>setYear()</code></h3>
+### 使用 `setYear()`
 
-<p>例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.</p>
+例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.
 
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);
 theBigDay.setYear(2000);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getFullYear()")}}
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxref("Date.prototype.setUTCFullYear()")}}

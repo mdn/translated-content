@@ -3,44 +3,42 @@ title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 translation_of: Web/API/Document/createProcessingInstruction
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>createProcessingInstruction() </code>创建一个新的处理指令节点，并返回。</p>
+`createProcessingInstruction() `创建一个新的处理指令节点，并返回。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>Processing instruction node</em> = document.createProcessingInstruction(target, data)
-</pre>
+```plain
+Processing instruction node = document.createProcessingInstruction(target, data)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>Processing Instruction node</code> 是 {{ domxref("ProcessingInstruction") }} 节点。</li>
- <li><code>target</code> 是指处理指令节点的 target 部分 (i.e., &lt;?<em>target</em> ... ?&gt;</li>
- <li><code>data</code> 是一个字符串，包含了将要添加到节点内的数据。</li>
-</ul>
+- `Processing Instruction node` 是 {{ domxref("ProcessingInstruction") }} 节点。
+- `target` 是指处理指令节点的 target 部分 (i.e., \<?_target_ ... ?>
+- `data` 是一个字符串，包含了将要添加到节点内的数据。
 
-<h3 id="Notes">异常</h3>
+### 异常
 
-<dl>
- <dt><code>NOT_SUPPORTED_ERR</code></dt>
- <dd>Thrown if you attempt to create a processing instruction node on an HTML document in Gecko 9 {{ geckoRelease("9.0") }} or earlier. In Gecko 10.0 {{ geckoRelease("10.0") }} and later, you can use this method on HTML documents.</dd>
- <dt><code>DOM_INVALID_CHARACTER</code></dt>
- <dd>Thrown if you try to add an invalid processing instruction target (it should be an XML name besides any case combination of the letters "xml") or if the closing processing instruction sequence ("?&gt;") is added as part of the data, so unescaped user-provided data cannot be safely used without escaping or otherwise dealing with such situations.</dd>
-</dl>
+- `NOT_SUPPORTED_ERR`
+  - : Thrown if you attempt to create a processing instruction node on an HTML document in Gecko 9 {{ geckoRelease("9.0") }} or earlier. In Gecko 10.0 {{ geckoRelease("10.0") }} and later, you can use this method on HTML documents.
+- `DOM_INVALID_CHARACTER`
+  - : Thrown if you try to add an invalid processing instruction target (it should be an XML name besides any case combination of the letters "xml") or if the closing processing instruction sequence ("?>") is added as part of the data, so unescaped user-provided data cannot be safely used without escaping or otherwise dealing with such situations.
 
-<h2 id="Example">实例</h2>
+## 实例
 
-<pre>var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml")
+```plain
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
 
 var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
 
 docu.insertBefore(pi, docu.firstChild);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 弹出框内容: &lt;?xml-stylesheet href="mycss.css" type="text/css"?&gt;&lt;xml/&gt;
-</pre>
+// 弹出框内容: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction">DOM 4: createProcessingInstruction</a></p>
+[DOM 4: createProcessingInstruction](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction)

@@ -3,53 +3,50 @@ title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
-<div>
-<div>{{JSRef("Global_Objects", "Math")}}</div>
-</div>
+{{JSRef("Global_Objects", "Math")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p><code><strong>Math.log1p()</strong></code> 函数返回一个数字加 1 后的自然对数 (底为 <code>E</code>), 既<code>log(x+1)</code>.</p>
+**`Math.log1p()`** 函数返回一个数字加 1 后的自然对数 (底为 `E`), 既`log(x+1)`.
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.log1p(<em>x</em>)</code></pre>
+```plain
+Math.log1p(x)
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>任意数字。</dd>
-</dl>
+- `x`
+  - : 任意数字。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>如果参数的值小于<code> -1</code>, 则返回 <code>NaN.</code></p>
+如果参数的值小于` -1`, 则返回 `NaN.`
 
-<p>函数 <code>y = log(x+1)</code> 的图形是这样的：</p>
+函数 `y = log(x+1)` 的图形是这样的：
 
-<p> <img alt="log(x+1)" src="https://mdn.mozillademos.org/files/6467/logx1.jpg"></p>
+![log(x+1)](https://mdn.mozillademos.org/files/6467/logx1.jpg)
 
-<p><strong>示例</strong></p>
+**示例**
 
-<pre class="brush:js">Math.log1p(Math.E-1)  // 1
+```js
+Math.log1p(Math.E-1)  // 1
 Math.log1p(0)         // 0
 Math.log1p("0")       // 0
 Math.log1p(-1)        // -Infinity
 Math.log1p(-2)        // NaN
 Math.log1p("foo")     // NaN
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Global_Objects/Math", "Math")}} 对象。</li>
-</ul>
+- {{jsxref("Global_Objects/Math", "Math")}} 对象。

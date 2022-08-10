@@ -3,33 +3,34 @@ title: InputEvent.isComposing
 slug: Web/API/InputEvent/isComposing
 translation_of: Web/API/InputEvent/isComposing
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>InputEvent.isComposing</strong></code> read-only property returns a {{jsxref("Boolean")}} value indicating if the event is fired after {{event("compositionstart")}} and before {{event("compositionend")}}.</p>
+The **`InputEvent.isComposing`** read-only property returns a {{jsxref("Boolean")}} value indicating if the event is fired after {{event("compositionstart")}} and before {{event("compositionend")}}.
 
-<h2 id="这是一个只读属性，返回boolean类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。">这是一个只读属性，返回 boolean 类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。</h2>
+## 这是一个只读属性，返回 boolean 类型。表示正处于输入事件的开始与结束之间，表示正在输入状态。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <em>bool</em> = <em>event</em>.isComposing;</pre>
+```plain
+var bool = event.isComposing;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var inputEvent = new InputEvent("syntheticInput", false);
+```js
+var inputEvent = new InputEvent("syntheticInput", false);
 console.log(inputEvent.isComposing); // return false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ event("compositionstart") }} and {{ event("compositionend")}}</li>
- <li>{{domxref("InputEvent")}}</li>
-</ul>
+- {{ event("compositionstart") }} and {{ event("compositionend")}}
+- {{domxref("InputEvent")}}

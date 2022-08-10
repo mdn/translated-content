@@ -3,52 +3,50 @@ title: WebGL2RenderingContext.beginQuery()
 slug: Web/API/WebGL2RenderingContext/beginQuery
 translation_of: Web/API/WebGL2RenderingContext/beginQuery
 ---
-<div>{{APIRef("WebGL")}} {{SeeCompatTable}}</div>
+{{APIRef("WebGL")}} {{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> 的<strong><code>WebGL2RenderingContext.beginQuery()</code></strong> 方法启动一个异步查询，<code>target</code> 参数表明是哪种类型的查询。</p>
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 的**`WebGL2RenderingContext.beginQuery()`** 方法启动一个异步查询，`target` 参数表明是哪种类型的查询。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">void <var>gl</var>.beginQuery(<var>target</var>, <var>query</var>);
-</pre>
+```plain
+void gl.beginQuery(target, query);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>target</dt>
- <dd> {{domxref("GLenum")}} 指定查询个的 target， 可能的值有：
- <ul>
-  <li><code>gl.ANY_SAMPLES_PASSED</code>: Specifies an occlusion query: these queries detect whether an object is visible (whether the scoped drawing commands pass the depth test and if so, how many samples pass).</li>
-  <li><code>gl.ANY_SAMPLES_PASSED_CONSERVATIVE</code>: 和以上一样， 但是是一个不精确和更快的版本。</li>
-  <li><code>gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</code>: Number of primitives that are written to transform feedback buffers.</li>
- </ul>
- </dd>
- <dt><code>query</code></dt>
- <dd>一个{{domxref("WebGLQuery")}} 对象用于查询。</dd>
-</dl>
+- target
 
-<h3 id="返回值">返回值</h3>
+  - : {{domxref("GLenum")}} 指定查询个的 target， 可能的值有：
 
-<p>None.</p>
+    - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries detect whether an object is visible (whether the scoped drawing commands pass the depth test and if so, how many samples pass).
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: 和以上一样， 但是是一个不精确和更快的版本。
+    - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that are written to transform feedback buffers.
 
-<h2 id="例子">例子</h2>
+- `query`
+  - : 一个{{domxref("WebGLQuery")}} 对象用于查询。
 
-<pre class="brush: js">var query = gl.createQuery();
+### 返回值
+
+None.
+
+## 例子
+
+```js
+var query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 // ...
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.WebGL2RenderingContext.beginQuery")}}</p>
+{{Compat("api.WebGL2RenderingContext.beginQuery")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{domxref("WebGLQuery")}}</li>
-</ul>
+- {{domxref("WebGLQuery")}}

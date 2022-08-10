@@ -3,26 +3,29 @@ title: 'TypeError: invalid ''instanceof'' operand ''x'''
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 translation_of: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+## 消息
 
-<pre class="syntaxbox">TypeError: invalid 'instanceof' operand "x" (Firefox)
+```plain
+TypeError: invalid 'instanceof' operand "x" (Firefox)
 TypeError: "x" is not a function (Firefox)
 TypeError: Right-hand side of 'instanceof' is not an object (Chrome)
-TypeError: Right-hand side of 'instanceof' is not callable (Chrome)</pre>
+TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> 操作符</a> 希望右边的操作数为一个构造对象，即一个有 <code>prototype</code> 属性且可以调用的对象。</p>
+[`instanceof` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) 希望右边的操作数为一个构造对象，即一个有 `prototype` 属性且可以调用的对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js example-bad">"test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
+```js example-bad
+"test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
 42 instanceof 0;      // TypeError: invalid 'instanceof' operand 0
 
 function Foo() {}
@@ -31,11 +34,12 @@ var x = new Foo();
 
 x instanceof f;       // TypeError: invalid 'instanceof' operand f
 x instanceof x;       // TypeError: x is not a function
-</pre>
+```
 
-<p>为了解决上述问题， 你可能需要将<a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> 操作符</a> 换成 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> 操作符</a>， 或者确保你使用的是函数名称，而不是函数计算的结果。</p>
+为了解决上述问题， 你可能需要将[`instanceof` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) 换成 [`typeof` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)， 或者确保你使用的是函数名称，而不是函数计算的结果。
 
-<pre class="brush: js example-good">typeof "test" == "string"; // true
+```js example-good
+typeof "test" == "string"; // true
 typeof 42 == "number"      // true
 
 function Foo() {}
@@ -44,13 +48,9 @@ var x = new Foo();
 
 x instanceof f;            // true
 x instanceof Foo;          // true
-</pre>
+```
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> 操作符</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> 操作符</a></li>
-</ul>
-
-<p> </p>
+- [`instanceof` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [`typeof` 操作符](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

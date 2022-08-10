@@ -6,26 +6,26 @@ tags:
   - 服务器端错误
 translation_of: Web/HTTP/Status/504
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>504 Gateway Timeout</code></strong> 是一种 HTTP 协议的服务器端错误状态代码，表示扮演网关或者代理的服务器无法在规定的时间内获得想要的响应。</p>
+**`504 Gateway Timeout`** 是一种 HTTP 协议的服务器端错误状态代码，表示扮演网关或者代理的服务器无法在规定的时间内获得想要的响应。
 
-<p><a href="https://zh.wikipedia.org/wiki/Gateway_(telecommunications)">Gateway</a>（网关）在计算机网络体系中可以指代不同的设备，504 错误通常不是在客户端可以修复的，而是需要由途径的 Web 服务器或者代理服务器对其进行修复。</p>
+[Gateway](<https://zh.wikipedia.org/wiki/Gateway_(telecommunications)>)（网关）在计算机网络体系中可以指代不同的设备，504 错误通常不是在客户端可以修复的，而是需要由途径的 Web 服务器或者代理服务器对其进行修复。
 
-<h2 id="状态">状态</h2>
+## 状态
 
-<pre class="syntaxbox">504 Gateway Timeout</pre>
+```plain
+504 Gateway Timeout
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{HTTPStatus(502)}}</li>
-</ul>
+- {{HTTPStatus(502)}}

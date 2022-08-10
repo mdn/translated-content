@@ -3,38 +3,38 @@ title: Element.removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
 translation_of: Web/API/Element/removeAttributeNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><code>removeAttributeNode</code> 从当前的 element(元素节点) 删除指定的属性</p>
+`removeAttributeNode` 从当前的 element(元素节点) 删除指定的属性
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>removedAttr</em> = <em>element</em>.removeAttributeNode(<em>attributeNode</em>)
-</pre>
+```plain
+removedAttr = element.removeAttributeNode(attributeNode)
+```
 
-<ul>
- <li><code>attributeNode</code> 是需要被删除的 Attr 节点。</li>
- <li><code>removedAttr</code> 是被删除了的 Attr 节点。</li>
-</ul>
+- `attributeNode` 是需要被删除的 Attr 节点。
+- `removedAttr` 是被删除了的 Attr 节点。
 
-<h2 id="Example">例如</h2>
+## 例如
 
-<pre>// &lt;div id="top" align="center" /&gt;
+```plain
+// <div id="top" align="center" />
 var d = document.getElementById("top");
 // getAttributeNode 返回指定元素的指定属性， 返回值是 Attr 节点类型
 var d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
-//  现在 align 被删除了: &lt;div id="top" /&gt;
-</pre>
+//  现在 align 被删除了: <div id="top" />
+```
 
-<h2 id="Notes">注意</h2>
+## 注意
 
-<p>如果删除有默认值的属性，相当于将属性值替换为默认值。属性只有在具有同样的命名空间、本地名称以及原始前缀时，才会在被删除的时候替换为默认值。</p>
+如果删除有默认值的属性，相当于将属性值替换为默认值。属性只有在具有同样的命名空间、本地名称以及原始前缀时，才会在被删除的时候替换为默认值。
 
-<p>不像 setAttributeNode 和 setAttributeNodeNS 配对使用那样，需要知道要替换哪个现有属性。removeAttributeNode 没有那样的要求，也没有 removeAttributeNodeNS。removeAttributeNode 可以删除命名空间以及非命名空间的属性。</p>
+不像 setAttributeNode 和 setAttributeNodeNS 配对使用那样，需要知道要替换哪个现有属性。removeAttributeNode 没有那样的要求，也没有 removeAttributeNodeNS。removeAttributeNode 可以删除命名空间以及非命名空间的属性。
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specification">规范</h2>
+## 规范
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198">DOM Level 2 Core: removeAttributeNode</a> (<a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode">DOM Level 1 Core</a> 里面的介绍)</p>
+[DOM Level 2 Core: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) ([DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode) 里面的介绍)

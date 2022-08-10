@@ -6,13 +6,14 @@ tags:
   - transform
 translation_of: Web/CSS/scale
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>CSS 属性 <strong><code>scale</code></strong> 允许你可以分别且独立地指定 CSS 属性 {{CSSxRef("transform")}} 缩放的比例。这更好地映射到典型的 UI（用户界面）用法中，并免去了在指定变换值时必须记住变换函数的精确顺序的麻烦。</p>
+CSS 属性 **`scale`** 允许你可以分别且独立地指定 CSS 属性 {{CSSxRef("transform")}} 缩放的比例。这更好地映射到典型的 UI（用户界面）用法中，并免去了在指定变换值时必须记住变换函数的精确顺序的麻烦。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: css">/* 关键值 */
+```css
+/* 关键值 */
 scale: none;
 
 /* 单个值 */
@@ -25,36 +26,38 @@ scale: 0.5;
 scale: 2 0.5;
 
 /* 三个值 */
-scale: 2 0.5 2;</pre>
+scale: 2 0.5 2;
+```
 
-<h3 id="取值">取值</h3>
+### 取值
 
-<dl>
- <dt>单一数值</dt>
- <dd>单一的数值即指定了一个缩放系数，同时作用于 X 轴和 Y 轴让该元素进行缩放，相当于指定了单个值的 scale()(2D 缩放) 函数。</dd>
- <dt>两个长度/百分比值</dt>
- <dd>两个数值即分别指定了 2D 比例的 X 轴和 Y 轴的缩放系数，相当于指定了两个值的 scale()（2D 缩放）函数。</dd>
- <dt>三个长度/百分比值</dt>
- <dd>三个数值即分别指定了 3D 比例的 X 轴、Y 轴和 Z 轴的缩放系数。相当于一个 scale3d() 函数。</dd>
- <dt><code>none</code></dt>
- <dd>指定不进行缩放。</dd>
-</dl>
+- 单一数值
+  - : 单一的数值即指定了一个缩放系数，同时作用于 X 轴和 Y 轴让该元素进行缩放，相当于指定了单个值的 scale()(2D 缩放) 函数。
+- 两个长度/百分比值
+  - : 两个数值即分别指定了 2D 比例的 X 轴和 Y 轴的缩放系数，相当于指定了两个值的 scale()（2D 缩放）函数。
+- 三个长度/百分比值
+  - : 三个数值即分别指定了 3D 比例的 X 轴、Y 轴和 Z 轴的缩放系数。相当于一个 scale3d() 函数。
+- `none`
+  - : 指定不进行缩放。
 
-<h3 id="标准语法">标准语法</h3>
+### 标准语法
 
 {{CSSSyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="scale"&gt;Scaling&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="scale">Scaling</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -83,18 +86,18 @@ p {
 div:hover .scale {
   scale: 2 0.7;
 }
-</pre>
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.scale")}}</p>
+{{Compat("css.properties.scale")}}

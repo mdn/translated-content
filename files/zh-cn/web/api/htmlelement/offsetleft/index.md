@@ -9,46 +9,49 @@ tags:
   - 属性
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p> <strong><code>HTMLElement.offsetLeft</code></strong> 是一个只读属性，返回当前元素<em>左上角</em>相对于  {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。</p>
+**`HTMLElement.offsetLeft`** 是一个只读属性，返回当前元素*左上角*相对于 {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。
 
-<p>对块级元素来说，<code>offsetTop</code>、<code>offsetLeft</code>、<code>offsetWidth</code> 及 <code>offsetHeight</code> 描述了元素相对于 <code>offsetParent</code> 的边界框。</p>
+对块级元素来说，`offsetTop`、`offsetLeft`、`offsetWidth` 及 `offsetHeight` 描述了元素相对于 `offsetParent` 的边界框。
 
-<p>然而，对于可被截断到下一行的行内元素（如 <strong>span</strong>），<code>offsetTop</code> 和 <code>offsetLeft</code> 描述的是<em>第一个</em>边界框的位置（使用 {{domxref("Element.getClientRects()")}} 来获取其宽度和高度），而 <code>offsetWidth</code> 和 <code>offsetHeight</code> 描述的是边界框的尺寸（使用 {{domxref("Element.getBoundingClientRect")}} 来获取其位置）。因此，使用 <code>offsetLeft、offsetTop、offsetWidth</code>、<code>offsetHeight</code> 来对应 left、top、width 和 height 的一个盒子将不会是文本容器 span 的盒子边界。</p>
+然而，对于可被截断到下一行的行内元素（如 **span**），`offsetTop` 和 `offsetLeft` 描述的是*第一个*边界框的位置（使用 {{domxref("Element.getClientRects()")}} 来获取其宽度和高度），而 `offsetWidth` 和 `offsetHeight` 描述的是边界框的尺寸（使用 {{domxref("Element.getBoundingClientRect")}} 来获取其位置）。因此，使用 `offsetLeft、offsetTop、offsetWidth`、`offsetHeight` 来对应 left、top、width 和 height 的一个盒子将不会是文本容器 span 的盒子边界。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval"><em>left</em> = <em>element</em>.offsetLeft;
-</pre>
+```plain
+left = element.offsetLeft;
+```
 
-<p><code>left</code> 是一个整数，表示向左偏移的像素值。</p>
+`left` 是一个整数，表示向左偏移的像素值。
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre>var colorTable = document.getElementById("t1");
+```plain
+var colorTable = document.getElementById("t1");
 var tOLeft = colorTable.offsetLeft;
 
-if (tOLeft &gt; 5) {
+if (tOLeft > 5) {
   // large left offset: do something here
 }
-</pre>
+```
 
-<p>这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。</p>
+这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。
 
-<p><img alt="Image:offsetLeft.jpg" class="internal" src="/@api/deki/files/790/=OffsetLeft.jpg"></p>
+![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
 
-<pre>&lt;div style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;"&gt;
-  &lt;span&gt;Short span. &lt;/span&gt;
-  &lt;span id="long"&gt;Long span that wraps withing this div.&lt;/span&gt;
-&lt;/div&gt;
+```plain
+<div style="width: 300px; border-color:blue;
+  border-style:solid; border-width:1;">
+  <span>Short span. </span>
+  <span id="long">Long span that wraps withing this div.</span>
+</div>
 
-&lt;div id="box" style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10"&gt;
-&lt;/div&gt;
+<div id="box" style="position: absolute; border-color: red;
+  border-width: 1; border-style: solid; z-index: 10">
+</div>
 
-&lt;script&gt;
+<script>
   var box = document.getElementById("box");
   var long = document.getElementById("long");
   //
@@ -60,18 +63,17 @@ if (tOLeft &gt; 5) {
   box.style.top = long.offsetTop + document.body.scrollTop + "px";
   box.style.width = long.offsetWidth + "px";
   box.style.height = long.offsetHeight + "px";
-&lt;/script&gt; </pre>
+</script>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.HTMLElement.offsetLeft")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref(" HTMLElement.offsetHeight")}}</li>
-</ul>
+- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref(" HTMLElement.offsetHeight")}}

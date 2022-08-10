@@ -8,27 +8,30 @@ tags:
   - 样式
 translation_of: Web/CSS/unset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>CSS 关键字 <strong><code>unset</code></strong> 可以分为两种情况，如果这个属性本来有从父级继承的值（这个属性默认可以继承，且父级有定义），则将该属性重新设置为继承的值，如果没有继承父级样式，则将该属性重新设置为初始值。换句话说，在第一种情况下（继承属性）它的行为类似于{{cssxref("inherit")}} ，在第二种情况下（非继承属性）类似于{{cssxref("initial")}}。它可以应用于任何 CSS 属性，包括 CSS 简写属性 {{cssxref("all")}} 。</p>
+CSS 关键字 **`unset`** 可以分为两种情况，如果这个属性本来有从父级继承的值（这个属性默认可以继承，且父级有定义），则将该属性重新设置为继承的值，如果没有继承父级样式，则将该属性重新设置为初始值。换句话说，在第一种情况下（继承属性）它的行为类似于{{cssxref("inherit")}} ，在第二种情况下（非继承属性）类似于{{cssxref("initial")}}。它可以应用于任何 CSS 属性，包括 CSS 简写属性 {{cssxref("all")}} 。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Color">Color</h3>
+### Color
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text is red.&lt;/p&gt;
-&lt;div class="foo"&gt;
-  &lt;p&gt;This text is also red.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text is green (default inherited value).&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p>This text is red.</p>
+<div class="foo">
+  <p>This text is also red.</p>
+</div>
+<div class="bar">
+  <p>This text is green (default inherited value).</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.foo {
+```css
+.foo {
   color: blue;
 }
 .bar {
@@ -41,27 +44,30 @@ p {
 .bar p {
   color: unset;
 }
-</pre>
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Color') }}</p>
+{{ EmbedLiveSample('Color') }}
 
-<h3 id="Border">Border</h3>
+### Border
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;div&gt;
-  &lt;p&gt;This text has a red border.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="bar"&gt;
-  &lt;p&gt;This text has has a black border (initial default, not inherited).&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<p>This text has a red border.</p>
+<div>
+  <p>This text has a red border.</p>
+</div>
+<div class="bar">
+  <p>This text has has a black border (initial default, not inherited).</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: 1px solid green;
 }
 
@@ -71,25 +77,24 @@ p {
 
 .bar p {
   border-color: unset;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('Border', 'auto', 200) }}</p>
+{{ EmbedLiveSample('Border', 'auto', 200) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{ Compat("css.types.global_keywords.unset")}}</p>
+{{ Compat("css.types.global_keywords.unset")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>使用{{cssxref("initial")}}将属性设置为其初始值。</li>
- <li>使用{{cssxref("revert")}}将属性重置为 user-agent 样式表规定的值（或用户样式，如果存在）。</li>
- <li>使用{{cssxref("inherit")}}使元素的属性与其父元素相同。</li>
- <li> {{cssxref("all")}}属性允许您一次将所有属性重置为其初始，继承，恢复或未设置状态。</li>
-</ul>
+- 使用{{cssxref("initial")}}将属性设置为其初始值。
+- 使用{{cssxref("revert")}}将属性重置为 user-agent 样式表规定的值（或用户样式，如果存在）。
+- 使用{{cssxref("inherit")}}使元素的属性与其父元素相同。
+- {{cssxref("all")}}属性允许您一次将所有属性重置为其初始，继承，恢复或未设置状态。

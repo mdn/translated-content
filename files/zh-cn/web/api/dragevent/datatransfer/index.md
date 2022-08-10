@@ -3,31 +3,29 @@ title: DragEvent.dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 translation_of: Web/API/DragEvent/dataTransfer
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<div> </div>
+**`DataEvent.dataTransfer`** 属性保存着拖拽操作中的数据（作为一个 DataTransfer 对象）
 
-<p><code><strong>DataEvent.dataTransfer</strong></code> 属性保存着拖拽操作中的数据（作为一个 DataTransfer 对象）</p>
+This property is {{readonlyInline}}.
 
-<p>This property is {{readonlyInline}}.</p>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+var data = dragEvent.dataTransfer;
+```
 
-<pre class="syntaxbox">var <var>data</var> = <var>dragEvent</var>.dataTransfer;
-</pre>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+- `data`
+  - : {{domxref("DataTransfer")}} 对象包含着 {{domxref("DragEvent","drag event's data")}}.
 
-<dl>
- <dt><code>data</code></dt>
- <dd>{{domxref("DataTransfer")}} 对象包含着 {{domxref("DragEvent","drag event's data")}}.</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+这个例子展示了在{{event("dragend")}} 事件处理程序中获取拖拽中数据的方式。
 
-<p>这个例子展示了在{{event("dragend")}} 事件处理程序中获取拖拽中数据的方式。</p>
-
-<pre class="brush: js">function process_data(d) {
+```js
+function process_data(d) {
    // Process the data ...
 }
 
@@ -35,12 +33,12 @@ dragTarget.addEventListener("dragend", function(ev) {
    // Call the drag and drop data processor
    if (ev.dataTransfer != null) process_data(ev.dataTransfer);
  }, false);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.DragEvent.dataTransfer")}}

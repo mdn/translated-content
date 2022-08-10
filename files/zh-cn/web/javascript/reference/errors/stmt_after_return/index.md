@@ -5,47 +5,45 @@ tags:
   - 警告
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="信息">信息</h2>
+## 信息
 
-<pre class="syntaxbox">Warning: unreachable code after return statement (Firefox)
-</pre>
+```plain
+Warning: unreachable code after return statement (Firefox)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>警告</p>
+警告
 
-<h2 id="什么地方出错了">什么地方出错了？</h2>
+## 什么地方出错了？
 
-<p>在<code>return</code>语句之后的不可达的语句会在下列情形中产生：</p>
+在`return`语句之后的不可达的语句会在下列情形中产生：
 
-<ul>
- <li>在{{jsxref("Statements/return", "return")}} 语句之后出现其他表达式；</li>
- <li>在省略分号的 return 语句之后直接接一个表达式。</li>
-</ul>
+- 在{{jsxref("Statements/return", "return")}} 语句之后出现其他表达式；
+- 在省略分号的 return 语句之后直接接一个表达式。
 
-<p>当一个表达式出现在一个有效的 <code>return </code>表达式之后时，会出现这个警告，用以说明在 <code>return </code>语句之后的表达式不可达，即这条语句之后的表达式永远不会运行。</p>
+当一个表达式出现在一个有效的 `return `表达式之后时，会出现这个警告，用以说明在 `return `语句之后的表达式不可达，即这条语句之后的表达式永远不会运行。
 
-<p>为什么我需要在 <code>return </code>语句之后添加分号？在省略分号的 <code>return </code>语句之后，开发者想要终止当前函数的执行还是返回 return 之后表达式的结果的意图是不明确的。这个警告表明这种情况下 <code>return </code>语句的表述具有二义性。</p>
+为什么我需要在 `return `语句之后添加分号？在省略分号的 `return `语句之后，开发者想要终止当前函数的执行还是返回 return 之后表达式的结果的意图是不明确的。这个警告表明这种情况下 `return `语句的表述具有二义性。
 
-<p>当在省略分号的 return 语句之后出现下列语句时，不会出现警告：</p>
+当在省略分号的 return 语句之后出现下列语句时，不会出现警告：
 
-<ul>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
-</ul>
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/function", "function")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="无效的例子">无效的例子</h3>
+### 无效的例子
 
-<pre class="brush: js example-bad">function f() {
+```js example-bad
+function f() {
   var x = 3;
   x += 4;
-  return x;   // <code>return </code>语句立即退出当前方法
+  return x;   // return 语句立即退出当前方法
   x -= 3;     // 因而该语句从不会执行，即该语句为不可达语句
 }
 
@@ -53,11 +51,12 @@ function f() {
   return     // 这条语句被视作 `return;`
     3 + 4;   // 因而此处该函数已经返回，该语句永不会执行
 }
-</pre>
+```
 
-<h3 id="合适的例子">合适的例子</h3>
+### 合适的例子
 
-<pre class="brush: js example-good">function f() {
+```js example-good
+function f() {
   var x = 3;
   x += 4;
   x -= 3;
@@ -65,12 +64,10 @@ function f() {
 }
 
 function f() {
-  return 3 + 4  // OK: 省略分号的 <code>return </code>语句与执行的表达式在同一行
+  return 3 + 4  // OK: 省略分号的 return 语句与执行的表达式在同一行
 }
-</pre>
+```
 
-<h2 id="相关页面">相关页面</h2>
+## 相关页面
 
-<ul>
- <li>{{jsxref("Statements/return", "Automatic Semicolon Insertion", "#Automatic_Semicolon_Insertion", 1)}}</li>
-</ul>
+- {{jsxref("Statements/return", "Automatic Semicolon Insertion", "#Automatic_Semicolon_Insertion", 1)}}

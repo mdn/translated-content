@@ -3,57 +3,54 @@ title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
-<div>{{JSRef("Global_Objects", "Number")}}</div>
+{{JSRef("Global_Objects", "Number")}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p><code><strong>Number.POSITIVE_INFINITY</strong></code> 属性表示正无穷大。</p>
+**`Number.POSITIVE_INFINITY`** 属性表示正无穷大。
 
-<p>不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例，可使用 <code>Number.POSITIVE_INFINITY</code> 来访问该静态属性。</p>
+不必创建一个 {{jsxref("Global_Objects/Number", "Number")}} 实例，可使用 `Number.POSITIVE_INFINITY` 来访问该静态属性。
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>Number.POSITIVE_INFINITY</code> 的值同全局对象 {{jsxref("Global_Objects/Infinity", "Infinity")}} 属性的值相同。</p>
+`Number.POSITIVE_INFINITY` 的值同全局对象 {{jsxref("Global_Objects/Infinity", "Infinity")}} 属性的值相同。
 
-<p>该值的表现同数学上的无穷大有点儿不同：</p>
+该值的表现同数学上的无穷大有点儿不同：
 
-<ul>
- <li>任何正值，包括 <code>POSITIVE_INFINITY</code>，乘以 <code>POSITIVE_INFINITY</code> 为 <code>POSITIVE_INFINITY</code>。</li>
- <li>任何负值，包括 <code>NEGATIVE_INFINITY</code>，乘以 <code>POSITIVE_INFINITY</code> 为 <code>NEGATIVE_INFINITY</code>。</li>
- <li>0 乘以 <code>POSITIVE_INFINITY</code> 为 NaN。</li>
- <li>NaN 乘以 <code>POSITIVE_INFINITY</code> 为 NaN。</li>
- <li><code>POSITIVE_INFINITY</code> 除以 <code>NEGATIVE_INFINITY</code> 以外的任何负值为 <code>NEGATIVE_INFINITY</code>。</li>
- <li><code>POSITIVE_INFINITY</code> 除以 <code>POSITIVE_INFINITY</code> 以外的任何正值为 <code>POSITIVE_INFINITY</code>。</li>
- <li><code>POSITIVE_INFINITY</code> 除以 <code>NEGATIVE_INFINITY</code> 或 <code>POSITIVE_INFINITY</code> 为 NaN。</li>
- <li>任何数除以 <code>POSITIVE_INFINITY</code> 为 0。</li>
-</ul>
+- 任何正值，包括 `POSITIVE_INFINITY`，乘以 `POSITIVE_INFINITY` 为 `POSITIVE_INFINITY`。
+- 任何负值，包括 `NEGATIVE_INFINITY`，乘以 `POSITIVE_INFINITY` 为 `NEGATIVE_INFINITY`。
+- 0 乘以 `POSITIVE_INFINITY` 为 NaN。
+- NaN 乘以 `POSITIVE_INFINITY` 为 NaN。
+- `POSITIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 以外的任何负值为 `NEGATIVE_INFINITY`。
+- `POSITIVE_INFINITY` 除以 `POSITIVE_INFINITY` 以外的任何正值为 `POSITIVE_INFINITY`。
+- `POSITIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 或 `POSITIVE_INFINITY` 为 NaN。
+- 任何数除以 `POSITIVE_INFINITY` 为 0。
 
-<p>You might use the <code>Number.POSITIVE_INFINITY</code> property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("Global_Objects/isFinite", "isFinite")}} would be more appropriate in such a case.</p>
+You might use the `Number.POSITIVE_INFINITY` property to indicate an error condition that returns a finite number in case of success. Note, however, that {{jsxref("Global_Objects/isFinite", "isFinite")}} would be more appropriate in such a case.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下例中，赋值给变量 <code>bigNumber</code> 一个大于 JavaScript 中最大值的值。当 <code>if</code> 语句执行时，变量 <code>bigNumber</code> 值为 "<code>Infinity</code>"， 因此在继续执行代码前，为变量 <code>bigNumber</code> 设置一个容易管理的值。</p>
+下例中，赋值给变量 `bigNumber` 一个大于 JavaScript 中最大值的值。当 `if` 语句执行时，变量 `bigNumber` 值为 "`Infinity`"， 因此在继续执行代码前，为变量 `bigNumber` 设置一个容易管理的值。
 
-<pre class="brush: js">var bigNumber = Number.MAX_VALUE * 2
+```js
+var bigNumber = Number.MAX_VALUE * 2
 if (bigNumber == Number.POSITIVE_INFINITY) {
  bigNumber = returnFinite();
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Global_Objects/Infinity", "Infinity")}}</li>
- <li>{{jsxref("Global_Objects/isFinite", "isFinite")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Global_Objects/Infinity", "Infinity")}}
+- {{jsxref("Global_Objects/isFinite", "isFinite")}}

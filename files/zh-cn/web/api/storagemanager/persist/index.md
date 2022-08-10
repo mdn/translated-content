@@ -3,38 +3,40 @@ title: StorageManager.persist()
 slug: Web/API/StorageManager/persist
 translation_of: Web/API/StorageManager/persist
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
-<p><strong><code>persist()</code></strong>方法是{{domxref("StorageManager")}}的一个接口，用于请求本地数据存储的权限，如果被授予权限，则返回一个 resolved 状态值为<code>true</code>的{{jsxref('Promise')}}对象，否则返回<code>false</code>。</p>
+**`persist()`**方法是{{domxref("StorageManager")}}的一个接口，用于请求本地数据存储的权限，如果被授予权限，则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}对象，否则返回`false`。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">navigator.storage.persist().then(function(persistent) { ... })</pre>
+```plain
+navigator.storage.persist().then(function(persistent) { ... })
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 resolved 状态，值为{{jsxref('Boolean')}}类型的{{jsxref('Promise')}}对象。</p>
+一个 resolved 状态，值为{{jsxref('Boolean')}}类型的{{jsxref('Promise')}}对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">if (navigator.storage &amp;&amp; navigator.storage.persist)
+```js
+if (navigator.storage && navigator.storage.persist)
   navigator.storage.persist().then(function(persistent) {
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
       console.log("Storage may be cleared by the UA under storage pressure.");
-  });</pre>
+  });
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.StorageManager.persist")}}</p>
+{{Compat("api.StorageManager.persist")}}

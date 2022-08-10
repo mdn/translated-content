@@ -8,29 +8,29 @@ tags:
   - custom elements
 translation_of: Web/API/CustomElementRegistry/get
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p> {{domxref("CustomElementRegistry")}} 的<code><strong>get()</strong></code>方法返回以前定义自定义元素的构造函数。</p>
+{{domxref("CustomElementRegistry")}} 的**`get()`**方法返回以前定义自定义元素的构造函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>constructor</em> = customElements.get(<em>name</em>);
-</pre>
+```plain
+constructor = customElements.get(name);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>name</dt>
- <dd>你想要返回引用的构造函数的自定义元素的名字。</dd>
-</dl>
+- name
+  - : 你想要返回引用的构造函数的自定义元素的名字。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>指定名字的自定义元素的构造函数，如果没有使用该名称的自定义元素定义，则为<code>undefined</code>。</p>
+指定名字的自定义元素的构造函数，如果没有使用该名称的自定义元素定义，则为`undefined`。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">customElements.define('my-paragraph',
+```js
+customElements.define('my-paragraph',
   class extends HTMLElement {
     constructor() {
       super();
@@ -44,16 +44,12 @@ translation_of: Web/API/CustomElementRegistry/get
 
 // Return a reference to the my-paragraph constructor
 let ctor = customElements.get('my-paragraph');
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.CustomElementRegistry.get")}}</p>
-</div>
+{{Compat("api.CustomElementRegistry.get")}}

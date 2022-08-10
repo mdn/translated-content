@@ -12,27 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 browser-compat: javascript.builtins.Map.keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>keys()</strong></code> 返回一个引用的 <code><strong>Iterator</strong></code> 对象。它包含按照顺序插入 <code>Map</code> 对象中每个元素的 key 值。</p>
+**`keys()`** 返回一个引用的 **`Iterator`** 对象。它包含按照顺序插入 `Map` 对象中每个元素的 key 值。
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
+## 语法
 
+```plain
+myMap.keys()
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><em>myMap</em>.keys()</code></pre>
+一个存在引用关系的 {{jsxref("Map")}} iterator 对象。
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>一个存在引用关系的 {{jsxref("Map")}} iterator 对象。</p>
+### 使用 `keys()`
 
-<h2 id="例子">例子</h2>
-
-<h3 id="使用_keys">使用 <code>keys()</code></h3>
-
-<pre class="brush:js">var myMap = new Map();
+```js
+var myMap = new Map();
 myMap.set("0", "foo");
 myMap.set(1, "bar");
 myMap.set({}, "baz");
@@ -42,21 +43,17 @@ var mapIter = myMap.keys();
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
 console.log(mapIter.next().value); // Object
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.values()")}}

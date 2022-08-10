@@ -5,28 +5,26 @@ tags:
   - originalTarget
 translation_of: Web/API/Event/originalTarget
 ---
-<div>{{ ApiRef("DOM") }} {{Non-standard_header}}</div>
+{{ ApiRef("DOM") }} {{Non-standard_header}}
 
-<div> </div>
+## 简介
 
-<h2 id="Summary">简介</h2>
+original target 是事件重定向之前的原始目标. (Mozilla-特有)
 
-<p>original target 是事件重定向之前的原始目标. (Mozilla-特有)</p>
+在 XBL 的匿名内容中，这将是该事件最初触发的匿名节点。看到匿名的内容。查看[Anonymous Content#Event_Flow_and_Targeting](/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting) 获取更多细节。
 
-<p>在 XBL 的匿名内容中，这将是该事件最初触发的匿名节点。看到匿名的内容。查看<a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> 获取更多细节。</p>
+注意：原始目标也可能是原生的匿名内容 (参见 Bug(“208427”))，在这种情况下，它对于非特权代码是无用的。
 
-<p>注意：原始目标也可能是原生的匿名内容 (参见 Bug(“208427”))，在这种情况下，它对于非特权代码是无用的。</p>
+查看[Comparison of Event Targets](/en-US/docs/DOM/event/Comparison_of_Event_Targets)
 
-<p>查看<a href="/en-US/docs/DOM/event/Comparison_of_Event_Targets">Comparison of Event Targets</a></p>
+## 示例
 
-<h2 id="Example">示例</h2>
+_需要一个有意义的示例_
 
-<p><em>需要一个有意义的示例</em></p>
+## 规范
 
-<h2 id="Specification">规范</h2>
+这是一个 Mozilla 特有的属性，不属于任何规范。它不会成为标准。
 
-<p>这是一个 Mozilla 特有的属性，不属于任何规范。它不会成为标准。</p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}

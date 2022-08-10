@@ -8,42 +8,38 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Types
 ---
-<div>{{ CssRef }}</div>
+{{ CssRef }}
 
-<p><strong>CSS </strong>基本数据类型是 组件值类型 <a href="https://www.w3.org/TR/css3-values/">component value type</a> 的一种。用于定义 CSS 属性和函数可以接受的变量（关键字和单位）的种类。</p>
+**CSS** 基本数据类型是 组件值类型 [component value type](https://www.w3.org/TR/css3-values/) 的一种。用于定义 CSS 属性和函数可以接受的变量（关键字和单位）的种类。
 
-<p>数据类型由放置在不等式符号  "&lt;" 和 "&gt;" 之间的关键字表示：</p>
+数据类型由放置在不等式符号 "<" 和 ">" 之间的关键字表示：
 
-<p> </p>
+## Reference
 
-<h2 id="Reference">Reference</h2>
+- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("&lt;color&gt;")}}
+- {{cssxref("&lt;custom-ident&gt;")}}
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("&lt;flex&gt;")}}
+- {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;integer&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;position&gt;")}}
+- {{cssxref("&lt;ratio&gt;")}}
+- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("&lt;shape-box&gt;")}}
+- {{cssxref("&lt;single-transition-timing-function&gt;")}}
+- {{cssxref("&lt;string&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("&lt;url&gt;")}}
 
-<ul>
- <li>{{cssxref("&lt;angle&gt;")}}</li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("&lt;color&gt;")}}</li>
- <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("&lt;flex&gt;")}}</li>
- <li>{{cssxref("&lt;frequency&gt;")}}</li>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
- <li>{{cssxref("&lt;length&gt;")}}</li>
- <li>{{cssxref("&lt;number&gt;")}}</li>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
- <li>{{cssxref("&lt;position&gt;")}}</li>
- <li>{{cssxref("&lt;ratio&gt;")}}</li>
- <li>{{cssxref("&lt;resolution&gt;")}}</li>
- <li>{{cssxref("&lt;shape-box&gt;")}}</li>
- <li>{{cssxref("&lt;single-transition-timing-function&gt;")}}</li>
- <li>{{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li>{{cssxref("&lt;url&gt;")}}</li>
-</ul>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

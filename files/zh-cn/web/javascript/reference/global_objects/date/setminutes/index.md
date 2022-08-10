@@ -3,58 +3,57 @@ title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>setMinutes()</strong></code> 方法根据本地时间为一个日期对象设置分钟数。</p>
+**`setMinutes()`** 方法根据本地时间为一个日期对象设置分钟数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setminutes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setminutes.html")}}
 
+## 语法
 
+```plain
+dateObj.setMinutes(minutesValue[, secondsValue[, msValue]])
+```
 
-<h2 id="Syntax">语法</h2>
+### JavaScript 1.3 之前版本
 
-<pre class="syntaxbox"><var>dateObj</var>.setMinutes(<em>minutesValue</em>[, <em>secondsValue</em>[, <em>msValue</em>]])</pre>
+```plain
+dateObj.setMinutes(minutesValue)
+```
 
-<h3 id="Versions_prior_to_JavaScript_1.3">JavaScript 1.3 之前版本</h3>
+### 参数
 
-<pre class="syntaxbox"><var>dateObj</var>.setMinutes(<em>minutesValue</em>)</pre>
+- `minutesValue`
+  - : 一个 0 到 59 的整数，表示分钟数。
+- `secondsValue`
+  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsValue` 参数，则必须同时指定 `minutesValue` 参数。
+- `msValue`
+  - : 一个 0 到 999 的数字，表示微秒数，如果指定了 `msValue` 参数，则必须同时指定 `minutesValue` 和`secondsValue` 参数。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>minutesValue</code></dt>
- <dd>一个 0 到 59 的整数，表示分钟数。</dd>
- <dt><code>secondsValue</code></dt>
- <dd>一个 0 到 59 的整数，表示秒数。如果指定了 <code>secondsValue</code> 参数，则必须同时指定 <code>minutesValue</code> 参数。</dd>
- <dt><code>msValue</code></dt>
- <dd>一个 0 到 999 的数字，表示微秒数，如果指定了 <code>msValue</code> 参数，则必须同时指定 <code>minutesValue</code> 和<code>secondsValue</code> 参数。</dd>
-</dl>
+如果没有指定 `secondsValue` 和 `msValue` 参数，就会使用 {{jsxref("Date.getSeconds", "getSeconds()")}} 和 {{jsxref("Date.getMilliseconds", "getmilliseconds()")}} 方法的返回值。
 
-<h2 id="Description">描述</h2>
+如果有一个指定的参数超出了合理范围，`setMinutes` 会相应地更新日期对象中的时间信息。例如，为 `secondsValue` 指定 100，分钟数将会加 1，而秒数会为 40。
 
-<p>如果没有指定 <code>secondsValue</code> 和 <code>msValue</code> 参数，就会使用 {{jsxref("Date.getSeconds", "getSeconds()")}} 和 {{jsxref("Date.getMilliseconds", "getmilliseconds()")}} 方法的返回值。</p>
+## 例子
 
-<p>如果有一个指定的参数超出了合理范围，<code>setMinutes</code> 会相应地更新日期对象中的时间信息。例如，为 <code>secondsValue</code> 指定 100，分钟数将会加 1，而秒数会为 40。</p>
+### 例子：使用`setMinutes` 方法
 
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example:_Using_setMinutes">例子：使用<code>setMinutes</code> 方法</h3>
-
-<pre class="brush: js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setMinutes(45);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getMinutes()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMinutes()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMinutes()")}}
+- {{jsxref("Date.prototype.setUTCMinutes()")}}

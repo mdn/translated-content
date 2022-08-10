@@ -3,56 +3,58 @@ title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>values()</code></strong>返回新的 <code>Array Iterator</code> 对象，包含数组中每个下标处的值。</p>
+**`values()`**返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>arr</var>.values()</code></pre>
+```plain
+arr.values()
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新的<code><strong>Array Iterator</strong></code>对象。</p>
+新的**`Array Iterator`**对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用for...of_循环的迭代">使用<code>for...of</code> 循环的迭代</h3>
+### 使用`for...of` 循环的迭代
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.values();
 // 你的浏览器必须支持 for..of 循环
 // 以及 for 循环中的 let 区域变量
 for (let n of eArray) {
   console.log(n);
 }
-</pre>
+```
 
-<h3 id="备选迭代">备选迭代</h3>
+### 备选迭代
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.values();
 console.log(eArr.next().value); // 10
 console.log(eArr.next().value); // 20
 console.log(eArr.next().value); // 30
 console.log(eArr.next().value); // 40
 console.log(eArr.next().value); // 50
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript 类型化数组</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
- <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
-</ul>
+- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.entries()")}}
+- {{jsxref("TypedArray.prototype.keys()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}

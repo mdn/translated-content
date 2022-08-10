@@ -7,73 +7,73 @@ tags:
   - 参考
 translation_of: Web/CSS/list-style-image
 ---
-<p>{{ CSSRef}}</p>
+{{ CSSRef}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p> <strong><code>list-style-image</code></strong> 属性用来指定一个能用来作为列表元素标记的图片。</p>
+**`list-style-image`** 属性用来指定一个能用来作为列表元素标记的图片。
 
-<p>通常来说使用{{ cssxref("list-style") }}较为方便。</p>
+通常来说使用{{ cssxref("list-style") }}较为方便。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css">/* Keyword values */
+```css
+/* Keyword values */
 list-style-image: none;
 
-/* &lt;url&gt; values */
+/* <url> values */
 list-style-image: url('starsolid.gif');
 
 /* Global values */
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: unset;
-</pre>
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>&lt;url&gt;</code></dt>
- <dd>用来作为标记的图片的地址。</dd>
- <dt><code>none</code></dt>
- <dd>说明没有图片被用作标记。如果这个值被设定，那么 {{ Cssxref("list-style-type") }} 中定义的值会被取代。</dd>
-</dl>
+- `<url>`
+  - : 用来作为标记的图片的地址。
+- `none`
+  - : 说明没有图片被用作标记。如果这个值被设定，那么 {{ Cssxref("list-style-type") }} 中定义的值会被取代。
 
-<h3 id="正式语法">正式语法</h3>
+### 正式语法
 
 {{csssyntax}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('Examples') }}</p>
+{{ EmbedLiveSample('Examples') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="其他链接">其他链接</h2>
+## 其他链接
 
-<ul>
- <li>{{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}</li>
-</ul>
+- {{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}

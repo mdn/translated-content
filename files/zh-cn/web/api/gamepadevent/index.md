@@ -3,49 +3,49 @@ title: GamepadEvent
 slug: Web/API/GamepadEvent
 translation_of: Web/API/GamepadEvent
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>Gamepad API 的 GamepadEvent 接口包含对连接到系统的控制器的引用，这也是 gamepad 事件 events {{domxref("Window.gamepadconnected")}} 与 {{domxref("Window.gamepaddisconnected")}} 被触发时响应的内容。</p>
+Gamepad API 的 GamepadEvent 接口包含对连接到系统的控制器的引用，这也是 gamepad 事件 events {{domxref("Window.gamepadconnected")}} 与 {{domxref("Window.gamepaddisconnected")}} 被触发时响应的内容。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}</dt>
- <dd>返回一个新的 <code>GamepadEvent</code> 对象。</dd>
-</dl>
+- {{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}
+  - : 返回一个新的 `GamepadEvent` 对象。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}</dt>
- <dd>返回一个 {{ domxref("Gamepad") }} 对象，提供触发事件的控制器数据的访问。</dd>
-</dl>
+- {{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}
+  - : 返回一个 {{ domxref("Gamepad") }} 对象，提供触发事件的控制器数据的访问。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用控制器属性。</p>
+在触发的 {{domxref("Window.gamepadconnected")}} 事件上调用控制器属性。
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("控制器已连接于 %d 位：%s。 %d 个按键，%d 个坐标方向。",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<p>与 {{domxref("Window.gamepaddisconnected")}} 事件上的。</p>
+与 {{domxref("Window.gamepaddisconnected")}} 事件上的。
 
-<pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
+```js
+window.addEventListener("gamepaddisconnected", function(e) {
   console.log("控制器已从 %d 位断开：%s",
   e.gamepad.index, e.gamepad.id);
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.GamepadEvent")}}</p>
+{{Compat("api.GamepadEvent")}}
 
-<h2 id="另请参阅">另请参阅</h2>
+## 另请参阅
 
-<p><a href="/en-US/docs/Web/Guide/API/Gamepad">使用 Gamepad API</a></p>
+[使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)

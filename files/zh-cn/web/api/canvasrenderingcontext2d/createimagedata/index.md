@@ -7,84 +7,77 @@ tags:
   - CanvasRenderingContext2D
 translation_of: Web/API/CanvasRenderingContext2D/createImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.createImageData()</code></strong> 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。</p>
+**`CanvasRenderingContext2D.createImageData()`** 是 Canvas 2D API 创建一个新的、空白的、指定大小的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">ImageData <var><em>ctx</em>.createImageData(width, height);</var>
-ImageData <var><em>ctx</em>.createImageData(imagedata);</var>
-</pre>
+```plain
+ImageData ctx.createImageData(width, height);
+ImageData ctx.createImageData(imagedata);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>width</code></dt>
- <dd>{{domxref("ImageData")}} 新对象的宽度。</dd>
- <dt><code>height</code></dt>
- <dd>{{domxref("ImageData")}} 新对象的高度。</dd>
- <dt><code>imagedata</code></dt>
- <dd>从现有的 {{domxref("ImageData")}} 对象中，复制一个和其宽度和高度相同的对象。图像自身不允许被复制。</dd>
-</dl>
+- `width`
+  - : {{domxref("ImageData")}} 新对象的宽度。
+- `height`
+  - : {{domxref("ImageData")}} 新对象的高度。
+- `imagedata`
+  - : 从现有的 {{domxref("ImageData")}} 对象中，复制一个和其宽度和高度相同的对象。图像自身不允许被复制。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>指定了宽度和高度的，新的 {{domxref("ImageData")}} 对象。新对象使用透明的像素进行填充。</p>
+指定了宽度和高度的，新的 {{domxref("ImageData")}} 对象。新对象使用透明的像素进行填充。
 
-<h3 id="抛出错误">抛出错误</h3>
+### 抛出错误
 
-<dl>
- <dt><code>IndexSizeError</code></dt>
- <dd>如果宽度或者高度变量值为零，会抛出此异常。</dd>
-</dl>
+- `IndexSizeError`
+  - : 如果宽度或者高度变量值为零，会抛出此异常。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_createImageData_方法">使用 <code>createImageData</code> 方法</h3>
+### 使用 `createImageData` 方法
 
-<p>这是一段简单地使用 <code>createImageData</code> 方法的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a> 和 {{domxref("ImageData")}} 对象。</p>
+这是一段简单地使用 `createImageData` 方法的代码片段。 获取更多信息，请看 [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 console.log(ctx.createImageData(100, 100));
 // ImageData { width: 100, height: 100, data: Uint8ClampedArray[40000] }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("api.CanvasRenderingContext2D.createImageData")}}</p>
+{{Compat("api.CanvasRenderingContext2D.createImageData")}}
 
-<h3 id="兼容性注解">兼容性注解</h3>
+### 兼容性注解
 
-<ul>
- <li>从 {{geckoRelease("5.0")}}开始：
-  <ul>
-   <li>如果矩形小于指定的 1 个像素，<code>createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
-   <li>当调用 <code>createImageData()</code> 指定非限制值时，会抛出<code>NOT_SUPPORTED_ERR</code> exception 异常。</li>
-   <li><code>createImageData()</code> 根据规定处理负数变量，会围绕对称轴翻转矩形区域。</li>
-  </ul>
- </li>
-</ul>
+- 从 {{geckoRelease("5.0")}}开始：
 
-<h2 id="参见">参见</h2>
+  - 如果矩形小于指定的 1 个像素，`createImageData()` 会返回图像数据至少 1 个像素值。
+  - 当调用 `createImageData()` 指定非限制值时，会抛出`NOT_SUPPORTED_ERR` exception 异常。
+  - `createImageData()` 根据规定处理负数变量，会围绕对称轴翻转矩形区域。
 
-<ul>
- <li>接口定义，{{domxref("CanvasRenderingContext2D")}}.</li>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a></li>
-</ul>
+## 参见
+
+- 接口定义，{{domxref("CanvasRenderingContext2D")}}.
+- {{domxref("ImageData")}}
+- [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

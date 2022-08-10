@@ -3,33 +3,31 @@ title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
 translation_of: Web/API/TimeRanges/start
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>返回指定时间范围的开始偏移量。</p>
+返回指定时间范围的开始偏移量。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>startTime</em> = TimeRanges.start(index)
-</pre>
+```plain
+startTime = TimeRanges.start(index)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<ul>
- <li><code>index</code> 想要检索的时间范围的索引值。</li>
-</ul>
+- `index` 想要检索的时间范围的索引值。
 
-<h3 id="异常">异常</h3>
+### 异常
 
-<dl>
- <dt>INDEX_SIZE_ERR</dt>
- <dd>如果不存在指定索引值的时间范围，抛出 <code>DOMException</code> 异常。</dd>
-</dl>
+- INDEX_SIZE_ERR
+  - : 如果不存在指定索引值的时间范围，抛出 `DOMException` 异常。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>假定页面中存在一个ID为“myVideo”的 video 元素：</p>
+假定页面中存在一个 ID 为“myVideo”的 video 元素：
 
-<pre class="brush: js">var v = document.getElementById("myVideo");
+```js
+var v = document.getElementById("myVideo");
 
 var buf = v.buffered;
 
@@ -37,21 +35,19 @@ var numRanges = buf.length;
 
 if (buf.length == 1) {
   // only one range
-  if (buf.start(0) == 0 &amp;&amp; buf.end(0) == v.duration) {
+  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }
 }
-</pre>
+```
 
-<p>这个例子演示了如何通过 <code>TimeRanges</code> 来判断 video 是否已经完全加载。</p>
+这个例子演示了如何通过 `TimeRanges` 来判断 video 是否已经完全加载。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.TimeRanges.start")}}</p>
+{{Compat("api.TimeRanges.start")}}

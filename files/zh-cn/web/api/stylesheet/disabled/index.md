@@ -9,29 +9,27 @@ tags:
   - Reference
 translation_of: Web/API/StyleSheet/disabled
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}{{domxref("StyleSheet")}}接口的 **`disabled` **属性用于决定样式表是否被禁用于文档。样式表被禁用可能由于这个属性被手动设置为 true，也可能是因为样式表是未激活的[alternative style sheet](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。注意 `disabled == false` 并不保证样式表一定生效（例如它可能被移除出文档）。
 
-<div>{{domxref("StyleSheet")}}接口的 <strong><code>disabled</code> </strong>属性用于决定样式表是否被禁用于文档。</div>
+## 语法
 
-<div>样式表被禁用可能由于这个属性被手动设置为 true，也可能是因为样式表是未激活的<a href="/zh-CN/docs/Web/CSS/Alternative_style_sheets">alternative style sheet</a>。注意 <code>disabled == false</code> 并不保证样式表一定生效（例如它可能被移除出文档）。</div>
+```plain
+bool = stylesheet.disabled
+```
 
-<h2 id="Syntax">语法</h2>
+## 例子
 
-<pre class="syntaxbox"><em>bool</em> = stylesheet.disabled
-</pre>
-
-<h2 id="Example">例子</h2>
-
-<pre>// 如果样式表被禁用
+```plain
+// 如果样式表被禁用
 if (stylesheet.disabled) {
    // 添加行内样式
 }
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.StyleSheet.disabled")}}</p>
+{{Compat("api.StyleSheet.disabled")}}

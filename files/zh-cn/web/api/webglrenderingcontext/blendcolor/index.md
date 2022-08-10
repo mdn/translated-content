@@ -9,54 +9,55 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/blendColor
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.blendColor()</code></strong> 方法用于设置源和目标混合因子。</p>
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendColor()`** 方法用于设置源和目标混合因子。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var><em>void gl</em>.</var>blendColor<var>(red, green, blue, alpha);</var>
-</pre>
+```plain
+void gl.blendColor(red, green, blue, alpha);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>red</code></dt>
- <dd>{{domxref("GLclampf")}} 红色分量的范围为 0 到 1。</dd>
- <dt><code>green</code></dt>
- <dd>{{domxref("GLclampf")}} 红色分量的范围为 0 到 1。</dd>
- <dt>blue</dt>
- <dd>{{domxref("GLclampf")}} 红色分量的为 0 到 1。</dd>
- <dt>alpha</dt>
- <dd>{{domxref("GLclampf")}} 组件（透明度）的范围在 0 到 1。</dd>
-</dl>
+- `red`
+  - : {{domxref("GLclampf")}} 红色分量的范围为 0 到 1。
+- `green`
+  - : {{domxref("GLclampf")}} 红色分量的范围为 0 到 1。
+- blue
+  - : {{domxref("GLclampf")}} 红色分量的为 0 到 1。
+- alpha
+  - : {{domxref("GLclampf")}} 组件（透明度）的范围在 0 到 1。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>None.</p>
+None.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>要设置混合颜色，请使用：</p>
+要设置混合颜色，请使用：
 
-<pre class="brush: js">gl.blendColor(0, 0.5, 1, 1);</pre>
+```js
+gl.blendColor(0, 0.5, 1, 1);
+```
 
-<p>要获得混合颜色，请查询返回 {{jsxref("Float32Array")}} 的 BLEND_COLOR 常量。</p>
+要获得混合颜色，请查询返回 {{jsxref("Float32Array")}} 的 BLEND_COLOR 常量。
 
-<pre class="brush: js">gl.getParameter(gl.BLEND_COLOR);
-// Float32Array[0, 0.5, 1, 1]</pre>
+```js
+gl.getParameter(gl.BLEND_COLOR);
+// Float32Array[0, 0.5, 1, 1]
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendColor")}}</p>
+{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.blendColor")}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.blendEquation()")}}</li>
- <li>{{domxref("WebGLRenderingContext.blendFunc()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.blendEquation()")}}
+- {{domxref("WebGLRenderingContext.blendFunc()")}}

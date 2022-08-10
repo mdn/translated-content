@@ -8,31 +8,30 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>元素的 <code>scroll </code>事件处理函数。</p>
+元素的 `scroll `事件处理函数。
 
-<h3 id="语法">语法</h3>
+### 语法
 
-<pre class="syntaxbox">element.onscroll = <var>functionReference</var></pre>
+```plain
+element.onscroll = functionReference
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>functionReference 是一个函数的引用。当该元素滚动时，会执行该函数。</p>
+functionReference 是一个函数的引用。当该元素滚动时，会执行该函数。
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong>不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转， 而 onscroll 处理的是对象内部内容区的滚动事件。</p>
-</div>
+> **备注：**不要将 onscroll 与 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}混淆。onwheel 是鼠标滚轮旋转， 而 onscroll 处理的是对象内部内容区的滚动事件。
 
-<p> </p>
+## 示例
 
-<h2 id="示例">示例</h2>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-  &lt;meta charset="UTF-8" /&gt;
-  &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <style>
   #container {
     position: absolute;
     height: auto;
@@ -51,61 +50,68 @@ original_slug: Web/API/GlobalEventHandlers/onscroll
     display: block;
   }
 
-  &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="container"&gt;
-      &lt;div id="foo"&gt;&lt;/div&gt;
-    &lt;/div&gt;
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="foo"></div>
+    </div>
 
-    &lt;script type="text/javascript"&gt;
+    <script type="text/javascript">
       document.getElementById('container').onscroll = function() {
         console.log("scrolling");
       };
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    </script>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('示例') }}</p>
+{{ EmbedLiveSample('示例') }}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>这个示例能说明更多问题</p>
+这个示例能说明更多问题
 
-<p>This example monitors scrolling on a {{HtmlElement("textarea")}}, and logs the element's vertical scroll position accordingly.</p>
+This example monitors scrolling on a {{HtmlElement("textarea")}}, and logs the element's vertical scroll position accordingly.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;textarea&gt;1 2 3 4 5 6 7 8 9&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<textarea>1 2 3 4 5 6 7 8 9</textarea>
+<p id="log"></p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">textarea {
+```css
+textarea {
   width: 4rem;
   height: 8rem;
   font-size: 3rem;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const textarea = document.querySelector('textarea');
+```js
+const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 
 textarea.onscroll = logScroll;
 
 function logScroll(e) {
   log.textContent = `Scroll position: ${e.target.scrollTop}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
-<h2 id="注意">注意</h2>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<p>当用户滚动某个元素的内容时 <code>scroll</code> 事件将会被触发。<code>Element.onscroll 同等于</code> <code>element.addEventListener("scroll" ... )。</code></p>
+## 注意
 
-<h2 id="规范">规范</h2>
+当用户滚动某个元素的内容时 `scroll` 事件将会被触发。`Element.onscroll 同等于` `element.addEventListener("scroll" ... )。`
+
+## 规范
 
 {{Specifications}}

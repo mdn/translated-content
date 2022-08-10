@@ -3,40 +3,41 @@ title: Date.prototype.toGMTString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
-<div>{{JSRef("Global_Objects", "Date")}} {{ Deprecated_header() }}</div>
+{{JSRef("Global_Objects", "Date")}} {{ Deprecated_header() }}
 
-<p>The <code><strong>toGMTString()</strong></code> method converts a date to a string, using Internet GMT conventions. The exact format of the value returned by <code>toGMTString</code> varies according to the platform and browser, in general it should represent a human readable date string.</p>
+The **`toGMTString()`** method converts a date to a string, using Internet GMT conventions. The exact format of the value returned by `toGMTString` varies according to the platform and browser, in general it should represent a human readable date string.
 
-<p><strong>Note</strong>: <code>toGMTString</code> is deprecated and should no longer be used, it's only there for backwards compatibility, use {{jsxref("Date.toUTCString", "toUTCString()")}} instead.</p>
+**Note**: `toGMTString` is deprecated and should no longer be used, it's only there for backwards compatibility, use {{jsxref("Date.toUTCString", "toUTCString()")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>dateObj</var>.toGMTString()</pre>
+```plain
+dateObj.toGMTString()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Example:_Using_toGMTString">Example: Using <code>toGMTString</code></h3>
+### Example: Using `toGMTString`
 
-<p>In this example, the <code>toGMTString</code> method converts the date to GMT (UTC) using the operating system's time-zone offset and returns a string value that is similar to the following form. The exact format depends on the platform.</p>
+In this example, the `toGMTString` method converts the date to GMT (UTC) using the operating system's time-zone offset and returns a string value that is similar to the following form. The exact format depends on the platform.
 
-<pre class="brush: js">var today = new Date();
+```js
+var today = new Date();
 var str = today.toGMTString();  // deprecated! use toUTCString()
 
 console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

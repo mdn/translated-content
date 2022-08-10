@@ -7,11 +7,12 @@ tags:
   - SVG
 translation_of: Web/CSS/pointer-events
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>pointer-events</code> </strong>CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 <a href="/zh-CN/docs/Web/API/event.target">target</a>。</p>
+**`pointer-events` **CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 [target](/zh-CN/docs/Web/API/event.target)。
 
-<pre class="brush: css">/* Keyword values */
+```css
+/* Keyword values */
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG only */
@@ -26,108 +27,103 @@ pointer-events: all;            /* SVG only */
 /* Global values */
 pointer-events: inherit;
 pointer-events: initial;
-pointer-events: unset;</pre>
+pointer-events: unset;
+```
 
-<p>当此属性未指定时，<code>visiblePainted</code>值的相同特征适用于 SVG（可缩放矢量图形）内容。</p>
+当此属性未指定时，`visiblePainted`值的相同特征适用于 SVG（可缩放矢量图形）内容。
 
-<p>除了指示该元素不是鼠标事件的目标之外，值<code>none</code>表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。</p>
+除了指示该元素不是鼠标事件的目标之外，值`none`表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>pointer-events</code>属性被指定为从下面的值列表中选择的一个关键字。</p>
+`pointer-events`属性被指定为从下面的值列表中选择的一个关键字。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>与<code>pointer-events</code>属性未指定时的表现效果相同，对于 SVG 内容，该值与<code>visiblePainted</code>效果相同</dd>
- <dt><code>none</code></dt>
- <dd>元素永远不会成为鼠标事件的<a href="https://developer.mozilla.org/en-US/docs/Web/API/event.target">target</a>。但是，当其后代元素的<code>pointer-events</code>属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。</dd>
- <dt><code>visiblePainted</code></dt>
- <dd>
- <div>只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
+- `auto`
+  - : 与`pointer-events`属性未指定时的表现效果相同，对于 SVG 内容，该值与`visiblePainted`效果相同
+- `none`
+  - : 元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+- `visiblePainted`
 
- 
+  - : 只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：
 
- <ul>
-  <li><code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部，且<code>fill</code>属性指定了<code>none</code>之外的值</li>
-  <li><code>visibility</code>属性值为<code>visible</code>，鼠标指针在元素边界上，且<code>stroke</code>属性指定了<code>none</code>之外的值</li>
- </ul>
- </dd>
- <dt><code>visibleFill</code></dt>
- <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部时，元素才会成为鼠标事件的目标，<code>fill</code>属性的值不影响事件处理。</dd>
- <dt><code>visibleStroke</code></dt>
- <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素边界时，元素才会成为鼠标事件的目标，<code>stroke</code>属性的值不影响事件处理。</dd>
- <dt><code>visible</code></dt>
- <dd>只适用于 SVG。只有在元素<code>visibility</code>属性值为<code>visible</code>，且鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，<code>fill</code>和<code>stroke</code>属性的值不影响事件处理。</dd>
- <dt><code>painted</code></dt>
- <dd>
- <div>只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：</div>
+    - `visibility`属性值为`visible`，且鼠标指针在元素内部，且`fill`属性指定了`none`之外的值
+    - `visibility`属性值为`visible`，鼠标指针在元素边界上，且`stroke`属性指定了`none`之外的值
 
- 
+- `visibleFill`
+  - : 只适用于 SVG。只有在元素`visibility`属性值为`visible`，且鼠标指针在元素内部时，元素才会成为鼠标事件的目标，`fill`属性的值不影响事件处理。
+- `visibleStroke`
+  - : 只适用于 SVG。只有在元素`visibility`属性值为`visible`，且鼠标指针在元素边界时，元素才会成为鼠标事件的目标，`stroke`属性的值不影响事件处理。
+- `visible`
+  - : 只适用于 SVG。只有在元素`visibility`属性值为`visible`，且鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，`fill`和`stroke`属性的值不影响事件处理。
+- `painted`
 
- <ul>
-  <li>鼠标指针在元素内部，且<code>fill</code>属性指定了<code>none</code>之外的值</li>
-  <li>鼠标指针在元素边界上，且<code>stroke</code>属性指定了<code>none</code>之外的值</li>
- </ul>
+  - : 只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：
 
- <div><code>visibility</code>属性的值不影响事件处理。</div>
- </dd>
- <dt><code>fill</code></dt>
- <dd>只适用于 SVG。只有鼠标指针在元素内部时，元素才会成为鼠标事件的目标，<code>fill</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
- <dt><code>stroke</code></dt>
- <dd>只适用于 SVG。只有鼠标指针在元素边界上时，元素才会成为鼠标事件的目标，<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
- <dt><code>all</code></dt>
- <dd>只适用于 SVG。只有鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，<code>fill</code>、<code>stroke</code>和<code>visibility</code>属性的值不影响事件处理。</dd>
-</dl>
+    - 鼠标指针在元素内部，且`fill`属性指定了`none`之外的值
+    - 鼠标指针在元素边界上，且`stroke`属性指定了`none`之外的值
 
-<h2 id="示例">示例</h2>
+    `visibility`属性的值不影响事件处理。
 
-<h3 id="示例_1">示例 1</h3>
+- `fill`
+  - : 只适用于 SVG。只有鼠标指针在元素内部时，元素才会成为鼠标事件的目标，`fill`和`visibility`属性的值不影响事件处理。
+- `stroke`
+  - : 只适用于 SVG。只有鼠标指针在元素边界上时，元素才会成为鼠标事件的目标，`stroke`和`visibility`属性的值不影响事件处理。
+- `all`
+  - : 只适用于 SVG。只有鼠标指针在元素内部或边界时，元素才会成为鼠标事件的目标，`fill`、`stroke`和`visibility`属性的值不影响事件处理。
 
-<pre class="brush:css">/* Example 1: Makes all the img non-reactive to any mouse events such as dragging, hovering, clicking etc */
+## 示例
+
+### 示例 1
+
+```css
+/* Example 1: Makes all the img non-reactive to any mouse events such as dragging, hovering, clicking etc */
 img {
   pointer-events: none;
-}</pre>
+}
+```
 
-<h3 id="Example_2">示例 2</h3>
+### 示例 2
 
-<p>点击链接 http://example.com 时，不会跳转</p>
+点击链接 http\://example.com 时，不会跳转
 
-<pre class="brush:html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://developer.mozilla.org/"&gt;MDN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://example.com"&gt;example.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+<li><a href="https://developer.mozilla.org/">MDN</a></li>
+<li><a href="http://example.com">example.com</a></li>
+</ul>
+```
 
-<pre class="brush:css">a[href="http://example.com"] {
+```css
+a[href="http://example.com"] {
   pointer-events: none;
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample('Example_2', "500", "100")}}</div>
+{{EmbedLiveSample('Example_2', "500", "100")}}
 
-<h2 id="提示">提示</h2>
+## 提示
 
-<p>使用<code>pointer-events</code>来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永远不会触发。如果元素后代明确指定了<code>pointer-events</code>属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然，位于父元素但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（鼠标活动将会穿过父元素而指向位于其下面的元素）。</p>
+使用`pointer-events`来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永远不会触发。如果元素后代明确指定了`pointer-events`属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然，位于父元素但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（鼠标活动将会穿过父元素而指向位于其下面的元素）。
 
-<p>我们希望为 HTML 提供更为精细的控制（而不仅仅是<code>auto</code>和<code>none</code>），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至<a href="https://wiki.mozilla.org/SVG:pointer-events">wiki 页面</a>的 Use Cases 部分，以帮助我们如何针对 HTML 扩展<code>pointer-events</code>。</p>
+我们希望为 HTML 提供更为精细的控制（而不仅仅是`auto`和`none`），以控制元素哪一部分何时会捕获鼠标事件。如果你有独特的想法，请添加至[wiki 页面](https://wiki.mozilla.org/SVG:pointer-events)的 Use Cases 部分，以帮助我们如何针对 HTML 扩展`pointer-events`。
 
-<p>该属性也可用来提高滚动时的帧频。的确，当滚动时，鼠标悬停在某些元素上，则触发其上的 hover 效果，然而这些影响通常不被用户注意，并多半导致滚动出现问题。对<code>body</code>元素应用<code>pointer-events：none</code>，禁用了包括<code>hover</code>在内的鼠标事件，从而提高滚动性能。</p>
+该属性也可用来提高滚动时的帧频。的确，当滚动时，鼠标悬停在某些元素上，则触发其上的 hover 效果，然而这些影响通常不被用户注意，并多半导致滚动出现问题。对`body`元素应用`pointer-events：none`，禁用了包括`hover`在内的鼠标事件，从而提高滚动性能。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its <a href="http://wiki.csswg.org/spec/css4-ui#pointer-events">level 4</a>.</p>
+Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+## 浏览器兼容
 
-<p>{{Compat("css.properties.pointer-events")}}</p>
+{{Compat("css.properties.pointer-events")}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>The SVG attribute {{SVGAttr("pointer-events")}}</li>
- <li><a href="http://webkit.org/specs/PointerEventsProperty.html">WebKit Specs PointerEventsProperty</a> extended for use in (X)HTML content</li>
-</ul>
+- The SVG attribute {{SVGAttr("pointer-events")}}
+- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content

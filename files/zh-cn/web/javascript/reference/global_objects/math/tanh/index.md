@@ -10,65 +10,66 @@ tags:
   - 双曲正切
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Math.tanh()</code></strong> 函数将会返回一个数的双曲正切函数值，公式如下：</p>
+**`Math.tanh()`** 函数将会返回一个数的双曲正切函数值，公式如下：
 
-<p><math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-tanh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-tanh.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code>Math.tanh(<var>x</var>)</code></pre>
+```plain
+Math.tanh(x)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>待计算的数字。</dd>
-</dl>
+- `x`
+  - : 待计算的数字。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>所给数字的双曲正切值。</p>
+所给数字的双曲正切值。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>因为 <code>tanh()</code> 是 <code>Math</code> 的静态方法，所以总应该直接调用 <code>Math.tanh()</code> ，而不是创建 <code>Math</code> 对象再调用该方法（<code>Math</code> 不是一个构造函数）。</p>
+因为 `tanh()` 是 `Math` 的静态方法，所以总应该直接调用 `Math.tanh()` ，而不是创建 `Math` 对象再调用该方法（`Math` 不是一个构造函数）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_Math.tanh">使用 <code>Math.tanh()</code></h3>
+### 使用 `Math.tanh()`
 
-<pre class="brush: js">Math.tanh(0);        // 0
+```js
+Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
 Math.tanh(1);        // 0.7615941559557649
-</pre>
+```
 
-<h2 id="向下兼容">向下兼容</h2>
+## 向下兼容
 
-<p><code>tanh()</code> 可以通过 {{jsxref("Math.exp()")}} 函数实现：</p>
+`tanh()` 可以通过 {{jsxref("Math.exp()")}} 函数实现：
 
-<pre class="brush: js">Math.tanh = Math.tanh || function(x){
+```js
+Math.tanh = Math.tanh || function(x){
     var a = Math.exp(+x), b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}

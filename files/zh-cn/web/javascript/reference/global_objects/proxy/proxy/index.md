@@ -3,74 +3,69 @@ title: Proxy() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}**`Proxy()`** 构造器用来创建 {{jsxref("Proxy")}} 对象。
 
-<div> <code><strong>Proxy()</strong></code> 构造器用来创建 {{jsxref("Proxy")}} 对象。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
+```plain
+new Proxy(target, handler)
+```
 
-<pre class="syntaxbox">new Proxy(<var>target</var>, <var>handler</var>)</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+- `target`
+  - : `Proxy` 会对 target 对象进行包装。它可以是任何类型的对象，包括内置的数组，函数甚至是另一个代理对象。
+- `handler`
+  - : 它是一个对象，它的属性提供了某些操作发生时所对应的处理函数。
 
-<dl>
- <dt><code><var>target</var></code></dt>
- <dd> <code>Proxy</code> 会对 target 对象进行包装。它可以是任何类型的对象，包括内置的数组，函数甚至是另一个代理对象。</dd>
- <dt><code><var>handler</var></code></dt>
- <dd>它是一个对象，它的属性提供了某些操作发生时所对应的处理函数。</dd>
-</dl>
+## 描述
 
-<h2 id="描述">描述</h2>
+我们可以使用 `Proxy()` 构造器来创建一个新的 `Proxy` 对象。 构造器接收两个主要参数：
 
-<p>我们可以使用 <code>Proxy()</code> 构造器来创建一个新的 <code>Proxy</code> 对象。 构造器接收两个主要参数：</p>
+- `target` 被代理的对象
+- `handler` 被代理对象上的自定义行为
 
-<ul>
- <li><code>target</code> 被代理的对象</li>
- <li><code>handler</code> 被代理对象上的自定义行为</li>
-</ul>
+一个空的 `handler` 参数将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 `handler` 对象上定义一组处理函数，你可以自定义被代理对象的一些特定行为。例如， 通过定义 `get()` 你就可以自定义被代理对象的 [属性访问器](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。
 
-<p>一个空的 <code>handler</code> 参数将会创建一个与被代理对象行为几乎完全相同的代理对象。通过在 <code>handler</code> 对象上定义一组处理函数，你可以自定义被代理对象的一些特定行为。例如， 通过定义 <code>get()</code> 你就可以自定义被代理对象的 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">属性访问器</a>。</p>
+### 处理函数
 
-<h3 id="处理函数">处理函数</h3>
+本节列出了所有你可以自定义的处理函数。处理函数有时候也被成为“劫持”（traps），这是由于它们会对底层被代理对象的调用进行劫持。
 
-<p>本节列出了所有你可以自定义的处理函数。处理函数有时候也被成为“劫持”（traps），这是由于它们会对底层被代理对象的调用进行劫持。</p>
+- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
+  - : 函数调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
+  - : {{JSxRef("Operators/new", "new")}} 操作符劫持
+- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
+  - : {{JSxRef("Object.defineProperty")}}调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+  - : {{JSxRef("Operators/delete", "delete")}} 操作符劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
+  - : 获取属性值劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+  - : {{JSxRef("Object.getOwnPropertyDescriptor")}} 调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : {{JSxRef("Object.getPrototypeOf")}}调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
+  - : {{JSxRef("Operators/in", "in")}} 操作符劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+  - : {{JSxRef("Object.isExtensible")}}调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
+  - : {{JSxRef("Object.getOwnPropertyNames")}} 和{{JSxRef("Object.getOwnPropertySymbols")}}调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
+  - : {{JSxRef("Object.preventExtensions")}}调用劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
+  - : 设置属性值劫持。
+- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : {{JSxRef("Object.setPrototypeOf")}}调用劫持。
 
-<dl>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}</dt>
- <dd>函数调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}</dt>
- <dd>{{JSxRef("Operators/new", "new")}} 操作符劫持</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}</dt>
- <dd>{{JSxRef("Object.defineProperty")}}调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}</dt>
- <dd>{{JSxRef("Operators/delete", "delete")}} 操作符劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}</dt>
- <dd>获取属性值劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</dt>
- <dd>{{JSxRef("Object.getOwnPropertyDescriptor")}} 调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}</dt>
- <dd>{{JSxRef("Object.getPrototypeOf")}}调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}</dt>
- <dd>{{JSxRef("Operators/in", "in")}} 操作符劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}</dt>
- <dd> {{JSxRef("Object.isExtensible")}}调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}</dt>
- <dd>{{JSxRef("Object.getOwnPropertyNames")}} 和{{JSxRef("Object.getOwnPropertySymbols")}}调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}</dt>
- <dd>{{JSxRef("Object.preventExtensions")}}调用劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}</dt>
- <dd>设置属性值劫持。</dd>
- <dt>{{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}</dt>
- <dd>{{JSxRef("Object.setPrototypeOf")}}调用劫持。</dd>
-</dl>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 选择性代理属性访问器
 
-<h3 id="选择性代理属性访问器">选择性代理属性访问器</h3>
+本例中，被代理对象有两个属性： `notProxied` 和 `proxied` 。我们定义了一个处理函数，它为 `proxied` 属性返回一个不同的值，而其他属性返回原值。
 
-<p>本例中，被代理对象有两个属性： <code>notProxied</code>  和 <code>proxied</code> 。我们定义了一个处理函数，它为 <code>proxied</code> 属性返回一个不同的值，而其他属性返回原值。</p>
-
-<pre class="brush: js">const target = {
+```js
+const target = {
   notProxied: "original value",
   proxied: "original value"
 };
@@ -87,21 +82,18 @@ const handler = {
 const proxy = new Proxy(target, handler);
 
 console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"</pre>
+console.log(proxy.proxied);    // "replaced value"
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Meta_programming"><code>Proxy</code> and <code>Reflect</code> in the JavaScript Guide</a></li>
- <li>{{jsxref("Global_Objects/Reflect", "Reflect")}}</li>
-</ul>
+- [`Proxy` and `Reflect` in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+- {{jsxref("Global_Objects/Reflect", "Reflect")}}

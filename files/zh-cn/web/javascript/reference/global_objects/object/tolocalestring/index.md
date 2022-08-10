@@ -8,43 +8,40 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
-<div>{{JSRef("Global_Objects", "Object")}}</div>
+{{JSRef("Global_Objects", "Object")}}
 
-<p><code><strong>toLocaleString()</strong></code> 方法返回一个该对象的字符串表示。此方法被用于派生对象为了特定语言环境的目的（locale-specific purposes）而重载使用。</p>
+**`toLocaleString()`** 方法返回一个该对象的字符串表示。此方法被用于派生对象为了特定语言环境的目的（locale-specific purposes）而重载使用。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>obj</var>.toLocaleString();</code>
-</pre>
+```plain
+obj.toLocaleString();
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>表示对象的字符串。</p>
+表示对象的字符串。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>{{jsxref("Object")}} <code>toLocaleString</code> 返回调用 {{jsxref("Object.toString", "toString()")}} 的结果。</p>
+{{jsxref("Object")}} `toLocaleString` 返回调用 {{jsxref("Object.toString", "toString()")}} 的结果。
 
-<p>该函数提供给对象一个通用的<code>toLocaleString</code> 方法，即使不是全部都可以使用它。 见下面的列表。</p>
+该函数提供给对象一个通用的`toLocaleString` 方法，即使不是全部都可以使用它。 见下面的列表。
 
-<h3 id="覆盖_toLocaleString_的对象">覆盖 <code>toLocaleString</code> 的对象</h3>
+### 覆盖 `toLocaleString` 的对象
 
-<ul>
- <li>{{jsxref("Array")}}：{{jsxref("Array.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number")}}：{{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date")}}：{{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array")}}：{{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number")}}：{{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date")}}：{{jsxref("Date.prototype.toLocaleString()")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

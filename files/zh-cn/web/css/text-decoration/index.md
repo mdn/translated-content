@@ -5,51 +5,52 @@ tags:
   - 文本修饰
 translation_of: Web/CSS/text-decoration
 ---
-<div>{{ CSSRef() }}</div>
+{{ CSSRef() }}
 
-<h2 id="Summary">简介</h2>
+## 简介
 
-<p>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</p>
+{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-<p><code>text-decoration</code> 这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线  或 闪烁）它是 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, 和新出现的 {{cssxref("text-decoration-thickness")}} 属性的缩写。</p>
+`text-decoration` 这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线 或 闪烁）它是 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, 和新出现的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
-<p>文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中<code> &lt;p&gt;This text has &lt;em&gt;some emphasized words&lt;/em&gt; in it.&lt;/p&gt;，应用样式</code><code>p { text-decoration: underline }</code> 会对整个段落添加下划线，此时再添加样式 <code>em { text-decoration: none }</code> 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 <code>em { text-decoration: overline }</code> 则会在&lt;em&gt;标记的文字上再添加上这种 overline 样式。</p>
+文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中` <p>This text has <em>some emphasized words</em> in it.</p>，应用样式 ``p { text-decoration: underline }` 会对整个段落添加下划线，此时再添加样式 `em { text-decoration: none }` 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 `em { text-decoration: overline }` 则会在\<em>标记的文字上再添加上这种 overline 样式。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<p>text-decoration 属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}</p>
+text-decoration 属性是一种简写属性，并且可以使用普通属性三个值中的任何一个。普通属性如下：{{cssxref("text-decoration-line")}}，{{cssxref("text-decoration-color")}}和{{cssxref("text-decoration-style")}}
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("text-decoration-line")}}</dt>
- <dd>文本修饰的位置，如下划线<code>underline</code>，删除线<code>line-through</code></dd>
- <dt>{{cssxref("text-decoration-color")}}</dt>
- <dd>文本修饰的颜色</dd>
- <dt>{{cssxref("text-decoration-style")}}</dt>
- <dd>文本修饰的样式，如波浪线<code>wavy</code>实线<code>solid</code>虚线<code>dashed</code></dd>
- <dt>{{cssxref("text-decoration-thickness")}}</dt>
- <dd>文本修饰线的粗细</dd>
-</dl>
+- {{cssxref("text-decoration-line")}}
+  - : 文本修饰的位置，如下划线`underline`，删除线`line-through`
+- {{cssxref("text-decoration-color")}}
+  - : 文本修饰的颜色
+- {{cssxref("text-decoration-style")}}
+  - : 文本修饰的样式，如波浪线`wavy`实线`solid`虚线`dashed`
+- {{cssxref("text-decoration-thickness")}}
+  - : 文本修饰线的粗细
 
-<h3 id="语法形式">语法形式</h3>
+### 语法形式
 
 {{csssyntax("text-decoration")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html"><code>&lt;p class="under"&gt;This text has a line underneath it.&lt;/p&gt;
-&lt;p class="over"&gt;This text has a line over it.&lt;/p&gt;
-&lt;p class="line"&gt;This text has a line going through it.&lt;/p&gt;
-&lt;p&gt;This &lt;a class="plain" href="#"&gt;link will not be underlined&lt;/a&gt;,
+```html
+<p class="under">This text has a line underneath it.</p>
+<p class="over">This text has a line over it.</p>
+<p class="line">This text has a line going through it.</p>
+<p>This <a class="plain" href="#">link will not be underlined</a>,
     as links generally are by default. Be careful when removing
     the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.&lt;/p&gt;
-&lt;p class="underover"&gt;This text has lines above &lt;em&gt;and&lt;/em&gt; below it.&lt;/p&gt;
-&lt;p class="blink"&gt;This text might blink for you,
-    depending on the browser you use.&lt;/p&gt;</code></pre>
+    the underline to denote hyperlinks.</p>
+<p class="underover">This text has lines above <em>and</em> below it.</p>
+<p class="blink">This text might blink for you,
+    depending on the browser you use.</p>
+```
 
-<pre class="brush: css"><code>.under {
+```css
+.under {
   text-decoration: underline red;
 }
 
@@ -71,26 +72,24 @@ translation_of: Web/CSS/text-decoration
 
 .blink {
   text-decoration: blink;
-}</code>
-</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{EmbedLiveSample('示例','auto','280')}}</p>
+{{EmbedLiveSample('示例','auto','280')}}
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.</li>
- <li>The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.</li>
-</ul>
+- The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, and {{cssxref("text-decoration-style")}}.
+- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.

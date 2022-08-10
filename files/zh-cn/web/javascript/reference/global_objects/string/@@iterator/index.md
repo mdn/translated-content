@@ -1,39 +1,43 @@
 ---
-title: 'String.prototype[@@iterator]()'
+title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>[@@iterator]()</code></strong> 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。</p>
+**`[@@iterator]()`** 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。
 
-<p>{{EmbedInteractiveExample("pages/js/string-iterator.html")}}</p>
+{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
 
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>string</var>[Symbol.iterator]</code></pre>
+```plain
+string[Symbol.iterator]
+```
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个新的 Iterator 对象。</p>
+一个新的 Iterator 对象。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="使用_iterator">使用 <code>[@@iterator]()</code></h3>
+### 使用 `[@@iterator]()`
 
-<pre class="brush:js">var string = 'A\uD835\uDC68';
+```js
+var string = 'A\uD835\uDC68';
 
 var strIter = string[Symbol.iterator]();
 
 console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
-</pre>
+```
 
-<h3 id="通过_for..of_使用_iterator">通过 <code>for..of</code> 使用 <code>[@@iterator]()</code></h3>
+### 通过 `for..of` 使用 `[@@iterator]()`
 
-<pre class="brush:js">var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
+```js
+var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 
 for (var v of string) {
   console.log(v);
@@ -44,18 +48,16 @@ for (var v of string) {
 // "\uD835\uDC69"
 // "C"
 // "\uD835\uDC6A"
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a></li>
-</ul>
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

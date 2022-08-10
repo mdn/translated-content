@@ -3,56 +3,55 @@ title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
-<div>{{JSRef("Global_Objects", "Date")}}</div>
+{{JSRef("Global_Objects", "Date")}}
 
-<p><code><strong>setSeconds()</strong></code> 方法根据本地时间设置一个日期对象的秒数。</p>
+**`setSeconds()`** 方法根据本地时间设置一个日期对象的秒数。
 
-<div>{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
 
+## 语法
 
+```plain
+dateObj.setSeconds(secondsValue[, msValue])
+```
 
-<h2 id="Syntax">语法</h2>
+### JavaScript 1.3 之前版本
 
-<pre class="syntaxbox"><var>dateObj</var>.setSeconds(<em>secondsValue</em>[, <em>msValue</em>])</pre>
+```plain
+dateObj.setSeconds(secondsValue)
+```
 
-<h3 id="JavaScript_1.3之前版本">JavaScript 1.3 之前版本</h3>
+### 参数
 
-<pre class="syntaxbox"><var>dateObj</var>.setSeconds(<em>secondsValue</em>)</pre>
+- `secondsValue`
+  - : 一个 0 到 59 的整数。
+- `msValue`
+  - : 一个 0 到 999 的数字，表示微秒数。
 
-<h3 id="Parameters">参数</h3>
+## 描述
 
-<dl>
- <dt><code>secondsValue</code></dt>
- <dd>一个 0 到 59 的整数。</dd>
- <dt><code>msValue</code></dt>
- <dd>一个 0 到 999 的数字，表示微秒数。</dd>
-</dl>
+如果没有指定 `msValue` 参数，就会使用 {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} 方法的返回值。
 
-<h2 id="Description">描述</h2>
+如果一个参数超出了合理范围， `setSeconds` 方法会相应地更新日期对象的时间信息。例如，为 `secondsValue` 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。
 
-<p>如果没有指定 <code>msValue</code> 参数，就会使用 {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} 方法的返回值。</p>
+## 例子
 
-<p>如果一个参数超出了合理范围， <code>setSeconds</code> 方法会相应地更新日期对象的时间信息。例如，为 <code>secondsValue</code> 指定 100，则日期对象的分钟数会相应地加 1，秒数将会使用 40。</p>
+### 例子：使用`setSeconds` 方法
 
-<h2 id="Examples">例子</h2>
-
-<h3 id="Example:_Using_setSeconds">例子：使用<code>setSeconds</code> 方法</h3>
-
-<pre class="brush:js">var theBigDay = new Date();
+```js
+var theBigDay = new Date();
 theBigDay.setSeconds(30)
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_Also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}

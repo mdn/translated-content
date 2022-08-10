@@ -5,33 +5,33 @@ tags:
   - API
 translation_of: Web/API/Screen/pixelDepth
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<h2 id="Summary">概述</h2>
+## 概述
 
-<p>返回屏幕的位深度/色彩深度（bit depth）。根据 CSSOM( CSS 对象模型 ) 视图，为兼容起见，该值总为 24。</p>
+返回屏幕的位深度/色彩深度（bit depth）。根据 CSSOM( CSS 对象模型 ) 视图，为兼容起见，该值总为 24。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="syntaxbox">depth = window.screen.pixelDepth
-</pre>
+```plain
+depth = window.screen.pixelDepth
+```
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<pre class="brush:js">// 如果没有足够的位深度/色彩深度（bit depth），就选择一个更纯的颜色
-if ( window.screen.pixelDepth &gt; 8 ) {
+```js
+// 如果没有足够的位深度/色彩深度（bit depth），就选择一个更纯的颜色
+if ( window.screen.pixelDepth > 8 ) {
   document.style.color = "#FAEBD7";
 } else {
   document.style.color = "#FFFFFF";
 }
-</pre>
+```
 
-<h2 id="Specification">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{domxref("Screen.colorDepth")}}</li>
-</ul>
+- {{domxref("Screen.colorDepth")}}

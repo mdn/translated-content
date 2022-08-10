@@ -3,75 +3,47 @@ title: show
 slug: Web/API/Element/show_event
 translation_of: Web/API/Element/show_event
 ---
-<p>当一个具有 contextmenu 属性的元素的 contextmenu 事件触发或冒泡到该元素时，show 事件会被触发。</p>
+当一个具有 contextmenu 属性的元素的 contextmenu 事件触发或冒泡到该元素时，show 事件会被触发。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
-<dl>
- <dt>标准</dt>
- <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#context-menus">HTML5</a></dd>
- <dt>接口</dt>
- <dd>Event</dd>
- <dt>冒泡</dt>
- <dd>否</dd>
- <dt>可关闭</dt>
- <dd>否</dd>
- <dt>触发对象</dt>
- <dd>Element</dd>
- <dt>默认动作</dt>
- <dd>显示由相关目录元素创建的上下文目录</dd>
-</dl>
+- 标准
+  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#context-menus)
+- 接口
+  - : Event
+- 冒泡
+  - : 否
+- 可关闭
+  - : 否
+- 触发对象
+  - : Element
+- 默认动作
+  - : 显示由相关目录元素创建的上下文目录
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">属性</th>
-   <th scope="col">类型</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>事件的目标对象 (DOM 树中的最高层元素)。</td>
-  </tr>
-  <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>事件类型。</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否冒泡。</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>事件是否可以关闭。</td>
-  </tr>
- </tbody>
-</table>
+| 属性                                  | 类型                                 | 描述                                    |
+| ------------------------------------- | ------------------------------------ | --------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件的目标对象 (DOM 树中的最高层元素)。 |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 事件类型。                              |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 事件是否冒泡。                          |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 事件是否可以关闭。                      |
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush:html;">&lt;div contextmenu="test"&gt;&lt;/div&gt;
-&lt;menu type="context" id="test"&gt;
-    &lt;menuitem label="alert" onclick="alert('the alert label has been clicked')" /&gt;
-&lt;/menu&gt;
+```html
+<div contextmenu="test"></div>
+<menu type="context" id="test">
+    <menuitem label="alert" onclick="alert('the alert label has been clicked')" />
+</menu>
 
-&lt;script&gt;
+<script>
   document.getElementById("test").addEventListener("show", function(e){
     alert("the context menu will be displayed");
   }, false);
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="相关事件">相关事件</h2>
+## 相关事件
 
-<ul>
- <li><a href="/en-US/Mozilla_event_reference/contextmenu"><code>contextmenu</code></a></li>
-</ul>
+- [`contextmenu`](/en-US/Mozilla_event_reference/contextmenu)

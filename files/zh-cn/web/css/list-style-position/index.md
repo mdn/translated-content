@@ -3,17 +3,18 @@ title: list-style-position
 slug: Web/CSS/list-style-position
 translation_of: Web/CSS/list-style-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p> <strong><code>list-style-position</code></strong> 属性指定标记框在主体块框中的位置。</p>
+**`list-style-position`** 属性指定标记框在主体块框中的位置。
 
-<p>使用助记符{{cssxref("list-style")}}更方便。</p>
+使用助记符{{cssxref("list-style")}}更方便。
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:css notranslate">/* Keyword values */
+```css
+/* Keyword values */
 list-style-position: inside;
 list-style-position: outside;
 
@@ -21,47 +22,48 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: unset;
-</pre>
+```
 
-<h3 id="数值">数值</h3>
+### 数值
 
-<dl>
- <dt><code>outside</code></dt>
- <dd>标记盒在主块盒的外面。</dd>
- <dt><code>inside</code></dt>
- <dd>标记盒是主要块盒中的第一个行内盒，处于元素的内容流之后。</dd>
-</dl>
+- `outside`
+  - : 标记盒在主块盒的外面。
+- `inside`
+  - : 标记盒是主要块盒中的第一个行内盒，处于元素的内容流之后。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;ul class="one"&gt; List 1
-  &lt;li&gt;List Item 1-1&lt;/li&gt;
-  &lt;li&gt;List Item 1-2&lt;/li&gt;
-  &lt;li&gt;List Item 1-3&lt;/li&gt;
-  &lt;li&gt;List Item 1-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="two"&gt; List 2
-  &lt;li&gt;List Item 2-1&lt;/li&gt;
-  &lt;li&gt;List Item 2-2&lt;/li&gt;
-  &lt;li&gt;List Item 2-3&lt;/li&gt;
-  &lt;li&gt;List Item 2-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="three"&gt; List 3
-  &lt;li&gt;List Item 3-1&lt;/li&gt;
-  &lt;li&gt;List Item 3-2&lt;/li&gt;
-  &lt;li&gt;List Item 3-3&lt;/li&gt;
-  &lt;li&gt;List Item 3-4&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="one"> List 1
+  <li>List Item 1-1</li>
+  <li>List Item 1-2</li>
+  <li>List Item 1-3</li>
+  <li>List Item 1-4</li>
+</ul>
+<ul class="two"> List 2
+  <li>List Item 2-1</li>
+  <li>List Item 2-2</li>
+  <li>List Item 2-3</li>
+  <li>List Item 2-4</li>
+</ul>
+<ul class="three"> List 3
+  <li>List Item 3-1</li>
+  <li>List Item 3-2</li>
+  <li>List Item 3-3</li>
+  <li>List Item 3-4</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css; notranslate">.one {
+```css
+.one {
   list-style:square inside;
 }
 
@@ -73,22 +75,21 @@ list-style-position: unset;
 .three {
   list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
   list-style-position: inherit;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("例子","200","420")}}</p>
+{{EmbedLiveSample("例子","200","420")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.list-style-position")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}</li>
-</ul>
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}

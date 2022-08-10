@@ -11,26 +11,27 @@ tags:
 translation_of: Web/API/BaseAudioContext/createBiquadFilter
 original_slug: Web/API/AudioContext/createBiquadFilter
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioContext") }} 的<code>createBiquadFilter()</code> 方法创建了一个  {{ domxref("BiquadFilterNode") }}, 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。</p>
-</div>
+{{ domxref("AudioContext") }} 的`createBiquadFilter()` 方法创建了一个 {{ domxref("BiquadFilterNode") }}, 它提供了一个可以指定多个不同的一般滤波器类型的双二阶滤波器。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var biquadFilter = audioCtx.createBiquadFilter();</pre>
+```js
+var audioCtx = new AudioContext();
+var biquadFilter = audioCtx.createBiquadFilter();
+```
 
-<h3 id="Description">返回</h3>
+### 返回
 
-<p>一个 {{domxref("BiquadFilterNode")}}.</p>
+一个 {{domxref("BiquadFilterNode")}}.
 
-<h2 id="Example">示例</h2>
+## 示例
 
-<p>这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For <a href="http://mdn.github.io/voice-change-o-matic/">voice-change-o-matic</a> 样例（也可以查看  <a href="https://github.com/mdn/voice-change-o-matic">源码</a> ）.</p>
+这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For [voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）.
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 //set up the different audio nodes we will use for the app
 var analyser = audioCtx.createAnalyser();
@@ -53,20 +54,19 @@ gainNode.connect(audioCtx.destination);
 
 biquadFilter.type = "lowshelf";
 biquadFilter.frequency.value = 1000;
-biquadFilter.gain.value = 25;</pre>
+biquadFilter.gain.value = 25;
+```
 
-<h2 id="规格">规格</h2>
+## 规格
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("api.BaseAudioContext.createBiquadFilter")}}
 
-<h2 id="sect1"> </h2>
+##
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)

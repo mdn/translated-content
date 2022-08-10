@@ -3,11 +3,12 @@ title: font-kerning
 slug: Web/CSS/font-kerning
 translation_of: Web/CSS/font-kerning
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>font-kerning</code></strong> CSS 属性设置是否使用字体中储存的字距信息。</p>
+**`font-kerning`** CSS 属性设置是否使用字体中储存的字距信息。
 
-<pre class="brush:css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 font-kerning: auto;
 font-kerning: normal;
 font-kerning: none;
@@ -16,44 +17,45 @@ font-kerning: none;
 font-kerning: inherit;
 font-kerning: initial;
 font-kerning: unset;
-</pre>
+```
 
-<p><em>Kerning</em>（字距）定义了字母的分布情况。对于良好地规定了字距的字体，字距特性使得字母分布更为统一，阅读体验更佳。如下图所示，左侧的示例没有应用字距，而右侧使用了：</p>
+_Kerning_（字距）定义了字母的分布情况。对于良好地规定了字距的字体，字距特性使得字母分布更为统一，阅读体验更佳。如下图所示，左侧的示例没有应用字距，而右侧使用了：
 
-<p><img alt="Example of font-kerning" src="font-kerning.png"></p>
+![Example of font-kerning](font-kerning.png)
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>font-kerning</code> 属性通过以下的关键字进行指定。</p>
+`font-kerning` 属性通过以下的关键字进行指定。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>浏览器来决定是否使用字体字距。比如，一些浏览器会在小字体的情况下禁用字距，因为这会使得文本可读性下降。</dd>
- <dt><code>normal</code></dt>
- <dd>必须应用字体中的字距信息。</dd>
- <dt><code>none</code></dt>
- <dd>禁用字体中的字距信息。</dd>
-</dl>
+- `auto`
+  - : 浏览器来决定是否使用字体字距。比如，一些浏览器会在小字体的情况下禁用字距，因为这会使得文本可读性下降。
+- `normal`
+  - : 必须应用字体中的字距信息。
+- `none`
+  - : 禁用字体中的字距信息。
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="kern"&gt;&lt;/div&gt;
-&lt;div id="nokern"&gt;&lt;/div&gt;
-&lt;textarea id="input"&gt;AV T. ij&lt;/textarea&gt;</pre>
+```html
+<div id="kern"></div>
+<div id="nokern"></div>
+<textarea id="input">AV T. ij</textarea>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   font-size: 2rem;
   font-family: serif;
 }
@@ -64,11 +66,13 @@ font-kerning: unset;
 
 #kern {
   font-kerning: normal;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var input  = document.getElementById('input'),
+```js
+var input  = document.getElementById('input'),
     kern   = document.getElementById('kern'),
     nokern = document.getElementById('nokern');
 
@@ -79,20 +83,18 @@ input.addEventListener('keyup', function() {
 
 kern.textContent = input.value; /* Initialize content */
 nokern.textContent = input.value;
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("css.properties.font-kerning")}}</p>
+{{Compat("css.properties.font-kerning")}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li>{{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}</li>
-</ul>
+- {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}

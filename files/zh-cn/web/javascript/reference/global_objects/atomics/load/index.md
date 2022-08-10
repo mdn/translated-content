@@ -3,59 +3,54 @@ title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>静态方法 <code><strong>Atomics</strong></code><strong><code>.load()</code></strong> 返回一个数组当中给定位置的值。</p>
+静态方法 **`Atomics.load()`** 返回一个数组当中给定位置的值。
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-load.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
 
+## 语法
 
+```plain
+Atomics.load(typedArray, index)
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox">Atomics.load(typedArray, index)
-</pre>
+- `typedArray`
+  - : 一个共享的整型数组。可以是 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}} 或 {{jsxref("Uint32Array")}}.
+- `index`
+  - : 在 `typedArray` 中需要加载的位置。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>一个共享的整型数组。可以是 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}} 或 {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>在 <code>typedArray</code> 中需要加载的位置。</dd>
-</dl>
+给定位置的值 (`typedArray[index]`)。
 
-<h3 id="返回值">返回值</h3>
+### 异常
 
-<p>给定位置的值 (<code>typedArray[index]</code>)。</p>
+- 抛出 {{jsxref("TypeError")}}, 如果 `typedArray` 不是一个被允许的整型。
+- 抛出 {{jsxref("TypeError")}}, 如果 `typedArray` 不是一个共享数组。
+- 抛出 {{jsxref("RangeError")}}, 如果 `index` 超出 `typedArray` 的界限。
 
-<h3 id="异常">异常</h3>
+## 示例
 
-<ul>
- <li>抛出 {{jsxref("TypeError")}}, 如果 <code>typedArray</code> 不是一个被允许的整型。</li>
- <li>抛出 {{jsxref("TypeError")}}, 如果 <code>typedArray</code> 不是一个共享数组。</li>
- <li>抛出 {{jsxref("RangeError")}}, 如果 <code>index</code> 超出 <code>typedArray</code> 的界限。</li>
-</ul>
-
-<h2 id="示例">示例</h2>
-
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
 Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12</pre>
+Atomics.load(ta, 0); // 12
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.store()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.store()")}}

@@ -1,44 +1,41 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
-translation_of: Web/API/Element/after
-original_slug: Web/API/ChildNode/after
 tags:
   - API
   - DOM
   - Method
   - Node
   - Reference
+translation_of: Web/API/Element/after
+original_slug: Web/API/ChildNode/after
 browser-compat: api.Element.after
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.after()</code> </strong>方法会在其父节点的子节点列表中插入一些 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以 {{domxref("Text")}} 的形式插入。</p>
+**`Element.after()` **方法会在其父节点的子节点列表中插入一些 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以 {{domxref("Text")}} 的形式插入。
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="brush: js">
+```js
 after(... nodes)
-</pre>
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>nodes</code></dt>
- <dd>一组准备插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 。</dd>
-</dl>
+- `nodes`
+  - : 一组准备插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 。
 
-<h3 id="Exceptions">错误</h3>
+### 错误
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}: 在某些不正确的层级结构进行了插入操作。</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: 在某些不正确的层级结构进行了插入操作。
 
-<h2 id="Examples">示例</h2>
+## 示例
 
-<h3 id="Inserting_an_element">插入元素</h3>
+### 插入元素
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 let span = document.createElement("span");
@@ -46,23 +43,26 @@ let span = document.createElement("span");
 p.after(span);
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
-</pre>
+// "<div><p></p><span></span></div>"
+```
 
-<h3 id="Inserting_text">插入文本</h3>
+### 插入文本
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 
 p.after("Text");
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;Text&lt;/div&gt;"</pre>
+// "<div><p></p>Text</div>"
+```
 
-<h3 id="Inserting_an_element_and_text">同时插入元素和文本</h3>
+### 同时插入元素和文本
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 let span = document.createElement("span");
@@ -70,22 +70,21 @@ let span = document.createElement("span");
 p.after(span, "Text");
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;Text&lt;/div&gt;"</pre>
+// "<div><p></p><span></span>Text</div>"
+```
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
-  <li>{{domxref("Element.before()")}}</li>
-  <li>{{domxref("Element.append()")}}</li>
-  <li>{{domxref("Node.appendChild()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element.before()")}}
+- {{domxref("Element.append()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("NodeList")}}

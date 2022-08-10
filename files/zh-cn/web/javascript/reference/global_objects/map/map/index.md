@@ -11,44 +11,41 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 browser-compat: javascript.builtins.Map.Map
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Map()</code> 构造函数</strong> 创建 {{jsxref("Map")}} 对象。</p>
+**`Map()` 构造函数** 创建 {{jsxref("Map")}} 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">new Map([<var>iterable</var>])</pre>
+```plain
+new Map([iterable])
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>iterable</var></code></dt>
- <dd>Iterable 可以是一个{{jsxref("Array", "数组")}}或者其他 <a href="/zh-CN/docs/Web/JavaScript/Guide/iterable">iterable</a> 对象，其元素为键值对 (两个元素的数组，例如: [[ 1, 'one' ],[ 2, 'two' ]])。 每个键值对都会添加到新的 Map。<code>null</code> 会被当做 <code>undefined。</code></dd>
-</dl>
+- `iterable`
+  - : Iterable 可以是一个{{jsxref("Array", "数组")}}或者其他 [iterable](/zh-CN/docs/Web/JavaScript/Guide/iterable) 对象，其元素为键值对 (两个元素的数组，例如: \[\[ 1, 'one' ],\[ 2, 'two' ]])。 每个键值对都会添加到新的 Map。`null` 会被当做 `undefined。`
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">let myMap = new Map([
+```js
+let myMap = new Map([
   [1, 'one'],
   [2, 'two'],
   [3, 'three'],
 ])
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakSet")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}

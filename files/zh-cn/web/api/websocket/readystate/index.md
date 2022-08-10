@@ -6,35 +6,35 @@ tags:
   - WebSocket
 translation_of: Web/API/WebSocket/readyState
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>返回当前 {{domxref("WebSocket")}} 的链接状态，只读。</p>
+返回当前 {{domxref("WebSocket")}} 的链接状态，只读。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate">var readyState = <em>WebSocket</em>.readyState;</pre>
+```plain
+var readyState = WebSocket.readyState;
+```
 
-<h2 id="值">值</h2>
+## 值
 
-<p>以下其中之一</p>
+以下其中之一
 
-<dl>
- <dt>0 (<code>WebSocket.CONNECTING</code>)</dt>
- <dd>正在链接中</dd>
- <dt>1 (<code>WebSocket.OPEN</code>)</dt>
- <dd>已经链接并且可以通讯</dd>
- <dt>2 (<code>WebSocket.CLOSING</code>)</dt>
- <dd>连接正在关闭</dd>
- <dt>3 (<code>WebSocket.CLOSED</code>)</dt>
- <dd>连接已关闭或者没有链接成功</dd>
-</dl>
+- 0 (`WebSocket.CONNECTING`)
+  - : 正在链接中
+- 1 (`WebSocket.OPEN`)
+  - : 已经链接并且可以通讯
+- 2 (`WebSocket.CLOSING`)
+  - : 连接正在关闭
+- 3 (`WebSocket.CLOSED`)
+  - : 连接已关闭或者没有链接成功
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

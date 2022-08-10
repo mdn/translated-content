@@ -11,44 +11,38 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/feDistantLight
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>该滤镜定义了一个距离光源，可以用在灯光滤镜{{SVGElement("feDiffuseLighting")}}元素或{{SVGElement("feSpecularLighting")}}元素的内部。</p>
+该滤镜定义了一个距离光源，可以用在灯光滤镜{{SVGElement("feDiffuseLighting")}}元素或{{SVGElement("feSpecularLighting")}}元素的内部。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("azimuth") }}</li>
- <li>{{ SVGAttr("elevation") }}</li>
-</ul>
+- {{ SVGAttr("azimuth") }}
+- {{ SVGAttr("elevation") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFEDistantLightElement">SVGFEDistantLightElement</a></code>接口。</p>
+该元素实现了[`SVGFEDistantLightElement`](/en/DOM/SVGFEDistantLightElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("fePointLight") }}</li>
- <li>{{ SVGElement("feSpotLight") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("animate") }}
+- {{ SVGElement("set") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("fePointLight") }}
+- {{ SVGElement("feSpotLight") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

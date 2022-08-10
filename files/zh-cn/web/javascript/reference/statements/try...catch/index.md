@@ -8,86 +8,85 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>try...catch</code></strong>语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。</p>
+**`try...catch`**语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。
 
-<p>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">try {
-   <em>try_statements</em>
+```plain
+try {
+   try_statements
 }
-[catch (<em>exception_var_1</em> if <em>condition_1</em>) { // non-standard
-   <em>catch_statements_1</em>
+[catch (exception_var_1 if condition_1) { // non-standard
+   catch_statements_1
 }]
 ...
-[catch (<em>exception_var_2</em>) {
-   <em>catch_statements_2</em>
+[catch (exception_var_2) {
+   catch_statements_2
 }]
 [finally {
-   <em>finally_statements</em>
+   finally_statements
 }]
-</pre>
+```
 
-<dl>
- <dt><code>try_statements</code></dt>
- <dd>需要被执行的语句。</dd>
- <dt><code>catch_statements_1</code>, <code>catch_statements_2</code></dt>
- <dd>如果在<code>try</code>块里有异常被抛出时执行的语句。</dd>
- <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
- <dd>用于保存关联<code>catch</code>子句的异常对象的标识符。</dd>
- <dt><code>condition_1</code></dt>
- <dd>一个条件表达式。</dd>
- <dt><code>finally_statements</code></dt>
- <dd>在<code>try</code>语句块之后执行的语句块。无论是否有异常抛出或捕获这些语句都将执行。</dd>
-</dl>
+- `try_statements`
+  - : 需要被执行的语句。
+- `catch_statements_1`, `catch_statements_2`
+  - : 如果在`try`块里有异常被抛出时执行的语句。
+- `exception_var_1`, `exception_var_2`
+  - : 用于保存关联`catch`子句的异常对象的标识符。
+- `condition_1`
+  - : 一个条件表达式。
+- `finally_statements`
+  - : 在`try`语句块之后执行的语句块。无论是否有异常抛出或捕获这些语句都将执行。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p><code>try</code>语句包含了由一个或者多个语句组成的<code>try</code>块，和至少一个<code>catch</code>块或者一个<code>finally</code>块的其中一个，或者两个兼有， 下面是三种形式的<code>try</code>声明：</p>
+`try`语句包含了由一个或者多个语句组成的`try`块，和至少一个`catch`块或者一个`finally`块的其中一个，或者两个兼有， 下面是三种形式的`try`声明：
 
-<ol>
- <li><code>try...catch</code></li>
- <li><code>try...finally</code></li>
- <li><code>try...catch...finally</code></li>
-</ol>
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
-<p><code>catch</code>子句包含<code>try</code>块中抛出异常时要执行的语句。也就是，你想让<code>try</code>语句中的内容成功， 如果没成功，你想控制接下来发生的事情，这时你可以在<code>catch</code>语句中实现。 如果在<code>try</code>块中有任何一个语句（或者从<code>try</code>块中调用的函数）抛出异常，控制立即转向<code>catch</code>子句。如果在<code>try</code>块中没有异常抛出，会跳过<code>catch</code>子句。</p>
+`catch`子句包含`try`块中抛出异常时要执行的语句。也就是，你想让`try`语句中的内容成功， 如果没成功，你想控制接下来发生的事情，这时你可以在`catch`语句中实现。 如果在`try`块中有任何一个语句（或者从`try`块中调用的函数）抛出异常，控制立即转向`catch`子句。如果在`try`块中没有异常抛出，会跳过`catch`子句。
 
-<p><code>finally</code>子句在<code>try</code>块和<code>catch</code>块之后执行但是在下一个<code>try</code>声明之前执行。无论是否有异常抛出或捕获它总是执行。</p>
+`finally`子句在`try`块和`catch`块之后执行但是在下一个`try`声明之前执行。无论是否有异常抛出或捕获它总是执行。
 
-<p>你可以嵌套一个或者更多的<code>try</code>语句。如果内部的<code>try</code>语句没有<code>catch</code>子句，那么将会进入包裹它的<code>try</code>语句的<code>catch</code>子句。</p>
+你可以嵌套一个或者更多的`try`语句。如果内部的`try`语句没有`catch`子句，那么将会进入包裹它的`try`语句的`catch`子句。
 
-<p>你也可以用<code>try</code>语句去处理 JavaScript 异常。参考<a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>了解更多关于 Javascript 异常的信息。</p>
+你也可以用`try`语句去处理 JavaScript 异常。参考[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)了解更多关于 Javascript 异常的信息。
 
-<h3 id="无条件的catch块">无条件的<code>catch</code>块</h3>
+### 无条件的`catch`块
 
-<p>当使用单个无条件<code>catch</code>子句时，抛出的任何异常时都会进入到<code>catch</code>块。例如，当在下面的代码中发生异常时，控制转移到<code>catch</code>子句。</p>
+当使用单个无条件`catch`子句时，抛出的任何异常时都会进入到`catch`块。例如，当在下面的代码中发生异常时，控制转移到`catch`子句。
 
-<pre class="brush: js">try {
+```js
+try {
    throw "myException"; // generates an exception
 }
 catch (e) {
    // statements to handle any exceptions
    logMyErrors(e); // pass exception object to error handler
 }
-</pre>
+```
 
-<p><code>catch</code>块指定一个标识符（在上面的示例中为 e），该标识符保存由<code>throw</code>语句指定的值。<code>catch</code>块是唯一的，因为当输入<code>catch</code>块时，JavaScript 会创建此标识符，并将其添加到当前作用域；标识符仅在<code>catch</code>块执行时存在；<code>catch</code>块执行完成后，标识符不再可用。</p>
+`catch`块指定一个标识符（在上面的示例中为 e），该标识符保存由`throw`语句指定的值。`catch`块是唯一的，因为当输入`catch`块时，JavaScript 会创建此标识符，并将其添加到当前作用域；标识符仅在`catch`块执行时存在；`catch`块执行完成后，标识符不再可用。
 
-<h3 id="条件catch块">条件<code>catch</code>块</h3>
+### 条件`catch`块
 
-<p>{{non-standard_header}}</p>
+{{non-standard_header}}
 
-<p>你也可以用一个或者更多条件<code>catch</code>子句来处理特定的异常。在这种情况下，当异常抛出时将会进入合适的<code>catch</code>子句中。在下面的代码中，<code>try</code>块的代码可能会抛出三种异常：{{jsxref("TypeError")}}，{{jsxref("RangeError")}}和{{jsxref("EvalError")}}。当一个异常抛出时，控制将会进入与其对应的<code>catch</code>语句。如果这个异常不是特定的，那么控制将转移到无条件<code>catch</code>子句。</p>
+你也可以用一个或者更多条件`catch`子句来处理特定的异常。在这种情况下，当异常抛出时将会进入合适的`catch`子句中。在下面的代码中，`try`块的代码可能会抛出三种异常：{{jsxref("TypeError")}}，{{jsxref("RangeError")}}和{{jsxref("EvalError")}}。当一个异常抛出时，控制将会进入与其对应的`catch`语句。如果这个异常不是特定的，那么控制将转移到无条件`catch`子句。
 
-<p>当用一个无条件<code>catch</code>子句和一个或多个条件语句时，无条件<code>catch</code>子句必须放在最后。否则当到达条件语句之前所有的异常将会被非条件语句拦截。</p>
+当用一个无条件`catch`子句和一个或多个条件语句时，无条件`catch`子句必须放在最后。否则当到达条件语句之前所有的异常将会被非条件语句拦截。
 
-<p>提醒：这个功能不符合 ECMAscript 规范。</p>
+提醒：这个功能不符合 ECMAscript 规范。
 
-<pre class="brush: js">try {
+```js
+try {
     myroutine(); // may throw three types of exceptions
 } catch (e if e instanceof TypeError) {
     // statements to handle TypeError exceptions
@@ -99,11 +98,12 @@ catch (e) {
     // statements to handle any unspecified exceptions
     logMyErrors(e); // pass exception object to error handler
 }
-</pre>
+```
 
-<p>下面用符合 ECMAscript 规范的简单的 JavaScript 来编写相同的“条件 catch 子句”（显然更加冗长的，但是可以在任何地方运行）：</p>
+下面用符合 ECMAscript 规范的简单的 JavaScript 来编写相同的“条件 catch 子句”（显然更加冗长的，但是可以在任何地方运行）：
 
-<pre class="brush: js">try {
+```js
+try {
   myRoutine();
 } catch (e) {
   if (e instanceof RangeError) {
@@ -111,30 +111,34 @@ catch (e) {
   } else {
     throw e;  // re-throw the error unchanged
   }
-}</pre>
+}
+```
 
-<h3 id="异常标识符">异常标识符</h3>
+### 异常标识符
 
-<p>当<code>try</code>块中的抛出一个异常时， <em><code>exception_var</code></em>（如<code>catch (e)</code>中的<code>e</code>）用来保存被抛出声明指定的值。你可以用这个标识符来获取关于被抛出异常的信息。</p>
+当`try`块中的抛出一个异常时， _`exception_var`_（如`catch (e)`中的`e`）用来保存被抛出声明指定的值。你可以用这个标识符来获取关于被抛出异常的信息。
 
-<p>这个标识符是<code>catch</code>子语句内部的。换言之，当进入<code>catch</code>子语句时标识符创建，<code>catch</code>子语句执行完毕后，这个标识符将不再可用。</p>
+这个标识符是`catch`子语句内部的。换言之，当进入`catch`子语句时标识符创建，`catch`子语句执行完毕后，这个标识符将不再可用。
 
-<pre class="brush: js">function isValidJSON(text) {
+```js
+function isValidJSON(text) {
   try {
     JSON.parse(text);
     return true;
   } catch {
     return false;
   }
-}</pre>
+}
+```
 
-<h3 id="finally块"><code>finally</code>块</h3>
+### `finally`块
 
-<p><code>finally</code>块包含的语句在<code>try</code>块和<code>catch</code>之后，<code>try..catch..finally</code>块后的语句之前执行。请注意，无论是否抛出异常<code>finally</code>子句都会执行。此外，如果抛出异常，即使没有<code>catch</code>子句处理异常，<code>finally</code>子句中的语句也会执行。</p>
+`finally`块包含的语句在`try`块和`catch`之后，`try..catch..finally`块后的语句之前执行。请注意，无论是否抛出异常`finally`子句都会执行。此外，如果抛出异常，即使没有`catch`子句处理异常，`finally`子句中的语句也会执行。
 
-<p>以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则<code>finally</code>子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在<code>try</code>或<code>catch block</code>显式返回时执行。</p>
+以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则`finally`子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在`try`或`catch block`显式返回时执行。
 
-<pre class="brush: js">openMyFile()
+```js
+openMyFile()
 try {
    // tie up a resource
    writeMyFile(theData);
@@ -142,15 +146,16 @@ try {
 finally {
    closeMyFile(); // always close the resource
 }
-</pre>
+```
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="嵌套_try_块">嵌套 try 块</h3>
+### 嵌套 try 块
 
-<p>首先让我们看看这里发生什么：</p>
+首先让我们看看这里发生什么：
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oops");
   }
@@ -165,11 +170,12 @@ catch (ex) {
 // Output:
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>现在，如果我们已经在 try 语句中，通过增加一个 catch 语句块捕获了异常</p>
+现在，如果我们已经在 try 语句中，通过增加一个 catch 语句块捕获了异常
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oops");
   }
@@ -187,11 +193,12 @@ catch (ex) {
 // Output:
 // "inner" "oops"
 // "finally"
-</pre>
+```
 
-<p>现在，让我们再次抛出错误。</p>
+现在，让我们再次抛出错误。
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oops");
   }
@@ -211,15 +218,16 @@ catch (ex) {
 // "inner" "oops"
 // "finally"
 // "outer" "oops"
-</pre>
+```
 
-<p>任何给定的异常只会被离它最近的封闭 catch 块捕获一次。当然，在“inner”块抛出的任何新异常 （因为 catch 块里的代码也可以抛出异常），将会被“outer”块所捕获。</p>
+任何给定的异常只会被离它最近的封闭 catch 块捕获一次。当然，在“inner”块抛出的任何新异常 （因为 catch 块里的代码也可以抛出异常），将会被“outer”块所捕获。
 
-<h3 id="从_finally_语句块返回">从 finally 语句块返回</h3>
+### 从 finally 语句块返回
 
-<p>如果从<code>finally</code>块中返回一个值，那么这个值将会成为整个<code>try-catch-finally</code>的返回值，无论是否有<code>return</code>语句在<code>try</code>和<code>catch</code>中。这包括在<code>catch</code>块里抛出的异常。</p>
+如果从`finally`块中返回一个值，那么这个值将会成为整个`try-catch-finally`的返回值，无论是否有`return`语句在`try`和`catch`中。这包括在`catch`块里抛出的异常。
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oops");
   }
@@ -240,21 +248,19 @@ catch (ex) {
 // Output:
 // "inner" "oops"
 // "finally"
-</pre>
+```
 
-<p>因为 finally 块里的 return 语句，"oops" 没有抛出到外层，从 catch 块返回的值同样适用。</p>
+因为 finally 块里的 return 语句，"oops" 没有抛出到外层，从 catch 块返回的值同样适用。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Statements/throw", "throw")}}

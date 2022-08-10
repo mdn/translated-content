@@ -3,30 +3,31 @@ title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
 translation_of: Web/API/HTMLFormElement/enctype
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><code><strong>HTMLFormElement.enctype</strong></code> 属性常用来指明提交表单的内容类型，可选的值如下：</p>
+**`HTMLFormElement.enctype`** 属性常用来指明提交表单的内容类型，可选的值如下：
 
-<ul>
- <li><code>application/x-www-form-urlencoded</code>: 初始的默认值</li>
- <li><code>multipart/form-data</code>:  适用于使用{{HTMLElement("input")}} 标签上传文件</li>
- <li><code>text/plain</code>: HTML5 引入的类型</li>
-</ul>
+- `application/x-www-form-urlencoded`: 初始的默认值
+- `multipart/form-data`: 适用于使用{{HTMLElement("input")}} 标签上传文件
+- `text/plain`: HTML5 引入的类型
 
-<p>这些值可以通过元素 {{HTMLElement("button")}} or {{HTMLElement("input")}} 的属性 form.enctype 来改写</p>
+这些值可以通过元素 {{HTMLElement("button")}} or {{HTMLElement("input")}} 的属性 form.enctype 来改写
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre class="eval notranslate"><em>string</em> = form.enctype
-form.enctype = <em>string</em>
-</pre>
+```plain
+string = form.enctype
+form.enctype = string
+```
 
-<h2 id="Example">例子</h2>
+## 例子
 
-<pre class="eval notranslate">form.enctype = "application/x-www-form-urlencoded";</pre>
+```plain
+form.enctype = "application/x-www-form-urlencoded";
+```
 
-<h2 id="Specification">参考</h2>
+## 参考
 
-<p><a href="http://www.w3.org/TR/html5/forms.html#attr-fs-enctype">HTML 5, Section 4.10.19.6, Form submission</a></p>
+[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
 
-<p><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810">DOM Level 2 HTML: enctype</a></p>
+[DOM Level 2 HTML: enctype](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)

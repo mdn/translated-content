@@ -12,67 +12,63 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
-<div>
-<div>
-<div>{{JSRef}}</div>
-</div>
-</div>
+{{JSRef}}
 
-<p><strong><code>trim()</code> </strong>方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。</p>
+**`trim()` **方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符 (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR 等）。
 
-<p>{{EmbedInteractiveExample("pages/js/string-trim.html")}}</p>
+{{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
+## 语法
 
+```plain
+str.trim()
+```
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="syntaxbox"><code><var>str</var>.trim()</code></pre>
+一个代表调用字符串两端去掉空白的新字符串。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>一个代表调用字符串两端去掉空白的新字符串。</p>
+`trim()` 方法返回一个从两头去掉空白字符的字符串，并不影响原字符串本身。
 
-<h2 id="描述">描述</h2>
+## 例子
 
-<p><code>trim()</code> 方法返回一个从两头去掉空白字符的字符串，并不影响原字符串本身。</p>
+### 使用 `trim()`
 
-<h2 id="例子">例子</h2>
+下面的例子中将显示小写的字符串 'foo':
 
-<h3 id="使用_trim">使用 <code>trim()</code></h3>
-
-<p>下面的例子中将显示小写的字符串 'foo':</p>
-
-<pre class="brush: js">var orig = '   foo  ';
+```js
+var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
 
 // 另一个 .trim() 例子，只从一边删除
 
 var orig = 'foo    ';
 console.log(orig.trim()); // 'foo'
-</pre>
+```
 
-<h2 id="兼容旧环境">兼容旧环境</h2>
+## 兼容旧环境
 
-<p>如果 <code>trim()</code> 不存在，可以在所有代码前执行下面代码</p>
+如果 `trim()` 不存在，可以在所有代码前执行下面代码
 
-<pre class="brush: js">if (!String.prototype.trim) {
+```js
+if (!String.prototype.trim) {
   String.prototype.trim = function () {
     return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("String.prototype.trimStart()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trimStart()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

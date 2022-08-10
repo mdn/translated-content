@@ -1,81 +1,86 @@
 ---
 title: '::placeholder'
-slug: 'Web/CSS/::placeholder'
-translation_of: 'Web/CSS/::placeholder'
+slug: Web/CSS/::placeholder
+translation_of: Web/CSS/::placeholder
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a><strong><code>::placeholder</code></strong>可以选择一个表单元素的<a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">占位文本</a>，它允许开发者和设计师自定义<a href="/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute">占位文本</a>的样式。</p>
+[伪元素](/en-US/docs/Web/CSS/Pseudo-elements)**`::placeholder`**可以选择一个表单元素的[占位文本](/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)，它允许开发者和设计师自定义[占位文本](/en-US/docs/Web/HTML/Forms_in_HTML#The_placeholder_attribute)的样式。
 
-<pre class="brush: css no-line-numbers">::placeholder {
+```css
+::placeholder {
   color: red;
   font-size: 1.5em;
-}</pre>
+}
+```
 
-<p>在使用了<code>::placeholder</code>伪元素的选择器中，仅有小一部分 CSS 属性可以使用，这个集合可以参考{{cssxref("::first-line")}}伪元素。</p>
+在使用了`::placeholder`伪元素的选择器中，仅有小一部分 CSS 属性可以使用，这个集合可以参考{{cssxref("::first-line")}}伪元素。
 
-<h2 id="语法">语法</h2>
+## 语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="红色文本">红色文本</h3>
+### 红色文本
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="我是红色的！"&gt;</pre>
+```html
+<input placeholder="我是红色的！">
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input::placeholder {
+```css
+input::placeholder {
   color: red;
   font-size: 1.2em;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="结果">结果</h4>
+#### 结果
 
-<p>{{ EmbedLiveSample('红色文本') }}</p>
+{{ EmbedLiveSample('红色文本') }}
 
-<h3 id="绿色文本">绿色文本</h3>
+### 绿色文本
 
-<p> </p>
+#### HTML
 
-<h4 id="HTML_2">HTML</h4>
+```html
+<input placeholder="而我是绿色的！">
+```
 
-<pre class="brush: html">&lt;input placeholder="而我是绿色的！"&gt;</pre>
+#### CSS
 
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css">input::placeholder {
+```css
+input::placeholder {
   color: green;
-}</pre>
+}
+```
 
-<h4 id="结果_2">结果</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('绿色文本')}}</p>
+{{EmbedLiveSample('绿色文本')}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("css.selectors.placeholder")}}
 
-<h2 id="相似阅读">相似阅读</h2>
+## 相似阅读
 
-<ul>
- <li>{{cssxref(":placeholder-shown")}}</li>
- <li>与此伪元素选择器功能相同的几个浏览器私有选择器：
-  <ul>
-   <li>{{cssxref("::-webkit-input-placeholder")}}</li>
-   <li>{{cssxref("::-moz-placeholder")}}</li>
-   <li>{{cssxref(":-ms-input-placeholder")}}</li>
-  </ul>
- </li>
- <li><a href="/en-US/docs/Web/HTML/Forms_in_HTML">Forms in HTML</a></li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{cssxref(":placeholder-shown")}}
+- 与此伪元素选择器功能相同的几个浏览器私有选择器：
+
+  - {{cssxref("::-webkit-input-placeholder")}}
+  - {{cssxref("::-moz-placeholder")}}
+  - {{cssxref(":-ms-input-placeholder")}}
+
+- [Forms in HTML](/en-US/docs/Web/HTML/Forms_in_HTML)
+- {{HTMLElement("input")}}
+- {{HTMLElement("textarea")}}
