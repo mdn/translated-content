@@ -7,182 +7,196 @@ tags:
   - Private Field
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>class 의 속성(property)들은 기본적으로 public 하며 class 외부에서 읽히고 수정될 수 있다. 하지만, ES2019 에서는 해쉬 <code>#</code> prefix 를 추가해 private class 필드를 선언할 수 있게 되었다.</p>
+class 의 속성(property)들은 기본적으로 public 하며 class 외부에서 읽히고 수정될 수 있다. 하지만, ES2019 에서는 해쉬 `#` prefix 를 추가해 private class 필드를 선언할 수 있게 되었다.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre >class ClassWithPrivateField {
-  #privateField
-}
+```js
+    class ClassWithPrivateField {
+      #privateField
+    }
 
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
-}
+    class ClassWithPrivateMethod {
+      #privateMethod() {
+        return 'hello world'
+      }
+    }
 
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
-}</pre>
+    class ClassWithPrivateStaticField {
+      static #PRIVATE_STATIC_FIELD
+    }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Private_static_fields">Private static fields</h3>
+### Private static fields
 
-<p>private 필드는 class 선언문 내부의 class 생성자(class constructor)에서 접근이 가능하다.</p>
+private 필드는 class 선언문 내부의 class 생성자(class constructor)에서 접근이 가능하다.
 
-<p>static 메소드에서만 static 변수들을 호출할 수 있다는 제약은 그대로 유지된다.</p>
+static 메소드에서만 static 변수들을 호출할 수 있다는 제약은 그대로 유지된다.
 
-<pre >class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+```js
+    class ClassWithPrivateStaticField {
+      static #PRIVATE_STATIC_FIELD
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
-  }
-}
+      static publicStaticMethod() {
+        ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
+        return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+      }
+    }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)</pre>
+    console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+```
 
-<p>Private static 필드는 class evaluation 시 class 생성자(class constructor)에 추가된다.</p>
+Private static 필드는 class evaluation 시 class 생성자(class constructor)에 추가된다.
 
-<p>Private static 필드는 해당 필드를 선언한 class 에서만 접근할 수 있다.</p>
+Private static 필드는 해당 필드를 선언한 class 에서만 접근할 수 있다.
 
-<p>이는 <code>this</code> 를 사용함에 있어 예상치 못한 동작을 야기할 수 있다.</p>
+이는 `this` 를 사용함에 있어 예상치 못한 동작을 야기할 수 있다.
 
-<pre >class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+```js
+    class BaseClassWithPrivateStaticField {
+      static #PRIVATE_STATIC_FIELD
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
-}
+      static basePublicStaticMethod() {
+        this.#PRIVATE_STATIC_FIELD = 42
+        return this.#PRIVATE_STATIC_FIELD
+      }
+    }
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+    class SubClass extends BaseClassWithPrivateStaticField { }
 
-let error = null
+    let error = null
 
-try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e}
+    try {
+      SubClass.basePublicStaticMethod()
+    } catch(e) { error = e}
 
-console.assert(error instanceof TypeError)</pre>
+    console.assert(error instanceof TypeError)
+```
 
-<h3 id="Private_instance_fields">Private instance fields</h3>
+### Private instance fields
 
-<p>private 인스턴스 필드는 <strong># 이름 ('해쉬 이름' 으로 발음)</strong>,<strong> </strong>즉 <code>#</code> prefix 를 가진 식별자로 선언된다. <code>#</code> 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.</p>
+private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**,\*\* \*\*즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
 
-<p>캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 <code>#</code> 이름에 접근하는 것은 syntax error 이다.</p>
+캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 `#` 이름에 접근하는 것은 syntax error 이다.
 
-<pre >class ClassWithPrivateField {
-  #privateField
+```js
+    class ClassWithPrivateField {
+      #privateField
 
-  constructor() {
-    this.#privateField = 42
-    this.#randomField = 444 // Syntax error
-  }
-}
+      constructor() {
+        this.#privateField = 42
+        this.#randomField = 444 // Syntax error
+      }
+    }
 
-const instance = new ClassWithPrivateField()
-instance.#privateField === 42 // Syntax error</pre>
+    const instance = new ClassWithPrivateField()
+    instance.#privateField === 42 // Syntax error
+```
 
-<h3 id="Private_Methods">Private Methods</h3>
+### Private Methods
 
-<h4 id="Private_static_methods">Private static methods</h4>
+#### Private static methods
 
-<p><strong>private static 메소드</strong>는 public static 메소드처럼 인스턴스가 아닌 class 로부터 호출된다. 그리고 private static 필드처럼 class 선언문 내부에서만 접근 가능하다. </p>
+**private static 메소드**는 public static 메소드처럼 인스턴스가 아닌 class 로부터 호출된다. 그리고 private static 필드처럼 class 선언문 내부에서만 접근 가능하다.
 
-<p>private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.</p>
+```js
+private static 메소드는 generator, async 그리고 async generator 함수가 될 수 있다.
 
-<pre >class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42
-  }
+    class ClassWithPrivateStaticMethod {
+      static #privateStaticMethod() {
+        return 42
+      }
 
-  static publicStaticMethod1() {
-    return ClassWithPrivateStaticMethod.#privateStaticMethod();
-  }
+      static publicStaticMethod1() {
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+      }
 
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
-  }
-}
+      static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+      }
+    }
 
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);</pre>
+    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
+    console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+```
 
-<p>이는 <code>this</code> 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (이는 <code>this</code> binding rule 이 적용되기 때문이다.) 다음 예시에서 <code>Derived.publicStaticMethod2()</code> 를 호출할 때, <code>this</code> 는 class <code>Derived</code> (<code>Base</code> 가 아니라) 를 가리킨다. </p>
+이는 `this` 를 사용할 때 예상치 못한 동작을 발생시킬 수 있다. (이는 `this` binding rule 이 적용되기 때문이다.) 다음 예시에서 `Derived.publicStaticMethod2()` 를 호출할 때, `this` 는 class `Derived` (`Base` 가 아니라) 를 가리킨다.
 
-<pre >class Base {
-  static #privateStaticMethod() {
-    return 42;
-  }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
-  }
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
-  }
-}
+```js
+    class Base {
+      static #privateStaticMethod() {
+        return 42;
+      }
+      static publicStaticMethod1() {
+        return Base.#privateStaticMethod();
+      }
+      static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+      }
+    }
 
-class Derived extends Base {}
+    class Derived extends Base {}
 
-console.log(Derived.publicStaticMethod1()); // 42
-console.log(Derived.publicStaticMethod2()); // TypeError</pre>
+    console.log(Derived.publicStaticMethod1()); // 42
+    console.log(Derived.publicStaticMethod2()); // TypeError
+```
 
-<h4 id="Private_instance_methods">Private instance methods</h4>
+#### Private instance methods
 
-<p>private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 class 인스턴스로부터 접근 가능하다.</p>
+private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 class 인스턴스로부터 접근 가능하다.
 
-<pre >class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
+```js
+    class ClassWithPrivateMethod {
+      #privateMethod() {
+        return 'hello world'
+      }
 
-  getPrivateMessage() {
-    return this.#privateMethod()
-  }
-}
+      getPrivateMessage() {
+        return this.#privateMethod()
+      }
+    }
 
-const instance = new ClassWithPrivateMethod()
-console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"</pre>
+    const instance = new ClassWithPrivateMethod()
+    console.log(instance.getPrivateMessage())
+    // expected output: "hello worl​d"
+```
 
-<p>private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:</p>
+private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:
 
-<pre >class ClassWithPrivateAccessor {
-  #message
+```js
+    class ClassWithPrivateAccessor {
+      #message
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg
-  }
+      get #decoratedMessage() {
+        return `✨${this.#message}✨`
+      }
+      set #decoratedMessage(msg) {
+        this.#message = msg
+      }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
-  }
-}
+      constructor() {
+        this.#decoratedMessage = 'hello world'
+        console.log(this.#decoratedMessage)
+      }
+    }
 
-new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"</pre>
+    new ClassWithPrivateAccessor();
+    // expected output: "✨hello worl​d✨"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields">Public class fields</a></li>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
-</ul>
+- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
