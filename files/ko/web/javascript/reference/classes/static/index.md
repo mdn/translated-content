@@ -9,27 +9,30 @@ tags:
   - 클래스
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p><strong>static</strong> 키워드는 클래스의 정적 메서드를 정의합니다.</p>
+**static** 키워드는 클래스의 정적 메서드를 정의합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</p>
+{{EmbedInteractiveExample("pages/js/classes-static.html")}}
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">static methodName() { ... }</pre>
+```
+    static methodName() { ... }
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>정적 메서드는 클래스의 인스턴스 없이 호출이 가능하며 클래스가 인스턴스화되면 호출할 수 없다. 정적 메서드는 종종 어플리케이션의 유틸리티 함수를 만드는데 사용된다.</p>
+정적 메서드는 클래스의 인스턴스 없이 호출이 가능하며 클래스가 인스턴스화되면 호출할 수 없다. 정적 메서드는 종종 어플리케이션의 유틸리티 함수를 만드는데 사용된다.
 
-<h2 id="정적_메서드의_호출">정적 메서드의 호출</h2>
+## 정적 메서드의 호출
 
-<h4 id="다른_정적_메서드에서의_호출">다른 정적 메서드에서의 호출</h4>
+#### 다른 정적 메서드에서의 호출
 
-<p>동일한 클래스 내의 다른 정적 메서드 내에서 정적 메서드를 호출하는 경우 키워드 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>를 사용할 수 있다.</p>
+동일한 클래스 내의 다른 정적 메서드 내에서 정적 메서드를 호출하는 경우 키워드 [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)를 사용할 수 있다.
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   static staticMethod() {
     return 'Static method has been called';
   }
@@ -42,13 +45,14 @@ StaticMethodCall.staticMethod();
 
 StaticMethodCall.anotherStaticMethod();
 // 'Static method has been called from another static method'
-</pre>
+```
 
-<h3 id="클래스_생성자_및_다른_메서드에서의_호출">클래스 생성자 및 다른 메서드에서의 호출</h3>
+### 클래스 생성자 및 다른 메서드에서의 호출
 
-<p>정적 메서드가 비정적 메서드에서 키워드<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 를 써서는 직접적인 접근을 할 수 없다. 바른 호출 방법은  클래스 명칭을 쓰거나, 즉 <code>CLASSNAME.STATIC_METHOD_NAME()</code> 을 이용하거나 혹은 그 메서드를 생성자의 한 속성으로 부르는 것으로, 즉 <code>constructor</code> : <code>this.constructor.STATIC_METHOD_NAME()</code>를 이용한다.</p>
+정적 메서드가 비정적 메서드에서 키워드[`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) 를 써서는 직접적인 접근을 할 수 없다. 바른 호출 방법은 클래스 명칭을 쓰거나, 즉 `CLASSNAME.STATIC_METHOD_NAME()` 을 이용하거나 혹은 그 메서드를 생성자의 한 속성으로 부르는 것으로, 즉 `constructor` : `this.constructor.STATIC_METHOD_NAME()`를 이용한다.
 
-<pre class="brush: js">class StaticMethodCall {
+```js
+class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticMethod());
     // 'static method has been called.'
@@ -61,19 +65,18 @@ StaticMethodCall.anotherStaticMethod();
     return 'static method has been called.';
   }
 }
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>아래 예제는 여러가지 내용을 설명합니다.</p>
+아래 예제는 여러가지 내용을 설명합니다.
 
-<ol>
- <li>어떻게 정적 메서드가 클래스에서 구현되는지</li>
- <li>클래스의 정적 맴버가 서브클래스화 되는 것을 보여줍니다.</li>
- <li>정적 메서드가 어떤 경우에 호출 될 수 있는지와 없는지를 설명합니다.</li>
-</ol>
+1.  어떻게 정적 메서드가 클래스에서 구현되는지
+2.  클래스의 정적 맴버가 서브클래스화 되는 것을 보여줍니다.
+3.  정적 메서드가 어떤 경우에 호출 될 수 있는지와 없는지를 설명합니다.
 
-<pre class="brush: js">class Triple {
+```js
+class Triple {
   static triple(n) {
     n = n || 1; //비트연산이 아니어야 합니다.
     return n * 3;
@@ -93,22 +96,18 @@ var tp = new Triple();
 console.log(BiggerTriple.triple(3)); // 81 (부모의 인스턴스에 영향을 받지 않습니다.)
 console.log(tp.triple()); // 'tp.triple은 함수가 아닙니다.'.
 console.log(tp.constructor.triple(4)); // 12
-</pre>
+```
 
-<p> </p>
-
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.classes.static")}}</p>
+{{Compat}}
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expression</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaration</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
