@@ -14,87 +14,78 @@ tags:
   - size
 translation_of: Web/CSS/Containing_block
 ---
-<div>{{cssref}}</div>
+{{CSSRef}}
 
-<p>要素の寸法や位置は、しばしば<ruby><strong>包含ブロック</strong><rp> (</rp><rt>containing block</rt><rp>) </rp></ruby>に影響されます。多くの場合、包含ブロックは要素から見て直近の<a href="/ja/docs/Web/HTML/Block-level_elements">ブロックレベル</a>の祖先の<a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">コンテンツ領域</a>ですが、常にそうとは限りません。<span class="seoSummary">この記事では、要素の包含ブロックが決まる要因を学びます。</span></p>
+要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Web/HTML/Block-level_elements)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
-<p>ユーザーエージェント (ブラウザーなど) が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは４つの領域に分かれます。</p>
+ユーザーエージェント (ブラウザーなど) が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは４つの領域に分かれます。
 
-<ol start="1">
- <li>コンテンツ領域</li>
- <li>パディング領域</li>
- <li>境界領域</li>
- <li>マージン領域</li>
-</ol>
+1. コンテンツ領域
+2. パディング領域
+3. 境界領域
+4. マージン領域
 
-<p><img alt="ボックスモデルの図" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+![ボックスモデルの図](box-model.png)
 
-<p>多くの開発者が、要素の包含ブロックは常に親要素のコンテンツ領域であると信じていますが、それは必ずしも正しくありません。要素の包含ブロックが何になるかを決定する要因を調べてみましょう。</p>
+多くの開発者が、要素の包含ブロックは常に親要素のコンテンツ領域であると信じていますが、それは必ずしも正しくありません。要素の包含ブロックが何になるかを決定する要因を調べてみましょう。
 
-<h2 id="Effects_of_the_containing_block" name="Effects_of_the_containing_block">包含ブロックの影響</h2>
+## 包含ブロックの影響
 
-<p>何が要素の包含ブロックを決定するかを学習する前に、最初になぜそのようなことが起こるのかを知っておくと役立ちます。</p>
+何が要素の包含ブロックを決定するかを学習する前に、最初になぜそのようなことが起こるのかを知っておくと役立ちます。
 
-<p>要素の寸法と位置は、しばしば包含ブロックに影響されます。 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} に適用されるパーセント値や、絶対位置指定要素 (つまり、 {{cssxref("position")}} が <code>absolute</code> または <code>fixed</code> に設定されている要素) のオフセットプロパティは、要素の包含ブロックから計算されます。</p>
+要素の寸法と位置は、しばしば包含ブロックに影響されます。 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} に適用されるパーセント値や、絶対位置指定要素 (つまり、 {{cssxref("position")}} が `absolute` または `fixed` に設定されている要素) のオフセットプロパティは、要素の包含ブロックから計算されます。
 
-<h2 id="Identifying_the_containing_block" name="Identifying_the_containing_block">包含ブロックの識別</h2>
+## 包含ブロックの識別
 
-<p>包含ブロックを識別するプロセスは、要素の {{cssxref("position")}} プロパティの値に全面的に依存します。</p>
+包含ブロックを識別するプロセスは、要素の {{cssxref("position")}} プロパティの値に全面的に依存します。
 
-<ol start="1">
- <li><code>position</code> プロパティが <code><strong>static</strong></code>, <code><strong>relative</strong></code>, <strong><code>sticky</code></strong> のいずれかの場合、包含ブロックは<strong>ブロックコンテナー</strong> (inline-block, block, list-item などの要素) または<strong>整形コンテキストを確立する</strong>要素 (表コンテナー、フレックスコンテナー、グリッドコンテナー、ブロックコンテナー自身など) である直近の祖先要素の<em>コンテンツボックス</em>の辺によって構成されます。</li>
- <li><code>position</code> プロパティが <code><strong>absolute</strong></code> の場合、包含ブロックは <code>position</code> の値が <code>static</code> 以外 (<code>fixed</code>, <code>absolute</code>, <code>relative</code>, <code>sticky</code>) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。</li>
- <li><code>position</code> プロパティが <code><strong>fixed</strong></code> の場合、包含ブロックは{{glossary("viewport", "ビューポート")}} (連続的なメディアの場合) またはページ領域 (ページメディアの場合) によって確立されます。</li>
- <li><code>position</code> プロパティが <code><strong>absolute</strong></code> または <code><strong>fixed</strong></code> の場合、包含ブロックは以下の条件を持った直近の祖先要素における<em>パディングボックス</em>の辺によって構成されることがあります。
-  <ol start="1">
-   <li>{{cssxref("transform")}} または {{cssxref("perspective")}} の値が <code>none</code> 以外である</li>
-   <li>{{cssxref("will-change")}} の値が <code>transform</code> または <code>perspective</code> である</li>
-   <li>{{cssxref("filter")}} の値が <code>none</code> 以外、または <code>will-change</code> の値が <code>filter</code> の場合 (Firefox のみで動作)。</li>
-   <li>{{cssxref("contain")}} の値が <code>paint</code> の場合 (例 <code>contain: paint;</code>)</li>
-  </ol>
- </li>
-</ol>
+1. `position` プロパティが **`static`**, **`relative`**, **`sticky`** のいずれかの場合、包含ブロックは**ブロックコンテナー** (inline-block, block, list-item などの要素) または**整形コンテキストを確立する**要素 (表コンテナー、フレックスコンテナー、グリッドコンテナー、ブロックコンテナー自身など) である直近の祖先要素の<em>コンテンツボックス</em>の辺によって構成されます。
+2. `position` プロパティが **`absolute`** の場合、包含ブロックは `position` の値が `static` 以外 (`fixed`, `absolute`, `relative`, `sticky`) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。
+3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("viewport", "ビューポート")}} (連続的なメディアの場合) またはページ領域 (ページメディアの場合) によって確立されます。
+4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素における<em>パディングボックス</em>の辺によって構成されることがあります。
 
-<div class="note">
-<p><strong>注:</strong> ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、<strong>初期包含ブロック</strong>と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。</p>
-</div>
+    1. {{cssxref("transform")}} または {{cssxref("perspective")}} の値が `none` 以外である
+    2. {{cssxref("will-change")}} の値が `transform` または `perspective` である
+    3. {{cssxref("filter")}} の値が `none` 以外、または `will-change` の値が `filter` の場合 (Firefox のみで動作)。
+    4. {{cssxref("contain")}} の値が `paint` の場合 (例 `contain: paint;`)
 
-<h2 id="Calculating_percentage_values_from_the_containing_block" name="Calculating_percentage_values_from_the_containing_block">包含ブロックからのパーセント値の計算</h2>
+> **Note:** ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。
 
-<p>前述の通り、特定のプロパティがパーセント値を与えられた場合、計算値は要素の包含ブロックに依存します。このように動作するプロパティは<strong>ボックスモデルプロパティ</strong>及び<strong>オフセットプロパティ</strong>です。</p>
+## 包含ブロックからのパーセント値の計算
 
-<ol start="1">
- <li>{{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} の各プロパティは、包含ブロックの <code>height</code> からパーセント値を計算します。</li>
- <li>{{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} の各プロパティは、包含ブロックの <code>width</code> からパーセント値を計算します。</li>
-</ol>
+前述の通り、特定のプロパティがパーセント値を与えられた場合、計算値は要素の包含ブロックに依存します。このように動するプロパティは**ボックスモデルプロパティ**及び**オフセットプロパティ**です。
 
-<h2 id="Some_examples" name="Some_examples">いくつかの例</h2>
+1. {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} の各プロパティは、包含ブロックの `height` からパーセント値を計算します。
+2. {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} の各プロパティは、包含ブロックの `width` からパーセント値を計算します。
 
-<p>すべての例の HTML コードは以下の通りです。</p>
+## いくつかの例
 
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+すべての例の HTML コードは以下の通りです。
 
-<p>以下のそれぞれの例では、 CSS のみが異なります。</p>
+```html
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
 
-<h3 id="Example_1" name="Example_1">例 1</h3>
+以下のそれぞれの例では、 CSS のみが異なります。`
 
-<p>この例では、段落が静的に配置されているため、包含ブロックはブロックコンテナーである直近の祖先である {{HTMLElement("section")}} になります。</p>
+### 例 1
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+この例では、段落が静的に配置されているため、包含ブロックはブロックコンテナーである直近の祖先である {{HTMLElement("section")}} になります。
 
-<pre class="brush: css notranslate">body {
+```html hidden
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
+
+```css
+body {
   background: beige;
 }
 
@@ -112,24 +103,24 @@ p {
   padding: 5%;  /* == 400px * .05 = 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_1','100%','300')}}</p>
+{{EmbedLiveSample('Example_1','100%','300')}}
 
-<h3 id="Example_2" name="Example_2">例 2</h3>
+### 例 2
 
-<p>この例では、 <code>&lt;section&gt;</code> が (<code>display: inline</code> であるため) ブロックコンテナーではなく、整形コンテキストを確立しないので、段落の包含ブロックは {{HTMLElement("body")}} 要素になります。</p>
+この例では、段落の包含ブロックは {{HTMLElement("body")}} 要素になります。 `<section>` が (`display: inline` であるため) ブロックコンテナーではなく、整形コンテキストを確立しないからです。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background: beige;
 }
 
@@ -143,24 +134,24 @@ p {
   height: 200px;  /* Note: a percentage would be 0 */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_2','100%','300')}}</p>
+{{EmbedLiveSample('Example_2','100%','300')}}
 
-<h3 id="Example_3" name="Example_3">例 3</h3>
+### 例 3
 
-<p>この例では、 <code>&lt;section&gt;</code> の <code>position</code> が <code>absolute</code> であるため、段落の包含ブロックは <code>&lt;section&gt;</code> になります。段落のパーセント値は、包含ブロックの <code>padding</code> に影響されますが、 {{cssxref("box-sizing")}} の値が <code>border-box</code> である場合はそのようにはなりません。</p>
+この例では、 `<section>` の `position` が `absolute` であるため、段落の包含ブロックは `<section>` になります。段落のパーセント値は、包含ブロックの `padding` に影響されますが、 {{cssxref("box-sizing")}} の値が `border-box` である場合はそのようにはなりません。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background: beige;
 }
 
@@ -182,24 +173,24 @@ p {
   padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_3','100%','300')}}</p>
+{{EmbedLiveSample('Example_3','100%','300')}}
 
-<h3 id="Example_4" name="Example_4">例 4</h3>
+### 例 4
 
-<p>この例では、段落の <code>position</code> が <code>fixed</code> なので、包含ブロックは初期包含ブロック (画面の場合はビューポート) になります。従って、段落の寸法はブラウザーウィンドウの寸法に基づいて変化します。</p>
+この例では、段落の `position` が `fixed` なので、包含ブロックは初期包含ブロック (画面の場合はビューポート) になります。従って、段落の寸法はブラウザーウィンドウの寸法に基づいて変化します。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background: beige;
 }
 
@@ -219,24 +210,24 @@ p {
   padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_4','100%','300')}}</p>
+{{EmbedLiveSample('Example_4','100%','300')}}
 
-<h3 id="Example_5" name="Example_5">例 5</h3>
+### 例 5
 
-<p>この例では、段落の <code>position</code> が <code>absolute</code> なので、包含ブロックは {{cssxref("transform")}} プロパティが <code>none</code> ではない直近の祖先である <code>&lt;section&gt;</code> になります。</p>
+この例では、段落の `position` が `absolute` なので、包含ブロックは {{cssxref("transform")}} プロパティが `none` ではない直近の祖先である `<section>` になります。
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;This is a paragraph!&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
-</div>
+```html hidden
+<body>
+  <section>
+    <p>これは段落です。</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css notranslate">body {
+```css
+body {
   background: beige;
 }
 
@@ -257,13 +248,28 @@ p {
   padding: 5%;  /* == 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example_5','100%','300')}}</p>
+{{EmbedLiveSample('Example_5','100%','300')}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{css_key_concepts}}</li>
- <li>{{cssxref("all")}} プロパティは、すべての CSS 宣言を初期状態に初期化します</li>
-</ul>
+- {{cssxref("all")}} プロパティは、すべての CSS 宣言を初期状態に初期化します
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
