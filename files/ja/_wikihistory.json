@@ -24201,66 +24201,6 @@
       "davidbrouillette"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
-    "modified": "2019-03-18T21:23:20.561Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute": {
-    "modified": "2019-03-18T21:11:33.624Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2019-03-18T21:23:10.123Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute": {
-    "modified": "2019-03-18T21:23:18.418Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute": {
-    "modified": "2019-03-18T21:22:59.880Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute": {
-    "modified": "2019-03-18T21:23:09.833Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute": {
-    "modified": "2019-03-18T21:23:04.624Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute": {
-    "modified": "2019-03-18T21:23:02.217Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute": {
-    "modified": "2019-03-18T21:23:09.637Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute": {
-    "modified": "2019-03-18T21:23:08.424Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2019-09-22T05:24:34.765Z",
     "contributors": [
