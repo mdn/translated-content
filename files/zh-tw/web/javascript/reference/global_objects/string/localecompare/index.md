@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 **`localeCompare()`** 回傳一個數字，用來表示其與被比較的字串的先後順序。
 
-如果環境中有支援[`Intl.Collator` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)，這個方法實際上是調用 `Intl.Collator` API。
+如果環境中有支援[`Intl.Collator` API](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)，這個方法實際上是調用 `Intl.Collator` API。
 
 {{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
