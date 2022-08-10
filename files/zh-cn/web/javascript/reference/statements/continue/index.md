@@ -23,9 +23,6 @@ continue [ label ];
 与 {{jsxref("Statements/break", "break")}} 语句的区别在于， continue 并不会终止循环的迭代，而是：
 
 - 在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；
-
-<!---->
-
 - 在 {{jsxref("Statements/for", "for")}} 循环中，控制流跳转到更新语句。
 
 `continue` 语句可以包含一个可选的标号以控制程序跳转到指定循环的下一次迭代，而非当前循环。此时要求 `continue` 语句在对应的循环内部。

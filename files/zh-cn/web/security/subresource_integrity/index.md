@@ -10,107 +10,104 @@ tags:
 translation_of: Web/Security/Subresource_Integrity
 original_slug: Web/Security/子资源完整性
 ---
-<p><strong>子资源完整性</strong>(SRI) 是允许浏览器检查其获得的资源（例如从 <a href="/en-US/docs/Glossary/CDN">CDN</a> 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。</p>
+**子资源完整性**(SRI) 是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的哈希值是否和你提供的哈希值一样来判断资源是否被篡改。
 
-<h2 id="SRI_如何工作">SRI 如何工作</h2>
+## SRI 如何工作
 
-<p>使用 {{Glossary("CDN", "内容分发网络 (CDNs)")}} 在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用 CDN 也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中（或完全替换掉文件)<br>
- ），因此可能潜在地攻击所有从该 CDN 获取文件的站点。</p>
+使用 {{Glossary("CDN", "内容分发网络 (CDNs)")}} 在多个站点之间共享脚本和样式表等文件可以提高站点性能并节省带宽。然而，使用 CDN 也存在风险，如果攻击者获得对 CDN 的控制权，则可以将任意恶意内容注入到 CDN 上的文件中（或完全替换掉文件)
+），因此可能潜在地攻击所有从该 CDN 获取文件的站点。
 
-<p>子资源完整性通过确保 Web 应用程序获得的文件未经第三方注入或其他任何形式的修改来降低这种攻击的风险。</p>
+子资源完整性通过确保 Web 应用程序获得的文件未经第三方注入或其他任何形式的修改来降低这种攻击的风险。
 
+> **备注：** SRI 并不能规避所有的风险。第三方库经常会自己请求额外的信息，这就有可能会携带用户的账号密码等关键信息。这些经常需要 js 功能的支持，比如一个地图库会需要取\<svg>数据来渲染，但是包含点击事件。
 
+## 如何使用 SRI
 
-<div class="note">
-<p><strong>Note</strong>: SRI 并不能规避所有的风险。第三方库经常会自己请求额外的信息，这就有可能会携带用户的账号密码等关键信息。这些经常需要 js 功能的支持，比如一个地图库会需要取&lt;svg&gt;数据来渲染，但是包含点击事件。</p>
-</div>
+将使用 base64 编码过后的文件哈希值写入你所引用的 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 标签的 **integrity** 属性值中即可启用子资源完整性功能。
 
-<h2 id="如何使用_SRI">如何使用 SRI</h2>
+integrity 值分成两个部分，第一部分指定哈希值的生成算法（目前支持 sha256、sha384 及 sha512），第二部分是经过 base64 编码的实际哈希值，两者之间通过一个短横（-）分割。
 
-<p>将使用 base64 编码过后的文件哈希值写入你所引用的 {{HTMLElement("script")}} 或 {{HTMLElement("link")}} 标签的 <strong>integrity</strong> 属性值中即可启用子资源完整性功能。</p>
+> **备注：** **integrity** 值可以包含多个由空格分隔的哈希值，只要文件匹配其中任意一个哈希值，就可以通过校验并加载该资源。
 
-<p>integrity 值分成两个部分，第一部分指定哈希值的生成算法（目前支持 sha256、sha384 及 sha512），第二部分是经过 base64 编码的实际哈希值，两者之间通过一个短横（-）分割。</p>
+使用 base64 编码 sha384 算法计算出摘要后的 **integrity** 值的例子：
 
-<div class="note">
-<p><strong>integrity</strong> 值可以包含多个由空格分隔的哈希值，只要文件匹配其中任意一个哈希值，就可以通过校验并加载该资源。</p>
-</div>
+```plain
+sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+```
 
-<p>使用 base64 编码 sha384 算法计算出摘要后的 <strong>integrity</strong> 值的例子：</p>
+`oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即哈希值部分，`sha384` 前缀说明使用的是 sha384 哈希方法。
 
-<pre>sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
-</pre>
+> **备注：** **integrity** 中的“hash”部分，严格来说，是一种经过特定的哈希函数转换之后的密码学摘要。但是更一般的叫法就是**哈希**，本文用的也是这种叫法。
 
-<p><code>oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC</code> 即哈希值部分，<code>sha384</code> 前缀说明使用的是 sha384 哈希方法。</p>
+### 生成 SRI 哈希的工具
 
-<div class="note">
-<p><strong>integrity</strong> 中的“hash”部分，严格来说，是一种经过特定的哈希函数转换之后的密码学摘要。但是更一般的叫法就是<strong>哈希</strong>，本文用的也是这种叫法。</p>
-</div>
+你可以用 **openssl** 在命令行中执行如下命令来生成 SRI 哈希值：
 
-<h3 id="生成_SRI_哈希的工具">生成 SRI 哈希的工具</h3>
+```plain
+cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
+```
 
-<p>你可以用 <strong>openssl</strong> 在命令行中执行如下命令来生成 SRI 哈希值：</p>
+或者用 **shasum** 在命令行中执行：
 
-<pre>cat <strong>FILENAME.js</strong> | openssl dgst -sha384 -binary | openssl enc -base64 -A         </pre>
+```plain
+shasum -b -a 384 FILENAME.js | xxd -r -p | base64
+```
 
-<p>或者用 <strong>shasum</strong> 在命令行中执行：</p>
+另外，[SRI Hash Generator](https://srihash.org/) 是一个在线生成 SRI 哈希值的工具。
 
-<pre><code>shasum -b -a 384 FILENAME.js | xxd -r -p | base64</code></pre>
+## 内容安全策略及子资源完整性
 
-<p><code>另外，</code><a href="https://srihash.org/">SRI Hash Generator</a> 是一个在线生成 SRI 哈希值的工具。</p>
+你可以根据[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)来配置你的服务器使得指定类型的文件遵守 SRI。这是通过在 CSP 头部添加 {{CSP("require-sri-for")}} 指令实现的：
 
-<h2 id="内容安全策略及子资源完整性">内容安全策略及子资源完整性</h2>
+```plain
+Content-Security-Policy: require-sri-for script;
+```
 
-<p>你可以根据<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">内容安全策略</a>来配置你的服务器使得指定类型的文件遵守 SRI。这是通过在 CSP 头部添加 {{CSP("require-sri-for")}} 指令实现的：</p>
+这条指令规定了所有 JavaScript 都要有 integrity 属性，且通过验证才能被加载。
 
-<pre><code>Content-Security-Policy: require-sri-for script;</code></pre>
+你也可以指定所有样式表也要通过 SRI 验证：
 
-<p><code>这条指令规定了所有 JavaScript 都要有 <strong>integrity</strong> 属性，且通过验证才能被加载。</code></p>
+```plain
+Content-Security-Policy: require-sri-for style;
+```
 
-<p>你也可以指定所有样式表也要通过 SRI 验证：</p>
+你也可以对两者都加上验证。
 
-<pre><code>Content-Security-Policy: require-sri-for style;</code></pre>
+## 范例
 
-<p><code>你也可以对两者都加上验证。</code></p>
+在这个例子中，我们已知 `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 是一个指定文件，比如 `example-framework.js`，经过 `SHA-384` 算法得出的摘要，同时在 `https://example.com/example-framework.js` 上有其一份拷贝。
 
-<h2 id="范例">范例</h2>
+### 在 script 标签中增加 SRI
 
-<p>在这个例子中，我们已知 <code id="sriSnippet">oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC 是一个指定文件，比如 </code><code>example-framework.js，经过 SHA-384</code> 算法得出的摘要，同时在 <code>https://example.com/example-framework.js 上有其一份拷贝。</code></p>
+你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 https\://example.com/example-framework.js 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。
 
-<h3 id="在_script_标签中增加_SRI">在 script 标签中增加 SRI</h3>
-
-<p>你可以使用以下的 {{HTMLElement("script")}} 元素告诉浏览器在执行 https://example.com/example-framework.js 中的内容之前，必须先比较该文件的哈希值是否和预期的一致，只有一致才能执行。</p>
-
-<pre class="brush: html">&lt;script src="https://example.com/example-framework.js"
+```html
+<script src="https://example.com/example-framework.js"
         integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<div class="note">
-<p><strong>备注：</strong> 有关 <strong>crossorigin</strong> 属性的更多信息，见 <a href="/en-US/docs/Web/HTML/CORS_settings_attributes">CORS settings attributes</a>.</p>
-</div>
+> **备注：** 有关 **crossorigin** 属性的更多信息，见 [CORS settings attributes](/zh-CN/docs/Web/HTML/CORS_settings_attributes).
 
-<h2 id="浏览器如何处理_SRI">浏览器如何处理 SRI</h2>
+## 浏览器如何处理 SRI
 
-<p>浏览器根据以下步骤处理 SRI：</p>
+浏览器根据以下步骤处理 SRI：
 
-<ol>
- <li>当浏览器在  {{HTMLElement("script")}} 或者 {{HTMLElement("link")}}  标签中遇到 <strong>integrity</strong> 属性之后，会在执行脚本或者应用样式表之前对比所加载文件的哈希值和期望的哈希值。</li>
- <li>当脚本或者样式表的哈希值和期望的不一致时，浏览器必须拒绝执行脚本或者应用样式表，并且必须返回一个网络错误说明获得脚本或样式表失败。</li>
-</ol>
+1.  当浏览器在 {{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 标签中遇到 **integrity** 属性之后，会在执行脚本或者应用样式表之前对比所加载文件的哈希值和期望的哈希值。
+2.  当脚本或者样式表的哈希值和期望的不一致时，浏览器必须拒绝执行脚本或者应用样式表，并且必须返回一个网络错误说明获得脚本或样式表失败。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关资料">相关资料</h2>
+## 相关资料
 
-<ul>
- <li>Content Security Policy 内容安全策略</li>
- <li>{{httpheader("Content-Security-Policy")}}</li>
- <li><a href="https://frederik-braun.com/using-subresource-integrity.html">A CDN that can not XSS you: Using Subresource Integrity</a></li>
-</ul>
+- Content Security Policy 内容安全策略
+- {{httpheader("Content-Security-Policy")}}
+- [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 
-<p>{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}</p>
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
