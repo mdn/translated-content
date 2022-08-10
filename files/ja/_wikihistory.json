@@ -14092,22 +14092,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-15T21:33:17.644Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "yyss",
-      "N.Wada",
-      "fscholz"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncancel": {
-    "modified": "2020-10-15T22:34:40.533Z",
-    "contributors": [
-      "genzai"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2020-10-15T22:22:52.350Z",
     "contributors": [
@@ -24093,15 +24077,6 @@
       "lv7777",
       "Piroro-hs",
       "chikoski"
-    ]
-  },
-  "Web/API/globalEventhandlers/onmousedown": {
-    "modified": "2020-10-15T21:23:57.929Z",
-    "contributors": [
-      "mpcjazz",
-      "fscholz",
-      "khalid32",
-      "ethertank"
     ]
   },
   "Web/API/indexedDB": {
