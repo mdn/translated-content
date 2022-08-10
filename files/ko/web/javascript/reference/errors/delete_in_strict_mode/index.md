@@ -10,34 +10,36 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="메세지">메세지</h2>
+## 메세지
 
-<pre class="syntaxbox">SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
-SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
-</pre>
+```
+  SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
+  SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
+  SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```
 
-<h2 id="에러_타입">에러 타입</h2>
+## 에러 타입
 
-<p>엄격(Strict) 모드에서의 {{jsxref("SyntaxError")}}</p>
+엄격(Strict) 모드에서의 {{jsxref("SyntaxError")}}
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+## 무엇이 잘못되었을까?
 
-<p>자바스크립트에서 일반 변수는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 연산자를 사용하여 삭제할 수 없습니다. 엄격 모드에서 변수를 삭제하는 접근은 허용되지 않으므로 에러가 발생합니다.</p>
+자바스크립트에서 일반 변수는 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 연산자를 사용하여 삭제할 수 없습니다. 엄격 모드에서 변수를 삭제하는 접근은 허용되지 않으므로 에러가 발생합니다.
 
-<p><code>delete</code> 연산자는 오직 객체의 속성만을 삭제할 수 있습니다. 객체 속성은 설정할 수 있는 경우 "수식"될 수 있습니다.</p>
+`delete` 연산자는 오직 객체의 속성만을 삭제할 수 있습니다. 객체 속성은 설정할 수 있는 경우 "수식"될 수 있습니다.
 
-<p>일반적인 생각과 다르게 <code>delete</code> 연산자는 메모리 해제와 직접적인 연관이 없습니다. 메모리 관리는 참조가 깨짐에 따라 간접적으로 수행됩니다. 자세한 내용은 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management">메모리 관리</a> 페이지와 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 연산자 페이지를 참조하십시오.</p>
+일반적인 생각과 다르게 `delete` 연산자는 메모리 해제와 직접적인 연관이 없습니다. 메모리 관리는 참조가 깨짐에 따라 간접적으로 수행됩니다. 자세한 내용은 [메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management) 페이지와 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) 연산자 페이지를 참조하십시오.
 
-<p>이 에러는 오직 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드 코드</a>에서만 발생합니다. 엄격하지 않은 모드에서 해당 연산자는 단순히 <code>false</code> 를 반환합니다.</p>
+이 에러는 오직 [엄격 모드 코드](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode)에서만 발생합니다. 엄격하지 않은 모드에서 해당 연산자는 단순히 `false` 를 반환합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>자바스크립트에서 일반 변수를 삭제하려고 하면 동작하지 않습니다. 그리고 엄격 모드에서는 에러가 발생합니다:</p>
+자바스크립트에서 일반 변수를 삭제하려고 하면 동작하지 않습니다. 그리고 엄격 모드에서는 에러가 발생합니다:
 
-<pre class="brush: js example-bad">'use strict';
+```js example-bad
+'use strict';
 
 var x;
 
@@ -47,11 +49,12 @@ delete x;
 
 // SyntaxError: applying the 'delete' operator to an unqualified name
 // is deprecated
-</pre>
+```
 
-<p>변수의 내용을 비우려면 {{jsxref("null")}}을 설정하면 됩니다:</p>
+변수의 내용을 비우려면 {{jsxref("null")}}을 설정하면 됩니다:
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 
 var x;
 
@@ -60,12 +63,10 @@ var x;
 x = null;
 
 // x는 가비지 컬렉터에 의해 메모리에서 해제됩니다
-</pre>
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code></li>
- <li><a href="/en-US/docs/Web/JavaScript/Memory_Management">메모리 관리</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete">TypeError: property "x" is non-configurable and can't be deleted</a></li>
-</ul>
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [메모리 관리](/en-US/docs/Web/JavaScript/Memory_Management)
+- [TypeError: property "x" is non-configurable and can't be deleted](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_delete)

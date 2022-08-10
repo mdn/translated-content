@@ -8,32 +8,34 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
-<div>{{JSSidebar("Errors")}}</div>
+{{JSSidebar("Errors")}}
 
-<h2 id="메세지">메세지</h2>
+## 메세지
 
-<pre class="syntaxbox">SyntaxError: Unexpected identifier after numeric literal (Edge)
-SyntaxError: identifier starts immediately after numeric literal (Firefox)
-SyntaxError: Unexpected number (Chrome)
-</pre>
+```
+  SyntaxError: Unexpected identifier after numeric literal (Edge)
+  SyntaxError: identifier starts immediately after numeric literal (Firefox)
+  SyntaxError: Unexpected number (Chrome)
+```
 
-<h2 id="에러_타입">에러 타입</h2>
+## 에러 타입
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+## 무엇이 잘못되었을까?
 
-<p>{{Glossary("식별자", "식별자")}}라고 불리는 변수의 이름은 반드시 지켜야 하는 특정 규칙을 따라야 합니다.</p>
+{{Glossary("식별자", "식별자")}}라고 불리는 변수의 이름은 반드시 지켜야 하는 특정 규칙을 따라야 합니다.
 
-<p>자바스크립트의 식별자는 반드시 문자, 언더스코어(_), 또는 달러 표시($)로 시작돼야 합니다. 숫자로 시작될 수 없습니다. 글자 뒤에만 숫자(0-9)가 올 수 있습니다.</p>
+자바스크립트의 식별자는 반드시 문자, 언더스코어(\_), 또는 달러 표시($)로 시작돼야 합니다. 숫자로 시작될 수 없습니다. 글자 뒤에만 숫자(0-9)가 올 수 있습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="숫자로_시작하는_변수_이름">숫자로 시작하는 변수 이름</h3>
+### 숫자로 시작하는 변수 이름
 
-<p>자바스크립트에서 변수 이름은 숫자로 시작될 수 없습니다. 아래 예제는 에러가 발생합니다:</p>
+자바스크립트에서 변수 이름은 숫자로 시작될 수 없습니다. 아래 예제는 에러가 발생합니다:
 
-<pre class="brush: js example-bad">var 1life = 'foo';
+```js example-bad
+var 1life = 'foo';
 // SyntaxError: identifier starts immediately after numeric literal
 
 var foo = 1life;
@@ -41,17 +43,16 @@ var foo = 1life;
 
 alert(1.foo);
 // SyntaxError: identifier starts immediately after numeric literal
-</pre>
+```
 
-<p>숫자가 뒤에 오도록 변수 이름을 변경해야 합니다.</p>
+숫자가 뒤에 오도록 변수 이름을 변경해야 합니다.
 
-<pre class="brush: js example-good">var life1 = 'foo';
+```js example-good
+var life1 = 'foo';
 var foo = life1;
-</pre>
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar">문법</a></li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98">변수</a>(<a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>)</li>
-</ul>
+- [문법](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [변수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98)([JavaScript Guide](/en-US/docs/Web/JavaScript/Guide))

@@ -7,26 +7,28 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="메세지">메세지</h2>
+## 메세지
 
-<pre class="syntaxbox">SyntaxError: missing ] after element list
-</pre>
+```
+    SyntaxError: missing ] after element list
+```
 
-<h2 id="에러_타입">에러 타입</h2>
+## 에러 타입
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+## 무엇이 잘못되었을까?
 
-<p>배열 초기자 구문에 오류가 있습니다. 닫는 대괄호("<code>]</code>") 또는 콤마("<code>,</code>")가 빠진 것 같습니다.</p>
+배열 초기자 구문에 오류가 있습니다. 닫는 대괄호("`]`") 또는 콤마("`,`")가 빠진 것 같습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="완성되지_않은_배열_초기자">완성되지 않은 배열 초기자</h3>
+### 완성되지 않은 배열 초기자
 
-<pre class="brush: js example-bad">var list = [1, 2,
+```js example-bad
+var list = [1, 2,
 
 var instruments = [
   'Ukulele',
@@ -35,11 +37,12 @@ var instruments = [
 };
 
 var data = [{foo: 'bar'} {bar: 'foo'}];
-</pre>
+```
 
-<p>바르게 고치면:</p>
+바르게 고치면:
 
-<pre class="brush: js example-good">var list = [1, 2];
+```js example-good
+var list = [1, 2];
 
 var instruments = [
  'Ukulele',
@@ -47,10 +50,9 @@ var instruments = [
  'Piano'
 ];
 
-var data = [{foo: 'bar'}, {bar: 'foo'}];</pre>
+var data = [{foo: 'bar'}, {bar: 'foo'}];
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}
