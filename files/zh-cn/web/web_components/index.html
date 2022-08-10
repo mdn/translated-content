@@ -52,7 +52,7 @@ translation_of: Web/Web_Components
  <dd>包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。</dd>
  <dt>{{domxref("Window.customElements")}}</dt>
  <dd>返回 <code>CustomElementRegistry</code> 对象的引用。</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">生命周期回调</a></dt>
+ <dt><a href="/zh-CN/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">生命周期回调</a></dt>
  <dd>定义在自定义元素的类定义中的特殊回调函数，影响其行为：
  <ul>
   <li><code>connectedCallback</code>: 当自定义元素第一次被连接到文档 DOM 时被调用。</li>
@@ -61,15 +61,11 @@ translation_of: Web/Web_Components
   <li><code>attributeChangedCallback</code>: 当自定义元素的一个属性被增加、移除或更改时被调用。</li>
  </ul>
  </dd>
- <dd>
- <ul>
- </ul>
- </dd>
 </dl>
 
 <dl>
  <dt>创建自定义内置元素的扩展</dt>
- <dd>
+ <dd>定义了以下扩展：
  <ul>
   <li>{{htmlattrxref("is")}} 全局 HTML 属性：允许您指定一个标准 HTML 元素应该表现得像一个已注册的自定义内置元素。</li>
   <li>{{domxref("Document.createElement()")}} 方法的“is”选项：允许您创建一个标准 HTML 元素的实例，表现得像一个给定的已注册的自定义内置元素。</li>
@@ -108,8 +104,7 @@ translation_of: Web/Web_Components
  </ul>
  </dd>
  <dt>{{domxref("Event")}} 拓展</dt>
- <dd>与 shadow DOM 相关的<code>Event</code> 接口的扩展：</dd>
- <dd>
+ <dd>与 shadow DOM 相关的 <code>Event</code> 接口的扩展：
  <ul>
   <li>{{domxref("Event.composed")}}: 返回 {{jsxref("Boolean")}} 它表明事件是否会通过 shadow DOM 边界传播到标准 DOM。</li>
   <li>返回事件的路径（侦听器将被调用的对象）。如果 shadow root 是使用{{domxref("ShadowRoot.mode")}}为 closed 创建的，则不包括 shadow 树中的节点。</li>
@@ -132,15 +127,15 @@ translation_of: Web/Web_Components
 
 <dl>
  <dt>{{domxref("Element")}} extensions</dt>
- <dd>与插槽相关的<code>Element</code>接口的扩展：
+ <dd>与插槽相关的 <code>Element</code> 接口的扩展：
  <ul>
-  <li>{{domxref("Element.slot")}}: 返回附加到元素上的 shadow DOM 插槽的名字。</li>
+  <li>{{domxref("Element.slot")}}：返回附加到元素上的 shadow DOM 插槽的名字。</li>
  </ul>
  </dd>
  <dt>CSS pseudo-elements</dt>
  <dd>slots 特别相关的伪元素：
  <ul>
-  <li>{{cssxref("::slotted")}}: 匹配任何已经插入一个 slot 的内容。</li>
+  <li>{{cssxref("::slotted")}}：匹配任何已经插入一个 slot 的内容。</li>
  </ul>
  </dd>
  <dt>The {{event("slotchange")}} event</dt>
