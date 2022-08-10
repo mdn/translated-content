@@ -35,22 +35,11 @@ translation_of: Web/OpenSearch
 
 <dl>
  <dt>ShortName</dt>
- <dd>搜尋引擎簡稱</dd>
- <dd><strong>Restrictions:</strong> The value must contain 16 or fewer characters of plain text. The value must not contain HTML or other markup.</dd>
-</dl>
-
-<dl>
+ <dd>搜尋引擎簡稱。<strong>Restrictions:</strong> The value must contain 16 or fewer characters of plain text. The value must not contain HTML or other markup.</dd>
  <dt>Description</dt>
- <dd>搜尋引擎的簡要描述</dd>
- <dd><strong>Restrictions:</strong> The value must contain 1024 or fewer characters of plain text. The value must not contain HTML or other markup.</dd>
-</dl>
-
-<dl>
+ <dd>搜尋引擎的簡要描述。<strong>Restrictions:</strong> The value must contain 1024 or fewer characters of plain text. The value must not contain HTML or other markup.</dd>
  <dt>InputEncoding</dt>
  <dd>搜尋引擎資料輸入時的編碼方式，例如說：<code>&lt;InputEncoding&gt;UTF-8&lt;/InputEncoding&gt;</code>。</dd>
-</dl>
-
-<dl>
  <dt>Image</dt>
  <dd>
  <p>URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>. The URI may also use the <a href="/en-US/docs/Web/HTTP/data_URIs"><code>data:</code> URI scheme</a>. You can generate a <code>data:</code> URI from an icon file at <a href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.</p>
@@ -62,46 +51,28 @@ translation_of: Web/OpenSearch
 
  <p>Firefox caches the icon as a <a href="https://en.wikipedia.org/wiki/Base64">base64</a> <code>data:</code> URI (search plug-ins are stored in the profile's "searchplugins" folder). <code>http:</code> URIs are changed to <code>data:</code> URIs when this is done.</p>
 
- <div class="note"><strong>Note:</strong> For icons loaded remotely (i.e. from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than 10 kilobytes in size.</div>
+ <div class="note"><p><strong>備註：</strong> For icons loaded remotely (i.e. from <code>https://</code> URIs as opposed to <code>data:</code> URIs), Firefox will reject icons larger than 10 kilobytes in size.</p></div>
 
- <p><img alt="Search suggestions from Google displayed in Firefox's search box" class="internal" src="/@api/deki/files/358/=SearchSuggestionSample.png"></p>
+ <p><img alt="Search suggestions from Google displayed in Firefox's search box" src="/@api/deki/files/358/=SearchSuggestionSample.png"></p>
  </dd>
-</dl>
-
-<dl>
  <dt><strong>Url</strong></dt>
- <dd>描述搜尋用的 URL。以 <code>template</code> 屬性指定其搜尋 URL。</dd>
- <dd>Firefox 支援以下型態的 URL：
+ <dd>描述搜尋用的 URL。以 <code>template</code> 屬性指定其搜尋 URL。Firefox 支援以下型態的 URL：
  <ul>
   <li><code>type="text/html"</code>，即是搜尋用的 URL。</li>
   <li><code>type="application/x-suggestions+json"</code>，用以取回「搜尋建議」的 URL。</li>
- </ul>
-
- <ul>
   <li><code>type="application/x-moz-keywordsearch"</code> specifies the URL used when a keyword search is entered in the location bar. This is supported only in Firefox.</li>
- </ul>
-
- <ul>
  </ul>
 
  <p>這些型態的 URL 都可以使用 <code>{searchTerms}</code> 字串來決定要關鍵字於 URL 中的位置，其他可用的參數請參考<a href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters">OpenSearch 1.1 參數規格</a>。</p>
 
  <p>在支援「搜尋建議」的模組中，搜尋的 URL 應可取回一組以 JSON 格式編寫的數據，提供這類服務的詳細方法請見<a href="/zh-tw/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0">讓搜尋模組支援搜尋建議</a>。</p>
+ <p><img src="searchsuggestionsample.png" alt="Search suggestions from Google displayed in Firefox's search box"></p>
  </dd>
-</dl>
-
-<p><img alt="Image:SearchSuggestionSample.png"></p>
-
-<dl>
  <dt>Param</dt>
  <dd>隨搜尋要求一併送出的參數，每組皆有參數名稱及其值。指定參數時可放入 <code>{searchTerms}</code> 字串來取得使用者輸入的搜尋關鍵字。</dd>
-</dl>
-
-<dl>
  <dt>moz:SearchForm</dt>
- <dd>搜尋網站的網址，提供 Firefox 使用者不搜尋、直接連到搜尋網站的方法。</dd>
- <dd>
- <div class="note"><strong>註：</strong> 由於此元素非 OpenSearch 標準規格而是 Firefox 獨有，故加上「<code>moz:</code>」名稱空間，已確保不支援的用戶端能直接跳過此元素。</div>
+ <dd>搜尋網站的網址，提供 Firefox 使用者不搜尋、直接連到搜尋網站的方法。
+ <div class="note"><strong>備註：</strong> 由於此元素非 OpenSearch 標準規格而是 Firefox 獨有，故加上「<code>moz:</code>」名稱空間，已確保不支援的用戶端能直接跳過此元素。</div>
  </dd>
 </dl>
 
@@ -122,9 +93,6 @@ translation_of: Web/OpenSearch
 <dl>
  <dt><strong>searchTitle</strong></dt>
  <dd>這是搜尋引擎的名稱，例如「Search MDC」或「雅虎搜尋」等。這個名稱應該與引擎名稱一樣。</dd>
-</dl>
-
-<dl>
  <dt><strong>pluginURL</strong></dt>
  <dd>瀏覽器可以下載的搜尋引擎 XML 檔案位置。</dd>
 </dl>
@@ -152,7 +120,7 @@ translation_of: Web/OpenSearch
      template="http://example.com/mysearchdescription.xml" /&gt;
 </pre>
 
-<div class="note"><strong>註：</strong>目前的<a href="http://addons.mozilla.org">addons.mozilla.org</a>（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。</div>
+<div class="note"><strong>備註：</strong>目前的<a href="http://addons.mozilla.org">addons.mozilla.org</a>（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。</div>
 
 <h2 id="除錯技巧">除錯技巧</h2>
 
