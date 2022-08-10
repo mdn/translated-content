@@ -12,16 +12,160 @@ translation_of: Web/JavaScript/Guide
 
 JavaScript 안내서에서 [JavaScript](/ko/docs/Web/JavaScript) 언어 개요와 사용법을 알아보세요. 언어 기능에 대해 상세한 정보가 필요하면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)를 방문하세요.
 
-## 목차
-
 본 안내서는 여러 장으로 구성되어 있습니다.
 
-<ul class="card-grid"><li><a href="/ko/docs/Web/JavaScript/Guide/Introduction">소개</a><p><a href="/ko/docs/Web/JavaScript/Guide/Introduction#Where_to_find_JavaScript_information">이 가이드에 대해서</a><br><a href="/ko/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript.3F">JavaScript에 대하여</a><br><a href="/ko/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_Java">JavaScript와 Java</a><br><a href="/ko/docs/Web/JavaScript/Guide/Introduction#JavaScript_and_the_ECMAScript_Specification">ECMAScript</a><br><a href="/ko/docs/Web/JavaScript/Guide/Introduction#Getting_started_with_JavaScript">도구</a><br><a href="/ko/docs/Web/JavaScript/Guide/Introduction#Hello_world">Hello World</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types">문법과 자료형</a><p><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Basics">기본 구문 &#x26; 주석</a><br><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations">선언문</a><br><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_scope">변수 범위</a><br><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Variable_hoisting">변수 가져오기</a><br><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Data_structures_and_types">데이터 구조와 타입</a><br><a href="/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Literals">리터럴</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">흐름 제어과 오류 처리</a><p><code><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement">if...else</a></code><br><code><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement">switch</a></code><br><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Exception_handling_statements"><code>try</code>/<code>catch</code>/<code>throw</code></a><br><a href="/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Utilizing_Error_objects">Error objects</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration">반복과 순회</a><p><code><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">for</a><br><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement">while</a><br><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement">do...while</a><br><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement">break</a>/<a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement">continue</a><br><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement">for..in</a><br><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for..of</a></code></p></li></ul>
+## 소개
 
-<ul class="card-grid"><li><a href="/ko/docs/Web/JavaScript/Guide/Functions">함수</a><p><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%95%A8%EC%88%98_%EC%A0%95%EC%9D%98">함수 선언하기</a><br><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%95%A8%EC%88%98_%ED%98%B8%EC%B6%9C">함수 호출하기</a><br><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%95%A8%EC%88%98%EC%9D%98_%EB%B2%94%EC%9C%84">함수 범위</a><br><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%81%B4%EB%A1%9C%EC%A0%80">클로저(Closures</a>)<br><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%EC%9D%B8%EC%88%98(arguments)_%EA%B0%9D%EC%B2%B4_%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">아규먼트</a> &#x26; <a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%95%A8%EC%88%98%EC%9D%98_%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98">파라미터</a><br><a href="/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98#%ED%99%94%EC%82%B4%ED%91%9C_%ED%95%A8%EC%88%98">Arrow 함수</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators">표현식과 연산자</a><p><a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자">할당 연산</a> &#x26; <a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#비교_연산자">비교 연산</a><br><a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#산술_연산자">산술 연산자</a><br><a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#비트_연산자">비트연산</a> &#x26; <a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#논리_연산자">논리 연산자</a><br><a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#삼항_조건_연산자">Conditional (ternary) operator</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates">숫자와 날짜</a><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers"> 리터럴</a><p><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object"><code>Number</code> 오브젝트</a><br><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Math_object"><code>Math</code> </a><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object" style="background-color: rgba(234, 239, 242, 0.498039);">오브젝트</a><br><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Date_object"><code>Date</code> </a><a href="/ko/docs/Web/JavaScript/Guide/Numbers_and_dates#Number_object" style="background-color: rgba(234, 239, 242, 0.498039);">오브젝트</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Text_formatting">텍스트 서식</a><p><a href="/ko/docs/Web/JavaScript/Guide/Text_formatting#String_literals">String 리터럴</a><br><a href="/ko/docs/Web/JavaScript/Guide/Text_formatting#String_objects"><code>String</code> 오브젝트</a><br><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Text_formatting#Multi-line_template_literals">템플릿 리터럴</a><br><a href="/ko/docs/Web/JavaScript/Guide/Text_formatting#Internationalization">지역 별 서식</a><br><a href="/ko/docs/Web/JavaScript/Guide/Regular_Expressions">정규식</a></p></li></ul>
+Overview: [Introduction](/en-US/docs/Web/JavaScript/Guide/Introduction)
 
-<ul class="card-grid"><li><a href="/ko/docs/Web/JavaScript/Guide/Indexed_collections">인덱스 콜렉션</a><p><a href="/ko/docs/Web/JavaScript/Guide/Indexed_collections#Array_object">Arrays</a><br><a href="/ko/docs/Web/JavaScript/Guide/Indexed_collections#Typed_Arrays">Typed arrays</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Keyed_collections">키 콜렉션</a><p><code><a href="/ko/docs/Web/JavaScript/Guide/Keyed_collections#Map_object">Map</a></code><br><code><a href="/ko/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object">WeakMap</a></code><br><code><a href="/ko/docs/Web/JavaScript/Guide/Keyed_collections#Set_object">Set</a></code><br><code><a href="/ko/docs/Web/JavaScript/Guide/Keyed_collections#WeakSet_object">WeakSet</a></code></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Working_with_Objects">객체와 작업하기</a><p><a href="/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_properties">오브젝트와 속성</a><br><a href="/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects">오브젝트 생성하기</a><br><a href="/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods">메소드 정의하기</a><br><a href="/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Getter 와 setter</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">객체 모델</a><a href="/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model" style="font-family: Arial, x-locale-body, sans-serif; letter-spacing: -0.00278rem;"></a><p><a href="/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages">프로토타입 기반 객체 지향 프로그래밍</a><br><a href="/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Creating_the_hierarchy">오브젝트 계층 생성하기</a><br><a href="/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited">상속</a></p></li></ul>
+- [About this guide](/en-US/docs/Web/JavaScript/Guide/Introduction#where_to_find_javascript_information)
+- [About JavaScript](/en-US/docs/Web/JavaScript/Guide/Introduction#what_is_javascript)
+- [JavaScript and Java](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_java)
+- [ECMAScript](/en-US/docs/Web/JavaScript/Guide/Introduction#javascript_and_the_ecmascript_specification)
+- [Tools](/en-US/docs/Web/JavaScript/Guide/Introduction#getting_started_with_javascript)
+- [Hello World](/en-US/docs/Web/JavaScript/Guide/Introduction#hello_world)
 
-<ul class="card-grid"><li><a href="/ko/docs/Web/JavaScript/Guide/Using_promises">프로미스</a><p><a href="/ko/docs/Web/JavaScript/Guide/Using_promises#Guarantees">Guarantees</a><br><a href="/ko/docs/Web/JavaScript/Guide/Using_promises#Chaining">Chaining</a><br><a href="/ko/docs/Web/JavaScript/Guide/Using_promises#Error_propagation">Error propagation</a><br><a href="/ko/docs/Web/JavaScript/Guide/Using_promises#Composition">Composition</a><br><a href="/ko/docs/Web/JavaScript/Guide/Using_promises#Timing">Timing</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators">반복기와 생성기</a><p><a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterators">Iterators</a><br><a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables">Iterables</a><br><a href="/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">Generators</a></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming">메타 프로그래밍</a><p><code><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming#Proxies">프록시(Proxy</a></code><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming#Proxies" style="font-family: Consolas, Monaco, &#x27;Andale Mono&#x27;, monospace; background-color: rgba(234, 239, 242, 0.498039);">)</a><br><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming#Handlers_and_traps">Handlers와 traps</a><br><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming#Revocable_Proxy">Revocable Proxy</a><br><code><a href="/ko/docs/Web/JavaScript/Guide/Meta_programming#Reflection">Reflect</a></code></p></li><li><a href="/ko/docs/Web/JavaScript/Guide/Modules">JavaScript 모듈</a><p><a href="/ko/docs/Web/JavaScript/Guide/Modules#Exporting_module_features">Exporting</a><br><a href="/ko/docs/Web/JavaScript/Guide/Modules#Importing_features_into_your_script">Importing</a><br><a href="/ko/docs/Web/JavaScript/Guide/Modules#Default_exports_versus_named_exports">Default exports</a><br><a href="/ko/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports">Renaming features</a><br><a href="/ko/docs/Web/JavaScript/Guide/Modules#Aggregating_modules">Aggregating modules</a><br><a href="/ko/docs/Web/JavaScript/Guide/Modules#Dynamic_module_loading">Dynamic module loading</a></p></li></ul>
+## Grammar and types
+
+Overview: [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+
+- [Basic syntax & comments](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)
+- [Declarations](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [Variable scope](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope)
+- [Variable hoisting](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+- [Data structures and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#data_structures_and_types)
+- [Literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#literals)
+
+## Control flow and error handling
+
+Overview: [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
+- [`if...else`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement)
+- [`switch`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement)
+- [`try`/`catch`/`throw`](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
+- [Error objects](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#utilizing_error_objects)
+
+## Loops and iteration
+
+Overview: [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+- [`for`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement)
+- [`while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement)
+- [`do...while`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement)
+- [`continue`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement)
+- [`break`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement)
+- [`for..in`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement)
+- [`for..of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+
+## Functions
+
+Overview: [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+
+- [Defining functions](/en-US/docs/Web/JavaScript/Guide/Functions#defining_functions)
+- [Calling functions](/en-US/docs/Web/JavaScript/Guide/Functions#calling_functions)
+- [Function scope](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Functions#closures)
+- [Arguments](/en-US/docs/Web/JavaScript/Guide/Functions#using_the_arguments_object) & [parameters](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters)
+- [Arrow functions](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions)
+
+## Expressions and operators
+
+Overview: [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+- [Assignment](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators) & [Comparisons](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
+- [Arithmetic operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
+- [Bitwise](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) & [logical operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
+- [Conditional (ternary) operator](</en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
+
+## Numbers and dates
+
+Overview: [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+
+- [Number literals](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+- [`Number` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
+- [`Math` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
+- [`Date` object](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+
+## Text formatting
+
+Overview: [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+
+- [String literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
+- [`String` object](/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
+- [Template literals](/en-US/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
+- [Internationalization](/en-US/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+## Indexed collections
+
+Overview: [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+
+- [Arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+- [Typed arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#typed_arrays)
+
+## Keyed collections
+
+Overview: [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections)
+
+- [`Map`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#map_object)
+- [`WeakMap`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [`Set`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#set_object)
+- [`WeakSet`](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakset_object)
+
+## Working with objects
+
+Overview: [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+- [Objects and properties](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)
+- [Creating objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+- [Defining methods](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
+- [Getter and setter](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+
+## Using classes
+
+Overview: [Using classes](/en-US/docs/Web/JavaScript/Using_Classes)
+
+- [Declaring a class](/en-US/docs/Web/JavaScript/Using_Classes#declaring_a_class)
+- [Various class features](/en-US/docs/Web/JavaScript/Guide/Using_Classes#constructor)
+- [Extends and inheritance](/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
+- [Why classes?](/en-US/docs/Web/JavaScript/Guide/Using_Classes#why_classes)
+
+## Promises
+
+Overview: [Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+
+- [Guarantees](/en-US/docs/Web/JavaScript/Guide/Using_promises#guarantees)
+- [Chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining)
+- [Error propagation](/en-US/docs/Web/JavaScript/Guide/Using_promises#error_propagation)
+- [Composition](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition)
+- [Timing](/en-US/docs/Web/JavaScript/Guide/Using_promises#timing)
+
+## Iterators and generators
+
+Overview: [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+
+- [Iterators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
+- [Iterables](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
+- [Generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+
+## Meta programming
+
+Overview: [Meta programming](/en-US/docs/Web/JavaScript/Guide/Meta_programming)
+
+- [`Proxy`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#proxies)
+- [Handlers and traps](/en-US/docs/Web/JavaScript/Guide/Meta_programming#handlers_and_traps)
+- [Revocable Proxy](/en-US/docs/Web/JavaScript/Guide/Meta_programming#revocable_proxy)
+- [`Reflect`](/en-US/docs/Web/JavaScript/Guide/Meta_programming#reflection)
+
+## JavaScript modules
+
+Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+
+- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
+- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
+- [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
+- [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
+- [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+- [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

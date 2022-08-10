@@ -369,16 +369,21 @@ typeof proxy;            // "object", typeof doesn't trigger any trap
 
 With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in) as a function:
 
+```js
     Reflect.has(Object, 'assign'); // true
+```
 
 ### A better `apply` function
 
 In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
+```js
     Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
 With {{jsxref("Reflect.apply")}} this becomes less verbose and easier to understand:
 
+```js
     Reflect.apply(Math.floor, undefined, [1.75]);
     // 1;
 
@@ -390,15 +395,18 @@ With {{jsxref("Reflect.apply")}} this becomes less verbose and easier to underst
 
     Reflect.apply(''.charAt, 'ponies', [3]);
     // "i"
+```
 
 ### Checking if property definition has been successful
 
 With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a {{jsxref("Statements/try...catch","try...catch")}} block to catch any error that occurred while defining a property. Because {{jsxref("Reflect.defineProperty")}} returns a Boolean success status, you can just use an {{jsxref("Statements/if...else","if...else")}} block here:
 
+```js
     if (Reflect.defineProperty(target, property, attributes)) {
       // success
     } else {
       // failure
     }
+```
 
 {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}

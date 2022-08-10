@@ -15,17 +15,9 @@ translation_of: Web/JavaScript/Guide/Modules
 
 좋은 소식은 최신 브라우저가 기본적으로 모듈 기능을 지원하기 시작했으며, 이것이 이 기사의 전부입니다. 브라우저는 모듈의 로딩을 최적화 할 수 있기 때문에 라이브러리를 사용하는 것보다 더 효율적이며, 클라이언트 측에서의 추가 처리와 여분의 왕복을 모두 해야하는 것 보다 효율적입니다.
 
-## Browser support
+## 브라우저 호환성
 
-네이티브 자바스크립트 모듈은 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)와 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 문(statement)에 의존적이며, 호환성은 다음과 같습니다.
-
-### import
-
-{{Compat("javascript.statements.import")}}
-
-### export
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Introducing an example
 
@@ -33,19 +25,21 @@ translation_of: Web/JavaScript/Guide/Modules
 
 이것들은 매우 사소한 것이지만, 모듈을 명확하게 설명하기 의해 의도적으로 단순하게 유지중입니다.
 
-<div class="blockIndicator note"><p><strong>주의</strong>: 예제를 다운로드하여 로컬에서 실행하려면, 로컬 웹 서버를 통해 예제를 실행해야 합니다.</p></div>
+> **주의:** 예제를 다운로드하여 로컬에서 실행하려면, 로컬 웹 서버를 통해 예제를 실행해야 합니다.
 
 ## Basic example structure
 
 첫 번째 예제([basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules))를 보면 다음과 같은 파일 구조가 있습니다.
 
+```
     index.html
     main.js
     modules/
         canvas.js
         square.js
+```
 
-<div class="blockIndicator note"><p><strong>주의</strong>: 이 가이드의 모든 예제는 기본적으로 동일한 구조를 가집니다. 위의 내용에 익숙해지시는게 좋습니다.</p></div>
+> **주의:** 이 가이드의 모든 예제는 기본적으로 동일한 구조를 가집니다. 위의 내용에 익숙해지시는게 좋습니다.
 
 modules 디렉토리의 두 모듈은 다음과 같습니다.
 
@@ -105,15 +99,19 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 
 예를들면,
 
+```bash
     /js-examples/modules/basic-modules/modules/square.js
+```
 
 이렇게 쓸 수 있습니다.
 
+```bash
     ./modules/square.js
+```
 
 [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js)에서 이러한 코드를 볼 수 있습니다.
 
-<div class="blockIndicator note"><p><strong>주의</strong>: 일부 모듈 시스템에서는 파일 확장명을 생략할 수 있습니다. (예: <code>'/modules/square'</code>). 이것은 네이티브 자바스크립트에서는 작동하지 않습니다. 또한 앞에 슬래시를 포함해야 합니다.</p></div>
+> **주의:** 일부 모듈 시스템에서는 파일 확장명을 생략할 수 있습니다. (예: `'/modules/square'`). 이것은 네이티브 자바스크립트에서는 작동하지 않습니다. 또한 앞에 슬래시를 포함해야 합니다.
 
 우리의 스크립트에 기능을 가져오면 동일한 파일 내에 정의한 것처럼 기능을 사용할 수 있습니다. 다음은 `main.js` 의 import 행 아래에 있습니다.
 
@@ -140,7 +138,7 @@ reportPerimeter(square1.length, reportList);
 
 `import` 와 `export` 문(statement)은 모듈 내에서만 사용할 수 있습니다. 정규 스크립트가 아닙니다.
 
-<div class="blockIndicator note"><p><strong>주의</strong>: <code>type="module"</code>을 포함하면 인터널 스크립트에서도 import 모듈을 사용할 수 있습니다. 예: <code>&#x3C;script type="module"> /* 여기에 코드를 작성하세요 */ &#x3C;/script></code>.</p></div>
+> **주의:** `type="module"`을 포함하면 인터널 스크립트에서도 import 모듈을 사용할 수 있습니다. 예: `<script type="module"> /* 여기에 코드를 작성하세요 */ </script>`.
 
 ## Other differences between modules and standard scripts
 
@@ -183,7 +181,7 @@ import randomSquare from './modules/square.js';
 import {default as randomSquare} from './modules/square.js';
 ```
 
-<div class="blockIndicator note"><p><strong>주의</strong>: export한 항목의 이름을 바꾸는 구문은 <a href="#renaming_imports_and_exports">Renaming imports and exports</a> 섹션에서 설명합니다.</p></div>
+> **주의:** export한 항목의 이름을 바꾸는 구문은 [Renaming imports and exports](#renaming_imports_and_exports) 섹션에서 설명합니다.
 
 ## Avoiding naming conflicts
 
@@ -367,6 +365,7 @@ export { name } from 'x.js'
 
 예를들어 [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation) 디렉토리를 참조하겠습니다. 이 예제에서는 이전 클래스 예제를 기반으로 `circle.js`, `square.js`, `triangle.js` 의 모든 기능을 함께 모으는 `shapes.js`라는 추가 모듈이 있습니다. 또한 우리는 `shapes` 모듈 디렉토리 안에 있는 서브 디렉토리 내에서 서브 모듈을 이동 시켰습니다. 이제 모듈 구조는 다음과 같습니다.
 
+```
     modules/
       canvas.js
       shapes.js
@@ -374,6 +373,7 @@ export { name } from 'x.js'
         circle.js
         square.js
         triangle.js
+```
 
 각 하위 모듈에서 export 형태는 같습니다. 예)
 
@@ -391,7 +391,7 @@ export { Circle } from './shapes/circle.js';
 
 이 모듈은 각각의 서브 모듈의 export를 가져와서 `shapes.js` 모듈에서 효과적으로 사용할 수 있도록 합니다.
 
-<div class="blockIndicator note"><p><strong>주의</strong>: <code>shapes.js</code> 에서 참조되는 export는 기본적으로 파일을 통해 리다이렉트 되고 실제로는 존재하지 않으므로, 같은 파일 내에 유용한 코드를 쓸 수 없습니다.</p></div>
+> **주의:** `shapes.js` 에서 참조되는 export는 기본적으로 파일을 통해 리다이렉트 되고 실제로는 존재하지 않으므로, 같은 파일 내에 유용한 코드를 쓸 수 없습니다.
 
 이제 `main.js` 파일에서 우리는 세 개의 모듈 클래스를 모두 대체할 수 있습니다.
 

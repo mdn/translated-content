@@ -108,6 +108,7 @@ Scratchpad를 열기 위해, Firefox의 메뉴 "Tools" 의 하위에 있는 "Web
 
 JavaScript 작성을 시작하기 위해서, Scratchpad를 열고 첫 JavaScript 코드 "Hello World" 를 작성하세요.
 
+```javascript
     (function(){
       "use strict";
       /* Start of your code */
@@ -118,6 +119,7 @@ JavaScript 작성을 시작하기 위해서, Scratchpad를 열고 첫 JavaScript
       greetMe('World');
       /* End of your code */
     })();
+```
 
 패드에서 코드를 선택하고 Ctrl + R 키를 눌러 브라우저에서 펼쳐지는 것을 지켜보십시오! 다음 페이지에서 이 가이드는 JavaScript 구문 및 언어 기능을 소개하므로보다 복잡한 응용 프로그램을 작성할 수 있습니다. 그러나 당분간은 `(function () { "use strict"`를 코드 앞에 추가하고`}}) ();`를 코드마지막에 추가하세요. 아직은 이코드가 뭔지 잘 모르겠지만 나중에 이 코드가 의미하는 것을 배울 것입니다, 지금은 간단히 다음과 같다고 생각하세요.
 

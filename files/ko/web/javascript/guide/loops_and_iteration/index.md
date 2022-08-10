@@ -34,8 +34,10 @@ for (step = 0; step < 5; step++) {
 
 for 반복문은 어떤 특정한 조건이 거짓으로 판별될 때까지 반복합니다. 자바스크립트의 반복문은 C의 반복문과 비슷합니다. for 반복문은 다음과 같습니다.
 
+```
     for ([초기문]; [조건문]; [증감문])
       문장
+```
 
 for문이 실행될 때, 다음과 같이 실행됩니다.:
 
@@ -86,9 +88,11 @@ btn.addEventListener("click", function(){
 
 do...while 문은 특정한 조건이 거짓으로 판별될 때까지 반복합니다. do...while 문은 다음과 같습니다.
 
+```
     do
       문장
     while (조건문);
+```
 
 `조건문을 확인하기 전에 문장은 한번 실행됩니다. 많은 문장을 실행하기 위해선 { }를 써서 문장들을 묶어줍니다. 만약 조건이 참이라면, 그 문장은 다시 실행됩니다. 매 실행 마지막마다 조건문이 확인됩니다. 만약 조건문이 거짓일 경우, 실행을 멈추고 do...while 문 바로 아래에 있는 문장으로 넘어가게 합니다.`
 
@@ -107,8 +111,10 @@ do {
 
 while 문은 어떤 조건문이 참이기만 하면 문장을 계속해서 수행합니다. while 문은 다음과 같습니다.
 
+```
     while (조건문)
       문장
+```
 
 만약 조건문이 거짓이 된다면, 그 반복문 안의 문장은 실행을 멈추고 반복문 바로 다음의 문장으로 넘어갑니다.
 
@@ -154,8 +160,10 @@ while (true) {
 
 레이블 문의 구문은 다음과 같습니다:
 
+```
     label :
        statement
+```
 
 레이블 값은 예약어가 아닌 임의의 JavaScript 식별자일 수 있습니다. 여러분이 레이블을 가지고 식별하는 문은 어떠한 문이 될 수 있습니다.
 
@@ -308,9 +316,11 @@ car.model = Mustang
 
 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, [반복 가능한 객체](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable)({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [인수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.
 
+```
     for (variable of object) {
       statement
     }
+```
 
 다음 예는 for...of 루프와 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in "en-US/docs/JavaScript/Reference/Statements/for...in") 루프의 차이를 보여줍니다. 속성 이름을 통해 for...in이 반복하는 동안, for...of은 속성 값을 통해 반복합니다:
 
