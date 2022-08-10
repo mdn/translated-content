@@ -530,7 +530,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) mu
 
 The ECMAScript specification mentions[ three rules of semicolon insertion](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
-1\. A semicolon is inserted before, when a [Line terminator](#Line_terminators) or "}" is encountered that is not allowed by the grammar.
+1. A semicolon is inserted before, when a [Line terminator](#Line_terminators) or "}" is encountered that is not allowed by the grammar.
 
 ```js
 { 1 2 } 3
@@ -540,7 +540,7 @@ The ECMAScript specification mentions[ three rules of semicolon insertion](https
 { 1 2 ;} 3;
 ```
 
-2\. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
+2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
 
 Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
@@ -554,7 +554,7 @@ a = b;
 ++c;
 ```
 
-3\. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
+3. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
 
 - PostfixExpressions (`++` and `--`)
 - `continue`
