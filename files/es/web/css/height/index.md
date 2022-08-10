@@ -62,3 +62,75 @@ Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscu
 - [MDN Entender las WCAG, explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+
+## Definición formal
+
+{{cssInfo}}
+
+## Sintaxis formal
+
+{{csssyntax}}
+
+## Ejemplos
+
+### Fijación de la altura mediante píxeles y porcentajes
+
+#### HTML
+
+```html
+<div id="taller">Yo tengo 50 píxeles.</div>
+<div id="shorter">Yo tengo 25 píxeles de altura.</div>
+<div id="parent">
+  <div id="child">
+    Yo tengo la mitad de altura de mi padre
+  </div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 250px;
+  margin-bottom: 5px;
+  border: 2px solid blue;
+}
+
+#taller {
+  height: 50px;
+}
+
+#shorter {
+  height: 25px;
+}
+
+#parent {
+  height: 100px;
+}
+
+#child {
+  height: 50%;
+  width: 75%;
+}
+```
+#### Result
+
+{{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [El modelo de caja](
+  /es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+  )
+- {{cssxref("width")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-height")}}
+- Las propiedades lógicas asignadas: {{cssxref("block-size")}},
+  {{cssxref("inline-size")}}
