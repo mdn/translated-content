@@ -1,106 +1,144 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
+tags:
+  - Function
+  - JavaScript
+  - Language feature
+  - Operator
+  - Primary Expression
 translation_of: Web/JavaScript/Reference/Operators/await
+browser-compat: javascript.operators.await
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<div><code>await</code>연산자는 {{jsxref("Promise")}}를 기다리기 위해 사용됩니다. 연산자는 {{jsxref("Statements/async_function", "async function")}} 내부에서만 사용할 수 있습니다.</div>
+`await`연산자는 {{jsxref("Promise")}}를 기다리기 위해 사용됩니다. 이 연산자는 {{jsxref("Statements/async_function", "async function")}} 내부에서만 사용할 수 있습니다. 하지만 [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)과 함께 `await`를 단독으로 사용할 수 있습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox ">[<em>rv</em>] = await <em>expression</em>;</pre>
+```js
+[rv] = await expression
+```
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>{{jsxref("Promise")}} 혹은 기다릴 어떤 값입니다.</dd>
- <dt><code>rv</code></dt>
- <dd>
- <p>{{jsxref("Promise")}}에 의해 만족되는 값이 반환됩니다. {{jsxref("Promise")}}가 아닌 경우에는 그 값 자체가 반환됩니다.</p>
- </dd>
-</dl>
+- `expression`
+  - : {{jsxref("Promise")}} 혹은 기다릴 어떤 값입니다.
+- `rv`
+  - : {{jsxref("Promise")}}에 의해 만족되는 값이 반환됩니다. {{jsxref("Promise")}}가 아닌 경우에는 그 값 자체가 반환됩니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>await</code> 문은 <code>Promise</code>가 fulfill되거나 <code>reject</code> 될 때까지 <code>async</code> 함수의 실행을 일시 정지하고, <code>Promise</code>가 fulfill되면 <code>async</code> 함수를 일시 정지한 부분부터 실행합니다. 이때  <code>await</code> 문의 반환값은 <code>Promise</code> 에서 fulfill된 값이 됩니다.</p>
+`await` 문은 `Promise`가 처리(즉, 이행되거나 거부됨)될 때까지 `async` 함수의 실행을 일시 정지하고, `Promise`가 이행되면 `async` 함수를 일시 정지한 부분부터 실행합니다. 이때 `await` 문의 반환값은 `Promise` 에서 이행된 값이 됩니다.
 
-<p>만약 <code>Promise</code>가 <code>reject</code>되면, <code>await</code> 문은 <code>reject</code>된 값을 <code>throw</code>합니다.</p>
+만약 `Promise`가 거부되면, `await` 문은 거부된 값을 `throw`합니다.
 
-<p><code>await</code> 연산자 다음에 나오는 문의 값이 <code>Promise</code>가 아니면 해당 값을 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolved Promise</a>로 변환시킵니다.</p>
+`await` 연산자 다음에 나오는 표현식의 값이 `Promise`가 아니면 해당 값을 [resolved Promise](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)로 변환시킵니다.
 
-<p>An <code>await</code> can split execution flow, allowing the caller of the <code>await</code>'s function to resume execution before the deferred continuation of the <code>await</code>'s function. After the <code>await</code> defers the continuation of its function, if this is the first <code>await</code> executed by the function, immediate execution also continues by returning to the function's caller a pending <code>Promise</code> for the completion of the <code>await</code>'s function and resuming execution of that caller.</p>
+`await`은 실행 흐름을 분할하고 `await` 함수의 호출자가 `await` 함수의 지연된 지속 전에 실행을 재개할 수 있게 합니다. `await`가 `await` 함수를 연기한 후, 이것이 함수에 의해 실행된 첫 번째 `await`이라면 즉시 실행은 함수 호출자에게 `await` 함수의 완료에 대한 대기(pending) 중인 `Promise`를 반환하고 그 호출자의 실행을 재개함으로써 계속 이어갑니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>만약 <code>Promise</code>가 <code>await</code>에 넘겨지면, <code>await</code>은 <code>Promise</code>가 fulfill되기를 기다렸다가, 해당 값을 리턴합니다.</p>
+### Awaiting a promise to be fulfilled
 
-<pre class="brush: js ">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+만약 `Promise`가 `await`에 넘겨지면, `await`는 `Promise`가 이행되기를 기다렸다가, 해당 값을 반환합니다.
+
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
 async function f1() {
-  var x = await resolveAfter2Seconds(10);
+  const x = await resolveAfter2Seconds(10);
   console.log(x); // 10
 }
 
 f1();
-</pre>
+```
 
-<p>{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} will be fulfilled just the same.</p>
+### Thenable objects
 
-<pre ><code>async function f2() {
+{{jsxref("Global_Objects/Promise/then", "Thenable objects")}} 도 동일하게 이행됩니다.
+
+```js
+async function f2() {
   const thenable = {
-    then: function(resolve, _reject) {
+    then(resolve, _reject) {
       resolve('resolved!')
     }
   };
   console.log(await thenable); // resolved!
 }
 
-f2();</code></pre>
+f2();
+```
 
-<p>만약 값이 <code>Promise</code>가 아니라면, 해당 값은 <code>resolve</code>된 <code>Promise</code>로 변환되며 이를 기다립니다.</p>
+### Conversion to promise
 
-<pre class="brush: js ">async function f2() {
-  var y = await 20;
+만약 값이 `Promise`가 아니라면, 해당 값은 이행된 `Promise`로 변환되며 이를 기다립니다.
+
+```js
+async function f3() {
+  const y = await 20;
   console.log(y); // 20
 }
-f2();
-</pre>
 
-<p>만약 <code>Promise</code>가 <code>reject</code>되면, <code>reject</code>된 값이 <code>throw</code>됩니다.</p>
+f3();
+```
 
-<pre class="brush: js ">async function f3() {
+### Promise rejection
+
+만약 `Promise`가 거부되면, 거부된 값이 `throw`됩니다.
+
+```js
+async function f4() {
   try {
-    var z = await Promise.reject(30);
-  } catch(e) {
-    console.log(e); // 30
+    const z = await Promise.reject(30);
+  } catch (e) {
+    console.error(e); // 30
   }
 }
-f3();
-</pre>
 
-<p>try블럭 없이 rejected <code>Promise</code>다루기</p>
+f4();
+```
 
-<pre ><code>var response = await promisedFunction().catch((err) =&gt; { console.error(err); });
-// response will be undefined if the promise is rejected</code></pre>
+### Handling rejected promises
 
-<h2 id="Specifications">Specifications</h2>
+try블럭 없이 거부된 `Promise`다루기
+
+```js
+const response = await promisedFunction()
+  .catch((err) => { console.error(err); });
+// promise가 거부된다면 response는 undefined일 것이다.
+```
+
+### Top level await
+
+[JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules)안에서 `await` 키워드를 사용할 수 있습니다. 이것은 `await`를 사용하는 하위 모듈이 있는 모듈이 실행되기 전에 다른 하위 모듈이 로드되는 것을 막지 않으면서 모든 하위 모듈이 실행될 때까지 기다립니다.
+
+아래 [Fetch API](/en-US/docs/Web/API/Fetch_API)를 사용하고 [`export statement`](/en-US/docs/Web/JavaScript/Reference/Statements/export)에 `await`를 지정한 간단한 모듈의 예입니다. 이 모듈을 포함하는 모든 모듈은 코드를 실행하기 전에 `fetch`를 이행할 때까지 기다립니다.
+
+```js
+// fetch request
+const colors = fetch('../data/colors.json')
+  .then((response) => response.json());
+
+export default await colors;
+```
+
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 브라우저 호환성
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object
+- [Top level await](https://v8.dev/features/top-level-await) on v8.dev
