@@ -3324,7 +3324,7 @@
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/HTMLElement/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
-/ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event_7f96b143800d76a3bff8abbddbff0a0a
+/ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/HTMLElement/lostpointercapture_event	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
 /ja/docs/Web/API/HTMLElement/oncut	/ja/docs/Web/API/HTMLElement/cut_event
