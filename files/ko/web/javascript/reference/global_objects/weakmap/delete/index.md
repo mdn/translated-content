@@ -10,51 +10,48 @@ tags:
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>delete()</strong></code> 메소드는 <code>WeakMap</code> 객체의 특정 요소를 제거합니다.</p>
+**`delete()`** 메서드는 {{jsxref("WeakMap")}} 객체에서 특정 요소를 제거합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
+## 구문
 
+```js
+delete(key)
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox"><em>wm</em>.delete(<em>key</em>);</pre>
+- `key`
+  - : `WeakMap` 객체에서 제거할 요소의 키입니다.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>key</code></dt>
- <dd><code>WeakMap</code> 객체에서 제거할 요소의 키.</dd>
-</dl>
+`WeakMap` 겍체의 요소가 성공적으로 제거된 경우 `true`입니다. `WeakMap`에서 키를 찾을 수 없거나 키가 객체가 아닌 경우는 `false`입니다.
 
-<h3 id="반환_값">반환 값</h3>
+## 예제
 
-<p><code>WeakMap</code> 객체의 요소가 성공적으로 제거되면 <code>true</code>, 키를 찾을 수 없거나 키가 객체가 아닌 경우 <code>false</code>.</p>
+### delete() 메서드 사용하기
 
-<h2 id="예제">예제</h2>
-
-<h3 id="delete_메서드_사용하기"><code>delete</code> 메서드 사용하기</h3>
-
-<pre class="brush: js;highlight:[4]">var wm = new WeakMap();
+```js
+const wm = new WeakMap();
 wm.set(window, 'foo');
 
-wm.delete(window); // Returns true. Successfully removed.
+wm.delete(window); // true 반환. 성공적으로 제거됨.
 
-wm.has(window);    // Returns false. The window object is no longer in the WeakMap.
-</pre>
+wm.has(window);    // false 반환. window 객체는 더이상 WeakMap에 있지않음.
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.builtins.WeakMap.delete")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
