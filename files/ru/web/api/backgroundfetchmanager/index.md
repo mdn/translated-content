@@ -58,6 +58,6 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
