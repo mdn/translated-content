@@ -19,70 +19,51 @@ tags:
   - formats
 translation_of: Web/Media/Formats
 ---
-<p>{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}</p>
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-<p>Since nearly its beginning, the web has included support for some form of visual media presentation. Originally, these capabilities were limited, and were expanded organically, with different browsers finding their own solutions to the problems around including still and video imagery on the web. The modern web has powerful features to support the presentation and manipulation of media, with several media-related APIs supporting various types of content. Generally, the media formats supported by a browser are entirely up to the browser's creators, which can complicate the work of a web developer.</p>
+Since nearly its beginning, the web has included support for some form of visual media presentation. Originally, these capabilities were limited, and were expanded organically, with different browsers finding their own solutions to the problems around including still and video imagery on the web. The modern web has powerful features to support the presentation and manipulation of media, with several media-related APIs supporting various types of content. Generally, the media formats supported by a browser are entirely up to the browser's creators, which can complicate the work of a web developer.
 
-<p>This guide provides an overview of the media file types, {{Glossary("codec", "codecs")}}, and algorithms that may comprise media used on the web. It also provides browser support information for various combinations of these, and suggestions for prioritization of formats, as well as which formats excel at specific types of content.</p>
+This guide provides an overview of the media file types, {{Glossary("codec", "codecs")}}, and algorithms that may comprise media used on the web. It also provides browser support information for various combinations of these, and suggestions for prioritization of formats, as well as which formats excel at specific types of content.
 
-<div class="row topicpage-table">
-<div class="section">
-<h2 id="References">References</h2>
+## References
 
-<h3 id="Images">Images</h3>
+### Images
 
-<dl>
- <dt> <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type and format guide</a></dt>
- <dd>Covers support of image file types and content formats across the major web browsers, as well as providing basic information about each type: benefits, limitations, and use cases of interest to web designers and developers.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/Images_for_web_designers">Image file types for web designers</a></dt>
- <dd>Fundamental information about the various image file types that may be useful for web designers, including best practices and use cases for each type, and guidelines for choosing the right image file format for specific types of content.</dd>
-</dl>
+- [Image file type and format guide](/zh-TW/docs/Web/Media/Formats/Image_types)
+  - : Covers support of image file types and content formats across the major web browsers, as well as providing basic information about each type: benefits, limitations, and use cases of interest to web designers and developers.
+- [Image file types for web designers](/zh-TW/docs/Web/Media/Formats/Images_for_web_designers)
+  - : Fundamental information about the various image file types that may be useful for web designers, including best practices and use cases for each type, and guidelines for choosing the right image file format for specific types of content.
 
-<h3 id="Media_file_types_and_codecs">Media file types and codecs</h3>
+### Media file types and codecs
 
-<dl>
- <dt><a href="/en-US/docs/Web/Media/Formats/Containers">Media containers (file types)</a></dt>
- <dd>A guide to the file types that contain media data. Some are audio-specific, while others may be used for either audio or combined audiovisual content such as movies. Includes overviews of each of the file types supported by the major web browsers, along with browser support information and supported features.</dd>
-</dl>
+- [Media containers (file types)](/zh-TW/docs/Web/Media/Formats/Containers)
+  - : A guide to the file types that contain media data. Some are audio-specific, while others may be used for either audio or combined audiovisual content such as movies. Includes overviews of each of the file types supported by the major web browsers, along with browser support information and supported features.
+- [Web audio codec guide](/zh-TW/docs/Web/Media/Formats/Audio_codecs)
+  - : A guide to the audio codecs allowed for by the common media containers, as well as by the major browsers. Includes benefits, limitations, key specifications and capabilities, and use cases. It also covers each browser's support for using the codec in given containers.
+- [Web video codec guide](/zh-TW/docs/Web/Media/Formats/Video_codecs)
+  - : This article provides basic information about the video codecs supported by the major browsers, as well as some that are not commonly supported but that you might still run into. It also covers codec capabilities, benefits, limitations, and browser support levels and restrictions.
+- [The "codecs" parameter in common media types](/zh-TW/docs/Web/Media/Formats/codecs_parameter)
+  - : When specifying the MIME type describing a media format, you can provide details using the `codecs` parameter as part of the type string. This guide describes the format and possible values of the `codecs` parameter for the common media types.
+- [Codecs used by WebRTC](/zh-TW/docs/Web/Media/Formats/WebRTC_codecs)
+  - : [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) doesn't use a container, but instead streams the encoded media itself from peer to peer using {{domxref("MediaStreamTrack")}} objects to represent each audio or video track. This guide discusses the codecs commonly used with WebRTC.
 
-<dl>
- <dt><a href="/en-US/docs/Web/Media/Formats/Audio_codecs">Web audio codec guide</a></dt>
- <dd>A guide to the audio codecs allowed for by the common media containers, as well as by the major browsers. Includes benefits, limitations, key specifications and capabilities, and use cases. It also covers each browser's support for using the codec in given containers.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/Video_codecs">Web video codec guide</a></dt>
- <dd>This article provides basic information about the video codecs supported by the major browsers, as well as some that are not commonly supported but that you might still run into. It also covers codec capabilities, benefits, limitations, and browser support levels and restrictions.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">The "codecs" parameter in common media types</a></dt>
- <dd>When specifying the MIME type describing a media format, you can provide details using the <code>codecs</code> parameter as part of the type string. This guide describes the format and possible values of the <code>codecs</code> parameter for the common media types.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a></dt>
- <dd><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> doesn't use a container, but instead streams the encoded media itself from peer to peer using {{domxref("MediaStreamTrack")}} objects to represent each audio or video track. This guide discusses the codecs commonly used with WebRTC.</dd>
-</dl>
-</div>
+## Guides
 
-<div class="section">
-<h2 id="Guides">Guides</h2>
+### Concepts
 
-<h3 id="Concepts">Concepts</h3>
+- [Digital audio concepts](/zh-TW/docs/Web/Media/Formats/Audio_concepts)
+  - : An introduction to how audio is converted into digital form and stored for use by computers. It explains basic concepts about how audio is sampled, as well as concepts such as sample rate, audio frames, and audio compression.
+- [Digital video concepts](/zh-TW/docs/Web/Media/Formats/Video_concepts)
+  - : A guide to fundamental concepts involved with digital video as used on the web, including basics about color formats, chroma subsampling, how human perception influences video coding, and so forth.
 
-<dl>
- <dt><a href="/en-US/docs/Web/Media/Formats/Audio_concepts">Digital audio concepts</a></dt>
- <dd>An introduction to how audio is converted into digital form and stored for use by computers. It explains basic concepts about how audio is sampled, as well as concepts such as sample rate, audio frames, and audio compression.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/Video_concepts">Digital video concepts</a></dt>
- <dd>A guide to fundamental concepts involved with digital video as used on the web, including basics about color formats, chroma subsampling, how human perception influences video coding, and so forth.</dd>
-</dl>
+### Tutorials and how-tos
 
-<h3 id="Tutorials_and_how-tos">Tutorials and how-tos</h3>
+- [Learning: Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : This tutorial introduces and details the use of media on the web.
+- [Handling media support issues in web content](/zh-TW/docs/Web/Media/Formats/Support_issues)
+  - : In this guide, we look at how to build web content that maximizes quality or performance while providing the broadest possible compatibility, by choosing media formats wisely, and offering fallbacks and alternate formats where it would be helpful.
 
-<dl>
- <dt><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Learning: Video and audio content</a></dt>
- <dd>This tutorial introduces and details the use of media on the web.</dd>
- <dt><a href="/en-US/docs/Web/Media/Formats/Support_issues">Handling media support issues in web content</a></dt>
- <dd>In this guide, we look at how to build web content that maximizes quality or performance while providing the broadest possible compatibility, by choosing media formats wisely, and offering fallbacks and alternate formats where it would be helpful.</dd>
-</dl>
+## Other topics
 
-<h2 id="Other_topics">Other topics</h2>
-
-<dl>
- <dt><a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a></dt>
- <dd>The Media Capabilities API lets you discover the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.</dd>
-</dl>
-</div>
-</div>
+- [Media Capabilities API](/zh-TW/docs/Web/API/Media_Capabilities_API)
+  - : The Media Capabilities API lets you discover the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.
