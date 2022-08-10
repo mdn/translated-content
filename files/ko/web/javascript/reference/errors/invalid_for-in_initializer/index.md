@@ -9,28 +9,30 @@ tags:
   - 초기화
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="메세지">메세지</h2>
+## 메세지
 
-<pre class="syntaxbox">SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
-SyntaxError: for-in loop head declarations may not have initializers (Firefox)
-SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
-</pre>
+```
+    SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
+    SyntaxError: for-in loop head declarations may not have initializers (Firefox)
+    SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
+```
 
-<h2 id="에러_타입">에러 타입</h2>
+## 에러 타입
 
-<p>엄격(Strict) 모드에서의 {{jsxref("SyntaxError")}}.</p>
+엄격(Strict) 모드에서의 {{jsxref("SyntaxError")}}.
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+## 무엇이 잘못되었을까?
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> 반복문의 선언부에 초기화 구문이 포함되어 있습니다. 즉, |<code>for (var i = 0 in obj)</code>| 구문을 통해 변수가 정의되고 값이 할당된 것을 말합니다. 비엄격 모드(non-strict) 모드에서는 이 초기화 구문이 무시되어 <code>|for (var i in obj)|</code> 처럼 동작합니다. 하지만 엄격 모드에서는 <code>SyntaxError</code> 가 발생합니다.</p>
+[for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 반복문의 선언부에 초기화 구문이 포함되어 있습니다. 즉, |`for (var i = 0 in obj)`| 구문을 통해 변수가 정의되고 값이 할당된 것을 말합니다. 비엄격 모드(non-strict) 모드에서는 이 초기화 구문이 무시되어 `|for (var i in obj)|` 처럼 동작합니다. 하지만 엄격 모드에서는 `SyntaxError` 가 발생합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>이 예제는 <code>SyntaxError</code>를 발생시킵니다.</p>
+이 예제는 `SyntaxError`를 발생시킵니다.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 var obj = {a: 1, b: 2, c: 3 };
 
@@ -39,37 +41,38 @@ for (var i = 0 in obj) {
 }
 
 // SyntaxError: for-in loop head declarations may not have initializers
-</pre>
+```
 
-<h3 id="올바른_for-in_반복문">올바른 for-in 반복문</h3>
+### 올바른 for-in 반복문
 
-<p>for-in 반복문의 선언부에서 초기화 구문(<code>i = 0</code>)을 삭제합니다.</p>
+for-in 반복문의 선언부에서 초기화 구문(`i = 0`)을 삭제합니다.
 
-<pre class="brush: js example-good">"use strict";
+```js example-good
+"use strict";
 
 var obj = {a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
 }
-</pre>
+```
 
-<h3 id="배열_반복">배열 반복</h3>
+### 배열 반복
 
-<p>for...in 반복문은 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in">배열을 반복하는데에는 사용하지 않습니다</a>. 배열({{jsxref("Array")}})을 반복하기 위해 <code>for-in</code> 반복문 대신에 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> 반복문을 사용하려고 한 적이 있습니까? <code>for</code> 반복문은 선언부에서 초기화도 할 수 있습니다:</p>
+for...in 반복문은 [배열을 반복하는데에는 사용하지 않습니다](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in#Array_iteration_and_for...in). 배열({{jsxref("Array")}})을 반복하기 위해 `for-in` 반복문 대신에 [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하려고 한 적이 있습니까? `for` 반복문은 선언부에서 초기화도 할 수 있습니다:
 
-<pre class="brush: js example-good">var arr = [ "a", "b", "c" ]
+```js example-good
+var arr = [ "a", "b", "c" ]
 
-for (var i = 2; i &lt; arr.length; i++) {
+for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
-// "c"</pre>
+// "c"
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> – 엄격 모드와 비엄격 모드에서 모두 초기화를 허용하지 않습니다.</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> – 배열 반복에 적합하고 초기화도 가능합니다.</li>
-</ul>
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) – 엄격 모드와 비엄격 모드에서 모두 초기화를 허용하지 않습니다.
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – 배열 반복에 적합하고 초기화도 가능합니다.

@@ -3,105 +3,108 @@ title: 'SyntaxError: "use strict" not allowed in function with non-simple parame
 slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">Firefox:
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
+```
+    Firefox:
+    SyntaxError: "use strict" not allowed in function with default parameter
+    SyntaxError: "use strict" not allowed in function with rest parameter
+    SyntaxError: "use strict" not allowed in function with destructuring parameter
 
-Chrome:
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
-</pre>
+    Chrome:
+    SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+```
 
-<h2 id="Error_type">Error type</h2>
+## Error type
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="무엇이_잘못_되었을까요">무엇이 잘못 되었을까요?</h2>
+## 무엇이 잘못 되었을까요?
 
-<p> <code>"use strict"</code> 지시문은 다음 매개변수 중 한 개가 있는 함수의 맨 위에 작성됩니다:</p>
+`"use strict"` 지시문은 다음 매개변수 중 한 개가 있는 함수의 맨 위에 작성됩니다:
 
-<ul>
- <li>{{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}</li>
- <li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}</li>
- <li>{{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}</li>
-</ul>
+- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}
 
-<p><code>"use strict"</code> 지시문은 ECMAScript 동작에 따라 이러한 함수의 맨 위에 허용되지 않습니다.</p>
+`"use strict"` 지시문은 ECMAScript 동작에 따라 이러한 함수의 맨 위에 허용되지 않습니다.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="기능_명세서">기능 명세서</h3>
+### 기능 명세서
 
-<p>다음은 함수 <code>sum</code> 에는 기본 매개 변수 <code>a=1</code> 및 <code>b=2</code>가 있는 경우입니다:</p>
+다음은 함수 `sum` 에는 기본 매개 변수 `a=1` 및 `b=2`가 있는 경우입니다:
 
-<pre class="brush: js example-bad">function sum(a = 1, b = 2) {
+```js example-bad
+function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   'use strict';
   return a + b;
 }
-</pre>
+```
 
-<p>함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>에 있어도 괜찮으면 함수 외부에서 <code>"use strict"</code> 지시문을 이동할 수 있습니다:</p>
+함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)에 있어도 괜찮으면 함수 외부에서 `"use strict"` 지시문을 이동할 수 있습니다:
 
-<pre class="brush: js example-good">'use strict';
+```js example-good
+'use strict';
 function sum(a = 1, b = 2) {
   return a + b;
 }
-</pre>
+```
 
-<h3 id="함수_표현식">함수 표현식</h3>
+### 함수 표현식
 
-<p>함수 표현식은 또 다른 해결방법을 사용할 수 있습니다:</p>
+함수 표현식은 또 다른 해결방법을 사용할 수 있습니다:
 
-<pre class="brush: js example-bad">var sum = function sum([a, b]) {
+```js example-bad
+var sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
   'use strict';
   return a + b;
 };
-</pre>
+```
 
-<p>이것은 다음 표현식으로 변환 될 수 있습니다:</p>
+이것은 다음 표현식으로 변환 될 수 있습니다:
 
-<pre class="brush: js example-good">var sum = (function() {
+```js example-good
+var sum = (function() {
   'use strict';
   return function sum([a, b]) {
     return a + b;
   };
 })();
-</pre>
+```
 
-<h3 id="화살표_함수">화살표 함수</h3>
+### 화살표 함수
 
-<p>화살표 함수가 <code>this</code>에 접근해야 하는 경우에는,  둘러싼 함수로 화살표 함수를 사용할 수 있습니다:</p>
+화살표 함수가 `this`에 접근해야 하는 경우에는, 둘러싼 함수로 화살표 함수를 사용할 수 있습니다:
 
-<pre class="brush: js example-bad">var callback = (...args) =&gt; {
+```js example-bad
+var callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
   'use strict';
   return this.run(args);
 };
-</pre>
+```
 
-<p>이것은 다음 표현식과 같이 변환될 수 있습니다:</p>
+이것은 다음 표현식과 같이 변환될 수 있습니다:
 
-<pre class="brush: js example-good">var callback = (() =&gt; {
+```js example-good
+var callback = (() => {
   'use strict';
-  return (...args) =&gt; {
+  return (...args) => {
     return this.run(args);
   };
 })();
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Strict_mode", "Strict mode", "", 1)}}</li>
- <li>{{jsxref("Statements/function", "function statement", "", 1)}}</li>
- <li>{{jsxref("Operators/function", "function expression", "", 1)}}</li>
- <li>{{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}</li>
- <li>{{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}</li>
- <li>{{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}</li>
-</ul>
+- {{jsxref("Strict_mode", "Strict mode", "", 1)}}
+- {{jsxref("Statements/function", "function statement", "", 1)}}
+- {{jsxref("Operators/function", "function expression", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}}
+- {{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}

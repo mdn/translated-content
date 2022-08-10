@@ -2,75 +2,70 @@
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 tags:
-- Error
-- Errors
-- JavaScript
-- SyntaxError
+  - Error
+  - Errors
+  - JavaScript
+  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<p>JavaScript 예외 "return (or yield) not in function"은
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  또는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  이 <a
-    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a> 외부에서 호출될 때 발생합니다.</p>
+JavaScript 예외 "return (or yield) not in function"은
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+또는 [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+이 [function](/en-US/docs/Web/JavaScript/Guide/Functions) 외부에서 호출될 때 발생합니다.
 
-<h2 id="Message">메시지</h2>
+## 메시지
 
-<pre class="brush: js">SyntaxError: 'return' statement outside of function (Edge)
+```js
+SyntaxError: 'return' statement outside of function (Edge)
   SyntaxError: return not in function (Firefox)
   SyntaxError: yield not in function (Firefox)
-</pre>
+```
 
-<h2 id="Error_type">에러 타입</h2>
+## 에러 타입
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="What_went_wrong">무엇이 잘못된 걸까요?</h2>
+## 무엇이 잘못된 걸까요?
 
-<p>
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  또는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  문장이 <a
-    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a> 밖에서 호출되었기 때문입니다.
-    혹시 어딘가에 중괄호를 빠트리신 건 아닌가요? <code>return</code>과 <code>yield</code>는 function 내에 있어야합니다.
-    왜냐하면 이것들은 function의 실행 종료 (또는 일시정지 및 재개)를 의미하고 function 호출자에게 특정 값을 반환하기 위해 사용되기 때문입니다.
-  </p>
+[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+또는 [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)
+문장이 [function](/en-US/docs/Web/JavaScript/Guide/Functions) 밖에서 호출되었기 때문입니다.
+혹시 어딘가에 중괄호를 빠트리신 건 아닌가요? `return`과 `yield`는 function 내에 있어야합니다.
+왜냐하면 이것들은 function의 실행 종료 (또는 일시정지 및 재개)를 의미하고 function 호출자에게 특정 값을 반환하기 위해 사용되기 때문입니다.
 
-<h2 id="Examples">예제</h2>
+## 예제
 
-<h3 id="Missing_curly_brackets">중괄호 누락</h3>
+### 중괄호 누락
 
-<pre class="brush: js example-bad">var cheer = function(score) {
+```js example-bad
+var cheer = function(score) {
   if (score === 147)
     return 'Maximum!';
   };
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Century!';
   }
 }
 
-// SyntaxError: return not in function</pre>
+// SyntaxError: return not in function
+```
 
-<p>처음 볼 때는 중괄호가 제대로 있는 것처럼 보인다, 하지만 이 코드 조각에는 if 문장 다음에 중괄호가 하나 빠져 있다. 다음처럼 고쳐야 한다:</p>
+처음 볼 때는 중괄호가 제대로 있는 것처럼 보인다, 하지만 이 코드 조각에는 if 문장 다음에 중괄호가 하나 빠져 있다. 다음처럼 고쳐야 한다:
 
-<pre class="brush: js example-good">var cheer = function(score) {
+```js example-good
+var cheer = function(score) {
   if (score === 147) {
     return 'Maximum!';
   }
-  if (score &gt; 100) {
+  if (score > 100) {
     return 'Century!';
   }
-};</pre>
+};
+```
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
-  </li>
-  <li>
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
-  </li>
-</ul>
+- [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield)

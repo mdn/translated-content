@@ -3,43 +3,45 @@ title: 'SyntaxError: "x" is not a legal ECMA-262 octal constant'
 slug: Web/JavaScript/Reference/Errors/Bad_octal
 translation_of: Web/JavaScript/Reference/Errors/Bad_octal
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="메시지">메시지</h2>
+## 메시지
 
-<pre class="syntaxbox">Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
-Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
-</pre>
+```
+    Warning: SyntaxError: 08 is not a legal ECMA-262 octal constant.
+    Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
+```
 
-<h2 id="에러_형식">에러 형식</h2>
+## 에러 형식
 
-<p>{{jsxref("SyntaxError")}}<code>. </code>엄격 모드(<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>)에서만 경고 됨.</p>
+{{jsxref("SyntaxError")}}`. `엄격 모드([strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))에서만 경고 됨.
 
-<h2 id="무엇이_잘못되었을까">무엇이 잘못되었을까?</h2>
+## 무엇이 잘못되었을까?
 
-<p>10진법의 리터럴은 <code>0</code>을 가장 앞 자리에 표시하고 뒤따라 다른 10진 숫자가 오게 할 수 있지만, <code>0</code>으로 시작하여 그 뒤를 따르는 모든 숫자들이 8보다 작다면, 그 수는 8진수로 해석됩니다. 이런 경우에는 <code>08</code>과 <code>09</code>는 허용되지 않기 때문에 JavaScript는 경고를 띄웁니다. </p>
+10진법의 리터럴은 `0`을 가장 앞 자리에 표시하고 뒤따라 다른 10진 숫자가 오게 할 수 있지만, `0`으로 시작하여 그 뒤를 따르는 모든 숫자들이 8보다 작다면, 그 수는 8진수로 해석됩니다. 이런 경우에는 `08`과 `09`는 허용되지 않기 때문에 JavaScript는 경고를 띄웁니다.
 
-<p>8진 리터럴과 8진 escape sequence는 사라지고 추가적인 경고가 나타날 것임을 알아 두세요. ECMAScript 6와 그 이후 버전의 구문은, 맨 앞자리에 위치하는 <code>0</code>의 뒤에 소문자 또는 대문자의 라틴 문자 "O" 를 위치시키도록 합니다 (<code>0o</code> or <code>0O)</code>. 더 자세한 설명은 <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal">lexical grammar</a> 페이지를 보세요.</p>
+8진 리터럴과 8진 escape sequence는 사라지고 추가적인 경고가 나타날 것임을 알아 두세요. ECMAScript 6와 그 이후 버전의 구문은, 맨 앞자리에 위치하는 `0`의 뒤에 소문자 또는 대문자의 라틴 문자 "O" 를 위치시키도록 합니다 (`0o` or `0O)`. 더 자세한 설명은 [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal) 페이지를 보세요.
 
-<h2 id="예">예</h2>
+## 예
 
-<h3 id="유효하지_않은_8진수">유효하지 않은 8진수</h3>
+### 유효하지 않은 8진수
 
-<pre class="brush: js example-bad">08;
+```js example-bad
+08;
 09;
 // SyntaxError: 08 is not a legal ECMA-262 octal constant
-// SyntaxError: octal literals and octal escape sequences are deprecated</pre>
+// SyntaxError: octal literals and octal escape sequences are deprecated
+```
 
-<h3 id="유효한_8진수">유효한 8진수</h3>
+### 유효한 8진수
 
-<p>선두로 사용된 <code>0</code>의 뒤에는 문자 "o"가 오도록 한다. </p>
+선두로 사용된 `0`의 뒤에는 문자 "o"가 오도록 한다.
 
-<pre class="brush: js example-good">0O755;
+```js example-good
+0O755;
 0o644;
-</pre>
+```
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal">Lexical grammar</a></li>
-</ul>
+- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)

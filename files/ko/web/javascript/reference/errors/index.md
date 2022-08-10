@@ -5,8 +5,8 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Errors
 ---
-<p>{{jsSidebar("Errors")}}</p>
+{{jsSidebar("Errors")}}
 
-<p>오류, 사방에 오류.</p>
+오류, 사방에 오류.
 
-<p>{{ListSubPages("/ko/docs/Web/JavaScript/Reference/Errors")}}</p>
+{{ListSubPages("/ko/docs/Web/JavaScript/Reference/Errors")}}
