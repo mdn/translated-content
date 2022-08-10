@@ -11,18 +11,19 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.match
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
+Метод **`match()`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает первое совпадение {{domxref("BackgroundFetchRecord")}}.
 
-## Syntax
+## Синтаксис
 
 ```js
-match(request)
-match(request, options)
+match(request);
+match(request, options);
 ```
 
-### Parameters
+### Параметры
 
 - `request`
   - : The {{domxref("Request")}} for which you are attempting to find records.
@@ -47,7 +48,7 @@ match(request, options)
         header should be ignored.
         It defaults to `false`.
 
-### Return value
+### Возвращаемое значение
 
 A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
 the request or {{jsxref("undefined")}} if no match is found.
@@ -56,12 +57,12 @@ the request or {{jsxref("undefined")}} if no match is found.
 > {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
 > all matching records, it resolves with the first matching record only.
 
-### Exceptions
+### Исключения
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
 
-## Examples
+## Примеры
 
 In this example we look for a record with the URL "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
 
@@ -72,16 +73,16 @@ bgFetch.match('/ep-5.mp3').then(async (record) => {
     return;
   }
 
-  console.log(`Here's the request`, record.request);
+  console.log(`Запрос`, record.request);
   const response = await record.responseReady;
-  console.log(`And here's the response`, response);
+  console.log(`Ответ`, response);
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

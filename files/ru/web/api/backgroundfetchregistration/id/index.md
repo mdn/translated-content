@@ -11,26 +11,27 @@ tags:
   - Experimental
 browser-compat: api.BackgroundFetchRegistration.id
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
+Доступное только для чтения свойство **`id`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает копию идентификатора запроса.
 
-## Value
+## Значение
 
-A string.
+Строка.
 
-## Examples
+## Примеры
 
-Logging the this part to the console returns the identifier set when registering the fetch. In this case, `"my-fetch"`.
+Логирование этого значения в консоль возвращает идентификатор, который был установлен при регистрации фонового запроса. В этом случает это `"my-fetch"`.
 
 ```js
 console.log(bgFetch.id); // "my-fetch"
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
