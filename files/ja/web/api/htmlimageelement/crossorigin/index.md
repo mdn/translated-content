@@ -32,7 +32,7 @@ translation_of: Web/API/HTMLImageElement/crossOrigin
 - `use-credentials`
   - : {{domxref("HTMLImageElement")}} によるリクエストは `cors` モードと `include` 認証モードを使用します。この要素によるすべての画像リクエストは、取得元のドメインに関係なく CORS を使用します。
 
-crossOrigin` が空の文字列 (`""`) の場合、`anonymous` モードが選択されます。
+`crossOrigin` が空の文字列 (`""`) の場合、`anonymous` モードが選択されます。
 
 ## 例
 

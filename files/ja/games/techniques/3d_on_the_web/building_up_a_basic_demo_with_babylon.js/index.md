@@ -89,6 +89,7 @@ engine.runRenderLoop(renderLoop);
 ## カメラの作成
 
 さて、セットアップコードができたところで、標準的なシーンコンポーネントであるカメラ、ライト、オブジェクトの実装について考える必要があります。まず、カメラから始めましょう。シーンの作成と `clearColor` を定義した行の下に、次の行を追加してください。
+
 ```js
 var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
 ```
@@ -165,7 +166,6 @@ torus.rotation.x = 1.5;
 ```
 
 これはトーラスを作成し、シーンに追加します。引数は、名前、直径、厚さ、テセレーション（分割数）、追加するシーンです。また、トーラスを少し左側に配置し、見やすくするために `x` 軸で回転させます。それでは、素材を追加してみましょう。
-
 
 ```js
 var torusMaterial = new BABYLON.StandardMaterial("material", scene);

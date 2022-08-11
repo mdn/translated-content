@@ -50,7 +50,7 @@ Three.js で開発を始める上で、必要なものはあまりありませ�
 <script>
   const WIDTH = window.innerWidth;
   const HEIGHT = window.innerHeight;
-	/* すべての JavaScript コードをここに置きます */
+  /* すべての JavaScript コードをここに置きます */
 </script>
 </body>
 </html>
@@ -196,7 +196,7 @@ const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
 
-TorusGeometry()` メソッドの引数で定義します。引数は `radius`, `tube diameter`, `radial segment count`, `tubular segment count` です。フォンの素材は箱のシンプルな基本素材よりも光沢があるように見えますが、今のところトーラスはただの黒にしか見えません。
+`TorusGeometry()` メソッドの引数で定義します。引数は `radius`, `tube diameter`, `radial segment count`, `tubular segment count` です。フォンの素材は箱のシンプルな基本素材よりも光沢があるように見えますが、今のところトーラスはただの黒にしか見えません。
 
 もっと楽しい定義済み図形を選べます。もう少し遊んでみましょう。トーラスを定義している行の下に、次の行を追加してください。
 
