@@ -9,14 +9,13 @@ translation_of: Web/SVG/Attribute/max
 
 <p>Five elements are using this attribute: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>示例</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
-<pre class="brush: html; highlight[3,5]">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;circle cx="60" cy="10" r="10"&gt;
     &lt;animate attributeName="cx" dur="4s" max="6s" repeatCount="indefinite"
         values="60 ; 110 ; 60 ; 10 ; 60" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/&gt;
@@ -25,8 +24,7 @@ translation_of: Web/SVG/Attribute/max
   &lt;/circle&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "200", "200")}}</p>
-</div>
+<p>{{EmbedLiveSample("示例", "200", "200")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

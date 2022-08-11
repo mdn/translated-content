@@ -24,15 +24,15 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>此外，在 SVG 中你可以分别定义填充色和边框色的不透明度，属性<code>fill-opacity</code>控制填充色的不透明度，属性<code>stroke-opacity</code>控制描边的不透明度。</p>
 
-<div class="note style-wrap">注意，FireFox 3+ 支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和填充/描边的不透明度分开使用。如果同时指定了 rgba 值和填充/描边不透明度，它们将都被调用。</div>
+<div class="note"><p><strong>备注：</strong> FireFox 3+ 支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和填充/描边的不透明度分开使用。如果同时指定了 rgba 值和填充/描边不透明度，它们将都被调用。</p></div>
 
 <h3 id="Stroke">描边</h3>
 
 <p>除了颜色属性，还有其他一些属性用来控制绘制描边的方式。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png"></p>
+<p><img alt="" src="svg_stroke_linecap_example.png"></p>
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
+<pre class="brush:xml">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/&gt;
   &lt;line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/&gt;
@@ -53,9 +53,9 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>还有一个<code>stroke-linejoin</code>属性，用来控制两条描边线段之间，用什么方式连接。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png"></p>
+<p><img alt="" src="svg_stroke_linejoin_example.png"></p>
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
+<pre class="brush:xml">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/&gt;
@@ -71,7 +71,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>最后，你可以通过指定<code>stroke-dasharray</code>属性，将虚线类型应用在描边上。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png"></p>
+<p><img alt="" src="svg_stroke_dasharray_example.png"></p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -89,7 +89,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>除了定义对象的属性外，你也可以通过 CSS 来样式化<code>填充</code>和<code>描边</code>。语法和在 HTML 里使用 CSS 一样，只不过你要把<code>background-color</code>、<code>border</code>改成<code>fill</code>和<code>stroke</code>。注意，不是所有的属性都能用 CSS 来设置。上色和填充的部分一般是可以用 CSS 来设置的，比如<code>fill</code>，<code>stroke</code>，<code>stroke-dasharray</code>等，但是不包括下面会提到的渐变和图案等功能。另外，<code>width</code>、<code>height</code>，以及路径的命令等等，都不能用 CSS 设置。判断它们能不能用 CSS 设置还是比较容易的。</p>
 
-<div class="note style-wrap"><a href="http://www.w3.org/TR/SVG/propidx.html">SVG 规范</a>将属性区分成 properties 和其他 attributes，前者是可以用 CSS 设置的，后者不能。</div>
+<div class="note"><p><strong>备注：</strong> <a href="http://www.w3.org/TR/SVG/propidx.html">SVG 规范</a>将属性区分成 properties 和其他 attributes，前者是可以用 CSS 设置的，后者不能。</p></div>
 
 <p>CSS 可以利用 style 属性插入到元素的行间：</p>
 

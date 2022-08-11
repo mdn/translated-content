@@ -9,9 +9,9 @@ translation_of: Web/SVG/Attribute/target
 
 <p>只有一个元素正在使用此属性：{{SVGElement("a")}}</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>示例</h2>
+
+<pre class="brush: css hidden">html, body, svg {
     height: 100%;
 }
 
@@ -21,9 +21,8 @@ text {
     text-decoration: underline;
 }
 </pre>
-</div>
 
-<pre class="brush: html; highlight[2,5,8]">&lt;svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;a href="https://developer.mozilla.org" target="_self"&gt;
     &lt;text x="0" y="20"&gt;在 iframe 中打开链接&lt;/text&gt;
     &lt;/a&gt;
@@ -36,8 +35,7 @@ text {
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample("topExample", "300", "120")}}</p>
-</div>
+<p>{{EmbedLiveSample("示例", "300", "120")}}</p>
 
 <h2 id="使用说明">使用说明</h2>
 
@@ -64,7 +62,7 @@ text {
  <p>当前 SVG 图像被与当前 SVG 图像在同一帧中相同矩形区域中的链接内容替换。</p>
 
  <div class="blockIndicator note">
- <p><strong>注意：</strong>这个值是从来没有很好的执行，之间的区别<code>_replace</code>，并<code>_self</code>已通过在浏览上下文的 HTML 定义的变化变得多余。使用<code>_self</code>以取代目前的 SVG 文件。</p>
+ <p><strong>备注：</strong> 这个值是从来没有很好的执行，之间的区别<code>_replace</code>，并<code>_self</code>已通过在浏览上下文的 HTML 定义的变化变得多余。使用<code>_self</code>以取代目前的 SVG 文件。</p>
  </div>
  </dd>
  <dt><code>_self</code></dt>
