@@ -7,9 +7,11 @@ translation_of: Glossary/undefined
 
 ## 例子
 
-    var x; //创建一个变量，但并没有赋值
+```js
+var x; //创建一个变量，但并没有赋值
 
-    console.log("X的值是", x)  //返回X的值是undefined
+console.log("X的值是", x)  //返回X的值是undefined
+```
 
 ## 更多
 

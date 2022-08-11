@@ -26,7 +26,7 @@ GLSL 不同于 JavaScript, 它是强类型语言，并且内置很多数学公�
 
 ```glsl
 void main() {
-	gl_Position = makeCalculationsToHaveCoordinates;
+  gl_Position = makeCalculationsToHaveCoordinates;
 }
 ```
 
@@ -38,7 +38,7 @@ void main() {
 
 ```glsl
 void main() {
-	gl_FragColor = makeCalculationsToHaveColor;
+  gl_FragColor = makeCalculationsToHaveColor;
 }
 ```
 
@@ -66,23 +66,23 @@ void main() {
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Shaders demo</title>
-	<style>
-		body { margin: 0; padding: 0; font-size: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
-	<script src="three.min.js"></script>
+    <meta charset="utf-8">
+    <title>MDN Games: Shaders demo</title>
+    <style>
+        body { margin: 0; padding: 0; font-size: 0; }
+        canvas { width: 100%; height: 100%; }
+    </style>
+    <script src="three.min.js"></script>
 </head>
 <body>
   <script id="vertexShader" type="x-shader/x-vertex">
-	// 顶点着色器代码在这里
+    // 顶点着色器代码在这里
   </script>
   <script id="fragmentShader" type="x-shader/x-fragment">
-	// 片段着色器代码在这里
+    // 片段着色器代码在这里
   </script>
   <script>
-	// 场景设置在这里
+    // 场景设置在这里
   </script>
 </body>
 </html>
@@ -90,9 +90,9 @@ void main() {
 
 他包含了一些基本信息比如 文档的 {{htmlelement("title")}}, 并且设置了{{htmlelement("canvas")}}元素 css 样式的宽高，Three.js 会插入到页面中占满整个可视区域。 {{htmlelement("script")}}元素在包含 Three.js 库的{{htmlelement("head")}}中。我们的代码将卸载{{htmlelement("body")}}标签中的 script 标签中：
 
-1.  首先将包含顶点着色器。
-2.  然后包含片段着色器。
-3.  最后会包含一些生成实际场景的 JavaScript 代码。
+1. 首先将包含顶点着色器。
+2. 然后包含片段着色器。
+3. 最后会包含一些生成实际场景的 JavaScript 代码。
 
 阅读之前，复制这些代码到一个新的文本文件中，保存到你的工作目录作为 `index.html`. 我们将在这个文件中创建一个简单的立方体来解释着色器是如何工作的。
 
@@ -108,7 +108,7 @@ void main() {
 
 ```glsl
 void main() {
-	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 ```
 
@@ -124,7 +124,7 @@ void main() {
 
 ```glsl
 void main() {
-	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 ```
 
@@ -142,8 +142,8 @@ void main() {
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial( {
-	vertexShader: document.getElementById( 'vertexShader' ).textContent,
-	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+    vertexShader: document.getElementById( 'vertexShader' ).textContent,
+    fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
 ```
 

@@ -13,10 +13,10 @@ translation_of: Learn/CSS/Building_blocks
 
 在开始本模块之前，你应该已经掌握：
 
-1.  使用计算机的基本知识，能够被动使用网络（也就是查看网页的内容）。
-2.  建立基本工作环境（详见[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），知道如何建立和管理文档（详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）。
-3.  HTML 基础知识（参见[HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块）。
-4.  CSS 基础知识（参见[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块）。
+1. 使用计算机的基本知识，能够被动使用网络（也就是查看网页的内容）。
+2. 建立基本工作环境（详见[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），知道如何建立和管理文档（详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）。
+3. HTML 基础知识（参见[HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块）。
+4. CSS 基础知识（参见[学习 CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块）。
 
 > **备注：** 如果你此刻正使用一台电脑/笔记本/其他设备，而你无法创建自己的文件，那你可以在诸如 JSBin 或 Glitch 等网络编辑程序上尝试（多数）程序案例。
 

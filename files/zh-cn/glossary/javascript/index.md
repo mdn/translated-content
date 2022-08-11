@@ -35,4 +35,4 @@ JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来�
 
 - [John Resig 的 Learning Advanced JavaScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 - MDN 的 {{Link("/en-US/docs/Web/JavaScript/reference")}} 参考文件
-- [_Eloquent JavaScript_ ](https://eloquentjavascript.net/)一书
+- [_Eloquent JavaScript_](https://eloquentjavascript.net/) 一书

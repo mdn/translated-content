@@ -22,11 +22,13 @@ translation_of: Glossary/Vendor_Prefix
 
 示例：
 
-    -webkit-transition: all 4s ease;
-    -moz-transition: all 4s ease;
-    -ms-transition: all 4s ease;
-    -o-transition: all 4s ease;
-    transition: all 4s ease;
+```css
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;
+```
 
 ## API 前缀
 

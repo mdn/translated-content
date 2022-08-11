@@ -169,7 +169,7 @@ p {
 
 #### 默认字体
 
-CSS 定义了 5 个常用的字体名称: ` serif, `` sans-serif, ``monospace`, `cursive,`和 `fantasy. `这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 `serif`, `sans-serif` 和 `monospace` 是比较好预测的，默认的情况应该比较合理，另一方面，`cursive` 和 `fantasy` 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。
+CSS 定义了 5 个常用的字体名称: `serif`, `sans-serif`, `monospace`, `cursive`, 和 `fantasy`. 这些都是非常通用的，当使用这些通用名称时，使用的字体完全取决于每个浏览器，而且它们所运行的每个操作系统也会有所不同。这是一种糟糕的情况，浏览器会尽力提供一个看上去合适的字体。 `serif`, `sans-serif` 和 `monospace` 是比较好预测的，默认的情况应该比较合理，另一方面，`cursive` 和 `fantasy` 是不太好预测的，我们建议使用它们的时候应该稍微注意一些，多多测试。
 
 五个名称定义如下：
 
@@ -363,10 +363,10 @@ text-shadow: 4px 4px 5px red;
 
 4 个属性如下：
 
-1.  阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), 但是 px 是比较合适的。这个值必须指定。
-2.  阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
-3.  模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
-4.  阴影的基础颜色，可以使用大多数的 CSS 颜色单位 [CSS color unit](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). 如果没有指定，默认为 `black`.
+1. 阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), 但是 px 是比较合适的。这个值必须指定。
+2. 阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
+3. 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。可以使用大多数的 CSS 单位 [length and size units](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+4. 阴影的基础颜色，可以使用大多数的 CSS 颜色单位 [CSS color unit](/zh-CN/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). 如果没有指定，默认为 `black`.
 
 > **备注：** 正偏移值可以向右移动阴影，但也可以使用负偏移值来左右移动阴影，例如 `-1px -1px`.
 
