@@ -47,7 +47,3 @@ signal.onabort = () => {
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
