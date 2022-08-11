@@ -54,7 +54,7 @@ Object 혹은 Map중에 어느 것을 사용할지를 결정하는데 도움을 
 
 WeakMap에 대한 더 많은 정보와 예제 코드 그리고 "왜 WeakMap을 사용하지?"를 보고 싶다면 {{jsxref("WeakMap")}} 페이지를 참고하면 된다.
 
-`WeakMap를 사용하는 한가지 경우는 객체의 사적인 정보를 저장하기 위해서 이거나 상세 구현 내용을 숨기기 위한 것이다. 다음의 예제는 `Nick Fitzgerald의 블로그 글- ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/)-에서 가져온 것이다. 객체가 가지고 있는 그렇지만 외부에 공개되지 않는(private) 데이터와 메서드들은 WeakMap객체인 privates에 저장이 된다. 인스턴스를 통해 접근 가능한 모든 것들과 prototype은 public이고 다른 것들은 외부에서는 접근이 불가하다 그 이유는 privates는 모듈로부터 내보내기(export)가 되지 않기 때문이다.
+`WeakMap`를 사용하는 한가지 경우는 객체의 사적인 정보를 저장하기 위해서 이거나 상세 구현 내용을 숨기기 위한 것이다. 다음의 예제는 Nick Fitzgerald의 블로그 글- ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/)-에서 가져온 것이다. 객체가 가지고 있는 그렇지만 외부에 공개되지 않는(private) 데이터와 메서드들은 `WeakMap`객체인 `privates`에 저장이 된다. 인스턴스를 통해 접근 가능한 모든 것들과 prototype은 public이고 다른 것들은 외부에서는 접근이 불가하다 그 이유는 `privates`는 모듈로부터 내보내기(export)가 되지 않기 때문이다.
 
 ```js
 const privates = new WeakMap();

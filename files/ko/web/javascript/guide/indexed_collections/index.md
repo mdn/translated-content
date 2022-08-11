@@ -73,7 +73,9 @@ var arr = Array(9.3);  // RangeError: Invalid array length
 
 ES2015에서 요소가 하나인 배열을 만들기 위해 Array.of 정적 메소드를 사용할 수 있습니다.
 
-    let wisenArray = Array.of(9.3) // wisenArray contains only one element 9.3
+```js
+let wisenArray = Array.of(9.3) // wisenArray contains only one element 9.3
+```
 
 ### 배열에 값 저장
 
@@ -182,11 +184,13 @@ colors.forEach(function(color) {
 
 ES2015 Arrow Function으로 다음과 같이 더 짧게 코드를 짤 수 있습니다.
 
-    var colors = ['red', 'green', 'blue'];
-    color.forEach(color => console.log(color));
-    // red
-    // green
-    // blue
+```js
+var colors = ['red', 'green', 'blue'];
+color.forEach(color => console.log(color));
+// red
+// green
+// blue
+```
 
 `forEach`에 인자로 주어진 함수는 배열의 각 요소에 대해 한번씩 실행이 되고 배열의 각 요소는 인자로 주어진 함수의 인자로 주어지게 됩니다. 할당 되지 않은 요소 값은 `forEach` 반복문에서 처리 되지 않습니다.
 
@@ -225,58 +229,76 @@ JavaScript 요소는 표준 객체 속성으로 저장되므로 {{jsxref ( "Stat
 
 {{jsxref("Array.concat", "concat()")}} 메서드는 두개의 배열을 합쳐 새로운 배열을 반환합니다.
 
-    var myArray = new Array('1', '2', '3');
-    myArray = myArray.concat('a', 'b', 'c');
-    // myArray is now ["1", "2", "3", "a", "b", "c"]
+```js
+var myArray = new Array('1', '2', '3');
+myArray = myArray.concat('a', 'b', 'c');
+// myArray is now ["1", "2", "3", "a", "b", "c"]
+```
 
 {{jsxref("Array.join", "join(delimiter = ',')")}} 메서드는 배열의 모든 요소를 주어진 구분자로 연결된 하나의 문자열을 반환 합니다.
 
-    var myArray = new Array('Wind', 'Rain', 'Fire');
-    var list = myArray.join(' - '); // list is "Wind - Rain - Fire"
+```js
+var myArray = new Array('Wind', 'Rain', 'Fire');
+var list = myArray.join(' - '); // list is "Wind - Rain - Fire"
+```
 
 {{jsxref("Array.push", "push()")}}메서드는 하나 혹은 그 이상의 요소를 배열의 마지막에 추가하고 추가된 요소를 포함한 길이를 반환합니다.
 
-    var myArray = new Array('1', '2');
-    myArray.push('3'); // myArray is now ["1", "2", "3"]
+```js
+var myArray = new Array('1', '2');
+myArray.push('3'); // myArray is now ["1", "2", "3"]
+```
 
 {{jsxref("Array.pop", "pop()")}} 메서드는 배열의 마지막 요소를 제거 하고 그 제거된 요소를 반환합니다.
 
-    var myArray = new Array('1', '2', '3');
-    var last = myArray.pop();
-    // myArray is now ["1", "2"], last = "3"
+```js
+var myArray = new Array('1', '2', '3');
+var last = myArray.pop();
+// myArray is now ["1", "2"], last = "3"
+```
 
 {{jsxref("Array.shift", "shift()")}}메서드는 배열의 첫번째 요소를 제거하고 그 제거된 요소를 반환합니다.
 
-    var myArray = new Array('1', '2', '3');
-    var first = myArray.shift();
-    // myArray is now ["2", "3"], first is "1"
+```js
+var myArray = new Array('1', '2', '3');
+var first = myArray.shift();
+// myArray is now ["2", "3"], first is "1"
+```
 
 {{jsxref("Array.shift", "unshift()")}}메서드는 하나 혹은 그 이상의 요소를 배열의 앞쪽에 추가하고 추가한 요소를 포함한 길이를 반환 합니다.
 
-    var myArray = new Array('1', '2', '3');
-    myArray.unshift('4', '5');
-    // myArray becomes ["4", "5", "1", "2", "3"]
+```js
+var myArray = new Array('1', '2', '3');
+myArray.unshift('4', '5');
+// myArray becomes ["4", "5", "1", "2", "3"]
+```
 
 {{jsxref("Array.slice", "slice(start_index, upto_index)")}}메서드는 배열의 특정 부분을 추출하여 그 추출된 부분을 포함하는 새로운 배열을 반환 합니다. upto_index에 해당하는 요소는 포함되지 않습니다.
 
-    var myArray = new Array('a', 'b', 'c', 'd', 'e');
-    myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
-                                   // until index 3, returning [ "b", "c", "d"]
+```js
+var myArray = new Array('a', 'b', 'c', 'd', 'e');
+myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
+                               // until index 3, returning [ "b", "c", "d"]
+```
 
 {{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} 메세드는 주어진 인덱스 요소를 포함하여 count_to_remove 갯수만큼 삭제 하고 주어진 요소로 바꿔 줍니다.
 
-    var myArray = new Array('1', '2', '3', '4', '5');
-    myArray.splice(1, 3, 'a', 'b', 'c', 'd');
-    // myArray is now ["1", "a", "b", "c", "d", "5"]
-    // This code started at index one (or where the "2" was),
-    // removed 3 elements there, and then inserted all consecutive
-    // elements in its place.
+```js
+var myArray = new Array('1', '2', '3', '4', '5');
+myArray.splice(1, 3, 'a', 'b', 'c', 'd');
+// myArray is now ["1", "a", "b", "c", "d", "5"]
+// This code started at index one (or where the "2" was),
+// removed 3 elements there, and then inserted all consecutive
+// elements in its place.
+```
 
 {{jsxref ( "Array.reverse", "reverse ()")}} 배열의 요소를 제자리에 배치합니다. 첫 번째 배열 요소가 마지막 요소가되고 마지막 요소가 첫 번째 요소가됩니다. 배열에 대한 참조를 반환합니다.
 
-    var myArray = new Array('1', '2', '3');
-    myArray.reverse();
-    // transposes the array so that myArray = ["3", "2", "1"]
+```js
+var myArray = new Array('1', '2', '3');
+myArray.reverse();
+// transposes the array so that myArray = ["3", "2", "1"]
+```
 
 {{jsxref ( "Array.sort", "sort ()")}} 배열의 요소를 제자리에 정렬하고 배열에 대한 참조를 반환합니다.
 
@@ -400,20 +422,24 @@ console.log(total) // Prints 60
 
 아래의 예제는 2차원 배열을 생성하는 예제입니다.
 
-    var a = new Array(4);
-    for (i = 0; i < 4; i++) {
-      a[i] = new Array(4);
-      for (j = 0; j < 4; j++) {
-        a[i][j] = '[' + i + ', ' + j + ']';
-      }
-    }
+```js
+var a = new Array(4);
+for (i = 0; i < 4; i++) {
+  a[i] = new Array(4);
+  for (j = 0; j < 4; j++) {
+    a[i][j] = '[' + i + ', ' + j + ']';
+  }
+}
+```
 
 이 예제는 다음과 같은 열을 포함하는 배열을 생성합니다.
 
-    Row 0: [0,0] [0,1] [0,2] [0,3]
-    Row 1: [1,0] [1,1] [1,2] [1,3]
-    Row 2: [2,0] [2,1] [2,2] [2,3]
-    Row 3: [3,0] [3,1] [3,2] [3,3]
+```
+Row 0: [0,0] [0,1] [0,2] [0,3]
+Row 1: [1,0] [1,1] [1,2] [1,3]
+Row 2: [2,0] [2,1] [2,2] [2,3]
+Row 3: [3,0] [3,1] [3,2] [3,3]
+```
 
 ### 배열과 정규표현식
 
@@ -435,9 +461,11 @@ function printArguments() {
 
 배열 프로토 타입 메서드는 배열과 비슷한 방식으로 문자에 순차적으로 액세스 할 수 있으므로 문자열에서도 사용할 수 있습니다.
 
-    Array.prototype.forEach.call('a string', function(chr) {
-      console.log(chr);
-    });
+```js
+Array.prototype.forEach.call('a string', function(chr) {
+  console.log(chr);
+});
+```
 
 ## 타입 배열
 
@@ -451,11 +479,11 @@ function printArguments() {
 
 ### 배열버퍼
 
-{{jsxref("ArrayBuffer")}}는 일반적이고, 고정길이의 이진 데이터 버퍼를 표현하기 위해 사용되는 데이터 타입입니다. `ArrayBuffer의 내용을 직접 수정할 수는 없는 대신 타입 배열 뷰 혹은 특정 형식 그리고 해당 버퍼의 내용을 읽고 쓸수 있게 해주는 `{{jsxref("DataView")}}`를 생성할 수 있습니다.`
+{{jsxref("ArrayBuffer")}}는 일반적이고, 고정길이의 이진 데이터 버퍼를 표현하기 위해 사용되는 데이터 타입입니다. `ArrayBuffer의 내용을 직접 수정할 수는 없는 대신 타입 배열 뷰 혹은 특정 형식 그리고 해당 버퍼의 내용을 읽고 쓸수 있게 해주는`{{jsxref("DataView")}}`를 생성할 수 있습니다.`
 
 ### 타입 배열 뷰
 
-타입 배열 뷰들은 스스로를 나타낼 수 있는 이름과 `Int8`, `Uint32`, `Float64등의 일반적인 숫자 형들을 위한 뷰를 제공합니다.Uint8ClampedArray라는 특별한 타입 배열 뷰가 있습니다. 0부터 255까지의 값을 가질수 있습니다. 예를 들며, Uint8ClampedArray는 `[Canvas data processing](/en-US/docs/Web/API/ImageData)에 유용합니다.
+타입 배열 뷰들은 스스로를 나타낼 수 있는 이름과 `Int8`, `Uint32`, `Float64`등의 일반적인 숫자 형들을 위한 뷰를 제공합니다.Uint8ClampedArray라는 특별한 타입 배열 뷰가 있습니다. `0`부터 `255`까지의 값을 가질수 있습니다. 예를 들며, `Uint8ClampedArray`는 [Canvas data processing](/en-US/docs/Web/API/ImageData)에 유용합니다.
 
 | Type                                     | Value Range                   | Size in bytes | Description                                                                  | Web IDL type          | Equivalent C type               |
 | ---------------------------------------- | ----------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |

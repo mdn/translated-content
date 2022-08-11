@@ -86,7 +86,7 @@ JavaScript를 실험하기 유용한 두 도구가 Firefox에 내장되어 있�
 
 ### 웹 콘솔
 
-[웹 콘솔](/ko/docs/Tools/Web_Console)은 현재 로드된 페이지에 대한 정보를 보이고, 또한 여러분이 현재 페이지에서 JavaScript 식을 실행해볼 수 있는[ 명령어 입력줄(command line)](/ko/docs/Tools/Web_Console#The_command_line_interpreter)을 제공합니다.
+[웹 콘솔](/ko/docs/Tools/Web_Console)은 현재 로드된 페이지에 대한 정보를 보이고, 또한 여러분이 현재 페이지에서 JavaScript 식을 실행해볼 수 있는 [명령어 입력줄(command line)](/ko/docs/Tools/Web_Console#The_command_line_interpreter)을 제공합니다.
 
 웹 콘솔을 열기 위해서는, Firefox의 "도구" 메뉴 하위에 있는 "개발자" 메뉴의 "웹 콘솔"을 선택(윈도우와 리눅스에서는 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>, 맥에서는 <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>)합니다. 브라우저 창의 아래에 웹 콘솔이 나타납니다. 콘솔의 바닥을 따라 나온 것이 여러분이 JavaScript를 입력할 수 있는 명령어 입력줄이고, 실행 결과는 바로 위 공간에 표시됩니다:
 
@@ -94,7 +94,9 @@ JavaScript를 실험하기 유용한 두 도구가 Firefox에 내장되어 있�
 
 이 콘솔은 eval과 완전히 동일하게 동작합니다:마지막 입력된 표현식이 반환되죠. 간단하게 생각해서, 콘솔에 뭔가 입력할 때마다 eval로 감싼 console.log로 둘러싸인 형태라고 보시면 됩니다.
 
-    function greetMe(yourName) { alert('Hello ' + yourName); } console.log(eval('3 + 5'));
+```js
+function greetMe(yourName) { alert('Hello ' + yourName); } console.log(eval('3 + 5'));
+```
 
 ### Scratchpad
 
@@ -123,8 +125,8 @@ JavaScript 작성을 시작하기 위해서, Scratchpad를 열고 첫 JavaScript
 
 패드에서 코드를 선택하고 Ctrl + R 키를 눌러 브라우저에서 펼쳐지는 것을 지켜보십시오! 다음 페이지에서 이 가이드는 JavaScript 구문 및 언어 기능을 소개하므로보다 복잡한 응용 프로그램을 작성할 수 있습니다. 그러나 당분간은 `(function () { "use strict"`를 코드 앞에 추가하고`}}) ();`를 코드마지막에 추가하세요. 아직은 이코드가 뭔지 잘 모르겠지만 나중에 이 코드가 의미하는 것을 배울 것입니다, 지금은 간단히 다음과 같다고 생각하세요.
 
-1.  성능을 크게 개선합니다.
-2.  초보자가 실수하게 만드는 Javascript의 일부 시맨틱을 막습니다.
-3.  콘솔에서 실행되는 코드 스니펫이 서로 상호 작용하지 못하도록합니다 (예 : 한 콘솔 실행에서 생성 된 내용을 다른 콘솔 실행에 사용하는 경우).
+1. 성능을 크게 개선합니다.
+2. 초보자가 실수하게 만드는 Javascript의 일부 시맨틱을 막습니다.
+3. 콘솔에서 실행되는 코드 스니펫이 서로 상호 작용하지 못하도록합니다 (예 : 한 콘솔 실행에서 생성 된 내용을 다른 콘솔 실행에 사용하는 경우).
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
