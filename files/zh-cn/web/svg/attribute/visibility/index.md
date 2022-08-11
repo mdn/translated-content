@@ -7,53 +7,37 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/visibility
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>visibility</code>属性让你能够控制一个图形元素的可见性。用了值<code>hidden</code>或者值<code>collapse</code>，当前的图形元素将不可见。</p>
+`visibility`属性让你能够控制一个图形元素的可见性。用了值`hidden`或者值`collapse`，当前的图形元素将不可见。
 
-<div class="note"><strong>注意：</strong>如果 {{ SVGElement("tspan") }}元素、{{ SVGElement("tref") }}元素或{{ SVGElement("altGlyph") }}元素上的<code>visibility</code>属性设置为<code>hidden</code>，则文本变得不可见，但是依然占用文本布局计算的空间。</div>
+> **备注：** 如果 {{ SVGElement("tspan") }}元素、{{ SVGElement("tref") }}元素或{{ SVGElement("altGlyph") }}元素上的`visibility`属性设置为`hidden`，则文本变得不可见，但是依然占用文本布局计算的空间。
 
-<p>根据属性{{ SVGAttr("pointer-events") }}的值，图形元素如果属性<code>visibility 值设置为 hidden，依然能够响应事件。</code></p>
+根据属性{{ SVGAttr("pointer-events") }}的值，图形元素如果属性`visibility 值设置为 hidden，依然能够响应事件。`
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("visibility","CSS visibility") }}以了解更多信息。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("visibility","CSS visibility") }}以了解更多信息。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong>visible</strong> | hidden | collapse | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                                     |
+| ------ | -------------------------------------------- |
+| 值     | **visible** \| hidden \| collapse \| inherit |
+| 可变性 | Yes                                          |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素楞以使用<code>visibility</code>属性：</p>
+下列元素楞以使用`visibility`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Graphics">图形元素</a> »</li>
- <li><a href="/en/SVG/Element#Text_content_elements">文本内容元素</a> »</li>
-</ul>
+- [图形元素](/en/SVG/Element#Graphics) »
+- [文本内容元素](/en/SVG/Element#Text_content_elements) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>属性{{ SVGAttr("display") }} </li>
- <li>{{ cssxref("visibility","CSS visibility") }}</li>
-</ul>
+- 属性{{ SVGAttr("display") }}
+- {{ cssxref("visibility","CSS visibility") }}

@@ -7,77 +7,51 @@ tags:
   - 需要完善
 translation_of: Web/SVG/Attribute/shape-rendering
 ---
-<p>« <a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/zh-CN/docs/Web/SVG/Attribute)
 
-<p>指定 SVG 元素{{SVGElement("path")}}的渲染模式。</p>
+指定 SVG 元素{{SVGElement("path")}}的渲染模式。
 
-<h2 id="使用参考">使用参考</h2>
+## 使用参考
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类型</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong>auto</strong> | optimizeSpeed | crispEdges | geometricPrecision | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可运动</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类型   | 外观属性                                                                 |
+| ------ | ------------------------------------------------------------------------ |
+| 值     | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit |
+| 可运动 | Yes                                                                      |
 
-<dl>
- <dt>auto</dt>
- <dd>让浏览器自动权衡渲染速度、平滑度、精确度。默认是倾向于精确度而非平滑度和速度。</dd>
- <dt>optimizeSpeed</dt>
- <dd>偏向渲染速度，浏览器会关闭反锯齿模式。（速度）</dd>
- <dt>crispEdges</dt>
- <dd>偏向更加清晰锐利的边缘的渲染。浏览器在渲染的时候会关闭反锯齿模式，且会让线条的位置和宽度和显示器边缘对齐。（锐度）</dd>
- <dt>geometricPrecision</dt>
- <dd>偏向渲染平滑的曲线。（平滑）</dd>
-</dl>
+- auto
+  - : 让浏览器自动权衡渲染速度、平滑度、精确度。默认是倾向于精确度而非平滑度和速度。
+- optimizeSpeed
+  - : 偏向渲染速度，浏览器会关闭反锯齿模式。（速度）
+- crispEdges
+  - : 偏向更加清晰锐利的边缘的渲染。浏览器在渲染的时候会关闭反锯齿模式，且会让线条的位置和宽度和显示器边缘对齐。（锐度）
+- geometricPrecision
+  - : 偏向渲染平滑的曲线。（平滑）
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg"
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
   version="1.1" width="100" height="100"
-  shape-rendering="optimizeSpeed"&gt;&lt;!-- 这个示例在 Firefox 下看区别更明显 --&gt;</pre>
+  shape-rendering="optimizeSpeed"><!-- 这个示例在 Firefox 下看区别更明显 -->
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td>
-    <p>shape-rendering: geometricPrecision:</p>
+| shape-rendering: geometricPrecision:![shape-rendering:geometricPrecision](http://download.g63.ru/svg/shape-rendering-geometricPrecision.svg) | shape-rendering: optimizeSpeed![shape-rendering:optimizeSpeed](http://download.g63.ru/svg/shape-rendering-optimizeSpeed.svg) |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 
-    <p><img alt="shape-rendering:geometricPrecision" src="http://download.g63.ru/svg/shape-rendering-geometricPrecision.svg" style="height: 210px; width: 200px;"></p>
-   </td>
-   <td>
-    <p>shape-rendering: optimizeSpeed</p>
+同样，你也可以在 CSS 样式中使用 shape-rendering:
 
-    <p><img alt="shape-rendering:optimizeSpeed" src="http://download.g63.ru/svg/shape-rendering-optimizeSpeed.svg" style="height: 210px; width: 200px;"></p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<p>同样，你也可以在 CSS 样式中使用 shape-rendering:</p>
-
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg"
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
   version="1.1" width="100" height="100"
-  style="shape-rendering:optimizeSpeed;"&gt;</pre>
+  style="shape-rendering:optimizeSpeed;">
+```
 
-<h2 id="关联元素">关联元素</h2>
+## 关联元素
 
-<p>下面的元素可以使用这个属性</p>
+下面的元素可以使用这个属性
 
-<ul>
- <li><a href="/en/SVG/Element#Shape">Shape elements</a> »</li>
-</ul>
+- [Shape elements](/en/SVG/Element#Shape) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

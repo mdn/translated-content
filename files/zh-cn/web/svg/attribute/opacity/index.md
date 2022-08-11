@@ -8,62 +8,44 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/opacity
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>opacity 属性指定了一个对象或一组对象的透明度，也就是说，元素后面的背景的透过率。</p>
+opacity 属性指定了一个对象或一组对象的透明度，也就是说，元素后面的背景的透过率。
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性，请阅读 {{ cssxref("opacity","CSS opacity") }}以了解更多信息。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性，请阅读 {{ cssxref("opacity","CSS opacity") }}以了解更多信息。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;opacity-value&gt; | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                   |
+| ------ | -------------------------- |
+| 值     | <opacity-value> \| inherit |
+| 可变性 | Yes                        |
 
-<dl>
- <dt>&lt;opacity-value&gt;</dt>
- <dd>一致的不透明度设置，作为一个<a href="/en/SVG/Content_type#Number">&lt;number&gt;</a>被应用到整个对象上。任何超过范围 0.0 到 1.0 的值都会被压回这个范围。0.0 表示完全透明，1.0 表示完全不透明。</dd>
-</dl>
+- \<opacity-value>
+  - : 一致的不透明度设置，作为一个[\<number>](/en/SVG/Content_type#Number)被应用到整个对象上。任何超过范围 0.0 到 1.0 的值都会被压回这个范围。0.0 表示完全透明，1.0 表示完全不透明。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用<code>opacity</code>属性：</p>
+以下元素可以使用`opacity`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Graphics">图形元素</a> »</li>
- <li>{{ SVGElement("a") }}</li>
- <li>{{ SVGElement("defs") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("g") }}</li>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("missing-glyph") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("switch") }}</li>
- <li>{{ SVGElement("symbol") }}</li>
-</ul>
+- [图形元素](/en/SVG/Element#Graphics) »
+- {{ SVGElement("a") }}
+- {{ SVGElement("defs") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("g") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("missing-glyph") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("switch") }}
+- {{ SVGElement("symbol") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref("opacity","CSS opacity") }}</li>
-</ul>
+- {{ cssxref("opacity","CSS opacity") }}

@@ -3,43 +3,29 @@ title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
 translation_of: Web/SVG/Attribute/text-decoration
 ---
-<p>« <a href="/en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
-<p><code>text-decoration</code> 属性的作用跟{{ cssxref("text-decoration","CSS Text Decoration") }} 特性差不多，当然除了它是一个 CSS 属性。浏览 {{ cssxref("text-decoration","CSS Text Decoration") }} 获取进一步的信息。</p>
+`text-decoration` 属性的作用跟{{ cssxref("text-decoration","CSS Text Decoration") }} 特性差不多，当然除了它是一个 CSS 属性。浏览 {{ cssxref("text-decoration","CSS Text Decoration") }} 获取进一步的信息。
 
-<h2 id="使用环境">使用环境</h2>
+## 使用环境
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">分类</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>none | underline | overline | line-through | blink | <strong>inherit</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">是否可用于动画</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 分类           | 外观属性                                                              |
+| -------------- | --------------------------------------------------------------------- |
+| 值             | none \| underline \| overline \| line-through \| blink \| **inherit** |
+| 是否可用于动画 | Yes                                                                   |
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<pre class="notranslate">后代元素可以继承 text-decoration 这个属性</pre>
+```plain
+后代元素可以继承 text-decoration 这个属性
+```
 
-<ul>
- <li><a href="/en/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Text content elements](/en/SVG/Element#TextContent) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{ cssxref("text-decoration", "CSS Text Decoration") }}</li>
-</ul>
+- {{ cssxref("text-decoration", "CSS Text Decoration") }}

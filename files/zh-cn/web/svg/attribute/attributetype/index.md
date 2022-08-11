@@ -7,58 +7,40 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/attributeType
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>该属性指定目标属性和它相对应的值处于哪个命名空间里。</p>
+该属性指定目标属性和它相对应的值处于哪个命名空间里。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画属性目标属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>CSS | XML | <strong>auto</strong></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 动画属性目标属性                                                                      |
+| -------- | ------------------------------------------------------------------------------------- |
+| 值       | CSS \| XML \| **auto**                                                                |
+| 可变性   | No                                                                                    |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
 
-<p>这个属性可取下列值之一：</p>
+这个属性可取下列值之一：
 
-<dl>
- <dt>CSS</dt>
- <dd>指定{{ SVGAttr("attributeName") }}的值是一个 CSS 属性名。</dd>
- <dt> </dt>
- <dt>XML</dt>
- <dd>指定{{ SVGAttr("attributeName") }}的值是一个 XML 属性名，在目标元素的默认 XML 命名空间里。</dd>
- <dt>auto</dt>
- <dd>编译器将把{{ SVGAttr("attributeName") }}匹配到目标元素的一个属性。用户代理先搜索 CSS 属性列表以找出一个匹配的属性名，如果找不到，再为这个元素搜索默认 XML 命名空间。</dd>
-</dl>
+- CSS
+  - : 指定{{ SVGAttr("attributeName") }}的值是一个 CSS 属性名。
+- XML
 
-<h2 id="示例">示例</h2>
+  - : 指定{{ SVGAttr("attributeName") }}的值是一个 XML 属性名，在目标元素的默认 XML 命名空间里。
 
-<h2 id="元素">元素</h2>
+- auto
+  - : 编译器将把{{ SVGAttr("attributeName") }}匹配到目标元素的一个属性。用户代理先搜索 CSS 属性列表以找出一个匹配的属性名，如果找不到，再为这个元素搜索默认 XML 命名空间。
 
-<p>下列元素可以使用<code>attributeType</code>属性：</p>
+## 示例
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("animateColor") }}</li>
- <li>{{ SVGElement("animateTransform") }}</li>
- <li>{{ SVGElement("set") }}</li>
-</ul>
+## 元素
 
-<h2 id="规范">规范</h2>
+下列元素可以使用`attributeType`属性：
+
+- {{ SVGElement("animate") }}
+- {{ SVGElement("animateColor") }}
+- {{ SVGElement("animateTransform") }}
+- {{ SVGElement("set") }}
+
+## 规范
 
 {{Specifications}}

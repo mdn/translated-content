@@ -6,87 +6,67 @@ tags:
   - SVG 属性
 translation_of: Web/SVG/Attribute/r
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>r</code></strong> 属性用来定义圆的半径。</p>
+**`r`** 属性用来定义圆的半径。
 
-<p>有两个元素在使用该属性：{{SVGElement("circle")}} 和 {{SVGElement("radialGradient")}}</p>
+有两个元素在使用该属性：{{SVGElement("circle")}} 和 {{SVGElement("radialGradient")}}
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;radialGradient r="0" id="myGradient000"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;radialGradient r="50%" id="myGradient050"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;radialGradient r="100%" id="myGradient100"&gt;
-    &lt;stop offset="0"    stop-color="white" /&gt;
-    &lt;stop offset="100%" stop-color="black" /&gt;
-  &lt;/radialGradient&gt;
+```html
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient r="0" id="myGradient000">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="50%" id="myGradient050">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
+  <radialGradient r="100%" id="myGradient100">
+    <stop offset="0"    stop-color="white" />
+    <stop offset="100%" stop-color="black" />
+  </radialGradient>
 
-  &lt;circle cx="50"  cy="50" r="0"/&gt;
-  &lt;circle cx="150" cy="50" r="25"/&gt;
-  &lt;circle cx="250" cy="50" r="50"/&gt;
+  <circle cx="50"  cy="50" r="0"/>
+  <circle cx="150" cy="50" r="25"/>
+  <circle cx="250" cy="50" r="50"/>
 
-  &lt;rect x="20"  y="120" width="60" height="60" fill="url(#myGradient000)" /&gt;
-  &lt;rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" /&gt;
-  &lt;rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="20"  y="120" width="60" height="60" fill="url(#myGradient000)" />
+  <rect x="120" y="120" width="60" height="60" fill="url(#myGradient050)" />
+  <rect x="220" y="120" width="60" height="60" fill="url(#myGradient100)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('示例', '100%', 200)}}</p>
+{{EmbedLiveSample('示例', '100%', 200)}}
 
-<h2 id="圆">圆</h2>
+## 圆
 
-<p>对于 {{SVGElement('circle')}}，<code>r</code> 用来定义圆的半径以及它的大小。取值小于或等于零，圆将不会被绘制出来。</p>
+对于 {{SVGElement('circle')}}，`r` 用来定义圆的半径以及它的大小。取值小于或等于零，圆将不会被绘制出来。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 值     | **[<length>](/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
+| ------ | -------------------------------------------------------------------------------------------------------------- |
+| 默认值 | `0`                                                                                                            |
+| 可变性 | Yes                                                                                                            |
 
-<p><strong>注：</strong>起始于 SVG2，<code>r</code> 是一个几何属性，意味着该属性也可以用作圆的 CSS 属性。</p>
+**注：**起始于 SVG2，`r` 是一个几何属性，意味着该属性也可以用作圆的 CSS 属性。
 
-<h2 id="径向渐变">径向渐变</h2>
+## 径向渐变
 
-<p>对于 {{ SVGElement("radialGradient") }}，<code>r</code> 用来定义径向渐变终止圆的半径。</p>
+对于 {{ SVGElement("radialGradient") }}，`r` 用来定义径向渐变终止圆的半径。
 
-<p>渐变将以此绘制出来：<strong>100%</strong> 渐变停止点会被映射到终止圆的一周上。取值小于或等于零，将会使用最后一个渐变 {{ SVGElement("stop") }} 的颜色和不透明度，导致该区域被绘制为单色。</p>
+渐变将以此绘制出来：**100%** 渐变停止点会被映射到终止圆的一周上。取值小于或等于零，将会使用最后一个渐变 {{ SVGElement("stop") }} 的颜色和不透明度，导致该区域被绘制为单色。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong><a href="/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></strong> | <strong><a href="/docs/Web/SVG/Content_type#Percentage">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 值     | **[<length>](/docs/Web/SVG/Content_type#Length)** \| **[<percentage>](/docs/Web/SVG/Content_type#Percentage)** |
+| ------ | -------------------------------------------------------------------------------------------------------------- |
+| 默认值 | `50%`                                                                                                          |
+| 可变性 | Yes                                                                                                            |
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

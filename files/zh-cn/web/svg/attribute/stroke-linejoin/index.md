@@ -3,267 +3,278 @@ title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
 translation_of: Web/SVG/Attribute/stroke-linejoin
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>stroke-linejoin</code></strong> 属性指明路径的转角处使用的形状或者绘制的基础形状。</p>
+**`stroke-linejoin`** 属性指明路径的转角处使用的形状或者绘制的基础形状。
 
-<div class="blockIndicator note"><strong>备注：</strong> 作为显示属性， <code>stroke-linejoin</code> 能被用做 CSS 属性。</div>
+> **备注：** 作为显示属性， `stroke-linejoin` 能被用做 CSS 属性。
 
-<p>作为显示属性，该属性能被应用到任何元素，但只对这 9 种元素有效： {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, {{SVGElement('tspan')}}</p>
+作为显示属性，该属性能被应用到任何元素，但只对这 9 种元素有效： {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, {{SVGElement('tspan')}}
 
-<div id="topExample">
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+## 示例
 
-<pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+  <!--
   Upper left path:
   Effect of the "miter" value
-  --&gt;
-  &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter" /&gt;
+  -->
+  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter" />
 
-  &lt;!--
+  <!--
   Center path:
   Effect of the "round" value
-  --&gt;
-  &lt;path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="round" /&gt;
+  -->
+  <path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="round" />
 
-  &lt;!--
+  <!--
   Upper right path:
   Effect of the "bevel" value
-  --&gt;
-  &lt;path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="bevel" /&gt;
+  -->
+  <path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="bevel" />
 
-  &lt;!--
+  <!--
   Bottom left path:
   Effect of the "miter-clip" value
   with fallback to "miter" if not supported.
-  --&gt;
-  &lt;path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter-clip" /&gt;
+  -->
+  <path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" />
 
-  &lt;!--
+  <!--
   Bottom right path:
   Effect of the "arcs" value
   with fallback to "miter" if not supported.
-  --&gt;
-  &lt;path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="arcs" /&gt;
+  -->
+  <path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="arcs" />
 
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;g id="highlight"&gt;
-    &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-          stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5"   r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2"   r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5.5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-  &lt;use xlink:href="#highlight" x="6" /&gt;
-  &lt;use xlink:href="#highlight" x="12" /&gt;
-  &lt;use xlink:href="#highlight" x="2" y="6" /&gt;
-  &lt;use xlink:href="#highlight" x="8" y="6" /&gt;
-&lt;/svg&gt;
-</pre>
+  -->
+  <g id="highlight">
+    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5"   r="0.05" fill="pink" />
+    <circle cx="3" cy="2"   r="0.05" fill="pink" />
+    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+  </g>
+  <use xlink:href="#highlight" x="6" />
+  <use xlink:href="#highlight" x="12" />
+  <use xlink:href="#highlight" x="2" y="6" />
+  <use xlink:href="#highlight" x="8" y="6" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 400)}}</p>
-</div>
+{{EmbedLiveSample('示例', '100%', 400)}}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">值</th>
-   <td><code>arcs</code> | <code>bevel</code> |<code>miter</code> | <code>miter-clip</code> | <code>round</code></td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td><code>miter</code></td>
-  </tr>
-  <tr>
-   <th scope="row">可动画性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 值       | `arcs` \| `bevel` \|`miter` \| `miter-clip` \| `round` |
+| -------- | ------------------------------------------------------ |
+| 默认值   | `miter`                                                |
+| 可动画性 | Yes                                                    |
 
-<h3 id="arcs">arcs</h3>
+### arcs
 
-<div class="blockIndicator note"><strong>说明：</strong> <code>arcs</code> 来自于 SVG2 但尚未被广泛支持，详情参见 <a href="#Browser_compatibility">浏览器兼容性</a></div>
+> **备注：** `arcs` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#Browser_compatibility)
 
-<p><code>arcs</code> 值指示将使用圆弧拐角来连接路径线段。 通过用与连接点的外边缘具有相同曲率的圆弧在连接点处延伸笔触的外边缘来形成弧形。</p>
+`arcs` 值指示将使用圆弧拐角来连接路径线段。 通过用与连接点的外边缘具有相同曲率的圆弧在连接点处延伸笔触的外边缘来形成弧形。
 
-<h4 id="示例">示例</h4>
+#### 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of the "arcs" value --&gt;
-  &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3" stroke="black" fill="none"
-        stroke-linejoin="arcs" /&gt;
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "arcs" value -->
+  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3" stroke="black" fill="none"
+        stroke-linejoin="arcs" />
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;g id="p"&gt;
-    &lt;path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
-          stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <g id="p">
+    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('arcs', '100%', 200)}}</p>
+{{EmbedLiveSample('arcs', '100%', 200)}}
 
-<h3 id="bevel">bevel</h3>
+### bevel
 
-<p>The <code>bevel</code> 用斜角连接路径段。</p>
+The `bevel` 用斜角连接路径段。
 
-<h4 id="示例_2">示例</h4>
+#### 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of the "bevel" value --&gt;
-  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
-        stroke-linejoin="bevel" /&gt;
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "bevel" value -->
+  <path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="bevel" />
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;g id="p"&gt;
-    &lt;path d="M1,5 l2,-3 l2,3"
-          stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <g id="p">
+    <path d="M1,5 l2,-3 l2,3"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('bevel', '100%', 200)}}</p>
+{{EmbedLiveSample('bevel', '100%', 200)}}
 
-<h3 id="miter">miter</h3>
+### miter
 
-<p>The <code>miter</code> 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。</p>
+The `miter` 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
 
-<div class="blockIndicator note"><p><strong>备注：</strong> 如果超出了{{SVGAttr('stroke-miterlimit')}}，则会退回到 <code>bevel</code>。</p></div>
+> **备注：** 如果超出了{{SVGAttr('stroke-miterlimit')}}，则会退回到 `bevel`。
 
-<h4 id="示例_3">示例</h4>
+#### 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of the "miter" value --&gt;
-  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
-        stroke-linejoin="miter" /&gt;
+```html
+<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "miter" value -->
+  <path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="miter" />
 
-  &lt;!-- Effect of the "miter" value on a sharp angle
-       where de default miter limit is exceeded --&gt;
-  &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
-        stroke-linejoin="miter" /&gt;
+  <!-- Effect of the "miter" value on a sharp angle
+       where de default miter limit is exceeded -->
+  <path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
+        stroke-linejoin="miter" />
 
-  &lt;!-- the following red dotted line show where
-       the miter value falls back to the bevel value --&gt;
-  &lt;path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/&gt;
+  <!-- the following red dotted line show where
+       the miter value falls back to the bevel value -->
+  <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
-  &lt;!-- the following pink lines highlight the position of the path for each stroke --&gt;
-  &lt;g&gt;
-    &lt;path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+  <!-- the following pink lines highlight the position of the path for each stroke -->
+  <g>
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
 
-    &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="7"    cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="7.75" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="8.5"  cy="5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+    <path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="7"    cy="5" r="0.05" fill="pink" />
+    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
+    <circle cx="8.5"  cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('miter', '100%', 200)}}</p>
+{{EmbedLiveSample('miter', '100%', 200)}}
 
-<h3 id="miter-clip">miter-clip</h3>
+### miter-clip
 
-<div class="blockIndicator note"><strong>说明：</strong> <code>miter-clip</code> 来自于 SVG2 但尚未被广泛支持，详情参见 <a href="#Browser_compatibility">浏览器兼容性</a></div>
+> **备注：** `miter-clip` 来自于 SVG2 但尚未被广泛支持，详情参见 [浏览器兼容性](#Browser_compatibility)
 
-<p>The <code>miter-clip</code> 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。</p>
+The `miter-clip` 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。
 
-<p>如果超过了{{SVGAttr('stroke-miterlimit')}}，则斜切将被裁剪为等于{{SVGAttr('stroke-miterlimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比 <code>mitt</code> 更好的渲染效果。</p>
+如果超过了{{SVGAttr('stroke-miterlimit')}}，则斜切将被裁剪为等于{{SVGAttr('stroke-miterlimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比 `mitt` 更好的渲染效果。
 
-<h4 id="示例_4">示例</h4>
+#### 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of the "miter-clip" value --&gt;
-  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
-        stroke-linejoin="miter-clip" /&gt;
+```html
+<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "miter-clip" value -->
+  <path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" />
 
-  &lt;!-- Effect of the "miter-clip" value on a sharp angle
-       where de default miter limit is exceeded --&gt;
-  &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
-        stroke-linejoin="miter-clip" /&gt;
+  <!-- Effect of the "miter-clip" value on a sharp angle
+       where de default miter limit is exceeded -->
+  <path d="M7,5 l0.75,-3 l0.75,3" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" />
 
-  &lt;!-- the following red dotted line show where the clip should happen --&gt;
-  &lt;path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/&gt;
+  <!-- the following red dotted line show where the clip should happen -->
+  <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
-  &lt;!-- the following pink lines highlight the position of the path for each stroke --&gt;
-  &lt;g&gt;
-    &lt;path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
+  <!-- the following pink lines highlight the position of the path for each stroke -->
+  <g>
+    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
 
-    &lt;path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="7"    cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="7.75" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="8.5"  cy="5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+    <path d="M7,5 l0.75,-3 l0.75,3" stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="7"    cy="5" r="0.05" fill="pink" />
+    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
+    <circle cx="8.5"  cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('miter-clip', '100%', 200)}}</p>
+{{EmbedLiveSample('miter-clip', '100%', 200)}}
 
-<h3 id="round">round</h3>
+### round
 
-<p><code>round</code> 使用圆角连接路径片段。</p>
+`round` 使用圆角连接路径片段。
 
-<h4 id="示例_5">示例</h4>
+#### 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Effect of the "round" value --&gt;
-  &lt;path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
-        stroke-linejoin="round" /&gt;
+```html
+<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <!-- Effect of the "round" value -->
+  <path d="M1,5 l2,-3 l2,3" stroke="black" fill="none"
+        stroke-linejoin="round" />
 
-  &lt;!--
+  <!--
   the following pink lines highlight the
   position of the path for each stroke
-  --&gt;
-  &lt;g id="p"&gt;
-    &lt;path d="M1,5 l2,-3 l2,3"
-          stroke="pink" fill="none" stroke-width="0.025" /&gt;
-    &lt;circle cx="1" cy="5" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="3" cy="2" r="0.05" fill="pink" /&gt;
-    &lt;circle cx="5" cy="5" r="0.05" fill="pink" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <g id="p">
+    <path d="M1,5 l2,-3 l2,3"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5" r="0.05" fill="pink" />
+    <circle cx="3" cy="2" r="0.05" fill="pink" />
+    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample('round', '100%', 200)}}</p>
+{{EmbedLiveSample('round', '100%', 200)}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,102 +8,100 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/text
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code style="font-style: normal; line-height: 1.5;">text</code>元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 text 上。</p>
+`text`元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 text 上。
 
-<h2 id="使用上下文">使用上下文</h2>
+## 使用上下文
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg"
-     width="100px" height="30px" viewBox="0 0 1000 300"&gt;
+```xml
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="100px" height="30px" viewBox="0 0 1000 300">
 
-  &lt;text x="250" y="150"
+  <text x="250" y="150"
         font-family="Verdana"
-        font-size="55"&gt;
+        font-size="55">
     Hello, out there
-  &lt;/text&gt;
+  </text>
 
-  &lt;!-- Show outline of canvas using 'rect' element --&gt;
-  &lt;rect x="1" y="1" width="998" height="298"
-        fill="none" stroke="1" stroke-width="2" /&gt;
-&lt;/svg&gt;
-</pre>
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x="1" y="1" width="998" height="298"
+        fill="none" stroke="1" stroke-width="2" />
+</svg>
+```
 
-<p>&lt;text&gt;元素用来绘制文本。下面这段代码展示了如何在坐标系中绘制一段文本。</p>
+\<text>元素用来绘制文本。下面这段代码展示了如何在坐标系中绘制一段文本。
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px"&gt;
-  &lt;text x="10" y="20"&gt;SVG Text Example&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+  <text x="10" y="20">SVG Text Example</text>
+</svg>
+```
 
-<p>可以旋转 SVG 文本。下面的代码做了一个演示。</p>
+可以旋转 SVG 文本。下面的代码做了一个演示。
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px"&gt;
-  &lt;text x="10"  y="20"
-        transform="rotate(30 20,40)"&gt;
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+  <text x="10"  y="20"
+        transform="rotate(30 20,40)">
     SVG Text Rotation example
-  &lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+  </text>
+</svg>
+```
 
-<p>SVG 文本还可以应用样式。</p>
+SVG 文本还可以应用样式。
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px"&gt;
-  &lt;text x="10"  y="20"
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+  <text x="10"  y="20"
         style="font-family: Times New Roman;
                font-size  : 24;
                stroke     : #00ff00;
-               fill       : #0000ff;"&gt;
+               fill       : #0000ff;">
     SVG text styling
-  &lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+  </text>
+</svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("dx") }}</li>
- <li>{{ SVGAttr("dy") }}</li>
- <li>{{ SVGAttr("text-anchor") }}</li>
- <li>{{ SVGAttr("rotate") }}</li>
- <li>{{ SVGAttr("textLength") }}</li>
- <li>{{ SVGAttr("lengthAdjust") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("dx") }}
+- {{ SVGAttr("dy") }}
+- {{ SVGAttr("text-anchor") }}
+- {{ SVGAttr("rotate") }}
+- {{ SVGAttr("textLength") }}
+- {{ SVGAttr("lengthAdjust") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGTextElement">SVGTextElement</a></code>接口。</p>
+该元素实现了[`SVGTextElement`](/en/DOM/SVGTextElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.text")}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("tspan") }}</li>
- <li>{{ SVGElement("tref") }}</li>
- <li>{{ SVGElement("altGlyph") }}</li>
-</ul>
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("tref") }}
+- {{ SVGElement("altGlyph") }}

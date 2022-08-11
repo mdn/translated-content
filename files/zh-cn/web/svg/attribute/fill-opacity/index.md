@@ -8,55 +8,33 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/fill-opacity
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>该属性指定了填色的不透明度或当前对象的内容物的不透明度。</p>
+该属性指定了填色的不透明度或当前对象的内容物的不透明度。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Opacity_value">&lt;opacity-value&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">初始值</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 外观属性                                                                            |
+| -------- | ----------------------------------------------------------------------------------- |
+| 值       | [<opacity-value>](/en/SVG/Content_type#Opacity_value) \| inherit                    |
+| 初始值   | 1                                                                                   |
+| 可变性   | Yes                                                                                 |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>fill-opacity</code>属性：</p>
+下列元素可以使用`fill-opacity`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Shape">元素元素</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">文本内容元素</a> »</li>
-</ul>
+- [元素元素](/en/SVG/Element#Shape) »
+- [文本内容元素](/en/SVG/Element#TextContent) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGAttr("stroke-opacity") }}</li>
- <li>{{ SVGAttr("opacity") }}</li>
-</ul>
+- {{ SVGAttr("stroke-opacity") }}
+- {{ SVGAttr("opacity") }}

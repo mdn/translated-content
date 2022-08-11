@@ -8,121 +8,117 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Element/feDiffuseLighting
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。</p>
+滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
 
-<p>滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重<code>arithmetic 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。</code></p>
+滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重`arithmetic 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。`
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下示例演示了一个圆上的<code>feDiffuseLighting</code>元素的效果，演示了每种可用的光源，光的方向来自左上角。</p>
+以下示例演示了一个圆上的`feDiffuseLighting`元素的效果，演示了每种可用的光源，光的方向来自左上角。
 
-<pre class="brush: html">&lt;svg width="440" height="140" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- No light is applied --&gt;
-  &lt;text text-anchor="middle" x="60" y="22"&gt;No Light&lt;/text&gt;
-  &lt;circle cx="60" cy="80" r="50" fill="green" /&gt;
+  <!-- No light is applied -->
+  <text text-anchor="middle" x="60" y="22">No Light</text>
+  <circle cx="60" cy="80" r="50" fill="green" />
 
-  &lt;!-- the light source is a fePointLight element --&gt;
-  &lt;text text-anchor="middle" x="170" y="22"&gt;fePointLight&lt;/text&gt;
-  &lt;filter id="lightMe1"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;fePointLight x="150" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- the light source is a fePointLight element -->
+  <text text-anchor="middle" x="170" y="22">fePointLight</text>
+  <filter id="lightMe1">
+    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
+      <fePointLight x="150" y="60" z="20" />
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" /&gt;
+  <circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" />
 
-  &lt;!-- the light source is a feDistantLight element --&gt;
-  &lt;text text-anchor="middle" x="280" y="22"&gt;feDistantLight&lt;/text&gt;
-  &lt;filter id="lightMe2"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;feDistantLight azimuth="240" elevation="20"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- the light source is a feDistantLight element -->
+  <text text-anchor="middle" x="280" y="22">feDistantLight</text>
+  <filter id="lightMe2">
+    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
+      <feDistantLight azimuth="240" elevation="20"/>
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" /&gt;
+  <circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" />
 
-  &lt;!-- the light source is a feSpotLight source --&gt;
-  &lt;text text-anchor="middle" x="390" y="22"&gt;feSpotLight&lt;/text&gt;
-  &lt;filter id="lightMe3"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
-                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  <!-- the light source is a feSpotLight source -->
+  <text text-anchor="middle" x="390" y="22">feSpotLight</text>
+  <filter id="lightMe3">
+    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
+      <feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
+                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/>
+    </feDiffuseLighting>
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    <feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+  </filter>
 
-  &lt;circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" />
+</svg>
+```
 
-<p>预计的呈现：</p>
+预计的呈现：
 
-<p><img alt="Expected rendering for the example" src="/files/4447/feDiffuseLighting.png" style="height: 120px; width: 430px;"></p>
+![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
 
-<p>实时呈现：</p>
+实时呈现：
 
-<p>{{EmbedLiveSample("Example",470,170)}}</p>
+{{EmbedLiveSample("Example",470,170)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter">滤镜属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
-</ul>
+- [核心属性](/en/SVG/Attribute#Core) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [滤镜属性](/en/SVG/Attribute#Filter) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
- <li>{{ SVGAttr("surfaceScale") }}</li>
- <li>{{ SVGAttr("diffuseConstant") }}</li>
- <li>{{ SVGAttr("kernelUnitLength") }}</li>
-</ul>
+- {{ SVGAttr("in") }}
+- {{ SVGAttr("surfaceScale") }}
+- {{ SVGAttr("diffuseConstant") }}
+- {{ SVGAttr("kernelUnitLength") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGFEDiffuseLightingElement">SVGFEDiffuseLightingElement</a></code>接口。</p>
+该元素实现了[`SVGFEDiffuseLightingElement`](/en/DOM/SVGFEDiffuseLightingElement)接口。
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("feBlend") }}</li>
- <li>{{ SVGElement("feColorMatrix") }}</li>
- <li>{{ SVGElement("feComponentTransfer") }}</li>
- <li>{{ SVGElement("feComposite") }}</li>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
- <li>{{ SVGElement("feDistantLight") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
- <li>{{ SVGElement("feImage") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li>{{ SVGElement("feMorphology") }}</li>
- <li>{{ SVGElement("feOffset") }}</li>
- <li>{{ SVGElement("fePointLight") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
- <li>{{ SVGElement("feSpotLight") }}</li>
- <li>{{ SVGElement("feTile") }}</li>
- <li>{{ SVGElement("feTurbulence") }}</li>
- <li><a href="/en/SVG/Tutorial/Filter_effects">SVG 教程：滤镜效果</a></li>
-</ul>
+- {{ SVGElement("filter") }}
+- {{ SVGElement("feBlend") }}
+- {{ SVGElement("feColorMatrix") }}
+- {{ SVGElement("feComponentTransfer") }}
+- {{ SVGElement("feComposite") }}
+- {{ SVGElement("feConvolveMatrix") }}
+- {{ SVGElement("feDisplacementMap") }}
+- {{ SVGElement("feDistantLight") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feGaussianBlur") }}
+- {{ SVGElement("feImage") }}
+- {{ SVGElement("feMerge") }}
+- {{ SVGElement("feMorphology") }}
+- {{ SVGElement("feOffset") }}
+- {{ SVGElement("fePointLight") }}
+- {{ SVGElement("feSpecularLighting") }}
+- {{ SVGElement("feSpotLight") }}
+- {{ SVGElement("feTile") }}
+- {{ SVGElement("feTurbulence") }}
+- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)

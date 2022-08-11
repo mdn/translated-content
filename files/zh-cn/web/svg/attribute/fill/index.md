@@ -7,77 +7,43 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/fill
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>fill</code>属性根据它的使用环境，拥有两个意义。</p>
+`fill`属性根据它的使用环境，拥有两个意义。
 
-<p>默认地，当动画元素结束时，目标元素的外观属性不再应用该效果。在动画元素结束后，要还保持这个动画的的值，就需要用到<code>fill</code>属性。</p>
+默认地，当动画元素结束时，目标元素的外观属性不再应用该效果。在动画元素结束后，要还保持这个动画的的值，就需要用到`fill`属性。
 
-<p>对于形状元素和文本，<code>fill</code>属性是外观属性，用来定义给定图形元素内部的颜色。哪一块算是“内部”取决于形状本身以及{{ SVGAttr("fill-rule") }} 属性的值。作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。</p>
+对于形状元素和文本，`fill`属性是外观属性，用来定义给定图形元素内部的颜色。哪一块算是“内部”取决于形状本身以及{{ SVGAttr("fill-rule") }} 属性的值。作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<h3 id="对动画元素">对动画元素</h3>
+### 对动画元素
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画定时属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong>remove</strong> | freeze</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#FillAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 动画定时属性                                                                 |
+| -------- | ---------------------------------------------------------------------------- |
+| 值       | **remove** \| freeze                                                         |
+| 可变性   | No                                                                           |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FillAttribute) |
 
-<dl>
- <dt>remove（默认值）</dt>
- <dd>在动画的激活持续时间结束后，动画效果会移除（不再应用）。在动画的激活结束后，动画不再对目标元素有影响（除非动画重新开始）。</dd>
- <dt>freeze</dt>
- <dd>在动画激活持续时间结束后，文档持续时间的剩余时间里（或者直到动画重新开始）动画效果会“冻结”着。</dd>
-</dl>
+- remove（默认值）
+  - : 在动画的激活持续时间结束后，动画效果会移除（不再应用）。在动画的激活结束后，动画不再对目标元素有影响（除非动画重新开始）。
+- freeze
+  - : 在动画激活持续时间结束后，文档持续时间的剩余时间里（或者直到动画重新开始）动画效果会“冻结”着。
 
-<h3 id="对形状元素">对形状元素</h3>
+### 对形状元素
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Paint">&lt;paint&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/painting.html#FillProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 外观属性                                                                     |
+| -------- | ---------------------------------------------------------------------------- |
+| 值       | [<paint>](/en/SVG/Content_type#Paint)                                        |
+| 可变性   | Yes                                                                          |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>fill</code>属性：</p>
+下列元素可以使用`fill`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Animation_elements">动画元素</a> »</li>
- <li><a href="/en/SVG/Element#Shape">形状元素</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">文本内容元素</a> »</li>
-</ul>
+- [动画元素](/en/SVG/Element#Animation_elements) »
+- [形状元素](/en/SVG/Element#Shape) »
+- [文本内容元素](/en/SVG/Element#TextContent) »

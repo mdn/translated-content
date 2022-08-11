@@ -7,60 +7,48 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/stroke
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>stroke</code>属性定义了给定图形元素的外轮廓的颜色。它的默认值是<strong>none</strong>。</p>
+`stroke`属性定义了给定图形元素的外轮廓的颜色。它的默认值是**none**。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Paint">&lt;paint&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>是</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                              |
+| ------ | ------------------------------------- |
+| 值     | [<paint>](/en/SVG/Content_type#Paint) |
+| 可变性 | 是                                    |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>​</p>
+​
 
-<h2 id="SVG_Line">SVG 描边的线</h2>
+## SVG 描边的线
 
-<h3 id="示例1：用stroke属性画一条绿色的直线.">示例 1：用 stroke 属性画一条绿色的直线。</h3>
+### 示例 1：用 stroke 属性画一条绿色的直线。
 
-<pre class="brush: html">&lt;svg height="50" width ="300"&gt;
-    &lt;path stroke = "green" d="M5 20 1215 0" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg height="50" width ="300">
+    <path stroke = "green" d="M5 20 1215 0" />
+</svg>
+```
 
-<h3 id="sect1"> </h3>
+###
 
-<h3 id="示例2：用Stroke属性画一个拥有蓝色边框的黑色的圆形">示例 2：用 Stroke 属性画一个拥有蓝色边框的黑色的圆形</h3>
+### 示例 2：用 Stroke 属性画一个拥有蓝色边框的黑色的圆形
 
-<pre class="brush: html">​​&lt;svg height="200" width="200"&gt;
-    &lt;circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill ="black" /&gt;
-&lt;/svg&gt;</pre>
+```html
+​​<svg height="200" width="200">
+    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill ="black" />
+</svg>
+```
 
-<p> </p>
+## 元素
 
-<h2 id="元素">元素</h2>
+下列元素可以使用`stroke`属性：
 
-<p>下列元素可以使用<code>stroke</code>属性：</p>
+- [形状元素](https://developer.mozilla.org/en/SVG/Element#Shape) »
+- [文本内容元素](https://developer.mozilla.org/en/SVG/Element#TextContent) »
 
-<ul>
- <li><a href="https://developer.mozilla.org/en/SVG/Element#Shape">形状元素</a> »</li>
- <li><a href="https://developer.mozilla.org/en/SVG/Element#TextContent">文本内容元素</a> »</li>
-</ul>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

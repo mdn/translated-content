@@ -6,60 +6,47 @@ tags:
   - SVG 属性
 translation_of: Web/SVG/Attribute/color
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>color</code> 属性用来为 {{ SVGAttr("fill") }} 属性、{{ SVGAttr("stroke") }} 属性、{{ SvgAttr("stop-color") }} 属性、{{ SVGAttr("flood-color") }} 属性和 {{ SVGAttr("lighting-color") }} 属性提供一个潜在的间接值（<code>currentColor</code>）。</p>
+`color` 属性用来为 {{ SVGAttr("fill") }} 属性、{{ SVGAttr("stroke") }} 属性、{{ SvgAttr("stop-color") }} 属性、{{ SVGAttr("flood-color") }} 属性和 {{ SVGAttr("lighting-color") }} 属性提供一个潜在的间接值（`currentColor`）。
 
-<p>作为一个外观属性，它还可以直接用作 CSS 样式表的属性。请阅读 {{ cssxref("color","CSS color") }} 以了解更多信息。</p>
+作为一个外观属性，它还可以直接用作 CSS 样式表的属性。请阅读 {{ cssxref("color","CSS color") }} 以了解更多信息。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Color">&lt;color&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG11/color.html#ColorProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 外观属性                                                                     |
+| -------- | ---------------------------------------------------------------------------- |
+| 值       | [<color>](/en/SVG/Content_type#Color) \| inherit                             |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/color.html#ColorProperty) |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;g color="green"&gt;
-    &lt;rect width="50" height="50" fill="currentColor" /&gt;
-    &lt;circle r="25" cx="70" cy="70" stroke="currentColor" fill="none" stroke-width="5" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <g color="green">
+    <rect width="50" height="50" fill="currentColor" />
+    <circle r="25" cx="70" cy="70" stroke="currentColor" fill="none" stroke-width="5" />
+  </g>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', '110') }}</p>
+{{ EmbedLiveSample('Example', '100%', '110') }}
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>color</code>属性：</p>
+下列元素可以使用`color`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Text_content_elements">文本内容元素</a> »</li>
- <li><a href="/en/SVG/Element#Shape_elements">形状元素</a> »</li>
- <li>{{ SVGElement("stop") }}</li>
- <li>{{ SVGElement("feFlood") }}</li>
- <li>{{ SVGElement("feDiffuseLighting") }}</li>
- <li>{{ SVGElement("feSpecularLighting") }}</li>
-</ul>
+- [文本内容元素](/en/SVG/Element#Text_content_elements) »
+- [形状元素](/en/SVG/Element#Shape_elements) »
+- {{ SVGElement("stop") }}
+- {{ SVGElement("feFlood") }}
+- {{ SVGElement("feDiffuseLighting") }}
+- {{ SVGElement("feSpecularLighting") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

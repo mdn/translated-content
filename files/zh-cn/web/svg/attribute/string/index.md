@@ -3,44 +3,26 @@ title: string
 slug: Web/SVG/Attribute/string
 translation_of: Web/SVG/Attribute/string
 ---
-<div>{{SVGRef}}{{deprecated_header("SVG 2")}}</div>
+{{SVGRef}}{{deprecated_header("SVG 2")}}
 
-<p>The <strong><code>string</code></strong> attribute is a hint to the user agent, and specifies a list of formats that the font referenced by the parent {{SVGElement("font-face-uri")}} element supports.</p>
+The **`string`** attribute is a hint to the user agent, and specifies a list of formats that the font referenced by the parent {{SVGElement("font-face-uri")}} element supports.
 
-<p>Only one element is using this attribute: {{SVGElement("font-face-format")}}</p>
+Only one element is using this attribute: {{SVGElement("font-face-format")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Anything">&lt;anything&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Value         | [`<anything>`](/en-US/docs/Web/SVG/Content_type#Anything) |
+| ------------- | --------------------------------------------------------- |
+| Default value | _None_                                                    |
+| Animatable    | No                                                        |
 
-<dl>
- <dt><code>&lt;anything&gt;</code></dt>
- <dd>
- <p>This value specifies a list of formats that are supported by the font referenced by the parent {{SVGElement("font-face-uri")}} element.</p>
+- `<anything>`
+  - : This value specifies a list of formats that are supported by the font referenced by the parent {{SVGElement("font-face-uri")}} element.The available types are: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, and `"svg"`. See the {{cssxref("@font-face/src", "src")}} descriptor of the {{cssxref("@font-face")}} at-rule for more information.
 
- <p>The available types are: <code>"woff"</code>, <code>"woff2"</code>, <code>"truetype"</code>, <code>"opentype"</code>, <code>"embedded-opentype"</code>, and <code>"svg"</code>. See the {{cssxref("@font-face/src", "src")}} descriptor of the {{cssxref("@font-face")}} at-rule for more information.</p>
- </dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

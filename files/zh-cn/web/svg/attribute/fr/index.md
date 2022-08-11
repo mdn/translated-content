@@ -7,66 +7,51 @@ tags:
   - SVG 径向渐变焦点
 translation_of: Web/SVG/Attribute/fr
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。</p>
+对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en-US/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>非</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute">SVG 1.1 (2nd Edition): The radialGradient element</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 无                                                                                                                           |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 值       | [<length>](/zh-CN/docs/Web/SVG/Content_type#Length)                                                                          |
+| 可变性   | 非                                                                                                                           |
+| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html  language-html"><code class="language-html">&lt;?xml version="1.0" standalone="no"?&gt;
+```html
+<?xml version="1.0" standalone="no"?>
 
-&lt;svg width="120" height="120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-      &lt;radialGradient id="Gradient"
-            cx="0.5" cy="0.5" r="0.5" </code>fx="0.35" fy="0.35" fr="5%"<code class="language-html">&gt;
-        &lt;stop offset="0%" stop-color="red"/&gt;
-        &lt;stop offset="100%" stop-color="blue"/&gt;
-      &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+<svg width="120" height="120" version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <radialGradient id="Gradient"
+            cx="0.5" cy="0.5" r="0.5" fx="0.35" fy="0.35" fr="5%">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
+  </defs>
 
-  &lt;rect x="10" y="10" rx="15" ry="15" width="100" height="100"
-        fill="url(#Gradient)" stroke="black" stroke-width="2"/&gt;
+  <rect x="10" y="10" rx="15" ry="15" width="100" height="100"
+        fill="url(#Gradient)" stroke="black" stroke-width="2"/>
 
-  &lt;circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/&gt;
-  &lt;circle cx="35" cy="35" r="2" fill="white" stroke="white"/&gt;
-  &lt;circle cx="60" cy="60" r="2" fill="white" stroke="white"/&gt;
-  &lt;text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt"&gt;(fx,fy)&lt;/text&gt;
-  &lt;text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt"&gt;(cx,cy)&lt;/text&gt;
+  <circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/>
+  <circle cx="35" cy="35" r="2" fill="white" stroke="white"/>
+  <circle cx="60" cy="60" r="2" fill="white" stroke="white"/>
+  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">(fx,fy)</text>
+  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">(cx,cy)</text>
 
-&lt;/svg&gt;</code></pre>
+</svg>
+```
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用 <code>fr</code> 属性：</p>
+下列元素可以使用 `fr` 属性：
 
-<ul>
- <li>{{ SVGElement("radialGradient") }}</li>
-</ul>
+- {{ SVGElement("radialGradient") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

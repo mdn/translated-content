@@ -7,59 +7,47 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/height
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>该属性在用户坐标系统中标识了一个垂直长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的高度（请阅读每个元素的文档以了解例外情况）。</p>
+该属性在用户坐标系统中标识了一个垂直长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的高度（请阅读每个元素的文档以了解例外情况）。
 
-<p>除了{{ SVGElement("svg") }}元素之外，别的元素都必须指定该属性，{{ SVGElement("svg") }}的高度默认是<strong>100%</strong>，而{{ SVGElement("filter") }}元素以及{{ SVGElement("mask") }}元素的默认高度是<strong>120%</strong>。</p>
+除了{{ SVGElement("svg") }}元素之外，别的元素都必须指定该属性，{{ SVGElement("svg") }}的高度默认是**100%**，而{{ SVGElement("filter") }}元素以及{{ SVGElement("mask") }}元素的默认高度是**120%**。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Length">&lt;length&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 无                                      |
+| ------ | --------------------------------------- |
+| 值     | [<length>](/en/SVG/Content_type#Length) |
+| 可变性 | Yes                                     |
 
-<p>{{ page("/zh-CN/Content_type","Length") }}</p>
+{{ page("/zh-CN/Content_type","Length") }}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;?xml version="1.0"?&gt;
-&lt;svg width="120" height="120"
+```html
+<?xml version="1.0"?>
+<svg width="120" height="120"
      viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;rect x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+  <rect x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用 <code>height </code>属性：</p>
+下列元素可以使用 `height `属性：
 
-<ul>
- <li><a href="/en/SVG/Element#FilterPrimitive">滤镜元素</a> »</li>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("foreignObject") }}</li>
- <li>{{ SVGElement("image") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("rect") }}</li>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("use") }}</li>
- <li>{{ SVGElement("mask") }}</li>
-</ul>
+- [滤镜元素](/en/SVG/Element#FilterPrimitive) »
+- {{ SVGElement("filter") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("rect") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("use") }}
+- {{ SVGElement("mask") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

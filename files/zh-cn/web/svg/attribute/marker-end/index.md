@@ -3,77 +3,64 @@ title: marker-end
 slug: Web/SVG/Attribute/marker-end
 translation_of: Web/SVG/Attribute/marker-end
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>marker-end</code></strong> 属性将在给定<a href="/en-US/docs/Web/SVG/Element#Shape_elements">形状</a>的最终顶点绘制的箭头或者多边形标记。</p>
+**`marker-end`** 属性将在给定[形状](/zh-CN/docs/Web/SVG/Element#Shape_elements)的最终顶点绘制的箭头或者多边形标记。
 
-<p>对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的 marker-start 属性和 <code>marker-end</code> 的值都不是 <code>none</code> ，然后再最后一个顶点渲染两个图标。 对于一个 <code>&lt;path&gt;</code> 元素， 对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 <code>marker-end</code> 仅在<a href="/en-US/docs/Web/SVG/Attribute/d#Path_commands">路径数据</a>的最终顶点上呈现。</p>
+对于除 SVG 的 polyline 和 path 元素之外的所有形状元素，最后的一个顶点与第一个顶点相同。在这种情况下，如果 SVG 的 marker-start 属性和 `marker-end` 的值都不是 `none` ，然后再最后一个顶点渲染两个图标。 对于一个 `<path>` 元素， 对于每个封闭的子路径，他的最后一个顶点都与第一个顶点相同。 `marker-end` 仅在[路径数据](/zh-CN/docs/Web/SVG/Attribute/d#Path_commands)的最终顶点上呈现。
 
-<p><strong>Note:</strong> 作为一个图像属性，<code>marker-end</code> 可以用作 CSS 属性。</p>
+**Note:** 作为一个图像属性，`marker-end` 可以用作 CSS 属性。
 
-<p>作为一个图像属性，他可以应用到所有的元素上，但是他只针对于一下其中元素有效:  {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}}</p>
+作为一个图像属性，他可以应用到所有的元素上，但是他只针对于一下其中元素有效: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, and {{SVGElement("rect")}}
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="triangle" viewBox="0 0 10 10"
+```html
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="triangle" viewBox="0 0 10 10"
           refX="1" refY="5"
           markerUnits="strokeWidth"
           markerWidth="10" markerHeight="10"
-          orient="auto"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-  &lt;polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-end="url(#triangle)"/&gt;
-&lt;/svg&gt;
-</pre>
+          orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/>
+    </marker>
+  </defs>
+  <polyline fill="none" stroke="black"
+      points="20,100 40,60 70,80 100,20" marker-end="url(#triangle)"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("示例", "200", "200")}}</p>
+{{EmbedLiveSample("示例", "200", "200")}}
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>none</code> | <code>&lt;marker-ref&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Value         | `none` \| `<marker-ref>` |
+| ------------- | ------------------------ |
+| Default value | `none`                   |
+| Animatable    | Yes                      |
 
-<dl>
- <dt><code>none</code></dt>
- <dd>表示将不会在终点绘制任何符号。</dd>
- <dt><code>&lt;marker-ref&gt;</code></dt>
- <dd>这个值表示的是对 {{SVGElement("marker")}} 元素的引用，将在终点绘制该元素.。如果引用无效，将不会绘制任何东西。</dd>
-</dl>
+- `none`
+  - : 表示将不会在终点绘制任何符号。
+- `<marker-ref>`
+  - : 这个值表示的是对 {{SVGElement("marker")}} 元素的引用，将在终点绘制该元素.。如果引用无效，将不会绘制任何东西。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li>{{SVGElement("marker")}}</li>
- <li>{{SVGAttr("marker-start")}}</li>
- <li>{{SVGAttr("marker-mid")}}</li>
-</ul>
+- {{SVGElement("marker")}}
+- {{SVGAttr("marker-start")}}
+- {{SVGAttr("marker-mid")}}

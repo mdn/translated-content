@@ -3,72 +3,54 @@ title: id
 slug: Web/SVG/Attribute/id
 translation_of: Web/SVG/Attribute/id
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><code>id</code></strong> 属性给予元素一个唯一名称。</p>
+**`id`** 属性给予元素一个唯一名称。
 
-<p>所有元素均可使用该属性。</p>
+所有元素均可使用该属性。
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;svg width="120" height="120" viewPort="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style type="text/css"&gt;
-    &lt;![CDATA[
+```html
+<svg width="120" height="120" viewPort="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[
       #smallRect {
         stroke: #000066;
         fill: #00cc00;
       }
-    ]]&gt;
-  &lt;/style&gt;
+    ]]>
+  </style>
 
-  &lt;rect id="smallRect" x="10" y="10" width="100" height="100" /&gt;
-&lt;/svg&gt;
-</pre>
+  <rect id="smallRect" x="10" y="10" width="100" height="100" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("示例", "120", "120")}}</p>
+{{EmbedLiveSample("示例", "120", "120")}}
 
-<h2 id="用法说明">用法说明</h2>
+## 用法说明
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;id&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">可动画</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| 值     | <id>   |
+| ------ | ------ |
+| 默认值 | _None_ |
+| 可动画 | No     |
 
-<dl>
- <dt>&lt;id&gt;</dt>
- <dd>
- <p>指定元素的 ID。 该 ID 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。</p>
+- \<id>
+  - : 指定元素的 ID。 该 ID 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。
 
- <div class="blockIndicator note">
- <p><strong>备注：</strong> 应当避免使用会被解析为 SVG 视图规范的 <code>id</code> 值（如<code>MyDrawing.svg#svgView(viewBox(0,200,1000,1000))</code>），或被解析为用作 URL 目标片段的基本媒体片段的 <code>id</code> 值。</p>
- </div>
- <p>该属性取值必须在 XML 文档中有效。 独立的 SVG 文档使用 XML 1.0 语法，该语法指定有效的 ID 仅包含指定的字符（字母，数字和一些标点符号），开头不能是数字，点（.）字符或 连字符减号（-）。</p>
- </dd>
-</dl>
+    > **备注：** 应当避免使用会被解析为 SVG 视图规范的 `id` 值（如 `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`），或被解析为用作 URL 目标片段的基本媒体片段的 `id` 值。
 
-<h2 id="规范">规范</h2>
+    该属性取值必须在 XML 文档中有效。 独立的 SVG 文档使用 XML 1.0 语法，该语法指定有效的 ID 仅包含指定的字符（字母，数字和一些标点符号），开头不能是数字，点（.）字符或 连字符减号（-）。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 参考
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/id">HTML <code>id</code></a></li>
- <li>{{SVGAttr("class")}}</li>
-</ul>
+- [HTML `id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
+- {{SVGAttr("class")}}

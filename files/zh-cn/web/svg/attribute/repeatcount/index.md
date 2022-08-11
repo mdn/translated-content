@@ -3,43 +3,29 @@ title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 translation_of: Web/SVG/Attribute/repeatCount
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考</a></p>
+« [SVG 属性参考](/en/SVG/Attribute)
 
-<p>这个属性表示动画将发生的次数。</p>
+这个属性表示动画将发生的次数。
 
-<p>这个属性的值指定了重复的次数。它也可以包括用分数值表示。它的值必须大于 0。</p>
+这个属性的值指定了重复的次数。它也可以包括用分数值表示。它的值必须大于 0。
 
-<h2 id="用法解释">用法解释</h2>
+## 用法解释
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画时间属性</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#Number">&lt;number&gt;</a> | "indefinite"</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| 类别       | 动画时间属性                                            |
+| ---------- | ------------------------------------------------------- |
+| Value      | [<number>](/en/SVG/Content_type#Number) \| "indefinite" |
+| Animatable | No                                                      |
 
-<p>{{ page("/en/SVG/Content_type","Number") }}</p>
+{{ page("/en/SVG/Content_type","Number") }}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>repeatCount</code> attribute</p>
+The following elements can use the `repeatCount` attribute
 
-<ul>
- <li><a href="/en/SVG/Element#Animation">Animation elements</a> »</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

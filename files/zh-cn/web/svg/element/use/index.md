@@ -9,67 +9,64 @@ tags:
   - 需要浏览器兼容性
 translation_of: Web/SVG/Element/use
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>use</code>元素在 SVG 文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的 DOM 中，然后将其粘贴到<code>use</code>元素的位置，很像 HTML5 中的克隆<a href="/en-US/docs/Web/HTML/Element/template">模板元素</a>。因为克隆的节点是不可见的，所以当使用<a href="/en/CSS">CSS</a>样式化一个<code>use</code>元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的 DOM 不能保证继承 CSS 属性，除非你明文设置使用<a href="/en/CSS/inheritance">CSS 继承</a>。</p>
+`use`元素在 SVG 文档内取得目标节点，并在别的地方复制它们。它的效果等同于这些节点被深克隆到一个不可见的 DOM 中，然后将其粘贴到`use`元素的位置，很像 HTML5 中的克隆[模板元素](/zh-CN/docs/Web/HTML/Element/template)。因为克隆的节点是不可见的，所以当使用[CSS](/en/CSS)样式化一个`use`元素以及它的隐藏的后代元素的时候，必须小心注意。隐藏的、克隆的 DOM 不能保证继承 CSS 属性，除非你明文设置使用[CSS 继承](/en/CSS/inheritance)。
 
-<p>出于安全原因，一些浏览器可能在 use 元素上应用同源策略，还有可能拒绝载入 xlink:href 属性内的跨源 URI。</p>
+出于安全原因，一些浏览器可能在 use 元素上应用同源策略，还有可能拒绝载入 xlink:href 属性内的跨源 URI。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;svg width="100%" height="100%" xmlns="<a href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a>" xmlns:xlink="<a href="http://www.w3.org/1999/xlink">http://www.w3.org/1999/xlink</a>"&gt;
-  &lt;style&gt;
+```xml
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
     .classA { fill:red }
-  &lt;/style&gt;
-  &lt;defs&gt;
-    &lt;g id="Port"&gt;
-      &lt;circle style="fill:inherit" r="10"/&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
+  </style>
+  <defs>
+    <g id="Port">
+      <circle style="fill:inherit" r="10"/>
+    </g>
+  </defs>
 
-  &lt;text y="15"&gt;black&lt;/text&gt;
-  &lt;use x="50" y="10" xlink:href="#Port" /&gt;
-  &lt;text y="35"&gt;red&lt;/text&gt;
-  &lt;use x="50" y="30" xlink:href="#Port" class="classA"/&gt;
-  &lt;text y="55"&gt;blue&lt;/text&gt;
-  &lt;use x="50" y="50" xlink:href="#Port" style="fill:blue"/&gt;
- &lt;/svg&gt;
-</pre>
+  <text y="15">black</text>
+  <use x="50" y="10" xlink:href="#Port" />
+  <text y="35">red</text>
+  <use x="50" y="30" xlink:href="#Port" class="classA"/>
+  <text y="55">blue</text>
+  <use x="50" y="50" xlink:href="#Port" style="fill:blue"/>
+ </svg>
+```
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/en/SVG/Attribute#Core) »
+- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/en/SVG/Attribute#Presentation) »
+- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("x") }}</li>
- <li>{{ SVGAttr("y") }}</li>
- <li>{{ SVGAttr("width") }}</li>
- <li>{{ SVGAttr("height") }}</li>
- <li>{{ SVGAttr("xlink:href") }}</li>
-</ul>
+- {{ SVGAttr("x") }}
+- {{ SVGAttr("y") }}
+- {{ SVGAttr("width") }}
+- {{ SVGAttr("height") }}
+- {{ SVGAttr("xlink:href") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en/DOM/SVGUseElement">SVGUseElement</a></code>接口。</p>
+该元素实现了[`SVGUseElement`](/en/DOM/SVGUseElement)接口。
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.use")}}

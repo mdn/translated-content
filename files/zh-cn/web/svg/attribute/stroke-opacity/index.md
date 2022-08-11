@@ -7,73 +7,59 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/stroke-opacity
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>stroke-opacity</code>属性指定了当前对象的轮廓的不透明度。它的默认值是<strong>1</strong>。</p>
+`stroke-opacity`属性指定了当前对象的轮廓的不透明度。它的默认值是**1**。
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;opacity-value&gt; | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                   |
+| ------ | -------------------------- |
+| 值     | <opacity-value> \| inherit |
+| 可变性 | Yes                        |
 
-<dl>
- <dt>&lt;opacity-value&gt;</dt>
- <dd>在当前对象的轮廓上用该涂色操作的不透明度。任何超出 0.0 到 1.0 范围的值都会被压回这个范围（0.0 表示完全透明，1.0 表示完全不透明）。</dd>
-</dl>
+- \<opacity-value>
+  - : 在当前对象的轮廓上用该涂色操作的不透明度。任何超出 0.0 到 1.0 范围的值都会被压回这个范围（0.0 表示完全透明，1.0 表示完全不透明）。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="120px" height="120px" viewBox="0 0 120 120"&gt;
-  &lt;rect x="10" y="10" width="100" height="100"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg width="120px" height="120px" viewBox="0 0 120 120">
+  <rect x="10" y="10" width="100" height="100"/>
+</svg>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">rect{
+```css
+rect{
   fill:#b4da55;
   stroke:#000;
   stroke-width:10px;
   stroke-opacity:0.3;
-}</pre>
+}
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<div>{{EmbedLiveSample("示例",150,150)}}</div>
+{{EmbedLiveSample("示例",150,150)}}
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>stroke-opacity</code>属性：</p>
+下列元素可以使用`stroke-opacity`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Shape">形状元素</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">文本内容元素</a> »</li>
-</ul>
+- [形状元素](/en/SVG/Element#Shape) »
+- [文本内容元素](/en/SVG/Element#TextContent) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ SVGAttr("fill-opacity") }}</li>
- <li>{{ SVGAttr("opacity") }}</li>
-</ul>
+- {{ SVGAttr("fill-opacity") }}
+- {{ SVGAttr("opacity") }}

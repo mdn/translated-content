@@ -10,47 +10,45 @@ tags:
   - 需要更新
 translation_of: Web/SVG/Tutorial
 ---
-<p>可缩放矢量图形，即<a href="/zh-CN/SVG">SVG</a>，是 W3C XML 的分支语言之一，用于标记可缩放的矢量图形。目前 SVG 在 Firefox、Opera、Webkit 浏览器、IE 等浏览器中已经部分实现。</p>
+可缩放矢量图形，即[SVG](/zh-CN/SVG)，是 W3C XML 的分支语言之一，用于标记可缩放的矢量图形。目前 SVG 在 Firefox、Opera、Webkit 浏览器、IE 等浏览器中已经部分实现。
 
-<p>本教程旨在解释 SVG 内部的技术细节。如果你希望绘制非常漂亮的图形，你可以在<a href="http://inkscape.org/doc/">Inkscape 的文档页面</a>上获取更多有用的资源。另外还有一个比较好的 SVG 介绍：<a href="http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html">W3C 的 SVG 入门</a>。</p>
+本教程旨在解释 SVG 内部的技术细节。如果你希望绘制非常漂亮的图形，你可以在[Inkscape 的文档页面](http://inkscape.org/doc/)上获取更多有用的资源。另外还有一个比较好的 SVG 介绍：[W3C 的 SVG 入门](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)。
 
-<div class="note">本教程还在初期阶段，如果你有能力，可以来增加扩展一两段，写一整页的话会给加分！</div>
+> **备注：** 本教程还在初期阶段，如果你有能力，可以来增加扩展一两段，写一整页的话会给加分！
 
-<h5 id="从头开始介绍SVG">从头开始介绍 SVG</h5>
+##### 从头开始介绍 SVG
 
-<ul>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Introduction">引言</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Getting_Started">入门</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Positions">坐标定位</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Basic_Shapes">基本形状</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Paths">路径</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Fills_and_Strokes">填充与边框</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Gradients">渐变</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Patterns">图案</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Texts">文字</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Basic_Transformations">基本变换</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Clipping_and_masking">裁剪和遮罩</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Other_content_in_SVG">其他 SVG 内容</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/Filter_effects">滤镜效果</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/SVG_fonts">SVG 字体</a></li>
- <li><a href="/zh-CN/Web/SVG/Tutorial/SVG_Image_Tag">SVG 的 Image 标签</a></li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Tools_for_SVG">SVG 工具</a></li>
-</ul>
+- [引言](/zh-CN/Web/SVG/Tutorial/Introduction)
+- [入门](/zh-CN/Web/SVG/Tutorial/Getting_Started)
+- [坐标定位](/zh-CN/Web/SVG/Tutorial/Positions)
+- [基本形状](/zh-CN/Web/SVG/Tutorial/Basic_Shapes)
+- [路径](/zh-CN/Web/SVG/Tutorial/Paths)
+- [填充与边框](/zh-CN/Web/SVG/Tutorial/Fills_and_Strokes)
+- [渐变](/zh-CN/Web/SVG/Tutorial/Gradients)
+- [图案](/zh-CN/Web/SVG/Tutorial/Patterns)
+- [文字](/zh-CN/Web/SVG/Tutorial/Texts)
+- [基本变换](/zh-CN/Web/SVG/Tutorial/Basic_Transformations)
+- [裁剪和遮罩](/zh-CN/Web/SVG/Tutorial/Clipping_and_masking)
+- [其他 SVG 内容](/zh-CN/Web/SVG/Tutorial/Other_content_in_SVG)
+- [滤镜效果](/zh-CN/Web/SVG/Tutorial/Filter_effects)
+- [SVG 字体](/zh-CN/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 的 Image 标签](/zh-CN/Web/SVG/Tutorial/SVG_Image_Tag)
+- [SVG 工具](/zh-CN/docs/Web/SVG/Tutorial/Tools_for_SVG)
 
-<p>下面罗列的主题更高级，所以需要单独列出教程。</p>
+下面罗列的主题更高级，所以需要单独列出教程。
 
-<h5 id="JavaScript脚本化SVG">JavaScript 脚本化 SVG</h5>
+##### JavaScript 脚本化 SVG
 
-<p>待定（TBD：To be determined）</p>
+待定（TBD：To be determined）
 
-<h5 id="SVG滤镜教程">SVG 滤镜教程</h5>
+##### SVG 滤镜教程
 
-<p>待定</p>
+待定
 
-<h5 id="SVG的SMIL动画">SVG 的 SMIL 动画</h5>
+##### SVG 的 SMIL 动画
 
-<p>待定</p>
+待定
 
-<h5 id="在SVG中创建字体">在 SVG 中创建字体</h5>
+##### 在 SVG 中创建字体
 
-<p>待定</p>
+待定

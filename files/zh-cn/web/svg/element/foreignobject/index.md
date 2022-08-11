@@ -7,16 +7,19 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/foreignObject
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><a href="/zh-CN/docs/Web/SVG">SVG</a>中的<strong><code>&lt;foreignObject&gt;</code></strong>元素允许包含来自不同的 XML 命名空间的元素。在浏览器的上下文中，很可能是 XHTML / HTML。</p>
+[SVG](/zh-CN/docs/Web/SVG)中的**`<foreignObject>`**元素允许包含来自不同的 XML 命名空间的元素。在浏览器的上下文中，很可能是 XHTML / HTML。
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
     polygon { fill: black }
 
     div {
@@ -25,73 +28,68 @@ translation_of: Web/SVG/Element/foreignObject
       height: 100%;
       overflow: auto;
     }
-  &lt;/style&gt;
+  </style>
 
-  &lt;polygon points="5,5 195,10 185,185 10,195" /&gt;
+  <polygon points="5,5 195,10 185,185 10,195" />
 
-  &lt;!-- Common use case: embed HTML text into SVG --&gt;
-  &lt;foreignObject x="20" y="20" width="160" height="160"&gt;
-    &lt;!--
+  <!-- Common use case: embed HTML text into SVG -->
+  <foreignObject x="20" y="20" width="160" height="160">
+    <!--
       In the context of SVG embeded into HTML, the XHTML namespace could
       be avoided, but it is mandatory in the context of an SVG document
-    --&gt;
-    &lt;div xmlns="http://www.w3.org/1999/xhtml"&gt;
+    -->
+    <div xmlns="http://www.w3.org/1999/xhtml">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
       porta vel dui convallis, rutrum imperdiet eros. Aliquam
       erat volutpat.
-    &lt;/div&gt;
-  &lt;/foreignObject&gt;
-&lt;/svg&gt;</pre>
+    </div>
+  </foreignObject>
+</svg>
+```
 
-<p>{{EmbedLiveSample('示例', 150, '100%')}}</p>
+{{EmbedLiveSample('示例', 150, '100%')}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>设置 foreignObject 的高度。<br>
- <small>值得类型：<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>默认值</em>: <code>auto</code>; <em>是否可设置动画</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>设置 foreignObject 的宽度。<br>
- <small>值得类型：<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>默认值</em>: <code>auto</code>; <em>是否可设置动画</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>设置 foreignObject 的 x 坐标。<br>
- <small>值得类型：<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>默认值</em>: <code>0</code>; <em>是否可设置动画</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>设置 foreignObject 的 y 坐标。<br>
- <small>值得类型：<a href="/docs/Web/SVG/Content_type#Length"><strong>&lt;length&gt;</strong></a>|<a href="/docs/Web/SVG/Content_type#Percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>默认值</em>: <code>0</code>; <em>是否可设置动画</em>: <strong>yes</strong></small></dd>
-</dl>
+- {{SVGAttr("height")}}
+  - : 设置 foreignObject 的高度。
+    值得类型：[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
+- {{SVGAttr("width")}}
+  - : 设置 foreignObject 的宽度。
+    值得类型：[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _默认值_: `auto`; _是否可设置动画_: **yes**
+- {{SVGAttr("x")}}
+  - : 设置 foreignObject 的 x 坐标。
+    值得类型：[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
+- {{SVGAttr("y")}}
+  - : 设置 foreignObject 的 y 坐标。
+    值得类型：[**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _默认值_: `0`; _是否可设置动画_: **yes**
 
-<div class="note">
-<p>注意：从 SVG2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 CSS 属性。</p>
-</div>
+> **备注：** 从 SVG2 开始，x、y、宽度和高度都是几何属性，这意味着这些属性也可以用作该元素的 CSS 属性。
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/docs/Web/SVG/Attribute/Events#Global_Event_Attributes">Global event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes">Graphical event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Document_Event_Attributes">Document event attributes</a>, <a href="/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes">Document element event attributes</a></small></dd>
- <dt><a href="/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Aria Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- Event Attributes
+  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes), [Document event attributes](/docs/Web/SVG/Attribute/Events#Document_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- Aria Attributes
+  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

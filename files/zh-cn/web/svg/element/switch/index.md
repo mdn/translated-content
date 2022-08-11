@@ -8,43 +8,39 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/switch
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>switch</code>元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为<code>true</code>的子元素。 其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。</p>
+`switch`元素对它的直接子元素上的属性{{ SVGAttr("requiredFeatures") }}、属性{{ SVGAttr("requiredExtensions") }} 和 属性{{ SVGAttr("systemLanguage") }}按照顺序进行评估，然后处理和呈现第一个评估为`true`的子元素。 其他子元素会被绕过不会被呈现。如果某个子元素是容器元素比如说是一个{{ SVGElement("g") }}元素，那么整个子树会被处理呈现或者全部绕过不呈现。
 
-<p>注意：属性<code>display</code>和属性<code>visibility</code>的值对<code>switch 元素处理是不起作用的。</code>特别是， 在<code>switch 元素的子元素上</code>设置<code style="font-style: normal;">display</code>为 none，对<code>switch</code> 元素的 true/false 测试处理不起作用。</p>
+注意：属性`display`和属性`visibility`的值对`switch 元素处理是不起作用的。`特别是， 在`switch 元素的子元素上`设置`display`为 none，对`switch` 元素的 true/false 测试处理不起作用。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{ SVGAttr("class") }}</li>
- <li>{{ SVGAttr("style") }}</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
- <li>{{ SVGAttr("transform") }}</li>
-</ul>
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- {{ SVGAttr("class") }}
+- {{ SVGAttr("style") }}
+- {{ SVGAttr("externalResourcesRequired") }}
+- {{ SVGAttr("transform") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("allowReorder") }}</li>
-</ul>
+- {{ SVGAttr("allowReorder") }}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGSwitchElement">SVGSwitchElement</a></code> 接口。</p>
+该元素实现了[`SVGSwitchElement`](/en-US/docs/DOM/SVGSwitchElement) 接口。
 
-<h2 id="浏览器支持">浏览器支持</h2>
+## 浏览器支持
 
 {{Compat("svg.elements.switch")}}

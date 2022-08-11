@@ -7,66 +7,45 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/filter
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>属性<code>filter</code>定义了由{{ SVGElement("filter") }}元素定义滤镜效果，该滤镜效果将应用到该元素上。</p>
+属性`filter`定义了由{{ SVGElement("filter") }}元素定义滤镜效果，该滤镜效果将应用到该元素上。
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("filter","CSS filter") }}以了解更多信息。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("filter","CSS filter") }}以了解更多信息。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#FuncIRI">&lt;funciri&gt;</a> | <strong>none</strong> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG11/filters.html#FilterProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 外观属性                                                                        |
+| -------- | ------------------------------------------------------------------------------- |
+| 值       | [<funciri>](/en/SVG/Content_type#FuncIRI) \| **none** \| inherit                |
+| 可变性   | Yes                                                                             |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#FilterProperty) |
 
-<dl>
- <dt><a href="/en/SVG/Content_type#FuncIRI">&lt;funciri&gt;</a></dt>
- <dd>元素的引用，它定义了将要应用到该元素的滤镜效果。</dd>
- <dt>none</dt>
- <dd>不对该元素应用任何滤镜效果。</dd>
-</dl>
+- [\<funciri>](/en/SVG/Content_type#FuncIRI)
+  - : 元素的引用，它定义了将要应用到该元素的滤镜效果。
+- none
+  - : 不对该元素应用任何滤镜效果。
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>filter</code>属性：</p>
+下列元素可以使用`filter`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Graphics_elements">图形元素</a> »</li>
- <li>{{ SVGElement("a") }}</li>
- <li>{{ SVGElement("defs") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
- <li>{{ SVGElement("g") }}</li>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("missing-glyph") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("switch") }}</li>
- <li>{{ SVGElement("symbol") }}</li>
-</ul>
+- [图形元素](/en/SVG/Element#Graphics_elements) »
+- {{ SVGElement("a") }}
+- {{ SVGElement("defs") }}
+- {{ SVGElement("glyph") }}
+- {{ SVGElement("g") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("missing-glyph") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("svg") }}
+- {{ SVGElement("switch") }}
+- {{ SVGElement("symbol") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref("filter","CSS filter") }}</li>
-</ul>
+- {{ cssxref("filter","CSS filter") }}
