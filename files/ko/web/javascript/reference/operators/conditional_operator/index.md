@@ -2,72 +2,73 @@
 title: 삼항 조건 연산자
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
 tags:
-- Conditional
-- Decision
-- JS
-- JavaScript
-- Language feature
-- Operator
-- Reference
-- else
-- if
-- ternary
+  - Conditional
+  - Decision
+  - JS
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+  - else
+  - if
+  - ternary
 browser-compat: javascript.operators.conditional
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>조건부 삼항 연산자</strong>는 JavaScript에서 세 개의 피연산자를 취할 수 있는 유일한 연산자입니다. 맨 앞에 조건문 들어가고. 그 뒤로 물음표(<code>?</code>)와 조건이 참{{Glossary("truthy")}}이라면 실행할 식이 물음표 뒤로 들어갑니다. 바로 뒤로 콜론(<code>:</code>)이 들어가며 조건이 거짓{{Glossary("falsy")}}이라면 실행할 식이 마지막에 들어갑니다. 보통 <a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code></a> 명령문의 단축 형태로 쓰입니다.</p>
+**조건부 삼항 연산자**는 JavaScript에서 세 개의 피연산자를 취할 수 있는 유일한 연산자입니다. 맨 앞에 조건문 들어가고. 그 뒤로 물음표(`?`)와 조건이 참{{Glossary("truthy")}}이라면 실행할 식이 물음표 뒤로 들어갑니다. 바로 뒤로 콜론(`:`)이 들어가며 조건이 거짓{{Glossary("falsy")}}이라면 실행할 식이 마지막에 들어갑니다. 보통 [`if`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 명령문의 단축 형태로 쓰입니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
+## 구문
 
+```js
+    condition ? exprIfTrue : exprIfFalse
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox "><em>condition</em> ? <em>exprIfTrue</em> : <em>exprIfFalse</em> </pre>
+- `condition` (조건문)
+  - : 조건문으로 들어갈 표현식
+- `exprIfTrue` (참일 때 실행할 식)
+  - : `condition`이 {{Glossary("Truthy")}}일 때 실행되는 표현식입니다. (`true`일 때 치환될 값입니다).
+- `exprIfFalse` (거짓일 때 실행할 식)
+  - : `condition`이 {{Glossary("falsy")}}일 때 실행되는 표현식입니다. (`false`일 때 치환될 값입니다).
 
-<h3 id="매개변수">매개변수</h3>
+## 설명
 
-<dl>
- <dt><code>condition</code> (조건문)</dt>
- <dd>조건문으로 들어갈 표현식</dd>
- <dt><code>exprIfTrue</code> (참일 때 실행할 식)</dt>
- <dd><code>condition</code>이 {{Glossary("Truthy")}}일 때 실행되는 표현식입니다. (<code>true</code>일 때 치환될 값입니다).</dd>
- <dt><code>exprIfFalse</code> (거짓일 때 실행할 식)</dt>
- <dd><code>condition</code>이 {{Glossary("falsy")}}일 때 실행되는 표현식입니다. (<code>false</code>일 때 치환될 값입니다).</dd>
-</dl>
+`false`외에도 `null`,`NaN`, `0`, 비어있는 문자 값 (`""`), 그리고 `undefined`으로 조건문에 false 값으로 사용 가능 합니다. 이 값들이 조건문으로 사용된다면 `exprIfFalse`이 결과로 나오게 됩니다.
 
-<h2 id="설명">설명</h2>
-<p><code>false</code>외에도 <code>null</code>,<code>NaN</code>, <code>0</code>, 비어있는 문자 값 (<code>""</code>), 그리고 <code>undefined</code>으로 조건문에 false 값으로 사용 가능 합니다. 이 값들이 조건문으로 사용된다면 <code>exprIfFalse</code>이 결과로 나오게 됩니다.</p>
+## 예제
 
-<h2 id="예제">예제</h2>
+### 간단한 예제
 
-<h3 id="A_simple_example">간단한 예제</h3>
-
-<pre class="brush: js">var age = 26;
-var beverage = (age &gt;= 21) ? "Beer" : "Juice";
+```js
+var age = 26;
+var beverage = (age >= 21) ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
-</pre>
+```
 
-<h3 id="Handling_null_values">null 값 처리하기</h3>
+### null 값 처리하기
 
-<p>이와같이 <code>null</code> 값을 처리할 때에도 일반적으로 사용됩니다.:</p>
+이와같이 `null` 값을 처리할 때에도 일반적으로 사용됩니다.:
 
-<pre class="brush: js">let greeting = person =&gt; {
+```js
+let greeting = person => {
   let name = person ? person.name : `stranger`
   return `Howdy, ${name}`
 }
 
 console.log(greeting({name: `Alice`}));  // "Howdy, Alice"
 console.log(greeting(null));             // "Howdy, stranger"
-</pre>
+```
 
+### 연속된 조건문 처리하기
 
-<h3 id="Conditional_chains">연속된 조건문 처리하기</h3>
+삼항 연산자는 `if … else if … else if … else`와 같은 "연속된 조건"을 사용할 수 있습니다.
 
-<p>삼항 연산자는 <code>if … else if … else if … else</code>와 같은 "연속된 조건"을 사용할 수 있습니다.</p>
-
-<pre class="brush: js">function example(…) {
+```js
+function example(…) {
     return condition1 ? value1
          : condition2 ? value2
          : condition3 ? value3
@@ -82,18 +83,16 @@ function example(…) {
     else if (condition3) { return value3; }
     else { return value4; }
 }
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/if...else">if statement</a></li>
-</ul>
+- [if statement](/ko/docs/Web/JavaScript/Reference/Statements/if...else)

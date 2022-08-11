@@ -8,90 +8,51 @@ tags:
   - Unary
 translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>typeof</code></strong> 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.</p>
+**`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<p><code>typeof</code> 연산자는 피연산자 앞에 위치합니다.</p>
+`typeof` 연산자는 피연산자 앞에 위치합니다.
 
-<pre>typeof <var>operand</var>
-typeof(<var>operand</var>)</pre>
+```js
+    typeof operand
+    typeof(operand)
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>operand</code></dt>
- <dd>자료형을 가져올 객체 또는 {{glossary("Primitive", "원시값")}}을 나타내는 표현식.</dd>
-</dl>
+- `operand`
+  - : 자료형을 가져올 객체 또는 {{glossary("Primitive", "원시값")}}을 나타내는 표현식.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>typeof</code>가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 자료형과 원시값에 대한 자세한 정보는 <a href="/ko/docs/Web/JavaScript/Data_structures">JavaScript 자료형과 자료구조</a> 페이지를 참고하세요.</p>
+`typeof`가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 자료형과 원시값에 대한 자세한 정보는 [JavaScript 자료형과 자료구조](/ko/docs/Web/JavaScript/Data_structures) 페이지를 참고하세요.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Type</th>
-   <th scope="col">Result</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{glossary("Undefined")}}</td>
-   <td><code>"undefined"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Null")}}</td>
-   <td><code>"object"</code> (<a href="#null">아래</a> 참고)</td>
-  </tr>
-  <tr>
-   <td>{{glossary("Boolean")}}</td>
-   <td><code>"boolean"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Number")}}</td>
-   <td><code>"number"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("BigInt")}}</td>
-   <td><code>"bigint"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("String")}}</td>
-   <td><code>"string"</code></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Symbol")}} (ECMAScript 2015에서 추가)</td>
-   <td><code>"symbol"</code></td>
-  </tr>
-  <tr>
-   <td>호스트 객체 (JS 환경에서 제공)</td>
-   <td><em>구현체마다 다름</em></td>
-  </tr>
-  <tr>
-   <td>{{glossary("Function")}} 객체 (ECMA-262 표현으로는 [[Call]]을 구현하는 객체)</td>
-   <td><code>"function"</code></td>
-  </tr>
-  <tr>
-   <td>다른 모든 객체</td>
-   <td><code>"object"</code></td>
-  </tr>
- </tbody>
-</table>
+| Type                                                                                 | Result                          |
+| ------------------------------------------------------------------------------------ | ------------------------------- |
+| {{glossary("Undefined")}}                                                     | `"undefined"`                   |
+| {{glossary("Null")}}                                                         | `"object"` ([아래](#null) 참고) |
+| {{glossary("Boolean")}}                                                     | `"boolean"`                     |
+| {{glossary("Number")}}                                                         | `"number"`                      |
+| {{glossary("BigInt")}}                                                         | `"bigint"`                      |
+| {{glossary("String")}}                                                         | `"string"`                      |
+| {{glossary("Symbol")}} (ECMAScript 2015에서 추가)                              | `"symbol"`                      |
+| 호스트 객체 (JS 환경에서 제공)                                                       | _구현체마다 다름_               |
+| {{glossary("Function")}} 객체 (ECMA-262 표현으로는 [[Call]]을 구현하는 객체) | `"function"`                    |
+| 다른 모든 객체                                                                       | `"object"`                      |
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> ECMAScript 2019 and older permitted implementations to have <code>typeof</code> return any implementation-defined string value for non-callable non-standard exotic objects.</p>
+> **참고:** ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
+>
+> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#IE-specific_notes)).
 
-<p>The only known browser to have actually taken advantage of this is old Internet Explorer (see <a href="#IE-specific_notes">below</a>).</p>
-</div>
+## 예제
 
-<h2 id="예제">예제</h2>
-
-<pre class="brush:js">// Numbers
+```js
+// Numbers
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof Math.LN2 === 'number';
@@ -130,7 +91,7 @@ typeof undeclaredVariable === 'undefined';
 // Objects
 typeof {a:1} === 'object';
 
-// use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray">Array.isArray</a> or Object.prototype.toString.call
+// use Array.isArray or Object.prototype.toString.call
 // to differentiate regular objects from arrays
 typeof [1, 2, 4] === 'object';
 
@@ -147,44 +108,46 @@ typeof new String("abc") === 'object';
 typeof function(){} === 'function';
 typeof class C {} === 'function';
 typeof Math.sin === 'function';
-</pre>
+```
 
-<h2 id="추가_정보">추가 정보</h2>
+## 추가 정보
 
-<h3 id="null"><code>null</code></h3>
+### `null`
 
-<pre class="brush:js">// This stands since the beginning of JavaScript
+```js
+// This stands since the beginning of JavaScript
 typeof null === 'object';
-</pre>
+```
 
-<p>자바스크립트를 처음 구현할 때, 자바스크립트 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. <code>null</code>은 Null pointer(대부분의 플랫폼에서 <code>0x00</code>)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 <code>typeof</code>는 object를 반환합니다. (<a href="https://2ality.com/2013/10/typeof-null.html">참고 문서</a>)</p>
+자바스크립트를 처음 구현할 때, 자바스크립트 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. `null`은 Null pointer(대부분의 플랫폼에서 `0x00`)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 `typeof`는 object를 반환합니다. ([참고 문서](https://2ality.com/2013/10/typeof-null.html))
 
-<p>ECMAScript에 수정이 제안(opt-in을 통해)되었으나 <a href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">거절되었습니다</a>. 제안된 것은 다음과 같습니다. <code>typeof null === 'null'.</code></p>
+ECMAScript에 수정이 제안(opt-in을 통해)되었으나 [거절되었습니다](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). 제안된 것은 다음과 같습니다. `typeof null === 'null'.`
 
-<h3 id="Regular_expressions">Regular expressions</h3>
+### Regular expressions
 
-<p>Callable regular expressions were a non-standard addition in some browsers.</p>
+Callable regular expressions were a non-standard addition in some browsers.
 
-<pre class="brush:js">typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
+```js
+typeof /s/ === 'function'; // Chrome 1-12 Non-conform to ECMAScript 5.1
 typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
-</pre>
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.operators.typeof")}}</p>
+{{Compat}}
 
-<h2 id="IE_참고사항">IE 참고사항</h2>
+## IE 참고사항
 
-<p>On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:</p>
+On IE 6, 7, and 8 a lot of host objects are objects and not functions. For example:
 
-<pre class="brush: js">typeof alert === 'object'</pre>
+```js
+typeof alert === 'object'
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Operators/instanceof", "instanceof")}}

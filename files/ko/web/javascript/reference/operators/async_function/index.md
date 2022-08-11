@@ -1,80 +1,80 @@
 ---
 title: async function 표현식
 slug: Web/JavaScript/Reference/Operators/async_function
-browser-compat: javascript.operators.async_function
 translation_of: Web/JavaScript/Reference/Operators/async_function
+browser-compat: javascript.operators.async_function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>async function</code></strong> 키워드는 표현식 내에서 <code>async</code> 함수를 정의하기 위해 사용됩니다.</p>
+**`async function`** 키워드는 표현식 내에서 `async` 함수를 정의하기 위해 사용됩니다.
 
-<p>또한 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function statement</a>을 사용하여 async 함수를 정의할 수 있습니다.</p>
+또한 [async function statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)을 사용하여 async 함수를 정의할 수 있습니다.
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox">async function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) { <em>statements </em>}</pre>
+```js
+    async function [name]([param1[, param2[, ..., paramN]]]) { statements }
+```
 
-<p>ES2015에서와 같이 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>를 사용해도 됩니다.</p>
+ES2015에서와 같이 [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해도 됩니다.
 
-<h3 id="인수">인수</h3>
+### 인수
 
-<dl>
- <dt><code><var>name</var></code></dt>
- <dd>함수 이름. 생략가능하며 이경우함수는 <em>anonymous</em> 형식임  이름은 함수 몸체에 대해 지역적으로 사용.</dd>
- <dt><code><var>paramN</var></code></dt>
- <dd>함수에 전달될 인수의 이름.</dd>
- <dt><code><var>statements</var></code></dt>
- <dd>함수 몸체를 구성하는 명령문들.</dd>
-</dl>
+- `name`
+  - : 함수 이름. 생략가능하며 이경우함수는 _anonymous_ 형식임 이름은 함수 몸체에 대해 지역적으로 사용.
+- `paramN`
+  - : 함수에 전달될 인수의 이름.
+- `statements`
+  - : 함수 몸체를 구성하는 명령문들.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p><code>async function</code> 표현식은 {{jsxref('Statements/async_function', '<code>async function</code> 선언')}} 문법과 유사하며, 거의 동일합니다. <code>async function</code> 표현식과 <code>async function</code> 선언문의 주요 차이점은 익명함수로써의 사용 여부로, <code>async function</code> 표현식은 함수 이름을 생략하면 익명함수를 만듭니다. <code>async function</code> 표현식은 {{Glossary("IIFE")}}(즉시실행함수)로 사용할 수 있습니다. <code><a href="/en-US/docs/Web/JavaScript/Reference/Functions">functions</a></code>문서를 참고하세요.</p>
+`async function` 표현식은 {{jsxref('Statements/async_function', '<code>async function</code> 선언')}} 문법과 유사하며, 거의 동일합니다. `async function` 표현식과 `async function` 선언문의 주요 차이점은 익명함수로써의 사용 여부로, `async function` 표현식은 함수 이름을 생략하면 익명함수를 만듭니다. `async function` 표현식은 {{Glossary("IIFE")}}(즉시실행함수)로 사용할 수 있습니다. [`functions`](/en-US/docs/Web/JavaScript/Reference/Functions)문서를 참고하세요.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<pre><code>function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
-      resolve(x);
-    }, 2000);
-  });
-};
-
-
-var add = async function(x) { // async function 표현식을 변수에 할당
-  var a = await resolveAfter2Seconds(20);
-  var b = await resolveAfter2Seconds(30);
-  return x + a + b;
-};
-
-add(10).then(v =&gt; {
-  console.log(v);  // 4초 뒤에 60 출력
-});
+```js
+    function resolveAfter2Seconds(x) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(x);
+        }, 2000);
+      });
+    };
 
 
-(async function(x) { // async function 표현식을 IIFE로 사용
-  var p_a = resolveAfter2Seconds(20);
-  var p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
-})(10).then(v =&gt; {
-  console.log(v);  // 2초 뒤에 60 출력
-});</code></pre>
+    var add = async function(x) { // async function 표현식을 변수에 할당
+      var a = await resolveAfter2Seconds(20);
+      var b = await resolveAfter2Seconds(30);
+      return x + a + b;
+    };
 
-<h2 id="Specifications">Specifications</h2>
+    add(10).then(v => {
+      console.log(v);  // 4초 뒤에 60 출력
+    });
+
+
+    (async function(x) { // async function 표현식을 IIFE로 사용
+      var p_a = resolveAfter2Seconds(20);
+      var p_b = resolveAfter2Seconds(30);
+      return x + await p_a + await p_b;
+    })(10).then(v => {
+      console.log(v);  // 2초 뒤에 60 출력
+    });
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Statements/async_function", "async function")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
-</ul>
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}

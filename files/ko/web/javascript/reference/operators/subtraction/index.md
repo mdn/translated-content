@@ -6,51 +6,52 @@ tags:
   - Language feature
   - Operator
   - Reference
-browser-compat: javascript.operators.subtraction
 translation_of: Web/JavaScript/Reference/Operators/Subtraction
+browser-compat: javascript.operators.subtraction
 ---
+{{jsSidebar("Operators")}}
 
-<div>{{jsSidebar("Operators")}}</div>
+빼기 연산자(`-`)는 두 연산자의 차이를 구합니다.
 
-<p>빼기 연산자(<code>-</code>)는 두 연산자의 차이를 구합니다.</p>
+{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}</div>
+## 구문
 
-<h2 id="syntax">구문</h2>
+```js
+x - y
+```
 
-<pre class="brush: js">x - y</pre>
+## 예제
 
-<h2 id="examples">예제</h2>
+### 뺄셈
 
-<h3 id="subtraction_with_numbers">뺄셈</h3>
-
-<pre class="brush: js">
+```js
 5 - 3  // 2
 3 - 5  // -2
-</pre>
+```
 
-<h3 id="subtraction_with_non-numbers">숫자가 아닌 경우</h3>
+### 숫자가 아닌 경우
 
-<pre class="brush: js">'foo' - 3 // NaN</pre>
+```js
+'foo' - 3 // NaN
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Addition">더하기 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Division">나누기 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Multiplication">곱하기 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Increment">증가 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement">감소 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation">단항 부정 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus">단항 플러스 연산자</a></li>
-</ul>
+- [더하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Addition)
+- [나누기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Division)
+- [곱하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [나머지 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [거듭제곱 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [증가 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Increment)
+- [감소 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [단항 부정 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [단항 플러스 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)
