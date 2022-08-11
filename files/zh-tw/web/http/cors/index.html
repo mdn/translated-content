@@ -1,18 +1,6 @@
 ---
 title: 跨來源資源共用（CORS）
 slug: Web/HTTP/CORS
-tags:
-  - AJAX
-  - CORS
-  - Cross-Origin Resource Sharing
-  - Fetch
-  - Fetch API
-  - HTTP
-  - HTTP Access Controls
-  - Same-origin policy
-  - Security
-  - XMLHttpRequest
-translation_of: Web/HTTP/CORS
 ---
 <div>{{HTTPSidebar}}</div>
 
@@ -97,13 +85,13 @@ translation_of: Web/HTTP/CORS
  <li>請求中沒有 {{domxref("ReadableStream")}} 物件被用於上傳。</li>
 </ul>
 
-<div class="note"><strong>備註：</strong>雖然這些都是網頁目前已經可以送出的跨站請求，但除非伺服器回傳適當標頭，否則不會有資料回傳，因此不允許跨站請求的網站無須擔心會受到新的 HTTP 存取控制影響。</div>
+<div class="note"><strong>備註：</strong> 雖然這些都是網頁目前已經可以送出的跨站請求，但除非伺服器回傳適當標頭，否則不會有資料回傳，因此不允許跨站請求的網站無須擔心會受到新的 HTTP 存取控制影響。</div>
 
-<div class="note"><strong>備註：</strong>WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 就不會將該請求視為「簡單請求」。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
+<div class="note"><strong>備註：</strong> WebKit Nightly 與 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 及 {{HTTPHeader("Content-Language")}} 標頭值加入了額外的限制。假如這三個標頭中有任一個擁有「非標準」值，WebKit／Safari 就不會將該請求視為「簡單請求」。WebKit／Safari 並沒有於文件中定義何者為「非標準」值，只有在以下 WebKit bugs 中討論：<a href="https://bugs.webkit.org/show_bug.cgi?id=165178">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a>、<a href="https://bugs.webkit.org/show_bug.cgi?id=165566">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a> 和 <a href="https://bugs.webkit.org/show_bug.cgi?id=166363">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a>。其它的瀏覽器沒有實作這些額外的限制，因為這並不是規範中的一部分。</div>
 
-<p>例如，假設 <code class="plain">http://foo.example</code> 網域上的網頁內容想要呼叫 <code class="plain">http://bar.other</code> 網域內的內容，以下程式碼可能會在 foo.example 上執行：</p>
+<p>例如，假設 <code>http://foo.example</code> 網域上的網頁內容想要呼叫 <code>http://bar.other</code> 網域內的內容，以下程式碼可能會在 foo.example 上執行：</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/public-data/';
 
 function callOtherDomain() {
@@ -121,7 +109,7 @@ function callOtherDomain() {
 
 <p>我們來看看這個例子中瀏覽器將會送出什麼到伺服器，而伺服器又會如何回應：</p>
 
-<pre class="brush: shell;highlight:[10,16]">GET /resources/public-data/ HTTP/1.1
+<pre class="brush: plain">GET /resources/public-data/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -145,13 +133,13 @@ Content-Type: application/xml
 [XML Data]
 </pre>
 
-<p>第 1 - 10 行是送出的標頭。第 10 行之主要 HTTP 請求標頭中的 {{HTTPHeader("Origin")}} 標頭，它標示出請求是來自 <code class="plain">http://foo.example</code> 網域上的內容。</p>
+<p>第 1 - 10 行是送出的標頭。第 10 行之主要 HTTP 請求標頭中的 {{HTTPHeader("Origin")}} 標頭，它標示出請求是來自 <code>http://foo.example</code> 網域上的內容。</p>
 
-<p>第 13 - 22 行是 <code class="plain">http://bar.other</code> 網域伺服器回傳的 HTTP 回應。第 16 行伺服器回傳了一個 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭，從 {{HTTPHeader("Origin")}} 標頭與 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭中可以看到存取控制協定最簡單的用途。這個例子中，伺服器回傳 <code>Access-Control-Allow-Origin: *</code> 表示允許<strong>任何</strong>網域跨站存取資源，倘若 <code class="plain">http://bar.other</code> 的資源擁有者只准許來自 <code class="plain">http://foo.example</code> 的存取資源請求，那麼將會回傳：</p>
+<p>第 13 - 22 行是 <code>http://bar.other</code> 網域伺服器回傳的 HTTP 回應。第 16 行伺服器回傳了一個 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭，從 {{HTTPHeader("Origin")}} 標頭與 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭中可以看到存取控制協定最簡單的用途。這個例子中，伺服器回傳 <code>Access-Control-Allow-Origin: *</code> 表示允許<strong>任何</strong>網域跨站存取資源，倘若 <code>http://bar.other</code> 的資源擁有者只准許來自 <code>http://foo.example</code> 的存取資源請求，那麼將會回傳：</p>
 
-<p><code class="plain">Access-Control-Allow-Origin: http://foo.example</code></p>
+<pre><code>Access-Control-Allow-Origin: http://foo.example</code></pre>
 
-<p>如此一來，來源並非 <code class="plain">http://foo.example</code> 網域（由第 10 行請求標頭中的 ORIGIN 標頭確認）便無法以跨站的方式存取資源。<code>Access-Control-Allow-Origin</code> 標頭必須包含請求當中的 <code>Origin</code> 標頭值。</p>
+<p>如此一來，來源並非 <code>http://foo.example</code> 網域（由第 10 行請求標頭中的 ORIGIN 標頭確認）便無法以跨站的方式存取資源。<code>Access-Control-Allow-Origin</code> 標頭必須包含請求當中的 <code>Origin</code> 標頭值。</p>
 
 <h3 id="預檢請求">預檢請求</h3>
 
@@ -199,7 +187,7 @@ Content-Type: application/xml
 
 <p>下面是一段會引起預檢請求的範例：</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/post-here/';
 var body = '&lt;?xml version="1.0"?&gt;&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;';
 
@@ -223,7 +211,7 @@ function callOtherDomain(){
 
 <p>我們來看看客戶端與伺服器端之間完整的交換資訊。第一次的交換為<em>預檢請求／回應</em>：</p>
 
-<pre class="brush: none">OPTIONS /resources/post-here/ HTTP/1.1
+<pre class="brush: plain">OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -253,7 +241,7 @@ Content-Type: text/plain
 
 <p>一旦預檢請求完成，真正的請求才會被送出：</p>
 
-<pre class="brush: none">POST /resources/post-here/ HTTP/1.1
+<pre class="brush: plain">POST /resources/post-here/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -288,7 +276,7 @@ Content-Type: text/plain
 
 <p>第 1 - 12 行屬於 {{HTTPMethod("OPTIONS")}} 方法的預檢請求，瀏覽器依據前面的 JavaScript 程式碼決定送出預檢請求，好讓伺服器回應是否允許後續送出實際（actual）請求。OPTIONS 是一個 HTTP/1.1 方法，這個方法用來確認來自伺服器進一步的資訊，重複執行不會造成任何影響，為一{{Glossary("safe", "安全")}}方法，不會造成資源更動。除了 OPTIONS 方法，有另外兩個送出的請求標頭（分別在第 10 及 11 行）：</p>
 
-<pre class="brush: none">Access-Control-Request-Method: POST
+<pre class="brush: plain">Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 </pre>
 
@@ -296,7 +284,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>第 14 - 26 行屬於伺服器的回應，它說明了伺服器接受 <code>POST</code> 請求方法和 <code>X-PINGOTHER</code> 標頭。另外讓我們特別來看看 17 - 20 行：</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: http://foo.example
+<pre class="brush: plain">Access-Control-Allow-Origin: http://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
@@ -341,9 +329,9 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>{{domxref("XMLHttpRequest")}} 或 <a href="/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 在 CORS 中最有趣的功能為傳送基於 <a href="/zh-TW/docs/Web/HTTP/Cookies">HTTP cookies</a> 和 HTTP 認證（Authentication）資訊的「身分驗證（credentialed）」請求。預設情況下，在跨站 {{domxref("XMLHttpRequest")}} 或 <a href="/zh-TW/docs/Web/API/Fetch_API">Fetch</a> 呼叫時，瀏覽器<strong>不會</strong>送出身分驗證。必須要於 {{domxref("XMLHttpRequest")}} 物件中或是在呼叫 {{domxref("Request")}} 建構式時設置一個特定的旗標。</p>
 
-<p>在這個範例中，一個來自 <code class="plain">http://foo.example</code> 的內容發出了一個簡單的 GET 去請求一個 <code class="plain">http://bar.other</code> 的資源，且該站會設定 Cookies。foo.example 的內容可能包含類似的 JavaScript：</p>
+<p>在這個範例中，一個來自 <code>http://foo.example</code> 的內容發出了一個簡單的 GET 去請求一個 <code>http://bar.other</code> 的資源，且該站會設定 Cookies。foo.example 的內容可能包含類似的 JavaScript：</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/credentialed-content/';
 
 function callOtherDomain(){
@@ -361,7 +349,7 @@ function callOtherDomain(){
 
 <p>下面是一個簡單的客戶端與伺服器端之間的交換資訊：</p>
 
-<pre class="brush: none">GET /resources/access-control-with-credentials/ HTTP/1.1
+<pre class="brush: plain">GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -394,13 +382,13 @@ Content-Type: text/plain
 [text/plain payload]
 </pre>
 
-<p>雖然第 11 行包含了預定要給予 <code class="plain">http://bar.other</code> 來取得資源內容的 Cookie，但假如 bar.other 沒有於回應中帶有 {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> 標頭值（第 19 行），則回應將會被乎略且不提供給網站內容使用。</p>
+<p>雖然第 11 行包含了預定要給予 <code>http://bar.other</code> 來取得資源內容的 Cookie，但假如 bar.other 沒有於回應中帶有 {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> 標頭值（第 19 行），則回應將會被乎略且不提供給網站內容使用。</p>
 
 <h4 id="身分驗證請求與萬用字元">身分驗證請求與萬用字元</h4>
 
 <p>在回應一個身分驗證請求時，伺服器<strong>必須</strong>於 <code>Access-Control-Allow-Origin</code> 標頭值中指定一個來源，而不是使用「<code>*</code>」萬用字元（wildcard）。</p>
 
-<p>上方範例的請求標頭中包含了一個 <code>Cookie</code> 標頭，若 <code>Access-Control-Allow-Origin</code> 標頭為「*」，則請求將會失敗。範例中的 <code>Access-Control-Allow-Origin</code> 標頭值為「<code class="plain">http://foo.example</code>」（一個實際的來源）而不是「*」萬用字元，所以身分驗證證明內容被回傳予呼叫的網站內容中。</p>
+<p>上方範例的請求標頭中包含了一個 <code>Cookie</code> 標頭，若 <code>Access-Control-Allow-Origin</code> 標頭為「*」，則請求將會失敗。範例中的 <code>Access-Control-Allow-Origin</code> 標頭值為「<code>http://foo.example</code>」（一個實際的來源）而不是「*」萬用字元，所以身分驗證證明內容被回傳予呼叫的網站內容中。</p>
 
 <p>請注意上面範例中的 <code>Set-Cookie</code> 回應標頭也設定了另一個 cookie。萬一失敗，會拋出一個錯誤（取決於所使用的 API）。</p>
 
@@ -416,14 +404,14 @@ Content-Type: text/plain
 
 <p>一個回應的資源可能擁有一個 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭，如以下的語法：</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: &lt;origin&gt; | *
+<pre class="brush: plain">Access-Control-Allow-Origin: &lt;origin&gt; | *
 </pre>
 
 <p><code>origin</code> 參數指定了一個可以存取資源的 URI。瀏覽器必定會執行此檢查。對一個<strong>不帶有</strong>身分驗證的請求，伺服器可以指定一個「*」作為萬用字元（wildcard），從而允許任何來源存取資源。</p>
 
 <p>舉例來說，要允許 http://mozilla.org 存取資源，你可以指定：</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: http://mozilla.org</pre>
+<pre class="brush: plain">Access-Control-Allow-Origin: http://mozilla.org</pre>
 
 <p>如果伺服器指定了一個來源主機而不是「*」，那也可能於不同回應的標頭中包含不同之來源，來向客戶端表示伺服器的回應會因請求標頭之 <code>Origin</code> 值而有所不同。</p>
 
@@ -431,7 +419,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Expose-Headers")}} 標頭表示伺服器允許瀏覽器存取回應標頭的白名單，如：</p>
 
-<pre class="brush: none">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
+<pre class="brush: plain">Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 </pre>
 
 <p>這允許了瀏覽器能夠存取回應當中的 <code>X-My-Custom-Header</code> 以及 <code>X-Another-Custom-Header</code> 標頭。</p>
@@ -440,7 +428,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Max-Age")}} 標頭表示了預檢請求的結果可以被快取多長的時間，請參考上面的範例。</p>
 
-<pre class="brush: none">Access-Control-Max-Age: &lt;delta-seconds&gt;
+<pre class="brush: plain">Access-Control-Max-Age: &lt;delta-seconds&gt;
 </pre>
 
 <p><code>delta-seconds</code> 參數代表預檢請求之結果可以被快取的秒數。</p>
@@ -449,7 +437,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Allow-Credentials")}} 標頭表示了當請求的 <code>credentials</code> 旗標為真時，是否要回應該請求。當用在預檢請求的回應中，那就是指示後續的實際請求可否附帶身分驗證。請注意，由於簡單的 <code>GET</code> 請求沒有預檢，所以如果一個簡單請求帶有身分驗證，同時假設此標頭沒有與資源一併回傳，則回應會被瀏覽器所忽略並且不會回傳予呼叫的網站內容。</p>
 
-<pre class="brush: none">Access-Control-Allow-Credentials: true
+<pre class="brush: plain">Access-Control-Allow-Credentials: true
 </pre>
 
 <p><a href="#Requests_with_credentials">驗證請求</a>在上面的討論當中。</p>
@@ -458,7 +446,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Allow-Methods")}} 標頭表示存取資源所允許的方法，用來回應預檢請求。上面已討論請求之預檢的條件。</p>
 
-<pre class="brush: none">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
+<pre class="brush: plain">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
 <p>一個<a href="#Preflighted_requests">預檢請求的範例已在上面提供</a>，其中包含了一個回傳此標頭予瀏覽器的例子。</p>
@@ -467,7 +455,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Allow-Headers")}} 標頭用在回傳予預檢請求的回應當中，以指定哪些 HTTP 標頭可以於實際請求中使用。</p>
 
-<pre class="brush: none">Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
+<pre class="brush: plain">Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
 <h2 id="HTTP_請求標頭">HTTP 請求標頭</h2>
@@ -478,7 +466,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Origin")}} 標頭表示了跨站存取請求或預檢請求的來源。</p>
 
-<pre class="brush: none">Origin: &lt;origin&gt;
+<pre class="brush: plain">Origin: &lt;origin&gt;
 </pre>
 
 <p>其值為一個告訴目標伺服器之請求傳送來源的 URI。並不含有任何路徑資訊，僅有伺服器名稱。</p>
@@ -491,7 +479,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Request-Method")}} 標頭用在發出的預檢請求中，告訴伺服器後續實際（actual）請求所用的 HTTP 方法。</p>
 
-<pre class="brush: none">Access-Control-Request-Method: &lt;method&gt;
+<pre class="brush: plain">Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
 <p>此標頭的相關範例可參考<a href="#Preflighted_requests">上方說明</a>。</p>
@@ -500,7 +488,7 @@ Content-Type: text/plain
 
 <p>{{HTTPHeader("Access-Control-Request-Headers")}} 標頭用在發出的預檢請求中，告訴伺服器端後續實際（actual）請求所帶的 HTTP 標頭。</p>
 
-<pre class="brush: none">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
+<pre class="brush: plain">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
 <p>此標頭的相關範例可參考<a href="#Preflighted_requests">上方說明</a>。</p>

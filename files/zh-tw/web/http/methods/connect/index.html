@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Methods/CONNECT
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>HTTP <code>CONNECT</code> </strong>方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。</p>
+<p><strong>HTTP <code>CONNECT</code></strong> 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。</p>
 
-<p>舉例來說，<code>CONNECT </code>方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。</p>
+<p>舉例來說，<code>CONNECT</code> 方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。</p>
 
 <p><code>CONNECT</code> 是個逐跳方法。</p>
 
@@ -49,7 +49,7 @@ translation_of: Web/HTTP/Methods/CONNECT
 
 <p>有些 Proxy 伺服器也許需要授權以建立隧道。請見 {{HTTPHeader("Proxy-Authorization")}} 標頭。</p>
 
-<pre class="line-numbers  language-html">CONNECT server.example.com:80 HTTP/1.1
+<pre class="brush: plain">CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
 
