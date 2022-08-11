@@ -1,46 +1,53 @@
 ---
 title: AbortSignal.onabort
 slug: Web/API/AbortSignal/abort_event
-tags:
-  - API
-  - Fetch
-  - onabort
-  - 事件处理
-  - 属性
-  - 测试
-  - 终止属性
-translation_of: Web/API/AbortSignal/onabort
-original_slug: Web/API/AbortSignal/onabort
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}当事件被{{event("abort_(cancellable_fetch)", "终止")}}，{{domxref("FetchSignal")}}接口的**`onabort`** 只读属性就会被调用。例子。当 fetch 的请求信号被终止。
+{{APIRef("DOM")}}
+
+当事件关联的请求被中止时，触发 {{domxref("AbortSignal")}} 接口的 **`abort`** 事件，例如，调用 {{domxref("AbortController.abort()")}}。
 
 ## 语法
 
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置一个事件处理器属性。
+
 ```js
-abortSignal.onabort = function() { ... };
+addEventListener('abort', (event) => { })
+onabort = (event) => { }
 ```
+
+## 事件类型
+
+{{DOMxRef("Event")}} 泛型，无任何额外的属性。
 
 ## 示例
 
-在下面例子中，我们将创建一个新的 `AbortController` 对象，并获取它的{{domxref("AbortSignal")}} (在 `signal` 属性中可用)。然后我们查看 `onabort` 属性是否被终止，并将相应的日志输出到控制台。
+在下面例子中，我们将创建一个新的 `AbortController` 对象，并获取它的 {{domxref("AbortSignal")}}（在 `signal` 属性中可用）。稍后，我们使用事件处理器属性检查信号是否被中止。
+
+你可以使用 [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法来检测 `abort` 事件：
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-signal.onabort = function() {
+signal.addEventListener('abort', () => {
+  console.log('Request aborted');
+});
+```
+
+或者使用 `onabort` 事件处理器属性：
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+signal.onabort = () => {
   console.log('Request aborted');
 };
 ```
 
-## 规格
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.AbortSignal.onabort")}}
-
-## 参考文档
-
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+{{Compat}}
