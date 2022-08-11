@@ -3,34 +3,39 @@ title: 206 Partial Content
 slug: Web/HTTP/Status/206
 translation_of: Web/HTTP/Status/206
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP <strong><code>206 Partial Content</code></strong> 成功狀態碼表明請求成功，且主體包含在請求標頭{{HTTPHeader("Range")}} 中所指定的資料區間。</p>
+HTTP **`206 Partial Content`** 成功狀態碼表明請求成功，且主體包含在請求標頭{{HTTPHeader("Range")}} 中所指定的資料區間。
 
-<p>若只包含一個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 將會被設為該文件的類型 ，且會包含一個 {{HTTPHeader("Content-Range")}} 標頭。</p>
+若只包含一個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 將會被設為該文件的類型 ，且會包含一個 {{HTTPHeader("Content-Range")}} 標頭。
 
-<p>若有多個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 會被設為 <code>multipart/byteranges</code> ，且每個分段會對應一個區間，並有 {{HTTPHeader("Content-Range")}} 及 {{HTTPHeader("Content-Type")}} 描述各個區間。</p>
+若有多個區間，則整個回應的 {{HTTPHeader("Content-Type")}} 會被設為 `multipart/byteranges` ，且每個分段會對應一個區間，並有 {{HTTPHeader("Content-Range")}} 及 {{HTTPHeader("Content-Type")}} 描述各個區間。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">206 Partial Content</pre>
+```plain
+206 Partial Content
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>一個包含單一區間的回應：</p>
+一個包含單一區間的回應：
 
-<pre class="brush: plain">HTTP/1.1 206 Partial Content
+```plain
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Range: bytes 21010-47021/47022
 Content-Length: 26012
 Content-Type: image/gif
 
-... 26012 bytes of partial image data ...</pre>
+... 26012 bytes of partial image data ...
+```
 
-<p>一個包含多個區間的回應：</p>
+一個包含多個區間的回應：
 
-<pre class="brush: plain">HTTP/1.1 206 Partial Content
+```plain
+HTTP/1.1 206 Partial Content
 Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Length: 1741
@@ -46,21 +51,20 @@ Content-Type: application/pdf
 Content-Range: bytes 4590-7999/8000
 
 ...the second range
---String_separator--</pre>
+--String_separator--
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.status.206")}}</p>
+{{Compat("http.status.206")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}

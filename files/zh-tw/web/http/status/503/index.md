@@ -8,45 +8,41 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/503
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>超文本傳輸協定(英文：HyperText Transfer Protocol (HTTP) ) <code><strong>503 Service Unavailable</strong></code> 表示目前伺服器暫時不能處理連線的請求。</p>
+超文本傳輸協定(英文：HyperText Transfer Protocol (HTTP) ) **`503 Service Unavailable`** 表示目前伺服器暫時不能處理連線的請求。
 
-<p>起因通常是伺服器正在進行維護或是當下流量過載。這種錯誤回傳應該是暫時性的，並且{{HTTPHeader("Retry-After")}} HTTP header 中要盡可能描述到系統大概恢復正常的時間。.</p>
+起因通常是伺服器正在進行維護或是當下流量過載。這種錯誤回傳應該是暫時性的，並且{{HTTPHeader("Retry-After")}} HTTP header 中要盡可能描述到系統大概恢復正常的時間。.
 
-<div class="note">
-<p><strong>注意：回傳這種錯誤的同時，也要同時顯示一張對使用者友善的網頁，來簡單描述問題。</strong></p>
-</div>
+> **備註：** 回傳這種錯誤的同時，也要同時顯示一張對使用者友善的網頁，來簡單描述問題。
 
-<p>回傳此錯誤時，務必注意和快取存取相關的標頭（Caching-related headers），因為 503 狀態通常要是暫時性的，而這種回應不應該被暫存至快取。</p>
+回傳此錯誤時，務必注意和快取存取相關的標頭（Caching-related headers），因為 503 狀態通常要是暫時性的，而這種回應不應該被暫存至快取。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">503 Service Unavailable</pre>
+```plain
+503 Service Unavailable
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>以下資訊是從 MDN 的 GitHub 取得 (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+以下資訊是從 MDN 的 GitHub 取得 (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http.status.503")}}</p>
+{{Compat("http.status.503")}}
 
-<h2 id="請參閱">請參閱</h2>
+## 請參閱
 
-<ul>
- <li>{{HTTPHeader("Retry-After")}}</li>
-</ul>
+- {{HTTPHeader("Retry-After")}}
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<h3 id="一般知識">一般知識</h3>
+### 一般知識
 
-<ul>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions</a></li>
- <li><a href="https://kinsta.com/blog/http-error-503/">HTTP Error 503</a></li>
- <li><a href="https://secure.wphackedhelp.com/blog/503-service-unavailable-error-wordpress/">503 Service Unvailaible WordPress</a></li>
- <li><a href="https://techmoon.xyz/503-service-unavailable-error/">如何修復在 WordPress 當中「503 Service Unavailable Error」的問題？</a></li>
-</ul>
+- [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [HTTP Error 503](https://kinsta.com/blog/http-error-503/)
+- [503 Service Unvailaible WordPress](https://secure.wphackedhelp.com/blog/503-service-unavailable-error-wordpress/)
+- [如何修復在 WordPress 當中「503 Service Unavailable Error」的問題？](https://techmoon.xyz/503-service-unavailable-error/)

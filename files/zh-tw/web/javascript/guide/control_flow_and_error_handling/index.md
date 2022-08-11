@@ -239,7 +239,7 @@ throw true;       // True/False
 throw {toString: function() { return "我是物件!"; } };
 ```
 
-> **備註：**您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。
+> **備註：** 您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。
 
 ```js
 // 創建類型爲 UserException 的物件

@@ -3,21 +3,24 @@ title: Web App Manifest
 slug: Web/Manifest
 translation_of: Web/Manifest
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。</p>
+Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。
 
-<p>Web App manifests 是屬於 <a href="/en-US/docs/Web/Apps/Progressive">progressive web apps</a> 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。</p>
+Web App manifests 是屬於 [progressive web apps](/zh-TW/docs/Web/Apps/Progressive) 的 Web 技術系列的一部分， 這是一個能不透過 App 商店就能被安裝到設備主畫面的 Web 應用程式，伴隨著其他功能，比如離線使用和通知的接收發送。
 
-<h2 id="部署_manifest">部署 manifest</h2>
+## 部署 manifest
 
-<p>Web app manifest 的部署只需要在 HTML 文件中的 <a href="/zh-TW/docs/Web/HTML/Element/head">head</a> 區域加上 <a href="/zh-TW/docs/Web/HTML/Element/link">link 元素</a>即可。</p>
+Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/HTML/Element/head) 區域加上 [link 元素](/zh-TW/docs/Web/HTML/Element/link)即可。
 
-<pre class="notranslate brush:html">&lt;link rel="manifest" href="/manifest.json"&gt;</pre>
+```html
+<link rel="manifest" href="/manifest.json">
+```
 
-<h2 id="manifest_範例">manifest 範例</h2>
+## manifest 範例
 
-<pre class="brush: json notranslate">{
+```json
+{
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",
@@ -55,95 +58,72 @@ translation_of: Web/Manifest
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
   }]
-}</pre>
+}
+```
 
-<h2 id="成員">成員</h2>
+## 成員
 
-<h3 id="background_color"><code>background_color</code></h3>
+### `background_color`
 
-<p>定義 Web 應用程式預期的背景顏色。 其值雖然與應用程式樣式表中的值有所重複，但是在 manifest 已可用而樣式表載入之前，瀏覽器可使用該值來繪製 Web 應用程式的背景色。 這能在 Web 應用程式的啟動和載入內容之間創建平順的過場。</p>
+定義 Web 應用程式預期的背景顏色。 其值雖然與應用程式樣式表中的值有所重複，但是在 manifest 已可用而樣式表載入之前，瀏覽器可使用該值來繪製 Web 應用程式的背景色。 這能在 Web 應用程式的啟動和載入內容之間創建平順的過場。
 
-<pre class="brush: json notranslate">"background_color": "red"</pre>
+```json
+"background_color": "red"
+```
 
-<div class="note">
-<p><strong>Note</strong>: <code>background_color</code> 成員僅用於改善 Web 應用程式載入時體驗，並且當 Web 應用程式的樣式表可用時，使用者代理不能再將其用作背景顏色。</p>
-</div>
+> **備註：** `background_color` 成員僅用於改善 Web 應用程式載入時體驗，並且當 Web 應用程式的樣式表可用時，使用者代理不能再將其用作背景顏色。
 
-<h3 id="description"><code>description</code></h3>
+### `description`
 
-<p>提供一段描述來形容這個 Web 應用程式的作用是什麼。</p>
+提供一段描述來形容這個 Web 應用程式的作用是什麼。
 
-<pre class="brush: json notranslate">"description": "The app that helps you find the best food in town!"</pre>
+```json
+"description": "The app that helps you find the best food in town!"
+```
 
-<h3 id="dir"><code>dir</code></h3>
+### `dir`
 
-<p>指定一個對於 <code>name</code>、<code>short_name、</code><code>description</code> 等成員的主要書寫方向。 包含 <code>lang</code> 成員，其能夠為右至左書寫的語言提供幫助。</p>
+指定一個對於 `name`、` short_name、``description ` 等成員的主要書寫方向。 包含 `lang` 成員，其能夠為右至左書寫的語言提供幫助。
 
-<pre class="brush: json notranslate">"dir": "rtl",
+```json
+"dir": "rtl",
 "lang": "ar",
-"short_name": "أنا من التطبيق!"</pre>
+"short_name": "أنا من التطبيق!"
+```
 
-<p>其值可以是下列的其中之一：</p>
+其值可以是下列的其中之一：
 
-<ul>
- <li><code>ltr</code>（左至右）</li>
- <li><code>rtl</code>（右至左）</li>
- <li><code>auto</code>（讓瀏覽器根據 Unicode 雙向演算法對書寫方向做出最佳的猜測）</li>
-</ul>
+- `ltr`（左至右）
+- `rtl`（右至左）
+- `auto`（讓瀏覽器根據 Unicode 雙向演算法對書寫方向做出最佳的猜測）
 
-<div class="note">
-<p><strong>Note</strong>: 當省略其值時，預設為 <code>auto</code>。</p>
-</div>
+> **備註：** 當省略其值時，預設為 `auto`。
 
-<h3 id="display"><code>display</code></h3>
+### `display`
 
-<p>定義開發者喜好的 Web 應用程式顯示模式。</p>
+定義開發者喜好的 Web 應用程式顯示模式。
 
-<pre class="brush: json notranslate">"display": "standalone"</pre>
+```json
+"display": "standalone"
+```
 
-<p>有效值：</p>
+有效值：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">顯示模式</th>
-   <th scope="col">描述</th>
-   <th scope="col">Fallback 顯示模式</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>fullscreen</code></td>
-   <td>所有可用的顯示區域都被填充並且不顯示使用者代理 {{Glossary("chrome")}} 。</td>
-   <td><code>standalone</code></td>
-  </tr>
-  <tr>
-   <td><code>standalone</code></td>
-   <td>這看起來和感覺上就像是獨立應用程式一樣，包括有不同的執行視窗、有圖示的應用程式啟動器 ... 等等。 在這模式下，使用者代理將不包含控制導覽列，但能包含其他的 UI 元素，像是狀態列。</td>
-   <td><code>minimal-ui</code></td>
-  </tr>
-  <tr>
-   <td><code>minimal-ui</code></td>
-   <td>這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。</td>
-   <td><code>browser</code></td>
-  </tr>
-  <tr>
-   <td><code>browser</code></td>
-   <td>預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。</td>
-   <td>(None)</td>
-  </tr>
- </tbody>
-</table>
+| 顯示模式     | 描述                                                                                                                                                                           | Fallback 顯示模式 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| `fullscreen` | 所有可用的顯示區域都被填充並且不顯示使用者代理 {{Glossary("chrome")}} 。                                                                                                 | `standalone`      |
+| `standalone` | 這看起來和感覺上就像是獨立應用程式一樣，包括有不同的執行視窗、有圖示的應用程式啟動器 ... 等等。 在這模式下，使用者代理將不包含控制導覽列，但能包含其他的 UI 元素，像是狀態列。 | `minimal-ui`      |
+| `minimal-ui` | 這看起來和感覺上就像是獨立應用程式一樣，但將有控制導覽列 UI 元素的最小設置，元素會因瀏覽器而不同。                                                                             | `browser`         |
+| `browser`    | 預設值。 應用程式如常規般地被開啟於瀏覽器分頁或新視窗，依瀏覽器與平台而不同。                                                                                                  | (None)            |
 
-<div class="note">
-<p><strong>Note</strong>: 您能根據顯示模式選擇性地將 CSS <a href="/docs/Web/CSS/@media/display-mode">display-mode</a> media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。</p>
-</div>
+> **備註：** 您能根據顯示模式選擇性地將 CSS [display-mode](/docs/Web/CSS/@media/display-mode) media 功能運用於您的應用程式，這可以提供一致的使用者體驗不管是由網址開啟網站或者由桌面圖示啟動。
 
-<h3 id="icons"><code>icons</code></h3>
+### `icons`
 
-<p>指定一個陣列，其包含可以在不同上下文情況當中做為應用程式圖示的物件。 舉例來說，其可能被用作代表該 web 應用程式出現在其他應用程式的列表當中，或是作業系統的任務切換器 task switcher 與系統偏好設定 system preferences。</p>
+指定一個陣列，其包含可以在不同上下文情況當中做為應用程式圖示的物件。 舉例來說，其可能被用作代表該 web 應用程式出現在其他應用程式的列表當中，或是作業系統的任務切換器 task switcher 與系統偏好設定 system preferences。
 
-<pre class="brush: json notranslate">"icons": [
+```json
+"icons": [
   {
     "src": "icon/lowres.webp",
     "sizes": "48x48",
@@ -161,79 +141,68 @@ translation_of: Web/Manifest
     "src": "icon/hd_hi.svg",
     "sizes": "72x72"
   }
-]</pre>
+]
+```
 
-<p>圖示物件能包含下列的值：</p>
+圖示物件能包含下列的值：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">成員</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>sizes</code></td>
-   <td>以空白間隔各圖片尺吋的一個字串。 </td>
-  </tr>
-  <tr>
-   <td><code>src</code></td>
-   <td>圖檔的路徑。 若 src 為相對路徑，則網址將以 manifest 的位置為基準。</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td>關於圖片媒體類型的提示。 其使用目的是允許使用者代理快速地去忽略其不支持的媒體類型的圖片。</td>
-  </tr>
- </tbody>
-</table>
+| 成員    | 描述                                                                                      |
+| ------- | ----------------------------------------------------------------------------------------- |
+| `sizes` | 以空白間隔各圖片尺吋的一個字串。                                                          |
+| `src`   | 圖檔的路徑。 若 src 為相對路徑，則網址將以 manifest 的位置為基準。                        |
+| `type`  | 關於圖片媒體類型的提示。 其使用目的是允許使用者代理快速地去忽略其不支持的媒體類型的圖片。 |
 
-<h3 id="lang"><code>lang</code></h3>
+### `lang`
 
-<p>指定一個對於 <code>name</code>、<code>short_name</code> 等成員的主要語言。 其值限單一種語言標籤的字串。</p>
+指定一個對於 `name`、`short_name` 等成員的主要語言。 其值限單一種語言標籤的字串。
 
-<pre class="brush: json notranslate">"lang": "en-US"</pre>
+```json
+"lang": "en-US"
+```
 
-<h3 id="name"><code>name</code></h3>
+### `name`
 
-<p>提供一個人類可讀的應用程式名稱，其值是對使用者顯示的，可能在其他應用程式的列表之中，或是做為圖示的標籤。</p>
+提供一個人類可讀的應用程式名稱，其值是對使用者顯示的，可能在其他應用程式的列表之中，或是做為圖示的標籤。
 
-<pre class="brush: json notranslate">"name": "Google I/O 2017" </pre>
+```json
+"name": "Google I/O 2017"
+```
 
-<h3 id="orientation"><code>orientation</code></h3>
+### `orientation`
 
-<p>定義預設的顯示方向，其將作用在 all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.</p>
+定義預設的顯示方向，其將作用在 all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
-<pre class="brush: json notranslate">"orientation": "portrait-primary"</pre>
+```json
+"orientation": "portrait-primary"
+```
 
-<p>其值可以是下列的其中之一：</p>
+其值可以是下列的其中之一：
 
-<ul>
- <li><code>any</code></li>
- <li><code>natural</code></li>
- <li><code>landscape</code></li>
- <li><code>landscape-primary</code></li>
- <li><code>landscape-secondary</code></li>
- <li><code>portrait</code></li>
- <li><code>portrait-primary</code></li>
- <li><code>portrait-secondary</code></li>
-</ul>
+- `any`
+- `natural`
+- `landscape`
+- `landscape-primary`
+- `landscape-secondary`
+- `portrait`
+- `portrait-primary`
+- `portrait-secondary`
 
-<h3 id="prefer_related_applications"><code>prefer_related_applications</code></h3>
+### `prefer_related_applications`
 
-<p>提供一個布林值告訴使用者代理是否要在 Web 應用程式上去推薦一個相關的應用程式（見下文）給使用者。 這應該只被使用在當原生應用程式提供了 Web 應用程式無法替代其功用的時候。</p>
+提供一個布林值告訴使用者代理是否要在 Web 應用程式上去推薦一個相關的應用程式（見下文）給使用者。 這應該只被使用在當原生應用程式提供了 Web 應用程式無法替代其功用的時候。
 
-<pre class="brush: json notranslate">"prefer_related_applications": false</pre>
+```json
+"prefer_related_applications": false
+```
 
-<div class="note">
-<p><strong>Note</strong>: 當省略其值時，預設為 <code>false。</code></p>
-</div>
+> **備註：** 當省略其值時，預設為 `false。`
 
-<h3 id="related_applications"><code>related_applications</code></h3>
+### `related_applications`
 
-<p>指定一個包含「應用程式物件」的陣列，其物件用以表示一個能被底層平台安裝或訪問的原生應用程式 — 例如能由 Google Play 商店獲取的原生 Android 應用程式。 這是一個可選的替代方案，如同原生應用程式版的 Web 應用程式一般去提供相似或等同的功能。</p>
+指定一個包含「應用程式物件」的陣列，其物件用以表示一個能被底層平台安裝或訪問的原生應用程式 — 例如能由 Google Play 商店獲取的原生 Android 應用程式。 這是一個可選的替代方案，如同原生應用程式版的 Web 應用程式一般去提供相似或等同的功能。
 
-<pre class="brush: json notranslate">"related_applications": [
+```json
+"related_applications": [
   {
     "platform": "play",
     "url": "https://play.google.com/store/apps/details?id=com.example.app1",
@@ -241,68 +210,59 @@ translation_of: Web/Manifest
   }, {
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
-  }]</pre>
+  }]
+```
 
-<p>應用程式物件能包含下列的值：</p>
+應用程式物件能包含下列的值：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">成員</th>
-   <th scope="col">描述</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>platform</code></td>
-   <td>可以找到該應用程式的平台。</td>
-  </tr>
-  <tr>
-   <td><code>url</code></td>
-   <td>可以找到該應用程式的網址。</td>
-  </tr>
-  <tr>
-   <td><code>id</code></td>
-   <td>在特定平台上代表該應用程式的 ID。</td>
-  </tr>
- </tbody>
-</table>
+| 成員       | 描述                              |
+| ---------- | --------------------------------- |
+| `platform` | 可以找到該應用程式的平台。        |
+| `url`      | 可以找到該應用程式的網址。        |
+| `id`       | 在特定平台上代表該應用程式的 ID。 |
 
-<h3 id="scope"><code>scope</code></h3>
+### `scope`
 
-<p>Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.</p>
+Defines the navigation scope of this web application's application context. This basically restricts what web pages can be viewed while the manifest is applied. If the user navigates the application outside the scope, it returns to being a normal web page.
 
-<p>If the scope is a relative URL, the base URL will be the URL of the manifest.</p>
+If the scope is a relative URL, the base URL will be the URL of the manifest.
 
-<pre class="brush: json notranslate">"scope": "/myapp/"</pre>
+```json
+"scope": "/myapp/"
+```
 
-<h3 id="short_name"><code>short_name</code></h3>
+### `short_name`
 
-<p>提供一個人類可讀且較簡短的應用程式名稱，其值將被使用在較不足以去顯示 Web 應用程式全名的空間。</p>
+提供一個人類可讀且較簡短的應用程式名稱，其值將被使用在較不足以去顯示 Web 應用程式全名的空間。
 
-<pre class="brush: json notranslate">"short_name": "I/O 2017"
-</pre>
+```json
+"short_name": "I/O 2017"
+```
 
-<h3 id="start_url"><code>start_url</code></h3>
+### `start_url`
 
-<p>指定一個當使用者由裝置上啟動應用程式時所開啟的網址。 若使用相對路徑，則網址將以 manifest 的位置為基準。</p>
+指定一個當使用者由裝置上啟動應用程式時所開啟的網址。 若使用相對路徑，則網址將以 manifest 的位置為基準。
 
-<pre class="brush: json notranslate">"start_url": "./?utm_source=web_app_manifest"</pre>
+```json
+"start_url": "./?utm_source=web_app_manifest"
+```
 
-<h3 id="theme_color"><code>theme_color</code></h3>
+### `theme_color`
 
-<p>定義一個應用程式預設的主題顏色。 其值會被作業系統在某些時候運用來顯示應用程式（如： Android 的任務切換器 task switcher 就以主題顏色圍繞著應用程式）。  </p>
+定義一個應用程式預設的主題顏色。 其值會被作業系統在某些時候運用來顯示應用程式（如： Android 的任務切換器 task switcher 就以主題顏色圍繞著應用程式）。
 
-<pre class="brush: json notranslate">"theme_color": "aliceblue"</pre>
+```json
+"theme_color": "aliceblue"
+```
 
-<h2 id="啟動畫面（Splash_screens）">啟動畫面（Splash screens）</h2>
+## 啟動畫面（Splash screens）
 
-<p>在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 <code>name</code>、<code>background_color</code> 、 <code>icons </code>陣列中較接近裝置的 128dpi 的圖示。</p>
+在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 `name`、`background_color` 、 `icons `陣列中較接近裝置的 128dpi 的圖示。
 
-<h2 id="Mime_類型">Mime 類型</h2>
+## Mime 類型
 
-<p>Manifests 應該被使用 <code>application/manifest+json</code> 的 MIME 類型。不過這是可選的。 </p>
+Manifests 應該被使用 `application/manifest+json` 的 MIME 類型。不過這是可選的。
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat}}</p>
+{{Compat}}

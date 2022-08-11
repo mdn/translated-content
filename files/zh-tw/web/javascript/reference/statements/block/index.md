@@ -3,77 +3,80 @@ title: 區塊
 slug: Web/JavaScript/Reference/Statements/block
 translation_of: Web/JavaScript/Reference/Statements/block
 ---
-<p>{{jsSidebar("Statements")}}</p>
+{{jsSidebar("Statements")}}
 
-<h2 id="總覽">總覽</h2>
+## 總覽
 
-<p>區塊陳述用來組合零個或多個陳述。我們使用一對大括號 { } 以界定區塊。</p>
+區塊陳述用來組合零個或多個陳述。我們使用一對大括號 { } 以界定區塊。
 
 <table>
- <tbody>
-  <tr>
-   <th colspan="2">陳述句</th>
-  </tr>
-  <tr>
-   <td>Implemented in</td>
-   <td>JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>ECMAScript edition</td>
-   <td>ECMA-262 1st edition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th colspan="2">陳述句</th>
+    </tr>
+    <tr>
+      <td>Implemented in</td>
+      <td>JavaScript 1.0</td>
+    </tr>
+    <tr>
+      <td>ECMAScript edition</td>
+      <td>ECMA-262 1st edition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">{
-  <var>陳述_1</var>
-  <var>陳述_2</var>
+```plain
+{
+  陳述_1
+  陳述_2
   ...
-  <var>陳述_n</var>
+  陳述_n
 }
-</pre>
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>陳述_1</code>, <code>陳述_2</code>, <code>陳述_n</code></dt>
- <dd>區塊陳述中的陳述句群。</dd>
-</dl>
+- `陳述_1`, `陳述_2`, `陳述_n`
+  - : 區塊陳述中的陳述句群。
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>區塊陳述通常配合流程控制陳述（如 <code>if</code>、<code>for</code>、<code>while</code>）一併使用。</p>
+區塊陳述通常配合流程控制陳述（如 `if`、`for`、`while`）一併使用。
 
-<h4 id="var"><code>var</code></h4>
+#### `var`
 
-<p>使用<code>var</code>區塊中定義的變數，其存取範圍是整個整個函式或是腳本，即為Execution Context的範圍中。</p>
+使用`var`區塊中定義的變數，其存取範圍是整個整個函式或是腳本，即為 Execution Context 的範圍中。
 
-<pre class="brush: js">var x = 1;
+```js
+var x = 1;
 {
   var x = 2;
 }
 alert(x); // outputs 2
-</pre>
+```
 
-<p>輸出結果是 2。因為var是宣告於整個腳本範圍中。</p>
+輸出結果是 2。因為 var 是宣告於整個腳本範圍中。
 
-<h4 id="let_和_const"><code>let </code>和 <code>const</code></h4>
+#### `let `和 `const`
 
-<p>當使用<code>let</code>或是<code>const</code>進行宣告時，其存取範圍是只有本身定義的區塊中。</p>
+當使用`let`或是`const`進行宣告時，其存取範圍是只有本身定義的區塊中。
 
-<pre class="brush: js">let x = 1;
+```js
+let x = 1;
 {
   let x = 2;
 }
-console.log(x); // logs 1</pre>
+console.log(x); // logs 1
+```
 
-<h4 id="function"><code>function</code></h4>
+#### `function`
 
-<p>當function被呼叫時，會建立此function的Execution Context，因此在function區塊使用<code>var</code>整個function區塊中都可對其進行存取。</p>
+當 function 被呼叫時，會建立此 function 的 Execution Context，因此在 function 區塊使用`var`整個 function 區塊中都可對其進行存取。
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
     {
         var a = 'var';
         {
@@ -83,12 +86,13 @@ console.log(x); // logs 1</pre>
     }
     console.log(a);  // var
 }
-foo();</pre>
+foo();
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}

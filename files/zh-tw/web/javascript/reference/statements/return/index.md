@@ -60,7 +60,7 @@ a + b;
 
 主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
 
-> **備註：**從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
+> **備註：** 從 Gecko 40 {{geckoRelease(40)}} 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
 
 要避免 ASI 問題，可以添加括號：
 

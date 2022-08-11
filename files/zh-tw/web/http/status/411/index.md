@@ -3,25 +3,23 @@ title: 411 Length Required
 slug: Web/HTTP/Status/411
 translation_of: Web/HTTP/Status/411
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>超文本傳輸協定 (HTTP) <code><strong>411 Length Required</strong></code> 用戶端錯誤表示伺服器拒絕接收沒有定義 {{HTTPHeader("Content-Length")}} 頭的請求。 </p>
+超文本傳輸協定 (HTTP) **`411 Length Required`** 用戶端錯誤表示伺服器拒絕接收沒有定義 {{HTTPHeader("Content-Length")}} 頭的請求。
 
-<div class="note">
-<p><strong>Note: </strong>by specification, when sending data in a series of chunks, the <code>Content-Length</code> header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format. See {{HTTPHeader("Transfer-Encoding")}} for more details.</p>
-</div>
+> **備註：** by specification, when sending data in a series of chunks, the `Content-Length` header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format. See {{HTTPHeader("Transfer-Encoding")}} for more details.
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox">411 Length Required</pre>
+```plain
+411 Length Required
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Transfer-Encoding")}}

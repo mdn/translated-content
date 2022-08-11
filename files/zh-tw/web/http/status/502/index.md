@@ -7,38 +7,33 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/502
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code>502 Bad Gateway</code> 錯誤表明伺服器以閘道器或代理訪問時，收到了來自上游服務器的無效回應。</p>
+`502 Bad Gateway` 錯誤表明伺服器以閘道器或代理訪問時，收到了來自上游服務器的無效回應。
 
-<div class="note">
-<p><strong>注意：</strong><a href="https://zh.wikipedia.org/wiki/閘道器">閘道器</a>可能位於網路上的不同地方。502 錯誤通常也不是開發者可以修復的，他通常需要在要訪問的的伺服器或代理修復之。</p>
-</div>
+> **備註：** [閘道器](https://zh.wikipedia.org/wiki/閘道器)可能位於網路上的不同地方。502 錯誤通常也不是開發者可以修復的，他通常需要在要訪問的的伺服器或代理修復之。
 
-<h2 id="狀態">狀態</h2>
+## 狀態
 
-<pre class="syntaxbox notranslate">502 Bad Gateway
-</pre>
+```plain
+502 Bad Gateway
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>The information shown below has been pulled from MDN's GitHub (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
+{{Compat("http.status.502")}}
 
+## See also
 
-<p>{{Compat("http.status.502")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://techmoon.xyz/502-bad-gateway-error-fix-wordpress/">WordPress 出現 502 Bad Gateway Error 解決方法</a></li>
- <li>{{HTTPStatus(504)}}</li>
- <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definition</a></li>
- <li><a href="https://www.exai.com/blog/502-bad-gateway">502 bad gateway fix</a></li>
- <li><a href="https://kinsta.com/blog/502-bad-gateway/">502 Bad Gateway error on WordPress</a></li>
- <li><a href="https://support.cloudflare.com/hc/en-us/articles/115003011431#502504error">502 error with Cloudflare</a></li>
-</ul>
+- [WordPress 出現 502 Bad Gateway Error 解決方法](https://techmoon.xyz/502-bad-gateway-error-fix-wordpress/)
+- {{HTTPStatus(504)}}
+- [HTTP/1.1: Status Code Definition](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [502 bad gateway fix](https://www.exai.com/blog/502-bad-gateway)
+- [502 Bad Gateway error on WordPress](https://kinsta.com/blog/502-bad-gateway/)
+- [502 error with Cloudflare](https://support.cloudflare.com/hc/en-us/articles/115003011431#502504error)

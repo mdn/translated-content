@@ -2,86 +2,74 @@
 title: Date
 slug: Web/HTTP/Headers/Date
 tags:
-- General Header
-- HTTP
-- Reference
-- header
+  - General Header
+  - HTTP
+  - Reference
+  - header
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Date</code></strong> 標頭的值是傳送當下的日期與時間。</p>
+**`Date`** 標頭的值是傳送當下的日期與時間。
 
-<div class="warning">
-	<p><code>Date</code> 被列在 fetch spec 的 <a
-			href="https://fetch.spec.whatwg.org/#forbidden-header-name"
-			rel="nofollow noreferrer">forbidden header names</a> 清單中──也就是說這段程式不會送出 <code>Date</code> 標頭：</p>
+> **警告：** `Date` 被列在 fetch spec 的 [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name) 清單中 ── 也就是說這段程式不會送出 `Date` 標頭：```js
+> fetch('https://httpbin.org/get', {
+> 'headers': {
+> 'Date': (new Date()).toUTCString()
+> }
+> })
+>
+> ```
+>
+> ```
 
-	<pre class="brush: js">fetch('https://httpbin.org/get', {
-    'headers': {
-        'Date': (new Date()).toUTCString()
-    }
-})</pre>
-</div>
+| Header type                                      | {{Glossary("General header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Header type</th>
-			<td>{{Glossary("General header")}}</td>
-		</tr>
-		<tr>
-			<th scope="row">{{Glossary("Forbidden header name")}}</th>
-			<td>yes</td>
-		</tr>
-	</tbody>
-</table>
+## 語法
 
-<h2 id="Syntax">語法</h2>
+```html
+Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+```
 
-<pre class="brush: html">Date: &lt;day-name&gt;, &lt;day&gt; &lt;month&gt; &lt;year&gt; &lt;hour&gt;:&lt;minute&gt;:&lt;second&gt; GMT
-</pre>
+## 指令
 
-<h2 id="Directives">指令</h2>
+- \<day-name>
+  - : 代表星期幾，為 Mon、Tue、Wed、Thu、Fri、Sat 或 Sun 之一（區分大小寫）。
+- \<day>
+  - : 二位數日期，比如「04」或「23」。
+- \<month>
+  - : 月份，為 Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov、Dec 之一（區分大小寫）。
+- \<year>
+  - : 四位數年份，比如「1990」或「2016」。
+- \<hour>
+  - : 二位數小時，比如「09」或「23」。
+- \<minute>
+  - : 二位數分鐘，比如「04」或「59」。
+- \<second>
+  - : 二位數秒，比如「04」或「59」。
+- GMT
+  - : 格林威治標準時間的意思。在 HTTP 中日期都是採用 GMT，絕不會顯示當地時間。
 
-<dl>
-	<dt>&lt;day-name&gt;</dt>
-	<dd>代表星期幾，為 Mon、Tue、Wed、Thu、Fri、Sat 或 Sun 之一（區分大小寫）。</dd>
-	<dt>&lt;day&gt;</dt>
-	<dd>二位數日期，比如「04」或「23」。</dd>
-	<dt>&lt;month&gt;</dt>
-	<dd>月份，為 Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov、Dec 之一（區分大小寫）。</dd>
-	<dt>&lt;year&gt;</dt>
-	<dd>四位數年份，比如「1990」或「2016」。</dd>
-	<dt>&lt;hour&gt;</dt>
-	<dd>二位數小時，比如「09」或「23」。</dd>
-	<dt>&lt;minute&gt;</dt>
-	<dd>二位數分鐘，比如「04」或「59」。</dd>
-	<dt>&lt;second&gt;</dt>
-	<dd>二位數秒，比如「04」或「59」。</dd>
-	<dt>GMT</dt>
-	<dd>
-		<p>格林威治標準時間的意思。在 HTTP 中日期都是採用 GMT，絕不會顯示當地時間。</p>
-	</dd>
-</dl>
+## 範例
 
-<h2 id="Examples">範例</h2>
+```plain
+Date: Wed, 21 Oct 2015 07:28:00 GMT
+```
 
-<pre>Date: Wed, 21 Oct 2015 07:28:00 GMT
-</pre>
+```js
+new Date().toUTCString()
+// "Mon, 09 Mar 2020 08:13:24 GMT"
+```
 
-<pre class="brush: js">new Date().toUTCString()
-// "Mon, 09 Mar 2020 08:13:24 GMT"</pre>
-
-<h2 id="Specifications">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.headers.Date")}}</p>
+{{Compat("http.headers.Date")}}
 
-<h2 id="See_also">參閱</h2>
+## 參閱
 
-<ul>
-	<li>{{HTTPHeader("Age")}}</li>
-</ul>
+- {{HTTPHeader("Age")}}

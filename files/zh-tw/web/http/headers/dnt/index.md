@@ -3,66 +3,54 @@ title: DNT
 slug: Web/HTTP/Headers/DNT
 translation_of: Web/HTTP/Headers/DNT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>DNT</code></strong>（<strong>D</strong>o <strong>N</strong>ot <strong>T</strong>rack，<strong>請勿追蹤</strong>）請求標頭表明用戶針對追蹤程式的設定。它能讓用戶表達自己相較於個人化設定，更在乎個人隱私。</p>
+**`DNT`**（**D**o **N**ot **T**rack，**請勿追蹤**）請求標頭表明用戶針對追蹤程式的設定。它能讓用戶表達自己相較於個人化設定，更在乎個人隱私。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">標頭類型</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>是</td>
-  </tr>
- </tbody>
-</table>
+| 標頭類型                                         | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | 是                                       |
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">DNT: 0
+```plain
+DNT: 0
 DNT: 1
-</pre>
+```
 
-<h2 id="指令">指令</h2>
+## 指令
 
-<dl>
- <dt>0</dt>
- <dd>用戶允許目標網站追蹤之。</dd>
- <dt>1</dt>
- <dd>用戶不允許目標網站追蹤。</dd>
-</dl>
+- 0
+  - : 用戶允許目標網站追蹤之。
+- 1
+  - : 用戶不允許目標網站追蹤。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="請參考_JavaScript_的_Do_Not_Track">請參考 JavaScript 的 Do Not Track</h3>
+### 請參考 JavaScript 的 Do Not Track
 
-<p>用戶的 DNT 設定也能透過 JavaScript 的 {{domxref("Navigator.doNotTrack")}} 設定檢查：</p>
+用戶的 DNT 設定也能透過 JavaScript 的 {{domxref("Navigator.doNotTrack")}} 設定檢查：
 
-<pre class="brush: js">navigator.doNotTrack; // "0" or "1"</pre>
+```js
+navigator.doNotTrack; // "0" or "1"
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.headers.DNT")}}</p>
+{{Compat("http.headers.DNT")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Navigator.doNotTrack")}}</li>
- <li>{{HTTPHeader("Tk")}} 標頭</li>
- <li>維基百科的<a href="https://zh.wikipedia.org/zh-tw/%E8%AF%B7%E5%8B%BF%E8%BF%BD%E8%B8%AA">Do Not Track </a></li>
- <li><a href="https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean">What Does the "Track" in "Do Not Track" Mean? – EFF</a></li>
- <li><a href="http://donottrack.us/">donottrack.us</a></li>
- <li>瀏覽器設定 DNT 的幫助：
-  <ul>
-   <li><a href="https://www.mozilla.org/zh-tw/firefox/dnt/">Firefox</a></li>
-   <li><a href="https://support.google.com/chrome/answer/2790761">Chrome</a></li>
-  </ul>
- </li>
-</ul>
+- {{domxref("Navigator.doNotTrack")}}
+- {{HTTPHeader("Tk")}} 標頭
+- 維基百科的[Do Not Track](https://zh.wikipedia.org/zh-tw/%E8%AF%B7%E5%8B%BF%E8%BF%BD%E8%B8%AA)
+- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
+- [donottrack.us](http://donottrack.us/)
+- 瀏覽器設定 DNT 的幫助：
+
+  - [Firefox](https://www.mozilla.org/zh-tw/firefox/dnt/)
+  - [Chrome](https://support.google.com/chrome/answer/2790761)

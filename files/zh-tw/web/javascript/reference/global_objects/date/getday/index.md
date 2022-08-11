@@ -32,7 +32,7 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-> **備註：**如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上`options`參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：
+> **備註：** 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}加上`options`參數來獲取星期幾全名。使使用此方法能輕鬆做出各種國際語言：
 >
 > ```js
 > var options = { weekday: 'long'};

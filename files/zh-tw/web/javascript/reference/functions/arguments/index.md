@@ -20,9 +20,9 @@ arguments
 
 ## 描述
 
-> **備註：**如果你有在使用 ES6 語法，建議參考[其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
+> **備註：** 如果你有在使用 ES6 語法，建議參考[其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
 
-> **備註：**「類陣列 (Array-like)」 的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()` ，或是 `map()` 。
+> **備註：** 「類陣列 (Array-like)」 的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()` ，或是 `map()` 。
 
 The `arguments` object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the `arguments` object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.
 

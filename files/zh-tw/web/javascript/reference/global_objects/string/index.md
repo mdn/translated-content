@@ -59,7 +59,7 @@ String(thing)
 | `\u{X}` ... `\u{XXXXXX}` | unicode 代碼 {{experimental_inline}} |
 | `\xXX`                   | Latin-1 字元                                  |
 
-> **備註：**和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
+> **備註：** 和其他語言不同，JavaScript 將單引號字串和雙引號字串是做相同；因此，上述的序列可以在單引號或雙引號中作用。
 
 ### 長字面值字串
 
@@ -151,7 +151,7 @@ console.log(eval(s2));      // 回傳字串 "2 + 2"
 console.log(eval(s2.valueOf())); // 回傳數字 4
 ```
 
-> **備註：**對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)。
+> **備註：** 對於在 JavaScript 中其他可用的字串方法，請參閱這篇文章[`StringView` – a C-like representation of strings based on typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays/StringView)。
 
 ## 屬性
 

@@ -3,54 +3,32 @@ title: GET
 slug: Web/HTTP/Methods/GET
 translation_of: Web/HTTP/Methods/GET
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>GET</code> method</strong> 方法請求展示指定資源。 使用 <code>GET</code> 的請求只應用於取得資料。</p>
+**HTTP `GET` method** 方法請求展示指定資源。 使用 `GET` 的請求只應用於取得資料。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Request 有 body</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">成功的 response 有 body</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">允許在 HTML 表單</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Request 有 body                      | No  |
+| ------------------------------------ | --- |
+| 成功的 response 有 body              | Yes |
+| {{Glossary("Safe")}}         | Yes |
+| {{Glossary("Idempotent")}} | Yes |
+| {{Glossary("Cacheable")}}     | Yes |
+| 允許在 HTML 表單                     | Yes |
 
-<h2 id="格式">格式</h2>
+## 格式
 
-<pre class="syntaxbox">GET /index.html
-</pre>
+```plain
+GET /index.html
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.methods.GET")}}</p>
+{{Compat("http.methods.GET")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPHeader("Range")}}
