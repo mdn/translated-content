@@ -59,58 +59,7 @@ translation_of: Web/SVG/Tutorial/Filter_effects
 &lt;/svg&gt;
 </pre>
 
-<div class="hidden">
-<h2 id="Example">Example</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;svg width="250" viewBox="0 0 200 85"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;defs&gt;
-    &lt;!-- Filter declaration --&gt;
-    &lt;filter id="MyFilter" filterUnits="userSpaceOnUse"
-            x="0" y="0"
-            width="200" height="120"&gt;
-
-      &lt;!-- offsetBlur --&gt;
-      &lt;feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/&gt;
-      &lt;feOffset in="blur" dx="4" dy="4" result="offsetBlur"/&gt;
-
-      &lt;!-- litPaint --&gt;
-      &lt;feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75"
-                          specularExponent="20" lighting-color="#bbbbbb"
-                          result="specOut"&gt;
-        &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-      &lt;/feSpecularLighting&gt;
-      &lt;feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/&gt;
-      &lt;feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
-                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/&gt;
-
-      &lt;!-- merge offsetBlur + litPaint --&gt;
-      &lt;feMerge&gt;
-        &lt;feMergeNode in="offsetBlur"/&gt;
-        &lt;feMergeNode in="litPaint"/&gt;
-      &lt;/feMerge&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-
-  &lt;!-- Graphic elements --&gt;
-  &lt;g filter="url(#MyFilter)"&gt;
-      &lt;path fill="none" stroke="#D90000" stroke-width="10"
-            d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" /&gt;
-      &lt;path fill="#D90000"
-            d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" /&gt;
-      &lt;g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" &gt;
-        &lt;text x="52" y="52"&gt;SVG&lt;/text&gt;
-      &lt;/g&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
-
-
-</div>
-
-<p>{{ EmbedLiveSample('Example', '100%', 120) }}</p>
+<p>{{ EmbedLiveSample('示例', '100%', 120) }}</p>
 
 <h3 id="步骤_1">步骤 1</h3>
 
