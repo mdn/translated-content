@@ -4,162 +4,184 @@ slug: Web/Guide/CSS/Block_formatting_context
 tags:
   - CSS
   - Guide
+  - NeedsBeginnerUpdate
+  - NeedsExample
   - Reference
   - Web
-  - ウェブ
-  - ガイド
+spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
 translation_of: Web/Guide/CSS/Block_formatting_context
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><ruby><strong>ブロック整形コンテキスト</strong><rp> (</rp><rt>block formatting context</rt><rp>) </rp></ruby>は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。</p>
+**ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。
 
-<p>ブロック整形コンテキストは、以下のうちの少なくとも一つから生成されます。</p>
+ブロック整形コンテキストは、以下のうちの少なくとも一つから生成されます。
 
-<ul>
- <li>文書のルート要素 (<code>&lt;html&gt;</code>)</li>
- <li>浮動要素 ({{ cssxref("float") }} が <code>none</code> 以外である要素)</li>
- <li>絶対位置指定の要素 ({{ cssxref("position") }} が <code>absolute</code> または <code>fixed</code> である要素)</li>
- <li>インラインブロック ({{ cssxref("display") }}<code>: inline-block</code> である要素)</li>
- <li>表のセル ({{ cssxref("display") }}<code>: table-cell</code> を持つ要素。これは HTML の表のセルの既定値です)</li>
- <li>表のキャプション ({{ cssxref("display") }}<code>: table-caption</code> を持つ要素。HTMLの、表のキャプションの既定値です)</li>
- <li>{{ cssxref("display") }}<code>: table</code>, <code>table-row</code>, <code>table-row-group</code>, <code>table-header-group</code>, <code>table-footer-group</code> (つまりそれぞれ HTML の表、表の行、表の本体、表のヘッダー、表のフッターの既定値), <code>inline-table</code> のついた要素によって暗黙的に生成された無名の表のセル。</li>
- <li>{{ cssxref("overflow") }} の値が <code>visible</code> 以外であるブロック要素</li>
- <li>{{ cssxref("display") }}<code>: <a href="https://drafts.csswg.org/css-display/#valdef-display-flow-root">flow-root</a></code></li>
- <li>{{ cssxref("contain") }}<code>: layout</code>, <code>content</code>, <code>paint</code> の付いた要素</li>
- <li>フレックスアイテム ({{ cssxref("display") }}<code>: flex</code> または <code>inline-flex</code> である要素の直接の子要素)</li>
- <li>グリッドアイテム ({{ cssxref("display") }}<code>: grid</code> または <code>inline-grid</code> である要素の直接の子要素)</li>
- <li>段組みコンテナー ({{ cssxref("column-count") }} または {{ cssxref("column-width") }} が <code>auto</code> ではない要素、 <code>column-count: 1</code> の要素も含む)</li>
- <li>{{ cssxref("column-span") }}<code>: all</code> は、 <code>column-span: all</code> の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">仕様変更</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">Chrome bug</a>)。</li>
-</ul>
+- 文書のルート要素 (`<html>`)
+- 浮動要素 ({{ cssxref("float") }} が `none` 以外である要素)
+- 絶対位置指定の要素 ({{ cssxref("position") }} が `absolute` または `fixed` である要素)
+- インラインブロック ({{ cssxref("display") }}`: inline-block` である要素)
+- 表のセル ({{ cssxref("display") }}`: table-cell` を持つ要素。これは HTML の表のセルの既定値です)
+- 表のキャプション ({{ cssxref("display") }}`: table-caption` を持つ要素。HTMLの、表のキャプションの既定値です)
+- {{ cssxref("display") }}`: table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (つまりそれぞれ HTML の表、表の行、表の本体、表のヘッダー、表のフッターの既定値), `inline-table` のついた要素によって暗黙的に生成された無名の表のセル。
+- {{ cssxref("overflow") }} の値が `visible` 以外であるブロック要素
+- {{ cssxref("display") }}`: flow-root`
+- {{ cssxref("contain") }}`: layout`, `content`, `paint` の付いた要素
+- フレックスアイテム ({{ cssxref("display") }}`: flex` または `inline-flex` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_Table)でもない場合
+- グリッドアイテム ({{ cssxref("display") }}`: grid` または `inline-grid` である要素の直接の子要素)、[フレックス](/ja/docs/Glossary/Flex_Container)でも[グリッド](/ja/docs/Glossary/Grid_Container)でも[表](/ja/docs/Web/CSS/CSS_Table)でもない場合
+- 段組みコンテナー ({{ cssxref("column-count") }} または {{ cssxref("column-width") }} が `auto` ではない要素、 `column-count: 1` の要素も含む)
+- {{ cssxref("column-span") }}`: all` は、 `column-span: all` の要素が段組みコンテナーに含まれていなくても、常に新たな整形コンテキストを生成します ([仕様変更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))。
 
-<p>ブロック整形コンテキストは、それを生成する要素の内側にあるすべてのものを含みます。</p>
+整形コンテキストはレイアウトに影響を与えますが、通常はレイアウトを変更するのではなく、位置決めと浮動要素の解消のために新しいブロック整形コンテキストを作成します。これは、新しいブロック整形コンテキストを確立する要素が次のようになるからです。
 
-<p>ブロック整形コンテキストは、浮動要素の配置設定 ({{ cssxref("float") }} を参照) と解除 ({{ cssxref("clear") }}を参照) にとって重要です。浮動要素の配置設定と解除の規則は、同一のブロック整形コンテキスト内にあるものにだけ適用されます。浮動要素は他のブロック整形コンテキストの内容のレイアウトには影響せず、 clear は同じブロック整形コンテキスト内の以前の浮動要素のみを解除します。<a href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">マージンの相殺</a>も、同じブロック整形コンテキストに所属するブロック同士でしか発生しません。</p>
+- 内部の浮動要素を収めます。
+- 外部の浮動要素を追いやります。
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を抑止します。
 
-<h2 id="Examples" name="Examples">例</h2>
+> **Note:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
 
-<h3 id="Make_float_content_and_alongside_content_the_same_height" name="Make_float_content_and_alongside_content_the_same_height">浮動コンテンツとその横のコンテンツの高さを同じにする</h3>
+## 例
 
-<div id="example1">
-<p>いくつかの例を見て、新しいブロック整形コンテキスト (<abbr title="Block Formatting Context">BFC</abbr>) を生成することによる効果を確認してみましょう。</p>
+### 内部の浮動要素を収める
 
-<p>以下の例では、 <code>&lt;div&gt;</code> に <code>border</code> が適用されている中に浮動要素があります。その <code>&lt;div&gt;</code> の内容は、浮動要素の横にあります。浮動要素の内容がその横のコンテンツよりも高いので、 <code>&lt;div&gt;</code> の境界は浮動要素を突き抜けてしまいます。<a href="/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">フロー内とフローの外の要素のガイド</a>で説明している通り、浮動要素はフローから出るので、 <code>&lt;div&gt;</code> の <code>background</code> および <code>border</code> はコンテンツのみを含みますが、浮動要素は含みません。</p>
+浮動小数点コンテンツと横に並んだコンテンツの高さを同じにします。
 
-<h4 id="HTML">HTML</h4>
+新しいBFC を作成する効果を見るために、これらのいくつかを見てみましょう。
 
-<pre class="brush: html">&lt;div class="box"&gt;
-    &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-    &lt;p&gt;I am content inside the container.&lt;/p&gt;
-&lt;/div&gt;</pre>
+以下の例では、`border`が適用された `<div>` の中に浮動要素があります。その `<div>` のコンテンツは浮動要素の横に並んだ状態になっています。浮動要素のコンテンツは横に並んだコンテンツよりも高さがあるため、`<div>` の境界線が浮動要素を貫通してしまいます。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)で説明しているように、浮動要素がフローから外れたので、 `<div>` の `background` と `border` には浮動要素はなく、コンテンツだけが保持されています。
 
-<h4 id="CSS">CSS</h4>
+**`overflow: auto` の使用**
 
-<pre class="brush: css">.box {
+`overflow: auto` を設定したり、初期値である `overflow: visible` 以外の値を設定すると、浮動要素を含む新しい BFC を作成することができます。これで、`<div>` がレイアウトの中のミニレイアウトになります。子要素はすべてこの中に含まれます。
+
+新しい BFC を作成するために `overflow` を使用することの問題点は、`overflow` プロパティが、はみ出したコンテンツをどのように処理したいかをブラウザーに指示するためのものであることです。このプロパティを純粋に BFC を作成するために使用すると、不要なスクロールバーやクリップドシャドウが返されることがあるようです。さらに、将来的に開発者が読解できない可能性もあります。なぜそのために `overflow` を使用したのかがわからないかもしれないからです。もし `overflow` を使用するのであれば、コードにコメントをつけて説明するとよいでしょう。
+
+**`display: flow-root` の使用**
+
+より新しい値の `display` を使用すると、他の問題となりうる副作用なしに、新しいBFCを作成することができます。コンテナブロックに `display: flow-root` を使用すると、新しい BFC が作成されます。
+
+`display: flow-root;` を `<div>` に指定すると、コンテナーの中にあるすべてのものが、そのコンテナーのブロック整形コンテキストに参加し、浮動要素が要素の下部からはみ出ることはありません。
+
+`flow-root` という値は、`root` 要素（ブラウザーでは `<html>` 要素）のように、その中にフローレイアウトのための新しいコンテキストを作成することを理解すれば、理にかなったものです。
+
+#### HTML
+
+```html
+<section>
+    <div class="box">
+        <div class="float">浮動ボックスです。</div>
+        <p>コンテナー内のコンテンツです。</p>
+    </div>
+</section>
+<section>
+    <div class="box" style="overflow:auto">
+        <div class="float">浮動ボックスです。</div>
+        <p><code>overflow:auto</code> のコンテナー内のコンテンツです。</p>
+    </div>
+</section>
+<section>
+    <div class="box" style="display:flow-root">
+        <div class="float">浮動ボックスです。</div>
+        <p><code>display:flow-root</code> のコンテナー内のコンテンツです。</p>
+    </div>
+</section>
+```
+
+#### CSS
+
+```css
+section {
+    height:150px;
+}
+.box {
     background-color: rgb(224, 206, 247);
     border: 5px solid rebeccapurple;
+}
+.box[style] {
+    background-color: aliceblue;
+    border: 5px solid steelblue;
 }
 .float {
     float: left;
     width: 200px;
-    height: 150px;
-    background-color: white;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .5);
     border:1px solid black;
     padding: 10px;
-}     </pre>
+}
+```
 
-<p>{{EmbedLiveSample("example1", 200, 200)}}</p>
-</div>
+#### 結果
+{{EmbedLiveSample("Contain_internal_floats", 200, 480)}}
 
-<div id="With_overflow">
-<h3 id="Using_overflow_auto" name="Using_overflow_auto"><code>overflow: auto;</code> の使用</h3>
+### 外部の浮動要素を除外する
 
-<p>新しいブロック整形コンテキスト (<abbr title="Block Formatting Context">BFC</abbr>) を生成すると、浮動要素を含むようになります。以前からよくある方法は、 <code>overflow: auto</code> を設定するか、初期値である <code>overflow: visible</code> 以外の値を設定するものです。</p>
+以下の例では、 `display:flow-root` と浮動要素を使用して 2 列のレイアウトを実装しています。これは、新しい BFC を確立する通常のフロー内の要素が、その要素自身と同じブロック整形コンテキストにあるどの浮動要素のマージンボックスにも重ならないためです。
 
-<h4 id="CSS_2">CSS</h4>
+#### HTML
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="box"&gt;
-    &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-    &lt;p&gt;I am content inside the container.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</div>
+```html
+<section>
+  <div class="float">外部の浮動要素の大きさを変えてみてください</div>
+  <div class="box"><p>通常</p></div>
+</section>
+<section>
+  <div class="float">外部の浮動要素の大きさを変えてみてください</div>
+  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+</section>
+```
 
-<pre class="brush: css">.box {
+#### CSS
+
+```css
+section {
+    height:150px;
+}
+.box {
     background-color: rgb(224, 206, 247);
     border: 5px solid rebeccapurple;
-    overflow: auto;
+}
+.box[style] {
+    background-color: aliceblue;
+    border: 5px solid steelblue;
 }
 .float {
     float: left;
+    overflow: hidden; /* required by resize:both */
+    resize: both;
+    margin-right:25px;
     width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .75);
+    border: 1px solid black;
     padding: 10px;
-}     </pre>
-
-<p>{{EmbedLiveSample("With_overflow", 200, 200)}}</p>
-</div>
-
-<p><code>overflow: auto</code> を設定することで浮動要素を含む新しい <abbr title="Block Formatting Context">BFC</abbr> を生成しました。 <code>&lt;div&gt;</code> はレイアウトの中のミニレイアウトになりました。すべての子要素はその中に含まれます。</p>
-
-<p><code>overflow</code> を使用して新しい <abbr title="Block Formatting Context">BFC</abbr> を生成することの問題は、 <code>overflow</code> プロパティがブラウザーにあふれた内容をどのように扱いたいかを伝えるためのものであることです。このプロパティを純粋に使用して <abbr title="Block Formatting Context">BFC</abbr> を作成すると、不要なスクロールバーやクリップされた影が表示される場合があります。また、この目的で <code>overflow</code> を使用した理由が明らかではない可能性があるため、将来の開発者にとっては読みにくくなる可能性があります。 <code>overflow</code> を使用する場合、コードに説明するためのコメントをすることをお勧めします。</p>
-
-<h3 id="Using_display_flow-root" name="Using_display_flow-root"><code>display: flow-root</code> の使用</h3>
-
-<div id="flowroot">
-<p>A newer value of <code>display</code> lets us create a new <abbr title="Block Formatting Context">BFC</abbr> without any other potentially problematic side-effects. Using <code>display: flow-root</code> on the containing block creates a new <abbr title="Block Formatting Context">BFC</abbr> .</p>
-
-<h4 id="CSS_3">CSS</h4>
-
-<div class="hidden">
-<pre class="brush: html">&lt;div class="box"&gt;
-    &lt;div class="float"&gt;I am a floated box!&lt;/div&gt;
-    &lt;p&gt;I am content inside the container.&lt;/p&gt;
-&lt;/div&gt;</pre>
-</div>
-
-<pre class="brush: css">.box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root
 }
-.float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
-}     </pre>
+```
 
-<p>{{EmbedLiveSample("flowroot", 200, 200)}}</p>
+#### 結果
+{{EmbedLiveSample("Exclude_external_floats", 200, 330)}}
+
+inline-block で width:\<percentage> を使用するよりも、この場合は右側の div の幅を指定する必要がありません。
+
+なお、最近の CSS では、フレックスボックスの方が効率的に複数列のレイアウトを搭載することができます。
+
+### マージンの相殺
+
+新しい BFC を作成すると、隣接する 2 つの div 間の[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を避けることができます。
+
+#### HTML
+
+```html
+<div class="blue"></div>
+<div class="red-outer">
+  <div class="red-inner">red inner</div>
 </div>
+```
 
-<p>With <code>display: flow-root;</code> on the <code>&lt;div&gt;</code>, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.</p>
+#### CSS
 
-<p>The value name of <code>flow-root</code> makes sense when you understand you are creating something that acts like the <code>root</code> element (<code>&lt;html&gt;</code> element in browser) in terms of how it creates a new context for the flow layout inside it.</p>
-
-<div class="blockIndicator note">
-<p><strong>Note:</strong> <code>display: flow-root;</code> <a href="https://caniuse.com/#search=flow-root">is not supported</a> by Safari.</p>
-</div>
-
-<h3 id="margin_collapsing" name="margin_collapsing">マージンの相殺</h3>
-
-<p>Creating a new BFC to avoid the <a href="/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">margin collapsing</a> between two neighbor div:</p>
-
-<h4 id="HTML_2">HTML</h4>
-
-<pre class="brush: html">&lt;div class="blue"&gt;&lt;/div&gt;
-&lt;div class="red-outer"&gt;
-  &lt;div class="red-inner"&gt;red inner&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<h4 id="CSS_4">CSS</h4>
-
-<pre class="brush: css">.blue, .red-inner {
+```css
+.blue, .red-inner {
   height: 50px;
   margin: 10px 0;
 }
@@ -172,20 +194,33 @@ translation_of: Web/Guide/CSS/Block_formatting_context
   overflow: hidden;
   background: red;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Margin_collapsing", 120, 120)}}</p>
+#### 結果
+{{EmbedLiveSample("Margin_collapsing", 120, 170)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#block-formatting">CSS 2.1</a></li>
- <li><a class="external" href="https://drafts.csswg.org/css-display/#block-formatting-context">CSS Display Level 3</a></li>
-</ul>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ cssxref("float") }}, {{ cssxref("clear") }}</li>
- <li>{{css_key_concepts}}</li>
-</ul>
+- {{ cssxref("float") }}, {{ cssxref("clear") }}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
