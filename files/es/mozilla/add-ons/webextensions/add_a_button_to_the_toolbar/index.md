@@ -178,15 +178,17 @@ En nuestro JavaScript, esta a la espera de clicks en las opciones de nuestro pop
 
 La estructura de la extensión final debe ser como esta:
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 Ahora vamos a recargar la extensión, click en el botón otra vez e intenta dar click en las opciones del popup:
 

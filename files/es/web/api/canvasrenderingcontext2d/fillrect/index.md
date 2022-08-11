@@ -9,7 +9,9 @@ El método **`CanvasRenderingContext2D.fillRect()`** de la API Canvas 2D dibuja 
 
 ## Sintaxis
 
-    void ctx.fillRect(x, y, width, height);
+```js
+void ctx.fillRect(x, y, width, height);
+```
 
 ### Parámetros
 

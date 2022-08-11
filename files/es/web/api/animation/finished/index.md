@@ -18,7 +18,9 @@ La propiedad de solo-lectura de **`Animation.finished`** de la [Web Animations A
 
 ## Sintaxis
 
-    var animationsPromise = Animation.finished;
+```js
+var animationsPromise = Animation.finished;
+```
 
 ### Valor
 

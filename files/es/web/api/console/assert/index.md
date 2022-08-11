@@ -23,8 +23,10 @@ Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afir
 
 ## Sintaxis
 
-    console.assert(afirmación, obj1 [, obj2, ..., objN]);
-    console.assert(afirmación, msg [, subst1, ..., substN]);
+```js
+console.assert(afirmación, obj1 [, obj2, ..., objN]);
+console.assert(afirmación, msg [, subst1, ..., substN]);
+```
 
 ### Parámetros
 

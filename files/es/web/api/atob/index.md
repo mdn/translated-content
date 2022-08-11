@@ -10,9 +10,11 @@ La función **WindowBase64.atob()** descodifica una cadena de datos que ha sido 
 
 For use with Unicode or UTF-8 strings, see [this note at Base64 encoding and decoding](/es/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22) and [this note at `window.btoa()`](/es/docs/Web/API/window.btoa#Unicode_Strings).
 
-## Syntax
+## Sintaxis
 
-    var decodedData = window.atob(encodedData);
+```js
+var decodedData = window.atob(encodedData);
+```
 
 ## Example
 

@@ -15,7 +15,9 @@ El método **`CanvasRenderingContext2D.beginPath()`** del API Canvas 2D comienza
 
 ## Sintaxis
 
-    void ctx.beginPath();
+```
+void ctx.beginPath();
+```
 
 ## Ejemplos
 

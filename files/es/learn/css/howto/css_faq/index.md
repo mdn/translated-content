@@ -20,17 +20,25 @@ Los navegadores basados en Gecko tienen un tercer _[Modo casi estándar](/en/Gec
 
 Esta es una lista de las declaraciones `DOCTYPE` más utilizadas que activarán el Modo estándar o el Modo casi estándar:
 
-    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+```
 
-    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+```
 
-    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
 
-    <!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```html
+<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```
 
 #### Diferencia entre `id` y `class`
 
@@ -40,7 +48,7 @@ Utiliza un estilo específico de `id` cuando desees restringir las reglas de est
 
 Usa un estilo específico de `class` cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
 
-Consulta [Selectores CSS](/en/CSS/Getting_Started/Selectors "en/CSS/Getting Started/Selectors")
+Consulta [Selectores CSS](/en/CSS/Getting_Started/Selectors)
 
 #### Restaurar el valor de la propiedad predeterminado
 
@@ -58,32 +66,38 @@ CSS no permite que se defina un estilo según los términos de otro. (Consulta l
 
 A los elementos HTML se les pueden asignar varias clases listándolas en el atributo `class`, con un espacio en blanco para separarlas.
 
-    <style type="text/css">
-    .news { background: black; color: white; }
-    .today { font-weight: bold; }
-    </style>
+```html
+<style type="text/css">
+.news { background: black; color: white; }
+.today { font-weight: bold; }
+</style>
 
-    <div class="news today">
-    ... contenido de las noticias de hoy ...
-    </ div>
+<div class="news today">
+... contenido de las noticias de hoy ...
+</div>
+```
 
 Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve primero a través de la especificidad, a continuación, según el orden de las declaraciones CSS. El orden de las clases en el atributo `class` no es relevante.
 
 #### Normas de estilo que no funcionan
 
-Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en/DOM_Inspector "en/DOM Inspector") para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las _Reglas de estilo de CSS_ del [Inspector DOM](/en/DOM_Inspector) para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
 
 ##### Jerarquía de los elementos HTML
 
 La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
 
-    .news { color: black; }
-    . corpName {font-weight: bold; color: red;}
+```css
+.news { color: black; }
+. corpName {font-weight: bold; color: red;}
+```
 
-    <!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita -->
-    <div class="news">
-       (Reuters) <span class="corpName"> General Electric </ span> (GE.NYS) anunció el jueves ...
-    </ div>
+```html
+<!-- el texto de la noticia es negro, pero el nombre de la empresa va en rojo y negrita -->
+<div class="news">
+    (Reuters) <span class="corpName"> General Electric </ span> (GE.NYS) anunció el jueves ...
+</div>
+```
 
 En el caso de jerarquías HTML complejas, si parece que se ignora una regla, comprueba si el elemento está dentro de otro elemento con un estilo diferente.
 
@@ -91,17 +105,21 @@ En el caso de jerarquías HTML complejas, si parece que se ignora una regla, com
 
 En las hojas de estilo CSS el orden **es** importante. Si defines una regla y luego vuelves a definirla, se usará la última definición.
 
-    #stockTicker { font-weight: bold; }
-    .stockSymbol { color: red; }
-    /*  otras reglas             */
-    /*  otras reglas             */
-    /*  otras reglas             */
-    .stockSymbol { font-weight: normal; }
+```css
+#stockTicker { font-weight: bold; }
+.stockSymbol { color: red; }
+/*  otras reglas             */
+/*  otras reglas             */
+/*  otras reglas             */
+.stockSymbol { font-weight: normal; }
+```
 
-    <!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita -->
-    <div id="stockTicker">
-       NYS: <span class="stockSymbol">GE</span> +1.0 ...
-    </ div>
+```html
+<!-- la mayor parte del texto va en negrita, con excepción de "GE", que va en rojo y no en negrita -->
+<div id="stockTicker">
+    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+</div>
+```
 
 Para evitar este tipo de errores, intenta definir las reglas solo una vez para un selector determinado y agrupa todas las reglas que pertenecen a ese selector.
 
@@ -109,32 +127,42 @@ Para evitar este tipo de errores, intenta definir las reglas solo una vez para u
 
 Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
 
-    #stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-    .stockSymbol { font: 14px Arial; color: red; }
+```css
+#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
+.stockSymbol { font: 14px Arial; color: red; }
+```
 
-    <div id="stockTicker">
-       NYS: <span class="stockSymbol">GE</span> +1.0 ...
-    </ div>
+```html
+<div id="stockTicker">
+    NYS: <span class="stockSymbol">GE</span> +1.0 ...
+</div>
+```
 
 En el ejemplo anterior el problema se produjo en las reglas que pertencían a distintos elementos, pero puede ocurrir también para el mismo elemento, porque el orden de las reglas **es** importante.
 
-    #stockTicker {
-       font-weight: bold;
-       font: 12px Verdana; / * font-weight es ahora normal * /
-    }
+```css
+#stockTicker {
+    font-weight: bold;
+    font: 12px Verdana; / * font-weight es ahora normal * /
+}
+```
 
 ##### Uso del selector `*`
 
 El selector `*` se refiere a cualquier elemento y tiene que utilizarse con especial cuidado.
 
-    body * { font-weight: normal; }
-    #stockTicker { font: 12px Verdana; }
-    .corpName { font-weight: bold; }
-    .stockUp { color: red; }
+```css
+body * { font-weight: normal; }
+#stockTicker { font: 12px Verdana; }
+.corpName { font-weight: bold; }
+.stockUp { color: red; }
+```
 
-    <div id="section">
-       NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
-    </ div>
+```html
+<div id="section">
+    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+</div>
+```
 
 En este ejemplo, el selector `body *` aplica la regla a todos los elementos dentro del cuerpo (_body_), en cualquier nivel de jerarquía, incluyendo _redtext._ Así `font-weight: bold;` aplicada a la clase _boldtext_ se reemplaza por `font-weight: normal;` aplicada a _redtext._
 
@@ -142,14 +170,18 @@ En este ejemplo, el selector `body *` aplica la regla a todos los elementos dent
 
 Cuando se aplican múltiples reglas a un determinado elemento, la norma escogida depende de su especificidad de estilo. El estilo en línea (en los atributos HTML `style`) es lo primero, seguido por los selectores id, a continuación, los selectores class y, finalmente, los selectores element-name.
 
-    div { color: black; }
-    #orange { color: orange; }
-    .green { color: green; }
+```css
+div { color: black; }
+#orange { color: orange; }
+.green { color: green; }
+```
 
-    <div id="orange" class="green" style="color: red;">This is red</div>
+```html
+<div id="orange" class="green" style="color: red;">This is red</div>
+```
 
 Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#specificity)
 
 #### ¿Qué hacen las propiedades -moz-\*?
 
-Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions "en/CSS Reference/Mozilla Extensions").
+Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions).

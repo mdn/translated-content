@@ -18,10 +18,12 @@ Muestra un mensaje de error en la Consola Web.
 
 ## Sintaxis
 
-    console.error(obj1 [, obj2, ..., objN]);
-    console.error(msg [, subst1, ..., substN]);
-    console.exception(obj1 [, obj2, ..., objN]);
-    console.exception(msg [, subst1, ..., substN]);
+```js
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+console.exception(obj1 [, obj2, ..., objN]);
+console.exception(msg [, subst1, ..., substN]);
+```
 
 > **Nota:** `console.exception()` es un alias de `console.error()`; son funcionalmente identicas.
 

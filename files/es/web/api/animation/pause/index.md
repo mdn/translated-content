@@ -18,7 +18,9 @@ El método **`pause()`** de la interfaz {{domxref("Animation")}} de la [Web Anim
 
 ## Sintaxis
 
-    animation.pause();
+```js
+animation.pause();
+```
 
 ### Parámetros
 

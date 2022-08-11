@@ -21,7 +21,9 @@ La propiedad de solo lectura **`NavigatorLanguage.language`** devuelve un string
 
 ## Sintaxis
 
-    lang = globalObj.navigator.language
+```js
+lang = globalObj.navigator.language
+```
 
 ### Valores
 

@@ -13,8 +13,8 @@ translation_of: Web/API/CSSStyleDeclaration
 `CSSStyleDeclaration` representa una colección CSS de pares propiedad-valor. Se utiliza en unas cuantas APIs:
 
 - {{domxref("HTMLElement.style")}} - para manipular el estilo de un solo elemento (\<elem style="...">);
-- En otras palabras, es un interface para los [bloques de declaraciones](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) devueltos por la propiedad [`style`](/en/DOM/cssRule.style "en/DOM/cssRule.style") de una [`regla CSS`](/en/DOM/cssRule "en/DOM/cssRule") en una [hoja de estilos](/en/DOM/stylesheet "en/DOM/stylesheet"), cuando la regla es una [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule "en/DOM/cssRule#CSSStyleRule").
-- `CSSStyleDeclaration` es también un interface de **sólo-lectura** para el resultado de [window.getComputedStyle](/en/DOM/window.getComputedStyle "en/DOM/window.getComputedStyle")().
+- En otras palabras, es un interface para los [bloques de declaraciones](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) devueltos por la propiedad [`style`](/en/DOM/cssRule.style) de una [`regla CSS`](/en/DOM/cssRule) en una [hoja de estilos](/en/DOM/stylesheet), cuando la regla es una [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule).
+- `CSSStyleDeclaration` es también un interface de **sólo-lectura** para el resultado de [window.getComputedStyle](/en/DOM/window.getComputedStyle)().
 
 ## Atributos
 
@@ -38,8 +38,8 @@ translation_of: Web/API/CSSStyleDeclaration
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Sin retorno. Ejemplo: _styleObj_.setProperty('color', 'red', 'important')
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
-  - : Solo soportado a través de getComputedStyle. Devuelve un {{ domxref("ROCSSPrimitiveValue") }} en Firefox ({{ domxref("CSSPrimitiveValue") }}, en otros, los cuales implementan [CSSValue](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue)), o nulo para [Propiedades taquigráficas](/en/CSS/Shorthand_properties "en/Guide to Shorthand CSS"). Ejemplo: _cssString_= window\.getComputedStyle(_elemento_, `null`).getPropertyCSSValue('color').cssText;
-    Observación: Gecko 1.9 devuelve **null** a menos que se utilice [getComputedStyle()](/en/DOM/window.getComputedStyle "en/DOM/window.getComputedStyle").
+  - : Solo soportado a través de getComputedStyle. Devuelve un {{ domxref("ROCSSPrimitiveValue") }} en Firefox ({{ domxref("CSSPrimitiveValue") }}, en otros, los cuales implementan [CSSValue](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSValue)), o nulo para [Propiedades taquigráficas](/en/CSS/Shorthand_properties). Ejemplo: _cssString_= window\.getComputedStyle(_elemento_, `null`).getPropertyCSSValue('color').cssText;
+    Observación: Gecko 1.9 devuelve **null** a menos que se utilice [getComputedStyle()](/en/DOM/window.getComputedStyle).
     Observación: Este método puede estar [desaconsejado por el W3C](http://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html) , y no está presente en el último [borrador CSSOM](http://dev.w3.org/csswg/cssom/#cssstyledeclaration). No está soportado por IE e incluso aunque la función existe en Opera, llamarla lanza una excepción {{ domxref("DOMException") }} NOT_SUPPORTED_ERR.
 
 ## Ejemplo

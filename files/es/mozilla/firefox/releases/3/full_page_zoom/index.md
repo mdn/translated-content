@@ -12,19 +12,23 @@ El zoom a página completa (o sólo zoom completo) es una nueva característica 
 
 El siguiente ejemplo demuestra su uso para la ventana de navegación que posea actualmente el foco. Este es el típico uso para una extensión de Firefox.
 
-    var zoom = 1.5;
-    var docViewer = getBrowser().mCurrentBrowser.markupDocumentViewer;
-    docViewer.fullZoom = zoom;
+```js
+var zoom = 1.5;
+var docViewer = getBrowser().mCurrentBrowser.markupDocumentViewer;
+docViewer.fullZoom = zoom;
+```
 
 ### Ejemplo (xul:iframe)
 
 Puedes usar la característica de zoom completo incluso para un xul:iframe. Sin embargo, dado que un iframe no posee ninguna propiedad markupDocumentViewer, debemos primero obtenerla:
 
-    var zoom = 1.5;
-    var iframe = document.getElementById("authorFrame");
-    var contViewer = iframe.docShell.contentViewer;
-    var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
-    docViewer.fullZoom = zoom;
+```js
+var zoom = 1.5;
+var iframe = document.getElementById("authorFrame");
+var contViewer = iframe.docShell.contentViewer;
+var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
+docViewer.fullZoom = zoom;
+```
 
 ### Referencías
 

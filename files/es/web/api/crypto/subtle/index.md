@@ -16,7 +16,9 @@ La propiedad de sólo lectura **`Crypto.subtle`** retorna un objeto {{domxref("S
 
 ## Sintaxis
 
-    var crypto = crypto.subtle;
+```js
+var crypto = crypto.subtle;
+```
 
 ## Especificaciones
 

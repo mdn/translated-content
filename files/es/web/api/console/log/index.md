@@ -24,8 +24,10 @@ translation_of: Web/API/Console/log
 
 ## Sintaxis
 
-    console.log(obj1 [, obj2, ..., objN]);
-    console.log(msg [, subst1, ..., substN]);
+```js
+console.log(obj1 [, obj2, ..., objN]);
+console.log(msg [, subst1, ..., substN]);
+```
 
 ## Parámetros
 

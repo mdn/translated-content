@@ -19,7 +19,9 @@ El método **`Animation.reverse()`** de la interfaz {{ domxref("Animation") }} I
 
 ## Sintaxis
 
-    animation.reverse();
+```js
+animation.reverse();
+```
 
 ### Parámetros
 

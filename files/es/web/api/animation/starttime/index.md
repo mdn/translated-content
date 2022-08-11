@@ -19,9 +19,11 @@ El **start time** **(tiempo de inicio)** es el valor de tiempo de su {{domxref("
 
 ## Sintaxis
 
-    var animationStartedWhen = Animation.startTime;
+```js
+var animationStartedWhen = Animation.startTime;
 
-    Animation.startTime = newStartTime;
+Animation.startTime = newStartTime;
+```
 
 ### Valor
 

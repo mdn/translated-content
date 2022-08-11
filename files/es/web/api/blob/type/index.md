@@ -16,7 +16,9 @@ La propiedad **`type`** de un objeto [`Blob`](/en-US/docs/Web/API/Blob) proporci
 
 ## Sintaxis
 
-    var tipo = instanceOfFile.type
+```js
+var tipo = instanceOfFile.type
+```
 
 ## Valor
 

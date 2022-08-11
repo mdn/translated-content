@@ -21,9 +21,11 @@ El evento `cancel` puede ser activado manualmente con {{domxref("Animation.cance
 
 ## Sintaxis
 
-    var cancelHandler = Animation.oncancel;
+```js
+var cancelHandler = Animation.oncancel;
 
-    Animation.oncancel = cancelHandler;
+Animation.oncancel = cancelHandler;
+```
 
 ### Valor
 

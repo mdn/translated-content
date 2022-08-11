@@ -14,7 +14,9 @@ Muestra en consola un árbol interactivo de los elementos descendientes del elem
 
 ## Sintaxis
 
-    console.dirxml(objeto);
+```js
+console.dirxml(objeto);
+```
 
 ## Parámetros
 

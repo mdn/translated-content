@@ -22,9 +22,11 @@ El evento `finish` ocurre cuando la reproducción se completa de forma natural, 
 
 ## Sintaxis
 
-    var finishHandler = Animation.onfinish;
+```js
+var finishHandler = Animation.onfinish;
 
-    Animation.onfinish = finishHandler;
+Animation.onfinish = finishHandler;
+```
 
 ### Valor
 

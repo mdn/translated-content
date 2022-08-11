@@ -24,7 +24,9 @@ El estado del dibujo que se almacena en una pila consiste en los siguientes elem
 
 ## Sintaxis
 
-    void ctx.save();
+```js
+void ctx.save();
+```
 
 ## Ejemplos
 

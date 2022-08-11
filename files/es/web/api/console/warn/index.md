@@ -15,8 +15,10 @@ Imprime un mensaje de advertencia en la Consola Web.
 
 ## Sintaxis
 
-    console.warn(obj1 [, obj2, ..., objN]);
-    console.warn(msg [, subst1, ..., substN]);
+```js
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
 ## Parámetros
 

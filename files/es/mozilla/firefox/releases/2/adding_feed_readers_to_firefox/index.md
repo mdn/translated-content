@@ -34,9 +34,11 @@ Puede añadir estas preferencias manualmente, visitando about:config, o puede pr
 
 El código JavaScript en la web puede añadir un lector de canales fácilmente, usando la función `navigator.registerContentHandler()`, de esta manera:
 
-    navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
-                                     "http://www.urllectorsencillo.com?feed=%s",
-                                     "Lector Sencillo");
+```js
+navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
+                                  "http://www.urllectorsencillo.com?feed=%s",
+                                  "Lector Sencillo");
+```
 
 ## Añadir una nueva aplicación lectora de canales
 

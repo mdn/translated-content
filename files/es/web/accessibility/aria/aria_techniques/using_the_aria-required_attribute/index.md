@@ -50,12 +50,12 @@ Nota que este atributo no cambiará automáticamente la presentación del campo.
 - Listbox
 - Radiogroup
 - Spinbutton
-- [Textbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role "Usando el role textbox")
+- [Textbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
 - Tree
 
 ### Técnicas relacionadas con ARIA
 
-- [Utilizando el atributo aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute "Usando la propiedad aria-invalid ")
+- [Utilizando el atributo aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
 
 ### Compatibilidad
 
@@ -65,4 +65,4 @@ Por determinar: Agregar información de soporte para combinaciones comunes de pr
 
 - [Especificación WAI-ARIA para `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
 - [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform)
-- [Constraint validation](/en/HTML/HTML5/Constraint_validation "Constraint validation") in {{ HTMLVersionInline("5") }}
+- [Constraint validation](/en/HTML/HTML5/Constraint_validation) in {{ HTMLVersionInline("5") }}

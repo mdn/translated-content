@@ -18,7 +18,9 @@ El método **`finish()` **de la interfaz {{domxref("Animation")}} de la [Web Ani
 
 ## Sintaxis
 
-    Animation.finish();
+```js
+Animation.finish();
+```
 
 ### Parámetros
 

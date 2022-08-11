@@ -10,7 +10,9 @@ Si esta hoja de estilos viene de una regla `@import`, la propiedad **ownerRule**
 
 ### Sintaxis
 
-    rule = stylesheet.ownerRule
+```js
+rule = stylesheet.ownerRule
+```
 
 ### Parámetros
 
@@ -18,7 +20,7 @@ Si esta hoja de estilos viene de una regla `@import`, la propiedad **ownerRule**
 
 ### Notas
 
-Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/es/DOM/element.style "es/DOM/element.style") actual es NULL, el valor **ownerRule** devolverá !!TODO!! y viceversa.
+Ten en cuenta que si el valor de la propiedad ownerNode en el elemento [STYLE](/es/DOM/element.style) actual es NULL, el valor **ownerRule** devolverá !!TODO!! y viceversa.
 
 ### Specification
 

@@ -11,7 +11,9 @@ El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade un
 
 ## Sintaxis
 
-    void ctx.rotate(angulo);
+```js
+void ctx.rotate(angulo);
+```
 
 ![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
 

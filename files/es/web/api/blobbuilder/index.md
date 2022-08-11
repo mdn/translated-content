@@ -32,19 +32,20 @@ La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref(
 
 Anexa el contenido del objeto javascript especificado al {{domxref("Blob")}} que esta siendo construido. Si el valor especificado no es un {{domxref("Blob")}}, [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), o [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String), el valor es convertido a String antes de ser anexado al blob.
 
-    void append(
-      in ArrayBuffer data
-    );
+```
+void append(
+  in ArrayBuffer data
+);
 
-    void append(
-      in Blob data
-    );
+void append(
+  in Blob data
+);
 
-
-    void append(
-      in String data,
-      [optional] in String endings
-    );
+void append(
+  in String data,
+  [optional] in String endings
+);
+```
 
 ### Parametros
 
@@ -57,9 +58,11 @@ Anexa el contenido del objeto javascript especificado al {{domxref("Blob")}} que
 
 Regresa el objeto {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método [append](#append).
 
-    Blob getBlob(
-      in DOMString contentType {{optional_inline}}
-    );
+```
+Blob getBlob(
+  in DOMString contentType {{optional_inline}}
+);
+```
 
 ### Parametros
 
@@ -74,10 +77,12 @@ Un objeto {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier 
 
 Retorna un objeto {{domxref("File")}}.
 
-    File getFile(
-      in DOMString name,
-      [optional] in DOMString contentType
-    );
+```
+File getFile(
+  in DOMString name,
+  [optional] in DOMString contentType
+);
+```
 
 ### Parametros
 

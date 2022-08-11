@@ -19,7 +19,9 @@ El método **`play()`** de la interfaz {{ domxref("Animation") }} de la [Web Ani
 
 ## Sintaxis
 
-    animation.play();
+```js
+animation.play();
+```
 
 ### Parámetros
 

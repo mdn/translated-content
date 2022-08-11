@@ -21,7 +21,9 @@ Para más información, mira la documentación de los eventos {{event("cut")}}, 
 
 ## Sintaxis
 
-    data = ClipboardEvent.clipboardData
+```js
+data = ClipboardEvent.clipboardData
+```
 
 ## Especificaciones
 

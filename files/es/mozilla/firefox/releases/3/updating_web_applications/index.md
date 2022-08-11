@@ -12,8 +12,8 @@ Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web 
 
 ### Cambios DOM
 
-Nodes from external documents should be cloned using [`document.importNode()`](/es/docs/Web/API/Document/importNode "Crea una copia de un nodo desde un documento externo para ser insertado en el documento actual.") (or adopted using [`document.adoptNode()`](/es/docs/Web/API/Document/adoptNode "Adopta un nodo extreno. El nodo y sub subnodos son quitados del documento en que se encuentra  y su nuevo  ownerDocument se cambia por el actual. El nodo puede entoces ser insertado en el documento actual.")) before they
-can be inserted into the current document. For more on the [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument "La propiedad de lectura Nodo.ownerDocument devuelve el objecto Document de más alto nivel/jerarquia para ese nodo.") issues, see the
+Nodes from external documents should be cloned using [`document.importNode()`](/es/docs/Web/API/Document/importNode) (or adopted using [`document.adoptNode()`](/es/docs/Web/API/Document/adoptNode)) before they
+can be inserted into the current document. For more on the [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument) issues, see the
 [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
 
 Firefox doesn't currently enforce this rule (it did for a while during the development of Firefox 3, but too many
@@ -30,11 +30,15 @@ Firefox 3 cierra un fallo en la seguridad en frames e iframes que les permitía 
 
 Ahora hay que cerrar el elemento \<script> en `text/html` con \</script> en los documentos de HTML 4, incluso si no hay contenido dentro. En las versiones previas de Firefox, bastaba con hacer:
 
-    <script ...   />
+```html
+<script ...   />
+```
 
 Ahora se deben cumplir las especificaciones de HTML (si se trata de un HTML), y por lo tanto se deben cerrar, así:
 
-    <script ...></script>
+```html
+<script ...></script>
+```
 
 Esto mejora tanto la compatibilidad como la seguridad.
 
@@ -58,7 +62,9 @@ Firefox 3 solo permite contenido web para acceder a los elementos en los espacio
 
 Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo chrome.manifest de esta manera:
 
-    content mypackage location/ contentaccessible=yes
+```
+content mypackage location/ contentaccessible=yes
+```
 
 Esto no debería ser algo que se haga muy seguido, pero está disponible para aquellos casos raros en los que es necesario. Debe tomarse en cuenta que es posible que Firefox alerte al usuario que su extensión utiliza una bandera en el contentaccessible de alguna manera, ya que consituye un riesgo potencial en la seguridad.
 
@@ -75,4 +81,4 @@ Firefox 3 soporta [JavaScript 1.8](../../../../../en/New_in_JavaScript_1.8). Un 
 
 ### Vea también
 
-- [Firefox 3 para desarrolladores](/es/Firefox_3_for_developers "es/Firefox_3_for_developers") [Nuevo en JavaScript 1.8](/es/New_in_JavaScript_1.8 "es/New_in_JavaScript_1.8") [Actualizando extensiones para Firefox 3](/es/Updating_extensions_for_Firefox_3 "es/Updating_extensions_for_Firefox_3")
+- [Firefox 3 para desarrolladores](/es/Firefox_3_for_developers) [Nuevo en JavaScript 1.8](/es/New_in_JavaScript_1.8) [Actualizando extensiones para Firefox 3](/es/Updating_extensions_for_Firefox_3)

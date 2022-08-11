@@ -166,11 +166,13 @@ chrome.storage.local.get(null, (res) => {
 
 En este punto, el complemento completo debe tener este aspecto:
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 Ahora:
 

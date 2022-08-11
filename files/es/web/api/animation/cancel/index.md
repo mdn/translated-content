@@ -20,7 +20,9 @@ El método **`cancel()`** de la Web Animations API de la interfaz {{domxref("Ani
 
 ## Sintaxis
 
-    Animation.cancel();
+```js
+Animation.cancel();
+```
 
 ### Parámetros
 

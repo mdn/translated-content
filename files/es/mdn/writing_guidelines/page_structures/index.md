@@ -480,8 +480,6 @@ Por ejemplo, en la página de encabezado HTTP {{HTTPHeader("Accept-Charset")}}, 
 
 Otro ejemplo, la tabla de compatibilidad para la propiedad {{domxref("VRDisplay.capabilities")}} se genera usando `\{{Compat("api.VRDisplay.capabilities")}}`. La llamada a la macro genera la siguiente tabla (y el correspondiente conjunto de notas):
 
-<hr>
-
 {{Compat("api.VRDisplay.capabilities")}}
 
 > **Nota:** Los nombres de archivo a menudo coinciden con las etiquetas dadas a las interfaces dentro de las estructuras JSON, pero no siempre es así. Cuando las llamadas a macro generan las tablas, recorren todos los archivos hasta encontrar el JSON relevante para usar, por lo que los nombres de archivo no son críticos. Dicho esto, siempre debes nombrarlos de la manera más intuitiva posible.

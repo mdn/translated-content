@@ -18,9 +18,11 @@ La propiedad **`Animation.playState`** de la [Web Animations API](/es/docs/Web/A
 
 ## Sintaxis
 
-    var currentPlayState = Animation.playState;
+```js
+var currentPlayState = Animation.playState;
 
-    Animation.playState = newState;
+Animation.playState = newState;
+```
 
 ### Valor
 

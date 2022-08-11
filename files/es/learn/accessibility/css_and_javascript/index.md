@@ -306,10 +306,12 @@ Además, el `errorField` se coloca en la parte superior del orden de código (au
 
 Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostración para ayudar a resolver los problemas de accesibilidad causados por áreas de contenido que se actualizan constantemente sin recargar la página (los lectores de pantalla no captan esto ni alertan a los usuarios de forma predeterminada):
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
 

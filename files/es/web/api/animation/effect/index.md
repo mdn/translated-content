@@ -16,9 +16,11 @@ La propiedad **`Animation.effect`** de la [Web Animations API](/es/docs/Web/API/
 
 ## Sintaxis
 
-    var effect = Animation.effect;
+```js
+var effect = Animation.effect;
 
-    Animation.effect = {{domxref("AnimationEffectReadOnly")}}
+Animation.effect = {{domxref("AnimationEffectReadOnly")}}
+```
 
 ### Valor
 

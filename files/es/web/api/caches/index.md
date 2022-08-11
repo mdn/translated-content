@@ -10,7 +10,9 @@ La propiedad de sólo-lectura **`caches`**, de la interfaz {{domxref("WindowOrWo
 
 ## Sintaxis
 
-    var myCacheStorage = self.caches; // or just caches
+```js
+var myCacheStorage = self.caches; // or just caches
+```
 
 ### Valor
 

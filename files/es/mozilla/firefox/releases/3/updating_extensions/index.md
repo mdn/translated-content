@@ -14,15 +14,19 @@ Antes de continuar, queremos sugerirte algo: si el único cambio que requiere tu
 
 ### Paso 1: Actualiza el manifiesto de instalación
 
-El primer paso —y para la mayoría de las extensiones, el único que será necesario— es actualizar el archivo `install.rdf` dentro del [manifiesto de instalación](/es/Manifiesto_de_instalaci%C3%B3n "es/Manifiesto_de_instalación") para indicar la compatibilidad con Firefox 3.
+El primer paso —y para la mayoría de las extensiones, el único que será necesario— es actualizar el archivo `install.rdf` dentro del [manifiesto de instalación](/es/Manifiesto_de_instalaci%C3%B3n) para indicar la compatibilidad con Firefox 3.
 
 Sólo debes buscar la línea que indica la máxima versión compatible de Firefox, lo que para Firefox 2, probablemente sea:
 
-     <em:maxVersion>2.0.*</em:maxVersion>
+```
+<em:maxVersion>2.0.*</em:maxVersion>
+```
 
 Cámbiala para indicar compatibilidad con Firefox 3:
 
-     <em:maxVersion>3.0.*</em:maxVersion>
+```
+<em:maxVersion>3.0.*</em:maxVersion>
+```
 
 A continuación, reinstala la extensión.
 
@@ -34,11 +38,11 @@ Si tu extensión todavía usa un script [`Install.js`](\"es/Install.js\") en vez
 
 #### Agregar localizaciones al manifiesto de instalación
 
-Firefox 3 cuenta con tres nuevas propiedades en el manifiesto de instalación para especificar descripciones de localización. Los métodos antiguos todavía funcionan. Sin embargo, los nuevos permiten que Firefox escoja la localización, aún cuando la extensión esté deshabilitada o pendiente de instalación. Visita [Localizar las_descripciones_de_las_extensiones](/es/Traducir_las_descripciones_de_las_extensiones "es/Traducir_las_descripciones_de_las_extensiones") para más detalles.
+Firefox 3 cuenta con tres nuevas propiedades en el manifiesto de instalación para especificar descripciones de localización. Los métodos antiguos todavía funcionan. Sin embargo, los nuevos permiten que Firefox escoja la localización, aún cuando la extensión esté deshabilitada o pendiente de instalación. Visita [Localizar las_descripciones_de_las_extensiones](/es/Traducir_las_descripciones_de_las_extensiones) para más detalles.
 
 ### Paso 2: Asegúrate de suministrar actualizaciones seguras
 
-Si suministras extensiones por tu propia cuenta y no usas un proveedor de hosting seguro como [addons.mozilla.org](https://addons.mozilla.org), debes asegurarte de suministrar algún método seguro para la actualización de tus extensiones. Esto puede hacerse de dos formas: puedes usar un hosting con servicio de SSL o bien, puedes usar claves criptográficas para firmar la información de actualización. Lee [Cómo hacer actualizaciones seguras](/es/Versionado,_actualizaci%C3%B3n_y_compatibilidad_de_extensiones "es/Versionado,_actualización_y_compatibilidad_de_extensiones") para más información.
+Si suministras extensiones por tu propia cuenta y no usas un proveedor de hosting seguro como [addons.mozilla.org](https://addons.mozilla.org), debes asegurarte de suministrar algún método seguro para la actualización de tus extensiones. Esto puede hacerse de dos formas: puedes usar un hosting con servicio de SSL o bien, puedes usar claves criptográficas para firmar la información de actualización. Lee [Cómo hacer actualizaciones seguras](/es/Versionado,_actualizaci%C3%B3n_y_compatibilidad_de_extensiones) para más información.
 
 ### Paso 3: Debes estar al tanto de los cambios en las APIs
 
@@ -52,19 +56,19 @@ Actualmente, Firefox no exige hacerlo aunque sí lo hizo durante algún tiempo, 
 
 #### Marcadores e Historial
 
-Si de alguna forma tu extensión tiene acceso a Marcadores o Historial, necesitarás un gran esfuerzo para hacer que sea compatible con Firefox 3. Las APIs antiguas que daban acceso a esta información han sido reemplazadas por la nueva arquitectura [Catálogo (Biblioteca)](/es/Cat%C3%A1logo "es/Catálogo"). Visita la [Guía para la migración a Catálogo (Biblioteca)](/es/Lugares/Gu%C3%ADa_para_migraci%C3%B3n_con_lugares "es/Lugares/Guía_para_migración_con_lugares") para más detalles acerca de cómo actualizar tus extensiones para el uso de las APIs de Catálogo (Biblioteca).
+Si de alguna forma tu extensión tiene acceso a Marcadores o Historial, necesitarás un gran esfuerzo para hacer que sea compatible con Firefox 3. Las APIs antiguas que daban acceso a esta información han sido reemplazadas por la nueva arquitectura [Catálogo (Biblioteca)](/es/Cat%C3%A1logo). Visita la [Guía para la migración a Catálogo (Biblioteca)](/es/Lugares/Gu%C3%ADa_para_migraci%C3%B3n_con_lugares) para más detalles acerca de cómo actualizar tus extensiones para el uso de las APIs de Catálogo (Biblioteca).
 
 #### Administrador de descargas
 
-La API del Administrador de descargas ha cambiado ligeramente debido a la transición del almacén de datos RDF al uso de la API [Almacenamiento](/es/Almacenamiento "es/Almacenamiento"). Esto debería ser una transición sencilla y fácil. Además , se ha modificado la API que controla los procesos de descarga para permitir varios receptores del administrador de descargas. Visita `nsIDownloadManager`, `nsIDownloadProgressListener` y [Controlar descargas](../../../../en/Monitoring_downloads) para más información.
+La API del Administrador de descargas ha cambiado ligeramente debido a la transición del almacén de datos RDF al uso de la API [Almacenamiento](/es/Almacenamiento). Esto debería ser una transición sencilla y fácil. Además , se ha modificado la API que controla los procesos de descarga para permitir varios receptores del administrador de descargas. Visita `nsIDownloadManager`, `nsIDownloadProgressListener` y [Controlar descargas](../../../../en/Monitoring_downloads) para más información.
 
 #### Administrador de contraseñas
 
 Si tu extensión tiene acceso a información de inicio de sesión de usuario en el Administrador de contraseñas, deberás actualizarla para poder utilizar la nueva API para el Administrador de inicio de sesión.
 
 - El artículo [Utilizar nsILoginManager](../../../../es/Using_nsILoginManager) incluye ejemplos y hasta una demostración de cómo debes escribir extensiones que funcionen tanto con el Administrador de contraseñas como con el Administrador de inicio de sesión, de manera que ambos funcionen con Firefox 3 y versiones anteriores.
-- [`nsILoginInfo`](/en/nsILoginInfo "en/nsILoginInfo")
-- [`nsILoginManager`](/en/nsILoginManager "en/nsILoginManager")
+- [`nsILoginInfo`](/en/nsILoginInfo)
+- [`nsILoginManager`](/en/nsILoginManager)
 
 También puedes sobrescribir el almacén del administrador de contraseñas interno si quieres ofrecer tu propia implementación del almacén de contraseñas en la extensión. Visita [Crear un módulo de almacenamiento para el Administrador de inicio de sesión](../../../../es/Creating_a_Login_Manager_storage_module) para más detalles
 
@@ -103,23 +107,29 @@ Se ha producido un cambio menor en el chrome que puede requerir cambios en tu c�
 
 Por ejemplo, si has superpuesto algún elemento del chrome antes de la barra de estado de la siguiente manera:
 
-    <window id="main-window">
-      <something insertbefore="status-bar" />
-    </window>
+```
+<window id="main-window">
+  <something insertbefore="status-bar" />
+</window>
+```
 
 Debes cambiar tu código a algo que se parezca a:
 
-    <vbox id="browser-bottombox">
-      <something insertbefore="status-bar" />
-    </vbox>
+```
+<vbox id="browser-bottombox">
+  <something insertbefore="status-bar" />
+</vbox>
+```
 
 O bien, emplear la siguiente técnica para hacer que la superposición funcione en Firefox 2 y Firefox 3 por igual:
 
-    <window id="main-window">
-      <vbox id="browser-bottombox" insertbefore="status-bar">
-        <something insertbefore="status-bar" />
-      <vbox>
-    </window>
+```
+<window id="main-window">
+  <vbox id="browser-bottombox" insertbefore="status-bar">
+    <something insertbefore="status-bar" />
+  <vbox>
+</window>
+```
 
 {{ Note("Este cambio es efectivo para Firefox 3 beta 4 y la prebeta 4.") }}
 

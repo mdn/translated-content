@@ -121,7 +121,9 @@ Se puede ordenar la tabla por una columna en particular pulsando en la etiqueta 
 
 ## Sintaxis
 
-    console.table(data [, columns]);
+```js
+console.table(data [, columns]);
+```
 
 ### Parámetros
 

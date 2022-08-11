@@ -18,15 +18,17 @@ En mapas de imágenes, cada elemento {{htmlelement("area")}} con un atributo `al
 
 El siguiente ejemplo muestra un simple mapa de imagen (tomada de [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)):
 
-    <img src="welcome.gif" usemap="#map1"
-        alt="Areas in the library. Select an area for
-    more information on that area." />
-    <map id="map1" name="map1">
-      <area shape="rect" coords="0,0,30,30"
-        href="reference.html" alt="Reference" />
-      <area shape="rect" coords="34,34,100,100"
-        href="media.html" alt="Audio visual lab" />
-    </map>
+```html
+<img src="welcome.gif" usemap="#map1"
+    alt="Areas in the library. Select an area for
+more information on that area." />
+<map id="map1" name="map1">
+  <area shape="rect" coords="0,0,30,30"
+    href="reference.html" alt="Reference" />
+  <area shape="rect" coords="34,34,100,100"
+    href="media.html" alt="Audio visual lab" />
+</map>
+```
 
 Ver la [página de referencia del elemento](/es/docs/Web/HTML/Element/area) [`<area>`](/es/docs/Web/HTML/Element/area) para unu ejemplo interactivo.
 
@@ -45,19 +47,23 @@ Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/e
 
 El siguiente ejemplo muestra una caja de dialogo sencilla, definida como `role="dialog"` y etiquetada con `aria-labelledby`.
 
-    <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-      <h2 id="dialog1Title">Your personal details were successfully updated</h2>
-      <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
-      <button>Close</button>
-    </div>
+```html
+<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">Your personal details were successfully updated</h2>
+  <p id="dialog1Desc">You can change your details at any time in the user account section.</p>
+  <button>Close</button>
+</div>
+```
 
 Si la caja de diálogo no tiene un encabezado, se puede usar `aria-label` para contener la etiqueta de texto:
 
-    <div role="dialog" aria-label="Personal details updated confirmation">
-      <p>Your personal details were successfully updated. You can
-        change your details at any time in the user account section.</p>
-      <button>Close</button>
-    </div>
+```html
+<div role="dialog" aria-label="Personal details updated confirmation">
+  <p>Your personal details were successfully updated. You can
+    change your details at any time in the user account section.</p>
+  <button>Close</button>
+</div>
+```
 
 ### Ver también
 
@@ -76,15 +82,21 @@ Es importante que cada documento HTML, incluya un elemento {{htmlelement("title"
 
 El título para el artículo de refencia sobre el elemento {{htmlelement("title")}} es como sigue:
 
-    <title>&lt;title&gt;: The Document Title element - HTML: Hypertext Markup Language | MDN</title>
+```html
+<title>&lt;title&gt;: The Document Title element - HTML: Hypertext Markup Language | MDN</title>
+```
 
 Otro ejemplo podría ser:
 
-    <title>Fill in your details to register — myGov services</title>
+```html
+<title>Fill in your details to register — myGov services</title>
+```
 
 Para ayudar al usuario, se puede actualizar el titulo de la página para reflejar cambios significativos al estado de la página (como problemas en la validación de un formulario):
 
-    <title>2 errors — Fill in your details to register — myGov services</title>
+```html
+<title>2 errors — Fill in your details to register — myGov services</title>
+```
 
 ### Ver también
 
@@ -102,11 +114,13 @@ Para una mejor accesibilidad, incluir un {{HTMLElement("figcaption")}} dentro de
 
 El siguiente ejemplo muestra código para una figura con un pie de página. El atributo `alt` del elemento {{htmlelement("img")}} describe la apariencia de la imagen; el elemento {{htmlelement("figcaption")}} lo describe desde una perspectiva funcional (en este caso, el nombre en latín de la flor de la imagen).
 
-    <figure>
-      <img src="milkweed.jpg"
-          alt="Black and white close-up photo of milkweed flowers">
-     <figcaption>Asclepias verticillata</figcaption>
-    </figure>
+```html
+<figure>
+  <img src="milkweed.jpg"
+      alt="Black and white close-up photo of milkweed flowers">
+  <figcaption>Asclepias verticillata</figcaption>
+</figure>
+```
 
 ## Los elementos de un conjuto campos deben ser etiquetados
 
@@ -120,20 +134,22 @@ Usuarios de tecnologías asistivas encuentras esta descripción útil cuando tra
 
 ### Ejemplo
 
-    <form>
-      <fieldset>
-        <legend>Choose your favorite monster</legend>
+```html
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
 
-        <input type="radio" id="kraken" name="monster">
-        <label for="kraken">Kraken</label><br/>
+    <input type="radio" id="kraken" name="monster">
+    <label for="kraken">Kraken</label><br/>
 
-        <input type="radio" id="sasquatch" name="monster">
-        <label for="sasquatch">Sasquatch</label><br/>
+    <input type="radio" id="sasquatch" name="monster">
+    <label for="sasquatch">Sasquatch</label><br/>
 
-        <input type="radio" id="mothman" name="monster">
-        <label for="mothman">Mothman</label>
-      </fieldset>
-    </form>
+    <input type="radio" id="mothman" name="monster">
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
 
 Puede ver un ejemplo interactivo en la [página de referencia de `<fieldset>`](/es/docs/Web/HTML/Element/fieldset).
 
@@ -150,12 +166,14 @@ El elemento del formulario puede ser puesto dentro de un elemento {{htmlelement(
 
 ### Ejemplos
 
-    <label>I agree to the terms and conditions.
-      <input type="checkbox" id="terms">
-    </label>
+```html
+<label>I agree to the terms and conditions.
+  <input type="checkbox" id="terms">
+</label>
 
-    <input type="checkbox" id="emailoptin">
-    <label for="emailoptin">Yes, please send me news about this product.</label>
+<input type="checkbox" id="emailoptin">
+<label for="emailoptin">Yes, please send me news about this product.</label>
+```
 
 ## Los elementos de un formulario deberían tener una etiqueta de texto visible
 
@@ -171,12 +189,14 @@ Como una mejor práctica, también proporcionar un {{htmlelement("title")}} para
 
 ### Ejemplos
 
-    <iframe
-        title="MDN Web docs"
-        width="300"
-        height="200"
-        src="https://developer.mozilla.org">
-    </iframe>
+```html
+<iframe
+    title="MDN Web docs"
+    width="300"
+    height="200"
+    src="https://developer.mozilla.org">
+</iframe>
+```
 
 ## Usar el atributo alt para etiquetar elementos mglyph
 
@@ -204,8 +224,10 @@ Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos
 
 ### Ejemplo
 
-    <img src="milkweed.jgp"
-         alt="Black and white close-up photo of milkweed flowers">
+```html
+<img src="milkweed.jgp"
+     alt="Black and white close-up photo of milkweed flowers">
+```
 
 ## Elementos interactivos deben ser etiquetados
 
@@ -219,19 +241,21 @@ En un elemento {{htmlelement("optgroup")}}, utilizar el atributo `label` para de
 
 En este ejemplo, el atributo `label` en los elementos `<optgroup>` da un nombre de categoría para el grupo de opciones.
 
-    <label for="dino-select">Choose a dinosaur:</label>
-    <select id="dino-select">
-        <optgroup label="Theropods">
-            <option>Tyrannosaurus</option>
-            <option>Velociraptor</option>
-            <option>Deinonychus</option>
-        </optgroup>
-        <optgroup label="Sauropods">
-            <option>Diplodocus</option>
-            <option>Saltasaurus</option>
-            <option>Apatosaurus</option>
-        </optgroup>
-    </select>
+```html
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+    <optgroup label="Theropods">
+        <option>Tyrannosaurus</option>
+        <option>Velociraptor</option>
+        <option>Deinonychus</option>
+    </optgroup>
+    <optgroup label="Sauropods">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+    </optgroup>
+</select>
+```
 
 ## Las barras de herramientas deben ser etiquetadas cuando haya más de una barra
 

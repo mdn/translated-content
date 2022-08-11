@@ -94,9 +94,11 @@ La tabla de datos no es muy accesible actualmente: es difícil para los usuarios
 
 Si desea que se evalúe su trabajo, o si está atorado y desea pedir ayuda:
 
-1. Ponga su trabajo en un editor compartible en línea como [CodePen,](https://codepen.io/) [jsFiddle](https://jsfiddle.net/)o [Glitch](https://glitch.com/).
-2. Escribe una publicación pidiendo evaluación y/o ayuda en la categoría Aprendizaje del [foro de discurso mdn](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:Un título descriptivo como "Evaluación deseada para la solución de problemas de accesibilidad".
-3. - Detalles de lo que ya ha intentado, y lo que le gustaría que hagamos, por ejemplo, si está atascado y necesita ayuda, o quiere una evaluación.
+1. Ponga su trabajo en un editor compartible en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/).
+2. Escribe una publicación pidiendo evaluación y/o ayuda en la categoría Aprendizaje del [foro de discurso mdn](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:
+
+    - Un título descriptivo como "Evaluación deseada para la solución de problemas de accesibilidad".
+    - Detalles de lo que ya ha intentado, y lo que le gustaría que hagamos, por ejemplo, si está atascado y necesita ayuda, o quiere una evaluación.
     - Un enlace al ejemplo con el que desea evaluar o necesita ayuda, en un editor de compartición en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica a adquirir - es muy difícil ayudar a alguien con un problema de codificación si no se puede ver su código.
     - Un enlace a la tarea actual o página de evaluación, para que podamos encontrar la pregunta con la que desea ayuda.
 

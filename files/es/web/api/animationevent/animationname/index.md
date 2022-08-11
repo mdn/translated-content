@@ -17,7 +17,9 @@ La propiedad de solo-lectura **`AnimationEvent.animationName`** es un {{domxref(
 
 ## Sintaxis
 
-    name = AnimationEvent.animationName
+```js
+name = AnimationEvent.animationName
+```
 
 ## Especificaciones
 
@@ -28,8 +30,6 @@ La propiedad de solo-lectura **`AnimationEvent.animationName`** es un {{domxref(
 ## Compatibilidad de navegadores
 
 {{Compat("api.AnimationEvent.animationName")}}
-
-##
 
 ## Ver también
 

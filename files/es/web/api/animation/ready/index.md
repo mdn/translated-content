@@ -18,7 +18,9 @@ La propiedad de solo-lectura **`Animation.ready`** de la [Web Animations API](/e
 
 ## Sintaxis
 
-    var readyPromise = Animation.ready;
+```js
+var readyPromise = Animation.ready;
+```
 
 ### Valor
 

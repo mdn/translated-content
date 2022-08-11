@@ -33,10 +33,12 @@ console.count();
 
 La salida de la consola va a mostrar algo como esto:
 
-    "<no label>: 1"
-    "<no label>: 2"
-    "<no label>: 3"
-    "<no label>: 1"
+```
+"<no label>: 1"
+"<no label>: 2"
+"<no label>: 3"
+"<no label>: 1"
+```
 
 Note que al final de la linea de la salida: La llamada separada `count()` en la linea 11 es tratada como un evento independiente.
 
@@ -60,16 +62,20 @@ console.count("alice");
 
 Vamos a ver una salida como esta:
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"alice: 3"
+```
 
 Ahora tenemos diferentes contadores según el valor de la `etiqueta`. Al coincidir la etiqueta "alice" en la línea 11 con el valor de `user` dos veces, no se considera un evento independiente.
 
 ## Sintaxis
 
-    console.count([label]);
+```js
+console.count([label]);
+```
 
 ## Parámetros
 

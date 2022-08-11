@@ -66,10 +66,12 @@ Mas abajo podemos observar una función de saludo, posterior a retornar intentam
 
 Ejemplo de una declaración posterior a una declaración de retorno:
 
-    function saludo(nombre){
-     return "Hola, " + nombre + " que bueno que volviste";
-     var x = nombre; //Esta linea jamas se ejecutara ya que viene despues de un retorno
-    }
+```js
+function saludo(nombre){
+  return "Hola, " + nombre + " que bueno que volviste";
+  var x = nombre; //Esta linea jamas se ejecutara ya que viene despues de un retorno
+}
+```
 
 ### Notación de objetos versus asignación normal
 

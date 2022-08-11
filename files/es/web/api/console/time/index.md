@@ -13,7 +13,9 @@ Consulte [Timers](/es/docs/Web/API/console#Timers) en la documentación de {{dom
 
 ## Sintaxis
 
-    console.time(label);
+```js
+console.time(label);
+```
 
 ## Parametros
 

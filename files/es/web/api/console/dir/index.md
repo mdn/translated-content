@@ -15,7 +15,9 @@ Dicho de otra manera, `console.dir()` es la manera de ver todas las propiedades 
 
 ## Sintaxis
 
-    console.dir(objeto);
+```js
+console.dir(objeto);
+```
 
 ## Parámetros
 

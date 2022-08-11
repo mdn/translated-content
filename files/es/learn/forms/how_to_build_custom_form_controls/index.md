@@ -416,10 +416,10 @@ The features we plan to use are the following (ordered from the riskiest to the 
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (This is not DOM but modern JavaScript)
+3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
 4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). This is important because `Array` objects support the [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
+Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -656,7 +656,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex "/en-US/docs/Web/API/HTMLElement/tabIndex") property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
+In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native widget will never gain focus, and to make sure that our custom widget gains focus when the user uses his keyboard or his mouse.
 
 With that, we're done! Here's the result:
 
@@ -675,11 +675,11 @@ Fortunately, there is a solution and it's called [ARIA](/es/docs/Accessibility/A
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/es/docs/Accessibility/ARIA) is the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/es/docs/Accessibility/ARIA) is the [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/es/docs/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
 It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our widget will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-To support the [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") role, we just have to update our HTML like this:
+To support the [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) role, we just have to update our HTML like this:
 
 ```html
 <!-- We add the role="listbox" attribute to our top element -->
@@ -730,7 +730,7 @@ Here is the final result of all these changes (you'll get a better feel for this
 | Live example                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                          |
-| [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5 "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2") |
+| [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Conclusion
 

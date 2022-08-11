@@ -13,10 +13,12 @@ translation_of: Web/API/CSSStyleRule
 
 La sintaxis es descrita usando el formato [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
 
-    interface CSSStyleRule : CSSRule {
-        attribute DOMString selectorText;
-        readonly attribute CSSStyleDeclaration style;
-    };
+```
+interface CSSStyleRule : CSSRule {
+    attribute DOMString selectorText;
+    readonly attribute CSSStyleDeclaration style;
+};
+```
 
 ## Propiedades
 

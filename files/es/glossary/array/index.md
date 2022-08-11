@@ -19,11 +19,13 @@ En JavaScript, los arreglos (matrices) comienzan a partir del índice cero y pue
 
 Un arreglo (matriz*)* en JavaScript se ve de esta forma:
 
-    var myArray = [1, 2, 3, 4];
+```js
+var myArray = [1, 2, 3, 4];
 
-    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
+var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
-    //Los arreglos en Javascript pueden guardar distintos tipos de datos como se muestra anteriormente
+//Los arreglos en Javascript pueden guardar distintos tipos de datos como se muestra anteriormente
+```
 
 ## Saber más
 

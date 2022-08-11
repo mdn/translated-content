@@ -16,9 +16,11 @@ La propiedad **`Animation.id`** de la [Web Animations API](/es/docs/Web/API/Web_
 
 ## Sintaxis
 
-    var animationsId = Animation.id;
+```js
+var animationsId = Animation.id;
 
-    Animation.id = newIdString;
+Animation.id = newIdString;
+```
 
 ### Valor
 

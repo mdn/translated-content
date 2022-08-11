@@ -9,9 +9,9 @@ tags:
 translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: Web/HTML/anipular_video_por_medio_de_canvas
 ---
-Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video "En/HTML/Element/Video") introducido en Firefox 3.5 con un elemento [`canvas`](/en/HTML/Canvas "En/Canvas") , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.
+Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) introducido en Firefox 3.5 con un elemento [`canvas`](/en/HTML/Canvas) , puedes manipular los datos de video en tiempo real para incorporar una variedad de efectos visuales que se mostrarán en el video. Este artículo, adaptado de [esta entrada del blog](http://blog.mozbox.org/post/2009/02/25/video-canvas%3A-special-effects) de Paul Rouget, muestra cómo realizar una inserción croma (también conocida como el "efecto pantalla verde") utilizando el código JavaScript.
 
-[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml "samples/video/chroma-key/index.xhtml") .
+[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml) .
 
 ## El contenido del documento
 
@@ -158,10 +158,10 @@ La imagen resultante tiene este aspecto:
 
 Esto se hace en varias ocasiones mientras el video se reproduce, de manera que fotograma tras fotograma se procesa y se muestra con el efecto de croma.
 
-[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml "samples/video/chroma-key/index.xhtml") .
+[Ver este ejemplo en vivo](/samples/video/chroma-key/index.xhtml) .
 
 ## Consulta también
 
-- [Usar audio y video en Firefox](/es/Usando_audio_y_video_en_Firefox "es/Usando audio y video en Firefox")
+- [Usar audio y video en Firefox](/es/Usando_audio_y_video_en_Firefox)
 
 {{ languages ( { "en": "En/Manipulating_video_using_canvas" } ) }}

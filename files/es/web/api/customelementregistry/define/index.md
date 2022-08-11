@@ -10,11 +10,13 @@ El método **`define()`** de la interfaz {{domxref("CustomElementRegistry")}} de
 Se pueden crear dos tipos de elementos personalizados:
 
 - **Elementos personalizados autónomos**: Elementos autónomos; estos heredan de HTMLElement (Elemento HTML genérico).
-- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Element/p "The HTML <p> element represents a paragraph.")).
+- **Elementos personalizados preconstruidos**: Estos elementos heredan - y extienden - elementos HTML ya existentes (p.ej HTMLParagraphElement que es el elemento HTML [`<p>`](/es/docs/Web/HTML/Element/p)).
 
 ## Sintaxis
 
-    customElements.define(name, constructor, options);
+```js
+customElements.define(name, constructor, options);
+```
 
 ### Parámetros
 

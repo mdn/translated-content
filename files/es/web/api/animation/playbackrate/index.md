@@ -19,9 +19,11 @@ Las animaciones tienen un **playback rate** que proporciona un factor de escala 
 
 ## Sintaxis
 
-    var currentPlaybackRate = Animation.playbackRate;
+```js
+var currentPlaybackRate = Animation.playbackRate;
 
-    Animation.playbackRate = newRate;
+Animation.playbackRate = newRate;
+```
 
 ### Valor
 

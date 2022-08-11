@@ -22,7 +22,7 @@ Ahora que hemos preparado nuestro [entorno canvas](/es/docs/Web/API/Canvas_API/T
 
 ## Dibujando rectángulos
 
-A diferencia de [SVG](/es/docs/SVG "en/SVG"), {{HTMLElement("canvas")}} solo soporta una forma primitiva: rectangulos. Todas las otras formas deben ser creadas por la combinación de uno o más trazos, listas de puntos conectados por líneas. Afortunadamente, tenemos una variedad de funciones para dibujar trazos que hacen posible componer formas muy complejas.
+A diferencia de [SVG](/es/docs/SVG), {{HTMLElement("canvas")}} solo soporta una forma primitiva: rectangulos. Todas las otras formas deben ser creadas por la combinación de uno o más trazos, listas de puntos conectados por líneas. Afortunadamente, tenemos una variedad de funciones para dibujar trazos que hacen posible componer formas muy complejas.
 
 Primero veamos el rectángulo. Aquí hay tres funciones que podemos usar en el canvas para dibujarlos:
 

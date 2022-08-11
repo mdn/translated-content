@@ -16,8 +16,10 @@ translation_of: Web/API/Console/info
 
 ## Sintaxis
 
-    console.info(obj1 [, obj2, ..., objN]);
-    console.info(msg [, subst1, ..., substN]);
+```js
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
 ## Parametros
 

@@ -8,10 +8,12 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 
 El método **`toSource()`** regresa una cadena representando el código fuente del objeto.
 
-## Syntax
+## Sintaxis
 
-    Object.toSource();
-    obj.toSource();
+```js
+Object.toSource();
+obj.toSource();
+```
 
 ### Return value
 

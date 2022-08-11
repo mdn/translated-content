@@ -18,8 +18,10 @@ El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso esp
 
 ## Sintaxis
 
-    createImageBitmap(image[, options]).then(function(response) { ... });
-    createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+```js
+createImageBitmap(image[, options]).then(function(response) { ... });
+createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ... });
+```
 
 ### Parámetros
 

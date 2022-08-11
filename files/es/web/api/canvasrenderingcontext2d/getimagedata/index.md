@@ -18,7 +18,9 @@ Los píxeles fuera del área del lienzo están presentes como valores negros tra
 
 ## Sintaxis
 
-    ImageData ctx.getImageData(sx, sy, sw, sh);
+```js
+ImageData ctx.getImageData(sx, sy, sw, sh);
+```
 
 ### Parámetros
 
@@ -33,7 +35,7 @@ Los píxeles fuera del área del lienzo están presentes como valores negros tra
 
 ### Valor de retorno
 
-An [`ImageData`](/es/docs/Web/API/ImageData "The ImageData interface represents the underlying pixel data of an area of a <canvas> element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().") object containing the image data for the given rectangle of the canvas.
+An [`ImageData`](/es/docs/Web/API/ImageData) object containing the image data for the given rectangle of the canvas.
 
 ### Errores cometidos
 

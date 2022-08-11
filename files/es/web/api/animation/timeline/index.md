@@ -16,9 +16,11 @@ La propiedad **`Animation.timeline`** de la interfaz {{domxref ("Animation")}} d
 
 ## Sintaxis
 
-    var animationsTimeline = Animation.timeline;
+```js
+var animationsTimeline = Animation.timeline;
 
-    Animation.timeline = newTimeline;
+Animation.timeline = newTimeline;
+```
 
 ### Valor
 

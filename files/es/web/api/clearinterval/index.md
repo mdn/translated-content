@@ -10,13 +10,15 @@ Cancela una acción reiterativa que se inició mediante una llamada a {{domxref(
 
 ## Sintaxis
 
-    window.clearInterval(intervalID)
+```js
+window.clearInterval(intervalID)
+```
 
 `intervalID` es el identificador de la acción reiterativa que se desea cancelar. Este ID se obtiene a partir de `setInterval()`.
 
 ## Ejemplo
 
-Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/window.setInterval#Example").
+Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example).
 
 ## Especificación
 
@@ -25,9 +27,9 @@ Vea el [ejemplo de`setInterval()`](/es/docs/DOM/window.setInterval#Example "DOM/
 
 ## Vea también
 
-- [JavaScript timers](/es/docs/JavaScript/Timers "JavaScript/Timers")
+- [JavaScript timers](/es/docs/JavaScript/Timers)
 - {{domxref("WindowTimers.setTimeout")}}
 - {{domxref("WindowTimers.setInterval")}}
 - {{domxref("WindowTimers.clearTimeout")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons)

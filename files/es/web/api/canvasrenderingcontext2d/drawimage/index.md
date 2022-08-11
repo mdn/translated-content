@@ -15,9 +15,11 @@ El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D propor
 
 ## Sintaxis
 
-    void ctx.drawImage(image, dx, dy);
-    void ctx.drawImage(image, dx, dy, dWidth, dHeight);
-    void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
+void ctx.drawImage(image, dx, dy);
+void ctx.drawImage(image, dx, dy, dWidth, dHeight);
+void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
 
 ![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
 
@@ -129,16 +131,14 @@ window.addEventListener("load", drawCanvas);
 
 {{Compat("api.CanvasRenderingContext2D.drawImage")}}
 
-##
-
 ## Notas de compatibilidad
 
 - Soporte para voltear imagen usando valores negativos para `sw` y `sh` fue añadido en Gecko 5.0 {{geckoRelease("5.0")}}.
 - Empezando con {{geckoRelease("5.0")}} `drawImage()` maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.
 - Especificación de una imagen `null` o `undefined` al llamar o `drawImage()` correctamente lanzando una excepción `TYPE_MISMATCH_ERR` empezando con {{geckoRelease("5.0")}}.
 - antes de Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.
-- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
-- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
+- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Mira también
 

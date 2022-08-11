@@ -10,11 +10,13 @@ El elemento [`<canvas>`](es/HTML/Canvas) permite dibujar texto en él a través 
 
 ### API
 
-    attribute DOMString mozTextStyle;
-    void mozDrawText(in DOMString textToDraw);
-    float mozMeasureText(in DOMString textToMeasure);
-    void mozPathText(in DOMString textToPath);
-    void mozTextAlongPath(in DOMString textToDraw, in boolean stroke);
+```
+attribute DOMString mozTextStyle;
+void mozDrawText(in DOMString textToDraw);
+float mozMeasureText(in DOMString textToMeasure);
+void mozPathText(in DOMString textToPath);
+void mozTextAlongPath(in DOMString textToDraw, in boolean stroke);
+```
 
 ### Notas
 
@@ -34,35 +36,43 @@ El atributo `mozTextStyle` contiene el estilo de texto actual. Usa la misma sint
 
 Ej:
 
-    ctx.mozTextStyle = "20pt Arial"
+```js
+ctx.mozTextStyle = "20pt Arial"
+```
 
 ### Dibujar texto
 
 Dibujar es muy sencillo. `mozDrawText` usa el estilo de texto actual, cualquiera que sea éste. Se usa el color de relleno del contexto como color del texto.
 
-    ctx.translate(10, 50);
-    ctx.fillStyle = "Red";
-    ctx.mozDrawText("Sample String");
+```js
+ctx.translate(10, 50);
+ctx.fillStyle = "Red";
+ctx.mozDrawText("Sample String");
+```
 
 ### Medir texto
 
 A veces es útil saber qué tan ancho es un trozo de texto en particular (para centrarlo en una ventana, por ejemplo).
 
-    var text = "Sample String";
-    var width = ctx.canvas.width;
-    var len = ctx.mozMeasureText(text);
-    ctx.translate(len/2, 0);
-    ctx.mozDrawText(text);
+```js
+var text = "Sample String";
+var width = ctx.canvas.width;
+var len = ctx.mozMeasureText(text);
+ctx.translate(len/2, 0);
+ctx.mozDrawText(text);
+```
 
 ### Interacción texto/trazo
 
 Si quieres tachar un texto, `mozDrawText` no te lo permite. En cambio, `mozPathText` agrega el tachado de texto al trazo actual.
 
-    ctx.fillStyle = "green";
-    ctx.strokeStyle = "black";
-    ctx.mozPathText("Sample String");
-    ctx.fill()
-    ctx.stroke()
+```js
+ctx.fillStyle = "green";
+ctx.strokeStyle = "black";
+ctx.mozPathText("Sample String");
+ctx.fill()
+ctx.stroke()
+```
 
 Supongamos ahora que quieres agregar un texto que se acomode a un trazo que dibujaste (una línea curva o algo parecido) es donde aparece `mozTextAlongPath`. Al contrario de otras funciones de texto, `mozTextAlongPath` necesita dos argumentos: el texto y qué se quiere hacer con él. `mozTextAlongPath` aproxima el trazo actual como una serie de segmentos de línea y ubica cada carácter encima de ese trazo. Los caracteres no son cambiados de tamaño o transformados de acuerdo a la curvatura de la base; toman la orientación del trazo a la mitad del carácter.
 

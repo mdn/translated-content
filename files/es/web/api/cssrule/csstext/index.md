@@ -9,16 +9,20 @@ Summary
 
 **cssText** returns the current text style rule.
 
-### Syntax
+### Sintaxis
 
-    string = cssRule.cssText
+```js
+string = cssRule.cssText
+```
 
 ### Instance
 
-    if (myRule.cssText.indexOf ("background-color")! = -1) {
-       bgRule = MyRule;
-    }
-    ...
+```js
+if (myRule.cssText.indexOf ("background-color")! = -1) {
+    bgRule = MyRule;
+}
+...
+```
 
 ### Specification
 

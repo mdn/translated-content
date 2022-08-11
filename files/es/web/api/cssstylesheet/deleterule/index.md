@@ -11,7 +11,9 @@ El método **deleteRule** elimina una regla de la hoja de estilos actual.
 
 ### Sintaxis
 
-    stylesheet.deleteRule(index)
+```js
+stylesheet.deleteRule(index)
+```
 
 ### Parámetros
 
@@ -19,7 +21,9 @@ El método **deleteRule** elimina una regla de la hoja de estilos actual.
 
 ### Ejemplo
 
-     myStyles.deleteRule(0);
+```js
+myStyles.deleteRule(0);
+```
 
 ### Especificación
 

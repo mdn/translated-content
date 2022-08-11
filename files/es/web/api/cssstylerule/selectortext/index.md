@@ -11,16 +11,20 @@ translation_of: Web/API/CSSStyleRule/selectorText
 
 ### Sintaxis
 
-    string = cssRule.selectorText
-    cssRule.selectorText = string
+```js
+string = cssRule.selectorText
+cssRule.selectorText = string
+```
 
 ### Ejemplo
 
-     // for cssrule: body { background-color: darkblue; }
-     cssrule = document.styleSheets[1]
-     !!TODO!!
-     selector = cssrule.selectorText;
-     // selector is now "body"
+```js
+// for cssrule: body { background-color: darkblue; }
+cssrule = document.styleSheets[1]
+!!TODO!!
+selector = cssrule.selectorText;
+// selector is now "body"
+```
 
 ### Notas
 

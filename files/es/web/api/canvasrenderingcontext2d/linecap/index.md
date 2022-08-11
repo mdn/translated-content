@@ -11,7 +11,9 @@ La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina 
 
 ## Sintaxis
 
-    ctx.lineCap = "butt" || "round" || "square";
+```js
+ctx.lineCap = "butt" || "round" || "square";
+```
 
 ### Opciones
 

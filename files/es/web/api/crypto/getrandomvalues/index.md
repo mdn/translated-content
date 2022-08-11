@@ -17,7 +17,9 @@ Con el fin de garantizar un rendimiento razonable, las distintas implementacione
 
 ## Sintaxis
 
-    cryptoObj.getRandomValues(typedArray);
+```js
+cryptoObj.getRandomValues(typedArray);
+```
 
 ### Parámetros
 

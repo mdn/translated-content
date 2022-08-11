@@ -13,7 +13,9 @@ Ver [Stack traces](/es/docs/Web/API/console#Stack_traces) en la documentación d
 
 ## Sintaxis
 
-    console.trace();
+```js
+console.trace();
+```
 
 ## Ejemplo
 
@@ -30,9 +32,11 @@ foo();
 
 La siguiente indicador será mostrado en la consola:
 
-    bar
-    foo
-    <anonymous>
+```
+bar
+foo
+<anonymous>
+```
 
 ## Especificaciones
 

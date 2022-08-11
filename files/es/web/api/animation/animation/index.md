@@ -12,7 +12,9 @@ El constructor **`Animation()`** de [Web Animations API](/es/docs/Web/API/Web_An
 
 ## Sintaxis
 
-    var animation = new Animation([effect][, timeline]);
+```js
+var animation = new Animation([effect][, timeline]);
+```
 
 ### Parámetros
 

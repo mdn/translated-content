@@ -12,7 +12,9 @@ Borra el retraso asignado por {{domxref("window.setTimeout","window.setTimeout()
 
 ## Sintaxis
 
-    window.clearTimeout(timeoutID)
+```js
+window.clearTimeout(timeoutID)
+```
 
 - `timeoutID` es el ID del timeout que desee borrar, retornado por {{domxref("window.setTimeout","window.setTimeout()")}}.
 
@@ -53,9 +55,9 @@ DOM Nivel 0. Especificado en [HTML5](http://www.whatwg.org/specs/web-apps/curren
 
 ## Vea también
 
-- [JavaScript timers](/es/docs/JavaScript/Timers "JavaScript/Timers")
+- [JavaScript timers](/es/docs/JavaScript/Timers)
 - {{domxref("window.setTimeout")}}
 - {{domxref("window.setInterval")}}
 - {{domxref("window.clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+- [_Daemons_ management](/es/docs/JavaScript/Timers/Daemons)

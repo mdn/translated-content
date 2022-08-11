@@ -19,4 +19,4 @@ CSS ofrece una serie de características poderosas que puede ser difíciles de u
 
 ## Temas relacionados
 
-- [CSS](/es/docs/Web/CSS "/en-US/docs/Web/CSS")
+- [CSS](/es/docs/Web/CSS)

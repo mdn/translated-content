@@ -105,7 +105,7 @@ document.getElementById("expirationWarning").className = "";
 
 - Usar el rol de alerta en un elemento implica que ese elemento tiene `aria-live="assertive"`.
 - El rol de alerta solo debería ser utilizada para contenido de texto estático. El elemento que en el que el rol de alerta es utilizado no debe ser capaz de recibir el foco, pues lectores de pantalla automáticamente anunciarán la alerta sin importar donde el foco del teclado esta actualmente localizado.
-- Si una alerta también provee controles interactivos (como controles del formulario que permitan al usuario rectificar un problema, o un boton de "OK" que descarte la alerta) el rol de [alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role") debe ser utilizado en lugar de éste.
+- Si una alerta también provee controles interactivos (como controles del formulario que permitan al usuario rectificar un problema, o un boton de "OK" que descarte la alerta) el rol de [alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role) debe ser utilizado en lugar de éste.
 
 ### Atributos ARIA utilizados
 
@@ -113,8 +113,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### Técnicas ARIA relacionadas
 
-- [Utilizando el rol alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "en/ARIA/ARIA_Techniques/Using_the_alertdialog_role")
-- [Utilizando la propiedad aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property "Using the aria-invalid property")
+- [Utilizando el rol alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Utilizando la propiedad aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### Compatibilidad
 

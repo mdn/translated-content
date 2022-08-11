@@ -184,16 +184,20 @@ Un menú de navegación generalmente se crea a partir de una lista de enlaces, a
 
 Para hacer que todos los elementos se asienten horizontalmente en una línea, la forma moderna más fácil es usar flexbox:
 
-    ul {
-      display: flex;
-    }
+```css
+ul {
+  display: flex;
+}
+```
 
 Para eliminar el espacio innecesario y las viñetas, podemos hacer esto:
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
+```css
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+```
 
 etc.
 

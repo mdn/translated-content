@@ -13,7 +13,9 @@ Consulte la documentación de [Timers](/es/docs/Web/API/console#Timers) para má
 
 ## Sintaxis
 
-    console.timeEnd(etiqueta);
+```js
+console.timeEnd(etiqueta);
+```
 
 ### Parámetros
 

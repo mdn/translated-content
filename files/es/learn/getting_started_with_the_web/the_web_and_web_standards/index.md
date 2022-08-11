@@ -104,9 +104,11 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
 - Hojas de estilo en cascada (**CSS** por "_Cascading Style Sheets_") es un lenguaje basado en reglas que se utiliza para aplicar estilos a tu HTML, por ejemplo, establecer colores del texto y del fondo, agregar bordes, animar cosas o diseñar una página de cierta manera. Como un sencillo ejemplo, el siguiente código convertirá nuestro párrafo HTML en rojo:
 
-      p  {
-        color: red;
-      }
+  ```css
+  p  {
+    color: red;
+  }
+  ```
 
   En la analogía de la casa, CSS es como la pintura, el papel tapiz, las alfombras y los cuadros que usarías para hacer que la casa se vea bien.
 

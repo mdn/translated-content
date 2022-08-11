@@ -29,7 +29,7 @@ Esta interfaz hereda de las siguientes interfaces padre:
 _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform "/en-US/docs/")) to be used to determine the frequency domain.
+  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
 - {{domxref("AnalyserNode.minDecibels")}}

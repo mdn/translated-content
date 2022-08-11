@@ -14,8 +14,10 @@ Si la animaci√≥n carece de un {{domxref("AnimationTimeline", "timeline")}}, est√
 
 ## Sintaxis
 
-    var currentTime = Animation.currentTime;
-    Animation.currentTime = newTime;
+```js
+var currentTime = Animation.currentTime;
+Animation.currentTime = newTime;
+```
 
 ### Valor
 

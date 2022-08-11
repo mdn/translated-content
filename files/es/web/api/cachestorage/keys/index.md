@@ -11,9 +11,11 @@ Puede acceder a `CacheStorage`través de la propiedad global {{domxref ("WindowO
 
 ## Sintaxis
 
-    caches.keys().then(function(keyList) {
-      // haz algo con tu keyList
-    });
+```js
+caches.keys().then(function(keyList) {
+  // haz algo con tu keyList
+});
+```
 
 ### Parámetros
 
