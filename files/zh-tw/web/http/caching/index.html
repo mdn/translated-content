@@ -149,8 +149,7 @@ Cache-Control: public
 
 <pre>Vary: Accept-Encoding</pre>
 
-<div class="notecard note">
-  <h4>Note</h4>
+<div class="note">
   <p>Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
 </div>
 

@@ -139,18 +139,18 @@ Cache-Control: stale-if-error=&lt;秒數&gt;
 <dl>
  <dt>Good:</dt>
  <dd>
- <pre class="example-good brush: http no-line-numbers">Cache-Control: no-store</pre>
+ <pre class="example-good brush: plain">Cache-Control: no-store</pre>
 
- <div class="notecard note">
+ <div class="note">
  <p>這個 <code>no-store</code> 指令使得回應再也不會被儲存，但它無法防止使用先前儲存、而且仍有效的快取。多設定 <code>max-age=0</code> 可以強制執行驗證（也就會清除既有快取）。</p>
 
- <pre class="brush: html">Cache-Control: no-store, max-age=0
+ <pre class="brush: plain">Cache-Control: no-store, max-age=0
 </pre>
  </div>
  </dd>
  <dt>Bad:</dt>
  <dd>
- <pre class="example-bad brush: http no-line-numbers">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
+ <pre class="example-bad brush: plain">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0</pre>
  </dd>
 </dl>
 
@@ -158,7 +158,7 @@ Cache-Control: stale-if-error=&lt;秒數&gt;
 
 <p>對於那些不會更新的檔案，你可以在回應中使用下列這個激進的標頭。比如說用在圖片、CSS 檔案，以及 JavaScript 檔案。附帶一提，也可以看看 <code>Expires</code> 標頭。</p>
 
-<pre class="brush: http no-line-numbers">Cache-Control: public, max-age=604800, immutable
+<pre class="brush: plain">Cache-Control: public, max-age=604800, immutable
 </pre>
 
 <h3 id="Requiring_revalidation">必須執行驗證</h3>
@@ -166,13 +166,13 @@ Cache-Control: stale-if-error=&lt;秒數&gt;
 <p><code>no-cache</code>、<code>max-age=0, must-revalidate</code> 是同樣的意思。<br>
  表示客戶端可以儲存資源，但使用它前必須做驗證。這表示每次都會發生 HTTP 請求，不過只要沒過期就不用下載完整內容</p>
 
-<pre class="brush: http no-line-numbers">Cache-Control: no-cache</pre>
+<pre class="brush: plain">Cache-Control: no-cache</pre>
 
-<pre class="brush: http no-line-numbers">Cache-Control: max-age=0, must-revalidate</pre>
+<pre class="brush: plain">Cache-Control: max-age=0, must-revalidate</pre>
 
 <p><strong>附帶一提</strong>： 這個設定可以在伺服器掛掉的時候使用過期資源</p>
 
-<pre class="brush: http no-line-numbers">Cache-Control: max-age=0</pre>
+<pre class="brush: http">Cache-Control: max-age=0</pre>
 
 <h2 id="Specifications">Specifications</h2>
 

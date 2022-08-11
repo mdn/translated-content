@@ -28,9 +28,9 @@ translation_of: Web/HTTP/Headers
 <p>Headers can also be grouped according to how proxies handle them:</p>
 
 <dl>
- <dt><a id="e2e" name="e2e"></a>End-to-end headers</dt>
+ <dt><a id="e2e">End-to-end headers</a></dt>
  <dd>These headers must be transmitted to the final recipient of the message; that is, the server for a request or the client for a response. Intermediate proxies must retransmit end-to-end headers unmodified and caches must store them.</dd>
- <dt><a id="hbh" name="hbh"></a>Hop-by-hop headers</dt>
+ <dt><a id="hbh">Hop-by-hop headers</a></dt>
  <dd>These headers are meaningful only for a single transport-level connection and must not be retransmitted by proxies or cached. Such headers are: {{ httpheader("Connection") }}, {{ httpheader("Keep-Alive") }}, {{ httpheader("Proxy-Authenticate") }}, {{ httpheader("Proxy-Authorization") }}, {{ httpheader("TE") }}, {{ httpheader("Trailer") }}, {{ httpheader("Transfer-Encoding") }} and {{ httpheader("Upgrade") }}. Note that only hop-by-hop headers may be set using the {{ httpheader("Connection") }} general header.</dd>
 </dl>
 
@@ -83,10 +83,9 @@ translation_of: Web/HTTP/Headers
  <dd>...</dd>
 </dl>
 
+<h2 id="Conditionals">Conditionals</h2>
+
 <dl>
- <dt>
- <h2 id="Conditionals">Conditionals</h2>
- </dt>
  <dt>{{HTTPHeader("Last-Modified")}}</dt>
  <dd>It is a validator, the last modification date of the resource, used to compare several versions of the same resource. It is less accurate than {{HTTPHeader("ETag")}}, but easier to calculate in some environments. Conditional requests using {{HTTPHeader("If-Modified-Since")}} and {{HTTPHeader("If-Unmodified-Since")}} use this value to change the behavior of the request.</dd>
  <dt>{{HTTPHeader("ETag")}}</dt>
@@ -146,9 +145,11 @@ translation_of: Web/HTTP/Headers
  <dd>Used to contain an HTTP cookie, previously sent by the server with the {{HTTPHeader("Set-Cookie2")}} header, but has been obsoleted by the specification. Use {{HTTPHeader("Cookie")}} instead.</dd>
  <dt>{{HTTPHeader("Set-Cookie2")}} {{Deprecated_Inline}}</dt>
  <dd>Used to send cookies from the server to the user agent, but has been obsoleted by the specification. Use {{HTTPHeader("Set-Cookie")}} instead.</dd>
- <dt>
- <h2 id="CORS">CORS</h2>
- </dt>
+</dl>
+
+<h2 id="CORS">CORS</h2>
+
+<dl>
  <dt>{{HTTPHeader("Access-Control-Allow-Origin")}}</dt>
  <dd>Indicates whether the response can be shared.</dd>
  <dt>{{HTTPHeader("Access-Control-Allow-Credentials")}}</dt>
@@ -198,10 +199,9 @@ translation_of: Web/HTTP/Headers
  <dd>Describes the language(s) intended for the audience, so that it allows a user to differentiate according to the users' own preferred language.</dd>
  <dt>{{HTTPHeader("Content-Location")}}</dt>
  <dd>Indicates an alternate location for the returned data.</dd>
- <dt>
- <h2 id="Proxies">Proxies</h2>
- </dt>
 </dl>
+
+<h2 id="Proxies">Proxies</h2>
 
 <dl>
  <dt>{{HTTPHeader("Forwarded")}}</dt>

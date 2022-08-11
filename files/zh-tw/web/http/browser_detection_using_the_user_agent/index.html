@@ -32,8 +32,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <dl>
  <dt>功能偵測</dt>
- <dd>功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：<a href="https://www.chromestatus.com/feature/5668726032564224">Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援</a>，但其他瀏覽器並不支援。你可能以為要這麼用：</dd>
- <dd>
+ <dd>功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：<a href="https://www.chromestatus.com/feature/5668726032564224">Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援</a>，但其他瀏覽器並不支援。你可能以為要這麼用：
  <pre class="brush: js notranslate">// 這個程式以特殊表示法把字串分開來
 
 if (navigator.userAgent.indexOf("Chrome") !== -1){
