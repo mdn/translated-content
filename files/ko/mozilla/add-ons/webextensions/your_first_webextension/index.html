@@ -26,31 +26,31 @@ cd borderify</pre>
 
 <p>이제 "borderify" 폴더 안에 "manifest.json" 파일을 만들어야 합니다. 아래 내용을 작성해 주세요.</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="punctuation token">{</span>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">{
 
-  <span class="key token">"manifest_version":</span> <span class="number token">2</span><span class="punctuation token">,</span>
-  <span class="key token">"name":</span> <span class="string token">"Borderify"</span><span class="punctuation token">,</span>
-  <span class="key token">"version":</span> <span class="string token">"1.0"</span><span class="punctuation token">,</span>
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
 
-  <span class="key token">"description":</span> <span class="string token">"Adds a red border to all webpages matching mozilla.org."</span><span class="punctuation token">,</span>
+  "description": "Adds a red border to all webpages matching mozilla.org.",
 
-  <span class="key token">"icons":</span> <span class="punctuation token">{</span>
-    <span class="key token">"48":</span> <span class="string token">"icons/border-48.png"</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
+  "icons": {
+    "48": "icons/border-48.png"
+  },
 
-  <span class="key token">"content_scripts":</span> <span class="punctuation token">[</span>
-    <span class="punctuation token">{</span>
-      <span class="key token">"matches":</span> <span class="punctuation token">[</span><span class="string token">"*://*.mozilla.org/*"</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-      <span class="key token">"js":</span> <span class="punctuation token">[</span><span class="string token">"borderify.js"</span><span class="punctuation token">]</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">]</span>
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["borderify.js"]
+    }
+  ]
 
-<span class="punctuation token">}</span></code></pre>
+}</code></pre>
 
 <ul>
  <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/name">name</a></code>, <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/version">version</a></code>, 이 세가지 키는 반드시 필요합니다. 확장의 기본 메타 데이터를 담고 있습니다.</li>
  <li><code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/description">description</a></code>은 없어도 괜찮지만 포함하는 게 좋습니다. 확장 관리자 화면에서 볼 수 있습니다.</li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">icons</a></code>은 없어도 괜찮지만 역시 포함하는 편이 좋습니다<span class="translation">. 이는 확장의 아이콘을 결정하며 확장 관리자 화면에서 볼 수 있습니다.</span></li>
+ <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">icons</a></code>은 없어도 괜찮지만 역시 포함하는 편이 좋습니다. 이는 확장의 아이콘을 결정하며 확장 관리자 화면에서 볼 수 있습니다.</li>
 </ul>
 
 <p>가장 재밌는 키는 <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> 입니다. 이 키는 URL이 패턴과 일치하는 페이지에 스크립트를 주입하도록 Firefox에 요청하는 역할을 합니다. 이 예제의 경우, "mozilla.org"와 그 하위 도메인에서 제공되는 모든 HTTP와 HTTPS 페이지에 "borderify.js" 스크립트를 주입하도록 Firefox에 요청합니다.</p>
@@ -61,7 +61,7 @@ cd borderify</pre>
 </ul>
 
 <div class="warning">
-<p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">확장에 ID를 지정해야 할 수도 있습니다</a><span class="translation">. 애드온</span> ID를 지정해야 한다면, <code>manifest.json</code> 파일에 <code>application</code> 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.</p>
+<p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">확장에 ID를 지정해야 할 수도 있습니다</a>. 애드온 ID를 지정해야 한다면, <code>manifest.json</code> 파일에 <code>application</code> 키를 작성한 다음 gecko.id 프로퍼티를 설정하면 됩니다.</p>
 
 <pre class="brush: json">"applications": {
   "gecko": {
@@ -128,7 +128,7 @@ cd borderify</pre>
 <p>{{EmbedYouTube("rxBQl2Z9IBQ")}}</p>
 
 <div class="note">
-<p><span class="translation">addons.mozilla.org에 들어가서 테스트 하지 마세요! </span>Content script는 현재 이 도메인에 사용할 수 없도록 차단됩니다.</p>
+<p>addons.mozilla.org에 들어가서 테스트 하지 마세요! Content script는 현재 이 도메인에 사용할 수 없도록 차단됩니다.</p>
 </div>
 
 <p>좀 더 파고들어 봅시다. 테두리의 색을 변경하거나, 페이지 컨텐츠에 다른 것들을 해볼 수 있겠죠. content script를 저장하고 about:debugging 페이지에서 Reload 버튼을 눌러 확장기능 파일을 새로고침 할 수 있습니다. 그리고 나서는 곧바로 변경된 기능을 확인할 수 있죠.</p>
