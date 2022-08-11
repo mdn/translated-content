@@ -3,9 +3,9 @@ title: 構文
 slug: Web/CSS/Syntax
 tags:
   - CSS
-  - ガイド
-  - リファレンス
-  - ウェブ
+  - Guide
+  - Reference
+  - Web
 translation_of: Web/CSS/Syntax
 ---
 {{CSSRef}}
@@ -72,8 +72,25 @@ CSS のルールセット (またはルール) は下記の図のように表現
 
 ## 入れ子の文
 
-他にも文のグループとして、**入れ子の文**があります。これらはアットルール特有のサブセットである*条件付きグループルール*の中で使用することができます。これらの文は、特定の条件が一致した場合にのみ適用されます。例えば、 `@media` アットルールの内容は、示された条件に一致するブラウザーが実行されている端末でのみ適用されるなどです。 CSS1 と CSS2.1 では、条件付きグループルール内では*ルールセット*のみが利用できました。それではあまりに厳しかったので、 [_CSS Conditionals Level 3_](/ja/docs/Web/CSS/CSS3#Conditionals) では、この制約は撤廃されました。現在、それは今でも試験的でどのブラウザーでも対応しているわけではないものの、条件付きグループルールはより広い範囲の内容を持つことができ、ルールセットだけではなく、すべてではないものの、一部のアットルールを含むこともできます。
+他にも文のグループとして、**入れ子の文**があります。これらはアットルール特有のサブセットである*条件付きグループルール*の中で使用することができます。これらの文は、特定の条件が一致した場合にのみ適用されます。例えば、 `@media` アットルールの内容は、示された条件に一致するブラウザーが実行されている端末でのみ適用されるなどです。 CSS1 と CSS2.1 では、条件付きグループルール内では*ルールセット*のみが利用できました。それではあまりに厳しかったので、 [_CSS Conditionals Level 3_](/ja/docs/Web/CSS/CSS_Conditional_Rules) では、この制約は撤廃されました。現在、それは今でも試験的でどのブラウザーでも対応しているわけではないものの、条件付きグループルールはより広い範囲の内容を持つことができ、ルールセットだけではなく、すべてではないものの、一部のアットルールを含むこともできます。
 
 ## 関連情報
 
-- {{ CSS_key_concepts()}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
