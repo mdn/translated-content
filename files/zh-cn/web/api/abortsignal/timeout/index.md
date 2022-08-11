@@ -6,11 +6,11 @@ slug: Web/API/AbortSignal/timeout
 
 静态方阿飞 **`AbortSignal.timeout()`** 返回一个指定时间后将自动中止的 {{domxref("AbortSignal")}}。
 
-信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的"停止"操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
+信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的“停止”操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
 
-超时将基于活动的时间，而不是经过的时间，如果代码在挂起的工作中运行或者文档在向后缓存中时（“[bfcache](https://web.dev/bfcache/)”），将有效地暂停。
+超时将基于活动的时间，而不是经过的时间，如果代码在挂起的工作中运行或者文档在向后缓存中时（“[bfcache](https://web.dev/bfcache/)”），将有效的暂停。
 
-> **备注：** 在撰写代码时，无法组合多个。意思时你不能使用超时的 signal 或者通过调用 {{domxref("AbortController.abort()")}} 直接中止下载。
+> **备注：** 在撰写代码时，无法组合多个。意思是你不能使用超时的 signal 或者通过调用 {{domxref("AbortController.abort()")}} 直接中止下载。
 
 ## 语法
 
