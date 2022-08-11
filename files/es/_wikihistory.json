@@ -3715,16 +3715,6 @@
       "atlas7jean"
     ]
   },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:19.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "velizluisma",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
     "contributors": [
@@ -3748,15 +3738,6 @@
     "contributors": [
       "chrisdavidmills",
       "Nachec"
-    ]
-  },
-  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
-    "modified": "2020-09-30T15:28:56.171Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "LeoHirsch"
     ]
   },
   "MDN/Writing_guidelines/Howto/Tag": {
@@ -3788,16 +3769,6 @@
     "contributors": [
       "chrisdavidmills",
       "Nachec"
-    ]
-  },
-  "MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-01-16T19:10:19.469Z",
-    "contributors": [
-      "wbamberg",
-      "javierdp",
-      "gpadilla",
-      "RoxPulido",
-      "LeoHirsch"
     ]
   },
   "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
