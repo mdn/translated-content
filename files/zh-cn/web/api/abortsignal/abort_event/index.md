@@ -40,7 +40,7 @@ signal.onabort = () => {
 };
 ```
 
-## 规格
+## 规范
 
 {{Specifications}}
 
