@@ -3,37 +3,41 @@ title: Nullish coalescing operator
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
-<p>{{JSSidebar("Operators")}}</p>
+{{JSSidebar("Operators")}}
 
-<p><strong>널 병합 연산자 (<code>??</code>)</strong> 는 왼쪽 피연산자가 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환하는 논리 연산자이다.</p>
+**널 병합 연산자 (`??`)** 는 왼쪽 피연산자가 [null](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) 또는 [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환하는 논리 연산자이다.
 
-<p>이는 왼쪽 피연산자가 <code>null</code> 또는 <code>undefined</code> 뿐만 아니라 <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값에 해당할 경우 오른쪽 피연산자를 반환하는 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">논리 연산자 OR (<code>||</code>)</a>와는 대조된다. 다시 말해 만약 어떤 변수 foo에게 <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값( <code>''</code> 또는 <code>0</code>)을 포함한 값을 제공하기 위해 <code>||</code>을 사용하는 것을 고려했다면 예기치 않는 동작이 발생할 수 있다. 하단에 더 많은 예제가 있다.</p>
+이는 왼쪽 피연산자가 `null` 또는 `undefined` 뿐만 아니라 *[falsy](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description) *값에 해당할 경우 오른쪽 피연산자를 반환하는 [논리 연산자 OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2)와는 대조된다. 다시 말해 만약 어떤 변수 foo에게 *[falsy](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description) *값( `''` 또는 `0`)을 포함한 값을 제공하기 위해 `||`을 사용하는 것을 고려했다면 예기치 않는 동작이 발생할 수 있다. 하단에 더 많은 예제가 있다.
 
-<p> 널 병합 연산자는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">연산자 우선 순위</a>가 다섯번째로 낮은데, <code>||</code> 의 바로 아래이며 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">조건부 (삼항) 연산자</a>의 바로 위이다. </p>
+널 병합 연산자는 [연산자 우선 순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)가 다섯번째로 낮은데, `||` 의 바로 아래이며 [조건부 (삼항) 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)의 바로 위이다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 
-<h2 id="문법">문법</h2>
+## 문법
 
-<pre class="syntaxbox "><var>leftExpr</var> ?? <var>rightExpr</var>
-</pre>
+```js
+    leftExpr ?? rightExpr
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>널 병합 연산자는 만약 왼쪽 표현식이 {{jsxref("null")}} 또는 {{jsxref("undefined")}}인 경우, 오른쪽 표현식의 결과를 반환한다.</p>
+널 병합 연산자는 만약 왼쪽 표현식이 {{jsxref("null")}} 또는 {{jsxref("undefined")}}인 경우, 오른쪽 표현식의 결과를 반환한다.
 
-<h3 id="변수에_기본값_할당">변수에 기본값 할당</h3>
+### 변수에 기본값 할당
 
-<p>이전에는 변수에 기본값을 할당하고 싶을 때, 논리 연산자 OR (<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>)을 사용하는 것이 일반적인 패턴이다:</p>
+이전에는 변수에 기본값을 할당하고 싶을 때, 논리 연산자 OR ([`||`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2))을 사용하는 것이 일반적인 패턴이다:
 
-<pre class="brush: js ">let foo;
+```js
+let foo;
 ...
 //  foo is never assigned any value so it is still undefined
-let someDummyText = foo || 'Hello!';</pre>
+let someDummyText = foo || 'Hello!';
+```
 
-<p>그러나 <code>||</code> boolean 논리 연산자 때문에, 왼쪽 피연산자는 boolean으로 강제로 변환되었고 <em>falsy</em> 한 값(<code>0</code>, <code>''</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>)은 반환되지 않았다. 이 동작은 만약 <code>0</code>, <code>''</code> or <code>NaN</code>을 유효한 값으로 생각한 경우 예기치 않는 결과를 초래할 수 있다.</p>
+그러나 `||` boolean 논리 연산자 때문에, 왼쪽 피연산자는 boolean으로 강제로 변환되었고 _falsy_ 한 값(`0`, `''`, `NaN`, `null`, `undefined`)은 반환되지 않았다. 이 동작은 만약 `0`, `''` or `NaN`을 유효한 값으로 생각한 경우 예기치 않는 결과를 초래할 수 있다.
 
-<pre class="brush: js ">let count;
+```js
+let count;
 let text;
 ...
 count = 0;
@@ -43,24 +47,26 @@ let qty = count || 42;
 let message = text || "hi!";
 console.log(qty);     // 42 and not 0
 console.log(message); // "hi!" and not ""
-</pre>
+```
 
-<p>널 병합 연산자는 첫 번째 연산자가 <code>null</code> 또는 <code>undefined</code>로 평가될 때만, 두 번째 피연산자를 반환함으로써 이러한 위험을 피한다:</p>
+널 병합 연산자는 첫 번째 연산자가 `null` 또는 `undefined`로 평가될 때만, 두 번째 피연산자를 반환함으로써 이러한 위험을 피한다:
 
-<pre class="brush: js ">let myText = ''; // An empty string (which is also a falsy value)
+```js
+let myText = ''; // An empty string (which is also a falsy value)
 
 let notFalsyText = myText || 'Hello world';
 console.log(notFalsyText); // Hello world
 
 let preservingFalsy = myText ?? 'Hi neighborhood';
 console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
-</pre>
+```
 
-<h3 id="단락">단락</h3>
+### 단락
 
-<p>OR과 AND 같은 논리 연산자들과 마찬가지로, 만약 왼쪽이 <code>null</code> 또는 <code>undefined</code>가 아님이 판명되면 오른쪽 표현식은 평가되지 않는다.</p>
+OR과 AND 같은 논리 연산자들과 마찬가지로, 만약 왼쪽이 `null` 또는 `undefined`가 아님이 판명되면 오른쪽 표현식은 평가되지 않는다.
 
-<pre class="brush: js ">function A() { console.log('A was called'); return undefined;}
+```js
+function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
@@ -72,35 +78,40 @@ console.log( B() ?? C() );
 // logs "B was called" then "false"
 // as B() returned false (and not null or undefined), the right
 // hand side expression was not evaluated
-</pre>
+```
 
-<h3 id="No_chaining_with_AND_or_OR_operators">No chaining with AND or OR operators</h3>
+### No chaining with AND or OR operators
 
-<p>AND (<code>&amp;&amp;</code>) 와 OR 연산자 (<code>||</code>)를 <code>??</code>와 직접적으로 결합하여 사용하는 것은 불가능하다. 이 경우 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>가 발생된다.</p>
+AND (`&&`) 와 OR 연산자 (`||`)를 `??`와 직접적으로 결합하여 사용하는 것은 불가능하다. 이 경우 [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생된다.
 
-<pre class="brush: js ">null || undefined ?? "foo"; // raises a SyntaxError
-true || undefined ?? "foo"; // raises a SyntaxError</pre>
+```js
+null || undefined ?? "foo"; // raises a SyntaxError
+true || undefined ?? "foo"; // raises a SyntaxError
+```
 
-<p>그러나 우선 순위를 명시적으로 나타내기 위해 괄호를 사용하면 가능하다:</p>
+그러나 우선 순위를 명시적으로 나타내기 위해 괄호를 사용하면 가능하다:
 
-<pre class="brush: js ">(null || undefined ) ?? "foo"; // returns "foo"
-</pre>
+```js
+(null || undefined ) ?? "foo"; // returns "foo"
+```
 
-<h3 id="Optional_chaining_연산자.와의_관계">Optional chaining 연산자(<code>?.</code>)와의 관계</h3>
+### Optional chaining 연산자(`?.`)와의 관계
 
-<p>널 병합 연산자는 명확한 값으로 <code>undefined</code>과 <code>null</code>을 처리하고, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">optional chaining 연산자 (<code>?.</code>)</a>는 <code>null</code> or <code>undefined</code>일 수 있는 객체의 속성에 접근할 때 유용하다.</p>
+널 병합 연산자는 명확한 값으로 `undefined`과 `null`을 처리하고, [optional chaining 연산자 (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)는 `null` or `undefined`일 수 있는 객체의 속성에 접근할 때 유용하다.
 
-<pre class="brush: js ">let foo = { someFooProp: "hi" };
+```js
+let foo = { someFooProp: "hi" };
 
 console.log(foo.someFooProp?.toUpperCase());  // "HI"
 console.log(foo.someBarProp?.toUpperCase()); // undefined
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>이 예제는 기본 값을 제공하지만 <code>null</code> or <code>undefined</code> 이외의 값을 를 유지한다. </p>
+이 예제는 기본 값을 제공하지만 `null` or `undefined` 이외의 값을 를 유지한다.
 
-<pre class="brush: js ">function getMiscObj(){
+```js
+function getMiscObj(){
   return {
     aNullProperty: null,
     emptyText: "", // this is not falsy
@@ -118,20 +129,18 @@ newObj.propC = miscObj.someNumber ?? 0;
 console.log(newObj.propA); // "default for A"
 console.log(newObj.propB); // "" (as the empty string is not null or undefined)
 console.log(newObj.propC); // 42
-</pre>
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.operators.nullish_coalescing")}}</p>
+{{Compat}}
 
-<h2 id="참고">참고</h2>
+## 참고
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">The optional chaining operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">The logical OR (<code>||</code>) operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default paramaters in functions</a></li>
-</ul>
+- [The optional chaining operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [The logical OR (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2)
+- [Default paramaters in functions](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)

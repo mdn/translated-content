@@ -9,35 +9,34 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/class
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>class 표현식</strong>은 ECMAScript 2015 (ES6)에서 클래스를 정의하는 한 방법입니다. <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">function 식</a>과 비슷하게, class 식은 기명(named) 또는 익명(unnamed)일 수 있습니다. 기명인 경우, 클래스명은 클래스 본체(body)에서만 지역(local)입니다. JavaScript 클래스는 프로토타입(원형) 기반 상속을 사용합니다.</p>
+**class 표현식**은 ECMAScript 2015 (ES6)에서 클래스를 정의하는 한 방법입니다. [function 식](/ko/docs/Web/JavaScript/Reference/Operators/function)과 비슷하게, class 식은 기명(named) 또는 익명(unnamed)일 수 있습니다. 기명인 경우, 클래스명은 클래스 본체(body)에서만 지역(local)입니다. JavaScript 클래스는 프로토타입(원형) 기반 상속을 사용합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
 
+## 구문
 
+```js
+    var MyClass = class [className] [extends] {
+      // class body
+    };
+```
 
-<h2 id="구문">구문</h2>
+## 설명
 
-<pre class="syntaxbox ">var MyClass = class <em>[className]</em> [extends] {
-  // class body
-};</pre>
+class 식은 [class 문](/ko/docs/Web/JavaScript/Reference/Statements/class)과 구문이 비슷합니다. 그러나, class 식의 경우 클래스명("binding identifier")을 생략할 수 있는데 class 문으로는 할 수 없습니다.
 
-<h2 id="설명">설명</h2>
+class 문과 같이, class 식의 본체는 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 실행됩니다.
 
-<p>class 식은 <a href="/ko/docs/Web/JavaScript/Reference/Statements/class">class 문</a>과 구문이 비슷합니다. 그러나, class 식의 경우 클래스명("binding identifier")을 생략할 수 있는데 class 문으로는 할 수 없습니다.</p>
+## 예제
 
-<p>class 문과 같이, class 식의 본체는 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서 실행됩니다.</p>
+### 간단한 class 식
 
+이게 바로 변수 "Foo"를 사용하여 참조할 수 있는 간단한 익명 class 식입니다.
 
-
-<h2 id="예제">예제</h2>
-
-<h3 id="간단한_class_식">간단한 class 식</h3>
-
-<p>이게 바로 변수 "Foo"를 사용하여 참조할 수 있는 간단한 익명 class 식입니다.</p>
-
-<pre class="brush: js ">var Foo = class {
+```js
+var Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -47,13 +46,14 @@ translation_of: Web/JavaScript/Reference/Operators/class
 var instance = new Foo();
 instance.bar(); // "Hello World!"
 Foo.name; // ""
-</pre>
+```
 
-<h3 id="Named_class_식">Named  class 식</h3>
+### Named class 식
 
-<p>당신이 클래스 몸통 내에서 현재 클래스를 참조하고 싶다면, 유명 class 식을 만들 수 있습니다. 이 이름은 오직 class 식 자체 범위에서만 볼 수 있습니다.</p>
+당신이 클래스 몸통 내에서 현재 클래스를 참조하고 싶다면, 유명 class 식을 만들 수 있습니다. 이 이름은 오직 class 식 자체 범위에서만 볼 수 있습니다.
 
-<pre class="brush: js ">var Foo = class NamedFoo {
+```js
+var Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;
@@ -63,20 +63,18 @@ var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo가 정의되지 않음
 Foo.name; // "NamedFoo"
-</pre>
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.operators.class")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/function"><code>function</code> 식</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> 문</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
-</ul>
+- [`function` 식](/ko/docs/Web/JavaScript/Reference/Operators/function)
+- [`class` 문](/ko/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/ko/docs/Web/JavaScript/Reference/Classes)

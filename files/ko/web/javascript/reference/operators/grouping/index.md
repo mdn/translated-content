@@ -8,27 +8,28 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>그룹 연산자 <code>()</code></strong>는 표현식 내에서 평가의 우선순위를 제어합니다.</p>
+**그룹 연산자 `()`**는 표현식 내에서 평가의 우선순위를 제어합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
+## 구문
 
+```js
+     ( )
+```
 
-<h2 id="구문">구문</h2>
+## 설명
 
-<pre class="syntaxbox"> ( )</pre>
+그룹 연산자는 표현식이나 중첩 표현식 주위를 감싸는 한 쌍의 괄호로 이루어진 연산자로, 감싸인 식이 더 높은 우선순위를 갖도록 일반적인 [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)를 재정의합니다. 이름 그대로, 그룹 연산자는 괄호 안의 내용을 묶습니다.
 
-<h2 id="설명">설명</h2>
+## 예제
 
-<p>그룹 연산자는 표현식이나 중첩 표현식 주위를 감싸는 한 쌍의 괄호로 이루어진 연산자로, 감싸인 식이 더 높은 우선순위를 갖도록 일반적인 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">연산자 우선순위</a>를 재정의합니다. 이름 그대로, 그룹 연산자는 괄호 안의 내용을 묶습니다.</p>
+다음 예제에서는 곱셈과 나눗셈 이후 덧셈과 뺄셈을 사용하는 일반적인 연산 순서를 그룹 연산자를 사용해 바꿉니다.
 
-<h2 id="예제">예제</h2>
-
-<p>다음 예제에서는 곱셈과 나눗셈 이후 덧셈과 뺄셈을 사용하는 일반적인 연산 순서를 그룹 연산자를 사용해 바꿉니다.</p>
-
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var c = 3;
 
@@ -43,20 +44,18 @@ a + (b * c)   // 7
 
 // 이것과 같음
 a * c + b * c // 9
-</pre>
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.operators.grouping")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">연산자 우선순위</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Operators/typeof", "typeof")}}</li>
-</ul>
+- [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/typeof", "typeof")}}

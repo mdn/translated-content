@@ -11,31 +11,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/in
 browser-compat: javascript.operators.in
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p> <strong><code>in</code> 연산자</strong>는 명시된 속성이 명시된 객체에 존재하면 <code>true</code>를 반환합니다.</p>
+**`in` 연산자**는 명시된 속성이 명시된 객체에 존재하면 `true`를 반환합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox"><em>속성</em> in <em>객체명</em></pre>
+```js
+    속성 in 객체명
+```
 
-<h3 id="인자">인자</h3>
+### 인자
 
-<dl>
- <dt><code>속성</code></dt>
- <dd>속성의 이름이나 배열의 인덱스를 뜻하는 문자열 또는 수 값입니다.</dd>
-</dl>
+- `속성`
+  - : 속성의 이름이나 배열의 인덱스를 뜻하는 문자열 또는 수 값입니다.
+- `객체명`
+  - : 객체의 이름입니다.
 
-<dl>
- <dt><code>객체명</code></dt>
- <dd>객체의 이름입니다.</dd>
-</dl>
+## 설명
 
-<h2 id="설명">설명</h2>
+다음 예제들은 `in` 연산자의 용도를 보여 줍니다.
 
-<p> 다음 예제들은 <code>in</code> 연산자의 용도를 보여 줍니다.</p>
-
-<pre class="brush:js">// 배열
+```js
+// 배열
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 0 in trees         // true를 반환합니다.
 3 in trees         // true를 반환합니다.
@@ -52,62 +50,65 @@ var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
 "company" in myCar // true를 반환합니다.
 "model" in myCar   // true를 반환합니다.
-</pre>
+```
 
-<p> 당신은 반드시 <code>in</code> 연산자의 오른쪽에 객체를 명시하여야 합니다. 예컨대 당신은 <code>String</code> 생성자로 만들어진 문자열을 명시할 수 있지만 문자열 리터럴은 명시할 수 없습니다.</p>
+당신은 반드시 `in` 연산자의 오른쪽에 객체를 명시하여야 합니다. 예컨대 당신은 `String` 생성자로 만들어진 문자열을 명시할 수 있지만 문자열 리터럴은 명시할 수 없습니다.
 
-<pre class="brush:js">var color1 = new String("green");
+```js
+var color1 = new String("green");
 "length" in color1 // true를 반환합니다.
 
 var color2 = "coral";
 "length" in color2 // color2는 String 객체가 아니기에 오류를 냅니다.
-</pre>
+```
 
-<h3 id="제거되었거나_정의되지_않은_속성에_대하여_in_연산자_사용하기">제거되었거나 정의되지 않은 속성에 대하여 <code>in</code> 연산자 사용하기</h3>
+### 제거되었거나 정의되지 않은 속성에 대하여 `in` 연산자 사용하기
 
-<p> <code>in</code> 연산자는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 연산자로 제거된 속성에 대하여 <code>false</code>를 반환합니다.</p>
+`in` 연산자는 [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete") 연산자로 제거된 속성에 대하여 `false`를 반환합니다.
 
-<pre class="brush:js">var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
+```js
+var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
 delete myCar.company;
 "company" in myCar; // false를 반환합니다.
 
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 delete trees[3];
 3 in trees; // false를 반환합니다.
-</pre>
+```
 
-<p> 만약 당신이 속성을 {{jsxref("Global_Objects/undefined", "undefined")}}로 설정하였는데 그것을 제거하지 않으면, <code>in</code> 연산자는 그 속성에 대하여 <code>true</code>를 반환합니다.</p>
+만약 당신이 속성을 {{jsxref("Global_Objects/undefined", "undefined")}}로 설정하였는데 그것을 제거하지 않으면, `in` 연산자는 그 속성에 대하여 `true`를 반환합니다.
 
-<pre class="brush:js">var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
+```js
+var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
 myCar.company = undefined;
 "company" in myCar; // true를 반환합니다.
-</pre>
+```
 
-<pre class="brush:js">var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
+```js
+var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
 trees[3] = undefined;
 3 in trees; // true를 반환합니다.
-</pre>
+```
 
-<h3 id="상속된_속성">상속된 속성</h3>
+### 상속된 속성
 
-<p> <code>in</code> 연산자는 프로토타입 체인에 의하여 접근할 수 있는 속성에 대하여 <code>true</code>를 반환합니다.</p>
+`in` 연산자는 프로토타입 체인에 의하여 접근할 수 있는 속성에 대하여 `true`를 반환합니다.
 
-<pre class="brush:js">"toString" in {}; // true를 반환합니다.
-</pre>
+```js
+"toString" in {}; // true를 반환합니다.
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="관련_문서">관련 문서</h2>
+## 관련 문서
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code></li>
- <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
- <li>{{jsxref("Reflect.has()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="/en-US/docs/Enumerability_and_ownership_of_properties">속성의, 소유와 셀 수 있는 성질</a></li>
-</ul>
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete")
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Reflect.has()")}}
+- [속성의, 소유와 셀 수 있는 성질](/en-US/docs/Enumerability_and_ownership_of_properties "/en-US/docs/Enumerability_and_ownership_of_properties")

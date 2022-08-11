@@ -6,66 +6,65 @@ tags:
   - Language feature
   - Operator
   - Reference
-browser-compat: javascript.operators.addition
 translation_of: Web/JavaScript/Reference/Operators/Addition
+browser-compat: javascript.operators.addition
 ---
+{{jsSidebar("Operators")}}
 
-<div>{{jsSidebar("Operators")}}</div>
+더하기 연산자(`+`)는 숫자 피연산자의 합을 구하거나, 문자열을 서로 연결합니다.
 
-<p>더하기 연산자(<code>+</code>)는 숫자 피연산자의 합을 구하거나, 문자열을 서로 연결합니다.</p>
+{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}</div>
+## 구문
 
-<h2 id="syntax">구문</h2>
+```js
+x + y
+```
 
-<pre class="brush: js">x + y</pre>
+## 예제
 
-<h2 id="examples">예제</h2>
+### 덧셈
 
-<h3 id="numeric_addition">덧셈</h3>
-
-<pre class="brush: js">
-// Number + Number -&gt; 덧셈
+```js
+// Number + Number -> 덧셈
 1 + 2 // 3
-  
-// Boolean + Number -&gt; 덧셈
+
+// Boolean + Number -> 덧셈
 true + 1 // 2
 
-// Boolean + Boolean -&gt; 덧셈
-false + false // 0</pre>
+// Boolean + Boolean -> 덧셈
+false + false // 0
+```
 
-<h3 id="string_concatenation">문자열 연결</h3>
+### 문자열 연결
 
-<pre class="brush: js">
-// String + String -&gt; 연결
+```js
+// String + String -> 연결
 'foo' + 'bar' // "foobar"
 
-// Number + String -&gt; 연결
+// Number + String -> 연결
 5 + 'foo' // "5foo"
 
-// String + Boolean -&gt; 연결
-'foo' + false // "foofalse"</pre>
+// String + Boolean -> 연결
+'foo' + false // "foofalse"
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Subtraction">빼기 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Division">나누기 연산자</a></li>
-  <li><a
-      href="/ko/docs/Web/JavaScript/Reference/Operators/Multiplication">곱하기 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지 연산자</a></li>
-  <li><a
-      href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Increment">증가 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement">감소 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation">단항 부정 연산자</a></li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus">단항 플러스 연산자</a></li>
-</ul>
+- [빼기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [나누기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Division)
+- [곱하기 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [나머지 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [거듭제곱 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [증가 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Increment)
+- [감소 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [단항 부정 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [단항 플러스 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus)

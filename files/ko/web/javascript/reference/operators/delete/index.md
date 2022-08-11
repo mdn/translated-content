@@ -6,66 +6,63 @@ tags:
   - Operator
   - Property
   - Reference
-browser-compat: javascript.operators.delete
 translation_of: Web/JavaScript/Reference/Operators/delete
+browser-compat: javascript.operators.delete
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>delete</code></strong> <strong>연산자</strong>는 객체의 속성을 제거합니다. 제거한 객체의 참조를 어디에서도 사용하지 않는다면 나중에 자원을 회수합니다.</p>
+**`delete`** **연산자**는 객체의 속성을 제거합니다. 제거한 객체의 참조를 어디에서도 사용하지 않는다면 나중에 자원을 회수합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
+## 구문
 
+```js
+    delete expression
+```
 
-<h2 id="구문">구문</h2>
+`expression`은 속성 참조여야 합니다. 예컨대,
 
-<pre class="syntaxbox">delete <em>expression</em> </pre>
+```js
+    delete object.property
+    delete object['property']
+```
 
-<p><code>expression</code>은 속성 참조여야 합니다. 예컨대,</p>
+### 매개변수
 
-<pre class="syntaxbox">delete <em>object.property</em>
-delete <em>object</em>['<em>property</em>']
-</pre>
+- `object`
+  - : 객체의 이름, 또는 평가했을 때 객체를 반환하는 표현식.
+- `property`
+  - : 제거하려는 속성.
 
-<h3 id="매개변수">매개변수</h3>
+### 반환 값
 
-<dl>
- <dt><code>object</code></dt>
- <dd>객체의 이름, 또는 평가했을 때 객체를 반환하는 표현식.</dd>
- <dt><code>property</code></dt>
- <dd>제거하려는 속성.</dd>
-</dl>
+`true`. 단, 비엄격 모드에서 속성이 {{jsxref("Object.prototype.hasOwnProperty", "자신의 속성", "", 0)}}이며 [설정 불가능](/ko/docs/Web/JavaScript/Reference/Errors/Cant_delete)한 경우 `false`.
 
-<h3 id="반환_값">반환 값</h3>
+### 예외
 
-<p><code>true</code>. 단, 비엄격 모드에서 속성이 {{jsxref("Object.prototype.hasOwnProperty", "자신의 속성", "", 0)}}이며 <a href="/ko/docs/Web/JavaScript/Reference/Errors/Cant_delete">설정 불가능</a>한 경우 <code>false</code>.</p>
+엄격 모드에서, 속성이 자신의 속성이며 설정 불가능한 경우 {{jsxref("TypeError")}}.
 
-<h3 id="예외">예외</h3>
+## 설명
 
-<p>엄격 모드에서, 속성이 자신의 속성이며 설정 불가능한 경우 {{jsxref("TypeError")}}.</p>
+일반적으로 생각하고 있는것과는 다르게 `delete` 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 [memory management](/en-US/docs/Web/JavaScript/Memory_Management) 를 보세요.
 
-<h2 id="설명">설명</h2>
+**`delete`**연산자는 오브젝트로 부터 해당 프로퍼티를 삭제합니다. 삭제를 하면 true를 반환, 아니면 false를 반환합니다. 그렇지만 아래 경우를 고려해야만 합니다.
 
-<p>일반적으로 생각하고 있는것과는 다르게 <code>delete</code> 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 <a href="/en-US/docs/Web/JavaScript/Memory_Management">memory management</a> 를 보세요.</p>
+- 만약 존재하지 않는 속성을 삭제하려고 하면 delete는 어떠한 작업도 없이 true를 반환합니다.
+- 오브젝트의 프로토타입 체인에 같은 이름의 속성이 있다면, 삭제 후에, 오브젝트의 프로토타입체인을 통해 프로퍼티를 사용 할 수 있습니다. (즉, `delete`는 오직 자신의 프로퍼티만 삭제 합니다.
+- {{jsxref("Statements/var","var")}}로 선언된 어떠한 프로퍼티라도 글로벌 스코프나 펑션 스코프로부터 삭제될 수 없습니다.
 
-<p><code><strong>delete</strong></code>연산자는 오브젝트로 부터 해당 프로퍼티를 삭제합니다. 삭제를 하면 true를 반환, 아니면 false를 반환합니다. 그렇지만 아래 경우를 고려해야만 합니다. </p>
+  - 결국, `delete`는 글로벌 스코프의 어떤 함수도 삭제 할 수 없습니다. (함수 정의식이건 함수 표현식이건 삭제 불가)
+  - 오브젝트의 속성으로 있는 함수인 경우(글로벌 스코프를 제외하고)는 `delete`로 삭제할 수 있습니다.
 
-<ul>
- <li>만약 존재하지 않는 속성을 삭제하려고 하면 delete는 어떠한 작업도 없이 true를 반환합니다.</li>
- <li>오브젝트의 프로토타입 체인에 같은 이름의 속성이 있다면, 삭제 후에,  오브젝트의 프로토타입체인을 통해 프로퍼티를 사용 할 수 있습니다. (즉, <code>delete</code>는 오직 자신의 프로퍼티만 삭제 합니다.</li>
- <li>{{jsxref("Statements/var","var")}}로 선언된 어떠한 프로퍼티라도 글로벌 스코프나 펑션 스코프로부터 삭제될 수 없습니다.
-  <ul>
-   <li>결국, <code>delete</code>는 글로벌 스코프의 어떤 함수도 삭제 할 수 없습니다. (함수 정의식이건 함수 표현식이건 삭제 불가)</li>
-   <li>오브젝트의 속성으로 있는 함수인 경우(글로벌 스코프를 제외하고)는 <code>delete</code>로 삭제할 수 있습니다.</li>
-  </ul>
- </li>
- <li>{{jsxref("Statements/let","let")}}과 {{jsxref("Statements/const","const")}}로 선언한 속성은 어느 스코프에 정의되어 있건 삭제 할 수 없습니다.</li>
- <li>Non-configurable 속성은 삭제 할 수 없습니다. 이것은  {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}}와 같은 built-in objects의 속성들이나 {{jsxref("Object.defineProperty()")}} 같은 메소드로 만든 non-configurable속성들을 포함합니다.</li>
-</ul>
+- {{jsxref("Statements/let","let")}}과 {{jsxref("Statements/const","const")}}로 선언한 속성은 어느 스코프에 정의되어 있건 삭제 할 수 없습니다.
+- Non-configurable 속성은 삭제 할 수 없습니다. 이것은 {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}}와 같은 built-in objects의 속성들이나 {{jsxref("Object.defineProperty()")}} 같은 메소드로 만든 non-configurable속성들을 포함합니다.
 
-<p>간단한 예제입니다.</p>
+간단한 예제입니다.
 
-<pre class="brush: js">var Employee = {
+```js
+var Employee = {
   age: 28,
   name: 'abc',
   designation: 'developer'
@@ -77,21 +74,23 @@ console.log(delete Employee.age);    // returns true
 // 존재하지 않는 속성을 삭제하려하면
 // true를 리턴합니다.
 console.log(delete Employee.salary); // returns true
-</pre>
+```
 
-<h3 id="설정_불가능한_속성">설정 불가능한 속성</h3>
+### 설정 불가능한 속성
 
-<p>non-configurable 속성은 <code>delete</code>로 삭제할 수 없으며, <code>false</code>를 반환할 것입니다(*strict mode에서는 <code>SyntaxError</code>를 발생시킴).</p>
+non-configurable 속성은 `delete`로 삭제할 수 없으며, `false`를 반환할 것입니다(\*strict mode에서는 `SyntaxError`를 발생시킴).
 
-<pre class="brush: js">var Employee = {};
+```js
+var Employee = {};
 Object.defineProperty(Employee, 'name', {configurable: false});
 
 console.log(delete Employee.name);  // returns false
-</pre>
+```
 
-<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, {{jsxref("Statements/const","const")}}로 선언된 변수는 non-configurable 속성으로 구분되며, <code>delete</code>로 삭제될 수 없습니다.</p>
+{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, {{jsxref("Statements/const","const")}}로 선언된 변수는 non-configurable 속성으로 구분되며, `delete`로 삭제될 수 없습니다.
 
-<pre class="brush: js">var nameOther = 'XYZ';
+```js
+var nameOther = 'XYZ';
 
 // 우리는 이를 사용해 글로벌 속성에 접근 할 수 있습니다:
 Object.getOwnPropertyDescriptor(window, 'nameOther');
@@ -99,32 +98,35 @@ Object.getOwnPropertyDescriptor(window, 'nameOther');
 // output: Object { value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
-//                  <strong>configurable: false </strong>}
+//                  configurable: false }
 
 // "nameOther"은 var로 선언되었기 때문에
 // 이는 "non-configurable" 속성으로 구분됩니다.
 
-delete nameOther;   // return false</pre>
+delete nameOther;   // return false
+```
 
-<p>strict mode, this would have raised an exception.</p>
+strict mode, this would have raised an exception.
 
-<h3 id="엄격_vs._비엄격_모드">엄격 vs. 비엄격 모드</h3>
+### 엄격 vs. 비엄격 모드
 
-<p>엄격 모드에서 <code>delete</code>로 변수나 함수를 삭제하려고 하면 {{jsxref("SyntaxError")}}가 발생합니다. </p>
+엄격 모드에서 `delete`로 변수나 함수를 삭제하려고 하면 {{jsxref("SyntaxError")}}가 발생합니다.
 
-<p><code>var</code>로 정의된 변수는 non-configurable로 구분됩니다. 다음 예제에서, <code>salary</code>는 non-configurable이며 삭제될 수 없습니다. non-strict mode에서 non-configurable에 <code>delete</code>를 쓰면 <code>false</code>를 반환합니다.</p>
+`var`로 정의된 변수는 non-configurable로 구분됩니다. 다음 예제에서, `salary`는 non-configurable이며 삭제될 수 없습니다. non-strict mode에서 non-configurable에 `delete`를 쓰면 `false`를 반환합니다.
 
-<pre class="brush: js">function Employee() {
+```js
+function Employee() {
   delete salary;
   var salary;
 }
 
 Employee();
-</pre>
+```
 
-<p>그러나 strict mode에서는 <code>false</code>를 반환하는 대신, <code>SyntaxError</code>를 발생시킵니다.</p>
+그러나 strict mode에서는 `false`를 반환하는 대신, `SyntaxError`를 발생시킵니다.
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 
 function Employee() {
   delete salary;  // SyntaxError
@@ -139,11 +141,12 @@ function DemoFunction() {
 }
 
 delete DemoFunction; // SyntaxError
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">// 전역스코프에 adminName라는 프로퍼티를 만듭니다.
+```js
+// 전역스코프에 adminName라는 프로퍼티를 만듭니다.
 adminName = 'xyz';
 
 // 전역스코프에 empCount라는 프로퍼티를 만듭니다.
@@ -183,13 +186,15 @@ function f() {
 
   // 지역변수에는 delete가 영향을 미치지 않습니다.
   delete z;     // returns false
-}</pre>
+}
+```
 
-<h3 id="delete와_프로토타입_체인"><code>delete</code>와 프로토타입 체인</h3>
+### `delete`와 프로토타입 체인
 
-<p>In the following example, we delete an own property of an object while a property with the same name is available on the prototype chain:</p>
+In the following example, we delete an own property of an object while a property with the same name is available on the prototype chain:
 
-<pre class="brush: js">function Foo() {
+```js
+function Foo() {
   this.bar = 10;
 }
 
@@ -210,46 +215,49 @@ delete Foo.prototype.bar;
 
 // logs "undefined" since the property
 // is no longer inherited
-console.log(foo.bar);           </pre>
+console.log(foo.bar);
+```
 
-<h3 id="객체_요소_제거하기">객체 요소 제거하기</h3>
+### 객체 요소 제거하기
 
-<p>When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array.</p>
+When you delete an array element, the array length is not affected. This holds even if you delete the last element of the array.
 
-<p>When the <code>delete</code> operator removes an array element, that element is no longer in the array. In the following example, <code>trees[3]</code> is removed with <code>delete</code>.</p>
+When the `delete` operator removes an array element, that element is no longer in the array. In the following example, `trees[3]` is removed with `delete`.
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
 if (3 in trees) {
     // this does not get executed
-}</pre>
+}
+```
 
-<p>If you want an array element to exist but have an undefined value, use the <code>undefined</code> value instead of the <code>delete</code> operator. In the following example, <code>trees[3]</code> is assigned the value undefined, but the array element still exists:</p>
+If you want an array element to exist but have an undefined value, use the `undefined` value instead of the `delete` operator. In the following example, `trees[3]` is assigned the value undefined, but the array element still exists:
 
-<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
 if (3 in trees) {
     // this gets executed
-}</pre>
+}
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="크로스_브라우저_참고사항">크로스 브라우저 참고사항</h2>
+## 크로스 브라우저 참고사항
 
-<p>Although ECMAScript makes iteration order of objects implementation-dependent, it may appear that all major browsers support an iteration order based on the earliest added property coming first (at least for properties not on the prototype). However, in the case of Internet Explorer, when one uses <code>delete</code> on a property, some confusing behavior results, preventing other browsers from using simple objects like object literals as ordered associative arrays. In Explorer, while the property <em>value</em> is indeed set to undefined, if one later adds back a property with the same name, the property will be iterated in its <em>old</em> position--not at the end of the iteration sequence as one might expect after having deleted the property and then added it back.</p>
+Although ECMAScript makes iteration order of objects implementation-dependent, it may appear that all major browsers support an iteration order based on the earliest added property coming first (at least for properties not on the prototype). However, in the case of Internet Explorer, when one uses `delete` on a property, some confusing behavior results, preventing other browsers from using simple objects like object literals as ordered associative arrays. In Explorer, while the property _value_ is indeed set to undefined, if one later adds back a property with the same name, the property will be iterated in its _old_ position--not at the end of the iteration sequence as one might expect after having deleted the property and then added it back.
 
-<p>If you want to use an ordered associative array in a cross-browser environment, use a {{jsxref("Map")}} object if available, or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.</p>
+If you want to use an ordered associative array in a cross-browser environment, use a {{jsxref("Map")}} object if available, or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="http://perfectionkills.com/understanding-delete/">In depth analysis on delete</a></li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
- <li>{{jsxref("Map.prototype.delete()")}}</li>
-</ul>
+- [In depth analysis on delete](http://perfectionkills.com/understanding-delete/)
+- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxref("Map.prototype.delete()")}}

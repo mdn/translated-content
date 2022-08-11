@@ -7,46 +7,43 @@ tags:
   - Language feature
   - Operator
   - Reference
-browser-compat: javascript.operators.remainder_assignment
 translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
+browser-compat: javascript.operators.remainder_assignment
 ---
+{{jsSidebar("Operators")}}
 
-<div>{{jsSidebar("Operators")}}</div>
+나머지 할당 연산자(`%=`)는 오른쪽 피연산자의 값으로 변수를 나눴을 때의 나머지를 다시 변수에 할당합니다.
 
-<p>나머지 할당 연산자(<code>%=</code>)는 오른쪽 피연산자의 값으로 변수를 나눴을 때의 나머지를 다시 변수에 할당합니다.</p>
+{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}</div>
+## 구문
 
-<h2 id="syntax">구문</h2>
+```js
+x %= y // x = x % y
+```
 
-<pre class="brush: js">x %= y // x = x % y</pre>
+## 예제
 
-<h2 id="examples">예제</h2>
+### 나머지 할당 사용하기
 
-<h3 id="using_subtraction_assignment">나머지 할당 사용하기</h3>
-
-<pre class="brush: js">
+```js
 // bar = 5
 // 위와 같은 변수를 가정할 때
 
 bar %= 2     // 1
 bar %= 'foo' // NaN
 bar %= 0     // NaN
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>
-    <a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자">JavaScript 안내서의 할당 연산자</a>
-  </li>
-  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지 연산자</a></li>
-</ul>
+- [JavaScript 안내서의 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)
+- [나머지 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Remainder)

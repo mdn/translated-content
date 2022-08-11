@@ -8,35 +8,37 @@ tags:
   - Unary
 translation_of: Web/JavaScript/Reference/Operators/void
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong><code>void</code> 연산자</strong>는 주어진 표현식을 평가하고 {{jsxref("undefined")}}를 반환합니다.</p>
+**`void` 연산자**는 주어진 표현식을 평가하고 {{jsxref("undefined")}}를 반환합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
 
+## 구문
 
+```js
+    void expression
+```
 
-<h2 id="구문">구문</h2>
+## 설명
 
-<pre class="syntaxbox">void <em>expression</em></pre>
+`void`는 값을 생성하는 표현식을 평가해서 {{jsxref("undefined")}}를 반환합니다.
 
-<h2 id="설명">설명</h2>
+오직 `undefined` 원시값을 얻기 위해 `void 0` 또는 `void(0)`처럼 사용하는 경우도 볼 수 있습니다. 이런 경우 전역 {{jsxref("undefined")}}를 대신 사용해도 됩니다.
 
-<p><code>void</code>는 값을 생성하는 표현식을 평가해서 {{jsxref("undefined")}}를 반환합니다.</p>
+`void` 연산자의 [우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)도 유념해야 합니다. [그룹 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Grouping)(괄호)를 사용하면 `void` 연산자를 사용한 식의 평가 과정을 더 명확하게 보일 수 있습니다.
 
-<p>오직 <code>undefined</code> 원시값을 얻기 위해 <code>void 0</code> 또는 <code>void(0)</code>처럼 사용하는 경우도 볼 수 있습니다. 이런 경우 전역 {{jsxref("undefined")}}를 대신 사용해도 됩니다.</p>
-
-<p><code>void</code> 연산자의 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">우선순위</a>도 유념해야 합니다. <a href="/ko/docs/Web/JavaScript/Reference/Operators/Grouping">그룹 연산자</a>(괄호)를 사용하면 <code>void</code> 연산자를 사용한 식의 평가 과정을 더 명확하게 보일 수 있습니다.</p>
-
-<pre class="brush: js">void 2 == '2'; // undefined == '2', false
+```js
+void 2 == '2'; // undefined == '2', false
 void (2 == '2'); // void true, undefined
-</pre>
+```
 
-<h2 id="IIFE">IIFE</h2>
+## IIFE
 
-<p>즉시 실행 함수 표현식({{Glossary("IIFE")}})을 사용할 때 <code>void</code>를 사용하면 <code>function</code> 키워드를 선언문이 아니라 표현식처럼 간주하도록 강제할 수 있습니다.</p>
+즉시 실행 함수 표현식({{Glossary("IIFE")}})을 사용할 때 `void`를 사용하면 `function` 키워드를 선언문이 아니라 표현식처럼 간주하도록 강제할 수 있습니다.
 
-<pre class="brush: js">void function iife() {
+```js
+void function iife() {
     var bar = function () {};
     var baz = function () {};
     var foo = function () {
@@ -48,42 +50,41 @@ void (2 == '2'); // void true, undefined
     foo();
     biz();
 }();
-</pre>
+```
 
-<h2 id="JavaScript_URI">JavaScript URI</h2>
+## JavaScript URI
 
-<p><code>javascript:</code>로 시작하는 URI를 지원하는 브라우저에서는, URI에 있는 코드의 평가 결과가 {{jsxref("undefined")}}가 아니라면 페이지의 콘텐츠를 반환 값으로 대체합니다. <code>void</code> 연산자를 사용하면 <code>undefined</code>를 반환할 수 있습니다. 다음 예제를 확인하세요.</p>
+`javascript:`로 시작하는 URI를 지원하는 브라우저에서는, URI에 있는 코드의 평가 결과가 {{jsxref("undefined")}}가 아니라면 페이지의 콘텐츠를 반환 값으로 대체합니다. `void` 연산자를 사용하면 `undefined`를 반환할 수 있습니다. 다음 예제를 확인하세요.
 
-<pre class="brush: html">&lt;a href="javascript:void(0);"&gt;
+```html
+<a href="javascript:void(0);">
   클릭해도 아무 일도 없음
-&lt;/a&gt;
-&lt;a href="javascript:void(document.body.style.backgroundColor='green');"&gt;
+</a>
+<a href="javascript:void(document.body.style.backgroundColor='green');">
   클릭하면 배경색이 녹색으로
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<div class="blockIndicator note">
-<p><strong>참고</strong>: <code>javascript:</code> 의사 프로토콜보다 이벤트 처리기와 같은 대체재 사용을 권장합니다.</p>
-</div>
+<div class="blockIndicator note"><p><strong>참고</strong>: <code>javascript:</code> 의사 프로토콜보다 이벤트 처리기와 같은 대체재 사용을 권장합니다.</p></div>
 
-<h2 id="새지_않는_화살표_함수">새지 않는 화살표 함수</h2>
+## 새지 않는 화살표 함수
 
-<p>Arrow functions introduce a short-hand braceless syntax that returns an expression. This can cause unintended side effects by returning the result of a function call that previously returned nothing. To be safe, when the return value of a function is not intended to be used, it can be passed to the void operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.</p>
+Arrow functions introduce a short-hand braceless syntax that returns an expression. This can cause unintended side effects by returning the result of a function call that previously returned nothing. To be safe, when the return value of a function is not intended to be used, it can be passed to the void operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.
 
-<pre class="brush: js">button.onclick = () =&gt; void doSomething();</pre>
+```js
+button.onclick = () => void doSomething();
+```
 
-<p>This ensures the return value of <code>doSomething</code> changing from <code>undefined</code> to <code>true</code> will not change the behavior of this code.</p>
+This ensures the return value of `doSomething` changing from `undefined` to `true` will not change the behavior of this code.
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.operators.void")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("undefined")}}</li>
-</ul>
+- {{jsxref("undefined")}}

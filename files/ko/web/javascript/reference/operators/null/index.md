@@ -10,40 +10,40 @@ translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 browser-compat: javascript.builtins.null
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>
-  <strong><code>null</code></strong>은 JavaScript의 <a href="/ko/docs/Glossary/Primitive">원시 값</a> 중 하나로, 어떤 값이 의도적으로 비어있음을 표현하며 불리언
-   연산에서는 <a href="/ko/docs/Glossary/Falsy">거짓</a>으로 취급합니다.
-</p>
+**`null`**은 JavaScript의 [원시 값](/ko/docs/Glossary/Primitive) 중 하나로, 어떤 값이 의도적으로 비어있음을 표현하며 불리언
+연산에서는 [거짓](/ko/docs/Glossary/Falsy)으로 취급합니다.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
 
-<h2 id="Syntax">구문</h2>
+## 구문
 
-<pre class="brush: js">null</pre>
+```js
+null
+```
 
-<h2 id="Description">설명</h2>
+## 설명
 
-<p><code>null</code>은 리터럴로서 <code>null</code>이라 씁니다. <code>null</code>은
-  {{jsxref("Global_Objects/undefined","undefined")}}과 같이 글로벌 객체의 속성에 대한 식별자가 아닙니다. 대신 <code>null</code>은 식별되지 않은 것을
-  표현합니다. 즉, 변수가 아무런 객체를 가리키지 않음을 표현합니다. API에서는 <code>null</code>을 종종 관련된 객체가 존재하지 않을 때 그 객체 대신 사용합니다.
-</p>
+`null`은 리터럴로서 `null`이라 씁니다. `null`은
+{{jsxref("Global_Objects/undefined","undefined")}}과 같이 글로벌 객체의 속성에 대한 식별자가 아닙니다. 대신 `null`은 식별되지 않은 것을
+표현합니다. 즉, 변수가 아무런 객체를 가리키지 않음을 표현합니다. API에서는 `null`을 종종 관련된 객체가 존재하지 않을 때 그 객체 대신 사용합니다.
 
-<pre class="brush: js">// 정의되지 않고 초기화된 적도 없는 foo
+```js
+// 정의되지 않고 초기화된 적도 없는 foo
 foo; //ReferenceError: foo is not defined
 
 // 존재하지만 값이나 자료형이 존재하지 않는 foo
 var foo = null;
 foo; //null
-</pre>
+```
 
-<h3 id="Difference_between_null_and_undefined"><code>null</code>과 <code>undefined</code>의 차이</h3>
+### `null`과 `undefined`의 차이
 
-<p><code>null</code> 또는 <code>undefined</code>를 검사할 때, <a
-  href="/ko/docs/Web/JavaScript/Reference/Operators">동등 연산자(==)와 일치 연산자(===)의 차이</a>를 주의하세요. 동등 연산자는 자료형 변환을 수행합니다.</p>
+`null` 또는 `undefined`를 검사할 때, [동등 연산자(==)와 일치 연산자(===)의 차이](/ko/docs/Web/JavaScript/Reference/Operators)를 주의하세요. 동등 연산자는 자료형 변환을 수행합니다.
 
-<pre class="brush: js">typeof null          // "object" (하위호환 유지를 위해 "null"이 아님)
+```js
+typeof null          // "object" (하위호환 유지를 위해 "null"이 아님)
 typeof undefined     // "undefined"
 null === undefined   // false
 null  == undefined   // true
@@ -51,22 +51,19 @@ null === null        // true
 null == null         // true
 !null                // true
 isNaN(1 + null)      // false
-isNaN(1 + undefined) // true</pre>
+isNaN(1 + undefined) // true
+```
 
-<h2 id="Specifications">명세</h2>
+## 명세
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">같이 보기</h2>
+## 같이 보기
 
-<ul>
-  <li>{{jsxref("undefined")}}</li>
-  <li>{{jsxref("NaN")}}</li>
-  <li>
-    {{jsxref("Operators/void", "void")}} 연산자
-  </li>
-</ul>
+- {{jsxref("undefined")}}
+- {{jsxref("NaN")}}
+- {{jsxref("Operators/void", "void")}} 연산자
