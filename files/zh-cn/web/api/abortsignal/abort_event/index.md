@@ -18,6 +18,7 @@ onabort = (event) => { }
 ## 事件类型
 
 {{DOMxRef("Event")}} 泛型，无任何额外的属性。
+
 ## 示例
 
 在下面例子中，我们将创建一个新的 `AbortController` 对象，并获取它的 {{domxref("AbortSignal")}}（在 `signal` 属性中可用）。稍后，我们使用事件处理器属性检查信号是否被中止。
