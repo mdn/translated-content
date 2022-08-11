@@ -3,45 +3,28 @@ title: accent-height
 slug: Web/SVG/Attribute/accent-height
 translation_of: Web/SVG/Attribute/accent-height
 ---
-<p>« 回到 SVG 属性指南首页</p>
+« 回到 SVG 属性指南首页
 
-<p>此属性定义从原点到重点字符顶部的距离，通过字体坐标系内的距离测量。</p>
+此属性定义从原点到重点字符顶部的距离，通过字体坐标系内的距离测量。
 
-<p>若未定义该属性，那么该属性就会被设置为{{ SVGAttr("ascent") }}。</p>
+若未定义该属性，那么该属性就会被设置为{{ SVGAttr("ascent") }}。
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#Length">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | None                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| Value              | [<number>](/en/SVG/Content_type#Length)                                                           |
+| Animatable         | No                                                                                                |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/fonts.html#FontFaceElementAccentHeightAttribute) |
 
-<p>{{ page("/en-US/docs/SVG/Content_type","Number") }}</p>
+{{ page("/en-US/docs/SVG/Content_type","Number") }}
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>accent-height</code> attribute</p>
+The following elements can use the `accent-height` attribute
 
-<ul>
- <li>{{ SVGElement("font-face") }}</li>
-</ul>
+- {{ SVGElement("font-face") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

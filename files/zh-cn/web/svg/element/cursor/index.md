@@ -9,48 +9,41 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Element/cursor
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<div class="blockIndicator note"><strong>Note:</strong> 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
+> **备注：** 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
 
+`cursor`元素可以用来定义独立于平台的自定义指针。要想定义独立于平台的指针，建议先创建一个 PNG 图象，然后定义一个引用该 PNG 图像的`cursor`元素，并在图像内部标识指针头（亦即，热点）的精确位置。
 
-</div>
+建议使用 PNG 格式，因为它支持利用 alpha 通道定义透明并遮罩的能力。如果使用了别的图像格式，这个格式必须支持透明度遮罩的定义（两个选项：提供一个明确的 alpha 通道或者使用一个特殊的像素色以表示透明度）。如果能够确定透明度遮罩，遮罩确定了指针的形状；否则，指针将是一个不透明的矩形。通常地，别的像素信息（例如，R、G、B 通道）定义了指针没有被遮罩到的部分的颜色，注意指针一般至少包含两个颜色，这样在大多数背景中都能看到指针。
 
-<p><code>cursor</code>元素可以用来定义独立于平台的自定义指针。要想定义独立于平台的指针，建议先创建一个 PNG 图象，然后定义一个引用该 PNG 图像的<code>cursor</code>元素，并在图像内部标识指针头（亦即，热点）的精确位置。</p>
+## 用法
 
-<p>建议使用 PNG 格式，因为它支持利用 alpha 通道定义透明并遮罩的能力。如果使用了别的图像格式，这个格式必须支持透明度遮罩的定义（两个选项：提供一个明确的 alpha 通道或者使用一个特殊的像素色以表示透明度）。如果能够确定透明度遮罩，遮罩确定了指针的形状；否则，指针将是一个不透明的矩形。通常地，别的像素信息（例如，R、G、B 通道）定义了指针没有被遮罩到的部分的颜色，注意指针一般至少包含两个颜色，这样在大多数背景中都能看到指针。</p>
+{{SVGInfo}}
 
-<h2 id="用法">用法</h2>
+## 属性
 
-<p>{{SVGInfo}}</p>
+### 全局属性
 
-<h2 id="属性">属性</h2>
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#XLink) »
+- {{SVGAttr("externalResourcesRequired")}}
 
-<h3 id="全局属性">全局属性</h3>
+### 专有属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
-</ul>
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("xlink:href")}}
 
-<h3 id="专有属性">专有属性</h3>
+## DOM 接口
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+该元素实现了[`SVGCursorElement`](/en-US/docs/DOM/SVGCursorElement)接口。
 
-<h2 id="DOM_接口">DOM 接口</h2>
-
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGCursorElement">SVGCursorElement</a></code>接口。</p>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

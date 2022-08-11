@@ -8,68 +8,64 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/path
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><strong><a href="/en-US/docs/Web/SVG/Tutorial/Paths">起步</a></strong><br>
-本教程将教你开始使用 SVG 路径。</p>
+**[起步](/zh-CN/docs/Web/SVG/Tutorial/Paths)**
+本教程将教你开始使用 SVG 路径。
 
-<p>path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。</p>
+path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre><code>&lt;svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```plain
+<svg width="100%" height="100%" viewBox="0 0 400 400"
+     xmlns="http://www.w3.org/2000/svg">
 
-  &lt;path d="M 100 100 L 300 100 L 200 300 z"
-        fill="orange" stroke="black" stroke-width="3" /&gt;
-&lt;/svg&gt;</code></pre>
+  <path d="M 100 100 L 300 100 L 200 300 z"
+        fill="orange" stroke="black" stroke-width="3" />
+</svg>
+```
 
-<p>输出结果：</p>
+输出结果：
 
-<p>{{EmbedLiveSample("Example",200,215)}}</p>
+{{EmbedLiveSample("Example",200,215)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{SVGAttr("d")}}</li>
- <li>{{SVGAttr("pathLength")}}</li>
-</ul>
+- {{SVGAttr("d")}}
+- {{SVGAttr("pathLength")}}
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGPathElement">SVGPathElement</a></code>接口。</p>
+该元素实现了[`SVGPathElement`](/en-US/docs/DOM/SVGPathElement)接口。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.path")}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{SVGElement("circle")}}</li>
- <li>{{SVGElement("ellipse")}}</li>
- <li>{{SVGElement("line")}}</li>
- <li>{{SVGElement("polygon")}}</li>
- <li>{{SVGElement("polyline")}}</li>
- <li>{{SVGElement("rect")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Paths">The MDN SVG "Getting Started" tutorial : Path</a></li>
-</ul>
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("line")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- [The MDN SVG "Getting Started" tutorial : Path](/zh-CN/docs/Web/SVG/Tutorial/Paths)

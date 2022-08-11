@@ -3,65 +3,51 @@ title: max
 slug: Web/SVG/Attribute/max
 translation_of: Web/SVG/Attribute/max
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>max</code></strong> attribute specifies the maximum value of the active animation duration.</p>
+The **`max`** attribute specifies the maximum value of the active animation duration.
 
-<p>Five elements are using this attribute: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}</p>
+Five elements are using this attribute: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="60" cy="10" r="10"&gt;
-    &lt;animate attributeName="cx" dur="4s" max="6s" repeatCount="indefinite"
-        values="60 ; 110 ; 60 ; 10 ; 60" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/&gt;
-    &lt;animate attributeName="cy" dur="4s" max="6s" repeatCount="indefinite"
-        values="10 ; 60 ; 110 ; 60 ; 10" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="10" r="10">
+    <animate attributeName="cx" dur="4s" max="6s" repeatCount="indefinite"
+        values="60 ; 110 ; 60 ; 10 ; 60" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
+    <animate attributeName="cy" dur="4s" max="6s" repeatCount="indefinite"
+        values="10 ; 60 ; 110 ; 60 ; 10" keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"/>
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample("示例", "200", "200")}}</p>
+{{EmbedLiveSample("示例", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Clock-value">&lt;clock-value&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Value         | [`<clock-value>`](/en-US/docs/Web/SVG/Content_type#Clock-value) |
+| ------------- | --------------------------------------------------------------- |
+| Default value | _None_                                                          |
+| Animatable    | No                                                              |
 
-<dl>
- <dt><code>&lt;clock-value&gt;</code></dt>
- <dd>
- <p>Specifies the length of the maximum value of the active duration, measured in local time. The value must be greater than 0.</p>
- </dd>
-</dl>
+- `<clock-value>`
+  - : Specifies the length of the maximum value of the active duration, measured in local time. The value must be greater than 0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("min")}}</li>
-</ul>
+- {{SVGAttr("min")}}

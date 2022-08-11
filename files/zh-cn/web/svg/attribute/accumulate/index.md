@@ -8,55 +8,36 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/accumulate
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>该属性控制了动画是否是累加的。</p>
+该属性控制了动画是否是累加的。
 
-<p>在原来的结果的基础上重复动画的时候，它通常很有用，每一次循环都累加。这个属性告诉动画是否是每次循环，前一个动画属性值要加上去。</p>
+在原来的结果的基础上重复动画的时候，它通常很有用，每一次循环都累加。这个属性告诉动画是否是每次循环，前一个动画属性值要加上去。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画累加属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong>none</strong> | sum</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#AdditionAttributes">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 动画累加属性                                                                      |
+| -------- | --------------------------------------------------------------------------------- |
+| 值       | **none** \| sum                                                                   |
+| 可变性   | No                                                                                |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AdditionAttributes) |
 
-<dl>
- <dt>sum</dt>
- <dd>指定第一次循环后的每次循环建立在上次循环的终值上。</dd>
- <dt>none</dt>
- <dd>指定重复循环是不累加的。这是默认值。</dd>
-</dl>
+- sum
+  - : 指定第一次循环后的每次循环建立在上次循环的终值上。
+- none
+  - : 指定重复循环是不累加的。这是默认值。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用<code>additive</code>属性：</p>
+以下元素可以使用`additive`属性：
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("animateColor") }}</li>
- <li>{{ SVGElement("animateMotion") }}</li>
- <li>{{ SVGElement("animateTransform") }}</li>
-</ul>
+- {{ SVGElement("animate") }}
+- {{ SVGElement("animateColor") }}
+- {{ SVGElement("animateMotion") }}
+- {{ SVGElement("animateTransform") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

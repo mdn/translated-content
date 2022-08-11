@@ -8,70 +8,53 @@ tags:
   - svg style
 translation_of: Web/SVG/Attribute/style
 ---
-<p>« <a href="/en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
-<p><strong><code>style </code></strong>属性指定了指定其元素的样式信息。它的功能与 HTML 中的<a href="/zh-CN/docs/Web/HTML/Global_attributes/style">style</a>属性相同。</p>
+**`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的[style](/zh-CN/docs/Web/HTML/Global_attributes/style)属性相同。
 
-<h2 id="使用环境">使用环境</h2>
+## 使用环境
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>Presentation attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;style&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Categories | Presentation attribute |
+| ---------- | ---------------------- |
+| Value      | \<style>               |
+| Animatable | No                     |
 
-<dl>
- <dt>&lt;style&gt;</dt>
- <dd>样式数据的语法取决于样式表语言。默认情况下，如果未指定 {{ SVGAttr("contentStyleType") }}，样式表语言为 CSS。</dd>
-</dl>
+- \<style>
+  - : 样式数据的语法取决于样式表语言。默认情况下，如果未指定 {{ SVGAttr("contentStyleType") }}，样式表语言为 CSS。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下示例展示了使用 CSS 作为样式表语言来使用 style 属性，为一个矩形框添加样式。</p>
+以下示例展示了使用 CSS 作为样式表语言来使用 style 属性，为一个矩形框添加样式。
 
-<pre class="brush: html">&lt;svg version="1.1" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg version="1.1" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <rect height="300" width="600" x="200" y="100"
+     style="fill: red; stroke: blue; stroke-width: 3"/>
+</svg>
+```
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用 style 属性</p>
+以下元素可以使用 style 属性
 
-<ul>
- <li><a href="/en/SVG/Element#Container">Container elements</a> »</li>
- <li><a href="/en/SVG/Element#FilterPrimitive">Filter primitive elements</a> »</li>
- <li><a href="/en/SVG/Element#Gradient">Gradient elements</a> »</li>
- <li><a href="/en/SVG/Element#Graphics">Graphics elements</a> »</li>
- <li><a href="/en/SVG/Element#Structural">Structural elements</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">Text content elements</a> »</li>
- <li>{{ SVGElement("clipPath") }}</li>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("font") }}</li>
- <li>{{ SVGElement("foreignObject") }}</li>
- <li>{{ SVGElement("glyphRef") }}</li>
- <li>{{ SVGElement("stop") }}</li>
- <li>{{ SVGElement("glyph") }}</li>
-</ul>
+- [Container elements](/en/SVG/Element#Container) »
+- [Filter primitive elements](/en/SVG/Element#FilterPrimitive) »
+- [Gradient elements](/en/SVG/Element#Gradient) »
+- [Graphics elements](/en/SVG/Element#Graphics) »
+- [Structural elements](/en/SVG/Element#Structural) »
+- [Text content elements](/en/SVG/Element#TextContent) »
+- {{ SVGElement("clipPath") }}
+- {{ SVGElement("filter") }}
+- {{ SVGElement("font") }}
+- {{ SVGElement("foreignObject") }}
+- {{ SVGElement("glyphRef") }}
+- {{ SVGElement("stop") }}
+- {{ SVGElement("glyph") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关">相关</h2>
+## 相关
 
-<ul>
- <li>{{ SVGElement("style") }}</li>
-</ul>
+- {{ SVGElement("style") }}

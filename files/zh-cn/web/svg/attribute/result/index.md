@@ -7,39 +7,25 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/result
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>属性<code>result</code>定义了滤镜的分配名。如果提供了它，则经过滤镜处理的结果即图形可以再次滤镜处理，在后继滤镜（即另一个{{ SVGElement("filter") }}元素）上通过一个{{ SVGAttr("in") }}属性引用之前的结果。如果没有提供<code>result</code>值，而且如果下一个滤镜也没有提供{{ SVGAttr("in") }}属性值，则输出只可作为下一个滤镜的隐式输入。</p>
+属性`result`定义了滤镜的分配名。如果提供了它，则经过滤镜处理的结果即图形可以再次滤镜处理，在后继滤镜（即另一个{{ SVGElement("filter") }}元素）上通过一个{{ SVGAttr("in") }}属性引用之前的结果。如果没有提供`result`值，而且如果下一个滤镜也没有提供{{ SVGAttr("in") }}属性值，则输出只可作为下一个滤镜的隐式输入。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;filter-primitive-reference&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 无                           |
+| ------ | ---------------------------- |
+| 值     | <filter-primitive-reference> |
+| 可变性 | Yes                          |
 
-<p>注意<code>&lt;filter-primitive-reference&gt;</code>不是一个 XML ID，换句话说，<code>&lt;filter-primitive-reference&gt;</code>只在给定的{{ SVGElement("filter") }}元素内部有意义，因此只有局部范围。在同一个{{ SVGElement("filter") }}元素内部，同一个<code>&lt;filter-primitive-reference&gt;</code>出现多次也是合法的。如果引用了，<code>&lt;filter-primitive-reference&gt;</code>将使用在给定结果前面、离给定结果最近的滤镜。</p>
+注意`<filter-primitive-reference>`不是一个 XML ID，换句话说，`<filter-primitive-reference>`只在给定的{{ SVGElement("filter") }}元素内部有意义，因此只有局部范围。在同一个{{ SVGElement("filter") }}元素内部，同一个`<filter-primitive-reference>`出现多次也是合法的。如果引用了，`<filter-primitive-reference>`将使用在给定结果前面、离给定结果最近的滤镜。
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>result</code>属性：</p>
+下列元素可以使用`result`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#FilterPrimitive">滤镜元素</a> »</li>
-</ul>
+- [滤镜元素](/en/SVG/Element#FilterPrimitive) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

@@ -9,43 +9,29 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/scale
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>属性<code>scale</code>定义了用在{{SVGElement("feDisplacementMap")}}滤镜上的置换缩放因子。它的总值表达在{{SVGElement("filter")}}元素的属性{{SVGAttr("primitiveUnits")}}确定的坐标系统中。</p>
+属性`scale`定义了用在{{SVGElement("feDisplacementMap")}}滤镜上的置换缩放因子。它的总值表达在{{SVGElement("filter")}}元素的属性{{SVGAttr("primitiveUnits")}}确定的坐标系统中。
 
-<p>如果这个属性的值是<strong>0</strong>，则它的操作对源图像没有影响。</p>
+如果这个属性的值是**0**，则它的操作对源图像没有影响。
 
-<p>如果没有指定这个属性，则效果等同于它被指定了<strong>0</strong>值。</p>
+如果没有指定这个属性，则效果等同于它被指定了**0**值。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td><em>无</em></td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Number">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | _无_                                    |
+| ------ | --------------------------------------- |
+| 值     | [<number>](/en/SVG/Content_type#Number) |
+| 可变性 | Yes                                     |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>scale</code>属性：</p>
+下列元素可以使用`scale`属性：
 
-<ul>
- <li>{{ SVGElement("feDisplacementMap") }}</li>
-</ul>
+- {{ SVGElement("feDisplacementMap") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

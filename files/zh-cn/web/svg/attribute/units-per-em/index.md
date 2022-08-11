@@ -3,44 +3,28 @@ title: units-per-em
 slug: Web/SVG/Attribute/units-per-em
 translation_of: Web/SVG/Attribute/units-per-em
 ---
-<div>{{SVGRef}}{{deprecated_header("SVG 2")}}</div>
+{{SVGRef}}{{deprecated_header("SVG 2")}}
 
-<p>The <strong><code>units-per-em</code></strong> attribute specifies the number of coordinate units on the "em square", an abstract square whose height is the intended distance between lines of type in the same type size. This is the size of the design grid on which {{Glossary("glyph", "glyphs")}} are laid out.</p>
+The **`units-per-em`** attribute specifies the number of coordinate units on the "em square", an abstract square whose height is the intended distance between lines of type in the same type size. This is the size of the design grid on which {{Glossary("glyph", "glyphs")}} are laid out.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> This value is almost always necessary as nearly every other attribute requires the definition of a design grid.</p>
-</div>
+> **备注：** This value is almost always necessary as nearly every other attribute requires the definition of a design grid.
 
-<p>Only one element is using this attribute: {{SVGElement("font-face")}}</p>
+Only one element is using this attribute: {{SVGElement("font-face")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1000</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
-</table>
+| Value         | [`<number>`](/en-US/docs/Web/SVG/Content_type#Number) |
+| ------------- | ----------------------------------------------------- |
+| Default value | `1000`                                                |
+| Animatable    | No                                                    |
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value indicates the the number of coordinate units on the em square.</dd>
-</dl>
+- `<number>`
+  - : This value indicates the the number of coordinate units on the em square.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

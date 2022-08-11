@@ -9,41 +9,27 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/seed
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>seed</code>属性代表了{{SVGElement("feTurbulence")}}元素生成的伪随机数的开始数字。</p>
+`seed`属性代表了{{SVGElement("feTurbulence")}}元素生成的伪随机数的开始数字。
 
-<p>如果没有指定这个属性，它等效于指定了一个<code>0</code>值。</p>
+如果没有指定这个属性，它等效于指定了一个`0`值。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en-US/docs/SVG/Content_type#Number">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | _None_                                          |
+| ------ | ----------------------------------------------- |
+| 值     | [<number>](/zh-CN/docs/SVG/Content_type#Number) |
+| 可变性 | Yes                                             |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用<code>seed</code>属性：</p>
+以下元素可以使用`seed`属性：
 
-<ul>
- <li>{{ SVGElement("feTurbulence") }}</li>
-</ul>
+- {{ SVGElement("feTurbulence") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

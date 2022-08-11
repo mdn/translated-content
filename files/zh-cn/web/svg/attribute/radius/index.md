@@ -9,41 +9,27 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/radius
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>radius</code>属性代表了一个给定{{SVGElement("feMorphology")}}滤镜上的操作。如果提供了两个<a href="/en/SVG/Content_type#Number">&lt;number&gt;</a>，则第一个数代表了 x-radius，第二个数代表了 y-radius。如果只提供了一个数字，则值同时用于 x 和 y。值是在{{SVGElement("filter")}} 元素的属性{{SVGAttr("primitiveUnits")}} 确定的坐标系统内。</p>
+`radius`属性代表了一个给定{{SVGElement("feMorphology")}}滤镜上的操作。如果提供了两个[\<number>](/en/SVG/Content_type#Number)，则第一个数代表了 x-radius，第二个数代表了 y-radius。如果只提供了一个数字，则值同时用于 x 和 y。值是在{{SVGElement("filter")}} 元素的属性{{SVGAttr("primitiveUnits")}} 确定的坐标系统内。
 
-<p>如果没有指定该属性值，效果等同于指定了一个<strong>0</strong>值。</p>
+如果没有指定该属性值，效果等同于指定了一个**0**值。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td><em>无</em></td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Number-optional-number">&lt;number-optional-number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | _无_                                                                    |
+| ------ | ----------------------------------------------------------------------- |
+| 值     | [<number-optional-number>](/en/SVG/Content_type#Number-optional-number) |
+| 可变性 | Yes                                                                     |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用<code>radius</code>属性：</p>
+以下元素可以使用`radius`属性：
 
-<ul>
- <li>{{ SVGElement("feMorphology") }}</li>
-</ul>
+- {{ SVGElement("feMorphology") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

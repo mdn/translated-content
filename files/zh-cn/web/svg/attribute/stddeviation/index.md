@@ -7,45 +7,31 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/stdDeviation
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>stdDeviation</code> 属性定义了模糊操作的标准差。如果列出两个 <a href="/en-US/docs/SVG/Content_type#Number">&lt;number&gt;</a>，第一个数字表示沿着 x 轴的标准差值，第二个值表示沿着 y 轴的标准差值。如果只出现一个数字，那个值就表示在 x 轴和 y 轴上有着相同的标准差。</p>
+`stdDeviation` 属性定义了模糊操作的标准差。如果列出两个 [\<number>](/zh-CN/docs/SVG/Content_type#Number)，第一个数字表示沿着 x 轴的标准差值，第二个值表示沿着 y 轴的标准差值。如果只出现一个数字，那个值就表示在 x 轴和 y 轴上有着相同的标准差。
 
-<p>负值是不允许的。设为零即禁用了已有滤镜的原本效果（比如，结果是滤镜输入图像）。如果 <code>stdDeviation</code> 在 x 轴和 y 轴上只有一个为 0，那么模糊效果就只会应用于非 0 的那个方向。</p>
+负值是不允许的。设为零即禁用了已有滤镜的原本效果（比如，结果是滤镜输入图像）。如果 `stdDeviation` 在 x 轴和 y 轴上只有一个为 0，那么模糊效果就只会应用于非 0 的那个方向。
 
-<p>如果此属性没被定义，就与标准差值被定义为 0 的效果一样。</p>
+如果此属性没被定义，就与标准差值被定义为 0 的效果一样。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en-US/docs/SVG/Content_type#Number-optional-number">&lt;number-optional-number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | None                                                                            |
+| ------ | ------------------------------------------------------------------------------- |
+| 值     | [<number-optional-number>](/zh-CN/docs/SVG/Content_type#Number-optional-number) |
+| 可变性 | Yes                                                                             |
 
-<p>{{ page("/en-US/docs/SVG/Content_type","Number-optional-number") }}</p>
+{{ page("/en-US/docs/SVG/Content_type","Number-optional-number") }}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下的元素可以使用 <code>stdDeviation</code> 属性</p>
+以下的元素可以使用 `stdDeviation` 属性
 
-<ul>
- <li>{{ SVGElement("feGaussianBlur") }}</li>
-</ul>
+- {{ SVGElement("feGaussianBlur") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

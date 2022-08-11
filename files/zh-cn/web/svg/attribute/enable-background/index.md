@@ -3,55 +3,31 @@ title: enable-background
 slug: Web/SVG/Attribute/enable-background
 translation_of: Web/SVG/Attribute/enable-background
 ---
-<div>{{SVGRef}} {{deprecated_header("SVG 2")}}</div>
+{{SVGRef}} {{deprecated_header("SVG 2")}}
 
-<p>该<strong><code>enable-background</code></strong>属性指定如何管理背景图像的累积。</p>
+该**`enable-background`**属性指定如何管理背景图像的累积。
 
-<p><strong>注意：</strong>作为演示文稿属性，<code>enable-background</code>可以用作 CSS 属性。</p>
+**注意：**作为演示文稿属性，`enable-background`可以用作 CSS 属性。
 
-<p>作为表示属性，它可以应用于任何元素，但仅对以下 11 个元素有效：{{SVGElement("a")}}，{{SVGElement("defs")}}，{{SVGElement("字形")}}，{{SVGElement("g")}}，{{SVGElement("marker")}}，{{SVGElement("mask")}}，{{SVGElement("missing-glyph")}}，{{SVGElement("pattern")}}，{{SVGElement("svg")}}，{{SVGElement("switch")}}和{{SVGElement("symbol")}}}</p>
+作为表示属性，它可以应用于任何元素，但仅对以下 11 个元素有效：{{SVGElement("a")}}，{{SVGElement("defs")}}，{{SVGElement("字形")}}，{{SVGElement("g")}}，{{SVGElement("marker")}}，{{SVGElement("mask")}}，{{SVGElement("missing-glyph")}}，{{SVGElement("pattern")}}，{{SVGElement("svg")}}，{{SVGElement("switch")}}和{{SVGElement("symbol")}}}
 
-<h2 id="上下文注释">上下文注释</h2>
+## 上下文注释
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">值</th>
-   <td><code>accumulate</code>| <code>new</code>[ <code>&lt;x&gt;</code> <code>&lt;y&gt;</code> <code>&lt;width&gt;</code> <code>&lt;height&gt;</code>]？</td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td><code>accumulate</code></td>
-  </tr>
-  <tr>
-   <th scope="row">可动画的</th>
-   <td>没有</td>
-  </tr>
- </tbody>
-</table>
+| 值       | `accumulate`\| `new`[ `<x>` `<y>` `<width>` `<height>`]？ |
+| -------- | --------------------------------------------------------- |
+| 默认值   | `accumulate`                                              |
+| 可动画的 | 没有                                                      |
 
-<dl>
- <dt><code>accumulate</code></dt>
- <dd>
- <p>如果祖先容器元素的属性值为<code>enable-background: new</code>，则当前容器元素内的所有图形元素都将呈现到父容器元素的背景图像画布上以及目标设备上。</p>
+- `accumulate`
+  - : 如果祖先容器元素的属性值为`enable-background: new`，则当前容器元素内的所有图形元素都将呈现到父容器元素的背景图像画布上以及目标设备上。否则，没有当前的背景图像画布，因此图形元素仅渲染到目标设备上。
+- `new [ <x> <y> <width> <height> ]?`
+  - : 该值使当前容器元素的子代能够访问背景图像。它还指示建立了新的（即最初为透明的黑色）背景图像画布，并且实际上，除了将当前容器元素的所有子对象呈现到目标设备上之外，还应将其呈现到新的背景图像画布中。The optional `<x>`, `<y>`, `<width>`, and `<height>` parameters are [`<number>`](/en-US/docs/Web/SVG/Content_type#Number) values that indicate the subregion of the container elementʼs user space where access to the background image is allowed to happen. Those values act as a clipping rectangle on the background image canvas.
+    Negative values for `<width>` or `<height>` are forbidden. If one, two, or three values are specified or if neither `<width>` nor `<height>` are specified, the `BackgroundImage` and `BackgroundAlpha` of a filter primitive are processed as if background image processing were not enabled.
 
- <p>否则，没有当前的背景图像画布，因此图形元素仅渲染到目标设备上。</p>
- </dd>
- <dt><code>new [ &lt;x&gt; &lt;y&gt; &lt;width&gt; &lt;height&gt; ]?</code></dt>
- <dd>
- <p>该值使当前容器元素的子代能够访问背景图像。</p>
-
- <p>它还指示建立了新的（即最初为透明的黑色）背景图像画布，并且实际上，除了将当前容器元素的所有子对象呈现到目标设备上之外，还应将其呈现到新的背景图像画布中。</p>
-
- <p>The optional <code>&lt;x&gt;</code>, <code>&lt;y&gt;</code>, <code>&lt;width&gt;</code>, and <code>&lt;height&gt;</code> parameters are <code><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></code> values that indicate the subregion of the container elementʼs user space where access to the background image is allowed to happen. Those values act as a clipping rectangle on the background image canvas.<br>
-  Negative values for <code>&lt;width&gt;</code> or <code>&lt;height&gt;</code> are forbidden. If one, two, or three values are specified or if neither <code>&lt;width&gt;</code> nor <code>&lt;height&gt;</code> are specified, the <code>BackgroundImage</code> and <code>BackgroundAlpha</code> of a filter primitive are processed as if background image processing were not enabled.</p>
- </dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

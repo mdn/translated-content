@@ -3,150 +3,70 @@ title: type
 slug: Web/SVG/Attribute/type
 translation_of: Web/SVG/Attribute/type
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>type 属性是一个类属性，他在不同的使用语境下有不同的意思。</p>
+type 属性是一个类属性，他在不同的使用语境下有不同的意思。
 
-<ul>
- <li>对于{{SVGElement("animateTransform")}}元素 , 它决定了那些随时间变化的值的转换的类型</li>
- <li>对于 {{SVGElement("feColorMatrix")}} 元素，它指明了矩阵运算的类型。关键词 <code>matrix</code> 表明一个全 5x4 矩阵的值会被提供。其他关键字快捷方式代表允许不执行复杂矩阵运算下使用常用颜色。</li>
- <li>对于{{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, 和{{SVGElement("feFuncA")}} 元素，它指明了组件传递函数的类型。</li>
- <li>对于 {{SVGElement("feTurbulence")}} 元素，它表示应以噪声函数还是湍流函数执行过滤。</li>
- <li>对于 {{SVGElement("style")}} 和 {{SVGElement("script")}} 元素，它定义了元素内容的类型。</li>
-</ul>
+- 对于{{SVGElement("animateTransform")}}元素 , 它决定了那些随时间变化的值的转换的类型
+- 对于 {{SVGElement("feColorMatrix")}} 元素，它指明了矩阵运算的类型。关键词 `matrix` 表明一个全 5x4 矩阵的值会被提供。其他关键字快捷方式代表允许不执行复杂矩阵运算下使用常用颜色。
+- 对于{{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, 和{{SVGElement("feFuncA")}} 元素，它指明了组件传递函数的类型。
+- 对于 {{SVGElement("feTurbulence")}} 元素，它表示应以噪声函数还是湍流函数执行过滤。
+- 对于 {{SVGElement("style")}} 和 {{SVGElement("script")}} 元素，它定义了元素内容的类型。
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<h3 id="For_the_SVGElementanimateTransform_elements">For the {{SVGElement("animateTransform")}} elements</h3>
+### For the {{SVGElement("animateTransform")}} elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><code>translate</code></strong> | <code>scale</code> | <code>rotate</code> | <code>skewX</code> | <code>skewY</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG11/animate.html#AnimateTransformElementTypeAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                                |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| Value              | **`translate`** \| `scale` \| `rotate` \| `skewX` \| `skewY`                                          |
+| Animatable         | No                                                                                                    |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/animate.html#AnimateTransformElementTypeAttribute) |
 
-<h3 id="For_the_SVGElementfeColorMatrix_element">For the {{ SVGElement("feColorMatrix") }} element</h3>
+### For the {{ SVGElement("feColorMatrix") }} element
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><strong><code>matrix</code></strong> | <code>saturate</code> | <code>hueRotate</code> | <code>luminanceToAlpha</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| Value              | **`matrix`** \| `saturate` \| `hueRotate` \| `luminanceToAlpha`                             |
+| Animatable         | Yes                                                                                         |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixTypeAttribute) |
 
-<h3 id="For_the_SVGElementfeFuncR_SVGElementfeFuncG_SVGElementfeFuncB_and_SVGElementfeFuncA_elements">For the {{ SVGElement("feFuncR") }}, {{ SVGElement("feFuncG") }}, {{ SVGElement("feFuncB") }}, and {{ SVGElement("feFuncA") }} elements</h3>
+### For the {{ SVGElement("feFuncR") }}, {{ SVGElement("feFuncG") }}, {{ SVGElement("feFuncB") }}, and {{ SVGElement("feFuncA") }} elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>identity</code> | <code>table</code> | <code>discrete</code> | <code>linear</code> | <code>gamma</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| Value              | `identity` \| `table` \| `discrete` \| `linear` \| `gamma`                                        |
+| Animatable         | Yes                                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feComponentTransferTypeAttribute) |
 
-<h3 id="For_the_SVGElementfeTurbulence_element">For the {{ SVGElement("feTurbulence") }} element</h3>
+### For the {{ SVGElement("feTurbulence") }} element
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>fractalNoise</code> | <strong><code>turbulence</code></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------ |
+| Value              | `fractalNoise` \| **`turbulence`**                                                         |
+| Animatable         | Yes                                                                                        |
+| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feTurbulenceTypeAttribute) |
 
-<h3 id="For_the_SVGElementstyle_and_SVGElementscript_elements">For the {{ SVGElement("style") }} and {{SVGElement("script")}} elements</h3>
+### For the {{ SVGElement("style") }} and {{SVGElement("script")}} elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>&lt;content-type&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="http://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute">SVG 1.1 (2nd Edition) : script</a><br>
-    <a href="http://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute">SVG 1.1 (2nd Edition) : style</a></td>
-  </tr>
- </tbody>
-</table>
+| Categories         | _None_                                                                                                                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Value              | <content-type>                                                                                                                                                                                         |
+| Animatable         | No                                                                                                                                                                                                     |
+| Normative document | [SVG 1.1 (2nd Edition) : script](http://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute) [SVG 1.1 (2nd Edition) : style](http://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute) |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>values</code> attribute</p>
+The following elements can use the `values` attribute
 
-<ul>
- <li>{{SVGElement("animateTransform")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feFuncA")}}</li>
- <li>{{SVGElement("feFuncB")}}</li>
- <li>{{SVGElement("feFuncG")}}</li>
- <li>{{SVGElement("feFuncR")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li>{{SVGElement("script")}}</li>
- <li>{{SVGElement("style")}}</li>
-</ul>
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("script")}}
+- {{SVGElement("style")}}

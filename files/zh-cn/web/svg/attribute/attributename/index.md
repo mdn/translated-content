@@ -7,60 +7,45 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/attributeName
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>该属性标识了在一个动画动作环节中，父元素的需要被改变的属性名。</p>
+该属性标识了在一个动画动作环节中，父元素的需要被改变的属性名。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画属性目标属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;attributeName&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 动画属性目标属性                                                                      |
+| -------- | ------------------------------------------------------------------------------------- |
+| 值       | <attributeName>                                                                       |
+| 可变性   | No                                                                                    |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute) |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>下面的示例使用了 y 作为<code>attributeName</code>，通过改变一个矩形在 Y 轴上的位置来变动这个矩形。</p>
+下面的示例使用了 y 作为`attributeName`，通过改变一个矩形在 Y 轴上的位置来变动这个矩形。
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;svg width="250" height="250"
+```xml
+<?xml version="1.0"?>
+<svg width="250" height="250"
   viewPort="0 0 250 250" version="1.1"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="50" y="50" width="100" height="100"&gt;
-    &lt;animate attributeType="XML"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="100" height="100">
+    <animate attributeType="XML"
       attributeName="y"
       from="0" to="50"
-      dur="5s"/&gt;
-  &lt;/rect&gt;
-&lt;/svg&gt;</pre>
+      dur="5s"/>
+  </rect>
+</svg>
+```
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>attributeName</code>属性：</p>
+下列元素可以使用`attributeName`属性：
 
-<ul>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("animateColor") }}</li>
- <li>{{ SVGElement("animateTransform") }}</li>
- <li>{{ SVGElement("set") }}</li>
-</ul>
+- {{ SVGElement("animate") }}
+- {{ SVGElement("animateColor") }}
+- {{ SVGElement("animateTransform") }}
+- {{ SVGElement("set") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

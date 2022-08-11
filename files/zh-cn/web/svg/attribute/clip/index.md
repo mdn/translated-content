@@ -6,63 +6,55 @@ tags:
   - SVG 属性
 translation_of: Web/SVG/Attribute/clip
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p><strong><code>clip</code></strong> 属性是定义元素可见区域的属性。</p>
+**`clip`** 属性是定义元素可见区域的属性。
 
-<p><code>clip</code> 属性的参数值与 {{ cssxref("clip","CSS clip property") }} 的参数值定义相同。指示当前用户坐标的无单位的值，可以用在 <code>&lt;shape&gt;</code> 的坐标值上。<code>auto</code> 值定义了一个剪切路径，其边界沿着由给定元素创建的视口的边界。</p>
+`clip` 属性的参数值与 {{ cssxref("clip","CSS clip property") }} 的参数值定义相同。指示当前用户坐标的无单位的值，可以用在 `<shape>` 的坐标值上。`auto` 值定义了一个剪切路径，其边界沿着由给定元素创建的视口的边界。
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following six elements: {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, {{ SVGElement("image") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("pattern") }}, {{ SVGElement("marker") }}</p>
+As a presentation attribute, it can be applied to any element but it has effect only on the following six elements: {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, {{ SVGElement("image") }}, {{ SVGElement("foreignObject") }}, {{ SVGElement("pattern") }}, {{ SVGElement("marker") }}
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Auto clipping --&gt;
-  &lt;svg x="0" width="10" height="10"
-       clip="auto"&gt;
-    &lt;circle cx="5" cy="5" r="4" stroke="green" /&gt;
-  &lt;/svg&gt;
+```html
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+  <!-- Auto clipping -->
+  <svg x="0" width="10" height="10"
+       clip="auto">
+    <circle cx="5" cy="5" r="4" stroke="green" />
+  </svg>
 
-  &lt;!-- Rect(top, right, bottom, left) clipping --&gt;
-  &lt;svg x="10" width="10" height="10"
-       clip="rect(1, 9, 8, 2)"&gt;
-    &lt;circle cx="5" cy="5" r="4" stroke="green" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;</pre>
+  <!-- Rect(top, right, bottom, left) clipping -->
+  <svg x="10" width="10" height="10"
+       clip="rect(1, 9, 8, 2)">
+    <circle cx="5" cy="5" r="4" stroke="green" />
+  </svg>
+</svg>
+```
 
-<p>{{EmbedLiveSample('示例', '100%', 150)}}</p>
+{{EmbedLiveSample('示例', '100%', 150)}}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p><strong>Warning:</strong> This property is deprecated. Use {{cssxref("clip-path")}} instead.</p>
+**Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">可用值</th>
-   <td><strong>auto</strong> | &lt;shape&gt; | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">默认值</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 可用值     | **auto** \| <shape> \| inherit |
+| ---------- | ------------------------------ |
+| 默认值     | Yes                            |
+| Animatable | Yes                            |
 
-<p>The value <code>auto</code> defines a clipping path along the bounds of the viewport created by the given element.</p>
+The value `auto` defines a clipping path along the bounds of the viewport created by the given element.
 
-<p>The value <code>rect()</code> defines a clipping rectangle following the following syntax: <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code>. The <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> values specify offsets from the <em>top border edge</em> of the element viewport, while <code>&lt;right&gt;</code> and <code>&lt;left&gt;</code> specify offsets from the <em>left border edge</em> of the element viewport.</p>
+The value `rect()` defines a clipping rectangle following the following syntax: `rect(<top>, <right>, <bottom>, <left>)`. The `<top>` and `<bottom>` values specify offsets from the _top border edge_ of the element viewport, while `<right>` and `<left>` specify offsets from the _left border edge_ of the element viewport.
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}

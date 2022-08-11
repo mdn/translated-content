@@ -8,48 +8,35 @@ tags:
   - 需要示例
 translation_of: Web/SVG/Attribute/points
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>points</code>属性定义了用来画一个{{ SVGElement("polyline") }}元素或画一个 SVGElement("polygon") }}元素的点的数列。</p>
+`points`属性定义了用来画一个{{ SVGElement("polyline") }}元素或画一个 SVGElement("polygon") }}元素的点的数列。
 
-<p>每个点用用户坐标系统中的一个 X 坐标和 Y 坐标定义。用逗号分开每个点的 X 和 Y 坐标标记是一个常用实践（但是并非必要），使用空间标注每个点。</p>
+每个点用用户坐标系统中的一个 X 坐标和 Y 坐标定义。用逗号分开每个点的 X 和 Y 坐标标记是一个常用实践（但是并非必要），使用空间标注每个点。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>无</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;list-of-points&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 无               |
+| ------ | ---------------- |
+| 值     | <list-of-points> |
+| 可变性 | Yes              |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: xml">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;polygon points="100,10 250,150 200,110"
-           style="fill:lime;stroke:purple;stroke-width:1" /&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <polygon points="100,10 250,150 200,110"
+           style="fill:lime;stroke:purple;stroke-width:1" />
+</svg>
+```
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>以下元素可以使用<code>points</code>属性：</p>
+以下元素可以使用`points`属性：
 
-<ul>
- <li>{{ SVGElement("polyline") }}</li>
- <li>{{ SVGElement("polygon") }}</li>
-</ul>
+- {{ SVGElement("polyline") }}
+- {{ SVGElement("polygon") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

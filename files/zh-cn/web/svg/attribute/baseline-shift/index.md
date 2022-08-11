@@ -7,67 +7,46 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/baseline-shift
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>属性<code>baseline-shift</code>允许相对于父文本内容元素的<code>dominant-baseline</code>重定位<code>dominant-baseline</code>。该切换对象必须是一个下标或上标。</p>
+属性`baseline-shift`允许相对于父文本内容元素的`dominant-baseline`重定位`dominant-baseline`。该切换对象必须是一个下标或上标。
 
-<p>作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请看{{ cssxref("baseline-shift","CSS baseline-shift") }}以了解更多信息。</p>
+作为一个外观属性，它还可以直接作为 CSS 样式表内部的属性使用。请看{{ cssxref("baseline-shift","CSS baseline-shift") }}以了解更多信息。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><strong>auto</strong> | baseline | super | sub | &lt;percentage&gt; | <a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 外观属性                                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| 值       | **auto** \| baseline \| super \| sub \| <percentage> \| [<length>](/en/SVG/Content_type#Length) \| inherit |
+| 可变性   | Yes                                                                                                        |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                        |
 
-<dl>
- <dt>baseline</dt>
- <dd>没有基线切换，<code>dominant-baseline</code>依然在原来的位置。</dd>
- <dt>sub</dt>
- <dd><code>dominant-baseline</code>切换到下标的默认位置。</dd>
- <dt>super</dt>
- <dd><code>dominant-baseline</code>切换到上标的默认位置</dd>
- <dt>&lt;percentage&gt;</dt>
- <dd>该属性的结果值是这个百分数乘以 {{ SVGElement("text") }}元素的{{ SVGAttr("line-height") }}。如果是正值，dominant-baseline 向 shift 同方向移动结果值；如果是负值，dominant-baseline 向 shift 反方向移动结果值，相对于父文本内容元素。值“0%”等于”baseline“。</dd>
- <dt><a href="/en/SVG/Content_type#Length">&lt;length&gt;</a></dt>
- <dd>如果是正值，dominant-baseline 向 shift 同方向移动<a href="/en/SVG/Content_type#Length">&lt;length&gt;</a>距离；如果是负值，dominant-baseline 向 shift 反方向移动<a href="/en/SVG/Content_type#Length">&lt;length&gt;</a>距离。值”0cm“等于”baseline“。</dd>
-</dl>
+- baseline
+  - : 没有基线切换，`dominant-baseline`依然在原来的位置。
+- sub
+  - : `dominant-baseline`切换到下标的默认位置。
+- super
+  - : `dominant-baseline`切换到上标的默认位置
+- \<percentage>
+  - : 该属性的结果值是这个百分数乘以 {{ SVGElement("text") }}元素的{{ SVGAttr("line-height") }}。如果是正值，dominant-baseline 向 shift 同方向移动结果值；如果是负值，dominant-baseline 向 shift 反方向移动结果值，相对于父文本内容元素。值“0%”等于”baseline“。
+- [\<length>](/en/SVG/Content_type#Length)
+  - : 如果是正值，dominant-baseline 向 shift 同方向移动[\<length>](/en/SVG/Content_type#Length)距离；如果是负值，dominant-baseline 向 shift 反方向移动[\<length>](/en/SVG/Content_type#Length)距离。值”0cm“等于”baseline“。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p><code>下列这些元素可以使用 baseline-shift</code>属性。</p>
+`下列这些元素可以使用 baseline-shift`属性。
 
-<ul>
- <li>{{ SVGElement("tspan") }}</li>
- <li>{{ SVGElement("tref") }}</li>
- <li>{{ SVGElement("altGlyph") }}</li>
- <li>{{ SVGElement("textPath") }}</li>
-</ul>
+- {{ SVGElement("tspan") }}
+- {{ SVGElement("tref") }}
+- {{ SVGElement("altGlyph") }}
+- {{ SVGElement("textPath") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>{{ cssxref("baseline-shift","CSS baseline-shift") }}</li>
-</ul>
+- {{ cssxref("baseline-shift","CSS baseline-shift") }}

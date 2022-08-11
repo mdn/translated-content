@@ -3,39 +3,25 @@ title: kernelMatrix
 slug: Web/SVG/Attribute/kernelMatrix
 translation_of: Web/SVG/Attribute/kernelMatrix
 ---
-<p>« <a href="/en/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
-<p>用于 order 属性定义一列<a href="/en/SVG/Content_type#Number">&lt;number&gt;</a>为{{SVGElement("feConvolveMatrix")}} 元素构成核矩阵。值之间用空格或逗号分开。<a href="/en/SVG/Content_type#Number">&lt;number&gt;</a>的数量必须等于在{{SVGAttr("order")}}属性中定义的&lt;orderX&gt;和&lt;orderY&gt;的乘积。</p>
+用于 order 属性定义一列[\<number>](/en/SVG/Content_type#Number)为{{SVGElement("feConvolveMatrix")}} 元素构成核矩阵。值之间用空格或逗号分开。[\<number>](/en/SVG/Content_type#Number)的数量必须等于在{{SVGAttr("order")}}属性中定义的\<orderX>和\<orderY>的乘积。
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en/SVG/Content_type#List-of-&lt;var>T&lt;.2Fvar>s">T&lt;.2Fvar>s">&lt;list of number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Categories | None                                                                         |
+| ---------- | ---------------------------------------------------------------------------- |
+| Value      | [T<.2Fvar>s"><list of number>](/en/SVG/Content_type#List-of-<var>T<.2Fvar>s) |
+| Animatable | Yes                                                                          |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>下面的元素可以使用<code>kernelMatrix 属性</code></p>
+下面的元素可以使用`kernelMatrix 属性`
 
-<ul>
- <li>{{ SVGElement("feConvolveMatrix") }}</li>
-</ul>
+- {{ SVGElement("feConvolveMatrix") }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

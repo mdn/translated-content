@@ -7,53 +7,35 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/mask
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>mask</code>属性绑定的元素将应用给定的{{ SVGElement("mask") }}元素。</p>
+`mask`属性绑定的元素将应用给定的{{ SVGElement("mask") }}元素。
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#FuncIRI">&lt;FuncIRI&gt;</a> | <strong>none</strong> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                                                         |
+| ------ | ---------------------------------------------------------------- |
+| 值     | [<FuncIRI>](/en/SVG/Content_type#FuncIRI) \| **none** \| inherit |
+| 可变性 | Yes                                                              |
 
-<dl>
- <dt><a href="/en/SVG/Content_type#FuncIRI">&lt;funcIRI&gt;</a></dt>
- <dd>对同一 SVG 文档片段内部别的图形对象的一个引用 ，这个图形对象将用作遮罩。这个引用的句法与{{ cssxref("uri","CSS URI") }}的句法相同。</dd>
-</dl>
+- [\<funcIRI>](/en/SVG/Content_type#FuncIRI)
+  - : 对同一 SVG 文档片段内部别的图形对象的一个引用 ，这个图形对象将用作遮罩。这个引用的句法与{{ cssxref("uri","CSS URI") }}的句法相同。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>mask</code>属性：</p>
+下列元素可以使用`mask`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Container">容器元素</a> »</li>
- <li><a href="/en/SVG/Element#Graphical">图形元素</a> »</li>
-</ul>
+- [容器元素](/en/SVG/Element#Container) »
+- [图形元素](/en/SVG/Element#Graphical) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("mask") }}</li>
-</ul>
+- {{ SVGElement("mask") }}

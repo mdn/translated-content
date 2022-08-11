@@ -8,84 +8,84 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/clipPath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><a href="/zh-CN/docs/Web/SVG">SVG</a> 元素 <strong><code>&lt;clipPath&gt;</code></strong> 定义一条剪切路径，可作为其他元素的 {{SVGAttr("clip-path")}} 属性的值。</p>
+[SVG](/zh-CN/docs/Web/SVG) 元素 **`<clipPath>`** 定义一条剪切路径，可作为其他元素的 {{SVGAttr("clip-path")}} 属性的值。
 
-<p>剪切路径限制了图形的可见范围。从概念上来说，如果图形超出了当前剪切路径所包围的区域，那么超出部分将不会绘制。</p>
+剪切路径限制了图形的可见范围。从概念上来说，如果图形超出了当前剪切路径所包围的区域，那么超出部分将不会绘制。
 
-<h2>示例</h2>
+## 示例
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100"&gt;
-  &lt;clipPath id="myClip"&gt;
-    &lt;!--
+```html
+<svg viewBox="0 0 100 100">
+  <clipPath id="myClip">
+    <!--
       圆圈外的所有东西都会被裁剪掉，因此不可见。
-    --&gt;
-    &lt;circle cx="40" cy="35" r="35" /&gt;
-  &lt;/clipPath&gt;
+    -->
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
-  &lt;!-- 作为引用元素（英文原文：<code>for reference</code>）的黑色心形 --&gt;
-  &lt;path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" /&gt;
+  <!-- 作为引用元素（英文原文：for reference）的黑色心形 -->
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
-  &lt;!--
+  <!--
     和上述黑色心形形状相同的红色心形，剪切路径是上面定义的圆；
     红色心形只有在圆内的部分可见。
-  --&gt;
-  &lt;use clip-path="url(#myClip)" xlink:href="#heart" fill="red" /&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+</svg>
+```
 
-<pre class="brush: css">/* 如果浏览器支持几何属性 r，可以加一点 css */
+```css
+/* 如果浏览器支持几何属性 r，可以加一点 css */
 
 @keyframes openYourHeart {from {r: 0} to {r: 60px}}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('示例', 100, 100)}}</p>
+{{EmbedLiveSample('示例', 100, 100)}}
 
-<p>从概念上讲，剪切路径等于给引用元素设置了一个自定义的可视区域。因此，它虽然会影响一个元素的绘制，但不会影响这个元素本身的几何形状，比如被剪切元素（通过 {{SVGAttr("clip-path")}} 属性引用了 <code>&lt;clipPath&gt;</code> 的元素及其子元素）的包围盒和没有被剪切时相同。</p>
+从概念上讲，剪切路径等于给引用元素设置了一个自定义的可视区域。因此，它虽然会影响一个元素的绘制，但不会影响这个元素本身的几何形状，比如被剪切元素（通过 {{SVGAttr("clip-path")}} 属性引用了 `<clipPath>` 的元素及其子元素）的包围盒和没有被剪切时相同。
 
-<p>默认情况下，{{cssxref("pointer-events")}} 不会在被剪切掉的区域（不可见的区域）内触发。举个例子，如果一个半径为 10 的圆形被剪切成半径为 5 的圆形，那么这个圆在半径为 5 以外的区域不会收到“click”事件。</p>
+默认情况下，{{cssxref("pointer-events")}} 不会在被剪切掉的区域（不可见的区域）内触发。举个例子，如果一个半径为 10 的圆形被剪切成半径为 5 的圆形，那么这个圆在半径为 5 以外的区域不会收到“click”事件。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{SVGAttr("clipPathUnits")}}</dt>
- <dd>为 <code>&lt;clipPath&gt;</code> 元素的内容定义坐标系。<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+- {{SVGAttr("clipPathUnits")}}
+  - : 为 `<clipPath>` 元素的内容定义坐标系。
+    _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<dl>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
-</dl>
+- [Core Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Core)
+  - : Most notably: {{SVGAttr('id')}}
+- [Styling Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Styling)
+  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+- [Conditional Processing Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Conditional_Processing)
+  - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Presentation Attributes](https://developer.mozilla.org/docs/Web/SVG/Attribute/Presentation)
+  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>Other clipping and masking SVG elements: {{SVGElement("mask")}}</li>
- <li>Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}</li>
-</ul>
+- Other clipping and masking SVG elements: {{SVGElement("mask")}}
+- Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}

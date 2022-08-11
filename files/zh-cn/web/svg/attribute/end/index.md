@@ -7,47 +7,30 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/end
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p>这个属性定义了一个动画的结束值，可以约束激活持续时间。</p>
+这个属性定义了一个动画的结束值，可以约束激活持续时间。
 
-<p>这个属性值是一个分号分隔的数列值。每个单独值可以是定义在{{ SVGAttr("begin") }}属性中同种类型。</p>
+这个属性值是一个分号分隔的数列值。每个单独值可以是定义在{{ SVGAttr("begin") }}属性中同种类型。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>动画定时属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td>&lt;End-value-list&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#EndAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
-</table>
+| 类别     | 动画定时属性                                                                |
+| -------- | --------------------------------------------------------------------------- |
+| 值       | <End-value-list>                                                            |
+| 可变性   | No                                                                          |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
-<p>欲知在<code>&lt;end-value-list&gt;</code>中允许用哪些值，请阅读{{ SVGAttr("begin") }}属性。</p>
+欲知在`<end-value-list>`中允许用哪些值，请阅读{{ SVGAttr("begin") }}属性。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>end</code>属性：</p>
+下列元素可以使用`end`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Animation">Animation elements</a> »</li>
-</ul>
+- [Animation elements](/en/SVG/Element#Animation) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}

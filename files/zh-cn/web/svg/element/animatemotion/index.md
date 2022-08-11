@@ -7,71 +7,67 @@ tags:
   - 元素
 translation_of: Web/SVG/Element/animateMotion
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p><code>&lt;animateMotion&gt;</code> 元素定义了一个元素如何沿着运动路径进行移动。</p>
+`<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。
 
-<div class="blockIndicator note">
-<p><strong>注意：</strong>为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 <code>&lt;animateMotion&gt;</code> 中，而不是使用 {{SVGAttr("path")}}。</p>
-</div>
+> **备注：** 为了复用一个已经定义的路径，就有必要使用一个 {{SVGElement("mpath")}} 元素嵌入到 `<animateMotion>` 中，而不是使用 {{SVGAttr("path")}}。
 
-<pre class="brush: css">html,body,svg { height:100%; margin: 0; padding: 0; display:block; }</pre>
+```css
+html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+```
 
-<pre class="brush: xml">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="lightgrey"
-    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
+```xml
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="lightgrey"
+    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
-  &lt;circle r="5" fill="red"&gt;
-    &lt;animateMotion dur="10s" repeatCount="indefinite"
-      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+  <circle r="5" fill="red">
+    <animateMotion dur="10s" repeatCount="indefinite"
+      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Exemple', 150, '100%')}}</p>
+{{EmbedLiveSample('Exemple', 150, '100%')}}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="Global_属性">Global 属性</h3>
+### Global 属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationEvent">动画事件属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#XLink">Xlink 属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationTiming">动画定时属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationValue">动画值属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#AnimationAddition">An 动画累加属性</a> »</li>
- <li>{{ SVGAttr("externalResourcesRequired") }}</li>
-</ul>
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
+- [动画事件属性](/zh-CN/docs/SVG/Attribute#AnimationEvent) »
+- [Xlink 属性](/zh-CN/docs/SVG/Attribute#XLink) »
+- [动画定时属性](/zh-CN/docs/SVG/Attribute#AnimationTiming) »
+- [动画值属性](/zh-CN/docs/SVG/Attribute#AnimationValue) »
+- [An 动画累加属性](/zh-CN/docs/SVG/Attribute#AnimationAddition) »
+- {{ SVGAttr("externalResourcesRequired") }}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<ul>
- <li>{{ SVGAttr("calcMode") }}</li>
- <li>{{ SVGAttr("path") }}</li>
- <li>{{ SVGAttr("keyPoints") }}</li>
- <li>{{ SVGAttr("rotate") }}</li>
- <li>{{ SVGAttr("origin") }}</li>
-</ul>
+- {{ SVGAttr("calcMode") }}
+- {{ SVGAttr("path") }}
+- {{ SVGAttr("keyPoints") }}
+- {{ SVGAttr("rotate") }}
+- {{ SVGAttr("origin") }}
 
-<h2 id="DOM接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGAnimateMotionElement">SVGAnimateMotionElement</a>接口。</code></p>
+该元素实现了`SVGAnimateMotionElement接口。`
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关内容">相关内容</h2>
+## 相关内容
 
-<ul>
- <li>{{ SVGElement("mpath") }}</li>
-</ul>
+- {{ SVGElement("mpath") }}

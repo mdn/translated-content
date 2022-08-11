@@ -8,52 +8,51 @@ tags:
   - 参考
 translation_of: Web/SVG/Element/g
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>元素<code>g</code>是用来组合对象的容器。添加到<code>g</code>元素上的变换会应用到其所有的子元素上。添加到<code>g</code>元素的属性会被其所有的子元素继承。此外，<code>g</code>元素也可以用来定义复杂的对象，之后可以通过{{SVGElement("use")}}元素来引用它们。</p>
+元素`g`是用来组合对象的容器。添加到`g`元素上的变换会应用到其所有的子元素上。添加到`g`元素的属性会被其所有的子元素继承。此外，`g`元素也可以用来定义复杂的对象，之后可以通过{{SVGElement("use")}}元素来引用它们。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html" style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-align: -webkit-auto; text-indent: 0px; text-transform: none;">&lt;svg width="100%" height="100%" viewBox="0 0 95 50"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g stroke="green" fill="white" stroke-width="5"&gt;
-    &lt;circle cx="25" cy="25" r="15" /&gt;
-    &lt;circle cx="40" cy="25" r="15" /&gt;
-    &lt;circle cx="55" cy="25" r="15" /&gt;
-    &lt;circle cx="70" cy="25" r="15" /&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="100%" height="100%" viewBox="0 0 95 50"
+     xmlns="http://www.w3.org/2000/svg">
+  <g stroke="green" fill="white" stroke-width="5">
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example",220,130)}}</p>
+{{EmbedLiveSample("Example",220,130)}}
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<h3 id="全局属性">全局属性</h3>
+### 全局属性
 
-<ul>
- <li><a href="/en-US/docs/SVG/Attribute#ConditionalProccessing">条件处理属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#GraphicalEvent">图形事件属性</a> »</li>
- <li><a href="/en-US/docs/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
- <li>{{SVGAttr("externalResourcesRequired")}}</li>
- <li>{{SVGAttr("transform")}}</li>
-</ul>
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("externalResourcesRequired")}}
+- {{SVGAttr("transform")}}
 
-<h3 id="专有属性">专有属性</h3>
+### 专有属性
 
-<p><em>没有专有属性。</em></p>
+_没有专有属性。_
 
-<h2 id="DOM_接口">DOM 接口</h2>
+## DOM 接口
 
-<p>该元素实现了<code><a href="/en-US/docs/DOM/SVGGElement">SVGGElement</a>的所有接口</code>.</p>
+该元素实现了`SVGGElement的所有接口`.
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat("svg.elements.g")}}

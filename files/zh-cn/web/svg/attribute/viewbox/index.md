@@ -7,110 +7,92 @@ tags:
   - viewBox
 translation_of: Web/SVG/Attribute/viewBox
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考</a></p>
+« [SVG 属性参考](/en/SVG/Attribute)
 
-<p>viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。</p>
+viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。
 
-<p>viewBox 属性的值是一个包含 4 个参数的列表 <code>min-x</code>, <code>min-y</code>, <code>width</code> and <code>height</code>， 以空格或者逗号分隔开， 在用户空间中指定一个矩形区域映射到给定的元素，查看属性{{ SVGAttr("preserveAspectRatio") }}。</p>
+viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `width` and `height`， 以空格或者逗号分隔开， 在用户空间中指定一个矩形区域映射到给定的元素，查看属性{{ SVGAttr("preserveAspectRatio") }}。
 
-<p>不允许宽度和高度为负值，0 则禁用元素的呈现。</p>
+不允许宽度和高度为负值，0 则禁用元素的呈现。
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   with a large viewBox the circle looks small
   as it is using user units for the r attribute:
   4 resolved against 100 as set in the viewBox
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox`
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   with a small viewBox the circle looks large
   as it is using user units for the r attribute:
   4 resolved against 10 as set in the viewBox
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
 
-&lt;svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!--
+<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+  <!--
   The point of coordinate 0,0 is now in the center of the viewport,
   and 100% is still resolve to a width or height of 10 user units so
   the rectangle looks shifted to the bottom/right corner of the viewport
-  --&gt;
-  &lt;rect x="0" y="0" width="100%" height="100%"/&gt;
+  -->
+  <rect x="0" y="0" width="100%" height="100%"/>
 
-  &lt;!--
+  <!--
   With the point of coordinate 0,0 in the center of the viewport the
   value 50% is resolve to 5 which means the center of the circle is
   in the bottom/right corner of the viewport.
-  --&gt;
-  &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <circle cx="50%" cy="50%" r="4" fill="white"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+{{EmbedLiveSample('topExample', '100%', 200)}}
 
+这个属性会受到 {{ SVGAttr("preserveAspectRatio") }} 的影响。
 
+> **备注：** `width` 或者 `height` 的值，小于或等于 0 的情况下，这个元素将不会被渲染出来。
 
-<p>这个属性会受到 {{ SVGAttr("preserveAspectRatio") }} 的影响。</p>
+有 {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, 和 {{ SVGElement("view") }} 等五个 svg 元素可以有这个属性。
 
-<div class="blockIndicator note">
-<p><strong>温馨提示:：</strong><code>width</code> 或者 <code>height</code> 的值，小于或等于 0 的情况下，这个元素将不会被渲染出来。</p>
-</div>
+## Usage context
 
-<p>有 {{SVGElement("marker")}}, {{SVGElement("pattern")}}, {{ SVGElement("svg") }}, {{ SVGElement("symbol") }}, 和 {{ SVGElement("view") }} 等五个 svg 元素可以有这个属性。</p>
+| Categories | None        |
+| ---------- | ----------- |
+| Value      | _See above_ |
+| Animatable | Yes         |
 
-<h2 id="Usage_context">Usage context</h2>
+## Elements
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Categories</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td><em>See above</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+下面的元素可以使用 viewBox 属性
 
-<h2 id="Elements">Elements</h2>
+- {{ SVGElement("svg") }}
+- {{ SVGElement("symbol") }}
+- {{ SVGElement("image") }}
+- {{ SVGElement("marker") }}
+- {{ SVGElement("pattern") }}
+- {{ SVGElement("view") }}
 
-<p>下面的元素可以使用 viewBox 属性</p>
-
-<ul>
- <li>{{ SVGElement("svg") }}</li>
- <li>{{ SVGElement("symbol") }}</li>
- <li>{{ SVGElement("image") }}</li>
- <li>{{ SVGElement("marker") }}</li>
- <li>{{ SVGElement("pattern") }}</li>
- <li>{{ SVGElement("view") }}</li>
-</ul>
-
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en/SVG/Tutorial/Positions">SVG Getting Started: Positions</a></li>
-</ul>
+- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)

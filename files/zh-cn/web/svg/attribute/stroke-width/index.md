@@ -7,42 +7,28 @@ tags:
   - 需要兼容性表
 translation_of: Web/SVG/Attribute/stroke-width
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 属性参考主页</a></p>
+« [SVG 属性参考主页](/en/SVG/Attribute)
 
-<p><code>stroke-width</code>属性指定了当前对象的轮廓的宽度。它的默认值是<strong>1</strong>。如果使用了一个&lt;percentage&gt;，这个值代表当前视口的百分比。如果使用了<strong>0</strong>值，则将不绘制轮廓。</p>
+`stroke-width`属性指定了当前对象的轮廓的宽度。它的默认值是**1**。如果使用了一个\<percentage>，这个值代表当前视口的百分比。如果使用了**0**值，则将不绘制轮廓。
 
-<p>作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。</p>
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>外观属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td><a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> | <a href="/en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| 类别   | 外观属性                                                                                              |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| 值     | [<length>](/en/SVG/Content_type#Length) \| [<percentage>](/en/SVG/Content_type#Percentage) \| inherit |
+| 可变性 | Yes                                                                                                   |
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h2 id="元素">元素</h2>
+## 元素
 
-<p>下列元素可以使用<code>stroke-width</code>属性：</p>
+下列元素可以使用`stroke-width`属性：
 
-<ul>
- <li><a href="/en/SVG/Element#Shape">形状元素</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">文本内容元素</a> »</li>
-</ul>
+- [形状元素](/en/SVG/Element#Shape) »
+- [文本内容元素](/en/SVG/Element#TextContent) »
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
