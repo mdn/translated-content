@@ -41,7 +41,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
  &lt;/form&gt;
 </pre>
 
-<h2 id="유효성_검사_및_사용자에게_알림"><span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">유효성 검사 및 사용자에게 알림</span></h2>
+<h2 id="유효성_검사_및_사용자에게_알림">유효성 검사 및 사용자에게 알림</h2>
 
 <p>폼 유효성 검사는 여러 단계로 구성됩니다. :</p>
 
@@ -88,7 +88,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
  &lt;/script&gt;
 </pre>
 
-<h2 id="checkValidity_함수"><span class="mw-headline" id="The_checkValidity_function"><code>checkValidity</code> 함수</span></h2>
+<h2 id="checkValidity_함수"><code>checkValidity</code> 함수</h2>
 
 <p>Javascript에서 폼 유효성 검사에 사용되는 기본 메소드는 <code>checkValidity</code> 함수입니다. 이 메소드는 세 개의 파라미터를 가집니다: 유효성 검사를 할 <code>input</code>의 ID, 유효성을 확인하기 위해 검색할 검색어, alert에 삽입할 에러 메시지입니다.</p>
 
@@ -103,7 +103,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
 
 <p>검색어가 발견되면 <code>aria-invalid</code> 속성은 “<code>false</code>”로 재설정됩니다. 또한 남아있는 모든 alert가 제거됩니다. </p>
 
-<h2 id="addAlert_함수"><span class="mw-headline" id="The_addAlert_function"><code>addAlert</code> 함수</span></h2>
+<h2 id="addAlert_함수"><code>addAlert</code> 함수</h2>
 
 <p>이 함수는 일단 오래된 alert을 제거합니다. 이 함수는 간단합니다. : id가 “<code>alert</code>”인 요소를 찾고, 발견되면 <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">document object model</a>.에서 해당 요소를 제거합니다. </p>
 
@@ -113,7 +113,7 @@ original_slug: Web/Accessibility/ARIA/forms/alerts
 
 <p>이 <code>div</code>  요소가 나타나면 Firefox는 보조기기에 "alert" 이벤트를 발생시킵니다. 대부분의 스크린 리더는 자동으로 그것을 주워서 읽습니다. 이건 암호 저장 여부를 묻는 Firefox의 알림 표시 줄과 비슷합니다. 방금 만든 alert에는 버튼이 없으므로 단순히 무엇이 문제인지만을 알려줍니다. </p>
 
-<h2 id="“onblur”_이벤트_수정하기"><span class="mw-headline" id="Adding_the_magic_to_the_.E2.80.9Conblur.E2.80.9D_event">“<code>onblur</code>” 이벤트 수정하기</span></h2>
+<h2 id="“onblur”_이벤트_수정하기">“<code>onblur</code>” 이벤트 수정하기</h2>
 
 <p>이제 남은 것은 이벤트 핸들러를 추가하는 것뿐입니다. 우리는 Email과 이름에 대한 두개의 인풋을 다음과 같이 변경해야합니다. :</p>
 
