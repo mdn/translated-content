@@ -16,7 +16,7 @@ return controller.signal;
 
 例如，这可以传递给一个 fetch 方法，以便去运行它的中止逻辑（也就是说，组织起来的代码即使预期的 fetch 操作还没有启动，也应该运行中止逻）。
 
-> **备注:** 该方法在目的上类似于 {{JSxRef("Promise.reject")}}.
+> **备注：** 该方法在目的上类似于 {{JSxRef("Promise.reject")}}.
 
 ## 语法
 
