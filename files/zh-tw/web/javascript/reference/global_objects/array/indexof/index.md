@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 **`indexOf()`** 方法會回傳給定元素於陣列中第一個被找到之索引，若不存在於陣列中則回傳 -1。
 
-> **備註：**若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
+> **備註：** 若是調用字串的方法，請參閱 {{jsxref("String.prototype.indexOf()")}}。
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 

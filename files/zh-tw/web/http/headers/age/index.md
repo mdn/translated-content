@@ -2,60 +2,48 @@
 title: Age
 slug: Web/HTTP/Headers/Age
 tags:
-- Caching
-- HTTP
-- Response
-- header
+  - Caching
+  - HTTP
+  - Response
+  - header
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><code><strong>Age</strong></code> 標頭代表資源進到代理快取後，經過了幾秒。</p>
+**`Age`** 標頭代表資源進到代理快取後，經過了幾秒。
 
-<p><code>Age</code> 標頭通常接近 0。如果你拿到 <code>Age: 0</code> 代表資源剛剛才從後端伺服器抓進來；
-  不然通常會是快取當下與回應中 {{HTTPHeader("Date")}} 標頭的時間差。</p>
+`Age` 標頭通常接近 0。如果你拿到 `Age: 0` 代表資源剛剛才從後端伺服器抓進來；
+不然通常會是快取當下與回應中 {{HTTPHeader("Date")}} 標頭的時間差。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+| Header type                                      | {{Glossary("Response header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="brush: html">Age: &lt;秒數差&gt;
-</pre>
+```html
+Age: <秒數差>
+```
 
-<h2 id="Directives">指令</h2>
+## 指令
 
-<dl>
-  <dt>&lt;秒數差&gt;</dt>
-  <dd>
-    <p>正整數，代表資源在代理快取放幾秒了。</p>
-  </dd>
-</dl>
+- <秒數差>
+  - : 正整數，代表資源在代理快取放幾秒了。
 
-<h2 id="Examples">範例</h2>
+## 範例
 
-<pre>Age: 24</pre>
+```plain
+Age: 24
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("http.headers.Age")}}</p>
+{{Compat("http.headers.Age")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTTPHeader("Cache-Control")}}</li>
-  <li>{{HTTPHeader("Expires")}}</li>
-</ul>
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Expires")}}

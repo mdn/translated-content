@@ -5,82 +5,78 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 {{HTTPSidebar}}
 
-<p><code>X-Frame-Options</code> <a href="/zh-TW/docs/Web/HTTP">HTTP</a> 回應標頭 (header) 用來指示文件是否能夠透過 {{ HTMLElement("frame") }}、{{ HTMLElement("iframe") }} 以及 {{ HTMLElement("object") }} 載入。網站可以利用 <code>X-Frame-Options</code> 來確保本身內容不會遭惡意嵌入到其他網站、避免 <a href="/en-US/docs/Web/Security/Types_of_attacks#click-jacking">clickjacking</a> 攻擊。</p>
+`X-Frame-Options` [HTTP](/zh-TW/docs/Web/HTTP) 回應標頭 (header) 用來指示文件是否能夠透過 {{ HTMLElement("frame") }}、{{ HTMLElement("iframe") }} 以及 {{ HTMLElement("object") }} 載入。網站可以利用 `X-Frame-Options` 來確保本身內容不會遭惡意嵌入到其他網站、避免 [clickjacking](/zh-TW/docs/Web/Security/Types_of_attacks#click-jacking) 攻擊。
 
-<p>僅當訪問文件的用戶使用支持 <code>X-Frame-Options</code> 的瀏覽器時，才提供附加的安全性。</p>
+僅當訪問文件的用戶使用支持 `X-Frame-Options` 的瀏覽器時，才提供附加的安全性。
 
-<div class="note">
-  <p><strong>Note: </strong>在支援的瀏覽器中，{{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令標準已經<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">取代</a>了非標準的 <code>X-Frame-Options</code>。</p>
-</div>
+> **備註：** 在支援的瀏覽器中，{{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令標準已經[取代](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了非標準的 `X-Frame-Options`。
 
-<h2 id="使用_X-Frame-Options">使用 X-Frame-Options</h2>
+## 使用 X-Frame-Options
 
-<p>共有三種值：</p>
+共有三種值：
 
-<dl>
- <dt><code>DENY</code></dt>
- <dd>表示網頁無論如何都無法被嵌入到 frame 中，即使於相同網域內嵌入也不允許。</dd>
- <dt><code>SAMEORIGIN</code></dt>
- <dd>唯有當符合<a href="/zh-TW/docs/Web/Security/Same-origin_policy">同源政策</a>下，才能被嵌入到 frame 中。</dd>
- <dt><code>ALLOW-FROM <em>uri</em></code> {{deprecated_inline}}</dt>
- <dd>唯有列表許可的 URI 才能嵌入到 frame 中。新版瀏覽器已不再支援此指令。</dd>
-</dl>
+- `DENY`
+  - : 表示網頁無論如何都無法被嵌入到 frame 中，即使於相同網域內嵌入也不允許。
+- `SAMEORIGIN`
+  - : 唯有當符合[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)下，才能被嵌入到 frame 中。
+- `ALLOW-FROM uri` {{deprecated_inline}}
+  - : 唯有列表許可的 URI 才能嵌入到 frame 中。新版瀏覽器已不再支援此指令。
 
-<h3 id="設定_Apache">設定 Apache</h3>
+### 設定 Apache
 
-<p>請加入以下指令到網站組態設定檔：</p>
+請加入以下指令到網站組態設定檔：
 
-<pre>Header always append X-Frame-Options SAMEORIGIN
-</pre>
+```plain
+Header always append X-Frame-Options SAMEORIGIN
+```
 
-<h3 id="設定_nginx">設定 nginx</h3>
+### 設定 nginx
 
-<p>請加入以下指令到 http, server 或 location 組態設定檔:</p>
+請加入以下指令到 http, server 或 location 組態設定檔:
 
-<pre><code>add_header X-Frame-Options </code>SAMEORIGIN<code>;</code>
-</pre>
+```plain
+add_header X-Frame-Options SAMEORIGIN;
+```
 
-<h3 id="設定_IIS">設定 IIS</h3>
+### 設定 IIS
 
-<p>請加入以下指令到網站的 Web.config 檔:</p>
+請加入以下指令到網站的 Web.config 檔:
 
-<pre><code>&lt;system.webServer&gt;
+```plain
+<system.webServer>
   ...
 
-  &lt;httpProtocol&gt;
-    &lt;customHeaders&gt;
-      &lt;add name="X-Frame-Options" value="SAMEORIGIN" /&gt;
-    &lt;/customHeaders&gt;
-  &lt;/httpProtocol&gt;
+  <httpProtocol>
+    <customHeaders>
+      <add name="X-Frame-Options" value="SAMEORIGIN" />
+    </customHeaders>
+  </httpProtocol>
 
   ...
-&lt;/system.webServer&gt;</code>
-</pre>
+</system.webServer>
+```
 
-<h3 id="設定_HAProxy">設定 HAProxy</h3>
+### 設定 HAProxy
 
-<p>請加入以下指令到 frontend, listen, 或 backend 組態設定檔:</p>
+請加入以下指令到 frontend, listen, 或 backend 組態設定檔:
 
-<pre>rspadd X-Frame-Options:\ SAMEORIGIN
-</pre>
+```plain
+rspadd X-Frame-Options:\ SAMEORIGIN
+```
 
-<div class="note">
-<p><strong>Note: </strong>設定 Meta tag 是無效的，像是 &lt;meta http-equiv="X-Frame-Options" content="deny"&gt; 便沒有任何效果，只有透過設定 HTTP header 才有效果，請勿採用。</p>
-</div>
+> **備註：** 設定 Meta tag 是無效的，像是 \<meta http-equiv="X-Frame-Options" content="deny"> 便沒有任何效果，只有透過設定 HTTP header 才有效果，請勿採用。
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令</li>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
- <li><a href="https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses">ClickJacking Defenses - IEBlog</a></li>
- <li><a href="https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令
+- [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
+- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)

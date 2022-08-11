@@ -3,67 +3,47 @@ title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 translation_of: Web/HTTP/Methods/CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong>HTTP <code>CONNECT</code></strong> 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。</p>
+**HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。
 
-<p>舉例來說，<code>CONNECT</code> 方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。</p>
+舉例來說，`CONNECT` 方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。
 
-<p><code>CONNECT</code> 是個逐跳方法。</p>
+`CONNECT` 是個逐跳方法。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">請求具有 Body</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">成功回覆具有 Body</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>否</td>
-  </tr>
-  <tr>
-   <th scope="row">可用於 <a href="/zh-TW/docs/Web/Guide/HTML/Forms">HTML 表單</a></th>
-   <td>否</td>
-  </tr>
- </tbody>
-</table>
+| 請求具有 Body                                        | 否  |
+| ---------------------------------------------------- | --- |
+| 成功回覆具有 Body                                    | 是  |
+| {{Glossary("Safe")}}                         | 否  |
+| {{Glossary("Idempotent")}}                 | 否  |
+| {{Glossary("Cacheable")}}                     | 否  |
+| 可用於 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms) | 否  |
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">CONNECT www.example.com:443 HTTP/1.1
-</pre>
+```plain
+CONNECT www.example.com:443 HTTP/1.1
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>有些 Proxy 伺服器也許需要授權以建立隧道。請見 {{HTTPHeader("Proxy-Authorization")}} 標頭。</p>
+有些 Proxy 伺服器也許需要授權以建立隧道。請見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
 
-<pre class="brush: plain">CONNECT server.example.com:80 HTTP/1.1
+```plain
+CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+Proxy-Authorization: basic aGVsbG86d29ybGQ=
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.methods.CONNECT")}}</p>
+{{Compat("http.methods.CONNECT")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Proxy-Authorization")}}

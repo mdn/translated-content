@@ -3,78 +3,57 @@ title: POST
 slug: Web/HTTP/Methods/POST
 translation_of: Web/HTTP/Methods/POST
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>The <strong>HTTP <code>POST</code> method</strong> sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.</p>
+The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
 
-<p>The difference between <code>PUT</code> and {{HTTPMethod("POST")}} is that <code>PUT</code> is idempotent: calling it once or several times successively has the same effect (that is no <em>side</em> effect), where successive identical <code>POST</code> may have additional effects, like passing an order several times.</p>
+The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), where successive identical `POST` may have additional effects, like passing an order several times.
 
-<p>A <code>POST</code> request is typically sent via an <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a> and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:</p>
+A `POST` request is typically sent via an [HTML form](/zh-TW/docs/Web/Guide/HTML/Forms) and results in a change on the server. In this case, the content type is selected by putting the adequate string in the {{htmlattrxref("enctype", "form")}} attribute of the {{HTMLElement("form")}} element or the {{htmlattrxref("formenctype", "input")}} attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
 
-<ul>
- <li><code>application/x-www-form-urlencoded</code>: the keys and values are encoded in key-value tuples separated by <code>'&amp;'</code>, with a <code>'='</code> between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use <code>multipart/form-data</code> instead)</li>
- <li><code>multipart/form-data</code>: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the <code>Content-Disposition</code> header of each part.</li>
- <li><code>text/plain</code></li>
-</ul>
+- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by `'&'`, with a `'='` between the key and the value. Non-alphanumeric characters in both keys and values are {{glossary("percent-encoding", "percent encoded")}}: this is the reason why this type is not suitable to use with binary data (use `multipart/form-data` instead)
+- `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the `Content-Disposition` header of each part.
+- `text/plain`
 
-<p>When the <code>POST</code> request is sent via a method other than an HTML form — like via an {{domxref("XMLHttpRequest")}} — the body can take any type. As described in the HTTP 1.1 specification, <code>POST</code> is designed to allow a uniform method to cover the following functions:</p>
+When the `POST` request is sent via a method other than an HTML form — like via an {{domxref("XMLHttpRequest")}} — the body can take any type. As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
-<ul>
- <li>Annotation of existing resources</li>
- <li>Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;</li>
- <li>Adding a new user through a signup modal;</li>
- <li>Providing a block of data, such as the result of submitting a form, to a data-handling process;</li>
- <li>Extending a database through an append operation.</li>
-</ul>
+- Annotation of existing resources
+- Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;
+- Adding a new user through a signup modal;
+- Providing a block of data, such as the result of submitting a form, to a data-handling process;
+- Extending a database through an append operation.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Request has body</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Successful response has body</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>Only if freshness information is included</td>
-  </tr>
-  <tr>
-   <th scope="row">Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a></th>
-   <td>Yes</td>
-  </tr>
- </tbody>
-</table>
+| Request has body                                          | Yes                                       |
+| --------------------------------------------------------- | ----------------------------------------- |
+| Successful response has body                              | Yes                                       |
+| {{Glossary("Safe")}}                              | No                                        |
+| {{Glossary("Idempotent")}}                      | No                                        |
+| {{Glossary("Cacheable")}}                          | Only if freshness information is included |
+| Allowed in [HTML forms](/zh-TW/docs/Web/Guide/HTML/Forms) | Yes                                       |
 
-<h2 id="格式">格式</h2>
+## 格式
 
-<pre class="syntaxbox">POST /test
-</pre>
+```plain
+POST /test
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>使用 <code>application/x-www-form-urlencoded</code> 內容類型的簡易表單:</p>
+使用 `application/x-www-form-urlencoded` 內容類型的簡易表單:
 
-<pre class="brush: plain">POST /test HTTP/1.1
+```plain
+POST /test HTTP/1.1
 Host: foo.example
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
 
-field1=value1&amp;field2=value2</pre>
+field1=value1&field2=value2
+```
 
-<p>使用 <code>multipart/form-data</code> 內容類型的表單:</p>
+使用 `multipart/form-data` 內容類型的表單:
 
-<pre>POST /test HTTP/1.1
+```plain
+POST /test HTTP/1.1
 Host: foo.example
 Content-Type: multipart/form-data;boundary="boundary"
 
@@ -87,19 +66,17 @@ Content-Disposition: form-data; name="field2"; filename="example.txt"
 
 value2
 --boundary--
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("http.methods.POST")}}</p>
+{{Compat("http.methods.POST")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Disposition")}}

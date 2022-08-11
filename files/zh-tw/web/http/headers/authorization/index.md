@@ -8,84 +8,58 @@ tags:
   - Request header
   - header
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP 請求中的 <strong><code>Authorization</code></strong> 是 user agent 用來向伺服器做身份認證（authentication）的憑證（credentials），
-  通常是在伺服器回應 {{HTTPStatus("401")}}
-  <code>Unauthorized</code> 狀態及 {{HTTPHeader("WWW-Authenticate")}} 標頭後才會在後續請求使用這個標頭。</p>
+HTTP 請求中的 **`Authorization`** 是 user agent 用來向伺服器做身份認證（authentication）的憑證（credentials），
+通常是在伺服器回應 {{HTTPStatus("401")}}
+`Unauthorized` 狀態及 {{HTTPHeader("WWW-Authenticate")}} 標頭後才會在後續請求使用這個標頭。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
-    </tr>
-  </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                       |
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="brush: html">Authorization: &lt;type&gt; &lt;credentials&gt;</pre>
+```html
+Authorization: <type> <credentials>
+```
 
-<h2 id="Directives">指令</h2>
+## 指令
 
-<dl>
-  <dt>&lt;type&gt;</dt>
-  <dd><a href="/en-US/docs/Web/HTTP/Authentication#authentication_schemes">認證方式</a>，通常是 <a
-      href="/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a>。
-    其他方式可以參考：
-    <ul>
-      <li><a
-          href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">IANA
-          registry of Authentication schemes</a></li>
-      <li><a
-          href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Authentification
-          for AWS servers (<code>AWS4-HMAC-SHA256</code>)</a></li>
-    </ul>
-  </dd>
-  <dt>&lt;credentials&gt;</dt>
-  <dd>如果使用「Basic」方式，則憑證的格式會長的像這樣：
-    <ul>
-      <li>帳號、密碼會用冒號（:）串起來
-        （<code>aladdin:opensesame</code>）。</li>
-      <li>然後在以 <a
-          href="/en-US/docs/Glossary/Base64">base64</a>
-        編碼 (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
-    </ul>
+- \<type>
+  - : [認證方式](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)，通常是 ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme)。其他方式可以參考：
 
-    <div class="note">
-      <p><strong>Note</strong>: Base64 編碼不是加密也不是雜湊（Hash）！就算用明文直接傳，
-        安全性也跟用 base64 編碼過一樣（base64 是可以解碼的）。最好用 HTTPS 搭配這種驗證方式。</p>
-    </div>
-  </dd>
-</dl>
+    - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [Authentification](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html) for AWS servers (`AWS4-HMAC-SHA256`)
+- \<credentials>
+  - : 如果使用「Basic」方式，則憑證的格式會長的像這樣：
 
-<h2 id="Examples">範例</h2>
+    - 帳號、密碼會用冒號（:）串起來（`aladdin:opensesame`）。
+    - 然後在以 [base64](/en-US/docs/Glossary/Base64) 編碼 (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-<pre>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
-</pre>
+    > **備註：** Base64 編碼不是加密也不是雜湊（Hash）！就算用明文直接傳，安全性也跟用 base64 編碼過一樣（base64 是可以解碼的）。最好用 HTTPS 搭配這種驗證方式。
 
-<p>可以看看 <a href="/en-US/docs/Web/HTTP/Authentication"> HTTP authentication</a> 中的範例
-  教你如何在 Apache 或 nginx 上啟用 HTTP basic authentication 來保護你的網站。</p>
+## 範例
 
-<h2 id="Specifications">規範</h2>
+```plain
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+
+可以看看 [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication) 中的範例
+教你如何在 Apache 或 nginx 上啟用 HTTP basic authentication 來保護你的網站。
+
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
-  <li>{{HTTPHeader("WWW-Authenticate")}}</li>
-  <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-  <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
-  <li>{{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [HTTP authentication](/zh-TW/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

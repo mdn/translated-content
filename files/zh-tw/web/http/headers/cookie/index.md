@@ -8,51 +8,42 @@ tags:
   - header
   - request
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>Cookie</code></strong> 是 HTTP 請求標頭，它的值包含由伺服器設定的 <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> （透過 {{HTTPHeader("Set-Cookie")}} 標頭設定，或者透過 Javascript 的 {{domxref("Document.cookie")}} 設定）。</p>
+**`Cookie`** 是 HTTP 請求標頭，它的值包含由伺服器設定的 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies) （透過 {{HTTPHeader("Set-Cookie")}} 標頭設定，或者透過 Javascript 的 {{domxref("Document.cookie")}} 設定）。
 
-<p><code>Cookie</code> 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。</p>
+`Cookie` 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
+| Header type                                      | {{Glossary("Request header")}} |
+| ------------------------------------------------ | ---------------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                                      |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">Cookie: &lt;cookie-list&gt;
+```html
+Cookie: <cookie-list>
 Cookie: name=value
-Cookie: name=value; name2=value2; name3=value3</pre>
+Cookie: name=value; name2=value2; name3=value3
+```
 
-<dl>
- <dt>&lt;cookie-list&gt;</dt>
- <dd>一連串名值對（name-value pair），格式為： <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code>。每對之間由一個分號與一個空白分隔（<code>'; '</code>）。</dd>
-</dl>
+- \<cookie-list>
+  - : 一連串名值對（name-value pair），格式為： `<cookie-name>=<cookie-value>`。每對之間由一個分號與一個空白分隔（`'; '`）。
 
-<h2 id="Examples">範例</h2>
+## 範例
 
-<pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1</pre>
+```plain
+Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("http.headers.Cookie")}}</p>
+{{Compat("http.headers.Cookie")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTTPHeader("Set-Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- {{HTTPHeader("Set-Cookie")}}
+- {{domxref("Document.cookie")}}

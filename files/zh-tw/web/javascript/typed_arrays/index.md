@@ -132,7 +132,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 舉例來說，可以用 `amountDueView[0]` 存取 amountDue。
 
-> **備註：**C 結構的 [data structure alignment](http://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
+> **備註：** C 結構的 [data structure alignment](http://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
 
 ### Conversion to normal arrays
 

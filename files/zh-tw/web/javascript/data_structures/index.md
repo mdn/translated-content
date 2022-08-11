@@ -129,7 +129,7 @@ Associates a key with one or two accessor functions (get and set) to retrieve or
 | [[Enumerable]]   | Boolean                      | If `true`, the property will be enumerated in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.                                                                                                | false         |
 | [[Configurable]] | Boolean                      | If `false`, the property can't be deleted and can't be changed to a data property.                                                                                                                                       | false         |
 
-> **備註：**Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
+> **備註：** Attribute is usually used by JavaScript engine, so you can't directly access it(see more about [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)).That's why the attribute is put in double square brackets instead of single.
 
 ### "Normal" objects, and functions
 

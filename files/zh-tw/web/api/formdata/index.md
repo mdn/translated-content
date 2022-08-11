@@ -9,7 +9,7 @@ translation_of: Web/API/FormData
 
 實作 `FormData` 的物件可以直接利用 {{jsxref("Statements/for...of", "for...of")}} 語法結構來替代 {{domxref('FormData.entries()', 'entries()')}}：`for (var p of myFormData)` 等同於 `for (var p of myFormData.entries())`。
 
-> **備註：**此特性適用於 [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API)。
+> **備註：** 此特性適用於 [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API)。
 
 ## 建構式
 

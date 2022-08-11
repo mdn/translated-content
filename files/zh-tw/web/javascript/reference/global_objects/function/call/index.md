@@ -3,64 +3,67 @@ title: Function.prototype.call
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>使用給定的<code>this</code>參數以及分別給定的參數來呼叫某個函數</p>
+使用給定的`this`參數以及分別給定的參數來呼叫某個函數
 
-<div class="note">
-<p><strong>備註：</strong> 此函數的所有語法大致上與<code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code>相同，他們基本上不同處只有 <code>call()</code> 接受一連串的參數，而 <code>apply()</code> 單一的array作為參數</p>
-</div>
+> **備註：** 此函數的所有語法大致上與[`apply()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply)相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th colspan="2"><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">Function </a>物件的方法</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>被實作於</td>
-   <td>JavaScript 1.3</td>
-  </tr>
-  <tr>
-   <td>ECMAScript 版本</td>
-   <td>ECMAScript 第三版</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="2">
+        <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function"
+          >Function </a
+        >物件的方法
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>被實作於</td>
+      <td>JavaScript 1.3</td>
+    </tr>
+    <tr>
+      <td>ECMAScript 版本</td>
+      <td>ECMAScript 第三版</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code><em>fun</em>.call(<em>thisArg</em>[, <em>arg1</em>[, <em>arg2</em>[, ...]]])</code></pre>
+```plain
+fun.call(thisArg[, arg1[, arg2[, ...]]])
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>thisArg</code></dt>
- <dd>呼叫<em><code>fun</code></em>時提供的<code>this</code>值。 注意，它可能是一個無法在函數內看到的值：若這個函數是在非嚴苛模式( <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">non-strict mode</a> ), <code>null</code> <code>、undefined</code> 將會被置換成全域變數，而原生型態的值將會被封裝</dd>
- <dt><code>arg1, arg2, ...</code></dt>
- <dd>其他參數</dd>
-</dl>
+- `thisArg`
+  - : 呼叫*`fun`*時提供的`this`值。 注意，它可能是一個無法在函數內看到的值：若這個函數是在非嚴苛模式( [non-strict mode](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) ), `null` `、undefined` 將會被置換成全域變數，而原生型態的值將會被封裝
+- `arg1, arg2, ...`
+  - : 其他參數
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<p>你可以在呼叫一個現存的函數時，使用不一樣的 <code>this</code> 物件。 <code>this</code> 會參照到目前的物件，呼叫的物件上</p>
+你可以在呼叫一個現存的函數時，使用不一樣的 `this` 物件。 `this` 會參照到目前的物件，呼叫的物件上
 
-<p>使用 <code>call，</code> 你可以實作函數一次，然後在其他的物件上直接繼承它，而不用在新的物件上重寫該函數</p>
+使用 `call，` 你可以實作函數一次，然後在其他的物件上直接繼承它，而不用在新的物件上重寫該函數
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="使用_call_來串接物件上的建構子">使用 <code>call</code> 來串接物件上的建構子</h3>
+### 使用 `call` 來串接物件上的建構子
 
-<p>你可以使用 <code>call</code> 來串接其他物件的建構子，就像 Java. 下面的例子中，<code>Product</code> 物件的建構子定義了兩個參數 <code>name</code> 以及 <code>price</code>. 其他函數<code>Food</code> 及 <code>Toy</code> 引用了 <code>Product</code> 並傳入 <code>this</code> 、 <code>name</code> 和 <code>price</code>。 Product 初始化它的屬性 <code>name</code> 和 <code>price</code>, 而兩個子函數則定義了<code>category。</code></p>
+你可以使用 `call` 來串接其他物件的建構子，就像 Java. 下面的例子中，`Product` 物件的建構子定義了兩個參數 `name` 以及 `price`. 其他函數`Food` 及 `Toy` 引用了 `Product` 並傳入 `this` 、 `name` 和 `price`。 Product 初始化它的屬性 `name` 和 `price`, 而兩個子函數則定義了`category。`
 
-<pre class="brush: js">function Product(name, price) {
+```js
+function Product(name, price) {
   this.name = name;
   this.price = price;
 
-  if (price &lt; 0)
+  if (price < 0)
     throw RangeError('Cannot create product "' + name + '" with a negative price');
   return this;
 }
@@ -79,18 +82,19 @@ Toy.prototype = new Product();
 
 var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
-</pre>
+```
 
-<h3 id="使用_call_來呼叫匿名的函數">使用 <code>call</code> 來呼叫匿名的函數</h3>
+### 使用 `call` 來呼叫匿名的函數
 
-<p>下面這個簡易的例子中，我們做了一個匿名的函數，並用 <code>call</code> 來讓它應用在每個在串列中的物件中. 這個匿名函數的主要用途是加入一個print函數到每個物件上，這個函數可以印出每個物件的index指標。 傳入物件作為 <code>this</code> 的值並不是必要的，但他有解釋的用途。</p>
+下面這個簡易的例子中，我們做了一個匿名的函數，並用 `call` 來讓它應用在每個在串列中的物件中. 這個匿名函數的主要用途是加入一個 print 函數到每個物件上，這個函數可以印出每個物件的 index 指標。 傳入物件作為 `this` 的值並不是必要的，但他有解釋的用途。
 
-<pre class="brush: js">var animals = [
+```js
+var animals = [
   {species: 'Lion', name: 'King'},
   {species: 'Whale', name: 'Fail'}
 ];
 
-for (var i = 0; i &lt; animals.length; i++) {
+for (var i = 0; i < animals.length; i++) {
   (function (i) {
     this.print = function () {
       console.log('#' + i  + ' ' + this.species + ': ' + this.name);
@@ -98,18 +102,16 @@ for (var i = 0; i &lt; animals.length; i++) {
     this.print();
   }).call(animals[i], i);
 }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply">apply</a></li>
-</ul>
+- [apply](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply)
