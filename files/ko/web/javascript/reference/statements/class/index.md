@@ -10,34 +10,36 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>class</code> 선언</strong>은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.</p>
+**`class` 선언**은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-class.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-class.html")}}
 
-<p>{{jsxref("Operators/class", "클래스 표현", "", 1)}}을 사용하여 클래스를 정의할 수도 있습니다. 표현식과 달리 선언문으로는 같은 클래스를 다시 선언하면 오류가 발생합니다.</p>
+{{jsxref("Operators/class", "클래스 표현", "", 1)}}을 사용하여 클래스를 정의할 수도 있습니다. 표현식과 달리 선언문으로는 같은 클래스를 다시 선언하면 오류가 발생합니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">class <em>name</em> [extends] {
-  // class body
-}
-</pre>
+```js
+    class name [extends] {
+      // class body
+    }
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>클래스 본문은 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서 실행됩니다. 생성자 속성은 선택 사항입니다..</p>
+클래스 본문은 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 실행됩니다. 생성자 속성은 선택 사항입니다..
 
-<p>클래스 선언은 {{jsxref("Statements/function", "함수 선언", "", 0)}}과 달리 {{Glossary("Hoisting", "호이스팅")}}의 대상이 아닙니다.</p>
+클래스 선언은 {{jsxref("Statements/function", "함수 선언", "", 0)}}과 달리 {{Glossary("Hoisting", "호이스팅")}}의 대상이 아닙니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="간단한_클래스_선언">간단한 클래스 선언</h3>
+### 간단한 클래스 선언
 
-<p>다음 예제는 우선 <code>Polygon</code> 클래스를 정의하고, <code>Square</code>라는 이름의 새로운 클래스가 <code>Polygon</code>을 상속합니다. 생성자 내부의 <code>super()</code>는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.</p>
+다음 예제는 우선 `Polygon` 클래스를 정의하고, `Square`라는 이름의 새로운 클래스가 `Polygon`을 상속합니다. 생성자 내부의 `super()`는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
   constructor(height, width) {
     this.name = 'Polygon';
     this.height = height;
@@ -50,36 +52,33 @@ class Square extends Polygon {
     super(length, length);
     this.name = 'Square';
   }
-}</pre>
+}
+```
 
-<div class="warning">
-<h3 id="같은_클래스를_두_번_선언하려고_시도할_때">같은 클래스를 두 번 선언하려고 시도할 때</h3>
+> **Warning:** 같은 클래스를 두 번 선언하려고 시도할 때 클래스 선언문으로 같은 클래스를 두 번 선언하면 오류가 발생합니다. 
 
-<p>클래스 선언문으로 같은 클래스를 두 번 선언하면 오류가 발생합니다.</p>
-
-<pre class="brush: js">class Foo {};
+```js
+class Foo {};
 class Foo {}; // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-</pre>
+```
 
-<p>이전에 표현식으로 정의한 경우에도 오류가 발생합니다.</p>
+이전에 표현식으로 정의한 경우에도 오류가 발생합니다.
 
-<pre class="brush: js">var Foo = class {};
+```js
+var Foo = class {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
-</pre>
-</div>
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.statements.class")}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 참조
 
-<ul>
- <li>{{jsxref("Statements/function", "function")}} 선언문</li>
- <li>{{jsxref("Operators/class", "class")}} 표현식</li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Classes">클래스</a></li>
-</ul>
+- {{jsxref("Statements/function", "function")}} 선언문
+- {{jsxref("Operators/class", "class")}} 표현식
+- [클래스](/ko/docs/Web/JavaScript/Reference/Classes)

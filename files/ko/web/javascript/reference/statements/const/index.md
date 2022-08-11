@@ -9,40 +9,39 @@ tags:
   - constants
 translation_of: Web/JavaScript/Reference/Statements/const
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>const</code> 선언</strong>은 블록 범위의 상수를 선언합니다. 상수의 값은 재할당할 수 없으며 다시 선언할 수도 없습니다.</p>
+**`const` 선언**은 블록 범위의 상수를 선언합니다. 상수의 값은 재할당할 수 없으며 다시 선언할 수도 없습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-const.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
+## 구문
 
+```js
+    const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```
 
-<h2 id="구문">구문</h2>
+- `nameN`
+  - : 상수의 이름. 아무 유효한 {{Glossary("identifier", "식별자")}}를 사용할 수 있습니다.
+- `valueN`
+  - : 상수의 값. 아무 유효한 [표현식](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식)이나 가능합니다.
 
-<pre class="syntaxbox">const <em>name1 = <em>value1 [</em>, <em>name2</em> = <em>value2</em><em> [</em>, ... [</em>, <em>nameN</em> = <em>valueN]]]</em>;</pre>
+## 설명
 
-<dl>
- <dt><code>nameN</code></dt>
- <dd>상수의 이름. 아무 유효한 {{Glossary("identifier", "식별자")}}를 사용할 수 있습니다.</dd>
- <dt><code>valueN</code></dt>
- <dd>상수의 값. 아무 유효한 <a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#표현식">표현식</a>이나 가능합니다.</dd>
-</dl>
+이 선언은 선언된 함수에 전역 또는 지역일 수 있는 상수를 만듭니다. 상수 초기자(initializer)가 필요합니다. 즉 선언되는 같은 문에 그 값을 지정해야 합니다(이는 나중에 변경될 수 없는 점을 감안하면 말이 됩니다).
 
-<h2 id="설명">설명</h2>
+상수는 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 문을 사용하여 정의된 변수와 마찬가지로 블록 범위(block-scope)입니다. 상수의 값은 재할당을 통해 바뀔 수 없고 재선언될 수 없습니다.
 
-<p>이 선언은 선언된 함수에 전역 또는 지역일 수 있는 상수를 만듭니다. 상수 초기자(initializer)가 필요합니다. 즉 선언되는 같은 문에 그 값을 지정해야 합니다(이는 나중에 변경될 수 없는 점을 감안하면 말이 됩니다).</p>
+[`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)에 적용한 "[일시적 사각 지대](/ko/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)"에 관한 모든 고려는, `const`에도 적용합니다.
 
-<p>상수는 <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 문을 사용하여 정의된 변수와 마찬가지로 블록 범위(block-scope)입니다. 상수의 값은 재할당을 통해 바뀔 수 없고 재선언될 수 없습니다.</p>
+상수는 같은 범위의 상수 또는 변수와 그 이름을 공유할 수 없습니다.
 
-<p><code><a href="/ko/docs/Web/JavaScript/Reference/Statements/let">let</a></code>에 적용한 "<a href="/ko/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">일시적 사각 지대</a>"에 관한 모든 고려는, <code>const</code>에도 적용합니다.</p>
+## 예제
 
-<p>상수는 같은 범위의 상수 또는 변수와 그 이름을 공유할 수 없습니다.</p>
+다음 예제는 상수가 어떻게 동작하는지 보입니다. 브라우저 콘솔에서 따라해보세요.
 
-<h2 id="예제">예제</h2>
-
-<p>다음 예제는 상수가 어떻게 동작하는지 보입니다. 브라우저 콘솔에서 따라해보세요.</p>
-
-<pre class="brush:js">// 주의: 상수 선언에는 대소문자 모두 사용할 수 있지만,
+```js
+// 주의: 상수 선언에는 대소문자 모두 사용할 수 있지만,
 // 일반적인 관습은 모두 대문자를 사용하는 것입니다.
 
 // MY_FAV를 상수로 정의하고 그 값을 7로 함
@@ -60,7 +59,7 @@ const MY_FAV = 20;
 // MY_FAV라는 이름은 위에서 상수로 예약되어 있어서 역시 실패함.
 var MY_FAV = 20;
 
-<code>// 역시 오류가 발생함
+// 역시 오류가 발생함
 let MY_FAV = 20;
 
 // 블록 범위의 특성을 아는게 중요
@@ -97,20 +96,19 @@ const MY_ARRAY = [];
 // 배열에 아이템을 삽입하는 건 가능합니다
 MY_ARRAY.push('A'); // ["A"]
 // 하지만 변수에 새로운 배열을 배정하면 에러가 발생합니다
-MY_ARRAY = ['B']</code></pre>
+MY_ARRAY = ['B']
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.statements.const")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
- <li><a href="/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants">JavaScript 안내서의 상수</a></li>
-</ul>
+- [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)
+- [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)
+- [JavaScript 안내서의 상수](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Constants)

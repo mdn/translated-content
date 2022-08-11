@@ -9,109 +9,120 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/export
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>export</code></strong> 문은 JavaScript 모듈에서 함수, 객체, 원시 값을 내보낼 때 사용합니다. 내보낸 값은 다른 프로그램에서 {{jsxref("Statements/import", "import")}} 문으로 가져가 사용할 수 있습니다.</p>
+**`export`** 문은 JavaScript 모듈에서 함수, 객체, 원시 값을 내보낼 때 사용합니다. 내보낸 값은 다른 프로그램에서 {{jsxref("Statements/import", "import")}} 문으로 가져가 사용할 수 있습니다.
 
-<p>내보내는 모듈은 <code>"use strict"</code>의 존재 유무와 상관없이 무조건 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>입니다. <code>export</code> 문은 HTML 안에 작성한 스크립트에서는 사용할 수 없습니다.</p>
+내보내는 모듈은 `"use strict"`의 존재 유무와 상관없이 무조건 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)입니다. `export` 문은 HTML 안에 작성한 스크립트에서는 사용할 수 없습니다.
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="syntaxbox">// 하나씩 내보내기
-export let <var>name1</var>, <var>name2</var>, …, <var>nameN</var>; // var, const도 동일
-export let <var>name1</var> = …, <var>name2</var> = …, …, <var>nameN</var>; // var, const도 동일
-export function functionName(){...}
-export class ClassName {...}
+```js
+    // 하나씩 내보내기
+    export let name1, name2, …, nameN; // var, const도 동일
+    export let name1 = …, name2 = …, …, nameN; // var, const도 동일
+    export function functionName(){...}
+    export class ClassName {...}
 
-// 목록으로 내보내기
-export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> };
+    // 목록으로 내보내기
+    export { name1, name2, …, nameN };
 
-// 내보내면서 이름 바꾸기
-export { <var>variable1</var> as <var>name1</var>, <var>variable2</var> as <var>name2</var>, …, <var>nameN</var> };
+    // 내보내면서 이름 바꾸기
+    export { variable1 as name1, variable2 as name2, …, nameN };
 
-// 비구조화로 내보내기
-export const { <var>name1</var>, <var>name2: bar</var> } = o;
+    // 비구조화로 내보내기
+    export const { name1, name2: bar } = o;
 
-// 기본 내보내기
-export default <em>expression</em>;
-export default function (…) { … } // also class, function*
-export default function name1(…) { … } // also class, function*
-export { <var>name1</var> as default, … };
+    // 기본 내보내기
+    export default expression;
+    export default function (…) { … } // also class, function*
+    export default function name1(…) { … } // also class, function*
+    export { name1 as default, … };
 
-// 모듈 조합
-export * from …; // does not set the default export
-export * as name1 from …;
-export { <var>name1</var>, <var>name2</var>, …, <var>nameN</var> } from …;
-export { <var>import1</var> as <var>name1</var>, <var>import2</var> as <var>name2</var>, …, <var>nameN</var> } from …;
-export { default } from …;</pre>
+    // 모듈 조합
+    export * from …; // does not set the default export
+    export * as name1 from …;
+    export { name1, name2, …, nameN } from …;
+    export { import1 as name1, import2 as name2, …, nameN } from …;
+    export { default } from …;
+```
 
-<dl>
- <dt><code>nameN</code></dt>
- <dd>내보낼 식별자 이름. {{jsxref("Statements/import", "import")}}를 사용해 다른 스크립트에서 가져갈 수 있습니다.</dd>
-</dl>
+- `nameN`
+  - : 내보낼 식별자 이름. {{jsxref("Statements/import", "import")}}를 사용해 다른 스크립트에서 가져갈 수 있습니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>내보내기에는 두 종류, <strong>유명</strong>(named)과 <strong>기본</strong>(default) 내보내기가 있습니다. 모듈 하나에서, 유명 내보내기는 여러 개 존재할 수 있지만 기본 내보내기는 하나만 가능합니다. 각 종류는 위의 구문 중 하나와 대응합니다.</p>
+내보내기에는 두 종류, **유명**(named)과 **기본**(default) 내보내기가 있습니다. 모듈 하나에서, 유명 내보내기는 여러 개 존재할 수 있지만 기본 내보내기는 하나만 가능합니다. 각 종류는 위의 구문 중 하나와 대응합니다.
 
-<ul>
- <li>유명 내보내기
-  <pre class="brush: js">// 먼저 선언한 식별자 내보내기
-export { myFunction, myVariable };
+- 유명 내보내기
 
-// 각각의 식별자 내보내기
-// (변수, 상수, 함수, 클래스)
-export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
-</pre>
- </li>
- <li>기본 내보내기
-  <pre class="brush: js">// 먼저 선언한 식별자 내보내기
-export { myFunction as default };
+  ```js
+  // 먼저 선언한 식별자 내보내기
+  export { myFunction, myVariable };
 
-// 각각의 식별자 내보내기
-export default function () { ... };
-export default class { ... }
-</pre>
- </li>
-</ul>
+  // 각각의 식별자 내보내기
+  // (변수, 상수, 함수, 클래스)
+  export let myVariable = Math.sqrt(2);
+  export function myFunction() { ... };
+  ```
 
-<p>유명 내보내기는 여러 값을 내보낼 때 유용합니다. 가져갈 때는 내보낸 이름과 동일한 이름을 사용해야 합니다.</p>
+- 기본 내보내기
 
-<p>반면 기본 내보내기는 어떤 이름으로도 가져올 수 있습니다.</p>
+  ```js
+  // 먼저 선언한 식별자 내보내기
+  export { myFunction as default };
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">// test.js
-let k; export default k = 12;</code></pre>
+  // 각각의 식별자 내보내기
+  export default function () { ... };
+  export default class { ... }
+  ```
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">// 임의의 다른 파일
+유명 내보내기는 여러 값을 내보낼 때 유용합니다. 가져갈 때는 내보낸 이름과 동일한 이름을 사용해야 합니다.
+
+반면 기본 내보내기는 어떤 이름으로도 가져올 수 있습니다.
+
+```js
+// test.js
+let k; 
+export default k = 12;
+```
+
+```js
+// 임의의 다른 파일
 import m from './test'; // k가 기본 내보내기이므로, 가져오는 이름으로 k 대신 m을 사용해도 문제 없음
-console.log(m);         // 12 기록</code></pre>
+console.log(m);         // 12 기록
+```
 
-<p>식별자 충돌을 피하기 위해 유명 내보내기 중 이름을 바꿔줄 수도 있습니다.</p>
+식별자 충돌을 피하기 위해 유명 내보내기 중 이름을 바꿔줄 수도 있습니다.
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">export { myFunction as function1,
-         myVariable as variable };</code></pre>
+```js
+export { myFunction as function1,
+         myVariable as variable };
+```
 
-<h3 id="다시_내보내기_조합">다시 내보내기 / 조합</h3>
+### 다시 내보내기 / 조합
 
-<p>부모 모듈이 자식 모듈을 가져와서 다시 내보낼 수도 있습니다. 즉, 여러 개의 모듈을 모아놓을 하나의 모듈을 만들 수 있습니다.</p>
+부모 모듈이 자식 모듈을 가져와서 다시 내보낼 수도 있습니다. 즉, 여러 개의 모듈을 모아놓을 하나의 모듈을 만들 수 있습니다.
 
-<pre class="brush: js">export foo from 'bar.js';
-</pre>
+```js
+export foo from 'bar.js';
+```
 
-<p>위 구문은 아래와 동일합니다.</p>
+위 구문은 아래와 동일합니다.
 
-<pre class="brush: js">import foo from 'bar.js';
+```js
+import foo from 'bar.js';
 export foo;
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="유명_내보내기_사용">유명 내보내기 사용</h3>
+### 유명 내보내기 사용
 
-<p>어떤 모듈에서 다음과 같은 코드를 가진다고 해보겠습니다.</p>
+어떤 모듈에서 다음과 같은 코드를 가진다고 해보겠습니다.
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 function cube(x) {
   return x * x * x;
 }
@@ -125,13 +136,15 @@ var graph = {
         console.log('From graph draw function');
     }
 }
-export { cube, foo, graph };</pre>
+export { cube, foo, graph };
+```
 
-<p>다른 스크립트에서는 아래와 같이 사용할 수 있습니다.</p>
+다른 스크립트에서는 아래와 같이 사용할 수 있습니다.
 
-<pre class="brush: js">// You should use this script in html with the type module.
+```js
+// You should use this script in html with the type module.
 // For example:
-//   &lt;script type="module" src="./demo.js"&gt;&lt;/script&gt;
+//   <script type="module" src="./demo.js"></script>
 //
 // Open the page in a http server, otherwise there will be a CORS policy error.
 //
@@ -144,38 +157,41 @@ graph.options = {
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888</pre>
+console.log(foo);    // 4.555806215962888
+```
 
-<h3 id="기본_내보내기_사용">기본 내보내기 사용</h3>
+### 기본 내보내기 사용
 
-<p>단일 값을 내보낼 때나 모듈의 폴백 값이 필요할 땐 기본 내보내기를 사용할 수 있습니다.</p>
+단일 값을 내보낼 때나 모듈의 폴백 값이 필요할 땐 기본 내보내기를 사용할 수 있습니다.
 
-<pre class="brush: js">// module "my-module.js"
+```js
+// module "my-module.js"
 export default function cube(x) {
   return x * x * x;
-}</pre>
+}
+```
 
-<p>그런 다음, 다른 스크립트에서 가져오는건 간단합니다:</p>
+그런 다음, 다른 스크립트에서 가져오는건 간단합니다:
 
-<pre class="brush: js">import cube from './my-module.js';
-console.log(cube(3)); // 27</pre>
+```js
+import cube from './my-module.js';
+console.log(cube(3)); // 27
+```
 
-<p><code>export default</code>를 사용할 때 <code>var</code>, <code>let</code>, <code>const</code>는 사용하지 못합니다.</p>
+`export default`를 사용할 때 `var`, `let`, `const`는 사용하지 못합니다.
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.statements.export")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Statements/import", "import")}}</li>
- <li><a href="/ko/docs/Web/JavaScript/Guide/Modules">JavaScript 모듈</a> 안내서</li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
- <li><a href="http://exploringjs.com/es6/ch_modules.html">Axel Rauschmayer's book: "Exploring JS: Modules"</a></li>
-</ul>
+- {{jsxref("Statements/import", "import")}}
+- [JavaScript 모듈](/ko/docs/Web/JavaScript/Guide/Modules) 안내서
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
+- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
