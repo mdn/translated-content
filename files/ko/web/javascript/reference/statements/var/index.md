@@ -7,37 +7,33 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/var
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><code><strong>var</strong></code>문은 변수를 선언하고, 선택적으로 초기화할 수 있습니다.</p>
+**`var`**문은 변수를 선언하고, 선택적으로 초기화할 수 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-var.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-var.html")}}
 
+## 구문
 
+```js
+    var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
+```
 
-<h2 id="구문">구문</h2>
+- `varnameN`
+  - : 변수 이름. 어떤 유효한 식별자도 될 수 있습니다.
+- `valueN`
+  - : 변수의 초기값. 어떤 유효한 표현도 될 수 있습니다.
 
-<pre class="syntaxbox">var <em>varname1 [</em>= <em>value1 [</em>, <em>varname2 [</em>, <em>varname3 ... [</em>, <em>varnameN]]]]</em>;</pre>
+## 설명
 
-<dl>
- <dt><code>varnameN</code></dt>
- <dd>변수 이름. 어떤 유효한 식별자도 될 수 있습니다.</dd>
-</dl>
+어디에 선언이 되어있든 간에 변수들은 어떠한 코드가 실행되기 전에 처리가 됩니다. var로 선언된 변수의 범위는 현재 실행 문맥인데, 그 문맥은 둘러싼 함수, 혹은 함수의 외부에 전역으로 선언된 변수도 될 수 있습니다.
 
-<dl>
- <dt><code>valueN</code></dt>
- <dd>변수의 초기값. 어떤 유효한 표현도 될 수 있습니다.</dd>
-</dl>
+선언된 변수들의 값 할당은 할당이 실행될 때 전역변수(이것은 전역 오브젝트의 프로퍼티가 됩니다)처럼 생성이 됩니다. 선언된 변수들과 선언되지 않은 변수들의 차이점은 다음과 같습니다:
 
-<h2 id="설명">설명</h2>
+1. 선언된 변수들은 변수가 선언된 실행 콘텍스트(execution context) 안에서 만들어집니다. 선언되지 않은 변수들은 항상 전역변수 입니다.
 
-<p>어디에 선언이 되어있든 간에 변수들은 어떠한 코드가 실행되기 전에  처리가 됩니다. var로 선언된 변수의 범위는 현재 실행 문맥인데, 그 문맥은 둘러싼 함수, 혹은 함수의 외부에 전역으로 선언된 변수도 될 수 있습니다.</p>
-
-<p>선언된 변수들의 값 할당은 할당이 실행될 때 전역변수(이것은 전역 오브젝트의 프로퍼티가 됩니다)처럼 생성이 됩니다. 선언된 변수들과 선언되지 않은 변수들의 차이점은 다음과 같습니다:</p>
-
-<p>1. 선언된 변수들은 변수가 선언된 실행 콘텍스트(execution context) 안에서 만들어집니다. 선언되지 않은 변수들은 항상 전역변수 입니다.</p>
-
-<pre class="brush: js">function x() {
+```js
+function x() {
   y = 1;   // strict 모드에서는 ReferenceError를 출력합니다.
   var z = 2;
 }
@@ -46,35 +42,42 @@ x();
 
 console.log(y); // 로그에 "1" 출력합니다.
 console.log(z); // ReferenceError: z is not defined outside x를 출력합니다.
-</pre>
+```
 
-<p>2. 선언된 변수들은 어떠한 코드가 실행되기 전에 만들어집니다. 선언되지 않은 변수들은 변수들을 할당하는 코드가 실행되기 전까지는 존재하지 않습니다.</p>
+2. 선언된 변수들은 어떠한 코드가 실행되기 전에 만들어집니다. 선언되지 않은 변수들은 변수들을 할당하는 코드가 실행되기 전까지는 존재하지 않습니다.
 
-<pre class="brush: js">console.log(a);                // ReferenceError를 출력합니다.
-console.log('still going...'); // 결코 실행되지 않습니다.</pre>
+```js
+console.log(a);                // ReferenceError를 출력합니다.
+console.log('still going...'); // 결코 실행되지 않습니다.
+```
 
-<pre class="brush: js">var a;
+```js
+var a;
 console.log(a);                // 브라우저에 따라 로그에 "undefined" 또는 "" 출력합니다.
-console.log('still going...'); // 로그에 "still going..." 출력합니다.</pre>
+console.log('still going...'); // 로그에 "still going..." 출력합니다.
+```
 
-<p>3. 선언된 변수들은 변수들의 실행 콘텍스트(execution context)의 프로퍼티를 변경되지 않습니다. 선언되지 않은 변수들은 변경 가능합니다. (e.g 삭제 될 수도 있습니다.)</p>
+3. 선언된 변수들은 변수들의 실행 콘텍스트(execution context)의 프로퍼티를 변경되지 않습니다. 선언되지 않은 변수들은 변경 가능합니다. (e.g 삭제 될 수도 있습니다.)
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 b = 2;
 
 delete this.a; // strict 모드에서는 TypeError를 출력합니다. 그렇지 않으면 자동적으로 실패합니다.
 delete this.b;
 
 console.log(a, b); // ReferenceError를 출력합니다.
-// 'b' 프로퍼티는 삭제되었고, 어디에도 존재하지 않습니다.</pre>
+// 'b' 프로퍼티는 삭제되었고, 어디에도 존재하지 않습니다.
+```
 
-<p>이러한 세가지 다른점 때문에, 변수 선언 오류는 예기치않은 결과로 이어질 가능성이 높습니다.  그러므로 <strong>함수 또는 전역 범위인지 여부와 상관없이, 항상 변수를 선언 하는 것을 추천합니다.</strong> 그리고 ECMAScript 5 안에 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a>, 선언되지 않은 변수에 할당하면 오류를 출력합니다.</p>
+이러한 세가지 다른점 때문에, 변수 선언 오류는 예기치않은 결과로 이어질 가능성이 높습니다. 그러므로 **함수 또는 전역 범위인지 여부와 상관없이, 항상 변수를 선언 하는 것을 추천합니다.** 그리고 ECMAScript 5 안에 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), 선언되지 않은 변수에 할당하면 오류를 출력합니다.
 
-<h3 id="var_호이스팅(hoisting)">var 호이스팅(hoisting)</h3>
+### var 호이스팅(hoisting)
 
-<p>변수 선언들 (그리고 일반적인 선언)은 어느 코드가 실행 되기 전에 처리하기 때문에, 코드 안에서 어디서든 변수 선언은  최상위에 선언한 것과 동등합니다. 이것은 변수가 선언되기 전에 사용 될 수 있다는 것을 의미합니다. 변수 선언이 함수 또는 전역 코드의 상단에 이동하는 것과 같은 행동을 "호이스팅(hoisting)"이라고 불립니다.</p>
+변수 선언들 (그리고 일반적인 선언)은 어느 코드가 실행 되기 전에 처리하기 때문에, 코드 안에서 어디서든 변수 선언은 최상위에 선언한 것과 동등합니다. 이것은 변수가 선언되기 전에 사용 될 수 있다는 것을 의미합니다. 변수 선언이 함수 또는 전역 코드의 상단에 이동하는 것과 같은 행동을 "호이스팅(hoisting)"이라고 불립니다.
 
-<pre class="brush: js">bla = 2
+```js
+bla = 2
 var bla;
 // ...
 
@@ -82,38 +85,42 @@ var bla;
 
 var bla;
 bla = 2;
-</pre>
+```
 
-<p>이러한 이유로, 그들의 범위(전역 코드의 상단 그리고 함수 코드의 상단) 상단에 변수를 항상 선언하기를 권장합니다. 그러면 변수는 함수 범위 (지역)이 되며, 스코프 체인으로 해결될 것이 분명합니다.</p>
+이러한 이유로, 그들의 범위(전역 코드의 상단 그리고 함수 코드의 상단) 상단에 변수를 항상 선언하기를 권장합니다. 그러면 변수는 함수 범위 (지역)이 되며, 스코프 체인으로 해결될 것이 분명합니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<h3 id="두_변수들의_선언_및_초기화">두 변수들의 선언 및 초기화</h3>
+### 두 변수들의 선언 및 초기화
 
-<pre class="brush: js">var a = 0, b = 0;
-</pre>
+```js
+var a = 0, b = 0;
+```
 
-<h3 id="단일_문자열_값으로_두_변수들_할당">단일 문자열 값으로 두 변수들 할당</h3>
+### 단일 문자열 값으로 두 변수들 할당
 
-<pre class="brush: js">var a = "A";
+```js
+var a = "A";
 var b = a;
 
 // 다음과 같음:
 
 var a, b = a = "A";
-</pre>
+```
 
-<p>순서에 유의:</p>
+순서에 유의:
 
-<pre class="brush: js">var x = y, y = 'A';
+```js
+var x = y, y = 'A';
 console.log(x + y); // undefinedA
-</pre>
+```
 
-<p>여기, x와 y는 어떠한 코드 실행하기 전에 선언되었다, 할당은 후에 발생하였다. "<code>x = y</code>"가 실행될 때, <code>y</code>는 존재하여 <code>ReferenceError를 출력하진 않고</code> 값은 '<code>undefined</code>' 입니다. 그래서, <code>x는</code> undefined 값이 할당 됩니다. 그리고나서, <code>y는 </code>'A' 값이 할당 됩니다. 결과적으로, 첫번째 줄 이후에, <code>x === undefined &amp;&amp; y === 'A'</code>, 이와 같은 결과가 됩니다.</p>
+여기, x와 y는 어떠한 코드 실행하기 전에 선언되었다, 할당은 후에 발생하였다. "`x = y`"가 실행될 때, `y`는 존재하여 `ReferenceError를 출력하진 않고` 값은 '`undefined`' 입니다. 그래서, `x는` undefined 값이 할당 됩니다. 그리고나서, `y는 `'A' 값이 할당 됩니다. 결과적으로, 첫번째 줄 이후에, `x === undefined && y === 'A'`, 이와 같은 결과가 됩니다.
 
-<h3 id="다수의_변수들의_초기화">다수의 변수들의 초기화</h3>
+### 다수의 변수들의 초기화
 
-<pre class="brush: js">var x = 0;
+```js
+var x = 0;
 
 function f(){
   var x = y = 1; // x는 지역변수로 선언됩니다. y는 아닙니다!
@@ -122,13 +129,15 @@ f();
 
 console.log(x, y); // 0, 1
 // x는 예상대로 전역이다
-// y leaked outside of the function, though! </pre>
+// y leaked outside of the function, though!
+```
 
-<h3 id="암묵적인_전역변수와_외부_함수_범위">암묵적인 전역변수와 외부 함수 범위</h3>
+### 암묵적인 전역변수와 외부 함수 범위
 
-<p>암묵적인 전역변수가 될 것으로 보이는 변수는 함수 범위 밖에서 변수들을 참조할 수 있다.</p>
+암묵적인 전역변수가 될 것으로 보이는 변수는 함수 범위 밖에서 변수들을 참조할 수 있다.
 
-<pre class="brush: js">var x = 0;  // x는 전역으로 선언되었고, 0으로 할당됩니다.
+```js
+var x = 0;  // x는 전역으로 선언되었고, 0으로 할당됩니다.
 
 console.log(typeof z); // undefined, z는 아직 존재하지 않습니다.
 
@@ -149,19 +158,18 @@ function a() { // a 함수를 호출했을 때,
 
 a();                   // 호출되는 a는 또한 b를 호출합니다.
 console.log(x, z);     // 3 5
-console.log(typeof y); // undefined y는 function a에서 지역 변수입니다.</pre>
+console.log(typeof y); // undefined y는 function a에서 지역 변수입니다.
+```
 
-<h2 id="Specifications">명세서</h2>
+## 명세서
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.statements.var")}}</p>
+{{Compat}}
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li>{{jsxref("Statements/const", "const")}}</li>
-</ul>
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}

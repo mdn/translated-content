@@ -9,180 +9,166 @@ tags:
   - await
 translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><code><strong>async function</strong></code> 선언은 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}객체를 반환하는 하나의 비동기 함수를 정의합니다. 비동기 함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로, 암시적으로 {{jsxref("Promise")}}를 사용하여 결과를 반환합니다. 그러나 비동기 함수를 사용하는 코드의 구문과 구조는, 표준 동기 함수를 사용하는것과 많이 비슷합니다.</p>
+**`async function`** 선언은 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}객체를 반환하는 하나의 비동기 함수를 정의합니다. 비동기 함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로, 암시적으로 {{jsxref("Promise")}}를 사용하여 결과를 반환합니다. 그러나 비동기 함수를 사용하는 코드의 구문과 구조는, 표준 동기 함수를 사용하는것과 많이 비슷합니다.
 
-<p>또한 {{jsxref("Operators/async_function", "async function expression", "", 1)}}을 사용해서 async function을 선언할 수 있습니다.</p>
+또한 {{jsxref("Operators/async_function", "async function expression", "", 1)}}을 사용해서 async function을 선언할 수 있습니다.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-    <em>statements</em>
-}
-</pre>
+```js
+    async function name([param[, param[, ... param]]]) {
+        statements
+    }
+```
 
-<h3 id="매개변수">매개변수</h3>
+### 매개변수
 
-<dl>
- <dt><code>name</code></dt>
- <dd>함수의 이름.</dd>
-</dl>
+- `name`
+  - : 함수의 이름.
+- `param` {{optional_inline}}
+  - : 함수에게 전달되기 위한 인자의 이름.
+- `statements` {{optional_inline}}
+  - : 함수 본문을 구성하는 내용. await 메커니즘이 사용될 수 있다.
 
-<dl>
- <dt><code>param</code></dt>
- <dd>함수에게 전달되기 위한 인자의 이름.</dd>
-</dl>
+## Description
 
-<dl>
- <dt><code>statements</code></dt>
- <dd>함수 본문을 구성하는 내용.</dd>
- <dt>
- <h3 id="반환_값">반환 값</h3>
+`async` 함수에는 {{jsxref ( "Operators / await", "await")}}식이 포함될 수 있습니다. 이 식은 `async` 함수의 실행을 일시 중지하고 전달 된 `Promise`의 해결을 기다린 다음 `async` 함수의 실행을 다시 시작하고 완료후 값을 반환합니다.
 
- <p>Promise : async 함수에 의해 반환 된 값으로 해결되거나 async함수 내에서 발생하는 캐치되지 않는 예외로 거부되는 값.</p>
- </dt>
-</dl>
+> **Note:** `await` 키워드는 `async` 함수에서만 유효하다는 것을 기억하십시오. `async` 함수의 본문 외부에서 사용하면 [SyntaxError](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다.
 
-<h2 id="Description">Description</h2>
+> **Note:** async/await함수의 목적은 사용하는 여러 promise의 동작을 동기스럽게 사용할 수 있게 하고, 어떠한 동작을 여러 promise의 그룹에서 간단하게 동작하게 하는 것이다. promise가 구조화된 callback과 유사한 것 처럼 `async/await` 또한 제네레이터(generator)와 프로미스(promise)를 묶는것과 유사하다.
 
-<p><code>async</code> 함수에는 {{jsxref ( "Operators / await", "await")}}식이 포함될 수 있습니다. 이 식은 <code>async</code> 함수의 실행을 일시 중지하고 전달 된 <code>Promise</code>의 해결을 기다린 다음 <code>async</code> 함수의 실행을 다시 시작하고 완료후 값을 반환합니다.</p>
+`async` 함수는 항상 promise를 반환합니다. 만약 `async` 함수의 반환값이 명시적으로 promise가 아니라면 암묵적으로 promise로 감싸집니다.
 
-<div class="blockIndicator note">
-<p><code>await</code> 키워드는 <code>async</code> 함수에서만 유효하다는 것을 기억하십시오. <code>async</code> 함수의 본문 외부에서 사용하면 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a>가 발생합니다.</p>
-</div>
+예를 들어
 
-<div class="note">
-<p>async/await함수의 목적은 사용하는 여러 promise의 동작을 동기스럽게 사용할 수 있게 하고, 어떠한 동작을 여러 promise의 그룹에서 간단하게 동작하게 하는 것이다.<br>
- promise가 구조화된 callback과 유사한 것 처럼 async/await또한 제네레이터(generator)와 프로미스(promise)를 묶는것과 유사하다.</p>
-</div>
+```js
+    async function foo() {
+        return 1
+    }
+```
 
-<p><code>async</code> 함수는 항상 promise를 반환합니다. 만약 <code>async</code> 함수의 반환값이 명시적으로 promise가 아니라면 암묵적으로 promise로 감싸집니다.</p>
+위 코드는 아래와 같습니다.
 
-<p>예를 들어</p>
+```js
+    function foo() {
+        return Promise.resolve(1)
+    }
+```
 
-<pre >async function foo() {
-    return 1
-}</pre>
+`async` 함수의 본문은 0개 이상의 `await` 문으로 분할된 것으로 생각할 수 있습니다. 첫번째 `await` 문을 포함하는 최상위 코드는 동기적으로 실행됩니다. 따라서 `await` 문이 없는 `async` 함수는 동기적으로 실행됩니다. 하지만 `await` 문이 있다면 `async` 함수는 항상 비동기적으로 완료됩니다.
 
-<p>위 코드는 아래와 같습니다.</p>
+예를 들어
 
-<pre >function foo() {
-    return Promise.resolve(1)
-}</pre>
+```js
+    async function foo() {
+        await 1
+    }
+```
 
-<p><code>async</code> 함수의 본문은 0개 이상의 <code>await</code> 문으로 분할된 것으로 생각할 수 있습니다. 첫번째 <code>await</code> 문을 포함하는 최상위 코드는 동기적으로 실행됩니다. 따라서 <code>await</code> 문이 없는 <code>async</code> 함수는 동기적으로 실행됩니다. 하지만 <code>await</code> 문이 있다면 <code>async</code> 함수는 항상 비동기적으로 완료됩니다.</p>
+위 코드는 아래와 같습니다.
 
-<p>예를 들어</p>
+```js
+    function foo() {
+        return Promise.resolve(1).then(() => undefined)
+    }
+```
 
-<pre >async function foo() {
-    await 1
-}</pre>
+## Examples
 
-<p>위 코드는 아래와 같습니다.</p>
+### Simple example
 
-<pre >function foo() {
-    return Promise.resolve(1).then(() =&gt; undefined)
-}
-</pre>
+```js
+    var resolveAfter2Seconds = function() {
+      console.log("starting slow promise");
+      return new Promise(resolve => {
+        setTimeout(function() {
+          resolve(20);
+          console.log("slow promise is done");
+        }, 2000);
+      });
+    };
 
-<h2 id="Examples">Examples</h2>
+    var resolveAfter1Second = function() {
+      console.log("starting fast promise");
+      return new Promise(resolve => {
+        setTimeout(function() {
+          resolve(10);
+          console.log("fast promise is done");
+        }, 1000);
+      });
+    };
 
-<h3 id="Simple_example">Simple example</h3>
+    var sequentialStart = async function() {
+      console.log('==SEQUENTIAL START==');
 
-<pre ><code>var resolveAfter2Seconds = function() {
-  console.log("starting slow promise");
-  return new Promise(resolve =&gt; {
-    setTimeout(function() {
-      resolve(20);
-      console.log("slow promise is done");
-    }, 2000);
-  });
-};
+      // If the value of the expression following the await operator is not a Promise, it's converted to a resolved Promise.
+      const slow = await resolveAfter2Seconds();
+      console.log(slow);
 
-var resolveAfter1Second = function() {
-  console.log("starting fast promise");
-  return new Promise(resolve =&gt; {
-    setTimeout(function() {
-      resolve(10);
-      console.log("fast promise is done");
-    }, 1000);
-  });
-};
+      const fast = await resolveAfter1Second();
+      console.log(fast);
+    }
 
-var sequentialStart = async function() {
-  console.log('==SEQUENTIAL START==');
+    var concurrentStart = async function() {
+      console.log('==CONCURRENT START with await==');
+      const slow = resolveAfter2Seconds(); // starts timer immediately
+      const fast = resolveAfter1Second();
 
-  // If the value of the expression following the await operator is not a Promise, it's converted to a resolved Promise.
-  const slow = await resolveAfter2Seconds();
-  console.log(slow);
+      console.log(await slow);
+      console.log(await fast); // waits for slow to finish, even though fast is already done!
+    }
 
-  const fast = await resolveAfter1Second();
-  console.log(fast);
-}
+    var stillConcurrent = function() {
+      console.log('==CONCURRENT START with Promise.all==');
+      Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) => {
+        console.log(messages[0]); // slow
+        console.log(messages[1]); // fast
+      });
+    }
 
-var concurrentStart = async function() {
-  console.log('==CONCURRENT START with await==');
-  const slow = resolveAfter2Seconds(); // starts timer immediately
-  const fast = resolveAfter1Second();
+    var parallel = function() {
+      console.log('==PARALLEL with Promise.then==');
+      resolveAfter2Seconds().then((message)=>console.log(message));
+      resolveAfter1Second().then((message)=>console.log(message));
+    }
 
-  console.log(await slow);
-  console.log(await fast); // waits for slow to finish, even though fast is already done!
-}
+    sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
+    // wait above to finish
+    setTimeout(concurrentStart, 4000); // after 2 seconds, logs "slow" and then "fast"
+    // wait again
+    setTimeout(stillConcurrent, 7000); // same as concurrentStart
+    // wait again
+    setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", then after 1 more second, "slow"
+```
 
-var stillConcurrent = function() {
-  console.log('==CONCURRENT START with Promise.all==');
-  Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) =&gt; {
-    console.log(messages[0]); // slow
-    console.log(messages[1]); // fast
-  });
-}
+> **Warning:** `await` 와 `Promise#then`을 혼동하지 마세요. `sequentialStart` 에서, 첫 번째 `await`는 2초의 대기 시간을 갖고, 다시 두 번째 `await`에서 1초의 대기 시간을 갖습니다. 두 번째 타이머는 첫 번째 타이머가 완료될 때 까지 생성되지 않습니다. `concurrentStart` 에서, 두 타이머 모두 생성 된 다음 `await` 합니다. 타이머가 동시에 실행되고 있지만, `await` 호출은 여전히 연속적 실행중이므로, 두 번째 `await` 는 첫 번째 호출이 끝날 때 까지 대기합니다. 이렇게하면 3초가 아니라, 가장 느린 타이머에 필요한 2초가 필요합니다. `stillConcurrent` 에서도 `Promise.all` 을 사용하여 같은 일이 발생합니다. 두 개 이상의 프러미스를 동시에 wait 하고 싶다면, `Promise#then`을 사용하여 예제와 같이 `parallel` 를 수행할 수 있습니다.
 
-var parallel = function() {
-  console.log('==PARALLEL with Promise.then==');
-  resolveAfter2Seconds().then((message)=&gt;console.log(message));
-  resolveAfter1Second().then((message)=&gt;console.log(message));
-}
+### `async`함수를 사용한 promise chain 재작성
 
-sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
-// wait above to finish
-setTimeout(concurrentStart, 4000); // after 2 seconds, logs "slow" and then "fast"
-// wait again
-setTimeout(stillConcurrent, 7000); // same as concurrentStart
-// wait again
-setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", then after 1 more second, "slow"</code></pre>
+{{jsxref("Promise")}} 를 반환하는 API는 promise chain을 만들며 여러 파트의 함수로 나뉜다.
+아래 코드를 보자.
 
-<div class="warning">
-<h4 id="await_와_Promisethen을_혼동하지_마세요"><code>await</code> 와 <code>Promise#then</code>을 혼동하지 마세요</h4>
-
-<p><code>sequentialStart</code> 에서, 첫 번째 <code>await</code>는 2초의 대기 시간을 갖고,  다시 두 번째 <code>await</code>에서 1초의 대기 시간을 갖습니다. 두 번째 타이머는 첫 번째 타이머가 완료될 때 까지 생성되지 않습니다.</p>
-
-<p><code>concurrentStart</code> 에서, 두 타이머 모두 생성 된 다음 <code>await</code> 합니다. 타이머가 동시에 실행되고 있지만, <code>await</code> 호출은 여전히 연속적 실행중이므로, 두 번째 <code>await</code> 는 첫 번째 호출이 끝날 때 까지 대기합니다. 이렇게하면 3초가 아니라, 가장 느린 타이머에 필요한 2초가 필요합니다. <code>stillConcurrent</code> 에서도 <code>Promise.all</code> 을 사용하여 같은 일이 발생합니다.</p>
-
-<p>두 개 이상의 프러미스를 동시에 wait 하고 싶다면, <code>Promise#then</code>을 사용하여 예제와 같이 <code>parallel</code> 를 수행할 수 있습니다.</p>
-</div>
-
-<h3 id="async함수를_사용한_promise_chain_재작성"><code>async</code>함수를 사용한 promise chain 재작성</h3>
-
-<p>{{jsxref("Promise")}} 를 반환하는 API는 promise chain을 만들며 여러 파트의 함수로 나뉜다.<br>
- 아래 코드를 보자.</p>
-
-<pre class="brush: js ">function getProcessedData(url) {
+```js
+function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e =&gt; {
+    .catch(e => {
       return downloadFallbackData(url) // returns a promise
     })
-    .then(v =&gt; {
+    .then(v => {
       return processDataInWorker(v); // returns a promise
     });
 }
-</pre>
+```
 
-<p>위의 코드는 하나의 async함수로 아래와 같이 쓰여질 수도 있다.</p>
+위의 코드는 하나의 async함수로 아래와 같이 쓰여질 수도 있다.
 
-<pre class="brush: js ">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -191,23 +177,21 @@ setTimeout(parallel, 10000); // trully parallel: after 1 second, logs "fast", th
   }
   return processDataInWorker(v);
 }
-</pre>
+```
 
-<p>위 예제에서는 return 구문에 await 구문이 없다는 것에 주목하자. 이는 async function의 반환값이 암묵적으로 {{jsxref("Promise.resolve")}}로 감싸지기 때문이다.</p>
+위 예제에서는 return 구문에 await 구문이 없다는 것에 주목하자. 이는 async function의 반환값이 암묵적으로 {{jsxref("Promise.resolve")}}로 감싸지기 때문이다.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("javascript.statements.async_function")}}</p>
+{{Compat}}
 
-<h2 id="함께_보기">함께 보기</h2>
+## 함께 보기
 
-<ul>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
- <li><a href="http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">"Decorating Async Javascript Functions" on "innolitics.com"</a></li>
-</ul>
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}
+- ["Decorating Async Javascript Functions" on "innolitics.com"](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
