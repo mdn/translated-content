@@ -3,50 +3,51 @@ title: Document.createElement()
 slug: Web/API/Document/createElement
 translation_of: Web/API/Document/createElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>於 <a href="/en-US/docs/Web/HTML">HTML</a> 文件中，<strong><code>Document.createElement()</code></strong> 方法可以依指定的標籤名稱（<code>tagName</code>）建立 HTML 元素，或是在未定義標籤名稱下建立一個 {{domxref("HTMLUnknownElement")}}。在 <a href="/en-US/docs/Mozilla/Tech/XUL">XUL</a> 文件中，<code>Document.createElement()</code> 將會建立指定的 XUL 元素。而在其它文件，則會建立一個 namespace URI 為 <code>null</code> 的元素。</p>
+於 [HTML](/zh-TW/docs/Web/HTML) 文件中，**`Document.createElement()`** 方法可以依指定的標籤名稱（`tagName`）建立 HTML 元素，或是在未定義標籤名稱下建立一個 {{domxref("HTMLUnknownElement")}}。在 [XUL](/zh-TW/docs/Mozilla/Tech/XUL) 文件中，`Document.createElement()` 將會建立指定的 XUL 元素。而在其它文件，則會建立一個 namespace URI 為 `null` 的元素。
 
-<p>若要明確指定元素的 namespace URI，請使用 <a href="/en-US/docs/Web/API/Document/createElementNS"><code>document.createElementNS()</code></a>。</p>
+若要明確指定元素的 namespace URI，請使用 [`document.createElementNS()`](/zh-TW/docs/Web/API/Document/createElementNS)。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js"><var>var <em>element</em></var> = <var>document</var>.createElement(<em><var>tagName[, options]</var></em>);
-</pre>
+```js
+var element = document.createElement(tagName[, options]);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>tagName</code></dt>
- <dd>一個指定類型給所創建的元素的字串。{{domxref("Node.nodeName", "nodeName")}} 創建的元素由 <code>tagName</code> 的值初始，不要使用吻合名稱（例如 "html:a"）。當該方法在 HTML 文件中被調用時，<code>createElement()</code> 會先將 <code>tagName</code> 轉化為小寫後再創建元素。在 Firefox、Opera 和 Chrome，<code>createElement(null)</code> 與 <code>createElement("null")</code> 作用相同。</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>選擇性 <code>ElementCreationOptions</code> 物件包含一個屬性 <code>is</code>，它的值是先前使用<code>customElements.define()</code> 所定義的自定義元素的標籤名稱。為了與以前的 <a href="https://www.w3.org/TR/custom-elements/">自定義元素規範</a> 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">擴展原生 HTML 元素</a>。新元素將被賦予一個 <code>is</code> 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。</dd>
-</dl>
+- `tagName`
+  - : 一個指定類型給所創建的元素的字串。{{domxref("Node.nodeName", "nodeName")}} 創建的元素由 `tagName` 的值初始，不要使用吻合名稱（例如 "html:a"）。當該方法在 HTML 文件中被調用時，`createElement()` 會先將 `tagName` 轉化為小寫後再創建元素。在 Firefox、Opera 和 Chrome，`createElement(null)` 與 `createElement("null")` 作用相同。
+- `options`{{optional_inline}}
+  - : 選擇性 `ElementCreationOptions` 物件包含一個屬性 `is`，它的值是先前使用`customElements.define()` 所定義的自定義元素的標籤名稱。為了與以前的 [自定義元素規範](https://www.w3.org/TR/custom-elements/) 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱 [擴展原生 HTML 元素](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml)。新元素將被賦予一個 `is` 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個新的 <a href="/en-US/docs/Web/API/Element"><code>Element</code></a>.</p>
+一個新的 [`Element`](/zh-TW/docs/Web/API/Element).
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>這邊創建一個新的 <code>&lt;div&gt;</code> ，並將它插入到 ID <code>div1</code> 之前。</p>
+這邊創建一個新的 `<div>` ，並將它插入到 ID `div1` 之前。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;||Working with elements||&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id="div1"&gt;The text above has been created dynamically.&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>||Working with elements||</title>
+</head>
+<body>
+  <div id="div1">The text above has been created dynamically.</div>
+</body>
+</html>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js">document.body.onload = addElement;
+```js
+document.body.onload = addElement;
 
 function addElement () {
   // create a new div element
@@ -58,24 +59,23 @@ function addElement () {
   // add the newly created element and its content into the DOM
   var currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 500, 50)}}</p>
+{{EmbedLiveSample("範例", 500, 50)}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Document.createElement")}}
 
-<h2 id="See_also">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Node.removeChild()")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("Node.appendChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.hasChildNodes()")}}</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}

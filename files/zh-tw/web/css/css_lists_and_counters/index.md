@@ -3,50 +3,42 @@ title: CSS Lists and Counters
 slug: Web/CSS/CSS_Lists_and_Counters
 translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Lists and Counters</strong> is a module of CSS that defines how lists are laid out, how the list marker can be styled and how authors can create new counters.</p>
+**CSS Lists and Counters** is a module of CSS that defines how lists are laid out, how the list marker can be styled and how authors can create new counters.
 
-<h2 id="參考">參考</h2>
+## 參考
 
-<h3 id="屬性">屬性</h3>
+### 屬性
 
-<ul>
- <li>{{cssxref("list-style-image")}}</li>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-position")}}</li>
- <li>{{cssxref("list-style")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
-</ul>
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-position")}}
+- {{cssxref("list-style")}}
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-increment")}}
 
-<h3 id="At-rules">At-rules</h3>
+### At-rules
 
-<ul>
- <li>{{cssxref("@counter-style")}}
- <ul>
-  <li>{{cssxref("@counter-style/system","system")}}</li>
-  <li>{{cssxref("@counter-style/additive-symbols", "additive-symbols")}}</li>
-  <li>{{cssxref("@counter-style/negative", "negative")}}</li>
-  <li>{{cssxref("@counter-style/prefix", "prefix")}}</li>
-  <li>{{cssxref("@counter-style/suffix", "suffix")}}</li>
-  <li>{{cssxref("@counter-style/range", "range")}}</li>
-  <li>{{cssxref("@counter-style/pad", "pad")}}</li>
-  <li>{{cssxref("@counter-style/speak-as", "speak-as")}}</li>
-  <li>{{cssxref("@counter-style/fallback", "fallback")}}</li>
- </ul>
- </li>
-</ul>
+- {{cssxref("@counter-style")}}
 
-<h2 id="指南">指南</h2>
+  - {{cssxref("@counter-style/system","system")}}
+  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+  - {{cssxref("@counter-style/negative", "negative")}}
+  - {{cssxref("@counter-style/prefix", "prefix")}}
+  - {{cssxref("@counter-style/suffix", "suffix")}}
+  - {{cssxref("@counter-style/range", "range")}}
+  - {{cssxref("@counter-style/pad", "pad")}}
+  - {{cssxref("@counter-style/speak-as", "speak-as")}}
+  - {{cssxref("@counter-style/fallback", "fallback")}}
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation">Consistent list indentation</a></dt>
- <dd>Explains how to reach a consistent indentation between different browsers.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS counters</a></dt>
- <dd>Describes how to use counters to be able to use numbering outside of traditional list elements or to perform complex counting.</dd>
-</dl>
+## 指南
 
-<h2 id="規範">規範</h2>
+- [Consistent list indentation](/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
+  - : Explains how to reach a consistent indentation between different browsers.
+- [Using CSS counters](/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - : Describes how to use counters to be able to use numbering outside of traditional list elements or to perform complex counting.
+
+## 規範
 
 {{Specifications}}

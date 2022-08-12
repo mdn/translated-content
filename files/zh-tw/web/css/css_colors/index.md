@@ -12,47 +12,43 @@ translation_of: Web/CSS/CSS_Color
 translation_of_original: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>CSS Colors</strong> is a module of CSS that deals with colors, color types and transparency.</p>
+**CSS Colors** is a module of CSS that deals with colors, color types and transparency.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("opacity")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("opacity")}}
 
-<h3 id="CSS_Data_Types">CSS Data Types</h3>
+### CSS Data Types
 
-<p>{{cssxref("&lt;color&gt;")}}</p>
+{{cssxref("&lt;color&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3><code>color</code> property</h3>
+### `color` property
 
 {{Compat("css.properties.color")}}
 
-<h3><code>print-color-adjust</code> property</h3>
+### `print-color-adjust` property
 
 {{Compat("css.properties.print-color-adjust")}}
 
-<h3><code>opacity</code> property</h3>
+### `opacity` property
 
 {{Compat("css.properties.opacity")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>In CSS, gradients aren't colors but <a href="/en-US/docs/Web/CSS/CSS_Images">images</a>.</li>
-</ul>
+- In CSS, gradients aren't colors but [images](/zh-TW/docs/Web/CSS/CSS_Images).

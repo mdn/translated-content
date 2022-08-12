@@ -10,108 +10,105 @@ tags:
   - 字型
 translation_of: Web/CSS/@font-face
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p>The <code>@font-face</code> <a href="/en-US/docs/CSS">CSS</a> <a href="/en-US/docs/CSS/At-rule">at-rule</a> allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, <code>@font-face</code> eliminates the need to depend on the limited number of fonts users have installed on their computers. The <code>@font-face</code> at-rule may be used not only at the top level of a CSS, but also inside any <a href="/en-US/docs/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
+The `@font-face` [CSS](/zh-TW/docs/CSS) [at-rule](/zh-TW/docs/CSS/At-rule) allows authors to specify online fonts to display text on their web pages. By allowing authors to provide their own fonts, `@font-face` eliminates the need to depend on the limited number of fonts users have installed on their computers. The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-TW/docs/CSS/At-rule#Conditional_Group_Rules).
 
-<p>{{seeCompatTable}}</p>
+{{seeCompatTable}}
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">@font-face {
-  [font-family: &lt;family-name&gt;;]?
-  [src: [ &lt;uri&gt; [format(&lt;string&gt;#)]? | &lt;font-face-name&gt; ]#;]?
-  [unicode-range: &lt;urange&gt;#;]?
-  [font-variant: &lt;font-variant&gt;;]?
-  [font-feature-settings: normal|&lt;feature-tag-value&gt;#;]?
-  [font-stretch: &lt;font-stretch&gt;;]?
-  [font-weight: &lt;weight&gt;];
-  [font-style: &lt;style&gt;];
+```plain
+@font-face {
+  [font-family: <family-name>;]?
+  [src: [ <uri> [format(<string>#)]? | <font-face-name> ]#;]?
+  [unicode-range: <urange>#;]?
+  [font-variant: <font-variant>;]?
+  [font-feature-settings: normal|<feature-tag-value>#;]?
+  [font-stretch: <font-stretch>;]?
+  [font-weight: <weight>];
+  [font-style: <style>];
 }
-</pre>
+```
 
-<h3 id="參數值">參數值</h3>
+### 參數值
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>Specifies a font name that will be used as font face value for font properties.</dd>
- <dt><code>&lt;uri&gt;</code></dt>
- <dd>URL for the remote font file location, or the name of a font on the user's computer in the form <code>local("Font Name")</code>.</dd>
- <dt><code>&lt;font-variant&gt;</code></dt>
- <dd>A {{cssxref("font-variant")}} value.</dd>
- <dt><code>&lt;font-stretch&gt;</code></dt>
- <dd>A {{cssxref("font-stretch")}} value.</dd>
- <dt><code>&lt;weight&gt;</code></dt>
- <dd>A <a href="/en-US/docs/CSS/font-weight">font weight</a> value.</dd>
- <dt><code>&lt;style&gt;</code></dt>
- <dd>A <a href="/en-US/docs/CSS/font-style">font style</a> value.</dd>
-</dl>
+- `<family-name>`
+  - : Specifies a font name that will be used as font face value for font properties.
+- `<uri>`
+  - : URL for the remote font file location, or the name of a font on the user's computer in the form `local("Font Name")`.
+- `<font-variant>`
+  - : A {{cssxref("font-variant")}} value.
+- `<font-stretch>`
+  - : A {{cssxref("font-stretch")}} value.
+- `<weight>`
+  - : A [font weight](/zh-TW/docs/CSS/font-weight) value.
+- `<style>`
+  - : A [font style](/zh-TW/docs/CSS/font-style) value.
 
-<p>You can specify a font on the user's local computer by name using the <code>local()</code> syntax. If that font isn't found, other sources will be tried until one is found.</p>
+You can specify a font on the user's local computer by name using the `local()` syntax. If that font isn't found, other sources will be tried until one is found.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>這個範例指定一個可供下載的字型，並套用至 document 的整個 body。</p>
+這個範例指定一個可供下載的字型，並套用至 document 的整個 body。
 
-<p><a href="/@api/deki/files/2935/=webfont-sample.html">檢視線上範例</a></p>
+[檢視線上範例](/@api/deki/files/2935/=webfont-sample.html)
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Web Font Sample&lt;/title&gt;
-  &lt;style type="text/css" media="screen, print"&gt;
+```plain
+<html>
+<head>
+  <title>Web Font Sample</title>
+  <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
       src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+  </style>
+</head>
+<body>
   This is Bitstream Vera Serif Bold.
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p>這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：</p>
+這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
   local("HelveticaNeue-Bold"),
   url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="注意事項">注意事項</h2>
+## 注意事項
 
-<ul>
- <li>In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a> are used to relax this restriction.</li>
- <li>
-  <div class="note"><strong>Note:</strong> Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.</div>
- </li>
- <li>When Gecko displays a page that uses web fonts, it initially displays text using the best CSS fallback font available on the user's computer while it waits for the web font to finish downloading.  As each web font finishes downloading, Gecko updates the text that uses that font.  This allows the user to read the text on the page more quickly.</li>
-</ul>
+- In Gecko, web fonts are subject to the same domain restriction (font files must be on the same domain as the page using them), unless [HTTP access controls](/zh-TW/docs/HTTP_access_control) are used to relax this restriction.
 
-<h2 id="規格文件">規格文件</h2>
+  > **備註：** Because there are no defined MIME types for TrueType, OpenType, and Web Open File Format (WOFF) fonts, the MIME type of the file specified is not considered.
+
+- When Gecko displays a page that uses web fonts, it initially displays text using the best CSS fallback font available on the user's computer while it waits for the web font to finish downloading. As each web font finishes downloading, Gecko updates the text that uses that font. This allows the user to read the text on the page more quickly.
+
+## 規格文件
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("css.at-rules.font-face")}}
 
-<h2 id="詳見">詳見</h2>
+## 詳見
 
-<ul>
- <li><a href="/en-US/docs/WOFF">About WOFF</a></li>
- <li><a href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
- <li><a href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a href="http://openfontlibrary.org/">Open Font Library</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx">Microsoft Developer Network (MSDN) @font-face reference</a></li>
- <li><a href="http://caniuse.com/woff">When can I use WOFF?</a></li>
- <li><a href="http://caniuse.com/svg-fonts">When can I use SVG Fonts?</a></li>
-</ul>
+- [About WOFF](/zh-TW/docs/WOFF)
+- [FontSquirrel @font-face generator](http://www.fontsquirrel.com/fontface/generator)
+- [Beautiful fonts with @font-face](http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
+- [Open Font Library](http://openfontlibrary.org/)
+- [Microsoft Developer Network (MSDN) @font-face reference](<http://msdn.microsoft.com/en-us/library/ms530757(VS.85).aspx>)
+- [When can I use WOFF?](http://caniuse.com/woff)
+- [When can I use SVG Fonts?](http://caniuse.com/svg-fonts)

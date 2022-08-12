@@ -3,114 +3,101 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><code><strong>MouseEvent</strong></code> 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 <code>MouseEvent</code> 實作事件包括了 {{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}} 與 {{event("mousedown")}}。</p>
+**`MouseEvent`** 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 `MouseEvent` 實作事件包括了 {{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}} 與 {{event("mousedown")}}。
 
-<p><code>MouseEvent</code> 繼承自 {{domxref("UIEvent")}}，而 <code>UIEvent</code> 則繼承自 {{domxref("Event")}}。雖然 {{domxref("MouseEvent.initMouseEvent()")}} 方法仍然向下相容新的瀏覽器，但現今應該使用 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 建構式來建立 <code>MouseEvent</code> 物件。</p>
+`MouseEvent` 繼承自 {{domxref("UIEvent")}}，而 `UIEvent` 則繼承自 {{domxref("Event")}}。雖然 {{domxref("MouseEvent.initMouseEvent()")}} 方法仍然向下相容新的瀏覽器，但現今應該使用 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 建構式來建立 `MouseEvent` 物件。
 
-<p>另外還有一些特定的事件繼承自 <code>MouseEvent</code>：{{domxref("WheelEvent")}} 及 {{domxref("DragEvent")}}。</p>
+另外還有一些特定的事件繼承自 `MouseEvent`：{{domxref("WheelEvent")}} 及 {{domxref("DragEvent")}}。
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}</dt>
- <dd>建立一個 <code>MouseEvent</code> 物件。</dd>
-</dl>
+- {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
+  - : 建立一個 `MouseEvent` 物件。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的屬性</em></p>
+_此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的屬性_
 
-<dl>
- <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
- <dd>Returns <code>true</code> if the <kbd>alt</kbd> key was down when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.button")}} {{readonlyinline}}</dt>
- <dd>The button number that was pressed when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.buttons")}} {{readonlyinline}}</dt>
- <dd>
- <p>The buttons being pressed when the mouse event was fired</p>
- </dd>
- <dt>{{domxref("MouseEvent.clientX")}} {{readonlyinline}}</dt>
- <dd>The X coordinate of the mouse pointer in local (DOM content) coordinates.</dd>
- <dt>{{domxref("MouseEvent.clientY")}} {{readonlyinline}}</dt>
- <dd>The Y coordinate of the mouse pointer in local (DOM content) coordinates.</dd>
- <dt>{{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}</dt>
- <dd>Returns <code>true</code> if the <kbd>control</kbd> key was down when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.metaKey")}} {{readonlyinline}}</dt>
- <dd>Returns <code>true</code> if the <kbd>meta</kbd> key was down when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.movementX")}} {{readonlyinline}}</dt>
- <dd>The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.</dd>
- <dt>{{domxref("MouseEvent.movementY")}} {{readonlyinline}}</dt>
- <dd>The Y coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.</dd>
- <dt>{{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.</dd>
- <dt>{{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.</dd>
- <dt>{{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>The X coordinate of the mouse pointer relative to the whole document.</dd>
- <dt>{{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}</dt>
- <dd>The Y coordinate of the mouse pointer relative to the whole document.</dd>
- <dt>{{domxref("MouseEvent.region")}} {{readonlyinline}}</dt>
- <dd>Returns the id of the hit region affected by the event. If no hit region is affected, <code>null</code> is returned.</dd>
- <dt>{{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}</dt>
- <dd>
- <p>The secondary target for the event, if there is one.</p>
- </dd>
- <dt>{{domxref("MouseEvent.screenX")}} {{readonlyinline}}</dt>
- <dd>The X coordinate of the mouse pointer in global (screen) coordinates.</dd>
- <dt>{{domxref("MouseEvent.screenY")}} {{readonlyinline}}</dt>
- <dd>The Y coordinate of the mouse pointer in global (screen) coordinates.</dd>
- <dt>{{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}</dt>
- <dd>Returns <code>true</code> if the <kbd>shift</kbd> key was down when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}</dt>
- <dd>The button being pressed when the mouse event was fired.</dd>
- <dt>{{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between <code>0.0</code> (minimum pressure) and <code>1.0</code> (maximum pressure).</dd>
- <dt>{{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>
- <p>The type of device that generated the event (one of the <code>MOZ_SOURCE_*</code> constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).</p>
- </dd>
- <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>The amount of pressure applied when clicking</dd>
- <dt>{{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias for {{domxref("MouseEvent.clientX")}}.</dd>
- <dt>{{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd>Alias for {{domxref("MouseEvent.clientY")}}</dd>
-</dl>
+- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
+  - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.button")}} {{readonlyinline}}
+  - : The button number that was pressed when the mouse event was fired.
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
+  - : The buttons being pressed when the mouse event was fired
+- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
+  - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
+- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
+  - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
+- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
+  - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
+  - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
+  - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
+  - : The Y coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
+  - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
+- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
+  - : The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.
+- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}{{experimental_inline}}
+  - : The X coordinate of the mouse pointer relative to the whole document.
+- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}{{experimental_inline}}
+  - : The Y coordinate of the mouse pointer relative to the whole document.
+- {{domxref("MouseEvent.region")}} {{readonlyinline}}
+  - : Returns the id of the hit region affected by the event. If no hit region is affected, `null` is returned.
+- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
+  - : The secondary target for the event, if there is one.
+- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
+  - : The X coordinate of the mouse pointer in global (screen) coordinates.
+- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
+  - : The Y coordinate of the mouse pointer in global (screen) coordinates.
+- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
+  - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
+- {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
+  - : The button being pressed when the mouse event was fired.
+- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants listed below). This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+  - : The amount of pressure applied when clicking
+- {{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}
+  - : Alias for {{domxref("MouseEvent.clientX")}}.
+- {{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}
+  - : Alias for {{domxref("MouseEvent.clientY")}}
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<dl>
- <dt>{{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}</dt>
- <dd>Minimum force necessary for a normal click</dd>
- <dt>{{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}</dt>
- <dd>Minimum force necessary for a force click</dd>
-</dl>
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+  - : Minimum force necessary for a normal click
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
+  - : Minimum force necessary for a force click
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的方法</em></p>
+_此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的方法_
 
-<dl>
- <dt>{{domxref("MouseEvent.getModifierState()")}}</dt>
- <dd>Returns the current state of the specified modifier key. See the {{domxref("KeyboardEvent.getModifierState")}}() for details.</dd>
- <dt>{{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}</dt>
- <dd>Initializes the value of a <code>MouseEvent</code> created. If the event has already being dispatched, this method does nothing.</dd>
-</dl>
+- {{domxref("MouseEvent.getModifierState()")}}
+  - : Returns the current state of the specified modifier key. See the {{domxref("KeyboardEvent.getModifierState")}}() for details.
+- {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
+  - : Initializes the value of a `MouseEvent` created. If the event has already being dispatched, this method does nothing.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. </p>
+This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods.
 
-<pre class="brush: js">function simulateClick() {
-  var evt = new <a href="/en-US/docs/Web/API/MouseEvent">MouseEvent</a>("click", {
+```js
+function simulateClick() {
+  var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
     view: window
   });
   var cb = document.getElementById("checkbox"); //element to click on
-  var canceled = !cb.<a href="/en-US/docs/Web/API/EventTarget.dispatchEvent">dispatchEvent</a>(evt);
+  var canceled = !cb.dispatchEvent(evt);
   if(canceled) {
     // A handler called preventDefault
     alert("canceled");
@@ -119,25 +106,26 @@ translation_of: Web/API/MouseEvent
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);</pre>
+document.getElementById("button").addEventListener('click', simulateClick);
+```
 
-<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
-&lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;</pre>
+```html
+<p><label><input type="checkbox" id="checkbox"> Checked</label>
+<p><button id="button">Click me</button>
+```
 
-<p>Click on the button to see how the sample works:</p>
+Click on the button to see how the sample works:
 
-<p>{{ EmbedLiveSample('Example', '', '', '') }}</p>
+{{ EmbedLiveSample('Example', '', '', '') }}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.MouseEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>Its direct parent, {{domxref("UIEvent")}}.</li>
-</ul>
+- Its direct parent, {{domxref("UIEvent")}}.

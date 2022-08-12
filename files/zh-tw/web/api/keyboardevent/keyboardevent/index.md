@@ -3,135 +3,58 @@ title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>KeyboardEvent()</code></strong> constructor 能用來建立一個新的 {{domxref("KeyboardEvent")}}。</p>
+**`KeyboardEvent()`** constructor 能用來建立一個新的 {{domxref("KeyboardEvent")}}。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"> <em>event</em> = new KeyboardEvent(<em>typeArg</em>, <em>KeyboardEventInit</em>);</pre>
+```plain
+ event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>一 {{domxref("DOMString")}} 用來表示事件名稱。</dd>
- <dt><em>KeyboardEventInit</em>{{optional_inline}}</dt>
- <dd>一個 <code>KeyboardEventInit</code> dictionary，能接受以下參數：
- <table>
-  <thead>
-   <tr>
-    <th>參數</th>
-    <th>可選</th>
-    <th>默認值</th>
-    <th>類型</th>
-    <th>說明</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>"key"</code></td>
-    <td>●</td>
-    <td><code>""</code></td>
-    <td>{{domxref("DOMString")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.key")}} 的值</td>
-   </tr>
-   <tr>
-    <td><code>"code"</code></td>
-    <td>●</td>
-    <td><code>""</code></td>
-    <td>{{domxref("DOMString")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.code")}} 的值</td>
-   </tr>
-   <tr>
-    <td><code>"location"</code></td>
-    <td>●</td>
-    <td>0</td>
-    <td><code>unsigned long</code></td>
-    <td>用來設定 {{domxref("KeyboardEvent.location")}} 的值</td>
-   </tr>
-   <tr>
-    <td><code>"ctrlKey"</code></td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.ctrlKey")}} 的值</td>
-   </tr>
-   <tr>
-    <td><code>"shiftKey"</code></td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.shiftKey")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"altKey"</td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.altKey")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"metaKey"</td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.metaKey")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"repeat"</td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.repeat")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"isComposing"</td>
-    <td>●</td>
-    <td><code>false</code></td>
-    <td>{{jsxref("Boolean")}}</td>
-    <td>用來設定 {{domxref("KeyboardEvent.isComposing")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"charCode"</td>
-    <td>●</td>
-    <td>0</td>
-    <td><code>unsigned long</code></td>
-    <td>用來設定 {{domxref("KeyboardEvent.charCode")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"keyCode"</td>
-    <td>●</td>
-    <td>0</td>
-    <td><code>unsigned long</code></td>
-    <td>用來設定 {{domxref("KeyboardEvent.keyCode")}} 的值</td>
-   </tr>
-   <tr>
-    <td>"which"</td>
-    <td>●</td>
-    <td>0</td>
-    <td><code>unsigned long</code></td>
-    <td>用來設定 {{domxref("KeyboardEvent.which")}} 的值</td>
-   </tr>
-  </tbody>
- </table>
+- `type`
+  - : 一 {{domxref("DOMString")}} 用來表示事件名稱。
+- `options` {{optional_inline}}
+  - : 一個 `KeyboardEventInit` dictionary，能接受以下參數：
 
- <div class="note">
- <p><em><code>KeyboardEventInit</code> dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。</em></p>
- </div>
- </dd>
-</dl>
+    - `key` {{optional_inline}}
+      - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.key")}} 的值。
+    - `code` {{optional_inline}}
+      - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.code")}} 的值。
+    - `location` {{optional_inline}}
+      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.location")}} 的值。
+    - `ctrlKey` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.ctrlKey")}} 的值。
+    - `shiftKey` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.shiftKey")}} 的值。
+    - `altKey` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.altKey")}} 的值。
+    - `metaKey` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.metaKey")}} 的值。
+    - `repeat` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.repeat")}} 的值。
+    - `isComposing` {{optional_inline}}
+      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.isComposing")}} 的值。
+    - `charCode` {{optional_inline}}
+      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.charCode")}} 的值。
+    - `keyCode` {{optional_inline}}
+      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.keyCode")}} 的值。
+    - `which` {{optional_inline}}
+      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.which")}} 的值
 
-<h2 id="Specifications">規格</h2>
+> **備註：** _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
+
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器支援度">瀏覽器支援度</h2>
+## 瀏覽器支援度
 
 {{Compat("api.KeyboardEvent.KeyboardEvent")}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li>{{domxref("KeyboardEvent")}} ，此 constructer 所建立的 object 的 interface</li>
-</ul>
+- {{domxref("KeyboardEvent")}} ，此 constructer 所建立的 object 的 interface

@@ -3,65 +3,36 @@ title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 translation_of: Web/API/UIEvent/UIEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>UIEvent()</code></strong> constructor 是用來建立新的 {{domxref("UIEvent")}}。</p>
+**`UIEvent()`** constructor 是用來建立新的 {{domxref("UIEvent")}}。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"> <em>event</em> = new UIEvent(<em>typeArg</em>, <em>UIEventInit</em>);</pre>
+```plain
+ event = new UIEvent(typeArg, UIEventInit);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>typeArg</em></dt>
- <dd>一個 {{domxref("DOMString")}} ，用來表示事件名稱</dd>
- <dt><em>UIEventInit</em>{{optional_inline}}</dt>
- <dd>一個 <code>UIEventInit</code> dictionary ，能接受以下參數：
- <table>
-  <thead>
-   <tr>
-    <th>參數</th>
-    <th>可選</th>
-    <th>默認值</th>
-    <th>類型</th>
-    <th>說明</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>"detail"</code></td>
-    <td>●</td>
-    <td><code>0</code></td>
-    <td><code>long</code></td>
-    <td>定義事件意義的值。關於事件的意義於 {{domxref("UIEvent.detail")}} 已有較詳盡的列表。</td>
-   </tr>
-   <tr>
-    <td><code>"view"</code></td>
-    <td>●</td>
-    <td><code>null</code></td>
-    <td>{{domxref("WindowProxy")}}</td>
-    <td>與事件相關的 {{domxref("Window")}} 。</td>
-   </tr>
-  </tbody>
- </table>
+- _typeArg_
+  - : 一個 {{domxref("DOMString")}} ，用來表示事件名稱
+- _UIEventInit_{{optional_inline}}
+  - : 一個 `UIEventInit` dictionary ，能接受以下參數： 
 
- <div class="note">
- <p><em><code>UIEventInit</code> dictionary 亦接受 {{domxref("Event.Event", "EventInit")}} dictionary 所接受的參數。</em></p>
- </div>
- </dd>
-</dl>
+    - `detail`
+      - : 定義事件意義的值（類型：`long`，默認值：`0`）。關於事件的意義於 {{domxref("UIEvent.detail")}} 已有較詳盡的列表。
+    - `view`
+      - : 與事件相關的 {{domxref("Window")}}，默認值：`null`。                          
 
-<h2 id="Specifications">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器支援度">瀏覽器支援度</h2>
+## 瀏覽器支援度
 
-{{Compat("api.UIEvent.UIEvent")}}
+{{Compat}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li>{{domxref("UIEvent")}}，此 constructer 所建立的 object 的 interface。</li>
-</ul>
+- {{domxref("UIEvent")}}，此 constructer 所建立的 object 的 interface。

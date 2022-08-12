@@ -3,46 +3,47 @@ title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API 的 <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clearRect()</code></strong> 方法可以設定指定矩形（經由坐標 <em>(x, y)</em> 及大小 <em>(width, height)</em>）範圍內的所有像素為透明，清除所有先前繪製的內容。</p>
+Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法可以設定指定矩形（經由坐標 _(x, y)_ 及大小 _(width, height)_）範圍內的所有像素為透明，清除所有先前繪製的內容。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">void <var><em>ctx</em>.clearRect(x, y, width, height);</var>
-</pre>
+```plain
+void ctx.clearRect(x, y, width, height);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>x</code></dt>
- <dd>The x axis of the coordinate for the rectangle starting point.</dd>
- <dt><code>y</code></dt>
- <dd>The y axis of the coordinate for the rectangle starting point.</dd>
- <dt><code>width</code></dt>
- <dd>The rectangle's width.</dd>
- <dt><code>height</code></dt>
- <dd>The rectangle's height.</dd>
-</dl>
+- `x`
+  - : The x axis of the coordinate for the rectangle starting point.
+- `y`
+  - : The y axis of the coordinate for the rectangle starting point.
+- `width`
+  - : The rectangle's width.
+- `height`
+  - : The rectangle's height.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>A common problem with <code>clearRect</code> is that it may appear it does not work when not <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths">using paths properly</a>. Don't forget to call {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to draw the new frame after calling <code>clearRect</code>.</p>
+A common problem with `clearRect` is that it may appear it does not work when not [using paths properly](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths). Don't forget to call {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to draw the new frame after calling `clearRect`.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="Using_the_clearRect_method">Using the <code>clearRect</code> method</h3>
+### Using the `clearRect` method
 
-<p>This is just a simple code snippet which uses the <code>clearRect</code> method.</p>
+This is just a simple code snippet which uses the `clearRect` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[11]">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -56,19 +57,17 @@ ctx.clearRect(10, 10, 100, 100);
 
 // clear the whole canvas
 // ctx.clearRect(0, 0, canvas.width, canvas.height);
-</pre>
+```
 
-<p>Edit the code below and see your changes update live in the canvas:</p>
+Edit the code below and see your changes update live in the canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code" style="height:140px;">
 ctx.beginPath();
 ctx.moveTo(20,20);
 ctx.lineTo(200,20);
@@ -76,10 +75,11 @@ ctx.lineTo(120,120);
 ctx.closePath(); // draws last line of the triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.clearRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -102,23 +102,20 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 400) }}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.CanvasRenderingContext2D.clearRect")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>The interface defining it, {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

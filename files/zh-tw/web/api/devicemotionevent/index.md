@@ -3,49 +3,45 @@ title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
 translation_of: Web/API/DeviceMotionEvent
 ---
-<p>{{apiref("Device Orientation Events")}}{{SeeCompatTable}}</p>
+{{apiref("Device Orientation Events")}}{{SeeCompatTable}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><code>DeviceMotionEvent</code> 提供了網頁開發者關於裝置位置及旋轉方向改變時的速度資訊。</p>
+`DeviceMotionEvent` 提供了網頁開發者關於裝置位置及旋轉方向改變時的速度資訊。
 
-<div class="warning">
-<p><strong>Warning:</strong> Currently, Firefox and Chrome does not handle the coordinates the same way. Take care about this while using them.</p>
-</div>
+> **警告：** Currently, Firefox and Chrome does not handle the coordinates the same way. Take care about this while using them.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("DeviceMotionEvent.acceleration")}} {{readonlyinline}}</dt>
- <dd>An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a>.</dd>
- <dt>{{domxref("DeviceMotionEvent.accelerationIncludingGravity")}} {{readonlyinline}}</dt>
- <dd>An object giving the acceleration of the device on the three axis X, Y and Z with the effect of gravity. Acceleration is expressed in <a href="https://en.wikipedia.org/wiki/Meter_per_second_squared">m/s<sup>2</sup></a>.</dd>
- <dt>{{domxref("DeviceMotionEvent.rotationRate")}} {{readonlyinline}}</dt>
- <dd>An object giving the rate of change of the device's orientation on the three orientation axis alpha, beta and gamma. Rotation rate is express in degrees per seconds.</dd>
- <dt>{{domxref("DeviceMotionEvent.interval")}} {{readonlyinline}}</dt>
- <dd>A number representing the interval of time, in milliseconds, at which data is obtained from the device.</dd>
-</dl>
+- {{domxref("DeviceMotionEvent.acceleration")}} {{readonlyinline}}
+  - : An object giving the acceleration of the device on the three axis X, Y and Z. Acceleration is expressed in [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{domxref("DeviceMotionEvent.accelerationIncludingGravity")}} {{readonlyinline}}
+  - : An object giving the acceleration of the device on the three axis X, Y and Z with the effect of gravity. Acceleration is expressed in [m/s2](https://en.wikipedia.org/wiki/Meter_per_second_squared).
+- {{domxref("DeviceMotionEvent.rotationRate")}} {{readonlyinline}}
+  - : An object giving the rate of change of the device's orientation on the three orientation axis alpha, beta and gamma. Rotation rate is express in degrees per seconds.
+- {{domxref("DeviceMotionEvent.interval")}} {{readonlyinline}}
+  - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">window.addEventListener('devicemotion', function(event) {
+```js
+window.addEventListener('devicemotion', function(event) {
   console.log(event.acceleration.x + ' m/s2');
-});</pre>
+});
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.DeviceMotionEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{ event("deviceorientation") }}</li>
- <li>{{ domxref("DeviceMotionEvent") }}</li>
- <li>{{ event("devicemotion") }}</li>
- <li><a href="/en-US/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="/en/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceMotionEvent") }}
+- {{ event("devicemotion") }}
+- [Detecting device orientation](/zh-TW/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)

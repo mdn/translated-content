@@ -3,48 +3,49 @@ title: Canvas API
 slug: Web/API/Canvas_API
 translation_of: Web/API/Canvas_API
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p><strong>{{HTMLElement("canvas")}}</strong> 是 <a href="/zh-TW/docs/HTML">HTML5</a> 的新元素，可透過 Script（通常是 <a href="/zh-TW/docs/JavaScript">JavaScript</a>）繪製圖形。例如，可以用來繪圖、合成圖照片、建立動畫、甚至處理即時的影片播放。</p>
+**{{HTMLElement("canvas")}}** 是 [HTML5](/zh-TW/docs/HTML) 的新元素，可透過 Script（通常是 [JavaScript](/zh-TW/docs/JavaScript)）繪製圖形。例如，可以用來繪圖、合成圖照片、建立動畫、甚至處理即時的影片播放。
 
-<p>Mozilla 應用程式從 Gecko 1.8（也就是 <a href="/en/Firefox_1.5_for_developers">Firefox 1.5</a>）起開始支援 <code>&lt;canvas&gt;</code>。這個元素最初由蘋果 OS X <a href="http://www.apple.com/macosx/features/dashboard/">Dashboard</a> 和 Safari 引入。Internet Explorer 9 以上版本也有支援<code> &lt;canvas&gt;</code>，但較舊的 IE 版本則須嵌入 Google <a href="http://excanvas.sourceforge.net/">Explorer Canvas</a> 專案中的程式腳本，才能得到有效的支援。Opera 9 也支援 <code>&lt;canvas&gt;</code>。</p>
+Mozilla 應用程式從 Gecko 1.8（也就是 [Firefox 1.5](/en/Firefox_1.5_for_developers)）起開始支援 `<canvas>`。這個元素最初由蘋果 OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) 和 Safari 引入。Internet Explorer 9 以上版本也有支援` <canvas>`，但較舊的 IE 版本則須嵌入 Google [Explorer Canvas](http://excanvas.sourceforge.net/) 專案中的程式腳本，才能得到有效的支援。Opera 9 也支援 `<canvas>`。
 
-<p><code>&lt;canvas&gt;</code> 元素通常也被 <a href="/zh-TW/docs/Web/WebGL">WebGL</a> 用來在網頁上顯示使用硬體加速繪製的 3D 圖形。</p>
+`<canvas>` 元素通常也被 [WebGL](/zh-TW/docs/Web/WebGL) 用來在網頁上顯示使用硬體加速繪製的 3D 圖形。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>這則簡單的範例使用了{{domxref("CanvasRenderingContext2D.fillRect()")}}這個方法。</p>
+這則簡單的範例使用了{{domxref("CanvasRenderingContext2D.fillRect()")}}這個方法。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
-</pre>
+```
 
-<p>Edit the code below and see your changes update live in the canvas:</p>
+Edit the code below and see your changes update live in the canvas:
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+ctx.fillRect(10, 10, 100, 100);</textarea>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -67,75 +68,64 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+```
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-<h2 id="參考">參考</h2>
+## 參考
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
- <li>{{domxref("ImageBitmap")}}</li>
- <li>{{domxref("ImageData")}}</li>
- <li>{{domxref("TextMetrics")}}</li>
- <li>{{domxref("Path2D")}} {{experimental_inline}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}
+- {{domxref("ImageBitmap")}}
+- {{domxref("ImageData")}}
+- {{domxref("TextMetrics")}}
+- {{domxref("Path2D")}} {{experimental_inline}}
 
-<p>這些與<code>WebGLRenderingContext</code>有關的標識，皆引用在<a href="/zh-TW/docs/Web/WebGL">WebGL</a></p>
+這些與`WebGLRenderingContext`有關的標識，皆引用在[WebGL](/zh-TW/docs/Web/WebGL)
 
-<h2 id="教程指南">教程指南</h2>
+## 教程指南
 
-<dl>
- <dt><a href="/zh-TW/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></dt>
- <dd>這個全部的課程包含 <code>&lt;canvas&gt;</code> 基礎的使用和高階的應用。</dd>
- <dt><a href="/zh-TW/Add-ons/Code_snippets/Canvas">Code snippets: Canvas</a></dt>
- <dd>一些延伸的開發功能，包含<code>&lt;canvas&gt;</code>。</dd>
- <dt><a href="/zh-TW/docs/Web/API/Canvas_API/A_basic_ray-caster">Demo: A basic ray-caster</a></dt>
- <dd>使用<code>&lt;canvas&gt;</code>做的光線追蹤(ray-tracing )範例。</dd>
- <dt><a href="/zh-TW/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas">Drawing DOM objects into a canvas</a></dt>
- <dd>如何在 DOM<code>&lt;canvas&gt;</code>之中，畫個物件。例如 HTML的元素。</dd>
- <dt><a href="/zh-TW/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></dt>
- <dd>結合{{HTMLElement("video")}} 和 {{HTMLElement("canvas")}} 去控制影像資料的真實時間</dd>
-</dl>
+- [Canvas tutorial](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
+  - : 這個全部的課程包含 `<canvas>` 基礎的使用和高階的應用。
+- [Code snippets: Canvas](/zh-TW/Add-ons/Code_snippets/Canvas)
+  - : 一些延伸的開發功能，包含`<canvas>`。
+- [Demo: A basic ray-caster](/zh-TW/docs/Web/API/Canvas_API/A_basic_ray-caster)
+  - : 使用`<canvas>`做的光線追蹤(ray-tracing )範例。
+- [Drawing DOM objects into a canvas](/zh-TW/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
+  - : 如何在 DOM`<canvas>`之中，畫個物件。例如 HTML 的元素。
+- [Manipulating video using canvas](/zh-TW/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+  - : 結合{{HTMLElement("video")}} 和 {{HTMLElement("canvas")}} 去控制影像資料的真實時間
 
-<h2 id="資源">資源</h2>
+## 資源
 
-<h3 id="Generic">Generic</h3>
+### Generic
 
-<ul>
- <li><a href="http://joshondesign.com/p/books/canvasdeepdive/title.html">HTML5 Canvas Deep Dive</a></li>
- <li><a href="http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html">Canvas Handbook</a></li>
-</ul>
+- [HTML5 Canvas Deep Dive](http://joshondesign.com/p/books/canvasdeepdive/title.html)
+- [Canvas Handbook](http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
 
-<h3 id="Libraries">Libraries</h3>
+### Libraries
 
-<ul>
- <li><a href="http://fabricjs.com">Fabric.js</a> is an open-source canvas library with SVG parsing capabilities.</li>
- <li><a href="https://github.com/ericdrowell/KineticJS">Kinetic.js</a> is an open-source canvas library focused on interactivity for desktop and mobile applications.</li>
- <li><a href="http://paperjs.org/">Paper.js</a> is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas.</li>
- <li><a href="http://origamijs.com/docs/">Origami.js</a> is an open source lightweight canvas library.</li>
- <li><a href="http://libcanvas.github.com/">libCanvas</a> 是一個強大且輕量化的 canvas 框架。</li>
- <li><a href="http://processingjs.org">Processing.js</a> 是視覺化程式語言 Processing 的移植版。</li>
- <li><a href="https://playcanvas.com/">PlayCanvas</a> is an open source game engine.</li>
- <li><a href="http://www.pixijs.com/">Pixi.js</a> is an open source game engine.</li>
- <li><a href="http://www.liquidx.net/plotkit/">PlotKit</a> 是一個製作圖表和圖形的函式庫。</li>
- <li><a href="https://github.com/jeremyckahn/rekapi">Rekapi</a> 是一個用來控制動畫影格的 Canvas API。</li>
- <li><a href="http://senchalabs.github.com/philogl/">PhiloGL</a> 是一個可應用在資料視覺化、遊戲開發的 WebGL 框架。</li>
- <li><a href="http://thejit.org/">JavaScript InfoVis Toolkit</a> 可在網頁上建立 2D 的互動式 Canvas 視覺化資料。</li>
- <li><a href="http://www.createjs.com/easeljs">EaselJS</a> 是一個自由 / 開放源始碼的函式庫，目的在簡化 canvas 於遊戲與美術的開發難度，類似 Flash API。</li>
- <li><a href="http://scrawl.rikweb.org.uk/">Scrawl-canvas</a> is another open-source javascript library for creating and manipulating 2d canvas elements</li>
-</ul>
+- [Fabric.js](http://fabricjs.com) is an open-source canvas library with SVG parsing capabilities.
+- [Kinetic.js](https://github.com/ericdrowell/KineticJS) is an open-source canvas library focused on interactivity for desktop and mobile applications.
+- [Paper.js](http://paperjs.org/) is an open source vector graphics scripting framework that runs on top of the HTML5 Canvas.
+- [Origami.js](http://origamijs.com/docs/) is an open source lightweight canvas library.
+- [libCanvas](http://libcanvas.github.com/) 是一個強大且輕量化的 canvas 框架。
+- [Processing.js](http://processingjs.org) 是視覺化程式語言 Processing 的移植版。
+- [PlayCanvas](https://playcanvas.com/) is an open source game engine.
+- [Pixi.js](http://www.pixijs.com/) is an open source game engine.
+- [PlotKit](http://www.liquidx.net/plotkit/) 是一個製作圖表和圖形的函式庫。
+- [Rekapi](https://github.com/jeremyckahn/rekapi) 是一個用來控制動畫影格的 Canvas API。
+- [PhiloGL](http://senchalabs.github.com/philogl/) 是一個可應用在資料視覺化、遊戲開發的 WebGL 框架。
+- [JavaScript InfoVis Toolkit](http://thejit.org/) 可在網頁上建立 2D 的互動式 Canvas 視覺化資料。
+- [EaselJS](http://www.createjs.com/easeljs) 是一個自由 / 開放源始碼的函式庫，目的在簡化 canvas 於遊戲與美術的開發難度，類似 Flash API。
+- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) is another open-source javascript library for creating and manipulating 2d canvas elements
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications("html.elements.canvas")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh-TW/docs/Web/WebGL">WebGL</a></li>
-</ul>
+- [WebGL](/zh-TW/docs/Web/WebGL)

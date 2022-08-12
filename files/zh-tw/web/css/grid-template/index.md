@@ -3,16 +3,16 @@ title: grid-template
 slug: Web/CSS/grid-template
 translation_of: Web/CSS/grid-template
 ---
-<p>的<strong><code>grid-template</code></strong>CSS屬性是一個<a href="/en-US/docs/Web/CSS/Shorthand_properties">速記屬性</a>，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。</p>
+的**`grid-template`**CSS 屬性是一個[速記屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。
 
-<div>{{EmbedInteractiveExample("pages / css / grid-template.html")}}</div>
+{{EmbedInteractiveExample("pages / css / grid-template.html")}}
 
+作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。
 
-<p>作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}},{{cssxref("grid-template-columns")}}和{{cssxref("grid-template-areas ")}}。</p>
+## 句法
 
-<h2 id="句法">句法</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* Keyword value */
+```css
+/* Keyword value */
 grid-template: none;
 
 /* grid-template-rows / grid-template-columns values */
@@ -34,33 +34,30 @@ grid-template: [header-top] "a a a"     [header-bottom]
 grid-template: inherit;
 grid-template: initial;
 grid-template: unset;
-</pre>
+```
 
-<h3 id="價值觀">價值觀</h3>
+### 價值觀
 
-<dl>
- <dt><code>none</code></dt>
- <dd>是將所有三個長期屬性設置為的關鍵字<code>none</code>，表示沒有顯式網格。沒有命名的網格區域。行和列將隱式生成；它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。</dd>
- <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref("grid-template-areas")}}至<code>none</code>。</dd>
- <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
- <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
+- `none`
+  - : 是將所有三個長期屬性設置為的關鍵字`none`，表示沒有顯式網格。沒有命名的網格區域。行和列將隱式生成；它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。
+- `<'grid-template-rows'> / <'grid-template-columns'>`
+  - : 將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref("grid-template-areas")}}至`none`。
+- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
+  - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
+    Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.
 
- <p>Note: The {{cssxref("repeat")}} function isn’t allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the “ASCII art”.</p>
- </dd>
-</dl>
+**Note:** The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in seperately.
 
-<p><strong>Note:</strong> The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use <code>grid</code> (as opposed to <code>grid-template</code>) to prevent these values from cascading in seperately.</p>
-
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css; highlight[5-8] notranslate">#page {
+```css
+#page {
   display: grid;
   width: 100%;
   height: 200px;
@@ -88,94 +85,39 @@ main {
 footer {
   background-color: red;
   grid-area: foot;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html notranslate">&lt;section id="page"&gt;
-  &lt;header&gt;Header&lt;/header&gt;
-  &lt;nav&gt;Navigation&lt;/nav&gt;
-  &lt;main&gt;Main area&lt;/main&gt;
-  &lt;footer&gt;Footer&lt;/footer&gt;
-&lt;/section&gt;</pre>
+```html
+<section id="page">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main area</main>
+  <footer>Footer</footer>
+</section>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", "100%", "200px")}}</p>
+{{EmbedLiveSample("Examples", "100%", "200px")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.grid-template")}}
 
+## See also
 
-<p>{{Compat("css.properties.grid-template")}}</p>
+- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands)_
+- Video tutorial:_ [Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
- <li>Video tutorial:<em> <a href="http://gridbyexample.com/video/grid-template-shorthand/">Grid Template shorthand</a></em></li>
-</ul>
-
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
- <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-columns">網格自動列</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-flow">網格自動流</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-auto-rows">網格自動行</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column">網格列</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-end">網格列端</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-gap">網格列間隙</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-column-start">網格列開始</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-gap">網格間隙</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row">網格行</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-end">網格行尾</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-gap">網格行間隙</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-row-start">網格行開始</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template">網格模板</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-areas">網格模板區域</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-columns">網格模板列</a></li>
-   <li><a href="/en-US/docs/Web/CSS/grid-template-rows">網格模板行</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>詞彙表</strong></a>
-  <ol>
-   <li><a href="/en-US/docs/Glossary/Grid_lines">網格線</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_tracks">網格軌道</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_cell">網格單元</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_areas">網格區域</a></li>
-   <li><a href="/en-US/docs/Glossary/Gutters">天溝</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_rows">網格行</a></li>
-   <li><a href="/en-US/docs/Glossary/Grid_column">網格列</a></li>
-  </ol>
- </li>
-</ol>
-</section>
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li><li><a href="/en-US/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li><li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="/en-US/docs/Web/CSS/grid">grid</a></li><li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-columns">網格自動列</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-flow">網格自動流</a></li><li><a href="/en-US/docs/Web/CSS/grid-auto-rows">網格自動行</a></li><li><a href="/en-US/docs/Web/CSS/grid-column">網格列</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-end">網格列端</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-gap">網格列間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-column-start">網格列開始</a></li><li><a href="/en-US/docs/Web/CSS/grid-gap">網格間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-row">網格行</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-end">網格行尾</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-gap">網格行間隙</a></li><li><a href="/en-US/docs/Web/CSS/grid-row-start">網格行開始</a></li><li><a href="/en-US/docs/Web/CSS/grid-template">網格模板</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-areas">網格模板區域</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-columns">網格模板列</a></li><li><a href="/en-US/docs/Web/CSS/grid-template-rows">網格模板行</a></li></ol></li><li data-default-state="open"><a href="#"><strong>詞彙表</strong></a><ol><li><a href="/en-US/docs/Glossary/Grid_lines">網格線</a></li><li><a href="/en-US/docs/Glossary/Grid_tracks">網格軌道</a></li><li><a href="/en-US/docs/Glossary/Grid_cell">網格單元</a></li><li><a href="/en-US/docs/Glossary/Grid_areas">網格區域</a></li><li><a href="/en-US/docs/Glossary/Gutters">天溝</a></li><li><a href="/en-US/docs/Glossary/Grid_rows">網格行</a></li><li><a href="/en-US/docs/Glossary/Grid_column">網格列</a></li></ol></li></ol></section>

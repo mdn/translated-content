@@ -12,52 +12,51 @@ tags:
   - TopicStub
 translation_of: Web/CSS/@viewport
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The<strong> <code>@viewport</code></strong> <a href="/en/CSS">CSS</a> <a href="/en/CSS/At-rule">at-rule</a> contains a set of nested descriptors in a CSS block that is delimited by curly braces. These descriptors control viewport settings, primarily on mobile devices.</p>
+The** `@viewport`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) contains a set of nested descriptors in a CSS block that is delimited by curly braces. These descriptors control viewport settings, primarily on mobile devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>A <em>zoom factor</em> of <code>1.0</code> or <code>100%</code> corresponds to no zooming. Larger values zoom in. Smaller values zoom out.</p>
+A _zoom factor_ of `1.0` or `100%` corresponds to no zooming. Larger values zoom in. Smaller values zoom out.
 
-<h3 id="Descriptors">Descriptors</h3>
+### Descriptors
 
-<p>Browsers are supposed to ignore unrecognized descriptors.</p>
+Browsers are supposed to ignore unrecognized descriptors.
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-width"><code>min-width</code></a></dt>
- <dd>Used in the determination of the width of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a></dt>
- <dd>Used in the determination of the width of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/width"><code>width</code></a></dt>
- <dd>A shorthand descriptor for setting both <code>min-width</code> and <code>max-width</code></dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-height"><code>min-height</code></a></dt>
- <dd>Used in the determination of the height of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-height"><code>max-height</code></a></dt>
- <dd>Used in the determination of the height of the viewport when the document is first displayed.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/height"><code>height</code></a></dt>
- <dd>A shorthand descriptor for setting both <code>min-height</code> and <code>max-height</code></dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/zoom"><code>zoom</code></a></dt>
- <dd>Sets the initial zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/min-zoom"><code>min-zoom</code></a></dt>
- <dd>Sets the minimum zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/max-zoom"><code>max-zoom</code></a></dt>
- <dd>Sets the maximum zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/user-zoom"><code>user-zoom</code></a></dt>
- <dd>Controls whether or not the user should be able to change the zoom factor.</dd>
- <dt><a href="/en-US/docs/Web/CSS/@viewport/orientation"><code>orientation</code></a></dt>
- <dd>Controls the document's orientation.</dd>
-</dl>
+- [`min-width`](/zh-TW/docs/Web/CSS/@viewport/min-width)
+  - : Used in the determination of the width of the viewport when the document is first displayed.
+- [`max-width`](/zh-TW/docs/Web/CSS/@viewport/max-width)
+  - : Used in the determination of the width of the viewport when the document is first displayed.
+- [`width`](/zh-TW/docs/Web/CSS/@viewport/width)
+  - : A shorthand descriptor for setting both `min-width` and `max-width`
+- [`min-height`](/zh-TW/docs/Web/CSS/@viewport/min-height)
+  - : Used in the determination of the height of the viewport when the document is first displayed.
+- [`max-height`](/zh-TW/docs/Web/CSS/@viewport/max-height)
+  - : Used in the determination of the height of the viewport when the document is first displayed.
+- [`height`](/zh-TW/docs/Web/CSS/@viewport/height)
+  - : A shorthand descriptor for setting both `min-height` and `max-height`
+- [`zoom`](/zh-TW/docs/Web/CSS/@viewport/zoom)
+  - : Sets the initial zoom factor.
+- [`min-zoom`](/zh-TW/docs/Web/CSS/@viewport/min-zoom)
+  - : Sets the minimum zoom factor.
+- [`max-zoom`](/zh-TW/docs/Web/CSS/@viewport/max-zoom)
+  - : Sets the maximum zoom factor.
+- [`user-zoom`](/zh-TW/docs/Web/CSS/@viewport/user-zoom)
+  - : Controls whether or not the user should be able to change the zoom factor.
+- [`orientation`](/zh-TW/docs/Web/CSS/@viewport/orientation)
+  - : Controls the document's orientation.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: css">@viewport {
+```css
+@viewport {
   min-width: 640px;
   max-width: 800px;
 }
@@ -68,19 +67,18 @@ translation_of: Web/CSS/@viewport
 }
 @viewport {
   orientation: landscape;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.at-rules.viewport")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("meta")}}, specifically <code>&lt;meta name="viewport"&gt;</code></li>
- <li><a href="/en-US/docs/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
-</ul>
+- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
+- [Using the viewport meta tag to control layout on mobile browsers](/zh-TW/docs/Mobile/Viewport_meta_tag)

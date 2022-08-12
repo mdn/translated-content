@@ -5,41 +5,36 @@ tags:
   - API
 translation_of: Web/API/GainNode/gain
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("GainNode") }} 介面的 <code>gain</code> 屬性是 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}，代表增益的數值。</p>
-</div>
+{{ domxref("GainNode") }} 介面的 `gain` 屬性是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，代表增益的數值。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-</pre>
+```
 
-<h3 id="傳回值">傳回值</h3>
+### 傳回值
 
-<p>一個 {{domxref("AudioParam")}}.</p>
+一個 {{domxref("AudioParam")}}.
 
-<div class="note">
-<p><strong>註：</strong> 雖然傳回的 <code>AudioParam</code> 是唯讀的，但是它所代表的值可以更改。</p>
-</div>
+> **備註：** 雖然傳回的 `AudioParam` 是唯讀的，但是它所代表的值可以更改。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}</p>
+{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容度">瀏覽器相容度</h2>
+## 瀏覽器相容度
 
 {{Compat("api.GainNode.gain")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)

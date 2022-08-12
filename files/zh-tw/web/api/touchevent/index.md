@@ -3,111 +3,101 @@ title: TouchEvent
 slug: Web/API/TouchEvent
 translation_of: Web/API/TouchEvent
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p><strong><code>TouchEvent</code></strong> 介面表示了一個由觸控平面因觸碰而改變狀態所發出的事件。平面可以是觸控螢幕或是觸控板，<code>TouchEvent</code> 能描述一或多個觸碰點，並且支援偵測其移動、增加或減少觸碰點等等功能。</p>
+**`TouchEvent`** 介面表示了一個由觸控平面因觸碰而改變狀態所發出的事件。平面可以是觸控螢幕或是觸控板，`TouchEvent` 能描述一或多個觸碰點，並且支援偵測其移動、增加或減少觸碰點等等功能。
 
-<p>觸碰點是由 {{ domxref("Touch") }} 物件表示；每一個觸碰點描述了其位置、大小與形狀、壓力值以及目標元素。觸碰點列表由 {{ domxref("TouchList") }} 所表示。</p>
+觸碰點是由 {{ domxref("Touch") }} 物件表示；每一個觸碰點描述了其位置、大小與形狀、壓力值以及目標元素。觸碰點列表由 {{ domxref("TouchList") }} 所表示。
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<dl>
- <dt>{{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}</dt>
- <dd>Creates a <code>TouchEvent</code> object.</dd>
-</dl>
+- {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
+  - : Creates a `TouchEvent` object.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的屬性</em></p>
+_此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")}} 的屬性_
 
-<dl>
- <dt>{{ domxref("TouchEvent.altKey") }} {{readonlyInline}}</dt>
- <dd>A Boolean value indicating whether or not the alt key was down when the touch event was fired.</dd>
- <dt>{{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}</dt>
- <dd>A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects representing individual points of contact whose states changed between the previous touch event and this one.</dd>
- <dt>{{ domxref("TouchEvent.ctrlKey") }} {{readonlyInline}}</dt>
- <dd>A Boolean value indicating whether or not the control key was down when the touch event was fired.</dd>
- <dt>{{ domxref("TouchEvent.metaKey") }} {{readonlyInline}}</dt>
- <dd>A Boolean value indicating whether or not the meta key was down when the touch event was fired.</dd>
- <dt>{{ domxref("TouchEvent.shiftKey") }} {{readonlyInline}}</dt>
- <dd>A Boolean value indicating whether or not the shift key was down when the touch event was fired.</dd>
- <dt>{{ domxref("TouchEvent.targetTouches") }}{{readonlyInline}}</dt>
- <dd>A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects that are both currently in contact with the touch surface <strong>and</strong> were also started on the same element that is the target of the event.</dd>
- <dt>{{ domxref("TouchEvent.touches") }} {{readonlyInline}}</dt>
- <dd>A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects representing all current points of contact with the surface, regardless of target or changed status.</dd>
-</dl>
+- {{ domxref("TouchEvent.altKey") }} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the alt key was down when the touch event was fired.
+- {{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}
+  - : A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects representing individual points of contact whose states changed between the previous touch event and this one.
+- {{ domxref("TouchEvent.ctrlKey") }} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the control key was down when the touch event was fired.
+- {{ domxref("TouchEvent.metaKey") }} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
+- {{ domxref("TouchEvent.shiftKey") }} {{readonlyInline}}
+  - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
+- {{ domxref("TouchEvent.targetTouches") }}{{readonlyInline}}
+  - : A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
+- {{ domxref("TouchEvent.touches") }} {{readonlyInline}}
+  - : A {{ domxref("TouchList") }} of all the {{ domxref("Touch") }} objects representing all current points of contact with the surface, regardless of target or changed status.
 
-<h2 id="觸控事件類型">觸控事件類型</h2>
+## 觸控事件類型
 
-<p>觸控事件有多個種類可以代表觸碰狀態發生了改變。可以藉由 {{ domxref("event.type", "TouchEvent.type") }} 屬性來確認是哪一個種類的觸控事件。</p>
+觸控事件有多個種類可以代表觸碰狀態發生了改變。可以藉由 {{ domxref("event.type", "TouchEvent.type") }} 屬性來確認是哪一個種類的觸控事件。
 
-<h3 id="event(touchstart)">{{event("touchstart")}}</h3>
+### {{event("touchstart")}}
 
-<p>Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.</p>
+Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
 
-<h3 id="event(touchend)">{{event("touchend")}}</h3>
+### {{event("touchend")}}
 
-<p>Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.</p>
+Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
 
-<p>The event's target is the same {{ domxref("element") }} that received the <code>touchstart</code> event corresponding to the touch point, even if the touch point has moved outside that element.</p>
+The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
-<p>The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the <code>changedTouches</code> attribute.</p>
+The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
 
-<h3 id="event(touchmove)">{{event("touchmove")}}</h3>
+### {{event("touchmove")}}
 
-<p>Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the <code>touchstart</code> event corresponding to the touch point, even if the touch point has moved outside that element.</p>
+Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
-<p>This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.</p>
+This event is also sent if the values of the radius, rotation angle, or force attributes of a touch point change.
 
-<div class="note"><strong>Note:</strong> The rate at which <code>touchmove</code> events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.</div>
+> **備註：** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
-<h3 id="event(touchcancel)">{{event("touchcancel")}}</h3>
+### {{event("touchcancel")}}
 
-<p>Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):</p>
+Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
 
-<ul>
- <li>An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.</li>
- <li>The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.</li>
- <li>The user has placed more touch points on the screen than can be supported, in which case the earliest {{ domxref("Touch") }} in the {{ domxref("TouchList") }} gets canceled.</li>
-</ul>
+- An event of some kind occurred that canceled the touch; this might happen if a modal alert pops up during the interaction.
+- The touch point has left the document window and moved into the browser's UI area, a plug-in, or other external content.
+- The user has placed more touch points on the screen than can be supported, in which case the earliest {{ domxref("Touch") }} in the {{ domxref("TouchList") }} gets canceled.
 
-<h3 id="Using_with_addEventListener()_and_preventDefault()">Using with addEventListener() and preventDefault()</h3>
+### Using with addEventListener() and preventDefault()
 
-<p>It's important to note that in many cases, both touch and mouse events get sent (in order to let non-touch-specific code still interact with the user). If you use touch events, you should call {{domxref("Event.preventDefault","preventDefault()")}} to keep the mouse event from being sent as well.</p>
+It's important to note that in many cases, both touch and mouse events get sent (in order to let non-touch-specific code still interact with the user). If you use touch events, you should call {{domxref("Event.preventDefault","preventDefault()")}} to keep the mouse event from being sent as well.
 
-<p>The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for {{event("touchstart")}} and {{event("touchmove")}} is <code>true</code> and calls to {{domxref("Event.preventDefault","preventDefault()")}} are not needed. To override this behavior, you simply set the <code>passive</code> option to <code>false</code> as shown in the example below. This change prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> site.</p>
+The exception to this is Chrome, starting with version 56 (desktop, Chrome for android, and android webview), where the default value for {{event("touchstart")}} and {{event("touchmove")}} is `true` and calls to {{domxref("Event.preventDefault","preventDefault()")}} are not needed. To override this behavior, you simply set the `passive` option to `false` as shown in the example below. This change prevents the listener from blocking page rendering while a user is scrolling. A demo is available on the [Google Developer](https://developers.google.com/web/updates/2016/06/passive-event-listeners) site.
 
-<h2 id="GlobalEventHandlers">GlobalEventHandlers</h2>
+## GlobalEventHandlers
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<dl>
- <dt>{{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}</dt>
- <dd>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchstart")}} event.</dd>
- <dt>{{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}</dt>
- <dd>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchend")}} event.</dd>
- <dt>{{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}</dt>
- <dd>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.</dd>
- <dt>{{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}</dt>
- <dd>A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchcancel")}} event.</dd>
-</dl>
+- {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchstart")}} event.
+- {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchend")}} event.
+- {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
+- {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchcancel")}} event.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>See the <a href="/en/DOM/Touch_events#Example">example on the main Touch events article</a>.</p>
+See the [example on the main Touch events article](/en/DOM/Touch_events#Example).
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.TouchEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("Touch_events","Touch Events Overview")}}</li>
- <li>{{domxref("GestureEvent")}}</li>
- <li>{{domxref("MSGestureEvent")}}</li>
-</ul>
+- {{domxref("Touch_events","Touch Events Overview")}}
+- {{domxref("GestureEvent")}}
+- {{domxref("MSGestureEvent")}}

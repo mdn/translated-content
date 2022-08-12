@@ -11,43 +11,37 @@ tags:
   - TopicStub
 translation_of: Web/API/Geolocation
 ---
-<div>{{APIRef("Geolocation API")}}</div>
+{{APIRef("Geolocation API")}}
 
-<p><code><strong>Geolocation</strong></code> 介面代表一個物件可以透過你的網頁程式去獲得你的裝置位置。這個介面提供了網站或應用程式根據使用者的位置去客製化呈現的內容。</p>
+**`Geolocation`** 介面代表一個物件可以透過你的網頁程式去獲得你的裝置位置。這個介面提供了網站或應用程式根據使用者的位置去客製化呈現的內容。
 
-<p>{{domxref("Navigator")}} 此物件實作了 {{domxref("Navigator.geolocation")}} 介面。</p>
+{{domxref("Navigator")}} 此物件實作了 {{domxref("Navigator.geolocation")}} 介面。
 
-<div class="note">
-<p><strong>備註:</strong> 因為隱私的因素，當網頁要求存取位置資訊時，用戶會被提示通知並且詢問授權與否。注意不同的瀏覽器在詢問授權時有各自不同的策略和方式。</p>
-</div>
+> **備註：** 因為隱私的因素，當網頁要求存取位置資訊時，用戶會被提示通知並且詢問授權與否。注意不同的瀏覽器在詢問授權時有各自不同的策略和方式。
 
-<h2 id="性質">性質</h2>
+## 性質
 
-<p><em><code>Geolocation</code> 介面沒有繼承也沒有時做任何方法</em>。</p>
+_`Geolocation` 介面沒有繼承也沒有時做任何方法_。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em><em><code>Geolocation</code> 介面沒有繼承任何方法</em></em>。</p>
+**`Geolocation` 介面沒有繼承任何方法**。
 
-<dl>
- <dt>{{domxref("Geolocation.getCurrentPosition()")}}</dt>
- <dd>取得裝置當前位置，並回傳{{domxref("Position")}}。</dd>
- <dt>{{domxref("Geolocation.watchPosition()")}}</dt>
- <dd>返回一個長整數，註冊一個回呼函數。這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。</dd>
- <dt>{{domxref("Geolocation.clearWatch()")}}</dt>
- <dd>移除指定註冊的<code> watchPosition()</code>。</dd>
-</dl>
+- {{domxref("Geolocation.getCurrentPosition()")}}
+  - : 取得裝置當前位置，並回傳{{domxref("Position")}}。
+- {{domxref("Geolocation.watchPosition()")}}
+  - : 返回一個長整數，註冊一個回呼函數。這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。
+- {{domxref("Geolocation.clearWatch()")}}
+  - : 移除指定註冊的` watchPosition()`。
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Geolocation")}}
 
-<h2 id="請參考">請參考</h2>
+## 請參考
 
-<ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation">Using geolocation</a></li>
-</ul>
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)

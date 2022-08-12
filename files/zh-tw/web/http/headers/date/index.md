@@ -11,15 +11,14 @@ tags:
 
 **`Date`** 標頭的值是傳送當下的日期與時間。
 
-> **警告：** `Date` 被列在 fetch spec 的 [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name) 清單中 ── 也就是說這段程式不會送出 `Date` 標頭：```js
+> **警告：** `Date` 被列在 fetch spec 的 [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name) 清單中 ── 也就是說這段程式不會送出 `Date` 標頭：
+>
+> ```js
 > fetch('https://httpbin.org/get', {
-> 'headers': {
-> 'Date': (new Date()).toUTCString()
-> }
+>   'headers': {
+>     'Date': (new Date()).toUTCString()
+>   }
 > })
->
-> ```
->
 > ```
 
 | Header type                                      | {{Glossary("General header")}} |

@@ -3,38 +3,38 @@ title: Element.classList
 slug: Web/API/Element/classList
 translation_of: Web/API/Element/classList
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.classList</strong></code> 唯讀屬性代表了該元素所擁有之類別屬性（<code>Class</code> {{Glossary("Attribute")}}）的即時更新集－{{domxref("DOMTokenList")}}。</p>
+**`Element.classList`** 唯讀屬性代表了該元素所擁有之類別屬性（`Class` {{Glossary("Attribute")}}）的即時更新集－{{domxref("DOMTokenList")}}。
 
-<p>使用 <code>classList</code> 屬性是取得元素 <code>Class</code> 的一種便利方式，也可以透過 {{domxref("element.className")}} 來得到以空格分隔之 <code>Class</code> 清單字串。</p>
+使用 `classList` 屬性是取得元素 `Class` 的一種便利方式，也可以透過 {{domxref("element.className")}} 來得到以空格分隔之 `Class` 清單字串。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <var>elementClasses</var> = elementNodeReference.classList;
-</pre>
+```plain
+var elementClasses = elementNodeReference.classList;
+```
 
-<p><em>elementClasses</em> is a {{domxref("DOMTokenList")}} representing the class attribute of <em>elementNodeReference</em>. If the class attribute was not set or is empty <em>elementClasses.length</em> returns 0. <code>element.classList</code> itself is read-only, although you can modify it using the<code> add()</code> and <code>remove()</code> methods.</p>
+_elementClasses_ is a {{domxref("DOMTokenList")}} representing the class attribute of _elementNodeReference_. If the class attribute was not set or is empty _elementClasses.length_ returns 0. `element.classList` itself is read-only, although you can modify it using the` add()` and `remove()` methods.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>add( String [, String] )</dt>
- <dd>Add specified class values. If these classes already exist in attribute of the element, then they are ignored.</dd>
- <dt>remove( String [,String] )</dt>
- <dd>Remove specified class values.</dd>
- <dt><strong>item</strong> ( Number )</dt>
- <dd>Return class value by index in collection.</dd>
- <dt><strong>toggle</strong> ( String [, force] )</dt>
- <dd>When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.<br>
- When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it.</dd>
- <dt>contains( String )</dt>
- <dd>Checks if specified class value exists in class attribute of the element.</dd>
-</dl>
+- add( String \[, String] )
+  - : Add specified class values. If these classes already exist in attribute of the element, then they are ignored.
+- remove( String \[,String] )
+  - : Remove specified class values.
+- **item** ( Number )
+  - : Return class value by index in collection.
+- **toggle** ( String \[, force] )
+  - : When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.
+    When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it.
+- contains( String )
+  - : Checks if specified class value exists in class attribute of the element.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">// div is an object reference to a &lt;div&gt; element with class="foo bar"
+```js
+// div is an object reference to a <div> element with class="foo bar"
 div.classList.remove("foo");
 div.classList.add("anotherclass");
 
@@ -42,21 +42,21 @@ div.classList.add("anotherclass");
 div.classList.toggle("visible");
 
 //  add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i &lt; 10 );
+div.classList.toggle("visible", i < 10 );
 
 alert(div.classList.contains("foo"));
 
-div.classList.add("foo","bar"); //add multiple classes</pre>
+div.classList.add("foo","bar"); //add multiple classes
+```
 
-<div class="note">
-<p>Versions of Firefox before 26 do not implement the use of several arguments in the add/remove/toggle methods. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
-</div>
+> **備註：** Versions of Firefox before 26 do not implement the use of several arguments in the add/remove/toggle methods. See <https://bugzilla.mozilla.org/show_bug.cgi?id=814014>
 
-<h2 id="JavaScript_shim_for_other_implementations">JavaScript shim for other implementations</h2>
+## JavaScript shim for other implementations
 
-<div class="note"><strong>Note:</strong> This shim does not work in Internet Explorer versions less than 8.</div>
+> **備註：** This shim does not work in Internet Explorer versions less than 8.
 
-<pre class="brush: js">/*
+```js
+/*
  * classList.js: Cross-browser full element.classList implementation.
  * 2014-07-23
  *
@@ -93,8 +93,8 @@ var
         i = 0
       , len = this.length
     ;
-    for (; i &lt; len; i++) {
-      if (i in this &amp;&amp; this[i] === item) {
+    for (; i < len; i++) {
+      if (i in this && this[i] === item) {
         return i;
       }
     }
@@ -128,7 +128,7 @@ var
       , i = 0
       , len = classes.length
     ;
-    for (; i &lt; len; i++) {
+    for (; i < len; i++) {
       this.push(classes[i]);
     }
     this._updateClassName = function () {
@@ -165,7 +165,7 @@ classListProto.add = function () {
       updated = true;
     }
   }
-  while (++i &lt; l);
+  while (++i < l);
 
   if (updated) {
     this._updateClassName();
@@ -189,7 +189,7 @@ classListProto.remove = function () {
       index = checkTokenAndGetIndex(this, token);
     }
   }
-  while (++i &lt; l);
+  while (++i < l);
 
   if (updated) {
     this._updateClassName();
@@ -201,9 +201,9 @@ classListProto.toggle = function (token, force) {
   var
       result = this.contains(token)
     , method = result ?
-      force !== true &amp;&amp; "remove"
+      force !== true && "remove"
     :
-      force !== false &amp;&amp; "add"
+      force !== false && "add"
   ;
 
   if (method) {
@@ -251,7 +251,7 @@ if (objCtr.defineProperty) {
 
   testElement.classList.add("c1", "c2");
 
-  // Polyfill for IE 10/11 and Firefox &lt;26, where classList.add and
+  // Polyfill for IE 10/11 and Firefox <26, where classList.add and
   // classList.remove exist but support only one argument at a time.
   if (!testElement.classList.contains("c2")) {
     var createMethod = function(method) {
@@ -260,7 +260,7 @@ if (objCtr.defineProperty) {
       DOMTokenList.prototype[method] = function(token) {
         var i, len = arguments.length;
 
-        for (i = 0; i &lt; len; i++) {
+        for (i = 0; i < len; i++) {
           token = arguments[i];
           original.call(this, token);
         }
@@ -272,13 +272,13 @@ if (objCtr.defineProperty) {
 
   testElement.classList.toggle("c3", false);
 
-  // Polyfill for IE 10 and Firefox &lt;24, where classList.toggle does not
+  // Polyfill for IE 10 and Firefox <24, where classList.toggle does not
   // support the second argument.
   if (testElement.classList.contains("c3")) {
     var _toggle = DOMTokenList.prototype.toggle;
 
     DOMTokenList.prototype.toggle = function(token, force) {
-      if (1 in arguments &amp;&amp; !this.contains(token) === !force) {
+      if (1 in arguments && !this.contains(token) === !force) {
         return force;
       } else {
         return _toggle.call(this, token);
@@ -292,19 +292,18 @@ if (objCtr.defineProperty) {
 
 }
 
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Element.classList")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("element.className")}}</li>
- <li>{{domxref("DOMTokenList")}};</li>
-</ul>
+- {{domxref("element.className")}}
+- {{domxref("DOMTokenList")}};

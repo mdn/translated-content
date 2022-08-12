@@ -1,24 +1,26 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
-translation_of: 'Web/CSS/:target'
+slug: Web/CSS/:target
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The<code> :target </code><a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-class</a> represents the unique element, if any, with an <strong>id</strong> matching the fragment identifier of the URI of the document..</p>
+The` :target `[pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes) represents the unique element, if any, with an **id** matching the fragment identifier of the URI of the document..
 
-<p>URIs with fragment identifiers link to a certain element within the document, known as the <em>target element</em>. For instance, here is a URI pointing to an <em>anchor</em> named section2:<br>
- <code>http://example.com/folder/document.html#section2</code><br>
- The <em>anchor</em> can be any element with an<code> id </code>attribute, e.g. <code>&lt;h1 id="section2"&gt;</code> in our example. The <em>target element</em> <code>h1</code> can be represented by the <code>:target</code> pseudo-class.</p>
+URIs with fragment identifiers link to a certain element within the document, known as the _target element_. For instance, here is a URI pointing to an _anchor_ named section2:
+`http://example.com/folder/document.html#section2`
+The _anchor_ can be any element with an` id `attribute, e.g. `<h1 id="section2">` in our example. The _target element_ `h1` can be represented by the `:target` pseudo-class.
 
-<div class="note"><strong>Note:</strong> The<code> id </code>attribute was new in HTML 4 (December 1997).  In old-style HTML <code>&lt;a&gt;</code> is a target element.  The<code> :target </code>pseudo-class applies to those targets as well.</div>
+> **備註：** The` id `attribute was new in HTML 4 (December 1997). In old-style HTML `<a>` is a target element. The` :target `pseudo-class applies to those targets as well.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush:css">:target { outline: solid red }  /* draw a red, solid line around the target element */
-</pre>
+```css
+:target { outline: solid red }  /* draw a red, solid line around the target element */
+```
 
-<pre class="brush:css">/* example code for userContent.css or any web pages;
+```css
+/* example code for userContent.css or any web pages;
    a red/yellow arrow indicates the target element */
 
 :target {
@@ -38,18 +40,19 @@ translation_of: 'Web/CSS/:target'
   margin-right:   0.13em;
   vertical-align: 20%;
 }
-</pre>
+```
 
-<h3 id="Working_with_display_none_elements…">Working with display: none elements…</h3>
+### Working with display: none elements…
 
-<p>The <code>:target</code> pseudo-class also works fine with <strong>undisplayed elements</strong>:</p>
+The `:target` pseudo-class also works fine with **undisplayed elements**:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;:target pseudoclass example&lt;/title&gt;
-&lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>:target pseudoclass example</title>
+<style>
 #newcomment {
   display: none;
 }
@@ -57,32 +60,32 @@ translation_of: 'Web/CSS/:target'
 #newcomment:target {
   display: block;
 }
-&lt;/style&gt;
+</style>
 
-&lt;/head&gt;
-&lt;body&gt;
- &lt;p&gt;&lt;a href="#newcomment"&gt;Add a comment&lt;/a&gt;&lt;/p&gt;
- &lt;div id="newcomment"&gt;
-  &lt;form&gt;
-  &lt;p&gt;Write your comment:&lt;br /&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;&lt;/p&gt;
-  &lt;/form&gt;
- &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+ <p><a href="#newcomment">Add a comment</a></p>
+ <div id="newcomment">
+  <form>
+  <p>Write your comment:<br />
+  <textarea></textarea></p>
+  </form>
+ </div>
+</body>
+</html>
+```
 
-<h3 id="Creating_a_pure_CSS_lightbox">Creating a pure CSS "lightbox"</h3>
+### Creating a pure CSS "lightbox"
 
-<p>The <code>:target</code> pseudo-class is useful to switch on/off some invisible elements. In this way you can create a pure-CSS lightbox (<a href="/files/4607/lightbox.html">live demo</a>).</p>
+The `:target` pseudo-class is useful to switch on/off some invisible elements. In this way you can create a pure-CSS lightbox ([live demo](/files/4607/lightbox.html)).
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;MDN Example &amp;ndash; CSS Lightbox&lt;/title&gt;
-&lt;style type="text/css"&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>MDN Example &ndash; CSS Lightbox</title>
+<style type="text/css">
 div.lightbox {
   display: none;
   position: fixed;
@@ -164,48 +167,46 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
   background-color: #000000;
   opacity: 0.85;
 }
-&lt;/style&gt;
-&lt;/head&gt;
+</style>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;h1&gt;Pure CSS Lightbox&lt;/h1&gt;
+<h1>Pure CSS Lightbox</h1>
 
-&lt;p&gt;Some sample text&amp;hellip;&lt;/p&gt;
+<p>Some sample text&hellip;</p>
 
-&lt;p&gt;[ &lt;a href="#example1"&gt;Open example #1&lt;/a&gt; | &lt;a href="#example2"&gt;Open example #2&lt;/a&gt; ]&lt;/p&gt;
+<p>[ <a href="#example1">Open example #1</a> | <a href="#example2">Open example #2</a> ]</p>
 
-&lt;p&gt;Another sample text&amp;hellip;&lt;/p&gt;
+<p>Another sample text&hellip;</p>
 
-&lt;div class="lightbox" id="example1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="closemsg"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim, placerat id eleifend eu, semper vel sem. Sed interdum commodo enim venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit. Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a. Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam erat volutpat.&lt;br /&gt;
-    Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo. Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec tellus pharetra dictum.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;div class="lightbox" id="example2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="closemsg"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna. Etiam ullamcorper augue quis orci posuere et tincidunt augue semper. Maecenas varius augue eu orci auctor bibendum tristique ligula egestas. Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec elit vel mauris dapibus lacinia eget sed odio.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<div class="lightbox" id="example1">
+  <figure>
+    <a href="#" class="closemsg"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim, placerat id eleifend eu, semper vel sem. Sed interdum commodo enim venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit. Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a. Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam erat volutpat.<br />
+    Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo. Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec tellus pharetra dictum.</figcaption>
+  </figure>
 </div>
 
-<h2 id="規範">規範</h2>
+<div class="lightbox" id="example2">
+  <figure>
+    <a href="#" class="closemsg"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna. Etiam ullamcorper augue quis orci posuere et tincidunt augue semper. Maecenas varius augue eu orci auctor bibendum tristique ligula egestas. Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec elit vel mauris dapibus lacinia eget sed odio.</figcaption>
+  </figure>
+</div>
+
+</body>
+</html>
+```
+
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
+## 瀏覽器兼容性
 
 {{Compat("css.selectors.target")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Using_the_:target_selector">使用 :target</a></li>
-</ul>
+- [使用 :target](/zh-TW/docs/Using_the_:target_selector)

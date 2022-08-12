@@ -1,70 +1,66 @@
 ---
 title: ':lang()'
-slug: 'Web/CSS/:lang'
-translation_of: 'Web/CSS/:lang'
+slug: Web/CSS/:lang
+translation_of: Web/CSS/:lang
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>:lang()</code></strong> 是一種 <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">偽類 ( pseudo-class )</a>。它會根據括號中指定的語系，來選擇使用的元素。</p>
+**`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類 ( pseudo-class )](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
 
-<pre class="brush: css no-line-numbers">/* 選取任何語言屬性為英文 (en) 的 &lt;p&gt; */
+```css
+/* 選取任何語言屬性為英文 (en) 的 <p> */
 p:lang(en) {
   quotes: '\201C' '\201D' '\2018' '\2019';
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>注意：</strong> 在 HTML 中，語言是通過 {{htmlattrxref("lang")}} 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。</p>
-</div>
+> **備註：** 在 HTML 中，語言是通過 {{htmlattrxref("lang")}} 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。
 
-<h2 id="語法_Syntax">語法 Syntax</h2>
+## 語法 Syntax
 
-<h3 id="語法格式_Formal_syntax">語法格式 Formal syntax</h3>
+### 語法格式 Formal syntax
 
 {{csssyntax}}
 
-<h3 id="參數_Parameter">參數 Parameter</h3>
+### 參數 Parameter
 
-<dl>
- <dt><code>&lt;language-code&gt;</code></dt>
- <dd>{{cssxref("&lt;string&gt;")}} 代表你要指定的語言。可接受的值為 <a href="/en-US/docs/Web/HTML">HTML</a> 規範中指定的值。</dd>
-</dl>
+- `<language-code>`
+  - : {{cssxref("&lt;string&gt;")}} 代表你要指定的語言。可接受的值為 [HTML](/zh-TW/docs/Web/HTML) 規範中指定的值。
 
-<h2 id="範例_Example">範例 Example</h2>
+## 範例 Example
 
-<p>在此例中，<code>:lang()</code> 偽類 會依據 “引用元素 quote” ({{htmlElement("q")}}) 的父層來選擇 <a href="/en-US/docs/Web/CSS/Child_selectors">子組合子 ( child combinators )</a>。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。</p>
+在此例中，`:lang()` 偽類 會依據 “引用元素 quote” ({{htmlElement("q")}}) 的父層來選擇 [子組合子 ( child combinators )](/zh-TW/docs/Web/CSS/Child_selectors)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div lang="en"&gt;&lt;q&gt;This English quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="fr"&gt;&lt;q&gt;This French quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-&lt;div lang="de"&gt;&lt;q&gt;This German quote has a &lt;q&gt;nested&lt;/q&gt; quote inside.&lt;/q&gt;&lt;/div&gt;
-</pre>
+```html
+<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
+<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
+<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:lang(en) &gt; q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) &gt; q { quotes: '« ' ' »'; }
-:lang(de) &gt; q { quotes: '»' '«' '\2039' '\203A'; }
-</pre>
+```css
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > q { quotes: '« ' ' »'; }
+:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+```
 
-<h3 id="結果_Result">結果 Result</h3>
+### 結果 Result
 
-<p>{{EmbedLiveSample('Example', 350)}}</p>
+{{EmbedLiveSample('Example', 350)}}
 
-<h2 id="技術規格_Specifications">技術規格 Specifications</h2>
+## 技術規格 Specifications
 
 {{Specifications}}
 
-<h2 id="瀏覽器兼容性_Browser_compatibility">瀏覽器兼容性 Browser compatibility</h2>
+## 瀏覽器兼容性 Browser compatibility
 
-<div>
-<p>{{Compat("css.selectors.lang")}}</p>
-</div>
+{{Compat("css.selectors.lang")}}
 
-<h2 id="其他參考_See_also">其他參考 See also</h2>
+## 其他參考 See also
 
-<ul>
- <li>語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}</li>
- <li>HTML {{htmlattrxref("lang")}} 屬性</li>
- <li><a href="https://tools.ietf.org/html/bcp47">BCP 47 - Tags for Identifying Languages (BCP 47 - 識別語言的標籤)</a></li>
-</ul>
+- 語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- HTML {{htmlattrxref("lang")}} 屬性
+- [BCP 47 - Tags for Identifying Languages (BCP 47 - 識別語言的標籤)](https://tools.ietf.org/html/bcp47)

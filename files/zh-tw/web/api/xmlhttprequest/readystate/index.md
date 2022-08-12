@@ -3,65 +3,35 @@ title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 translation_of: Web/API/XMLHttpRequest/readyState
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p><strong>XMLHttpRequest.readyState</strong> 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 <abbr title="XMLHttpRequest">XHR</abbr> 客戶端可以為下列其中一種狀態：</p>
+**XMLHttpRequest.readyState** 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 XHR 客戶端可以為下列其中一種狀態：
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">值</td>
-   <td class="header">狀態</td>
-   <td class="header">說明</td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>UNSENT</code></td>
-   <td>客戶端已被建立，但 <code>open()</code> 方法尚未被呼叫。</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>OPENED</code></td>
-   <td><code>open()</code> 方法已被呼叫。</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>HEADERS_RECEIVED</code></td>
-   <td><code>send()</code> 方法已被呼叫，而且可取得 header 與狀態。</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td><code>LOADING</code></td>
-   <td>回應資料下載中，此時 <code>responseText</code> 會擁有部分資料。</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td><code>DONE</code></td>
-   <td>完成下載操作。</td>
-  </tr>
- </tbody>
-</table>
+| 值  | 狀態               | 說明                                                 |
+| --- | ------------------ | ---------------------------------------------------- |
+| `0` | `UNSENT`           | 客戶端已被建立，但 `open()` 方法尚未被呼叫。         |
+| `1` | `OPENED`           | `open()` 方法已被呼叫。                              |
+| `2` | `HEADERS_RECEIVED` | `send()` 方法已被呼叫，而且可取得 header 與狀態。    |
+| `3` | `LOADING`          | 回應資料下載中，此時 `responseText` 會擁有部分資料。 |
+| `4` | `DONE`             | 完成下載操作。                                       |
 
-<dl>
- <dt>UNSENT</dt>
- <dd>XMLHttpRequest 客戶端物件已被建立，但 open() 方法尚未被呼叫。</dd>
- <dt>OPENED</dt>
- <dd>open() 方法已被呼叫。於此狀態時，可以使用 <a href="/zh-TW/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a> 方法設定請求標頭（request headers），並可呼叫 <a href="/zh-TW/docs/Web/API/XMLHttpRequest/send">send()</a> 方法來發送請求。</dd>
- <dt>HEADERS_RECEIVED</dt>
- <dd>send() 方法已被呼叫，並且已接收到回應標頭（response header）。</dd>
- <dt>LOADING</dt>
- <dd>正在接收回應內容（response's body）。如 <code><a href="/zh-TW/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> 屬性為 "text" 或空字串，則 <code><a href="/zh-TW/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> 屬性將會在載入的過程中擁有已載入部分之回應（response）內容中的文字。</dd>
- <dt>DONE</dt>
- <dd>請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。</dd>
-</dl>
+- UNSENT
+  - : XMLHttpRequest 客戶端物件已被建立，但 open() 方法尚未被呼叫。
+- OPENED
+  - : open() 方法已被呼叫。於此狀態時，可以使用 [setRequestHeader()](/zh-TW/docs/Web/API/XMLHttpRequest/setRequestHeader) 方法設定請求標頭（request headers），並可呼叫 [send()](/zh-TW/docs/Web/API/XMLHttpRequest/send) 方法來發送請求。
+- HEADERS_RECEIVED
+  - : send() 方法已被呼叫，並且已接收到回應標頭（response header）。
+- LOADING
+  - : 正在接收回應內容（response's body）。如 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType) 屬性為 "text" 或空字串，則 [`responseText`](/zh-TW/docs/Web/API/XMLHttpRequest/responseText) 屬性將會在載入的過程中擁有已載入部分之回應（response）內容中的文字。
+- DONE
+  - : 請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。
 
-<div class="note">
-<p>這些狀態名稱在 Internet Explorer 中略有不同。其中 <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> 和 <code>DONE 變成了 READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) 和<code>READYSTATE_COMPLETE</code> (4)。</p>
-</div>
+> **備註：** 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` 和 `DONE 變成了 READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);
@@ -76,12 +46,12 @@ xhr.onload = function () {
 };
 
 xhr.send(null);
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.XMLHttpRequest.readyState")}}

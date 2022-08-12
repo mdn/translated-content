@@ -9,17 +9,16 @@ tags:
   - localStorage
 translation_of: Web/API/Window/sessionStorage
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<p><code>sessionStorage</code> 屬性能讓開發人員訪問當前 origin 的 {{DOMxRef("Storage")}} 物件。<code>sessionStorage</code> 跟 {{DOMxRef("Window.localStorage", "localStorage")}} 很相似：唯一不同的地方是存放在 <code>localStorage</code> 的資料並沒有過期的時效；而存放在 <code>sessionStorage</code> 的資料則會在頁面 session 結束時清空。只要該頁面頁面(頁籤)沒被關閉或者有還原(restore)該頁面，資料就會保存。<strong>開啟新頁籤或視窗會產生一個新的sessionStorage</strong>，跟Session與Cookies的做法不大一樣。
+`sessionStorage` 屬性能讓開發人員訪問當前 origin 的 {{DOMxRef("Storage")}} 物件。`sessionStorage` 跟 {{DOMxRef("Window.localStorage", "localStorage")}} 很相似：唯一不同的地方是存放在 `localStorage` 的資料並沒有過期的時效；而存放在 `sessionStorage` 的資料則會在頁面 session 結束時清空。只要該頁面頁面(頁籤)沒被關閉或者有還原(restore)該頁面，資料就會保存。**開啟新頁籤或視窗會產生一個新的 sessionStorage**，跟 Session 與 Cookies 的做法不大一樣。
 
-</p>
+另應該注意：不論資料放在 `sessionStorage` 還是 `localStorage`，都被**限制在該網站的規範內，其他網站無法存取**。
 
-<p>另應該注意：不論資料放在 <code>sessionStorage</code> 還是 <code>localStorage</code>，都被<strong>限制在該網站的規範內，其他網站無法存取</strong>。</p>
+## 語法
 
-<h2 id="語法">語法</h2>
-
-<pre class="brush: js">// 將資料存到sessionStorage
+```js
+// 將資料存到sessionStorage
 sessionStorage.setItem('key', 'value');
 
 // 從sessionStorage取得之前存的資料
@@ -30,24 +29,27 @@ sessionStorage.removeItem('key');
 
 // 從sessionStorage移除之前存的所有資料
 sessionStorage.clear();
-</pre>
+```
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>一個 {{DOMxRef("Storage")}} 物件.</p>
+一個 {{DOMxRef("Storage")}} 物件.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>下面簡短的程式碼，訪問了當前域名下的 session {{DOMxRef("Storage")}} 物件，並使用 {{DOMxRef("Storage.setItem()")}} 添加了資料單元。</p>
+下面簡短的程式碼，訪問了當前域名下的 session {{DOMxRef("Storage")}} 物件，並使用 {{DOMxRef("Storage.setItem()")}} 添加了資料單元。
 
-<pre class="brush: js;">sessionStorage.setItem('myCat', 'Tom');</pre>
+```js
+sessionStorage.setItem('myCat', 'Tom');
+```
 
-<p>以下提供的範例為將文字輸入元件的內容自動保存，如果瀏覽器不小心重新整理，在頁面恢復後，會自動將內容還原，不會造成尚未送出的資料被清空。</p>
+以下提供的範例為將文字輸入元件的內容自動保存，如果瀏覽器不小心重新整理，在頁面恢復後，會自動將內容還原，不會造成尚未送出的資料被清空。
 
-<pre class="brush: js">// 取得我們要保留內容的text field元件
+```js
+// 取得我們要保留內容的text field元件
 var field = document.getElementById("field");
 
-// 檢查是否有之前的<strong>autosave</strong>的內容
+// 檢查是否有之前的autosave的內容
 // 這段程式碼會在瀏覽器進入該頁面時被執行
 if (sessionStorage.getItem("autosave")) {
   // 還原先前的內容到指定的text field
@@ -58,24 +60,20 @@ if (sessionStorage.getItem("autosave")) {
 field.addEventListener("change", function() {
   // 並儲存變化後的內容至sessionStorage的物件裡
   sessionStorage.setItem("autosave", field.value);
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>備註</strong>: 完整的範例可參考這篇文章: <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a>。</p>
-</div>
+> **備註：** 完整的範例可參考這篇文章: [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("api.Window.sessionStorage")}}</p>
+{{Compat("api.Window.sessionStorage")}}
 
+## 相關內容
 
-<h2 id="相關內容">相關內容</h2>
-
-<ul>
- <li><a href="/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li>{{domxref("Window.localStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{domxref("Window.localStorage")}}

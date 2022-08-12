@@ -3,60 +3,62 @@ title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 translation_of: Web/API/Window/getComputedStyle
 ---
-<p>{{APIRef()}}</p>
+{{APIRef()}}
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p><code>Window.getComputedStyle()</code> 方法可以得到元素於套用啟用之樣式表以及解析其中可能包含的任何基本運算後的所有 CSS 屬性值。</p>
+`Window.getComputedStyle()` 方法可以得到元素於套用啟用之樣式表以及解析其中可能包含的任何基本運算後的所有 CSS 屬性值。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <em>style</em> = window.getComputedStyle(<em>element</em>[, <em>pseudoElt</em>]);
-</pre>
+```plain
+var style = window.getComputedStyle(element[, pseudoElt]);
+```
 
-<dl>
- <dt>element</dt>
- <dd>The {{domxref("Element")}} for which to get the computed style.</dd>
- <dt>pseudoElt {{optional_inline}}</dt>
- <dd>A string specifying the pseudo-element to match. Must be omitted (or <code>null</code>) for regular elements.</dd>
-</dl>
+- element
+  - : The {{domxref("Element")}} for which to get the computed style.
+- pseudoElt {{optional_inline}}
+  - : A string specifying the pseudo-element to match. Must be omitted (or `null`) for regular elements.
 
-<div class="note"><strong>Note:</strong> Prior to Gecko 2.0 {{geckoRelease("2.0")}}, the <code>pseudoElt</code> parameter was required. No other major browser required this parameter be specified if null. Gecko has been changed to match the behavior of other browsers.</div>
+> **備註：** Prior to Gecko 2.0 {{geckoRelease("2.0")}}, the `pseudoElt` parameter was required. No other major browser required this parameter be specified if null. Gecko has been changed to match the behavior of other browsers.
 
-<p>The returned <code>style</code> is a <em>live</em> {{domxref("CSSStyleDeclaration")}} object, which updates itself automatically when the element's style is changed.</p>
+The returned `style` is a _live_ {{domxref("CSSStyleDeclaration")}} object, which updates itself automatically when the element's style is changed.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: js">var elem1 = document.getElementById("elemId");
+```js
+var elem1 = document.getElementById("elemId");
 var style = window.getComputedStyle(elem1, null);
 
 // this is equivalent:
 // var style = document.defaultView.getComputedStyle(elem1, null);
-</pre>
+```
 
-<pre class="brush: js">&lt;style&gt;
+```js
+<style>
  #elem-container{
    position: absolute;
    left:     100px;
    top:      200px;
    height:   100px;
  }
-&lt;/style&gt;
+</style>
 
-&lt;div id="elem-container"&gt;dummy&lt;/div&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
+<div id="elem-container">dummy</div>
+<div id="output"></div>
 
-&lt;script&gt;
+<script>
   function getTheStyle(){
     var elem = document.getElementById("elem-container");
     var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
     document.getElementById("output").innerHTML = theCSSprop;
    }
   getTheStyle();
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<pre class="brush: js">function dumpComputedStyles(elem,prop) {
+```js
+function dumpComputedStyles(elem,prop) {
 
   var cs = window.getComputedStyle(elem,null);
   if (prop) {
@@ -64,69 +66,66 @@ var style = window.getComputedStyle(elem1, null);
     return;
   }
   var len = cs.length;
-  for (var i=0;i&lt;len;i++) {
+  for (var i=0;i<len;i++) {
 
     var style = cs[i];
     console.log(style+" : "+cs.getPropertyValue(style));
   }
 
 }
-</pre>
+```
 
-<h2 id="說明">說明</h2>
+## 說明
 
-<p>The returned object is of the same type that the object returned from the element's {{domxref("HTMLElement.style", "style")}} property; however, the two objects have different purposes. The object returned from<code> getComputedStyle </code>is read-only and can be used to inspect the element's style (including those set by a <code>&lt;style&gt;</code> element or an external stylesheet). The<code> elt.style</code> object should be used to set styles on a specific element.</p>
+The returned object is of the same type that the object returned from the element's {{domxref("HTMLElement.style", "style")}} property; however, the two objects have different purposes. The object returned from` getComputedStyle `is read-only and can be used to inspect the element's style (including those set by a `<style>` element or an external stylesheet). The` elt.style` object should be used to set styles on a specific element.
 
-<p>The first argument must be an Element (passing a non-Element Node, like a #text Node, will throw an error). Starting in Gecko 1.9.2 {{geckoRelease("1.9.2")}}, returned URL values now have quotes around the URL, like this: <code>url("http://foo.com/bar.jpg")</code>.</p>
+The first argument must be an Element (passing a non-Element Node, like a #text Node, will throw an error). Starting in Gecko 1.9.2 {{geckoRelease("1.9.2")}}, returned URL values now have quotes around the URL, like this: `url("http://foo.com/bar.jpg")`.
 
-<h2 id="defaultView"><code>defaultView</code></h2>
+## `defaultView`
 
-<p>In many code samples online, <code>getComputedStyle</code> is used from the <code>document.defaultView</code> object. In nearly all cases, this is needless, as <code>getComputedStyle</code> exists on the <code>window</code> object as well. It's likely the defaultView pattern was some combination of (1) folks not wanting to write a spec for window and (2) making an API that was also usable in Java. However, there is <a href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">a single case</a> where the <code>defaultView</code>'s method must be used: when using Firefox 3.6 to access framed styles.</p>
+In many code samples online, `getComputedStyle` is used from the `document.defaultView` object. In nearly all cases, this is needless, as `getComputedStyle` exists on the `window` object as well. It's likely the defaultView pattern was some combination of (1) folks not wanting to write a spec for window and (2) making an API that was also usable in Java. However, there is [a single case](https://github.com/jquery/jquery/pull/524#issuecomment-2241183) where the `defaultView`'s method must be used: when using Firefox 3.6 to access framed styles.
 
-<h2 id="Use_with_pseudo-elements">Use with pseudo-elements</h2>
+## Use with pseudo-elements
 
-<p>getComputedStyle can pull style info from pseudo-elements (for example, <code>::after</code>, <code>::before</code>, <code>::marker</code>, <code>::line-marker</code>—see <a href="http://dev.w3.org/csswg/css3-content/#pseudo-elements">spec</a> here).</p>
+getComputedStyle can pull style info from pseudo-elements (for example, `::after`, `::before`, `::marker`, `::line-marker`—see [spec](http://dev.w3.org/csswg/css3-content/#pseudo-elements) here).
 
-<pre class="brush: html">&lt;style&gt;
+```html
+<style>
  h3::after {
    content: ' rocks!';
  }
-&lt;/style&gt;
+</style>
 
-&lt;h3&gt;generated content&lt;/h3&gt;
+<h3>generated content</h3>
 
-&lt;script&gt;
+<script>
   var h3       = document.querySelector('h3'),
       result   = getComputedStyle(h3, ':after').content;
 
   console.log('the generated content is: ', result); // returns ' rocks!'
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="備註">備註</h2>
+## 備註
 
-<p>The values returned by <code>getComputedStyle</code> are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like <code>width</code>, <code>height</code> or <code>padding</code>, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the <code>getComputedStyle</code> function returns the old meaning of computed values, now called <strong>used values</strong>. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.</p>
+The values returned by `getComputedStyle` are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like `width`, `height` or `padding`, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the `getComputedStyle` function returns the old meaning of computed values, now called **used values**. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.
 
-<p>The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <a href="http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/">http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/</a> and <a href="http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/">http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/</a> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by <code>getComputedStyle</code>.</p>
+The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> and <http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by `getComputedStyle`.
 
-<p>During a CSS transition, <code>getComputedStyle</code> returns the original property value in Firefox, but the final property value in WebKit.</p>
+During a CSS transition, `getComputedStyle` returns the original property value in Firefox, but the final property value in WebKit.
 
-<p>In Firefox, properties with the value <code>auto</code> return the used value, not the value <code>auto</code>. So if you apply <code>top:auto;</code> and <code>bottom:0</code>; on an element with <code>height:30px</code> and its containing block is <code>height:100px;</code>, upon requesting the computed style for <code>top</code>, Firefox will return <code>top:70px</code>, as <code>100px-30px=70px</code>.</p>
+In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto;` and `bottom:0`; on an element with `height:30px` and its containing block is `height:100px;`, upon requesting the computed style for `top`, Firefox will return `top:70px`, as `100px-30px=70px`.
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Window.getComputedStyle")}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
-<ul>
- <li><a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
- <li><a href="https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle">CSS Object Model specification</a></li>
-</ul>
+- [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
+- [CSS Object Model specification](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)
 
-<h2 id="See_also">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("window.getDefaultComputedStyle")}}</li>
- <li>{{cssxref("resolved_value", "Resolved Value")}}</li>
-</ul>
+- {{domxref("window.getDefaultComputedStyle")}}
+- {{cssxref("resolved_value", "Resolved Value")}}

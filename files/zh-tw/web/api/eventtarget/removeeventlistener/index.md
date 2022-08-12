@@ -3,52 +3,48 @@ title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 translation_of: Web/API/EventTarget/removeEventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>EventTarget.removeEventListener()</code></strong> 方法可以移除先前由 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 所註冊的事件監聽器。</p>
+**`EventTarget.removeEventListener()`** 方法可以移除先前由 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 所註冊的事件監聽器。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>options</em>]);
-</code><em>target</em>.removeEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</em>]);
-</pre>
+```js
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(type, listener[, useCapture]);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>type</code></dt>
- <dd>A string representing the event type to remove.</dd>
- <dt><code>listener</code></dt>
- <dd>The {{domxref("EventListener")}} function to remove from the event target.</dd>
- <dt>options {{optional_inline}}</dt>
- <dd>An options object that specifies characteristics about the event listener. The available options are:
- <ul>
-  <li><code>capture</code>: A {{jsxref("Boolean")}} that indicates that events of this type will be dispatched to the registered <code>listener</code> before being dispatched to any <code>EventTarget</code> beneath it in the DOM tree.  </li>
-  <li><code>passive</code>: A {{jsxref("Boolean")}} indicating that the <code>listener</code> will never call <code>preventDefault()</code>. If it does, the user agent should ignore it and generate a console warning.</li>
-  <li>{{non-standard_inline}}<code> mozSystemGroup</code>: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.</li>
- </ul>
- </dd>
- <dt><code>useCapture</code> {{optional_inline}}</dt>
- <dd>Specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of <code>false</code> is assumed. If a listener is registered twice, one with capture and one without, remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.</dd>
-</dl>
+- `type`
+  - : A string representing the event type to remove.
+- `listener`
+  - : The {{domxref("EventListener")}} function to remove from the event target.
+- options {{optional_inline}}
+  - : An options object that specifies characteristics about the event listener. The available options are: `capture`: A {{jsxref("Boolean")}} that indicates that events of this type will be dispatched to the registered `listener` before being dispatched to any `EventTarget` beneath it in the DOM tree.
+    - `passive`: A {{jsxref("Boolean")}} indicating that the `listener` will never call `preventDefault()`. If it does, the user agent should ignore it and generate a console warning.
+    - {{non-standard_inline}}` mozSystemGroup`: Available only in code running in XBL or in Firefox' chrome, it is a {{jsxref("Boolean")}} defining if the listener is added to the system group.
+- `useCapture` {{optional_inline}}
+  - : Specifies whether the {{domxref("EventListener")}} to be removed is registered as a capturing listener or not. If this parameter is absent, a default value of `false` is assumed. If a listener is registered twice, one with capture and one without, remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
 
-<div class="note"><strong>Note:</strong> <code>useCapture</code> was required in most major browsers' early versions. If broad compatibility is desired, you should always provide the <code>useCapture</code> parameter.</div>
+> **備註：** `useCapture` was required in most major browsers' early versions. If broad compatibility is desired, you should always provide the `useCapture` parameter.
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>無。</p>
+無。
 
-<h2 id="備註">備註</h2>
+## 備註
 
-<p>If an {{domxref("EventListener")}} is removed from an {{domxref("EventTarget")}} while it is processing an event, it will not be triggered by the current actions. An {{domxref("EventListener")}} will not be invoked for the event it was registered for after being removed, however it can be reattached.</p>
+If an {{domxref("EventListener")}} is removed from an {{domxref("EventTarget")}} while it is processing an event, it will not be triggered by the current actions. An {{domxref("EventListener")}} will not be invoked for the event it was registered for after being removed, however it can be reattached.
 
-<p>Calling <code>removeEventListener()</code> with arguments that do not identify any currently registered {{domxref("EventListener")}} on the <code>EventTarget</code> has no effect.</p>
+Calling `removeEventListener()` with arguments that do not identify any currently registered {{domxref("EventListener")}} on the `EventTarget` has no effect.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>This example shows how to add a <code>click</code>-based event listener and remove a <code>mouseover</code>-based event listener.</p>
+This example shows how to add a `click`-based event listener and remove a `mouseover`-based event listener.
 
-<pre class="brush: js">var body =
+```js
+var body =
         document.querySelector('body'),
     clickTarget =
         document.getElementById('click-target'),
@@ -81,27 +77,28 @@ mouseOverTarget.addEventListener('mouseover', function () {
         false
     );
 });
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.EventTarget.removeEventListener")}}
 
-<h2 id="Polyfill_to_support_older_browsers">Polyfill to support older browsers</h2>
+## Polyfill to support older browsers
 
-<p><code>addEventListener()</code> and <code>removeEventListener()</code> are not present in older browsers. You can work around this by inserting the following code at the beginning of your scripts, allowing the use of <code>addEventListener()</code> and <code>removeEventListener()</code> in implementations that do not natively support it. However, this method will not work on Internet Explorer 7 or earlier, since extending the Element.prototype was not supported until Internet Explorer 8.</p>
+`addEventListener()` and `removeEventListener()` are not present in older browsers. You can work around this by inserting the following code at the beginning of your scripts, allowing the use of `addEventListener()` and `removeEventListener()` in implementations that do not natively support it. However, this method will not work on Internet Explorer 7 or earlier, since extending the Element.prototype was not supported until Internet Explorer 8.
 
-<pre class="brush: js">if (!Element.prototype.addEventListener) {
+```js
+if (!Element.prototype.addEventListener) {
   var oListeners = {};
   function runListeners(oEvent) {
     if (!oEvent) { oEvent = window.event; }
-    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId &lt; oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
+        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) { oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent); }
         break;
       }
     }
@@ -109,7 +106,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
-      for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+      for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
         if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
       }
       if (nElIdx === -1) {
@@ -122,7 +119,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
           aElListeners.splice(0);
           this["on" + sEventType] = runListeners;
         }
-        for (var iLstId = 0; iLstId &lt; aElListeners.length; iLstId++) {
+        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
           if (aElListeners[iLstId] === fListener) { return; }
         }
         aElListeners.push(fListener);
@@ -135,20 +132,18 @@ mouseOverTarget.addEventListener('mouseover', function () {
   Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
     if (!oListeners.hasOwnProperty(sEventType)) { return; }
     var oEvtListeners = oListeners[sEventType];
-    for (var nElIdx = -1, iElId = 0; iElId &lt; oEvtListeners.aEls.length; iElId++) {
+    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
       if (oEvtListeners.aEls[iElId] === this) { nElIdx = iElId; break; }
     }
     if (nElIdx === -1) { return; }
-    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId &lt; aElListeners.length; iLstId++) {
+    for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
       if (aElListeners[iLstId] === fListener) { aElListeners.splice(iLstId, 1); }
     }
   };
 }
-</pre>
+```
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("EventTarget.addEventListener()")}}.</li>
- <li>{{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.</li>
-</ul>
+- {{domxref("EventTarget.addEventListener()")}}.
+- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.

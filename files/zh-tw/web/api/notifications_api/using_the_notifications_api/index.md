@@ -3,96 +3,92 @@ title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p>Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示通知。因此即使 Web Apps 處於閒置狀態，亦可傳送資訊予使用者。絕佳範例之一，就是在使用其他 Apps 時，Web Mail App 同樣可通知使用者已接收到新郵件。</p>
+Web Notifications API 可將通知傳送至頁面以外的系統層級並顯示通知。因此即使 Web Apps 處於閒置狀態，亦可傳送資訊予使用者。絕佳範例之一，就是在使用其他 Apps 時，Web Mail App 同樣可通知使用者已接收到新郵件。
 
-<h2 id="要求權限">要求權限</h2>
+## 要求權限
 
-<h3 id="網頁內容">網頁內容</h3>
+### 網頁內容
 
-<p>在 Apps 傳送通知之前，使用者必須先許可 Apps 的動作。只要 APIs 嘗試予網頁之外的東西互動，均必須先獲得使用者的授權。如此可避免濫發通知而影響使用經驗。</p>
+在 Apps 傳送通知之前，使用者必須先許可 Apps 的動作。只要 APIs 嘗試予網頁之外的東西互動，均必須先獲得使用者的授權。如此可避免濫發通知而影響使用經驗。
 
-<p>透過 <a href="/en-US/docs/Web/API/Notification.permission"><code>Notification.permission</code></a> 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：</p>
+透過 [`Notification.permission`](/zh-TW/docs/Web/API/Notification.permission) 唯讀屬性，要傳送通知的 Apps 將檢查目前的授權狀態。此屬性共有 3 組參數：
 
-<ul>
- <li><code>default：</code>使用者尚未給予任何權限 (因此不會顯示任何通知)</li>
- <li><code>granted</code>：使用者允許接收到 Apps 的通知</li>
- <li><code>denied</code><code>：使用者拒絕接收 </code>Apps 的通知</li>
-</ul>
+- `default：`使用者尚未給予任何權限 (因此不會顯示任何通知)
+- `granted`：使用者允許接收到 Apps 的通知
+- ` denied`` ：使用者拒絕接收  `Apps 的通知
 
-<div class="note">
-<p><strong>注意：</strong>Chrome 與 Safari 尚未建構 <code>permission</code> 屬性。</p>
-</div>
+> **備註：** Chrome 與 Safari 尚未建構 `permission` 屬性。
 
-<p>若使用者尚未給予權限，則 Apps 必須透過 <a href="/en-US/docs/Web/API/Notification.requestPermission"><code>Notification.requestPermission()</code></a> 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。</p>
+若使用者尚未給予權限，則 Apps 必須透過 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) 函式讓使用者選擇，接著由此函式接收 1 組回呼 (Callback) 函式作為參數；而該回呼函式則提供使用者是否授權的資訊。
 
-<p>以下為啟動 Apps 時要求權限的常用範例：</p>
+以下為啟動 Apps 時要求權限的常用範例：
 
-<pre class="brush: js">window.addEventListener('load', function () {
+```js
+window.addEventListener('load', function () {
   Notification.requestPermission(function (status) {
     // This allows to use Notification.permission with Chrome/Safari
     if (Notification.permission !== status) {
       Notification.permission = status;
     }
   });
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>注意：</strong>Chrome 不允許於載入事件中呼叫 <a href="/en-US/docs/Web/API/Notification.requestPermission"><code>Notification.requestPermission()</code></a> (參閱 <a href="https://code.google.com/p/chromium/issues/detail?id=274284">issue 274284</a>)。</p>
-</div>
+> **備註：** Chrome 不允許於載入事件中呼叫 [`Notification.requestPermission()`](/zh-TW/docs/Web/API/Notification.requestPermission) (參閱 [issue 274284](https://code.google.com/p/chromium/issues/detail?id=274284))。
 
-<h3 id="已安裝的_Apps">已安裝的 Apps</h3>
+### 已安裝的 Apps
 
-<p>在安裝 Apps 之後，若於 <a href="/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup">Apps 的 manifest 檔案</a>中直接添加權限，即可省去再次向使用者要求權限的動作。</p>
+在安裝 Apps 之後，若於 [Apps 的 manifest 檔案](/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/Manifest-840092-dup)中直接添加權限，即可省去再次向使用者要求權限的動作。
 
-<pre class="brush: json">permissions: {
+```json
+permissions: {
   "desktop-notification": {
     "description: "Allows to display notifications on the user's desktop.
   }
-}</pre>
-
-<h2 id="建立通知">建立通知</h2>
-
-<p>透過 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 <a href="/en-US/docs/Web/API/Notification.icon"><code>icon</code></a> 或文字 <a href="/en-US/docs/Web/API/Notification.body"><code>body</code></a><code> 等</code>數個選項，可強化通知的內容。</p>
-
-<p>在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 的實體階層觸發 4 個事件：</p>
-
-<ul>
- <li><a href="/en-US/docs/Web/Reference/Events/show">show</a>：對使用者顯示通知之後，隨即觸發</li>
- <li><a href="/en-US/docs/Web/Reference/Events/click">click</a>：使用者點擊通知之後，隨即觸發</li>
- <li><a href="/en-US/docs/Web/Reference/Events/close">close</a>：關閉通知之後，隨即觸發</li>
- <li><a href="/en-US/docs/Web/Reference/Events/error">error</a>：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發</li>
-</ul>
-
-<p>而透過 <a href="/en-US/docs/Web/API/Notification.onshow"><code>onshow</code></a>、<a href="/en-US/docs/Web/API/Notification.onclick"><code>onclick</code></a>、<a href="/en-US/docs/Web/API/Notification.onclose"><code>onclose</code></a>，或 <a href="/en-US/docs/Web/API/Notification.onerror"><code>onerror</code></a> 等事件處理器 (Event handler)，即可追蹤這些事件。由於 <a href="/en-US/docs/Web/API/Notification"><code>Notification</code></a> 是繼承 <a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a> 而來，因此亦可使用 <a href="/en-US/docs/Web/API/EventTarget.addEventListener"><code>addEventListener()</code></a> 函式。</p>
-
-<div class="note">
-<p><strong>注意：</strong>Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。</p>
-
-<p>此規格並明確規定「應透過 <a href="/en-US/docs/Web/API/Notification.close"><code>Notification.close()</code></a> 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：</p>
-
-<pre class="brush: js">var n = new Notification("Hi!");
-n.onshow = function () {
-  setTimeout(n.close, 5000);
 }
-</pre>
-</div>
+```
 
-<h3 id="簡易範例">簡易範例</h3>
+## 建立通知
 
-<p>先假設下列基本 HTML：</p>
+透過 [`Notification`](/zh-TW/docs/Web/API/Notification) 建構子 (Constructor) 即可建立通知。此建構子包含 1 組標題，可於通知內顯示；另有如 [`icon`](/zh-TW/docs/Web/API/Notification.icon) 或文字 [`body`](/zh-TW/docs/Web/API/Notification.body)` 等`數個選項，可強化通知的內容。
 
-<pre class="brush: html">&lt;button&gt;Notify me!&lt;/button&gt;</pre>
+在建立實體 (Instantiated) 之後，就會儘快顯示通知。若要追蹤通知的目前狀態，必須在 [`Notification`](/zh-TW/docs/Web/API/Notification) 的實體階層觸發 4 個事件：
 
-<p>則能以這種方法處理通知：</p>
+- [show](/zh-TW/docs/Web/Reference/Events/show)：對使用者顯示通知之後，隨即觸發
+- [click](/zh-TW/docs/Web/Reference/Events/click)：使用者點擊通知之後，隨即觸發
+- [close](/zh-TW/docs/Web/Reference/Events/close)：關閉通知之後，隨即觸發
+- [error](/zh-TW/docs/Web/Reference/Events/error)：通知發生任何錯誤 (大多數是因為某種情況而未顯示通知)，隨即觸發
 
-<pre class="brush: js">window.addEventListener('load', function () {
+而透過 [`onshow`](/zh-TW/docs/Web/API/Notification.onshow)、[`onclick`](/zh-TW/docs/Web/API/Notification.onclick)、[`onclose`](/zh-TW/docs/Web/API/Notification.onclose)，或 [`onerror`](/zh-TW/docs/Web/API/Notification.onerror) 等事件處理器 (Event handler)，即可追蹤這些事件。由於 [`Notification`](/zh-TW/docs/Web/API/Notification) 是繼承 [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) 而來，因此亦可使用 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget.addEventListener) 函式。
+
+> **備註：** Firefox 與 Safari 並未遵守 close 事件的規格。此規格雖然規定「僅限使用者能關閉通知」，但 Firefox 與 Safari 卻可於數分鐘後自動關閉通知。因此不一定是由使用者關閉通知。此規格並明確規定「應透過 [`Notification.close()`](/zh-TW/docs/Web/API/Notification.close) 函式，於應用程式層級完成自動關閉通知」。範例程式碼如下：
+>
+> ```js
+> var n = new Notification("Hi!");
+> n.onshow = function () {
+>   setTimeout(n.close, 5000);
+> }
+> ```
+
+### 簡易範例
+
+先假設下列基本 HTML：
+
+```html
+<button>Notify me!</button>
+```
+
+則能以這種方法處理通知：
+
+```js
+window.addEventListener('load', function () {
   // At first, let's check if we have permission for notification
   // If not, let's ask for it
-  if (Notification &amp;&amp; Notification.permission !== "granted") {
+  if (Notification && Notification.permission !== "granted") {
     Notification.requestPermission(function (status) {
       if (Notification.permission !== status) {
         Notification.permission = status;
@@ -102,13 +98,13 @@ n.onshow = function () {
   var button = document.getElementsByTagName('button')[0];
   button.addEventListener('click', function () {
     // If the user agreed to get notified
-    if (Notification &amp;&amp; Notification.permission === "granted") {
+    if (Notification && Notification.permission === "granted") {
       var n = new Notification("Hi!");
     }
     // If the user hasn't told if he wants to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
-    else if (Notification &amp;&amp; Notification.permission !== "denied") {
+    else if (Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         if (Notification.permission !== status) {
           Notification.permission = status;
@@ -129,32 +125,36 @@ n.onshow = function () {
       alert("Hi!");
     }
   });
-});</pre>
+});
+```
 
-<h3 id="現場測試結果">現場測試結果</h3>
+### 現場測試結果
 
-<p>若無法顯示，可至本文右上角「Language」切換回英文原文觀看。</p>
+若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-<p>{{ EmbedLiveSample('Simple_example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Simple_example', '100%', 30) }}
 
-<h2 id="處理多筆通知">處理多筆通知</h2>
+## 處理多筆通知
 
-<p>某些情況下 (如某個即時訊息 App 持續通知每一筆進來的訊息)，使用者可能會接收大量的通知。為了避免太多非必要訊息擠爆使用者的桌面，則應該讓等待中的通知進入佇列。</p>
+某些情況下 (如某個即時訊息 App 持續通知每一筆進來的訊息)，使用者可能會接收大量的通知。為了避免太多非必要訊息擠爆使用者的桌面，則應該讓等待中的通知進入佇列。
 
-<p>將標籤添加至任何新的通知，即可達到佇列效果。若通知擁有相同的標籤且尚未顯示，則新通知就會取代先前的通知；反之，若已顯示了相同標籤的通知，就會關閉先前的通知而顯示新通知。</p>
+將標籤添加至任何新的通知，即可達到佇列效果。若通知擁有相同的標籤且尚未顯示，則新通知就會取代先前的通知；反之，若已顯示了相同標籤的通知，就會關閉先前的通知而顯示新通知。
 
-<h3 id="標籤範例">標籤範例</h3>
+### 標籤範例
 
-<p>先假設下列基本 HTML：</p>
+先假設下列基本 HTML：
 
-<pre class="brush: html">&lt;button&gt;Notify me!&lt;/button&gt;</pre>
+```html
+<button>Notify me!</button>
+```
 
-<p>則能以下列方式處理多筆通知：</p>
+則能以下列方式處理多筆通知：
 
-<pre class="brush: js">window.addEventListener('load', function () {
+```js
+window.addEventListener('load', function () {
   // At first, let's check if we have permission for notification
   // If not, let's ask for it
-  if (Notification &amp;&amp; Notification.permission !== "granted") {
+  if (Notification && Notification.permission !== "granted") {
     Notification.requestPermission(function (status) {
       if (Notification.permission !== status) {
         Notification.permission = status;
@@ -165,8 +165,8 @@ n.onshow = function () {
   button.addEventListener('click', function () {
     // If the user agreed to get notified
     // Let's try to send ten notifications
-    if (Notification &amp;&amp; Notification.permission === "granted") {
-      for (var i = 0; i &lt; 10; i++) {
+    if (Notification && Notification.permission === "granted") {
+      for (var i = 0; i < 10; i++) {
         // Thanks to the tag, we should only see the "Hi! 10" notification
         var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
       }
@@ -174,14 +174,14 @@ n.onshow = function () {
     // If the user hasn't told if he wants to be notified or not
     // Note: because of Chrome, we are not sure the permission property
     // is set, therefore it's unsafe to check for the "default" value.
-    else if (Notification &amp;&amp; Notification.permission !== "denied") {
+    else if (Notification && Notification.permission !== "denied") {
       Notification.requestPermission(function (status) {
         if (Notification.permission !== status) {
           Notification.permission = status;
         }
         // If the user said okay
         if (status === "granted") {
-          for (var i = 0; i &lt; 10; i++) {
+          for (var i = 0; i < 10; i++) {
             // Thanks to the tag, we should only see the "Hi! 10" notification
             var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
           }
@@ -198,24 +198,23 @@ n.onshow = function () {
       alert(Hi!");
     }
   });
-});</pre>
+});
+```
 
-<h3 id="現場測試結果_2">現場測試結果</h3>
+### 現場測試結果
 
-<p>若無法顯示，可至本文右上角「Language」切換回英文原文觀看。</p>
+若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-<p>{{ EmbedLiveSample('Tag_example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Tag_example', '100%', 30) }}
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{page("/en-US/Web/API/Notification","Browser compatibility")}}</p>
+{{page("/en-US/Web/API/Notification","Browser compatibility")}}
 
-<h2 id="另可參閱">另可參閱</h2>
+## 另可參閱
 
-<ul>
- <li>{{ domxref("Notification") }}</li>
-</ul>
+- {{ domxref("Notification") }}

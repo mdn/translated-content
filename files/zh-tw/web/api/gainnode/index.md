@@ -3,15 +3,13 @@ title: GainNode
 slug: Web/API/GainNode
 translation_of: Web/API/GainNode
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><code>GainNode</code> 介面代表的是音量改變。 這是 {{domxref("AudioNode")}} 音訊處理模組，可以對輸入的訊號做增益 (gain) 後輸出。一個 <code>GainNode</code> 有一個輸入和一個輸出，兩者有相同的聲道數。</p>
-</div>
+`GainNode` 介面代表的是音量改變。 這是 {{domxref("AudioNode")}} 音訊處理模組，可以對輸入的訊號做增益 (gain) 後輸出。一個 `GainNode` 有一個輸入和一個輸出，兩者有相同的聲道數。
 
-<p>增益 (gain) 是無單位的數值，隨時間變化，會用來和所有輸入聲道的取樣做相乘。 如果更改的話，新的增益會用 de-zippering 演算法處理，以避免輸出聲音出現難聽的「喀」聲。</p>
+增益 (gain) 是無單位的數值，隨時間變化，會用來和所有輸入聲道的取樣做相乘。 如果更改的話，新的增益會用 de-zippering 演算法處理，以避免輸出聲音出現難聽的「喀」聲。
 
-<p><img alt="The GainNode is increasing the gain of the output." src="webaudiogainnode.png"></p>
+![The GainNode is increasing the gain of the output.](webaudiogainnode.png)
 
 <table class="properties">
  <tbody>
@@ -38,40 +36,34 @@ translation_of: Web/API/GainNode
  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("GainNode.GainNode", "GainNode()")}}</dt>
- <dd>Creates a new instance of an GainNode object.</dd>
-</dl>
+- {{domxref("GainNode.GainNode", "GainNode()")}}
+  - : Creates a new instance of an GainNode object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("GainNode.gain")}} {{readonlyinline}}</dt>
- <dd>是 <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} ，代表增益值</dd>
-</dl>
+- {{domxref("GainNode.gain")}} {{readonlyinline}}
+  - : 是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} ，代表增益值
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent,_ _{{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}</p>
+{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.GainNode")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/zh-TW/docs/Web_Audio_API/Using_Web_Audio_API)

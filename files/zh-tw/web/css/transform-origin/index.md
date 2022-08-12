@@ -5,20 +5,19 @@ tags:
   - CSS
 translation_of: Web/CSS/transform-origin
 ---
-<div>{{ CSSRef }}</div>
+{{ CSSRef }}
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 內的<strong><code>transform-origin</code></strong>屬性可以設定元素變化的原點。</p>
+[CSS](/zh-TW/docs/Web/CSS) 內的**`transform-origin`**屬性可以設定元素變化的原點。
 
-<div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
+變化原點指的是應用變化的點。舉例來說， [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
 
+## 語法
 
-<p>變化原點指的是應用變化的點。舉例來說， <code><a href="/en-US/docs/Web/CSS/transform-function/rotate">rotate()</a></code>函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)</p>
-
-<h2 id="語法">語法</h2>
-
-<pre class="brush: css no-line-numbers">/* One-value syntax */
-transform-origin: 2px<em>;</em>
+```css
+/* One-value syntax */
+transform-origin: 2px;
 transform-origin: bottom;
 
 /* x-offset | y-offset */
@@ -49,392 +48,246 @@ transform-origin: bottom right 2cm;
 transform-origin: inherit;
 transform-origin: initial;
 transform-origin: unset;
-</pre>
+```
 
-<p>The <code>transform-origin</code> p屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的 <a href="/en-US/docs/Web/CSS/initial_value">初始值</a>。</p>
+The `transform-origin` p 屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的 [初始值](/zh-TW/docs/Web/CSS/initial_value)。
 
-<p>If two or more values are defined and either no value is a keyword, or the only used keyword is <code>center</code>, then the first value represents the horizontal offset and the second represents the vertical offset.</p>
+If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
-<ul>
- <li>One-value syntax:
-  <ul>
-   <li>The value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords <code>left</code>, <code>center</code>, <code>right</code>, <code>top</code> or <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Two-value syntax:
-  <ul>
-   <li>One value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords <code>left</code>, <code>center</code>, and <code>right</code>.</li>
-   <li>The other value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords <code>top</code>, <code>center</code>, and <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Three-value syntax:
-  <ul>
-   <li>The first two values are the same as for the two-value syntax.</li>
-   <li>The third value must be a {{cssxref("&lt;length&gt;")}}. It always represents the Z offset.</li>
-  </ul>
- </li>
-</ul>
+- One-value syntax:
 
-<h3 id="Values">Values</h3>
+  - The value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, `right`, `top` or `bottom`.
 
-<dl>
- <dt><em>x-offset</em></dt>
- <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the left edge of the box the origin of the transform is set.</dd>
- <dt><em>offset-keyword</em></dt>
- <dd>Is one of the <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>, or <code>center</code> keyword describing the corresponding offset.</dd>
- <dt><em>y-offset</em></dt>
- <dd>Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the top edge of the box the origin of the transform is set.</dd>
- <dt><em>x-offset-keyword</em></dt>
- <dd>Is one of the <code>left</code>, <code>right</code>, or <code>center</code> keyword describing how far from the left edge of the box the origin of the transform is set.</dd>
- <dt><em>y-offset-keyword</em></dt>
- <dd>Is one of the <code>top</code>, <code>bottom</code>, or <code>center</code> keyword describing how far from the top edge of the box the origin of the transform is set.</dd>
- <dt><em>z-offset</em></dt>
- <dd>Is a {{cssxref("&lt;length&gt;")}} (and never a {{cssxref("&lt;percentage&gt;")}} which would make the statement invalid) describing how far from the user eye the z=0 origin is set.</dd>
-</dl>
+- Two-value syntax:
 
-<p>The keywords are convenience shorthands and match the following {{cssxref("&lt;percentage&gt;")}} values:</p>
+  - One value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, and `right`.
+  - The other value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `top`, `center`, and `bottom`.
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Keyword</th>
-   <th scope="col">Value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>center</code></td>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <td><code>top</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>bottom</code></td>
-   <td><code>100%</code></td>
-  </tr>
- </tbody>
-</table>
+- Three-value syntax:
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+  - The first two values are the same as for the two-value syntax.
+  - The third value must be a {{cssxref("&lt;length&gt;")}}. It always represents the Z offset.
+
+### Values
+
+- _x-offset_
+  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the left edge of the box the origin of the transform is set.
+- _offset-keyword_
+  - : Is one of the `left`, `right`, `top`, `bottom`, or `center` keyword describing the corresponding offset.
+- _y-offset_
+  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the top edge of the box the origin of the transform is set.
+- _x-offset-keyword_
+  - : Is one of the `left`, `right`, or `center` keyword describing how far from the left edge of the box the origin of the transform is set.
+- _y-offset-keyword_
+  - : Is one of the `top`, `bottom`, or `center` keyword describing how far from the top edge of the box the origin of the transform is set.
+- _z-offset_
+  - : Is a {{cssxref("&lt;length&gt;")}} (and never a {{cssxref("&lt;percentage&gt;")}} which would make the statement invalid) describing how far from the user eye the z=0 origin is set.
+
+The keywords are convenience shorthands and match the following {{cssxref("&lt;percentage&gt;")}} values:
+
+| Keyword  | Value  |
+| -------- | ------ |
+| `left`   | `0%`   |
+| `center` | `50%`  |
+| `right`  | `100%` |
+| `top`    | `0%`   |
+| `bottom` | `100%` |
+
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<table>
- <tbody>
-  <tr>
-   <th>Code</th>
-   <th>Sample</th>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: none;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_none">
-    <pre class="brush: html">
-&lt;div class="box1"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="container">
 
-    <pre class="brush: css">
-.box1 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box1">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: none;
--webkit-transform: none;
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_none', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_only">
-    <pre class="brush: html">
-&lt;div class="box2"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box2 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box2">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate_only', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate">
-    <pre class="brush: html">
-&lt;div class="box3"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box3 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box3">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
+</pre>
+
+<div class="example">
+  <div class="box box4">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 100% 100%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_percentage">
-    <pre class="brush: html">
-&lt;div class="box4"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box4 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: 100% 100%;
--webkit-transform-origin: 100% 100%;
+</pre>
+
+<div class="example">
+  <div class="box box5">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate_with_percentage', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: -1em -3em;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_em">
-    <pre class="brush: html">
-&lt;div class="box5"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box5 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: -1em -3em;
--webkit-transform-origin: -1em -3em;
-transform: rotate(30deg);
--webkit-transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_rotate_with_em', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_only">
-    <pre class="brush: html">
-&lt;div class="box6"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box6 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
-}
-</pre>
-    </div>
+<div class="example">
+  <div class="box box6">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
 
-    <div>{{EmbedLiveSample('transform_scale_only', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_without_origin">
-    <pre class="brush: html">
-&lt;div class="box7"&gt;&amp;nbsp;&lt;/div&gt;
+<pre>
+transform: scale(1.7);
 </pre>
 
-    <pre class="brush: css">
-.box7 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+<div class="example">
+  <div class="box box7">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
 transform-origin: 0 0;
--webkit-transform-origin: 0 0;
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_scale_without_origin', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.7);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale">
-    <pre class="brush: html">
-&lt;div class="box8"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box8 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(<code>1.7</code>);
--webkit-transform: scale(<code>1.7</code>);
+<div class="example">
+  <div class="box box8">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_scale', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewX(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_x">
-    <pre class="brush: html">
-&lt;div class="box9"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box9 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box9">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: skewX(50deg);
--webkit-transform: skewX(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('transform_skew_x', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewY(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_y">
-    <pre class="brush: html">
-&lt;div class="box10"&gt;&amp;nbsp;&lt;/div&gt;
 </pre>
 
-    <pre class="brush: css">
-.box10 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<div class="example">
+  <div class="box box10">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
 transform: skewY(50deg);
--webkit-transform: skewY(50deg);
 transform-origin: 100% -30%;
--webkit-transform-origin: 100% -30%;
-}
 </pre>
-    </div>
 
-    <div>{{EmbedLiveSample('transform_skew_y', '', 120, '', '', 'no-button') }}</div>
-   </td>
-  </tr>
- </tbody>
-</table>
+</div>
+```
 
-<h2 id="Specifications">Specifications</h2>
+```css hidden
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  gap: 20px;
+}
+
+.example {
+  position: relative;
+  margin: 0 2em 4em 5em;
+}
+
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: solid 1px;
+  background-color: palegreen;
+}
+
+.original {
+  position: absolute;
+  left: 0;
+  opacity: 20%;
+}
+
+.box1 {
+  transform: none;
+}
+
+.box2 {
+  transform: rotate(30deg);
+}
+
+.box3 {
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+}
+
+.box4 {
+  transform: rotate(30deg);
+  transform-origin: 100% 100%;
+}
+
+.box5 {
+  transform: rotate(30deg);
+  transform-origin: -1em -3em;
+}
+
+.box6 {
+  transform: scale(1.7);
+}
+
+.box7 {
+  transform: scale(1.7);
+  transform-origin: 0 0;
+}
+
+.box8 {
+  transform: scale(1.7);
+  transform-origin: 100% -30%;
+}
+
+.box9 {
+  transform: skewX(50deg);
+  transform-origin: 100% -30%;
+}
+
+.box10 {
+  transform: skewY(50deg);
+  transform-origin: 100% -30%;
+}
+```
+
+{{EmbedLiveSample('Examples', '', 1350) }}
+
+## Specifications
 
 {{Specifications}}
 
-<p>{{Cssinfo}}</p>
+{{Cssinfo}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("css.properties.transform-origin")}}
 
+## See also
 
-<p>{{Compat("css.properties.transform-origin")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_transforms">Using CSS transforms</a></li>
-</ul>
+- [Using CSS transforms](/zh-TW/docs/CSS/Using_CSS_transforms)

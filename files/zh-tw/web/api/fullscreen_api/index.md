@@ -3,27 +3,29 @@ title: 使用全螢幕模式
 slug: Web/API/Fullscreen_API
 translation_of: Web/API/Fullscreen_API
 ---
-<p>{{DefaultAPISidebar("Fullscreen API")}}</p>
+{{DefaultAPISidebar("Fullscreen API")}}
 
-<p>全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。</p>
+全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。
 
-<div class="note">目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（您也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。</div>
+> **備註：** 目前並非所有瀏覽器均使用 API 的沒有前綴的版本。請查閱有關前綴以及名稱差異的表格（您也可以使用 Fscreen 來提供跨瀏覽器 API 存取）。
 
-<h2 id="Specification">啟動全螢幕模式</h2>
+## 啟動全螢幕模式
 
-<p>如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。</p>
+如果您有一個元素打算以全螢幕模式展示（例如 {{ HTMLElement("video") }}），您可以呼叫該元素之 {{ domxref("Element.requestFullscreen()") }} 方法使之以全螢幕模式顯示。
 
-<p>考慮此 {{ HTMLElement("video") }} 元素：</p>
+考慮此 {{ HTMLElement("video") }} 元素：
 
-<pre class="brush: html">&lt;video controls id="myvideo"&gt;
-  &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
-  &lt;source src="somevideo.mp4"&gt;&lt;/source&gt;
-&lt;/video&gt;
-</pre>
+```html
+<video controls id="myvideo">
+  <source src="somevideo.webm"></source>
+  <source src="somevideo.mp4"></source>
+</video>
+```
 
-<p>我們可以使用指令碼將此影片全螢幕顯示：</p>
+我們可以使用指令碼將此影片全螢幕顯示：
 
-<pre class="brush: js">var elem = document.getElementById("myvideo");
+```js
+var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 } else if (elem.msRequestFullscreen) {
@@ -33,77 +35,76 @@ if (elem.requestFullscreen) {
 } else if (elem.webkitRequestFullscreen) {
   elem.webkitRequestFullscreen();
 }
-</pre>
+```
 
-<h3 id="呈現差異">呈現差異</h3>
+### 呈現差異
 
-<p>值得留意的是，Gecko 及 WebKit 的實作有關鍵分別：Gecko 會增加 CSS 規則讓全螢幕的元素展延至填滿整個螢幕："<code>width: 100%; height: 100%</code>"。WebKit 則不會執行此動作，取而代之的是把該元素置中，並以原先的大小顯示。要取得同樣的全螢幕行為，您需要為該元素自行添加 "<code>width: 100%; height: 100%;</code>" 的 CSS 規則：</p>
+值得留意的是，Gecko 及 WebKit 的實作有關鍵分別：Gecko 會增加 CSS 規則讓全螢幕的元素展延至填滿整個螢幕："`width: 100%; height: 100%`"。WebKit 則不會執行此動作，取而代之的是把該元素置中，並以原先的大小顯示。要取得同樣的全螢幕行為，您需要為該元素自行添加 "`width: 100%; height: 100%;`" 的 CSS 規則：
 
-<pre class="brush: css">#myvideo:-webkit-full-screen {
+```css
+#myvideo:-webkit-full-screen {
   width: 100%;
   height: 100%;
 }
-</pre>
+```
 
-<p>另一方面，如果您嘗試在 Gecko 上模擬 WebKit 的行為，您需要把呈現的元素放置在另一個實際調整為全螢幕的元素裡面，再使用 CSS 規則來調整內部元素至您想要的外觀。</p>
+另一方面，如果您嘗試在 Gecko 上模擬 WebKit 的行為，您需要把呈現的元素放置在另一個實際調整為全螢幕的元素裡面，再使用 CSS 規則來調整內部元素至您想要的外觀。
 
-<h3 id="通知">通知</h3>
+### 通知
 
-<p>如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。</p>
+如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
 
-<h3 id="全螢幕要求失敗">全螢幕要求失敗</h3>
+### 全螢幕要求失敗
 
-<p>並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 <code>mozfullscreenerror</code> 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。</p>
+並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
 
-<div class="note">
-<p><strong>注意：</strong>全螢幕要求必須在事件處理常式中呼叫，否則將會被拒絕。</p>
-</div>
+> **備註：** 全螢幕要求必須在事件處理常式中呼叫，否則將會被拒絕。
 
-<h2 id="離開全螢幕模式">離開全螢幕模式</h2>
+## 離開全螢幕模式
 
-<p>使用者永遠可以自行離開全螢幕模式，詳見 <a href="#things_your_users_want_to_know">Things your users want to know</a>。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。</p>
+使用者永遠可以自行離開全螢幕模式，詳見 [Things your users want to know](#things_your_users_want_to_know)。您也可以呼叫 {{domxref("Document.exitFullscreen()")}} 方法來達到相同效果。
 
-<h2 id="其他資訊">其他資訊</h2>
+## 其他資訊
 
-<p>{{ domxref("document") }} 提供一些附加資訊，對於開發全螢幕網頁應用程式的時候非常有用：</p>
+{{ domxref("document") }} 提供一些附加資訊，對於開發全螢幕網頁應用程式的時候非常有用：
 
-<dl>
- <dt>{{ domxref("document.fullscreenElement", "fullscreenElement") }}</dt>
- <dd><code>fullscreenElement</code> 屬性傳回正在顯示為全螢幕模式的 {{ domxref("element") }}。如其為非 null 值，表示文件目前在全螢幕模式。如其為 null，表示文件目前不在全螢幕模式。</dd>
- <dt>{{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}</dt>
- <dd><code>fullscreenEnabled</code> 屬性傳回文件是否容許您要求進入全螢幕訊息。</dd>
-</dl>
+- {{ domxref("document.fullscreenElement", "fullscreenElement") }}
+  - : `fullscreenElement` 屬性傳回正在顯示為全螢幕模式的 {{ domxref("element") }}。如其為非 null 值，表示文件目前在全螢幕模式。如其為 null，表示文件目前不在全螢幕模式。
+- {{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}
+  - : `fullscreenEnabled` 屬性傳回文件是否容許您要求進入全螢幕訊息。
 
-<h2 id="Things_your_users_want_to_know">使用者可能想了解的訊息</h2>
+## 使用者可能想了解的訊息
 
-<p>您可能會讓使用者知道他們可以按 <kbd>ESC</kbd> 或 <kbd>F11</kbd> 鍵來離開全螢幕模式。</p>
+您可能會讓使用者知道他們可以按 <kbd>ESC</kbd> 或 <kbd>F11</kbd> 鍵來離開全螢幕模式。
 
-<p>此外，瀏覽其他頁面、切換分頁、或切換到其他應用程式（例如按 鍵）亦會離開全螢幕模式。</p>
+此外，瀏覽其他頁面、切換分頁、或切換到其他應用程式（例如按 鍵）亦會離開全螢幕模式。
 
-<h2 id="Specification">範例</h2>
+## 範例
 
-<p>In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.</p>
+In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.
 
-<p><a href="/samples/domref/fullscreen.html">查看示例</a></p>
+[查看示例](/samples/domref/fullscreen.html)
 
-<h3 id="監視_Enter_鍵">監視 Enter 鍵</h3>
+### 監視 Enter 鍵
 
-<p>When the page is loaded, this code is run to set up an event listener to watch for the 'enter' key.</p>
+When the page is loaded, this code is run to set up an event listener to watch for the 'enter' key.
 
-<pre class="brush: js">document.addEventListener("keydown", function(e) {
+```js
+document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
     toggleFullScreen();
   }
 }, false);
-</pre>
+```
 
-<h3 id="Toggling_fullscreen_mode">Toggling fullscreen mode</h3>
+### Toggling fullscreen mode
 
-<p>This code is called when the user hits the Enter key, as seen above.</p>
+This code is called when the user hits the Enter key, as seen above.
 
-<pre class="brush: js">function toggleFullScreen() {
-  if (!document.fullscreenElement &amp;&amp;    // alternative standard method
-      !document.mozFullScreenElement &amp;&amp; !document.webkitFullscreenElement &amp;&amp; !document.msFullscreenElement ) {  // current working methods
+```js
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
     } else if (document.documentElement.msRequestFullscreen) {
@@ -125,64 +126,56 @@ if (elem.requestFullscreen) {
     }
   }
 }
-</pre>
+```
 
-<p>This starts by looking at the value of the <code>fullscreenElement</code> attribute on the {{ domxref("document") }} (checking it prefixed with both <code>moz</code>,<code> ms</code>,<code> </code>and <code>webkit</code>). If it's <code>null</code>, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} <code>msRequestFullscreen()</code>or <code>webkitRequestFullscreen()</code>, depending on which is available.</p>
+This starts by looking at the value of the `fullscreenElement` attribute on the {{ domxref("document") }} (checking it prefixed with both `moz`,` ms`,` `and `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either {{ domxref("element.mozRequestFullScreen()") }} `msRequestFullscreen()`or `webkitRequestFullscreen()`, depending on which is available.
 
-<p>If fullscreen mode is already active (<code>fullscreenElement</code> is non-<code>null</code>), we call {{ domxref("document.mozCancelFullScreen()") }}, <code>msExitFullscreen</code> or <code>webkitExitFullscreen()</code>, again depending on which browser is in use.</p>
+If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{ domxref("document.mozCancelFullScreen()") }}, `msExitFullscreen` or `webkitExitFullscreen()`, again depending on which browser is in use.
 
-<h2 id="Browser_compatibility">瀏覽器兼容性</h2>
+## 瀏覽器兼容性
 
-<h3>Document.fullscreen</h3>
+### Document.fullscreen
 
 {{Compat("api.Document.fullscreen")}}
 
-<h3>Document.fullscreenElement</h3>
+### Document.fullscreenElement
 
 {{Compat("api.Document.fullscreenElement")}}
 
-<h3>Document.fullscreenEnabled</h3>
+### Document.fullscreenEnabled
 
 {{Compat("api.Document.fullscreenEnabled")}}
 
-<h3>Document.exitFullscreen</h3>
+### Document.exitFullscreen
 
 {{Compat("api.Document.exitFullscreen")}}
 
-<h3>Element.requestFullscreen</h3>
+### Element.requestFullscreen
 
 {{Compat("api.Element.requestFullscreen")}}
 
+## 規範
 
-<h2 id="Specification">規範</h2>
+[Fullscreen API](http://fullscreen.spec.whatwg.org/)
 
-<p><a href="http://fullscreen.spec.whatwg.org/">Fullscreen API</a></p>
+## 非標準方法
 
-<h2 id="非標準方法">非標準方法</h2>
+These are some of the methods that browsers implemented before the standard was drafted. Having the standard methods described above it's better to avoid using the following ones:
 
-<p>These are some of the methods that browsers implemented before the standard was drafted. Having the standard methods described above it's better to avoid using the following ones:</p>
+- [`window.fullScreen`](/zh-TW/docs/DOM/window.fullScreen) (Firefox)
+- `HTMLMediaElement.webkitDisplayingFullscreen`
+- `HTMLMediaElement.webkitEnterFullscreen`
+- `HTMLMediaElement.webkitExitFullscreen`
+- `HTMLMediaElement.webkitSupportsFullscreen`
 
-<ul>
- <li><a href="/en-US/docs/DOM/window.fullScreen"><code>window.fullScreen</code></a> (Firefox)</li>
- <li><code>HTMLMediaElement.webkitDisplayingFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitEnterFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitExitFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitSupportsFullscreen</code></li>
-</ul>
+## 參見
 
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{ domxref("element.mozRequestFullScreen()") }}</li>
- <li>{{ domxref("element.mozCancelFullScreen()") }}</li>
- <li>{{ domxref("document.mozFullScreen") }}</li>
- <li>{{ domxref("document.mozFullScreenElement") }}</li>
- <li>{{ domxref("document.mozFullScreenEnabled") }}</li>
- <li>{{ cssxref(":-moz-full-screen") }}</li>
- <li>{{ cssxref(":-moz-full-screen-ancestor") }}</li>
- <li>{{ HTMLAttrXRef("allowfullscreen", "iframe") }}</li>
-</ul>
-
-<ul>
- <li><a href="http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html">Blog post: Firefox's HTML full-screen API enabled in Nightly builds</a></li>
-</ul>
+- {{ domxref("element.mozRequestFullScreen()") }}
+- {{ domxref("element.mozCancelFullScreen()") }}
+- {{ domxref("document.mozFullScreen") }}
+- {{ domxref("document.mozFullScreenElement") }}
+- {{ domxref("document.mozFullScreenEnabled") }}
+- {{ cssxref(":-moz-full-screen") }}
+- {{ cssxref(":-moz-full-screen-ancestor") }}
+- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)

@@ -9,63 +9,59 @@ tags:
   - TopicStub
 translation_of: Web/API/CSS_Object_Model
 ---
-<p>{{DefaultAPISidebar('CSSOM')}}</p>
+{{DefaultAPISidebar('CSSOM')}}
 
-<p>The <strong>CSS Object Model</strong> is a set of APIs allowing to manipulate CSS from JavaScript. It is the pendant of DOM and HTML APIs, but for CSS. It allows to read and modify CSS style dynamically.</p>
+The **CSS Object Model** is a set of APIs allowing to manipulate CSS from JavaScript. It is the pendant of DOM and HTML APIs, but for CSS. It allows to read and modify CSS style dynamically.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<ul>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>{{domxref("CaretPosition")}}</li>
- <li>{{domxref("CSS")}}</li>
- <li>{{domxref("CSSCharsetRule")}}</li>
- <li>{{domxref("CSSConditionRule")}}</li>
- <li>{{domxref("CSSCounterStyleRule")}}</li>
- <li>{{domxref("CSSFontFaceRule")}}</li>
- <li>{{domxref("CSSFontFeatureValuesMap")}}</li>
- <li>{{domxref("CSSFontFeatureValuesRule")}}</li>
- <li>{{domxref("CSSGroupingRule")}}</li>
- <li>{{domxref("CSSImportRule")}}</li>
- <li>{{domxref("CSSKeyframeRule")}}</li>
- <li>{{domxref("CSSKeyframesRule")}}</li>
- <li>{{domxref("CSSMarginRule")}}</li>
- <li>{{domxref("CSSMediaRule")}}</li>
- <li>{{domxref("CSSNamespaceRule")}}</li>
- <li>{{domxref("CSSPageRule")}}</li>
- <li>{{domxref("CSSRule")}}</li>
- <li>{{domxref("CSSRuleList")}}</li>
- <li>{{domxref("CSSStyleSheet")}}</li>
- <li>{{domxref("CSSStyleDeclaration")}}</li>
- <li>{{domxref("CSSSupportsRule")}}</li>
- <li>{{domxref("CSSVariablesMap")}}</li>
- <li>{{domxref("CSSViewportRule")}}</li>
- <li>{{domxref("ElementCSSInlineStyle")}}</li>
- <li>{{domxref("GeometryUtils")}}</li>
- <li>{{domxref("GetStyleUtils")}}</li>
- <li>{{domxref("LinkStyle")}}</li>
- <li>{{domxref("MediaList")}}</li>
- <li>{{domxref("MediaQueryList")}}</li>
- <li>{{domxref("PseudoElement")}}</li>
- <li>{{domxref("Screen")}}</li>
- <li>{{domxref("StyleSheet")}}</li>
- <li>{{domxref("StyleSheetList")}}</li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- {{domxref("AnimationEvent")}}
+- {{domxref("CaretPosition")}}
+- {{domxref("CSS")}}
+- {{domxref("CSSCharsetRule")}}
+- {{domxref("CSSConditionRule")}}
+- {{domxref("CSSCounterStyleRule")}}
+- {{domxref("CSSFontFaceRule")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
+- {{domxref("CSSFontFeatureValuesRule")}}
+- {{domxref("CSSGroupingRule")}}
+- {{domxref("CSSImportRule")}}
+- {{domxref("CSSKeyframeRule")}}
+- {{domxref("CSSKeyframesRule")}}
+- {{domxref("CSSMarginRule")}}
+- {{domxref("CSSMediaRule")}}
+- {{domxref("CSSNamespaceRule")}}
+- {{domxref("CSSPageRule")}}
+- {{domxref("CSSRule")}}
+- {{domxref("CSSRuleList")}}
+- {{domxref("CSSStyleSheet")}}
+- {{domxref("CSSStyleDeclaration")}}
+- {{domxref("CSSSupportsRule")}}
+- {{domxref("CSSVariablesMap")}}
+- {{domxref("CSSViewportRule")}}
+- {{domxref("ElementCSSInlineStyle")}}
+- {{domxref("GeometryUtils")}}
+- {{domxref("GetStyleUtils")}}
+- {{domxref("LinkStyle")}}
+- {{domxref("MediaList")}}
+- {{domxref("MediaQueryList")}}
+- {{domxref("PseudoElement")}}
+- {{domxref("Screen")}}
+- {{domxref("StyleSheet")}}
+- {{domxref("StyleSheetList")}}
+- {{domxref("TransitionEvent")}}
 
-<p>Several other interfaces are also extended by the CSSOM-related specifications: {{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.</p>
+Several other interfaces are also extended by the CSSOM-related specifications: {{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.
 
-<h2 id="Tutorials">Tutorials</h2>
+## Tutorials
 
-<ul>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a> (it needs some updating as it was made in the DHTML/Ajax era).</li>
- <li><a href="/en-US/docs/WebAPI/Managing_screen_orientation">Managing screen orientation</a></li>
-</ul>
+- [Determining the dimensions of elements](/zh-TW/docs/Determining_the_dimensions_of_elements) (it needs some updating as it was made in the DHTML/Ajax era).
+- [Managing screen orientation](/zh-TW/docs/WebAPI/Managing_screen_orientation)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility_notes">Browser compatibility notes</h2>
+## Browser compatibility notes
 
-<p>All these features have been added little by little over the years to the different browsers: it was a quite complex process that can't be summarized in a simple table. Please refer to the specific interfaces for its availability.</p>
+All these features have been added little by little over the years to the different browsers: it was a quite complex process that can't be summarized in a simple table. Please refer to the specific interfaces for its availability.

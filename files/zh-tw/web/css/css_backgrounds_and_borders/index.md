@@ -10,70 +10,64 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 translation_of_original: Web/CSS/CSS_Background_and_Borders
 original_slug: Web/CSS/CSS_Background_and_Borders
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p><strong>CSS Background and Borders</strong> is a module of CSS that defines how background and borders of elements are described. Borders can be lines or images, boxes can have one or multiple backgrounds, have rounded corners, and shadows.</p>
+**CSS Background and Borders** is a module of CSS that defines how background and borders of elements are described. Borders can be lines or images, boxes can have one or multiple backgrounds, have rounded corners, and shadows.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="CSS_Properties">CSS Properties</h3>
+### CSS Properties
 
-<div>
-<ul>
- <li>{{cssxref("background")}}</li>
- <li>{{cssxref("background-attachment")}}</li>
- <li>{{cssxref("background-clip")}}</li>
- <li>{{cssxref("background-color")}}</li>
- <li>{{cssxref("background-image")}}</li>
- <li>{{cssxref("background-origin")}}</li>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-repeat")}}</li>
- <li>{{cssxref("background-size")}}</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("border-bottom")}}</li>
- <li>{{cssxref("border-bottom-color")}}</li>
- <li>{{cssxref("border-bottom-left-radius")}}</li>
- <li>{{cssxref("border-bottom-right-radius")}}</li>
- <li>{{cssxref("border-bottom-style")}}</li>
- <li>{{cssxref("border-bottom-width")}}</li>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-color")}}</li>
- <li>{{cssxref("border-image")}}</li>
- <li>{{cssxref("border-image-outset")}}</li>
- <li>{{cssxref("border-image-repeat")}}</li>
- <li>{{cssxref("border-image-slice")}}</li>
- <li>{{cssxref("border-image-source")}}</li>
- <li>{{cssxref("border-image-width")}}</li>
- <li>{{cssxref("border-left")}}</li>
- <li>{{cssxref("border-left-color")}}</li>
- <li>{{cssxref("border-left-style")}}</li>
- <li>{{cssxref("border-left-width")}}</li>
- <li>{{cssxref("border-radius")}}</li>
- <li>{{cssxref("border-right")}}</li>
- <li>{{cssxref("border-right-color")}}</li>
- <li>{{cssxref("border-right-style")}}</li>
- <li>{{cssxref("border-right-width")}}</li>
- <li>{{cssxref("border-style")}}</li>
- <li>{{cssxref("border-top")}}</li>
- <li>{{cssxref("border-top-color")}}</li>
- <li>{{cssxref("border-top-left-radius")}}</li>
- <li>{{cssxref("border-top-right-radius")}}</li>
- <li>{{cssxref("border-top-style")}}</li>
- <li>{{cssxref("border-top-width")}}</li>
- <li>{{cssxref("border-width")}}</li>
-</ul>
-</div>
+- {{cssxref("background")}}
+- {{cssxref("background-attachment")}}
+- {{cssxref("background-clip")}}
+- {{cssxref("background-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("background-origin")}}
+- {{cssxref("background-position")}}
+- {{cssxref("background-repeat")}}
+- {{cssxref("background-size")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("border")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-bottom-left-radius")}}
+- {{cssxref("border-bottom-right-radius")}}
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-image")}}
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
+- {{cssxref("border-left")}}
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-right")}}
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-top")}}
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-left-radius")}}
+- {{cssxref("border-top-right-radius")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
+- {{cssxref("border-width")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds">Using CSS multiple backgrounds</a></dt>
- <dd>Explains how to set backgrounds on elements and how they will interact with it.</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images">Scaling background images</a></dt>
- <dd>Describes how to change the appearance of the background images, by stretching them or repeating them, to cover the whole background of the element, or not.</dd>
-</dl>
+- [Using CSS multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds)
+  - : Explains how to set backgrounds on elements and how they will interact with it.
+- [Scaling background images](/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images)
+  - : Describes how to change the appearance of the background images, by stretching them or repeating them, to cover the whole background of the element, or not.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}

@@ -6,35 +6,22 @@ tags:
 translation_of: Web/API/MessageEvent
 original_slug: WebSockets/WebSockets_reference/MessageEvent
 ---
-<p>當伺服器傳來資料時，客戶端會收到一個 <code>MessageEvent</code>，由 <code>WebSocket</code> 物件 <code>onmessage</code> 表示的監聽器接收。</p>
+當伺服器傳來資料時，客戶端會收到一個 `MessageEvent`，由 `WebSocket` 物件 `onmessage` 表示的監聽器接收。
 
-<h2 id="Attributes">屬性</h2>
+## 屬性
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">屬性</td>
-   <td class="header">形態</td>
-   <td class="header">描述</td>
-  </tr>
-  <tr>
-   <td><code>data</code></td>
-   <td>{{ domxref("DOMString") }} | {{ domxref("Blob") }} | <a href="/zh_tw/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a></td>
-   <td>伺服器傳來的資料。</td>
-  </tr>
- </tbody>
-</table>
+| 屬性   | 形態                                                                                                                                | 描述               |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `data` | {{ domxref("DOMString") }} \| {{ domxref("Blob") }} \| [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) | 伺服器傳來的資料。 |
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器兼容">瀏覽器兼容</h2>
+## 瀏覽器兼容
 
 {{Compat("api.MessageEvent")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/zh_tw/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a></li>
-</ul>
+- [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket)

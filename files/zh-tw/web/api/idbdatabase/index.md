@@ -3,75 +3,62 @@ title: IDBDatabase
 slug: Web/API/IDBDatabase
 translation_of: Web/API/IDBDatabase
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>The <strong><code>IDBDatabase</code></strong> interface of the IndexedDB API provides a <a href="/en-US/docs/IndexedDB#database_connection">connection to a database</a>; you can use an <code>IDBDatabase</code> object to open a <a href="/en-US/docs/IndexedDB#gloss_transaction">transaction</a> on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.</p>
+The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/zh-TW/docs/IndexedDB#database_connection); you can use an `IDBDatabase` object to open a [transaction](/zh-TW/docs/IndexedDB#gloss_transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
 
-<p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<div class="note">
-<p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
-</div>
+> **備註：** Everything you do in IndexedDB always happens in the context of a [transaction](/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
 
-<div class="note">
-<p><strong>Note</strong>: Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a <code>readwrite</code> transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the <code>complete</code> event by creating a transaction using the experimental (non-standard) <code>readwriteflush</code> mode (see {{domxref("IDBDatabase.transaction")}}.</p>
-</div>
+> **備註：** Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further. If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>Inherits from: <a href="/en-US/docs/DOM/EventTarget">EventTarget</a></p>
+Inherits from: [EventTarget](/zh-TW/docs/DOM/EventTarget)
 
-<dl>
- <dt>{{domxref("IDBDatabase.close()")}}</dt>
- <dd>Returns immediately and closes the connection to a database in a separate thread.</dd>
- <dt>{{domxref("IDBDatabase.createObjectStore()")}}</dt>
- <dd>Creates and returns a new object store or index.</dd>
- <dt>{{domxref("IDBDatabase.deleteObjectStore()")}}</dt>
- <dd>Destroys the object store with the given name in the connected database, along with any indexes that reference it.</dd>
- <dt>{{domxref("IDBDatabase.transaction()")}}</dt>
- <dd>Immediately returns a transaction object ({{domxref("IDBTransaction")}}) containing the {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your object store. Runs in a separate thread.</dd>
-</dl>
+- {{domxref("IDBDatabase.close()")}}
+  - : Returns immediately and closes the connection to a database in a separate thread.
+- {{domxref("IDBDatabase.createObjectStore()")}}
+  - : Creates and returns a new object store or index.
+- {{domxref("IDBDatabase.deleteObjectStore()")}}
+  - : Destroys the object store with the given name in the connected database, along with any indexes that reference it.
+- {{domxref("IDBDatabase.transaction()")}}
+  - : Immediately returns a transaction object ({{domxref("IDBTransaction")}}) containing the {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your object store. Runs in a separate thread.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("IDBDatabase.name")}} {{readonlyInline}}</dt>
- <dd>A {{ domxref("DOMString") }} that contains the name of the connected database.</dd>
- <dt>{{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
- <dd>A <a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit integer</a> that contains the version of the connected database. When a database is first created, this attribute is an empty string.</dd>
- <dt>{{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
- <dd>A {{ domxref("DOMStringList") }} that contains a list of the names of the <a href="/en-US/docs/IndexedDB#gloss_object_store">object stores</a> currently in the connected database.</dd>
-</dl>
+- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
+  - : A {{ domxref("DOMString") }} that contains the name of the connected database.
+- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
+  - : A [64-bit integer](</zh-TW/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>) that contains the version of the connected database. When a database is first created, this attribute is an empty string.
+- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
+  - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/zh-TW/docs/IndexedDB#gloss_object_store) currently in the connected database.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("IDBDatabase.onabort")}}</dt>
- <dd>Fires when access of the database is aborted.</dd>
- <dt>{{domxref("IDBDatabase.onerror")}}</dt>
- <dd>Fires when access to the database fails.</dd>
- <dt>{{domxref("IDBDatabase.onversionchange")}}</dt>
- <dd>
- <p>Fires when a database structure change ({{domxref("IDBOpenDBRequest.onupgradeneeded")}} event or<code> </code>{{domxref("IDBFactory.deleteDatabase")}} was requested elsewhere (most probably in another window/tab on the same computer). This is different from the version change transaction (see {{domxref("IDBVersionChangeEvent")}}), but it is related.</p>
- </dd>
-</dl>
+- {{domxref("IDBDatabase.onabort")}}
+  - : Fires when access of the database is aborted.
+- {{domxref("IDBDatabase.onerror")}}
+  - : Fires when access to the database fails.
+- {{domxref("IDBDatabase.onversionchange")}}
+  - : Fires when a database structure change ({{domxref("IDBOpenDBRequest.onupgradeneeded")}} event or` `{{domxref("IDBFactory.deleteDatabase")}} was requested elsewhere (most probably in another window/tab on the same computer). This is different from the version change transaction (see {{domxref("IDBVersionChangeEvent")}}), but it is related.
 
-<h2 id="example">範例</h2>
+## 範例
 
-<p>In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">// Let us open our database
+```js
+// Let us open our database
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   // these two event handlers act on the IDBDatabase object, when the database is opened successfully, or not
   DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+    note.innerHTML += '<li>Database initialised.</li>';
 
     // store the result of opening the database in the db variable. This is used a lot later on
     db = DBOpenRequest.result;
@@ -88,7 +75,7 @@ translation_of: Web/API/IDBDatabase
     var db = event.target.result;
 
     db.onerror = function(event) {
-      note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+      note.innerHTML += '<li>Error loading database.</li>';
     };
 
     // Create an objectStore for this database using IDBDatabase.createObjectStore
@@ -105,31 +92,30 @@ translation_of: Web/API/IDBDatabase
 
     objectStore.createIndex("notified", "notified", { unique: false });
 
-    note.innerHTML += '&lt;li&gt;Object store created.&lt;/li&gt;';
-  };</pre>
+    note.innerHTML += '<li>Object store created.</li>';
+  };
+```
 
-<p>This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.</p>
+This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
-<pre class="brush: js">    var objectStore = db.transaction('toDoList').objectStore('toDoList'); </pre>
+```js
+    var objectStore = db.transaction('toDoList').objectStore('toDoList');
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.IDBDatabase")}}
 
-<h2 id="閱讀更多">閱讀更多</h2>
+## 閱讀更多
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
-
-<p> </p>
+- [Using IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

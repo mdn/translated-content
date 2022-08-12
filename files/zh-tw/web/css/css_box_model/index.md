@@ -10,73 +10,61 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Box_Model
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Box Model</strong> is a CSS module that defines the rectangular boxes, including their padding and margin, that are generated for elements and laid out according to the visual formatting model.</p>
+**CSS Box Model** is a CSS module that defines the rectangular boxes, including their padding and margin, that are generated for elements and laid out according to the visual formatting model.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<h4 id="Properties_controlling_the_flow_of_content_in_a_box">Properties controlling the flow of content in a box</h4>
+#### Properties controlling the flow of content in a box
 
-<ul>
- <li>{{cssxref("box-decoration-break")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("overflow-y")}}</li>
-</ul>
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
-<h4 id="Properties_controlling_the_size_of_a_box">Properties controlling the size of a box</h4>
+#### Properties controlling the size of a box
 
-<ul>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("max-height")}}</li>
- <li>{{cssxref("max-width")}}</li>
- <li>{{cssxref("min-height")}}</li>
- <li>{{cssxref("min-width")}}</li>
-</ul>
+- {{cssxref("height")}}
+- {{cssxref("width")}}
+- {{cssxref("max-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("min-width")}}
 
-<h4 id="Properties_controlling_the_margins_of_a_box">Properties controlling the margins of a box</h4>
+#### Properties controlling the margins of a box
 
-<ul>
- <li>{{cssxref("margin")}}</li>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-top")}}</li>
-</ul>
+- {{cssxref("margin")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
 
-<h4 id="Properties_controlling_the_paddings_of_a_box">Properties controlling the paddings of a box</h4>
+#### Properties controlling the paddings of a box
 
-<ul>
- <li>{{cssxref("padding")}}</li>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
+- {{cssxref("padding")}}
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-<h4 id="Other_properties">Other properties</h4>
+#### Other properties
 
-<ul>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("visibility")}}</li>
-</ul>
+- {{cssxref("box-shadow")}}
+- {{cssxref("visibility")}}
 
-<h2 id="Guides_and_tools">Guides and tools</h2>
+## Guides and tools
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Introduction to the CSS box model</a></dt>
- <dd>Explains one of the fundamental concept of CSS, the box model: describes the meaning of the margin, padding, as well as the different areas of a box.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Mastering margin collapsing</a></dt>
- <dd>In several cases, two adjacent margins are collapsed into one. This article describes when this is happening and how to control it.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Box-shadow generator</a></dt>
- <dd>An interactive tool that allows to visually create shadows and to generate the needed syntax for the {{cssxref("box-shadow")}} property.</dd>
-</dl>
+- [Introduction to the CSS box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - : Explains one of the fundamental concept of CSS, the box model: describes the meaning of the margin, padding, as well as the different areas of a box.
+- [Mastering margin collapsing](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - : In several cases, two adjacent margins are collapsed into one. This article describes when this is happening and how to control it.
+- [Box-shadow generator](/zh-TW/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+  - : An interactive tool that allows to visually create shadows and to generate the needed syntax for the {{cssxref("box-shadow")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
