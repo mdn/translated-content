@@ -7,8 +7,8 @@ tags:
   - Tools
 translation_of: MDN/Tools
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/ja/docs/MDN")}}</div>
+{{MDNSidebar}}
 
-<p>MDN は数々の機能を提供して、進行を追跡すること、内容を管理すること、最新の変更をサイトへ反映することを容易にしようと努めています。</p>
+MDN は数々の機能を提供して、進行を追跡すること、内容を管理すること、最新の変更をサイトへ反映することを容易にしようと努めています。
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
