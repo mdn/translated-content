@@ -54,7 +54,7 @@ original_slug: Web/JavaScript/Reference/Functions/Methoden_Definitionen
 
 <p><a href="/de/docs/Web/JavaScript/Reference/Statements/function*">Generatormethoden</a> können mit der kurzen Syntax ebenfalls definiert werden. Zu beachten ist, dass der Stern (*) in der kurzen Syntax nur vor dem Namen der Generatoreigenschaft geschrieben werden kann. <code>* g(){}</code> funktioniert, <code>g *(){}</code> funktioniert nicht.</p>
 
-<pre class="brush: js;highlight[12]">// Using a named property (pre-ES2015)
+<pre class="brush: js;">// Using a named property (pre-ES2015)
 var obj2 = {
   g: function*() {
     var index = 0;
@@ -95,7 +95,7 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 <h3 id="Ein_einfacher_Testfall">Ein einfacher Testfall</h3>
 
-<pre class="brush: js;highlight[3]">var obj = {
+<pre class="brush: js;">var obj = {
   a : "foo",
   b(){ return this.a; }
 };
@@ -106,7 +106,7 @@ console.log(obj.b()); // "foo"
 
 <p>Die Kurzschreib-Syntax unterstützt auch berechnete Eigenschaftsnamen.</p>
 
-<pre class="brush: js;highlight[4]">var bar = {
+<pre class="brush: js;">var bar = {
   foo0 : function (){return 0;},
   foo1(){return 1;},
   ["foo" + 2](){return 2;},
@@ -145,72 +145,7 @@ console.log(bar.foo2()); // 2</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Method definition shorthand</td>
-   <td>{{CompatChrome("39")}}</td>
-   <td>{{CompatGeckoDesktop("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("26")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Generator methods are not constructable (ES2016)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("43")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Method definition shorthand</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("34")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Generator methods are not constructable (ES2016)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("43")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">SpiderMonkey spezifische Hinweise</h2>
 

@@ -36,7 +36,7 @@ original_slug: Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-h
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png" style="display: block; height: 401px; margin: 0px auto; width: 700px;"></p>
 
-<div class="note"><strong>Hinweis: </strong>Das bei der Registrierung angegebene URL Template <strong>muss</strong> mit der die Anfrage stellenden Webseite <strong>übereinstimmen</strong>, oder die Registrierung schlägt fehl. Beispielsweise kann <code class="plain">http://example.com/homepage.html</code> einen Protokoll-Handler für <code class="plain">http://example.com/handle_mailto/%s registrieren, aber nicht für</code> <code class="plain">http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
+<div class="note"><strong>Hinweis: </strong>Das bei der Registrierung angegebene URL Template <strong>muss</strong> mit der die Anfrage stellenden Webseite <strong>übereinstimmen</strong>, oder die Registrierung schlägt fehl. Beispielsweise kann <code>http://example.com/homepage.html</code> einen Protokoll-Handler für <code>http://example.com/handle_mailto/%s registrieren, aber nicht für</code> <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
 
 <p>Wird derselbe Handler mehrfach registriert, meldet der Browser das durch ein weiteres Pop-Up, das auf die bereits erfolgte Registrierung hinweist. Daher ist es sinnvoll, die Registrierung mit einem vorangehenden Check abzusichern.</p>
 

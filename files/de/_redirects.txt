@@ -196,7 +196,7 @@
 /de/docs/DOM	/de/docs/Web/API/Document_Object_Model
 /de/docs/DOM/File.fileSize	/de/docs/Web/API/Blob/size
 /de/docs/DOM/File.name	/de/docs/Web/API/File/name
-/de/docs/DOM/Node	/de/docs/Web/API/Node
+/de/docs/DOM/Node	/en-US/docs/Web/API/Node
 /de/docs/DOM/Node.childNodes	/de/docs/Web/API/Node/childNodes
 /de/docs/DOM/Node.firstChild	/de/docs/Web/API/Node/firstChild
 /de/docs/DOM/Node.lastChild	/de/docs/Web/API/Node/lastChild
@@ -209,7 +209,7 @@
 /de/docs/DOM/document	/de/docs/Web/API/Document
 /de/docs/DOM/document.createElement	/de/docs/Web/API/Document/createElement
 /de/docs/DOM/element	/de/docs/Web/API/Element
-/de/docs/DOM/window	/de/docs/Web/API/Window
+/de/docs/DOM/window	/en-US/docs/Web/API/Window
 /de/docs/DOM/window.dump	/de/docs/Web/API/Window/dump
 /de/docs/DOM/window.openDialog	/de/docs/Web/API/Window/openDialog
 /de/docs/DOM/window.setTimeout	/de/docs/Web/API/setTimeout
