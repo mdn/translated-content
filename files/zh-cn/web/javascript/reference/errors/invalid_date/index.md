@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 
 ### 错误示例
 
-ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出` RangeError: invalid date`，比如在火狐浏览器中有以下情形：
+ISO 格式化字符串中不可识别的字符串或者包含非法元素值的日期一般会返回 {{jsxref("NaN")}}。然而，根据实现的不同，不符合 ISO 格式的字符串可能也会抛出 `RangeError: invalid date`，比如在火狐浏览器中有以下情形：
 
 ```js example-bad
 new Date('foo-bar 2014');

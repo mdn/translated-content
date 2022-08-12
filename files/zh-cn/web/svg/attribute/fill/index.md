@@ -34,7 +34,7 @@ translation_of: Web/SVG/Attribute/fill
 
 | 类别     | 外观属性                                                                     |
 | -------- | ---------------------------------------------------------------------------- |
-| 值       | [<paint>](/en/SVG/Content_type#Paint)                                        |
+| 值       | [\<paint>](/en/SVG/Content_type#Paint)                                        |
 | 可变性   | Yes                                                                          |
 | 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
 

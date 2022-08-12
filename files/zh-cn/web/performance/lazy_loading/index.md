@@ -34,7 +34,7 @@ translation_of: Web/Performance/Lazy_loading
 ### JavaScript
 
 脚本类型模块
-任何类型为 `type="module" `的脚本标签都被视为一个 [JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
+任何类型为 `type="module"` 的脚本标签都被视为一个 [JavaScript 模块](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且默认情况下会被延迟。
 
 ### CSS
 

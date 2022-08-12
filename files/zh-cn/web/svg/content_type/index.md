@@ -51,11 +51,11 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
     - 完整时钟值：
       - `02:30:03` >= 2 小时 30 分钟又 3 秒
       - `50:00:10.25` = 50 小时 10 秒又 250 毫秒
-    
+
     - 部分时钟值：
       - `02:33` >= 2 分钟又 33 秒
       - `00:10.5` = 10.5 秒 = 10 秒又 500 毫秒
-    
+
     - Timecount 值：
       - `3.2h` >= 3.2 小时 = 3 小时 12 分钟
       - `45min` >= 45 分钟
@@ -128,7 +128,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
     integer ::= [+-]? [0-9]+
     ```
 
-    如果正负符号不出现，则这个数字是非负的。除非是另有声明为特殊的属性，<integer> 的范围是 -2147483648 到 2147483647 之间。在 SVG DOM 内部，一个 <integer> 代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。
+    如果正负符号不出现，则这个数字是非负的。除非是另有声明为特殊的属性，\<integer> 的范围是 -2147483648 到 2147483647 之间。在 SVG DOM 内部，一个 \<integer> 代表了一个数字或者一个{{domxref("SVGAnimatedInteger")}}。
 
 ## IRI
 
@@ -161,8 +161,8 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
     SVG 支持两种类型的 _IRI_ 引用：
 
-      - 本地 _IRI_ 引用，在这里 IRI 引用不能包含一个 `<absoluteIRI>` 或 `<relativeIRI>`，因此只能包含一个片段标识符（例如：`<elementID>` 或者 `#xpointer(id<elementID>)`）。
-      - 非本地 _IRI_ 引用，在这里 _IRI_ 引用必须包含一个 `<absoluteIRI>` 或 `<relativeIRI>`。
+    - 本地 _IRI_ 引用，在这里 IRI 引用不能包含一个 `<absoluteIRI>` 或 `<relativeIRI>`，因此只能包含一个片段标识符（例如：`<elementID>` 或者 `#xpointer(id<elementID>)`）。
+    - 非本地 _IRI_ 引用，在这里 _IRI_ 引用必须包含一个 `<absoluteIRI>` 或 `<relativeIRI>`。
 
     欲了解完整的 SVG 中的 IRI 引用的规范请阅读 [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference)。
 
@@ -217,7 +217,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## 数字
 
 - \<number>
-  - : 真实数字可以用两种方法指定。如果用在样式表中，一个 \<number> 可以如下定义：`plain number ::= integer | [+-]? [0-9]* "." [0-9]+ `该句法与 CSS（CSS2 第 4.3.1 章节）中的定义一样。如果用在一个 SVG 属性中，一个 \<number> 可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：
+  - : 真实数字可以用两种方法指定。如果用在样式表中，一个 \<number> 可以如下定义：`plain number ::= integer | [+-]? [0-9]* "." [0-9]+` 该句法与 CSS（CSS2 第 4.3.1 章节）中的定义一样。如果用在一个 SVG 属性中，一个 \<number> 可以用别的方法定义，允许一个数字后面跟着大数指数，以指定得更精确：
 
     ```plain
     number ::= integer ([Ee] integer)?| [+-]? [0-9]\* "." [0-9]+ ([Ee] integer)?

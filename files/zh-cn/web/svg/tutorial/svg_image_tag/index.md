@@ -15,7 +15,7 @@ SVG 的{{ SVGElement("image") }}元素允许在一个 SVG 对象内部呈现光�
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="5cm" height="4cm" version="1.1"
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
-	<image xlink:href="firefox.jpg" x="0" y="0" height="50px" width="50px"/>
+  <image xlink:href="firefox.jpg" x="0" y="0" height="50px" width="50px"/>
 </svg>
 ```
 

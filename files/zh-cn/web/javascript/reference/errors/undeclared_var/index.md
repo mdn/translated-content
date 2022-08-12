@@ -25,7 +25,7 @@ ReferenceError: Variable undefined in strict mode (Edge)
 
 ## 发生了什么？
 
-在代码里赋值了一个未声明的变量。换句话说，有处没有带着[` var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 关键字的赋值。事实上已声明的和未声明的变量之间有一些差异，这可能会导致意想不到的结果，这就是为什么 JavaScript 在严格模式打印出这种错误。
+在代码里赋值了一个未声明的变量。换句话说，有处没有带着 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 关键字的赋值。事实上已声明的和未声明的变量之间有一些差异，这可能会导致意想不到的结果，这就是为什么 JavaScript 在严格模式打印出这种错误。
 
 关于已声明和未声明的变量，其有三个注意事项：
 

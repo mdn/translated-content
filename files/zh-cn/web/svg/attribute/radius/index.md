@@ -19,7 +19,7 @@ translation_of: Web/SVG/Attribute/radius
 
 | 类别   | _无_                                                                    |
 | ------ | ----------------------------------------------------------------------- |
-| 值     | [<number-optional-number>](/en/SVG/Content_type#Number-optional-number) |
+| 值     | [\<number-optional-number>](/en/SVG/Content_type#Number-optional-number) |
 | 可变性 | Yes                                                                     |
 
 ## 示例

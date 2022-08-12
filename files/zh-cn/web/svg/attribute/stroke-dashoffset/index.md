@@ -20,7 +20,7 @@ translation_of: Web/SVG/Attribute/stroke-dashoffset
 
 | 类别   | 显示属性                                                                                              |
 | ------ | ----------------------------------------------------------------------------------------------------- |
-| 值     | [<percentage>](/en/SVG/Content_type#Percentage) \| [<length>](/en/SVG/Content_type#Length) \| inherit |
+| 值     | [\<percentage>](/en/SVG/Content_type#Percentage) \| [\<length>](/en/SVG/Content_type#Length) \| inherit |
 | 初始值 | 1                                                                                                     |
 | 可动画 | Yes                                                                                                   |
 

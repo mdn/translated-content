@@ -87,9 +87,9 @@ ClosePath 命令将在当前路径从，从当前点到第一个点简单画一�
 
 ## 示例
 
-```plain
+```html
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    	 viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+      viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
     <path fill="#F7931E" d="M37,17v15H14V17H37z M50,0H0v50h50V0z"/>
 </svg>
 ```

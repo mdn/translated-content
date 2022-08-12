@@ -17,7 +17,7 @@ order 属性确定被用作{{ SVGElement("feConvolveMatrix") }}元素的矩阵�
 
 | Categories | None                                                                    |
 | ---------- | ----------------------------------------------------------------------- |
-| Value      | [<number-optional-number>](/en/SVG/Content_type#Number-optional-number) |
+| Value      | [\<number-optional-number>](/en/SVG/Content_type#Number-optional-number) |
 | Animatable | Yes                                                                     |
 
 ## Example

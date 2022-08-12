@@ -219,11 +219,11 @@ $ wasm-pack build --scope mynpmusername
 
 这个命令将做一系列事情 (这会花一些时间，特别是当你第一次运行 `wasm-pack`)。想了解详细情况，查看[这篇在 Mozilla Hacks 上的文章](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)。简单来说，`wasm-pack build` 将做以下几件事：
 
-1.  将你的 Rust 代码编译成 WebAssembly。
-2.  在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
-3.  创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
-4.  读取你的 `Cargo.toml` 并生成相应的 `package.json。`
-5.  复制你的 `README.md` (如果有的话) 到文件夹中。
+1. 将你的 Rust 代码编译成 WebAssembly。
+2. 在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
+3. 创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
+4. 读取你的 `Cargo.toml` 并生成相应的 `package.json。`
+5. 复制你的 `README.md` (如果有的话) 到文件夹中。
 
 最后的结果？你在 `pkg` 文件夹下有了一个 npm 包。
 
@@ -323,7 +323,7 @@ $ npm install
 $ npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 [http://localhost:8080 ](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器。访问 [http://localhost:8080](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
 
 ## 结论
 

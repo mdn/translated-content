@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/fx
 
 | 类别     | 无                                                                                                                           |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [<coordinate>](https://developer.mozilla.org/en/SVG/Content_type#Coordinate)                                                 |
+| 值       | [\<coordinate>](https://developer.mozilla.org/en/SVG/Content_type#Coordinate)                                                 |
 | 可变性   | 非                                                                                                                           |
 | 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 

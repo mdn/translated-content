@@ -11,7 +11,7 @@ translation_of: Web/SVG/Attribute/kernelMatrix
 
 | Categories | None                                                                         |
 | ---------- | ---------------------------------------------------------------------------- |
-| Value      | [T<.2Fvar>s"><list of number>](/en/SVG/Content_type#List-of-<var>T<.2Fvar>s) |
+| Value      | [T<.2Fvar>s">\<list of number>](/en/SVG/Content_type#List-of-<var>T<.2Fvar>s) |
 | Animatable | Yes                                                                          |
 
 ## Example

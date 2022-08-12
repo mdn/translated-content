@@ -15,7 +15,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 | 类别   | 外观属性                              |
 | ------ | ------------------------------------- |
-| 值     | [<paint>](/en/SVG/Content_type#Paint) |
+| 值     | [\<paint>](/en/SVG/Content_type#Paint) |
 | 可变性 | 是                                    |
 
 ## 示例
@@ -31,8 +31,6 @@ translation_of: Web/SVG/Attribute/stroke
     <path stroke = "green" d="M5 20 1215 0" />
 </svg>
 ```
-
-###
 
 ### 示例 2：用 Stroke 属性画一个拥有蓝色边框的黑色的圆形
 

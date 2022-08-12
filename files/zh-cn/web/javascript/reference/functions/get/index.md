@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 - 可以使用数值或字符串作为标识；
 - 必须不带参数（请参考[Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)）；
-- 它不能与另一个 `get `或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
+- 它不能与另一个 `get` 或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 `{ get x() { }, get x() { } }` 和 `{ x: ..., get x() { } }`）。
 
 ## 示例
 

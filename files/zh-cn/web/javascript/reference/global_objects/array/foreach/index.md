@@ -48,9 +48,9 @@ arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
 
 可依次向 `callback` 函数传入三个参数：
 
-1.  数组当前项的值
-2.  数组当前项的索引
-3.  数组对象本身
+1. 数组当前项的值
+2. 数组当前项的索引
+3. 数组对象本身
 
 如果 `thisArg` 参数有值，则每次 `callback` 函数被调用时，`this` 都会指向 `thisArg` 参数。如果省略了 `thisArg` 参数，或者其值为 `null` 或 `undefined`，`this` 则指向全局对象。按照[函数观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，`callback` 函数最终可观察到 `this` 值。
 

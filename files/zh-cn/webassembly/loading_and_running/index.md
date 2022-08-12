@@ -105,10 +105,10 @@ fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
 
 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)在一定程度上而言要比 Fetch 老旧一些，但是，仍然可以很好地被用来获取带类型数组。仍然假设我们的模块叫做 simple.wasm：
 
-1.  创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为 GET 并且声明我们想要获取的文件路径。
-2.  关键之处在于使用{{domxref("XMLHttpRequest.responseType","responseType")}}属性设置响应类型为'arraybuffer'。
-3.  接下来使用{{domxref("XMLHttpRequest.send()")}}发送请求。
-4.  当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用 Fetch 那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。
+1. 创建一个 {{domxref("XMLHttpRequest()")}} 实例，然后使用它的{{domxref("XMLHttpRequest.open","open()")}} 方法来开启一个请求——设置请求方法为 GET 并且声明我们想要获取的文件路径。
+2. 关键之处在于使用{{domxref("XMLHttpRequest.responseType","responseType")}}属性设置响应类型为'arraybuffer'。
+3. 接下来使用{{domxref("XMLHttpRequest.send()")}}发送请求。
+4. 当响应已经完成下载之后，我们使用{{domxref("XMLHttpRequest.onload", "onload")}}事件处理器来调用一个函数——在这个函数中，我们从{{domxref("XMLHttpRequest.response", "response")}}属性中得到数组缓存然后就像使用 Fetch 那样把它传递给{{jsxref("WebAssembly.instantiate()")}} 。
 
 最终代码看起来像这样：
 

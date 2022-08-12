@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/stroke-dasharray
 
 | 类别   | 外观属性                           |
 | ------ | ---------------------------------- |
-| 值     | **none** \| <dasharray> \| inherit |
+| 值     | **none** \| \<dasharray> \| inherit |
 | 可变性 | Yes                                |
 
 - \<dasharray>

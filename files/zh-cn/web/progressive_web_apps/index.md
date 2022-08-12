@@ -21,12 +21,12 @@ PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可�
 
 以下指南通过简单的示例和工作原理，展示了实施 PWA 需要做什么。
 
-1.  [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)
-2.  [PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)
-3.  [通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4.  [让 PWA 易于安装](/zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs)
-5.  [通过通知推送让 PWA 可重用](/zh-CN/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
-6.  [渐进式加载](/zh-CN/docs/Web/Progressive_web_apps/Loading)
+1. [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)
+2. [PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)
+3. [通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)
+4. [让 PWA 易于安装](/zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs)
+5. [通过通知推送让 PWA 可重用](/zh-CN/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
+6. [渐进式加载](/zh-CN/docs/Web/Progressive_web_apps/Loading)
 
 ## 技术指南
 

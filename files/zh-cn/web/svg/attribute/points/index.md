@@ -18,7 +18,7 @@ translation_of: Web/SVG/Attribute/points
 
 | 类别   | 无               |
 | ------ | ---------------- |
-| 值     | <list-of-points> |
+| 值     | \<list-of-points> |
 | 可变性 | Yes              |
 
 ## 示例

@@ -21,7 +21,7 @@ translation_of: Web/SVG/Attribute/preserveAspectRatio
 
 | Categories | None                    |
 | ---------- | ----------------------- |
-| Value      | <align> [<meetOrSlice>] |
+| Value      | \<align> [\<meetOrSlice>] |
 | Animatable | Yes                     |
 
 - \<align>
@@ -45,7 +45,7 @@ translation_of: Web/SVG/Attribute/preserveAspectRatio
       - 宽高比将会被保留
       - 整个 SVG 的 viewbox 在视图范围内是可见的
       - 尽可能的放大 SVG 的 viewbox，同时仍然满足其他的条件。
-    
+
       在这种情况下，如果图形的宽高比和视图窗口不匹配，则某些视图将会超出 viewbox 范围（即 SVG 的 viewbox 视图将会比可视窗口小）。
 
     - **slice** - 图形将缩放到：

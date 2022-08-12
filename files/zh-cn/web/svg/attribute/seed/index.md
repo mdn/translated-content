@@ -19,7 +19,7 @@ translation_of: Web/SVG/Attribute/seed
 
 | 类别   | _None_                                          |
 | ------ | ----------------------------------------------- |
-| 值     | [<number>](/zh-CN/docs/SVG/Content_type#Number) |
+| 值     | [\<number>](/zh-CN/docs/SVG/Content_type#Number) |
 | 可变性 | Yes                                             |
 
 ## 示例
