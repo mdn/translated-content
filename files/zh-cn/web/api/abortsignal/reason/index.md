@@ -12,7 +12,7 @@ slug: Web/API/AbortSignal/reason
 
 一个使用 JavaScript 值表示的中止原因，如果没有被中止，则是 `undefined`。
 
-## 实例
+## 示例
 
 在以下片段中，我们创建一个新的 `AbortController` 对象，并且获取它的 {{domxref("AbortSignal")}}（位于 `signal` 属性中）。然后我们用 `aborted` 属性检查这个信号是否已被中止，并把相应的日志发送给控制台。
 
