@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 type/subtype
 ```
 
-_\*\*主類別(\_type)_**\_代表廣泛性的分類，譬如`video `或 `text`。**_子類別_**(**_subtype)_\*\* 則定義該資料精確的 MIME 類別。例如 MIME 類別為`text`, 子類可能會是 `plain` (純文字), `html` ({{Glossary("HTML")}} 源碼), 或`calendar` (iCalendar/`.ics`) 檔案。
+_\*\*主類別(\_type)_**\_代表廣泛性的分類，譬如`video` 或 `text`。**_子類別_**(**_subtype)_\*\* 則定義該資料精確的 MIME 類別。例如 MIME 類別為`text`, 子類可能會是 `plain` (純文字), `html` ({{Glossary("HTML")}} 源碼), 或`calendar` (iCalendar/`.ics`) 檔案。
 
 每一種主類別都可能有一組自己的子類別，MIME 類別永遠都有主類別和子類別，從來不會只有單一個。
 
@@ -222,7 +222,7 @@ Simple file.
 
 The `multipart/byteranges` MIME type is used to send partial responses to the browser.
 
-When the {{HTTPStatus("206")}}` Partial Content` status code is sent, this MIME type indicates that the document is composed of several parts, one for each of the requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a `boundary` to separate the pieces. Each piece has a {{HTTPHeader("Content-Type")}} header with its actual type and a {{HTTPHeader("Content-Range")}} of the range it represents.
+When the {{HTTPStatus("206")}} `Partial Content` status code is sent, this MIME type indicates that the document is composed of several parts, one for each of the requested ranges. Like other multipart types, the {{HTTPHeader("Content-Type")}} uses a `boundary` to separate the pieces. Each piece has a {{HTTPHeader("Content-Type")}} header with its actual type and a {{HTTPHeader("Content-Range")}} of the range it represents.
 
 ```plain
 HTTP/1.1 206 Partial Content

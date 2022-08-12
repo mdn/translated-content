@@ -24,11 +24,15 @@ Coordinates in the `"d"` attribute are **always unitless** and hence in the user
 
 There are five line commands for `<path>` nodes. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate ' x ' and coordinate ' y ' to move to. If your cursor already was somewhere on the page, no line is drawn to connect the two places. The "Move To" command appears at the beginning of paths to specify where the drawing should start. e.g. :
 
-    M x y
+```
+M x y
+```
 
 or
 
-    m dx dy
+```
+m dx dy
+```
 
 In the following example we only have a point at (10,10). Note, though, that it wouldn't show up if you were just drawing the path normally. For example:
 
@@ -47,12 +51,16 @@ In the following example we only have a point at (10,10). Note, though, that it 
 
 There are three commands that draw lines. The most generic is the "Line To" command, `called with L`. `L` takes two parameters—x and y coordinates—and draws a line from the current position to a new position.
 
-     L x y (or l dx dy)
+```
+L x y (or l dx dy)
+```
 
 There are two abbreviated forms for drawing horizontal and vertical lines. `H` draws a horizontal line, and `V` draws a vertical line. Both commands only take one argument since they only move in one direction.
 
-     H x (or h dx)
-     V y (or v dy)
+```
+H x (or h dx)
+V y (or v dy)
+```
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a `<rect>` element). It's composed of horizontal and vertical lines only:
 
@@ -74,18 +82,20 @@ An easy place to start is by drawing a shape. We will start with a rectangle (th
 
 We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
 
-     Z (or z)
+```
+Z (or z)
+```
 
 So our path above could be shortened to:
 
 ```xml
- <path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
+<path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
 ```
 
 You can also use the relative form of these commands to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our box is 80 x 80, the path element could have been written:
 
 ```xml
- <path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
+<path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
 ```
 
 The path will move to point (10,10) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
@@ -100,7 +110,9 @@ There are three different commands that you can use to create smooth curves. Two
 
 The cubic curve, C, is the slightly more complex curve. Cubic Beziers take in two control points for each point. Therefore, to create a cubic Bezier, you need to specify three sets of coordinates.
 
-     C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
+```
+C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
+```
 
 The last set of coordinates here (x,y) are where you want the line to end. The other two are control points. (x1,y1) is the control point for the start of your curve, and (x2,y2) is the control point for the end. The control points essentially describe the slope of your line starting at each point. The Bezier function then creates a smooth curve that transfers you from the slope you established at the beginning of your line, to the slope at the other end.
 
@@ -126,7 +138,9 @@ The example above creates nine Cubic Bezier curves. As the curves move toward th
 
 You can string together several Bezier curves to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, you can use a shortcut version of the cubic Bezier, designated by the command `S` (or `s`).
 
-     S x2 y2, x y (or s dx2 dy2, dx dy)
+```
+S x2 y2, x y (or s dx2 dy2, dx dy)
+```
 
 `S` produces the same type of curve as earlier, but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
 
@@ -140,7 +154,9 @@ You can string together several Bezier curves to create extended, smooth shapes.
 
 The other type of Bezier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two arguments: the control point and the end point of the curve. Note that the co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
 
-     Q x1 y1, x y (or q dx1 dy1, dx dy)
+```
+Q x1 y1, x y (or q dx1 dy1, dx dy)
+```
 
 ![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png)
 
@@ -152,7 +168,9 @@ The other type of Bezier curve, the quadratic curve called with Q, is actually a
 
 As with the cubic Bezier curve, there is a shortcut for stringing together multiple quadratic Beziers, called with T.
 
-     T x y (or t dx dy)
+```
+T x y (or t dx dy)
+```
 
 This shortcut looks at the previous control point you used and infers a new one from it. This means that after your first control point, you can make fairly complex shapes by specifying only end points.
 
@@ -172,8 +190,10 @@ Both curves produce similar results, although the cubic allows you greater freed
 
 The other type of curved line you can create using SVG is the arc, called with A. Arcs are sections of circles or ellipses. For a given x-radius and y-radius, there are two ellipses that can connect any two points (as long as they're within the radius of the circle). Along either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available. Because of that, arcs have to take in quite a few arguments:
 
-     A rx ry x-axis-rotation large-arc-flag sweep-flag x y
-     a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
+```
+A rx ry x-axis-rotation large-arc-flag sweep-flag x y
+a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
+```
 
 At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/en-US/Web/SVG/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
 
@@ -198,18 +218,20 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 
 ![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
-      <path d="M10 315
-               L 110 215
-               A 36 60 0 0 1 150.71 170.29
-               L 172.55 152.45
-               A 30 50 -45 0 1 215.1 109.9
-               L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
-      <circle cx="150.71" cy="170.29" r="2" fill="red"/>
-      <circle cx="110" cy="215" r="2" fill="red"/>
-      <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
-      <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
-    </svg>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+  <path d="M10 315
+            L 110 215
+            A 36 60 0 0 1 150.71 170.29
+            L 172.55 152.45
+            A 30 50 -45 0 1 215.1 109.9
+            L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+  <circle cx="150.71" cy="170.29" r="2" fill="red"/>
+  <circle cx="110" cy="215" r="2" fill="red"/>
+  <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
+  <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+</svg>
+```
 
 Notice that each of the blue ellipses are formed by two arcs, depending if you travel clockwise or counter-clockwise. Each ellipse has one short arc and one long arc. The two ellipses are just mirror images of each other. They are flipped along the line formed from the start->end points.
 

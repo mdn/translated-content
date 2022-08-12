@@ -66,7 +66,7 @@ myObj['']               = 'Even an empty string';
 console.log(myObj);
 ```
 
-Please note that all keys in the square bracket notation are converted to String type, since objects in JavaScript can only have String type as key type. For example, in the above code, when the key `obj `is added to the `myObj`, JavaScript will call the `obj.toString()` method, and use this result string as the new key.
+Please note that all keys in the square bracket notation are converted to String type, since objects in JavaScript can only have String type as key type. For example, in the above code, when the key `obj` is added to the `myObj`, JavaScript will call the `obj.toString()` method, and use this result string as the new key.
 
 You can also access properties by using a string value that is stored in a variable:
 
@@ -116,14 +116,14 @@ Before ECMAScript 5, there was no native way to list all properties of an object
 
 ```js
 function listAllProperties(o) {
-	var objectToInspect;
-	var result = [];
+  var objectToInspect;
+  var result = [];
 
-	for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
+  for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
       result = result.concat(Object.getOwnPropertyNames(objectToInspect));
-	}
+  }
 
-	return result;
+  return result;
 }
 ```
 
@@ -168,8 +168,8 @@ You can also use object initializers to create arrays. See [array literals](/en-
 
 Alternatively, you can create an object with these two steps:
 
-1.  Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
-2.  Create an instance of the object with `new`.
+1. Define the object type by writing a constructor function. There is a strong convention, with good reason, to use a capital initial letter.
+2. Create an instance of the object with `new`.
 
 To define an object type, create a function for the object type that specifies its name, properties, and methods. For example, suppose you want to create an object type for cars. You want this type of object to be called `car`, and you want it to have properties for make, model, and year. To do this, you would write the following function:
 

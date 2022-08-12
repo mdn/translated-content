@@ -27,7 +27,7 @@ _另外從其父 {{domxref("Event")}} 繼承屬性_。
 - {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
   - : 是一個{{domxref("DOMString")}}包含的值 {{cssxref("animation-name")}} CSS 屬性與過渡有關。
 - {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : 是一個`float`給予時間的動畫已經運行，以秒為單位，當該事件燒製，不含動畫被暫停的任何時間量。為一個`"animationstart"`事件，`elapsedTime`是`0.0`，除非有一個負值{{cssxref("animation-delay")}}，在這種情況下，該事件將與燒製`elapsedTime`含有 `(-1 * `_delay_`)`。
+  - : 是一個`float`給予時間的動畫已經運行，以秒為單位，當該事件燒製，不含動畫被暫停的任何時間量。為一個`"animationstart"`事件，`elapsedTime`是`0.0`，除非有一個負值{{cssxref("animation-delay")}}，在這種情況下，該事件將與燒製`elapsedTime`含有 `(-1 * delay)`。
 - {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
   - : 是一個{{domxref("DOMString")}}，從`"::"`，包含的名字[虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)的動畫運行。如果動畫上不偽元素，但該元素，一個空字符串上運行`：''。`
 

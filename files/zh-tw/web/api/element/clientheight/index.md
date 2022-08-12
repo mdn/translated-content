@@ -8,7 +8,7 @@ translation_of: Web/API/Element/clientHeight
 ---
 {{ APIRef("DOM") }}
 
-**`Element.clientHeight `**唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。
+**`Element.clientHeight`** 唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。
 
 `clientHeight` 可以被計算成 CSS `height` + CSS `padding` - 水平滾動條的高度（如果有顯示）
 

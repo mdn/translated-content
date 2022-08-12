@@ -38,7 +38,7 @@ height: unset;
   - : 查看 {{cssxref("&lt;length&gt;")}} 可用的單位。
 - `<percentage>`
   - : {{cssxref("&lt;percentage&gt;")}} 相對於元素的塊狀高度。如果沒有指定塊狀元素的高度，預設值為 `auto。`用在 root 元素 (e.g. `<html>`) 上是相對於初始塊狀元素（即顯示器的尺寸）。
-- `border-box `{{experimental_inline}}
+- `border-box`{{experimental_inline}}
   - : If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's border box.
 - `content-box` {{experimental_inline}}
   - : {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 是應用於元素的 content box.

@@ -41,7 +41,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ## 解譯 SVG 或 HTML 文件
 
-`DOMParser也可以用來解譯 `SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
+`DOMParser` 也可以用來解譯 SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();
@@ -73,38 +73,38 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 /*global document, DOMParser*/
 
 (function(DOMParser) {
-	"use strict";
+  "use strict";
 
-	var
-	  proto = DOMParser.prototype
-	, nativeParse = proto.parseFromString
-	;
+  var
+    proto = DOMParser.prototype
+  , nativeParse = proto.parseFromString
+  ;
 
-	// Firefox/Opera/IE throw errors on unsupported types
-	try {
-		// WebKit returns null on unsupported types
-		if ((new DOMParser()).parseFromString("", "text/html")) {
-			// text/html parsing is natively supported
-			return;
-		}
-	} catch (ex) {}
+  // Firefox/Opera/IE throw errors on unsupported types
+  try {
+    // WebKit returns null on unsupported types
+    if ((new DOMParser()).parseFromString("", "text/html")) {
+      // text/html parsing is natively supported
+      return;
+    }
+  } catch (ex) {}
 
-	proto.parseFromString = function(markup, type) {
-		if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-			var
-			  doc = document.implementation.createHTMLDocument("")
-			;
-	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-        			doc.documentElement.innerHTML = markup;
-      			}
-      			else {
-        			doc.body.innerHTML = markup;
-      			}
-			return doc;
-		} else {
-			return nativeParse.apply(this, arguments);
-		}
-	};
+  proto.parseFromString = function(markup, type) {
+    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+      var
+        doc = document.implementation.createHTMLDocument("")
+      ;
+            if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+              doc.documentElement.innerHTML = markup;
+            }
+            else {
+              doc.body.innerHTML = markup;
+            }
+      return doc;
+    } else {
+      return nativeParse.apply(this, arguments);
+    }
+  };
 }(DOMParser));
 ```
 

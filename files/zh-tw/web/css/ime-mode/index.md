@@ -49,9 +49,9 @@ ime-mode: <mode>
 
 與 Internet Explorer 不同的地方是，Firefox 實作 `ime-mode` 時亦允許此特性套用至密碼輸入欄位，但這在理想的使用體驗上有不妥之處、而密碼欄位也應該停用輸入法。若有網站執意將不適切的行為套用至密碼欄位，則使用者可以在自訂 CSS 檔中加上下列設定以強迫調整此功能：
 
-```plain
+```css
 input[type=password] {
-	ime-mode: auto !important;
+  ime-mode: auto !important;
 }
 ```
 

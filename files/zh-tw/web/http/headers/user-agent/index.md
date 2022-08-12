@@ -46,11 +46,11 @@ User-Agent: Mozilla/<version> (<system-information>) <platform> (<platform-detai
 
 **Mozilla/5.0 (_platform_; rv:_geckoversion_) Gecko/_geckotrail_ Firefox/_firefoxversion_**
 
-1.  `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
-2.  **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. [Firefox OS](/zh-TW/docs/Glossary/Firefox_OS) phones simply say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple `"; "`-separated tokens. See below for further details and examples.
-3.  **rv:_geckoversion_** indicates the release version of Gecko (such as _"17.0"_). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
-4.  **_Gecko/geckotrail_** indicates that the browser is based on [Gecko](/zh-TW/docs/Mozilla/Gecko). (On Desktop, _**geckotrail**_ is always the fixed string `20100101`.)
-5.  _**Firefox/firefoxversion**_ indicates the browser is Firefox, and provides the version (such as "_17.0"_).
+1. `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
+2. **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. [Firefox OS](/zh-TW/docs/Glossary/Firefox_OS) phones simply say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple `"; "`-separated tokens. See below for further details and examples.
+3. **rv:_geckoversion_** indicates the release version of Gecko (such as _"17.0"_). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
+4. **_Gecko/geckotrail_** indicates that the browser is based on [Gecko](/zh-TW/docs/Mozilla/Gecko). (On Desktop, _**geckotrail**_ is always the fixed string `20100101`.)
+5. _**Firefox/firefoxversion**_ indicates the browser is Firefox, and provides the version (such as "_17.0"_).
 
 ### 示例
 

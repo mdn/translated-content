@@ -110,11 +110,11 @@ Here, we are retrieving message strings dependant on the browser's locale, rathe
 
 To call a message string like this, you need to specify it like this:
 
-1.  Two underscores, followed by
-2.  The string "MSG", followed by
-3.  One underscore, followed by
-4.  The name of the message you want to call as defined in `messages.json`, followed by
-5.  Two underscores
+1. Two underscores, followed by
+2. The string "MSG", followed by
+3. One underscore, followed by
+4. The name of the message you want to call as defined in `messages.json`, followed by
+5. Two underscores
 
     __MSG_ + messageName + __
 
@@ -148,7 +148,7 @@ So, you've got your message strings set up, and your manifest. Now you just need
 - The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
 - The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.
 
-In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the[ background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
+In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
 var title = browser.i18n.getMessage("notificationTitle");
@@ -174,11 +174,15 @@ The `"placeholders"` member defines all the placeholders, and where they are ret
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
-    You clicked $URL$.
+```
+You clicked $URL$.
+```
 
 Let's say the link clicked on points to `https://developer.mozilla.org`. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as `$1`, which replaces the `$URL$` placeholder as defined in the `"url"` placeholder. So the final message string is
 
-    You clicked https://developer.mozilla.org.
+```
+You clicked https://developer.mozilla.org.
+```
 
 ### Direct placeholder usage
 
@@ -217,10 +221,10 @@ In addition, you can use such substitutions to specify parts of the string that 
 
 Locales can be specified using only a language code, like `fr` or `en`, or they may be further qualified with a region code, like `en_US` or `en_GB`, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:
 
-1.  if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
-2.  Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
-3.  Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
-4.  Otherwise return an empty string.
+1. if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
+2. Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
+3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
+4. Otherwise return an empty string.
 
 Take the following example:
 
@@ -255,11 +259,15 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Calling message strings from manifests and extension CSS](#retrieving_localized_strings_in_manifests). For example:
 
-    __MSG_extensionName__
+```
+__MSG_extensionName__
+```
 
 Predefined messages use exactly the same syntax, except with `@@` before the message name, for example
 
-    __MSG_@@ui_locale__
+```
+__MSG_@@ui_locale__
+```
 
 The following table shows the different available predefined messages:
 
@@ -385,10 +393,10 @@ Starting in Firefox 45, you can install extensions temporarily from disk — see
 
 Next, change Firefox's locale to one supported in the extension that you want to test.
 
-1.  Open "about:config" in Firefox, and search for the `general.useragent.locale` preference.
-2.  Double click on the preference (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported.
-3.  Search for `intl.locale.matchOS` and double click the preference so that it is set to `false`.
-4.  Restart your browser to complete the change.
+1. Open "about:config" in Firefox, and search for the `general.useragent.locale` preference.
+2. Double click on the preference (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported.
+3. Search for `intl.locale.matchOS` and double click the preference so that it is set to `false`.
+4. Restart your browser to complete the change.
 
 > **備註：** This works to change the browser's locale, even if you haven't got the [language pack](https://addons.mozilla.org/en-US/firefox/language-tools/) installed for that language. You'll just get the browser UI in your default language if this is the case.
 
