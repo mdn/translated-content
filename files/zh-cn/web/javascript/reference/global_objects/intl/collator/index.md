@@ -46,7 +46,7 @@ Intl.Collator.call(this[, locales[, options]])
         - `"case"`: 只有不同的基本字母或大小写的字符串比较不相等。 Examples: `a ≠ b`, `a = á`, `a ≠ A。`
         - `"variant"`: 字符串的字母，口音和其他变音符号、或不同大小写比较不相等。 也可以考虑其他差异。例如： `a ≠ b`, `a ≠ á`, `a ≠ A`.
 
-        `"variant" 的默认值使用 ``"sort"`; 它的 locale 依赖于使用 `"search"`.
+        `"variant"` 的默认值使用 `"sort"`；它的 locale 依赖于使用 `"search"`。
 
     - `ignore­Punctua­tion`
       - : 是否应忽略标点。 可能的值为 true 和 false; 默认值为 false。
