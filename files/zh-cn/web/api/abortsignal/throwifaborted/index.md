@@ -53,7 +53,7 @@ async function waitForCondition(func, targetValue, { signal } = {}) {
 
 需要支持中止的 API 可以接收一个 `AbortSignal` 对象，并在其需要时使用其状态去触发中止 signal 的操作。
 
-一个基于 {{jsxref("Promise")}} 的 API 应该通过使用 `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}} 拒绝任何未解决的 promise 来响应中止信号。例如，考虑以下 `myCoolPromiseAPI`，它接收一个信号并且返回一个 promise。如果 signal 已经中止或者检测到中止事件，则 promise 将被立刻拒绝。否则它将正常返回并且兑现。
+一个基于 {{jsxref("Promise")}} 的 API 应该通过使用 `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}} 拒绝任何未敲定的 promise 来响应中止信号。例如，考虑以下 `myCoolPromiseAPI`，它接收一个信号并且返回一个 promise。如果 signal 已经中止或者检测到中止事件，则 promise 将被立刻拒绝。否则它将正常返回并且兑现。
 
 ```js
 function myCoolPromiseAPI(/* … ,*/ {signal}) {
