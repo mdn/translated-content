@@ -6,7 +6,7 @@
 # FROM-URL	TO-URL
 /de/docs/AJAX	/de/docs/Web/Guide/AJAX
 /de/docs/Apps/Progressiv	/de/docs/Web/Progressive_web_apps
-/de/docs/Barrierefreiheit	/de/docs/Web/Accessibility
+/de/docs/Barrierefreiheit	/en-US/docs/Web/Accessibility
 /de/docs/Barrierefreiheit/ARIA	/de/docs/Web/Accessibility/ARIA
 /de/docs/Barrierefreiheit/ARIA/ARIA_Live_Regionen	/de/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /de/docs/Barrierefreiheit/An_overview_of_accessible_web_applications_and_widgets	/de/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
