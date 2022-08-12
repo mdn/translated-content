@@ -1,94 +1,117 @@
 ---
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
+page-type: web-api-instance-method
 tags:
   - API
   - Clip
   - Clipboard
   - Clipboard API
+  - Cut
   - Editing
   - Method
   - Reference
   - Scrap
   - Text
+  - copy
   - paste
   - read
+browser-compat: api.Clipboard.read
 translation_of: Web/API/Clipboard/read
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p><span class="seoSummary">{{domxref("Clipboard")}} インターフェイスの <strong><code>read()</code></strong> メソッドは、クリップボードの内容のコピーを要求し、戻り値の {{jsxref("Promise")}} が解決されたときにそのデータを取得できます。{{domxref("Clipboard.readText", "readText()")}} とは異なり、<code>read()</code> メソッドは画像など任意のデータを取得することができます。</span></p>
+**`read()`** は {{domxref("Clipboard")}} インターフェイスのメソッドで、クリップボードの内容のコピーを要求し、返されたプロミス ({{jsxref("Promise")}}) が解決されるとそのデータを取得できます。 {{domxref("Clipboard.readText", "readText()")}} とは異なり、 `read()` メソッドは画像など任意のデータを取得することができます。
 
-<p>クリップボードから読み込みを行うためには、まず <code>"clipboard-read"</code> パーミッションを取得する必要があります。</p>
+クリップボードから読み込みを行うためには、まず `"clipboard-read"` 権限を取得する必要があります。
 
-<div class="note">
-<p><strong>注意:</strong> 非同期の Clipboard API と <a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、パーミッションなどが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に <a href="#browser_compatibility">ブラウザー実装状況</a> を確認してください。</p>
-</div>
+> **Note:** 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>promise</em> = navigator.clipboard.read();</pre>
+```js
+read()
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<p>クリップボードの内容を持つ {{domxref("DataTransfer")}} に解決される、{{jsxref("Promise")}} オブジェクト。クリップボードへのアクセスが許可されない場合、この Promise は拒否される。</p>
+クリップボードの内容を保持する {{domxref("ClipboardItem")}} の配列に解決されるプロミス ({{jsxref("Promise")}})。クリップボードへのアクセスが許可されない場合、このプロミスは拒否されます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この使用例は、最初に {{domxref("Permissions.query", "navigator.permissions.query()")}} を使って <code>"clipboard-read"</code> 権限があるかどうか (またはプロンプトによってユーザーがそれを許可するかどうか) を調べ、その後クリップボードに現在あるデータを取得します。もしデータがプレーンテキストでない場合、エラーメッセージを表示します。そうでない場合は、変数 <code>textElem</code> により参照している要素の内容を、クリップボードの内容に置き換えます。</p>
+### 画像データの読み取り
 
-<pre class="brush: js">// まず、Permissions API を使って、
-// "clipboard-read" 機能を使えるかどうか確認します。
+この例では `read()` を使用して、画像データをクリップボードから読み取ります。
 
-navigator.permissions.query({name: "clipboard-read"}).then(result =&gt; {
-  // クリップボードの読み取りが許可されているか、またはプロンプトによって
-  // ユーザーがそれを許可する場合、処理を続行します。
+左側の蝶の画像をコンテキストメニューの「画像のコピー」でコピーし、右側の空の枠内をクリックしてみてください。
 
-  if (result.state == "granted" || result.state == "prompt") {
-    navigator.clipboard.read().then(data =&gt; {
-      for (let i=0; i&lt;data.items.length; i++) {
-        if (data.items[i].type != "text/plain") {
-          alert("クリップボードの内容がテキストでないため、読み込めません。");
-        } else {
-          textElem.innerText = data.items[i].getAs("text/plain");
-        }
+この例では、クリップボードの読み取りを確認または許可して、画像データを取得し、空のフレームに画像データを表示します。
+
+> **Note:** 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
+
+#### HTML
+
+```html
+<img id="source" src="butterfly.jpg" alt="A butterfly">
+<img id="destination">
+```
+
+#### CSS
+
+```css
+img {
+  height: 100px;
+  width: 100px;
+  margin: 0 1rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js
+const destinationImage = document.querySelector('#destination')
+destinationImage.addEventListener('click', pasteImage);
+
+async function pasteImage() {
+  try {
+    const permission = await navigator.permissions.query({ name: 'clipboard-read' });
+    if (permission.state === 'denied') {
+      throw new Error('Not allowed to read clipboard.');
+    }
+    const clipboardContents = await navigator.clipboard.read();
+    for (const item of clipboardContents) {
+      if (!item.types.includes('image/png')) {
+        throw new Error('Clipboard contains non-image data.');
       }
-    });
+      const blob = await item.getType('image/png');
+      destinationImage.src = URL.createObjectURL(blob);
+    }
   }
-});
-</pre>
+  catch (error) {
+    console.error(error.message);
+  }
+}
+```
 
-<div class="note">
-<p><strong>注意:</strong> 現時点で Firefox は <code>read()</code> を実装していますが、<code>"clipboard-read"</code> パーミッションは認識できません。そのため、<a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> を使ってこの API にアクセスしようとしても、失敗するでしょう。</p>
-</div>
+#### 結果
 
-<div class="note">
-<p><strong>日本語訳注:</strong> 翻訳時点 (2020/02/15) で、この使用例は Google Chrome (v80) でも実行できなくなっています。クリップボードから取得するデータの型が <code>DataTransfer</code> から <code><a href="https://www.w3.org/TR/clipboard-apis/#typedefdef-clipboarditems">ClipboardItems</a></code> に変更されるなど、仕様が変更されているためです。</p>
-</div>
+{{EmbedLiveSample("Reading image data")}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API','#dom-clipboard-read','read()')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Clipboard.read")}}</p>
+- [クリップボード API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
