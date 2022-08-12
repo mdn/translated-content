@@ -1,114 +1,121 @@
 ---
-title: Canvasを作ってその上に描画する
+title: キャンバスを作ってその上に描画する
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+tags:
+  - 2D
+  - Beginner
+  - Canvas
+  - Games
+  - HTML
+  - JavaScript
+  - Tutorial
 translation_of: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 original_slug: >-
-  Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/ja/docs/Games")}}</div>
+{{GamesSidebar}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-<div class="summary">
-<p>これは<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch">ゲーム開発Canvasチュートリアル</a>の10ステップのうち<strong>1番最初</strong>のステップです。このレッスンを終えたあとの完成予想のソースコードは<a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html">Gamedev-Canvas-workshop/lesson1.html</a>で入手できます。</p>
-</div>
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **1 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)で見ることができます。
 
-<p><span class="seoSummary">ゲームの機能を書き始める前に、ゲーム内部を記述する基本的な構造を作る必要があります。これにはHTMLと{{htmlelement("canvas")}}要素を用います。</span></p>
+ゲームの機能を書き始める前に、ゲームを内部でレンダリングするための基本的な構造を作成する必要があります。これは、HTML と {{htmlelement("canvas")}} 要素を使用して行うことができます。
 
-<h2 id="ゲームのHTML">ゲームのHTML</h2>
+## ゲームの HTML
 
-<p>ゲームは全て{{htmlelement("canvas")}}要素に描画されるため、HTML文書構造は極めて簡潔です。好きなテキストエディタを使って新しいHTML文書を作成し、適当な場所に<code>index.html</code>として保存してください。そして、そのHTML文書に次のコードを追加します。</p>
+ゲームはすべて {{htmlelement("canvas")}} 要素に描画されるため、 HTML 文書構造は極めて簡潔です。好きなテキストエディターを使って新しい HTML 文書を作成し、適当な場所に `index.html` として保存してください。そして、その HTML 文書に次のコードを追加してください。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;title&gt;Gamedev Canvas Workshop&lt;/title&gt;
-    &lt;style&gt;
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Gamedev Canvas Workshop</title>
+  <style>
+    * { padding: 0; margin: 0; }
+    canvas { background: #eee; display: block; margin: 0 auto; }
+  </style>
+</head>
+<body>
 
-&lt;canvas id="myCanvas" width="480" height="320"&gt;&lt;/canvas&gt;
+<canvas id="myCanvas" width="480" height="320"></canvas>
 
-&lt;script&gt;
-	// JavaScriptのコードがここに入ります
-&lt;/script&gt;
+<script>
+  // JavaScript のコードはここ
+</script>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<p><code>charset</code> を定義し、{{htmlelement("title")}}と簡単ななCSSをヘッダに記述しました。本体には{{htmlelement("canvas")}}と{{htmlelement("script")}}要素があり、前者にはゲームを描画し、後者にはそれを制御するJavaScriptのコードを記述します。{{htmlelement("canvas")}}要素は簡単に参照を取得できるように<code>myCanvas</code>という<code>id</code>を持ち、幅は480ピクセル、高さは320ピクセルとしています。このチュートリアルで書く全てのJavaScriptのコードは開始の<code>&lt;script&gt;</code>と終了の<code>&lt;/script&gt;</code>タグの間に配置されます。</p>
+`charset` を定義し、 {{htmlelement("title")}} と簡単なな CSS をヘッダーに記述しました。本体には {{htmlelement("canvas")}} と {{htmlelement("script")}} 要素があり、前者にはゲームを描画し、後者にはそれを制御する JavaScript のコードを記述します。 {{htmlelement("canvas")}} 要素は簡単に参照を取得できるように `id` を `myCanvas` とし、幅は 480 ピクセル、高さは 320 ピクセルとしています。このチュートリアルで書くすべての JavaScript のコードは開始の `<script>` と終了の `</script>` タグの間に配置されます。
 
-<h2 id="Canvasの基本">Canvasの基本</h2>
+## キャンバスの基本
 
-<p>実際に{{htmlelement("canvas")}}要素に映像を描画するために、まずはJavaScriptから要素への参照を取得しなければなりません。次のコードを開始の<code>&lt;script&gt;</code>タグのあとに追記してください。</p>
+実際に {{htmlelement("canvas")}} 要素に映像を描画するために、まずは JavaScript から要素への参照を取得しなければなりません。次のコードを開始の `<script>` タグのあとに追記してください。
 
-<pre class="brush: js">var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");</pre>
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+```
 
-<p>ここでは{{htmlelement("canvas")}}要素への参照を<code>canvas</code>に保存しています。それから2D描画コンテキストを保存するために<code>ctx</code>変数を作成しています。2D描画コンテキストは実際にCanvasに描画するために使うツールとなります。</p>
+ここでは {{htmlelement("canvas")}} 要素への参照を `canvas` に保存しています。それから 2D 描画コンテキストを保存するために `ctx` 変数を作成しています。 2D 描画コンテキストは実際にキャンバスに描画するために使うツールとなります。
 
-<p>赤い四角形をキャンバスの上に表示するコード例を見てみましょう。下記のコードを先程記述したJavaScriptのあとに追記して、<code>index.html</code>をブラウザで読み込んでみてください。</p>
+赤い四角形をキャンバスの上に表示するコード例を見てみましょう。下記のコードを先程記述した JavaScript のあとに追記して、 `index.html` をブラウザーで読み込んでみてください。
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(20, 40, 50, 50);
 ctx.fillStyle = "#FF0000";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>全ての命令は{{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}}メソッドと {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}メソッドの間に記述されています。四角形を{{domxref("CanvasRenderingContext2D.rect()","rect()")}}を用いて定義しています。最初の2つの値は左上の角のキャンバス上での座標を指定し、あとの2つの値は幅と高さを指定しています。今回描画された四角形は画面の左端から20ピクセル、上端から40ピクセルの位置に幅50ピクセル、高さ50ピクセルの大きさで、正方形になっています。{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}プロパティは{{domxref("CanvasRenderingContext2D.fill()","fill()")}}メソッドで用いられる色 (今回は赤) を保存します。</p>
+すべての命令は {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} メソッドと {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} メソッドの間に記述されています。四角形を {{domxref("CanvasRenderingContext2D.rect()","rect()")}} を用いて定義しています。最初の 2 つの値は左上の角のキャンバス上での座標を指定し、あとの 2 つの値は幅と高さを指定しています。今回描画された四角形は画面の左端から 20 ピクセル、上端から 40 ピクセルの位置に幅 50 ピクセル、高さ 50 ピクセルの大きさで、正方形になっています。 {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} プロパティは {{domxref("CanvasRenderingContext2D.fill()","fill()")}} メソッドで用いられる色 (今回は赤) を保存します。
 
-<p>もちろん四角形だけではありません。ここでは緑の円を描画するコードを紹介します。次のコードを自分のJavaScriptの最後に追記し、保存して再読込してみてください。</p>
+もちろん四角形だけではありません。ここでは緑の円を描画するコードを紹介します。次のコードを自分の JavaScript の最後に追記し、保存して再読込してみてください。
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
 ctx.fillStyle = "green";
 ctx.fill();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>見て分かるとおり、{{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}}メソッドと{{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}メソッドが再び用いられています。その間にこのコードで最も重要な部分、{{domxref("CanvasRenderingContext2D.arc()","arc()")}}メソッドが呼び出されています。このメソッドは6つのパラメーターを持ちます。</p>
+見て分かるとおり、 {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} メソッドと {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} メソッドが再び用いられています。その間にこのコードで最も重要な部分、 {{domxref("CanvasRenderingContext2D.arc()","arc()")}} メソッドが呼び出されています。このメソッドは 6 つの引数を持ちます。
 
-<ul>
- <li>円の中心の<code>x</code>、<code>y</code>座標</li>
- <li>円の半径</li>
- <li>開始角度と終了角度 (円を描く始める時点の角度と描き終えたあとの角度をラジアンで)</li>
- <li>描く方向 (時計回りは<code>false</code>で、デフォルト。半時計回りは<code>true</code>。) この最後のパラメーターは省略可能です。</li>
-</ul>
+- 円の中心の `x`、`y` 座標
+- 円の半径
+- 開始角度と終了角度 (円を描く始める時点の角度と描き終えたあとの角度をラジアンで)
+- 描く方向 (時計回りは `false` で、既定値。反時計回りは `true`。) この最後の引数は省略可能です。
 
-<p>{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}プロパティは先程とは違う形になっています。これはCSSでそうであるように、色は16進値、色キーワード、<code>rgba()</code>関数、その他利用可能な色メソッドなら何でも指定することができるからです。</p>
+{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} プロパティは先程とは違う形になっています。これは CSS でそうであるように、色は 16 進値、色キーワード、 `rgba()` 関数、その他利用可能な色メソッドなら何でも指定することができるからです。
 
-<p>図形を{{domxref("CanvasRenderingContext2D.fill()","fill()")}}で塗りつぶすかわりに{{domxref("CanvasRenderingContext2D.stroke()","stroke()")}}で縁だけ色を付けることも出来ます。次のコードも自分のJavaScriptに追記してみてください。</p>
+図形を {{domxref("CanvasRenderingContext2D.fill()","fill()")}} で塗りつぶすかわりに {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} で縁だけ色を付けることも出来ます。次のコードも自分の JavaScript に追記してみてください。
 
-<pre class="brush: js">ctx.beginPath();
+```js
+ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
 ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
 ctx.stroke();
-ctx.closePath();</pre>
+ctx.closePath();
+```
 
-<p>上記のコードは青く縁取られたからの四角形を描画します。<code>rgba()</code>関数内のアルファチャネルにより青色は半透明になっています。</p>
+上記のコードは青く縁取られたからの四角形を描画します。 `rgba()` 関数内のアルファチャネルにより青色は半透明になっています。
 
-<h2 id="自分のコードと比べる">自分のコードと比べる</h2>
+## 自分のコードと比べる
 
-<p>以下がJSFiddleで即実行可能な最初のレッスンのソースコード全てです。</p>
+以下が JSFiddle で即実行可能な最初のレッスンのソースコード全てです。
 
-<p> </p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}</p>
+> **Note:** 与えられた図形の大きさや色を変えてみましょう。
 
-<p> </p>
+## 次のステップ
 
-<div class="note">
-<p><strong>練習</strong>: 与えられた図形の大きさや色を変えてみましょう。</p>
-</div>
+ここまでで基本的な HTML を組み上げキャンバスについて少し学習しました。それでは、第 2 章に進み、[どうやってゲーム内のボールを動かすか](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)を学びましょう。
 
-<h2 id="次のステップ">次のステップ</h2>
-
-<p>ここまでで基本的なHTMLを組み上げcanvasに少し学習しました。それでは、第2章に進み<a href="/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball">どうやってゲーム内のボールを動かすか</a>学びましょう。</p>
-
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}</p>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
