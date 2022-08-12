@@ -6,7 +6,7 @@ slug: Web/API/AbortSignal/reason
 
 只读属性 **`reason`** 返回一个使用 JavaScript 值表示的中止原因。
 
-当 signal 没有被中止时，该属性值为 `undefined`。当 signal 被中止时，使用 {{domxref("AbortController.abort()")}} 或 {{domxref("AbortSignal.abort()")}} 可以设置一个指定的值。如果没有在这些方法中明确的设置，则默认是"AbortError"{{domxref("DOMException")}}。
+当 signal 没有被中止时，该属性值为 `undefined`。当使用 {{domxref("AbortController.abort()")}} 或 {{domxref("AbortSignal.abort()")}} 中止 signal 时，可以设置一个指定的值。如果没有在这些方法中明确的设置，则默认是"AbortError"{{domxref("DOMException")}}。
 
 ## 值
 
