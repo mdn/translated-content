@@ -260,8 +260,8 @@ WEBVTT
 
 让其与 HTML 媒体一起显示，你需要做如下工作：
 
-1.  以 .vtt 后缀名保存文件。
-2.  用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video> 标签当中`，同时需要放在所有 \<source> 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
+1. 以 .vtt 后缀名保存文件。
+2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video> 标签当中`，同时需要放在所有 \<source> 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
 
 如下：
 
@@ -289,11 +289,11 @@ WEBVTT
 
 我们希望你能够：
 
-1.  将你的音频或者视频文件保存在你电脑上的一个新目录中。
-2.  创建一个新的 HTML 文件在相同的路径下，命名为 index.html。
-3.  在页面上添加 `<audio>` 和 `<video>` 标签；并使用浏览器默认的控件来显示它们。
-4.  在当中添加 `<source>` 标签，并添加 `type` 属性，以便于浏览器能够找到其能够支持的格式并加载它。
-5.  在 `<video>` 标签中添加 `poster` 属性，这会显示在视频播放之前。
+1. 将你的音频或者视频文件保存在你电脑上的一个新目录中。
+2. 创建一个新的 HTML 文件在相同的路径下，命名为 index.html。
+3. 在页面上添加 `<audio>` 和 `<video>` 标签；并使用浏览器默认的控件来显示它们。
+4. 在当中添加 `<source>` 标签，并添加 `type` 属性，以便于浏览器能够找到其能够支持的格式并加载它。
+5. 在 `<video>` 标签中添加 `poster` 属性，这会显示在视频播放之前。
 
 另外，你可以尝试研究一下文本音轨，试着为你的视频添加一些字幕。
 

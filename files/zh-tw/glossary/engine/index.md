@@ -12,4 +12,4 @@ translation_of: Glossary/Engine
 
 ### 基礎知識
 
-- 維基百科上的{{Interwiki("wikipedia", "JavaScript engine")}}
+- 維基百科上的[JavaScript engine](https://zh.wikipedia.org/wiki/JavaScript_engine)

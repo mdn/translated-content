@@ -19,7 +19,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <pre class="syntaxbox"><var>тип</var>/<var>подтип</var></pre>
 
-<p><em><strong>Тип</strong> </em>представляет общую категорию, в которой находится тип данных, например <code>video</code> или <code>text</code>.<em> <strong>Подтип</strong></em> же строго отождествляется с отдельным типом данных, представляемых данным MIME типом. Например, для MIME типа <code>text</code>, подтипы могут быть  <code>plain</code> (простой текст), <code>html</code> ({{Glossary("HTML")}} source code) или <code>calendar</code> (для iCalendar/<code>.</code><code>ics</code>).</p>
+<p><em><strong>Тип</strong> </em>представляет общую категорию, в которой находится тип данных, например <code>video</code> или <code>text</code>.<em> <strong>Подтип</strong></em> же строго отождествляется с отдельным типом данных, представляемых данным MIME типом. Например, для MIME типа <code>text</code>, подтипы могут быть  <code>plain</code> (простой текст), <code>html</code> ({{Glossary("HTML")}} source code) или <code>calendar</code> (для iCalendar/<code>.</code><code>ics</code>).</p>
 
 <p>Необязательный <strong>параметр</strong> может быть добавлен для указания дополнительных деталей</p>
 
@@ -47,30 +47,30 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
  <dt><code>font</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#font" style="float: right;">Список IANA</a></dt>
  <dd>Данные шрифтов. Распространённые примеры включают <code>font</code><code>/</code><code>woff</code>, <code>font</code><code>/</code><code>ttf</code> и <code>font</code><code>/</code><code>otf</code>.</dd>
  <dt><code>image</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#image" style="float: right;">Список IANA</a></dt>
- <dd>Изображения или графические данные, включая векторную и растровую графику, а так же анимированные версии форматов неподвижных изображений, таких как  <a href="https://developer.mozilla.org/en-US/docs/Glossary/GIF" title="GIF: GIF (Graphics Interchange Format) is an image format that uses lossless compression and can be used for animations. A GIF uses up to 8 bits per pixel and a maximum of 256 colors from the 24-bit color space.">GIF</a> или APNG. Распространённые примеры включают <code>image/</code><code>jpeg</code>, <code>image</code><code>/</code><code>png</code> и <code>image</code><code>/</code><code>svg</code><code>+</code><code>xml</code>.</dd>
+ <dd>Изображения или графические данные, включая векторную и растровую графику, а так же анимированные версии форматов неподвижных изображений, таких как  <a href="https://developer.mozilla.org/en-US/docs/Glossary/GIF" title="GIF: GIF (Graphics Interchange Format) is an image format that uses lossless compression and can be used for animations. A GIF uses up to 8 bits per pixel and a maximum of 256 colors from the 24-bit color space.">GIF</a> или APNG. Распространённые примеры включают <code>image/</code><code>jpeg</code>, <code>image</code><code>/</code><code>png</code> и <code>image</code><code>/</code><code>svg</code><code>+</code><code>xml</code>.</dd>
  <dt><code>model</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#model" style="float: right;">Список IANA</a></dt>
  <dd>Данные моделей для 3D объектов или сцен. Примеры: <code>model/3mf</code> и <code>model/vml</code>.</dd>
  <dt><code>text</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#text" style="float: right;">Список IANA</a></dt>
- <dd>Любые текстовые данные, так или иначе доступные для чтения человеку, а так же  исходный код или текстовые данные для программ. Примеры: <code>text</code><code>/</code><code>plain</code>, <code>text</code><code>/</code><code>csv</code> и <code>text</code><code>/</code><code>html</code>.</dd>
+ <dd>Любые текстовые данные, так или иначе доступные для чтения человеку, а так же  исходный код или текстовые данные для программ. Примеры: <code>text</code><code>/</code><code>plain</code>, <code>text</code><code>/</code><code>csv</code> и <code>text</code><code>/</code><code>html</code>.</dd>
  <dt><code>video</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#video" style="float: right;">Список IANA</a></dt>
  <dd>Видео данные или файлы. Например, MP4 фильмы (<code>video</code><code>/</code><code>mp</code><code>4</code>).</dd>
 </dl>
 
-<p>Любые текстовые документы без определённого подтипа стоит отправлять, как  <code>text/plain</code> тип. Аналогичным образом,  <code>application/octet-stream</code> тип подойдёт бинарным документам при неопределённом или неизвестном подтипе.</p>
+<p>Любые текстовые документы без определённого подтипа стоит отправлять, как  <code>text/plain</code> тип. Аналогичным образом,  <code>application/octet-stream</code> тип подойдёт бинарным документам при неопределённом или неизвестном подтипе.</p>
 
 <h4 id="Многокомпонентные_типы">Многокомпонентные типы</h4>
 
 <p><em>Многокомпонентные</em> типы описывают категории разграниченных на части документов, где каждая из частей может иметь свой отдельный MIME тип. При работе с электронными письмами, они могут использоваться для описания нескольких отдельных файлов, передаваемых в одном сообщении. Они представляют <strong>составные документы</strong>.</p>
 
-<p>За исключением <code>multipart/form-data</code> типа, используемого в {{HTTPMethod("POST")}} методе <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форм</a>, и <code>multipart/byteranges</code> типа, используемом в ответе {{HTTPStatus("206")}} <code>Partial Content</code> для отправки части документа, HTTP никаким особым образом не обрабатывает многокомпонентные типы, и просто отправляет данные в браузер (который, с большой вероятностью, предложит сохранить переданный файл, тоже не зная как его обработать).</p>
+<p>За исключением <code>multipart/form-data</code> типа, используемого в {{HTTPMethod("POST")}} методе <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форм</a>, и <code>multipart/byteranges</code> типа, используемом в ответе {{HTTPStatus("206")}} <code>Partial Content</code> для отправки части документа, HTTP никаким особым образом не обрабатывает многокомпонентные типы, и просто отправляет данные в браузер (который, с большой вероятностью, предложит сохранить переданный файл, тоже не зная как его обработать).</p>
 
 <p>Существуют два многокомпонентных типа:</p>
 
 <dl>
  <dt><code>message</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#message" style="float: right;">Список IANA</a></dt>
- <dd>Сообщение, включающее в себя другие сообщения. Этот тип может использоваться, например, для представления сообщения, которое включают в себя другое переадресованное сообщение, как часть данных, или для отправки больших сообщений по частям, как если бы каждое сообщение отправлялось отдельно. Примеры включают <code>message</code><code>/</code><code>rfc</code><code>822</code> (для переадресованных или цитируемых сообщений) и  <code>message</code><code>/</code><code>partial</code> для автоматического разделения одного большого сообщения на несколько небольших и их последующей сборки на стороне получателя.</dd>
+ <dd>Сообщение, включающее в себя другие сообщения. Этот тип может использоваться, например, для представления сообщения, которое включают в себя другое переадресованное сообщение, как часть данных, или для отправки больших сообщений по частям, как если бы каждое сообщение отправлялось отдельно. Примеры включают <code>message</code><code>/</code><code>rfc</code><code>822</code> (для переадресованных или цитируемых сообщений) и  <code>message</code><code>/</code><code>partial</code> для автоматического разделения одного большого сообщения на несколько небольших и их последующей сборки на стороне получателя.</dd>
  <dt><code>multipart</code> <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#multipart" style="float: right;">Список IANA</a></dt>
- <dd>Данные составленные из нескольких компонентов, каждый из которых может иметь отдельный MIME тип. Примеры включают  <code>multipart</code><code>/</code><code>form</code><code>-</code><code>data</code> (для данных созданных с помощью {{domxref("FormData")}} API) и <code>multipart</code><code>/</code><code>byteranges</code> (определённого в {{RFC(7233, "5.4.1")}} и используемого в ответах {{Glossary("HTTP")}} {{HTTPStatus(206)}} "Partial Content", когда запрашиваемые данные возвращаются по частям в нескольких сообщениях, как например, при использовании заголовка {{HTTPHeader("Range")}}).</dd>
+ <dd>Данные составленные из нескольких компонентов, каждый из которых может иметь отдельный MIME тип. Примеры включают  <code>multipart</code><code>/</code><code>form</code><code>-</code><code>data</code> (для данных созданных с помощью {{domxref("FormData")}} API) и <code>multipart</code><code>/</code><code>byteranges</code> (определённого в {{RFC(7233, "5.4.1")}} и используемого в ответах {{Glossary("HTTP")}} {{HTTPStatus(206)}} "Partial Content", когда запрашиваемые данные возвращаются по частям в нескольких сообщениях, как например, при использовании заголовка {{HTTPHeader("Range")}}).</dd>
 </dl>
 
 <h2 id="Важные_для_Web-разработчиков_MIME_типы"><strong>Важные для Web-разработчиков MIME типы</strong></h2>
@@ -140,7 +140,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <h3 id="Аудио_и_видео_типы">Аудио и видео типы</h3>
 
-<p>Так же как в случае с изображениями, стандарт HTML не обязывает браузеры поддерживать какие-либо определённые форматы и кодеки для   {{HTMLElement("audio")}} и {{HTMLElement("video")}} элементов, так что при их выборе, важно брать в расчёт целевую аудиторию и диапазон браузеров (а так же версии этих браузеров), которые она может использовать.</p>
+<p>Так же как в случае с изображениями, стандарт HTML не обязывает браузеры поддерживать какие-либо определённые форматы и кодеки для   {{HTMLElement("audio")}} и {{HTMLElement("video")}} элементов, так что при их выборе, важно брать в расчёт целевую аудиторию и диапазон браузеров (а так же версии этих браузеров), которые она может использовать.</p>
 
 <p>Наше <a href="https://developer.mozilla.org/ru/docs/Web/Media/Formats/Containers">руководство по медиа форматам</a> предоставляет список общепринятых типов, включая информацию об особых случаях при их использовании, их недостатках, совместимости, а так же других деталях.</p>
 
@@ -179,18 +179,18 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
   </tr>
   <tr>
    <td><code>video/ogg</code></td>
-   <td>Видео файл, с возможной аудио дорожкой, в формате OGG. Где Theora –  наиболее часто встречающийся видео кодек и Vorbis - наиболее часто встречающийся аудио кодек. Хотя использование кодека Opus становится всё более распространённым.</td>
+   <td>Видео файл, с возможной аудио дорожкой, в формате OGG. Где Theora –  наиболее часто встречающийся видео кодек и Vorbis - наиболее часто встречающийся аудио кодек. Хотя использование кодека Opus становится всё более распространённым.</td>
   </tr>
   <tr>
    <td><code>application/ogg</code></td>
-   <td>Аудио или видео формата OGG. Где Theora –  наиболее часто встречающийся видео кодек и Vorbis - наиболее часто встречающийся аудио кодек.</td>
+   <td>Аудио или видео формата OGG. Где Theora –  наиболее часто встречающийся видео кодек и Vorbis - наиболее часто встречающийся аудио кодек.</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="multipartform-data">multipart/form-data</h3>
 
-<p><code>multipart/form-data</code> тип может быть использован при отправке значений из  заполненной <a href="/ru/docs/Web/Guide/HTML/Forms">HTML Формы</a> на сервер.</p>
+<p><code>multipart/form-data</code> тип может быть использован при отправке значений из  заполненной <a href="/ru/docs/Web/Guide/HTML/Forms">HTML Формы</a> на сервер.</p>
 
 <p>Как многокомпонентный тип документа, он состоит из различных частей, разделённых специальной границей (строкой, начинающейся с двух чёрточек <code>--</code>), где каждая часть представляет собой отдельную сущность и имеет отдельные HTTP заголовки {{HTTPHeader("Content-Disposition")}} и {{HTTPHeader("Content-Type")}} для загружаемых файлов.</p>
 

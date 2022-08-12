@@ -14,7 +14,7 @@ original_slug: Web/Guide/Events/Creating_and_triggering_events
 
 <h2 id="建立自定義事件">建立自定義事件</h2>
 
-<p>事件可以用 {{domxref("Event")}} constructor 建立，如下所示：</p>
+<p>事件可以用 {{domxref("Event")}} constructor 建立，如下所示：</p>
 
 <pre class="brush: js">var event = new Event('build');
 
@@ -24,11 +24,11 @@ elem.addEventListener('build', function (e) { ... }, false);
 // 觸發事件
 elem.dispatchEvent(event);</pre>
 
-<p>除了 Internet Explorer 以外，大多數的瀏覽器都支持這個 constructor 。若要能夠支援 Internet Explore 的更詳細的方法，可以參考段落《<a href="#早期的做法" title="早期的作法">早期的做法</a>》。</p>
+<p>除了 Internet Explorer 以外，大多數的瀏覽器都支持這個 constructor 。若要能夠支援 Internet Explore 的更詳細的方法，可以參考段落《<a href="#早期的做法" title="早期的作法">早期的做法</a>》。</p>
 
 <h3 id="增加自定義的資料－－CustomEvent()">增加自定義的資料－－CustomEvent()</h3>
 
-<p>要在事件的 object 追加其他資料，能使用 {{domxref("CustomEvent")}} 介面。它有 <u><strong>detail</strong></u> 屬性，可以用來傳送自訂資料。<br>
+<p>要在事件的 object 追加其他資料，能使用 {{domxref("CustomEvent")}} 介面。它有 <u><strong>detail</strong></u> 屬性，可以用來傳送自訂資料。<br>
  <span style="line-height: 1.5;">舉例來說，可以以下面方式建立事件：</span></p>
 
 <pre class="brush: js">var event = new CustomEvent('build', { 'detail': elem.dataset.time });</pre>
@@ -42,7 +42,7 @@ elem.dispatchEvent(event);</pre>
 
 <h3 id="早期的做法">早期的做法</h3>
 
-<p>早期建立事件的方式參考了 Java 的 API 。下為一個早期作法的例子：</p>
+<p>早期建立事件的方式參考了 Java 的 API 。下為一個早期作法的例子：</p>
 
 <pre class="brush: js">// 建立事件
 var event = document.createEvent('Event');
@@ -71,7 +71,7 @@ elem.dispatchEvent(event);
     'cancelable': true
   });
   var cb = document.getElementById('checkbox');
-  var canceled = !cb.dispatchEvent(event);
+  var canceled = !cb.dispatchEvent(event);
   if (canceled) {
     // A handler called preventDefault.
     alert("canceled");
@@ -83,57 +83,7 @@ elem.dispatchEvent(event);
 
 <h2 id="Browser_compatibility" name="Browser_compatibility" style="line-height: 30px; font-size: 2.14285714285714rem;">瀏覽器的支援度</h2>
 
-<h2 id="sect1"> </h2>
-
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Edge</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td><code>Event()</code> constructor</td>
-   <td>15</td>
-   <td>11</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.60</td>
-   <td>6</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>6</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="延伸閱讀">延伸閱讀</h2>
 

@@ -21,9 +21,9 @@ translation_of: Web/API/Streams_API
 
 
 
-<p>O streaming envolve a divisão de um recurso que você deseja receber pela rede em pequenos blocos e, em seguida, processa esses blocos aos poucos. Isso é algo que os navegadores fazem de qualquer maneira ao receber recursos para serem exibidos em páginas da web — o buffer de vídeos e mais está gradualmente disponível para reprodução, e às vezes você verá imagens sendo exibidas gradualmente conforme mais é carregado.</p>
+<p>O streaming envolve a divisão de um recurso que você deseja receber pela rede em pequenos blocos e, em seguida, processa esses blocos aos poucos. Isso é algo que os navegadores fazem de qualquer maneira ao receber recursos para serem exibidos em páginas da web — o buffer de vídeos e mais está gradualmente disponível para reprodução, e às vezes você verá imagens sendo exibidas gradualmente conforme mais é carregado.</p>
 
-<p>Mas isto nunca esteve disponível para JavaScript antes. Anteriormente, se quiséssemos processar um recurso de algum tipo (seja ele um vídeo, ou um arquivo de texto, etc.), Teríamos que baixar o arquivo inteiro, espera até que seja desserializado em um formato adequado, então processa todo o lote após ser totalmente recebido.</p>
+<p>Mas isto nunca esteve disponível para JavaScript antes. Anteriormente, se quiséssemos processar um recurso de algum tipo (seja ele um vídeo, ou um arquivo de texto, etc.), Teríamos que baixar o arquivo inteiro, espera até que seja desserializado em um formato adequado, então processa todo o lote após ser totalmente recebido.</p>
 
 <p>Com o Streams disponível para JavaScript, tudo isso muda - agora você pode começar a processar dados brutos com JavaScript bit a bit assim que estiverem disponíveis no lado do cliente, sem a necessidade de gerar um buffer, string ou blob.</p>
 
@@ -33,11 +33,11 @@ translation_of: Web/API/Streams_API
 
 <p>Também há mais vantagens - você pode detectar quando os fluxos começam ou terminam, encadeia os fluxos juntos, trata os erros e cancela os fluxos quando necessário e reage à velocidade em que o fluxo está sendo lido.</p>
 
-<p>O uso básico de Streams gira em torno de tornar as respostas disponíveis como streams. Por exemplo, a resposta {{domxref("Body")}} retornada com sucesso de uma <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> pode ser exposta como um {{domxref("ReadableStream")}}, e você pode lê-lo usando um leitor criado com {{domxref("ReadableStream.getReader()")}}, cancela-lo com {{domxref("ReadableStream.cancel()")}}, etc.</p>
+<p>O uso básico de Streams gira em torno de tornar as respostas disponíveis como streams. Por exemplo, a resposta {{domxref("Body")}} retornada com sucesso de uma <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> pode ser exposta como um {{domxref("ReadableStream")}}, e você pode lê-lo usando um leitor criado com {{domxref("ReadableStream.getReader()")}}, cancela-lo com {{domxref("ReadableStream.cancel()")}}, etc.</p>
 
 
 
-<p>Usos mais complicados envolvem a criação de seu próprio fluxo usando o contrutor {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, por exemplo para processar dados dentro de um <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
+<p>Usos mais complicados envolvem a criação de seu próprio fluxo usando o contrutor {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, por exemplo para processar dados dentro de um <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>.</p>
 
 <p>Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.</p>
 
@@ -51,38 +51,38 @@ translation_of: Web/API/Streams_API
 
 <dl>
  <dt>{{domxref("ReadableStream")}}</dt>
- <dd>Represents a readable stream of data. It can be used to handle response streams of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, or developer-defined streams (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
+ <dd>Represents a readable stream of data. It can be used to handle response streams of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>, or developer-defined streams (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
  <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
  <dd>Represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request).</dd>
  <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
- <dd>Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.</dd>
+ <dd>Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.</dd>
 </dl>
 
 <h3 id="Writable_streams">Writable streams</h3>
 
 <dl>
  <dt>{{domxref("WritableStream")}}</dt>
- <dd>Provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.</dd>
+ <dd>Provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.</dd>
  <dt>{{domxref("WritableStreamDefaultWriter")}}</dt>
  <dd>Represents a default writable stream writer that can be used to write chunks of data to a writable stream.</dd>
  <dt>{{domxref("WritableStreamDefaultController")}}</dt>
- <dd>Represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a <code>WritableStream</code>, the underlying sink is given a corresponding <code>WritableStreamDefaultController</code> instance to manipulate.</dd>
+ <dd>Represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a <code>WritableStream</code>, the underlying sink is given a corresponding <code>WritableStreamDefaultController</code> instance to manipulate.</dd>
 </dl>
 
 <h3 id="Related_stream_APIs_and_operations">Related stream APIs and operations</h3>
 
 <dl>
  <dt>{{domxref("ByteLengthQueuingStrategy")}}</dt>
- <dd>Provides a built-in byte length queuing strategy that can be used when constructing streams.</dd>
+ <dd>Provides a built-in byte length queuing strategy that can be used when constructing streams.</dd>
  <dt>{{domxref("CountQueuingStrategy")}}</dt>
- <dd>Provides a built-in chunk counting queuing strategy that can be used when constructing streams.</dd>
+ <dd>Provides a built-in chunk counting queuing strategy that can be used when constructing streams.</dd>
 </dl>
 
 <h3 id="Extensions_to_other_APIs">Extensions to other APIs</h3>
 
 <dl>
  <dt>{{domxref("Request")}}</dt>
- <dd>When a new <code>Request</code> object is constructed, you can pass it a {{domxref("ReadableStream")}} in the <code>body</code> property of its <code>RequestInit</code> dictionary.  This <code>Request</code> could then be passed to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} to commence fetching the stream.</dd>
+ <dd>When a new <code>Request</code> object is constructed, you can pass it a {{domxref("ReadableStream")}} in the <code>body</code> property of its <code>RequestInit</code> dictionary.  This <code>Request</code> could then be passed to a {{domxref("WindowOrWorkerGlobalScope.fetch()")}} to commence fetching the stream.</dd>
  <dt>{{domxref("Body")}}</dt>
  <dd>The response {{domxref("Body")}} returned by a successful <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch request</a> is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.</dd>
 </dl>
@@ -97,7 +97,7 @@ translation_of: Web/API/Streams_API
  <dt>{{domxref("ReadableStreamBYOBReader")}}</dt>
  <dd>Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).</dd>
  <dt>{{domxref("ReadableByteStreamController")}}</dt>
- <dd>Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.</dd>
+ <dd>Represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.</dd>
  <dt>{{domxref("ReadableStreamBYOBRequest")}}</dt>
  <dd>Represents a pull into request in a {{domxref("ReadableByteStreamController")}}.</dd>
 </dl>

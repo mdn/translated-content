@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>WebAssembly.Memory()</strong></code> 생성자는 WebAssembly <code>Instance</code>가 액세스하는 메모리의 원시 바이트를 가진 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(크기조정이 가능)인 새 <code>Memory</code> 객체를 만듭니다.</p>
+<p><code><strong>WebAssembly.Memory()</strong></code> 생성자는 WebAssembly <code>Instance</code>가 액세스하는 메모리의 원시 바이트를 가진 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>(크기조정이 가능)인 새 <code>Memory</code> 객체를 만듭니다.</p>
 
-<p>메모리는 자바스크립트 혹은 WebAssembly 코드 안에서 만들어지며 자바스크립트 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.</p>
+<p>메모리는 자바스크립트 혹은 WebAssembly 코드 안에서 만들어지며 자바스크립트 그리고 WebAssembly에서 접근하거나 변경이 가능합니다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,12 +17,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 
 <dl>
  <dt><em>memoryDescriptor</em></dt>
- <dd>다음의 멤버를 가질수 있는 객체입니다.
+ <dd>다음의 멤버를 가질수 있는 객체입니다.
  <dl>
   <dt><em>initial</em></dt>
   <dd>WebAssembly Page의 단위별 WebAssembly 메모리의 초기 크기입니다.</dd>
   <dt><em>maximum {{optional_inline}}</em></dt>
-  <dd>WebAssembly 메모리의 최대 크기는 WebAssembly 페이지 단위로 증가 할 수 있습니다. 이 매개 변수가 있으면 <code>maximum</code> 매개 변수는 엔진에 대해 메모리를 전면에 예약하도록 합니다. 그러나 엔진은 이 예약 요청을 무시하거나 클램핑 할 수 있습니다. 일반적으로 대부분의 WebAssembly 모듈은 <code>maximum</code> 값을 설정할 필요가 없습니다.</dd>
+  <dd>WebAssembly 메모리의 최대 크기는 WebAssembly 페이지 단위로 증가 할 수 있습니다. 이 매개 변수가 있으면 <code>maximum</code> 매개 변수는 엔진에 대해 메모리를 전면에 예약하도록 합니다. 그러나 엔진은 이 예약 요청을 무시하거나 클램핑 할 수 있습니다. 일반적으로 대부분의 WebAssembly 모듈은 <code>maximum</code> 값을 설정할 필요가 없습니다.</dd>
  </dl>
  </dd>
 </dl>
@@ -64,44 +64,25 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 
 <pre class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
-<p><code>WebAssembly.Memory</code> 객체를 가져 오는 두 번째 방법은 WebAssembly 모듈에서 내보냅니다. 다음 예제는 (GitHub의 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a>을 보세요. <a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">라이브로 보기</a>) 생성된 메모리를 가져 오는 동안 {{jsxref("WebAssembly.instantiateStreaming()")}} 메소드를 사용하여로드 된 memory.wasm 바이트 코드를 가져 와서 인스턴스화합니다. 위의 줄에. 그런 다음 메모리에 일부 값을 저장 한 다음 함수를 내 보낸 다음 일부 값의 합계에 사용합니다.</p>
+<p><code>WebAssembly.Memory</code> 객체를 가져 오는 두 번째 방법은 WebAssembly 모듈에서 내보냅니다. 다음 예제는 (GitHub의 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a>을 보세요. <a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">라이브로 보기</a>) 생성된 메모리를 가져 오는 동안 {{jsxref("WebAssembly.instantiateStreaming()")}} 메소드를 사용하여로드 된 memory.wasm 바이트 코드를 가져 와서 인스턴스화합니다. 위의 줄에. 그런 다음 메모리에 일부 값을 저장 한 다음 함수를 내 보낸 다음 일부 값의 합계에 사용합니다.</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(obj =&gt; {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i &lt; 10; i++) {
-    i32[i] = i;
-  }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  var i32 = new Uint32Array(memory.buffer);
+  for (var i = 0; i &lt; 10; i++) {
+    i32[i] = i;
+  }
+  var sum = obj.instance.exports.accumulate(0, 10);
+  console.log(sum);
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#webassemblymemory-objects', 'Memory')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Initial draft definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.Memory")}}</p>
-</div>
+{{Compat("javascript.builtins.WebAssembly.Memory")}}
 
 <h2 id="See_also">See also</h2>
 

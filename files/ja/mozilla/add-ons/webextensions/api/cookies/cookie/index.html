@@ -37,13 +37,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
  <dt><code>path</code></dt>
  <dd>cookie のパスが格納される <code>string</code> 型です。</dd>
  <dt><code>secure</code></dt>
- <dd><code>boolean</code> 型です。 cookie に secure 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に <code>true</code> 、でなければ <code>false</code> になります。</dd>
+ <dd><code>boolean</code> 型です。 cookie に secure 属性(暗号化通信でのみ cookie を送信する属性)が付与されている場合に <code>true</code> 、でなければ <code>false</code> になります。</dd>
  <dt><code>session</code></dt>
  <dd><code>boolean</code> 型です。 cookie がセッション cookie ( セッション限りで破棄される cookie )である場合に <code>true</code> 、でなければ <code>false</code> が付与されます。</dd>
  <dt><code>storeId</code></dt>
  <dd>この cookie が格納されている cookie ストアのIDを格納する <code>string</code> 型です。{{WebExtAPIRef("cookies.getAllCookieStores()")}}によって提供されます。</dd>
  <dt><code>value</code></dt>
- <dd> cookie の値を格納する <code>string</code> 型です。</dd>
+ <dd> cookie の値を格納する <code>string</code> 型です。</dd>
 </dl>
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 
 <p>cookies API のほとんどは入力パラメータまたは戻り値の一部として使用される <code>Cookie</code> オブジェクトを含みます。例えば {{WebExtAPIRef("cookies.getAll()")}} は <code>Cookie</code> オブジェクトの配列を返します。</p>
 
-<p>以下の例ではすべての cookie を取得し、コンソールログに  <code>Cookie</code> オブジェクト中のいくつかのプロパティを出力します。</p>
+<p>以下の例ではすべての cookie を取得し、コンソールログに  <code>Cookie</code> オブジェクト中のいくつかのプロパティを出力します。</p>
 
 <pre class="brush: js">function logCookies(cookies) {
   for (cookie of cookies) {

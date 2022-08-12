@@ -5,7 +5,7 @@ translation_of: Web/API/MediaDevices/enumerateDevices
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p>Метод <strong><code>MediaDevices.enumerateDevices()</code></strong> собирает информацию о медиа-устройствах ввода и вывода, доступных в системе.</p>
+<p>Метод <strong><code>MediaDevices.enumerateDevices()</code></strong> собирает информацию о медиа-устройствах ввода и вывода, доступных в системе.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -14,11 +14,11 @@ translation_of: Web/API/MediaDevices/enumerateDevices
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Возвращает {{ domxref("Promise") }} который, если выполнится успешно, вернёт массив экземпляров {{domxref("MediaDeviceInfo")}} , которые содержат информацию о доступных медиа-устройствах ввода и вывода.</p>
+<p>Возвращает {{ domxref("Promise") }} который, если выполнится успешно, вернёт массив экземпляров {{domxref("MediaDeviceInfo")}} , которые содержат информацию о доступных медиа-устройствах ввода и вывода.</p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Ниже, пример, использующий метод <code>mediaDevices.enumerateDevices()</code>.</p>
+<p>Ниже, пример, использующий метод <code>mediaDevices.enumerateDevices()</code>.</p>
 
 <pre class="brush: js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() не поддерживается.");
@@ -46,7 +46,7 @@ audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 </pre>
 
-<p>или, если один или более объектов {{domxref("MediaStream")}} активны,  или получены постоянные разрешения:</p>
+<p>или, если один или более объектов {{domxref("MediaStream")}} активны,  или получены постоянные разрешения:</p>
 
 <pre>videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
@@ -55,7 +55,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 <h2 id="Разрешения">Разрешения</h2>
 
-<p>Что бы использовать метод  <code>enumerateDevices()</code> в устанавливаемом приложении  (к примеру в  <a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS приложение</a>), необходимо указать оба поля внутри файла манифеста приложения:</p>
+<p>Что бы использовать метод  <code>enumerateDevices()</code> в устанавливаемом приложении  (к примеру в  <a href="/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox OS приложение</a>), необходимо указать оба поля внутри файла манифеста приложения:</p>
 
 <pre class="brush: js">"permissions": {
   "audio-capture": {
@@ -66,7 +66,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
   }
 }</pre>
 
-<p>Смотрите также : <a href="/en-US/Apps/Developing/App_permissions#audio-capture">разрешение: аудио захват</a> and <a href="/en-US/Apps/Developing/App_permissions#video-capture">разрешение : видео захват</a> в продолжение темы.</p>
+<p>Смотрите также : <a href="/en-US/Apps/Developing/App_permissions#audio-capture">разрешение: аудио захват</a> and <a href="/en-US/Apps/Developing/App_permissions#video-capture">разрешение : видео захват</a> в продолжение темы.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

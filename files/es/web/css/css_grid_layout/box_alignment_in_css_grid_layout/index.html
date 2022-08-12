@@ -3,29 +3,29 @@ title: Box alignment in CSS Grid Layout
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
-<p>Si estás familiarizado con <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.</p>
+<p>Si estás familiarizado con <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a> Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.</p>
 
-<p>Cada método de diseño que implemente Box Alignment tendrá algunas diferencias debido a que cada método tiene características y restricciones diferentes (y acciones heredadas), por lo que es imposible hacer la alineación exactamente de la misma forma en todos los ámbitos.  La especificación Box Alignment tiene detalles para cada método, sin embargo, te decepcionaría si intentaras alinear en muchos métodos en este momento, pues el soporte aún no está disponible para todos los navegadores. Donde sí tenemos soporte de navegador para las propiedades de alineación y distribución de espacio de la especificación Box Alignment es en grid layout.</p>
+<p>Cada método de diseño que implemente Box Alignment tendrá algunas diferencias debido a que cada método tiene características y restricciones diferentes (y acciones heredadas), por lo que es imposible hacer la alineación exactamente de la misma forma en todos los ámbitos.  La especificación Box Alignment tiene detalles para cada método, sin embargo, te decepcionaría si intentaras alinear en muchos métodos en este momento, pues el soporte aún no está disponible para todos los navegadores. Donde sí tenemos soporte de navegador para las propiedades de alineación y distribución de espacio de la especificación Box Alignment es en grid layout.</p>
 
-<p><span class="seoSummary">Esta guía muestra la forma cómo funciona la alineación de cajas (box alignment) en el diseño de cuadriculas (Grid Layout). Verás mucha similitud en cómo funcionan estás propiedades y valores en flexbox.</span> Debido a que la cuadrícula (grid) es bidimensional y flexbox es unidimensional, existen algunas pequeñas diferencias con las que debes tener cuidado. Así que comenzaremos mirando los dos ejes con los que tratamos cuando alineamos cosas en una cuadricula.</p>
+<p><span class="seoSummary">Esta guía muestra la forma cómo funciona la alineación de cajas (box alignment) en el diseño de cuadriculas (Grid Layout). Verás mucha similitud en cómo funcionan estás propiedades y valores en flexbox.</span> Debido a que la cuadrícula (grid) es bidimensional y flexbox es unidimensional, existen algunas pequeñas diferencias con las que debes tener cuidado. Así que comenzaremos mirando los dos ejes con los que tratamos cuando alineamos cosas en una cuadricula.</p>
 
 <h2 id="Los_2_ejes_de_un_diseño_Grid">Los 2 ejes de un diseño Grid</h2>
 
-<p>Al trabajar con el diseño de cuadrícula, tienes dos ejes disponibles para alinear las cosas: el eje del bloque (block axis) y el eje en línea (inline axis).  El eje de bloque es el eje sobre el cual se disponen los bloques en el diseño del bloque. Si tienes dos párrafos en tu página, se mostrara uno debajo del otro, entonces es ésta la dirección que describimos como el eje de bloque (también llamadas columnas, eje "y", eje vertical).</p>
+<p>Al trabajar con el diseño de cuadrícula, tienes dos ejes disponibles para alinear las cosas: el eje del bloque (block axis) y el eje en línea (inline axis).  El eje de bloque es el eje sobre el cual se disponen los bloques en el diseño del bloque. Si tienes dos párrafos en tu página, se mostrara uno debajo del otro, entonces es ésta la dirección que describimos como el eje de bloque (también llamadas columnas, eje "y", eje vertical).</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15963/Block_Axis.png" style="height: 306px; width: 940px;"></p>
 
-<p>El eje en línea (inline axis) se ejecuta a través del eje del bloque, es la dirección en la que se ejecuta el texto en el flujo regular en línea (también llamadas filas, Eje "x", eje horizontal). </p>
+<p>El eje en línea (inline axis) se ejecuta a través del eje del bloque, es la dirección en la que se ejecuta el texto en el flujo regular en línea (también llamadas filas, Eje "x", eje horizontal). </p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" style="height: 306px; width: 940px;"></p>
 
 <p>Podemos alinear el contenido dentro de las áreas de la cuadrícula o rejilla , y los tracks en estos dos ejes.</p>
 
-<h2 id="Alineación_de_elementos_en_el_Eje_de_Bloque">Alineación de elementos en el Eje de Bloque </h2>
+<h2 id="Alineación_de_elementos_en_el_Eje_de_Bloque">Alineación de elementos en el Eje de Bloque </h2>
 
-<p>Las propiedades {{cssxref("align-self")}} y {{cssxref("align-items")}} controlan la alineación en el eje de bloque. Cuando usamos estas propiedades, estamos cambiando la alineación del elemento dentro del área de la cuadricula (grid) que se ha colocado.</p>
+<p>Las propiedades {{cssxref("align-self")}} y {{cssxref("align-items")}} controlan la alineación en el eje de bloque. Cuando usamos estas propiedades, estamos cambiando la alineación del elemento dentro del área de la cuadricula (grid) que se ha colocado.</p>
 
-<p>En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo usar la propiedad {{cssxref("align-items")}} en el contenedor de la cuadricula (grid container), para alinear los elementos usando uno de los siguientes valores:</p>
+<p>En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo usar la propiedad {{cssxref("align-items")}} en el contenedor de la cuadricula (grid container), para alinear los elementos usando uno de los siguientes valores:</p>
 
 <ul>
  <li><code>auto</code></li>
@@ -96,11 +96,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <p>{{ EmbedLiveSample('alignment_1', '500', '450') }}</p>
 </div>
 
-<p>Ten en mente que una vez establezcas <code>align-self: start</code>, la altura de cada hijo <code>&lt;div&gt;</code> será determinada por el contenido del <code>&lt;div&gt;</code>.  Esto está en contraste de omitir <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self">align-self</a></code> completamente, en el cual la altura de cada <code>&lt;div&gt;</code> se extendería hasta llenar el área de la cuadricula.</p>
+<p>Ten en mente que una vez establezcas <code>align-self: start</code>, la altura de cada hijo <code>&lt;div&gt;</code> será determinada por el contenido del <code>&lt;div&gt;</code>.  Esto está en contraste de omitir <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self">align-self</a></code> completamente, en el cual la altura de cada <code>&lt;div&gt;</code> se extendería hasta llenar el área de la cuadricula.</p>
 
-<p>La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-self")}} para todos los elementos hijos de la cuadricula. Esto significa que puedes establecer la propiedad individualmente, usando <code>align-self</code> en cada elemento de la cuadricula.</p>
+<p>La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-self")}} para todos los elementos hijos de la cuadricula. Esto significa que puedes establecer la propiedad individualmente, usando <code>align-self</code> en cada elemento de la cuadricula.</p>
 
-<p>En el siguiente ejemplo, estoy usando la propiedad <code>align-self</code> para demostrar los diferentes valores de alineación. La primer área está mostrando la acción por defecto de <code>align-self</code>, el cual es extenderse. El segundo elemento tiene un valor en <code>align-self</code> de <code>start</code>, el tercero <code>end</code> y el cuarto <code>center</code>.</p>
+<p>En el siguiente ejemplo, estoy usando la propiedad <code>align-self</code> para demostrar los diferentes valores de alineación. La primer área está mostrando la acción por defecto de <code>align-self</code>, el cual es extenderse. El segundo elemento tiene un valor en <code>align-self</code> de <code>start</code>, el tercero <code>end</code> y el cuarto <code>center</code>.</p>
 
 <div id="alignment_2">
 <div class="hidden">
@@ -163,9 +163,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <h3 id="Elementos_con_una_relación_de_aspecto_intrínseco">Elementos con una relación de aspecto intrínseco</h3>
 
-<p>La especificación determina que la acción por defecto en {{cssxref("align-self")}} es estirarse, excepto para los elementos que tienen una relación de aspecto intrínseco, en este caso ellos funcionan como <code>start</code>. La razón para esto, es que si elemento con una relación de aspecto intrínseco es establecido para estirarse, este por defecto pueda distorsionarlo.</p>
+<p>La especificación determina que la acción por defecto en {{cssxref("align-self")}} es estirarse, excepto para los elementos que tienen una relación de aspecto intrínseco, en este caso ellos funcionan como <code>start</code>. La razón para esto, es que si elemento con una relación de aspecto intrínseco es establecido para estirarse, este por defecto pueda distorsionarlo.</p>
 
-<p>Esta acción ahora ha sido clarificada en la especificación, con navegadores aún hay que implementar la acción correcta. Hasta que eso pase, te puedes asegurar de que los elementos no se extiendan, como en imagenes, las cuales son hijos directos de la cuadricula, estableciendo {{cssxref("align-self")}} y {{cssxref("justify-self")}} al empezar. Esto se asemejará a la acción correcta una vez implementado.</p>
+<p>Esta acción ahora ha sido clarificada en la especificación, con navegadores aún hay que implementar la acción correcta. Hasta que eso pase, te puedes asegurar de que los elementos no se extiendan, como en imagenes, las cuales son hijos directos de la cuadricula, estableciendo {{cssxref("align-self")}} y {{cssxref("justify-self")}} al empezar. Esto se asemejará a la acción correcta una vez implementado.</p>
 
 <h2 id="Justifying_Items_on_the_Inline_Axis">Justifying Items on the Inline Axis</h2>
 

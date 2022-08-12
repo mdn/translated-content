@@ -5,17 +5,17 @@ translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 {{GamesSidebar}}
 
-在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 [Device Orientation](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 和 [Vibration ](/en-US/docs/Web/Guide/API/Vibration)**APIs** 来增强游戏玩法，并使用 [Phaser](http://phaser.io/) 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。
+在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 [Device Orientation](/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 和 [Vibration](/en-US/docs/Web/Guide/API/Vibration) **APIs** 来增强游戏玩法，并使用 [Phaser](http://phaser.io/) 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。
 
 ## Example game
 
-在本教程结束时，您将有一个功能齐全的游戏 demo：[Cyber Orb ](http://orb.enclavegames.com/)。如下所示：
+在本教程结束时，您将有一个功能齐全的游戏 demo：[Cyber Orb](http://orb.enclavegames.com/)。如下所示：
 
 ![A 2D game board featuring a small yellow ball. There is a large black hole for the ball to escape down, and a number of barriers blocking the ball from escaping.](cyber-orb.png)
 
 ## Phaser framework
 
-[Phaser](http://phaser.io/) 是构建桌面和移动 HTML5 游戏的框架。它非常新，但由于热情的社区参与开发过程它同时也是快速增长的。您能够在[ GitHub ](https://github.com/photonstorm/phaser)查看它的开放源代码，阅读[ 在线文档](http://docs.phaser.io/) 并浏览大量 [示例 ](http://examples.phaser.io/)。Phaser 框架为您提供了一组工具，这些工具将加快开发速度，并帮助处理完成游戏所需的一般任务，因此您可以专注于游戏创意本身。
+[Phaser](http://phaser.io/) 是构建桌面和移动 HTML5 游戏的框架。它非常新，但由于热情的社区参与开发过程它同时也是快速增长的。您能够在[GitHub](https://github.com/photonstorm/phaser)查看它的开放源代码，阅读 [在线文档](http://docs.phaser.io/) 并浏览大量 [示例](http://examples.phaser.io/)。Phaser 框架为您提供了一组工具，这些工具将加快开发速度，并帮助处理完成游戏所需的一般任务，因此您可以专注于游戏创意本身。
 
 ## Starting with the project
 

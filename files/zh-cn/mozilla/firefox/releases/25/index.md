@@ -31,7 +31,7 @@ translation_of: Mozilla/Firefox/Releases/25
 
 ### DOM
 
-- 在 Windows 上新增了` KeyboardEvent.key` 属性对几个与 IME 有关的键盘按键的支持 ({{bug("865565")}}), 查看 [各按键对应的 key 属性列表](/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win) 了解详情。
+- 在 Windows 上新增了 `KeyboardEvent.key` 属性对几个与 IME 有关的键盘按键的支持 ({{bug("865565")}}), 查看 [各按键对应的 key 属性列表](/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win) 了解详情。
 - Metrofox 的键盘事件和桌面版实现统一 ({{bug("843236")}}).
 - 如果使用 preventDefault() 阻止了 keydown 事件的默认行为，则后续的 [keypress 事件就不会触发](</zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) ({{bug("501496")}})
 - 实现了 {{domxref("HTMLIFrameElement")}} 接口的 `srcDoc` 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).

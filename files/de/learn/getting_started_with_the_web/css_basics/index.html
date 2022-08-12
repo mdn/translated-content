@@ -21,7 +21,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 <h2 id="Was_ist_CSS_jetzt_wirklich">Was ist CSS jetzt wirklich?</h2>
 
-<p>Wie HTML ist CSS nicht wirklich eine Programmiersprache. Es ist auch keine Markup-Sprache, sondern eine Stylesheet-Sprache, die es erlaubt für Elemente auf der Seite das Aussehen festzulegen. Zum Beispiel benötigt man folgengen CSS-Code, um alle Absätze (<code>&lt;p&gt;</code>) auszuwählen und deren Inhalt rot einzufärben:</p>
+<p>Wie HTML ist CSS nicht wirklich eine Programmiersprache. Es ist auch keine Markup-Sprache, sondern eine Stylesheet-Sprache, die es erlaubt für Elemente auf der Seite das Aussehen festzulegen. Zum Beispiel benötigt man folgengen CSS-Code, um alle Absätze (<code>&lt;p&gt;</code>) auszuwählen und deren Inhalt rot einzufärben:</p>
 
 <pre class="brush: css">p {
   color: red;
@@ -131,7 +131,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
    <td>Pseudoklassen-Selektoren</td>
    <td>Element(e) eines bestimmten Typs, welche sich in einem bestimmten Zustand befinden (z.B.: Mauszeiger ist über dem Element)</td>
    <td><code>a:hover</code><br>
-    Wählt <code>&lt;a&gt; </code>nur  dann aus, wenn der Mauszeiger darüber bewegt wird.</td>
+    Wählt <code>&lt;a&gt; </code>nur  dann aus, wenn der Mauszeiger darüber bewegt wird.</td>
   </tr>
  </tbody>
 </table>
@@ -143,7 +143,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 <p>Jetzt, da wir uns einige CSS-Grundlagen angeschaut haben, lassen Sie uns damit anfangen, mehr Regelsätze und Eigenschaften zu unserer <code>style.css</code>-Datei hinzuzufügen. Zuerst ändern wir die Schrift, damit unser Text besser aussieht<code>.</code></p>
 
 <ol>
- <li> In einem vorherigen Artikel haben Sie schon eine Schriftart von <a href="https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Schriftart">Google Fonts</a> ausgewählt, den zugehörigen Code sollten Sie schon irgendwo gespeichert haben. Fügen Sie das <code>&lt;link ... &gt;</code> Element in den Kopf Ihrer index.html Datei ein (zwischen den <code>&lt;head&gt;</code> und <code>&lt;/head&gt;</code> Tags). Das <code>&lt;link&gt;</code> Element sollte wie folgt aussehen:
+ <li> In einem vorherigen Artikel haben Sie schon eine Schriftart von <a href="https://developer.mozilla.org/de/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Schriftart">Google Fonts</a> ausgewählt, den zugehörigen Code sollten Sie schon irgendwo gespeichert haben. Fügen Sie das <code>&lt;link ... &gt;</code> Element in den Kopf Ihrer index.html Datei ein (zwischen den <code>&lt;head&gt;</code> und <code>&lt;/head&gt;</code> Tags). Das <code>&lt;link&gt;</code> Element sollte wie folgt aussehen:
 
   <pre class="brush: html">&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;</pre>
  </li>
@@ -160,14 +160,14 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  </li>
  <li>Nun setzen wir die Schriftgröße für die textbeinhaltenden HTML-Elemente {{htmlelement("h1")}}, {{htmlelement("li")}} und {{htmlelement("p")}} fest. Wir zentrieren auch den Text von unseren Überschriften mit <code>text-align: center;</code> und ändern die Linienhöhe (<code>line-height</code>) und den Buchstabenabstand (<code>letter-spacing</code>), um den Text der <code>p</code> und <code>li</code> Elemente etwas lesbarer zu machen:
   <pre class="brush: css">h1 {
-  font-size: 60px;
-  text-align: center;
+  font-size: 60px;
+  text-align: center;
 }
 
 p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
 }</pre>
  </li>
 </ol>
@@ -229,7 +229,7 @@ p, li {
  <li><code>margin: 0 auto;</code> — Wenn man bei den Eigenschaften <code>margin</code> oder <code>padding</code> zwei Werte setzt, dann steht der erste Wert für den Abstand nach oben <strong>und</strong> nach unten (welcher in diesem Fall <code>0</code> ist) und der zweite Wert steht für den Abstand links <strong>und</strong> rechts von dem Element (in diesem Fall setzen wir den Wert auf <code>auto</code>, wodurch der vorhandene Platz auf beiden Seiten des Elements gleichmäßig aufgeteilt wird). <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Values">Man kann auch nur einen, drei oder vier verschiedene Werte benutzen, wie dies das Element beeinflusst können Sie in der Dokumentation nachlesen.</a></li>
  <li><code>background-color: #FF9500;</code> — dies setzt die Hintergrundfarbe des &lt;body&gt;-Elements. Hier wurde eine rötliche Farbe ausgewählt, aber Sie können gerne eine andere Farbe nehmen<code>.</code></li>
  <li><code>padding: 0 20px 20px 20px;</code> — für den Innenabstand haben wir vier Werte gesetzt, um etwas Raum um unseren Inhalt zu schaffen. Oben setzen wir keinen Abstand, aber auf der linken und rechten Seite, sowie unten setzen wir jeweils 20 Pixel. Die Werte werden in folgender Reihenfolge gesetzt: oben, rechts, unten, links.</li>
- <li><code>border: 5px solid black;</code> — dies setzt einen 5 Pixel starken, soliden, schwarzen Rahmen um unser Element.   </li>
+ <li><code>border: 5px solid black;</code> — dies setzt einen 5 Pixel starken, soliden, schwarzen Rahmen um unser Element.   </li>
 </ul>
 
 <h3 id="Positionierung_und_Design_der_Hauptüberschrift">Positionierung und Design der Hauptüberschrift</h3>

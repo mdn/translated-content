@@ -14,4 +14,4 @@ original_slug: Glossaire/ARPA
 ### Culture générale
 
 - [Site web officiel](http://www.iana.org/domains/arpa)
-- {{Interwiki("wikipedia", ".arpa")}} sur Wikipédia
+- [.arpa](https://fr.wikipedia.org/wiki/.arpa) sur Wikipédia

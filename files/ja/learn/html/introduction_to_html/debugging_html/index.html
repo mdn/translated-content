@@ -22,7 +22,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>HTML の使い方、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML の始め方</a>や <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML テキストの基礎</a>、そして<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">ハイパーリンクの作成</a>を網羅した例。</td>
+   <td>HTML の使い方、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML の始め方</a>や <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML テキストの基礎</a>、そして<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">ハイパーリンクの作成</a>を網羅した例。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -33,9 +33,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h2 id="デバッグは怖くない">デバッグは怖くない</h2>
 
-<p>何かのコードを書いている時、エラーが起きる (何かしらの間違いを犯したため、コードが全く機能しない、あるいは望んでいた通りに動かない) その恐ろしい瞬間まで、通常は全く問題ありません。たとえば、以下は <a href="https://www.rust-lang.org/">Rust</a> 言語で書かれた単純なプログラムを {{glossary("compile")}} しようとしたときに報告されるエラーを示しています。<img alt="A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string." src="https://mdn.mozillademos.org/files/12435/error-message.png" style="display: block; height: 520px; margin: 0px auto; width: 711px;">ここに、比較的分かりやすいエラーメッセージがあります。 — "閉じていない二重引用符文字列"。リストを見れば、おそらく論理的に <code>println!(Hello, world!");</code> に二重引用符がない可能性があるとわかるでしょう。しかし、プログラムが大きくなるにつれてエラーメッセージはすぐに複雑になり、解釈しにくくなります。簡単な場合でも、Rust について何も知らない人には少し威圧的に見えるかもしれません。</p>
+<p>何かのコードを書いている時、エラーが起きる (何かしらの間違いを犯したため、コードが全く機能しない、あるいは望んでいた通りに動かない) その恐ろしい瞬間まで、通常は全く問題ありません。たとえば、以下は <a href="https://www.rust-lang.org/">Rust</a> 言語で書かれた単純なプログラムを {{glossary("compile")}} しようとしたときに報告されるエラーを示しています。<img alt="A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string." src="https://mdn.mozillademos.org/files/12435/error-message.png" style="display: block; height: 520px; margin: 0px auto; width: 711px;">ここに、比較的分かりやすいエラーメッセージがあります。 — "閉じていない二重引用符文字列"。リストを見れば、おそらく論理的に <code>println!(Hello, world!");</code> に二重引用符がない可能性があるとわかるでしょう。しかし、プログラムが大きくなるにつれてエラーメッセージはすぐに複雑になり、解釈しにくくなります。簡単な場合でも、Rust について何も知らない人には少し威圧的に見えるかもしれません。</p>
 
-<p>デバッグを怖がる必要はありません —  プログラミング言語やコードの作成、デバッグに慣れるための鍵は、言語とツールの両方に精通していることです。</p>
+<p>デバッグを怖がる必要はありません —  プログラミング言語やコードの作成、デバッグに慣れるための鍵は、言語とツールの両方に精通していることです。</p>
 
 <h2 id="HTML_とデバッグ">HTML とデバッグ</h2>
 
@@ -53,7 +53,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 <p>HTML 自体は構文エラーに悩まされていません。ブラウザが構文解析エラーを許容して解析するからです。つまり、構文エラーがあってもページは表示されたままです。ブラウザには、誤って書かれたマークアップを解釈する方法を決定するための組み込みのルールがあるので、たとえそれが期待したものでなくても、実行することはできます。もちろん、これはまだ問題になる可能性があります。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: Web の世界が最初に構築されたとき、HTML はそれほど厳格には解析されませんでした。これは、構文（シンタックス）が絶対的に正しいことを確認するよりも、人々がコンテンツを公開できることのほうが重要であると判断されたためです。当初から構文がより厳格に処理されていたとすれば、おそらく 現在のような Web は実現されなかったでしょう。</p>
+<p><strong>メモ</strong>: Web の世界が最初に構築されたとき、HTML はそれほど厳格には解析されませんでした。これは、構文（シンタックス）が絶対的に正しいことを確認するよりも、人々がコンテンツを公開できることのほうが重要であると判断されたためです。当初から構文がより厳格に処理されていたとすれば、おそらく 現在のような Web は実現されなかったでしょう。</p>
 </div>
 
 <h3 id="アクティブラーニング_許容コードの学習">アクティブラーニング: 許容コードの学習</h3>

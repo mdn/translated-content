@@ -32,7 +32,6 @@ requestPresent(layers)
 
 - `layers`
   - : 表示したいシーンを表す {{domxref("VRLayerInit")}} オブジェクトの配列です。現時点では、指定できるのは最小 0 要素、最大 1 要素です。
-</dl>
 
 ### 返値
 

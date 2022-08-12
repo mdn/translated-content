@@ -3,9 +3,9 @@ title: Utiliser la Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
-La [Web Audio API](/en-US/docs/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
+La [Web Audio API](/fr/docs/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
 
-La Web Audio API ne vient pas remplacer l'élément [\<audio>](/en-US/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/en-US/docs/Web/HTML/Element/Img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
+La Web Audio API ne vient pas remplacer l'élément [\<audio>](/fr/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/fr/docs/Web/HTML/Element/Img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
 
 L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
 
@@ -33,7 +33,7 @@ Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils formen
 
 ### Création d'un contexte audio
 
-Commencez par créer une instance de [`AudioContext`](/en-US/docs/Web/API/AudioContext) sur laquelle vous allez créer un graphe audio. L'exemple le plus simple ressemblerait à ceci:
+Commencez par créer une instance de [`AudioContext`](/fr/docs/Web/API/AudioContext) sur laquelle vous allez créer un graphe audio. L'exemple le plus simple ressemblerait à ceci:
 
 ```js
 var contexteAudio = new AudioContext();
@@ -56,7 +56,7 @@ Maintenant que nous avons créé un contexte, nous allons utiliser les méthodes
 - générées en JavaScript par un noeud audio tel qu'un oscillateur. Pour créer un {{domxref("OscillatorNode")}} on utilise la méthode {{domxref("AudioContext.createOscillator")}}.
 - créées à partir de données PCM brutes: le contexte audio a des méthodes pour décoder lesformats supportés; voir {{ domxref("AudioContext.createBuffer()") }}, {{domxref("AudioContext.createBufferSource()")}}, et {{domxref("AudioContext.decodeAudioData()")}}.
 - récupérées dans des élements HTML tels que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}: voir {{domxref("AudioContext.createMediaElementSource()")}}.
-- prises dans un [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.
+- prises dans un [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.
 
 Pour notre exemple nous nous contenterons de créer un oscillateur pour générer un son simple comme source, et un noeud de gain pour contrôler le volume:
 
@@ -98,7 +98,7 @@ Ce code créerait le graphe audio suivant :
 
 Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.
 
-> **Note :** Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/en-US/docs/Tools/Web_Audio_Editor),  très utile pour débugger les graphes audio.
+> **Note :** Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor),  très utile pour débugger les graphes audio.
 
 ### Lecture du son et définition du pitch
 

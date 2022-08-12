@@ -89,7 +89,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
   console.log('Gamepad connected.');
 },</code></pre>
 
-<p><code>connect()</code> <span id="result_box" lang="ja"><span>関数はイベントをパラメータとして受け取り、</span></span><code>gamepad </code><span lang="ja"><span>オブジェクトを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> 変数に割り当てます。</span></span><span class="short_text" id="result_box" lang="ja"><span>このゲームでは1つのゲームパッドしか使用しないため、ゲームパッドの配列ではなく単一のオブジェクトです。</span></span><span id="result_box" lang="ja"><span>次に、</span></span><code>turbo </code><span lang="ja"><span>プロパティを </span></span><code>true </code><span lang="ja"><span>に設定します。</span><span>（この目的のために </span></span><code>gamepad.connected </code><span lang="ja"><span>というブール値を使用することができましたが、上で説明した理由から、ゲームパッドを接続しなくてもターボモードを有効にするための別の変数が必要でした）。</span></span></p>
+<p><code>connect()</code> <span id="result_box" lang="ja"><span>関数はイベントをパラメータとして受け取り、</span></span><code>gamepad </code><span lang="ja"><span>オブジェクトを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> 変数に割り当てます。</span></span><span class="short_text" id="result_box" lang="ja"><span>このゲームでは1つのゲームパッドしか使用しないため、ゲームパッドの配列ではなく単一のオブジェクトです。</span></span><span id="result_box" lang="ja"><span>次に、</span></span><code>turbo </code><span lang="ja"><span>プロパティを </span></span><code>true </code><span lang="ja"><span>に設定します。</span><span>（この目的のために </span></span><code>gamepad.connected </code><span lang="ja"><span>というブール値を使用することができましたが、上で説明した理由から、ゲームパッドを接続しなくてもターボモードを有効にするための別の変数が必要でした）。</span></span></p>
 
 <pre class="brush: js"><code>disconnect: function(evt) {
   gamepadAPI.turbo = false;
@@ -106,17 +106,17 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
 <ul>
  <li><code>id</code>: コントローラーに関する情報を含む文字列。</li>
  <li><code>index</code>: 接続したデバイスを定義するユニークな識別子。</li>
- <li><code>connected</code>: 接続時に <code>true</code> になる真偽値の変数。</li>
+ <li><code>connected</code>: 接続時に <code>true</code> になる真偽値の変数。</li>
  <li><code>mapping</code>: <span class="short_text" id="result_box" lang="ja"><span>ボタンのレイアウトタイプ。</span> <span>標準は現在利用可能な唯一のオプション。</span></span></li>
  <li><code>axes</code>: <span class="short_text" id="result_box" lang="ja"><span>各軸の状態。浮動小数点値の配列で表される。</span></span></li>
- <li><code>buttons</code> : <code>pressed </code><span lang="ja"><span>プロパティと </span></span><code>value</code><span lang="ja"><span> のプロパティを含む </span></span><code>GamepadButton</code><span lang="ja"><span> オブジェクトの配列で表される各ボタンの状態。</span></span></li>
+ <li><code>buttons</code> : <code>pressed </code><span lang="ja"><span>プロパティと </span></span><code>value</code><span lang="ja"><span> のプロパティを含む </span></span><code>GamepadButton</code><span lang="ja"><span> オブジェクトの配列で表される各ボタンの状態。</span></span></li>
 </ul>
 
 <p><code>index </code><span lang="ja"><span>変数は、2つ以上のコントローラを接続しており、2つのデバイスが接続されている2人のゲームがある場合など、それらを識別する必要がある場合に便利です。</span></span></p>
 
 <h3 id="gamepad_オブジェクトのクエリ">gamepad オブジェクトのクエリ</h3>
 
-<p><code>connect() </code><span lang="ja"><span>と </span></span><code>disconnect()</code><span lang="ja"><span> のほかに、</span></span><code>gamepadAPI </code><span lang="ja"><span>オブジェクトには</span></span><code> update() </code><span lang="ja"><span>と </span></span><code>buttonPressed()</code><span lang="ja"><span> の2つのメソッドがあります。</span> </span><code>update() </code><span lang="ja"><span>は、ゲームループ内のすべてのフレームで実行され、ゲームパッドオブジェクトの実際のステータスを定期的に更新します：</span></span></p>
+<p><code>connect() </code><span lang="ja"><span>と </span></span><code>disconnect()</code><span lang="ja"><span> のほかに、</span></span><code>gamepadAPI </code><span lang="ja"><span>オブジェクトには</span></span><code> update() </code><span lang="ja"><span>と </span></span><code>buttonPressed()</code><span lang="ja"><span> の2つのメソッドがあります。</span> </span><code>update() </code><span lang="ja"><span>は、ゲームループ内のすべてのフレームで実行され、ゲームパッドオブジェクトの実際のステータスを定期的に更新します：</span></span></p>
 
 <pre class="brush: js"><code>update: function() {
   // clear the buttons cache
@@ -153,11 +153,11 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
   return pressed;
 },</code></pre>
 
-<p><span id="result_box" lang="ja"><span>すべてのフレームで、</span></span><code>update() </code><span lang="ja"><span>は前のフレームで押されたボタンを </span></span><code>buttonsCache</code><span lang="ja"><span> 配列に保存し、新しいものを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> オブジェクトから取得します。</span> <span>次に、実際の状態と値を取得するためにボタンと軸をループします。</span></span></p>
+<p><span id="result_box" lang="ja"><span>すべてのフレームで、</span></span><code>update() </code><span lang="ja"><span>は前のフレームで押されたボタンを </span></span><code>buttonsCache</code><span lang="ja"><span> 配列に保存し、新しいものを </span></span><code>gamepadAPI.controller</code><span lang="ja"><span> オブジェクトから取得します。</span> <span>次に、実際の状態と値を取得するためにボタンと軸をループします。</span></span></p>
 
 <h3 id="ボタンプレスの検出"><span class="short_text" id="result_box" lang="ja"><span>ボタンプレスの検出</span></span></h3>
 
-<p><code>buttonPressed()</code>  <span lang="ja"><span>メソッドはメインのゲームループに配置され、ボタンの押下を待機します。</span> <span>2つのパラメータ、つまり聴きたいボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。</span> <span>それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。</span></span></p>
+<p><code>buttonPressed()</code>  <span lang="ja"><span>メソッドはメインのゲームループに配置され、ボタンの押下を待機します。</span> <span>2つのパラメータ、つまり聴きたいボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。</span> <span>それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。</span></span></p>
 
 <pre class="brush: js"><code>buttonPressed: function(button, hold) {
   var newPress = false;
@@ -182,7 +182,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
   return newPress;
 },</code></pre>
 
-<p><span id="result_box" lang="ja"><span>ボタンには、1回の押下と長押しの2種類のアクションがあります。</span> </span><code>newPress </code><span lang="ja"><span>ブール変数は、ボタンの新規押下があるかどうかを示します。</span> <span>次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、</span></span><code>newPress </code><span lang="ja"><span>変数は </span></span><code>true</code><span lang="ja"><span> に設定されます。</span> <span>プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。</span> <span>ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。</span> <span>最後に、</span></span><code>newPress </code><span lang="ja"><span>変数が返されます。</span> </span><code>buttonPressed</code><span lang="ja"> <span>関数は、このようなゲームの更新ループで使用されます：</span></span></p>
+<p><span id="result_box" lang="ja"><span>ボタンには、1回の押下と長押しの2種類のアクションがあります。</span> </span><code>newPress </code><span lang="ja"><span>ブール変数は、ボタンの新規押下があるかどうかを示します。</span> <span>次に、押されたボタンの配列をループします。指定されたボタンが探しているボタンと同じ場合、</span></span><code>newPress </code><span lang="ja"><span>変数は </span></span><code>true</code><span lang="ja"><span> に設定されます。</span> <span>プレスが新しいものかどうかを確認するために、プレイヤーがキーを保持していないので、ゲームループの前のフレームからのボタンのキャッシュ状態をループします。</span> <span>ボタンが見つかった場合、ボタンが押されていることを意味するので、新しいプレスはありません。</span> <span>最後に、</span></span><code>newPress </code><span lang="ja"><span>変数が返されます。</span> </span><code>buttonPressed</code><span lang="ja"> <span>関数は、このようなゲームの更新ループで使用されます：</span></span></p>
 
 <pre class="brush: js"><code>if(gamepadAPI.turbo) {
   if(gamepadAPI.buttonPressed('A','hold')) {
@@ -201,7 +201,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
 
 <p><img alt="axis threshold" src="http://end3r.com/tmp/gamepad/axis-threshold.png" style="display: block; height: 300px; margin: 0px auto; width: 400px;"></p>
 
-<p><span id="result_box" lang="ja"><span>ゲームパッドは、ほこりのない場所からのゴミを得ることができます。つまり、正確な </span></span>-1 <span lang="ja"><span>または </span></span>1 <span lang="ja"><span>の値をチェックすることが問題になります。</span> <span>このため、軸の値のしきい値を設定すると効果的です。</span> 例えば<span>、</span></span><code>X </code><span lang="ja"><span>値が </span></span><code>0.5</code><span lang="ja"><span> より大きい場合にのみ、冷蔵庫のタンクが右に回転します：</span></span></p>
+<p><span id="result_box" lang="ja"><span>ゲームパッドは、ほこりのない場所からのゴミを得ることができます。つまり、正確な </span></span>-1 <span lang="ja"><span>または </span></span>1 <span lang="ja"><span>の値をチェックすることが問題になります。</span> <span>このため、軸の値のしきい値を設定すると効果的です。</span> 例えば<span>、</span></span><code>X </code><span lang="ja"><span>値が </span></span><code>0.5</code><span lang="ja"><span> より大きい場合にのみ、冷蔵庫のタンクが右に回転します：</span></span></p>
 
 <pre><code>if(gamepadAPI.axesStatus[0].x &gt; 0.5) {
   this.player.angle += 3;
@@ -216,7 +216,7 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
 
 <h3 id="gamepads_の入手">gamepads の入手</h3>
 
-<p>{{domxref("Naviagator.getGamepads()")}} <span id="result_box" lang="ja"><span>メソッドは、</span></span><a href="https://w3c.github.io/gamepad/#navigator-interface-extension">より長い解説とコード例</a><span lang="ja"><span>で更新されました。</span> <span>ここで、ゲームパッドの配列の長さは </span></span><code>n + 1</code><span lang="ja"><span> でなければなりません。ここで、</span></span><code>n </code><span lang="ja"><span>は接続されたデバイスの数です </span></span>—<span lang="ja"><span> 接続されたデバイスが1つでインデックスが1の場合、配列の長さは2で、</span> <span>[</span></span><code>null, </code><code>[object Gamepad]</code><code>] </code><span lang="ja"><span>をクリックします。</span> <span>デバイスが接続されていないか使用できない場合、デバイスの値は </span></span><code>null </code><span lang="ja"><span>に設定されます。</span></span></p>
+<p>{{domxref("Naviagator.getGamepads()")}} <span id="result_box" lang="ja"><span>メソッドは、</span></span><a href="https://w3c.github.io/gamepad/#navigator-interface-extension">より長い解説とコード例</a><span lang="ja"><span>で更新されました。</span> <span>ここで、ゲームパッドの配列の長さは </span></span><code>n + 1</code><span lang="ja"><span> でなければなりません。ここで、</span></span><code>n </code><span lang="ja"><span>は接続されたデバイスの数です </span></span>—<span lang="ja"><span> 接続されたデバイスが1つでインデックスが1の場合、配列の長さは2で、</span> <span>[</span></span><code>null, </code><code>[object Gamepad]</code><code>] </code><span lang="ja"><span>をクリックします。</span> <span>デバイスが接続されていないか使用できない場合、デバイスの値は </span></span><code>null </code><span lang="ja"><span>に設定されます。</span></span></p>
 
 <h3 id="マッピング標準"><span class="short_text" id="result_box" lang="ja"><span>マッピング標準</span></span></h3>
 
@@ -231,8 +231,8 @@ window.addEventListener("gamepaddisconnected", gamepadAPI.disconnect);</code></p
 
 <h3 id="イベント">イベント</h3>
 
-<p><span id="result_box" lang="ja"><span>スペックには、</span></span><code>gamepaddisconnected </code><span lang="ja"><span>と </span></span><code>gamepaddisconnected</code><span lang="ja"><span> よりも多くのイベントがありましたが、あまり役に立たないと思われていた仕様から削除されました。</span> <span>議論は、それを取り戻すべきかどうか、そしてどのような形で進行しているかについてはまだ進行中です。</span></span></p>
+<p><span id="result_box" lang="ja"><span>スペックには、</span></span><code>gamepaddisconnected </code><span lang="ja"><span>と </span></span><code>gamepaddisconnected</code><span lang="ja"><span> よりも多くのイベントがありましたが、あまり役に立たないと思われていた仕様から削除されました。</span> <span>議論は、それを取り戻すべきかどうか、そしてどのような形で進行しているかについてはまだ進行中です。</span></span></p>
 
 <h2 id="概要"><span class="short_text" id="result_box" lang="ja"><span>概要</span></span></h2>
 
-<p><span id="result_box" lang="ja"><span>Gamepad APIは非常に開発が簡単です。</span> <span>プラグインを必要とせずに、コンソールに似たエクスペリエンスをブラウザに提供することがこれまで以上に簡単になりました。</span> </span><a href="http://enclavegames.com/games/hungry-fridge/">Hungry Fridge </a><span lang="ja"><span>ゲームのフルバージョンをブラウザで直接再生したり、</span></span><a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> <span lang="ja"><span>からインストールしたり、</span></span><a href="https://github.com/EnclaveGames/Hungry-Fridge">Gamepad API Content Kit </a><span lang="ja"><span>のその他のリソースと一緒にデモのソースコードを確認したりすることができます。</span></span></p>
+<p><span id="result_box" lang="ja"><span>Gamepad APIは非常に開発が簡単です。</span> <span>プラグインを必要とせずに、コンソールに似たエクスペリエンスをブラウザに提供することがこれまで以上に簡単になりました。</span> </span><a href="http://enclavegames.com/games/hungry-fridge/">Hungry Fridge </a><span lang="ja"><span>ゲームのフルバージョンをブラウザで直接再生したり、</span></span><a href="https://marketplace.firefox.com/app/hungry-fridge">Firefox Marketplace</a> <span lang="ja"><span>からインストールしたり、</span></span><a href="https://github.com/EnclaveGames/Hungry-Fridge">Gamepad API Content Kit </a><span lang="ja"><span>のその他のリソースと一緒にデモのソースコードを確認したりすることができます。</span></span></p>

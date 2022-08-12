@@ -28,7 +28,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 > **警告：** WAI-ARIA Authoring Practices 1.1 提示 `aria-hidden="false"` 在现阶段 [各个浏览器中表现不同](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden).
 
-### 比较 `aria-hidden="true"`， ` role="presentation" 和 ``role="none"`
+### 比较 `aria-hidden="true"`， `role="presentation"` 和 `role="none"`
 
 表面上，`aria-hidden="true"`，`role="presentation"`，和`role="none"` 很相似，因为这三者都有以下特性：
 

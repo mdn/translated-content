@@ -22,15 +22,15 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <h4 id="일반_키워드">일반 키워드</h4>
 
-<p>사전 정의된 의미가 있는 키워드는 따옴표 없이 문자 그대로 나타납니다. 예시로는 <code>auto</code>, <code>smaller</code>, <code>ease-in</code>이 있습니다.</p>
+<p>사전 정의된 의미가 있는 키워드는 따옴표 없이 문자 그대로 나타납니다. 예시로는 <code>auto</code>, <code>smaller</code>, <code>ease-in</code>이 있습니다.</p>
 
 <h4 id="특별_키워드_inherit_initial_unset">특별 키워드: <code>inherit</code>, <code>initial</code>, <code>unset</code></h4>
 
-<p>모든 CSS 속성은 전역으로 정의한 <code>inherit</code>, <code>initial</code>, <code>unset</code> 키워드를 허용합니다. 세 키워드는 값 정의에 나타나지 않으며 암시적으로 정의됩니다.</p>
+<p>모든 CSS 속성은 전역으로 정의한 <code>inherit</code>, <code>initial</code>, <code>unset</code> 키워드를 허용합니다. 세 키워드는 값 정의에 나타나지 않으며 암시적으로 정의됩니다.</p>
 
 <h3 id="리터럴">리터럴</h3>
 
-<p>CSS에서 빗금('<code>/</code>')과 쉼표('<code>,</code>')와 같은 일부 문자는 그대로 나타날 수 있고, 속성 정의에서 값 구분을 위해 사용합니다. 쉼표는 종종 열거하는 값이나 수학형 함수의 매개변수를 구분할 때 사용합니다. 빗금은 의미가 다르지만 구문이 같은 값을 분리할 때 종종 사용합니다. 보통 빗금은 단축 속성에서 자료형이 같은 서로 다른 속성의 값을 구분할 때 쓰입니다.</p>
+<p>CSS에서 빗금('<code>/</code>')과 쉼표('<code>,</code>')와 같은 일부 문자는 그대로 나타날 수 있고, 속성 정의에서 값 구분을 위해 사용합니다. 쉼표는 종종 열거하는 값이나 수학형 함수의 매개변수를 구분할 때 사용합니다. 빗금은 의미가 다르지만 구문이 같은 값을 분리할 때 종종 사용합니다. 보통 빗금은 단축 속성에서 자료형이 같은 서로 다른 속성의 값을 구분할 때 쓰입니다.</p>
 
 <p>두 기호 모두 값 정의에 문자 그대로 나타납니다.</p>
 
@@ -99,7 +99,7 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <h3 id="이중_앰퍼샌드"><a id="Double_ampersand" name="Double_ampersand">이중 앰퍼샌드</a></h3>
 
-<p>두 개 이상의 구성 요소를 <u>이중 앰퍼샌드</u>, <code>&amp;&amp;</code>로 구분하면 모든 개체가 <strong>필수지만 순서는 상관 없음</strong>을 의미합니다.</p>
+<p>두 개 이상의 구성 요소를 <u>이중 앰퍼샌드</u>, <code>&amp;&amp;</code>로 구분하면 모든 개체가 <strong>필수지만 순서는 상관 없음</strong>을 의미합니다.</p>
 
 <pre class="syntaxbox notranslate">bold &amp;&amp; &lt;length&gt;
 </pre>
@@ -117,11 +117,11 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <ul>
  <li><code>bold</code>. 두 구성 요소가 값에 모두 나타나야 합니다.</li>
- <li><code>bold 1em bold</code>, 두 구성 요소는 한 번씩만 나타나야 합니다.</li>
+ <li><code>bold 1em bold</code>, 두 구성 요소는 한 번씩만 나타나야 합니다.</li>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>참고:</strong> 병치는 이중 앰퍼샌드보다 우선순위가 높습니다. 즉 <code>bold thin &amp;&amp; &lt;length&gt;</code>는 <code>[ bold thin ] &amp;&amp; &lt;length&gt;</code>와 같습니다. 따라서 <code>bold thin &lt;length&gt;</code>와 <code>&lt;length&gt; bold thin</code>은 일치하지만 <code>bold &lt;length&gt; thin</code>은 일치하지 않습니다.</p>
+<p><strong>참고:</strong> 병치는 이중 앰퍼샌드보다 우선순위가 높습니다. 즉 <code>bold thin &amp;&amp; &lt;length&gt;</code>는 <code>[ bold thin ] &amp;&amp; &lt;length&gt;</code>와 같습니다. 따라서 <code>bold thin &lt;length&gt;</code>와 <code>&lt;length&gt; bold thin</code>은 일치하지만 <code>bold &lt;length&gt; thin</code>은 일치하지 않습니다.</p>
 </div>
 
 <h3 id="이중_바"><a id="Double_bar" name="Double_bar">이중 바</a></h3>
@@ -147,7 +147,7 @@ translation_of: Web/CSS/Value_definition_syntax
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>참고:</strong> 이중 앰퍼샌드는 이중 바보다 우선순위가 높습니다. <code>bold || thin &amp;&amp; &lt;length&gt;</code>는 <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>와 같으며, <code>bold</code>, <code>thin &lt;length&gt;</code>, <code>bold thin &lt;length&gt;</code>, 그리고 <code>thin &lt;length&gt; bold</code>와 일치합니다. 하지만 <code>&lt;length&gt; bold thin</code>은 일치하지 않는데, <code>bold</code>를 생략하지 않으면 <code>thin &amp;&amp; &lt;length&gt;</code> 구성 요소 이전 또는 다음에 위치해야 하기 때문입니다.</p>
+<p><strong>참고:</strong> 이중 앰퍼샌드는 이중 바보다 우선순위가 높습니다. <code>bold || thin &amp;&amp; &lt;length&gt;</code>는 <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code>와 같으며, <code>bold</code>, <code>thin &lt;length&gt;</code>, <code>bold thin &lt;length&gt;</code>, 그리고 <code>thin &lt;length&gt; bold</code>와 일치합니다. 하지만 <code>&lt;length&gt; bold thin</code>은 일치하지 않는데, <code>bold</code>를 생략하지 않으면 <code>thin &amp;&amp; &lt;length&gt;</code> 구성 요소 이전 또는 다음에 위치해야 하기 때문입니다.</p>
 </div>
 
 <h3 id="단일_바"><a id="Single_bar" name="Single_bar">단일 바</a></h3>
@@ -177,7 +177,7 @@ translation_of: Web/CSS/Value_definition_syntax
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>참고:</strong> 이중 바는 단일 바보다 우선순위가 높으며 <code>bold | thin || &lt;length&gt;</code>는 <code>bold | [ thin || &lt;length&gt; ]</code>와 같습니다. <code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, <code>thin &lt;length&gt;</code>는 일치하지만, <code>|</code> 결합자는 좌우 중 단 하나만 선택할 수 있기 때문에 <code>bold &lt;length&gt;</code>는 일치하지 않습니다.</p>
+<p><strong>참고:</strong> 이중 바는 단일 바보다 우선순위가 높으며 <code>bold | thin || &lt;length&gt;</code>는 <code>bold | [ thin || &lt;length&gt; ]</code>와 같습니다. <code>bold</code>, <code>thin</code>, <code>&lt;length&gt;</code>, <code>&lt;length&gt; thin</code>, <code>thin &lt;length&gt;</code>는 일치하지만, <code>|</code> 결합자는 좌우 중 단 하나만 선택할 수 있기 때문에 <code>bold &lt;length&gt;</code>는 일치하지 않습니다.</p>
 </div>
 
 <h2 id="구성_요소_값_배수">구성 요소 값 배수</h2>
@@ -198,13 +198,13 @@ translation_of: Web/CSS/Value_definition_syntax
  <li><code>bold</code></li>
  <li><code>bold smaller</code></li>
  <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code> 등등.</li>
+ <li><code>bold smaller smaller smaller</code> 등등.</li>
 </ul>
 
 <p>하지만 다음과는 일치하지 않습니다.</p>
 
 <ul>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
 </ul>
 
 <h3 id="Plus" name="Plus"><a id="Plus_()" name="Plus_()">더하기 (<code>+</code>)</a></h3>
@@ -218,14 +218,14 @@ translation_of: Web/CSS/Value_definition_syntax
 <ul>
  <li><code>bold smaller</code></li>
  <li><code>bold smaller smaller</code></li>
- <li><code>bold smaller smaller smaller</code> 등등.</li>
+ <li><code>bold smaller smaller smaller</code> 등등.</li>
 </ul>
 
 <p>하지만 다음과는 일치하지 않습니다.</p>
 
 <ul>
- <li><code>bold</code>, <code>smaller</code>는 적어도 한 번 나타나야 합니다.</li>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>bold</code>, <code>smaller</code>는 적어도 한 번 나타나야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
 </ul>
 
 <h3 id="Question_mark" name="Question_mark"><a id="Question_mark_()" name="Question_mark_()">물음표 (<code>?</code>)</a></h3>
@@ -245,7 +245,7 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <ul>
  <li><code>bold smaller smaller</code>, <code>smaller</code>는 최대 한 번만 나타나야 합니다.</li>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
 </ul>
 
 <h3 id="Curly_braces" name="Curly_braces"><a id="Curly_braces_(_)" name="Curly_braces_(_)">중괄호 (<code>{ }</code>)</a></h3>
@@ -266,8 +266,8 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <ul>
  <li><code>bold</code>, <code>smaller</code>는 적어도 한 번 나타나야 합니다.</li>
- <li><code>bold smaller smaller smaller smaller</code>, <code>smaller</code>는 최대 3회까지만 나타나야 합니다.</li>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>bold smaller smaller smaller smaller</code>, <code>smaller</code>는 최대 3회까지만 나타나야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
 </ul>
 
 <h3 id="Hash_mark" name="Hash_mark"><a id="Hash_mark_()" name="Hash_mark_()">해시 (<code>#</code>)</a></h3>
@@ -288,8 +288,8 @@ translation_of: Web/CSS/Value_definition_syntax
 
 <ul>
  <li><code>bold</code>, <code>smaller</code>는 적어도 한 번 나타나야 합니다.</li>
- <li><code>bold smaller smaller smaller</code>, 각각의 <code>smaller</code>를 쉼표로 구분해야 합니다.</li>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>bold smaller smaller smaller</code>, 각각의 <code>smaller</code>를 쉼표로 구분해야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
 </ul>
 
 <h3 id="Exclamation_point" name="Exclamation_point"><a id="Exclamation_point_(!)" name="Exclamation_point_(!)">느낌표 (<code>!</code>)</a></h3>
@@ -310,9 +310,9 @@ translation_of: Web/CSS/Value_definition_syntax
 <p>하지만 다음과는 일치하지 않습니다.</p>
 
 <ul>
- <li><code>bold</code>도 없고 <code>smaller</code>도 없는 경우, 적어도 하나의 값은 나타나야 합니다.</li>
- <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
- <li><code>bold smaller bold</code>, <code>bold</code>와 <code>smaller</code>는 단 한 번만 나타나야 합니다.</li>
+ <li><code>bold</code>도 없고 <code>smaller</code>도 없는 경우, 적어도 하나의 값은 나타나야 합니다.</li>
+ <li><code>smaller</code>, <code>bold</code>는 병치이기 때문에 <code>smaller</code> 키워드 앞에 반드시 나타나야 합니다.</li>
+ <li><code>bold smaller bold</code>, <code>bold</code>와 <code>smaller</code>는 단 한 번만 나타나야 합니다.</li>
 </ul>
 
 <h2 id="요약">요약</h2>
@@ -390,7 +390,7 @@ translation_of: Web/CSS/Value_definition_syntax
   <tr>
    <td><code>{A,B}</code></td>
    <td>중괄호</td>
-   <td>최소 <code>A</code>회, 최대 <code>B</code>회</td>
+   <td>최소 <code>A</code>회, 최대 <code>B</code>회</td>
    <td><code>bold smaller{1,3}</code></td>
   </tr>
   <tr>
@@ -408,29 +408,6 @@ translation_of: Web/CSS/Value_definition_syntax
  </tbody>
 </table>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Adds the hash mark multiplier.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Adds the double ampersand combinator.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}

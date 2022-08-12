@@ -5,7 +5,7 @@ translation_of: WebAssembly/Exported_functions
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타내는 방법입니다. 여기서는 이 함수들에 대해 더 자세히 설명합니다.</p>
+<p class="summary">Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타내는 방법입니다. 여기서는 이 함수들에 대해 더 자세히 설명합니다.</p>
 
 <h2 id="Exported..._뭐요">Exported... 뭐요?</h2>
 
@@ -22,7 +22,7 @@ translation_of: WebAssembly/Exported_functions
 
 <h2 id="An_example">An example</h2>
 
-<p>예제를 보겠습니다. (GitHub의 <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a>로 찾을 수 있으며 실시간으로 보기(<a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">running live also</a>)도 참고하시고. wasm <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">text representation</a> 표현도 확인하세요).</p>
+<p>예제를 보겠습니다. (GitHub의 <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a>로 찾을 수 있으며 실시간으로 보기(<a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">running live also</a>)도 참고하시고. wasm <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">text representation</a> 표현도 확인하세요).</p>
 
 <pre class="brush: js">var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
@@ -37,9 +37,9 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
   console.log(otherTable.get(1)());
 });</pre>
 
-<p>{{jsxref("WebAssembly.Table")}}생성자를 사용하여 JavaScript에서 테이블 (<code>otherTable</code>)을 만든 다음 {{jsxref("WebAssembly.instantiateStreaming()")}}를 메서드를 사용하여 table.wasm를 우리가 만든 페이지에 로드합니다.</p>
+<p>{{jsxref("WebAssembly.Table")}}생성자를 사용하여 JavaScript에서 테이블 (<code>otherTable</code>)을 만든 다음 {{jsxref("WebAssembly.instantiateStreaming()")}}를 메서드를 사용하여 table.wasm를 우리가 만든 페이지에 로드합니다.</p>
 
-<p> </p>
+<p> </p>
 
 <p>그런 다음 모듈에서 함수를 내보내고 <code><a href="/en-US/docs/WebAssembly/API/Table/get">tbl.get()</a></code>을 통해 참조하는 함수를 검색하고 각 함수를 호출 한 결과를 콘솔에 기록합니다. 그런 다음 <code>set()</code>을 사용하여 <code>otherTable</code> 테이블에 tbl 테이블과 동일한 함수에 대한 참조가 포함되도록합니다.</p>
 
@@ -54,13 +54,13 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
 <pre class="brush: js">var testFunc = otherTable.get(0);
 typeof testFunc;</pre>
 
-<p>그러면 결과 함수(<code>function</code>)가 반환됩니다. 그런 다음 JavaScript에서 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind()</a></code> 등의 다른 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">functions</a>를 수행 할 수 있는 기능을 수행 할 수 있습니다. <code>testFunc.toString()</code>은 흥미로운 결과를 반환합니다.</p>
+<p>그러면 결과 함수(<code>function</code>)가 반환됩니다. 그런 다음 JavaScript에서 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind()</a></code> 등의 다른 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">functions</a>를 수행 할 수 있는 기능을 수행 할 수 있습니다. <code>testFunc.toString()</code>은 흥미로운 결과를 반환합니다.</p>
 
 <pre class="brush: js">function 0() {
     [native code]
 }</pre>
 
-<p>이렇게하면 wrapper-type의 본질에 대해 더 많이 알 수 있습니다.</p>
+<p>이렇게하면 wrapper-type의 본질에 대해 더 많이 알 수 있습니다.</p>
 
 <p>exported WebAssembly functions에 대해 알아야 할 몇 가지 사항은 다음과 같습니다.</p>
 

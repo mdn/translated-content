@@ -175,6 +175,6 @@ try {
 
 ## Voir aussi
 
-- [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utilisation des Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - [`caches`](/fr/docs/Web/API/caches)

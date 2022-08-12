@@ -85,14 +85,14 @@ translation_of: Web/API/XRReferenceSpace/reset_event
 <p><code>reset</code> イベントのハンドラーを追加するには、2つの方法のいずれかを使用できます。 まず、次のように {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用できます。</p>
 
 <pre class="brush: js notranslate">viewerRefSpace.addEventListener("reset", (event) =&gt; {
-  /* perform reset related tasks */
+  /* perform reset related tasks */
 });
 </pre>
 
 <p>2番目のオプションは、次のように <code>XRReferenceSpace</code> オブジェクトの {{domxref("XRReferenceSpace.onreset", "onreset")}} イベントハンドラープロパティを設定することです。</p>
 
 <pre class="brush: js notranslate">viewerRefSpace.onreset = (event) =&gt; {
-  /* perform reset related tasks */
+  /* perform reset related tasks */
 };
 </pre>
 

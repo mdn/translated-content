@@ -13,13 +13,13 @@ translation_of: Web/CSS/integer
 
 <h2 id="Summary" name="Summary">Übersicht</h2>
 
-<p>Der <a href="/de/docs/CSS" title="CSS">CSS</a> Wert <code>&lt;integer&gt;</code> ist eine Ganzzahl zwischen 0 und 9. data type denotes an integer number, positive or negative. Davor kann ein + oder - stehen. Steht nichts davor ist der Interger positiv.</p>
+<p>Der <a href="/de/docs/CSS" title="CSS">CSS</a> Wert <code>&lt;integer&gt;</code> ist eine Ganzzahl zwischen 0 und 9. data type denotes an integer number, positive or negative. Davor kann ein + oder - stehen. Steht nichts davor ist der Interger positiv.</p>
 
 <p>Integer kommen bspw. in {{cssxref("z-index")}}, {{cssxref("line-height")}}, {{cssxref("counter-increment")}} oder {{Cssxref("column-count")}} vor.</p>
 
 <p>Ein <code>&lt;integer&gt;</code> entspricht auch dem Wert {{cssxref("&lt;number&gt;")}}.</p>
 
-<div class="note">Es gibt keine offizielle Begrenzung des Wertes. Opera unterstützt nur Werte bis 2<sup>15</sup>-1, der Internet Explorer bis 2<sup>20</sup>-1. Während der Entwicklung von CSS3 wurde dies ausführlich diskutiert. Der letzte Stand, April 2012, war [-2<sup>27</sup>-1; 2<sup>27</sup>-1] <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html">#</a>, aber auch 2<sup>24</sup>-1 und 2<sup>30</sup>-1 wurden vorgeschlagen <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">#</a> <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">#</a>. Im letzten Entwurf der Spezifikation wurde kein Limit festgelegt.</div>
+<div class="note">Es gibt keine offizielle Begrenzung des Wertes. Opera unterstützt nur Werte bis 2<sup>15</sup>-1, der Internet Explorer bis 2<sup>20</sup>-1. Während der Entwicklung von CSS3 wurde dies ausführlich diskutiert. Der letzte Stand, April 2012, war [-2<sup>27</sup>-1; 2<sup>27</sup>-1] <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html">#</a>, aber auch 2<sup>24</sup>-1 und 2<sup>30</sup>-1 wurden vorgeschlagen <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">#</a> <a href="http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html">#</a>. Im letzten Entwurf der Spezifikation wurde kein Limit festgelegt.</div>
 
 <h2 id="Interpolation">Interpolation</h2>
 
@@ -29,23 +29,23 @@ translation_of: Web/CSS/integer
 
 <p>Gültige Integer:</p>
 
-<pre>12          Positiver Integer (ohne führendes +)
-+123        Positiver integer (mit führendem +)
--456        Negativer integer
-0           Null
-+0          Null mit führendem +
+<pre>12          Positiver Integer (ohne führendes +)
++123        Positiver integer (mit führendem +)
+-456        Negativer integer
+0           Null
++0          Null mit führendem +
 -0          Null mit führendem - (obwohl seltsam, ist dies ein erlaubter Wert)
 </pre>
 
 <p>Ungültige Integer:</p>
 
-<pre>12.0        Dist ist eine {{cssxref("&lt;number&gt;")}}, kein &lt;integer&gt;, obwohl sie eine Ganzzahl darstellt
+<pre>12.0        Dist ist eine {{cssxref("&lt;number&gt;")}}, kein &lt;integer&gt;, obwohl sie eine Ganzzahl darstellt
 12.         Der Punkt sollte nicht Teil eines &lt;integer&gt; sein
-+---12      Nur ein führendes +/- ist erlaubt
-ten         Buchstaben sind nicht erlaubt
-_5          Sonderzeichen sind nicht erlaubt
++---12      Nur ein führendes +/- ist erlaubt
+ten         Buchstaben sind nicht erlaubt
+_5          Sonderzeichen sind nicht erlaubt
 \35         Escapte Unicodezeichen sind nicht erlaubt, auch wenn diese einer Ganzzahl entsprechen (hier: 5)
-\4E94       Nicht-arabische Numerale sind nicht erlaubt, auch nicht escapt (hier: die japanische 5, 五)
+\4E94       Nicht-arabische Numerale sind nicht erlaubt, auch nicht escapt (hier: die japanische 5, 五)
 3e4         Wissenschaftliche Notation ist nicht gültig für &lt;integer&gt;
 </pre>
 

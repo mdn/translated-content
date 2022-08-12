@@ -238,7 +238,7 @@ console.log(instance.sousMethodePublique())
 // affichage attendu : "hello world"
 ```
 
-Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/get) et [set](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
+Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](/fr/docs/Web/JavaScript/Reference/Functions/get) et [set](/fr/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
 
 ```js
 class ClasseAvecGetSet {

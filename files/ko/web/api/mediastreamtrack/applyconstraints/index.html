@@ -38,49 +38,29 @@ translation_of: Web/API/MediaStreamTrack/applyConstraints
   width: {min: 640, ideal: 1280},
   height: {min: 480, ideal: 720},
   advanced: [
-    {width: 1920, height: 1280},
-    {aspectRatio: 1.333}
-  ]
+    {width: 1920, height: 1280},
+    {aspectRatio: 1.333}
+  ]
 };
 
 navigator.mediaDevices.getUserMedia({ video: true })
 .then(mediaStream =&gt; {
-  const track = mediaStream.getVideoTracks()[0];
-  track.applyConstraints(constraints)
-  .then(() =&gt; {
-    // Do something with the track such as using the Image Capture API.
-  })
-  .catch(e =&gt; {
-    // The constraints could not be satisfied by the available devices.
-  });
+  const track = mediaStream.getVideoTracks()[0];
+  track.applyConstraints(constraints)
+  .then(() =&gt; {
+    // Do something with the track such as using the Image Capture API.
+  })
+  .catch(e =&gt; {
+    // The constraints could not be satisfied by the available devices.
+  });
 });
 </pre>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediatrackconstraints', 'applyConstraints()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('MediaStream Image', '#mediatrackconstraintset-section','applyConstraints()')}}</td>
-   <td>{{Spec2('MediaStream Image')}}</td>
-   <td>Adds image constraints.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("api.MediaStreamTrack.applyConstraints")}}</p>
 

@@ -10,7 +10,7 @@ translation_of: Web/API/Text
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><strong><code>Text</code></strong> 인터페이스는 {{domxref("Element")}} 또는 {{domxref("Attr")}}의 문자형 콘텐츠를 표현합니다.</p>
+<p><strong><code>Text</code></strong> 인터페이스는 {{domxref("Element")}} 또는 {{domxref("Attr")}}의 문자형 콘텐츠를 표현합니다.</p>
 
 <p>요소의 콘텐츠에 마크업이 없을 경우 해당 요소는 요소의 텍스트를 담은 <code>Text</code> 를 구현한 단일 자식을 갖습니다. 반면에 요소에 마크업이 있을 경우 자식을 구성하는 정보 항목과 <code>Text</code> 노드로 파싱됩니다.</p>
 
@@ -45,8 +45,8 @@ translation_of: Web/API/Text
 <p><code>Text</code> 인터페이스는 {{domxref("Slotable")}} 믹스인이 정의하는 다음의 속성을 포함합니다.</p>
 
 <dl>
- <dt>{{domxref("Slotable.assignedSlot")}} {{readonlyInline}}</dt>
- <dd>노드가 삽입된 {{htmlelement("slot")}}을 나타내는 {{domxref("HTMLSlotElement")}}를 반환합니다.</dd>
+ <dt>{{domxref("Slotable.assignedSlot")}} {{readonlyInline}}</dt>
+ <dd>노드가 삽입된 {{htmlelement("slot")}}을 나타내는 {{domxref("HTMLSlotElement")}}를 반환합니다.</dd>
 </dl>
 
 <h2 id="메서드">메서드</h2>
@@ -68,45 +68,9 @@ translation_of: Web/API/Text
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#text', 'Text')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the <code>isElementContentWhitespace</code> property.<br>
-    Removed the <code>replaceWholeText()</code> method.<br>
-    Added the <code>Text()</code> constructor.<br>
-    Added the <code>assignedSlot</code> property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Added the <code>isElementContentWhitespace</code> and <code>wholeText</code> properties.<br>
-    Added the <code>replaceWholeText()</code> method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1312295772', 'Text')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("api.Text")}}</p>
 

@@ -249,7 +249,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 如果您使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
 
-创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 [此内容部分](/en-US/docs/Web/HTML/Element#Content_sectioning)） - 您只能使用嵌套的 `{{htmlelement("div")}}` 元素创建布局，但最好使用适当的分段元素包裹您的主导航（`{{htmlelement("nav")}}`），`footer` (`{{htmlelement("footer")}}`），重复内容单元 (`{{htmlelement("article")}}`) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅 [屏幕阅读器支持的新的 HTML5 章节元素](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) ，了解屏幕阅读器的支持是什么样的原理）。
+创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 [此内容部分](/en-US/docs/Web/HTML/Element#Content_sectioning)） - 您只能使用嵌套的 `{{htmlelement("div")}}` 元素创建布局，但最好使用适当的分段元素包裹您的主导航（`{{htmlelement("nav")}}`），`footer` (`{{htmlelement("footer")}}`），重复内容单元 (`{{htmlelement("article")}}`) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
 
 > **备注：** 除了您的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 您可以随时将它放在您想要使用 CSS 的位置，但是您应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
@@ -261,7 +261,7 @@ UI 控件可访问性的一个关键方面是，默认情况下，浏览器允�
 
 ![](button-focused-unfocused.png)
 
-接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如` {{htmlelement("select")}}` 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
+接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如 {{htmlelement("select")}} 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
 
 > **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)获取更多详细信。
 
@@ -342,7 +342,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-在这里，我们向文档对象 `document` 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 `event object` 的 `keyCode `属性，检查用户按下了哪个按钮; 如果它是与 `Return / Enter` 匹配的关键代码，我们通过按钮的 onclick 函数，即 `document.activeElement.onclick()` 。`activeElement` 提供给我们页面当前被 focused 的元素。
+在这里，我们向文档对象 `document` 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 `event object` 的 `keyCode` 属性，检查用户按下了哪个按钮; 如果它是与 `Return / Enter` 匹配的关键代码，我们通过按钮的 onclick 函数，即 `document.activeElement.onclick()` 。`activeElement` 提供给我们页面当前被 focused 的元素。
 
 我们使用`document.activeElement.onclick（）`运行存储在按钮的 onclick 处理函数中的函数。 `activeElement` 为我们提供了当前关注页面的元素。
 

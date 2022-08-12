@@ -9,8 +9,8 @@ translation_of: Glossary/Character
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Character (computing)")}} on Wikipedia
-- {{interwiki("wikipedia", "Character encoding")}} on Wikipedia
-- {{interwiki("wikipedia", "ASCII")}} on Wikipedia
-- {{interwiki("wikipedia", "UTF-8")}} on Wikipedia
-- {{interwiki("wikipedia", "Unicode")}} on Wikipedia
+- [Character (computing)](https://zh.wikipedia.org/wiki/Character_(computing)) on Wikipedia
+- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) on Wikipedia
+- [ASCII](https://zh.wikipedia.org/wiki/ASCII) on Wikipedia
+- [UTF-8](https://zh.wikipedia.org/wiki/UTF-8) on Wikipedia
+- [Unicode](https://zh.wikipedia.org/wiki/Unicode) on Wikipedia

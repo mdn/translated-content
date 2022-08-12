@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Was_ist_JavaScript
 
 <div>{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">Willkommen zum MDN-Einsteigerkurs für JavaScript! Im ersten Artikel werden wir uns JavaScript von aussen anschauen und Fragen beantworten wie "Was ist das?" oder  "Was macht das?", und wir stellen sicher, das du weißt was JavaScript ist.</p>
+<p class="summary">Willkommen zum MDN-Einsteigerkurs für JavaScript! Im ersten Artikel werden wir uns JavaScript von aussen anschauen und Fragen beantworten wie "Was ist das?" oder  "Was macht das?", und wir stellen sicher, das du weißt was JavaScript ist.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -41,10 +41,10 @@ original_slug: Learn/JavaScript/First_steps/Was_ist_JavaScript
 <ul>
  <li>{{glossary("HTML")}} ist die Markup-Language, die wir benutzen, um eine Webseite zu strukturieren und unsere Inhalte darzustellen, zum Beispiel durch Paragraphen, Überschriften, Tabellen aber auch um Bilder und Videos in die Webseite einzubinden.</li>
  <li>{{glossary("CSS")}} ist die Sprache, um Stil-Regeln für HTML zu definieren, zum Beispiel, indem wir die Hintergrundfarbe und die Schriftart ändern.</li>
- <li>{{glossary("JavaScript")}} ist eine Progammiersprache, die es erlaubt dynamische Updates der Inhalte, animierte Bilder und noch sehr viel mehr zu realisieren.</li>
+ <li>{{glossary("JavaScript")}} ist eine Progammiersprache, die es erlaubt dynamische Updates der Inhalte, animierte Bilder und noch sehr viel mehr zu realisieren.</li>
 </ul>
 
-<p>Die drei Teile bauen gut auf einander auf. Hier mal ein einfaches Beispiel: Wir können zunächst HTML benutzten, um eine Struktur zu bauen.</p>
+<p>Die drei Teile bauen gut auf einander auf. Hier mal ein einfaches Beispiel: Wir können zunächst HTML benutzten, um eine Struktur zu bauen.</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Player 1: Chris&lt;/p&gt;</pre>
 
@@ -69,7 +69,7 @@ original_slug: Learn/JavaScript/First_steps/Was_ist_JavaScript
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13424/html-and-css.png" style="height: 48px; width: 187px;"></p>
 
-<p>Und zum Schluss können wir mit etwas JavaScript eine Reaktion auf das Klicken des Benutzers implementieren:</p>
+<p>Und zum Schluss können wir mit etwas JavaScript eine Reaktion auf das Klicken des Benutzers implementieren:</p>
 
 <pre class="brush: js notranslate">var para = document.querySelector('p');
 
@@ -83,7 +83,7 @@ function updateName() {
 
 <p>{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}</p>
 
-<p>Klick auf das Label und sieh, was passiert (den <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html">Code</a> findest du auf GitHub und hier kannst du es in <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html">Aktion </a>sehen).</p>
+<p>Klick auf das Label und sieh, was passiert (den <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html">Code</a> findest du auf GitHub und hier kannst du es in <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html">Aktion </a>sehen).</p>
 
 <h2 id="So_und_was_kann_ich_jetzt_damit_machen">So und was kann ich jetzt damit machen?</h2>
 
@@ -91,7 +91,7 @@ function updateName() {
 
 <ul>
  <li>Nützliche Werte in Variablen speichern. Wie im Beispiel als wir eine Variable verwendet haben um den von dir eingebenen Namen zu speichern.</li>
- <li>Operationen auf Texten ( in der Programmierung "Strings" genannt). Im oberen Beispiel hatten wir den String "Player 1:" und die Variable  <code>name</code> verbunden und (wenn <code>name</code> "Chris" ist) haben wir den Text "Player 1: Chris" bekommen.</li>
+ <li>Operationen auf Texten ( in der Programmierung "Strings" genannt). Im oberen Beispiel hatten wir den String "Player 1:" und die Variable  <code>name</code> verbunden und (wenn <code>name</code> "Chris" ist) haben wir den Text "Player 1: Chris" bekommen.</li>
  <li>Mit Code auf Events in einer Webseite reagieren. Wir haben ein {{Event("click")}} Event benutzt um darauf zu reagieren wenn man auf das Label drückt.</li>
  <li>Und viel mehr. ( siehe jedes größere Webprojekt.)</li>
 </ul>
@@ -109,8 +109,8 @@ function updateName() {
 <ul>
  <li>Die {{domxref("Document_Object_Model","DOM (Document Object Model)")}} API</li>
  <li>Die <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">Geolocation API</a> ruft geografische Informationen ab. So ist es für <a href="https://www.google.com/maps">Google Maps</a> möglich dein Standort zu ermitteln um es danach z.B. auf einer Karte anzuzeigen.</li>
- <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> APIs ermöglichen es dir, 2D oder 3D animierte Grafiken zu erstellen. Das ermöglicht die Darstellung und den Einsatz von Webtechnologien. Mehr kannst du unter <a href="https://www.chromeexperiments.com/webgl">Chrome Experiments</a> und  <a href="http://webglsamples.org/">webglsamples</a> erfahren.</li>
- <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a> beispielsweise {{domxref("HTMLMediaElement")}} und <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> ermöglichen es wirklich spannende Dinge multimedial zu erstellen. Beispielsweise können Audio und Video in eine Webseite integriert werden, Ebenso ist es möglich die Webcam aufzunehmen und sie danach wiederzugeben. (Probiere unser einfaches <a href="http://chrisdavidmills.github.io/snapshot/">Snapshot Beispiel</a> um eine Einblick zu bekommen).</li>
+ <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> APIs ermöglichen es dir, 2D oder 3D animierte Grafiken zu erstellen. Das ermöglicht die Darstellung und den Einsatz von Webtechnologien. Mehr kannst du unter <a href="https://www.chromeexperiments.com/webgl">Chrome Experiments</a> und  <a href="http://webglsamples.org/">webglsamples</a> erfahren.</li>
+ <li><a href="https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery">Audio and Video APIs</a> beispielsweise {{domxref("HTMLMediaElement")}} und <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> ermöglichen es wirklich spannende Dinge multimedial zu erstellen. Beispielsweise können Audio und Video in eine Webseite integriert werden, Ebenso ist es möglich die Webcam aufzunehmen und sie danach wiederzugeben. (Probiere unser einfaches <a href="http://chrisdavidmills.github.io/snapshot/">Snapshot Beispiel</a> um eine Einblick zu bekommen).</li>
 </ul>
 
 <div class="note">
@@ -125,7 +125,7 @@ function updateName() {
 </ul>
 
 <div class="note">
-<p><strong>Notiz: </strong>Diese APIs sind sehr fortschrittlich und werden in diesem Modul nicht weiter behandelt.Du findest weitere Informationen bei unseren Modul<a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Clientbasierte Web APIs Modul</a>.</p>
+<p><strong>Notiz: </strong>Diese APIs sind sehr fortschrittlich und werden in diesem Modul nicht weiter behandelt.Du findest weitere Informationen bei unseren Modul<a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Clientbasierte Web APIs Modul</a>.</p>
 </div>
 
 <p>Es sind noch viele weitere APIs Verfügbar! Trotzdem werde jetzt nicht zu aufgeregt, denn du wirst es nicht schaffen, das nächste Facebook, Google Maps, oder Instagram zu entwickeln, nach gerade mal 24 Stunden JavaScript lernen — es gibt nämlich noch viele Sachen die Behandelt werden müssen. Und deswegen bist du hier — also lass uns weiter machen!</p>
@@ -205,7 +205,7 @@ function updateName() {
 
 &lt;/script&gt;</pre>
  </li>
- <li>Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
+ <li>Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
   <pre class="brush: js notranslate">function createParagraph() {
   var para = document.createElement('p');
   para.textContent = 'You clicked the button!';

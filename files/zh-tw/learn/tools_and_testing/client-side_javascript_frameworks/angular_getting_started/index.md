@@ -43,7 +43,7 @@ tags:
   </tbody>
 </table>
 
-## 什麼是 Angular？
+## 什麼是 Angular？
 
 Angular 是一個基於[TypeScript](https://www.typescriptlang.org/)的開發平台。身為一個平台，Angular 包含：
 
@@ -150,10 +150,10 @@ ng serve
 
 本教學導覽主要是用的程式原始檔在`src/app`資料夾內。由 CLI 自動產生的主要檔案如下：
 
-1.  `app.module.ts`：列出此專案使用的所有檔案。此檔案在專案中扮演中央樞紐的角色。
-2.  `app.component.ts`：又被稱為元件類別（Class），內含此專案主要頁面的相關邏輯
-3.  `app.component.html`：內含`AppComponent`所使用的網頁 html。這個檔案的內容也被視為元件模板（Template），此模板定義你在瀏覽器中看到的畫面。
-4.  `app.component.css`：內含`AppComponent`裡面的樣式。當你想定義某些樣式給特定模組使用，卻不希望影響到整體程式時，便可使用此檔案進行設定。
+1. `app.module.ts`：列出此專案使用的所有檔案。此檔案在專案中扮演中央樞紐的角色。
+2. `app.component.ts`：又被稱為元件類別（Class），內含此專案主要頁面的相關邏輯
+3. `app.component.html`：內含`AppComponent`所使用的網頁 html。這個檔案的內容也被視為元件模板（Template），此模板定義你在瀏覽器中看到的畫面。
+4. `app.component.css`：內含`AppComponent`裡面的樣式。當你想定義某些樣式給特定模組使用，卻不希望影響到整體程式時，便可使用此檔案進行設定。
 
 一個 Angular 的元件由三部份構成，分別是：模板、樣式、類別。舉例來說，`app.component.ts`、`app.component.html`、以及`app.component.css`一同構成`AppComponent`。此結構會將邏輯、畫面、樣式分開，如此一來便能讓程式更易於維護與擴張。
 

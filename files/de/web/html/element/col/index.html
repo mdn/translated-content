@@ -3,11 +3,11 @@ title: <col>
 slug: Web/HTML/Element/col
 translation_of: Web/HTML/Element/col
 ---
-<div> </div>
+<div> </div>
 
 <div><span id="result_box" lang="de"><span>Das <strong>HTML <code>&lt;col&gt;</code>-Element </strong>definiert eine Spalte innerhalb einer Tabelle und wird zum Definieren einer gemeinsamen Semantik für alle gängigen Zellen verwendet.</span> <span>Es wird allgemein innerhalb eines {{HTMLElement("colgroup")}} -Elements gefunden.</span></span></div>
 
-<div> </div>
+<div> </div>
 
 <div><span id="result_box" lang="de"><span>Auf dieses Element können CSS-Stilvorschriften für das Design von Spalten angewendet werden, aber nur wenige Attribute wirken sich auf die Spalte aus (siehe die CSS 2.1-Spezifikation für eine Liste).</span></span></div>
 
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/col
   <li><code>center</code>, <span id="result_box" lang="de"><span>zentriert den Inhalt in der Zelle</span></span></li>
   <li><code>right</code>, <span id="result_box" lang="de"><span>richtet den Inhalt auf der rechten Seite der Zelle aus</span></span></li>
   <li><code>justify</code>, <span id="result_box" lang="de"><span>einfügen von Leerzeichen in den Textinhalt, so dass der Inhalt in der Zelle gerechtfertigt ist</span></span></li>
-  <li><code>char</code>, <span id="result_box" lang="de"><span>richtet den Textinhalt auf ein Sonderzeichen mit einem minimalen Offset aus, definiert durch htmlattrxref &lt;char&gt;, &lt;col&gt; und htmlattrxref &lt;charoff&gt;, &lt;col&gt; Attribute ;</span> </span><span class="short_text" id="result_box" lang="de"><span>nicht implementiert</span></span><span lang="de"><span>_inline (2212).</span></span></li>
+  <li><code>char</code>, <span id="result_box" lang="de"><span>richtet den Textinhalt auf ein Sonderzeichen mit einem minimalen Offset aus, definiert durch htmlattrxref &lt;char&gt;, &lt;col&gt; und htmlattrxref &lt;charoff&gt;, &lt;col&gt; Attribute ;</span> </span><span class="short_text" id="result_box" lang="de"><span>nicht implementiert</span></span><span lang="de"><span>_inline (2212).</span></span></li>
  </ul>
 
  <p><span id="result_box" lang="de"><span>Wenn dieses Attribut nicht gesetzt ist, wird der Wert von </span></span> {{htmlattrxref("align", "colgroup")}} des {{HTMLElement("colgroup")}} <span lang="de"><span>-Elements geerbt, zu dem dieses <code>&lt;col&gt;</code> -Element gehört.</span> <span>Wenn es keine gibt, wird der Wert <code>left</code> angenommen.</span></span></p>
@@ -60,15 +60,15 @@ translation_of: Web/HTML/Element/col
  <div class="note"><strong>Note: </strong><span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (nicht unterstützt) ist.</span></span>
 
  <ul>
-  <li> Um den gleichen Effekt zu erzielen wie die Werte <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>:
+  <li> Um den gleichen Effekt zu erzielen wie die Werte <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code>:
 
    <ul>
-    <li>Versuchen Sie nicht, die Eigenschaft {{cssxref("text-align")}} in einem Selektor festzulegen, der ein  {{HTMLElement("col")}} enthält. Da {{HTMLElement("td")}} nicht von <code>&lt;col&gt;</code>-Element abhängen, werden sie nicht übernommen..</li>
+    <li>Versuchen Sie nicht, die Eigenschaft {{cssxref("text-align")}} in einem Selektor festzulegen, der ein  {{HTMLElement("col")}} enthält. Da {{HTMLElement("td")}} nicht von <code>&lt;col&gt;</code>-Element abhängen, werden sie nicht übernommen..</li>
     <li>Wenn die Tabelle keines der {{htmlattrxref("colspan", "td")}}-Attribute verwendet, benutzen Sie bitte den <code>td:nth-child(an+b)</code>-CSS-Selektoren. Setzen Sie <code>a</code> auf null und <code>b</code> auf die Position der Tabellenspalte, z.B. <code>td:nth-child(2) { text-align: right; }</code>, um die zweite Zeile rechts auszurichten.</li>
     <li><span id="result_box" lang="de"><span>Wenn die Tabelle ein Attribut </span></span> {{htmlattrxref("colspan", "td")}} <span lang="de"><span>verwendet, kann der Effekt durch Kombination geeigneter CSS-Attributselektoren wie <code>[colspan = n] </code>erzielt werden, obwohl dies nicht trivial ist.</span></span></li>
    </ul>
   </li>
-  <li><span id="result_box" lang="de"><span>Um den gleichen Effekt wie den <code>char</code>-Wert zu erzielen, können Sie in CSS3 den Wert von </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span>als Wert von </span></span> {{cssxref("text-align")}} <span lang="de"><span> verwenden.</span><span>(Inline nicht implementiert)  .</span></span></li>
+  <li><span id="result_box" lang="de"><span>Um den gleichen Effekt wie den <code>char</code>-Wert zu erzielen, können Sie in CSS3 den Wert von </span></span> {{htmlattrxref("char", "col")}} <span lang="de"><span>als Wert von </span></span> {{cssxref("text-align")}} <span lang="de"><span> verwenden.</span><span>(Inline nicht implementiert)  .</span></span></li>
  </ul>
 
  <ul>
@@ -83,51 +83,51 @@ translation_of: Web/HTML/Element/col
  <table style="width: 80%;">
   <tbody>
    <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>green</code> = "#008000"</td>
    </tr>
    <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>lime</code> = "#00FF00"</td>
    </tr>
    <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>olive</code> = "#808000"</td>
    </tr>
    <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>yellow</code> = "#FFFF00"</td>
    </tr>
    <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>navy</code> = "#000080"</td>
    </tr>
    <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>blue</code> = "#0000FF"</td>
    </tr>
    <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>teal</code> = "#008080"</td>
    </tr>
    <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
+    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
     <td><code>aqua</code> = "#00FFFF"</td>
    </tr>
   </tbody>
@@ -139,7 +139,7 @@ translation_of: Web/HTML/Element/col
 
 <dl>
  <dt>{{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dt> </dt>
+ <dt> </dt>
  <dd>
  <p><span lang="de"><span>Dieses Attribut wird verwendet, um das Zeichen festzulegen, an dem die Zellen in einer Spalte ausgerichtet werden sollen.</span> <span>Typische Werte hierfür sind ein Punkt (.) Beim Ausrichten von Zahlen oder Geldwerten.</span> <span>Wenn </span></span> {{htmlattrxref("align", "col")}} <span lang="de"><span> nicht auf <code>char</code> gesetzt ist, wird dieses Attribut ignoriert</span></span>;</p>
  </dd>
@@ -165,10 +165,10 @@ translation_of: Web/HTML/Element/col
  <dd><span id="result_box" lang="de"><span>Dieses Attribut gibt die vertikale Ausrichtung des Texts in jeder Zelle der Spalte an.</span> <span>Mögliche Werte für dieses Attribut sind:</span></span></dd>
  <dd>
  <ul>
-  <li><code>baseline</code>, <span id="result_box" lang="de"><span>setzt</span></span><span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle , richtet ihn aber an der Grundlinie der Zeichen anstatt am unteren Rand aus.</span> <span>Wenn alle Zeichen dieselbe Größe haben, hat dies den gleichen Effekt wie</span></span> <code>bottom</code></li>
-  <li><code>bottom</code>, setzt<span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle</span></span></li>
-  <li><code>middle</code>, zentriert den Text in der Zelle</li>
-  <li><code>top</code>, <span id="result_box" lang="de"><span>setzt den Text so nahe wie möglich an den oberen Rand der Zelle</span></span></li>
+  <li><code>baseline</code>, <span id="result_box" lang="de"><span>setzt</span></span><span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle , richtet ihn aber an der Grundlinie der Zeichen anstatt am unteren Rand aus.</span> <span>Wenn alle Zeichen dieselbe Größe haben, hat dies den gleichen Effekt wie</span></span> <code>bottom</code></li>
+  <li><code>bottom</code>, setzt<span lang="de"><span> den Text so nahe wie möglich an den unteren Rand der Zelle</span></span></li>
+  <li><code>middle</code>, zentriert den Text in der Zelle</li>
+  <li><code>top</code>, <span id="result_box" lang="de"><span>setzt den Text so nahe wie möglich an den oberen Rand der Zelle</span></span></li>
  </ul>
 
  <div class="note"><strong><u>Anmerkung</u>: </strong><span id="result_box" lang="de"><span>Verwenden Sie dieses Attribut nicht, da es im neuesten Standard veraltet (und nicht unterstützt) ist:</span></span>
@@ -205,12 +205,12 @@ translation_of: Web/HTML/Element/col
   <tr>
    <td>{{SpecName('HTML WHATWG', 'tables.html#the-col-element', '&lt;col&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-col-element', '&lt;col&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/tables.html#h-11.2.4.2', '&lt;col&gt;')}}</td>
@@ -232,7 +232,7 @@ translation_of: Web/HTML/Element/col
   <ul>
    <li><span id="result_box" lang="de"><span>Die Eigenschaft </span></span> {{cssxref("width")}} <span lang="de"><span>, um die Breite der Spalte zu steuern;</span></span></li>
    <li><span id="result_box" lang="de"><span>Die Pseudoklasse </span></span> {{cssxref(":nth-child")}} <span lang="de"><span>, um die Ausrichtung auf die Zellen der Spalte festzulegen;</span></span></li>
-   <li><span id="result_box" lang="de"><span>Die </span></span> {{cssxref("text-align")}} <span lang="de"><span> -Eigenschaft, um den Inhalt aller Zellen auf dasselbe Zeichen wie '.'.</span></span></li>
+   <li><span id="result_box" lang="de"><span>Die </span></span> {{cssxref("text-align")}} <span lang="de"><span> -Eigenschaft, um den Inhalt aller Zellen auf dasselbe Zeichen wie '.'.</span></span></li>
   </ul>
  </li>
 </ul>

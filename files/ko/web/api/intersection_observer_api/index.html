@@ -5,9 +5,9 @@ translation_of: Web/API/Intersection_Observer_API
 ---
 <div>{{DefaultAPISidebar("Intersection Observer API")}}</div>
 
-<p class="summary"><span class="seoSummary">Intersection Observer API는 타겟 요소와 상위 요소 또는 최상위 document 의 {{Glossary("viewport")}} 사이의 intersection 내의 변화를 비동기적으로 관찰하는 방법입니다.</span></p>
+<p class="summary"><span class="seoSummary">Intersection Observer API는 타겟 요소와 상위 요소 또는 최상위 document 의 {{Glossary("viewport")}} 사이의 intersection 내의 변화를 비동기적으로 관찰하는 방법입니다.</span></p>
 
-<p>역사적으로 요소의 가시성이나 두 요소의 상대적인 가시성을 탐지하는 것은 어려운 일이었습니다. 일반적으로 알려진 해결방법은 신뢰성이 부족하고 브라우저나 사이트에 부하를 주기때문에 좋지 못한 사용자 경험을 낳습니다. 웹이 성숙함에따라 이러한 정보의 필요성은 커졌습니다. intersection 정보는 아래와 같은 여러가지 이유 때문에 필요합니다:</p>
+<p>역사적으로 요소의 가시성이나 두 요소의 상대적인 가시성을 탐지하는 것은 어려운 일이었습니다. 일반적으로 알려진 해결방법은 신뢰성이 부족하고 브라우저나 사이트에 부하를 주기때문에 좋지 못한 사용자 경험을 낳습니다. 웹이 성숙함에따라 이러한 정보의 필요성은 커졌습니다. intersection 정보는 아래와 같은 여러가지 이유 때문에 필요합니다:</p>
 
 <ul>
  <li>페이지가 스크롤 되는 도중에 발생하는 이미지나 다른 컨텐츠의 지연 로딩.</li>
@@ -16,33 +16,33 @@ translation_of: Web/API/Intersection_Observer_API
  <li>사용자에게 결과가 표시되는 여부에 따라 작업이나 애니메이션을 수행할 지 여부를 결정.</li>
 </ul>
 
-<p>과거에 intersection 감지를 구현하면 영향을 받는 모든 요소를 알기 위해서 {{domxref("Element.getBoundingClientRect()")}}와 같은 메서드를 호출하는 여러 이벤트 핸들러와 루프가 얽혀있었습니다. 모든 코드가 메인 스레드에서 실행되기 때문에, 이 중 하나라도 성능 문제를 일으킬 수 있습니다. 사이트가 이러한 테스트들과 함께 로드되면 상황이 더욱 나빠질 수 있습니다.</p>
+<p>과거에 intersection 감지를 구현하면 영향을 받는 모든 요소를 알기 위해서 {{domxref("Element.getBoundingClientRect()")}}와 같은 메서드를 호출하는 여러 이벤트 핸들러와 루프가 얽혀있었습니다. 모든 코드가 메인 스레드에서 실행되기 때문에, 이 중 하나라도 성능 문제를 일으킬 수 있습니다. 사이트가 이러한 테스트들과 함께 로드되면 상황이 더욱 나빠질 수 있습니다.</p>
 
-<p>infinite-scroll이 구현된 웹 페이지를 생각해보십시오. 공급 업체가 제공하는 라이브러리를 사용하여 페이지 전체에 주기적으로 배치되는 광고를 관리하고 여기저기 애니메이션 그래픽이 있으며 알림 상자 등을 그리는 사용자 라이브러리를 사용합니다. 요소들 각각은 자신만의 교차 감지 루틴이 존재하고 이 모든 것들은 메인 스레드 위에서 동작합니다. </p>
+<p>infinite-scroll이 구현된 웹 페이지를 생각해보십시오. 공급 업체가 제공하는 라이브러리를 사용하여 페이지 전체에 주기적으로 배치되는 광고를 관리하고 여기저기 애니메이션 그래픽이 있으며 알림 상자 등을 그리는 사용자 라이브러리를 사용합니다. 요소들 각각은 자신만의 교차 감지 루틴이 존재하고 이 모든 것들은 메인 스레드 위에서 동작합니다. </p>
 
 <p>웹 페이지의 작성자는 사용중인 두 라이브러리의 내부 동작을 거의 알지 못하므로 이러한 일이 발생하는 것을 알지 못할 수도 있습니다. 사용자가 페이지를 스크롤할 때, 이러한 교차 탐지 루틴은 스크롤 처리 코드 중에 반복적으로 실행되므로 사용자는 브라우저, 웹사이트 및 컴퓨터에 좌절감을 느끼게 됩니다.</p>
 
-<p>Intersection Observer API 는 그들이 감시하고자 하는 요소가 다른 요소({{Glossary("viewport")}})에 들어가거나 나갈때 또는 요청한 부분만큼 두 요소의 교차부분이 변경될 때 마다 실행될 콜백 함수를 등록할 수 있게 합니다. 즉, 사이트는 요소의 교차를 지켜보기 위해 메인 스레드를 사용할 필요가 없어지고 브라우저는 원하는 대로 교차 영역 관리를 최적화 할 수 있습니다.</p>
+<p>Intersection Observer API 는 그들이 감시하고자 하는 요소가 다른 요소({{Glossary("viewport")}})에 들어가거나 나갈때 또는 요청한 부분만큼 두 요소의 교차부분이 변경될 때 마다 실행될 콜백 함수를 등록할 수 있게 합니다. 즉, 사이트는 요소의 교차를 지켜보기 위해 메인 스레드를 사용할 필요가 없어지고 브라우저는 원하는 대로 교차 영역 관리를 최적화 할 수 있습니다.</p>
 
-<p>정확히 몇 픽셀이 겹쳐졌고 어떠한 픽셀이 겹쳐졌는지 Intersection Observer API 가 알려줄 수 없습니다. 그러나 "N% 정도 교차하는 경우 상호작용이 이루어져야한다." 와 같은 더 일반적인 사용 사례를 다룰 수 있습니다.</p>
+<p>정확히 몇 픽셀이 겹쳐졌고 어떠한 픽셀이 겹쳐졌는지 Intersection Observer API 가 알려줄 수 없습니다. 그러나 "N% 정도 교차하는 경우 상호작용이 이루어져야한다." 와 같은 더 일반적인 사용 사례를 다룰 수 있습니다.</p>
 
 <h2 id="Intersection_observer_의_컨셉과_사용">Intersection observer 의 컨셉과 사용</h2>
 
-<p>Intersection Observer API는 다음과 같은 상황에 호출되는 콜백을 생성하는 기능을 제공합니다:</p>
+<p>Intersection Observer API는 다음과 같은 상황에 호출되는 콜백을 생성하는 기능을 제공합니다:</p>
 
-<p>(1) <strong>대상(target) </strong>으로 칭하는 요소가 기기 뷰포트나 특정 요소(이 API에서 이를 <strong>root</strong> 요소 혹은 <strong>root</strong>로 칭함)와 교차함.</p>
+<p>(1) <strong>대상(target) </strong>으로 칭하는 요소가 기기 뷰포트나 특정 요소(이 API에서 이를 <strong>root</strong> 요소 혹은 <strong>root</strong>로 칭함)와 교차함.</p>
 
-<p>(2) observer가 최초로 타겟을 관측하도록 요청받을 때마다.</p>
+<p>(2) observer가 최초로 타겟을 관측하도록 요청받을 때마다.</p>
 
-<p>일반적으로, 당신은 요소의 교차성이 가장 가까운 스크롤 가능한 조상에 의해 변경되길 원할 것입니다(혹은 대상 요소가 다른 요소의 자손이 아니라면 뷰포트에 의해 변경될 수 있을 것입니다). document의 루트 요소를 기준으로 해당 요소를 관측하기 위해서는 <code>null</code>을 설정하세요.</p>
+<p>일반적으로, 당신은 요소의 교차성이 가장 가까운 스크롤 가능한 조상에 의해 변경되길 원할 것입니다(혹은 대상 요소가 다른 요소의 자손이 아니라면 뷰포트에 의해 변경될 수 있을 것입니다). document의 루트 요소를 기준으로 해당 요소를 관측하기 위해서는 <code>null</code>을 설정하세요.</p>
 
-<p>당신이 뷰포트 혹은 다른 요소를 root로 사용하건 간에, 이 API는 같은 방식으로 동작합니다. 대상 요소의 가시성이 변경될 때마다 당신이 등록한 콜백 함수를 실행하며, 그것은 당신이 원하는 만큼 root 요소와 교차합니다.</p>
+<p>당신이 뷰포트 혹은 다른 요소를 root로 사용하건 간에, 이 API는 같은 방식으로 동작합니다. 대상 요소의 가시성이 변경될 때마다 당신이 등록한 콜백 함수를 실행하며, 그것은 당신이 원하는 만큼 root 요소와 교차합니다.</p>
 
-<p>root 와 대상 요소가 교차하는 정도를 <strong>intersection ratio </strong>라고 합니다. 이것은 대상 요소의 가시성 퍼센티지를 0.0~1.0의 숫자로 표현합니다.</p>
+<p>root 와 대상 요소가 교차하는 정도를 <strong>intersection ratio </strong>라고 합니다. 이것은 대상 요소의 가시성 퍼센티지를 0.0~1.0의 숫자로 표현합니다.</p>
 
 <h3 id="intersection_observer_생성하기">intersection observer 생성하기</h3>
 
-<p>intersection observer를 생성하기 위해서는 생성자 호출 시 콜백 함수를 제공해야 합니다. 이 콜백 함수는 threshold가 한 방향 혹은 다른 방향으로 교차할 때 실행됩니다.</p>
+<p>intersection observer를 생성하기 위해서는 생성자 호출 시 콜백 함수를 제공해야 합니다. 이 콜백 함수는 threshold가 한 방향 혹은 다른 방향으로 교차할 때 실행됩니다.</p>
 
 <pre class="brush: js">let options = {
   root: document.querySelector('#scrollArea'),
@@ -53,20 +53,20 @@ translation_of: Web/API/Intersection_Observer_API
 let observer = new IntersectionObserver(callback, options);
 </pre>
 
-<p><code>threshold: 1.0</code> 은 대상 요소가 <code>root</code> 에 지정된 요소 내에서 100% 보여질 때 콜백이 호출될 것을 의미합니다.</p>
+<p><code>threshold: 1.0</code> 은 대상 요소가 <code>root</code> 에 지정된 요소 내에서 100% 보여질 때 콜백이 호출될 것을 의미합니다.</p>
 
 <h4 id="Intersection_observer_설정">Intersection observer 설정</h4>
 
-<p>{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자에 전달되는 <code>options</code> 객체는 observer 콜백이 호출되는 상황을 조작할 수 있습니다. 이는 아래와 같은 필드를 가집니다:</p>
+<p>{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 생성자에 전달되는 <code>options</code> 객체는 observer 콜백이 호출되는 상황을 조작할 수 있습니다. 이는 아래와 같은 필드를 가집니다:</p>
 
 <dl>
  <dt><code>root</code></dt>
  <dd>대상 객체의 가시성을 확인할 때 사용되는 뷰포트 요소입니다. 이는 대상 객체의 조상 요소여야 합니다. 기본값은 브라우저 뷰포트이며, <code>root</code> 값이 <code>null</code> 이거나 지정되지 않을 때 기본값으로 설정됩니다.</dd>
  <dt><code>rootMargin</code></dt>
- <dd>root 가 가진 여백입니다. 이 속성의 값은 CSS의 {{cssxref("margin")}} 속성과 유사합니다. e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). 이 값은 퍼센티지가 될 수 있습니다. 이것은 root 요소의 각 측면의 bounding box를 수축시키거나 증가시키며, 교차성을 계산하기 전에 적용됩니다. 기본값은 0입니다.</dd>
+ <dd>root 가 가진 여백입니다. 이 속성의 값은 CSS의 {{cssxref("margin")}} 속성과 유사합니다. e.g. "<code>10px 20px 30px 40px"</code> (top, right, bottom, left). 이 값은 퍼센티지가 될 수 있습니다. 이것은 root 요소의 각 측면의 bounding box를 수축시키거나 증가시키며, 교차성을 계산하기 전에 적용됩니다. 기본값은 0입니다.</dd>
  <dt><code>threshold</code></dt>
- <dd>observer의 콜백이 실행될 대상 요소의 가시성 퍼센티지를 나타내는 단일 숫자 혹은 숫자 배열입니다. 만일 50%만큼 요소가 보여졌을 때를 탐지하고 싶다면, 값을 <code>0.5</code>로 설정하면 됩니다. 혹은 25% 단위로 요소의 가시성이 변경될 때마다 콜백이 실행되게 하고 싶다면 <code>[0, 0.25, 0.5, 0.75, 1]</code> 과 같은 배열을 설정하세요.<br>
- 기본값은 <code>0</code>이며(이는 요소가 1픽셀이라도 보이자 마자 콜백이 실행됨을 의미합니다). <code>1.0</code>은 요소의 모든 픽셀이 화면에 노출되기 전에는 콜백을 실행시키지 않음을 의미합니다.</dd>
+ <dd>observer의 콜백이 실행될 대상 요소의 가시성 퍼센티지를 나타내는 단일 숫자 혹은 숫자 배열입니다. 만일 50%만큼 요소가 보여졌을 때를 탐지하고 싶다면, 값을 <code>0.5</code>로 설정하면 됩니다. 혹은 25% 단위로 요소의 가시성이 변경될 때마다 콜백이 실행되게 하고 싶다면 <code>[0, 0.25, 0.5, 0.75, 1]</code> 과 같은 배열을 설정하세요.<br>
+ 기본값은 <code>0</code>이며(이는 요소가 1픽셀이라도 보이자 마자 콜백이 실행됨을 의미합니다). <code>1.0</code>은 요소의 모든 픽셀이 화면에 노출되기 전에는 콜백을 실행시키지 않음을 의미합니다.</dd>
 </dl>
 
 <h4 id="Targeting_an_element_to_be_observed">Targeting an element to be observed</h4>
@@ -566,26 +566,9 @@ window.addEventListener("load", (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('IntersectionObserver')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.IntersectionObserver")}}</p>
 

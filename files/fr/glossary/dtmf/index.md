@@ -16,4 +16,4 @@ Les ordinateurs peuvent utiliser DTMF lors de la numérotation d'un modem ou lor
 
 ### Culture générale
 
-- {{interwiki("wikipedia","Code_DTMF","Code DTMF")}} sur Wikipedia
+- [Code DTMF](https://fr.wikipedia.org/wiki/Code_DTMF) sur Wikipédia

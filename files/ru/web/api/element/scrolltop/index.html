@@ -5,7 +5,7 @@ translation_of: Web/API/Element/scrollTop
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><code>Свойство<strong> scrollTop</strong></code> считывает или устанавливает количество пикселей, прокрученных от верха элемента. <code>scrollTop</code> измеряет дистанцию от верха элемента до верхней точки видимого контента. Когда контент элемента не создаёт вертикальную прокрутку, его <code>scrollTop</code> равно <code>0</code>.</p>
+<p><code>Свойство<strong> scrollTop</strong></code> считывает или устанавливает количество пикселей, прокрученных от верха элемента. <code>scrollTop</code> измеряет дистанцию от верха элемента до верхней точки видимого контента. Когда контент элемента не создаёт вертикальную прокрутку, его <code>scrollTop</code> равно <code>0</code>.</p>
 
 <h2 id="Syntax_and_values">Синтаксис</h2>
 
@@ -13,18 +13,18 @@ translation_of: Web/API/Element/scrollTop
 var <var> intElemScrollTop</var> = someElement.scrollTop;
 </pre>
 
-<p><var>После выполнения этого кода, </var><code><var>intElemScrollTop</var></code> - целое число пикселей, на которое контент {{domxref("element")}} был прокручен от верха.</p>
+<p><var>После выполнения этого кода, </var><code><var>intElemScrollTop</var></code> - целое число пикселей, на которое контент {{domxref("element")}} был прокручен от верха.</p>
 
 <pre class="eval">// Устанавливаем количество прокрученных пикселей
 <var>element</var>.scrollTop = <var>intValue</var>;
 </pre>
 
-<p><code>scrollTop</code> может быть любым целым числом, с определёнными оговорками:</p>
+<p><code>scrollTop</code> может быть любым целым числом, с определёнными оговорками:</p>
 
 <ul>
- <li>Если элемент не может быть прокручен (т.е. у него нет переполнения или если элемент <strong>не прокручиваем</strong>), <code>scrollTop</code> устанавливается в <code>0</code>.</li>
- <li>Если значение меньше <code>0</code>, <code>scrollTop</code> устанавливается в <code>0</code>.</li>
- <li>Если установлено значение больше, чем максимум прокручиваемого контента, <code>scrollTop</code> устанавливается в максимум.</li>
+ <li>Если элемент не может быть прокручен (т.е. у него нет переполнения или если элемент <strong>не прокручиваем</strong>), <code>scrollTop</code> устанавливается в <code>0</code>.</li>
+ <li>Если значение меньше <code>0</code>, <code>scrollTop</code> устанавливается в <code>0</code>.</li>
+ <li>Если установлено значение больше, чем максимум прокручиваемого контента, <code>scrollTop</code> устанавливается в максимум.</li>
 </ul>
 
 <h2 id="Example">Пример</h2>

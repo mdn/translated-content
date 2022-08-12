@@ -50,16 +50,16 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 下面我们将下载 Phaser 的代码，并应用到我们的 HTML 文档中。
 
-1.  进入 [Phaser 下载页面](http://phaser.io/download/stable).
-2.  选择最适合你的下载项 — 我们建议选择 min.js，因为它最小，而且你不太可能想去看它的源码
-3.  将 Phaser 的源码存到一个和 index.html 同级的 /js 的目录下
-4.  在上面第一个 {{htmlelement("script")}} 标签里写下 phaser 的路径。
+1. 进入 [Phaser 下载页面](http://phaser.io/download/stable).
+2. 选择最适合你的下载项 — 我们建议选择 min.js，因为它最小，而且你不太可能想去看它的源码
+3. 将 Phaser 的源码存到一个和 index.html 同级的 /js 的目录下
+4. 在上面第一个 {{htmlelement("script")}} 标签里写下 phaser 的路径。
 
 ## 捋一捋我们干了些啥
 
 这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
 
-{{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game `创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
+{{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game` 创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
 
 - width 和 height 设置了 {{htmlelement("canvas")}} 宽高。
 - 渲染方式。有三个选项分别是 ` AUTO，``CANVAS ` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。

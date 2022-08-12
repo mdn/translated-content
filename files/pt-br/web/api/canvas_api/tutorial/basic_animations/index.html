@@ -4,9 +4,9 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
-<p>Já que estamos usando JavaScript para controlar {{HTMLElement("canvas")}} elementos, também é muito fácil criar animações interativas. Fazer animações mais complexas pode levar um tempo extra; esperamos introduzir um novo artigo para auxiliar sobre isso em breve.</p>
+<p>Já que estamos usando JavaScript para controlar {{HTMLElement("canvas")}} elementos, também é muito fácil criar animações interativas. Fazer animações mais complexas pode levar um tempo extra; esperamos introduzir um novo artigo para auxiliar sobre isso em breve.</p>
 
-<p>Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela permanece assim. Se precisarmos mover, temos que redesenhar-lá e tudo que foi desenhado antes. Demora muito tempo pra redesenhar frames complexos e a desempenho depende altamente da velocidade do computador em que está rodando.</p>
+<p>Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela permanece assim. Se precisarmos mover, temos que redesenhar-lá e tudo que foi desenhado antes. Demora muito tempo pra redesenhar frames complexos e a desempenho depende altamente da velocidade do computador em que está rodando.</p>
 
 <h2 id="Basic_animation_steps" name="Basic_animation_steps">Passos para animação básica</h2>
 
@@ -16,9 +16,9 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
  <li><strong>Limpe o canvas</strong><br>
   A menos que a forma que você vai desenhar preencha o canvas completo(por exemplo, uma imagem de fundo), você precisa limpar todas as formas que foram desenhadas anteriormente. O caminho mais fácil para fazer isso é usando o método clearRect().</li>
  <li><strong>Salve o estado da tela</strong><br>
-  Se você estiver mudando alguma configuração(como estilos, transformações, etc.) que afete o estado do canvas e você quer garantir que o estado original seja usado sempre que um quadro é desenhado, você precisa salvar esse estado original.</li>
+  Se você estiver mudando alguma configuração(como estilos, transformações, etc.) que afete o estado do canvas e você quer garantir que o estado original seja usado sempre que um quadro é desenhado, você precisa salvar esse estado original.</li>
  <li><strong>Desenhe formas animadas</strong><br>
-  A etapa em que você faz a renderização real do quadro.</li>
+  A etapa em que você faz a renderização real do quadro.</li>
  <li><strong>Restaure o estado do canvas</strong><br>
   Se você salvou o estado, restaure-o antes de desenhar um novo quadro.</li>
 </ol>
@@ -31,10 +31,10 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 
 <h3 id="Atualizações_agendadas">Atualizações agendadas</h3>
 
-<p>Primeiramente há as funções {{domxref("window.setInterval()")}} e {{domxref("window.setTimeout()")}}, que podem ser usadas para chamar uma função específica durante um certo período definido de tempo.</p>
+<p>Primeiramente há as funções {{domxref("window.setInterval()")}} e {{domxref("window.setTimeout()")}}, que podem ser usadas para chamar uma função específica durante um certo período definido de tempo.</p>
 
 <div class="note">
-<p>Nota: O método {{domxref("window.requestAnimationFrame()")}} agora é a maneira recomendada de programar animações. Vamos atualizar esse tutorial para abortar isso em breve.</p>
+<p>Nota: O método {{domxref("window.requestAnimationFrame()")}} agora é a maneira recomendada de programar animações. Vamos atualizar esse tutorial para abortar isso em breve.</p>
 </div>
 
 <dl>
@@ -48,9 +48,9 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 
 <h3 id="Atualizar_na_interação_do_usuário">Atualizar na interação do usuário</h3>
 
-<p>O segundo método que nós podemos usar para controlar uma animação é a entrada do usuário. Se nós quiséssimos criar um jogo, nós poderiamos usar os eventos do teclado ou mouse para controlar a animação. Ao definir {{domxref("EventListener")}}s, nós pegamos qualquer interação do usuário e executamos nossas funções da animação. </p>
+<p>O segundo método que nós podemos usar para controlar uma animação é a entrada do usuário. Se nós quiséssimos criar um jogo, nós poderiamos usar os eventos do teclado ou mouse para controlar a animação. Ao definir {{domxref("EventListener")}}s, nós pegamos qualquer interação do usuário e executamos nossas funções da animação. </p>
 
-<p>Se você quer a interação do usuário, você pode usar uma versão menor ou a versão principal do nosso framework pra animação:</p>
+<p>Se você quer a interação do usuário, você pode usar uma versão menor ou a versão principal do nosso framework pra animação:</p>
 
 <pre>var myAnimation = new MiniDaemon(null, animateShape, 500, Infinity);</pre>
 
@@ -58,7 +58,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 
 <pre>var myAnimation = new Daemon(null, animateShape, 500, Infinity);</pre>
 
-<p>Nos exemplos abaixo, no entanto, usamos o método {{domxref("window.setInterval()")}} para controlar a animação. Na parte inferior dessa página há alguns links de exemplos que usam {{domxref("window.setTimeout()")}}.</p>
+<p>Nos exemplos abaixo, no entanto, usamos o método {{domxref("window.setInterval()")}} para controlar a animação. Na parte inferior dessa página há alguns links de exemplos que usam {{domxref("window.setTimeout()")}}.</p>
 
 <h4 id="Um_sistema_solar_animado">Um sistema solar animado</h4>
 
@@ -229,9 +229,9 @@ function clock(){
 
 <p>{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
 
-<h4 id="Um_panorama_em_loop">Um panorama  em loop</h4>
+<h4 id="Um_panorama_em_loop">Um panorama  em loop</h4>
 
-<p>Nesse exemplos, um panorama é rolado da esquerda pra direita. Nós estamos usando uma imagem do Parque Nacional de Yosemite que tiramos da Wikipedia, mas você pode usar qualquer imagem que fosse maior que a tela.</p>
+<p>Nesse exemplos, um panorama é rolado da esquerda pra direita. Nós estamos usando uma imagem do Parque Nacional de Yosemite que tiramos da Wikipedia, mas você pode usar qualquer imagem que fosse maior que a tela.</p>
 
 <pre class="brush: js">var img = new Image();
 
@@ -293,7 +293,7 @@ function draw() {
 }
 </pre>
 
-<p>Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis ​​CanvasXZSize e CanvasYSize no código JavaScript. </p>
+<p>Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a largura e a altura especificadas aqui devem corresponder aos valores das variáveis ​​CanvasXZSize e CanvasYSize no código JavaScript. </p>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
@@ -307,7 +307,7 @@ function draw() {
  <dt><a class="external" href="http://www.gartic.net/">Gartic</a></dt>
  <dd>Jogo de desenho para multiplayers.</dd>
  <dt><a class="external" href="http://www.abrahamjoffe.com.au/ben/canvascape/">Canvascape</a></dt>
- <dd>Um jogo de aventura 3D (tiro em primeira pessoa).</dd>
+ <dd>Um jogo de aventura 3D (tiro em primeira pessoa).</dd>
  <dt><a href="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster" title="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">A basic ray-caster</a></dt>
  <dd>Um bom exemplo de como fazer animações usando os controles do teclado.</dd>
  <dt><a class="external" href="http://andrewwooldridge.com/canvas/canvasgame001/canvasgame002.html">canvas adventure</a></dt>

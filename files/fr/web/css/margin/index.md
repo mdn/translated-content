@@ -153,5 +153,5 @@ Les marges haute et basse des éléments sont parfois fusionnées en une seule m
 ## Voir aussi
 
 - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
-- [Le modèle de boîte CSS](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}

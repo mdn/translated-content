@@ -7,7 +7,7 @@ translation_of: Web/API/Element/outerHTML
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O atributo <code>outerHTML</code> da estrutura DOM(Document object model) obtem  um fragmento serializado de código HTML descrevendo o elemento incluindo seus descendentes. É possível substituir o elemento em questão com nós obtidos através da análise de uma string.</p>
+<p>O atributo <code>outerHTML</code> da estrutura DOM(Document object model) obtem  um fragmento serializado de código HTML descrevendo o elemento incluindo seus descendentes. É possível substituir o elemento em questão com nós obtidos através da análise de uma string.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Element/outerHTML
 <pre class="eval"><em>elemento</em>.outerHTML = conteudo;
 </pre>
 
-<p><code>Atribui a <em>elemento</em></code>  os nós obtidos pela análise da  string <code>conteudo</code>, tendo nó pai de elemento como nó de contexto o para o algoritmo de análise do fragmento de código HTML.</p>
+<p><code>Atribui a <em>elemento</em></code>  os nós obtidos pela análise da  string <code>conteudo</code>, tendo nó pai de elemento como nó de contexto o para o algoritmo de análise do fragmento de código HTML.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
@@ -52,7 +52,7 @@ console.log(container.firstChild.nodeName); // mostra "P"
 
 <h2 id="Notas">Notas</h2>
 
-<p>Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um  <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> com o código de erro <code>NO_MODIFICATION_ALLOWED_ERR</code>. Por exemplo:</p>
+<p>Se o elemento não tiver um nó pai, ou seja se o nó é a raiz do documento, tentar alterar sua propriedade outerHTML irá lançar um  <code><a href="/en/DOM/DOMException" title="DOMException">DOMException</a></code> com o código de erro <code>NO_MODIFICATION_ALLOWED_ERR</code>. Por exemplo:</p>
 
 <pre class="brush: js">document.documentElement.outerHTML = "test";  // Irá lançar uma DOMException
 </pre>
@@ -79,7 +79,7 @@ console.log(p.nodeName); // ainda contém "P";
   <tr>
    <td>{{SpecName('DOM Parsing', '#outerhtml', 'Element.outerHTML')}}</td>
    <td>{{ Spec2('DOM Parsing') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -140,5 +140,5 @@ console.log(p.nodeName); // ainda contém "P";
 
 <ul>
  <li>{{domxref("HTMLElement.outerText")}}</li>
- <li>MSDN: <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx">outerHTML Property</a> </li>
+ <li>MSDN: <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx">outerHTML Property</a> </li>
 </ul>

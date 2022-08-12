@@ -4,11 +4,11 @@ slug: Web/API/HTMLElement/hidden
 translation_of: Web/API/HTMLElement/hidden
 ---
 <div>
-<div>HTMLElement <span class="seoSummary">Свойство <strong><code>hidden</code></strong> является {{jsxref("Boolean")}} типом данных , который принимает значение true , если содержимое спрятано, в противном случае значение будет false. Это свойство совершенно отличается от использования CSS-свойства {{cssxref("display")}} , чтобы контролировать отображение элемента.Свойство </span><code>hidden</code> <span class="seoSummary">применимо ко всем режимам  представления и не должно использоваться для скрытия содержимого предназначенного для прямого доступа к пользователю. Соответствующие варианты использования включают:</span></div>
+<div>HTMLElement <span class="seoSummary">Свойство <strong><code>hidden</code></strong> является {{jsxref("Boolean")}} типом данных , который принимает значение true , если содержимое спрятано, в противном случае значение будет false. Это свойство совершенно отличается от использования CSS-свойства {{cssxref("display")}} , чтобы контролировать отображение элемента.Свойство </span><code>hidden</code> <span class="seoSummary">применимо ко всем режимам  представления и не должно использоваться для скрытия содержимого предназначенного для прямого доступа к пользователю. Соответствующие варианты использования включают:</span></div>
 </div>
 
 <ul>
- <li> Содержимое, которое не является особенно важным, но может быть необходимо позже</li>
+ <li> Содержимое, которое не является особенно важным, но может быть необходимо позже</li>
  <li>Содержимое, которое было раньше необходимо, но больше нет в нем необходимости</li>
  <li>Содержимое, которое повторно используется другими частями страницы по шаблону</li>
  <li>Создание заставного холста в качестве буфера рисования</li>
@@ -34,7 +34,7 @@ translation_of: Web/API/HTMLElement/hidden
 
 <h3 id="Значение">Значение</h3>
 
-<p>Если элемент спрятан, то значение <em><strong>true</strong></em>, в противном случае <em><strong>false</strong></em>;  </p>
+<p>Если элемент спрятан, то значение <em><strong>true</strong></em>, в противном случае <em><strong>false</strong></em>;  </p>
 
 <h2 id="Example">Пример</h2>
 
@@ -44,15 +44,15 @@ translation_of: Web/API/HTMLElement/hidden
 
 <pre class="brush: js">document.getElementById("okButton")
         .addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("awesome").hidden = false;
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("awesome").hidden = false;
 }, false);</pre>
 
 <p>Этот код устанавливает обработчика для кнопки "OK", которая скрывает панель приветствия и делает The follow-up panel панель с необычным именем "awesome" - видимой в этом месте.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<p>HTML-код для двух boxes показанных здесь.</p>
+<p>HTML-код для двух boxes показанных здесь.</p>
 
 <h4 id="Welcome_panel">Welcome panel</h4>
 
@@ -62,11 +62,11 @@ translation_of: Web/API/HTMLElement/hidden
   &lt;button class="button" id="okButton"&gt;OK&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<p>Этот  HTML создаёт панель, которая приветствует пользователей на сайте и рассказывает им о том с чем они соглашаются нажимая на кнопку OK.</p>
+<p>Этот  HTML создаёт панель, которая приветствует пользователей на сайте и рассказывает им о том с чем они соглашаются нажимая на кнопку OK.</p>
 
 <h4 id="The_follow-up_panel">The follow-up panel</h4>
 
-<p>После того, как пользователь нажимает OK в welcome panel, JavaScript-код меняет две панели изменяя их значения hidden. Следующая The follow-up panel представлена в этом HMTL:</p>
+<p>После того, как пользователь нажимает OK в welcome panel, JavaScript-код меняет две панели изменяя их значения hidden. Следующая The follow-up panel представлена в этом HMTL:</p>
 
 <pre class="brush: html">&lt;div id="awesome" class="panel" hidden&gt;
   &lt;h1&gt;Thanks!&lt;/h1&gt;
@@ -113,17 +113,17 @@ h1 {
   <tr>
    <td>{{SpecName('HTML WHATWG', "interaction.html#dom-hidden", "HTMLElement.hidden")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}</td>
    <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', "editing.html#the-hidden-attribute", "HTMLElement.hidden")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

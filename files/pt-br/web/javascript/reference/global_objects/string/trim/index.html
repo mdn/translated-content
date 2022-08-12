@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
 <div>{{JSRef}}</div>
 
-<div>O método <strong><code>trim()</code></strong> remove os espaços em branco (<a href="/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM">whitespaces</a>) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).</div>
+<div>O método <strong><code>trim()</code></strong> remove os espaços em branco (<a href="/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM">whitespaces</a>) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).</div>
 
 
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>trim()</code> retorna o texto sem espaços em branco no início e/ou fim da string. O <code>trim()</code> não altera o valor da string original.</p>
+<p>O método <code>trim()</code> retorna o texto sem espaços em branco no início e/ou fim da string. O <code>trim()</code> não altera o valor da string original.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_trim">Usando <code>trim()</code></h3>
+<h3 id="Usando_trim">Usando <code>trim()</code></h3>
 
 <p>Os exemplos a seguir retornam o valor de <code>'foo'</code> sem espaços em branco:</p>
 
@@ -46,11 +46,11 @@ console.log(str.trim()); // retorna 'foo'
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Executar o seguinte código antes antes de qualquer código irá criar o método <code>trim()</code> se o mesmo não estiver disponível nativamente.</p>
+<p>Executar o seguinte código antes antes de qualquer código irá criar o método <code>trim()</code> se o mesmo não estiver disponível nativamente.</p>
 
 <pre class="brush: js notranslate">if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   };
 }
 </pre>

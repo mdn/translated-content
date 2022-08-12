@@ -39,7 +39,7 @@ translation_of: Web/API/Document/scroll_event
 </table>
 
 <div class="blockIndicator note">
-<p><strong>注:</strong> iOS UIWebViews では、スクロールされている最中は <code>scroll</code> イベントは生じません。スクロールが完了したあとにのみ生じます。 詳しくは <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a> をご覧ください。 Safari と WKWebViews ではこのバグは起きません。</p>
+<p><strong>注:</strong> iOS UIWebViews では、スクロールされている最中は <code>scroll</code> イベントは生じません。スクロールが完了したあとにのみ生じます。 詳しくは <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a> をご覧ください。 Safari と WKWebViews ではこのバグは起きません。</p>
 </div>
 
 <h2 id="Examples" name="Examples">例</h2>
@@ -48,7 +48,7 @@ translation_of: Web/API/Document/scroll_event
 
 <p><code>scroll</code> イベントは高い確率で生じることができるため、イベントハンドラーは DOM の変更といった計算上の処理コストの高い操作を実行すべきではありません。その代わり、次のように、 {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}} や、 {{DOMxRef("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}} 、または {{DOMxRef("CustomEvent")}} を使ってイベントを抑制することが推奨されます。</p>
 
-<p>ただし、インプットイベントやアニメーションフレームは同じような確率で生じ、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では <code>requestAnimationFrame</code> の <code>scroll</code> を最適化しています。</p>
+<p>ただし、インプットイベントやアニメーションフレームは同じような確率で生じ、そのため下記のような最適化は不要の場合が多いことに注意してください。 この例では <code>requestAnimationFrame</code> の <code>scroll</code> を最適化しています。</p>
 
 <pre class="brush: js notranslate">// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 

@@ -51,18 +51,18 @@ With the history lesson out of the way, let's move on and see how to use some of
 
 In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [Youtube](https://www.youtube.com), but many people don't know about some of the sharing facilities it has available. Let's look at how Youtube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
 
-1.  First, go to Youtube and find a video you like.
-2.  Below the video, you'll find a _Share_ button — select this to display the sharing options.
-3.  Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
-4.  Insert it into the _Input_ box below, and see what the result is in the _Output_.
+1. First, go to Youtube and find a video you like.
+2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
+3. Select the _Embed_ button and you'll be given some `<iframe>` code — copy this.
+4. Insert it into the _Input_ box below, and see what the result is in the _Output_.
 
 For bonus points, you could also try embedding a [Google Map](https://www.google.com/maps/) in the example:
 
-1.  Go to Google Maps and find a map you like.
-2.  Click on the "Hamburger Menu" (three horizontal lines) in the top left of the UI.
-3.  Select the _Share or embed map_ option.
-4.  Select the Embed map option, which will give you some `<iframe>` code — copy this.
-5.  Insert it into the _Input_ box below, and see what the result is in the _Output_.
+1. Go to Google Maps and find a map you like.
+2. Click on the "Hamburger Menu" (three horizontal lines) in the top left of the UI.
+3. Select the _Share or embed map_ option.
+4. Select the Embed map option, which will give you some `<iframe>` code — copy this.
+5. Insert it into the _Input_ box below, and see what the result is in the _Output_.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see an answer.
 
@@ -194,15 +194,17 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 
 There are some serious [Security concerns](#security_concerns) to consider with `<iframe>`s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:
 
-    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-            width="100%" height="500" frameborder="0"
-            allowfullscreen sandbox>
-      <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Glossary">
-           Fallback link for browsers that don't support iframes
-        </a>
-      </p>
-    </iframe>
+```html
+<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+        width="100%" height="500" frameborder="0"
+        allowfullscreen sandbox>
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+        Fallback link for browsers that don't support iframes
+    </a>
+  </p>
+</iframe>
+```
 
 This example includes the basic essentials needed to use an `<iframe>`:
 
@@ -227,7 +229,7 @@ Above we mentioned security concerns — let's go into this in a bit more detail
 
 Browser makers and Web developers have learned the hard way that iframes are a common target (official term: **attack vector**) for bad people on the Web (often termed **hackers**, or more accurately, **crackers**) to attack if they are trying to maliciously modify your webpage, or trick people into doing something they don't want to do, such as reveal sensitive information like usernames and passwords. Because of this, spec engineers and browser developers have developed various security mechanisms for making `<iframe>`s more secure, and there are also best practices to consider — we'll cover some of these below.
 
-> **備註：** {{interwiki('wikipedia','Clickjacking')}} is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
+> **備註：** [Clickjacking](https://zh.wikipedia.org/wiki/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
 
 A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) You won't actually see anything displayed on the page, and if you look at the _Console_ in the [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told _Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
 
@@ -243,8 +245,8 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 {{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}. You should serve your websites using HTTPS whenever possible:
 
-1.  HTTPS reduces the chance that remote content has been tampered with in transit,
-2.  HTTPS prevents embedded content from accessing content in your parent document, and vice versa.
+1. HTTPS reduces the chance that remote content has been tampered with in transit,
+2. HTTPS prevents embedded content from accessing content in your parent document, and vice versa.
 
 Using HTTPS requires a security certificate, which can be expensive (although [Let's Encrypt](https://letsencrypt.org/) makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, _no matter what the cost, you must never embed third-party content with HTTP._ (In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an `<iframe>` will make it available via HTTPS — look at the URLs inside the `<iframe>` `src` attribute when you are embedding content from Google Maps or Youtube, for example.
 
@@ -262,7 +264,7 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 #### Configure CSP directives
 
-{{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/Security/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+{{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/Security/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](https://zh.wikipedia.org/wiki/clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
 > **備註：** You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
 
@@ -317,7 +319,7 @@ PDFs were a necessary stepping stone between paper and digital, but they pose ma
 Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For virtually all applications, it's time to stop delivering content that depends on plugins and start taking advantage of Web technologies instead.
 
 - **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches ](https://webaim.org/techniques/flash/)that come with Flash and other plugins.**
+- **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook, [requested that Adobe discontinue Flash.](https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
 > **備註：** Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.

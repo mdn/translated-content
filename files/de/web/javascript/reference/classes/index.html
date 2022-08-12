@@ -126,7 +126,7 @@ console.log(Punkt.laenge(p1, p2));</pre>
 
 <h3 id="Boxing_with_prototype_and_static_methods">Boxing with prototype and static methods</h3>
 
-<p>Wird eine statische oder eine prototype-Methode aufgerufen, ohne dass ein Objekt in der Variable "this" liegt (oder mit "this" als Wahrheitswert, Zeichenkette, Nummer, undefiniert oder null), dann wird die Variable "this" im Funktionskörper undefined sein. Autoboxing wird nicht passieren. Das Verhalten wird das gleiche sein, sollte der Code nicht im "strict mode" geschrieben worden sein.</p>
+<p>Wird eine statische oder eine prototype-Methode aufgerufen, ohne dass ein Objekt in der Variable "this" liegt (oder mit "this" als Wahrheitswert, Zeichenkette, Nummer, undefiniert oder null), dann wird die Variable "this" im Funktionskörper undefined sein. Autoboxing wird nicht passieren. Das Verhalten wird das gleiche sein, sollte der Code nicht im "strict mode" geschrieben worden sein.</p>
 
 <pre class="brush: js">class Tier {
   sprich() {
@@ -208,7 +208,7 @@ class Hund extends Tier {
 var h = new Hund('Wolfi');
 h.sprich();</pre>
 
-<p>Klassen können nicht von regulären (nicht konstruierbaren) Objekten erben. Falls von einem regulärem Objekt geerbt werden soll, kann {{jsxref("Object.setPrototypeOf()")}} verwendet werden:</p>
+<p>Klassen können nicht von regulären (nicht konstruierbaren) Objekten erben. Falls von einem regulärem Objekt geerbt werden soll, kann {{jsxref("Object.setPrototypeOf()")}} verwendet werden:</p>
 
 <pre class="brush: js">var Tier = {
   sprich() {
@@ -269,7 +269,7 @@ class Loewe extends Katze {
 
 <h2 id="Mix-ins">Mix-ins</h2>
 
-<p>Abstrakte Subklassen oder <em>mix-ins</em> sind Vorlagen für Klassen. Eine ECMAScript-Klasse kann nur von einer einzigen Klasse ableiten, damit ist beispielsweise mehrfache Vererbung von Helferklassen nicht möglich. Die gewünschte Funktionalität muss von der Elternklasse bereitgestellt werden.</p>
+<p>Abstrakte Subklassen oder <em>mix-ins</em> sind Vorlagen für Klassen. Eine ECMAScript-Klasse kann nur von einer einzigen Klasse ableiten, damit ist beispielsweise mehrfache Vererbung von Helferklassen nicht möglich. Die gewünschte Funktionalität muss von der Elternklasse bereitgestellt werden.</p>
 
 <p>Eine Funktion die als Input eine Elternklasse nimmt und als Output eine davon abgeleitete Subklasse ausgibt, kann verwendet werden, um mix-ins in ECMAScript zu erzeugen:</p>
 
@@ -303,66 +303,14 @@ class Bar extends RechnerMixin(ZufallsGeneratorMixin(Foo)) { }</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}<sup>[1]</sup><br>
-    {{CompatChrome(49.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>13</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatSafari(9.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Funktion</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome für Android</th>
-  </tr>
-  <tr>
-   <td>Basis Unterstützung</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>9</td>
-   <td>{{CompatChrome(42.0)}}<sup>[1]</sup><br>
-    {{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Benötigt den strikten Modus. Der Support im nicht-strikte Modus verbirgt sich hinter der Flag "Experimentelle JavaScript-Funktionen", welche standardmäßig deaktiviert ist.</p>
 

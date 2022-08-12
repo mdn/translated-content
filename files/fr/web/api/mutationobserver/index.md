@@ -5,7 +5,7 @@ translation_of: Web/API/MutationObserver
 ---
 {{APIRef("DOM")}}
 
-`MutationObserver` fournit un moyen d’intercepter les changements dans le [DOM](/en-US/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/en-US/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
+`MutationObserver` fournit un moyen d’intercepter les changements dans le [DOM](/fr/docs/DOM). Il a été conçu pour remplacer les [Mutation Events](/fr/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
 
 ## Constructeur
 

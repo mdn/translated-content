@@ -8,45 +8,45 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 <p>{{ SeeCompatTable() }}</p>
 
 <div class="summary">
-<p>본 문서에서는 서비스 워커를 시작하기 위한 기본적인 아키텍처, 서비스 워커 등록, 새로운 서비스 워커의 설치와 활성화 과정, 서비스 워커 업데이트, 캐시 제어 및 사용자 정의 응답에 대한 정보를 오프라인 기능을 갖춘 간단한 예제를 통해 제공합니다.</p>
+<p>본 문서에서는 서비스 워커를 시작하기 위한 기본적인 아키텍처, 서비스 워커 등록, 새로운 서비스 워커의 설치와 활성화 과정, 서비스 워커 업데이트, 캐시 제어 및 사용자 정의 응답에 대한 정보를 오프라인 기능을 갖춘 간단한 예제를 통해 제공합니다.</p>
 </div>
 
 <h2 id="서비스_워커에_앞서서...">서비스 워커에 앞서서...</h2>
 
-<p><font><font>웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 <a href="https://developer.mozilla.org/en-US/Apps/Build/Offline">오프라인</a> 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.</font></font></p>
+<p><font><font>웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 <a href="https://developer.mozilla.org/en-US/Apps/Build/Offline">오프라인</a> 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.</font></font></p>
 
-<p>직전의 시도였던 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 </font></font><a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> <font><font>을 참고하세요.</font></font></p>
+<p>직전의 시도였던 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 </font></font><a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> <font><font>을 참고하세요.</font></font></p>
 
 <div class="note">
-<p><strong>참고</strong>: Firefox 44에서 <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">서비스 워커</a> 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ({{bug("1204581")}})</p>
+<p><strong>참고</strong>: Firefox 44에서 <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 <a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">서비스 워커</a> 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ({{bug("1204581")}})</p>
 </div>
 
-<p>서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. 서비스 워커 구문은 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> </font></font>보다 복잡하지만, 자바스크립트를 사용해서 세밀하게 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> </font></font>의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다.<font><font> (보통 </font></font><a href="http://offlinefirst.org/" rel="noopener"><font><font>오프라인 우선</font></font></a><font><font> 이라고 함</font><font>) </font></font>이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다.</p>
+<p>서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. 서비스 워커 구문은 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> </font></font>보다 복잡하지만, 자바스크립트를 사용해서 세밀하게 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache"><font><font>AppCache</font></font></a><font><font> </font></font>의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다.<font><font> (보통 </font></font><a href="http://offlinefirst.org/" rel="noopener"><font><font>오프라인 우선</font></font></a><font><font> 이라고 함</font><font>) </font></font>이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다.</p>
 
 <h2 id="서비스워커_개발을_위한_환경_설정">서비스워커 개발을 위한 환경 설정</h2>
 
 <p>서비스워커가 지원되는 최신 브라우저에서 많은 서비스 워커 기능들이 활성화되어 있습니다. 만약 현재 사용하시는 브라우저에서 데모 코드가 돌아가지 않으면, 아래와 같이 환경을 설정해주세요.</p>
 
 <ul>
- <li><strong>Firefox Nightly</strong>: <code>about:config</code> 로 가서 <code>dom.serviceWorkers.enabled</code> 값을 true 로 변경하고, 브라우저 재시작</li>
- <li><strong>Chrome Canary</strong>: <code>chrome://flags</code> 로 가서 <code>experimental-web-platform-features</code> 을 키고, 브라우저 재시작 (몇몇 기능은 크롬에서도 활성화되어 있습니다)</li>
- <li><strong>Opera</strong>: <code>opera://flags</code> 로 가서 <code>Support for ServiceWorker</code> 를 활성화 하고, 브라우저 재시작</li>
+ <li><strong>Firefox Nightly</strong>: <code>about:config</code> 로 가서 <code>dom.serviceWorkers.enabled</code> 값을 true 로 변경하고, 브라우저 재시작</li>
+ <li><strong>Chrome Canary</strong>: <code>chrome://flags</code> 로 가서 <code>experimental-web-platform-features</code> 을 키고, 브라우저 재시작 (몇몇 기능은 크롬에서도 활성화되어 있습니다)</li>
+ <li><strong>Opera</strong>: <code>opera://flags</code> 로 가서 <code>Support for ServiceWorker</code> 를 활성화 하고, 브라우저 재시작</li>
 </ul>
 
 <p>애플리케이션을 HTTPS 에서 실행시키세요 - 서비스워커는 보안상의 이유로 HTTPS 에서만 동작합니다. Github 은 HTTPS 를 지원하기 때문에 서비스워커를 시험해보기 좋은 사이트입니다. 이외에 localhost 도 https 로 간주되니 로컬 개발환경도 활용해보세요.</p>
 
 <h2 id="기본_구조">기본 구조</h2>
 
-<p>다음의 단계들은 서비스 워커의 기본적인 설정법입니다:</p>
+<p>다음의 단계들은 서비스 워커의 기본적인 설정법입니다:</p>
 
 <ol>
  <li>{{domxref("serviceWorkerContainer.register()")}}을 통해서 서비스 워커 URL을 가져오고, 등록합니다.</li>
- <li>등록에 성공하면, {{domxref("ServiceWorkerGlobalScope") }} 범위에서 서비스 워커가 실행됩니다. 이는 (메인 스크립트 실행 쓰레드를 running off하면서) 기본적으로 DOM 접근이 없는 작업 문맥을 갖습니다.</li>
+ <li>등록에 성공하면, {{domxref("ServiceWorkerGlobalScope") }} 범위에서 서비스 워커가 실행됩니다. 이는 (메인 스크립트 실행 쓰레드를 running off하면서) 기본적으로 DOM 접근이 없는 작업 문맥을 갖습니다.</li>
  <li>이제 서비스 워커는 이벤트를 처리할 준비가 되었습니다.</li>
- <li>서비스 워커가 제어하는 페이지들에 연속적으로 접근하게 될 때 서비스 워커 설치를 시도하게 됩니다. 서비스 워커는 항상 처음으로 설치 이벤트를 받습니다.(설치 이벤트는 IndexedDB를 생성하고, 사이트 assets을 캐싱하는 처리를 시작할 때 사용될 수 있습니다.) 설치 이벤트는 모든 것을 오프라인에서 사용할 수 있게 하는, 네이티브 또는 파이어폭스 OS 앱을 설치하는 프로시저와 같은 종류입니다.</li>
- <li><code>oninstall</code> 핸들러가 완료되면, 서비스 워커가 설치되었다고 할 수 있습니다.</li>
- <li>다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다.  <code>onactivate</code> 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.</li>
- <li>이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 <code>register()</code> 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.</li>
+ <li>서비스 워커가 제어하는 페이지들에 연속적으로 접근하게 될 때 서비스 워커 설치를 시도하게 됩니다. 서비스 워커는 항상 처음으로 설치 이벤트를 받습니다.(설치 이벤트는 IndexedDB를 생성하고, 사이트 assets을 캐싱하는 처리를 시작할 때 사용될 수 있습니다.) 설치 이벤트는 모든 것을 오프라인에서 사용할 수 있게 하는, 네이티브 또는 파이어폭스 OS 앱을 설치하는 프로시저와 같은 종류입니다.</li>
+ <li><code>oninstall</code> 핸들러가 완료되면, 서비스 워커가 설치되었다고 할 수 있습니다.</li>
+ <li>다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다.  <code>onactivate</code> 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.</li>
+ <li>이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 <code>register()</code> 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.</li>
 </ol>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12636/sw-lifecycle.png" style="display: block; height: 867px; margin: 0px auto; width: 579px;"></p>
@@ -161,11 +161,11 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <h3 id="Registering_your_worker">Registering your worker</h3>
 
-<p>The first block of code in our app’s JavaScript file — <code>app.js</code> — is as follows. This is our entry point into using service workers.</p>
+<p>The first block of code in our app’s JavaScript file — <code>app.js</code> — is as follows. This is our entry point into using service workers.</p>
 
 <pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: '/sw-test/'})
-  .then(function(reg) {
+  .then(function(reg) {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope);
   }).catch(function(error) {
@@ -178,11 +178,11 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  <li>The outer block performs a feature detection test to make sure service workers are supported before trying to register one.</li>
  <li>Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)</li>
  <li>The <code>scope</code> parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '<code>/sw-test/'</code>, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.</li>
- <li>The <code>.then()</code> promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.</li>
+ <li>The <code>.then()</code> promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.</li>
  <li>Finally, we chain a <code>.catch()</code> function onto the end that will run if the promise is rejected.</li>
 </ol>
 
-<p>This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.<br>
+<p>This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.<br>
  <br>
  A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
 
@@ -222,28 +222,28 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s brand new storage API — {{domxref("cache")}} — a global on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The Cache API is not supported in every browser. (See the <a href="#browser_support">Browser support</a> section for more information.) If you want to use this now, you could consider using a polyfill like the one available in <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, or perhaps store your assets in <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+<p><strong>Note</strong>: The Cache API is not supported in every browser. (See the <a href="#browser_support">Browser support</a> section for more information.) If you want to use this now, you could consider using a polyfill like the one available in <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, or perhaps store your assets in <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 </div>
 
 <p>Let’s start this section by looking at a code sample — this is the <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">first block you’ll find in our service worker</a>:</p>
 
 <pre class="brush: js">this.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
-  );
+  event.waitUntil(
+    caches.open('v1').then(function(cache) {
+      return cache.addAll([
+        '/sw-test/',
+        '/sw-test/index.html',
+        '/sw-test/style.css',
+        '/sw-test/app.js',
+        '/sw-test/image-list.js',
+        '/sw-test/star-wars-logo.jpg',
+        '/sw-test/gallery/',
+        '/sw-test/gallery/bountyHunters.jpg',
+        '/sw-test/gallery/myLittleVader.jpg',
+        '/sw-test/gallery/snowTroopers.jpg'
+      ]);
+    })
+  );
 });</pre>
 
 <ol>
@@ -326,7 +326,7 @@ event.request.body</pre>
 
 <p>So <code>caches.match(event.request)</code> is great when there is a match in the service worker cache, but what about cases when there isn’t a match? If we didn’t provide any kind of failure handling, our promise would resolve with <code>undefined</code> and we wouldn't get anything returned.</p>
 
-<p>Fortunately service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
+<p>Fortunately service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
 
 <pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
@@ -355,7 +355,7 @@ event.request.body</pre>
 
 <p>Here we return the default network request with <code>return fetch(event.request)</code>, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using <code>caches.open('v1')</code>; this also returns a promise. When that promise resolves, <code>cache.put()</code> is used to add the resource to the cache. The resource is grabbed from <code>event.request</code>, and the response is then cloned with <code>response.clone()</code> and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.</p>
 
-<p>Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.</p>
+<p>Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.</p>
 
 <p>The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:</p>
 
@@ -369,8 +369,8 @@ event.request.body</pre>
         return response;
       });
     }).catch(function() {
-      return caches.match('/sw-test/gallery/myLittleVader.jpg');
-    })
+      return caches.match('/sw-test/gallery/myLittleVader.jpg');
+    })
   );
 });</pre>
 
@@ -406,7 +406,7 @@ event.request.body</pre>
 
 <h3 id="Deleting_old_caches">Deleting old caches</h3>
 
-<p>You also get an <code>activate</code> event. This is a generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.</p>
+<p>You also get an <code>activate</code> event. This is a generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.</p>
 
 <p>Promises passed into <code>waitUntil()</code> will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first <code>fetch</code> event on the new cache.</p>
 
@@ -441,20 +441,7 @@ event.request.body</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="See_also">See also</h2>
 

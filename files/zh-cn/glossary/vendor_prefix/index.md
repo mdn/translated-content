@@ -22,11 +22,13 @@ translation_of: Glossary/Vendor_Prefix
 
 示例：
 
-    -webkit-transition: all 4s ease;
-    -moz-transition: all 4s ease;
-    -ms-transition: all 4s ease;
-    -o-transition: all 4s ease;
-    transition: all 4s ease;
+```css
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;
+```
 
 ## API 前缀
 
@@ -64,4 +66,4 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 
 ### 基础知识
 
-- 维基百科{{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "浏览器引擎前缀（Vendor prefix）")}}
+- 维基百科[浏览器引擎前缀（Vendor prefix）](https://zh.wikipedia.org/wiki/CSS_hack#Browser_prefixes)

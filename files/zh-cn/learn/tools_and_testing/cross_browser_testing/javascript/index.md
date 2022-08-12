@@ -73,11 +73,11 @@ It is not very convenient to have to copy and paste your code over to a web page
 
 To install it:
 
-1.  Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2.  Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3.  In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
-4.  You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
-5.  After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
+1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
+2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
+3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
+4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
+5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
 ![](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](http://jshint.com/install/).
 
@@ -189,10 +189,10 @@ Let's get to work. First of all, we know that the error is being thrown at line 
 
 We can find out some very useful information in here.
 
-1.  Expand the `showHeroes` scope — you can see from this that the heroes variable is undefined, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
-2.  You can also see that the `jsonObj` variable is storing a text string, not a JSON object.
-3.  Exploring further down the call stack, click `request.onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
-4.  Now if you expand the `request.onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
+1. Expand the `showHeroes` scope — you can see from this that the heroes variable is undefined, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
+2. You can also see that the `jsonObj` variable is storing a text string, not a JSON object.
+3. Exploring further down the call stack, click `request.onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
+4. Now if you expand the `request.onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
 
 > **备注：** We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/en-US/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/en-US/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
 
@@ -294,17 +294,18 @@ Modernizr's list of [HTML5 Cross Browser Polyfills](https://github.com/Modernizr
 
 Let's work through an exercise — in this example we will use a Fetch polyfill to provide support for the Fetch API in older browsers; however we also need to use the es6-promise polyfill, as Fetch makes heavy use of promises, and browsers that don't support them will still be in trouble.
 
-1.  To get started, make a local copy of our [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) example and [our nice image of some flowers](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) in a new directory. We are going to write code to fetch the flowers image and display it in the page.
-2.  Next, save copies of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) and the [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) in the same directory as the HTML.
-3.  Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch:
+1. To get started, make a local copy of our [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) example and [our nice image of some flowers](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/flowers.jpg) in a new directory. We are going to write code to fetch the flowers image and display it in the page.
+2. Next, save copies of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) and the [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) in the same directory as the HTML.
+3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch:
 
     ```js
     <script src="es6-promise.js"></script>
     <script src="fetch.js"></script>
     ```
 
-4.  Inside the original {{htmlelement("script")}}, add the following code:
-5.  ```js
+4. Inside the original {{htmlelement("script")}}, add the following code:
+
+5. ```js
     var myImage = document.querySelector('.my-image');
 
     fetch('flowers.jpg').then(function(response) {
@@ -315,7 +316,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     });
     ```
 
-6.  Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
+6. Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool!
     ![](fetch-image.jpg)
 
 > **备注：** You can find our finished version at [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).

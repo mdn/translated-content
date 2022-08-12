@@ -13,4 +13,4 @@ Une {{glossary("Variable","variable")}} dont le nom est associé à sa {{glossar
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Variable locale", "Variable locale")}} sur Wikipédia
+- [Variable locale](https://fr.wikipedia.org/wiki/Variable_locale) sur Wikipédia

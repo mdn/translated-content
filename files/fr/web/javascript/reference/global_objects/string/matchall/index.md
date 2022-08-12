@@ -29,7 +29,7 @@ str.matchAll(regexp)
 
 ### Valeur de retour
 
-Un [itérateur](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators).
 
 ## Exemples
 

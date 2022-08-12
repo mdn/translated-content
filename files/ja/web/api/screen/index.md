@@ -41,7 +41,7 @@ _親である {{domxref("EventTarget")}} から継承したプロパティもあ
 - {{DOMxRef("Screen.pixelDepth")}}
   - : 画面のピット深度を取得します。
 - {{DOMxRef("Screen.top")}} {{Non-standard_Inline}}
-  - : 現在の画面の上端からの距離をピクセル単位で返します。 
+  - : 現在の画面の上端からの距離をピクセル単位で返します。
 - {{DOMxRef("Screen.width")}}
   - : 画面の幅を返します。
 - {{DOMxRef("Screen.mozEnabled")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

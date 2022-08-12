@@ -9,4 +9,4 @@ translation_of: Glossary/webp
 
 ### General knowledge
 
-- [WebP ](https://en.wikipedia.org/wiki/WebP)on Wikipedia
+- [WebP](https://en.wikipedia.org/wiki/WebP) on Wikipedia

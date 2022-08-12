@@ -24,7 +24,7 @@ original_slug: Glossary/算法
 
 ### 通用知识库（维基百科）
 
-- {{Interwiki("wikipedia", "Algorithm", "Algorithm")}}，维基百科
+- [Algorithm](https://zh.wikipedia.org/wiki/Algorithm)，维基百科
 
 ### 技术分析
 

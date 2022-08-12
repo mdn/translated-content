@@ -21,7 +21,7 @@ translation_of: Glossary/WebGL
 
 ### 常识
 
-- 维基百科上的 {{Interwiki("wikipedia", "WebGL")}}
+- 维基百科上的 [WebGL](https://zh.wikipedia.org/wiki/WebGL)
 - [检查你的设备是否支持 WebGL](https://get.webgl.org/)
 
 ### 技术信息

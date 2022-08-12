@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
 <div>{{JSRef}}</div>
 
-<div>Die <strong>then()</strong>-Methode gibt ein <code>Promise</code>-Objekt zurück. Sie benötigt zwei Argumente, jeweils eine Callback-Funktion für den Erfolg und den Fehlschlag des <code>Promise</code>.</div>
+<div>Die <strong>then()</strong>-Methode gibt ein <code>Promise</code>-Objekt zurück. Sie benötigt zwei Argumente, jeweils eine Callback-Funktion für den Erfolg und den Fehlschlag des <code>Promise</code>.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -24,18 +24,18 @@ p.then(function(value) {
 
 <dl>
  <dt>onFulfilled</dt>
- <dd>Eine {{jsxref("Function")}}, welche aufgerufen wird, wenn der <code>Promise</code> erfüllt wurde. Die Funktion hat ein Argument, den Rückgabewert <code>value</code>.</dd>
- <dt>onRejected {{optional_inline}}</dt>
- <dd>Eine {{jsxref("Function")}}, welche aufgerufen wird, wenn der <code>Promise</code> fehlschlägt. Die Funktion hat ein Argument, den Grund für den Fehlschlag: <code>reason</code>. Ist keine Funktion definiert, so wird sie intern durch die "Thrower" Funktion ersetzt (Dieser gibt einen Fehler als Argument zurück)</dd>
+ <dd>Eine {{jsxref("Function")}}, welche aufgerufen wird, wenn der <code>Promise</code> erfüllt wurde. Die Funktion hat ein Argument, den Rückgabewert <code>value</code>.</dd>
+ <dt>onRejected {{optional_inline}}</dt>
+ <dd>Eine {{jsxref("Function")}}, welche aufgerufen wird, wenn der <code>Promise</code> fehlschlägt. Die Funktion hat ein Argument, den Grund für den Fehlschlag: <code>reason</code>. Ist keine Funktion definiert, so wird sie intern durch die "Thrower" Funktion ersetzt (Dieser gibt einen Fehler als Argument zurück)</dd>
 </dl>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Die <code>then</code>- und {{jsxref("Promise.prototype.catch()")}}-Methoden, können, da sie Promises zurückgeben<font face="Consolas, Liberation Mono, Courier, monospace">, verkettetet werden </font>— ein Vorgehen, das <em>composition</em> genannt wird.</p>
+<p>Die <code>then</code>- und {{jsxref("Promise.prototype.catch()")}}-Methoden, können, da sie Promises zurückgeben<font face="Consolas, Liberation Mono, Courier, monospace">, verkettetet werden </font>— ein Vorgehen, das <em>composition</em> genannt wird.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Benutzen_der_then-Methode">Benutzen der <code>then</code>-Methode</h3>
+<h3 id="Benutzen_der_then-Methode">Benutzen der <code>then</code>-Methode</h3>
 
 <pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
   resolve("Success!");
@@ -89,57 +89,9 @@ p2.then(function(value) {
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>32</td>
-   <td>{{CompatGeckoDesktop(29.0)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>19</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(29.0)}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-   <td>32</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 24 besitzt, unter dem Namen Future, eine experimentielle Implementation von Promise. In Gecko 25 wurde der Name final festgelegt aber standardmäßig durch die Einstellung <code>dom.promise.enabled </code>deaktiviert. Durch <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918806">Bug 918806</a> wurden Promises in Gecko 29 standardmäßig aktiviert.</p>
+<p>[1] Gecko 24 besitzt, unter dem Namen Future, eine experimentielle Implementation von Promise. In Gecko 25 wurde der Name final festgelegt aber standardmäßig durch die Einstellung <code>dom.promise.enabled </code>deaktiviert. Durch <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918806">Bug 918806</a> wurden Promises in Gecko 29 standardmäßig aktiviert.</p>
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

@@ -8,7 +8,7 @@ original_slug: Web/API/HTMLElement/animationcancel_event
 
 <div>{{SeeCompatTable}}</div>
 
-<p>一个 <code><strong>animationcancel</strong></code> 事件会在一个 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> 意外终止时触发。换句话说，就是任意时刻 CSS Animation 在没有发送 {{event("animationend")}} 事件时停止运行。这种情况会在  {{cssxref("animation-name")}} 发生改变导致动画被移除时，或者使用 CSS 隐藏了动画中的 node 节点。因此要么 node 节点直接被隐藏，要么因为 node 节点的父节点被隐藏。</p>
+<p>一个 <code><strong>animationcancel</strong></code> 事件会在一个 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> 意外终止时触发。换句话说，就是任意时刻 CSS Animation 在没有发送 {{event("animationend")}} 事件时停止运行。这种情况会在  {{cssxref("animation-name")}} 发生改变导致动画被移除时，或者使用 CSS 隐藏了动画中的 node 节点。因此要么 node 节点直接被隐藏，要么因为 node 节点的父节点被隐藏。</p>
 
 <p>该事件的处理函数可以通过 {{domxref("GlobalEventHandlers.onanimationcancel", "onanimationcancel")}} 属性进行设置，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
 
@@ -35,7 +35,7 @@ original_slug: Web/API/HTMLElement/animationcancel_event
 
 <h2 id="Examples">Examples</h2>
 
-<p>这段代码获取一个当前在动画中的元素，并为它添加了一个<code>animationcancel</code> 事件监听。然后设置该元素的 <code><a href="/en-US/docs/Web/CSS/display">display</a></code> 属性为 <code>none</code>, 触发 <code>animationcancel</code> 事件。</p>
+<p>这段代码获取一个当前在动画中的元素，并为它添加了一个<code>animationcancel</code> 事件监听。然后设置该元素的 <code><a href="/en-US/docs/Web/CSS/display">display</a></code> 属性为 <code>none</code>, 触发 <code>animationcancel</code> 事件。</p>
 
 <pre class="brush: js">const animated = document.querySelector('.animated');
 
@@ -45,7 +45,7 @@ animated.addEventListener('animationcancel', () =&gt; {
 
 animated.style.display = 'none';</pre>
 
-<p>同样，使用 <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">onanimationcancel</a></code> 属性替换 <code>addEventListener()</code>:</p>
+<p>同样，使用 <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel">onanimationcancel</a></code> 属性替换 <code>addEventListener()</code>:</p>
 
 <pre class="brush: js">const animated = document.querySelector('.animated');
 animated.onanimationcancel = () =&gt; {
@@ -88,12 +88,12 @@ animated.style.display = 'none';</pre>
 }
 
 @keyframes slidein {
-  from {
-    transform: translateX(100%) scaleX(3);
-  }
-  to {
-    transform: translateX(0) scaleX(1);
-  }
+  from {
+    transform: translateX(100%) scaleX(3);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
 }
 </pre>
 

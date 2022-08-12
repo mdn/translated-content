@@ -51,4 +51,4 @@ Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes `querySelector(
 - [`element.querySelectorAll`](/fr/docs/Web/API/Element/querySelectorAll)
 - [`document.querySelector`](/fr/docs/Web/API/Document/querySelector)
 - [`document.querySelectorAll`](/fr/docs/Web/API/Document/querySelectorAll)
-- [Extraits de code pour querySelector](/en-US/docs/Code_snippets/QuerySelector)
+- [Extraits de code pour querySelector](/fr/docs/Code_snippets/QuerySelector)

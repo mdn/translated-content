@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
  </li>
  <li><strong>La visibilidad del botón:</strong>
   <ul>
-   <li>La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades <code>show_matches</code> y <code>hide_matches</code> <a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action">manifest key</a>), y tu puedes llamar  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> y <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> para mostrar o ocultar esto en pestañas especificas.</li>
+   <li>La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades <code>show_matches</code> y <code>hide_matches</code> <a href="/en-US/Add-ons/WebExtensions/manifest.json/page_action">manifest key</a>), y tu puedes llamar  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> y <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> para mostrar o ocultar esto en pestañas especificas.</li>
    <li>La acción del navegador siempre esta mostrada.</li>
   </ul>
  </li>
@@ -80,7 +80,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
  <li>
   <pre class="brush: js line-numbers  language-js"><code class="language-js">browser<span class="punctuation token">.</span>pageAction<span class="punctuation token">.</span>onClicked<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span>handleClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
  </li>
- <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>article for more details on creating and managing popups.</li>
+ <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups">Popup </a>article for more details on creating and managing popups.</li>
 </ul>
 
 <p>Note that your extension can have one-page action only.</p>

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensio
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Object.preventExtensions()</strong></code> previene que nuevas propiedades sean agregadas a un objeto (p.e. previene la extensión futuras al objeto).</p>
+<p>El método <code><strong>Object.preventExtensions()</strong></code> previene que nuevas propiedades sean agregadas a un objeto (p.e. previene la extensión futuras al objeto).</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -21,11 +21,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensio
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Un objeto es extendible si propiedades nuevas pueden ser agregadas a este. Object.preventExtensions() marca un objecto como no extendible, así nunca más tendrá propiedades más allá de las tenía en el momento en que fue marcado como no extendible. Note que las propiedades de un objeto no-extendible, en general, aún pueden ser eliminadas. Los intentos de agregar propiedades nuevas a un objeto no-extendible fallarán, ya sea de manera silenciosa o arrojando una excepción {{jsxref("TypeError")}} (comunmente, pero no de manera exclusiva, en {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).</p>
+<p>Un objeto es extendible si propiedades nuevas pueden ser agregadas a este. Object.preventExtensions() marca un objecto como no extendible, así nunca más tendrá propiedades más allá de las tenía en el momento en que fue marcado como no extendible. Note que las propiedades de un objeto no-extendible, en general, aún pueden ser eliminadas. Los intentos de agregar propiedades nuevas a un objeto no-extendible fallarán, ya sea de manera silenciosa o arrojando una excepción {{jsxref("TypeError")}} (comunmente, pero no de manera exclusiva, en {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}}).</p>
 
-<p><code>Object.preventExtensions()</code> solo previene la adición de propiedades propias. Las propiedades aún pueden ser agregadas a object.prototype. Sin embargo, llamar <code>Object.preventExtensions()</code> sobre un objeto tambien prevendrá extensiones sobre la propiedad {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}.</p>
+<p><code>Object.preventExtensions()</code> solo previene la adición de propiedades propias. Las propiedades aún pueden ser agregadas a object.prototype. Sin embargo, llamar <code>Object.preventExtensions()</code> sobre un objeto tambien prevendrá extensiones sobre la propiedad {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}.</p>
 
-<p>Si hay una manera de cambiar un objeto extendible a uno no-extendible, hay una manera de hacer lo opuesto en ECMAScript 5.</p>
+<p>Si hay una manera de cambiar un objeto extendible a uno no-extendible, hay una manera de hacer lo opuesto en ECMAScript 5.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -65,7 +65,7 @@ fixed.__proto__ = { oh: 'hai' }; // arroja TypeError
 
 <h2 id="Notas">Notas</h2>
 
-<p>En ES5, si el argumento pasado a este método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto ordinario no-extendible, simplemente lo regresa.</p>
+<p>En ES5, si el argumento pasado a este método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto ordinario no-extendible, simplemente lo regresa.</p>
 
 <pre class="brush: js">Object.preventExtensions(1);
 // TypeError: 1 is not an object (ES5 code)
@@ -91,7 +91,7 @@ Object.preventExtensions(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

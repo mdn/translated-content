@@ -69,8 +69,8 @@ T 嘗試更新下面的程式碼以完成測驗：
 
 如果您希望對自己的工作進行評估，或者遇到困難希望尋求幫助：
 
-1.  將您的工作放入在線共享編輯器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或 [Glitch](https://glitch.com/). 您可以自己編寫程式碼，也可以使用以上各節中連接到的初始文件。
-2.  撰寫帖子，要求評估和/或幫助 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). 你的貼文應包括：
+1. 將您的工作放入在線共享編輯器中，例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或 [Glitch](https://glitch.com/). 您可以自己編寫程式碼，也可以使用以上各節中連接到的初始文件。
+2. 撰寫帖子，要求評估和/或幫助 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). 你的貼文應包括：
 
     - 描述性標題，例如“ HTML 圖像基礎知識 1 技能測試所需的評估”。
     - 您已經嘗試過的內容以及您希望我們做什麼的詳細信息，例如如果您陷入困境並需要幫助，或者需要評估。

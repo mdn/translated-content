@@ -13,7 +13,7 @@ translation_of: Web/API/Element/classList
 <p>У <strong>classList </strong>есть примитивная альтернатива - свойство <strong>className, </strong>которое содержит значение атрибута <strong>class</strong> элемента.</p>
 </div>
 
-<h2 id="Syntax"> </h2>
+<h2 id="Syntax"> </h2>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -24,32 +24,32 @@ translation_of: Web/API/Element/classList
  <li>Результат - псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы узла<strong> elem</strong></li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Методы">Методы</h2>
 
 <p><strong>ClassList </strong>является геттером. Возвращаемый им объект имеет несколько методов:</p>
 
 <dl>
- <dt>     add( String<strong> [,String] )</strong>    </dt>
- <dd>   Добавляет элементу указанные классы</dd>
- <dt><strong>     remove</strong>( String [,String]<strong> )</strong></dt>
- <dd><strong>    </strong>Удаляет у элемента указанные классы</dd>
+ <dt>     add( String<strong> [,String] )</strong>    </dt>
+ <dd>   Добавляет элементу указанные классы</dd>
+ <dt><strong>     remove</strong>( String [,String]<strong> )</strong></dt>
+ <dd><strong>    </strong>Удаляет у элемента указанные классы</dd>
  <dd><strong>item</strong> ( Number )<br>
-     Результат аналогичен вызову <code><strong>сlassList[Number]</strong></code></dd>
+     Результат аналогичен вызову <code><strong>сlassList[Number]</strong></code></dd>
  <dd><strong>toggle</strong> ( String [, Boolean])<br>
-     Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.</dd>
- <dd>    Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.</dd>
+     Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.</dd>
+ <dd>    Если вторым параметром передан undefined или переменная с typeof == 'undefined', поведение будет аналогичным передаче только первого параметра при вызове toggle.</dd>
  <dd><strong>contains</strong> ( String )<br>
-     Проверяет, есть ли данный класс у элемента (вернёт true или false)</dd>
+     Проверяет, есть ли данный класс у элемента (вернёт true или false)</dd>
 </dl>
 
 <div class="note">
-<p>И, конечно же, у <strong>ClassList</strong> есть заветное свойство<strong> length</strong>, которое возвращает количество классов у элемента.</p>
+<p>И, конечно же, у <strong>ClassList</strong> есть заветное свойство<strong> length</strong>, которое возвращает количество классов у элемента.</p>
 </div>
 
 <dl>
- <dt> </dt>
+ <dt> </dt>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
@@ -79,10 +79,10 @@ console.log(elem.classList.contains("lol")); //false
 elem.classList.remove("example", "for", "understand", "he");
 console.log(elem.classList); //DOMTokenList ["ok"]</pre>
 
-<p dir="rtl"> </p>
+<p dir="rtl"> </p>
 
 <div class="warning">
-<p>В Firefox 25- в методах add, remove и toggle возможно указать только один аргумент. Смотрите: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a> </p>
+<p>В Firefox 25- в методах add, remove и toggle возможно указать только один аргумент. Смотрите: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a> </p>
 </div>
 
 <h2 id="Полифил">Полифил</h2>
@@ -120,7 +120,7 @@ console.log(elem.classList); //DOMTokenList ["ok"]</pre>
         },
         toggle: function(name) {
             return this.contains(name)
-                ? (this.remove(name), false) : (this.add(name), true);
+                ? (this.remove(name), false) : (this.add(name), true);
         },
         contains: function(name) {
             return regExp(name).test(this.element.className);
@@ -147,15 +147,15 @@ console.log(elem.classList); //DOMTokenList ["ok"]</pre>
 })();
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p> </p>
+<p> </p>
 
 <p>{{Compat}}</p>
 
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Спецификация">Спецификация</h2>
 

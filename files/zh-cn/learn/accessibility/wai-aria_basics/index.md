@@ -116,7 +116,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 ### 路牌/地标（**Signposts/Landmarks**）
 
-WAI-ARIA 给浏览器增加了 [`role` ](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)的例子（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
+WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)的例子（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
 
 ```html
 <header>
@@ -280,7 +280,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 1. 首先，复制刚刚的 [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) 还有 [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) 文件，然后保存到本地。
 2. 把两个文件都用文本编辑器打开并且看看运作原理。
-3. 首先，在`<form> `标签的正上方添加一个段落，如下，并用星号标记表单\<label>。这通常是我们为有视力的用户标记必填字段的一个常用手法。
+3. 首先，在`<form>` 标签的正上方添加一个段落，如下，并用星号标记表单\<label>。这通常是我们为有视力的用户标记必填字段的一个常用手法。
 
     ```html
     <p>Fields marked with an asterisk (*) are required.</p>
@@ -305,7 +305,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 除了经典的 {{htmlelement("label")}} 元素之外，WAI-ARIA 还支持一些高级表单标注技术。我们已经讨论过使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 属性来提供标签，我们不希望标签对于有视力的用户是可见的（参见上面的 [路牌/地标（Signposts/Landmarks）](#路牌地标_（signpostslandmarks）) 部分）。还有一些其他标签技术使用其他属性，例如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) ，如果你想将非\<label>元素指定为标签或标签多个表单输入具有相同的标签，并且 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)，如果你想关联 带有表单输入的其他信息，并将其读出。请查阅文章获得更多细节： [WebAIM's Advanced Form Labeling article](http://webaim.org/techniques/forms/advanced)
 
-还有许多其他有用的属性和状态，用于指示表单元素的状态。例如：`aria-disabled="true" `可用于表示该表单字段已禁用。许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。
+还有许多其他有用的属性和状态，用于指示表单元素的状态。例如：`aria-disabled="true"` 可用于表示该表单字段已禁用。许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。
 
 如果输入的禁用状态可能会改变，那么指示它何时发生以及结果是什么也是一个好主意。例如，在我们的[form-validation-checkbox-disabled.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html) 这一 demo 中，有一个复选框，选中后，启用另一个表单输入以允许输入更多信息。我们已经建立了一个隐藏的实时区域：
 

@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 <div>{{APIRef}}</div>
 
-<div>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong> из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.</div>
+<div>Метод <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.rotate()</code></strong> из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,16 +18,16 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 
 <dl>
  <dt><code>angle</code></dt>
- <dd>Угол поворота по часовой стрелке, в радианах. Вы также можете использовать <code><em>degree</em> * Math.PI / 180</code> если вы хотите использовать для угла значение градуса (degree).</dd>
+ <dd>Угол поворота по часовой стрелке, в радианах. Вы также можете использовать <code><em>degree</em> * Math.PI / 180</code> если вы хотите использовать для угла значение градуса (degree).</dd>
 </dl>
 
 <p>Центром вращения всегда является начало холста. Для изменения центра вращения, нам необходимо передвинуть холст, используя метод {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использование_метода_rotate">Использование метода <code>rotate</code></h3>
+<h3 id="Использование_метода_rotate">Использование метода <code>rotate</code></h3>
 
-<p>Ниже приведён простой пример кода, который использует метод <code>rotate</code>.</p>
+<p>Ниже приведён простой пример кода, который использует метод <code>rotate</code>.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -53,8 +53,8 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.rotate(45 * Math.PI / 180);

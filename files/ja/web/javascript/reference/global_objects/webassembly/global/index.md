@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
 {{JSRef}}
 
-**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。 JavaScript からアクセスでき、1つ以上の {{jsxref("WebAssembly.Module")}} インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
+**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。 JavaScript からアクセスでき、1つ以上の {{jsxref("WebAssembly.Module")}} インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
 
 ## コンストラクター
 

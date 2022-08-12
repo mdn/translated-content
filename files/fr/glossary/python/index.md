@@ -17,6 +17,6 @@ Python est développé sous une licence Open Source approuvée OSI, ce qui le re
 
 ## Pour approfondir
 
-- {{interwiki('wikipedia', 'Python (langage)', 'Python')}} sur Wikipédia
+- [Python](https://fr.wikipedia.org/wiki/Python_(langage)) sur Wikipédia
 - [Le site officiel de Python, où le télécharger et l'installer](https://www.python.org/)
 - [Un tutoriel sur python](http://www.tutorialspoint.com/python/index.htm) (en anglais)

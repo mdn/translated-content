@@ -11,7 +11,7 @@ translation_of: Web/CSS/Cascade
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong>종속(Cascade)</strong>이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} <a href="/ko/docs/Web/API/CSSStyleDeclaration">정의</a>가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
+<p><strong>종속(Cascade)</strong>이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} <a href="/ko/docs/Web/API/CSSStyleDeclaration">정의</a>가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.</p>
 
 <h2 id="Which_CSS_entities_participate_in_the_cascade">Which CSS entities participate in the cascade</h2>
 
@@ -55,7 +55,7 @@ translation_of: Web/CSS/Cascade
   <table class="standard-table">
    <thead>
     <tr>
-     <th scope="col"> </th>
+     <th scope="col"> </th>
      <th scope="col">Origin</th>
      <th scope="col">Importance</th>
     </tr>
@@ -77,7 +77,7 @@ translation_of: Web/CSS/Cascade
      <td>normal</td>
     </tr>
     <tr>
-     <td> </td>
+     <td> </td>
      <td>override {{deprecated_inline}}</td>
      <td>normal</td>
     </tr>
@@ -92,7 +92,7 @@ translation_of: Web/CSS/Cascade
      <td><em>see below</em></td>
     </tr>
     <tr>
-     <td> </td>
+     <td> </td>
      <td>override {{deprecated_inline}}</td>
      <td><code>!important</code></td>
     </tr>
@@ -184,46 +184,36 @@ translation_of: Web/CSS/Cascade
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Cascade")}}</td>
-   <td>{{Spec2("CSS4 Cascade")}}</td>
-   <td>Added the {{CSSxRef("revert")}} keyword, which allows rolling a property back a cascade level.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Cascade")}}</td>
-   <td>{{Spec2("CSS3 Cascade")}}</td>
-   <td>Removed the override cascade origin, as it was never used in a W3C standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "cascade.html", "the cascade")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Style","css.html#CSS-OverrideAndComputed","override cascade origin")}}</td>
-   <td>{{Spec2("DOM2 Style")}}</td>
-   <td>Defined the override cascade origin, but didn't elaborate further.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "#the-cascade", "the cascade")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">A very simple introduction to the CSS cascade</a></li>
- <li>{{CSS_Key_Concepts}}</li>
+ <li>CSS 주요 개념
+  <ul>
+    <li><a href="/ko/docs/Web/CSS/Syntax">CSS 문법</a></li>
+    <li><a href="/ko/docs/Web/CSS/At-rule">@규칙</a></li>
+    <li><a href="/ko/docs/Web/CSS/Comments">주석</a></li>
+    <li><a href="/ko/docs/Web/CSS/Specificity">명시도</a></li>
+    <li><a href="/ko/docs/Web/CSS/inheritance">상속</a></li>
+    <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">박스 모델</a></li>
+    <li><a href="/ko/docs/Web/CSS/Layout_mode">레이아웃 모드</a></li>
+    <li><a href="/ko/docs/Web/CSS/Visual_formatting_model">시각적 서식 모델</a></li>
+    <li><a href="/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">마진 중첩</a></li>
+    <li>값
+      <ul>
+        <li><a href="/ko/docs/Web/CSS/initial_value">초깃값</a></li>
+        <li><a href="/ko/docs/Web/CSS/computed_value">계산값</a></li>
+        <li><a href="/ko/docs/Web/CSS/resolved_value">결정값</a></li>
+        <li><a href="/ko/docs/Web/CSS/specified_value">지정값</a></li>
+        <li><a href="/ko/docs/Web/CSS/used_value">사용값</a></li>
+        <li><a href="/ko/docs/Web/CSS/actual_value">실제값</a></li>
+      </ul>
+    </li>
+    <li><a href="/ko/docs/Web/CSS/Value_definition_syntax">값 정의 구문</a></li>
+    <li><a href="/ko/docs/Web/CSS/Shorthand_properties">단축 속성</a></li>
+    <li><a href="/ko/docs/Web/CSS/Replaced_element">대체 요소</a></li>
+  </ul>
+  </li>
 </ul>

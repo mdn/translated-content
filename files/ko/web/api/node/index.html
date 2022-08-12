@@ -8,11 +8,11 @@ translation_of: Web/API/Node
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>Node</code></strong>는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다</p>
+<p><strong><code>Node</code></strong>는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다</p>
 
-<p>다음의 인터페이스들은 모두 <code>Node</code>로부터 메소드와 프라퍼티를 상속한다: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} ({{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDATASection")}}이 상속), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}</p>
+<p>다음의 인터페이스들은 모두 <code>Node</code>로부터 메소드와 프라퍼티를 상속한다: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} ({{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDATASection")}}이 상속), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}</p>
 
-<p>이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 null을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.</p>
+<p>이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 null을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.</p>
 
 <h2 id="프라퍼티_&lt;속성>">프라퍼티 &lt;속성&gt;</h2>
 
@@ -30,10 +30,10 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Node")}} representing the last direct child node of the node, or <code>null</code> if the node has no child.</dd>
  <dt>{{domxref("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{ gecko_minversion_inline("1.9.2") }}<br>
+ <dd>Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML. {{ gecko_minversion_inline("1.9.2") }}<br>
  Though recent specifications require <code>localName</code> to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.</dd>
  <dt>{{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}</dt>
- <dd>The namespace URI of this node, or <code>null</code> if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}<br>
+ <dd>The namespace URI of this node, or <code>null</code> if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees. {{ gecko_minversion_inline("1.9.2") }}<br>
  Though recent specifications require <code>namespaceURI</code> to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Node")}} representing the next node in the tree, or <code>null</code> if there isn't such node.</dd>
@@ -169,12 +169,12 @@ translation_of: Web/API/Node
 <p>The following function recursively cycles all child nodes of a node and executes a callback function upon them (and upon the parent node itself).</p>
 
 <pre class="brush: js">function DOMComb (oParent, oCallback) {
-  if (oParent.hasChildNodes()) {
-    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
-      DOMComb(oNode, oCallback);
-    }
-  }
-  oCallback.call(oParent);
+  if (oParent.hasChildNodes()) {
+    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
+      DOMComb(oNode, oCallback);
+    }
+  }
+  oCallback.call(oParent);
 }</pre>
 
 <h4 id="Syntax">Syntax</h4>
@@ -199,11 +199,11 @@ translation_of: Web/API/Node
 <p>The following example send to the <code>console.log</code> the text content of the body:</p>
 
 <pre class="brush: js">function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+  if (this.nodeValue) { console.log(this.nodeValue); }
 }
 
 onload = function () {
-  DOMComb(document.body, printContent);
+  DOMComb(document.body, printContent);
 };</pre>
 
 <h3 id="한_노드_안에_중첩된_모든_자식_제거">한 노드 안에 중첩된 모든 자식 제거</h3>
@@ -220,43 +220,7 @@ document.body.removeAll();</pre>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">주석</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Removed the following properties: <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
-    Removed the following methods: <code>isSupported()</code>, <code>hasAttributes()</code>, <code>isSameNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>The methods <code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, and <code>appendChild()</code> returns one more kind of error (<code>NOT_SUPPORTED_ERR</code>) if called on a {{domxref("Document")}}.<br>
-    The <code>normalize()</code> method has been modified so that {{domxref("Text")}} node can also be normalized if the proper {{domxref("DOMConfiguration")}} flag is set.<br>
-    Added the following methods: <code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
-    Added the following properties: <code>baseURI</code> and <code>textContent</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>The <code>ownerDocument</code> property was slightly modified so that {{domxref("DocumentFragment")}} also returns <code>null</code>.<br>
-    Added the following properties: <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
-    Added the following methods: <code>normalize()</code>, <code>isSupported()</code> and <code>hasAttributes()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1950641247', 'Node')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

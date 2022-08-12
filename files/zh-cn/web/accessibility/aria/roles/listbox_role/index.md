@@ -130,18 +130,18 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 当用户选择一个选项时，必须发生以下情况：
 
-1.  取消选择先前选择的选项，将 aria-selected 设置为 false，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
-2.  选择新选择的选项，在该选项上设置 aria-selected="true" 并将新选择的选项的外观更改为选中。
-3.  将列表框上的 `aria-activedescendant` 值更新为新选择的选项的 id
-4.  可视化处理选项的丢焦、聚焦和选定状态
+1. 取消选择先前选择的选项，将 aria-selected 设置为 false，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
+2. 选择新选择的选项，在该选项上设置 aria-selected="true" 并将新选择的选项的外观更改为选中。
+3. 将列表框上的 `aria-activedescendant` 值更新为新选择的选项的 id
+4. 可视化处理选项的丢焦、聚焦和选定状态
 
 #### 在多选列表框中切换选项的状态
 
 当用户点击一个选项、聚焦在一个选项时按下 <kbd>Space</kbd>或者以其他方式切换一个选项的状态，必须发生以下情况：
 
-1.  切换当前聚焦选项的 aria-selected 状态，如果它是 false，则将 aria-selected 的状态更改为 true，如果为 true，则将其更改为 false。
-2.  更改选项的外观以反映其选定状态
-3.  将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。
+1. 切换当前聚焦选项的 aria-selected 状态，如果它是 false，则将 aria-selected 的状态更改为 true，如果为 true，则将其更改为 false。
+2. 更改选项的外观以反映其选定状态
+3. 将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。
 
 > **备注：** ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 

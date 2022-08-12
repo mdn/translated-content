@@ -23,7 +23,7 @@ translation_of: Web/Guide/AJAX/Getting_Started
  <li>サーバーからデータを受け取って処理する</li>
 </ul>
 
-<h3 id="Step_1_–_How_to_make_an_HTTP_request" name="Step_1_–_How_to_make_an_HTTP_request">Step 1 –  HTTP リクエストの送り方</h3>
+<h3 id="Step_1_–_How_to_make_an_HTTP_request" name="Step_1_–_How_to_make_an_HTTP_request">Step 1 –  HTTP リクエストの送り方</h3>
 
 <p>JavaScript からサーバーに <a href="/ja/HTTP">HTTP</a> リクエストを送るためには、この機能を提供するオブジェクトのインスタンスが必要になります。これが <code>XMLHttpRequest</code> の登場する場所です。このクラスは、もともとは Internet Explorer で <code>XMLHTTP</code> と呼ばれる ActiveX オブジェクトとして導入されたものです。その後、 Mozilla や Safari やその他のブラウザがこれに追随し、 Microsoft 独自の ActiveX オブジェクトのメソッドやプロパティに対応する <code>XMLHttpRequest</code> オブジェクトを実装しました。いっぽう、 Microsoft も同様に XMLHttpRequest を実装しました。</p>
 
@@ -117,7 +117,7 @@ httpRequest.send();
 
 <p>なお、上記の段階は非同期要求を使用した場合 (<code>open()</code> の第三引数が未指定か <code>true</code> に設定されていた場合) のみ有効です。<strong>同期</strong>要求を使用した場合は関数を指定する必要はありませんが、これはユーザーの使い勝手をひどく損なうので、避けるべきです。</p>
 
-<h3 id="Step_3_–_A_Simple_Example" name="Step_3_–_A_Simple_Example">Step 3 –  簡単な例</h3>
+<h3 id="Step_3_–_A_Simple_Example" name="Step_3_–_A_Simple_Example">Step 3 –  簡単な例</h3>
 
 <p>さて、ここまでに紹介した方法を使って簡単な HTTP リクエストを実行してみましょう。われわれの JavaScript では <code>test.html</code> という名前の、 "これはテストです" と書かれた HTML 文書を要求し、その内容を <code>alert()</code> で表示します。注意として、この例では vanilla JavaScript を使っています — jQuery は入っていません。また HTML, XML, PHP ファイルは同一ディレクトリに置かれています。</p>
 

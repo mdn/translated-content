@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 <div>{{JSRef}}</div>
 
-<p>O método estático <code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.</p>
+<p>O método estático <code><strong>Reflect</strong></code><strong><code>.defineProperty()</code></strong> é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}</div>
 
@@ -39,19 +39,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 <h3 id="Erros">Erros</h3>
 
-<p>Um {{jsxref("TypeError")}}, se <code><var>target</var></code> não for um {{jsxref("Object")}}.</p>
+<p>Um {{jsxref("TypeError")}}, se <code><var>target</var></code> não for um {{jsxref("Object")}}.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O método <code>Reflect.defineProperty</code> permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.</p>
+<p>O método <code>Reflect.defineProperty</code> permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.</p>
 
 <div class="blockIndicator note">
-<p><strong>Uma diferença fundamental:</strong> <code>Object.defineProperty</code> retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. <code>Reflect.defineProperty</code>, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.</p>
+<p><strong>Uma diferença fundamental:</strong> <code>Object.defineProperty</code> retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. <code>Reflect.defineProperty</code>, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Reflect.defineProperty">Usando <code>Reflect.defineProperty()</code></h3>
+<h3 id="Usando_Reflect.defineProperty">Usando <code>Reflect.defineProperty()</code></h3>
 
 <pre class="brush: js notranslate">let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true

@@ -31,7 +31,7 @@ translation_of: Learn/Server-side/Django/web_application_security
 
 ## 概述
 
-[web 安全](/zh-CN/docs/Web/Security)[ ](/en-US/docs/Web/Security)主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。
+[web 安全](/zh-CN/docs/Web/Security)主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。
 
 > **警告：** 切记，对于网站安全来说最重要一点就是“**永远不要相信浏览器端提交的数据**”。 这些数据包括使用 `GET` 方式请求时 URL 中的参数，`POST` 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。
 
@@ -47,17 +47,17 @@ XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击
 
 Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
 
-1.  使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
-2.  在浏览器中打开网站，并用超级用户身份登录。
-3.  进入创建作者页面 (地址可能会是：[`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/))。
-4.  输入姓名、生日等信息，随后在 Last Name 这个字段里面填入以下的内容：
+1. 使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
+2. 在浏览器中打开网站，并用超级用户身份登录。
+3. 进入创建作者页面 (地址可能会是：[`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/))。
+4. 输入姓名、生日等信息，随后在 Last Name 这个字段里面填入以下的内容：
     `<script>alert('Test alert');</script>`
     ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **备注：** 这一段代码并没有任何杀伤力，在执行的时候只会在浏览器中弹出一个警告提示框。如果这个警告提示框出现，则表明本网站存在可被 XSS 攻击的漏洞。
 
-5.  点击 **Submit** 按钮保存信息。
-6.  保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的`alert()`部分并没有执行，而只是用文本的方式直接显示了出来。![Author detail view XSS test](author_detail_alert_xss.png)
+5. 点击 **Submit** 按钮保存信息。
+6. 保存后的作者信息将会显示为下图的样式。因为 XSS 防护措施的存在，注入代码中的`alert()`部分并没有执行，而只是用文本的方式直接显示了出来。![Author detail view XSS test](author_detail_alert_xss.png)
 
 如果你有兴趣阅读下页面的 HTML 源码，则会发现危险的字符已被转义成了无害的字符 (例如： `>` 被转义为了 `&gt;` )
 
@@ -97,7 +97,7 @@ CSRF(英语：Cross-site request forgery，通常简称：CSRF 或 XSRF) 攻击�
 
 运行 Django 开发服务器，然后使用超级管理员账号进行登录。将上面的代码贴到一个文件中，并在浏览器中打开这个文件，随后你就会看到一个 CSRF 错误，这是因为 Django 的安全机制防护了此类的攻击。
 
-在表单定义的时候加入 `{% csrf_token %} `这个模板标签，CSRF 保护功能即可启用。在模板渲染的时候，这个 token 在 HTML 代码中将会按照下面的格式显示，包含了一个与当前用户和当前浏览器关联的值。
+在表单定义的时候加入 `{% csrf_token %}` 这个模板标签，CSRF 保护功能即可启用。在模板渲染的时候，这个 token 在 HTML 代码中将会按照下面的格式显示，包含了一个与当前用户和当前浏览器关联的值。
 
 ```html
 <input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' />
@@ -116,7 +116,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 - SQL 注入防护
   - : SQL 注入漏洞可以让攻击者直接对网站数据库执行构造好的 SQL 语句，在无需用户权限的情况下即可实现对数据的访问、修改甚至是删除。绝大多数的情况下，使用 Django 的查询集/模型直接进行数据库访问时，实际使用的 SQL 语句已经被底层的数据库驱动妥善地进行了转义。如果必须要直接执行自定义的 SQL 语句，那么也请一定要注意防范 SQL 注入的问题。
 - 点击劫持防护
-  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe> ](/en-US/docs/Web/HTML/Element/iframe)标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
+  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/en-US/docs/Web/HTML/Element/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
 - 强制 SSL/HTTPS
   - : web 服务器可通过启用 SSL/HTTPS 来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量(强烈建议启用 HTTPS)。如果 HTTPS 已启用，Django 还提供了一起实用的保护措施:
 

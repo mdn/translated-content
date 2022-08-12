@@ -17,7 +17,7 @@ original_slug: Web/CSS/Синтаксис
 
 <h2 id="Объявления_CSS">Объявления CSS</h2>
 
-<p>Задание CSS-свойствам определённых значений — это основная функция CSS. Пара свойство-значение называется <em>объявлением</em>. Работа CSS движка заключается в поиске соответствий между объявлениями стилей и элементом на странице, чтобы правильно отобразить и форматировать этот элемент.</p>
+<p>Задание CSS-свойствам определённых значений — это основная функция CSS. Пара свойство-значение называется <em>объявлением</em>. Работа CSS движка заключается в поиске соответствий между объявлениями стилей и элементом на странице, чтобы правильно отобразить и форматировать этот элемент.</p>
 
 <p>И свойство, и значения регистрозависимы. Пара свойство-значение разделяется двоеточием, '<code>:</code>' (<code>U+003A COLON</code>), а пробелы до, между и после свойства или значения игнорируются.</p>
 
@@ -31,11 +31,11 @@ original_slug: Web/CSS/Синтаксис
 
 <p><a href="/@api/deki/files/6165/=css_syntax_-_block.png"><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style="border: 1px solid black; padding: 1em;"></a></p>
 
-<p>Такие блоки называются <strong>блоками объявлений</strong>, и объявления в них разделяются точкой с запятой, '<code>;</code>' (<code>U+003B SEMICOLON</code>). Блок объявлений может быть пустым, т.е. не содержать объявлений. Пробелы между объявлениями игнорируются. Последнее объявление блока не нуждается в точке с запятой, хотя считается хорошим тоном добавить её для того, чтобы не допустить упущение этого знака при добавлении другого объявления в будущем.</p>
+<p>Такие блоки называются <strong>блоками объявлений</strong>, и объявления в них разделяются точкой с запятой, '<code>;</code>' (<code>U+003B SEMICOLON</code>). Блок объявлений может быть пустым, т.е. не содержать объявлений. Пробелы между объявлениями игнорируются. Последнее объявление блока не нуждается в точке с запятой, хотя считается хорошим тоном добавить её для того, чтобы не допустить упущение этого знака при добавлении другого объявления в будущем.</p>
 
 <p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<div class="note">Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.</div>
+<div class="note">Содержимое блока объявлений CSS, т. е. объявления, разделённые точкой с запятой. Блок объявлений может быть помещён внутри атрибута style HTML-документа без фигурных скобок.</div>
 
 <h2 id="CSS_rulesets">CSS rulesets</h2>
 
@@ -63,7 +63,7 @@ This leads to an important consequence: if one single basic selector is invalid,
 
 <ul>
  <li><strong>Rulesets</strong> (or <em>rules</em>) that, as seen, associate a collection of CSS declarations to a condition described by a selector.</li>
- <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href="/en/CSS/At-rule" title="At-rule">at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
+ <li><strong>At-rules</strong> that start with an at sign, '<code>@</code>' (<code>U+0040 COMMERCIAL AT</code>), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of <a href="/en/CSS/At-rule" title="At-rule">at-rules</a>, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).</li>
 </ul>
 
 <p>Any statement which isn't a rule or an at-rule is invalid and ignored.</p>

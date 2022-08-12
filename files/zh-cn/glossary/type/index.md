@@ -15,5 +15,5 @@ translation_of: Glossary/Type
 
 ### 基本知识
 
-- 维基百科的 {{Interwiki("wikipedia", "Data type")}}
+- 维基百科的 [Data type](https://zh.wikipedia.org/wiki/Data_type)
 - [JavaScript 的数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)

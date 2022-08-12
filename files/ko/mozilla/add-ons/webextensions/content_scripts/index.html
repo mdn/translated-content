@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 <p>A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).</p>
 
-<p><a href="/en-US/Add-ons/WebExtensions/Background_scripts">Background scripts</a> can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension JavaScript APIs</a>, but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.</p>
+<p><a href="/en-US/Add-ons/WebExtensions/Background_scripts">Background scripts</a> can access all the <a href="/en-US/Add-ons/WebExtensions/API">WebExtension JavaScript APIs</a>, but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.</p>
 
 <p>Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.</p>
 
@@ -159,7 +159,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the <code><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> key in manifest.json, then its content scripts get access that domain as well.</p>
 
-<p>This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code> headers like a request from the page itself would, this is often preferable to prevent the request from revealing its cross-orign nature. From version 58 onwards extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead. For cross-browser extensions their presence must be feature-detected.</p>
+<p>This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code> headers like a request from the page itself would, this is often preferable to prevent the request from revealing its cross-orign nature. From version 58 onwards extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead. For cross-browser extensions their presence must be feature-detected.</p>
 
 <h2 id="Communicating_with_background_scripts">Communicating with background scripts</h2>
 
@@ -174,7 +174,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <table class="fullwidth-table standard-table">
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col">In content script</th>
    <th scope="col">In background script</th>
   </tr>
@@ -235,7 +235,7 @@ function notify(message) {
 <ul>
  <li>one side listens for connections using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code></li>
  <li>the other side calls either <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (if connecting to a content script) or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> (if connecting to a background script). This returns a <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object.</li>
- <li>the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> listener gets passed its own <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object.</li>
+ <li>the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> listener gets passed its own <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object.</li>
 </ul>
 
 <p>Once each side has a port, the two sides can exchange messages using <code>runtime.Port.postMessage()</code> to send a message, and <code>runtime.Port.onMessage</code> to receive messages.</p>
@@ -300,7 +300,7 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>If you have multiple content scripts communicating at the same time, you might want to store each connection in an array.</p>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
@@ -310,7 +310,7 @@ browser.browserAction.onClicked.addListener(function() {
 var ports = []
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id]    = p
   //...
 }
 
@@ -318,11 +318,11 @@ browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
   ports.forEach(p =&gt; {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+        p.postMessage({greeting: "they clicked the button!"})
+    })
 });</pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
 </ul>
@@ -400,7 +400,7 @@ window.addEventListener("message", function(event) {
  <li>if you call <code>window.eval()</code>, it runs code in the context of the page.</li>
 </ul>
 
-<p><span>파이어폭스</span>에서:</p>
+<p>파이어폭스에서:</p>
 
 <ul>
  <li><code>eval()</code>을 호출하면, 콘텐트 스크립트의 컨텍스트에서 코드를 실행한다.</li>
@@ -469,7 +469,7 @@ In page script, window.y: undefined</pre>
 var original = console.log;
 
 console.log = function() {
-  original(true);
+  original(true);
 }
 </pre>
 

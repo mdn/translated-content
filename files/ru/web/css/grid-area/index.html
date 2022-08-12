@@ -3,7 +3,7 @@ title: grid-area
 slug: Web/CSS/grid-area
 translation_of: Web/CSS/grid-area
 ---
-<p>CSS-свойство <code>grid-area</code> - это <a href="/en-US/docs/Web/CSS/Shorthand_properties">сокращённая форма записи</a> для свойств {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} и {{cssxref("grid-column-end")}}. Определяет размер и местоположение грид-элемента в пределах {{glossary("grid rows", "grid row")}}. Задаёт края {{glossary("grid areas", "грид-области")}} грид-элемента.</p>
+<p>CSS-свойство <code>grid-area</code> - это <a href="/en-US/docs/Web/CSS/Shorthand_properties">сокращённая форма записи</a> для свойств {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} и {{cssxref("grid-column-end")}}. Определяет размер и местоположение грид-элемента в пределах {{glossary("grid rows", "grid row")}}. Задаёт края {{glossary("grid areas", "грид-области")}} грид-элемента.</p>
 
 <pre class="brush: css no-line-numbers">/* Ключевые слова в качестве значений */
 grid-area: auto;
@@ -30,13 +30,13 @@ grid-area: initial;
 grid-area: unset;
 </pre>
 
-<p>Если заданы четыре значения <code>&lt;grid-line&gt;</code> , то первое значение определяет <code>grid-row-start</code> , второе значение -  <code>grid-column-start</code> , третье значение -  <code>grid-row-end</code> и четвёртое значение -  <code>grid-column-end</code>.</p>
+<p>Если заданы четыре значения <code>&lt;grid-line&gt;</code> , то первое значение определяет <code>grid-row-start</code> , второе значение -  <code>grid-column-start</code> , третье значение -  <code>grid-row-end</code> и четвёртое значение -  <code>grid-column-end</code>.</p>
 
-<p>Если  <code>grid-column-end</code> опущено, а <code>grid-column-start</code> в значении {{cssxref("&lt;custom-ident&gt;")}}, <code>grid-column-end</code> устанавливается в это значение <code>&lt;custom-ident&gt;</code>; иначе оно устанавливается в значение <code>auto</code>.</p>
+<p>Если  <code>grid-column-end</code> опущено, а <code>grid-column-start</code> в значении {{cssxref("&lt;custom-ident&gt;")}}, <code>grid-column-end</code> устанавливается в это значение <code>&lt;custom-ident&gt;</code>; иначе оно устанавливается в значение <code>auto</code>.</p>
 
-<p>Когда <code>grid-row-end</code> опущено, а <code>grid-row-start</code> в значении <code>&lt;custom-ident&gt;</code>, то <code>grid-row-end</code> устанавливается в это значение <code>&lt;custom-ident&gt;</code>; иначе оно устанавливается в значение <code>auto</code>.</p>
+<p>Когда <code>grid-row-end</code> опущено, а <code>grid-row-start</code> в значении <code>&lt;custom-ident&gt;</code>, то <code>grid-row-end</code> устанавливается в это значение <code>&lt;custom-ident&gt;</code>; иначе оно устанавливается в значение <code>auto</code>.</p>
 
-<p>Когда <code>grid-column-start</code> опущено, а <code>grid-row-start</code> в значении <code>&lt;custom-ident&gt;</code>, все четыре свойства длинной записи устанавливаются в это значение, иначе они устанавливаются в значение <code>auto</code>.</p>
+<p>Когда <code>grid-column-start</code> опущено, а <code>grid-row-start</code> в значении <code>&lt;custom-ident&gt;</code>, все четыре свойства длинной записи устанавливаются в это значение, иначе они устанавливаются в значение <code>auto</code>.</p>
 
 <p>Свойство grid-area также может быть установлено в значение {{cssxref("&lt;custom-ident&gt;")}} , которое действует, как имя области. В дальнейшем разместить область в гриде по имени можно с помощью свойства {{cssxref("grid-template-areas")}}.</p>
 
@@ -48,12 +48,12 @@ grid-area: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>- ключевое слово, говорящее о том, что свойство не вносит никаких изменений в размещение грид-элемента. На элемент действует авторазмещение или размер элемента по умолчанию  <code>1</code>.  <em>(то есть, элемент занимает одну ячейку грид-сетки в заданном направлении)</em></dd>
+ <dd>- ключевое слово, говорящее о том, что свойство не вносит никаких изменений в размещение грид-элемента. На элемент действует авторазмещение или размер элемента по умолчанию  <code>1</code>.  <em>(то есть, элемент занимает одну ячейку грид-сетки в заданном направлении)</em></dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>если есть именованная линия с именем  '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>', то грид-элемент привязывается к первой из таких линий.
- <p class="note"><strong>Замечание:</strong> Именованные грид-области автоматически генерируют неявные именованные линии с именами подобного формата, поэтому запись <code>grid-area: foo;</code> выберет начальный/конечный край этой именованной грид-области (если, конечно, другая линия с именем <code>foo-start</code>/<code>foo-end</code> не была явно определена раньше).</p>
+ <dd>если есть именованная линия с именем  '<code>&lt;custom-ident&gt;-start</code>'/'<code>&lt;custom-ident&gt;-end</code>', то грид-элемент привязывается к первой из таких линий.
+ <p class="note"><strong>Замечание:</strong> Именованные грид-области автоматически генерируют неявные именованные линии с именами подобного формата, поэтому запись <code>grid-area: foo;</code> выберет начальный/конечный край этой именованной грид-области (если, конечно, другая линия с именем <code>foo-start</code>/<code>foo-end</code> не была явно определена раньше).</p>
 
- <p>В противном случае, значение расценивается, как если бы число  <code>1</code> было задано вместе с  <code>&lt;custom-ident&gt;</code>.</p>
+ <p>В противном случае, значение расценивается, как если бы число  <code>1</code> было задано вместе с  <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
  <dd>Contributes the <em>n</em>th grid line to the grid item’s placement. If a negative integer is given, it instead counts in reverse, starting from the end edge of the explicit grid.
@@ -137,7 +137,7 @@ grid-area: unset;
 <ul>
  <li>Related CSS properties: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}</li>
  <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></em></li>
- <li>Video tutorial: <em><a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
+ <li>Video tutorial: <em><a href="http://gridbyexample.com/video/grid-template-areas/">Grid Template Areas</a></em></li>
 </ul>
 
 <section id="Quick_links">

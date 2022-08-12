@@ -16,9 +16,9 @@ original_slug: Web/API/MutationObserverInit/attributeFilter
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p><span class="seoSummary"><strong>{{domxref("MutationObserverInit")}}</strong> 字典的可选属性 <strong><code>attributeFilter</code></strong> 是一个字符串数组，用于指定要</span>监听<span class="seoSummary">变化的属性名称。</span> 如果指定了该属性，则 {{domxref("MutationObserverInit.attributes", "attributes")}} 无论是否为 <code>true</code>，属性监听都将启用。</p>
+<p><span class="seoSummary"><strong>{{domxref("MutationObserverInit")}}</strong> 字典的可选属性 <strong><code>attributeFilter</code></strong> 是一个字符串数组，用于指定要</span>监听<span class="seoSummary">变化的属性名称。</span> 如果指定了该属性，则 {{domxref("MutationObserverInit.attributes", "attributes")}} 无论是否为 <code>true</code>，属性监听都将启用。</p>
 
-<p>如果属性 {{domxref("MutationObserverInit.attributes", "attributes")}} 设置为 <code>true</code> ，但options对象中未包含 <code>attributeFilter</code> ，则所有属性的变化都会被监听。</p>
+<p>如果属性 {{domxref("MutationObserverInit.attributes", "attributes")}} 设置为 <code>true</code> ，但options对象中未包含 <code>attributeFilter</code> ，则所有属性的变化都会被监听。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -69,29 +69,10 @@ observer.observe(userListElement, {
 
 <p>当observe()被调用时， options对象中指定了<code>attributeFilter</code>和{{domxref("MutationObserverInit.subtree", "subtree")}}，所以id为“<code>userlist</code>”的元素的所有子树的所有节点的属性值都会被监听。{{domxref("MutationObserverInit.attributeOldValue", "attributeOldValue")}}被设置为<code>true</code>，因为我们希望在监听到值变化时可以获取到上一个值。</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-mutationobserverinit-attributefilter', 'MutationObserverInit: attributeFilter')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("api.MutationObserverInit.attributeFilter")}}</p>
-</div>
+{{Compat}}

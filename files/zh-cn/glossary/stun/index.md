@@ -15,7 +15,7 @@ translation_of: Glossary/STUN
 
 ### 通用知识
 
-- {{Interwiki("wikipedia", "STUN")}} 在 维基百科
+- [STUN](https://zh.wikipedia.org/wiki/STUN) 在 维基百科
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
 
 ### 技术参考

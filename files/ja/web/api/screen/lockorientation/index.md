@@ -48,9 +48,9 @@ lockOrientation(orientation)
       - : 第二ランドスケープモードである画面の向きを表します。
         第二ランドスケープモードとは、端末を通常の向きが横向きでそこから 180° 回転させた場合と、端末の通常の位置が縦向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
     - `portrait`
-      - : `portrait-primary` と `portrait-secondary` の両方を表します。
+      - : `portrait-primary` と `portrait-secondary` の両方を表します。
     - `landscape`
-      - : `landscape-primary` と `landscape-secondary` の両方を表します。
+      - : `landscape-primary` と `landscape-secondary` の両方を表します。
     - `default`
       - : 端末に自然な向きによって `portrait-primary` または `landscape-primary` が選ばれます。たとえば、ディスプレイの解像度が 1280\*800 なら、 `default` は `landscape` になるでしょうし、800\*1280 なら、 `default` は `portrait` になるでしょう。
 

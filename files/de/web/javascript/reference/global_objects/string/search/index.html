@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/suchen
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <strong><code>search()</code></strong> methode führt eine Suche für eine Übereinstimmung von einem Regulären Ausdruck und diesem {{jsxref("String")}} Objekt.</p>
+<p>Die <strong><code>search()</code></strong> methode führt eine Suche für eine Übereinstimmung von einem Regulären Ausdruck und diesem {{jsxref("String")}} Objekt.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-search.html")}}</div>
 
@@ -27,20 +27,20 @@ original_slug: Web/JavaScript/Reference/Global_Objects/String/suchen
 
 <dl>
  <dt><code>regexp</code></dt>
- <dd>Ein Regulär-Ausdruck Objekt. Wenn ein nicht-RegExp Objekt <code>obj</code> eingereicht wird, wird es durch <code>new RegExp(obj)</code> zu {{jsxref("RegExp")}} konvertiert.</dd>
+ <dd>Ein Regulär-Ausdruck Objekt. Wenn ein nicht-RegExp Objekt <code>obj</code> eingereicht wird, wird es durch <code>new RegExp(obj)</code> zu {{jsxref("RegExp")}} konvertiert.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p>Die erste übereinstimmung zwischen dem Regulären Audruck und und der gegebenen Zeichenkette; wenn nicht gefunden, <strong>-1</strong>.</p>
+<p>Die erste übereinstimmung zwischen dem Regulären Audruck und und der gegebenen Zeichenkette; wenn nicht gefunden, <strong>-1</strong>.</p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Wenn du wissen willst ob ein Muster gefunden wurde, und was sein Index ist nutze <code>search()</code> (wenn du nur wissen willst ob es das gibt nutze die ähnliche {{jsxref("RegExp.prototype.test()", "test()")}} Methode auf dem RegExp Prototyp, der einen boolean zurückgibt); für mehr informationen (aber langsamererere Ausführung) nutze {{jsxref("String.prototype.match()", "match()")}} (ähnlich zum Ausdruck {{jsxref("RegExp.prototype.exec()", "exec()")}}).</p>
+<p>Wenn du wissen willst ob ein Muster gefunden wurde, und was sein Index ist nutze <code>search()</code> (wenn du nur wissen willst ob es das gibt nutze die ähnliche {{jsxref("RegExp.prototype.test()", "test()")}} Methode auf dem RegExp Prototyp, der einen boolean zurückgibt); für mehr informationen (aber langsamererere Ausführung) nutze {{jsxref("String.prototype.match()", "match()")}} (ähnlich zum Ausdruck {{jsxref("RegExp.prototype.exec()", "exec()")}}).</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<h3 id="Benutzung_von_search">Benutzung von <code>search()</code></h3>
+<h3 id="Benutzung_von_search">Benutzung von <code>search()</code></h3>
 
 <p>Das folgende Beispiel durchsucht eine Zeichenkette mit 2 verschiedenen regex Objekten, um eine erfolgreiche, und unerfolgreiche Suche zu zeigen.</p>
 
@@ -89,11 +89,11 @@ console.log(str.search(re2)); // gibt -1 zurück kann "." nicht finden</pre>
 <h2 id="Gecko-spezifische_Hinweise">Gecko-spezifische Hinweise</h2>
 
 <ul>
- <li><code>flags</code> war ein nicht-standard Zweitargument nur in Gecko verfügbar: <var>str</var>.search(<var>regexp, flags</var>)</li>
- <li>Vorher {{Gecko("8.0")}}, <code>search()</code> war falsch eingeführt; wenn es ohne oder mit {{jsxref("undefined")}} parametern Ausgeführt wurde, würde es mit 'undefined' übereinstimmen, anstatt mit einer leeren Zeichenkette übereinzustimmen. Das wurde behoben; jetzt ist <code>'a'.search()</code> und <code>'a'.search(undefined)</code> korrekt und geben 0 zurück.</li>
- <li>Ab Gecko 39 {{geckoRelease(39)}}, gibt das nicht-Standard <code>flag</code> Argument eine Konsolenwarnung ({{bug(1142351)}}).</li>
- <li>Ab Gecko 47 {{geckoRelease(47)}}, ist das nicht-Standard <code>flag</code> Argument nicht länger unterstützt in nicht-veröffentlichten Builds und wird bald vollständig entfernt ({{bug(1245801)}}).</li>
- <li>Ab Gecko 49 {{geckoRelease(49)}}, ist das nicht-Standard <code>flag</code> Argument nicht länger unterstützt ({{bug(1108382)}}).</li>
+ <li><code>flags</code> war ein nicht-standard Zweitargument nur in Gecko verfügbar: <var>str</var>.search(<var>regexp, flags</var>)</li>
+ <li>Vorher {{Gecko("8.0")}}, <code>search()</code> war falsch eingeführt; wenn es ohne oder mit {{jsxref("undefined")}} parametern Ausgeführt wurde, würde es mit 'undefined' übereinstimmen, anstatt mit einer leeren Zeichenkette übereinzustimmen. Das wurde behoben; jetzt ist <code>'a'.search()</code> und <code>'a'.search(undefined)</code> korrekt und geben 0 zurück.</li>
+ <li>Ab Gecko 39 {{geckoRelease(39)}}, gibt das nicht-Standard <code>flag</code> Argument eine Konsolenwarnung ({{bug(1142351)}}).</li>
+ <li>Ab Gecko 47 {{geckoRelease(47)}}, ist das nicht-Standard <code>flag</code> Argument nicht länger unterstützt in nicht-veröffentlichten Builds und wird bald vollständig entfernt ({{bug(1245801)}}).</li>
+ <li>Ab Gecko 49 {{geckoRelease(49)}}, ist das nicht-Standard <code>flag</code> Argument nicht länger unterstützt ({{bug(1108382)}}).</li>
 </ul>
 
 <h2 id="Siehe_auch">Siehe auch</h2>

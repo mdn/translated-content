@@ -176,7 +176,7 @@ Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `pare
 - `parentNode`
   - : Le nœud parent (`Node Object`)
 - `callbackFunction`
-  - : La fonction de rappel ([`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)).
+  - : La fonction de rappel ([`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemples d'utilisation
 

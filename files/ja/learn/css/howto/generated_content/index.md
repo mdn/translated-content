@@ -50,7 +50,7 @@ A text where I need to <span class="ref">something</span>
 
 {{ EmbedLiveSample('Text_content', 600, 30) }}
 
-スタイルシートの文字セットは規定で UTF-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定することができます。CSS 仕様書の [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) をご覧ください。
+スタイルシートの文字セットは規定で UTF-8 ですが、リンク、スタイルシート自身の内部、もしくはその他の方法で指定することができます。CSS 仕様書の [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23) をご覧ください。
 
 個々の文字は、バックスラッシュをエスケープ文字として使用して、エスケープ機構を使って記述することもできます。例えば、 "\265B" はチェスの黒クイーン ♛ です。詳しくは CSS 仕様書の [Referring to characters not represented in a character encoding](https://www.w3.org/TR/CSS21/syndata.html#q24) と [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6) をご覧ください。
 
@@ -58,7 +58,7 @@ A text where I need to <span class="ref">something</span>
 
 要素の前や後ろに画像を追加するには、 {{ cssxref("content") }} プロパティの値として画像ファイルの URL を記述します。
 
-このルールは `glossary` を持つすべてのリンクの後ろに、空白とアイコンを追加します。
+このルールは `glossary` を持つすべてのリンクの後ろに、空白とアイコンを追加します。
 
 #### HTML
 

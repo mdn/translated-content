@@ -44,7 +44,7 @@ void (2 == '2'); // void (2 == '2'), undefined を返す
 ```js
 void function iife() {
 
-  console.log("Executed!");
+  console.log("Executed!");
 
 }();
 

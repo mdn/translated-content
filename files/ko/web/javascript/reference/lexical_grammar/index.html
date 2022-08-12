@@ -371,14 +371,14 @@ false</pre>
 
 <h5 id="Exponential">Exponential</h5>
 
-<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and<em> </em><code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
+<p>The decimal exponential literal is specified by the following format: <code>beN</code>; where <code>b</code> is a base number (integer or floating), followed by <code>e</code> char (which serves as separator or <em>exponent indicator</em>) and<em> </em><code>N</code>, which is <em>exponent</em> or <em>power</em> number – a signed integer (as per 2019 ECMA-262 specs): </p>
 
-<pre >0e-5   // =&gt; 0
-0e+5   // =&gt; 0
-5e1    // =&gt; 50
+<pre >0e-5   // =&gt; 0
+0e+5   // =&gt; 0
+5e1    // =&gt; 50
 175e-2 // =&gt; 1.75
-1e3    // =&gt; 1000
-1e-3   // =&gt; 0.001</pre>
+1e3    // =&gt; 1000
+1e-3   // =&gt; 0.001</pre>
 
 <h4 id="2진법">2진법</h4>
 
@@ -411,28 +411,28 @@ var m = 0o644; // 420
 
 <h4 id="BigInt_literal">BigInt literal</h4>
 
-<p>The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending <code>n</code> to the end of an integer.</p>
+<p>The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending <code>n</code> to the end of an integer.</p>
 
-<pre >123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
+<pre >123456789123456789n     // 123456789123456789
+0o777777777777n         // 68719476735
+0x123456789ABCDEFn      // 81985529216486895‬
 0b11101001010101010101n // 955733
 </pre>
 
-<p>Note that legacy octal numbers with just a leading zero won't work for <code>BigInt</code>:</p>
+<p>Note that legacy octal numbers with just a leading zero won't work for <code>BigInt</code>:</p>
 
 <pre class="example-bad ">// 0755n
 // SyntaxError: invalid BigInt syntax</pre>
 
-<p>For octal <code>BigInt</code> numbers, always use zero followed by the letter "o" (uppercase or lowercase):</p>
+<p>For octal <code>BigInt</code> numbers, always use zero followed by the letter "o" (uppercase or lowercase):</p>
 
 <pre class="example-good ">0o755n</pre>
 
-<p>For more information about <code>BigInt</code>, see also <a href="/en-US/docs/Web/JavaScript/Data_structures#BigInt_type">JavaScript data structures</a>.</p>
+<p>For more information about <code>BigInt</code>, see also <a href="/en-US/docs/Web/JavaScript/Data_structures#BigInt_type">JavaScript data structures</a>.</p>
 
 <h4 id="Numeric_separators">Numeric separators</h4>
 
-<p>To improve readability for numeric literals, underscores (<code>_</code>, <code>U+005F</code>) can be used as separators:</p>
+<p>To improve readability for numeric literals, underscores (<code>_</code>, <code>U+005F</code>) can be used as separators:</p>
 
 <pre >// separators in decimal numbers
 1_000_000_000_000
@@ -607,41 +607,11 @@ return;
 a + b;
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2("ES1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-7', 'Lexical Conventions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Added: Binary and Octal Numeric literals, Unicode code point escapes, Templates</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Lexical Grammar')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.grammar")}}</p>
 

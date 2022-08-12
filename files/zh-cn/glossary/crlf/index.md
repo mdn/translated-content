@@ -14,5 +14,5 @@ translation_of: Glossary/CRLF
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Newline#In_programming_languages", "Newline")}} on Wikipedia
-- {{interwiki("wikipedia", "Carriage_return#Computers", "Carriage return")}} on Wikipedia
+- [Newline](https://zh.wikipedia.org/wiki/Newline#In_programming_languages) on Wikipedia
+- [Carriage return](https://zh.wikipedia.org/wiki/Carriage_return#Computers) on Wikipedia

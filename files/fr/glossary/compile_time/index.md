@@ -14,5 +14,4 @@ Le _moment de compilation_ est le moment allant du premier chargement du program
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Compile time")}} sur Wikipédia (anglais)
-- [Compile Time](https://en.wikipedia.org/wiki/Compile_time) sur Wikipédia(anglais)
+- [Compilateur](https://fr.wikipedia.org/wiki/Compilateur) sur Wikipédia

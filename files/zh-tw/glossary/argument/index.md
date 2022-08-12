@@ -13,7 +13,7 @@ translation_of: Glossary/Argument
 
 ### 基礎知識
 
-- {{Interwiki("wikipedia", "Parameter_(computer_programming)", "Difference between Parameter and Argument")}} on Wikipedia
+- [Difference between Parameter and Argument](https://zh.wikipedia.org/wiki/Parameter_(computer_programming)) on Wikipedia
 
 ### 技術參考
 

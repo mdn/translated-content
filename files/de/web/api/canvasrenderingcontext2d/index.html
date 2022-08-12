@@ -18,7 +18,7 @@ translation_of: Web/API/CanvasRenderingContext2D
 
 <h2 id="Ein_einfaches_Beispiel">Ein einfaches Beispiel</h2>
 
-<p>Um eine <code>CanvasRenderingContext2D</code> Instanz zu erhalten, muss man erst ein  HTML <code>&lt;canvas&gt;</code> Element haben, mit dem man arbeiten kann:</p>
+<p>Um eine <code>CanvasRenderingContext2D</code> Instanz zu erhalten, muss man erst ein  HTML <code>&lt;canvas&gt;</code> Element haben, mit dem man arbeiten kann:</p>
 
 <pre class="brush: html">&lt;canvas id="my-house" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 
@@ -81,7 +81,7 @@ ctx.stroke();
 
 <h3 id="Linienstile">Linienstile</h3>
 
-<p>Die folgenden Methoden und Eigenschaften beeinflussen die Art und Weise, wie Linien gezeichnet werden.</p>
+<p>Die folgenden Methoden und Eigenschaften beeinflussen die Art und Weise, wie Linien gezeichnet werden.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.lineWidth")}}</dt>
@@ -189,7 +189,7 @@ ctx.stroke();
  <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}</dt>
  <dd>Scrollt den aktuellen Pfad oder einen bestimmten Pfad in Sicht.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clip()")}}</dt>
- <dd>Erzeugt einen zugeschnittenen Pfad aus den aktuellen Unterpfaden. Alles, was nach <code>clip()</code> gezeichnet wird, erscheint nur im zugeschnittenen Pfad. Für ein Beispiel, siehe  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">Clipping paths</a> im Canvas Tutorial.</dd>
+ <dd>Erzeugt einen zugeschnittenen Pfad aus den aktuellen Unterpfaden. Alles, was nach <code>clip()</code> gezeichnet wird, erscheint nur im zugeschnittenen Pfad. Für ein Beispiel, siehe  <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">Clipping paths</a> im Canvas Tutorial.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInPath()")}}</dt>
  <dd>Gibt zurück, ob der angegebene Punkt im aktuellen Pfad enthalten ist oder nicht.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}</dt>
@@ -255,7 +255,7 @@ ctx.stroke();
 
 <h3 id="Der_Leinwand-Zustand">Der Leinwand-Zustand</h3>
 
-<p>Der <code>CanvasRenderingContext2D</code>-Renderkontext enthält eine Vielzahl an Zeichnungszuständen (Attribute für Linienstile, Füllstile, Schattenstile, Textstile). Die folgenden Methoden helfen Ihnen mit diesen Zuständen zu arbeiten:</p>
+<p>Der <code>CanvasRenderingContext2D</code>-Renderkontext enthält eine Vielzahl an Zeichnungszuständen (Attribute für Linienstile, Füllstile, Schattenstile, Textstile). Die folgenden Methoden helfen Ihnen mit diesen Zuständen zu arbeiten:</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save()")}}</dt>
@@ -270,9 +270,9 @@ ctx.stroke();
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Fügt eine Trefferregion (hit region) zur Leinwand hinzu.</dd>
+ <dd>Fügt eine Trefferregion (hit region) zur Leinwand hinzu.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}</dt>
- <dd>Entfernt eine Trefferregion mit gegebener <code>id</code> von der Leinwand.</dd>
+ <dd>Entfernt eine Trefferregion mit gegebener <code>id</code> von der Leinwand.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}</dt>
  <dd>Entfernt alle Trefferregionen von der Leinwand.</dd>
 </dl>
@@ -288,13 +288,13 @@ ctx.stroke();
 
 <h3 id="Blink_and_WebKit">Blink and WebKit</h3>
 
-<p>Die meisten dieser APIs sind <a href="https://code.google.com/p/chromium/issues/detail?id=363198">veraltet und wurden kurz nach Chrome 36 entfernt</a>.</p>
+<p>Die meisten dieser APIs sind <a href="https://code.google.com/p/chromium/issues/detail?id=363198">veraltet und wurden kurz nach Chrome 36 entfernt</a>.</p>
 
 <dl>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.clearShadow()</code></dt>
- <dd>Entfernt alle Schatteneinstellungen wie  {{domxref("CanvasRenderingContext2D.shadowColor")}} und {{domxref("CanvasRenderingContext2D.shadowBlur")}}.</dd>
+ <dd>Entfernt alle Schatteneinstellungen wie  {{domxref("CanvasRenderingContext2D.shadowColor")}} und {{domxref("CanvasRenderingContext2D.shadowBlur")}}.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.drawImageFromRect()</code></dt>
- <dd>Das ist redundant zum equivalenten Überladung von  <code>drawImage</code>.</dd>
+ <dd>Das ist redundant zum equivalenten Überladung von  <code>drawImage</code>.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.setAlpha()</code></dt>
  <dd>Verwenden Sie {{domxref("CanvasRenderingContext2D.globalAlpha")}} anstelle dieser Methode.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.setCompositeOperation()</code></dt>
@@ -317,7 +317,7 @@ ctx.stroke();
  <dd>Verwenden Sie {{domxref("CanvasRenderingContext2D.getLineDash()")}} und {{domxref("CanvasRenderingContext2D.setLineDash()")}} anstelle dieser Methode.</dd>
  <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.webkitLineDashOffset</code></dt>
  <dd>Verwenden Sie {{domxref("CanvasRenderingContext2D.lineDashOffset")}} anstelle dieser Methode.</dd>
- <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.webkitImageSmoothingEnabled</code></dt>
+ <dt>{{non-standard_inline}} {{obsolete_inline}} <code>CanvasRenderingContext2D.webkitImageSmoothingEnabled</code></dt>
  <dd>Verwenden Sie {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} anstelle dieser Methode.</dd>
 </dl>
 
@@ -355,9 +355,9 @@ ctx.stroke();
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransform</code></dt>
- <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
- <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
+ <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
  <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
@@ -408,7 +408,7 @@ ctx.stroke();
   <tr>
    <td>{{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -422,7 +422,7 @@ ctx.stroke();
 </div>
 
 <ul>
- <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: <code>translate()</code>, <code>transform()</code>, <code>rotate(), </code><code>scale(),</code> <code>rect()</code>, <code>clearRect()</code>, <code>fillRect()</code>, <code>strokeRect()</code>, <code>lineTo()</code>, <code>moveTo()</code>, <code>quadraticCurveTo()</code>, <code>arc()</code>, <code>shadowOffsetX</code>, <code>shadowOffsetY</code>,  <code>shadowBlur</code>.</li>
+ <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: <code>translate()</code>, <code>transform()</code>, <code>rotate(), </code><code>scale(),</code> <code>rect()</code>, <code>clearRect()</code>, <code>fillRect()</code>, <code>strokeRect()</code>, <code>lineTo()</code>, <code>moveTo()</code>, <code>quadraticCurveTo()</code>, <code>arc()</code>, <code>shadowOffsetX</code>, <code>shadowOffsetY</code>,  <code>shadowBlur</code>.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>

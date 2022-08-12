@@ -17,7 +17,7 @@ Dans la pratique, si l'on divise deux variables dans un programme {{glossary("Ja
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "NaN")}} sur Wikipedia
+- [`NaN`](https://fr.wikipedia.org/wiki/NaN) sur Wikipédia
 
 ### Informations techniques
 

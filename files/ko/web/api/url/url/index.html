@@ -56,47 +56,30 @@ translation_of: Web/API/URL/URL
 
 <pre class="brush: js">// Base urls
 let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
+let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
+let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
+                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
+        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
+        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
+        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
 </pre>
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('URL', '#constructors', 'URL.URL()')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("api.URL.URL")}}</p>
 

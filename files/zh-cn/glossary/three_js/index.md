@@ -15,5 +15,5 @@ three.js，一{{Glossary("WebGL")}}引擎，基于{{Glossary("JavaScript")}}，�
 
 ### 小常识
 
-- {{Interwiki("wikipedia", "Three.js")}}维基词条
+- [Three.js](https://zh.wikipedia.org/wiki/Three.js)维基词条
 - [three.js 官网](https://threejs.org/)

@@ -98,7 +98,7 @@ original_slug: Learn/CSS/Styling_text/ウェブフォント
 <p>いずれの場合も、フォントパッケージを解凍します（ウェブフォントは通常、フォントファイルとライセンス情報を含む ZIP ファイルで配布されます）。 パッケージの中に複数のフォントファイルを見つけるかもしれません — 例えば、thin（細字）、medium（中字）、bold（太字）、italic（イタリック）、thin italic（細字イタリック）など、利用可能なさまざまな異形（variant）を持つファミリーとして配布されるフォントがあります。 この例では、それぞれの選択に対して 1つのフォントファイルを使用することを考慮してください。</p>
 
 <div class="note">
-<p><strong>注</strong>: 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）</p>
+<p><strong>注</strong>: 右側の列の "Find fonts"（フォントの検索）セクションで、さまざまな tags（タグ）や classifications（分類）をクリックして表示された選択肢を絞り込むことができます。 （訳注：残念なことに現在のところ日本語フォントはないようです。）</p>
 </div>
 
 <h3 id="Generating_the_required_code" name="Generating_the_required_code">必要なコードの生成</h3>
@@ -152,10 +152,10 @@ original_slug: Learn/CSS/Styling_text/ウェブフォント
 
 <ol>
  <li><a href="https://www.google.com/fonts">Google Fonts</a> に行きます。</li>
- <li>左側のフィルタを使って、選択したいフォントの種類を表示し、好きなフォントをいくつか選択します。 （訳注：Languages（言語）に Japanese（日本語）を選んでも、中国語のフォントも表示されます。 フォントによっては、存在しない文字があるようなので注意しましょう。 日本語環境なら文字は表示されますが、書体の統一感はなくなってしまいます。）</li>
+ <li>左側のフィルタを使って、選択したいフォントの種類を表示し、好きなフォントをいくつか選択します。 （訳注：Languages（言語）に Japanese（日本語）を選んでも、中国語のフォントも表示されます。 フォントによっては、存在しない文字があるようなので注意しましょう。 日本語環境なら文字は表示されますが、書体の統一感はなくなってしまいます。）</li>
  <li>フォントファミリーを選択するには、その横にある ⊕ ボタンを押します。</li>
  <li>フォントファミリーを選択したら、ページ下部の <em>[選択数] Families Selected</em> バーを押します。</li>
- <li>表示された画面で、最初に表示された HTML コードの行をコピーして、それを HTML ファイルの先頭に貼り付ける必要があります。 フォントを CSS で使用する前にインポートされるように、既存の {{htmlelement("link")}} 要素の上に配置します。 （訳注：{{cssxref("@import")}} を選択すれば、CSS ファイルに貼り付けることもできます。）</li>
+ <li>表示された画面で、最初に表示された HTML コードの行をコピーして、それを HTML ファイルの先頭に貼り付ける必要があります。 フォントを CSS で使用する前にインポートされるように、既存の {{htmlelement("link")}} 要素の上に配置します。 （訳注：{{cssxref("@import")}} を選択すれば、CSS ファイルに貼り付けることもできます。）</li>
  <li>次に、カスタムフォントを HTML に適用するために、リストされている CSS 宣言を必要に応じて CSS にコピーする必要があります。</li>
 </ol>
 
@@ -179,7 +179,7 @@ original_slug: Learn/CSS/Styling_text/ウェブフォント
   font-style: normal;
 }</pre>
 
-<p><code>@font-face</code> が普及し始めた頃の Paul Irish による投稿（<a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>）の後、これは "bulletproof  @font-face 構文" と呼ばれています。 それを見て、それが何をするのか見てみましょう。</p>
+<p><code>@font-face</code> が普及し始めた頃の Paul Irish による投稿（<a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face Syntax</a>）の後、これは "bulletproof  @font-face 構文" と呼ばれています。 それを見て、それが何をするのか見てみましょう。</p>
 
 <ul>
  <li><code>font-family</code>: この行はフォントとして参照したい名前を指定します。 CSS を通して一貫してそれを使う限り、好きなものにすることができます。</li>

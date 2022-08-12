@@ -16,5 +16,5 @@ original_slug: Glossary/面向对象编程
 
 ### 常识
 
-- 维基百科：{{Interwiki("wikipedia", "Object-oriented programming")}}
+- 维基百科：[Object-oriented programming](https://zh.wikipedia.org/wiki/Object-oriented_programming)
 - [JavaScript 面向对象简介](/zh-CN/docs/Learn/JavaScript/Objects)

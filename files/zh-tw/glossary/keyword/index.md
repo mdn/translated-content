@@ -14,4 +14,4 @@ translation_of: Glossary/Keyword
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Keyword_research", "關鍵詞")}}
+- 維基百科上的 [關鍵詞](https://zh.wikipedia.org/wiki/Keyword_research)

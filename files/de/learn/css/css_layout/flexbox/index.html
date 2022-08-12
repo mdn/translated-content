@@ -18,13 +18,13 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <div>{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}</div>
 
-<p class="summary"><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> ist eine Layoutmethode zum Anordnen von Elementen in Zeilen oder Spalten. Elemente werden gestreckt, um zusätzlichen Platz zu füllen, und schrumpfen, um in kleinere Räume zu passen. Dieser Artikel erklärt alle Grundlagen.</p>
+<p class="summary"><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> ist eine Layoutmethode zum Anordnen von Elementen in Zeilen oder Spalten. Elemente werden gestreckt, um zusätzlichen Platz zu füllen, und schrumpfen, um in kleinere Räume zu passen. Dieser Artikel erklärt alle Grundlagen.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Voraussetzungen:</th>
-   <td>HTML Grundlagen (siehe <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), und eine Vorstellung davon, wie CSS funktioniert (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>HTML Grundlagen (siehe <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), und eine Vorstellung davon, wie CSS funktioniert (study <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">Zielsetzung:</th>
@@ -41,7 +41,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <ul>
  <li>Vertikales Zentrieren eines Inhaltsblocks in seinem übergeordneten Element.</li>
- <li>Alle untergeordneten Elemente eines Containers sollen die gleichen Anteil der Breite / Höhe einnehmen, unabhängig davon, wie viel Breite / Höhe verfügbar ist.</li>
+ <li>Alle untergeordneten Elemente eines Containers sollen die gleichen Anteil der Breite / Höhe einnehmen, unabhängig davon, wie viel Breite / Höhe verfügbar ist.</li>
  <li>Alle Spalten in einem mehrspaltigen Layout mit einheitlicher Höhe gestalten, auch wenn sie eine andere Menge an Inhalt enthalten.</li>
 </ul>
 
@@ -49,15 +49,15 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <h2 id="Ein_einfaches_Beispiel">Ein einfaches Beispiel</h2>
 
-<p>In diesem Artikel werden Sie eine Reihe von Übungen durcharbeiten, um zu verstehen, wie Flexbox funktioniert. Zuerst sollten Sie eine lokale Kopie der ersten Startdatei - <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html </a>aus unserem Github-Repo - erstellen, sie in einen modernen Browser (wie Firefox oder Chrome) laden und den Code in Ihrem Code-Editor anzeigen. Sie können es auch <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">hier live sehen</a>.</p>
+<p>In diesem Artikel werden Sie eine Reihe von Übungen durcharbeiten, um zu verstehen, wie Flexbox funktioniert. Zuerst sollten Sie eine lokale Kopie der ersten Startdatei - <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html">flexbox0.html </a>aus unserem Github-Repo - erstellen, sie in einen modernen Browser (wie Firefox oder Chrome) laden und den Code in Ihrem Code-Editor anzeigen. Sie können es auch <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html">hier live sehen</a>.</p>
 
 <p>Sie werden sehen, dass wir ein {{htmlelement ("header")}} Element mit einer Überschrift der obersten Ebene und ein {{htmlelement ("section")}} Element mit drei {{htmlelement ("article") }} haben. Wir werden damit ein standardmäßiges dreispaltiges Layout erstellen.</p>
 
 <p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
-<h2 id="Festlegen_der_Elemente_für_flexible_Boxen">Festlegen der Elemente für flexible Boxen </h2>
+<h2 id="Festlegen_der_Elemente_für_flexible_Boxen">Festlegen der Elemente für flexible Boxen </h2>
 
-<p>Zunächst müssen wir auswählen, welche Elemente als flexible Boxen angeordnet werden sollen. Dazu setzen wir einen speziellen Wert von {{cssxref ("display")}} für das übergeordnete Element der Elemente, die Sie beeinflussen möchten. In diesem Fall möchten wir die {{htmlelement ("article")}} Elemente anordnen, also setzen wir dies auf das {{htmlelement ("section")}}:</p>
+<p>Zunächst müssen wir auswählen, welche Elemente als flexible Boxen angeordnet werden sollen. Dazu setzen wir einen speziellen Wert von {{cssxref ("display")}} für das übergeordnete Element der Elemente, die Sie beeinflussen möchten. In diesem Fall möchten wir die {{htmlelement ("article")}} Elemente anordnen, also setzen wir dies auf das {{htmlelement ("section")}}:</p>
 
 <pre class="brush: css  notranslate">section {
   display: flex;
@@ -67,21 +67,21 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p><img alt="" src="flexbox-example2.png" style="border-style: solid; border-width: 1px; display: block; height: 348px; margin: 0px auto; width: 800px;"></p>
 
-<p>Diese Deklaration erzeugt alles, was wir brauchen - unglaublich, oder? Wir haben unser mehrspaltiges Layout mit gleich großen Spalten, und die Spalten haben alle die gleiche Höhe. Dies liegt an de Standardwerte für Flex-Elemente (die untergeordneten Elemente des Flex-Containers), die  so eingerichtet sind, um solche häufig auftretenden Probleme wie dieses zu lösen.</p>
+<p>Diese Deklaration erzeugt alles, was wir brauchen - unglaublich, oder? Wir haben unser mehrspaltiges Layout mit gleich großen Spalten, und die Spalten haben alle die gleiche Höhe. Dies liegt an de Standardwerte für Flex-Elemente (die untergeordneten Elemente des Flex-Containers), die  so eingerichtet sind, um solche häufig auftretenden Probleme wie dieses zu lösen.</p>
 
-<p>Lassen Sie uns noch einmal wiederholen, was hier passiert. Das Element, dem wir einen {{cssxref ("display")}} -Wert <code>flex</code> zugewiesen haben, verhält sich in Bezug auf die Interaktion mit dem Rest der Seite wie ein Element auf Blockebene, aber seine untergeordneten Elemente werden als Flex-Elemente angeordnet - Im nächsten Abschnitt wird detaillierter erläutert, was das bedeutet. Beachten Sie auch, dass Sie den <code>display</code> Wert <code>inline-flex</code> verwenden können, wenn Sie die untergeordneten Elemente eines Elements als Flex-Elemente auslegen möchten, dieses Element sich jedoch wie ein Inline-Element verhält.</p>
+<p>Lassen Sie uns noch einmal wiederholen, was hier passiert. Das Element, dem wir einen {{cssxref ("display")}} -Wert <code>flex</code> zugewiesen haben, verhält sich in Bezug auf die Interaktion mit dem Rest der Seite wie ein Element auf Blockebene, aber seine untergeordneten Elemente werden als Flex-Elemente angeordnet - Im nächsten Abschnitt wird detaillierter erläutert, was das bedeutet. Beachten Sie auch, dass Sie den <code>display</code> Wert <code>inline-flex</code> verwenden können, wenn Sie die untergeordneten Elemente eines Elements als Flex-Elemente auslegen möchten, dieses Element sich jedoch wie ein Inline-Element verhält.</p>
 
 <h2 id="Das_flex_Modell">Das flex Modell</h2>
 
-<p>Wenn Elemente als flex-Elemente angeordnet sind, werden sie entlang zweier Achsen angeordnet:</p>
+<p>Wenn Elemente als flex-Elemente angeordnet sind, werden sie entlang zweier Achsen angeordnet:</p>
 
 <p><img alt="flex_terms.png" class="default internal" src="flex_terms.png"></p>
 
 <ul>
- <li>Die <strong>Hauptachse (main axis) </strong>ist die Achse, die in der Richtung verläuft, in der die Flex-Elemente angeordnet sind (z. B. als Zeilen auf der Seite oder Spalten auf der Seite). Anfang und Ende dieser Achse werden als main start und main end bezeichnet.</li>
- <li>Die <strong>Querachse (cross axis) </strong>verläuft senkrecht dazu. Anfang und Ende dieser Achse werden als cross start und cross end bezeichnet.</li>
+ <li>Die <strong>Hauptachse (main axis) </strong>ist die Achse, die in der Richtung verläuft, in der die Flex-Elemente angeordnet sind (z. B. als Zeilen auf der Seite oder Spalten auf der Seite). Anfang und Ende dieser Achse werden als main start und main end bezeichnet.</li>
+ <li>Die <strong>Querachse (cross axis) </strong>verläuft senkrecht dazu. Anfang und Ende dieser Achse werden als cross start und cross end bezeichnet.</li>
  <li>Das übergeordnete Element, auf dem <code>display: flex</code> festgelegt ist (in unserem Beispiel das {{htmlelement ("section")}}), wird als <strong>Flex-Container</strong> bezeichnet.</li>
- <li>Die als flexible Boxen im Flex-Container angeordnetrn Elemente werden als <strong>Flex-Elemente (flex-items) </strong>bezeichnet (in unserem Beispiel die Elemente {{htmlelement ("article")}}).</li>
+ <li>Die als flexible Boxen im Flex-Container angeordnetrn Elemente werden als <strong>Flex-Elemente (flex-items) </strong>bezeichnet (in unserem Beispiel die Elemente {{htmlelement ("article")}}).</li>
 </ul>
 
 <p>Beachten Sie diese Terminologie, wenn Sie die folgenden Abschnitte durchgehen. Sie können jederzeit darauf zurückgreifen, wenn Sie über einen der verwendeten Begriffe verwirrt sind.</p>
@@ -106,7 +106,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p><img alt="" src="flexbox-example3.png" style="display: block; height: 646px; margin: 0px auto; width: 800px;"></p>
 
-<p>Hier sehen wir die Kind-Elemente tatsächlich aus ihrem Container laufen. Eine Möglichkeit, dies zu beheben, besteht darin, Ihrer {{htmlelement ("section")}} -Regel die folgende Deklaration hinzuzufügen:</p>
+<p>Hier sehen wir die Kind-Elemente tatsächlich aus ihrem Container laufen. Eine Möglichkeit, dies zu beheben, besteht darin, Ihrer {{htmlelement ("section")}} -Regel die folgende Deklaration hinzuzufügen:</p>
 
 <pre class="brush: css  notranslate">flex-wrap: wrap;</pre>
 
@@ -120,7 +120,7 @@ translation_of: Learn/CSS/CSS_layout/Flexbox
 
 <p>Wir haben jetzt mehrere Zeilen - so viele Flexbox-Kinder werden in jede Zeile eingefügt, wie sinnvoll ist, und jeder Überlauf wird in die nächste Zeile verschoben. Die auf den Artikeln festgelegte <code>flex: 200px</code>-Deklaration bedeutet, dass jede mindestens 200px breit ist. Wir werden diese Eigenschaft später genauer besprechen. Möglicherweise stellen Sie auch fest, dass die letzten untergeordneten Elemente in der letzten Zeile jeweils breiter sind, sodass die gesamte Zeile noch gefüllt ist.</p>
 
-<p>Aber wir können hier noch mehr tun. Versuchen Sie zunächst, den Eigenschaftswert {{cssxref ("flex-direction")}} in <code>row-reverse</code> zu ändern. Jetzt sehen Sie, dass Sie immer noch über ein Layout mit mehreren Zeilen verfügen, das jedoch in der gegenüberliegenden Seite des Browsers beginnt Fenster und in umgekehrter Richtung fließt.</p>
+<p>Aber wir können hier noch mehr tun. Versuchen Sie zunächst, den Eigenschaftswert {{cssxref ("flex-direction")}} in <code>row-reverse</code> zu ändern. Jetzt sehen Sie, dass Sie immer noch über ein Layout mit mehreren Zeilen verfügen, das jedoch in der gegenüberliegenden Seite des Browsers beginnt Fenster und in umgekehrter Richtung fließt.</p>
 
 <h2 id="flex-flow_shorthand">flex-flow shorthand</h2>
 
@@ -163,7 +163,7 @@ article:nth-of-type(3) {
   flex: 2 200px;
 }</pre>
 
-<p>Das heißt im Wesentlichen: "Jedes Flex-Element erhält zuerst 200 Pixel des verfügbaren Speicherplatzes. Danach wird der Rest des verfügbaren Speicherplatzes entsprechend den Proportionseinheiten aufgeteilt." Versuchen Sie es mit einer Aktualisierung, und Sie werden einen Unterschied in der Aufteilung des Speicherplatzes feststellen.</p>
+<p>Das heißt im Wesentlichen: "Jedes Flex-Element erhält zuerst 200 Pixel des verfügbaren Speicherplatzes. Danach wird der Rest des verfügbaren Speicherplatzes entsprechend den Proportionseinheiten aufgeteilt." Versuchen Sie es mit einer Aktualisierung, und Sie werden einen Unterschied in der Aufteilung des Speicherplatzes feststellen.</p>
 
 <p><img alt="" src="flexbox-example1.png" style="border-style: solid; border-width: 1px; display: block; height: 324px; margin: 0px auto; width: 800px;"></p>
 
@@ -183,7 +183,7 @@ article:nth-of-type(3) {
 
 <h2 id="Horizontale_und_vertikale_Ausrichtung">Horizontale und vertikale Ausrichtung</h2>
 
-<p>Sie können auch Flexbox-Funktionen verwenden, um Flex-Elemente entlang der Haupt- oder Querachse auszurichten. Schauen wir uns dies anhand eines neuen Beispiels an - f<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">lex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">siehe auch live</a>) - das wir in eine übersichtliche, flexible Schaltfläche / Symbolleiste verwandeln werden. Im Moment sehen Sie eine horizontale Menüleiste mit einigen Schaltflächen in der oberen linken Ecke.</p>
+<p>Sie können auch Flexbox-Funktionen verwenden, um Flex-Elemente entlang der Haupt- oder Querachse auszurichten. Schauen wir uns dies anhand eines neuen Beispiels an - f<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html">lex-align0.html</a> (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html">siehe auch live</a>) - das wir in eine übersichtliche, flexible Schaltfläche / Symbolleiste verwandeln werden. Im Moment sehen Sie eine horizontale Menüleiste mit einigen Schaltflächen in der oberen linken Ecke.</p>
 
 <p><img alt="" src="flexbox-example5.png" style="display: block; height: 77px; margin: 0px auto; width: 600px;"></p>
 
@@ -204,7 +204,7 @@ article:nth-of-type(3) {
 <p>{{cssxref ("align-items")}} steuert, wo sich die Flex-Elemente auf der Querachse befinden.</p>
 
 <ul>
- <li>Standardwert ist <code>stretch</code>, wodurch alle Flex-Elemente gestreckt werden, um das übergeordnete Element in Richtung der Querachse zu füllen. Wenn das übergeordnete Element in Querrichtung keine feste Breite hat, werden alle Flex-Elemente so lang wie die längsten Flex-Elemente. So hat unser erstes Beispiel standardmäßig Spalten gleicher Höhe erhalten.</li>
+ <li>Standardwert ist <code>stretch</code>, wodurch alle Flex-Elemente gestreckt werden, um das übergeordnete Element in Richtung der Querachse zu füllen. Wenn das übergeordnete Element in Querrichtung keine feste Breite hat, werden alle Flex-Elemente so lang wie die längsten Flex-Elemente. So hat unser erstes Beispiel standardmäßig Spalten gleicher Höhe erhalten.</li>
  <li>Der <code>center</code>-wert, den wir in unserem obigen Code verwendet haben, bewirkt, dass die Elemente ihre intrinsischen Abmessungen beibehalten, jedoch entlang der Querachse zentriert werden. Aus diesem Grund sind die Schaltflächen unseres aktuellen Beispiels vertikal zentriert.</li>
  <li>Sie können auch Werte wie <code>flex-start</code> und <code>flex-end</code> festlegen, mit denen alle Elemente am Anfang bzw. Ende der Querachse ausgerichtet werden. Ausführliche Informationen finden Sie unter {{cssxref ("align-items")}}.</li>
 </ul>
@@ -223,8 +223,8 @@ article:nth-of-type(3) {
 
 <ul>
  <li>Der Standardwert ist <code>flex-start</code>, wodurch alle Elemente am Anfang der Hauptachse sitzen.</li>
- <li>Sie können <code>flex-end</code> verwenden, damit sie am Ende sitzen.</li>
- <li><code>center</code> ist auch ein Wert für j<code>ustify-content</code> und lässt die flexiblen Elemente in der Mitte der Hauptachse sitzen.</li>
+ <li>Sie können <code>flex-end</code> verwenden, damit sie am Ende sitzen.</li>
+ <li><code>center</code> ist auch ein Wert für j<code>ustify-content</code> und lässt die flexiblen Elemente in der Mitte der Hauptachse sitzen.</li>
  <li>Der oben verwendete Wert <code>space-around</code> ist nützlich - er verteilt alle Elemente gleichmäßig entlang der Hauptachse, wobei an beiden Enden etwas Platz verbleibt.</li>
  <li>Es gibt einen anderen Wert, <code>space-between</code>, der dem <code>space-around</code> sehr ähnlich ist, außer dass an beiden Enden kein Leerzeichen verbleibt.</li>
 </ul>
@@ -258,7 +258,7 @@ article:nth-of-type(3) {
 
 <h2 id="Verschachtelte_Flexboxen">Verschachtelte Flexboxen</h2>
 
-<p>Mit der Flexbox können einige recht komplexe Layouts erstellt werden. Es ist vollkommen in Ordnung, ein Flex-Element auch als Flex-Container festzulegen, damit seine untergeordneten Elemente auch wie flexible Boxen angeordnet sind. Schauen Sie sich <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> an (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">Live-Ansicht</a>).</p>
+<p>Mit der Flexbox können einige recht komplexe Layouts erstellt werden. Es ist vollkommen in Ordnung, ein Flex-Element auch als Flex-Container festzulegen, damit seine untergeordneten Elemente auch wie flexible Boxen angeordnet sind. Schauen Sie sich <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html">complex-flexbox.html</a> an (<a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html">Live-Ansicht</a>).</p>
 
 <p><img alt="" src="flexbox-example7.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -280,7 +280,7 @@ article:nth-of-type(3) {
   display: flex;
 }</pre>
 
-<p>Als nächstes setzen wir einige Flex-Werte für die {{htmlelement ("article")}} selbst. Beachten Sie hier besonders die 2. Regel - wir setzen das dritte {{htmlelement ("article")}} so, dass seine Kindelemente auch wie flexible Elemente angeordnet sind, aber diesmal legen wir sie wie eine Spalte an.</p>
+<p>Als nächstes setzen wir einige Flex-Werte für die {{htmlelement ("article")}} selbst. Beachten Sie hier besonders die 2. Regel - wir setzen das dritte {{htmlelement ("article")}} so, dass seine Kindelemente auch wie flexible Elemente angeordnet sind, aber diesmal legen wir sie wie eine Spalte an.</p>
 
 <pre class="brush: css  notranslate">article {
   flex: 1 200px;
@@ -346,7 +346,7 @@ article:nth-of-type(3) {
  <li><a href="/de-DE/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive design</a></li>
  <li><a href="/de-DE/docs/Learn/CSS/CSS_layout/Media_queries">Anfängerleitfaden für media queries</a></li>
  <li><a href="/de-DEdocs/Learn/CSS/CSS_layout/Legacy_Layout_Methods">Legacy-Layout-Methoden</a></li>
- <li><a href="/de-DE/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Unterstützung älterer Browser</a></li>
+ <li><a href="/de-DE/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers">Unterstützung älterer Browser</a></li>
  <li><a href="/de-DE/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension">Grundlegende Bewertung des Layoutverständnisses</a></li>
 </ul>
 </div>

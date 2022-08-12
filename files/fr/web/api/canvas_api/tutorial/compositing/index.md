@@ -6,7 +6,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 ---
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-Dans tous nos [exemples précédents](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
+Dans tous nos [exemples précédents](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations), les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété `globalCompositeOperation`. En complément, la propriété `clip` nous permet de cacher les parties des formes que nous ne désirons pas.
 
 ## `globalCompositeOperation`
 
@@ -27,7 +27,7 @@ Un détourage (_clipping path_ en anglais) est comme une forme de canvas standar
 
 Si nous comparons le détourage à la propriété `globalCompositeOperation` vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec `source-in` et `source-atop`. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.
 
-Dans le chapitre "[dessiner des formes avec le canevas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)", nous n'avions mentionné que les méthodes `stroke()` et `fill()`, mais il y en a une troisième: `clip()` — elle permet de faire des détourages.
+Dans le chapitre "[dessiner des formes avec le canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)", nous n'avions mentionné que les méthodes `stroke()` et `fill()`, mais il y en a une troisième: `clip()` — elle permet de faire des détourages.
 
 - {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
   - : Transforme le chemin en cours de création en détourage effectif.

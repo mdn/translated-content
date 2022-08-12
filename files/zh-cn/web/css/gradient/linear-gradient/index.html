@@ -56,7 +56,7 @@ linear-gradient(0deg, blue, green 40%, red);</code></pre>
 linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);</code>
 </pre>
 
-<p>默认情况下，从一个颜色的终止点平滑的过渡到另一个颜色的终止点，颜色之间的中点是两个颜色颜色转换的中点。你可以将中点移动到这两个颜色之间的任意位置，方法是在两个颜色之间添加未标记的 %，以指示颜色的中转位置。下面的示例是从起始点到 10% 的位置标记红色，从 90% 到结束标记蓝色。在 10% 到 90% 之间，颜色从红色过渡到蓝色，然而过渡的中点是在 30% 的标记上，而不是在没有 30% 中转点的情况下会默认为 50%。</p>
+<p>默认情况下，从一个颜色的终止点平滑的过渡到另一个颜色的终止点，颜色之间的中点是两个颜色转换的中点。你可以将中点移动到这两个颜色之间的任意位置，方法是在两个颜色之间添加未标记的 %，以指示颜色的中转位置。下面的示例是从起始点到 10% 的位置标记红色，从 90% 到结束标记蓝色。在 10% 到 90% 之间，颜色从红色过渡到蓝色，然而过渡的中点是在 30% 的标记上，而不是在没有 30% 中转点的情况下会默认为 50%。</p>
 
 <pre class="notranslate"><code>linear-gradient(red 10%, 30%, blue 90%);</code></pre>
 
@@ -245,31 +245,11 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
 
 <h2 id="规范">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#linear-gradients', 'linear-gradient()')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#color-stop-syntax', 'Gradient Color-Stops')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Add Interpolation hints</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("css.types.image.gradient.linear-gradient")}}
+{{Compat}}
 
 <h2 id="了解更多">了解更多</h2>
 

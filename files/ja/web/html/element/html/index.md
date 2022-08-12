@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/html
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
+      <td>許可されている <code>role</code> なし</td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

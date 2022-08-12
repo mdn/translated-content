@@ -14,7 +14,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">{{domxref("MediaDevices")}} 인터페이스의 <code><strong>getUserMedia()</strong></code> 메서드는 사용자에게 미디어 입력 장치 사용 권한을 요청하며, 사용자가 수락하면 요청한 미디어 종류의 트랙을 포함한 {{domxref("MediaStream")}}을 반환합니다.</span> 스트림은 카메라, 비디오 녹화 장치, 스크린 공유 장치 등 하드웨어와 가장 비디오 소스가 생성하는 비디오 트랙과, 마이크, A/D 변환기 등 물리적과 가상 오디오 장치가 생성하는 오디오 스트림, 그리고 그 외의 다른 종류의 스트림을 포함할 수 있습니다.</p>
+<p><span class="seoSummary">{{domxref("MediaDevices")}} 인터페이스의 <code><strong>getUserMedia()</strong></code> 메서드는 사용자에게 미디어 입력 장치 사용 권한을 요청하며, 사용자가 수락하면 요청한 미디어 종류의 트랙을 포함한 {{domxref("MediaStream")}}을 반환합니다.</span> 스트림은 카메라, 비디오 녹화 장치, 스크린 공유 장치 등 하드웨어와 가장 비디오 소스가 생성하는 비디오 트랙과, 마이크, A/D 변환기 등 물리적과 가상 오디오 장치가 생성하는 오디오 스트림, 그리고 그 외의 다른 종류의 스트림을 포함할 수 있습니다.</p>
 
 <p>반환하는 값은 {{domxref("MediaStream")}} 객체로 이행하는 {{jsxref("Promise")}}입니다. 사용자가 권한 요청을 거부했거나 일치하는 유형의 미디어를 사용할 수 없는 경우, 프로미스는 각각 <code>NonAllowedError</code>와 <code>NotFoundError</code>로 거부합니다.</p>
 
@@ -67,9 +67,9 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <pre class="brush: js">{ audio: true, video: true }</pre>
 
- <p>미디어 타입에 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">true</span></font> 가 지정된 경우 각 타입에 맞는 장치가 사용 준비된 상태이어야 하며, 만약 사용 준비가 안 된 상태에서 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">getUserMedia()</span></font> 를 호출하면 오류를 반환합니다.</p>
+ <p>미디어 타입에 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">true</span></font> 가 지정된 경우 각 타입에 맞는 장치가 사용 준비된 상태이어야 하며, 만약 사용 준비가 안 된 상태에서 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">getUserMedia()</span></font> 를 호출하면 오류를 반환합니다.</p>
 
- <p>constraints 매개변수에 세부사항을 지정하여 카메라와 마이크에 세부적인 요청을 할 수 있습니다. 아래의 코드는 비디오의 해상도를 1280x720로 지정하는 예제입니다.</p>
+ <p>constraints 매개변수에 세부사항을 지정하여 카메라와 마이크에 세부적인 요청을 할 수 있습니다. 아래의 코드는 비디오의 해상도를 1280x720로 지정하는 예제입니다.</p>
 
  <pre class="brush: js">{
   audio: true,
@@ -78,7 +78,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p id="successCallback">브라우저는 지정한 해상도의 비디오 트랙을 가져오기 위해 시도하지만, 어떤 이유로든 지정한 해상도의 트랙을 가져올 수 없다면 다른 해상도의 비디오 트랙을 반환합니다.</p>
 
- <p>아래와 같이 <code>min</code>, <code>max</code> 키워드를 사용하여 최소 해상도를 1280x720으로 지정할 수도 있으며, <code>exact</code> (논리적으로 <code>min == max</code> 와 같음) 키워드를 사용하여 특정 해상도를 지정할 수도 있습니다.</p>
+ <p>아래와 같이 <code>min</code>, <code>max</code> 키워드를 사용하여 최소 해상도를 1280x720으로 지정할 수도 있으며, <code>exact</code> (논리적으로 <code>min == max</code> 와 같음) 키워드를 사용하여 특정 해상도를 지정할 수도 있습니다.</p>
 
  <pre class="brush: js">{
   audio: true,
@@ -88,11 +88,11 @@ translation_of: Web/API/MediaDevices/getUserMedia
   }
 }</pre>
 
- <p>만약 카메라에서 지원하는 해상도 중에서 1280x720해상도가 없거나 이 이상의 해상도 역시 없는 경우 promise는 rejected 상태로 <code>OverconstrainedError</code> 를 반환하며, 사용자에게 미디어 장치 사용 권한 요청을 하지 않습니다.</p>
+ <p>만약 카메라에서 지원하는 해상도 중에서 1280x720해상도가 없거나 이 이상의 해상도 역시 없는 경우 promise는 rejected 상태로 <code>OverconstrainedError</code> 를 반환하며, 사용자에게 미디어 장치 사용 권한 요청을 하지 않습니다.</p>
 
- <p><code>min</code>, <code>max</code> 키워드만 사용한 경우 최소, 최대 해상도를 지정할 수는 있지만, 브라우저는 최솟값을 기준으로 제공할 수 있는 해상도를 찾아 미디어 스트림을 반환합니다.  일반적으로 이러한 동작은 우리의 의도와 다릅니다. 그래서 <code>ideal</code> 키워드를 사용하여 이상적인 해상도를 지정할 수 있습니다.</p>
+ <p><code>min</code>, <code>max</code> 키워드만 사용한 경우 최소, 최대 해상도를 지정할 수는 있지만, 브라우저는 최솟값을 기준으로 제공할 수 있는 해상도를 찾아 미디어 스트림을 반환합니다.  일반적으로 이러한 동작은 우리의 의도와 다릅니다. 그래서 <code>ideal</code> 키워드를 사용하여 이상적인 해상도를 지정할 수 있습니다.</p>
 
- <p>아래의 코드를 논리적으로 해석하면 1024x776 - 1120x800 - 1350x1020 - 1920x1080 와 같이 지원하는 여러 해상도가 있으면 브라우저는 <code>ideal</code> 해상도와 가장 근사하는 1120x800 해상도를 미디어 장치에 요청 후 반환합니다.</p>
+ <p>아래의 코드를 논리적으로 해석하면 1024x776 - 1120x800 - 1350x1020 - 1920x1080 와 같이 지원하는 여러 해상도가 있으면 브라우저는 <code>ideal</code> 해상도와 가장 근사하는 1120x800 해상도를 미디어 장치에 요청 후 반환합니다.</p>
 
  <pre class="brush: js">{
   audio: true,
@@ -103,7 +103,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 }
 </pre>
 
- <p>아래와 같이 최솟값 최댓값 지정 없이 <code>ideal</code> 해상도만 지정할 수도 있습니다.</p>
+ <p>아래와 같이 최솟값 최댓값 지정 없이 <code>ideal</code> 해상도만 지정할 수도 있습니다.</p>
 
  <pre class="brush: js">{
   audio: true,
@@ -125,21 +125,21 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <h3 id="반환_값">반환 값</h3>
 
-<p>요청한 미디어를 성공적으로 얻었다면 {{domxref("MediaStream")}} 을 수신하는 핸들러가 {{jsxref("Promise")}} 형태로 스트림을 반환합니다.</p>
+<p>요청한 미디어를 성공적으로 얻었다면 {{domxref("MediaStream")}} 을 수신하는 핸들러가 {{jsxref("Promise")}} 형태로 스트림을 반환합니다.</p>
 
 <h3 id="예외">예외</h3>
 
-<p>promise 이행이 실패하면 실패 처리 핸들러로 {{domxref("DOMException")}} 에러 객체가 전달됩니다. 발생 가능한 에러 종류:</p>
+<p>promise 이행이 실패하면 실패 처리 핸들러로 {{domxref("DOMException")}} 에러 객체가 전달됩니다. 발생 가능한 에러 종류:</p>
 
 <dl>
  <dt><code>AbortError</code></dt>
- <dd>사용자와 운영체제에서 하드웨어 장치 사용 권한을 부여받고 <code>NotReadableError</code> 에러를 발생시키는 하드웨어 문제가 발생하지 않았지만, 다른 프로그램에서 해당 장치를 사용 중인 경우 이 에러가 발생합니다.</dd>
+ <dd>사용자와 운영체제에서 하드웨어 장치 사용 권한을 부여받고 <code>NotReadableError</code> 에러를 발생시키는 하드웨어 문제가 발생하지 않았지만, 다른 프로그램에서 해당 장치를 사용 중인 경우 이 에러가 발생합니다.</dd>
  <dt><code>NotAllowedError</code></dt>
  <dd>사용자가 브라우저 설정을 통해 장치에 대한 접근권한을 차단하였거나 장치 사용 권한 요청에 거부한 경우 이 에러가 발생합니다. 이 외에도 어떤 식으로든 장치에 대한 접근을 차단하였다면 이 에러가 발생합니다.
- <div class="note">이전 버전의 규격에서는 이 에러와 <code>SecurityError</code> 를 동일한 의미로 사용하였지만, 현재 버전에서는 다른 의미로 사용하므로 혼용하여선 안 됩니다.</div>
+ <div class="note">이전 버전의 규격에서는 이 에러와 <code>SecurityError</code> 를 동일한 의미로 사용하였지만, 현재 버전에서는 다른 의미로 사용하므로 혼용하여선 안 됩니다.</div>
  </dd>
  <dt><code>NotFoundError</code></dt>
- <dd>constraints 매개변수 조건에 맞는 미디어 트랙이 없는 경우 이 에러가 발생합니다.</dd>
+ <dd>constraints 매개변수 조건에 맞는 미디어 트랙이 없는 경우 이 에러가 발생합니다.</dd>
  <dt><code>NotReadableError</code></dt>
  <dd>사용자가 접근 권한을 부여했고 조건에 맞는 미디어 트랙도 있지만 어떤 이유로든 장치에 액세스 할 수 없어서 운영체제, 브라우저, 웹 페이지 레벨에서 하드웨어 에러가 발생하여 이 에러가 발생합니다.</dd>
  <dt><code>OverconstrainedError</code></dt>
@@ -264,24 +264,9 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.MediaDevices.getUserMedia")}}</p>
 

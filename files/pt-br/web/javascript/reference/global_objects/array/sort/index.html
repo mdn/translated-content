@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>sort()</strong></code> ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel">estável</a>. A ordenação padrão é de acordo com a  pontuação de código unicode.</p>
+<p>O método <code><strong>sort()</strong></code> ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente <a href="https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel">estável</a>. A ordenação padrão é de acordo com a  pontuação de código unicode.</p>
 
-<p>A complexidade do tempo de execução ou a quantidade de memória utilizada pela ordenação não pode ser garantido e depende da implementação realizada.</p>
+<p>A complexidade do tempo de execução ou a quantidade de memória utilizada pela ordenação não pode ser garantido e depende da implementação realizada.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -16,12 +16,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 <h3 id="Parâmetros">Parâmetros</h3>
 
 <dl>
- <dt><code>funcaoDeComparacao</code> {{optional_inline}}</dt>
+ <dt><code>funcaoDeComparacao</code> {{optional_inline}}</dt>
  <dd>Especifica uma função que define a ordenação. Se omitido, o array é ordenado de acordo com a pontuação de código <a href="/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> de cada um dos caracteres, de acordo com a conversão de cada elemento para string.</dd>
- <dt>    <code>primeiroElemento</code></dt>
- <dd>    O primeiro elemento para a comparação.</dd>
- <dt>    <code>segundoElemento</code></dt>
- <dd>    O segundo elemento para comparação.</dd>
+ <dt>    <code>primeiroElemento</code></dt>
+ <dd>    O primeiro elemento para a comparação.</dd>
+ <dt>    <code>segundoElemento</code></dt>
+ <dd>    O segundo elemento para comparação.</dd>
  <dt>
  <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
  </dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Se <strong><code>funcaoDeComparacao</code></strong> não for informado, os elementos serão ordenados de acordo com a sua conversão para texto e o texto comparado na pontuação unicode do texto convertido. Por exemplo, "banana" vem antes de "cherry". Em uma ordenação numérica, 9 vem antes de 80, mas porque os números são convertidos para texto e, "80" vem antes de "9" na ordenação Unicode.</p>
+<p>Se <strong><code>funcaoDeComparacao</code></strong> não for informado, os elementos serão ordenados de acordo com a sua conversão para texto e o texto comparado na pontuação unicode do texto convertido. Por exemplo, "banana" vem antes de "cherry". Em uma ordenação numérica, 9 vem antes de 80, mas porque os números são convertidos para texto e, "80" vem antes de "9" na ordenação Unicode.</p>
 
 <pre class="brush: js notranslate">var fruit = ['cherries', 'apples', 'bananas'];
 fruit.sort(); // ['apples', 'bananas', 'cherries']
@@ -46,10 +46,10 @@ things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 // as quais vêem antes das minúsculas.
 </pre>
 
-<p>Se o parametro <code>funcaoDeComparacao</code> é fornecido, o array será ordenado de acordo com o valor de retorno da <code>funcaoDeComparacao</code>. Considerando que <code>a</code> e <code>b</code> são dois elementos sendo comparados, então:</p>
+<p>Se o parametro <code>funcaoDeComparacao</code> é fornecido, o array será ordenado de acordo com o valor de retorno da <code>funcaoDeComparacao</code>. Considerando que <code>a</code> e <code>b</code> são dois elementos sendo comparados, então:</p>
 
 <ul>
- <li>Se <code>funcaoDeComparacao(a, b)</code> for menor que 0, ordena <code>a</code> para um índice anterior a <code>b</code>, i.e. a vem primeiro.</li>
+ <li>Se <code>funcaoDeComparacao(a, b)</code> for menor que 0, ordena <code>a</code> para um índice anterior a <code>b</code>, i.e. a vem primeiro.</li>
  <li>Se <code>funcaoDeComparacao(a, b)</code> retornar 0, deixa <code>a</code> e <code>b</code> inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.</li>
  <li>Se <code>funcaoDeComparacao(a, b)</code> é maior que 0, ordena b para um índice anterior que a.</li>
  <li><code>funcaoDeComparacao(a, b)</code> sempre deve retornar o mesmo valor dado um par específico de elementos a e b como seus dois parametros. Se resultados inconsistentes são retornados, então a ordenação é indefinida.</li>
@@ -170,7 +170,7 @@ items.sort(function (a, b) {
 
 <h3 id="Ordenando_com_mapa">Ordenando com mapa</h3>
 
-<p>A <code>funcaoDeComparacao</code> pode ser invocada múltiplas vezes por elemento do array. Dependendo da natureza da <code>funcaoDeComparacao</code>, isto pode causar um excesso processamento. Quanto mais trabalho a <code>funcaoDeComparacao</code> fizer, e quanto mais elementos houverem para ordenar, seria mais inteligente considerar  o uso de um mapa para a ordenação. A idéia é percorrer o array uma vez para extrair os valores já processados para a ordenação e armazenar em um array temporário, ordenar o array temporário e então percorrer o array temporário para conseguir a ordenação correta.</p>
+<p>A <code>funcaoDeComparacao</code> pode ser invocada múltiplas vezes por elemento do array. Dependendo da natureza da <code>funcaoDeComparacao</code>, isto pode causar um excesso processamento. Quanto mais trabalho a <code>funcaoDeComparacao</code> fizer, e quanto mais elementos houverem para ordenar, seria mais inteligente considerar  o uso de um mapa para a ordenação. A idéia é percorrer o array uma vez para extrair os valores já processados para a ordenação e armazenar em um array temporário, ordenar o array temporário e então percorrer o array temporário para conseguir a ordenação correta.</p>
 
 <pre class="brush: js notranslate">// o array a ser ordenado
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];

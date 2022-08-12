@@ -11,7 +11,7 @@ translation_of: Web/API/Console
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>Das <strong><code>Console</code></strong> Objekt bietet Zurgiff auf die Debugging-Konsole des Browsers (z. B. die <a href="/de/docs/Tools/Web_Console">Web-Konsole</a> in Firefox). Die Einzelheiten der Funktionsweise sind von Browser zu Browser unterschiedlich, es gibt jedoch <em>de facto</em> eine Reihe von Funktionen, die normalerweise bereitgestellt werden.</p>
+<p>Das <strong><code>Console</code></strong> Objekt bietet Zurgiff auf die Debugging-Konsole des Browsers (z. B. die <a href="/de/docs/Tools/Web_Console">Web-Konsole</a> in Firefox). Die Einzelheiten der Funktionsweise sind von Browser zu Browser unterschiedlich, es gibt jedoch <em>de facto</em> eine Reihe von Funktionen, die normalerweise bereitgestellt werden.</p>
 
 <p>Auf das <code>Console</code> Objekt kann von jedem globalen Objekt aus zugegriffen werden. {{domxref("Window")}} im Browser und {{domxref("WorkerGlobalScope")}} als spezifische Varianten in Workern über die Property-Konsole. Es wird unter {{domxref("Window.console")}} zur Verfügung gestellt und kann als einfache Konsole referenziert werden. Zum Beispiel:</p>
 
@@ -170,17 +170,17 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 <div>Der Text vor der Direktive wird nicht beeinflusst. Der Text nach der Direktive wird jedoch mit den CSS-Deklarationen im Parameter formatiert.</div>
 
-<div> </div>
+<div> </div>
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/12527/CSS-styling.png" style="display: block; margin: 0 auto;"></div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
 <p><strong>Hinweis:</strong> Es werden etliche CSS-Eigenschaften von diesem Stil unterstützt. Sie sollten experimentieren und sehen, welche sich als nützlich erweisen.</p>
 </div>
 
-<p>Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie <code>console.group()</code> auf. Die Methode <code>console.groupCollapsed()</code> ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.</p>
+<p>Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie <code>console.group()</code> auf. Die Methode <code>console.groupCollapsed()</code> ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.</p>
 
 <div class="note"><strong>Hinweis:</strong> Minimierte Gruppen werden in Gecko noch nicht unterstützt. Die Methode <code>groupCollapsed()</code> ist zu diesem Zeitpunkt die gleiche wie <code>group()</code>.</div>
 

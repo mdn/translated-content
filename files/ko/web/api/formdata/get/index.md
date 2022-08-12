@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/get
 ---
 {{APIRef("XMLHttpRequest")}}
 
-{{domxref("FormData")}} 인터페이스의 **`get()`** 메서드는 `FormData` 객체에서 지정한 키와 연관된 첫 번째 값을 반환합니다. 값이 여러개이고, 모든 값을 원하면 이 메서드 대신 {{domxref("FormData.getAll()","getAll()")}} 메서드를 사용하십시오.
+{{domxref("FormData")}} 인터페이스의 **`get()`** 메서드는 `FormData` 객체에서 지정한 키와 연관된 첫 번째 값을 반환합니다. 값이 여러개이고, 모든 값을 원하면 이 메서드 대신 {{domxref("FormData.getAll()","getAll()")}} 메서드를 사용하십시오.
 
 > **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
@@ -24,11 +24,11 @@ formData.get(name);
 
 ### Return value
 
-값을 포함하는 {{domxref("FormDataEntryValue")}} 입니다.
+값을 포함하는 {{domxref("FormDataEntryValue")}} 입니다.
 
 ## Example
 
-다음 코드를 따라 빈 `FormData` 객체를 만듭니다:
+다음 코드를 따라 빈 `FormData` 객체를 만듭니다:
 
 ```js
 var formData = new FormData();
@@ -58,6 +58,6 @@ formData.get('username'); // Returns "Chris"
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
 - {{HTMLElement("Form")}}

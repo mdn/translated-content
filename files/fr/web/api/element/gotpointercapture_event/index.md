@@ -14,7 +14,7 @@ target.ongotpointercapture = functionRef;
 
 ### Valeur
 
-`functionRef` est un nom de fonction ou une [expression fonction](/en-US/docs/Web/JavaScript/Reference/Operators/function). La fonction accepte un objet {{domxref("FocusEvent")}} en tant qu'unique argument.
+`functionRef` est un nom de fonction ou une [expression fonction](/fr/docs/Web/JavaScript/Reference/Operators/function). La fonction accepte un objet {{domxref("FocusEvent")}} en tant qu'unique argument.
 
 ## Example
 
@@ -42,6 +42,6 @@ function init() {
 
 ## Voir aussi
 
-- L'évènement [`Document: gotpointercapture`](/en-US/docs/Web/API/Document/gotpointercapture_event)
-- L'évènement [`Element: gotpointercapture`](/en-US/docs/Web/API/Element/gotpointercapture_event)
+- L'évènement [`Document: gotpointercapture`](/fr/docs/Web/API/Document/gotpointercapture_event)
+- L'évènement [`Element: gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
 - {{domxref("Element.setPointerCapture()")}}

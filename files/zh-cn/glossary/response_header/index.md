@@ -12,23 +12,25 @@ translation_of: Glossary/Response_header
 
 下面展示了一个 {{HTTPMethod("GET")}}请求的响应头。需要注意的是，严格来说{{HTTPHeader("Content-Encoding")}}和{{HTTPHeader("Content-Type")}}都是属于{{glossary("entity headers")}}。
 
-    200 OK
-    Access-Control-Allow-Origin: *
-    Connection: Keep-Alive
-    Content-Encoding: gzip
-    Content-Type: text/html; charset=utf-8
-    Date: Mon, 18 Jul 2016 16:06:00 GMT
-    Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
-    Keep-Alive: timeout=5, max=997
-    Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
-    Server: Apache
-    Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
-    Transfer-Encoding: chunked
-    Vary: Cookie, Accept-Encoding
-    X-Backend-Server: developer2.webapp.scl3.mozilla.com
-    X-Cache-Info: not cacheable; meta data too large
-    X-kuma-revision: 1085259
-    x-frame-options: DENY
+```
+200 OK
+Access-Control-Allow-Origin: *
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Mon, 18 Jul 2016 16:06:00 GMT
+Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
+Keep-Alive: timeout=5, max=997
+Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
+Server: Apache
+Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
+Transfer-Encoding: chunked
+Vary: Cookie, Accept-Encoding
+X-Backend-Server: developer2.webapp.scl3.mozilla.com
+X-Cache-Info: not cacheable; meta data too large
+X-kuma-revision: 1085259
+x-frame-options: DENY
+```
 
 ## 更多
 
