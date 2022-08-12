@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 ---
-<div> </div>
+<div> </div>
 
 <div>{{CSSRef}}</div>
 
@@ -37,7 +37,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <h3 id="Die_Querachse">Die Querachse</h3>
 
-<p>Die Querachse (cross axis) verläuft senkrecht zur Hauptachse, d.h. wenn Ihre <code>flex-direction</code> (Hauptachse) auf <code>row</code> oder <code>row-reverse</code> eingestellt ist, läuft die Querachse die Spalten hinunter.</p>
+<p>Die Querachse (cross axis) verläuft senkrecht zur Hauptachse, d.h. wenn Ihre <code>flex-direction</code> (Hauptachse) auf <code>row</code> oder <code>row-reverse</code> eingestellt ist, läuft die Querachse die Spalten hinunter.</p>
 
 <p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="https://mdn.mozillademos.org/files/15616/Basics3.png" style="display: block; height: 125px; margin: 0px auto; width: 666px;"></p>
 
@@ -67,29 +67,29 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <h2 id="Der_Flex_Container">Der Flex Container</h2>
 
-<p>Ein mit Flexbox angelegter Bereich eines Dokuments wird als <strong>Flex Container</strong> bezeichnet. Um einen Flex Container zu erstellen, setzen wir den Wert der Eigenschaft {{cssxref("display")}} des Bereichscontainers auf <code>flex</code> oder <code>inline-flex</code>. Sobald wir dies tun, werden die direkten Kinder dieses Containers zu flexiblen Elementen. Wie bei allen Eigenschaften in CSS sind einige Initialwerte definiert, so dass sich beim Erstellen eines Flex Containers alle enthaltenen Flex Items wie folgt verhalten.</p>
+<p>Ein mit Flexbox angelegter Bereich eines Dokuments wird als <strong>Flex Container</strong> bezeichnet. Um einen Flex Container zu erstellen, setzen wir den Wert der Eigenschaft {{cssxref("display")}} des Bereichscontainers auf <code>flex</code> oder <code>inline-flex</code>. Sobald wir dies tun, werden die direkten Kinder dieses Containers zu flexiblen Elementen. Wie bei allen Eigenschaften in CSS sind einige Initialwerte definiert, so dass sich beim Erstellen eines Flex Containers alle enthaltenen Flex Items wie folgt verhalten.</p>
 
 <ul>
- <li>Elemente werden in einer Zeile angezeigt (die Standardeinstellung der Eigenschaft <code>flex-direction</code> ist <code>row</code>).</li>
+ <li>Elemente werden in einer Zeile angezeigt (die Standardeinstellung der Eigenschaft <code>flex-direction</code> ist <code>row</code>).</li>
  <li>Die Positionen beginnen an der Startkante der Hauptachse.</li>
- <li>Die Elemente dehnen sich nicht auf der Hauptdimension aus, sondern können schrumpfen.</li>
+ <li>Die Elemente dehnen sich nicht auf der Hauptdimension aus, sondern können schrumpfen.</li>
  <li>Die {{cssxref("flex-basis")}} Eigenschaft wird auf <code>auto </code>gesetzt.</li>
- <li>Die{{cssxref("flex-wrap")}} Eigenschaft wird auf <code>nowrap </code>gesetzt.</li>
+ <li>Die{{cssxref("flex-wrap")}} Eigenschaft wird auf <code>nowrap </code>gesetzt.</li>
 </ul>
 
 <p>Dies hat zur Folge, dass Ihre Elemente in einer Reihe angeordnet werden, wobei die Größe des Inhalts als Größe in der Hauptachse verwendet wird. Wenn es mehr Elemente gibt, als in den Container passen, werden sie nicht eingepackt, sondern überlaufen. Wenn einige Elemente größer als andere sind, dehnen sich alle Elemente entlang der Querachse aus, um ihre volle Größe zu erreichen.</p>
 
 <p>Wie das aussieht, sehen Sie im folgenden Live-Beispiel. Versuchen Sie, die Elemente zu bearbeiten oder zusätzliche Elemente hinzuzufügen, um das anfängliche Verhalten von Flexbox zu testen.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}} </p>
 
 <h3 id="Wechsel_der_flex-direction">Wechsel der flex-direction</h3>
 
-<p>Das Hinzufügen der Eigenschaft {{cssxref("flex-direction")}} zum Flex Container erlaubt es uns, die Richtung zu ändern, in der unsere Flex Elemente angezeigt werden. Einstellung der <code>flex-direction</code>: <code>row-reverse</code> behält die Anzeige entlang der Zeile bei, jedoch werden die Start- und Endlinien umgeschaltet.</p>
+<p>Das Hinzufügen der Eigenschaft {{cssxref("flex-direction")}} zum Flex Container erlaubt es uns, die Richtung zu ändern, in der unsere Flex Elemente angezeigt werden. Einstellung der <code>flex-direction</code>: <code>row-reverse</code> behält die Anzeige entlang der Zeile bei, jedoch werden die Start- und Endlinien umgeschaltet.</p>
 
-<p>Wenn wir die <code>flex-direction</code> in eine Spalte (<code>column)</code>ändern, schaltet die Hauptachse um und unsere Elemente werden nun in einer Spalte angezeigt. Setzen Sie <code>column-reverse</code> und die Start- und Endzeilen werden wieder umgeschaltet.</p>
+<p>Wenn wir die <code>flex-direction</code> in eine Spalte (<code>column)</code>ändern, schaltet die Hauptachse um und unsere Elemente werden nun in einer Spalte angezeigt. Setzen Sie <code>column-reverse</code> und die Start- und Endzeilen werden wieder umgeschaltet.</p>
 
-<p>Das folgende Live-Beispiel hat die <code>flex-direction</code> auf <code>row-reverse</code> eingestellt. Versuchen Sie die anderen Werte - <code>row</code>, <code>column</code> and <code>column-reverse</code> - um zu sehen, was mit dem Inhalt passiert.</p>
+<p>Das folgende Live-Beispiel hat die <code>flex-direction</code> auf <code>row-reverse</code> eingestellt. Versuchen Sie die anderen Werte - <code>row</code>, <code>column</code> and <code>column-reverse</code> - um zu sehen, was mit dem Inhalt passiert.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}</p>
 
@@ -143,7 +143,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <p>If we gave all of our items in the example above a <code>flex-grow</code> value of 1 then the available space in the flex container would be equally shared between our items and they would stretch to fill the container on the main axis.</p>
 
-<p>The flex-grow property can be used to distribute space in proportion. If we give our first item a <code>flex-grow</code> value of 2 and the other items a value of 1, 2 parts will be given to the first item (100px out of 200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
+<p>The flex-grow property can be used to distribute space in proportion. If we give our first item a <code>flex-grow</code> value of 2 and the other items a value of 1, 2 parts will be given to the first item (100px out of 200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).</p>
 
 <h3 id="The_flex-shrink_property">The <code>flex-shrink</code> property</h3>
 
@@ -194,7 +194,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <p>The initial value for this property is <code>stretch</code> and this is why flex items stretch to the height of the tallest one by default. They are in fact stretching to fill the flex container — the tallest item is defining the height of that.</p>
 
-<p>You could instead set <code>align-items</code> to <code>flex-start</code> in order to make the items line up at the start of the flex container, <code>flex-end</code> to align them to the end, or <code>center</code> to align them in the centre. Try this in the live example — I have given the flex container a height in order that you can see how the items can be moved around inside the container. See what happens if you set the value of align-items to:</p>
+<p>You could instead set <code>align-items</code> to <code>flex-start</code> in order to make the items line up at the start of the flex container, <code>flex-end</code> to align them to the end, or <code>center</code> to align them in the centre. Try this in the live example — I have given the flex container a height in order that you can see how the items can be moved around inside the container. See what happens if you set the value of align-items to:</p>
 
 <ul>
  <li><code>stretch</code></li>
@@ -209,7 +209,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <p>The {{cssxref("justify-content")}} property is used to align the items on the main axis, the direction in which <code>flex-direction</code> has set the flow. The initial value is <code>flex-start</code> which will line the items up at the start edge of the container, but you could also set the value to <code>flex-end</code> to line them up at the end, or <code>center</code> to line them up in the centre.</p>
 
-<p>You can also use the value <code>space-between</code> to take all the spare space after the items have been laid out, and share it out evenly between the items so there will be an equal amount of space between each item. To cause an equal amount of space on the right and left of each item use the value <code>space-around</code>. With <code>space-around</code>, items have a half-size space on either end. Or, to cause items to have equal space around them use the value <code>space-evenly</code>. With <code>space-evenly</code>, items have a full-size space on either end.</p>
+<p>You can also use the value <code>space-between</code> to take all the spare space after the items have been laid out, and share it out evenly between the items so there will be an equal amount of space between each item. To cause an equal amount of space on the right and left of each item use the value <code>space-around</code>. With <code>space-around</code>, items have a half-size space on either end. Or, to cause items to have equal space around them use the value <code>space-evenly</code>. With <code>space-evenly</code>, items have a full-size space on either end.</p>
 
 <p>Try the following values of <code>justify-content</code> in the live example:</p>
 
@@ -224,8 +224,8 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Grundlegende_Konzepte_der_Flexbox
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}</p>
 
-<p>In the article <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a Flex Container</a> we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.</p>
+<p>In the article <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a Flex Container</a> we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.</p>
 
 <h2 id="Next_steps">Next steps</h2>
 
-<p>After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">how this specification relates to other parts of CSS</a>.</p>
+<p>After reading this article you should have an understanding of the basic features of Flexbox. In the next article we will look at <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">how this specification relates to other parts of CSS</a>.</p>

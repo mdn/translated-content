@@ -7,9 +7,9 @@ tags:
   - JavaScript
 translation_of: Glossary/Falsy
 ---
-<p id="Summary">Ein <strong>falsy-</strong>Wert ist ein Wert welcher zu <code>false</code> übersetzt, wenn er in einem {{Glossary("Boolean", "booleschen")}} Kontext ausgewertet wird.</p>
+<p id="Summary">Ein <strong>falsy-</strong>Wert ist ein Wert welcher zu <code>false</code> übersetzt, wenn er in einem {{Glossary("Boolean", "booleschen")}} Kontext ausgewertet wird.</p>
 
-<p>{{Glossary("JavaScript")}} nutzt {{Glossary("Type_Conversion", "Type Conversion")}} (Typ-Konvertierung) um für beliebige Werte eine boolesche Entsprechung zu erzwingen, wenn der Kontext es erfordert, beispielsweise bei {{Glossary("Conditional", "Conditionals")}} (Bedingungen) und {{Glossary("Loop", "Loops")}} (Schleifen).</p>
+<p>{{Glossary("JavaScript")}} nutzt {{Glossary("Type_Conversion", "Type Conversion")}} (Typ-Konvertierung) um für beliebige Werte eine boolesche Entsprechung zu erzwingen, wenn der Kontext es erfordert, beispielsweise bei {{Glossary("Conditional", "Conditionals")}} (Bedingungen) und {{Glossary("Loop", "Loops")}} (Schleifen).</p>
 
 <div class="note">
 <p><span class="st">Es gibt 8<strong> falsy</strong>-Werte in JavaScript.</span></p>
@@ -58,7 +58,7 @@ translation_of: Glossary/Falsy
 
 <h2 id="Beispiele">Beispiele</h2>
 
-<p>Beispiele von <em>falsy-</em>Werten in JavaScript (welche zu false übersetzen und somit folgende <code>if</code> Konditionen nicht erfüllen):</p>
+<p>Beispiele von <em>falsy-</em>Werten in JavaScript (welche zu false übersetzen und somit folgende <code>if</code> Konditionen nicht erfüllen):</p>
 
 <pre class="brush: js">if (false)
 if (null)
@@ -72,7 +72,7 @@ if (``)
 if (document.all)</pre>
 
 <div class="blockIndicator note">
-<p><code>document.all</code> wurde in der Vergangenheit zur Browsererkennung verwendet und die <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all">HTML-Spezifikation definiert hier eine absichtliche Verletzung</a> des ECMAScript-Standards, um eine Kompatibilität mit Legacy-Code zu gewährleisten <code>(if (document.all) { // Internet Explorer code here }</code> oder nutzen von <code>document.all</code> ohne vorher auf dessen Existenz zu prüfen: <code>document.all.foo</code>).</p>
+<p><code>document.all</code> wurde in der Vergangenheit zur Browsererkennung verwendet und die <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all">HTML-Spezifikation definiert hier eine absichtliche Verletzung</a> des ECMAScript-Standards, um eine Kompatibilität mit Legacy-Code zu gewährleisten <code>(if (document.all) { // Internet Explorer code here }</code> oder nutzen von <code>document.all</code> ohne vorher auf dessen Existenz zu prüfen: <code>document.all.foo</code>).</p>
 </div>
 
 <h3 id="Der_logische_AND_Operator">Der logische AND Operator, &amp;&amp;</h3>
@@ -84,7 +84,7 @@ if (document.all)</pre>
 // ↪ false
 </pre>
 
-<p>Manchmal begegnet man auch der Schreibweise <strong>falsey</strong>, obwohl im Englischen die Bildung von Adjektiven mit <em>-y</em> zu einem Wegfall des Buchstaben <em>e</em> am Ende des Wortes führt (z.B. noise =&gt; noisy, ice =&gt; icy, shine =&gt; shiny).</p>
+<p>Manchmal begegnet man auch der Schreibweise <strong>falsey</strong>, obwohl im Englischen die Bildung von Adjektiven mit <em>-y</em> zu einem Wegfall des Buchstaben <em>e</em> am Ende des Wortes führt (z.B. noise =&gt; noisy, ice =&gt; icy, shine =&gt; shiny).</p>
 
 <h2 id="Spezikationen">Spezikationen</h2>
 
@@ -96,7 +96,7 @@ if (document.all)</pre>
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName("ESDraft", "#sec-toboolean", "<code>ToBoolean</code> abstract operation")}}</td>
+   <td>{{SpecName("ESDraft", "#sec-toboolean", "<code>ToBoolean</code> abstract operation")}}</td>
   </tr>
  </tbody>
 </table>

@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p>Die <code>parse()</code> Methode bekommt ein Datumsstring (z. B. <code>"Dec 25, 1995"</code> ) und gibt die Anzahl der Millisekunden seit dem 1. Januar 1970 00:00:00 UTC zurück. Diese Funktion ist nützlich, um Datumswerte mithilfe eines Stringswertes einzustellen, (z. B. im zusammenhang mit der {{jsxref("Date.prototype.setTime()", "setTime()")}} Methode und dem {{jsxref("Global_Objects/Date", "Date")}} Objekt).</p>
 
-<p>Bei einer Stringrepräsentation mit einer Zeit, gibt die <code>parse()</code> Methode die Zeitwert zurück. Es wird die RFC2822 / IETF Datums Syntax (<a href="http://tools.ietf.org/html/rfc2822#section-3.3">RFC2822 Section 3.3</a>) unterstützt (z. B. <code>"Mon, 25 Dec 1995 13:30:00 GMT"</code>). Die Methode versteht die kontimentalen US Zeitzonenabkürzungen, jedoch sollte lieber der Zeitzonenunterschied angegeben werden, wie zum Beispiel  <code>"Mon, 25 Dec 1995 13:30:00 +0430"</code> (4 Stunden und 30 Minuten östlich vom Greenwich Meridian).</p>
+<p>Bei einer Stringrepräsentation mit einer Zeit, gibt die <code>parse()</code> Methode die Zeitwert zurück. Es wird die RFC2822 / IETF Datums Syntax (<a href="http://tools.ietf.org/html/rfc2822#section-3.3">RFC2822 Section 3.3</a>) unterstützt (z. B. <code>"Mon, 25 Dec 1995 13:30:00 GMT"</code>). Die Methode versteht die kontimentalen US Zeitzonenabkürzungen, jedoch sollte lieber der Zeitzonenunterschied angegeben werden, wie zum Beispiel  <code>"Mon, 25 Dec 1995 13:30:00 +0430"</code> (4 Stunden und 30 Minuten östlich vom Greenwich Meridian).</p>
 
 <p>GMT und UTC werden gleich berücksichtigt. Die lokale Zeitzone wird eingesetzt um Argumente im <a href="http://tools.ietf.org/html/rfc2822#section-3.3">RFC2822 Kapitel 3.3</a> Format zu interpretieren, welche keine Zeitzoneninformationen enthalten.</p>
 
@@ -59,11 +59,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <h3 id="Unterschiede_in_erwarteten_Zeitzonen">Unterschiede in erwarteten Zeitzonen</h3>
 
-<p>Wenn der Datumsstring  <code>"March 7, 2014"</code> gegeben ist, nimmt <code>parse()</code> dabei die lokale Zeitzone an. Ist hingegen ein ISO Format wie <code>"2014-03-07"</code> angegeben, so wird eine UTC Zeitzone angenommen (ES5 und ECMAScript 2015). Deshalb können die so erstellten {{jsxref("Date")}} Objekte einen unterschiedlichen Zeitpunkt repräsentieren. Dieses ist von der ECMAScript Version abhängig wenn das System mit einer lokalen UTC Zeit eingestellt ist. Das bedeutet, dass zwei Strings mit einem äquivalenten Datum (Unterschied in der Formatierung) zu zwei verschiednenen Ergebnissen führen kann.</p>
+<p>Wenn der Datumsstring  <code>"March 7, 2014"</code> gegeben ist, nimmt <code>parse()</code> dabei die lokale Zeitzone an. Ist hingegen ein ISO Format wie <code>"2014-03-07"</code> angegeben, so wird eine UTC Zeitzone angenommen (ES5 und ECMAScript 2015). Deshalb können die so erstellten {{jsxref("Date")}} Objekte einen unterschiedlichen Zeitpunkt repräsentieren. Dieses ist von der ECMAScript Version abhängig wenn das System mit einer lokalen UTC Zeit eingestellt ist. Das bedeutet, dass zwei Strings mit einem äquivalenten Datum (Unterschied in der Formatierung) zu zwei verschiednenen Ergebnissen führen kann.</p>
 
 <h3 id="Fall-back_für_implementierungsspezifische_Datumsformate">Fall-back für implementierungsspezifische Datumsformate</h3>
 
-<p>Die ECMAScript Spezifikation besagt: Wenn ein String nicht dem Standardformat entspricht, nutzen die Funktionen eine Fall-back-Lösung in Form einer implementierungsabhängigen Heuristik oder eines implementierungsabhängigen Algorithmus. Unkenntliche Strings oder Daten, die nicht valide Werte  von ISO formattierten Elementen haben, führen dazu, dass <code>Date.parse()</code> den Wert {{jsxref("NaN")}} zurückgibt.</p>
+<p>Die ECMAScript Spezifikation besagt: Wenn ein String nicht dem Standardformat entspricht, nutzen die Funktionen eine Fall-back-Lösung in Form einer implementierungsabhängigen Heuristik oder eines implementierungsabhängigen Algorithmus. Unkenntliche Strings oder Daten, die nicht valide Werte  von ISO formattierten Elementen haben, führen dazu, dass <code>Date.parse()</code> den Wert {{jsxref("NaN")}} zurückgibt.</p>
 
 <p>Immer, wenn ein String nicht im einfachen ISO Format ist (ECMA-252) und nicht valide Datumswerte enthällt, ist es vom Wert und vom Browser abhängig, ob {{jsxref("NaN")}} zurückgegeben wird oder nicht. Z. B.:</p>
 
@@ -144,12 +144,12 @@ Date<span class="punctuation token">.</span><span class="function token">parse</
   <tr>
    <td>{{SpecName('ES6', '#sec-date.parse', 'Date.parse')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.parse', 'Date.parse')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

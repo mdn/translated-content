@@ -13,9 +13,9 @@ translation_of: Web/API/Node/appendChild
 
 <p>Die <code><strong>Node.appendChild()</strong></code> Methode fügt einen Kind-Knoten am Ende der Liste aller Kinder des angegebenen Eltern-Knotens an (to append = anhängen).</p>
 
-<p>Wenn das gegebene Kind eine Referenz zu einem existierenden Knoten im Dokument ist, wird <code>appendChild()</code> es von der aktuellen Position zu der neuen Position bewegen. Es gibt also keine Notwendigkeit den Knoten erst zu entfernen, weil ein Knoten in einem Dokument nicht gleichzeitig an zwei Stellen vorkommen kann. Also, wenn der Knoten bereits einen Eltern-Knoten hat, wird der Knoten zuerst entfernt und dann erneut am Ende der Kind-Knoten-Liste angehängt.</p>
+<p>Wenn das gegebene Kind eine Referenz zu einem existierenden Knoten im Dokument ist, wird <code>appendChild()</code> es von der aktuellen Position zu der neuen Position bewegen. Es gibt also keine Notwendigkeit den Knoten erst zu entfernen, weil ein Knoten in einem Dokument nicht gleichzeitig an zwei Stellen vorkommen kann. Also, wenn der Knoten bereits einen Eltern-Knoten hat, wird der Knoten zuerst entfernt und dann erneut am Ende der Kind-Knoten-Liste angehängt.</p>
 
-<p>Das {{domxref("Node.cloneNode()")}}  kann genutzt werden um eine Kopie des Knotens zu machen, bevor es an einen neuen Eltern-Knoten angehängt wird. Zu beachten: Kopien die mit <code>cloneNode</code> gemacht wurden, werden nicht automatisch Synchron gehalten.</p>
+<p>Das {{domxref("Node.cloneNode()")}}  kann genutzt werden um eine Kopie des Knotens zu machen, bevor es an einen neuen Eltern-Knoten angehängt wird. Zu beachten: Kopien die mit <code>cloneNode</code> gemacht wurden, werden nicht automatisch Synchron gehalten.</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 

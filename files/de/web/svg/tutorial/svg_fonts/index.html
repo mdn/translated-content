@@ -11,7 +11,7 @@ original_slug: Web/SVG/Tutorial/SVG_Schriftarten
 <p><strong>SVG-Schriftarten werden gegenwärtig nur durch Safari und Android-Browser unterstützt. </strong></p>
 
 <p>
- </p><div class="note">Im Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">wurde eine Implementierung nicht berücksichtigt</a>, in <a href="https://www.chromestatus.com/feature/5930075908210688">Chrome 38 wurde sie entfernt</a> (auch in Opera 25) und Firefox hat es auf <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">unbestimmte Zeit verschoben</a>, um sich auf <a href="/en/WOFF" title="en/About WOFF">WOFF</a> konzentrieren zu können. Andere Tools jedoch wie <a class="external" href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a>-Plugin, Batik und Teile von Inkscape unterstützen das Einbetten von SVG-Schriftarten.</div>
+ </p><div class="note">Im Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">wurde eine Implementierung nicht berücksichtigt</a>, in <a href="https://www.chromestatus.com/feature/5930075908210688">Chrome 38 wurde sie entfernt</a> (auch in Opera 25) und Firefox hat es auf <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">unbestimmte Zeit verschoben</a>, um sich auf <a href="/en/WOFF" title="en/About WOFF">WOFF</a> konzentrieren zu können. Andere Tools jedoch wie <a class="external" href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a>-Plugin, Batik und Teile von Inkscape unterstützen das Einbetten von SVG-Schriftarten.</div>
 
 
 <p>Das grundlegende Tag zur Definition einer SVG-Schriftart ist {{ SVGElement("font") }}.</p>
@@ -42,7 +42,7 @@ original_slug: Web/SVG/Tutorial/SVG_Schriftarten
 
 <p>Das Kind-Tag {{ SVGElement("font-face-src") }} entspricht dem <code>src</code>-Descriptor bei <code>@font-face</code> in CSS. Mittels der Kinder-Tags {{ SVGElement("font-face-name") }} und {{ SVGElement("font-face-uri") }} können auf externe Quellen verwiesen werden. Am obigen Beispiel gezeigt: Wenn dem Renderer lokal eine Schriftart namens "Super Sans Bold" verfügbar ist, soll er diese stattdessen benutzen.</p>
 
-<p>Das {{ SVGElement("missing-glyph") }}-Tag wird benutzt, um ein Zeichen zu definieren, das angezeigt wird, falls in der Schriftart kein Zeichen an dieser Stelle definiert wurde und auch kein Ausweichmechanismus zur Verfügung steht. Am Beispiel der Definition des Missing-Glyph (im obigen Beispiel) kann gezeigt werden, wie Zeichen gemacht werden: Einfach irgendeine beliebige SVG-Form oder -Pfad einfügen. </p>
+<p>Das {{ SVGElement("missing-glyph") }}-Tag wird benutzt, um ein Zeichen zu definieren, das angezeigt wird, falls in der Schriftart kein Zeichen an dieser Stelle definiert wurde und auch kein Ausweichmechanismus zur Verfügung steht. Am Beispiel der Definition des Missing-Glyph (im obigen Beispiel) kann gezeigt werden, wie Zeichen gemacht werden: Einfach irgendeine beliebige SVG-Form oder -Pfad einfügen. </p>
 
 <p>Auch andere SVG-Tags können hier benutzt werden, zum Beispiel {{ SVGElement("filter") }}, {{ SVGElement("a") }} oder {{ SVGElement("script") }}. Für einfache Zeichen aber kann ein Attribut <code>d</code> hinzugefügt werden. Es definiert den Umriss des Zeichens genau so, wie es beim <code>path</code>-Tag geschieht.</p>
 
@@ -55,7 +55,7 @@ original_slug: Web/SVG/Tutorial/SVG_Schriftarten
 
 <h2 id="Auf_eine_Schriftart_zugreifen">Auf eine Schriftart zugreifen</h2>
 
-<p>Wenn die Schriftart fertig ist, kann im {{ SVGElement("text") }}-Tag mit dem Attribut <code>font-family</code> auf sie zugegriffen werden:</p>
+<p>Wenn die Schriftart fertig ist, kann im {{ SVGElement("text") }}-Tag mit dem Attribut <code>font-family</code> auf sie zugegriffen werden:</p>
 
 <pre>&lt;font&gt;
   &lt;font-face font-family="Super Sans" /&gt;

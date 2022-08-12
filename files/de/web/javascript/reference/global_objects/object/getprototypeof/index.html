@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<p>Die <code><strong>Object.getPrototypeOf()</strong></code> Methode gibt den Prototyp (den Wert der internen <code>[[Prototype]]</code> Eigenschaft) des angegebenen Objekts <em>obj</em> zurück</p>
+<p>Die <code><strong>Object.getPrototypeOf()</strong></code> Methode gibt den Prototyp (den Wert der internen <code>[[Prototype]]</code> Eigenschaft) des angegebenen Objekts <em>obj</em> zurück</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p>Der Prototyp des Objekts <em>obj</em> wird zurückgegeben. Wenn keine Eigenschaften vererbt werden, wird {{jsxref("null")}} zurück gegeben.</p>
+<p>Der Prototyp des Objekts <em>obj</em> wird zurückgegeben. Wenn keine Eigenschaften vererbt werden, wird {{jsxref("null")}} zurück gegeben.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -31,7 +31,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 <h2 id="Notizen">Notizen</h2>
 
-<p>In ES5 wird eine {{jsxref("TypeError")}} exception geworfen, falls der Parameter obj kein Objekt ist . In ES2015 wird der Parameter <em>obj</em> in ein {{jsxref("Object")}} umgewandelt.</p>
+<p>In ES5 wird eine {{jsxref("TypeError")}} exception geworfen, falls der Parameter obj kein Objekt ist . In ES2015 wird der Parameter <em>obj</em> in ein {{jsxref("Object")}} umgewandelt.</p>
 
 <pre class="brush: js">Object.getPrototypeOf('foo');
 // TypeError: "foo" is not an object (ES5 code)
@@ -56,12 +56,12 @@ Object.getPrototypeOf('foo');
   <tr>
    <td>{{SpecName('ES6', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getProtoypeOf')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -118,7 +118,7 @@ Object.getPrototypeOf('foo');
 </table>
 </div>
 
-<h2 id="Opera-spezfische_Notizen">Opera-spezfische Notizen</h2>
+<h2 id="Opera-spezfische_Notizen">Opera-spezfische Notizen</h2>
 
 <p>Even though older Opera versions don't support <code>Object.getPrototypeOf()</code> yet, Opera supports the non-standard {{jsxref("Object.proto", "__proto__")}} property since Opera 10.50.</p>
 

@@ -17,7 +17,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Applying_styles_and_colors
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}</dt>
  <dd>
- <p class="Normal"> Bestimmt den Stil in dem die Form gefüllt wird.</p>
+ <p class="Normal"> Bestimmt den Stil in dem die Form gefüllt wird.</p>
  </dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle = color")}}</dt>
  <dd>
@@ -57,7 +57,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 }</pre>
 
 <div class="hidden">
-<pre class="brush: html"> </pre>
+<pre class="brush: html"> </pre>
 
 <pre class="brush: js">draw();</pre>
 </div>
@@ -158,25 +158,25 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 <p class="Normal">Das zweite Beispiel ist ähnlich dem ersten, aber hier überlagern wir farbige Flächen mit schmalen, weißen Rechtecken zunehmender Deckkraft. Die Verwendung von rgba() an Stelle von <code>globalAlpha</code> erlaubt uns mehr Kontrolle und Flexibilität, weil wir damit Strich- und Füllstil unterschiedlich behandeln können.</p>
 
 <pre class="brush: js;highlight[16]">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  // Draw background
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  // Draw background
+  ctx.fillStyle = 'rgb(255,221,0)';
+  ctx.fillRect(0,0,150,37.5);
+  ctx.fillStyle = 'rgb(102,204,0)';
+  ctx.fillRect(0,37.5,150,37.5);
+  ctx.fillStyle = 'rgb(0,153,255)';
+  ctx.fillRect(0,75,150,37.5);
+  ctx.fillStyle = 'rgb(255,51,0)';
+  ctx.fillRect(0,112.5,150,37.5);
 
-  // Draw semi transparent rectangles
-  for (var i=0;i&lt;10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j&lt;4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5);
-    }
-  }
+  // Draw semi transparent rectangles
+  for (var i=0;i&lt;10;i++){
+    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
+    for (var j=0;j&lt;4;j++){
+      ctx.fillRect(5+i*14,5+j*37.5,14,27.5);
+    }
+  }
 }</pre>
 
 <div class="hidden">
@@ -462,19 +462,19 @@ draw();</pre>
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10,10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset &gt; 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset &gt; 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();</pre>
@@ -507,7 +507,7 @@ var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 <dl>
  <dt>{{domxref("CanvasGradient.addColorStop", "gradient.addColorStop(position, color)")}}</dt>
  <dd>
- <p class="Normal">Erzeugt einen neuen Farbwert am Verlaufsobjekt. Das Positionsargument ist eine Zahl zwischen 0.0 und 1.0, und es definiert die relative Position der Farbe innerhalb der Verlaufsstrecke. Das Farbargument ist eine Zeichenkette für eine CSS {{cssxref("&lt;color&gt;")}} und beschreibt den Farbwert, den der Farbverlauf bis zur angegebenen Position erreicht hat.</p>
+ <p class="Normal">Erzeugt einen neuen Farbwert am Verlaufsobjekt. Das Positionsargument ist eine Zahl zwischen 0.0 und 1.0, und es definiert die relative Position der Farbe innerhalb der Verlaufsstrecke. Das Farbargument ist eine Zeichenkette für eine CSS {{cssxref("&lt;color&gt;")}} und beschreibt den Farbwert, den der Farbverlauf bis zur angegebenen Position erreicht hat.</p>
  </dd>
 </dl>
 
@@ -522,7 +522,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p class="Normal">In diesem Beispiel erzeugen wir zwei unterschiedliche Verläufe. Wie Sie sehen, akzeptieren sowohl <code>strokeStyle</code> als auch <code>fillStyle</code> ein <code>canvasGradient</code>-Objekt als Eingabe.</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js;highlight[5,11]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
@@ -549,7 +549,7 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
@@ -647,7 +647,7 @@ lineargradient.addColorStop(1, 'black');
  </dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <p class="Normal">Wir verwenden eine Methode ähnlich den vorhergehenden Beispielen zu Verläufen, um ein {{domxref("CanvasPattern")}}-Objekt zu erzeugen. Haben wir das Muster erst erzeugt, können wir es einer <code>fillStyle</code>- oder <code>strokeStyle</code>-Eigenschaft zuordnen.</p>
 
@@ -656,7 +656,7 @@ img.src = 'someimage.png';
 var ptrn = ctx.createPattern(img,'repeat');
 </pre>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p class="Normal"><strong>Anmerkung:</strong> Wie bei <code>drawImage()</code> müssen Sie auch hier sicherstellen, dass das Bild vollständig geladen wurde bevor Sie die Methode aufrufen; andernfalls kann das Muster inkorrekt dargestellt werden.</p>
@@ -765,13 +765,13 @@ var ptrn = ctx.createPattern(img,'repeat');
  <li><code><strong>"evenodd"</strong></code>: Die <a class="external external-icon" href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd rule</a>.</li>
 </ul>
 
-<p>In diesem  Beispiel verwenden wir die <code>evenodd</code>-Regel.</p>
+<p>In diesem  Beispiel verwenden wir die <code>evenodd</code>-Regel.</p>
 
 <pre class="brush: js;highlight[6]">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI*2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI*2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI*2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI*2, true);
   ctx.fill("evenodd");
 }</pre>
 

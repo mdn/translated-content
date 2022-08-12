@@ -13,21 +13,21 @@ translation_of: 'Web/CSS/:invalid'
 
 <h2 id="Übersicht">Übersicht</h2>
 
-<p>Die <a href="/de/CSS/Pseudo-classes" title="Pseudoklassen">Pseudoklasse</a> <code>:invalid </code>entspricht jedem {{ HTMLElement("input") }}- oder {{ HTMLElement("form") }}-Element, dessen Inhalt nicht gemäß der Eigenschaften des Eingabeelements <a href="/en/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">validiert</a> werden kann. Dadurch kann die Darstellung ungültiger Felder auf einfache Weise angepasst werden, damit Benutzer*innen fehlerhafte Eingaben gut identifizieren und korrigieren können.</p>
+<p>Die <a href="/de/CSS/Pseudo-classes" title="Pseudoklassen">Pseudoklasse</a> <code>:invalid </code>entspricht jedem {{ HTMLElement("input") }}- oder {{ HTMLElement("form") }}-Element, dessen Inhalt nicht gemäß der Eigenschaften des Eingabeelements <a href="/en/HTML/HTML5/Constraint_validation" title="en/HTML/HTML5/Constraint_validation">validiert</a> werden kann. Dadurch kann die Darstellung ungültiger Felder auf einfache Weise angepasst werden, damit Benutzer*innen fehlerhafte Eingaben gut identifizieren und korrigieren können.</p>
 
-<p>Standardmäßig wendet Gecko keinen Stil auf die Pseudoklasse <code>:invalid</code> an. Jedoch wendet es einen Stil (ein rotes "Leuchten" mithilfe der Eigenschaft {{ Cssxref("box-shadow") }}) auf die Pseudoklasse {{ Cssxref(":-moz-ui-invalid") }} an, der einen Teil der Fälle für <code>:invalid</code> betrifft.</p>
+<p>Standardmäßig wendet Gecko keinen Stil auf die Pseudoklasse <code>:invalid</code> an. Jedoch wendet es einen Stil (ein rotes "Leuchten" mithilfe der Eigenschaft {{ Cssxref("box-shadow") }}) auf die Pseudoklasse {{ Cssxref(":-moz-ui-invalid") }} an, der einen Teil der Fälle für <code>:invalid</code> betrifft.</p>
 
 <p>Das Leuchten kann mit dem folgenden CSS ausgeschaltet werden. Es kann auch komplett überschrieben werden, um das Aussehen von ungültigen Feldern anzupassen.</p>
 
 <pre class="brush: css">:invalid {
-  box-shadow: none;
+  box-shadow: none;
 }
 
 :-moz-submit-invalid {
-  box-shadow: none;
+  box-shadow: none;
 }
 
-:-moz-ui-invalid {
+:-moz-ui-invalid {
   box-shadow: none;
 }
 </pre>
@@ -40,11 +40,11 @@ translation_of: 'Web/CSS/:invalid'
 
 <h4 id="Radio_Buttons">Radio Buttons</h4>
 
-<p>Wenn in einer Gruppe von Radio Buttons (d.i., wenn alle den gleichen Wert für ihr <code>name</code>-Attribut besitzen) kein Radio Button ausgewählt ist und mindestens einer die Eigenschaft <code>required</code> hat, wird die Pseudoklasse <code>:invalid</code> auf alle Radio Buttons der Gruppe angewendet.</p>
+<p>Wenn in einer Gruppe von Radio Buttons (d.i., wenn alle den gleichen Wert für ihr <code>name</code>-Attribut besitzen) kein Radio Button ausgewählt ist und mindestens einer die Eigenschaft <code>required</code> hat, wird die Pseudoklasse <code>:invalid</code> auf alle Radio Buttons der Gruppe angewendet.</p>
 
 <h2 id="Example2" name="Example2">Beispiel</h2>
 
-<p>Dieses Beispiel zeigt ein einfaches Formular, dessen gültige Elemente grün und dessen ungültige Elemente rot gefärbt werden.</p>
+<p>Dieses Beispiel zeigt ein einfaches Formular, dessen gültige Elemente grün und dessen ungültige Elemente rot gefärbt werden.</p>
 
 <h3 id="HTML">HTML</h3>
 

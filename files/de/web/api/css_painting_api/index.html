@@ -32,7 +32,7 @@ translation_of: Web/API/CSS_Painting_API
 
 <dl>
  <dt>{{domxref('PaintWorklet')}}</dt>
- <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
+ <dd>Programmatically generates an image where a CSS property expects a file. Access this interface through <a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS/paintWorklet" title="paintWorklet is a static, read-only property of the CSS interface that provides access to the PaintWorklet, which programmatically generates an image where a CSS property expects a file. "><code>CSS.paintWorklet</code></a>.</dd>
  <dt>{{domxref('PaintWorkletGlobalScope')}}</dt>
  <dd>The global execution context of the <code>paintWorklet</code>.</dd>
  <dt>{{domxref('PaintRenderingContext2D')}}</dt>
@@ -52,7 +52,7 @@ translation_of: Web/API/CSS_Painting_API
 
 <h2 id="Examples" name="Examples">Examples</h2>
 
-<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/paint()" title="The documentation about this has not yet been written; please consider contributing!"><code>paint()</code></a></code>  function.</p>
+<p>To draw directly into an element's background using JavaScript in our CSS, we define a paint worklet using the <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function, tell the document to include the worklet using the paintWorklet addModule() method, then include the image we created using the CSS <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/paint()" title="The documentation about this has not yet been written; please consider contributing!"><code>paint()</code></a></code>  function.</p>
 
 <p>We create our PaintWorklet called 'hollowHighlights' using the <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> function:</p>
 
@@ -123,26 +123,26 @@ translation_of: Web/API/CSS_Painting_API
 <p>We then include the paintWorklet:</p>
 
 <pre class="brush: html hidden notranslate">&lt;ul&gt;
-    &lt;li&gt;item 1&lt;/li&gt;
-    &lt;li&gt;item 2&lt;/li&gt;
-    &lt;li&gt;item 3&lt;/li&gt;
-    &lt;li&gt;item 4&lt;/li&gt;
-    &lt;li&gt;item 5&lt;/li&gt;
-    &lt;li&gt;item 6&lt;/li&gt;
-    &lt;li&gt;item 7&lt;/li&gt;
-    &lt;li&gt;item 8&lt;/li&gt;
-    &lt;li&gt;item 9&lt;/li&gt;
-    &lt;li&gt;item 10&lt;/li&gt;
-    &lt;li&gt;item 11&lt;/li&gt;
-    &lt;li&gt;item 12&lt;/li&gt;
-    &lt;li&gt;item 13&lt;/li&gt;
-    &lt;li&gt;item 14&lt;/li&gt;
-    &lt;li&gt;item 15&lt;/li&gt;
-    &lt;li&gt;item 16&lt;/li&gt;
-    &lt;li&gt;item 17&lt;/li&gt;
-    &lt;li&gt;item 18&lt;/li&gt;
-    &lt;li&gt;item 19&lt;/li&gt;
-    &lt;li&gt;item 20&lt;/li&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item 18&lt;/li&gt;
+    &lt;li&gt;item 19&lt;/li&gt;
+    &lt;li&gt;item 20&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
 <pre class="brush: js notranslate">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');

@@ -50,15 +50,15 @@ console.log(str.endsWith('to be', 19)); // true
 <p>Diese Methode wurde der ECMAScript6-Spezifikation hinzugefügt und könnte noch nicht in allen JavaScript-Implementierungen verfügbar sein. Mithilfe des folgenden Code-Stücks kann die Methode auch bei fehlender Implementierung genutzt werden:</p>
 
 <pre class="brush: js">if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
-      var subjectString = this.toString();
-      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position &gt; subjectString.length) {
-        position = subjectString.length;
-      }
-      position -= searchString.length;
-      var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 &amp;&amp; lastIndex === position;
-  };
+  String.prototype.endsWith = function(searchString, position) {
+      var subjectString = this.toString();
+      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position &gt; subjectString.length) {
+        position = subjectString.length;
+      }
+      position -= searchString.length;
+      var lastIndex = subjectString.indexOf(searchString, position);
+      return lastIndex !== -1 &amp;&amp; lastIndex === position;
+  };
 }
 </pre>
 
@@ -79,7 +79,7 @@ console.log(str.endsWith('to be', 19)); // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

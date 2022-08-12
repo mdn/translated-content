@@ -41,7 +41,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>Man kann auch Methoden von Array.prototype auf {{ domxref("HTMLCollection") }} anwenden, in dem die <var>HTMLCollection</var>  in dem sie an die <var>this</var> Werte der Methoden übergeben wird. Hier finden wir alle div-Elemente der Klasse 'test':</p>
+<p>Man kann auch Methoden von Array.prototype auf {{ domxref("HTMLCollection") }} anwenden, in dem die <var>HTMLCollection</var>  in dem sie an die <var>this</var> Werte der Methoden übergeben wird. Hier finden wir alle div-Elemente der Klasse 'test':</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){

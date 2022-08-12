@@ -7,7 +7,7 @@ original_slug: Web/Barrierefreiheit/ARIA/ARIA_Live_Regionen
 <h2 id="Einführung">Einführung</h2>
 <p>In der Vergangenheit konnten Änderungen bei Webseiten nur so von einem Screenreader kommuniziert werden, dass der komplette Inhalt vorgelesen oder nur sehr wenig bis gar nichts über die Inhaltsänderungen berichtet wurde. Dies führte dazu, dass einige oder sogar alle Informationen unzugänglich waren. Bisher waren Screenreader nicht in der Lage, diese Situation zu verbessern, weil es keine standardisierte Methode gab, um Screenreader per Markup über Veränderungen zu informieren. ARIA-Live-Regionen sollen diese Lücke schließen. Über Live-Regionen erhalten Screenreader Anweisungen, wonach entschieden werden kann, ob und wann Benutzer unterbrochen werden sollen, um sie über Veränderungen des Inhalts in Kenntnis zu setzen.</p>
 <h2 id="Einfache_Live-Regionen">Einfache Live-Regionen</h2>
-<p> </p>
+<p> </p>
 <p>Dynamische Inhalte, die ohne das Neuladen einer Webseite nachgeladen werden, sind im Allgemeinen entweder eine Region oder eine Komponente. Einfache Inhaltsänderungen, die nicht interaktiv sind, sollten als Live-Regionen gekennzeichnet werden. In der folgenden Liste werden die unterschiedlichen Eigenschaften für ARIA-Live-Regionen mit einer Beschreibung aufgeführt.</p>
 <ol>
  <li><strong>aria-live:</strong> Mit aria-live=POLITENESS_SETTING wird die Priorität für die Behandlung von Aktualisierungen von Live-Regionen festgelegt - die möglichen Werte für diese Einstellung sind: off/polite/assertive, wobei "off" der Default-Wert ist. Diese Eigenschaft ist mit Abstand die Wichtigste.</li>
@@ -47,23 +47,23 @@ original_slug: Web/Barrierefreiheit/ARIA/ARIA_Live_Regionen
   </tr>
   <tr>
    <td>alert</td>
-   <td>Eine Fehler- oder Warnungmeldung, die auf dem Bildschirm eingeblendet wird. Alarmmeldungen sind  insbesondere bei der clentseitige Validierungsmeldungen für Benutzer wichtig. (TBD: link to ARIA form tutorial with aria info)</td>
-   <td>Zur Maximierung der Kompatiblität sollte ein redundantes aria-live="assertive" hinzugefügt werden, wenn diese Rolle verwendet wird.  (TBD: check to see if this is necessary or causes double speaking issues.)</td>
+   <td>Eine Fehler- oder Warnungmeldung, die auf dem Bildschirm eingeblendet wird. Alarmmeldungen sind  insbesondere bei der clentseitige Validierungsmeldungen für Benutzer wichtig. (TBD: link to ARIA form tutorial with aria info)</td>
+   <td>Zur Maximierung der Kompatiblität sollte ein redundantes aria-live="assertive" hinzugefügt werden, wenn diese Rolle verwendet wird.  (TBD: check to see if this is necessary or causes double speaking issues.)</td>
   </tr>
   <tr>
    <td>progressbar</td>
-   <td>Eine Kombination aus einer Komponente und einer Live-Region.  Verwenden Sie diese Rolle mit aria-valuemin, aria-valuenow und aria-valuemax. (TBD: add more info here).</td>
-   <td> </td>
+   <td>Eine Kombination aus einer Komponente und einer Live-Region.  Verwenden Sie diese Rolle mit aria-valuemin, aria-valuenow und aria-valuemax. (TBD: add more info here).</td>
+   <td> </td>
   </tr>
   <tr>
    <td>marquee</td>
    <td>Für scrollenden Text, wie z.B. ein Börsenticker.</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>timer</td>
    <td>Jede Art von Zeitschaltung oder Uhr, wie z.B. ein Countdown-Timer oder eine Stoppuhr.</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

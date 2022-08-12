@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextrestored_event
 <div>{{APIRef}}</div>
 
 <div>
-<p>Das <code><strong>webglcontextrestored</strong></code> Event der <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> wird ausgelöst, wenn der User-Agent den Drawing Buffer das  {{domxref("WebGLRenderingContext")}}-Objekts wiederhergestellt hat.</p>
+<p>Das <code><strong>webglcontextrestored</strong></code> Event der <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> wird ausgelöst, wenn der User-Agent den Drawing Buffer das  {{domxref("WebGLRenderingContext")}}-Objekts wiederhergestellt hat.</p>
 
 <p>Wenn der Context wiederhergestellt wurde, sind alle zuvor erzeugten WebGL-Ressourcen wie Texturen und Buffer nicht mehr gültig. Die WebGL-Applikation muss dann neu initalisiert und alle Ressourcen neu erstellt werden.</p>
 </div>
@@ -38,7 +38,7 @@ translation_of: Web/API/HTMLCanvasElement/webglcontextrestored_event
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>Mit der Hilfe der {{domxref("WEBGL_lose_context")}} Extension kann das <code>webglcontextrestored</code> Event simuliert werden:</p>
+<p>Mit der Hilfe der {{domxref("WEBGL_lose_context")}} Extension kann das <code>webglcontextrestored</code> Event simuliert werden:</p>
 
 <pre class="brush: js">var canvas = document.getElementById("canvas");
 var gl = canvas.getContext("webgl");

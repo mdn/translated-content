@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
 
 <div>{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">In dieser Prüfung ist es deine Aufgabe das von dir in den vorherigen Artikeln gesammelten Wissen anzuwenden, indem due eine lustige Applikation schreibst, mit der man lustige Geschichten erzeugen kann. Viel Spass mit dem Lustige Geschichten Generator !</p>
+<p class="summary">In dieser Prüfung ist es deine Aufgabe das von dir in den vorherigen Artikeln gesammelten Wissen anzuwenden, indem due eine lustige Applikation schreibst, mit der man lustige Geschichten erzeugen kann. Viel Spass mit dem Lustige Geschichten Generator !</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,8 +28,8 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
 <p>Um mit deiner Aufgabe zu beginnen, solltest du::</p>
 
 <ul>
- <li>Öffne <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html">die HTML-Vorlage</a> und speichere eine lokale Kopie davon auf deinem Rechner in einen neuen Ordner als <code>index.html</code>. Die Datei enthält auch einige CSS-Anweisungen für das Styling.</li>
- <li>Öffne <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt">die Seite, die die Text-Vorlagen enthält</a> und öffne sie in einem seperaten Browserfenster oder -tab. Die brauchst du später noch.</li>
+ <li>Öffne <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html">die HTML-Vorlage</a> und speichere eine lokale Kopie davon auf deinem Rechner in einen neuen Ordner als <code>index.html</code>. Die Datei enthält auch einige CSS-Anweisungen für das Styling.</li>
+ <li>Öffne <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt">die Seite, die die Text-Vorlagen enthält</a> und öffne sie in einem seperaten Browserfenster oder -tab. Die brauchst du später noch.</li>
 </ul>
 
 <div class="note">
@@ -38,11 +38,11 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
 
 <h2 id="Projektbeschreibung">Projektbeschreibung</h2>
 
-<p>Für diese Aufgabe geben wir dir einige HTML/CSS Codestücke, einige Textbausteine und ein paar JavaScript Funktionen in die Hand; du musst die fehlenden JavaScript-Teile ergänzen, um alles zu einem lauffähigen Programm zu kombinieren, was Folgendes tun kann:</p>
+<p>Für diese Aufgabe geben wir dir einige HTML/CSS Codestücke, einige Textbausteine und ein paar JavaScript Funktionen in die Hand; du musst die fehlenden JavaScript-Teile ergänzen, um alles zu einem lauffähigen Programm zu kombinieren, was Folgendes tun kann:</p>
 
 <ul>
  <li>es generiert eine lustige Geschichte, wenn der "Generate random story" button gedrückt wird.</li>
- <li>es ersetzt den vorgegebenen Namen "Bob" in der Geschichte mit einem individuellen Namen, allerdings nur, wenn eine Eingabe in das "Enter custom name" Text-Feld gemacht worden ist, bevor der Button gedrückt wurde.</li>
+ <li>es ersetzt den vorgegebenen Namen "Bob" in der Geschichte mit einem individuellen Namen, allerdings nur, wenn eine Eingabe in das "Enter custom name" Text-Feld gemacht worden ist, bevor der Button gedrückt wurde.</li>
  <li>es konvertiert US-amerikanische Maßeinheiten, wie Gewicht und Temperatur in die englischen Äquivalente, wenn der Radio-Button entsprechend gesetzt wurde, bevor der Button gedrückt wurde.</li>
  <li>es generiert immer wieder eine neue Variante der Geschichte, wenn der Button erneut gedrückt wird.</li>
 </ul>
@@ -51,7 +51,7 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16178/Screen_Shot_2018-09-19_at_10.01.38_AM.png" style="border-style: solid; border-width: 1px; display: block; height: 404px; margin: 0px auto; width: 500px;"></p>
 
-<p>Um dich noch mehr mit deiner Arbeit vertraut zu machen, <a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/">schau dir die fertige Lösung an</a> (ohne im Quellcode zu spicken! )</p>
+<p>Um dich noch mehr mit deiner Arbeit vertraut zu machen, <a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/">schau dir die fertige Lösung an</a> (ohne im Quellcode zu spicken! )</p>
 
 <h2 id="Schritt-für-Schritt_Anleitung">Schritt-für-Schritt Anleitung</h2>
 
@@ -60,14 +60,14 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
 <p>Grundaufbau:</p>
 
 <ol>
- <li>Erzeuge eine Datei mit dem Namen <code>main.js</code>, und zwar im selben Verzeichnis, wie deine <code>index.html</code> Datei.</li>
- <li>Verbinde deine externe JavaScript Datei <code>main.js </code>mit deiner HTML Datei, indem du es mithilfe des Script-tags {{htmlelement("script")}} in deinem HTML aufrufst. Füge die Zeile kurz vor dem schließenden <code>&lt;/body&gt;</code> tag ein.</li>
+ <li>Erzeuge eine Datei mit dem Namen <code>main.js</code>, und zwar im selben Verzeichnis, wie deine <code>index.html</code> Datei.</li>
+ <li>Verbinde deine externe JavaScript Datei <code>main.js </code>mit deiner HTML Datei, indem du es mithilfe des Script-tags {{htmlelement("script")}} in deinem HTML aufrufst. Füge die Zeile kurz vor dem schließenden <code>&lt;/body&gt;</code> tag ein.</li>
 </ol>
 
-<p> Vorgegebene Variablen und Functions:</p>
+<p> Vorgegebene Variablen und Functions:</p>
 
 <ol>
- <li>Kopiere alle Code-Zeilen aus der Roh-Text-Datei, die unter der Überschrift "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" stehen und füge Sie an den Anfang deiner <code>main.js</code> Datei. Im Code wirst du 3 Variablen entdecken, die sich auf verschiedene Teile der Ausgabe beziehen: (<code>customName</code>) bezieht sich auf das "Enter custom name" Text Feld , the "Generate random story" button (<code>randomize</code>), and the {{htmlelement("p")}} element at the bottom of the HTML body that the story will be copied into (<code>story</code>), respectively. In addition you've got a function called <code>randomValueFromArray()</code> that takes an array, and returns one of the items stored inside the array at random.</li>
+ <li>Kopiere alle Code-Zeilen aus der Roh-Text-Datei, die unter der Überschrift "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" stehen und füge Sie an den Anfang deiner <code>main.js</code> Datei. Im Code wirst du 3 Variablen entdecken, die sich auf verschiedene Teile der Ausgabe beziehen: (<code>customName</code>) bezieht sich auf das "Enter custom name" Text Feld , the "Generate random story" button (<code>randomize</code>), and the {{htmlelement("p")}} element at the bottom of the HTML body that the story will be copied into (<code>story</code>), respectively. In addition you've got a function called <code>randomValueFromArray()</code> that takes an array, and returns one of the items stored inside the array at random.</li>
  <li>Now look at the second section of the raw text file — "2. RAW TEXT STRINGS". This contains text strings that will act as input into our program. We'd like you to contain these inside variables inside <code>main.js</code>:
   <ol>
    <li>Store the first, big long, string of text inside a variable called <code>storyText</code>.</li>
@@ -102,7 +102,7 @@ original_slug: Learn/JavaScript/First_steps/lustige_geschichten_generator
    <li>Look up the formulae for converting pounds to stone, and Fahrenheit to centigrade.</li>
    <li>Inside the line that defines the <code>weight</code> variable, replace 300 with a calculation that converts 300 pounds into stones. Concatenate <code>' stone'</code> onto the end of the result of the overall <code>Math.round()</code> call.</li>
    <li>Inside the line that defines the <code>temperature</code> variable, replace 94 with a calculation that converts 94 Fahrenheit into centigrade. Concatenate <code>' centigrade'</code> onto the end of the result of the overall <code>Math.round()</code> call.</li>
-   <li>Just under the two variable definitions, add two more string replacement lines that replace '94 fahrenheit' with the contents of the <code>temperature</code> variable, and '300 pounds' with the contents of the <code>weight</code> variable.</li>
+   <li>Just under the two variable definitions, add two more string replacement lines that replace '94 fahrenheit' with the contents of the <code>temperature</code> variable, and '300 pounds' with the contents of the <code>weight</code> variable.</li>
   </ol>
  </li>
  <li>Finally, in the second-to-last line of the function, make the <code>textContent</code> property of the <code>story</code> variable (which references the paragraph) equal to <code>newStory</code>.</li>

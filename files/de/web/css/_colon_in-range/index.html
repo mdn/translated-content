@@ -11,18 +11,18 @@ translation_of: 'Web/CSS/:in-range'
 ---
 <div>{{CSSRef}}</div>
 
-<p>Die <strong><code>:in-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">Pseudoklasse</a> entspricht einem {{htmlelement("input")}} Element, dessen aktueller Wert innerhalb eines bestimmten Bereichs liegt. Dieser Bereich wird durch die {{htmlattrxref("min", "input")}} und {{htmlattrxref("max","input")}} Attribute festgelegt.</p>
+<p>Die <strong><code>:in-range</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/CSS/Pseudo-classes" title="Pseudo-classes">Pseudoklasse</a> entspricht einem {{htmlelement("input")}} Element, dessen aktueller Wert innerhalb eines bestimmten Bereichs liegt. Dieser Bereich wird durch die {{htmlattrxref("min", "input")}} und {{htmlattrxref("max","input")}} Attribute festgelegt.</p>
 
 <pre class="brush: css no-line-numbers">/* Wählt jedes &lt;input&gt; Element aus, aber nur wenn es eine
-   Begrenzung festlegt, und sein Wert innerhalb dieser
-   Begrenzung liegt */
+   Begrenzung festlegt, und sein Wert innerhalb dieser
+   Begrenzung liegt */
 input:in-range {
   background-color: rgba(0, 255, 0, 0.25);
 }</pre>
 
-<p>Diese Pseudoklasse ist nützlich um den Nutzer visuell darauf hinzuweisen, dass der aktuelle Wert des Feldes innerhalb der erlaubten Begrenzungen liegt.</p>
+<p>Diese Pseudoklasse ist nützlich um den Nutzer visuell darauf hinzuweisen, dass der aktuelle Wert des Feldes innerhalb der erlaubten Begrenzungen liegt.</p>
 
-<div class="note"><strong>Note: </strong>Diese Pseudoklasse gilt nur für Elemente, die eine Begrenzung haben. Wenn es eine solche Begrenzung nicht gibt, kann der Wert des Elements weder "in-range" (innerhalb der Begrenzung) noch "out-of-range" (außerhalb der Begrenzung) sein.</div>
+<div class="note"><strong>Note: </strong>Diese Pseudoklasse gilt nur für Elemente, die eine Begrenzung haben. Wenn es eine solche Begrenzung nicht gibt, kann der Wert des Elements weder "in-range" (innerhalb der Begrenzung) noch "out-of-range" (außerhalb der Begrenzung) sein.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -89,7 +89,7 @@ input:out-of-range + label::after {
   <tr>
    <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-in-range', ':in-range')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Definiert wann <code>:in-range</code> HTML-Elementen entspricht.</td>
+   <td>Definiert wann <code>:in-range</code> HTML-Elementen entspricht.</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS4 Selectors', '#in-range-pseudo', ':in-range')}}</td>
