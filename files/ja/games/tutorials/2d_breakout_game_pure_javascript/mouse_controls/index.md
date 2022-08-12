@@ -1,58 +1,60 @@
 ---
 title: マウス操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+tags:
+  - Beginner
+  - Canvas
+  - Controls
+  - Games
+  - JavaScript
+  - Tutorial
+  - mouse
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<div>{{IncludeSubnav("/ja/docs/Games")}}</div>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **9 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html)で見ることができます。
 
-<div class="summary">
-<p>これは<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch">ゲーム開発Canvasチュートリアル</a>の10ステップのうち<strong>9番目</strong>のステップです。このレッスンを終えたあとの完成予想のソースコードは<a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html" rel="noopener">Gamedev-Canvas-workshop/lesson9.html</a>で入手できます。</p>
-</div>
+ゲーム自体は実際に完成したので、磨き上げにかかりましょう。既にキーボード操作を追加していますが、マウス操作も簡単に追加できます。
 
-<p><span class="seoSummary">ゲーム自体は実際に完成したので、磨き上げにかかりましょう。既にキーボード操作を追加していますが、マウス操作も簡単に追加できます。</span></p>
+## マウスの動作を監視する
 
-<h2 id="マウスの動作を監視する">マウスの動作を監視する</h2>
+マウスの操作を監視するのはキー入力を監視するのよりも簡単です。 {{domxref("Element/mousemove_event", "mousemove")}} イベントのリスナーさえあればよいのです。次の行を、他のイベントリスナーの近く、 `keyup event` のすぐ下に追記してください。
 
-<p>マウスの操作を監視するのはキー入力を監視するのよりも簡単です。{{event("mousemove")}}イベントのリスナーさえあればよいのです。次の行を、他のイベントリスナーの近く、<code>keyup event</code>のすぐ下に追記してください。</p>
+```js
+document.addEventListener("mousemove", mouseMoveHandler, false);
+```
 
-<pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
+## パドルの動きをマウスの動きと紐付ける
 
-<h2 id="パドルの動きをマウスの動きと紐付ける">パドルの動きをマウスの動きと紐付ける</h2>
+ポインターの座標に基づいてパドルの位置を更新することができます。以下のハンドラー関数がまさにそれを行うものです。以下の関数を、前に追加した行の下に、あなたのコードに追加してください。
 
-<p>パドルの位置をカーソルの座標に基づいて更新することができます。次のハンドラ関数は実際にそれを行います。次の関数を自分のコードの、先程追記したコードのすぐ下に追記しましょう。</p>
+```js
+function mouseMoveHandler(e) {
+  const relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth/2;
+  }
+}
+```
 
-<pre class="brush: js">function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX &gt; 0 &amp;&amp; relativeX &lt; canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
-}</pre>
+この値は、ビューポート内のマウスの水平位置 (`e.clientX`) からキャンバスの左端とビューポートの左端間の距離 (`canvas.offsetLeft`) を引いたもので、実質的にこれはキャンバス左端からマウスポインターまでの距離と等しくなっています。ポインタの相対 X 位置が 0 より大きく、キャンバスの幅よりも小さい場合、ポインタはキャンバスの境界内にあり、`paddleX` 位置（パドルの左端に固定）は `relativeX` 値からパドルの幅の半分を引いた値に設定され、実際の移動はパドルの中央に対して相対的に行われることになります。
 
-<p>この関数ではまずビューポートの水平方向のマウスの位置 (<code>e.clientX</code>) からキャンバスの左端とビューポートの左端の距離 (<code>canvas.offsetLeft</code>) をひいて<code>relativeX</code>の値を導出します。これはキャンバスの左端とマウスカーソルの距離とちょうど同じになります。もしカーソルの相対X座標が0より大きくCanvasの幅より小さいのならば、カーソルはキャンバス内にあります。また、座標<code>paddleX</code> (パドルの左端と紐付けられている) は、パドルの中点で対称に動くように<code>relativeX</code>の値からパドルの幅の半分をひいた値に設定されます。</p>
+パドルはマウスカーソルの位置を追うようになりますが、動きをキャンバスの大きさに制限しているため、両端で消え失せてしまうようなことはありません。
 
-<p>パドルはマウスカーソルの位置を追うようになりますが、動きをCanvasの大きさに制限しているため、両端で消え失せてしまうようなことはありません。</p>
+## 自分のコードと比べる
 
-<h2 id="自分のコードと比べる">自分のコードと比べる</h2>
+比較用にコードの最新の状態を示します。
 
-<p>比較用にコードの最新の状態を示します。</p>
+{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-<p> </p>
+> **Note:** パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}</p>
+## 次のステップ
 
-<p> </p>
+最後に微調整する準備が整った、完全なゲームが完成しました。では、[仕上げ](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)に入りましょう。
 
-<div class="summary">
-<p>練習: パドル動作の境界を調節して、Canvasの両端でもパドルの半分ではなく全体が見えるようにしてください。</p>
-</div>
-
-<h2 id="次のステップ">次のステップ</h2>
-
-<p>最後に微調整する準備が整った、完全なゲームが完成しました。では、<a href="/ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up">仕上げ</a>に入りましょう。</p>
-
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
