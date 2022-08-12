@@ -9,15 +9,15 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>JSON</code></strong>对象包含两个方法：用于解析 <a href="http://json.org/">JavaScript Object Notation</a>  ({{glossary("JSON")}}) 的 <code>parse()</code> 方法，以及将对象/值转换为 JSON 字符串的 <code>stringify()</code> 方法。除了这两个方法，JSON 这个对象本身并没有其他作用，也不能被调用或者作为构造函数调用。</p>
+**`JSON`**对象包含两个方法：用于解析 [JavaScript Object Notation](http://json.org/) ({{glossary("JSON")}}) 的 `parse()` 方法，以及将对象/值转换为 JSON 字符串的 `stringify()` 方法。除了这两个方法，JSON 这个对象本身并没有其他作用，也不能被调用或者作为构造函数调用。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<h3 id="JavaScript_Object_Notation">JavaScript Object Notation</h3>
+### JavaScript Object Notation
 
-<p><strong>JSON</strong> 是一种语法，用来序列化对象、数组、数值、字符串、布尔值和 {{jsxref("null")}} 。它基于 JavaScript 语法，但与之不同：<strong>JavaScript 不是 JSON，JSON 也不是 JavaScript</strong>。参考 <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JSON：并不是 JavaScript 的子集</a>。</p>
+**JSON** 是一种语法，用来序列化对象、数组、数值、字符串、布尔值和 {{jsxref("null")}} 。它基于 JavaScript 语法，但与之不同：**JavaScript 不是 JSON，JSON 也不是 JavaScript**。参考 [JSON：并不是 JavaScript 的子集](http://timelessrepo.com/json-isnt-a-javascript-subset)。
 
 <table>
  <caption>JavaScript 与 JSON 的区别</caption>
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON
    <td>
     <p>只有有限的一些字符可能会被转义；禁止某些控制字符； Unicode 行分隔符（<a href="http://unicode-table.com/cn/2028/">U+2028</a>）和段分隔符（<a href="http://unicode-table.com/cn/2029/">U+2029</a>）被允许 ; 字符串必须用双引号括起来。请参考下面的示例，可以看到 {{jsxref("JSON.parse()")}} 能够正常解析，但将其当作 JavaScript 解析时会抛出 {{jsxref("SyntaxError")}} 错误：</p>
 
-    <pre class="brush: js">
+  <pre class="brush: js">
 let code = '"\u2028\u2029"';
 JSON.parse(code);  // 正常
 eval(code);  // 错误
@@ -53,9 +53,10 @@ eval(code);  // 错误
  </tbody>
 </table>
 
-<p>完整的 JSON 语法定义如下：</p>
+完整的 JSON 语法定义如下：
 
-<pre>JSON = null
+```plain
+JSON = null
     or true or false
     or JSONNumber
     or JSONString
@@ -102,26 +103,25 @@ JSONArray = [ ]
          or [ ArrayElements ]
 ArrayElements = JSON
              or ArrayElements , JSON
-</pre>
+```
 
-<p>在<code>JSONNumber</code>（数字内部不允许包含空格）或<code>JSONString</code>（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符： 制表符（<a href="http://unicode-table.com/en/0009/">U+0009</a>），回车（<a href="http://unicode-table.com/en/000D/">U+000D</a>），换行（<a href="http://unicode-table.com/en/0020/">U+00</a>0A）以及空格（<a href="http://unicode-table.com/en/0020/">U+0020</a>）。</p>
+在`JSONNumber`（数字内部不允许包含空格）或`JSONString`（字符串内部的空格被解释为相应的字符，否则就有问题了）之外的任何位置可以有多余的空白字符。JSON 只支持这些空白字符： 制表符（[U+0009](http://unicode-table.com/en/0009/)），回车（[U+000D](http://unicode-table.com/en/000D/)），换行（[U+00](http://unicode-table.com/en/0020/)0A）以及空格（[U+0020](http://unicode-table.com/en/0020/)）。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>{{jsxref("JSON.parse()")}}</dt>
- <dd>解析 JSON 字符串并返回对应的值，可以额外传入一个转换函数，用来将生成的值和其属性，在返回之前进行某些修改。</dd>
- <dt>{{jsxref("JSON.stringify()")}}</dt>
- <dd>返回与指定值对应的 JSON 字符串，可以通过额外的参数，控制仅包含某些属性，或者以自定义方法来替换某些 key 对应的属性值。</dd>
-</dl>
+- {{jsxref("JSON.parse()")}}
+  - : 解析 JSON 字符串并返回对应的值，可以额外传入一个转换函数，用来将生成的值和其属性，在返回之前进行某些修改。
+- {{jsxref("JSON.stringify()")}}
+  - : 返回与指定值对应的 JSON 字符串，可以通过额外的参数，控制仅包含某些属性，或者以自定义方法来替换某些 key 对应的属性值。
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p><code>JSON</code>对象可能不被老版本的浏览器支持。可以将下面的代码放到 JS 脚本最开始的位置，这样就可以在没有原生支持 JSON 对象的浏览器（如 IE6）中使用 <code>JSON</code>对象。</p>
+`JSON`对象可能不被老版本的浏览器支持。可以将下面的代码放到 JS 脚本最开始的位置，这样就可以在没有原生支持 JSON 对象的浏览器（如 IE6）中使用 `JSON`对象。
 
-<p>以下算法是对原生<code>JSON</code>对象的模仿：</p>
+以下算法是对原生`JSON`对象的模仿：
 
-<pre class="brush: js">if (!window.JSON) {
+```js
+if (!window.JSON) {
   window.JSON = {
     parse: function(sJSON) { return eval('(' + sJSON + ')'); },
     stringify: (function () {
@@ -142,7 +142,7 @@ ArrayElements = JSON
             return stringify(value.toJSON());
           } else if (isArray(value)) {
             var res = '[';
-            for (var i = 0; i &lt; value.length; i++)
+            for (var i = 0; i < value.length; i++)
               res += (i ? ', ' : '') + stringify(value[i]);
             return res + ']';
           } else if (toString.call(value) === '[object Object]') {
@@ -159,20 +159,18 @@ ArrayElements = JSON
     })()
   };
 }
-</pre>
+```
 
-<p>业界更专业，更强大的<code>JSON</code>对象 <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfills</a> 是 <a href="https://github.com/douglascrockford/JSON-js">JSON2</a> 和 <a href="http://bestiejs.github.com/json3">JSON3</a>。</p>
+业界更专业，更强大的`JSON`对象 [polyfills](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是 [JSON2](https://github.com/douglascrockford/JSON-js) 和 [JSON3](http://bestiejs.github.com/json3)。
 
-<h2 id="Specifications">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Date.prototype.toJSON()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toJSON()")}}

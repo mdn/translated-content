@@ -125,9 +125,9 @@ Hashbang 注释指定特定 JavaScript 解释器的路径要用于执行脚本�
 console.log("Hello world");
 ```
 
-> **备注：**：JavaScript 中的 hashbang 注释模仿 [Unix 中的 shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)，用于指定适当的解释器运行文件。
+> **备注：** JavaScript 中的 hashbang 注释模仿 [Unix 中的 shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)，用于指定适当的解释器运行文件。
 
-> **警告：**尽管在 hashbang 注释之前的 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。
+> **警告：** 尽管在 hashbang 注释之前的 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。
 
 您只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
 

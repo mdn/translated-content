@@ -41,7 +41,7 @@ var arr = [];
 arr.length = arrayLength;
 ```
 
-> **备注：**以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。 因此在数组上使用 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值 。
+> **备注：** 以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。 因此在数组上使用 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值 。
 
 除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：
 
@@ -86,7 +86,7 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **备注：**如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个代表数组的对象的属性 (property) 创建，而非作为数组的元素。
+> **备注：** 如果你在以上代码中给数组操作符的是一个非整形数值，那么将作为一个代表数组的对象的属性 (property) 创建，而非作为数组的元素。
 
 ```js
 var arr = [];
@@ -112,7 +112,7 @@ var myArray = ["Wind", "Rain", "Fire"];
 
 你可以用 `myArray[0]`引用第一个元素，`myArray[1]`引用第二个元素。元素的索引是从`0`开始的。
 
-> **备注：**数组操作符（方括号 \[ ]）也可以用来访问数组的属性 (在 JavaScript 中，数组也是对象)。例如：
+> **备注：** 数组操作符（方括号 \[ ]）也可以用来访问数组的属性 (在 JavaScript 中，数组也是对象)。例如：
 
 ```js
 var arr = ["one", "two", "three"];

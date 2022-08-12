@@ -21,7 +21,7 @@ original_slug: Web/Events/blur
 - 默认行为
   - : 无
 
-> **备注：**{{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
+> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
 
 ## 属性
 

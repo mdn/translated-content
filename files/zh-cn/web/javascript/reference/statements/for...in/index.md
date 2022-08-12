@@ -24,7 +24,7 @@ for (variable in object)
 
 ### 数组迭代和 `for...in`
 
-> **备注：**`for...in`不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。
+> **备注：** `for...in`不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。
 
 ### 仅迭代自身的属性
 

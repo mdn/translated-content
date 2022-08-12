@@ -39,7 +39,7 @@ new GeneratorFunction ([arg1[, arg2[, ...argN]],] functionBody)
 
 传递给函数的所有参数按照它们被传递的顺序被视为要创建的函数中参数的标识符的名称。
 
-> **备注：**使用`GeneratorFunction`构造函数创建的{{jsxref("Statements/function*", "生成器函数")}}不会为其创建上下文创建闭包；它们始终在全局范围内创建。当运行它们时，它们只能访问自己的本地变量和全局变量，而不是从`GeneratorFunction`构造函数调用的范围的变量。这与使用{{jsxref("Global_Objects/eval", "eval")}}与生成函数表达式的代码不同。
+> **备注：** 使用`GeneratorFunction`构造函数创建的{{jsxref("Statements/function*", "生成器函数")}}不会为其创建上下文创建闭包；它们始终在全局范围内创建。当运行它们时，它们只能访问自己的本地变量和全局变量，而不是从`GeneratorFunction`构造函数调用的范围的变量。这与使用{{jsxref("Global_Objects/eval", "eval")}}与生成函数表达式的代码不同。
 
 将`GeneratorFunction`构造函数调用为函数（不使用`new`运算符）与将其作为构造函数调用的效果相同。
 

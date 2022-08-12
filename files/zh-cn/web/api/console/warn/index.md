@@ -9,7 +9,7 @@ translation_of: Web/API/Console/warn
 
 {{AvailableInWorkers}}
 
-> **备注：**在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。
+> **备注：** 在火狐浏览器里，警告会有一个小感叹号图标在 Web 控制台信息前面。
 
 ## 语法
 

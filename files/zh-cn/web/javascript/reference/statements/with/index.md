@@ -7,7 +7,7 @@ tags:
   - Statement
 translation_of: Web/JavaScript/Reference/Statements/with
 ---
-> **警告：**不建议使用`with`语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。
+> **警告：** 不建议使用`with`语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。
 
 {{jsSidebar("Statements")}}**with 语句** 扩展一个语句的作用域链。
 
@@ -28,7 +28,7 @@ with (expression) {
 
 JavaScript 查找某个未使用命名空间的变量时，会通过作用域链来查找，作用域链是跟执行代码的 context 或者包含这个变量的函数有关。'with'语句将某个对象添加到作用域链的顶部，如果在 statement 中有某个未使用命名空间的变量，跟作用域链中的某个属性同名，则这个变量将指向这个属性值。如果沒有同名的属性，则将拋出{{jsxref("ReferenceError")}}异常。
 
-> **备注：**不推荐使用`with`，在 ECMAScript 5 [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中该标签已被禁止。推荐的替代方案是声明一个临时变量来承载你所需要的属性。
+> **备注：** 不推荐使用`with`，在 ECMAScript 5 [严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中该标签已被禁止。推荐的替代方案是声明一个临时变量来承载你所需要的属性。
 
 ### 性能方面的利与弊
 

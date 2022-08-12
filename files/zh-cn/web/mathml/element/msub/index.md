@@ -3,59 +3,54 @@ title: <msub>
 slug: Web/MathML/Element/msub
 translation_of: Web/MathML/Element/msub
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML<code><strong>&lt;msub&gt;</strong></code>元素用来为表达式加下标，语法如下：<code><strong>&lt;msub&gt; base subscript &lt;/msub&gt;</strong></code>。</p>
+MathML**`<msub>`**元素用来为表达式加下标，语法如下：**`<msub> base subscript </msub>`**。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>class, id, style</dt>
- <dd>供<a href="/en-US/docs/CSS">样式表</a>使用。</dd>
- <dt>href</dt>
- <dd>用来设置标签点击后跳转的链接。</dd>
- <dt>mathbackground</dt>
- <dd>用来设置标签的背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
- <dt>mathcolor</dt>
- <dd>用来设置标签文字的颜色，同样可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
- <dt>subscriptshift</dt>
- <dd>用来设置下标相对于表达式的基线的最小距离，它是一个<a href="/en-US/docs/MathML/Attributes/Values#Lengths">长度值</a>。</dd>
-</dl>
+- class, id, style
+  - : 供[样式表](/zh-CN/docs/CSS)使用。
+- href
+  - : 用来设置标签点击后跳转的链接。
+- mathbackground
+  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+- mathcolor
+  - : 用来设置标签文字的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+- subscriptshift
+  - : 用来设置下标相对于表达式的基线的最小距离，它是一个[长度值](/zh-CN/docs/MathML/Attributes/Values#Lengths)。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下述代码表示：<img alt="x1" src="/files/3202/msub.png" style="margin-left: 10px; vertical-align: middle;"></p>
+下述代码表示：![x1](/files/3202/msub.png)
 
-<p>您的浏览器的渲染结果： <math> <msub> <mi>X</mi> <mn>1</mn> </msub> </math></p>
+您的浏览器的渲染结果： <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;msub&gt;
-    &lt;mi&gt;X&lt;/mi&gt;
-    &lt;mn&gt;1&lt;/mn&gt;
-  &lt;/msub&gt;
+  <msub>
+    <mi>X</mi>
+    <mn>1</mn>
+  </msub>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="关于Gecko的特殊说明">关于 Gecko 的特殊说明</h2>
+## 关于 Gecko 的特殊说明
 
-<ul>
- <li>从 Gecko 26.0 {{geckoRelease("26")}}开始，不允许使用&lt;none /&gt;作为子元素。The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application <code>of the </code><code>superscriptshift</code> attribute has been fixed (see {{bug("827713")}} for details).</li>
-</ul>
+- 从 Gecko 26.0 {{geckoRelease("26")}}开始，不允许使用\<none />作为子元素。The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application ` of the ``superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ MathMLElement("msup") }} (Superscript)</li>
- <li>{{ MathMLElement("msubsup") }} (Subscript-superscript pair)</li>
- <li>{{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)</li>
-</ul>
+- {{ MathMLElement("msup") }} (Superscript)
+- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
+- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)

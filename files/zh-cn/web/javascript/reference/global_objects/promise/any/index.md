@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 `Promise.any()` 接收一个由 {{JSxRef("Promise")}} 所组成的可迭代对象，该方法会返回一个新的 `promise`，一旦可迭代对象内的任意一个 `promise` 变成了兑现状态，那么由该方法所返回的 `promise` 就会变成兑现状态，并且它的兑现值就是可迭代对象内的首先兑现的 `promise` 的兑现值。如果可迭代对象内的 `promise` 最终都没有兑现（即所有 `promise` 都被拒绝了），那么该方法所返回的 `promise` 就会变成拒绝状态，并且它的拒因会是一个 {{JSxRef("Global_Objects/AggregateError", "AggregateError")}} 实例，这是 {{JSxRef("Error")}} 的子类，用于把单一的错误集合在一起。
 
-> **警告：**`Promise.any()` 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 [TC39 第四阶段草案（Stage 4）](https://github.com/tc39/proposal-promise-any)
+> **警告：** `Promise.any()` 方法依然是实验性的，尚未被所有的浏览器完全支持。它当前处于 [TC39 第四阶段草案（Stage 4）](https://github.com/tc39/proposal-promise-any)
 
 ## 语法
 

@@ -3,49 +3,46 @@ title: <mroot>
 slug: Web/MathML/Element/mroot
 translation_of: Web/MathML/Element/mroot
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML 的<strong><code>&lt;mroot&gt;</code></strong>元素用来表示一个有明确根指数的根式。它接受两个参数，语法如下：<code><strong>&lt;mroot&gt; base index &lt;/mroot&gt;</strong></code>。</p>
+MathML 的**`<mroot>`**元素用来表示一个有明确根指数的根式。它接受两个参数，语法如下：**`<mroot> base index </mroot>`**。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>class, id, style</dt>
- <dd>供<a href="/en-US/docs/CSS">样式表</a>使用。</dd>
- <dt>href</dt>
- <dd>用来设置标签点击后跳转的链接。</dd>
- <dt>mathbackground</dt>
- <dd>用来设置标签的背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
- <dt>mathcolor</dt>
- <dd>用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
-</dl>
+- class, id, style
+  - : 供[样式表](/zh-CN/docs/CSS)使用。
+- href
+  - : 用来设置标签点击后跳转的链接。
+- mathbackground
+  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+- mathcolor
+  - : 用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下述代码表示：<img alt="x" src="/files/3200/mroot.png" style="margin-left: 10px; vertical-align: middle;"></p>
+下述代码表示：![x](/files/3200/mroot.png)
 
-<p>您的浏览器的渲染结果：<math><mroot><mi>x</mi> <mn>3</mn> </mroot> </math></p>
+您的浏览器的渲染结果：<math><mroot><mi>x</mi> <mn>3</mn></mroot></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
- &lt;mroot&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-    &lt;mn&gt;3&lt;/mn&gt;
- &lt;/mroot&gt;
+ <mroot>
+    <mi>x</mi>
+    <mn>3</mn>
+ </mroot>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ MathMLElement("msqrt") }} (Square root without an index)</li>
-</ul>
+- {{ MathMLElement("msqrt") }} (Square root without an index)
