@@ -10,88 +10,28 @@ tags:
   - Tools
 translation_of: MDN/Tools/Sample_server
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<p><span class="seoSummary">MDN は内蔵の<a href="/ja/docs/MDN/Structures/Live_samples">ライブサンプルシステム</a>を提供しており、単純な (時にはそう単純でない) コードのサンプルをその出力と共にページの中で表示する機能を提供していますが、サーバーへの通信を必要とするサンプルもあります。私たちは MDN サンプルサーバーを用意し、このような、またその他の問題も合わせて、解決することにしました。</span> この記事は、そのサンプルサーバーを利用するためのガイドです。</p>
+MDN は内蔵の[ライブサンプルシステム](/ja/docs/MDN/Writing_guidelines/Page_structures)を提供しており、単純な (時にはそう単純でない) コードのサンプルをその出力と共にページの中で表示する機能を提供していますが、サーバーへの通信を必要とするサンプルもあります。私たちは MDN サンプルサーバーを用意し、このような、またその他の問題も合わせて、解決することにしました。 この記事は、そのサンプルサーバーを利用するためのガイドです。
 
-<h2 id="Possible_use_cases">想定するユースケース</h2>
+## 想定するユースケース
 
-<p>たいていのサンプルは組み込みの<a href="/ja/docs/MDN/Structures/Live_samples">ライブサンプルシステム</a>で表現できますが、例外もあります。サンプルサーバーの利用が必要となる理由は下記の通りです。</p>
+たいていのサンプルは組み込みの[ライブサンプルシステム](/ja/docs/MDN/Writing_guidelines/Page_structures)で表現できますが、例外もあります。サンプルサーバーの利用が必要となる理由は下記の通りです。
 
-<ul>
- <li>サンプルにサーバー上で永続的に実行されるコードが必要、例えば WebSocket サーバーにはサーバーコンポーネントと、サンプルサーバー上のクライアントコンポーネントもあるなど。</li>
- <li>MDN wiki のコンテンツでは動かない技術を使ったサンプルや、読み手がコンテンツに集中する能力に影響するようなものは明らかに候補となります; これにはサウンド効果やメディアや大量のアニメーションを再生するものが含まれます。</li>
- <li>MDN でホストできないようなリソースにアクセスする必要があるサンプルはサンプルサーバーに置かれます。</li>
-</ul>
+- サンプルにサーバー上で永続的に実行されるコードが必要、例えば WebSocket サーバーにはサーバーコンポーネントと、サンプルサーバー上のクライアントコンポーネントもあるなど。
+- MDN wiki のコンテンツでは動かない技術を使ったサンプルや、読み手がコンテンツに集中する能力に影響するようなものは明らかに候補となります; これにはサウンド効果やメディアや大量のアニメーションを再生するものが含まれます。
+- MDN でホストできないようなリソースにアクセスする必要があるサンプルはサンプルサーバーに置かれます。
 
-<h2 id="Referencing_samples">サンプルへの参照を追加する</h2>
+## サンプルの参照
 
-<p>各サンプルのコードは <a href="https://github.com/mdn/samples-server">GitHub で管理されて</a>おり、そのすべてのサンプルの実行可能/使用可能なインストールアクセスを提供するサーバーを持っています。</p>
+各サンプルのコードは [GitHub で管理されて](https://github.com/mdn/dom-examples)おり、そのすべてのサンプルの実行可能/使用可能なインストールアクセスを提供する[サーバーのインスタンス](https://mdn.github.io/dom-examples/)を持っています。
 
-<h2 id="Contributing_advanced_samples">高度なサンプルに貢献する</h2>
+## 高度なサンプルに貢献する
 
-<p><a href="https://mdn-samples.mozilla.org/">サンプルサーバー</a>に置かれたサンプルに貢献するには、GitHub の <a href="https://github.com/mdn/samples-server">MDN サンプルサーバーリポジトリー
-</a>をフォークする必要があります。現在、すべてのサンプルは GitHub の同じリポジトリーにあります。</p>
+[サンプルサーバー](https://mdn.github.io/dom-examples/)に置かれたサンプルに貢献するには、GitHub の [mdn/dom-examples リポジトリー](https://github.com/mdn/dom-examples)をフォークする必要があります。現在、すべてのサンプルは GitHub の同じリポジトリーにあります。
 
-<p>それぞれのサンプルは <a href="https://github.com/mdn/samples-server/tree/master/s"><code>s/</code> ディレクトリー</a>の下に自身のディレクトリーを持っています。新しいサンプルを作るには、そこに適切な名前のディレクトリーを追加します。例えば、ちょっとしたゲームを実装するための Fetch API の使い方を示す例であれぱ、<code>s/fetch-trivia</code> にサンプルを置いても良いでしょう。</p>
+それぞれの API は、例えば [canvas](https://github.com/mdn/dom-examples/tree/master/canvas) のように、独自のディレクトリーを持っています。サンプルの作成は、その API のディレクトリーの下に、適切な名前のディレクトリーを追加して行います。例えば、「ファイルをドロップしてアップロードする機能」の使い方を示すサンプルであれば、 [drag-and-drop](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) ディレクトリーにサンプルを置いてください。
 
-<h3 id="Structure_of_an_advanced_sample">高度なサンプルの構造</h3>
+### サンプルの投稿
 
-<p>それぞれのサンプルに一つの必須ファイルがあります (これは皮肉にもまだ使われていませんが、すぐ使われるため入れておいてください)。 <code>manifest.json</code> というマニフェストファイルで、これはサンプルを説明し、サンプルサーバー自体からと、これをメンテ・使用するツールから使われるメタデータを提供します。その他のすべてはオプションです。もっと詳しく見ていきましょう。</p>
-
-<h4 id="The_manifest_file_manifest.json">マニフェストファイル: manifest.json</h4>
-
-<p>マニフェストファイルは第一に、サンプルのリストをビルドするのに使われますが、最終的には各サンプルのスタートアップとシャットダウンプロセスを改良することに使われるでしょう。これは次のような JSON オブジェクトです。</p>
-
-<pre class="brush: json">{
-  "name": "WebSocket based chat server with WebRTC video chat support",
-  "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
-  "description": "Uses Node.js to set up a WebSocket-based chat server, and provides a web page you can use to join the chat. Adds a feature to start a video call with another chat participant."
-}
-</pre>
-
-<p>現在オブジェクトには 3 つの項目があり、<em>すべてが必須です </em> (まだ使用してないですが、すぐ使います)。</p>
-
-<dl>
- <dt><code>name</code></dt>
- <dd>実例の名前です。例の比較的短い名前であるべきです。</dd>
- <dt><code>docsUrl</code></dt>
- <dd>この例を詳しく扱っている MDN の主なページの URL です。例が複数のページから参照されている場合、「メイン」ページ (または存在するならランディングページ) のアドレスであるべきです。</dd>
- <dt><code>description</code></dt>
- <dd>実例を説明する長めの文で、これがデモする技術についての情報を含みます。</dd>
-</dl>
-
-<h4 id="Running_your_sample_at_startup_startup.sh">起動時にサンプルを動かす: startup.sh</h4>
-
-<p>サンプルサーバーの起動時やサンプルの再起動時には、各サンプルのベースディレクトリーがスキャンされ、 <code>startup.sh</code> という名前のシェルスクリプトファイルが存在するかどうかが確認されます。このファイルが存在すると、そのファイルが実行され、サンプルがサポートファイルをインストールしたり、スクリプトを実行したり、サンプルをサポートするために必要なサーバープロセスを起動したりする機会が与えられます。例えば、 <a href="/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling">WebSocket chat サンプル</a>の startup.sh スクリプトは次のようになります。</p>
-
-<pre class="brush: bash">npm install websocket
-node chatserver.js</pre>
-
-<p>1 行目は Node のパッケージマネージャーである <code>npm</code> を使用して、 <code>websocket</code> というモジュールをインストールし、これが <a href="/ja/docs/Web/API/WebSockets_API">WebSocket</a> サーバーを生成したり対話したりすることのサポートを提供します。</p>
-
-<p>2 行目は、実際にサーバープロセスを起動します。これは、バックグラウンドで起動し実行される JavaScript スクリプトとして実装されています。</p>
-
-<h4 id="Using_Node.js_modules_package.json">Node.js モジュールを使う: package.json</h4>
-
-<p>Node モジュールをプロジェクトで使用するには、 <code>package.json</code> ファイルを追加する必要があります。ここにはサンプルに関する情報だけでなく、依存関係のリストも含まれており、 Node パッケージマネージャー (<code>npm</code>) によって依存関係がインストールされるようになっています。</p>
-
-<h4 id="Optional_files">オプションのファイル</h4>
-
-<p>もちろん、他のファイルがあっても構いません。明らかな候補としては、サンプルを閲覧したユーザーに何らかのコンテンツを見せるための <code>index.html</code> ファイル、スタイルシート、サポート用の HTML や JavaScript ファイル、画像やその他のメディアなどがあります。</p>
-
-<h3 id="Submitting_your_sample">サンプルの投稿</h3>
-
-<p>サンプルを完成させてテストしたら、それを提出してテストを受け、最終的に本番のサンプルサーバーにインストールできるようにしましょう。この作業は、 Github の標準的な<a href="https://help.github.com/articles/using-pull-requests/">プルリクエスト</a>プロセスを用いて行います。</p>
-
-<h2 id="Tips_and_errata">ヒントとエラッタ</h2>
-
-<p>サンプルサーバー自体がまだ完成していないため、サンプルの動作には癖や問題があります。ここでは、潜在的な最悪の問題を回避するためのヒントをいくつかご紹介します。</p>
-
-<h3 id="Port_numbers">ポート番号</h3>
-
-<p>サンプルがネットワークポートを使用する必要がある場合、他のサンプル (またはサーバー上のシステムサービス) が既に使用しているポートを不用意に使用しないように注意する必要があります。将来的には、サンプルのマニフェストにポート番号を要求する項目が設けられ、システムがポート番号を割り当てて、どれが使われていてどれが使われていないかを記録するようになる予定です。それまでは、つま先を踏まないように気をつけてください。</p>
-
-<h2 id="Work_in_progress">進行中の作業</h2>
-
-<p>このページそのもの、そしてここに記述されているサーバーについては、現在作業中です。</p>
+サンプルを完成させてテストしたら、それを提出してテストを受け、最終的に本番のサンプルサーバーにインストールできるようにしましょう。この作業は、 Github の標準的な[プルリクエスト (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) プロセスを用いて行います。プルリクエストの投稿は[こちら](https://github.com/mdn/dom-examples/pulls)から行ってください。
