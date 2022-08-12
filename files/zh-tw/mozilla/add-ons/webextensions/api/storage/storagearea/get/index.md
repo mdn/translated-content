@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 
 ## 語法
 
-```
+```js
 let gettingItem = browser.storage.<storageType>.get(
   keys    // null, string, object or array of strings
 )
