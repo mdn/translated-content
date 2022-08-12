@@ -225,7 +225,7 @@ This is a sample LaTeXML document.
 
 <p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
 
-<p><a name="mathjax"></a>Another way to work around the lack of MathML support in some browsers is to use <a href="https://www.mathjax.org/">MathJax</a>. However, note that you may find conflicts and synchronization issues between MathJax and the Javascript libraries previously mentioned. So if you really want to use MathJax as a MathML polyfill, you'd better use its own LaTeX/ASCIIMath parsers too. Note that on the one hand MathJax has better parsing and rendering support but on the other hand it is much bigger, more complex and slower than the previous Javascript libraries. Fortunately, you can use MathJax's CDN so that you don't need to install it on your Web server. Also, the slowest part of MathJax is currently its HTML-CSS / SVG output modes so we recommend to use the Native MathML output for Gecko-based browsers. Hence a typical configuration to use the AMS-LaTeX input is:</p>
+<p>Another way to work around the lack of MathML support in some browsers is to use <a href="https://www.mathjax.org/">MathJax</a>. However, note that you may find conflicts and synchronization issues between MathJax and the Javascript libraries previously mentioned. So if you really want to use MathJax as a MathML polyfill, you'd better use its own LaTeX/ASCIIMath parsers too. Note that on the one hand MathJax has better parsing and rendering support but on the other hand it is much bigger, more complex and slower than the previous Javascript libraries. Fortunately, you can use MathJax's CDN so that you don't need to install it on your Web server. Also, the slowest part of MathJax is currently its HTML-CSS / SVG output modes so we recommend to use the Native MathML output for Gecko-based browsers. Hence a typical configuration to use the AMS-LaTeX input is:</p>
 
 <pre class="brush: html">...
     &lt;script type="text/x-mathjax-config"&gt;
@@ -361,13 +361,3 @@ sudo make install
 <p><a href="https://www.inftyreader.org/">Inftyreader</a> is able to perform some Optical Character Recognition, including translation of mathematical equations into MathML. Other tools can do handwriting recognition such as the <a href="https://windows.microsoft.com/en-za/windows7/use-math-input-panel-to-write-and-correct-math-equations">Windows Math Input Panel</a></p>
 
 <p>or the online converter <a href="http://webdemo.visionobjects.com/">Web Equation</a>.</p>
-
-<div class="originaldocinfo">
-<h3 id="原始文件信息">原始文件信息</h3>
-
-<ul>
- <li>作者：Frédéric Wang</li>
- <li>其他贡献者：Florian Scholz</li>
- <li>版权信息：Portions of this content are © 2010 by individual mozilla.org contributors; content available under a Creative Commons license | <a href="https://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
-</ul>
-</div>
