@@ -68,8 +68,8 @@ original_slug: Web/HTML/Element/кнопка
  <p>Firefox по умолчанию, в отличие от прочих браузеров, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">сохраняет назначенное динамически отключённое состояние </a>для элемента <code>&lt;button&gt;</code>, даже при обновлении страницы. Чтобы изменить поведение браузера в этом случае, используйте атрибут {{htmlattrxref("autocomplete","button")}}.</p>
  </dd>
  <dt>{{htmlattrdef("form")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Атрибут <strong>form</strong> позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение <strong>id</strong> элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент <code>&lt;button&gt;</code> будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.</dd>
- <dd>Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент <code>&lt;button&gt;</code> с формой, даже в случае, если <code>&lt;button&gt;</code> не является наследником элемента {{HTMLElement("form")}}.</dd>
+ <dd><p>Атрибут <strong>form</strong> позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение <strong>id</strong> элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент <code>&lt;button&gt;</code> будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.</p>
+ <p>Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент <code>&lt;button&gt;</code> с формой, даже в случае, если <code>&lt;button&gt;</code> не является наследником элемента {{HTMLElement("form")}}.</p></dd>
  <dt>{{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Ссылка на обработчик формы. Если атрибут определён — он переопределит атрибут {{htmlattrxref("action","form")}} у формы-родителя.</dd>
  <dt>{{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}</dt>
@@ -92,8 +92,8 @@ original_slug: Web/HTML/Element/кнопка
  <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("method","form")}} у формы-родителя.</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.</dd>
- <dd>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.</dd>
+ <dd><p>Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.</p>
+ <p>Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.</p></dd>
  <dt>{{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}</dt>
  <dd>Если <code>button</code> имеет тип <code>submit</code>, этот атрибут <span style="">является именем или ключевым словом</span>,
  <p dir="ltr" id="tw-target-text">указывающим, где отображать ответ, полученный после отправки формы<span style="">. This is a name of, or keyword for, a </span><em>browsing context</em><span style=""> (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:</span></p>
