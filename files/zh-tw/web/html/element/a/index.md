@@ -3,184 +3,176 @@ title: <a>
 slug: Web/HTML/Element/a
 translation_of: Web/HTML/Element/a
 ---
-<p><strong>HTML <code>&lt;a&gt;</code> 元素</strong>（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。</p>
+**HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-TW/docs/HTML/Content_categories">內容類型</a></th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Flow_content">流型內容</a>、<a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">內容省略</th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Transparent_content_model">Transparent</a>, containing either <a href="/zh-TW/docs/HTML/Content_categories#Flow_content">flow content</a> (excluding <a href="/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>) or <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">標籤省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允許的父元素</th>
-   <td>任何允許 <a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 或 <a href="/zh-TW/docs/HTML/Content_categories#Flow_content">flow content</a> 的內容，但 &lt;a&gt; 永遠例外（according to the logical principle of symmetry, if &lt;a&gt; tag, as a parent, can not have <a href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content">interactive content</a>, then the same &lt;a&gt; content can not have &lt;a&gt; tag as its parent）</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{domxref("HTMLAnchorElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                           |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 內容省略                                        | [Transparent](/zh-TW/docs/HTML/Content_categories#Transparent_content_model), containing either [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) (excluding [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content)) or [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                            |
+| 標籤省略                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 允許的父元素                                    | 任何允許 [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content) 或 [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) 的內容，但 <a> 永遠例外（according to the logical principle of symmetry, if <a> tag, as a parent, can not have [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), then the same <a> content can not have <a> tag as its parent） |
+| Permitted ARIA roles                            | {{ARIARole("button")}}, {{ARIARole("checkbox")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("option")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}, {{ARIARole("treeitem")}}                                                                                |
+| DOM 介面                                        | {{domxref("HTMLAnchorElement")}}                                                                                                                                                                                                                                                                                                                                                                                  |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>本元素包含<a href="/zh-TW/docs/HTML/Global_attributes">全域屬性</a>。</p>
+本元素包含[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("download")}}</dt>
- <dd>This attribute instructs browsers to download a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). There are no restrictions on allowed values, though <code>/</code> and <code>\</code> are converted to underscores. Most file systems limit some punctuation in file names, and browsers will adjust the suggested name accordingly.
- <div class="note"><strong>Notes:</strong>
- <ul>
-  <li>This attribute only works for <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin URLs</a>.</li>
-  <li>This attribute can be used with <a href="/en-US/docs/Web/API/URL.createObjectURL"><code>blob:</code> URLs</a> and <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a> to download content generated by JavaScript, such as pictures created in an image-editor Web app.</li>
-  <li>If the HTTP header <a href="/en-US/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition:</code></a> gives a different filename than this attribute, the HTTP header takes priority over this attribute.</li>
-  <li>If <code>Content-Disposition:</code> is set to <code>inline</code>, Firefox prioritizes <code>Content-Disposition</code>, like the filename case, while Chrome prioritizes the <code>download</code> attribute.</li>
- </ul>
- </div>
- </dd>
- <dt>{{htmlattrdef("href")}}</dt>
- <dd>Contains a URL or a URL fragment that the hyperlink points to.</dd>
- <dd>A URL fragment is a name preceded by a hash mark (<code>#</code>), which specifies an internal target location (an <a href="/en-US/docs/HTML/Global_attributes#attr-id">ID</a> of an HTML element) within the current document. URLs are not restricted to Web (HTTP)-based documents, but can use any protocol supported by the browser. For example, <a href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>, <code>ftp:</code>, and <code>mailto:</code> work in most browsers.</dd>
- <dd>This attribute may be omitted (as of HTML5) to create a placeholder link. A placeholder link resembles a traditional hyperlink, but does not lead anywhere.
- <div class="note">
- <p><strong>Note:</strong> You can use <code>href="#top"</code> or the empty fragment <code>href="#"</code> to link to the top of the current page. <a href="https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid">This behavior is specified by HTML5</a>.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>This attribute indicates the human language of the linked resource. It is purely advisory, with no built-in functionality. Allowed values are determined by <a href="https://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>.</dd>
- <dt>{{htmlattrdef("ping")}}</dt>
- <dd>Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body <code>PING</code> will be sent by the browser (in the background). Typically used for tracking.</dd>
- <dt>{{htmlattrdef("referrerpolicy")}} {{experimental_inline}}</dt>
- <dd>Indicates which <a href="/en-US/docs/Web/HTTP/Headers/Referer">referrer</a> to send when fetching the URL:
- <ul>
-  <li><code>'no-referrer'</code> means the <code>Referer:</code> header will not be sent.</li>
-  <li><code>'no-referrer-when-downgrade'</code> means no <code>Referer:</code> header will be sent when navigating to an origin without HTTPS. This is the default behavior.</li>
-  <li><code>'origin'</code> means the referrer will be the <a href="/en-US/docs/Glossary/Origin">origin</a> of the page, not including information after the domain.</li>
-  <li><code>'origin-when-cross-origin'</code> meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.</li>
-  <li><code>'unsafe-url'</code> means the referrer will include the origin and path, but not the fragment, password, or username. This is unsafe because it can leak data from secure URLs to insecure ones.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("rel")}}</dt>
- <dd>Specifies the relationship of the target object to the link object. The value is a space-separated list of <a href="/en-US/docs/Web/HTML/Link_types">link types</a>.</dd>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd>Specifies where to display the linked URL. It is a name of, or keyword for, a <em>browsing context</em>: a tab, window, or <code>&lt;iframe&gt;</code>. The following keywords have special meanings:
- <ul>
-  <li><code>_self</code>: Load the URL into the same browsing context as the current one. This is the default behavior.</li>
-  <li><code>_blank</code>: Load the URL into a new browsing context. This is usually a tab, but users can configure browsers to use new windows instead.</li>
-  <li><code>_parent</code>: Load the URL into the parent browsing context of the current one. If there is no parent, this behaves the same way as <code>_self</code>.</li>
-  <li><code>_top</code>: Load the URL into the top-level browsing context (that is, the "highest" browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this behaves the same way as <code>_self</code>.</li>
- </ul>
+- {{HTMLAttrDef("download")}}
 
- <div class="note">
- <p><strong>Note:</strong> When using <code>target</code>, consider adding <code>rel="noopener noreferrer"</code> to avoid exploitation of the <code>window.opener</code> API.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("type")}}</dt>
- <dd>Specifies the media type in the form of a {{Glossary("MIME type")}} for the linked URL. It is purely advisory, with no built-in functionality.</dd>
-</dl>
+  - : Causes the browser to treat the linked URL as a download. Can be used with or without a value:
 
-<h3 id="Obsolete">Obsolete</h3>
+    - Without a value, the browser will suggest a filename/extension, generated from various sources:
 
-<dl>
- <dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
- <dd>This attribute defined the <a href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the linked URL. The value should be a space- and/or comma-delimited list of character sets defined in <a href="https://tools.ietf.org/html/rfc2045">RFC 2045</a>. The default value is <code>ISO-8859-1</code>.
- <div class="note">
- <p><strong>Usage note:</strong> This attribute is obsolete in HTML5 and <strong>should not be used by authors</strong>. To achieve its effect, use the HTTP <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type:</code></a> header on the linked URL.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("coords")}} {{Deprecated_Inline}}</dt>
- <dd>For use with the below <code>shape</code> attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.</dd>
- <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, <code>id</code> and <code>name</code> could be used simultaneously on a <code>&lt;a&gt;</code> element as long as they have identical values.
- <div class="note">
- <p><strong>Usage note:</strong> This attribute is obsolete in HTML5, use the <a href="/en-US/docs/HTML/Global_attributes#attr-id">global attribute <code>id</code></a> instead.</p>
- </div>
- </dd>
- <dt>{{htmlattrdef("rev")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute specified a reverse link, the inverse relationship of the <strong>rel</strong> attribute. It was deprecated for being very confusing.</dd>
- <dt>{{htmlattrdef("shape")}} {{Deprecated_Inline}}</dt>
- <dd>This attribute was used to define a region for hyperlinks to create an image map. The values are <code>circle</code>, <code>default</code>, <code>polygon</code>, and <code>rect</code>. The format of the <strong>coords</strong> attribute depends on the value of shape. For <code>circle</code>, the value is <code>x,y,r</code> where <code>x</code> and <code>y</code> are the pixel coordinates for the center of the circle and <code>r</code> is the radius value in pixels. For <code>rect</code>, the <strong>coords</strong> attribute should be <code>x,y,w,h</code>. The <code>x,y</code> values define the upper-left-hand corner of the rectangle, while <code>w</code> and <code>h</code> define the width and height respectively. A value of <code>polygon</code> for <strong>shape</strong> requires <code>x1,y1,x2,y2,...</code> values for <strong>coords</strong>. Each of the <code>x,y</code> pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value <code>default</code> for shape requires that the entire enclosed area, typically an image, be used.
- <div class="note"><strong>Note:</strong> Use the <a href="/en-US/docs/Web/HTML/Element/img#attr-usemap"><code>usemap</code> attribute</a> for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the <code>shape</code> attribute.</div>
- </dd>
-</dl>
+      - The {{HTTPHeader("Content-Disposition")}} HTTP header
+      - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL))
 
-<h2 id="Examples">Examples</h2>
+    - Defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
-<h3 id="Linking_to_an_external_location">Linking to an external location</h3>
+    > **Note:**
+    >
+    > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
+    > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
+    > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
+    >
+    >   - If the header specifies a `filename`, it takes priority over a filename specified in the `download` attribute.
+    >   - If the header specifies a disposition of `inline`, Chrome and Firefox prioritize the attribute and treat it as a download. Old Firefox versions (before 82) prioritize the header and will display the content inline.
 
-<pre class="brush: html">&lt;!-- anchor linking to external file --&gt;
-&lt;a href="https://www.mozilla.com/"&gt;
+- {{HTMLAttrDef("href")}}
+
+  - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+
+    - Sections of a page with fragment URLs
+    - Pieces of media files with media fragments
+    - Telephone numbers with `tel:` URLs
+    - Email addresses with `mailto:` URLs
+    - While web browsers may not support other URL schemes, web sites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+
+- {{HTMLAttrDef("hreflang")}}
+  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
+- {{HTMLAttrDef("ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body `PING` to the URLs. Typically for tracking.
+- {{HTMLAttrDef("referrerpolicy")}}
+
+  - : How much of the [referrer](/en-US/docs/Web/HTTP/Headers/Referer) to send when following the link.
+
+    - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
+    - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
+    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
+    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+
+- {{HTMLAttrDef("rel")}}
+  - : The relationship of the linked URL as space-separated [link types](/en-US/docs/Web/HTML/Link_types).
+- {{HTMLAttrDef("target")}}
+
+  - : Where to display the linked URL, as the name for a _browsing context_ (a tab, window, or {{HTMLElement("iframe")}}). The following keywords have special meanings for where to load the URL:
+
+    - `_self`: the current browsing context. (Default)
+    - `_blank`: usually a new tab, but users can configure browsers to open a new window instead.
+    - `_parent`: the parent browsing context of the current one. If no parent, behaves as `_self`.
+    - `_top`: the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as `_self`.
+
+    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+
+- {{HTMLAttrDef("type")}}
+  - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
+
+### Obsolete
+
+- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+  - : This attribute defined the [character encoding](/zh-TW/docs/Glossary/character_encoding) of the linked URL. The value should be a space- and/or comma-delimited list of character sets defined in [RFC 2045](https://tools.ietf.org/html/rfc2045). The default value is `ISO-8859-1`.
+
+    > **備註：** This attribute is obsolete in HTML5 and **should not be used by authors**. To achieve its effect, use the HTTP [`Content-Type:`](/zh-TW/docs/Web/HTTP/Headers/Content-Type) header on the linked URL.
+- {{htmlattrdef("coords")}} {{Deprecated_Inline}}
+  - : For use with the below `shape` attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.
+- {{htmlattrdef("name")}} {{Deprecated_Inline}}
+  - : This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, `id` and `name` could be used simultaneously on a `<a>` element as long as they have identical values.
+
+    > **備註：** This attribute is obsolete in HTML5, use the [global attribute `id`](/zh-TW/docs/HTML/Global_attributes#attr-id) instead.
+- {{htmlattrdef("rev")}} {{Deprecated_Inline}}
+  - : This attribute specified a reverse link, the inverse relationship of the **rel** attribute. It was deprecated for being very confusing.
+- {{htmlattrdef("shape")}} {{Deprecated_Inline}}
+  - : This attribute was used to define a region for hyperlinks to create an image map. The values are `circle`, `default`, `polygon`, and `rect`. The format of the **coords** attribute depends on the value of shape. For `circle`, the value is `x,y,r` where `x` and `y` are the pixel coordinates for the center of the circle and `r` is the radius value in pixels. For `rect`, the **coords** attribute should be `x,y,w,h`. The `x,y` values define the upper-left-hand corner of the rectangle, while `w` and `h` define the width and height respectively. A value of `polygon` for **shape** requires `x1,y1,x2,y2,...` values for **coords**. Each of the `x,y` pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value `default` for shape requires that the entire enclosed area, typically an image, be used.
+
+    > **備註：** Use the [`usemap` attribute](/zh-TW/docs/Web/HTML/Element/img#attr-usemap) for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the `shape` attribute.
+
+## Examples
+
+### Linking to an external location
+
+```html
+<!-- anchor linking to external file -->
+<a href="https://www.mozilla.com/">
 External Link
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p><a href="https://www.mozilla.com/">External Link</a></p>
+[External Link](https://www.mozilla.com/)
 
-<h3 id="Linking_to_another_section_on_the_same_page">Linking to another section on the same page</h3>
+### Linking to another section on the same page
 
-<pre class="brush: html">&lt;!-- links to element on this page with id="attr-href" --&gt;
-&lt;a href="#attr-href"&gt;
+```html
+<!-- links to element on this page with id="attr-href" -->
+<a href="#attr-href">
 Description of Same-Page Links
-&lt;/a&gt;
-</pre>
+</a>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p><a href="#attr-href">Description of Same Page Links</a></p>
+[Description of Same Page Links](#attr-href)
 
-<h3 id="Creating_a_clickable_image">Creating a clickable image</h3>
+### Creating a clickable image
 
-<p>This example uses an image to link to the MDN home page. The home page will open in a new browsing context, that is, a new page or a new tab.</p>
+This example uses an image to link to the MDN home page. The home page will open in a new browsing context, that is, a new page or a new tab.
 
-<pre class="brush: html">&lt;a href="https://developer.mozilla.org/en-US/" target="_blank"&gt;
-  &lt;img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
-       alt="MDN logo" /&gt;
-&lt;/a&gt;
-</pre>
+```html
+<a href="https://developer.mozilla.org/en-US/" target="_blank">
+  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
+       alt="MDN logo" />
+</a>
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Creating_a_clickable_image", "320", "64")}}</p>
+{{EmbedLiveSample("Creating_a_clickable_image", "320", "64")}}
 
-<h3 id="Creating_an_email_link">Creating an email link</h3>
+### Creating an email link
 
-<p>It's common to create links that open in the user's email program to allow them to send a new message. This is done with a <code>mailto:</code> link. Here's a simple example:</p>
+It's common to create links that open in the user's email program to allow them to send a new message. This is done with a `mailto:` link. Here's a simple example:
 
-<pre class="brush: html">&lt;a href="mailto:nowhere@mozilla.org"&gt;Send email to nowhere&lt;/a&gt;</pre>
+```html
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<p><a href="mailto:nowhere@mozilla.org">Send email to nowhere</a></p>
+[Send email to nowhere](mailto:nowhere@mozilla.org)
 
-<p>For additional details about the <code>mailto</code> URL scheme, such as including the subject, body, or other predetermined content, see <a href="/en-US/docs/Web/Guide/HTML/Email_links">Email links</a> or {{RFC(6068)}}.</p>
+For additional details about the `mailto` URL scheme, such as including the subject, body, or other predetermined content, see [Email links](/zh-TW/docs/Web/Guide/HTML/Email_links) or {{RFC(6068)}}.
 
-<h3 id="Creating_a_phone_link">Creating a phone link</h3>
+### Creating a phone link
 
-<p>Offering phone links is helpful for users viewing web documents and laptops connected to phones.</p>
+Offering phone links is helpful for users viewing web documents and laptops connected to phones.
 
-<pre class="brush: html">&lt;a href="tel:+491570156"&gt;+49 157 0156&lt;/a&gt;</pre>
+```html
+<a href="tel:+491570156">+49 157 0156</a>
+```
 
-<p>For additional details about the <code>tel</code> URL scheme, see {{RFC(3966)}}.</p>
+For additional details about the `tel` URL scheme, see {{RFC(3966)}}.
 
-<h3 id="Using_the_download_attribute_to_save_a_&lt;canvas>_as_a_PNG">Using the <code>download</code> attribute to save a <code>&lt;canvas&gt;</code> as a PNG</h3>
+### Using the `download` attribute to save a `<canvas>` as a PNG
 
-<p>If you want to let users download an HTML {{HTMLElement("canvas")}} element as an image, you can create a link with a <code>download</code> attribute and the canvas data as a file URL:</p>
+If you want to let users download an HTML {{HTMLElement("canvas")}} element as an image, you can create a link with a `download` attribute and the canvas data as a file URL:
 
-<pre class="brush: js">var link = document.createElement('a');
+```js
+var link = document.createElement('a');
 link.textContent = 'download image';
 
 link.addEventListener('click', function(ev) {
@@ -188,94 +180,46 @@ link.addEventListener('click', function(ev) {
     link.download = "mypainting.png";
 }, false);
 
-document.body.appendChild(link);</pre>
+document.body.appendChild(link);
+```
 
-<p>You can see this in action at <a href="https://jsfiddle.net/codepo8/V6ufG/2/">jsfiddle.net/codepo8/V6ufG/2/</a>.</p>
+You can see this in action at [jsfiddle.net/codepo8/V6ufG/2/](https://jsfiddle.net/codepo8/V6ufG/2/).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>HTML 3.2 defines only the <code>name</code>, <code>href</code>, <code>rel</code>, <code>rev</code>, and <code>title</code> attributes.</p>
+HTML 3.2 defines only the `name`, `href`, `rel`, `rev`, and `title` attributes.
 
-<h3 id="Accessibility_recommendations">Accessibility recommendations</h3>
+### Accessibility recommendations
 
-<p>Anchor tags are often abused with the <code>onclick</code> event to create pseudo-buttons by setting <strong>href</strong> to <code>"#"</code> or <code>"javascript:void(0)"</code> to prevent the page from refreshing. These values cause unexpected behavior when copying/dragging links, opening links in a new tabs/windows, bookmarking, and when JavaScript is still downloading, errors out, or is disabled. This also conveys incorrect semantics to assistive technologies (e.g., screen readers). In these cases, it is recommended to use a {{HTMLElement("button")}} instead. In general you should only use an anchor for navigation using a proper URL. </p>
+Anchor tags are often abused with the `onclick` event to create pseudo-buttons by setting **href** to `"#"` or `"javascript:void(0)"` to prevent the page from refreshing. These values cause unexpected behavior when copying/dragging links, opening links in a new tabs/windows, bookmarking, and when JavaScript is still downloading, errors out, or is disabled. This also conveys incorrect semantics to assistive technologies (e.g., screen readers). In these cases, it is recommended to use a {{HTMLElement("button")}} instead. In general you should only use an anchor for navigation using a proper URL.
 
-<h3 id="Clicking_and_focus">Clicking and focus</h3>
+### Clicking and focus
 
-<p>Whether clicking on an {{HTMLElement("a")}} causes it to become focused varies by browser and OS.</p>
+Whether clicking on an {{HTMLElement("a")}} causes it to become focused varies by browser and OS.
 
-<table>
- <caption>Does clicking on an {{HTMLElement("a")}} give it focus?</caption>
- <tbody>
-  <tr>
-   <td>Desktop Browsers</td>
-   <th>Windows 8.1</th>
-   <th>OS X 10.9</th>
-  </tr>
-  <tr>
-   <th>Firefox 30.0</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
-  <tr>
-   <th>Chrome ≥39<br>
-    (<a href="https://code.google.com/p/chromium/issues/detail?id=388666">Chromium bug 388666</a>)</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
-  <tr>
-   <th>Safari 7.0.5</th>
-   <td style="background-color: silver;">N/A</td>
-   <td style="background-color: yellow;">Only when it has a <code>tabindex</code></td>
-  </tr>
-  <tr>
-   <th>Internet Explorer 11</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: silver;">N/A</td>
-  </tr>
-  <tr>
-   <th>Presto (Opera 12)</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
- </tbody>
-</table>
+| Desktop Browsers                                                                               | Windows 8.1 | OS X 10.9                     |
+| ---------------------------------------------------------------------------------------------- | ----------- | ----------------------------- |
+| Firefox 30.0                                                                                   | Yes         | Yes                           |
+| Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Yes         | Yes                           |
+| Safari 7.0.5                                                                                   | N/A         | Only when it has a `tabindex` |
+| Internet Explorer 11                                                                           | Yes         | N/A                           |
+| Presto (Opera 12)                                                                              | Yes         | Yes                           |
 
-<table>
- <caption>Does tapping on an {{HTMLElement("a")}} give it focus?</caption>
- <tbody>
-  <tr>
-   <td>Mobile Browsers</td>
-   <th>iOS 7.1.2</th>
-   <th>Android 4.4.4</th>
-  </tr>
-  <tr>
-   <th>Safari Mobile</th>
-   <td style="background-color: yellow;">Only when it has a <code>tabindex</code></td>
-   <td style="background-color: silver;">N/A</td>
-  </tr>
-  <tr>
-   <th>Chrome 35</th>
-   <td>???</td>
-   <td style="background-color: yellow;">Only when it has a <code>tabindex</code></td>
-  </tr>
- </tbody>
-</table>
+| Mobile Browsers | iOS 7.1.2                     | Android 4.4.4                 |
+| --------------- | ----------------------------- | ----------------------------- |
+| Safari Mobile   | Only when it has a `tabindex` | N/A                           |
+| Chrome 35       | ???                           | Only when it has a `tabindex` |
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("html.elements.a")}}
 
+## See also
 
-<p>{{Compat("html.elements.a")}}</p>
+- Other elements conveying [text-level semantics](/zh-TW/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>Other elements conveying <a href="/en-US/docs/HTML/Text_level_semantics_conveying_elements">text-level semantics</a>: {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
-</ul>
-
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

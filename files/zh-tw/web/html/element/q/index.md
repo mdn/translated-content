@@ -3,78 +3,49 @@ title: <q>
 slug: Web/HTML/Element/q
 translation_of: Web/HTML/Element/q
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><em>HTML 引文元素</em> (<strong>&lt;q&gt;</strong>) 指示一段元素內的文字，屬於行內引文。這個元素適用於不須換行的短引文，針對長引文，請使用 {{HTMLElement("blockquote")}} 元素。</p>
+_HTML 引文元素_ (**\<q>**) 指示一段元素內的文字，屬於行內引文。這個元素適用於不須換行的短引文，針對長引文，請使用 {{HTMLElement("blockquote")}} 元素。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-TW/docs/HTML/Content_categories">內容類別</a></th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Flow_content">流內容</a>、<a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">段落式內容</a>、捫及內容。</td>
-  </tr>
-  <tr>
-   <th scope="row">允許內容</th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">段落式內容</a></td>
-  </tr>
-  <tr>
-   <th scope="row">標籤省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允許父元素</th>
-   <td>任何允許<a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">段落式內容</a>的元素</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)、捫及內容。 |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 允許內容                                        | [段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)                                                                         |
+| 標籤省略                                        | {{no_tag_omission}}                                                                                                                   |
+| 允許父元素                                      | 任何允許[段落式內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素                                                           |
+| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                                                                   |
 
-<div class="note">
- <p><strong>備註：</strong> 多數現代標準瀏覽器，如 Mozilla Firefox, Opera, Safari 會在 <code>&lt;q&gt;</code> 元素周圍添加引號；但有些瀏覽器（如 Internet Explorer）可能不會針對引用添加任何樣式，不過這些都可以透過樣式規則套用。</p>
-</div>
+> **備註：** 多數現代標準瀏覽器，如 Mozilla Firefox, Opera, Safari 會在 `<q>` 元素周圍添加引號；但有些瀏覽器（如 Internet Explorer）可能不會針對引用添加任何樣式，不過這些都可以透過樣式規則套用。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>這個元素包含 <a href="/zh-TW/docs/HTML/Global_attributes">全域屬性</a>。</p>
+這個元素包含 [全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>這個屬性值為可以指定引用文件、或信息來源的 URL。這個屬性預期導向信息說明的上下文、或是引文參照。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 這個屬性值為可以指定引用文件、或信息來源的 URL。這個屬性預期導向信息說明的上下文、或是引文參照。
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<h3 id="HTML_內容">HTML 內容</h3>
+### HTML 內容
 
-<pre class="brush: html">&lt;p&gt;每當阿尼掛掉的時候，屎蛋會說：
-   &lt;q cite="https://zh.wikipedia.org/zh-tw/%E8%82%AF%E5%B0%BC%C2%B7%E9%BA%A6%E5%85%8B%E5%BA%B7%E7%B1%B3%E5%85%8B"&gt;
+```html
+<p>每當阿尼掛掉的時候，屎蛋會說：
+   <q cite="https://zh.wikipedia.org/zh-tw/%E8%82%AF%E5%B0%BC%C2%B7%E9%BA%A6%E5%85%8B%E5%BA%B7%E7%B1%B3%E5%85%8B">
      我的天啊！阿尼他被掛掉了！
-   &lt;/q&gt;.
-&lt;/p&gt;
-</pre>
+   </q>.
+</p>
+```
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<div>
+{{Compat("html.elements.q")}}
 
+## 參閱
 
-<p>{{Compat("html.elements.q")}}</p>
-</div>
-
-<p> </p>
-
-<h2 id="參閱">參閱</h2>
-
-<ul>
- <li>針對長引文的 {{HTMLElement("blockquote")}} 元素</li>
- <li>針對引用來源的 {{HTMLElement("cite")}} 元素</li>
-</ul>
+- 針對長引文的 {{HTMLElement("blockquote")}} 元素
+- 針對引用來源的 {{HTMLElement("cite")}} 元素

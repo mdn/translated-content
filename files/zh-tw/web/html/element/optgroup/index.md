@@ -9,84 +9,61 @@ tags:
   - Web
 translation_of: Web/HTML/Element/optgroup
 ---
-<h2 id="總覽">總覽</h2>
+## 總覽
 
-<p>In a Web form, the <strong>HTML <code>&lt;optgroup&gt;</code> element</strong>  creates a grouping of options within a {{HTMLElement("select")}} element.</p>
+In a Web form, the **HTML `<optgroup>` element** creates a grouping of options within a {{HTMLElement("select")}} element.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content categories</a></th>
-   <td>None.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Zero or more {{HTMLElement("option")}} elements.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>The start tag is mandatory. The end tag is optional if this element is immediately followed by another &lt;optgroup&gt; element, or if the parent element has no more content.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent elements</th>
-   <td>A {{HTMLElement("select")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLOptGroupElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/zh-TW/docs/HTML/Content_categories) | None.                                                                                                                                                                    |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Permitted content                                         | Zero or more {{HTMLElement("option")}} elements.                                                                                                                  |
+| Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another <optgroup> element, or if the parent element has no more content. |
+| Permitted parent elements                                 | A {{HTMLElement("select")}} element.                                                                                                                              |
+| DOM interface                                             | {{domxref("HTMLOptGroupElement")}}                                                                                                                             |
 
-<div class="note">
- <p><strong>備註：</strong>Optgroup elements may not be nested.</p>
-</div>
+> **備註：** Optgroup elements may not be nested.
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>This element includes the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("disabled")}}</dt>
- <dd>If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.</dd>
- <dt>{{htmlattrdef("label")}}</dt>
- <dd>The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.</dd>
-</dl>
+- {{htmlattrdef("disabled")}}
+  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
+- {{htmlattrdef("label")}}
+  - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: html">&lt;select&gt;
-  &lt;optgroup label="Group 1"&gt;
-    &lt;option&gt;Option 1.1&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Group 2"&gt;
-    &lt;option&gt;Option 2.1&lt;/option&gt;
-    &lt;option&gt;Option 2.2&lt;/option&gt;
-  &lt;/optgroup&gt;
-  &lt;optgroup label="Group 3" disabled&gt;
-    &lt;option&gt;Option 3.1&lt;/option&gt;
-    &lt;option&gt;Option 3.2&lt;/option&gt;
-    &lt;option&gt;Option 3.3&lt;/option&gt;
-  &lt;/optgroup&gt;
-&lt;/select&gt;
-</pre>
+```html
+<select>
+  <optgroup label="Group 1">
+    <option>Option 1.1</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option>Option 2.1</option>
+    <option>Option 2.2</option>
+  </optgroup>
+  <optgroup label="Group 3" disabled>
+    <option>Option 3.1</option>
+    <option>Option 3.2</option>
+    <option>Option 3.3</option>
+  </optgroup>
+</select>
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("html.elements.optgroup")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.</li>
-</ul>
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

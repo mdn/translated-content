@@ -3,160 +3,108 @@ title: <form>
 slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p>HTML <strong><code>&lt;form&gt;</code></strong> 元素表示提交訊息的區塊，此區塊含有許多可互動的控制項。</p>
+HTML **`<form>`** 元素表示提交訊息的區塊，此區塊含有許多可互動的控制項。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-<p>It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> to style a <code>&lt;form&gt;</code> element based on whether or not the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.</p>
+It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes) to style a `<form>` element based on whether or not the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, but not containing <code>&lt;form&gt;</code> elements</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role">form</a></code> if the form has an <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">accessible name</a>, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, {{ARIARole("none")}} or {{ARIARole("presentation")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLFormElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [Content categories](/zh-TW/docs/Web/Guide/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content), [palpable content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Palpable_content)                                                                                           |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                   | [Flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content), but not containing `<form>` elements                                                                                                                                         |
+| Tag omission                                                        | {{no_tag_omission}}                                                                                                                                                                                                                                 |
+| Permitted parents                                                   | Any element that accepts [flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content)                                                                                                                                                      |
+| Implicit ARIA role                                                  | [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role) if the form has an [accessible name](https://www.w3.org/TR/accname-1.1/#dfn-accessible-name), otherwise [no corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role) |
+| Permitted ARIA roles                                                | [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role), {{ARIARole("none")}} or {{ARIARole("presentation")}}                                                                                                                   |
+| DOM interface                                                       | {{domxref("HTMLFormElement")}}                                                                                                                                                                                                                 |
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
+This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attributes).
 
-<dl>
- <dt>{{htmlattrdef("accept")}} {{Deprecated_Inline}}</dt>
- <dd>Comma-separated <a href="/en-US/docs/Web/SVG/Content_type">content types</a> the server accepts.
- <div class="note"><strong>This attribute was removed in HTML5 and should not be used.</strong> Instead, use the {{htmlattrxref("accept", "input")}} attribute on <code>&lt;input type=file&gt;</code> elements.</div>
- </dd>
- <dt>{{htmlattrdef("accept-charset")}}</dt>
- <dd>Space-separated <a href="/en-US/docs/Web/Guide/Localizations_and_character_encodings">character encodings</a> the server accepts. The browser uses them in the order in which they are listed. The default value means <a href="/en-US/docs/Web/HTTP/Headers/Content-Encoding">the same encoding as the page</a>.<br>
- (In previous versions of HTML, character encodings could also be delimited by commas.)</dd>
- <dt>{{htmlattrdef("action")}}</dt>
- <dd>The URL that processes the form submission. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> element.</dd>
- <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
- <dd>A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. <code>autocapitalize</code> attributes on a form elements override it on <code>&lt;form&gt;</code>. Possible values:
- <ul>
-  <li><code>none</code>: No automatic capitalization.</li>
-  <li><code>sentences</code> (default): Capitalize the first letter of each sentence.</li>
-  <li><code>words</code>: Capitalize the first letter of each word.</li>
-  <li><code>characters</code>: Capitalize all characters — that is, uppercase.</li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("autocomplete")}}</dt>
- <dd>Indicates whether input elements can by default have their values automatically completed by the browser. <code>autocomplete</code> attributes on form elements override it on <code>&lt;form&gt;</code>. Possible values:
- <ul>
-  <li><code>off</code>: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see <a href="/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">The autocomplete attribute and login fields</a>.)</li>
-  <li><code>on</code>: The browser may automatically complete entries. </li>
- </ul>
- </dd>
- <dt>{{htmlattrdef("enctype")}}</dt>
- <dd>If the value of the <code>method</code> attribute is <code>post</code>, <code>enctype</code> is the <a href="https://en.wikipedia.org/wiki/Mime_type">MIME type</a> of the form submission. Possible values:
- <ul>
-  <li><code>application/x-www-form-urlencoded</code>: The default value.</li>
-  <li><code>multipart/form-data</code>: Use this if the form contains {{HTMLElement("input")}} elements with <code>type=file</code>.</li>
-  <li><code>text/plain</code>: Introduced by HTML5 for debugging purposes.</li>
- </ul>
+- {{htmlattrdef("accept")}} {{Deprecated_Inline}}
+  - : Comma-separated [content types](/zh-TW/docs/Web/SVG/Content_type) the server accepts.
 
- <p>This value can be overridden by {{htmlattrxref("formenctype", "button")}} attributes on {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> elements.</p>
- </dd>
- <dt>{{htmlattrdef("method")}}</dt>
- <dd>The <a href="/en-US/docs/Web/HTTP">HTTP</a> method to submit the form with. Possible values:
- <ul>
-  <li><code>post</code>: The <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST method</a>; form data sent as the <a href="/en-US/docs/Web/API/Body">request body</a>.</li>
-  <li><code>get</code>: The <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET method</a>; form data appended to the <code>action</code> URL with a <code>?</code> separator. Use this method when the form <a href="/en-US/docs/Glossary/Idempotent">has no side-effects</a>.</li>
-  <li><code>dialog</code>: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission.</li>
- </ul>
+    > **備註：** **This attribute was removed in HTML5 and should not be used.** Instead, use the {{htmlattrxref("accept", "input")}} attribute on `<input type=file>` elements.
+- {{htmlattrdef("accept-charset")}}
+  - : Space-separated [character encodings](/zh-TW/docs/Web/Guide/Localizations_and_character_encodings) the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding).
+    (In previous versions of HTML, character encodings could also be delimited by commas.)
+- {{htmlattrdef("action")}}
+  - : The URL that processes the form submission. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
+- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+  - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values: `none`: No automatic capitalization.
+    - `sentences` (default): Capitalize the first letter of each sentence.
+    - `words`: Capitalize the first letter of each word.
+    - `characters`: Capitalize all characters — that is, uppercase.
+- {{htmlattrdef("autocomplete")}}
+  - : Indicates whether input elements can by default have their values automatically completed by the browser. `autocomplete` attributes on form elements override it on `<form>`. Possible values: `off`: The browser may not automatically complete entries. (Browsers tend to ignore this for suspected login forms; see [The autocomplete attribute and login fields](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).)
+    - `on`: The browser may automatically complete entries.
+- {{htmlattrdef("enctype")}}
+  - : If the value of the `method` attribute is `post`, `enctype` is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of the form submission. Possible values: `application/x-www-form-urlencoded`: The default value.
+    - `multipart/form-data`: Use this if the form contains {{HTMLElement("input")}} elements with `type=file`.
+    - `text/plain`: Introduced by HTML5 for debugging purposes.This value can be overridden by {{htmlattrxref("formenctype", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
+- {{htmlattrdef("method")}}
+  - : The [HTTP](/zh-TW/docs/Web/HTTP) method to submit the form with. Possible values: `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/zh-TW/docs/Web/API/Body).
+    - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/zh-TW/docs/Glossary/Idempotent).
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission.This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image"> `](/en-US/docs/Web/HTML/Element/input/image)elements.
+- {{htmlattrdef("name")}} {{deprecated_inline}}
+  - : The name of the form. Deprecated as of HTML 4 (use `id` instead). It must be unique among the forms in a document and not an empty string as of HTML5.
+- {{htmlattrdef("novalidate")}}
+  - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form _**is**_ validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.
+- {{htmlattrdef("rel")}}
+  - : Creates a hyperlink or annotation depending on the value, see the [{{htmlattrdef("rel")}}](/docs/Web/HTML/Attributes/rel) attribute for details.
+- {{htmlattrdef("target")}}
+  - : Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a _browsing context_ (for example, tab, window, or iframe). The following keywords have special meanings `_self` (default): Load into the same browsing context as the current one.
+    - `_blank`: Load into a new unnamed browsing context.
+    - `_parent`: Load into the parent browsing context of the current one. If no parent, behaves the same as `_self`.
+    - `_top`: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as `_self`.This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
 
- <p>This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt; </a></code>elements.</p>
- </dd>
- <dt>{{htmlattrdef("name")}} {{deprecated_inline}}</dt>
- <dd>The name of the form. Deprecated as of HTML 4 (use <code>id</code> instead). It must be unique among the forms in a document and not an empty string as of HTML5.</dd>
- <dt>{{htmlattrdef("novalidate")}}</dt>
- <dd>This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form <em><strong>is</strong></em> validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> element belonging to the form.</dd>
- <dt>{{htmlattrdef("rel")}}</dt>
- <dd>Creates a hyperlink or annotation depending on the value, see the <a href="/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
- <dt>{{htmlattrdef("target")}}</dt>
- <dd>Indicates where to display the response after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a <em>browsing context</em> (for example, tab, window, or iframe). The following keywords have special meanings:
- <ul>
-  <li><code>_self</code> (default): Load into the same browsing context as the current one.</li>
-  <li><code>_blank</code>: Load into a new unnamed browsing context.</li>
-  <li><code>_parent</code>: Load into the parent browsing context of the current one. If no parent, behaves the same as <code>_self</code>.</li>
-  <li><code>_top</code>: Load into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one and has no parent). If no parent, behaves the same as <code>_self</code>.</li>
- </ul>
+## Examples
 
- <p>This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}}, <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code>, or <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> element.</p>
- </dd>
-</dl>
+### HTML
 
-<h2 id="Examples">Examples</h2>
+```html
+<!-- Form which will send a GET request to the current URL -->
+<form>
+  <label>Name:
+    <input name="submitted-name" autocomplete="name">
+  </label>
+  <button>Save</button>
+</form>
 
-<h3 id="HTML">HTML</h3>
+<!-- Form which will send a POST request to the current URL -->
+<form method="post">
+  <label>Name:
+    <input name="submitted-name" autocomplete="name">
+  </label>
+  <button>Save</button>
+</form>
 
-<pre class="brush: html">&lt;!-- Form which will send a GET request to the current URL --&gt;
-&lt;form&gt;
-  &lt;label&gt;Name:
-    &lt;input name="submitted-name" autocomplete="name"&gt;
-  &lt;/label&gt;
-  &lt;button&gt;Save&lt;/button&gt;
-&lt;/form&gt;
+<!-- Form with fieldset, legend, and label -->
+<form method="post">
+  <fieldset>
+    <legend>Title</legend>
+    <label><input type="radio" name="radio"> Select me</label>
+  </fieldset>
+</form>
+```
 
-&lt;!-- Form which will send a POST request to the current URL --&gt;
-&lt;form method="post"&gt;
-  &lt;label&gt;Name:
-    &lt;input name="submitted-name" autocomplete="name"&gt;
-  &lt;/label&gt;
-  &lt;button&gt;Save&lt;/button&gt;
-&lt;/form&gt;
+{{ EmbedLiveSample('Examples', '100%', 110) }}
 
-&lt;!-- Form with fieldset, legend, and label --&gt;
-&lt;form method="post"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Title&lt;/legend&gt;
-    &lt;label&gt;&lt;input type="radio" name="radio"&gt; Select me&lt;/label&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</pre>
-
-<p>{{ EmbedLiveSample('Examples', '100%', 110) }}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("html.elements.form")}}</p>
+{{Compat("html.elements.form")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms guide</a></li>
- <li>Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.</li>
- <li>Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}</li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role">ARIA: Form role</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role">ARIA: Search role</a></li>
-</ul>
+- [HTML forms guide](/zh-TW/docs/Web/Guide/HTML/Forms)
+- Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+- Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
+- [ARIA: Form role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Search role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Search_role)

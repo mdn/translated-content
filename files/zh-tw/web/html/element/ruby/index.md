@@ -3,71 +3,55 @@ title: <ruby>
 slug: Web/HTML/Element/ruby
 translation_of: Web/HTML/Element/ruby
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML <code>&lt;ruby&gt;</code> 元素</strong>的意思是旁註標記。旁註標記用於標示東亞文字的發音。</p>
+**HTML `<ruby>` 元素**的意思是旁註標記。旁註標記用於標示東亞文字的發音。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a></th>
-   <td><a href="/zh-TW/docs/Web/HTML/Content_categories#Flow_content">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content">段落型內容</a>、捫及內容</td>
-  </tr>
-  <tr>
-   <th scope="row">允許內容</th>
-   <td><a href="/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content">段落型內容</a></td>
-  </tr>
-  <tr>
-   <th scope="row">標籤省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允許父元素</th>
-   <td>Any element that accepts <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[段落型內容](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content)、捫及內容 |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 允許內容                                            | [段落型內容](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content)                                                                           |
+| 標籤省略                                            | {{no_tag_omission}}                                                                                                                         |
+| 允許父元素                                          | Any element that accepts [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content)                                                |
+| DOM 介面                                            | {{domxref("HTMLElement")}}                                                                                                             |
 
-<h2 id="Attributes">屬性</h2>
+## 屬性
 
-<p>這個元素只支援<a href="/zh-TW/docs/Web/HTML/Global_attributes">全域屬性</a>。</p>
+這個元素只支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-<h2 id="Examples">範例</h2>
+## 範例
 
-<h3 id="範例一：字">範例一：字</h3>
+### 範例一：字
 
-<pre class="brush:html">&lt;ruby&gt;
-  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Kan&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;ji&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-<h3 id="範例二：詞">範例二：詞</h3>
+### 範例二：詞
 
-<pre class="brush:html">&lt;ruby&gt;
-  明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
-&lt;/ruby&gt;</pre>
+```html
+<ruby>
+  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+</ruby>
+```
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("html.elements.ruby")}}</p>
+{{Compat("html.elements.ruby")}}
 
-<h2 id="See_also">參閱</h2>
+## 參閱
 
-<ul>
- <li>{{HTMLElement("rt")}}</li>
- <li>{{HTMLElement("rp")}}</li>
- <li>{{HTMLElement("rb")}}</li>
- <li>{{HTMLElement("rtc")}}</li>
- <li>{{HTMLElement("rbc")}}</li>
- <li>{{CSSxRef("text-transform")}}: full-size-kana</li>
-</ul>
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("rbc")}}
+- {{CSSxRef("text-transform")}}: full-size-kana

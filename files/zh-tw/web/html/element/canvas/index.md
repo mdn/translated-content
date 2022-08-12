@@ -3,95 +3,70 @@ title: <canvas>
 slug: Web/HTML/Element/canvas
 translation_of: Web/HTML/Element/canvas
 ---
-<p>這個 <strong>HTML <code>&lt;canvas&gt;</code> 元素</strong> 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在&lt;canvas&gt;區段內提供替代方案的內容 .這內容將能被一些不支援&lt;canvas&gt;以及無法使用Javescript功能的瀏覽器所渲染 .</p>
+這個 **HTML `<canvas>` 元素** 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在\<canvas>區段內提供替代方案的內容 .這內容將能被一些不支援\<canvas>以及無法使用 Javescript 功能的瀏覽器所渲染 .
 
-<p>更多文章關於canvas, 請參考 <a href="/en-US/docs/Web/API/Canvas_API">canvas 主題</a></p>
+更多文章關於 canvas, 請參考 [canvas 主題](/zh-TW/docs/Web/API/Canvas_API)
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Content 分類</a></th>
-   <td><a href="/en-US/docs/HTML/Content_categories#Flow_content">流程式content</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">段落式content</a>, <a href="/en-US/docs/HTML/Content_categories#Embedded_content">強調式content</a>, 可見式 content.</td>
-  </tr>
-  <tr>
-   <th scope="row">
-    <p>被允許通過的內容</p>
-   </th>
-   <td>
-    <p>除了子元素不是 &lt;a&gt;的元素、 &lt;button&gt;的元素、&lt;input&gt;的元素屬性是<code>checkbox</code>, <code>radio</code>, 或 <code>button</code> 之外且是透明內容模型但不是<a href="/en-US/docs/HTML/Content_categories#Interactive_content">互動式content</a></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Tag 省略</th>
-   <td>不能省略標籤&lt;canvas&gt; &lt;/canvas&gt;</td>
-  </tr>
-  <tr>
-   <th scope="row">被允許通過的父親元素</th>
-   <td>
-    <p>任何<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">強調式content</a>的元素皆可通過</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>HTMLCanvasElement</td>
-  </tr>
- </tbody>
-</table>
+| [Content 分類](/zh-TW/docs/HTML/Content_categories) | [流程式 content](/zh-TW/docs/HTML/Content_categories#Flow_content), [段落式 content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [強調式 content](/zh-TW/docs/HTML/Content_categories#Embedded_content), 可見式 content. |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 被允許通過的內容                                    | 除了子元素不是 \<a>的元素、 \<button>的元素、\<input>的元素屬性是`checkbox`, `radio`, 或 `button` 之外且是透明內容模型但不是[互動式 content](/zh-TW/docs/HTML/Content_categories#Interactive_content)                               |
+| Tag 省略                                            | 不能省略標籤<canvas> </canvas>                                                                                                                                                                                                      |
+| 被允許通過的父親元素                                | 任何[強調式 content](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素皆可通過                                                                                                                                            |
+| DOM 介面                                            | HTMLCanvasElement                                                                                                                                                                                                                   |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>這個元素的屬性包含全域屬性</p>
+這個元素的屬性包含全域屬性
 
-<dl>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>在CSS 中以 pixels 表示 座標的空間<strong>高度</strong>（預設是150）</dd>
- <dt>{{htmlattrdef("moz-opaque")}} {{non-standard_inline}}</dt>
- <dd>讓canvas知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>在CSS 中以 pixels 表示 座標的空間<strong>寬度</strong>（預設是300）</dd>
-</dl>
+- {{htmlattrdef("height")}}
+  - : 在 CSS 中以 pixels 表示 座標的空間**高度**（預設是 150）
+- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+  - : 讓 canvas 知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能
+- {{htmlattrdef("width")}}
+  - : 在 CSS 中以 pixels 表示 座標的空間**寬度**（預設是 300）
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<h3 id="需要_&lt;canvas>_結尾">需要 <code>&lt;/canvas&gt;</code> 結尾</h3>
+### 需要 `</canvas>` 結尾
 
-<p>與&lt;img&gt;不同之處,<code>&lt;canvas&gt;</code>需要<code>&lt;/canvas&gt;</code> 結尾</p>
+與\<img>不同之處,`<canvas>`需要`</canvas>` 結尾
 
-<h3 id="canvas的大小設置">canvas的大小設置</h3>
+### canvas 的大小設置
 
-<p>canvas的大小設置可透過樣式表（stylesheet）被改變。可經由樣式修改圖像的縮放大小。</p>
+canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣式修改圖像的縮放大小。
 
-<p>若呈現的效果圖似乎是扭曲變形的，可試著先修改<code>&lt;canvas&gt;</code>標籤中的<code>width</code>和<code>height</code>的屬性，而<strong>不建議</strong>使用css去控制。</p>
+若呈現的效果圖似乎是扭曲變形的，可試著先修改`<canvas>`標籤中的`width`和`height`的屬性，而**不建議**使用 css 去控制。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>將下面這條範例加到你的HTML文件。如果你的瀏覽器並不支援canvas 或不能讀取canvas 時，則會回報canvas中的訊息。若想知道更多有用的回應訊息或替代DOM的註文，可以<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">參考更多相似的註文</a>。</p>
+將下面這條範例加到你的 HTML 文件。如果你的瀏覽器並不支援 canvas 或不能讀取 canvas 時，則會回報 canvas 中的訊息。若想知道更多有用的回應訊息或替代 DOM 的註文，可以[參考更多相似的註文](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)。
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;
-  抱歉，你的瀏覽器並不支援&lt;canvas&gt;元素
-&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300">
+  抱歉，你的瀏覽器並不支援<canvas>元素
+</canvas>
+```
 
-<p>如果你的canvas沒有使用透明度，可在&lt;canvas&gt;標籤設立<code>moz-opaque</code>屬性，提升它的繪圖效果。<code>moz-opaque</code> 尚未標準化，所以只適用在 Mozilla 的 效能引擎。</p>
+如果你的 canvas 沒有使用透明度，可在\<canvas>標籤設立`moz-opaque`屬性，提升它的繪圖效果。`moz-opaque` 尚未標準化，所以只適用在 Mozilla 的 效能引擎。
 
-<pre class="brush: html">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="mycanvas" moz-opaque></canvas>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("html.elements.canvas")}}
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Canvas_API">MDN canvas portal</a></li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a></li>
- <li><a href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">Canvas cheat sheet</a></li>
- <li><a href="/en-US/demos/tag/tech:canvas">Canvas-related demos</a></li>
- <li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html">Canvas introduction by Apple</a></li>
-</ul>
+- [MDN canvas portal](/zh-TW/docs/Web/API/Canvas_API)
+- [Canvas tutorial](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
+- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}

@@ -3,74 +3,53 @@ title: <blockquote>
 slug: Web/HTML/Element/blockquote
 translation_of: Web/HTML/Element/blockquote
 ---
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（<em>HTML 區塊引言元素</em>）定義一段文字屬於引用。通常，這元素會透過縮排來呈現（要知道如何改變，請參考<a href="#Notes">備註</a>）。引言的 URL 來源可透過 <strong>cite</strong> 屬性賦予，而來源的文本形式可以使用 {{HTMLElement("cite")}} 元素。</p>
+**HTML `<blockquote>` 元素**（_HTML 區塊引言元素_）定義一段文字屬於引用。通常，這元素會透過縮排來呈現（要知道如何改變，請參考[備註](#Notes)）。引言的 URL 來源可透過 **cite** 屬性賦予，而來源的文本形式可以使用 {{HTMLElement("cite")}} 元素。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-TW/docs/HTML/Content_categories">內容類別</a></th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Flow_content">流內容</a>、sectioning root、捫及內容。</td>
-  </tr>
-  <tr>
-   <th scope="row">允許內容</th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Flow_content">內容流</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag 省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允許父元素</th>
-   <td>任何允許<a href="/zh-TW/docs/HTML/Content_categories#Flow_content">內容流</a>的元素</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{domxref("HTMLQuoteElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、sectioning root、捫及內容。 |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 允許內容                                        | [內容流](/zh-TW/docs/HTML/Content_categories#Flow_content).                             |
+| Tag 省略                                        | {{no_tag_omission}}                                                                |
+| 允許父元素                                      | 任何允許[內容流](/zh-TW/docs/HTML/Content_categories#Flow_content)的元素                |
+| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>這個屬性包含<a href="/zh-TW/docs/HTML/Global_attributes">全局屬性</a>。</p>
+這個屬性包含[全局屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-<dl>
- <dt>{{htmlattrdef("cite")}}</dt>
- <dd>一個指向被引用的原始文件或訊息的 URL 。這個屬性預期要指引到解釋內容的資訊，或是引言的援引。</dd>
-</dl>
+- {{htmlattrdef("cite")}}
+  - : 一個指向被引用的原始文件或訊息的 URL 。這個屬性預期要指引到解釋內容的資訊，或是引言的援引。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: html">&lt;blockquote cite="http://developer.mozilla.org"&gt;
-  &lt;p&gt;這是取自於 Mozilla Developer Center 的引言。&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+```html
+<blockquote cite="http://developer.mozilla.org">
+  <p>這是取自於 Mozilla Developer Center 的引言。</p>
+</blockquote>
+```
 
-<p>以上的 HTML 原始碼會輸出：</p>
+以上的 HTML 原始碼會輸出：
 
 {{EmbedLiveSample('範例')}}
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("html.elements.blockquote")}}
 
-<h2 id="備註">備註</h2>
+## 備註
 
-<p>要改變<code>&lt;blockquote&gt;</code>的縮進，請使用 <a href="/zh-TW/docs/CSS">CSS</a> 的 {{cssxref("margin")}} 屬性。</p>
+要改變`<blockquote>`的縮進，請使用 [CSS](/zh-TW/docs/CSS) 的 {{cssxref("margin")}} 屬性。
 
-<p>針對短篇引文請使用 {{HTMLElement("q")}} 元素。</p>
+針對短篇引文請使用 {{HTMLElement("q")}} 元素。
 
-<h2 id="延伸閱讀">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li>{{HTMLElement("q")}} 元素：用以表示單行的引用內容。</li>
- <li>{{HTMLElement("cite")}} 元素：用以表示引用來源。</li>
-</ul>
+- {{HTMLElement("q")}} 元素：用以表示單行的引用內容。
+- {{HTMLElement("cite")}} 元素：用以表示引用來源。
 
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

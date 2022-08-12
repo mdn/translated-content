@@ -3,65 +3,46 @@ title: <code>
 slug: Web/HTML/Element/code
 translation_of: Web/HTML/Element/code
 ---
-<p><em>HTML Code 元素</em>（<strong>&lt;code&gt;</strong>）表現出電腦程式碼的片段。通常，它會由瀏覽器預設的 monospace 字體顯示出來。</p>
+_HTML Code 元素_（**\<code>**）表現出電腦程式碼的片段。通常，它會由瀏覽器預設的 monospace 字體顯示出來。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-TW/docs/HTML/Content_categories">內容分類</a></th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Flow_content">流內容</a>、<a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">段落式内容</a>、捫及內容</td>
-  </tr>
-  <tr>
-   <th scope="row">允許內容</th>
-   <td><a href="/zh-TW/docs/HTML/Content_categories#Phrasing_content">段落式内容</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">標籤省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允許父元素</th>
-   <td>任何允許<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">段落式内容</a>的元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4) 以前，Firefox 針對這個元素使用 {{domxref("HTMLSpanElement")}} 介面實做。</td>
-  </tr>
- </tbody>
-</table>
+| [內容分類](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落式内容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)、捫及內容         |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 允許內容                                        | [段落式内容](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                              |
+| 標籤省略                                        | {{no_tag_omission}}                                                                                                                         |
+| 允許父元素                                      | 任何允許[段落式内容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素。                                                               |
+| DOM 介面                                        | {{domxref("HTMLElement")}}。Gecko 1.9.2 (Firefox 4) 以前，Firefox 針對這個元素使用 {{domxref("HTMLSpanElement")}} 介面實做。 |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p>這個元素只支援<a href="/zh-TW/docs/HTML/Global_attributes">全域屬性</a>。</p>
+這個元素只支援[全域屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: html">&lt;p&gt; Regular text. &lt;code&gt; This is code. &lt;/code&gt; Regular text. &lt;/p&gt;
-</pre>
+```html
+<p> Regular text. <code> This is code. </code> Regular text. </p>
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>Regular text. <code>This is code.</code> Regular text.</p>
+Regular text. `This is code.` Regular text.
 
-<h2 id="註記">註記</h2>
+## 註記
 
-<p>CSS 的 <code>code</code> 選擇器設定可以透過蓋過瀏覽器預設，而用戶個人設定可以蓋過 CSS 設定。</p>
+CSS 的 `code` 選擇器設定可以透過蓋過瀏覽器預設，而用戶個人設定可以蓋過 CSS 設定。
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("html.elements.code")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("samp")}}</li>
- <li>{{HTMLElement("kbd")}}</li>
- <li>{{HTMLElement("command")}} (deprecated)</li>
- <li>{{HTMLElement("var")}}</li>
-</ul>
+- {{HTMLElement("samp")}}
+- {{HTMLElement("kbd")}}
+- {{HTMLElement("command")}} (deprecated)
+- {{HTMLElement("var")}}
 
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
