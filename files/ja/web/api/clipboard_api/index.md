@@ -1,6 +1,7 @@
 ---
 title: クリップボード API
 slug: Web/API/Clipboard_API
+page-type: web-api-overview
 tags:
   - API
   - Async Clipboard API
@@ -8,66 +9,60 @@ tags:
   - Clipboard API
   - Clipboard Event API
   - ClipboardEvent
+  - ClipboardItem
+  - Cut
   - Landing
   - Reference
+  - copy
+  - paste
+browser-compat:
+  - api.Clipboard
+  - api.ClipboardEvent
+  - api.ClipboardItem
 translation_of: Web/API/Clipboard_API
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p><strong>クリップボード API</strong> は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。クリップボードの内容へのアクセスは、 <a href="/ja/docs/Web/API/Permissions_API">Permissions API</a> によって制限されています。ユーザーの許可がなければ、クリップボードの内容の読み取りや変更は許可されません。</p>
+**クリップボード API** は、クリップボードのコマンド (切り取り、コピー、貼り付け) に応答する機能や、システムクリップボードの非同期の読み取りや書き込みを行う機能を提供します。
 
-<p>この API は、 {{domxref("document.execCommand()")}} を使用したクリップボードへのアクセスに取って代わるように設計されています。</p>
+> **Note:** この API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。（{{domxref("WorkerNavigator")}} に公開されていません）。
 
-<h2 id="Accessing_the_clipboard" name="Accessing_the_clipboard">クリップボードへのアクセス</h2>
+この API は、 {{domxref("document.execCommand()")}} を使用したクリップボードへのアクセスを置き換えるように設計されています。
 
-<p><code>Clipboard</code> オブジェクトをインスタンス化して生成するのではなく、システムクリップボードにはグローバル変数の {{domxref("Navigator.clipboard")}} を通してアクセスすることができます。</p>
+> **Note:** **クリップボード**は、短期間のデータ保存やデータ転送に使用されるデータバッファで、文書間やアプリケーション間で使用することができます。
+> 通常、無名で一時的な[データバッファー](https://ja.wikipedia.org/wiki/バッファ)として実装されており、ペーストバッファーと呼ばれることもあります。環境内のほとんどまたはすべてのプログラムから定義された[プログラミングインターフェイス](https://ja.wikipedia.org/wiki/アプリケーションプログラミングインタフェース)を通じてアクセス可能です。
+>
+> 一般的なアプリケーションでは、これらのインターフェイスに対して、[キーバインド](https://ja.wikipedia.org/wiki/ショートカットキー)、[メニュー選択](<https://ja.wikipedia.org/wiki/メニュー_(コンピュータ)>)などの[ユーザー入力](https://ja.wikipedia.org/wiki/入力)を対応付けることでクリップボード機能にアクセスします。
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.querySelector(".editor").innerText += clipText);</pre>
+## クリップボードへのアクセス
 
-<p>このスニペットはクリップボードからテキストを読み取り、最初に見つかった <code>editor</code> クラスを持つ要素に追加します。 {{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。</p>
+`Clipboard` オブジェクトをインスタンス化して生成するのではなく、グローバル変数の {{domxref("Navigator.clipboard")}} を通してシステムクリップボードにアクセスすることができます。
 
-<h2 id="Interfaces" name="Interfaces">インターフェイス</h2>
+```js
+navigator.clipboard.readText().then(
+  (clipText) => document.querySelector(".editor").innerText += clipText);
+```
 
-<dl>
- <dt>{{domxref("Clipboard")}} {{securecontext_inline}}</dt>
- <dd>システムクリップボードに対してテキストやデータを読み書きするインターフェイスを提供します。これは仕様書では 'Async Clipboard API' と呼ばれています。</dd>
- <dt>{{domxref("ClipboardEvent")}} {{securecontext_inline}}</dt>
- <dd>クリップボードの変更に関する情報を提供するイベント、すなわち {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}} イベントを表します。これは仕様書では 'Clipboard Event API' と呼ばれています。</dd>
-</dl>
+このスニペットはクリップボードからテキストを読み取り、最初に見つかった `editor` クラスを持つ要素に追加します。 {{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## インターフェイス
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Clipboard API')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("Clipboard")}} {{securecontext_inline}}
+  - : システムクリップボードに対してテキストやデータを読み書きするインターフェイスを提供します。これは仕様書では「非同期クリップボード API」と呼ばれています。
+- {{domxref("ClipboardEvent")}} {{securecontext_inline}}
+  - : クリップボードの変更に関する情報を提供するイベント、すなわち {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}} イベントを表します。これは仕様書では「クリップボードイベント API」と呼ばれています。
+- {{domxref("ClipboardItem")}} {{securecontext_inline}}
+  - : データの読み書きの際に使用する単一項目形式を表します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 仕様書
 
-<h3 id="Clipboard" name="Clipboard"><code>Clipboard</code></h3>
+{{Specifications}}
 
-<div>
-<p>{{Compat("api.Clipboard")}}</p>
+## ブラウザーの互換性
 
-<h3 id="ClipboardEvent" name="ClipboardEvent"><code>ClipboardEvent</code></h3>
+{{Compat}}
 
-<p>{{Compat("api.ClipboardEvent")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Permissions_API">Permissions API</a></li>
- <li><a href="/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API">Permissions API の利用</a></li>
-</ul>
-</div>
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
