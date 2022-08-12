@@ -61,7 +61,7 @@ var request = window.indexedDB.open("MeineTestdatenbank", 3);
 
 <p>Die Anforderung zum Öffnen öffnet nicht sofort die Datenbank und startet auch die Transaktion nicht gleich. Der Aufruf zur <code>open()</code> Funktion gibt ein <a href="/de/docs/Web/API/IDBOpenDBRequest" title="IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a>-Objekt mit Ergebniswert (Erfolg) oder Fehlerwert zurück, die Sie als Ereignis verarbeiten. Die meisten anderen asynchronen Funktionen in IndexedDB machen das gleiche – sie geben ein <a href="/de/docs/Web/API/IDBRequest" title="IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a>-Objekt mit Ergebnis oder Fehler zurück. Das Ergebnis für die open-Funktion ist eine Instanz einer <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/de/docs/Web/API/IDBDatabase" title="IDBDatabase">IDBDatabase</a>.</code></p>
 
-<p>Der zweite Parameter der open-Methode ist die Version der Datenbank. Die Version der Datenbank bestimmt das Datenbankschema – den Objektspeichern und ihrer Strukturen. Wenn die angeforderte Version nicht existiert (weil die Datenbank neu ist, oder weil die Version aktualisiert wurde), wird das Ereignis <code>onupgradeneeded</code> ausgelöst, und es lässt sich eine neue Version der Datenbank im Handler für dieses Ereignis erzeugen. Mehr dazu später im Abschnitt <a href="#Updating_the_version_of_the_database">Aktualisieren der Version der Datenbank</a>.</p>
+<p>Der zweite Parameter der open-Methode ist die Version der Datenbank. Die Version der Datenbank bestimmt das Datenbankschema – den Objektspeichern und ihrer Strukturen. Wenn die angeforderte Version nicht existiert (weil die Datenbank neu ist, oder weil die Version aktualisiert wurde), wird das Ereignis <code>onupgradeneeded</code> ausgelöst, und es lässt sich eine neue Version der Datenbank im Handler für dieses Ereignis erzeugen. Mehr dazu später im Abschnitt <a href="#Erstellen_oder_Updaten_der_Datenbank">Aktualisieren der Version der Datenbank</a>.</p>
 
 <h4 id="Erzeugen_von_Handlern">Erzeugen von Handlern</h4>
 
@@ -106,7 +106,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Erstellen_oder_Updaten_der_Datenbank">Erstellen oder Updaten der Datenbank</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>Wenn eine neue Version der Datenbank erstellt wird, wird das <code style="font-style: normal; line-height: 1.5; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 1.5;"> Event ausgelöst. In der Handler-Funktion dieses Events musst du für die Erstellung der Datenbankspeicher, welche für diese Version benötigt wird, sorgen</span>:</p>
+<p>Wenn eine neue Version der Datenbank erstellt wird, wird das <code style="font-style: normal; line-height: 1.5; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 1.5;"> Event ausgelöst. In der Handler-Funktion dieses Events musst du für die Erstellung der Datenbankspeicher, welche für diese Version benötigt wird, sorgen</span>:</p>
 
 <pre class="brush:js;">// Dieses Event ist lediglich in modernen Browsern verfügbar
 request.onupgradeneeded = function(event) {

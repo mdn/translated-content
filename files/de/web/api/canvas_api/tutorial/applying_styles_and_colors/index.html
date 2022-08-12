@@ -45,7 +45,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p class="Normal">In diesem Beispiel nutzen wir wieder zwei Schleifen um ein Gitter aus gefüllten Quadraten zu zeichnen, jedes in einer anderen Farbe. Das resultierende Bild sollte etwa dem Screenshot unten entsprechen. Außergewöhnliches passiert hier nicht, wir nutzen einfach die beiden Variablen i und j um jedem Quadrat eine eigene Farbe zu geben, wobei wir nur die Werte für den Rot- und Grünanteil ändern; der Blauwert bleibt unverändert. Durch Modifikation der Farbkanäle können Sie verschiedene Paletten erzeugen; eine Erhöhung der Schrittweite erzeugt z.B. ein Muster, das an die Farbpaletten in Photoshop erinnert.</p>
 
-<pre class="brush: js;highlight[5,6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i=0;i&lt;6;i++){
     for (var j=0;j&lt;6;j++){
@@ -56,11 +56,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html"> </pre>
-
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>Das Ergebnis:</p>
 
@@ -70,7 +66,7 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 <p class="Normal">Dieses Beispiel ähnelt dem vorangegangenen, nutzt aber die <code>strokeStyle</code> Eigenschaft, um die Farben der Umrisslinien zu ändern. Mit der Methode <code>arc()</code> zeichnen wir Kreise an Stelle der Quadrate.</p>
 
-<pre class="brush: js;highlight[5,6]">  function draw() {
+<pre class="brush: js;">  function draw() {
     var ctx = document.getElementById('canvas').getContext('2d');
     for (var i=0;i&lt;6;i++){
       for (var j=0;j&lt;6;j++){
@@ -84,11 +80,9 @@ ctx.fillStyle = "rgba(255,165,0,1)";
   }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>The result looks like this:</p>
 
@@ -121,7 +115,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">In diesem Beispiel zeichnen wir einen Hintergrund aus vier unterschiedlich gefärbten Quadraten. Über diese legen wir dann einige transparente Kreise. Die Eigenschaft <code>globalAlpha</code> wird auf den Wert 0.2 gesetzt, der dann für alle folgend gezeichneten Formen verwendet wird. Jeder Durchlauf der <code>for</code>-Schleife zeichnet einen Satz Kreise mit zunehmendem Radius. Das Endresultat ist ein kreisförmiger Verlauf. Durch das Übereinanderlagern von immer mehr Kreisen reduzieren wir letztlich die Transparenz bereits gezeichneter Kreise. Erhöhen wir die Anzahl der Durchläufe (und damit der gezeichneten Kreise) weiter, wird der Hintergrund in der Bildmitte irgendwann völlig überdeckt.</p>
 
-<pre class="brush: js;highlight[15]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   // draw background
   ctx.fillStyle = '#FD0';
@@ -145,11 +139,9 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 
@@ -157,7 +149,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">Das zweite Beispiel ist ähnlich dem ersten, aber hier überlagern wir farbige Flächen mit schmalen, weißen Rechtecken zunehmender Deckkraft. Die Verwendung von rgba() an Stelle von <code>globalAlpha</code> erlaubt uns mehr Kontrolle und Flexibilität, weil wir damit Strich- und Füllstil unterschiedlich behandeln können.</p>
 
-<pre class="brush: js;highlight[16]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Draw background
@@ -179,11 +171,9 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   }
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}</p>
 
@@ -227,7 +217,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">Im folgenden Beispiel werden zehn gerade Linien zunehmender Breite gezeichnet. Die Linie ganz links ist 1.0 Einheiten breit. Allerdings erscheint diese Linie - und auch alle anderen Linien mit einem ungeraden Wert für die Liniendicke - nicht wirklich scharf; schuld daran ist die Positionierung.</p>
 
-<pre class="brush: js;highlight[4]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 10; i++){
     ctx.lineWidth = 1+i;
@@ -239,11 +229,9 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}</p>
 
@@ -290,7 +278,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">Die linke Linie verwendet die Option <code>butt</code>. Sie sehen, dass sie exakt an den Hilfslinien endet. Die zweite Linie verwendet die Option <code>round</code>, es wird dadurch ein Halbkreis mit einem Radius entsprechend der halben Linienbreite angehängt. Die recht Linie verwendet die Option <code>square</code>. Diese hängt ein Rechteck von gleicher Breite und einer Länge der halben Linienbreite an.</p>
 
-<pre class="brush: js;highlight[18]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineCap = ['butt','round','square'];
 
@@ -316,11 +304,9 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
 
@@ -349,7 +335,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">Das folgenden Beispielprogramm verdeutlicht die Auswirkungen der drei Varianten von <code>lineJoin</code> anhand von drei Linienzügen; das Ergebnis sehen Sie oben.</p>
 
-<pre class="brush: js;highlight[6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   var lineJoin = ['round','bevel','miter'];
   ctx.lineWidth = 10;
@@ -366,10 +352,9 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
+<pre class="brush: js hidden">draw();</pre>
 </div>
 
 <p>{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
@@ -394,7 +379,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p class="Normal">Stellen Sie in diesem Programm ein <code>miterLimit</code> kleiner als 4.2 ein, wird an keiner der sichtbaren Ecken zu einer zusätzlichen Ausdehnung durch die Gehrung kommen; stattdessen entsteht an der blauen Linie eine Fase. Ist <code>miterLimit</code> größer als zehn, verbinden sich die meisten Linien in diesem Beispiel in einer Gehrung die weit über die blauen Linie hinausreicht, wobei sich die Höhe von links nach rechts wegen der zunehmenden Winkel verringert. Für dazwischenliegende Werte bilden die linken Elemente eine ausgedehnte Gehrung, während nach rechts die Spitzen durch Fasen ersetzt werden.</p>
 
-<pre class="brush: js;highlight[18]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Clear canvas
@@ -428,8 +413,7 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html hidden">&lt;table&gt;
   &lt;tr&gt;
     &lt;td&gt;&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;&lt;/td&gt;
     &lt;td&gt;Change the &lt;code&gt;miterLimit&lt;/code&gt; by entering a new value below and clicking the redraw button.&lt;br&gt;&lt;br&gt;
@@ -442,9 +426,8 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
-<pre class="brush: js">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+<pre class="brush: js hidden">document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
 draw();</pre>
-</div>
 
 <p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
 
@@ -454,11 +437,9 @@ draw();</pre>
 
 <p>In diesem Beispiel erzeugen wir einen „marschierende Ameisen“-Effekt. Diese Animation finden wir oft bei Auswahlwerkzeugen von Bildbearbeitungsprogrammen. Es macht dort die Grenze zwischen Auswahlbereich und Hintergrund sichtbar. Später werden Sie in diesem Tutorial noch lernen solche oder ähnliche <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">einfache Animationen</a> zu erzeugen.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js;highlight[6]">var ctx = document.getElementById('canvas').getContext('2d');
+<pre class="brush: js;">var ctx = document.getElementById('canvas').getContext('2d');
 var offset = 0;
 
 function draw() {
@@ -524,7 +505,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p> </p>
 
-<pre class="brush: js;highlight[5,11]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -549,13 +530,10 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<p> </p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p class="Normal">Der erste Teil beschreibt den Hintergrundverlauf. Wie Sie sehen, haben wir an der gleichen Position zwei unterschiedliche Farben definiert. Das dient zur Erzeugung sprunghafter Farbänderungen - hier von weiss nach grün. Üblicherweise spielt es keine Rolle in welcher Reihenfolge die Farbstufen definiert werden, in diesem speziellen Fall ist die Reihenfolge aber wichtig. Nehmen Sie die Zuordnungen am besten in der tatsächlichen Reihenfolge vor, so beugen Sie möglichen Problemen vor.</p>
 
@@ -567,7 +545,7 @@ lineargradient.addColorStop(1, 'black');
 
 <p class="Normal">In diesem Beispiel werden wir vier kreisförmige Verläufe definieren. Weil wir volle Kontrolle über die Start- und Zielpunkte der Verläufe haben, können wir komplexere Verläufe erzeugen als z.B. die einfacheren Radialverläufe in Photoshop, die uns nur Verläufe mit einem gemeinsamen Mittelpunkt und radial gleichmäßig verteilten Farben erlauben würden.</p>
 
-<pre class="brush: js;highlight[5,10,15,20]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // Create gradients
@@ -603,11 +581,9 @@ lineargradient.addColorStop(1, 'black');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p class="Normal">Wir haben die Mittelpunkte von Start- und Zielkreis etwas gegeneinander versetzt, was einen kugelförmigen 3D-Effekt erzeugt. Man sollte vermeiden, dass sich die Begrenzungen des inneren und des äußeren Kreises schneiden, weil das unberechenbare Effekte erzeugen kann.</p>
 
@@ -666,7 +642,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p class="Normal">Im abschließenden Beispiel erzeugen wir ein Muster um es dann dem <code>fillStyle</code> zuzuordnen. Bemerkenswert ist hierbei die Verwendung des <code>onload()</code>-Handlers, um zu gewährleisten, dass die Bilddatei erst dann dem Muster zugeordnet wird, wenn sie vollständig geladen wurde.</p>
 
-<pre class="brush: js;highlight[10]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // create new image object to use as pattern
@@ -683,13 +659,9 @@ var ptrn = ctx.createPattern(img,'repeat');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-
-<p>The result looks like this:</p>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}</p>
 
@@ -730,7 +702,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p class="Normal">Dieses Beispiel zeichnet eine Buchstabenfolge mit einem Schatteneffekt.</p>
 
-<pre class="brush: js;highlight[4,5,6,7]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.shadowOffsetX = 2;
@@ -744,11 +716,9 @@ var ptrn = ctx.createPattern(img,'repeat');
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="80"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
 
@@ -767,7 +737,7 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 <p>In diesem  Beispiel verwenden wir die <code>evenodd</code>-Regel.</p>
 
-<pre class="brush: js;highlight[6]">function draw() {
+<pre class="brush: js;">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI*2, true);
@@ -775,11 +745,9 @@ var ptrn = ctx.createPattern(img,'repeat');
   ctx.fill("evenodd");
 }</pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}</p>
 

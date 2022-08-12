@@ -80,11 +80,11 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
-<h3 id="document.hidden_Read_only"><code>document.hidden</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></h3>
+<h3 id="document.hidden_Read_only"><code>document.hidden</code> {{ReadOnlyInline}}</h3>
 
 <p>Liefert <code>true</code> wenn die Webseite als unsichtbar für den Benutzer gewertet wird und <code>false</code> andernfalls.</p>
 
-<h3 id="document.visibilityState_Read_only"><code>document.visibilityState</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></h3>
+<h3 id="document.visibilityState_Read_only"><code>document.visibilityState</code> {{ReadOnlyInline}}</h3>
 
 <p>Ist ein <code>string</code> welcher den aktuellen Sichtbarkeitsstatus angibt. Mögliche Werte sind:</p>
 
@@ -128,54 +128,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13 {{property_prefix("webkit")}}<br>
-    33</td>
-   <td>{{CompatGeckoDesktop(18)}} [2]</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4 {{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoMobile(18)}} [2]</td>
-   <td>10</td>
-   <td>12.10[1]</td>
-   <td>7</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Feuert das {{event("visibilitychange")}} Event nicht, wenn das Browserfenster minimiert wird. Ebenso wird <code>hidden</code> nicht auf <code>true </code>gesetzt.</p>
 

@@ -27,8 +27,7 @@ translation_of: Web/API/Element/classList
  <dt><strong>item</strong> ( Number )</dt>
  <dd>Rückgabewert nach Index in der Sammlung.</dd>
  <dt><strong>toggle</strong> ( String [, force] )</dt>
- <dd>Wenn nur ein Argument vorhanden ist: Klassenwert umschalten; d.h. wenn die Klasse existiert, dann <u>entfernt</u> es diese und gibt <code>false</code> zurück, wenn nicht, dann <u>fügt</u> es diese hinzu und gibt <code>true</code> zurück.</dd>
- <dd>Wenn ein zweites Argument vorhanden ist: Wenn das zweite Argument auf <code>true</code> basiert, fügt es den angegebenen Klassenwert hinzu. Wenn es <code>false</code> auswertet, entfernt es ihn.</dd>
+ <dd>Wenn nur ein Argument vorhanden ist: Klassenwert umschalten; d.h. wenn die Klasse existiert, dann <u>entfernt</u> es diese und gibt <code>false</code> zurück, wenn nicht, dann <u>fügt</u> es diese hinzu und gibt <code>true</code> zurück.<br /><br />Wenn ein zweites Argument vorhanden ist: Wenn das zweite Argument auf <code>true</code> basiert, fügt es den angegebenen Klassenwert hinzu. Wenn es <code>false</code> auswertet, entfernt es ihn.</dd>
  <dt>contains( String )</dt>
  <dd>Überprüft, ob der angegebene Klassenwert im Klassenattribut des Elements vorhanden ist.</dd>
  <dt>replace( oldClass, newClass )</dt>
@@ -183,111 +182,7 @@ div.classList.replace("foo", "bar");</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>8</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(1.9.2)}}</td>
-   <td>10<sup>[1]</sup></td>
-   <td>11.50</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>toggle()</code> method's second argument</td>
-   <td>24</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(24)}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>15</td>
-   <td>7</td>
-  </tr>
-  <tr>
-   <td>Multiple arguments for <code>add()</code> &amp; <code>remove()</code></td>
-   <td>28</td>
-   <td>12</td>
-   <td>{{CompatGeckoDesktop(26)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15</td>
-   <td>7</td>
-  </tr>
-  <tr>
-   <td><code>replace()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("49")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0</td>
-   <td>12</td>
-   <td>{{CompatGeckoMobile(1.9.2)}}</td>
-   <td>10<sup>[1]</sup></td>
-   <td>11.10</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td>toggle method's second argument</td>
-   <td>4.4</td>
-   <td>12</td>
-   <td>{{CompatGeckoMobile(24)}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>7.0</td>
-  </tr>
-  <tr>
-   <td>multiple arguments for <code>add()</code> &amp; <code>remove()</code></td>
-   <td>4.4</td>
-   <td>12</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>7.0</td>
-  </tr>
-  <tr>
-   <td><code>replace()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("49")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Not supported for SVG elements.  See <a href="https://connect.microsoft.com/IE/feedback/details/1046039/classlist-not-working-on-svg-elements">a report at Microsoft about that</a>.<br>
  [2] Internet Explorer never implemented this. See <a href="https://connect.microsoft.com/IE/feedback/details/878564/element-classlist-toggle-does-not-support-second-parameter">a report at Microsoft about that</a>.</p>

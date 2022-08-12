@@ -15,23 +15,23 @@ original_slug: WebSockets/Writing_WebSocket_servers
 <p><span class="tlid-translation translation" lang="de"><span title="">In diesem Artikel wird davon ausgegangen, dass Sie bereits mit der Funktionsweise von {{Glossary ("HTTP")}} vertraut sind und über ein moderates Programmiererlebnis verfügen.</span> <span title="">Abhängig von der Sprachunterstützung sind möglicherweise Kenntnisse über TCP-Sockets erforderlich.</span> <span title="">In diesem Handbuch wird das Mindestwissen dargestellt, das Sie zum Schreiben eines WebSocket-Servers benötigen.</span></span></p>
 
 <div class="note">
-<p><strong><u>Notiz</u>:</strong> <span class="tlid-translation translation" lang="de"><span title="">Lesen Sie die neueste offizielle WebSockets-Spezifikation, RFC 6455. Die Abschnitte 1 und 4-7 sind für Server-Implementierer besonders interessant.</span> <span title="">In Abschnitt 10 wird die Sicherheit erläutert, und Sie sollten sie unbedingt lesen, bevor Sie Ihren Server verfügbar machen.</span></span></p>
+<p><strong>Notiz:</strong> <span class="tlid-translation translation" lang="de"><span title="">Lesen Sie die neueste offizielle WebSockets-Spezifikation, RFC 6455. Die Abschnitte 1 und 4-7 sind für Server-Implementierer besonders interessant.</span> <span title="">In Abschnitt 10 wird die Sicherheit erläutert, und Sie sollten sie unbedingt lesen, bevor Sie Ihren Server verfügbar machen.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="de"><span title="">Ein WebSocket-Server wird hier auf sehr niedriger Ebene erklärt.</span> <span title="">WebSocket-Server sind häufig separate und spezialisierte Server (aus Gründen des Lastenausgleichs oder aus anderen praktischen Gründen). Daher verwenden Sie häufig einen Reverse-Proxy (z. B. einen normalen HTTP-Server), um WebSocket-Handshakes zu erkennen, vorzuverarbeiten und an diese Clients zu senden</span> <span title="">ein echter WebSocket-Server.</span> <span title="">Dies bedeutet, dass Sie Ihren Servercode nicht mit Cookie- und Authentifizierungshandlern (zum Beispiel) aufblähen müssen.</span></span></p>
 
-<h2 id="Der_WebSocket-Handshake"><strong><u><span class="tlid-translation translation" lang="de"><span title="">Der WebSocket-Handshake</span></span> </u></strong></h2>
+<h2 id="Der_WebSocket-Handshake"><strong><b><span class="tlid-translation translation" lang="de"><span title="">Der WebSocket-Handshake</span></span> </b></strong></h2>
 
 <p><span class="tlid-translation translation" lang="de"><span title="">Zunächst muss der Server mithilfe eines Standard-TCP-Sockets auf eingehende Socket-Verbindungen warten.</span> <span title="">Abhängig von Ihrer Plattform kann dies automatisch für Sie erledigt werden.</span> <span title="">Angenommen, Ihr Server überwacht example.com, Port 8000, und Ihr Socket-Server antwortet auf {{HTTPMethod ("GET")}} -Anfragen unter example.com/chat.</span></span></p>
 
 <div class="warning">
-<p><span class="tlid-translation translation" lang="de"><span title=""><u>Warnung</u>: Der Server überwacht möglicherweise jeden von ihm ausgewählten Port. Wenn er jedoch einen anderen Port als 80 oder 443 auswählt, kann es zu Problemen mit Firewalls und / oder Proxys kommen.</span> <span title="">Browser benötigen im Allgemeinen eine sichere Verbindung für WebSockets, obwohl sie möglicherweise eine Ausnahme für lokale Geräte bieten.</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><b>Warnung</b>: Der Server überwacht möglicherweise jeden von ihm ausgewählten Port. Wenn er jedoch einen anderen Port als 80 oder 443 auswählt, kann es zu Problemen mit Firewalls und / oder Proxys kommen.</span> <span title="">Browser benötigen im Allgemeinen eine sichere Verbindung für WebSockets, obwohl sie möglicherweise eine Ausnahme für lokale Geräte bieten.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="de"><span title="">Der Handshake ist das "Web" in WebSockets.</span> <span title="">Es ist die Brücke von HTTP zu WebSockets.</span> <span title="">Beim Handshake werden Details der Verbindung ausgehandelt, und jede Partei kann vor Abschluss zurücktreten, wenn die Bedingungen ungünstig sind.</span> <span title="">Der Server muss darauf achten, alles zu verstehen, was der Client verlangt, da sonst Sicherheitsprobleme auftreten können.</span></span></p>
 
 <div class="blockIndicator note">
-<p><span class="tlid-translation translation" lang="de"><span title=""><u>Tipp</u>: Die Anfrage-URL (/ Chat hier) hat in der Spezifikation keine definierte Bedeutung.</span> <span title="">Viele Benutzer verwenden es daher, damit ein Server mehrere WebSocket-Anwendungen verarbeiten kann.</span> <span title="">Zum Beispiel könnte example.com/chat eine Mehrbenutzer-Chat-App aufrufen, während /game auf demselben Server möglicherweise ein Multiplayer-Spiel aufruft.</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><b>Tipp</b>: Die Anfrage-URL (/ Chat hier) hat in der Spezifikation keine definierte Bedeutung.</span> <span title="">Viele Benutzer verwenden es daher, damit ein Server mehrere WebSocket-Anwendungen verarbeiten kann.</span> <span title="">Zum Beispiel könnte example.com/chat eine Mehrbenutzer-Chat-App aufrufen, während /game auf demselben Server möglicherweise ein Multiplayer-Spiel aufruft.</span></span></p>
 </div>
 
 <h3 id="Client_handshake_Anfrage">Client handshake Anfrage</h3>
@@ -50,7 +50,7 @@ Sec-WebSocket-Version: 13
 <p><span class="tlid-translation translation" lang="de"><span title="">Der Client kann hier Erweiterungen und / oder Unterprotokolle anfordern.</span> <span title="">Einzelheiten finden Sie unter Sonstiges.</span> <span title="">Es können auch allgemeine Header wie {{HTTPHeader ("User-Agent")}}, {{HTTPHeader ("Referer")}}, {{HTTPHeader ("Cookie")}} oder Authentifizierungsheader vorhanden sein.</span> <span title="">Mach mit denen, was du willst;</span> <span title="">Sie beziehen sich nicht direkt auf das WebSocket.</span> <span title="">Es ist auch sicher, sie zu ignorieren.</span> <span title="">In vielen gängigen Setups hat sich bereits ein Reverse-Proxy mit ihnen befasst.</span></span></p>
 
 <div class="blockIndicator note">
-<p><span class="tlid-translation translation" lang="de"><span title=""><u>Tipp</u>: Alle Browser senden einen Origin-Header.</span> <span title="">Sie können diesen Header aus Sicherheitsgründen verwenden (nach demselben Ursprung suchen, automatisch zulassen oder ablehnen usw.) und eine 403 Forbidden senden, wenn Ihnen das, was Sie sehen, nicht gefällt.</span> <span title="">Seien Sie jedoch gewarnt, dass Nicht-Browser-Agenten einen gefälschten Ursprung senden können.</span> <span title="">Die meisten Anwendungen lehnen Anforderungen ohne diesen Header ab.</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><b>Tipp</b>: Alle Browser senden einen Origin-Header.</span> <span title="">Sie können diesen Header aus Sicherheitsgründen verwenden (nach demselben Ursprung suchen, automatisch zulassen oder ablehnen usw.) und eine 403 Forbidden senden, wenn Ihnen das, was Sie sehen, nicht gefällt.</span> <span title="">Seien Sie jedoch gewarnt, dass Nicht-Browser-Agenten einen gefälschten Ursprung senden können.</span> <span title="">Die meisten Anwendungen lehnen Anforderungen ohne diesen Header ab.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="de"><span title="">Wenn ein Header nicht verstanden wird oder einen falschen Wert hat, sollte der Server eine {{HTTPStatus ("400")}} ("Bad Request")} Antwort senden und den Socket sofort schließen.</span> <span title="">Wie üblich wird möglicherweise auch der Grund angegeben, warum der Handshake im HTTP-Antworttext fehlgeschlagen ist, die Nachricht wird jedoch möglicherweise nie angezeigt (Browser zeigen sie nicht an).</span> <span title="">Wenn der Server diese Version von WebSockets nicht versteht, sollte er einen {{HTTPHeader ("Sec-WebSocket-Version")}} Header zurücksenden, der die Version (en) enthält, die er versteht.</span> <span title="">Im obigen Beispiel wird Version 13 des WebSocket-Protokolls angegeben.</span><br>
@@ -58,7 +58,7 @@ Sec-WebSocket-Version: 13
  <span title="">Der interessanteste Header hier ist {{HTTPHeader ("Sec-WebSocket-Key")}}.</span> <span title="">Schauen wir uns das also als nächstes an.</span></span></p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="de"><span title=""><u>Hinweis</u>: Normale HTTP-Statuscodes können nur vor dem Handshake verwendet werden.</span> <span title="">Nach erfolgreichem Handshake müssen Sie einen anderen Satz von Codes verwenden (definiert in Abschnitt 7.4 der Spezifikation).</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><b>Hinweis</b>: Normale HTTP-Statuscodes können nur vor dem Handshake verwendet werden.</span> <span title="">Nach erfolgreichem Handshake müssen Sie einen anderen Satz von Codes verwenden (definiert in Abschnitt 7.4 der Spezifikation).</span></span></p>
 </div>
 
 <h3 id="Server_handshake_Antwort">Server handshake Antwort</h3>
@@ -75,13 +75,13 @@ Connection: Upgrade
 <p><span class="tlid-translation translation" lang="de"><span title="">Darüber hinaus kann der Server hier über Erweiterungs- / Unterprotokollanforderungen entscheiden.</span> <span title="">Einzelheiten finden Sie unter Sonstiges.</span> <span title="">Der Sec-WebSocket-Accept-Header ist wichtig, da der Server ihn von dem {{HTTPHeader ("Sec-WebSocket-Key")}} ableiten muss, den der Client an ihn gesendet hat.</span> <span title="">Verketten Sie dazu den Sec-WebSocket-Key des Clients und die Zeichenfolge "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (es handelt sich um eine "magische Zeichenfolge"), nehmen Sie den SHA-1-Hash des Ergebnisses und geben Sie den base64 zurück</span> <span title="">Codierung dieses Hashs.</span></span></p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="de"><span title=""><strong><u>Hinweis</u></strong>: Dieser scheinbar überkomplizierte Prozess ist vorhanden, sodass für den Client offensichtlich ist, ob der Server WebSockets unterstützt.</span> <span title="">Dies ist wichtig, da Sicherheitsprobleme auftreten können, wenn der Server eine WebSockets-Verbindung akzeptiert, die Daten jedoch als HTTP-Anforderung interpretiert.</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><strong><b>Hinweis</b></strong>: Dieser scheinbar überkomplizierte Prozess ist vorhanden, sodass für den Client offensichtlich ist, ob der Server WebSockets unterstützt.</span> <span title="">Dies ist wichtig, da Sicherheitsprobleme auftreten können, wenn der Server eine WebSockets-Verbindung akzeptiert, die Daten jedoch als HTTP-Anforderung interpretiert.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="de"><span title="">Wenn der Schlüssel also "dGhlIHNhbXBsZSBub25jZQ ==" war, lautet der Wert des Sec-WebSocket-Accept-Headers "s3pPLMBiTxaQ9kYGzzhZRbK + xOo =".</span> <span title="">Sobald der Server diese Header sendet, ist der Handshake abgeschlossen und Sie können mit dem Datenaustausch beginnen !</span></span></p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="de"><span title=""><strong><u>Hinweis</u></strong>: Der Server kann andere Header wie {{HTTPHeader ("Set-Cookie")}} senden oder über andere Statuscodes nach Authentifizierung oder Weiterleitung fragen, bevor er den Antwort-Handshake sendet.</span></span></p>
+<p><span class="tlid-translation translation" lang="de"><span title=""><strong><b>Hinweis</b></strong>: Der Server kann andere Header wie {{HTTPHeader ("Set-Cookie")}} senden oder über andere Statuscodes nach Authentifizierung oder Weiterleitung fragen, bevor er den Antwort-Handshake sendet.</span></span></p>
 </div>
 
 <h3 id="Clients_im_Auge_behalten">  <span class="tlid-translation translation" lang="de"><span title="">Clients im Auge behalten</span></span></h3>
@@ -152,14 +152,16 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p><span style="line-height: 1.5;">Recall that the opcode tells what a frame is meant to do. If it's <code>0x1</code>, the payload is text. If it's <code>0x2</code>, the payload is binary data.</span><span style="line-height: 1.5;"> However, if it's </span><code style="font-style: normal; line-height: 1.5;">0x0,</code><span style="line-height: 1.5;"> the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client.</span><span style="line-height: 1.5;"> Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:</span></p>
 
-<pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
+<pre>
+<strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
 <strong>Server:</strong> <em>(process complete message immediately) </em>Hi.
 <strong>Client:</strong> FIN=0, opcode=0x1, msg="and a"
 <strong>Server:</strong> <em>(listening, new message containing text started)</em>
 <strong>Client:</strong> FIN=0, opcode=0x0, msg="happy new"
 <strong>Server:</strong> <em>(listening, payload concatenated to previous message)</em>
 <strong>Client:</strong> FIN=1, opcode=0x0, msg="year!"
-<strong>Server:</strong> <em>(process complete message) </em>Happy new year to you too!</pre>
+<strong>Server:</strong> <em>(process complete message) </em>Happy new year to you too!
+</pre>
 
 <p>Notice the first frame contains an entire message (has <code>FIN=1</code> and <code>opcode!=0x0</code>), so the server can process or respond as it sees fit. The second frame sent by the client has a text payload (<code>opcode=0x1</code>), but the entire message has not arrived yet (<code>FIN=0</code>). All remaining parts of that message are sent with continuation frames (<code>opcode=0x0</code>), and the final frame of the message is marked by <code>FIN=1</code>. <a href="http://tools.ietf.org/html/rfc6455#section-5.4">Section 5.4 of the spec</a> describes message fragmentation.</p>
 
@@ -177,7 +179,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>To close a connection either the client or server can send a control frame with data containing a specified control sequence to begin the closing handshake (detailed in <a href="http://tools.ietf.org/html/rfc6455#section-5.5.1">Section 5.5.1</a>). Upon receiving such a frame, the other peer sends a Close frame in response. The first peer then closes the connection. Any further data received after closing of connection is then discarded. </p>
 
-<h2 id="Miscellaneous_2"><a name="Miscellaneous">Miscellaneous</a></h2>
+<h2 id="Miscellaneous">Miscellaneous</h2>
 
 <div class="note">
 <p>WebSocket codes, extensions, subprotocols, etc. are registered at the <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.</p>

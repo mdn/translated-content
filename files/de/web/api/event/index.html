@@ -20,7 +20,7 @@ translation_of: Web/API/Event
 
 <p>Es gibt eine Vielzahl verschiedener Typen von Ereignissen, von denen manche erweiterte Schnittstellen basieren auf dem zentralen <code><strong>Event</strong></code> Interface benutzen. <strong><code>Event</code></strong> beinhaltet alle Attribute und Methoden, die allen Ereignissen gemein sind.</p>
 
-<p>Viele DOM-Element können für das Empfangen dieser Events konfiguriert werden und rufen Code auf, um sie zu behandeln. Event-Handler werden normalerweise mit unterschiedlichen <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element">HTML-Elementen</a> (so wie <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) verbunden, durch den Aufruf von <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a>. Dies ersetzt größtenteils die alten HTML <a class="new" rel="nofollow" title="Seite wurde noch nicht erstellt.">Event Handler</a> Attribute. Die neueren Event-Handler können außerdem nötigenfalls mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a> wieder entfernt werden.</p>
+<p>Viele DOM-Element können für das Empfangen dieser Events konfiguriert werden und rufen Code auf, um sie zu behandeln. Event-Handler werden normalerweise mit unterschiedlichen <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element">HTML-Elementen</a> (so wie <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) verbunden, durch den Aufruf von <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a>. Dies ersetzt größtenteils die alten HTML Event Handler Attribute. Die neueren Event-Handler können außerdem nötigenfalls mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a> wieder entfernt werden.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Ein Element kann mehrere solcher Handler besitzen, sogar für das selbe Ereignis—so können sie verschiedene, unabhängige Code-Module angebracht werden, jeweils für deren unabhängige Zwecke. (Zum Beispiel eine Webseite mit einem Werbemodul und einem Statistikmodel, die beide Videowiedergabe überwachen.)</p>
@@ -172,69 +172,7 @@ translation_of: Web/API/Event
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Previous to Firefox 52, this property was defined on the {{domxref("UIEvent")}} interface. See {{bug(1298970)}} for more details.</p>
 
