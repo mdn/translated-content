@@ -10,144 +10,146 @@ tags:
   - Reference
   - Web
   - details
+browser-compat: html.elements.details
 translation_of: Web/HTML/Element/details
 ---
-<div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の詳細折りたたみ要素</strong> (<strong><code>&lt;details&gt;</code></strong>) は、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。</p>
+{{HTMLRef}}
 
-<p>折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 <code>&lt;summary&gt;</code> 要素の内容が折りたたみウィジェットのラベルとして使用されます。</p>
+**`<details>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウィジェットが「開いた」状態になった時のみ情報が表示される折りたたみウィジェットを作成します。</span>概要やラベルは {{HTMLElement("summary")}} 要素を使用して提供する必要があります。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}</div>
+折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 `<summary>` 要素の内容が折りたたみウィジェットのラベルとして使用されます。
 
-<div class="note">
-<p><strong>メモ:</strong> ウィジェットの開閉を回転する (ねじる) 三角形で表すのが一般的な使い方なので、このウィジェットはツイスティー (twisties) と呼ばれることがあります。</p>
-</div>
+{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
-<p><code>&lt;details&gt;</code> ウィジェットは2つの状態のうち1つを取ります。既定の<em>閉じた</em>状態は <code>&lt;summary&gt;</code> を使用して指定されたラベル文字列 (または{{Glossary("user agent", "ユーザーエージェント")}}が定義した既定の文字列) とウィジェット自身による三角形だけを表示します。これは次のように表示されます。</p>
+`<details>` ウィジェットは 2 つの状態のうち 1 つを取ります。既定の*閉じた*状態は `<summary>` を使用して指定されたラベル文字列（または `<summary>` がない場合は{{Glossary("user agent", "ユーザーエージェント")}}が定義した既定の文字列）とウィジェット自身による三角形だけを表示します。
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="閉じた &lt;details&gt; ウィジェットのスクリーンショット。黒い左向きの三角形が「System Requirements」のテキストの右側にあります。" src="details-closed.png"></figure>
+ユーザーがウィジェットをクリックするか、フォーカスしてスペースバーを押すと、ウィジェットは「ツイスト」して開き、中身が見えるようになります。ウィジェットの開閉を表すために、回転したりねじれたりする三角形を使用することが多いため、「ツイスティ」 (twisty) と呼ばれることもある。
 
-<p>ここでは既定の閉じた状態であり、折りたたみウィジェットと "System Requirements" というラベルが表示されています。ユーザーがこのウィジェットをクリックするか、フォーカスしてスペースバーを押すと、「ねじれて」開き、コンテンツが展開されて次のようになります。</p>
+CSS を使用して折り畳みウィジェットのスタイルを設定することができます。また、 {{htmlattrxref("open", "details")}} 属性を設定したり削除したりすることによって、プログラムによってウィジェットを開いたり閉じたりすることも可能です。残念ながら、現時点では、開閉の遷移をアニメーションで表現する方法は組み込まれていません。
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="開いた &lt;details&gt; ウィジェットのスクリーンショット。三角形は下向きになり、「System Requirements」とは何かの詳細説明が表示されています。” means is shown." src="details-open.png"></figure>
+既定では、ウィジェットが閉じている時、折りたたみの三角形と概要が表示できるだけの高さしかありません。ウィジェットが開くと、要素は中に含まれた詳細が表示できるだけの大きさに拡大されます。
 
-<p>ここから、 CSS を使用して折りたたみウィジェットの外見を変更することができ、また {{htmlattrxref("open", "details")}} の値を設定したり削除したりすることにより、プログラムから開いたり閉じたりすることができます。</p>
-
-<p>ウィジェットが閉じている時、折りたたみの三角形と概要が表示できるだけの高さしかありません。ウィジェットが開くと、要素は中に含まれた詳細が表示できるだけの大きさに拡大されます。</p>
-
-<div class="note">
-<p><strong>メモ:</strong> 残念なことに、現時点では開いたり閉じたりする間のアニメーションを行う組み込みの方法はありません。</p>
-</div>
-
-<p>完全な標準互換の実装では、 CSS の <code>{{cssxref("display")}}: list-item</code> が自動的に {{HTMLElement("summary")}} に適用されます。この表示方法はカスタマイズすることができます。詳しくは<a href="#customizing_the_disclosure_widget">折りたたみウィジェットのカスタマイズ</a>を参照してください。</p>
+完全な標準互換の実装では、 CSS の `{{cssxref("display")}}: list-item` が自動的に {{HTMLElement("summary")}} に適用されます。この表示方法はカスタマイズすることができます。詳しくは[折りたたみウィジェットのカスタマイズ](#表示方法のカスタマイズ)を参照してください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、区分化ルート、対話型コンテンツ、知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td>1つの {{HTMLElement("summary")}} 要素と、それに続く <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙的な ARIA ロール</th>
-   <td>{{ARIARole("group")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLDetailsElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、区分化ルート、対話型コンテンツ、知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        1 つの {{HTMLElement("summary")}} 要素と、それに続く <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙的な ARIA ロール</th>
+      <td>{{ARIARole("group")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLDetailsElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">属性</h2>
+## 属性
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-<dl>
- <dt>{{htmlattrdef("open")}}</dt>
- <dd>
- <p>この論理属性は、現在 — つまり <code>&lt;details&gt;</code> 要素の内容 — が現在表示されているかどうかを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。</p>
+- {{htmlattrdef("open")}}
 
- <p class="note"><strong>注:</strong> 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 <code>open="false"</code> では詳細が表示状態になります。</p>
- </dd>
-</dl>
+  - : この論理属性は、現在 — つまり `<details>` 要素の内容 — が現在表示されているかどうかを示します。この属性がある場合は詳細が表示され、この属性がない場合は非表示になります。既定では、この属性は存在しないため、詳細は表示されません。
 
-<h2 id="Events">イベント</h2>
+ <strong>注:</strong> 詳細を非表示にするには、この属性を完全に削除する必要があります。この属性は論理属性なので、 `open="false"` では詳細が表示状態になります。
 
-<p>HTML で対応している通常のイベントに加えて、 <code>&lt;details&gt;</code> 要素は {{event("toggle")}} イベントに対応しており、開閉状態が変化するたびに <code>&lt;details&gt;</code> 要素が呼び出されます。イベントは状態が変化した<em>後</em>に送信され、もしブラウザーがイベントを送信する前に状態が2回以上変化しても、イベントは合体して1回しか送信されません。</p>
+## イベント
 
-<p>ウィジェットの状態が変化したことを検出するために、 <code>toggle</code> イベントをリスンすることができます。</p>
+HTML で対応している通常のイベントに加えて、 `<details>` 要素は {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントに対応しており、開閉状態が変化するたびに `<details>` 要素が呼び出されます。イベントは状態が変化した**後**に送信され、もしブラウザーがイベントを送信する前に状態が 2 回以上変化しても、イベントは合体して 1 回しか送信されません。
 
-<pre class="brush: js">details.addEventListener("toggle", event =&gt; {
+ウィジェットの状態が変化したことを検出するために、 `toggle` イベントを待ち受けすることができます。
+
+```js
+details.addEventListener("toggle", (event) => {
   if (details.open) {
     /* 要素が開いた方に切り替わった */
   } else {
     /* 要素が閉じた方に切り替わった */
   }
-});</pre>
+});
+```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="A_simple_disclosure_example">単純な折りたたみの例</h3>
+## 単純な折りたたみの例
 
-<p>この例では <code>&lt;details&gt;</code> 要素を <code>&lt;summary&gt;</code> 付きで表示します。</p>
+この例では `<details>` 要素を `<summary>` 付きで表示します。
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>この HTML の結果は次のようになります。</p>
+この HTML の結果は次のようになります。
 
-<p>{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}</p>
+{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
 
-<h3 id="Creating_an_open_disclosure_box">折りたたみボックスの作成</h3>
+## 折りたたみボックスの作成
 
-<p><code>&lt;details&gt;</code> ボックスを開いた状態にするために、論理値の <code>open</code> 属性を追加しましょう。</p>
+`<details>` ボックスを開いた状態にするために、論理値の `open` 属性を追加しましょう。
 
-<pre class="brush: html">&lt;details open&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details open>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<p>これだけで、次のような結果になります。</p>
+これだけで、次のような結果になります。
 
-<p>{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}</p>
+{{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
 
-<h3 id="Customizing_the_appearance">表示方法のカスタマイズ</h3>
+## 表示方法のカスタマイズ
 
-<p>では、いくらか CSS を適用して折りたたみボックスの外見をカスタマイズしましょう。</p>
+では、いくらか CSS を適用して折りたたみボックスの外見をカスタマイズしましょう。
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">details {
+```css
+details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -156,7 +158,7 @@ details &gt; summary {
   cursor: pointer;
 }
 
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
@@ -166,42 +168,44 @@ details &gt; p {
 
 details[open] > summary {
   background-color: #ccf;
-}</pre>
+}
+```
 
-<p>この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。</p>
+この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
 
-<p><code>details[open]</code> セレクターを、開いている要素のスタイル付けに使用することができます。</p>
+`details[open]` セレクターを、開いている要素のスタイル付けに使用することができます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}
 
-<h3 id="Customizing_the_disclosure_widget">折りたたみウィジェットのカスタマイズ</h3>
+### 折りたたみウィジェットのカスタマイズ
 
-<p>折りたたみの三角形ウィジェット自身はカスタマイズできますが、これは最近標準化され、広くは対応されていません。さらに、この対応方法については複数の種類があり、標準はそれに基づいて決定されましたので、しばらくの間はカスタマイズのために複数の方法を使用する必要があります。</p>
+折りたたみの三角形ウィジェット自身はカスタマイズできますが、これは最近標準化され、広くは対応されていません。さらに、この対応方法については複数の種類があり、標準はそれに基づいて決定されましたので、しばらくの間はカスタマイズのために複数の方法を使用する必要があります。
 
-<p>{{HTMLElement("summary")}} 要素は {{cssxref("list-style")}} 一括指定プロパティや、 {{cssxref("list-style-type")}} などの個別指定プロパティに対応しており、折りたたみウィジェットを三角形から選択したものに変更することができます (ふつうは {{cssxref("list-style-image")}}) を使用します。例えば、折りたたみウィジェットのアイコンは <code>list-style: none</code> と設定することで削除することができます。</p>
+{{HTMLElement("summary")}} 要素は {{cssxref("list-style")}} 一括指定プロパティや、 {{cssxref("list-style-type")}} などの個別指定プロパティに対応しており、折りたたみウィジェットを三角形から選択したものに変更することができます (ふつうは {{cssxref("list-style-image")}}) を使用します。例えば、折りたたみウィジェットのアイコンは `list-style: none` と設定することで削除することができます。
 
-<p>しかし、 Chrome はまだこれに対応していませんので、このブラウザーでは外見をカスタマイズするために、非標準の <code>::-webkit-details-marker</code> <a href="/ja/docs/Web/CSS/Pseudo-elements">擬似要素</a>を使用する必要があります。</p>
+#### CSS
 
-<h4 id="CSS_2">CSS</h4>
-
-<pre class="brush: css; highlight:[12, 15-17]">details {
+```css
+details {
   font: 16px "Open Sans", Calibri, sans-serif;
   width: 620px;
 }
 
-details &gt; summary {
+details > summary {
   padding: 2px 6px;
   width: 15em;
   background-color: #ddd;
@@ -211,65 +215,41 @@ details &gt; summary {
   list-style: none;
 }
 
-details &gt; summary::-webkit-details-marker {
-  display: none;
-}
-
-details &gt; p {
+details > p {
   border-radius: 0 0 10px 10px;
   background-color: #ddd;
   padding: 2px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px black;
 }
-</pre>
+```
 
-<p>この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。</p>
+この CSS はタブ風のインターフェイスに似た外見を作り出し、クリックするとタブが開いてコンテンツを表示します。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;details&gt;
-  &lt;summary&gt;System Requirements&lt;/summary&gt;
-  &lt;p&gt;Requires a computer running an operating system. The computer
+```html
+<details>
+  <summary>System Requirements</summary>
+  <p>Requires a computer running an operating system. The computer
   must have some memory and ideally some kind of long-term storage.
   An input device as well as some form of output device is
-  recommended.&lt;/p&gt;
-&lt;/details&gt;</pre>
+  recommended.</p>
+</details>
+```
 
-<h4 id="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}</p>
+{{EmbedLiveSample("Customizing_the_disclosure_widget", 650, 150)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.details")}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("summary")}}</li>
-</ul>
+- {{HTMLElement("summary")}}
