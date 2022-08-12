@@ -79,7 +79,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>上のコードでは、次の結果が得られます。</p>
 
-<p><img alt='恐竜の基本的な画像が、ブラウザに埋め込まれ、その上に "Images in HTML" が書かれています' src="https://mdn.mozillademos.org/files/12700/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt='恐竜の基本的な画像が、ブラウザに埋め込まれ、その上に "Images in HTML" が書かれています' src="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/basic-image.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
 
 <div class="note">
 <p><strong>メモ</strong>: {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、<strong>置き換えられた要素</strong>と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース(画像ファイルや動画ファイルなど)によって定義されているためです。</p>
@@ -99,7 +99,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p><code>alt</code> テキストをテストする最も簡単な方法は、意図的にファイル名のスペルミスをすることです。たとえば、画像名のスペルが <code>dinosooooor.jpg</code> の場合、ブラウザは画像を表示せず、代わりに代替テキストを表示します。</p>
 
-<p><img alt="Images in HTMLというタイトルですが、今回は恐竜の画像が表示されず、代替テキストが代わりに表示されます。" src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="Images in HTMLというタイトルですが、今回は恐竜の画像が表示されず、代替テキストが代わりに表示されます。" src="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
 
 <p>それでは、なぜ代替テキストを見たり、必要とするのでしょうか?  いくつかの理由から便利です。</p>
 
@@ -138,7 +138,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>これは、通常の状況下では表示が大きく異なるものではありません。しかし、画像が表示されていない場合、たとえば、ユーザがページに移動して画像がまだ読み込まれていない場合、ブラウザには画像が表示されるスペースが残ります。</p>
 
-<p><img alt="恐竜の代替テキストを含む Images in HTML タイトルは、幅と高さの設定の結果として大きなボックスの内側に表示されます" src="https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="恐竜の代替テキストを含む Images in HTML タイトルは、幅と高さの設定の結果として大きなボックスの内側に表示されます" src="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text-with-width-height.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
 
 <p>これは良いことです。その結果、ページの読み込みがより迅速かつスムーズに行われます。</p>
 
@@ -161,8 +161,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>これは、リンクのタイトルと同様に、マウスのホバーによるツールチップを提供します。</p>
 
-<p><img alt="恐竜の画像に、A T-Rex on display at the Manchester University Museumというツールチップのタイトルが表示されます" src="https://mdn.mozillademos.org/files/12708/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
-
+<p><img alt="恐竜の画像に、A T-Rex on display at the Manchester University Museumというツールチップのタイトルが表示されます" src="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/image-with-title.png" style="display: block; height: 341px; margin: 0px auto; width: 400px;"></p>
+ 
 <p>しかし、これは推奨されていません — <code>title</code> には多くのアクセシビリティ上の問題があります。主に、スクリーンリーダーのサポートは予測不可能で、マウスを使用していない限り、ほとんどのブラウザーでは表示されません(例えば、キーボード ユーザ)。このことについてもっと知りたい場合は、Scott O'Hara の<a href="https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/">タイトル属性の試行錯誤</a> (英語) をお読みください。</p>
 
 <p>画像に添付するのではなく、メインの記事のテキストにそのようなサポート情報を含める方が良いでしょう。</p>
