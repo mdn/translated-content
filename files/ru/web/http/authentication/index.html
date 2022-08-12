@@ -129,7 +129,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 <p>"Базовая" (Basic) схема аутентификации обеспечивает очень низкую безопасность, но широко поддерживается и проста в
   настройке. Более подробно она представлена ниже.</p>
 
-<h2 id="Basic_authentication_scheme">Базовя (Basic) схема аутентификации</h2>
+<h2 id="Basic_authentication_scheme">Базовая (Basic) схема аутентификации</h2>
 
 <p>"Базовая" схема HTTP-аутентификации определена в {{rfc(7617)}}, которая передаёт учётные данные в виде пар
   пользователь ID/пароль (user ID/password), закодированных с использованием base64.</p>
@@ -166,7 +166,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 </pre>
 
 <h3 id="Restricting_access_with_nginx_and_basic_authentication">Ограничение доступа с помощью nginx и базовой
-  аутеннтификации</h3>
+  аутентификации</h3>
 
 <p>Для nginx, вам потребуется указать местоположение, которое вы собираетесь защитить и директиву
   <code>auth_basic</code>, которая задаёт имя защищённой паролем области. Директива <code>auth_basic_user_file</code>
