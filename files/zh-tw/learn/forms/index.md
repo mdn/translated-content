@@ -17,23 +17,23 @@ original_slug: Learn/HTML/Forms
 
 ## 參考文章列表
 
-1.  [我的第一個 HTML 表單](/zh-TW/docs/HTML/Forms/My_first_HTML_form)
-2.  [如何構建 HTML 表單](/zh-TW/docs/HTML/Forms/How_to_structure_an_HTML_form)
-3.  [本機表單控件](/zh-TW/docs/HTML/Forms/The_native_form_widgets)
-4.  CSS 和 HTML 表單
+1. [我的第一個 HTML 表單](/zh-TW/docs/HTML/Forms/My_first_HTML_form)
+2. [如何構建 HTML 表單](/zh-TW/docs/HTML/Forms/How_to_structure_an_HTML_form)
+3. [本機表單控件](/zh-TW/docs/HTML/Forms/The_native_form_widgets)
+4. CSS 和 HTML 表單
 
-    1.  [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
-    2.  [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
-    3.  [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
+    1. [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
+    2. [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
+    3. [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
 
-5.  [發送和檢索表單數據](/zh-TW/docs/HTML/Forms/Sending_and_retrieving_form_data)
-6.  [數據表單驗證](/zh-TW/docs/HTML/Forms/Data_form_validation)
-7.  [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
-8.  [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
+5. [發送和檢索表單數據](/zh-TW/docs/HTML/Forms/Sending_and_retrieving_form_data)
+6. [數據表單驗證](/zh-TW/docs/HTML/Forms/Data_form_validation)
+7. [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
+8. [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
-    1.  [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+    1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 
-9.  [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
+9. [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
 
 ## HTML 文件
 
@@ -51,7 +51,7 @@ original_slug: Learn/HTML/Forms
 | {{HTMLElement("legend")}}     | {{domxref("HTMLLegendElement")}} | 在`傳說`元素代表一個標題為其父 {{ HTMLElement("fieldset") }} 的內容。                                                                                                           |
 | {{HTMLElement("meter")}}     | {{domxref("HTMLMeterElement")}}     | 所述`米`元素表示一個已知的範圍內的任一標量值或分數值。                                                                                                                                     |
 | {{HTMLElement("optgroup")}} | {{domxref("HTMLOptGroupElement")}} | 在`OPTGROUP`元素創建一個 {{ HTMLElement("select") }} 元素中的一組選項。                                                                                                           |
-| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | 在 HTML `選項`元素用於創建表示 {{ HTMLElement("select") }} ，一個 {{ HTMLElement("optgroup") }} 或 {{ HTMLElement("datalist") }} 元素中的項目的控制。\*\*`` |
+| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | 在 HTML `選項`元素用於創建表示 {{ HTMLElement("select") }} ，一個 {{ HTMLElement("optgroup") }} 或 {{ HTMLElement("datalist") }} 元素中的項目的控制。 |
 | {{HTMLElement("output")}}     | {{domxref("HTMLOutputElement")}} | 的`輸出`元素表示一個計算的結果。                                                                                                                                                           |
 | {{HTMLElement("progress")}} | {{domxref("HTMLProgressElement")}} | 的`進展`元素用於查看任務的完成進度。                                                                                                                                                       |
 | {{HTMLElement("select")}}     | {{domxref("HTMLSelectElement")}} | 在`選擇`元素代表呈現一個選項菜單的控制。                                                                                                                                                   |

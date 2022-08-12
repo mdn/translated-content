@@ -27,7 +27,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Bilder
  <dt>{{domxref("HTMLCanvasElement")}}</dt>
  <dd>Ein anderes {{HTMLElement("canvas")}} Element kann ebenfalls als Bild dienen.</dd>
  <dt>{{domxref("ImageBitmap")}}</dt>
- <dd>Eine hochleistungsfähige Bitmap, welche mit niedriger Verzögerung gerendert werden kann. Sie lässt sich aus allen der oben genannten Quellen, sowie aus mehreren weitern erstellen.</dd>
+ <dd>Eine hochleistungsfähige Bitmap, welche mit niedriger Verzögerung gerendert werden kann. Sie lässt sich aus allen der oben genannten Quellen, sowie aus mehreren weitern erstellen.</dd>
 </dl>
 
 <p>These sources are collectively referred to by the type {{domxref("CanvasImageSource")}}.</p>
@@ -48,7 +48,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Bilder
 
 <p>Mithilfe des {{htmlattrxref("crossorigin", "img")}} Attributs eines {{domxref("HTMLImageElement")}} ist es möglich die Erlaubnis zur Benutzung eines Bildes von einer anderen Domain zu nutzen. Wenn die Domain jenen Zugriff gestattet, kann das Image genutzt werden und das Bild wird wie gewollt angezeigt; andernfalls entsteht ein <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image#What_is_a_.22tainted.22_canvas.3F">"getaintes Canvas"</a>.</p>
 
-<h3 id="Andere_Canvas_Elemente_benutzen">Andere Canvas Elemente benutzen</h3>
+<h3 id="Andere_Canvas_Elemente_benutzen">Andere Canvas Elemente benutzen</h3>
 
 <p>Genau wie normalen Bildern auch, können wir ein anderes Canvas durch {{domxref("document.getElementsByTagName()")}} oder {{domxref("document.getElementById()")}} ansprechen.</p>
 
@@ -120,26 +120,26 @@ img.src = 'myImage.png'; // Setze den Pfad zum Bild
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
-    ctx.beginPath();
-    ctx.moveTo(30,96);
-    ctx.lineTo(70,66);
-    ctx.lineTo(103,76);
-    ctx.lineTo(170,15);
-    ctx.stroke();
-  };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function(){
+    ctx.drawImage(img,0,0);
+    ctx.beginPath();
+    ctx.moveTo(30,96);
+    ctx.lineTo(70,66);
+    ctx.lineTo(103,76);
+    ctx.lineTo(170,15);
+    ctx.stroke();
+  };
+  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
 }</pre>
 
 <p>The resulting graph looks like this:</p>
@@ -165,24 +165,24 @@ img.src = 'myImage.png'; // Setze den Pfad zum Bild
 
 <div class="hidden">
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
 
 <pre class="brush: js">function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var img = new Image();
-  img.onload = function(){
-    for (var i=0;i&lt;4;i++){
-      for (var j=0;j&lt;3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
-      }
-    }
-  };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  var ctx = document.getElementById('canvas').getContext('2d');
+  var img = new Image();
+  img.onload = function(){
+    for (var i=0;i&lt;4;i++){
+      for (var j=0;j&lt;3;j++){
+        ctx.drawImage(img,j*50,i*38,50,38);
+      }
+    }
+  };
+  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 }</pre>
 
 <p>The resulting canvas looks like this:</p>
@@ -207,13 +207,13 @@ img.src = 'myImage.png'; // Setze den Pfad zum Bild
 <p>In this example, we'll use the same rhino as in the previous example, but we'll slice out its head and composite it into a picture frame. The picture frame image is a 24-bit PNG which includes a drop shadow. Because 24-bit PNG images include a full 8-bit alpha channel, unlike GIF and 8-bit PNG images, it can be placed onto any background without worrying about a matte color.</p>
 
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
    &lt;div style="display:none;"&gt;
      &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
    &lt;/div&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
@@ -237,30 +237,30 @@ img.src = 'myImage.png'; // Setze den Pfad zum Bild
 
 <h2 id="Art_gallery_example">Art gallery example</h2>
 
-<p>In the final example of this chapter, we'll build a little art gallery. The gallery consists of a table containing several images. When the page is loaded, a {{HTMLElement("canvas")}}  element is inserted for each image and a frame is drawn arround it.</p>
+<p>In the final example of this chapter, we'll build a little art gallery. The gallery consists of a table containing several images. When the page is loaded, a {{HTMLElement("canvas")}}  element is inserted for each image and a frame is drawn arround it.</p>
 
 <p>In this case, every image has a fixed width and height, as does the frame that's drawn around them. You could enhance the script so that it uses the image's width and height to make the frame fit perfectly around it.</p>
 
 <p>The code below should be self-explanatory. We loop through the {{domxref("document.images")}} container and add new canvas elements accordingly. Probably the only thing to note, for those not so familiar with the DOM, is the use of the {{domxref("Node.insertBefore")}} method. <code>insertBefore()</code> is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).</p>
 
 <pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-     &lt;table&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-     &lt;/table&gt;
+ &lt;body onload="draw();"&gt;
+     &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+     &lt;/table&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 

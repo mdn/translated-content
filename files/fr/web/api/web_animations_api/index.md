@@ -21,7 +21,7 @@ L'API Web Animations fournit un langage commun aux navigateurs et aux développe
 - {{domxref("Animation")}}
   - : Fournit des commandes de lecture et une chronologie pour un nœud ou une source d'animation. Peut prendre un objet créé avec le constructeur {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}.
 - {{domxref("KeyframeEffect")}}
-  - : Décrit des ensembles de propriétés et de valeurs animables, appelées **images clés** (_keyframes_) et leurs [options de minutage](/en-US/docs/Web/API/Web_Animations_API/Animation_timing_options) . Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref("Animation.Animation", "Animation()")}}.
+  - : Décrit des ensembles de propriétés et de valeurs animables, appelées **images clés** (_keyframes_) et leurs [options de minutage](/fr/docs/Web/API/Web_Animations_API/Animation_timing_options) . Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref("Animation.Animation", "Animation()")}}.
 - {{domxref("AnimationTimeline")}}
   - : Représente la chronologie de l'animation. Cette interface existe pour définir les fonctionnalités de la chronologie (héritées par {{domxref("DocumentTimeline")}} et les futurs objets de chronologie) et n'est pas elle-même accessible par les développeurs.
 - {{domxref("AnimationEvent")}}
@@ -57,7 +57,7 @@ L'API Web Animations ajoute de nouvelles fonctionnalités à {{domxref("document
 
 ## Voir aussi
 
-- [Utilisation de l'API Web Animations](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
+- [Utilisation de l'API Web Animations](/fr/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
 - [Démos d'animations web](https://mozdevs.github.io/Animation-examples/)
 - [Polyfill / Prothèse d'implémentation](https://github.com/web-animations/web-animations-js)
 - [Implémentation](https://birtles.github.io/areweanimatedyet/) actuelle de Firefox : [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)

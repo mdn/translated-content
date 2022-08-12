@@ -16,7 +16,9 @@ translation_of: Web/SVG/Tutorial/Positions
 
 元素
 
-    <rect x="0" y="0" width="100" height="100" />
+```html
+<rect x="0" y="0" width="100" height="100" />
+```
 
 定義一个矩形，即從左上角開始，向右延展 100px，向下延展 100px，形成一个 100\*100 大的矩形。
 
@@ -26,11 +28,15 @@ translation_of: Web/SVG/Tutorial/Positions
 
 在没有进一步规范说明的情况下，1 个用户单位等同于 1 个屏幕单位。要明确改变这种设定，SVG 里有多种方法。我们从`svg`根元素开始：
 
-    <svg width="100" height="100">
+```html
+<svg width="100" height="100">
+```
 
 上面的元素定義了一個 100\*100px 的 SVG 畫布，這裡 1 用戶單位等同於 1 螢幕單位。
 
-    <svg width="200" height="200" viewBox="0 0 100 100">
+```html
+<svg width="200" height="200" viewBox="0 0 100 100">
+```
 
 這裡定義的畫布尺寸是 200\*200px。但是，viewBox 屬性定義了畫布上可以顯示的區域：從(0,0)點開始，100 寬\*100 高的區域。這個 100\*100 的區域，會放到 200\*200 的畫布上顯示。於是就形成了放大兩倍的效果。
 

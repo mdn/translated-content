@@ -19,8 +19,8 @@ npm install moment
 
 ## 創建虛擬屬性
 
-1.  打開 **./models/bookinstance.js**.
-2.  在此頁面最上方，引入 _moment_.
+1. 打開 **./models/bookinstance.js**.
+2. 在此頁面最上方，引入 _moment_.
 
     ```js
     var moment = require('moment');

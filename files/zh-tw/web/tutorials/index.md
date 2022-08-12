@@ -29,7 +29,7 @@ translation_of: Web/Tutorials
   - : 適用於 HTML 初學者的指南，其中包含常見的標籤( tag ), 其中包括利用編碼範例步驟，一步步指導建立一個基本網頁。
 - **[初學者 HTML 指南](http://bit.ly/2z9xSS2) (Website Setup)**
   - : 此指南將指導你如何使用 HTML 和 HTML5 標籤 (tags) 建立基礎網站。 簡易的步驟教學，以及包含可用於提升編碼技巧的圖像和資源。
-- **[HTML 挑戰 ](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)(Wikiversity)**
+- **[HTML 挑戰](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)(Wikiversity)**
   - : 使用這些挑戰來磨練你的 HTML 技能 (例如 : "Should I use an \<h2> element or a \<strong> element?"), 注意這些含有意義的標籤。
 
 ### 中級

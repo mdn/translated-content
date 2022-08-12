@@ -16,13 +16,13 @@ translation_of: Web/MathML/Element/mo
 
 <dl>
  <dt id="attr-accent">accent</dt>
- <dd>Ein Boolescher Wert, der festlegt, ob das Rechenzeichen als Akzentzeichen behandelt werden soll, falls der Operator als <a href="/en-US/docs/MathML/Element/munder">underscript</a> oder <a href="/en-US/docs/MathML/Element/mover">overscript</a> markiert wurde. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
+ <dd>Ein Boolescher Wert, der festlegt, ob das Rechenzeichen als Akzentzeichen behandelt werden soll, falls der Operator als <a href="/en-US/docs/MathML/Element/munder">underscript</a> oder <a href="/en-US/docs/MathML/Element/mover">overscript</a> markiert wurde. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
  <dt id="attr-class-id-style">class, id, style</dt>
  <dd>Zur Einbindung von <a href="https://developer.mozilla.org/de/docs/Web/CSS">CSS-Stylesheets</a> und zur direkten Anwendung von CSS-Angaben.</dd>
  <dt id="attr-dir">dir</dt>
  <dd>Allgemeine Schreibrichtung für die Formeln. Mögliche Werte sind <code>ltr</code> (left to right, von links nach rechts) und <code>rtl</code> (right to left, von rechts nach links).</dd>
  <dt id="attr-fence"><a id="fence" name="fence">fence</a></dt>
- <dd>Boolescher Wert, der festlegt, ob der Operator eine Begrenzung (z.B. ein Paar Klammern) ist. Dieses Attribut wird selbst nicht bildlich dargestellt. Erlaubte Werte sind <code>true</code> und <code>false</code>. Siehe auch <code><a href="#separator">separator</a></code>.</dd>
+ <dd>Boolescher Wert, der festlegt, ob der Operator eine Begrenzung (z.B. ein Paar Klammern) ist. Dieses Attribut wird selbst nicht bildlich dargestellt. Erlaubte Werte sind <code>true</code> und <code>false</code>. Siehe auch <code><a href="#separator">separator</a></code>.</dd>
  <dt id="attr-form">{{ unimplemented_inline() }} form</dt>
  <dd>Legt die Funktion des Operators in z.B. einem Klammerausdruck fest. Die Angabe beeinflusst horizontale Abstände und andere Eigenschaften. Für die meisten Rechenzeichen (+, - usw.) brauchst Du dieses Attribut dank passender Vorgabewerte nicht explizit zu setzen.<br>
  Mögliche Werte sind:
@@ -35,7 +35,7 @@ translation_of: Web/MathML/Element/mo
  <dt id="attr-href">href</dt>
  <dd>Mit diesem Attribut kann ein Link gesetzt werden.</dd>
  <dt id="attr-largeop">largeop</dt>
- <dd>Legt fest, ob das Rechenzeichen größer als üblich dargestellt werden soll. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
+ <dd>Legt fest, ob das Rechenzeichen größer als üblich dargestellt werden soll. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
  <dt id="attr-lspace"><a id="lspace" name="lspace">lspace</a></dt>
  <dd>Bestimmt die Breite des Leerzeichens <em>vor</em> einem Rechenzeichen. (Siehe <a href="/de/docs/Web/MathML/Attribute/Werte">Maßangaben</a> für mögliche Werte, Vorgabewert ist die Konstante <code>thickmathspace</code> = 5/18em.) Siehe auch <code><a href="#rspace">rspace</a></code>.</dd>
  <dt id="attr-mathbackground">mathbackground</dt>
@@ -93,13 +93,13 @@ translation_of: Web/MathML/Element/mo
  <dt id="attr-minsize">minsize</dt>
  <dd>Falls <code><a href="#stretchy">stretchy</a></code> auf <code>true</code> gesetzt ist, dann gibt <code>minsize</code> die <em>minimale</em> Größe des Operators an. Erlaubte Werte sind <code>infinity</code> und eine <a href="/en-US/docs/MathML/Attributes/Values#Lengths">Längenangabe</a>.</dd>
  <dt id="attr-movablelimits">movablelimits</dt>
- <dd>Falls <code>displaystyle</code> auf <code>false</code> gesetzt ist, dann gibt <code>moveblelimits</code> an, ob <code>underscripts</code> und <code>overscripts</code> an den Positionen von <code>subcripts</code> bzw. <code>superscripts</code> angezeigt werden. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
+ <dd>Falls <code>displaystyle</code> auf <code>false</code> gesetzt ist, dann gibt <code>moveblelimits</code> an, ob <code>underscripts</code> und <code>overscripts</code> an den Positionen von <code>subcripts</code> bzw. <code>superscripts</code> angezeigt werden. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
  <dt id="attr-rspace"><a id="rspace" name="rspace">rspace</a></dt>
  <dd>Bestimmt die Breite des Leerzeichens <em>nach</em> einem Operator. (Siehe <a href="/de/docs/Web/MathML/Attribute/Werte">Maßangaben</a> für mögliche Werte, Vorgabewert ist die Konstante <code>thickmathspace</code> = 5/18em.) Siehe auch <code><a href="#lspace">lspace</a>.</code></dd>
  <dt id="attr-separator"><a id="separator" name="separator">separator</a></dt>
- <dd>Dieses Attribut bestimmt, ob der Operator ein Trennzeichen (z.B. ein Komma ist). Das Attribut selbst wird nicht dargestellt. Erlaubte Werte sind <code>true</code> und <code>false</code>. Siehe auch <code><a href="#fence">fence</a></code>.</dd>
+ <dd>Dieses Attribut bestimmt, ob der Operator ein Trennzeichen (z.B. ein Komma ist). Das Attribut selbst wird nicht dargestellt. Erlaubte Werte sind <code>true</code> und <code>false</code>. Siehe auch <code><a href="#fence">fence</a></code>.</dd>
  <dt id="attr-stretchy"><a id="stretchy" name="stretchy">stretchy</a></dt>
- <dd>Gibt an, ob der Operator an die Größe der benachbarten Elemente angepasst (vergrößert) wird. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
+ <dd>Gibt an, ob der Operator an die Größe der benachbarten Elemente angepasst (vergrößert) wird. Erlaubte Werte sind <code>true</code> und <code>false</code>.</dd>
  <dt id="attr-symmetric">symmetric</dt>
  <dd>Falls <code><a href="#stretchy">stretchy</a></code> auf <code>true</code> gesetzt ist, dann gibt <code>symmetric</code> an, ob der Operator (z.B. ein Bruchstrich) vertikal an der imaginären Mittellinie ausgerichtet wird. Falls <code>stretchy</code> auf <code>true</code> gesetzt gesetzt ist, dann ist der Vorgabewert für <code>symmetric</code> ebenfalls <code>true</code>, ansonsten <code>false</code>.</dd>
 </dl>
@@ -109,17 +109,17 @@ translation_of: Web/MathML/Element/mo
 <pre class="brush: html">&lt;math&gt;
 
   &lt;mrow&gt;
-    &lt;mn&gt;5&lt;/mn&gt;
-    &lt;mo&gt;+&lt;/mo&gt;
-    &lt;mn&gt;5&lt;/mn&gt;
+    &lt;mn&gt;5&lt;/mn&gt;
+    &lt;mo&gt;+&lt;/mo&gt;
+    &lt;mn&gt;5&lt;/mn&gt;
   &lt;/mrow&gt;
 
   &lt;mrow&gt;
     &lt;mo&gt; [ &lt;/mo&gt; &lt;!-- default form value: prefix --&gt;
-      &lt;mrow&gt;
+      &lt;mrow&gt;
         &lt;mn&gt; 0 &lt;/mn&gt;
         &lt;mo&gt; ; &lt;/mo&gt; &lt;!-- default form value: infix --&gt;
-        &lt;mn&gt; 1 &lt;/mn&gt;
+        &lt;mn&gt; 1 &lt;/mn&gt;
       &lt;/mrow&gt;
     &lt;mo&gt; ) &lt;/mo&gt; &lt;!-- default form value: postfix --&gt;
   &lt;/mrow&gt;
@@ -153,265 +153,13 @@ translation_of: Web/MathML/Element/mo
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>accent</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>dir</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("12.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>form</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>largeop</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>lspace, rspace</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathsize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>mathvariant</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("28.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>maxsize, minsize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>movablelimits</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>stretchy</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td><code>symmetric</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Merkmal</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>accent</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>dir</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("12.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>form</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>href</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("7.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>largeop</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>lspace, rspace</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathsize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>mathvariant</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("28.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>maxsize, minsize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>movablelimits</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>stretchy</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>symmetric</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.9.2") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Hinweise_zu_Gecko">Hinweise zu Gecko</h2>
 
 <ul>
  <li>Mit Gecko 16.0 {{ geckoRelease("16.0") }} wurden die Standardwerte für <code>lspace</code> und <code>rspace</code> korrigiert. Entsprechend der MathML3-Spezifikation ist der Vorgabewert jetzt 5/18em, das ist der Wert der Konstante <code>thickmathspace</code>.</li>
- <li>Seit Gecko 20.0 {{geckoRelease("20.0")}} sind einheitenlose Wertangaben für  <code>mathsize</code> erlaubt.</li>
+ <li>Seit Gecko 20.0 {{geckoRelease("20.0")}} sind einheitenlose Wertangaben für  <code>mathsize</code> erlaubt.</li>
  <li>Einige <code>mathvariant</code> sind erst seit Gecko 28.0 (Firefox 28.0 / Thunderbird 28.0 / SeaMonkey 2.25) umgesetzt und erfordern passende <a href="/de/docs/Mozilla/MathML_Project/Fonts">Schriftarten für MathML</a>.</li>
  <li>Es sind noch keine Attribute für <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbattrs">Zeilenumbrüche</a> oder <a class="external" href="http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs">Einrückungen</a> implementiert. Siehe {{ bug("534962") }}.</li>
 </ul>

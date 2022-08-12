@@ -15,7 +15,7 @@ L'**API Processing MediaStream**, souvent appelée _Media Stream API_ ou _Stream
 
 ## Concepts de base
 
-L'API est basée sur la manipulation de l'objet {{domxref("MediaStream")}} représentant un flux de données audio ou vidéo. Typiquement, un {{domxref("MediaStream")}} est une simple chaine URL qui peut être utilisée pour référencer une donnée stockée dans un {{domxref("File")}} DOM, ou un objet {{domxref("Blob")}} crée avec {{domxref("window.URL.createObjectURL()")}}, tel que décrit dans [cette vidéo](/en-US/docs/WebRTC/taking_webcam_photos#Get_the_video).
+L'API est basée sur la manipulation de l'objet {{domxref("MediaStream")}} représentant un flux de données audio ou vidéo. Typiquement, un {{domxref("MediaStream")}} est une simple chaine URL qui peut être utilisée pour référencer une donnée stockée dans un {{domxref("File")}} DOM, ou un objet {{domxref("Blob")}} crée avec {{domxref("window.URL.createObjectURL()")}}, tel que décrit dans [cette vidéo](/fr/docs/WebRTC/taking_webcam_photos#Get_the_video).
 
 Un {{domxref("MediaStream")}} consiste en zéro ou plus objets {{domxref("MediaStreamTrack")}}, représentant différentes **pistes** audio ou vidéos. Chaque {{domxref("MediaStreamTrack")}} peut avoir un ou plusieurs **canal**. Le canal représente la plus petite unité d'un flux média, tel un signal audio d'un haut-parleur, séparé en _gauche_ et _droite_ sur une piste audio en stéréo.
 

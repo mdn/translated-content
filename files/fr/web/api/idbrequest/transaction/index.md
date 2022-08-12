@@ -95,7 +95,7 @@ openRequest.onsuccess = function() {
 
 ## Voir aussi
 
-- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

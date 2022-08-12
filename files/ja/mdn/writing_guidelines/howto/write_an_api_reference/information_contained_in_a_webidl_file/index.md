@@ -23,6 +23,7 @@ IDL は **_Interface Definition Language_** の略で、 API を記述するた�
 WebIDL は複数の場所で見つけることができます。
 
 -それぞれの仕様書には、本文の中に WebIDL が含まれています：これは、正確な定義を伝えるのにとても便利な方法です。これらは、API の構文を記述しています。正規のリファレンスではありますが、実際の実装とは異なる可能性があることを念頭に置いておく必要があります。 MDN では、実用的でありたいと考えており、ウェブプラットフォームが実際にどうであるか、理想的にどうあるべきかを文書化するものではありません。ですから、そこにあるものを実装でダブルチェックしてください（そして、矛盾を発見したら遠慮なくバグを報告してください）。
+
 - 3 つのブラウザーエンジンが、ツールチェーンの一部として（修正された） WebIDL を使用しています。 Gecko、Chromium/Blink、そして WebCore/WebKit です。 Chromium 以前の Edge では内部的に WebIDL を使用していましたが、残念ながらこれらは公開されていません。
 
   - Gecko では、すべての WebIDL ファイルは 1 つのディレクトリー <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/> にまとめられています。拡張子は `.webidl` です。Gecko のソースツリーには他にも `*.idl` ファイルがありますが、それらは WebIDL ではないので無視してかまいません。古いバージョンの Gecko には WebIDL が散在しており、 WebIDL の代わりに Mozilla の IDL を使ってウェブインターフェイスを記述しているものもありますが、最近の Gecko のコードでは問題ありません。
@@ -61,7 +62,7 @@ WebIDL インターフェイスは、真のインターフェイスであれ、�
 interface HTMLMediaElement : HTMLElement {…}
 ```
 
-継承チェーンはサイドバーに自動的に掲載されます（ \{{APIRef}} マクロを使用）。また、 SVG 画像としてマクロの \{{InheritanceDiagram}} を使って追加することもできます。
+継承チェーンはサイドバーに自動的に掲載されます（\\{{APIRef}} マクロを使用）。また、 SVG 画像としてマクロの \\{{InheritanceDiagram}} を使って追加することもできます。
 
 ### ミックスイン
 
@@ -103,7 +104,7 @@ IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links
 そのミックスインを実装しているインターフェイスを探してください。
 [HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement) のように、ミックスインを実装するインターフェイスを探し、それらのインターフェイス上で直接ミックスインのメンバーを文書化します。
 
-実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`] (/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
+実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`](/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
 
 `HTMLHyperlinkElementUtils.hash` を適切に説明する以下の 2 ページを参照してください。
 
@@ -164,7 +165,7 @@ partial interface Performance {
 - `ServiceWorker`
   - : この部分インターフェイスは {{domxref('ServiceWorkerGlobalScope')}} のみで利用可能です。
 
-`System` のような別の値も可能ですが、これには[特別な意味](/ja/docs/Mozilla/WebIDL_bindings#exposed)があり、文書化される必要はありません。
+`System` のような別の値も可能ですが、これには[特別な意味](/ja/docs/Mozilla/WebIDL_bindings#exposed)があり、文書化する必要はありません。
 
 これらの可能な値は、それ自体が WebIDL ファイルで定義されていることに注意してください。インターフェイスは `[Global=xyz]` という注釈を持つことができます。これは、このタイプのオブジェクトがグローバルスコープとして使用される場合、 `[Exposed]` の値が `xyz` である インターフェイス、プロパティ、メソッドがすべて利用可能になることを意味します。
 
@@ -297,7 +298,6 @@ API は時として、*新しい*オブジェクト、あるいは内部のオ�
 ```
 
 この場合、 `buffered` を呼び出すたびに異なるオブジェクトが返されます。これを変更しても内部の値は変化せず、内部の値が変化しても各オブジェクトのインスタンスには影響がありません。ドキュメントでは、オブジェクトの隣に*新しい*という形容詞を使ってマークすることにします。
-
 
 _**`HTMLMediaElement.buffered`** プロパティは読み取り専用で、新しい \\{{domxref("TimeRanges")}} オブジェクトを返します…_
 
@@ -576,10 +576,10 @@ interface InterfaceIdentifier {
 
 2019 年 9 月より、 WebIDL のコンストラクターの構文が更新されました。コンストラクターの構文には、インターフェイスの拡張属性が含まれなくなりました。
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
-      ...
+     // …
 };
 ```
 

@@ -27,10 +27,10 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 ### 准备工作
 
-1.  首先需要一个 wasm 模块！下载 [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
-2.  确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的。
-3.  然后，创建一个简单的 HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) ).
-4.  现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示 (也可以在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式)见到):
+1. 首先需要一个 wasm 模块！下载 [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 文件到本机的一个新的目录下。
+2. 确保本机使用的是支持 webassembly 的浏览器。Firefox 52+ 和 Chrome 57+ 是默认支持 webassembly 的。
+3. 然后，创建一个简单的 HTML 文件命名为 index.html 和并且你的本机的 wasm 文件处于同一目录下 ( 如果你没有模板可以使用我们提供的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) ).
+4. 现在，为了帮助我们理解发生了什么，让我们来看看这个 wasm 模块的文本表示 (也可以在[将 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm#初识文本格式)见到):
 
     ```wasm
     (module
@@ -40,7 +40,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
             call $i))
     ```
 
-5.  在第二行，你将看到导入有一个两级命名空间 —— 内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
+5. 在第二行，你将看到导入有一个两级命名空间 —— 内部函数 `$i` 是从 imports.imported_func 导入的。编写要导入到 wasm 模块的对象时，我们需要在 JavaScript 中反映这个两级命名空间。创建一个 `<script></script>` 节点在你的 HTML 文件中，并且添加下面的代码：
 
     ```js
     var importObject = {
@@ -109,8 +109,8 @@ fetch('simple.wasm')
 
 我们通过一个快速的例子来开始探索。
 
-1.  创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html。`添加一个 `<script></script>` 节点到页面中。
-2.  在脚本的顶部添加下面的一行代码来创建一个内存实例：
+1. 创建另一个简单的 HTML 页面 (复制我们的 [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) 并且命名为 `memory.html。`添加一个 `<script></script>` 节点到页面中。
+2. 在脚本的顶部添加下面的一行代码来创建一个内存实例：
 
     ```js
     var memory = new WebAssembly.Memory({initial:10, maximum:100});
@@ -130,7 +130,7 @@ fetch('simple.wasm')
     new Uint32Array(memory.buffer)[0]
     ```
 
-3.  现在尝试这个演示 —— 保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。
+3. 现在尝试这个演示 —— 保存目前为止添加的内容，将其加载到浏览器中，然后尝试在 JavaScript 控制台中输入上述两行。
 
 ### 增加内存
 
@@ -150,11 +150,11 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
 让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在这里[memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)找到示例。
 
-1.  像前面那样在相同的目录下复制一份 memory.wasm。
+1. 像前面那样在相同的目录下复制一份 memory.wasm。
 
     > **备注：** 你可以在这里[memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat)找到模块的文本表示形式。
 
-2.  回到你的示例文件 memory.html，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
+2. 回到你的示例文件 memory.html，像前面那样获取、编译和实例化你的 wasm 模块——在你的脚本代码底部加入下面的代码：
 
     ```js
     fetch('memory.wasm').then(response =>
@@ -166,7 +166,7 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
     });
     ```
 
-3.  因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 accumulate() 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
+3. 因为该模块导出了它的内存，给定该模块的一个实例，我们可以使用一个导出函数 accumulate() 在该模块实例的线性内存（mem）中创建和填入一个输入数组。在前面指明的地方加入如下代码：
 
     ```js
     var i32 = new Uint32Array(results.instance.exports.mem.buffer);
@@ -203,12 +203,12 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在[table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm)中找到该示例。
 
-1.  在一个新的目录中复制一份 table.wasm。
+1. 在一个新的目录中复制一份 table.wasm。
 
     > **备注：** 你可以在[table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat)中查看模块的文本表示。
 
-2.  创建一份[HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
-3.  如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的[\<script>](/zh-CN/docs/Web/HTML/Element/script)节点里面：
+2. 创建一份[HTML 模板](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)的新副本并将其命名为`table.html`.
+3. 如前所示，获取、编译并且实例化你的 wasm 模块——将下面的代码放入到 HTML body 底部的[\<script>](/zh-CN/docs/Web/HTML/Element/script)节点里面：
 
     ```js
     fetch('table.wasm').then(response =>
@@ -220,7 +220,7 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
     });
     ```
 
-4.  现在，让我们获取表格中的数据——将下面的代码放入到指定的位置：
+4. 现在，让我们获取表格中的数据——将下面的代码放入到指定的位置：
 
     ```js
     var tbl = results.instance.exports.tbl;

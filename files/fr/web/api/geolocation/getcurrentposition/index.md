@@ -69,5 +69,5 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## Voir aussi
 
-- [Utiliser la géolocalisation](/en-US/docs/WebAPI/Using_geolocation)
+- [Utiliser la géolocalisation](/fr/docs/WebAPI/Using_geolocation)
 - {{domxref("Navigator.geolocation")}}

@@ -44,7 +44,7 @@ window.addEventListener("gamepadconnected", function( event ) {
 
 ## Evénements liés
 
-- [gamepaddisconnected](/en-US/docs/Web/Reference/Events/gamepaddisconnected)
+- [gamepaddisconnected](/fr/docs/Web/Reference/Events/gamepaddisconnected)
 
 ## Voir aussi
 

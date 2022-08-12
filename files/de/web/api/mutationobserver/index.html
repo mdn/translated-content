@@ -30,7 +30,7 @@ translation_of: Web/API/MutationObserver
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>Die Funktion wird bei jeder Veränderung am DOM-Element ausgelöst. Der Observer (Beobachter) ruft die Callbackfunktion mit zwei Argumenten auf. Das erste ist ein Array aus <a href="#MutationRecord"><code>MutationRecord</code></a>-Objekten. Das zweite ist diese Instanz des <code>MutationObserver</code>.</dd>
+ <dd>Die Funktion wird bei jeder Veränderung am DOM-Element ausgelöst. Der Observer (Beobachter) ruft die Callbackfunktion mit zwei Argumenten auf. Das erste ist ein Array aus <a href="#MutationRecord"><code>MutationRecord</code></a>-Objekten. Das zweite ist diese Instanz des <code>MutationObserver</code>.</dd>
 </dl>
 
 <h2 id="Instance_methods" name="Instance_methods">Methoden</h2>
@@ -149,7 +149,7 @@ translation_of: Web/API/MutationObserver
   <tr>
    <td><code>type</code></td>
    <td><code>String</code></td>
-   <td>Gibt <code>attributes</code> zurück, wenn die Veränderung eine Änderung an Attributen der Node gewesen ist, <code>characterData</code> wenn Veränderungen an der <code>CharacterData</code>-Node vorgenommen wurden, und <code>childList</code> wenn es sich um eine Veränderung an den untergeordneten Knoten im Baum handelt.</td>
+   <td>Gibt <code>attributes</code> zurück, wenn die Veränderung eine Änderung an Attributen der Node gewesen ist, <code>characterData</code> wenn Veränderungen an der <code>CharacterData</code>-Node vorgenommen wurden, und <code>childList</code> wenn es sich um eine Veränderung an den untergeordneten Knoten im Baum handelt.</td>
   </tr>
   <tr>
    <td><code>target</code></td>
@@ -230,58 +230,4 @@ observer.disconnect();
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>18 {{ property_prefix("WebKit") }}<br>
-    26</td>
-   <td>{{ CompatGeckoDesktop(14) }}</td>
-   <td>11</td>
-   <td>15</td>
-   <td>6.0 {{ property_prefix("WebKit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>18 {{ property_prefix("WebKit") }}<br>
-    26</td>
-   <td>{{ CompatGeckoMobile(14) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>15</td>
-   <td>
-    <p>6 {{ property_prefix("WebKit")}}</p>
-
-    <p>7</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}

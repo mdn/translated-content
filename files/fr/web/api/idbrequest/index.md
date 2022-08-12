@@ -52,9 +52,9 @@ _Pas de méthodes spécifiques, mais hérite des méthodes de {{domxref("EventTa
 On peut écouter les évènement avec `addEventListener()` ou bien en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
 
 - {{domxref("IDBRequest.onerror","onerror")}}
-  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/en-US/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
+  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/fr/docs/Web/Events/error), déclenché quand une requête renvoie une erreur.
 - {{domxref("IDBRequest.onsuccess","onsuccess")}}
-  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/en-US/docs/Web/Events/success), déclenché quand la requête réussie.
+  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/fr/docs/Web/Events/success), déclenché quand la requête réussie.
 
 ## Exemple
 

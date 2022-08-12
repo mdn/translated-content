@@ -64,7 +64,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 ```
 
-现在将以下 CSS 应用到您的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css `文件——由你选择）：
+现在将以下 CSS 应用到您的 HTML 中（使用 {{htmlelement("style")}} 元素或 {{htmlelement("link")}} 到单独的 `.css` 文件——由你选择）：
 
 ```css
 body {
@@ -433,7 +433,7 @@ body {
 ### display: flow-root
 
 一个较为现代的方案是使用 `display` 属性的 `flow-root` 值。它可以无需小技巧来创建块格式化上下文（BFC），在使用上没有副作用。
- 
+
 从 `.wrapper` 中移除 `overflow: auto` 规则并添加 `display: flow-root`。如果你的浏览器支持该属性（[支持的浏览器列表](/zh-CN/docs/Web/CSS/display#浏览器兼容性)），盒子就会停止浮动。
 
 ```css

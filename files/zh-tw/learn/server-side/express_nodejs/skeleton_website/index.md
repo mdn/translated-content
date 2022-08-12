@@ -33,7 +33,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 以下部分向您展示如何調用應用程序生成器，並提供關於視圖或 CSS 的不同選項的一些解釋。我們還將解釋骨架網站的結構。最後，我們將展示如何運行網站，來驗證它是否有效。
 
-> **備註：** Express Application Generator 並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 [Hello world ](https://expressjs.com/en/starter/hello-world.html)示例（Express docs）。
+> **備註：** Express Application Generator 並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 [Hello world](https://expressjs.com/en/starter/hello-world.html) 示例（Express docs）。
 
 ## 使用應用產生器
 
@@ -158,14 +158,14 @@ express express-locallibrary-tutorial --view=pug
 
 在這一時間點上，我們有一個完整的骨架項目。該網站實際上並沒有做太多工作，但運行它，能夠展示它是如何工作的。
 
-1.  首先安裝依賴項（`install`安裝命令，將獲取項目的 **package.json** 文件中列出的所有依賴項包）。
+1. 首先安裝依賴項（`install`安裝命令，將獲取項目的 **package.json** 文件中列出的所有依賴項包）。
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  然後運行該應用程序。
+2. 然後運行該應用程序。
 
     - 在 Windows 上，使用此命令:
 
@@ -179,13 +179,13 @@ express express-locallibrary-tutorial --view=pug
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  然後在瀏覽器中加載 <http://localhost:3000/> ，以訪問該應用程序。
+3. 然後在瀏覽器中加載 <http://localhost:3000/> ，以訪問該應用程序。
 
 你應該會看到一個瀏覽器頁面，就像這樣:
 
 ![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
-你有一個能工作的 Express 應用了，讓它在 [http://localhost:3000/ ](http://localhost:3000/)服務。
+你有一個能工作的 Express 應用了，讓它在 [http://localhost:3000/](http://localhost:3000/) 服務。
 
 > **備註：** 您也可以使用 `npm start`命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：
 >
@@ -219,7 +219,7 @@ npm install --save-dev nodemon
   }
 ```
 
-由於該工具沒有全局安裝，我們無法從命令行啟動它（除非我們將其添加到路徑中），但是我們可以從 NPM 腳本中調用它，因為 NPM 知道所有關於安裝的軟件包的信息。找到你的 package.json 的腳本 scripts 區塊。我們更新 `scripts `區塊，最初的一行，以"`start`"開頭，在該行的末尾添加逗號，並添加 "`devstart`" 開頭的一行，如下所示：
+由於該工具沒有全局安裝，我們無法從命令行啟動它（除非我們將其添加到路徑中），但是我們可以從 NPM 腳本中調用它，因為 NPM 知道所有關於安裝的軟件包的信息。找到你的 package.json 的腳本 scripts 區塊。我們更新 `scripts` 區塊，最初的一行，以"`start`"開頭，在該行的末尾添加逗號，並添加 "`devstart`" 開頭的一行，如下所示：
 
 ```json
   "scripts": {
@@ -314,7 +314,7 @@ npm install --save-dev nodemon
 - [morgan](https://www.npmjs.com/package/morgan): 搭配 node 使用的 HTTP 請求記錄器中間層軟件。
 - [serve-favicon](https://www.npmjs.com/package/serve-favicon): 用於提供收藏圖標 [favicon](https://en.wikipedia.org/wiki/Favicon) 的 node 中間層軟件（這是用於表示瀏覽器選項卡、書籤等網站內的圖標）。
 
-腳本部分，定義了一個“開始” "start" 腳本，當我們調用 `npm start` 來啟動服務器時，這就是我們所調用的腳本。從腳本定義中，您可以看到這實際上用 node 啟動了 JavaScript 文件 **./bin/www**。它還定義了一個“devstart” 腳本，我們在調用 `npm run devstart `時調用它。這將啟動相同的 **./bin/www** 文件，但使用 nodemon 調用而不是 node 。
+腳本部分，定義了一個“開始” "start" 腳本，當我們調用 `npm start` 來啟動服務器時，這就是我們所調用的腳本。從腳本定義中，您可以看到這實際上用 node 啟動了 JavaScript 文件 **./bin/www**。它還定義了一個“devstart” 腳本，我們在調用 `npm run devstart` 時調用它。這將啟動相同的 **./bin/www** 文件，但使用 nodemon 調用而不是 node 。
 
 ```json
   "scripts": {
@@ -435,7 +435,7 @@ module.exports = app;
 
 ### 路由
 
-路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ​​，並使用它獲取` express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
+路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ​​，並使用它獲取 `express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
 
 ```js
 var express = require('express');

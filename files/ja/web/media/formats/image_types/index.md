@@ -277,7 +277,7 @@ APNG は、進捗インジケーターやアクティビティ{{interwiki("wikip
 
 ### AVIF 画像
 
-AVIF (AV1 Image File Format) は、 *AV1ビットストリームを HEIF (High Efficiency Image File Format) コンテナー*にエンコードした、強力でオープンソース、ロイヤリティフリーのファイル形式です。 
+AVIF (AV1 Image File Format) は、 *AV1ビットストリームを HEIF (High Efficiency Image File Format) コンテナー*にエンコードした、強力でオープンソース、ロイヤリティフリーのファイル形式です。
 
 > **Note:** AVIF は、ウェブコンテンツで画像を共有するための「次の大きな流れ」となる可能性を秘めています。
 > AVIF は、複雑なライセンスや特許使用料に煩わされることなく、最先端の機能と性能を提供し、他の類似製品を抑えています。

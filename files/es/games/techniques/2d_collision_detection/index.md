@@ -138,7 +138,6 @@ Si bien algunos de estos algoritmos para la detección de colisiones son lo sufi
 
 ### Fase amplia
 
-
 La fase amplia debería proporcionarle una lista de entidades que \*podrían\* estar colisionando. Esto se puede implementar con una estructura de datos espaciales que le dará una idea aproximada de dónde existe la entidad y qué existe a su alrededor. Algunos ejemplos de estructuras de datos espaciales son _Quad Trees_, _R-Trees_ o _Spacial Hashmap_.
 
 ### Fase estrecha

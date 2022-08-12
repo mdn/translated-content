@@ -13,20 +13,20 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Mehrere_Hintergründe_in_CSS_v
 ---
 <p>{{CSSRef}}</p>
 
-<p><span class="seoSummary">Mit <a href="/de/docs/Web/CSS/CSS3">CSS3</a> können einem Element mehrere Hintergründe zugewiesen werden. Diese werden aufeinander gestapelt wobei der erste Hintergrund zuoberst ist und der letzte zuunterst. Nur dem untersten Hintergrund kann eine Hintergrundfarbe zugewiesen werden.</span></p>
+<p><span class="seoSummary">Mit <a href="/de/docs/Web/CSS/CSS3">CSS3</a> können einem Element mehrere Hintergründe zugewiesen werden. Diese werden aufeinander gestapelt wobei der erste Hintergrund zuoberst ist und der letzte zuunterst. Nur dem untersten Hintergrund kann eine Hintergrundfarbe zugewiesen werden.</span></p>
 
 <p>Mehrere Hintergründe festzulegen ist einfach:</p>
 
 <pre class="brush: css">.myclass {
-  background: background1, background 2, ..., background;
+  background: background1, background 2, ..., background;
 }
 </pre>
 
-<p>Du kannst dies mit beiden Varianten, der verkürzten {{cssxref("background")}} Eigenschaft und dem Einzel-Eigenschafts-Selektor davon ausser {{cssxref("background-color")}}. Die folgenden Hintergrund Eigenschaften können als Liste festgelegt werden, eine pro Hintergrund: {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},<code> </code>{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.</p>
+<p>Du kannst dies mit beiden Varianten, der verkürzten {{cssxref("background")}} Eigenschaft und dem Einzel-Eigenschafts-Selektor davon ausser {{cssxref("background-color")}}. Die folgenden Hintergrund Eigenschaften können als Liste festgelegt werden, eine pro Hintergrund: {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},<code> </code>{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>In diesem Beispiel werden drei Hintergründe übereinandergelegt: das Firefox Logo, ein <a href="/de/docs/Web/CSS/linear-gradient">linearer Farbverlauf</a> und ein Bild mit Blasen:</p>
+<p>In diesem Beispiel werden drei Hintergründe übereinandergelegt: das Firefox Logo, ein <a href="/de/docs/Web/CSS/linear-gradient">linearer Farbverlauf</a> und ein Bild mit Blasen:</p>
 
 <pre class="brush: css">.multi_bg_example {
   background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),

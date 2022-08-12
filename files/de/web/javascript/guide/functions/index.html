@@ -25,7 +25,7 @@ original_slug: Web/JavaScript/Guide/Funktionen
 <ul>
  <li>Den Namen der Funktion.</li>
  <li>Eine Liste von Parametern, die in runden Klammern geschrieben sind und durch Kommas getrennt sind.</li>
- <li>Die JavaScript Anweisungen, die durch die Funktion definiert werden und innerhalb von geschweiften Klammern steht<code>.</code></li>
+ <li>Die JavaScript Anweisungen, die durch die Funktion definiert werden und innerhalb von geschweiften Klammern steht<code>.</code></li>
 </ul>
 
 <p>Das folgende Beispiel definiert eine Funktion mit dem Namen <code>square</code>:</p>
@@ -35,14 +35,14 @@ original_slug: Web/JavaScript/Guide/Funktionen
 }
 </pre>
 
-<p>Die Funktion <code>square </code>nimmt einen Parameter entgegen, welcher <code>number</code> heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der Parameter der Funktion (das ist <code>number</code>), multipliziert mit sich selbst, zurückgegeben werden soll. Dabei gibt das  <a href="/de/docs/Web/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> Statement an, welcher Wert von der Funktion zurückzugeben wird.</p>
+<p>Die Funktion <code>square </code>nimmt einen Parameter entgegen, welcher <code>number</code> heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der Parameter der Funktion (das ist <code>number</code>), multipliziert mit sich selbst, zurückgegeben werden soll. Dabei gibt das  <a href="/de/docs/Web/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> Statement an, welcher Wert von der Funktion zurückzugeben wird.</p>
 
 <pre class="brush: js">return number * number;
 </pre>
 
 <p>Bei Primitive Parameter, wie Zahlen, wird der Funktionen <strong>der Wert</strong> übergeben. Werte, die der Funktion übergeben wurden und innerhalb der Funktion geändert werden, ändert den Wert zwar innerhalb der Funktion, <strong>aber nicht global oder in der aufrufenden Funktion</strong>.</p>
 
-<p>Wird ein Objekt als Parameter übergeben (z. B. ein nicht primitiver Wert wie ein  {{jsxref("Array")}} oder ein selbst definiertes Objekt) und die Funktion ändert die Objekteigenschaften, so sind die Änderungen außerhalb der Funktion sichtbar, wie im folgendem Beispiel veranschaulicht wird:</p>
+<p>Wird ein Objekt als Parameter übergeben (z. B. ein nicht primitiver Wert wie ein  {{jsxref("Array")}} oder ein selbst definiertes Objekt) und die Funktion ändert die Objekteigenschaften, so sind die Änderungen außerhalb der Funktion sichtbar, wie im folgendem Beispiel veranschaulicht wird:</p>
 
 <pre class="brush: js">function myFunc(theObject) {       //Funktiondekleration
   theObject.make = 'Toyota';
@@ -99,7 +99,7 @@ var cube = map(f,numbers);
 console.log(cube);
 </pre>
 
-<p>gibt [0, 1, 8, 125, 1000]  zurück.</p>
+<p>gibt [0, 1, 8, 125, 1000]  zurück.</p>
 
 <p>In JavaScript kann eine Funktion definiert werden, wenn eine Bedingung erfüllt ist. Zum Beispiel wird <code>myFunc</code> nur definiert, wenn <code>num </code>gleich <code>0 </code>ist:</p>
 
@@ -372,7 +372,7 @@ A(1); // logs 6 (1 + 2 + 3)
 result = outside()(20); // gibt 20 statt 10 zurück
 </pre>
 
-<p>Der Namenskonflikt tritt beim der Anweisung <code>return x</code> auf und ist zwischen dem Parmeter <code>x</code> von <code>inside</code> und der Variable <code>x</code> von <code> outside</code>. Die Scopekette ist hier {<code>inside</code>, <code>outside</code>, globales Objekt}. Dabei bekommt <code>x</code> von <code>inside</code> eine höhere Priorität als das <code>x</code> von <code>outside</code>. und 20 wird statt der 10 zurückgegeben.</p>
+<p>Der Namenskonflikt tritt beim der Anweisung <code>return x</code> auf und ist zwischen dem Parmeter <code>x</code> von <code>inside</code> und der Variable <code>x</code> von <code> outside</code>. Die Scopekette ist hier {<code>inside</code>, <code>outside</code>, globales Objekt}. Dabei bekommt <code>x</code> von <code>inside</code> eine höhere Priorität als das <code>x</code> von <code>outside</code>. und 20 wird statt der 10 zurückgegeben.</p>
 
 <h2 id="Closures">Closures</h2>
 
@@ -457,7 +457,7 @@ getCode();    // gibt secureCode zurück.
 
 <p><code>i</code> ist die Ordnungsnummer des Arguments, beginnend bei null. So ist das erste übergebene Argument einer Funktion <code>arguments[0]</code>. Die Anzahl der übergebenen Argumente ist <code>arguments.length</code>.</p>
 
-<p>Mit dem <code>arguments</code> Objekt kann man eine Funktion mit mehr Agumenten aufrufen als sie formal deklariert wurden. Das ist oft nützlich, wenn man nicht weiß, wie viele Argumente einer Funktion übergeben werden. Mit <code>arguments.length</code> kann die Anzahl der Argumente, die einer Funktion übergeben wurde, ermittelt werden. Über das <code>arguments</code> Objekt können dann alle Argumente gelesen werden.</p>
+<p>Mit dem <code>arguments</code> Objekt kann man eine Funktion mit mehr Agumenten aufrufen als sie formal deklariert wurden. Das ist oft nützlich, wenn man nicht weiß, wie viele Argumente einer Funktion übergeben werden. Mit <code>arguments.length</code> kann die Anzahl der Argumente, die einer Funktion übergeben wurde, ermittelt werden. Über das <code>arguments</code> Objekt können dann alle Argumente gelesen werden.</p>
 
 <p>Zum Beispiel kann es eine Funktion geben, die verschieden viele Strings zusammenfügt. Das einzige formale Argument der Funktion ist das Trennzeichen, welches die Zeichen definiert, die zwischen den Strings eingefügt werden. Im folgenden Quelltext ist die Funktion implementiert:</p>
 
@@ -588,7 +588,7 @@ var p = new Person();</pre>
   }, 1000);
 }</pre>
 
-<p>Alternativ kann eine <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">gebundene Funktion</a>  erstellt werden, so dass der Wert für <code>this</code> mit übergeben werden kann.</p>
+<p>Alternativ kann eine <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">gebundene Funktion</a>  erstellt werden, so dass der Wert für <code>this</code> mit übergeben werden kann.</p>
 
 <p>Pfeilfunktionen nutzen den <code>this</code> Wert des umschließenden Kontextes, so dass der folgende Quelltext wie erwartet funktioniert:</p>
 
@@ -620,7 +620,7 @@ var p = new Person();</pre>
  <p>Die globale <code><strong>isFinite()</strong></code> Funktion ob ein übergebener Wert endlich ist. Der übergebene Wert wird, wenn es nötig ist, zu einer Zahl konvertiert.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
- <dd>Die <code><strong>isNaN()</strong></code> Funktion überprüft, ob ein Wert {{jsxref("Global_Objects/NaN", "NaN")}} ist oder nicht. Hinweis: Wegen einigen Zwängen innerhalb der <code>isNaN</code> Funktion gibt es <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Beschreibung">interessante Regeln</a>; alternativ kann auch die in  ECMAScript 2015 definierte Funktion Funktion {{jsxref("Number.isNaN()")}} oder der Operator <code><a href="/de/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> verwendet werden, um einen {{jsxref("Global_Objects/NaN", "NaN")}} Wert zu erkennen.</dd>
+ <dd>Die <code><strong>isNaN()</strong></code> Funktion überprüft, ob ein Wert {{jsxref("Global_Objects/NaN", "NaN")}} ist oder nicht. Hinweis: Wegen einigen Zwängen innerhalb der <code>isNaN</code> Funktion gibt es <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Beschreibung">interessante Regeln</a>; alternativ kann auch die in  ECMAScript 2015 definierte Funktion Funktion {{jsxref("Number.isNaN()")}} oder der Operator <code><a href="/de/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> verwendet werden, um einen {{jsxref("Global_Objects/NaN", "NaN")}} Wert zu erkennen.</dd>
  <dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
  <dd>
  <p>Doe <code><strong>parseFloat()</strong></code> Funktion liest einen String als Argument ein und gibt eine Gleitkommazahl zurück.</p>

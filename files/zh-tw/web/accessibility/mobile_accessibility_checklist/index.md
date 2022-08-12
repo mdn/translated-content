@@ -45,7 +45,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 處理狀態
 
-- 標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過[ARIA 狀態](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)如` aria-checked`、`aria-disabled`、`ria-selected`、`aria-expanded`與`aria-pressed`來提供。
+- 標準控制措施如選項按鈕與核取框可被作業系統處理。然而，其他客製的控制措施狀態改變必須透過[ARIA 狀態](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header)如 `aria-checked`、`aria-disabled`、`ria-selected`、`aria-expanded`與`aria-pressed`來提供。
 
 ## 一般準則
 

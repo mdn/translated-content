@@ -41,7 +41,7 @@ Django 提供了一个身份验证和授权（“权限”）系统，该系统�
 
 我们在[创建框架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)时（在教程 2 中），自动启用了身份验证，因此您此时，无需再执行任何操作。
 
-> **备注：** 当我们使用 `django-admin startproject `命令，以创建应用程序时，所有必要的配置都已完成。当我们第一次调用 `python manage.py migrate` 时，创建了用户和模型权限的数据库表。
+> **备注：** 当我们使用 `django-admin startproject` 命令，以创建应用程序时，所有必要的配置都已完成。当我们第一次调用 `python manage.py migrate` 时，创建了用户和模型权限的数据库表。
 
 配置在项目文件（**locallibrary/locallibrary/settings.py**）的`INSTALLED_APPS`和`MIDDLEWARE`部分中设置，如下所示：
 
@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 ## 创建用户和分组
 
-在教程 4 中，当我们查看 [Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)时，您已经创建了第一个用户（这是一个超级用户，使用命令 `python manage.py createsuperuser `创建）。我们的超级用户已经过身份验证，并拥有所有权限，因此我们需要创建一个测试用户，来代表普通网站用户。我们将使用管理站点，来创建我们的 locallibrary 组別和网站登录，因为这是最快的方法之一。
+在教程 4 中，当我们查看 [Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)时，您已经创建了第一个用户（这是一个超级用户，使用命令 `python manage.py createsuperuser` 创建）。我们的超级用户已经过身份验证，并拥有所有权限，因此我们需要创建一个测试用户，来代表普通网站用户。我们将使用管理站点，来创建我们的 locallibrary 组別和网站登录，因为这是最快的方法之一。
 
 > **备注：** 您还可以用编程方式创建用户，如下所示。您会必须这样做，例如，如果要开发一个界面，能允许用户创建自己的登录（您不应该授予用户访问管理站点的权限）。
 >
@@ -86,22 +86,22 @@ MIDDLEWARE = [
 
 首先，我们为图书馆成员，创建一个新的分组。
 
-1.  单击“添加” **Add** 按钮（“分组”Group 旁边）以创建新的分组；在分组的名称 **Name** ，输入“Library Members”。![Admin site - add group](admin_authentication_add_group.png)
-2.  我们不需要该组的任何权限，因此只需按**SAVE**（您将进入分组列表）。
+1. 单击“添加” **Add** 按钮（“分组”Group 旁边）以创建新的分组；在分组的名称 **Name** ，输入“Library Members”。![Admin site - add group](admin_authentication_add_group.png)
+2. 我们不需要该组的任何权限，因此只需按**SAVE**（您将进入分组列表）。
 
 现在让我们创建一个用户：
 
-1.  回到管理站点的主页
-2.  单击“用户”旁边的“添加”按钮 **Add**，以打开“添加用户”对话框。![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
-3.  为测试用户输入适当的用户名（**Username）**和密码/密码确认**（Password/Password confirmation** ）
-4.  按 **SAVE** 创建用户。
+1. 回到管理站点的主页
+2. 单击“用户”旁边的“添加”按钮 **Add**，以打开“添加用户”对话框。![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+3. 为测试用户输入适当的用户名（**Username）**和密码/密码确认**（Password/Password confirmation** ）
+4. 按 **SAVE** 创建用户。
 
     管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（**username**），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志 **Active**）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。
 
     ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5.  在“分组”（_Groups_）部分中，从“可用分组”（_Available groups_）列表中，选择“图书馆成员”分组 **Library Member**，然后点击这些框之间的**右箭头**，将其移动到“选择的分组”（_Chosen groups_）框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
-6.  我们不需要在此处执行任何其他操作，因此只需再次选择 **SAVE** ，即可转到用户列表。
+5. 在“分组”（_Groups_）部分中，从“可用分组”（_Available groups_）列表中，选择“图书馆成员”分组 **Library Member**，然后点击这些框之间的**右箭头**，将其移动到“选择的分组”（_Chosen groups_）框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
+6. 我们不需要在此处执行任何其他操作，因此只需再次选择 **SAVE** ，即可转到用户列表。
 
 就是这样！现在您有一个“普通的图书馆成员”帐户，您可以使用该帐户进行测试（一旦我们实现了页面，使他们能够登录）。
 
@@ -168,7 +168,7 @@ Exception Value:    registration/login.html
 > |\_templates **(new)**
 > |\_registration
 
-要使这些目录对模板加载器可见（即将此目录放在模板搜索路径中），请打开项目设置（**/locallibrary/locallibrary/settings.py**），并更新`TEMPLATES `部分的“`DIRS`”那一行，如下所示。
+要使这些目录对模板加载器可见（即将此目录放在模板搜索路径中），请打开项目设置（**/locallibrary/locallibrary/settings.py**），并更新`TEMPLATES` 部分的“`DIRS`”那一行，如下所示。
 
 ```python
 TEMPLATES = [
@@ -386,7 +386,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 您可以使用`\{{ user }}`模板变量，以获取有关模板中，当前登录用户的信息（默认情况下，在我们在骨架中设置项目时，会将其添加到模板上下文中）。
 
-通常，您将首先针对 `\{{ user.is_authenticated }} `模板变量进行测试，以确定用户是否有资格查看特定内容。为了展示这一点，接下来我们将更新侧边栏，以在用户登出时，显示“登录”链接，如果他们已登录，则显示“登出”链接。
+通常，您将首先针对 `\{{ user.is_authenticated }}` 模板变量进行测试，以确定用户是否有资格查看特定内容。为了展示这一点，接下来我们将更新侧边栏，以在用户登出时，显示“登录”链接，如果他们已登录，则显示“登出”链接。
 
 打开基本模板（**/locallibrary/catalog/templates/base_generic.html**），并将以下文本，复制到侧边栏区块`sidebar`中，紧接在`endblock`模板标记之前。
 
@@ -573,7 +573,7 @@ urlpatterns += [
 {% endblock %}
 ```
 
-此模板与我们之前为 `Book `和 `Author`对象创建的模板非常相似。这里唯一新的东西，是我们检查在模型中添加的方法（`bookinst.is_overdue`），并使用它，来更改过期项目的颜色。
+此模板与我们之前为 `Book` 和 `Author`对象创建的模板非常相似。这里唯一新的东西，是我们检查在模型中添加的方法（`bookinst.is_overdue`），并使用它，来更改过期项目的颜色。
 
 当开发服务器运行时，您现在应该能够在浏览器中，查看登录用户的列表，网址为<http://127.0.0.1:8000/catalog/mybooks/>。在您的用户登录并登出后，尝试此操作（在第二种情况下，您应该被重定向到登录页面）。
 
@@ -685,7 +685,7 @@ class MyView(PermissionRequiredMixin, View):
 ## 也可以参考
 
 - [Django 中的用户授权](https://docs.djangoproject.com/en/2.0/topics/auth/) (Django 文档)
-- [使用 Django 授权系统 (默认) ](https://docs.djangoproject.com/en/2.0/topics/auth/default//)(Django 文档)
+- [使用 Django 授权系统 (默认)](https://docs.djangoproject.com/en/2.0/topics/auth/default//)(Django 文档)
 - [介绍从基于类别的视图 > 到使用装饰器的基于类别的视图](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views) (Django 文档)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}

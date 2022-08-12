@@ -35,7 +35,7 @@ translation_of: WebAssembly/C_to_wasm
 <p>이 방법은 브라우저에서 WebAssembly 코드를 실행하는 데 필요한 모든 것을 emscripten에서 생성하도록 하는 가장 간단한 방법입니다.</p>
 
 <ol>
- <li>먼저 컴파일 할 예제가 필요합니다. 다음 C 예제 코드를 복사하여 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">hello.c</span></font> 파일을 만듭니다.
+ <li>먼저 컴파일 할 예제가 필요합니다. 다음 C 예제 코드를 복사하여 <font face="consolas, Liberation Mono, courier, monospace">hello.c</font> 파일을 만듭니다.
 
   <pre class="notranslate"><code>#include &lt;stdio.h&gt;
 
@@ -43,7 +43,7 @@ int main(int argc, char ** argv) {
   printf("Hello World\n");
 }</code></pre>
  </li>
- <li>terminal을 사용하여 Emscripten 컴파일 환경에서 다음의 명령어를 실행합니다. <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">hello.c </span></font>파일과 동일한 경로에서 실행하세요
+ <li>terminal을 사용하여 Emscripten 컴파일 환경에서 다음의 명령어를 실행합니다. <font face="consolas, Liberation Mono, courier, monospace">hello.c </font>파일과 동일한 경로에서 실행하세요
   <pre class="notranslate"><code>emcc hello.c -s WASM=1 -o hello.html</code></pre>
  </li>
 </ol>
@@ -184,7 +184,7 @@ void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
  </li>
 </ol>
 
-<p><code>ccall()</code><span>을 사용하여 내보낸 함수를 호출하는 방법이었습니다.</span></p>
+<p><code>ccall()</code>을 사용하여 내보낸 함수를 호출하는 방법이었습니다.</p>
 
 <h2 id="바깥_고리">바깥 고리</h2>
 

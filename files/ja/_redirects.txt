@@ -1856,7 +1856,7 @@
 /ja/docs/Firefox_9_for_developers	/ja/docs/Mozilla/Firefox/Releases/9
 /ja/docs/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
-/ja/docs/Games/Index	/ja/docs/conflicting/Games
+/ja/docs/Games/Index	/ja/docs/Games
 /ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -2100,7 +2100,6 @@
 /ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
-/ja/docs/Installing_extensions	/ja/docs/orphaned/Installing_extensions
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
 /ja/docs/Introduction_to_DOM_Inspector	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html
 /ja/docs/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
@@ -2683,7 +2682,7 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
+/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -2733,16 +2732,16 @@
 /ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto/Tag
 /ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
-/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
+/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 /ja/docs/MDN/Contribute/Howto/Write_for_SEO	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Localize	/ja/docs/MDN/Community/Contributing/Translated_content
 /ja/docs/MDN/Contribute/Markdown_in_MDN	/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /ja/docs/MDN/Contribute/Open_source_etiquette	/ja/docs/MDN/Community/Open_source_etiquette
 /ja/docs/MDN/Contribute/Processes/Content_bug_triage	/ja/docs/MDN/Community/Issues/Issue_triage
 /ja/docs/MDN/Contribute/Structures	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures_838dbfb4005335dd67b770e59c82ce63
-/ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/orphaned/MDN/Structures/API_references
-/ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
+/ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 /ja/docs/MDN/Contribute/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Contribute/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Contribute/Structures/Code_examples	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures
@@ -2781,8 +2780,8 @@
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/conflicting/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Kuma	/ja/docs/MDN/Yari
 /ja/docs/MDN/Structures	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures_838dbfb4005335dd67b770e59c82ce63
-/ja/docs/MDN/Structures/API_references	/ja/docs/orphaned/MDN/Structures/API_references
-/ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+/ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
+/ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 /ja/docs/MDN/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Structures/Banners_and_notices	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/Code_examples	/ja/docs/conflicting/MDN/Writing_guidelines/Page_structures
@@ -2812,8 +2811,6 @@
 /ja/docs/Media_formats_supported_by_the_audio_and_video_elements	/ja/docs/Web/Media/Formats
 /ja/docs/Microsummary_XML_grammar_reference	/ja/docs/orphaned/Microsummary_XML_grammar_reference
 /ja/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla	/ja/docs/orphaned/Migrate_apps_from_Internet_Explorer_to_Mozilla
-/ja/docs/Monitoring_HTTP_activity	/ja/docs/orphaned/Monitoring_HTTP_activity
-/ja/docs/Monitoring_WiFi_access_points	/ja/docs/orphaned/Monitoring_WiFi_access_points
 /ja/docs/Mozilla's_Quirks_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
@@ -3605,7 +3602,7 @@
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
-/ja/docs/Web/API/Window/mozPaintCount	/ja/docs/conflicting/Web/API/Window
+/ja/docs/Web/API/Window/mozPaintCount	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/Window/blur_event
@@ -3927,7 +3924,8 @@
 /ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /ja/docs/Web/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
-/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
+/ja/docs/Web/Accessibility/ARIA/widgets	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
+/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Accessibility/Index	/ja/docs/conflicting/Web/Accessibility
 /ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery
@@ -4318,7 +4316,7 @@
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
-/ja/docs/Web/Guide/Index	/ja/docs/conflicting/Web/Guide
+/ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API

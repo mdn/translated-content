@@ -36,7 +36,7 @@ L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une actio
   </tbody>
 </table>
 
-La cible d'origine de cet événement est le {{domxref("Element")}} qui était la cible prévue de l'action cut. Vous pouvez écouter cet événement sur l'interface {{domxref("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur l'événement [Element: cut event](/en-US/docs/Web/API/Element/cut_event).
+La cible d'origine de cet événement est le {{domxref("Element")}} qui était la cible prévue de l'action cut. Vous pouvez écouter cet événement sur l'interface {{domxref("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur l'événement [Element: cut event](/fr/docs/Web/API/Element/cut_event).
 
 ## Exemples
 

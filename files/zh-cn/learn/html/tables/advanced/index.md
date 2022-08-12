@@ -59,9 +59,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
 
-1.  打开你的语言老师的学校时间表，就是 [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
-2.  为表格添加一个合适的标题。
-3.  保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
+1. 打开你的语言老师的学校时间表，就是 [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) 文件复制下面。
+2. 为表格添加一个合适的标题。
+3. 保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
 
 > **备注：** 你也可以在 GitHub 上找到我们的版本 [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -83,12 +83,12 @@ translation_of: Learn/HTML/Tables/Advanced
 
 让我们动手使用这些新元素。
 
-1.  首先，把 [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) 拷贝到你的本地环境。
-2.  尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
-3.  将明显的标题行改为使用 `<thead>` 元素，"SUM" 行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
-4.  先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，导致 "SUM" 这行跑到了表格的底部。
-5.  接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
-6.  让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
+1. 首先，把 [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) 拷贝到你的本地环境。
+2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
+3. 将明显的标题行改为使用 `<thead>` 元素，"SUM" 行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
+4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，导致 "SUM" 这行跑到了表格的底部。
+5. 接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
+6. 让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
 
     ```css
     tbody {
@@ -101,7 +101,7 @@ translation_of: Learn/HTML/Tables/Advanced
     }
     ```
 
-7.  先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
+7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器来应用同样的样式。
 
 > **备注：** 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 ([Introduction to CSS](/zh_CN/docs/Learn/CSS/Introduction_to_CSS) 是一个好的起点；我们也有专门的文章 [styling tables](/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables)).
 
@@ -374,8 +374,8 @@ translation_of: Learn/HTML/Tables/Advanced
 
 如果要替代 `scope` 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：
 
-1.  为每个`<th>` 元素添加一个唯一的 `id` 。
-2.  为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的`headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
+1. 为每个`<th>` 元素添加一个唯一的 `id` 。
+2. 为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的`headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
 
 这会给你的 HTML 表格中每个单元格的位置一个明确的定义。像一个电子表格一样，通过 headers 属性来定义属于哪些行或列。为了让它工作良好，表格同时需要列和行标题。
 
@@ -409,9 +409,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 ### 动手练习：使用 scope 和 headers
 
-1.  对于这个最后的练习，首先把 [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css),拷贝到你的本地环境。
-2.  现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
-3.  最后，尝试把未添加 `scope` 属性的源文件再复制一份。这次使用 `id` 和 `headers` 属性让表格变得更加恰当。
+1. 对于这个最后的练习，首先把 [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css),拷贝到你的本地环境。
+2. 现在尝试添加适当的 `scope` 属性来让表格变得更加恰当。
+3. 最后，尝试把未添加 `scope` 属性的源文件再复制一份。这次使用 `id` 和 `headers` 属性让表格变得更加恰当。
 
 > **备注：** 你可以根据我们完成的例子检查你的工作，请看 [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) 和 [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 

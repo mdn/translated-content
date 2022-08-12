@@ -99,7 +99,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error)
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 

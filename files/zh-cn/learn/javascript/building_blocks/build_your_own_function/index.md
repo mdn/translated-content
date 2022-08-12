@@ -53,8 +53,8 @@ alert('This is a message');
 
 > **备注：** 对于函数命名约定，应遵循与[变量命名约定](/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
-1.  我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
-2.  接下来，将下面的代码添加至 `<script>` 元素中：
+1. 我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
+2. 接下来，将下面的代码添加至 `<script>` 元素中：
 
     ```js
     function displayMessage() {
@@ -64,7 +64,7 @@ alert('This is a message');
 
     我们从表示定义一个函数的关键字 `function`开始，这之后是我们想给我们的函数取的名字；一组括号；和一组大括号。我们要传给我们的函数的任何参数都在括号内，当我们调用该函数时运行的代码均在大括号内。
 
-3.  最后，添加以下代码到大括号中：
+3. 最后，添加以下代码到大括号中：
 
     ```js
     const html = document.querySelector('html');
@@ -145,7 +145,7 @@ closeBtn.onclick = function() {
 
 相信你已经迫不及待的在你的`<script>` 标签中写好了一个函数，但仅仅是定义而已，这玩意不会做任何事情。
 
-1.  把下面这行代码加在写好的函数下面来调用函数（当然，不一定要放在函数下面来调用，在 C 语言中确实是还要先定义后使用，但是我们现在用的是 JavaScript，这玩意很强大，不管你是先定义后调用还是先调用后定义都行，但是别忘了定义）:
+1. 把下面这行代码加在写好的函数下面来调用函数（当然，不一定要放在函数下面来调用，在 C 语言中确实是还要先定义后使用，但是我们现在用的是 JavaScript，这玩意很强大，不管你是先定义后调用还是先调用后定义都行，但是别忘了定义）:
 
     ```js
     displayMessage();
@@ -153,18 +153,18 @@ closeBtn.onclick = function() {
 
     这行代码调用了你写的函数，当浏览器解析到这行代码时会立即执行函数内的代码。当你保存好你的代码以后在浏览器中刷新，你会马上看到一个小小的提示框弹出来，但是只弹出了一次。毕竟我们只调用了一次函数是不？
 
-2.  现在打开浏览器开发工具，找到 JavaScript 控制台把上面这一句再输入一遍然后回车，你会看到又弹出了一次！有点意思... — 现在我们有了一个能够重复调用的函数，只要你高兴可以随时调用它。
+2. 现在打开浏览器开发工具，找到 JavaScript 控制台把上面这一句再输入一遍然后回车，你会看到又弹出了一次！有点意思... — 现在我们有了一个能够重复调用的函数，只要你高兴可以随时调用它。
 
     但是，这玩意有什么用呢？在真实的应用当中这样的消息提示框一般用来提示一些什么新的东西，或者是出现了一个什么错误，或者当用户删除配置文件的时候 ("你确定要这样做？"), 或者用户添加一个新的联系人之后提示操作成功..等等。在这个例子里面，当用户点击这个按钮的时候这个提示框会出现。
 
-3.  删掉你之前加的那一行代码。
-4.  下一步我们用选择器找到这个按钮并赋值给一个常量。 在你的函数定义之前把这行代码加上去：
+3. 删掉你之前加的那一行代码。
+4. 下一步我们用选择器找到这个按钮并赋值给一个常量。 在你的函数定义之前把这行代码加上去：
 
     ```js
     const btn = document.querySelector('button');
     ```
 
-5.  最后，把这行代码加在上面这行的下面：
+5. 最后，把这行代码加在上面这行的下面：
 
     ```js
     btn.onclick = displayMessage;
@@ -172,7 +172,7 @@ closeBtn.onclick = function() {
 
     `跟关闭按钮类似closeBtn.onclick...` , 当按钮被点击的时候我们运行了点代码。 但不同的是，之前等号的右边是一个匿名函数，看起来是这样的：`btn.onclick = function(){...}`, 我们现在是直接使用函数名称来调用。
 
-6.  保存好以后刷新页面 — 现在你应该能看到当你点击按钮的时候提示框弹出来。
+6. 保存好以后刷新页面 — 现在你应该能看到当你点击按钮的时候提示框弹出来。
 
 你会想“怎么函数名后面没有括号呢？”. 这是因为我们不想直接调用这个函数 — 而是只有当按钮被点击的时候才调用这个函数。 试试把代码改成这样：
 
@@ -188,7 +188,7 @@ btn.onclick = displayMessage();
 
 就现在看来，我们的函数还不是特别有用 — 我们想要的不仅仅是每点击一次展示一个默认的消息。我们来改造下我们的函数，给它添加几个参数，允许我们以不同的方式调用这个函数。
 
-1.  第一步，修改函数的第一行代码：
+1. 第一步，修改函数的第一行代码：
 
     ```js
     function displayMessage() {
@@ -202,7 +202,7 @@ btn.onclick = displayMessage();
 
     当我们调用函数的时候，我们可以在括号里添加两个变量，来指定显示在消息框里面的消息，和消息的类型。
 
-2.  为了使用第一个参数，把接下来的一行：
+2. 为了使用第一个参数，把接下来的一行：
 
     ```js
     msg.textContent = 'This is a message box';
@@ -214,7 +214,7 @@ btn.onclick = displayMessage();
     msg.textContent = msgText;
     ```
 
-3.  最后但同样重要的一点，我们来调用这个函数，并且使用了带参数的形式，修改下面这行：
+3. 最后但同样重要的一点，我们来调用这个函数，并且使用了带参数的形式，修改下面这行：
 
     ```js
     btn.onclick = displayMessage;
@@ -230,17 +230,17 @@ btn.onclick = displayMessage();
 
     如果我们要在点击事件里面绑定这个新函数，我们不能直接使用（`btn.onclick = displayMessage('Woo, this is a different message!');`）前面已经讲过— 我们要把它放在一个匿名函数里面，不然函数会直接调用，而不是按钮点击之后才会调用，这不是我们想要的结果。
 
-4.  保存刷新，就像你所期待的那样现在你可以随意的指定消息框里面显示的消息！
+4. 保存刷新，就像你所期待的那样现在你可以随意的指定消息框里面显示的消息！
 
 ### 一个更加复杂的参数
 
 刚才我们只使用了我们定义的第一个参数`msgText`，对于第二个参数`msgType`，这个就涉及了稍微多一点的东西— 我们要设置一些依赖于这个 `msgType` 参数的东西，我们的函数将会显示不同的图标和不同的背景颜色。
 
-1.  第一步，从 Github 上下载我们需要的图标 ([警告图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 和 [聊天图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) 。把图标保存在一个叫做`icons` 的文件夹下，和你的 HTML 文件在同一个目录下。
+1. 第一步，从 Github 上下载我们需要的图标 ([警告图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/warning.png) 和 [聊天图标](https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/functions/icons/chat.png)) 。把图标保存在一个叫做`icons` 的文件夹下，和你的 HTML 文件在同一个目录下。
 
     > **备注：** 警告和聊天图标是在这个网站 iconfinder.com 上找到的，设计者是 [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr)。感谢他！
 
-2.  下一步，找到页面的 CSS 文件。我们要修改下以便我们使用图标。首先，修改 `.msgBox` 的宽度：
+2. 下一步，找到页面的 CSS 文件。我们要修改下以便我们使用图标。首先，修改 `.msgBox` 的宽度：
 
     ```css
     width: 200px;
@@ -252,7 +252,7 @@ btn.onclick = displayMessage();
     width: 242px;
     ```
 
-3.  下一步，在 `.msgBox p { ... }` 里面添加几条新规则：
+3. 下一步，在 `.msgBox p { ... }` 里面添加几条新规则：
 
     ```css
     padding-left: 82px;
@@ -260,7 +260,7 @@ btn.onclick = displayMessage();
     background-repeat: no-repeat;
     ```
 
-4.  CSS 改完了以后我们就要来修改函数 `displayMessage()` 让它能够显示图标。在你的函数结束符之前`}`添加下面这几行代码：
+4. CSS 改完了以后我们就要来修改函数 `displayMessage()` 让它能够显示图标。在你的函数结束符之前`}`添加下面这几行代码：
 
     ```js
     if (msgType === 'warning') {
@@ -276,7 +276,7 @@ btn.onclick = displayMessage();
 
     来解释下，如果第二个参数 `msgType` 的值为 `'warning'`, 我们的消息框将显示一个警告图标和一个红色的背景。如果这个参数的值是 `'chat'`, 将显示聊天图标和水蓝色的背景。如果 `msgType` 没有指定任何值 (或者不是`'warning'`和`'chat'`), 然后这个 `else { ... }` 代码块将会被执行，代码的意思是给消息段落设置了一个简单的左内边距并且没有图标，也没有背景颜色。这么做是为了当没有提供 `msgType` 参数的时候给函数一个默认行为，意思是这是一个可选参数（你没发现？其实我们已经用过了！就在这里`btn.onclick = function() { displayMessage('Woo, this is a different message!'); };`只是当时我们没有写这个`else`段，也就是啥操作也没做）！
 
-5.  现在来测试下我们的新函数，可以直接调用 `displayMessage()` 像这样：
+5. 现在来测试下我们的新函数，可以直接调用 `displayMessage()` 像这样：
 
     ```js
     displayMessage('Woo, this is a different message!');

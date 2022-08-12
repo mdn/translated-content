@@ -138,9 +138,9 @@ Define the other menu items
 
 Here is a summary of the above does:
 
-1.  The menu items are declared.
-2.  An empty `div` with the ID `tabs-list` is declared to contain the list of tabs.
-3.  tabs.js is called.
+1. The menu items are declared.
+2. An empty `div` with the ID `tabs-list` is declared to contain the list of tabs.
+3. tabs.js is called.
 
 ### tabs.js
 
@@ -166,10 +166,10 @@ Now, `listTabs()` is ready to create the content for the popup.
 
 To start with:
 
-1.  Grab the `tabs-list` `div`.
-2.  Create a document fragment (into which the list will be built).
-3.  Set counters.
-4.  Clear the content of the `tabs-list` `div`.
+1. Grab the `tabs-list` `div`.
+2. Create a document fragment (into which the list will be built).
+3. Set counters.
+4. Clear the content of the `tabs-list` `div`.
 
 ```js
 function listTabs() {
@@ -184,13 +184,13 @@ function listTabs() {
 
 Next, we’ll create the links for each tab:
 
-1.  Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
-2.  For each item, add a hyperlink to the document fragment.
+1. Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
+2. For each item, add a hyperlink to the document fragment.
 
     - The link’s label—that is, its text—is set using the tab’s title (or the ID, if it has no title).
     - The link’s address is set using the tab’s ID.
 
-```js
+    ```js
     for (let tab of tabs) {
      if (!tab.active && counter <= limit) {
         let tabLink = document.createElement('a');
@@ -205,7 +205,7 @@ Next, we’ll create the links for each tab:
      counter += 1;
 
     }
-```
+    ```
 
 Finally, the document fragment is written to the `tabs-list` div:
 

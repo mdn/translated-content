@@ -102,9 +102,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 在每个实现阶段之后，你需要测试这些新功能。要开始测试，你应该确保你的代码没有能够阻止功能运行的一般性错误：
 
-1.  在一些稳定浏览器中测试，例如 Firefox、Safari、Chrome 或 IE/Edge。
-2.  做一些低可用性测试，比如尝试只用键盘使用网站，或通过屏幕阅读器访问，来检查可操纵性。
-3.  在移动端测试，例如 iOS 或 Android。
+1. 在一些稳定浏览器中测试，例如 Firefox、Safari、Chrome 或 IE/Edge。
+2. 做一些低可用性测试，比如尝试只用键盘使用网站，或通过屏幕阅读器访问，来检查可操纵性。
+3. 在移动端测试，例如 iOS 或 Android。
 
 此时，你要修复一切发现的问题。
 

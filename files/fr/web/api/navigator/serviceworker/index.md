@@ -47,5 +47,5 @@ if ('serviceWorker' in navigator) {
 
 ## Voir aussi
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [Utilisation de Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [ServiceWorker API](/fr/docs/Web/API/ServiceWorker_API)
+- [Utilisation de Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)

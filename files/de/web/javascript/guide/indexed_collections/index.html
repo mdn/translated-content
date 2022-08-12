@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
 
-<p class="summary">Dieses Kapitel beschreibt Datensammlungen, die nach einem Indexwert sortiert sind. Diese beinhalten Arrays und Array-ähnliche Konstrukte, wie {{jsxref("Array")}} Objekte {{jsxref("TypedArray")}} Objekte.</p>
+<p class="summary">Dieses Kapitel beschreibt Datensammlungen, die nach einem Indexwert sortiert sind. Diese beinhalten Arrays und Array-ähnliche Konstrukte, wie {{jsxref("Array")}} Objekte {{jsxref("TypedArray")}} Objekte.</p>
 
-<h2 id="Array_Objekt"><code>Array</code> Objekt</h2>
+<h2 id="Array_Objekt"><code>Array</code> Objekt</h2>
 
 <p>Ein <em>Array</em> ist ein sortiertes Set an Werten, die mit einem Namen und einem Index referenziert werden. Zum Beispiel könnte ein Array mit dem Namen <code>emp</code> Mitarbeiternamen enthalten, die über ihre Mitarbeiternummer indexiert sind. <code>emp[1]</code> würde somit Mitarbeiter Eins sein, <code>emp[2]</code> ist Mitarbeiter Zwei, und so weiter.</p>
 
 <p>JavaScript hat keinen expliziten Array-Datentyp, aber es ist möglich, das vordefinierte <code>Array</code> Objekt und dessen Methoden zu verwenden, um mit Arrays zu arbeiten. Das <code>Array</code> Objekt verfügt über Methoden, um Arrays auf unterschiedliche Weisen zu manipulieren. Es hat ein Property um die Arraylänge zu bestimmen, und andere Properties für die Verwendung von Regular Expressions.</p>
 
-<h3 id="Ein_Array_erstellen">Ein Array erstellen</h3>
+<h3 id="Ein_Array_erstellen">Ein Array erstellen</h3>
 
 <p>Die folgenden Statements erstellen äquivalente Arrays:</p>
 
@@ -31,7 +31,7 @@ var arr = [element0, element1, ..., elementN];
 
 <p><code>element0, element1, ..., elementN</code> ist eine Liste von Werten für die Elemente im Array. Das Array wird mit den Werten als Elemente initialisiert. Das <code>length</code> Property des Arrays entspricht dann der Anzahl Argumente.</p>
 
-<p>Die Bracket-Syntax wird als "Array-Literal" oder "Array-Initialisierer" bezeichnet. Es ist eine kürzere Form der Array-Erstellung und wird allgemein bevorzugt. Siehe <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals">Array literals</a> für weitere Details.</p>
+<p>Die Bracket-Syntax wird als "Array-Literal" oder "Array-Initialisierer" bezeichnet. Es ist eine kürzere Form der Array-Erstellung und wird allgemein bevorzugt. Siehe <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals">Array literals</a> für weitere Details.</p>
 
 <p>Um ein leeres Array mit einer Länge von mehr als Null zu erstellen, kann eine der folgenden Statements verwendet werden:</p>
 
@@ -44,7 +44,7 @@ arr.length = arrayLength;
 </pre>
 
 <div class="note">
-<p><strong>Bemerkung :</strong> im obigen Code, <code>arrayLength</code> muss ein <code>Number</code> Objekt sein, ansonsten wird ein Array mit einem Element (dem übergebenen Wert) erstellt. Ein Aufruf von <code>arr.length</code> wird <code>arrayLength</code> zurückgeben, aber das Array besteht aus leeren (<code>undefined</code>) Elementen. Eine {{jsxref("Statements/for...in","for...in")}} Schleife wird keine der Elemente aus dem Array zurückgeben.</p>
+<p><strong>Bemerkung :</strong> im obigen Code, <code>arrayLength</code> muss ein <code>Number</code> Objekt sein, ansonsten wird ein Array mit einem Element (dem übergebenen Wert) erstellt. Ein Aufruf von <code>arr.length</code> wird <code>arrayLength</code> zurückgeben, aber das Array besteht aus leeren (<code>undefined</code>) Elementen. Eine {{jsxref("Statements/for...in","for...in")}} Schleife wird keine der Elemente aus dem Array zurückgeben.</p>
 </div>
 
 <p>Neben der Zuweisung an eine neue Variable, wie im Beispiel oben gezeigt, können Arrays auch als Property eines neuen oder existierenden Objekts zugewiesen werden:</p>
@@ -62,16 +62,16 @@ var obj = {prop: [element0, element1, ...., elementN]};
 <p>Wenn ein Array mit einem einzelnen <code>Number</code> Objekt erstellt werden soll, muss die Bracket-Syntax verwendet werden. Wenn ein einzelnes <code>Number</code> Objekt an den/der Array() Konstruktor oder Funktion übergeben wird, wird es als <code>arrayLength</code> und nicht als einzelnes Element interpretiert.</p>
 
 <pre class="brush: js">var arr = [42];      // Erstellt ein Array mit genau einem
-                     // Element: der Nummer 42.
+                     // Element: der Nummer 42.
 
 var arr = Array(42); // Erstellt ein Array ohne Elemente und
                      // arr.length wird als 42 gesetzt; dies
-                     // ist äquivalent zu:
+                     // ist äquivalent zu:
 var arr = [];
 arr.length = 42;
 </pre>
 
-<p>Wenn <code>Array(N)</code> aufgerufen wird und <code>N</code> keine Ganzzahl ist, wird ein <code>RangeError</code> geworfen. Das folgende Beispiel illustriert dieses Verhalten:</p>
+<p>Wenn <code>Array(N)</code> aufgerufen wird und <code>N</code> keine Ganzzahl ist, wird ein <code>RangeError</code> geworfen. Das folgende Beispiel illustriert dieses Verhalten:</p>
 
 <pre class="brush: js">var arr = Array(9.3);  // RangeError: Invalid array length
                        // "Ungültige Array-Länge"</pre>
@@ -89,7 +89,7 @@ emp[2] = 'August West';
 </pre>
 
 <div class="note">
-<p><strong>Bemerkung :</strong> Wenn ein Wert dem Array-Operator übergeben wird, der kein Integer ist, wie im obigen Code, wird ein Property auf dem Array-Objekt erstellt, statt als Array-Element.</p>
+<p><strong>Bemerkung :</strong> Wenn ein Wert dem Array-Operator übergeben wird, der kein Integer ist, wie im obigen Code, wird ein Property auf dem Array-Objekt erstellt, statt als Array-Element.</p>
 
 <p>Der Array-Operator ist die Rechteckige Klammer nach der Array-Variable.</p>
 </div>
@@ -116,7 +116,7 @@ var myArray = ['Mango', 'Apple', 'Orange'];
 <p>Das erste Element kann mit <code>myArray[0]</code>, und das zweite Element des Arrays mit <code>myArray[1]</code> referenziert werden. Der Index der Elemente beginnt mit Null.</p>
 
 <div class="note">
-<p><strong>Bemerkung :</strong> Der Array-Operator (Rechteckige Klammer) wird auch für den Zugriff auf die Properties des Arrays (Arrays sind in JavaScript auch Objekte) verwendet. Beispielsweise:</p>
+<p><strong>Bemerkung :</strong> Der Array-Operator (Rechteckige Klammer) wird auch für den Zugriff auf die Properties des Arrays (Arrays sind in JavaScript auch Objekte) verwendet. Beispielsweise:</p>
 </div>
 
 <pre class="brush: js">var arr = ['one', 'two', 'three'];
@@ -140,7 +140,7 @@ console.log(cats.length); // 3
 
 cats.length = 2;
 console.log(cats); // Loggt "Dusty, Misty" - Twiggy wurde
-                   // entfernt.
+                   // entfernt.
 
 cats.length = 0;
 console.log(cats); // Loggt nichts; Das 'cats' Array ist leer.
@@ -159,7 +159,7 @@ for (var i = 0; i &lt; colors.length; i++) {
 }
 </pre>
 
-<p>Wenn es ausgeschlossen ist, dass eines der Elemente im Array in einem Boolean-Kontext als <code>false</code> evaluiert wird — beispielsweise, wenn es nur aus <a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a> Knoten besteht — kann ein effizienterer Ausdruck verwendet werden:</p>
+<p>Wenn es ausgeschlossen ist, dass eines der Elemente im Array in einem Boolean-Kontext als <code>false</code> evaluiert wird — beispielsweise, wenn es nur aus <a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a> Knoten besteht — kann ein effizienterer Ausdruck verwendet werden:</p>
 
 <pre class="brush: js">var divs = document.getElementsByTagName('div');
 for (var i = 0, div; div = divs[i]; i++) {
@@ -167,9 +167,9 @@ for (var i = 0, div; div = divs[i]; i++) {
 }
 </pre>
 
-<p>Dies vermeidet den Overhead bei der Überprüfung der Array-Länge und  weist der <code>div</code> Variable den aktuellen Wert des Schleifendurchlaufs sofort zu.</p>
+<p>Dies vermeidet den Overhead bei der Überprüfung der Array-Länge und  weist der <code>div</code> Variable den aktuellen Wert des Schleifendurchlaufs sofort zu.</p>
 
-<p>Die {{jsxref("Array.forEach", "forEach()")}} Methode erlaubt eine andere Variate zur Iteration über ein Array:</p>
+<p>Die {{jsxref("Array.forEach", "forEach()")}} Methode erlaubt eine andere Variate zur Iteration über ein Array:</p>
 
 <pre class="brush: js">var colors = ['red', 'green', 'blue'];
 colors.forEach(function(color) {
@@ -189,7 +189,7 @@ array.forEach(function(element) {
 })
 
 if (array[2] === undefined) { // true
-  console.log('array[2] is undefined');
+  console.log('array[2] is undefined');
 }
 
 var array = ['first', 'second', undefined, 'fourth'];
@@ -199,7 +199,7 @@ array.forEach(function(element) {
   console.log(element);
 })</pre>
 
-<p>Weil JavaScript Elemente als normale Objekt-Properties abgelegt werden, ist es nicht ratsam Arrays mit {{jsxref("Statements/for...in","for...in")}} zu iterieren, weil normale Elemente plus alle aufzählbaren (enumerable) Properties aufgelistet werden.</p>
+<p>Weil JavaScript Elemente als normale Objekt-Properties abgelegt werden, ist es nicht ratsam Arrays mit {{jsxref("Statements/for...in","for...in")}} zu iterieren, weil normale Elemente plus alle aufzählbaren (enumerable) Properties aufgelistet werden.</p>
 
 <h3 id="Array-Methoden">Array-Methoden</h3>
 
@@ -216,7 +216,7 @@ myArray = myArray.concat('a', 'b', 'c');
 
 <pre class="brush: js">var myArray = new Array('Earth', 'Wind', 'Fire');
 var list = myArray.join(' - '); // list ist
-                                // "Earth - Wind - Fire".
+                                // "Earth - Wind - Fire".
 </pre>
 
 <p>{{jsxref("Array.push", "push()")}} fügt eines oder mehrere Elemente an ein Array und gibt den Wert des neuen <code>length</code> Property zurück.</p>
@@ -249,9 +249,9 @@ myArray.unshift('4', '5');
 
 <pre class="brush: js">var myArray = new Array('a', 'b', 'c', 'd', 'e');
 myArray = myArray.slice(1, 4); // Beginnt bei Index 1 und
-                               // extrahiert alle Elemente bis
+                               // extrahiert alle Elemente bis
                                // Index 3 und gibt somit
-                               // [ "b", "c", "d"] zurück.
+                               // [ "b", "c", "d"] zurück.
 </pre>
 
 <p>{{jsxref("Array.splice", "splice(index, count_to_remove, addElement1, addElement2, ...)")}} entfernt einen Teil des Arrays und ersetzt sie (optional). Der rückgegebene Wert entspricht den entfernten Elementen.</p>
@@ -279,7 +279,7 @@ myArray.sort();
 // myArray = ["Earth", "Fire", "Wind"]
 </pre>
 
-<p><code>sort()</code> kann auch eine Callback-Funktion verwenden, um zu bestimmen, wie die Elemente miteinander verglichen werden sollen. Die Funktion vergleicht zwei Werte und gibt einen von drei Werten zurück:</p>
+<p><code>sort()</code> kann auch eine Callback-Funktion verwenden, um zu bestimmen, wie die Elemente miteinander verglichen werden sollen. Die Funktion vergleicht zwei Werte und gibt einen von drei Werten zurück:</p>
 
 <p>Beispielsweise wird der folgende Code das Array nach dem letzten Buchstaben des Strings sortieren:</p>
 
@@ -293,9 +293,9 @@ myArray.sort(sortFn);
 // myArray = ["Wind","Fire","Earth"]</pre>
 
 <ul>
- <li>Wenn <code>a</code> kleiner ist als <code>b</code>, -1 (oder eine andere negative Zahl) wird zurückgegeben</li>
- <li>Wenn <code>a</code> ist grösser als <code>b</code>, 1 (oder eine andere positive Zahl) wird zurückgegeben</li>
- <li>Wenn <code>a</code> und <code>b</code> äquivalent sind, wird 0 zurückgegeben.</li>
+ <li>Wenn <code>a</code> kleiner ist als <code>b</code>, -1 (oder eine andere negative Zahl) wird zurückgegeben</li>
+ <li>Wenn <code>a</code> ist grösser als <code>b</code>, 1 (oder eine andere positive Zahl) wird zurückgegeben</li>
+ <li>Wenn <code>a</code> und <code>b</code> äquivalent sind, wird 0 zurückgegeben.</li>
 </ul>
 
 <p>{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} durchsucht das Array nach <code>searchElement</code> und gibt den Index des ersten Treffers zurück.</p>
@@ -362,22 +362,22 @@ var a3 = ['1', '2', '3'];
 console.log(a3.some(isNumber)); // Loggt false.
 </pre>
 
-<p>Die obige Methoden, die eine <code>callback</code> Funktion als Argument verlangen sind als <em>Iterative Methoden</em> bekannt, weil sie über das ganze Array auf irgendeine Weise iterieren. Jede der Methoden nimmt ein optionales zweites Argument <code>thisObject</code>. Wenn <code>thisObject</code> übergeben wird, wird es im Kontext der <code>callback</code> Funktion als <code>this</code> behandelt. Falls es nicht übergeben wird, wie es auch der Fall ist, wenn eine Funktion ausserhalb eines expliziten Objektkontext aufgerufen wird, referenziert this das globale Objekt ({{domxref("window")}}).</p>
+<p>Die obige Methoden, die eine <code>callback</code> Funktion als Argument verlangen sind als <em>Iterative Methoden</em> bekannt, weil sie über das ganze Array auf irgendeine Weise iterieren. Jede der Methoden nimmt ein optionales zweites Argument <code>thisObject</code>. Wenn <code>thisObject</code> übergeben wird, wird es im Kontext der <code>callback</code> Funktion als <code>this</code> behandelt. Falls es nicht übergeben wird, wie es auch der Fall ist, wenn eine Funktion ausserhalb eines expliziten Objektkontext aufgerufen wird, referenziert this das globale Objekt ({{domxref("window")}}).</p>
 
 <p>Die <code>callback</code> Funktion wird jeweils mit drei Argumenten aufgerufen. Das erste ist der Wert des aktuellen Elements in der Iteration, das zweite ist der Index des Elements und das dritte ist eine Referenz auf das Array selbst. JavaScript Funktionen ignorieren Parameter, die in der Liste nicht benannt werden, es ist somit sicher, eine Funktion als <code>callback</code> zu definieren, die nur ein einzelnes Argument nimmt, zum Beispiel <code>alert</code>.</p>
 
-<p> </p>
+<p> </p>
 
-<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} wendet <code>callback(firstValue, secondValue)</code> an, um die Liste auf einen einzelnen Wert zu reduzieren.</p>
+<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} wendet <code>callback(firstValue, secondValue)</code> an, um die Liste auf einen einzelnen Wert zu reduzieren.</p>
 
 <pre class="brush: js">var a = [10, 20, 30];
 var total = a.reduce(function(first, second) { return first + second; }, 0);
 console.log(total) // Loggt 60.
 </pre>
 
-<p>{{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funktioniert wie <code>reduce()</code>, aber startet am Ende des Arrays.</p>
+<p>{{jsxref("Array.reduceRight", "reduceRight(callback[, initialValue])")}} funktioniert wie <code>reduce()</code>, aber startet am Ende des Arrays.</p>
 
-<p><code>reduce</code> und <code>reduceRight</code> sind die unauffälligsten iterativen Array-Methoden. Sie sollten dazu verwendet werden, rekursiv jeweils zwei Werte miteinander zu kombinieren, bis nur noch ein einzelner Wert verbleibt.</p>
+<p><code>reduce</code> und <code>reduceRight</code> sind die unauffälligsten iterativen Array-Methoden. Sie sollten dazu verwendet werden, rekursiv jeweils zwei Werte miteinander zu kombinieren, bis nur noch ein einzelner Wert verbleibt.</p>
 
 <h3 id="Mehrdimensionale_Arrays">Mehrdimensionale Arrays</h3>
 
@@ -402,11 +402,11 @@ Zeile 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <h3 id="Arrays_und_Regular_Expressions">Arrays und Regular Expressions</h3>
 
-<p>Wenn ein Array das Resultat einer Regular Expression auf einem String ist, wird das Array Properties und Elemente zuückgeben, die Informationen zum Match liefern. Der Rückgabewert der {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, und {{jsxref("Global_Objects/String/split","String.split()")}} Methode ist ein Array. Für weitere Informationen für die Verwendung von Arrays mit Regular Expressions, siehe <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a>.</p>
+<p>Wenn ein Array das Resultat einer Regular Expression auf einem String ist, wird das Array Properties und Elemente zuückgeben, die Informationen zum Match liefern. Der Rückgabewert der {{jsxref("Global_Objects/RegExp/exec","RegExp.exec()")}}, {{jsxref("Global_Objects/String/match","String.match()")}}, und {{jsxref("Global_Objects/String/split","String.split()")}} Methode ist ein Array. Für weitere Informationen für die Verwendung von Arrays mit Regular Expressions, siehe <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a>.</p>
 
 <h3 id="Mit_Array-ähnlichen_Objekten_arbeiten">Mit Array-ähnlichen Objekten arbeiten</h3>
 
-<p>Manche JavaScript Objekte, wie {{domxref("NodeList")}}, welche von {{domxref("document.getElementsByTagName()")}} zurückgegeben oder als {{jsxref("Functions/arguments","arguments")}} in einem Funktionskörper referenziert wird, verhalten sich wie Arrays, aber teilen nicht alle deren Methoden. Das <code>arguments</code> Objekt stellt ein {{jsxref("Global_Objects/Function/length","length")}} Attribut zur Verfügung, implementiert aber beispielsweise nicht die {{jsxref("Array.forEach", "forEach()")}} Methode.</p>
+<p>Manche JavaScript Objekte, wie {{domxref("NodeList")}}, welche von {{domxref("document.getElementsByTagName()")}} zurückgegeben oder als {{jsxref("Functions/arguments","arguments")}} in einem Funktionskörper referenziert wird, verhalten sich wie Arrays, aber teilen nicht alle deren Methoden. Das <code>arguments</code> Objekt stellt ein {{jsxref("Global_Objects/Function/length","length")}} Attribut zur Verfügung, implementiert aber beispielsweise nicht die {{jsxref("Array.forEach", "forEach()")}} Methode.</p>
 
 <p>Array Prototyp-Methoden können auf einem Array-ähnlichen Objekt aufgerufen werden, siehe folgendes Beispiel:</p>
 
@@ -425,24 +425,24 @@ Zeile 3: [3, 0] [3, 1] [3, 2] [3, 3]
 
 <h2 id="Typisierte_Arrays">Typisierte Arrays</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typisierte Arrays</a> sind Array-ähnliche Objekte und stellen einen Mechanismus für den Zugriff auf Raw-Binärdaten zur Verfügung. Wie bereits erklärt, passen {{jsxref("Array")}} Objekte ihre Grösse dynamisch an und können beliebige Werte enthalten. JavaScript Engines führen Optimierungen durch, damit diese Arrays schneller sind. Je stärker Web-Applikationen werden mit Features wie Audio und Video Manipulation, Zugriff auf Raw Daten mit <a href="/en-US/docs/WebSockets">WebSockets</a> und so weiter, ist es hilfreich, wenn JavaScript Code einfach und schnell Raw Binärdaten in typisierten Arrays manipulieren kann.</p>
+<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typisierte Arrays</a> sind Array-ähnliche Objekte und stellen einen Mechanismus für den Zugriff auf Raw-Binärdaten zur Verfügung. Wie bereits erklärt, passen {{jsxref("Array")}} Objekte ihre Grösse dynamisch an und können beliebige Werte enthalten. JavaScript Engines führen Optimierungen durch, damit diese Arrays schneller sind. Je stärker Web-Applikationen werden mit Features wie Audio und Video Manipulation, Zugriff auf Raw Daten mit <a href="/en-US/docs/WebSockets">WebSockets</a> und so weiter, ist es hilfreich, wenn JavaScript Code einfach und schnell Raw Binärdaten in typisierten Arrays manipulieren kann.</p>
 
 <h3 id="Buffers_und_Views_Typisierte_Array_Architektur">Buffers und Views: Typisierte Array Architektur</h3>
 
-<p>Um maximale Flexibilität und Effizienz zu erreichen, werden typisierte Arrays in JavaScript auf <strong>Buffers</strong> und V<strong>iews</strong> aufgeteilt. Ein Buffer (implementiert durch das {{jsxref("ArrayBuffer")}} Objekt) ist ein Objekt, welches einen Block Daten repräsentiert; es hat kein Format und keine Mechanismen für den Zugriff auf Inhalte. Um auf den Speicher in einem Buffer zuzugreifen, wird eine View benötigt. Eine View stellt einen Kontext — einen Datentyp, Start-Offset und eine Anzahl Elemente — zur Verfügung, welcher die Daten in einen typisierten Array verwandelt.</p>
+<p>Um maximale Flexibilität und Effizienz zu erreichen, werden typisierte Arrays in JavaScript auf <strong>Buffers</strong> und V<strong>iews</strong> aufgeteilt. Ein Buffer (implementiert durch das {{jsxref("ArrayBuffer")}} Objekt) ist ein Objekt, welches einen Block Daten repräsentiert; es hat kein Format und keine Mechanismen für den Zugriff auf Inhalte. Um auf den Speicher in einem Buffer zuzugreifen, wird eine View benötigt. Eine View stellt einen Kontext — einen Datentyp, Start-Offset und eine Anzahl Elemente — zur Verfügung, welcher die Daten in einen typisierten Array verwandelt.</p>
 
 <p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 
-<p>Der {{jsxref("ArrayBuffer")}} ist ein Datentyp, welcher für die Darstellung von generischen Binär-Daten-Buffer mit einer fixen Grösse. Der Inhalt eines <code>ArrayBuffer</code> kann nicht direkt manipuliert werden; stattdessen kann eine typisierte Array-View oder eine {{jsxref("DataView")}} erstellt werden, welches den Buffer in einem spezifischen Format darstellt, welche dann für das Lesen und Schreiben der Inhalte auf dem Buffer verwendet werden kann.</p>
+<p>Der {{jsxref("ArrayBuffer")}} ist ein Datentyp, welcher für die Darstellung von generischen Binär-Daten-Buffer mit einer fixen Grösse. Der Inhalt eines <code>ArrayBuffer</code> kann nicht direkt manipuliert werden; stattdessen kann eine typisierte Array-View oder eine {{jsxref("DataView")}} erstellt werden, welches den Buffer in einem spezifischen Format darstellt, welche dann für das Lesen und Schreiben der Inhalte auf dem Buffer verwendet werden kann.</p>
 
-<h3 id="Typisierte_Array-Views">Typisierte Array-Views</h3>
+<h3 id="Typisierte_Array-Views">Typisierte Array-Views</h3>
 
-<p>Typisierte Array-Views haben selbstbeschreibende Namen und stellen Views für alle geläufigen numerischen Typen, wie <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> und so weiter, zur Verfügung. Es gibt ein spezielles typisiertes Array: <code>Uint8ClampedArray</code>. Es klemmt (clamps) zwischen 0 und 255. Dies ist hilfreich für <a href="/en-US/docs/Web/API/ImageData">Canvas Datenverarbeitung</a>, zum Beispiel.</p>
+<p>Typisierte Array-Views haben selbstbeschreibende Namen und stellen Views für alle geläufigen numerischen Typen, wie <code>Int8</code>, <code>Uint32</code>, <code>Float64</code> und so weiter, zur Verfügung. Es gibt ein spezielles typisiertes Array: <code>Uint8ClampedArray</code>. Es klemmt (clamps) zwischen 0 und 255. Dies ist hilfreich für <a href="/en-US/docs/Web/API/ImageData">Canvas Datenverarbeitung</a>, zum Beispiel.</p>
 
 <p>{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}</p>
 
-<p>Für weitere Informationen, siehe <a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript Typisierte Arrays</a> und die Referenzdokumentation für die unterschiedlichen {{jsxref("TypedArray")}} Objekte.</p>
+<p>Für weitere Informationen, siehe <a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript Typisierte Arrays</a> und die Referenzdokumentation für die unterschiedlichen {{jsxref("TypedArray")}} Objekte.</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</p>

@@ -26,8 +26,8 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
   - : Est un {{domxref("DOMString")}} contenant l'identifcateur de contexte définissant le contexte de dessin associé au canevas. Les valeurs possibles sont :
 
     - `"2d`", conduisant à la création d'un objet {{domxref("CanvasRenderingContext2D")}} représentant un contexte de représentation bi-dimensionnel.
-    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/en-US/docs/Web/WebGL) (OpenGL ES 2.0).
-    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/en-US/docs/Web/WebGL) (OpenGL ES 3.0). {{experimental_inline}}.
+    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 2.0).
+    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/WebGL) (OpenGL ES 3.0). {{experimental_inline}}.
     - `"bitmaprenderer"` pour créer un {{domxref("ImageBitmapRenderingContext")}} ne fournissant que la fonctionnalité de remplacement du contenu du canevas par une {{domxref("ImageBitmap")}} donnée.
 
     Note : l'identificateur "`experimental-webgl`" est utilisé dans les nouvelles implémentations de WebGL. Ces implémentations n'ont pas encore obtenu la conformité à la suite de test, ou l'emploi des pilotes graphiques sur la plateforme n'est pas encore stable. Le [Khronos Group](https://www.khronos.org/) certifie les implémentations WebGL sous certaines [règles de conformité](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
@@ -85,7 +85,7 @@ var ctx = canvas.getContext('2d');
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 
-Vous avez alors le [contexte 2D de représentation](/en-US/docs/Web/API/CanvasRenderingContext2D) pour un canevas, et vous pouvez dessiner à l'intérieur.
+Vous avez alors le [contexte 2D de représentation](/fr/docs/Web/API/CanvasRenderingContext2D) pour un canevas, et vous pouvez dessiner à l'intérieur.
 
 ## Spécifications
 

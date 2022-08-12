@@ -56,9 +56,9 @@ tags:
 
 來建立我們的一個元件，這個元件會顯示一個待辦項目，我們會使用它來建立待辦清單。
 
-1.  在你的 `moz-todo-vue/src/components` 資料夾裡建立一個新檔案並命名為 `ToDoItem.vue` 。在程式編輯器打開這個檔案。
-2.  在檔案頂端加上 `<template></template>` 來建立元件的模板。
-3.  在 template 區塊底下建立一個 `<script></script>` 區塊。在 `<script>` 標籤之間加上一個預設匯出的物件 `export default {}` ，這是你的元件物件。
+1. 在你的 `moz-todo-vue/src/components` 資料夾裡建立一個新檔案並命名為 `ToDoItem.vue` 。在程式編輯器打開這個檔案。
+2. 在檔案頂端加上 `<template></template>` 來建立元件的模板。
+3. 在 template 區塊底下建立一個 `<script></script>` 區塊。在 `<script>` 標籤之間加上一個預設匯出的物件 `export default {}` ，這是你的元件物件。
 
 現在你的檔案應該會像這樣：
 
@@ -71,8 +71,8 @@ tags:
 
 我們現在開始為 `ToDoItem` 添加實際內容。目前 Vue 模板只允許存在一個根元素——用一個元素來包裝在 template 區塊裡面的所有內容（這個情況在 Vue 3 發布後會改變）。我們將使用一個 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 來做為根元素。
 
-1.  現在在元件 template 裡面新增一個空的 `<div>` 。
-2.  在這個 `<div>` 裡面，新增一個 checkbox 和一個相對應的 label。在 checkbox 加上一個 `id` 屬性，並在 label 加上 `for` 屬性，使 checkbox 對應到 label 。如下所示。
+1. 現在在元件 template 裡面新增一個空的 `<div>` 。
+2. 在這個 `<div>` 裡面，新增一個 checkbox 和一個相對應的 label。在 checkbox 加上一個 `id` 屬性，並在 label 加上 `for` 屬性，使 checkbox 對應到 label 。如下所示。
 
     ```html
     <template>
@@ -87,14 +87,14 @@ tags:
 
 目前一切都很好，但是我們還沒把元件加到應用程式裡面，所以沒辦法測試它是否可以正常運作。現在讓我們把它加到應用程式裡。
 
-1.  再一次打開 `App.vue` 。
-2.  在 `<script>` 標籤的頂端，加上以下內容來匯入 `ToDoItem` 元件：
+1. 再一次打開 `App.vue` 。
+2. 在 `<script>` 標籤的頂端，加上以下內容來匯入 `ToDoItem` 元件：
 
     ```js
     import ToDoItem from './components/ToDoItem.vue';
     ```
 
-3.  在元件物件裡面添加 `components` 屬性，然後在它裡面添加 `ToDoItem` 元件來註冊它。
+3. 在元件物件裡面添加 `components` 屬性，然後在它裡面添加 `ToDoItem` 元件來註冊它。
 
 現在你的 `<script>` 內容應該會像這樣：
 
@@ -113,8 +113,8 @@ export default {
 
 要在應用程式裡實際渲染 `ToDoItem` 元件，你需要在 `<template>` 元素裡面呼叫它——加上 `<to-do-item></to-do-item>` 元素。請注意，元件檔案名稱和它在 JavaScript 的表示法通常是用大駝峰式命名法（ PascalCase ，例如： `ToDoList` ），而相對應的自訂元素是用 kebab-case（例如： `<to-do-list>` ）。
 
-1.  在 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 底下建立一個無序清單（ [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) ）包含單一個清單項目（ [`<li>`](/zh-TW/docs/Web/HTML/Element/li) ）。
-2.  在清單項目（ \<li> ）裡面加上 `<to-do-item></to-do-item>` 。
+1. 在 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 底下建立一個無序清單（ [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) ）包含單一個清單項目（ [`<li>`](/zh-TW/docs/Web/HTML/Element/li) ）。
+2. 在清單項目（ \<li> ）裡面加上 `<to-do-item></to-do-item>` 。
 
 現在你的 `App.vue` 的 `<template>` 內容應該會像這樣：
 
@@ -150,18 +150,18 @@ In Vue, there are two ways to register props:
 
 For this component, we’ll use the object registration method.
 
-1.  Go back to your `ToDoItem.vue` file.
-2.  Add a `props` property inside the export `default {}` object, which contains an empty object.
-3.  Inside this object, add two properties with the keys `label` and `done`.
-4.  The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
+1. Go back to your `ToDoItem.vue` file.
+2. Add a `props` property inside the export `default {}` object, which contains an empty object.
+3. Inside this object, add two properties with the keys `label` and `done`.
+4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
 
-    1.  The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
-    2.  The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
+    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
 
-5.  Now on to the `done` prop.
+5. Now on to the `done` prop.
 
-    1.  First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
-    2.  Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
+    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
 
 Your component object should now look like this:
 

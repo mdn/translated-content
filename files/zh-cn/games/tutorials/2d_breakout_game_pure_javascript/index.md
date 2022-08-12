@@ -28,15 +28,15 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 全部教程 — [MDN 消除小游戏](http://breakout.enclavegames.com/lesson10.html) 的各个版本我们正一起管理并托管到 [GitHub](https://github.com/end3r/Canvas-gamedev-workshop) 上：
 
-1.  [创建、绘制画布](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
-2.  [让球动起来](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3.  [反弹的墙](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4.  [键盘操作](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
-5.  [游戏结束](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
-6.  [创建砖块](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7.  [撞击处理](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)
-8.  [统计得分、获得胜利](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
-9.  [鼠标控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls)
+1. [创建、绘制画布](/zh-CN/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
+2. [让球动起来](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+3. [反弹的墙](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
+4. [键盘操作](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
+5. [游戏结束](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over)
+6. [创建砖块](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
+7. [撞击处理](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection)
+8. [统计得分、获得胜利](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
+9. [鼠标控制](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls)
 10. [完成](/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up)
 
 对于实现一个网页游戏而言，最好的方式是从纯 JavaScirpt 着手，那样可以让我们建立更坚实的基础。之后你可以在你的项目中选择你喜欢的框架。框架也只是用 JavaScript 语言实现的工具；如果你想要在项目中使用框架，你必须先了解语言本身。框架可以帮你提高开发效率并生成一些基础的内容；但是如果没有达到你的预期，你只能慢慢调试或者使用原生 JavaScript 去实现解决方案。

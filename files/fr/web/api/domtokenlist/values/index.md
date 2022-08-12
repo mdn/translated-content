@@ -23,7 +23,7 @@ Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Si nous récupérons un itérateur contenant les valeurs en utilisant `values()`, nous les itérons alors en utilisant une boucle [for ... of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) et écrivons chacune dans le {{domxref("Node.textContent")}} du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Si nous récupérons un itérateur contenant les valeurs en utilisant `values()`, nous les itérons alors en utilisant une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) et écrivons chacune dans le {{domxref("Node.textContent")}} du `<span>`.
 
 D'abord, le HTML :
 

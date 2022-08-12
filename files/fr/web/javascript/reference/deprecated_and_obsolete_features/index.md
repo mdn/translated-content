@@ -138,7 +138,7 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 
 ### Proxy
 
-- [Proxy.create](/en-US/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/en-US/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
+- [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
 - Les trappes de captures suivantes sont obsolètes :
 
   - `hasOwn` ({{bug(980565)}}, Firefox 33).
@@ -206,4 +206,4 @@ Voir la page [E4X](/fr/docs/E4X) pour plus d'informations.
 
 ### Sharp variables
 
-Voir la page [sur les variables « Sharp » en JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.
+Voir la page [sur les variables « Sharp » en JavaScript](/fr/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.

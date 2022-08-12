@@ -132,7 +132,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong><code>touch-action</code> CSS 属性</strong><br />The
         {{cssxref("touch-action")}} CSS property is part of the
-        {{SpecName("Pointer Events")}} specification and allows you to
+        <a href="https://www.w3.org/TR/pointerevents1/">Pointer Events</a> specification and allows you to
         specify how and in what way the user is able to manipulate an object by
         touch.
       </td>
@@ -147,7 +147,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
         <p>
           <strong>The <code>shape-outside</code> CSS property</strong><br />The
           {{cssxref("shape-outside")}} CSS property is part of the
-          {{SpecName("CSS Shapes")}} specification and allows you to
+          <a href="https://drafts.csswg.org/css-shapes/">CSS Shapes Module Level 1</a> specification and allows you to
           specify a float area causing inline contents to wrap around a shape.
         </p>
         <p>
@@ -168,7 +168,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>The <code>contain</code> CSS property</strong><br />The
         {{cssxref("contain")}} CSS property is part of the
-        {{SpecName("CSS Containment")}} specification and allows you to
+        <a href="https://drafts.csswg.org/css-contain-1/">CSS Containment Module Level 1</a> specification and allows you to
         indicate that an element and its contents are independent of the rest of
         the document tree, allowing
         {{Glossary("User agent", "user agents")}} to optimize the
@@ -185,7 +185,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
         <p>
           <strong>The <code>column-span</code> CSS property</strong><br />The
           {{cssxref("column-span")}} CSS property is part of the
-          {{SpecName("CSS3 Multicol")}} specification and allows you
+          <a href="https://drafts.csswg.org/css-multicol-1/">CSS Multi-column Layout Module</a> specification and allows you
           to specify how many columns an element spans across.
         </p>
         <p>

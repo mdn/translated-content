@@ -20,15 +20,15 @@ translation_of: Web/JavaScript/Reference/Operators/await
  <dd>Ein {{jsxref("Promise")}} oder jeder Wert, auf den gewartet wird.</dd>
  <dt><code>rv</code></dt>
  <dd>
- <p>Gibt den ermittelten Wert des <code>Promise</code> zurück, oder den Wert selbst, wenn es sich nicht um ein <code>Promise</code> handelt.</p>
+ <p>Gibt den ermittelten Wert des <code>Promise</code> zurück, oder den Wert selbst, wenn es sich nicht um ein <code>Promise</code> handelt.</p>
  </dd>
 </dl>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Der <code>await</code> Ausdruck lässt <code>async</code> Funktionen pausieren, bis ein <code>Promise</code> erfüllt oder abgewiesen ist, und führt die <code>async</code> danach weiter aus. Wenn die Funktion weiter ausgeführt wird, ist der Wert des <code>await</code> Ausdrucks der Wert des erfüllten <code>Promise</code>.</p>
+<p>Der <code>await</code> Ausdruck lässt <code>async</code> Funktionen pausieren, bis ein <code>Promise</code> erfüllt oder abgewiesen ist, und führt die <code>async</code> danach weiter aus. Wenn die Funktion weiter ausgeführt wird, ist der Wert des <code>await</code> Ausdrucks der Wert des erfüllten <code>Promise</code>.</p>
 
-<p>Wenn das <code>Promise</code> abgewiesen wird, wirft der <code>await</code> Ausdruck eine Exception mit dem zurückgewiesenen Wert.</p>
+<p>Wenn das <code>Promise</code> abgewiesen wird, wirft der <code>await</code> Ausdruck eine Exception mit dem zurückgewiesenen Wert.</p>
 
 <p>Ist der Wert des Ausdrucks, der auf den <code>await</code> Operator folgt, kein <code>Promise</code> ist, wird dieser zu einem <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">erfüllten Promise</a> konvertiert.</p>
 
@@ -51,7 +51,7 @@ async function f1() {
 f1();
 </pre>
 
-<p>Wenn der Wert kein <code>Promise</code> ist, wird dieser zu einem erfüllten <code>Promise</code> konvertiert und dessen Wert zurückgegeben.</p>
+<p>Wenn der Wert kein <code>Promise</code> ist, wird dieser zu einem erfüllten <code>Promise</code> konvertiert und dessen Wert zurückgegeben.</p>
 
 <pre class="brush: js">async function f2() {
   var y = await 20;
@@ -59,7 +59,7 @@ f1();
 }
 f2();</pre>
 
-<p>Wird ein <code>Promise</code> abgewiesen, so wird eine Exception mit dem zurückgewiesene Wert geworfen.</p>
+<p>Wird ein <code>Promise</code> abgewiesen, so wird eine Exception mit dem zurückgewiesene Wert geworfen.</p>
 
 <pre class="brush: js">async function f3() {
   try {
@@ -70,7 +70,7 @@ f2();</pre>
 }
 f3();</pre>
 
-<p>Abfangen von abgewiesenen <code>Promise</code>s ohne try-Block.</p>
+<p>Abfangen von abgewiesenen <code>Promise</code>s ohne try-Block.</p>
 
 <pre class="brush: js">var response = await promisedFunction().catch((err) =&gt; { console.log(err); });
 // response will be undefined if the promise is rejected

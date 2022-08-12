@@ -37,10 +37,10 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/zh-cn/DOM/KeyboardEvent#Attributes_location) attribute, has been implemented ({{ bug("166240") }}).
 - KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/zh-cn/DOM/KeyboardEvent#Virtual_key_codes).
 - The [`range.detach()`](/zh-cn/DOM/range.detach) method has been transformed in a no-op and will probably be removed in the future.
-- The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug ](https://bugzilla.mozilla.org/show_bug.cgi?id=480376)[480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
-- The `Performance` API has a new method, `now()`, supporting high resolution timers of type` DOMHighResTimeStamp`. ([bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)).
+- The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug 480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
+- The `Performance` API has a new method, `now()`, supporting high resolution timers of type `DOMHighResTimeStamp`. ([bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)).
 - The `Window.java` and `Window.packages` attributes has been removed. These were never documented, and hopefully you're not using them!
-- The [WebSMS API](/zh-cn/API/WebSMS) has been updated and now supports a `read `attribute indicating whether an SMS text message is read or unread.
+- The [WebSMS API](/zh-cn/API/WebSMS) has been updated and now supports a `read`attribute indicating whether an SMS text message is read or unread.
 - The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
 - The [`Blob`](/zh-cn/DOM/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
 - The {{domxref("DeviceLightEvent")}} specified in the [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) has been implemented.

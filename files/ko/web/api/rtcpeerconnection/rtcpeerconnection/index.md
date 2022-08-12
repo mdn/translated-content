@@ -111,7 +111,7 @@ the cost of generating new keys.
 
 ## 참고
 
-- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/en-US/docs/Web/API/WebRTC_API/Architecture)
-- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC architecture overview](/ko/docs/Web/API/WebRTC_API/Architecture)
+- [Lifetime of a WebRTC session](/ko/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}

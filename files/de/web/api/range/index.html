@@ -12,7 +12,7 @@ translation_of: Web/API/Range
 
 <p>The <strong><code>Range</code></strong> interface represents a fragment of a document that can contain nodes and parts of text nodes.</p>
 
-<p>A range can be created using the {{ domxref("Document.createRange", "createRange()") }} method of the {{ domxref("Document") }} object. Range objects can also be retrieved by using the {{ domxref("Selection/getRangeAt", "getRangeAt()") }} method of the {{ domxref("Selection") }} object or the {{domxref("Document/caretRangeFromPoint", "caretRangeAtPoint()")}} method of the {{domxref("Document")}} object.</p>
+<p>A range can be created using the {{ domxref("Document.createRange", "createRange()") }} method of the {{ domxref("Document") }} object. Range objects can also be retrieved by using the {{ domxref("Selection/getRangeAt", "getRangeAt()") }} method of the {{ domxref("Selection") }} object or the {{domxref("Document/caretRangeFromPoint", "caretRangeAtPoint()")}} method of the {{domxref("Document")}} object.</p>
 
 <p>There also is the {{domxref("Range.Range()", "Range()")}} constructor available.</p>
 
@@ -24,13 +24,13 @@ translation_of: Web/API/Range
  <dt>{{domxref("Range.collapsed")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("Boolean")}} indicating whether the range's start and end points are at the same position.</dd>
  <dt>{{domxref("Range.commonAncestorContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the deepest {{ domxref("Node") }} that contains the <code>startContainer</code> and <code>endContainer</code> nodes.</dd>
+ <dd>Returns the deepest {{ domxref("Node") }} that contains the <code>startContainer</code> and <code>endContainer</code> nodes.</dd>
  <dt>{{domxref("Range.endContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> ends.</dd>
+ <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> ends.</dd>
  <dt>{{domxref("Range.endOffset")}} {{readonlyInline}}</dt>
  <dd>Returns a number representing where in the <code>endContainer</code> the <code>Range</code> ends.</dd>
  <dt>{{domxref("Range.startContainer")}} {{readonlyInline}}</dt>
- <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> starts.</dd>
+ <dd>Returns the {{ domxref("Node") }} within which the <code>Range</code> starts.</dd>
  <dt>{{domxref("Range.startOffset")}} {{readonlyInline}}</dt>
  <dd>Returns a number representing where in the <code>startContainer</code> the <code>Range</code> starts.</dd>
 </dl>
@@ -52,29 +52,29 @@ translation_of: Web/API/Range
  <dt>{{ domxref("Range.setEnd()")}}</dt>
  <dd>Sets the end position of a <code>Range</code>.</dd>
  <dt>{{ domxref("Range.setStartBefore()")}}</dt>
- <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
+ <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.setStartAfter()")}}</dt>
- <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
+ <dd>Sets the start position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.setEndBefore()")}}</dt>
- <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
+ <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.setEndAfter()")}}</dt>
- <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
+ <dd>Sets the end position of a <code>Range</code> relative to another {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.selectNode()")}}</dt>
- <dd>Sets the <code>Range</code> to contain the {{ domxref("Node") }} and its contents.</dd>
+ <dd>Sets the <code>Range</code> to contain the {{ domxref("Node") }} and its contents.</dd>
  <dt>{{ domxref("Range.selectNodeContents()")}}</dt>
- <dd>Sets the <code>Range</code> to contain the contents of a {{ domxref("Node") }}.</dd>
+ <dd>Sets the <code>Range</code> to contain the contents of a {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.collapse()")}}</dt>
  <dd>Collapses the <code>Range</code> to one of its boundary points.</dd>
  <dt>{{ domxref("Range.cloneContents()")}}</dt>
- <dd>Returns a {{ domxref("DocumentFragment") }} copying the nodes of a <code>Range</code>.</dd>
+ <dd>Returns a {{ domxref("DocumentFragment") }} copying the nodes of a <code>Range</code>.</dd>
  <dt>{{ domxref("Range.deleteContents()")}}</dt>
  <dd>Removes the contents of a <code>Range</code> from the {{ domxref("Document") }}.</dd>
  <dt>{{ domxref("Range.extractContents()")}}</dt>
- <dd>Moves contents of a <code>Range</code> from the document tree into a {{ domxref("DocumentFragment") }}.</dd>
+ <dd>Moves contents of a <code>Range</code> from the document tree into a {{ domxref("DocumentFragment") }}.</dd>
  <dt>{{ domxref("Range.insertNode()")}}</dt>
- <dd>Insert a {{ domxref("Node") }} at the start of a <code>Range</code>.</dd>
+ <dd>Insert a {{ domxref("Node") }} at the start of a <code>Range</code>.</dd>
  <dt>{{ domxref("Range.surroundContents()")}}</dt>
- <dd>Moves content of a <code>Range</code> into a new {{ domxref("Node") }}.</dd>
+ <dd>Moves content of a <code>Range</code> into a new {{ domxref("Node") }}.</dd>
  <dt>{{ domxref("Range.compareBoundaryPoints()")}}</dt>
  <dd>Compares the boundary points of the <code>Range</code> with another <code>Range</code>.</dd>
  <dt>{{ domxref("Range.cloneRange()")}}</dt>
@@ -88,7 +88,7 @@ translation_of: Web/API/Range
  <dt>{{ domxref("Range.comparePoint()")}} {{experimental_inline}}</dt>
  <dd>Returns -1, 0, or 1 indicating whether the point occurs before, inside, or after the <code>Range</code>.</dd>
  <dt>{{ domxref("Range.createContextualFragment()")}}{{experimental_inline}}</dt>
- <dd>Returns a {{ domxref("DocumentFragment") }} created from a given string of code.</dd>
+ <dd>Returns a {{ domxref("DocumentFragment") }} created from a given string of code.</dd>
  <dt>{{ domxref("Range.getBoundingClientRect()") }} {{experimental_inline}}</dt>
  <dd>Returns a {{ domxref("DOMRect") }} object which bounds the entire contents of the <code>Range</code>; this would be the union of all the rectangles returned by {{ domxref("range.getClientRects()") }}.</dd>
  <dt>{{ domxref("Range.getClientRects()") }} {{experimental_inline}}</dt>
@@ -136,112 +136,7 @@ translation_of: Web/API/Range
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}} [1]</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>Range()</code> constructor {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("24.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>compareNode()</code> {{obsolete_inline}}{{non-standard_inline()}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<br>
-    Removed in {{CompatGeckoDesktop("1.9")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>isPointInRange()</code>, and <code>comparePoint()</code>{{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>intersectsNode()</code> {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("17.0")}} [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>15.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>getClientRects()</code> and <code>getBoundingClientRect()</code>{{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>9</td>
-   <td>15.0</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td><code>createContextualFragment()</code>{{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>11</td>
-   <td>15.0</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}} [1]</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Starting with Gecko 13.0 {{ geckoRelease("13.0") }} the <code>Range</code> object throws a {{ domxref("DOMException") }} as defined in DOM 4, instead of a <code>RangeException</code> defined in prior specifications.</p>
 

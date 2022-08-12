@@ -119,7 +119,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![A Javascript error is shown in the Console](js-error.png)
 
-在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列 ](/en-US/Learn/JavaScript)的文章中提到 JavaScript )。
+在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/en-US/Learn/JavaScript) 的文章中提到 JavaScript )。
 
 ### 更多需要检查的地方
 

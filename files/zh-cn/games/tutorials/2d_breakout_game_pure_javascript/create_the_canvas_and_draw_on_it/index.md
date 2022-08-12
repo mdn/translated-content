@@ -24,8 +24,8 @@ HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+     * { padding: 0; margin: 0; }
+     canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -33,7 +33,7 @@ HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript code goes here
+ // JavaScript code goes here
 </script>
 
 </body>
@@ -67,11 +67,13 @@ ctx.closePath();
 
 我们不局限于绘制矩形 — 下面这段代码会绘制出一个绿色的圆；尝试添加到 JavaScript 代码的底部，保存并刷新：
 
-    ctx.beginPath();
-    ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-    ctx.fillStyle = "green";
-    ctx.fill();
-    ctx.closePath();
+```js
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+```
 
 正如你所见，我们再一次使用了 ctx.beginPath() 方法 和 ctx.closePath() 方法；在这两个方法中间，最重要的部分是 ctx.arc() 方法。它需要六个参数：
 

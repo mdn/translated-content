@@ -16,7 +16,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/收尾工作
 
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
-本篇为 [Gamedev Canvas tutorial ](/en-US/docs/Games/Workflows/Breakout_game_from_scratch)10 节教程中的**第 10 节也是最后一节。**完成这篇课程后，你可以在 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html) 找到我们的源代码。
+本篇为 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的**第 10 节也是最后一节。**完成这篇课程后，你可以在 [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html) 找到我们的源代码。
 
 不管我们做什么游戏，它总是存在优化的空间。例如，我们可以为玩家多提供几条命，让他们能在发生一两次失误的情况下顺利完成游戏。或者，我们也可以在渲染代码上下工夫。
 

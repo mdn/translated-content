@@ -6,37 +6,37 @@ original_slug: Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-h
 ---
 <h2 id="Background" name="Background">Hintergrund</h2>
 
-<p>Man findet im Web häufiger Seiten, die Verweise mit anderen Protokollen als HTTP einsetzen. Ein Beispiel ist das <code>mailto:</code> Protokoll:</p>
+<p>Man findet im Web häufiger Seiten, die Verweise mit anderen Protokollen als HTTP einsetzen. Ein Beispiel ist das <code>mailto:</code> Protokoll:</p>
 
 <div style="overflow: hidden;">
 <pre class="brush:html">&lt;a href="mailto:webmaster@example.com"&gt;Web Master&lt;/a&gt;</pre>
 </div>
 
-<p>Seitenersteller können <code>mailto:</code> Verweise nutzen, wenn sie einen bequemen Weg anbieten möchten, E-Mails direkt aus ihrer Webseite heraus zu versenden. Wird der Link aktiviert, sollte der Browser das im Betriebssystem eingestelle Standardprogramm für E-Mail starten. Das ist ein Beispiel für einen desktopbasierten Protokoll-Handler.</p>
+<p>Seitenersteller können <code>mailto:</code> Verweise nutzen, wenn sie einen bequemen Weg anbieten möchten, E-Mails direkt aus ihrer Webseite heraus zu versenden. Wird der Link aktiviert, sollte der Browser das im Betriebssystem eingestelle Standardprogramm für E-Mail starten. Das ist ein Beispiel für einen desktopbasierten Protokoll-Handler.</p>
 
-<p>Webbasierte Protokoll-Handler erlauben webbasierten Anwendungen ebenfall an solchen Prozessen teilzunehmen. Das wird mit der Migration vieler Anwendungen ins Web zunehmend wichtiger. Tatsächlich gibt es bereits viele Webanwendungen, die einen <code>mailto:</code> Verweis verarbeiten könnten.</p>
+<p>Webbasierte Protokoll-Handler erlauben webbasierten Anwendungen ebenfall an solchen Prozessen teilzunehmen. Das wird mit der Migration vieler Anwendungen ins Web zunehmend wichtiger. Tatsächlich gibt es bereits viele Webanwendungen, die einen <code>mailto:</code> Verweis verarbeiten könnten.</p>
 
 <h2 id="Registering" name="Registering">Registrierung</h2>
 
-<p>Das Einrichten einer webbasierten Anwendung als Protokoll-Handler ist unkompliziert. Die Webapp nutzt <code><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler" title="DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code>, um sich selbst beim Browser als potentiellen Handler für ein bestimmtes Protokoll zu registrieren. Ein Beispiel:</p>
+<p>Das Einrichten einer webbasierten Anwendung als Protokoll-Handler ist unkompliziert. Die Webapp nutzt <code><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler" title="DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code>, um sich selbst beim Browser als potentiellen Handler für ein bestimmtes Protokoll zu registrieren. Ein Beispiel:</p>
 
 <pre class="brush: js">navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");</pre>
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");</pre>
 
 <p>Die Parameter sind:</p>
 
 <ul>
  <li>Das Protokoll.</li>
- <li>Das URL Template, das als Handler genutzt werden soll. Das "%s" wird durch das <code>href</code> Attribut des Verweises ersetzt und ein GET Request mit der resultierenden URL ausgeführt.</li>
+ <li>Das URL Template, das als Handler genutzt werden soll. Das "%s" wird durch das <code>href</code> Attribut des Verweises ersetzt und ein GET Request mit der resultierenden URL ausgeführt.</li>
  <li>Der nutzerlesbare Name des Protokoll Handlers.</li>
 </ul>
 
-<p>Führt ein Browser diesen Code aus, wird er über einen Dialog die Erlaubnis des Nutzers einholen, die Webanwendung als Handler für dieses Protokoll zu registrieren. Firefox zeigt eine Nachricht in der Notification Bar:</p>
+<p>Führt ein Browser diesen Code aus, wird er über einen Dialog die Erlaubnis des Nutzers einholen, die Webanwendung als Handler für dieses Protokoll zu registrieren. Firefox zeigt eine Nachricht in der Notification Bar:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png" style="display: block; height: 401px; margin: 0px auto; width: 700px;"></p>
 
-<div class="note"><strong>Hinweis: </strong>Das bei der Registrierung angegebene URL Template <strong>muss</strong> mit der die Anfrage stellenden Webseite <strong>übereinstimmen</strong>, oder die Registrierung schlägt fehl. Beispielsweise kann <code class="plain">http://example.com/homepage.html</code> einen Protokoll-Handler für <code class="plain">http://example.com/handle_mailto/%s registrieren, aber nicht für</code> <code class="plain">http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
+<div class="note"><strong>Hinweis: </strong>Das bei der Registrierung angegebene URL Template <strong>muss</strong> mit der die Anfrage stellenden Webseite <strong>übereinstimmen</strong>, oder die Registrierung schlägt fehl. Beispielsweise kann <code>http://example.com/homepage.html</code> einen Protokoll-Handler für <code>http://example.com/handle_mailto/%s registrieren, aber nicht für</code> <code>http://example.<em><strong>org</strong></em>/handle_mailto/%s</code>.</div>
 
 <p>Wird derselbe Handler mehrfach registriert, meldet der Browser das durch ein weiteres Pop-Up, das auf die bereits erfolgte Registrierung hinweist. Daher ist es sinnvoll, die Registrierung mit einem vorangehenden Check abzusichern.</p>
 
@@ -48,8 +48,8 @@ original_slug: Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-h
   &lt;title&gt;Web Protocol Handler Sample - Register&lt;/title&gt;
   &lt;script type="text/javascript"&gt;
     navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+                                  "http://www.google.co.uk/?uri=%s",
+                                  "Burger handler");
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -61,7 +61,7 @@ original_slug: Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-h
 
 <h2 id="Activating" name="Activating">Aktivierung</h2>
 
-<p>Ab jetzt wird der Browser bei jedem Klick auf einen Verweis, der das neu registrierte Protokoll verwendet, die Ausführung auf die registrierte URL umleiten. Firefox wird zuvor standardmäßig die Bestätigung durch den Nutzer einholen.</p>
+<p>Ab jetzt wird der Browser bei jedem Klick auf einen Verweis, der das neu registrierte Protokoll verwendet, die Ausführung auf die registrierte URL umleiten. Firefox wird zuvor standardmäßig die Bestätigung durch den Nutzer einholen.</p>
 
 <h3 id="Example_2" name="Example_2">Beispiel</h3>
 
@@ -78,14 +78,14 @@ original_slug: Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-h
 
 <h2 id="Handling" name="Handling">Handling</h2>
 
-<p>Der nächste Schritt ist das tatsächliche Handling. Der Browser kombiniert die <code>href </code>aus dem aktivierten Link mit dem registrierten URL Template und führt dann damit einen HTTP GET Request aus. Hervorgehend aus den vorangegangenen Beispielen würde der Request auf folgender URL stattfinden:</p>
+<p>Der nächste Schritt ist das tatsächliche Handling. Der Browser kombiniert die <code>href </code>aus dem aktivierten Link mit dem registrierten URL Template und führt dann damit einen HTTP GET Request aus. Hervorgehend aus den vorangegangenen Beispielen würde der Request auf folgender URL stattfinden:</p>
 
 <pre>http://www.google.co.uk/?uri=burger:cheeseburger
 </pre>
 
 <p>Serverseitiger Code kann dann die query String Parameter extrahieren und die gewünschte Aktion ausführen.</p>
 
-<div class="note"><strong>Hinweis:</strong> Dem serverseitigen Code wird der <strong>gesamte </strong>Inhalt der href übergeben. D.h. der Server muss das Protokoll aus den Daten parsen.</div>
+<div class="note"><strong>Hinweis:</strong> Dem serverseitigen Code wird der <strong>gesamte </strong>Inhalt der href übergeben. D.h. der Server muss das Protokoll aus den Daten parsen.</div>
 
 <h3 id="Example_3" name="Example_3">Beispiel</h3>
 

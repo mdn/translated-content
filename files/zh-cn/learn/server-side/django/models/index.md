@@ -56,33 +56,35 @@ This section provides a brief overview of how a model is defined and some of the
 
 Models are usually defined in an application's **models.py** file. They are implemented as subclasses of `django.db.models.Model`, and can include fields, methods and metadata. The code fragment below shows a "typical" model, named `MyModelName`:
 
-    from django.db import models
+```python
+from django.db import models
 
-    class MyModelName(models.Model):
-        """
-        A typical class defining a model, derived from the Model class.
-        """
+class MyModelName(models.Model):
+    """
+    A typical class defining a model, derived from the Model class.
+    """
 
-        # Fields
-        my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
-        ...
+    # Fields
+    my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
+    ...
 
-        # Metadata
-        class Meta:
-            ordering = ["-my_field_name"]
+    # Metadata
+    class Meta:
+        ordering = ["-my_field_name"]
 
-        # Methods
-        def get_absolute_url(self):
-             """
-             Returns the url to access a particular instance of MyModelName.
-             """
-             return reverse('model-detail-view', args=[str(self.id)])
-
-        def __str__(self):
+    # Methods
+    def get_absolute_url(self):
             """
-            String for representing the MyModelName object (in Admin site etc.)
+            Returns the url to access a particular instance of MyModelName.
             """
-            return self.field_name
+            return reverse('model-detail-view', args=[str(self.id)])
+
+    def __str__(self):
+        """
+        String for representing the MyModelName object (in Admin site etc.)
+        """
+        return self.field_name
+```
 
 In the below sections we'll explore each of the features inside the model in detail:
 
@@ -124,7 +126,7 @@ my_field_name = models.CharField(max_length=20, help_text="Enter field documenta
 以下列表描述了一些更常用的字段类型。
 
 - [CharField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField) 是用来定义短到中等长度的字段字符串。你必须指定`max_length`要存储的数据。
-- [TextField ](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField)用于大型任意长度的字符串。你可以`max_length`为该字段指定一个字段，但仅当该字段以表单显示时才会使用（不会在数据库级别强制执行）。
+- [TextField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField) 用于大型任意长度的字符串。你可以`max_length`为该字段指定一个字段，但仅当该字段以表单显示时才会使用（不会在数据库级别强制执行）。
 - [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField) 是一个用于存储整数（整数）值的字段，用于在表单中验证输入的值为整数。
 - [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) 和[DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) 用于存储／表示日期和日期／时间信息（分别是`Python.datetime.date` 和 `datetime.datetime` 对象）。这些字段可以另外表明（互斥）参数 `auto_now=Ture`（在每次保存模型时将该字段设置为当前日期），`auto_now_add`（仅设置模型首次创建时的日期）和 `default`（设置默认日期，可以被用户覆盖）。
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) 用于存储和验证电子邮件地址。
@@ -139,20 +141,26 @@ my_field_name = models.CharField(max_length=20, help_text="Enter field documenta
 
 你可以通过宣告 class Meta 来宣告模型级别的元数据，如图所示：
 
-    class Meta:
-        ordering = ['-my_field_name']
+```python
+class Meta:
+    ordering = ['-my_field_name']
+```
 
 此元数据最有用的功能之一是控制在查询模型类型时返回之记录的默认排序。你可以透过在`ordering`属性的字段名称列表中指定匹配顺序来执行此操作，如上所示。排序将依赖字段的类型（字符串字段按字母顺序排序，而日期字段按时间顺序排序）。如上所示，你可以使用减号（-）对字段名称进行前缀，以反转排序顺序。
 
 例如，如果我们选择依照此预设来排列书单：
 
-    ordering = ['title', '-pubdate']
+```python
+ordering = ['title', '-pubdate']
+```
 
 书单通过标题依据--字母排序--排列，从 A 到 Z，然后再依每个标题的出版日期，从最新到最旧排列。
 
 另一个常见的属性是 `verbose_name`,一个 `verbose_name`说明单数和复数形式的类别。
 
-    verbose_name = 'BetterName'
+```python
+verbose_name = 'BetterName'
+```
 
 其他有用的属性允许你为模型创建和应用新的“访问权限”（预设权限会被自动套用），允许基于其他的字段排序，或声明该类是”抽象的“（你无法创建的记录基类，并将由其他型号派生）。
 
@@ -166,14 +174,18 @@ my_field_name = models.CharField(max_length=20, help_text="Enter field documenta
 
 最起码，在每个模型中，你应该定义标准的 Python 类方法 `__str__()`，**来为每个物件返回一个人类可读的字符串**。此字符用于表示管理站点的各个记录（以及你需要引用模型实例的任何其他位置）。通常这将返回模型中的标题或名称字段。
 
-    def __str__(self):
-        return self.field_name
+```python
+def __str__(self):
+    return self.field_name
+```
 
 Django 方法中另一个常用方法是 `get_absolute_url()` ，这函数返回一个在网站上显示个人模型记录的 URL（如果你定义了该方法，那么 Django 将自动在“管理站点”中添加“在站点中查看“按钮在模型的记录编辑栏）。`get_absolute_url()`的典型示例如下：
 
-    def get_absolute_url(self):
-        """Returns the url to access a particular instance of the model."""
-        return reverse('model-detail-view', args=[str(self.id)])
+```python
+def get_absolute_url(self):
+    """Returns the url to access a particular instance of the model."""
+    return reverse('model-detail-view', args=[str(self.id)])
+```
 
 **注意** :假设你将使用 URL `/myapplication/mymodelname/2` 来显示模型的单个记录（其中“2”是 id 特定记录），则需要创建一个 URL 映射器来将响应和 id 传递给“模型详细视图” （这将做出显示记录所需的工作）。以上示例中，`reverse()`函数可以“反转”你的 url 映射器（在上诉命名为“model-detail-view”的案例中，以创建正确格式的 URL。
 
@@ -402,8 +414,10 @@ class Author(models.Model):
 
 All your models have now been created. Now re-run your database migrations to add them to your database.
 
-    python3 manage.py makemigrations
-    python3 manage.py migrate
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
 ## Language model — challenge
 

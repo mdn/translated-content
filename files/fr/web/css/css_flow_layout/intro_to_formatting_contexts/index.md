@@ -39,7 +39,7 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 
 Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.
 
-Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sur le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contienne que le contenu et pas l'élément flottant.
+Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sur le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contienne que le contenu et pas l'élément flottant.
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 

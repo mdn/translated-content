@@ -44,15 +44,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 本教程分为下列章节，讲解了为了显示图书馆网站需求的页面而新增各种特性的过程。在进入下一个教程之前，你需要阅读并逐一实现下列章节。
 
-1.  [使用 async 进行异步流控制](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2.  [模版入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3.  [本地图书馆基础样版](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4.  [主页](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5.  [书本清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6.  [书本实例清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7.  [日期格式化 - 使用 moment](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8.  [作者清单页面、分类清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)[、](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)[与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9.  [分类详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+1. [使用 async 进行异步流控制](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+2. [模版入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+3. [本地图书馆基础样版](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+4. [主页](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+5. [书本清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+6. [书本实例清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+7. [日期格式化 - 使用 moment](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+8. [作者清单页面、分类清单页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)[、](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)[与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+9. [分类详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
 10. [书本详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
 11. [作者详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
 12. [书本实例详情页面、与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
@@ -65,7 +65,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 参见
 
-- [Async ](http://caolan.github.io/async/docs.html)模组 (Async 模组官方文件)
+- [Async](http://caolan.github.io/async/docs.html) 模组 (Async 模组官方文件)
 - [在 Express 中使用模板引擎](https://expressjs.com/en/guide/using-template-engines.html) (Express 官方文件)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug 官方文件)
 - [Moment](http://momentjs.com/docs/) (Moment 官方文件)

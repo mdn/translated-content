@@ -401,7 +401,7 @@ The [WebMaker](https://webmaker.org) project, through the [Web Literacy Map](htt
 
 - 没有标签
   - : 一般来说文章应该至少有一个 "[category](/en-US/docs/MDN/Contributing/Tagging_standards#Category)" 标签和一个 "[topic](/en-US/docs/MDN/Contributing/Tagging_standards#Topic)"标签。虽然有其他标签也好，但是如果你能帮我们提供最基本的标签（前文所说的 category 和 topic 标签）, 你将会是一名（维护）文档的英雄！
-- 不符合我们<s>标签</s>标准的标签
+- 不符合我们标准的标签
   - : 请修正一切含有不合标准标签的文档。请注意由于[Kuma 的一个 bug](https://bugzilla.mozilla.org/show_bug.cgi?id=776048), 一些本地化的标签 (比如 `Référence`) 可能会出现在一些英语页面上。这些标签还有可能反复出现，即使你已经吧它们删除; 请耐心处理这些问题直到 kuma 的那个 bug 被修复。
 - 不正确的标签
   - : 如果你正在看一篇关于 HTML 的文章并且发现它被标上了"JavaScript"的标签，那很有可能这是一个错误标签！同理，如果一篇文章在讨论 Mozilla internals 但是有一个"Web"标签，那也有可能是错误的。删除这些错误的标签并且如果还没有合适标签的话，加上正确的标签。同样请更正拼写错误的标签 (e.g., 因为标签是大小写敏感的， 所以"Javascript" 仍然匹配，但是我们还是不要马虎对待 !).

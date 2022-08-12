@@ -313,10 +313,12 @@ function createLink(testItem) {
 
 最后，我们在演示中使用了一些 WAI-ARIA 属性，以帮助解决因为内容区域不断更新而未重新加载页面，导致的辅助功能问题（默认情况下，屏幕阅读器不会选取该属性或提醒用户）：
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 我们将在下一篇文章中解释这些属性，其中将更详细地介绍 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)。
 

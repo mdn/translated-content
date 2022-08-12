@@ -90,9 +90,11 @@ urlpatterns = [
 
 > **备注：** 在 **/locallibrary/locallibrary/urls.py**
 >
->     urlpatterns += [
->         path('catalog/', include('catalog.urls')),
->     ]
+> ```python
+> urlpatterns += [
+>     path('catalog/', include('catalog.urls')),
+> ]
+> ```
 >
 > 每当 Django 使用 include() （[`django.conf.urls.include()），`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)`它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。`
 >
@@ -108,7 +110,7 @@ urlpatterns = [
 
 ### View (基于功能)
 
-视图是处理 HTTP 请求的功能，根据需要从数据库获取数据，通过使用 HTML 模板呈现此数据生成 HTML 页面，然后以 HTTP 响应返回 HTML 以显示给用户。索引视图遵循此模型 - 它提取有关数据库中有多少`Book`，`BookInstance `可用 `BookInstance` 和` Author` 记录的信息，并将其传递给模板以进行显示。
+视图是处理 HTTP 请求的功能，根据需要从数据库获取数据，通过使用 HTML 模板呈现此数据生成 HTML 页面，然后以 HTTP 响应返回 HTML 以显示给用户。索引视图遵循此模型 - 它提取有关数据库中有多少`Book`，`BookInstance` 可用 `BookInstance` 和 `Author` 记录的信息，并将其传递给模板以进行显示。
 
 打开 catalog / views.py，并注意该文件已经导入了 使用模板和数据生成 HTML 文件的 [render()](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) 快捷方式函数。
 
@@ -176,7 +178,7 @@ def index(request):
 </html>
 ```
 
-当我们要为特定视图定义一个模版时，我们首先指定基本模版（使用 `extends` 模版标签—查看下一个代码片段）。如果我们想要在模版中替换的章节，会使用相同的 `block/endblock `部分在基本模版表明。
+当我们要为特定视图定义一个模版时，我们首先指定基本模版（使用 `extends` 模版标签—查看下一个代码片段）。如果我们想要在模版中替换的章节，会使用相同的 `block/endblock` 部分在基本模版表明。
 
 例如，下面我们使用 `extends` 模版标签，并覆盖 `content` 块。生成的最终 HTML 页面将具有基本模版中定义的所以 HTML 和结构（包括你在`title`块中定义的默认内容），但你新的 `content` 块插入到了默认的那块。
 
@@ -195,7 +197,7 @@ def index(request):
 
 下面就是我们计划的基本模版用于本地图书馆网站。正如所看到的，内容包括一些 HTML 和定义块 `title` ，`sidebar` 和 `content`。我们有默认的 `title`（当然我们可以改）和默认的所以书籍和作者的链接列表 `sidebar` （我们可能并不会怎么改，但需要时，我们通过把想法放入块`block`中，比如想法是—允许范围）。
 
-> **备注：** 我们再介绍两个额外的模版标签： `url` 和 `load static `。下文中我们会详细介绍。
+> **备注：** 我们再介绍两个额外的模版标签： `url` 和 `load static`。下文中我们会详细介绍。
 
 创建一个新的文件 — **/locallibrary/catalog/templates/_base_generic.html_** — 写入如下代码
 
@@ -240,7 +242,7 @@ def index(request):
 </html>
 ```
 
-该模版使用（并包含）JavaScript 和 [Bootstrap ](http://getbootstrap.com/)（css 框架）来改进 HTML 页面的布局和显示，这个框架或者另一个客户端网络框架，这是快速创建一个可用页面来适应在不同浏览器尺寸和允许我们处理页面呈现且不用一点细节—我们只需要专注在服务器端。
+该模版使用（并包含）JavaScript 和 [Bootstrap](http://getbootstrap.com/)（css 框架）来改进 HTML 页面的布局和显示，这个框架或者另一个客户端网络框架，这是快速创建一个可用页面来适应在不同浏览器尺寸和允许我们处理页面呈现且不用一点细节—我们只需要专注在服务器端。
 
 基本模版还引用了一个本地 css 文件 (**styles.css**) ，它提供了一些额外的样式。新建 **/locallibrary/catalog/static/css/styles.css** 如下：
 
