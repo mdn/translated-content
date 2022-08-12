@@ -40,8 +40,8 @@ clip-path: initial;
 clip-path: unset;
 </pre>
 
-<div class="hidden" id="clip-path">
-<pre class="brush: html">&lt;svg class="defs"&gt;
+
+<pre class="brush: html hidden">&lt;svg class="defs"&gt;
   &lt;defs&gt;
     &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
       &lt;path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" /&gt;
@@ -106,6 +106,31 @@ clip-path: unset;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+
+    &lt;div class="note"&gt;clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z')
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="cell"&gt; &lt;span&gt;HTML&lt;/span&gt;
+        &lt;div class="container"&gt;
+          &lt;p class="svg2"&gt;
+            I LOVE&lt;br&gt;&lt;em&gt;clipping&lt;/em&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="cell"&gt; &lt;span&gt;SVG&lt;/span&gt;
+        &lt;div class="container viewbox"&gt;
+          &lt;svg viewBox="0 0 192 192"&gt;
+            &lt;g class="svg2"&gt;
+              &lt;rect x="24" y="24" width="144" height="144" /&gt;
+              &lt;text x="96" y="91"&gt;I LOVE&lt;/text&gt;
+              &lt;text x="96" y="109" class="em"&gt;clipping&lt;/text&gt;
+            &lt;/g&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
 
     &lt;div class="note"&gt;clip-path: circle(25%)&lt;/div&gt;
     &lt;div class="row"&gt;
@@ -307,8 +332,6 @@ clip-path: unset;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>mlk</p>
-
 <pre class="brush: css">html,body {
   height: 100%;
   box-sizing: border-box;
@@ -330,9 +353,7 @@ clip-path: unset;
 }
 
 .col {
-  display: flex;
   flex: 1 auto;
-  flex-direction: column;
 }
 
 .cell {
@@ -400,6 +421,7 @@ p {
 
 .none { clip-path: none; }
 .svg  { clip-path: url(#myPath); }
+.svg2 { clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z');}
 .shape1 { clip-path: circle(25%); }
 .shape2 { clip-path: circle(25% at 25% 25%); }
 .shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
@@ -438,7 +460,6 @@ svg text {
 svg text.em {
   font-style: italic;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample("clip-path", "100%", 800, "", "", "example-outcome-frame")}}</p>
 
