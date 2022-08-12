@@ -20,7 +20,7 @@ str.substr(start[, length])
 ### 参数
 
 - `start`
-  - : 开始提取字符的位置。如果为负值，则被看作 ` strLength + ``start，其中` `strLength` 为字符串的长度（例如，如果 `start` 为 `-3，则被看作` `strLength + (-3)）。`
+  - : 开始提取字符的位置。如果为负值，则被看作 `strLength + start`，其中 `strLength` 为字符串的长度（例如，如果 `start` 为 `-3`，则被看作 `strLength + (-3)`）。
 - `length`
   - : 可选。提取的字符数。
 

@@ -61,7 +61,7 @@ if (!Uint8Array.prototype.slice) {
 
 这不是一个完整的 polyfill，因为它返回的是一个 Array 的实例而不是 Uint8Array，所以它没有 TypedArrays 应有的一些属性。
 
-如果你要在不支持 `Object.defineProperty `的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 `Array.prototype` 中那些方法的 polyfill ，因为你没法让它们不可枚举。
+如果你要在不支持 `Object.defineProperty` 的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 `Array.prototype` 中那些方法的 polyfill ，因为你没法让它们不可枚举。
 
 ## 规范
 

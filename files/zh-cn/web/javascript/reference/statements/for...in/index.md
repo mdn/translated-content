@@ -22,8 +22,6 @@ for (variable in object)
 - `object`
   - : 非 Symbol 类型的可枚举属性被迭代的对象。
 
-##
-
 ### 数组迭代和 `for...in`
 
 > **备注：**`for...in`不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。

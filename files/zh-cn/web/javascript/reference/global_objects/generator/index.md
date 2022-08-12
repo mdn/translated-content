@@ -65,7 +65,7 @@ Firefox (SpiderMonkey) 在 [JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_Ja
 
 ### 传统的生成器方法
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()` {{non-standard_inline}}
   - : 返回 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。与 ES2015 生成器对象的 next() 方法对应。
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : 关闭生成器，因此执行该函数后调用`next() 函数时将会抛出` {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..

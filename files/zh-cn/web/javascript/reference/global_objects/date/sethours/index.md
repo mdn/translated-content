@@ -28,7 +28,7 @@ dateObj.setHours(hoursValue)
 - `minutesValue`
   - : 一个 0 到 59 的整数，表示分钟。
 - `secondsValue`
-  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsValue` 参数，则必须同时指定 `minutesValue `参数。
+  - : 一个 0 到 59 的整数，表示秒数。如果指定了 `secondsValue` 参数，则必须同时指定 `minutesValue` 参数。
 - `msValue`
   - : 一个 0 到 999 的数字，表示微秒数，如果指定了 `msValue` 参数，则必须同时指定 `minutesValue` 和 `secondsValue` 参数。
 

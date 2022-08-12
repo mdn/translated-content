@@ -37,7 +37,7 @@ speak-as: <counter-style-name>;
     - 如果 `system` 的值是 `alphabetic`，**`speak-as`** 的值是 `spell-out`**。**
     - 如果 `system` 的值是 `cyclic`，**`speak-as`** 的值是 `bullets`。
     - 如果 `system` 的值是 `extends`，当被继承的样式上也定义了 **`speak-as: auto`**，那么 **`speak-as`** 的值就和被继承样式的值相同。
-    - 其他场景下，表现都与**` speak-as: numbers`** 相同。
+    - 其他场景下，表现都与 **`speak-as: numbers`** 相同。
 
 - `bullets`
   - : 用于表示无序的列表项，具体的发音由{{Glossary("user agent")}}决定。

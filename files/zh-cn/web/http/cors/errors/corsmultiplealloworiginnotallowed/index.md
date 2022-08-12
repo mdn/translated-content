@@ -19,7 +19,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 
 ## 查看更多
 
-- [CORS ](/en-US/docs/Web/HTTP/CORS/Errors)错误
+- [CORS](/en-US/docs/Web/HTTP/CORS/Errors) 错误
 - Glossary: {{Glossary("CORS")}}
-- [CORS ](/en-US/docs/Web/HTTP/CORS)介绍
+- [CORS](/en-US/docs/Web/HTTP/CORS) 介绍
 - [启用 CORS: 我想让自己的服务支持 CORS](https://enable-cors.org/server.html)

@@ -10,7 +10,7 @@ translation_of: Web/CSS/@import
 
 ## 概述
 
-**`@import `**[CSS](/en-US/docs/Web/CSS)[@规则](/en-US/docs/Web/CSS/At-rule)，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/Syntax#nested_statements)，@import 不能在[条件组的规则](/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules)中使用。
+**`@import`** [CSS](/en-US/docs/Web/CSS)[@规则](/en-US/docs/Web/CSS/At-rule)，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/Syntax#nested_statements)，@import 不能在[条件组的规则](/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules)中使用。
 
 因此，用户代理可以避免为不支持的媒体类型检索资源，作者可以指定依赖媒体的 @import 规则。这些条件导入在 URI 之后指定逗号分隔的[媒体查询](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)。在没有任何媒体查询的情况下，导入是无条件的。指定所有的媒体具有相同的效果。
 

@@ -47,9 +47,9 @@ try {
 
 `try`语句包含了由一个或者多个语句组成的`try`块，和至少一个`catch`块或者一个`finally`块的其中一个，或者两个兼有， 下面是三种形式的`try`声明：
 
-1.  `try...catch`
-2.  `try...finally`
-3.  `try...catch...finally`
+1. `try...catch`
+2. `try...finally`
+3. `try...catch...finally`
 
 `catch`子句包含`try`块中抛出异常时要执行的语句。也就是，你想让`try`语句中的内容成功， 如果没成功，你想控制接下来发生的事情，这时你可以在`catch`语句中实现。 如果在`try`块中有任何一个语句（或者从`try`块中调用的函数）抛出异常，控制立即转向`catch`子句。如果在`try`块中没有异常抛出，会跳过`catch`子句。
 

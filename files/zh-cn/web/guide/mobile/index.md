@@ -24,7 +24,7 @@ translation_of: Web/Guide/Mobile
 
 在触摸设备中你需要使用 dom 的 touch 事件。不再需要使用 css:hover 伪类；同时因为手指比鼠标要大的缘故，要将可点击元素做的更大一点。参见此文 [designing for touch screens](http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
 
-你可以使用[-moz-touch-enabled ](/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-touch-enabled)media query 属性在可触摸设备上加载不同的 css。
+你可以使用[-moz-touch-enabled](/zh-CN/docs/Web/Guide/CSS/Media_queries#-moz-touch-enabled) media query 属性在可触摸设备上加载不同的 css。
 
 ### 优化图片
 
@@ -63,4 +63,4 @@ translation_of: Web/Guide/Mobile
 在多个浏览器中测试你的网站。这意味着在多个平台测试—至少 iOS 和 Android。
 
 - 使用 [iOS simulator](https://developer.apple.com/devcenter/ios/index.action) 在 IPhone 上测试移动版 Safari。
-- 使用[ Android SDK ](https://developer.android.com/sdk/index.html)测试 Opera 和 Firefox。详细方法请点击 [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator) 查看。
+- 使用 [Android SDK](https://developer.android.com/sdk/index.html) 测试 Opera 和 Firefox。详细方法请点击 [running Firefox for Android using the Android emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator) 查看。

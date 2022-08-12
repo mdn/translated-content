@@ -86,9 +86,9 @@ function foo() {
 
 在接下来的例子中，我们将使用 await 执行两次 promise，整个`foo`函数的执行将会被分为三个阶段。
 
-1.  `foo`函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过`foo`的进程，并将控制权交还给调用`foo`的函数。
-2.  一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将`1`（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即`result1`。接下来函数会继续进行，到达第二个 await 区域，此时`foo`函数的进程将再次被暂停。
-3.  一段时间后，同样当第二个 promise 完结的时候，`result2`将被赋值为`2`，之后函数将会正常同步执行，将默认返回`undefined` 。
+1. `foo`函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过`foo`的进程，并将控制权交还给调用`foo`的函数。
+2. 一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将`1`（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即`result1`。接下来函数会继续进行，到达第二个 await 区域，此时`foo`函数的进程将再次被暂停。
+3. 一段时间后，同样当第二个 promise 完结的时候，`result2`将被赋值为`2`，之后函数将会正常同步执行，将默认返回`undefined` 。
 
 ```plain
 async function foo() {
@@ -205,7 +205,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
 >
 > 在 `concurrentStart`中，两个计时器被同时创建，然后执行`await`。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。
 >
-> 但是 `await `仍旧是顺序执行的，第二个 `await` 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。
+> 但是 `await` 仍旧是顺序执行的，第二个 `await` 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。
 >
 > 如果你希望并行执行两个或更多的任务，你必须像在`parallel`中一样使用`await Promise.all([job1(), job2()])`。
 
@@ -221,7 +221,7 @@ setTimeout(parallelPromise, 13000); // same as parallel
 >
 > 但是，async 函数仍有可能然可能错误地忽略错误。
 > 以`parallel` async 函数为例。 如果它没有等待`await`（或返回）`Promise.all([])`调用的结果，则不会传播任何错误。
-> 虽然`parallelPromise`函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于` return ``Promise.all([])`处理方式。
+> 虽然`parallelPromise`函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于 `return Promise.all([])`处理方式。
 
 ### 使用 async 函数重写 promise 链
 

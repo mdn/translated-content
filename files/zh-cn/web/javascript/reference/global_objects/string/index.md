@@ -98,7 +98,7 @@ otherwise my code is unreadable.";
 
 ## 描述
 
-字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用[ + 和 += ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators)运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
+字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询[字符串长度](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)，使用 [+ 和 +=](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators) 运算符来构建和连接字符串，使用 [indexOf](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法检查某一子字符串在父字符串中的位置，又或是使用 [substring](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 方法提取从父字符串中提取子字符串。
 
 ### 从字符串中获取单个字符
 

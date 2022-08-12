@@ -21,7 +21,7 @@ dateObj.getDate()
 
 ## 描述
 
-`getDate() `返回一个 1 到 31 的整数值。
+`getDate()` 返回一个 1 到 31 的整数值。
 
 ## 例子
 

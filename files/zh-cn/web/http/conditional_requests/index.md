@@ -63,7 +63,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 ### 缓存更新
 
-条件式请求最常见的应用场景是更新缓存。假如缓存为空，或者是没有缓存的话，被请求资源会以状态码 {{HTTPStatus("200")}} `OK `返回。
+条件式请求最常见的应用场景是更新缓存。假如缓存为空，或者是没有缓存的话，被请求资源会以状态码 {{HTTPStatus("200")}} `OK` 返回。
 
 ![The request issued when the cache is empty triggers the resource to be downloaded, with both validator value sent as headers. The cache is then filled.](cache1.png)
 
@@ -75,7 +75,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 ![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](httpcache2.png)
 
-假如资源发生了变化，服务器就直接返回 {{HTTPStatus("200")}}` OK` 响应码，连同新版本的资源，就像是没有应用条件式请求一样；客户端则采用新版本资源（并将其缓存起来）。
+假如资源发生了变化，服务器就直接返回 {{HTTPStatus("200")}} `OK` 响应码，连同新版本的资源，就像是没有应用条件式请求一样；客户端则采用新版本资源（并将其缓存起来）。
 
 ![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](httpcache3.png)
 

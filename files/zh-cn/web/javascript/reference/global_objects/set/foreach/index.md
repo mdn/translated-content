@@ -33,7 +33,7 @@ mySet.forEach(callback[, thisArg])
 
 ## 描述
 
-`forEach` 方法会依次为集合中的元素执行回调函数，就算元素的值是 `undefined `。
+`forEach` 方法会依次为集合中的元素执行回调函数，就算元素的值是 `undefined`。
 
 **回调函数**有三个参数：
 

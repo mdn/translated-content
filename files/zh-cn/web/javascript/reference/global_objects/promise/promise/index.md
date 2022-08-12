@@ -51,13 +51,13 @@ new Promise(executor)
 
     综上所述，对典型流程进行总结：
 
-    1.  `executor` 内的操作是异步的，并且提供一个回调（callback）。
-    2.  该回调在 `executor` 内定义。
-    3.  该回调通过调用 `resolutionFunc` 终止。
-    4.  `resolutionFunc` 的调用包含一个 `value` 参数。
-    5.  该`value` 被返回给绑定的 `Promise` 对象上。
-    6.  该`Promise` 对象（异步地）调用任何相关的 `.then(handleResolved)`。
-    7.  `.then(handleResolved)` 收到的 `value` 作为入参被传递给了 `handleResolved` 的调用。（参见[Promise 的链式调用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise%E7%9A%84%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8)）
+    1. `executor` 内的操作是异步的，并且提供一个回调（callback）。
+    2. 该回调在 `executor` 内定义。
+    3. 该回调通过调用 `resolutionFunc` 终止。
+    4. `resolutionFunc` 的调用包含一个 `value` 参数。
+    5. 该`value` 被返回给绑定的 `Promise` 对象上。
+    6. 该`Promise` 对象（异步地）调用任何相关的 `.then(handleResolved)`。
+    7. `.then(handleResolved)` 收到的 `value` 作为入参被传递给了 `handleResolved` 的调用。（参见[Promise 的链式调用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise%E7%9A%84%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8)）
 
 ### 返回值
 

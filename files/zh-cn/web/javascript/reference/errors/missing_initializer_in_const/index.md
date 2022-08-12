@@ -49,7 +49,7 @@ const COLUMNS = 80;
 
 #### `const`, `let` 还是 `var?`
 
-如果你并不想声明一个常量值，那么就不要使用 const 关键字。或许你想要的是使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 来声明一个块状作用域变量或者是用 `var `声明一个全局变量。这两者都不需要设置初始值。
+如果你并不想声明一个常量值，那么就不要使用 const 关键字。或许你想要的是使用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 来声明一个块状作用域变量或者是用 `var` 声明一个全局变量。这两者都不需要设置初始值。
 
 ```js example-good
 let columns;

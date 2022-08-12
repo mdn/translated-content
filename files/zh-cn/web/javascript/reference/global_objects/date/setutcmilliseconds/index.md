@@ -26,7 +26,7 @@ dateObj.setUTCMilliseconds(millisecondsValue)
 
 ## 描述
 
-如果传递的参数超出了指定的范围，`setUTCMilliseconds() 方法会相应地尝试更新储存在 `{{jsxref("Date")}} 的时间信息。例如，假设你传递参数的值是 1100，存储在 {{jsxref("Date")}} 的秒数会加 1，然后使用 100 来作为毫秒数。
+如果传递的参数超出了指定的范围，`setUTCMilliseconds()` 方法会相应地尝试更新储存在 {{jsxref("Date")}} 的时间信息。例如，假设你传递参数的值是 1100，存储在 {{jsxref("Date")}} 的秒数会加 1，然后使用 100 来作为毫秒数。
 
 ## 示例
 

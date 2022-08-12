@@ -29,7 +29,7 @@ x === y
   - 字符串类型必须拥有相同顺序的相同字符。
   - 布尔运算符必须同时为 `true` 或同时为 `false`。
 
-全等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`== `运算符会在比较之前尝试将它们转换为相同的类型。
+全等运算符与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)（`==`）最显著的区别是，如果操作数的类型不同，`==` 运算符会在比较之前尝试将它们转换为相同的类型。
 
 ## 例子
 

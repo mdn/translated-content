@@ -43,7 +43,7 @@ myCar.year = 1969;
 myCar.noProperty; // undefined
 ```
 
-JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar `对象的属性：
+JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
 
 ```js
 myCar["make"] = "Ford";
@@ -175,8 +175,8 @@ var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
 
 作为另一种方式，你可以通过两步来创建对象：
 
-1.  通过创建一个构造函数来定义对象的类型。首字母大写是非常普遍而且很恰当的惯用法。
-2.  通过 `new` 创建对象实例。
+1. 通过创建一个构造函数来定义对象的类型。首字母大写是非常普遍而且很恰当的惯用法。
+2. 通过 `new` 创建对象实例。
 
 为了定义对象类型，为对象类型创建一个函数以声明类型的名称、属性和方法。例如，你想为汽车创建一个类型，并且将这类对象称为 `car` ，并且拥有属性 make, model，和 year，你可以创建如下的函数：
 
@@ -252,7 +252,7 @@ car2.owner.name
 car1.color = "black";
 ```
 
-为 `car1` 增加了 `color` 属性，并将其值设为 "black." 然而，这并不影响其他的对象。想要为某个类型的所有对象增加新属性，你必须将属性加入到 `car `对象类型的定义中。
+为 `car1` 增加了 `color` 属性，并将其值设为 "black." 然而，这并不影响其他的对象。想要为某个类型的所有对象增加新属性，你必须将属性加入到 `car` 对象类型的定义中。
 
 ### 使用 Object.create 方法
 
@@ -287,11 +287,11 @@ fish.displayType(); // Output:Fishes
 
 这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 `Car` 对象类型所做的那样）并且显式地定义了单独的属性（如 `m`yCar.color = "red"）之时。如果你最初使用索引定义了一个对象属性，例如 `myCar[5] = "25"`，则你只可能通过 `myCar[5]` 引用它。
 
-这条规则的例外是从与 HTML 对应的对象，例如 `forms` 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 `<form>` 标签有一个 `NAME` 属性且值为` "myForm"，访问该 form 的方式可以是 document.forms[1]，document.forms["myForm"] 或 document.myForm。`
+这条规则的例外是从与 HTML 对应的对象，例如 `forms` 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 `<form>` 标签有一个 `NAME` 属性且值为 `"myForm"`，访问该 `form` 的方式可以是 `document.forms[1]`，`document.forms["myForm"]` 或 document.myForm。`
 
 为对象类型定义属性
 
-你可以通过 `prototype `属性为之前定义的对象类型增加属性。这为该类型的所有对象，而不是仅仅一个对象增加了一个属性。下面的代码为所有类型为 `car `的对象增加了 `color` 属性，然后为对象 `car1` 的 `color` 属性赋值：
+你可以通过 `prototype`属性为之前定义的对象类型增加属性。这为该类型的所有对象，而不是仅仅一个对象增加了一个属性。下面的代码为所有类型为 `car` 的对象增加了 `color` 属性，然后为对象 `car1` 的 `color` 属性赋值：
 
 ```js
 Car.prototype.color = null;
@@ -385,7 +385,7 @@ function validate(obj, lowval, hival) {
 
 总的说来， `this` 在一个方法中指调用的对象。
 
-当与 `form` 属性一起使用时，`this `可以指代当前对象的父窗体。在下面的例子中，窗体 `myForm` 包含一个 `Text `对象和一个按钮，当用户点击按键，`Text` 对象的值被设为窗体的名称。按钮的 `onclick` 事件处理器使用 `this.form` 以指代其父窗体，即 `myForm`。
+当与 `form` 属性一起使用时，`this`可以指代当前对象的父窗体。在下面的例子中，窗体 `myForm` 包含一个 `Text` 对象和一个按钮，当用户点击按键，`Text` 对象的值被设为窗体的名称。按钮的 `onclick` 事件处理器使用 `this.form` 以指代其父窗体，即 `myForm`。
 
 ```html
 <form name="myForm">
@@ -400,7 +400,7 @@ function validate(obj, lowval, hival) {
 
 一个 [getter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 是一个获取某个特定属性的值的方法。一个 [setter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。
 
-下面例子描述了 getters 和 setters 是如何为用户定义的对象` o` 工作的。
+下面例子描述了 getters 和 setters 是如何为用户定义的对象 `o` 工作的。
 
 ```js
 var o = {

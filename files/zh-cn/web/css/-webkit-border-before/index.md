@@ -28,9 +28,9 @@ translation_of: Web/CSS/-webkit-border-before
 
 `-webkit-border-before` 可以使用以下一个或多个值：
 
-1.  {{cssxref("-webkit-border-before-width")}}
-2.  {{cssxref("-webkit-border-before-style")}}
-3.  {{cssxref("-webkit-border-before-color")}}.
+1. {{cssxref("-webkit-border-before-width")}}
+2. {{cssxref("-webkit-border-before-style")}}
+3. {{cssxref("-webkit-border-before-color")}}.
 
 它根据元素的书写模式、方向以及文本方向映射到 Border 上。对应到四个边框属性{{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}或{{cssxref("border-left")}} ，具体取决于 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}三个属性定义的值。
 

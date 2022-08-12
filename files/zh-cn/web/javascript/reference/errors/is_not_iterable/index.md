@@ -21,13 +21,13 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## 发生了什么错误？
 
-这个值作为 [for…of ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 的对象
+这个值作为 [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 的表达式右值，或者作为一个函数的参数，如 {{jsxref("Promise.all")}} 或者 {{jsxref("TypedArray.from")}}, 不是一个 [可迭代对象](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). 一个可迭代对象可以是一个内置可迭代类型，如{{jsxref("Array")}}, {{jsxref("String")}} 或 {{jsxref("Map")}}, 一个 generator 生成结果，或者一个实现了 [可迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 的对象
 
 ## 示例
 
 ### Iterating over Object properties
 
-在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol). 因此，你不能使用 [for…of ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)来迭代对象的属性。
+在 JavaScript 中，{{jsxref("Object")}} 是不可迭代的，除非它们实现了[迭代协议](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol). 因此，你不能使用 [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 来迭代对象的属性。
 
 ```js example-bad
 var obj = { 'France': 'Paris', 'England': 'London' };

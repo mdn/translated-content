@@ -21,13 +21,13 @@ dateObj.toString()
 
 ## 描述
 
-{{jsxref("Date")}}对象覆盖了 {{jsxref("Object")}} 对象的 `toString() `方法；它不是继承自 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref("Date")}} 对象，`toString()` 方法返回一个表示该对象的字符串。
+{{jsxref("Date")}}对象覆盖了 {{jsxref("Object")}} 对象的 `toString()` 方法；它不是继承自 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref("Date")}} 对象，`toString()` 方法返回一个表示该对象的字符串。
 
 该 `toString` 方法总是返回一个美式英语日期格式的字符串。
 
 当一个日期对象被用来作为文本值或用来进行字符串连接时，`toString` 方法会被自动调用。
 
-`toString() `是通用函数。如果不是{{jsxref("Date")}}实例，则 返回"Invalid Date"。
+`toString()` 是通用函数。如果不是{{jsxref("Date")}}实例，则 返回"Invalid Date"。
 
 ## 例子
 

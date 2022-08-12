@@ -104,7 +104,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 当（中断之后）重新开始请求更多资源片段的时候，必须确保自从上一个片段被接收之后该资源没有进行过修改。
 
-The {{HTTPHeader("If-Range")}} 请求首部可以用来生成条件式范围请求：假如条件满足的话，条件请求就会生效，服务器会返回状态码为 {{HTTPStatus("206")}} `Partial `的响应，以及相应的消息主体。假如条件未能得到满足，那么就会返回状态码为 {{HTTPStatus("200")}} `OK` 的响应，同时返回整个资源。该首部可以与 {{HTTPHeader("Last-Modified")}} 验证器或者 {{HTTPHeader("ETag")}} 一起使用，但是二者不能同时使用。
+The {{HTTPHeader("If-Range")}} 请求首部可以用来生成条件式范围请求：假如条件满足的话，条件请求就会生效，服务器会返回状态码为 {{HTTPStatus("206")}} `Partial` 的响应，以及相应的消息主体。假如条件未能得到满足，那么就会返回状态码为 {{HTTPStatus("200")}} `OK` 的响应，同时返回整个资源。该首部可以与 {{HTTPHeader("Last-Modified")}} 验证器或者 {{HTTPHeader("ETag")}} 一起使用，但是二者不能同时使用。
 
 ```plain
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT

@@ -44,7 +44,7 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 - 伪数组对象（拥有一个 `length` 属性和若干索引属性的任意对象）
 - [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（可以获取对象中的元素，如 Map 和 Set 等）
 
-`Array.from()` 方法有一个可选参数 `mapFn`，让你可以在最后生成的数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说` Array.from(obj, mapFn, thisArg) `就相当于` Array.from(obj).map(mapFn, thisArg),` 除非创建的不是可用的中间数组。 这对一些数组的子类`,`如 [typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) 来说很重要，因为中间数组的值在调用 map() 时需要是适当的类型。
+`Array.from()` 方法有一个可选参数 `mapFn`，让你可以在最后生成的数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说 `Array.from(obj, mapFn, thisArg)` 就相当于 `Array.from(obj).map(mapFn, thisArg)`, 除非创建的不是可用的中间数组。 这对一些数组的子类`,`如 [typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) 来说很重要，因为中间数组的值在调用 map() 时需要是适当的类型。
 
 `from()` 的 `length` 属性为 1 ，即 `Array.from.length === 1`。
 
@@ -143,7 +143,7 @@ console.log(combine(m,n));                     // [1, 2, 3]
 
 ## Polyfill
 
-ECMA-262 第六版标准中添加了 `Array.from `。有些实现中可能尚未包括在其中。你可以通过在脚本前添加如下内容作为替代方法，以使用未原生支持的 `Array.from` 方法。该算法按照 ECMA-262 第六版中的规范实现，并假定 `Object` 和 `TypeError` 有其本身的值， `callback.call` 对应 {{jsxref("Function.prototype.call")}} 。此外，鉴于无法使用 Polyfill 实现真正的的迭代器，该实现不支持规范中定义的泛型可迭代元素。
+ECMA-262 第六版标准中添加了 `Array.from`。有些实现中可能尚未包括在其中。你可以通过在脚本前添加如下内容作为替代方法，以使用未原生支持的 `Array.from` 方法。该算法按照 ECMA-262 第六版中的规范实现，并假定 `Object` 和 `TypeError` 有其本身的值， `callback.call` 对应 {{jsxref("Function.prototype.call")}} 。此外，鉴于无法使用 Polyfill 实现真正的的迭代器，该实现不支持规范中定义的泛型可迭代元素。
 
 ```js
 // Production steps of ECMA-262, Edition 6, 22.1.2.1

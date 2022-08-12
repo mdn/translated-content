@@ -67,7 +67,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ### 第一种重载例子
 
-使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中， 接下来我们使用`Instance` 导出的[Exported WebAssembly ](/en-US/docs/WebAssembly/Exported_functions)方法。
+使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中， 接下来我们使用`Instance` 导出的[Exported WebAssembly](/en-US/docs/WebAssembly/Exported_functions) 方法。
 
 ```js
 var importObject = {

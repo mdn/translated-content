@@ -353,7 +353,7 @@ y = 42 + " is the answer" // "42 is the answer"
 - [`parseInt()`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt)
 - [`parseFloat()`](https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat)
 
-`parseInt `方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制 (radix) 参数，这个参数用于指定使用哪一种进制。
+`parseInt` 方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制 (radix) 参数，这个参数用于指定使用哪一种进制。
 
 将字符串转换为数字的另一种方法是使用一元**加法运算符**。
 
@@ -438,7 +438,7 @@ var myList = ['home', , 'school', , ];
 
 布尔类型有两种字面量：`true`和`false`。
 
-不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见[ 布尔对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)。
+不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见 [布尔对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)。
 
 ### 数字字面量
 

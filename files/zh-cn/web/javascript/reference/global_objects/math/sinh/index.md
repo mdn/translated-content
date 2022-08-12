@@ -41,7 +41,7 @@ Math.sinh("foo")  // NaN
 
 ## Polyfill
 
-该函数可以使用 {{jsxref("Math.exp()")}}` 函数来实现`:
+该函数可以使用 {{jsxref("Math.exp()")}} 函数来实现：
 
 ```js
 function sinh(x){
