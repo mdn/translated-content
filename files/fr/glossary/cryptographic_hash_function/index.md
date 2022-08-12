@@ -21,4 +21,4 @@ Les fonctions de hachage cryptographiques comme MD5 et SHA-1 sont considérées 
 
 ## Pour approfondir
 
-- {{interwiki("wikipedia", "Fonction de hachage cryptographique", "Fonction de hachage cryptographique")}} sur Wikipédia
+- [Fonction de hachage cryptographique](https://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique) sur Wikipédia

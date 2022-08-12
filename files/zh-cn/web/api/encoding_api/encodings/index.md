@@ -35,7 +35,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Code_page_866', "'ibm866'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Code_page_866">'ibm866'</a></code
         >
       </td>
     </tr>
@@ -45,7 +45,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-2', "'iso-8859-2'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-2">'iso-8859-2'</a></code
         >
       </td>
     </tr>
@@ -55,7 +55,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-3', "'iso-8859-3'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-3">'iso-8859-3'</a></code
         >
       </td>
     </tr>
@@ -65,7 +65,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-4', "'iso-8859-4'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-4">'iso-8859-4'</a></code
         >
       </td>
     </tr>
@@ -75,7 +75,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-5', "'iso-8859-5'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-5">'iso-8859-5'</a></code
         >
       </td>
     </tr>
@@ -85,7 +85,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-6', "'iso-8859-6'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-6">'iso-8859-6'</a></code
         >
       </td>
     </tr>
@@ -95,7 +95,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-7', "'iso-8859-7'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-7">'iso-8859-7'</a></code
         >
       </td>
     </tr>
@@ -105,7 +105,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-8', "'iso-8859-8'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-8">'iso-8859-8'</a></code
         >
       </td>
     </tr>
@@ -115,7 +115,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO-8859-8-I', "'iso-8859-8i'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO-8859-8-I">'iso-8859-8i'</a></code
         >
       </td>
     </tr>
@@ -125,7 +125,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-10', "'iso-8859-10'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-10">'iso-8859-10'</a></code
         >
       </td>
     </tr>
@@ -135,7 +135,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-13', "'iso-8859-13'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-13">'iso-8859-13'</a></code
         >
       </td>
     </tr>
@@ -145,7 +145,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-14', "'iso-8859-14'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-14">'iso-8859-14'</a></code
         >
       </td>
     </tr>
@@ -155,7 +155,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-15', "'iso-8859-15'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-15">'iso-8859-15'</a></code
         >
       </td>
     </tr>
@@ -163,7 +163,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>iso-8859-16</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_8859-16', "'iso-8859-16'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_8859-16">'iso-8859-16'</a></code
         >
       </td>
     </tr>
@@ -173,7 +173,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'KOI8-R', "'koi8-r'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/KOI8-R">'koi8-r'</a></code
         >
       </td>
     </tr>
@@ -181,7 +181,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>koi8-u</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'KOI8-U', "'koi8-u'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/KOI8-U">'koi8-u'</a></code
         >
       </td>
     </tr>
@@ -191,7 +191,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Mac OS Roman', "'macintosh'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Mac_OS_Roman">'macintosh'</a></code
         >
       </td>
     </tr>
@@ -201,7 +201,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-874', "'windows-874'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-874">'windows-874'</a></code
         >
       </td>
     </tr>
@@ -211,7 +211,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1250', "'windows-1250'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1250">'windows-1250'</a></code
         >
       </td>
     </tr>
@@ -221,7 +221,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1251', "'windows-1251'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1251">'windows-1251'</a></code
         >
       </td>
     </tr>
@@ -231,7 +231,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1252', "'windows-1252'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1252">'windows-1252'</a></code
         >
       </td>
     </tr>
@@ -241,7 +241,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1253', "'windows-1253'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1253">'windows-1253'</a></code
         >
       </td>
     </tr>
@@ -251,7 +251,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1254', "'windows-1254'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1254">'windows-1254'</a></code
         >
       </td>
     </tr>
@@ -261,7 +261,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1255', "'windows-1255'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1255">'windows-1255'</a></code
         >
       </td>
     </tr>
@@ -271,7 +271,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1256', "'windows-1256'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1256">'windows-1256'</a></code
         >
       </td>
     </tr>
@@ -281,7 +281,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1257', "'windows-1257'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1257">'windows-1257'</a></code
         >
       </td>
     </tr>
@@ -291,7 +291,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Windows-1258', "'windows-1258'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Windows-1258">'windows-1258'</a></code
         >
       </td>
     </tr>
@@ -299,7 +299,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>x-mac-cyrillic</code>"、"<code>x-mac-ukrainian</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Macintosh Cyrillic encoding', "'x-mac-cyrillic'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Macintosh_Cyrillic_encoding">'x-mac-cyrillic'</a></code
         >
       </td>
     </tr>
@@ -308,14 +308,14 @@ translation-of: Web/API/Encoding_API/Encodings
         "<code>chinese</code>"、"<code>csgb2312</code>"、"<code>csiso58gb231280</code>"、"<code>gb2312</code>"、"<code>gb_2312</code>"、"<code>gb_2312-80</code>"、"<code>gbk</code>"、"<code>iso-ir-58</code>"、"<code>x-gbk</code>"
       </td>
       <td>
-        <code>{{interwiki('wikipedia', 'GBK', "'gbk'")}}</code>
+        <code><a href="https://zh.wikipedia.org/wiki/GBK">'gbk'</a></code>
       </td>
     </tr>
     <tr>
       <td>"<code>gb18030</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'GB_18030', "'gb18030'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/GB_18030">'gb18030'</a></code
         >
       </td>
     </tr>
@@ -323,7 +323,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>hz-gb-2312</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'HZ_(character_encoding)', "'hz-gb-2312'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/HZ_(character_encoding)">'hz-gb-2312'</a></code
         >
       </td>
     </tr>
@@ -333,7 +333,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Big5', "'big5'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Big5">'big5'</a></code
         >
       </td>
     </tr>
@@ -343,7 +343,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Extended_Unix_Code#EUC-JP', "'euc-jp'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-JP">'euc-jp'</a></code
         >
       </td>
     </tr>
@@ -351,7 +351,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>csiso2022jp</code>"、"<code>iso-2022-jp</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_2022#ISO-2022-JP', "'iso-2022-jp'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-JP">'iso-2022-jp'</a></code
         >
       </td>
     </tr>
@@ -361,7 +361,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Shift JIS', "'shift-jis'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Shift_JIS">'shift-jis'</a></code
         >
       </td>
     </tr>
@@ -371,7 +371,7 @@ translation-of: Web/API/Encoding_API/Encodings
       </td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'Extended_Unix_Code#EUC-KR', "'euc-kr'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/Extended_Unix_Code#EUC-KR">'euc-kr'</a></code
         >
       </td>
     </tr>
@@ -379,7 +379,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>csiso2022kr</code>"、"<code>iso-2022-kr</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'ISO/IEC_2022#ISO-2022-KR', "'iso-2022-kr'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/ISO/IEC_2022#ISO-2022-KR">'iso-2022-kr'</a></code
         >
       </td>
     </tr>
@@ -387,7 +387,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>utf-16be</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'UTF-16#Byte_order_encoding_schemes', "'utf-16be'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16be'</a></code
         >
       </td>
     </tr>
@@ -395,7 +395,7 @@ translation-of: Web/API/Encoding_API/Encodings
       <td>"<code>utf-16</code>"、"<code>utf-16le</code>"</td>
       <td>
         <code
-          >{{interwiki('wikipedia', 'UTF-16#Byte_order_encoding_schemes', "'utf-16le'")}}</code
+          ><a href="https://zh.wikipedia.org/wiki/UTF-16#Byte_order_encoding_schemes">'utf-16le'</a></code
         >
       </td>
     </tr>

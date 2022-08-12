@@ -9,7 +9,7 @@ translation_of: Glossary/Statement
 
 ### 一般知识
 
-- {{Interwiki("wikipedia", "Statement (computer science)")}} on Wikipedia
+- [Statement (computer science)](https://zh.wikipedia.org/wiki/Statement_(computer_science)) on Wikipedia
 
 ### 技术参考
 

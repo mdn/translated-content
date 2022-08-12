@@ -12,13 +12,13 @@ original_slug: Web/API/Node/insertarAntes
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>El método <strong><code>Node.insertBefore()</code></strong> inserta un nodo antes del nodo de referencia como hijo de un nodo padre indicado. Si el nodo hijo es una referencia a un nodo ya existente en el documento, <code>insertBefore()</code> lo mueve de la posición actual a la nueva posición (no hay necesidad de eliminar el nodo de su nodo padre antes de agregarlo al algún nodo nuevo).</p>
+<p>El método <strong><code>Node.insertBefore()</code></strong> inserta un nodo antes del nodo de referencia como hijo de un nodo padre indicado. Si el nodo hijo es una referencia a un nodo ya existente en el documento, <code>insertBefore()</code> lo mueve de la posición actual a la nueva posición (no hay necesidad de eliminar el nodo de su nodo padre antes de agregarlo al algún nodo nuevo).</p>
 
 <p>Esto significa que el nodo no puede estar en dos puntos del documento al simultáneamente. Por lo que si el nodo ya tiene un padre, primero se elimina el nodo, y luego se inserta en la nueva posición. {{domxref("Node.cloneNode()")}} puede utilizarse para hacer una copia de un nodo antes de insertarlo en un nuevo padre. Ten en cuenta que las copias hechas con <code>cloneNode()</code> no se mantendrán sincronizadas automáticamente.</p>
 
 <p>Si el nodo de referencia es <code>null</code>, el nodo indicado se añadirá al final de la lista de hijos del nodo padre especificado.</p>
 
-<p>Si el hijo proporcionado es un {{domxref("DocumentFragment")}}, el contenido completo del <code>DocumentFragment</code> se moverá a la lista de hijos del nodo padre indicado.</p>
+<p>Si el hijo proporcionado es un {{domxref("DocumentFragment")}}, el contenido completo del <code>DocumentFragment</code> se moverá a la lista de hijos del nodo padre indicado.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -26,21 +26,21 @@ original_slug: Web/API/Node/insertarAntes
 </pre>
 
 <ul>
- <li><code>insertedNode</code> El nodo que esta siendo insertado, es decir, <code>newNode</code></li>
+ <li><code>insertedNode</code> El nodo que esta siendo insertado, es decir, <code>newNode</code></li>
  <li><code>parentNode</code> El padre del nodo recién insertado.</li>
  <li><code>newNode</code> El nodo a insertar.</li>
- <li><code>referenceNode</code> El nodo antes del cual se inserta <code>newNode</code>.</li>
+ <li><code>referenceNode</code> El nodo antes del cual se inserta <code>newNode</code>.</li>
 </ul>
 
-<p>Si <code>referenceNode</code> es <code>null</code>, el <code>newNode</code> se insertará al final de la lista de nodos hijos.</p>
+<p>Si <code>referenceNode</code> es <code>null</code>, el <code>newNode</code> se insertará al final de la lista de nodos hijos.</p>
 
 <div class="note">
-<p><code>referenceNode</code> <strong>no</strong> es un parámetro opcional -- debes pasar explícitamente un <code>Node</code> o <code>null</code>. No proporcionándolo o pasando valores no válidos podría provocar un <a href="https://code.google.com/p/chromium/issues/detail?id=419780">comportamiento</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">distinto</a> en diferentes versiones de navegadores.</p>
+<p><code>referenceNode</code> <strong>no</strong> es un parámetro opcional -- debes pasar explícitamente un <code>Node</code> o <code>null</code>. No proporcionándolo o pasando valores no válidos podría provocar un <a href="https://code.google.com/p/chromium/issues/detail?id=419780">comportamiento</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">distinto</a> en diferentes versiones de navegadores.</p>
 </div>
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>El valor devuelto es el hijo añadido excepto cuando <code>newNode</code> es un {{domxref("DocumentFragment")}}, en cuyo caso se devuelve un {{domxref("DocumentFragment")}}.</p>
+<p>El valor devuelto es el hijo añadido excepto cuando <code>newNode</code> es un {{domxref("DocumentFragment")}}, en cuyo caso se devuelve un {{domxref("DocumentFragment")}}.</p>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
@@ -94,13 +94,13 @@ parentDiv.insertBefore(sp1, sp2);
 &lt;/script&gt;
 </pre>
 
-<p>No existe el método <code>insertAfter()</code>.  Puede ser emulado mediante la combinación del método con {{domxref("Node.nextSibling()")}}.</p>
+<p>No existe el método <code>insertAfter()</code>.  Puede ser emulado mediante la combinación del método con {{domxref("Node.nextSibling()")}}.</p>
 
-<p>En el ejemplo anterior, <code>sp1</code> podría insertarse después de <code>sp2</code> usando:</p>
+<p>En el ejemplo anterior, <code>sp1</code> podría insertarse después de <code>sp2</code> usando:</p>
 
 <pre class="brush: js"><code>parentDiv.insertBefore(sp1, sp2.nextSibling);</code></pre>
 
-<p>Si <code>sp2</code> no tiene ningún hermano depués de él, entonces debe ser el último hijo — <code>sp2.nextSibling</code> devuelve <code>null</code>, y <code>sp1</code> se inserta al final de la lista de nodos hijos (inmediatamente después de <code>sp2</code>).</p>
+<p>Si <code>sp2</code> no tiene ningún hermano depués de él, entonces debe ser el último hijo — <code>sp2.nextSibling</code> devuelve <code>null</code>, y <code>sp1</code> se inserta al final de la lista de nodos hijos (inmediatamente después de <code>sp2</code>).</p>
 
 <h3 id="Ejemplo_3">Ejemplo 3</h3>
 
@@ -118,7 +118,7 @@ var newElement = document.createElement("div");
 parentElement.insertBefore(newElement, theFirstChild);
 </pre>
 
-<p>Cuando el elemento no tiene ub primer hijo, entonces <code style="font-style: normal; line-height: 1.5;">firstChild</code><span style="line-height: 1.5;"> es </span><code style="font-style: normal; line-height: 1.5;">null</code><span style="line-height: 1.5;">. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.</span></p>
+<p>Cuando el elemento no tiene ub primer hijo, entonces <code style="font-style: normal; line-height: 1.5;">firstChild</code><span style="line-height: 1.5;"> es </span><code style="font-style: normal; line-height: 1.5;">null</code><span style="line-height: 1.5;">. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.</span></p>
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 

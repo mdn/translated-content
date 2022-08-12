@@ -12,21 +12,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 <div>{{JSRef}}</div>
 
-<p><strong>Reflect </strong> es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handlers</a>. <code>Reflect</code> no es un objeto de funciones y por lo tanto no puede ser construido.</p>
+<p><strong>Reflect </strong> es un objecto incorporado que proporciona metodos para interceptar operaciones de javascript. Los métodos son los mismos que los de <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handlers</a>. <code>Reflect</code> no es un objeto de funciones y por lo tanto no puede ser construido.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>A diferencia de la mayoria de los objetos globales, <code>Reflect</code> no es un constructor.  No puede ser instanciado con un <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">operador</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> </a>o invocando el objecto  <code>Reflect</code> como una función. Todas las propiedades y métodos de <code>Reflect</code> son estáticos (igual que los del objeto {{jsxref("Math")}}).</p>
+<p>A diferencia de la mayoria de los objetos globales, <code>Reflect</code> no es un constructor.  No puede ser instanciado con un <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">operador</a> <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> </a>o invocando el objecto  <code>Reflect</code> como una función. Todas las propiedades y métodos de <code>Reflect</code> son estáticos (igual que los del objeto {{jsxref("Math")}}).</p>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p>El objeto <code>Reflect</code>  proporciona las siguientes funciones estáticas con los mismos nombres de los métodos de <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler</a>. Algunos de estos métodos son correspondientes a los métodos de {{jsxref("Object")}}.</p>
+<p>El objeto <code>Reflect</code>  proporciona las siguientes funciones estáticas con los mismos nombres de los métodos de <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler">proxy handler</a>. Algunos de estos métodos son correspondientes a los métodos de {{jsxref("Object")}}.</p>
 
 <dl>
  <dt>{{jsxref("Reflect.apply()")}}</dt>
  <dd>Calls a target function with arguments as specified by the <code>args</code> parameter. See also {{jsxref("Function.prototype.apply()")}}.</dd>
  <dt>{{jsxref("Reflect.construct()")}}</dt>
- <dd> The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> as a function. Equivalent to calling <code>new target(...args)</code>.</dd>
+ <dd> The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> as a function. Equivalent to calling <code>new target(...args)</code>.</dd>
  <dt>{{jsxref("Reflect.defineProperty()")}}</dt>
  <dd>Similar to {{jsxref("Object.defineProperty()")}}. Returns a {{jsxref("Boolean")}}.</dd>
  <dt>{{jsxref("Reflect.deleteProperty()")}}</dt>
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
  <dt>{{jsxref("Reflect.get()")}}</dt>
  <dd>A function that returns the value of properties.</dd>
  <dt>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</dt>
- <dd>Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.</dd>
+ <dd>Similar to {{jsxref("Object.getOwnPropertyDescriptor()")}}. Returns a property descriptor of the given property if it exists on the object,  {{jsxref("undefined")}} otherwise.</dd>
  <dt>{{jsxref("Reflect.getPrototypeOf()")}}</dt>
  <dd>Same as {{jsxref("Object.getPrototypeOf()")}}.</dd>
  <dt>{{jsxref("Reflect.has()")}}</dt>

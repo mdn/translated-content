@@ -287,7 +287,7 @@ function onLoad() {
 
 <p>次に、<code>SESSION_TYPE</code> 定数の値を調べて、WebXR コンテキストを没入型にするかインラインにするかを確認します。 没入型セッションは <code>local</code> 参照空間を使用し、インラインセッションは <code>viewer</code> 参照空間を使用します。</p>
 
-<p><code>glMatrix</code> ライブラリーの 4x4 行列用の <code>fromTranslation()</code> 関数は、<code>viewerStartPosition</code> 定数で指定されたビューアーの開始位置を変換行列 <code>cubeMatrix</code> に変換するために使用します。 ビューアーの開始方向である <code>viewerStartOrientation</code> 定数は、<code>cubeOrientation</code> にコピーして、時間の経過に伴う立方体の回転を追跡するために使用します。</p>
+<p><code>glMatrix</code> ライブラリーの 4x4 行列用の <code>fromTranslation()</code> 関数は、<code>viewerStartPosition</code> 定数で指定されたビューアーの開始位置を変換行列 <code>cubeMatrix</code> に変換するために使用します。 ビューアーの開始方向である <code>viewerStartOrientation</code> 定数は、<code>cubeOrientation</code> にコピーして、時間の経過に伴う立方体の回転を追跡するために使用します。</p>
 
 <p><code>sessionStarted()</code> は、セッションの {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} メソッドを呼び出して、オブジェクトを作成する空間を記述する参照空間オブジェクトを取得することで仕上げます。 返された promise が {{domxref("XRReferenceSpace")}} オブジェクトに解決されると、その {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace")}} メソッドを呼び出して、オブジェクトの座標系を表す参照空間オブジェクトを取得します。 新しい空間の原点は、<code>viewerStartPosition</code> で指定された世界座標にあり、その方向は <code>cubeOrientation</code> に設定されています。 次に、{{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} メソッドを呼び出して、フレームを描画する準備ができたことをセッションに通知します。 後でリクエストをキャンセルする必要がある場合に備えて、返されたリクエスト ID を記録します。</p>
 

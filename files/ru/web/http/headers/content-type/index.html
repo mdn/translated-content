@@ -50,7 +50,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <h3 id="Content-Type_в_HTML_формах"><code>Content-Type</code> в HTML формах</h3>
 
-<p>В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, <code>Content-Type</code> запроса определяется в атрибуте <code>enctype</code> тега {{HTMLElement("form")}}.</p>
+<p>В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, <code>Content-Type</code> запроса определяется в атрибуте <code>enctype</code> тега {{HTMLElement("form")}}.</p>
 
 <pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
   &lt;input type="text" name="description" value="some text"&gt;
@@ -59,7 +59,7 @@ Content-Type: multipart/form-data; boundary=something
 &lt;/form&gt;
 </pre>
 
-<p>Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):</p>
+<p>Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):</p>
 
 <pre>POST /foo HTTP/1.1
 Content-Length: 68137

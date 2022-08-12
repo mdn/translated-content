@@ -5,13 +5,13 @@ translation_of: Web/API/MutationObserver
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code>MutationObserver</code> 는 개발자들에게 <a href="/en-US/docs/DOM">DOM</a> 변경 감시를 제공합니다. DOM3 이벤트 기술 설명서에 정의된 <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> 를 대체합니다.</p>
+<p><code>MutationObserver</code> 는 개발자들에게 <a href="/en-US/docs/DOM">DOM</a> 변경 감시를 제공합니다. DOM3 이벤트 기술 설명서에 정의된 <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a> 를 대체합니다.</p>
 
 <h2 id="생성자">생성자</h2>
 
 <h3 id="MutationObserver"><code>MutationObserver()</code></h3>
 
-<p>새 DOM 변경 감시자의 인스턴스화에 대한 생성자.</p>
+<p>새 DOM 변경 감시자의 인스턴스화에 대한 생성자.</p>
 
 <pre class="syntaxbox">new MutationObserver(
   function callback
@@ -42,12 +42,12 @@ translation_of: Web/API/MutationObserver
 </table>
 
 <div class="note">
-<p><strong>주</strong>: {{domxref("Node")}}의 대상은 <a href="https://nodejs.org/en/">NodeJS</a> 와 혼동되지 말아야 합니다.</p>
+<p><strong>주</strong>: {{domxref("Node")}}의 대상은 <a href="https://nodejs.org/en/">NodeJS</a> 와 혼동되지 말아야 합니다.</p>
 </div>
 
 <h3 id="observe"><code>observe()</code></h3>
 
-<p>특정 노드에서 DOM 변경의 알림을 받을 수 있도록 <code>MutationObserver</code> 인스턴스를 등록.</p>
+<p>특정 노드에서 DOM 변경의 알림을 받을 수 있도록 <code>MutationObserver</code> 인스턴스를 등록.</p>
 
 <pre class="syntaxbox">void observe(
   {{domxref("Node")}} target,
@@ -64,11 +64,11 @@ translation_of: Web/API/MutationObserver
  <dd>DOM 변경이 보고되어야 할 특정 <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> 객체.</dd>
 </dl>
 
-<div class="note">주: observer를 element에 추가하는 것은 addEventListner와 비슷하며, 여러 번 element를 관찰하더라도 차이가 나지 않습니다. element를 두번 관찰한다고해서 observe callback이 두 번 발생하지 않으며, disconnect()를 두번 실행하지 않아도 됩니다. 다시 말해서, 한번 element를 관찰하면 동일한 observer instance로 다시 관찰하더라도 아무 일이 발생하지 않습니다. 물론 callback object가 다르다면 다른 observer를 추가합니다.</div>
+<div class="note">주: observer를 element에 추가하는 것은 addEventListner와 비슷하며, 여러 번 element를 관찰하더라도 차이가 나지 않습니다. element를 두번 관찰한다고해서 observe callback이 두 번 발생하지 않으며, disconnect()를 두번 실행하지 않아도 됩니다. 다시 말해서, 한번 element를 관찰하면 동일한 observer instance로 다시 관찰하더라도 아무 일이 발생하지 않습니다. 물론 callback object가 다르다면 다른 observer를 추가합니다.</div>
 
 <h3 id="disconnect"><code>disconnect()</code></h3>
 
-<p>DOM 변경 알림을 받는 <code>MutationObserver</code> 인스턴스 중지. <a href="#observe()"><code>observe()</code></a> 재사용시까지 감시 콜백은 발동되지 않을 것입니다.</p>
+<p>DOM 변경 알림을 받는 <code>MutationObserver</code> 인스턴스 중지. <a href="#observe()"><code>observe()</code></a> 재사용시까지 감시 콜백은 발동되지 않을 것입니다.</p>
 
 <pre class="syntaxbox">void disconnect();
 </pre>
@@ -86,9 +86,9 @@ translation_of: Web/API/MutationObserver
 
 <h2 id="MutationObserverInit"><code>MutationObserverInit</code></h2>
 
-<p><code>MutationObserverInit</code> 는 다음 속성들을 가진 객체입니다:</p>
+<p><code>MutationObserverInit</code> 는 다음 속성들을 가진 객체입니다:</p>
 
-<div class="note">주: 최소한 <code>childList</code>, <code>attributes</code>, 또는 <code>characterData</code>는 <code>true</code>로 설정해야합니다. 그렇지 않으면 'An invalid or ilegal string was specified' 오류가 발생합니다. </div>
+<div class="note">주: 최소한 <code>childList</code>, <code>attributes</code>, 또는 <code>characterData</code>는 <code>true</code>로 설정해야합니다. 그렇지 않으면 'An invalid or ilegal string was specified' 오류가 발생합니다. </div>
 
 <table class="standard-table">
  <tbody>
@@ -129,7 +129,7 @@ translation_of: Web/API/MutationObserver
 
 <h2 id="사용_예">사용 예</h2>
 
-<p>다음 예제는 <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">이 블로그 글</a>에서 발췌했습니다.</p>
+<p>다음 예제는 <a class="external" href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/" rel="freelink">이 블로그 글</a>에서 발췌했습니다.</p>
 
 <pre class="brush: js">// 대상 node 선택
 var target = document.getElementById('some-id');
@@ -160,29 +160,9 @@ observer.disconnect();
  <li><a class="external" href="http://code.google.com/p/mutation-summary/" rel="freelink">The mutation summary library</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">규격</h2>
+<h2 id="Specifications">규격</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">규격</th>
-   <th scope="col">상태</th>
-   <th scope="col">의견</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}}</td>
-   <td>{{ Spec2('DOM WHATWG') }}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4', '#mutationobserver', 'MutationObserver')}}</td>
-   <td>{{ Spec2('DOM4') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

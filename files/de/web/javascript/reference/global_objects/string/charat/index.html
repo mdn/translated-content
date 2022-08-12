@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 <h3 id="Wiedergegebener_Wert">Wiedergegebener Wert</h3>
 
 <p>Ein String, der das Zeichen an der angegebenen <code>index</code>-Stelle wiedergibt. Wenn <code>index</code> außerhalb der Reichweite liegt, wird ein leerer String zurückgegeben.<br>
-  </p>
+  </p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
@@ -119,7 +119,7 @@ function getWholeChar(str, i) {
 }
 </pre>
 
-<p>In einer ECMAScript 2016-Umgebung, welche destruktive Benennung erlaubt, ist eine bündigere und  zu gewissem Grad flexiblere Alternative möglich, da es automatisch eine Erhöhung der entsprechenden Variable vornimmt (wenn das Zeichen<br>
+<p>In einer ECMAScript 2016-Umgebung, welche destruktive Benennung erlaubt, ist eine bündigere und  zu gewissem Grad flexiblere Alternative möglich, da es automatisch eine Erhöhung der entsprechenden Variable vornimmt (wenn das Zeichen<br>
  ein Ersatzpaar ist).</p>
 
 <pre class="brush: js">var str = 'A\uD87E\uDC04Z'; // direkter Einsatz von nicht MBE-Zeichen auch möglich
@@ -177,7 +177,7 @@ function getWholeCharAndI(str, i) {
 <h3 id="Korrigiere_charAt()_um_Zeichen_der_nicht_mehrsprachigen_Basisebene_(MBE)_zu_unterstützen">Korrigiere <code>charAt()</code>, um Zeichen der nicht mehrsprachigen Basisebene (MBE) zu unterstützen</h3>
 
 <p><br>
-  Das obige Beispiel dürfte häufiger für diejenigen hilfreich sein, die nicht MBE-Zeichen unterstützen möchten (da man nicht wissen muss, wo nicht MBE-Zeichen vorkommen).  Falls man wünscht (durch Angabe eines Indexwerts) die Ersatzpaare innerhalb eines Strings als Einzelcharakter zu behandeln, kann man folgendes nutzen:</p>
+  Das obige Beispiel dürfte häufiger für diejenigen hilfreich sein, die nicht MBE-Zeichen unterstützen möchten (da man nicht wissen muss, wo nicht MBE-Zeichen vorkommen).  Falls man wünscht (durch Angabe eines Indexwerts) die Ersatzpaare innerhalb eines Strings als Einzelcharakter zu behandeln, kann man folgendes nutzen:</p>
 
 <pre class="brush: js">function fixedCharAt(str, idx) {
   var ret = '';
@@ -225,72 +225,24 @@ function getWholeCharAndI(str, i) {
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Standardunterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome für Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td> Standardunterstützung</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 

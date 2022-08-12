@@ -18,7 +18,7 @@ translation_of: Mozilla/Firefox/Releases/3.6
 - [Mozilla-specific media features](/en-US/docs/CSS/Media_queries#Mozilla-specific_media_features)
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/CSS/Media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/CSS/Scaling_background_images)
-  - : The `background-size `property from the [CSS 3 Backgrounds and Borders draft](http://dev.w3.org/csswg/css3-background/) is now supported under the name [`-moz-background-size`](/zh-TW/docs/Web/CSS/-moz-background-size).
+  - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](http://dev.w3.org/csswg/css3-background/) is now supported under the name [`-moz-background-size`](/zh-TW/docs/Web/CSS/-moz-background-size).
 - [WOFF font support](/en-US/docs/WOFF)
   - : [`@font-face`](/zh-TW/docs/Web/CSS/@font-face) now supports the WOFF downloadable font file format.
 - [Pointer events](/en-US/docs/CSS/pointer-events)
@@ -53,8 +53,6 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 
 - [`Date.parse()`](/en-US/docs/JavaScript/Reference/Global_Objects/Date/parse) can now parse ISO 8601 dates like YYYY-MM-DD.
 - The [`prototype`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype) property of function instances is no longer enumerable.
-
-<!---->
 
 ### DOM
 

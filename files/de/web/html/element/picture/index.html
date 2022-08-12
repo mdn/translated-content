@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/picture
 ---
 <div>{{HTMLRef}}</div>
 
-<p>Das <strong>HTML-Element <code>&lt;picture&gt;</code> </strong>ist ein Container, der zur Angabe mehrerer {{HTMLElement("source")}}s (Bildquellen) für ein {{HTMLElement("img")}} dient. Der Browser wird die Quelle verwenden, die aufgrund des gegenwärtigen Seitenlayouts (die Begrenzungen der Box, in der das Bild auftaucht) und dem Anzeigegerät (z.B. ein normales or hiDPI-Gerät) am geeignesten erscheint.</p>
+<p>Das <strong>HTML-Element <code>&lt;picture&gt;</code> </strong>ist ein Container, der zur Angabe mehrerer {{HTMLElement("source")}}s (Bildquellen) für ein {{HTMLElement("img")}} dient. Der Browser wird die Quelle verwenden, die aufgrund des gegenwärtigen Seitenlayouts (die Begrenzungen der Box, in der das Bild auftaucht) und dem Anzeigegerät (z.B. ein normales or hiDPI-Gerät) am geeignesten erscheint.</p>
 
 <h2 id="Usage_Context">Usage Context</h2>
 
@@ -38,11 +38,11 @@ translation_of: Web/HTML/Element/picture
 
 <h2 id="Attribute">Attribute</h2>
 
-<p>Dieses Element beinhaltet nur <a href="/en-US/docs/Web/HTML/Global_attributes">globale Attribute</a>.</p>
+<p>Dieses Element beinhaltet nur <a href="/en-US/docs/Web/HTML/Global_attributes">globale Attribute</a>.</p>
 
-<h2 id="Beispiel_1_Verwendung_des_Attributs_media">Beispiel 1: Verwendung des Attributs <code>media</code></h2>
+<h2 id="Beispiel_1_Verwendung_des_Attributs_media">Beispiel 1: Verwendung des Attributs <code>media</code></h2>
 
-<p>Das Attribut <code>media</code> erlaubt die Angabe eines Media-Query, das der User Agent auswertet, um das gewünschte {{HTMLElement("source")}}-Element auszuwählen. Wenn ein Media Query zu <code>false</code> evaluiert, wird das {{HTMLElement("source")}}-Element übersprungen.</p>
+<p>Das Attribut <code>media</code> erlaubt die Angabe eines Media-Query, das der User Agent auswertet, um das gewünschte {{HTMLElement("source")}}-Element auszuwählen. Wenn ein Media Query zu <code>false</code> evaluiert, wird das {{HTMLElement("source")}}-Element übersprungen.</p>
 
 <pre class="brush: html">&lt;picture&gt;
  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/picture
 
 <h2 id="Beispiel_2_Verwendung_des_Attributs_type">Beispiel 2: Verwendung des Attributs <code>type</code></h2>
 
-<p>Das Attribut type erlaubt die Angabe eines MIME-Typs für Ressourcen, die im Attribut srcset des Elements {{HTMLElement("source")}} angegeben sind. Wenn der User Agent den angegebenen Typ nicht unterstützt, wird das {{HTMLElement("source")}}-Element übersprungen.</p>
+<p>Das Attribut type erlaubt die Angabe eines MIME-Typs für Ressourcen, die im Attribut srcset des Elements {{HTMLElement("source")}} angegeben sind. Wenn der User Agent den angegebenen Typ nicht unterstützt, wird das {{HTMLElement("source")}}-Element übersprungen.</p>
 
 <pre class="brush: html">​&lt;picture&gt;
  &lt;source srcset="mdn-logo.svg" type="image/svg+xml"&gt;
@@ -60,7 +60,7 @@ translation_of: Web/HTML/Element/picture
 &lt;/picture&gt;
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Beispiel_3_Verwendung_des_Attributs_srcset">Beispiel 3: Verwendung des Attributs <code>srcset</code></h2>
 
@@ -71,7 +71,7 @@ translation_of: Web/HTML/Element/picture
  &lt;img src="mdn-logo.png" alt="MDN"&gt;
 &lt;/picture&gt;</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Spezifikation">Spezifikation</h2>
 

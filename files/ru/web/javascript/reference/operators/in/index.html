@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p><strong>Оператор <code>in</code></strong> возвращает <code>true</code>, если свойство содержится в указанном объекте или в его цепочке прототипов.</p>
+<p><strong>Оператор <code>in</code></strong> возвращает <code>true</code>, если свойство содержится в указанном объекте или в его цепочке прототипов.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 <h2 id="Описание">Описание</h2>
 
-<p>В примере ниже показаны некоторые способы использования оператора <code>in</code>.</p>
+<p>В примере ниже показаны некоторые способы использования оператора <code>in</code>.</p>
 
 <pre class="brush:js">// Массивы
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -48,7 +48,7 @@ var mycar = {make: "Honda", model: "Accord", year: 1998};
 "model" in mycar // true
 </pre>
 
-<p>Вы должны указать объект справа от оператора <code>in</code>. Например, вы можете указать строку, созданную через конструктор объекта <code>String</code>, но вы не можете указать строковый литерал.</p>
+<p>Вы должны указать объект справа от оператора <code>in</code>. Например, вы можете указать строку, созданную через конструктор объекта <code>String</code>, но вы не можете указать строковый литерал.</p>
 
 <pre class="brush:js">var color1 = new String("green");
 "length" in color1 // returns true
@@ -60,7 +60,7 @@ var color2 = "coral";
 
 <h3 id="Использование_оператора_in_с_неопределёнными_или_с_уже_удалёнными_свойствами">Использование оператора <code>in</code> с неопределёнными или с уже удалёнными свойствами</h3>
 
-<p>Если вы удалили свойство при помощи оператора <code style="font-style: normal;"><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code>, то оператор <code>in</code> возвратит <code>false</code> для этого свойства.</p>
+<p>Если вы удалили свойство при помощи оператора <code style="font-style: normal;"><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code>, то оператор <code>in</code> возвратит <code>false</code> для этого свойства.</p>
 
 <pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 delete mycar.make;
@@ -71,7 +71,7 @@ delete trees[3];
 3 in trees; // false
 </pre>
 
-<p>Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор <code>in</code> вернёт значение <code>true</code>.</p>
+<p>Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор <code>in</code> вернёт значение <code>true</code>.</p>
 
 <pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;

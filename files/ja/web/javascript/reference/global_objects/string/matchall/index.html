@@ -94,7 +94,7 @@ Array.from(str.matchAll(regexp), m =&gt; `${regexp.lastIndex} ${m[0]}`);
 
 <p><code>matchAll</code> はキャプチャグループへのよりよいアクセスを実現します。</p>
 
-<p>{{jsxref("Global_Objects/String/match", "match()")}} では、グローバル <code>/g</code> フラグを使用するとキャプチャグループが無視されてしまいます。</p>
+<p>{{jsxref("Global_Objects/String/match", "match()")}} では、グローバル <code>/g</code> フラグを使用するとキャプチャグループが無視されてしまいます。</p>
 
 <pre class="brush: js notranslate">let regexp = /t(e)(st(\d?))/g;
 let str = 'test1test2';

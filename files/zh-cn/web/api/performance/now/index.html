@@ -39,7 +39,7 @@ const t1 = window.performance.now();
 console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒.")
 </pre>
 
-<p>和 JavaScript 中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now" title="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
+<p>和 JavaScript 中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
 
 <p>另外一个不同点是，<code>window.performance.now()</code>是以一个恒定的速率慢慢增加的，它不会受到系统时间的影响（系统时钟可能会被手动调整或被 NTP 等软件篡改）。另外，<code>performance.timing.navigationStart + performance.now()</code> 约等于 <code>Date.now()</code>。</p>
 
@@ -85,5 +85,5 @@ Cross-Origin-Embedder-Policy: require-corp</pre>
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now" title="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>from HTML5 Rocks</li>
+ <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>from HTML5 Rocks</li>
 </ul>

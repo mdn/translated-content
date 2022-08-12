@@ -16,4 +16,4 @@ En d'autres termes, cela informe le navigateur que basculer d'HTTP à HTTPS dans
 
 - {{HTTPHeader("Strict-Transport-Security")}}
 - Article OWASP : [HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- Wikipedia : {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
+- [<i lang="en">HTTP Strict Transport Security</i>](https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security) sur Wikipédia

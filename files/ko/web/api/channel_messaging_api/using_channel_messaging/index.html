@@ -5,13 +5,13 @@ translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
 <p>{{DefaultAPISidebar("Channel Messaging API")}}</p>
 
-<p><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 는 두 개의 독립적인 스크립트(예를 들면, 두 개의 IFrame, 또는 메인 다큐먼트와 IFrame, 또는 {{domxref("SharedWorker")}}에 의한 두 개의 다큐먼트)를 각 포트를 가진 양방향 채널(또는 파이프)을 통해 서로 직접 통신할 수 있도록 해줍니다. 이 문서에서 이 기술을 사용하는 기본내용에 대해 살펴봅시다.</p>
+<p><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 는 두 개의 독립적인 스크립트(예를 들면, 두 개의 IFrame, 또는 메인 다큐먼트와 IFrame, 또는 {{domxref("SharedWorker")}}에 의한 두 개의 다큐먼트)를 각 포트를 가진 양방향 채널(또는 파이프)을 통해 서로 직접 통신할 수 있도록 해줍니다. 이 문서에서 이 기술을 사용하는 기본내용에 대해 살펴봅시다.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Use_cases">Use cases</h2>
 
-<p>Channel messaging is mainly useful in cases where you've got a social site that embeds capabilities from other sites into its main interface via IFrames, such as games, address book, or an audio player with personalized music choices. When these act as standalone units, things are ok, but the difficulty comes when you want interaction between the main site and the IFrames, or the different IFrames. For example, what if you wanted to add a contact to the address book from the main site, add high scores from your game into  your main profile, or add new background music choices from the audio player onto the game? Such things are not so easy using conventional web technology, because of the security models the web uses. You have to think about whether the origins trust one another, and how the messages are passed.</p>
+<p>Channel messaging is mainly useful in cases where you've got a social site that embeds capabilities from other sites into its main interface via IFrames, such as games, address book, or an audio player with personalized music choices. When these act as standalone units, things are ok, but the difficulty comes when you want interaction between the main site and the IFrames, or the different IFrames. For example, what if you wanted to add a contact to the address book from the main site, add high scores from your game into  your main profile, or add new background music choices from the audio player onto the game? Such things are not so easy using conventional web technology, because of the security models the web uses. You have to think about whether the origins trust one another, and how the messages are passed.</p>
 
 <p>Message channels on the other hand can provide a secure channel that a single data item can be sent down, from one browsing context to another, after which the channel is closed. The sending context asks the receiving context for the capability to send a single message. At the receiving end, this message is actioned as appropriate (for example as "add a contact", or "share high scores".)</p>
 
@@ -98,20 +98,7 @@ function handleMessage(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'web-messaging.html#channel-messaging', 'Channel messaging')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

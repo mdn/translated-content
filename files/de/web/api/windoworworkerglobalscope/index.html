@@ -16,7 +16,7 @@ original_slug: Web/API/WindowBase64
 
 <p>The <code><strong>WindowBase64</strong></code> helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in <a href="/en-US/docs/data_URIs">data URIs</a>.</p>
 
-<p>There is no object of this type, though the context object, either the {{domxref("Window")}} for regular browsing scope, or the {{domxref("WorkerGlobalScope")}}  for workers, implements it.</p>
+<p>There is no object of this type, though the context object, either the {{domxref("Window")}} for regular browsing scope, or the {{domxref("WorkerGlobalScope")}}  for workers, implements it.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -64,55 +64,9 @@ original_slug: Web/API/WindowBase64
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop(1)}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoMobile(1)}}</td>
-   <td rowspan="1">{{CompatVersionUnknown}}</td>
-   <td rowspan="1">{{CompatVersionUnknown}}</td>
-   <td rowspan="1">{{CompatVersionUnknown}}</td>
-   <td rowspan="1">{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]  <code>atob()</code> is also available to XPCOM components implemented in JavaScript, even though {{domxref("Window")}} is not the global object in components.</p>
+<p>[1]  <code>atob()</code> is also available to XPCOM components implemented in JavaScript, even though {{domxref("Window")}} is not the global object in components.</p>
 
 <h2 id="See_also">See also</h2>
 

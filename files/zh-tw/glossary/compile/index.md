@@ -12,7 +12,7 @@ translation_of: Glossary/Compile
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "編譯器")}}
+- 維基百科上的 [編譯器](https://zh.wikipedia.org/wiki/編譯器)
 
 ### 學習資源
 

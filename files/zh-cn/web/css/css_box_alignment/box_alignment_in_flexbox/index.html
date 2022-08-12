@@ -5,7 +5,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
 <div>{{CSSRef}}</div>
 
-<div> </div>
+<div> </div>
 
 <p><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 <p>但是，在 Flexbox 中，您可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：</p>
 
 <ul>
- <li>主轴由<code>flex-direction</code>设置方向，通过<code>justify-content</code> 属性对齐</li>
+ <li>主轴由<code>flex-direction</code>设置方向，通过<code>justify-content</code> 属性对齐</li>
  <li>纵轴穿过主轴，通过<code>align-content</code>，<code>align-self</code> / <code>align-items</code>对齐</li>
 </ul>
 
@@ -56,7 +56,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
 
-<h2 id="gap_属性"><code>gap</code> 属性</h2>
+<h2 id="gap_属性"><code>gap</code> 属性</h2>
 
 <ul>
  <li>{{cssxref("row-gap")}}</li>
@@ -71,7 +71,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 <p>在纵轴上，<code>row-gap</code>属性将在相邻的子元素之间创建间距，因此还必须将<code>flex-wrap</code>设置为<code>wrap</code>,以使其具有任何效果。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。</p>
+<p><strong>注意</strong>: 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。</p>
 </div>
 
 <h2 id="Reference">Reference</h2>

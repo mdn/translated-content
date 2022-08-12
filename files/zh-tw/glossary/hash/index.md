@@ -12,4 +12,4 @@ translation_of: Glossary/hash
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "散列函式")}}
+- 維基百科上的 [散列函式](https://zh.wikipedia.org/wiki/散列函式)

@@ -23,7 +23,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 <h2 id="O_que_deu_errado">O que deu errado?</h2>
 
-<p>A variável global ou propriedade do objeto foi definida como propriedade somente-leitura. (Tecnicamente, esse é um dado de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute">não-escrita</a>.)</p>
+<p>A variável global ou propriedade do objeto foi definida como propriedade somente-leitura. (Tecnicamente, esse é um dado de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute">não-escrita</a>.)</p>
 
 <p>Esse erro ocorre apenas em código no <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>. No modo não strict mode, essa atribuição é ignorada silenciosamente.</p>
 
@@ -31,7 +31,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 <h3 id="Casos_inválidos">Casos inválidos</h3>
 
-<p>Propriedades somente-leitura não são super comuns, mas elas podem ser criadas utilizando {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.</p>
+<p>Propriedades somente-leitura não são super comuns, mas elas podem ser criadas utilizando {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.</p>
 
 <pre class="brush: js example-bad">'use strict';
 var obj = Object.freeze({nome: 'Elsa', pontuacao: 157});
@@ -54,7 +54,7 @@ Math.PI = 4;  // TypeError
 
 <p>Desculpe, você não pode fazer isso.</p>
 
-<p>A variável global <code>undefined</code> também é somente-leitura, então você não pode silenciar o infame erro "undefined is not a function" fazendo isso:</p>
+<p>A variável global <code>undefined</code> também é somente-leitura, então você não pode silenciar o infame erro "undefined is not a function" fazendo isso:</p>
 
 <pre class="brush: js example-bad">'use strict';
 undefined = function() {};  // TypeError: "undefined" is read-only

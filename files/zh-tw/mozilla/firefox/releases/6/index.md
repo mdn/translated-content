@@ -11,8 +11,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ### HTML
 
-<!---->
-
 - The HTML5 [`<progress>`](/zh-TW/docs/Web/HTML/Element/progress) element, which lets you create a progress bar, is now supported.
 - The parsing of the HTML5 [`<track>`](/zh-TW/docs/Web/HTML/Element/track) element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
 - The [`<iframe>`](/zh-TW/docs/Web/HTML/Element/iframe) element is now clipped correctly by its container when the container's corners have been rounded using the [`border-radius`](/zh-TW/docs/Web/CSS/border-radius) property.
@@ -43,7 +41,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The [`azimuth`](/zh-TW/docs/Web/CSS/azimuth) CSS property is no longer supported, as we have removed what little code we had for the `aural` media group. It was never significantly implemented, so it made more sense to remove the crufty implementation for the time being rather than try to patch it up.
 - In the past, the [`:hover`](/zh-TW/docs/Web/CSS/:hover) pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The [`:indeterminate`](/zh-TW/docs/Web/CSS/:indeterminate) pseudo-class can be applied to [`<progress>`](/zh-TW/docs/Web/HTML/Element/progress) elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
-- The `-moz-win-exclude-glass `value has been added to the [`-moz-appearance`](/zh-TW/docs/Web/CSS/-moz-appearance) CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
+- The `-moz-win-exclude-glass` value has been added to the [`-moz-appearance`](/zh-TW/docs/Web/CSS/-moz-appearance) CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
 - [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) changed how the hash (#) symbol is treated in data URIs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
@@ -54,8 +52,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
   - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.
 - [Server-sent events](/en/Server-sent_events)
   - : Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.
-
-<!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - [`BlobBuilder`](/zh-TW/docs/Web/API/BlobBuilder) is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
@@ -101,8 +97,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - [WebSockets](/en/WebSockets)
   - : WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global `WebSocket` object has been renamed to `MozWebSocket` to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.
 
-<!---->
-
 - Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
 - The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.
 - The [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) request header is now supported; you can request an upgrade of an HTTP channel to another protocol by calling [`nsIHttpChannelInternal.HTTPUpgrade()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
@@ -112,7 +106,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
 - WebGL now supports the [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt) extension.
 - The new [Scratchpad](/en/Tools/Scratchpad) tool provides a handy place to experiment with JavaScript code.
-- The `console.trace()` method has been added to the [ConsoleAPI ](/en/Tools/Web_Console)(see [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
+- The `console.trace()` method has been added to the [ConsoleAPI](/en/Tools/Web_Console) (see [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
 
 ## Changes for Mozilla and add-on developers
 

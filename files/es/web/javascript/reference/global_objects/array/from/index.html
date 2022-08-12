@@ -43,12 +43,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/from
 
 <ul>
  <li>Objetos array-like (objetos con propiedad <code>length</code> o elementos indexados).</li>
- <li><a href="/es/docs/Web/JavaScript/Referencia/Iteration_protocols">Objetos iterables</a> (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).</li>
+ <li><a href="/es/docs/Web/JavaScript/Referencia/Iteration_protocols">Objetos iterables</a> (objetos de los cuales se pueden obtener sus elementos como {{jsxref("Map")}} y {{jsxref("Set")}}).</li>
 </ul>
 
-<p><code>Array.from()</code> tiene un parámetro opcional <code>mapFn</code>, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}}  a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, <code>Array.from(obj, mapFn, thisArg)</code> es igual que <code>Array.from(obj).map(mapFn, thisArg)</code>, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, <a href="/es/docs/Web/JavaScript/Vectores_tipados">vectores tipados</a>, ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.</p>
+<p><code>Array.from()</code> tiene un parámetro opcional <code>mapFn</code>, que te permite ejecutar una función {{jsxref("Array.prototype.map", "map")}}  a cada elemento del array (o a la subclase del objeto) que se ha creado. Para aclararlo, <code>Array.from(obj, mapFn, thisArg)</code> es igual que <code>Array.from(obj).map(mapFn, thisArg)</code>, excepto en que éste no crea un array intermedio. Esto es importante para ciertas subclases de array, <a href="/es/docs/Web/JavaScript/Vectores_tipados">vectores tipados</a>, ya que el vector intermedio necesitaría tener valores truncados para trabajar con el tipo adecuado.</p>
 
-<p>La propiedad <code>length</code> del método <code>from()</code> es 1.</p>
+<p>La propiedad <code>length</code> del método <code>from()</code> es 1.</p>
 
 <p>En ES2015, la sintaxis de clase permite la subclasificación de clases integradas y definidas por el usuario; como resultado, los métodos estáticos como <code>Array.from</code> son "heredados" por subclases de <code>Array</code> y crean nuevas instancias de la subclase, no <code>Array</code>.</p>
 
@@ -124,7 +124,7 @@ range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x =&gt; String.fromCharCode(x
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>Array.from</code> fue añadido en el estándar ECMA-262 en la 6ta edición (ES2015); así que no puede estar presente en otras implementaciones del estándar. Puedes usarlo insertando este código al comienzo de sus scripts, permitiendo el uso de <code>Array.from</code> en implementaciones que no lo soportan. Este algoritmo es el mismo especificado en ECMA-262, 6ta edición, suponiendo que <code>Object</code> y <code>TypeError</code> tengan sus valores originales y <code>callback.call</code> evalúa el valor original de {{jsxref("Function.prototype.call")}}. Adicionalmente, ya que verdaderos iterables pueden no ser polyficados, esta implementación no soporta iterables genéricos como definidos en la 6ta edición de ECMA-262.</p>
+<p><code>Array.from</code> fue añadido en el estándar ECMA-262 en la 6ta edición (ES2015); así que no puede estar presente en otras implementaciones del estándar. Puedes usarlo insertando este código al comienzo de sus scripts, permitiendo el uso de <code>Array.from</code> en implementaciones que no lo soportan. Este algoritmo es el mismo especificado en ECMA-262, 6ta edición, suponiendo que <code>Object</code> y <code>TypeError</code> tengan sus valores originales y <code>callback.call</code> evalúa el valor original de {{jsxref("Function.prototype.call")}}. Adicionalmente, ya que verdaderos iterables pueden no ser polyficados, esta implementación no soporta iterables genéricos como definidos en la 6ta edición de ECMA-262.</p>
 
 <pre class="brush: js">// Pasos de producción de ECMA-262, Edición 6, 22.1.2.1
 // Referencia: https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from
@@ -135,16 +135,16 @@ if (!Array.from) {
       return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
     };
     var toInteger = function (value) {
-      var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
-      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
-    };
+      var number = Number(value);
+      if (isNaN(number)) { return 0; }
+      if (number === 0 || !isFinite(number)) { return number; }
+      return (number &gt; 0 ? 1 : -1) * Math.floor(Math.abs(number));
+    };
     var maxSafeInteger = Math.pow(2, 53) - 1;
     var toLength = function (value) {
-      var len = toInteger(value);
+      var len = toInteger(value);
       return Math.min(Math.max(len, 0), maxSafeInteger);
-    };
+    };
 
     // La propiedad length del método from es 1.
     return function from(arrayLike/*, mapFn, thisArg */) {
@@ -170,7 +170,7 @@ if (!Array.from) {
         }
 
         // 5. b. Si thisArg se suministró, deje que T sea thisArg; si no, deje que T esté indefinido.
-        if (arguments.length &gt; 2) {
+        if (arguments.length &gt; 2) {
           T = arguments[2];
         }
       }
@@ -223,7 +223,7 @@ if (!Array.from) {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.from', 'Array.from')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

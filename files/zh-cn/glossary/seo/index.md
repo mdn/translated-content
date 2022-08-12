@@ -22,7 +22,7 @@ SEO 方法分为三大类：
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "SEO")}} on 维基百科
+- [SEO](https://zh.wikipedia.org/wiki/SEO) on 维基百科
 
 ### 学习 SEO
 

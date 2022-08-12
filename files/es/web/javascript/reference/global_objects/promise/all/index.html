@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/all
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Promise.all(iterable)</strong></code> devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición con el motivo pasado por la primera promesa que es rechazada.</p>
+<p>El método <code><strong>Promise.all(iterable)</strong></code> devuelve una promesa que termina correctamente cuando todas las promesas en el argumento iterable han sido concluídas con éxito, o bien rechaza la petición con el motivo pasado por la primera promesa que es rechazada.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -20,24 +20,24 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/all
 
 <dl>
  <dt>iterable</dt>
- <dd>Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
+ <dd>Un objeto iterable, por ejemplo un {{jsxref("Array")}}. Vea <a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>.</dd>
 </dl>
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Una {{jsxref("Promise")}}  que se cumplirá cuando todas las promesas del argumento iterable hayan sido cumplidas, o bien se rechazará cuando alguna de ellas se rechace.</p>
+<p>Una {{jsxref("Promise")}}  que se cumplirá cuando todas las promesas del argumento iterable hayan sido cumplidas, o bien se rechazará cuando alguna de ellas se rechace.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p><strong><code>Promise.all</code> </strong> se cumple cuando todas las promesas del iterable dado se han cumplido, o es rechazada si alguna promesa no se cumple. {{jsxref("Promise.resolve")}}.</p>
+<p><strong><code>Promise.all</code> </strong> se cumple cuando todas las promesas del iterable dado se han cumplido, o es rechazada si alguna promesa no se cumple. {{jsxref("Promise.resolve")}}.</p>
 
-<p>Si alguna de las promesas pasadas en el argumento iterable falla, la promesa <code>all</code> es rechazada inmediatamente con el valor de la promesa que fué rechazada, descartando todas las demás promesas hayan sido o no cumplidas. Si se pasa un array vacío a <code>all</code> , la promesa se cumple inmediatamente.</p>
+<p>Si alguna de las promesas pasadas en el argumento iterable falla, la promesa <code>all</code> es rechazada inmediatamente con el valor de la promesa que fué rechazada, descartando todas las demás promesas hayan sido o no cumplidas. Si se pasa un array vacío a <code>all</code> , la promesa se cumple inmediatamente.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <h3 id="Uso_de_Promise.all">Uso de <code>Promise.all</code></h3>
 
-<p><code>Promise.all</code> espera a que todo se cumpla (o bien al primer rechazo).</p>
+<p><code>Promise.all</code> espera a que todo se cumpla (o bien al primer rechazo).</p>
 
 <pre class="brush: js">var p1 = Promise.resolve(3);
 var p2 = 1337;
@@ -49,9 +49,9 @@ Promise.all([p1, p2, p3]).then(values =&gt; {
   console.log(values); // [3, 1337, "foo"]
 });</pre>
 
-<h3 id="Promise.all_comportamiento_de_fallo-rápido"><code>Promise.all</code> comportamiento de fallo-rápido</h3>
+<h3 id="Promise.all_comportamiento_de_fallo-rápido"><code>Promise.all</code> comportamiento de fallo-rápido</h3>
 
-<p><code>Promise.all</code> se rechaza si uno de los elementos ha sido rechazado y <code>Promise.all</code> falla rápido: Si tienes cuatro promesas que se resuelven después de un timeout y una de ellas falla inmediatamente, entonces <code>Promise.all</code> se rechaza inmediatamente.</p>
+<p><code>Promise.all</code> se rechaza si uno de los elementos ha sido rechazado y <code>Promise.all</code> falla rápido: Si tienes cuatro promesas que se resuelven después de un timeout y una de ellas falla inmediatamente, entonces <code>Promise.all</code> se rechaza inmediatamente.</p>
 
 <pre class="brush: js">var p1 = new Promise((resolve, reject) =&gt; {
   setTimeout(resolve, 1000, "one");
@@ -107,7 +107,7 @@ Promise.all([p1, p2, p3, p4, p5]).then(values =&gt; {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

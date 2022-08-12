@@ -21,10 +21,10 @@ translation_of: Glossary/Falsy
 | 0                                | 数值 [zero](/zh-CN/docs/Web/JavaScript/Data_structures#Number_type)                                                                                                                   |
 | -0                               | 数值 负 [zero](/zh-CN/docs/Web/JavaScript/Data_structures#Number_type)                                                                                                                |
 | 0n                               | 当 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 作为布尔值使用时，遵从其作为数值的规则. `0n` 是 _falsy_ 值。                                                  |
-| "", '', ``                       | 这是一个空字符串 (字符串的长度为零). JavaScript 中的字符串可用双引号 **`""`**, 单引号 `''`, 或 [模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals) **` `` `** 定义。 |
+| "", '', \`\`                       | 这是一个空字符串 (字符串的长度为零). JavaScript 中的字符串可用双引号 **`""`**, 单引号 `''`, 或 [模板字面量](/zh-CN/docs/Web/JavaScript/Reference/Template_literals) **` `` `** 定义。 |
 | {{Glossary("null")}}     | [null](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) - 缺少值                                                                                                             |
 | {{Glossary("undefined")}} | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 原始值                                                                                                   |
-| {{Glossary("NaN")}}         | [NaN ](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)- 非数值                                                                                                               |
+| {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数值                                                                                                               |
 
 ## 例子
 
@@ -47,9 +47,11 @@ if (document.all)
 
 如果第一个对象（译注：原文如此）是 falsy 值，则返回那个对象：
 
-    let pet = false && "dog";
+```js
+let pet = false && "dog";
 
-    // ↪ false
+// ↪ false
+```
 
 > **备注：** `document.all` 在过去被用于浏览器检测，是 [HTML 规范在此定义了](https://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all)故意与 ECMAScript 标准相违背的（译者注：`document.all` 虽然是一个对象，但其转换为 boolean 类型是 false），以保持与历史代码的兼容性 (`if (document.all) { // Internet Explorer code here }` 或使用 `document.all` 而不先检查它的存在：`document.all.foo`).
 

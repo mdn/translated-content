@@ -27,7 +27,7 @@ original_slug: Learn/CSS/Styling_text/Стилизация_списков
 
 <h2 id="Пример_простого_списка">Пример простого списка</h2>
 
-<p>Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки  — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">доступен на Github</a> (проверьте также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">источник кода</a>.)</p>
+<p>Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки  — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">доступен на Github</a> (проверьте также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">источник кода</a>.)</p>
 
 <p>HTML для нашего примера списка представлен ниже:</p>
 
@@ -71,7 +71,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
   &lt;dd&gt;That green healthy stuff that many of us just use to garnish kebabs.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
 
-<p>Если вы перейдёте к живому примеру прямо сейчас и изучите элемент списка используя <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">инструменты разработчика браузера</a>, то вы заметите несколько стилей установленных по умолчанию:</p>
+<p>Если вы перейдёте к живому примеру прямо сейчас и изучите элемент списка используя <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">инструменты разработчика браузера</a>, то вы заметите несколько стилей установленных по умолчанию:</p>
 
 <ul>
  <li>Элементы {{htmlelement("ul")}} и {{htmlelement("ol")}} имеют верхний и нижний {{cssxref("margin")}} по <code>16px</code> (<code>1em</code>) и {{cssxref("padding-left")}} <code>40px</code> (<code>2.5em</code>.)</li>
@@ -125,7 +125,7 @@ dd {
  <li>Первое правило устанавливает шрифт сайта и основной размер шрифта 10px. Они наследуются всеми на этой странице.</li>
  <li>Правила 2 и 3 задают относительные размеры шрифтов заголовков, различных типов списков (их наследуют дочерние элементы списков) и параграфов. Это значит, что каждый параграф и список будут иметь одинаковый размер шрифта, а также верхний и нижний интервалы, помогая сохранить согласованность вертикального ритма.</li>
  <li>Правило 4 задаёт одинаковую высоту {{cssxref("line-height")}} в параграфах и пунктах списка — так, что параграфы и каждый отдельный пункт списка будут иметь те же интервалы между строками. Это также поможет сохранить согласованность вертикального ритма.</li>
- <li>Правила 5 и 6 применяются к списку описаний — мы задаём одинаковую высоту <code>line-height</code> между терминами и описаниями списке описаний как мы это делали с параграфами и пунктами списка. И снова, согласованность хорошая! <span class="tlid-translation translation" lang="ru"><span title="">Мы также делаем описание терминов жирным шрифтом, чтобы они визуально выделялись легче.</span></span> <span id="cke_bm_126E" class="hidden"> </span></li>
+ <li>Правила 5 и 6 применяются к списку описаний — мы задаём одинаковую высоту <code>line-height</code> между терминами и описаниями списке описаний как мы это делали с параграфами и пунктами списка. И снова, согласованность хорошая! <span class="tlid-translation translation" lang="ru"><span title="">Мы также делаем описание терминов жирным шрифтом, чтобы они визуально выделялись легче.</span></span> <span id="cke_bm_126E" class="hidden"> </span></li>
 </ul>
 
 <h2 id="Стили_специфичные_для_списков">Стили специфичные для списков</h2>
@@ -134,7 +134,7 @@ dd {
 
 <ul>
  <li>{{cssxref("list-style-type")}}: задаёт тип маркеров для использования в списке, например, квадратные или круглые маркеры для неупорядоченного списка, или цифры, буквы или римские цифры для упорядоченного списка.</li>
- <li>{{cssxref("list-style-position")}}: управляет будет ли маркер появляется внутри пунктов списка или <span class="tlid-translation translation" lang="ru"><span title="">вне их перед началом каждого элемента.</span></span></li>
+ <li>{{cssxref("list-style-position")}}: управляет будет ли маркер появляется внутри пунктов списка или <span class="tlid-translation translation" lang="ru"><span title="">вне их перед началом каждого элемента.</span></span></li>
  <li>{{cssxref("list-style-image")}}: позволяет вам использовать пользовательские изображения в качестве маркеров, а не просто квадрат или круг.</li>
 </ul>
 
@@ -150,11 +150,11 @@ dd {
 
 <p><img alt="an ordered list with the bullet points set to appear outside the list item text." src="outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете найти гораздо больше опций, заглянув на справочную страницу {{cssxref ("list-style-type")}}.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете найти гораздо больше опций, заглянув на справочную страницу {{cssxref ("list-style-type")}}.</span></span></p>
 
 <h3 id="Позиция_маркера">Позиция маркера</h3>
 
-<p>Свойство {{cssxref("list-style-position")}} устанавливает будет ли появляться маркер внутри пунктов списка или снаружи перед началом каждого пункта. Значение по умолчанию — <code>outside</code>, которое заставляет маркеры находится снаружи пунктов списка, как видно выше.</p>
+<p>Свойство {{cssxref("list-style-position")}} устанавливает будет ли появляться маркер внутри пунктов списка или снаружи перед началом каждого пункта. Значение по умолчанию — <code>outside</code>, которое заставляет маркеры находится снаружи пунктов списка, как видно выше.</p>
 
 <p>Если вы установите значение на <code>inside</code>, то маркеры будут находиться внутри строк:</p>
 
@@ -197,9 +197,9 @@ ul li {
  <li>Установили {{cssxref("list-style-type")}} на <code>none</code>, для того чтобы маркеры не появлялись по умолчанию. Мы собираемся использовать свойства {{cssxref("background")}} для управления маркерами.</li>
  <li>Вставили маркер в каждый пункт неупорядоченного списка. <span class="tlid-translation translation" lang="ru"><span title="">Соответствующие свойства, следующие:</span></span>
   <ul>
-   <li>{{cssxref("background-image")}}: <span class="tlid-translation translation" lang="ru"><span title="">Указывает путь к файлу изображения, который вы хотите использовать в качестве маркера.</span></span></li>
+   <li>{{cssxref("background-image")}}: <span class="tlid-translation translation" lang="ru"><span title="">Указывает путь к файлу изображения, который вы хотите использовать в качестве маркера.</span></span></li>
    <li>{{cssxref("background-position")}}: Определяет где в фоне выбранного элемента появится изображение — в данном случае мы говорим <code>0 0</code>, что значит что маркер будет появляться в самом верху слева каждого пункта списка.</li>
-   <li>{{cssxref("background-size")}}: Задаёт размер фонового изображения. В идеале мы хотим, чтоб маркеры были того же размера что и пункты списка (или самую малость меньше или крупнее). Мы используем размер <code>1.6rem</code> (<code>16px</code>), <span class="tlid-translation translation" lang="ru"><span title="">что очень хорошо сочетается с отступом (padding) </span></span><code>20px</code><span class="tlid-translation translation" lang="ru"><span title="">, </span></span><span class="tlid-translation translation" lang="ru"><span title="">который мы позволили разместить внутри маркера </span></span>— <span class="tlid-translation translation" lang="ru"><span title="">16px плюс 4px интервала между маркером и текстом пункта списка работают хорошо.</span></span></li>
+   <li>{{cssxref("background-size")}}: Задаёт размер фонового изображения. В идеале мы хотим, чтоб маркеры были того же размера что и пункты списка (или самую малость меньше или крупнее). Мы используем размер <code>1.6rem</code> (<code>16px</code>), <span class="tlid-translation translation" lang="ru"><span title="">что очень хорошо сочетается с отступом (padding) </span></span><code>20px</code><span class="tlid-translation translation" lang="ru"><span title="">, </span></span><span class="tlid-translation translation" lang="ru"><span title="">который мы позволили разместить внутри маркера </span></span>— <span class="tlid-translation translation" lang="ru"><span title="">16px плюс 4px интервала между маркером и текстом пункта списка работают хорошо.</span></span></li>
    <li>{{cssxref("background-repeat")}}: По умолчанию, фоновые изображения повторяются пока не заполнят доступное фоновое пространство. Мы хотим всего лишь одну копию вставленного изображения в каждом случае, поэтому мы установили значение <code>no-repeat</code>.</li>
   </ul>
  </li>
@@ -295,7 +295,7 @@ ul li {
  <li>Не стесняйтесь играться с примерами списков столько сколько вам нравится, экспериментируя с типами маркеров, интервалами или со всем что вы найдёте.</li>
 </ol>
 
-<p>Если вы допустите ошибку, вы всегда можете сделать сброс используя кнопку <em>Reset</em>. Если вы застрянете, нажмите кнопку <em>Show solution </em>чтобы посмотреть возможный ответ.</p>
+<p>Если вы допустите ошибку, вы всегда можете сделать сброс используя кнопку <em>Reset</em>. Если вы застрянете, нажмите кнопку <em>Show solution </em>чтобы посмотреть возможный ответ.</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -320,7 +320,7 @@ ul li {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -344,9 +344,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {

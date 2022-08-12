@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>exec()</code></strong> 메서드는 주어진 문자열에서 일치 탐색을 수행한 결과를 배열 혹은 {{jsxref("null")}}로 반환합니다.</p>
+<p><strong><code>exec()</code></strong> 메서드는 주어진 문자열에서 일치 탐색을 수행한 결과를 배열 혹은 {{jsxref("null")}}로 반환합니다.</p>
 
 <p>JavaScript {{jsxref("RegExp")}} 객체는 {{jsxref("RegExp.global", "global")}} 또는 {{jsxref("RegExp.sticky", "sticky")}} 플래그를 설정(<code>/foo/g</code>, <code>/foo/y</code> 등)한 경우 이전 일치의 인덱스를 저장하므로 <strong>상태를 가지고</strong>(stateful) 있습니다. 이를 내부적으로 사용하여, {{jsxref("String.prototype.match()")}}와는 다르게 (캡처 그룹을 포함한) 문자열 내의 일치 다수를 반복해 순회할 수 있습니다.</p>
 
-<p>(캡처 그룹을 포함한) 문자열 내의 다수 일치를 수행할 수 있는 보다 간편한 신규 메서드,  {{jsxref("String.prototype.matchAll()")}}이 제안된 상태입니다.</p>
+<p>(캡처 그룹을 포함한) 문자열 내의 다수 일치를 수행할 수 있는 보다 간편한 신규 메서드,  {{jsxref("String.prototype.matchAll()")}}이 제안된 상태입니다.</p>
 
 <p>단순히 <code>true</code>/<code>false</code>가 필요한 경우 {{jsxref("RegExp.prototype.test()")}} 메서드 혹은 {{jsxref("String.prototype.search()")}}를 사용하세요.</p>
 
@@ -37,9 +37,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 <h3 id="반환_값">반환 값</h3>
 
-<p>정규 표현식이 일치하면, <code>exec()</code> 메서드는 배열(추가 속성 <code>index</code>와 <code>input</code> 포함, 아래 설명을 참고하세요)을 반환하고, 정규 표현식 객체의 {{jsxref("RegExp.lastIndex", "lastIndex")}} 속성을 업데이트합니다. 반환하는 배열은 일치한 텍스트를 첫 번째 원소로, 각각의 괄호 캡처 그룹을 이후 원소로 포함합니다.</p>
+<p>정규 표현식이 일치하면, <code>exec()</code> 메서드는 배열(추가 속성 <code>index</code>와 <code>input</code> 포함, 아래 설명을 참고하세요)을 반환하고, 정규 표현식 객체의 {{jsxref("RegExp.lastIndex", "lastIndex")}} 속성을 업데이트합니다. 반환하는 배열은 일치한 텍스트를 첫 번째 원소로, 각각의 괄호 캡처 그룹을 이후 원소로 포함합니다.</p>
 
-<p>정규표현식 검색에 실패하면, <code>exec()</code> 메서드는 {{jsxref("null")}}을 반환하고 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 <code>0</code>으로 설정합니다.</p>
+<p>정규표현식 검색에 실패하면, <code>exec()</code> 메서드는 {{jsxref("null")}}을 반환하고 {{jsxref("RegExp.lastIndex", "lastIndex")}}를 <code>0</code>으로 설정합니다.</p>
 
 <h2 id="설명">설명</h2>
 
@@ -157,28 +157,15 @@ Found ab. Next match starts at 9
 console.log(matches[1]);
 </pre>
 
-<p>This will log a message containing 'hello world!'.</p>
+<p>This will log a message containing 'hello world!'.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.RegExp.exec")}}</p>
-</div>
+{{Compat("javascript.builtins.RegExp.exec")}}
 
 <h2 id="같이_보기">같이 보기</h2>
 

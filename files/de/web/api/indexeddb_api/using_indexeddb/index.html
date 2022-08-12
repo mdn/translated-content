@@ -4,7 +4,7 @@ slug: Web/API/IndexedDB_API/Using_IndexedDB
 translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/IndexedDB_verwenden
 ---
-<p>Mit IndexedDB lassen sich Daten innerhalb des Browsers eines Benutzers permanent abzulegen. Es können so Webanwendungen mit funktionsreichen Abfragemöglichkeiten in Anwendungen erstellt werden, die sowohl online als auch offline funktionieren können, da keine Netzwerkfunktionalitäten benötigt werden.</p>
+<p>Mit IndexedDB lassen sich Daten innerhalb des Browsers eines Benutzers permanent abzulegen. Es können so Webanwendungen mit funktionsreichen Abfragemöglichkeiten in Anwendungen erstellt werden, die sowohl online als auch offline funktionieren können, da keine Netzwerkfunktionalitäten benötigt werden.</p>
 
 <h2 id="Über_dieses_Dokument">Über dieses Dokument</h2>
 
@@ -21,10 +21,10 @@ original_slug: Web/API/IndexedDB_API/IndexedDB_verwenden
  <li>Erzeuge einen Objektspeicher.</li>
  <li>Fordere die Ausführung von Datenbankoperationen an, wie das Hinzufügen und Auslesen von Daten.</li>
  <li>Warte auf die richtige Art von DOM-Ereignis, das auftritt, wenn die Operation beendet ist.</li>
- <li>Verarbeite die Ergebnisse? (, welche im Anforderungsobjekt gefunden werden können).</li>
+ <li>Verarbeite die Ergebnisse? (, welche im Anforderungsobjekt gefunden werden können).</li>
 </ol>
 
-<p>Mit dem Wissen über diese Grundkonzepte können wir uns nun konkreteren Dingen zuwenden.</p>
+<p>Mit dem Wissen über diese Grundkonzepte können wir uns nun konkreteren Dingen zuwenden.</p>
 
 <h2 id="open" name="open">Erzeugung und Strukturierung des Speichers</h2>
 
@@ -61,7 +61,7 @@ var request = window.indexedDB.open("MeineTestdatenbank", 3);
 
 <p>Die Anforderung zum Öffnen öffnet nicht sofort die Datenbank und startet auch die Transaktion nicht gleich. Der Aufruf zur <code>open()</code> Funktion gibt ein <a href="/de/docs/Web/API/IDBOpenDBRequest" title="IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a>-Objekt mit Ergebniswert (Erfolg) oder Fehlerwert zurück, die Sie als Ereignis verarbeiten. Die meisten anderen asynchronen Funktionen in IndexedDB machen das gleiche – sie geben ein <a href="/de/docs/Web/API/IDBRequest" title="IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a>-Objekt mit Ergebnis oder Fehler zurück. Das Ergebnis für die open-Funktion ist eine Instanz einer <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/de/docs/Web/API/IDBDatabase" title="IDBDatabase">IDBDatabase</a>.</code></p>
 
-<p>Der zweite Parameter der open-Methode ist die Version der Datenbank. Die Version der Datenbank bestimmt das Datenbankschema – den Objektspeichern und ihrer Strukturen. Wenn die angeforderte Version nicht existiert (weil die Datenbank neu ist, oder weil die Version aktualisiert wurde), wird das Ereignis <code>onupgradeneeded</code> ausgelöst, und es lässt sich eine neue Version der Datenbank im Handler für dieses Ereignis erzeugen. Mehr dazu später im Abschnitt <a href="#Updating_the_version_of_the_database">Aktualisieren der Version der Datenbank</a>.</p>
+<p>Der zweite Parameter der open-Methode ist die Version der Datenbank. Die Version der Datenbank bestimmt das Datenbankschema – den Objektspeichern und ihrer Strukturen. Wenn die angeforderte Version nicht existiert (weil die Datenbank neu ist, oder weil die Version aktualisiert wurde), wird das Ereignis <code>onupgradeneeded</code> ausgelöst, und es lässt sich eine neue Version der Datenbank im Handler für dieses Ereignis erzeugen. Mehr dazu später im Abschnitt <a href="#Erstellen_oder_Updaten_der_Datenbank">Aktualisieren der Version der Datenbank</a>.</p>
 
 <h4 id="Erzeugen_von_Handlern">Erzeugen von Handlern</h4>
 
@@ -76,7 +76,7 @@ request.onsuccess = function(event) {
 
 <p>Welche der beiden Funktionen, <code>onsuccess()</code> oder <code>onerror()</code>, wird aufgerufen? Wenn alles fehlerfrei ablief, wird ein Erfolgsereignis (d.h. ein DOM-Ereignis, dessen <code>type</code> Eigenschaft auf <code>"success"</code> gesetzt ist) mit <code>request</code> als <code>target</code> ausgelöst. Sobald es ausgelöst wurde, wird die Funktion <code>onsuccess()</code> auf <code>request</code> ausgelöst mit dem Erfolgsereignis als Argument. Wenn nicht alles fehlerfrei ablief, wird ein Fehlerereignis (d.h. ein DOM-Ereignis, dessen <code>type</code> Eigenschaft auf <code>"error"</code> gesetzt ist) auf <code>request</code> ausgelöst. Dies löst die Funktion <code>onerror()</code> aus mit dem Fehlerereignis als Argument.</p>
 
-<p>Die IndexedDB-API ist so entworfen, dass sie die Notwendigkeit zur Fehlerbehandlung minimiert, also werden Sie wahrscheinlich nicht viele Fehlerereignisse sehen (zumindest nicht nachdem Sie sich an die API gewöhnt haben!). Beim Öffnen von Datenbanken jedoch gibt es ein paar typische Zustände, die Fehlerereignisse erzeugen. Das wahrscheinlichste Problem ist, dass der Benutzer festgelegt hat, den Webapps das Erzeugen von Datenbanken nicht zu erlauben. Eines der Hauptentwurfsziele von IndexedDB ist es, das Speichern von großen Datenmengen zur Offline-Verwendung zu erlauben. (Um mehr darüber zu erfahren, wieviel Speicher jedem Browser zur Verfügung steht, lesen Sie <a href="/de/docs/IndexedDB#Storage_limits" title="Storage_limits">Storage limits</a>).</p>
+<p>Die IndexedDB-API ist so entworfen, dass sie die Notwendigkeit zur Fehlerbehandlung minimiert, also werden Sie wahrscheinlich nicht viele Fehlerereignisse sehen (zumindest nicht nachdem Sie sich an die API gewöhnt haben!). Beim Öffnen von Datenbanken jedoch gibt es ein paar typische Zustände, die Fehlerereignisse erzeugen. Das wahrscheinlichste Problem ist, dass der Benutzer festgelegt hat, den Webapps das Erzeugen von Datenbanken nicht zu erlauben. Eines der Hauptentwurfsziele von IndexedDB ist es, das Speichern von großen Datenmengen zur Offline-Verwendung zu erlauben. (Um mehr darüber zu erfahren, wieviel Speicher jedem Browser zur Verfügung steht, lesen Sie <a href="/de/docs/IndexedDB#Storage_limits" title="Storage_limits">Storage limits</a>).</p>
 
 <p>Offensichtlich wollen Browser nicht irgendeinem Werbenetzwerk oder einer böswilligen Website erlauben, Ihren Computer zu verschmutzen, deshalb warnen Browser den Benutzer, wenn eine Webapp zum ersten Mal versucht einen IndexedDB-Speicher zu öffnen. Der Benutzer kann wählen, ob er den Zugriff erlaubt oder verbietet. Außerdem ist IndexedDB komplett deaktiviert im Privaten Modus der Browser (Privater Modus für Firefox und Incognito Modus für Chrome). Der Hauptzweck vom Surfen im Privaten Modus ist es, keine Spuren zu hinterlassen, daher schlägt der Versuch fehl, eine Datenbank in diesem Modus zu öffnen.</p>
 
@@ -94,7 +94,7 @@ request.onsuccess = function(event) {
 
 <h4 id="Fehlerbehandlung">Fehlerbehandlung</h4>
 
-<p>Wie bereits oben erwähnt, werden Error events bei entsprechenden Fehlern ausgelöst und in der Objekthierarachie weiter nach oben gereicht. Solche Fehlerereignisse  werden zunächst in der entsprechende Anfrage ausgelöst, die den Fehler verursacht hat. Anschließend werden sie zur Transaktion weitergereicht und schließlich zum Datenbankobjekt.  Wenn man nicht für jede Anfrage einen Error-Handler schreiben möchte, kann man der Datenbank einen einzigen Error-Handler hinzufügen:</p>
+<p>Wie bereits oben erwähnt, werden Error events bei entsprechenden Fehlern ausgelöst und in der Objekthierarachie weiter nach oben gereicht. Solche Fehlerereignisse  werden zunächst in der entsprechende Anfrage ausgelöst, die den Fehler verursacht hat. Anschließend werden sie zur Transaktion weitergereicht und schließlich zum Datenbankobjekt.  Wenn man nicht für jede Anfrage einen Error-Handler schreiben möchte, kann man der Datenbank einen einzigen Error-Handler hinzufügen:</p>
 
 <pre class="brush: js">db.onerror = function(event) {
   // Allgemeine Fehlerbehandlung, die für alle Anfragen an die Datenbank gilt.
@@ -102,11 +102,11 @@ request.onsuccess = function(event) {
 };
 </pre>
 
-<p>Einer der häufigsten Fehler, die beim Öffnen der Datenbank auftreten, ist  <code>VER_ERR</code>.  Er zeigt an, dass die Versionsnummer der lokal gespeicherten Datenbank  <em>größer </em> als die Versionsnummer ist,  die man zu öffnen versucht. Ein solcher Fehler muss immer durch eine Fehlerbehandlung berücksichtigt werden.</p>
+<p>Einer der häufigsten Fehler, die beim Öffnen der Datenbank auftreten, ist  <code>VER_ERR</code>.  Er zeigt an, dass die Versionsnummer der lokal gespeicherten Datenbank  <em>größer </em> als die Versionsnummer ist,  die man zu öffnen versucht. Ein solcher Fehler muss immer durch eine Fehlerbehandlung berücksichtigt werden.</p>
 
 <h3 id="Erstellen_oder_Updaten_der_Datenbank">Erstellen oder Updaten der Datenbank</h3>
 
-<p><a name="Updating_the_version_of_the_database"></a>Wenn eine neue Version der Datenbank erstellt wird, wird das <code style="font-style: normal; line-height: 1.5; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 1.5;"> Event ausgelöst. In der Handler-Funktion dieses Events musst du für die Erstellung der Datenbankspeicher, welche für diese Version benötigt wird, sorgen</span>:</p>
+<p>Wenn eine neue Version der Datenbank erstellt wird, wird das <code style="font-style: normal; line-height: 1.5; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 1.5;"> Event ausgelöst. In der Handler-Funktion dieses Events musst du für die Erstellung der Datenbankspeicher, welche für diese Version benötigt wird, sorgen</span>:</p>
 
 <pre class="brush:js;">// Dieses Event ist lediglich in modernen Browsern verfügbar
 request.onupgradeneeded = function(event) {
@@ -119,18 +119,18 @@ request.onupgradeneeded = function(event) {
 <p>The Versionsnummer der Datenbank ist vom Typ <code>unsigned long long</code>, so dass sie eine sehr große Ganzzahl sein kann.</p>
 
 <div class="warning">
-<p>Das Bedeutet auch, dass sie nicht vom Typ float sein darf,  ansonsten wird sie zur nächstkleineren Ganzzahl abgerundet, so dass die Transaktion weder starten kann noch ein  <code>upgradeneeded</code> ausgelöst wird. Beispielsweise sollte man nicht 2.4 als Versionsnummer verwenden:</p>
+<p>Das Bedeutet auch, dass sie nicht vom Typ float sein darf,  ansonsten wird sie zur nächstkleineren Ganzzahl abgerundet, so dass die Transaktion weder starten kann noch ein  <code>upgradeneeded</code> ausgelöst wird. Beispielsweise sollte man nicht 2.4 als Versionsnummer verwenden:</p>
 
 <pre class="brush: js">var request = indexedDB.open("MeineTestdatenbank", 2.4); // don't do this, as the version will be rounded to 2</pre>
 </div>
 
-<p>Wenn man die Versionsnummer der Datenbank erhöht, wird ein  <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 21px;"> </span> -Ereignis ausgelöst. In diesem Fall übernimmt die neue Datenbank automatisch die Objectstores von der Vorgängerversion der Datenbank, so dass man diese nicht erneut erzeugen muss. Lediglich neue Objectsores müssen angelegt oder nicht mehr gebrauchte der Vorgängerversion gelöscht werden. Wenn man einen bereits existierenden Objectstore ändern will (beispielsweise den keyPath veränden), ist es allerdings notwendig, den alten Objectstore zu löschen und einen neuen anzulegen. (Beachten Sie, dass dies die im Objectstore gespeicherten Informationen löscht, so dass man sie vorher auslesen und an anderer Stelle sichern sollte, bevor man ein Datenbankupgrade durchführt.)</p>
+<p>Wenn man die Versionsnummer der Datenbank erhöht, wird ein  <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 21px;"> </span> -Ereignis ausgelöst. In diesem Fall übernimmt die neue Datenbank automatisch die Objectstores von der Vorgängerversion der Datenbank, so dass man diese nicht erneut erzeugen muss. Lediglich neue Objectsores müssen angelegt oder nicht mehr gebrauchte der Vorgängerversion gelöscht werden. Wenn man einen bereits existierenden Objectstore ändern will (beispielsweise den keyPath veränden), ist es allerdings notwendig, den alten Objectstore zu löschen und einen neuen anzulegen. (Beachten Sie, dass dies die im Objectstore gespeicherten Informationen löscht, so dass man sie vorher auslesen und an anderer Stelle sichern sollte, bevor man ein Datenbankupgrade durchführt.)</p>
 
 <p>WebKit unterstützt die aktuelle Version dieser Spezifikation, wie sie in Chrome 23+ ausgeliefert wird, ebenso Opera 17+ und IE10+. Andere und ältere Implementierungen unterstützen nicht die aktuelle Version dieser Spezifikation und stellen damit auch noch nicht die Möglichkeit bereit, auf die Methodensignatur <code>indexedDB.open(name, version).onupgradeneeded</code> zugreifen zu könenn. Um ältere Versionen einer Datenbank auf neuer Versionen zu aktualisieren, siehe <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
 
 <h3 id="Strukturierung_der_Datenbank">Strukturierung der Datenbank</h3>
 
-<p>Im Folgenden wird gezeigt, wie man eine die Daten  strukturiert. IndexedDB verwendet Objectstores anstatt Tabellen, wobei eine einzelne Datenbank viele verschiedene Objectsores enthalten kann. Jeglicher Wert im Objectstore ist einem bestimmten Schlüssel (key) zugeordnet. Es werden dabei unterschiedliche Arten von Schlüsseln verarbeitet, abhängig davon, ob der Objectstore  einen <a href="/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> oder einen <a href="/en/IndexedDB#gloss_key_generator" title="en/IndexedDB#gloss key generator">key generator</a> benutzt.</p>
+<p>Im Folgenden wird gezeigt, wie man eine die Daten  strukturiert. IndexedDB verwendet Objectstores anstatt Tabellen, wobei eine einzelne Datenbank viele verschiedene Objectsores enthalten kann. Jeglicher Wert im Objectstore ist einem bestimmten Schlüssel (key) zugeordnet. Es werden dabei unterschiedliche Arten von Schlüsseln verarbeitet, abhängig davon, ob der Objectstore  einen <a href="/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> oder einen <a href="/en/IndexedDB#gloss_key_generator" title="en/IndexedDB#gloss key generator">key generator</a> benutzt.</p>
 
 <p>Die folgende Tabelle gibt eine Übersicht über die bereitgestellten Arten von Schlüssseln.</p>
 
@@ -323,7 +323,7 @@ objectStore.openCursor().onsuccess = function(event) {
   }
 };</pre>
 
-<div class="warning"><strong>Warnung:</strong> Die folgende Funktion ist nicht Teil des IndexedDB Standards.</div>
+<div class="warning"><strong>Warnung:</strong> Die folgende Funktion ist nicht Teil des IndexedDB Standards.</div>
 
 <p>Mozilla has also implemented <code>getAll()</code> to handle this case. It isn't part of the IndexedDB standard, so it may disappear in the future. We've included it because we think it's useful. The following code does precisely the same thing as above:</p>
 
@@ -691,7 +691,7 @@ input {
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 

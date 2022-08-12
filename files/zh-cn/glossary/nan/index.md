@@ -13,7 +13,7 @@ NaN(不是一个数字) 是一种数值表达形式 {{Glossary("Type", "data typ
 
 ### 通常的知识点
 
-- {{Interwiki("wikipedia", "NaN")}} 在维基百科
+- [NaN](https://zh.wikipedia.org/wiki/NaN) 在维基百科
 
 ### 权威的信息
 

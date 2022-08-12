@@ -34,7 +34,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 
 <h2 id="HTML5_video_と_audio">HTML5 video と audio</h2>
 
-<p>The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a>, a typical implementation looks like this:</p>
+<p>The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a>, a typical implementation looks like this:</p>
 
 <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
@@ -73,21 +73,21 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 <p>Open the HTML index file. You'll see a number of features; the HTML is dominated by the video player and its controls:</p>
 
 <pre class="notranslate">&lt;div class="player"&gt;
-  &lt;video controls&gt;
-    &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
-    &lt;source src="video/sintel-short.webm" type="video/webm"&gt;
-    &lt;!-- fallback content here --&gt;
-  &lt;/video&gt;
-  &lt;div class="controls"&gt;
-    &lt;button class="play" data-icon="P" aria-label="play pause toggle"&gt;&lt;/button&gt;
-    &lt;button class="stop" data-icon="S" aria-label="stop"&gt;&lt;/button&gt;
-    &lt;div class="timer"&gt;
+  &lt;video controls&gt;
+    &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
+    &lt;source src="video/sintel-short.webm" type="video/webm"&gt;
+    &lt;!-- fallback content here --&gt;
+  &lt;/video&gt;
+  &lt;div class="controls"&gt;
+    &lt;button class="play" data-icon="P" aria-label="play pause toggle"&gt;&lt;/button&gt;
+    &lt;button class="stop" data-icon="S" aria-label="stop"&gt;&lt;/button&gt;
+    &lt;div class="timer"&gt;
       &lt;div&gt;&lt;/div&gt;
       &lt;span aria-label="timer"&gt;00:00&lt;/span&gt;
     &lt;/div&gt;
-    &lt;button class="rwd" data-icon="B" aria-label="rewind"&gt;&lt;/button&gt;
-    &lt;button class="fwd" data-icon="F" aria-label="fast forward"&gt;&lt;/button&gt;
-  &lt;/div&gt;
+    &lt;button class="rwd" data-icon="B" aria-label="rewind"&gt;&lt;/button&gt;
+    &lt;button class="fwd" data-icon="F" aria-label="fast forward"&gt;&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -470,7 +470,7 @@ clearInterval(intervalFwd);
   <p>The time display currently breaks if the video is an hour long or more (well, it won't display hours; just minutes and seconds). Can you figure out how to change the example to make it display hours?</p>
  </li>
  <li>
-  <p>Because <code>&lt;audio&gt;</code> elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an <code>&lt;audio&gt;</code> element too. Try doing so.</p>
+  <p>Because <code>&lt;audio&gt;</code> elements have the same {{domxref("HTMLMediaElement")}} functionality available to them, you could easily get this player to work for an <code>&lt;audio&gt;</code> element too. Try doing so.</p>
  </li>
  <li>
   <p>Can you work out a way to turn the timer inner <code>&lt;div&gt;</code> element into a true seek bar/scrobbler — i.e., when you click somewhere on the bar, it jumps to that relative position in the video playback? As a hint, you can find out the X and Y values of the element's left/right and top/bottom sides via the <code><a href="/ja/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a></code> method, and you can find the coordinates of a mouse click via the event object of the click event, called on the {{domxref("Document")}} object. For example:</p>
@@ -486,8 +486,8 @@ clearInterval(intervalFwd);
 <ul>
  <li>{{domxref("HTMLMediaElement")}}</li>
  <li><a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a> — simple guide to <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> HTML.</li>
- <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
- <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and video manipulation</a> — detailed guide to manipulating audio and video, e.g. with <a href="/ja/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>, and more.</li>
+ <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
+ <li><a href="/ja/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio and video manipulation</a> — detailed guide to manipulating audio and video, e.g. with <a href="/ja/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>, and more.</li>
  <li>{{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.</li>
  <li><a href="/ja/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
 </ul>

@@ -72,7 +72,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
 
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单 ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)来配置路径。
+> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -129,7 +129,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 当原生应用启动后，它被会传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的[ extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
 
 原生应用会一直保持运行，直到 extension 调用 `Port.disconnect()` 或连接它的记录被结束。
 
@@ -170,7 +170,7 @@ browser.browserAction.onClicked.addListener(() => {
 每个消息都会创建一个新的原生应用实例。当原生应用启动时会被传入 2 个参数：
 
 - 到原生应用清单的完整路径
-- （Firefox 55+）启动它的[ extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
+- （Firefox 55+）启动它的 [extension ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
 
 原生应用发送的第一条消息将会被作为对 `sendNativeMessage()` 响应，将会被传入回调函数中。
 

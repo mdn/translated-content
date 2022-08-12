@@ -120,7 +120,7 @@ httpRequest.send();
 
 <p>Beachten Sie, dass die obigen Schritte nur gültig sind, wenn Sie eine asynchrone Anforderung verwendet haben (der dritte Parameter von <code>open()</code> war nicht spezifiziert oder auf true gesetzt). Wenn Sie eine synchrone Anforderung verwendet haben, brauchen Sie keine Funktion anzugeben, aber davon wird dringend abgeraten, da dies eine schlechte Benutzerführung zur Folge hat.</p>
 
-<h2 id="Schritt_3_–_Ein_einfaches_Beispiel">Schritt  3 – Ein einfaches Beispiel</h2>
+<h2 id="Schritt_3_–_Ein_einfaches_Beispiel">Schritt  3 – Ein einfaches Beispiel</h2>
 
 <p>Lassen Sie uns das alles mit einer einfachen HTTP-Anfrage zusammenfassen. Unser JavaScript wird ein HTML-Dokument, <code>test.html</code>, anfordern, das den Text "Ich bin ein Test" enthält. Dann <code>alert()</code> wir den Inhalt der Antwort. Beachten Sie, dass dieses Beispiel <a href="https://wiki.selfhtml.org/wiki/Vanilla-JS">Vanilla JavaScript</a> verwendet - es handelt sich nicht um jQuery. Außerdem sollten sich die HTML-, XML- und PHP-Dateien im selben Verzeichnis befinden.</p>
 
@@ -219,23 +219,23 @@ alert(root_node.firstChild.data);
 
 <h2 id="Schritt_5_–_Arbeiten_mit_Daten">Schritt 5 – Arbeiten mit Daten</h2>
 
-<p>Zum Schluss senden wir einige Daten an den Server und erhalten eine Antwort. Unser JavaScript wird diesmal eine dynamische Seite <code>test.php</code> anfordern, die die von uns gesendeten Daten entgegennimmt und einen "computed" string - "Hello, [user data]!" - den wir  <code>alert()</code>-en werden.</p>
+<p>Zum Schluss senden wir einige Daten an den Server und erhalten eine Antwort. Unser JavaScript wird diesmal eine dynamische Seite <code>test.php</code> anfordern, die die von uns gesendeten Daten entgegennimmt und einen "computed" string - "Hello, [user data]!" - den wir  <code>alert()</code>-en werden.</p>
 
 <p>Zuerst fügen wir unserem HTML ein Textfeld hinzu, damit der Benutzer seinen Namen eingeben kann:</p>
 
 <pre class="brush: html notranslate">&lt;label&gt;Your name:
-  &lt;input type="text" id="ajaxTextbox" /&gt;
+  &lt;input type="text" id="ajaxTextbox" /&gt;
 &lt;/label&gt;
 &lt;span id="ajaxButton" style="cursor: pointer; text-decoration: underline"&gt;
-  Make a request
+  Make a request
 &lt;/span&gt;</pre>
 
 <p>Wir fügen auch eine Zeile zu unserem Event-Handler hinzu, um die Daten des Benutzers aus dem Textfeld zu holen und sie zusammen mit der URL unseres serverseitigen Skripts an die Funktion <code>makeRequest()</code> zu senden:</p>
 
-<pre class="brush: js notranslate">  document.getElementById("ajaxButton").onclick = function() {
-      var userName = document.getElementById("ajaxTextbox").value;
-      makeRequest('test.php',userName);
-  };
+<pre class="brush: js notranslate">  document.getElementById("ajaxButton").onclick = function() {
+      var userName = document.getElementById("ajaxTextbox").value;
+      makeRequest('test.php',userName);
+  };
 </pre>
 
 <p>Wir müssen <code>makeRequest()</code> so modifizieren, dass es die Benutzerdaten akzeptiert und an den Server weiterleitet. Wir werden die Anfragemethode von <code>GET</code> auf <code>POST</code> ändern und unsere Daten als Parameter in den Aufruf von <code>httpRequest.send()</code> aufnehmen:</p>

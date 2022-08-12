@@ -8,4 +8,4 @@ translation_of: Glossary/HTTP
 ## 深入了解
 
 - [MDN 的 HTTP](/zh-TW/docs/Web/HTTP)
-- 維基百科的 {{interwiki("wikipedia", "HTTP", "HTTP")}}
+- 維基百科的 [HTTP](https://zh.wikipedia.org/wiki/HTTP)

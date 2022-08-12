@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p>Die veraltete Funktion <code><strong>escape()</strong></code> erzeugt einen neuen Text, in welchem gewisse Zeichen durch eine Hexadezimal-Escape-Sequenz ersetzt wurden. Es wird empfohlen, {{jsxref("encodeURI")}} oder {{jsxref("encodeURIComponent")}} stattdessen zu nutzen.</p>
+<p>Die veraltete Funktion <code><strong>escape()</strong></code> erzeugt einen neuen Text, in welchem gewisse Zeichen durch eine Hexadezimal-Escape-Sequenz ersetzt wurden. Es wird empfohlen, {{jsxref("encodeURI")}} oder {{jsxref("encodeURIComponent")}} stattdessen zu nutzen.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -18,16 +18,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/escape
 
 <dl>
  <dt><code>str</code></dt>
- <dd>Ein Text welcher verarbeitet wird.</dd>
+ <dd>Ein Text welcher verarbeitet wird.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p>Ein neuer Text, in welchem gewisse Zeichen escaped wurden.</p>
+<p>Ein neuer Text, in welchem gewisse Zeichen escaped wurden.</p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Die <code>escape</code>-Funktion ist Teil des <em>globalen Objektes</em>. Hierbei werden spezielle Zeichen codiert. Außnahme bilden hier: @*_+-./</p>
+<p>Die <code>escape</code>-Funktion ist Teil des <em>globalen Objektes</em>. Hierbei werden spezielle Zeichen codiert. Außnahme bilden hier: @*_+-./</p>
 
 <p>Die hexadezimale Form für Zeichen, deren Code-Einheitswert 0xFF oder weniger ist, enspricht einer zwei Ziffern großen Escape-Sequenz: %xx. Für Zeichen mit einem größeren Code-Einheitswert wird ein vier-Ziffern-Format genutzt: %<strong>u</strong>xxxx</p>
 
@@ -74,55 +74,7 @@ escape("@*_+-./");    // "@*_+-./"</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_Auch">Siehe Auch</h2>
 

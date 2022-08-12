@@ -23,7 +23,7 @@ Lorsqu'une animation fait évoluer une valeur de type `<alpha-value>`, les valeu
 
 ## Exemples
 
-Certaines fonctionnalités CSS utilisent des valeurs `<alpha-value>` dont [les notations fonctionnelles pour les couleurs telles que `rgba()` et `hsla()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#RGB_colors) et aussi {{cssxref("shape-image-threshold")}} (qui détermine les pixels à prendre en compte pour une image lorsqu'on souhaite en extraire une forme).
+Certaines fonctionnalités CSS utilisent des valeurs `<alpha-value>` dont [les notations fonctionnelles pour les couleurs telles que `rgba()` et `hsla()`](/fr/docs/Web/CSS/color_value#les_couleurs_rgb) et aussi {{cssxref("shape-image-threshold")}} (qui détermine les pixels à prendre en compte pour une image lorsqu'on souhaite en extraire une forme).
 
 ```css
 /* <rgba()> */

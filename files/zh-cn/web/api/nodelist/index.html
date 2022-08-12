@@ -106,7 +106,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 <h4 id="解决办法">解决办法</h4>
 
-<p>一个解决办法就是把 <code>Array.prototype</code> 上的方法添加到 <code>NodeList.prototype</code> 上。可是，要注意<a class="external" href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">扩展 DOM 对象的原型是非常危险的</a>，尤其是在旧版本的 Internet Explorer（6，7，8）中。</p>
+<p>一个解决办法就是把 <code>Array.prototype</code> 上的方法添加到 <code>NodeList.prototype</code> 上。可是，要注意<a href="http://perfectionkills.com/whats-wrong-with-extending-the-dom/">扩展 DOM 对象的原型是非常危险的</a>，尤其是在旧版本的 Internet Explorer（6，7，8）中。</p>
 
 <pre class="brush: js">var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
 

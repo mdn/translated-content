@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h2 id="Summary" name="Summary">Summary</h2>
 
-<p>Die <code><strong>Object.create()</strong></code> Methode erstellt ein neues Objekt mit dem angegebenen Prototype object und ggf. zusätzlichen Eigenschaften (properties).</p>
+<p>Die <code><strong>Object.create()</strong></code> Methode erstellt ein neues Objekt mit dem angegebenen Prototype object und ggf. zusätzlichen Eigenschaften (properties).</p>
 
 <h2 id="Syntax" name="Syntax">Syntax</h2>
 
@@ -22,9 +22,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <dl>
  <dt><code>proto</code></dt>
- <dd>Das Objekt, welches als Prototype object des zu erstellenden Objekts verwendet wird.</dd>
+ <dd>Das Objekt, welches als Prototype object des zu erstellenden Objekts verwendet wird.</dd>
  <dt><code>propertiesObject</code></dt>
- <dd>Optional. Falls angegeben und nicht {{jsxref("Global_Objects/undefined", "undefined")}}, ein Objekt dessen aufzählbare eigene Eigenschaften (properties, d.h.: Eigenschaften, die für das Objekt selbst definiert wurden und nicht in der prototype chain) als Eigenschaften dem neu erstellten Objekt hinzugefügt werden.  Die Eigenschaften entsprechen dem zweiten Parameter von {{jsxref("Object.defineProperties()")}}.</dd>
+ <dd>Optional. Falls angegeben und nicht {{jsxref("Global_Objects/undefined", "undefined")}}, ein Objekt dessen aufzählbare eigene Eigenschaften (properties, d.h.: Eigenschaften, die für das Objekt selbst definiert wurden und nicht in der prototype chain) als Eigenschaften dem neu erstellten Objekt hinzugefügt werden.  Die Eigenschaften entsprechen dem zweiten Parameter von {{jsxref("Object.defineProperties()")}}.</dd>
 </dl>
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example:_Classical_inheritance_with_Object.create" name="Example:_Classical_inheritance_with_Object.create">Beispiel: Klassenbasierte Vererbung mit <code>Object.create()</code></h3>
+<h3 id="Example:_Classical_inheritance_with_Object.create" name="Example:_Classical_inheritance_with_Object.create">Beispiel: Klassenbasierte Vererbung mit <code>Object.create()</code></h3>
 
 <p>Im folgenden sehen Sie ein Beispiel wie man <code>Object.create()</code> verwenden kann, um klassenbasierte Vererbung zu realisieren. JavaScript unterstützt nur einzelne Vererbung.</p>
 
@@ -85,9 +85,9 @@ MyClass.prototype.myMethod = function() {
 };
 </pre>
 
-<p>Die <code>mixin</code> Funktion kopiert die Funktionen des superclass Prototypen in den subclass Prototyp. Die mixin Funktion muss vom Benutzer bereitgestellt werden. Ein Beispiel für eine mixin-ähnliche Funktion ist <a href="http://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
+<p>Die <code>mixin</code> Funktion kopiert die Funktionen des superclass Prototypen in den subclass Prototyp. Die mixin Funktion muss vom Benutzer bereitgestellt werden. Ein Beispiel für eine mixin-ähnliche Funktion ist <a href="http://api.jquery.com/jQuery.extend/">jQuery.extend()</a>.</p>
 
-<h3 id="Example:_Using_propertiesObject_argument_with_Object.create" name="Example:_Using_propertiesObject_argument_with_Object.create">Beispiel: Benutzung des <code>propertiesObject</code> Parameters von <code>Object.create()</code></h3>
+<h3 id="Example:_Using_propertiesObject_argument_with_Object.create" name="Example:_Using_propertiesObject_argument_with_Object.create">Beispiel: Benutzung des <code>propertiesObject</code> Parameters von <code>Object.create()</code></h3>
 
 <pre class="brush: js">var o;
 
@@ -199,64 +199,16 @@ o2 = Object.create({}, {
   <tr>
    <td>{{SpecName('ES6', '#sec-object.create', 'Object.create')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Browser Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatOperaMobile("11.50")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>Basierend auf <a href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
+<p>Basierend auf <a href="http://kangax.github.com/es5-compat-table/">Kangax's compat table</a>.</p>
 
 <h2 id="See_also" name="See_also">Zusätzliches Material</h2>
 

@@ -1290,7 +1290,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>。{{htmlattrxref("type", "input")}} の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。{{htmlattrxref("type", "input")}} の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
@@ -1304,7 +1304,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>

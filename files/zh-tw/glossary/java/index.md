@@ -16,6 +16,6 @@ Java 屬於靜態型別，並具有類 C 的語法。它還有個稱作 Java 軟
 
 ### 基礎知識
 
-- 維基百科的 {{interwiki("wikipedia", "Java")}}
+- 維基百科的 [Java](https://zh.wikipedia.org/wiki/Java)
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Glossary")}}

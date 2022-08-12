@@ -15,7 +15,7 @@ translation_of: Web/API/Web_Periodic_Background_Synchronization_API
 
 <p>APIが呼び出された際には最小の時間間隔がセットされますが、サービスワーカーがそのイベントを受け取るタイミングに影響を与える様々な要素をユーザーエージェントは考慮します。その要素には、例えばウェブサイトのエンゲージメントや特定のネットワークへの接続などがあります。</p>
 
-<p>{{domxref('PeriodicSyncManager')}} インターフェースは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュのアップデートや新たなリソースの取得といった任意の利用可能な機能を実行することができます</p>
+<p>{{domxref('PeriodicSyncManager')}} インターフェースは {{domxref('ServiceWorkerRegistration.periodicSync')}} によって提供されます。一意のタグが sync イベントの 'name' として設定され、これは {{domxref('ServiceWorker')}} スクリプト内で取得することができます。イベントを受け取った際には、キャッシュのアップデートや新たなリソースの取得といった任意の利用可能な機能を実行することができます</p>
 
 <p>このAPIはサービスワーカーに依存しているため、このAPIも安全なコンテクスト (secure context) でしか利用できません。</p>
 
@@ -40,14 +40,14 @@ translation_of: Web/API/Web_Periodic_Background_Synchronization_API
  <dt>{{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}</dt>
  <dd>Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope.onperiodicsync")}}</dt>
- <dd>An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.</dd>
+ <dd>An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
 <p>The following examples show how to use the interface.</p>
 
-<h3 id="Requesting_a_Periodic_Background_Sync">Requesting a Periodic Background Sync</h3>
+<h3 id="Requesting_a_Periodic_Background_Sync">Requesting a Periodic Background Sync</h3>
 
 <p>The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:</p>
 

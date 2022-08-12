@@ -46,7 +46,7 @@ window.addEventListener('languagechange', function() {
 });
 ```
 
-Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange) :
+Ou utilisez la propriété du gestionnaire d'événements [`onlanguagechange`](/fr/docs/Web/API/WindowEventHandlers/onlanguagechange) :
 
 ```js
 window.onlanguagechange = function(event) {

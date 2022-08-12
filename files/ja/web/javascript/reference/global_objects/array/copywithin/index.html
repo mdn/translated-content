@@ -28,13 +28,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 <dl>
  <dt><code>target</code></dt>
  <dd>シーケンスのコピー先となる、0 から始まるインデックスです。負の場合、<code>target</code> は最後から数えられます。</dd>
- <dd><code>target</code> が <code>arr.length</code> 以上の場合、何もコピーされません。 <code>target</code> が <code>start</code> より後に配置されている場合、コピーされたシーケンスは <code>arr.length</code> に合うように切り詰められます。</dd>
- <dt><code>start</code> {{optional_inline}}</dt>
- <dd>要素のコピー元の始まりを表す、0 から始まるインデックスです。負の場合、 <code>start</code> は最後から数えられます。</dd>
- <dd><code>start</code> が省略された場合、<code>copyWithin</code> は最初の要素からコピーします（つまり、初期値は 0 です）。</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>要素のコピー元の末尾を表す、0 から始まるインデックスです。 <code>copyWithin</code> のコピーは <code>end</code> を含みません。負の場合、 <code>end</code> は最後から数えられます。</dd>
- <dd><code>end</code> が省略された場合、 <code>copyWithin</code> は最後までコピーします（つまり、初期値は <code>arr.length</code> です）。</dd>
+ <dd><code>target</code> が <code>arr.length</code> 以上の場合、何もコピーされません。 <code>target</code> が <code>start</code> より後に配置されている場合、コピーされたシーケンスは <code>arr.length</code> に合うように切り詰められます。</dd>
+ <dt><code>start</code> {{optional_inline}}</dt>
+ <dd>要素のコピー元の始まりを表す、0 から始まるインデックスです。負の場合、 <code>start</code> は最後から数えられます。</dd>
+ <dd><code>start</code> が省略された場合、<code>copyWithin</code> は最初の要素からコピーします（つまり、初期値は 0 です）。</dd>
+ <dt><code>end</code> {{optional_inline}}</dt>
+ <dd>要素のコピー元の末尾を表す、0 から始まるインデックスです。 <code>copyWithin</code> のコピーは <code>end</code> を含みません。負の場合、 <code>end</code> は最後から数えられます。</dd>
+ <dd><code>end</code> が省略された場合、 <code>copyWithin</code> は最後までコピーします（つまり、初期値は <code>arr.length</code> です）。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">戻り値</h3>
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 <h2 id="Description" name="Description">説明</h2>
 
-<p><code>copyWithin</code> メソッドは C 言語や C++ 言語の <code>memmove</code> のような動きをし、{{jsxref("Array")}} のデータをシフトさせる高いパフォーマンスのメソッドです。これは特に {{jsxref("TypedArray/copyWithin", "TypedArray")}} の同名メソッドに当てはまります。シーケンスはコピーされ貼り付けられる処理が一命令で行われます。コピー＆ペースト領域が重なっている場合でも、ペーストされたシーケンスはコピーされた値を持ちます。</p>
+<p><code>copyWithin</code> メソッドは C 言語や C++ 言語の <code>memmove</code> のような動きをし、{{jsxref("Array")}} のデータをシフトさせる高いパフォーマンスのメソッドです。これは特に {{jsxref("TypedArray/copyWithin", "TypedArray")}} の同名メソッドに当てはまります。シーケンスはコピーされ貼り付けられる処理が一命令で行われます。コピー＆ペースト領域が重なっている場合でも、ペーストされたシーケンスはコピーされた値を持ちます。</p>
 
 <p><code>copyWithin</code> 関数は、ジェネリック関数として動作します。<code>this</code> 値が {{jsxref("Array")}} オブジェクトである必要はありません。</p>
 

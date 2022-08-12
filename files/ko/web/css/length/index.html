@@ -49,7 +49,7 @@ translation_of: Web/CSS/length
  <dt><code><a id="em" name="em">em</a></code></dt>
  <dd>요소 {{cssxref("font-size")}}의 계산값. 요소의 {{cssxref("font-size")}} 속성에 사용한다면 상속받는 <code>font-size</code> 값을 나타냅니다.</dd>
  <dt><code><a id="ex" name="ex">ex</a></code></dt>
- <dd>요소 {{cssxref("font")}}의 {{interwiki("wikipedia", "x높이")}}를 나타냅니다. "x"문자를 가진 글꼴에서는 보통 소문자 높이와 같습니다. 많은 글꼴에서 <code>1ex ≈ 0.5em</code>입니다.</dd>
+ <dd>요소 {{cssxref("font")}}의 <a href="https://ko.wikipedia.org/wiki/X%EB%86%92%EC%9D%B4">x높이</a>를 나타냅니다. "x"문자를 가진 글꼴에서는 보통 소문자 높이와 같습니다. 많은 글꼴에서 <code>1ex ≈ 0.5em</code>입니다.</dd>
  <dt><code><a id="ic" name="ic">ic</a></code> {{experimental_inline}}</dt>
  <dd>"水" (한중일 한자 "물", U+6C34) 문자를 렌더링할 때 사용하는 글꼴에서의 너비를 나타냅니다.</dd>
  <dt><code><a id="lh" name="lh">lh</a></code> {{experimental_inline}}</dt>
@@ -211,42 +211,10 @@ inputElem.addEventListener('change', () =&gt; {
 
 <p>{{EmbedLiveSample('길이_단위_비교','100%', 700)}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#lengths', '&lt;length&gt;')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td>Adds the <code>vi</code>, <code>vb</code>, <code>ic</code>, <code>lh</code>, and <code>rlh</code> units.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#lengths', '&lt;length&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Adds the <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, and <code>Q</code> units.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'syndata.html#length-units', '&lt;length&gt;')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Explicit definition of the <code>em</code>, <code>pt</code>, <code>pc</code>, and <code>px</code> units.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#length-units', '&lt;length&gt;')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition. Implicit definition of the <code>em</code>, <code>pt</code>, <code>pc</code>, and <code>px</code> units.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.types.length")}}</p>

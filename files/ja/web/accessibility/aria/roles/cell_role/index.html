@@ -10,16 +10,16 @@ translation_of: Web/Accessibility/ARIA/Roles/Cell_Role
 <p>ARIA の <em>role</em> 属性の <code>cell</code> 値は、要素を列ヘッダーや行ヘッダーの情報を含まない表形式コンテナー内のセルとして識別します。 サポートされるには、セルが行 (<code>row</code>) ロールを持つ要素内にネストされている必要があります。</p>
 
 <pre class="brush: html">&lt;div role="row"&gt;
-  &lt;span role="cell"&gt;フランス&lt;/span&gt;
-  &lt;span role="cell"&gt;6700 万&lt;/span&gt;
+  &lt;span role="cell"&gt;フランス&lt;/span&gt;
+  &lt;span role="cell"&gt;6700 万&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
 <p>上のセルの書き方のより良い、より意味論的な方法は、意味論的な <code>&lt;td&gt;</code> 要素を使うことです。</p>
 
 <pre class="brush: html">&lt;tr role="row"&gt;
-  &lt;td role="cell"&gt;フランス&lt;/td&gt;
-  &lt;td role="cell"&gt;6700 万&lt;/td&gt;
+  &lt;td role="cell"&gt;フランス&lt;/td&gt;
+  &lt;td role="cell"&gt;6700 万&lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
@@ -66,15 +66,15 @@ translation_of: Web/Accessibility/ARIA/Roles/Cell_Role
 <h4 id="States_and_Properties" name="States_and_Properties">ステートとプロパティ</h4>
 
 <dl>
- <dt>aria-colspan 属性</dt>
+ <dt>aria-colspan 属性</dt>
  <dd>HTML の <code><a href="/ja/docs/Web/HTML/Element/th">&lt;th&gt;</a></code> と <a href="/ja/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code> 要素の <code>colspan</code> 属性</a>と同様に、セルにまたがる列数を定義します。</dd>
- <dt>aria-rowspan 属性</dt>
+ <dt>aria-rowspan 属性</dt>
  <dd>HTML の <code><a href="/ja/docs/Web/HTML/Element/th">&lt;th&gt;</a></code> と <a href="/ja/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code> 要素の <code>rowspan</code> 属性</a>と同様に、セルにまたがる行数を定義します。</dd>
- <dt>aria-colindex 属性</dt>
+ <dt>aria-colindex 属性</dt>
  <dd>
  <p><code>aria-colindex</code> 属性は、列が DOM から隠されている場合にのみ必要です。 この属性は、値として 1 から表 (<code>table</code>)、グリッド (<code>grid</code>)、ツリーグリッド (<code>treegrid</code>) 内の総列数の間の整数をとります。 <code>aria-colindex</code> は、行内の総列数に対する要素の列インデックスまたは位置を定義します。 全ての列が DOM 内にある場合、この属性は必要ありません。</p>
  </dd>
- <dt>aria-rowindex 属性</dt>
+ <dt>aria-rowindex 属性</dt>
  <dd>
  <p><code>aria-rowindex</code> 属性は、行が DOM から隠されている場合にのみ必要で、現在のセルが総ての行のリスト内のどの行かを示します。 この属性は、値として 1 から表 (<code>table</code>)、グリッド (<code>grid</code>)、ツリーグリッド (<code>treegrid</code>) 内の総行数の間の整数をとり、セルの位置またはインデックスを示します。 たとえば、最初のヘッダーの最初の行のセルは <code>aria-rowindex="1"</code> と設定され、47 行目のセルは、DOM 内に全ての行が存在しないために <code>aria-rowindex</code> が必要な場合は、<code>aria-rowindex="47"</code> となるでしょう。 表示されている行が連続していて、<code>colspan</code> や <code>rowspan</code> が 1 より大きいセルがない場合、このプロパティは行の全てのセルの代わりに親の行に追加できます。</p>
 
@@ -92,28 +92,28 @@ translation_of: Web/Accessibility/ARIA/Roles/Cell_Role
 <h2 id="Examples" name="Examples">例</h2>
 
 <pre>&lt;div role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
-  &lt;div id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/div&gt;
-  &lt;div role="rowgroup"&gt;
-     &lt;div role="row"&gt;
-       &lt;span role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA ロール&lt;/span&gt;
-       &lt;span role="columnheader" aria-sort="none" aria-rowindex="1"&gt;意味論的な要素&lt;/span&gt;
-     &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div role="rowgroup"&gt;
-    &lt;div role="row"&gt;
-       &lt;span role="cell" aria-rowindex="11"&gt;header&lt;/span&gt;
-       &lt;span role="cell" aria-rowindex="11"&gt;h1&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"&gt;
-      &lt;span role="cell" aria-rowindex="16"&gt;header&lt;/span&gt;
-      &lt;span role="cell" aria-rowindex="16"&gt;h6&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"&gt;
-      &lt;span role="cell" aria-rowindex="18"&gt;rowgroup&lt;/span&gt;
-      &lt;span role="cell" aria-rowindex="18"&gt;thead&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div role="row"&gt;
-      &lt;span role="cell" aria-rowindex="24"&gt;term&lt;/span&gt;
+  &lt;div id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/div&gt;
+  &lt;div role="rowgroup"&gt;
+     &lt;div role="row"&gt;
+       &lt;span role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA ロール&lt;/span&gt;
+       &lt;span role="columnheader" aria-sort="none" aria-rowindex="1"&gt;意味論的な要素&lt;/span&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div role="rowgroup"&gt;
+    &lt;div role="row"&gt;
+       &lt;span role="cell" aria-rowindex="11"&gt;header&lt;/span&gt;
+       &lt;span role="cell" aria-rowindex="11"&gt;h1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"&gt;
+      &lt;span role="cell" aria-rowindex="16"&gt;header&lt;/span&gt;
+      &lt;span role="cell" aria-rowindex="16"&gt;h6&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"&gt;
+      &lt;span role="cell" aria-rowindex="18"&gt;rowgroup&lt;/span&gt;
+      &lt;span role="cell" aria-rowindex="18"&gt;thead&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div role="row"&gt;
+      &lt;span role="cell" aria-rowindex="24"&gt;term&lt;/span&gt;
       &lt;span role="cell" aria-rowindex="24"&gt;dt&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -127,31 +127,31 @@ translation_of: Web/Accessibility/ARIA/Roles/Cell_Role
 <p>データ表構造には、<code>table</code>、<code>tbody</code>、<code>thead</code>、<code>tr</code>、<code>th</code>、<code>td</code> などのみを使用します。 CSS などを使用して、表のネイティブな意味論を削除しなくてはならない場合に、ARIA ロールを追加してアクセシビリティを確保できます。 ARIA の表 (<code>table</code>) ロールの関連するユースケースは、<a href="/ja/docs/Web/CSS/display#accessibility_concerns">display: grid など、CSS の display プロパティ</a>によって表のネイティブな意味論がオーバーライドされる場合です。 この場合、ARIA の表 (<code>table</code>) ロールを使用して意味論を戻すことができます。</p>
 
 <pre>&lt;table role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt;
-  &lt;caption id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-     &lt;tr role="row"&gt;
-       &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA ロール&lt;/th&gt;
-       &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;意味論的な要素&lt;/th&gt;
-     &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-     &lt;tr role="row"&gt;
-       &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
-       &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
-     &lt;/tr&gt;
-     &lt;tr role="row"&gt;
-       &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
-       &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
-     &lt;/tr&gt;
-     &lt;tr role="row"&gt;
-       &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
-       &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
-     &lt;/tr&gt;
-     &lt;tr role="row"&gt;
-       &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
-       &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
-     &lt;/tr&gt;
-   &lt;/tbody&gt;
+  &lt;caption id="semantic_elements_table_desc"&gt;ARIA のロールの代わりに使用する意味論的な要素&lt;/caption&gt;
+  &lt;thead role="rowgroup"&gt;
+     &lt;tr role="row"&gt;
+       &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA ロール&lt;/th&gt;
+       &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;意味論的な要素&lt;/th&gt;
+     &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody role="rowgroup"&gt;
+     &lt;tr role="row"&gt;
+       &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
+       &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row"&gt;
+       &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
+       &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row"&gt;
+       &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
+       &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row"&gt;
+       &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
+       &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
  &lt;/table&gt;</pre>
 
 <p>上記は、表を作成する意味論的な方法です。 表のネイティブな意味論、つまり表の行が、<a href="/ja/docs/Web/CSS/display#accessibility_concerns">display プロパティ</a>などを介して変更されていない場合、ARIA ロールは必要ありません。</p>

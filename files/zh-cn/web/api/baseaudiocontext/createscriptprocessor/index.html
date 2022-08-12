@@ -4,7 +4,7 @@ slug: Web/API/BaseAudioContext/createScriptProcessor
 translation_of: Web/API/BaseAudioContext/createScriptProcessor
 original_slug: Web/API/AudioContext/createScriptProcessor
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
 
 <div>
 <p>{{ domxref("AudioContext") }} 接口的<code>createScriptProcessor()</code> 方法创建一个{{domxref("ScriptProcessorNode")}} 用于通过 JavaScript 直接处理音频。</p>
@@ -28,11 +28,11 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 </dl>
 
 <div class="warning">
-<p><strong>重要</strong>: Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .</p>
+<p><strong>警告：</strong> Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: <code>numberOfInputChannels和</code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
+<p><strong>备注：</strong> <code>numberOfInputChannels和</code><code>numberOfOutputChannels的值不能同时为0，二者同时为0是无效的</code></p>
 </div>
 
 <h3 id="Description">返回</h3>
@@ -44,7 +44,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 <p><code>下面的例子展示了一个ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法关联</code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
+<p><strong>备注：</strong> 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
 </div>
 
 <pre class="brush: js">var myScript = document.querySelector('script');
@@ -119,24 +119,13 @@ source.onended = function() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioContext-createScriptProcessor-ScriptProcessorNode-unsigned-long-bufferSize-unsigned-long-numberOfInputChannels-unsigned-long-numberOfOutputChannels', 'createScriptProcessor')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>自 2014 年 8 月 29 日 <a href="https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor">Web Audio API 规范</a>发布以来，此特性已被弃用。它不再有望成为标准。</p>
+
+<p>它已被 <a href="/zh-CN/docs/Web/API/AudioWorklet">AudioWorklet</a> 和 {{domxref("AudioWorkletNode")}} 接口所取代。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("api.BaseAudioContext.createScriptProcessor")}}
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

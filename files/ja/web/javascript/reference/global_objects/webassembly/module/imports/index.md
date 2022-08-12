@@ -45,8 +45,8 @@ module が {{jsxref("WebAssembly.Module")}} オブジェクトインスタンス
 ```js
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(function(mod) {
-  var imports = WebAssembly.Module.imports(mod);
-  console.log(imports[0]);
+  var imports = WebAssembly.Module.imports(mod);
+  console.log(imports[0]);
 });
 ```
 

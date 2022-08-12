@@ -91,8 +91,8 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment">求余赋值 (Remainder assignment)</a></td>
-   <td><code>x %= y</code></td>
-   <td><code>x = x % y</code></td>
+   <td><code>x %= y</code></td>
+   <td><code>x = x % y</code></td>
   </tr>
   <tr>
    <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment">求幂赋值 (Exponentiation assignment)</a></td>
@@ -266,7 +266,7 @@ var var2 = 4;</pre>
    <td>自减 (<code>--</code>)</td>
    <td>一元运算符。将操作数的值减一. 前后缀两种用法的返回值类似自增运算符。</td>
    <td>
-    <p>var x=3; console.log(--x); //输入 2,x=2</p>
+    <p>var x=3; console.log(--x); //输入 2,x=2</p>
 
     <p>var y=3;console.log(y--);//输出 3,x=2;</p>
    </td>
@@ -275,7 +275,7 @@ var var2 = 4;</pre>
    <td>一元负值符 (<code>-</code>)</td>
    <td>一元运算符，返回操作数的负值。</td>
    <td>
-    <p>var x=3; console.log(-x); //输入-3</p>
+    <p>var x=3; console.log(-x); //输入-3</p>
    </td>
   </tr>
   <tr>
@@ -293,10 +293,10 @@ var var2 = 4;</pre>
   </tr>
   <tr>
    <td>指数运算符 (**)</td>
-   <td>计算 <code>base(底数)</code> 的 <code>exponent(</code>指数<code>) 次方</code>, 表示为<code>base^exponent</code></td>
+   <td>计算 <code>base(底数)</code> 的 <code>exponent(</code>指数<code>) 次方</code>, 表示为<code>base^exponent</code></td>
    <td>
-    <p><code>2 ** 3</code> returns <code>8</code>.<br>
-     <code>10 ** -1</code> returns <code>0.1</code>.</p>
+    <p><code>2 ** 3</code> returns <code>8</code>.<br>
+     <code>10 ** -1</code> returns <code>0.1</code>.</p>
    </td>
   </tr>
   <tr>
@@ -321,29 +321,29 @@ var var2 = 4;</pre>
  </thead>
  <tbody>
   <tr>
-   <td>按位与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"> AND</a></td>
+   <td>按位与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"> AND</a></td>
    <td><code>a &amp; b</code></td>
    <td>
     <p>在 a,b 的位表示中，每一个对应的位都为 1 则返回 1， 否则返回 0.</p>
    </td>
   </tr>
   <tr>
-   <td>按位或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"> OR</a></td>
+   <td>按位或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"> OR</a></td>
    <td><code>a | b</code></td>
    <td>在 a,b 的位表示中，每一个对应的位，只要有一个为 1 则返回 1， 否则返回 0.</td>
   </tr>
   <tr>
-   <td>按位异或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"> XOR</a></td>
+   <td>按位异或<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"> XOR</a></td>
    <td><code>a ^ b</code></td>
    <td>在 a,b 的位表示中，每一个对应的位，两个不相同则返回 1，相同则返回 0.</td>
   </tr>
   <tr>
-   <td>按位非<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"> NOT</a></td>
+   <td>按位非<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"> NOT</a></td>
    <td><code>~ a</code></td>
    <td>反转被操作数的位。</td>
   </tr>
   <tr>
-   <td>左移<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift"> shift</a></td>
+   <td>左移<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift"> shift</a></td>
    <td><code>a &lt;&lt; b</code></td>
    <td>将 a 的二进制串向左移动 b 位，右边移入 0.</td>
   </tr>
@@ -456,13 +456,13 @@ var var2 = 4;</pre>
   <tr>
    <td><code>&gt;&gt;</code><br>
     (带符号右移)</td>
-   <td>将第一个操作数向右移动指定数量的位. 右边移出位被抛弃。左边多出的空位由原值的最左边数字补齐。</td>
+   <td>将第一个操作数向右移动指定数量的位. 右边移出位被抛弃。左边多出的空位由原值的最左边数字补齐。</td>
    <td><code>9&gt;&gt;2 产生 2，因为 1001 移位 2 位向右变为 10，其是 2。同样，-9&gt;&gt;2 产生-3，由于符号被保留。</code></td>
   </tr>
   <tr>
    <td><code>&gt;&gt;&gt;</code><br>
     (补零右移)</td>
-   <td>将第一个操作数向右移动指定数量的位. 右边移出位被抛弃。左边多出的空位由 0 补齐。</td>
+   <td>将第一个操作数向右移动指定数量的位. 右边移出位被抛弃。左边多出的空位由 0 补齐。</td>
    <td><code>19&gt;&gt;&gt;2</code>产生 4，因为 10011 移位 2 位向右变为 100，它是 4。对非负数值，补零右移和带符号右移产生相同结果。</td>
   </tr>
  </tbody>
@@ -484,17 +484,17 @@ var var2 = 4;</pre>
  </thead>
  <tbody>
   <tr>
-   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">逻辑与</a><code> (&amp;&amp;</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">逻辑与</a><code> (&amp;&amp;</code>)</td>
    <td><code>expr1 &amp;&amp; expr2</code></td>
    <td>(逻辑与) 如果 expr1 能被转换为 false，那么返回 expr1；否则，返回<code>expr2</code>。因此<code>，&amp;&amp;</code>用于布尔值时，当操作数都为 true 时返回 true；否则返回 false.</td>
   </tr>
   <tr>
-   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">逻辑或 </a>(<code>||</code>)</td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">逻辑或 </a>(<code>||</code>)</td>
    <td><code>expr1 || expr2</code></td>
    <td>(逻辑或) 如果 expr1 能被转换为 true，那么返回 expr1；否则，返回<code>expr2</code>。因此，|| 用于布尔值时，当任何一个操作数为 true 则返回 true；如果操作数都是 false 则返回 false。</td>
   </tr>
   <tr>
-   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">逻辑非</a><code> (!)</code></td>
+   <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">逻辑非</a><code> (!)</code></td>
    <td><code>!expr</code></td>
    <td>(逻辑非) 如果操作数能够转换为 true 则返回 false；否则返回 true。</td>
   </tr>
@@ -537,8 +537,8 @@ var n3 = !"Cat"; // !t returns false
 <p>作为逻辑表达式进行求值是从左到右，它们是为可能的“短路”的出现而使用以下规则进行测试：</p>
 
 <ul>
- <li><code>false</code> &amp;&amp; <em>anything</em>    // 被短路求值为 false</li>
- <li><code>true</code> || <em>anything</em>       // 被短路求值为 true</li>
+ <li><code>false</code> &amp;&amp; <em>anything</em>    // 被短路求值为 false</li>
+ <li><code>true</code> || <em>anything</em>       // 被短路求值为 true</li>
 </ul>
 
 <p>逻辑的规则，保证这些评估是总是正确的。请注意，上述表达式的<code>anything</code>部分不会被求值，所以这样做不会产生任何副作用。</p>
@@ -667,13 +667,13 @@ typeof today;     // returns "object"
 typeof dontExist; // returns "undefined"
 </pre>
 
-<p>对于关键词 <code>true</code> 和 <code>null</code>， <code>typeof</code> 操作符将会返回如下结果：</p>
+<p>对于关键词 <code>true</code> 和 <code>null</code>， <code>typeof</code> 操作符将会返回如下结果：</p>
 
 <pre class="brush: js">typeof true; // returns "boolean"
 typeof null; // returns "object"
 </pre>
 
-<p>对于一个数值或字符串<code></code>， <code>typeof</code> 操作符将会返回如下结果：</p>
+<p>对于一个数值或字符串<code></code>， <code>typeof</code> 操作符将会返回如下结果：</p>
 
 <pre class="brush: js">typeof 62;            // returns "number"
 typeof 'Hello world'; // returns "string"
@@ -861,7 +861,7 @@ if (theDay instanceof Date) {
  </tbody>
 </table>
 
-<p>上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 <a href="/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table">JavaScript 参考手册</a>中找到。</p>
+<p>上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 <a href="/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table">JavaScript 参考手册</a>中找到。</p>
 
 <h2 id="表达式">表达式</h2>
 
@@ -877,7 +877,7 @@ if (theDay instanceof Date) {
 
 <ul>
  <li>算数：得出一个数字，例如 3.14159。（通常使用<a href="#算术运算符">算数运算符</a>）</li>
- <li>字符串：得出一个字符串，例如，"Fred" 或 "234"。（通常使用<a href="#字符串运算符">字符串运算符</a>。）</li>
+ <li>字符串：得出一个字符串，例如，"Fred" 或 "234"。（通常使用<a href="#字符串运算符">字符串运算符</a>。）</li>
  <li>逻辑值：得出 true 或者 false。（经常涉及到<a href="#逻辑运算符">逻辑运算符</a>。）</li>
  <li>基本表达式: javascript 中基本的关键字和一般表达式。</li>
  <li>左值表达式：分配给左值。</li>
@@ -896,8 +896,8 @@ this.propertyName
 <p>假设一个用于验证对象<code>value</code>属性的<code>validate</code>函数，传参有对象，最高值和最低值。</p>
 
 <pre class="brush: js">function validate(obj, lowval, hival){
-  if ((obj.value &lt; lowval) || (obj.value &gt; hival))
-    console.log("Invalid Value!");
+  if ((obj.value &lt; lowval) || (obj.value &gt; hival))
+    console.log("Invalid Value!");
 }
 </pre>
 
@@ -967,7 +967,7 @@ var abc = [ "A", "B", "C" ];
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator">扩展语句</a>符允许一个表达式在原地展开， 当需要多个参数 (比如函数调用时) 或者多个值 (比如字面量数组) 。</p>
 
-<p><strong>例如：</strong>现在你有一个数组，你想创建一个新数组，并将刚才那个作为它的一部分，用 array 的字面语法是不够的，你不得不写一些代码实现它，比如用些<code>push</code>, <code>splice</code>, <code>concat 等等。但是用</code>spread syntax 就没问题了：</p>
+<p><strong>例如：</strong>现在你有一个数组，你想创建一个新数组，并将刚才那个作为它的一部分，用 array 的字面语法是不够的，你不得不写一些代码实现它，比如用些<code>push</code>, <code>splice</code>, <code>concat 等等。但是用</code>spread syntax 就没问题了：</p>
 
 <pre><code>var parts = ['shoulder', 'knees'];
 var lyrics = ['head', ...parts, 'and', 'toes'];</code></pre>

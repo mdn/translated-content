@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 ---
 <div>{{JSRef}}</div>
 
-<p> <strong><code>Symbol.isConcatSpreadable</code></strong> - это известный символ, который используется для  определения, должен ли объект редуцироваться к сумме своих элементов при использовании метода {{jsxref("Array.prototype.concat()")}}.</p>
+<p> <strong><code>Symbol.isConcatSpreadable</code></strong> - это известный символ, который используется для  определения, должен ли объект редуцироваться к сумме своих элементов при использовании метода {{jsxref("Array.prototype.concat()")}}.</p>
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 
 <h3 id="Массивы">Массивы</h3>
 
-<p>По умолчанию, {{jsxref("Array.prototype.concat()")}}  возвращает массив, объединяющий  элементы исходных массивов:</p>
+<p>По умолчанию, {{jsxref("Array.prototype.concat()")}}  возвращает массив, объединяющий  элементы исходных массивов:</p>
 
 <pre class="brush: js">var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
@@ -36,7 +36,7 @@ var alphaNumeric = alpha.concat(numeric);
 console.log(alphaNumeric); // Result: ['a', 'b', 'c', 1, 2, 3]
 </pre>
 
-<p>Если значение <code>Symbol.isConcatSpreadable</code>  =  <code>false</code>, то можно отменить поведение по умолчанию:</p>
+<p>Если значение <code>Symbol.isConcatSpreadable</code>  =  <code>false</code>, то можно отменить поведение по умолчанию:</p>
 
 <pre class="brush: js">var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
@@ -49,7 +49,7 @@ console.log(alphaNumeric); // Result: ['a', 'b', 'c', [1, 2, 3] ]
 
 <h3 id="Массивоподобные_объекты">Массивоподобные объекты</h3>
 
-<p>Для массивоподобных объектов поведением по умолчанию будет <code>сохранение своей структуры. </code>Чтобы вызвать его разложение до суммы  элементов  в итоговом массиве, нужно задать значение <code>true для Symbol.isConcatSpreadable</code>:</p>
+<p>Для массивоподобных объектов поведением по умолчанию будет <code>сохранение своей структуры. </code>Чтобы вызвать его разложение до суммы  элементов  в итоговом массиве, нужно задать значение <code>true для Symbol.isConcatSpreadable</code>:</p>
 
 <pre class="brush: js">var x = [1, 2, 3];
 

@@ -33,7 +33,7 @@ translation_of: Web/API/Node/textContent
  <li>如果节点是一个 {{domxref("document")}}，或者一个 <a href="/zh-CN/docs/Glossary/Doctype">DOCTYPE</a> ，则 <code>textContent</code> 返回 <code>null</code>。
 
   <div class="blockIndicator note">
-  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
+  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
   </div>
  </li>
  <li>如果节点是个 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA section</a>、注释、<a href="/zh-CN/docs/Web/API/ProcessingInstruction">processing instruction</a> 或者 <a href="/zh-CN/docs/Web/API/Document/createTextNode">text node</a>，<code>textContent</code> 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。</li>
@@ -103,38 +103,13 @@ if (Object.defineProperty
   })();
 }</pre>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{Compat("api.Node.textContent")}}</p>
-
 <h2 id="Specification">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change vs. DOM4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM4')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Introduced</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

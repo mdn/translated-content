@@ -28,7 +28,7 @@ HTML 文件通常会以 `.htm` 或 `.html` 为扩展名。用户可以从 {{Glos
 
 ### 基础知识
 
-- 维基百科 {{interwiki("wikipedia", "HTML", "HTML")}} 词条
+- 维基百科 [HTML](https://zh.wikipedia.org/wiki/HTML) 词条
 
 ### 学习 HTML
 

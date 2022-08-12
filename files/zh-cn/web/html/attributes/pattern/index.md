@@ -124,15 +124,11 @@ input:valid+span:after {
 
 ## 规范
 
-| 规范                                                                      | Status                   | Comment |
-| ------------------------------------------------------------------------- | ------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'pattern') }} | {{Spec2('HTML WHATWG')}} |         |
-| {{ SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'pattern') }}     | {{Spec2('HTML5.1')}}     |         |
-| {{ SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'pattern') }}   | {{Spec2('HTML5 W3C')}}   |         |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## 参见
 

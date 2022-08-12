@@ -62,7 +62,7 @@ En plus du contenu multimédia, un document HTML peut embarquer d'autres contenu
 
 ## SVG et MathML
 
-Vous pouvez intégrer du contenu [SVG](/en-US/docs/Web/SVG) et [MathML](/en-US/docs/Web/MathML) directement dans des documents HTML, en utilisant les éléments [`<svg>`](/fr/docs/Web/SVG/Element/svg) et [`<math>`](/fr/docs/Web/MathML/Element/math).
+Vous pouvez intégrer du contenu [SVG](/fr/docs/Web/SVG) et [MathML](/fr/docs/Web/MathML) directement dans des documents HTML, en utilisant les éléments [`<svg>`](/fr/docs/Web/SVG/Element/svg) et [`<math>`](/fr/docs/Web/MathML/Element/math).
 
 <table class="no-markdown">
   <thead>

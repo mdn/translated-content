@@ -65,11 +65,11 @@ delete this.b;
 console.log(a, b); // erzeugt einen ReferenceError.
 // Das 'b' Attribut wurde gelöscht und existiert nicht länger.</pre>
 
-<p>Wegen dieser drei Unterschiede führt das Fehlen der Variablendeklaration zu unerwarteten Ergebnissen. <strong>Deswegen ist es empfohlen immer Variablen zu deklarieren, unabhängig davon, ob sie sich in einer Funktion oder im globalen Kontext befinden.</strong> Zudem wird im ECMAScript 5 <code>{{jsxref("</code>Functions_and_function_scope/Strict_mode<code>", "strict mode")}} </code>ein Fehler erzeugt, wenn einer nicht deklarierten Variablen ein Wert zugewiesen wird.</p>
+<p>Wegen dieser drei Unterschiede führt das Fehlen der Variablendeklaration zu unerwarteten Ergebnissen. <strong>Deswegen ist es empfohlen immer Variablen zu deklarieren, unabhängig davon, ob sie sich in einer Funktion oder im globalen Kontext befinden.</strong> Zudem wird im ECMAScript 5 <code>{{jsxref("</code>Functions_and_function_scope/Strict_mode<code>", "strict mode")}} </code>ein Fehler erzeugt, wenn einer nicht deklarierten Variablen ein Wert zugewiesen wird.</p>
 
 <h3 id="var_hoisting">var hoisting</h3>
 
-<p>Weil Variablendeklarationen (und Deklarationen im Allgemeinen) vor dem Ausführen von Programmcode geschieht, ist das Deklarieren einer Variable irgendwo im Programmcode das gleiche, als würde sie am Anfang deklariert werden. Das bedeutet, dass eine Variable benutzt werden kann bevor sie im Programmcode deklariert wurde. Dieser Umstand wird "hoisting" genannt und wird möglich, weil die Deklaration der Variablen an den Anfang der Funktion oder den Anfang des globalen Programmcodes verschoben wird.</p>
+<p>Weil Variablendeklarationen (und Deklarationen im Allgemeinen) vor dem Ausführen von Programmcode geschieht, ist das Deklarieren einer Variable irgendwo im Programmcode das gleiche, als würde sie am Anfang deklariert werden. Das bedeutet, dass eine Variable benutzt werden kann bevor sie im Programmcode deklariert wurde. Dieser Umstand wird "hoisting" genannt und wird möglich, weil die Deklaration der Variablen an den Anfang der Funktion oder den Anfang des globalen Programmcodes verschoben wird.</p>
 
 <pre class="brush: js">bla = 2
 var bla;
@@ -119,11 +119,11 @@ f();
 console.log(x, y); // 0, 1
 // Nicht im strict-mode:
 // x ist die erwartetete globale Variable und nicht die lokale.
-// y wird global angelegt und der Wert 1 zugewiesen! </pre>
+// y wird global angelegt und der Wert 1 zugewiesen! </pre>
 
 <h3 id="Implizierte_globale_Variablen_und_Gültigkeitsbereiche_äußerer_Funktionen">Implizierte globale Variablen und Gültigkeitsbereiche äußerer Funktionen</h3>
 
-<p>Variablen die scheinbar global verfügbar sind, stammen manchmal aus dem Gültigkeitsbereich einer äußeren Funktion:</p>
+<p>Variablen die scheinbar global verfügbar sind, stammen manchmal aus dem Gültigkeitsbereich einer äußeren Funktion:</p>
 
 <pre class="brush: js">var x = 0;  // x ist global deklariert und mit dem Wert 0 initialisiert.
 
@@ -185,55 +185,7 @@ console.log(typeof y); // undefined weil y local in der Funktion a deklariert wu
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also" name="See_also">Siehe auch</h2>
 

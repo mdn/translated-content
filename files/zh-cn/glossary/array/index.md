@@ -23,7 +23,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### 常规知识
 
-- 维基百科的{{Interwiki("wikipedia", "数组", "数组")}}
+- 维基百科的[数组](https://zh.wikipedia.org/wiki/数组)
 
 ### 技术参考
 

@@ -326,26 +326,28 @@ browser.runtime.onMessage.addListener(beastify);
 
 首先，請再三的確認檔案有放到相對應的資料夾中：
 
-    beastify/
+```
+beastify/
 
-        beasts/
-            frog.jpg
-            snake.jpg
-            turtle.jpg
+    beasts/
+        frog.jpg
+        snake.jpg
+        turtle.jpg
 
-        content_scripts/
-            beastify.js
+    content_scripts/
+        beastify.js
 
-        icons/
-            beasts-32.png
-            beasts-48.png
+    icons/
+        beasts-32.png
+        beasts-48.png
 
-        popup/
-            choose_beast.css
-            choose_beast.html
-            choose_beast.js
+    popup/
+        choose_beast.css
+        choose_beast.html
+        choose_beast.js
 
-        manifest.json
+    manifest.json
+```
 
 開啟 Firefox 45.0，並安裝本地的 extensive 到瀏覽器裡。
 

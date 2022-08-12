@@ -157,9 +157,9 @@ typeof Math.sin === 'function';
 typeof null === 'object';
 </pre>
 
-<p>자바스크립트를 처음 구현할 때, 자바스크립트 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. <code>null</code>은 Null pointer(대부분의 플랫폼에서 <code>0x00</code>)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 <code>typeof</code>는 object를 반환합니다. (<a href="https://2ality.com/2013/10/typeof-null.html">참고 문서</a>)</p>
+<p>자바스크립트를 처음 구현할 때, 자바스크립트 값은 타입 태그와 값으로 표시되었습니다. 객체의 타입 태그는 0이었습니다. <code>null</code>은 Null pointer(대부분의 플랫폼에서 <code>0x00</code>)로 표시되었습니다. 그 결과 null은 타입 태그로 0을 가지며, 따라서 <code>typeof</code>는 object를 반환합니다. (<a href="https://2ality.com/2013/10/typeof-null.html">참고 문서</a>)</p>
 
-<p>ECMAScript에 수정이 제안(opt-in을 통해)되었으나 <a href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">거절되었습니다</a>. 제안된 것은 다음과 같습니다. <code>typeof null === 'null'.</code></p>
+<p>ECMAScript에 수정이 제안(opt-in을 통해)되었으나 <a href="https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null">거절되었습니다</a>. 제안된 것은 다음과 같습니다. <code>typeof null === 'null'.</code></p>
 
 <h3 id="Regular_expressions">Regular expressions</h3>
 
@@ -169,46 +169,11 @@ typeof null === 'object';
 typeof /s/ === 'object';   // Firefox 5+  Conform to ECMAScript 5.1
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typeof-operator', 'The typeof Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-typeof-operator', 'The typeof Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.3', 'The typeof Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.4.3', 'The typeof Operator')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.4.3', 'The typeof Operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.operators.typeof")}}</p>
 

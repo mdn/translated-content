@@ -11,7 +11,7 @@ translation_of: Glossary/TLS
 
 - [传输层安全性协议](/zh-CN/docs/Web/Security/Transport_Layer_Security)
 - [OWASP: 传输层保护备忘单](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
-- 维基百科上的{{Interwiki("wikipedia", "Transport Layer Security")}}
+- 维基百科上的[Transport Layer Security](https://zh.wikipedia.org/wiki/Transport_Layer_Security)
 
 ### 协议规范
 

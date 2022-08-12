@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><span class="seoSummary">A função <code><strong>decodeURI()</strong></code> decodifica um Uniform Resource Identifier (URI) criado anteriormente por {{jsxref("encodeURI", "encodeURI()")}} ou por uma rotina semelhante.</span></p>
+<p><span class="seoSummary">A função <code><strong>decodeURI()</strong></code> decodifica um Uniform Resource Identifier (URI) criado anteriormente por {{jsxref("encodeURI", "encodeURI()")}} ou por uma rotina semelhante.</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</div>
 
@@ -28,15 +28,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 
 <h3 id="Exceções">Exceções</h3>
 
-<p>Lança uma exceção {{jsxref("URIError")}} ("sequência de URI malformada") quando o <code><em>encodedURI</em></code> contém sequências de caracteres inválidos.</p>
+<p>Lança uma exceção {{jsxref("URIError")}} ("sequência de URI malformada") quando o <code><em>encodedURI</em></code> contém sequências de caracteres inválidos.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere “<code>#</code>” não é decodificado a partir de sequência de escape.</p>
+<p>Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere “<code>#</code>” não é decodificado a partir de sequência de escape.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Decodificando_uma_URL_Cyrillic">Decodificando uma URL Cyrillic</h3>
+<h3 id="Decodificando_uma_URL_Cyrillic">Decodificando uma URL Cyrillic</h3>
 
 <pre class="brush: js">decodeURI('https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
@@ -69,17 +69,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

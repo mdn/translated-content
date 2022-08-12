@@ -50,5 +50,5 @@ xhr.send();
 
 Voir aussi
 
-- Liste des [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
-- [HTTP](/en-US/docs/Web/HTTP)
+- Liste des [HTTP response codes](/fr/docs/Web/HTTP/Response_codes)
+- [HTTP](/fr/docs/Web/HTTP)

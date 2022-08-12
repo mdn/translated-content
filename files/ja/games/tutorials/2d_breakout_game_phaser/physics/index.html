@@ -16,14 +16,14 @@ original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 
 <h2 id="物理演算の追加">物理演算の追加</h2>
 
-<p>Phaser は Arcade Physics、P2、そして Ninja Physics  と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。</p>
+<p>Phaser は Arcade Physics、P2、そして Ninja Physics  と、3 つの異なる物理演算エンジンを備えています。また商用プラグインとして Box2D も物理演算エンジンとして利用できます。チュートリアルで作成しているような単純なゲームでは、複雑な幾何計算を必要としません。そのような場合には Arcade Physics を利用すると良いでしょう。</p>
 
 <p>まず Arcade Physics engine を初期化します。初期化は <code>create </code>関数の先頭で、 <code>physics.startSystem()</code> メソッドを呼ぶことで行います：</p>
 
 <pre class="brush: js">game.physics.startSystem(Phaser.Physics.ARCADE);
 </pre>
 
-<p>標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、<code>create()</code>  の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：</p>
+<p>標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、<code>create()</code>  の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：</p>
 
 <pre class="brush: js">game.physics.enable(ball, Phaser.Physics.ARCADE);
 </pre>

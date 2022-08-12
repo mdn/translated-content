@@ -97,5 +97,5 @@ div {
 ## 関連情報
 
 - {{cssxref("border-block-start")}}
-- 対応付けられる物理的プロパティ: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}
+- 対応付けられる物理的プロパティ: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

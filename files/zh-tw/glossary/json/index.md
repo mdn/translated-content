@@ -18,8 +18,8 @@ JSON 和 XML 很像，能夠儲存傳統 CSV 格式不能儲存的多層級資�
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "JSON", "JSON")}} 條目
+- 維基百科上的 [JSON](https://zh.wikipedia.org/wiki/JSON) 條目
 
 ### 技術資料
 
-- MDN 上的 {{Link("/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON")}} 條目
+- MDN 上的 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 條目

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isExtensible
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>Object.isExtensible()</code></strong> determina si un objeto es extendible (si puede tener propiedades nuevas agregadas a éste).</p>
+<p>El método <strong><code>Object.isExtensible()</code></strong> determina si un objeto es extendible (si puede tener propiedades nuevas agregadas a éste).</p>
 
 <h2 id="Síntaxis">Síntaxis</h2>
 
@@ -27,7 +27,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isExtensible
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} la propiedad __proto__) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.</p>
+<p>Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} la propiedad __proto__) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -50,7 +50,7 @@ Object.isExtensible(frozen); // === false
 
 <h2 id="Notas">Notas</h2>
 
-<p>En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces regresará {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto no-extendible ordinario, simplemente regresa <code>false</code>.</p>
+<p>En ES5, si el argumento pasado a éste método no es un objeto (primitivo), entonces regresará {{jsxref("TypeError")}}. En ES6, un no-objeto pasado como argumento será tratado como si fuera un objeto no-extendible ordinario, simplemente regresa <code>false</code>.</p>
 
 <pre class="brush: js">Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
@@ -76,7 +76,7 @@ Object.isExtensible(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

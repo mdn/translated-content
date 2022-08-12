@@ -108,9 +108,9 @@ Emscripten 工具能够将一段 C/C++代码，编译出：
 
 简而言之，工作流程如下所示：
 
-1.  Emscripten 首先把 C/C++提供给 clang+LLVM——一个成熟的开源 C/C++编译器工具链，比如，在 OSX 上是 XCode 的一部分。
-2.  Emscripten 将 clang+LLVM 编译的结果转换为一个.wasm 二进制文件。
-3.  就自身而言，WebAssembly 当前不能直接的存取 DOM；它只能调用 JavaScript，并且只能传入整形和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用到 JavaScript，然后由 JavaScript 调用 Web API。因此，Emscripten 创建了 HTML 和 JavaScript 胶水代码以便完成这些功能。
+1. Emscripten 首先把 C/C++提供给 clang+LLVM——一个成熟的开源 C/C++编译器工具链，比如，在 OSX 上是 XCode 的一部分。
+2. Emscripten 将 clang+LLVM 编译的结果转换为一个.wasm 二进制文件。
+3. 就自身而言，WebAssembly 当前不能直接的存取 DOM；它只能调用 JavaScript，并且只能传入整形和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用到 JavaScript，然后由 JavaScript 调用 Web API。因此，Emscripten 创建了 HTML 和 JavaScript 胶水代码以便完成这些功能。
 
 > **备注：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
 

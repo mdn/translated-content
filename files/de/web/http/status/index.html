@@ -82,14 +82,14 @@ translation_of: Web/HTTP/Status
  <dd>Dies wird für Cache-Zwecke verwendet. Es teilt dem Client mit, dass die Antwort nicht geändert wurde. Der Client kann also weiterhin dieselbe zwischengespeicherte Version der Antwort verwenden.</dd>
  <dt>{{HTTPStatus(305, "305 Use Proxy")}}</dt>
  <dd>Das bedeutet, dass ein Proxy auf die angeforderte Antwort zugreifen muss. Dieser Response-Code wird aus Sicherheitsgründen weitgehend nicht unterstützt.</dd>
- <dt>{{HTTPStatus(306, "306 unused")}} {{deprecated_inline}}</dt>
+ <dt>{{HTTPStatus(306, "306 unused")}} {{deprecated_inline}}</dt>
  <dd>Dieser Antwortcode wird nicht mehr verwendet, er ist derzeit nur reserviert. Er wurde in einer früheren Version der HTTP 1.1-Spezifikation verwendet.</dd>
  <dt>{{HTTPStatus(307, "307 Temporary Redirect")}}</dt>
  <dd>
  <p>Der Server schickte diese Antwort an den Client, um die angeforderte Ressource an eine andere URI mit derselben Methode zu senden, die die vorherige Anforderung verwendete. Dies hat die gleiche Semantik wie der <code>302 Found</code> HTTP Response Code, mit der Ausnahme, dass der Benutzeragent die verwendete HTTP-Methode <em>nicht ändern</em> darf: Wenn in der ersten Anforderung ein <code>POST</code> verwendet wurde, muss in der zweiten Anforderung ein <code>POST</code> verwendet werden.</p>
  </dd>
  <dt>{{HTTPStatus(308, "308 Permanent Redirect")}}</dt>
- <dd>Dies bedeutet, dass sich die Ressource nun <em>dauerhaft</em> an einem anderen, vom <code>Location:</code> angegebenen URI befindet: HTTP-Antwort-Header angegeben wird. Dies hat die gleiche Semantik wie der <code>301 Moved Permanently</code> HTTP Response Code, mit der Ausnahme, dass der Benutzeragent die verwendete HTTP-Methode <em>nicht ändern</em> darf: Wenn in der ersten Anfrage ein <code>POST</code> verwendet wurde, muss in der zweiten Anfrage ein <code>POST</code> verwendet werden.</dd>
+ <dd>Dies bedeutet, dass sich die Ressource nun <em>dauerhaft</em> an einem anderen, vom <code>Location:</code> angegebenen URI befindet: HTTP-Antwort-Header angegeben wird. Dies hat die gleiche Semantik wie der <code>301 Moved Permanently</code> HTTP Response Code, mit der Ausnahme, dass der Benutzeragent die verwendete HTTP-Methode <em>nicht ändern</em> darf: Wenn in der ersten Anfrage ein <code>POST</code> verwendet wurde, muss in der zweiten Anfrage ein <code>POST</code> verwendet werden.</dd>
 </dl>
 
 <h2 id="Antworten_auf_Client-Fehler">Antworten auf Client-Fehler</h2>
@@ -124,7 +124,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(412, "412 Precondition Failed")}}</dt>
  <dd>Der Client hat in seinen Headern Vorbedingungen angegeben, die der Server nicht erfüllt.</dd>
  <dt>{{HTTPStatus(413, "413 Payload Too Large")}}</dt>
- <dd>Anforderungsentität ist größer als die vom Server definierten Grenzen; der Server könnte die Verbindung schließen oder ein <code>Retry-After</code> Header-Feld zurückgeben.</dd>
+ <dd>Anforderungsentität ist größer als die vom Server definierten Grenzen; der Server könnte die Verbindung schließen oder ein <code>Retry-After</code> Header-Feld zurückgeben.</dd>
  <dt>{{HTTPStatus(414, "414 URI Too Long")}}</dt>
  <dd>Der vom Client angeforderte URI ist länger, als der Server zu interpretieren bereit ist.</dd>
  <dt>{{HTTPStatus(415, "415 Unsupported Media Type")}}</dt>
@@ -132,7 +132,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(416, "416 Requested Range Not Satisfiable")}}</dt>
  <dd>Der durch das Header-Feld <code>Range</code> in der Anforderung angegebene Bereich kann nicht erfüllt werden; es ist möglich, dass der Bereich außerhalb der Größe der Daten des Ziel-URIs liegt.</dd>
  <dt>{{HTTPStatus(417, "417 Expectation Failed")}}</dt>
- <dd>Dieser Antwort-Code bedeutet, dass die im Header-Feld <code>Expect</code> request angegebene Erwartung vom Server nicht erfüllt werden kann.</dd>
+ <dd>Dieser Antwort-Code bedeutet, dass die im Header-Feld <code>Expect</code> request angegebene Erwartung vom Server nicht erfüllt werden kann.</dd>
  <dt>{{HTTPStatus(421, "421 Misdirected Request")}}</dt>
  <dd>Die Anfrage war an einen Server gerichtet, der nicht in der Lage ist, eine Antwort zu produzieren. Diese kann von einem Server gesendet werden, der nicht so konfiguriert ist, dass er Antworten für die Kombination aus Schema und Autorität erzeugt, die im Anforderungs-URI enthalten sind.</dd>
  <dt>{{HTTPStatus(426, "426 Upgrade Required")}}</dt>

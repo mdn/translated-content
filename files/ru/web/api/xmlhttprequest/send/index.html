@@ -14,9 +14,9 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p>Метод <code><strong>XMLHttpRequest.send()</strong></code> отправляет запрос. Если запрос асинхронный (каким он является по умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод <code>send()</code> принимает необязательные аргументы в тело запросов. Если метод запроса <code>GET</code> или <code>HEAD</code>, то аргументы игнорируются и тело запроса устанавливается в null.</p>
+<p>Метод <code><strong>XMLHttpRequest.send()</strong></code> отправляет запрос. Если запрос асинхронный (каким он является по умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод <code>send()</code> принимает необязательные аргументы в тело запросов. Если метод запроса <code>GET</code> или <code>HEAD</code>, то аргументы игнорируются и тело запроса устанавливается в null.</p>
 
-<p>Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение <code>Accept</code> по умолчанию <code>*/*</code>.</p>
+<p>Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение <code>Accept</code> по умолчанию <code>*/*</code>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -30,18 +30,18 @@ translation_of: Web/API/XMLHttpRequest/send
  <p><em>body</em> {{optional_inline}}</p>
  </dt>
  <dd>
- <p>Данные из параметра body оправляются в запросе через XHR. Это могут быть:</p>
+ <p>Данные из параметра body оправляются в запросе через XHR. Это могут быть:</p>
 
  <ul>
   <li>{{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.</li>
-  <li><code>BodyInit</code>, которые, согласно спецификации <a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch </a>могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.</li>
+  <li><code>BodyInit</code>, которые, согласно спецификации <a href="https://fetch.spec.whatwg.org/#bodyinit">Fetch </a>могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.</li>
  </ul>
  </dd>
 </dl>
 
-<p>Лучший способ передать двоичные данные (например при загрузке файлов) - это использование <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> или <a href="/en-US/docs/Web/API/Blob">Blobs</a> в сочетании с методом<code>send()</code>.</p>
+<p>Лучший способ передать двоичные данные (например при загрузке файлов) - это использование <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> или <a href="/en-US/docs/Web/API/Blob">Blobs</a> в сочетании с методом<code>send()</code>.</p>
 
-<p>Если никакого значения не определено в качестве <em>body</em>, то будет использовано значение по умолчанию: <code>null</code>.</p>
+<p>Если никакого значения не определено в качестве <em>body</em>, то будет использовано значение по умолчанию: <code>null</code>.</p>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
@@ -61,11 +61,11 @@ translation_of: Web/API/XMLHttpRequest/send
  <tbody>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td><code>send()</code> уже был вызван для запроса, и/или запрос завершён.</td>
+   <td><code>send()</code> уже был вызван для запроса, и/или запрос завершён.</td>
   </tr>
   <tr>
    <td><code>NetworkError</code></td>
-   <td>Тип запрошенного ресурса - Blob, но метод запроса не <code>GET</code>.</td>
+   <td>Тип запрошенного ресурса - Blob, но метод запроса не <code>GET</code>.</td>
   </tr>
  </tbody>
 </table>

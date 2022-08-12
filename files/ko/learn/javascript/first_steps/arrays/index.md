@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 만약 배열이 없다면 모든 원소를 별도의 변수에 저장해야 할 것이고, 각 원소에 대해 별도로 출력하고 더하는 코드를 불러야 할 것입니다. 이런 방식은 작성하기에 훨씬 오래 걸리고, 덜 효율적이며, 오류가 나기 쉽습니다. 만약 우리가 청구서에 더할 10개의 물품을 가지고 있다면 이것만으로도 이미 짜증나는데, 100개의 물품, 혹은 1000개의 물품이라면 어떨까요? 우리는 이 문서에서 나중에 이 예시로 돌아올 것입니다.
 
-지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 [개발자 콘솔](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)을 사용하면 됩니다.)
+지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 [개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 사용하면 됩니다.)
 
 <div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
 &#x3C;html>
@@ -113,7 +113,7 @@ var inputForm = document.createElement('input');
       if(document.querySelectorAll('div').length > 1) {
 
 inputForm.focus();
-      }
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -166,9 +166,9 @@ inputForm.focus();
 
 3.  다음으로 넘어가기 전 여러분 마음대로 배열을 만들어 보세요.
 
-### 배열 항목의 접근과 수정 
+### 배열 항목의 접근과 수정 
 
-그런 다음 [문자열의 문자에 접근했던 것](https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
+그런 다음 [문자열의 문자에 접근했던 것](https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.
 
 1.  콘솔에 다음을 입력하세요:
 
@@ -225,7 +225,7 @@ for (var i = 0; i < sequence.length; i++) {
 
 ### 문자열을 배열로, 배열을 문자열로 변환하기
 
-프로그램을 만들다보면 종종 긴 문자열로 이루어진 원시 데이터를 제공받게 될 것이고, 원시 데이터를 정제하여 더 유용한 데이터를 추출해 테이블 형태로 표시하는 등 작업을 수행해야 합니다. 이러한 작업을 위해 {{jsxref("String.prototype.split()","split()")}} 메서드를 사용할 수 있습니다. {{jsxref("String.prototype.split()","split()")}} 메서드는 사용자가 원하는 매개변수로 문자열을 분리하여 배열로 표현해줍니다.
+프로그램을 만들다보면 종종 긴 문자열로 이루어진 원시 데이터를 제공받게 될 것이고, 원시 데이터를 정제하여 더 유용한 데이터를 추출해 테이블 형태로 표시하는 등 작업을 수행해야 합니다. 이러한 작업을 위해 {{jsxref("String.prototype.split()","split()")}} 메서드를 사용할 수 있습니다. {{jsxref("String.prototype.split()","split()")}} 메서드는 사용자가 원하는 매개변수로 문자열을 분리하여 배열로 표현해줍니다.
 
 > **참고:** 사실 엄밀히 따지면 문자열 메서드지만, 배열과 함께 사용하기 때문에 여기에 넣었습니다.
 
@@ -258,7 +258,7 @@ for (var i = 0; i < sequence.length; i++) {
     myNewString;
     ```
 
-5.  배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} 메서드를 사용하는 것입니다. `toString()` 은 `join()` 과 달리 매개변수가 필요없어서 더 간단하지만, 더 많은 제한이 있습니다. `join()` 을 사용하면 다른 구분자를 지정할 수 있지만, `toString()` 은 항상 콤마를 사용합니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행해 보세요.)
+5.  배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} 메서드를 사용하는 것입니다. `toString()` 은 `join()` 과 달리 매개변수가 필요없어서 더 간단하지만, 더 많은 제한이 있습니다. `join()` 을 사용하면 다른 구분자를 지정할 수 있지만, `toString()` 은 항상 콤마를 사용합니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행해 보세요.)
 
     ```js
     var dogNames = ['Rocket','Flash','Bella','Slugger'];
@@ -267,7 +267,7 @@ for (var i = 0; i < sequence.length; i++) {
 
 ### 배열에 원소를 추가하고 제거하기
 
-이번엔 배열에 원소를 추가하고 제거하는 방법을 알아볼 차례입니다. 위에서 만든 `myArray` 를 다시 사용하겠습니다. 섹션을 순서대로 진행하지 않았다면 아래와 같은 배열을 만들어주세요:
+이번엔 배열에 원소를 추가하고 제거하는 방법을 알아볼 차례입니다. 위에서 만든 `myArray` 를 다시 사용하겠습니다. 섹션을 순서대로 진행하지 않았다면 아래와 같은 배열을 만들어주세요:
 
 ```js
 var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
@@ -275,7 +275,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 먼저, 배열의 맨 끝에 원소를 추가하거나 제거하기 위해 각각 {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} 를 사용할 수 있습니다.
 
-1.  먼저 `push()` 를 사용합니다. — 배열의 끝에 추가할 원소를 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
+1.  먼저 `push()` 를 사용합니다. — 배열의 끝에 추가할 원소를 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
 
     ```js
     myArray.push('Cardiff');
@@ -292,7 +292,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     newLength;
     ```
 
-3.  배열의 마지막 원소를 제거하는 방법은 `pop()`으로 매우 간단합니다. 아래와 같이 따라해 보세요:
+3.  배열의 마지막 원소를 제거하는 방법은 `pop()`으로 매우 간단합니다. 아래와 같이 따라해 보세요:
 
     ```js
     myArray.pop();
@@ -306,16 +306,16 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     removedItem;
     ```
 
-{{jsxref("Array.prototype.unshift()","unshift()")}} 와{{jsxref("Array.prototype.shift()","shift()")}}는 `push()` 와 `pop()`과 완전히 동일하게 동작합니다. 다만, 배열의 맨 끝이 아닌 제일 처음 부분의 원소를 추가하거나 제거합니다.
+{{jsxref("Array.prototype.unshift()","unshift()")}} 와{{jsxref("Array.prototype.shift()","shift()")}}는 `push()` 와 `pop()`과 완전히 동일하게 동작합니다. 다만, 배열의 맨 끝이 아닌 제일 처음 부분의 원소를 추가하거나 제거합니다.
 
-1.  먼저 `unshift()` 를 사용해봅시다:
+1.  먼저 `unshift()` 를 사용해봅시다:
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  이제 `shift()`를 사용해봅시다!
+2.  이제 `shift()`를 사용해봅시다!
 
     ```js
     var removedItem = myArray.shift();
@@ -429,8 +429,8 @@ insertAtCaret('\t');
 }
 
 if (e.keyCode === 27) {
-    textarea.blur();
-  }
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
@@ -651,7 +651,7 @@ updateCode();
 
 ## 당신의 기량을 시험해 보세요!
 
-당신은 이 문서의 끝에 도달했지만, 가장 중요한 정보들을 기억할 수 있으신가요? 당신은 나아가기 전에 이 정보들을 보유하고 있다는 것을 확인하는 추가적인 테스트들을 찾을 수 있습니다 — 다음을 보세요: [Test your skills: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays)
+당신은 이 문서의 끝에 도달했지만, 가장 중요한 정보들을 기억할 수 있으신가요? 당신은 나아가기 전에 이 정보들을 보유하고 있다는 것을 확인하는 추가적인 테스트들을 찾을 수 있습니다 — 다음을 보세요: [Test your skills: Arrays](/ko/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays)
 
 ## 결론
 
@@ -661,19 +661,19 @@ updateCode();
 
 ## 참고
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드
+- [Indexed collections](/ko/docs/Web/JavaScript/Guide/Indexed_collections) — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드
 - {{jsxref("Array")}} — `Array` 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 ## 이번 모듈에서 배울 것들
 
-- [JavaScript란 무엇인가?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript를 시작해보자](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [원하는 정보를 저장하기 — 변](/en-US/docs/Learn/JavaScript/First_steps/Variables)수
-- [JavaScript의 수학 기초 — 숫자와 연산자](/en-US/docs/Learn/JavaScript/First_steps/Math)
-- [문자 다루기 — JavaScript에서의 문자](/en-US/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자 메소드](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/en-US/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 짧은 글 랜덤 생성기](/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript를 시작해보자](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [원하는 정보를 저장하기 — 변](/ko/docs/Learn/JavaScript/First_steps/Variables)수
+- [JavaScript의 수학 기초 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [문자 다루기 — JavaScript에서의 문자](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [유용한 문자 메소드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [평가: 짧은 글 랜덤 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

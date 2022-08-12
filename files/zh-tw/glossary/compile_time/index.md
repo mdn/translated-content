@@ -12,4 +12,4 @@ translation_of: Glossary/Compile_time
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "編譯時間")}}
+- 維基百科上的 [編譯時間](https://zh.wikipedia.org/wiki/編譯時間)

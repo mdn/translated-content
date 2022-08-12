@@ -67,7 +67,7 @@ Lorsqu'une seule propriété `filter` possède deux fonctions (ou plus), le rés
 
 ### `url()`
 
-La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/en-US/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
+La fonction `url()` prend comme argument l'emplacement d'un [élément SVG &lt;filter&gt; à appliquer](/fr/docs/Web/SVG/Element/filter). L'URL peut faire référence à une ancre d'un élément spécifique. Cet élément peut être embarqué dans un fichier XML externe.
 
 ```css
 filter: url(resources.svg#c1)

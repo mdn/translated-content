@@ -1493,15 +1493,6 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2019-09-10T08:51:50.833Z",
-    "contributors": [
-      "SphinxKnight",
-      "Streamities",
-      "wbamberg",
-      "rs-github"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:49:50.216Z",
     "contributors": [
@@ -1518,16 +1509,7 @@
       "Sebastianz"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2019-03-23T23:20:05.396Z",
-    "contributors": [
-      "wbamberg",
-      "matze",
-      "sbarthel",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-11-28T23:34:47.349Z",
     "contributors": [
       "chrisdavidmills",
@@ -1538,7 +1520,7 @@
       "Sebastianz"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:09:44.157Z",
     "contributors": [
       "chrisdavidmills",
@@ -1548,42 +1530,21 @@
       "sbarthel"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2019-03-23T23:20:05.396Z",
+    "contributors": [
+      "wbamberg",
+      "matze",
+      "sbarthel",
+      "Sheppy"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-03-23T23:17:41.242Z",
     "contributors": [
       "wbamberg",
       "sbarthel",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-16T23:07:11.407Z",
-    "contributors": [
-      "wbamberg",
-      "lmoench",
-      "Tutz"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag": {
-    "modified": "2019-07-04T23:25:18.289Z",
-    "contributors": [
-      "PercyGitarrist",
-      "wbamberg",
-      "Sixl-Daniel",
-      "vssn",
-      "hictox",
-      "ichlebelangeweb.de",
-      "drillmeister",
-      "clone"
-    ]
-  },
-  "MDN/Structures": {
-    "modified": "2020-09-30T09:04:48.225Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "SphinxKnight",
-      "hartmann2012"
     ]
   },
   "MDN/Tools": {
@@ -1599,6 +1560,45 @@
     "contributors": [
       "wbamberg",
       "rolandm"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2019-09-10T08:51:50.833Z",
+    "contributors": [
+      "SphinxKnight",
+      "Streamities",
+      "wbamberg",
+      "rs-github"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Tag": {
+    "modified": "2019-07-04T23:25:18.289Z",
+    "contributors": [
+      "PercyGitarrist",
+      "wbamberg",
+      "Sixl-Daniel",
+      "vssn",
+      "hictox",
+      "ichlebelangeweb.de",
+      "drillmeister",
+      "clone"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T09:04:48.225Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "SphinxKnight",
+      "hartmann2012"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-16T23:07:11.407Z",
+    "contributors": [
+      "wbamberg",
+      "lmoench",
+      "Tutz"
     ]
   },
   "MDN/Yari": {
@@ -2844,12 +2844,6 @@
     "contributors": [
       "matschibatschi",
       "AFBarstow"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:09:19.030Z",
-    "contributors": [
-      "Anonymous"
     ]
   },
   "Web/API/HTMLCanvasElement": {
@@ -8737,21 +8731,6 @@
       "eminor"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-10-03T02:52:53.149Z",
-    "contributors": [
-      "c0dewalker",
-      "wbamberg",
-      "schlagi123",
-      "sigoa",
-      "DoctypeRosenthal",
-      "Venhaus",
-      "crasher666",
-      "IngoB",
-      "fscholz",
-      "eminor"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:38:40.241Z",
     "contributors": [
@@ -8925,15 +8904,6 @@
       "lesch",
       "fl1p",
       "spiegelp"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:38:27.478Z",
-    "contributors": [
-      "schlagi123",
-      "hapeit",
-      "fscholz",
-      "Aurel"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -13233,6 +13203,12 @@
       "nothine"
     ]
   },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:09:19.030Z",
+    "contributors": [
+      "Anonymous"
+    ]
+  },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {
     "modified": "2019-03-23T23:01:42.969Z",
     "contributors": [
@@ -13340,6 +13316,30 @@
       "cob",
       "SebinNyshkim",
       "PercyGitarrist"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-10-03T02:52:53.149Z",
+    "contributors": [
+      "c0dewalker",
+      "wbamberg",
+      "schlagi123",
+      "sigoa",
+      "DoctypeRosenthal",
+      "Venhaus",
+      "crasher666",
+      "IngoB",
+      "fscholz",
+      "eminor"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:38:27.478Z",
+    "contributors": [
+      "schlagi123",
+      "hapeit",
+      "fscholz",
+      "Aurel"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

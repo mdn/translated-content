@@ -12,7 +12,7 @@ translation_of: Glossary/BiDi
 
 ### 常规知识
 
-- 维基百科的{{Interwiki("wikipedia", "Bi-directional text")}}
+- 维基百科的[Bi-directional text](https://zh.wikipedia.org/wiki/Bi-directional_text)
 
 ### 技术参考
 

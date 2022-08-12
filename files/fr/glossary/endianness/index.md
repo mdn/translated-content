@@ -25,4 +25,4 @@ Exemples avec le nombre `0x12345678` (i.e. 305 419 896 en décimal) :
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [Tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés)
-- {{Interwiki("wikipedia", "Endianness")}} sur Wikipédia
+- [Boutisme](https://fr.wikipedia.org/wiki/Boutisme) sur Wikipédia

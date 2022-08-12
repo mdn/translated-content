@@ -44,7 +44,7 @@ _Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{do
 - {{domxref("HTMLSelectElement.validity")}} {{ReadOnlyInline}}
   - : Un {{domxref("ValidityState")}} reflétant l'état de validité dans lequel se trouve ce contrôle.
 - {{domxref("HTMLSelectElement.value")}}
-  - : Une chapine de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
+  - : Une chaîne de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
 - {{domxref("HTMLSelectElement.willValidate")}} {{ReadOnlyInline}}
   - : Un {{jsxref("Boolean")}} qui indique si le bouton est un candidat à la validation des contraintes. Il vaut `false` si des conditions l'empêchent de bénéficier de la validation par contrainte.
 

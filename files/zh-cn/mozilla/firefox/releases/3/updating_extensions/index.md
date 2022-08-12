@@ -147,8 +147,8 @@ _Add simple changes you had to make while updating your extension to work with F
 - Changes to [nsISupports proxies](/cn/NsISupports_proxies) and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654):
 
-  1.  XML PIs are now added to a XUL document's DOM. This means [`document.firstChild`](/zh-CN/docs/Web/API/Document/firstChild) is no longer guaranteed to be the root element. If you need to get the root document in your script, use [`document.documentElement`](/zh-CN/docs/Web/API/Document/documentElement) instead.
-  2.  `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
+  1. XML PIs are now added to a XUL document's DOM. This means [`document.firstChild`](/zh-CN/docs/Web/API/Document/firstChild) is no longer guaranteed to be the root element. If you need to get the root document in your script, use [`document.documentElement`](/zh-CN/docs/Web/API/Document/documentElement) instead.
+  2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
 - `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/cn/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string

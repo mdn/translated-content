@@ -10,9 +10,9 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Documentation
 
-- [Utilisation des événements envoyés par le serveur](/en-US/docs/Server-sent_events/Using_server-sent_events)
+- [Utilisation des événements envoyés par le serveur](/fr/docs/Server-sent_events/Using_server-sent_events)
   - : Un tutoriel sur l'écriture d'une partie côté serveur et côté client d'une application d'événements envoyée par le serveur.
-- [EventSource référence](/en-US/docs/Server-sent_events/EventSource)
+- [EventSource référence](/fr/docs/Server-sent_events/EventSource)
   - : Une référence à l'API EventSource côté client.
 
 ## Outils
@@ -23,7 +23,7 @@ Habituellement, une page web doit envoyer une requête au serveur pour obtenir d
 
 ## Rubriques connexes
 
-- [AJAX](/en-US/docs/AJAX), [JavaScript](/en-US/docs/JavaScript), [WebSockets](/en-US/docs/WebSockets)
+- [AJAX](/fr/docs/AJAX), [JavaScript](/fr/docs/JavaScript), [WebSockets](/fr/docs/WebSockets)
 
 ## Voir également
 

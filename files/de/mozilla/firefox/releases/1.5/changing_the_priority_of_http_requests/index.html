@@ -22,7 +22,7 @@ original_slug: Firefox_1.5_für_Entwickler/Changing_the_priority_of_HTTP_request
 
 <h4 id="Auf_die_Priorität_zugreifen_ausgehend_vom_nsIChannel">Auf die Priorität zugreifen ausgehend vom nsIChannel</h4>
 
-<p>Um die Priorität einer HTTP Anfrage ändern zu können, müssen Sie Zugriff auf den  <a href="/en/XPCOM_Interface_Reference/nsIChannel" title="en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a> haben, von dem die Anfrage ausgeht. Wenn Sie keinen bestehenden Channel haben, dann kann dieser erstellt werden durch:</p>
+<p>Um die Priorität einer HTTP Anfrage ändern zu können, müssen Sie Zugriff auf den  <a href="/en/XPCOM_Interface_Reference/nsIChannel" title="en/XPCOM_Interface_Reference/nsIChannel">nsIChannel</a> haben, von dem die Anfrage ausgeht. Wenn Sie keinen bestehenden Channel haben, dann kann dieser erstellt werden durch:</p>
 
 <pre class="eval">var ios = Components.classes["@<a class="linkification-ext external" href="http://mozilla.org/network/io-service;1" title="Linkification: http://mozilla.org/network/io-service;1">mozilla.org/network/io-service;1</a>"]
                     .getService(Components.interfaces.nsIIOService);

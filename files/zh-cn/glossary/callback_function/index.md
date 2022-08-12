@@ -31,4 +31,4 @@ processUserInput(greeting);
 
 ## 参见
 
-- 维基百科上的{{interwiki("wikipedia", "回调函数", "回调函数")}}
+- 维基百科上的[回调函数](https://zh.wikipedia.org/wiki/回调函数)

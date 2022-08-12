@@ -17,7 +17,7 @@ function Overloaded(arg1, arg2, ...,argN){
 }
 ```
 
-要呼叫 JavaScript 內的建構子 class ，請用 `new` 操作符給 {{glossary("variable")}} 宣告新的 {{glossary("object reference")}}。
+要呼叫 JavaScript 內的建構子 class ，請用 `new` 操作符給 {{glossary("variable")}} 宣告新的 {{glossary("object reference")}}。
 
 ```js
 function Default() {
@@ -31,7 +31,7 @@ var defaultReference = new Default();
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "構造器", "構造器")}}
+- 維基百科的 [構造器](https://zh.wikipedia.org/wiki/構造器)
 
 ### 技術資訊
 

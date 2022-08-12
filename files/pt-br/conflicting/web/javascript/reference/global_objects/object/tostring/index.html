@@ -66,20 +66,20 @@ console.log(new Person('Joe').toSource()); // ---&gt; new Person("Joe")
 <p>Cada tipo principal do JavaScript tem seu próprio método <code>toSource()</code>. Esses objetos são:</p>
 
 <ul>
- <li>{{jsxref("Array.prototype.toSource()")}}  — objeto {{jsxref("Array")}}.</li>
- <li>{{jsxref("Boolean.prototype.toSource()")}}  — objeto {{jsxref("Boolean")}}.</li>
- <li>{{jsxref("Date.prototype.toSource()")}}  — objeto {{jsxref("Date")}}.</li>
- <li>{{jsxref("Function.prototype.toSource()")}}  — objeto {{jsxref("Function")}}.</li>
- <li>{{jsxref("Number.prototype.toSource()")}}  — objeto {{jsxref("Number")}}.</li>
- <li>{{jsxref("RegExp.prototype.toSource()")}}  — objeto {{jsxref("RegExp")}}.</li>
- <li>{{jsxref("String.prototype.toSource()")}}  — objeto {{jsxref("String")}}.</li>
- <li>{{jsxref("Symbol.prototype.toSource()")}}  — objeto {{jsxref("Symbol")}}.</li>
- <li><code>Math.toSource()</code> — Retorna a <em>string</em> "Math".</li>
+ <li>{{jsxref("Array.prototype.toSource()")}}  — objeto {{jsxref("Array")}}.</li>
+ <li>{{jsxref("Boolean.prototype.toSource()")}}  — objeto {{jsxref("Boolean")}}.</li>
+ <li>{{jsxref("Date.prototype.toSource()")}}  — objeto {{jsxref("Date")}}.</li>
+ <li>{{jsxref("Function.prototype.toSource()")}}  — objeto {{jsxref("Function")}}.</li>
+ <li>{{jsxref("Number.prototype.toSource()")}}  — objeto {{jsxref("Number")}}.</li>
+ <li>{{jsxref("RegExp.prototype.toSource()")}}  — objeto {{jsxref("RegExp")}}.</li>
+ <li>{{jsxref("String.prototype.toSource()")}}  — objeto {{jsxref("String")}}.</li>
+ <li>{{jsxref("Symbol.prototype.toSource()")}}  — objeto {{jsxref("Symbol")}}.</li>
+ <li><code>Math.toSource()</code> — Retorna a <em>string</em> "Math".</li>
 </ul>
 
 <h3 id="Limitações_em_objetos_cíclicos">Limitações em objetos cíclicos</h3>
 
-<p>Em case de objetos que contém referências para eles mesmos, e.g. uma lista ligada cíclica ou uma árvore que pode ser percorrida pelos dois sentidos, <code>toSource()</code> não irá recriar a auto-referência, como no Firefox 24. Por exemplo:</p>
+<p>Em case de objetos que contém referências para eles mesmos, e.g. uma lista ligada cíclica ou uma árvore que pode ser percorrida pelos dois sentidos, <code>toSource()</code> não irá recriar a auto-referência, como no Firefox 24. Por exemplo:</p>
 
 <pre class="brush: js notranslate">var obj1 = {};
 var obj2 = { a: obj1 };

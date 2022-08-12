@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-如果指定了弹出框，当用户点击按钮时，点击事件将不会被发送，而是显示出弹出框。用户能够通过弹出框进行互动，并且点击框外区域时弹出框会自动关闭。请参看文章 [Popup ](/en-US/Add-ons/WebExtensions/Popups)来了解更多关于创建和管理弹出框的细节。
+如果指定了弹出框，当用户点击按钮时，点击事件将不会被发送，而是显示出弹出框。用户能够通过弹出框进行互动，并且点击框外区域时弹出框会自动关闭。请参看文章 [Popup](/en-US/Add-ons/WebExtensions/Popups) 来了解更多关于创建和管理弹出框的细节。
 
 注意一个扩展只能指定一个浏览器动作。
 

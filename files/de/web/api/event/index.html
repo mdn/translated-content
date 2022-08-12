@@ -16,11 +16,11 @@ translation_of: Web/API/Event
 
 <p>Das <code><strong>Event</strong></code> Interface repräsentiert jegliches Ereignis, das im DOM auftritt.</p>
 
-<p>Ein Ereignis kann durch Benutzerinteraktion ausgelöst werden, z.B das Klicken einer Maustaste oder Eingaben der Tastatur, oder durch eine API generiert werden um den Fortschritt eines asynchronen Prozesses zu repräsentieren. Es kann auch durch ein Programm ausgelöst werden, beispielsweise indem die <a href="https://developer.mozilla.org/de/docs/Web/API/HTMLElement/click" title="The HTMLElement.click() method simulates a mouse click on an element."><code>HTMLElement.click()</code></a> Method eines Elements aufgerufen wird, oder indem ein Ereignis definiert wird und es danach mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/dispatchEvent" title="Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a> an ein Ziel versandt wird.</p>
+<p>Ein Ereignis kann durch Benutzerinteraktion ausgelöst werden, z.B das Klicken einer Maustaste oder Eingaben der Tastatur, oder durch eine API generiert werden um den Fortschritt eines asynchronen Prozesses zu repräsentieren. Es kann auch durch ein Programm ausgelöst werden, beispielsweise indem die <a href="https://developer.mozilla.org/de/docs/Web/API/HTMLElement/click" title="The HTMLElement.click() method simulates a mouse click on an element."><code>HTMLElement.click()</code></a> Method eines Elements aufgerufen wird, oder indem ein Ereignis definiert wird und es danach mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/dispatchEvent" title="Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a> an ein Ziel versandt wird.</p>
 
 <p>Es gibt eine Vielzahl verschiedener Typen von Ereignissen, von denen manche erweiterte Schnittstellen basieren auf dem zentralen <code><strong>Event</strong></code> Interface benutzen. <strong><code>Event</code></strong> beinhaltet alle Attribute und Methoden, die allen Ereignissen gemein sind.</p>
 
-<p>Viele DOM-Element können für das Empfangen dieser Events konfiguriert werden und rufen Code auf, um sie zu behandeln. Event-Handler werden normalerweise mit unterschiedlichen <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element">HTML-Elementen</a> (so wie <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) verbunden, durch den Aufruf von <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a>. Dies ersetzt größtenteils die alten HTML <a class="new" rel="nofollow" title="Seite wurde noch nicht erstellt.">Event Handler</a> Attribute. Die neueren Event-Handler können außerdem nötigenfalls mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a> wieder entfernt werden.</p>
+<p>Viele DOM-Element können für das Empfangen dieser Events konfiguriert werden und rufen Code auf, um sie zu behandeln. Event-Handler werden normalerweise mit unterschiedlichen <a href="https://developer.mozilla.org/de/docs/Web/HTML/Element">HTML-Elementen</a> (so wie <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) verbunden, durch den Aufruf von <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a>. Dies ersetzt größtenteils die alten HTML Event Handler Attribute. Die neueren Event-Handler können außerdem nötigenfalls mithilfe von <a href="https://developer.mozilla.org/de/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>removeEventListener()</code></a> wieder entfernt werden.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Ein Element kann mehrere solcher Handler besitzen, sogar für das selbe Ereignis—so können sie verschiedene, unabhängige Code-Module angebracht werden, jeweils für deren unabhängige Zwecke. (Zum Beispiel eine Webseite mit einem Werbemodul und einem Statistikmodel, die beide Videowiedergabe überwachen.)</p>
@@ -108,7 +108,7 @@ translation_of: Web/API/Event
  <dd>A Boolean value indicating whether or not the event can bubble across the boundary between the shadow DOM and the regular DOM.</dd>
  <dt>{{domxref("Event.currentTarget")}} {{readonlyinline}}</dt>
  <dd>A reference to the currently registered target for the event. This is the object to which the event is currently slated to be sent; it's possible this has been changed along the way through <em>retargeting</em>.</dd>
- <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("Event.deepPath")}} {{non-standard_inline}}</dt>
  <dd>An {{jsxref("Array")}} of DOM {{domxref("Node")}}s through which the event has bubbled.</dd>
  <dt>{{domxref("Event.defaultPrevented")}} {{readonlyinline}}</dt>
  <dd>Indicates whether or not {{domxref("event.preventDefault()")}} has been called on the event.</dd>
@@ -150,7 +150,7 @@ translation_of: Web/API/Event
  <dt>{{domxref("Event.stopPropagation()")}}</dt>
  <dd>Stops the propagation of events further along in the DOM.</dd>
  <dt>{{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}</dt>
- <dd>Non-standard. Returns the value of {{domxref("Event.defaultPrevented")}}. Use {{domxref("Event.defaultPrevented")}} instead.</dd>
+ <dd>Non-standard. Returns the value of {{domxref("Event.defaultPrevented")}}. Use {{domxref("Event.defaultPrevented")}} instead.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -172,69 +172,7 @@ translation_of: Web/API/Event
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>cancelBubble</code> defined on Event</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] Previous to Firefox 52, this property was defined on the {{domxref("UIEvent")}} interface. See {{bug(1298970)}} for more details.</p>
 

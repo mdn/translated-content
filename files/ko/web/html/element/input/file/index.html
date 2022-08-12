@@ -364,7 +364,7 @@ form label:active, form button:active {
 
 <p>이제 JavaScript 차례입니다.</p>
 
-<p>우선 양식의 파일 입력 칸과, <code>.preview</code> 클래스를 가진 {{htmlelement("div")}} 요소에 대한 참조를 가져옵니다. 그 후, {{htmlelement("input")}} 요소를 숨겨버립니다. 파일 입력 칸은 보통 못생겼고, 스타일을 적용하기도 어려우며 브라우저마다 디자인이 다르기 때문입니다. <code>&lt;input&gt;</code>은 연결된 {{htmlelement("label")}}을 클릭해도 활성화할 수 있으므로, 시각적으로 <code>&lt;input&gt;</code>을 숨긴 후 레이블에 버튼처럼 스타일을 적용해서, 파일을 업로드하고 싶은 경우 레이블을 누르라는 것을 알려주는 편이 낫습니다.</p>
+<p>우선 양식의 파일 입력 칸과, <code>.preview</code> 클래스를 가진 {{htmlelement("div")}} 요소에 대한 참조를 가져옵니다. 그 후, {{htmlelement("input")}} 요소를 숨겨버립니다. 파일 입력 칸은 보통 못생겼고, 스타일을 적용하기도 어려우며 브라우저마다 디자인이 다르기 때문입니다. <code>&lt;input&gt;</code>은 연결된 {{htmlelement("label")}}을 클릭해도 활성화할 수 있으므로, 시각적으로 <code>&lt;input&gt;</code>을 숨긴 후 레이블에 버튼처럼 스타일을 적용해서, 파일을 업로드하고 싶은 경우 레이블을 누르라는 것을 알려주는 편이 낫습니다.</p>
 
 <pre class="brush: js notranslate">var input = document.querySelector('input');
 var preview = document.querySelector('.preview');
@@ -410,7 +410,7 @@ input.style.opacity = 0;</pre>
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for(const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
       if(validFileType(file)) {
@@ -435,15 +435,15 @@ input.style.opacity = 0;</pre>
 <pre class="brush: js notranslate">// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
-  "image/bmp",
-  "image/gif",
-  "image/jpeg",
-  "image/pjpeg",
-  "image/png",
-  "image/svg+xml",
-  "image/tiff",
-  "image/webp",
-  "image/x-icon"
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon"
 ];
 
 function validFileType(file) {
@@ -466,34 +466,9 @@ function validFileType(file) {
 
 <p>{{EmbedLiveSample('예제', '100%', 200)}}</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}}</td>
-   <td>{{Spec2('HTML Media Capture')}}</td>
-   <td>initial <code>capture</code> attribute</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

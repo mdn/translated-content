@@ -17,7 +17,7 @@ translation_of: Web/API/IDBIndex
 
 <h2 id="Methods">Methods</h2>
 
-<p>Inherits from: <a href="/en/DOM/EventTarget" title="en/DOM/EventTarget">EventTarget</a></p>
+<p>Inherits from: <a href="/en/DOM/EventTarget">EventTarget</a></p>
 
 <dl>
  <dt>{{domxref("IDBIndex.count")}}</dt>
@@ -29,9 +29,9 @@ translation_of: Web/API/IDBIndex
  <dt>{{domxref("IDBIndex.getKey")}}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if <code>key</code> is a key range.</dd>
  <dt>{{domxref("IDBIndex.getAllKeys")}} {{ Non-Standard_inline() }}</dt>
- <dd>Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the <code><a href="/en/IndexedDB/IDBRequest#attr_result" title="en/IndexedDB/IDBRequest#attr result">result</a></code> of the request object.</dd>
+ <dd>Instantly retrieves the keys of all objects inside an {{domxref("IDBObjectStore")}}, setting them as the <code><a href="/en/IndexedDB/IDBRequest#attr_result">result</a></code> of the request object.</dd>
  <dt>{{domxref("IDBIndex.openCursor")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en/IndexedDB#gloss_cursor" title="en/IndexedDB#gloss cursor">cursor</a> over the specified key range.</dd>
+ <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en/IndexedDB#gloss_cursor">cursor</a> over the specified key range.</dd>
  <dt>{{domxref("IDBIndex.openKeyCursor")}} {{ Non-Standard_inline() }}</dt>
  <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.</dd>
 </dl>
@@ -105,5 +105,5 @@ request.onsuccess = function(event) {
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Setting transaction modes: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>The reference application for the examples in this reference: <a class="external" href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.) Not every snippet appears in this example, but every example uses the same data structure and syntax, and they will make sense in the context of this example.</li>
+ <li>The reference application for the examples in this reference: <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://chrisdavidmills.github.io/to-do-notifications/">view example live</a>.) Not every snippet appears in this example, but every example uses the same data structure and syntax, and they will make sense in the context of this example.</li>
 </ul>

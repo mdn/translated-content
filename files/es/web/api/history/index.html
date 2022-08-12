@@ -13,7 +13,7 @@ translation_of: Web/API/History
 ---
 <div>{{ APIRef("History API") }}</div>
 
-<p>The <strong><code>History</code></strong> interface allows manipulation of the browser <em>session history</em>, that is the pages visited in the tab or frame that the current page is loaded in.</p>
+<p>The <strong><code>History</code></strong> interface allows manipulation of the browser <em>session history</em>, that is the pages visited in the tab or frame that the current page is loaded in.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -42,11 +42,11 @@ translation_of: Web/API/History
  <div class="note">Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.</div>
  </dd>
  <dt>{{domxref("History.go","go()")}}</dt>
- <dd>Asynchronously loads a page from the session history, identified by its relative location to the current page, for example <code>-1</code> for the previous page or <code>1</code> for the next page. If you specify an out-of-bounds value (for instance, specifying <code>-1</code> when there are no previously-visited pages in the session history), this method silently has no effect. Calling <code>go()</code> without parameters or a value of <code>0</code> reloads the current page. Internet Explorer lets you specify a string, instead of an integer, to go to a specific URL in the history list.</dd>
+ <dd>Asynchronously loads a page from the session history, identified by its relative location to the current page, for example <code>-1</code> for the previous page or <code>1</code> for the next page. If you specify an out-of-bounds value (for instance, specifying <code>-1</code> when there are no previously-visited pages in the session history), this method silently has no effect. Calling <code>go()</code> without parameters or a value of <code>0</code> reloads the current page. Internet Explorer lets you specify a string, instead of an integer, to go to a specific URL in the history list.</dd>
  <dt>{{domxref("History.pushState","pushState()")}}</dt>
- <dd>Pushes the given data onto the session history stack with the specified title (and, if provided, URL). The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized.  Note that all browsers but Safari currently ignore the <em>title</em> parameter. For more information, see <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a>.</dd>
+ <dd>Pushes the given data onto the session history stack with the specified title (and, if provided, URL). The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized.  Note that all browsers but Safari currently ignore the <em>title</em> parameter. For more information, see <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a>.</dd>
  <dt>{{domxref("History.replaceState","replaceState()")}}</dt>
- <dd>Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized.  Note that all browsers but Safari currently ignore the <em>title</em> parameter. For more information, see <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a>.</dd>
+ <dd>Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized.  Note that all browsers but Safari currently ignore the <em>title</em> parameter. For more information, see <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a>.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

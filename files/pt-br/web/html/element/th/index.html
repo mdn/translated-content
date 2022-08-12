@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/th
 ---
 <div>{{HTMLRef}}</div>
 
-<p>O <strong>elemento</strong> <strong>HTML <code>&lt;th&gt;</code> </strong> define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.</p>
+<p>O <strong>elemento</strong> <strong>HTML <code>&lt;th&gt;</code> </strong> define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}</div>
 
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/th
   </tr>
   <tr>
    <th scope="row">Conteúdo permitido</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Conteúdo de fluxo</a>, mas sem descendentes de cabeçalho, rodapé, conteúdo de seção ou conteúdo de cabeçalho.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Conteúdo de fluxo</a>, mas sem descendentes de cabeçalho, rodapé, conteúdo de seção ou conteúdo de cabeçalho.</td>
   </tr>
   <tr>
    <th scope="row">Omissão de tag</th>
@@ -43,20 +43,20 @@ translation_of: Web/HTML/Element/th
 
 <h2 id="Atributos">Atributos</h2>
 
-<p>Esse elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+<p>Esse elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("abbr")}}</dt>
  <dd>Este atributo contém uma breve descrição do conteúdo da célula. Alguns usuários-agentes, como leitores, pode apresentar essa descrição antes do próprio conteúdo.</dd>
  <dt>{{htmlattrdef("colspan")}}</dt>
- <dd>Este atributo contém um valor inteiro não negativo que indica quantas colunas a célula ocupará. Valor padrão <code>1</code>. Valores acima de 1000 são considerados incorretos e serão modificados para o valor padrão <code>1</code>.</dd>
+ <dd>Este atributo contém um valor inteiro não negativo que indica quantas colunas a célula ocupará. Valor padrão <code>1</code>. Valores acima de 1000 são considerados incorretos e serão modificados para o valor padrão <code>1</code>.</dd>
  <dt>{{htmlattrdef("headers")}}</dt>
- <dd>Este atributo contém uma lista de palavras separadas por espaço, cada uma correspondendo ao atributo <strong>id</strong> dos elementos {{HTMLElement("th")}} que se aplicam a este elemento.</dd>
+ <dd>Este atributo contém uma lista de palavras separadas por espaço, cada uma correspondendo ao atributo <strong>id</strong> dos elementos {{HTMLElement("th")}} que se aplicam a este elemento.</dd>
  <dd></dd>
  <dt>{{htmlattrdef("rowspan")}}</dt>
- <dd>Este atributo contém um valor inteiro não negativo que indica quantas linhas a célula estende. Valor padrão <code>1</code>. Se seu valor é definido como <code>0</code>, ele se estende até o final da tabela ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, mesmo que implicitamente definido), que a célula pertence. Não é possível colocar valores superiores a 65534.</dd>
+ <dd>Este atributo contém um valor inteiro não negativo que indica quantas linhas a célula estende. Valor padrão <code>1</code>. Se seu valor é definido como <code>0</code>, ele se estende até o final da tabela ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, mesmo que implicitamente definido), que a célula pertence. Não é possível colocar valores superiores a 65534.</dd>
  <dt>{{htmlattrdef("scope")}}</dt>
- <dd>Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.<br>
+ <dd>Este atributo define as células a que o cabeçalho (definido no elemento {{HTMLElement("th")}}) se relaciona.<br>
  Possíveis valores:</dd>
  <dd>
  <ul>
@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/th
   <li><code>auto</code></li>
  </ul>
 
- <p>O valor padrão quando este atributo não é especificado é <code>auto</code>.</p>
+ <p>O valor padrão quando este atributo não é especificado é <code>auto</code>.</p>
 
  <h3 id="Atributos_depreciados">Atributos depreciados</h3>
 
@@ -84,7 +84,7 @@ translation_of: Web/HTML/Element/th
   <li><code>char</code> (somente com texto): O conteúdo está alinhado a um caractere dentro do elemento <code>&lt;th&gt;</code> com deslocamento mínimo. Esse caractere é definido pelos atributos {{htmlattrxref("char", "th")}} e {{htmlattrxref("charoff", "th")}}.</li>
  </ul>
 
- <p>O valor padrão quando não especificado é <code>left</code>.</p>
+ <p>O valor padrão quando não especificado é <code>left</code>.</p>
  </dd>
  <dd>
 
@@ -92,8 +92,8 @@ translation_of: Web/HTML/Element/th
  <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente.
 
  <ul>
-  <li>Para alcançar o mesmo efeito que os valores <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code>, aplique a propriedade CSS {{cssxref("text-align")}} no elemento.</li>
-  <li>Para alcançar o mesmo efeito que os valor <code>char</code>, atribue a {{cssxref("text-align")}}  o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.</li>
+  <li>Para alcançar o mesmo efeito que os valores <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code>, aplique a propriedade CSS {{cssxref("text-align")}} no elemento.</li>
+  <li>Para alcançar o mesmo efeito que os valor <code>char</code>, atribue a {{cssxref("text-align")}}  o mesmo valor que você usaria para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} no CSS3.</li>
  </ul>
  </div>
 
@@ -104,7 +104,7 @@ translation_of: Web/HTML/Element/th
  <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente: use o atributo {{htmlattrxref("scope", "th")}}.</div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Esse atributo define a cor de fundo de cada célula na coluna. Ele consiste de 6 digitos hexadecimais definidos pelo <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> com o prefixo '#. Nesse atributo pode ser usado dezesseis cores predefinidas:
+ <dd>Esse atributo define a cor de fundo de cada célula na coluna. Ele consiste de 6 digitos hexadecimais definidos pelo <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a> com o prefixo '#. Nesse atributo pode ser usado dezesseis cores predefinidas:
  <table>
   <tbody>
    <tr>
@@ -158,44 +158,44 @@ translation_of: Web/HTML/Element/th
   </tbody>
  </table>
 
- <div class="note"><strong>Note:</strong> Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando <a href="/en-US/docs/Web/CSS">CSS</a>. Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do <a href="/en-US/docs/Web/CSS">CSS</a>.</div>
+ <div class="note"><strong>Note:</strong> Não use esse atributo como padrão pois não é implementado em algumas versões do Microsoft Internet Explorer: O elemento {{HTMLElement("th")}} deve ser estilizado usando <a href="/en-US/docs/Web/CSS">CSS</a>. Para criar um efeito semelhante, use a propriedade {{cssxref("background-color")}} do <a href="/en-US/docs/Web/CSS">CSS</a>.</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("char")}} {{obsolete_inline("html5")}}</dt>
- <dd>O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no <code>char</code>, o atributo é ignorado.
- <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.</div>
+ <dd>O conteúdo da célula está alinhado a um caractere. Os valores típicos incluem um ponto (.) para alinhar números ou valores monetários. Se {{htmlattrxref("align", "th")}} não está definido no <code>char</code>, o atributo é ignorado.
+ <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente. Para obter o mesmo efeito, você pode especificar o caractere como o primeiro valor da propriedade {{cssxref("text-align")}}, {{unimplemented_inline}} no CSS3.</div>
  </dd>
  <dt>{{htmlattrdef("charoff")}} {{obsolete_inline("html5")}}</dt>
- <dd>Este atributo é usado para mudar os dados da coluna para a direita do caractere especificado pelo atributo <strong>char</strong>. Seu valor especifica o comprimento desse deslocamento.
+ <dd>Este atributo é usado para mudar os dados da coluna para a direita do caractere especificado pelo atributo <strong>char</strong>. Seu valor especifica o comprimento desse deslocamento.
  <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente.</div>
  </dd>
  <dt>{{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Esse atributo é usado para definir uma altura recomendada da célula.
- <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.</div>
+ <dd>Esse atributo é usado para definir uma altura recomendada da célula.
+ <div class="note"><strong>Note: </strong>Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("height")}}.</div>
  </dd>
  <dt>{{htmlattrdef("valign")}} {{obsolete_inline("html5")}}</dt>
  <dd>Esse atributo especifica como o texto é alinhado verticalmente na célula.</dd>
  <dd>Possíveis valores:
  <ul>
-  <li><code>baseline</code>: Posiciona o texto próximo à parte inferior da célula e o alinha ao <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">roda pé</a>. Se os caracteres não descerem abaixo da linha de base, o valor da linha de base alcançará o mesmo efeito que <code>bottom</code>.</li>
+  <li><code>baseline</code>: Posiciona o texto próximo à parte inferior da célula e o alinha ao <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">roda pé</a>. Se os caracteres não descerem abaixo da linha de base, o valor da linha de base alcançará o mesmo efeito que <code>bottom</code>.</li>
   <li><code>bottom</code>: Posiciona o texto próximo à parte inferior da célula.</li>
   <li><code>middle</code>: Centraliza o texto na célula.</li>
   <li><code>top</code>: Posiciona o texto próximo à parte superior da célula.</li>
  </ul>
 
- <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.</div>
+ <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("vertical-align")}}.</div>
  </dd>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
- <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.</div>
+ <dd>Este atributo é usado para definir uma largura de célula recomendada. Espaço adicional pode ser adicionado com as propriedades {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} e {{domxref("HTMLTableElement.cellPadding", "cellpadding")}}, e a largura do elemento {{HTMLElement("col")}} pode criar largura extra. Mas, se a largura de uma coluna for muito estreita para mostrar uma célula específica corretamente, ela será ampliada quando exibida.
+ <div class="note"><strong>Note:</strong> Não use esse atributo, pois ele está obsoleto no padrão mais recente: use a propriedade CSS {{cssxref("width")}}.</div>
  </dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Veja {{HTMLElement("table")}} para mais elementos <code>&lt;th&gt;</code>.</p>
+<p>Veja {{HTMLElement("table")}} para mais elementos <code>&lt;th&gt;</code>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 

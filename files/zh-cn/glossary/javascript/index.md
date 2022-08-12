@@ -22,11 +22,11 @@ JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来�
 
 ### 基本知识
 
-- 维基百科上的{{interwiki("wikipedia", "JavaScript", "JavaScript")}}
+- 维基百科上的[JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
 
 ### 学习 JavaScript
 
-- MDN 的 {{Link("/zh-CN/docs/Web/JavaScript/Guide")}}
+- MDN 的 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
 - [NodeSchool 的 javascripting 工坊](https://nodeschool.io/#workshoppers)
 - [codecademy.com 的 JavaScript 课程](https://www.codecademy.com/tracks/javascript)
 - [John Resig 的 Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
@@ -34,5 +34,5 @@ JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来�
 ### 技术参考
 
 - [John Resig 的 Learning Advanced JavaScript](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- MDN 的 {{Link("/en-US/docs/Web/JavaScript/reference")}} 参考文件
-- [_Eloquent JavaScript_ ](https://eloquentjavascript.net/)一书
+- MDN 的 [JavaScript 参考](/en-US/docs/Web/JavaScript/reference)文件
+- [_Eloquent JavaScript_](https://eloquentjavascript.net/) 一书

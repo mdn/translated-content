@@ -15,7 +15,7 @@ translation_of: Web/API/WebGL_API
 
 <p>WebGL（Web 图形库）是一个 JavaScript API，可在任何兼容的 Web 浏览器中渲染高性能的交互式 3D 和 2D 图形，而无需使用插件。WebGL 通过引入一个与 OpenGL ES 2.0 非常一致的 API 来做到这一点，该 API 可以在 HTML5 {{HTMLElement("canvas")}}元素中使用。 这种一致性使 API 可以利用用户设备提供的硬件图形加速。</p>
 
-<p>目前支持 WebGL 的浏览器有：<a href="https://developer.mozilla.org/zh-CN/Firefox" title="Firefox 4 for developers">Firefox</a> 4+, <a href="http://www.google.com/chrome/" title="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/" title="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/" title="http://www.apple.com/fr/safari/">Safari </a>5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a> 11+ 和<a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> build 10240+；然而，WebGL 一些特性也需要用户的硬件设备支持。</p>
+<p>目前支持 WebGL 的浏览器有：<a href="https://developer.mozilla.org/zh-CN/Firefox">Firefox</a> 4+, <a href="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/safari/">Safari </a>5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/browser-ie">Internet Explorer</a> 11+ 和<a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a> build 10240+；然而，WebGL 一些特性也需要用户的硬件设备支持。</p>
 
 <p><a href="#webgl_2">WebGL 2</a> API 引入了对大部分的 OpenGL ES 3.0 功能集的支持; 它是通过{{domxref("WebGL2RenderingContext")}}界面提供的。</p>
 
@@ -169,75 +169,30 @@ translation_of: Web/API/WebGL_API
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/">WebGL 基础</a> 一个关于 WebGL 的基础教程。</li>
  <li><a href="http://webglplayground.net">WebGL 试炼</a> 一个在线创建和分享 WebGL 的工具站点，非常适合快速创建一个原型或者体验一个成品。</li>
  <li><a href="http://www.webglacademy.com">WebGL Academy</a> 通过一个 HTML/JavaScript 编辑器来学习一个基础的 WebGl 基础知识。</li>
- <li><a href="http://webglstats.com/">WebGL Stats</a> 一个统计 WebGL 在不同平台上能力表现的网站。</li>
+ <li><a href="https://webglreport.com/">WebGL Report</a> 一个检测浏览器是否支持 WebGL 的网站。</li>
 </ul>
 
 <h3 id="库">库</h3>
 
 <ul>
- <li><a class="link-https" href="https://github.com/toji/gl-matrix">glMatrix</a> 创建高性能 WebGL 应用的 JavaScript 矩阵矢量库。</li>
+ <li><a href="https://github.com/toji/gl-matrix">glMatrix</a> 创建高性能 WebGL 应用的 JavaScript 矩阵矢量库。</li>
  <li><a href="/zh-CN/docs/">PhiloGL</a> 一个用于数据可视化、创意编程和游戏开发的 WebGL 库。</li>
- <li><a href="http://www.pixijs.com/" rel="noopener">Pixi.js</a>是一种快速的开源 2D WebGL 渲染器。</li>
- <li><a href="https://playcanvas.com/" rel="noopener">PlayCanvas</a>是一个开源游戏引擎。</li>
- <li><a href="http://sylvester.jcoglan.com/" rel="noopener">Sylvester</a>是一个用于处理向量和矩阵的开源库。尚未针对 WebGL 进行优化，但功能极其强大。</li>
- <li><a href="https://threejs.org/" rel="noopener">three.js</a>是一个开源的，功能齐全的 3D WebGL 库。</li>
- <li><a href="https://phaser.io/" rel="noopener">Phaser</a>是一个适用于 Canvas 和 WebGL 的浏览器游戏的快速，免费和有趣的开源框架。</li>
- <li><a href="https://github.com/redcamel/RedGL2" rel="noopener">RedGL</a>  是一个开源 3D WebGL 库。</li>
- <li><a href="https://kitware.github.io/vtk-js/" rel="noopener">vtk.js</a>  是一个 JavaScript 库，用于在浏览器中进行科学可视化。</li>
+ <li><a href="http://www.pixijs.com/">Pixi.js</a>是一种快速的开源 2D WebGL 渲染器。</li>
+ <li><a href="https://playcanvas.com/">PlayCanvas</a>是一个开源游戏引擎。</li>
+ <li><a href="http://sylvester.jcoglan.com/">Sylvester</a>是一个用于处理向量和矩阵的开源库。尚未针对 WebGL 进行优化，但功能极其强大。</li>
+ <li><a href="https://threejs.org/">three.js</a>是一个开源的，功能齐全的 3D WebGL 库。</li>
+ <li><a href="https://phaser.io/">Phaser</a>是一个适用于 Canvas 和 WebGL 的浏览器游戏的快速，免费和有趣的开源框架。</li>
+ <li><a href="https://github.com/redcamel/RedGL2">RedGL</a>  是一个开源 3D WebGL 库。</li>
+ <li><a href="https://kitware.github.io/vtk-js/">vtk.js</a>  是一个 JavaScript 库，用于在浏览器中进行科学可视化。</li>
 </ul>
 
 <h2 id="规范">规范</h2>
 
-
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebGL')}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初始定义。基于 OpenGL ES 2.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL2')}}</td>
-   <td>{{Spec2('WebGL2')}}</td>
-   <td>在 WebGL 1 基础上构建。基于 OpenGL ES 3.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0')}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0')}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<h3 id="WebGL_1">WebGL 1</h3>
-
-<div class="hidden">
-<p>此页面上的兼容性表是根据结构化数据生成的。 如果您想提供数据，请查看<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>并向我们发送拉取请求。</p>
-</div>
-
-<p>{{Compat("api.WebGLRenderingContext", 0)}}</p>
-
-<h3 id="WebGL_2_2">WebGL 2</h3>
-
-<div class="hidden">
-<p>此页面上的兼容性表是根据结构化数据生成的。 如果您想提供数据，请查看<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>并向我们发送拉取请求。</p>
-</div>
-
-<p>{{Compat("api.WebGL2RenderingContext", 0)}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="兼容性说明">兼容性说明</h3>
 

@@ -11,7 +11,7 @@ original_slug: >-
 
 
 
-<div>В данном руководстве, мы исследуем три свойства  применяемые к flex элементам, которые позволяют нам контролировать размер и  гибкость flex элементов по основной(main) оси. Полное понимание, как эти свойства работают,  при увеличение и уменьшение элементов, есть ключ к мастерству flexbox.</div>
+<div>В данном руководстве, мы исследуем три свойства  применяемые к flex элементам, которые позволяют нам контролировать размер и  гибкость flex элементов по основной(main) оси. Полное понимание, как эти свойства работают,  при увеличение и уменьшение элементов, есть ключ к мастерству flexbox.</div>
 
 <h2 id="A_first_look">A first look</h2>
 
@@ -41,7 +41,7 @@ original_slug: >-
 
 <p>There is a concept in CSS of {{CSSxRef('width','min-content','#min-content')}} and {{CSSxRef('width','max-content','#max-content')}} — these keywords are <a href="https://drafts.csswg.org/css-sizing-3/#width-height-keywords">defined in the CSS Intrinsic and Extrinsic Sizing Specification</a>, and can be used in place of a <a href="/en-US/docs/Web/CSS/length">length unit</a>.</p>
 
-<p>In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of <code>min-content</code>. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the <code>min-content</code> size of that string. Essentially, the longest word in the string is dictating the size.</p>
+<p>In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of <code>min-content</code>. In a browser that supports this keyword you should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the <code>min-content</code> size of that string. Essentially, the longest word in the string is dictating the size.</p>
 
 <p>The second paragraph has a value of <code>max-content</code> and so it does the opposite. It gets as big as it possibly can be, taking no soft-wrapping opportunities. It would overflow the box it is in if that container was too narrow.</p>
 
@@ -83,7 +83,7 @@ original_slug: >-
 
 <h2 id="The_flex-grow_property">The flex-grow property</h2>
 
-<p>The {{CSSxRef("flex-grow")}} property specifies the <strong>flex grow factor</strong>, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.</p>
+<p>The {{CSSxRef("flex-grow")}} property specifies the <strong>flex grow factor</strong>, which determines how much the flex item will grow relative to the rest of the flex items in the flex container when the positive free space is distributed.</p>
 
 <p>If all of your items have the same <code>flex-grow</code> factor then space will be distributed evenly between all of them. If this is the situation that you want then typically you would use <code>1</code> as the value, however you could give them all a <code>flex-grow</code> of <code>88</code>, or <code>100</code>, or <code>1.2</code> if you like — it is a ratio. If the factor is the same for all, and there is positive free space in the flex container then it will be distributed equally to all.</p>
 
@@ -113,7 +113,7 @@ original_slug: >-
 
 <h3 id="Giving_items_different_flex-grow_factors">Giving items different flex-grow factors</h3>
 
-<p>Our understanding of how <code>flex-grow</code> works with <code>flex-basis</code> allows us to have further control over our individual item sizes by assigning items different <code>flex-grow</code> factors. If we keep our <code>flex-basis</code> at <code>0</code> so all of the space can be distributed, we could assign each of the three flex items a different <code>flex-grow</code> factor. In the example below I am using the following values:</p>
+<p>Our understanding of how <code>flex-grow</code> works with <code>flex-basis</code> allows us to have further control over our individual item sizes by assigning items different <code>flex-grow</code> factors. If we keep our <code>flex-basis</code> at <code>0</code> so all of the space can be distributed, we could assign each of the three flex items a different <code>flex-grow</code> factor. In the example below I am using the following values:</p>
 
 <ul>
  <li><code>1</code> for the first item.</li>
@@ -129,7 +129,7 @@ original_slug: >-
 
 <h2 id="The_flex-shrink_property">The <code>flex-shrink</code> property</h2>
 
-<p>The {{CSSxRef("flex-shrink")}} property specifies the <strong>flex shrink factor</strong>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.</p>
+<p>The {{CSSxRef("flex-shrink")}} property specifies the <strong>flex shrink factor</strong>, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.</p>
 
 <p>This property deals with situations where the browser calculates the <code>flex-basis</code> values of the flex items, and finds that they are too large to fit into the flex container. As long as <code>flex-shrink</code> has a positive value the items will shrink in order that they do not overflow the container.</p>
 
@@ -148,7 +148,7 @@ original_slug: >-
 <p>While it is usually subtle, defined in the specification is one reason why <code>flex-shrink</code> isn’t quite the same for negative space as <code>flex-grow</code> is for positive space:</p>
 
 <blockquote>
-<p>“Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won’t shrink to zero before a larger item has been noticeably reduced.”</p>
+<p>“Note: The flex shrink factor is multiplied by the flex base size when distributing negative space. This distributes negative space in proportion to how much the item is able to shrink, so that e.g. a small item won’t shrink to zero before a larger item has been noticeably reduced.”</p>
 </blockquote>
 
 <p>The second reason is that flexbox prevents small items from shrinking to zero size during this removal of negative free space. The items will be floored at their <code>min-content</code> size — the size that they become if they take advantage of any soft wrapping opportunities available to them.</p>

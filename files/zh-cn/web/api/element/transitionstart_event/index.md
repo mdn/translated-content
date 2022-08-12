@@ -97,7 +97,7 @@ transition.addEventListener('transitionstart', function() {
 });
 
 transition.addEventListener('transitionend', function() {
-  message.textContent = 'transitionend 触发了';
+  message.textContent = 'transitionend 触发了';
 });
 ```
 

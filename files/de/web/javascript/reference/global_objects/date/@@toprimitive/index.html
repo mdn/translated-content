@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 
 <div>Die <code><strong>[@@toPrimitive]()</strong></code> Methode konvertiert ein {{jsxref("date")}} Objekt in einen primitiven Wert.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 
 <p>Wenn der Parameter <code>hint</code> die Wert <code>"string"</code> oder <code>"default"</code> enthält, wird versucht die  {{jsxref("Object.prototype.toString()", "toString")}}  Methode aufzurufen. Wenn diese Methode nicht existiert, wird versucht die  {{jsxref("Object.prototype.valueOf()", "valueOf")}}  Methode aufzurufen. Wenn diese wiederum nicht existiert wirft <code>[@@toPrimitive]()</code> einen {{jsxref("TypeError")}}.</p>
 
-<p>Wenn der Parameter <code>hint</code> den Wert <code>"number"</code> hat, wird als erstes versucht die  <code>valueOf</code> Methode aufzurufen. Wenn diese nicht existiert, wird die <code>toString</code> Methode aufgerufen.</p>
+<p>Wenn der Parameter <code>hint</code> den Wert <code>"number"</code> hat, wird als erstes versucht die  <code>valueOf</code> Methode aufzurufen. Wenn diese nicht existiert, wird die <code>toString</code> Methode aufgerufen.</p>
 
 <p>JavaScript ruft die <code>[@@toPrimitive]()</code> auf, um ein Objekt in einen primitiven Wert zu konvertieren. Explizit muss man diese Methode extrem selten aufrufen. JavaScript ruft diese Methode automatisch auf, wenn ein Objekt an Stellen verwendet wird, an denen ein primitiver Wert erwartet wird.</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

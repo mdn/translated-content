@@ -51,7 +51,7 @@ Angular は、[TypeScript](https://www.typescriptlang.org/) でビルドする�
 - ルーティング、フォーム管理、クライアント/サーバー通信など、さまざまな機能をカバーする、十分に統合されたライブラリのコレクション
 - コードの開発、ビルド、テスト、更新を支援する一連の開発者ツール
 
-Angular を使用してアプリケーションを構築する場合、単一の開発者プロジェクトからエンタープライズレベルのアプリケーションまで拡張できるプラットフォームを利用しています。 Angular は、更新を可能な限り簡単にするように設計されているため、最小限の労力で最新の開発を利用できます。 何よりも、 Angular エコシステムは、170万人を超える開発者、ライブラリ作成者、コンテンツ作成者からなる多様なグループで構成されています。
+Angular を使用してアプリケーションを構築する場合、単一の開発者プロジェクトからエンタープライズレベルのアプリケーションまで拡張できるプラットフォームを利用しています。 Angular は、更新を可能な限り簡単にするように設計されているため、最小限の労力で最新の開発を利用できます。 何よりも、 Angular エコシステムは、170 万人を超える開発者、ライブラリ作成者、コンテンツ作成者からなる多様なグループで構成されています。
 
 Angular プラットフォームの探索を開始する前に、 Angular CLI について知っておく必要があります。 Angular CLI は、Angular アプリケーションを開発するための最も速く、最も簡単で、推奨される方法です。 Angular CLI を使用すると、多くのタスクを簡単に実行できます。 ここではいくつかの例を示します。
 
@@ -358,6 +358,6 @@ Angular の最初の紹介は以上です。 この時点で、Angular アプリ
   - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - [Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

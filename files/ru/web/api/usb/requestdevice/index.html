@@ -46,15 +46,15 @@ translation_of: Web/API/USB/requestDevice
 <p>Количество фильтров не определяет количество устройств, показываемых браузером. Например, если найдено только USB-устройство с product ID <code>0xa800</code>, браузер отобразит только одно устройство. Но, если браузер определит два устройства, совпадающих с первым фильтром, и ещё одно, совпадающее со вторым, будут показаны все три устройства.</p>
 
 <pre class="brush: js">const filters = [
-        {vendorId: 0x1209, productId: 0xa800},
-        {vendorId: 0x1209, productId: 0xa850}
-      ];
+        {vendorId: 0x1209, productId: 0xa800},
+        {vendorId: 0x1209, productId: 0xa850}
+      ];
 navigator.usb.requestDevice({filters: filters})
 .then(usbDevice =&gt; {
-  console.log("Product name: " + usbDevice.productName);
+  console.log("Product name: " + usbDevice.productName);
 })
 .catch(e =&gt; {
-  console.log("There is no device. " + e);
+  console.log("There is no device. " + e);
 });
 </pre>
 

@@ -88,7 +88,7 @@ window.addEventListener('load', drawCanvas);
 - {{domxref("OffscreenCanvas")}}{{experimental_inline}}
 - {{domxref("Path2D")}} {{experimental_inline}}{{domxref("ImageBitmapRenderingContext")}}{{experimental_inline}}
 
-Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL](/en-US/docs/Web/WebGL).
+Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL](/fr/docs/Web/WebGL).
 
 {{domxref("CanvasCaptureMediaStream")}} est lié.
 
@@ -138,4 +138,4 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL
 
 ## Voir aussi
 
-- [WebGL](/en-US/docs/Web/WebGL)
+- [WebGL](/fr/docs/Web/WebGL)

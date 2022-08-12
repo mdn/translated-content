@@ -24,7 +24,7 @@ SEO 方法分為三大類：
 
 ### 一般常識
 
-- 維基百科的 {{Interwiki("wikipedia", "SEO")}}
+- 維基百科的 [SEO](https://zh.wikipedia.org/wiki/SEO)
 
 ### 理解 SEO
 

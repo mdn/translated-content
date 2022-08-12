@@ -5,7 +5,7 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong>XMLHttpRequest.setRequestHeader()</strong> 메소드는 HTTP요청 헤더의 값을 설정합니다. 반드시 <code>setRequestHeader()</code>를 <a href="#open"><code>open()</code></a>뒤에 호출하여야 하며, 또한 <code>send()</code>가 호출되기 전에 호출해야 합니다. 만약 이 메소드가 같은 헤더에 대하여 여러번 호출이 되면, 그 값은 단일 요청 헤더에 병합됩니다.</p>
+<p><strong>XMLHttpRequest.setRequestHeader()</strong> 메소드는 HTTP요청 헤더의 값을 설정합니다. 반드시 <code>setRequestHeader()</code>를 <a href="#open"><code>open()</code></a>뒤에 호출하여야 하며, 또한 <code>send()</code>가 호출되기 전에 호출해야 합니다. 만약 이 메소드가 같은 헤더에 대하여 여러번 호출이 되면, 그 값은 단일 요청 헤더에 병합됩니다.</p>
 
 <p>만약 이것을 이용해 {{HTTPHeader("Accept")}} 헤더를 설정하지 않으면, {{domxref("XMLHttpRequest.send", "send()")}}가 호출될 때 <code>Accept</code> 헤더가 <code>*/*</code>와 함께 전송됩니다.</p>
 
@@ -31,20 +31,7 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 
 <h2 id="명세">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">코멘트</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-setRequestHeader()-method', 'setRequestHeader()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

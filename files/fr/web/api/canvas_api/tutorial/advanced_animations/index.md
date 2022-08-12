@@ -301,7 +301,7 @@ ball.draw();
 
 ## Ajout d'un contrôle de souris
 
-Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove), par exemple. L'événement [`click`](/en-US/docs/Web/Events/click) relâche la balle et la laisse rebondir à nouveau.
+Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement [`mousemove`](/fr/docs/Web/Reference/Events/mousemove), par exemple. L'événement [`click`](/fr/docs/Web/Events/click) relâche la balle et la laisse rebondir à nouveau.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
