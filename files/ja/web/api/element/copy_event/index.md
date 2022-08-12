@@ -8,104 +8,84 @@ tags:
   - Event
   - Reference
   - Web
-  - イベント
+browser-compat: api.Element.copy_event
 translation_of: Web/API/Element/copy_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>copy</code></strong> イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。</span></p>
+**`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-  </tr>
- </tbody>
-</table>
+このイベントの既定の動作は、（もしあれば）選択範囲をクリップボードへコピーすることです。
 
-<p>このイベントの既定の動作は、 (もしあれば) 選択範囲をクリップボードへコピーすることです。</p>
+このイベントのハンドラーは、 {{domxref("DataTransfer.setData", "setData(format, data)")}} をイベントの {{domxref("ClipboardEvent.clipboardData")}} プロパティに対して呼び出すことで、クリップボードの内容を*変更*したり、 {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用してイベントの既定の動作を取り消したりすることができます。
 
-<p>このイベントのハンドラーは、 {{domxref("DataTransfer.setData", "setData(format, data)")}} をイベントの {{domxref("ClipboardEvent.clipboardData")}} プロパティに対して呼び出すことで、クリップボードの内容を<em>変更</em>したり、 {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用してイベントの既定の動作を取り消したりすることができます。</p>
+ただし、ハンドラーがクリップボードのデータを*読み取る*ことはできません。
 
-<p>ただし、ハンドラーがクリップボードのデータを<em>読み取る</em>ことはできません。</p>
+[合成で](/ja/docs/Web/Events/Creating_and_triggering_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
 
-<p><a href="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">仮想の</a> <code>copy</code> イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。</p>
+## 構文
 
-<h2 id="Examples" name="Examples">例</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<h3 id="Live_example" name="Live_example">ライブデモ</h3>
+```js
+addEventListener('copy', (event) => { });
 
-<h4 id="HTML">HTML</h4>
+oncopy = (event) => { };
+```
 
-<pre class="brush: html">&lt;div class="source" contenteditable="true"&gt;Try copying text from this box...&lt;/div&gt;
-&lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;
-</pre>
+## イベント型
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
+{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} から継承しています。
 
-<pre class="brush: css">div.source, div.target {
+{{InheritanceDiagram("ClipboardEvent")}}
+
+## 例
+
+### ライブデモ
+
+#### HTML
+
+```html
+<div class="source" contenteditable="true">Copy text from this box.</div>
+<div class="target" contenteditable="true">And paste it into this one.</div>
+```
+
+```css hidden
+div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
     height: 1rem;
     background-color: #e9eef1;
-}</pre>
-</div>
+}
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const source = document.querySelector('div.source');
+```js
+const source = document.querySelector('div.source');
 
-source.addEventListener('copy', (event) =&gt; {
+source.addEventListener('copy', (event) => {
     const selection = document.getSelection();
     event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
     event.preventDefault();
 });
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '120px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Clipboard API', '#clipboard-event-copy')}}</td>
-   <td>{{Spec2('Clipboard API')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Window.copy_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/paste_event", "paste")}}</li>
- <li>{{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/copy_event", "copy")}}</li>
- <li>{{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/copy_event", "copy")}}</li>
-</ul>
+- 関連イベント: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/copy_event", "copy")}}
+- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/copy_event", "copy")}}
