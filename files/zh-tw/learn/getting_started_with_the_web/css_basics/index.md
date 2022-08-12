@@ -21,13 +21,13 @@ p {
 
 但我們還需要把 CSS 套用在 HTML 文件上。否則 CSS 的樣式效果，不會在瀏覽器的 HTML 檔案顯示。（如果你還未跟上我們的專案，請閱讀 [Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML basics](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics) 以找出你需要什麼）
 
-1.  打開 `index.html` 文件，然後將下面一行貼到 head，也就是 `<head>` 和 `</head>` 標籤之間。
+1. 打開 `index.html` 文件，然後將下面一行貼到 head，也就是 `<head>` 和 `</head>` 標籤之間。
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2.  存檔 `index.html` 並且在瀏覽器載入。你應該可以看到下面的頁面。
+2. 存檔 `index.html` 並且在瀏覽器載入。你應該可以看到下面的頁面。
 
 ![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)如果你的段落文字現在變成紅色, 恭喜, 你已經成功撰寫你的第一份 CSS！
 
@@ -145,15 +145,15 @@ p,li,h1 {
 
 現在我們已經瀏覽過一些 CCS 的基礎，接下來我們開始增加更多的規則和資訊到我們的 style.css 檔案，讓我們範例中的字型和文字看起來更好.
 
-1.  第一步, 我們回到 [output from Google Fonts](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 找到你存的字體。 加上 `<link ... >` 這個元素在你的 `index.html`文件裡的 head 中（在 `<head>` 跟 `</head>` 任何位置中）。
+1. 第一步, 我們回到 [output from Google Fonts](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 找到你存的字體。 加上 `<link ... >` 這個元素在你的 `index.html`文件裡的 head 中（在 `<head>` 跟 `</head>` 任何位置中）。
     這一段 code 將頁面連結到樣式表，將 Open Sans 字體系列與網頁一起下載，並讓你在 HTML 元素上使用自己的樣式表進行設置。 它看起來會像:
 
     ```html
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     ```
 
-2.  下一步, 刪除`style.css文件中`其他現有的字體。這是個很好的嘗試, 但紅色字體看起來真的有點醜。
-3.  把下面這行加在這個地方, 取代 placeholder line with the actual `font-family` line you got from Google 字體. (`font-family` 是指你想在文件中使用的字體.)
+2. 下一步, 刪除`style.css文件中`其他現有的字體。這是個很好的嘗試, 但紅色字體看起來真的有點醜。
+3. 把下面這行加在這個地方, 取代 placeholder line with the actual `font-family` line you got from Google 字體. (`font-family` 是指你想在文件中使用的字體.)
     這規則
     此規則首先為頁面設置整體的基本字體和字型(因 `<html>` 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
 
@@ -166,8 +166,9 @@ p,li,h1 {
 
     > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
 
-4.  現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
-5.  ```css
+4. 現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
+
+5. ```css
     h1 {
       font-size: 60px;
       text-align: center;

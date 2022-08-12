@@ -23,7 +23,7 @@ translation_of: Learn/JavaScript/First_steps
 
 在開始這個教學之前，你不需要具備任何的 JavaScript 相關知識，但是你應該對 HTML 及 CSS 有一點熟悉。建議你在開始學習 JavaScript 前，先看過下列內容 :
 
-- [開始使用 Web ](/zh-TW/docs/Learn/Getting_started_with_the_web)(包括 [JavaScript 基礎簡介](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
+- [開始使用 Web](/zh-TW/docs/Learn/Getting_started_with_the_web) (包括 [JavaScript 基礎簡介](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML).
 - [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS).
 

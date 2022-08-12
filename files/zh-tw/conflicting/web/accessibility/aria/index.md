@@ -10,7 +10,7 @@ original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 當使用傳統的 HTML 表單元素建立表單時，提供控制用的標籤（label）以及將標籤與對應表單元素建立關聯是非常重要的。當  screen reader （例如瀏覽器、電子郵件……等等）瀏覽一個頁面時，screen reader 會顯示  form controls ，但若沒有標示 control 和  label 之間的關聯，  screen reader 沒法知道哪個 label 是對應哪個 control。
 
-下面的範例顯示一個使用標籤的表單。注意每一個 {{ HTMLElement("input") }} 元件都有 **`id`**，每一個 {{ HTMLElement("label") }} 元件有 **`for `**屬性，用來對應 {{ HTMLElement("input") }} 元素的 **`id`**。
+下面的範例顯示一個使用標籤的表單。注意每一個 {{ HTMLElement("input") }} 元件都有 **`id`**，每一個 {{ HTMLElement("label") }} 元件有 **`for`** 屬性，用來對應 {{ HTMLElement("input") }} 元素的 **`id`**。
 
 _範例 1. 使用 label 的簡易表單_
 

@@ -50,7 +50,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 讓我們來快速操作一些數字來重新認識一下我們會需要用到的基本語法。將下面的需求表輸入進你的開發者工具 js 控制台([developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools))，或是簡單建立在任何你偏好的控制台。
 
-1.  首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
+1. 首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
 
     ```js
     var myInt = 5;
@@ -59,8 +59,8 @@ translation_of: Learn/JavaScript/First_steps/Math
     myFloat;
     ```
 
-2.  數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。
-3.  現在，來確認 Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
+2. 數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。
+3. 現在，來確認 Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
     ```js
     typeof myInt;
@@ -143,7 +143,7 @@ Arithmetic operators are the basic operators that we use to do sums:
 
 We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
 
-1.  First try entering some simple examples of your own, such as
+1. First try entering some simple examples of your own, such as
 
     ```js
     10 + 7
@@ -151,7 +151,7 @@ We probably don't need to teach you how to do basic math, but we would like to t
     60 % 3
     ```
 
-2.  You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
+2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
     ```js
     var num1 = 10;
@@ -160,7 +160,7 @@ We probably don't need to teach you how to do basic math, but we would like to t
     num2 / num1;
     ```
 
-3.  Last for this section, try entering some more complex expressions, such as:
+3. Last for this section, try entering some more complex expressions, such as:
 
     ```js
     5 + 10 * 3;

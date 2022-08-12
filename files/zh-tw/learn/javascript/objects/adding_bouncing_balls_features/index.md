@@ -44,11 +44,11 @@ translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 首先將現有的 `Ball()` 建構子變更為 `Shape()` 建構子，以及新的 `Ball()` 建構子：
 
-1.  `Shape()` 建構子對 `x`、`y`、`velX`、`velY` 屬性的定義方式，就如同 `Ball()` 建構子所用的方式。
-2.  另須定義新的 `exists` 屬性，用以追蹤球體是否存在於程式之中 (也就是尚未遭邪惡圈所吃掉)。此屬性必為布林值 (Boolean)，初始值為 `true`。
-3.  `Ball()` 建構子應從 `Shape()` 建構子繼承 `x`、`y`、`velX`、`velY`、`exists` 等屬性。另必須將這些屬性定義為參數以利呼叫之。
-4.  必須定義 `color` 與 `size` 屬性各 1 組，且由於兩者均來自於原始的 `Ball()` 建構子之中，所以剛開始的隨機值亦須相同。
-5.  記得應正確設定 `Ball()` 建構子的 `prototype` 與 `constructor`。
+1. `Shape()` 建構子對 `x`、`y`、`velX`、`velY` 屬性的定義方式，就如同 `Ball()` 建構子所用的方式。
+2. 另須定義新的 `exists` 屬性，用以追蹤球體是否存在於程式之中 (也就是尚未遭邪惡圈所吃掉)。此屬性必為布林值 (Boolean)，初始值為 `true`。
+3. `Ball()` 建構子應從 `Shape()` 建構子繼承 `x`、`y`、`velX`、`velY`、`exists` 等屬性。另必須將這些屬性定義為參數以利呼叫之。
+4. 必須定義 `color` 與 `size` 屬性各 1 組，且由於兩者均來自於原始的 `Ball()` 建構子之中，所以剛開始的隨機值亦須相同。
+5. 記得應正確設定 `Ball()` 建構子的 `prototype` 與 `constructor`。
 
 彩球的 `draw()`、`update()`、`collisionDetect()` 函式定義，均與之前完全相同。
 
@@ -130,8 +130,8 @@ Now we've defined the evil circle, we need to actually make it appear in our sce
 
 To implement the score counter, follow the following steps:
 
-1.  In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
-2.  In your CSS file, add the following rule at the bottom:
+1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
+2. In your CSS file, add the following rule at the bottom:
 
     ```css
     p {
@@ -143,7 +143,7 @@ To implement the score counter, follow the following steps:
     }
     ```
 
-3.  In your JavaScript, make the following updates:
+3. In your JavaScript, make the following updates:
 
     - Create a variable that stores a reference to the paragraph.
     - Keep a count of the number of balls on screen in some way.
@@ -157,6 +157,6 @@ To implement the score counter, follow the following steps:
 
 ## 交作業
 
-如果你是在某個課堂上操作這份作業，那麼請將成品交給您的老師 / 助教；如果您是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC ](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
+如果你是在某個課堂上操作這份作業，那麼請將成品交給您的老師 / 助教；如果您是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

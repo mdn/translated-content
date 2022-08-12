@@ -187,9 +187,9 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 ### 內部的 JavaScript
 
-1.  首先，下載一份 [apply-javascript.html 範例](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)儲存在自己的電腦上合適的目錄裡。
-2.  用瀏覽器與文字編輯器打開範例。你會看到 HTML 建立了一個簡單的網頁，包含一個可點擊的按鈕。
-3.  接著，切換到文字編輯器，在標頭區加入下面的文字，就放在 `</head>` 結尾標籤前：
+1. 首先，下載一份 [apply-javascript.html 範例](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)儲存在自己的電腦上合適的目錄裡。
+2. 用瀏覽器與文字編輯器打開範例。你會看到 HTML 建立了一個簡單的網頁，包含一個可點擊的按鈕。
+3. 接著，切換到文字編輯器，在標頭區加入下面的文字，就放在 `</head>` 結尾標籤前：
 
     ```html
     <script>
@@ -199,7 +199,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
     </script>
     ```
 
-4.  現在，我們將在我們的 {{htmlelement("script")}} 元素中加入一些 JavaScript 程式，讓網頁能做些有趣的事，接者在「// JavaScript 將放在這裡」那行後面：
+4. 現在，我們將在我們的 {{htmlelement("script")}} 元素中加入一些 JavaScript 程式，讓網頁能做些有趣的事，接者在「// JavaScript 將放在這裡」那行後面：
 
     ```js
     document.addEventListener("DOMContentLoaded", function() {
@@ -217,7 +217,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
     });
     ```
 
-5.  儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。
+5. 儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。
 
 > **備註：** 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？ **JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
 
@@ -227,14 +227,14 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 內部 JavaScript 目前運作得很好，但如果我們想把 JavaScript 放在外部檔案，應該怎麼做？讓我們現在來探索。
 
-1.  首先，建立一個新的檔案，和 HTML 檔案放在相同的目錄下，命名為 `script.js` ，確定這個檔案是以 .js 為副檔名， 因為這就是它被識別為 JavaScript 的原因。
-2.  將 {{htmlelement("script")}} 元素（包含裡面的程式）換成下面的樣子：
+1. 首先，建立一個新的檔案，和 HTML 檔案放在相同的目錄下，命名為 `script.js` ，確定這個檔案是以 .js 為副檔名， 因為這就是它被識別為 JavaScript 的原因。
+2. 將 {{htmlelement("script")}} 元素（包含裡面的程式）換成下面的樣子：
 
     ```html
     <script src="script.js" async></script>
     ```
 
-3.  在 `script.js` 中，加入下面的程式碼：
+3. 在 `script.js` 中，加入下面的程式碼：
 
     ```js
     function createParagraph() {
@@ -250,7 +250,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
     }
     ```
 
-4.  儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。
+4. 儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。
 
 > **備註：** 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
 

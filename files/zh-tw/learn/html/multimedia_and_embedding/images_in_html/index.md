@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從[ element embeds an image into the document.">`<img>`](/en-US/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
+最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/en-US/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -308,15 +308,17 @@ This is ok. It contains the content you need, and is nicely stylable using CSS. 
 
 A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmlelement("figcaption")}} elements. These are created for exactly this purpose: to provide a semantic container for figures, and to clearly link the figure to the caption. Our above example could be rewritten like this:
 
-    <figure>
-      <img src="images/dinosaur.jpg"
-           alt="The head and torso of a dinosaur skeleton;
-                it has a large head with long sharp teeth"
-           width="400"
-           height="341">
+```html
+<figure>
+  <img src="images/dinosaur.jpg"
+        alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+        width="400"
+        height="341">
 
-      <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
-    </figure>
+  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+</figure>
+```
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
@@ -334,8 +336,8 @@ A figure could be several images, a code snippet, audio, video, equations, a tab
 
 In this active learning section, we'd like you to take the finished code from the previous active learning section, and turn it into a figure:
 
-1.  Wrap it in a {{htmlelement("figure")}} element.
-2.  Copy the text out of the `title` attribute, remove the `title` attribute, and put the text inside a {{htmlelement("figcaption")}} element below the image.
+1. Wrap it in a {{htmlelement("figure")}} element.
+2. Copy the text out of the `title` attribute, remove the `title` attribute, and put the text inside a {{htmlelement("figcaption")}} element below the image.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see an answer:
 

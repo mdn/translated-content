@@ -114,16 +114,18 @@ Django 網絡應用程序通常將處理每個步驟的代碼分組到單獨的�
 
 URL 映射器通常存儲在名為 urls.py 的文件中。在下面的示例中，mapper（`urlpatterns`）定義了特定 URL 模式和相應視圖函數之間的映射列表。如果接收到具有與指定模式匹配的 URL（例如 r'^$'，下面）的 HTTP 請求，則將調用相關聯的視圖功能（例如 views.index）並傳遞請求。
 
-    urlpatterns = [
-        path('admin/', admin.site.urls),
-        path('book/<int:id>/', views.book_detail, name='book_detail'),
-        path('catalog/', include('catalog.urls')),
-        re_path(r'^([0-9]+)/$', views.best),
-    ]
+```python
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('book/<int:id>/', views.book_detail, name='book_detail'),
+    path('catalog/', include('catalog.urls')),
+    re_path(r'^([0-9]+)/$', views.best),
+]
+```
 
 `urlpatterns`對像是`path()`和/或`re_path()`函數的列表（Python 列表使用方括號定義，其中項目用逗號分隔，可以有一個[可選的尾隨逗號](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples)。例如：\[`item1, item2, item3,` ]）。
 
-兩種方法的第一個參數，是將要匹配的路由（模式）。` path()`方法使用尖括號，來定義將被捕獲、並作為命名參數傳遞給視圖函數的 URL 的部分。` re_path()`函數使用靈活的模式匹配方法，稱為正則表達式。我們將在後面的文章中討論這些內容！
+兩種方法的第一個參數，是將要匹配的路由（模式）。`path()`方法使用尖括號，來定義將被捕獲、並作為命名參數傳遞給視圖函數的 URL 的部分。`re_path()`函數使用靈活的模式匹配方法，稱為正則表達式。我們將在後面的文章中討論這些內容！
 
 第二個參數，是在匹配模式時將調用的另一個函數。註釋 `views.book_detail`表示該函數名為`book_detail()`，可以在名為`views`的模塊中找到（即在名為`views.py`的文件中）
 
