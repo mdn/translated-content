@@ -95,7 +95,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 如果您想对 test-site 进行更多更改并将其上传到 GitHub，那么您只需像以前一样对文件进行更改。然后，您需要输入以下命令（在每个之后按 Enter 键）将这些更改推送到 GitHub：
 
-```
+```bash
 git add --all
 git commit -m 'another commit'
 git push
