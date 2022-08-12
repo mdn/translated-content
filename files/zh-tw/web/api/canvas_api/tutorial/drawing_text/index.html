@@ -39,8 +39,6 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
  </tbody>
 </table>
 
-<p> </p>
-
 <h2 id="Attributes">屬性</h2>
 
 <table>
@@ -128,7 +126,7 @@ ctx.font = "20pt Arial";</pre>
 
 <p>繪製文字使用<code>font</code>屬性指定的文字樣式，對齊則使用<code>textAlign</code>屬性，而指定基線則使用<code>textBaseline</code>.  填充文字當前使用<code>fillStyle</code>，而<code>strokeStyle</code>則被忽略</p>
 
-<div class="note"><strong>注意：</strong>這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分.</div>
+<div class="note">這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分.</div>
 
 <pre>void fillText(
    in DOMString textToDraw,
@@ -160,21 +158,21 @@ ctx.font = "20pt Arial";</pre>
 
 <p>測量文字。返回一個物件包含了寬度，像素值，所指定的文字會以當前的文字樣式繪製。</p>
 
-<div class="note"><strong>注意：</strong> 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是HTML 5標準的一部分。</div>
+<div class="note">這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是HTML 5標準的一部分。</div>
 
 <pre class="eval">nsIDOMTextMetrics measureText(
   in DOMString textToMeasure
 );
 </pre>
 
-<h6 id="Parameters_2">參數</h6>
+<h4 id="Parameters_2">參數</h4>
 
 <dl>
  <dt><code>textToMeasure</code></dt>
  <dd>該字串的像素值。</dd>
 </dl>
 
-<h6 id="Return_value">返回值</h6>
+<h4 id="Return_value">返回值</h4>
 
 <p><a href="/nsIDOMTextMetrics"><code>nsIDOMTextMetrics</code></a>物件的<code>width</code>屬性在繪製時會將數字設定給CSS 的像素值寬度。</p>
 
@@ -191,14 +189,14 @@ ctx.font = "20pt Arial";</pre>
 );
 </pre>
 
-<h6 id="Parameters">參數</h6>
+<h4 id="Parameters">參數</h4>
 
 <dl>
  <dt><code>textToDraw</code></dt>
  <dd>將文字繪製到文本。</dd>
 </dl>
 
-<h6 id="Example">範例</h6>
+<h4 id="Example">範例</h4>
 
 <pre class="brush: js">ctx.translate(10, 50);
 ctx.fillStyle = "Red";
@@ -220,18 +218,18 @@ ctx.mozDrawText("Sample String");
 );
 </pre>
 
-<h6 id="Parameters_2">參數</h6>
+<h4 id="Parameters_2">參數</h4>
 
 <dl>
  <dt><code>textToMeasure</code></dt>
  <dd>字串的寬度像素值</dd>
 </dl>
 
-<h6 id="Return_value">返回值</h6>
+<h4 id="Return_value">返回值</h4>
 
 <p>文字的寬度像素值</p>
 
-<h6 id="Example_2">範例</h6>
+<h4 id="Example_2">範例</h4>
 
 <pre class="brush: js">var text = "Sample String";
 var width = ctx.canvas.width;
@@ -251,14 +249,14 @@ ctx.mozDrawText(text);
 );
 </pre>
 
-<h6 id="Parameters_3">參數</h6>
+<h4 id="Parameters_3">參數</h4>
 
 <dl>
  <dt><code>textToPath</code></dt>
  <dd>為當前的文字路徑加上框線</dd>
 </dl>
 
-<h6 id="Example_3">Example</h6>
+<h4 id="Example_3">Example</h4>
 
 <pre class="brush: js">ctx.fillStyle = "green";
 ctx.strokeStyle = "black";
@@ -279,7 +277,7 @@ ctx.stroke()
 );
 </pre>
 
-<h6 id="Parameters_4">參數</h6>
+<h4 id="Parameters_4">參數</h4>
 
 <dl>
  <dt><code>textToDraw</code></dt>
@@ -288,7 +286,7 @@ ctx.stroke()
  <dd>如果參數是 <code>true</code>（真值），文字會沿著指定路徑繪製。如果 <code>false</code>（假值），這個文字則會加入到路徑之中，再沿著當前路徑繪製。</dd>
 </dl>
 
-<h6 id="Remarks">備註</h6>
+<h4 id="Remarks">備註</h4>
 
 <p>字體不會沿著路徑曲線縮放或變形，反而在彎曲路徑下，字體每次計算都會當成是直線在處理。這可以用來建立一些特殊的效果。</p>
 

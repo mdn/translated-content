@@ -20,8 +20,7 @@ translation_of: Web/API/Document/createElement
  <dt><code>tagName</code></dt>
  <dd>一個指定類型給所創建的元素的字串。{{domxref("Node.nodeName", "nodeName")}} 創建的元素由 <code>tagName</code> 的值初始，不要使用吻合名稱（例如 "html:a"）。當該方法在 HTML 文件中被調用時，<code>createElement()</code> 會先將 <code>tagName</code> 轉化為小寫後再創建元素。在 Firefox、Opera 和 Chrome，<code>createElement(null)</code> 與 <code>createElement("null")</code> 作用相同。</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd>選擇性 <code>ElementCreationOptions</code> 物件包含一個屬性 <code>is</code>，它的值是先前使用<code>customElements.define()</code> 所定義的自定義元素的標籤名稱。為了與以前的 <a href="https://www.w3.org/TR/custom-elements/">自定義元素規範</a> 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">擴展原生 HTML 元素</a> 。</dd>
- <dd>新元素將被賦予一個 <code>is</code> 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。</dd>
+ <dd>選擇性 <code>ElementCreationOptions</code> 物件包含一個屬性 <code>is</code>，它的值是先前使用<code>customElements.define()</code> 所定義的自定義元素的標籤名稱。為了與以前的 <a href="https://www.w3.org/TR/custom-elements/">自定義元素規範</a> 相容，一些瀏覽器將允許你在此傳遞一個字串而非物件，其字串的值就是自定義元件的標籤名稱。了解更多訊息以及如何使用此參數，可以參閱 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">擴展原生 HTML 元素</a>。新元素將被賦予一個 <code>is</code> 屬性，其值就是自定義元素的標籤名稱。自定義元素算是實驗中的功能，因此目前只作用於部分瀏覽器中。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>

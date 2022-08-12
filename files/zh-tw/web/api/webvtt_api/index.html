@@ -10,8 +10,6 @@ original_slug: Web/API/Web_Video_Text_Tracks_Format
 
 <p>WebVTT 的 MIME Type 為 <code>text/vtt</code>。</p>
 
-<p> </p>
-
 <h2 id="WebVTT_文本">WebVTT 文本</h2>
 
 <p>WebVTT 檔的結構中，有兩項必備資訊、四項選用資訊。</p>
@@ -512,23 +510,18 @@ Third
  </tbody>
 </table>
 
-<p> </p>
-
 <h3 id="文字內容中的標籤">文字內容中的標籤</h3>
 
 <p>有很多標籤（例如 <code>&lt;bold&gt;</code>）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 <code>chapters</code> 時，其中所用的 WebVTT  檔案裡就不能使用標籤。</p>
 
-<ul>
- <li><strong>時間標籤</strong>
+<dl>
+ <dt><strong>時間標籤</strong></dt>
+ <dd>時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。<em>當前文字（active text）</em> 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比<em>當前文字</em> 早的文字都稱為<em>先前文字（previous text）</em> ，而晚於<em>當前文字</em> 的便稱為<em>未來文字（future text）</em> 。如此便可做出卡拉OK字幕效果</dd>
+</dl>
 
-  <ul>
-   <li>時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。<em>當前文字（active text）</em> 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比<em>當前文字</em> 早的文字都稱為<em>先前文字（previous text）</em> ，而晚於<em>當前文字</em> 的便稱為<em>未來文字（future text）</em> 。如此便可做出卡拉OK字幕效果</li>
-  </ul>
+<h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
-
-  <pre>1
+<pre>1
 00:16.500 --&gt; 00:18.500
 When the moon &lt;00:17.500&gt;hits your eye
 
@@ -539,107 +532,76 @@ Like a &lt;00:19.000&gt;big-a &lt;00:19.500&gt;pizza &lt;00:20.000&gt;pie
 1
 00:00:20.500 --&gt; 00:00:21.500
 That's &lt;00:00:21.000&gt;amore
-      </pre>
-  </div>
- </li>
-</ul>
-
-<p> </p>
+</pre>
 
 <p>以下則需要開頭標籤與結束標籤（例如 <code>&lt;b&gt;text&lt;/b&gt;</code>）。</p>
 
-<ul>
- <li><strong>Class 標籤</strong>（<code>&lt;c&gt;&lt;/c&gt;</code>）
+<dl>
+  <dt><strong>Class 標籤</strong>（<code>&lt;c&gt;&lt;/c&gt;</code>）</dt>
+  <dd>以 CSS 類別為該段文字設定樣式</dd>
+</dl>
 
-  <ul>
-   <li>以 CSS 類別為該段文字設定樣式</li>
-  </ul>
+<h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
+<pre>&lt;c.classname&gt;text&lt;/c&gt;</pre>
 
-  <pre>&lt;c.classname&gt;text&lt;/c&gt;</pre>
-  </div>
- </li>
- <li><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)
-  <ul>
-   <li>Italicize the contained text.</li>
-  </ul>
+<dl>
+  <dt><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)</dt>
+  <dd>Italicize the contained text.</dd>
+</dl>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
+<h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
 
-  <pre>&lt;i&gt;text&lt;/i&gt;</pre>
-  </div>
- </li>
- <li><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)
-  <ul>
-   <li>Bold the contained text.</li>
-  </ul>
+<pre>&lt;i&gt;text&lt;/i&gt;</pre>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
+<dl>
+  <dt><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)</dt>
+  <dd>Bold the contained text.</dd>
+</dl>
 
-  <pre>&lt;b&gt;text&lt;/b&gt;</pre>
-  </div>
- </li>
- <li><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)
-  <ul>
-   <li>Underline the contained text.</li>
-  </ul>
+<h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
+<pre>&lt;b&gt;text&lt;/b&gt;</pre>
 
-  <pre>&lt;u&gt;text&lt;/u&gt;</pre>
-  </div>
- </li>
- <li><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)
-  <ul>
-   <li>Used with ruby text tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</li>
-  </ul>
+<dl>
+  <dt><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)</dt>
+  <dd>Underline the contained text.</dd>
+</dl>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
+<h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
 
-  <pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
-  </div>
- </li>
- <li><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)
-  <ul>
-   <li>Used with ruby tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</li>
-  </ul>
+<pre>&lt;u&gt;text&lt;/u&gt;</pre>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
+<dl>
+  <dt><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)</dt>
+  <dd>Used with ruby text tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</dd>
+</dl>
 
-  <pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
-  </div>
- </li>
- <li><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)
-  <ul>
-   <li>Similar to class tag, also used to style the contained text using CSS.</li>
-  </ul>
+<h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
 
-  <div style="margin-left: 30px;">
-  <h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
+<pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
 
-  <pre>&lt;v Bob&gt;text&lt;/v&gt;</pre>
-  </div>
- </li>
-</ul>
+<dl>
+  <dt><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)</dt>
+  <dd>Used with ruby tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</dd>
+</dl>
 
-<p> </p>
+<h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
+
+<pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+
+<dl>
+  <dt><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)</dt>
+  <dd>Similar to class tag, also used to style the contained text using CSS.</dd>
+</dl>
+
+<h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
+
+<pre>&lt;v Bob&gt;text&lt;/v&gt;</pre>
 
 <h2 id="瀏覽器支援">瀏覽器支援</h2>
 
-<h3><code>VTTCue</code> interface</h3>
-
-{{Compat("api.VTTCue", 0)}}
-
-<h3><code>TextTrack</code> interface</h3>
-
-{{Compat("api.TextTrack", 0)}}
+{{Compat}}
 
 <h2 id="規格">規格</h2>
 

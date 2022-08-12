@@ -133,7 +133,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
 );
 </pre>
 
-<h6 id="Parameters">參數</h6>
+<h4 id="Parameters">參數</h4>
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
@@ -142,7 +142,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
  <dd>解釋連線關閉原因的人類可讀字串，字串必不可大於 123 個 UTF-8 字符。</dd>
 </dl>
 
-<h6 id="可丟例外">可丟例外</h6>
+<h4 id="可丟例外">可丟例外</h4>
 
 <dl>
  <dt><code>INVALID_ACCESS_ERR</code></dt>
@@ -168,14 +168,14 @@ void send(
 );
 </pre>
 
-<h6 id="Parameters">參數</h6>
+<h4 id="Parameters">參數</h4>
 
 <dl>
  <dt><code>data</code></dt>
  <dd>要傳送至伺服器的字串。</dd>
 </dl>
 
-<h6 id="可丟例外_2">可丟例外</h6>
+<h4 id="可丟例外_2">可丟例外</h4>
 
 <dl>
  <dt><code>INVALID_STATE_ERR</code></dt>
@@ -184,9 +184,9 @@ void send(
  <dd>資料為帶有未配對代理對的字串。</dd>
 </dl>
 
-<h6 id="註釋">註釋</h6>
+<h4 id="註釋">註釋</h4>
 
-<div class="geckoVersionNote">
+<div class="note">
 <p>Gecko <code>send()</code> 方法的實作與 Gecko 6.0 的規範有差別。Gecko 回傳一個 <code>boolean</code> 以表示連線是否仍處於開啟狀態（且資料成功隊列／傳輸）。另外，此時此刻，Gecko 不支援 <code><a href="/zh_tw/JavaScript_typed_arrays/ArrayBuffer">ArrayBuffer</a></code> 或 {{ domxref("Blob") }} 作為資料形態。</p>
 </div>
 

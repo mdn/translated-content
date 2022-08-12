@@ -10,6 +10,8 @@ tags:
   - 網格布局
 translation_of: Web/CSS/CSS_Grid_Layout
 ---
+{{CSSRef}}
+
 <p><strong>CSS 格線佈局</strong>長於把頁面的主要區域分離、或是在 HTML 原生語法構建的區域間，定義大小、位置、層次等方面的關聯。</p>
 
 <p>格線佈局使作者能夠對齊元素為行和列，就像表格一樣，。然而，格線佈局可以更輕易的達成比一般表格更多元化的排版。例如，一個網格容器的子元素可以定位自己和層重疊，類似於CSS定位元素。</p>
@@ -18,7 +20,6 @@ translation_of: Web/CSS/CSS_Grid_Layout
 
 <p>以下示例展示了一個三列軌道格線，其中創建的行數最小為 100 像素，最大為 auto。Items 已經使用基於線放置在網格的位置上。</p>
 
-<div id="example">
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
 .wrapper {
@@ -80,14 +81,12 @@ translation_of: Web/CSS/CSS_Grid_Layout
 }
 </pre>
 
-<p>{{ EmbedLiveSample('example', '500', '440') }}</p>
-</div>
+<p>{{ EmbedLiveSample('基本示例', '500', '440') }}</p>
 
 <h2 id="參考">參考</h2>
 
 <h3 id="CSS_屬性">CSS 屬性</h3>
 
-<div class="index">
 <ul>
  <li>{{cssxref("grid-template-columns")}}</li>
  <li>{{cssxref("grid-template-rows")}}</li>
@@ -108,29 +107,23 @@ translation_of: Web/CSS/CSS_Grid_Layout
  <li>{{cssxref("grid-column-gap")}}</li>
  <li>{{cssxref("grid-gap")}}</li>
 </ul>
-</div>
 
 <h3 id="CSS_函式">CSS 函式</h3>
 
-<div class="index">
 <ul>
  <li>{{cssxref("repeat", "repeat()")}}</li>
  <li>{{cssxref("minmax", "minmax()")}}</li>
  <li>{{cssxref("fit-content", "fit-content()")}}</li>
 </ul>
-</div>
 
 <h3 id="CSS_資料型別">CSS 資料型別</h3>
 
-<div class="index">
 <ul>
  <li>{{cssxref("&lt;flex&gt;")}}</li>
 </ul>
-</div>
 
 <h3 id="詞匯表條目">詞匯表條目</h3>
 
-<div class="index">
 <ul>
  <li><a href="/zh-TW/docs/Glossary/Grid">格線</a></li>
  <li><a href="/zh-TW/docs/Glossary/Grid_Lines">網格線</a></li>
@@ -142,11 +135,9 @@ translation_of: Web/CSS/CSS_Grid_Layout
  <li><a href="/zh-TW/docs/Glossary/Grid_Rows">格線行</a></li>
  <li><a href="/zh-TW/docs/Glossary/Grid_Column">格線列</a></li>
 </ul>
-</div>
 
 <h2 id="指引">指引</h2>
 
-<div class="index">
 <ul>
  <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">格線布局的基本概念</a></li>
  <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">格線布局與其它布局的關係</a></li>
@@ -162,7 +153,6 @@ translation_of: Web/CSS/CSS_Grid_Layout
  <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 格線與漸進增強</a></li>
  <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_">用 CSS 格線實做常見排版</a></li>
 </ul>
-</div>
 
 <h2 id="外部資源">外部資源</h2>
 
@@ -177,61 +167,3 @@ translation_of: Web/CSS/CSS_Grid_Layout
 <h2 id="規範">規範</h2>
 
 {{Specifications}}
-
-<section id="Quick_links">
-<ol>
- <li><a href="/zh-TW/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><a href="/zh-TW/docs/Web/CSS/Reference"><strong>CSS 參考</strong></a></li>
- <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout">CSS 格線布局</a></li>
- <li data-default-state="open"><a href="#"><strong>參考</strong></a>
-  <ol>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">格線布局基本概念</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">與其他布局的關系</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">基於行展示的位置</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">格線模板區域</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">使用指定網格線布局</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">自動放置格線布局</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">格線布局中的框對齊</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">格線，邏輯值和寫入模式</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS 格線布局和輔助功能</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS 格線布局與漸進式增強</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用格線實現常見的布局</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
-  <ol>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-area">網格</a> </li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-area">網格區域</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-auto-columns">網格自動列</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-auto-flow">網格自動流</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-auto-rows">網格自動行</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-column">網格列</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-column-end">結束網格列</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-column-gap">網格柱間隙</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-column-start">啟動網格</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-gap">網格間隙</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-row">網格行</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-row-end">結束網格行</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-row-gap">網格行間隙</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-row-start">啟動網格行</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-template">網格模板</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-template-areas">網格模板區域</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-template-columns">網格模板的列</a></li>
-   <li><a href="/zh-TW/docs/Web/CSS/grid-template-rows">網格模板的行</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><a href="#"><strong>詞匯表</strong></a>
-  <ol>
-   <li><a href="/zh-TW/docs/Glossary/Grid">格線</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_lines">網格線</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_tracks">網格軌道</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_cell">網格單元格</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_areas">網格區域</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Gutters">间距</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_Axis">網格軸</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_rows">網格行</a></li>
-   <li><a href="/zh-TW/docs/Glossary/Grid_column">網格列</a></li>
-  </ol>
- </li>
-</ol>
-</section>
