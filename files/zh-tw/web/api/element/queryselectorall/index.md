@@ -16,7 +16,7 @@ elementList = baseElement.querySelectorAll(selectors);
 ```
 
 - `elementList`
-  - : is a non-live node list \[`NodeList[elements] ]` of [element](/en-US/docs/DOM/element) objects.
+  - : is a non-live node list `NodeList[elements]` of [element](/en-US/docs/DOM/element) objects.
 - `baseElement`
   - : is an [element](/en-US/docs/DOM/element) object.
 - `selectors`
