@@ -4,7 +4,7 @@ slug: Web/API/AbortSignal/timeout
 ---
 {{APIRef("DOM")}}
 
-静态方阿飞 **`AbortSignal.timeout()`** 返回一个指定时间后将自动中止的 {{domxref("AbortSignal")}}。
+静态方法 **`AbortSignal.timeout()`** 返回一个指定时间后将自动中止的 {{domxref("AbortSignal")}}。
 
 信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的“停止”操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
 
