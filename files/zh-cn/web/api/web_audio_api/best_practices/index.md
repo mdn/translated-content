@@ -1,13 +1,6 @@
 ---
 title: Web Audio API 最佳实践
 slug: Web/API/Web_Audio_API/Best_practices
-tags:
-  - Web Audio API
-  - 指导
-  - 最佳实践
-  - 音频
-translation_of: Web/API/Web_Audio_API/Best_practices
-original_slug: Web/API/Web_Audio_API/最佳实践
 ---
 {{apiref("Web Audio API")}}
 

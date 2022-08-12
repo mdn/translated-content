@@ -1,11 +1,6 @@
 ---
 title: WebGLUniformLocation
 slug: Web/API/WebGLUniformLocation
-tags:
-  - API
-  - WebGL
-  - WebGLUniformLocation
-translation_of: Web/API/WebGLUniformLocation
 ---
 {{APIRef("WebGL")}}
 

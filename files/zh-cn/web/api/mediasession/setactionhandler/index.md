@@ -1,7 +1,6 @@
 ---
 title: MediaSession.setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
-translation_of: Web/API/MediaSession/setActionHandler
 ---
 {{APIRef("Media Session API")}}{{SeeCompatTable}}
 

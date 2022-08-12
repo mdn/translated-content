@@ -1,7 +1,6 @@
 ---
 title: TimeRanges
 slug: Web/API/TimeRanges
-translation_of: Web/API/TimeRanges
 ---
 {{APIRef("DOM")}}`TimeRanges` 接口用来表示一组时间范围，主要目的是跟踪供{{HTMLElement("audio")}} 和{{HTMLElement("video")}} 元素加载使用的媒体哪些部分已经被缓冲。
 

@@ -1,7 +1,6 @@
 ---
 title: credentials
 slug: Web/API/Navigator/credentials
-translation_of: Web/API/Navigator/credentials
 ---
 {{SeeCompatTable}}{{APIRef("")}}
 

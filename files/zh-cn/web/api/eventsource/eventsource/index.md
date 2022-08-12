@@ -1,12 +1,6 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
-tags:
-  - API
-  - EventSource
-  - Server-sent events
-translation_of: Web/API/EventSource/EventSource
-original_slug: Server-sent_events/EventSource/EventSource
 ---
 {{APIRef('WebSockets API')}}
 

@@ -1,21 +1,6 @@
 ---
 title: 交易过程的基本概念
 slug: Web/API/Payment_Request_API/Concepts
-tags:
-  - API
-  - Apple Pay
-  - 中间状态
-  - 交易
-  - 付款方
-  - 付款方式
-  - 应用程序接口
-  - 指南
-  - 支付
-  - 支付请求 API
-  - 收款方
-  - 贸易
-translation_of: Web/API/Payment_Request_API/Concepts
-original_slug: Web/API/支付_请求_接口/Concepts
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
 

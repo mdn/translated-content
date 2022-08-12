@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.vertexAttrib[1234]f[v]()
 slug: Web/API/WebGLRenderingContext/vertexAttrib
-translation_of: Web/API/WebGLRenderingContext/vertexAttrib
 ---
 {{APIRef("WebGL")}}
 

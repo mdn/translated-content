@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onpointerup
 slug: Web/API/Element/pointerup_event
-translation_of: Web/API/GlobalEventHandlers/onpointerup
-original_slug: Web/API/GlobalEventHandlers/onpointerup
 ---
 {{ApiRef("HTML DOM")}}
 

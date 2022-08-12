@@ -1,12 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - FileReader
-  - 参考
-  - 构造方法
-translation_of: Web/API/FileReader/FileReader
 ---
 使用 **`FileReader()`** 构造器去创建一个新的 FileReader.
 

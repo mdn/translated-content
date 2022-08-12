@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
-translation_of: Web/API/RTCPeerConnection/iceConnectionState
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

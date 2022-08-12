@@ -1,7 +1,6 @@
 ---
 title: StorageManager
 slug: Web/API/StorageManager
-translation_of: Web/API/StorageManager
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 

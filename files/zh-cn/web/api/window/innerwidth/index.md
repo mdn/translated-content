@@ -1,12 +1,6 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - innerWidth
-translation_of: Web/API/Window/innerWidth
 ---
 {{APIRef}}
 

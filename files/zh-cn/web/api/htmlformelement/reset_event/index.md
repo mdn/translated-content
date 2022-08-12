@@ -1,7 +1,6 @@
 ---
 title: reset
 slug: Web/API/HTMLFormElement/reset_event
-translation_of: Web/API/HTMLFormElement/reset_event
 ---
 当表单被重置时触发`reset`事件。
 

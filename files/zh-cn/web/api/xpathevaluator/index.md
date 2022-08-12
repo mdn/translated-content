@@ -1,19 +1,6 @@
 ---
 title: XPathEvaluator
 slug: Web/API/XPathEvaluator
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Document
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - XML
-  - XPath
-  - XPathEvaluator
-translation_of: Web/API/XPathEvaluator
 ---
 {{APIRef("DOM XPath")}}
 

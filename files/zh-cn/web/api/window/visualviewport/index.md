@@ -1,7 +1,6 @@
 ---
 title: Window.visualViewport
 slug: Web/API/Window/visualViewport
-translation_of: Web/API/Window/visualViewport
 ---
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 

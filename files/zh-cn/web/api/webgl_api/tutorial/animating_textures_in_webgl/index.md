@@ -1,9 +1,6 @@
 ---
 title: 动画纹理
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 {{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 

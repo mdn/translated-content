@@ -1,7 +1,6 @@
 ---
 title: ImageData.height
 slug: Web/API/ImageData/height
-translation_of: Web/API/ImageData/height
 ---
 {{APIRef("Canvas API")}}
 

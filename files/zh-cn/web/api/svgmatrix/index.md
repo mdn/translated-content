@@ -1,7 +1,6 @@
 ---
 title: SVGMatrix
 slug: Web/API/SVGMatrix
-translation_of: Web/API/SVGMatrix
 ---
 {{APIRef("SVG")}}{{deprecated_header}}
 

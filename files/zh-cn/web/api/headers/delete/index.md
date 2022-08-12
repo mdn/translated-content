@@ -1,7 +1,6 @@
 ---
 title: Headers.delete()
 slug: Web/API/Headers/delete
-translation_of: Web/API/Headers/delete
 ---
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 

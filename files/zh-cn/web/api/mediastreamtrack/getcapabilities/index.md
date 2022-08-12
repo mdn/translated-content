@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.getCapabilities()
 slug: Web/API/MediaStreamTrack/getCapabilities
-tags:
-  - API
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - getCapabilities
-  - 媒体 API
-translation_of: Web/API/MediaStreamTrack/getCapabilities
 ---
 {{APIRef("Media Capture and Streams")}}
 

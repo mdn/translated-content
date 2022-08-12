@@ -1,16 +1,6 @@
 ---
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
-tags:
-  - API
-  - DedicatedWorkerGlobalScope
-  - Interface
-  - Reference
-  - Web Workers
-  - Workers
-  - 参考
-  - 接口
-translation_of: Web/API/DedicatedWorkerGlobalScope
 ---
 {{APIRef("Web Workers API")}}
 

@@ -1,9 +1,6 @@
 ---
 title: Touch.rotationAngle
 slug: Web/API/Touch/rotationAngle
-tags:
-  - touch
-translation_of: Web/API/Touch/rotationAngle
 ---
 {{ ApiRef() }}
 

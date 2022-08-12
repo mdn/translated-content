@@ -1,16 +1,6 @@
 ---
 title: WritableStreamDefaultWriter.close()
 slug: Web/API/WritableStreamDefaultWriter/close
-page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - close
-translation_of: Web/API/WritableStreamDefaultWriter/close
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

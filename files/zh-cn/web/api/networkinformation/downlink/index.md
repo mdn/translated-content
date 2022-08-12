@@ -1,7 +1,6 @@
 ---
 title: NetworkInformation.downlink
 slug: Web/API/NetworkInformation/downlink
-translation_of: Web/API/NetworkInformation/downlink
 ---
 {{SeeCompatTable}}{{APIRef("Network Information API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming
 slug: Web/API/PerformanceResourceTiming
-translation_of: Web/API/PerformanceResourceTiming
 ---
 {{APIRef("Resource Timing API")}}PerformanceResourceTiming 接口可以检索和分析有关加载应用程序资源的详细网络计时数据。 应用程序可以使用 timing 指标来确定获取特定资源所需的时间长度，例如{{domxref("XMLHttpRequest")}}，{{SVGElement("SVG","SVG element")}}，image 或 script。这个接口使用{{domxref("DOMHighResTimeStamp","high-resolution timestamps")}} 属性创建加载资源时间轴，用于网络事件，例如重定向开始 ( redirect start ) 和结束时间，获取开始 ( fetch start )，DNS 查找开始 ( DNS lookup start ) 和结束时间，响应开始 ( response start ) 和结束时间等。此外，接口扩展{{domxref("PerformanceEntry")}}与其他属性，这些属性提供有关获取资源大小的数据以及初始化时获取的资源类型。
 

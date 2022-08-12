@@ -1,7 +1,6 @@
 ---
 title: 在 IE6 中使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
-translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6
 ---
 [XMLHttpRequest](/zh-CN/DOM/XMLHttpRequest) 在 Internet Explorer 5.0 上作为 ActiveX 控件第一次被 Microsoft 引入。然而，在 IE7 和其它浏览器上，XMLHttpRequest 作为本地 JavaScript 对象而存在。
 

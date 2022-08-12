@@ -1,12 +1,6 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL
-tags:
-  - API
-  - URL
-  - URL API
-  - 方法
-translation_of: Web/API/URL/revokeObjectURL
 ---
 {{ApiRef("URL")}}
 

@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.pause()
 slug: Web/API/MediaRecorder/pause
-translation_of: Web/API/MediaRecorder/pause
 ---
 {{APIRef("MediaStream Recording")}}
 

@@ -1,8 +1,6 @@
 ---
 title: VisualViewport.onscroll
 slug: Web/API/VisualViewport/scroll_event
-translation_of: Web/API/VisualViewport/onscroll
-original_slug: Web/API/VisualViewport/onscroll
 ---
 {{APIRef("Visual Viewport")}}{{ SeeCompatTable() }}
 

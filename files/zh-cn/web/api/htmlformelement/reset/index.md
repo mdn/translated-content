@@ -1,7 +1,6 @@
 ---
 title: form.reset
 slug: Web/API/HTMLFormElement/reset
-translation_of: Web/API/HTMLFormElement/reset
 ---
 {{ ApiRef() }}
 

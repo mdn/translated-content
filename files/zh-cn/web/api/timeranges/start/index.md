@@ -1,7 +1,6 @@
 ---
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
-translation_of: Web/API/TimeRanges/start
 ---
 {{APIRef("DOM")}}
 

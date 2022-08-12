@@ -1,7 +1,6 @@
 ---
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
-translation_of: Web/API/MediaSource/addSourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}
 

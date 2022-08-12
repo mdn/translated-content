@@ -1,11 +1,6 @@
 ---
 title: CSSValueList.length
 slug: Web/API/CSSValueList/length
-tags:
-  - API
-  - CSS
-  - CSSValueList
-translation_of: Web/API/CSSValueList/length
 ---
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 

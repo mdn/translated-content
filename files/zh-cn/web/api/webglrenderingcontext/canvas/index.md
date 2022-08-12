@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-tags:
-  - WebGL
-  - WebGLRenderingContext
-  - 只读
-  - 属性
-translation_of: Web/API/WebGLRenderingContext/canvas
 ---
 {{APIRef("WebGL")}}
 

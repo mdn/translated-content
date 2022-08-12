@@ -1,19 +1,6 @@
 ---
 title: XMLHttpRequest.getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
-tags:
-  - API
-  - HTTP 协议
-  - XHR 头
-  - XHR 请求
-  - XMLHttpRequest
-  - getResponseHeader
-  - HTTP 头
-  - 引用
-  - 得到响应头
-  - 报文
-  - 方法
-translation_of: Web/API/XMLHttpRequest/getResponseHeader
 ---
 {{APIRef('XMLHttpRequest')}}
 

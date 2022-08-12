@@ -1,7 +1,6 @@
 ---
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
-translation_of: Web/API/DataTransferItem/getAsString
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

@@ -1,15 +1,6 @@
 ---
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
-page-type: web-api-interface
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
-translation_of: Web/API/ByteLengthQueuingStrategy
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 

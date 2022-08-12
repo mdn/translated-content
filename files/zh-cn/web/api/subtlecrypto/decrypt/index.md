@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.decrypt()
 slug: Web/API/SubtleCrypto/decrypt
-translation_of: Web/API/SubtleCrypto/decrypt
 ---
 {{APIRef("Web Crypto API")}}
 

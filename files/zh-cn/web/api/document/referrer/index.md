@@ -1,12 +1,6 @@
 ---
 title: document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Document
-  - 参考
-  - 属性
-translation_of: Web/API/Document/referrer
 ---
 {{APIRef("DOM")}}
 

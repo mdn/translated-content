@@ -1,7 +1,6 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
-translation_of: Web/API/Navigator/serviceWorker
 ---
 {{APIRef("Service Workers API")}}
 

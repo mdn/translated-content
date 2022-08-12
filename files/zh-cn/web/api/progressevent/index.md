@@ -1,12 +1,6 @@
 ---
 title: ProgressEvent
 slug: Web/API/ProgressEvent
-tags:
-  - API
-  - 参考
-  - 接口
-  - 进度事件
-translation_of: Web/API/ProgressEvent
 ---
 {{APIRef("DOM Events")}}
 

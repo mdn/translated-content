@@ -1,7 +1,6 @@
 ---
 title: srcObject
 slug: Web/API/HTMLMediaElement/srcObject
-translation_of: Web/API/HTMLMediaElement/srcObject
 ---
 {{SeeCompatTable}}{{APIRef("")}}
 

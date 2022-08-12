@@ -1,7 +1,6 @@
 ---
 title: DeviceOrientationEvent.beta
 slug: Web/API/DeviceOrientationEvent/beta
-translation_of: Web/API/DeviceOrientationEvent/beta
 ---
 {{ ApiRef("Device Orientation Events") }}
 

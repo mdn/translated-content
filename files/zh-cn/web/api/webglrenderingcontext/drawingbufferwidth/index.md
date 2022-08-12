@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.drawingBufferWidth
 slug: Web/API/WebGLRenderingContext/drawingBufferWidth
-tags:
-  - API
-  - WebGL
-  - WebGLRenderingContext
-  - 参考
-  - 只读
-  - 属性
-translation_of: Web/API/WebGLRenderingContext/drawingBufferWidth
 ---
 {{APIRef("WebGL")}}
 

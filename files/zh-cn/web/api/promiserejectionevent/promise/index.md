@@ -1,7 +1,6 @@
 ---
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
-translation_of: Web/API/PromiseRejectionEvent/promise
 ---
 {{APIRef("HTML DOM") }}
 

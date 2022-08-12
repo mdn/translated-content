@@ -1,13 +1,6 @@
 ---
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-translation_of: Web/API/Document/createDocumentFragment
 ---
 {{ ApiRef("DOM") }}
 

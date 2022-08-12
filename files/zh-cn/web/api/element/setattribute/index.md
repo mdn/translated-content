@@ -1,15 +1,6 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-tags:
-  - API
-  - DOM
-  - NeedsSpecTable
-  - 元素
-  - 参考
-  - 属性
-  - 方法
-translation_of: Web/API/Element/setAttribute
 ---
 {{APIRef("DOM")}}
 

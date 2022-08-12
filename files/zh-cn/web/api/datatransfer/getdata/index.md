@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
-translation_of: Web/API/DataTransfer/getData
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,14 +1,6 @@
 ---
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
-page-type: web-api-instance-method
-tags:
-  - API
-  - Element Lists
-  - HTMLCollection
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLCollection/namedItem
 ---
 {{APIRef("DOM")}}
 

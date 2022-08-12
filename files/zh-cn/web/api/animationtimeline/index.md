@@ -1,7 +1,6 @@
 ---
 title: AnimationTimeline
 slug: Web/API/AnimationTimeline
-translation_of: Web/API/AnimationTimeline
 ---
 {{ SeeCompatTable() }} {{ APIRef("Web Animations", "Web 动画")}}
 

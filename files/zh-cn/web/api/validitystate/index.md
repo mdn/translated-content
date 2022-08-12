@@ -1,13 +1,6 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - HTML DOM
-  - 接口
-  - 表单
-  - 输入
-translation_of: Web/API/ValidityState
 ---
 {{APIRef("HTML DOM")}}
 

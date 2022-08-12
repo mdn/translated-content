@@ -1,9 +1,6 @@
 ---
 title: MouseEvent.mozInputSource
 slug: Web/API/MouseEvent/mozInputSource
-tags:
-  - API
-translation_of: Web/API/MouseEvent/mozInputSource
 ---
 {{ APIRef() }}
 

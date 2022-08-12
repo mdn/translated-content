@@ -1,12 +1,6 @@
 ---
 title: DOMStringMap
 slug: Web/API/DOMStringMap
-tags:
-  - API
-  - DOM
-  - 参考
-  - 接口
-translation_of: Web/API/DOMStringMap
 ---
 {{ APIRef("HTML DOM") }}
 

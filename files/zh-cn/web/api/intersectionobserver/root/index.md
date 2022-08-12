@@ -1,7 +1,6 @@
 ---
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
-translation_of: Web/API/IntersectionObserver/root
 ---
 `root` 属性用来获取当前 `intersectionObserver` 实例的根元素。
 

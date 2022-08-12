@@ -1,12 +1,6 @@
 ---
 title: MIDIAccess
 slug: Web/API/MIDIAccess
-tags:
-  - API
-  - Web MIDI API
-  - 引用
-  - 接口
-translation_of: Web/API/MIDIAccess
 ---
 {{SeeCompatTable}}{{APIRef("Web MIDI API")}}
 

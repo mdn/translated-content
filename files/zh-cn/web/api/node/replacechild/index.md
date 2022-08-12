@@ -1,13 +1,6 @@
 ---
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - Node
-  - 参考
-  - 方法
-translation_of: Web/API/Node/replaceChild
 ---
 {{APIRef("DOM")}}
 

@@ -1,10 +1,6 @@
 ---
 title: Console.debug()
 slug: Web/API/Console/debug
-tags:
-  - 控制台
-  - 调试
-translation_of: Web/API/Console/debug
 ---
 {{APIRef("Console API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
-translation_of: Web/API/PerformanceEntry/duration
 ---
 {{APIRef("Performance Timeline API")}}
 

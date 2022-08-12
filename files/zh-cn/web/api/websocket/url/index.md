@@ -1,13 +1,6 @@
 ---
 title: WebSocket.url
 slug: Web/API/WebSocket/url
-tags:
-  - API
-  - Property
-  - Refrence
-  - Web API
-  - WebSocket
-translation_of: Web/API/WebSocket/url
 ---
 {{APIRef("Web Sockets API")}}
 

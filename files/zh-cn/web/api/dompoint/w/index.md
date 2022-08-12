@@ -1,7 +1,6 @@
 ---
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
-translation_of: Web/API/DOMPoint/w
 ---
 {{APIRef("DOM")}}
 

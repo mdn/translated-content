@@ -1,16 +1,6 @@
 ---
 title: Touch.target
 slug: Web/API/Touch/target
-tags:
-  - API
-  - DOM
-  - EventTarget
-  - TouchEvent
-  - touch
-  - 属性
-  - 移动设备
-  - 触摸
-translation_of: Web/API/Touch/target
 ---
 {{ APIRef("Touch Events") }}
 

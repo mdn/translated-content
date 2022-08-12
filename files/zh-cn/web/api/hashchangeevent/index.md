@@ -1,15 +1,6 @@
 ---
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
-tags:
-  - API
-  - Event
-  - HTML5
-  - HashChange
-  - 事件
-  - 参考
-  - 接口
-translation_of: Web/API/HashChangeEvent
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
-translation_of: Web/API/AudioTrack
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: ended 事件'
 slug: Web/API/HTMLMediaElement/ended_event
-translation_of: Web/API/HTMLMediaElement/ended_event
 ---
 {{APIRef("HTMLMediaElement")}}
 

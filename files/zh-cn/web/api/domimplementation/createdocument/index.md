@@ -1,7 +1,6 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
-translation_of: Web/API/DOMImplementation/createDocument
 ---
 {{ApiRef("DOM")}}
 

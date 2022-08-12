@@ -1,7 +1,6 @@
 ---
 title: Keyboard
 slug: Web/API/Keyboard
-translation_of: Web/API/Keyboard
 ---
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 

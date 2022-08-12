@@ -1,11 +1,6 @@
 ---
 title: Navigator.share
 slug: Web/API/Navigator/share
-tags:
-  - Navitator
-  - Share
-  - Web Share
-translation_of: Web/API/Navigator/share
 ---
 {{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-translation_of: Web/API/HTMLFormElement/elements
 ---
 小结
 

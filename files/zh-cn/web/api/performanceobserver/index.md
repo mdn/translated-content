@@ -1,16 +1,6 @@
 ---
 title: 性能监测对象
 slug: Web/API/PerformanceObserver
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - observers
-translation_of: Web/API/PerformanceObserver
 ---
 {{APIRef("Performance Timeline API")}}
 

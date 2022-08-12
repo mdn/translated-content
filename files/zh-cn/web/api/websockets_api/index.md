@@ -1,10 +1,6 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-tags:
-  - References
-  - WebSockets
-translation_of: Web/API/WebSockets_API
 ---
 {{DefaultAPISidebar("Websockets API")}}
 

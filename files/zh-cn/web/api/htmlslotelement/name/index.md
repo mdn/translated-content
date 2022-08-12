@@ -1,13 +1,6 @@
 ---
 title: HTMLSlotElement.name
 slug: Web/API/HTMLSlotElement/name
-tags:
-  - name
-  - 名称
-  - 属性
-  - 影子DOM
-  - 插槽
-translation_of: Web/API/HTMLSlotElement/name
 ---
 {{APIRef("Shadow DOM API")}}
 

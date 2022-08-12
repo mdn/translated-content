@@ -1,12 +1,6 @@
 ---
 title: Cross-global fetch usage
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-tags:
-  - Fetch
-  - 相对 URL
-  - 跨源
-  - 边缘情况
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 本文解释了在 fetch 时发生的边缘情况（以及潜在的其他 APIs 展示相同类型的资源检索行为）。当从“iframe”发起包含相对 url 的跨源 fetch 时，相对 url 用于针对当前全局位置而不是 iframe 的位置进行解析。
 

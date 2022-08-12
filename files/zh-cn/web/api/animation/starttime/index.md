@@ -1,8 +1,6 @@
 ---
 title: window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-translation_of: Web/API/Window/mozAnimationStartTime
-original_slug: Web/API/Window/mozAnimationStartTIme
 ---
 {{ ApiRef() }}
 

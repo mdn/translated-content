@@ -1,13 +1,6 @@
 ---
 title: TransformStream()
 slug: Web/API/TransformStream/TransformStream
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TransformStream
-translation_of: Web/api/TransformStream/TransformStream
 ---
 {{APIRef("Streams")}}
 

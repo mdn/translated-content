@@ -1,7 +1,6 @@
 ---
 title: HTMLDialogElement.show()
 slug: Web/API/HTMLDialogElement/show
-translation_of: Web/API/HTMLDialogElement/show
 ---
 {{ APIRef("HTML DOM") }} {{ SeeCompatTable() }}
 

@@ -1,7 +1,6 @@
 ---
 title: File.getAsText
 slug: Web/API/File/getAsText
-translation_of: Web/API/File/getAsText
 ---
 {{APIRef("File API")}}
 

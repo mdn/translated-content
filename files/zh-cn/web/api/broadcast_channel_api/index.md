@@ -1,7 +1,6 @@
 ---
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
-translation_of: Web/API/Broadcast_Channel_API
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 

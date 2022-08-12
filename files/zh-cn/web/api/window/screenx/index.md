@@ -1,7 +1,6 @@
 ---
 title: Window.screenX
 slug: Web/API/Window/screenX
-translation_of: Web/API/Window/screenX
 ---
 {{APIRef}}
 

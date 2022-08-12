@@ -1,7 +1,6 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
-translation_of: Web/API/CustomElementRegistry/upgrade
 ---
 {{APIRef("CustomElementRegistry")}}
 

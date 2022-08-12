@@ -1,7 +1,6 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
-translation_of: Web/API/CacheStorage/delete
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 

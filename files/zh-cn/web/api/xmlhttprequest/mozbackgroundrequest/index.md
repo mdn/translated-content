@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
-translation_of: Web/API/XMLHttpRequest/mozBackgroundRequest
 ---
 {{APIRef('XMLHttpRequest')}}
 

@@ -1,7 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-translation_of: Web/API/FileReader/readAsText
 ---
 {{APIRef("File API")}}
 

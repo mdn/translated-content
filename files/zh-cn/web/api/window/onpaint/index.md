@@ -1,7 +1,6 @@
 ---
 title: Window.onpaint
 slug: Web/API/Window/onpaint
-translation_of: Web/API/Window/onpaint
 ---
 {{ ApiRef() }}
 

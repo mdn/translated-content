@@ -1,7 +1,6 @@
 ---
 title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
-translation_of: Web/API/DOMParser/DOMParser
 ---
 **`DOMParser()`** 构造函数新建一个 [`DOMParser`](/en-US/docs/Web/API/DOMParser) 对象实例。
 

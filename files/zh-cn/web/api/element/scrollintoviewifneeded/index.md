@@ -1,14 +1,6 @@
 ---
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
-tags:
-  - API
-  - DOM
-  - 可视区域
-  - 方法
-  - 滚动
-  - 非标准
-translation_of: Web/API/Element/scrollIntoViewIfNeeded
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 

@@ -1,7 +1,6 @@
 ---
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
-translation_of: Web/API/ProgressEvent/lengthComputable
 ---
 {{APIRef("DOM Events")}}
 

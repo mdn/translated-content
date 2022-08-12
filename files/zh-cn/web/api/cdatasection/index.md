@@ -1,12 +1,6 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-tags:
-  - API
-  - DOM
-  - 参考
-  - 接口
-translation_of: Web/API/CDATASection
 ---
 {{APIRef("DOM")}}
 

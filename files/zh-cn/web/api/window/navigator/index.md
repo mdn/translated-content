@@ -1,12 +1,6 @@
 ---
 title: window.navigator
 slug: Web/API/Window/navigator
-tags:
-  - API
-  - Window
-  - 只读属性
-  - 属性
-translation_of: Web/API/Window/navigator
 ---
 {{ApiRef}}
 

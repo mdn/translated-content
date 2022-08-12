@@ -1,10 +1,6 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
-tags:
-  - 数据
-  - 文本
-translation_of: Web/API/Blob/text
 ---
 {{APIRef("File API")}}
 

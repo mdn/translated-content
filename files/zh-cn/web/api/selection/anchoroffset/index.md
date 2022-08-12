@@ -1,7 +1,6 @@
 ---
 title: Selection.anchorOffset
 slug: Web/API/Selection/anchorOffset
-translation_of: Web/API/Selection/anchorOffset
 ---
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 

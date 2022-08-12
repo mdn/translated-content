@@ -1,11 +1,6 @@
 ---
 title: WebGLTexture
 slug: Web/API/WebGLTexture
-tags:
-  - API
-  - Reference
-  - WebGL
-translation_of: Web/API/WebGLTexture
 ---
 **WebGLTexture**接口是[WebGL API](/en-US/docs/Web/API/WebGL_API)的一部分，为不透明的纹理对象提供储存和状态等纹理操作。
 

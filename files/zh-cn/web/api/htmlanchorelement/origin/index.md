@@ -1,10 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.origin
 slug: Web/API/HTMLAnchorElement/origin
-tags:
-  - HTMLHyperlinkElementUtils.origin
-translation_of: Web/API/HTMLHyperlinkElementUtils/origin
-original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
 {{APIRef("URL API")}}
 

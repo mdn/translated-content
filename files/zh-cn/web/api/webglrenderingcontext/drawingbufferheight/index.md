@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.drawingBufferHeight
 slug: Web/API/WebGLRenderingContext/drawingBufferHeight
-tags:
-  - API
-  - WebGL
-  - WebGLRenderingContext
-  - 参考
-  - 只读
-  - 属性
-translation_of: Web/API/WebGLRenderingContext/drawingBufferHeight
 ---
 {{APIRef("WebGL")}}
 

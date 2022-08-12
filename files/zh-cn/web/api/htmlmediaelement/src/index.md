@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
-translation_of: Web/API/HTMLMediaElement/src
 ---
 {{APIRef("HTML DOM")}}**`HTMLMediaElement.src`**属性反映 HTML 媒体元素的`src` 属性的值，该属性指示要在元素中使用的媒体资源的 URL。
 

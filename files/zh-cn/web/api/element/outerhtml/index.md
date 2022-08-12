@@ -1,11 +1,6 @@
 ---
 title: element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - You Don't Need jQuery &  http://youmightnotneedjquery.com/
-  - insertAdjacentHTML
-  - outerHTML
-translation_of: Web/API/Element/outerHTML
 ---
 {{APIRef("DOM")}}
 

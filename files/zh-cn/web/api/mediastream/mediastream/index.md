@@ -1,7 +1,6 @@
 ---
 title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
-translation_of: Web/API/MediaStream/MediaStream
 ---
 {{APIRef("Media Capture and Streams")}}
 

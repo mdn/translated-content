@@ -1,9 +1,6 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
-tags:
-  - 无效 标签 未知
-translation_of: Web/API/HTMLUnknownElement
 ---
 {{ APIRef("HTML DOM") }}
 

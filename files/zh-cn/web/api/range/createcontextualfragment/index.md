@@ -1,7 +1,6 @@
 ---
 title: Range.createContextualFragment()
 slug: Web/API/Range/createContextualFragment
-translation_of: Web/API/Range/createContextualFragment
 ---
 {{ApiRef("DOM")}}
 

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.iceGatheringState
 slug: Web/API/RTCPeerConnection/iceGatheringState
-translation_of: Web/API/RTCPeerConnection/iceGatheringState
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
-translation_of: Web/API/MediaStream/clone
 ---
 {{APIRef("Media Capture and Streams")}}
 

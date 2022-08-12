@@ -1,11 +1,6 @@
 ---
 title: File.lastModified
 slug: Web/API/File/lastModified
-tags:
-  - API
-  - File API
-  - Files
-translation_of: Web/API/File/lastModified
 ---
 {{APIRef("File API")}}
 

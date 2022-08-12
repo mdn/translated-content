@@ -1,19 +1,6 @@
 ---
 title: RTCStats
 slug: Web/API/RTCStats
-tags:
-  - API
-  - Dictionary
-  - NeedsTranslation
-  - RTCStats
-  - Reference
-  - Report
-  - Statistics
-  - Stats
-  - TopicStub
-  - WebRTC
-  - rtc
-translation_of: Web/API/RTCStats
 ---
 {{APIRef("WebRTC")}}
 

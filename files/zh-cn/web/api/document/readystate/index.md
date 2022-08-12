@@ -1,17 +1,6 @@
 ---
 title: document.readyState
 slug: Web/API/Document/readyState
-tags:
-  - API
-  - DOMContentLoaded
-  - Document.readyState
-  - HTML DOM
-  - load
-  - onload
-  - readyState
-  - 参考
-  - 属性
-translation_of: Web/API/Document/readyState
 ---
 {{APIRef("DOM")}}
 

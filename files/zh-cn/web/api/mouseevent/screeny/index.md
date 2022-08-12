@@ -1,13 +1,6 @@
 ---
 title: MouseEvent.screenY
 slug: Web/API/MouseEvent/screenY
-tags:
-  - API
-  - 参考
-  - 属性
-  - 鼠标
-  - 鼠标事件
-translation_of: Web/API/MouseEvent/screenY
 ---
 {{APIRef("DOM Events")}}
 

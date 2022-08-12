@@ -1,20 +1,6 @@
 ---
 title: RTCRtpTransceiver
 slug: Web/API/RTCRtpTransceiver
-tags:
-  - API
-  - Interface
-  - Media
-  - MediaStreamTrack
-  - NeedsTranslation
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - SDP
-  - TopicStub
-  - Transceiver
-  - WebRTC
-translation_of: Web/API/RTCRtpTransceiver
 ---
 {{APIRef("WebRTC")}}
 

@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
-translation_of: Web/API/WebGLRenderingContext/isProgram
 ---
 {{APIRef("WebGL")}}
 

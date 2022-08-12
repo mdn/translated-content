@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
-translation_of: Web/API/MediaRecorder/audioBitsPerSecond
 ---
 {{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
 

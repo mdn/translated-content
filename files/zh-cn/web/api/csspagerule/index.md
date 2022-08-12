@@ -1,8 +1,6 @@
 ---
 title: CSS 分页规则
 slug: Web/API/CSSPageRule
-translation_of: Web/API/CSSPageRule
-original_slug: Web/API/CSS 分页规则
 ---
 {{APIRef("CSSOM")}}
 

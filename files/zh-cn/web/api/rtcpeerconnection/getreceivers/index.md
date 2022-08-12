@@ -1,12 +1,6 @@
 ---
 title: RTCPeerConnection.getReceivers()
 slug: Web/API/RTCPeerConnection/getReceivers
-tags:
-  - Media
-  - RTCPeerConnection
-  - WebRTC
-  - getReceivers
-translation_of: Web/API/RTCPeerConnection/getReceivers
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

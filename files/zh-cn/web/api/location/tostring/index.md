@@ -1,7 +1,6 @@
 ---
 title: 'Location: toString()'
 slug: Web/API/Location/toString
-translation_of: Web/API/Location/toString
 ---
 {{ApiRef("Location")}}
 

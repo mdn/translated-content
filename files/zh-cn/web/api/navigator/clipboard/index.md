@@ -1,17 +1,6 @@
 ---
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
-tags:
-  - API
-  - Navigator
-  - 剪切
-  - 剪切板
-  - 参考
-  - 只读
-  - 复制
-  - 属性
-  - 粘贴
-translation_of: Web/API/Navigator/clipboard
 ---
 剪贴板 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API) 为 **{{domxref("Navigator")}}** 接口添加了只读属性 **`clipboard`**，该属性返回一个可以读写剪切板内容的 {{domxref("Clipboard")}} 对象。 在 Web 应用中，剪切板 API 可用于实现剪切、复制、粘贴的功能。
 

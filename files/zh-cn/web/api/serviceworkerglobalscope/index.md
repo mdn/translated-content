@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 {{APIRef("Service Workers API")}}
 

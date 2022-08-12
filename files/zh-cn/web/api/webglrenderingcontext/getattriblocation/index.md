@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
-translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
 {{APIRef("WebGL")}}
 

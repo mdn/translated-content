@@ -1,7 +1,6 @@
 ---
 title: VideoPlaybackQuality
 slug: Web/API/VideoPlaybackQuality
-translation_of: Web/API/VideoPlaybackQuality
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

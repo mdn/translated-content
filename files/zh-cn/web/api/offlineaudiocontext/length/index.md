@@ -1,7 +1,6 @@
 ---
 title: OfflineAudoContext.length
 slug: Web/API/OfflineAudioContext/length
-translation_of: Web/API/OfflineAudioContext/length
 ---
 {{SeeCompatTable}}{{ APIRef("Web Audio API") }}
 

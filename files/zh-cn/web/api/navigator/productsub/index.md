@@ -1,12 +1,6 @@
 ---
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
-tags:
-  - API
-  - DOM
-  - 只读
-  - 属性
-translation_of: Web/API/Navigator/productSub
 ---
 {{ ApiRef("HTML DOM") }}
 

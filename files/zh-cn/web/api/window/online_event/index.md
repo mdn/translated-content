@@ -1,13 +1,6 @@
 ---
 title: Window：online 事件
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - Event
-  - Online
-  - Reference
-  - Window
-translation_of: Web/API/Window/online_event
 ---
 {{APIRef}}
 

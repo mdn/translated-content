@@ -1,7 +1,6 @@
 ---
 title: document.anchors
 slug: Web/API/Document/anchors
-translation_of: Web/API/Document/anchors
 ---
 {{APIRef("DOM")}}
 

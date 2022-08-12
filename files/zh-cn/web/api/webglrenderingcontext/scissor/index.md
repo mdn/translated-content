@@ -1,9 +1,6 @@
 ---
 title: WebGLRenderingContext.scissor()
 slug: Web/API/WebGLRenderingContext/scissor
-tags:
-  - WebGL
-translation_of: Web/API/WebGLRenderingContext/scissor
 ---
 {{APIRef("WebGL")}}
 

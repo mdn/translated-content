@@ -1,7 +1,6 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
-translation_of: Web/API/Document/queryCommandState
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 

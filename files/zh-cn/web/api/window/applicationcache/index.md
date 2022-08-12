@@ -1,12 +1,6 @@
 ---
 title: window.applicationCache
 slug: Web/API/Window/applicationCache
-tags:
-  - HTML5
-  - HTML5.1
-  - HTML5.2
-  - REC
-translation_of: Web/API/Window/applicationCache
 ---
 {{APIRef}}
 

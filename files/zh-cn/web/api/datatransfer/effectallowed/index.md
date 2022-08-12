@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
-translation_of: Web/API/DataTransfer/effectAllowed
 ---
 {{APIRef("HTML Drag and Drop API")}}
 

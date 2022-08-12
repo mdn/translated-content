@@ -1,8 +1,6 @@
 ---
 title: GeolocationPosition.timestamp
 slug: Web/API/GeolocationPosition/timestamp
-translation_of: Web/API/GeolocationPosition/timestamp
-original_slug: Web/API/GeolocationPosition/获取该位置时的时间戳
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 

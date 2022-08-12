@@ -1,7 +1,6 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-translation_of: Web/API/MediaSource
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

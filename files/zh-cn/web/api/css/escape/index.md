@@ -1,12 +1,6 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape
-tags:
-  - CSS
-  - escape()
-  - 参考
-  - 方法
-translation_of: Web/API/CSS/escape
 ---
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 

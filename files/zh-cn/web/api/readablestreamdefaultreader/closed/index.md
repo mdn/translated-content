@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - closed
-translation_of: Web/API/ReadableStreamDefaultReader/closed
 ---
 {{APIRef("Streams")}}
 

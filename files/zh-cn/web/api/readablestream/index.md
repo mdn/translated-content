@@ -1,19 +1,6 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - HTTP
-  - Interface
-  - Networking
-  - ReadableStream
-  - Reference
-  - Streams
-  - data
-translation_of: Web/API/ReadableStream
 ---
 {{APIRef("Fetch")}}
 

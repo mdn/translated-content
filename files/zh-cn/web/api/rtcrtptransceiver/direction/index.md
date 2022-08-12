@@ -1,7 +1,6 @@
 ---
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
-translation_of: Web/API/RTCRtpTransceiver/direction
 ---
 {{APIRef("WebRTC")}}
 

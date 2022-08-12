@@ -1,12 +1,6 @@
 ---
 title: Notification.badge
 slug: Web/API/notification/badge
-tags:
-  - Notification
-  - Notification badge
-  - Notifications API
-  - Web API
-translation_of: Web/API/Notification/badge
 ---
 {{SeeCompatTable}}{{APIRef("Notifications API")}}
 

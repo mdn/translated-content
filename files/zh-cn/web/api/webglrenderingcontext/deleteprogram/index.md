@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
-translation_of: Web/API/WebGLRenderingContext/deleteProgram
 ---
 {{APIRef("WebGL")}}
 

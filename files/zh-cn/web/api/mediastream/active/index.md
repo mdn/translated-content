@@ -1,13 +1,6 @@
 ---
 title: active
 slug: Web/API/MediaStream/active
-tags:
-  - 参考
-  - 媒体流
-  - 属性
-  - 接口
-  - 活动
-translation_of: Web/API/MediaStream/active
 ---
 {{APIRef("Media Capture and Streams")}}
 

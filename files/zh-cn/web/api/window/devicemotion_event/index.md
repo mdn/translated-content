@@ -1,15 +1,6 @@
 ---
 title: Window.ondevicemotion
 slug: Web/API/Window/devicemotion_event
-tags:
-  - API
-  - Device Orientation
-  - Firefox OS
-  - Mobile
-  - Motion
-  - 移动端设备
-translation_of: Web/API/Window/ondevicemotion
-original_slug: Web/API/Window/ondevicemotion
 ---
 {{ ApiRef() }}
 

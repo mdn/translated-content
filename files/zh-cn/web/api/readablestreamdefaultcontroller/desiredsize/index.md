@@ -1,14 +1,6 @@
 ---
 title: ReadableStreamDefaultController.desiredSize
 slug: Web/API/ReadableStreamDefaultController/desiredSize
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - desiredSize
-translation_of: Web/API/ReadableStreamDefaultController/desiredSize
 ---
 {{APIRef("Streams")}}
 

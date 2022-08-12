@@ -1,7 +1,6 @@
 ---
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
-translation_of: Web/API/HTMLDataElement/value
 ---
 {{APIRef("HTML DOM")}}
 

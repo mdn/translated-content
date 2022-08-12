@@ -1,12 +1,6 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-tags:
-  - API
-  - Experimental
-  - Screen Orientation
-  - screen
-translation_of: Web/API/Screen/orientation
 ---
 {{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
 

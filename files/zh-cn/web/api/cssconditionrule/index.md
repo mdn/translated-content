@@ -1,7 +1,6 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
-translation_of: Web/API/CSSConditionRule
 ---
 {{ APIRef("CSSOM") }}
 

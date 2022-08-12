@@ -1,9 +1,6 @@
 ---
 title: 电池管理器
 slug: Web/API/BatteryManager/charging
-tags:
-  - 电池 API
-translation_of: Web/API/BatteryManager/charging
 ---
 {{APIRef("Battery API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
-translation_of: Web/API/MediaSource/duration
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 

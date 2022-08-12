@@ -1,8 +1,6 @@
 ---
 title: WebSocket.onclose
 slug: Web/API/WebSocket/close_event
-translation_of: Web/API/WebSocket/onclose
-original_slug: Web/API/WebSocket/onclose
 ---
 {{APIRef("Web Sockets API")}}
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
-translation_of: Web/API/HTMLFieldSetElement
 ---
 {{ ApiRef() }}
 

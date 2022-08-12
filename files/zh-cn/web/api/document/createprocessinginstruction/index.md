@@ -1,7 +1,6 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
-translation_of: Web/API/Document/createProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
