@@ -125,7 +125,7 @@ console.log(Ponto.distancia(p1, p2));</pre>
 
 <h3 id="Empacotando_com_protótipos_e_métodos_estáticos">Empacotando com protótipos e métodos estáticos</h3>
 
-<p>Quando um método estático ou protótipo é chamado sem um objeto "this" configurado (ou com "this" como boolean, string, number, undefined ou null), então o valor "this" será <strong><code>undefined</code></strong> dentro da função chamada. Autoboxing não vai acontecer. O comportamento será o mesmo mesmo se escrevemos o código no modo não-estrito.</p>
+<p>Quando um método estático ou protótipo é chamado sem um objeto "this" configurado (ou com "this" como boolean, string, number, undefined ou null), então o valor "this" será <strong><code>undefined</code></strong> dentro da função chamada. Autoboxing não vai acontecer. O comportamento será o mesmo se escrevemos o código no modo não-estrito.</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">class</span> <span class="class-name token">Animal</span> <span class="punctuation token">{</span>
   falar<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
