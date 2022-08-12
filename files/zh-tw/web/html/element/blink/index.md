@@ -3,34 +3,36 @@ title: <blink>：文字閃爍元素（已過時）
 slug: Web/HTML/Element/blink
 translation_of: Web/HTML/Element/blink
 ---
-<div>{{Deprecated_header}}</div>
+{{Deprecated_header}}
 
-<p>非標準元素 <strong>HTML Blink</strong>（<code>&lt;blink&gt;</code>）可以讓該元素裡面的文字緩慢閃爍。</p>
+非標準元素 **HTML Blink**（`<blink>`）可以讓該元素裡面的文字緩慢閃爍。
 
-<div class="warning">不要使用這個元素，因為它已經<strong>被棄用</strong>，而且是糟糕的設計。無障礙標準不會接受閃爍文字、而 CSS 規範上允許瀏覽器忽略閃爍效果。</div>
+> **警告：** 不要使用這個元素，因為它已經**被棄用**，而且是糟糕的設計。無障礙標準不會接受閃爍文字、而 CSS 規範上允許瀏覽器忽略閃爍效果。
 
-<h2 id="DOM_介面">DOM 介面</h2>
+## DOM 介面
 
-<p>此元素並未被支援，因此是透過 {{domxref("HTMLUnknownElement")}} 介面實做。</p>
+此元素並未被支援，因此是透過 {{domxref("HTMLUnknownElement")}} 介面實做。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush:html">&lt;blink&gt;Why would somebody use this?&lt;/blink&gt;
-</pre>
+```html
+<blink>Why would somebody use this?</blink>
+```
 
-<h3 id="結果（已經過淡化！）">結果（已經過淡化！）</h3>
+### 結果（已經過淡化！）
 
-<p><img alt="Image:HTMLBlinkElement.gif" src="/@api/deki/files/247/=HTMLBlinkElement.gif"></p>
+![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
 
-<h2 id="規範">規範</h2>
+## 規範
 
-<p>此元素並非標準元素，也不屬於任何規範。不信的話，<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features">你自己來看 HTML 規範</a>。</p>
+此元素並非標準元素，也不屬於任何規範。不信的話，[你自己來看 HTML 規範](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#non-conforming-features)。
 
-<h2 id="CSS_Polyfill">CSS Polyfill</h2>
+## CSS Polyfill
 
-<p>如果真的需要 polyfill，請使用以下的 CSS。它支援 IE10 以上。</p>
+如果真的需要 polyfill，請使用以下的 CSS。它支援 IE10 以上。
 
-<pre class="brush:html">blink {
+```html
+blink {
     -webkit-animation: 2s linear infinite condemned_blink_effect; // for android
     animation: 2s linear infinite condemned_blink_effect;
 }
@@ -55,21 +57,18 @@ translation_of: Web/HTML/Element/blink
     100% {
         visibility: visible;
     }
-}</pre>
+}
+```
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("html.elements.blink")}}
 
+## 參見
 
-<p>{{Compat("html.elements.blink")}}</p>
+- [HTML `<blink>` 元素的創建史](http://www.montulli.org/theoriginofthe%3Cblink%3Etag)。
+- {{cssxref("text-decoration")}}，儘管有 blink 值，多數瀏覽器並不需要實做閃爍效果。
+- {{htmlelement("marquee")}}，類似的非標準元素。
+- [CSS 動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)能得出與此元素相同的效果。
 
-<h2 id="參見">參見</h2>
-
-<ul>
- <li><a href="http://www.montulli.org/theoriginofthe%3Cblink%3Etag">HTML <code>&lt;blink&gt;</code> 元素的創建史</a>。</li>
- <li>{{cssxref("text-decoration")}}，儘管有 blink 值，多數瀏覽器並不需要實做閃爍效果。</li>
- <li>{{htmlelement("marquee")}}，類似的非標準元素。</li>
- <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS 動畫</a>能得出與此元素相同的效果。</li>
-</ul>
-
-<p>{{HTMLRef}}</p>
+{{HTMLRef}}

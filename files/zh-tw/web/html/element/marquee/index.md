@@ -3,90 +3,76 @@ title: <marquee>：捲動元素（已過時）
 slug: Web/HTML/Element/marquee
 translation_of: Web/HTML/Element/marquee
 ---
-<p>HTML <code>&lt;marquee&gt;</code> 元素用作插入一段文字的捲動區域。你可以透過屬性，控制文字在到達邊緣後的應對動作。</p>
+HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過屬性，控制文字在到達邊緣後的應對動作。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">DOM 介面</th>
-   <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-  </tr>
- </tbody>
-</table>
+| DOM 介面 | {{DOMxRef("HTMLMarqueeElement")}} |
+| -------- | -------------------------------------------- |
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{htmlattrdef("behavior")}}</dt>
- <dd>設定文字如何在 marquee 內捲動。可用值為 <code>scroll</code>、<code>slide</code>、<code>alternate</code>。若無指定，預設值為 <code>scroll</code>。</dd>
- <dt>{{htmlattrdef("bgcolor")}}</dt>
- <dd>透過色彩名或十六進位值指定背景顏色。</dd>
- <dt>{{htmlattrdef("direction")}}</dt>
- <dd>設定 marquee 內的捲動方向。可用值為 <code>left</code>、<code>right</code>、<code>up</code>、<code>down</code>。若無指定，預設值為 <code>left</code>。</dd>
- <dt>{{htmlattrdef("height")}}</dt>
- <dd>設定像素或百分比高度。</dd>
- <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>設定橫向外邊（horizontal margin）</dd>
- <dt>{{htmlattrdef("loop")}}</dt>
- <dd>設定 marquee 捲動的次數。若無指定，預設值為 -1，意思是的 marquee 將持續捲動。</dd>
- <dt>{{htmlattrdef("scrollamount")}}</dt>
- <dd>以像素為單位，設定捲動的間隔量。預設值為 6。</dd>
- <dt>{{htmlattrdef("scrolldelay")}}</dt>
- <dd>設定每次捲動時之間間隔的毫秒。預設值為 85。請注意，除非指定了 <code>truespeed</code>，否則小於 60 的數字會被忽略，並值使用 60。</dd>
- <dt>{{htmlattrdef("truespeed")}}</dt>
- <dd><code>scrolldelay</code> 預設上會忽略低於 60 的值。但如果有 <code>truespeed</code> 的話，就不會忽略此值。</dd>
- <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>以像素或百分比值設置垂直邊距。</dd>
- <dt>{{htmlattrdef("width")}}</dt>
- <dd>設置以像素或百分比值為單位的寬度。</dd>
-</dl>
+- {{htmlattrdef("behavior")}}
+  - : 設定文字如何在 marquee 內捲動。可用值為 `scroll`、`slide`、`alternate`。若無指定，預設值為 `scroll`。
+- {{htmlattrdef("bgcolor")}}
+  - : 透過色彩名或十六進位值指定背景顏色。
+- {{htmlattrdef("direction")}}
+  - : 設定 marquee 內的捲動方向。可用值為 `left`、`right`、`up`、`down`。若無指定，預設值為 `left`。
+- {{htmlattrdef("height")}}
+  - : 設定像素或百分比高度。
+- {{htmlattrdef("hspace")}}
+  - : 設定橫向外邊（horizontal margin）
+- {{htmlattrdef("loop")}}
+  - : 設定 marquee 捲動的次數。若無指定，預設值為 -1，意思是的 marquee 將持續捲動。
+- {{htmlattrdef("scrollamount")}}
+  - : 以像素為單位，設定捲動的間隔量。預設值為 6。
+- {{htmlattrdef("scrolldelay")}}
+  - : 設定每次捲動時之間間隔的毫秒。預設值為 85。請注意，除非指定了 `truespeed`，否則小於 60 的數字會被忽略，並值使用 60。
+- {{htmlattrdef("truespeed")}}
+  - : `scrolldelay` 預設上會忽略低於 60 的值。但如果有 `truespeed` 的話，就不會忽略此值。
+- {{htmlattrdef("vspace")}}
+  - : 以像素或百分比值設置垂直邊距。
+- {{htmlattrdef("width")}}
+  - : 設置以像素或百分比值為單位的寬度。
 
-<h2 id="Event_handlers">事件處理器</h2>
+## 事件處理器
 
-<dl>
- <dt>{{htmlattrdef("onbounce")}}</dt>
- <dd>marquee 滾動到結尾時觸發。只能在 behavior 屬性設置為 <code>alternate</code> 時觸發。</dd>
- <dt>{{htmlattrdef("onfinish")}}</dt>
- <dd>marquee 完成 loop 屬性的設定值時觸發。只能在 loop 屬性設為大於 0 的數字時觸發。</dd>
- <dt>{{htmlattrdef("onstart")}}</dt>
- <dd>marquee 開始捲動時觸發。</dd>
-</dl>
+- {{htmlattrdef("onbounce")}}
+  - : marquee 滾動到結尾時觸發。只能在 behavior 屬性設置為 `alternate` 時觸發。
+- {{htmlattrdef("onfinish")}}
+  - : marquee 完成 loop 屬性的設定值時觸發。只能在 loop 屬性設為大於 0 的數字時觸發。
+- {{htmlattrdef("onstart")}}
+  - : marquee 開始捲動時觸發。
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<dl>
- <dt>start()</dt>
- <dd>開始 marquee 的捲動</dd>
- <dt>stop()</dt>
- <dd>停止 marquee 的捲動</dd>
-</dl>
+- start()
+  - : 開始 marquee 的捲動
+- stop()
+  - : 停止 marquee 的捲動
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html">&lt;marquee&gt;This text will scroll from right to left&lt;/marquee&gt;
+```html
+<marquee>This text will scroll from right to left</marquee>
 
-&lt;marquee direction="up"&gt;This text will scroll from bottom to top&lt;/marquee&gt;
+<marquee direction="up">This text will scroll from bottom to top</marquee>
 
-&lt;marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid"&gt;
-  &lt;marquee behavior="alternate"&gt;
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
     This text will bounce
-  &lt;/marquee&gt;
-&lt;/marquee&gt;</pre>
+  </marquee>
+</marquee>
+```
 
-<p>{{EmbedLiveSample("Examples", 600, 450)}}</p>
+{{EmbedLiveSample("Examples", 600, 450)}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("html.elements.marquee")}}
 
+## 參見
 
-<p>{{Compat("html.elements.marquee")}}</p>
-
-<h2 id="參見">參見</h2>
-
-<ul>
- <li>{{DOMxRef("HTMLMarqueeElement")}}</li>
-</ul>
+- {{DOMxRef("HTMLMarqueeElement")}}

@@ -3,111 +3,104 @@ title: 區塊級元素
 slug: Web/HTML/Block-level_elements
 translation_of: Web/HTML/Block-level_elements
 ---
-<p>HTML (超文字標記語言, <strong>Hypertext Markup Language</strong>) 元素通常為 "區塊級" 元素或是 <a href="/en-US/docs/HTML/Inline_elements">"行內" 元素</a>。 一個區塊級元素會藉由建立"區塊"的動作, 完全佔滿其父元素(容器)的空間。本文將為您說明其意涵.</p>
+HTML (超文字標記語言, **Hypertext Markup Language**) 元素通常為 "區塊級" 元素或是 ["行內" 元素](/zh-TW/docs/HTML/Inline_elements)。 一個區塊級元素會藉由建立"區塊"的動作, 完全佔滿其父元素(容器)的空間。本文將為您說明其意涵.
 
-<p>瀏覽器預設以在元素前後換行的方式, 表現區塊級元素. 視覺上會呈現為一排縱向堆疊的方塊。</p>
+瀏覽器預設以在元素前後換行的方式, 表現區塊級元素. 視覺上會呈現為一排縱向堆疊的方塊。
 
-<div class="note">
-<p>區塊級元素必定以換行方式, 取得完整寬度的空間(向左右兩側儘可能地延伸出去)。</p>
-</div>
+> **備註：** 區塊級元素必定以換行方式, 取得完整寬度的空間(向左右兩側儘可能地延伸出去)。
 
-<p>以下範例將展示區塊級元素的影響:</p>
+以下範例將展示區塊級元素的影響:
 
-<h2 id="Block-level_Example">區塊級元素</h2>
+## 區塊級元素
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.&lt;/p&gt;</pre>
+```html
+<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p { background-color: #8ABB55; }
-</pre>
+```css
+p { background-color: #8ABB55; }
+```
 
-<p>{{ EmbedLiveSample('Block-level_Example') }}</p>
+{{ EmbedLiveSample('Block-level_Example') }}
 
-<h2 id="用法">用法</h2>
+## 用法
 
-<ul>
- <li>區塊級元素只能出現於 {{ HTMLElement("body") }} 元素之內.</li>
-</ul>
+- 區塊級元素只能出現於 {{ HTMLElement("body") }} 元素之內.
 
-<h2 id="區塊級_vs._行內元素">區塊級 vs. 行內元素</h2>
+## 區塊級 vs. 行內元素
 
-<p>There are a couple of key differences between block-level elements and inline elements:</p>
+There are a couple of key differences between block-level elements and inline elements:
 
-<dl>
- <dt>Formatting</dt>
- <dd>By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.</dd>
- <dt>Content model</dt>
- <dd>Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.</dd>
-</dl>
+- Formatting
+  - : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
+- Content model
+  - : Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
 
-<p>The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of <a href="/en-US/docs/HTML/Content_categories">content categories</a>. The "block-level" category roughly corresponds to the category of <a href="/en-US/docs/HTML/Content_categories#Flow_content">flow content</a> in HTML5, while "inline" corresponds to <a href="/en-US/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, but there are additional categories.</p>
+The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/HTML/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), but there are additional categories.
 
-<h2 id="相關元素">相關元素</h2>
+## 相關元素
 
-<p>The following is a complete list of all HTML block level elements (although "block-level" is not technically defined for elements that are new in HTML5).</p>
+The following is a complete list of all HTML block level elements (although "block-level" is not technically defined for elements that are new in HTML5).
 
-<dl>
- <dt>{{ HTMLElement("address") }}</dt>
- <dd>Contact information.</dd>
- <dt>{{ HTMLElement("article") }}</dt>
- <dd>Article content.</dd>
- <dt>{{ HTMLElement("aside") }}</dt>
- <dd>Aside content.</dd>
- <dt>{{ HTMLElement("blockquote") }}</dt>
- <dd>Long ("block") quotation.</dd>
- <dt>{{ HTMLElement("dialog") }}</dt>
- <dd>Dialog box.</dd>
- <dt>{{ HTMLElement("dd") }}</dt>
- <dd>Describes a term in a description list.</dd>
- <dt>{{ HTMLElement("div") }}</dt>
- <dd>Document division.</dd>
- <dt>{{ HTMLElement("dl") }}</dt>
- <dd>Description list.</dd>
- <dt>{{ HTMLElement("dt") }}</dt>
- <dd>Description list term.</dd>
- <dt>{{ HTMLElement("fieldset") }}</dt>
- <dd>Field set label.</dd>
- <dt>{{ HTMLElement("figcaption") }}</dt>
- <dd>Figure caption.</dd>
- <dt>{{ HTMLElement("figure") }}</dt>
- <dd>Groups media content with a caption (see {{ HTMLElement("figcaption") }}).</dd>
- <dt>{{ HTMLElement("footer") }}</dt>
- <dd>Section or page footer.</dd>
- <dt>{{ HTMLElement("form") }}</dt>
- <dd>Input form.</dd>
- <dt>{{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}</dt>
- <dd>Heading levels 1-6.</dd>
- <dt>{{ HTMLElement("header") }}</dt>
- <dd>Section or page header.</dd>
- <dt>{{ HTMLElement("hgroup") }}</dt>
- <dd>Groups header information.</dd>
- <dt>{{ HTMLElement("hr") }}</dt>
- <dd>Horizontal rule (dividing line).</dd>
- <dt>{{ HTMLElement("li") }}</dt>
- <dd>List item.</dd>
- <dt>{{ HTMLElement("main") }}</dt>
- <dd>Contains the central content unique to this document.</dd>
- <dt>{{ HTMLElement("nav") }}</dt>
- <dd>Contains navigation links.</dd>
- <dt>{{ HTMLElement("ol") }}</dt>
- <dd>Ordered list.</dd>
- <dt>{{ HTMLElement("p") }}</dt>
- <dd>Paragraph.</dd>
- <dt>{{ HTMLElement("pre") }}</dt>
- <dd>Preformatted text.</dd>
- <dt>{{ HTMLElement("section") }}</dt>
- <dd>Section of a web page.</dd>
- <dt>{{ HTMLElement("table") }}</dt>
- <dd>Table.</dd>
- <dt>{{ HTMLElement("ul") }}</dt>
- <dd>Unordered list.</dd>
-</dl>
+- {{ HTMLElement("address") }}
+  - : Contact information.
+- {{ HTMLElement("article") }}
+  - : Article content.
+- {{ HTMLElement("aside") }}
+  - : Aside content.
+- {{ HTMLElement("blockquote") }}
+  - : Long ("block") quotation.
+- {{ HTMLElement("dialog") }}
+  - : Dialog box.
+- {{ HTMLElement("dd") }}
+  - : Describes a term in a description list.
+- {{ HTMLElement("div") }}
+  - : Document division.
+- {{ HTMLElement("dl") }}
+  - : Description list.
+- {{ HTMLElement("dt") }}
+  - : Description list term.
+- {{ HTMLElement("fieldset") }}
+  - : Field set label.
+- {{ HTMLElement("figcaption") }}
+  - : Figure caption.
+- {{ HTMLElement("figure") }}
+  - : Groups media content with a caption (see {{ HTMLElement("figcaption") }}).
+- {{ HTMLElement("footer") }}
+  - : Section or page footer.
+- {{ HTMLElement("form") }}
+  - : Input form.
+- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
+  - : Heading levels 1-6.
+- {{ HTMLElement("header") }}
+  - : Section or page header.
+- {{ HTMLElement("hgroup") }}
+  - : Groups header information.
+- {{ HTMLElement("hr") }}
+  - : Horizontal rule (dividing line).
+- {{ HTMLElement("li") }}
+  - : List item.
+- {{ HTMLElement("main") }}
+  - : Contains the central content unique to this document.
+- {{ HTMLElement("nav") }}
+  - : Contains navigation links.
+- {{ HTMLElement("ol") }}
+  - : Ordered list.
+- {{ HTMLElement("p") }}
+  - : Paragraph.
+- {{ HTMLElement("pre") }}
+  - : Preformatted text.
+- {{ HTMLElement("section") }}
+  - : Section of a web page.
+- {{ HTMLElement("table") }}
+  - : Table.
+- {{ HTMLElement("ul") }}
+  - : Unordered list.
 
-<h3 id="See_also">參閱</h3>
+### 參閱
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Inline_elements">行內元素</a></li>
-</ul>
+- [行內元素](/zh-TW/docs/Web/HTML/Inline_elements)

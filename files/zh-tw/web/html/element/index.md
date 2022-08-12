@@ -9,98 +9,94 @@ tags:
   - Web
 translation_of: Web/HTML/Element
 ---
-<div>{{HTMLSidebar("Elements")}}</div>
+{{HTMLSidebar("Elements")}}
 
-<p>本頁列出了所有 {{Glossary("HTML")}} 元素（{{Glossary("Element")}}），他們可以透過標籤（{{Glossary("Tags", "tags")}}）建立。這些元素會以功能來分組，讓你更容易尋找。在本頁及每一個元素的頁面的側邊欄都提供了以英文字母排序的所有元素清單。</p>
+本頁列出了所有 {{Glossary("HTML")}} 元素（{{Glossary("Element")}}），他們可以透過標籤（{{Glossary("Tags", "tags")}}）建立。這些元素會以功能來分組，讓你更容易尋找。在本頁及每一個元素的頁面的側邊欄都提供了以英文字母排序的所有元素清單。
 
-<div class="note">
-<p>更多關於基本 HTML 元素及屬性（attribute）可參考<a href="/zh-TW/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks">HTML 介紹一文中的元素小節</a>。</p>
-</div>
+> **備註：** 更多關於基本 HTML 元素及屬性（attribute）可參考[HTML 介紹一文中的元素小節](/zh-TW/docs/Web/Guide/HTML/Introduction#Elements_—_the_basic_building_blocks)。
 
-<h2 id="主要根元素">主要根元素</h2>
+## 主要根元素
 
-<p>{{HTMLRefTable("HTML Root Element")}}</p>
+{{HTMLRefTable("HTML Root Element")}}
 
-<h2 id="文件詮釋資料（metadata）">文件詮釋資料（metadata）</h2>
+## 文件詮釋資料（metadata）
 
-<p>Metadata 是一些外部資料，不會被使用者看到。Metadata 記錄了頁面的訊息給其他軟體利用，像是瀏覽器會讀取 metadata 去決定這個頁面應該要使用哪種編碼顯示以避免亂碼。另外，有時候一個網頁的原始碼會被分散的檔案中，所以一個網頁的 Metameta 可以被定義在別份檔案中。</p>
+Metadata 是一些外部資料，不會被使用者看到。Metadata 記錄了頁面的訊息給其他軟體利用，像是瀏覽器會讀取 metadata 去決定這個頁面應該要使用哪種編碼顯示以避免亂碼。另外，有時候一個網頁的原始碼會被分散的檔案中，所以一個網頁的 Metameta 可以被定義在別份檔案中。
 
-<p>{{HTMLRefTable("HTML Document Metadata")}}</p>
+{{HTMLRefTable("HTML Document Metadata")}}
 
-<h2 id="Sectioning_root">Sectioning root</h2>
+## Sectioning root
 
-<p>{{HTMLRefTable("Sectioning Root Element")}}</p>
+{{HTMLRefTable("Sectioning Root Element")}}
 
-<h2 id="Content_sectioning">Content sectioning</h2>
+## Content sectioning
 
-<p>Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.   </p>
+Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.
 
-<p>{{HTMLRefTable("HTML Sections")}}</p>
+{{HTMLRefTable("HTML Sections")}}
 
-<h2 id="文字內容">文字內容</h2>
+## 文字內容
 
-<p>使用 HTML 文字內容元素，來組織放在 {{HTMLElement("body")}} 與 <code>&lt;/body&gt;</code> 之間的區塊或章節內容。這對 {{Glossary("Accessibility")}} 與 {{Glossary("SEO")}} 至關重要。這些元素確立了內容的目的或結構。</p>
+使用 HTML 文字內容元素，來組織放在 {{HTMLElement("body")}} 與 `</body>` 之間的區塊或章節內容。這對 {{Glossary("Accessibility")}} 與 {{Glossary("SEO")}} 至關重要。這些元素確立了內容的目的或結構。
 
-<p>{{HTMLRefTable("HTML Grouping Content")}}</p>
+{{HTMLRefTable("HTML Grouping Content")}}
 
-<h2 id="行內文字語義化">行內文字語義化</h2>
+## 行內文字語義化
 
-<p>Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.</p>
+Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text.
 
-<p>{{HTMLRefTable("HTML Text-Level Semantics")}}</p>
+{{HTMLRefTable("HTML Text-Level Semantics")}}
 
-<h2 id="圖片與多媒體">圖片與多媒體</h2>
+## 圖片與多媒體
 
-<p>HTML supports various multimedia resources such as images, audio, and video.</p>
+HTML supports various multimedia resources such as images, audio, and video.
 
-<p>{{HTMLRefTable("multimedia")}}</p>
+{{HTMLRefTable("multimedia")}}
 
-<h2 id="嵌入內容">嵌入內容</h2>
+## 嵌入內容
 
-<p>In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with.</p>
+In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with.
 
-<p>{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}</p>
+{{HTMLRefTable({"include":["HTML embedded content"], "exclude":["multimedia"]})}}
 
-<h2 id="腳本">腳本</h2>
+## 腳本
 
-<p>In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.</p>
+In order to create dynamic content and Web applications, HTML supports the use of scripting languages, most prominently JavaScript. Certain elements support this capability.
 
-<p>{{HTMLRefTable("HTML Scripting")}}</p>
+{{HTMLRefTable("HTML Scripting")}}
 
-<h2 id="Demarcating_edits">Demarcating edits</h2>
+## Demarcating edits
 
-<p>These elements let you provide indications that specific parts of the text have been altered.</p>
+These elements let you provide indications that specific parts of the text have been altered.
 
-<p>{{HTMLRefTable("HTML Edits")}}</p>
+{{HTMLRefTable("HTML Edits")}}
 
-<h2 id="表格">表格</h2>
+## 表格
 
-<p>The elements here are used to create and handle tabular data.</p>
+The elements here are used to create and handle tabular data.
 
-<p>{{HTMLRefTable("HTML tabular data")}}</p>
+{{HTMLRefTable("HTML tabular data")}}
 
-<h2 id="表單">表單</h2>
+## 表單
 
-<p>HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms guide</a>.</p>
+HTML provides a number of elements which can be used together to create forms which the user can fill out and submit to the Web site or application. There's a great deal of further information about this available in the [HTML forms guide](/zh-TW/docs/WebLearn/Guide/HTML/Forms).
 
-<p>{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}</p>
+{{HTMLRefTable({"include": ["HTML forms"], "exclude":["Deprecated"]})}}
 
-<h2 id="互動元素">互動元素</h2>
+## 互動元素
 
-<p>HTML offers a selection of elements which help to create interactive user interface objects.</p>
+HTML offers a selection of elements which help to create interactive user interface objects.
 
-<p>{{HTMLRefTable("HTML interactive elements")}}</p>
+{{HTMLRefTable("HTML interactive elements")}}
 
-<h2 id="Web_Components">Web Components</h2>
+## Web Components
 
-<p>Web Components is an HTML-related technology which makes it possible to, essentially, create and use custom elements as if it were regular HTML. In addition, you can create custom versions of standard HTML elements.</p>
+Web Components is an HTML-related technology which makes it possible to, essentially, create and use custom elements as if it were regular HTML. In addition, you can create custom versions of standard HTML elements.
 
-<p>{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}</p>
+{{HTMLRefTable({"include":["Web Components"],"elements":["shadow"]})}}
 
-<h2 id="過時與棄用的元素">過時與棄用的元素</h2>
+## 過時與棄用的元素
 
-<div class="warning">
-<p><strong>Warning:</strong> These are old HTML elements which are deprecated and should not be used. <strong>You should never use them in new projects, and should replace them in old projects as soon as you can.</strong> They are listed here for informational purposes only.</p>
-</div>
+> **警告：** These are old HTML elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for informational purposes only.
 
-<p>{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}</p>
+{{HTMLRefTable({"include":["Deprecated","Obsolete"]})}}

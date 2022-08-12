@@ -3,69 +3,52 @@ title: <summary>
 slug: Web/HTML/Element/summary
 translation_of: Web/HTML/Element/summary
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The HTML <em>summary </em>element (<code>&lt;summary&gt;</code>) is used as a summary, caption, or legend for the content of a {{HTMLElement("details")}} element.</p>
+The HTML _summary_ element (`<summary>`) is used as a summary, caption, or legend for the content of a {{HTMLElement("details")}} element.
 
-<div class="note"><strong>Note:</strong> If the <code>&lt;summary&gt;</code> element is omitted, the heading "details" will be used.</div>
+> **備註：** If the `<summary>` element is omitted, the heading "details" will be used.
 
-<div class="note"><strong>Note:</strong> The default style for <code>&lt;summary&gt;</code> is <code>display:list-item</code> per <a href="https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements">HTML standard</a>.  If the style is being changed to <code>display:block</code>, the disclosure triangle will be dismissed, which is expected. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1283989">Bug 1283989</a> for more information.</div>
+> **備註：** The default style for `<summary>` is `display:list-item` per [HTML standard](https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements). If the style is being changed to `display:block`, the disclosure triangle will be dismissed, which is expected. See [Bug 1283989](https://bugzilla.mozilla.org/show_bug.cgi?id=1283989) for more information.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a> or one element of <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Heading_content">Heading content</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>None, both the start tag and the end tag are mandatory.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parent element</th>
-   <td>The {{HTMLElement("details")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="https://html.spec.whatwg.org/multipage/forms.html#the-summary-element">HTML5, section 4.11.2</a></td>
-  </tr>
- </tbody>
-</table>
+| Permitted content        | [Phrasing content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Phrasing_content) or one element of [Heading content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Heading_content) |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission             | None, both the start tag and the end tag are mandatory.                                                                                                                               |
+| Permitted parent element | The {{HTMLElement("details")}} element.                                                                                                                                     |
+| Normative document       | [HTML5, section 4.11.2](https://html.spec.whatwg.org/multipage/forms.html#the-summary-element)                                                                                        |
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes the <a href="/en-US/docs/HTML/Global_attributes">global attributes</a>.</p>
+This element only includes the [global attributes](/zh-TW/docs/HTML/Global_attributes).
 
-<h2 id="DOM_interface">DOM interface</h2>
+## DOM interface
 
-<p>This element implements the {{domxref("HTMLElement")}} interface.</p>
+This element implements the {{domxref("HTMLElement")}} interface.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">
-&lt;details style="color: blue; margin-left: 15px; margin-bottom: 10px;"&gt;
-&lt;p&gt;In summation, get details from the link on the next line&lt;/p&gt;
-&lt;/details&gt;
-</pre>
+```html
+<details style="color: blue; margin-left: 15px; margin-bottom: 10px;">
+<p>In summation, get details from the link on the next line</p>
+</details>
+```
 
 {{EmbedLiveSample("Examples")}}
 
-<p>Please see the {{HTMLElement("details")}} page for examples on &lt;summary&gt;.</p>
+Please see the {{HTMLElement("details")}} page for examples on \<summary>.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("html.elements.summary")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{HTMLElement("details")}}</li>
-</ul>
+- {{HTMLElement("details")}}
