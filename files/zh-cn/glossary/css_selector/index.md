@@ -62,12 +62,12 @@ div.warning {
 - 查看我们的关于选择器的介绍 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
 - 基础选择器
 
-  - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors)` elementname`
+  - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`
   - [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) `.classname`
   - [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors) `#idname`
-  - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)` [attr=value]`
-  - [状态选择器](/zh-CN/docs/Web/CSS/Pseudo-classes)` a:active, a:visited`
+  - [通配选择器](/zh-CN/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+  - [状态选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - 组选择器
 

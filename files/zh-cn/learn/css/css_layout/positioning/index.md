@@ -309,12 +309,14 @@ span {
 
 尝试添加以下到你的 CSS，使第一段也是绝对定位：
 
-    p:nth-of-type(1) {
-      position: absolute;
-      background: lime;
-      top: 10px;
-      right: 30px;
-    }
+```css
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+}
+```
 
 此时，你将看到第一段的颜色为绿色，移出文档流程，并位于原始位置上方一点。它也堆叠在原始的 `.positioned` 段落下，其中两个重叠。这是因为 `.positioned` 段落是源顺序 (HTML 标记) 中的第二个段落，并且源顺序中后定位的元素将赢得先定位的元素。
 
@@ -324,7 +326,9 @@ span {
 
 要更改堆叠顺序，请尝试将以下声明添加到 `p:nth-of-type(1)` 规则中：
 
-    z-index: 1;
+```css
+z-index: 1;
+```
 
 你现在应该可以看到完成的例子：
 
@@ -389,30 +393,36 @@ p:nth-of-type(1) {
 
 现在，更新 `body` 规则以删除`position: relative;` 声明并添加固定高度，如此：
 
-    body {
-      width: 500px;
-      height: 1400px;
-      margin: 0 auto;
-    }
+```css
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+```
 
 现在我们要给{{htmlelement("h1")}}元素 `position: fixed;`，并让它坐在视口的顶部中心。将以下规则添加到 CSS：
 
-    h1 {
-      position: fixed;
-      top: 0;
-      width: 500px;
-      margin: 0 auto;
-      background: white;
-      padding: 10px;
-    }
+```css
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+```
 
 `top: 0;`是要使它贴在屏幕的顶部；我们然后给出标题与内容列相同的宽度，并使用可靠的老技巧 `margin: 0 auto;` 使它居中。然后我们给它一个白色背景和一些内边距，所以内容将不会在它下面可见。
 
 如果你现在保存并刷新，你会看到一个有趣的小效果，标题保持固定，内容显示向上滚动并消失在其下。但是我们可以改进这一点——目前标题下面挡住一些内容的开头。这是因为定位的标题不再出现在文档流中，所以其他内容向上移动到顶部。我们要把它向下移动一点；我们可以通过在第一段设置一些顶部边距来做到这一点。添加：
 
-    p:nth-of-type(1) {
-      margin-top: 60px;
-    }
+```css
+p:nth-of-type(1) {
+  margin-top: 60px;
+}
+```
 
 你现在应该看到完成的例子：
 
@@ -510,47 +520,51 @@ body {
 
 `position: sticky` 的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：
 
-    <h1>Sticky positioning</h1>
+```html
+<h1>Sticky positioning</h1>
 
-    <dl>
-        <dt>A</dt>
-        <dd>Apple</dd>
-        <dd>Ant</dd>
-        <dd>Altimeter</dd>
-        <dd>Airplane</dd>
-        <dt>B</dt>
-        <dd>Bird</dd>
-        <dd>Buzzard</dd>
-        <dd>Bee</dd>
-        <dd>Banana</dd>
-        <dd>Beanstalk</dd>
-        <dt>C</dt>
-        <dd>Calculator</dd>
-        <dd>Cane</dd>
-        <dd>Camera</dd>
-        <dd>Camel</dd>
-        <dt>D</dt>
-        <dd>Duck</dd>
-        <dd>Dime</dd>
-        <dd>Dipstick</dd>
-        <dd>Drone</dd>
-        <dt>E</dt>
-        <dd>Egg</dd>
-        <dd>Elephant</dd>
-        <dd>Egret</dd>
-    </dl>
+<dl>
+    <dt>A</dt>
+    <dd>Apple</dd>
+    <dd>Ant</dd>
+    <dd>Altimeter</dd>
+    <dd>Airplane</dd>
+    <dt>B</dt>
+    <dd>Bird</dd>
+    <dd>Buzzard</dd>
+    <dd>Bee</dd>
+    <dd>Banana</dd>
+    <dd>Beanstalk</dd>
+    <dt>C</dt>
+    <dd>Calculator</dd>
+    <dd>Cane</dd>
+    <dd>Camera</dd>
+    <dd>Camel</dd>
+    <dt>D</dt>
+    <dd>Duck</dd>
+    <dd>Dime</dd>
+    <dd>Dipstick</dd>
+    <dd>Drone</dd>
+    <dt>E</dt>
+    <dd>Egg</dd>
+    <dd>Elephant</dd>
+    <dd>Egret</dd>
+</dl>
+```
 
 CSS 可能如下所示。在正常布局流中，{{htmlelement("dt")}}元素将随内容滚动。当我们在{{htmlelement("dt")}}元素上添加`position: sticky`，并将{{cssxref("top")}}的值设置为 0，当标题滚动到视口的顶部时，支持此属性的浏览器会将标题粘贴到那个位置。随后，每个后续标题将替换前一个标题，直到它向上滚动到该位置。
 
-    dt {
-      background-color: black;
-      color: white;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      left: 0;
-      margin: 1em 0;
-    }
+```css
+dt {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+}
+```
 
 ```css
 body {

@@ -41,7 +41,7 @@ Base64 编码普遍应用于需要通过被设计为处理文本数据的媒介�
 
   - : 这篇文章发布了一个我们做的库，目的在于：
 
-    - 为字符串创建一个类 C 接口 (i.e. array of characters codes —[ `ArrayBufferView`](/zh-CN/docs/Web/API/ArrayBufferView) in JavaScript) ，基于 JavaScript [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 接口。
+    - 为字符串创建一个类 C 接口 (i.e. array of characters codes — [`ArrayBufferView`](/zh-CN/docs/Web/API/ArrayBufferView) in JavaScript) ，基于 JavaScript [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 接口。
     - 为类字符串对象 (目前为止为：`stringView`s) 创建一系列方法，它们**严格按照数字数组**工作，而不是不可变的字符串。
     - 可用于其它 Unicode 编码，和默认的 `DOMStrings不同。`
 
@@ -438,17 +438,17 @@ The following is the fastest and most compact possible approach. The output is e
 
 function btoaUTF16 (sString) {
 
-	var aUTF16CodeUnits = new Uint16Array(sString.length);
-	Array.prototype.forEach.call(aUTF16CodeUnits, function (el, idx, arr) { arr[idx] = sString.charCodeAt(idx); });
-	return btoa(String.fromCharCode.apply(null, new Uint8Array(aUTF16CodeUnits.buffer)));
+  var aUTF16CodeUnits = new Uint16Array(sString.length);
+  Array.prototype.forEach.call(aUTF16CodeUnits, function (el, idx, arr) { arr[idx] = sString.charCodeAt(idx); });
+  return btoa(String.fromCharCode.apply(null, new Uint8Array(aUTF16CodeUnits.buffer)));
 
 }
 
 function atobUTF16 (sBase64) {
 
-	var sBinaryString = atob(sBase64), aBinaryView = new Uint8Array(sBinaryString.length);
-	Array.prototype.forEach.call(aBinaryView, function (el, idx, arr) { arr[idx] = sBinaryString.charCodeAt(idx); });
-	return String.fromCharCode.apply(null, new Uint16Array(aBinaryView.buffer));
+ var sBinaryString = atob(sBase64), aBinaryView = new Uint8Array(sBinaryString.length);
+ Array.prototype.forEach.call(aBinaryView, function (el, idx, arr) { arr[idx] = sBinaryString.charCodeAt(idx); });
+ return String.fromCharCode.apply(null, new Uint16Array(aBinaryView.buffer));
 
 }
 ```
@@ -512,7 +512,7 @@ b64DecodeUnicode('Cg=='); // "\n"
 
 ### Solution #5 – rewrite the DOMs `atob()` and `btoa()` using JavaScript's `TypedArray`s and UTF-8
 
-Use a [TextEncoder](/zh-CN/docs/Web/API/TextEncoder) polyfill such as [TextEncoding](https://github.com/inexorabletash/text-encoding) (also includes legacy windows, mac, and ISO encodings), [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite), combined with a [Buffer](https://github.com/feross/buffer) and a Base64 implementation such as [base64-js](https://github.com/beatgammit/base64-js) or [TypeScript version of ](https://github.com/waitingsong/base64)base64-js for both modern browsers and Node.js.
+Use a [TextEncoder](/zh-CN/docs/Web/API/TextEncoder) polyfill such as [TextEncoding](https://github.com/inexorabletash/text-encoding) (also includes legacy windows, mac, and ISO encodings), [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite), combined with a [Buffer](https://github.com/feross/buffer) and a Base64 implementation such as [base64-js](https://github.com/beatgammit/base64-js) or [TypeScript version of base64-js](https://github.com/waitingsong/base64) for both modern browsers and Node.js.
 
 When a native `TextEncoder` implementation is not available, the most light-weight solution would be to use [Solution #3](#Solution_3_–_JavaScript's_UTF-16_>_binary_string_>_base64) because in addition to being much faster, [Solution #3](#Solution_3_–_JavaScript's_UTF-16_>_binary_string_>_base64) also works in IE9 "out of the box." Alternatively, use [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite) with [base64-js](https://github.com/beatgammit/base64-js). Use the browser implementation when you can.
 
@@ -554,20 +554,22 @@ b64EncodeUnicode('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
 
 把 base64 转换回字符串
 
-    function b64DecodeUnicode(str) {
-        return decodeURIComponent(atob(str).split('').map(function(c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-    }
+```js
+function b64DecodeUnicode(str) {
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
 
-    b64DecodeUnicode('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
-    b64DecodeUnicode('Cg=='); // "\n"
+b64DecodeUnicode('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+b64DecodeUnicode('Cg=='); // "\n"
+```
 
 [Unibabel](https://github.com/coolaj86/unibabel-js) 是一个包含了一些使用这种策略的通用转换的库。
 
 ### 方案 #6 – 用 JavaScript 的 `TypedArray` 和 UTF-8 重写 DOM 的 `atob()` 和 `btoa()`
 
-使用像[TextEncoding](https://github.com/inexorabletash/text-encoding)(包含了早期 (legacy) 的 windows，mac， 和 ISO 编码)，[TextEncoderLite](https://github.com/coolaj86/TextEncoderLite/blob/master/index.js) 或者 [Buffer](https://github.com/feross/buffer) 这样的文本编码器增强 (polyfill) 和 Base64 增强，比如[base64-js](https://github.com/beatgammit/base64-js/blob/master/index.js) 或 [TypeScript 版本的 ](https://github.com/waitingsong/base64)base64-js（适用于长青浏览器和 Node.js）。
+使用像[TextEncoding](https://github.com/inexorabletash/text-encoding)(包含了早期 (legacy) 的 windows，mac， 和 ISO 编码)，[TextEncoderLite](https://github.com/coolaj86/TextEncoderLite/blob/master/index.js) 或者 [Buffer](https://github.com/feross/buffer) 这样的文本编码器增强 (polyfill) 和 Base64 增强，比如[base64-js](https://github.com/beatgammit/base64-js/blob/master/index.js) 或 [TypeScript 版本的 base64-js](https://github.com/waitingsong/base64)（适用于长青浏览器和 Node.js）。
 
 最简单，最轻量级的解决方法就是使用 [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite/blob/master/index.js) 和 [base64-js](https://github.com/beatgammit/base64-js/blob/master/index.js).
 

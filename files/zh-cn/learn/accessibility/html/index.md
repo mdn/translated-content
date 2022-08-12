@@ -261,7 +261,7 @@ UI 控件可访问性的一个关键方面是，默认情况下，浏览器允�
 
 ![](button-focused-unfocused.png)
 
-接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如` {{htmlelement("select")}}` 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
+接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如 {{htmlelement("select")}} 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
 
 > **备注：** 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)获取更多详细信。
 
@@ -342,7 +342,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-在这里，我们向文档对象 `document` 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 `event object` 的 `keyCode `属性，检查用户按下了哪个按钮; 如果它是与 `Return / Enter` 匹配的关键代码，我们通过按钮的 onclick 函数，即 `document.activeElement.onclick()` 。`activeElement` 提供给我们页面当前被 focused 的元素。
+在这里，我们向文档对象 `document` 添加一个侦听器，以检测什么时候键盘上按下按钮 我们通过事件对象 `event object` 的 `keyCode` 属性，检查用户按下了哪个按钮; 如果它是与 `Return / Enter` 匹配的关键代码，我们通过按钮的 onclick 函数，即 `document.activeElement.onclick()` 。`activeElement` 提供给我们页面当前被 focused 的元素。
 
 我们使用`document.activeElement.onclick（）`运行存储在按钮的 onclick 处理函数中的函数。 `activeElement` 为我们提供了当前关注页面的元素。
 
