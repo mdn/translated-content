@@ -9,8 +9,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 
 請注意，更新 cookie 的屬性要透過以下兩個步驟實做：
 
-1.  首先，要更新的 cookie 會先被刪掉，並產生一個 `overwrite` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
-2.  接著，帶著更新數值的新 cookie 會被寫進去，並產生第二個 `explicit` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
+1. 首先，要更新的 cookie 會先被刪掉，並產生一個 `overwrite` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
+2. 接著，帶著更新數值的新 cookie 會被寫進去，並產生第二個 `explicit` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
 
 ## 語法
 

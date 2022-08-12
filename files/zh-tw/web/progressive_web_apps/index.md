@@ -19,12 +19,12 @@ PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進�
 
 以下教學將以簡單例子告訴你，在實作 PWA 時所需要的東西，並講述一切如何運行。
 
-1.  [漸進式網絡應用程式簡介](/zh-TW/docs/Web/Apps/Progressive/Introduction)
-2.  [漸進式網絡應用程式架構](/zh-TW/docs/Web/Apps/Progressive/App_structure)
-3.  [使用 Service worker 讓 PWA 能離線工作](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
-4.  [如何令 PWA 可安裝](/zh-TW/docs/Web/Apps/Progressive/Installable_PWAs)
-5.  [如何使用 Notifications 與 Push 令 PWA 可重連線](/zh-TW/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
-6.  [漸進式載入](/zh-TW/docs/Web/Apps/Progressive/Loading)
+1. [漸進式網絡應用程式簡介](/zh-TW/docs/Web/Apps/Progressive/Introduction)
+2. [漸進式網絡應用程式架構](/zh-TW/docs/Web/Apps/Progressive/App_structure)
+3. [使用 Service worker 讓 PWA 能離線工作](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
+4. [如何令 PWA 可安裝](/zh-TW/docs/Web/Apps/Progressive/Installable_PWAs)
+5. [如何使用 Notifications 與 Push 令 PWA 可重連線](/zh-TW/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
+6. [漸進式載入](/zh-TW/docs/Web/Apps/Progressive/Loading)
 
 ## 技術教學
 

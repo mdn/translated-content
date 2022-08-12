@@ -206,7 +206,7 @@ Enumerable properties are those properties whose internal \[\[Enumerable]] flag 
 Note that this is not the most efficient algorithm for all cases, but useful for a quick demonstration.
 
 - Detection can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use` filter()`, `map()`, etc.)
+- Iteration can occur by `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
 
 ```js
 var SimplePropertyRetriever = {

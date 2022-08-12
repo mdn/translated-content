@@ -257,7 +257,7 @@ If the scope is a relative URL, the base URL will be the URL of the manifest.
 
 ## 啟動畫面（Splash screens）
 
-在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 `name`、`background_color` 、 `icons `陣列中較接近裝置的 128dpi 的圖示。
+在 Chrome 47 或較新版本，啟動畫面 splash screen 會被使用在當 Web 應用程式由主畫面開啟的時後。 這啟動畫面是依 Web App manifest 的屬性自動產生的，明確來說是由 `name`、`background_color` 、 `icons` 陣列中較接近裝置的 128dpi 的圖示。
 
 ## Mime 類型
 

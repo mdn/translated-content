@@ -91,7 +91,7 @@ If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`
 - [W3C Note: Editing the Web – Detecting
   the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)

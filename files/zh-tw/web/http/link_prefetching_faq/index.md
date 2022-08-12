@@ -48,7 +48,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 預先取回 (Prefetch) 符合標準嗎 ?
 
-預先取回並沒有違反標準規範；事實上 HTML 4.01 允許新定義的 rel 型態 ([see Section 6.12: Link types](http://www.w3.org/TR/html4/types.html#type-links))，只是 Mozilla 現在的機制還在 HTML5 標準化草稿作業中，請見 HTML5 標準:[ Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
+預先取回並沒有違反標準規範；事實上 HTML 4.01 允許新定義的 rel 型態 ([see Section 6.12: Link types](http://www.w3.org/TR/html4/types.html#type-links))，只是 Mozilla 現在的機制還在 HTML5 標準化草稿作業中，請見 HTML5 標準: [Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch) .
 
 ### 如何判定瀏覽器是否閒置 ?
 

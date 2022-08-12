@@ -73,8 +73,8 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 
 然而，以上方法有一些限制。若要建置一些較複雜的應用程式，你將需要使用 [Vue NPM 套件](https://www.npmjs.com/package/vue)。 這讓你可以使用 Vue 的進階功能且可以使用打包器像是 WebPack。為了讓使用 Vue 建置應用程式變得更容易，可以使用 CLI 來精簡化開發流程。如果要使用 npm 套件 & CLI ，你將需要：
 
-1.  安裝 Node.js 8.11+
-2.  npm 或 yarn
+1. 安裝 Node.js 8.11+
+2. npm 或 yarn
 
 > **備註：** 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
 
@@ -98,38 +98,38 @@ yarn global add @vue/cli
 
 為了探索 Vue 各式各樣的功能，我們將會製作一個待辦事項應用程式。我們將使用 Vue CLI 來創造一個新專案框架來建構我們的應用程式。請跟著以下步驟：
 
-1.  在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue` 。
-2.  使用方向鍵以及
+1. 在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue` 。
+2. 使用方向鍵以及
 
     <kbd>Enter</kbd>
 
     鍵，選擇「 Manually select features 」
 
-3.  第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「 Babel 」和「 Linter / Formatter 」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下
+3. 第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「 Babel 」和「 Linter / Formatter 」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下
 
     <kbd>Enter</kbd>
 
     鍵進行下一步。
 
-4.  接下來，你要選擇 linter / formatter 的設定。切換到「 Eslint with error prevention only 」然後按下
+4. 接下來，你要選擇 linter / formatter 的設定。切換到「 Eslint with error prevention only 」然後按下
 
     <kbd>Enter</kbd>
 
     。這個設定會進行報錯提醒，但不會強制你修改。
 
-5.  然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「 Lint on save 」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下
+5. 然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「 Lint on save 」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下
 
     <kbd>Enter</kbd>
 
     鍵進行下一步。
 
-6.  現在，你將要選擇如何管理你的組態檔案。「 In dedicated config files 」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「 In package.json 」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「 In dedicated config files 」然後按下
+6. 現在，你將要選擇如何管理你的組態檔案。「 In dedicated config files 」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「 In package.json 」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「 In dedicated config files 」然後按下
 
     <kbd>Enter</kbd>
 
     。
 
-7.  最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下
+7. 最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下
 
     <kbd>y</kbd>
 
@@ -141,7 +141,7 @@ yarn global add @vue/cli
 
 CLI 會開始建構你的專案，並且安裝所需的相依套件。
 
-如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 `vue create` 時傳入一個標幟 `--packageManager=<package-manager>` 。舉例來說，如果你現在想要用 npm 來創建 `moz-todo-vue` 專案，但是之前是使用 yarn ，你可以執行 `vue create moz-todo-vue --packageManager=npm` 。
+如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 `vue create` 時傳入一個標幟 `--packageManager=<package-manager>` 。舉例來說，如果你現在想要用 npm 來創建 `moz-todo-vue` 專案，但是之前是使用 yarn ，你可以執行 `vue create moz-todo-vue --packageManager=npm` 。
 
 > **備註：** 在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的[關於 CLI 的更多資訊](https://cli.vuejs.org)。
 
@@ -204,7 +204,7 @@ export default {
 
 > **備註：** 如果你想要使用 [TypeScript](https://www.typescriptlang.org/) 語法，你必須把 `<script>` 標籤的 `lang` 屬性設定成 `<script lang="ts">` 來告訴編譯器你要使用 TypeScript 。
 
-`<style>` 是你撰寫元件的 CSS 的地方。如果你加上 `scoped` 屬性，例如 `<style scoped>` ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案 ，但是它允許你寫單純的 CSS 。
+`<style>` 是你撰寫元件的 CSS 的地方。如果你加上 `scoped` 屬性，例如 `<style scoped>` ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案，但是它允許你寫單純的 CSS 。
 
 > **備註：** 如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 `<style>` 標籤上添加 `lang` 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， `<style lang="scss">` 允許你在樣式資訊中使用 SCSS 語法。
 
@@ -280,7 +280,7 @@ components: {
 
 讓我們現在暫時告一個段落。我們學習了 Vue 背後的一些想法，創建應用架構並使我們的範例應用可以在其運行，檢查它，並且對它做一些初步的改變。
 
-在進行基本介紹之前，我們將進一步建構我們的範例應用，一個基本的待辦應用程式，它讓我們儲存待辦事項，在已完成的事項上打勾，以及依事項完成 /未完成狀態來過濾列表。
+在進行基本介紹之前，我們將進一步建構我們的範例應用，一個基本的待辦應用程式，它讓我們儲存待辦事項，在已完成的事項上打勾，以及依事項完成 /未完成狀態來過濾列表。
 
 在下一篇文章中，我們將會建立第一個客製元件，研究一些重要的概念，像是透過 props 傳遞資料及儲存它的資料狀態。
 

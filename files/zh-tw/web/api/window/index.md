@@ -142,7 +142,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Returns a reference to the current window.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Returns a reference to the `window` object in the frames. See {{domxref("Window.frames")}} for more details.
 
 ### Properties implemented from elsewhere

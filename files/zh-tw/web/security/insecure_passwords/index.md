@@ -18,16 +18,16 @@ translation_of: Web/Security/Insecure_passwords
 
 為提醒上述風險，Firefox 實做了許多警告機制：
 
-1.  Firefox 51 以後會在網址列的左方顯示一個紅色劃叉的鎖頭警告標示，如下圖所示。
+1. Firefox 51 以後會在網址列的左方顯示一個紅色劃叉的鎖頭警告標示，如下圖所示。
 
     ![鎖頭標示](https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png)
 
-2.  Firefox 52 以後會在任何不安全表單的 URL 欄位與密碼區域清楚呈現警告：
+2. Firefox 52 以後會在任何不安全表單的 URL 欄位與密碼區域清楚呈現警告：
 
     ![警告](https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png)
 
-3.  Firefox 52 以後還會禁止在不安全表單自動填入密碼。用戶依舊可以藉由下拉列表，填入已存登錄的資訊。
-4.  不安全表單的警告，也能從所有 Firefox 發行的開發者主控台之安全窗格找到。詳請參見下節敘述。
+3. Firefox 52 以後還會禁止在不安全表單自動填入密碼。用戶依舊可以藉由下拉列表，填入已存登錄的資訊。
+4. 不安全表單的警告，也能從所有 Firefox 發行的開發者主控台之安全窗格找到。詳請參見下節敘述。
 
 ## 網頁主控台訊息
 

@@ -155,7 +155,7 @@ HTML
 
   - [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Preloading_content) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 

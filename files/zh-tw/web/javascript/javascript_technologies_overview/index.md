@@ -46,7 +46,7 @@ JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名
 
 W3C 統一規範了文件物件模型的核心部分。它定義了無關語言而將 HTML 與 XML 文件抽象化為物件的介面，以及對抽象化物件進行處理的機制。在 DOM 的定義中包含：
 
-- [DOM core ](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html)中的文件結構、樹狀模型，DOM 事件結構：Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
+- [DOM core](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) 中的文件結構、樹狀模型，DOM 事件結構：Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
 - [DOM events](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html) 中對 DOM 事件結構（DOM Event Architecture）和特定事件的廣義定義。
 - 其他如 [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) 和 [DOM Range](http://html5.org/specs/dom-range.html)。
 
@@ -54,7 +54,7 @@ W3C 統一規範了文件物件模型的核心部分。它定義了無關語言�
 
 ### HTML DOM
 
-網頁標記語言 [HTML](http://www.whatwg.org/html) 是依據 DOM 來規格化。在 DOM 核心中，定義了虛擬概念的分層，而 HTML 也定義了元素的意義。 HTML DOM 包含了 HTML 元素的 `className 屬性與諸如 `{{ domxref("document.body") }} 的 API。
+網頁標記語言 [HTML](http://www.whatwg.org/html) 是依據 DOM 來規格化。在 DOM 核心中，定義了虛擬概念的分層，而 HTML 也定義了元素的意義。 HTML DOM 包含了 HTML 元素的 `className` 屬性與諸如 {{ domxref("document.body") }} 的 API。
 
 HTML 的規格書也定義了在文件上的一些限制；例如，他要求所有 `ul` 元素（代表無順序編號的清單）的子元素必須是 `li 元素（代表清單`中的項目）。而未在標準中定義的元素和屬性通常在規格中被禁用。
 
@@ -71,4 +71,4 @@ HTML 的規格書也定義了在文件上的一些限制；例如，他要求所
 
 每個網頁開發者都曾經體會過 [一團混亂的 DOM 支援狀況](http://ejohn.org/blog/the-dom-is-a-mess/)。某些功能上不同瀏覽器的支援可能差異很大，因為過去重要的 DOM 功能都沒有明確的規範，進而使不同網頁瀏覽器對相同的使用情境實踐了互不相容的功能（像是 Internet Explorer 的事件模型）。最近（截至 2011 年 6 月），由 W3C 與（特別是）WHATWG 對舊功能重新進行詳盡的定義以提升互通性成為了趨勢 。為了跟進這個趨勢，許多網頁瀏覽器也根據這些新規格改進它們的實作。
 
-雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括[ jQuery](http://jquery.com/)、[prototype](http://www.prototypejs.org/) 和 [YUI](http://developer.yahoo.com/yui/)。
+雖然並未完全可靠，使用 JavaScript 函式庫是解決跨瀏覽器相容問題的最普遍方式。 這些函式庫將 DOM 的功能抽象化，確保其 API 在不同的瀏覽器中能以相似的方式運作。廣為被使用的框架包括 [jQuery](http://jquery.com/)、[prototype](http://www.prototypejs.org/) 和 [YUI](http://developer.yahoo.com/yui/)。

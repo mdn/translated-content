@@ -30,7 +30,7 @@ Object.create(proto[, propertiesObject])
 
 ## 範例
 
-### 使用 `Object.create() `實現類別繼承
+### 使用 `Object.create()` 實現類別繼承
 
 下方是如何使用 `Object.create()` 去實現類別繼承的示範，此為 JavaScript 支援的單一繼承.。
 

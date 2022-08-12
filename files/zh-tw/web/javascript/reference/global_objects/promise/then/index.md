@@ -25,7 +25,7 @@ p.then(function(value) {
 
 - `onFulfilled`
   - : 一個 {{jsxref("Function")}}，當 `Promise` 被實現（fulfilled）時被呼叫。此函式接收一個實現值（`fullfillment value）作為引數。`
-- `onRejected `{{optional_inline}}
+- `onRejected` {{optional_inline}}
   - : 一個 {{jsxref("Function")}}，當 `Promise` 被拒絕（rejected）時被呼叫。此函式接收一個失敗訊息（`rejection reason）作為引數。`
 
 ### 回傳值

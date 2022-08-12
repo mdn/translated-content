@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.toString
 ---
 {{JSRef}}
 
-**`toString()`** 方法將回傳一個可以表達  該陣列及其元素的字串。
+**`toString()`** 方法將回傳一個可以表達該陣列及其元素的字串。
 
 {{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
 

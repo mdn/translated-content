@@ -336,7 +336,7 @@ for(var i=0 ; i<elements.length ; i++){
 
 ### 作為行內事件處理器
 
-當程式碼從行內的[ on 事件處理器](/zh-TW/docs/Web/Guide/Events/Event_handlers)呼叫的話，`this` 就會設在監聽器所置的 DOM 元素：
+當程式碼從行內的 [on 事件處理器](/zh-TW/docs/Web/Guide/Events/Event_handlers)呼叫的話，`this` 就會設在監聽器所置的 DOM 元素：
 
 ```js
 <button onclick="alert(this.tagName.toLowerCase());">

@@ -59,9 +59,9 @@ var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
 
 `callback` 函式於被調用時會傳入三個參數：
 
-1.  元素值
-2.  元素之索引
-3.  被迭代的陣列物件
+1. 元素值
+2. 元素之索引
+3. 被迭代的陣列物件
 
 若有提供 `thisArg` 參數予 `filter` 方法，`thisArg` 將會被當作回呼函式的 `this` 值，否則 `this` 會是 `undefined`。`callback` 的最終 `this` 值是依據[函式的 `this` 規則](/zh-TW/docs/Web/JavaScript/Reference/Operators/this)來決定。
 

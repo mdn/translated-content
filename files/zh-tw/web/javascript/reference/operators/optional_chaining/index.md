@@ -63,7 +63,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **備註：** 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（` x.y`` 不是一個函數  `.
+> **備註：** 假如物件有同樣的屬性名稱，而不是一個方法，使用 `?.` 將會抛出 {{JSxRef("TypeError")}} 錯誤（`x.y 不是一個函數`）。
 
 #### 處理回呼函式或事件處理器
 

@@ -85,7 +85,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 
 ### 靜態方法
 
-這些方法只能在` Notification 實例上使用。`
+這些方法只能在 `Notification` 實例上使用。
 
 - {{domxref("Notification.requestPermission()")}}
   - : 向使用者詢問是否開放顯示 Notification 的權限。
