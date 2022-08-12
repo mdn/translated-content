@@ -7,8 +7,8 @@ tags:
   - 시작하기
 translation_of: MDN/Contribute/Howto
 ---
-<div>{{MDNSidebar}}</div><div>{{IncludeSubnav("/ko/docs/MDN")}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ko/docs/MDN")}}
 
-<p>이 페이지에서는 여러분이 MDN에 공헌하기 위한 목표를 달성하는 데에 도움을 줄 단계별 가이드를 제공합니다.</p>
+이 페이지에서는 여러분이 MDN에 공헌하기 위한 목표를 달성하는 데에 도움을 줄 단계별 가이드를 제공합니다.
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
