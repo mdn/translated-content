@@ -8,56 +8,52 @@ tags:
   - 自訂標籤
 translation_of: Web/API/Document/registerElement
 ---
-<p>{{APIRef("DOM")}}{{Deprecated_header}}</p>
+{{APIRef("DOM")}}{{Deprecated_header}}
 
-<div class="warning">
-<p><strong>Warning: </strong>document.registerElement()                       已經被棄用，建議使用               <a href="/en-US/docs/Web/API/CustomElementRegistry/define">customElements.define()</a>.</p>
-</div>
+> **警告：** document.registerElement() 已經被棄用，建議使用 [customElements.define()](/zh-TW/docs/Web/API/CustomElementRegistry/define).
 
-<p><code><strong>document.registerElement()</strong></code>                 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.</p>
+**`document.registerElement()`** 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.
 
-<div class="note">
-<p><strong>Note:</strong> This is an experimental technology. The browser you use it in must support Web Components. See <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
-</div>
+> **備註：** This is an experimental technology. The browser you use it in must support Web Components. See [Enabling Web Components in Firefox](/zh-TW/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox).
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">var <em>constructor</em> = document.registerElement(<em>tag-name</em>, <em>options</em>);</pre>
+```plain
+var constructor = document.registerElement(tag-name, options);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><em>標籤名稱</em></dt>
- <dd>自訂的標籤名稱需有一個 橫線  ( - ), 例如<code>my-tag</code>.</dd>
- <dt><em>options {{optional_inline}}</em></dt>
- <dd>
- <p>An object with properties <strong>prototype</strong> to base the custom element on, and <strong>extends</strong>, an existing tag to extend. Both of these are optional.</p>
- </dd>
-</dl>
+- _標籤名稱_
+  - : 自訂的標籤名稱需有一個 橫線 ( - ), 例如`my-tag`.
+- _options {{optional_inline}}_
+  - : An object with properties **prototype** to base the custom element on, and **extends**, an existing tag to extend. Both of these are optional.
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>這是一個非常簡單的例子:</p>
+這是一個非常簡單的例子:
 
-<pre class="brush: js">var Mytag = document.registerElement('my-tag');
-</pre>
+```js
+var Mytag = document.registerElement('my-tag');
+```
 
-<p>現在新的標籤已經在瀏覽器中註冊了. The <code>Mytag</code> variable holds a constructor that you can use to create a <code>my-tag</code> element in the document as follows:</p>
+現在新的標籤已經在瀏覽器中註冊了. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
 
-<pre class="brush: js">document.body.appendChild(new Mytag());</pre>
+```js
+document.body.appendChild(new Mytag());
+```
 
-<p>This inserts an empty <code>my-tag</code> element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:</p>
+This inserts an empty `my-tag` element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:
 
-<pre class="brush: js">var mytag = document.getElementsByTagName("my-tag")[0];
+```js
+var mytag = document.getElementsByTagName("my-tag")[0];
 mytag.textContent = "I am a my-tag element.";
-</pre>
+```
 
-<h2 id="瀏覽器支援性">瀏覽器支援性</h2>
+## 瀏覽器支援性
 
 {{Compat("api.Document.registerElement")}}
 
-<h2 id="也看一下">也看一下</h2>
+## 也看一下
 
-<ul>
- <li><a href="/en-US/docs/Web/Web_Components/Custom_Elements">Custom Elements</a></li>
-</ul>
+- [Custom Elements](/zh-TW/docs/Web/Web_Components/Custom_Elements)

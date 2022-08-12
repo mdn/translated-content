@@ -3,67 +3,68 @@ title: Window.localStorage
 slug: Web/API/Window/localStorage
 translation_of: Web/API/Window/localStorage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><strong><code>localStorage</code></strong> 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). <code>localStorage</code> 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 <code>localStorage</code> 的儲存資料並無到期的限制, 而 <code>sessionStorage</code> 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.</p>
+**`localStorage`** 為一唯讀屬性, 此屬性允許您存取目前文件({{DOMxRef("Document")}})隸屬網域來源的 {{DOMxRef("Storage")}} 物件; 與 sessionStorage 不同的是其儲存資料的可存取範圍為跨瀏覽頁狀態(Browser Sessions). `localStorage` 的應用與 {{DOMxRef("Window.sessionStorage", "sessionStorage")}} 相似, 除了 `localStorage` 的儲存資料並無到期的限制, 而 `sessionStorage` 的儲存資料於目前瀏覽頁狀態結束的同時將一併被清除 — 也就是目前瀏覽器頁面被關閉的同時.
 
-<p>值得注意的是不論 <code>localStorage</code> 或者 <code>sessionStorage</code> <strong>皆為專屬於目前瀏覽器頁面的通訊協定(Protocol)</strong>.</p>
+值得注意的是不論 `localStorage` 或者 `sessionStorage` **皆為專屬於目前瀏覽器頁面的通訊協定(Protocol)**.
 
-<p>鍵值名稱和值皆為<strong>字串型式</strong>(請留意, 當其為物件, 整數等將自動轉換為字串型式).</p>
+鍵值名稱和值皆為**字串型式**(請留意, 當其為物件, 整數等將自動轉換為字串型式).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><em>myStorage</em> = <em>window</em>.localStorage;</pre>
+```plain
+myStorage = window.localStorage;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{DOMxRef("Storage")}} 物件 which can be used to access the current origin's local storage space.</p>
+{{DOMxRef("Storage")}} 物件 which can be used to access the current origin's local storage space.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>SecurityError</code></dt>
- <dd>The request violates a policy decision, or the origin is not <a href="/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin">a valid scheme/host/port tuple</a> (this can happen if the origin uses the <code>file:</code> or <code>data:</code> scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.</dd>
-</dl>
+- `SecurityError`
+  - : The request violates a policy decision, or the origin is not [a valid scheme/host/port tuple](/zh-TW/docs/Web/Security/Same-origin_policy#Definition_of_an_origin) (this can happen if the origin uses the `file:` or `data:` scheme, for example). 舉例來說，使用者 may have their browser configured to deny permission to persist data for the specified origin.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>下列的程式碼片段讀取了目前域名內的 local {{DOMxRef("Storage")}} 物件 ，並用{{DOMxRef("Storage.setItem()")}}，增加一個資料物件 item 到其中</p>
+下列的程式碼片段讀取了目前域名內的 local {{DOMxRef("Storage")}} 物件 ，並用{{DOMxRef("Storage.setItem()")}}，增加一個資料物件 item 到其中
 
-<pre class="brush: js">localStorage.setItem('myCat', 'Tom');</pre>
+```js
+localStorage.setItem('myCat', 'Tom');
+```
 
-<p>讀取 <code>localStorage</code> 內物件的語法如下：</p>
+讀取 `localStorage` 內物件的語法如下：
 
-<pre class="brush: js">var cat = localStorage.getItem('myCat');</pre>
+```js
+var cat = localStorage.getItem('myCat');
+```
 
-<p>移除 <code>localStorage</code> 內物件的語法如下：</p>
+移除 `localStorage` 內物件的語法如下：
 
-<pre class="brush: js">localStorage.removeItem('myCat');</pre>
+```js
+localStorage.removeItem('myCat');
+```
 
-<p>刪除 <code>localStorage</code> 內所有物件的語法如下：</p>
+刪除 `localStorage` 內所有物件的語法如下：
 
-<pre class="brush: js">// Clear all items
+```js
+// Clear all items
 localStorage.clear();
-</pre>
+```
 
-<div class="note">
-<p><strong>Note</strong>: Please refer to the <a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a> article for a full example.</p>
-</div>
+> **備註：** Please refer to the [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("api.Window.localStorage")}}
 
+## See also
 
-<p>{{Compat("api.Window.localStorage")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Storage_API/Local_storage">Local storage with Window.localStorage</a></li>
- <li>{{DOMxRef("Window.sessionStorage")}}</li>
-</ul>
+- [Using the Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Local storage with Window.localStorage](/zh-TW/docs/Web/API/Web_Storage_API/Local_storage)
+- {{DOMxRef("Window.sessionStorage")}}

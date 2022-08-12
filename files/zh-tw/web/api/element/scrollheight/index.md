@@ -6,54 +6,54 @@ tags:
   - Reference
 translation_of: Web/API/Element/scrollHeight
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.scrollHeight</code></strong> 是衡量元素包含因為 overflow 而沒顯示在螢幕上的內容高度的唯讀屬性. <code>scrollHeight</code> 的值相等於元素要求 <code>clientHeight</code> 在視域中沒有使用滾動條顯示所有內容的最小高度值 . 這當中只包含 padding, 並不包含 margin.</p>
+**`Element.scrollHeight`** 是衡量元素包含因為 overflow 而沒顯示在螢幕上的內容高度的唯讀屬性. `scrollHeight` 的值相等於元素要求 `clientHeight` 在視域中沒有使用滾動條顯示所有內容的最小高度值 . 這當中只包含 padding, 並不包含 margin.
 
-<div class="note">
-<p>這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.</p>
-</div>
+> **備註：** 這個屬性會以四捨五入進位取整數. 如果要使用非整數值, 使用 {{ domxref("Element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax_and_values">表達式</h2>
+## 表達式
 
-<pre class="eval">var <em>intElemScrollHeight</em> = document.getElementById(<em>id_attribute_value</em>).scrollHeight;
-</pre>
+```js
+var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```
 
-<p><em>intElemScrollHeight</em> 是個儲存了元素 scrollHeight 的正整數變數. scrollHeight是唯讀的屬性.</p>
+_intElemScrollHeight_ 是個儲存了元素 scrollHeight 的正整數變數. scrollHeight 是唯讀的屬性.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<div id="offsetContainer" style="margin: 40px 50px 50px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: relative; display: inline-block;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p>padding-top</p>
+padding-top
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<p>padding-bottom</p>
-</div>
-<strong>Left</strong> <strong>Top</strong> <strong>Right</strong> <strong>Bottom</strong> <em>margin-top</em> <em>margin-bottom</em> <em>border-top</em> <em>border-bottom</em></div>
+padding-bottom
 
-<p><img alt="Image:scrollHeight.png" class="internal" src="/@api/deki/files/840/=ScrollHeight.png"></p>
+**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-<h2 id="問題與解決方法">問題與解決方法</h2>
+![Image:scrollHeight.png](/@api/deki/files/840/=ScrollHeight.png)
 
-<h3 id="了解元素是否被滾輪完全滾過">了解元素是否被滾輪完全滾過</h3>
+## 問題與解決方法
 
-<p>下面的等式代表<code>如果元素被完全滾過將會</code>回傳 <code>true </code>,  否則回傳 <code>false</code>.</p>
+### 了解元素是否被滾輪完全滾過
 
-<pre class="syntaxbox">element.scrollHeight - element.scrollTop === element.clientHeight</pre>
+下面的等式代表`如果元素被完全滾過將會`回傳 `true `, 否則回傳 `false`.
 
-<h2 id="scrollHeight_Demo">scrollHeight 範例</h2>
+```js
+element.scrollHeight - element.scrollTop === element.clientHeight
+```
 
-<p>藉由 <code><a href="/en-US/docs/DOM/element.onscroll">onscroll</a></code> 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 <code><a href="/en-US/docs/DOM/element.scrollTop">element.scrollTop</a></code>, <code><a href="/en-US/docs/DOM/element.clientHeight">element.clientHeight</a></code> 屬性). 範例:</p>
+## scrollHeight 範例
 
-<h3 id="HTML">HTML</h3>
+藉由 [`onscroll`](/en-US/docs/DOM/element.onscroll) 事件, 這個等式對於決定使用者是否已經讀完文字內容是很有用 (參見 [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop), [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight) 屬性). 範例:
 
-<pre class="brush: html">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+### HTML
+
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -75,18 +75,20 @@ ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maec
 interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
 laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
 nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" name="accept" id="agree" /&gt;
-    &lt;label for="agree"&gt;I agree&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Next" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" name="accept" id="agree" />
+    <label for="agree">I agree</label>
+    <input type="submit" id="nextstep" value="Next" />
+  </p>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#notice {
+```css
+#notice {
   display: inline-block;
   margin-bottom: 12px;
   border-radius: 5px;
@@ -101,11 +103,13 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
   padding: 5px;
   border: #2A9F00 solid 2px;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function checkReading () {
+```js
+function checkReading () {
   if (checkReading.read) {
     return;
   }
@@ -123,23 +127,22 @@ onload = function () {
   oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
   oToBeRead.onscroll = checkReading;
   checkReading.call(oToBeRead);
-}</pre>
+}
+```
 
-<p>{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}</p>
+{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
 
-<h2 id="Specification">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="Supported">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
 
-<h2 id="See_Also">參見</h2>
+## 參見
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9</a></li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.offsetHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- [MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- {{domxref("Element.clientHeight")}}
+- {{domxref("Element.offsetHeight")}}
+- [Determining the dimensions of elements](/zh-TW/docs/Determining_the_dimensions_of_elements)

@@ -3,37 +3,34 @@ title: HTMLCollection
 slug: Web/API/HTMLCollection
 translation_of: Web/API/HTMLCollection
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>HTMLCollection</code></strong> 介面表示了一種成員為 {{domxref("Element")}} 物件的通用集合（如 <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> 一般的類陣列，成員順序同元素在文件中的順序），並提供了可用來選取集合成員的方法與屬性。</p>
+**`HTMLCollection`** 介面表示了一種成員為 {{domxref("Element")}} 物件的通用集合（如 [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments) 一般的類陣列，成員順序同元素在文件中的順序），並提供了可用來選取集合成員的方法與屬性。
 
-<div class="note"><strong>Note:</strong> This interface is called <code>HTMLCollection</code> for historical reasons (before DOM4, collections implementing this interface could only have HTML elements as their items).</div>
+> **備註：** This interface is called `HTMLCollection` for historical reasons (before DOM4, collections implementing this interface could only have HTML elements as their items).
 
-<p><code>HTMLCollection</code> 物件對 HTML DOM 而言具有即時性（live），如果底層的文件（<code>document</code> 物件）發生改變，<code>HTMLCollection</code> 物件會自動更新至最新的狀態。</p>
+`HTMLCollection` 物件對 HTML DOM 而言具有即時性（live），如果底層的文件（`document` 物件）發生改變，`HTMLCollection` 物件會自動更新至最新的狀態。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<dl>
- <dt>{{domxref("HTMLCollection.length")}} {{readonlyInline}}</dt>
- <dd>Returns the number of items in the collection.</dd>
-</dl>
+- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
+  - : Returns the number of items in the collection.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{domxref("HTMLCollection.item()")}}</dt>
- <dd>Returns the specific node at the given zero-based <code>index</code> into the list. Returns <code>null</code> if the <code>index</code> is out of range.</dd>
- <dt>{{domxref("HTMLCollection.namedItem()")}}</dt>
- <dd>Returns the specific node whose ID or, as a fallback, name matches the string specified by <code>name</code>. Matching by name is only done as a last resort, only in HTML, and only if the referenced element supports the <code>name</code> attribute. Returns <code>null</code> if no node exists by the given name.</dd>
-</dl>
+- {{domxref("HTMLCollection.item()")}}
+  - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
+- {{domxref("HTMLCollection.namedItem()")}}
+  - : Returns the specific node whose ID or, as a fallback, name matches the string specified by `name`. Matching by name is only done as a last resort, only in HTML, and only if the referenced element supports the `name` attribute. Returns `null` if no node exists by the given name.
 
-<h2 id="Usage_in_JavaScript">Usage in JavaScript</h2>
+## Usage in JavaScript
 
-<p><code>HTMLCollection also</code> exposes its members directly as properties by both name and index. HTML IDs may contain : and . as valid characters, which would necessitate using bracket notation for property access. Currently HTMLCollections does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.</p>
+`HTMLCollection also` exposes its members directly as properties by both name and index. HTML IDs may contain : and . as valid characters, which would necessitate using bracket notation for property access. Currently HTMLCollections does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.
 
-<p>For example, assuming there is one <code>&lt;form&gt;</code> element in the document and its <code>id</code> is <code>"myForm"</code>:</p>
+For example, assuming there is one `<form>` element in the document and its `id` is `"myForm"`:
 
-<pre class="brush:js">var elem1, elem2;
+```js
+var elem1, elem2;
 
 // document.forms is an HTMLCollection
 
@@ -47,19 +44,18 @@ elem2 = document.forms.namedItem("myForm");
 
 alert(elem1 === elem2); // shows: "true"
 
-elem1 = document.forms["named.item.with.periods"];</pre>
+elem1 = document.forms["named.item.with.periods"];
+```
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>Different browsers behave differently when there are more than one elements matching the string used as an index (or <code>namedItem</code>'s argument). Firefox 8 behaves as specified in DOM 2 and DOM4, returning the first matching element. WebKit browsers and Internet Explorer in this case return another <code>HTMLCollection</code> and Opera returns a {{domxref("NodeList")}} of all matching elements.</p>
+Different browsers behave differently when there are more than one elements matching the string used as an index (or `namedItem`'s argument). Firefox 8 behaves as specified in DOM 2 and DOM4, returning the first matching element. WebKit browsers and Internet Explorer in this case return another `HTMLCollection` and Opera returns a {{domxref("NodeList")}} of all matching elements.
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li>{{domxref("NodeList")}}</li>
- <li>{{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}</li>
-</ul>
+- {{domxref("NodeList")}}
+- {{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}

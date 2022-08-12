@@ -3,85 +3,71 @@ title: MediaSource
 slug: Web/API/MediaSource
 translation_of: Web/API/MediaSource
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a> 的 <strong><code>MediaSource</code></strong> 介面代表 {{domxref("HTMLMediaElement")}} 物件的媒體資料來源。一個 <code>MediaSource</code> 物件可以被附加到一個 {{domxref("HTMLMediaElement")}} 以被用戶代理 (user agent) 播放。</p>
+[Media Source Extensions API](/zh-TW/docs/Web/API/Media_Source_Extensions_API) 的 **`MediaSource`** 介面代表 {{domxref("HTMLMediaElement")}} 物件的媒體資料來源。一個 `MediaSource` 物件可以被附加到一個 {{domxref("HTMLMediaElement")}} 以被用戶代理 (user agent) 播放。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="建構子_Constructor">建構子 (Constructor)</h2>
+## 建構子 (Constructor)
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>建構且回傳一個新的 <code>MediaSource</code> 物件但不與任何來源緩衝 (source buffers) 關聯 (associate)。</dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
+  - : 建構且回傳一個新的 `MediaSource` 物件但不與任何來源緩衝 (source buffers) 關聯 (associate)。
 
-<h2 id="屬性_Properties">屬性 (Properties)</h2>
+## 屬性 (Properties)
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}</dt>
- <dd>回傳一個含有與此 <code>MediaSource</code> 關聯的 {{domxref("SourceBuffer")}} 物件串列的 {{domxref("SourceBufferList")}} 物件。</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>回傳一個 {{domxref("SourceBufferList")}} 物件，含有 {{domxref("SourceBuffers")}} 的子集合 {{domxref("SourceBuffer")}} 物件 — 物件的串列提供被選擇的影片軌 (video track), 啟用的音軌 (audio tracks), 以及顯示或隱藏的字軌。</dd>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>回傳一個列舉類型表示目前 <code>MediaSource</code> 的狀態：沒有附加到媒體元件 (<code>closed</code>)，已經附加且可以接收 {{domxref("SourceBuffer")}} 物件 (<code>open</code>)，已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束 (<code>ended</code>)。</dd>
- <dt>{{domxref("MediaSource.duration")}}</dt>
- <dd>取得或設置現在正被表示的媒體的時間長度。</dd>
- <dt>
- <h3 id="事件處理函數_Event_handlers">事件處理函數 (Event handlers)</h3>
+- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+  - : 回傳一個含有與此 `MediaSource` 關聯的 {{domxref("SourceBuffer")}} 物件串列的 {{domxref("SourceBufferList")}} 物件。
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : 回傳一個 {{domxref("SourceBufferList")}} 物件，含有 {{domxref("SourceBuffers")}} 的子集合 {{domxref("SourceBuffer")}} 物件 — 物件的串列提供被選擇的影片軌 (video track), 啟用的音軌 (audio tracks), 以及顯示或隱藏的字軌。
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+  - : 回傳一個列舉類型表示目前 `MediaSource` 的狀態：沒有附加到媒體元件 (`closed`)，已經附加且可以接收 {{domxref("SourceBuffer")}} 物件 (`open`)，已經附加但是串流已經經由 {{domxref("MediaSource.endOfStream()")}} 結束 (`ended`)。
+- {{domxref("MediaSource.duration")}}
+  - : 取得或設置現在正被表示的媒體的時間長度。
+- ### 事件處理函數 (Event handlers)
 
+  {{domxref("MediaSource.onsourceclose")}}
 
- </dt>
- <dt>{{domxref("MediaSource.onsourceclose")}}</dt>
- <dd><code>sourceclose</code> 事件的事件處理函數。</dd>
- <dt>{{domxref("MediaSource.onsourceended")}}</dt>
- <dd><code>sourceended</code> 事件的事件處理函數。</dd>
- <dt>{{domxref("MediaSource.onsourceopen")}}</dt>
- <dd><code>sourceopen</code> 事件的事件處理函數。</dd>
-</dl>
+  - : `sourceclose` 事件的事件處理函數。
 
-<dl>
-</dl>
+- {{domxref("MediaSource.onsourceended")}}
+  - : `sourceended` 事件的事件處理函數。
+- {{domxref("MediaSource.onsourceopen")}}
+  - : `sourceopen` 事件的事件處理函數。
 
-<dl>
-</dl>
+## 方法 (Methods)
 
-<h2 id="方法_Methods">方法 (Methods)</h2>
+_從親介面 (parent interface) {{domxref("EventTarget")}} 繼承屬性。_
 
-<p><em>從親介面 (parent interface) {{domxref("EventTarget")}} 繼承屬性。</em></p>
+- {{domxref("MediaSource.addSourceBuffer()")}}
+  - : 依據指定的 MIME 類型建立一個新的 {{domxref("SourceBuffer")}} 且將其加入 `MediaSource` 的 {{domxref("SourceBuffers")}} 串列。
+- {{domxref("MediaSource.clearLiveSeekableRange()")}}
+  - : 清除先前藉由呼叫 `setLiveSeekableRange()` 所設定的可尋找範圍。
+- {{domxref("MediaSource.endOfStream()")}}
+  - : 示意串流的結束。
+- {{domxref("MediaSource.removeSourceBuffer()")}}
+  - : 從與此 `MediaSource` 物件關聯的 {{domxref("SourceBuffers")}} 串列移除指定的 {{domxref("SourceBuffer")}}。
+- {{domxref("MediaSource.setLiveSeekableRange()")}}
+  - : 設定使用者可以在媒體元素中的可尋找範圍。
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>依據指定的 MIME 類型建立一個新的 {{domxref("SourceBuffer")}} 且將其加入 <code>MediaSource</code> 的 {{domxref("SourceBuffers")}} 串列。</dd>
- <dt>{{domxref("MediaSource.clearLiveSeekableRange()")}}</dt>
- <dd>清除先前藉由呼叫 <code>setLiveSeekableRange()</code> 所設定的可尋找範圍。</dd>
- <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
- <dd>示意串流的結束。</dd>
- <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
- <dd>從與此 <code>MediaSource</code> 物件關聯的 {{domxref("SourceBuffers")}} 串列移除指定的 {{domxref("SourceBuffer")}}。</dd>
- <dt>{{domxref("MediaSource.setLiveSeekableRange()")}}</dt>
- <dd>設定使用者可以在媒體元素中的可尋找範圍。</dd>
-</dl>
+## 靜態方法 (Static methods)
 
-<h2 id="靜態方法_Static_methods">靜態方法 (Static methods)</h2>
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : 回傳一個 {{domxref("Boolean")}} 值表示指定的 MIME 類型是否被現在的用戶代理支援 — 意即可否成功的為該 MIME 類型建立 {{domxref("SourceBuffer")}} 物件。
 
-<dl>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>回傳一個 {{domxref("Boolean")}} 值表示指定的 MIME 類型是否被現在的用戶代理支援 — 意即可否成功的為該 MIME 類型建立 {{domxref("SourceBuffer")}} 物件。</dd>
-</dl>
+## 範例
 
-<h2 id="範例">範例</h2>
+以下簡單的範例儘快的載入一個個影片塊 (chunk) 且儘快的播放。這個範例是由 Nick Desaulniers 所撰寫且可以[在此實際觀看](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)（您也可以[下載原始碼](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以更進一步研究）
 
-<p>以下簡單的範例儘快的載入一個個影片塊 (chunk) 且儘快的播放。這個範例是由 Nick Desaulniers 所撰寫且可以<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">在此實際觀看</a>（您也可以<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下載原始碼</a>以更進一步研究）</p>
-
-<pre class="brush: js notranslate">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -113,19 +99,18 @@ function fetchAB (url, cb) {
     cb(xhr.response);
   };
   xhr.send();
-};</pre>
+};
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="相容性表格">相容性表格</h2>
+## 相容性表格
 
-<div>{{Compat("api.MediaSource")}}</div>
+{{Compat("api.MediaSource")}}
 
-<h2 id="相關資料">相關資料</h2>
+## 相關資料
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

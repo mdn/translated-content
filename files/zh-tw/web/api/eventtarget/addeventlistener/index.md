@@ -8,36 +8,35 @@ tags:
 translation_of: Web/API/EventListener
 original_slug: Web/API/EventListener
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>EventListener</code></strong> 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。</p>
+**`EventListener`** 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。
 
-<div class="note">
-<p><strong>注意：</strong>基於相容舊版內容的需要， <code>EventListener</code> 可以接受一個函式及一個帶有 <code>handleEvent()</code> 屬性函式的物件。相關的<a href="#Example">範例</a>顯示在下方。</p>
-</div>
+> **備註：** 基於相容舊版內容的需要， `EventListener` 可以接受一個函式及一個帶有 `handleEvent()` 屬性函式的物件。相關的[範例](#Example)顯示在下方。
 
-<h2 id="屬性">屬性</h2>
+## 屬性
 
-<p><em>這個介面並不實作且不繼承任何屬性。</em></p>
+_這個介面並不實作且不繼承任何屬性。_
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>這個介面不繼承任何方法。</em></p>
+_這個介面不繼承任何方法。_
 
-<dl>
- <dt>{{domxref("EventListener.handleEvent()")}}</dt>
- <dd>一個可以在指定類型事件發生時被呼叫的函數。</dd>
-</dl>
+- {{domxref("EventListener.handleEvent()")}}
+  - : 一個可以在指定類型事件發生時被呼叫的函數。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id="btn"&gt;Click here!&lt;/button&gt;</pre>
+```html
+<button id="btn">Click here!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const buttonElement = document.getElementById('btn');
+```js
+const buttonElement = document.getElementById('btn');
 
 // 透過提供回呼函數的方式對「click」事件新增處理器。
 // 當元素被點選後會出現「Element clicked!」的彈出訊息。
@@ -51,22 +50,20 @@ buttonElement.addEventListener('click', {
     alert('Element clicked through handleEvent property!');
   }
 });
-</pre>
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h3 id="檢閱相關">檢閱相關:</h3>
+### 檢閱相關:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></li>
-</ul>
+- [addEventListener](/zh-TW/docs/Web/API/EventTarget/addEventListener)
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat}}</p>
+{{Compat}}

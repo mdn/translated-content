@@ -3,26 +3,22 @@ title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 translation_of: Web/CSS/transition-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>transition-timing-function</code></strong> CSS 屬性用於表示各個被<a href="/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">動畫特效</a>影響的屬性的區間值計算方式。</p>
+**`transition-timing-function`** CSS 屬性用於表示各個被[動畫特效](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)影響的屬性的區間值計算方式。
 
-<div>{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
+本質上，這個屬性讓你使用加速度曲線來表示動畫變換的速度。
 
-<p> </p>
+而每個可以動畫化的屬性使用一個 {{cssxref("&lt;timing-function&gt;")}} 作為加速度曲線。
 
-<p>本質上，這個屬性讓你使用加速度曲線來表示動畫變換的速度。</p>
+你也許有許多時間函數，而你可以透過使用 {{ cssxref("transition-property") }} 屬性來個別設置。如果有前述清單的數量超過時間函數的數量，則會使用預設值 `ease`；如果少於那多餘的時間函數會被忽略，在這兩種情況，CSS 宣告總會有效。
 
-<p>而每個可以動畫化的屬性使用一個 {{cssxref("&lt;timing-function&gt;")}} 作為加速度曲線。</p>
+## 語法
 
-<p> </p>
-
-<p>你也許有許多時間函數，而你可以透過使用 {{ cssxref("transition-property") }} 屬性來個別設置。如果有前述清單的數量超過時間函數的數量，則會使用預設值 <code>ease</code>；如果少於那多餘的時間函數會被忽略，在這兩種情況，CSS 宣告總會有效。</p>
-
-<h2 id="語法">語法</h2>
-
-<pre class="brush:css no-line-numbers">/* Keyword */
+```css
+/* Keyword */
 transition-timing-function: ease;
 transition-timing-function: ease-in;
 transition-timing-function: ease-out;
@@ -47,33 +43,30 @@ transition-timing-function: unset;
 /* 包含 transition-property */
 transition-property: width, height;
 transition-timing-function: ease-in, ease-out; // ease-in to width and ease-out to height
+```
 
-</pre>
+### 值
 
-<h3 id="值">值</h3>
+- `<timing-function>`
+  - : 每個 {{cssxref("&lt;timing-function&gt;")}} 連結到對應的動畫化屬性，請參考 {{ cssxref("transition-property") }}。
 
-<dl>
- <dt><code>&lt;timing-function&gt;</code></dt>
- <dd>每個 {{cssxref("&lt;timing-function&gt;")}} 連結到對應的動畫化屬性，請參考 {{ cssxref("transition-property") }}。</dd>
-</dl>
-
-<h3 id="公式語法">公式語法</h3>
+### 公式語法
 
 {{csssyntax}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<div>
-<div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease</code></p>
+`transition-timing-function: ease`
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
+</div>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```
+
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -105,9 +98,10 @@ transition-timing-function: ease-in, ease-out; // ease-in to width and ease-out 
     transition-duration:2s;
     transition-timing-function: ease;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -121,22 +115,21 @@ transition-timing-function: ease-in, ease-out; // ease-in to width and ease-out 
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_ease",275,150)}}
+
+`transition-timing-function: ease-in`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_ease",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easein" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-in</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -168,9 +161,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -184,22 +178,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easein",275,150)}}
+
+`transition-timing-function: ease-out`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easein",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easeout" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-out</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -231,9 +224,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -247,22 +241,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easeout",275,150)}}
+
+`transition-timing-function: ease-in-out`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easeout",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_easeinout" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: ease-in-out</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -294,9 +287,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: ease-in-out;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -310,23 +304,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_easeinout",275,150)}}
+
+`transition-timing-function: linear`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_easeinout",275,150)}}</div>
-</div>
-</div>
+```
 
-<div id="ttf_linear" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: linear</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -358,9 +350,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: linear;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -374,22 +367,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_linear",275,150)}}
+
+`transition-timing-function: step-start`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_linear",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_stepstart" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: step-start</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -421,9 +413,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: step-start;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -437,22 +430,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_stepstart",275,150)}}
+
+`transition-timing-function: step-end`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_stepstart",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_stepend" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: step-end</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -484,9 +476,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: step-end;
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -500,22 +493,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
+```
+
+{{EmbedLiveSample("ttf_stepend",275,150)}}
+
+`transition-timing-function: steps(4, end)`
+
+```html hidden
+ <div class="parent">
+  <div class="box">Lorem</div>
 </div>
 
-<div>{{EmbedLiveSample("ttf_stepend",275,150)}}</div>
-</div>
+```
 
-<div id="ttf_step4end" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-timing-function: steps(4, end)</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+```css hidden
+.parent { width: 250px; height:125px;}
 .box {
     width: 100px;
     height: 100px;
@@ -547,9 +539,10 @@ var intervalID = window.setInterval(updateTransition, 7000);
     transition-duration:2s;
     transition-timing-function: steps(4, end);
 }
-</pre>
+```
 
-<pre class="brush:js">function updateTransition() {
+```js hidden
+function updateTransition() {
   var el = document.querySelector("div.box");
 
   if (el) {
@@ -563,25 +556,21 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 
 var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
+```
 
-<div>{{EmbedLiveSample("ttf_step4end",275,150)}}</div>
-</div>
+{{EmbedLiveSample("ttf_step4end",275,150)}}
 
-<h2 id="規格">規格</h2>
+## 規格
 
 {{Specifications}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="相容性">相容性</h2>
+## 相容性
 
-<p>{{Compat("css.properties.transition-timing-function")}}</p>
+{{Compat("css.properties.transition-timing-function")}}
 
-<h2 id="看更多">看更多</h2>
+## 看更多
 
-<ul>
- <li><a href="/zh-TW/docs/CSS/Using_CSS_transitions">使用 CSS transitions</a></li>
- <li>{{ domxref("TransitionEvent") }}</li>
-</ul>
+- [使用 CSS transitions](/zh-TW/docs/CSS/Using_CSS_transitions)
+- {{ domxref("TransitionEvent") }}

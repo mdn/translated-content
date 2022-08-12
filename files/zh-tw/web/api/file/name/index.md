@@ -4,30 +4,30 @@ slug: Web/API/File/name
 translation_of: Web/API/File/fileName
 original_slug: Web/API/File/fileName
 ---
-<p>{{APIRef("File API")}}{{non-standard_header}}</p>
+{{APIRef("File API")}}{{non-standard_header}}
 
-<p>{{deprecated_header(7.0)}}</p>
+{{deprecated_header(7.0)}}
 
-<h2 id="總覽">總覽</h2>
+## 總覽
 
-<p>回傳檔案名稱，基於安全因素，檔案路徑不包含這個屬性。</p>
+回傳檔案名稱，基於安全因素，檔案路徑不包含這個屬性。
 
-<div class="note">這個檔案是廢棄的，使用 {{domxref("File.name")}} 取代。</div>
+> **備註：** 這個檔案是廢棄的，使用 {{domxref("File.name")}} 取代。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre>var name = instanceOfFile.fileName</pre>
+```js
+var name = instanceOfFile.fileName
+```
 
-<h2 id="數值">數值</h2>
+## 數值
 
-<p>字串</p>
+字串
 
-<h2 id="Specification">格式</h2>
+## 格式
 
-<p>尚無資料</p>
+尚無資料
 
-<h2 id="看更多">看更多</h2>
+## 看更多
 
-<ul>
- <li>{{domxref("File.name")}}</li>
-</ul>
+- {{domxref("File.name")}}

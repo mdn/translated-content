@@ -12,76 +12,64 @@ tags:
   - Web Performance
 translation_of: Web/API/Performance
 ---
-<div>{{APIRef("High Resolution Time")}}</div>
+{{APIRef("High Resolution Time")}}
 
-<p>The <strong><code>Performance</code></strong> interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline API</a>, the <a href="/en-US/docs/Web/API/Navigation_timing_API">Navigation Timing API</a>, the <a href="/en-US/docs/Web/API/User_Timing_API">User Timing API</a>, and the <a href="/en-US/docs/Web/API/Resource_Timing_API">Resource Timing API</a>.</p>
+The **`Performance`** interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the [Performance Timeline API](/zh-TW/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/zh-TW/docs/Web/API/Navigation_timing_API), the [User Timing API](/zh-TW/docs/Web/API/User_Timing_API), and the [Resource Timing API](/zh-TW/docs/Web/API/Resource_Timing_API).
 
-<p>An object of this type can be obtained by calling the {{domxref("Window.performance")}} read-only attribute.</p>
+An object of this type can be obtained by calling the {{domxref("Window.performance")}} read-only attribute.
 
-<div class="note">
-<p>This interface and its members are available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>, except where indicated below. Also note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.</p>
-</div>
+> **備註：** This interface and its members are available in [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API), except where indicated below. Also note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>Performance</code> interface doesn't inherit any properties.</em></p>
+_The `Performance` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{deprecated_inline}} {{domxref("Performance.navigation")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in <code>timing</code>, including whether the page was a load or a refresh, how many redirections occurred, and so forth.</dd>
- <dt>{{deprecated_inline}}  {{domxref("Performance.timing")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("PerformanceTiming")}} object containing latency-related performance information. Not available in workers.</dd>
- <dt>{{domxref("Performance.memory", "performance.memory")}} {{Non-standard_inline}}</dt>
- <dd>A <em>non-standard</em> extension added in Chrome, this property provides an object with basic memory usage information. <em>You <strong>should not use</strong> this non-standard API.</em></dd>
- <dt>{{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}</dt>
- <dd>Returns the high resolution timestamp of the start time of the performance measurement.</dd>
-</dl>
+- {{deprecated_inline}} {{domxref("Performance.navigation")}} {{readonlyInline}}
+  - : A {{domxref("PerformanceNavigation")}} object that provides useful context about the operations included in the times listed in `timing`, including whether the page was a load or a refresh, how many redirections occurred, and so forth.
+- {{deprecated_inline}} {{domxref("Performance.timing")}} {{readonlyInline}}
+  - : A {{domxref("PerformanceTiming")}} object containing latency-related performance information. Not available in workers.
+- {{domxref("Performance.memory", "performance.memory")}} {{Non-standard_inline}}
+  - : A _non-standard_ extension added in Chrome, this property provides an object with basic memory usage information. _You **should not use** this non-standard API._
+- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Non-standard_inline}}
+  - : Returns the high resolution timestamp of the start time of the performance measurement.
 
-<dl>
- <dt>
- <h3 id="Event_handlers">Event handlers</h3>
- </dt>
- <dt>{{domxref("Performance.onresourcetimingbufferfull")}}</dt>
- <dd>An {{domxref("EventTarget")}} which is a callback that will be called when the {{event("resourcetimingbufferfull")}} event is fired.</dd>
-</dl>
+- ### Event handlers
 
-<h2 id="Methods">Methods</h2>
+  {{domxref("Performance.onresourcetimingbufferfull")}}
 
-<p><em><em>The <code>Performance</code> interface doesn't inherit any </em>methods</em>.</p>
+  - : An {{domxref("EventTarget")}} which is a callback that will be called when the {{event("resourcetimingbufferfull")}} event is fired.
 
-<dl>
- <dt>{{domxref("Performance.clearMarks()")}}</dt>
- <dd>Removes the given <em>mark</em> from the browser's performance entry buffer.</dd>
- <dt>{{domxref("Performance.clearMeasures()")}}</dt>
- <dd>Removes the given <em>measure</em> from the browser's performance entry buffer.</dd>
- <dt>{{domxref("Performance.clearResourceTimings()")}}</dt>
- <dd>Removes all {{domxref("PerformanceEntry","performance entries")}} with a {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" from the browser's performance data buffer.</dd>
- <dt>{{domxref("Performance.getEntries()")}}</dt>
- <dd>Returns a list of {{domxref("PerformanceEntry")}} objects based on the given <em>filter</em>.</dd>
- <dt>{{domxref("Performance.getEntriesByName()")}}</dt>
- <dd>Returns a list of {{domxref("PerformanceEntry")}} objects based on the given <em>name</em> and <em>entry type</em>.</dd>
- <dt>{{domxref("Performance.getEntriesByType()")}}</dt>
- <dd>Returns a list of {{domxref("PerformanceEntry")}} objects of the given <em>entry type</em>.</dd>
- <dt>{{domxref("Performance.mark()")}}</dt>
- <dd>Creates a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's <em>performance entry buffer</em> with the given name.</dd>
- <dt>{{domxref("Performance.measure()")}}</dt>
- <dd>Creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's performance entry buffer between two specified marks (known as the <em>start mark</em> and <em>end mark</em>, respectively).</dd>
- <dt>{{domxref("Performance.now()")}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since a reference instant.</dd>
- <dt>{{domxref("Performance.setResourceTimingBufferSize()")}}</dt>
- <dd>Sets the browser's resource timing buffer size to the specified number of "<code>resource</code>" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} objects.</dd>
- <dt>{{domxref("Performance.toJSON()")}}</dt>
- <dd>Is a jsonizer returning a json object representing the <code>Performance</code> object.</dd>
-</dl>
+## Methods
 
-<h2 id="Specifications">Specifications</h2>
+_The `Performance` interface doesn't inherit any methods_.
+
+- {{domxref("Performance.clearMarks()")}}
+  - : Removes the given _mark_ from the browser's performance entry buffer.
+- {{domxref("Performance.clearMeasures()")}}
+  - : Removes the given _measure_ from the browser's performance entry buffer.
+- {{domxref("Performance.clearResourceTimings()")}}
+  - : Removes all {{domxref("PerformanceEntry","performance entries")}} with a {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from the browser's performance data buffer.
+- {{domxref("Performance.getEntries()")}}
+  - : Returns a list of {{domxref("PerformanceEntry")}} objects based on the given _filter_.
+- {{domxref("Performance.getEntriesByName()")}}
+  - : Returns a list of {{domxref("PerformanceEntry")}} objects based on the given _name_ and _entry type_.
+- {{domxref("Performance.getEntriesByType()")}}
+  - : Returns a list of {{domxref("PerformanceEntry")}} objects of the given _entry type_.
+- {{domxref("Performance.mark()")}}
+  - : Creates a {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's _performance entry buffer_ with the given name.
+- {{domxref("Performance.measure()")}}
+  - : Creates a named {{domxref("DOMHighResTimeStamp","timestamp")}} in the browser's performance entry buffer between two specified marks (known as the _start mark_ and _end mark_, respectively).
+- {{domxref("Performance.now()")}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed since a reference instant.
+- {{domxref("Performance.setResourceTimingBufferSize()")}}
+  - : Sets the browser's resource timing buffer size to the specified number of "`resource`" {{domxref("PerformanceEntry.entryType","type")}} {{domxref("PerformanceEntry","performance entry")}} objects.
+- {{domxref("Performance.toJSON()")}}
+  - : Is a jsonizer returning a json object representing the `Performance` object.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-
-<p>{{Compat("api.Performance")}}</p>
-</div>
+{{Compat("api.Performance")}}

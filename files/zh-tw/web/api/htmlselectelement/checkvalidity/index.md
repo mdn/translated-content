@@ -3,24 +3,24 @@ title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
 translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><code><strong>HTMLSelectElement.checkValidity()</strong></code> 方法會檢查元素是否有任何的檢核、驗證條件，並且檢查是否滿足這些條件。如果元素沒有通過這些檢核，瀏覽器會於該元素上觸發一個可取消的 {{event("invalid")}} 事件，並回傳 <code>false</code>。</p>
+**`HTMLSelectElement.checkValidity()`** 方法會檢查元素是否有任何的檢核、驗證條件，並且檢查是否滿足這些條件。如果元素沒有通過這些檢核，瀏覽器會於該元素上觸發一個可取消的 {{event("invalid")}} 事件，並回傳 `false`。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">var <em>result</em> = <em>selectElt</em>.checkValidity();</pre>
+```js
+var result = selectElt.checkValidity();
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.HTMLSelectElement.checkValidity")}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form validation.</a></li>
-</ul>
+- [Form validation.](/zh-TW/docs/Web/Guide/HTML/HTML5/Constraint_validation)

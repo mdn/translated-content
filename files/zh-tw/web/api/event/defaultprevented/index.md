@@ -3,29 +3,32 @@ title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 translation_of: Web/API/Event/defaultPrevented
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<h2 id="概述">概述</h2>
+## 概述
 
-<p>回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxref("event.preventDefault()", "preventDefault()")}} 方法。</p>
+回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxref("event.preventDefault()", "preventDefault()")}} 方法。
 
-<div class="note"><strong>註：</strong>You should use this instead of the non-standard, deprecated<code> getPreventDefault()</code> method (see {{ bug(691151) }}).</div>
+> **備註：** You should use this instead of the non-standard, deprecated` getPreventDefault()` method (see {{ bug(691151) }}).
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="eval">bool = event.defaultPrevented </pre>
+```js
+bool = event.defaultPrevented
+```
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre> if (e.defaultPrevented) {
+```js
+ if (e.defaultPrevented) {
    /* the default was prevented */
  }
-</pre>
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Event.defaultPrevented")}}

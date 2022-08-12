@@ -3,15 +3,16 @@ title: width
 slug: Web/CSS/width
 translation_of: Web/CSS/width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>The <strong><code>width</code></strong> CSS property specifies the width of an element. By default, the property defines the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">content area</a>. If {{cssxref("box-sizing")}} is set to <code>border-box</code>, however, it instead determines the width of the <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area">border area</a>.</p>
+The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area).
 
-<pre class="brush:css no-line-numbers">/* &lt;length&gt; values */
+```css
+/* <length> values */
 width: 300px;
 width: 25em;
 
-/* &lt;percentage&gt; value */
+/* <percentage> value */
 width: 75%;
 
 /* Keyword values */
@@ -27,38 +28,40 @@ width: auto;
 width: inherit;
 width: initial;
 width: unset;
-</pre>
+```
 
-<h2>Examples</h2>
+## Examples
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="grid"&gt;
-  &lt;div class="col"&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;length&amp;gt; values
-      &lt;p class="w1"&gt;width: 150px&lt;/p&gt;
-      &lt;p class="w2"&gt;width: 20em&lt;/p&gt;
-      &lt;p class="w3 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em content-box&lt;/p&gt;
-      &lt;p class="w4 warning" title="this feature is experimental and might not work in your browser"&gt;width: 20em border-box&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
-      &amp;lt;percentage&amp;gt; values
-      &lt;p class="w5"&gt;width: 75%&lt;/p&gt;
-      &lt;p class="w6 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% content-box&lt;/p&gt;
-      &lt;p class="w7 warning" title="this feature is experimental and might not work in your browser"&gt;width: 75% border-box&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="cell"&gt;
+```html hidden
+<div class="grid">
+  <div class="col">
+    <div class="cell">
+      &lt;length&gt; values
+      <p class="w1">width: 150px</p>
+      <p class="w2">width: 20em</p>
+      <p class="w3 warning" title="this feature is experimental and might not work in your browser">width: 20em content-box</p>
+      <p class="w4 warning" title="this feature is experimental and might not work in your browser">width: 20em border-box</p>
+    </div>
+    <div class="cell">
+      &lt;percentage&gt; values
+      <p class="w5">width: 75%</p>
+      <p class="w6 warning" title="this feature is experimental and might not work in your browser">width: 75% content-box</p>
+      <p class="w7 warning" title="this feature is experimental and might not work in your browser">width: 75% border-box</p>
+    </div>
+    <div class="cell">
       Keyword values
-      &lt;p&gt;width: auto&lt;/p&gt;
-      &lt;p class="w8 warning" title="this feature is experimental and might not work in your browser"&gt;width: max-content&lt;/p&gt;
-      &lt;p class="w9 warning" title="this feature is experimental and might not work in your browser"&gt;width: min-content&lt;/p&gt;
-      &lt;p class="w10 warning" title="this feature is experimental and might not work in your browser"&gt;width: available&lt;/p&gt;
-      &lt;p class="w11 warning" title="this feature is experimental and might not work in your browser"&gt;width: fit-content&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      <p>width: auto</p>
+      <p class="w8 warning" title="this feature is experimental and might not work in your browser">width: max-content</p>
+      <p class="w9 warning" title="this feature is experimental and might not work in your browser">width: min-content</p>
+      <p class="w10 warning" title="this feature is experimental and might not work in your browser">width: available</p>
+      <p class="w11 warning" title="this feature is experimental and might not work in your browser">width: fit-content</p>
+    </div>
+  </div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -117,75 +120,70 @@ p {
 .w8 { width: max-content; }
 .w9 { width: min-content; }
 .w10 { width: available; }
-.w11 { width: fit-content; }</pre>
-</div>
+.w11 { width: fit-content; }
+```
 
-<div>{{EmbedLiveSample("examples", "100%", 660)}}</div>
+{{EmbedLiveSample("examples", "100%", 660)}}
 
-<div class="note">
-<p>{{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.</p>
-</div>
+> **備註：** {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>width</code> property is specified as either:</p>
+The `width` property is specified as either:
 
-<ul>
- <li>one of the following keyword values: <code><a href="#available">available</a></code>, <code><a href="#min-content">min-content</a></code>, <code><a href="#max-content">max-content</a></code>, <code><a href="#fit-content">fit-content</a></code>, <code><a href="#auto">auto</a></code>.</li>
- <li>a <code><a href="#&lt;length>">&lt;length&gt;</a></code> or a <code><a href="#&lt;percentage>">&lt;percentage&gt;</a></code>. This may optionally be followed by one of the following keywords: <code><a href="#border-box">border-box</a></code>, <code><a href="#content-box">content-box</a></code>.</li>
-</ul>
+- one of the following keyword values: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
+- a [`<length>`](#<length>) or a [`<percentage>`](#<percentage>). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>Defines the width as an absolute value.</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Defines the width as a percentage of the containing block's width. If the width of the containing block depends on the width of the element, the resulting layout is undefined.</dd>
- <dt><code>border-box</code>{{experimental_inline}}</dt>
- <dd>If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's border box.</dd>
- <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's content box.</dd>
- <dt><code>auto</code></dt>
- <dd>The browser will calculate and select a width for the specified element.</dd>
- <dt><code>fill</code> {{experimental_inline}}</dt>
- <dd>Use the <code>fill-available</code> inline size or <code>fill-available</code> block size, as appropriate to the writing mode.</dd>
- <dt><code>max-content</code> {{experimental_inline}}</dt>
- <dd>The intrinsic preferred width.</dd>
- <dt><code>min-content</code> {{experimental_inline}}</dt>
- <dd>The intrinsic minimum width.</dd>
- <dt><code>available</code> {{experimental_inline}}</dt>
- <dd>The containing block width minus horizontal margin, border and padding.</dd>
- <dt><code>fit-content</code> {{experimental_inline}}</dt>
- <dd>The larger of:
- <ul>
-  <li>the intrinsic minimum width</li>
-  <li>the smaller of the intrinsic preferred width and the available width</li>
- </ul>
- </dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : Defines the width as an absolute value.
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Defines the width as a percentage of the containing block's width. If the width of the containing block depends on the width of the element, the resulting layout is undefined.
+- `border-box`{{experimental_inline}}
+  - : If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's border box.
+- `content-box` {{experimental_inline}}
+  - : If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's content box.
+- `auto`
+  - : The browser will calculate and select a width for the specified element.
+- `fill` {{experimental_inline}}
+  - : Use the `fill-available` inline size or `fill-available` block size, as appropriate to the writing mode.
+- `max-content` {{experimental_inline}}
+  - : The intrinsic preferred width.
+- `min-content` {{experimental_inline}}
+  - : The intrinsic minimum width.
+- `available` {{experimental_inline}}
+  - : The containing block width minus horizontal margin, border and padding.
+- `fit-content` {{experimental_inline}}
+  - : The larger of: the intrinsic minimum width
+    - the smaller of the intrinsic preferred width and the available width
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="預設寬度">預設寬度</h3>
+### 預設寬度
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
+{{EmbedLiveSample('Default_width', '500px', '64px')}}
 
-<h3 id="像素和相對大小">像素和相對大小</h3>
+### 像素和相對大小
 
-<pre class="brush: css">.px_length {
+```css
+.px_length {
   width: 200px;
   background-color: red;
   color: white;
@@ -198,62 +196,72 @@ p {
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
-&lt;div class="em_length"&gt;Width measured in em&lt;/div&gt;</pre>
+```html
+<div class="px_length">Width measured in px</div>
+<div class="em_length">Width measured in em</div>
+```
 
-<p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
+{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
 
-<h3 id="百分比">百分比</h3>
+### 百分比
 
-<pre class="brush: css">.percent {
+```css
+.percent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
+```html
+<div class="percent">Width in percentage</div>
+```
 
-<p>{{EmbedLiveSample('Percentage', '500px', '64px')}}</p>
+{{EmbedLiveSample('Percentage', '500px', '64px')}}
 
-<h3 id="內容最大值">內容最大值</h3>
+### 內容最大值
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit uses a non-standard name */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('max-content_2', '500px', '64px')}}</p>
+{{EmbedLiveSample('max-content_2', '500px', '64px')}}
 
-<h3 id="內容最小值">內容最小值</h3>
+### 內容最小值
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+```html
+<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```
 
-<p>{{EmbedLiveSample('min-content_2', '500px', '155px')}}</p>
+{{EmbedLiveSample('min-content_2', '500px', '155px')}}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
+{{Compat("css.properties.width")}}
 
+## 參考
 
-<p>{{Compat("css.properties.width")}}</p>
-
-<h2 id="參考">參考</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">box model</a>, {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
-</ul>
+- [box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

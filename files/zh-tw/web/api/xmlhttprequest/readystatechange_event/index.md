@@ -4,48 +4,46 @@ slug: Web/API/XMLHttpRequest/readystatechange_event
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>An <a href="/docs/Web/API/EventHandler"><code>EventHandler</code></a> that is called whenever the <code>readyState</code> attribute changes. The callback is called from the user interface thread. The <strong><code>XMLHttpRequest.onreadystatechange</code></strong> property contains the event handler to be called when the {{event("readystatechange")}} event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.</p>
+An [`EventHandler`](/docs/Web/API/EventHandler) that is called whenever the `readyState` attribute changes. The callback is called from the user interface thread. The **`XMLHttpRequest.onreadystatechange`** property contains the event handler to be called when the {{event("readystatechange")}} event is fired, that is every time the {{domxref("XMLHttpRequest.readyState", "readyState")}} property of the {{domxref("XMLHttpRequest")}} changes.
 
-<div class="warning">
-<p><strong>Warning:</strong> This should not be used with synchronous requests and must not be used from native code.</p>
-</div>
+> **警告：** This should not be used with synchronous requests and must not be used from native code.
 
-<p>The <code>readystatechange</code> event will not be fired when an <code>XMLHttpRequest</code> request is cancelled with the <a href="/docs/Web/API/XMLHttpRequest/abort">abort()</a> method.</p>
+The `readystatechange` event will not be fired when an `XMLHttpRequest` request is cancelled with the [abort()](/docs/Web/API/XMLHttpRequest/abort) method.
 
-<div class="note">
-<p>UPDATE: it's firing in the latest version of browsers (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Example <a href="https://jsfiddle.net/merksam/ve5oc0gn/">here</a> - just reaload page few times.</p>
-</div>
+> **備註：** UPDATE: it's firing in the latest version of browsers (Firefox 51.0.1, Opera 43.0.2442.991, Safari 10.0.3 (12602.4.8), Chrome 54.0.2840.71, Edge, IE11). Example [here](https://jsfiddle.net/merksam/ve5oc0gn/) - just reaload page few times.
 
-<h2 id="Syntax">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
+```plain
+XMLHttpRequest.onreadystatechange = callback;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<ul>
- <li><code><em>callback</em></code> is the function to be executed when the <code>readyState</code> changes.</li>
-</ul>
+- `callback` is the function to be executed when the `readyState` changes.
 
-<h2 id="Example">範例</h2>
+## 範例
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 
-xhr.open(<em>method</em>, <em>url</em>, true);
+xhr.open(method, url, true);
 xhr.onreadystatechange = function () {
-        if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log(xhr.responseText);
         }
     };
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.XMLHttpRequest.readystatechange_event")}}

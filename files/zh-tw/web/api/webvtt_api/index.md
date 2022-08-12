@@ -4,607 +4,575 @@ slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 original_slug: Web/API/Web_Video_Text_Tracks_Format
 ---
-<p>WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。</p>
+WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。
 
-<p>WebVTT 當中可以採用空白或分隔字元（tab）。</p>
+WebVTT 當中可以採用空白或分隔字元（tab）。
 
-<p>WebVTT 的 MIME Type 為 <code>text/vtt</code>。</p>
+WebVTT 的 MIME Type 為 `text/vtt`。
 
-<h2 id="WebVTT_文本">WebVTT 文本</h2>
+## WebVTT 文本
 
-<p>WebVTT 檔的結構中，有兩項必備資訊、四項選用資訊。</p>
+WebVTT 檔的結構中，有兩項必備資訊、四項選用資訊。
 
-<ul>
- <li>選用：byte order mark (BOM)</li>
- <li>字串 <code>WEBVTT</code></li>
- <li>選用：於 <code>WEBVTT</code> 右側可加上文字標題
-  <ul>
-   <li>在 <code>WEBVTT</code> 之後至少要有一個空白字元</li>
-   <li>可以藉此為檔案加上描述</li>
-   <li>除了換行字元及<code>「--&gt;</code>」字串外，可以是任何文字</li>
-  </ul>
- </li>
- <li>一個空白行，由兩個連續的換行字元構成。</li>
- <li>選用：一個以上的時間節點（cue）或註解</li>
- <li>選用：一個以上的空白行</li>
-</ul>
+- 選用：byte order mark (BOM)
+- 字串 `WEBVTT`
+- 選用：於 `WEBVTT` 右側可加上文字標題
 
-<h5 id="範例_1_-_最簡單的_WEBVTT_檔">範例 1 - 最簡單的 WEBVTT 檔</h5>
+  - 在 `WEBVTT` 之後至少要有一個空白字元
+  - 可以藉此為檔案加上描述
+  - 除了換行字元及`「-->`」字串外，可以是任何文字
 
-<pre>  WEBVTT
+- 一個空白行，由兩個連續的換行字元構成。
+- 選用：一個以上的時間節點（cue）或註解
+- 選用：一個以上的空白行
 
-</pre>
+##### 範例 1 - 最簡單的 WEBVTT 檔
 
-<h5 id="範例_2_-_很簡單的_WebVTT_檔">範例 2 - 很簡單的 WebVTT 檔</h5>
+```plain
+  WEBVTT
+```
 
-<pre>  WEBVTT - 這個檔案沒有時間節點
+##### 範例 2 - 很簡單的 WebVTT 檔
 
-</pre>
+```plain
+  WEBVTT - 這個檔案沒有時間節點
+```
 
-<h5 id="範例_3_-_常見的_WebVTT_例子">範例 3 - 常見的 WebVTT 例子</h5>
+##### 範例 3 - 常見的 WebVTT 例子
 
-<pre>  WEBVTT - 這個檔案有時間節點
+```plain
+  WEBVTT - 這個檔案有時間節點
 
   14
-  00:01:14.815 --&gt; 00:01:18.114
+  00:01:14.815 --> 00:01:18.114
   - What?
   - Where are we now?
 
   15
-  00:01:18.171 --&gt; 00:01:20.991
+  00:01:18.171 --> 00:01:20.991
   - This is big bat country.
 
   16
-  00:01:21.058 --&gt; 00:01:23.868
+  00:01:21.058 --> 00:01:23.868
   - [ Bats Screeching ]
   - They won't get in your hair. They're after the bugs.
-</pre>
+```
 
-<p> </p>
+## WebVTT 註解
 
-<h2 id="WebVTT_註解">WebVTT 註解</h2>
+Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
 
-<p>Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.</p>
+註解中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。
 
-<p>註解中不能包含「<code>--&gt;」字串、「</code>&amp;」符號或「&lt;」符號。如欲使用後兩者，可採跳脫字串「&amp;amp;」或「&amp;lt;」。此外雖規格上允許使用「&gt;」字元，仍然建議跳脫為「&amp;gt;」以避免混淆。</p>
+註解由三個部分組成：
 
-<p>註解由三個部分組成：</p>
+- 字串 `NOTE`
+- 一個空白字元或換行字元
+- 選用：一個以上的字元，除了前面提到的禁用字元外皆可使用
 
-<ul>
- <li>字串 <code>NOTE</code></li>
- <li>一個空白字元或換行字元</li>
- <li>選用：一個以上的字元，除了前面提到的禁用字元外皆可使用</li>
-</ul>
+##### 範例 4 - 常見 WebVTT 範例
 
-<h5 id="範例_4_-_常見_WebVTT_範例">範例 4 - 常見 WebVTT 範例</h5>
+```plain
+  NOTE 這行是註解
+```
 
-<pre>  NOTE 這行是註解
-</pre>
+##### 範例 5 - 多行註解
 
-<h5 id="範例_5_-_多行註解">範例 5 - 多行註解</h5>
-
-<pre>  NOTE
+```plain
+  NOTE
   這也是註解，
   只是拆成多行。
 
   NOTE 當然也可以像這樣
   來分行寫註解。
-</pre>
+```
 
-<h5 id="範例_6_-_常見註解使用方式">範例 6 - 常見註解使用方式</h5>
+##### 範例 6 - 常見註解使用方式
 
-<pre>  WEBVTT - 翻譯我喜歡的影片字幕
+```plain
+  WEBVTT - 翻譯我喜歡的影片字幕
 
   NOTE
   本字幕由 Kyle 翻譯，
   希望可以讓我的朋友跟家人一同觀賞。
 
   1
-  00:02:15.000 --&gt; 00:02:20.000
+  00:02:15.000 --> 00:02:20.000
   - Ta en kopp varmt te.
   - Det är inte varmt.
 
   2
-  00:02:20.000 --&gt; 00:02:25.000
+  00:02:20.000 --> 00:02:25.000
   - Har en kopp te.
   - Det smakar som te.
 
   NOTE This last line may not translate well.
 
   3
-  00:02:25.000 --&gt; 00:02:30.000
+  00:02:25.000 --> 00:02:30.000
   -Ta en kopp.
-</pre>
+```
 
-<p> </p>
+## WebVTT 時間節點
 
-<h2 id="WebVTT_時間節點">WebVTT 時間節點</h2>
+時間節點（cue）是具備單一開始時間、結束時間、文字內容的字幕區段。 Example 6 consists of the header, a blank line, and then five cues separated by blank lines. 時間節點由五個部分組成：
 
-<p>時間節點（cue）是具備單一開始時間、結束時間、文字內容的字幕區段。 Example 6 consists of the header, a blank line, and then five cues separated by blank lines. 時間節點由五個部分組成：</p>
+- 選用：時間節點 ID，後接著一個換行字元
+- 時間資訊
+- 選用：時間節點設定，每個設定值以空白字元分隔，第一個設定值前也要加個空白字元
+- 一個以上的換行字元
+- 文字內容
 
-<ul>
- <li>選用：時間節點 ID，後接著一個換行字元</li>
- <li>時間資訊</li>
- <li>選用：時間節點設定，每個設定值以空白字元分隔，第一個設定值前也要加個空白字元</li>
- <li>一個以上的換行字元</li>
- <li>文字內容</li>
-</ul>
+##### 範例 7 - Example of a cue
 
-<h5 id="範例7_-_Example_of_a_cue">範例7 - Example of a cue</h5>
+```plain
+1 - Title Crawl
+00:00:5.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
+Some time ago in a place rather distant....
+```
 
-<pre>1 - Title Crawl
-00:00:5.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....</pre>
+### 節點 ID
 
-<p> </p>
+此 ID 代表時間節點的名稱，可以用以在腳本語言中參照某段特定時間節點。ID 中禁用換行字元，也不可以包括「`-->」字串。`ID 最後必須以一個換行字元作為結束。
 
-<h3 id="節點_ID">節點 ID</h3>
+雖然通常都用數字（1, 2, 3...）作為 ID，但規格上並不要求每個 ID 都是為一值。
 
-<p>此 ID 代表時間節點的名稱，可以用以在腳本語言中參照某段特定時間節點。ID 中禁用換行字元，也不可以包括「<code>--&gt;」字串。</code>ID 最後必須以一個換行字元作為結束。</p>
+##### 範例 8 - 範例 7 中的時間節點 ID
 
-<p>雖然通常都用數字（1, 2, 3...）作為 ID，但規格上並不要求每個 ID 都是為一值。</p>
+```plain
+1 - Title Crawl
+```
 
-<h5 id="範例_8_-_範例_7_中的時間節點_ID">範例 8 - 範例 7 中的時間節點 ID</h5>
+##### 範例 9 - ID 常見用法
 
-<pre>1 - Title Crawl</pre>
-
-<h5 id="範例_9_-_ID_常見用法">範例 9 - ID 常見用法</h5>
-
-<pre>WEBVTT
+```plain
+WEBVTT
 
 1
-00:00:22.230 --&gt; 00:00:24.606
+00:00:22.230 --> 00:00:24.606
 This is the first subtitle.
 
 2
-00:00:30.739 --&gt; 00:00:34.074
+00:00:30.739 --> 00:00:34.074
 This is the second.
 
 3
-00:00:34.159 --&gt; 00:00:35.743
+00:00:34.159 --> 00:00:35.743
 Third
-</pre>
+```
 
-<p> </p>
+### 時間資訊
 
-<h3 id="時間資訊">時間資訊</h3>
+時間資訊標注了此段節點的出現時機，其中包括開始時間與結束時間。結束時間必須比開始時間晚，而開始時間必須比先前所有的開始時間晚，或至少是同一時間。
 
-<p>時間資訊標注了此段節點的出現時機，其中包括開始時間與結束時間。結束時間必須比開始時間晚，而開始時間必須比先前所有的開始時間晚，或至少是同一時間。</p>
+不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters`），則不允許兩段節點同時出現。
 
-<p>不同時間節點可以設定為同時顯示，但若 WebVTT 檔案是用在 chapters（{{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 <code>chapters</code>），則不允許兩段節點同時出現。</p>
+每項時間資訊都由五個部分組成：
 
-<p>每項時間資訊都由五個部分組成：</p>
+- 開始時間
+- 一個以上的空白字元
+- 「`-->」字串`
+- 一個以上的空白字元
+- 結束時間
 
-<ul>
- <li>開始時間</li>
- <li>一個以上的空白字元</li>
- <li>「<code>--&gt;」字串</code></li>
- <li>一個以上的空白字元</li>
- <li>結束時間
-  <ul>
-   <li>必須比開始時間晚</li>
-  </ul>
- </li>
-</ul>
+  - 必須比開始時間晚
 
-<p>時間的表示方式，可以是以下兩種：</p>
+時間的表示方式，可以是以下兩種：
 
-<ul>
- <li><code>mm:ss.ttt</code></li>
- <li><code>hh:mm:ss.ttt</code></li>
-</ul>
+- `mm:ss.ttt`
+- `hh:mm:ss.ttt`
 
-<p>其中的各元素說明如下：</p>
+其中的各元素說明如下：
 
-<ul>
- <li><code>hh</code> - 小時
+- `hh` - 小時
 
-  <ul>
-   <li>至少要有兩個數字，不小於 01</li>
-   <li>可以超過兩個數字（例如 9999:00:00.000）</li>
-  </ul>
- </li>
- <li><code>mm</code> - 分
-  <ul>
-   <li>從 00 到 59</li>
-  </ul>
- </li>
- <li><code>ss</code> - 秒
-  <ul>
-   <li>從 00 到 59</li>
-  </ul>
- </li>
- <li><code>ttt</code> - 毫秒
-  <ul>
-   <li>從 000 到 999</li>
-  </ul>
- </li>
-</ul>
+  - 至少要有兩個數字，不小於 01
+  - 可以超過兩個數字（例如 9999:00:00.000）
 
-<h5 id="Example_10_-_Basic_cue_timing_examples">Example 10 - Basic cue timing examples</h5>
+- `mm` - 分
 
-<pre>00:22.230 --&gt; 00:24.606
-00:30.739 --&gt; 00:00:34.074
-00:00:34.159 --&gt; 00:35.743
-00:00:35.827 --&gt; 00:00:40.122</pre>
+  - 從 00 到 59
 
-<h5 id="Example_11_-_Overlapping_cue_timing_examples">Example 11 - Overlapping cue timing examples</h5>
+- `ss` - 秒
 
-<pre>00:00:00.000 --&gt; 00:00:10.000
-00:00:05.000 --&gt; 00:01:00.000
-00:00:30.000 --&gt; 00:00:50.000</pre>
+  - 從 00 到 59
 
-<h5 id="Example_12_-_Non-overlapping_cue_timing_examples">Example 12 - Non-overlapping cue timing examples</h5>
+- `ttt` - 毫秒
 
-<pre>00:00:00.000 --&gt; 00:00:10.000
-00:00:10.000 --&gt; 00:01:00.581
-00:01:00.581 --&gt; 00:02:00.100
-00:02:01.000 --&gt; 00:02:01.000</pre>
+  - 從 000 到 999
 
-<p> </p>
+##### Example 10 - Basic cue timing examples
 
-<h3 id="Cue_Settings">Cue Settings</h3>
+```plain
+00:22.230 --> 00:24.606
+00:30.739 --> 00:00:34.074
+00:00:34.159 --> 00:35.743
+00:00:35.827 --> 00:00:40.122
+```
 
-<p>Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.</p>
+##### Example 11 - Overlapping cue timing examples
 
-<p>The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:</p>
+```plain
+00:00:00.000 --> 00:00:10.000
+00:00:05.000 --> 00:01:00.000
+00:00:30.000 --> 00:00:50.000
+```
 
-<ul>
- <li><strong>vertical</strong>
+##### Example 12 - Non-overlapping cue timing examples
 
-  <ul>
-   <li>水平方向</li>
-  </ul>
+```plain
+00:00:00.000 --> 00:00:10.000
+00:00:10.000 --> 00:01:00.581
+00:01:00.581 --> 00:02:00.100
+00:02:01.000 --> 00:02:01.000
+```
 
-  <table style="margin-left: 30px;">
-   <thead>
-    <tr>
-     <th colspan="2">Table 1 - vertical values</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th><code>vertical:rl</code></th>
-     <td>文字方向由右至左</td>
-    </tr>
-    <tr>
-     <th><code>vertical:lr</code></th>
-     <td>文字方向由左至右</td>
-    </tr>
-   </tbody>
+### Cue Settings
+
+Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+
+The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
+
+- **vertical**
+
+  - 水平方向
+
+  <table style="margin-left: 30px">
+    <thead>
+      <tr>
+        <th colspan="2">Table 1 - vertical values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><code>vertical:rl</code></th>
+        <td>文字方向由右至左</td>
+      </tr>
+      <tr>
+        <th><code>vertical:lr</code></th>
+        <td>文字方向由左至右</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>line</strong>
-  <ul>
-   <li>Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.</li>
-   <li>Value can be a line number
-    <ul>
-     <li>The line height is the height of the first line of the cue as it appears on the video</li>
-     <li>Positive numbers indicate top down</li>
-     <li>Negative numbers indicate bottom up</li>
-    </ul>
-   </li>
-   <li>Or value can be a percentage
-    <ul>
-     <li>Must be an integer (i.e. no decimals) between 0 and 100 inclusive</li>
-     <li>Must be followed by a percent sign (%)</li>
-    </ul>
-   </li>
-  </ul>
 
-  <table style="margin-left: 30px;">
-   <thead>
-    <tr>
-     <th colspan="4">Table 2 - line examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th> </th>
-     <th><code>vertical</code> 省略時</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>line:0</code></th>
-     <td>top</td>
-     <td>right</td>
-     <td>left</td>
-    </tr>
-    <tr>
-     <th><code>line:-1</code></th>
-     <td>bottom</td>
-     <td>left</td>
-     <td>right</td>
-    </tr>
-    <tr>
-     <th><code>line:0%</code></th>
-     <td>top</td>
-     <td>right</td>
-     <td>left</td>
-    </tr>
-    <tr>
-     <th><code>line:100%</code></th>
-     <td>bottom</td>
-     <td>left</td>
-     <td>right</td>
-    </tr>
-   </tbody>
+- **line**
+
+  - Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.
+  - Value can be a line number
+
+    - The line height is the height of the first line of the cue as it appears on the video
+    - Positive numbers indicate top down
+    - Negative numbers indicate bottom up
+
+  - Or value can be a percentage
+
+    - Must be an integer (i.e. no decimals) between 0 and 100 inclusive
+    - Must be followed by a percent sign (%)
+
+  <table style="margin-left: 30px">
+    <thead>
+      <tr>
+        <th colspan="4">Table 2 - line examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> 省略時</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>line:0</code></th>
+        <td>top</td>
+        <td>right</td>
+        <td>left</td>
+      </tr>
+      <tr>
+        <th><code>line:-1</code></th>
+        <td>bottom</td>
+        <td>left</td>
+        <td>right</td>
+      </tr>
+      <tr>
+        <th><code>line:0%</code></th>
+        <td>top</td>
+        <td>right</td>
+        <td>left</td>
+      </tr>
+      <tr>
+        <th><code>line:100%</code></th>
+        <td>bottom</td>
+        <td>left</td>
+        <td>right</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>position</strong>
-  <ul>
-   <li>Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.</li>
-   <li>Value is a percentage</li>
-   <li>Must be an integer (no decimals) between 0 and 100 inclusive</li>
-   <li>Must be followed by a percent sign (%)</li>
-  </ul>
 
-  <table style="margin-left: 30px;">
-   <thead>
-    <tr>
-     <th colspan="4">Table 3 - position examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th> </th>
-     <th><code>vertical</code> 省略時</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>position:0%</code></th>
-     <td>left</td>
-     <td>top</td>
-     <td>top</td>
-    </tr>
-    <tr>
-     <th><code>position:100%</code></th>
-     <td>right</td>
-     <td>bottom</td>
-     <td>bottom</td>
-    </tr>
-   </tbody>
+- **position**
+
+  - Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.
+  - Value is a percentage
+  - Must be an integer (no decimals) between 0 and 100 inclusive
+  - Must be followed by a percent sign (%)
+
+  <table style="margin-left: 30px">
+    <thead>
+      <tr>
+        <th colspan="4">Table 3 - position examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> 省略時</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>position:0%</code></th>
+        <td>left</td>
+        <td>top</td>
+        <td>top</td>
+      </tr>
+      <tr>
+        <th><code>position:100%</code></th>
+        <td>right</td>
+        <td>bottom</td>
+        <td>bottom</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>size</strong>
-  <ul>
-   <li>Specifies the width of the text area. If vertical is set, size specifies the height of the text area.</li>
-   <li>Value is a percentage</li>
-   <li>Must be an integer (i.e. no decimals) between 0 and 100 inclusive</li>
-   <li>Must be followed by a percent sign (%)</li>
-  </ul>
 
-  <table style="margin-left: 30px;">
-   <thead>
-    <tr>
-     <th colspan="4">Table 4 - size examples</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th> </th>
-     <th><code>vertical</code> 省略時</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>size:100%</code></th>
-     <td>full width</td>
-     <td>full height</td>
-     <td>full height</td>
-    </tr>
-    <tr>
-     <th><code>size:50%</code></th>
-     <td>half width</td>
-     <td>half height</td>
-     <td>half height</td>
-    </tr>
-   </tbody>
+- **size**
+
+  - Specifies the width of the text area. If vertical is set, size specifies the height of the text area.
+  - Value is a percentage
+  - Must be an integer (i.e. no decimals) between 0 and 100 inclusive
+  - Must be followed by a percent sign (%)
+
+  <table style="margin-left: 30px">
+    <thead>
+      <tr>
+        <th colspan="4">Table 4 - size examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> 省略時</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>size:100%</code></th>
+        <td>full width</td>
+        <td>full height</td>
+        <td>full height</td>
+      </tr>
+      <tr>
+        <th><code>size:50%</code></th>
+        <td>half width</td>
+        <td>half height</td>
+        <td>half height</td>
+      </tr>
+    </tbody>
   </table>
- </li>
- <li><strong>align</strong>
-  <ul>
-   <li>Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.</li>
-  </ul>
 
-  <table style="margin-left: 30px;">
-   <thead>
-    <tr>
-     <th colspan="4">Table 5 - align values</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-     <th> </th>
-     <th><code>vertical</code> 省略時</th>
-     <th><code>vertical:rl</code></th>
-     <th><code>vertical:lr</code></th>
-    </tr>
-    <tr>
-     <th><code>align:start</code></th>
-     <td>left</td>
-     <td>top</td>
-     <td>top</td>
-    </tr>
-    <tr>
-     <th><code>align:middle</code></th>
-     <td>centred horizontally</td>
-     <td>centred vertically</td>
-     <td>centred vertically</td>
-    </tr>
-    <tr>
-     <th><code>align:end</code></th>
-     <td>right</td>
-     <td>bottom</td>
-     <td>bottom</td>
-    </tr>
-   </tbody>
+- **align**
+
+  - Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
+
+  <table style="margin-left: 30px">
+    <thead>
+      <tr>
+        <th colspan="4">Table 5 - align values</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th></th>
+        <th><code>vertical</code> 省略時</th>
+        <th><code>vertical:rl</code></th>
+        <th><code>vertical:lr</code></th>
+      </tr>
+      <tr>
+        <th><code>align:start</code></th>
+        <td>left</td>
+        <td>top</td>
+        <td>top</td>
+      </tr>
+      <tr>
+        <th><code>align:middle</code></th>
+        <td>centred horizontally</td>
+        <td>centred vertically</td>
+        <td>centred vertically</td>
+      </tr>
+      <tr>
+        <th><code>align:end</code></th>
+        <td>right</td>
+        <td>bottom</td>
+        <td>bottom</td>
+      </tr>
+    </tbody>
   </table>
- </li>
-</ul>
 
-<h5 id="Example_13_-_Cue_setting_examples">Example 13 - Cue setting examples</h5>
+##### Example 13 - Cue setting examples
 
-<p>The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.</p>
+The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
 
-<pre>00:00:5.000 --&gt; 00:00:10.000
-00:00:5.000 --&gt; 00:00:10.000 line:63% position:72% align:start
-00:00:5.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:5.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
-</pre>
+```plain
+00:00:5.000 --> 00:00:10.000
+00:00:5.000 --> 00:00:10.000 line:63% position:72% align:start
+00:00:5.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
+00:00:5.000 --> 00:00:10.000 vertical:rt line:-1 align:end
+```
 
-<p> </p>
+### 文字內容
 
-<h3 id="文字內容">文字內容</h3>
+The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+文字內容中不能包含「`-->」字串、「`&」符號或「<」符號。如欲使用後兩者，可採跳脫字串「\&amp;」或「\&lt;」。此外雖規格上允許使用「>」字元，仍然建議跳脫為「\&gt;」以避免混淆。若您使用 WebVTT 檔作為後設資料，則可不管這些限制。
 
-<p>文字內容中不能包含「<code>--&gt;」字串、「</code>&amp;」符號或「&lt;」符號。如欲使用後兩者，可採跳脫字串「&amp;amp;」或「&amp;lt;」。此外雖規格上允許使用「&gt;」字元，仍然建議跳脫為「&amp;gt;」以避免混淆。若您使用 WebVTT 檔作為後設資料，則可不管這些限制。</p>
-
-<p>除了上述的三個跳脫字串外，還有其他四種跳脫字串，分列如下</p>
+除了上述的三個跳脫字串外，還有其他四種跳脫字串，分列如下
 
 <table>
- <thead>
-  <tr>
-   <th colspan="3">Table 6 - 跳脫字串</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th>名稱</th>
-   <th>字元</th>
-   <th>跳脫字串</th>
-  </tr>
-  <tr>
-   <td>「與」</td>
-   <td>&amp;</td>
-   <td><code>&amp;amp;</code></td>
-  </tr>
-  <tr>
-   <td>小於</td>
-   <td>&lt;</td>
-   <td><code>&amp;lt;</code></td>
-  </tr>
-  <tr>
-   <td>大於</td>
-   <td>&gt;</td>
-   <td><code>&amp;gt;</code></td>
-  </tr>
-  <tr>
-   <td>左到右標記</td>
-   <td> </td>
-   <td><code>&amp;lrm;</code></td>
-  </tr>
-  <tr>
-   <td>右到左標記</td>
-   <td> </td>
-   <td><code>&amp;rlm;</code></td>
-  </tr>
-  <tr>
-   <td>不斷行空白</td>
-   <td><code> </code></td>
-   <td><code>&amp;nbsp;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th colspan="3">Table 6 - 跳脫字串</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>名稱</th>
+      <th>字元</th>
+      <th>跳脫字串</th>
+    </tr>
+    <tr>
+      <td>「與」</td>
+      <td>&#x26;</td>
+      <td><code>&#x26;amp;</code></td>
+    </tr>
+    <tr>
+      <td>小於</td>
+      <td>&#x3C;</td>
+      <td><code>&#x26;lt;</code></td>
+    </tr>
+    <tr>
+      <td>大於</td>
+      <td>></td>
+      <td><code>&#x26;gt;</code></td>
+    </tr>
+    <tr>
+      <td>左到右標記</td>
+      <td></td>
+      <td><code>&#x26;lrm;</code></td>
+    </tr>
+    <tr>
+      <td>右到左標記</td>
+      <td></td>
+      <td><code>&#x26;rlm;</code></td>
+    </tr>
+    <tr>
+      <td>不斷行空白</td>
+      <td><code></code></td>
+      <td><code>&#x26;nbsp;</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="文字內容中的標籤">文字內容中的標籤</h3>
+### 文字內容中的標籤
 
-<p>有很多標籤（例如 <code>&lt;bold&gt;</code>）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 <code>chapters</code> 時，其中所用的 WebVTT  檔案裡就不能使用標籤。</p>
+有很多標籤（例如 `<bold>`）可以用在文字內容中，但若 {{ HTMLElement("track") }} 的 {{ htmlattrxref("kind") }} 設定為 `chapters` 時，其中所用的 WebVTT 檔案裡就不能使用標籤。
 
-<dl>
- <dt><strong>時間標籤</strong></dt>
- <dd>時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。<em>當前文字（active text）</em> 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比<em>當前文字</em> 早的文字都稱為<em>先前文字（previous text）</em> ，而晚於<em>當前文字</em> 的便稱為<em>未來文字（future text）</em> 。如此便可做出卡拉OK字幕效果</dd>
-</dl>
+- **時間標籤**
+  - : 時間標籤中的時間，必須比該節點的開始時間晚、比同節點先前之其他時間標籤晚，並且早於該節點的結束時間。_當前文字（active text）_ 代表此時間標籤到下個時間標籤（或文字內容的結尾）之間的文字，其他同節點中，比*當前文字* 早的文字都稱為*先前文字（previous text）* ，而晚於*當前文字* 的便稱為*未來文字（future text）* 。如此便可做出卡拉 OK 字幕效果
 
-<h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
+##### Example 12 - Karaoke style text
 
-<pre>1
-00:16.500 --&gt; 00:18.500
-When the moon &lt;00:17.500&gt;hits your eye
+```plain
+1
+00:16.500 --> 00:18.500
+When the moon <00:17.500>hits your eye
 
 1
-00:00:18.500 --&gt; 00:00:20.500
-Like a &lt;00:19.000&gt;big-a &lt;00:19.500&gt;pizza &lt;00:20.000&gt;pie
+00:00:18.500 --> 00:00:20.500
+Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
 
 1
-00:00:20.500 --&gt; 00:00:21.500
-That's &lt;00:00:21.000&gt;amore
-</pre>
+00:00:20.500 --> 00:00:21.500
+That's <00:00:21.000>amore
+```
 
-<p>以下則需要開頭標籤與結束標籤（例如 <code>&lt;b&gt;text&lt;/b&gt;</code>）。</p>
+以下則需要開頭標籤與結束標籤（例如 `<b>text</b>`）。
 
-<dl>
-  <dt><strong>Class 標籤</strong>（<code>&lt;c&gt;&lt;/c&gt;</code>）</dt>
-  <dd>以 CSS 類別為該段文字設定樣式</dd>
-</dl>
+- **Class 標籤**（`<c></c>`）
+  - : 以 CSS 類別為該段文字設定樣式
 
-<h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
+##### Example 14 - Class tag
 
-<pre>&lt;c.classname&gt;text&lt;/c&gt;</pre>
+```plain
+<c.classname>text</c>
+```
 
-<dl>
-  <dt><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)</dt>
-  <dd>Italicize the contained text.</dd>
-</dl>
+- **Italics tag** (`<i></i>`)
+  - : Italicize the contained text.
 
-<h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
+##### Example 15 - Italics tag
 
-<pre>&lt;i&gt;text&lt;/i&gt;</pre>
+```plain
+<i>text</i>
+```
 
-<dl>
-  <dt><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)</dt>
-  <dd>Bold the contained text.</dd>
-</dl>
+- **Bold tag** (`<b></b>`)
+  - : Bold the contained text.
 
-<h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
+##### Example 16 - Bold tag
 
-<pre>&lt;b&gt;text&lt;/b&gt;</pre>
+```plain
+<b>text</b>
+```
 
-<dl>
-  <dt><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)</dt>
-  <dd>Underline the contained text.</dd>
-</dl>
+- **Underline tag** (`<u></u>`)
+  - : Underline the contained text.
 
-<h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
+##### Example 17 - Underline tag
 
-<pre>&lt;u&gt;text&lt;/u&gt;</pre>
+```plain
+<u>text</u>
+```
 
-<dl>
-  <dt><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)</dt>
-  <dd>Used with ruby text tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</dd>
-</dl>
+- **Ruby tag** (`<ruby></ruby>`)
+  - : Used with ruby text tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
-<h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
+##### Example 18 - Ruby tag
 
-<pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+```plain
+<ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+```
 
-<dl>
-  <dt><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)</dt>
-  <dd>Used with ruby tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e. small annotative characters above other characters).</dd>
-</dl>
+- **Ruby text tag** (`<rt></rt>`)
+  - : Used with ruby tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
-<h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
+##### Example 19 - Ruby text tag
 
-<pre>&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+```plain
+<ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+```
 
-<dl>
-  <dt><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)</dt>
-  <dd>Similar to class tag, also used to style the contained text using CSS.</dd>
-</dl>
+- **Voice tag** (`<v></v>`)
+  - : Similar to class tag, also used to style the contained text using CSS.
 
-<h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
+##### Example 20 - Voice tag
 
-<pre>&lt;v Bob&gt;text&lt;/v&gt;</pre>
+```plain
+<v Bob>text</v>
+```
 
-<h2 id="瀏覽器支援">瀏覽器支援</h2>
+## 瀏覽器支援
 
 {{Compat}}
 
-<h2 id="規格">規格</h2>
+## 規格
 
-<ul>
- <li><a href="http://dev.w3.org/html5/webvtt/">http://dev.w3.org/html5/webvtt/</a></li>
-</ul>
+- <http://dev.w3.org/html5/webvtt/>

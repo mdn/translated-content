@@ -3,19 +3,20 @@ title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 translation_of: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
-<p><code>XMLHttpRequest 支持同步和非同步請求，一般來說，建議使用非同步請求。</code></p>
+`XMLHttpRequest 支持同步和非同步請求，一般來說，建議使用非同步請求。`
 
-<p>In short, synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience. </p>
+In short, synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience.
 
-<h2 id="非同步請求">非同步請求</h2>
+## 非同步請求
 
-<p>If you use <code>XMLHttpRequest</code> from an extension, you should use it asynchronously.  In this case, you receive a callback when the data has been received, which lets the browser continue to work as normal while your request is being handled.</p>
+If you use `XMLHttpRequest` from an extension, you should use it asynchronously. In this case, you receive a callback when the data has been received, which lets the browser continue to work as normal while your request is being handled.
 
-<h3 id="範例_send_a_file_to_the_console_log">範例: send a file to the console log</h3>
+### 範例: send a file to the console log
 
-<p>這是使用非同步XMLHttpRequest的基本方式</p>
+這是使用非同步 XMLHttpRequest 的基本方式
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open("GET", "/bar/foo.txt", true);
 xhr.onload = function (e) {
   if (xhr.readyState === 4) {
@@ -29,19 +30,21 @@ xhr.onload = function (e) {
 xhr.onerror = function (e) {
   console.error(xhr.statusText);
 };
-xhr.send(null); </pre>
+xhr.send(null);
+```
 
-<p>Line 2第3個參數為布林值，true表示非同步請求。</p>
+Line 2 第 3 個參數為布林值，true 表示非同步請求。
 
-<p>Line 3 creates an event handler function object and assigns it to the request's <code>onload</code> attribute.  This handler looks at the request's <code>readyState</code> to see if the transaction is complete in line 4, and if it is, and the HTTP status is 200, dumps the received content.  If an error occurred, an error message is displayed.</p>
+Line 3 creates an event handler function object and assigns it to the request's `onload` attribute. This handler looks at the request's `readyState` to see if the transaction is complete in line 4, and if it is, and the HTTP status is 200, dumps the received content. If an error occurred, an error message is displayed.
 
-<p>Line 15 actually initiates the request.  The callback routine is called whenever the state of the request changes.</p>
+Line 15 actually initiates the request. The callback routine is called whenever the state of the request changes.
 
-<h3 id="Example_creating_a_standard_function_to_read_external_files">Example: creating a standard function to read external files</h3>
+### Example: creating a standard function to read external files
 
-<p>In some cases you must read many external files. This is a standard function which uses the <code>XMLHttpRequest</code> object asynchronously in order to switch the content of the read file to a specified listener.</p>
+In some cases you must read many external files. This is a standard function which uses the `XMLHttpRequest` object asynchronously in order to switch the content of the read file to a specified listener.
 
-<pre class="brush: js">function xhrSuccess () { this.callback.apply(this, this.arguments); }
+```js
+function xhrSuccess () { this.callback.apply(this, this.arguments); }
 
 function xhrError () { console.error(this.statusText); }
 
@@ -54,30 +57,32 @@ function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */
   oReq.open("get", sURL, true);
   oReq.send(null);
 }
-</pre>
+```
 
-<p>Usage:</p>
+Usage:
 
-<pre class="brush: js">function showMessage (sMsg) {
+```js
+function showMessage (sMsg) {
   alert(sMsg + this.responseText);
 }
 
 loadFile("message.txt", showMessage, "New message!\n\n");
-</pre>
+```
 
-<p>Line 1 declares a function which will pass all arguments after the third to the callback function when the file has been loaded.</p>
+Line 1 declares a function which will pass all arguments after the third to the callback function when the file has been loaded.
 
-<p>Line 4 creates an event handler function object and assigns it to the request's <code>onload</code> attribute.  This handler looks at the request's <code>readyState</code> to see if the transaction is complete in line 5, and if it is, and the HTTP status is 200, calls the callback function.  If an error occurred, an error message is displayed.</p>
+Line 4 creates an event handler function object and assigns it to the request's `onload` attribute. This handler looks at the request's `readyState` to see if the transaction is complete in line 5, and if it is, and the HTTP status is 200, calls the callback function. If an error occurred, an error message is displayed.
 
-<p>Line 13 specifies <code>true</code> for its third parameter to indicate that the request should be handled asynchronously.</p>
+Line 13 specifies `true` for its third parameter to indicate that the request should be handled asynchronously.
 
-<p>Line 14 actually initiates the request.</p>
+Line 14 actually initiates the request.
 
-<h3 id="Example_using_a_timeout">Example: using a timeout</h3>
+### Example: using a timeout
 
-<p>You can use a timeout to prevent hanging your code forever while waiting for a read to occur. This is done by setting the value of the <code>timeout</code> property on the <code>XMLHttpRequest</code> object, as shown in the code below:</p>
+You can use a timeout to prevent hanging your code forever while waiting for a read to occur. This is done by setting the value of the `timeout` property on the `XMLHttpRequest` object, as shown in the code below:
 
-<pre class="brush: js">  var args = arguments.slice(2);
+```js
+  var args = arguments.slice(2);
   var xhr = new XMLHttpRequest();
   xhr.ontimeout = function () {
     console.error("The request for " + url + " timed out.");
@@ -95,80 +100,83 @@ loadFile("message.txt", showMessage, "New message!\n\n");
   xhr.timeout = timeout;
   xhr.send(null);
 }
-</pre>
+```
 
-<p>Notice the addition of code to handle the "timeout" event by setting the <code>ontimeout</code> handler.</p>
+Notice the addition of code to handle the "timeout" event by setting the `ontimeout` handler.
 
-<p>Usage:</p>
+Usage:
 
-<pre class="brush: js">function showMessage (sMsg) {
+```js
+function showMessage (sMsg) {
   alert(sMsg + this.responseText);
 }
 
 loadFile("message.txt", 2000, showMessage, "New message!\n");
-</pre>
+```
 
-<p>Here, we're specifying a timeout of 2000 ms.</p>
+Here, we're specifying a timeout of 2000 ms.
 
-<div class="note">
-<p><strong>Note:</strong> Support for <code>timeout</code> was added in {{Gecko("12.0")}}.</p>
-</div>
+> **備註：** Support for `timeout` was added in {{Gecko("12.0")}}.
 
-<h2 id="Synchronous_request">Synchronous request</h2>
+## Synchronous request
 
-<div class="note"><strong>Note:</strong> Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.</div>
+> **備註：** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
-<p>In rare cases, the use of a synchronous method is preferable to an asynchronous one.</p>
+In rare cases, the use of a synchronous method is preferable to an asynchronous one.
 
-<h3 id="Example_HTTP_synchronous_request">Example: HTTP synchronous request</h3>
+### Example: HTTP synchronous request
 
-<p>This example demonstrates how to make a simple synchronous request.</p>
+This example demonstrates how to make a simple synchronous request.
 
-<pre class="brush: js">var request = new XMLHttpRequest();
+```js
+var request = new XMLHttpRequest();
 request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
 request.send(null);
 
 if (request.status === 200) {
   console.log(request.responseText);
 }
-</pre>
+```
 
-<p>Line 3 sends the request.  The <code>null</code> parameter indicates that no body content is needed for the <code>GET</code> request.</p>
+Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-<p>Line 5 checks the status code after the transaction is completed.  If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.</p>
+Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
 
-<h3 id="Example_Synchronous_HTTP_request_from_a_Worker">Example: Synchronous HTTP request from a <code>Worker</code></h3>
+### Example: Synchronous HTTP request from a `Worker`
 
-<p>One of the few cases in which a synchronous request does not usually block execution is the use of <code>XMLHttpRequest</code> within a <code><a href="/en/DOM/Worker">Worker</a></code>.</p>
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/en/DOM/Worker).
 
-<p><code><strong>example.html</strong></code> (the main page):</p>
+**`example.html`** (the main page):
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```html
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example</title>
+<script type="text/javascript">
   var worker = new Worker("myTask.js");
   worker.onmessage = function(event) {
     alert("Worker said: " + event.data);
   };
 
   worker.postMessage("Hello");
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+</head>
+<body></body>
+</html>
+```
 
-<p><code><strong>myFile.txt</strong></code> (the target of the synchronous <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> invocation):</p>
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) invocation):
 
-<pre>Hello World!!
-</pre>
+```plain
+Hello World!!
+```
 
-<p><code><strong>myTask.js</strong></code> (the <code><a href="/en/DOM/Worker">Worker</a></code>):</p>
+**`myTask.js`** (the [`Worker`](/en/DOM/Worker)):
 
-<pre class="brush: js">self.onmessage = function (event) {
+```js
+self.onmessage = function (event) {
   if (event.data === "Hello") {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "myFile.txt", false);  // synchronous request
@@ -176,25 +184,26 @@ if (request.status === 200) {
     self.postMessage(xhr.responseText);
   }
 };
-</pre>
+```
 
-<div class="note"><strong>Note:</strong> The effect, because of the use of the <code>Worker</code>, is however asynchronous.</div>
+> **備註：** The effect, because of the use of the `Worker`, is however asynchronous.
 
-<p>It could be useful in order to interact in background with the server or to preload some content. See <a href="/En/DOM/Using_web_workers">Using web workers</a> for examples and details.</p>
+It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/En/DOM/Using_web_workers) for examples and details.
 
-<h3 id="Irreplaceability_of_the_synchronous_use">Irreplaceability of the synchronous use</h3>
+### Irreplaceability of the synchronous use
 
-<p>There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the <a href="/en/DOM/window.onunload"><code>window.onunload</code></a> and <a href="/en/DOM/window.onbeforeunload"><code>window.onbeforeunload</code></a> events (<a href="#XMLHttpRequests_being_stopped">see also below</a>).</p>
+There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the [`window.onunload`](/en/DOM/window.onunload) and [`window.onbeforeunload`](/en/DOM/window.onbeforeunload) events ([see also below](#XMLHttpRequests_being_stopped)).
 
-<p>Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.</p>
+Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.
 
-<p><img alt="" class="internal" src="/@api/deki/files/6227/=AsyncUnload.jpg" style="height: 359px; width: 467px;"></p>
+![](/@api/deki/files/6227/=AsyncUnload.jpg)
 
-<p>A possible solution is to make sure that any AJAX requests that you make on unload are make synchronously instead of asynchronously. This will ensure that the page doesn’t finish unloading before the server response comes back.</p>
+A possible solution is to make sure that any AJAX requests that you make on unload are make synchronously instead of asynchronously. This will ensure that the page doesn’t finish unloading before the server response comes back.
 
-<h4 id="Example_1_Automatic_logout_before_exit">Example #1: Automatic logout before exit</h4>
+#### Example #1: Automatic logout before exit
 
-<pre class="brush: js">window.onbeforeunload = function () {
+```js
+window.onbeforeunload = function () {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "logout.php?nick=" + escape(myName), false);  // synchronous request
   xhr.send(null);
@@ -202,16 +211,17 @@ if (request.status === 200) {
     return "Logout has failed. Do you want to complete it manually?";
   }
 };
-</pre>
+```
 
-<h4 id="Example_2_Noting_if_a_user_abandon_the_site_without_clicking_any_link_and_registering_the_boring_page">Example #2: Noting if a user abandon the site without clicking any link and registering the boring page</h4>
+#### Example #2: Noting if a user abandon the site without clicking any link and registering the boring page
 
-<pre class="brush: js">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-&lt;title&gt;MDN Example&lt;/title&gt;
-&lt;script type="text/javascript"&gt;
+```js
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MDN Example</title>
+<script type="text/javascript">
 (function () {
 
   function dontPanic () {
@@ -222,7 +232,7 @@ if (request.status === 200) {
   onload = function () {
     for (
       var aLinks = document.links, nLen = aLinks.length, nIdx = 0;
-      nIdx &lt; nLen;
+      nIdx < nLen;
       aLinks[nIdx++].onclick = dontPanic
     );
   };
@@ -239,20 +249,19 @@ if (request.status === 200) {
   var bForsake = true;
 
 })();
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;p&gt;&lt;a href="https://developer.mozilla.org/"&gt;Example link&lt;/a&gt;&lt;/p&gt;
+<p><a href="https://developer.mozilla.org/">Example link</a></p>
 
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+</body>
+</html>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/AJAX">AJAX</a></li>
-</ul>
+- [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest)
+- [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [AJAX](/zh-TW/docs/AJAX)

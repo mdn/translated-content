@@ -1,49 +1,54 @@
 ---
-title: '使用 :target'
-slug: 'Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors'
-translation_of: 'Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors'
+title: 使用 :target
+slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 ---
-<p>When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. As an aid to identifying the destination of a link that points to a specific portion of a document, <a href="http://www.w3.org/TR/css3-selectors/#target-pseudo">CSS3 Selectors</a> introduces the<code> {{ Cssxref(":target") }} </code><a href="/en/CSS/Pseudo-classes">pseudo-class</a>. Netscape 7.1 introduced support for this pseudo-class into the Netscape family, giving authors a new way to assist users keep oriented within large documents.</p>
+When a URL points at a specific piece of a document, it can be difficult to ascertain. Find out how you can use some simple CSS to draw attention to the target of a URL and improve the user's experience. As an aid to identifying the destination of a link that points to a specific portion of a document, [CSS3 Selectors](http://www.w3.org/TR/css3-selectors/#target-pseudo) introduces the` {{ Cssxref(":target") }} `[pseudo-class](/en/CSS/Pseudo-classes). Netscape 7.1 introduced support for this pseudo-class into the Netscape family, giving authors a new way to assist users keep oriented within large documents.
 
-<h3 id="Picking_a_Target">挑選目標</h3>
+### 挑選目標
 
-<p>The pseudo-class<code> {{ Cssxref(":target") }} </code>is used to style the target element of a URI containing a fragment identifier. For example, the URI <code>http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example</code> contains the fragment identifier <code>#Example</code>. In HTML, identifiers are found as the values of either <code>id</code> or <code>name</code> attributes, since the two share the same namespace. Thus, the example URI would point to the heading "Example" in this document.</p>
+The pseudo-class` {{ Cssxref(":target") }} `is used to style the target element of a URI containing a fragment identifier. For example, the URI `http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example` contains the fragment identifier `#Example`. In HTML, identifiers are found as the values of either `id` or `name` attributes, since the two share the same namespace. Thus, the example URI would point to the heading "Example" in this document.
 
-<p>Suppose you wish to style any<code> h2 </code>element that is the target of a URI, but do not want any other kind of element to get a target style. This is simple enough:</p>
+Suppose you wish to style any` h2 `element that is the target of a URI, but do not want any other kind of element to get a target style. This is simple enough:
 
-<pre>h2:target {font-weight: bold;}</pre>
+```plain
+h2:target {font-weight: bold;}
+```
 
-<p>It's also possible to create styles that are specific to a particular fragment of the document. This is done using the same identifying value that is found in the URI. Thus, to add a border to the <code>#Example</code> fragment, we would write:</p>
+It's also possible to create styles that are specific to a particular fragment of the document. This is done using the same identifying value that is found in the URI. Thus, to add a border to the `#Example` fragment, we would write:
 
-<pre>#Example:target {border: 1px solid black;}</pre>
+```plain
+#Example:target {border: 1px solid black;}
+```
 
-<h3 id="Targeting_the_Root_Element">選擇所有元素</h3>
+### 選擇所有元素
 
-<p>If the intent is to create a "blanket" style that will apply to all targeted elements, then the universal selector comes in handy:</p>
+If the intent is to create a "blanket" style that will apply to all targeted elements, then the universal selector comes in handy:
 
-<pre>:target {color: red;}
-</pre>
+```plain
+:target {color: red;}
+```
 
-<h3 id="Example">範例</h3>
+### 範例
 
-<p>In the following example, there are five links that point to elements in the same document. Selecting the "First" link, for example, will cause<code> &lt;h1 id="one"&gt; </code>to become the target element. Note that the document may jump to a new scroll position, since target elements are placed on the top of the browser window if possible.</p>
+In the following example, there are five links that point to elements in the same document. Selecting the "First" link, for example, will cause` <h1 id="one"> `to become the target element. Note that the document may jump to a new scroll position, since target elements are placed on the top of the browser window if possible.
 
-<pre class="brush: html">&lt;h4 id="one"&gt;...&lt;/h4&gt; &lt;p id="two"&gt;...&lt;/p&gt;
-&lt;div id="three"&gt;...&lt;/div&gt; &lt;a id="four"&gt;...&lt;/a&gt; &lt;em id="five"&gt;...&lt;/em&gt;
+```html
+<h4 id="one">...</h4> <p id="two">...</p>
+<div id="three">...</div> <a id="four">...</a> <em id="five">...</em>
 
-&lt;a href="#one"&gt;First&lt;/a&gt;
-&lt;a href="#two"&gt;Second&lt;/a&gt;
-&lt;a href="#three"&gt;Third&lt;/a&gt;
-&lt;a href="#four"&gt;Fourth&lt;/a&gt;
-&lt;a href="#five"&gt;Fifth&lt;/a&gt;</pre>
+<a href="#one">First</a>
+<a href="#two">Second</a>
+<a href="#three">Third</a>
+<a href="#four">Fourth</a>
+<a href="#five">Fifth</a>
+```
 
-<h3 id="Conclusion">結論</h3>
+### 結論
 
-<p>In cases where a fragment identifier points to a portion of the document, readers may become confused about which part of the document they're supposed to be reading. By styling the target of a URI, reader confusion can be reduced or eliminated.</p>
+In cases where a fragment identifier points to a portion of the document, readers may become confused about which part of the document they're supposed to be reading. By styling the target of a URI, reader confusion can be reduced or eliminated.
 
-<h3 id="Related_Links">相關連結</h3>
+### 相關連結
 
-<ul>
- <li><a href="http://www.w3.org/TR/css3-selectors/#target-pseudo">CSS3 Selectors #target-pseudo</a></li>
- <li><a href="/En/CSS/:target">CSS Reference :target</a></li>
-</ul>
+- [CSS3 Selectors #target-pseudo](http://www.w3.org/TR/css3-selectors/#target-pseudo)
+- [CSS Reference :target](/En/CSS/:target)

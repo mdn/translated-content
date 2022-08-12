@@ -3,42 +3,39 @@ title: 繪製圖形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-<p>網格(Grid)</p>
+網格(Grid)
 
-<p><img src="canvas_default_grid.png">在開始繪圖前，我們必須先了解畫布 (canvas) 網格，或著是說座標空間。在前一頁教學中的 HTML 範本有一個寬150 pixels (像素)、高150 pixels 的畫布。如右圖，你在畫布預設網格上繪圖，網格上 1 單位相當於畫布上 1 pixel，網格的原點 (座標 (0, 0) ) 坐落於左上角，所有元素定位皆相對於此左上角原點，所以藍色方塊的位置為從左往右推 x pixels、從上往下推 y pixels (亦即座標 (x, y) )。現在我們先專注在預設設定上，之後我們會看到如何轉換原點位置、旋轉網格以及縮放網格。</p>
+![](canvas_default_grid.png)在開始繪圖前，我們必須先了解畫布 (canvas) 網格，或著是說座標空間。在前一頁教學中的 HTML 範本有一個寬 150 pixels (像素)、高 150 pixels 的畫布。如右圖，你在畫布預設網格上繪圖，網格上 1 單位相當於畫布上 1 pixel，網格的原點 (座標 (0, 0) ) 坐落於左上角，所有元素定位皆相對於此左上角原點，所以藍色方塊的位置為從左往右推 x pixels、從上往下推 y pixels (亦即座標 (x, y) )。現在我們先專注在預設設定上，之後我們會看到如何轉換原點位置、旋轉網格以及縮放網格。
 
-<h2 id="畫矩形">畫矩形</h2>
+## 畫矩形
 
-<p>不同於<a href="/en-US/docs/SVG">SVG</a>，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。</p>
+不同於[SVG](/zh-TW/docs/SVG)，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。
 
-<div id="section_3">
-<p>首先來看看矩形，共有三個矩形繪圖函數:</p>
+首先來看看矩形，共有三個矩形繪圖函數:
 
-<dl>
- <dt><code>fillRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>畫出一個填滿的矩形。</dd>
- <dt><code>strokeRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>畫出一個矩形的邊框</dd>
- <dt><code>clearRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</code></dt>
- <dd>清除指定矩形區域內的內容，使其變為全透明。</dd>
-</dl>
+- `fillRect(x, y, width, height)`
+  - : 畫出一個填滿的矩形。
+- `strokeRect(x, y, width, height)`
+  - : 畫出一個矩形的邊框
+- `clearRect(x, y, width, height)`
+  - : 清除指定矩形區域內的內容，使其變為全透明。
 
-<p>這三個函數都接受一樣的參數: x, y代表從原點出發的座標位置，width, height代表矩形的寬高。</p>
+這三個函數都接受一樣的參數: x, y 代表從原點出發的座標位置，width, height 代表矩形的寬高。
 
-<h3 id="矩形範例">矩形範例</h3>
+### 矩形範例
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -47,62 +44,58 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.clearRect(45,45,60,60);
     ctx.strokeRect(50,50,50,50);
   }
-}</pre>
+}
+```
 
-<p>本例結果如下:</p>
+本例結果如下:
 
-<p>{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}</p>
+{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
 
-<p>fillRect()函數畫出一個寬高都100 pixels的矩形，clearRect()函數清除中央60 x 60 pixels大的正方形區域，接著strokeRect()在被清除區域內畫上一個50 x 50 pixels的矩形邊框。</p>
+fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數清除中央 60 x 60 pixels 大的正方形區域，接著 strokeRect()在被清除區域內畫上一個 50 x 50 pixels 的矩形邊框。
 
-<p>之後我們會看到另外兩種代替clearRect()的方法，還有如何改變圖形顏色與筆畫樣式。</p>
+之後我們會看到另外兩種代替 clearRect()的方法，還有如何改變圖形顏色與筆畫樣式。
 
-<p>不像之後會看到的路徑繪圖函數，這三個函數會立即在畫布上畫出矩形。</p>
+不像之後會看到的路徑繪圖函數，這三個函數會立即在畫布上畫出矩形。
 
-<h2 id="路徑繪製">路徑繪製</h2>
+## 路徑繪製
 
-<p>使用路徑 (path) 來畫圖形需要多一點步驟，一開始先產生路徑，然後用繪圖指令畫出路徑，然後再結束路徑，一旦路徑產生後便可以用畫筆或填滿方式來渲染生成，這裡是一些可用函數:</p>
+使用路徑 (path) 來畫圖形需要多一點步驟，一開始先產生路徑，然後用繪圖指令畫出路徑，然後再結束路徑，一旦路徑產生後便可以用畫筆或填滿方式來渲染生成，這裡是一些可用函數:
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}</dt>
- <dd>產生一個新路徑，產生後再使用繪圖指令來設定路徑。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
- <dd>閉合路徑好讓新的繪圖指令來設定路徑。</dd>
- <dt><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a></dt>
- <dd>路徑 API，這些 API 便是繪圖指令</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
+  - : 產生一個新路徑，產生後再使用繪圖指令來設定路徑。
+- {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
+  - : 閉合路徑好讓新的繪圖指令來設定路徑。
+- [路徑 API](/zh-TW/docs/Web/API/CanvasRenderingContext2D#Paths)
+  - : 路徑 API，這些 API 便是繪圖指令
+- {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}
+  - : 畫出圖形的邊框。
+- {{domxref("CanvasRenderingContext2D.fill", "fill()")}}
+  - : 填滿路徑內容區域來產生圖形。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}</dt>
- <dd>畫出圖形的邊框。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.fill", "fill()")}}</dt>
- <dd>填滿路徑內容區域來產生圖形。</dd>
-</dl>
+第一步呼叫 beginPath() 產生一個路徑，表面下，路徑會被存在一個次路徑 (sub-path) 清單中，例如直線、曲線等，這些次路徑集合起來就形成一塊圖形。每一次呼叫這個方法，次路徑清單就會被重設，然後我們便能夠畫另一個新圖形。
 
-<p>第一步呼叫 beginPath() 產生一個路徑，表面下，路徑會被存在一個次路徑 (sub-path) 清單中，例如直線、曲線等，這些次路徑集合起來就形成一塊圖形。每一次呼叫這個方法，次路徑清單就會被重設，然後我們便能夠畫另一個新圖形。</p>
+> **備註：** 當目前路徑為空(例如接著呼叫 beginPath()完後)或是在一個新畫布上，不論為何，第一個路徑繪圖指令總是 moveTo()；因為每當重設路徑後，你幾乎都會需要設定繪圖起始點。
 
-<div class="note"><strong>Note:</strong> 當目前路徑為空(例如接著呼叫beginPath()完後)或是在一個新畫布上，不論為何，第一個路徑繪圖指令總是moveTo()；因為每當重設路徑後，你幾乎都會需要設定繪圖起始點。</div>
+第二步是呼叫各式方法來實際設定繪圖路徑，稍後我們將會介紹這部分。
 
-<p>第二步是呼叫各式方法來實際設定繪圖路徑，稍後我們將會介紹這部分。</p>
+第三步，也是非必要的一步，就是呼叫 closePath()。這個方法會在現在所在點到起始點間畫一條直線以閉合圖形，如果圖形已經閉合或是只含一個點，這個方法不會有任何效果。
 
-<p>第三步，也是非必要的一步，就是呼叫closePath()。這個方法會在現在所在點到起始點間畫一條直線以閉合圖形，如果圖形已經閉合或是只含一個點，這個方法不會有任何效果。</p>
+> **備註：** 當呼叫 fill()，任何開放的圖形都會自動閉合，所以不需要再呼叫 closePath()，但是 stroke()並非如此。
 
-<div class="note"><strong>Note:</strong> 當呼叫fill()，任何開放的圖形都會自動閉合，所以不需要再呼叫closePath()，但是stroke()並非如此。</div>
+### 畫一個三角形
 
-<h3 id="畫一個三角形">畫一個三角形</h3>
+這是一個畫出三角形的程式碼範例。
 
-<p>這是一個畫出三角形的程式碼範例。</p>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
-
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -114,35 +107,33 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.fill();
   }
 }
-</pre>
+```
 
-<p>結果如下:</p>
+結果如下:
 
-<p>{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}</p>
+{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
 
-<h3 id="移動畫筆">移動畫筆</h3>
+### 移動畫筆
 
-<p>moveTo()是一個很有用的函數，moveTo()不會畫任何圖形，但卻是上述路徑清單的一部分，這大概有點像是把筆從紙上一點提起來，然後放到另一個點。</p>
+moveTo()是一個很有用的函數，moveTo()不會畫任何圖形，但卻是上述路徑清單的一部分，這大概有點像是把筆從紙上一點提起來，然後放到另一個點。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.moveTo", "moveTo(x, y)")}}</dt>
- <dd>移動畫筆到指定的(x, y)座標點</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo(x, y)")}}
+  - : 移動畫筆到指定的(x, y)座標點
 
-<p>當初始化畫布或是呼叫beginPath()，通常會想要使用moveTo()來指定起始點，我們可以用moveTo()畫不連結的路徑，看一下笑臉圖範例，圖中紅線即為使用到moveTo()的位置。</p>
+當初始化畫布或是呼叫 beginPath()，通常會想要使用 moveTo()來指定起始點，我們可以用 moveTo()畫不連結的路徑，看一下笑臉圖範例，圖中紅線即為使用到 moveTo()的位置。
 
-<p>你可以拿下面的程式碼，放進先前的draw()函數，自己試試看效果。</p>
+你可以拿下面的程式碼，放進先前的 draw()函數，自己試試看效果。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -158,41 +149,37 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>結果如下:</p>
+結果如下:
 
-<p>{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}</p>
+{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
 
-<p>移除moveTo()便可以看到線條連結起來。</p>
+移除 moveTo()便可以看到線條連結起來。
 
-<div class="note">
-<p><strong>Note:</strong> 有關arc()，請參照下方<a href="#弧形">弧形</a>。</p>
-</div>
+> **備註：** 有關 arc()，請參照下方[弧形](#弧形)。
 
-<h3 id="線條">線條</h3>
+### 線條
 
-<p>用lineTo()方法畫直線。</p>
+用 lineTo()方法畫直線。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}</dt>
- <dd>從目前繪圖點畫一條直線到指定的(x, y)座標點。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
+  - : 從目前繪圖點畫一條直線到指定的(x, y)座標點。
 
-<p>本方法接受x, y參數作為線條結束點的座標位置，至於起始點則視前一個繪圖路徑，由前一個繪圖路徑的結束點作為起始點，當然，起始點也可以用moveTo()方法來變更。</p>
+本方法接受 x, y 參數作為線條結束點的座標位置，至於起始點則視前一個繪圖路徑，由前一個繪圖路徑的結束點作為起始點，當然，起始點也可以用 moveTo()方法來變更。
 
-<p>下面畫兩個三角形，一個填滿，一個空心。</p>
+下面畫兩個三角形，一個填滿，一個空心。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -213,53 +200,49 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>從呼叫beginPath()起始一個新圖形路徑，然後用moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。</p>
+從呼叫 beginPath()起始一個新圖形路徑，然後用 moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。
 
-<p>{{EmbedLiveSample("Lines", 160, 160, "canvas_lineTo.png")}}</p>
+{{EmbedLiveSample("Lines", 160, 160, "canvas_lineTo.png")}}
 
-<p>我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫closePaht()的話，只會畫出兩條線而非三角形。</p>
+我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫 closePaht()的話，只會畫出兩條線而非三角形。
 
-<h3 id="弧形">弧形</h3>
+### 弧形
 
-<p>用arc()方法來畫弧形或圓形。雖然也可以用arcTo()，但這個方法比較不可靠，所以這裡我們不討論arcTo()。</p>
+用 arc()方法來畫弧形或圓形。雖然也可以用 arcTo()，但這個方法比較不可靠，所以這裡我們不討論 arcTo()。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.arc", "arc(x, y, radius, startAngle, endAngle, anticlockwise)")}}</dt>
- <dd>畫一個弧形</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.arc", "arc(x, y, radius, startAngle, endAngle, anticlockwise)")}}
+  - : 畫一個弧形
 
-<p>本方法接受五個參數: x, y代表圓心座標點，radius代表半徑，startAngle, endAngle分別代表沿著弧形曲線上的起始點與結束點的弧度，弧度測量是相對於x軸，anticlockwise為true代表逆時針作圖、false代表順時針作圖。</p>
+本方法接受五個參數: x, y 代表圓心座標點，radius 代表半徑，startAngle, endAngle 分別代表沿著弧形曲線上的起始點與結束點的弧度，弧度測量是相對於 x 軸，anticlockwise 為 true 代表逆時針作圖、false 代表順時針作圖。
 
-<div class="note">
-<p><strong>Note</strong>: arc()方法用的是弧度(radians)而非角度(degrees)，如果要在弧度與角度間換算，可以利用以下javascript程式碼: radians = (Math.PI/180) * degrees.</p>
-</div>
+> **備註：** arc()方法用的是弧度(radians)而非角度(degrees)，如果要在弧度與角度間換算，可以利用以下 javascript 程式碼: radians = (Math.PI/180) \* degrees.
 
-<p>以下例子比較複雜，它會畫出12個不同的弧形。</p>
+以下例子比較複雜，它會畫出 12 個不同的弧形。
 
-<p>兩個for迴圈走一遍弧形圖列的列跟行，每一個弧形由呼叫beginPath()開始新的繪圖路徑，為了清楚，我們在程式範例中用變數儲存參數，你不一定要這麼做。</p>
+兩個 for 迴圈走一遍弧形圖列的列跟行，每一個弧形由呼叫 beginPath()開始新的繪圖路徑，為了清楚，我們在程式範例中用變數儲存參數，你不一定要這麼做。
 
-<p>x, y座標點的部分應該相當淺顯，radius和startAngle是定值，endAngle從180度(半圓)開始，然後每一行增加90度，最後一行便會形成一個完整的圓。</p>
+x, y 座標點的部分應該相當淺顯，radius 和 startAngle 是定值，endAngle 從 180 度(半圓)開始，然後每一行增加 90 度，最後一行便會形成一個完整的圓。
 
-<p>第1, 3列的anticlockwise 為false，所以會順時針作圖，2, 4列的anticlockwise 為true，所以會逆時針作圖。最後的if決定下半部是用填滿圖形，上半部是勾勒圖形。</p>
+第 1, 3 列的 anticlockwise 為 false，所以會順時針作圖，2, 4 列的 anticlockwise 為 true，所以會逆時針作圖。最後的 if 決定下半部是用填滿圖形，上半部是勾勒圖形。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="200"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
 
-    for(var i=0;i&lt;4;i++){
-      for(var j=0;j&lt;3;j++){
+    for(var i=0;i<4;i++){
+      for(var j=0;j<3;j++){
         ctx.beginPath();
         var x              = 25+j*50;               // x coordinate
         var y              = 25+i*50;               // y coordinate
@@ -270,7 +253,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
         ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-        if (i&gt;1){
+        if (i>1){
           ctx.fill();
         } else {
           ctx.stroke();
@@ -279,40 +262,39 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     }
   }
 }
-</pre>
+```
+
 {{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
 
-<h3 id="貝茲曲線(Bezier_curve)與二次曲線(quadratic_curve)">貝茲曲線(Bezier curve)與二次曲線(quadratic curve)</h3>
+### 貝茲曲線(Bezier curve)與二次曲線(quadratic curve)
 
-<p>二次與三次<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">貝茲曲線(Bézier curves)</a>是另一種可用來構成複雜有機圖形的路徑。</p>
+二次與三次[貝茲曲線(Bézier curves)](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)是另一種可用來構成複雜有機圖形的路徑。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}</dt>
- <dd>從目前起始點畫一條二次貝茲曲線到x, y指定的終點，控制點由cp1x, cp1y指定。</dd>
- <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}</dt>
- <dd>從目前起始點畫一條三次貝茲曲線到x, y指定的終點，控制點由(cp1x, cp1y)和(cp2x, cp2y)指定。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
+  - : 從目前起始點畫一條二次貝茲曲線到 x, y 指定的終點，控制點由 cp1x, cp1y 指定。
+- {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
+  - : 從目前起始點畫一條三次貝茲曲線到 x, y 指定的終點，控制點由(cp1x, cp1y)和(cp2x, cp2y)指定。
 
-<p><img src="canvas_curves.png">二次和三次的差別可以從右圖看出；貝茲曲線的起始和終點以藍點標示，其中二次貝茲曲線只有一個控制點(如紅點標示)而三次貝茲曲線有兩個控制點。</p>
+![](canvas_curves.png)二次和三次的差別可以從右圖看出；貝茲曲線的起始和終點以藍點標示，其中二次貝茲曲線只有一個控制點(如紅點標示)而三次貝茲曲線有兩個控制點。
 
-<p>二次和三次貝茲曲線都用x, y參數定義終點座標，然後用cp1x, xp1y定義第一個控制點座標、cp2x, xp2y定義第二個控制點座標。</p>
+二次和三次貝茲曲線都用 x, y 參數定義終點座標，然後用 cp1x, xp1y 定義第一個控制點座標、cp2x, xp2y 定義第二個控制點座標。
 
-<p>用二次和三次貝茲曲線作圖相當具有挑戰性，因為不像使用 Adobe illustrator 的向量繪圖軟體，我們在繪圖時無法即時看到繪圖狀況，所以畫複雜的圖形十分困難。下面的範例我們畫了一些圖形，如果你有時間與耐心，可以畫出更複雜的圖形。</p>
+用二次和三次貝茲曲線作圖相當具有挑戰性，因為不像使用 Adobe illustrator 的向量繪圖軟體，我們在繪圖時無法即時看到繪圖狀況，所以畫複雜的圖形十分困難。下面的範例我們畫了一些圖形，如果你有時間與耐心，可以畫出更複雜的圖形。
 
-<h4 id="二次貝茲曲線">二次貝茲曲線</h4>
+#### 二次貝茲曲線
 
-<p>本例用了數個二次貝茲曲線畫了一個會話框。</p>
+本例用了數個二次貝茲曲線畫了一個會話框。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -329,24 +311,24 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.stroke();
   }
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}</p>
+{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
 
-<h4 id="三次貝茲曲線">三次貝茲曲線</h4>
+#### 三次貝茲曲線
 
-<p>這個範例畫了一個愛心。</p>
+這個範例畫了一個愛心。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -363,35 +345,33 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.fill();
   }
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}</p>
+{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
 
-<h3 id="矩形">矩形</h3>
+### 矩形
 
-<p>除了在{畫矩形}段落中提到的三個方法，還有rect()方法能夠在畫布上畫矩形；rect()方法會在目前路徑下加入一個矩形繪圖路徑。</p>
+除了在{畫矩形}段落中提到的三個方法，還有 rect()方法能夠在畫布上畫矩形；rect()方法會在目前路徑下加入一個矩形繪圖路徑。
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.bezierCurveTo", "rect(x, y, width, height)")}}</dt>
- <dd>畫一個左上角位於(x, y)、寬width、高height的矩形。</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.bezierCurveTo", "rect(x, y, width, height)")}}
+  - : 畫一個左上角位於(x, y)、寬 width、高 height 的矩形。
 
-<p>呼叫這個方法，moveTo()方法會以(0, 0)參數被自動呼叫，所以目前的下筆點跟者自動被設為預設座標。</p>
+呼叫這個方法，moveTo()方法會以(0, 0)參數被自動呼叫，所以目前的下筆點跟者自動被設為預設座標。
 
-<h3 id="多樣組合">多樣組合</h3>
+### 多樣組合
 
-<p>截至目前為止，我們都只用一種路徑函數在各個範例裡作圖，不過，其實繪圖時並沒有任何使用數量或種類上的路徑函數限制，所以最後我們來試著組合各樣路徑繪圖函數來畫一些十分有名的遊戲角色。</p>
+截至目前為止，我們都只用一種路徑函數在各個範例裡作圖，不過，其實繪圖時並沒有任何使用數量或種類上的路徑函數限制，所以最後我們來試著組合各樣路徑繪圖函數來畫一些十分有名的遊戲角色。
 
-<div class="hidden">
-<pre class="brush: html">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-</div>
+```html hidden
+<html>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
+</html>
+```
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -408,15 +388,15 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
     ctx.lineTo(31,37);
     ctx.fill();
 
-    for(var i=0;i&lt;8;i++){
+    for(var i=0;i<8;i++){
       ctx.fillRect(51+i*16,35,4,4);
     }
 
-    for(i=0;i&lt;6;i++){
+    for(i=0;i<6;i++){
       ctx.fillRect(115,51+i*16,4,4);
     }
 
-    for(i=0;i&lt;8;i++){
+    for(i=0;i<8;i++){
       ctx.fillRect(51+i*16,99,4,4);
     }
 
@@ -474,46 +454,46 @@ function roundedRect(ctx,x,y,width,height,radius){
   ctx.quadraticCurveTo(x,y,x,y+radius);
   ctx.stroke();
 }
-</pre>
+```
 
-<div id="section_18">
-<p>結果如下:</p>
+結果如下:
 
-<p>{{EmbedLiveSample("Making_combinations", 160, 160)}}</p>
+{{EmbedLiveSample("Making_combinations", 160, 160)}}
 
-<p>畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了fillStyle屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。</p>
+畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了 fillStyle 屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。
 
-<p>稍後我們會更進一步介紹fillStyle屬性，這個範例我們所做是的透過fillStyle屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色，。</p>
+稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色，。
 
-<p>{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}</p>
-</div>
-</div>
+{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}
 
-<h2 id="Path2D_objects">Path2D objects</h2>
+## Path2D objects
 
-<p>如同前面的範例，canvas 上常常會畫上一連串的繪圖路徑，為了簡化程式碼還有改善效能，我們可以利用 {{domxref("Path2D")}} 物件 (目前在較先進的瀏覽器上已經有提供了)。Path2D 讓我們可以快取和記錄繪圖指令，方便快速重複地繪圖，底下我就來看看如何使用 Path2D :</p>
+如同前面的範例，canvas 上常常會畫上一連串的繪圖路徑，為了簡化程式碼還有改善效能，我們可以利用 {{domxref("Path2D")}} 物件 (目前在較先進的瀏覽器上已經有提供了)。Path2D 讓我們可以快取和記錄繪圖指令，方便快速重複地繪圖，底下我就來看看如何使用 Path2D :
 
-<p>{{domxref("Path2D.Path2D", "Path2D()")}}</p>
+{{domxref("Path2D.Path2D", "Path2D()")}}
 
-<p>    Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a>:</p>
+Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorial/Paths):
 
-<pre class="brush: js">new Path2D();     // 不傳入參數會回傳一個空的 Path2D 物件
+```js
+new Path2D();     // 不傳入參數會回傳一個空的 Path2D 物件
 new Path2D(path); // 複製傳入的 Path2D 物件，然後以之建立 Path2D 物件
-new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
+new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件
+```
 
-<p>所有已知的 <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">路徑 API</a>，如 rect, arc 等等，都可以在 Path2D 上找到。</p>
+所有已知的 [路徑 API](/zh-TW/docs/Web/API/CanvasRenderingContext2D#Paths)，如 rect, arc 等等，都可以在 Path2D 上找到。
 
-<p>Path2D 物件還可以加入其他 Path2D 物件，這讓我們可以很方便的組合多個物件使用。</p>
+Path2D 物件還可以加入其他 Path2D 物件，這讓我們可以很方便的組合多個物件使用。
 
-<p>{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}</p>
+{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}
 
-<p>    addPath 增加一個 Path2D 物件，其中的非必要參數是變形矩陣。</p>
+addPath 增加一個 Path2D 物件，其中的非必要參數是變形矩陣。
 
-<h3 id="Path2D_example">Path2D example</h3>
+### Path2D example
 
-<p>這個例子用 Path2D 物件將矩形和圓形的繪圖路徑存起來，以供之後使用。而配合新的 Path2D API，有一些繪圖方法更接受傳入 Path2D 作為繪圖路徑使用，例如下方本例所用到的 stroke 和 fill。</p>
+這個例子用 Path2D 物件將矩形和圓形的繪圖路徑存起來，以供之後使用。而配合新的 Path2D API，有一些繪圖方法更接受傳入 Path2D 作為繪圖路徑使用，例如下方本例所用到的 stroke 和 fill。
 
-<pre class="brush: js">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -528,18 +508,19 @@ new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
     ctx.stroke(rectangle);
     ctx.fill(circle);
   }
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}</p>
+{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
 
-<h3 id="使用向量路徑_(SVG_paths)">使用向量路徑 (SVG paths)</h3>
+### 使用向量路徑 (SVG paths)
 
-<p>另一個強而有力的特色是在 SVG 和 Canvas 中我們都可以使用 SVG path。</p>
+另一個強而有力的特色是在 SVG 和 Canvas 中我們都可以使用 SVG path。
 
-<p>下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到<a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> 建構子頁面</a>看繪圖範例結果。</p>
+下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到[`Path2D` 建構子頁面](/zh-TW/docs/Web/API/Path2D.Path2D#Using_SVG_paths)看繪圖範例結果。
 
-<pre class="brush: js;">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</pre>
+```js
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+```
 
-<div>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>
-
-<p> </p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

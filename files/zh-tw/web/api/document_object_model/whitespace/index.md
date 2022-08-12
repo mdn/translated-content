@@ -6,33 +6,40 @@ tags:
   - 所有類別
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
-<h4 id=".E5.95.8F.E9.A1.8C.E8.AA.AA.E6.98.8E">問題說明</h4>
-<p><a href="zh_tw/DOM">DOM</a> 裡的空白字元會讓處理節點結構時增加不少麻煩。Mozilla 相關軟體中，原始文件裡所有空白字元都會在 DOM 中出現（不包括標籤內含的空白字元）。這樣的處理方式有其必要，一方面編輯器中可逕行排列文字、二方面 <a href="zh_tw/CSS">CSS</a> 裡的 <code>white-space: pre</code> 也才能發揮作用。 如此一來就表示：</p>
-<ul>
-  <li>有些空白字元會自成一個文字節點。</li>
-  <li>有些空白字元會與其他字串合成一個文字節點。</li>
-</ul>
-<p>換句話說，下面這段程式碼的 DOM 節點結構就如附圖一般，其中「\n」代表換行字元：</p>
-<pre class="eval">&lt;!-- My document --&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Header&lt;/h1&gt;
-  &lt;p&gt;
+#### 問題說明
+
+[DOM](zh_tw/DOM) 裡的空白字元會讓處理節點結構時增加不少麻煩。Mozilla 相關軟體中，原始文件裡所有空白字元都會在 DOM 中出現（不包括標籤內含的空白字元）。這樣的處理方式有其必要，一方面編輯器中可逕行排列文字、二方面 [CSS](zh_tw/CSS) 裡的 `white-space: pre` 也才能發揮作用。 如此一來就表示：
+
+- 有些空白字元會自成一個文字節點。
+- 有些空白字元會與其他字串合成一個文字節點。
+
+換句話說，下面這段程式碼的 DOM 節點結構就如附圖一般，其中「\n」代表換行字元：
+
+```html
+<!-- My document -->
+<html>
+<head>
+  <title>My Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <p>
     Paragraph
-  &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </p>
+</body>
+</html>
+```
 
-<p><img src="https://mdn.mozillademos.org/files/854/whitespace_tree.png"></p>
+![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
 
-<p>這麼一來，要使用 DOM 遊走於節點結構間又不想要無用的空白字元時，會有點困難。</p>
-<h4 id=".E5.8A.A9.E4.BD.A0.E4.B8.80.E8.87.82.E4.B9.8B.E5.8A.9B">助你一臂之力</h4>
-<p>以下的 JavaScript 程式碼定義了許多函式，讓你處理 DOM 中的空白字元時能輕鬆點：</p>
-<pre>/**
+這麼一來，要使用 DOM 遊走於節點結構間又不想要無用的空白字元時，會有點困難。
+
+#### 助你一臂之力
+
+以下的 JavaScript 程式碼定義了許多函式，讓你處理 DOM 中的空白字元時能輕鬆點：
+
+```js
+/**
  * 以下所謂的「空白字元」代表：
  *  "\t" TAB \u0009 （移位字元）
  *  "\n" LF  \u000A （換行字元）
@@ -67,7 +74,7 @@ function is_all_ws( nod )
 function is_ignorable( nod )
 {
   return ( nod.nodeType == 8) || // 註解節點
-         ( (nod.nodeType == 3) &amp;&amp; is_all_ws(nod) ); // 僅含空白字元的文字節點
+         ( (nod.nodeType == 3) && is_all_ws(nod) ); // 僅含空白字元的文字節點
 }
 
 /**
@@ -159,10 +166,14 @@ function data_of( txt )
     data = data.substring(0, data.length - 1);
   return data;
 }
-</pre>
-<h4 id=".E7.AF.84.E4.BE.8B">範例</h4>
-<p>以下示範上述函式的應用方法，在節點結構中依序檢查、找出內容為「<code>"This is the third paragraph"</code>」的節點，並修改其 class 屬性及文字內容。</p>
-<pre>var cur = first_child(document.getElementById("test"));
+```
+
+#### 範例
+
+以下示範上述函式的應用方法，在節點結構中依序檢查、找出內容為「`"This is the third paragraph"`」的節點，並修改其 class 屬性及文字內容。
+
+```js
+var cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")
@@ -172,4 +183,4 @@ while (cur)
   }
   cur = node_after(cur);
 }
-</pre>
+```

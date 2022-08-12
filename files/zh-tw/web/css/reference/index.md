@@ -3,205 +3,183 @@ title: CSS 參考文件
 slug: Web/CSS/Reference
 translation_of: Web/CSS/Reference
 ---
-<p>Use this <strong>CSS reference</strong> to browse an <a href="#Keyword_index">alphabetical index</a> of all the standard <a href="/en-US/docs/Web/CSS">CSS</a> properties, <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a>, <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a>, <a href="/en-US/docs/Web/CSS/CSS_Types">data types</a>, and <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a>. You can also browse a list of all the CSS <a href="#Selectors">selectors organized by type</a> and a list of <a href="#Concepts">key CSS concepts</a>. Also included is a brief <a href="#DOM-CSS_CSSOM">DOM-CSS / CSSOM reference</a>.</p>
+Use this **CSS reference** to browse an [alphabetical index](#Keyword_index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
 
-<h2 id="基本語法規則">基本語法規則</h2>
+## 基本語法規則
 
-<h3 id="Style_rule_syntax">Style rule syntax</h3>
+### Style rule syntax
 
-<pre class="syntaxbox"><strong><var>selectorlist</var> {
-  <var>property</var>: <var>value</var>;</strong>
-  <var>[more property:value; pairs]</var>
-<strong>}</strong>
+```plain
+selectorlist {
+  property: value;
+  [more property:value; pairs]
+}
 
-... where <var>selectorlist</var> is: <var>selector[:pseudo-class] [::pseudo-element] [, more selectorlists]</var>
+... where selectorlist is: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
 
-See <a href="#Selectors"><em>selector</em></a>, <a href="#pcls"><em>pseudo-class</em></a>, <em><a href="#pelm">pseudo-element</a></em> lists below.
-</pre>
+See selector, pseudo-class, pseudo-element lists below.
+```
 
-<h4 id="Style_rule_examples">Style rule examples</h4>
+#### Style rule examples
 
-<pre class="brush: css">strong {
+```css
+strong {
   color: red;
 }
 
-div.menu-bar li:hover &gt; ul {
+div.menu-bar li:hover > ul {
   display: block;
 }
-</pre>
+```
 
-<p>For a beginner-level introduction to the syntax of CSS selectors, please see <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">this tutorial</a>. Be aware that any <a href="/en-US/docs/Web/CSS/syntax">CSS syntax</a> error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) <a href="https://www.w3.org/TR/css-syntax-3/#intro">text-based</a>, whereas DOM-CSS / CSSOM (the rule management system) is <a href="https://www.w3.org/TR/cssom/#introduction">object-based</a>.</p>
+For a beginner-level introduction to the syntax of CSS selectors, please see [this tutorial](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Selectors). Be aware that any [CSS syntax](/zh-TW/docs/Web/CSS/syntax) error in a rule definition invalidates the entire rule. Invalid rules are ignored by the browser. Note that CSS rule definitions are entirely (ASCII) [text-based](https://www.w3.org/TR/css-syntax-3/#intro), whereas DOM-CSS / CSSOM (the rule management system) is [object-based](https://www.w3.org/TR/cssom/#introduction).
 
-<h3 id="At-rule_syntax">At-rule syntax</h3>
+### At-rule syntax
 
-<p>As the structure of at-rules varies widely, please see <a href="/en-US/docs/Web/CSS/At-rule">At-rule</a> to find the syntax of the specific one you want.</p>
+As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web/CSS/At-rule) to find the syntax of the specific one you want.
 
-<h2 id="Keyword_index">Keyword index</h2>
+## Keyword index
 
-<div class="note">
-<p><strong>Note:</strong> The property names in this index do <strong>not</strong> include the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">JavaScript names</a> where they differ from the CSS standard names.</p>
-</div>
+> **備註：** The property names in this index do **not** include the [JavaScript names](/zh-TW/docs/Web/CSS/CSS_Properties_Reference) where they differ from the CSS standard names.
 
-<div>{{CSS_Ref}}</div>
+{{CSS_Ref}}
 
-<h2 id="Selectors">Selectors</h2>
+## Selectors
 
-<h3 id="Basic_selectors"><a href="/en-US/docs/Web/CSS/CSS_Selectors#Basic_selectors">Basic selectors</a></h3>
+### [Basic selectors](/zh-TW/docs/Web/CSS/CSS_Selectors#Basic_selectors)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Type_selectors">Type selector</a> <code>elementname</code></li>
- <li><a href="/en-US/docs/Web/CSS/Class_selectors">Class selector</a> <code>.classname</code></li>
- <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID selector</a> <code>#idname</code></li>
- <li><a href="/en-US/docs/Web/CSS/Universal_selectors">Universal selector</a> <code>*</code>, <code>ns|*</code>, <code>*|*</code>, <code>|*</code></li>
- <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selector</a> <code>[attr=value]</code></li>
-</ul>
+- [Type selector](/zh-TW/docs/Web/CSS/Type_selectors) `elementname`
+- [Class selector](/zh-TW/docs/Web/CSS/Class_selectors) `.classname`
+- [ID selector](/zh-TW/docs/Web/CSS/ID_selectors) `#idname`
+- [Universal selector](/zh-TW/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Attribute selector](/zh-TW/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
-<h3 id="Combinators"><a href="/en-US/docs/Web/CSS/CSS_Selectors#Combinators">Combinators</a></h3>
+### [Combinators](/zh-TW/docs/Web/CSS/CSS_Selectors#Combinators)
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Adjacent_sibling_selectors">Adjacent sibling combinator</a> <code>A + B</code></li>
- <li><a href="/en-US/docs/Web/CSS/General_sibling_selectors">General sibling combinator</a> <code>A ~ B</code></li>
- <li><a href="/en-US/docs/Web/CSS/Child_selectors">Child combinator</a> <code>A &gt; B</code></li>
- <li><a href="/en-US/docs/Web/CSS/Descendant_selectors">Descendant combinator</a> <code>A B</code></li>
-</ul>
+- [Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
+- [General sibling combinator](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
+- [Child combinator](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
+- [Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
 
-<h3 id="Pseudo-classes"><a href="/en-US/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></h3>
+### [Pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes)
 
-<ul>
- <li id="pcls">{{ Cssxref(":active") }}</li>
- <li>{{cssxref(':any')}}</li>
- <li>{{cssxref(':any-link')}}</li>
- <li>{{ Cssxref(":checked") }}</li>
- <li>{{ Cssxref(":default") }}</li>
- <li>{{ Cssxref(":defined") }}</li>
- <li>{{ Cssxref(":dir", ":dir()")}}</li>
- <li>{{ Cssxref(":disabled") }}</li>
- <li>{{ Cssxref(":empty") }}</li>
- <li>{{ Cssxref(":enabled") }}</li>
- <li>{{ Cssxref(":first") }}</li>
- <li>{{ Cssxref(":first-child") }}</li>
- <li>{{ Cssxref(":first-of-type") }}</li>
- <li>{{ Cssxref(":fullscreen") }}</li>
- <li>{{ Cssxref(":focus") }}</li>
- <li>{{ Cssxref(":focus-visible") }}</li>
- <li>{{ Cssxref(":host") }}</li>
- <li>{{ Cssxref(":host()") }}</li>
- <li>{{ Cssxref(":host-context()") }}</li>
- <li>{{ Cssxref(":hover") }}</li>
- <li>{{ Cssxref(":indeterminate") }}</li>
- <li>{{ Cssxref(":in-range") }}</li>
- <li>{{ Cssxref(":invalid") }}</li>
- <li>{{ Cssxref(":lang", ":lang()") }}</li>
- <li>{{ Cssxref(":last-child") }}</li>
- <li>{{ Cssxref(":last-of-type") }}</li>
- <li>{{ Cssxref(":left") }}</li>
- <li>{{ Cssxref(":link") }}</li>
- <li>{{ Cssxref(":not", ":not()") }}</li>
- <li>{{ Cssxref(":nth-child", ":nth-child()") }}</li>
- <li>{{ Cssxref(":nth-last-child", ":nth-last-child()") }}</li>
- <li>{{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}</li>
- <li>{{ Cssxref(":nth-of-type", ":nth-of-type()") }}</li>
- <li>{{ Cssxref(":only-child") }}</li>
- <li>{{ Cssxref(":only-of-type") }}</li>
- <li>{{ Cssxref(":optional") }}</li>
- <li>{{ Cssxref(":out-of-range") }}</li>
- <li>{{ Cssxref(":read-only") }}</li>
- <li>{{ Cssxref(":read-write") }}</li>
- <li>{{ Cssxref(":required") }}</li>
- <li>{{ Cssxref(":right") }}</li>
- <li>{{ Cssxref(":root") }}</li>
- <li>{{ Cssxref(":scope") }}</li>
- <li>{{ Cssxref(":target") }}</li>
- <li>{{ Cssxref(":valid") }}</li>
- <li>{{ Cssxref(":visited") }}</li>
-</ul>
+- {{ Cssxref(":active") }}
+- {{cssxref(':any')}}
+- {{cssxref(':any-link')}}
+- {{ Cssxref(":checked") }}
+- {{ Cssxref(":default") }}
+- {{ Cssxref(":defined") }}
+- {{ Cssxref(":dir", ":dir()")}}
+- {{ Cssxref(":disabled") }}
+- {{ Cssxref(":empty") }}
+- {{ Cssxref(":enabled") }}
+- {{ Cssxref(":first") }}
+- {{ Cssxref(":first-child") }}
+- {{ Cssxref(":first-of-type") }}
+- {{ Cssxref(":fullscreen") }}
+- {{ Cssxref(":focus") }}
+- {{ Cssxref(":focus-visible") }}
+- {{ Cssxref(":host") }}
+- {{ Cssxref(":host()") }}
+- {{ Cssxref(":host-context()") }}
+- {{ Cssxref(":hover") }}
+- {{ Cssxref(":indeterminate") }}
+- {{ Cssxref(":in-range") }}
+- {{ Cssxref(":invalid") }}
+- {{ Cssxref(":lang", ":lang()") }}
+- {{ Cssxref(":last-child") }}
+- {{ Cssxref(":last-of-type") }}
+- {{ Cssxref(":left") }}
+- {{ Cssxref(":link") }}
+- {{ Cssxref(":not", ":not()") }}
+- {{ Cssxref(":nth-child", ":nth-child()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":only-child") }}
+- {{ Cssxref(":only-of-type") }}
+- {{ Cssxref(":optional") }}
+- {{ Cssxref(":out-of-range") }}
+- {{ Cssxref(":read-only") }}
+- {{ Cssxref(":read-write") }}
+- {{ Cssxref(":required") }}
+- {{ Cssxref(":right") }}
+- {{ Cssxref(":root") }}
+- {{ Cssxref(":scope") }}
+- {{ Cssxref(":target") }}
+- {{ Cssxref(":valid") }}
+- {{ Cssxref(":visited") }}
 
-<h3 id="Pseudo-elements"><a href="/en-US/docs/Web/CSS/Pseudo-elements">Pseudo-elements</a></h3>
+### [Pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements)
 
-<ul>
- <li id="pelm">{{ Cssxref("::after") }}</li>
- <li>{{ Cssxref("::backdrop") }}</li>
- <li>{{ Cssxref("::before") }}</li>
- <li>{{ Cssxref("::cue") }}</li>
- <li>{{ Cssxref("::first-letter") }}</li>
- <li>{{ Cssxref("::first-line") }}</li>
- <li>{{ Cssxref("::grammar-error") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::marker") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::placeholder") }} {{experimental_inline}}</li>
- <li>{{ Cssxref("::selection") }}</li>
- <li>{{ Cssxref("::spelling-error") }} {{experimental_inline}}</li>
-</ul>
+- {{ Cssxref("::after") }}
+- {{ Cssxref("::backdrop") }}
+- {{ Cssxref("::before") }}
+- {{ Cssxref("::cue") }}
+- {{ Cssxref("::first-letter") }}
+- {{ Cssxref("::first-line") }}
+- {{ Cssxref("::grammar-error") }} {{experimental_inline}}
+- {{ Cssxref("::marker") }} {{experimental_inline}}
+- {{ Cssxref("::placeholder") }} {{experimental_inline}}
+- {{ Cssxref("::selection") }}
+- {{ Cssxref("::spelling-error") }} {{experimental_inline}}
 
-<div class="note">
-<p><strong>See also:</strong> A complete <a href="https://www.w3.org/TR/selectors/#selectors">list of selectors</a> in the Selectors Level 3 specification.</p>
-</div>
+> **備註：** A complete [list of selectors](https://www.w3.org/TR/selectors/#selectors) in the Selectors Level 3 specification.
 
-<h2 id="Concepts">Concepts</h2>
+## Concepts
 
-<h3 id="Syntax_and_semantics">Syntax and semantics</h3>
+### Syntax and semantics
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Syntax">CSS syntax</a></li>
- <li><a href="/en-US/docs/Web/CSS/At-rule">At-rules</a></li>
- <li><a href="/en-US/docs/Web/CSS/Cascade">Cascade</a></li>
- <li><a href="/en-US/docs/Web/CSS/Comments">Comments</a></li>
- <li><a href="/en-US/docs/Glossary/Descriptor_(CSS)">Descriptor</a></li>
- <li><a href="/en-US/docs/Web/CSS/inheritance">Inheritance</a></li>
- <li><a href="/en-US/docs/Web/CSS/Shorthand_properties">Shorthand properties</a></li>
- <li><a href="/en-US/docs/Web/CSS/Specificity">Specificity</a></li>
- <li><a href="/en-US/docs/Web/CSS/Value_definition_syntax">Value definition syntax</a></li>
-</ul>
+- [CSS syntax](/zh-TW/docs/Web/CSS/Syntax)
+- [At-rules](/zh-TW/docs/Web/CSS/At-rule)
+- [Cascade](/zh-TW/docs/Web/CSS/Cascade)
+- [Comments](/zh-TW/docs/Web/CSS/Comments)
+- [Descriptor](</zh-TW/docs/Glossary/Descriptor_(CSS)>)
+- [Inheritance](/zh-TW/docs/Web/CSS/inheritance)
+- [Shorthand properties](/zh-TW/docs/Web/CSS/Shorthand_properties)
+- [Specificity](/zh-TW/docs/Web/CSS/Specificity)
+- [Value definition syntax](/zh-TW/docs/Web/CSS/Value_definition_syntax)
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/actual_value">Actual value</a></li>
- <li><a href="/en-US/docs/Web/CSS/computed_value">Computed value</a></li>
- <li><a href="/en-US/docs/Web/CSS/initial_value">Initial value</a></li>
- <li><a href="/en-US/docs/Web/CSS/resolved_value">Resolved value</a></li>
- <li><a href="/en-US/docs/Web/CSS/specified_value">Specified value</a></li>
- <li><a href="/en-US/docs/Web/CSS/used_value">Used value</a></li>
-</ul>
+- [Actual value](/zh-TW/docs/Web/CSS/actual_value)
+- [Computed value](/zh-TW/docs/Web/CSS/computed_value)
+- [Initial value](/zh-TW/docs/Web/CSS/initial_value)
+- [Resolved value](/zh-TW/docs/Web/CSS/resolved_value)
+- [Specified value](/zh-TW/docs/Web/CSS/specified_value)
+- [Used value](/zh-TW/docs/Web/CSS/used_value)
 
-<h3 id="Layout">Layout</h3>
+### Layout
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">Block formatting context</a></li>
- <li><a href="/en-US/docs/Web/CSS/box_model">Box model</a></li>
- <li><a href="/en-US/docs/Web/CSS/All_About_The_Containing_Block">Containing block</a></li>
- <li><a href="/en-US/docs/Web/CSS/Layout_mode">Layout mode</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">Margin collapsing</a></li>
- <li><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Stacking context</a></li>
- <li><a href="/en-US/docs/Web/Guide/CSS/Visual_formatting_model">Visual formatting model</a></li>
-</ul>
+- [Block formatting context](/zh-TW/docs/Web/Guide/CSS/Block_formatting_context)
+- [Box model](/zh-TW/docs/Web/CSS/box_model)
+- [Containing block](/zh-TW/docs/Web/CSS/All_About_The_Containing_Block)
+- [Layout mode](/zh-TW/docs/Web/CSS/Layout_mode)
+- [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Replaced elements](/zh-TW/docs/Web/CSS/Replaced_element)
+- [Stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Visual formatting model](/zh-TW/docs/Web/Guide/CSS/Visual_formatting_model)
 
-<h2 id="DOM-CSS_CSSOM">DOM-CSS / CSSOM</h2>
+## DOM-CSS / CSSOM
 
-<h3 id="Major_object_types">Major object types</h3>
+### Major object types
 
-<ul>
- <li>document.<a href="/en-US/docs/Web/API/Document/styleSheets">styleSheets</a></li>
- <li>styleSheets[i].<a href="/en-US/docs/Web/API/CSSRuleList">cssRules</a></li>
- <li>cssRules[i].<a href="/en-US/docs/Web/API/CSSRule/cssText">cssText</a> (selector &amp; style)</li>
- <li>cssRules[i].<a href="/en-US/docs/Web/API/CSSStyleRule/selectorText">selectorText</a></li>
- <li>elem.<a href="/en-US/docs/Web/API/HTMLElement/style">style</a></li>
- <li>elem.style.<a href="/en-US/docs/Web/API/CSSStyleDeclaration/cssText">cssText</a> (just style)</li>
- <li>elem.<a href="/en-US/docs/Web/API/Element/className">className</a></li>
- <li>elem.<a href="/en-US/docs/Web/API/Element/classList">classList</a></li>
-</ul>
+- document.[styleSheets](/zh-TW/docs/Web/API/Document/styleSheets)
+- styleSheets\[i].[cssRules](/zh-TW/docs/Web/API/CSSRuleList)
+- cssRules\[i].[cssText](/zh-TW/docs/Web/API/CSSRule/cssText) (selector & style)
+- cssRules\[i].[selectorText](/zh-TW/docs/Web/API/CSSStyleRule/selectorText)
+- elem.[style](/zh-TW/docs/Web/API/HTMLElement/style)
+- elem.style.[cssText](/zh-TW/docs/Web/API/CSSStyleDeclaration/cssText) (just style)
+- elem.[className](/zh-TW/docs/Web/API/Element/className)
+- elem.[classList](/zh-TW/docs/Web/API/Element/classList)
 
-<h3 id="Important_methods">Important methods</h3>
+### Important methods
 
-<ul>
- <li>{{domxref("CSSStyleSheet.insertRule")}}</li>
- <li>{{domxref("CSSStyleSheet.deleteRule")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet.insertRule")}}
+- {{domxref("CSSStyleSheet.deleteRule")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a> (prefixed with <code>-moz</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Webkit_Extensions">WebKit CSS extensions</a> (mostly prefixed with <code>-webkit</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">Microsoft CSS extensions</a> (prefixed with <code>-ms</code>)</li>
-</ul>
+- [Mozilla CSS extensions](/zh-TW/docs/Web/CSS/Mozilla_Extensions) (prefixed with `-moz`)
+- [WebKit CSS extensions](/zh-TW/docs/Web/CSS/Webkit_Extensions) (mostly prefixed with `-webkit`)
+- [Microsoft CSS extensions](/zh-TW/docs/Web/CSS/Microsoft_CSS_extensions) (prefixed with `-ms`)

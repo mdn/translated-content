@@ -3,46 +3,42 @@ title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
-<p>« <a href="/en/CSS">CSS</a> « <a href="/en/CSS/Understanding_z-index">理解CSS的z-index</a></p>
+« [CSS](/en/CSS) « [理解 CSS 的 z-index](/en/CSS/Understanding_z-index)
 
-<h3 id="堆疊環境範例1">堆疊環境範例1</h3>
+### 堆疊環境範例 1
 
-<p>讓我們先從一個基本的例子。根堆疊情況下，我們有兩個div（DIV＃1和＃DIV 3），兩種相對定位的，但是如果沒有的z-index屬性。裡面DIV＃1有一個絕對定位的div＃2，而在DIV＃3有一個絕對定位的div＃4，雙方沒有的z-index屬性。</p>
+讓我們先從一個基本的例子。根堆疊情況下，我們有兩個 div（DIV＃1 和＃DIV 3），兩種相對定位的，但是如果沒有的 z-index 屬性。裡面 DIV＃1 有一個絕對定位的 div＃2，而在 DIV＃3 有一個絕對定位的 div＃4，雙方沒有的 z-index 屬性。
 
-<p>唯一的堆疊上下文是根上下文。如果沒有Z-指標，要素依次層疊的發生。</p>
+唯一的堆疊上下文是根上下文。如果沒有 Z-指標，要素依次層疊的發生。
 
-<p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/914/=Understanding_zindex_05a.png"></p>
+![堆疊環境範例1](/@api/deki/files/914/=Understanding_zindex_05a.png)
 
-<p>如果DIV＃2被分配一個正的（非零和非自動）z索引值，它是上述所有其他的DIV呈現。</p>
+如果 DIV＃2 被分配一個正的（非零和非自動）z 索引值，它是上述所有其他的 DIV 呈現。
 
-<p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/915/=Understanding_zindex_05b.png"></p>
+![堆疊環境範例1](/@api/deki/files/915/=Understanding_zindex_05b.png)
 
-<p>然後，如果DIV＃4也被分配比DIV＃2的Z指數正z指數越大，它上面的所有其他的DIV DIV，包括2＃呈現。</p>
+然後，如果 DIV＃4 也被分配比 DIV＃2 的 Z 指數正 z 指數越大，它上面的所有其他的 DIV DIV，包括 2＃呈現。
 
-<p><img alt="堆疊環境範例1" class="internal" src="/@api/deki/files/916/=Understanding_zindex_05c.png"></p>
+![堆疊環境範例1](/@api/deki/files/916/=Understanding_zindex_05c.png)
 
-<p>在最後的例子，你可以看到，DIV＃2和＃DIV 4不兄弟姐妹，因為它們屬於不同的家長在HTML元素的層次結構。即便如此，DIV＃4堆疊相的DIV＃2可以通過z索引來控制。碰巧的是，由於DIV＃1和＃DIV 3不指定任何的z-index值，他們不創造一個堆疊環境。這意味著，所有的內容，包括DIV＃2和DIV＃4屬於相同根堆疊環境。</p>
+在最後的例子，你可以看到，DIV＃2 和＃DIV 4 不兄弟姐妹，因為它們屬於不同的家長在 HTML 元素的層次結構。即便如此，DIV＃4 堆疊相的 DIV＃2 可以通過 z 索引來控制。碰巧的是，由於 DIV＃1 和＃DIV 3 不指定任何的 z-index 值，他們不創造一個堆疊環境。這意味著，所有的內容，包括 DIV＃2 和 DIV＃4 屬於相同根堆疊環境。
 
-<p>在堆疊上下文而言，DIV＃1和DIV＃3簡單地同化到根元素，將得到的層次結構如下：</p>
+在堆疊上下文而言，DIV＃1 和 DIV＃3 簡單地同化到根元素，將得到的層次結構如下：
 
-<ul>
- <li>根堆疊環境
+- 根堆疊環境
 
-  <ul>
-   <li>DIV＃2（Z-指數1）</li>
-   <li>DIV＃4（Z-指數2）</li>
-  </ul>
- </li>
-</ul>
+  - DIV＃2（Z-指數 1）
+  - DIV＃4（Z-指數 2）
 
-<div class="note"><strong>注：</strong> DIV＃1和＃DIV 3不適透亮。重要的是要記住，分配的不透明度小於1到定位的元素隱式創建一個疊加的背景下，就像一個加入的z-index值是非常重要的。這個例子顯示，當父元素不會創建一個堆疊環境會發生什麼。</div>
+> **備註：** DIV＃1 和＃DIV 3 不適透亮。重要的是要記住，分配的不透明度小於 1 到定位的元素隱式創建一個疊加的背景下，就像一個加入的 z-index 值是非常重要的。這個例子顯示，當父元素不會創建一個堆疊環境會發生什麼。
 
-<h3 id="示例源代碼"><strong>示例源代碼</strong></h3>
+### 示例源代碼
 
-<pre class="brush: html">&lt;！DOCTYPE HTML PUBLIC“ -  // W3C // DTD XHTML 1.0過渡// EN”
-“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;
-&lt;HTML&gt;
-&lt;HEAD&gt; &lt;風格類型=“文本/ CSS”&gt;
+```html
+<！DOCTYPE HTML PUBLIC“ -  // W3C // DTD XHTML 1.0過渡// EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<HTML>
+<HEAD> <風格類型=“文本/ CSS”>
 
 DIV {字體：12px的宋體; }
 
@@ -84,44 +80,42 @@ span.bold {字體重量：大膽的; }
 }
 
 
-&lt;/風格&gt; &lt;/ HEAD&gt;
+</風格> </ HEAD>
 
-&lt;BODY&gt;
+<BODY>
 
-&lt;br /&gt;
+<br />
 
-&lt;DIV ID =“DIV1”&gt;
-&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃1 &lt;/ SPAN&gt;
-&lt;br /&gt;位置：親屬;
-   &lt;DIV ID =“DIV2”&gt;
-   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃2 &lt;/ SPAN&gt;
-   &lt;br /&gt;位置：絕對的;
-   &lt;br /&gt;的z-index：1;
-   &lt;/ DIV&gt;
-&lt;/ DIV&gt;
+<DIV ID =“DIV1”>
+<br />的<span class =“黑體”> DIV＃1 </ SPAN>
+<br />位置：親屬;
+   <DIV ID =“DIV2”>
+   <br />的<span class =“黑體”> DIV＃2 </ SPAN>
+   <br />位置：絕對的;
+   <br />的z-index：1;
+   </ DIV>
+</ DIV>
 
-&lt;br /&gt;
+<br />
 
-&lt;DIV ID =“DIV3”&gt;
-&lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃3 &lt;/ SPAN&gt;
-&lt;br /&gt;位置：親屬;
-   &lt;DIV ID =“DIV4”&gt;
-   &lt;br /&gt;的&lt;span class =“黑體”&gt; DIV＃4 &lt;/ SPAN&gt;
-   &lt;br /&gt;位置：絕對的;
-   &lt;br /&gt;的z-index：2;
-   &lt;/ DIV&gt;
-&lt;/ DIV&gt;
+<DIV ID =“DIV3”>
+<br />的<span class =“黑體”> DIV＃3 </ SPAN>
+<br />位置：親屬;
+   <DIV ID =“DIV4”>
+   <br />的<span class =“黑體”> DIV＃4 </ SPAN>
+   <br />位置：絕對的;
+   <br />的z-index：2;
+   </ DIV>
+</ DIV>
 
-&lt;/ BODY&gt; &lt;/ HTML&gt;
-</pre>
+</ BODY> </ HTML>
+```
 
-<h3 id="另請參見">另請參見</h3>
+### 另請參見
 
-<ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index">無堆疊的z-index</a>  ：默認規則疊加</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float">堆疊和浮動</a>  ：如何浮動元素的處理方式</li>
- <li><a href="/en/CSS/Understanding_z-index/Adding_z-index">添加的z-index</a>  ：使用的z-index來改變默認的堆疊</li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context">堆疊背景</a>  ：在堆疊環境票據</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2">堆疊環境例子2</a>  ：在所有層面上2級HTML層次，Z指數</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3">堆疊上下文例3</a>  ：3級的HTML等級，在第二級上的z索引 </li>
-</ul>
+- [無堆疊的 z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) ：默認規則疊加
+- [堆疊和浮動](/en/CSS/Understanding_z-index/Stacking_and_float) ：如何浮動元素的處理方式
+- [添加的 z-index](/en/CSS/Understanding_z-index/Adding_z-index) ：使用的 z-index 來改變默認的堆疊
+- [堆疊背景](/en/CSS/Understanding_z-index/The_stacking_context) ：在堆疊環境票據
+- [堆疊環境例子 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) ：在所有層面上 2 級 HTML 層次，Z 指數
+- [堆疊上下文例 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) ：3 級的 HTML 等級，在第二級上的 z 索引

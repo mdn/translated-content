@@ -13,26 +13,26 @@ tags:
 translation_of: Web/API/Performance/timing
 original_slug: Web/API/Performance.timing
 ---
-<p>{{APIRef("Performance")}}</p>
+{{APIRef("Performance")}}
 
-<h2 id="摘要">摘要</h2>
+## 摘要
 
-<p><code><strong>Performance</strong></code><strong><code>.timing</code></strong> 是唯讀的屬性，傳回的 {{domxref("PerformanceTiming")}} 物件當中包含了效能與時間延遲相關的資訊。</p>
+**`Performance.timing`** 是唯讀的屬性，傳回的 {{domxref("PerformanceTiming")}} 物件當中包含了效能與時間延遲相關的資訊。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox"><em>timingInfo</em> = <em>performance</em>.timing;</pre>
+```plain
+timingInfo = performance.timing;
+```
 
-<h2 id="規格">規格</h2>
+## 規格
 
-<p>因為 Navigation Timing 規範已被棄用，此特性不再有望成為標準。請使用 {{domxref("PerformanceNavigationTiming")}} 介面代替。</p>
+因為 Navigation Timing 規範已被棄用，此特性不再有望成為標準。請使用 {{domxref("PerformanceNavigationTiming")}} 介面代替。
 
-<h2 id="瀏覽器支援狀況">瀏覽器支援狀況</h2>
+## 瀏覽器支援狀況
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="參照">參照</h2>
+## 參照
 
-<ul>
- <li>屬於 {{domxref("Performance")}} 界面的一部份</li>
-</ul>
+- 屬於 {{domxref("Performance")}} 界面的一部份

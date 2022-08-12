@@ -8,377 +8,333 @@ tags:
   - Intermediate
 translation_of: Web/API/Document_Object_Model
 ---
-<p>{{DefaultAPISidebar("DOM")}}</p>
+{{DefaultAPISidebar("DOM")}}
 
-<p><strong>文件物件模型（<em>Document Object Model, DOM</em>）</strong>是 HTML、XML 和 SVG 文件的程式介面。它提供了一個文件（樹）的結構化表示法，並定義讓程式可以存取並改變文件架構、風格和內容的方法。DOM 提供了文件以擁有屬性與函式的節點與物件組成的結構化表示。節點也可以附加事件處理程序，一旦觸發事件就會執行處理程序。 本質上，它將網頁與腳本或程式語言連結在一起。</p>
+**文件物件模型（_Document Object Model, DOM_）**是 HTML、XML 和 SVG 文件的程式介面。它提供了一個文件（樹）的結構化表示法，並定義讓程式可以存取並改變文件架構、風格和內容的方法。DOM 提供了文件以擁有屬性與函式的節點與物件組成的結構化表示。節點也可以附加事件處理程序，一旦觸發事件就會執行處理程序。 本質上，它將網頁與腳本或程式語言連結在一起。
 
-<p>雖然常常使用 JavaScript 來存取 DOM，但它本身並不是 JavaScript 語言的一部分，而且它也可以被其他語言存取（雖然不太常見就是了）。</p>
+雖然常常使用 JavaScript 來存取 DOM，但它本身並不是 JavaScript 語言的一部分，而且它也可以被其他語言存取（雖然不太常見就是了）。
 
-<p>這裡有一篇 DOM 的<a href="/zh-TW/docs/DOM/DOM_Reference/Introduction">介紹</a>可供查閱。</p>
+這裡有一篇 DOM 的[介紹](/zh-TW/docs/DOM/DOM_Reference/Introduction)可供查閱。
 
-<h2 id="DOM_介面">DOM 介面</h2>
+## DOM 介面
 
-<div>
-<ul>
- <li>{{domxref("Attr")}}</li>
- <li>{{domxref("CharacterData")}}</li>
- <li>{{domxref("ChildNode")}} {{experimental_inline}}</li>
- <li>{{domxref("Comment")}}</li>
- <li>{{domxref("CustomEvent")}}</li>
- <li>{{domxref("Document")}}</li>
- <li>{{domxref("DocumentFragment")}}</li>
- <li>{{domxref("DocumentType")}}</li>
- <li>{{domxref("DOMError")}}</li>
- <li>{{domxref("DOMException")}}</li>
- <li>{{domxref("DOMImplementation")}}</li>
- <li>{{domxref("DOMString")}}</li>
- <li>{{domxref("DOMTimeStamp")}}</li>
- <li>{{domxref("DOMSettableTokenList")}}</li>
- <li>{{domxref("DOMStringList")}}</li>
- <li>{{domxref("DOMTokenList")}}</li>
- <li>{{domxref("Element")}}</li>
- <li>{{domxref("Event")}}</li>
- <li>{{domxref("EventTarget")}}</li>
- <li>{{domxref("HTMLCollection")}}</li>
- <li>{{domxref("MutationObserver")}}</li>
- <li>{{domxref("MutationRecord")}}</li>
- <li>{{domxref("Node")}}</li>
- <li>{{domxref("NodeFilter")}}</li>
- <li>{{domxref("NodeIterator")}}</li>
- <li>{{domxref("NodeList")}}</li>
- <li>{{domxref("ParentNode")}} {{experimental_inline}}</li>
- <li>{{domxref("ProcessingInstruction")}}</li>
- <li>{{domxref("Range")}}</li>
- <li>{{domxref("Text")}}</li>
- <li>{{domxref("TreeWalker")}}</li>
- <li>{{domxref("URL")}}</li>
- <li>{{domxref("Window")}}</li>
- <li>{{domxref("Worker")}}</li>
- <li>{{domxref("XMLDocument")}} {{experimental_inline}}</li>
-</ul>
-</div>
+- {{domxref("Attr")}}
+- {{domxref("CharacterData")}}
+- {{domxref("ChildNode")}} {{experimental_inline}}
+- {{domxref("Comment")}}
+- {{domxref("CustomEvent")}}
+- {{domxref("Document")}}
+- {{domxref("DocumentFragment")}}
+- {{domxref("DocumentType")}}
+- {{domxref("DOMError")}}
+- {{domxref("DOMException")}}
+- {{domxref("DOMImplementation")}}
+- {{domxref("DOMString")}}
+- {{domxref("DOMTimeStamp")}}
+- {{domxref("DOMSettableTokenList")}}
+- {{domxref("DOMStringList")}}
+- {{domxref("DOMTokenList")}}
+- {{domxref("Element")}}
+- {{domxref("Event")}}
+- {{domxref("EventTarget")}}
+- {{domxref("HTMLCollection")}}
+- {{domxref("MutationObserver")}}
+- {{domxref("MutationRecord")}}
+- {{domxref("Node")}}
+- {{domxref("NodeFilter")}}
+- {{domxref("NodeIterator")}}
+- {{domxref("NodeList")}}
+- {{domxref("ParentNode")}} {{experimental_inline}}
+- {{domxref("ProcessingInstruction")}}
+- {{domxref("Range")}}
+- {{domxref("Text")}}
+- {{domxref("TreeWalker")}}
+- {{domxref("URL")}}
+- {{domxref("Window")}}
+- {{domxref("Worker")}}
+- {{domxref("XMLDocument")}} {{experimental_inline}}
 
-<h2 id="棄用的_DOM_介面">棄用的 DOM 介面</h2>
+## 棄用的 DOM 介面
 
-<p>文件物件模型正被大量的簡化。為了達成這個目的，下這些介面是在 DOM level 3 或更早的規範中就被刪掉了。由於不清楚是否會被再度納入，請姑且當他們已經被遺棄，並避免使用：</p>
+文件物件模型正被大量的簡化。為了達成這個目的，下這些介面是在 DOM level 3 或更早的規範中就被刪掉了。由於不清楚是否會被再度納入，請姑且當他們已經被遺棄，並避免使用：
 
-<div>
-<ul>
- <li>{{domxref("CDATASection")}}</li>
- <li>{{domxref("DOMConfiguration")}}</li>
- <li>{{domxref("DOMErrorHandler")}}</li>
- <li>{{domxref("DOMImplementationList")}}</li>
- <li>{{domxref("DOMImplementationRegistry")}}</li>
- <li>{{domxref("DOMImplementationSource")}}</li>
- <li>{{domxref("DOMLocator")}}</li>
- <li>{{domxref("DOMObject")}}</li>
- <li>{{domxref("DOMUserData")}}</li>
- <li>{{domxref("Entity")}}</li>
- <li>{{domxref("EntityReference")}}</li>
- <li>{{domxref("NamedNodeMap")}}</li>
- <li>{{domxref("NameList")}}</li>
- <li>{{domxref("Notation")}}</li>
- <li>{{domxref("TypeInfo")}}</li>
- <li>{{domxref("UserDataHandler")}}</li>
- <li> </li>
-</ul>
-</div>
+- {{domxref("CDATASection")}}
+- {{domxref("DOMConfiguration")}}
+- {{domxref("DOMErrorHandler")}}
+- {{domxref("DOMImplementationList")}}
+- {{domxref("DOMImplementationRegistry")}}
+- {{domxref("DOMImplementationSource")}}
+- {{domxref("DOMLocator")}}
+- {{domxref("DOMObject")}}
+- {{domxref("DOMUserData")}}
+- {{domxref("Entity")}}
+- {{domxref("EntityReference")}}
+- {{domxref("NamedNodeMap")}}
+- {{domxref("NameList")}}
+- {{domxref("Notation")}}
+- {{domxref("TypeInfo")}}
+- {{domxref("UserDataHandler")}}
+-
 
-<h2 id="HTML_介面">HTML 介面</h2>
+## HTML 介面
 
-<p>一份包含 html 的文件會透過 {{domxref("HTMLDocument")}} 介面來描述。注意 HTML 規範也擴展了 {{domxref("Document")}} 介面。</p>
+一份包含 html 的文件會透過 {{domxref("HTMLDocument")}} 介面來描述。注意 HTML 規範也擴展了 {{domxref("Document")}} 介面。
 
-<p><code>HTMLDocument</code> 物件也提供了瀏覽器功能的存取：分頁、透過 {{domxref("Window")}} 介面描繪頁面的視窗、與其相關的 {{domxref("window.style", "樣式")}} （通常是 CSS ）、與本文關聯的瀏覽器 {{domxref("window.history", "歷史")}}、以及一個文件內的 {{domxref("Selection", "選擇器")}}。</p>
+`HTMLDocument` 物件也提供了瀏覽器功能的存取：分頁、透過 {{domxref("Window")}} 介面描繪頁面的視窗、與其相關的 {{domxref("window.style", "樣式")}} （通常是 CSS ）、與本文關聯的瀏覽器 {{domxref("window.history", "歷史")}}、以及一個文件內的 {{domxref("Selection", "選擇器")}}。
 
-<h3 id="HTML_元素介面">HTML 元素介面</h3>
+### HTML 元素介面
 
-<div>
-<ul>
- <li>{{domxref("HTMLAnchorElement")}}</li>
- <li>{{domxref("HTMLAppletElement")}}</li>
- <li>{{domxref("HTMLAreaElement")}}</li>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLBaseElement")}}</li>
- <li>{{domxref("HTMLBodyElement")}}</li>
- <li>{{domxref("HTMLBRElement")}}</li>
- <li>{{domxref("HTMLButtonElement")}}</li>
- <li>{{domxref("HTMLCanvasElement")}}</li>
- <li>{{domxref("HTMLDataElement")}}</li>
- <li>{{domxref("HTMLDataListElement")}}</li>
- <li>{{domxref("HTMLDialogElement")}}</li>
- <li>{{domxref("HTMLDirectoryElement")}}</li>
- <li>{{domxref("HTMLDivElement")}}</li>
- <li>{{domxref("HTMLDListElement")}}</li>
- <li>{{domxref("HTMLElement")}}</li>
- <li>{{domxref("HTMLEmbedElement")}}</li>
- <li>{{domxref("HTMLFieldSetElement")}}</li>
- <li>{{domxref("HTMLFontElement")}}</li>
- <li>{{domxref("HTMLFormElement")}}</li>
- <li>{{domxref("HTMLFrameElement")}}</li>
- <li>{{domxref("HTMLFrameSetElement")}}</li>
- <li>{{domxref("HTMLHeadElement")}}</li>
- <li>{{domxref("HTMLHeadingElement")}}</li>
- <li>{{domxref("HTMLHtmlElement")}}</li>
- <li>{{domxref("HTMLHRElement")}}</li>
- <li>{{domxref("HTMLIFrameElement")}}</li>
- <li>{{domxref("HTMLImageElement")}}</li>
- <li>{{domxref("HTMLInputElement")}}</li>
- <li>{{domxref("HTMLKeygenElement")}}</li>
- <li>{{domxref("HTMLLabelElement")}}</li>
- <li>{{domxref("HTMLLegendElement")}}</li>
- <li>{{domxref("HTMLLIElement")}}</li>
- <li>{{domxref("HTMLLinkElement")}}</li>
- <li>{{domxref("HTMLMapElement")}}</li>
- <li>{{domxref("HTMLMediaElement")}}</li>
- <li>{{domxref("HTMLMenuElement")}}</li>
- <li>{{domxref("HTMLMetaElement")}}</li>
- <li>{{domxref("HTMLMeterElement")}}</li>
- <li>{{domxref("HTMLModElement")}}</li>
- <li>{{domxref("HTMLObjectElement")}}</li>
- <li>{{domxref("HTMLOListElement")}}</li>
- <li>{{domxref("HTMLOptGroupElement")}}</li>
- <li>{{domxref("HTMLOptionElement")}}</li>
- <li>{{domxref("HTMLOutputElement")}}</li>
- <li>{{domxref("HTMLParagraphElement")}}</li>
- <li>{{domxref("HTMLParamElement")}}</li>
- <li>{{domxref("HTMLPreElement")}}</li>
- <li>{{domxref("HTMLProgressElement")}}</li>
- <li>{{domxref("HTMLQuoteElement")}}</li>
- <li>{{domxref("HTMLScriptElement")}}</li>
- <li>{{domxref("HTMLSelectElement")}}</li>
- <li>{{domxref("HTMLSourceElement")}}</li>
- <li>{{domxref("HTMLSpanElement")}}</li>
- <li>{{domxref("HTMLStyleElement")}}</li>
- <li>{{domxref("HTMLTableElement")}}</li>
- <li>{{domxref("HTMLTableCaptionElement")}}</li>
- <li>{{domxref("HTMLTableCellElement")}}</li>
- <li>{{domxref("HTMLTableDataCellElement")}}</li>
- <li>{{domxref("HTMLTableHeaderCellElement")}}</li>
- <li>{{domxref("HTMLTableColElement")}}</li>
- <li>{{domxref("HTMLTableRowElement")}}</li>
- <li>{{domxref("HTMLTableSectionElement")}}</li>
- <li>{{domxref("HTMLTextAreaElement")}}</li>
- <li>{{domxref("HTMLTimeElement")}}</li>
- <li>{{domxref("HTMLTitleElement")}}</li>
- <li>{{domxref("HTMLTrackElement")}}</li>
- <li>{{domxref("HTMLUListElement")}}</li>
- <li>{{domxref("HTMLUnknownElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
-</ul>
-</div>
+- {{domxref("HTMLAnchorElement")}}
+- {{domxref("HTMLAppletElement")}}
+- {{domxref("HTMLAreaElement")}}
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLBaseElement")}}
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLBRElement")}}
+- {{domxref("HTMLButtonElement")}}
+- {{domxref("HTMLCanvasElement")}}
+- {{domxref("HTMLDataElement")}}
+- {{domxref("HTMLDataListElement")}}
+- {{domxref("HTMLDialogElement")}}
+- {{domxref("HTMLDirectoryElement")}}
+- {{domxref("HTMLDivElement")}}
+- {{domxref("HTMLDListElement")}}
+- {{domxref("HTMLElement")}}
+- {{domxref("HTMLEmbedElement")}}
+- {{domxref("HTMLFieldSetElement")}}
+- {{domxref("HTMLFontElement")}}
+- {{domxref("HTMLFormElement")}}
+- {{domxref("HTMLFrameElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("HTMLHeadElement")}}
+- {{domxref("HTMLHeadingElement")}}
+- {{domxref("HTMLHtmlElement")}}
+- {{domxref("HTMLHRElement")}}
+- {{domxref("HTMLIFrameElement")}}
+- {{domxref("HTMLImageElement")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("HTMLKeygenElement")}}
+- {{domxref("HTMLLabelElement")}}
+- {{domxref("HTMLLegendElement")}}
+- {{domxref("HTMLLIElement")}}
+- {{domxref("HTMLLinkElement")}}
+- {{domxref("HTMLMapElement")}}
+- {{domxref("HTMLMediaElement")}}
+- {{domxref("HTMLMenuElement")}}
+- {{domxref("HTMLMetaElement")}}
+- {{domxref("HTMLMeterElement")}}
+- {{domxref("HTMLModElement")}}
+- {{domxref("HTMLObjectElement")}}
+- {{domxref("HTMLOListElement")}}
+- {{domxref("HTMLOptGroupElement")}}
+- {{domxref("HTMLOptionElement")}}
+- {{domxref("HTMLOutputElement")}}
+- {{domxref("HTMLParagraphElement")}}
+- {{domxref("HTMLParamElement")}}
+- {{domxref("HTMLPreElement")}}
+- {{domxref("HTMLProgressElement")}}
+- {{domxref("HTMLQuoteElement")}}
+- {{domxref("HTMLScriptElement")}}
+- {{domxref("HTMLSelectElement")}}
+- {{domxref("HTMLSourceElement")}}
+- {{domxref("HTMLSpanElement")}}
+- {{domxref("HTMLStyleElement")}}
+- {{domxref("HTMLTableElement")}}
+- {{domxref("HTMLTableCaptionElement")}}
+- {{domxref("HTMLTableCellElement")}}
+- {{domxref("HTMLTableDataCellElement")}}
+- {{domxref("HTMLTableHeaderCellElement")}}
+- {{domxref("HTMLTableColElement")}}
+- {{domxref("HTMLTableRowElement")}}
+- {{domxref("HTMLTableSectionElement")}}
+- {{domxref("HTMLTextAreaElement")}}
+- {{domxref("HTMLTimeElement")}}
+- {{domxref("HTMLTitleElement")}}
+- {{domxref("HTMLTrackElement")}}
+- {{domxref("HTMLUListElement")}}
+- {{domxref("HTMLUnknownElement")}}
+- {{domxref("HTMLVideoElement")}}
 
-<h3 id="其他介面">其他介面</h3>
+### 其他介面
 
-<div>
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasGradient")}}</li>
- <li>{{domxref("CanvasPattern")}}</li>
- <li>{{domxref("TextMetrics")}}</li>
- <li>{{domxref("ImageData")}}</li>
- <li>{{domxref("CanvasPixelArray")}}</li>
- <li>{{domxref("NotifyAudioAvailableEvent")}}</li>
- <li>{{domxref("HTMLAllCollection")}}</li>
- <li>{{domxref("HTMLFormControlsCollection")}}</li>
- <li>{{domxref("HTMLOptionsCollection")}}</li>
- <li>{{domxref("HTMLPropertiesCollection")}}</li>
- <li>{{domxref("DOMStringMap")}}</li>
- <li>{{domxref("RadioNodeList")}}</li>
- <li>{{domxref("MediaError")}}</li>
-</ul>
-</div>
+- {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasPattern")}}
+- {{domxref("TextMetrics")}}
+- {{domxref("ImageData")}}
+- {{domxref("CanvasPixelArray")}}
+- {{domxref("NotifyAudioAvailableEvent")}}
+- {{domxref("HTMLAllCollection")}}
+- {{domxref("HTMLFormControlsCollection")}}
+- {{domxref("HTMLOptionsCollection")}}
+- {{domxref("HTMLPropertiesCollection")}}
+- {{domxref("DOMStringMap")}}
+- {{domxref("RadioNodeList")}}
+- {{domxref("MediaError")}}
 
-<h3 id="棄用的_HTML_介面">棄用的 HTML 介面</h3>
+### 棄用的 HTML 介面
 
-<div>
-<ul>
- <li>{{domxref("HTMLBaseFontElement")}}</li>
- <li>{{domxref("HTMLIsIndexElement")}}</li>
-</ul>
-</div>
+- {{domxref("HTMLBaseFontElement")}}
+- {{domxref("HTMLIsIndexElement")}}
 
-<h2 id="SVG_介面">SVG 介面</h2>
+## SVG 介面
 
-<h3 id="SVG_元素介面">SVG 元素介面</h3>
+### SVG 元素介面
 
-<div>
-<ul>
- <li>{{domxref("SVGAElement")}}</li>
- <li>{{domxref("SVGAltGlyphElement")}}</li>
- <li>{{domxref("SVGAltGlyphDefElement")}}</li>
- <li>{{domxref("SVGAltGlyphItemElement")}}</li>
- <li>{{domxref("SVGAnimationElement")}}</li>
- <li>{{domxref("SVGAnimateElement")}}</li>
- <li>{{domxref("SVGAnimateColorElement")}}</li>
- <li>{{domxref("SVGAnimateMotionElement")}}</li>
- <li>{{domxref("SVGAnimateTransformElement")}}</li>
- <li>{{domxref("SVGCircleElement")}}</li>
- <li>{{domxref("SVGClipPathElement")}}</li>
- <li>{{domxref("SVGColorProfileElement")}}</li>
- <li>{{domxref("SVGComponentTransferFunctionElement")}}</li>
- <li>{{domxref("SVGCursorElement")}}</li>
- <li>{{domxref("SVGDefsElement")}}</li>
- <li>{{domxref("SVGDescElement")}}</li>
- <li>{{domxref("SVGElement")}}</li>
- <li>{{domxref("SVGEllipseElement")}}</li>
- <li>{{domxref("SVGFEBlendElement")}}</li>
- <li>{{domxref("SVGFEColorMatrixElement")}}</li>
- <li>{{domxref("SVGFEComponentTransferElement")}}</li>
- <li>{{domxref("SVGFECompositeElement")}}</li>
- <li>{{domxref("SVGFEConvolveMatrixElement")}}</li>
- <li>{{domxref("SVGFEDiffuseLightingElement")}}</li>
- <li>{{domxref("SVGFEDisplacementMapElement")}}</li>
- <li>{{domxref("SVGFEDistantLightElement")}}</li>
- <li>{{domxref("SVGFEFloodElement")}}</li>
- <li>{{domxref("SVGFEGaussianBlurElement")}}</li>
- <li>{{domxref("SVGFEImageElement")}}</li>
- <li>{{domxref("SVGFEMergeElement")}}</li>
- <li>{{domxref("SVGFEMergeNodeElement")}}</li>
- <li>{{domxref("SVGFEMorphologyElement")}}</li>
- <li>{{domxref("SVGFEOffsetElement")}}</li>
- <li>{{domxref("SVGFEPointLightElement")}}</li>
- <li>{{domxref("SVGFESpecularLightingElement")}}</li>
- <li>{{domxref("SVGFESpotLightElement")}}</li>
- <li>{{domxref("SVGFETileElement")}}</li>
- <li>{{domxref("SVGFETurbulenceElement")}}</li>
- <li>{{domxref("SVGFEFuncRElement")}}</li>
- <li>{{domxref("SVGFEFuncGElement")}}</li>
- <li>{{domxref("SVGFEFuncBElement")}}</li>
- <li>{{domxref("SVGFEFuncAElement")}}</li>
- <li>{{domxref("SVGFilterElement")}}</li>
- <li>{{domxref("SVGFilterPrimitiveStandardAttributes")}}</li>
- <li>{{domxref("SVGFontElement")}}</li>
- <li>{{domxref("SVGFontFaceElement")}}</li>
- <li>{{domxref("SVGFontFaceFormatElement")}}</li>
- <li>{{domxref("SVGFontFaceNameElement")}}</li>
- <li>{{domxref("SVGFontFaceSrcElement")}}</li>
- <li>{{domxref("SVGFontFaceUriElement")}}</li>
- <li>{{domxref("SVGForeignObjectElement")}}</li>
- <li>{{domxref("SVGGElement")}}</li>
- <li>{{domxref("SVGGlyphElement")}}</li>
- <li>{{domxref("SVGGlyphRefElement")}}</li>
- <li>{{domxref("SVGGradientElement")}}</li>
- <li>{{domxref("SVGHKernElement")}}</li>
- <li>{{domxref("SVGImageElement")}}</li>
- <li>{{domxref("SVGLinearGradientElement")}}</li>
- <li>{{domxref("SVGLineElement")}}</li>
- <li>{{domxref("SVGMarkerElement")}}</li>
- <li>{{domxref("SVGMaskElement")}}</li>
- <li>{{domxref("SVGMetadataElement")}}</li>
- <li>{{domxref("SVGMissingGlyphElement")}}</li>
- <li>{{domxref("SVGMPathElement")}}</li>
- <li>{{domxref("SVGPathElement")}}</li>
- <li>{{domxref("SVGPatternElement")}}</li>
- <li>{{domxref("SVGPolylineElement")}}</li>
- <li>{{domxref("SVGPolygonElement")}}</li>
- <li>{{domxref("SVGRadialGradientElement")}}</li>
- <li>{{domxref("SVGRectElement")}}</li>
- <li>{{domxref("SVGScriptElement")}}</li>
- <li>{{domxref("SVGSetElement")}}</li>
- <li>{{domxref("SVGStopElement")}}</li>
- <li>{{domxref("SVGStyleElement")}}</li>
- <li>{{domxref("SVGSVGElement")}}</li>
- <li>{{domxref("SVGSwitchElement")}}</li>
- <li>{{domxref("SVGSymbolElement")}}</li>
- <li>{{domxref("SVGTextElement")}}</li>
- <li>{{domxref("SVGTextPathElement")}}</li>
- <li>{{domxref("SVGTitleElement")}}</li>
- <li>{{domxref("SVGTRefElement")}}</li>
- <li>{{domxref("SVGTSpanElement")}}</li>
- <li>{{domxref("SVGUseElement")}}</li>
- <li>{{domxref("SVGViewElement")}}</li>
- <li>{{domxref("SVGVKernElement")}}</li>
-</ul>
-</div>
+- {{domxref("SVGAElement")}}
+- {{domxref("SVGAltGlyphElement")}}
+- {{domxref("SVGAltGlyphDefElement")}}
+- {{domxref("SVGAltGlyphItemElement")}}
+- {{domxref("SVGAnimationElement")}}
+- {{domxref("SVGAnimateElement")}}
+- {{domxref("SVGAnimateColorElement")}}
+- {{domxref("SVGAnimateMotionElement")}}
+- {{domxref("SVGAnimateTransformElement")}}
+- {{domxref("SVGCircleElement")}}
+- {{domxref("SVGClipPathElement")}}
+- {{domxref("SVGColorProfileElement")}}
+- {{domxref("SVGComponentTransferFunctionElement")}}
+- {{domxref("SVGCursorElement")}}
+- {{domxref("SVGDefsElement")}}
+- {{domxref("SVGDescElement")}}
+- {{domxref("SVGElement")}}
+- {{domxref("SVGEllipseElement")}}
+- {{domxref("SVGFEBlendElement")}}
+- {{domxref("SVGFEColorMatrixElement")}}
+- {{domxref("SVGFEComponentTransferElement")}}
+- {{domxref("SVGFECompositeElement")}}
+- {{domxref("SVGFEConvolveMatrixElement")}}
+- {{domxref("SVGFEDiffuseLightingElement")}}
+- {{domxref("SVGFEDisplacementMapElement")}}
+- {{domxref("SVGFEDistantLightElement")}}
+- {{domxref("SVGFEFloodElement")}}
+- {{domxref("SVGFEGaussianBlurElement")}}
+- {{domxref("SVGFEImageElement")}}
+- {{domxref("SVGFEMergeElement")}}
+- {{domxref("SVGFEMergeNodeElement")}}
+- {{domxref("SVGFEMorphologyElement")}}
+- {{domxref("SVGFEOffsetElement")}}
+- {{domxref("SVGFEPointLightElement")}}
+- {{domxref("SVGFESpecularLightingElement")}}
+- {{domxref("SVGFESpotLightElement")}}
+- {{domxref("SVGFETileElement")}}
+- {{domxref("SVGFETurbulenceElement")}}
+- {{domxref("SVGFEFuncRElement")}}
+- {{domxref("SVGFEFuncGElement")}}
+- {{domxref("SVGFEFuncBElement")}}
+- {{domxref("SVGFEFuncAElement")}}
+- {{domxref("SVGFilterElement")}}
+- {{domxref("SVGFilterPrimitiveStandardAttributes")}}
+- {{domxref("SVGFontElement")}}
+- {{domxref("SVGFontFaceElement")}}
+- {{domxref("SVGFontFaceFormatElement")}}
+- {{domxref("SVGFontFaceNameElement")}}
+- {{domxref("SVGFontFaceSrcElement")}}
+- {{domxref("SVGFontFaceUriElement")}}
+- {{domxref("SVGForeignObjectElement")}}
+- {{domxref("SVGGElement")}}
+- {{domxref("SVGGlyphElement")}}
+- {{domxref("SVGGlyphRefElement")}}
+- {{domxref("SVGGradientElement")}}
+- {{domxref("SVGHKernElement")}}
+- {{domxref("SVGImageElement")}}
+- {{domxref("SVGLinearGradientElement")}}
+- {{domxref("SVGLineElement")}}
+- {{domxref("SVGMarkerElement")}}
+- {{domxref("SVGMaskElement")}}
+- {{domxref("SVGMetadataElement")}}
+- {{domxref("SVGMissingGlyphElement")}}
+- {{domxref("SVGMPathElement")}}
+- {{domxref("SVGPathElement")}}
+- {{domxref("SVGPatternElement")}}
+- {{domxref("SVGPolylineElement")}}
+- {{domxref("SVGPolygonElement")}}
+- {{domxref("SVGRadialGradientElement")}}
+- {{domxref("SVGRectElement")}}
+- {{domxref("SVGScriptElement")}}
+- {{domxref("SVGSetElement")}}
+- {{domxref("SVGStopElement")}}
+- {{domxref("SVGStyleElement")}}
+- {{domxref("SVGSVGElement")}}
+- {{domxref("SVGSwitchElement")}}
+- {{domxref("SVGSymbolElement")}}
+- {{domxref("SVGTextElement")}}
+- {{domxref("SVGTextPathElement")}}
+- {{domxref("SVGTitleElement")}}
+- {{domxref("SVGTRefElement")}}
+- {{domxref("SVGTSpanElement")}}
+- {{domxref("SVGUseElement")}}
+- {{domxref("SVGViewElement")}}
+- {{domxref("SVGVKernElement")}}
 
-<h3 id="SVG_資料型別介面">SVG 資料型別介面</h3>
+### SVG 資料型別介面
 
-<p>這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。</p>
+這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。
 
-<div class="note">
-<p>從 {{Gecko("5.0")}} 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。</p>
-</div>
+> **備註：** 從 {{Gecko("5.0")}} 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
 
-<h4 id="靜態類型">靜態類型</h4>
+#### 靜態類型
 
-<div>
-<ul>
- <li>{{domxref("SVGAngle")}}</li>
- <li>{{domxref("SVGColor")}}</li>
- <li>{{domxref("SVGICCColor")}}</li>
- <li>{{domxref("SVGElementInstance")}}</li>
- <li>{{domxref("SVGElementInstanceList")}}</li>
- <li>{{domxref("SVGLength")}}</li>
- <li>{{domxref("SVGLengthList")}}</li>
- <li>{{domxref("SVGMatrix")}}</li>
- <li>{{domxref("SVGNumber")}}</li>
- <li>{{domxref("SVGNumberList")}}</li>
- <li>{{domxref("SVGPaint")}}</li>
- <li>{{domxref("SVGPoint")}}</li>
- <li>{{domxref("SVGPointList")}}</li>
- <li>{{domxref("SVGPreserveAspectRatio")}}</li>
- <li>{{domxref("SVGRect")}}</li>
- <li>{{domxref("SVGStringList")}}</li>
- <li>{{domxref("SVGTransform")}}</li>
- <li>{{domxref("SVGTransformList")}}</li>
-</ul>
-</div>
+- {{domxref("SVGAngle")}}
+- {{domxref("SVGColor")}}
+- {{domxref("SVGICCColor")}}
+- {{domxref("SVGElementInstance")}}
+- {{domxref("SVGElementInstanceList")}}
+- {{domxref("SVGLength")}}
+- {{domxref("SVGLengthList")}}
+- {{domxref("SVGMatrix")}}
+- {{domxref("SVGNumber")}}
+- {{domxref("SVGNumberList")}}
+- {{domxref("SVGPaint")}}
+- {{domxref("SVGPoint")}}
+- {{domxref("SVGPointList")}}
+- {{domxref("SVGPreserveAspectRatio")}}
+- {{domxref("SVGRect")}}
+- {{domxref("SVGStringList")}}
+- {{domxref("SVGTransform")}}
+- {{domxref("SVGTransformList")}}
 
-<h4 id="動畫類型">動畫類型</h4>
+#### 動畫類型
 
-<div>
-<ul>
- <li>{{domxref("SVGAnimatedAngle")}}</li>
- <li>{{domxref("SVGAnimatedBoolean")}}</li>
- <li>{{domxref("SVGAnimatedEnumeration")}}</li>
- <li>{{domxref("SVGAnimatedInteger")}}</li>
- <li>{{domxref("SVGAnimatedLength")}}</li>
- <li>{{domxref("SVGAnimatedLengthList")}}</li>
- <li>{{domxref("SVGAnimatedNumber")}}</li>
- <li>{{domxref("SVGAnimatedNumberList")}}</li>
- <li>{{domxref("SVGAnimatedPreserveAspectRatio")}}</li>
- <li>{{domxref("SVGAnimatedRect")}}</li>
- <li>{{domxref("SVGAnimatedString")}}</li>
- <li>{{domxref("SVGAnimatedTransformList")}}</li>
-</ul>
-</div>
+- {{domxref("SVGAnimatedAngle")}}
+- {{domxref("SVGAnimatedBoolean")}}
+- {{domxref("SVGAnimatedEnumeration")}}
+- {{domxref("SVGAnimatedInteger")}}
+- {{domxref("SVGAnimatedLength")}}
+- {{domxref("SVGAnimatedLengthList")}}
+- {{domxref("SVGAnimatedNumber")}}
+- {{domxref("SVGAnimatedNumberList")}}
+- {{domxref("SVGAnimatedPreserveAspectRatio")}}
+- {{domxref("SVGAnimatedRect")}}
+- {{domxref("SVGAnimatedString")}}
+- {{domxref("SVGAnimatedTransformList")}}
 
-<h3 id="SMIL_相關介面">SMIL 相關介面</h3>
+### SMIL 相關介面
 
-<div>
-<ul>
- <li>{{domxref("ElementTimeControl")}}</li>
- <li>{{domxref("TimeEvent")}}</li>
-</ul>
-</div>
+- {{domxref("ElementTimeControl")}}
+- {{domxref("TimeEvent")}}
 
-<h3 id="其他的_SVG_介面">其他的 SVG 介面</h3>
+### 其他的 SVG 介面
 
-<div>
-<ul>
- <li>{{domxref("SVGAnimatedPathData")}}</li>
- <li>{{domxref("SVGAnimatedPoints")}}</li>
- <li>{{domxref("SVGColorProfileRule")}}</li>
- <li>{{domxref("SVGCSSRule")}}</li>
- <li>{{domxref("SVGExternalResourcesRequired")}}</li>
- <li>{{domxref("SVGFitToViewBox")}}</li>
- <li>{{domxref("SVGLangSpace")}}</li>
- <li>{{domxref("SVGLocatable")}}</li>
- <li>{{domxref("SVGRenderingIntent")}}</li>
- <li>{{domxref("SVGStylable")}}</li>
- <li>{{domxref("SVGTests")}}</li>
- <li>{{domxref("SVGTextContentElement")}}</li>
- <li>{{domxref("SVGTextPositioningElement")}}</li>
- <li>{{domxref("SVGTransformable")}}</li>
- <li>{{domxref("SVGUnitTypes")}}</li>
- <li>{{domxref("SVGURIReference")}}</li>
- <li>{{domxref("SVGViewSpec")}}</li>
- <li>{{domxref("SVGZoomAndPan")}}</li>
-</ul>
-</div>
+- {{domxref("SVGAnimatedPathData")}}
+- {{domxref("SVGAnimatedPoints")}}
+- {{domxref("SVGColorProfileRule")}}
+- {{domxref("SVGCSSRule")}}
+- {{domxref("SVGExternalResourcesRequired")}}
+- {{domxref("SVGFitToViewBox")}}
+- {{domxref("SVGLangSpace")}}
+- {{domxref("SVGLocatable")}}
+- {{domxref("SVGRenderingIntent")}}
+- {{domxref("SVGStylable")}}
+- {{domxref("SVGTests")}}
+- {{domxref("SVGTextContentElement")}}
+- {{domxref("SVGTextPositioningElement")}}
+- {{domxref("SVGTransformable")}}
+- {{domxref("SVGUnitTypes")}}
+- {{domxref("SVGURIReference")}}
+- {{domxref("SVGViewSpec")}}
+- {{domxref("SVGZoomAndPan")}}
 
-<h2 id="See_also">相關連結</h2>
+## 相關連結
 
-<ul>
- <li><a href="/zh-TW/docs/DOM/DOM_Reference/Examples">DOM 範例</a></li>
-</ul>
+- [DOM 範例](/zh-TW/docs/DOM/DOM_Reference/Examples)

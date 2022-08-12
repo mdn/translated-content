@@ -3,96 +3,70 @@ title: MediaQueryList
 slug: Web/API/MediaQueryList
 translation_of: Web/API/MediaQueryList
 ---
-<div>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</div>
+{{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-<p><code>MediaQueryList</code> 物件維護一組針對 {{ domxref("document") }} 的 <a href="/en-US/docs/CSS/Media_queries">media querie</a> , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。</p>
+`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/CSS/Media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
 
-<p>MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。</p>
+MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
-<table>
- <tbody>
-  <tr>
-   <td><code>void <a href="/en-US/docs/DOM/MediaQueryList#addListener()">addListener</a>(MediaQueryListListener listener);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="/en-US/docs/DOM/MediaQueryList#removeListener()">removeListener</a>(MediaQueryListListener listener);</code></td>
-  </tr>
- </tbody>
-</table>
+| `void addListener(MediaQueryListListener listener);`    |
+| ------------------------------------------------------- |
+| `void removeListener(MediaQueryListListener listener);` |
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>matches</code></td>
-   <td><code>boolean</code></td>
-   <td><code>true</code> 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨<strong>。</strong></td>
-  </tr>
-  <tr>
-   <td><code>media</code></td>
-   <td><code>DOMString</code></td>
-   <td>序列化 (serialized) 的 media query list.</td>
-  </tr>
- </tbody>
-</table>
+| Property  | Type        | Description                                                                                                    |
+| --------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| `matches` | `boolean`   | `true` 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨**。** |
+| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                       |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="addListener()">addListener()</h3>
+### addListener()
 
-<p>添加一個新的事件處理器 (listener)，若 listener 已存在則無作用。</p>
+添加一個新的事件處理器 (listener)，若 listener 已存在則無作用。
 
-<pre>void addListener(
+```plain
+void addListener(
   MediaQueryListListener listener
-);</pre>
+);
+```
 
-<h4 id="Parameter_(for_addListener_method)">Parameter (for addListener method)</h4>
+#### Parameter (for addListener method)
 
-<dl>
- <dt><code>listener</code></dt>
- <dd>當 media query 對應的狀態改變時所觸發的事件處理函數 ({{ domxref("MediaQueryListListener") }})。</dd>
-</dl>
+- `listener`
+  - : 當 media query 對應的狀態改變時所觸發的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
 
-<h3 id="removeListener()">removeListener()</h3>
+### removeListener()
 
-<p>移除一個事件處理器 (listener)，若 listener 不存在則無作用。</p>
+移除一個事件處理器 (listener)，若 listener 不存在則無作用。
 
-<pre>void removeListener(
+```plain
+void removeListener(
   MediaQueryListListener listener
-);</pre>
+);
+```
 
-<h4 id="Parameter_(for_removeListener_method)">Parameter (for removeListener method)</h4>
+#### Parameter (for removeListener method)
 
-<dl>
- <dt><code>listener</code></dt>
- <dd>欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。</dd>
-</dl>
+- `listener`
+  - : 欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
 
-<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.MediaQueryList")}}
 
-<h2 id="Specification"> </h2>
+##
 
-<h2 id="Specification">規範標準</h2>
+## 規範標準
 
-<ul>
- <li><a href="http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface">The CSSOM View Module: The MediaQueryList Interface</a></li>
-</ul>
+- [The CSSOM View Module: The MediaQueryList Interface](http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
 
-<h2 id="See_also">延伸閱讀</h2>
+## 延伸閱讀
 
-<ul>
- <li><a href="/en-US/docs/CSS/Media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/CSS/Using_media_queries_from_code">Using media queries from code</a></li>
- <li>{{ domxref("window.matchMedia()") }}</li>
- <li>{{ domxref("MediaQueryListListener") }}</li>
-</ul>
+- [Media queries](/zh-TW/docs/CSS/Media_queries)
+- [Using media queries from code](/zh-TW/docs/CSS/Using_media_queries_from_code)
+- {{ domxref("window.matchMedia()") }}
+- {{ domxref("MediaQueryListListener") }}

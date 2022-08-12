@@ -3,70 +3,67 @@ title: 虛擬類別
 slug: Web/CSS/Pseudo-classes
 translation_of: Web/CSS/Pseudo-classes
 ---
-<p>{{ CSSRef() }}</p>
+{{ CSSRef() }}
 
-<p>CSS <strong><em><dfn>虛擬類別（pseudo-class）</dfn></em></strong>的元素，在特殊狀態下被選取的話，會作為關鍵字被加到選擇器裡面。例如 {{ Cssxref(":hover") }} 會讓用戶的滑鼠停在某個元素的時候，套用指定選擇器的樣式。</p>
+CSS ****虛擬類別（pseudo-class）****的元素，在特殊狀態下被選取的話，會作為關鍵字被加到選擇器裡面。例如 {{ Cssxref(":hover") }} 會讓用戶的滑鼠停在某個元素的時候，套用指定選擇器的樣式。
 
-<p>虛擬類別與 {{ Cssxref("pseudo-elements") }} 能讓你不只能給文件樹（document tree）本身的相關內容套用樣式，還能給諸如瀏覽歷史（{{ cssxref(":visited") }}）、內容的狀態（{{ cssxref(":checked") }}）、還有滑鼠的位置（像 {{ cssxref(":hover") }} 就能讓偵測滑鼠是否在元件上）之類的外部相關因素套用樣式。</p>
+虛擬類別與 {{ Cssxref("pseudo-elements") }} 能讓你不只能給文件樹（document tree）本身的相關內容套用樣式，還能給諸如瀏覽歷史（{{ cssxref(":visited") }}）、內容的狀態（{{ cssxref(":checked") }}）、還有滑鼠的位置（像 {{ cssxref(":hover") }} 就能讓偵測滑鼠是否在元件上）之類的外部相關因素套用樣式。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">selector:pseudo-class {
+```plain
+selector:pseudo-class {
   property: value;
 }
-</pre>
+```
 
-<h2 id="基本虛擬類別的目錄">基本虛擬類別的目錄</h2>
+## 基本虛擬類別的目錄
 
-<ul>
- <li>{{ Cssxref(":active") }}</li>
- <li>{{ cssxref(':any')}}</li>
- <li>{{ Cssxref(":checked") }}</li>
- <li>{{ Cssxref(":default") }}</li>
- <li>{{ Cssxref(":dir", ":dir()")}}</li>
- <li>{{ Cssxref(":disabled") }}</li>
- <li>{{ Cssxref(":empty") }}</li>
- <li>{{ Cssxref(":enabled") }}</li>
- <li>{{ Cssxref(":first") }}</li>
- <li>{{ Cssxref(":first-child") }}</li>
- <li>{{ Cssxref(":first-of-type") }}</li>
- <li>{{ Cssxref(":fullscreen") }}</li>
- <li>{{ Cssxref(":focus") }}</li>
- <li>{{ Cssxref(":hover") }}</li>
- <li>{{ Cssxref(":indeterminate") }}</li>
- <li>{{ Cssxref(":in-range") }}</li>
- <li>{{ Cssxref(":invalid") }}</li>
- <li>{{ Cssxref(":lang", ":lang()") }}</li>
- <li>{{ Cssxref(":last-child") }}</li>
- <li>{{ Cssxref(":last-of-type") }}</li>
- <li>{{ Cssxref(":left") }}</li>
- <li>{{ Cssxref(":link") }}</li>
- <li>{{ Cssxref(":not", ":not()") }}</li>
- <li>{{ Cssxref(":nth-child", ":nth-child()") }}</li>
- <li>{{ Cssxref(":nth-last-child", ":nth-last-child()") }}</li>
- <li>{{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}</li>
- <li>{{ Cssxref(":nth-of-type", ":nth-of-type()") }}</li>
- <li>{{ Cssxref(":only-child") }}</li>
- <li>{{ Cssxref(":only-of-type") }}</li>
- <li>{{ Cssxref(":optional") }}</li>
- <li>{{ Cssxref(":out-of-range") }}</li>
- <li>{{ Cssxref(":read-only") }}</li>
- <li>{{ Cssxref(":read-write") }}</li>
- <li>{{ Cssxref(":required") }}</li>
- <li>{{ Cssxref(":right") }}</li>
- <li>{{ Cssxref(":root") }}</li>
- <li>{{ Cssxref(":scope") }}</li>
- <li>{{ Cssxref(":target") }}</li>
- <li>{{ Cssxref(":valid") }}</li>
- <li>{{ Cssxref(":visited") }}</li>
-</ul>
+- {{ Cssxref(":active") }}
+- {{ cssxref(':any')}}
+- {{ Cssxref(":checked") }}
+- {{ Cssxref(":default") }}
+- {{ Cssxref(":dir", ":dir()")}}
+- {{ Cssxref(":disabled") }}
+- {{ Cssxref(":empty") }}
+- {{ Cssxref(":enabled") }}
+- {{ Cssxref(":first") }}
+- {{ Cssxref(":first-child") }}
+- {{ Cssxref(":first-of-type") }}
+- {{ Cssxref(":fullscreen") }}
+- {{ Cssxref(":focus") }}
+- {{ Cssxref(":hover") }}
+- {{ Cssxref(":indeterminate") }}
+- {{ Cssxref(":in-range") }}
+- {{ Cssxref(":invalid") }}
+- {{ Cssxref(":lang", ":lang()") }}
+- {{ Cssxref(":last-child") }}
+- {{ Cssxref(":last-of-type") }}
+- {{ Cssxref(":left") }}
+- {{ Cssxref(":link") }}
+- {{ Cssxref(":not", ":not()") }}
+- {{ Cssxref(":nth-child", ":nth-child()") }}
+- {{ Cssxref(":nth-last-child", ":nth-last-child()") }}
+- {{ Cssxref(":nth-last-of-type", ":nth-last-of-type()") }}
+- {{ Cssxref(":nth-of-type", ":nth-of-type()") }}
+- {{ Cssxref(":only-child") }}
+- {{ Cssxref(":only-of-type") }}
+- {{ Cssxref(":optional") }}
+- {{ Cssxref(":out-of-range") }}
+- {{ Cssxref(":read-only") }}
+- {{ Cssxref(":read-write") }}
+- {{ Cssxref(":required") }}
+- {{ Cssxref(":right") }}
+- {{ Cssxref(":root") }}
+- {{ Cssxref(":scope") }}
+- {{ Cssxref(":target") }}
+- {{ Cssxref(":valid") }}
+- {{ Cssxref(":visited") }}
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="參閱">參閱</h2>
+## 參閱
 
-<ul>
- <li>{{ Cssxref("pseudo-elements") }}</li>
-</ul>
+- {{ Cssxref("pseudo-elements") }}

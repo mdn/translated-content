@@ -6,74 +6,73 @@ tags:
   - Canvas
 translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
-<div>
-<div>
-<div>{{APIRef("Canvas API")}}</div>
-</div>
-</div>
+{{APIRef("Canvas API")}}
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> 方法回傳含有圖像和參數設置特定格式的 <a href="/en-US/docs/Web/HTTP/data_URIs">data URIs</a> (預設 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). 回傳的圖像解析度為 96 dpi.</p>
+**`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/HTTP/data_URIs) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
 
-<ul>
- <li>如果 canvas 的高度或是寬度為 <code>0</code>, 將會回傳字串 <code>"data:,"</code>.</li>
- <li>如果要求的圖像類型並非 <code>image/png</code>, 但是回傳的類型卻是 <code>data:image/png</code>, 表示要求的圖像類型並不支援.</li>
- <li>Chrome 也支援 <code>image/webp</code> 類型.</li>
-</ul>
+- 如果 canvas 的高度或是寬度為 `0`, 將會回傳字串 `"data:,"`.
+- 如果要求的圖像類型並非 `image/png`, 但是回傳的類型卻是 `data:image/png`, 表示要求的圖像類型並不支援.
+- Chrome 也支援 `image/webp` 類型.
 
-<h2 id="Syntax">表達式</h2>
+## 表達式
 
-<pre class="syntaxbox"><var><em>canvas</em>.toDataURL(<em>type</em>, <em>encoderOptions</em>);</var>
-</pre>
+```plain
+canvas.toDataURL(type, encoderOptions);
+```
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>type</code> {{optional_inline}}</dt>
- <dd>圖像格式的 {{domxref("DOMString")}}. 預設為 <code>image/png</code>.</dd>
- <dt><code>encoderOptions</code> {{optional_inline}}</dt>
- <dd><code>表示 image/jpeg 或是 image/webp 的圖像品質, 為0</code> 到 <code>1</code> 之間的 {{jsxref("Number")}}.<br>
- 如果值不在上述範圍中, 將會使用預設值. 其他的會忽略.</dd>
-</dl>
+- `type` {{optional_inline}}
+  - : 圖像格式的 {{domxref("DOMString")}}. 預設為 `image/png`.
+- `encoderOptions` {{optional_inline}}
+  - : `表示 image/jpeg 或是 image/webp 的圖像品質, 為0` 到 `1` 之間的 {{jsxref("Number")}}.
+    如果值不在上述範圍中, 將會使用預設值. 其他的會忽略.
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p>包含 <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> 的 {{domxref("DOMString")}}.</p>
+包含 [data URI](/zh-TW/docs/Web/HTTP/data_URIs) 的 {{domxref("DOMString")}}.
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>創建 {{HTMLElement("canvas")}} 元素:</p>
+創建 {{HTMLElement("canvas")}} 元素:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="5" height="5"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="5" height="5"></canvas>
+```
 
-<p>可以使用下面的方式獲取 data-URL:</p>
+可以使用下面的方式獲取 data-URL:
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+```js
+var canvas = document.getElementById("canvas");
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
-</pre>
+```
 
-<h3 id="設置圖像的品質">設置圖像的品質</h3>
+### 設置圖像的品質
 
-<pre class="brush: js">var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
+```js
+var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
 // data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
 var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
 var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
-</pre>
+```
 
-<h3 id="Example:_Dynamically_change_images">範例: 動態改變圖像</h3>
+### 範例: 動態改變圖像
 
-<p>為了動態改變圖像, 可以與滑鼠事件一起使用 (gray-scale versus color in this example):</p>
+為了動態改變圖像, 可以與滑鼠事件一起使用 (gray-scale versus color in this example):
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img class="grayscale" src="myPicture.png" alt="Description of my picture" /&gt;</pre>
+```html
+<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">window.addEventListener("load", removeColors);
+```js
+window.addEventListener("load", removeColors);
 
 function showColorImg() {
   this.style.display = "none";
@@ -90,7 +89,7 @@ function removeColors() {
       nImgsLen = aImages.length,
       oCanvas = document.createElement("canvas"),
       oCtx = oCanvas.getContext("2d");
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId &lt; nImgsLen; nImgId++) {
+  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -100,7 +99,7 @@ function removeColors() {
     oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
     aPix = oImgData.data;
     nPixLen = aPix.length;
-    for (nPixel = 0; nPixel &lt; nPixLen; nPixel += 4) {
+    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
       aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
@@ -112,19 +111,18 @@ function removeColors() {
     oColorImg.style.display = "none";
     oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
   }
-}</pre>
+}
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.HTMLCanvasElement.toDataURL")}}
 
-<h2 id="See_Also">參見</h2>
+## 參見
 
-<ul>
- <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> in the <a href="/en-US/docs/Web/HTTP">HTTP</a> reference.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- [Data URIs](/zh-TW/docs/Web/HTTP/data_URIs) in the [HTTP](/zh-TW/docs/Web/HTTP) reference.

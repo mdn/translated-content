@@ -5,50 +5,38 @@ tags:
   - Sensors
 translation_of: Web/API/Window/orientationchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>orientationchange</code> 事件在設備方向改變時被觸發。</p>
+`orientationchange` 事件在設備方向改變時被觸發。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">冒泡</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">可取消</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">介面</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">事件處理器</th>
-   <td><code><a href="/zh-TW/docs/Web/API/Window/onorientationchange">onorientationchange</a></code></td>
-  </tr>
- </tbody>
-</table>
+| 冒泡       | No                                                                      |
+| ---------- | ----------------------------------------------------------------------- |
+| 可取消     | No                                                                      |
+| 介面       | {{domxref("Event")}}                                            |
+| 事件處理器 | [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) |
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<p>可於 <code><a href="/zh-TW/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> 方法中使用 <code>abort</code> 事件：</p>
+可於 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 方法中使用 `abort` 事件：
 
-<pre class="brush:js;">window.addEventListener("orientationchange", function() {
+```js
+window.addEventListener("orientationchange", function() {
   console.log("the orientation of the device is now " + screen.orientation.angle);
 });
-</pre>
+```
 
-<p>或使用 <code><a href="/zh-TW/docs/Web/API/Window/onorientationchange">onorientationchange</a></code> 事件處理器屬性：</p>
+或使用 [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) 事件處理器屬性：
 
-<pre class="brush: js">window.onorientationchange = function() {
+```js
+window.onorientationchange = function() {
   console.log("the orientation of the device is now " + screen.orientation.angle);
-};</pre>
+};
+```
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("api.Window.orientationchange_event")}}</p>
+{{Compat("api.Window.orientationchange_event")}}

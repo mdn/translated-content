@@ -52,7 +52,7 @@ var args = [].slice.call(arguments);
 const args = Array.from(arguments);
 ```
 
-> **警告：**Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - [more information](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised `Array` constructor as a function:
+> **警告：** Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - [more information](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised `Array` constructor as a function:
 >
 > ```js
 > var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));

@@ -11,204 +11,189 @@ tags:
   - Élément(2)
 translation_of: Web/API/Element
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Element</code></strong> 介面表示了一個在 {{domxref("Document")}} 中的物件，其描述了各類型元素的共同屬性與方法，<code>Element</code> 的子介面則定義了不同類型元素的具體行為並增加額外的功能。例如 {{domxref("HTMLElement")}} 為所有 HTML 元素的基礎介面，而 {{domxref("SVGElement")}} 則是定義所有 SVG 元素的介面。</p>
+**`Element`** 介面表示了一個在 {{domxref("Document")}} 中的物件，其描述了各類型元素的共同屬性與方法，`Element` 的子介面則定義了不同類型元素的具體行為並增加額外的功能。例如 {{domxref("HTMLElement")}} 為所有 HTML 元素的基礎介面，而 {{domxref("SVGElement")}} 則是定義所有 SVG 元素的介面。
 
-<p>在 Web 領域之外，如 XUL 語言也能藉由 <code>XULElement</code> 介面來繼承 <code>Element</code>。</p>
+在 Web 領域之外，如 XUL 語言也能藉由 `XULElement` 介面來繼承 `Element`。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">屬性</h2>
+## 屬性
 
-<p><em>Inherits properties from its parent interface, {{domxref("Node")}}, and by extension that interface's parent, {{domxref("EventTarget")}}. It implements the properties of {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}, </em>and {{domxref("Animatable")}}.</p>
+_Inherits properties from its parent interface, {{domxref("Node")}}, and by extension that interface's parent, {{domxref("EventTarget")}}. It implements the properties of {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}},_ and {{domxref("Animatable")}}.
 
-<dl>
- <dt>{{ domxref("Element.assignedSlot")}} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{domxref("HTMLSlotElement")}} interface associated with the element.</dd>
- <dt>{{ domxref("Element.attributes") }} {{readOnlyInline}}</dt>
- <dd>Returns a {{ domxref("NamedNodeMap") }} object containing the assigned attributes of the corresponding HTML element.</dd>
- <dt>{{ domxref("Element.classList") }} {{readOnlyInline}}</dt>
- <dd>Returns a {{ domxref("DOMTokenList") }} containing the list of class attributes.</dd>
- <dt>{{ domxref("Element.className") }}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the class of the element.</dd>
- <dt>{{ domxref("Element.clientHeight") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the inner height of the element.</dd>
- <dt>{{ domxref("Element.clientLeft") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the width of the left border of the element.</dd>
- <dt>{{ domxref("Element.clientTop") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the width of the top border of the element.</dd>
- <dt>{{ domxref("Element.clientWidth") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the inner width of the element.</dd>
- <dt>{{domxref("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the label exposed to accessibility.</dd>
- <dt>{{domxref("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the ARIA role that has been applied to a particular element.</dd>
- <dt>{{ domxref("Element.id") }}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the id of the element.</dd>
- <dt>{{ domxref("Element.innerHTML") }}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the markup of the element's content.</dd>
- <dt>{{ domxref("Element.localName") }} {{readOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the local part of the qualified name of the element.</dd>
- <dt>{{domxref("Element.namespaceURI")}} {{readonlyInline}}</dt>
- <dd>The namespace URI of the element, or <code>null</code> if it is no namespace.
- <div class="note">
- <p><strong>Note:</strong> In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the <code><a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> namespace in both HTML and XML trees.</p>
- </div>
- </dd>
- <dt>{{ domxref("NonDocumentTypeChildNode.nextElementSibling") }} {{readOnlyInline}}</dt>
- <dd>Is a {{ domxref("Element") }}, the element immediately following the given one in the tree, or <code>null</code> if there's no sibling node.</dd>
- <dt>{{ domxref("Element.outerHTML") }} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.</dd>
- <dt>{{ domxref("Element.prefix") }} {{readOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the namespace prefix of the element, or <code>null</code> if no prefix is specified.</dd>
- <dt>{{ domxref("NonDocumentTypeChildNode.previousElementSibling") }} {{readOnlyInline}}</dt>
- <dd>Is a {{ domxref("Element") }}, the element immediately preceding the given one in the tree, or <code>null</code> if there is no sibling element.</dd>
- <dt>{{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the scroll view height of an element.</dd>
- <dt>{{ domxref("Element.scrollLeft") }} {{experimental_inline}}</dt>
- <dd>Is a {{jsxref("Number")}} representing the left scroll offset of the element.</dd>
- <dt>{{ domxref("Element.scrollLeftMax") }} {{non-standard_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the maximum left scroll offset possible for the element.</dd>
- <dt>{{ domxref("Element.scrollTop") }} {{experimental_inline}}</dt>
- <dd>Is a {{jsxref("Number")}} representing the top scroll offset the an element.</dd>
- <dt>{{ domxref("Element.scrollTopMax") }} {{non-standard_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the maximum top scroll offset possible for the element.</dd>
- <dt>{{ domxref("Element.scrollWidth") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns a {{jsxref("Number")}} representing the scroll view width of the element.</dd>
- <dt>{{domxref("Element.shadowRoot") }} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns the youngest shadow root that is hosted by the element.</dd>
- <dt>{{domxref("Element.slot")}} {{experimental_inline}}</dt>
- <dd>Returns the name of the shadow DOM slot attatched to the element. A slot is a placeholder inside a web component that users can fill with their own markup.</dd>
- <dt>{{domxref("Element.tabStop")}} {{non-standard_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.</dd>
- <dt>{{ domxref("Element.tagName") }} {{readOnlyInline}}</dt>
- <dd>Returns a {{domxref("String")}} with the name of the tag for the given element.</dd>
- <dt>{{ domxref("Element.undoManager")}} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Returns the {{domxref("UndoManager")}} associated with the element.</dd>
- <dt>{{ domxref("Element.undoScope")}} {{experimental_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.</dd>
-</dl>
+- {{ domxref("Element.assignedSlot")}} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns the {{domxref("HTMLSlotElement")}} interface associated with the element.
+- {{ domxref("Element.attributes") }} {{readOnlyInline}}
+  - : Returns a {{ domxref("NamedNodeMap") }} object containing the assigned attributes of the corresponding HTML element.
+- {{ domxref("Element.classList") }} {{readOnlyInline}}
+  - : Returns a {{ domxref("DOMTokenList") }} containing the list of class attributes.
+- {{ domxref("Element.className") }}
+  - : Is a {{domxref("DOMString")}} representing the class of the element.
+- {{ domxref("Element.clientHeight") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the inner height of the element.
+- {{ domxref("Element.clientLeft") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the width of the left border of the element.
+- {{ domxref("Element.clientTop") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the width of the top border of the element.
+- {{ domxref("Element.clientWidth") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the inner width of the element.
+- {{domxref("Element.computedName")}} {{readOnlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the label exposed to accessibility.
+- {{domxref("Element.computedRole")}} {{readOnlyInline}}
+  - : Returns a {{domxref("DOMString")}} containing the ARIA role that has been applied to a particular element.
+- {{ domxref("Element.id") }}
+  - : Is a {{domxref("DOMString")}} representing the id of the element.
+- {{ domxref("Element.innerHTML") }}
+  - : Is a {{domxref("DOMString")}} representing the markup of the element's content.
+- {{ domxref("Element.localName") }} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} representing the local part of the qualified name of the element.
+- {{domxref("Element.namespaceURI")}} {{readonlyInline}}
+  - : The namespace URI of the element, or `null` if it is no namespace.
 
-<div class="note">
-<p><strong>Note:</strong> DOM Level 3 defined <code>namespaceURI</code>, <code>localName</code> and <code>prefix</code> on the {{domxref("Node")}} interface. In DOM4 they were moved to <code>Element</code>.</p>
+    > **備註：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
+- {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }} {{readOnlyInline}}
+  - : Is a {{ domxref("Element") }}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
+- {{ domxref("Element.outerHTML") }} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
+- {{ domxref("Element.prefix") }} {{readOnlyInline}}
+  - : A {{domxref("DOMString")}} representing the namespace prefix of the element, or `null` if no prefix is specified.
+- {{ domxref("NonDocumentTypeChildNode.previousElementSibling") }} {{readOnlyInline}}
+  - : Is a {{ domxref("Element") }}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
+- {{ domxref("Element.scrollHeight") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the scroll view height of an element.
+- {{ domxref("Element.scrollLeft") }} {{experimental_inline}}
+  - : Is a {{jsxref("Number")}} representing the left scroll offset of the element.
+- {{ domxref("Element.scrollLeftMax") }} {{non-standard_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the maximum left scroll offset possible for the element.
+- {{ domxref("Element.scrollTop") }} {{experimental_inline}}
+  - : Is a {{jsxref("Number")}} representing the top scroll offset the an element.
+- {{ domxref("Element.scrollTopMax") }} {{non-standard_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the maximum top scroll offset possible for the element.
+- {{ domxref("Element.scrollWidth") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns a {{jsxref("Number")}} representing the scroll view width of the element.
+- {{domxref("Element.shadowRoot") }} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns the youngest shadow root that is hosted by the element.
+- {{domxref("Element.slot")}} {{experimental_inline}}
+  - : Returns the name of the shadow DOM slot attatched to the element. A slot is a placeholder inside a web component that users can fill with their own markup.
+- {{domxref("Element.tabStop")}} {{non-standard_inline}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element can receive input focus via the tab key.
+- {{ domxref("Element.tagName") }} {{readOnlyInline}}
+  - : Returns a {{domxref("String")}} with the name of the tag for the given element.
+- {{ domxref("Element.undoManager")}} {{experimental_inline}} {{readOnlyInline}}
+  - : Returns the {{domxref("UndoManager")}} associated with the element.
+- {{ domxref("Element.undoScope")}} {{experimental_inline}}
+  - : Is a {{jsxref("Boolean")}} indicating if the element is an undo scope host, or not.
 
-<p>This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.</p>
-</div>
+> **備註：** DOM Level 3 defined `namespaceURI`, `localName` and `prefix` on the {{domxref("Node")}} interface. In DOM4 they were moved to `Element`.This change is implemented in Chrome since version 46.0 and Firefox since version 48.0.
 
-<h3 id="Handlers">事件處理器</h3>
+### 事件處理器
 
-<dl>
- <dt>{{ domxref("Element.ongotpointercapture") }}</dt>
- <dd>Returns the event handler for the {{event("gotpointercapture")}} event type.</dd>
- <dt>{{ domxref("Element.onlostpointercapture") }}</dt>
- <dd>Returns the event handler for the {{event("lostpointercapture")}} event type.</dd>
- <dt>{{ domxref("Element.onwheel") }} {{ non-standard_inline() }}</dt>
- <dd>Returns the event handling code for the <code>wheel</code> event.</dd>
-</dl>
+- {{ domxref("Element.ongotpointercapture") }}
+  - : Returns the event handler for the {{event("gotpointercapture")}} event type.
+- {{ domxref("Element.onlostpointercapture") }}
+  - : Returns the event handler for the {{event("lostpointercapture")}} event type.
+- {{ domxref("Element.onwheel") }} {{ non-standard_inline() }}
+  - : Returns the event handling code for the `wheel` event.
 
-<h2 id="Methods">方法</h2>
+## 方法
 
-<p><em>Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{domxref("EventTarget")}}<em>, and implements those of {{domxref("ParentNode")}}, {{domxref("ChildNode")}}<em>, {{domxref("NonDocumentTypeChildNode")}}, </em></em>and {{domxref("Animatable")}}.</em></p>
+_Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{domxref("EventTarget")}}_, and implements those of {{domxref("ParentNode")}}, {{domxref("ChildNode")}}_, {{domxref("NonDocumentTypeChildNode")}},_ _and {{domxref("Animatable")}}._
 
-<dl>
- <dt>{{ domxref("EventTarget.addEventListener()") }}</dt>
- <dd>Registers an event handler to a specific event type on the element.</dd>
- <dt>{{domxref("Element.attachShadow()")}} {{experimental_inline}}</dt>
- <dd>Attatches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.</dd>
- <dt>{{domxref("Element.animate()")}} {{experimental_inline}}</dt>
- <dd>A shortcut method to create and run an animation on an element. Returns the created Animation object instance.</dd>
- <dt>{{ domxref("Element.closest()")}} {{experimental_inline}}</dt>
- <dd>Returns the {{domxref("Element")}}, descendant of this element (or this element itself), that is the closest ancestor of the elements selected by the selectors given in parameter.</dd>
- <dt>{{ domxref("Element.createShadowRoot()")}} {{experimental_inline}} {{deprecated_inline()}}</dt>
- <dd>Creates a <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> on on the element, turning it into a shadow host. Returns a {{domxref("ShadowRoot")}}.</dd>
- <dt>{{ domxref("EventTarget.dispatchEvent()") }}</dt>
- <dd>Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates that at least one handler has not canceled it.</dd>
- <dt>{{domxref("Element.find()")}}{{experimental_inline}}</dt>
- <dd>...</dd>
- <dt>{{domxref("Element.findAll()")}}{{experimental_inline}}</dt>
- <dd>...</dd>
- <dt>{{domxref("Element.getAnimations()")}} {{experimental_inline}}</dt>
- <dd>Returns an array of Animation objects currently active on the element.</dd>
- <dt>{{ domxref("Element.getAttribute()") }}</dt>
- <dd>Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.</dd>
- <dt>{{ domxref("Element.getAttributeNames()") }}</dt>
- <dd>TBD</dd>
- <dt>{{ domxref("Element.getAttributeNS()") }}</dt>
- <dd>Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.</dd>
- <dt>{{ domxref("Element.getAttributeNode()") }} {{Deprecated_Inline}}</dt>
- <dd>Retrieves the node representation of the named attribute from the current node and returns it as an {{ domxref("Attr") }}.</dd>
- <dt>{{ domxref("Element.getAttributeNodeNS()") }} {{Deprecated_Inline}}</dt>
- <dd>Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{ domxref("Attr") }}.</dd>
- <dt>{{ domxref("Element.getBoundingClientRect()") }}</dt>
- <dd>...</dd>
- <dt>{{ domxref("Element.getClientRects()") }}</dt>
- <dd>Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.</dd>
- <dt>{{domxref("Element.getDestinationInsertionPoints()")}} {{experimental_inline}}</dt>
- <dd>…</dd>
- <dt>{{ domxref("Element.getElementsByClassName()") }}</dt>
- <dd>Returns a live {{ domxref("HTMLCollection") }} that contains all descendants of the current element that possess the list of classes given in the parameter.</dd>
- <dt>{{ domxref("Element.getElementsByTagName()") }}</dt>
- <dd>Returns a live {{ domxref("HTMLCollection") }} containing all descendant elements, of a particular tag name, from the current element.</dd>
- <dt>{{ domxref("Element.getElementsByTagNameNS()") }}</dt>
- <dd>Returns a live {{ domxref("HTMLCollection") }} containing all descendant elements, of a particular tag name and namespace, from the current element.</dd>
- <dt>{{ domxref("Element.hasAttribute()") }}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.</dd>
- <dt>{{ domxref("Element.hasAttributeNS()") }}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.</dd>
- <dt>{{ domxref("Element.hasAttributes()") }}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.</dd>
- <dt>{{ domxref("Element.insertAdjacentElement") }} {{experimental_inline}}</dt>
- <dd>Inserts a given element node at a given position relative to the element it is invoked upon.</dd>
- <dt>{{ domxref("Element.insertAdjacentHTML") }} {{experimental_inline}}</dt>
- <dd>Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.</dd>
- <dt>{{ domxref("Element.insertAdjacentText") }} {{experimental_inline}}</dt>
- <dd>Inserts a given text node at a given position relative to the element it is invoked upon.</dd>
- <dt>{{ domxref("Element.matches()") }}<code> </code>{{experimental_inline}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.</dd>
- <dt>{{ domxref("Element.querySelector()") }}</dt>
- <dd>Returns the first {{ domxref("Node") }} which matches the specified selector string relative to the element.</dd>
- <dt>{{ domxref("Element.querySelectorAll") }}</dt>
- <dd>Returns a {{ domxref("NodeList") }} of nodes which match the specified selector string relative to the element.</dd>
- <dt>{{ domxref("Element.releasePointerCapture")}}</dt>
- <dd>Releases (stops) pointer capture that was previously set for a specific {{domxref("PointerEvent","pointer event")}}.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Removes the element from the children list of its parent.</dd>
- <dt>{{ domxref("Element.removeAttribute()") }}</dt>
- <dd>Removes the named attribute from the current node.</dd>
- <dt>{{ domxref("Element.removeAttributeNS()") }}</dt>
- <dd>Removes the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{ domxref("Element.removeAttributeNode()") }} {{Deprecated_Inline}}</dt>
- <dd>Removes the node representation of the named attribute from the current node.</dd>
- <dt>{{ domxref("EventTarget.removeEventListener()") }}</dt>
- <dd>Removes an event listener from the element.</dd>
- <dt>{{ domxref("Element.requestFullscreen()") }} {{experimental_inline}}</dt>
- <dd>Asynchronously asks the browser to make the element full-screen.</dd>
- <dt>{{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}</dt>
- <dd>Allows to asynchronously ask for the pointer to be locked on the given element.</dd>
-</dl>
+- {{ domxref("EventTarget.addEventListener()") }}
+  - : Registers an event handler to a specific event type on the element.
+- {{domxref("Element.attachShadow()")}} {{experimental_inline}}
+  - : Attatches a shadow DOM tree to the specified element and returns a reference to its {{domxref("ShadowRoot")}}.
+- {{domxref("Element.animate()")}} {{experimental_inline}}
+  - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
+- {{ domxref("Element.closest()")}} {{experimental_inline}}
+  - : Returns the {{domxref("Element")}}, descendant of this element (or this element itself), that is the closest ancestor of the elements selected by the selectors given in parameter.
+- {{ domxref("Element.createShadowRoot()")}} {{experimental_inline}} {{deprecated_inline()}}
+  - : Creates a [shadow DOM](/zh-TW/docs/Web/Web_Components/Shadow_DOM) on on the element, turning it into a shadow host. Returns a {{domxref("ShadowRoot")}}.
+- {{ domxref("EventTarget.dispatchEvent()") }}
+  - : Dispatches an event to this node in the DOM and returns a {{jsxref("Boolean")}} that indicates that at least one handler has not canceled it.
+- {{domxref("Element.find()")}}{{experimental_inline}}
+  - : ...
+- {{domxref("Element.findAll()")}}{{experimental_inline}}
+  - : ...
+- {{domxref("Element.getAnimations()")}} {{experimental_inline}}
+  - : Returns an array of Animation objects currently active on the element.
+- {{ domxref("Element.getAttribute()") }}
+  - : Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.
+- {{ domxref("Element.getAttributeNames()") }}
+  - : TBD
+- {{ domxref("Element.getAttributeNS()") }}
+  - : Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.
+- {{ domxref("Element.getAttributeNode()") }} {{Deprecated_Inline}}
+  - : Retrieves the node representation of the named attribute from the current node and returns it as an {{ domxref("Attr") }}.
+- {{ domxref("Element.getAttributeNodeNS()") }} {{Deprecated_Inline}}
+  - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{ domxref("Attr") }}.
+- {{ domxref("Element.getBoundingClientRect()") }}
+  - : ...
+- {{ domxref("Element.getClientRects()") }}
+  - : Returns a collection of rectangles that indicate the bounding rectangles for each line of text in a client.
+- {{domxref("Element.getDestinationInsertionPoints()")}} {{experimental_inline}}
+  - : …
+- {{ domxref("Element.getElementsByClassName()") }}
+  - : Returns a live {{ domxref("HTMLCollection") }} that contains all descendants of the current element that possess the list of classes given in the parameter.
+- {{ domxref("Element.getElementsByTagName()") }}
+  - : Returns a live {{ domxref("HTMLCollection") }} containing all descendant elements, of a particular tag name, from the current element.
+- {{ domxref("Element.getElementsByTagNameNS()") }}
+  - : Returns a live {{ domxref("HTMLCollection") }} containing all descendant elements, of a particular tag name and namespace, from the current element.
+- {{ domxref("Element.hasAttribute()") }}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute or not.
+- {{ domxref("Element.hasAttributeNS()") }}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has the specified attribute, in the specified namespace, or not.
+- {{ domxref("Element.hasAttributes()") }}
+  - : Returns a {{jsxref("Boolean")}} indicating if the element has one or more HTML attributes present.
+- {{ domxref("Element.insertAdjacentElement") }} {{experimental_inline}}
+  - : Inserts a given element node at a given position relative to the element it is invoked upon.
+- {{ domxref("Element.insertAdjacentHTML") }} {{experimental_inline}}
+  - : Parses the text as HTML or XML and inserts the resulting nodes into the tree in the position given.
+- {{ domxref("Element.insertAdjacentText") }} {{experimental_inline}}
+  - : Inserts a given text node at a given position relative to the element it is invoked upon.
+- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
+  - : Returns a {{jsxref("Boolean")}} indicating whether or not the element would be selected by the specified selector string.
+- {{ domxref("Element.querySelector()") }}
+  - : Returns the first {{ domxref("Node") }} which matches the specified selector string relative to the element.
+- {{ domxref("Element.querySelectorAll") }}
+  - : Returns a {{ domxref("NodeList") }} of nodes which match the specified selector string relative to the element.
+- {{ domxref("Element.releasePointerCapture")}}
+  - : Releases (stops) pointer capture that was previously set for a specific {{domxref("PointerEvent","pointer event")}}.
+- {{domxref("ChildNode.remove()")}} {{experimental_inline}}
+  - : Removes the element from the children list of its parent.
+- {{ domxref("Element.removeAttribute()") }}
+  - : Removes the named attribute from the current node.
+- {{ domxref("Element.removeAttributeNS()") }}
+  - : Removes the attribute with the specified name and namespace, from the current node.
+- {{ domxref("Element.removeAttributeNode()") }} {{Deprecated_Inline}}
+  - : Removes the node representation of the named attribute from the current node.
+- {{ domxref("EventTarget.removeEventListener()") }}
+  - : Removes an event listener from the element.
+- {{ domxref("Element.requestFullscreen()") }} {{experimental_inline}}
+  - : Asynchronously asks the browser to make the element full-screen.
+- {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
+  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+- {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
+  - : Scrolls the page until the element gets into the view.
+- {{ domxref("Element.setAttribute()") }}
+  - : Sets the value of a named attribute of the current node.
+- {{ domxref("Element.setAttributeNS()") }}
+  - : Sets the value of the attribute with the specified name and namespace, from the current node.
+- {{ domxref("Element.setAttributeNode()") }} {{Deprecated_Inline}}
+  - : Sets the node representation of the named attribute from the current node.
+- {{ domxref("Element.setAttributeNodeNS()") }} {{Deprecated_Inline}}
+  - : Setw the node representation of the attribute with the specified name and namespace, from the current node.
+- {{ domxref("Element.setCapture()") }} {{non-standard_inline}}
+  - : Sets up mouse event capture, redirecting all mouse events to this element.
+- {{domxref("Element.setPointerCapture()")}}
+  - : Designates a specific element as the capture target of future {{domxref("PointerEvent","pointer events")}}.
 
-<dl>
- <dt>{{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}</dt>
- <dd>Scrolls the page until the element gets into the view.</dd>
- <dt>{{ domxref("Element.setAttribute()") }}</dt>
- <dd>Sets the value of a named attribute of the current node.</dd>
- <dt>{{ domxref("Element.setAttributeNS()") }}</dt>
- <dd>Sets the value of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{ domxref("Element.setAttributeNode()") }} {{Deprecated_Inline}}</dt>
- <dd>Sets the node representation of the named attribute from the current node.</dd>
- <dt>{{ domxref("Element.setAttributeNodeNS()") }} {{Deprecated_Inline}}</dt>
- <dd>Setw the node representation of the attribute with the specified name and namespace, from the current node.</dd>
- <dt>{{ domxref("Element.setCapture()") }} {{non-standard_inline}}</dt>
- <dd>Sets up mouse event capture, redirecting all mouse events to this element.</dd>
- <dt>{{domxref("Element.setPointerCapture()")}}</dt>
- <dd>Designates a specific element as the capture target of future {{domxref("PointerEvent","pointer events")}}.</dd>
-</dl>
-
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat("api.Element")}}

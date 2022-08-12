@@ -9,59 +9,54 @@ tags:
   - request
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}</p>
+{{DefaultAPISidebar("Fetch API")}}
 
-<div>
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。</p>
-</div>
+[Fetch API](/zh-TW/docs/Web/API/Fetch_API) 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。
 
-<p>同樣的功能，以前都是使用 {{domxref("XMLHttpRequest")}}，而 Fetch 作為其替代方案，能更方便地整合在如 {{domxref("ServiceWorker_API", "Service Workers")}} 等相關技術上。此外，Fetch 具備額外的 logical palce，能拿來定義其他和 HTTP 有關的東西，像是 CORS 和 HTTP extensions。</p>
+同樣的功能，以前都是使用 {{domxref("XMLHttpRequest")}}，而 Fetch 作為其替代方案，能更方便地整合在如 {{domxref("ServiceWorker_API", "Service Workers")}} 等相關技術上。此外，Fetch 具備額外的 logical palce，能拿來定義其他和 HTTP 有關的東西，像是 CORS 和 HTTP extensions。
 
-<p> <code>fetch</code> 和 <code>jQuery.ajax()</code> 有三個主要的差異:</p>
+`fetch` 和 `jQuery.ajax()` 有三個主要的差異:
 
-<ul>
- <li><code>fetch()</code> 回傳的 promise <strong>不會 reject HTTP 的 error status</strong>，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 <code>ok</code> status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。</li>
- <li><code>fetch</code> <strong>可以接收跨站的 cookies</strong>，你可以用 Fetch 來建立跨站的 session。</li>
- <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="/zh-TW/docs/Web/API/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
-</ul>
+- `fetch()` 回傳的 promise **不會 reject HTTP 的 error status**，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 `ok` status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。
+- `fetch` **可以接收跨站的 cookies**，你可以用 Fetch 來建立跨站的 session。
+- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/fetch#Parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
 
-<h2 id="使用_Fetch_發送請求_request">使用 Fetch 發送請求 ( request )</h2>
+## 使用 Fetch 發送請求 ( request )
 
-<p>用法簡單，如下:</p>
+用法簡單，如下:
 
-<pre class="brush: js notranslate">fetch('http://example.com/movies.json')
+```js
+fetch('http://example.com/movies.json')
   .then(function(response) {
     return response.json();
   })
   .then(function(myJson) {
     console.log(myJson);
   });
+```
 
-</pre>
+這裡要使用 fetch 透過網路取得 json 然後印出在 console，最簡單的方式只需要一個參數就是資料的 URI，fetch 會回傳一個包含 response 的 promise 。
 
-<p>這裡要使用 fetch 透過網路取得 json 然後印出在 console，最簡單的方式只需要一個參數就是資料的 URI，fetch 會回傳一個包含 response 的 promise 。</p>
+這個範例使用的 url 只是示意用。
 
-<p>這個範例使用的 url 只是示意用。</p>
+回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)
 
-<p>回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)</p>
+> **備註：** 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
 
-<div class="note">
-<p><strong>備註</strong>: 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見<a href="#body">Body</a> </p>
-</div>
+Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_policy_directives)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
 
-<p>Fetch 請求的安全性 <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a>(內容安全策略) 是由 header 中的 <code>connect-src</code> directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。</p>
+### Request 可用的設定值
 
-<h3 id="Request_可用的設定值">Request 可用的設定值</h3>
+`fetch()` 第二個參數是選用的，可以傳送一個 `init` Object 來設定 request。
 
-<p><code>fetch()</code> 第二個參數是選用的，可以傳送一個 <code>init</code> Object 來設定 request。</p>
+更多可以用的設定值詳見 {{domxref("GlobalFetch.fetch","fetch()")}}
 
-<p>更多可以用的設定值詳見 {{domxref("GlobalFetch.fetch","fetch()")}} </p>
-
-<pre class="brush: js notranslate">// 來發個 POST Request:
+```js
+// 來發個 POST Request:
 
 postData('http://example.com/answer', {answer: 42})
-  .then(data =&gt; console.log(data)) // JSON from `response.json()` call
-  .catch(error =&gt; console.error(error))
+  .then(data => console.log(data)) // JSON from `response.json()` call
+  .catch(error => console.error(error))
 
 function postData(url, data) {
   // Default options are marked with *
@@ -78,37 +73,44 @@ function postData(url, data) {
     redirect: 'follow', // manual, *follow, error
     referrer: 'no-referrer', // *client, no-referrer
   })
-  .then(response =&gt; response.json()) // 輸出成 json
+  .then(response => response.json()) // 輸出成 json
 }
-</pre>
+```
 
-<h3 id="包含憑證Credentials_的_Request_用法">包含憑證(Credentials) 的 Request 用法</h3>
+### 包含憑證(Credentials) 的 Request 用法
 
-<p>要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 <code>init</code> object 加上 <code>credentials: 'include'</code> </p>
+要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 `init` object 加上 `credentials: 'include'`
 
-<pre class="brush: js notranslate">fetch('https://example.com', {
+```js
+fetch('https://example.com', {
   credentials: 'include'
-})</pre>
+})
+```
 
-<p>如果只想要把 credentials 發送給同源的 URL ，加上<code>credentials: 'same-origin'</code>。</p>
+如果只想要把 credentials 發送給同源的 URL ，加上`credentials: 'same-origin'`。
 
-<pre class="brush: js notranslate">// The calling script is on the origin 'https://example.com'
+```js
+// The calling script is on the origin 'https://example.com'
 
 fetch('https://example.com', {
   credentials: 'same-origin'
-})</pre>
+})
+```
 
-<p>或要確保瀏覽器不會帶著 credentials 請求，可以用 <code>credentials: 'omit'</code> 。</p>
+或要確保瀏覽器不會帶著 credentials 請求，可以用 `credentials: 'omit'` 。
 
-<pre class="brush: js notranslate">fetch('https://example.com', {
+```js
+fetch('https://example.com', {
   credentials: 'omit'
-})</pre>
+})
+```
 
-<h3 id="上傳JSON資料">上傳JSON資料</h3>
+### 上傳 JSON 資料
 
-<p>使用 {{domxref("GlobalFetch.fetch","fetch()")}} 來 POST JSON 格式的資料。</p>
+使用 {{domxref("GlobalFetch.fetch","fetch()")}} 來 POST JSON 格式的資料。
 
-<pre class="brush: js notranslate">var url = 'https://example.com/profile';
+```js
+var url = 'https://example.com/profile';
 var data = {username: 'example'};
 
 fetch(url, {
@@ -117,16 +119,17 @@ fetch(url, {
   headers: new Headers({
     'Content-Type': 'application/json'
   })
-}).then(res =&gt; res.json())
-.catch(error =&gt; console.error('Error:', error))
-.then(response =&gt; console.log('Success:', response));
-</pre>
+}).then(res => res.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
+```
 
-<h3 id="上傳檔案">上傳檔案</h3>
+### 上傳檔案
 
-<p>上傳檔案可以透過使用HTML <code>&lt;input type="file" /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} 與{{domxref("GlobalFetch.fetch","fetch()")}}.</p>
+上傳檔案可以透過使用 HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} 與{{domxref("GlobalFetch.fetch","fetch()")}}.
 
-<pre class="brush: js notranslate">var formData = new FormData();
+```js
+var formData = new FormData();
 var fileField = document.querySelector("input[type='file']");
 
 formData.append('username', 'abc123');
@@ -136,18 +139,19 @@ fetch('https://example.com/profile/avatar', {
   method: 'PUT',
   body: formData
 })
-.then(response =&gt; response.json())
-.catch(error =&gt; console.error('Error:', error))
-.then(response =&gt; console.log('Success:', response));
-</pre>
+.then(response => response.json())
+.catch(error => console.error('Error:', error))
+.then(response => console.log('Success:', response));
+```
 
-<h3 id="如何確認fetch是否成功">如何確認fetch是否成功</h3>
+### 如何確認 fetch 是否成功
 
-<p>當{{domxref("GlobalFetch.fetch","fetch()")}}遇到CORS或server設定錯誤導致network error時,  promise會reject並附上{{jsxref("TypeError")}}的回應, 但在權限或類似問題導致404的常見狀況下, 卻不會導致network error.</p>
+當{{domxref("GlobalFetch.fetch","fetch()")}}遇到 CORS 或 server 設定錯誤導致 network error 時, promise 會 reject 並附上{{jsxref("TypeError")}}的回應, 但在權限或類似問題導致 404 的常見狀況下, 卻不會導致 network error.
 
-<p>因此, 確認<code>fetch()</code>是否成功的正確方式, 應包含檢查promise resolved, 以及檢查{{domxref("Response.ok")}}的屬性是否為true. 代碼如下例：</p>
+因此, 確認`fetch()`是否成功的正確方式, 應包含檢查 promise resolved, 以及檢查{{domxref("Response.ok")}}的屬性是否為 true. 代碼如下例：
 
-<pre class="brush: js notranslate">fetch('flowers.jpg').then(function(response) {
+```js
+fetch('flowers.jpg').then(function(response) {
   if(response.ok) {
     return response.blob();
   }
@@ -157,13 +161,15 @@ fetch('https://example.com/profile/avatar', {
   myImage.src = objectURL;
 }).catch(function(error) {
   console.log('There has been a problem with your fetch operation: ', error.message);
-});</pre>
+});
+```
 
-<h3 id="Supplying_your_own_request_object">Supplying your own request object</h3>
+### Supplying your own request object
 
-<p>Instead of passing a path to the resource you want to request into the <code>fetch()</code> call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a <code>fetch()</code> method argument:</p>
+Instead of passing a path to the resource you want to request into the `fetch()` call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a `fetch()` method argument:
 
-<pre class="brush: js notranslate">var myHeaders = new Headers();
+```js
+var myHeaders = new Headers();
 
 var myInit = { method: 'GET',
                headers: myHeaders,
@@ -177,39 +183,45 @@ fetch(myRequest).then(function(response) {
 }).then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
   myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p><code>Request()</code> accepts exactly the same parameters as the <code>fetch()</code> method. You can even pass in an existing request object to create a copy of it:</p>
+`Request()` accepts exactly the same parameters as the `fetch()` method. You can even pass in an existing request object to create a copy of it:
 
-<pre class="brush: js notranslate">var anotherRequest = new Request(myRequest, myInit);</pre>
+```js
+var anotherRequest = new Request(myRequest, myInit);
+```
 
-<p>This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the <code>init</code> options if desired.  The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.</p>
+This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the `init` options if desired. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
 
-<div class="note">
-<p><strong>Note</strong>: There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
-</div>
+> **備註：** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
 
-<h2 id="Headers">Headers</h2>
+## Headers
 
-<p>The {{domxref("Headers")}} interface allows you to create your own headers object via the {{domxref("Headers.Headers","Headers()")}} constructor. A headers object is a simple multi-map of names to values:</p>
+The {{domxref("Headers")}} interface allows you to create your own headers object via the {{domxref("Headers.Headers","Headers()")}} constructor. A headers object is a simple multi-map of names to values:
 
-<pre class="brush: js notranslate">var content = "Hello World";
+```js
+var content = "Hello World";
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "text/plain");
 myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");</pre>
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
+```
 
-<p>The same can be achieved by passing an array of arrays or an object literal to the constructor:</p>
+The same can be achieved by passing an array of arrays or an object literal to the constructor:
 
-<pre class="brush: js notranslate">myHeaders = new Headers({
+```js
+myHeaders = new Headers({
   "Content-Type": "text/plain",
   "Content-Length": content.length.toString(),
   "X-Custom-Header": "ProcessThisImmediately",
-});</pre>
+});
+```
 
-<p>The contents can be queried and retrieved:</p>
+The contents can be queried and retrieved:
 
-<pre class="brush: js notranslate">console.log(myHeaders.has("Content-Type")); // true
+```js
+console.log(myHeaders.has("Content-Type")); // true
 console.log(myHeaders.has("Set-Cookie")); // false
 myHeaders.set("Content-Type", "text/html");
 myHeaders.append("X-Custom-Header", "AnotherValue");
@@ -218,64 +230,64 @@ console.log(myHeaders.get("Content-Length")); // 11
 console.log(myHeaders.get("X-Custom-Header")); // ["ProcessThisImmediately", "AnotherValue"]
 
 myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
+console.log(myHeaders.get("X-Custom-Header")); // [ ]
+```
 
-<p>Some of these operations are only useful in {{domxref("ServiceWorker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.</p>
+Some of these operations are only useful in {{domxref("ServiceWorker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.
 
-<p>All of the Headers methods throw a <code>TypeError</code> if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a <code>TypeError</code> if there is an immutable guard (see below). Otherwise they fail silently. For example:</p>
+All of the Headers methods throw a `TypeError` if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a `TypeError` if there is an immutable guard (see below). Otherwise they fail silently. For example:
 
-<pre class="brush: js notranslate">var myResponse = Response.error();
+```js
+var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
 } catch(e) {
   console.log("Cannot pretend to be a bank!");
-}</pre>
+}
+```
 
-<p>A good use case for headers is checking whether the content type is correct before you process it further. For example:</p>
+A good use case for headers is checking whether the content type is correct before you process it further. For example:
 
-<pre class="brush: js notranslate">fetch(myRequest).then(function(response) {
+```js
+fetch(myRequest).then(function(response) {
     var contentType = response.headers.get("content-type");
-    if(contentType &amp;&amp; contentType.includes("application/json")) {
+    if(contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
   .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); });</pre>
+  .catch(function(error) { console.log(error); });
+```
 
-<h3 id="Guard">Guard</h3>
+### Guard
 
-<p>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.</p>
+Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.
 
-<p>Possible guard values are:</p>
+Possible guard values are:
 
-<ul>
- <li><code>none</code>: default.</li>
- <li><code>request</code>: guard for a headers object obtained from a request ({{domxref("Request.headers")}}).</li>
- <li><code>request-no-cors</code>: guard for a headers object obtained from a request created with {{domxref("Request.mode")}} <code>no-cors</code>.</li>
- <li><code>response</code>: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).</li>
- <li><code>immutable</code>: Mostly used for ServiceWorkers; renders a headers object read-only.</li>
-</ul>
+- `none`: default.
+- `request`: guard for a headers object obtained from a request ({{domxref("Request.headers")}}).
+- `request-no-cors`: guard for a headers object obtained from a request created with {{domxref("Request.mode")}} `no-cors`.
+- `response`: guard for a Headers obtained from a response ({{domxref("Response.headers")}}).
+- `immutable`: Mostly used for ServiceWorkers; renders a headers object read-only.
 
-<div class="note">
-<p><strong>Note</strong>: You may not append or set a <code>request</code> guarded Headers’ <code>Content-Length</code> header. Similarly, inserting <code>Set-Cookie</code> into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.</p>
-</div>
+> **備註：** You may not append or set a `request` guarded Headers’ `Content-Length` header. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
 
-<h2 id="Response_objects">Response objects</h2>
+## Response objects
 
-<p>As you have seen above, {{domxref("Response")}} instances are returned when <code>fetch()</code> promises are resolved.</p>
+As you have seen above, {{domxref("Response")}} instances are returned when `fetch()` promises are resolved.
 
-<p>The most common response properties you'll use are:</p>
+The most common response properties you'll use are:
 
-<ul>
- <li>{{domxref("Response.status")}} — An integer (default value 200) containing the response status code.</li>
- <li>{{domxref("Response.statusText")}} — A string (default value "OK"), which corresponds to the HTTP status code message.</li>
- <li>{{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.</li>
-</ul>
+- {{domxref("Response.status")}} — An integer (default value 200) containing the response status code.
+- {{domxref("Response.statusText")}} — A string (default value "OK"), which corresponds to the HTTP status code message.
+- {{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a {{domxref("Boolean")}}.
 
-<p>They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("ServiceWorker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:</p>
+They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("ServiceWorker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:
 
-<pre class="brush: js notranslate">var myBody = new Blob();
+```js
+var myBody = new Blob();
 
 addEventListener('fetch', function(event) { // ServiceWorker intercepting a fetch
   event.respondWith(
@@ -283,80 +295,74 @@ addEventListener('fetch', function(event) { // ServiceWorker intercepting a fetc
       headers: { "Content-Type" : "text/plain" }
     })
   );
-});</pre>
+});
+```
 
-<p>The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)</p>
+The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)
 
-<ul>
-</ul>
+> **備註：** The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
 
-<div class="note">
-<p><strong>Note</strong>: The static method {{domxref("Response.error","error()")}} simply returns an error response. Similarly, {{domxref("Response.redirect","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.</p>
-</div>
+## Body
 
-<h2 id="Body">Body</h2>
+Both requests and responses may contain body data. A body is an instance of any of the following types:
 
-<p>Both requests and responses may contain body data. A body is an instance of any of the following types:</p>
+- {{domxref("ArrayBuffer")}}
+- {{domxref("ArrayBufferView")}} (Uint8Array and friends)
+- {{domxref("Blob")}}/File
+- string
+- {{domxref("URLSearchParams")}}
+- {{domxref("FormData")}}
 
-<ul>
- <li>{{domxref("ArrayBuffer")}}</li>
- <li>{{domxref("ArrayBufferView")}} (Uint8Array and friends)</li>
- <li>{{domxref("Blob")}}/File</li>
- <li>string</li>
- <li>{{domxref("URLSearchParams")}}</li>
- <li>{{domxref("FormData")}}</li>
-</ul>
+The {{domxref("Body")}} mixin defines the following methods to extract a body (implemented by both {{domxref("Request")}} and {{domxref("Response")}}). These all return a promise that is eventually resolved with the actual content.
 
-<p>The {{domxref("Body")}} mixin defines the following methods to extract a body (implemented by both {{domxref("Request")}} and {{domxref("Response")}}). These all return a promise that is eventually resolved with the actual content.</p>
+- {{domxref("Body.arrayBuffer","arrayBuffer()")}}
+- {{domxref("Body.blob","blob()")}}
+- {{domxref("Body.json","json()")}}
+- {{domxref("Body.text","text()")}}
+- {{domxref("Body.formData","formData()")}}
 
-<ul>
- <li>{{domxref("Body.arrayBuffer","arrayBuffer()")}}</li>
- <li>{{domxref("Body.blob","blob()")}}</li>
- <li>{{domxref("Body.json","json()")}}</li>
- <li>{{domxref("Body.text","text()")}}</li>
- <li>{{domxref("Body.formData","formData()")}}</li>
-</ul>
+This makes usage of non-textual data much easier than it was with XHR.
 
-<p>This makes usage of non-textual data much easier than it was with XHR.</p>
+Request bodies can be set by passing body parameters:
 
-<p>Request bodies can be set by passing body parameters:</p>
-
-<pre class="brush: js notranslate">var form = new FormData(document.getElementById('login-form'));
+```js
+var form = new FormData(document.getElementById('login-form'));
 fetch("/login", {
   method: "POST",
   body: form
-});</pre>
+});
+```
 
-<p>Both request and response (and by extension the <code>fetch()</code> function), will try to intelligently determine the content type. A request will also automatically set a <code>Content-Type</code> header if none is set in the dictionary.</p>
+Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the dictionary.
 
-<h2 id="特性偵測">特性偵測</h2>
+## 特性偵測
 
-<p>想確認是否支持 Fetch API，可透過檢查 {{domxref("Headers")}}、{{domxref("Request")}}、{{domxref("Response")}} 或 {{domxref("GlobalFetch.fetch","fetch()")}} 是否存在 {{domxref("Window")}} 或 {{domxref("Worker")}} 域中。例如：</p>
+想確認是否支持 Fetch API，可透過檢查 {{domxref("Headers")}}、{{domxref("Request")}}、{{domxref("Response")}} 或 {{domxref("GlobalFetch.fetch","fetch()")}} 是否存在 {{domxref("Window")}} 或 {{domxref("Worker")}} 域中。例如：
 
-<pre class="brush: js notranslate">if (self.fetch) {
+```js
+if (self.fetch) {
     // run my fetch request here
 } else {
     // do something with XMLHttpRequest?
-}</pre>
+}
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>在不支援 Fetch 的瀏覽器, 可改用 <a href="https://github.com/github/fetch">Fetch Polyfill</a> 來重新支持缺少的 fetch 功能。</p>
+在不支援 Fetch 的瀏覽器, 可改用 [Fetch Polyfill](https://github.com/github/fetch) 來重新支持缺少的 fetch 功能。
 
-<h2 id="技術指標">技術指標</h2>
+## 技術指標
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
- <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>
- <li><a href="https://github.com/mdn/fetch-examples/">Fetch examples on Github</a></li>
-</ul>
+- [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-TW/docs/Web/HTTP)
+- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

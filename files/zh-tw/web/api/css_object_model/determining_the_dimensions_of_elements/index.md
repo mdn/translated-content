@@ -3,31 +3,29 @@ title: Determining the dimensions of elements
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
-<p>{{APIRef("CSSOM View")}}</p>
+{{APIRef("CSSOM View")}}
 
-<p>There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision.  Note that all these properties are read-only.  If you want to set the width and height of an element, use  <code style="font-style: normal; line-height: 1.5;"><a href="/en-US/docs/Web/CSS/width">width</a> </code>and<code style="font-style: normal; line-height: 1.5;"> </code><code><a href="/en-US/docs/Web/CSS/height">height</a>;</code> or, the overriding <a href="/en-US/docs/Web/CSS/min-width"><code>min-width</code></a> and <a href="/en-US/docs/Web/CSS/max-width"><code>max-width</code></a>, and <a href="/en-US/docs/Web/CSS/min-height"><code>min-height</code></a> and <a href="/en-US/docs/Web/CSS/max-height"><code>max-height</code></a> properties.</p>
+There are several properties you can look at in order to determine the width and height of elements, and it can be tricky to determine which is the right one for your needs. This article is designed to help you make that decision. Note that all these properties are read-only. If you want to set the width and height of an element, use `width `and` ``height;` or, the overriding [`min-width`](/zh-TW/docs/Web/CSS/min-width) and [`max-width`](/zh-TW/docs/Web/CSS/max-width), and [`min-height`](/zh-TW/docs/Web/CSS/min-height) and [`max-height`](/zh-TW/docs/Web/CSS/max-height) properties.
 
-<h2 id="How_much_room_does_it_use_up.3F">How much room does it use up?</h2>
+## How much room does it use up?
 
-<p>If you need to know the total amount of space an element occupies, including the width of the visible content, scrollbars (if any), padding, and border, you want to use the <code><a href="/en/DOM/element.offsetWidth">offsetWidth</a></code> and <code><a href="/en/DOM/element.offsetHeight">offsetHeight</a></code> properties. Most of the time these are the same as width and height of <code><a href="/en/DOM/element.getBoundingClientRect">getBoundingClientRect()</a></code>, when there aren't any transforms applied to the element. In case of transforms, the <code>offsetWidth</code> and <code>offsetHeight</code> returns the element's layout width and height, while <code>getBoundingClientRect()</code> returns the rendering width and height. As an example, if the element has <code>width: 100px;</code> and <code>transform: scale(0.5);</code> the <code>getBoundingClientRect()</code> will return 50 as the width, while <code>offsetWidth</code> will return 100.</p>
+If you need to know the total amount of space an element occupies, including the width of the visible content, scrollbars (if any), padding, and border, you want to use the [`offsetWidth`](/en/DOM/element.offsetWidth) and [`offsetHeight`](/en/DOM/element.offsetHeight) properties. Most of the time these are the same as width and height of [`getBoundingClientRect()`](/en/DOM/element.getBoundingClientRect), when there aren't any transforms applied to the element. In case of transforms, the `offsetWidth` and `offsetHeight` returns the element's layout width and height, while `getBoundingClientRect()` returns the rendering width and height. As an example, if the element has `width: 100px;` and `transform: scale(0.5);` the `getBoundingClientRect()` will return 50 as the width, while `offsetWidth` will return 100.
 
-<p><img alt="Image:Dimensions-offset.png" class="internal" src="/@api/deki/files/186/=Dimensions-offset.png"></p>
+![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
 
-<h2 id="What.27s_the_size_of_the_displayed_content.3F">What's the size of the displayed content?</h2>
+## What's the size of the displayed content?
 
-<p>If you need to know how much space the actual displayed content takes up, including padding but not including the border, margins, or scrollbars, you want to use the <code><a href="/en/DOM/element.clientWidth">clientWidth</a></code> and <code><a href="/en/DOM/element.clientHeight">clientHeight</a></code> properties:</p>
+If you need to know how much space the actual displayed content takes up, including padding but not including the border, margins, or scrollbars, you want to use the [`clientWidth`](/en/DOM/element.clientWidth) and [`clientHeight`](/en/DOM/element.clientHeight) properties:
 
-<p><img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
+![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-<h2 id="How_big_is_the_content.3F">How big is the content?</h2>
+## How big is the content?
 
-<p>If you need to know the actual size of the content, regardless of how much of it is currently visible, you need to use the <code><a href="/en/DOM/element.scrollWidth">scrollWidth</a></code> and <code><a href="/en-US/docs/Web/API/Element.scrollHeight">scrollHeight</a></code> properties. These return the width and height of the entire content of an element, even if only part of it is presently visible due to the use of scroll bars.</p>
+If you need to know the actual size of the content, regardless of how much of it is currently visible, you need to use the [`scrollWidth`](/en/DOM/element.scrollWidth) and [`scrollHeight`](/en-US/docs/Web/API/Element.scrollHeight) properties. These return the width and height of the entire content of an element, even if only part of it is presently visible due to the use of scroll bars.
 
-<p>For example, if a 600x400 pixel element is being displayed inside a 300x300 pixel scrollbox, <code>scrollWidth</code> will return 600 while <code>scrollHeight</code> will return 400.</p>
+For example, if a 600x400 pixel element is being displayed inside a 300x300 pixel scrollbox, `scrollWidth` will return 600 while `scrollHeight` will return 400.
 
-<h2 id="參見">參見</h2>
+## 參見
 
-<ul>
- <li><a href="http://www.w3.org/TR/cssom-view/">http://www.w3.org/TR/cssom-view/</a></li>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location</a></li>
-</ul>
+- <http://www.w3.org/TR/cssom-view/>
+- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

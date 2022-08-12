@@ -3,57 +3,60 @@ title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 translation_of: Web/API/Event/preventDefault
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<div> </div>
+## 概要
 
-<h2 id="Summary">概要</h2>
+如果事件可以被取消，就取消事件（即取消事件的預設行為）。但不會影響事件的傳遞，事件仍會繼續傳遞。
 
-<p>如果事件可以被取消，就取消事件（即取消事件的預設行為）。但不會影響事件的傳遞，事件仍會繼續傳遞。</p>
+## 語法
 
-<h2 id="Syntax">語法</h2>
+```js
+event.preventDefault();
+```
 
-<pre class="syntaxbox"><em>event</em>.preventDefault();</pre>
+## 範例
 
-<h2 id="Example">範例</h2>
+Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:
 
-<p>Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:</p>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>preventDefault example</title>
+</head>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;preventDefault example&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;p&gt;Please click on the checkbox control.&lt;/p&gt;
-    &lt;form&gt;
-        &lt;label for="id-checkbox"&gt;Checkbox&lt;/label&gt;
-        &lt;input type="checkbox" id="id-checkbox"/&gt;
-    &lt;/form&gt;
-    &lt;script&gt;
+<body>
+    <p>Please click on the checkbox control.</p>
+    <form>
+        <label for="id-checkbox">Checkbox</label>
+        <input type="checkbox" id="id-checkbox"/>
+    </form>
+    <script>
         document.querySelector("#id-checkbox").addEventListener("click", function(event){
             alert("preventDefault will stop you from checking this checkbox!")
             event.preventDefault();
         }, false);
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+</body>
+</html>
+```
 
-<p>You can see <code>preventDefault</code> in action <a href="/samples/domref/dispatchEvent.html">here</a>.</p>
+You can see `preventDefault` in action [here](/samples/domref/dispatchEvent.html).
 
-<p>The following example demonstrates how invalid text input can be stopped from reaching the input field with preventDefault().</p>
+The following example demonstrates how invalid text input can be stopped from reaching the input field with preventDefault().
 
-<div id="preventDefault_invalid_text">
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;preventDefault example&lt;/title&gt;
+```html hidden
+<!DOCTYPE html>
+<html>
+<head>
+<title>preventDefault example</title>
 
-&lt;script&gt;
-</pre>
+<script>
+```
 
-<pre class="brush: js">function Init () {
+```js hidden
+function Init () {
     var myTextbox = document.getElementById('my-textbox');
     myTextbox.addEventListener( 'keypress', checkName, false );
 }
@@ -61,7 +64,7 @@ translation_of: Web/API/Event/preventDefault
 function checkName(evt) {
     var charCode = evt.charCode;
     if (charCode != 0) {
-        if (charCode &lt; 97 || charCode &gt; 122) {
+        if (charCode < 97 || charCode > 122) {
             evt.preventDefault();
             alert(
                 "Please use lowercase letters only."
@@ -70,35 +73,34 @@ function checkName(evt) {
         }
     }
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="Init ()"&gt;
-    &lt;p&gt;Please enter your name using lowercase letters only.&lt;/p&gt;
-    &lt;form&gt;
-        &lt;input type="text" id="my-textbox" /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-</div>
+```html hidden
+</script>
+</head>
+<body onload="Init ()">
+    <p>Please enter your name using lowercase letters only.</p>
+    <form>
+        <input type="text" id="my-textbox" />
+    </form>
+</body>
+</html>
+```
 
-<p>Here is the result of the preceding code:</p>
+Here is the result of the preceding code:
 
-<p>{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}</p>
+{{ EmbedLiveSample('preventDefault_invalid_text', '', '', '') }}
 
-<h2 id="Notes">備註</h2>
+## 備註
 
-<p>Calling <code>preventDefault</code> during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.</p>
+Calling `preventDefault` during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.
 
-<div class="note">
-<p><strong>Note:</strong> As of {{Gecko("6.0")}}, calling <code>preventDefault()</code> causes the {{ domxref("event.defaultPrevented") }} property's value to become <code>true</code>.</p>
-</div>
+> **備註：** As of {{Gecko("6.0")}}, calling `preventDefault()` causes the {{ domxref("event.defaultPrevented") }} property's value to become `true`.
 
-<p>你可以查看 {{domxref("Event.cancelable")}} 屬性來檢查事件是否能夠被取消。對一個不能被取消的事件呼叫 <code>preventDefault()</code> 方法是沒有任何效果的。</p>
+你可以查看 {{domxref("Event.cancelable")}} 屬性來檢查事件是否能夠被取消。對一個不能被取消的事件呼叫 `preventDefault()` 方法是沒有任何效果的。
 
-<p><code>preventDefault()</code> 方法不會停止事件傳遞。若要停止事件繼續傳遞，可以使用 {{domxref("Event.stopPropagation()")}} 方法。</p>
+`preventDefault()` 方法不會停止事件傳遞。若要停止事件繼續傳遞，可以使用 {{domxref("Event.stopPropagation()")}} 方法。
 
-<h2 id="Specifications">規範</h2>
+## 規範
 
 {{Specifications}}

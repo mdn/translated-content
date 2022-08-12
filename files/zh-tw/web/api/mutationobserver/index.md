@@ -3,194 +3,114 @@ title: MutationObserver
 slug: Web/API/MutationObserver
 translation_of: Web/API/MutationObserver
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code>MutationObserver</code> 提供開發人員一個方法，來對 <a href="/en-US/docs/DOM">DOM</a> tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 <a href="/en-US/docs/DOM/Mutation_events">Mutation Events</a>。</p>
+`MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/DOM) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
 
-<h2 id="建構式">建構式</h2>
+## 建構式
 
-<h3 id="MutationObserver()"><code>MutationObserver()</code></h3>
+### `MutationObserver()`
 
-<p>以下舉例為一個新的 DOM mutation observers 建構式。</p>
+以下舉例為一個新的 DOM mutation observers 建構式。
 
-<pre class="syntaxbox">new MutationObserver(
+```plain
+new MutationObserver(
   function callback
 );
-</pre>
+```
 
-<h4 id="參數">參數</h4>
+#### 參數
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 <code><a href="#MutationRecord">MutationRecord</a> </code>物件陣列，而第二個參數則是觀察者目標本身。</dd>
-</dl>
+- `callback`
+  - : 這個函式會在 DOM 有變化時被呼叫，observer 會用兩個參數來呼叫它，第一個是 `MutationRecord `物件陣列，而第二個參數則是觀察者目標本身。
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<table>
- <tbody>
-  <tr>
-   <td><code>void <a href="#observe()">observe</a>( {{domxref("Node")}} target, <a href="#MutationObserverInit">MutationObserverInit</a> options );</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#disconnect()">disconnect</a>();</code></td>
-  </tr>
-  <tr>
-   <td><code>Array <a href="#takeRecords()">takeRecords</a>();</code></td>
-  </tr>
- </tbody>
-</table>
+| `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
+| -------------------------------------------------------------------------------- |
+| `void disconnect();`                                                             |
+| `Array takeRecords();`                                                           |
 
-<div class="note">
-<p><strong>筆記</strong>: {{domxref("Node")}} target should not be confused with <a href="https://nodejs.org/en/">NodeJS</a>.</p>
-</div>
+> **備註：** {{domxref("Node")}} target should not be confused with [NodeJS](https://nodejs.org/en/).
 
-<h3 id="observe()"><code>observe()</code></h3>
+### `observe()`
 
-<p>Registers the <code>MutationObserver</code> instance to receive notifications of DOM mutations on the specified node.</p>
+Registers the `MutationObserver` instance to receive notifications of DOM mutations on the specified node.
 
-<pre class="syntaxbox">void observe(
+```plain
+void observe(
   {{domxref("Node")}} target,
-  <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> options
+  MutationObserverInit options
 );
-</pre>
+```
 
-<h4 id="Parameters">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt><code>target</code></dt>
- <dd>The {{domxref("Node")}} on which to observe DOM mutations.</dd>
- <dt><code>options</code></dt>
- <dd>A <a href="#MutationObserverInit"><code>MutationObserverInit</code></a> object, specifies which DOM mutations should be reported.</dd>
-</dl>
+- `target`
+  - : The {{domxref("Node")}} on which to observe DOM mutations.
+- `options`
+  - : A [`MutationObserverInit`](#MutationObserverInit) object, specifies which DOM mutations should be reported.
 
-<div class="note">NOTE: Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.</div>
+> **備註：** Adding an observer to an element is just like addEventListener, if you observe the element multiple times it does not make a difference. Meaning if you observe element twice, the observe callback does not fire twice, nor will you have to run disconnect() twice. In other words, once an element is observed, observing it again with the same observer instance will do nothing. However if the callback object is different it will of course add another observer to it.
 
-<h3 id="disconnect()"><code>disconnect()</code></h3>
+### `disconnect()`
 
-<p>Stops the <code>MutationObserver</code> instance from receiving notifications of DOM mutations. Until the <a href="#observe()"><code>observe()</code></a> method is used again, observer's callback will not be invoked.</p>
+Stops the `MutationObserver` instance from receiving notifications of DOM mutations. Until the [`observe()`](<#observe()>) method is used again, observer's callback will not be invoked.
 
-<pre class="syntaxbox">void disconnect();
-</pre>
+```plain
+void disconnect();
+```
 
-<h3 id="takeRecords()"><code>takeRecords()</code></h3>
+### `takeRecords()`
 
-<p>Empties the <code>MutationObserver</code> instance's record queue and returns what was in there.</p>
+Empties the `MutationObserver` instance's record queue and returns what was in there.
 
-<pre class="syntaxbox">Array takeRecords();
-</pre>
+```plain
+Array takeRecords();
+```
 
-<h4 id="Return_value">Return value</h4>
+#### Return value
 
-<p>Returns an Array of <a href="#MutationRecord"><code>MutationRecord</code>s</a>.</p>
+Returns an Array of [`MutationRecord`s](#MutationRecord).
 
-<h2 id="MutationObserverInit"><code>MutationObserverInit</code></h2>
+## `MutationObserverInit`
 
-<p><code>MutationObserverInit</code> is an object which can specify the following properties:</p>
+`MutationObserverInit` is an object which can specify the following properties:
 
-<div class="note">NOTE: At the very least, <code>childList</code>, <code>attributes</code>, or <code>characterData</code> must be set to <code>true</code>. Otherwise, "An invalid or illegal string was specified" error is thrown.</div>
+> **備註：** At the very least, `childList`, `attributes`, or `characterData` must be set to `true`. Otherwise, "An invalid or illegal string was specified" error is thrown.
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>childList</code></td>
-   <td>Set to <code>true</code> if additions and removals of the target node's child elements (including text nodes) are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>attributes</code></td>
-   <td>Set to <code>true</code> if mutations to target's attributes are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>characterData</code></td>
-   <td>Set to <code>true</code> if mutations to target's data are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>subtree</code></td>
-   <td>Set to <code>true</code> if mutations to not just target, but also target's descendants are to be observed.</td>
-  </tr>
-  <tr>
-   <td><code>attributeOldValue</code></td>
-   <td>Set to <code>true</code> if <code>attributes</code> is set to <code>true</code> and target's attribute value before the mutation needs to be recorded.</td>
-  </tr>
-  <tr>
-   <td><code>characterDataOldValue</code></td>
-   <td>Set to <code>true</code> if <code>characterData</code> is set to <code>true</code> and target's data before the mutation needs to be recorded.</td>
-  </tr>
-  <tr>
-   <td><code>attributeFilter</code></td>
-   <td>Set to an array of attribute local names (without namespace) if not all attribute mutations need to be observed.</td>
-  </tr>
- </tbody>
-</table>
+| Property                | Description                                                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `childList`             | Set to `true` if additions and removals of the target node's child elements (including text nodes) are to be observed. |
+| `attributes`            | Set to `true` if mutations to target's attributes are to be observed.                                                  |
+| `characterData`         | Set to `true` if mutations to target's data are to be observed.                                                        |
+| `subtree`               | Set to `true` if mutations to not just target, but also target's descendants are to be observed.                       |
+| `attributeOldValue`     | Set to `true` if `attributes` is set to `true` and target's attribute value before the mutation needs to be recorded.  |
+| `characterDataOldValue` | Set to `true` if `characterData` is set to `true` and target's data before the mutation needs to be recorded.          |
+| `attributeFilter`       | Set to an array of attribute local names (without namespace) if not all attribute mutations need to be observed.       |
 
-<h2 id="MutationRecord"><code>MutationRecord</code></h2>
+## `MutationRecord`
 
-<p><code>MutationRecord</code> is the object that will be passed to the observer's callback. It has the following properties:</p>
+`MutationRecord` is the object that will be passed to the observer's callback. It has the following properties:
 
-<table>
- <tbody>
-  <tr>
-   <td class="header">Property</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
-  </tr>
-  <tr>
-   <td><code>type</code></td>
-   <td><code>String</code></td>
-   <td>Returns <code>attributes</code> if the mutation was an attribute mutation, <code>characterData</code> if it was a mutation to a <code>CharacterData</code> node, and <code>childList</code> if it was a mutation to the tree of nodes.</td>
-  </tr>
-  <tr>
-   <td><code>target</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Returns the node the mutation affected, depending on the <code>type</code>. For <code>attributes</code>, it is the element whose attribute changed. For <code>characterData</code>, it is the <code>CharacterData</code> node. For <code>childList</code>, it is the node whose children changed.</td>
-  </tr>
-  <tr>
-   <td><code>addedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>Return the nodes added. Will be an empty <code>NodeList</code> if no nodes were added.</td>
-  </tr>
-  <tr>
-   <td><code>removedNodes</code></td>
-   <td><code>{{domxref("NodeList")}}</code></td>
-   <td>Return the nodes removed. Will be an empty <code>NodeList</code> if no nodes were removed.</td>
-  </tr>
-  <tr>
-   <td><code>previousSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Return the previous sibling of the added or removed nodes, or <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>nextSibling</code></td>
-   <td><code>{{domxref("Node")}}</code></td>
-   <td>Return the next sibling of the added or removed nodes, or <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>attributeName</code></td>
-   <td><code>String</code></td>
-   <td>Returns the local name of the changed attribute, or <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>attributeNamespace</code></td>
-   <td><code>String</code></td>
-   <td>Returns the namespace of the changed attribute, or <code>null</code>.</td>
-  </tr>
-  <tr>
-   <td><code>oldValue</code></td>
-   <td><code>String</code></td>
-   <td>The return value depends on the <code>type</code>. For <code>attributes</code>, it is the value of the changed attribute before the change. For <code>characterData</code>, it is the data of the changed node before the change. For <code>childList</code>, it is <code>null</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Property             | Type                               | Description                                                                                                                                                                                                                                |
+| -------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `type`               | `String`                           | Returns `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.                                                 |
+| `target`             | `{{domxref("Node")}}`         | Returns the node the mutation affected, depending on the `type`. For `attributes`, it is the element whose attribute changed. For `characterData`, it is the `CharacterData` node. For `childList`, it is the node whose children changed. |
+| `addedNodes`         | `{{domxref("NodeList")}}` | Return the nodes added. Will be an empty `NodeList` if no nodes were added.                                                                                                                                                                |
+| `removedNodes`       | `{{domxref("NodeList")}}` | Return the nodes removed. Will be an empty `NodeList` if no nodes were removed.                                                                                                                                                            |
+| `previousSibling`    | `{{domxref("Node")}}`         | Return the previous sibling of the added or removed nodes, or `null`.                                                                                                                                                                      |
+| `nextSibling`        | `{{domxref("Node")}}`         | Return the next sibling of the added or removed nodes, or `null`.                                                                                                                                                                          |
+| `attributeName`      | `String`                           | Returns the local name of the changed attribute, or `null`.                                                                                                                                                                                |
+| `attributeNamespace` | `String`                           | Returns the namespace of the changed attribute, or `null`.                                                                                                                                                                                 |
+| `oldValue`           | `String`                           | The return value depends on the `type`. For `attributes`, it is the value of the changed attribute before the change. For `characterData`, it is the data of the changed node before the change. For `childList`, it is `null`.            |
 
-<h2 id="Example_usage">Example usage</h2>
+## Example usage
 
-<p>The following example was taken from <a href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">this blog post</a>.</p>
+The following example was taken from [this blog post](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 
-<pre class="brush: js">// select the target node
+```js
+// select the target node
 var target = document.querySelector('#some-id');
 
 // create an observer instance
@@ -208,18 +128,16 @@ observer.observe(target, config);
 
 // later, you can stop observing
 observer.disconnect();
-</pre>
+```
 
-<h2 id="Additional_reading">Additional reading</h2>
+## Additional reading
 
-<ul>
- <li><a href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">A brief overview</a></li>
- <li><a href="http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/">A more in-depth discussion</a></li>
- <li><a href="http://www.youtube.com/watch?v=eRZ4pO0gVWw">A screencast by Chromium developer Rafael Weinstein</a></li>
- <li><a href="http://code.google.com/p/mutation-summary/">The mutation summary library</a></li>
- <li><a href="http://dom.spec.whatwg.org/#mutation-observers">The DOM standard</a> which defines the <code>MutationObserver</code> interface</li>
-</ul>
+- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
+- [A more in-depth discussion](http://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
+- [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- [The mutation summary library](http://code.google.com/p/mutation-summary/)
+- [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.MutationObserver")}}

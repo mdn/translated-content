@@ -3,15 +3,14 @@ title: white-space
 slug: Web/CSS/white-space
 translation_of: Web/CSS/white-space
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>此 CSS <strong><code>white-space</code></strong> 屬性決定如何處理元素內的空白字元。</p>
+此 CSS **`white-space`** 屬性決定如何處理元素內的空白字元。
 
-<div class="note">
-<p>提醒：如果要讓文字本身斷行，請改用 {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}} 或 {{cssxref("hyphens")}}。</p>
-</div>
+> **備註：** 如果要讓文字本身斷行，請改用 {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}} 或 {{cssxref("hyphens")}}。
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -22,67 +21,69 @@ white-space: pre-line;
 white-space: inherit;
 white-space: initial;
 white-space: unset;
-</pre>
+```
 
-<div class="hidden" id="white-space">
-<pre class="brush: html">&lt;div class="grid"&gt;
-&lt;div class="col"&gt;
-  &lt;div class="cell"&gt;
-    &lt;div class="label"&gt;normal&lt;/div&gt;
-    &lt;div&gt;
-  &lt;p class="wspNormal"&gt;
+```html hidden
+<div class="grid">
+<div class="col">
+  <div class="cell">
+    <div class="label">normal</div>
+    <div>
+  <p class="wspNormal">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Nulla pellentesque metus eget massa feugiat lobortis.
-  &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="cell"&gt;
-    &lt;div class="label"&gt;pre-wrap&lt;/div&gt;
-    &lt;div&gt;
-  &lt;p class="wspPreWrap"&gt;
+  </p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="label">pre-wrap</div>
+    <div>
+  <p class="wspPreWrap">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Nulla pellentesque metus eget massa feugiat lobortis.
-  &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="cell"&gt;
-    &lt;div class="label"&gt;pre-line&lt;/div&gt;
-    &lt;div&gt;
-  &lt;p class="wspPreLine"&gt;
+  </p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="label">pre-line</div>
+    <div>
+  <p class="wspPreLine">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Nulla pellentesque metus eget massa feugiat lobortis.
-  &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="cell"&gt;
-    &lt;div class="label"&gt;nowrap&lt;/div&gt;
-    &lt;div&gt;
-  &lt;p class="wspNowrap"&gt;
+  </p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="label">nowrap</div>
+    <div>
+  <p class="wspNowrap">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Nulla pellentesque metus eget massa feugiat lobortis.
-  &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="cell"&gt;
-    &lt;div class="label"&gt;pre&lt;/div&gt;
-    &lt;div&gt;
-  &lt;p class="wspPre"&gt;
+  </p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="label">pre</div>
+    <div>
+  <p class="wspPre">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Nulla pellentesque metus eget massa feugiat lobortis.
-  &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="note"&gt;
+  </p>
+    </div>
+  </div>
+  <div class="note">
     Examples above are applied to the following HTML (square represents white spaces):
-    &lt;pre&gt;☐☐&amp;lt;p&amp;gt;
+    <pre>☐☐&lt;p&gt;
 ☐☐☐☐Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ☐☐☐☐Nulla pellentesque metus eget massa feugiat lobortis.
-☐☐&amp;lt;/p&amp;gt;&lt;/pre&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</pre>
+☐☐&lt;/p&gt;</pre>
+  </div>
+</div>
+</div>
+```
 
-<pre class="brush: css">html,body {
+```css hidden
+html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -146,121 +147,89 @@ p {
 .wspNowrap  { white-space: nowrap; }
 .wspPre     { white-space: pre; }
 .wspPreWrap { white-space: pre-wrap; }
-.wspPreLine { white-space: pre-line; }</pre>
-</div>
+.wspPreLine { white-space: pre-line; }
+```
 
-<p>{{EmbedLiveSample("white-space", "100%", 530, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("white-space", "100%", 530, "", "", "example-outcome-frame")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p> <code>white-space</code> 的特性值為下列其中之一。</p>
+`white-space` 的特性值為下列其中之一。
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>連續的空白字元會被合併(collapse)，換行字元被視為空白字元。換行只在被文字空間限制時發生。</dd>
- <dt><code>nowrap</code></dt>
- <dd>對待空白字元的方式跟 <code>normal</code> 一樣，且會強制不換行。</dd>
- <dt><code>pre</code></dt>
- <dd>連續的空白字元都會被保留。換行在有換行字元以及{{HTMLElement("br")}}時發生。</dd>
- <dt><code>pre-wrap</code></dt>
- <dd>連續的空白字元都會被保留。換行會在換行字元、有{{HTMLElement("br")}}元素以及被文字空間限制時發生。</dd>
- <dt><code>pre-line</code></dt>
- <dd>連續的空白字元會被合併(collapse)。換行在換行字元、 {{HTMLElement("br")}}以及被文字空間限制時發生。</dd>
-</dl>
+- `normal`
+  - : 連續的空白字元會被合併(collapse)，換行字元被視為空白字元。換行只在被文字空間限制時發生。
+- `nowrap`
+  - : 對待空白字元的方式跟 `normal` 一樣，且會強制不換行。
+- `pre`
+  - : 連續的空白字元都會被保留。換行在有換行字元以及{{HTMLElement("br")}}時發生。
+- `pre-wrap`
+  - : 連續的空白字元都會被保留。換行會在換行字元、有{{HTMLElement("br")}}元素以及被文字空間限制時發生。
+- `pre-line`
+  - : 連續的空白字元會被合併(collapse)。換行在換行字元、 {{HTMLElement("br")}}以及被文字空間限制時發生。
 
-<p>下列表格整理了各項 <code>white-space</code> 值的行為：</p>
+下列表格整理了各項 `white-space` 值的行為：
 
-<table>
- <thead>
-  <tr>
-   <th> </th>
-   <th>New lines</th>
-   <th>Spaces and tabs</th>
-   <th>Text wrapping</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th><code>normal</code></th>
-   <td>Collapse</td>
-   <td>Collapse</td>
-   <td>Wrap</td>
-  </tr>
-  <tr>
-   <th><code>nowrap</code></th>
-   <td>Collapse</td>
-   <td>Collapse</td>
-   <td>No wrap</td>
-  </tr>
-  <tr>
-   <th><code>pre</code></th>
-   <td>Preserve</td>
-   <td>Preserve</td>
-   <td>No wrap</td>
-  </tr>
-  <tr>
-   <th><code>pre-wrap</code></th>
-   <td>Preserve</td>
-   <td>Preserve</td>
-   <td>Wrap</td>
-  </tr>
-  <tr>
-   <th><code>pre-line</code></th>
-   <td>Preserve</td>
-   <td>Collapse</td>
-   <td>Wrap</td>
-  </tr>
- </tbody>
-</table>
+|            | New lines | Spaces and tabs | Text wrapping |
+| ---------- | --------- | --------------- | ------------- |
+| `normal`   | Collapse  | Collapse        | Wrap          |
+| `nowrap`   | Collapse  | Collapse        | No wrap       |
+| `pre`      | Preserve  | Preserve        | No wrap       |
+| `pre-wrap` | Preserve  | Preserve        | Wrap          |
+| `pre-line` | Preserve  | Collapse        | Wrap          |
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: css">code {
+```css
+code {
   white-space: pre;
-}</pre>
+}
+```
 
-<h3 id="Line_breaks_inside_HTMLElement(pre)_elements">Line breaks inside {{HTMLElement("pre")}} elements</h3>
+### Line breaks inside {{HTMLElement("pre")}} elements
 
-<pre class="brush: css">pre {
+```css
+pre {
   word-wrap: break-word;      /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
   white-space: pre-wrap;      /* Modern browsers */
-}</pre>
+}
+```
 
-<h2 id="See_in_action">See it in action</h2>
+## See it in action
 
-<div class="hidden">
-<pre class="brush: html">    &lt;div id="css-code" class="box"&gt;
-     p { white-space: &lt;select&gt;
-       &lt;option&gt;normal&lt;/option&gt;
-       &lt;option&gt;nowrap&lt;/option&gt;
-       &lt;option&gt;pre&lt;/option&gt;
-       &lt;option&gt;pre-wrap&lt;/option&gt;
-       &lt;option&gt;pre-line&lt;/option&gt;
-     &lt;/select&gt; }
-    &lt;/div&gt;
-    &lt;div id="results" class="box"&gt;
-    &lt;p&gt;    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```html hidden
+    <div id="css-code" class="box">
+     p { white-space: <select>
+       <option>normal</option>
+       <option>nowrap</option>
+       <option>pre</option>
+       <option>pre-wrap</option>
+       <option>pre-line</option>
+     </select> }
+    </div>
+    <div id="results" class="box">
+    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-    &lt;/div&gt;
-</pre>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+```
 
-<pre class="brush: css">.box {
+```css hidden
+.box {
   width: 300px;
   padding: 16px;
   border-radius: 10px;
@@ -277,40 +246,41 @@ p {
   height: 400px;
   white-space: normal;
   font-size: 14px;
-}</pre>
+}
+```
 
-<pre class="brush: js">var select  = document.querySelector("#css-code select");
+```js hidden
+var select  = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
 select.addEventListener("change", function(e) {
   results.setAttribute("style", "white-space: "+e.target.value);
-})</pre>
-</div>
+})
+```
 
-<h3 id="Source">Source</h3>
+### Source
 
-<pre>    &lt;p&gt;    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```plain
+    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</pre>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+```
 
-<h3 id="CSS_Result">CSS + Result</h3>
+### CSS + Result
 
-<p>{{ EmbedLiveSample('See_in_action', '80%', '500px') }}</p>
+{{ EmbedLiveSample('See_in_action', '80%', '500px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.white-space")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Properties that define how words break <em>within themselves</em>: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}, {{cssxref("hyphens")}}</li>
-</ul>
+- Properties that define how words break _within themselves_: {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}}, {{cssxref("hyphens")}}

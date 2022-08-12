@@ -3,315 +3,85 @@ title: CSS 屬性參考
 slug: Web/CSS/CSS_Properties_Reference
 translation_of: Web/CSS/CSS_Properties_Reference
 ---
-<h2 id="常見_CSS_屬性參考">常見 CSS 屬性參考</h2>
+## 常見 CSS 屬性參考
 
-<p>下列為最為常見的 CSS 屬性基本清單及其對應的 文件物件模型(DOM)屬性——通常由 JavaScript 進行存取：</p>
+下列為最為常見的 CSS 屬性基本清單及其對應的 文件物件模型(DOM)屬性——通常由 JavaScript 進行存取：
 
-<div class="note"><strong>備註:</strong>  此清單並不完整， 更多屬性請見  <a href="/zh-TW/docs/Web/CSS/Reference">CSS 參考文件</a> 與  <a href="en-US/docs/Web/CSS/Mozilla_Extensions">Mozilla CSS extensions</a>。 CSS參考文件也包含屬性使用範例。</div>
+> **備註：** 此清單並不完整， 更多屬性請見 [CSS 參考文件](/zh-TW/docs/Web/CSS/Reference) 與 [Mozilla CSS extensions](en-US/docs/Web/CSS/Mozilla_Extensions)。 CSS 參考文件也包含屬性使用範例。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><strong>CSS</strong></th>
-   <th scope="col"><strong>JavaScript</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>background</td>
-   <td>background</td>
-  </tr>
-  <tr>
-   <td>background-attachment</td>
-   <td>backgroundAttachment</td>
-  </tr>
-  <tr>
-   <td>background-color</td>
-   <td>backgroundColor</td>
-  </tr>
-  <tr>
-   <td>background-image</td>
-   <td>backgroundImage</td>
-  </tr>
-  <tr>
-   <td>background-position</td>
-   <td>backgroundPosition</td>
-  </tr>
-  <tr>
-   <td>background-repeat</td>
-   <td>backgroundRepeat</td>
-  </tr>
-  <tr>
-   <td>border</td>
-   <td>border</td>
-  </tr>
-  <tr>
-   <td>border-bottom</td>
-   <td>borderBottom</td>
-  </tr>
-  <tr>
-   <td>border-bottom-color</td>
-   <td>borderBottomColor</td>
-  </tr>
-  <tr>
-   <td>border-bottom-style</td>
-   <td>borderBottomStyle</td>
-  </tr>
-  <tr>
-   <td>border-bottom-width</td>
-   <td>borderBottomWidth</td>
-  </tr>
-  <tr>
-   <td>border-color</td>
-   <td>borderColor</td>
-  </tr>
-  <tr>
-   <td>border-left</td>
-   <td>borderLeft</td>
-  </tr>
-  <tr>
-   <td>border-left-color</td>
-   <td>borderLeftColor</td>
-  </tr>
-  <tr>
-   <td>border-left-style</td>
-   <td>borderLeftStyle</td>
-  </tr>
-  <tr>
-   <td>border-left-width</td>
-   <td>borderLeftWidth</td>
-  </tr>
-  <tr>
-   <td>border-right</td>
-   <td>borderRight</td>
-  </tr>
-  <tr>
-   <td>border-right-color</td>
-   <td>borderRightColor</td>
-  </tr>
-  <tr>
-   <td>border-right-style</td>
-   <td>borderRightStyle</td>
-  </tr>
-  <tr>
-   <td>border-right-width</td>
-   <td>borderRightWidth</td>
-  </tr>
-  <tr>
-   <td>border-style</td>
-   <td>borderStyle</td>
-  </tr>
-  <tr>
-   <td>border-top</td>
-   <td>borderTop</td>
-  </tr>
-  <tr>
-   <td>border-top-color</td>
-   <td>borderTopColor</td>
-  </tr>
-  <tr>
-   <td>border-top-style</td>
-   <td>borderTopStyle</td>
-  </tr>
-  <tr>
-   <td>border-top-width</td>
-   <td>borderTopWidth</td>
-  </tr>
-  <tr>
-   <td>border-width</td>
-   <td>borderWidth</td>
-  </tr>
-  <tr>
-   <td>clear</td>
-   <td>clear</td>
-  </tr>
-  <tr>
-   <td>clip</td>
-   <td>clip</td>
-  </tr>
-  <tr>
-   <td>color</td>
-   <td>color</td>
-  </tr>
-  <tr>
-   <td>cursor</td>
-   <td>cursor</td>
-  </tr>
-  <tr>
-   <td>display</td>
-   <td>display</td>
-  </tr>
-  <tr>
-   <td>filter</td>
-   <td>filter</td>
-  </tr>
-  <tr>
-   <td>font</td>
-   <td>font</td>
-  </tr>
-  <tr>
-   <td>font-family</td>
-   <td>fontFamily</td>
-  </tr>
-  <tr>
-   <td>font-size</td>
-   <td>fontSize</td>
-  </tr>
-  <tr>
-   <td>font-variant</td>
-   <td>fontVariant</td>
-  </tr>
-  <tr>
-   <td>font-weight</td>
-   <td>fontWeight</td>
-  </tr>
-  <tr>
-   <td>height</td>
-   <td>height</td>
-  </tr>
-  <tr>
-   <td>left</td>
-   <td>left</td>
-  </tr>
-  <tr>
-   <td>letter-spacing</td>
-   <td>letterSpacing</td>
-  </tr>
-  <tr>
-   <td>line-height</td>
-   <td>lineHeight</td>
-  </tr>
-  <tr>
-   <td>list-style</td>
-   <td>listStyle</td>
-  </tr>
-  <tr>
-   <td>list-style-image</td>
-   <td>listStyleImage</td>
-  </tr>
-  <tr>
-   <td>list-style-position</td>
-   <td>listStylePosition</td>
-  </tr>
-  <tr>
-   <td>list-style-type</td>
-   <td>listStyleType</td>
-  </tr>
-  <tr>
-   <td>margin</td>
-   <td>margin</td>
-  </tr>
-  <tr>
-   <td>margin-bottom</td>
-   <td>marginBottom</td>
-  </tr>
-  <tr>
-   <td>margin-left</td>
-   <td>marginLeft</td>
-  </tr>
-  <tr>
-   <td>margin-right</td>
-   <td>marginRight</td>
-  </tr>
-  <tr>
-   <td>margin-top</td>
-   <td>marginTop</td>
-  </tr>
-  <tr>
-   <td>overflow</td>
-   <td>overflow</td>
-  </tr>
-  <tr>
-   <td>padding</td>
-   <td>padding</td>
-  </tr>
-  <tr>
-   <td>padding-bottom</td>
-   <td>paddingBottom</td>
-  </tr>
-  <tr>
-   <td>padding-left</td>
-   <td>paddingLeft</td>
-  </tr>
-  <tr>
-   <td>padding-right</td>
-   <td>paddingRight</td>
-  </tr>
-  <tr>
-   <td>padding-top</td>
-   <td>paddingTop</td>
-  </tr>
-  <tr>
-   <td>page-break-after</td>
-   <td>pageBreakAfter</td>
-  </tr>
-  <tr>
-   <td>page-break-before</td>
-   <td>pageBreakBefore</td>
-  </tr>
-  <tr>
-   <td>position</td>
-   <td>position</td>
-  </tr>
-  <tr>
-   <td>float</td>
-   <td>cssFloat</td>
-  </tr>
-  <tr>
-   <td>text-align</td>
-   <td>textAlign</td>
-  </tr>
-  <tr>
-   <td>text-decoration</td>
-   <td>textDecoration</td>
-  </tr>
-  <tr>
-   <td>text-decoration: blink</td>
-   <td>textDecorationBlink</td>
-  </tr>
-  <tr>
-   <td>text-decoration: line-through</td>
-   <td>textDecorationLineThrough</td>
-  </tr>
-  <tr>
-   <td>text-decoration: none</td>
-   <td>textDecorationNone</td>
-  </tr>
-  <tr>
-   <td>text-decoration: overline</td>
-   <td>textDecorationOverline</td>
-  </tr>
-  <tr>
-   <td>text-decoration: underline</td>
-   <td>textDecorationUnderline</td>
-  </tr>
-  <tr>
-   <td>text-indent</td>
-   <td>textIndent</td>
-  </tr>
-  <tr>
-   <td>text-transform</td>
-   <td>textTransform</td>
-  </tr>
-  <tr>
-   <td>top</td>
-   <td>top</td>
-  </tr>
-  <tr>
-   <td>vertical-align</td>
-   <td>verticalAlign</td>
-  </tr>
-  <tr>
-   <td>visibility</td>
-   <td>visibility</td>
-  </tr>
-  <tr>
-   <td>width</td>
-   <td>width</td>
-  </tr>
-  <tr>
-   <td>z-index</td>
-   <td>zIndex</td>
-  </tr>
- </tbody>
-</table>
+| **CSS**                       | **JavaScript**            |
+| ----------------------------- | ------------------------- |
+| background                    | background                |
+| background-attachment         | backgroundAttachment      |
+| background-color              | backgroundColor           |
+| background-image              | backgroundImage           |
+| background-position           | backgroundPosition        |
+| background-repeat             | backgroundRepeat          |
+| border                        | border                    |
+| border-bottom                 | borderBottom              |
+| border-bottom-color           | borderBottomColor         |
+| border-bottom-style           | borderBottomStyle         |
+| border-bottom-width           | borderBottomWidth         |
+| border-color                  | borderColor               |
+| border-left                   | borderLeft                |
+| border-left-color             | borderLeftColor           |
+| border-left-style             | borderLeftStyle           |
+| border-left-width             | borderLeftWidth           |
+| border-right                  | borderRight               |
+| border-right-color            | borderRightColor          |
+| border-right-style            | borderRightStyle          |
+| border-right-width            | borderRightWidth          |
+| border-style                  | borderStyle               |
+| border-top                    | borderTop                 |
+| border-top-color              | borderTopColor            |
+| border-top-style              | borderTopStyle            |
+| border-top-width              | borderTopWidth            |
+| border-width                  | borderWidth               |
+| clear                         | clear                     |
+| clip                          | clip                      |
+| color                         | color                     |
+| cursor                        | cursor                    |
+| display                       | display                   |
+| filter                        | filter                    |
+| font                          | font                      |
+| font-family                   | fontFamily                |
+| font-size                     | fontSize                  |
+| font-variant                  | fontVariant               |
+| font-weight                   | fontWeight                |
+| height                        | height                    |
+| left                          | left                      |
+| letter-spacing                | letterSpacing             |
+| line-height                   | lineHeight                |
+| list-style                    | listStyle                 |
+| list-style-image              | listStyleImage            |
+| list-style-position           | listStylePosition         |
+| list-style-type               | listStyleType             |
+| margin                        | margin                    |
+| margin-bottom                 | marginBottom              |
+| margin-left                   | marginLeft                |
+| margin-right                  | marginRight               |
+| margin-top                    | marginTop                 |
+| overflow                      | overflow                  |
+| padding                       | padding                   |
+| padding-bottom                | paddingBottom             |
+| padding-left                  | paddingLeft               |
+| padding-right                 | paddingRight              |
+| padding-top                   | paddingTop                |
+| page-break-after              | pageBreakAfter            |
+| page-break-before             | pageBreakBefore           |
+| position                      | position                  |
+| float                         | cssFloat                  |
+| text-align                    | textAlign                 |
+| text-decoration               | textDecoration            |
+| text-decoration: blink        | textDecorationBlink       |
+| text-decoration: line-through | textDecorationLineThrough |
+| text-decoration: none         | textDecorationNone        |
+| text-decoration: overline     | textDecorationOverline    |
+| text-decoration: underline    | textDecorationUnderline   |
+| text-indent                   | textIndent                |
+| text-transform                | textTransform             |
+| top                           | top                       |
+| vertical-align                | verticalAlign             |
+| visibility                    | visibility                |
+| width                         | width                     |
+| z-index                       | zIndex                    |

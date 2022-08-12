@@ -3,24 +3,23 @@ title: clip
 slug: Web/CSS/clip
 translation_of: Web/CSS/clip
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<h2 id="總結">總結</h2>
+## 總結
 
-<p><strong><code>這個 clip</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 屬性用來定義元素的哪一個部分是可見的. <code>clip</code> 屬性只能被賦予在絕對位置的元素(element)上, 像是帶有這些的CSS屬性的元素 {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.</p>
+**`這個 clip`** [CSS](/zh-TW/docs/Web/CSS) 屬性用來定義元素的哪一個部分是可見的. `clip` 屬性只能被賦予在絕對位置的元素(element)上, 像是帶有這些的 CSS 屬性的元素 {{cssxref("position","position:absolute")}} or {{cssxref("position","position:fixed")}}.
 
-<div class="warning">
-<p><strong>警告:</strong> 這個屬性被遺棄了. 請改用 {{cssxref("clip-path")}} .</p>
-</div>
+> **警告：** 這個屬性被遺棄了. 請改用 {{cssxref("clip-path")}} .
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css">/* Keyword value */
+```css
+/* Keyword value */
 clip: auto;
 
-/* &lt;shape&gt; values */
+/* <shape> values */
 clip: rect(1px 10em 3rem 2ch);
 clip: rect(1px, 10em, 3rem, 2ch);
 
@@ -28,24 +27,23 @@ clip: rect(1px, 10em, 3rem, 2ch);
 clip: inherit;
 clip: initial;
 clip: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>A rectangular {{cssxref("&lt;shape&gt;")}} of the form <code>rect(&lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;, &lt;left&gt;)</code> or of the form <code>rect(&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt;)</code> (which is a more backwards compatible syntax) <code>&lt;top&gt;</code> and <code>&lt;bottom&gt;</code> specify offsets from the <em>inside top border edge</em> of the box, and <code>&lt;right&gt;</code>, and <code>&lt;left&gt;</code> specify offsets from the <em>inside left border edge</em> of the box — that is, the extent of the padding box.<code>&lt;top&gt;</code>, <code>&lt;right&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;left&gt;</code> may either have a {{cssxref("&lt;length&gt;")}} value or<code> auto</code>. If any side's value is <code>auto</code>, the element is clipped to that side's <em>inside border edge</em>.</dd>
- <dt><code>auto</code></dt>
- <dd>The element does not clip (default value). Note that this is distinct from <code>rect(auto, auto, auto, auto)</code>, which does clip to the inside border edges of the element.</dd>
-</dl>
+- `<shape>`
+  - : A rectangular {{cssxref("&lt;shape&gt;")}} of the form `rect(<top>, <right>, <bottom>, <left>)` or of the form `rect(<top> <right> <bottom> <left>)` (which is a more backwards compatible syntax) `<top>` and `<bottom>` specify offsets from the _inside top border edge_ of the box, and `<right>`, and `<left>` specify offsets from the _inside left border edge_ of the box — that is, the extent of the padding box.`<top>`, `<right>`, `<bottom>`, and `<left>` may either have a {{cssxref("&lt;length&gt;")}} value or` auto`. If any side's value is `auto`, the element is clipped to that side's _inside border edge_.
+- `auto`
+  - : The element does not clip (default value). Note that this is distinct from `rect(auto, auto, auto, auto)`, which does clip to the inside border edges of the element.
 
-<h3 id="Formal_syntax">Formal syntax</h3>
+### Formal syntax
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:css">.dotted-border {
+```css
+.dotted-border {
    border: dotted;
    position: relative;
    width: 536px;
@@ -73,27 +71,28 @@ clip: unset;
    left: 200px;
    clip: rect(235px 335px 345px 160px);
    /* non-standard syntax, but supported by all major browsers*/
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="dotted-border"&gt;
-   &lt;img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original Graphic" /&gt;
-   &lt;img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left"&gt;
-   &lt;img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle"&gt;
-   &lt;img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right"&gt;
-&lt;/p&gt;</pre>
+```html
+<p class="dotted-border">
+   <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original Graphic" />
+   <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
+   <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
+   <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+</p>
+```
 
-<p>{{EmbedLiveSample('Examples', '689px', '410px')}}</p>
+{{EmbedLiveSample('Examples', '689px', '410px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("css.properties.clip")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow")}}, {{Cssxref("display")}}, {{Cssxref("position")}}</li>
-</ul>
+- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow")}}, {{Cssxref("display")}}, {{Cssxref("position")}}
