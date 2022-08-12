@@ -10,7 +10,7 @@ slug: Web/API/AbortSignal/reason
 
 ## 值
 
-一个使用 JavaScript 值表示的中止原因，如果没有被中止，则是 undefined。
+一个使用 JavaScript 值表示的中止原因，如果没有被中止，则是 `undefined`。
 
 ## 实例
 
