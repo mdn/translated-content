@@ -10,12 +10,12 @@ translation_of: MDN/Tools
 ---
 {{MDNSidebar}}
 
-MDN ofrece un número de características que hacen fácil seguir el progreso, gestionar el contenido y mantenerte al tanto de los últimos cambios al sitio.
-
 ## Documentación sobre las herramientas de MDN
 
+MDN ofrece un número de características que hacen fácil seguir el progreso, gestionar el contenido y mantenerte al tanto de los últimos cambios al sitio.
+
 - [Panel de Revisiones](/es/docs/Project:MDN/Tools/Revision_dashboard)
-  - te permite opinar sobre los artículos recientemente cambiados en MDN; el panel también ofrece un número de herramientas de filtrado útlies que te dejan personalizar la pantalla para satisfacer tus necesidades como revisor de contenido.
+  - El [Panel de Revisión](/es/dashboards/revisions) te permite opinar sobre los artículos recientemente cambiados en MDN; el panel también ofrece un número de herramientas de filtrado útlies que te dejan personalizar la pantalla para satisfacer tus necesidades como revisor de contenido.
 - [Panel de Localización](/es/docs/Project:MDN/Tools/Revision_dashboard)
   - permite a los equipos de localización coordinar, gestionar su proyecto de localización, y traducir documentación eficientemente. Su función principal es la de ayudar a los equipos de localización a averiguar qué contenido necesita traducirse y qué artículos necesitan atención lo más pronto posible. Esta característica no está terminada aún, pero puedes seguir el desarrollo en {{bug(834317)}}.
 - [Fuentes RSS](/es/docs/Project:MDN/Tools/Feeds)

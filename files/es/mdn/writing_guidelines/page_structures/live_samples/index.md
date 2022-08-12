@@ -19,7 +19,7 @@ MDN tiene ahora un sistema de "ejemplos en vivo", donde el código de demostraci
       <td>
         En artículos etiquetados como
         <a href="/es/docs/tag/NeedsLiveSample">NecesitaMuestraEnVivo</a
-        >&#x3C;(<a href="/es/docs/tag/NeedsLiveSample">NeedsLiveSample</a>)
+        > (<a href="/es/docs/tag/NeedsLiveSample">NeedsLiveSample</a>)
       </td>
     </tr>
     <tr>

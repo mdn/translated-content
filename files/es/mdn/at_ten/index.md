@@ -6,9 +6,9 @@ tags:
 translation_of: MDN_at_ten
 original_slug: MDN_en_diez
 ---
-Celebra 10 años documentando tu Web.
-
 ## La historia de MDN (Mozilla Developers Network)
+
+Celebra 10 años documentando tu Web.
 
 A principios de 2005 , un grupo pequeño de idealistas se propuso a crear una nueva, libre, comunidad en línea de recursos para todos los desarrolladores Web. Su brillante pero poco excentrica idea se convirtió en la actual Mozilla Developer Network (MDN) - el principal recurso para todas las tecnologías Web abiertas. Diez años más tarde, nuestra comunidad mundial es más grande que nunca, y juntos todavía estamos creando documentación , código de ejemplo y recursos de aprendizaje para todas las tecnologías Web abiertas, incluyendo CSS , HTML , JavaScript y todo lo demás que hace que la web abierta tan poderoso como lo es.
 
