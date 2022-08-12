@@ -56,14 +56,14 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 现在，让我们通过 Github 页面告诉你公布的你的代码是如此的简单。
 
-1.  首先， [注册一个 GitHub 账号，](https://github.com/join) 并确认你的邮箱地址。
-2.  接下来，你需要创建一个新的资源库 ( repository ) 来存放你的文件。
-3.  在这个页面上，在 _Repository name_ 输入框里输入 _username_.github.io，username 是你的用户名。比如，我们的朋友 bobsmith 会输入 _bobsmith.github.io。同时勾选_ _Initialize this repository with a README_ ，然后点击 _Create repository_。![](github-create-repo.png)
-4.  然后，将你的网站文件夹里的内容拖拽到你的资源库 ( repository )，再点击 _Commit changes_ 。
+1. 首先， [注册一个 GitHub 账号，](https://github.com/join) 并确认你的邮箱地址。
+2. 接下来，你需要创建一个新的资源库 ( repository ) 来存放你的文件。
+3. 在这个页面上，在 _Repository name_ 输入框里输入 _username_.github.io，username 是你的用户名。比如，我们的朋友 bobsmith 会输入 _bobsmith.github.io。同时勾选_ _Initialize this repository with a README_ ，然后点击 _Create repository_。![](github-create-repo.png)
+4. 然后，将你的网站文件夹里的内容拖拽到你的资源库 ( repository )，再点击 _Commit changes_ 。
 
     > **备注：** 确保你的文件夹有一个 _index.html_ 文件。
 
-5.  现在将你的浏览器转到 _username_.github.io 来在线查看你的网站。比如，_如果用户名为 chrisdavidmills_, 请转到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
+5. 现在将你的浏览器转到 _username_.github.io 来在线查看你的网站。比如，_如果用户名为 chrisdavidmills_, 请转到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
 
     > **备注：** 你的网站可能需要几分钟的时间才能投入使用。如果它不能立即工作，你可能需要等待几分钟，然后再试一次。
 

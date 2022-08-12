@@ -54,7 +54,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 以此类推。
 
-> **备注：** 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：`dinosaur.jpg` 比 `img835.png `要好。
+> **备注：** 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：`dinosaur.jpg` 比 `img835.png` 要好。
 
 你也可以像下面这样使用绝对路径：
 
@@ -66,9 +66,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **警告：** 大多数图片是有版权的。**不要**在你的网页上使用一张图片，除非：
 >
-> 1.  你是图片版权所有者
-> 2.  你有图片版权所有者明确的、书面上的使用授权
-> 3.  你有充分的证据证明这张图片是公共领域内的
+> 1. 你是图片版权所有者
+> 2. 你有图片版权所有者明确的、书面上的使用授权
+> 3. 你有充分的证据证明这张图片是公共领域内的
 >
 > 侵犯版权是违法并且不道德的。此外，在得到授权之前**永远不要**把你的`src`属性指向其他人网站上的图片。这被称为"盗链（hotlinking）"。同样，盗取其他人的带宽也是违法的。而且这会降低你的页面的加载速度，而且图片可能会在不受你控制的情况下被移走或用别的令人尴尬的东西替换掉。
 
@@ -136,7 +136,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ### Image titles 图片标题
 
-类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用<title>添加支持信息)，你可以给图片增加`title`属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
+类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用\<title>添加支持信息)，你可以给图片增加`title`属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
 
 ```html
 <img src="images/dinosaur.jpg"
@@ -293,13 +293,15 @@ https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and
 
 有一个更好的做法是使用 HTML5 的 {{htmlelement("figure")}} 和 {{htmlelement("figcaption")}} 元素，它正是为此而被创造出来的：为图片提供一个语义容器，在标题和图片之间建立清晰的关联。我们之前的例子可以重写为：
 
-    <figure>
-      <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
-         alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-         width="400"
-         height="341">
-      <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
-    </figure>
+```html
+<figure>
+  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+      alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+      width="400"
+      height="341">
+  <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
+</figure>
+```
 
 这个 {{htmlelement("figcaption")}} 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 

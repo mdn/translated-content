@@ -58,10 +58,10 @@ Further reading:
 
 更多信息：
 
-1.  [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3.  [HTTP ETag on Wikipedia](http://en.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+3. [HTTP ETag on Wikipedia](http://en.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### 高效地排列页面组件
 
@@ -155,10 +155,10 @@ table-layout: fixed;
       JavaScript 文件用来实现页面加载时**需要**的函数，而避免在页面加载后才能运行的 JavaScript。在调试维护中把不相关的 JavaScript 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
   - `{{htmlelement('body')}}`
     用户能在完整页面下载完之前就可以看到的页面小分块（`{{htmlelement('header')}}`/`{{htmlelement('main')}}`/`{{htmlelement('table')}}`）。
-    
+
     - `{{htmlelement('script')}}`
       DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
-  
+
 ## 相关链接
 
 - 书籍：["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)

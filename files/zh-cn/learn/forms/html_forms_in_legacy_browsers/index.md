@@ -81,7 +81,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 
 #### CSS 属性选择器
 
-[CSS 属性选择器 ](/en-US/docs/CSS/Attribute_selectors)在 [HTML Forms](/en-US/docs/HTML/Forms) 中十分有用，然而旧式浏览器不支持。在那种情形下，一般会习惯性使用等价的 class:
+[CSS 属性选择器](/en-US/docs/CSS/Attribute_selectors) 在 [HTML Forms](/en-US/docs/HTML/Forms) 中十分有用，然而旧式浏览器不支持。在那种情形下，一般会习惯性使用等价的 class:
 
 ```html
 <input type="number" class="number">

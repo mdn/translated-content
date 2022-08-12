@@ -61,7 +61,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 另外，有必要说一下，HTML 中 form 表单默认就是以 post 提交的。它比 get 方式存储量更大、传输更安全。
 
-提交输入（`submit`）将显示为按钮（默认情况下） - 用户可以按此按钮，将其他输入元素包含的数据，上传到服务器（在本例中，只有`team_name`）。表单属性，定义用于发送数据的 HTTP` method`方法，和服务器上数据的目标（`action`）：
+提交输入（`submit`）将显示为按钮（默认情况下） - 用户可以按此按钮，将其他输入元素包含的数据，上传到服务器（在本例中，只有`team_name`）。表单属性，定义用于发送数据的 HTTP `method`方法，和服务器上数据的目标（`action`）：
 
 - `action`: 提交表单时，要发送数据以进行处理的资源/ URL。如果未设置（或设置为空字符串），则表单将提交回当前页面 URL。
 - `method`: 用于发送数据的 HTTP 方法：`POST` 或 `GET`。
@@ -79,15 +79,15 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 如上图所示，构成处理代码所需要做的主要是：
 
-1.  在用户第一次请求时显示默认表单。
+1. 在用户第一次请求时显示默认表单。
 
     - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
 
-2.  接收用户提交的数据，通常是在 HTTP `POST`请求中。
-3.  验证并清理数据。
-4.  如果任何数据无效，请重新显示表单 - 这次使用用户填写的任何值，和问题字段的错误消息。
-5.  如果所有数据都有效，请执行所需的操作（例如，将数据保存在数据库中，发送通知电子邮件，返回搜索结果，上传文件等）
-6.  完成所有操作后，将用户重定向到另一个页面。
+2. 接收用户提交的数据，通常是在 HTTP `POST`请求中。
+3. 验证并清理数据。
+4. 如果任何数据无效，请重新显示表单 - 这次使用用户填写的任何值，和问题字段的错误消息。
+5. 如果所有数据都有效，请执行所需的操作（例如，将数据保存在数据库中，发送通知电子邮件，返回搜索结果，上传文件等）
+6. 完成所有操作后，将用户重定向到另一个页面。
 
 表格处理代码，通常使用`GET`路由，以实现表单的初始显示，以及`POST`路由到同一路径，以处理表单数据的验证和处理。这是将在本教程中使用的方法！Express 本身不提供表单处理操作的任何特定支持，但它可以使用中间件，以处理表单中的`POST`和`GET`参数，并验证/清理它们的值。
 
@@ -216,12 +216,12 @@ router.post('/genre/create', genre_controller.genre_create_post);
 
 以下子文件，将带我们完成向示例应用程序添加所需表单的过程。在进入下一个文件之前，您需要依次阅读并解决每个问题。
 
-1.  [创建种类表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定义我们的页面以创建`Genre`种类对象。
-2.  [创建作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定义用于创建作者对象的页面。
-3.  [创建书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定义页面/表单以创建书本对象。
-4.  [创建书本实例表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定义页面/表单以创建书本实例对象。
-5.  [删除作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定义要删除作者对象的页面。
-6.  [更新书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定义页面以更新书本对象。
+1. [创建种类表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定义我们的页面以创建`Genre`种类对象。
+2. [创建作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定义用于创建作者对象的页面。
+3. [创建书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定义页面/表单以创建书本对象。
+4. [创建书本实例表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定义页面/表单以创建书本实例对象。
+5. [删除作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定义要删除作者对象的页面。
+6. [更新书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定义页面以更新书本对象。
 
 ## 挑战自我
 

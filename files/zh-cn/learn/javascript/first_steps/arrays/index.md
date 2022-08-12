@@ -154,34 +154,34 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 数组由方括号构成，其中包含用逗号分隔的元素列表。
 
-1.  假设我们想在一个数组中存储一个购物清单 - 我们会做一些像下面这样的事情。在您的控制台中输入以下行：
+1. 假设我们想在一个数组中存储一个购物清单 - 我们会做一些像下面这样的事情。在您的控制台中输入以下行：
 
     ```js
     let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping;
     ```
 
-2.  在这种情况下，数组中的每个项目都是一个字符串，但请记住，您可以将任何类型的元素存储在数组中 - 字符串，数字，对象，另一个变量，甚至另一个数组。您也可以混合和匹配项目类型 - 它们并不都是数字，字符串等。尝试下面这些：
+2. 在这种情况下，数组中的每个项目都是一个字符串，但请记住，您可以将任何类型的元素存储在数组中 - 字符串，数字，对象，另一个变量，甚至另一个数组。您也可以混合和匹配项目类型 - 它们并不都是数字，字符串等。尝试下面这些：
 
     ```js
     let sequence = [1, 1, 2, 3, 5, 8, 13];
     let random = ['tree', 795, [0, 1, 2]];
     ```
 
-3.  尝试创建您自己的几个数组，然后再继续往下看。
+3. 尝试创建您自己的几个数组，然后再继续往下看。
 
 ### 访问和修改数组元素
 
 然后，您可以使用括号表示法访问数组中的元素，与 [检索特定字符串字符](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods#检索特定字符串字符) 的方法相同。
 
-1.  在您的控制台中输入以下内容：
+1. 在您的控制台中输入以下内容：
 
     ```js
     shopping[0];
     // returns "bread"
     ```
 
-2.  您还可以简单地为单个数组元素提供新值来修改数组中的元素。例如：
+2. 您还可以简单地为单个数组元素提供新值来修改数组中的元素。例如：
 
     ```js
     shopping[0] = 'tahini';
@@ -191,13 +191,13 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
     > **备注：** 我们以前说过，但还是提醒一下 —— 电脑从 0 开始计数！
 
-3.  请注意，数组中包含数组的话称之为多维数组。您可以通过将两组方括号链接在一起来访问数组内的另一个数组。例如，要访问数组内部的一个项目，即 `random` 数组中的第三个项目（参见上一节），我们可以这样做：
+3. 请注意，数组中包含数组的话称之为多维数组。您可以通过将两组方括号链接在一起来访问数组内的另一个数组。例如，要访问数组内部的一个项目，即 `random` 数组中的第三个项目（参见上一节），我们可以这样做：
 
     ```js
     random[2][2];
     ```
 
-4.  在继续之前，尝试对您的数组示例进行一些修改。玩一玩，看看哪些有效，哪些无效。
+4. 在继续之前，尝试对您的数组示例进行一些修改。玩一玩，看看哪些有效，哪些无效。
 
 ### 获取数组长度
 
@@ -219,9 +219,9 @@ for (let i = 0; i < sequence.length; i++) {
 
 您将在以后的文章中正确地了解循环，但简而言之，这段代码的意思是：
 
-1.  在数组中的元素编号 0 开始循环。
-2.  在元素编号等于数组长度的时候停止循环。这适用于任何长度的数组，但在这种情况下，它将在编号 7 的时候终止循环（这很好，因为我们希望最后一位元素的编号是 6）。
-3.  对于每个元素，使用 [console.log()](/en-US/docs/Web/API/Console/log) 将其打印到浏览器控制台。
+1. 在数组中的元素编号 0 开始循环。
+2. 在元素编号等于数组长度的时候停止循环。这适用于任何长度的数组，但在这种情况下，它将在编号 7 的时候终止循环（这很好，因为我们希望最后一位元素的编号是 6）。
+3. 对于每个元素，使用 [console.log()](/en-US/docs/Web/API/Console/log) 将其打印到浏览器控制台。
 
 ## 一些有用的数组方法
 
@@ -233,20 +233,20 @@ for (let i = 0; i < sequence.length; i++) {
 
 > **备注：** 好吧，从技术上讲，这是一个字符串方法，而不是一个数组方法，但是我们把它放在数组中，因为它在这里很合适。
 
-1.  我们来玩一下这个方法，看看它是如何工作的。首先，在控制台中创建一个字符串：
+1. 我们来玩一下这个方法，看看它是如何工作的。首先，在控制台中创建一个字符串：
 
     ```js
     let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  现在我们用每个逗号分隔它：
+2. 现在我们用每个逗号分隔它：
 
     ```js
     let myArray = myData.split(',');
     myArray;
     ```
 
-3.  最后，尝试找到新数组的长度，并从中检索一些项目：
+3. 最后，尝试找到新数组的长度，并从中检索一些项目：
 
     ```js
     myArray.length;
@@ -255,14 +255,14 @@ for (let i = 0; i < sequence.length; i++) {
     myArray[myArray.length-1]; // the last item in the array
     ```
 
-4.  您也可以使用 {{jsxref("Array.prototype.join()","join()")}} 方法进行相反的操作。尝试以下：
+4. 您也可以使用 {{jsxref("Array.prototype.join()","join()")}} 方法进行相反的操作。尝试以下：
 
     ```js
     let myNewString = myArray.join(',');
     myNewString;
     ```
 
-5.  将数组转换为字符串的另一种方法是使用 {{jsxref("Array.prototype.toString()","toString()")}} 方法。 `toString()` 可以比 `join()` 更简单，因为它不需要一个参数，但更有限制。使用 `join()` 可以指定不同的分隔符（尝试使用与逗号不同的字符运行步骤 4）。
+5. 将数组转换为字符串的另一种方法是使用 {{jsxref("Array.prototype.toString()","toString()")}} 方法。 `toString()` 可以比 `join()` 更简单，因为它不需要一个参数，但更有限制。使用 `join()` 可以指定不同的分隔符（尝试使用与逗号不同的字符运行步骤 4）。
 
     ```js
     let dogNames = ["Rocket","Flash","Bella","Slugger"];
@@ -279,7 +279,7 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 首先，要在数组末尾添加或删除一个项目，我们可以使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}}。
 
-1.  让我们先使用 `push()` —— 注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
+1. 让我们先使用 `push()` —— 注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
 
     ```js
     myArray.push('Cardiff');
@@ -288,7 +288,7 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     myArray;
     ```
 
-2.  当方法调用完成时，将返回数组的新长度。如果要将新数组长度存储在变量中。例如：
+2. 当方法调用完成时，将返回数组的新长度。如果要将新数组长度存储在变量中。例如：
 
     ```js
     var newLength = myArray.push('Bristol');
@@ -296,13 +296,13 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     newLength;
     ```
 
-3.  从数组中删除最后一个元素的话直接使用 `pop()` 就可以。例如：
+3. 从数组中删除最后一个元素的话直接使用 `pop()` 就可以。例如：
 
     ```js
     myArray.pop();
     ```
 
-4.  当方法调用完成时，将返回已删除的项目。你也可以这样做：
+4. 当方法调用完成时，将返回已删除的项目。你也可以这样做：
 
     ```js
     let removedItem = myArray.pop();
@@ -312,14 +312,14 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} 和 {{jsxref("Array.prototype.shift()","shift()")}} 从功能上与 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 完全相同，只是它们分别作用于数组的开始，而不是结尾。
 
-1.  首先 `unshift()` ——尝试一下这个命令：
+1. 首先 `unshift()` ——尝试一下这个命令：
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  现在 `shift()` —— 尝试一下！
+2. 现在 `shift()` —— 尝试一下！
 
     ```js
     let removedItem = myArray.shift();
@@ -331,12 +331,12 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 我们回到前面描述的例子 —— 打印出发票上的产品名称和价格，然后计算总价格并将其印在底部。在下面的可编辑示例中，包含数字的注释 —— 每个注释标记都是您必须向代码添加内容的地方。它们如下：
 
-1.  在 `// number 1` 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。我们希望您将其转换为一个数组，并将其存储在名为 `products` 的数组中。
-2.  与 `// number 2` 注释同一行的是 for 循环的开头。在这行中，我们目前有 `i <= 0`，这是一个条件测试，导致 [for 循环](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）) 立即停止，因为它说“当 `i` 不再小于或等于 0”时停止，而 `i` 从 0 开始。我们希望您使用条件测试来替换它，当 `i` 不再小于 `products` 数组的长度时，该条件测试会停止循环。
-3.  就在 `// number 3` 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。如果您不确定如何执行此操作，请参阅[有用的字符串方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)文章以获得一些帮助，甚至更好的看看本文中的[字符串和数组之间的转换](#字符串和数组之间的转换)部分。
-4.  作为上述代码行的一部分，您还需要将价格从字符串转换为数字。如果你不记得如何做，请查看[第一个字符串](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#创建一个字符串)文章。
-5.  有一个名为 `total` 的变量被创建，并在代码的顶部赋值为 0。在循环内（在 `// number 4` 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。您可能需要一个赋值运算符来执行此操作。
-6.  我们希望您改变 `// number 5` 注释的行，以便使 `itemText` 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。这只是简单的字符串连接，您应该对此很熟悉。
+1. 在 `// number 1` 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。我们希望您将其转换为一个数组，并将其存储在名为 `products` 的数组中。
+2. 与 `// number 2` 注释同一行的是 for 循环的开头。在这行中，我们目前有 `i <= 0`，这是一个条件测试，导致 [for 循环](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）) 立即停止，因为它说“当 `i` 不再小于或等于 0”时停止，而 `i` 从 0 开始。我们希望您使用条件测试来替换它，当 `i` 不再小于 `products` 数组的长度时，该条件测试会停止循环。
+3. 就在 `// number 3` 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。如果您不确定如何执行此操作，请参阅[有用的字符串方法](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)文章以获得一些帮助，甚至更好的看看本文中的[字符串和数组之间的转换](#字符串和数组之间的转换)部分。
+4. 作为上述代码行的一部分，您还需要将价格从字符串转换为数字。如果你不记得如何做，请查看[第一个字符串](/zh-CN/docs/Learn/JavaScript/First_steps/Strings#创建一个字符串)文章。
+5. 有一个名为 `total` 的变量被创建，并在代码的顶部赋值为 0。在循环内（在 `// number 4` 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。您可能需要一个赋值运算符来执行此操作。
+6. 我们希望您改变 `// number 5` 注释的行，以便使 `itemText` 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。这只是简单的字符串连接，您应该对此很熟悉。
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
@@ -422,8 +422,8 @@ window.addEventListener('load', updateCode);
 
 要完成该应用程序，我们需要您：
 
-1.  在 `//number 1` 注释下面添加一行，将输入到搜索框中的当前值添加到数组的开头。这可以使用 `searchInput.value` 检索。
-2.  在 `// number 2` 注释下方添加一行，该行删除数组末尾的当前值。
+1. 在 `//number 1` 注释下面添加一行，将输入到搜索框中的当前值添加到数组的开头。这可以使用 `searchInput.value` 检索。
+2. 在 `// number 2` 注释下方添加一行，该行删除数组末尾的当前值。
 
 ```html hidden
 <div class="output" style="min-height: 150px;">

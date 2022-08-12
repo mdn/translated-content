@@ -72,14 +72,14 @@ block content
 
 种类列表控制器功能，需要获取所有种类实例的列表，然后将这些实例传递给模板进行渲染。
 
-1.  您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
-2.  实现方式几乎与`author_list()`控制器完全相同。
+1. 您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
+2. 实现方式几乎与`author_list()`控制器完全相同。
 
     - 按名称以上升顺序，对结果进行排序。
 
-3.  要呈现的模板，应命名为 **genre_list.pug**。
-4.  要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。
-5.  该视图应与上面的屏幕截图/要求相匹配（这应该与作者列表视图具有非常相似的结构/格式，除了种类没有日期）。
+3. 要呈现的模板，应命名为 **genre_list.pug**。
+4. 要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。
+5. 该视图应与上面的屏幕截图/要求相匹配（这应该与作者列表视图具有非常相似的结构/格式，除了种类没有日期）。
 
 ## 下一步
 

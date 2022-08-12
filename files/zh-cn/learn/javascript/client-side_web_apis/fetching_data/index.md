@@ -49,8 +49,8 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不仅仅是让浏览器重新加载整个页面。让我们来思考这个意义：
 
-1.  去你最喜欢的信息丰富的网站之一，如亚马逊，油管，CNN 等，并加载它。
-2.  现在搜索一些东西，比如一个新产品。主要内容将会改变，但大部分周围的信息，如页眉，页脚，导航菜单等都将保持不变。
+1. 去你最喜欢的信息丰富的网站之一，如亚马逊，油管，CNN 等，并加载它。
+2. 现在搜索一些东西，比如一个新产品。主要内容将会改变，但大部分周围的信息，如页眉，页脚，导航菜单等都将保持不变。
 
 这是一件非常好的事情，因为：
 
@@ -73,8 +73,8 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
 
 `XMLHttpRequest`（通常缩写为 XHR）现在是一个相当古老的技术 - 它是在 20 世纪 90 年代后期由微软发明的，并且已经在相当长的时间内跨浏览器进行了标准化。
 
-1.  为例子做些准备，将 [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) 和四个文本文件 — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — 复制到你计算机上的一个新目录。在这个例子中，我们将通过 XHR 在下拉菜单中选择一首诗（您可能会认识 — "如果谷歌翻译可以翻译的话"）加载另一首诗。
-2.  在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时， 将其值传递给 `updateDisplay()` 函数作为参数。
+1. 为例子做些准备，将 [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) 和四个文本文件 — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — 复制到你计算机上的一个新目录。在这个例子中，我们将通过 XHR 在下拉菜单中选择一首诗（您可能会认识 — "如果谷歌翻译可以翻译的话"）加载另一首诗。
+2. 在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时， 将其值传递给 `updateDisplay()` 函数作为参数。
 
     ```js
     const verseChoose = document.querySelector('select');
@@ -86,7 +86,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     };
     ```
 
-3.  定义 `updateDisplay()` 函数。首先，将下面的代码块放在之前代码块的下面 - 这是函数的空壳：
+3. 定义 `updateDisplay()` 函数。首先，将下面的代码块放在之前代码块的下面 - 这是函数的空壳：
 
     ```js
     function updateDisplay(verse) {
@@ -94,7 +94,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     }
     ```
 
-4.  我们将通过构造一个 指向我们要加载的文本文件的相对 URL 来启动我们的函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同 (除非在值属性中指定了不同的值) — 例如 "Verse 1". 相应的诗歌文本文件是 "verse1.txt", 并与 HTML 文件位于同一目录中，因此只需要文件名即可。
+4. 我们将通过构造一个 指向我们要加载的文本文件的相对 URL 来启动我们的函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同 (除非在值属性中指定了不同的值) — 例如 "Verse 1". 相应的诗歌文本文件是 "verse1.txt", 并与 HTML 文件位于同一目录中，因此只需要文件名即可。
 
     但是，Web 服务器往往是区分大小写的，文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写，删除空格，并在末尾添加.txt。 这可以通过 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, 和 简单的 [string concatenation](/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings) 来完成。在 `updateDisplay()` 函数中添加以下代码：
 
@@ -104,25 +104,25 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     let url = verse + '.txt';
     ```
 
-5.  要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。 你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 `request` 来保持简单。在之前的代码中添加以下内容：
+5. 要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。 你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 `request` 来保持简单。在之前的代码中添加以下内容：
 
     ```js
     let request = new XMLHttpRequest();
     ```
 
-6.  接下来，您需要使用 {{domxref("XMLHttpRequest.open","open()")}} 方法来指定用于从网络请求资源的 [HTTP request method](/en-US/docs/Web/HTTP/Methods) , 以及它的 URL 是什么。我们将在这里使用 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 方法，并将 URL 设置为我们的 `url` 变量。在你上面的代码中添加以下代码：
+6. 接下来，您需要使用 {{domxref("XMLHttpRequest.open","open()")}} 方法来指定用于从网络请求资源的 [HTTP request method](/en-US/docs/Web/HTTP/Methods) , 以及它的 URL 是什么。我们将在这里使用 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 方法，并将 URL 设置为我们的 `url` 变量。在你上面的代码中添加以下代码：
 
     ```js
     request.open('GET', url);
     ```
 
-7.  接下来，我们将设置我们期待的响应类型 — 这是由请求的 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性定义的 — 作为 `text`. 这并不是绝对必要的 — XHR 默认返回文本 —但如果你想在以后获取其他类型的数据，养成这样的习惯是一个好习惯。接下来添加：
+7. 接下来，我们将设置我们期待的响应类型 — 这是由请求的 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性定义的 — 作为 `text`. 这并不是绝对必要的 — XHR 默认返回文本 —但如果你想在以后获取其他类型的数据，养成这样的习惯是一个好习惯。接下来添加：
 
     ```js
     request.responseType = 'text';
     ```
 
-8.  从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件 — 当{{event("onload")}} 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
+8. 从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件 — 当{{event("onload")}} 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， `response` 数据将在 XHR 请求对象的响应属性中可用。
 
     在后面添加以下内容。 你会看到，在 `onload` 事件处理程序中，我们将 `poemDisplay` ( {{htmlelement("pre")}} 元素 ) 的 [`textContent`](/en-US/docs/Web/API/Node/textContent) 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。
 
@@ -132,7 +132,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
     };
     ```
 
-9.  以上都是 XHR 请求的设置 — 在我们告诉它之前，它不会真正运行，这是通过 {{domxref("XMLHttpRequest.send","send()")}} 完成的。在你之前的代码下添加以下内容完成该函数：
+9. 以上都是 XHR 请求的设置 — 在我们告诉它之前，它不会真正运行，这是通过 {{domxref("XMLHttpRequest.send","send()")}} 完成的。在你之前的代码下添加以下内容完成该函数：
 
     ```js
     request.send();
@@ -157,8 +157,8 @@ Fetch API 基本上是 XHR 的一个现代替代品——它是最近在浏览�
 
 让我们将最后一个示例转换为使用 Fetch !
 
-1.  复制您之前完成的示例目录。(如果您没有通过以前的练习，创建一个新的目录。, 然后复制 [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html)和这四个文件 — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt).)
-2.  在 `updateDisplay()` 里找到 XHR 那段代码：
+1. 复制您之前完成的示例目录。(如果您没有通过以前的练习，创建一个新的目录。, 然后复制 [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html)和这四个文件 — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt).)
+2. 在 `updateDisplay()` 里找到 XHR 那段代码：
 
     ```js
     let request = new XMLHttpRequest();
@@ -172,7 +172,7 @@ Fetch API 基本上是 XHR 的一个现代替代品——它是最近在浏览�
     request.send();
     ```
 
-3.  像这样替换掉所有关于 XHR 的代码：
+3. 像这样替换掉所有关于 XHR 的代码：
 
     ```js
     fetch(url).then(function(response) {
@@ -182,7 +182,7 @@ Fetch API 基本上是 XHR 的一个现代替代品——它是最近在浏览�
     });
     ```
 
-4.  在浏览器中加载示例 (通过 web 服务器运行)，它应该与 XHR 版本相同，前提是您运行的是一个现代浏览器。
+4. 在浏览器中加载示例 (通过 web 服务器运行)，它应该与 XHR 版本相同，前提是您运行的是一个现代浏览器。
 
 #### 那么 Fetch 代码中发生了什么呢？
 
@@ -305,10 +305,10 @@ fetch('products.json').then(function(response) {
 
 您可以自己测试失败案例：
 
-1.  制作示例文件的本地副本 (下载并解压[the can-store ZIP file](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true))
-2.  通过 web 服务器运行代码 (如上所述，在 [在 server 端运行例子](#在server端运行例子))
-3.  修改要获取的文件的路径，比如“produc.json'(确保你拼写的是错误的)
-4.  现在在你的浏览器上加载索引文件 (通过 `localhost:8000`) 然后查看你的开发者控制台。你将看到一条类似于“网络请求 products.json 失败，404：找不到文件”的消息
+1. 制作示例文件的本地副本 (下载并解压[the can-store ZIP file](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true))
+2. 通过 web 服务器运行代码 (如上所述，在 [在 server 端运行例子](#在server端运行例子))
+3. 修改要获取的文件的路径，比如“produc.json'(确保你拼写的是错误的)
+4. 现在在你的浏览器上加载索引文件 (通过 `localhost:8000`) 然后查看你的开发者控制台。你将看到一条类似于“网络请求 products.json 失败，404：找不到文件”的消息
 
 第二个 Fetch 块可以在`fetchBlob()` 找到：
 
