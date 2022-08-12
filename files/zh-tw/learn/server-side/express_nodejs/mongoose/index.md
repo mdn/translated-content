@@ -232,7 +232,7 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 內置的驗證器包括：
 
 - 所有[SchemaTypes](http://mongoosejs.com/docs/schematypes.html)都具有內置的[必需](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required)驗證器。這用於指定，是否必須提供該字段才能保存文檔。
-- [Numbers 數字](http://mongoosejs.com/docs/api.html#schema-number-js) 有最小[min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)和最大[max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)驗證器。
+- [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) 數字有最小[min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)和最大[max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)驗證器。
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js)字符串有：
 
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum)枚舉：指定該字段的允許值集合。

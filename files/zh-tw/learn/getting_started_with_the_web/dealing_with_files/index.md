@@ -69,7 +69,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 - 要連結一個目標檔案到在同一個目錄下的 HTML 檔案，只需要檔案名稱就可以了。例如 `my-image.jpg`。
 - 為了要參照到在子目錄下的檔案，在路徑前面加上該目錄的名稱，並接著加上一個斜線(/)。例如： `subdirectory/my-image.jpg`.
-- 為了要連結到一個在 HTML file 的上層目錄的檔案，你需要使用兩個點點(..)。例如：index.html 是在`test-site 這個目錄的一個子目錄下，而 my-image.png` 是在 `test-site 這個目錄`下，HTML file 要參照 `my-image.png` 必須使用 `../my-image.png`。
+- 為了要連結到一個在 HTML file 的上層目錄的檔案，你需要使用兩個點點(..)。例如：index.html 是在 `test-site` 這個目錄的一個子目錄下，而 `my-image.png` 是在 `test-site` 這個目錄下，HTML file 要參照 `my-image.png` 必須使用 `../my-image.png`。
 - 你可以混和著使用以上的規則，例如 `../subdirectory/another-subdirectory/my-image.png`.
 
 至此，你已經知道目前需要知道的了。
