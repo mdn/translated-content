@@ -265,7 +265,7 @@ The final step is to copy in your application and then add the files to your rep
 
 6. Then synchronise your local repository to the Github website, using the following:
 
-    ```
+    ```bash
     git push origin master
     ```
 
