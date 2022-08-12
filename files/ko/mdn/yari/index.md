@@ -8,20 +8,14 @@ tags:
 translation_of: MDN/Kuma
 original_slug: MDN/Kuma
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}{{IncludeSubnav("/ko/docs/MDN")}}쿠마(Kuma)는 MDN Web Docs를 작동시키는 Django 코드 입니다.
 
-<div>{{IncludeSubnav("/ko/docs/MDN")}}</div>
+{{SubpagesWithSummaries}}
 
-<div>쿠마(Kuma)는 MDN Web Docs를 작동시키는 Django 코드 입니다. </div>
+## Kuma와 함께해주세요.
 
-<p>{{SubpagesWithSummaries}}</p>
+함께 하고 싶다면
 
-<h2 id="Kuma와_함께해주세요.">Kuma와 함께해주세요. </h2>
-
-<p>함께 하고 싶다면 </p>
-
-<ul>
- <li><a href="https://github.com/mozilla/kuma">Github의 Kuma 프로젝트</a>를 방문해서 </li>
- <li><a href="https://github.com/mozilla/kuma/blob/master/CONTRIBUTING.md">기여하는 법</a>을 확인하고 </li>
- <li>필요하다면 <a href="http://kuma.readthedocs.org/en/latest/">kuma 문서 전체</a>를 차근차근 살펴보세요. </li>
-</ul>
+- [Github의 Kuma 프로젝트](https://github.com/mozilla/kuma)를 방문해서
+- [기여하는 법](https://github.com/mozilla/kuma/blob/master/CONTRIBUTING.md)을 확인하고
+- 필요하다면 [kuma 문서 전체](http://kuma.readthedocs.org/en/latest/)를 차근차근 살펴보세요.
