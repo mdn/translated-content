@@ -92,7 +92,7 @@ alert(date.toLocaleDateString(["ban", "id"]));
 
 ### 例子：使用`options`
 
-可以使用 `options `参数来自定义 `toLocaleDateString` 方法返回的字符串。
+可以使用 `options` 参数来自定义 `toLocaleDateString` 方法返回的字符串。
 
 ```js
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

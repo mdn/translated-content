@@ -19,8 +19,8 @@ translation_of: Web/JavaScript/Reference/Statements/export
 
 存在两种 exports 导出方式：
 
-1.  命名导出（每个模块包含任意数量）
-2.  默认导出（每个模块包含一个）
+1. 命名导出（每个模块包含任意数量）
+2. 默认导出（每个模块包含一个）
 
 ```js
 // 导出单个特性

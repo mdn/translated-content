@@ -15,8 +15,8 @@ translation_of: Web/CSS/z-index
 
 对于一个已经定位的盒子（即其 `position` 属性值不是 `static`，这里要注意的是 CSS 把元素看作盒子），`z-index` 属性指定：
 
-1.  盒子在当前堆叠上下文中的堆叠层级。
-2.  盒子是否创建一个本地堆叠上下文。
+1. 盒子在当前堆叠上下文中的堆叠层级。
+2. 盒子是否创建一个本地堆叠上下文。
 
 ## 语法
 
@@ -36,7 +36,7 @@ z-index: initial;
 z-index: unset;
 ```
 
-`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index$edit#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index$edit#<integer>)。
+`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index$edit#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index$edit#integer)。
 
 ### 取值
 

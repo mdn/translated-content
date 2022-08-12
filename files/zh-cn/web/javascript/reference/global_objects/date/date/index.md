@@ -24,16 +24,16 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 There are four basic forms for the `Date()` constructor:
 
-1.  #### No parameters
+1. #### No parameters
 
     When no parameters are provided, the newly-created `Date` object represents the current date and time as of the time of instantiation.
 
-2.  #### Time value or timestamp number
+2. #### Time value or timestamp number
 
     - `value`
       - : An integer value representing the number of milliseconds since January 1, 1970, 00:00:00 UTC (the ECMAScript epoch, equivalent to the UNIX epoch), with leap seconds ignored. Keep in mind that most [UNIX Timestamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) functions are only accurate to the nearest second.
 
-3.  #### Timestamp string
+3. #### Timestamp string
 
     - `dateString`
 
@@ -44,7 +44,7 @@ There are four basic forms for the `Date()` constructor:
         > - Support for [RFC 2822](https://tools.ietf.org/html/rfc2822) format strings is by convention only.
         > - Support for ISO 8601 formats differs in that date-only strings (e.g. `"1970-01-01"`) are treated as UTC, not local.
 
-4.  #### Individual date and time component values
+4. #### Individual date and time component values
 
     Given at least a year and month, this form of `Date()` returns a `Date` object whose component values (year, month, day, hour, minute, second, and millisecond) all come from the following parameters. Any missing fields are given the lowest possible value (`1` for `day` and `0` for every other component).
 

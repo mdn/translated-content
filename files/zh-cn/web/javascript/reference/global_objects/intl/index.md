@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 - `"de-AT"`：`在奥地利使用的德语 (primary language with country code)。`
 - `"zh-Hans-CN"`：在中国使用的简体中文 (primary language with script and country codes)。
 
-在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在[ IANA 语言子标记注册](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)中找到。
+在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在[IANA 语言子标记注册](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) 中找到。
 
 BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Collator")}}，{{jsxref("NumberFormat")}}，或者 {{jsxref("DateTimeFormat")}} 对象。例如：
 

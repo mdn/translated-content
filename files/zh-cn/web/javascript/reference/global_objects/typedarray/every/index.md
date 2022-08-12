@@ -27,7 +27,7 @@ typedarray.every(callback[, thisArg])
       - : every 在其上调用的类型化数组
 
 - `thisArg`
-  - : 可选，执行 `callback `时的 `this` 值。
+  - : 可选，执行 `callback` 时的 `this` 值。
 
 ### 返回值
 

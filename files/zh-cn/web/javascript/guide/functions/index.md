@@ -218,9 +218,9 @@ getScore(); // 返回 "Chamahk scored 5"
 
 一个函数可以指向并调用自身。有三种方法可以达到这个目的：
 
-1.  函数名
-2.  [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  作用域下的一个指向该函数的变量名
+1. 函数名
+2. [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. 作用域下的一个指向该函数的变量名
 
 例如，思考一下如下的函数定义：
 
@@ -232,9 +232,9 @@ var foo = function bar() {
 
 在这个函数体内，以下的语句是等价的：
 
-1.  `bar()`
-2.  `arguments.callee()` **（译者注：ES5 禁止在严格模式下使用此属性）**
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()` **（译者注：ES5 禁止在严格模式下使用此属性）**
+3. `foo()`
 
 调用自身的函数我们称之为*递归函数*。在某种意义上说，递归近似于循环。两者都重复执行相同的代码，并且两者都需要一个终止条件（避免无限循环或者无限递归）。例如以下的循环：
 
@@ -366,9 +366,9 @@ A(1); // logs 6 (1 + 2 + 3)
 
 在这个例子里面，C 可以访问 B 的 y 和 A 的 x。这是因为：
 
-1.  B 形成了一个包含 A 的闭包，B 可以访问 A 的参数和变量
-2.  C 形成了一个包含 B 的闭包
-3.  B 包含 A，所以 C 也包含 A，C 可以访问 B 和 A 的参数和变量。换言之，C 用这个顺序链接了 B 和 A 的作用域
+1. B 形成了一个包含 A 的闭包，B 可以访问 A 的参数和变量
+2. C 形成了一个包含 B 的闭包
+3. B 包含 A，所以 C 也包含 A，C 可以访问 B 和 A 的参数和变量。换言之，C 用这个顺序链接了 B 和 A 的作用域
 
 反过来却不是这样。A 不能访问 C，因为 A 看不到 B 中的参数和变量，C 是 B 中的一个变量，所以 C 是 B 私有的。
 

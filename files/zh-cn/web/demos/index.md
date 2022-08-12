@@ -81,7 +81,7 @@ Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用�
 
 旧项目：
 
-- [CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG. ](https://s.codepen.io/SoftwareRVG/debug/OXkOWj)(debug 模式)
+- [CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG.](https://s.codepen.io/SoftwareRVG/debug/OXkOWj) (debug 模式)
 - [Bootstrap Contact Form Design](https://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
 - [CSS Paralax Forest](http://www.lesmoffat.co.uk/folio/forest/forest.html)
 - [Responsive Login Page Design](http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html)

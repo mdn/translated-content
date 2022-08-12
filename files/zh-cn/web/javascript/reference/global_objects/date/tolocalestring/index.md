@@ -21,7 +21,7 @@ dateObj.toLocaleString([locales [, options]])
 
 {{page('zh-CN/docs/JavaScript/Reference/Global_Objects/DateTimeFormat','Parameters')}}
 
-每个日期时间组件的默认值都是 undefined，但是如果 `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` 属性都是 `undefined`, 那么 `year`, `month`, `day`, `hour`, ` minute 和 ``second` 的值都被认为是 "numeric".
+每个日期时间组件的默认值都是 undefined，但是如果 `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` 属性都是 `undefined`, 那么 `year`, `month`, `day`, `hour`, `minute` 和 `second` 的值都被认为是 "numeric".
 
 ### 返回值
 
@@ -94,7 +94,7 @@ alert(date.toLocaleString(["ban", "id"]));
 
 ### 例子：使用 `options` 参数
 
-可以使用 `options `参数来自定义 `toLocaleString` 方法返回的字符串。
+可以使用 `options` 参数来自定义 `toLocaleString` 方法返回的字符串。
 
 ```js
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

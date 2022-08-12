@@ -37,7 +37,7 @@ str.match(regexp)
 
 ## 描述
 
-如果正则表达式不包含 `g `标志，`str.match()` 将返回与 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. 相同的结果。
+如果正则表达式不包含 `g` 标志，`str.match()` 将返回与 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}. 相同的结果。
 
 ### 参看：`RegExp` 方法
 

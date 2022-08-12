@@ -47,7 +47,7 @@ p.then(value => {
 - 返回一个已经是拒绝状态的 Promise，那么 `then` 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的 Promise 的拒绝状态回调函数的参数值。
 - 返回一个未定状态（`pending`）的 Promise，那么 `then` 返回 Promise 的状态也是未定的，并且它的终态与那个 Promise 的终态相同；同时，它变为终态时调用的回调函数参数与那个 Promise 变为终态时的回调函数的参数是相同的。
 
-下面是一个演示` then` 方法的异步性的例子。
+下面是一个演示 `then` 方法的异步性的例子。
 
 ```js
 // using a resolved promise, the 'then' block will be triggered instantly,

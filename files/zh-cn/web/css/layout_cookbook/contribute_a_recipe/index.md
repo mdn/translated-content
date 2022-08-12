@@ -15,17 +15,17 @@ translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 
 一份 recipe 包括以下内容：
 
-1.  一个动态的示例，存储在 [CSS Examples GitHub repo](https://github.com/mdn/css-examples) 之上。
-2.  这份示例的可供下载版本，同样也存储在 CSS Examples repo 之上。
-3.  该网站的某个页面在 [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) 上应详细说明：
+1. 一个动态的示例，存储在 [CSS Examples GitHub repo](https://github.com/mdn/css-examples) 之上。
+2. 这份示例的可供下载版本，同样也存储在 CSS Examples repo 之上。
+3. 该网站的某个页面在 [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) 上应详细说明：
 
-    1.  要求
-    2.  recipe
-    3.  做出的选择
-    4.  任何有用的反馈或供选择的方法
-    5.  任何无障碍访问问题
-    6.  浏览器兼容性
-    7.  其他资源
+    1. 要求
+    2. recipe
+    3. 做出的选择
+    4. 任何有用的反馈或供选择的方法
+    5. 任何无障碍访问问题
+    6. 浏览器兼容性
+    7. 其他资源
 
 ### 1. 建立自己的模式
 
@@ -55,9 +55,9 @@ If you have forked the repo and therefore have our CSS and JavaScript files alon
 
 #### Useful tips
 
-1.  Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
-2.  If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
-3.  You can adjust the height of the textareas by changing the height in the inline styles.
+1. Do not indent the CSS and HTML inside the textareas; instead bump it up against the start of the lines. This will look better when it is rendered.
+2. If you have any required images, pop them into the directory with the examples. Or you are welcome to use any already there.
+3. You can adjust the height of the textareas by changing the height in the inline styles.
 
 ### 3. 创建一份可供下载的版本
 

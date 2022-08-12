@@ -13,7 +13,7 @@ translation_of: Web/CSS/text-decoration
 
 `text-decoration` 这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线/删除线 或 闪烁）它是 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, 和新出现的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
-文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中` <p>This text has <em>some emphasized words</em> in it.</p>，应用样式 ``p { text-decoration: underline }` 会对整个段落添加下划线，此时再添加样式 `em { text-decoration: none }` 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 `em { text-decoration: overline }` 则会在\<em>标记的文字上再添加上这种 overline 样式。
+文本修饰属性会延伸到子元素。这意味着如果祖先元素指定了文本修饰属性，子元素则不能将其删除。例如，在如下标记中 `<p>This text has <em>some emphasized words</em> in it.</p>`，应用样式 `p { text-decoration: underline }` 会对整个段落添加下划线，此时再添加样式 `em { text-decoration: none }` 则不会引起任何改变，整个段落仍然有下划线修饰。然而，新加样式 `em { text-decoration: overline }` 则会在\<em>标记的文字上再添加上这种 overline 样式。
 
 ## 语法
 

@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 {{JsSidebar("Operators")}}
 
-可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，` Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。 一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
+可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，`Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。 一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
 
 ## 语法
 

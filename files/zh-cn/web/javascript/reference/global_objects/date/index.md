@@ -46,7 +46,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 #### 分别提供日期与时间的每一个成员
 
-当至少提供了年份与月份时，这一形式的 `Date() `返回的 `Date `对象中的每一个成员都来自下列参数。没有提供的成员将使用最小可能值（对日期为`1`，其他为`0`）。
+当至少提供了年份与月份时，这一形式的 `Date()` 返回的 `Date` 对象中的每一个成员都来自下列参数。没有提供的成员将使用最小可能值（对日期为`1`，其他为`0`）。
 
 - `year`
   - : 表示年份的整数值。 0 到 99 会被映射至 1900 年至 1999 年，其它值代表实际年份。参见 [示例](#例子：将两位数年份映射为_1900_-_1999_年)。
@@ -102,7 +102,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ## JavaScript `Date` 实例
 
-所有的 `Date` 实例都继承自 {{jsxref("Date.prototype")}}。修改 `Date `构造函数的原型对象会影响到所有的 `Date` 实例。
+所有的 `Date` 实例都继承自 {{jsxref("Date.prototype")}}。修改 `Date` 构造函数的原型对象会影响到所有的 `Date` 实例。
 
 ### 实例属性
 

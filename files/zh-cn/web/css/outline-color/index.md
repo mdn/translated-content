@@ -9,7 +9,7 @@ translation_of: Web/CSS/outline-color
 
 {{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
-大多时候使用{{cssxref("outline")}}而不是` outline-style`,` outline-width 和 `` outline-color`会更方便。
+大多时候使用{{cssxref("outline")}}而不是 `outline-style`, `outline-width` 和 `outline-color`会更方便。
 
 元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出。不像 border，轮廓在元素的 frame 外绘制并且可能与其他元素重叠。而 border 不会出现这种现象 (除非故意).
 

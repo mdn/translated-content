@@ -47,8 +47,6 @@ translation_of: Web/CSS/:dir
 
 {{Compat("css.selectors.dir")}}
 
-##
-
 ## 参见
 
 - 语言相关伪类: {{ cssxref(":lang") }}, {{ cssxref(":dir") }}

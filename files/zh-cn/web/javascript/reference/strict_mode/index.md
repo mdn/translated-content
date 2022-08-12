@@ -13,9 +13,9 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
 
-1.  严格模式通过**抛出错误**来消除了一些原有**静默错误**。
-2.  严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**。
-3.  严格模式**禁用了**在 ECMAScript 的未来版本中可能会定义的一些语法。
+1. 严格模式通过**抛出错误**来消除了一些原有**静默错误**。
+2. 严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**。
+3. 严格模式**禁用了**在 ECMAScript 的未来版本中可能会定义的一些语法。
 
 如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
 
@@ -39,7 +39,7 @@ var v = "Hi!  I'm a strict mode script!";
 
 ### 为函数开启严格模式
 
-同样地，要给某个函数开启严格模式，得把 `"use strict";` (或 `'use strict'; `) 声明*一字不漏地*放在函数体所有语句之前。
+同样地，要给某个函数开启严格模式，得把 `"use strict";` (或 `'use strict';`) 声明*一字不漏地*放在函数体所有语句之前。
 
 ```js
 function strict() {

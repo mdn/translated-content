@@ -42,7 +42,7 @@ function.call(thisArg, arg1, arg2, ...)
 
 ### 使用 `call` 方法调用父构造函数
 
-在一个子构造函数中，你可以通过调用父构造函数的 `call` 方法来实现继承，类似于 `Java` 中的写法。下例中，使用 `Food` 和 `Toy `构造函数创建的对象实例都会拥有在 `Product` 构造函数中添加的 `name` 属性和 `price` 属性，但 `category` 属性是在各自的构造函数中定义的。
+在一个子构造函数中，你可以通过调用父构造函数的 `call` 方法来实现继承，类似于 `Java` 中的写法。下例中，使用 `Food` 和 `Toy` 构造函数创建的对象实例都会拥有在 `Product` 构造函数中添加的 `name` 属性和 `price` 属性，但 `category` 属性是在各自的构造函数中定义的。
 
 ```js
 function Product(name, price) {

@@ -22,7 +22,7 @@ Math.cosh(x)
 
 ## 描述
 
-由于`cosh()` 是 Math 的静态函数，只需通过`Math.cosh() `调用，而不用通过创建 Math 对象来调用。
+由于`cosh()` 是 Math 的静态函数，只需通过`Math.cosh()` 调用，而不用通过创建 Math 对象来调用。
 
 ## 示例
 

@@ -16,7 +16,7 @@ Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一
   - : 本文将为您引导完成 ajax 基础知识，并为您提供两个简单的实际操作示例。
 - [使用 XMLHttpRequest API](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
 
-  - : {{domxref("XMLHttpRequest")}}[ API](/zh-CN/docs/Web/API/XMLHttpRequest)是 Ajax 的核心。本文将解释如何使用一些 Ajax 技术，比如：
+  - : {{domxref("XMLHttpRequest")}} [API](/zh-CN/docs/Web/API/XMLHttpRequest)是 Ajax 的核心。本文将解释如何使用一些 Ajax 技术，比如：
 
     - [分析和操纵服务器响应](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Handling_responses)
     - [监控请求过程](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
@@ -38,7 +38,7 @@ Asynchronous JavaScript + XML（异步 JavaScript 和 XML）, 其本身不是一
   - : 如何从字符串，文件或者 Javascript 中解析 XML 文档，以及如何将 XML 文档序列转化为字符串，Javascript 对象树 (JSON) 或者文件 。
 - [XPath](/zh-CN/docs/Web/XPath)
   - : XPath 代表**X**ML **Path** Language，它使用非 XML 语法，提供了一种灵活的方式来寻址（指向）XML 文档的不同部分。除此之外，它还可以用于测试文档中的寻址节点，以确定他们是否匹配模式。
-- {{domxref("FileReader")}}[ API](/zh-CN/docs/WEB/API/FileReader)
+- {{domxref("FileReader")}} [API](/zh-CN/docs/WEB/API/FileReader)
   - : `FileReader` API 允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓存）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。文件对象可以从用户选择文件后的 {{HTMLElement("input")}} 元素的 {{domxref("FileList")}} 对象中获取，也可以从拖放操作的 {{domxref("DataTransfer")}} 对象获取，或者从{{domxref("HTMLCanvasElement")}} 的`mozGetAsFile()` API 获取。
 - [XMLHttpRequest 对 HTML 的支持](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - : W3C [XMLHttpRequest](https://xhr.spec.whatwg.org/)规范向 XMLHttpRequest 添加了 HTML 解析支持，XMLHttpRequest 原本只支持 XML 解析。此功能允许 Web 应用程序使用 XMLHttpRequest 获取 HTML 资源作为解析的 DOM。

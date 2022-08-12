@@ -27,7 +27,7 @@ dateObj.getHours()
 
 ### 例子：使用`getHours`方法
 
-下面第二条语句，基于日期对象 `Xmas95 `的值，把 23 赋值给了变量 `hours。`
+下面第二条语句，基于日期对象 `Xmas95` 的值，把 23 赋值给了变量 `hours。`
 
 ```js
 var Xmas95 = new Date("December 25, 1995 23:15:00");

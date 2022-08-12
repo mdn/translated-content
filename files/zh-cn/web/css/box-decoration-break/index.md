@@ -85,7 +85,7 @@ box-decoration-break: clone;
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-你可以[ 尝试这两个例子](https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html).
+你可以 [尝试这两个例子](https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html).
 
 下面是一个使用大圆角值的内联元素示例。第二个“iM”在“i”和“M”之间有一个分界线，作为比较，第一个“iM”是没有换行符的。请注意，如果您将两个片段的呈现水平地排列在一起，就会导致非分段呈现。
 

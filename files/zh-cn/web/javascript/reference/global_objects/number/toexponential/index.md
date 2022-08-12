@@ -26,7 +26,7 @@ numObj.toExponential(fractionDigits)
 
 对数值字面量使用 `toExponential()` 方法，且该数值没有小数点和指数时，应该在该数值与该方法之间隔开一个空格，以避免点号被解释为一个小数点。也可以使用两个点号调用该方法。
 
-如果一个数值的小数位数多余 `fractionDigits` 参数所提供的，则该数值将会在 `fractionDigits` 指定的小数位数处四舍五入。可以查看 {{jsxref("Number.toFixed", "toFixed()")}} 方法描述中关于四舍五入的讨论，同样应用于 `toExponential() `方法。
+如果一个数值的小数位数多余 `fractionDigits` 参数所提供的，则该数值将会在 `fractionDigits` 指定的小数位数处四舍五入。可以查看 {{jsxref("Number.toFixed", "toFixed()")}} 方法描述中关于四舍五入的讨论，同样应用于 `toExponential()` 方法。
 
 ### 异常
 
