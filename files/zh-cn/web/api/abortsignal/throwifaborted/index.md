@@ -4,7 +4,7 @@ slug: Web/API/AbortSignal/throwIfAborted
 ---
 {{APIRef("DOM")}}
 
-如果 signal 已经被中止，**`throwIfAborted()`** 方法抛出 signal 中止的 {{domxref("AbortSignal.reason", "reason")}}；否则它什么也不做。
+如果 signal 已经被中止，则 **`throwIfAborted()`** 方法抛出中止的 {{domxref("AbortSignal.reason", "reason")}}；否则它什么也不做。
 
 需要支持中止的 API 可以接收一个 {{domxref("AbortSignal")}} 对象并且使用 `throwIfAborted()` 来测试并且当 [`abort`](/zh-CN/docs/Web/API/AbortSignal/abort_event) 事件发出信号时抛出。
 
