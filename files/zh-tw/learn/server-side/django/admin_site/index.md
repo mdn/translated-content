@@ -322,8 +322,8 @@ In this case all we've done is declare our tabular inline class, which just adds
 
 在本節中我們學到了很多東西，所以現在該您嘗試一些事情了。
 
-1.  對於`BookInstance`列表視圖(list view)，添加代碼以顯示`books`，`status`，`due back date` 和 `id`（而不是默認的\_\_str \_\_（）文本）。
-2.  使用與`Book/BookInstance`相同的方法將`Book`項目的內聯列表添加到`Author` 的詳細視圖(detail view)中。
+1. 對於`BookInstance`列表視圖(list view)，添加代碼以顯示`books`，`status`，`due back date` 和 `id`（而不是默認的\_\_str \_\_（）文本）。
+2. 使用與`Book/BookInstance`相同的方法將`Book`項目的內聯列表添加到`Author` 的詳細視圖(detail view)中。
 
 ## 小結
 

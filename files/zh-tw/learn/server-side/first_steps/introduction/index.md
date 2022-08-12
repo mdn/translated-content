@@ -109,9 +109,9 @@ original_slug: Learn/Server-side/First_steps/介紹
 
 > **備註：** Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:
 >
-> 1.  Go to [Amazon](https://www.amazon.com) or some other e-commerce site.
-> 2.  Search for a number of keywords and note how the page structure doesn't change, even though the results do.
-> 3.  Open two or three different products. Note again how they have a common structure and layout, but the content for different products has been pulled from the database.
+> 1. Go to [Amazon](https://www.amazon.com) or some other e-commerce site.
+> 2. Search for a number of keywords and note how the page structure doesn't change, even though the results do.
+> 3. Open two or three different products. Note again how they have a common structure and layout, but the content for different products has been pulled from the database.
 >
 > For a common search term ("fish", say) you can see literally millions of returned values. Using a database allows these to be stored and shared efficiently, and it allows the presentation of the information to be controlled in just one place.
 
@@ -125,9 +125,9 @@ original_slug: Learn/Server-side/First_steps/介紹
 >
 > Google search results are optimized based on previous searches.
 >
-> 1.  Go to [Google search](https:\\google.com).
-> 2.  Search for "football".
-> 3.  Now try typing "favourite" in the search box and observe the autocomplete search predictions.
+> 1. Go to [Google search](https:\\google.com).
+> 2. Search for "football".
+> 3. Now try typing "favourite" in the search box and observe the autocomplete search predictions.
 >
 > Coincidence? Nada!
 

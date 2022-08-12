@@ -106,8 +106,8 @@ The function calls on the line are run first and their return values substituted
 
 Let's have a go at writing our own functions featuring return values.
 
-1.  First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
-2.  Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
+1. First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
+2. Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
 
     ```js
     function squared(num) {
@@ -130,7 +130,7 @@ Let's have a go at writing our own functions featuring return values.
 
     The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
 
-3.  Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
+3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
     ```js
     input.onchange = function() {
@@ -151,7 +151,7 @@ Let's have a go at writing our own functions featuring return values.
 
     If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
-4.  Save your code, load it in a browser, and try it out.
+4. Save your code, load it in a browser, and try it out.
 
 > **備註：** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
 

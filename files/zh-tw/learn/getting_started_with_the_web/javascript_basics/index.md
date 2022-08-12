@@ -34,22 +34,22 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 
 > **警告：** 如果您還沒有學習過先前的課程，[請您下載這個範例程式碼](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip)，並以此開始練習。
 
-1.  首先，進入您測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
-2.  接著，開啟 `index.html` 檔案，並在 `</body>` 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
+1. 首先，進入您測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
+2. 接著，開啟 `index.html` 檔案，並在 `</body>` 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
 
     ```html
     <script src="scripts/main.js"></script>
     ```
 
-3.  我們做的事情，基本上跟新增一個 CSS 的 {{htmlelement("link")}} 元素是相同的概念 — 我們將 JavaScript 給導入這個頁面中，讓她來影響 HTML（以及 CSS、還有任何頁面上的東西）。
-4.  再來我們把以下的程式碼新增到 `main.js` 檔案內：
+3. 我們做的事情，基本上跟新增一個 CSS 的 {{htmlelement("link")}} 元素是相同的概念 — 我們將 JavaScript 給導入這個頁面中，讓她來影響 HTML（以及 CSS、還有任何頁面上的東西）。
+4. 再來我們把以下的程式碼新增到 `main.js` 檔案內：
 
     ```js
     var myHeading = document.querySelector('h1');
     myHeading.textContent = 'Hello world!';
     ```
 
-5.  現在請您將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。您應該會看到以下的內容：![](hello-world.png)
+5. 現在請您將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。您應該會看到以下的內容：![](hello-world.png)
 
 > **備註：** 我們選擇將 {{htmlelement("script")}} 元素放在接近 HTML 檔案底部的原因，是因為瀏覽器是依照程式碼存在檔案中的順序來讀取 HTML 檔案的。如果 JavaScript 先被瀏覽器讀取了，那她應該要去影響她之後的 HTML 程式碼，但有時候卻行不通，因為她比應該產生改變的 HTML 還要早被讀取到。因此，把她放在接近檔案底部的位置，通常都會是一個不錯的策略。
 
@@ -286,12 +286,13 @@ if (iceCream === 'chocolate') {
 
 函式（{{Glossary("Function", "Functions")}}）是一種將需要重複使用的功能打包裝起來的方法，所以當要再次執行這些功能的時候，就可以呼叫這個函式來達成，而不是一再的重新撰寫程式碼。您在先前的篇幅中其實已經看過一些函式了，例如：
 
-1.  ```js
-    let myVariable = document.querySelector('h1');
-    ```
-2.  ```js
-    alert('hello!');
-    ```
+```js
+let myVariable = document.querySelector('h1');
+```
+
+```js
+alert('hello!');
+```
 
 這些函式是瀏覽器為您內建的，您可以自由地使用。
 
@@ -316,7 +317,7 @@ multiply(20,20);
 multiply(0.5,3);
 ```
 
-> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result `變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope)）
+> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope)）
 
 ### 事件（Events）
 
@@ -353,9 +354,9 @@ myHTML.onclick = function() {};
 
 在這個小節中，我們將在這個網頁裡添加一個圖片，以及一些簡單的 JavaScript，當這個圖片被滑鼠點選的時候，就會在兩個圖片之間互相切換。
 
-1.  首先，先去找張您可以為您的網頁增添光彩的圖片。請盡量找一張尺寸跟第一張圖相同的圖片、或至少是張相似尺寸的圖片。
-2.  將圖片存放到 `images` 資料夾內。
-3.  編輯您的 `main.js` 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
+1. 首先，先去找張您可以為您的網頁增添光彩的圖片。請盡量找一張尺寸跟第一張圖相同的圖片、或至少是張相似尺寸的圖片。
+2. 將圖片存放到 `images` 資料夾內。
+3. 編輯您的 `main.js` 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
 
     ```js
     var myImage = document.querySelector('img');
@@ -370,34 +371,34 @@ myHTML.onclick = function() {};
     }
     ```
 
-4.  請將全部檔案儲存，並用瀏覽器開啟 `index.html`。現在請您點選圖片，她應該會切換成另外一張！
+4. 請將全部檔案儲存，並用瀏覽器開啟 `index.html`。現在請您點選圖片，她應該會切換成另外一張！
 
 在這裡，我們把一個圖片元素的參考存進了 `myImage` 變數裡。接著，我們把這個變數的 `onclick` 事件處理器設定為一個匿名函式。現在，每當這個圖片被點選一次：
 
-1.  我們會去取得圖片中 `src` 屬性的數值
-2.  我們用一個條件判斷式，來檢查 `src` 的數值是否跟原始圖片的位址相同：
+1. 我們會去取得圖片中 `src` 屬性的數值
+2. 我們用一個條件判斷式，來檢查 `src` 的數值是否跟原始圖片的位址相同：
 
-    1.  如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
-    2.  如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
+    1. 如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
+    2. 如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
 
 ### 添加個客製化的歡迎訊息
 
 接著我們再來添加一些程式碼，在使用者瀏覽這個網頁的時候，將網頁標題改為客製化的歡迎訊息。這個歡迎訊息會一直保留著，直到使用者離開這個網頁為止。我們也會添加個切換使用者的選項，並且一併更改歡迎訊息。
 
-1.  編輯 `index.html` 檔案，並將下列程式碼置於 {{htmlelement("script")}} 元素之前：
+1. 編輯 `index.html` 檔案，並將下列程式碼置於 {{htmlelement("script")}} 元素之前：
 
     ```html
     <button>Change user</button>
     ```
 
-2.  編輯 `main.js` 檔案，並將下列程式碼一字不漏地置於檔案的最末端 — 這些程式碼將會取得新按鈕、標題的參考，並把它們存在變數裡：
+2. 編輯 `main.js` 檔案，並將下列程式碼一字不漏地置於檔案的最末端 — 這些程式碼將會取得新按鈕、標題的參考，並把它們存在變數裡：
 
     ```js
     var myButton = document.querySelector('button');
     var myHeading = document.querySelector('h1');
     ```
 
-3.  現在，將以下的函式加進去以設定客製化的歡迎訊息 — 這些函式目前還不會產生作用，但我們等一下會用到她們：
+3. 現在，將以下的函式加進去以設定客製化的歡迎訊息 — 這些函式目前還不會產生作用，但我們等一下會用到她們：
 
     ```js
     function setUserName() {
@@ -409,7 +410,7 @@ myHTML.onclick = function() {};
 
     這個函式包含了一個會產生一個對話視窗的 [`prompt()`](/zh-TW/docs/Web/API/Window.prompt) 函式，有點像 `alert()`，只是 `prompt()` 會要求使用者輸入一些資料，並在使用者點選`確認`之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 `localStorage` 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 `setItem()` 函式來建立並且把資料儲存到一個名稱為 `'name'` 的變數裡，再把包含者用者名字的 `myName` 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 `innerHTML` 特性：
 
-4.  接著，加入這個 `if ... else` 區塊 — 因為她會在程式一開始被讀取的時候就被啟用，我們稱她為初始化程式碼：
+4. 接著，加入這個 `if ... else` 區塊 — 因為她會在程式一開始被讀取的時候就被啟用，我們稱她為初始化程式碼：
 
     ```js
     if(!localStorage.getItem('name')) {
@@ -422,7 +423,7 @@ myHTML.onclick = function() {};
 
     這個區塊一開始使用了邏輯負運算子（邏輯非）來檢查 `name` 這個物件是否存在。如果沒有，那就執行 `setUserName()` 這個函式並且創造她。如果有了（例如：使用者已經在上一次造訪網頁時就設定過了），我們就使用 `getItem()` 函式來取得儲存的名字，並且將標題的 `innerHTML` 特性設定為一個字串加上使用者的名字，也就是我們在 `setUserName()` 函式裡做的事情。
 
-5.  最後，把以下的 `onclick` 事件處理器跟按鈕綁定，如此一來，每次點選按鈕時就會執行 `setUserName()`。這將允許使用者透過點選那個按鈕來重新設定一個新的名字：
+5. 最後，把以下的 `onclick` 事件處理器跟按鈕綁定，如此一來，每次點選按鈕時就會執行 `setUserName()`。這將允許使用者透過點選那個按鈕來重新設定一個新的名字：
 
     ```js
     myButton.onclick = function() {
@@ -460,7 +461,7 @@ function setUserName() {
 
 ![](website-screen-scripted.png)
 
-如果在過程中遇到了任何問題，您也可以隨時把您的成品與我們 [放在 Github 上的範例 ](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)相互對照。
+如果在過程中遇到了任何問題，您也可以隨時把您的成品與我們 [放在 Github 上的範例](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js) 相互對照。
 
 在此，我們只稍稍體驗了 JavaScript 的一些皮毛。如果您非常享受這段學習的過程，並想要繼續深究，請您繼續瀏覽我們製作的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)。
 
