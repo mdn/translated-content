@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong><code>class</code> 선언</strong>은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.</p>
+<p><strong><code>class</code> 선언</strong>은 프로토타입 기반 상속을 사용하여, 주어진 이름의 새로운 클래스를 만듭니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-class.html")}}</div>
 
@@ -29,13 +29,13 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <p>클래스 본문은 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서 실행됩니다. 생성자 속성은 선택 사항입니다..</p>
 
-<p>클래스 선언은 {{jsxref("Statements/function", "함수 선언", "", 0)}}과 달리 {{Glossary("Hoisting", "호이스팅")}}의 대상이 아닙니다.</p>
+<p>클래스 선언은 {{jsxref("Statements/function", "함수 선언", "", 0)}}과 달리 {{Glossary("Hoisting", "호이스팅")}}의 대상이 아닙니다.</p>
 
 <h2 id="예제">예제</h2>
 
 <h3 id="간단한_클래스_선언">간단한 클래스 선언</h3>
 
-<p>다음 예제는 우선 <code>Polygon</code> 클래스를 정의하고, <code>Square</code>라는 이름의 새로운 클래스가 <code>Polygon</code>을 상속합니다. 생성자 내부의 <code>super()</code>는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.</p>
+<p>다음 예제는 우선 <code>Polygon</code> 클래스를 정의하고, <code>Square</code>라는 이름의 새로운 클래스가 <code>Polygon</code>을 상속합니다. 생성자 내부의 <code>super()</code>는 생성자 내에서만, 그리고 {{jsxref("Operators/this", "this")}} 키워드를 사용하기 전에만 쓸 수 있다는 점을 주의하세요.</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = 'Square';
   }
 }</pre>
 
@@ -68,41 +68,11 @@ class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 </pre>
 </div>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2016')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2017')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.statements.class")}}</p>
 

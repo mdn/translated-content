@@ -29,9 +29,9 @@ original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 
 <h3 id="Hoja_de_estilo_externa">Hoja de estilo externa</h3>
 
-<p>En <a href="/es/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a>, vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.</p>
+<p>En <a href="/es/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a>, vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.</p>
 
-<p>Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión <code>.css</code> y que lo vinculas desde un elemento <code>&lt;link&gt;</code> de HTML:</p>
+<p>Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión <code>.css</code> y que lo vinculas desde un elemento <code>&lt;link&gt;</code> de HTML:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -58,9 +58,9 @@ p {
   color: red;
 }</pre>
 
-<p>El atributo <code>href</code> del elemento {{htmlelement("link")}} tiene que hacer referencia a un archivo de tu sistema de archivos.</p>
+<p>El atributo <code>href</code> del elemento {{htmlelement("link")}} tiene que hacer referencia a un archivo de tu sistema de archivos.</p>
 
-<p>En el ejemplo anterior, el archivo CSS está en la misma carpeta que el documento HTML, pero puedes colocarlo en otro lugar y especificar la ruta adecuada. Por ejemplo:</p>
+<p>En el ejemplo anterior, el archivo CSS está en la misma carpeta que el documento HTML, pero puedes colocarlo en otro lugar y especificar la ruta adecuada. Por ejemplo:</p>
 
 <pre class="brush: html notranslate">&lt;!-- Dentro de un subdirectorio llamado styles dentro del directorio de trabajo --&gt;
 &lt;link rel="stylesheet" href="styles/style.css"&gt;
@@ -100,11 +100,11 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>Esto puede ser útil en algunas circunstancias (tal vez estés trabajando con un sistema de administración de contenido donde no sea posible modificar los archivos CSS directamente), pero no es tan eficiente como las hojas de estilo externas: en una página web, deberías repetir el CSS en cada página y actualizarlo en varios lugares en caso de que hubiera que hacer cambios.</p>
+<p>Esto puede ser útil en algunas circunstancias (tal vez estés trabajando con un sistema de administración de contenido donde no sea posible modificar los archivos CSS directamente), pero no es tan eficiente como las hojas de estilo externas: en una página web, deberías repetir el CSS en cada página y actualizarlo en varios lugares en caso de que hubiera que hacer cambios.</p>
 
 <h3 id="Estilos_en_línea">Estilos en línea</h3>
 
-<p>Los estilos en línea son declaraciones CSS que afectan a un solo elemento, contenido dentro de un atributo de <code>style</code>:</p>
+<p>Los estilos en línea son declaraciones CSS que afectan a un solo elemento, contenido dentro de un atributo de <code>style</code>:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -118,11 +118,11 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>¡No hagas esto a menos que realmente tengas que hacerlo!</strong> Es realmente malo a la hora de realizar el mantenimiento (puede que tengas que actualizar la misma información varias veces en un mismo documento), y además mezcla tu información CSS para la presentación con tu información HTML para la estructura, lo que dificulta la lectura y la comprensión del código. Mantener los diferentes tipos de código separados facilita trabajar con ellos.</p>
+<p><strong>¡No hagas esto a menos que realmente tengas que hacerlo!</strong> Es realmente malo a la hora de realizar el mantenimiento (puede que tengas que actualizar la misma información varias veces en un mismo documento), y además mezcla tu información CSS para la presentación con tu información HTML para la estructura, lo que dificulta la lectura y la comprensión del código. Mantener los diferentes tipos de código separados facilita trabajar con ellos.</p>
 
-<p>Hay ciertos lugares donde los estilos en línea son más comunes, o incluso aconsejables. Es posible que tengas que recurrir a ellos si realmente tu entorno de trabajo es restrictivo (tal vez el CMS solo te permita editar el cuerpo del HTML). También verás que se usan mucho en el correo electrónico en formato HTML para lograr la máxima compatibilidad con el mayor número de clientes.</p>
+<p>Hay ciertos lugares donde los estilos en línea son más comunes, o incluso aconsejables. Es posible que tengas que recurrir a ellos si realmente tu entorno de trabajo es restrictivo (tal vez el CMS solo te permita editar el cuerpo del HTML). También verás que se usan mucho en el correo electrónico en formato HTML para lograr la máxima compatibilidad con el mayor número de clientes.</p>
 
-<h2 id="Juguemos_con_el_CSS_de_este_artículo">Juguemos con el CSS de este artículo</h2>
+<h2 id="Juguemos_con_el_CSS_de_este_artículo">Juguemos con el CSS de este artículo</h2>
 
 <p>En este artículo hay mucho CSS con el que jugar. Para hacerlo, recomendamos crear un nuevo directorio/carpeta en el ordenador, dentro de la cual deberás crear una copia de los siguientes dos archivos:</p>
 
@@ -150,11 +150,11 @@ p {
   color: red;
 }</pre>
 
-<p>Entonces, cuando te encuentres con un CSS con el que desees experimentar, reemplaza el contenido <code>&lt;body&gt;</code> del HTML con algo de HTML sin estilos y añade CSS a tu archivo de CSS para darle estilo.</p>
+<p>Entonces, cuando te encuentres con un CSS con el que desees experimentar, reemplaza el contenido <code>&lt;body&gt;</code> del HTML con algo de HTML sin estilos y añade CSS a tu archivo de CSS para darle estilo.</p>
 
 <p>Si no estás en un sistema donde puedas crear archivos fácilmente, puedes utilizar el editor interactivo que encontrarás a continuación para experimentar.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
 
 <p>¡Sigue leyendo y disfruta!</p>
 
@@ -173,15 +173,15 @@ a:link
 .box p:first-child
 h1, h2, .intro</pre>
 
-<p><strong>Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!</strong></p>
+<p><strong>Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!</strong></p>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre <a href="/es/docs/Learn/CSS/Building_blocks/Selectors">selectores CSS</a> de la próxima lección.</p>
+<p><strong>Nota</strong>: Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre <a href="/es/docs/Learn/CSS/Building_blocks/Selectors">selectores CSS</a> de la próxima lección.</p>
 </div>
 
 <h3 id="Especificidad">Especificidad</h3>
 
-<p>A menudo habrá situaciones en las que dos selectores podrían determinar un mismo elemento HTML. Considera la siguiente hoja de estilo, en que definimos una regla con un selector <code>p</code> que establecerá los párrafos en color azul, y también una clase que establecerá los elementos seleccionados en color rojo.</p>
+<p>A menudo habrá situaciones en las que dos selectores podrían determinar un mismo elemento HTML. Considera la siguiente hoja de estilo, en que definimos una regla con un selector <code>p</code> que establecerá los párrafos en color azul, y también una clase que establecerá los elementos seleccionados en color rojo.</p>
 
 <pre class="brush: css notranslate">.special {
   color: red;
@@ -191,7 +191,7 @@ p {
   color: blue;
 }</pre>
 
-<p>Digamos que en nuestro documento HTML hay un párrafo con una clase <code>special</code>. Ambas reglas podrían aplicarse. ¿Cuál ganará? ¿De qué color crees que será nuestro párrafo?</p>
+<p>Digamos que en nuestro documento HTML hay un párrafo con una clase <code>special</code>. Ambas reglas podrían aplicarse. ¿Cuál ganará? ¿De qué color crees que será nuestro párrafo?</p>
 
 <pre class="brush: html notranslate">&lt;p class="special"&gt;¿De qué color soy?&lt;/p&gt;</pre>
 
@@ -207,17 +207,17 @@ p {
 
 <p>Sin embargo, en el caso de nuestro primer bloque, que contiene un selector de clase y otro de elementos, la clase ganará. Esto hará que el párrafo sea rojo, incluso aunque aparezca antes en la hoja de estilo. Una clase se describe de forma más específica o con más especificidad que el selector de elementos, razón por la que gana.</p>
 
-<p><strong>Prueba el ejemplo anterior: añade el HTML a tu experimento, luego pon las dos reglas <code>p { ... }</code> a tu hoja de estilo. A continuación, cambia el primer selector <code>p</code> por <code>.special</code> para ver cómo cambia el estilo.</strong></p>
+<p><strong>Prueba el ejemplo anterior: añade el HTML a tu experimento, luego pon las dos reglas <code>p { ... }</code> a tu hoja de estilo. A continuación, cambia el primer selector <code>p</code> por <code>.special</code> para ver cómo cambia el estilo.</strong></p>
 
-<p>Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre <a href="/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascada y herencia</a>, que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.</p>
+<p>Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre <a href="/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascada y herencia</a>, que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.</p>
 
 <h2 id="Propiedades_y_valores">Propiedades y valores</h2>
 
 <p>En su nivel más básico, el CSS consta de dos componentes básicos:</p>
 
 <ul>
- <li><strong>Propiedades</strong>: Identificadores legibles por los humanos que indican qué características de estilo (por ejemplo, <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code>) deseas cambiar.</li>
- <li><strong>Valores</strong>: A cada propiedad especificada se le asigna un valor que indica cómo quieres que cambien esas características de estilo (por ejemplo, lo que quieres que cambie de la fuente, el ancho o el color de fondo).</li>
+ <li><strong>Propiedades</strong>: Identificadores legibles por los humanos que indican qué características de estilo (por ejemplo, <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, <code><a href="/en-US/docs/Web/CSS/background-color">background-color</a></code>) deseas cambiar.</li>
+ <li><strong>Valores</strong>: A cada propiedad especificada se le asigna un valor que indica cómo quieres que cambien esas características de estilo (por ejemplo, lo que quieres que cambie de la fuente, el ancho o el color de fondo).</li>
 </ul>
 
 <p>La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es <code>color</code> y el valor <code>blue</code>.</p>
@@ -232,7 +232,7 @@ p {
 
 <p><img alt="La regla para h1 resaltada" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
-<p>Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.</p>
+<p>Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.</p>
 
 <div class="blockIndicator warning">
 <p><strong>Importante:</strong> Las propiedades y valores de CSS son sensibles a mayúsculas y minúsculas. La propiedad y el valor de cada par están separados por dos puntos (<code>:</code>).</p>
@@ -253,12 +253,12 @@ p {
 </div>
 
 <div class="warning">
-<p><strong>Importante</strong>: En CSS (y otros estándares web) se ha acordado establecer como estándar la ortografía en inglés de los EE. UU. para solucionar las incertidumbres idiomáticas. Por ejemplo, <em>siempre</em> hay que escribir <code>color</code>. Si se escribe <code>colour</code>, no funcionará.</p>
+<p><strong>Importante</strong>: En CSS (y otros estándares web) se ha acordado establecer como estándar la ortografía en inglés de los EE. UU. para solucionar las incertidumbres idiomáticas. Por ejemplo, <em>siempre</em> hay que escribir <code>color</code>. Si se escribe <code>colour</code>, no funcionará.</p>
 </div>
 
 <h3 id="Las_funciones">Las funciones</h3>
 
-<p>Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es posible que algunos valores tomen la forma de una función. Un ejemplo sería la función <code>calc()</code>. Esta función te permite hacer operaciones matemáticas sencillas desde tu CSS, por ejemplo:</p>
+<p>Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es posible que algunos valores tomen la forma de una función. Un ejemplo sería la función <code>calc()</code>. Esta función te permite hacer operaciones matemáticas sencillas desde tu CSS, por ejemplo:</p>
 
 <div id="calc_example">
 <pre class="brush: html notranslate">&lt;div class="outer"&gt; &lt;div class="box"&gt;La caja interior es del 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
@@ -279,7 +279,7 @@ p {
 
 <p>{{EmbedLiveSample('calc_example', '100%', 200)}}</p>
 
-<p>Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo <code>calc()</code> anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.</p>
+<p>Una función consta del nombre de la función y, a continuación, unos paréntesis entre los que se colocan los valores permitidos para esa función. En el caso del ejemplo <code>calc()</code> anterior, pedimos que el ancho de esta caja sea del 90% del ancho del bloque que la contiene, menos 30 píxeles. Esto no es algo que podamos calcular con anticipación y simplemente introducir el valor en el CSS, ya que no sabemos cuál será el 90%. Como con todos los valores, la página correspondiente del proyecto MDN tendrá ejemplos de uso para que puedas ver cómo funciona.</p>
 
 <p>Otro ejemplo serían los diversos valores para {{cssxref ("transform")}}, como <code>rotate()</code>.</p>
 
@@ -313,7 +313,7 @@ p {
 
 <pre class="brush: css notranslate">@import 'styles2.css';</pre>
 
-<p>Una de las <code>@rules</code> más comunes con las que te encontrarás es <code>@media</code>, que permite usar <a href="/es/docs/Web/CSS/Media_Queries">consultas a medios</a> para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).</p>
+<p>Una de las <code>@rules</code> más comunes con las que te encontrarás es <code>@media</code>, que permite usar <a href="/es/docs/Web/CSS/Media_Queries">consultas a medios</a> para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).</p>
 
 <p>En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento <code>&lt;body&gt;</code> un color de fondo rosado. Sin embargo, luego usamos <code>@media</code> para crear una sección de nuestra hoja de estilo que solo se aplicará en los navegadores con una ventana gráfica de más de 30em de ancho. Si el navegador es más ancho que 30em, el color de fondo será azul.</p>
 
@@ -329,7 +329,7 @@ p {
 
 <p>Encontrarás otras <code>@rules</code> a lo largo de estas lecciones.</p>
 
-<p><strong>Prueba a añadir una consulta a medios en tu CSS que cambie los estilos según el ancho de la ventana gráfica. Cambia el ancho de la ventana de tu navegador para ver el resultado.</strong></p>
+<p><strong>Prueba a añadir una consulta a medios en tu CSS que cambie los estilos según el ancho de la ventana gráfica. Cambia el ancho de la ventana de tu navegador para ver el resultado.</strong></p>
 
 <h2 id="Abreviaturas">Abreviaturas</h2>
 
@@ -362,19 +362,19 @@ background-position: 10px 10px;
 background-repeat: repeat-x;
 background-scroll: fixed;</pre>
 
-<p>Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejemplos más adelante en el curso. Te aconsejamos que busques los nombres de las propiedades abreviadas en nuestra <a href="/es/docs/Web/CSS/Reference">referencia CSS</a> para obtener más información.</p>
+<p>Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejemplos más adelante en el curso. Te aconsejamos que busques los nombres de las propiedades abreviadas en nuestra <a href="/es/docs/Web/CSS/Reference">referencia CSS</a> para obtener más información.</p>
 
 <p><strong>Prueba a añadir las declaraciones anteriores a tu CSS para ver cómo afecta al estilo de tu HTML. Experimenta con diferentes valores.</strong></p>
 
 <div class="blockIndicator warning">
-<p><strong>Advertencia</strong>: Si bien las propiedades abreviadas a menudo permiten ahorrarte valores, luego restablecerán a sus valores iniciales cualquier valor que no incluyas. Esto asegura que se use un conjunto de valores razonable. Sin embargo, puede resultar confuso si esperas que la propiedad abreviada solo cambie los valores que has introducido.</p>
+<p><strong>Advertencia</strong>: Si bien las propiedades abreviadas a menudo permiten ahorrarte valores, luego restablecerán a sus valores iniciales cualquier valor que no incluyas. Esto asegura que se use un conjunto de valores razonable. Sin embargo, puede resultar confuso si esperas que la propiedad abreviada solo cambie los valores que has introducido.</p>
 </div>
 
 <h2 id="Comentarios">Comentarios</h2>
 
 <p>Al igual que con el HTML, te recomendamos que hagas comentarios en tu CSS para que te ayuden a comprender cómo funciona su código cuando vuelvas a utilizarlo al cabo de varios meses, así como para ayudar a otros que vayan a trabajar con él a entenderlo.</p>
 
-<p>Los comentarios en el CSS comienzan con <code>/*</code> y terminan con <code>*/</code>. En el bloque de código que encontrarás a continuación, hemos usado comentarios para marcar el inicio de las diferentes secciones de código. Esto es útil para ayudarnos a movernos por la base de código a medida que aumenta: puedes buscar los comentarios en tu editor de código.</p>
+<p>Los comentarios en el CSS comienzan con <code>/*</code> y terminan con <code>*/</code>. En el bloque de código que encontrarás a continuación, hemos usado comentarios para marcar el inicio de las diferentes secciones de código. Esto es útil para ayudarnos a movernos por la base de código a medida que aumenta: puedes buscar los comentarios en tu editor de código.</p>
 
 <pre class="brush: css notranslate">/* con elementos básicos de aplicación de estilo */
 /* -------------------------------------------------------------------------------------------- */
@@ -411,7 +411,7 @@ div p + p {
   padding-top: 0;
 }</pre>
 
-<p>Los comentarios también son útiles para <em>comentar</em> temporalmente ciertas partes del código con fines de prueba, por ejemplo, si tratas de encontrar qué parte de tu código causa un error. En el siguiente ejemplo, hemos comentado las reglas para el selector <code>.special</code>.</p>
+<p>Los comentarios también son útiles para <em>comentar</em> temporalmente ciertas partes del código con fines de prueba, por ejemplo, si tratas de encontrar qué parte de tu código causa un error. En el siguiente ejemplo, hemos comentado las reglas para el selector <code>.special</code>.</p>
 
 <pre class="brush: css notranslate">/*.special {
   color: red;
@@ -421,13 +421,13 @@ p {
   color: blue;
 }</pre>
 
-<p><strong>Añade algunos comentarios al CSS para acostumbrarte a usarlos.</strong></p>
+<p><strong>Añade algunos comentarios al CSS para acostumbrarte a usarlos.</strong></p>
 
 <h2 id="Espacio_en_blanco">Espacio en blanco</h2>
 
 <p>Por espacio en blanco nos referimos los espacios en sí, tabuladores y retornos de carro o intros. De la misma manera que el HTML, el navegador ignora el espacio en blanco dentro del CSS. El valor del espacio en blanco es que puede mejorar la legibilidad.</p>
 
-<p>En el siguiente ejemplo, cada declaración (y el principio/fin de regla) está en una línea propia; esta es posiblemente una buena forma de escribir el CSS, ya que facilita el mantenimiento y la comprensión:</p>
+<p>En el siguiente ejemplo, cada declaración (y el principio/fin de regla) está en una línea propia; esta es posiblemente una buena forma de escribir el CSS, ya que facilita el mantenimiento y la comprensión:</p>
 
 <pre class="brush: css notranslate">body {
   font: 1em/150% Helvética, Arial, sans-serif;
@@ -474,7 +474,7 @@ div p {margin: 0; padding: 1em;}
 div p + p {padding-top: 0;}
 </pre>
 
-<p>La manera que elijas para disponer el código suele ser una preferencia personal, aunque cuando comiences a trabajar en equipo es posible que encuentres que el equipo ya tiene su propia guía de estilo que especifica una convención acordada a seguir.</p>
+<p>La manera que elijas para disponer el código suele ser una preferencia personal, aunque cuando comiences a trabajar en equipo es posible que encuentres que el equipo ya tiene su propia guía de estilo que especifica una convención acordada a seguir.</p>
 
 <div class="blockIndicator warning">
 <p><strong>Importante:</strong> Aunque los valores de las declaraciones CSS se separan por espacios, <strong>los nombres de propiedad nunca tienen espacios</strong>.</p>
@@ -494,11 +494,11 @@ padding- left: 10px;</pre>
 
 <p>Debes asegurarte siempre de separar los valores distintos entre sí por al menos un espacio, pero mantén los nombres de las propiedades y los valores de las propiedades juntos.</p>
 
-<p><strong>Prueba a jugar con los espacios en blanco de tu CSS y observa qué es lo que se rompe y lo que no.</strong></p>
+<p><strong>Prueba a jugar con los espacios en blanco de tu CSS y observa qué es lo que se rompe y lo que no.</strong></p>
 
-<h2 id="¿Qué_sigue">¿Qué sigue?</h2>
+<h2 id="¿Qué_sigue">¿Qué sigue?</h2>
 
-<p>Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo (<a href="/es/docs/Learn/CSS/First_steps/How_CSS_works">Cómo funciona el CSS</a>) veremos ese proceso.</p>
+<p>Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo (<a href="/es/docs/Learn/CSS/First_steps/How_CSS_works">Cómo funciona el CSS</a>) veremos ese proceso.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
 

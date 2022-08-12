@@ -5,7 +5,7 @@ translation_of: Web/CSS/clip-path
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <code><strong>clip-path</strong></code> создаёт ограниченную область, которая определяет какая часть элемента должна быть видимой. Те части, которые находятся внутри области, видимы, в то время как части вне области, скрыты. Обрезанная область - это траектория, определяемая либо как внутренняя ссылка, либо как внешний SVG , либо как фигура, такая как круг (<code><a href="https://developer.mozilla.org/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/circle">circle()</a></code>).</p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <code><strong>clip-path</strong></code> создаёт ограниченную область, которая определяет какая часть элемента должна быть видимой. Те части, которые находятся внутри области, видимы, в то время как части вне области, скрыты. Обрезанная область - это траектория, определяемая либо как внутренняя ссылка, либо как внешний SVG , либо как фигура, такая как круг (<code><a href="https://developer.mozilla.org/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/circle">circle()</a></code>).</p>
 
 <div class="note">
 <p><strong>Историческая справка:</strong> Свойство clip-path заменило устаревшее свойство {{cssxref("clip")}} .</p>
@@ -446,7 +446,7 @@ svg text.em {
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<p>Свойство <code>clip-path</code> определяется как одно или комбинация значений перечисленных ниже.</p>
+<p>Свойство <code>clip-path</code> определяется как одно или комбинация значений перечисленных ниже.</p>
 
 <h3 id="Значения">Значения</h3>
 
@@ -454,24 +454,24 @@ svg text.em {
  <dt><code>url()</code></dt>
  <dd>Представляет URL ссылку на траекторию, ограничивающую элемент.</dd>
  <dt><code>inset()</code>, <code>circle()</code>, <code>ellipse()</code>, <code>polygon()</code></dt>
- <dd>Функция {{cssxref("&lt;basic-shape&gt;")}}. Размер и положение области определяется значением <code>&lt;geometry-box&gt;</code>. Если геометрия не определена,<code>border-box</code> будет использоваться в качестве блока.</dd>
+ <dd>Функция {{cssxref("&lt;basic-shape&gt;")}}. Размер и положение области определяется значением <code>&lt;geometry-box&gt;</code>. Если геометрия не определена,<code>border-box</code> будет использоваться в качестве блока.</dd>
  <dt><code>&lt;geometry-box&gt;</code></dt>
- <dd>Если определён в комбинации с <code>&lt;basic-shape&gt;</code>, это значение определяет блок для базовой области. Если задан самостоятельно, определяет границы блока, включая формирование углов (такое как {{cssxref("border-radius")}}). Геометрия может быть определена с помощью одного из следующих значений:
+ <dd>Если определён в комбинации с <code>&lt;basic-shape&gt;</code>, это значение определяет блок для базовой области. Если задан самостоятельно, определяет границы блока, включая формирование углов (такое как {{cssxref("border-radius")}}). Геометрия может быть определена с помощью одного из следующих значений:
  <dl>
   <dt><code>fill-box</code></dt>
   <dd>Использует границы объекта в качестве базовой области.</dd>
   <dt><code>stroke-box</code></dt>
   <dd>Использует stroke bounding box в качестве базовой области.</dd>
   <dt><code>view-box</code></dt>
-  <dd>Использует ближайший SVG viewport в качестве базового блока. Если атрибут {{SVGAttr("viewBox")}} определён для элемента, создающего SVG viewport, базовый блок позиционируется в оригинальной системе координат, установленной атрибутом <code>viewBox</code> и ширина и высота базового блока устанавливаются равными значениям атрибута <code>viewBox</code>.​​​​​​​</dd>
+  <dd>Использует ближайший SVG viewport в качестве базового блока. Если атрибут {{SVGAttr("viewBox")}} определён для элемента, создающего SVG viewport, базовый блок позиционируется в оригинальной системе координат, установленной атрибутом <code>viewBox</code> и ширина и высота базового блока устанавливаются равными значениям атрибута <code>viewBox</code>.​​​​​​​</dd>
   <dt><code>margin-box</code></dt>
   <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">margin box</a> в качестве базового блока.</dd>
   <dt><code>border-box</code></dt>
   <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">border box</a> в качестве базового блока.</dd>
   <dt><code>padding-box</code></dt>
-  <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">padding box</a> в качестве базового блока.</dd>
+  <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">padding box</a> в качестве базового блока.</dd>
   <dt><code>content-box</code></dt>
-  <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">content box</a> в качестве базового блока.</dd>
+  <dd>Использует <a href="CSS_Box_Model/Introduction_to_the_CSS_box_model">content box</a> в качестве базового блока.</dd>
  </dl>
  </dd>
  <dt><code>none</code></dt>
@@ -517,10 +517,10 @@ svg text.em {
 &lt;/svg&gt;
 
 &lt;select id="clipPath"&gt;
-  &lt;option value="none"&gt;none&lt;/option&gt;
-  &lt;option value="circle(100px at 110px 100px)"&gt;circle&lt;/option&gt;
-  &lt;option value="url(#cross)" selected&gt;cross&lt;/option&gt;
-  &lt;option value="inset(20px round 20px)"&gt;inset&lt;/option&gt;
+  &lt;option value="none"&gt;none&lt;/option&gt;
+  &lt;option value="circle(100px at 110px 100px)"&gt;circle&lt;/option&gt;
+  &lt;option value="url(#cross)" selected&gt;cross&lt;/option&gt;
+  &lt;option value="inset(20px round 20px)"&gt;inset&lt;/option&gt;
 &lt;/select&gt;
 </pre>
 

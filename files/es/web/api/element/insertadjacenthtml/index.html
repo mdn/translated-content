@@ -15,7 +15,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>EL método <strong><code>insertAdjacentHTML()</code></strong> de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.</p>
+<p>EL método <strong><code>insertAdjacentHTML()</code></strong> de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -25,12 +25,12 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <dl>
  <dt><code><strong>posición</strong></code></dt>
- <dd>Un {{domxref("DOMString")}} que representa la posición relativa al <code>elemento</code>, y deberá ser una de las siguientes cadenas:
+ <dd>Un {{domxref("DOMString")}} que representa la posición relativa al <code>elemento</code>, y deberá ser una de las siguientes cadenas:
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: Antes que el propio <code>elemento</code>.</li>
-  <li><code style="color: green;">'afterbegin'</code>: Justo dentro del <code>elemento</code>, antes de su primer elemento hijo.</li>
-  <li><code style="color: blue;">'beforeend'</code>: Justo dentro del <code>elemento</code>, después de su último elemento hijo.</li>
-  <li><code style="color: magenta;">'afterend'</code>: Después del propio <code>elemento</code>.</li>
+  <li><code style="color: red;">'beforebegin'</code>: Antes que el propio <code>elemento</code>.</li>
+  <li><code style="color: green;">'afterbegin'</code>: Justo dentro del <code>elemento</code>, antes de su primer elemento hijo.</li>
+  <li><code style="color: blue;">'beforeend'</code>: Justo dentro del <code>elemento</code>, después de su último elemento hijo.</li>
+  <li><code style="color: magenta;">'afterend'</code>: Después del propio <code>elemento</code>.</li>
  </ul>
  </dd>
  <dt><code>texto</code></dt>
@@ -62,9 +62,9 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <h3 id="Consideraciones_de_seguridad">Consideraciones de seguridad</h3>
 
-<p>Cuando se inserte texto HTML en una página usando <code>insertAdjacentHTML()</code> debe tener cuidado de no usar cadenas de texto que no contengan las secuencias de escape pertinentes según sea el caso.</p>
+<p>Cuando se inserte texto HTML en una página usando <code>insertAdjacentHTML()</code> debe tener cuidado de no usar cadenas de texto que no contengan las secuencias de escape pertinentes según sea el caso.</p>
 
-<p>Se recomienda no usar <code>insertAdjacentHTML()</code> cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.</p>
+<p>Se recomienda no usar <code>insertAdjacentHTML()</code> cuando se pretende insertar texto plano; en su lugar, se debe utilizar la propiedad {{domxref("Node.textContent")}} o el método {{domxref("Element.insertAdjacentText()")}}. Este método no interpreta el contenido pasado como HTML, si no que lo inserta como texto plano.</p>
 
 <h2 id="Especificación">Especificación</h2>
 

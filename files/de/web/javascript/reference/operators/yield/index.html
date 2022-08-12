@@ -39,9 +39,9 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 <p>Solange ein <code>yield</code> Ausdruck pausiert, wird die Codeausführung des Generators pausiert, bis die <code>next()</code> Methode des Generators aufgerufen wird. Mit jedem Aufruf der Generator <code>next()</code> Methode läuft der Generator weiter, bis einer der folgenden Punkte eintritt:</p>
 
 <ul>
- <li> Ein <code>yield</code>, welches dazu führt, dass der Generator wieder Pausiert und einen neuen Generatorwert zurückgibt. Beim nächsten Aufruf von <code>next()</code> wird die Ausführung direkt nach dem <code>yield</code> fortgesetzt.</li>
+ <li> Ein <code>yield</code>, welches dazu führt, dass der Generator wieder Pausiert und einen neuen Generatorwert zurückgibt. Beim nächsten Aufruf von <code>next()</code> wird die Ausführung direkt nach dem <code>yield</code> fortgesetzt.</li>
  <li>{{jsxref("Statements/throw", "throw")}} wird eingesetzt um einen Fehler im Generator zu erzeugen. Dieses stoppt den Generator vollständig und führt dazu, dass die Ausführung beim Aufrufer fortgesetzt wird, wie es bei üblicherweise bei Fehlern der Fall ist.</li>
- <li>Das Ende einer Generatorfunktion wird erreicht; In diesem Fall endet die Ausführung des Generator und ein <code>IteratorResult</code> Objekt wird zum Aufrufer zurückgegeben, bei dem <code>value</code> {{jsxref("undefined")}} ist und <code>done</code> <code>true</code> ist.</li>
+ <li>Das Ende einer Generatorfunktion wird erreicht; In diesem Fall endet die Ausführung des Generator und ein <code>IteratorResult</code> Objekt wird zum Aufrufer zurückgegeben, bei dem <code>value</code> {{jsxref("undefined")}} ist und <code>done</code> <code>true</code> ist.</li>
  <li>Ein {{jsxref("Statements/return", "return")}} Statement wird erreicht. In diesem Fall endet die Ausführung des Generators und ein <code>IteratorResult</code> Objekt wird zum Aufrufer zurückgegeben, welches als <code>value</code> den vom <code>return</code> Statement spezifizierten Wert enthält und <code>done</code> <code>true</code> ist.</li>
 </ul>
 
@@ -87,7 +87,7 @@ console.log(appleStore.next()); // { value: undefined, done: true }</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

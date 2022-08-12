@@ -19,7 +19,7 @@ Pour en apprendre plus, suivez ces liens.
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Futures_(informatique)")}}
+- [Promesses](https://fr.wikipedia.org/wiki/Futures_(informatique)) sur Wikipédia
 
 ### Référence technique
 

@@ -46,7 +46,7 @@ original_slug: Web/Guide/HTML/Canvas_Tutorial/Basic_animations
  <dd>Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.</dd>
 </dl>
 
-<p>If you don't want any user interaction you can use the <code>setInterval()</code> function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use <code>setTimeout()</code>. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.</p>
+<p>If you don't want any user interaction you can use the <code>setInterval()</code> function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use <code>setTimeout()</code>. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.</p>
 
 <div class="note">
 <p>In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The <code>requestAnimationFrame</code> method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article <a href="/en-US/docs/Games/Anatomy">Anatomy of a video game</a> in our <a href="/en-US/docs/Games">Game development zone</a>.</p>
@@ -250,7 +250,7 @@ img.onload = function() {
     imgW = img.width * scale;
     imgH = img.height * scale;
 
-    if (imgW &gt; CanvasXSize) { x = CanvasXSize - imgW; } // image larger than canvas
+    if (imgW &gt; CanvasXSize) { x = CanvasXSize - imgW; } // image larger than canvas
     if (imgW &gt; CanvasXSize) { clearX = imgW; } // image width larger than canvas
     else { clearX = CanvasXSize; }
     if (imgH &gt; CanvasYSize) { clearY = imgH; } // image height larger than canvas
@@ -259,14 +259,14 @@ img.onload = function() {
     // get canvas context
     ctx = document.getElementById('canvas').getContext('2d');
 
-    // set refresh rate
+    // set refresh rate
     return setInterval(draw, speed);
 }
 
 function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is &lt;= Canvas Size
+    // if image is &lt;= Canvas Size
     if (imgW &lt;= CanvasXSize) {
         // reset, start from beginning
         if (x &gt; CanvasXSize) { x = -imgW + x; }

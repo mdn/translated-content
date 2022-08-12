@@ -12,13 +12,13 @@ translation_of: Web/CSS/background-image
 
 <h2 id="Краткое_описание">Краткое описание</h2>
 
-<p>Свойство <a href="/ru/docs/CSS" title="/ru/docs/CSS">CSS</a>  <strong><code>background-image</code></strong> устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.</p>
+<p>Свойство <a href="/ru/docs/CSS" title="/ru/docs/CSS">CSS</a>  <strong><code>background-image</code></strong> устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.</p>
 
 <p><a href="/ru/CSS/border" title="border">Границы</a> {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.</p>
 
 <p>Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением <code>none</code>.</p>
 
-<div class="note"><strong>Обратите внимание:</strong> Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.</div>
+<div class="note"><strong>Обратите внимание:</strong> Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.</div>
 
 <p>{{cssinfo}}</p>
 
@@ -52,34 +52,34 @@ background-image: inherit;
 <h4 id="HTML_содержимое">HTML содержимое</h4>
 
 <pre class="brush: html">&lt;div&gt;
-    &lt;p class="catsandstars"&gt;
-        This paragraph is full of cats&lt;br /&gt;and stars.
-    &lt;/p&gt;
-    &lt;p&gt;This paragraph is not.&lt;/p&gt;
-    &lt;p class="catsandstars"&gt;
-        Here are more cats for you.&lt;br /&gt;Look at them!
-    &lt;/p&gt;
-    &lt;p&gt;And no more.&lt;/p&gt;
+    &lt;p class="catsandstars"&gt;
+        This paragraph is full of cats&lt;br /&gt;and stars.
+    &lt;/p&gt;
+    &lt;p&gt;This paragraph is not.&lt;/p&gt;
+    &lt;p class="catsandstars"&gt;
+        Here are more cats for you.&lt;br /&gt;Look at them!
+    &lt;/p&gt;
+    &lt;p&gt;And no more.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS_содержимое">CSS содержимое</h4>
 
 <pre class="brush: css">pre, p {
-    font-size: 1.5em;
-    color: #FE7F88;
+    font-size: 1.5em;
+    color: #FE7F88;
     background-color: transparent;
 }
 
 div {
-  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
 }
 
 p {
-  background-image: none;
+  background-image: none;
 }
 
 .catsandstars {
-  background-image:  url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
+  background-image:  url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
                      url("https://mdn.mozillademos.org/files/7693/catfront.png");
   background-color: transparent;
 }

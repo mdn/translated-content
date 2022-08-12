@@ -92,7 +92,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <ul>
  <li>1 つ目は間隔時間はミリ秒単位で表現されています。3秒という指定ではなく、3000 ミリ秒です。{{domxref("WindowTimers.setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように Web Animations API はミリ秒しか値を取りません。</li>
- <li>もう 1 つは <code>iteration-count</code> ではなく <code>iterations</code> ということです。</li>
+ <li>もう 1 つは <code>iteration-count</code> ではなく <code>iterations</code> ということです。</li>
 </ul>
 
 <div class="note">
@@ -228,7 +228,7 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <h2 id="アニメーションから情報を取得する">アニメーションから情報を取得する</h2>
 
-<p>サイト全体のアニメーションを遅くすることで前庭障害のあるユーザーのアクセシビリティを改善するなど、playbackRate を使用する他の方法を想像してみてください。すべての CSS ルールで期間を再計算することなく CSS で全てを行うことは不可能ですが、Web Animations API では次の {{domxref("document.getAnimations()")}} メソッド(まだブラウザーでの完全なサポートではないですが) を使用して次のようにページ上の各アニメーションをループして <code>playbackRate</code> を半分にします。</p>
+<p>サイト全体のアニメーションを遅くすることで前庭障害のあるユーザーのアクセシビリティを改善するなど、playbackRate を使用する他の方法を想像してみてください。すべての CSS ルールで期間を再計算することなく CSS で全てを行うことは不可能ですが、Web Animations API では次の {{domxref("document.getAnimations()")}} メソッド(まだブラウザーでの完全なサポートではないですが) を使用して次のようにページ上の各アニメーションをループして <code>playbackRate</code> を半分にします。</p>
 
 <pre class="brush: js notranslate">document.getAnimations().forEach(
   function (animation) {
@@ -254,7 +254,7 @@ document.addEventListener("touchstart", goFaster);</pre>
     fill: 'both'
   });</pre>
 
-<p>アリスのアニメーションでは、8秒かけてサイズが半分から  2 倍になります。その後、彼女のエフェクトを停止します。</p>
+<p>アリスのアニメーションでは、8秒かけてサイズが半分から  2 倍になります。その後、彼女のエフェクトを停止します。</p>
 
 <pre class="brush: js notranslate">aliceChange.pause();</pre>
 
@@ -266,7 +266,7 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <pre class="brush: js notranslate">aliceChange.currentTime = aliceChange.effect.timing.duration / 2;</pre>
 
-<p><code>effect</code> を利用すると、アニメーションの <code>keyframe</code> と <code>timing</code> オブジェクトにアクセスできます。<code>aliceChange.effect.timing</code> はアリスのタイミングオブジェクト({{domxref("AnimationEffectTimingReadOnly")}}) 型) を示します。これには、{{domxref("AnimationEffectTimingReadOnly.duration")}} も含まれます。<br>
+<p><code>effect</code> を利用すると、アニメーションの <code>keyframe</code> と <code>timing</code> オブジェクトにアクセスできます。<code>aliceChange.effect.timing</code> はアリスのタイミングオブジェクト({{domxref("AnimationEffectTimingReadOnly")}}) 型) を示します。これには、{{domxref("AnimationEffectTimingReadOnly.duration")}} も含まれます。<br>
  アニメーションのタイムラインの中間点を取得するために、アリスの長さを半分に分割し、通常の身長に設定できます。アリスのアニメーションを逆再生して、どちらの方向にも再生したり、小さくしたり、大きくしたり出来ます！</p>
 
 <p>また、ボトルとケーキの再生時間を設定するときにも同じことが出来ます。</p>
@@ -283,7 +283,7 @@ drinking.pause();</pre>
 
 <p>これで、3 つのアニメーションすべてが 1 つの間隔時間に繋がり、1 つの場所から簡単に変更することが出来ます。</p>
 
-<p>Web Animation API を利用して、アニメーションの現在の時刻を把握することも出来ます。ケーキを食べてなくなったり、ボトルが空になるとゲームが終了します。アリスが大きすぎてドアを通らなかったり、小さすぎてドアノブに届かなかったかはアリスのアニメーションによって表現されプレイヤーの操作に依存します。アリスのアニメーションの<code><a href="/ja-JP/docs/Web/API/Animation/currentTime">currentTime</a></code> を取得して、彼女の <code>activeDuration</code> で割ることで彼女の大きさを把握できます。</p>
+<p>Web Animation API を利用して、アニメーションの現在の時刻を把握することも出来ます。ケーキを食べてなくなったり、ボトルが空になるとゲームが終了します。アリスが大きすぎてドアを通らなかったり、小さすぎてドアノブに届かなかったかはアリスのアニメーションによって表現されプレイヤーの操作に依存します。アリスのアニメーションの<code><a href="/ja-JP/docs/Web/API/Animation/currentTime">currentTime</a></code> を取得して、彼女の <code>activeDuration</code> で割ることで彼女の大きさを把握できます。</p>
 
 <pre class="brush: js notranslate">var endGame = function() {
 

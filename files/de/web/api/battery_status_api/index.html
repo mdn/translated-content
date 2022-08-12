@@ -7,11 +7,11 @@ translation_of: Web/API/Battery_Status_API
 
 <p>Die <strong>Battery Status API</strong>, oder kurz <strong>Battery API</strong>, stellt Informationen über den Ladezustand der Systembatterie zur Verfügung. Diese Informationen können zur Anpassung der Ressourcennutzung verwendet werden. Wenn nur noch wenig Energie zur Verfügung steht, sollten unnötige Operationen eingestellt werden, damit die Laufzeit erhöht wird. Oder aber der Zustand gespeichert werden, damit ein Datenverlust verhindert werden kann.</p>
 
-<p>Die Battery Status API erweitert  {{domxref("window.navigator")}} mit einer Methode  {{domxref("navigator.getBattery()")}}, die ein Promise mit einem  {{domxref("BatteryManager")}} Objekt liefert, sowie einigen Nachrichten zum Überwachen des Batteriestatus.</p>
+<p>Die Battery Status API erweitert  {{domxref("window.navigator")}} mit einer Methode  {{domxref("navigator.getBattery()")}}, die ein Promise mit einem  {{domxref("BatteryManager")}} Objekt liefert, sowie einigen Nachrichten zum Überwachen des Batteriestatus.</p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>In diesem Beispiel wird der Ladezustand (Netz, ladend, etc.) und Änderungen des Batterieniveaus und der Zeit überwacht. Dies erfolgt durch Überwachen der Events:  {{event("chargingchange")}}, {{event("levelchange")}} und {{event("chargingtimechange")}}, {{event("dischargingtimechange")}}.</p>
+<p>In diesem Beispiel wird der Ladezustand (Netz, ladend, etc.) und Änderungen des Batterieniveaus und der Zeit überwacht. Dies erfolgt durch Überwachen der Events:  {{event("chargingchange")}}, {{event("levelchange")}} und {{event("chargingtimechange")}}, {{event("dischargingtimechange")}}.</p>
 
 <pre class="brush: js;">navigator.getBattery().then(function(battery) {
   function updateAllBatteryInfo(){
@@ -19,40 +19,40 @@ translation_of: Web/API/Battery_Status_API
     updateLevelInfo();
     updateChargingInfo();
     updateDischargingInfo();
-  }
+  }
   updateAllBatteryInfo();
 
   battery.addEventListener('chargingchange', function(){
     updateChargeInfo();
   });
   function updateChargeInfo(){
-    console.log("Battery charging? "
+    console.log("Battery charging? "
                 + (battery.charging ? "Yes" : "No"));
-  }
+  }
 
   battery.addEventListener('levelchange', function(){
     updateLevelInfo();
   });
   function updateLevelInfo(){
-    console.log("Battery level: "
+    console.log("Battery level: "
                 + battery.level * 100 + "%");
-  }
+  }
 
   battery.addEventListener('chargingtimechange', function(){
     updateChargingInfo();
   });
   function updateChargingInfo(){
-    console.log("Battery charging time: "
+    console.log("Battery charging time: "
                  + battery.chargingTime + " seconds");
-  }
+  }
 
   battery.addEventListener('dischargingtimechange', function(){
     updateDischargingInfo();
   });
   function updateDischargingInfo(){
-    console.log("Battery discharging time: "
+    console.log("Battery discharging time: "
                  + battery.dischargingTime + " seconds");
-  }
+  }
 
 });
 </pre>

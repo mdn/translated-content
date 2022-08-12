@@ -466,7 +466,7 @@ index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key は "Bill" のような名前、cursor.value はオブジェクト全体です。
-    console.log("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    console.log("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
     cursor.continue();
   }
 };
@@ -1310,7 +1310,7 @@ input {
 <p>{{LiveSampleLink('Full_IndexedDB_example', "オンラインのライブデモを試す")}}</p>
 
 <div class="notecard note">
-<p><strong>メモ</strong>: <code>window.indexedDB.open()</code> は非同期です。このメソッドは <code>success</code> イベントが発行されるよりもはるかに前に終了します。すなわち、ある関数 (例えば <code>openDb()</code>) が <code>open()</code> や <code>onsuccess</code> を呼び出すと、 <code>onsuccess</code> ハンドラーが実行されるよりも前に戻ります。この問題は、 <code>transaction()</code> や <code>get()</code> のような他のリクエストメソッドでも言えます。</p>
+<p><strong>メモ</strong>: <code>window.indexedDB.open()</code> は非同期です。このメソッドは <code>success</code> イベントが発行されるよりもはるかに前に終了します。すなわち、ある関数 (例えば <code>openDb()</code>) が <code>open()</code> や <code>onsuccess</code> を呼び出すと、 <code>onsuccess</code> ハンドラーが実行されるよりも前に戻ります。この問題は、 <code>transaction()</code> や <code>get()</code> のような他のリクエストメソッドでも言えます。</p>
 </div>
 
 <h2 id="See_also">関連情報</h2>

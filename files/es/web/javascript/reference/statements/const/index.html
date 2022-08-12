@@ -14,10 +14,10 @@ original_slug: Web/JavaScript/Referencia/Sentencias/const
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>Las variables constantes presentan un <strong>ámbito de bloque </strong><font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font> tal y como lo hacen las variables definidas usando la instrucción <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/let">let</a>, con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes <u>no se pueden redeclarar</u>.</p>
+<p>Las variables constantes presentan un <strong>ámbito de bloque </strong><font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font> tal y como lo hacen las variables definidas usando la instrucción <a href="/es/docs/Web/JavaScript/Referencia/Sentencias/let">let</a>, con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes <u>no se pueden redeclarar</u>.</p>
 
 <div class="warning">
-<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments" rel="noopener">ámbito léxico</a></font></font> terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
+<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments" rel="noopener">ámbito léxico</a></font></font> terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -38,14 +38,14 @@ original_slug: Web/JavaScript/Referencia/Sentencias/const
 
 <p>Esta declaración crea una constante cuyo alcance puede ser <strong>global o local para el bloque en el que se declara</strong>. Es necesario <strong>inicializar</strong> la constante, es decir, se debe especificar su valor en la misma sentencia en la que se declara, lo que tiene sentido, dado que no se puede cambiar posteriormente.</p>
 
-<p>La declaración de una constante crea una referencia de sólo lectura. No significa que el valor que tiene sea inmutable, sino que el identificador de variable no puede ser reasignado, por lo tanto, en el caso de que la asignación a la constante sea un objeto, el objeto sí que puede ser alterado.</p>
+<p>La declaración de una constante crea una referencia de sólo lectura. No significa que el valor que tiene sea inmutable, sino que el identificador de variable no puede ser reasignado, por lo tanto, en el caso de que la asignación a la constante sea un objeto, el objeto sí que puede ser alterado.</p>
 
 <p>Una constante <strong>no puede compartir su nombre</strong> con una función o variable en el mismo ámbito.</p>
 
-<p><font><font>Todas las consideraciones acerca de la " <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let#muerta">zona muerta temporal</a> " se aplican tanto a </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code><font><font>y</font></font><code>const</code><font><font>.</font></font></p>
+<p><font><font>Todas las consideraciones acerca de la " <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let#muerta">zona muerta temporal</a> " se aplican tanto a </font></font><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code><font><font>y</font></font><code>const</code><font><font>.</font></font></p>
 
 <div class="warning">
-<p><code>const</code> <s>es </s><u>fue</u> una <strong>extensión especifica de Mozilla</strong>, no <s>es</s> <u>era</u> soportado en IE, pero <s>tiene</s> <u>tenia</u> soporte parcial por Opera desde la versión 9.0 y por Safari.</p>
+<p><code>const</code> <s>es </s><u>fue</u> una <strong>extensión especifica de Mozilla</strong>, no <s>es</s> <u>era</u> soportado en IE, pero <s>tiene</s> <u>tenia</u> soporte parcial por Opera desde la versión 9.0 y por Safari.</p>
 </div>
 
 <h2 id="Ejemplos">Ejemplos</h2>

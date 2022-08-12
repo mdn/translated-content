@@ -15,19 +15,19 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 <p>Adiciona um botão a barra de ferramentas do navegador.</p>
 
-<p>Uma <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> é um botão na barra de ferramentas do navegador.</p>
+<p>Uma <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> é um botão na barra de ferramentas do navegador.</p>
 
-<p>Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via <a href="/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging">messages</a>.</p>
+<p>Você pode associar um popup junto ao botão. O popup é especificado usando HTML, CSS e JavaScript, apenas como uma página web normal. O JavaScript rodando no popup tem o mesmo acesso a API WebExtension completa, assim como seus scripts em backend, mas seu contexto global é o popup, não a página exibida no navegador atualmente. Para afetar páginas web você precisa comunicá-las via <a href="/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging">messages</a>.</p>
 
-<p>Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.</p>
+<p>Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.</p>
 
-<p>Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a> </code>no arquivo manifest.json.</p>
+<p>Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a> </code>no arquivo manifest.json.</p>
 
-<p>Com a API <code>browserAction você pode</code>:</p>
+<p>Com a API <code>browserAction você pode</code>:</p>
 
 <ul>
  <li>Usar {{WebExtAPIRef("browserAction.onClicked")}} para escutar por cliques no ícone.</li>
- <li>Atribuir e obter as propriedades do ícone — icone, titulo, popup, e assim por diante. Você pode obter e atribui-los globalmente para todas as abas, ou para uma aba específica informando o ID como um argumento adicional.</li>
+ <li>Atribuir e obter as propriedades do ícone — icone, titulo, popup, e assim por diante. Você pode obter e atribui-los globalmente para todas as abas, ou para uma aba específica informando o ID como um argumento adicional.</li>
 </ul>
 
 <h2 id="Tipos">Tipos</h2>
@@ -36,16 +36,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
  <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
  <dd>Um array de quatro números inteiros entre 0-55 definido uma cor RGB.</dd>
  <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>Dados do pixel de uma imagem. Deve ser um objeto <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> (por exemplo, de um elemento {{htmlelement("canvas")}}).</dd>
+ <dd>Dados do pixel de uma imagem. Deve ser um objeto <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> (por exemplo, de um elemento {{htmlelement("canvas")}}).</dd>
 </dl>
 
 <h2 id="Funções">Funções</h2>
 
 <dl>
  <dt>{{WebExtAPIRef("browserAction.setTitle()")}}</dt>
- <dd>Atribui ação de título do navegador. Ele será exibido em um tooltip.</dd>
+ <dd>Atribui ação de título do navegador. Ele será exibido em um tooltip.</dd>
  <dt>{{WebExtAPIRef("browserAction.getTitle()")}}</dt>
- <dd>Obtém a ação de título do navegador.</dd>
+ <dd>Obtém a ação de título do navegador.</dd>
  <dt>{{WebExtAPIRef("browserAction.setIcon()")}}</dt>
  <dd>Atribui a ação de ícone ao navegador.</dd>
  <dt>{{WebExtAPIRef("browserAction.setPopup()")}}</dt>
@@ -59,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
  <dt>{{WebExtAPIRef("browserAction.getBadgeText()")}}</dt>
  <dd>Obtém o texto do emblema do navegador.</dd>
  <dt>{{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}</dt>
- <dd>Atribui a cor de fundo do emblema.</dd>
+ <dd>Atribui a cor de fundo do emblema.</dd>
  <dt>{{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}</dt>
  <dd>Obtém a cor de fundo do emblema.</dd>
  <dt>{{WebExtAPIRef("browserAction.enable()")}}</dt>
@@ -82,18 +82,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 <p>{{Compat("webextensions.api.browserAction")}}</p>
 
 <div class="hidden note">
-<p>A sessão "Chrome incompatibilities" está inclusa em <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando a macro <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a>.</p>
+<p>A sessão "Chrome incompatibilities" está inclusa em <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando a macro <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a>.</p>
 
-<p>Se precisar atualizar este conteúdo edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue esta página para visualizar suas alterações.</p>
+<p>Se precisar atualizar este conteúdo edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue esta página para visualizar suas alterações.</p>
 </div>
 
 <p>{{WebExtExamples("h2")}}</p>
 
 <div class="note"><strong>Agradecimentos</strong>
 
-<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a> do Chromium. Este documento é derivado do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> no código do Chromium.</p>
+<p>Esta API é baseada na API <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a> do Chromium. Este documento é derivado do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> no código do Chromium.</p>
 
-<p>Os dados de compatibilidade do Microsoft Edge são fornecidos Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
+<p>Os dados de compatibilidade do Microsoft Edge são fornecidos Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">

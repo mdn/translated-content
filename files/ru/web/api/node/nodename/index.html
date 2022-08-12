@@ -91,7 +91,7 @@ var text_field = document.getElementById("t");
 text_field.value = div1.nodeName;
 </pre>
 
-<p>В XHTML (или любых других форматов XML), значение <code>text_field</code> будет прочитано как "div". Тем не менее, в HTML, значение <code>text_field</code> будет прочитано  как "DIV", потому что <code>nodeName</code> и <code>tagName</code> возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше <a href="http://ejohn.org/blog/nodename-case-sensitivity/">деталей о чувствительности регистра nodeName в различных браузерах.</a></p>
+<p>В XHTML (или любых других форматов XML), значение <code>text_field</code> будет прочитано как "div". Тем не менее, в HTML, значение <code>text_field</code> будет прочитано  как "DIV", потому что <code>nodeName</code> и <code>tagName</code> возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше <a href="http://ejohn.org/blog/nodename-case-sensitivity/">деталей о чувствительности регистра nodeName в различных браузерах.</a></p>
 
 <p>Обратите внимание, что свойство <code><a href="/en-US/docs/DOM/element.tagName" title="DOM/element.tagName">tagName</a></code> можно было бы использовать вместо него, поскольку <code>nodeName</code> имеет тоже значение что и <code>tagName</code> для элемента. Однако имейте в виду, что <code>nodeName</code> будет возвращать <code>#text</code> для текстово узла, в то время как <code>tagName</code> будет возвращать <code>undefined</code>.</p>
 

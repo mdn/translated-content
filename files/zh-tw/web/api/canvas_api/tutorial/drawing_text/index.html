@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}</div>
 
-<p><code><a href="/en/HTML/Canvas">canvas</a></code>元素支援在<a href="http://www.whatwg.org/specs/web-apps/current-work/#text-0">標準 HTML 5 特色</a>以及少許實驗性的Mozilla方法和功能上繪製文字。</p>
+<p><code><a href="/en/HTML/Canvas">canvas</a></code>元素支援在<a href="http://www.whatwg.org/specs/web-apps/current-work/#text-0">標準 HTML 5 特色</a>以及少許實驗性的Mozilla方法和功能上繪製文字。</p>
 
 <p>文字可以包括任何Unicode字元，即使用那些超出“基本多文種平面”的字元也可以。</p>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Attributes">屬性</h2>
 
@@ -73,7 +73,7 @@ ctx.font = "20pt Arial";</pre>
    <td><code>textAlign</code></td>
    <td><code><a href="/En/DOM/DOMString">DOMString</a></code></td>
    <td>
-    <p>當前繪製文字所使用的文字對齊方式。  可使用的值：</p>
+    <p>當前繪製文字所使用的文字對齊方式。  可使用的值：</p>
 
     <dl>
      <dt>left</dt>
@@ -95,21 +95,21 @@ ctx.font = "20pt Arial";</pre>
    <td><code>textBaseline</code></td>
    <td><code><a href="/En/DOM/DOMString">DOMString</a></code></td>
    <td>
-    <p>當前繪製文字的基線位置  可使用的值：</p>
+    <p>當前繪製文字的基線位置  可使用的值：</p>
 
     <dl>
      <dt>top</dt>
      <dd>基線在字元區塊的頂部（圖中top of the squre位置）。</dd>
      <dt>hanging（懸掛）</dt>
-     <dd>文字基線在拼音文字頂部的位置（圖中hanging baseline）  <em>當前仍未支援；會顯示 <strong>alphabetic</strong>代替。</em></dd>
+     <dd>文字基線在拼音文字頂部的位置（圖中hanging baseline）  <em>當前仍未支援；會顯示 <strong>alphabetic</strong>代替。</em></dd>
      <dt>middle</dt>
      <dd>文字基線在字元區塊的中間。</dd>
      <dt>alphabetic（拼音文字）</dt>
      <dd>這是一般拼音文字底線的位置。</dd>
      <dt>ideographic（表意文字）</dt>
-     <dd>文字在表意文字（如漢字）底部的位置  <em>當前仍未支援；會顯示<strong>alphabetic</strong>代替。</em></dd>
+     <dd>文字在表意文字（如漢字）底部的位置  <em>當前仍未支援；會顯示<strong>alphabetic</strong>代替。</em></dd>
      <dt>bottom</dt>
-     <dd>基線在拼音文字下伸部的位置 這與ideographic的基線位置不同，因為表意文字沒有下伸部</dd>
+     <dd>基線在拼音文字下伸部的位置 這與ideographic的基線位置不同，因為表意文字沒有下伸部</dd>
     </dl>
 
     <p>預設使用 <code>alphabetic</code>.</p>
@@ -126,9 +126,9 @@ ctx.font = "20pt Arial";</pre>
 
 <h3 id="fillText()">fillText()</h3>
 
-<p>繪製文字使用<code>font</code>屬性指定的文字樣式，對齊則使用<code>textAlign</code>屬性，而指定基線則使用<code>textBaseline</code>.  填充文字當前使用<code>fillStyle</code>，而<code>strokeStyle</code>則被忽略</p>
+<p>繪製文字使用<code>font</code>屬性指定的文字樣式，對齊則使用<code>textAlign</code>屬性，而指定基線則使用<code>textBaseline</code>.  填充文字當前使用<code>fillStyle</code>，而<code>strokeStyle</code>則被忽略</p>
 
-<div class="note"><strong>注意：</strong>這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分.</div>
+<div class="note"><strong>注意：</strong>這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分.</div>
 
 <pre>void fillText(
    in DOMString textToDraw,
@@ -148,7 +148,7 @@ ctx.font = "20pt Arial";</pre>
  <dt><code>y</code></dt>
  <dd>繪製位置的y座標。</dd>
  <dt><code>maxWidth</code></dt>
- <dd>最大寬度，可選用的；繪製字串最大長度 如果指定此參數，當字串被計算出比這個值更寬，它會自動選擇水平方向更窄的字型（如果有可用的字型或是有可讀的字型可以嵌入當前字型之中），或者縮小字型。</dd>
+ <dd>最大寬度，可選用的；繪製字串最大長度 如果指定此參數，當字串被計算出比這個值更寬，它會自動選擇水平方向更窄的字型（如果有可用的字型或是有可讀的字型可以嵌入當前字型之中），或者縮小字型。</dd>
 </dl>
 
 <h5 id="範例">範例</h5>
@@ -160,7 +160,7 @@ ctx.font = "20pt Arial";</pre>
 
 <p>測量文字。返回一個物件包含了寬度，像素值，所指定的文字會以當前的文字樣式繪製。</p>
 
-<div class="note"><strong>注意：</strong> 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是HTML 5標準的一部分。</div>
+<div class="note"><strong>注意：</strong> 這個方法在 Gecko 1.9.1 (Firefox 3.5) 引進，且是HTML 5標準的一部分。</div>
 
 <pre class="eval">nsIDOMTextMetrics measureText(
   in DOMString textToMeasure
@@ -176,7 +176,7 @@ ctx.font = "20pt Arial";</pre>
 
 <h6 id="Return_value">返回值</h6>
 
-<p><a href="/nsIDOMTextMetrics"><code>nsIDOMTextMetrics</code></a>物件的<code>width</code>屬性在繪製時會將數字設定給CSS 的像素值寬度。</p>
+<p><a href="/nsIDOMTextMetrics"><code>nsIDOMTextMetrics</code></a>物件的<code>width</code>屬性在繪製時會將數字設定給CSS 的像素值寬度。</p>
 
 <h3 id="mozDrawText.28.29">mozDrawText()</h3>
 
@@ -184,7 +184,7 @@ ctx.font = "20pt Arial";</pre>
 
 <p>繪製文字使用由<code>mozTextStyle</code>屬性的文字樣式。文本當前的填充顏色被用來當做文字顏色。</p>
 
-<div class="note"><strong>注意：</strong>這個方法已經不被建議使用,請使用正式的HTML 5方法 <code>fillText()</code> and <code>strokeText()</code>.</div>
+<div class="note"><strong>注意：</strong>這個方法已經不被建議使用,請使用正式的HTML 5方法 <code>fillText()</code> and <code>strokeText()</code>.</div>
 
 <pre class="eval">void mozDrawText(
    in DOMString textToDraw
@@ -213,7 +213,7 @@ ctx.mozDrawText("Sample String");
 
 <p>返回寬度，像素值，指定文字</p>
 
-<div class="note"><strong>注意：</strong>這個方法已經已宣告棄用，請使用正式的HTML 5方法<code>measureText()</code>.</div>
+<div class="note"><strong>注意：</strong>這個方法已經已宣告棄用，請使用正式的HTML 5方法<code>measureText()</code>.</div>
 
 <pre class="eval">float mozMeasureText(
   in DOMString textToMeasure
@@ -294,9 +294,9 @@ ctx.stroke()
 
 <h3 id="strokeText()">strokeText()</h3>
 
-<p>繪製文字使用<code>font</code>屬性指定的文字樣式，對齊則使用<code>textAlign</code>屬性，而指定基線則使用<code>textBaseline</code>.  當前使用<code>strokeStyle</code>來建立文字外框。</p>
+<p>繪製文字使用<code>font</code>屬性指定的文字樣式，對齊則使用<code>textAlign</code>屬性，而指定基線則使用<code>textBaseline</code>.  當前使用<code>strokeStyle</code>來建立文字外框。</p>
 
-<div class="note"><strong>注意：</strong> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分。</div>
+<div class="note"><strong>注意：</strong> 這個方法在 Gecko 1.9.1 (Firefox 3.5)時引進，且是HTML 5標準的一部分。</div>
 
 <pre>void strokeText(
    in DOMString textToDraw,
@@ -316,7 +316,7 @@ ctx.stroke()
  <dt><code>y</code></dt>
  <dd>繪製位置的y座標</dd>
  <dt><code>maxWidth</code></dt>
- <dd>最大寬度，可選用的；繪製字串最大長度 如果指定此參數，當字串被計算出比這個值更寬，它會自動選擇水平方向更窄的字型（如果有可用的字型或是有可讀的字型可以嵌入當前字型之中），或者縮小字型。</dd>
+ <dd>最大寬度，可選用的；繪製字串最大長度 如果指定此參數，當字串被計算出比這個值更寬，它會自動選擇水平方向更窄的字型（如果有可用的字型或是有可讀的字型可以嵌入當前字型之中），或者縮小字型。</dd>
 </dl>
 
 <h5 id="範例_2">範例</h5>
@@ -327,7 +327,7 @@ ctx.stroke()
 <h2 id="Remarks_2">備註</h2>
 
 <ul>
- <li>請見 <a href="http://www.whatwg.org/specs/web-apps/current-work/#text">WHATWG specification</a> 關於HTML 5 canvas text的說明。</li>
+ <li>請見 <a href="http://www.whatwg.org/specs/web-apps/current-work/#text">WHATWG specification</a> 關於HTML 5 canvas text的說明。</li>
  <li>你不需要特別的文本來使用這些功能；2D的文本就可以執行得很好。</li>
  <li>所有的繪圖都使用即時變化來完成。</li>
 </ul>

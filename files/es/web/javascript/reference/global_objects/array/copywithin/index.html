@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>copyWithin()</strong></code> transfiere una copia  plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.</p>
+<p>El método <code><strong>copyWithin()</strong></code> transfiere una copia  plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-copywithin.html")}}</p>
 
@@ -28,23 +28,23 @@ arr.copyWithin(target, start, end)</var></pre>
 
 <dl>
  <dt><code>target</code></dt>
- <dd>Índice basado en cero que establece en dónde dentro de la secuencia original se insertará la secuencia copiada.  Si es negativo, <code>target</code> se contará desde el final. -1 es el último elemento, -2 el penúltimo, etc.</dd>
- <dd>Si <code>target</code> es  igual o mayor que  <code>arr.length</code>, no se copiará nada. Si <code>target</code> es posicionado después de <code>start</code>, la secuencia copiada se recortará para que encaje con <code>arr.length</code>.</dd>
- <dt><code>start</code> {{optional_inline}}</dt>
+ <dd>Índice basado en cero que establece en dónde dentro de la secuencia original se insertará la secuencia copiada.  Si es negativo, <code>target</code> se contará desde el final. -1 es el último elemento, -2 el penúltimo, etc.</dd>
+ <dd>Si <code>target</code> es  igual o mayor que  <code>arr.length</code>, no se copiará nada. Si <code>target</code> es posicionado después de <code>start</code>, la secuencia copiada se recortará para que encaje con <code>arr.length</code>.</dd>
+ <dt><code>start</code> {{optional_inline}}</dt>
  <dd>Índice basado en cero a partir del cual comenzar la copia de elementos. Si es negativo, start comenzará a contarse desde el final.</dd>
  <dd>Si <code>start</code> es omitido, <code>copyWithin</code> copiará desde el principio (por defecto es 0).</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
+ <dt><code>end</code> {{optional_inline}}</dt>
  <dd>Índice basado en cero hasta el cual se copiarán los elementos. <code>copyWithin</code> copiará hasta pero sin incluir el end. Si es negativo, <code>end</code> será contado desde el final.</dd>
  <dd>Si <code>end</code> es omitido, <code>copyWithin</code> copiará hasta el final ( por defecto es <code>arr.length </code>).</dd>
 </dl>
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>El array modificado.</p>
+<p>El array modificado.</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p><code>copyWithin</code> es similar a la función <code>memmove</code> de C y C++  , siendo altamente eficiente para desplazar los datos en un {{jsxref("Array")}} o  {{jsxref("TypedArray")}}. La secuencia de datos es leída y escrita en una sola operación;  la escritura será correcta incluso en el caso de que la zona de lectura y el destino de escritura se solapen.</p>
+<p><code>copyWithin</code> es similar a la función <code>memmove</code> de C y C++  , siendo altamente eficiente para desplazar los datos en un {{jsxref("Array")}} o  {{jsxref("TypedArray")}}. La secuencia de datos es leída y escrita en una sola operación;  la escritura será correcta incluso en el caso de que la zona de lectura y el destino de escritura se solapen.</p>
 
 <p>La función <code>copyWithin</code> es intencionadamente <em>genérica</em>, permitiendo que se aplique en contextos en los cuales <code>this</code> no sea necesariamente un objeto {{jsxref("Array")}}.</p>
 
@@ -56,8 +56,8 @@ arr.copyWithin(target, start, end)</var></pre>
 
 <ul>
  <li>El tamaño del contexto en el que se aplica no cambia. En los ejemplos el array parte con cinco elementos y siempre mantiene cinco elementos.</li>
- <li><code>start</code> y <code>end</code> trabajan juntos para decidir qué se copiará.  Siempre tienen valor por defecto aunque omitas <code>end</code>, o <code>start</code> y <code>end</code>.</li>
- <li><code>target</code> trabaja solo y debe especificarse.  Indica el lugar para en el que la copia comenzará a sobreescribir datos existentes. Debe estar dentro de los límites en el contexto que se aplique.</li>
+ <li><code>start</code> y <code>end</code> trabajan juntos para decidir qué se copiará.  Siempre tienen valor por defecto aunque omitas <code>end</code>, o <code>start</code> y <code>end</code>.</li>
+ <li><code>target</code> trabaja solo y debe especificarse.  Indica el lugar para en el que la copia comenzará a sobreescribir datos existentes. Debe estar dentro de los límites en el contexto que se aplique.</li>
  <li>escribir <code>arr.copyWithin( n ) </code>es lo mismo que <code>arr.copyWithin( n, 0, arr.length)</code></li>
 </ul>
 
@@ -78,7 +78,7 @@ arr.copyWithin(target, start, end)</var></pre>
 
 <ul>
  <li>El objeto contextual tiene alguna propiedad con clave numérica, y una propiedad length. Esto es suficiente para considerarse array-like.</li>
- <li>observa que <strong>no</strong> se modifica la propiedad length, a pesar de que se ha introducido una nueva propiedad con clave 0. A esto ser refiere cuando se dice que <code>copyWithin</code> es un método <strong>mutador</strong>.  ¿Por qué se creó esta nueva propiedad?  porque mediante el argumento target se especificó que  la copia debía comenzar a partir de un índice que ¡¡no existía!!</li>
+ <li>observa que <strong>no</strong> se modifica la propiedad length, a pesar de que se ha introducido una nueva propiedad con clave 0. A esto ser refiere cuando se dice que <code>copyWithin</code> es un método <strong>mutador</strong>.  ¿Por qué se creó esta nueva propiedad?  porque mediante el argumento target se especificó que  la copia debía comenzar a partir de un índice que ¡¡no existía!!</li>
 </ul>
 
 <pre class="brush: js">[].copyWithin.call({length: 5, 3: 1}, 0, 3);
@@ -148,12 +148,12 @@ i32a.copyWithin(0, 2);
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
 <div>
 <p>{{Compat("javascript.builtins.Array.copyWithin")}}</p>

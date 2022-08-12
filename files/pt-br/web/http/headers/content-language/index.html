@@ -9,11 +9,11 @@ translation_of: Web/HTTP/Headers/Content-Language
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>O <a href="/pt-BR/docs/Glossario/Entity_header">cabeçalho de entidade</a> <strong><code>Content-Language</code></strong>  é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.</p>
+<p>O <a href="/pt-BR/docs/Glossario/Entity_header">cabeçalho de entidade</a> <strong><code>Content-Language</code></strong>  é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.</p>
 
-<p>Por exemplo, se "<code>Content-Language: de-DE</code>" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).</p>
+<p>Por exemplo, se "<code>Content-Language: de-DE</code>" está selecionado, você diz que o documento é destinado para quem fala Alemão (no entanto, não indica que o documento é escrito em Alemão. Por exemplo, pode ser escrito em Inglês como parte de um curso de línguas para fluentes em Alemão).</p>
 
-<p>Se nenhum <code>Content-Language</code> é especificado, o padrão é que o conteúdo é destinado para todas as línguas. Múltiplas tags de língua também podem ser usada, assim como usar o header <code>Content-Language</code> com varios tipos de mídia e não apenas para documentos de texto.</p>
+<p>Se nenhum <code>Content-Language</code> é especificado, o padrão é que o conteúdo é destinado para todas as línguas. Múltiplas tags de língua também podem ser usada, assim como usar o header <code>Content-Language</code> com varios tipos de mídia e não apenas para documentos de texto.</p>
 
 <table class="properties">
  <tbody>
@@ -47,18 +47,18 @@ Content-Language: de-DE, en-CA
 
 <dl>
  <dt><code>language-tag</code></dt>
- <dd>Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("<code>-</code>", <code>%x2D</code>). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "<code>en</code>" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "<code>en-CA</code>" =  variedade de Inglês como comunicado no Canadá).</dd>
+ <dd>Múltiplas tags de línguas são separadas por uma vírgula. Cada tag de língua é uma sequencia de uma ou mais subtags insensitíveis, cada uma separada por um hífen ("<code>-</code>", <code>%x2D</code>). Na maioria dos casos, uma tag de língua consiste de uma tag de língua primária que identifica uma família ampla de outras línguas (ex., "<code>en</code>" = English), que é opcionalmente seguida por uma série de subtags que refinam ou restringem aquele alcance da língua (ex., "<code>en-CA</code>" =  variedade de Inglês como comunicado no Canadá).</dd>
 </dl>
 
 <div class="note">
-<p><strong>Nota:</strong> Tags de língua são formalmente deifnidas em <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>, que depende do padrão <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> (muitas vezes o <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code list</a>) para <a href="https://en.wikipedia.org/wiki/Language_code">language codes</a> serem usados.</p>
+<p><strong>Nota:</strong> Tags de língua são formalmente deifnidas em <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>, que depende do padrão <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> (muitas vezes o <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1 code list</a>) para <a href="https://en.wikipedia.org/wiki/Language_code">language codes</a> serem usados.</p>
 </div>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Indicando_a_língua_que_um_documento_está_escrito">Indicando a língua que um documento está escrito</h3>
 
-<p>O atributo global <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a></code> é usado em elementos HTML para indicar a língua de um documento <a href="/en-US/docs/Web/HTML">HTML</a> ou partes dele.</p>
+<p>O atributo global <code><a href="/pt-BR/docs/Web/HTML/Global_attributes/lang">lang</a></code> é usado em elementos HTML para indicar a língua de um documento <a href="/en-US/docs/Web/HTML">HTML</a> ou partes dele.</p>
 
 <pre class="brush: html">&lt;html lang="de"&gt;</pre>
 
@@ -69,7 +69,7 @@ Content-Language: de-DE, en-CA
 
 <h3 id="Indicando_uma_audiência_destinada_para_um_documento">Indicando uma audiência destinada para um documento</h3>
 
-<p>O header <code>Content-Language</code> é usado para especificar a <strong>audiência destinada da página</strong>, e pode indicar que é mais de uma língua.</p>
+<p>O header <code>Content-Language</code> é usado para especificar a <strong>audiência destinada da página</strong>, e pode indicar que é mais de uma língua.</p>
 
 <pre>Content-Language: de, en</pre>
 

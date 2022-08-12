@@ -10,18 +10,18 @@ translation_of: Web/CSS/used_value
 
 
 
-<div><strong>Используемое значение </strong>- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS </a>свойство, которое используется, когда все вычисления уже выполнены, смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value">вычисленное значение</a>.</div>
+<div><strong>Используемое значение </strong>- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS </a>свойство, которое используется, когда все вычисления уже выполнены, смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value">вычисленное значение</a>.</div>
 
 <article>
-<p>После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения  (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов  (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.</p>
+<p>После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения  (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов  (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.</p>
 
 <div class="blockIndicator note">
-<p><strong>Замечание</strong>:  {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает <a href="/ru/docs/">решённое значение</a>, которое может быть <a href="/ru/docs/">численным значением</a> или <a href="/ru/docs/">используемым значением</a>, в зависимости от свойства.</p>
+<p><strong>Замечание</strong>:  {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает <a href="/ru/docs/">решённое значение</a>, которое может быть <a href="/ru/docs/">численным значением</a> или <a href="/ru/docs/">используемым значением</a>, в зависимости от свойства.</p>
 </div>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Данный пример показывает вычисление и отображение значения <code>width</code> трёх элементов (обновление при изменении размера):</p>
+<p>Данный пример показывает вычисление и отображение значения <code>width</code> трёх элементов (обновление при изменении размера):</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -84,15 +84,15 @@ window.addEventListener('resize', updateAllUsedWidths);</code></pre>
 
 <h2 id="Difference_from_computed_value">Difference from computed value</h2>
 
-<p>CSS 2.0 defined only <em>computed value</em> as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., <code>display</code>, <code>font-size</code>, or <code>line-height</code>), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from <a href="http://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a>):</p>
+<p>CSS 2.0 defined only <em>computed value</em> as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., <code>display</code>, <code>font-size</code>, or <code>line-height</code>), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from <a href="http://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a>):</p>
 
 <ul>
  <li><code>background-position</code></li>
- <li><code>bottom</code>, <code>left</code>, <code>right</code>, <code>top</code></li>
- <li><code>height</code>, <code>width</code></li>
- <li><code>margin-bottom</code>, <code>margin-left</code>, <code>margin-right</code>, <code>margin-top</code></li>
- <li><code>min-height</code>, <code>min-width</code></li>
- <li><code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code>, <code>padding-top</code></li>
+ <li><code>bottom</code>, <code>left</code>, <code>right</code>, <code>top</code></li>
+ <li><code>height</code>, <code>width</code></li>
+ <li><code>margin-bottom</code>, <code>margin-left</code>, <code>margin-right</code>, <code>margin-top</code></li>
+ <li><code>min-height</code>, <code>min-width</code></li>
+ <li><code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code>, <code>padding-top</code></li>
  <li><code>text-indent</code></li>
 </ul>
 

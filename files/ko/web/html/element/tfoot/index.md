@@ -53,7 +53,7 @@ browser-compat: html.elements.tfoot
       <th scope="row">암시적 ARIA 역할</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+          ><a href="/ko/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
             >rowgroup</a
           ></code
         >
@@ -97,7 +97,7 @@ browser-compat: html.elements.tfoot
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/en-US/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.
+  - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.
 
     비슷한 효과를 적용하고 싶다면 CSS {{cssxref("background-color")}} 속성을 사용합니다.
 

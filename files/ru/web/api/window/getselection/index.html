@@ -15,9 +15,9 @@ translation_of: Web/API/Window/getSelection
 
 <h3 id="Значение">Значение</h3>
 
-<p><font face="consolas, Liberation Mono, courier, monospace">Объект </font>{{domxref("Selection")}}.</p>
+<p><font face="consolas, Liberation Mono, courier, monospace">Объект </font>{{domxref("Selection")}}.</p>
 
-<p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
+<p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
 
 <h2 id="Example">Пример</h2>
 
@@ -32,24 +32,24 @@ translation_of: Web/API/Window/getSelection
 
 <h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
 
-<p>В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.</p>
+<p>В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.</p>
 
-<p>В приведённом выше примере <code>selObj.toString() автоматически задействуется, когда мы передаём в </code>{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code>. В следствии чего, вам необходимо будет применить вручную метод   <code>toString(), как тут:</code></p>
+<p>В приведённом выше примере <code>selObj.toString() автоматически задействуется, когда мы передаём в </code>{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code>. В следствии чего, вам необходимо будет применить вручную метод   <code>toString(), как тут:</code></p>
 
 <pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
 
 <ul>
- <li><code>selObj</code> это объект <code>Selection</code>.</li>
- <li><code>selectedText</code> это строка  (Выделенный текст).</li>
+ <li><code>selObj</code> это объект <code>Selection</code>.</li>
+ <li><code>selectedText</code> это строка  (Выделенный текст).</li>
 </ul>
 
-<h3 id="Родственные_объекты">Родственные объекты</h3>
+<h3 id="Родственные_объекты">Родственные объекты</h3>
 
-<p>Вы так же можете использовать такой способ вызова {{domxref("Document.getSelection()")}}, который работает идентично {{domxref("Window.getSelection()")}}.</p>
+<p>Вы так же можете использовать такой способ вызова {{domxref("Document.getSelection()")}}, который работает идентично {{domxref("Window.getSelection()")}}.</p>
 
-<p>Поля ввода HTML (inputs) предоставляют более удобный API для работы с выделенным текстом (смотрите {{domxref("HTMLInputElement.setSelectionRange()")}}).</p>
+<p>Поля ввода HTML (inputs) предоставляют более удобный API для работы с выделенным текстом (смотрите {{domxref("HTMLInputElement.setSelectionRange()")}}).</p>
 
-<p>На заметку, разница между <em>selection</em> и <em>focus</em>. {{domxref("Document.activeElement")}}  - это то, что вернётся элемент, который выделен (focused) .</p>
+<p>На заметку, разница между <em>selection</em> и <em>focus</em>. {{domxref("Document.activeElement")}}  - это то, что вернётся элемент, который выделен (focused) .</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

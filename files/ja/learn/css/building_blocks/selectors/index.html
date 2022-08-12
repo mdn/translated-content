@@ -20,7 +20,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>) および CSS に関するアイデア (<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>) に関する基本的な知識を得ている。</td>
+   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>) および CSS に関するアイデア (<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>) に関する基本的な知識を得ている。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -31,17 +31,17 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <h2 id="What_is_a_selector" name="What_is_a_selector">セレクターとは</h2>
 
-<p>実はもうこれまでにセレクターを見たことがあるはずです。CSS セレクターは、CSS のもっとも基本的なルールとなるものです。要素やその他を選択して CSS プロパティ値を適用する HTML 要素をブラウザーに伝えるものです。セレクターによって選択される要素は、選択対象 <em>(subject of the selector</em>) と呼ばれます。</p>
+<p>実はもうこれまでにセレクターを見たことがあるはずです。CSS セレクターは、CSS のもっとも基本的なルールとなるものです。要素やその他を選択して CSS プロパティ値を適用する HTML 要素をブラウザーに伝えるものです。セレクターによって選択される要素は、選択対象 <em>(subject of the selector</em>) と呼ばれます。</p>
 
 <p><img alt="Some code with the h1 highlighted." src="https://mdn.mozillademos.org/files/16550/selector.png" style="border: 1px solid #cccccc; height: 218px; width: 471px;"></p>
 
 <p>これまでの記事で <code>h1</code> 要素や <code>.special</code> クラスなどのいくつかのセレクターを見てきました。それらはドキュメント内の対象をさまざまな方法で指定できるということも学びました。</p>
 
-<p>"CSS セレクター仕様" (<em>CSS Selectors specification</em>) で、CSS のセレクターは定義されています。CSS の他の部分と同様に、それらが機能するにはブラウザーでのサポートが必要です。よく使うセレクターは確定仕様である <a href="https://www.w3.org/TR/selectors-3/">Level 3 Selectors specification</a> で定義されているため、ブラウザーサポートも期待できます。</p>
+<p>"CSS セレクター仕様" (<em>CSS Selectors specification</em>) で、CSS のセレクターは定義されています。CSS の他の部分と同様に、それらが機能するにはブラウザーでのサポートが必要です。よく使うセレクターは確定仕様である <a href="https://www.w3.org/TR/selectors-3/">Level 3 Selectors specification</a> で定義されているため、ブラウザーサポートも期待できます。</p>
 
 <h2 id="Selector_lists" name="Selector_lists">セレクター一覧</h2>
 
-<p>同じ CSS を使用するものが複数ある場合は、セレクターリストでまとめてルールを適用することができます。たとえば、<code>h1</code> と <code>.special</code> クラスが同じ CSS だとして、2 つの個別のルールとして記述できます。</p>
+<p>同じ CSS を使用するものが複数ある場合は、セレクターリストでまとめてルールを適用することができます。たとえば、<code>h1</code> と <code>.special</code> クラスが同じ CSS だとして、2 つの個別のルールとして記述できます。</p>
 
 <pre class="brush: css"><code>h1 {
   color: blue;
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <p>以下のライブサンプルを使って、同じ宣言を持つ 2 つのセレクターを結合してみてください。作業の前後で見た目が同じになるように留意してください。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}} </p>
 
 <p>この方法でセレクターをグループ化していると、無効なセレクターがある場合はルール全体が無視されます。</p>
 
@@ -127,7 +127,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
 
 <h3 id="Combinators" name="Combinators">結合子</h3>
 
-<p>最後のセレクターグループは、セレクターを組み合わせて文書内のターゲット要素を選びます。たとえば、以下では子コンビネータ (<code>&gt;</code>) によって <code>&lt;article&gt;</code> 要素の直接の子である段落を選択します。</p>
+<p>最後のセレクターグループは、セレクターを組み合わせて文書内のターゲット要素を選びます。たとえば、以下では子コンビネータ (<code>&gt;</code>) によって <code>&lt;article&gt;</code> 要素の直接の子である段落を選択します。</p>
 
 <pre class="brush: css">article &gt; p { }</pre>
 
@@ -152,17 +152,17 @@ translation_of: Learn/CSS/Building_blocks/Selectors
  <tbody>
   <tr>
    <td><a href="/ja/docs/Web/CSS/Type_selectors">要素セレクター</a></td>
-   <td><code>h1 {  }</code></td>
+   <td><code>h1 {  }</code></td>
    <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Type_selectors">要素セレクター</a></td>
   </tr>
   <tr>
    <td><a href="/ja/docs/Web/CSS/Universal_selectors">全称セレクター</a></td>
-   <td><code>* {  }</code></td>
+   <td><code>* {  }</code></td>
    <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#The_universal_selector">全称セレクター</a></td>
   </tr>
   <tr>
    <td><a href="/ja/docs/Web/CSS/Class_selectors">クラスセレクター</a></td>
-   <td><code>.box {  }</code></td>
+   <td><code>.box {  }</code></td>
    <td><a href="/ja/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors">クラスセレクター</a></td>
   </tr>
   <tr>
@@ -172,7 +172,7 @@ translation_of: Learn/CSS/Building_blocks/Selectors
   </tr>
   <tr>
    <td><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a></td>
-   <td><code>a[title] {  }</code></td>
+   <td><code>a[title] {  }</code></td>
    <td><a href="/ja/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Attribute_selectors">属性によるセレクター</a></td>
   </tr>
   <tr>

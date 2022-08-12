@@ -28,7 +28,7 @@ translation_of: Web/API/RTCDataChannel
  <dd>返回枚举类型的 RTCDataChannelState，表示数据连接的状态，有以下几种类型：
  <ul>
   <li><code>"connecting"</code> 该状态表示底层链路还未建立和激活，该状态还是由{{domxref("RTCPeerConnection.createDataChannel()")}}生成的 datachannel 初始状态。</li>
-  <li><code>"open"</code> 该状态表示底层链路已经连接成功并且运行。这个状态还是由{{domxref("RTCDataChannelEvent")}}分发的 datachannel 的初始状态。 </li>
+  <li><code>"open"</code> 该状态表示底层链路已经连接成功并且运行。这个状态还是由{{domxref("RTCDataChannelEvent")}}分发的 datachannel 的初始状态。 </li>
   <li><code>"closing"</code> 该状态表示底层链路已经在关闭的过程中。该状态下将不会接受新的发送任务，但是缓冲队列中的消息还是会被继续发送或者接收。</li>
   <li><code>"closed"</code> 该状态表示底层链路已经完全被关闭（或者无法处于 established 状态）。</li>
  </ul>
@@ -95,30 +95,13 @@ dc.onclose = function () {
 };
 </pre>
 
-<p> </p>
+<h2 id="Specifications">Specifications</h2>
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
-
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannel', 'RTCDataChannel') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-{{Compat("api.RTCDataChannel")}}
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

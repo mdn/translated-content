@@ -37,15 +37,15 @@ translation_of: Web/CSS/@media/-webkit-transform-3d
 
 ```css
 @media (-webkit-transform-3d) {
-  .foo {
-    transform-style: preserve-3d;
-  }
+  .foo {
+    transform-style: preserve-3d;
+  }
 }
 
 @media (-webkit-transform-3d: 1) {
-  .foo {
-    transform-style: preserve-3d;
-  }
+  .foo {
+    transform-style: preserve-3d;
+  }
 }
 ```
 

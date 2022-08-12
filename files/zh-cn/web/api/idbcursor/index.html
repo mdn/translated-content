@@ -31,7 +31,7 @@ translation_of: Web/API/IDBCursor
 
 <dl>
  <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>返回一个游标正在迭代的 {{domxref("IDBObjectStore")}}  或者 {{domxref("IDBIndex")}} 。这个方法永远不会返回一个空或者抛出异常，即使游标当前正在被迭代，已迭代超过其结束，再或者其事务没有处于活动状态。</dd>
+ <dd>返回一个游标正在迭代的 {{domxref("IDBObjectStore")}}  或者 {{domxref("IDBIndex")}} 。这个方法永远不会返回一个空或者抛出异常，即使游标当前正在被迭代，已迭代超过其结束，再或者其事务没有处于活动状态。</dd>
  <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
  <dd>返回光标遍历方向。请查看<a href="#const_next"> 常数</a> 中可能的值。</dd>
  <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
@@ -42,7 +42,7 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="Constants">常量</h2>
 
-<div>{{ obsolete_header(25) }}</div>
+<div>{{deprecated_header}}</div>
 
 <div class="warning">
 <p>这些常量不再被支持。你应该使用字符串常量。({{ bug(891944) }})</p>
@@ -57,7 +57,7 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="示例">示例</h2>
 
-<p>在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用   <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code> 抓取数据。对于完整的工作示例，请查看我们的 <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">在线查看示例</a>)。</p>
+<p>在这个简单的代码片段中，我们创建了一个事务和检索一个对象存储，之后使用一个游标遍历存储对象中所有的记录。游标不是必须使用主键来选则数据库，我们可以把它全部拿出来。同时需要注意在每次循环遍历中，你可以在当前记录下的游标对象中使用   <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code> 抓取数据。对于完整的工作示例，请查看我们的 <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/">在线查看示例</a>)。</p>
 
 <pre class="notranslate">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
@@ -79,20 +79,7 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -107,5 +94,5 @@ translation_of: Web/API/IDBCursor
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

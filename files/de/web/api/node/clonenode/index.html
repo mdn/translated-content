@@ -24,9 +24,9 @@ translation_of: Web/API/Node/cloneNode
 </dl>
 
 <div class="note">
-<p><strong>Hinweis:</strong> In der DOM4 Spezifikation (implementiert in Gecko 13.0 {{geckoRelease(13)}}), ist das Argument <code>deep</code> optional. Es ist dann laut Spezifikation <strong><code>true</code></strong>.</p>
+<p><strong>Hinweis:</strong> In der DOM4 Spezifikation (implementiert in Gecko 13.0 {{geckoRelease(13)}}), ist das Argument <code>deep</code> optional. Es ist dann laut Spezifikation <strong><code>true</code></strong>.</p>
 
-<p>Leider wurde dies in der letzten Spezifikation geändert, sodass der Standardwert nun <strong><code>false</code></strong> ist. Auch wenn es immer noch optional ist, sollte man das Argument <code>deep</code> aus diesen Kompatibilitätsgründen setzen. Ab Gecko 28.0 {{geckoRelease(28)}} warnt die Konsole den Entwickler, wenn das Argument nicht gesetzt ist.</p>
+<p>Leider wurde dies in der letzten Spezifikation geändert, sodass der Standardwert nun <strong><code>false</code></strong> ist. Auch wenn es immer noch optional ist, sollte man das Argument <code>deep</code> aus diesen Kompatibilitätsgründen setzen. Ab Gecko 28.0 {{geckoRelease(28)}} warnt die Konsole den Entwickler, wenn das Argument nicht gesetzt ist.</p>
 </div>
 
 <h2 id="Example" name="Example">Beispiel</h2>
@@ -43,7 +43,7 @@ translation_of: Web/API/Node/cloneNode
 
 <p>Wenn <code>deep</code> auf <code>false</code> gesetzt ist, werden die Kindknoten nicht mitkopiert. Dies schließt ebenfalls alle Textelemente mit ein, da diese in einem oder mehreren Kindknoten enthalten sind.</p>
 
-<div class="warning"><strong>Warnung:</strong> Die Verwendung von <code>cloneNode()</code> kann dazu führen, dass die selbe ID im Dokument mehrmals existiert.</div>
+<div class="warning"><strong>Warnung:</strong> Die Verwendung von <code>cloneNode()</code> kann dazu führen, dass die selbe ID im Dokument mehrmals existiert.</div>
 
 <p>Wenn der Originalknoten eine ID hat, sollte diese im dupliziertem Knoten geändert oder gelöscht werden, um Probleme zu vermeiden. Dies sollte auch für das <code>name</code> Attribut überlegt werden.</p>
 
@@ -51,80 +51,7 @@ translation_of: Web/API/Node/cloneNode
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>
-    <p>Ja</p>
-
-    <p>(Standard: <code>false</code>)</p>
-   </td>
-   <td>{{CompatGeckoDesktop("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p>Yes</p>
-
-    <p>(default is <code>false</code>)</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome für Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>deep</code> as an optional parameter</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 

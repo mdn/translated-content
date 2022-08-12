@@ -5,7 +5,7 @@ translation_of: Web/CSS/flex-basis
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>flex-basis</code></strong> задаёт базовый размер флекс элемента по <strong>основной оси</strong>. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.</p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>flex-basis</code></strong> задаёт базовый размер флекс элемента по <strong>основной оси</strong>. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
 
@@ -49,19 +49,19 @@ flex-basis: unset;
 
 <dl>
  <dt><a id="&lt;'width'>" name="&lt;'width'>"><code>&lt;'ширина'&gt;</code></a></dt>
- <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово <code>auto</code>. Негативные значения не допустимы.</dd>
+ <dd>An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово <code>auto</code>. Негативные значения не допустимы.</dd>
  <dt><a id="content" name="content"><code>content</code></a></dt>
  <dd>Автоматический задаёт размер на основе содержимого элемента flex.</dd>
  <dd>
- <div class="note"><strong>Примечание:</strong> Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя <code>auto</code> вместе с основным размером (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> или <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) <code>auto</code>.</div>
+ <div class="note"><strong>Примечание:</strong> Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя <code>auto</code> вместе с основным размером (<a href="https://drafts.csswg.org/css2/visudet.html#propdef-width">width</a> или <a href="https://drafts.csswg.org/css2/visudet.html#propdef-height">height</a>) <code>auto</code>.</div>
 
  <div class="note">
  <p id="comment_text_0"><strong>История:</strong></p>
 
  <ul>
-  <li>Первоначально, <code>flex-basis:auto</code> означает "смотреть на значения <code>width</code> или <code>height</code>".</li>
-  <li>Затем <code>flex-basis:auto</code> был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения <code>width</code> или <code>height</code>".  Это было реализован в  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>баге 1032922</a>.</li>
-  <li>Затем в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>баге 1093316</a> это было возвращено обратно, поэтому <code>auto</code> снова означает "смотреть на значения <code>width</code> или <code>height</code>"; а новое ключевое слово <code>content</code> было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).</li>
+  <li>Первоначально, <code>flex-basis:auto</code> означает "смотреть на значения <code>width</code> или <code>height</code>".</li>
+  <li>Затем <code>flex-basis:auto</code> был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения <code>width</code> или <code>height</code>".  Это было реализован в  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032922" title='RESOLVED FIXED - Rename "flex-basis:auto" to "main-size", while preserving "flex:auto" shorthand value'>баге 1032922</a>.</li>
+  <li>Затем в <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1093316" title='RESOLVED FIXED - Back out flexbox "flex-basis:main-size" rename, since the CSSWG removed it from the spec'>баге 1093316</a> это было возвращено обратно, поэтому <code>auto</code> снова означает "смотреть на значения <code>width</code> или <code>height</code>"; а новое ключевое слово <code>content</code> было введено для автоматического размера. ({{bug("1105111")}} охватывает добавление этого ключевого слова).</li>
  </ul>
  </div>
  </dd>

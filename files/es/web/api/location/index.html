@@ -11,48 +11,48 @@ translation_of: Web/API/Location
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>La interface <strong><code>Location</code></strong> representa la ubicación (URL) del objeto al que esta vinculado. Los cambios hechos en ella son reflejados en el objeto al cual está relacionado. Ambas interfaces, {{domxref("Document")}} y {{domxref("Window")}} tienen una interface <code>Location</code> asignada, accessible desde {{domxref("Document.location")}} y {{domxref("Window.location")}} respectivamente.</p>
+<p>La interface <strong><code>Location</code></strong> representa la ubicación (URL) del objeto al que esta vinculado. Los cambios hechos en ella son reflejados en el objeto al cual está relacionado. Ambas interfaces, {{domxref("Document")}} y {{domxref("Window")}} tienen una interface <code>Location</code> asignada, accessible desde {{domxref("Document.location")}} y {{domxref("Window.location")}} respectivamente.</p>
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<p><em>La interface <code>Location</code></em><em> no hereda ninguna propiedad, pero las implementa desde {{domxref("URLUtils")}}.</em></p>
+<p><em>La interface <code>Location</code></em><em> no hereda ninguna propiedad, pero las implementa desde {{domxref("URLUtils")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Location.href")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene la URL completa. Si es cambiada, el documento asociado navegará a la nueva pagina. Puede ser cambiada desde un origen diferente que el asociado al documento.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene la URL completa. Si es cambiada, el documento asociado navegará a la nueva pagina. Puede ser cambiada desde un origen diferente que el asociado al documento.</dd>
  <dt>{{domxref("Location.protocol")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene el esquema del protocolo de la URL, incluyendo el <code>':'</code> final.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene el esquema del protocolo de la URL, incluyendo el <code>':'</code> final.</dd>
  <dt>{{domxref("Location.host")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene el host, el cual esta compuesta por: <em>hostname</em>,  <code>':'</code>, y el <em>port</em> de la URL.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene el host, el cual esta compuesta por: <em>hostname</em>,  <code>':'</code>, y el <em>port</em> de la URL.</dd>
  <dt>{{domxref("Location.hostname")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene el dominio de la URL.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene el dominio de la URL.</dd>
  <dt>{{domxref("Location.port")}}</dt>
  <dd>Es un {{domxref("DOMString")}} que contiene el numero del puerto de la URL.</dd>
  <dt>{{domxref("Location.pathname")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene el <code>'/'</code> inicial, seguido por la ruta de la URL.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene el <code>'/'</code> inicial, seguido por la ruta de la URL.</dd>
  <dt>{{domxref("Location.search")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene un <code>'?'</code> seguido por los parametros o el "querystring" de la URL. Navegadores modernos proveen <a href="/en-US/docs/Web/API/URLSearchParams/get#Example">URLSearchParams</a> y <a href="/en-US/docs/Web/API/URL/searchParams#Example">URL.searchParams</a> para hacer mas facil de obtener los parametros desde el querystring.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene un <code>'?'</code> seguido por los parametros o el "querystring" de la URL. Navegadores modernos proveen <a href="/en-US/docs/Web/API/URLSearchParams/get#Example">URLSearchParams</a> y <a href="/en-US/docs/Web/API/URL/searchParams#Example">URL.searchParams</a> para hacer mas facil de obtener los parametros desde el querystring.</dd>
  <dt>{{domxref("Location.hash")}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene un <code>'#'</code> seguido por el fragmento identificador de la URL.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene un <code>'#'</code> seguido por el fragmento identificador de la URL.</dd>
  <dt>{{domxref("Location.username")}}</dt>
  <dd>Es un {{domxref("DOMString")}} que contiene el <em>username</em> (usuario) especificado antes del dominio.</dd>
  <dt>{{domxref("Location.password")}}</dt>
  <dd>Es un {{domxref("DOMString")}} que contiene el <em>password</em> (contraseña) especificado antes del dominio.</dd>
  <dt>{{domxref("Location.origin")}} {{readOnlyInline}}</dt>
- <dd>Es un {{domxref("DOMString")}} que contiene la forma canonica del <em>origin</em> (origen) de la URL.</dd>
+ <dd>Es un {{domxref("DOMString")}} que contiene la forma canonica del <em>origin</em> (origen) de la URL.</dd>
 </dl>
 
 <h2 id="Metodos">Metodos</h2>
 
-<p><em>La interface <code>Location</code></em><em> no hereda ningun metodo<em>, pero los implementa desde {{domxref("URLUtils")}}</em>.</em></p>
+<p><em>La interface <code>Location</code></em><em> no hereda ningun metodo<em>, pero los implementa desde {{domxref("URLUtils")}}</em>.</em></p>
 
 <dl>
  <dt>{{domxref("Location.assign()")}}</dt>
  <dd>Carga el recurso en la URL proporcionada en el parámetro.</dd>
  <dt>{{domxref("Location.reload()")}}</dt>
- <dd>Recarga el recurso desde la URL actual. Si unico y opcional parametro es {{domxref("Boolean")}}, el cual, cuando es <code>true</code>, hace que la pagina siempre sea recargada desde el servidor. Si es <code>false</code> o no es especificado, el navegador puede recargar la pagina desde su cache.</dd>
+ <dd>Recarga el recurso desde la URL actual. Si unico y opcional parametro es {{domxref("Boolean")}}, el cual, cuando es <code>true</code>, hace que la pagina siempre sea recargada desde el servidor. Si es <code>false</code> o no es especificado, el navegador puede recargar la pagina desde su cache.</dd>
  <dt>{{domxref("Location.replace()")}}</dt>
- <dd>Reemplaza el recurso actual por el recibido como URL. La diferencia con el metodo <code>assign()</code> es que luego de usar <code>replace()</code> la pagina actual no va a ser guardada en la sesión {{domxref("History")}}, esto significa que el usuario no podrá usar el boton <em>Atras</em> para navegar a esta.</dd>
+ <dd>Reemplaza el recurso actual por el recibido como URL. La diferencia con el metodo <code>assign()</code> es que luego de usar <code>replace()</code> la pagina actual no va a ser guardada en la sesión {{domxref("History")}}, esto significa que el usuario no podrá usar el boton <em>Atras</em> para navegar a esta.</dd>
  <dt>{{domxref("Location.toString()")}}</dt>
  <dd>Retorna un {{domxref("DOMString")}} que contiene la URL completa. Es un sinonimo de {{domxref("URLUtils.href")}}, aunque este no puede ser utilizado para modificar el valor.</dd>
 </dl>
@@ -104,5 +104,5 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 <ul>
  <li>Dos metodos que crean tal objeto: {{domxref("Window.location")}} y {{domxref("Document.location")}}.</li>
- <li>URL relacionadas a interfaces: {{domxref("URL")}}, {{domxref("URLSearchParams")}} y {{domxref("HTMLHyperlinkElementUtils")}}</li>
+ <li>URL relacionadas a interfaces: {{domxref("URL")}}, {{domxref("URLSearchParams")}} y {{domxref("HTMLHyperlinkElementUtils")}}</li>
 </ul>

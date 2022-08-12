@@ -5,7 +5,7 @@ translation_of: Web/API/History/state
 ---
 <div>{{APIRef("History API")}}</div>
 
-<div><span class="seoSummary">Свойство <strong><code>History.state</code></strong> возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события </span>{{event("popstate")}}.</div>
+<div><span class="seoSummary">Свойство <strong><code>History.state</code></strong> возвращает значение последнего состояния стека истории (history stack). Этим способом можно проверить состояние не дожидаясь события </span>{{event("popstate")}}.</div>
 
 
 
@@ -15,11 +15,11 @@ translation_of: Web/API/History/state
 
 <h3 id="Значение">Значение</h3>
 
-<p>Последнее состояние стека истории. Значение равно {{jsxref("null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.</p>
+<p>Последнее состояние стека истории. Значение равно {{jsxref("null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Код, приведённый ниже, выводит в консоль значение <code>history.state</code> до и после применения метода {{domxref("History.pushState","pushState()")}}, который записывает значение в историю.</p>
+<p>Код, приведённый ниже, выводит в консоль значение <code>history.state</code> до и после применения метода {{domxref("History.pushState","pushState()")}}, который записывает значение в историю.</p>
 
 <pre class="brush: js">// Выведет null потому что мы пока не изменяли стек истории
 console.log(`History.state before pushState: ${history.state}`);

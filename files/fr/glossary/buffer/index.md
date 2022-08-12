@@ -13,4 +13,4 @@ Un tampon est un stockage dans la mémoire physique utilisé pour stocker tempor
 
 ### Culture générale
 
-- [Mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) sur Wikipedia
+- [Mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) sur Wikipédia

@@ -8,30 +8,30 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">    &lt;div id="container"&gt;
-        &lt;div id="palette" class="block"&gt;
-            &lt;div id="color-palette"&gt;&lt;/div&gt;
-            &lt;div id="color-info"&gt;
-                &lt;div class="title"&gt; CSS Color &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+<pre class="brush: html">    &lt;div id="container"&gt;
+        &lt;div id="palette" class="block"&gt;
+            &lt;div id="color-palette"&gt;&lt;/div&gt;
+            &lt;div id="color-info"&gt;
+                &lt;div class="title"&gt; CSS Color &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 
-        &lt;div id="picker" class="block"&gt;
-            &lt;div class="ui-color-picker" data-topic="picker" data-mode="HSL"&gt;&lt;/div&gt;
-            &lt;div id="picker-samples" sample-id="master"&gt;&lt;/div&gt;
-            &lt;div id="controls"&gt;
-                &lt;div id="delete"&gt;
-                    &lt;div id="trash-can"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div id="void-sample" class="icon"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;div id="picker" class="block"&gt;
+            &lt;div class="ui-color-picker" data-topic="picker" data-mode="HSL"&gt;&lt;/div&gt;
+            &lt;div id="picker-samples" sample-id="master"&gt;&lt;/div&gt;
+            &lt;div id="controls"&gt;
+                &lt;div id="delete"&gt;
+                    &lt;div id="trash-can"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div id="void-sample" class="icon"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 
-        &lt;div id="canvas" data-tutorial="drop"&gt;
-            &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
-                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div id="canvas" data-tutorial="drop"&gt;
+            &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
+                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
 </pre>
 
@@ -3207,23 +3207,23 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 <p>{{CSSRef}}</p>
 
-<p><font><font>이 도구를 사용하면 웹용 사용자 정의 색상을 쉽게 만들고 조정하고 실험 할 수 있습니다. </font></font><font><font>또한 </font><font>HEXA 색상, RGB (빨강 / 녹색 / 파랑) 및 HSL (색조 / 채도 / 밝기)를 비롯하여 </font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><font>CSS</font></a><font> 에서 </font><font>지원하는 </font><font>다양한 </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><font><font>색상 형식</font></font></a><font><font> 간에 쉽게 변환 할 수 </font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><font>있습니다</font></a><font> . </font><font>RGB (rgba) 및 HSL (hsla) 형식에서도 알파 채널을 제어 할 수 있습니다.</font></font></p>
+<p><font><font>이 도구를 사용하면 웹용 사용자 정의 색상을 쉽게 만들고 조정하고 실험 할 수 있습니다. </font></font><font><font>또한 </font><font>HEXA 색상, RGB (빨강 / 녹색 / 파랑) 및 HSL (색조 / 채도 / 밝기)를 비롯하여 </font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><font>CSS</font></a><font> 에서 </font><font>지원하는 </font><font>다양한 </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><font><font>색상 형식</font></font></a><font><font> 간에 쉽게 변환 할 수 </font><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"><font>있습니다</font></a><font> . </font><font>RGB (rgba) 및 HSL (hsla) 형식에서도 알파 채널을 제어 할 수 있습니다.</font></font></p>
 
-<p><font><font>색상을 정의하는 매개 변수를 조정하면 세 가지 표준 웹 CSS 형식으로 모두 표시됩니다. </font><font>또한 현재 선택한 색상을 기반으로 HSL 및 HSV 용 팔레트와 알파가 생성됩니다. </font><font>"스포이드"스타일 색상 선택 도구 상자는 HSL 또는 HSV 형식으로 전환 할 수 있습니다. </font><font>도구의 바닥에있는 상자로 색상을 드래그하고 서로 위로 움직여 색상을 비교할 수 있습니다. </font><font>상대 Z 색인 값을 조정하여 서로를 앞뒤로 이동하십시오.</font></font></p>
+<p><font><font>색상을 정의하는 매개 변수를 조정하면 세 가지 표준 웹 CSS 형식으로 모두 표시됩니다. </font><font>또한 현재 선택한 색상을 기반으로 HSL 및 HSV 용 팔레트와 알파가 생성됩니다. </font><font>"스포이드"스타일 색상 선택 도구 상자는 HSL 또는 HSV 형식으로 전환 할 수 있습니다. </font><font>도구의 바닥에있는 상자로 색상을 드래그하고 서로 위로 움직여 색상을 비교할 수 있습니다. </font><font>상대 Z 색인 값을 조정하여 서로를 앞뒤로 이동하십시오.</font></font></p>
 
-<p><font><font>이 도구는 </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><font><font>HTML</font></font></a><font><font> 에 적용 할 완벽한 CSS 색상을 식별하는 데 도움을줍니다 </font><font>.</font></font></p>
+<p><font><font>이 도구는 </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><font><font>HTML</font></font></a><font><font> 에 적용 할 완벽한 CSS 색상을 식별하는 데 도움을줍니다 </font><font>.</font></font></p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <p><font><font>{{EmbedLiveSample ( 'ColorPicker_Tool', '100 %', '900')}}</font></font></p>
 
 <p><font><font>위에서 작성한 생성 된 색상은 달리 명시하지 않는 한 CSS 및 HTML에서 색상이 사용되는 모든 위치에서 사용할 수 있습니다.</font></font></p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="See_also">See also</h2>
 

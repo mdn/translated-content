@@ -28,7 +28,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 <h3 id="모든_객체_프로퍼티_iterating">모든 객체 프로퍼티 iterating</h3>
 
-<p>JavaScript 에서 <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> 을 구현하지 않은 {{jsxref("Object")}} 는 iterable 이 아닙니다.<br>
+<p>JavaScript 에서 <a href="/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> 을 구현하지 않은 {{jsxref("Object")}} 는 iterable 이 아닙니다.<br>
  그러므로, 객체의 프로퍼티를 반복하기 위해 <a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of</a> 를 사용하면 안됩니다.</p>
 
 <pre class="brush: js example-bad">var obj = { 'France': 'Paris', 'England': 'London' };

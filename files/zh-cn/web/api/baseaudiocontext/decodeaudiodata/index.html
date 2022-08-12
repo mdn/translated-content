@@ -37,9 +37,9 @@ original_slug: Web/API/AudioContext/decodeAudioData
 
 <h3 id="旧的回调语法">旧的回调语法</h3>
 
-<p>在这个事例中， <code>getData()</code> 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于<code>decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回</code>, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。</p>
+<p>在这个事例中， <code>getData()</code> 方法使用 XHR 加载一个音轨，设置请求的 responsetype 为 ArrayBuffer 使它返回一个 arraybuffer 数据，然后存储在 audioData 变量中。然后我们将这个 arraybuffer 数据置于<code>decodeAudioData()方法中使用，当成功解码PCM Data后通过回调返回</code>, 将返回的结果通过{{ domxref("AudioContext.createBufferSource()") }}接口进行处理并获得一个{{ domxref("AudioBufferSourceNode") }}, 将源连接至{{domxref("AudioContext.destination") }}并将它设置为循环的。</p>
 
-<p>通过按钮来运行 <code>getData()</code> 来获取音轨并播放它。当使用 <code>stop()</code> 方法后 source 将会被清除。</p>
+<p>通过按钮来运行 <code>getData()</code> 来获取音轨并播放它。当使用 <code>stop()</code> 方法后 source 将会被清除。</p>
 
 <div class="note">
 <p><strong>Note</strong>: You can <a href="http://mdn.github.io/decode-audio-data/">run the example live</a> (or <a href="https://github.com/mdn/decode-audio-data">view the source</a>.)</p>
@@ -88,14 +88,14 @@ function getData() {
 // wire up buttons to stop and play audio
 
 play.onclick = function() {
-  getData();
-  source.start(0);
-  play.setAttribute('disabled', 'disabled');
+  getData();
+  source.start(0);
+  play.setAttribute('disabled', 'disabled');
 }
 
 stop.onclick = function() {
-  source.stop(0);
-  play.removeAttribute('disabled');
+  source.stop(0);
+  play.removeAttribute('disabled');
 }
 
 

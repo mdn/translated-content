@@ -10,9 +10,9 @@ translation_of: Web/HTTP/Status/408
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><code>A resposta <strong>408 Request Timeout</strong></code> significa que o servidor irá encerrar essa conexão em desuso. É enviado a uma conexão parada por alguns servidores, <em>mesmo sem nenhuma requisição feita anteriormente pelo cliente</em>.</p>
+<p><code>A resposta <strong>408 Request Timeout</strong></code> significa que o servidor irá encerrar essa conexão em desuso. É enviado a uma conexão parada por alguns servidores, <em>mesmo sem nenhuma requisição feita anteriormente pelo cliente</em>.</p>
 
-<p>O servidor deve enviar no cabeçalho de resposta "close" {{HTTPHeader("Connection")}}  já que <code>408</code> implica que o servidor decidiu encerrar a conexão ao invés de continuar aguardando.</p>
+<p>O servidor deve enviar no cabeçalho de resposta "close" {{HTTPHeader("Connection")}}  já que <code>408</code> implica que o servidor decidiu encerrar a conexão ao invés de continuar aguardando.</p>
 
 <p>Essa resposta está sendo mais usada desde que alguns browsers como Chrome, Firefox 27+, e IE9, usam o mecanismo "HTTP pre-connection" para acelerar a navegação.</p>
 

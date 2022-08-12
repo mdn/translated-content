@@ -107,20 +107,20 @@ translation_of: Learn/Accessibility/Mobile
 <p>Por ejemplo, con TalkBack activado:</p>
 
 <ol>
- <li>    Abra su navegador web.</li>
- <li>    Activar la barra de URL.</li>
- <li>    Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
+ <li>    Abra su navegador web.</li>
+ <li>    Activar la barra de URL.</li>
+ <li>    Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
   <ul>
    <li>Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.</li>
    <li>Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.</li>
    <li>Una vez que hayas terminado, encuentra la tecla Intro y presiónala.</li>
   </ul>
  </li>
- <li>    Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.</li>
- <li>    Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.</li>
- <li>    Deslízate hacia la derecha hasta que encuentres la opción "Encabezados y puntos de referencia".</li>
- <li>    Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.</li>
- <li>    Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.</li>
+ <li>    Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.</li>
+ <li>    Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.</li>
+ <li>    Deslízate hacia la derecha hasta que encuentres la opción "Encabezados y puntos de referencia".</li>
+ <li>    Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.</li>
+ <li>    Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.</li>
 </ol>
 
 <p><strong>Nota</strong>: consulte <a href="https://support.google.com/accessibility/android/answer/6283677?hl=en&amp;ref_topic=3529932">Empezar en Android con TalkBack</a> para obtener una documentación más completa.</p>
@@ -134,11 +134,11 @@ translation_of: Learn/Accessibility/Mobile
 <p>Una vez que VoiceOver esté habilitado, los gestos de control básico de iOS serán un poco diferentes:</p>
 
 <ol>
- <li>    Un solo toque hará que se seleccione el elemento que tocas; su dispositivo dirá el elemento que ha tocado.</li>
- <li>    También puede navegar por los elementos en la pantalla deslizando hacia la izquierda y hacia la derecha para moverse entre ellos, o deslizando el dedo por la pantalla para moverse entre diferentes elementos (cuando encuentra el elemento que desea, puede quitar el dedo para seleccionarlo). ).</li>
- <li>    Para activar el elemento seleccionado (por ejemplo, abrir una aplicación seleccionada), toque dos veces en cualquier lugar de la pantalla.</li>
- <li>    Desliza tres dedos para desplazarte por una página.</li>
- <li>    Toque con dos dedos para realizar una acción relevante para el contexto, por ejemplo, tomar una foto mientras está en la aplicación de la cámara.</li>
+ <li>    Un solo toque hará que se seleccione el elemento que tocas; su dispositivo dirá el elemento que ha tocado.</li>
+ <li>    También puede navegar por los elementos en la pantalla deslizando hacia la izquierda y hacia la derecha para moverse entre ellos, o deslizando el dedo por la pantalla para moverse entre diferentes elementos (cuando encuentra el elemento que desea, puede quitar el dedo para seleccionarlo). ).</li>
+ <li>    Para activar el elemento seleccionado (por ejemplo, abrir una aplicación seleccionada), toque dos veces en cualquier lugar de la pantalla.</li>
+ <li>    Desliza tres dedos para desplazarte por una página.</li>
+ <li>    Toque con dos dedos para realizar una acción relevante para el contexto, por ejemplo, tomar una foto mientras está en la aplicación de la cámara.</li>
 </ol>
 
 <p>Para apagarlo nuevamente, navegue de nuevo a Configuración&gt; General&gt; Accesibilidad&gt; VoiceOver usando los gestos anteriores, y active el control deslizante VoiceOver para desactivarlo.</p>
@@ -202,7 +202,7 @@ translation_of: Learn/Accessibility/Mobile
 
 <p>Alternativamente, los eventos específicos del mouse como <a href="/es/docs/Web/API/GlobalEventHandlers/onmousedown">mousedown</a> y <a href="/es/docs/Web/API/GlobalEventHandlers/onmouseup">mouseup</a> crean problemas: sus controladores de eventos no pueden invocarse usando controles que no sean del mouse.</p>
 
-<p>Si intenta controlar nuestro ejemplo de <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">ver ejemplo en vivo</a>) con el teclado o el toque, verá el problema. Esto ocurre porque estamos usando un código como el siguiente:</p>
+<p>Si intenta controlar nuestro ejemplo de <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html">simple-box-drag.html</a> (<a href="https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html">ver ejemplo en vivo</a>) con el teclado o el toque, verá el problema. Esto ocurre porque estamos usando un código como el siguiente:</p>
 
 <pre class="brush: js">div.onmousedown = function() {
   initialBoxX = div.offsetLeft;
@@ -234,7 +234,7 @@ panel.ontouchend = stopMove;</pre>
 <p>En particular, los problemas más comunes que deben abordarse para dispositivos móviles son:</p>
 
 <ul>
- <li>Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como <a href="/es/docs/Web/CSS/Media_Queries">mconsultas de medios, </a><a href="/es/docs/Mozilla/Mobile/Viewport_meta_tag">vista</a> and <a href="/es/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>. .</li>
+ <li>Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como <a href="/es/docs/Web/CSS/Media_Queries">mconsultas de medios, </a><a href="/es/docs/Mozilla/Mobile/Viewport_meta_tag">vista</a> and <a href="/es/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>. .</li>
  <li>Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"> técnicas de imagenes de respuesta</a>.</li>
  <li>Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Agregar gráficos vectoriales a la web</a> para obtener más detalles).</li>
 </ul>
@@ -265,16 +265,16 @@ panel.ontouchend = stopMove;</pre>
 
 <p>En los dispositivos móviles, el ingreso de datos tiende a ser más molesto para los usuarios que la experiencia equivalente en computadoras de escritorio. Es más conveniente escribir texto en las entradas de formulario utilizando un teclado de computadora de escritorio o portátil que un teclado virtual de pantalla táctil o un pequeño teclado físico móvil.</p>
 
-<p>Por esta razón, vale la pena intentar minimizar la cantidad de escritura necesaria. Como ejemplo, en lugar de hacer que los usuarios completen el título de su trabajo cada vez que usan una entrada de texto regular, podría ofrecer un menú {{htmlelement ("select")}} que contenga las opciones más comunes (que también ayuda a mantener la coherencia en entrada de datos), y ofrece una opción "Otro" que muestra un campo de texto para escribir cualquier valor atípico. Puedes ver un ejemplo simple de esta idea en acción en <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html">common-job-types.html</a> (ver el <a href="https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html">common jobs ejemplo en vivo</a>).</p>
+<p>Por esta razón, vale la pena intentar minimizar la cantidad de escritura necesaria. Como ejemplo, en lugar de hacer que los usuarios completen el título de su trabajo cada vez que usan una entrada de texto regular, podría ofrecer un menú {{htmlelement ("select")}} que contenga las opciones más comunes (que también ayuda a mantener la coherencia en entrada de datos), y ofrece una opción "Otro" que muestra un campo de texto para escribir cualquier valor atípico. Puedes ver un ejemplo simple de esta idea en acción en <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html">common-job-types.html</a> (ver el <a href="https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html">common jobs ejemplo en vivo</a>).</p>
 
-<p>También vale la pena considerar el uso de los tipos de entrada de formulario HTML5, así como la fecha en las plataformas móviles, ya que ambos los manejan bien: tanto Android como iOS, por ejemplo, muestran widgets utilizables que se adaptan bien a la experiencia del dispositivo. Ver <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html">html5-form-examples.html</a> para algunos ejemplos (ver el <a href="https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html">ejemplo de formulario en vivo en HTML5</a>) — intenta cargarlos y manipularlos en dispositivos móviles. Por ejemplo:</p>
+<p>También vale la pena considerar el uso de los tipos de entrada de formulario HTML5, así como la fecha en las plataformas móviles, ya que ambos los manejan bien: tanto Android como iOS, por ejemplo, muestran widgets utilizables que se adaptan bien a la experiencia del dispositivo. Ver <a href="https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html">html5-form-examples.html</a> para algunos ejemplos (ver el <a href="https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html">ejemplo de formulario en vivo en HTML5</a>) — intenta cargarlos y manipularlos en dispositivos móviles. Por ejemplo:</p>
 
 <ul>
- <li>Los tipos de <code>number</code>, <code>tel</code>, <code>y email</code> muestran teclados virtuales adecuados para ingresar números / números de teléfono.</li>
- <li>Los tipos de <code>time</code> and <code>date</code> muestran selectores adecuados para seleccionar horas y fechas.</li>
+ <li>Los tipos de <code>number</code>, <code>tel</code>, <code>y email</code> muestran teclados virtuales adecuados para ingresar números / números de teléfono.</li>
+ <li>Los tipos de <code>time</code> and <code>date</code> muestran selectores adecuados para seleccionar horas y fechas.</li>
 </ul>
 
-<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="https://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
+<p>If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. See <a href="https://diveinto.html5doctor.com/detect.html#input-types">input types</a> for raw information on detecting different input types, and also check out our <a href="/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">feature detection article</a> for much more information.</p>
 
 <h2 id="Resumen">Resumen</h2>
 

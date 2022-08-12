@@ -120,14 +120,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 
 <pre class="brush: js">function replacer(match, p1, p2, p3, offset, string){
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(' - ');
 }
 newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 </pre>
 
 <h2 id="Examples" name="Examples">Beispiele</h2>
 
-<h3 id="Example_Defining_the_regular_expression_in_replace" name="Example:_Defining_the_regular_expression_in_replace">Beispiel: Definieren des regulären Ausdrucks in <code>replace</code></h3>
+<h3 id="Example_Defining_the_regular_expression_in_replace" name="Example:_Defining_the_regular_expression_in_replace">Beispiel: Definieren des regulären Ausdrucks in <code>replace</code></h3>
 
 <p>Globales Ersetzen kann nur mit einem regulären Ausdruck durchgeführt werden. Im folgenden Beispiel wird der reguläre Ausdruck in <code>replace</code> definiert und beinhaltet den Schalter <code>ignore case</code>.</p>
 
@@ -138,7 +138,7 @@ print(newstr);
 
 <p>Dies erzeugt die Ausgabe "Twas the night before Christmas..."</p>
 
-<h3 id="Example_Using_global_and_ignore_with_replace" name="Example:_Using_global_and_ignore_with_replace">Beispiel: Nutzung von <code>global</code> und <code>ignore</code> mit <code>replace</code></h3>
+<h3 id="Example_Using_global_and_ignore_with_replace" name="Example:_Using_global_and_ignore_with_replace">Beispiel: Nutzung von <code>global</code> und <code>ignore</code> mit <code>replace</code></h3>
 
 <p>Das nachfolgende Beispiel enthält einen regulären Ausdruck, der sowohl das <code>global</code> als auch das <code>ignore</code> Flag gesetzt hat. Dadurch wird von <code>replace</code> jedes Vorkommnis von 'apples' in der Zeichenkette durch 'oranges' ersetzt.</p>
 
@@ -152,7 +152,7 @@ print(newstr);
 
 <h3 id="Beispiel_Vertausche_Wörter_in_Strings">Beispiel: Vertausche Wörter in Strings</h3>
 
-<p>Im folgenden Skript werden die Wörter in dem String getauscht. Für die Vertauschung im Text nutzt das Skript die Ersetzungspatterns <code>$1</code> und <code>$2</code>.</p>
+<p>Im folgenden Skript werden die Wörter in dem String getauscht. Für die Vertauschung im Text nutzt das Skript die Ersetzungspatterns <code>$1</code> und <code>$2</code>.</p>
 
 <pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
@@ -189,7 +189,7 @@ print(newstr);
 
 <p>Das folgende Beispiel ersetzt einen Wert in Grad Fahrenheit durch den entsprechenden Celsius-Wert. Der Fahrenheitwert sollte eine Nummer sein, die mit einem F endet. Die Funktion gibt eine Celsius-Temperatur mit der Endung C aus. Ist zum Beispiel der Eingabewert 212F, so gibt die Funktion 100C zurück. Ist die Nummer 0F, so wird -17,77777777777778C zurück gegeben.</p>
 
-<p>Der reguläre Ausdruck <code>test</code> prüft jede Nummer, die mit F endet. Die Nummer in Grad Fahrenheit ist durch den zweiten Funktionsparameter, <code>p1</code>, ansprechbar. Die Funktion setzt den Celsiuswert basierend auf dem Fahrenheitwert in einer Zeichenkette in der <code>f2c</code>-Funktion. <code>f2c gibt dann den Celsiuswert zurück. Diese Funktion </code>ähnelt dem s///e-Flag in Perl.</p>
+<p>Der reguläre Ausdruck <code>test</code> prüft jede Nummer, die mit F endet. Die Nummer in Grad Fahrenheit ist durch den zweiten Funktionsparameter, <code>p1</code>, ansprechbar. Die Funktion setzt den Celsiuswert basierend auf dem Fahrenheitwert in einer Zeichenkette in der <code>f2c</code>-Funktion. <code>f2c gibt dann den Celsiuswert zurück. Diese Funktion </code>ähnelt dem s///e-Flag in Perl.</p>
 
 <pre class="brush: js">function f2c(x) {
   function convert(str, p1, offset, s) {
@@ -276,62 +276,14 @@ console.log(retArr);</pre>
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Eigenschaft</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Grundlegende Unterstützung</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Firefox-spezifische_Bemerkungen">Firefox-spezifische Bemerkungen</h2>
 
 <ul>
  <li>Mit dem Start von Gecko 27 {{geckoRelease(27)}}, wurde diese Methode an die ECMAScript Spezifikation angepasst. Wenn <code>replace()</code> mit einem globalen regulären Ausdruck aufgerufen wird, wird die {{jsxref("RegExp.lastIndex")}} Eigenschaft (wenn sie Spezifiziert wurde) auf 0 zurückgesetzt ({{bug(501739)}}).</li>
  <li>Mit dem Start von Gecko 39 {{geckoRelease(39)}} wurden das nicht standardisierte <code>flags</code> Argument als deprecated markiert und wirft eine Warnung in der Konsole ({{bug(1142351)}}).</li>
- <li>Mit dem Start von Gecko 47 {{geckoRelease(47)}} wurden das nicht standardisierte <code>flags</code> Argument  nicht länger in <span class="short_text" id="result_box" lang="de"><span>Nicht-</span><span>Release-Builds</span></span> unterstützt und wird bald vollständig entfernt ({{bug(1245801)}}).</li>
+ <li>Mit dem Start von Gecko 47 {{geckoRelease(47)}} wurden das nicht standardisierte <code>flags</code> Argument  nicht länger in <span class="short_text" id="result_box" lang="de"><span>Nicht-</span><span>Release-Builds</span></span> unterstützt und wird bald vollständig entfernt ({{bug(1245801)}}).</li>
  <li>Mit dem Start von Gecko 49 {{geckoRelease(49)}} wurden das nicht standardisierte <code>flags</code> Argument nicht mehr unterstützt ({{bug(1108382)}}).</li>
 </ul>
 

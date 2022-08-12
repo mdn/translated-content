@@ -5,7 +5,7 @@ translation_of: Web/API/Element/scrollWidth
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>La propiedad de sólo lectura <strong><code>Element.scrollWidth</code></strong> retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido),  <code>scrollWidth</code> es mayor que  <code>clientWidth</code>.</p>
+<p>La propiedad de sólo lectura <strong><code>Element.scrollWidth</code></strong> retorna bien la anchura en pixels del contenido de un elemento o bien la anchura del elemento en si, la que sea mayor de ambas. Si el elemento es más ancho que su área contenedora (por ejemplo, si existen barras de desplazamiento para desplazarse a través del contenido),  <code>scrollWidth</code> es mayor que  <code>clientWidth</code>.</p>
 
 <div class="note">
 <p>El valor de esta propiedad será red redondedo a un entero. Si necesita un valor fraccional, use {{ domxref("element.getBoundingClientRect()") }}.</p>
@@ -22,65 +22,65 @@ translation_of: Web/API/Element/scrollWidth
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;title&gt;Ejemplo&lt;/title&gt;
-    &lt;style&gt;
-        div {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
+    &lt;title&gt;Ejemplo&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
-        #aDiv {
-            width: 100px;
-        }
+        #aDiv {
+            width: 100px;
+        }
 
-        button {
-            margin-bottom: 2em;
-        }
-    &lt;/style&gt;
+        button {
+            margin-bottom: 2em;
+        }
+    &lt;/style&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
-    &lt;div id="aDiv"&gt;
-        FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="aButton"&gt;
-        Check for overflow
-    &lt;/button&gt;
+    &lt;div id="aDiv"&gt;
+        FooBar-FooBar-FooBar-FooBar
+    &lt;/div&gt;
+    &lt;button id="aButton"&gt;
+        Check for overflow
+    &lt;/button&gt;
 
-    &lt;div id="anotherDiv"&gt;
-        FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="anotherButton"&gt;
-        Check for overflow
-    &lt;/button&gt;
+    &lt;div id="anotherDiv"&gt;
+        FooBar-FooBar-FooBar-FooBar
+    &lt;/div&gt;
+    &lt;button id="anotherButton"&gt;
+        Check for overflow
+    &lt;/button&gt;
 &lt;/body&gt;
 &lt;script&gt;
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    var buttonOne = document.getElementById('aButton'),
+    buttonTwo = document.getElementById('anotherButton'),
+    divOne = document.getElementById('aDiv'),
+    divTwo = document.getElementById('anotherDiv');
 
-    //comprueba si un desbordamiento está ocurriendo
-    function isOverflowing(element) {
-        return (element.scrollWidth &gt; element.offsetWidth);
-    }
+    //comprueba si un desbordamiento está ocurriendo
+    function isOverflowing(element) {
+        return (element.scrollWidth &gt; element.offsetWidth);
+    }
 
-    function alertOverflow(element) {
-        if (isOverflowing(element)) {
-            alert('El contenido desborda el contenedor.');
-        } else {
-            alert('Sin desobordamiento!');
-        }
-    }
+    function alertOverflow(element) {
+        if (isOverflowing(element)) {
+            alert('El contenido desborda el contenedor.');
+        } else {
+            alert('Sin desobordamiento!');
+        }
+    }
 
-    buttonOne.addEventListener('click', function() {
-        alertOverflow(divOne);
-    });
+    buttonOne.addEventListener('click', function() {
+        alertOverflow(divOne);
+    });
 
-    buttonTwo.addEventListener('click', function() {
-        alertOverflow(divTwo);
-    });
+    buttonTwo.addEventListener('click', function() {
+        alertOverflow(divTwo);
+    });
 &lt;/script&gt;
 &lt;/html&gt;
 

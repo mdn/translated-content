@@ -14,7 +14,7 @@ translation_of: Web/API/WindowClient
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-L'interface `WindowClient` de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) représente la portée d'un client service worker lorsque celui-ci existe en tant que document dans un contexte navigateur, controlé par un worker actif. Le client sélectionne et utilise un service worker pour son propre chargement et celui de ses sous-ressources.
+L'interface `WindowClient` de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) représente la portée d'un client service worker lorsque celui-ci existe en tant que document dans un contexte navigateur, controlé par un worker actif. Le client sélectionne et utilise un service worker pour son propre chargement et celui de ses sous-ressources.
 
 ## Méthodes
 
@@ -69,9 +69,9 @@ self.addEventListener('notificationclick', function(event) {
 
 ## Voir aussi
 
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
-- [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)
+- [Promises](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Channel Messaging API](/fr/docs/Web/API/Channel_Messaging_API)

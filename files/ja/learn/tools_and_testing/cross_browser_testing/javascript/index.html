@@ -59,12 +59,12 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
  <li>Basic syntax and logic problems (again, check out <a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">Troubleshooting JavaScript</a>).</li>
  <li>Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see <a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts">Function scope and conflicts</a>).</li>
  <li>Confusion about <a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a>, in terms of what scope it applies to, and therefore if its value is what you intended. You can read <a href="/ja/docs/Learn/JavaScript/Objects/Basics#What_is_this">What is "this"?</a> for a light introduction; you should also study examples like <a href="https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143">this one</a>, which shows a typical pattern of saving a <code>this</code> scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct <code>this</code> scope.</li>
- <li>Incorrectly using functions inside loops — for example, in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">bad-for-loop.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">source code</a>), we loop through 10 iterations, each time creating a paragraph and adding an <a href="/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handler to it. When clicked, each one should alert a message containing its number (the value of <code>i</code> at the time it was created), however each one reports <code>i</code> as 11, because for loops do all their iterating before nested functions are invoked. If you want this to work correctly, you need to define a function to add the handler separately, calling it on each iteration and passing it the current value of <code>para</code> and <code>i</code> each time (or something similar). See <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html">good-for-loop.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html">source code</a> also) for a version that works.</li>
+ <li>Incorrectly using functions inside loops — for example, in <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">bad-for-loop.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/bad-for-loop.html">source code</a>), we loop through 10 iterations, each time creating a paragraph and adding an <a href="/ja/docs/Web/API/GlobalEventHandlers/onclick">onclick</a> event handler to it. When clicked, each one should alert a message containing its number (the value of <code>i</code> at the time it was created), however each one reports <code>i</code> as 11, because for loops do all their iterating before nested functions are invoked. If you want this to work correctly, you need to define a function to add the handler separately, calling it on each iteration and passing it the current value of <code>para</code> and <code>i</code> each time (or something similar). See <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html">good-for-loop.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/good-for-loop.html">source code</a> also) for a version that works.</li>
  <li>Making sure asynchronous operations have returned before trying to use the values they return. For example, <a href="/ja/docs/AJAX/Getting_Started#Step_3_%E2%80%93_A_Simple_Example">this Ajax example</a> checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction to <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> to the JavaScript language.</li>
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: <a href="https://www.toptal.com/javascript/10-most-common-javascript-mistakes">Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make</a> has some nice discussions of these common mistakes and more.</p>
+<p><strong>注</strong>: <a href="https://www.toptal.com/javascript/10-most-common-javascript-mistakes">Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make</a> has some nice discussions of these common mistakes and more.</p>
 </div>
 
 <h3 id="Linters" name="Linters">Linters</h3>
@@ -91,7 +91,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
  <li>After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14173/jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/14173/jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="http://jshint.com/install/">JSHint install page</a>.</p>
 
 <h4 id="Other_uses" name="Other_uses">その他</h4>
 
@@ -196,7 +196,7 @@ showHeroes(superHeroes);</pre>
 
 <ul>
  <li>Under <em>Breakpoints</em>, you'll see the details of the break-point you have set.</li>
- <li>Under <em>Call Stack</em>, you'll see two entries — this is basically a list of the series of functions that were invoked to cause the current function to be invoked. At the top, we have <code>showHeroes()</code> the function we are currently in, and below we have <code>request.onload</code>, which stores the event handler function containing the call to <code>showHeroes()</code>.</li>
+ <li>Under <em>Call Stack</em>, you'll see two entries — this is basically a list of the series of functions that were invoked to cause the current function to be invoked. At the top, we have <code>showHeroes()</code> the function we are currently in, and below we have <code>request.onload</code>, which stores the event handler function containing the call to <code>showHeroes()</code>.</li>
  <li>Under <em>Scopes</em>, you'll see the currently active scope for the function we are looking at. We only have two — <code>showHeroes</code>, and <code>Window</code> (the global scope). Each scope can be expanded to show the values of variables inside the scope at the point that execution of the code was stopped.</li>
 </ul>
 
@@ -229,7 +229,7 @@ showHeroes(superHeroes);</pre>
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: Addy Osmani's <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'"><span class="headline">Writing Fast, Memory-Efficient JavaScript</span></a> <span class="headline">contains a lot of detail and some excellent tips for boosting JavaScript performance.</span></p>
+<p><strong>注</strong>: Addy Osmani's <a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/" rel="bookmark" title="Read 'Writing Fast, Memory-Efficient JavaScript'"><span class="headline">Writing Fast, Memory-Efficient JavaScript</span></a> <span class="headline">contains a lot of detail and some excellent tips for boosting JavaScript performance.</span></p>
 </div>
 
 <h2 id="Cross-browser_JavaScript_problems" name="Cross-browser_JavaScript_problems">クロスブラウザー JavaScript の問題</h2>
@@ -252,7 +252,7 @@ showHeroes(superHeroes);</pre>
 <p>For example:</p>
 
 <ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the <a href="/ja/docs/Web/API/GlobalFetch/fetch">Fetch API</a> (a modern equivalent to <a href="/ja/docs/Web/API/XMLHttpRequest">XMLHTTPRequest</a>) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.</li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the <a href="/ja/docs/Web/API/GlobalFetch/fetch">Fetch API</a> (a modern equivalent to <a href="/ja/docs/Web/API/XMLHttpRequest">XMLHTTPRequest</a>) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.</li>
  <li>Arrow functions provide a shorter, more convenient syntax for writing <a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions">anonymous functions</a>, which also has other advantages (see <a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>). For a quick example, see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a> also). Arrow functions are supported across all modern browsers, except for IE and Safari.</li>
  <li>Declaring <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode#Strict_mode_in_browsers">Strict mode in browsers</a>).</li>
  <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">Typed arrays</a> allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.</li>
@@ -277,7 +277,7 @@ showHeroes(superHeroes);</pre>
 
 <h4 id="Feature_detection" name="Feature_detection">機能検出</h4>
 
-<p>The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the <a href="/ja/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a>  (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a <code>geolocation</code> property available on the global <a href="/ja/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
+<p>The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the <a href="/ja/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a>  (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a <code>geolocation</code> property available on the global <a href="/ja/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
 <pre class="language-js"><span class="keyword token">if</span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -351,7 +351,7 @@ fetch('flowers.jpg').then(function(response) {
   });
 });</pre>
  </li>
- <li>Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool! <br>
+ <li>Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool! <br>
   <img alt="" src="https://mdn.mozillademos.org/files/14183/fetch-image.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
@@ -383,7 +383,7 @@ fetch('flowers.jpg').then(function(response) {
   <span class="hljs-keyword">return</span> <span class="hljs-built_in">window</span>.Promise &amp;&amp; <span class="hljs-built_in">window</span>.fetch;
 }</code></pre>
 
-<p>Here we are testing whether the <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> object and <code><a href="/ja/docs/Web/API/GlobalFetch/fetch">fetch()</a></code> function exist in the browser. If both do, the function returns true. If the function returns <code>false</code>, then we run the code inside the second part of the conditional  — this runs a function called loadScript(), which loads the polyfills into the page, then runs <code>main()</code> after the loading has finished. <code>loadScript()</code> looks like this:</p>
+<p>Here we are testing whether the <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> object and <code><a href="/ja/docs/Web/API/GlobalFetch/fetch">fetch()</a></code> function exist in the browser. If both do, the function returns true. If the function returns <code>false</code>, then we run the code inside the second part of the conditional  — this runs a function called loadScript(), which loads the polyfills into the page, then runs <code>main()</code> after the loading has finished. <code>loadScript()</code> looks like this:</p>
 
 <pre class="brush: js"><code class="language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadScript</span>(<span class="hljs-params">src, done</span>) </span>{
   <span class="hljs-keyword">var</span> js = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);
@@ -402,7 +402,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <p>Note that polyfills.js is basically the two polyfills we are using put together into one file. We did this manually, but there are cleverer solutions that will automatically generate bundles for you — see <a href="http://browserify.org/">Browserify</a> (see <a href="https://www.sitepoint.com/getting-started-browserify/">Getting started with Browserify</a> for a basic tutorial). It is a good idea to bundle JS files into one like this — reducing the number of HTTP requests you need to make improves the performance of your site.</p>
 
-<p>You can see this code in action in <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
+<p>You can see this code in action in <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">fetch-polyfill-only-when-needed.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html">source code also</a>). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton.  Check out his article <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/">Loading Polyfills Only When Needed</a> for the original code, plus a lot of useful explanation around the wider subject).</p>
 
 <div class="note">
 <p><strong>注</strong>: There are some 3rd party options to consider, for example <a href="https://polyfill.io/v2/docs/">Polyfill.io</a> — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.</p>
@@ -454,7 +454,7 @@ if(ua.indexOf('Firefox') !== -1) {
 
 <p>However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.</p>
 
-<p>Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless. </p>
+<p>Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless. </p>
 
 <div class="note">
 <p><strong>注</strong>: You should read <a href="http://webaim.org/blog/user-agent-string-history/">History of the browser user-agent string</a> by Aaron Andersen for a useful and amusing take on this situation.</p>
@@ -503,7 +503,7 @@ var audioCtx = new AudioContext();</pre>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
 
@@ -518,4 +518,4 @@ var audioCtx = new AudioContext();</pre>
  <li><a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

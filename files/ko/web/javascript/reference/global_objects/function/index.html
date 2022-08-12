@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 
 
-<p>모든 JavaScript 함수는 사실 <code>Function</code> 객체입니다. 이는 <code>(function(){}).constructor === Function</code>이 참을 반환하는 것에서 알 수 있습니다.</p>
+<p>모든 JavaScript 함수는 사실 <code>Function</code> 객체입니다. 이는 <code>(function(){}).constructor === Function</code>이 참을 반환하는 것에서 알 수 있습니다.</p>
 
 <h2 id="구문">구문</h2>
 
@@ -34,11 +34,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <h2 id="설명">설명</h2>
 
-<p><code>Function</code> 생성자로 생성한 <code>Function</code> 객체는 함수를 생성할 때 구문 분석을 수행합니다. 반면, {{jsxref("Operators/function", "함수 표현식", "", 1)}}이나 {{jsxref("Statements/function", "함수 선언문", "", 1)}}으로 함수를 정의하고 코드 내에서 호출한 경우 나머지 코드와 함께 구문 분석되므로, <code>Function</code> 생성자가 더 비효율적입니다.</p>
+<p><code>Function</code> 생성자로 생성한 <code>Function</code> 객체는 함수를 생성할 때 구문 분석을 수행합니다. 반면, {{jsxref("Operators/function", "함수 표현식", "", 1)}}이나 {{jsxref("Statements/function", "함수 선언문", "", 1)}}으로 함수를 정의하고 코드 내에서 호출한 경우 나머지 코드와 함께 구문 분석되므로, <code>Function</code> 생성자가 더 비효율적입니다.</p>
 
 <p>함수로 전달되는 모든 인수는 생성될 함수의 매개 변수 식별자 이름으로 전달되는 순서대로 처리됩니다.</p>
 
-<p>(<code>new</code> 연산자를 사용하지 않고) 함수로써 <code>Function</code> 생성자를 호출하는 것은 생성자로 호출하는 것과 같습니다. 하지만, new 연산자가 제거됨으로써 코드의 크기를 약간(4 바이트 더 작게) 줄일 수 있으므로 <code>Function</code>에 대해서는 <code>new</code> 연산자를 사용하지 않는 것이 좋습니다.</p>
+<p>(<code>new</code> 연산자를 사용하지 않고) 함수로써 <code>Function</code> 생성자를 호출하는 것은 생성자로 호출하는 것과 같습니다. 하지만, new 연산자가 제거됨으로써 코드의 크기를 약간(4 바이트 더 작게) 줄일 수 있으므로 <code>Function</code>에 대해서는 <code>new</code> 연산자를 사용하지 않는 것이 좋습니다.</p>
 
 <h2 id="Function의_속성과_메서드"><code>Function</code>의 속성과 메서드</h2>
 
@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <h2 id="Function_인스턴스"><code>Function</code> 인스턴스</h2>
 
-<p><code>Function</code> 인스턴스는 {{jsxref("Function.prototype")}}에서 메서드 및 속성을 상속받습니다. 모든 생성자와 마찬가지로, 생성자의 프로토타입 객체를 바꿈으로써 모든 <code>Function</code> 인스턴스에 변화를 줄 수 있습니다.</p>
+<p><code>Function</code> 인스턴스는 {{jsxref("Function.prototype")}}에서 메서드 및 속성을 상속받습니다. 모든 생성자와 마찬가지로, 생성자의 프로토타입 객체를 바꿈으로써 모든 <code>Function</code> 인스턴스에 변화를 줄 수 있습니다.</p>
 
 <h2 id="예제">예제</h2>
 
@@ -106,11 +106,11 @@ adder(2, 6);
 // &gt; 8
 </pre>
 
-<p>인수 "<code>a</code>" 및 "<code>b</code>"는 함수 몸통(body)의 "<code>return a + b</code>"에 사용되는 형식 인수명입니다.</p>
+<p>인수 "<code>a</code>" 및 "<code>b</code>"는 함수 몸통(body)의 "<code>return a + b</code>"에 사용되는 형식 인수명입니다.</p>
 
 <h3 id="Function_생성자와_함수_선언의_차이">Function 생성자와 함수 선언의 차이</h3>
 
-<p><code>Function</code> 생성자로 만들어지는 함수는 생성 컨텍스트에 대한 클로저(closure)를 생성하지 않습니다; 이들 함수는 항상 전역 범위에서 생성됩니다. 함수가 실행될 때, 자신의 지역 변수와 전역 변수에만 접근할 수 있으며 <code>Function</code> 생성자가 호출된 그 범위의 변수에는 접근할 수 없습니다. 이 점이 함수 표현식 코드에서 {{jsxref("eval")}}을 사용하는 것과 다른 점입니다.</p>
+<p><code>Function</code> 생성자로 만들어지는 함수는 생성 컨텍스트에 대한 클로저(closure)를 생성하지 않습니다; 이들 함수는 항상 전역 범위에서 생성됩니다. 함수가 실행될 때, 자신의 지역 변수와 전역 변수에만 접근할 수 있으며 <code>Function</code> 생성자가 호출된 그 범위의 변수에는 접근할 수 없습니다. 이 점이 함수 표현식 코드에서 {{jsxref("eval")}}을 사용하는 것과 다른 점입니다.</p>
 
 <pre class="brush: js">var x = 10;
 
@@ -135,26 +135,13 @@ console.log(f2());          // 20
 
 <p>위 코드는 브라우저에서는 정상 동작하지만, {{glossary("Node.js")}}에서는 <code>x</code>를 찾을 수 없어, <code>f1()</code>이 <code>ReferenceError</code>를 생성합니다. 이는 Node.js의 최상위 스크립트 범위가 전역이 아닌 모듈이므로, <code>x</code>도 모듈 범위에 종속되기 때문입니다.</p>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-objects', 'Function')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Function")}}</p>
-</div>
+{{Compat("javascript.builtins.Function")}}
 
 <h2 id="같이_보기">같이 보기</h2>
 

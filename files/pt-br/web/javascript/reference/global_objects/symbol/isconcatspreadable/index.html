@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 ---
 <div>{{JSRef}}</div>
 
-<p>O <strong><code>Symbol.isConcatSpreadable</code></strong> é um símbolo conhecido que é usado para configurar se um objeto deve ser achatado para um elemento da array quando usado o método {{jsxref("Array.prototype.concat()")}}.</p>
+<p>O <strong><code>Symbol.isConcatSpreadable</code></strong> é um símbolo conhecido que é usado para configurar se um objeto deve ser achatado para um elemento da array quando usado o método {{jsxref("Array.prototype.concat()")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}</div>
 
@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O <code>@@isConcatSpreadable</code> símbolo (<code>Symbol.isConcatSpreadable</code>) pode também ser definido como uma propriedade própria ou herdada e seu valor é um booleano. Ele consegue controlar o comportamento das arrays e objetos semelhantes a array:</p>
+<p>O <code>@@isConcatSpreadable</code> símbolo (<code>Symbol.isConcatSpreadable</code>) pode também ser definido como uma propriedade própria ou herdada e seu valor é um booleano. Ele consegue controlar o comportamento das arrays e objetos semelhantes a array:</p>
 
 <ul>
  <li>For array objects, the default behavior is to spread (flatten) elements. <code>Symbol.isConcatSpreadable</code> can avoid flattening in these cases.</li>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadabl
 
 <h3 id="Arrays">Arrays</h3>
 
-<p>Por padrão, o {{jsxref("Array.prototype.concat()")}} espalha (alinha) arrays no seus resultados:</p>
+<p>Por padrão, o {{jsxref("Array.prototype.concat()")}} espalha (alinha) arrays no seus resultados:</p>
 
 <pre class="brush: js notranslate">let alpha = ['a', 'b', 'c'],
 let numeric = [1, 2, 3]
@@ -36,7 +36,7 @@ let alphaNumeric = alpha.concat(numeric)
 console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', 1, 2, 3]
 </pre>
 
-<p>Quando configurando o <code>Symbol.isConcatSpreadable</code> para <code>false</code>, o comportamento padrão dele:</p>
+<p>Quando configurando o <code>Symbol.isConcatSpreadable</code> para <code>false</code>, o comportamento padrão dele:</p>
 
 <pre class="brush: js notranslate">let alpha = ['a', 'b', 'c'],
 let numeric = [1, 2, 3]
@@ -47,9 +47,9 @@ let alphaNumeric = alpha.concat(numeric)
 console.log(alphaNumeric)  // Resultado: ['a', 'b', 'c', [1, 2, 3] ]
 </pre>
 
-<h3 id="Objetos_de_array_semelhantes">Objetos de array semelhantes </h3>
+<h3 id="Objetos_de_array_semelhantes">Objetos de array semelhantes </h3>
 
-<p>Para objetos de array semelhantes, o padrão não é espalhado. <code>Symbol.isConcatSpreadable</code>precisa ser configurado para <code>true</code> para poder conseguir um a array alinhada:</p>
+<p>Para objetos de array semelhantes, o padrão não é espalhado. <code>Symbol.isConcatSpreadable</code>precisa ser configurado para <code>true</code> para poder conseguir um a array alinhada:</p>
 
 <pre class="brush: js notranslate">let x = [1, 2, 3]
 
@@ -64,7 +64,7 @@ x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> A propriedade <code>length</code> é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, <code>length:2</code> indica que duas propriedades tem de ser adicionado.</p>
+<p><strong>Note:</strong> A propriedade <code>length</code> é usada para controlar o número de propriedade dos objetos para ser adicionado. No exemplo acima, <code>length:2</code> indica que duas propriedades tem de ser adicionado.</p>
 </div>
 
 <h2 id="Especificações">Especificações</h2>

@@ -16,17 +16,17 @@ translation_of: Web/API/StorageManager
 ---
 <p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}</p>
 
-<p><strong><code>StorageManager</code></strong> é uma inteface da <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.</p>
+<p><strong><code>StorageManager</code></strong> é uma inteface da <a href="/en-US/docs/Web/API/Storage_API">Storage API</a> que fornece uma interface para controlar as permissões de gravações e estima o espaço disponível. Você pode obter a referência desta interface usando {{domxref("navigator.storage")}} ou {{domxref("WorkerNavigator.storage")}}.</p>
 
 <h2 id="Métodos">Métodos</h2>
 
 <dl>
  <dt>{{domxref("StorageManager.estimate()")}} {{securecontext_inline}}</dt>
- <dd>Retorna um objeto {{domxref("StorageEstimate")}} contendo números de uso e cota para sua origem.</dd>
+ <dd>Retorna um objeto {{domxref("StorageEstimate")}} contendo números de uso e cota para sua origem.</dd>
  <dt>{{domxref("StorageManager.persist()")}} {{securecontext_inline}}</dt>
- <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se o agente de usuário for capaz de gravar o armazenamento do seu site.</dd>
+ <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se o agente de usuário for capaz de gravar o armazenamento do seu site.</dd>
  <dt>{{domxref("StorageManager.persisted()")}} {{securecontext_inline}}</dt>
- <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se alguma gravação já foi concedida para o armazenamento do seu site.</dd>
+ <dd>Retorna uma {{jsxref('Promise')}} que resolve como <code>true</code> se alguma gravação já foi concedida para o armazenamento do seu site.</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>

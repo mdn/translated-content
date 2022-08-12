@@ -5,18 +5,18 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
 
-<p>En esta demostración nos basamos en el ejemplo anterior, solo que ahora reemplazaremos nuestra textura estática con los fotogramas de un video Ogg.</p>
+<p>En esta demostración nos basamos en el ejemplo anterior, solo que ahora reemplazaremos nuestra textura estática con los fotogramas de un video Ogg.</p>
 
-<p>Esto es de hecho muy fácil de entender y de hacer, así que vamos a empezar. </p>
+<p>Esto es de hecho muy fácil de entender y de hacer, así que vamos a empezar. </p>
 
-<p>Podemos utilizar un código similar para usar, como fuente para las texturas, otros tipos de datos tales como {{ HTMLElement("canvas") }}.</p>
+<p>Podemos utilizar un código similar para usar, como fuente para las texturas, otros tipos de datos tales como {{ HTMLElement("canvas") }}.</p>
 
 <h2 id="Obteniendo_acceso_al_video">Obteniendo acceso al video</h2>
 
-<p>El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video") }} que usaremos para obtener los fotogramas de video:</p>
+<p>El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video") }} que usaremos para obtener los fotogramas de video:</p>
 
 <pre class="brush: js">&lt;video id="video"&gt;
-  Parece ser que tu navegador no soporta el elemento HTML5. &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;
+  Parece ser que tu navegador no soporta el elemento HTML5. &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;
 &lt;/video&gt;
 </pre>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 }
 </pre>
 
-<p>Ahora pasamos al código JavasScript, empezando por añadir una línea de código a la función start() para obtener la referencia al elemento de video:</p>
+<p>Ahora pasamos al código JavasScript, empezando por añadir una línea de código a la función start() para obtener la referencia al elemento de video:</p>
 
 <pre class="brush: js">videoElement = document.getElementById("video");
 </pre>
@@ -38,14 +38,14 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 videoElement.addEventListener("ended", videoDone, true);
 </pre>
 
-<p>Finalmente configuramos el atributo src para empezar a cargar el video. FIXME (bjacob): También se debe configurar preload="auto" o si no, el video nunca ejecuta canplaythrough en Firefox. En Chrome se debería cargar el video aun sin usar preload="auto".</p>
+<p>Finalmente configuramos el atributo src para empezar a cargar el video. FIXME (bjacob): También se debe configurar preload="auto" o si no, el video nunca ejecuta canplaythrough en Firefox. En Chrome se debería cargar el video aun sin usar preload="auto".</p>
 
 <pre class="brush: js">video.preload = "auto";
 videoElement.src = "Firefox.ogv";</pre>
 
 <p>El objetivo aquí es no empezar la animación hasta que una parte suficiente del video se haya cargado de modo que pueda ser reproducido sin interrupciones. Para esto añadimos un event listener para esperar a que el elemento de video nos diga que ya ha cargado los suficientes datos como para reproducir el video puede ser reproducido sin pausas.</p>
 
-<p>The <code>startVideo()</code> quedará así:</p>
+<p>The <code>startVideo()</code> quedará así:</p>
 
 <pre class="brush: js">function startVideo() {
   videoElement.play();
@@ -58,10 +58,10 @@ videoElement.src = "Firefox.ogv";</pre>
 <p>Añadiremos también un segundo event listener en el "ended" del video de modo que cuando el video haya finalizado de reproducirse nosotros podamos parar la animación.</p>
 
 <pre class="brush: js">function videoDone() {
-  clearInterval(intervalID);
+  clearInterval(intervalID);
 }</pre>
 
-<p>La función de videoDone() simplemente llama a {{ domxref("window.clearInterval()") }}  para terminar de llamar a la función de actualizar la animación.</p>
+<p>La función de videoDone() simplemente llama a {{ domxref("window.clearInterval()") }}  para terminar de llamar a la función de actualizar la animación.</p>
 
 <h2 id="Usando_los_fotogramas_del_video_como_textura">Usando los fotogramas del video como textura</h2>
 
@@ -77,7 +77,7 @@ videoElement.src = "Firefox.ogv";</pre>
 }
 </pre>
 
-<div>La función updateTexture() quedaría así; Aquí es donde se realiza el trabajo real.</div>
+<div>La función updateTexture() quedaría así; Aquí es donde se realiza el trabajo real.</div>
 
 <pre class="brush: js">function updateTexture() {
   gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
@@ -87,9 +87,9 @@ videoElement.src = "Firefox.ogv";</pre>
 }
 </pre>
 
-<p>Has visto este código antes. Es prácticamente idéntico a la rutina de handleTextureLoaded() en el ejemplo anterior, excepto que cuando llamamos a texImage2D() en lugar de pasarle un objeto Image, lo pasamos en el elemento {{ HTMLElement("video") }}. Ya que WebGL sabe como obtener el fotograma actual y usarlo como textura.</p>
+<p>Has visto este código antes. Es prácticamente idéntico a la rutina de handleTextureLoaded() en el ejemplo anterior, excepto que cuando llamamos a texImage2D() en lugar de pasarle un objeto Image, lo pasamos en el elemento {{ HTMLElement("video") }}. Ya que WebGL sabe como obtener el fotograma actual y usarlo como textura.</p>
 
-<p><code>updateTexture()</code> se llama cada vez que estamos preparados para que la función drawScene() redibuje la escena. La única diferencia es que añadimos la llamada de updateTexture() antes de hacer nada más.</p>
+<p><code>updateTexture()</code> se llama cada vez que estamos preparados para que la función drawScene() redibuje la escena. La única diferencia es que añadimos la llamada de updateTexture() antes de hacer nada más.</p>
 
 <p>¡Esto es todo al respecto!</p>
 

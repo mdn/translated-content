@@ -11,9 +11,9 @@ tags:
 translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
-<div>{{seecompattable}}{{CSSRef}} </div>
+<div>{{seecompattable}}{{CSSRef}} </div>
 
-<div><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>函数 <strong><code>:host()</code></strong> 选择包含使用这段 CSS 的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。</div>
+<div><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a>函数 <strong><code>:host()</code></strong> 选择包含使用这段 CSS 的 <a href="/zh-CN/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。</div>
 
 <p>最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 {{cssxref(":host-context()")}} 的作用。</p>
 
@@ -59,33 +59,18 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 <p><code>:host(.footer) { color : red; }</code> 规则为文档中所有在其上设置了 <code>footer</code> 类的<code>&lt;context-span&gt;</code> 元素实例（此实例中的影子宿主）设置样式——使用它来为 {{htmlelement("footer")}} 中的元素提供实例一种特殊的颜色。</p>
 
-<h2 id="产品规格">产品规格</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS Scope', '#host-selector', ':host()') }}</td>
-   <td>{{ Spec2('CSS Scope') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("css.selectors.hostfunction")}}</p>
 
-<h2 id="也可以看看">也可以看看</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Web_Components">Web components</a></li>
- <li>{{cssxref(":host-context()")}}</li>
+ <li><a href="/zh-CN/docs/Web/Web_Components">Web components</a></li>
+ <li>{{cssxref(":host-context", ":host-context()")}}</li>
  <li>{{cssxref(":host")}}</li>
 </ul>

@@ -16,4 +16,4 @@ En {{glossary("cryptography","cryptographie")}}, un cryptogramme est un message 
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Cryptographie")}} sur Wikipédia
+- [Cryptographie](https://fr.wikipedia.org/wiki/Cryptographie) sur Wikipédia

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>Ключевое слово <strong><code>extends</code></strong> используется в  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">объявлении класса</a> или в  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">выражениях класса</a> для создания дочернего класса.</p>
+<p>Ключевое слово <strong><code>extends</code></strong> используется в  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">объявлении класса</a> или в  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">выражениях класса</a> для создания дочернего класса.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -17,27 +17,27 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 
 <h2 id="Описание">Описание</h2>
 
-<p>Ключевое слово <strong><code>extends</code></strong> может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта.</p>
+<p>Ключевое слово <strong><code>extends</code></strong> может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта.</p>
 
-<p>Свойство <strong><code>.prototype</code></strong> родительского класса или объекта должно быть {{jsxref("Object")}} или {{jsxref("null")}}.</p>
+<p>Свойство <strong><code>.prototype</code></strong> родительского класса или объекта должно быть {{jsxref("Object")}} или {{jsxref("null")}}.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Использование_extends">Использование <code>extends</code></h3>
+<h3 id="Использование_extends">Использование <code>extends</code></h3>
 
-<p>В первом примере создаётся дочерний класс с именем <code>Square</code> от класса с именем <code>Polygon</code>. Этот пример был взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+<p>В первом примере создаётся дочерний класс с именем <code>Square</code> от класса с именем <code>Polygon</code>. Этот пример был взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
-    // в который передаётся свойство length в качестве
-    // аргументов, соответствующих полям width и height,
-    // класса Polygon
+    // в который передаётся свойство length в качестве
+    // аргументов, соответствующих полям width и height,
+    // класса Polygon
     super(length, length);
     // Примечание:
-    // В конструкторе класса, метод super() должен быть вызван
-    // перед использованием this. В противном случае, будет
-    // выброшена ошибка.
+    // В конструкторе класса, метод super() должен быть вызван
+    // перед использованием this. В противном случае, будет
+    // выброшена ошибка.
     this.name = 'Square';
   }
 
@@ -46,9 +46,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="Расширение_встроенных_объектов_с_помощью_extends">Расширение встроенных объектов с помощью <code>extends</code></h3>
+<h3 id="Расширение_встроенных_объектов_с_помощью_extends">Расширение встроенных объектов с помощью <code>extends</code></h3>
 
-<p>Этот пример расширяет встроенный объект {{jsxref("Date")}}. Пример взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
+<p>Этот пример расширяет встроенный объект {{jsxref("Date")}}. Пример взят из <a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a> <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">(source)</a>.</p>
 
 <pre class="brush: js">class myDate extends Date {
   constructor() {
@@ -57,18 +57,18 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 
   getFormattedDate() {
     var months = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ];
     return this.getDate() + '-' +
-      months[this.getMonth()] + '-' +
-      this.getFullYear();
+      months[this.getMonth()] + '-' +
+      this.getFullYear();
   }
 }</pre>
 
-<h3 id="Расширение_null">Расширение <code>null</code></h3>
+<h3 id="Расширение_null">Расширение <code>null</code></h3>
 
-<p>Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.</p>
+<p>Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.</p>
 
 <pre class="brush: js">class nullExtends extends null {
   constructor() {}

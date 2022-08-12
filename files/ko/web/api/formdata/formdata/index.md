@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 
-**`FormData()`** 생성자(Constructor)는 새로운 {{domxref("FormData")}}객체를 만듭니다.
+**`FormData()`** 생성자(Constructor)는 새로운 {{domxref("FormData")}}객체를 만듭니다.
 
 > **참고:** 이 기능은 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
@@ -20,11 +20,11 @@ var formData = new FormData(form)
 ### Parameters
 
 - `form `{{optional_inline}}
-  - : HTML {{HTMLElement("form")}} 요소 — 지정된 경우 {{domxref("FormData")}} 객체는 form의 현재 key/value 들로 채워집니다. key/value는 submit한 각 요소의 name property와 value를 사용합니다. 또한 파일 입력 내용을 인코딩합니다.
+  - : HTML {{HTMLElement("form")}} 요소 — 지정된 경우 {{domxref("FormData")}} 객체는 form의 현재 key/value 들로 채워집니다. key/value는 submit한 각 요소의 name property와 value를 사용합니다. 또한 파일 입력 내용을 인코딩합니다.
 
 ## Example
 
-다음 코드는 빈 `FormData` 객체를 만듭니다:
+다음 코드는 빈 `FormData` 객체를 만듭니다:
 
 ```js
 var formData = new FormData(); // Currently empty
@@ -36,7 +36,7 @@ var formData = new FormData(); // Currently empty
 formData.append('username', 'Chris');
 ```
 
-또는 `FormData` 객체를 만들 때 선택적으로 `form` argument를 지정할 수 있는데, 지정된 양식대로 value를 미리 채우는 것입니다:
+또는 `FormData` 객체를 만들 때 선택적으로 `form` argument를 지정할 수 있는데, 지정된 양식대로 value를 미리 채우는 것입니다:
 
 ```html
 <form id="myForm" name="myForm">
@@ -74,6 +74,6 @@ formData = new FormData(myForm);
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Using FormData objects](/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Using XMLHttpRequest](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/ko/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
 - {{HTMLElement("Form")}}

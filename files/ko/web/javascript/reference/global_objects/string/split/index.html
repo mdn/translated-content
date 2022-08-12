@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 <pre class="syntaxbox"><var>str</var>.split([<var>separator</var>[, <var>limit</var>]])</pre>
 
 <div class="warning">
-<p><strong>주의:</strong> 구분자로 빈 문자열(<code>""</code>)을 제공하면, 사용자가 인식하는 문자 하나(<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme cluster</a>) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 <a href="http://unicode.org/faq/utf_bom.html#utf16-2">써로게이트 페어</a>가 망가질 수 있습니다. 스택 오버플로우의 <a href="https://stackoverflow.com/a/34717402">How do you get a string to a character array in JavaScript?</a> 질문도 참고해 보세요.</p>
+<p><strong>주의:</strong> 구분자로 빈 문자열(<code>""</code>)을 제공하면, 사용자가 인식하는 문자 하나(<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grapheme cluster</a>) 또는 유니코드 문자(코드포인트) 하나씩으로 나누는 것이 아니라, UTF-16 코드유닛으로 나누게 되며 <a href="http://unicode.org/faq/utf_bom.html#utf16-2">써로게이트 페어</a>가 망가질 수 있습니다. 스택 오버플로우의 <a href="https://stackoverflow.com/a/34717402">How do you get a string to a character array in JavaScript?</a> 질문도 참고해 보세요.</p>
 </div>
 
 <h3 id="매개변수">매개변수</h3>
@@ -104,7 +104,7 @@ The array has 12 elements: Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep /
 
 <h3 id="문자열에서_공백_제거하기">문자열에서 공백 제거하기</h3>
 
-<p>다음 예제에서 <code>split()</code>은 세미콜론 앞뒤에 각각 0개 이상의 공백이 있는 부분 문자열을 찾고, 있을 경우 문자열에서 세미콜론과 공백을 제거합니다. <code>split()</code>의 결과로 반환된 배열은  <code>nameList</code>에 저장됩니다.</p>
+<p>다음 예제에서 <code>split()</code>은 세미콜론 앞뒤에 각각 0개 이상의 공백이 있는 부분 문자열을 찾고, 있을 경우 문자열에서 세미콜론과 공백을 제거합니다. <code>split()</code>의 결과로 반환된 배열은  <code>nameList</code>에 저장됩니다.</p>
 
 <pre class="brush: js">var names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';
 
@@ -187,37 +187,9 @@ var strReverse = str.split(/(?:)/u).reverse().join('');
 <p><strong>추가:</strong> {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 연산자를 사용하면 원본 문자열이 팰린드롬인지 확인할 수 있습니다.</p>
 </div>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>초기 정의. JavaScript 1.1에 구현되었음.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.14', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

@@ -6,7 +6,7 @@ original_slug: Web/API/ParentNode/firstElementChild
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><strong><code>ParentNode.firstElementChild</code></strong> 介面會會返回 <code>ParentNode</code>的第一個子元素(唯讀) ，如果該節點沒有子節點則返回<code>null</code>。</p>
+<p><strong><code>ParentNode.firstElementChild</code></strong> 介面會會返回 <code>ParentNode</code>的第一個子元素(唯讀) ，如果該節點沒有子節點則返回<code>null</code>。</p>
 
 <div class="note">
 <p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("ParentNode")}} and {{domxref("ChildNode")}}. In this case, <code>firstElementChild</code> moved to {{domxref("ParentNode")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
@@ -32,7 +32,7 @@ console.log(foo.firstElementChild.textContent);
 &lt;/script&gt;
 </pre>
 
-<h2 id="適用於IE8_IE9_和_Safari的Polyfill">適用於IE8, IE9 和 Safari的Polyfill</h2>
+<h2 id="適用於IE8_IE9_和_Safari的Polyfill">適用於IE8, IE9 和 Safari的Polyfill</h2>
 
 <pre class="brush: js">// Overwrites native 'firstElementChild' prototype.
 // Adds Document &amp; DocumentFragment support for IE9 &amp; Safari.
@@ -55,34 +55,13 @@ console.log(foo.firstElementChild.textContent);
 })(window.Node || window.Element);
 </pre>
 
-<h2 id="規範">規範</h2>
+<h2 id="規格">規格</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-firstelementchild', 'ParentNode.firstElementChild')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Split the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}} and <code>ParentNode</code>. This method is now defined on the latter.<br>
-    The {{domxref("Document")}} and {{domxref("DocumentFragment")}} implemented the new interfaces.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#attribute-firstElementChild', 'ElementTraversal.firstElementChild')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Added its initial definition to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-
-
-<p>{{Compat("api.ParentNode.firstElementChild")}}</p>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

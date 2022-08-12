@@ -502,8 +502,8 @@ div {
 
 ```css
 .radial-ellipse-size {
-   background: radial-gradient(ellipse 50% 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+   background: radial-gradient(ellipse 50% 50px,
+      red, yellow 10%, #1e90ff 50%, beige);
 }
 ```
 
@@ -527,7 +527,7 @@ div {
 ```css
 .radial-circle-size {
   background: radial-gradient(circle 50px,
-      red, yellow 10%, #1e90ff 50%, beige);
+      red, yellow 10%, #1e90ff 50%, beige);
 }
 ```
 
@@ -820,7 +820,7 @@ div {
 
 ## 関連記事
 
-- グラデーション関数: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
+- グラデーション関数: {{cssxref("gradient/linear-gradient()", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient()", "radial-gradient()")}}, {{cssxref("gradient/conic-gradient()", "conic-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}
 - グラデーション関連の CSS データ型: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - グラデーション関連の CSS プロパティ: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://lea.verou.me/css3patterns/)

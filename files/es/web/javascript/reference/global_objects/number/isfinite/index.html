@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>Number.isFinite()</code></strong> determina si el valor pasado es un número finito.</p>
+<p>El método <strong><code>Number.isFinite()</code></strong> determina si el valor pasado es un número finito.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
 
@@ -29,7 +29,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 
 <h2 id="Description">Description</h2>
 
-<p>En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan <code>true</code>.</p>
+<p>En comparación con la funcion global {{jsxref("isFinite", "isFinite()")}} , este método no convierte el parámetro forzádamente a un número. Esto significa que solo valores de tipo númerico, que también son finitos, retornan <code>true</code>.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -49,7 +49,7 @@ Number.isFinite(null);      // false, retornaría true con la función
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+    return typeof value === 'number' &amp;&amp; isFinite(value);
 }
 </pre>
 
@@ -70,7 +70,7 @@ Number.isFinite(null);      // false, retornaría true con la función
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -21,12 +21,12 @@ translation_of: Web/CSS/::slotted
 ```css
 /* スロット内に配置された任意の要素を選択 */
 ::slotted(*) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 /* スロット内に配置された &lt;span&gt; 要素を選択 */
 ::slotted(span) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 

@@ -18,7 +18,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 <p>除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：</p>
 
 <ul>
- <li>在想要拖曳的元素上設定 <code>{{htmlattrxref("draggable")}}</code> 屬性為 <code>true</code>。</li>
+ <li>在想要拖曳的元素上設定 <code>{{htmlattrxref("draggable")}}</code> 屬性為 <code>true</code>。</li>
  <li>註冊 <code>{{event("dragstart")}}</code> 事件之事件處理器。</li>
  <li>{{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.</li>
 </ul>
@@ -52,7 +52,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <h2 id="dragdata">拖曳資料</h2>
 
-<p>所有的拖曳事件物件都有一個 <a href="/en-US/docs/DragDrop/DataTransfer">dataTransfer</a> 屬性，這個屬性是用來攜帶資料。</p>
+<p>所有的拖曳事件物件都有一個 <a href="/en-US/docs/DragDrop/DataTransfer">dataTransfer</a> 屬性，這個屬性是用來攜帶資料。</p>
 
 <p>當拖曳時，資料必須和被拖曳目標作連結，比如說拖曳文字框中反白選擇的文字，那麼文字本身便是連結資料，同理，拖曳連結時URL便是連結資料。</p>
 
@@ -117,7 +117,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 }
 </pre>
 
-<p>上面我們的canvas是50 x 50px大小，然後我們位移一半25讓圖片落在滑鼠指標中央。 </p>
+<p>上面我們的canvas是50 x 50px大小，然後我們位移一半25讓圖片落在滑鼠指標中央。 </p>
 
 <p>在Gecko上開發，比如說外掛或Mozllia應用程式，Gecko9.0{{geckoRelease("9.0")}}支援使用{{XULElem("panel")}}元素作為拖曳圖片，簡單將XUL panel元素傳入setDragImage方法即可。</p>
 
@@ -153,7 +153,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>上面只有copy被允許，但還有其他種類：</p>
 
-<p>     只能移動或連結。</p>
+<p>     只能移動或連結。</p>
 
 <dl>
  <dt>none</dt>
@@ -259,7 +259,7 @@ event.dataTransfer.dropEffect = "copy";
   var data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
   event.preventDefault();
-} </pre>
+} </pre>
 
 <p>上面的範例會取出文字資料，假設拖曳目標區是文字區域，例如p或div元素，那麼資料就會被當作文字內容，插入目標元素之中。</p>
 
@@ -314,14 +314,14 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>當dragend事件結束傳遞後，拖曳作業也完成了。</p>
 
-<p>[1] 在Gecko，如果被拖曳元素在拖曳作業還在進行中移動或刪除，那麼dragend事件就不會觸發。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801">bug 460801</a></p>
+<p>[1] 在Gecko，如果被拖曳元素在拖曳作業還在進行中移動或刪除，那麼dragend事件就不會觸發。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801">bug 460801</a></p>
 
 <div class="s3gt_translate_tooltip" id="s3gt_translate_tooltip" style="position: absolute; left: 107px; top: 546px; opacity: 0;">
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="翻譯選取的文字"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="翻譯選取的文字"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="朗讀"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="朗讀"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="將文字複製到剪貼簿"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="將文字複製到剪貼簿"> </div>
 </div>
 
 <h2 id="See_also">參見</h2>

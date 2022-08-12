@@ -154,7 +154,7 @@ Les cookies ont un domaine qui leur est associé. Si ce domaine est le même que
 
 Alors que les cookies internes sont uniquement envoyés au serveur qui les a définis, une page web peut également contenir des images ou tout autre composant stockés sur d'autres domaines (comme des bannières publicitaires). Les cookies qui sont envoyés via les composants tiers sont appelés cookies tiers et ils sont principalement utilisés pour la publicité et le suivi sur le web. Voir par exemple les [types de cookies utilisés par Google](https://www.google.com/policies/technologies/types/). La plupart des navigateurs autorisent les cookies tiers par défaut, mais il existe des addons disponibles pour les bloquer (par exemple, [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) par [EFF](https://www.eff.org/)).
 
-Si vous n'avertissez pas vos utilisateurs de l'utilisation de cookies tiers, vous pouvez perdre leur confiance s'ils la découvrent. Une divulgation claire (tel que dans une politique de confidentialité) tend à éliminer les effets négatifs d'une telle découverte. Quelques pays ont également une législation sur les cookies. Voir par exemple l'article [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement) de Wikipedia.
+Si vous n'avertissez pas vos utilisateurs de l'utilisation de cookies tiers, vous pouvez perdre leur confiance s'ils la découvrent. Une divulgation claire (tel que dans une politique de confidentialité) tend à éliminer les effets négatifs d'une telle découverte. Quelques pays ont également une législation sur les cookies. Voir par exemple l'article [cookie statement](https://wikimediafoundation.org/wiki/Cookie_statement) de Wikipédia.
 
 ### Do-Not-Track
 
@@ -166,14 +166,14 @@ Les exigences relatives aux cookies dans l'Union Européenne sont définies dans
 
 Pour faire court, la directive de l'UE stipule qu'avant de pouvoir stocker ou récupérer des informations sur un ordinateur, téléphone mobile ou tout autre appareil, l'utilisateur doit donner son consentement de le faire en connaissance de cause. Beaucoup de sites web ont ajoutés des bannières depuis lors pour informer l'utilisateur sur l'utilisation des cookies.
 
-Pour en savoir plus, voir [cette section Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) et consultez les lois de l'état pour avoir des informations plus récentes et plus précises.
+Pour en savoir plus, voir [cette section Wikipédia](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) et consultez les lois de l'état pour avoir des informations plus récentes et plus précises.
 
 ### Cookies Zombie et Evercookies
 
-Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/en-US/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
+Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
 
 - [Evercookie by Samy Kamkar](https://github.com/samyk/evercookie)
-- [Zombie cookies sur Wikipedia](https://en.wikipedia.org/wiki/Zombie_cookie)
+- [Zombie cookies sur Wikipédia](https://en.wikipedia.org/wiki/Zombie_cookie)
 
 ## Voir aussi
 
@@ -181,8 +181,8 @@ Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies"
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecting cookies using the Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
+- [Inspecting cookies using the Storage Inspector](/fr/docs/Tools/Storage_Inspector)
 - [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Nicholas Zakas article on cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Nicholas Zakas article on cookies and security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)
-- [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [Cookies HTTP sur Wikipédia](https://en.wikipedia.org/wiki/HTTP_cookie)

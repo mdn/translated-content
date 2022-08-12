@@ -10,9 +10,9 @@ tags:
   - Web
 translation_of: Web/Events
 ---
-<p>DOM-Events werden gesendet, um Code von interessanten Dingen, welche stattgefunden haben, anzuzeigen. Jedes Event wird durch ein Objekt dargestellt, das auf der {{domxref ("Event")}}-Schnittstelle basiert und möglicherweise zusätzliche benutzerdefinierte Felder und/oder Funktionen enthält, die dazu benutzt werden, um zusätzliche Informationen darüber zu erhalten, was genau passiert ist. Events können alles repräsentieren, angefangen von einfachen Benutzerinteraktionen bis hin zu automatisierten Benachrichtigungen über Abläufe, die im Rendering-Modell stattgefunden haben.</p>
+<p>DOM-Events werden gesendet, um Code von interessanten Dingen, welche stattgefunden haben, anzuzeigen. Jedes Event wird durch ein Objekt dargestellt, das auf der {{domxref ("Event")}}-Schnittstelle basiert und möglicherweise zusätzliche benutzerdefinierte Felder und/oder Funktionen enthält, die dazu benutzt werden, um zusätzliche Informationen darüber zu erhalten, was genau passiert ist. Events können alles repräsentieren, angefangen von einfachen Benutzerinteraktionen bis hin zu automatisierten Benachrichtigungen über Abläufe, die im Rendering-Modell stattgefunden haben.</p>
 
-<p>Dieser Artikel zeigt eine Liste von Events, die gesendet werden können; einige sind Standard-Events, definiert in offiziellen Spezifikationen, während andere solche Events sind, die intern von bestimmten Browsern verwendet werden. Beispielswese werden Mozilla-spezifische Events aufgelistet, so dass <a href="/en-US/docs/Mozilla/Add-ons">add-ons</a> sie verwenden werden können, um mit dem Browser zu interagieren.</p>
+<p>Dieser Artikel zeigt eine Liste von Events, die gesendet werden können; einige sind Standard-Events, definiert in offiziellen Spezifikationen, während andere solche Events sind, die intern von bestimmten Browsern verwendet werden. Beispielswese werden Mozilla-spezifische Events aufgelistet, so dass <a href="/en-US/docs/Mozilla/Add-ons">add-ons</a> sie verwenden werden können, um mit dem Browser zu interagieren.</p>
 
 <h2 id="Standard_Events">Standard Events</h2>
 
@@ -384,7 +384,7 @@ translation_of: Web/Events
    <td>{{event("emptied")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied">HTML5 media</a></td>
-   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
   </tr>
   <tr>
    <td>{{event("ended")}}</td>
@@ -1843,7 +1843,7 @@ translation_of: Web/Events
 
 <h3 id="Database_events">Database events</h3>
 
-<p><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/en-US/docs/Web/Reference/Events/error">link</a>), <code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
+<p><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/en-US/docs/Web/Reference/Events/error">link</a>), <code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
 
 <h3 id="Document_events">Document events</h3>
 
@@ -1871,7 +1871,7 @@ translation_of: Web/Events
 
 <h3 id="Frame_events">Frame events</h3>
 
-<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
+<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
 
 <h3 id="Input_device_events">Input device events</h3>
 

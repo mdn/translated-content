@@ -7,11 +7,11 @@ translation_of: Web/API/FileReader
 
 <h2 id="Sumario">Sumario</h2>
 
-<p> </p>
+<p> </p>
 
 <p>El objeto FileReader permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona, usando los objetos {{domxref("File")}} o {{domxref("Blob")}} dependiendo de los datos que se pretenden leer.</p>
 
-<p> </p>
+<p> </p>
 
 <p>El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuelto como resultado de la selección de archivos por parte del usuario en un elemento {{HTMLElement("input")}}, desde el objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer"><code>DataTransfer </code></a><code>producido por una operación de arrastre (<em>drag and drop</em>) o </code>desde la API mozGetAsFile () en un {{domxref("HTMLCanvasElement")}}.</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/API/FileReader
  <dt>{{domxref("FileReader.onloadstart")}}</dt>
  <dd>Un controlador para el evento {{event("loadstart")}}. Este evento se activa cada vez que comienza la lectura.</dd>
  <dt>{{domxref("FileReader.onloadend")}}</dt>
- <dd>Un controlador para el evento {{event("loadend")}}. Este evento se activa cada vez que  la operación de lecura se ha completado (ya sea con éxito o fallo).</dd>
+ <dd>Un controlador para el evento {{event("loadend")}}. Este evento se activa cada vez que  la operación de lecura se ha completado (ya sea con éxito o fallo).</dd>
  <dt>{{domxref("FileReader.onprogress")}}</dt>
  <dd>Un controlador para el evento {{event("progress")}}. Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.</dd>
 </dl>
@@ -73,17 +73,17 @@ translation_of: Web/API/FileReader
 <p>Nota: Como <code>FileReader</code> hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Methods" name="Methods">Métodos</h2>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{domxref("FileReader.abort()")}}</dt>
  <dd>Interrumpe la operación de lectura. A su regreso <code>readyState</code> será <code>DONE</code>.</dd>
  <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}</dt>
- <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo <code>result </code>contiene un  {{domxref("ArrayBuffer")}} representando los datos del fichero.</dd>
+ <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }} especificado, una vez terminada, el atributo <code>result </code>contiene un  {{domxref("ArrayBuffer")}} representando los datos del fichero.</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
  <dd>Comienza la lectura del contenido del objeto {{ domxref("Blob") }}, una vez terminada, el atributo <code>result</code> contiene los datos binarios en bruto del archivo como una cadena.</dd>
  <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>

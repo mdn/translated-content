@@ -13,7 +13,7 @@ translation_of: Web/CSS/row-gap
 ---
 {{CSSRef}}
 
-**`row-gap`** 该 [CSS](/zh-CN/docs/Web/CSS) 属性用来设置行元素之间的间隙（{{glossary("gutters","gutter")}}）大小。
+**`row-gap`** 该 [CSS](/zh-CN/docs/Web/CSS) 属性用来设置行元素之间的间隙（{{glossary("gutters","gutter")}}）大小。
 
 {{EmbedInteractiveExample("pages/css/row-gap.html")}}
 

@@ -25,7 +25,7 @@ La ultima especificación ha actualizado este método a una sintaxis de tipo pro
 Notification.requestPermission().then(function(permission) { /* ... */ });
 ```
 
-Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta:
+Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta:
 
 ```js
 Notification.requestPermission(callback);

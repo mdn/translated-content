@@ -15,4 +15,4 @@ En JavaScript, cela est fait pendant le {{glossary("compile time", "moment de co
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Analyse syntaxique")}} sur Wikipédia
+- [Analyse syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique) sur Wikipédia

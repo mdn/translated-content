@@ -19,7 +19,7 @@ translation_of: Web/API/FormData/get
 
 <dl>
  <dt><code>name</code></dt>
- <dd>{{domxref("USVString")}} строка, являющаяся именем ключа, значение которого вы хотите получить.</dd>
+ <dd>{{domxref("USVString")}} строка, являющаяся именем ключа, значение которого вы хотите получить.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -28,16 +28,16 @@ translation_of: Web/API/FormData/get
 
 <h2 id="Пример">Пример</h2>
 
-<p>Следующий код создаёт пустой объект <code>FormData</code>:</p>
+<p>Следующий код создаёт пустой объект <code>FormData</code>:</p>
 
 <pre class="brush: js">var formData = new FormData();</pre>
 
-<p>Если мы добавим два значения  <code>username,</code> используя {{domxref("FormData.append")}}:</p>
+<p>Если мы добавим два значения  <code>username,</code> используя {{domxref("FormData.append")}}:</p>
 
 <pre class="brush: js">formData.append('username', 'Борис');
 formData.append('username', 'Кирилл');</pre>
 
-<p>То метод <code>get()</code> вернёт только первое добавленное значение <code>username</code>:</p>
+<p>То метод <code>get()</code> вернёт только первое добавленное значение <code>username</code>:</p>
 
 <pre class="brush: js">formData.get('username'); // Вернёт "Борис"</pre>
 
@@ -52,7 +52,7 @@ formData.append('username', 'Кирилл');</pre>
 
 <ul>
  <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Использование XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Использование FormData objects</a></li>
+ <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Использование XMLHttpRequest</a></li>
+ <li><a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Использование FormData objects</a></li>
  <li>{{HTMLElement("Form")}}</li>
 </ul>

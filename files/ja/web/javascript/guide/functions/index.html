@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <h3 id="Function_declarations">関数宣言</h3>
 
-<p><strong>関数定義</strong> (<strong>関数宣言</strong>や<strong>関数定義文</strong> とも呼ばれます) は <a href="/ja/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> キーワードと、それに続く以下の内容で構成されます。</p>
+<p><strong>関数定義</strong> (<strong>関数宣言</strong>や<strong>関数定義文</strong> とも呼ばれます) は <a href="/ja/docs/Web/JavaScript/Reference/Statements/function"><code>function</code></a> キーワードと、それに続く以下の内容で構成されます。</p>
 
 <ul>
  <li>関数の名前。</li>
@@ -100,7 +100,7 @@ let numbers = [0, 1, 2, 5, 10];
 let cube = map(f,numbers);
 console.log(cube);</pre>
 
-<p>これは <code>[0, 1, 8, 125, 1000]</code> を返します。</p>
+<p>これは <code>[0, 1, 8, 125, 1000]</code> を返します。</p>
 
 <p>JavaScript では、条件に基づいて関数を定義することもできます。例えば次の関数の定義は、 <code>myFunc</code> という関数を、変数 <code>num</code> が <code>0</code> に等しい場合のみ定義します。</p>
 
@@ -339,7 +339,7 @@ result1 = outside(3)(5); // 8 を返す
 
 <h3 id="Preservation_of_variables">変数の保護</h3>
 
-<p><code>inside</code> が返されるとき、変数 <code>x</code> がどのように保護されるのかに注目してください。クロージャはそれ自身が参照しているすべてのスコープ内の引数と変数を保護することになります。それぞれの呼び出しには異なる引数が渡される可能性があるので、 <code>outside</code> を呼び出すたびに新しいクロージャが作られます。返された <code>inside</code> がもはやアクセスできなくなった時にのみメモリーが解放されます。</p>
+<p><code>inside</code> が返されるとき、変数 <code>x</code> がどのように保護されるのかに注目してください。クロージャはそれ自身が参照しているすべてのスコープ内の引数と変数を保護することになります。それぞれの呼び出しには異なる引数が渡される可能性があるので、 <code>outside</code> を呼び出すたびに新しいクロージャが作られます。返された <code>inside</code> がもはやアクセスできなくなった時にのみメモリーが解放されます。</p>
 
 <p>これはその他のオブジェクトの内部で参照を保持する場合と違いはないのですが、クロージャの場合は直接参照を設定せず、また情報を取得できないので、明白さは劣ります。</p>
 
@@ -379,7 +379,7 @@ A(1); // 6 がログに出力される (1 + 2 + 3)
 	<li>クロージャ <code>B</code> は <code>A</code> の中にあり、 <code>C</code> のクロージャも <code>A</code> の中にあるので、 <code>C</code> は <code>B</code> <em>と</em> <code>A</code> の<em>両方</em>の引数と変数にアクセスできます。言い換えれば、<code>C</code> は <code>B</code>、<code>A</code> の順でスコープがつながっている (<em>chain</em>) のです。</li>
 </ol>
 
-<p>その一方で、逆は成り立ちません。 <code>A</code> は <code>C</code> にアクセスできません。なぜなら <code>A</code> は、 <code>C</code> を変数の一つとして持っている <code>B</code> の引数や変数にはアクセスできないからです。このように <code>C</code> は <code>B</code> の外に対してのみ非公開となっています。</p>
+<p>その一方で、逆は成り立ちません。 <code>A</code> は <code>C</code> にアクセスできません。なぜなら <code>A</code> は、 <code>C</code> を変数の一つとして持っている <code>B</code> の引数や変数にはアクセスできないからです。このように <code>C</code> は <code>B</code> の外に対してのみ非公開となっています。</p>
 
 <h3 id="Name_conflicts">名前の衝突</h3>
 

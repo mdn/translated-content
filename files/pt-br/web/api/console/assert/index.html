@@ -10,8 +10,8 @@ translation_of: Web/API/console/assert
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note:</strong> <em>O método <code>console.assert()</code> é implementado de forma diferente em Node.js.</em><br>
- Especificamente, em navegadores, chamando o método console.assert() com uma afirmação falsa fará com que a mensagem a ser impressa para o console não interrompa a execução do código subsequente. Em Node.js, no entanto, uma afirmação falsa causará um <em>AssertionError.</em></p>
+<p><strong>Note:</strong> <em>O método <code>console.assert()</code> é implementado de forma diferente em Node.js.</em><br>
+ Especificamente, em navegadores, chamando o método console.assert() com uma afirmação falsa fará com que a mensagem a ser impressa para o console não interrompa a execução do código subsequente. Em Node.js, no entanto, uma afirmação falsa causará um <em>AssertionError.</em></p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -24,16 +24,16 @@ console.assert(<em>afirmação</em>, <em>msg</em> [, <em>subst1</em>, ..., <em>s
 
 <dl>
  <dt><code>afirmação</code></dt>
- <dd>Qualquer expressão booleana. Se a afirmação é falsa, a mensagem é impressa no console.</dd>
+ <dd>Qualquer expressão booleana. Se a afirmação é falsa, a mensagem é impressa no console.</dd>
  <dt><code>obj1</code> ... <code>objN</code></dt>
  <dd>Uma lista de objetos JavaScript para escrever. As representações de strings de cada um desses objetos são acrescentados juntos na ordem dada e saída.</dd>
  <dt><code>msg</code></dt>
  <dd>Uma String que contém zero ou mais seguências de substituição.</dd>
  <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd>Objetos JavaScript com qual as strings de substituição <code>msg </code>serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.</dd>
+ <dd>Objetos JavaScript com qual as strings de substituição <code>msg </code>serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.</dd>
 </dl>
 
-<p>Ver <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação do {{domxref("console")}} para mais detalhes.</p>
+<p>Ver <a href="/en-US/docs/Web/API/console#Outputting_text_to_the_console">Outputting text to the console</a> na documentação do {{domxref("console")}} para mais detalhes.</p>
 
 <p><strong style="font-size: 2.143rem; font-weight: 700; letter-spacing: -1px;">Especificações</strong></p>
 

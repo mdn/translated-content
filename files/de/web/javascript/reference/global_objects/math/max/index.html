@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 ---
 <div>{{JSRef}}</div>
 
-<p>Die Funktion <strong><code>Math.max()</code></strong> gibt die größte von 0 oder mehr Zahlen zurück.</p>
+<p>Die Funktion <strong><code>Math.max()</code></strong> gibt die größte von 0 oder mehr Zahlen zurück.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
 
@@ -29,15 +29,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 
 <h3 id="Rückgabewert">Rückgabewert</h3>
 
-<p>Die größte der übergebenen Zahlen. Wenn mindestens ein Parameter nicht zu einer Zahl konvertiert werden kann, wird {{jsxref("NaN")}} zurückgegeben.</p>
+<p>Die größte der übergebenen Zahlen. Wenn mindestens ein Parameter nicht zu einer Zahl konvertiert werden kann, wird {{jsxref("NaN")}} zurückgegeben.</p>
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Weil <code>max()</code> eine statische Methode von <code>Math</code> ist, kann nur <code>Math.max()</code> verwendet werden. Eine Verwendung mit Math als instanziertem Objekt ist nicht möglich (<code>Math</code> ist kein constructor).</p>
+<p>Weil <code>max()</code> eine statische Methode von <code>Math</code> ist, kann nur <code>Math.max()</code> verwendet werden. Eine Verwendung mit Math als instanziertem Objekt ist nicht möglich (<code>Math</code> ist kein constructor).</p>
 
 <p>Wenn keine Argumente übergeben wurden ist der Rückgabewert -{{jsxref("Infinity")}}.</p>
 
-<p>Wenn mindestens eines der Argumente nicht in eine Zahl umgewandelt werden kann, ist der Rückgabewert {{jsxref("NaN")}}.</p>
+<p>Wenn mindestens eines der Argumente nicht in eine Zahl umgewandelt werden kann, ist der Rückgabewert {{jsxref("NaN")}}.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -58,20 +58,20 @@ var max = arr.reduce(function(a, b) {
 }, -Infinity);
 </pre>
 
-<p>Die folgende Funktion benutzt {{jsxref("Function.prototype.apply()")}}, um den maximalen Wert eines numerischen Arrays zu finden. <code>getMaxOfArray([1, 2, 3])</code> entspricht <code>Math.max(1, 2, 3)</code>, aber <code>getMaxOfArray()</code> kann programmatisch erstellte Arrays jeder Art annehmen.</p>
+<p>Die folgende Funktion benutzt {{jsxref("Function.prototype.apply()")}}, um den maximalen Wert eines numerischen Arrays zu finden. <code>getMaxOfArray([1, 2, 3])</code> entspricht <code>Math.max(1, 2, 3)</code>, aber <code>getMaxOfArray()</code> kann programmatisch erstellte Arrays jeder Art annehmen.</p>
 
 <pre class="brush: js">function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }
 </pre>
 
-<p>Alternativ ist es mit dem neuen {{jsxref("Operators/Spread_operator", "spread Operator")}} viel einfacher, den maximalen Wert eines Arrays herauszufinden.</p>
+<p>Alternativ ist es mit dem neuen {{jsxref("Operators/Spread_operator", "spread Operator")}} viel einfacher, den maximalen Wert eines Arrays herauszufinden.</p>
 
 <pre class="brush: js">var arr = [1, 2, 3];
 var max = Math.max(...arr);
 </pre>
 
-<p>Bei dem Einsatz des {{jsxref("Operators/Spread_operator", "spread Operator")}} oder <code>apply</code> kann der Aufruf fehlschlagen oder ein ungültiges Ergebnis herauskommen, wenn das Array zu viele Elemente hat. Das liegt daran, dass versucht wird die Elemente des Arrays als Parameter einer Funktion zu übergeben. Siehe für mehr Details im Abschnitt <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Einsatz von <code>apply</code> und standard Funktionen</a> nach. Die <code>reduce</code> Lösung hat dieses Problem nicht.</p>
+<p>Bei dem Einsatz des {{jsxref("Operators/Spread_operator", "spread Operator")}} oder <code>apply</code> kann der Aufruf fehlschlagen oder ein ungültiges Ergebnis herauskommen, wenn das Array zu viele Elemente hat. Das liegt daran, dass versucht wird die Elemente des Arrays als Parameter einer Funktion zu übergeben. Siehe für mehr Details im Abschnitt <a href="/de/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Einsatz von <code>apply</code> und standard Funktionen</a> nach. Die <code>reduce</code> Lösung hat dieses Problem nicht.</p>
 
 <h2 id="Spezifikationen">Spezifikationen</h2>
 
@@ -90,17 +90,17 @@ var max = Math.max(...arr);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.8.2.11', 'Math.max')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-math.max', 'Math.max')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

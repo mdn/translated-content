@@ -15,7 +15,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p class="summary">ブラウザーには Scalable Vector Graphics (<a href="/ja/docs/Web/SVG">SVG</a>) 言語から、HTML {{htmlelement("canvas")}} 要素へ描画するための API (<a href="/ja/docs/Web/API/Canvas_API">The Canvas API</a> と <a href="/ja/docs/Web/API/WebGL_API">WebGL</a> を参照) まで、非常に強力なグラフィックプログラミングツールが含まれています。<br>
+<p class="summary">ブラウザーには Scalable Vector Graphics (<a href="/ja/docs/Web/SVG">SVG</a>) 言語から、HTML {{htmlelement("canvas")}} 要素へ描画するための API (<a href="/ja/docs/Web/API/Canvas_API">The Canvas API</a> と <a href="/ja/docs/Web/API/WebGL_API">WebGL</a> を参照) まで、非常に強力なグラフィックプログラミングツールが含まれています。<br>
  この記事では、canvas の概要とさらに詳細を学ぶためのリソースについて説明します。</p>
 
 <table class="learn-box standard-table">
@@ -93,7 +93,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;</pre>
 
-  <p>Here we have stored a reference to the canvas in the <code>canvas</code> constant. In the second line we set both a new constant <code>width</code> and the canvas' <code>width</code> property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant <code>height</code> and the canvas' <code>height</code> property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!</p>
+  <p>Here we have stored a reference to the canvas in the <code>canvas</code> constant. In the second line we set both a new constant <code>width</code> and the canvas' <code>width</code> property equal to {{domxref("Window.innerWidth")}} (which gives us the viewport width). In the third line we set both a new constant <code>height</code> and the canvas' <code>height</code> property equal to {{domxref("Window.innerHeight")}} (which gives us the viewport height). So now we have a canvas that fills the entire width and height of the browser window!</p>
 
   <p>You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (例えば、if you want to draw something exactly halfway across the width of the canvas).</p>
  </li>
@@ -387,7 +387,7 @@ ctx.fillText('Canvas text', 50, 150);</pre>
   <pre class="brush: js notranslate">let image = new Image();
 image.src = 'firefox.png';</pre>
 
-  <p>Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.</p>
+  <p>Here we create a new {{domxref("HTMLImageElement")}} object using the {{domxref("HTMLImageElement.Image()", "Image()")}} constructor. The returned object is the same type as that which is returned when you grab a reference to an existing {{htmlelement("img")}} element). We then set its {{htmlattrxref("src", "img")}} attribute to equal our Firefox logo image. At this point, the browser starts loading the image.</p>
  </li>
  <li>
   <p>We could now try to embed the image using <code>drawImage()</code>, but we need to make sure the image file has been loaded first, otherwise the code will fail. We can achieve this using the <code>onload</code> event handler, which will only be invoked when the image has finished loading. Add the following block below the previous one:</p>
@@ -628,12 +628,12 @@ let posX = 0;</pre>
     }
   }</pre>
 
-  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
+  <p>We are wrapping the whole block in <code> if (posX % 13 === 0) { ... }</code>. We use the modulo (<code>%</code>) operator (also known as the <a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()">remainder operator</a>) to check whether the <code>posX</code> value can be exactly divided by 13 with no remainder. If so, we move on  to the next sprite by incrementing <code>sprite</code> (wrapping to 0 after we're done with sprite #5). This effectively means that we are only updating the sprite on every 13th frame, or roughly about 5 frames a second (<code>requestAnimationFrame()</code> calls us at up to 60 frames per second if possible). We are deliberately slowing down the frame rate because we only have six sprites to work with, and if we display one every 60th of a second, our character will move way too fast!</p>
 
   <p>Inside the outer block we use an <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code> statement to check whether the <code>sprite</code> value is at 5 (the last sprite, given that the sprite numbers run from 0 to 5). If we are showing the last sprite already, we reset <code>sprite</code> back to 0; if not we just increment it by 1.</p>
  </li>
  <li>
-  <p>Next we need to work out how to change the <code>posX</code> value on each frame — add the following code block just below your last one. </p>
+  <p>Next we need to work out how to change the <code>posX</code> value on each frame — add the following code block just below your last one. </p>
 
   <pre class="brush: js notranslate">  if(posX &gt; width/2) {
     newStartPos = -((width/2) + 102);

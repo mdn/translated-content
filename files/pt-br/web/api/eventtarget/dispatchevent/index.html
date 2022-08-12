@@ -21,10 +21,10 @@ translation_of: Web/API/EventTarget/dispatchEvent
 <ul>
  <li><code>event</code> é o objeto {{domxref("Event")}} a ser disparado.</li>
  <li><code>target</code> é utilizado para inicializar o {{domxref("Event", "", "target")}} e determinar quais event listeners serão <span class="traducaoContextual">invocados.</span></li>
- <li>O valor retornado é <code>false</code> se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna <code>true</code>.</li>
+ <li>O valor retornado é <code>false</code> se ao menos um dos event handlers o qual manipulou o evento chamou {{domxref("Event.preventDefault()")}}. De outro modo, isto retorna <code>true</code>.</li>
 </ul>
 
-<p>O método <code>dispatchEvent joga</code> <code>UNSPECIFIED_EVENT_TYPE_ERR</code> se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is <code>null</code> ou uma string vazia. Exceções jogadas por event handlers são reportadas  como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.</p>
+<p>O método <code>dispatchEvent joga</code> <code>UNSPECIFIED_EVENT_TYPE_ERR</code> se o tipo do evento não foi especificado pela inicialização do evento antes do método ser chamado, ou se o tipo do evento for is <code>null</code> ou uma string vazia. Exceções jogadas por event handlers são reportadas  como exceções não-capturáveis; os event handlers são executados em uma callstack aninhada; eles bloqueiam o chamador até que a rotina tenha sido totalmente executada, mas as execeções não se propagam para o chamador.</p>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 

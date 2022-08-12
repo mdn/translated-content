@@ -40,7 +40,7 @@ translation_of: Mozilla/Firefox/Releases/47
 
 <ul>
  <li>{{cssxref("::backdrop")}} 疑似要素をサポートしました ({{bug(1064843)}})。</li>
- <li><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a> で大文字・小文字を区別しないことを示す修飾子 <code>i</code> (例: <code>[foo=bar i]</code>) を実装しました ({{bug(888190)}})。</li>
+ <li><a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a> で大文字・小文字を区別しないことを示す修飾子 <code>i</code> (例: <code>[foo=bar i]</code>) を実装しました ({{bug(888190)}})。</li>
  <li>CSS Mask Image プロパティを実験的に実装しました。現在は Nightly 版の Firefox のみで使用できます。{{cssxref("mask-repeat")}}、{{cssxref("mask-position")}}、{{cssxref("mask-size")}}、およびショートハンドの {{cssxref("mask")}} を使用できます ({{bug(686281)}})。</li>
  <li>HTML 要素において、{{cssxref("clip-path")}} プロパティで <code>polygon()</code>, <code>ellipse()</code>, <code>circle()</code> を実験的にサポートしました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246762">inset()</a> および <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246764">path()</a> はサポートしていません)。設定項目 <code>layout.css.clip-path-shapes.enabled</code> で制御しており、既定値は <code>false</code> です ({{bug(1075457)}})。値の変更は (従ってアニメーションも) 未サポートです。</li>
  <li>CSS Grid の実験的な実装を更新しました:
@@ -56,10 +56,10 @@ translation_of: Mozilla/Firefox/Releases/47
 <h3 id="JavaScript" name="JavaScript">JavaScript</h3>
 
 <ul>
- <li>ES2017 の {{jsxref("Object.values()")}} および {{jsxref("Object.entries()")}} メソッドを実装しました ({{bug(1232639)}})。</li>
+ <li>ES2017 の {{jsxref("Object.values()")}} および {{jsxref("Object.entries()")}} メソッドを実装しました ({{bug(1232639)}})。</li>
  <li>非推奨の <a href="/ja/docs/Archive/Web/Old_Proxy_API">古い Proxy API</a> (<code>Proxy.create</code> および <code>Proxy.createFunction</code>) は、コンソールで警告を表示するようになりました。また、将来のバージョンで削除する予定です。代わりに標準の {{jsxref("Proxy")}} オブジェクトを使用してください ({{bug(892903)}})。</li>
  <li>非推奨かつ非標準である、<code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の <code>flags</code> 引数をリリース版以外の以外のビルドで廃止しました ({{bug(1245801)}})。</li>
- <li>新たな ES2016 仕様に従い、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 用の {{jsxref("Proxy")}} <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate">enumerate</a> トラップを削除しました ({{bug(1246318)}})。</li>
+ <li>新たな ES2016 仕様に従い、<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 用の {{jsxref("Proxy")}} <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate">enumerate</a> トラップを削除しました ({{bug(1246318)}})。</li>
  <li>ECMAScript 仕様に従い、{{jsxref("Array.prototype.indexOf()")}} および {{jsxref("Array.prototype.lastIndexOf()")}} メソッド (および {{jsxref("TypedArray")}} の同等メソッド) を、<code>-0</code> を返さないように更新しました ({{bug(1242043)}})。</li>
 </ul>
 

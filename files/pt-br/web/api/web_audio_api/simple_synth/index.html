@@ -16,9 +16,9 @@ original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 ---
 <div>{{DefaultAPISidebar("Web Audio API")}}</div>
 
-<p>Este artigo apresenta o código e uma demonstração funcional de um teclado que você pode tocar usando seu mouse. O teclado lhe permite alternar entre formas de onda padrões e customizadas. Esse exemplo utiliza das seguintes interfaces de Web API: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, e {{domxref("GainNode")}}.</p>
+<p>Este artigo apresenta o código e uma demonstração funcional de um teclado que você pode tocar usando seu mouse. O teclado lhe permite alternar entre formas de onda padrões e customizadas. Esse exemplo utiliza das seguintes interfaces de Web API: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, e {{domxref("GainNode")}}.</p>
 
-<p>Já que {{domxref("OscillatorNode")}} é baseado no {{domxref("AudioScheduledSourceNode")}}, isso até certo ponto também é um exemplo pra isto.</p>
+<p>Já que {{domxref("OscillatorNode")}} é baseado no {{domxref("AudioScheduledSourceNode")}}, isso até certo ponto também é um exemplo pra isto.</p>
 
 <h2 id="The_video_keyboard" name="The_video_keyboard">O Teclado Visual</h2>
 
@@ -28,14 +28,14 @@ original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 
 <h4 id="O_Teclado">O Teclado</h4>
 
-<p>Primeiro, criamos o espaço no qual construiremos o teclado. Estaremos construindo o teclado programaticamente, considerando que ao fazer desse jeito teremos a flexibilidade de configurar cada tecla conforme determinamos as informações apropriadas para tecla correspondente. No nosso caso, pegamos a frequência de cada tecla através de uma tabela, mas poderia ser calculado de forma algoritmica também.</p>
+<p>Primeiro, criamos o espaço no qual construiremos o teclado. Estaremos construindo o teclado programaticamente, considerando que ao fazer desse jeito teremos a flexibilidade de configurar cada tecla conforme determinamos as informações apropriadas para tecla correspondente. No nosso caso, pegamos a frequência de cada tecla através de uma tabela, mas poderia ser calculado de forma algoritmica também.</p>
 
 <pre class="brush: html notranslate">&lt;div class="container"&gt;
   &lt;div class="keyboard"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<p>O {{HTMLElement("div")}} nomeado de <code>"container"</code> é a barra de rolagem que permite o teclado ser rolado horizontalmente se for largo demais para o espaço disponivel. As teclas em si serão inseridas no bloco de classe <code>"keyboard"</code>.</p>
+<p>O {{HTMLElement("div")}} nomeado de <code>"container"</code> é a barra de rolagem que permite o teclado ser rolado horizontalmente se for largo demais para o espaço disponivel. As teclas em si serão inseridas no bloco de classe <code>"keyboard"</code>.</p>
 
 <h4 id="A_barra_de_opções">A barra de opções</h4>
 
@@ -43,7 +43,7 @@ original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 
 <h5 id="O_controle_de_volume">O controle de volume</h5>
 
-<p>Primeiro criamos o <code>&lt;div&gt;</code> para conter a barra de opções, para ser personalizado conforme preciso. Então estabelecemos uma caixa que será apresentada no lado esquerdo da barra e colocar um rotulo e um elemento {{HTMLElement("input")}} do tipo <code>"range"</code>. O elemento range será tipicamente apresentado como o controle da barra de rolagem ; configuramos ele para permitir qualquer valor entre 0.0 e 1.0 em cada posição.</p>
+<p>Primeiro criamos o <code>&lt;div&gt;</code> para conter a barra de opções, para ser personalizado conforme preciso. Então estabelecemos uma caixa que será apresentada no lado esquerdo da barra e colocar um rotulo e um elemento {{HTMLElement("input")}} do tipo <code>"range"</code>. O elemento range será tipicamente apresentado como o controle da barra de rolagem ; configuramos ele para permitir qualquer valor entre 0.0 e 1.0 em cada posição.</p>
 
 <pre class="brush: html notranslate">&lt;div class="settingsBar"&gt;
   &lt;div class="left"&gt;
@@ -57,11 +57,11 @@ original_slug: Web/API/API_Web_Audio/Sintetizador_simples
   &lt;/div&gt;
 </pre>
 
-<p>Especificamos um valor padrão de 0.5, e provemos um elemento {{HTMLElement("datalist")}} no qual é conectado ao range usando o atributo {{htmlattrxref("name")}} para achar uma lista de opções cujo ID encaixa; nesse caso, o conjunto de informações é nomeado de <code>"volume"</code>. isso nos permite prover um conjunto de valores comuns e strings especiais que o browser pode de forma opcional escolher mostrar de alguma maneira; e então atribuimos nomes aos valores 0.0 ("Mute") e 1.0 ("100%").</p>
+<p>Especificamos um valor padrão de 0.5, e provemos um elemento {{HTMLElement("datalist")}} no qual é conectado ao range usando o atributo {{htmlattrxref("name")}} para achar uma lista de opções cujo ID encaixa; nesse caso, o conjunto de informações é nomeado de <code>"volume"</code>. isso nos permite prover um conjunto de valores comuns e strings especiais que o browser pode de forma opcional escolher mostrar de alguma maneira; e então atribuimos nomes aos valores 0.0 ("Mute") e 1.0 ("100%").</p>
 
 <h5 id="A_seleção_de_forma_de_onda">A seleção de forma de onda</h5>
 
-<p>E no lado da barra de configurações, colocamos um rótulo e um elemento {{HTMLElement("select")}} nomeado de <code>"waveform"</code> cujas opções correspondem as formas de onda disponiveis.</p>
+<p>E no lado da barra de configurações, colocamos um rótulo e um elemento {{HTMLElement("select")}} nomeado de <code>"waveform"</code> cujas opções correspondem as formas de onda disponiveis.</p>
 
 <pre class="brush: html notranslate">  &lt;div class="right"&gt;
     &lt;span&gt;Current waveform: &lt;/span&gt;
@@ -178,7 +178,7 @@ original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>O código em JavaScript começa inicializando algumas váriaveis.</p>
+<p>O código em JavaScript começa inicializando algumas váriaveis.</p>
 
 <pre class="brush: js notranslate">let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let oscList = [];
@@ -186,9 +186,9 @@ let masterGainNode = null;
 </pre>
 
 <ol>
- <li><code>audioContext</code> é colocado para referenciar o objeto global {{domxref("AudioContext")}} (ou <code>webkitAudioContext</code> se  necessário).</li>
- <li><code>oscillators</code> está colocado para conter uma lista de todos os osciladores atualmente tocando. Ele começa nulo, afinal não há nenhum oscilador tocando ainda.</li>
- <li><code>masterGainNode</code> é colocado como nulo; durante o processo de setup, ele será configurado para contar um {{domxref("GainNode")}} no quall todos os osciladores irão se conectar para permitir o volume geral a ser controlado por apenas uma barra de rolagem.</li>
+ <li><code>audioContext</code> é colocado para referenciar o objeto global {{domxref("AudioContext")}} (ou <code>webkitAudioContext</code> se  necessário).</li>
+ <li><code>oscillators</code> está colocado para conter uma lista de todos os osciladores atualmente tocando. Ele começa nulo, afinal não há nenhum oscilador tocando ainda.</li>
+ <li><code>masterGainNode</code> é colocado como nulo; durante o processo de setup, ele será configurado para contar um {{domxref("GainNode")}} no quall todos os osciladores irão se conectar para permitir o volume geral a ser controlado por apenas uma barra de rolagem.</li>
 </ol>
 
 <pre class="brush: js notranslate">let keyboard = document.querySelector(".keyboard");
@@ -199,9 +199,9 @@ let volumeControl = document.querySelector("input[name='volume']");
 <p>Referencias aos elementos que precisaremos acessar são obtidas através dp:</p>
 
 <ul>
- <li><code>keyboard</code> que é o elemento que irá alojar as teclas.</li>
- <li><code>wavePicker</code> é o elemento {{HTMLElement("select")}} usado para seleção da forma de onda das notas.</li>
- <li><code>volumeControl</code> É o elemento {{HTMLElement("input")}} (do tipo <code>"range"</code>) usado para controlar o volume geral.</li>
+ <li><code>keyboard</code> que é o elemento que irá alojar as teclas.</li>
+ <li><code>wavePicker</code> é o elemento {{HTMLElement("select")}} usado para seleção da forma de onda das notas.</li>
+ <li><code>volumeControl</code> É o elemento {{HTMLElement("input")}} (do tipo <code>"range"</code>) usado para controlar o volume geral.</li>
 </ul>
 
 <pre class="brush: js notranslate">let noteFreq = null;
@@ -210,17 +210,17 @@ let sineTerms = null;
 let cosineTerms = null;
 </pre>
 
-<p>Enfim, variaveis globais que serão usadas quando as formas de onda são criadas:</p>
+<p>Enfim, variaveis globais que serão usadas quando as formas de onda são criadas:</p>
 
 <ul>
- <li><code>noteFreq</code> será uma matriz de matrizes; cada matriz representa uma oitava, cada uma possuindo um valor nota daquela oitava. O valor de cada é a frequência, em Hertz, do tom da nota.</li>
- <li><code>customWaveform</code> será arrumado como um {{domxref("PeriodicWave")}} descrevendo a forma de onda quando o usuário selecionar "Custom" na seleção de forma de onda.</li>
- <li><code>sineTerms</code> e <code>cosineTerms</code> será utilizado para guardar a informação para gerar a forma de onda; cada um irá conter uma matriz que será gerada caso o usuário escolha "Custom".</li>
+ <li><code>noteFreq</code> será uma matriz de matrizes; cada matriz representa uma oitava, cada uma possuindo um valor nota daquela oitava. O valor de cada é a frequência, em Hertz, do tom da nota.</li>
+ <li><code>customWaveform</code> será arrumado como um {{domxref("PeriodicWave")}} descrevendo a forma de onda quando o usuário selecionar "Custom" na seleção de forma de onda.</li>
+ <li><code>sineTerms</code> e <code>cosineTerms</code> será utilizado para guardar a informação para gerar a forma de onda; cada um irá conter uma matriz que será gerada caso o usuário escolha "Custom".</li>
 </ul>
 
 <h3 id="Criando_a_tabela_de_notas">Criando a tabela de notas</h3>
 
-<p>A função <code>createNoteTable()</code> constrói a matriz <code>noteFreq</code> para conter uma matriz de objetos representando cada oitava. Cada oitava, possui uma propriedade para cada nota nessa oitava; O nome dessa propriedade é o nome da nota (utilizando da notação em inglês, como "C" para representar "dó"), e o valor é a frequência, em Hertz, daquela nota.</p>
+<p>A função <code>createNoteTable()</code> constrói a matriz <code>noteFreq</code> para conter uma matriz de objetos representando cada oitava. Cada oitava, possui uma propriedade para cada nota nessa oitava; O nome dessa propriedade é o nome da nota (utilizando da notação em inglês, como "C" para representar "dó"), e o valor é a frequência, em Hertz, daquela nota.</p>
 
 <pre class="brush: js notranslate">function createNoteTable() {
   let noteFreq = [];
@@ -246,7 +246,7 @@ let cosineTerms = null;
   noteFreq[1]["B"] = 61.735412657015513;
 </pre>
 
-<p>... várias oitavas não mostradas para manter breve ...</p>
+<p>... várias oitavas não mostradas para manter breve ...</p>
 
 <div class="hidden">
 <pre class="brush: js notranslate">  noteFreq[2]["C"] = 65.406391325149658;
@@ -334,7 +334,7 @@ let cosineTerms = null;
 }
 </pre>
 
-<p>O resultado é uma matriz, <code>noteFreq</code>, com um objeto para cada oitava. Cada objeto de oitava tem propriedades nomeadas nela onde a propriedade é o nome da nota com a notação em inglês (Como "C" para representar "dó") e o valor da propriedade é a frequência da nota em Hertz.. o objeto resultando se parece com isso:</p>
+<p>O resultado é uma matriz, <code>noteFreq</code>, com um objeto para cada oitava. Cada objeto de oitava tem propriedades nomeadas nela onde a propriedade é o nome da nota com a notação em inglês (Como "C" para representar "dó") e o valor da propriedade é a frequência da nota em Hertz.. o objeto resultando se parece com isso:</p>
 
 <table class="standard-table">
  <tbody>
@@ -383,14 +383,14 @@ let cosineTerms = null;
  </tbody>
 </table>
 
-<p>Com esta tabela no lugar, podemos descobrir a frequência para uma dada nota em uma oitava particular relativamente fácil. Se queremos a frequência pra nota G# na primeira oitava, nós simplesmente usamos  <code>noteFreq[1]["G#"]</code> e conseguimos o valor 51.9 como resultado.</p>
+<p>Com esta tabela no lugar, podemos descobrir a frequência para uma dada nota em uma oitava particular relativamente fácil. Se queremos a frequência pra nota G# na primeira oitava, nós simplesmente usamos  <code>noteFreq[1]["G#"]</code> e conseguimos o valor 51.9 como resultado.</p>
 
 <div class="note">
 <p>Os valores na tabela de exemplo acima foram arredondados para duas casas decimais.</p>
 </div>
 
 <div class="hidden">
-<p> Esse polyfill  é utilizado quando <code>Object.entries()</code> não existir.</p>
+<p> Esse polyfill  é utilizado quando <code>Object.entries()</code> não existir.</p>
 
 <pre class="brush: js notranslate">if (!Object.entries) {
     Object.entries = function entries(O) {
@@ -400,9 +400,9 @@ let cosineTerms = null;
 </pre>
 </div>
 
-<h3 id="Construindo_o_teclado">Construindo o teclado</h3>
+<h3 id="Construindo_o_teclado">Construindo o teclado</h3>
 
-<p>A função <code>setup()</code> é responsavel por construir o teclado e preparar a aplicação para tocar a música.</p>
+<p>A função <code>setup()</code> é responsavel por construir o teclado e preparar a aplicação para tocar a música.</p>
 
 <pre class="brush: js notranslate">function setup() {
   noteFreq = createNoteTable();
@@ -445,11 +445,11 @@ let cosineTerms = null;
 setup();</pre>
 
 <ol>
- <li>A tabela que mapeia o nome e oitavas das notas para suas respectivas frequências é criado ao chamar <code>createNoteTable()</code>.</li>
- <li>Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do {{event("change")}} no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.</li>
- <li>Em seguida, nós replicamos cada oitava na tabela de frequências das notas. Para cada oitava, usamos {{jsxref("Object.entries()")}} para conseguir uma lista de notas daquela oitava.</li>
+ <li>A tabela que mapeia o nome e oitavas das notas para suas respectivas frequências é criado ao chamar <code>createNoteTable()</code>.</li>
+ <li>Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do {{event("change")}} no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.</li>
+ <li>Em seguida, nós replicamos cada oitava na tabela de frequências das notas. Para cada oitava, usamos {{jsxref("Object.entries()")}} para conseguir uma lista de notas daquela oitava.</li>
  <li>Criar um {{HTMLElement("div")}} para contar as notas daquela oitava (para ter um pouco de espaço entre as oitavas), e mudar o nome de classe para "octave".</li>
- <li>Para cada tecla na oitava, checamos para ver se o nome daquela nota há mais de um caractere. Nós pulamos essas, pois estamos deixando notas sustenidas de fora deste exemplo. Do contrário, chamamos <code>createKey()</code>, especificando uma string, oitava, e frequência. O elemento retornado é anexado na elemento da oitava criada no passo 4.</li>
+ <li>Para cada tecla na oitava, checamos para ver se o nome daquela nota há mais de um caractere. Nós pulamos essas, pois estamos deixando notas sustenidas de fora deste exemplo. Do contrário, chamamos <code>createKey()</code>, especificando uma string, oitava, e frequência. O elemento retornado é anexado na elemento da oitava criada no passo 4.</li>
  <li>Quando o elemento da oitava é construido, é então anexada ao teclado.</li>
  <li>Uma vez que o teclado foi construido, nós rolamos para nota "B" na quinta oitava; isso tem o efeito de garantir que o C médio é visivel junto das notas ao redor.</li>
  <li>Então uma forma de onda customizada é construida usando {{domxref("AudioContext.createPeriodicWave()")}}. Essa forma de onda será usada toda vez que o usuário selecionar "Custom" da seleção de formas de onda.</li>
@@ -458,7 +458,7 @@ setup();</pre>
 
 <h4 id="Criando_uma_tecla">Criando uma tecla</h4>
 
-<p>A função <code>createKey()</code>  é chamada toda vez que queremos que uma tecla seja apresentada no nosso teclado virtual. Ela cria elementos da tecla e seu rótulo, adiciona informação dos atributos ao elemento para uso posterior, e coloca modificadores de eventos para os eventos que nos importam.</p>
+<p>A função <code>createKey()</code>  é chamada toda vez que queremos que uma tecla seja apresentada no nosso teclado virtual. Ela cria elementos da tecla e seu rótulo, adiciona informação dos atributos ao elemento para uso posterior, e coloca modificadores de eventos para os eventos que nos importam.</p>
 
 <pre class="brush: js notranslate">function createKey(note, octave, freq) {
   let keyElement = document.createElement("div");
@@ -481,13 +481,13 @@ setup();</pre>
 }
 </pre>
 
-<p>Após criar  os elementos representando as teclas e seus rótulos, nós configuramos o elemento das teclas ao configurar sua classe para "key" (Que estabelece a aparência). Então adicionamos atributos {{htmlattrxref("data-*")}}  que contém a string da oitava da nota (attribute <code>data-octave</code>), representando a nota a ser tocada (attribute <code>data-note</code>), e frequência (attribute <code>data-frequency</code>) em Hertz. Isso irá nos permitir facilmente pegar informação conforme necessário ao cuidar de eventos.</p>
+<p>Após criar  os elementos representando as teclas e seus rótulos, nós configuramos o elemento das teclas ao configurar sua classe para "key" (Que estabelece a aparência). Então adicionamos atributos {{htmlattrxref("data-*")}}  que contém a string da oitava da nota (attribute <code>data-octave</code>), representando a nota a ser tocada (attribute <code>data-note</code>), e frequência (attribute <code>data-frequency</code>) em Hertz. Isso irá nos permitir facilmente pegar informação conforme necessário ao cuidar de eventos.</p>
 
 <h3 id="Fazendo_música">Fazendo música</h3>
 
 <h4 id="Tocando_um_tom">Tocando um tom</h4>
 
-<p>O trabalho da função <code>playTone()</code> é tocar um tom em uma dada frequência. Isso será usado pelo modificador para eventos acionados nas teclas do teclado, para que toquem as notas apropriadas.</p>
+<p>O trabalho da função <code>playTone()</code> é tocar um tom em uma dada frequência. Isso será usado pelo modificador para eventos acionados nas teclas do teclado, para que toquem as notas apropriadas.</p>
 
 <pre class="brush: js notranslate">function playTone(freq) {
   let osc = audioContext.createOscillator();
@@ -508,15 +508,15 @@ setup();</pre>
 }
 </pre>
 
-<p>O <code>playTone()</code> começa criando um novo {{domxref("OscillatorNode")}} ao chamar o método {{domxref("AudioContext.createOscillator()")}}. Então conectamos ele para o módulo de ganha geral ao chamar o novo método de osciladores {{domxref("OscillatorNode.connect()")}} method;, Que determina ao oscilador onde ele irá mandar seu output. Ao fazer isso, mudar o valor do ganho do módulo de ganho geral irá mudar o volume de todos os toms gerados.</p>
+<p>O <code>playTone()</code> começa criando um novo {{domxref("OscillatorNode")}} ao chamar o método {{domxref("AudioContext.createOscillator()")}}. Então conectamos ele para o módulo de ganha geral ao chamar o novo método de osciladores {{domxref("OscillatorNode.connect()")}} method;, Que determina ao oscilador onde ele irá mandar seu output. Ao fazer isso, mudar o valor do ganho do módulo de ganho geral irá mudar o volume de todos os toms gerados.</p>
 
-<p>Então conseguimos o tipo de forma de onda para usar ao checar o valor do controle de seleção de formas de onda na barra de opções. Se o usuário estiver colocado como <code>"custom"</code>, chamamos {{domxref("OscillatorNode.setPeriodicWave()")}} para configurar os osciladores para usar nossa forma de onda customizada. Fazer isso automáticamente coloca o {{domxref("OscillatorNode.type", "type")}} do oscilador como <code>custom</code>. Se qualquer outro tipo de forma de onda é selecionado na seleção de formas de ondas, nós simplesmente colocamos os tipos de osciladores no valor da seleção, esse valor será um entre <code>sine</code>, <code>square</code>, <code>triangle</code>, e <code>sawtooth</code>.</p>
+<p>Então conseguimos o tipo de forma de onda para usar ao checar o valor do controle de seleção de formas de onda na barra de opções. Se o usuário estiver colocado como <code>"custom"</code>, chamamos {{domxref("OscillatorNode.setPeriodicWave()")}} para configurar os osciladores para usar nossa forma de onda customizada. Fazer isso automáticamente coloca o {{domxref("OscillatorNode.type", "type")}} do oscilador como <code>custom</code>. Se qualquer outro tipo de forma de onda é selecionado na seleção de formas de ondas, nós simplesmente colocamos os tipos de osciladores no valor da seleção, esse valor será um entre <code>sine</code>, <code>square</code>, <code>triangle</code>, e <code>sawtooth</code>.</p>
 
-<p>A frequência do oscilador é colocada no valor especificado no paramêtro <code>freq</code> ao colocar o valor dos objetos {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} . Então, enfim, o oscilador é iniciado e começa a produzir sons ao chamar o método {{domxref("AudioScheduledSourceNode.start()")}} .</p>
+<p>A frequência do oscilador é colocada no valor especificado no paramêtro <code>freq</code> ao colocar o valor dos objetos {{domxref("Oscillator.frequency")}} {{domxref("AudioParam")}} . Então, enfim, o oscilador é iniciado e começa a produzir sons ao chamar o método {{domxref("AudioScheduledSourceNode.start()")}} .</p>
 
 <h4 id="Tocando_um_tom_2">Tocando um tom</h4>
 
-<p>Quando o evento {{event("mousedown")}} ou {{domxref("mouseover")}} ocorre em uma tecla, queremos que toque a nota correspondente. A função <code>notePressed()</code> é usada como o modificador de eventos para esses eventos.</p>
+<p>Quando o evento {{event("mousedown")}} ou {{domxref("mouseover")}} ocorre em uma tecla, queremos que toque a nota correspondente. A função <code>notePressed()</code> é usada como o modificador de eventos para esses eventos.</p>
 
 <pre class="brush: js notranslate">function notePressed(event) {
   if (event.buttons &amp; 1) {
@@ -531,13 +531,13 @@ setup();</pre>
 }
 </pre>
 
-<p>Começamos checando se o botão esquerdo do mouse é pressionado, por dois motivos. Primeiro, queremos que apenas o botão esquerdo acione as notas. Segundo, e mais importante, estamos usando isso para cuidar do {{event("mouseover")}} para casos onde o usuário arrasta de tecla a tecla, e só queremos tocar uma nota se o mouse estiver pressionado quando entrar no elemento.</p>
+<p>Começamos checando se o botão esquerdo do mouse é pressionado, por dois motivos. Primeiro, queremos que apenas o botão esquerdo acione as notas. Segundo, e mais importante, estamos usando isso para cuidar do {{event("mouseover")}} para casos onde o usuário arrasta de tecla a tecla, e só queremos tocar uma nota se o mouse estiver pressionado quando entrar no elemento.</p>
 
-<p>Se o botão do mouse estiver de fato sendo pressionado, recebemos o atributo de tecla pressionada {{htmlattrxref("dataset")}} ; isso torna fácil o acesso das informações de atributo customizadas no elemento. Procuramos por um atributo <code>data-pressed</code> ; caso não haja um(o que indica que a nota não está tocando ainda), chamamos <code>playTone()</code> para começar a tocar a nota, passando no valor dos elementos do atributo <code>data-frequency</code>. O valor retornado do oscilador é guardado no <code>oscList</code> para refêrencia futura, e <code>data-pressed</code> é colocado como <code>yes</code> para indicar que a nota está tocando para que não iniciemos novamente na próxima vez que isso for chamado.</p>
+<p>Se o botão do mouse estiver de fato sendo pressionado, recebemos o atributo de tecla pressionada {{htmlattrxref("dataset")}} ; isso torna fácil o acesso das informações de atributo customizadas no elemento. Procuramos por um atributo <code>data-pressed</code> ; caso não haja um(o que indica que a nota não está tocando ainda), chamamos <code>playTone()</code> para começar a tocar a nota, passando no valor dos elementos do atributo <code>data-frequency</code>. O valor retornado do oscilador é guardado no <code>oscList</code> para refêrencia futura, e <code>data-pressed</code> é colocado como <code>yes</code> para indicar que a nota está tocando para que não iniciemos novamente na próxima vez que isso for chamado.</p>
 
 <h4 id="Parando_um_tom">Parando um tom</h4>
 
-<p>A função <code>noteReleased()</code> é o modificador de eventos chamado quando o usuário solta o botão do mouse ou move o mouse para fora da tecla que ele está tocando.</p>
+<p>A função <code>noteReleased()</code> é o modificador de eventos chamado quando o usuário solta o botão do mouse ou move o mouse para fora da tecla que ele está tocando.</p>
 
 <pre class="brush: js notranslate">function noteReleased(event) {
   let dataset = event.target.dataset;
@@ -551,18 +551,18 @@ setup();</pre>
 }
 </pre>
 
-<p><code>noteReleased()</code> usa os atributos customizados <code>data-octave</code> and <code>data-note</code>  para procurar os osciladores das teclas, e então chama o método de oscilador {{domxref("AudioScheduledSourceNode.stop", "stop()")}} para parar de tocar a nota. Finalmente, a entrada <code>oscList</code> para nota é limpa e o atributo <code>data-pressed</code> é removido do elemento da tecla (como identificado pelo {{domxref("event.target")}}), para indicar que a nota não está tocando no momento.</p>
+<p><code>noteReleased()</code> usa os atributos customizados <code>data-octave</code> and <code>data-note</code>  para procurar os osciladores das teclas, e então chama o método de oscilador {{domxref("AudioScheduledSourceNode.stop", "stop()")}} para parar de tocar a nota. Finalmente, a entrada <code>oscList</code> para nota é limpa e o atributo <code>data-pressed</code> é removido do elemento da tecla (como identificado pelo {{domxref("event.target")}}), para indicar que a nota não está tocando no momento.</p>
 
 <h4 id="Mudando_o_volume_geral">Mudando o volume geral</h4>
 
-<p>A barra de rolagem do volume na barra de opções dá uma simples interface para mudar o valor do ganho no módulo de ganho geral, então mudando o volume de todas as notas sendo tocadas. O metódo <code>changeVolume()</code> é o modificador do evento {{event("change")}} na barra de rolagem.</p>
+<p>A barra de rolagem do volume na barra de opções dá uma simples interface para mudar o valor do ganho no módulo de ganho geral, então mudando o volume de todas as notas sendo tocadas. O metódo <code>changeVolume()</code> é o modificador do evento {{event("change")}} na barra de rolagem.</p>
 
 <pre class="brush: js notranslate">function changeVolume(event) {
   masterGainNode.gain.value = volumeControl.value
 }
 </pre>
 
-<p>Isso simplesmente coloca o valor do módulo de ganho geral <code>gain</code> {{domxref("AudioParam")}} para o novo valor na barra de rolagem.</p>
+<p>Isso simplesmente coloca o valor do módulo de ganho geral <code>gain</code> {{domxref("AudioParam")}} para o novo valor na barra de rolagem.</p>
 
 <h3 id="Resultado">Resultado</h3>
 

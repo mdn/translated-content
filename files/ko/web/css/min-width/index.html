@@ -9,7 +9,7 @@ translation_of: Web/CSS/min-width
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>min-width</code></strong> <a href="/en-US/docs/CSS">CSS</a> 속성은 요소의 최소 너비를 설정합니다. <code>min-width</code>는 {{cssxref("width")}} 속성의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>이 자신의 값보다 작아지는걸 방지합니다.</p>
+<p><strong><code>min-width</code></strong> <a href="/en-US/docs/CSS">CSS</a> 속성은 요소의 최소 너비를 설정합니다. <code>min-width</code>는 {{cssxref("width")}} 속성의 <a href="/ko/docs/Web/CSS/used_value">사용값</a>이 자신의 값보다 작아지는걸 방지합니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/min-width.html")}}</div>
 
@@ -56,7 +56,7 @@ min-width: unset;
  <dt><code>min-content</code> {{ experimental_inline() }}</dt>
  <dd>본질적인 최소 높이.</dd>
  <dt><code>fill-available</code>{{ experimental_inline() }}</dt>
- <dd>컨테이닝 블록의 너비에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
+ <dd>컨테이닝 블록의 너비에서 가로축 안쪽 및 바깥 여백과 테두리의 공간을 제외한 높이. (일부 브라우저는 매우 오래 된 이름인 <code>available</code>로 구현함을 참고하세요.)</dd>
  <dt><code>fit-content</code> {{ experimental_inline() }}</dt>
  <dd><code>min(max-content, max(min-content, fill-available))</code>과 같음.</dd>
 </dl>
@@ -72,45 +72,13 @@ min-width: unset;
 form { min-width: 0; }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-width') }}</td>
-   <td>{{ Spec2('CSS3 Sizing') }}</td>
-   <td>Adds the <code>max-content</code>, <code>min-content</code>, <code>fit-content</code>, and <code>fill-available</code> keywords. (Both CSS3 Box and CSS3 Writing Modes drafts used to define these keywords, but are superseded by this spec.<em>)</em></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Flexbox', '#min-size-auto', 'min-width') }}</td>
-   <td>{{ Spec2('CSS3 Flexbox') }}</td>
-   <td>Adds the <code>auto</code> keyword and uses it as the initial value.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Transitions', '#animatable-css', 'min-width') }}</td>
-   <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td>Defines <code>min-width</code> as animatable.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'visudet.html#min-max-widths', 'min-width') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("css.properties.min-width")}}</p>
 

@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>trimEnd()</code></strong> elimina los espacios en blanco al final de una cadena de carácteres. <code>trimRight()</code> es el alias de este método.</p>
+<p>El método <strong><code>trimEnd()</code></strong> elimina los espacios en blanco al final de una cadena de carácteres. <code>trimRight()</code> es el alias de este método.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-trimend.html")}}</div>
 
@@ -25,25 +25,25 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/trimEnd
 <pre class="syntaxbox notranslate"><code><var>str</var>.trimEnd();
 <var>str</var>.trimRight();</code></pre>
 
-<h3 id="Valor_de_retorno">Valor de retorno</h3>
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
 <p>Una nueva cadena de texto que representa la cadena de texto llamada sin espacios en blanco de su extremo (derecho).</p>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p><code>trimEnd()</code> / <code>trimRight()</code> Los metodos devuelven una cadena de texto sin espacios en blanco desde su extremo derecho. <code>trimEnd()</code> ó <code>trimRight()</code> no afectan el valor de la cadena de texto en sí.</p>
+<p><code>trimEnd()</code> / <code>trimRight()</code> Los metodos devuelven una cadena de texto sin espacios en blanco desde su extremo derecho. <code>trimEnd()</code> ó <code>trimRight()</code> no afectan el valor de la cadena de texto en sí.</p>
 
 <h3 id="Superposición">Superposición</h3>
 
-<p>Por coherencia de funciones como {{jsxref("String.prototype.padEnd")}} el nombre del método estandar es <code>trimEnd</code>. Sin embargo por compatibilidad web, <code>trimRight</code> permanece como un alias para <code>trimEnd</code>. En algunos motores esto significa: </p>
+<p>Por coherencia de funciones como {{jsxref("String.prototype.padEnd")}} el nombre del método estandar es <code>trimEnd</code>. Sin embargo por compatibilidad web, <code>trimRight</code> permanece como un alias para <code>trimEnd</code>. En algunos motores esto significa: </p>
 
 <pre class="brush: js notranslate">String.prototype.trimRight.name === "trimEnd";</pre>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
-<h3 id="Usando_trimEnd">Usando <code>trimEnd()</code></h3>
+<h3 id="Usando_trimEnd">Usando <code>trimEnd()</code></h3>
 
-<p>El siguiente ejemplo muestra la cadena de texto en minusculas <code>'   foo'</code>:</p>
+<p>El siguiente ejemplo muestra la cadena de texto en minusculas <code>'   foo'</code>:</p>
 
 <pre class="brush: js; highlight: [5] notranslate">var str = '   foo  ';
 

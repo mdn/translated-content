@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Wenn <code>compareFunction</code> nicht angegeben wird, werden alle Arrayelemente, die nicht <code>undefined</code> sind, sortiert indem sie in Strings konvertiert werden und in UTF-16-Code-Unit-Reihenfolge verglichen werden. Zum Beispiel steht "banana" vor "cherry". Bei einer numerischen Sortierung kommt 9 vor 80, aber weil Zahlen in Strings konvertiert werden, kommt "80" in Unicode vor "9". Alle Elemente die <code>undefined</code> sind werden ans Ende des Arrays sortiert.</p>
+<p>Wenn <code>compareFunction</code> nicht angegeben wird, werden alle Arrayelemente, die nicht <code>undefined</code> sind, sortiert indem sie in Strings konvertiert werden und in UTF-16-Code-Unit-Reihenfolge verglichen werden. Zum Beispiel steht "banana" vor "cherry". Bei einer numerischen Sortierung kommt 9 vor 80, aber weil Zahlen in Strings konvertiert werden, kommt "80" in Unicode vor "9". Alle Elemente die <code>undefined</code> sind werden ans Ende des Arrays sortiert.</p>
 
 <div class="blockIndicator note">
 <p>Hinweis: In UTF-16 werden Unicode-Zeichen über <code>\uFFFF</code> als zwei Ersatzcodeeinheiten im Bereich <code>\uD800</code> - <code>\ uDFFF</code> codiert. Der Wert jeder Codeeinheit wird für den Vergleich gesondert berücksichtigt. Daher wird das durch das Ersatzpaar <code>\uD655</code> <code>\uDE55</code> gebildete Zeichen vor dem Zeichen <code>\uFF3A</code> sortiert.</p>
@@ -232,17 +232,17 @@ var result = mapped.map(function(el){
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.sort', 'Array.prototype.sort')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

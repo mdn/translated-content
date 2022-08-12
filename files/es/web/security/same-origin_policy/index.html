@@ -14,7 +14,7 @@ original_slug: Web/Security/Same-origin_politica
 
 <h2 id="Definición_de_origen">Definición de origen</h2>
 
-<p>Dos páginas tienen el <em>mismo origen</em> si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).</p>
+<p>Dos páginas tienen el <em>mismo origen</em> si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).</p>
 
 <p>La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL <code>http://store.company.com/dir/page.html</code>:</p>
 
@@ -57,14 +57,14 @@ original_slug: Web/Security/Same-origin_politica
 
 <h3 id="Orígenes_heredados">Orígenes heredados</h3>
 
-<p>Los scripts ejecutados desde páginas con una URL <code>about:blank</code> o <code>javascript:</code> heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.</p>
+<p>Los scripts ejecutados desde páginas con una URL <code>about:blank</code> o <code>javascript:</code> heredan el origen del documento que contiene esa URL, puesto que esos tipos de URLs no contienen información sobre un servidor de origen.</p>
 
 <div class="blockIndicator note">
-<p>Por ejemplo, <code>about:blank</code> a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.</p>
+<p>Por ejemplo, <code>about:blank</code> a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.</p>
 </div>
 
 <div class="blockIndicator warning">
-<p><code>data:</code> URLs obtienen un nuevo, vacío, contexto de seguridad.</p>
+<p><code>data:</code> URLs obtienen un nuevo, vacío, contexto de seguridad.</p>
 </div>
 
 <h3 id="Excepciones_en_Internet_Explorer" style="line-height: 30px;">Excepciones en Internet Explorer</h3>
@@ -87,7 +87,7 @@ original_slug: Web/Security/Same-origin_politica
 
 <p>Tras su ejecución, la página puede pasar la comprobación de origen con <code>http://company.com/dir/page.html</code> (asumiendo que <code>http://company.com/dir/page.html</code> asigna su <code>document.domain</code> a "<code>company.com</code>" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, <code>company.com</code> <strong>no</strong> podría asignar <code>document.domain</code> a <code>othercompany.com</code> ya que no es un superdominio de <code>company.com</code>.</p>
 
-<p>El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo <code>document.domain = document.domain</code> causa que el número del puerto sea sobrescrito con <code>null</code>. Por lo tanto <strong>no se puede</strong> hacer que<code> company.com:8080</code> hable con  <code>company.com</code> solo asignando <code>document.domain = "company.com"</code> en el primero. Tiene que ser asignado en ambos para que los números de puerto sean <code>null</code>.</p>
+<p>El número de puerto es guardado de forma separada por el navegador. Cualquier llamada al setter, incluyendo <code>document.domain = document.domain</code> causa que el número del puerto sea sobrescrito con <code>null</code>. Por lo tanto <strong>no se puede</strong> hacer que<code> company.com:8080</code> hable con  <code>company.com</code> solo asignando <code>document.domain = "company.com"</code> en el primero. Tiene que ser asignado en ambos para que los números de puerto sean <code>null</code>.</p>
 
 <div class="note">
 <p><strong>Nota:</strong> Cuando se use <code>document.domain</code> para permitir a un subdominio acceder a su padre de forma segura, necesitas asignar <code>document.domain</code> al mismo valor tanto en el padre como en el subdominio. Esto es necesario incluso si solo se asigna el dominio padre a su valor original. Un fallo al hacer esto puede resultar en errores de permisos.</p>
@@ -95,12 +95,12 @@ original_slug: Web/Security/Same-origin_politica
 
 <h2 id="Acceso_de_red_de_origen_cruzado">Acceso de red de origen cruzado</h2>
 
-<p>La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:</p>
+<p>La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:</p>
 
 <ul>
- <li>Las escrituras Cross-origin<em> </em>normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren <a href="/en-US/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
- <li>La integración Cross-origin (<em>embedding) </em>normalmente se permite. Los ejemplos se listan debajo.</li>
- <li>Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">disponibilidad de un recurso integrado</a>.</li>
+ <li>Las escrituras Cross-origin<em> </em>normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren <a href="/en-US/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
+ <li>La integración Cross-origin (<em>embedding) </em>normalmente se permite. Los ejemplos se listan debajo.</li>
+ <li>Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">disponibilidad de un recurso integrado</a>.</li>
 </ul>
 
 <p>Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:</p>
@@ -135,7 +135,7 @@ original_slug: Web/Security/Same-origin_politica
 
 <h3 id="Window">Window</h3>
 
-<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window</a>.</p>
+<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window</a>.</p>
 
 <p>Los siguientes accesos de origen-cruzado a las propiedades de <code>Window</code> están permitidos:</p>
 
@@ -212,7 +212,7 @@ original_slug: Web/Security/Same-origin_politica
 
 <h3 id="Location">Location</h3>
 
-<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location</a>.</p>
+<p>Especificación:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location</a>.</p>
 
 <p>Los siguientes accesos de origen cruzado a las propiedades de <code>Location</code> están permitidos:</p>
 

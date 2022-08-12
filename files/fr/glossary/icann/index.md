@@ -14,4 +14,4 @@ original_slug: Glossaire/ICANN
 ### Culture générale
 
 - [Site web officiel](https://www.icann.org/)
-- {{interwiki("wikipedia", "ICANN", "ICANN")}} sur Wikipédia
+- [ICANN](https://fr.wikipedia.org/wiki/ICANN) sur Wikipédia

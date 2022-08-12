@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_p
 
 <p>Open <strong>/controllers/authorController.js</strong>.</p>
 
-<p>Add the following lines to the top of the file to import the <em>async</em> and <em>Book</em> modules (these are needed for our author detail page).</p>
+<p>Add the following lines to the top of the file to import the <em>async</em> and <em>Book</em> modules (these are needed for our author detail page).</p>
 
 <pre class="brush: js">var async = require('async');
 var Book = require('../models/book');</pre>
@@ -19,25 +19,25 @@ var Book = require('../models/book');</pre>
 <pre class="brush: js">// Display detail page for a specific Author.
 exports.author_detail = function(req, res, next) {
 
-<strong>    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id)
-              .exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id },'title summary')
-          .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.author==null) { // No results.
-            var err = new Error('Author not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });</strong>
+<strong>    async.parallel({
+        author: function(callback) {
+            Author.findById(req.params.id)
+              .exec(callback)
+        },
+        authors_books: function(callback) {
+          Book.find({ 'author': req.params.id },'title summary')
+          .exec(callback)
+        },
+    }, function(err, results) {
+        if (err) { return next(err); } // Error in API usage.
+        if (results.author==null) { // No results.
+            var err = new Error('Author not found');
+            err.status = 404;
+            return next(err);
+        }
+        // Successful, so render.
+        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
+    });</strong>
 
 };
 </pre>
@@ -52,21 +52,21 @@ exports.author_detail = function(req, res, next) {
 
 block content
 
-<strong>  h1 Author: #{author.name}</strong>
-  p #{author.date_of_birth} - #{author.date_of_death}
+<strong>  h1 Author: #{author.name}</strong>
+  p #{author.date_of_birth} - #{author.date_of_death}
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h4 Books
 
-    dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+    dl
+      each book in author_books
+        dt
+          a(href=book.url) #{book.title}
+        dd #{book.summary}
 
-      else
-        p This author has no books.
+      else
+        p This author has no books.
 </pre>
 
 <p>Everything in this template has been demonstrated in previous sections.</p>
@@ -84,6 +84,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
  <li>Proceed to final subarticle of part 5 : <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge">BookInstance detail page and challenge</a>.</li>
 </ul>

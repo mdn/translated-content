@@ -12,15 +12,15 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <p>{{DefaultAPISidebar("Fetch API")}}</p>
 
 <div>
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。</p>
+<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。</p>
 </div>
 
 <p>同樣的功能，以前都是使用 {{domxref("XMLHttpRequest")}}，而 Fetch 作為其替代方案，能更方便地整合在如 {{domxref("ServiceWorker_API", "Service Workers")}} 等相關技術上。此外，Fetch 具備額外的 logical palce，能拿來定義其他和 HTTP 有關的東西，像是 CORS 和 HTTP extensions。</p>
 
-<p> <code>fetch</code> 和 <code>jQuery.ajax()</code> 有三個主要的差異:</p>
+<p> <code>fetch</code> 和 <code>jQuery.ajax()</code> 有三個主要的差異:</p>
 
 <ul>
- <li><code>fetch()</code> 回傳的 promise <strong>不會 reject HTTP 的 error status</strong>，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 <code>ok</code> status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。</li>
+ <li><code>fetch()</code> 回傳的 promise <strong>不會 reject HTTP 的 error status</strong>，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 <code>ok</code> status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。</li>
  <li><code>fetch</code> <strong>可以接收跨站的 cookies</strong>，你可以用 Fetch 來建立跨站的 session。</li>
  <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="/zh-TW/docs/Web/API/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
@@ -30,10 +30,10 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <p>用法簡單，如下:</p>
 
 <pre class="brush: js notranslate">fetch('http://example.com/movies.json')
-  .then(function(response) {
-    return response.json();
+  .then(function(response) {
+    return response.json();
   })
-  .then(function(myJson) {
+  .then(function(myJson) {
     console.log(myJson);
   });
 
@@ -43,19 +43,19 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <p>這個範例使用的 url 只是示意用。</p>
 
-<p>回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)</p>
+<p>回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)</p>
 
 <div class="note">
-<p><strong>備註</strong>: 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見<a href="#body">Body</a> </p>
+<p><strong>備註</strong>: 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見<a href="#body">Body</a> </p>
 </div>
 
-<p>Fetch 請求的安全性 <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a>(內容安全策略) 是由 header 中的 <code>connect-src</code> directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。</p>
+<p>Fetch 請求的安全性 <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a>(內容安全策略) 是由 header 中的 <code>connect-src</code> directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。</p>
 
 <h3 id="Request_可用的設定值">Request 可用的設定值</h3>
 
-<p><code>fetch()</code> 第二個參數是選用的，可以傳送一個 <code>init</code> Object 來設定 request。</p>
+<p><code>fetch()</code> 第二個參數是選用的，可以傳送一個 <code>init</code> Object 來設定 request。</p>
 
-<p>更多可以用的設定值詳見 {{domxref("GlobalFetch.fetch","fetch()")}} </p>
+<p>更多可以用的設定值詳見 {{domxref("GlobalFetch.fetch","fetch()")}} </p>
 
 <pre class="brush: js notranslate">// 來發個 POST Request:
 
@@ -84,7 +84,7 @@ function postData(url, data) {
 
 <h3 id="包含憑證Credentials_的_Request_用法">包含憑證(Credentials) 的 Request 用法</h3>
 
-<p>要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 <code>init</code> object 加上 <code>credentials: 'include'</code> </p>
+<p>要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 <code>init</code> object 加上 <code>credentials: 'include'</code> </p>
 
 <pre class="brush: js notranslate">fetch('https://example.com', {
   credentials: 'include'
@@ -98,7 +98,7 @@ fetch('https://example.com', {
   credentials: 'same-origin'
 })</pre>
 
-<p>或要確保瀏覽器不會帶著 credentials 請求，可以用 <code>credentials: 'omit'</code> 。</p>
+<p>或要確保瀏覽器不會帶著 credentials 請求，可以用 <code>credentials: 'omit'</code> 。</p>
 
 <pre class="brush: js notranslate">fetch('https://example.com', {
   credentials: 'omit'
@@ -124,7 +124,7 @@ fetch(url, {
 
 <h3 id="上傳檔案">上傳檔案</h3>
 
-<p>上傳檔案可以透過使用HTML <code>&lt;input type="file" /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} 與{{domxref("GlobalFetch.fetch","fetch()")}}.</p>
+<p>上傳檔案可以透過使用HTML <code>&lt;input type="file" /&gt;</code> input element, {{domxref("FormData.FormData","FormData()")}} 與{{domxref("GlobalFetch.fetch","fetch()")}}.</p>
 
 <pre class="brush: js notranslate">var formData = new FormData();
 var fileField = document.querySelector("input[type='file']");
@@ -143,7 +143,7 @@ fetch('https://example.com/profile/avatar', {
 
 <h3 id="如何確認fetch是否成功">如何確認fetch是否成功</h3>
 
-<p>當{{domxref("GlobalFetch.fetch","fetch()")}}遇到CORS或server設定錯誤導致network error時,  promise會reject並附上{{jsxref("TypeError")}}的回應, 但在權限或類似問題導致404的常見狀況下, 卻不會導致network error.</p>
+<p>當{{domxref("GlobalFetch.fetch","fetch()")}}遇到CORS或server設定錯誤導致network error時,  promise會reject並附上{{jsxref("TypeError")}}的回應, 但在權限或類似問題導致404的常見狀況下, 卻不會導致network error.</p>
 
 <p>因此, 確認<code>fetch()</code>是否成功的正確方式, 應包含檢查promise resolved, 以及檢查{{domxref("Response.ok")}}的屬性是否為true. 代碼如下例：</p>
 
@@ -183,10 +183,10 @@ fetch(myRequest).then(function(response) {
 
 <pre class="brush: js notranslate">var anotherRequest = new Request(myRequest, myInit);</pre>
 
-<p>This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the <code>init</code> options if desired.  The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.</p>
+<p>This is pretty useful, as request and response bodies are one use only. Making a copy like this allows you to make use of the request/response again, while varying the <code>init</code> options if desired.  The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
+<p><strong>Note</strong>: There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.</p>
 </div>
 
 <h2 id="Headers">Headers</h2>
@@ -282,7 +282,7 @@ addEventListener('fetch', function(event) { // ServiceWorker intercepting a fetc
     new Response(myBody, {
       headers: { "Content-Type" : "text/plain" }
     })
-  );
+  );
 });</pre>
 
 <p>The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)</p>

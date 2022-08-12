@@ -60,36 +60,36 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 <pre class="brush: html">&lt;Form action = "#"&gt;</pre>
 
 <div class="note">
-<p><strong>Nota:</strong> Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo {{htmlattrxref ( "acción", "form")}} , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez  que intenten enviar datos, ya que estos no se pueden cifrar.</p>
+<p><strong>Nota:</strong> Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo {{htmlattrxref ( "acción", "form")}} , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez  que intenten enviar datos, ya que estos no se pueden cifrar.</p>
 </div>
 
 <h4 id="El_atributo_htmlattrxref_método_form">El atributo {{htmlattrxref ( "método", "form")}}</h4>
 
-<p>Este atributo define cómo se envían los datos. El <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">protocolo HTTP</a> proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método <code>GET</code> y el método <code>POST</code>.</p>
+<p>Este atributo define cómo se envían los datos. El <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">protocolo HTTP</a> proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método <code>GET</code> y el método <code>POST</code>.</p>
 
 <p>Para entender la diferencia entre estos dos métodos, vamos a dar un paso atrás y examinar cómo funciona HTTP. Cada vez que desee llegar a un recurso en la Web, el navegador envía una petición a una URL. Una petición HTTP consta de dos partes: un encabezado que contiene un conjunto de metadatos mundial sobre las capacidades del navegador, y un cuerpo que puede contener la información necesaria paraque el servidor pueda procesar la petición específica.</p>
 
 <h5 id="El_método_GET">El método GET</h5>
 
-<p>El método <code>GET</code> es  utilizado por el navegador para pedir al servidor que se envíe de vuelta un recurso dado: "Hey servidor, quiero conseguir este recurso." En este caso, el navegador envía un cuerpo vacío. Debido a que el cuerpo está vacío, si un formulario se envía utilizando este método, los datos enviados al servidor se anexan a la URL.</p>
+<p>El método <code>GET</code> es  utilizado por el navegador para pedir al servidor que se envíe de vuelta un recurso dado: "Hey servidor, quiero conseguir este recurso." En este caso, el navegador envía un cuerpo vacío. Debido a que el cuerpo está vacío, si un formulario se envía utilizando este método, los datos enviados al servidor se anexan a la URL.</p>
 
 <p>Considere la siguiente forma:</p>
 
 <pre class="brush: html">&lt;form action="http://foo.com" method="get"&gt;
-  &lt;div&gt;
-    &lt;label for="decir"&gt; ¿Qué saludo quiere decir? &lt;/label&gt;
-    &lt;input name="decir" id="decir" value="Hola"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="para"&gt; ¿A quién se lo quiere decir? &lt;/label&gt;
-    &lt;input name="para" value="mamá"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt; Botón enviar mis saludos &lt;/ button&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="decir"&gt; ¿Qué saludo quiere decir? &lt;/label&gt;
+    &lt;input name="decir" id="decir" value="Hola"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="para"&gt; ¿A quién se lo quiere decir? &lt;/label&gt;
+    &lt;input name="para" value="mamá"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt; Botón enviar mis saludos &lt;/ button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>Dado que el método <code>GET</code>ha conseguido el recurso, verá en la URL lo siguiente en la barra de direcciones del navegador <code>www.foo.com/?say=Hi&amp;to=Mom</code>  cuando se envía el formulario.</p>
+<p>Dado que el método <code>GET</code>ha conseguido el recurso, verá en la URL lo siguiente en la barra de direcciones del navegador <code>www.foo.com/?say=Hi&amp;to=Mom</code>  cuando se envía el formulario.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14685/url-parameters.png" style="display: block; margin: 0 auto;">Los datos se añaden a la URL como una serie de pares de nombre / valor. Después que la dirección web URL ha terminado, se incluye un signo de interrogación ( <code>?</code>) seguido de los pares de nombre / valor, cada uno separado por un signo ( <code>&amp;</code>). En este caso estamos pasando dos piezas de datos en el servidor:</p>
 
@@ -114,17 +114,17 @@ Anfitrión: foo.com</pre>
 <p>Veamos un ejemplo - se trata de algo similar a como se vió en el método <code>GET</code>del apartado anterior, pero con el {{htmlattrxref ( "método", "form")}} atributo establecido <code>post</code>.</p>
 
 <pre class="brush: html">&lt;Form action = "http://foo.com" method = "post"&gt;
-  &lt;Div&gt;
-    &lt;Label for = "dice"&gt; Lo saludo qué quiere decir? &lt;/ Label&gt;
-    &lt;Input name = "decir" id = "decir" value = "Hola"&gt;
-  &lt;/ Div&gt;
-  &lt;Div&gt;
-    &lt;Label for = "para"&gt; ¿Quién usted quiere decir que a? &lt;/ Label&gt;
-    &lt;Input name = "a" value = "mamá"&gt;
-  &lt;/ Div&gt;
-  &lt;Div&gt;
-    &lt;&gt; Botón enviar mis saludos &lt;/ botón&gt;
-  &lt;/ Div&gt;
+  &lt;Div&gt;
+    &lt;Label for = "dice"&gt; Lo saludo qué quiere decir? &lt;/ Label&gt;
+    &lt;Input name = "decir" id = "decir" value = "Hola"&gt;
+  &lt;/ Div&gt;
+  &lt;Div&gt;
+    &lt;Label for = "para"&gt; ¿Quién usted quiere decir que a? &lt;/ Label&gt;
+    &lt;Input name = "a" value = "mamá"&gt;
+  &lt;/ Div&gt;
+  &lt;Div&gt;
+    &lt;&gt; Botón enviar mis saludos &lt;/ botón&gt;
+  &lt;/ Div&gt;
 &lt;/ Form&gt;</pre>
 
 <p>Cuando el formulario se envía mediante el método <code>POST</code>, no se obtienen los datos adjuntos en la dirección URL, y la solicitud HTTP se parece a esto y los datos son incluidos en el cuerpo de la petición en su lugar:</p>
@@ -136,7 +136,7 @@ Content-Length: 13
 
 decir = Hi &amp; a = mamá</pre>
 
-<p>La cabecera <code>Content-Length</code> indica el tamaño del cuerpo, y la cabecera <code>Content-Type</code> indica el tipo de recurso que se envía al servidor. Discutiremos estas cabeceras más adelante.</p>
+<p>La cabecera <code>Content-Length</code> indica el tamaño del cuerpo, y la cabecera <code>Content-Type</code> indica el tipo de recurso que se envía al servidor. Discutiremos estas cabeceras más adelante.</p>
 
 <div class="note">
 <p><strong>Nota</strong> : Puede encontrar este ejemplo en GitHub - ver <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html">post-method.html</a> ( <a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">verlo en directo también</a> ).</p>
@@ -148,14 +148,14 @@ decir = Hi &amp; a = mamá</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14691/network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p>Lo único que se muestra al usuario es la dirección URL llamada. Como mencionamos anteriormente, con una petición<code>GET</code> del usuario,se verán los datos en su barra de direcciones, pero con una petición <code>POST</code> no será de esta manera. Esto puede ser muy importante por dos razones:</p>
+<p>Lo único que se muestra al usuario es la dirección URL llamada. Como mencionamos anteriormente, con una petición<code>GET</code> del usuario,se verán los datos en su barra de direcciones, pero con una petición <code>POST</code> no será de esta manera. Esto puede ser muy importante por dos razones:</p>
 
 <ol>
  <li>Si necesita enviar una contraseña (o cualquier otra pieza sensible de los datos), nunca utilice el método<code>GET</code> o se arriesga a mostrar en la barra de direcciones, lo que sería muy inseguro.</li>
  <li>Si necesita enviar una gran cantidad de datos, el método <code>POSt</code> es preferible debido a que algunos navegadores limitan los tamaños de las direcciones URL. Además, muchos servidores limitan la longitud de las URL que aceptan.</li>
 </ol>
 
-<h3 id="En_el_lado_Servidor_la_recuperación_de_los_datos">En el lado  Servidor: la recuperación de los datos</h3>
+<h3 id="En_el_lado_Servidor_la_recuperación_de_los_datos">En el lado  Servidor: la recuperación de los datos</h3>
 
 <p>Sea cual sea el método HTTP que elija, el servidor recibe una cadena que será analizada con el fin de obtener los datos como una lista de pares clave / valor. La forma de acceder a esta lista depende de la plataforma de desarrollo que use y de las estructuras específicas que pueda estar usando con él. La tecnología se utiliza también determina cómo se manejan claves duplicadas; A menudo,se da prioridad al valor recibido más recientemente para una clave dada .</p>
 
@@ -177,7 +177,7 @@ decir = Hi &amp; a = mamá</pre>
 <p><img alt="" src="https://mdn.mozillademos.org/files/14693/php-result.png" style="display: block; margin: 0 auto;"></p>
 
 <div class="note">
-<p><strong>Nota</strong> : Este ejemplo no funcionará cuando se carga en un navegador localmente - los navegadores no pueden interpretar  código PHP, por lo que cuando se envía el formulario en el navegador sólo  se puede ofrecer la descarga del archivo PHP para usted. Para conseguir que funcione, es necesario ejecutar el ejemplo a través de un servidor PHP de algún tipo. Buenas opciones para probar PHP locales son <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac y Windows) y <a href="http://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).</p>
+<p><strong>Nota</strong> : Este ejemplo no funcionará cuando se carga en un navegador localmente - los navegadores no pueden interpretar  código PHP, por lo que cuando se envía el formulario en el navegador sólo  se puede ofrecer la descarga del archivo PHP para usted. Para conseguir que funcione, es necesario ejecutar el ejemplo a través de un servidor PHP de algún tipo. Buenas opciones para probar PHP locales son <a href="https://www.mamp.info/en/downloads/">MAMP</a> (Mac y Windows) y <a href="http://ampps.com/download">AMPPS</a> (Mac, Windows, Linux).</p>
 </div>
 
 <h4 id="Ejemplo_Python">Ejemplo: Python</h4>
@@ -222,7 +222,7 @@ if __name__ == "__main__":
  <li>etc.</li>
 </ul>
 
-<p>Vale la pena señalar que incluso el uso de estos marcos, trabajar con formularios no es necesariamente <em>fácil</em> . Pero es mucho más fácil que tratar de escribir toda la funcionalidad  a partir de cero, además, le ahorrará mucho tiempo.</p>
+<p>Vale la pena señalar que incluso el uso de estos marcos, trabajar con formularios no es necesariamente <em>fácil</em> . Pero es mucho más fácil que tratar de escribir toda la funcionalidad  a partir de cero, además, le ahorrará mucho tiempo.</p>
 
 <div class="note">
 <p><strong>Nota</strong> : Está más allá del alcance de este artículo para enseñarle cualquier lenguaje del lado del servidor o marcos de trabajo. Los enlaces de arriba le dará un poco de ayuda,en caso de que desee aprender.</p>
@@ -241,14 +241,14 @@ if __name__ == "__main__":
 <ul>
  <li>Ajuste el {{htmlattrxref ( "método", "form")}} atributo <code>POST</code>porque el contenido del archivo no se puede poner dentro de los parámetros de URL.</li>
  <li>Establecer el valor de {{htmlattrxref ( "enctype", "form")}} que <code>multipart/form-data</code>debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).</li>
- <li>Incluir uno o más widgets <a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker">selector de archivos</a> para permitir a los usuarios seleccionar el archivo (s) que será subido.</li>
+ <li>Incluir uno o más widgets <a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker">selector de archivos</a> para permitir a los usuarios seleccionar el archivo (s) que será subido.</li>
 </ul>
 
 <p>Por ejemplo:</p>
 
 <pre class="brush: html">&lt;Form method = "post" enctype = "multipart / form-data"&gt;
   &lt;Div&gt;
-    &lt;Label for = "archivo"&gt; ​​Elija un archivo &lt;/ label&gt;
+    &lt;Label for = "archivo"&gt; ​​Elija un archivo &lt;/ label&gt;
     &lt;Input type = "file" id = "file" name = "myFile"&gt;
   &lt;/ Div&gt;
   &lt;Div&gt;
@@ -257,7 +257,7 @@ if __name__ == "__main__":
 &lt;/ Form&gt;</pre>
 
 <div class="note">
-<p><strong>Nota:</strong> Algunos navegadores son compatibles con la {{htmlattrxref ( "múltiple", "input")}} atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo  para subir con un único elemento <code>&lt;input&gt;</code> . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.</p>
+<p><strong>Nota:</strong> Algunos navegadores son compatibles con la {{htmlattrxref ( "múltiple", "input")}} atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo  para subir con un único elemento <code>&lt;input&gt;</code> . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.</p>
 </div>
 
 <div class="warning">
@@ -276,7 +276,7 @@ if __name__ == "__main__":
 
 <p>XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la <a href="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript" title="/ Es-ES / docs / JavaScript / Same_origin_policy_for_JavaScript">política del mismo origen</a> . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.</p>
 
-<p>Los ataques CSRF son similares a los ataques XSS porque comienzan de la misma manera - mediante la inyección de comandos de cliente en páginas Web - pero su objetivo es diferente. Los atacantes CSRF tratan de escalar privilegios  de un usuario de mayores privilegios (por ejemplo, un administrador de sitio) para realizar una acción que no deberían ser capaces de hacer (por ejemplo, el envío de datos a un usuario no fiable).</p>
+<p>Los ataques CSRF son similares a los ataques XSS porque comienzan de la misma manera - mediante la inyección de comandos de cliente en páginas Web - pero su objetivo es diferente. Los atacantes CSRF tratan de escalar privilegios  de un usuario de mayores privilegios (por ejemplo, un administrador de sitio) para realizar una acción que no deberían ser capaces de hacer (por ejemplo, el envío de datos a un usuario no fiable).</p>
 
 <p>Los ataques XSS explotan la confianza depositada a un usuario de un sitio web, mientras que los ataques CSRF abusan de la confianza que un sitio web ofrece para sus usuarios.</p>
 
@@ -284,9 +284,9 @@ if __name__ == "__main__":
 
 <h3 id="Inyección_SQL">Inyección SQL</h3>
 
-<p>La inyección de SQL es un tipo de ataque que intenta realizar acciones en una base de datos utilizada por el sitio web de destino. Esto normalmente implica el envío de una petición SQL con la esperanza de que el servidor la ejecutará (por lo general cuando el servidor de aplicaciones intenta almacenar los datos enviados por un usuario). Esto es en realidad <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">uno de los principales vectores de ataque contra los sitios web </a> .</p>
+<p>La inyección de SQL es un tipo de ataque que intenta realizar acciones en una base de datos utilizada por el sitio web de destino. Esto normalmente implica el envío de una petición SQL con la esperanza de que el servidor la ejecutará (por lo general cuando el servidor de aplicaciones intenta almacenar los datos enviados por un usuario). Esto es en realidad <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">uno de los principales vectores de ataque contra los sitios web </a> .</p>
 
-<p>Las consecuencias pueden ser terribles, que van desde la pérdida de datos o hasta que los ataques  tomen el control de la infraestructura de todo el sitio web mediante el uso de una escalada de privilegios. Esta es una amenaza muy seria y nunca debe almacenar los datos enviados por un usuario sin realizar alguna sanitización (por ejemplo, mediante el uso <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code>de una infraestructura de PHP / MySQL).</p>
+<p>Las consecuencias pueden ser terribles, que van desde la pérdida de datos o hasta que los ataques  tomen el control de la infraestructura de todo el sitio web mediante el uso de una escalada de privilegios. Esta es una amenaza muy seria y nunca debe almacenar los datos enviados por un usuario sin realizar alguna sanitización (por ejemplo, mediante el uso <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code>de una infraestructura de PHP / MySQL).</p>
 
 <h3 id="Inyección_de_cabecera_HTTP_y_la_inyección_de_correo_electrónico">Inyección de cabecera HTTP y la inyección de correo electrónico</h3>
 
@@ -306,7 +306,7 @@ if __name__ == "__main__":
  <li>Sandbox subido archivos (almacenarlos en un servidor diferente y permitir el acceso al archivo sólo a través de un subdominio diferente o incluso mejor a través de un nombre de dominio totalmente diferente).</li>
 </ul>
 
-<p>Debería evitar muchos o  la mayoría de estos problemas, si sigue estas tres reglas, pero siempre es una buena idea  obtener una revisión de seguridad realizada por una tercera parte competente. No asuma que usted ha visto todos los posibles problemas.</p>
+<p>Debería evitar muchos o  la mayoría de estos problemas, si sigue estas tres reglas, pero siempre es una buena idea  obtener una revisión de seguridad realizada por una tercera parte competente. No asuma que usted ha visto todos los posibles problemas.</p>
 
 <div class="note">
 <p><strong>Nota</strong> : La <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">seguridad del sitio web</a> el artículo de nuestro <a href="/en-US/docs/Learn/Server-side">lado del servidor</a> tema de aprendizaje analiza las amenazas anteriores y las posibles soluciones con más detalle.</p>
@@ -314,7 +314,7 @@ if __name__ == "__main__":
 
 <h2 id="Conclusión">Conclusión</h2>
 
-<p>Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible <a href="/en-US/docs/HTML/Forms/Data_form_validation" title="/ es-ES / docs / HTML / Formularios / Data_form_validation">realizar la validación de los datos del lado del cliente</a> , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que  sucede en el lado del cliente.</p>
+<p>Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible <a href="/en-US/docs/HTML/Forms/Data_form_validation" title="/ es-ES / docs / HTML / Formularios / Data_form_validation">realizar la validación de los datos del lado del cliente</a> , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que  sucede en el lado del cliente.</p>
 
 <h2 id="Ver_también">Ver también</h2>
 

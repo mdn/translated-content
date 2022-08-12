@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
 {{jsSidebar("Operators")}}
 
-減算演算子 (`-`) は 2 つのオペランドの間で減算し、それらの差を生成します。
+減算演算子 (`-`) は 2 つのオペランドの間で減算し、それらの差を生成します。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 

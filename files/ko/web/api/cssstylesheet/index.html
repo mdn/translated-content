@@ -25,8 +25,8 @@ translation_of: Web/API/CSSStyleSheet
  <dt id="cssRules">{{domxref("CSSStyleSheet.cssRules")}}</dt>
  <dd>Returns a live {{domxref("CSSRuleList")}}, listing the {{domxref("CSSRule")}} objects in the style sheet.<br>
  This is normally used to access individual rules like this:
- <pre><code>   styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code></pre>
- To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s <code>deleteRule()</code> and <code>insertRule()</code> methods, described below.</dd>
+ <pre><code>   styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code></pre>
+ To add or remove items in <code>cssRules</code>, use the <code>CSSStyleSheet</code>'s <code>deleteRule()</code> and <code>insertRule()</code> methods, described below.</dd>
  <dt id="ownerRule">{{domxref("CSSStyleSheet.ownerRule")}}</dt>
  <dd>If this style sheet is imported into the document using an {{cssxref("@import")}} rule, the <code>ownerRule</code> property will return that {{domxref("CSSImportRule")}}, otherwise it returns <code>null</code>.</dd>
 </dl>
@@ -48,7 +48,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>A stylesheet is associated with at most one {{domxref("Document")}}, which it applies to (unless {{domxref("StyleSheet.disabled", "disabled", "", 1)}}). A list of <code>CSSStyleSheet</code> objects for a given document can be obtained using the {{domxref("document.styleSheets")}} property. A specific style sheet can also be accessed from its <em>owner</em> object (<code>Node</code> or <code>CSSImportRule</code>), if any.</p>
 
-<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's <code>styleSheets</code> list automatically by the browser, when a style sheet is loaded for a document. As the {{domxref("document.styleSheets")}} list cannot be modified directly, there's no useful way to create a new <code>CSSStyleSheet</code> object manually (although <a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> is coming to the web platform soon and is already supported in Blink). To create a new stylesheet, insert a {{HTMLElement("style")}} or {{HTMLElement("link")}} element into the document.</p>
+<p>A <code>CSSStyleSheet</code> object is created and inserted into the document's <code>styleSheets</code> list automatically by the browser, when a style sheet is loaded for a document. As the {{domxref("document.styleSheets")}} list cannot be modified directly, there's no useful way to create a new <code>CSSStyleSheet</code> object manually (although <a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a> is coming to the web platform soon and is already supported in Blink). To create a new stylesheet, insert a {{HTMLElement("style")}} or {{HTMLElement("link")}} element into the document.</p>
 
 <p>A (possibly incomplete) list of ways a style sheet can be associated with a document follows:</p>
 
@@ -74,7 +74,7 @@ translation_of: Web/API/CSSStyleSheet
    <td>{{domxref("LinkStyle.sheet", ".sheet")}}</td>
   </tr>
   <tr>
-   <td>CSS {{cssxref("@import")}} rule in other style sheets applied to the document</td>
+   <td>CSS {{cssxref("@import")}} rule in other style sheets applied to the document</td>
    <td>Yes</td>
    <td>{{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}</td>
    <td>{{domxref("CSSImportRule")}}</td>
@@ -106,29 +106,9 @@ translation_of: Web/API/CSSStyleSheet
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSSOM", "#cssstylesheet", 'CSSStyleSheet')}}</td>
-   <td>{{Spec2("CSSOM")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Style", "css.html#CSS-CSSStyleSheet", "CSSStyleSheet")}}</td>
-   <td>{{Spec2("DOM2 Style")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
 
 <p>{{Compat("api.CSSStyleSheet")}}</p>
 

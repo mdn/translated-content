@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 
 <h2 id="O_que_aconteceu_de_errado">O que aconteceu de errado?</h2>
 
-<p>A declaração {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} do JavaScript 1.6 foi descontinuada e será removida num futuro próximo.</p>
+<p>A declaração {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} do JavaScript 1.6 foi descontinuada e será removida num futuro próximo.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -38,9 +38,9 @@ for each (var x in object) {
 }
 </pre>
 
-<h4 id="Sintaxe_padrão_alternativa">Sintaxe padrão alternativa</h4>
+<h4 id="Sintaxe_padrão_alternativa">Sintaxe padrão alternativa</h4>
 
-<p>Agora você pode utilizar o loop padrão {{jsxref("Statements/for...in", "for...in")}}, para iterar sobre chaves específicas do objeto e receber cada valor para dentro do loop:</p>
+<p>Agora você pode utilizar o loop padrão {{jsxref("Statements/for...in", "for...in")}}, para iterar sobre chaves específicas do objeto e receber cada valor para dentro do loop:</p>
 
 <pre class="brush: js example-good">var object = { a: 10, b: 20 };
 
@@ -51,7 +51,7 @@ for (var key in object) {
 }
 </pre>
 
-<p>Ou, utilizando {{jsxref("Statements/for...of", "for...of")}} (ES2015) e {{jsxref("Object.values")}} (ES2017), você pode ter um array dos valores específicos do objeto e iterar sobre o array da seguinte maneira:</p>
+<p>Ou, utilizando {{jsxref("Statements/for...of", "for...of")}} (ES2015) e {{jsxref("Object.values")}} (ES2017), você pode ter um array dos valores específicos do objeto e iterar sobre o array da seguinte maneira:</p>
 
 <pre class="brush: js example-good">var object = { a: 10, b: 20 };
 
@@ -76,9 +76,9 @@ for each (var x in array) {
 }
 </pre>
 
-<h4 id="Sintaxe_padrão_alternativa_2">Sintaxe padrão alternativa</h4>
+<h4 id="Sintaxe_padrão_alternativa_2">Sintaxe padrão alternativa</h4>
 
-<p>Isso agora é possível também com loops {{jsxref("Statements/for...of", "for...of")}} (ES2015).</p>
+<p>Isso agora é possível também com loops {{jsxref("Statements/for...of", "for...of")}} (ES2015).</p>
 
 <pre class="brush: js example-good">var array = [10, 20, 30];
 
@@ -91,7 +91,7 @@ for (var x of array) {
 
 <h3 id="Iterando_sobre_um_array_null-able">Iterando sobre um array null-able</h3>
 
-<p>{{jsxref("Statements/for_each...in", "for each...in")}} não faz nada se o valor especificado for <code>null</code> ou <code>undefined</code>, mas {{jsxref("Statements/for...of", "for...of")}} vai disparar uma exceção nestes casos.</p>
+<p>{{jsxref("Statements/for_each...in", "for each...in")}} não faz nada se o valor especificado for <code>null</code> ou <code>undefined</code>, mas {{jsxref("Statements/for...of", "for...of")}} vai disparar uma exceção nestes casos.</p>
 
 <h4 id="Sintaxe_descontinuada_3">Sintaxe descontinuada</h4>
 
@@ -106,9 +106,9 @@ func(null);            // prints nothing
 func(undefined);       // prints nothing
 </pre>
 
-<h4 id="Sintaxe_padrão_alternativa_3">Sintaxe padrão alternativa</h4>
+<h4 id="Sintaxe_padrão_alternativa_3">Sintaxe padrão alternativa</h4>
 
-<p>Para reescrever as declarações {{jsxref("Statements/for_each...in", "for each...in")}} de modo que os valores possam ser <code>null</code> ou <code>undefined</code> com {{jsxref("Statements/for...of", "for...of")}} também, você precisa utilizar algo como {{jsxref("Statements/for...of", "for...of")}}.</p>
+<p>Para reescrever as declarações {{jsxref("Statements/for_each...in", "for each...in")}} de modo que os valores possam ser <code>null</code> ou <code>undefined</code> com {{jsxref("Statements/for...of", "for...of")}} também, você precisa utilizar algo como {{jsxref("Statements/for...of", "for...of")}}.</p>
 
 <pre class="brush: js example-good">function func(array) {
   if (array) {
@@ -127,7 +127,7 @@ func(undefined);       // prints nothing
 
 <h4 id="Sintaxe_descontinuada_4">Sintaxe descontinuada</h4>
 
-<p>Existe um idioma descontinuado para iterar sobre pares chave-valor específicos de um objeto, utilizando {{jsxref("Statements/for_each...in", "for each...in")}} e o objeto descontinuado {{jsxref("Iterator")}}.</p>
+<p>Existe um idioma descontinuado para iterar sobre pares chave-valor específicos de um objeto, utilizando {{jsxref("Statements/for_each...in", "for each...in")}} e o objeto descontinuado {{jsxref("Iterator")}}.</p>
 
 <pre class="brush: js example-bad">var object = { a: 10, b: 20 };
 
@@ -150,7 +150,7 @@ for (var key in object) {
 }
 </pre>
 
-<p>Ou utilizando {{jsxref("Statements/for...of", "for...of")}} (ES2015) e {{jsxref("Object.entries")}} (ES2017), você pode obter um array dos valores específicos do objeto e iterar sobre este array da seguinte maneira:</p>
+<p>Ou utilizando {{jsxref("Statements/for...of", "for...of")}} (ES2015) e {{jsxref("Object.entries")}} (ES2017), você pode obter um array dos valores específicos do objeto e iterar sobre este array da seguinte maneira:</p>
 
 <pre class="brush: js example-good">var object = { a: 10, b: 20 };
 

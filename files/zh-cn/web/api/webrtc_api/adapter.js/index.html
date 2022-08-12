@@ -5,10 +5,10 @@ translation_of: Web/API/WebRTC_API/adapter.js
 ---
 <p>{{WebRTCSidebar}}</p>
 
-<p>虽然 WebRTC <a href="http://www.w3.org/TR/webrtc/">规范</a>已经相对健全稳固了，但是并不是所有的浏览器都实现了它所有的功能。除此之外。有些浏览器需要在一些或者所有的 WebRTC API 上添加前缀才能正常使用。尽管你可以自己写代码解决这种问题，但是还有一个比较简单的方法。WebRTC 组织在 github 上提供了一个 <a href="https://github.com/webrtc/adapter/">WebRTC 适配器</a>（WebRTC adapter）来解决在不同浏览器上实现 WebRTC 的兼容性问题。这个适配器是一个 JavaScript 垫片，它可以让你根据 WebRTC 规范描述的那样去写代码，在所有支持 WebRTC 的浏览器中不用去写前缀或者其他兼容性解决方法。</p>
+<p>虽然 WebRTC <a href="http://www.w3.org/TR/webrtc/">规范</a>已经相对健全稳固了，但是并不是所有的浏览器都实现了它所有的功能。除此之外。有些浏览器需要在一些或者所有的 WebRTC API 上添加前缀才能正常使用。尽管你可以自己写代码解决这种问题，但是还有一个比较简单的方法。WebRTC 组织在 github 上提供了一个 <a href="https://github.com/webrtc/adapter/">WebRTC 适配器</a>（WebRTC adapter）来解决在不同浏览器上实现 WebRTC 的兼容性问题。这个适配器是一个 JavaScript 垫片，它可以让你根据 WebRTC 规范描述的那样去写代码，在所有支持 WebRTC 的浏览器中不用去写前缀或者其他兼容性解决方法。</p>
 
 <div class="note">
-<p>注意: 由于 WebRTC 和支持的浏览器中的 API 的功能和命名在不断变动，推荐使用这个适配器。</p>
+<p>注意: 由于 WebRTC 和支持的浏览器中的 API 的功能和命名在不断变动，推荐使用这个适配器。</p>
 </div>
 
 <p>这个 adapter（适配器）是基于 BSD 开源协议的。</p>
@@ -23,7 +23,7 @@ translation_of: Web/API/WebRTC_API/adapter.js
 
 <h2 id="使用adapter.js">使用 adapter.js</h2>
 
-<p>要使用 adapter.js，你需要在使用 WebRTC APIs 的每个页面都引入 adapter.js ：</p>
+<p>要使用 adapter.js，你需要在使用 WebRTC APIs 的每个页面都引入 adapter.js ：</p>
 
 <ol>
  <li>从 GitHub 上下载一个最新<a href="https://github.com/webrtc/adapter/tree/master/release">adapter.js</a>的副本。</li>
