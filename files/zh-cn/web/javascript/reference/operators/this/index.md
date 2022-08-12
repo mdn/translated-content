@@ -46,7 +46,7 @@ console.log(window.b)  // "MDN"
 console.log(b)         // "MDN"
 ```
 
-> **备注：**你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。
+> **备注：** 你可以使用 {{jsxref("globalThis")}} 获取全局对象，无论你的代码是否在当前上下文运行。
 
 ### 函数上下文
 
@@ -76,7 +76,7 @@ function f2(){
 f2() === undefined; // true
 ```
 
-> **备注：**在第二个例子中，`this` 应是 [undefined](/zh-CN/docs/Glossary/undefined)，因为 `f2` 是被直接调用的，而不是作为对象的属性或方法调用的（如 `window.f2()`）。有一些浏览器最初在支持[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)时没有正确实现这个功能，于是它们错误地返回了`window`对象。
+> **备注：** 在第二个例子中，`this` 应是 [undefined](/zh-CN/docs/Glossary/undefined)，因为 `f2` 是被直接调用的，而不是作为对象的属性或方法调用的（如 `window.f2()`）。有一些浏览器最初在支持[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)时没有正确实现这个功能，于是它们错误地返回了`window`对象。
 
 如果要想把 `this` 的值从一个环境传到另一个，就要用 [`call`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或者[`apply`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法，如下方的示例所示。
 
@@ -100,7 +100,7 @@ class Example {
 new Example(); // ['constructor', 'first', 'second']
 ```
 
-> **备注：**静态方法不是 this 的属性，它们只是类自身的属性。
+> **备注：** 静态方法不是 this 的属性，它们只是类自身的属性。
 
 ### 派生类
 
@@ -110,7 +110,7 @@ new Example(); // ['constructor', 'first', 'second']
 this = new Base();
 ```
 
-> **警告：**在调用 `super()` 之前引用 `this` 会抛出错误。
+> **警告：** 在调用 `super()` 之前引用 `this` 会抛出错误。
 
 派生类不能在调用 `super()` 之前返回，除非其构造函数返回的是一个对象，或者根本没有构造函数。
 
@@ -210,7 +210,7 @@ var foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
 
-> **备注：**如果将`this`传递给`call`、`bind`、或者`apply`来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（`thisArg`）应该设置为`null`。
+> **备注：** 如果将`this`传递给`call`、`bind`、或者`apply`来调用箭头函数，它将被忽略。不过你仍然可以为调用添加参数，不过第一个参数（`thisArg`）应该设置为`null`。
 
 ```js
 // 接着上面的代码
@@ -347,7 +347,7 @@ console.log(o.average, o.sum); // logs 2, 6
 
 当一个函数用作构造函数时（使用[new](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关键字），它的`this`被绑定到正在构造的新对象。
 
-> **备注：**虽然构造函数返回的默认值是 `this` 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 `this` 对象）。
+> **备注：** 虽然构造函数返回的默认值是 `this` 所指的那个对象，但它仍可以手动返回其他的对象（如果返回值不是一个对象，则返回 `this` 对象）。
 
 ```js
 /*

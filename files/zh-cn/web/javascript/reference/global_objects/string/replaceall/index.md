@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **备注：**当使用一个 \`regex\`时，您必须设置全局（“ g”）标志，
+> **备注：** 当使用一个 \`regex\`时，您必须设置全局（“ g”）标志，
 > 否则，它将引发 `TypeError`：“必须使用全局 RegExp 调用 replaceAll”。
 
 ### 参数

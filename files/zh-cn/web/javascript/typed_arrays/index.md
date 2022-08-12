@@ -129,7 +129,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 现在你就可以通过`amountDueView[0]`的方式访问数量。
 
-> **备注：**C 语言结构体的[数据对齐](http://en.wikipedia.org/wiki/Data_structure_alignment)与平台相关。因此需要防范和考虑不同平台的字节填充对齐。
+> **备注：** C 语言结构体的[数据对齐](http://en.wikipedia.org/wiki/Data_structure_alignment)与平台相关。因此需要防范和考虑不同平台的字节填充对齐。
 
 ### 转换为普通数组
 

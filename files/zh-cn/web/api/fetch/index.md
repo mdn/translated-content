@@ -21,7 +21,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 `fetch()` 方法由 [Content Security Policy](/en-US/docs/Security/CSP/CSP_policy_directives) 的 `connect-src`指令控制，而不是它请求的资源。
 
-> **备注：**{{domxref("fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。
+> **备注：** {{domxref("fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。
 
 ## 语法
 

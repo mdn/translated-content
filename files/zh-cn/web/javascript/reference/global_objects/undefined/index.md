@@ -30,7 +30,7 @@ test();                       // 返回"undefined"
 
 一个函数如果没有使用 return 语句指定{{jsxref("Statements/return", "返回")}}值，就会返回一个 undefined 值。
 
-> **警告：**但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用 (因为 undefined 不是一个{{jsxref("Reserved_Words", "保留字")}}))，这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
+> **警告：** 但是它有可能在非全局作用域中被当作{{Glossary("Identifier", "标识符")}}（变量名）来使用 (因为 undefined 不是一个{{jsxref("Reserved_Words", "保留字")}}))，这样做是一个非常坏的主意，因为这样会使你的代码难以去维护和排错。
 >
 > ```js
 > // 不要这样做！
@@ -63,7 +63,7 @@ if (x === undefined) {
 }
 ```
 
-> **备注：**这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators/Comparison_Operators", "比较操作符")}}查看详情。
+> **备注：** 这里是必须使用严格相等操作符（===）而不是标准相等操作符（==），因为 x == undefined 会检查 x 是不是 null，但是严格相等不会检查（有点饶人，其实 === 会严格判断双方的类型、值等是否相等）。null 不等同于 undefined。移步{{jsxref("Operators/Comparison_Operators", "比较操作符")}}查看详情。
 
 ### Typeof 操作符和 undefined
 

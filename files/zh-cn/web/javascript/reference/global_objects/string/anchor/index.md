@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 
 ## 概述
 
-> **警告：**该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
+> **警告：** 该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
 
 **`anchor()`** 方法创建一个 {{HTMLElement("a")}} HTML 锚元素，被用作超文本靶标（hypertext target）。
 

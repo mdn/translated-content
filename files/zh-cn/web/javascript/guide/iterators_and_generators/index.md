@@ -68,7 +68,7 @@ while (!result.done) {
 console.log("Iterated over sequence of size: ", result.value); // 5
 ```
 
-> **备注：**反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 [Iterables](#Iterables).
+> **备注：** 反射性地知道特定对象是否是迭代器是不可能的。 如果您需要这样做，请使用 [Iterables](#Iterables).
 
 ## 生成器函数
 

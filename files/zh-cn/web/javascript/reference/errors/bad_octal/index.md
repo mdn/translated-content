@@ -27,7 +27,7 @@ Warning: SyntaxError: 09 is not a legal ECMA-262 octal constant.
 
 请注意，不推荐使用八进制字面值和八进制转义序列，并会产生另外的弃用警告。 在 ECMAScript 6 和更高版本里，语法使用前导零后跟小写或大写拉丁字母“O”（0o 或 0O）。更多信息请查看 [lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)。
 
-> **备注：**现在仅 **firefox** 会产生此错误。
+> **备注：** 现在仅 **firefox** 会产生此错误。
 
 ## 示例
 

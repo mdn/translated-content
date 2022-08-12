@@ -32,7 +32,7 @@ translation_of: Web/Security/Same-origin_policy
 
 > **备注：** 例如，`about:blank` 通常作为父脚本写入内容的新的空白弹出窗口的 URL（例如，通过 [Window.open()](/zh-CN/docs/Web/API/Window/open)）。如果此弹出窗口也包含 JavaScript，则该脚本将从创建它的脚本那里继承对应的源。
 
-> **备注：** 注意：在{{Gecko("6.0")}}之前，如果用户在位置栏中输入 `data` URLs，`data` URLs 将继承当前浏览器窗口中网页的安全上下文。
+> **备注：** 在{{Gecko("6.0")}}之前，如果用户在位置栏中输入 `data` URLs，`data` URLs 将继承当前浏览器窗口中网页的安全上下文。
 
 > **警告：** `data`：URLs 获得一个新的，空的安全上下文。
 
@@ -59,7 +59,7 @@ document.domain = "company.com";
 
 端口号是由浏览器另行检查的。任何对 document.domain 的赋值操作，包括 `document.domain = document.domain` 都会导致端口号被重写为 `null` 。因此 `company.com:8080` **不能**仅通过设置 `document.domain = "company.com"` 来与`company.com` 通信。必须在他们双方中都进行赋值，以确保端口号都为 `null` 。
 
-> **备注：** 注意：使用 `document.domain` 来允许子域安全访问其父域时，您需要在父域和子域中设置 document.domain 为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
+> **备注：** 使用 `document.domain` 来允许子域安全访问其父域时，您需要在父域和子域中设置 document.domain 为相同的值。这是必要的，即使这样做只是将父域设置回其原始值。不这样做可能会导致权限错误。
 
 ## 跨源网络访问
 

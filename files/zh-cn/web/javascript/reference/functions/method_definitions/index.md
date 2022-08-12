@@ -65,7 +65,7 @@ var obj = {
 };
 ```
 
-> **备注：**简写语法使用命名函数而不是匿名函数（如…`foo: function() {}`…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。
+> **备注：** 简写语法使用命名函数而不是匿名函数（如…`foo: function() {}`…）。命名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。
 
 ### 生成器方法
 

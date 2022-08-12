@@ -58,7 +58,6 @@ Tout le contenu qui est disponible pour les personnes qui n'utilisent pas d'outi
 
 > **Note :** Les éléments qui sont des points de repère dans la navigation du document ([`<main>`](/fr/docs/Web/HTML/Element/main), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<nav>`](/fr/docs/Web/HTML/Element/nav), etc.) ont des rôles ARIA implicites natifs, il n'est pas nécessaire de les dupliquer.
 
-
 ## Prise en charge
 
 À l'instar des autres technologies web, la prise en charge d'ARIA est plus ou moins hétérogène parmi les différents navigateurs. La prise en charge d'ARIA repose à la fois sur le navigateur, sur le système d'exploitation sous-jacent et sur la technologie d'assistance utilisée et aussi les versions de ces différents éléments. Certaines versions antérieures de logiciels pourront ne pas prendre en charge (ou que partiellement) certains rôles ARIA.

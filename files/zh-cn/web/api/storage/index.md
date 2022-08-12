@@ -68,7 +68,7 @@ function setStyles() {
 }
 ```
 
-> **备注：**要运行完整的例子，可查看 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
+> **备注：** 要运行完整的例子，可查看 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 

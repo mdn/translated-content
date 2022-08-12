@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 **`call()`** 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。
 
-> **备注：**该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 `call()` 方法接受的是**一个参数列表**，而 `apply()` 方法接受的是**一个包含多个参数的数组**。
+> **备注：** 该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 `call()` 方法接受的是**一个参数列表**，而 `apply()` 方法接受的是**一个包含多个参数的数组**。
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
@@ -116,7 +116,7 @@ function display() {
 display.call();  // sData value is Wisen
 ```
 
-> **备注：**在严格模式下，`this` 的值将会是 `undefined`。见下文。
+> **备注：** 在严格模式下，`this` 的值将会是 `undefined`。见下文。
 
 ```js
 'use strict';

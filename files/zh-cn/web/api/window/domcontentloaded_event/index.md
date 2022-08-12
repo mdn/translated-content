@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
 如果将 link 置于 script 之后，就会立即打印。
 
-> **备注：**同步 JavaScript 会暂停 DOM 的解析。
+> **备注：** 同步 JavaScript 会暂停 DOM 的解析。
 
-> **备注：**还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪
+> **备注：** 还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪
 
 ## 加速中
 

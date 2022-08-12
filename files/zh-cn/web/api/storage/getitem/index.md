@@ -42,7 +42,7 @@ function setStyles() {
 }
 ```
 
-> **备注：**一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
+> **备注：** 一个实际的例子 [Web Storage Demo](https://github.com/mdn/web-storage-demo)。
 
 ## 规范
 

@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 
 类似于 {{jsxref("Operators/await", "await")}} 运算符一样，该语句只能在一个{{jsxref("Statements/async_function", "async function", "异步函数", 1)}} 内部使用。
 
-> **备注：**`for await...of` 不适用于不是异步可迭代的异步迭代器。
+> **备注：** `for await...of` 不适用于不是异步可迭代的异步迭代器。
 
 ## 语法
 
