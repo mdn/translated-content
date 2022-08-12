@@ -1,5 +1,5 @@
 ---
-title: 2D breakout game using Phaser
+title: Phaser を使用した 2D ブロック崩しゲーム
 slug: Games/Tutorials/2D_breakout_game_Phaser
 tags:
   - 2D
@@ -7,58 +7,50 @@ tags:
   - Canvas
   - Games
   - JavaScript
-  - NeedsTranslation
   - Phaser
-  - TopicStub
   - Tutorial
-translation_of: Games/Tutorials/2D_breakout_game_Phaser
-original_slug: Games/Workflows/2D_breakout_game_Phaser
 ---
-<div>{{GamesSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+{{GamesSidebar}}
 
-<p>{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}</p>
+{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
-<p class="summary">In this step-by-step tutorial we create a simple mobile <strong>MDN Breakout</strong> game written in JavaScript, using the <a href="http://phaser.io/">Phaser</a> framework.</p>
+このステップバイステップのチュートリアルでは、シンプルなモバイル **MDN ブロック崩し**ゲーム を、 JavaScript で書き、 [Phaser](https://phaser.io/) フレームワークを使用して作成します。
 
-<p>Every step has editable, live samples available to play with so you can see what the intermediate stages should look like. You will learn the basics of using the Phaser framework to implement fundamental game mechanics like rendering and moving images, collision detection, control machanisms, framework-specific helper functions, animations and tweens, and winning and losing states.</p>
+各ステップには、編集可能なライブサンプルがあるので、中間ステージがどのように見えるかを確認しながら遊ぶことができます。 Phaser フレームワークを使用して、画像のレンダリングと移動、衝突の検出、コントロールメカニズム、フレームワーク固有のヘルパー関数、アニメーションと調整、勝利と敗北状態などの基本的なゲームメカニズムを使用するための基本を学びます。
 
-<p>To get the most out of this series of articles you should already have basic to intermediate <a href="/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript</a> knowledge. After working through this tutorial you should be able to build your own simple Web games with Phaser.</p>
+この連載記事を最大限に活用するためには、すでに基礎から中級の [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) の知識を持っている必要があります。このチュートリアルを動作させた後は、 Phaser を使って自身の簡単なウェブゲームを作ることができるはずです。
 
-<p><img alt="Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives." src="https://mdn.mozillademos.org/files/11323/mdn-breakout-phaser.png" style="display: block; height: 320px; margin: 0px auto; width: 480px;"></p>
+![Phaser で作成したゲーム MDN ブロック崩しのゲーム画面。パドルを使用してボールを跳ね返し、ポイントとライフを維持しながら、レンガのフィールドを破壊することができます。](mdn-breakout-phaser.png)
 
-<h2 id="Lesson_details">Lesson details</h2>
+## 学習内容
 
-<p>All the lessons — and the different versions of the <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html">MDN Breakout game</a> we are building together — are <a href="https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/">available on GitHub</a>:</p>
+すべてのレッスン、そして私たちが一緒に作っている [MDN ブロック崩しゲーム](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html)のさまざまなバージョンは、 [GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/) で利用可能です。
 
-<ol>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework">Initialize the framework</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling">Scaling</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen">Load the assets and print them on screen</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball">Move the ball</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Physics">Physics</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls">Bounce off the walls</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls">Player paddle and controls</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Game_over">Game over</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field">Build the brick field</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Collision_detection">Collision detection</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score">The score</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Win_the_game">Win the game</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Extra_lives">Extra lives</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens">Animations and tweens</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons">Buttons</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay">Randomizing gameplay</a></li>
-</ol>
+1. [フレームワークの初期化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
+2. [拡大縮小](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
+3. [資産を読み込んで画面の内側へ表示する](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
+4. [ボールを移動させる](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
+5. [物理演算](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
+6. [壁で跳ね返す](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
+7. [プレイヤーパドルと操作](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
+8. [ゲームオーバー](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
+9. [レンガ場を作る](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+10. [衝突判定](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
+11. [得点](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+12. [ゲームの勝利](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
+13. [ライフの追加](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
+14. [アニメーションと調整](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+15. [ボタン](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
+16. [ゲームプレイのランダム化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
-<p>As a note on learning paths — starting with pure JavaScript is the best way to get a solid knowledge of web game development. If you are not already familiar with pure JavaScript game development, we'd suggest that you first work through this series' counterpart, <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript">2D breakout game using pure JavaScript</a>.</p>
+学習経路に関する注意点として、純粋な JavaScript から始めることが、ウェブゲーム開発の確かな知識を得るための最良の方法です。もしあなたが純粋な JavaScript のゲーム開発にまだ慣れていないなら、先にこのシリーズの対になるものである[純粋な JavaScript を使用した 2D ブレイクアウトゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)をやっておくことをお勧めします。
 
-<p>After that, you can pick any framework you like and use it for your projects; we've chosen Phaser as it is a good solid framework, with a good support and community available, and a good set of plugins. Frameworks speed up development time and help take care of the boring parts, allowing you to concentrate on the fun stuff. However, frameworks are not always perfect, so if something unexpected happens or you want to write some functionality that the framework doesn't provide, you'll need some pure JavaScript knowledge.</p>
+その後、好きなフレームワークを選んで、プロジェクトに使用することができます。私たちは、良いサポートとコミュニティが利用でき、プラグインの良いセットがある、堅実なフレームワークである Phaser を選びました。フレームワークは、開発時間を短縮し、退屈な部分を引き受けてくれるので、あなたは楽しいことに集中することができます。しかし、フレームワークは常に完璧というわけではありません。予期せぬことが起こったり、フレームワークが提供しない機能を書きたい場合、純粋な JavaScript の知識が必要になります。
 
-<div class="note">
-<p><strong>Note</strong>: This series of articles can be used as material for hands-on game development workshops. You can also make use of the <a href="https://github.com/end3r/Gamedev-Phaser-Content-Kit">Gamedev Phaser Content Kit</a> based on this tutorial if you want to give a talk about game development with Phaser.</p>
-</div>
+> **Note:** この連載記事は、ゲーム開発の体験型ワークショップの素材として使用することができます。また、Phaser を使ったゲーム開発についての講演を行う場合、このチュートリアルを元にした [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) を使用することができます。
 
-<h2 id="Next_steps">Next steps</h2>
+## 次のステップ
 
-<p>Ok, let's get started! Head to the first part of the series — <a href="/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework">Initialize the framework</a>.</p>
+では、始めましょう。シリーズの最初の部分 - [フレームワークの初期化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)に向かいましょう。
 
-<p>{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}</p>
+{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
