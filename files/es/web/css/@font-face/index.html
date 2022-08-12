@@ -14,21 +14,21 @@ translation_of: Web/CSS/@font-face
 <pre>@font-face {
   font-family: &lt;un-nombre-de-fuente-remota&gt;;
   src: &lt;origen&gt; [,&lt;origen&gt;]*;
-  [font-weight: &lt;peso&gt;];
-  [font-style: &lt;estilo&gt;];
+  [font-weight: &lt;peso&gt;];
+  [font-style: &lt;estilo&gt;];
 }
 </pre>
 
 <h3 id="Valores">Valores</h3>
 
 <dl>
- <dt>&lt;un-nombre-de-fuente-remota&gt; </dt>
+ <dt>&lt;un-nombre-de-fuente-remota&gt; </dt>
  <dd>Especifica el nombre de una fuente que será utilizada como valor de font face por las propiedades de fuente.</dd>
- <dt>&lt;origen&gt; </dt>
+ <dt>&lt;origen&gt; </dt>
  <dd>Dirección URL para la ubicación remota del archivo de fuente, o el nombre de una fuente en la computadora del usuario en la forma <code>local("Nombre de Fuente")</code>.</dd>
- <dt>&lt;peso&gt; </dt>
+ <dt>&lt;peso&gt; </dt>
  <dd>Un valor de <a class="internal" href="/en/CSS/font-weight" title="en/CSS/font-weight">peso/grosor de fuente</a>.</dd>
- <dt>&lt;estilo&gt; </dt>
+ <dt>&lt;estilo&gt; </dt>
  <dd>Un valor de <a class="internal" href="/en/CSS/font-style" title="en/CSS/font-style">estilo de fuente</a>.</dd>
 </dl>
 
@@ -68,18 +68,18 @@ translation_of: Web/CSS/@font-face
 <p>En este ejemplo, es utilizada la copia local de "Helvetica Neue Bold" del usuario; si el usuario no tiene esa fuente instalada (se prueban dos nombre distintos), luego la fuente descargable de nombre "MgOpenModernaBold.ttf" es utilizada en cambio:</p>
 
 <pre class="deki-transform">@font-face {
-  font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
-  font-weight: bold;
+  font-family: MyHelvetica;
+  src: local("Helvetica Neue Bold"),
+  local("HelveticaNeue-Bold"),
+  url(MgOpenModernaBold.ttf);
+  font-weight: bold;
 }
 </pre>
 
 <h2 id="Notas">Notas</h2>
 
 <ul>
- <li><span id="result_box" lang="es"><span class="hps" title="Haz clic para obtener otras posibles traducciones">En</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">Gecko</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">las fuentes</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">web están</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">sujetas</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">a la restricción del</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="atn hps" title="Haz clic para obtener otras posibles traducciones">(los </span><span title="Haz clic para obtener otras posibles traducciones">archivos de</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">fuentes</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">deben estar en</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">el</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">que</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">la página</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">que los utiliza</span><span title="Haz clic para obtener otras posibles traducciones">)</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">a menos que</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">los </span></span><a class="internal" href="/En/HTTP_access_control" title="En/HTTP access control">controles de acceso HTTP</a> <span id="result_box" lang="es"><span class="hps" title="Haz clic para obtener otras posibles traducciones">sean utilizados para</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">relajar</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">esta restricción.</span></span></li>
+ <li><span id="result_box" lang="es"><span class="hps" title="Haz clic para obtener otras posibles traducciones">En</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">Gecko</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">las fuentes</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">web están</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">sujetas</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">a la restricción del</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="atn hps" title="Haz clic para obtener otras posibles traducciones">(los </span><span title="Haz clic para obtener otras posibles traducciones">archivos de</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">fuentes</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">deben estar en</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">el</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">mismo dominio</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">que</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">la página</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">que los utiliza</span><span title="Haz clic para obtener otras posibles traducciones">)</span><span title="Haz clic para obtener otras posibles traducciones">,</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">a menos que</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">los </span></span><a class="internal" href="/En/HTTP_access_control" title="En/HTTP access control">controles de acceso HTTP</a> <span id="result_box" lang="es"><span class="hps" title="Haz clic para obtener otras posibles traducciones">sean utilizados para</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">relajar</span> <span class="hps" title="Haz clic para obtener otras posibles traducciones">esta restricción.</span></span></li>
  <li>
   <div class="note"><strong>Nota:</strong> Porque no hay tipos MIME definidos para fuentes TrueType, OpenType, y WOFF, el tipo MIME del archivo especificado no es considerado.</div>
  </li>
@@ -157,6 +157,6 @@ translation_of: Web/CSS/@font-face
  <li><a class="external" href="http://www.fontsquirrel.com/fontface/generator">FontSquirrel @font-face generator</a></li>
  <li><a href="/en/WOFF" title="en/About WOFF">About WOFF</a></li>
  <li><a class="external" href="http://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/">Beautiful fonts with @font-face</a></li>
- <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
+ <li><a class="external" href="http://openfontlibrary.org/">Open Font Library</a></li>
  <li><a class="external" href="http://opentype.info/demo/webfontdemo.html">10 Great Free Fonts for @font-face embedding</a></li>
 </ul>

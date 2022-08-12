@@ -22,22 +22,22 @@ original_slug: Web/JavaScript/Reference/Fehler/Property_access_denied
 
 <h2 id="Was_ist_falsch_gelaufen">Was ist falsch gelaufen?</h2>
 
-<p><span class="seoSummary">Es wurde versucht auf ein Objekt zuzugreifen, wofür man nicht ausreichend berechtig ist. In den meisten Fällen handelt es sich um ein {{HTMLElement("iframe")}} Element, das von einer anderen Domäne geladen wurde und die <a href="/de/docs/Web/Security/Same-origin_policy">Same-Origin Policy</a> verletzt.</span></p>
+<p><span class="seoSummary">Es wurde versucht auf ein Objekt zuzugreifen, wofür man nicht ausreichend berechtig ist. In den meisten Fällen handelt es sich um ein {{HTMLElement("iframe")}} Element, das von einer anderen Domäne geladen wurde und die <a href="/de/docs/Web/Security/Same-origin_policy">Same-Origin Policy</a> verletzt.</span></p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
+  &lt;head&gt;
+    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
+    &lt;script&gt;
       onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;</pre>
 
 <h2 id="Siehe_auch">Siehe auch</h2>

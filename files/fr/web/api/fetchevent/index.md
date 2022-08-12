@@ -83,4 +83,4 @@ self.addEventListener('fetch', function(event) {
 ## Voir aussi
 
 - {{jsxref("Promise")}}
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/fr/docs/Web/API/Fetch_API)

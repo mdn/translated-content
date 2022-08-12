@@ -16,7 +16,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 <pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>照常理，先在canvas上需要先畫一顆球。創造一個 <code>ball</code> object，它包含的屬性和<code>draw()</code>的方法，使canvas可以在上面繪圖。</p>
+<p>照常理，先在canvas上需要先畫一顆球。創造一個 <code>ball</code> object，它包含的屬性和<code>draw()</code>的方法，使canvas可以在上面繪圖。</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -84,18 +84,18 @@ ball.draw();
 
 <h2 id="邊界">邊界</h2>
 
-<p>沒有任何邊界碰撞下，球很快就會跑出canvas。這時需要確認球的 <code>x</code> and <code>y</code> 是否超出 canvas 尺寸，若超出則將球的向量顛倒。所以，我們添加了確認條件在<code>draw</code>方法:</p>
+<p>沒有任何邊界碰撞下，球很快就會跑出canvas。這時需要確認球的 <code>x</code> and <code>y</code> 是否超出 canvas 尺寸，若超出則將球的向量顛倒。所以，我們添加了確認條件在<code>draw</code>方法:</p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }</pre>
 
 <h3 id="第一個示範">第一個示範</h3>
 
-<p>讓我們看看，看似很遠的行徑它如何行徑。移動你的滑鼠在canvas，使動畫開始。 </p>
+<p>讓我們看看，看似很遠的行徑它如何行徑。移動你的滑鼠在canvas，使動畫開始。 </p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -286,7 +286,7 @@ ball.draw();</pre>
 
 <h2 id="增加滑鼠控制">增加滑鼠控制</h2>
 
-<p>為了能控制球使它跟著滑鼠移動，在這個範例使用<code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> 效果。當 <code><a href="/en-US/docs/Web/Events/click">click</a></code> 事件觸發了這顆球，它又會開始彈跳。</p>
+<p>為了能控制球使它跟著滑鼠移動，在這個範例使用<code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> 效果。當 <code><a href="/en-US/docs/Web/Events/click">click</a></code> 事件觸發了這顆球，它又會開始彈跳。</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -364,7 +364,7 @@ ball.draw();
 
 <h2 id="突破性(遊戲)">突破性(遊戲)</h2>
 
-<p>這個小章節只有解釋一些創造高級動畫的技巧。這裡還有更多!如何增加槳,磚塊,到這個 到 <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game demo去看，有我們更<a href="/en-US/docs/Games">多遊戲研發</a>的文章! </p>
+<p>這個小章節只有解釋一些創造高級動畫的技巧。這裡還有更多!如何增加槳,磚塊,到這個 到 <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game demo去看，有我們更<a href="/en-US/docs/Games">多遊戲研發</a>的文章! </p>
 
 <h2 id="延伸閱讀">延伸閱讀</h2>
 

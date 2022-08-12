@@ -49,7 +49,7 @@ navigator.clipboard.readText().then(
 
 ## 명세
 
-{{Specifications("api.Clipboard")}}
+{{Specifications}}
 
 ## 브라우저 호환성
 

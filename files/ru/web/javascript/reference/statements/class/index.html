@@ -5,10 +5,10 @@ translation_of: Web/JavaScript/Reference/Statements/class
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong>Class declaration</strong> создаёт новый класс с данным именем на основе прототипного наследования.</p>
+<p><strong>Class declaration</strong> создаёт новый класс с данным именем на основе прототипного наследования.</p>
 
 <div class="noinclude">
-<p>Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это <strong>приведёт к ошибке типа</strong>.</p>
+<p>Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это <strong>приведёт к ошибке типа</strong>.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -20,15 +20,15 @@ translation_of: Web/JavaScript/Reference/Statements/class
 
 <h2 id="Описание">Описание</h2>
 
-<p>Как и class expression, тело class declaration будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}. Свойство конструктора является опциональным.</p>
+<p>Как и class expression, тело class declaration будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}. Свойство конструктора является опциональным.</p>
 
-<p>Class declaration не {{Glossary("Hoisting", "поднимается")}} (в отличие от <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">декларируемых функций</a>).</p>
+<p>Class declaration не {{Glossary("Hoisting", "поднимается")}} (в отличие от <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">декларируемых функций</a>).</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Простой_class_declaration">Простой class declaration</h3>
 
-<p>В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.</p>
+<p>В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -41,20 +41,20 @@ translation_of: Web/JavaScript/Reference/Statements/class
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = 'Square';
   }
 }</pre>
 
 <div class="warning">
 <h3 id="Попытка_объявить_класс_дважды">Попытка объявить класс дважды</h3>
 
-<p>Переопределение класса с помощью class declaration вызовет ошибку типа.</p>
+<p>Переопределение класса с помощью class declaration вызовет ошибку типа.</p>
 
 <pre class="brush: js">class Foo {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 </pre>
 
-<p>Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.</p>
+<p>Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.</p>
 
 <pre class="brush: js">var Foo = class {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared

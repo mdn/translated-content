@@ -5,7 +5,7 @@ translation_of: Web/API/Element/scrollIntoView
 ---
 <div>{{ APIRef("DOM")}}</div>
 
-<p>Метод <code><strong>Element.scrollIntoView()</strong></code> интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван <code>scrollIntoView()</code>, стал виден пользователю.</p>
+<p>Метод <code><strong>Element.scrollIntoView()</strong></code> интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван <code>scrollIntoView()</code>, стал виден пользователю.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -17,23 +17,23 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 <h3 id="Параметры">Параметры</h3>
 
 <dl>
- <dt><code>alignToTop</code> {{optional_inline}}</dt>
+ <dt><code>alignToTop</code> {{optional_inline}}</dt>
  <dd>Параметр типа {{jsxref("Boolean")}}:
  <ul>
-  <li><code>true</code>, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Значение по умолчанию.</li>
-  <li><code>false</code>, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
+  <li><code>true</code>, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. Значение по умолчанию.</li>
+  <li><code>false</code>, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code></li>
  </ul>
  </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
+ <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
  <dd>Объект со следующими свойствами:</dd>
- <dt><code>behavior</code> {{optional_inline}}</dt>
- <dd>Анимация прокрутки. Принимает значения <code>"auto"</code> или <code>"smooth"</code>. По умолчанию <code>"auto"</code>.</dd>
- <dt><code>block</code> {{optional_inline}}</dt>
+ <dt><code>behavior</code> {{optional_inline}}</dt>
+ <dd>Анимация прокрутки. Принимает значения <code>"auto"</code> или <code>"smooth"</code>. По умолчанию <code>"auto"</code>.</dd>
+ <dt><code>block</code> {{optional_inline}}</dt>
  <dd>Вертикальное выравнивание.<br>
- Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"start"</code>.</dd>
- <dt><code>inline</code> {{optional_inline}}</dt>
+ Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"start"</code>.</dd>
+ <dt><code>inline</code> {{optional_inline}}</dt>
  <dd>Горизонтальное выравнивание.<br>
- Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"nearest"</code>.</dd>
+ Одно из значений: <code>"start"</code>, <code>"center"</code>, <code>"end"</code> или <code>"nearest"</code>. По умолчанию <code>"nearest"</code>.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
@@ -49,7 +49,7 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">.big {
-   background: #ccc;
+   background: #ccc;
    height: 300px;
 }
 
@@ -59,7 +59,7 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 
 .box {
    background: lightgreen;
-   height: 40px;
+   height: 40px;
 }</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -80,7 +80,7 @@ btn.addEventListener('click', handleButtonClick);
 
 <h2 id="Примечание">Примечание</h2>
 
-<p>Область может не полностью прокручивается до элемента (вверх или вниз), это зависит от расположения других элементов.</p>
+<p>Область может не полностью прокручивается до элемента (вверх или вниз), это зависит от расположения других элементов.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
@@ -93,5 +93,5 @@ btn.addEventListener('click', handleButtonClick);
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
+ <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
 </ul>

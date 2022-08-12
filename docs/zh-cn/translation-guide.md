@@ -1,10 +1,48 @@
 # 针对 MDN 文档的本地化指南
 
-本文是针对简体中文（zh-CN）文档的翻译指南。如果你所使用的语言尚未有翻译指南，而你又希望新建的话，欢迎你联系[我们负责该语言的翻译团队](https://github.com/mdn/translated-content/blob/docs-readme/README.md)。
+本文是针对简体中文（zh-CN）文档的翻译指南。如果你所使用的语言尚未有翻译指南，而你又希望新建的话，欢迎你联系[我们负责该语言的翻译团队](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)。
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
 > MDN 中的文档正在逐渐向 Markdown 格式迁移（由 [yari 平台](https://developer.mozilla.org/zh-CN/docs/MDN/Yari)渲染为 HTML），以下的说明仅针对 Markdown 格式，对于现有的 HTML 格式文档，并非完全适用。若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN)。
+
+## 元数据
+
+每个文档的开头都会有元数据，大致的结构如下：
+
+```yaml
+---
+title: Fetch API
+slug: Web/API/Fetch_API
+page-type: web-api-overview
+tags:
+  - API
+  - Fetch
+  - Landing
+  - Reference
+  - Response
+  - XMLHttpRequest
+  - request
+browser-compat: api.fetch
+---
+```
+
+其中：
+
+- `title` 为文档的大标题
+- `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
+- `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
+- `tags` 为[文章标签](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag)，被用于站点管理和自动化数据处理
+- `browser-compat` 为[**浏览器兼容性表**](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)对应的宏所使用的元数据。
+
+在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`tags`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+
+最终在简体中文文档中呈现的元数据如下所示：
+
+```yaml
+title: Fetch API
+slug: Web/API/Fetch_API
+```
 
 ## 翻译标题和 ID
 

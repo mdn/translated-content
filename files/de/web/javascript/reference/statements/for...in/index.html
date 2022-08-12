@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>Die Eigenschaften eines Javascript-Objekts können anhand ihres internen Statusfeldes <code>enumerable</code> als <a href="/de/docs/Web/JavaScript/Aufzählbarkeit_und_Zugehörigkeit_von_Eigenschaften">aufzählbar oder nicht aufzählbar</a> gekennzeichnet werden.</p>
 
-<p>Insbesondere erben manche eingebaute Objekte wie <code>Array</code> und <code>Object</code> nicht-aufzählbare Eigenschaften<span style="line-height: 1.5;"> von </span><code>Object.prototype</code> and <code>String.prototype</code><span style="line-height: 1.5;">, unter anderem die Methoden {{jsxref("String.indexOf")}} und {{jsxref("Object.toString")}}. </span></p>
+<p>Insbesondere erben manche eingebaute Objekte wie <code>Array</code> und <code>Object</code> nicht-aufzählbare Eigenschaften<span style="line-height: 1.5;"> von </span><code>Object.prototype</code> and <code>String.prototype</code><span style="line-height: 1.5;">, unter anderem die Methoden {{jsxref("String.indexOf")}} und {{jsxref("Object.toString")}}. </span></p>
 
 <p><span style="line-height: 1.5;">Nicht-aufzählbare Eigenschaften werden von </span> <code>for…in</code> ignoriert.</p>
 
@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <p>Anders als vielleicht von vielen anderen Programmiersprachen gewohnt sind bei Javascript die Indizes eines Feldes normale Objekt-Eigenschaften mit Ganzzahlen als Namen.</p>
 
-<p>Wie oben bereits erwähnt, ist nicht sichergestellt, dass <code>for…in</code> Eigenschaften eines Objektes in einer bestimmten Reihenfolge durchläuft. Dies gilt, da sie normale Eigenschaften sind, auch für die Feldindizes. Zudem durchläuft <code>for…in</code> auch alle anderen (aufzählbaren) Eigenschaften, einschließlich derer mit nicht ganzzahligen Namen sowie geerbte.</p>
+<p>Wie oben bereits erwähnt, ist nicht sichergestellt, dass <code>for…in</code> Eigenschaften eines Objektes in einer bestimmten Reihenfolge durchläuft. Dies gilt, da sie normale Eigenschaften sind, auch für die Feldindizes. Zudem durchläuft <code>for…in</code> auch alle anderen (aufzählbaren) Eigenschaften, einschließlich derer mit nicht ganzzahligen Namen sowie geerbte.</p>
 
 <p><code>for…in</code> ist daher nicht geeignet, um die Felder eines Objekts vom Typ Array von 0 bis Array.length der Reihenfolge nach zu durchlaufen.<br>
  Zu diesem Zweck kann entweder auf eine {{jsxref("Statements/for", "for-Schleife")}} mit numerischem Zähler, die Array-eigene Methode {{jsxref("Array.prototype.forEach()", "forEach()")}} oder eine {{jsxref("Statements/for...of", "for...of-Schleife")}} verwendet werden.</p>
@@ -73,7 +73,7 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="Example" name="Example">Beispiele</h2>
 
-<p>Die folgende Funktion erwartet ein Objekt als Argument. Es werden dann alle aufzählbaren Eigenschaften des Objekts durchlaufen und der Name der Eigenschaft mit dem entsprechenden Wert ausgegeben.</p>
+<p>Die folgende Funktion erwartet ein Objekt als Argument. Es werden dann alle aufzählbaren Eigenschaften des Objekts durchlaufen und der Name der Eigenschaft mit dem entsprechenden Wert ausgegeben.</p>
 
 <pre class="brush: js">var obj = {a:1, b:2, c:3};
 
@@ -147,55 +147,7 @@ for (var prop in obj) {
 
 <h2 id="Browserkompatibilität">Browserkompatibilität</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>6</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h3 id="Kompatibilität_Initialisierender_Ausdruck">Kompatibilität: Initialisierender Ausdruck</h3>
 

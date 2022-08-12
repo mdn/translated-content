@@ -33,7 +33,7 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 
 La {{jsxref("Promise")}} retournée par `getDisplayMedia()` résout un {{domxref("MediaStream")}} qui diffuse le dédia capturé.
 
-Voir l'article [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
+Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
 
 ## Ajouts à l'interface actuelle
 
@@ -94,7 +94,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu du document d’utiliser Screen Capture.
 
-Voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
+Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 
 ## Caracteristiques
 
@@ -108,5 +108,5 @@ Voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature
 
 ## Voir aussi
 
-- [Utiliser l'API Screen Capture](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

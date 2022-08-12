@@ -17,7 +17,7 @@ translation_of: Web/API/WebGL_API
 ---
 <div>{{WebGLSidebar}}</div>
 
-<p><strong>WebGL</strong>(Web Graphics Library)은 플러그인을 사용하지 않고 웹 브라우저에서 상호작용 가능한 3D와 2D 그래픽을 표현하기 위한 JavaScript API입니다. WebGL은 HTML5 {{HTMLElement("canvas")}} 요소에서 사용할 수 있는, OpenGL ES 2.0을 대부분 충족하는 API를 제공합니다.</p>
+<p><strong>WebGL</strong>(Web Graphics Library)은 플러그인을 사용하지 않고 웹 브라우저에서 상호작용 가능한 3D와 2D 그래픽을 표현하기 위한 JavaScript API입니다. WebGL은 HTML5 {{HTMLElement("canvas")}} 요소에서 사용할 수 있는, OpenGL ES 2.0을 대부분 충족하는 API를 제공합니다.</p>
 
 <p>WebGL은 <a href="https://www.mozilla.org/ko/firefox/new/">Firefox</a> 4+, <a href="http://www.google.com/chrome/">Google Chrome</a> 9+, <a href="http://www.opera.com/">Opera</a> 12+, <a href="http://www.apple.com/fr/safari/">Safari</a> 5.1+, <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> 11+, <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Microsoft Edge</a> build 10240+에서 사용할 수 있습니다. 그러나 사용자 장치의 하드웨어도 WebGL 기능을 지원해야 합니다.</p>
 
@@ -106,7 +106,7 @@ translation_of: Web/API/WebGL_API
 
 <h3 id="WebGL_2">WebGL 2</h3>
 
-<p>WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제공되는 WebGL 메이저 업데이트다. OpenGL ES 3.0 을 기반으로 하며 다음과 같은 특징을 포함한다:</p>
+<p>WebGL 2는 {{domxref("WebGL2RenderingContext")}} 인터페이스를 통해 제공되는 WebGL 메이저 업데이트다. OpenGL ES 3.0 을 기반으로 하며 다음과 같은 특징을 포함한다:</p>
 
 <ul>
  <li><a href="/ko/docs/Web/API/WebGL2RenderingContext/texImage3D">3D textures</a>,</li>
@@ -115,10 +115,10 @@ translation_of: Web/API/WebGL_API
  <li><a href="/ko/docs/Web/API/WebGLSync">Sync objects</a>,</li>
  <li><a href="/ko/docs/Web/API/WebGLQuery">Query objects</a>,</li>
  <li><a href="/ko/docs/Web/API/WebGLTransformFeedback">Transform Feedback objects</a>,</li>
- <li>WebGL 2의 핵심이 된 확장 기능: <a href="/ko/docs/Web/API/WebGLVertexArrayObject">Vertex Array objects</a>, <a href="/ko/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">instancing</a>, <a href="/ko/docs/Web/API/WebGL2RenderingContext/drawBuffers">multiple render targets</a>, <a href="/ko/docs/Web/API/EXT_frag_depth">fragment depth</a>.</li>
+ <li>WebGL 2의 핵심이 된 확장 기능: <a href="/ko/docs/Web/API/WebGLVertexArrayObject">Vertex Array objects</a>, <a href="/ko/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced">instancing</a>, <a href="/ko/docs/Web/API/WebGL2RenderingContext/drawBuffers">multiple render targets</a>, <a href="/ko/docs/Web/API/EXT_frag_depth">fragment depth</a>.</li>
 </ul>
 
-<p><a href="https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/">"WebGL 2 lands in Firefox"</a> 블로그 포스트와와 and <a href="http://webglsamples.org/WebGL2Samples/">webglsamples.org/WebGL2Samples</a> 데모도 참고.</p>
+<p><a href="https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/">"WebGL 2 lands in Firefox"</a> 블로그 포스트와와 and <a href="http://webglsamples.org/WebGL2Samples/">webglsamples.org/WebGL2Samples</a> 데모도 참고.</p>
 
 <h2 class="Documentation" id="안내서와_자습서">안내서와 자습서</h2>
 
@@ -182,45 +182,13 @@ translation_of: Web/API/WebGL_API
  <li><a href="https://phaser.io/">Phaser</a> is a fast, free and fun open source framework for Canvas and WebGL powered browser games</li>
 </ul>
 
-<h2 class="Related_Topics" id="명세">명세</h2>
+<h2 class="명세" id="명세">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebGL')}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition. Based on OpenGL ES 2.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL2')}}</td>
-   <td>{{Spec2('WebGL2')}}</td>
-   <td>Builds on top of WebGL 1. Based on OpenGL ES 3.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0')}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 3.0')}}</td>
-   <td>{{Spec2('OpenGL ES 3.0')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 class="Related_Topics" id="브라우저_호환성">브라우저 호환성</h2>
 
 <h3 id="WebGL_1">WebGL 1</h3>
-
-
 
 <p>{{Compat("api.WebGLRenderingContext", 0)}}</p>
 

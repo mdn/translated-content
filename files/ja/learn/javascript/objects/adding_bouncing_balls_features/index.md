@@ -145,14 +145,14 @@ window.addEventListener('keydown', (e) => {
 このメソッドは、`Ball()` の `draw()` メソッドと同じく、キャンバス上にオブジェクトインスタンスを描画するという目的を持ちます。とても良く似た動作をするので、`Ball` の `draw()` メソッドの定義をコピーすることから始めます。次に、以下の変更を行います。
 
 - 邪悪な円は塗りつぶしせず、枠線（ストローク）だけを持たせたいと思います。そのために、[`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) と [`fill()`](/ja/docs/Web/API/CanvasRenderingContext2D/fill) を [`strokeStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/strokeStyle) と [`stroke()`](/ja/docs/Web/API/CanvasRenderingContext2D/stroke) に変更します。
-- また、線を少し太くすれば、邪悪な円が少し分かりやすくなります。これは、 [`lineWidth`](/ja/docs/Web/API/CanvasRenderingContext2D/lineWidth) の値（3 で十分でしょう）を [`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼び出しの後のどこかで設定することで実現できます 。
+- また、線を少し太くすれば、邪悪な円が少し分かりやすくなります。これは、 [`lineWidth`](/ja/docs/Web/API/CanvasRenderingContext2D/lineWidth) の値（3 で十分でしょう）を [`beginPath()`](/ja/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼び出しの後のどこかで設定することで実現できます 。
 
 #### checkBounds()
 
 このメソッドは、 `Ball` の `update()` メソッドの最初の部分と同じ機能、すなわち、邪悪な円が画面の端から出そうになったら出ないようにする機能を持ちます。先ほどと同様に、`Ball` の `update()` の定義をほぼコピーするだけでできますが、いくつか変更する必要があります。
 
 - 最後の 2 行を削除します。後で見られるように、別の方法で邪悪な円を動かすので、フレーム毎に邪悪な円の位置を自動的に更新する必要はありません。
-- `if()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
+- `if()` 文の内部でそのテストが true を返す場合、`velX`/`velY` を更新したくありません。代わりに `x`/`y` の値を変更して、邪悪な円が画面内に少し跳ね返ってくるようにしたいのです。邪悪な円の `size` プロパティを（適切に）加えたり減じたりすることは理にかなっています。
 
 #### collisionDetect()
 

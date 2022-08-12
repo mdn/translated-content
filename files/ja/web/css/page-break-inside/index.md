@@ -64,21 +64,21 @@ page-break-inside: unset;
 
 ```html
 <div class="page">
-  <p>これは最初の段落です。</p>
-  <section class="list">
-    <span>リスト</span>
-    <ol>
-      <li>one</li>
-<!--       <li>two</li> -->
-    </ol>
-  </section>
-  <ul>
-    <li>one</li>
-<!--     <li>two</li> -->
-  </ul>
-  <p>Tこれは第二段落です。</p>
-  <p>これは第三段落です。文章の量が多くなっています。</p>
-  <p>これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。</p>
+  <p>これは最初の段落です。</p>
+  <section class="list">
+    <span>リスト</span>
+    <ol>
+      <li>one</li>
+<!--       <li>two</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>one</li>
+<!--     <li>two</li> -->
+  </ul>
+  <p>Tこれは第二段落です。</p>
+  <p>これは第三段落です。文章の量が多くなっています。</p>
+  <p>これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。</p>
 </div>
 ```
 

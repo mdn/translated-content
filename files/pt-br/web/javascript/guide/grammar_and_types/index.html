@@ -15,15 +15,15 @@ original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 
 <h2 id="Basics" name="Basics">Sintaxe básica</h2>
 
-<p>JavaScript pega emprestado a maior parte de sua sintaxe do Java, mas também é influenciado por Awk, Perl e Python.</p>
+<p>JavaScript pega emprestado a maior parte de sua sintaxe do Java, mas também é influenciado por Awk, Perl e Python.</p>
 
-<p>JavaScript é <strong>case-sensitive</strong> e usa o conjunto de caracteres <strong>Unicode. </strong>Por exemplo, a palavra Früh (que significa "cedo" em Alemão) pode ser usada como nome de variável.</p>
+<p>JavaScript é <strong>case-sensitive</strong> e usa o conjunto de caracteres <strong>Unicode. </strong>Por exemplo, a palavra Früh (que significa "cedo" em Alemão) pode ser usada como nome de variável.</p>
 
 <pre class="brush: js">var Früh = "foobar";</pre>
 
-<p>Mas a variável <code>früh</code> não é a mesma que <code>Früh</code> porque JavaScript é case sensitive.</p>
+<p>Mas a variável <code>früh</code> não é a mesma que <code>Früh</code> porque JavaScript é case sensitive.</p>
 
-<p>No JavaScript, instruções são chamadas de {{Glossary("Statement", "declaração")}} e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula (<a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar">gramática léxica</a> do JavaScript.</p>
+<p>No JavaScript, instruções são chamadas de {{Glossary("Statement", "declaração")}} e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula (<a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">ASI</a>) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar">gramática léxica</a> do JavaScript.</p>
 
 <h2 id="Comentários">Comentários</h2>
 
@@ -52,27 +52,27 @@ original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 
 <h3 id="Variáveis">Variáveis</h3>
 
-<p>Você usa variáveis como nomes simbólicos para os valores em sua aplicação. O nome das variáveis, chamados de {{Glossary("Identifier", "identificadores")}}, obedecem determinadas regras.</p>
+<p>Você usa variáveis como nomes simbólicos para os valores em sua aplicação. O nome das variáveis, chamados de {{Glossary("Identifier", "identificadores")}}, obedecem determinadas regras.</p>
 
 <p>Um identificador JavaScript deve começar com uma letra, underline (<code>_</code>), ou cifrão (<code>$</code>); os caracteres subsequentes podem também ser números (0-9). Devido JavaScript ser case-sensitive, letras incluem caracteres de "A" a "Z" (maiúsculos) e caracteres de "a" a "z" (minúsculos).</p>
 
-<p>Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">sequências de escape Unicode</a> como caracteres e identificadores.</p>
+<p>Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">sequências de escape Unicode</a> como caracteres e identificadores.</p>
 
 <p>Alguns exemplos de nomes legais são <code>Numeros_visitas</code>, <code>temp99</code>, e<code> _nome</code>.</p>
 
 <h3 id="Declarando_variáveis">Declarando variáveis</h3>
 
-<p>Você pode declarar uma variável de três formas:</p>
+<p>Você pode declarar uma variável de três formas:</p>
 
 <ul>
- <li>Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var <code>x = 42</code>. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.</li>
+ <li>Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var <code>x = 42</code>. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.</li>
  <li>Por simples adição de valor. Por exemplo, <code>x = 42</code>. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.</li>
- <li>Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, <code>let y = 13</code>. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Variable_scope">escopo de variável</a> abaixo.</li>
+ <li>Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, <code>let y = 13</code>. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Variable_scope">escopo de variável</a> abaixo.</li>
 </ul>
 
 <h3 id="Classificando_variáveis">Classificando variáveis</h3>
 
-<p>Uma variável declarada usando a declaração <code>var</code> ou <code>let</code> sem especificar o valor inicial tem o valor  {{jsxref("undefined")}}.</p>
+<p>Uma variável declarada usando a declaração <code>var</code> ou <code>let</code> sem especificar o valor inicial tem o valor  {{jsxref("undefined")}}.</p>
 
 <p>Uma tentativa de acessar uma variável não declarada resultará no lançamento de uma exceção {{jsxref("ReferenceError")}}:</p>
 
@@ -81,7 +81,7 @@ console.log("O valor de a é " + a); // saída "O valor de a é undefined"
 console.log("O valor de b é " + b); // executa uma exception de erro de referência (ReferenceError)
 </pre>
 
-<p>Você pode usar <code>undefined</code> para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> será avaliada como verdadeira (<code>true</code>).</p>
+<p>Você pode usar <code>undefined</code> para determinar se uma variável tem um valor. No código a seguir, não é atribuído um valor de entrada na variável e a declaração <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else">if</a></code> será avaliada como verdadeira (<code>true</code>).</p>
 
 <pre class="brush: js">var input;
 if(input === undefined){
@@ -109,11 +109,11 @@ a + 2;  // Avaliado como NaN
 console.log(n * 32); // a saída para o console será 0.
 </pre>
 
-<h3 id="Variable_scope" name="Variable_scope">Escopo de variável</h3>
+<h3 id="Variable_scope" name="Variable_scope">Escopo de variável</h3>
 
-<p>Quando você declara uma váriavel fora de qualquer função, ela é chamada de variável <em>global</em>, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável <em>local</em>,  pois ela está disponível somente dentro dessa função.</p>
+<p>Quando você declara uma váriavel fora de qualquer função, ela é chamada de variável <em>global</em>, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável <em>local</em>,  pois ela está disponível somente dentro dessa função.</p>
 
-<p>JavaScript antes do ECMAScript 6 não possuía escopo de <a href="/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement">declaração de bloco</a>; pelo contrário, uma variável declarada dentro de um bloco de uma <em>função </em>é uma variável local (ou contexto <em>global</em>) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de <code>x</code> está na função (ou contexto global) no qual <code>x</code> é declarado, não o bloco, que neste caso é a declaração <code>if</code>. </p>
+<p>JavaScript antes do ECMAScript 6 não possuía escopo de <a href="/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement">declaração de bloco</a>; pelo contrário, uma variável declarada dentro de um bloco de uma <em>função </em>é uma variável local (ou contexto <em>global</em>) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de <code>x</code> está na função (ou contexto global) no qual <code>x</code> é declarado, não o bloco, que neste caso é a declaração <code>if</code>. </p>
 
 <pre class="brush: js">if (true) {
   var x = 5;
@@ -151,7 +151,7 @@ var myvar = "my value";
 })();
 </pre>
 
-<p>Os exemplos acima serão interpretados como:</p>
+<p>Os exemplos acima serão interpretados como:</p>
 
 <pre class="brush: js">/**
  * Exemplo 1
@@ -172,26 +172,26 @@ var myvar = "um valor";
 })();
 </pre>
 
-<p>Devido o hoisting, todas as declarações <code>var</code> em uma função devem ser colocadas no início da função. Essa recomendação de prática deixa o código mais legível.</p>
+<p>Devido o hoisting, todas as declarações <code>var</code> em uma função devem ser colocadas no início da função. Essa recomendação de prática deixa o código mais legível.</p>
 
 <h3 id="Variáveis_Globais">Variáveis Globais</h3>
 
-<p>Variáveis globais são propriedades do <em>objeto global</em>. Em páginas web o objeto global é a {{domxref("window")}}, assim você pode configurar e acessar variáveis globais utilizando a sintaxe <code>window.variavel.</code> </p>
+<p>Variáveis globais são propriedades do <em>objeto global</em>. Em páginas web o objeto global é a {{domxref("window")}}, assim você pode configurar e acessar variáveis globais utilizando a sintaxe <code>window.variavel.</code> </p>
 
 <p>Consequentemente, você pode acessar variáveis globais declaradas em uma janela ou frame ou frame de outra janela. Por exemplo, se uma variável chamada phoneNumber é declarada em um documento, você pode consultar esta variável de um frame como <code>parent.phoneNumber</code>.</p>
 
 <h3 id="Constantes">Constantes</h3>
 
-<p>Você pode criar uma constante apenas de leitura por meio da palavra-chave {{jsxref("Statements/const", "const")}}. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: deve começar com uma letra, sublinhado ou cifrão e pode conter caractere alfabético, numérico ou sublinhado.</p>
+<p>Você pode criar uma constante apenas de leitura por meio da palavra-chave {{jsxref("Statements/const", "const")}}. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: deve começar com uma letra, sublinhado ou cifrão e pode conter caractere alfabético, numérico ou sublinhado.</p>
 
 <pre class="brush: js">const PI = 3.14;
 </pre>
 
-<p>Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução. Deve ser inicializada com um valor.</p>
+<p>Uma constante não pode alterar seu valor por meio de uma atribuição ou ser declarada novamente enquanto o script está em execução. Deve ser inicializada com um valor.</p>
 
 <p>As regras de escopo para as constantes são as mesmas para as váriaveis <code>let</code> de escopo de bloco. Se a palavra-chave <code>const</code> for omitida, presume-se que o identificador represente uma variável.</p>
 
-<p>Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo. Por exemplo: </p>
+<p>Você não pode declarar uma constante com o mesmo nome de uma função ou variável que estão no mesmo escopo. Por exemplo: </p>
 
 <pre class="example-bad brush: js">// Isto irá causar um  erro
 function f() {};
@@ -213,20 +213,20 @@ function f() {
 <p>O mais recente padrão ECMAScript define sete tipos de dados:</p>
 
 <ul>
- <li>Seis tipos de dados são os chamados {{Glossary("Primitive", "primitivos")}}:
+ <li>Seis tipos de dados são os chamados {{Glossary("Primitive", "primitivos")}}:
   <ul>
-   <li>{{Glossary("Boolean")}}. <code>true</code> e <code>false</code>.</li>
+   <li>{{Glossary("Boolean")}}. <code>true</code> e <code>false</code>.</li>
    <li>{{Glossary("null")}}. Uma palavra-chave que indica valor nulo. Devido JavaScript ser case-sensitive, <code>null</code> não é o mesmo que <code>Null</code>, <code>NULL</code>, ou ainda outra variação.</li>
    <li>{{Glossary("undefined")}}. Uma propriedade superior cujo valor é indefinido.</li>
-   <li>{{Glossary("Number")}}. <code>42</code> ou <code>3.14159</code>.</li>
+   <li>{{Glossary("Number")}}. <code>42</code> ou <code>3.14159</code>.</li>
    <li>{{Glossary("String")}}. "Howdy"</li>
-   <li>{{Glossary("Symbol")}} (novo em ECMAScript 6). Um tipo de dado cuja as instâncias são únicas e imutáveis.</li>
+   <li>{{Glossary("Symbol")}} (novo em ECMAScript 6). Um tipo de dado cuja as instâncias são únicas e imutáveis.</li>
   </ul>
  </li>
  <li>e {{Glossary("Object")}}</li>
 </ul>
 
-<p>Embora esses tipos de dados sejam uma quantidade relativamente pequena, eles permitem realizar funções úteis em suas aplicações.  <span style="line-height: 1.5;">{{jsxref("Object", "Objetos")}} e {{jsxref("Function", "funções")}} são outros elementos fundamentais na linguagem. Você pode pensar em objetos como recipientes para os valores, e funções como métodos que suas aplicações podem executar.</span></p>
+<p>Embora esses tipos de dados sejam uma quantidade relativamente pequena, eles permitem realizar funções úteis em suas aplicações.  <span style="line-height: 1.5;">{{jsxref("Object", "Objetos")}} e {{jsxref("Function", "funções")}} são outros elementos fundamentais na linguagem. Você pode pensar em objetos como recipientes para os valores, e funções como métodos que suas aplicações podem executar.</span></p>
 
 <h3 id="Conversão_de_tipos_de_dados">Conversão de tipos de dados</h3>
 
@@ -248,7 +248,7 @@ function f() {
 y = 42 + " é a resposta" // "42 é a resposta"
 </pre>
 
-<p>Nas declarações envolvendo outros operadores,  JavaScript não converte valores numérico para strings. Por exemplo:</p>
+<p>Nas declarações envolvendo outros operadores,  JavaScript não converte valores numérico para strings. Por exemplo:</p>
 
 <pre class="brush: js">"37" - 7 // 30
 "37" + 7 // "377"
@@ -256,16 +256,16 @@ y = 42 + " é a resposta" // "42 é a resposta"
 
 <h3 id="Convertendo_strings_para_números">Convertendo strings para números</h3>
 
-<p>No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.</p>
+<p>No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.</p>
 
 <ul>
  <li id="parseInt()_and_parseFloat()">{{jsxref("parseInt", "parseInt()")}}</li>
  <li>{{jsxref("parseFloat", "parseFloat()")}}</li>
 </ul>
 
-<p>parseInt irá retornar apenas números inteiros, então seu uso é restrito para a casa dos decimais. Além disso, é uma boa prática ao usar parseInt incluir o parâmetro da base. O parâmetro da base é usado para especificar qual sistema númerico deve ser usado.</p>
+<p>parseInt irá retornar apenas números inteiros, então seu uso é restrito para a casa dos decimais. Além disso, é uma boa prática ao usar parseInt incluir o parâmetro da base. O parâmetro da base é usado para especificar qual sistema númerico deve ser usado.</p>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">Uma método alternativo de conversão de um número em forma de string é com o operador <code>+</code> (operador soma):</font></p>
+<p><font face="Consolas, Liberation Mono, Courier, monospace">Uma método alternativo de conversão de um número em forma de string é com o operador <code>+</code> (operador soma):</font></p>
 
 <pre class="brush: js">"1.1" + "1.1" = "1.11.1"
 (+"1.1") + (+"1.1") = 2.2
@@ -284,9 +284,9 @@ y = 42 + " é a resposta" // "42 é a resposta"
  <li><a href="#string_literal">String literal</a></li>
 </ul>
 
-<h3 id="Array_literal">Array literal</h3>
+<h3 id="Array_literal">Array literal</h3>
 
-<p>Um array literal é uma lista de zero ou mais expressões, onde cada uma delas representam um elemento do array, inseridas entre colchetes (<code>[]</code>). Quando você cria um array usando um array literal, ele é inicializado  com os valores especificados como seus elementos, e seu comprimento é definido com o  número de elementos especificados.</p>
+<p>Um array literal é uma lista de zero ou mais expressões, onde cada uma delas representam um elemento do array, inseridas entre colchetes (<code>[]</code>). Quando você cria um array usando um array literal, ele é inicializado  com os valores especificados como seus elementos, e seu comprimento é definido com o  número de elementos especificados.</p>
 
 <p>O exemplo a seguir cria um array <code>coffees</code> com três elementos e um comprimento de três:</p>
 
@@ -294,12 +294,12 @@ y = 42 + " é a resposta" // "42 é a resposta"
 </pre>
 
 <div class="note">
-<p><strong>Nota :</strong> Um array literal é um tipo de inicializador de objetos. Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers" title="en-US/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">Usando inicializadores de Objetos</a>.</p>
+<p><strong>Nota :</strong> Um array literal é um tipo de inicializador de objetos. Veja <a href="/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers" title="en-US/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">Usando inicializadores de Objetos</a>.</p>
 </div>
 
 <p>Se um array é criado usando um literal no topo do script, JavaScript interpreta o array cada vez que avalia a expressão que contêm o array literal. Além disso, um literal usado em uma função é criado cada vez que a função é chamada.</p>
 
-<p>Array literal são também um array de objetos. Veja  {{jsxref("Array")}} e <a href="/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections">Coleções indexadas</a> para detalhes sobre array de objetos.</p>
+<p>Array literal são também um array de objetos. Veja  {{jsxref("Array")}} e <a href="/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections">Coleções indexadas</a> para detalhes sobre array de objetos.</p>
 
 <h4 id="Vírgulas_extras_em_array_literal">Vírgulas extras em array literal</h4>
 
@@ -313,7 +313,7 @@ y = 42 + " é a resposta" // "42 é a resposta"
 <p>Se você incluir uma vírgula à direita no final da lista dos elementos, a vírgula é ignorada. No exemplo a seguir, o comprimento do array é três. Não há nenhum <code>myList[3]</code>. Todas as outras vírgulas na lista indicam um novo elemento.</p>
 
 <div class="note">
-<p><strong>Nota :</strong> Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.</p>
+<p><strong>Nota :</strong> Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.</p>
 </div>
 
 <pre class="brush: js">var myList = ['home', , 'school', ];
@@ -329,21 +329,21 @@ y = 42 + " é a resposta" // "42 é a resposta"
 <pre class="brush: js">var myList = ['home', , 'school', , ];
 </pre>
 
-<p>Entender o comportamento de vírgulas extras é importante para a compreensão da linguagem JavaScript, no entanto, quando você escrever seu próprio código: declarar explicitamente os elementos em falta como <code>undefined</code> vai aumentar a clareza do código, e consequentemente na sua manutenção.</p>
+<p>Entender o comportamento de vírgulas extras é importante para a compreensão da linguagem JavaScript, no entanto, quando você escrever seu próprio código: declarar explicitamente os elementos em falta como <code>undefined</code> vai aumentar a clareza do código, e consequentemente na sua manutenção.</p>
 
 <h3 id="Literais_Boolean">Literais Boolean</h3>
 
 <p>O tipo Boolean tem dois valores literal: <code>true</code> e <code>false</code>.</p>
 
-<p>Não confunda os valores primitivos Boolean <code>true</code> e <code>false</code> com os valores <code>true</code> e <code>false</code> do objeto Boolean. O objeto Boolean é um invólucro em torno do tipo de dado primitivo. Veja {{jsxref("Boolean")}} para mais informação.</p>
+<p>Não confunda os valores primitivos Boolean <code>true</code> e <code>false</code> com os valores <code>true</code> e <code>false</code> do objeto Boolean. O objeto Boolean é um invólucro em torno do tipo de dado primitivo. Veja {{jsxref("Boolean")}} para mais informação.</p>
 
 <h3 id="Inteiros">Inteiros</h3>
 
-<p>Inteiros podem ser expressos em decimal (base 10), hexadecimal (base 16), octal (base 8) e binário (base 2).</p>
+<p>Inteiros podem ser expressos em decimal (base 10), hexadecimal (base 16), octal (base 8) e binário (base 2).</p>
 
 <ul>
  <li>Decimal inteiro literal consiste em uma sequência de dígitos sem um 0 (zero).</li>
- <li>0 (zero) em um inteiro literal indica que ele está em octal. Octal pode incluir somente os dígitos 0-7.</li>
+ <li>0 (zero) em um inteiro literal indica que ele está em octal. Octal pode incluir somente os dígitos 0-7.</li>
  <li>0x (ou 0X) indica um hexadecimal. Inteiros hexadecimais podem incluir dígitos (0-9) e as letras a-f e A-F.</li>
  <li>0b (ou 0B) indica um binário. Inteiros binário podem incluir apenas os dígitos 0 e 1.</li>
 </ul>
@@ -356,7 +356,7 @@ y = 42 + " é a resposta" // "42 é a resposta"
 0b11, 0b0011 and -0b11 (binário, base 2)
 </pre>
 
-<p>Para maiores informações, veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Literais numérico na referência Léxica</a>.</p>
+<p>Para maiores informações, veja <a href="/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals">Literais numérico na referência Léxica</a>.</p>
 
 <h3 id="Literais_de_ponto_flutuante">Literais de ponto flutuante</h3>
 
@@ -369,7 +369,7 @@ y = 42 + " é a resposta" // "42 é a resposta"
  <li>Um expoente.</li>
 </ul>
 
-<p>O expoente é um "e" ou "E" seguido por um inteiro, que pode ter sinal (precedido por "+" ou "-"). Um literal de ponto flutuante  deve ter no mínimo um dígito e um ponto decimal ou "e" (ou "E").</p>
+<p>O expoente é um "e" ou "E" seguido por um inteiro, que pode ter sinal (precedido por "+" ou "-"). Um literal de ponto flutuante  deve ter no mínimo um dígito e um ponto decimal ou "e" (ou "E").</p>
 
 <p>Mais sucintamente, a sintaxe é:</p>
 
@@ -386,9 +386,9 @@ y = 42 + " é a resposta" // "42 é a resposta"
 
 <h3 id="Objeto_literal">Objeto literal</h3>
 
-<p>Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves (<code>{}</code>). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o <code>{</code> será interpretado como início de um bloco.</p>
+<p>Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves (<code>{}</code>). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o <code>{</code> será interpretado como início de um bloco.</p>
 
-<p>Segue um exemplo de um objeto literal. O primeiro elemento do objeto <code>carro </code>define uma propriedade, <code>meuCarro</code>, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade <code>getCarro</code>, é imediatamente atribuído o resultado de chamar uma função (<code>tipoCarro("Fiat")</code>); o terceiro elemento, a propriedade <code>especial</code>, usa uma variável existente (<code>vendas)</code>.</p>
+<p>Segue um exemplo de um objeto literal. O primeiro elemento do objeto <code>carro </code>define uma propriedade, <code>meuCarro</code>, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade <code>getCarro</code>, é imediatamente atribuído o resultado de chamar uma função (<code>tipoCarro("Fiat")</code>); o terceiro elemento, a propriedade <code>especial</code>, usa uma variável existente (<code>vendas)</code>.</p>
 
 <pre class="brush: js">var vendas = "Toyota";
 
@@ -415,7 +415,7 @@ console.log(carro.carros.b); // Jeep
 console.log(carro[7]); // Mazda
 </pre>
 
-<p>Nomes de propriedades de objeto podem ser qualquer string, incluindo uma string vazia. Caso o nome da propriedade não seja um {{Glossary("Identifier","identificador")}} JavaScript ou número, ele deve ser colocado entre aspas. Nomes de propriedades que não possuem identificadores válido, também não podem ser acessadas pela propriedade de ponto (<code>.</code>), mas podem ser acessadas e definidas com a notação do tipo array ("<code>[]</code>").</p>
+<p>Nomes de propriedades de objeto podem ser qualquer string, incluindo uma string vazia. Caso o nome da propriedade não seja um {{Glossary("Identifier","identificador")}} JavaScript ou número, ele deve ser colocado entre aspas. Nomes de propriedades que não possuem identificadores válido, também não podem ser acessadas pela propriedade de ponto (<code>.</code>), mas podem ser acessadas e definidas com a notação do tipo array ("<code>[]</code>").</p>
 
 <pre class="brush: js">var unusualPropertyNames = {
   "": "Uma string vazia",
@@ -437,7 +437,7 @@ console.log(foo["a"]); // alpha
 console.log(foo["2"]); // two
 </pre>
 
-<h3 id="sect1"> </h3>
+<h3 id="sect1"> </h3>
 
 <h3 id="Expressão_Regex_Literal">Expressão Regex Literal</h3>
 
@@ -447,7 +447,7 @@ console.log(foo["2"]); // two
 
 <h3 id="String_Literal">String Literal</h3>
 
-<p>Uma string literal são zero ou mais caracteres dispostos em aspas duplas (<code>"</code>) ou aspas simples (<code>'</code>). Uma sequência de caracteres deve ser delimitada por aspas do mesmo tipo; ou seja,  as duas aspas simples ou ambas aspas duplas. A seguir um exemplo de strings literais.</p>
+<p>Uma string literal são zero ou mais caracteres dispostos em aspas duplas (<code>"</code>) ou aspas simples (<code>'</code>). Uma sequência de caracteres deve ser delimitada por aspas do mesmo tipo; ou seja,  as duas aspas simples ou ambas aspas duplas. A seguir um exemplo de strings literais.</p>
 
 <pre class="eval">"foo"
 'bar'
@@ -463,7 +463,7 @@ console.log(foo["2"]); // two
 // Nesse caso, 10 caracteres.
 </pre>
 
-<p>Você deve usar string literal, a não ser que você precise usar um objeto string. Veja {{jsxref("String")}} para detalhes sobre objetos de strings.</p>
+<p>Você deve usar string literal, a não ser que você precise usar um objeto string. Veja {{jsxref("String")}} para detalhes sobre objetos de strings.</p>
 
 <h4 id="Uso_de_caracteres_especiais_em_string">Uso de caracteres especiais em string</h4>
 
@@ -526,7 +526,7 @@ console.log(foo["2"]); // two
   <tr>
    <td><code>\<em>XXX</em></code></td>
    <td>
-    <p>Caractere com a codificação Latin-1 especificada por três dígitos octal <em>XXX </em>entre 0 e 377. Por exemplo, \251 é sequência octal para o símbolo de direitos autorais.</p>
+    <p>Caractere com a codificação Latin-1 especificada por três dígitos octal <em>XXX </em>entre 0 e 377. Por exemplo, \251 é sequência octal para o símbolo de direitos autorais.</p>
    </td>
   </tr>
   <tr>
@@ -534,7 +534,7 @@ console.log(foo["2"]); // two
   <tr>
    <td><code>\x<em>XX</em></code></td>
    <td>
-    <p>Caractere com a codificação Latin-1 especificada por dois dígitos hexadecimal <em>XX</em> entre 00 e FF. Por exemplo, \xA9 é a sequência hexadecimal para o símbolo de direitos autorais.</p>
+    <p>Caractere com a codificação Latin-1 especificada por dois dígitos hexadecimal <em>XX</em> entre 00 e FF. Por exemplo, \xA9 é a sequência hexadecimal para o símbolo de direitos autorais.</p>
    </td>
   </tr>
   <tr>
@@ -550,9 +550,9 @@ console.log(foo["2"]); // two
 
 <h4 id="Caracteres_de_escape">Caracteres de escape</h4>
 
-<p>Para caracteres não listados na tabela, se precedidos de barra invertida ela é ignorada, seu uso está absoleto e deve ser ignorado.</p>
+<p>Para caracteres não listados na tabela, se precedidos de barra invertida ela é ignorada, seu uso está absoleto e deve ser ignorado.</p>
 
-<p>Você pode inserir uma aspa dentro de uma string precendendo-a com uma barra invertida. Isso  é conhecido como <em>escaping</em> das aspas. Por exemplo:</p>
+<p>Você pode inserir uma aspa dentro de uma string precendendo-a com uma barra invertida. Isso  é conhecido como <em>escaping</em> das aspas. Por exemplo:</p>
 
 <pre class="brush: js">var quote = "Ele lê \"The Cremation of Sam McGee\" de R.W. Service.";
 console.log(quote);
@@ -563,7 +563,7 @@ console.log(quote);
 <pre class="eval">Ele lê "The Cremation of Sam McGee" de R.W. Service.
 </pre>
 
-<p>Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo <code>c:\temp </code>para uma string, utilize o seguinte:</p>
+<p>Para incluir uma barra invertida dentro de uma string, você deve escapar o caractere de barra invertida. Por exemplo, para atribuir o caminho do arquivo <code>c:\temp </code>para uma string, utilize o seguinte:</p>
 
 <pre class="brush: js">var home = "c:\\temp";
 </pre>
@@ -577,7 +577,7 @@ linhas."
 console.log(str);   // esta string está quebrada em várias linhas.
 </pre>
 
-<p>Embora JavaScript não tenha sintaxe "heredoc", você pode adicionar uma quebra de linha e um escape de quebra de linha no final de cada linha:</p>
+<p>Embora JavaScript não tenha sintaxe "heredoc", você pode adicionar uma quebra de linha e um escape de quebra de linha no final de cada linha:</p>
 
 <pre class="brush: js">var poema =
 "Rosas são vermelhas\n\
@@ -597,6 +597,6 @@ Esse seu sorriso\n\
  <li><a href="/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressões e operadores</a></li>
 </ul>
 
-<p>No próximo capítulo, veremos a construção de controle de fluxos e manipulação de erro.</p>
+<p>No próximo capítulo, veremos a construção de controle de fluxos e manipulação de erro.</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}</p>

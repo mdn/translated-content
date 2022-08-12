@@ -46,7 +46,7 @@ console.log(+y);
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
-+1n    //  BigInt 値は数値に変換できないためエラーになります
++1n    //  BigInt 値は数値に変換できないためエラーになります
 ```
 
 ## 仕様書

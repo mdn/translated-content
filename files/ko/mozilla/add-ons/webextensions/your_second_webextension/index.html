@@ -22,14 +22,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
  <li><strong>웹페이지에 주입될 "beastify.js"라는 content script를 작성한다. </strong><br>
   이것이 실제로 웹페이지를 변경할 코드이다.</li>
  <li><strong>웹페이지를 변경할 동물 이미지를 패키징한다.</strong><br>
-  <span class="translation">이미지를 "웹 접근 가능 자원"으로 만들어 웹페이지에서 참조 하게 한다.</span></li>
+  이미지를 "웹 접근 가능 자원"으로 만들어 웹페이지에서 참조 하게 한다.</li>
 </ul>
 
 <p>확장앱의 구조를 표현하면 아래와 같다:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13671/Untitled-1.png" style="display: block; height: 1200px; margin-left: auto; margin-right: auto; width: 860px;"></p>
 
-<p><span class="translation">간단한 확장앱이지만 WebExtensions API의 기본 개념을 잘 보여줍니다.</span></p>
+<p>간단한 확장앱이지만 WebExtensions API의 기본 개념을 잘 보여줍니다.</p>
 
 <ul>
  <li>툴바에 버튼 추가</li>
@@ -86,7 +86,7 @@ cd beastify</pre>
 </pre>
 
 <ul>
- <li>위에서부터 세가지 키인 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>는 , <span class="translation">필수항목이고 확장앱의 기본 정보이다.</span></li>
+ <li>위에서부터 세가지 키인 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>는 , 필수항목이고 확장앱의 기본 정보이다.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> 과 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code>은 선택사항이나, 확장앱에관한 유용한 정보를 가지기에 권장한다.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> 도 선택사항이나 애드온 매니저에서 확장앱을 알리는 아이콘이니 권장한다.</li>
  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> 은 확장앱이 필요로 하는 권한의 목록이다. 이 확장앱에서는 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> 과 permission</a> 을 사용한다.</li>
@@ -104,24 +104,24 @@ cd beastify</pre>
 
 <h3 id="The_icon">The icon</h3>
 
-<p>확장앱은 아이콘을 가져야한다. 이 아이콘은 애드온 매니저에서 확장앱의 목록에서 보여진다.("about:addons" url을 통해 열수 있다). 이번에 만든 manifest.json는 <span class="translation">"icons / beasts-48.png" 아이콘을 정의하였다</span></p>
+<p>확장앱은 아이콘을 가져야한다. 이 아이콘은 애드온 매니저에서 확장앱의 목록에서 보여진다.("about:addons" url을 통해 열수 있다). 이번에 만든 manifest.json는 "icons / beasts-48.png" 아이콘을 정의하였다</p>
 
-<p>"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장한다. <span class="translation">우리 예제는 </span><a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a><span class="translation">에서 가져온 이미지를 </span><a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">라이센스</a><span class="translation"> 조건에 따라 사용했다.</span></p>
+<p>"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장한다. 우리 예제는 <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">Aha-Soft’s Free Retina iconset</a>에서 가져온 이미지를 <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">라이센스</a> 조건에 따라 사용했다.</p>
 
 <p>자신만의 아이콘을 사용하려면 48x48 픽셀이어야한다. 또한 고해상도를 위한 96x96 필셀도 지원한다. 만약 고해상도를 지원하게 하고싶다면 manifest.json의 아이콘 부분을 아래처럼 작성하면 된다.</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
-  <span class="key token">"48":</span> <span class="string token">"icons/beasts-48.png"</span><span class="punctuation token">,</span>
-  <span class="key token">"96":</span> <span class="string token">"icons/beasts-96.png"</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json line-numbers  language-json"><code class="language-json">"icons": {
+  "48": "icons/beasts-48.png",
+  "96": "icons/beasts-96.png"
+}</code></pre>
 
 <h3 id="The_toolbar_button">The toolbar button</h3>
 
-<p>툴바 버튼도 아이콘이 필요한데, 우리 manifest.json 파일에 툴바 버튼의 아이콘을 "icons/beasts-32.png"으로 기술하였다.</p>
+<p>툴바 버튼도 아이콘이 필요한데, 우리 manifest.json 파일에 툴바 버튼의 아이콘을 "icons/beasts-32.png"으로 기술하였다.</p>
 
-<p>"icons" 디렉토리 아래 "beasts-32.png"  파일을 저장한다. 우리는  <span class="translation">우리 예제의 </span><a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">이미지</a><span class="translation">는 </span><a href="http://www.iconbeast.com/free">IconBeast Lite icon set</a><span class="translation">에서 가져온 이미지를 </span><a href="http://www.iconbeast.com/faq/">라이센스</a><span class="translation"> 조건에 따라 사용했다.</span></p>
+<p>"icons" 디렉토리 아래 "beasts-32.png"  파일을 저장한다. 우리는  우리 예제의 <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">이미지</a>는 <a href="http://www.iconbeast.com/free">IconBeast Lite icon set</a>에서 가져온 이미지를 <a href="http://www.iconbeast.com/faq/">라이센스</a> 조건에 따라 사용했다.</p>
 
-<p><span class="translation">팝업을 제공하지 않으면 사용자가 버튼을 클릭 할 때 클릭 이벤트가 없어지게된다. </span>팝업을 제공한다면 이벤트는 없이지지않고 대신 팝업이 열린다. 우리는 팝업을 열어야하니 다음에서 팝업을 정의한다.</p>
+<p>팝업을 제공하지 않으면 사용자가 버튼을 클릭 할 때 클릭 이벤트가 없어지게된다. 팝업을 제공한다면 이벤트는 없이지지않고 대신 팝업이 열린다. 우리는 팝업을 열어야하니 다음에서 팝업을 정의한다.</p>
 
 <h3 id="The_popup">The popup</h3>
 
@@ -168,13 +168,13 @@ touch choose_beast.html choose_beast.css choose_beast.js
 &lt;/html&gt;
 </pre>
 
-<p>각각의 동물들을 보여주는 항목을 가지는 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 요소의 ID에 <code>"popup-content"</code> 를 정의하였다. 또 다른 <code>"error-content"</code> ID를 가지는 <code>&lt;div&gt;</code>는  <code>"hidden"</code> 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것이다.</p>
+<p>각각의 동물들을 보여주는 항목을 가지는 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 요소의 ID에 <code>"popup-content"</code> 를 정의하였다. 또 다른 <code>"error-content"</code> ID를 가지는 <code>&lt;div&gt;</code>는  <code>"hidden"</code> 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것이다.</p>
 
 <p>이 HTML파일은 일반 웹페이지처럼 CSS파일과 JS파일을 포함한다.</p>
 
 <h4 id="choose_beast.css">choose_beast.css</h4>
 
-<p>이 CSS는 팝업의 크기를 정의하고 선택항목의 공간을 정의하는등 기본적인 스타일링을 한다. 또한 <code>class="hidden"</code> 이라고 정의한 항목을 숨긴다. 이것은 <code>"error-content"</code> <code>&lt;div&gt;</code> 가 기본적으로는 숨겨진다는 것을 뜻한다.</p>
+<p>이 CSS는 팝업의 크기를 정의하고 선택항목의 공간을 정의하는등 기본적인 스타일링을 한다. 또한 <code>class="hidden"</code> 이라고 정의한 항목을 숨긴다. 이것은 <code>"error-content"</code> <code>&lt;div&gt;</code> 가 기본적으로는 숨겨진다는 것을 뜻한다.</p>
 
 <pre class="brush: css">html, body {
   width: 100px;
@@ -315,11 +315,11 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 </pre>
 
-<p>이 코드의 시작접은 96번째 라인이다. <span class="translation">이 스크립트는 browser.tabs.executeScript () API를 사용해 팝업이 로드될때 활성화된 탭에 </span>content script<span class="translation"> (</span>beastify.js<span class="translation">)를 주입한다.</span> content script<span class="translation">를 성공적으로 주입하면 사용자가 탭을 닫거나 페이지를 이동할 때까지 </span>content script<span class="translation">가 주입 된 상태로 유지된다.</span></p>
+<p>이 코드의 시작접은 96번째 라인이다. 이 스크립트는 browser.tabs.executeScript () API를 사용해 팝업이 로드될때 활성화된 탭에 content script (beastify.js)를 주입한다. content script를 성공적으로 주입하면 사용자가 탭을 닫거나 페이지를 이동할 때까지 content script가 주입 된 상태로 유지된다.</p>
 
-<p><code>browser.tabs.executeScript()</code>API호출이 실패하는 공통적인 이유는 모든 웹페이지에 content scripts를 주입할 수 없기 때문이다. 예를들어 about:debugging 같은 권한이 있는 페이지에서는 content scripts를 주입할 수 없고 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 도 마찬가지이다. 이처럼 실패할때는 <code>reportExecuteScriptError()</code>가 호출되어 <code>"popup-content"</code> <code>&lt;div&gt;</code> 를 숨기고 <code>"error-content"</code> <code>&lt;div&gt;</code>를 보여주고 <a href="/en-US/Add-ons/WebExtensions/Debugging">콘솔</a>에 에러를 로깅한다.</p>
+<p><code>browser.tabs.executeScript()</code>API호출이 실패하는 공통적인 이유는 모든 웹페이지에 content scripts를 주입할 수 없기 때문이다. 예를들어 about:debugging 같은 권한이 있는 페이지에서는 content scripts를 주입할 수 없고 <a href="https://addons.mozilla.org/">addons.mozilla.org</a> 도 마찬가지이다. 이처럼 실패할때는 <code>reportExecuteScriptError()</code>가 호출되어 <code>"popup-content"</code> <code>&lt;div&gt;</code> 를 숨기고 <code>"error-content"</code> <code>&lt;div&gt;</code>를 보여주고 <a href="/en-US/Add-ons/WebExtensions/Debugging">콘솔</a>에 에러를 로깅한다.</p>
 
-<p>content script 주입이 성공하면 <code>listenForClicks()</code>이 호출 된다. 이 함수는 팝업에서 클릭을 위한 리스너이다.</p>
+<p>content script 주입이 성공하면 <code>listenForClicks()</code>이 호출 된다. 이 함수는 팝업에서 클릭을 위한 리스너이다.</p>
 
 <ul>
  <li><code>"beast"</code>클래스를 가진 버튼을 클릭하면 <code>beastify()</code> 함수가 호출 된다.</li>
@@ -329,9 +329,9 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 <p><code>beastify()</code> 함수는 3가지 기능을 한다:</p>
 
 <ul>
- <li><span class="translation">클릭 한 버튼을 동물의 이미지 URL로 매핑</span></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code><span class="translation"> API로 CSS를 주입하여 페이지의 전체를 숨긴다.</span></li>
- <li><span class="translation">페이지를 동물그림으로 변경하도록 짐승 이미지 URL을 전달 요청하기 위해</span><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code><span class="translation"> API로 "beastify"메시지를 </span>content script<span class="translation">에 보낸다.</span></li>
+ <li>클릭 한 버튼을 동물의 이미지 URL로 매핑</li>
+ <li><code><a href="/en-US/Add-ons/WebExtensions/API/tabs/insertCSS">browser.tabs.insertCSS()</a></code> API로 CSS를 주입하여 페이지의 전체를 숨긴다.</li>
+ <li>페이지를 동물그림으로 변경하도록 짐승 이미지 URL을 전달 요청하기 위해<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code> API로 "beastify"메시지를 content script에 보낸다.</li>
 </ul>
 
 <p><code>reset()</code> 함수는 페이지가 동물그림으로 변경된 것을 취소한다:</p>
@@ -395,20 +395,20 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 })();
 </pre>
 
-<p>content script는<span class="translation"> 먼저 전역 변수 </span><code>window.hasRun</code><span class="translation">을 확인한다:</span> content script가 이미 실행되어 있다면 아무작업도 하지 않고, 아직 주입되어 있지않으면 <code>window.hasRun</code>를 true로 셋팅한뒤 잡업을 계속한다. <span class="translation">이 작업을 하는 이유는 팝업을 열 때마다 활성화된 탭에 </span>content script<span class="translation">를 실행하기 때문에 스크립트가 중복으로 실행되기 때문에</span> 첫번째 팝업오픈시에만 content script<span class="translation">를 실행해야한다.</span></p>
+<p>content script는 먼저 전역 변수 <code>window.hasRun</code>을 확인한다: content script가 이미 실행되어 있다면 아무작업도 하지 않고, 아직 주입되어 있지않으면 <code>window.hasRun</code>를 true로 셋팅한뒤 잡업을 계속한다. 이 작업을 하는 이유는 팝업을 열 때마다 활성화된 탭에 content script를 실행하기 때문에 스크립트가 중복으로 실행되기 때문에 첫번째 팝업오픈시에만 content script를 실행해야한다.</p>
 
-<p>그런 다음 40번째 라인에서 content script는 <span class="translation">browser.runtime.onMessage API로 팝업의 메시지를 받는다.</span> <span class="translation">위에서 봤던 팝업의 스크립트는 "beastify"와 "reset" 두 종류의 메시지를 보낸다.</span></p>
+<p>그런 다음 40번째 라인에서 content script는 browser.runtime.onMessage API로 팝업의 메시지를 받는다. 위에서 봤던 팝업의 스크립트는 "beastify"와 "reset" 두 종류의 메시지를 보낸다.</p>
 
 <ul>
- <li>"beastify" 메시지를 받으면 메시지에 동물이미지의 URL이 있다는 걸 예상할수 있다. <span class="translation">우리는 이전의 "beastify" 메시지로 추가 된 동물을 제거하고  &lt;img&gt; 요소를 만들어서 src속성에 동물 이미지 URL을 셋팅한다.</span></li>
+ <li>"beastify" 메시지를 받으면 메시지에 동물이미지의 URL이 있다는 걸 예상할수 있다. 우리는 이전의 "beastify" 메시지로 추가 된 동물을 제거하고  &lt;img&gt; 요소를 만들어서 src속성에 동물 이미지 URL을 셋팅한다.</li>
  <li>"reset" 메시지를 받으면 그냥 모든 추가된 동물을 삭제한다.</li>
 </ul>
 
 <h3 id="The_beasts">The beasts</h3>
 
-<p><span class="translation">마지막으로 동물의 이미지를 추가한다.</span></p>
+<p>마지막으로 동물의 이미지를 추가한다.</p>
 
-<p>"beasts" 디렉토리를 만들고 그 아래 적절한 이름의 이미지 세개를 추가한다.  <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">GitHub 저장소</a><span class="translation">에서 이미지를 가져올 수 있다. </span></p>
+<p>"beasts" 디렉토리를 만들고 그 아래 적절한 이름의 이미지 세개를 추가한다.  <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts">GitHub 저장소</a>에서 이미지를 가져올 수 있다. </p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/11459/frog.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11461/snake.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"><img alt="" src="https://mdn.mozillademos.org/files/11463/turtle.jpg" style="display: inline-block; height: 200px; margin: 20px; width: 200px;"></p>
 
@@ -437,7 +437,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
     manifest.json</pre>
 
-<p><span class="translation">파이어폭스 45에서 디스크로부터 임시로 확장 기능을 설치할 수 있다.</span></p>
+<p>파이어폭스 45에서 디스크로부터 임시로 확장 기능을 설치할 수 있다.</p>
 
 <p>파이어폭스에서 about:debugging를 열고 "Load Temporary Add-on"를 클릭한다음 manifest.json 파일을 선택한다. 그러면 파이어폭스 툴바에서 버튼을 볼수 있을것이다.</p>
 

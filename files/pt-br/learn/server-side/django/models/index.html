@@ -32,13 +32,13 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>Antes de começarmos a criar nossos modelos, vale a pena perder alguns minutos pensando sobre os dados que iremos guardar e as relações entre os diferentes modelos que serão criados.</p>
 
-<p>Sabemos que precisamos armazenar informação sobre os livros (título, resumo, autor, idioma, gênero, ISBN) e também que existem várias cópias do mesmo livro na biblioteca (com um id único, status de disponibilidade, etc.). Talvez queiramos armazenar mais informações sobre o autor além de somente seu nome, até porque existem vários autores com o mesmo nome, ou com nomes parecidos. Queremos ordernar a busca dos livros por título, autor, idioma e gênero.</p>
+<p>Sabemos que precisamos armazenar informação sobre os livros (título, resumo, autor, idioma, gênero, ISBN) e também que existem várias cópias do mesmo livro na biblioteca (com um id único, status de disponibilidade, etc.). Talvez queiramos armazenar mais informações sobre o autor além de somente seu nome, até porque existem vários autores com o mesmo nome, ou com nomes parecidos. Queremos ordernar a busca dos livros por título, autor, idioma e gênero.</p>
 
 <p>Quando estamos projetando nossos modelos, faz sentido criar modelos separados para cada "objeto". Em nosso caso de estudo, os "objetos" são os livros (a informação de cada livro, não a cópia em si), as cópias dos livros (um livro pode ter mais de uma cópia) e os autores.</p>
 
-<p>Você pode também utilizar modelos para representar opções em uma lista de seleção (por exemplo numa lista suspensa), o que é melhor do que trabalhar com opções predefinidas — isso é recomendado quando nem todas as opções são conhecidas ou podem mudar de acordo com um filtro. Obviamente, para nosso tutorial, modelos candidatos para esse caso são o gênero e o idioma.</p>
+<p>Você pode também utilizar modelos para representar opções em uma lista de seleção (por exemplo numa lista suspensa), o que é melhor do que trabalhar com opções predefinidas — isso é recomendado quando nem todas as opções são conhecidas ou podem mudar de acordo com um filtro. Obviamente, para nosso tutorial, modelos candidatos para esse caso são o gênero e o idioma.</p>
 
-<p>Após decidirmos nossos modelos e campos, precisamos pensar no relacionamento dessas informações. Django permite que você defina relações que são um pra um (<code>OneToOneField</code>), um pra muitos (<code>ForeignKey</code>) e muitos pra muitos (<code>ManyToManyField</code>).</p>
+<p>Após decidirmos nossos modelos e campos, precisamos pensar no relacionamento dessas informações. Django permite que você defina relações que são um pra um (<code>OneToOneField</code>), um pra muitos (<code>ForeignKey</code>) e muitos pra muitos (<code>ManyToManyField</code>).</p>
 
 <p>Com isso em mente, os diagramas UML de associação, mostram abaixo os modelos que definiremos nesse caso (como caixas).</p>
 
@@ -64,24 +64,24 @@ translation_of: Learn/Server-side/Django/Models
 <pre class="notranslate">from django.db import models
 
 class MyModelName(models.Model):
-    """Uma típica classe definindo um modelo, derivada da classe Model."""
+    """Uma típica classe definindo um modelo, derivada da classe Model."""
 
-    # Campos
-    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
-    ...
+    # Campos
+    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    ...
 
-    # Metadados
+    # Metadados
     class Meta:
-        ordering = ['-my_field_name']
+        ordering = ['-my_field_name']
 
-    # Métodos
-    def get_absolute_url(self):
-        """Retorna a url para acessar uma instancia específica de MyModelName."""
-        return reverse('model-detail-view', args=[str(self.id)])
+    # Métodos
+    def get_absolute_url(self):
+        """Retorna a url para acessar uma instancia específica de MyModelName."""
+        return reverse('model-detail-view', args=[str(self.id)])
 
-    def __str__(self):
+    def __str__(self):
         """ String para representar o objeto MyModelName (no site Admin)."""
-        return self.my_field_name</pre>
+        return self.my_field_name</pre>
 
 <p>Nas seções abaixa, exploraremos detalhadamente cada um dos recursos dentro do modelo:</p>
 
@@ -112,11 +112,11 @@ class MyModelName(models.Model):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text">help_text</a>: <span class="tlid-translation translation" lang="pt"><span title="">Fornece um rótulo de texto para formulários HTML (por exemplo, no site admin), conforme descrito acima.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um nome legível para o campo usado nos rótulos de campo.</span> <span title="">Se não for especificado, o Django irá inferir o nome detalhado do campo <code>name</code>.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: <span class="tlid-translation translation" lang="pt"><span title="">O valor padrão para o campo.</span> <span title="">Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: <span class="tlid-translation translation" lang="pt"><span title="">Se for <code>True</code>, o Django armazenará valores em branco como <code>NULL</code> no banco de dados, para campos onde isso é apropriado (um <code>CharField </code>irá armazenar uma string vazia).</span> <span title="">O padrão é <code>False</code></span></span>.</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name">verbose_name</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um nome legível para o campo usado nos rótulos de campo.</span> <span title="">Se não for especificado, o Django irá inferir o nome detalhado do campo <code>name</code>.</span></span></li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#default">default</a>: <span class="tlid-translation translation" lang="pt"><span title="">O valor padrão para o campo.</span> <span title="">Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.</span></span></li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#null">null</a>: <span class="tlid-translation translation" lang="pt"><span title="">Se for <code>True</code>, o Django armazenará valores em branco como <code>NULL</code> no banco de dados, para campos onde isso é apropriado (um <code>CharField </code>irá armazenar uma string vazia).</span> <span title="">O padrão é <code>False</code></span></span>.</li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank">blank</a>:<span class="tlid-translation translation" lang="pt"><span title="">Se for <code>True</code>, o campo poderá ficar em branco nos seus formulários.</span> <span title="">O padrão é <code>False</code>, o que significa que a validação de formulário do Django forçará você a inserir um valor.</span> <span title="">Isso é frequentemente usado com <code>null = True</code>, porque se você permitir valores em branco, também desejará que o banco de dados possa representá-los adequadamente.</span></span></li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um grupo de escolhas para este campo.</span> <span title="">Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.</span></span></li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices">choices</a>: <span class="tlid-translation translation" lang="pt"><span title="">Um grupo de escolhas para este campo.</span> <span title="">Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.</span></span></li>
  <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key">primary_key</a>:<span class="tlid-translation translation" lang="pt"><span title="">Se <code>True,</code> define o campo atual como a chave primária do modelo (uma chave primária é uma coluna especial do banco de dados, designada para identificar exclusivamente as diferentes tabelas) .</span> <span title="">Se nenhum campo for especificado como a chave primária, o Django adicionará automaticamente um campo para essa finalidade.</span></span></li>
 </ul>
 
@@ -173,7 +173,7 @@ class MyModelName(models.Model):
 <p><strong>Minimamente, em cada modelo você deve definir o método de classe padrão do Python <code>__str__()</code> para retornar uma string legível para cada objeto.</strong> Essa sequência é usada para representar registros individuais no site de administração (e em qualquer outro lugar que você precise se referir a uma instância de modelo). Muitas vezes isso retornará um campo de título ou nome do modelo.</p>
 
 <pre class="brush: python notranslate">def __str__(self):
-    return self.field_name</pre>
+    return self.field_name</pre>
 
 <p>Outro método comum a incluir nos modelos do Django é o <code>get_absolute_url()</code>, que retorna uma URL para exibir registros de modelos individuais no site (se você definir esse método, o Django adicionará automaticamente um botão "View on Site" às ​​telas de edição de registros do modelo o site Admin). Um padrão típico para <code>get_absolute_url ()</code> é mostrado abaixo.</p>
 
@@ -224,7 +224,7 @@ record.save()</pre>
 <p>Você pode procurar registros que correspondam a um determinado critério usando o atributo de objetos do modelo (fornecido pela classe base).</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Explicar como procurar registros usando nomes de campos e modelos "abstratos" pode ser um pouco confuso. Na discussão abaixo, vamos nos referir a um modelo de livro com campos de título e gênero, onde o gênero também é um modelo com um único <code>nome</code> de campo.</p>
+<p><strong>Nota: </strong>Explicar como procurar registros usando nomes de campos e modelos "abstratos" pode ser um pouco confuso. Na discussão abaixo, vamos nos referir a um modelo de livro com campos de título e gênero, onde o gênero também é um modelo com um único <code>nome</code> de campo.</p>
 </div>
 
 <p>Podemos obter todos os registros para um modelo como um <code>QuerySet</code>, usando<code> objects.all ()</code>. O <code>QuerySet</code> é um objeto iterável, o que significa que ele contém um número de objetos que podemos iterar / percorrer.</p>
@@ -232,7 +232,7 @@ record.save()</pre>
 <pre class="brush: python notranslate">all_books = Book.objects.all()
 </pre>
 
-<p>O método <code>filter ()</code> do Django nos permite filtrar o <code>QuerySet</code> retornado para corresponder a um campo especificado de <strong>texto</strong> ou <strong>numérico</strong> em relação a um critério específico. Por exemplo, para filtrar por livros que contenham "wild" no título e, em seguida, contá-los, poderíamos fazer o seguinte.</p>
+<p>O método <code>filter ()</code> do Django nos permite filtrar o <code>QuerySet</code> retornado para corresponder a um campo especificado de <strong>texto</strong> ou <strong>numérico</strong> em relação a um critério específico. Por exemplo, para filtrar por livros que contenham "wild" no título e, em seguida, contá-los, poderíamos fazer o seguinte.</p>
 
 <pre class="brush: python notranslate">wild_books = Book.objects.filter(title__contains='wild')
 number_wild_books = Book.objects.filter(title__contains='wild').count()
@@ -254,7 +254,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <h2 id="Definindo_os_modelos_LocalLibrary">Definindo os modelos LocalLibrary</h2>
 
-<p>Nesta seção, começaremos a definir os modelos para a biblioteca. Abra models.py (em / locallibrary / catalog /). O código na parte superior da página importa o módulo de models, que contém os modelos da classe base do models. Modelo do qual nossos models herdarão.</p>
+<p>Nesta seção, começaremos a definir os modelos para a biblioteca. Abra models.py (em / locallibrary / catalog /). O código na parte superior da página importa o módulo de models, que contém os modelos da classe base do models. Modelo do qual nossos models herdarão.</p>
 
 <pre class="brush: python notranslate">from django.db import models
 
@@ -262,7 +262,7 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
 
 <h3 id="Genre_model">Genre model</h3>
 
-<p>Copie o código do model <code>Genre</code> , que aparece a baixo, e cole no seu arquivo <code>models.py</code> , abaixo do código de importação.  Esse model  guarda informaçoes sobre a categoria do livro — por exemplo se é ficção ou não ficção, romance ou história, etc. Como mencionado acima, criamos o genero como um model em vez de um campo de texto ou um lista de seleção para que os possíveis generos criados possam ser gerenciados pelo banco de dados, em vez de serem codificados.</p>
+<p>Copie o código do model <code>Genre</code> , que aparece a baixo, e cole no seu arquivo <code>models.py</code> , abaixo do código de importação.  Esse model  guarda informaçoes sobre a categoria do livro — por exemplo se é ficção ou não ficção, romance ou história, etc. Como mencionado acima, criamos o genero como um model em vez de um campo de texto ou um lista de seleção para que os possíveis generos criados possam ser gerenciados pelo banco de dados, em vez de serem codificados.</p>
 
 <pre class="syntaxbox notranslate">class Genre(models.Model):
     """Model representing a book genre."""
@@ -272,52 +272,52 @@ books_containing_genre = Book.objects.filter(genre<strong>__</strong>name<strong
         """String for representing the Model object."""
         return self.name</pre>
 
-<p class="syntaxbox">O model tem apenas um campo do tipo <code>CharField</code> (<code>name</code>), que é usado para descrever o genero (esse campo é limitado a 200 caracteres e tem um <code>help_text</code>). No final da classe Genre declaramos o metodo  <code>__str__()</code> que retorna o nome do genero definido por um registro especifico. Não foi definido um argumento <code>verbose_name</code> , assim o campo será referenciado como  <code>Name</code> nos forms.</p>
+<p class="syntaxbox">O model tem apenas um campo do tipo <code>CharField</code> (<code>name</code>), que é usado para descrever o genero (esse campo é limitado a 200 caracteres e tem um <code>help_text</code>). No final da classe Genre declaramos o metodo  <code>__str__()</code> que retorna o nome do genero definido por um registro especifico. Não foi definido um argumento <code>verbose_name</code> , assim o campo será referenciado como  <code>Name</code> nos forms.</p>
 
 <h3 id="Book_model">Book model</h3>
 
-<p>Copie o model Book abaixo e cole novamente ao final do seu arquivo. O model Book representa todas as informações disponíveis sobre um livro de maneira geral, mas não incluí detalhes sobre o formato do encadernamento ou disponibilidade para empréstimo. O model usa um <code>CharField</code> para representar o  <code>title</code> (tílutlo) do livro e o <code>isbn</code> (veja que o <code>isbn</code> recebe um rótulo como "ISBN", usando o primeiro parâmetro não nomeado, porque, de outra forma, o rótulo ficaria "Isbn"). O model usa <code>TextField</code> para o campo <code>summary</code> porque ele precisa ser um tanto longo.</p>
+<p>Copie o model Book abaixo e cole novamente ao final do seu arquivo. O model Book representa todas as informações disponíveis sobre um livro de maneira geral, mas não incluí detalhes sobre o formato do encadernamento ou disponibilidade para empréstimo. O model usa um <code>CharField</code> para representar o  <code>title</code> (tílutlo) do livro e o <code>isbn</code> (veja que o <code>isbn</code> recebe um rótulo como "ISBN", usando o primeiro parâmetro não nomeado, porque, de outra forma, o rótulo ficaria "Isbn"). O model usa <code>TextField</code> para o campo <code>summary</code> porque ele precisa ser um tanto longo.</p>
 
 <pre class="notranslate">from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
 class Book(models.Model):
-    """Model representing a book (but not a specific copy of a book)."""
-    title = models.CharField(max_length=200)
+    """Model representing a book (but not a specific copy of a book)."""
+    title = models.CharField(max_length=200)
 
     # Foreign Key used because book can only have one author, but authors can have multiple books
     # Author as a string rather than object because it hasn't been declared yet in the file
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
 
-    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
-    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
+    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
+    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character &lt;a href="https://www.isbn-international.org/content/what-isbn"&gt;ISBN number&lt;/a&gt;')
 
-    # ManyToManyField used because genre can contain many books. Books can cover many genres.
-    # Genre class has already been defined so we can specify the object above.
+    # ManyToManyField used because genre can contain many books. Books can cover many genres.
+    # Genre class has already been defined so we can specify the object above.
     genre = models.ManyToManyField(Genre, help_text='Select a genre for this book')
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.title
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.title
 
-    def get_absolute_url(self):
-        """Returns the url to access a detail record for this book."""
-        return reverse('book-detail', args=[str(self.id)])</pre>
+    def get_absolute_url(self):
+        """Returns the url to access a detail record for this book."""
+        return reverse('book-detail', args=[str(self.id)])</pre>
 
-<p>Genre é um campo <code>ManyToManyField</code>, de forma que um livro pode ter múltiplos gêneros e um gênero pode ter muitos livros. O campor Author é declarado como um <code>ForeignKey</code>, logo, cada livro terá somente um autor, mas um autor por der muitos livros (na prática, um livro pode ter múltiplos autores, mas não nesta implementação!)</p>
+<p>Genre é um campo <code>ManyToManyField</code>, de forma que um livro pode ter múltiplos gêneros e um gênero pode ter muitos livros. O campor Author é declarado como um <code>ForeignKey</code>, logo, cada livro terá somente um autor, mas um autor por der muitos livros (na prática, um livro pode ter múltiplos autores, mas não nesta implementação!)</p>
 
-<p>Em ambos tipos de campo, a classe model relacionada é declarada como primeiro campo não nomeado usando a classe model ou contendo o nome do modelo relacionado. Você deve usar o nome do model como uma string se a classe associada ainda não tiver sido definida no arquivo, antes de referenciá-la. Outro parâmetro de interesse no campo <code>author</code> é <code>null=True</code>, o qual permite ao banco de dados armazer um valor <code>Null</code> se nenhum autor for selecionado, e, <code>on_delete=models.SET_NULL</code>, o qual definirá o valor <code>author</code> como <code>Null</code> se o registro do autor associado for excluído.</p>
+<p>Em ambos tipos de campo, a classe model relacionada é declarada como primeiro campo não nomeado usando a classe model ou contendo o nome do modelo relacionado. Você deve usar o nome do model como uma string se a classe associada ainda não tiver sido definida no arquivo, antes de referenciá-la. Outro parâmetro de interesse no campo <code>author</code> é <code>null=True</code>, o qual permite ao banco de dados armazer um valor <code>Null</code> se nenhum autor for selecionado, e, <code>on_delete=models.SET_NULL</code>, o qual definirá o valor <code>author</code> como <code>Null</code> se o registro do autor associado for excluído.</p>
 
-<p>O mode também defini <code>__str__()</code>, usando o <code>title</code> do livro para representar o registro do <code>Book</code>. O método final, <code>get_absolute_url()</code>, retorna a URL que pode ser usada para acessar o registro detalhado deste modelo (para que isto funcione, teremos que definir um mapa de URL com o nome <code>book-detail</code> e associá-la a uma view e a um template.).</p>
+<p>O mode também defini <code>__str__()</code>, usando o <code>title</code> do livro para representar o registro do <code>Book</code>. O método final, <code>get_absolute_url()</code>, retorna a URL que pode ser usada para acessar o registro detalhado deste modelo (para que isto funcione, teremos que definir um mapa de URL com o nome <code>book-detail</code> e associá-la a uma view e a um template.).</p>
 
 <h3 id="BookInstance_model">BookInstance model</h3>
 
-<p>Em seguida, copie o modelo <code>BookInstance</code> (exibido a abaixo) depois dos outros modelos. O <code>BookInstance</code> representa um exemplar específico do livro que pode ser emprestado, indica se ela está disponível ou a data programada de restituição, "imprint" ou detalhes da versão, e, um id único do livro na biblioteca.</p>
+<p>Em seguida, copie o modelo <code>BookInstance</code> (exibido a abaixo) depois dos outros modelos. O <code>BookInstance</code> representa um exemplar específico do livro que pode ser emprestado, indica se ela está disponível ou a data programada de restituição, "imprint" ou detalhes da versão, e, um id único do livro na biblioteca.</p>
 
-<p>Alguns dos campos e métodos serão familiares agora. O model usa</p>
+<p>Alguns dos campos e métodos serão familiares agora. O model usa</p>
 
 <ul>
- <li><code>ForeignKey</code> para identificar o <code>Book</code> associado (cada livro pode ter muitos exemplares, porém uma cópia pode ter sometne um <code>Book</code>).</li>
- <li><code>CharField</code> para representar o imprint (edição específica) do livro.</li>
+ <li><code>ForeignKey</code> para identificar o <code>Book</code> associado (cada livro pode ter muitos exemplares, porém uma cópia pode ter sometne um <code>Book</code>).</li>
+ <li><code>CharField</code> para representar o imprint (edição específica) do livro.</li>
 </ul>
 
 <pre class="brush: python notranslate">import uuid # Required for unique book instances
@@ -354,45 +354,45 @@ class BookInstance(models.Model):
 <p>Nós declaramos adicionalmente alguns tipos novos de campos:</p>
 
 <ul>
- <li><code>UUIDField</code> é usado no campo <code>id</code> para definí-lo como <code>primary_key</code> deste model. Este tipo de campo aloca um valor único global para cada instância (um para cada livro encontrado na biblioteca).</li>
- <li><code>DateField</code> é usado para a data <code>due_back</code> (na qual o livro deve retonar e ficar disponível após um empréstimo ou uma manutenção). O valor pode ser <code>blank</code> ou <code>null</code> (para quando o livro estiver disponível). O model metadata (<code>Class Meta</code>) usa este campo para ordenar os registros quando eles são retornados em uma query.</li>
- <li><code>status</code> é um <code>CharField</code> que define uma lista de opção/seleção. Como pode ser visto, nós definimos uma dupla contendo pares de valores-chave e a passamos no argumento da opção. O valor do par valor-chave é um valor que o usuário pode selecionar, enquanto que a chave é o valor que  realmetne será salvo se a opção for selecionada. Nós também definimos um valor default como "m" (maintenance), uma vez que os livros serão inicialmente criados como indisponíveis até que eles sejam disponibilizados nas prateleiras.</li>
+ <li><code>UUIDField</code> é usado no campo <code>id</code> para definí-lo como <code>primary_key</code> deste model. Este tipo de campo aloca um valor único global para cada instância (um para cada livro encontrado na biblioteca).</li>
+ <li><code>DateField</code> é usado para a data <code>due_back</code> (na qual o livro deve retonar e ficar disponível após um empréstimo ou uma manutenção). O valor pode ser <code>blank</code> ou <code>null</code> (para quando o livro estiver disponível). O model metadata (<code>Class Meta</code>) usa este campo para ordenar os registros quando eles são retornados em uma query.</li>
+ <li><code>status</code> é um <code>CharField</code> que define uma lista de opção/seleção. Como pode ser visto, nós definimos uma dupla contendo pares de valores-chave e a passamos no argumento da opção. O valor do par valor-chave é um valor que o usuário pode selecionar, enquanto que a chave é o valor que  realmetne será salvo se a opção for selecionada. Nós também definimos um valor default como "m" (maintenance), uma vez que os livros serão inicialmente criados como indisponíveis até que eles sejam disponibilizados nas prateleiras.</li>
 </ul>
 
-<p>O model <code>__str__()</code> representa o objeto <code>BookInstance</code> usando a combinação do seu id único e o título do <code>Book</code> associado.</p>
+<p>O model <code>__str__()</code> representa o objeto <code>BookInstance</code> usando a combinação do seu id único e o título do <code>Book</code> associado.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Um pouco sobre Python:</p>
+<p><strong>Nota</strong>: Um pouco sobre Python:</p>
 
 <ul>
- <li>Começando com Python 3.6, pode ser usada a sintaxe de interpolação  (também conhecida como f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
- <li>Em versões anteriores deste tutorial, nós estávamos usando a sintaxe de  <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a>, a qual também é uma maneira válida de formatar  strings em Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
+ <li>Começando com Python 3.6, pode ser usada a sintaxe de interpolação  (também conhecida como f-strings): <code>f'{self.id} ({self.book.title})'</code>.</li>
+ <li>Em versões anteriores deste tutorial, nós estávamos usando a sintaxe de  <a href="https://www.python.org/dev/peps/pep-3101/">formatted string</a>, a qual também é uma maneira válida de formatar  strings em Python (e.g. <code>'{0} ({1})'.format(self.id,self.book.title)</code>).</li>
 </ul>
 </div>
 
 <h3 id="Author_model">Author model</h3>
 
-<p>Copie o model <code>Author</code> (exibido abaixo) na sequência do código existente em  <strong>models.py</strong>.</p>
+<p>Copie o model <code>Author</code> (exibido abaixo) na sequência do código existente em  <strong>models.py</strong>.</p>
 
-<p>Todos os campos/métodos já devem ser familiares agora. O model define um autor como tendo um nome, sobrenome, data de nascimento e data de morte (opcionalmente). Ele especifica que <code>__str__()</code> retorna por default sobrenome e nome, nesta ordem. O método <code>get_absolute_url()</code> reverte o mapaeamento da URL <code>author-detail</code> para obter a URL de display individual author.</p>
+<p>Todos os campos/métodos já devem ser familiares agora. O model define um autor como tendo um nome, sobrenome, data de nascimento e data de morte (opcionalmente). Ele especifica que <code>__str__()</code> retorna por default sobrenome e nome, nesta ordem. O método <code>get_absolute_url()</code> reverte o mapaeamento da URL <code>author-detail</code> para obter a URL de display individual author.</p>
 
 <pre class="brush: python notranslate">class Author(models.Model):
-    """Model representing an author."""
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    """Model representing an author."""
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    class Meta:
-        ordering = ['last_name', 'first_name']
+    class Meta:
+        ordering = ['last_name', 'first_name']
 
-    def get_absolute_url(self):
-        """Returns the url to access a particular author instance."""
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        """Returns the url to access a particular author instance."""
+        return reverse('author-detail', args=[str(self.id)])
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return f'{self.last_name}, {self.first_name}'
+    def __str__(self):
+        """String for representing the Model object."""
+        return f'{self.last_name}, {self.first_name}'
 
 </pre>
 
@@ -405,16 +405,16 @@ python3 manage.py migrate</code></pre>
 
 <h2 id="Language_model_—_desafio">Language model — desafio</h2>
 
-<p>Considere que um benfeitor local doe uma quantidade de livros escritos em outro idioma (digamos, Farsi). O desafio é desenvolver como eles seriam melhor representados no website da nossa biblioteca, e, então, adicioná-lo no models.</p>
+<p>Considere que um benfeitor local doe uma quantidade de livros escritos em outro idioma (digamos, Farsi). O desafio é desenvolver como eles seriam melhor representados no website da nossa biblioteca, e, então, adicioná-lo no models.</p>
 
 <p>Algumas coisas a considerar:</p>
 
 <ul>
- <li>O idioma seria associado ao  <code>Book</code>, <code>BookInstance</code>, ou algum outro objeto?</li>
- <li>Os diferentes idiomas seriam representados usando model, como campo de texto livre ou codificado como uma lista de seleção?</li>
+ <li>O idioma seria associado ao  <code>Book</code>, <code>BookInstance</code>, ou algum outro objeto?</li>
+ <li>Os diferentes idiomas seriam representados usando model, como campo de texto livre ou codificado como uma lista de seleção?</li>
 </ul>
 
-<p>Depois de decidido, adicione o campo. Pode ser visto o que decidimos no Github <a href="https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py">aqui</a>.</p>
+<p>Depois de decidido, adicione o campo. Pode ser visto o que decidimos no Github <a href="https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py">aqui</a>.</p>
 
 <ul>
 </ul>
@@ -424,16 +424,16 @@ python3 manage.py migrate</code></pre>
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>Neste artículo vimos como os  models são definidos, e, então, usamos esta informação para desenhar e implementar modelos apropriados para o website  <em>LocalLibrary</em>.</p>
+<p>Neste artículo vimos como os  models são definidos, e, então, usamos esta informação para desenhar e implementar modelos apropriados para o website  <em>LocalLibrary</em>.</p>
 
-<p>Neste ponto faremos um rápido desvio da criação do site para ver o <em>Django Administration site</em>. Este site nos permitirá adicionar alguns dados à biblioteca, os quais podemos então exibir usando nossos próprios views e templates (ainda não criados).</p>
+<p>Neste ponto faremos um rápido desvio da criação do site para ver o <em>Django Administration site</em>. Este site nos permitirá adicionar alguns dados à biblioteca, os quais podemos então exibir usando nossos próprios views e templates (ainda não criados).</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.1/intro/tutorial02/">Escrevendo nossa primeira app Django, parte 2</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Fazendo queries</a> (Django Docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">Referência a QuerySet API</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/">Fazendo queries</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.1/ref/models/querysets/">Referência a QuerySet API</a> (Django Docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}</p>
@@ -445,14 +445,14 @@ python3 manage.py migrate</code></pre>
  <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial Django: Website de uma biblioteca local</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando o escopo do website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Utilizando models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: Lista genérica e detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: Framework de Sessões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: Autenticação de Usuário e permissões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: Trabalhando com formulários</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: Testando uma aplicação web Django</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Utilizando models</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: Lista genérica e detail views</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: Framework de Sessões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: Autenticação de Usuário e permissões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: Trabalhando com formulários</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: Testando uma aplicação web Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Segurança de aplicações Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>

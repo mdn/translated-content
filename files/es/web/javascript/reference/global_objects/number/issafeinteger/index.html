@@ -21,12 +21,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isSafeInteger
 
 <ul>
  <li>puede ser exactamente representado como un número IEEE-754 de doble presición, y</li>
- <li>su representación IEEE-754 no puede ser el resultado de redondear cualquier otro entero para  adaptarse a la representación de IEEE-754.</li>
+ <li>su representación IEEE-754 no puede ser el resultado de redondear cualquier otro entero para  adaptarse a la representación de IEEE-754.</li>
 </ul>
 
-<p>Por ejemplo, <code>2<sup>53</sup> - 1</code> es un entero seguro: puede ser exactamente representado y ningún otro entero puede ser redondeado a él bajo cualquier modo de redondeo de IEEE-754. En contraste, <code>2<sup>53</sup></code> <em>no</em> es un entero seguro, puede ser exactamente representado en IEEE-754, pero el entero <code>2<sup>53</sup> + 1</code> no puede ser directamente representado en IEEE-754 pero en su lugar, redondea a <code>2<sup>53</sup></code> bajo los modos de redondeo <em>redondeo-al-más-cercano</em> y <em>redondeo-a-cero</em>.  Los enteros seguros consisten en todos los enteros desde <code>-(2<sup>53</sup> - 1)</code> inclusivo, hasta <code>2<sup>53</sup> - 1</code> inclusivo (± <code>9007199254740991</code> o ± 9,007,199,254,740,991).  </p>
+<p>Por ejemplo, <code>2<sup>53</sup> - 1</code> es un entero seguro: puede ser exactamente representado y ningún otro entero puede ser redondeado a él bajo cualquier modo de redondeo de IEEE-754. En contraste, <code>2<sup>53</sup></code> <em>no</em> es un entero seguro, puede ser exactamente representado en IEEE-754, pero el entero <code>2<sup>53</sup> + 1</code> no puede ser directamente representado en IEEE-754 pero en su lugar, redondea a <code>2<sup>53</sup></code> bajo los modos de redondeo <em>redondeo-al-más-cercano</em> y <em>redondeo-a-cero</em>.  Los enteros seguros consisten en todos los enteros desde <code>-(2<sup>53</sup> - 1)</code> inclusivo, hasta <code>2<sup>53</sup> - 1</code> inclusivo (± <code>9007199254740991</code> o ± 9,007,199,254,740,991).  </p>
 
-<p>Manejar valores más grandes o más pequeños que ~9 cuatrillones con presición completa requiere usar una <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">biblioteca de artimética de presición arbitraria</a>.  Ver <a href="http://floating-point-gui.de/">Lo que todo programador necesita saber sobre aritmética de punto flotante</a> para más información sobre representaciones de punto flotante de los números.</p>
+<p>Manejar valores más grandes o más pequeños que ~9 cuatrillones con presición completa requiere usar una <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">biblioteca de artimética de presición arbitraria</a>.  Ver <a href="http://floating-point-gui.de/">Lo que todo programador necesita saber sobre aritmética de punto flotante</a> para más información sobre representaciones de punto flotante de los números.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -80,7 +80,7 @@ Number.isSafeInteger(3.0);                  // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

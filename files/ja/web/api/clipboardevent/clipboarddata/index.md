@@ -40,6 +40,6 @@ data = ClipboardEvent.clipboardData
 
 ## 関連情報
 
-- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - 所属先の {{domxref("ClipboardEvent")}} インターフェイス
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)

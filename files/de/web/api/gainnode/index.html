@@ -6,10 +6,10 @@ translation_of: Web/API/GainNode
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>Die <code>GainNode</code> Schnittstelle ermöglicht eine Verstärkung (engl. gain) eines Signals, was als veränderte Lautstärke wahrgenommen wird. Es handelt sich um ein {{domxref("AudioNode")}} audio-verarbeitendes Modul, das ein Eingabesignal mit einer gewissen Verstärkung (die auch negativ sein kann) versieht, und es an den Ausgang weiterleitet. Ein <code>GainNode</code> hat immer genau einen Eingang und einen Ausgang, beide mit derselben Anzahl an Kanälen.</p>
+<p>Die <code>GainNode</code> Schnittstelle ermöglicht eine Verstärkung (engl. gain) eines Signals, was als veränderte Lautstärke wahrgenommen wird. Es handelt sich um ein {{domxref("AudioNode")}} audio-verarbeitendes Modul, das ein Eingabesignal mit einer gewissen Verstärkung (die auch negativ sein kann) versieht, und es an den Ausgang weiterleitet. Ein <code>GainNode</code> hat immer genau einen Eingang und einen Ausgang, beide mit derselben Anzahl an Kanälen.</p>
 </div>
 
-<p>Verstärkung ist ein Wert ohne Einheit, der sich über die Zeit ändert. Er wird mit allen zeitlich korrespondierenden Samples aller Eingangskanäle multipliziert, um das Signal zu verändern.  Ändert sich der Wert, wird der neue Wert durch einen "de-zippering" Algorithmus angewendet, um unästhetisches Klick-Artifakte im Signal zu vermeiden.</p>
+<p>Verstärkung ist ein Wert ohne Einheit, der sich über die Zeit ändert. Er wird mit allen zeitlich korrespondierenden Samples aller Eingangskanäle multipliziert, um das Signal zu verändern.  Ändert sich der Wert, wird der neue Wert durch einen "de-zippering" Algorithmus angewendet, um unästhetisches Klick-Artifakte im Signal zu vermeiden.</p>
 
 <p><img alt="The GainNode is increasing the gain of the output." src="https://mdn.mozillademos.org/files/5085/WebAudioGainNode.png" style="height: 116px; width: 774px;"></p>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/GainNode
 
 <dl>
  <dt>{{domxref("GainNode.gain")}} {{readonlyinline}}</dt>
- <dd>Ist ein <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} der das Ausmaß der Verstärkung angibt.</dd>
+ <dd>Ist ein <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} der das Ausmaß der Verstärkung angibt.</dd>
 </dl>
 
 <h2 id="Methoden">Methoden</h2>
@@ -67,68 +67,17 @@ translation_of: Web/API/GainNode
   <tr>
    <td>{{SpecName('Web Audio API', '#the-gainnode-interface', 'GainNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(10.0)}}{{property_prefix("webkit")}}</td>
-   <td>{{CompatGeckoDesktop(25.0)}} </td>
-   <td>{{CompatNo}}</td>
-   <td>15.0{{property_prefix("webkit")}}<br>
-    22</td>
-   <td>6.0{{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>26.0</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>33.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Die Web Audio API</a> benutzen</li>
+ <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Die Web Audio API</a> benutzen</li>
 </ul>

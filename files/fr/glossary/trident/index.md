@@ -13,4 +13,4 @@ Trident (ou MSHTML) est un moteur de rendu qui fait fonctionner {{Glossary("Micr
 
 ## En apprendre plus
 
-- [Trident (moteur de rendu)](https://fr.wikipedia.org/wiki/Trident_%28moteur_de_rendu%29) sur Wikipedia
+- [Trident (moteur de rendu)](https://fr.wikipedia.org/wiki/Trident_%28moteur_de_rendu%29) sur Wikipédia

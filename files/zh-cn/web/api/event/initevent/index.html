@@ -5,17 +5,17 @@ translation_of: Web/API/Event/initEvent
 ---
 <div>{{ ApiRef("DOM") }}{{deprecated_header}}</div>
 
-<p><strong><code>Event.initEvent()</code></strong> 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。</p>
+<p><strong><code>Event.initEvent()</code></strong> 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。</p>
 
 <p>用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例。本方法必须在事件被触发之前调用（用{{ domxref("EventTarget.dispatchEvent()") }}调用）.事件 一旦被调用，便不再做其他任何事。</p>
 
 <div class="note">
 <p><strong>不建议再使用此方法（方法已经过时 deprecated）</strong></p>
 
-<p>可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> .</p>
+<p>可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> .</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Event/initEvent
  <dd>一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。</dd>
 </dl>
 
-<h2 id="Example" name="Example">范例</h2>
+<h2 id="Example">范例</h2>
 
 <pre><code>// 创建事件。
 var event = document.createEvent('Event');
@@ -49,7 +49,7 @@ elem.dispatchEvent(event);</code>
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容</h2>
+<h2 id="Browser_compatibility">浏览器兼容</h2>
 
 {{Compat("api.Event.initEvent")}}
 

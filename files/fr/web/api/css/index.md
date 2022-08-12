@@ -40,4 +40,4 @@ _Aucun héritage de méthode statique_.
 
 ## Voir également
 
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

@@ -38,7 +38,7 @@ delete <em>object</em>['<em>property</em>']
 
 <h3 id="반환_값">반환 값</h3>
 
-<p><code>true</code>. 단, 비엄격 모드에서 속성이 {{jsxref("Object.prototype.hasOwnProperty", "자신의 속성", "", 0)}}이며 <a href="/ko/docs/Web/JavaScript/Reference/Errors/Cant_delete">설정 불가능</a>한 경우 <code>false</code>.</p>
+<p><code>true</code>. 단, 비엄격 모드에서 속성이 {{jsxref("Object.prototype.hasOwnProperty", "자신의 속성", "", 0)}}이며 <a href="/ko/docs/Web/JavaScript/Reference/Errors/Cant_delete">설정 불가능</a>한 경우 <code>false</code>.</p>
 
 <h3 id="예외">예외</h3>
 
@@ -46,27 +46,27 @@ delete <em>object</em>['<em>property</em>']
 
 <h2 id="설명">설명</h2>
 
-<p>일반적으로 생각하고 있는것과는 다르게 <code>delete</code> 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 <a href="/en-US/docs/Web/JavaScript/Memory_Management">memory management</a> 를 보세요.</p>
+<p>일반적으로 생각하고 있는것과는 다르게 <code>delete</code> 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 <a href="/en-US/docs/Web/JavaScript/Memory_Management">memory management</a> 를 보세요.</p>
 
-<p><code><strong>delete</strong></code>연산자는 오브젝트로 부터 해당 프로퍼티를 삭제합니다. 삭제를 하면 true를 반환, 아니면 false를 반환합니다. 그렇지만 아래 경우를 고려해야만 합니다. </p>
+<p><code><strong>delete</strong></code>연산자는 오브젝트로 부터 해당 프로퍼티를 삭제합니다. 삭제를 하면 true를 반환, 아니면 false를 반환합니다. 그렇지만 아래 경우를 고려해야만 합니다. </p>
 
 <ul>
  <li>만약 존재하지 않는 속성을 삭제하려고 하면 delete는 어떠한 작업도 없이 true를 반환합니다.</li>
- <li>오브젝트의 프로토타입 체인에 같은 이름의 속성이 있다면, 삭제 후에,  오브젝트의 프로토타입체인을 통해 프로퍼티를 사용 할 수 있습니다. (즉, <code>delete</code>는 오직 자신의 프로퍼티만 삭제 합니다.</li>
+ <li>오브젝트의 프로토타입 체인에 같은 이름의 속성이 있다면, 삭제 후에,  오브젝트의 프로토타입체인을 통해 프로퍼티를 사용 할 수 있습니다. (즉, <code>delete</code>는 오직 자신의 프로퍼티만 삭제 합니다.</li>
  <li>{{jsxref("Statements/var","var")}}로 선언된 어떠한 프로퍼티라도 글로벌 스코프나 펑션 스코프로부터 삭제될 수 없습니다.
   <ul>
-   <li>결국, <code>delete</code>는 글로벌 스코프의 어떤 함수도 삭제 할 수 없습니다. (함수 정의식이건 함수 표현식이건 삭제 불가)</li>
+   <li>결국, <code>delete</code>는 글로벌 스코프의 어떤 함수도 삭제 할 수 없습니다. (함수 정의식이건 함수 표현식이건 삭제 불가)</li>
    <li>오브젝트의 속성으로 있는 함수인 경우(글로벌 스코프를 제외하고)는 <code>delete</code>로 삭제할 수 있습니다.</li>
   </ul>
  </li>
- <li>{{jsxref("Statements/let","let")}}과 {{jsxref("Statements/const","const")}}로 선언한 속성은 어느 스코프에 정의되어 있건 삭제 할 수 없습니다.</li>
- <li>Non-configurable 속성은 삭제 할 수 없습니다. 이것은  {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}}와 같은 built-in objects의 속성들이나 {{jsxref("Object.defineProperty()")}} 같은 메소드로 만든 non-configurable속성들을 포함합니다.</li>
+ <li>{{jsxref("Statements/let","let")}}과 {{jsxref("Statements/const","const")}}로 선언한 속성은 어느 스코프에 정의되어 있건 삭제 할 수 없습니다.</li>
+ <li>Non-configurable 속성은 삭제 할 수 없습니다. 이것은  {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}}와 같은 built-in objects의 속성들이나 {{jsxref("Object.defineProperty()")}} 같은 메소드로 만든 non-configurable속성들을 포함합니다.</li>
 </ul>
 
 <p>간단한 예제입니다.</p>
 
 <pre class="brush: js">var Employee = {
-  age: 28,
+  age: 28,
   name: 'abc',
   designation: 'developer'
 }
@@ -81,7 +81,7 @@ console.log(delete Employee.salary); // returns true
 
 <h3 id="설정_불가능한_속성">설정 불가능한 속성</h3>
 
-<p>non-configurable 속성은 <code>delete</code>로 삭제할 수 없으며, <code>false</code>를 반환할 것입니다(*strict mode에서는 <code>SyntaxError</code>를 발생시킴).</p>
+<p>non-configurable 속성은 <code>delete</code>로 삭제할 수 없으며, <code>false</code>를 반환할 것입니다(*strict mode에서는 <code>SyntaxError</code>를 발생시킴).</p>
 
 <pre class="brush: js">var Employee = {};
 Object.defineProperty(Employee, 'name', {configurable: false});
@@ -89,7 +89,7 @@ Object.defineProperty(Employee, 'name', {configurable: false});
 console.log(delete Employee.name);  // returns false
 </pre>
 
-<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, {{jsxref("Statements/const","const")}}로 선언된 변수는 non-configurable 속성으로 구분되며, <code>delete</code>로 삭제될 수 없습니다.</p>
+<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}, {{jsxref("Statements/const","const")}}로 선언된 변수는 non-configurable 속성으로 구분되며, <code>delete</code>로 삭제될 수 없습니다.</p>
 
 <pre class="brush: js">var nameOther = 'XYZ';
 
@@ -110,9 +110,9 @@ delete nameOther;   // return false</pre>
 
 <h3 id="엄격_vs._비엄격_모드">엄격 vs. 비엄격 모드</h3>
 
-<p>엄격 모드에서 <code>delete</code>로 변수나 함수를 삭제하려고 하면 {{jsxref("SyntaxError")}}가 발생합니다. </p>
+<p>엄격 모드에서 <code>delete</code>로 변수나 함수를 삭제하려고 하면 {{jsxref("SyntaxError")}}가 발생합니다. </p>
 
-<p><code>var</code>로 정의된 변수는 non-configurable로 구분됩니다. 다음 예제에서, <code>salary</code>는 non-configurable이며 삭제될 수 없습니다. non-strict mode에서 non-configurable에 <code>delete</code>를 쓰면 <code>false</code>를 반환합니다.</p>
+<p><code>var</code>로 정의된 변수는 non-configurable로 구분됩니다. 다음 예제에서, <code>salary</code>는 non-configurable이며 삭제될 수 없습니다. non-strict mode에서 non-configurable에 <code>delete</code>를 쓰면 <code>false</code>를 반환합니다.</p>
 
 <pre class="brush: js">function Employee() {
   delete salary;
@@ -122,13 +122,13 @@ delete nameOther;   // return false</pre>
 Employee();
 </pre>
 
-<p>그러나 strict mode에서는 <code>false</code>를 반환하는 대신, <code>SyntaxError</code>를 발생시킵니다.</p>
+<p>그러나 strict mode에서는 <code>false</code>를 반환하는 대신, <code>SyntaxError</code>를 발생시킵니다.</p>
 
 <pre class="brush: js">"use strict";
 
 function Employee() {
-  delete salary;  // SyntaxError
-  var salary;
+  delete salary;  // SyntaxError
+  var salary;
 }
 
 // 이와 마찬가지로, delete로 함수를 삭제하는 것도
@@ -232,37 +232,9 @@ if (3 in trees) {
     // this gets executed
 }</pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 

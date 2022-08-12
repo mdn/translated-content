@@ -30,11 +30,11 @@ translation_of: Web/API/Request/Request
  <dd>Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
  <ul>
   <li><code>method</code>: O método de request, ex: <code>GET</code>, <code>POST</code>.</li>
-  <li><code>headers</code>: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.</li>
+  <li><code>headers</code>: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.</li>
   <li><code>body</code>: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.</li>
   <li><code>mode</code>: <span class="tlid-translation translation"><span title="">O modo que você deseja usar para a solicitação, por exemplo:</span></span> <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, or <code>navigate</code>. O padrão é <code>cors</code>. No Chrome o padrão é <code>no-cors</code> antes do Chrome 47 e <code>same-origin</code> do Chrome 47 em diante.</li>
   <li><code>credentials</code>: As credenciais de solicitação que você deseja usar para a solicitação: <code>omit</code>, <code>same-origin</code>, ou <code>include</code>. O padrão é <code>omit</code>. No Chrome o padrão é <code>same-origin</code> antes do Chrome 47 e <code>include</code> do Chrome 47 em diante.</li>
-  <li><code>cache</code>: O <a href="/en-US/docs/Web/API/Request/cache">cache mode</a>  <span class="tlid-translation translation"><span title="">que você deseja usar para a solicitação.</span></span></li>
+  <li><code>cache</code>: O <a href="/en-US/docs/Web/API/Request/cache">cache mode</a>  <span class="tlid-translation translation"><span title="">que você deseja usar para a solicitação.</span></span></li>
   <li><code>redirect</code>: O modo de redirecionamento para usar: <code>follow</code>, <code>error</code>, or <code>manual</code>. No Chrome o padrão é <code>follow</code> (antes do Chrome 47 foi padronizado <code>manual</code>).</li>
   <li><code>referrer</code>: Um {{domxref("USVString")}} especificando <code>no-referrer</code>, <code>client</code>, ou uma URL. O padrão é <code>client</code>.</li>
   <li><code>integrity</code>: Contém o <a href="/en-US/docs/Web/Security/Subresource_Integrity">valor de integridade do sub-recurso</a> da solicitação (exemplo: <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</li>
@@ -135,7 +135,7 @@ var myRequest = new Request('flowers.jpg', myInit);
   <tr>
    <td>{{SpecName('Fetch','#dom-request','Request()')}}</td>
    <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

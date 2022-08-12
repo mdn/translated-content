@@ -5,14 +5,14 @@ translation_of: 'Web/CSS/:focus-within'
 ---
 <div>{{CSSRef}}</div>
 
-<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:focus-within</code></strong> representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por <code>:focus</code>. (Isto inclui descendentes em <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
+<p>A <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>:focus-within</code></strong> representa um elemento que recebeu o foco ou contém um elemento que recebeu o foco. Em outras palavras, isto representa um elemento que é correspondido por si só pela pseudo-classe {{cssxref(":focus")}} ou tem um descendente que é correspondido por <code>:focus</code>. (Isto inclui descendentes em <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">shadow trees</a>.)</p>
 
 <pre class="brush: css no-line-numbers">/* Seleciona uma &lt;div&gt; quando um de seus descendentes é focado */
 div:focus-within {
   background: cyan;
 }</pre>
 
-<p>Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlElement("form")}} container quando o usuário focar em um de seus campos {{htmlElement("input")}}.</p>
+<p>Este seletor é útil, pegando um exemplo comum, para destacar um todo {{htmlElement("form")}} container quando o usuário focar em um de seus campos {{htmlElement("input")}}.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -20,7 +20,7 @@ div:focus-within {
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>Neste exemplo, o formulário receberá estilos de coloração especiais quando o input de texto recebe o foco</p>
+<p>Neste exemplo, o formulário receberá estilos de coloração especiais quando o input de texto recebe o foco</p>
 
 <h3 id="HTML">HTML</h3>
 

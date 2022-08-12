@@ -88,16 +88,16 @@ Feature-Policy: camera *;
 
 <p>Feature Policy を使用する 2 つ目の方法は、iframe 内のコンテンツを制御することです。 <code>allow</code> 属性を使用して、埋め込みコンテンツのポリシーリストを指定します。</p>
 
-<p>たとえば、以下は iframe 内のすべてのブラウジングコンテキストに、フルスクリーンの使用を許可する方法です。</p>
+<p>たとえば、以下は iframe 内のすべてのブラウジングコンテキストに、フルスクリーンの使用を許可する方法です。</p>
 
 <pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen"&gt;&lt;/iframe&gt;</pre>
 
-<p><code>&lt;iframe&gt;</code> がデフォルトで許可している <a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy$edit#allowlist">allowlist</a> の値は <code>'src'</code> です。したがって、以下のようにも書いても同じとなります。</p>
+<p><code>&lt;iframe&gt;</code> がデフォルトで許可している <a href="/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy$edit#allowlist">allowlist</a> の値は <code>'src'</code> です。したがって、以下のようにも書いても同じとなります。</p>
 
 <pre class="brush: html notranslate">&lt;iframe src="https://example.com..." allow="fullscreen 'src'"&gt;&lt;/iframe&gt;
 </pre>
 
-<p>以下の例は、特定のオリジンの <code>&lt;iframe&gt;</code> のコンテンツに、ユーザーの位置情報へのアクセスを許可する方法です。</p>
+<p>以下の例は、特定のオリジンの <code>&lt;iframe&gt;</code> のコンテンツに、ユーザーの位置情報へのアクセスを許可する方法です。</p>
 
 <pre class="brush: html notranslate">&lt;iframe src="https://google-developers.appspot.com/demos/..."
         allow="geolocation https://google-developers.appspot.com"&gt;&lt;/iframe&gt;

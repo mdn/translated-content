@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 <div>{{JSRef}}</div>
 
-<p>Die Methode <strong><code>Object.isExtensible()</code></strong> bestimmt, ob ein Objekt erweiterbar ist. Das heißt, es können dem Objekt neue Eigenschaften hinzugefügt werden.</p>
+<p>Die Methode <strong><code>Object.isExtensible()</code></strong> bestimmt, ob ein Objekt erweiterbar ist. Das heißt, es können dem Objekt neue Eigenschaften hinzugefügt werden.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Standardmäßig sind Objekte erweiterbar: Es ist möglich, ihnen neue Eigenschaften zuzuweisen und sie dadurch zu verändern. In Engines, die {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} unterstützen, kann auch deren __proto__ Eigenschaft geändert werden. Ein Objekt kann mittels {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} oder {{jsxref("Object.freeze()")}} explizit als nicht-erweiterbar markiert werden.</p>
+<p>Standardmäßig sind Objekte erweiterbar: Es ist möglich, ihnen neue Eigenschaften zuzuweisen und sie dadurch zu verändern. In Engines, die {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} unterstützen, kann auch deren __proto__ Eigenschaft geändert werden. Ein Objekt kann mittels {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} oder {{jsxref("Object.freeze()")}} explizit als nicht-erweiterbar markiert werden.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -53,7 +53,7 @@ Object.isExtensible(frozen); // === false
 
 <h2 id="Anmerkungen">Anmerkungen</h2>
 
-<p>In ES5 muss das Argument der Methode ein echtes Objekt sein. Ist dies nicht der Fall, wird ein {{jsxref("TypeError")}} geworfen. In ES2015 hingegen wird ein Nicht-Objekt einfach als nicht-erweiterbares Objekt behandelt, sodass von der Methode <code>false </code>zurückgegeben wird.</p>
+<p>In ES5 muss das Argument der Methode ein echtes Objekt sein. Ist dies nicht der Fall, wird ein {{jsxref("TypeError")}} geworfen. In ES2015 hingegen wird ein Nicht-Objekt einfach als nicht-erweiterbares Objekt behandelt, sodass von der Methode <code>false </code>zurückgegeben wird.</p>
 
 <pre class="brush: js">Object.isExtensible(1);
 // TypeError: 1 is not an object (ES5 code)
@@ -79,67 +79,19 @@ Object.isExtensible(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("6")}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("12")}}</td>
-   <td>{{CompatSafari("5.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="Zusätzliches_Material">Zusätzliches Material</h2>
 

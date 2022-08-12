@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong><code>if</code> 문</strong>은 지정한 조건이 {{glossary("truthy", "참")}}인 경우 명령문(statement)을 실행합니다. 조건이 {{glossary("falsy", "거짓")}}인 경우 또 다른 명령문이 실행 될 수 있습니다.</p>
+<p><strong><code>if</code> 문</strong>은 지정한 조건이 {{glossary("truthy", "참")}}인 경우 명령문(statement)을 실행합니다. 조건이 {{glossary("falsy", "거짓")}}인 경우 또 다른 명령문이 실행 될 수 있습니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</div>
 
@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
 <dl>
  <dt><code>statement1</code></dt>
  <dd>조건이 참으로 평가될 경우 실행되는 문입니다.<br>
- 중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우  ({ ... })<a href="/en-US/docs/Web/JavaScript/Reference/Statements/block">블럭</a> 구문 으로 그룹화 하고 실행하지 않으려면 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Empty">빈</a> 구문을 사용합니다.</dd>
+ 중첩된 if구문을 포함하여 어떤 구문이든 쓸 수 있습니다. 다중구문을 사용할 경우  ({ ... })<a href="/en-US/docs/Web/JavaScript/Reference/Statements/block">블럭</a> 구문 으로 그룹화 하고 실행하지 않으려면 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/Empty">빈</a> 구문을 사용합니다.</dd>
 </dl>
 
 <dl>
@@ -53,7 +53,7 @@ else
    <em>명령문N</em>
 </pre>
 
-<p>아래 작업한 것을 보면,  if문을 중첩 사용하면 들여쓰기된 것이 제대로 보여집니다.</p>
+<p>아래 작업한 것을 보면,  if문을 중첩 사용하면 들여쓰기된 것이 제대로 보여집니다.</p>
 
 <pre class="eval">if (<em>조건1</em>)
    <em>명령문1</em>
@@ -65,7 +65,7 @@ else
 ...
 </pre>
 
-<p>하나의 절에서 여러개의 명령문들을 실행하려면,   그 명령문들을 그룹화하는 블록 명령문 ({ ... }) 블럭구문을 사용한다.<br>
+<p>하나의 절에서 여러개의 명령문들을 실행하려면,   그 명령문들을 그룹화하는 블록 명령문 ({ ... }) 블럭구문을 사용한다.<br>
  일반적으로, 블럭구문을 항상 사용하는 것은 좋은 연습입니다. 특히 중첩된 if 문과 관련되어<br>
  있는 코드안에서 사용하면 더욱 좋습니다.</p>
 
@@ -96,7 +96,7 @@ if (b) // 이 조건은 참으로 보이는 것 (truthy) 이다.
 
 <h3 id="else_if_사용하기"><code>else if</code> 사용하기</h3>
 
-<p>자바스크립트에는 elseif 구문이 없다. 그러나, else if  를 사용할 수 있다.</p>
+<p>자바스크립트에는 elseif 구문이 없다. 그러나, else if  를 사용할 수 있다.</p>
 
 <pre class="brush: js">if (x &gt; 5) {
 
@@ -109,7 +109,7 @@ if (b) // 이 조건은 참으로 보이는 것 (truthy) 이다.
 <h3 id="조건식의_값을_지정하기">조건식의 값을 지정하기</h3>
 
 <p>조건식을 단순하게 지정하는 것은 좋지 않습니다.<br>
- 왜냐하면,  코드를 흘깃 보면 값을 지정한것을 평등한것으로  혼동할 수 있기 때문입니다. 예를들어, 다음코드를 사용하지 마세요:</p>
+ 왜냐하면,  코드를 흘깃 보면 값을 지정한것을 평등한것으로  혼동할 수 있기 때문입니다. 예를들어, 다음코드를 사용하지 마세요:</p>
 
 <pre class="brush: js example-bad">if (x = y) {
    /* do the right thing */
@@ -123,46 +123,11 @@ if (b) // 이 조건은 참으로 보이는 것 (truthy) 이다.
 }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세서</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-if-statement', 'if statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-if-statement', 'if statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.5', 'if statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.statements.if_else")}}</p>
 

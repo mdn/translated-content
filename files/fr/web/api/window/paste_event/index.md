@@ -33,7 +33,7 @@ L'événement **`paste`** est déclenché lorsque l'utilisateur a lancé une act
   </tbody>
 </table>
 
-La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: paste event](/en-US/docs/Web/API/Element/paste_event).
+La cible d'origine de cet événement est le {{domxref ("Element")}} qui était la cible prévue de l'action de collage. Vous pouvez écouter cet événement sur l'interface {{domxref ("Window")}} pour le gérer dans les phases de capture ou de bullage. Pour plus de détails sur cet événement, veuillez consulter la page sur le [Element: paste event](/fr/docs/Web/API/Element/paste_event).
 
 ## Exemples
 

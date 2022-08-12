@@ -13,7 +13,7 @@ translation_of: Web/API/CanvasRenderingContext2D/putImageData
 
 
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.putImageData()</code></strong> метод Canvas 2D API рисует данные из заданного {{domxref("ImageData")}} объекта на холст. На этот метод не влияет матрица преобразования холста.</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.putImageData()</code></strong> метод Canvas 2D API рисует данные из заданного {{domxref("ImageData")}} объекта на холст. На этот метод не влияет матрица преобразования холста.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Данные изображения могут быть получены с холста с помощью метода {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}}.</p>
@@ -109,7 +109,7 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 <h3 id="Потеря_данных_из-за_оптимизации_браузера">Потеря данных из-за оптимизации браузера</h3>
 
 <div class="blockIndicator warning">
-<p> Из-за характера потерь при преобразовании в и из предварительно умноженных значений альфа-цвета пиксели, которые были только что установлены с помощью <code>putImageData()</code>, могут быть возвращены в эквивалентный <code>getImageData()</code> в качестве различных значений.</p>
+<p> Из-за характера потерь при преобразовании в и из предварительно умноженных значений альфа-цвета пиксели, которые были только что установлены с помощью <code>putImageData()</code>, могут быть возвращены в эквивалентный <code>getImageData()</code> в качестве различных значений.</p>
 </div>
 
 <h4 id="JavaScript_2">JavaScript</h4>
@@ -150,7 +150,7 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]</pre>
 <h3 id="Специфичные_для_Gecko_заметки">Специфичные для Gecko заметки</h3>
 
 <ul>
- <li>Начиная с Gecko 10.0 {{ geckoRelease("10.0") }}, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов <code>putImageData()</code> будет игнорироваться, а не вызывать исключение.</li>
+ <li>Начиная с Gecko 10.0 {{ geckoRelease("10.0") }}, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов <code>putImageData()</code> будет игнорироваться, а не вызывать исключение.</li>
  <li>To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}}, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).</li>
 </ul>
 

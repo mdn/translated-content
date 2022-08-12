@@ -29,7 +29,7 @@ original_slug: Web/API/FileSystemEntrySync
 
 <p><code>FileSystemEntrySync</code> インターフェイスには、ファイルやディレクトリの操作に必要なメソッドが含まれていますが、<code><a href="/ja/docs/Web/API/FileSystemEntrySync$translate?tolocale=ja#toURL">toURL()</a></code>というエントリの URL を取得するための便利なメソッドもあります。 また新しい URL スキーム <code>filesystem:</code> を紹介します。</p>
 
-<p>Google Chromeで <code>filesystem:</code> スキームを使用すると、アプリのルートに保存されているすべてのファイルとフォルダを表示できます。 アプリの起源のルートディレクトリに <code>filesystem:</code> スキームを使用するだけです。たとえば、アプリが <code><a class="external external-icon" href="http://ww.html5rocks.com" rel="freelink">http://ww.html5rocks.com</a></code> にある場合は、 <code>filesystem:<a class="external external-icon" href="http://www.html5rocks.com/temporary/" rel="freelink">http://www.html5rocks.com/temporary/</a></code> をタブで開きます。Chrome は、アプリのオリジンに保存されているすべてのファイルとフォルダの読み取り専用リストを表示します。</p>
+<p>Google Chromeで <code>filesystem:</code> スキームを使用すると、アプリのルートに保存されているすべてのファイルとフォルダを表示できます。 アプリの起源のルートディレクトリに <code>filesystem:</code> スキームを使用するだけです。たとえば、アプリが <code><a class="external external-icon" href="http://ww.html5rocks.com" rel="freelink">http://ww.html5rocks.com</a></code> にある場合は、 <code>filesystem:<a class="external external-icon" href="http://www.html5rocks.com/temporary/" rel="freelink">http://www.html5rocks.com/temporary/</a></code> をタブで開きます。Chrome は、アプリのオリジンに保存されているすべてのファイルとフォルダの読み取り専用リストを表示します。</p>
 
 <h2 id="メソッド概要">メソッド概要</h2>
 
@@ -284,7 +284,7 @@ original_slug: Web/API/FileSystemEntrySync
 
 <h3 id="toURL" name="toURL">toURL()</h3>
 
-<p>このエントリを識別するために使用できるURLを返します。これは  <code>src</code> や <code>href</code> 属性を埋めるために使用できる新しい URL スキーム、 <code>filesystem:</code>を公開しています。たとえば、イメージを表示しその <a class="external external-icon" href="/ja/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a> を持つ場合、 <code>toURL()</code> を呼び出すと、イメージファイルのファイルシステムURLが得られます。<br>
+<p>このエントリを識別するために使用できるURLを返します。これは  <code>src</code> や <code>href</code> 属性を埋めるために使用できる新しい URL スキーム、 <code>filesystem:</code>を公開しています。たとえば、イメージを表示しその <a class="external external-icon" href="/ja/DOM/File_API/File_System_API/FileEntry" title="en/DOM/File_API/File_System_API/FileEntry">fileEntry</a> を持つ場合、 <code>toURL()</code> を呼び出すと、イメージファイルのファイルシステムURLが得られます。<br>
  あなたは <code>filesystem:<a class="external external-icon" href="http://example.com/temporary/lolcat.png" rel="freelink">http://example.com/temporary/lolcat.png</a></code> のようなものを手に入れます。</p>
 
 <p>ファイルシステムの URL の有効期限はありません。このメソッドはディスク上の場所を記述しているため、URL はその場所が存在する限り有効です。あなたはファイルを削除して再作成することができます。</p>
@@ -357,7 +357,7 @@ original_slug: Web/API/FileSystemEntrySync
 
 <h3 id="getParent" name="getParent">getParent()</h3>
 
-<p>エントリを含む親 <a href="/ja/docs/Web/API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。</p>
+<p>エントリを含む親 <a href="/ja/docs/Web/API/DirectoryEntrySync" title="https://developer.mozilla.org/en/DOM/File_API/File_System_API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> を調べます。このエントリがファイルシステムのルートである場合、親はそれ自身です。</p>
 
 <pre>void getParent ();</pre>
 
@@ -386,4 +386,4 @@ original_slug: Web/API/FileSystemEntrySync
 
 <p>リファレンス: <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>イントロダクション: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>イントロダクション: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

@@ -106,7 +106,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
 </ul>
 
 <div class="note">
-<p><strong>注記: </strong>さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd>  キー で実現できますが、この例では実装しません。しかし、仕組みはすでに <code>click</code> イベント向けに実装されていますので、行うのは簡単です。</p>
+<p><strong>注記: </strong>さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd>  キー で実現できますが、この例では実装しません。しかし、仕組みはすでに <code>click</code> イベント向けに実装されていますので、行うのは簡単です。</p>
 </div>
 
 <h2 id="Defining_the_HTML_structure_and_semantics" name="Defining_the_HTML_structure_and_semantics">HTML の構造とセマンティクスの定義</h2>
@@ -787,65 +787,65 @@ window.addEventListener('load', function () {
 
 <p>完全に意味のある、アクセシブルで、順序のない、関連する{{htmlelement('label')}}つきの{{htmlelement('input/radio','radio')}} ボタンのリストから始めます、グループ全体を適切な意味のある{{htmlelement('fieldset')}} と{{htmlelement('legend')}} のペアにラベルづけします。.</p>
 
-<pre class="brush: html notranslate"> &lt;fieldset&gt;
-  &lt;legend&gt;Pick a fruit&lt;/legend&gt;
-    &lt;ul class="styledSelect"&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Lemon" id="fruitLemon"&gt;&lt;label for="fruitLemon"&gt;Lemon&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Banana" id="fruitBanana"&gt;&lt;label for="fruitBanana""&gt;Banana&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"&gt;&lt;label for="fruitStrawberry"&gt;Strawberry&lt;/label&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;input type="radio" name="fruit" value="Apple" id="fruitApple"&gt;&lt;label for="fruitApple"&gt;Apple&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/fieldset&gt;</pre>
+<pre class="brush: html notranslate"> &lt;fieldset&gt;
+  &lt;legend&gt;Pick a fruit&lt;/legend&gt;
+    &lt;ul class="styledSelect"&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked&gt;&lt;label for="fruitCherry"&gt;Cherry&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Lemon" id="fruitLemon"&gt;&lt;label for="fruitLemon"&gt;Lemon&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Banana" id="fruitBanana"&gt;&lt;label for="fruitBanana""&gt;Banana&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"&gt;&lt;label for="fruitStrawberry"&gt;Strawberry&lt;/label&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;input type="radio" name="fruit" value="Apple" id="fruitApple"&gt;&lt;label for="fruitApple"&gt;Apple&lt;/label&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/fieldset&gt;</pre>
 
 <p>(legend/fieldsetではなく)ラジオボタンリストに少しスタイルづけをして、前の例と同じ見た目にし、完了したことがわかるようにします:</p>
 
 <pre class="brush: css notranslate">.styledSelect {
-  display: inline-block;
-  padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 .styledSelect li {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 }
 .styledSelect [type=radio] {
-  position: absolute;
-  left: -100vw;
-  top: -100vh;
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
 }
 .styledSelect label {
-  margin: 0;
-  line-height: 2;
-  padding: 0 0 0 4px;
+  margin: 0;
+  line-height: 2;
+  padding: 0 0 0 4px;
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
-  height: 0;
-  outline: none;
-  overflow: hidden;
+  height: 0;
+  outline: none;
+  overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
-  content : "▼";
-  background: black;
-  float: right;
-  color: white;
-  padding: 0 4px;
-  margin: 0 -4px 0 4px;
+  content : "▼";
+  background: black;
+  float: right;
+  color: white;
+  padding: 0 4px;
+  margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
-  color: #fff;
-  width: 100%;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
 }</pre>
 
 <p>JavaScriptなしで少しの CSSにて、ラジオボタンのリストをスタイルづけしてチェック済み項目のみを表示することができます。フォーカスが<code>&lt;fieldset&gt;</code>内の <code>&lt;ul&gt;</code> に来ると、リストは開いて、上下左右の矢印が前後の項目を選択するのに使えます。次で試してください:</p>

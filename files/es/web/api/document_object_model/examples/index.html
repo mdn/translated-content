@@ -316,7 +316,7 @@ function showEventProperties(e)
 
   for (var p in e) {
     row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
+    row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
     addCell(row, p);
     addCell(row, e[p]);

@@ -20,11 +20,11 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 
 <h2 id="從伺服器端接收事件">從伺服器端接收事件</h2>
 
-<p>server-sent event API 包含在  {{domxref("EventSource")}} 介面；為了與伺服器端開啟連線並接收事件，需要建立帶有產生事件 script URL 的 {{domxref("EventSource")}} 物件。例如：</p>
+<p>server-sent event API 包含在  {{domxref("EventSource")}} 介面；為了與伺服器端開啟連線並接收事件，需要建立帶有產生事件 script URL 的 {{domxref("EventSource")}} 物件。例如：</p>
 
 <pre class="brush: js notranslate">const evtSource = new EventSource("ssedemo.php");</pre>
 
-<p>如果事件產生的 script 在不同源的伺服器上，在建立 {{domxref("EventSource")}} 物件時需要同時提供 URL 和第二個參數作為選項設定。假設客戶端的 script 伺服於 <code>example.com</code> ：</p>
+<p>如果事件產生的 script 在不同源的伺服器上，在建立 {{domxref("EventSource")}} 物件時需要同時提供 URL 和第二個參數作為選項設定。假設客戶端的 script 伺服於 <code>example.com</code> ：</p>
 
 <pre class="brush: js notranslate">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
 
@@ -54,12 +54,12 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 <p>上述的程式碼大同小異，不同之處在於若伺服器傳送了 <code>event</code> 欄位值為「ping」的訊息時它就會把 <code>data</code> 欄位的值解析為 JSON 並輸出到畫面上。</p>
 
 <div class="blockIndicator warning">
-<p>當連線不是透過<strong> HTTP/2</strong> 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a> 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www.example2.com 也可以開啟六個（根據 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。當使用 HTTP/2 時最大同時 <em>HTTP streams</em> 連線數是由伺服器和客戶端之間協調（預設 100）。</p>
+<p>當連線不是透過<strong> HTTP/2</strong> 時，SSE 會受到最大連線數限制所苦，尤其當開啟多個分頁。每個瀏覽器有自己的限制數而且被限制在很低的數量（6）。這個問題已經被 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896">Firefox</a> 標註為「Won't fix」（不修復）。限制是基於每個瀏覽器 + 網域，也就是說你可以針對 www.example1.com 網域在所有的分頁中開啟六個 SSE 連線，另一個網域 www.example2.com 也可以開啟六個（根據 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。當使用 HTTP/2 時最大同時 <em>HTTP streams</em> 連線數是由伺服器和客戶端之間協調（預設 100）。</p>
 </div>
 
 <h2 id="從伺服器發送事件">從伺服器發送事件</h2>
 
-<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 <a href="#事件串流（event_stream）格式">Event stream format</a> 。</p>
+<p>由伺服器端所發送的事件需要使用 <code>text/event-stream</code> 的 MIME 類型回應。每一個通知皆由一組文字組成並由一對換行結尾。如何處理事件串流的格式，請參考 <a href="#事件串流（event_stream）格式">Event stream format</a> 。</p>
 
 <p>下面是一個 {{Glossary("PHP")}} 範例：</p>
 
@@ -120,7 +120,7 @@ while (true) {
 
 <h2 id="事件串流（Event_Stream）格式">事件串流（Event Stream）格式</h2>
 
-<p>事件串流是個簡易的文字資料串流，內容必須以 UTF-8 格式編碼。在事件串流中，不同的訊息以一對換行符號做區隔。若要撰寫註解，則要在該行的開頭加上冒號（:）。</p>
+<p>事件串流是個簡易的文字資料串流，內容必須以 UTF-8 格式編碼。在事件串流中，不同的訊息以一對換行符號做區隔。若要撰寫註解，則要在該行的開頭加上冒號（:）。</p>
 
 <div class="note"><strong>備註：</strong> 註解將有助於防止連線逾時；伺服器端可以定時發送註解以維持連線活著。</div>
 

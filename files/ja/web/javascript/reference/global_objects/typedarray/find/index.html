@@ -66,13 +66,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 <p>次の例では、型付き配列内で素数である要素を探します (または、素数がない場合は {{jsxref("undefined")}} を返します)。</p>
 
 <pre class="brush: js notranslate">function isPrime(element, index, array) {
-  var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
-      return false;
-    }
-  }
-  return element &gt; 1;
+  var start = 2;
+  while (start &lt;= Math.sqrt(element)) {
+    if (element % start++ &lt; 1) {
+      return false;
+    }
+  }
+  return element &gt; 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);

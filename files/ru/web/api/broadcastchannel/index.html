@@ -5,7 +5,7 @@ translation_of: Web/API/BroadcastChannel
 ---
 <p>{{APIRef("Broadcast Channel API")}}</p>
 
-<p>Интерфейс <code><strong>BroadcastChannel</strong></code> представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов <code>BroadcastChannel</code>, слушающих этот канал.</p>
+<p>Интерфейс <code><strong>BroadcastChannel</strong></code> представляет собой именованный канал, на который можно подписаться из любого {{glossary("browsing context","контекста просмотра")}} данного {{glossary("origin","источника")}}. Это позволяет настроить коммуникацию между разными документами (в разных окнах, вкладках, фреймах и т.д.) одного источника. Сообщения распространяются с помощью события {{event("message")}}, выстреливающего для всех объектов <code>BroadcastChannel</code>, слушающих этот канал.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -27,9 +27,9 @@ translation_of: Web/API/BroadcastChannel
  <h3 id="Обработчики_событий">Обработчики событий</h3>
  </dt>
  <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.</dd>
+ <dd>{{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.</dd>
  <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.</dd>
+ <dd>{{event("Event_handlers", "event handler")}}, который вызывается, когда приходит {{domxref("MessageEvent")}} типа {{domxref("MessageError")}} — когда приходит сообщение, которое не может быть десереализовано.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -38,7 +38,7 @@ translation_of: Web/API/BroadcastChannel
 
 <dl>
  <dt>{{domxref("BroadcastChannel.postMessage()")}}</dt>
- <dd>Отправляет сообщение любого типа объекта всем объектам <code>BroadcastChannel</code>, прослушивающим данный канал.</dd>
+ <dd>Отправляет сообщение любого типа объекта всем объектам <code>BroadcastChannel</code>, прослушивающим данный канал.</dd>
  <dt>{{domxref("BroadcastChannel.close()")}}</dt>
  <dd>Закрывает объект канала, указывая, что тот больше не будет получать новые сообщения, и позволяет сборщику мусора уничтожить его.</dd>
 </dl>

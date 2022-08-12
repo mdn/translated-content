@@ -12,30 +12,30 @@ translation_of: Web/API/Response
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
-<p><span class="seoSummary">Интерфейс <strong><code>Response</code></strong> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> представляет собой ответ на запрос.</span></p>
+<p><span class="seoSummary">Интерфейс <strong><code>Response</code></strong> из <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> представляет собой ответ на запрос.</span></p>
 
-<p>Вы можете создать новый экземпляр объекта <code>Response</code> используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом <code>Response</code>, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.</p>
+<p>Вы можете создать новый экземпляр объекта <code>Response</code> используя конструктор {{domxref("Response.Response()")}}, но скорее всего вы столкнётесь с объектом <code>Response</code>, как результат какой-нибудь API операции — например, service worker {{domxref("Fetchevent.respondWith")}}, или {{domxref("WindowOrWorkerGlobalScope.fetch()")}}.</p>
 
 <h2 id="Конструктор">Конструктор</h2>
 
 <dl>
  <dt>{{domxref("Response.Response","Response()")}}</dt>
- <dd>Создаёт новый экземпляр объекта <code>Response</code>.</dd>
+ <dd>Создаёт новый экземпляр объекта <code>Response</code>.</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
 
 <dl>
  <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
- <dd>Объект {{domxref("Headers")}}, который описывает заголовок ответа.</dd>
+ <dd>Объект {{domxref("Headers")}}, который описывает заголовок ответа.</dd>
  <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
- <dd>Булевское значение, которое указывает, выполнился ли запрос успешно или нет (то есть находится ли код ответа в диапазоне <code>200</code>–<code>299</code>).</dd>
+ <dd>Булевское значение, которое указывает, выполнился ли запрос успешно или нет (то есть находится ли код ответа в диапазоне <code>200</code>–<code>299</code>).</dd>
  <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
  <dd>Указывает, является ли результат запроса перенаправлением.</dd>
  <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
  <dd>Код ответа.</dd>
  <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
- <dd>Строка, соответствующая коду ответа (например, <code>OK</code> для кода <code>200</code>).</dd>
+ <dd>Строка, соответствующая коду ответа (например, <code>OK</code> для кода <code>200</code>).</dd>
  <dt>{{domxref("Response.trailers")}}</dt>
  <dd>A {{domxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.</dd>
  <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
@@ -80,7 +80,7 @@ translation_of: Web/API/Response
  <dt>{{domxref("Body.formData()")}}</dt>
  <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("FormData")}} object.</dd>
  <dt>{{domxref("Body.json()")}}</dt>
- <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.</dd>
+ <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as {{jsxref("JSON")}}, which is a JavaScript value of datatype object, string, etc.</dd>
  <dt>{{domxref("Body.text()")}}</dt>
  <dd>Takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise that resolves with a {{domxref("USVString")}} (text).</dd>
 </dl>
@@ -107,7 +107,7 @@ fetch('flowers.jpg').then(function(response) {
 
 <h3 id="Ajax_запрос">Ajax запрос</h3>
 
-<p>Здесь мы с помощью функции doAjax вызываем PHP скрипт, который генерирует JSON строку, и возвращает распарсенный JSON в виде JavaScript объекта. Также реализована простая обработка ошибок.</p>
+<p>Здесь мы с помощью функции doAjax вызываем PHP скрипт, который генерирует JSON строку, и возвращает распарсенный JSON в виде JavaScript объекта. Также реализована простая обработка ошибок.</p>
 
 <pre class="brush: js">// Функция, которая делает Ajax запрос
 const doAjax = async () =&gt; {

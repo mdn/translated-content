@@ -108,6 +108,6 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 関連情報
 
-- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
+- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
 - {{HTMLAttrxRef("exportparts")}} 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

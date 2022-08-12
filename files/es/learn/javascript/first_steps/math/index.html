@@ -21,13 +21,13 @@ original_slug: Learn/JavaScript/First_steps/Matemáticas
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">En este punto del curso, hablaremos de matemáticas en JavaScript — cómo  podemos usar {{Glossary("Operator","operadores")}} y otras características para manipular con éxito números y conseguir lo que nos hayamos propuesto.</p>
+<p class="summary">En este punto del curso, hablaremos de matemáticas en JavaScript — cómo  podemos usar {{Glossary("Operator","operadores")}} y otras características para manipular con éxito números y conseguir lo que nos hayamos propuesto.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisitos:</th>
-   <td>Conocimientos básicos de ordenadores, comprensión básica de  HTML y CSS, comprensión básica de lo que es JavaScript.</td>
+   <td>Conocimientos básicos de ordenadores, comprensión básica de  HTML y CSS, comprensión básica de lo que es JavaScript.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -57,12 +57,12 @@ original_slug: Learn/JavaScript/First_steps/Matemáticas
 <ul>
  <li><strong>Binario</strong> — El lenguaje de computadora de nivel más bajo; 0s y 1s.</li>
  <li><strong>Octal</strong> — De base 8, utiliza de 0–7 en cada columna.</li>
- <li><strong>Hexadecimal</strong> — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas <a href="/es/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values">colores en CSS</a>.</li>
+ <li><strong>Hexadecimal</strong> — De base 16, utiliza de 0–9 y luego de a–f en cada columna. Puedes haber encontrado estos números antes, cuando colocabas <a href="/es/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values">colores en CSS</a>.</li>
 </ul>
 
-<p><strong>Antes de que comiences a preouparte de que tu cerebro se derrita, ¡detente un momento!</strong> Para empezar, sólo vamos a apegarnos a los números decimales durante todo este curso; pocas veces te verás en la necesidad de comenzar a pensar sobre los otros tipos, si es que lo haces.</p>
+<p><strong>Antes de que comiences a preouparte de que tu cerebro se derrita, ¡detente un momento!</strong> Para empezar, sólo vamos a apegarnos a los números decimales durante todo este curso; pocas veces te verás en la necesidad de comenzar a pensar sobre los otros tipos, si es que lo haces.</p>
 
-<p>La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes de programación, JavaScript sólo tiene un tipo de dato para los números, adivinaste, {{jsxref("Number")}}. Esto significa que, sin importar el tipo de número con el que estés lidiando en Javascript, los manejas siempre de la misma manera.</p>
+<p>La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes de programación, JavaScript sólo tiene un tipo de dato para los números, adivinaste, {{jsxref("Number")}}. Esto significa que, sin importar el tipo de número con el que estés lidiando en Javascript, los manejas siempre de la misma manera.</p>
 
 <div class="blockIndicator note">
 <p><strong>Nota</strong>: En realidad, JavaScript tiene un segundo tipo de número, {{Glossary("BigInt")}}, que se utiliza para números enteros muy, muy grandes. Pero para los propósitos de este curso, solo nos preocuparemos por los valores numéricos.</p>
@@ -70,9 +70,9 @@ original_slug: Learn/JavaScript/First_steps/Matemáticas
 
 <h3 id="Para_mí_todo_son_números.">Para mí, todo son números.</h3>
 
-<p>Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola JavaScript de tus herramientas para desarrolladores</a>, o utiliza la sencilla consola integrada que verás abajo si lo prefieres.</p>
+<p>Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola JavaScript de tus herramientas para desarrolladores</a>, o utiliza la sencilla consola integrada que verás abajo si lo prefieres.</p>
 
-<p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/">Abrir en una ventana nueva</a></strong></p>
+<p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/">Abrir en una ventana nueva</a></strong></p>
 
 <ol>
  <li>Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
@@ -82,10 +82,10 @@ myInt;
 myFloat;</pre>
  </li>
  <li>Los valores numéricos están escritos sin comillas - Trata de declarar e inicializar un par de variables más que contengan números antes de continuar.</li>
- <li>Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
+ <li>Ahora chequea que nuestras variables originales sean del mismo tipo. Hay un operador llamado {{jsxref("Operators/typeof", "typeof")}} en JavaScript hace esto. Digita las dos lineas siguientes:
   <pre class="brush: js notranslate">typeof myInt;
 typeof myFloat;</pre>
-  Obtendrás <code>"number"</code> en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !</li>
+  Obtendrás <code>"number"</code> en ambos casos — esto hace las cosas mucho más fáciles que si diferentes números tuvieran difetentes tipos, y tuvimos que lidiar con ellos de diferentes maneras. Uf !</li>
 </ol>
 
 <h2 id="Operadores_Aritméticos">Operadores Aritméticos</h2>
@@ -141,7 +141,7 @@ typeof myFloat;</pre>
 <p><strong>Nota</strong>: A veces verás números involucrados en sumas referidas como {{Glossary("Operand", "operands")}}.</p>
 </div>
 
-<p>Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola JavaScript de tus herramientas para desarrolladores</a>, o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.</p>
+<p>Probablemente no necesitemos enseñarte matemáticas básicas, pero nos gustaría probar tu entendimiento de la sintaxis involucrada. Intenta entrar los ejemplos de abajo en tu <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">consola JavaScript de tus herramientas para desarrolladores</a>, o usa la sencilla consola incorporada que se vio anteriormente, si lo prefieres, para familiarizarte con la sintaxis.</p>
 
 <ol>
  <li>Primero, trata entrando un ejemplo simple por tu cuenta, como
@@ -149,13 +149,13 @@ typeof myFloat;</pre>
 9 * 8
 60 % 3</pre>
  </li>
- <li>Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
+ <li>Puedes tratar declarando e inicializando algunos números en variables, y probar usándolos en la suma - Las variables se comportarán exactamente como los valores que tienen para los fines de la suma. Por ejemplo:
   <pre class="brush: js notranslate">var num1 = 10;
 var num2 = 50;
 9 * num1;
 num2 / num1;</pre>
  </li>
- <li>Por último, trate entrando algunas expresiones complejas, como:
+ <li>Por último, trate entrando algunas expresiones complejas, como:
   <pre class="brush: js notranslate">5 + 10 * 3;
 num2 % 9 * num1;
 num2 + num1 / 8 + 2;</pre>
@@ -174,7 +174,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>Pero el navegador hace "10 dividido por 8 es igual a 1.25", luego "50 más 1.25 más 2 es igual a 53.25".</p>
 
-<p>Esto es debido a la <strong>precedencia de operadores</strong> — algunos operadores son aplicados antes de otros cuando se calcula el resultado de una suma (referida como una expresión, en programación).  La precedencia de operadores en JavaScript es la misma que en las matemáticas de la escuela  — La multiplicación y la división se resuelven siempre primero, luego la suma y resta (la suma siempre se evalua de izquierda a derecha).</p>
+<p>Esto es debido a la <strong>precedencia de operadores</strong> — algunos operadores son aplicados antes de otros cuando se calcula el resultado de una suma (referida como una expresión, en programación).  La precedencia de operadores en JavaScript es la misma que en las matemáticas de la escuela  — La multiplicación y la división se resuelven siempre primero, luego la suma y resta (la suma siempre se evalua de izquierda a derecha).</p>
 
 <p>Si quieres alterar la precedencia de operación, puedes colocar paréntesis alrededor de las partes que quieras explícitamente evaluar primero. Para obtener un resultado de 6, podríamos hacer esto:</p>
 
@@ -183,17 +183,17 @@ num2 + num1 / 8 + 2;</pre>
 <p>Pruébalo y verás.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Una completa lista de todos los operadores de JavaScript y sus precedencias pueden encontrarse en <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence">Expresiones y operadores</a>.</p>
+<p><strong>Nota</strong>: Una completa lista de todos los operadores de JavaScript y sus precedencias pueden encontrarse en <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence">Expresiones y operadores</a>.</p>
 </div>
 
 <h2 id="Operadores_de_incremento_y_decremento">Operadores de incremento y decremento</h2>
 
-<p>Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (<code>++</code>) y decremento (<code>--</code>). Usamos <code>++</code> en nuestro juego "Adivina el número" en nuestro artículo <a href="/es/docs/Learn/JavaScript/First_steps/A_first_splash">Un primer acercamiento a JavaScrip</a><a href="/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">t</a>, cuando agregamos 1 a nuestra variable <code>guessCount</code> para mantener una pista de cuantas respuestas le quedan al usuario por turno.</p>
+<p>Algunas veces necesitarás repetidamente sumar o restar uno de/a una variable numérica. Esto puede hacerse convenientemente usando los operadores de incremento (<code>++</code>) y decremento (<code>--</code>). Usamos <code>++</code> en nuestro juego "Adivina el número" en nuestro artículo <a href="/es/docs/Learn/JavaScript/First_steps/A_first_splash">Un primer acercamiento a JavaScrip</a><a href="/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">t</a>, cuando agregamos 1 a nuestra variable <code>guessCount</code> para mantener una pista de cuantas respuestas le quedan al usuario por turno.</p>
 
 <pre class="brush: js notranslate">guessCount++;</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Son muy comunmente usadas en <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">ciclos</a>, que aprenderás más adelante en el curso. Por ejemplo, Digamos que quieras recorrer una lista de precios, y agregar impuestos a cada uno. Usaría un ciclo para recorrer cada valor y realizar el cálculo necesario para agregar el impuesto a las ventas en cada caso. El incrementador es usado para mover al próximo valor cuando es necesario. Damos un simple ejemplo En realidad, proporcionamos un ejemplo simple que muestra cómo se hace esto: ¡pruébalo en vivo y mira el código fuente para ver si puedes detectar los incrementadores! Veremos los ciclos en detalle más adelante en el curso..</p>
+<p><strong>Nota</strong>: Son muy comunmente usadas en <a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">ciclos</a>, que aprenderás más adelante en el curso. Por ejemplo, Digamos que quieras recorrer una lista de precios, y agregar impuestos a cada uno. Usaría un ciclo para recorrer cada valor y realizar el cálculo necesario para agregar el impuesto a las ventas en cada caso. El incrementador es usado para mover al próximo valor cuando es necesario. Damos un simple ejemplo En realidad, proporcionamos un ejemplo simple que muestra cómo se hace esto: ¡pruébalo en vivo y mira el código fuente para ver si puedes detectar los incrementadores! Veremos los ciclos en detalle más adelante en el curso..</p>
 </div>
 
 <p>Trata jugando con eso en tu consola. Para empezar, nota que no puedes aplicar esto directamente a un número, sin operar en él mismo. Lo siguiente retorna un error:</p>
@@ -209,14 +209,14 @@ num1++;</pre>
 
 <pre class="brush: js notranslate">num1;</pre>
 
-<p>Lo mismo funciona con <code>--</code> : intenta lo siguiente:</p>
+<p>Lo mismo funciona con <code>--</code> : intenta lo siguiente:</p>
 
 <pre class="brush: js notranslate">var num2 = 6;
 num2--;
 num2;</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Puedes hacer que el navegador lo haga al revés: aumentar / disminuir la variable y luego devolver el valor, colocando el operador al comienzo de la variable en lugar del final. Prueba los ejemplos anteriores otra vez, pero esta vez usa <code>++num1</code> y<code>--num2</code>.</p>
+<p><strong>Nota</strong>: Puedes hacer que el navegador lo haga al revés: aumentar / disminuir la variable y luego devolver el valor, colocando el operador al comienzo de la variable en lugar del final. Prueba los ejemplos anteriores otra vez, pero esta vez usa <code>++num1</code> y<code>--num2</code>.</p>
 </div>
 
 <h2 id="Operadores_de_asignación">Operadores de asignación</h2>
@@ -243,7 +243,7 @@ x = y; // x ahora contiene el mismo valor de y... 4</pre>
   <tr>
    <td><code>+=</code></td>
    <td>Adición asignación</td>
-   <td>Suma el valor de la derecha al valor de la variable de la  izquierda y returna el nuevo valor</td>
+   <td>Suma el valor de la derecha al valor de la variable de la  izquierda y returna el nuevo valor</td>
    <td><code>x = 3;<br>
     x += 4;</code></td>
    <td><code>x = 3;<br>
@@ -285,16 +285,16 @@ x = y; // x ahora contiene el mismo valor de y... 4</pre>
  </tbody>
 </table>
 
-<p>Intenta digitar algunos de estos ejemplos en tu consola, para darte una idea de cómo funcionan. Mira si puedes preguntar los valores que tenían antes de ingresarlos en la segunda línea, en cada caso.</p>
+<p>Intenta digitar algunos de estos ejemplos en tu consola, para darte una idea de cómo funcionan. Mira si puedes preguntar los valores que tenían antes de ingresarlos en la segunda línea, en cada caso.</p>
 
-<p>Ten en cuenta que puedes usar otras variables en el lado derecho de cada expresión, por ejemplo:</p>
+<p>Ten en cuenta que puedes usar otras variables en el lado derecho de cada expresión, por ejemplo:</p>
 
 <pre class="brush: js notranslate">var x = 3; // x contiene el valor 3
 var y = 4; // y contiene el valor 4
 x *= y; // x ahora contiene el valor 12</pre>
 
 <div class="note">
-<p><strong>Nota</strong>: Hay una cantidad de <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators">otros operadores de asignación disponibles</a>, pero estos son los básicos que debes aprender por ahora.</p>
+<p><strong>Nota</strong>: Hay una cantidad de <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators">otros operadores de asignación disponibles</a>, pero estos son los básicos que debes aprender por ahora.</p>
 </div>
 
 <h2 id="Aprendizaje_activo_dimensionando_una_caja_canvas">Aprendizaje activo: dimensionando una caja canvas</h2>
@@ -308,15 +308,15 @@ x *= y; // x ahora contiene el valor 12</pre>
 <p>En el cuadro de código editable anterior, hay dos líneas marcadas claramente con un comentario que nos gustaría que actualices para hacer que el cuadro crezca/se reduzca a ciertos tamaños, utilizando ciertos operadores y/o valores en cada caso. Intenta lo siguiente:</p>
 
 <ul>
- <li>Cambia la línea que calcula x, para que el recuadro tenga un ancho de 50px, y que el 50 se calcule utilizando los números 43 y 7, y un operador aritmético.</li>
- <li>Cambia la línea que calcula y, para que la casilla tenga 75px de altura y que el 75 se calcule utilizando los números 25 y 3, y un operador aritmético.</li>
- <li>Cambia la línea que calcula x, para que el recuadro tenga un ancho de 250px, y que el 250 se calcule utilizando dos números y el operador del resto (módulo).</li>
- <li>Cambia la línea que calcula y, para que el cuadro tenga 150px de altura, y que el 150 se calcule utilizando tres números, y los operadores de resta y división.</li>
- <li>Cambia la línea que calcula x, para que el cuadro tenga 200px de ancho y que el 200 se calcule utilizando el número 4 y un operador de asignación.</li>
- <li>Cambia la línea que calcula y, para que el cuadro tenga 200px de altura y que el 200 se calcule utilizando los números 50 y 3, el operador de multiplicación y el operador de asignación de suma.</li>
+ <li>Cambia la línea que calcula x, para que el recuadro tenga un ancho de 50px, y que el 50 se calcule utilizando los números 43 y 7, y un operador aritmético.</li>
+ <li>Cambia la línea que calcula y, para que la casilla tenga 75px de altura y que el 75 se calcule utilizando los números 25 y 3, y un operador aritmético.</li>
+ <li>Cambia la línea que calcula x, para que el recuadro tenga un ancho de 250px, y que el 250 se calcule utilizando dos números y el operador del resto (módulo).</li>
+ <li>Cambia la línea que calcula y, para que el cuadro tenga 150px de altura, y que el 150 se calcule utilizando tres números, y los operadores de resta y división.</li>
+ <li>Cambia la línea que calcula x, para que el cuadro tenga 200px de ancho y que el 200 se calcule utilizando el número 4 y un operador de asignación.</li>
+ <li>Cambia la línea que calcula y, para que el cuadro tenga 200px de altura y que el 200 se calcule utilizando los números 50 y 3, el operador de multiplicación y el operador de asignación de suma.</li>
 </ul>
 
-<p>No te preocupes si arruinas totalmente el código. Siempre puedes presionar el botón Restablecer para que las cosas vuelvan a funcionar. Después de haber respondido correctamente a todas las preguntas anteriores, siéntete libre de jugar con el código un poco más, o establece desafíos para tus amigos/compañeros de clase..</p>
+<p>No te preocupes si arruinas totalmente el código. Siempre puedes presionar el botón Restablecer para que las cosas vuelvan a funcionar. Después de haber respondido correctamente a todas las preguntas anteriores, siéntete libre de jugar con el código un poco más, o establece desafíos para tus amigos/compañeros de clase..</p>
 
 <h2 id="Operadores_de_comparación">Operadores de comparación</h2>
 
@@ -410,7 +410,7 @@ function updateBtn() {
 <p>Puede ver el operador de igualdad utilizado justo dentro de la función <code>updateBtn().</code> En este caso, no estamos probando si dos expresiones matemáticas tienen el mismo valor (estamos comprobando si el contenido de texto de un botón contiene una cadena determinada), pero sigue siendo el mismo principio. Si el botón está actualmente diciendo "Iniciar máquina" cuando se presiona, cambiamos su etiqueta a "Detener máquina" y actualizamos la etiqueta según corresponda. Si el botón está actualmente diciendo "Detener máquina" cuando se presiona, volvemos a cambiar la pantalla.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Un control de este tipo que intercambia entre dos estados generalmente se conoce como <strong>conmutador</strong>. Conmuta entre un estado y otro — Luces on, luces off, etc.</p>
+<p><strong>Nota</strong>: Un control de este tipo que intercambia entre dos estados generalmente se conoce como <strong>conmutador</strong>. Conmuta entre un estado y otro — Luces on, luces off, etc.</p>
 </div>
 
 <h2 id="Pon_a_prueba_tus_habilidades">Pon a prueba tus habilidades</h2>
@@ -419,12 +419,12 @@ function updateBtn() {
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>En este artículo hemos cubierto la información fundamental que necesitas saber sobre los números en JavaScript, por ahora. Verás los números usados una y otra vez, a lo largo de tu aprendizaje de JavaScript, por lo que es una buena idea hacer esto ahora. Si eres una de esas personas que no disfruta de las matemáticas, puedes sentirte cómodo por el hecho de que este capítulo fue bastante breve.</p>
+<p>En este artículo hemos cubierto la información fundamental que necesitas saber sobre los números en JavaScript, por ahora. Verás los números usados una y otra vez, a lo largo de tu aprendizaje de JavaScript, por lo que es una buena idea hacer esto ahora. Si eres una de esas personas que no disfruta de las matemáticas, puedes sentirte cómodo por el hecho de que este capítulo fue bastante breve.</p>
 
 <p>En el siguiente artículo, exploraremos el texto y cómo JavaScript nos permite manipularlo.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre <a href="/es/docs/Web/JavaScript/Guide/Numbers_and_dates">Numero y fechas</a> y <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expresiones y operadores</a>.</p>
+<p><strong>Nota</strong>: Si disfrutas de las matemáticas y quieres leer más sobre cómo se implementa en JavaScript, puedes encontrar muchos más detalles en la sección principal de JavaScript de MDN. Los mejores lugares para iniciar con artículos sobre <a href="/es/docs/Web/JavaScript/Guide/Numbers_and_dates">Numero y fechas</a> y <a href="/es/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expresiones y operadores</a>.</p>
 </div>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</p>
@@ -438,7 +438,7 @@ function updateBtn() {
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Variables">Guardando la información que necesitas— Variables</a></li>
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas">Matemáticas básicas en JavaScript — números y operadores</a></li>
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Strings">Manejo de texto — cadenas en JavaScript</a></li>
- <li><a href="/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
+ <li><a href="/es/docs/Learn/JavaScript/First_steps/Useful_string_methods">Métodos útiles para el manejo de cadenas</a></li>
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Arrays">Arreglos</a></li>
  <li><a href="/es/docs/Learn/JavaScript/First_steps/Silly_story_generator" rel="nofollow">Evaluaciones: Generador de historias absurdas</a></li>
 </ul>

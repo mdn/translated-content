@@ -90,5 +90,5 @@ Il existe plusieurs scripts de secours listés sur [cette page](https://github.c
 
 ## Voir aussi
 
-- [`popstate`](/en-US/docs/Mozilla_event_reference/popstate)
-- [WindowEventHandlers.onhashchange](/en-US/docs/Web/API/WindowEventHandlers/onhashchange)
+- [`popstate`](/fr/docs/Mozilla_event_reference/popstate)
+- [WindowEventHandlers.onhashchange](/fr/docs/Web/API/WindowEventHandlers/onhashchange)

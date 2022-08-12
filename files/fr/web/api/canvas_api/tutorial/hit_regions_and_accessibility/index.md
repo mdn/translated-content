@@ -29,7 +29,7 @@ Jetez un oeil à la [video comment NVDA lit cet exemple par Steve Faulkner](http
 
 ## Les règles ARIA
 
-Accessible Rich Internet Applications **([ARIA](/en-US/docs/Web/Accessibility/ARIA))** (≈ [Les applications Internet Accessibles Riches)](https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications) défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir [ARIA](/en-US/docs/Web/Accessibility/ARIA) et [les techniques ARIA](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) pour plus d'informations.
+Accessible Rich Internet Applications **([ARIA](/fr/docs/Web/Accessibility/ARIA))** (≈ [Les applications Internet Accessibles Riches)](https://fr.wikipedia.org/wiki/Accessible_Rich_Internet_Applications) défini des pistes pour rendre le contenu Web et les applications Web plus accessibles pour les personnes ayant un handicap. Vous pouvez utiliser les attributs ARIA pour decrire le comportement et le but de vos éléments canvas. Allez voir [ARIA](/fr/docs/Web/Accessibility/ARIA) et [les techniques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) pour plus d'informations.
 
 ```html
 <canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"></canvas>

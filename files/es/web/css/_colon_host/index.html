@@ -12,7 +12,7 @@ translation_of: 'Web/CSS/:host'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary">La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a> <strong><code>:host</code></strong> selecciona la sombra host de <a href="/es/docs/Web/Web_Components/Using_shadow_DOM">sombra DOM</a> que contiene el CSS que se usa en el interior — es decir, esto le permite seleccionar un elemento personalizado desde su sombra DOM.</span></p>
+<p><span class="seoSummary">La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <a href="/es/docs/Web/CSS">CSS</a> <strong><code>:host</code></strong> selecciona la sombra host de <a href="/es/docs/Web/Web_Components/Using_shadow_DOM">sombra DOM</a> que contiene el CSS que se usa en el interior — es decir, esto le permite seleccionar un elemento personalizado desde su sombra DOM.</span></p>
 
 <div class="note">
 <p><strong>Nota</strong>: Esto no tiene ningún efecto cuando se usa fuera de una sombra DOM.</p>
@@ -20,7 +20,7 @@ translation_of: 'Web/CSS/:host'
 
 <pre class="brush: css no-line-numbers">/* Selects a shadow root host */
 :host {
-  font-weight: bold;
+  font-weight: bold;
 }
 </pre>
 
@@ -30,13 +30,13 @@ translation_of: 'Web/CSS/:host'
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>Los siguientes fragmentos se toman de nuestro ejemplo de <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">selectores de host</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">ver también en directo</a>).</p>
+<p>Los siguientes fragmentos se toman de nuestro ejemplo de <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors">selectores de host</a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">ver también en directo</a>).</p>
 
 <p>En este ejemplo, tenemos un elemento personalizado simple — <code>&lt;context-span&gt;</code> — que se puede envolver alrededor del texto:</p>
 
 <pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
 
-<p>Dentro del constructor del elemento, creamos los elementos <code>style</code> y <code>span</code>, llenamos el <code>span</code> con el contenido del elemento personalizado y llenamos el elemento <code>style</code> con algunas reglas CSS:</p>
+<p>Dentro del constructor del elemento, creamos los elementos <code>style</code> y <code>span</code>, llenamos el <code>span</code> con el contenido del elemento personalizado y llenamos el elemento <code>style</code> con algunas reglas CSS:</p>
 
 <pre class="brush: js">let style = document.createElement('style');
       let span = document.createElement('span');
@@ -53,7 +53,7 @@ translation_of: 'Web/CSS/:host'
                           ':host(.footer) { color : red; }' +
                           ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
 
-<p>La regla <code>:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }</code>  estiliza todas las instancias del elemento <code>&lt;context-span&gt;</code> (la sombra host en esta instancia) en el documento.</p>
+<p>La regla <code>:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }</code>  estiliza todas las instancias del elemento <code>&lt;context-span&gt;</code> (la sombra host en esta instancia) en el documento.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -92,4 +92,4 @@ translation_of: 'Web/CSS/:host'
  <li>{{cssxref(":host-context()")}}</li>
 </ul>
 
-<p> </p>
+<p> </p>

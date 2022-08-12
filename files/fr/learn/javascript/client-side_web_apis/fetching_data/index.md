@@ -202,7 +202,7 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
 
 #### Que se passe-t-il dans le code Fetch?
 
-Tout d'abord, nous invoquons la méthode {{domxref("WindowOrWorkerGlobalScope.fetch()","fetch()")}}, en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
+Tout d'abord, nous invoquons la méthode [`fetch()`](/fr/docs/Web/API/Fetch), en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
 
 Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment-là. C'est l'équivalent du gestionnaire d'évènement `onload` dans la version XHR.
 

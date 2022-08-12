@@ -62,4 +62,4 @@ window.onoffline = (event) => {
 
 ## Voir également
 
-- [`online`](/en-US/docs/Web/API/Window/online_event)
+- [`online`](/fr/docs/Web/API/Window/online_event)

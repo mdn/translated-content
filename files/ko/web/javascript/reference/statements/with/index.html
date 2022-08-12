@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong>with statement</strong> 는 명령문의 범위 체인을 확장합니다.</p>
+<p><strong>with statement</strong> 는 명령문의 범위 체인을 확장합니다.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,11 +26,11 @@ translation_of: Web/JavaScript/Reference/Statements/with
 
 <p>JavaScript는 규정되지 않은 이름을 포함하는 스크립트 또는 함수의 실행 컨텍스트와 연관된 범위 체인을 검색하여 규정되지 않은 이름을 찾습니다. 'with'문은 해당 개체를 평가하는 동안 이 개체를 해당 범위 체인의 머리글에 추가합니다. 본문에 사용된 규정되지 않은 이름이 범위 체인의 속성과 일치하는 경우 이름은 속성과 속성이 포함 된 개체에 바인딩 됩니다. 그렇지 않으면, {{jsxref("ReferenceError")}} 가 발생됩니다.</p>
 
-<div class="note"><code>with</code> 를 사용하는 것은 권장하지 않으며, ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode</a>에서는 금지되어 있습니다. 임시 변수에 액세스 하려는 속성이 있는 객체를 할당하는 것이 좋습니다.</div>
+<div class="note"><code>with</code> 를 사용하는 것은 권장하지 않으며, ECMAScript 5 <a href="/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode</a>에서는 금지되어 있습니다. 임시 변수에 액세스 하려는 속성이 있는 객체를 할당하는 것이 좋습니다.</div>
 
 <h3 id="Performance_pro_contra">Performance pro &amp; contra</h3>
 
-<p><strong>Pro:</strong> <code>with</code> 구문은 성능저하 없이 긴 객체 참조를 반복해야할 필요를 줄여서 파일 크기를 감소 시킬 수 있습니다. 'with'에 필요한 스코프 체인 변경은 연산 비용이 들지 않습니다. 'with'를 사용하면 반복되는 객체 참조를 파싱하는 인터프리터가 해소됩니다. 하지만 대게의 경우에 이 이점은 임시변수를 사용하여 원하는 객체에 대한 참조를 저장함으로써 얻을 수 있습니다.</p>
+<p><strong>Pro:</strong> <code>with</code> 구문은 성능저하 없이 긴 객체 참조를 반복해야할 필요를 줄여서 파일 크기를 감소 시킬 수 있습니다. 'with'에 필요한 스코프 체인 변경은 연산 비용이 들지 않습니다. 'with'를 사용하면 반복되는 객체 참조를 파싱하는 인터프리터가 해소됩니다. 하지만 대게의 경우에 이 이점은 임시변수를 사용하여 원하는 객체에 대한 참조를 저장함으로써 얻을 수 있습니다.</p>
 
 <p><strong>Contra:</strong> The <code>with</code> statement forces the specified object to be searched first for all name lookups. Therefore all identifiers that aren't members of the specified object will be found more slowly in a 'with' block. Where performance is important, 'with' should only be used to encompass code blocks that access members of the specified object.</p>
 
@@ -76,46 +76,11 @@ with (Math) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-with-statement', 'with statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-with-statement', 'with statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.10', 'with statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Now forbidden in strict mode.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.10', 'with statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.10', 'with statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-
-
-<p>{{Compat("javascript.statements.with")}}</p>
+{{Compat("javascript.statements.with")}}
 
 <h2 id="See_also">See also</h2>
 

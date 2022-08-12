@@ -69,14 +69,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-start-start-radius: 10px;
+  border-start-start-radius: 10px;
 }
 ```
 

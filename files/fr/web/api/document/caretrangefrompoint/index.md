@@ -1,37 +1,81 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
+page-type: web-api-instance-method
 translation_of: Web/API/Document/caretRangeFromPoint
+browser-compat: api.Document.caretRangeFromPoint
 ---
 {{APIRef("DOM")}}{{Non-standard_header}}
 
-La méthode **`caretRangeFromPoint()`** de l'interface {{domxref("Document")}} renvoie un objet "Range" (_chaîne_) pour le fragment de document aux coordonnées spécifiées.
+La méthode **`caretRangeFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Range`](/fr/docs/Web/API/Range) correspondant au fragment de document situé aux coordonnées indiquées.
 
 ## Syntaxe
 
 ```js
-var range = document.caretRangeFromPoint(float x, float y);
+caretRangeFromPoint(x, y)
 ```
-
-### Retourne
-
-Une des réponses suivantes :
-
-- Un {{domxref("Range")}}.
-- `Null` si **x** ou **y** sont négatifs, hors de la fenêtre, ou s'il n'y a pas de noeud d'entrée de texte.
 
 ### Paramètres
 
-- x
-  - : Une position horizontale dans la fenêtre courante.
-- y
-  - : Une position verticale dans la fenêtre courante.
+- `x`
+  - : L'abscisse de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
+- `y`
+  - : L'ordonnée de la position ciblée au sein de la zone d'affichage (<i lang="en">viewport</i>) actuelle.
 
-## Exemple
+### Valeur de retour
 
-Démonstration de base : lorsque vous cliquez dans un paragraphe, insérez un saut de ligne à la position du curseur :
+La valeur de retour peut être&nbsp;:
 
-### Contenu HTML
+- Un objet [`Range`](/fr/docs/Web/API/Range)
+- Ou `null`, si `x` ou `y` sont négatifs, situés en dehors de la zone d'affichage ou s'il n'y a pas de nœud texte correspondant.
+
+## Exemples
+
+Cliquez n'importe où dans le paragraphe **Démo** ci-après pour ajouter un saut de ligne à l'endroit du clic. Le code utilisé est décrit après.
+
+### Démo
+
+{{EmbedLiveSample('')}}
+
+Le code qui suit commence par vérifier la prise en charge de `document.caretRangeFromPoint`. Si le navigateur ne prend pas en charge cette méthode, le code vérifie si [`document.caretPositionFromPoint`](/fr/docs/Web/API/Document/caretPositionFromPoint) est disponible et l'utilise le cas échéant.
+
+### JavaScript
+
+```js
+function insertBreakAtPoint(e) {
+  let range;
+  let textNode;
+  let offset;
+
+  if (document.caretRangeFromPoint) {
+    range = document.caretRangeFromPoint(e.clientX, e.clientY);
+    textNode = range.startContainer;
+    offset = range.startOffset;
+  } else if (document.caretPositionFromPoint) {
+    range = document.caretPositionFromPoint(e.clientX, e.clientY);
+    textNode = range.offsetNode;
+    offset = range.offset;
+  } else {
+    document.body.textContent = '[Ce navigateur ne supporte ni'
+      + ' document.caretRangeFromPoint'
+      + ' ni document.caretPositionFromPoint.]';
+    return;
+  }
+  // On opère uniquement sur le texte
+  if (textNode && textNode.nodeType == 3) {
+    let replacement = textNode.splitText(offset);
+    let br = document.createElement('br');
+    textNode.parentNode.insertBefore(br, replacement);
+  }
+}
+
+let paragraphs = document.getElementsByTagName('p');
+for (let i = 0; i < paragraphs.length; i++) {
+  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+}
+```
+
+### HTML
 
 ```html
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
@@ -40,42 +84,6 @@ sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 ```
 
-### Contenu JavaScript
-
-```js
-function insertBreakAtPoint(e) {
-
-    var range;
-    var textNode;
-    var offset;
-    
-    if (document.caretPositionFromPoint) {
-        range = document.caretPositi
-        textNode = range.offset
-        offset = range.offset;
-    
-    } else if (document.caretRangeFromPo
-        range = document.caretRange
-      
-        offset = range.startOffset;
-    }
-    
-    // divise seulement les TEXT_NODE (noeuds 
-    if (textNode && textNode.nodeType == 3) {
-        var replacement = textNode.splitText(offset);
-        var br = document.createElement('br');
-        textNode.parentNode.insertBefore(br, replacement);
-    }
-}
-
-var paragraphs = document.getElementsByTagName("p");
-for (i=0 ; i < paragraphs.length; i++) {
-    paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
-}
-```
-
-{{ EmbedLiveSample('Exemple', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}
-
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.caretRangeFromPoint")}}
+{{Compat}}

@@ -7,9 +7,9 @@ translation_of: Web/API/Touch_events
 
 <p><span class="seoSummary">터치를 기반으로 한 양질의 서비스를 제공하기 위해, Touch Events(터치이벤트)는 터치로 인한 움직임을 감지할 능력을 제공합니다.</span></p>
 
-<p>터치 이벤트 인터페이스는 상대적으로 low-level API이며 multi-touch interaction등의 다양한 동작을 특정해 트리거 할 수 있습니다. multi-touch interaction은 한 손가락이 터치패드에 처음 닫는 순간 시작합니다. 이후 다른 손가락들이 터치패드에 닿고 선택적으로 터치패드를 가로지를 수도 있습니다. interaction은 손가락들이 터치패드에서 떨어지면 끝납니다. interaction동안에 어플리케이션은 touch start, move, end 이벤트들을 받습니다.</p>
+<p>터치 이벤트 인터페이스는 상대적으로 low-level API이며 multi-touch interaction등의 다양한 동작을 특정해 트리거 할 수 있습니다. multi-touch interaction은 한 손가락이 터치패드에 처음 닫는 순간 시작합니다. 이후 다른 손가락들이 터치패드에 닿고 선택적으로 터치패드를 가로지를 수도 있습니다. interaction은 손가락들이 터치패드에서 떨어지면 끝납니다. interaction동안에 어플리케이션은 touch start, move, end 이벤트들을 받습니다.</p>
 
-<p>터치 이벤트는 동시에 여러 손가락으로 동시에 혹은 여러 지점에 터치 할 수 있다는 것만 제외하면 마우스 이벤트와 유사합니다. {{domxref("TouchEvent")}} 인터페이스는 현재 액션과 터치 지점을 캡슐화 합니다. single touch로 대표되는 {{domxref("Touch")}} 인터페이스는 브라우저의 뷰포트와 관련된 접촉 지점의 위치와 같은 것들의 정보등을 포함합니다.</p>
+<p>터치 이벤트는 동시에 여러 손가락으로 동시에 혹은 여러 지점에 터치 할 수 있다는 것만 제외하면 마우스 이벤트와 유사합니다. {{domxref("TouchEvent")}} 인터페이스는 현재 액션과 터치 지점을 캡슐화 합니다. single touch로 대표되는 {{domxref("Touch")}} 인터페이스는 브라우저의 뷰포트와 관련된 접촉 지점의 위치와 같은 것들의 정보등을 포함합니다.</p>
 
 <h2 id="Definitions">Definitions</h2>
 
@@ -142,7 +142,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h4 id="Handling_the_end_of_a_touch">Handling the end of a touch</h4>
 
-<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
+<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
 
 <pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();
@@ -182,7 +182,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
   var touches = evt.changedTouches;
 
   for (var i = 0; i &lt; touches.length; i++) {
-    var idx = ongoingTouchIndexById(touches[i].identifier);
+    var idx = ongoingTouchIndexById(touches[i].identifier);
     ongoingTouches.splice(idx, 1);  // remove it; we're done
   }
 }
@@ -293,25 +293,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>radiusX</code>, <code>radiusY</code>, <code>rotationAngle</code>, <code>force</code> properties</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

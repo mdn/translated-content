@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <strong><code>matchAll()</code></strong> возвращает итератор по всем результатам при сопоставлении <em>строки с регулярным выражением</em>.</p>
+<p>Метод <strong><code>matchAll()</code></strong> возвращает итератор по всем результатам при сопоставлении <em>строки с регулярным выражением</em>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
 
@@ -31,33 +31,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Возвращается <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a> (не перезапускаемый).</p>
+<p>Возвращается <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">iterator</a> (не перезапускаемый).</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Regexp.exec_и_matchAll">Regexp.exec() и matchAll()</h3>
 
-<p>До добавления метода <code>matchAll</code> в JavaScript, можно было использовать метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a> (и регулярные выражения с флагом <code>/g</code> ) в цикле для получения доступа к совпадениям:</p>
+<p>До добавления метода <code>matchAll</code> в JavaScript, можно было использовать метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">regexp.exec</a> (и регулярные выражения с флагом <code>/g</code> ) в цикле для получения доступа к совпадениям:</p>
 
 <pre class="brush: js">const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 
 while ((matches = regexp.exec(str)) !== null) {
-  console.log(`Found ${matches[0]}. Next starts at ${regexp.lastIndex}.`);
-  // expected output: "Found foo. Next starts at 9."
-  // expected output: "Found foo. Next starts at 19."
+  console.log(`Found ${matches[0]}. Next starts at ${regexp.lastIndex}.`);
+  // expected output: "Found foo. Next starts at 9."
+  // expected output: "Found foo. Next starts at 19."
 }
 </pre>
 
-<p>С появлением <code>matchAll</code>, нет необходимости использовать цикл <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> и метод <code>exec</code> с флагом <code>/g</code>.<br>
- Используя вместо этого метод <code>matchAll</code>, вы получаете итератор, который вы можете использовать более удобно с конструкциями <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">array spread</a>, или {{jsxref("Array.from()")}} :</p>
+<p>С появлением <code>matchAll</code>, нет необходимости использовать цикл <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> и метод <code>exec</code> с флагом <code>/g</code>.<br>
+ Используя вместо этого метод <code>matchAll</code>, вы получаете итератор, который вы можете использовать более удобно с конструкциями <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">array spread</a>, или {{jsxref("Array.from()")}} :</p>
 
 <pre class="brush: js">const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 let matches = str.matchAll(regexp);
 
 for (const match of matches) {
-  console.log(match);
+  console.log(match);
 }
 // Array [ "foo" ]
 // Array [ "foo" ]
@@ -72,7 +72,7 @@ Array.from(matches, m =&gt; m[0]);
 
 <h3 id="Улучшенный_доступ_к_группам_захвата">Улучшенный доступ к группам захвата</h3>
 
-<p>Ещё одна веская причина использовать <code>matchAll</code> это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match()</a></code> с глобальным флагом <code>/g</code>:</p>
+<p>Ещё одна веская причина использовать <code>matchAll</code> это улучшенный доступ к группам захвата. Группы захвата игнорируются при использовании <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">match()</a></code> с глобальным флагом <code>/g</code>:</p>
 
 <pre class="brush: js">var regexp = /t(e)(st(\d?))/g;
 var str = 'test1test2';

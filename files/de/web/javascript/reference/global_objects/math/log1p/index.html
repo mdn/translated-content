@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 
 <h2 id="Beschreibung">Beschreibung</h2>
 
-<p>Für sehr kleine Zahlen für <code>x</code> kann das Addieren mit 1 zu verlusten in der Präzision führen. Die Zahlen in JavaScript haben eine Genauigkeit von 15 Stellen. <code> 1 + 1e-15 = 1.000000000000001</code>, aber <code>1 + 1e-16 = 1.000000000000000</code> und damit exakt <code>1</code><code>.0</code> in dieser Arithmetik, weil Ziffern nach der 15 Stelle gerundet werden.</p>
+<p>Für sehr kleine Zahlen für <code>x</code> kann das Addieren mit 1 zu verlusten in der Präzision führen. Die Zahlen in JavaScript haben eine Genauigkeit von 15 Stellen. <code> 1 + 1e-15 = 1.000000000000001</code>, aber <code>1 + 1e-16 = 1.000000000000000</code> und damit exakt <code>1</code><code>.0</code> in dieser Arithmetik, weil Ziffern nach der 15 Stelle gerundet werden.</p>
 
 <p>Wenn <code>log(1 + x)</code> berechnet wird, bekommt man ein Ergebnis sehr na an <code>x</code>, wenn <code>x</code> klein ist (das ist der Grund, warum es 'natürlicher' Logarithmus heißt). Wenn <code>Math.log(1 + 1.1111111111e-15)</code> berechnet wird sollte man ein Ergebnis nah an <code>1.1111111111e-15</code> bekommt. Stattdessen berechnet man den Logarithmus von <code><span style="line-height: 1.5;">1.00000000000000111022</span></code><span style="line-height: 1.5;"> (die Rundung geschieht im Binärsystem und ist manchmal unschön) un erhält das Ergebnis <code>1.11022...e-15</code> mit nur 3 korrekten Stellen. Wenn stattdessen <code>Math.log1p(</code></span><code>1.1111111111e-15</code><span style="line-height: 1.5;"><code>)</code> berechnet wird, bekommt man ein besseres Ergebnis von <code>1.1111111110999995e-15</code> mit 15 korrekten Stellen in der Präzision (aktuell 16 in diesem Fall).</span></p>
 
@@ -80,7 +80,7 @@ Math.log1p(-2); // NaN
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/wbr
   </tr>
   <tr>
    <th scope="row">Разрешённые родительские элементы</th>
-   <td><strong>Любой элемент принимающий <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</strong></td>
+   <td><strong>Любой элемент принимающий <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a>.</strong></td>
   </tr>
   <tr>
    <th scope="row">Разрешённые роли ARIA</th>
@@ -42,11 +42,11 @@ translation_of: Web/HTML/Element/wbr
 
 <h2 id="Атрибуты"><strong>Атрибуты</strong></h2>
 
-<p><strong>Элемент может содержать только <a href="/ru-R/docs/HTML/Global_attributes">глобальные атрибуты</a>.</strong></p>
+<p><strong>Элемент может содержать только <a href="/ru-R/docs/HTML/Global_attributes">глобальные атрибуты</a>.</strong></p>
 
 <h2 id="Примечания"><strong>Примечания</strong></h2>
 
-<p>На страницах в кодировке UTF-8, элемент <code>&lt;wbr&gt;</code> ведёт себя как кодовое значение <code>U+200B ZERO-WIDTH SPACE</code> (пробел нулевой ширины). В частности, он ведёт себя как кодовое значение Unicode Bidi BN, то есть он не влияет на порядок {{Glossary("bidi")}}-направления (двунаправленного потока) <code>&lt;div dir=rtl&gt;123,&lt;wbr&gt;456&lt;/div&gt;</code>: отображается, если выражение не разбито на две строки, <code>123 456</code> и не <code>456,123</code>.</p>
+<p>На страницах в кодировке UTF-8, элемент <code>&lt;wbr&gt;</code> ведёт себя как кодовое значение <code>U+200B ZERO-WIDTH SPACE</code> (пробел нулевой ширины). В частности, он ведёт себя как кодовое значение Unicode Bidi BN, то есть он не влияет на порядок {{Glossary("bidi")}}-направления (двунаправленного потока) <code>&lt;div dir=rtl&gt;123,&lt;wbr&gt;456&lt;/div&gt;</code>: отображается, если выражение не разбито на две строки, <code>123 456</code> и не <code>456,123</code>.</p>
 
 <p>По той же причине, элемент <code>&lt;wbr&gt;</code> не вводит дефис в точке разрыва строки. Чтобы дефис отображался только в конце строки, используйте вместо него символ «мягкого дефиса» (<code>&amp;shy;</code>).</p>
 
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/wbr
 
 <h2 id="Пример"><strong>Пример</strong></h2>
 
-<p><a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/">Руководство по стилю Yahoo</a> рекомендует <a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses">разбивать URL перед пунктуацией</a>, чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.<strong> </strong></p>
+<p><a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/">Руководство по стилю Yahoo</a> рекомендует <a href="https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses">разбивать URL перед пунктуацией</a>, чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.<strong> </strong></p>
 
 <pre class="brush: html"><strong>&lt;p&gt;http://this&lt;wbr&gt;.is&lt;wbr&gt;.a&lt;wbr&gt;.really&lt;wbr&gt;.long&lt;wbr&gt;.example&lt;wbr&gt;.com/With&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;wbr&gt;/deeper&lt;wbr&gt;/level&lt;wbr&gt;/pages&lt;/p&gt; </strong></pre>
 

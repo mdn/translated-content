@@ -53,9 +53,9 @@ translation_of: 'Web/CSS/:nth-last-child'
 <h3 id="Example_selectors" name="Example_selectors">Selectores de ejemplo</h3>
 
 <dl>
- <dt><code>tr:nth-last-child(odd)</code> o <code>tr:nth-last-child(2n+1)</code></dt>
+ <dt><code>tr:nth-last-child(odd)</code> o <code>tr:nth-last-child(2n+1)</code></dt>
  <dd>Representa las filas impares de una tabla HTML: 1, 3, 5, etc., contando desde el final.</dd>
- <dt><code>tr:nth-last-child(even)</code> o <code>tr:nth-last-child(2n)</code></dt>
+ <dt><code>tr:nth-last-child(even)</code> o <code>tr:nth-last-child(2n)</code></dt>
  <dd>Representa las filas pares de una tabla HTML: 2, 4, 6, etc., contando desde el final.</dd>
  <dt><code>:nth-last-child(7)</code></dt>
  <dd>Representa el séptimo elemento, contando desde el final.</dd>
@@ -66,9 +66,9 @@ translation_of: 'Web/CSS/:nth-last-child'
  <dt><code>:nth-last-child(-n+3)</code></dt>
  <dd>Representa los últimos tres elementos entre un grupo de hermanos.</dd>
  <dt><code>p:nth-last-child(n)</code></dt>
- <dd>Representa cada elemento <code>&lt;p&gt;</code> entre un grupo de hermanos. Esto es lo mismo que un simple selector <code>p</code>. </dd>
+ <dd>Representa cada elemento <code>&lt;p&gt;</code> entre un grupo de hermanos. Esto es lo mismo que un simple selector <code>p</code>. </dd>
  <dt><code>p:nth-last-child(1)</code> or <code>p:nth-last-child(0n+1)</code></dt>
- <dd>Representa cada <code>&lt;p&gt;</code> que es el primer elemento entre un grupo de hermanos, contando desde el final. Esto es lo mismo que el selector {{cssxref(":last-child")}}. </dd>
+ <dd>Representa cada <code>&lt;p&gt;</code> que es el primer elemento entre un grupo de hermanos, contando desde el final. Esto es lo mismo que el selector {{cssxref(":last-child")}}. </dd>
 </dl>
 
 <h3 id="Ejemplo_de_tabla">Ejemplo de tabla</h3>
@@ -109,12 +109,12 @@ tr:nth-last-child(-n+3) {
 
 /* Toma todos los elementos a partir del penúltimo elemento */
 tr:nth-last-child(n+2) {
-  color: blue;
+  color: blue;
 }
 
 /* Seleccione solo el penúltimo elemento */
 tr:nth-last-child(2) {
-  font-weight: 600;
+  font-weight: 600;
 }
 </pre>
 
@@ -129,27 +129,27 @@ tr:nth-last-child(2) {
 <h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Primera línea&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Segunda línea&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Tercera línea&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Primera línea&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Segunda línea&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tercera línea&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
 <pre class="brush: css">tr:nth-last-child(n) {
-  background-color: lightgray;
+  background-color: lightgray;
 }
 
 tr:nth-last-child(n+1){
-  font-weight: 600;
+  font-weight: 600;
 }
 </pre>
 

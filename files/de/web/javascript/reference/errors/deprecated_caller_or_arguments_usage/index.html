@@ -24,7 +24,7 @@ TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
 
 <h2 id="Was_ist_falsch_gelaufen">Was ist falsch gelaufen?</h2>
 
-<p>Im <a href="/de/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a> wurden die Eigenschaften {{jsxref("Function.caller")}} oder {{jsxref("Function.arguments")}} benutzt, was nicht getan werden sollte. Sie sind veraltet, da sie den Funktionsaufruf verlieren, nicht standardisiert sind, schwer zu optimieren sind und möglicherweise leistungsschädigend sein können.</p>
+<p>Im <a href="/de/docs/Web/JavaScript/Reference/Strict_mode">Strict Mode</a> wurden die Eigenschaften {{jsxref("Function.caller")}} oder {{jsxref("Function.arguments")}} benutzt, was nicht getan werden sollte. Sie sind veraltet, da sie den Funktionsaufruf verlieren, nicht standardisiert sind, schwer zu optimieren sind und möglicherweise leistungsschädigend sein können.</p>
 
 <h2 id="Beispiele">Beispiele</h2>
 
@@ -35,11 +35,11 @@ TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
 <pre class="brush: js example-bad">'use strict';
 
 function myFunc() {
-  if (myFunc.caller == null) {
-    return 'The function was called from the top!';
-  } else {
-    return 'This function\'s caller was ' + myFunc.caller;
-  }
+  if (myFunc.caller == null) {
+    return 'The function was called from the top!';
+  } else {
+    return 'This function\'s caller was ' + myFunc.caller;
+  }
 }
 
 myFunc();

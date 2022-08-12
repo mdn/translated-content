@@ -11,17 +11,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Symbol.species</strong></code><strong> —</strong> известный символ, позволяющий определить конструктор, использующийся для создания порождённых объектов.</p>
+<p><code><strong>Symbol.species</strong></code><strong> —</strong> известный символ, позволяющий определить конструктор, использующийся для создания порождённых объектов.</p>
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Свойство <code><strong>Symbol.species</strong></code>, содержащее аксессор (геттер), позволяет подклассам переопределить конструктор, используемый по умолчанию для создания новых объектов.</p>
+<p>Свойство <code><strong>Symbol.species</strong></code>, содержащее аксессор (геттер), позволяет подклассам переопределить конструктор, используемый по умолчанию для создания новых объектов.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Вам может понадобиться возвращать объекты типа {{jsxref("Array")}} в методах вашего производного класса <code>MyArray</code>. Например, при использовании метода вроде {{jsxref("Array.map", "map()")}}, использующего конструктор по умолчанию, вам может потребоваться возвращать объект родительского типа <code>Array</code>, вместо <code>MyArray</code>. Символ <code><strong>species</strong></code> позволит вам это сделать:</p>
+<p>Вам может понадобиться возвращать объекты типа {{jsxref("Array")}} в методах вашего производного класса <code>MyArray</code>. Например, при использовании метода вроде {{jsxref("Array.map", "map()")}}, использующего конструктор по умолчанию, вам может потребоваться возвращать объект родительского типа <code>Array</code>, вместо <code>MyArray</code>. Символ <code><strong>species</strong></code> позволит вам это сделать:</p>
 
 <pre class="brush: js">class MyArray extends Array {
   // Перегружаем species для использования родительского конструктора Array
@@ -51,7 +51,7 @@ console.log(mapped instanceof Array);   // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

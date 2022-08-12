@@ -12,10 +12,10 @@ translation_of: Web/API/SharedWorker
 ---
 <div>{{APIRef("Web Workers API")}}</div>
 
-<p>Das <code><strong>SharedWorker</strong></code> Interface repräsentiert eine spezielle Art von Worker, auf welchen durch mehrere Kontexte zugegeriffen werden kann. Hier kann es sich um verschiedene Tabs, iFrames oder auch Worker handeln. Diese implementieren ein anderes Interface als dedicated Worker und haben einen anderen Global Scope {{domxref("SharedWorkerGlobalScope")}}.</p>
+<p>Das <code><strong>SharedWorker</strong></code> Interface repräsentiert eine spezielle Art von Worker, auf welchen durch mehrere Kontexte zugegeriffen werden kann. Hier kann es sich um verschiedene Tabs, iFrames oder auch Worker handeln. Diese implementieren ein anderes Interface als dedicated Worker und haben einen anderen Global Scope {{domxref("SharedWorkerGlobalScope")}}.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Wenn auf einen SharedWorker von mehreren Browser Kontexten aus zugegriffen wird müssen all diese denselben Urpsrung haben. (Dasselbe Protocol, Host und Port)</p>
+<p><strong>Note:</strong> Wenn auf einen SharedWorker von mehreren Browser Kontexten aus zugegriffen wird müssen all diese denselben Urpsrung haben. (Dasselbe Protocol, Host und Port)</p>
 </div>
 
 <h2 id="Konstruktoren">Konstruktoren</h2>
@@ -27,13 +27,13 @@ translation_of: Web/API/SharedWorker
 
 <h2 id="Eigenschaften">Eigenschaften</h2>
 
-<p><em>Erbt Eigenschaften von dem Parent {{domxref("EventTarget")}} und implementiert Eigenschaften von {{domxref("AbstractWorker")}}.</em></p>
+<p><em>Erbt Eigenschaften von dem Parent {{domxref("EventTarget")}} und implementiert Eigenschaften von {{domxref("AbstractWorker")}}.</em></p>
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>Ist ein{{domxref("EventListener")}} der immer aufgerufen wird wenn ein {{domxref("ErrorEvent")}} vom Typ <code>error</code> durch den Worker läuft.</dd>
+ <dd>Ist ein{{domxref("EventListener")}} der immer aufgerufen wird wenn ein {{domxref("ErrorEvent")}} vom Typ <code>error</code> durch den Worker läuft.</dd>
  <dt>{{domxref("SharedWorker.port")}} {{readonlyInline}}</dt>
- <dd>Returnt ein {{domxref("MessagePort")}} Objekt, welches zum Kommunizieren und Kontrollieren des Shared Workers verwendet wird.</dd>
+ <dd>Returnt ein {{domxref("MessagePort")}} Objekt, welches zum Kommunizieren und Kontrollieren des Shared Workers verwendet wird.</dd>
 </dl>
 
 <dl>
@@ -45,7 +45,7 @@ translation_of: Web/API/SharedWorker
 
 <h2 id="Beispiel">Beispiel</h2>
 
-<p>In unserem <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Grundlegenden Shared Worker Beispiel</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">Shared Worker ausführen</a>), haben wir zwei HTML Seiten, von denen beide etwas JavaScript verwenden um simple Kalkulationen auszuführen. Die verschiedenen Skripte verwenden dasselbe Worker File um die Kalkulation durchzuführen. Beide können auf dieses zugreifen, auch wenn diese in verschiedenen Fenstern ausgeführt werden.</p>
+<p>In unserem <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">Grundlegenden Shared Worker Beispiel</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">Shared Worker ausführen</a>), haben wir zwei HTML Seiten, von denen beide etwas JavaScript verwenden um simple Kalkulationen auszuführen. Die verschiedenen Skripte verwenden dasselbe Worker File um die Kalkulation durchzuführen. Beide können auf dieses zugreifen, auch wenn diese in verschiedenen Fenstern ausgeführt werden.</p>
 
 <p>Das folgende Code Beispiel zeigt das Erstellen eines <code>SharedWorker</code> Objekts unter der Verwendung des {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} Konstruktors. Beide Skripte enthalten:</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/SharedWorker
 
 <pre class="brush: js">myWorker.port.start();</pre>
 
-<p>Wenn der Port gestartet ist senden beide Skripte Nachrichten an den Worker und behandeln die empfangenen Nachrichten von <code>port.postMessage()</code> und <code>port.onmessage</code>:</p>
+<p>Wenn der Port gestartet ist senden beide Skripte Nachrichten an den Worker und behandeln die empfangenen Nachrichten von <code>port.postMessage()</code> und <code>port.onmessage</code>:</p>
 
 <pre class="brush: js">first.onchange = function() {
   myWorker.port.postMessage([first.value,second.value]);
@@ -73,7 +73,7 @@ myWorker.port.onmessage = function(e) {
   console.log('Message received from worker');
 }</pre>
 
-<p>Innerhalb des Workers verwenden wird den {{domxref("SharedWorkerGlobalScope.onconnect")}} Handler um uns an den oben genannten Port zu verbinden. Die mit dem Worker verbundenen Ports sind durch die Eigenschaft <code>ports im</code> {{event("connect")}} Event zugänglich. Anschließend verwenden wir die {{domxref("MessagePort")}} <code>start()</code> Methode um den Port zu starten und verwenden den <code>onmessage</code> Handler um die Nachrichten aus dem Main Thread zu behandeln.</p>
+<p>Innerhalb des Workers verwenden wird den {{domxref("SharedWorkerGlobalScope.onconnect")}} Handler um uns an den oben genannten Port zu verbinden. Die mit dem Worker verbundenen Ports sind durch die Eigenschaft <code>ports im</code> {{event("connect")}} Event zugänglich. Anschließend verwenden wir die {{domxref("MessagePort")}} <code>start()</code> Methode um den Port zu starten und verwenden den <code>onmessage</code> Handler um die Nachrichten aus dem Main Thread zu behandeln.</p>
 
 <pre class="brush: js">onconnect = function(e) {
   var port = e.ports[0];

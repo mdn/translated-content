@@ -29,13 +29,13 @@ translation_of: Web/API/Window/devicePixelRatio
 
 <h3 id="Value" name="Value">値</h3>
 
-<p>倍精度浮動小数点の値であり、CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI やレティナのディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。</p>
+<p>倍精度浮動小数点の値であり、CSS ピクセル解像度に対するディスプレイの物理的なピクセル解像度の比率を表します。この値が 1 であることは、それが伝統的な 96 DPI (プラットフォームによっては 76 DPI) であることを意味し、2 であることは、HiDPI やレティナのディスプレイであると考えられます。それ以外の値が返されることもあり、それは一般的でない低解像度のディスプレイの場合や、より考えられるのはスクリーンが標準的な 96 または 76 DPI の解像度の単純な 2 倍よりも高いピクセル密度を持つ場合です。</p>
 
 <h2 id="Examples" name="Examples">使用例</h2>
 
 <h3 id="Correcting_resolution_in_a_&lt;canvas>" name="Correcting_resolution_in_a_&lt;canvas>">&lt;canvas&gt; の解像度を補正する</h3>
 
-<p>レティナでは <code>canvas</code> がぼやけて見えることがあるでしょう。<code>window.devicePixelRatio</code>を使うことで、鮮明に表示するために必要なピクセル密度を調べます。</p>
+<p>レティナでは <code>canvas</code> がぼやけて見えることがあるでしょう。<code>window.devicePixelRatio</code>を使うことで、鮮明に表示するために必要なピクセル密度を調べます。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -82,7 +82,7 @@ ctx.fillText(textString, x, y);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>この JavaScript のコードは、デバイス解像度を監視するメディアクエリを作り、<code>devicePixelRatio</code> の値が変化したときはいつでもそれをチェックします。</p>
+<p>この JavaScript のコードは、デバイス解像度を監視するメディアクエリを作り、<code>devicePixelRatio</code> の値が変化したときはいつでもそれをチェックします。</p>
 
 <pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
 let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
@@ -97,15 +97,15 @@ updatePixelRatio();
 
 matchMedia(mqString).addEventListener("change", updatePixelRatio);</pre>
 
-<p>文字列 <code>mqString</code> は、メディアクエリそのものになるように作ります。このメディアクエリは、<code>(resolution: 1dppx)</code> (標準的なディスプレイの場合)、または <code>(resolution: 2dppx)</code> (HiDPI / レティナディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。</p>
+<p>文字列 <code>mqString</code> は、メディアクエリそのものになるように作ります。このメディアクエリは、<code>(resolution: 1dppx)</code> (標準的なディスプレイの場合)、または <code>(resolution: 2dppx)</code> (HiDPI / レティナディスプレイの場合) のような内容で始まり、現在のディスプレイ解像度のピクセルあたりのドット数が特定の数であるかをチェックします。</p>
 
-<p>関数 <code>updatePixelRatio()</code> は、現在の <code>devicePixelRatio</code> の値を取得し、<code>pixelRatioBox</code> 要素の {{domxref("HTMLElement.innerText", "innerText")}} に、その比率を百分率と小数第 2 位までの未加工の 10 進数の値の両方で表示する文字列を設定します。</p>
+<p>関数 <code>updatePixelRatio()</code> は、現在の <code>devicePixelRatio</code> の値を取得し、<code>pixelRatioBox</code> 要素の {{domxref("HTMLElement.innerText", "innerText")}} に、その比率を百分率と小数第 2 位までの未加工の 10 進数の値の両方で表示する文字列を設定します。</p>
 
-<p>そして、関数 <code>updatePixelRatio()</code> が最初の値を表示するために一回実行され、その後メディアクエリが作られて <code>updatePixelRatio()</code> を <code>change</code> イベントのハンドラーとして登録するために {{domxref("EventTarget.addEventListener", "addEventListener()")}} が実行されます。</p>
+<p>そして、関数 <code>updatePixelRatio()</code> が最初の値を表示するために一回実行され、その後メディアクエリが作られて <code>updatePixelRatio()</code> を <code>change</code> イベントのハンドラーとして登録するために {{domxref("EventTarget.addEventListener", "addEventListener()")}} が実行されます。</p>
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>この HTML は、説明文を含むボックスと、現在のピクセル比率情報を表示する <code>pixel-ratio</code> ボックスを作成します。</p>
+<p>この HTML は、説明文を含むボックスと、現在のピクセル比率情報を表示する <code>pixel-ratio</code> ボックスを作成します。</p>
 
 <pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="inner-container"&gt;

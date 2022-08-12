@@ -7,9 +7,9 @@ translation_of: Web/API/WebGLRenderingContext/clear
 
 <p><a href="/ja/docs/Web/API/WebGL_API">WebGL API</a> の <strong><code>WebGLRenderingContext.clear()</code></strong> メソッドは、バッファーをプリセット値で消去します。</p>
 
-<p>プリセット値は、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} や {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} で設定可能です。</p>
+<p>プリセット値は、{{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} や {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} で設定可能です。</p>
 
-<p>シザーボックス、ディザリング、バッファー書き込みマスクは <code>clear()</code> メソッドに影響します。</p>
+<p>シザーボックス、ディザリング、バッファー書き込みマスクは <code>clear()</code> メソッドに影響します。</p>
 
 <h2 id="構文">構文</h2>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/WebGLRenderingContext/clear
 
 <h3 id="例外">例外</h3>
 
-<p><em>mask</em> が記載した値のうちどれでもない場合、<code>gl.INVALID_ENUM</code> エラーがスローされます。</p>
+<p><em>mask</em> が記載した値のうちどれでもない場合、<code>gl.INVALID_ENUM</code> エラーがスローされます。</p>
 
 <h2 id="例">例</h2>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/WebGLRenderingContext/clear
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 </pre>
 
-<p>現在の消去する値を取得するには、<code>COLOR_CLEAR_VALUE</code>, <code>DEPTH_CLEAR_VALUE</code>, や <code>STENCIL_CLEAR_VALUE</code> 定数で問い合わせます。</p>
+<p>現在の消去する値を取得するには、<code>COLOR_CLEAR_VALUE</code>, <code>DEPTH_CLEAR_VALUE</code>, や <code>STENCIL_CLEAR_VALUE</code> 定数で問い合わせます。</p>
 
 <pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);

@@ -19,7 +19,7 @@ Tout comme XML, JSON permet de conserver des données hiérarchiques, ce qui n'e
 
 ### Connaissances générales
 
-- {{interwiki("wikipedia", "JSON", "JSON")}} sur Wikipédia
+- [JSON](https://fr.wikipedia.org/wiki/JSON) sur Wikipédia
 
 ### Référence technique
 

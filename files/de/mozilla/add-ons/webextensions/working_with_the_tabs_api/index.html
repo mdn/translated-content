@@ -23,7 +23,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Arbeiten_mit_Taps_API
 <p>Wir schließen dann mit Blick auf einige andere, andere Funktionen, die von der API angeboten werden.</p>
 
 <div class="blockIndicator note">
-<p><strong>Hinweis:</strong> Es gibt einige Tab-API-Funktionen, die an anderer Stelle abgedeckt sind. Dies sind die Methoden, die Sie verwenden können, um den Inhalt der Registerkarten mit Skripten zu manipulieren  ({{WebExtAPIRef("tabs.connect")}},  {{WebExtAPIRef("tabs.sendMessage")}} und  {{WebExtAPIRef("tabs.executeScript")}}). Wenn Sie mehr Informationen über diese Methoden wünschen, lesen Sie die <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Artikelinhaltskripte</a> Concepts und die Anleitung ändern Sie<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">eine Webseite</a>.</p>
+<p><strong>Hinweis:</strong> Es gibt einige Tab-API-Funktionen, die an anderer Stelle abgedeckt sind. Dies sind die Methoden, die Sie verwenden können, um den Inhalt der Registerkarten mit Skripten zu manipulieren  ({{WebExtAPIRef("tabs.connect")}},  {{WebExtAPIRef("tabs.sendMessage")}} und  {{WebExtAPIRef("tabs.executeScript")}}). Wenn Sie mehr Informationen über diese Methoden wünschen, lesen Sie die <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Artikelinhaltskripte</a> Concepts und die Anleitung ändern Sie<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">eine Webseite</a>.</p>
 </div>
 
 <p><strong>Berechtigungen und die Tabs API</strong></p>
@@ -32,7 +32,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Arbeiten_mit_Taps_API
 
 <ul>
  <li>Für den Zugriff auf die Eigenschaften <code>Tab.url</code>, <code>Tab.title </code>und <code>Tab.favIconUrl</code> des Tab-Objekts ist die Erlaubnis "Tabs" erforderlich. In Firefox benötigen Sie auch "Tabs", um eine <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">Abfrage</a> per URL durchzuführen.</li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">Die Host-Berechtigung</a> ist für die {{WebExtAPIRef("tabs.executeScript")}} oder  {{WebExtAPIRef("tabs.insertCSS")}}. erforderlich.</li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">Die Host-Berechtigung</a> ist für die {{WebExtAPIRef("tabs.executeScript")}} oder  {{WebExtAPIRef("tabs.insertCSS")}}. erforderlich.</li>
 </ul>
 
 <p>Im Folgenden können Sie in der manifest.json-Datei Ihrer Erweiterung die Erlaubnis "Tabs " beantragen :</p>
@@ -55,9 +55,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/Arbeiten_mit_Taps_API
 
 <p>Es wird Gelegenheiten geben, in denen Sie eine Liste aller Tabs in allen Browser-Fenstern erhalten wollen. Zu anderen Zeiten möchten Sie vielleicht eine Untergruppe von Tabs finden, die bestimmten Kriterien entsprechen, wie zum Beispiel solchen, die von einem bestimmten Tab geöffnet werden oder Seiten aus einer bestimmten Domain anzeigen. Und wenn Sie Ihre Liste der Tabs haben, werden Sie wahrscheinlich mehr über ihre Eigenschaften wissen wollen.</p>
 
-<p>Hier kommt die {{WebExtAPIRef("tabs.query")}} in den Fall. Wird allein verwendet, um alle Tabs zu erhalten oder das queryInfo-Objekt zu nehmen —, um Abfragekriterien anzugeben, wie zum Beispiel, ob die Registerkarte im aktuellen Fenster aktiv ist, oder eines oder mehrere von 17 Kriterien —  {{WebExtAPIRef("tabs.query")}} gibt ein Array von  {{WebExtAPIRef("tabs.Tab")}} Objekte, die Informationen über die Registerkarten enthalten.</p>
+<p>Hier kommt die {{WebExtAPIRef("tabs.query")}} in den Fall. Wird allein verwendet, um alle Tabs zu erhalten oder das queryInfo-Objekt zu nehmen —, um Abfragekriterien anzugeben, wie zum Beispiel, ob die Registerkarte im aktuellen Fenster aktiv ist, oder eines oder mehrere von 17 Kriterien —  {{WebExtAPIRef("tabs.query")}} gibt ein Array von  {{WebExtAPIRef("tabs.Tab")}} Objekte, die Informationen über die Registerkarten enthalten.</p>
 
-<p>Wenn Sie nur Informationen über den aktuellen Reiter wünschen, können Sie eine {{WebExtAPIRef("tabs.Tab")}} erhalten. Objekt für diese Registerkarte mit {{WebExtAPIRef("tabs.getCurrent")}}. Wenn Sie eine Tab-ID haben, können Sie die  {{WebExtAPIRef("tabs.Tab")}} Objekt mit {{WebExtAPIRef("tabs.get")}}.</p>
+<p>Wenn Sie nur Informationen über den aktuellen Reiter wünschen, können Sie eine {{WebExtAPIRef("tabs.Tab")}} erhalten. Objekt für diese Registerkarte mit {{WebExtAPIRef("tabs.getCurrent")}}. Wenn Sie eine Tab-ID haben, können Sie die  {{WebExtAPIRef("tabs.Tab")}} Objekt mit {{WebExtAPIRef("tabs.get")}}.</p>
 
 <div class="blockIndicator note">
 <p><strong>notiz:</strong></p>
@@ -70,7 +70,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Arbeiten_mit_Taps_API
 
 <h3 id="Wie_man_mit_dem_Beispiel_geht">Wie man mit dem Beispiel geht</h3>
 
-<p>Um zu sehen, wie  {{WebExtAPIRef("tabs.query")}} und  {{WebExtAPIRef("tabs.Tab")}} werden verwendet, lassen Sie uns durch, wie  das <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">Tabs-Tabs-Tabs </a>Beispiel fügt die Liste von" Schalter auf Tabs "zu seiner Toolbar-Taste Popup.</p>
+<p>Um zu sehen, wie  {{WebExtAPIRef("tabs.query")}} und  {{WebExtAPIRef("tabs.Tab")}} werden verwendet, lassen Sie uns durch, wie  das <a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">Tabs-Tabs-Tabs </a>Beispiel fügt die Liste von" Schalter auf Tabs "zu seiner Toolbar-Taste Popup.</p>
 
 <p><a href="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png"><img alt="" src="https://mdn.mozillademos.org/files/15723/Switch_to_tab.png" style="height: 645px; width: 369px;"></a></p>
 
@@ -156,7 +156,7 @@ Define the other menu items
 
 <h3 id="Tabs.js">Tabs.js</h3>
 
-<p>In <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a>werdenwir sehen, wie die Liste der Tabs aufgebaut und zum Popup hinzugefügt wird.  </p>
+<p>In <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a>werdenwir sehen, wie die Liste der Tabs aufgebaut und zum Popup hinzugefügt wird.  </p>
 
 <p><strong>Das Popup schaffen</strong></p>
 
@@ -164,7 +164,7 @@ Define the other menu items
 
 <pre>document.addEventListener ("DOMContentLoaded", hört Tabs);</pre>
 
-<p>Das erste, was <code>listTabs ()</code> tut, ist <code>getCurrentWindowTabs ()</code>zu nennen. Hier wird ein {{WebExtAPIRef("tabs.query")}} verwendet, um eine  {{WebExtAPIRef("tabs.Tab")}} zu erhalten. Objekt für die Tabs im aktuellen Fenster:</p>
+<p>Das erste, was <code>listTabs ()</code> tut, ist <code>getCurrentWindowTabs ()</code>zu nennen. Hier wird ein {{WebExtAPIRef("tabs.query")}} verwendet, um eine  {{WebExtAPIRef("tabs.Tab")}} zu erhalten. Objekt für die Tabs im aktuellen Fenster:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">getCurrentWindowTabs</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">return</span> browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span><span class="function token">query</span><span class="punctuation token">(</span><span class="punctuation token">{</span>currentWindow<span class="punctuation token">:</span> <span class="boolean token">true</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -193,7 +193,7 @@ Define the other menu items
 <p>Als nächstes werden wir die Links für jeden Tab erstellen:</p>
 
 <ol>
- <li>Schleifen Sie sich durch die ersten 5 Elemente aus der   {{WebExtAPIRef("tabs.Tab")}} Objekt.</li>
+ <li>Schleifen Sie sich durch die ersten 5 Elemente aus der   {{WebExtAPIRef("tabs.Tab")}} Objekt.</li>
  <li>Fügen Sie für jeden Artikel einen Hyperlink zum Dokumentenfragment hinzu.
   <ul>
    <li>Das Etikett des Links — das heißt, sein Text — wird mit dem Titel des Tab gesetzt (oder mit der ID, wenn er keinen Titel hat).</li>
@@ -362,7 +362,7 @@ Define the other menu items
 
 <p><strong>Gepinnte Tabs</strong></p>
 
-<p>Eine Besonderheit von Registern ist, dass  der Benutzer Tabs in ein Fenster einfügen kann. Gepinnte Tabs werden am Anfang der Tab-Liste platziert und können nicht verschoben werden. Das bedeutet, dass die früheste Position, in die sich ein Tab bewegen kann, die erste Position nach einem gefiederten Tabs ist. Also , <code>firstUnpinnedTab ()</code> wird aufgerufen, um die Position des ersten ungepasten Tab zu finden, indem man durch das <code>Tabs</code>-Objekt Looping:</p>
+<p>Eine Besonderheit von Registern ist, dass  der Benutzer Tabs in ein Fenster einfügen kann. Gepinnte Tabs werden am Anfang der Tab-Liste platziert und können nicht verschoben werden. Das bedeutet, dass die früheste Position, in die sich ein Tab bewegen kann, die erste Position nach einem gefiederten Tabs ist. Also , <code>firstUnpinnedTab ()</code> wird aufgerufen, um die Position des ersten ungepasten Tab zu finden, indem man durch das <code>Tabs</code>-Objekt Looping:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">firstUnpinnedTab</span><span class="punctuation token">(</span><span class="parameter token">tabs</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="parameter token"><span class="keyword token">var</span> tab <span class="keyword token">of</span> tabs</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -380,7 +380,7 @@ Define the other menu items
 
 <h4 id="Manipulationen_eines_Tab"><strong>Manipulationen eines Tab</strong></h4>
 
-<p>Die nächste Reihe von Funktionen ermöglicht es Ihnen, die Zoomstufe in einem Tab zu erhalten  ({{WebExtAPIRef("tabs.getZoom")}}) und zu setzen ({{WebExtAPIRef("tabs.setZoom")}}) . Sie können auch die Zoom-Einstellungen abrufen ({{WebExtAPIRef("tabs.getZoomSettings")}}) , aber zum Zeitpunkt des Schreibens war die Möglichkeit, die Einstellungen zu setzen ({{WebExtAPIRef("tabs.setZoomSettings")}}) , war in Firefox nicht verfügbar.</p>
+<p>Die nächste Reihe von Funktionen ermöglicht es Ihnen, die Zoomstufe in einem Tab zu erhalten  ({{WebExtAPIRef("tabs.getZoom")}}) und zu setzen ({{WebExtAPIRef("tabs.setZoom")}}) . Sie können auch die Zoom-Einstellungen abrufen ({{WebExtAPIRef("tabs.getZoomSettings")}}) , aber zum Zeitpunkt des Schreibens war die Möglichkeit, die Einstellungen zu setzen ({{WebExtAPIRef("tabs.setZoomSettings")}}) , war in Firefox nicht verfügbar.</p>
 
 <p>Der Zoomwert kann zwischen 30% und 300% liegen (dargestellt als Dezimalzahl <code>0,3 bis 3</code>).</p>
 
@@ -394,7 +394,7 @@ Define the other menu items
 
 <h3 id="Wie_man_mit_dem_Beispiel_geht_2">Wie man mit dem Beispiel geht</h3>
 
-<p>Das  Beispiel der Tabs-Tabs-Tabs enthält drei Vorführungen der Zoom-Funktion: Zoomen, Zoomen und Zoom zurücksetzen. Hier ist das Feature in Aktion:</p>
+<p>Das  Beispiel der Tabs-Tabs-Tabs enthält drei Vorführungen der Zoom-Funktion: Zoomen, Zoomen und Zoom zurücksetzen. Hier ist das Feature in Aktion:</p>
 
 <p>{{EmbedYouTube("RFr3oYBCg28")}}</p>
 
@@ -464,7 +464,7 @@ Define the other menu items
  <li><code>"activeTab"</code>-Erlaubnis .</li>
 </ul>
 
-<p>Letzteres ist das nützlichste, da es einer Erweiterung erlaubt,  {{WebExtAPIRef("tabs.insertCSS")}} und  {{WebExtAPIRef("tabs.removeCSS")}} in der aktiven Registerkarte zu verwenden, wenn sie von der Browser-oder Seitenaktion, dem Kontextmenü oder einem Shortcut der Erweiterung ausgeführt wird.</p>
+<p>Letzteres ist das nützlichste, da es einer Erweiterung erlaubt,  {{WebExtAPIRef("tabs.insertCSS")}} und  {{WebExtAPIRef("tabs.removeCSS")}} in der aktiven Registerkarte zu verwenden, wenn sie von der Browser-oder Seitenaktion, dem Kontextmenü oder einem Shortcut der Erweiterung ausgeführt wird.</p>
 
 <pre class="brush: json line-numbers language-json"><code class="language-json"><span class="punctuation token">{</span>
   <span class="property token">"description"</span><span class="operator token">:</span> <span class="string token">"Adds a page action to toggle applying CSS to pages."</span><span class="punctuation token">,</span>
@@ -539,7 +539,7 @@ gettingAllTabs<span class="punctuation token">.</span><span class="function toke
  <span class="punctuation token">}</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>Als Nächstes wartet ein Zuhörer auf der <code>pageAction.onClicked</code> darauf, dass das <code>PageAction</code>-Symbol angeklickt wird  , und ruft toggleCSS an , wenn es ist.</p>
+<p>Als Nächstes wartet ein Zuhörer auf der <code>pageAction.onClicked</code> darauf, dass das <code>PageAction</code>-Symbol angeklickt wird  , und ruft toggleCSS an , wenn es ist.</p>
 
 <pre>browser.pageAction.onClicked.addListener (toggleCSS);</pre>
 
@@ -582,7 +582,7 @@ gettingAllTabs<span class="punctuation token">.</span><span class="function toke
  gettingTitle<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>gotTitle<span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>Um sicherzustellen, dass die PageAction nach jedem Update auf den Tab gültig ist, ruft ein Zuhörer auf  {{WebExtAPIRef("tabs.onUpdated")}} jedes Mal, wenn der Tab aktualisiert wird, auf initializePageAction () , um zu überprüfen, ob der Reiter immer noch ein Protokoll, auf das das CSS angewendet werden kann.</p>
+<p>Um sicherzustellen, dass die PageAction nach jedem Update auf den Tab gültig ist, ruft ein Zuhörer auf  {{WebExtAPIRef("tabs.onUpdated")}} jedes Mal, wenn der Tab aktualisiert wird, auf initializePageAction () , um zu überprüfen, ob der Reiter immer noch ein Protokoll, auf das das CSS angewendet werden kann.</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">browser<span class="punctuation token">.</span>tabs<span class="punctuation token">.</span>onUpdated<span class="punctuation token">.</span><span class="function token">addListener</span><span class="punctuation token">(</span><span class="punctuation token">(</span><span class="parameter token">id<span class="punctuation token">,</span> changeInfo<span class="punctuation token">,</span> tab</span><span class="punctuation token">)</span> <span class="operator token">=&gt;</span> <span class="punctuation token">{</span>
 <span class="function token"> initializePageAction</span><span class="punctuation token">(</span>tab<span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -594,7 +594,7 @@ gettingAllTabs<span class="punctuation token">.</span><span class="function toke
 
 <ul>
  <li>Erfassen Sie den sichtbaren Tab-Inhalt mit {{WebExtAPIRef("tabs.captureVisibleTab")}}.</li>
- <li>Erkennen Sie die Hauptsprache des Inhalts in einem Tab mit {{WebExtAPIRef("tabs.detectLanguage")}} . Dies könnte zum Beispiel verwendet werden, um die Sprache in Ihrem UI mit der Seite, in der sie läuft, zu vergleichen.</li>
+ <li>Erkennen Sie die Hauptsprache des Inhalts in einem Tab mit {{WebExtAPIRef("tabs.detectLanguage")}} . Dies könnte zum Beispiel verwendet werden, um die Sprache in Ihrem UI mit der Seite, in der sie läuft, zu vergleichen.</li>
 </ul>
 
 <p><strong>Weitere Informationen</strong></p>
@@ -603,7 +603,7 @@ gettingAllTabs<span class="punctuation token">.</span><span class="function toke
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs">Tabs API-Referenz</a></li>
- <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples">Beispielerweiterungen</a> (von denen viele die Tabs API verwenden)<a name="_GoBack"></a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples">Beispielerweiterungen</a> (von denen viele die Tabs API verwenden)</li>
 </ul>
 
-<p> </p>
+<p> </p>

@@ -4,9 +4,9 @@ slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
-<p>O evento <strong><code>beforeunload</code></strong> é disparado quando o <em>window</em>, o <em>document</em> e seus recursos estão prestes a ser descarregados.</p>
+<p>O evento <strong><code>beforeunload</code></strong> é disparado quando o <em>window</em>, o <em>document</em> e seus recursos estão prestes a ser descarregados.</p>
 
-<p>Quando uma <em>string</em> é atribuída na propriedade <code>returnValue</code> do <em>Event</em>, uma caixa de díalogo aparecerá solicitando ao usuário uma confirmação para sair da página (veja exemplo abaixo). Quando nenhum valor é fornecido, o evento é processado silenciosamente.</p>
+<p>Quando uma <em>string</em> é atribuída na propriedade <code>returnValue</code> do <em>Event</em>, uma caixa de díalogo aparecerá solicitando ao usuário uma confirmação para sair da página (veja exemplo abaixo). Quando nenhum valor é fornecido, o evento é processado silenciosamente.</p>
 
 <table class="properties">
  <tbody>
@@ -79,7 +79,7 @@ window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });</pre>
 
-<p>Navegadores baseados no WebKit não seguem a especificação para caixas de diálogo. Um exemplo que funcionaria na maioria dos navegadores seria aproximadamente o seguinte:</p>
+<p>Navegadores baseados no WebKit não seguem a especificação para caixas de diálogo. Um exemplo que funcionaria na maioria dos navegadores seria aproximadamente o seguinte:</p>
 
 <pre class="brush: js">window.addEventListener("beforeunload", function (e) {
   var confirmationMessage = "\o/";
@@ -90,11 +90,11 @@ window.addEventListener("beforeunload", function (event) {
 
 <h2 id="Notas">Notas</h2>
 
-<p>Quando este evento retorna um valor não vazio (<em>non-void</em>), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a <em>string</em> retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja {{bug("588292")}}.</p>
+<p>Quando este evento retorna um valor não vazio (<em>non-void</em>), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a <em>string</em> retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja {{bug("588292")}}.</p>
 
-<p>Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">especificação HTML5</a> (em inglês).</p>
+<p>Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">especificação HTML5</a> (em inglês).</p>
 
-<p>Note também que vários navegadores para celular ignoram o resultado deste evento (isso que dizer que eles não solicitam a confirmação do usuário). O Firefox possui uma configuração escondida em <em>about:config</em> que faz o mesmo. Em essência, isto significa que o usuário estará sempre confirmando que o documento pode ser descarregado.</p>
+<p>Note também que vários navegadores para celular ignoram o resultado deste evento (isso que dizer que eles não solicitam a confirmação do usuário). O Firefox possui uma configuração escondida em <em>about:config</em> que faz o mesmo. Em essência, isto significa que o usuário estará sempre confirmando que o documento pode ser descarregado.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -103,5 +103,5 @@ window.addEventListener("beforeunload", function (event) {
  <li>{{Event("readystatechange")}}</li>
  <li>{{Event("load")}}</li>
  <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Descarregando documentos — Confirmando para descarregar o documento</a> (em inglês)</li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Descarregando documentos — Confirmando para descarregar o documento</a> (em inglês)</li>
 </ul>

@@ -18,14 +18,14 @@ translation_of: Web/CSS/color_value
 ---
 <p>{{CSSRef}}</p>
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a class="external" href="http://en.wikipedia.org/wiki/SRGB">标准 RGB 色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha 通道</a>透明度值，来表明颜色如何与它的背景色<a class="external" href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a href="http://en.wikipedia.org/wiki/SRGB">标准 RGB 色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha 通道</a>透明度值，来表明颜色如何与它的背景色<a href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
 
 <p>一个<code>&lt;color&gt;</code>可以以如下方式定义：</p>
 
 <ul>
  <li>使用一个关键字（比如<code>blue</code>或<code>transparent</code>）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB 立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL 圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
+ <li>使用<a href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB 立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
+ <li>使用<a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL 圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -37,7 +37,7 @@ translation_of: Web/CSS/color_value
 <p><code>&lt;color&gt;</code>可以以以下方式指定。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a class="external" href="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
+<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a href="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
 </div>
 
 <h3 id="颜色关键字">颜色关键字</h3>
@@ -68,918 +68,22 @@ translation_of: Web/CSS/color_value
 <p>注意：可接受的关键字列表在 CSS 的演变过程中发生了改变：</p>
 
 <ul>
- <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA 颜色</em>，因为它们来源于 <a class="external" href="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
+ <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA 颜色</em>，因为它们来源于 <a href="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
  <li>CSS 标准 2 增加了 <code>orange</code> 关键字。</li>
  <li>从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作<em>扩张的颜色关键字</em>， <em>X11 颜色</em>或 <em>SVG 颜色</em> 。</li>
  <li>CSS 颜色标准 4 添加可<code>rebeccapurple</code>关键字来<a href="https://codepen.io/trezy/post/honoring-a-great-man">纪念 web 先锋 Eric Meyer</a>。</li>
 </ul>
 </div>
 
-<table id="colors_table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">颜色</th>
-   <th scope="col">关键字</th>
-   <th scope="col">RGB 十六进制数</th>
-   <th scope="col">实样</th>
-  </tr>
- </thead>
- <tbody>
-  <tr style="position: relative;">
-   <td rowspan="16">{{SpecName("CSS1")}}</td>
-   <td style="background: #000;"></td>
-   <td style="text-align: center;"><code>black</code>（黑）</td>
-   <td><code>#000000</code></td>
-   <td style="background: black;"></td>
-  </tr>
-  <tr>
-   <td style="background: #C0C0C0;"></td>
-   <td style="text-align: center;"><code>silver</code>（银）</td>
-   <td><code>#c0c0c0</code></td>
-   <td style="background: silver;"></td>
-  </tr>
-  <tr>
-   <td style="background: #808080;"></td>
-   <td style="text-align: center;"><code>gray</code>（灰）</td>
-   <td><code>#808080</code></td>
-   <td style="background: gray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #FFF;"></td>
-   <td style="text-align: center;"><code>white</code>（白）</td>
-   <td><code>#ffffff</code></td>
-   <td style="background: white;"></td>
-  </tr>
-  <tr>
-   <td style="background: #800000;"></td>
-   <td style="text-align: center;"><code>maroon</code>（褐）</td>
-   <td><code>#800000</code></td>
-   <td style="background: maroon;"></td>
-  </tr>
-  <tr>
-   <td style="background: #F00;"></td>
-   <td style="text-align: center;"><code>red</code>（红）</td>
-   <td><code>#ff0000</code></td>
-   <td style="background: red;"></td>
-  </tr>
-  <tr>
-   <td style="background: #800080;"></td>
-   <td style="text-align: center;"><code>purple</code>（紫）</td>
-   <td><code>#800080</code></td>
-   <td style="background: purple;"></td>
-  </tr>
-  <tr>
-   <td style="background: #F0F;"></td>
-   <td style="text-align: center;"><code>fuchsia</code>（紫红）</td>
-   <td><code>#ff00ff</code></td>
-   <td style="background: fuchsia;"></td>
-  </tr>
-  <tr>
-   <td style="background: #008000;"></td>
-   <td style="text-align: center;"><code>green</code>（绿）</td>
-   <td><code>#008000</code></td>
-   <td style="background: green;"></td>
-  </tr>
-  <tr>
-   <td style="background: #0F0;"></td>
-   <td style="text-align: center;"><code>lime</code>（绿黄）</td>
-   <td><code>#00ff00</code></td>
-   <td style="background: lime;"></td>
-  </tr>
-  <tr>
-   <td style="background: #808000;"></td>
-   <td style="text-align: center;"><code>olive</code>（橄榄绿）</td>
-   <td><code>#808000</code></td>
-   <td style="background: olive;"></td>
-  </tr>
-  <tr>
-   <td style="background: #FF0;"></td>
-   <td style="text-align: center;"><code>yellow</code>（黄）</td>
-   <td><code>#ffff00</code></td>
-   <td style="background: yellow;"></td>
-  </tr>
-  <tr>
-   <td style="background: #000080;"></td>
-   <td style="text-align: center;"><code>navy</code>（藏青）</td>
-   <td><code>#000080</code></td>
-   <td style="background: navy;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00F;"></td>
-   <td style="text-align: center;"><code>blue</code>（蓝）</td>
-   <td><code>#0000ff</code></td>
-   <td style="background: blue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #008080;"></td>
-   <td style="text-align: center;"><code>teal</code>（青）</td>
-   <td><code>#008080</code></td>
-   <td style="background: teal;"></td>
-  </tr>
-  <tr>
-   <td style="background: #0FF;"></td>
-   <td style="text-align: center;"><code>aqua</code>（水绿）</td>
-   <td><code>#00ffff</code></td>
-   <td style="background: aqua;"></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1")}}</td>
-   <td style="background: #FFA500;"></td>
-   <td style="text-align: center;"><code>orange</code>（橙）</td>
-   <td><code>#ffa500</code></td>
-   <td style="background: orange;"></td>
-  </tr>
-  <tr>
-   <td rowspan="128">{{SpecName("CSS3 Colors")}}</td>
-   <td style="background: #f0f8ff;"></td>
-   <td style="text-align: center;"><code>aliceblue</code>（浅灰蓝）</td>
-   <td><code>#f0f8ff</code></td>
-   <td style="background: aliceblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #faebd7;"></td>
-   <td style="text-align: center;"><code>antiquewhite</code>（古董白）</td>
-   <td><code>#faebd7</code></td>
-   <td style="background: antiquewhite;"></td>
-  </tr>
-  <tr>
-   <td style="background: #7fffd4;"></td>
-   <td style="text-align: center;"><code>aquamarine</code>（海蓝）</td>
-   <td><code>#7fffd4</code></td>
-   <td style="background: aquamarine;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f0ffff;"></td>
-   <td style="text-align: center;"><code>azure</code>（蔚蓝）</td>
-   <td><code>#f0ffff</code></td>
-   <td style="background: azure;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f5f5dc;"></td>
-   <td style="text-align: center;"><code>beige</code>（浅褐）</td>
-   <td><code>#f5f5dc</code></td>
-   <td style="background: beige;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffe4c4;"></td>
-   <td style="text-align: center;"><code>bisque</code>（橘黄）</td>
-   <td><code>#ffe4c4</code></td>
-   <td style="background: bisque;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffebcd;"></td>
-   <td style="text-align: center;"><code>blanchedalmond</code>（杏仁白）</td>
-   <td><code>#ffebcd</code></td>
-   <td style="background: blanchedalmond;"></td>
-  </tr>
-  <tr>
-   <td style="background: #8a2be2;"></td>
-   <td style="text-align: center;"><code>blueviolet</code>（蓝紫）</td>
-   <td><code>#8a2be2</code></td>
-   <td style="background: blueviolet;"></td>
-  </tr>
-  <tr>
-   <td style="background: #a52a2a;"></td>
-   <td style="text-align: center;"><code>brown</code>（褐）</td>
-   <td><code>#a52a2a</code></td>
-   <td style="background: brown;"></td>
-  </tr>
-  <tr>
-   <td style="background: #deb887;"></td>
-   <td style="text-align: center;"><code>burlywood</code>（原木色）</td>
-   <td><code>#deb887</code></td>
-   <td style="background: burlywood;"></td>
-  </tr>
-  <tr>
-   <td style="background: #5f9ea0;"></td>
-   <td style="text-align: center;"><code>cadetblue</code>（灰蓝）</td>
-   <td><code>#5f9ea0</code></td>
-   <td style="background: cadetblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #7fff00;"></td>
-   <td style="text-align: center;"><code>chartreuse</code>（黄绿）</td>
-   <td><code>#7fff00</code></td>
-   <td style="background: chartreuse;"></td>
-  </tr>
-  <tr>
-   <td style="background: #d2691e;"></td>
-   <td style="text-align: center;"><code>chocolate</code>（巧克力色）</td>
-   <td><code>#d2691e</code></td>
-   <td style="background: chocolate;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff7f50;"></td>
-   <td style="text-align: center;"><code>coral</code>（珊瑚红）</td>
-   <td><code>#ff7f50</code></td>
-   <td style="background: coral;"></td>
-  </tr>
-  <tr>
-   <td style="background: #6495ed;"></td>
-   <td style="text-align: center;"><code>cornflowerblue</code>（矢车菊蓝）</td>
-   <td><code>#6495ed</code></td>
-   <td style="background: cornflowerblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fff8dc;"></td>
-   <td style="text-align: center;"><code>cornsilk</code>（玉米穗黄）</td>
-   <td><code>#fff8dc</code></td>
-   <td style="background: cornsilk;"></td>
-  </tr>
-  <tr>
-   <td style="background: #dc143c;"></td>
-   <td style="text-align: center;"><code>crimson</code>（深红）</td>
-   <td><code>#dc143c</code></td>
-   <td style="background: crimson;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00008b;"></td>
-   <td style="text-align: center;"><code>darkblue</code>（深蓝）</td>
-   <td><code>#00008b</code></td>
-   <td style="background: darkblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #008b8b;"></td>
-   <td style="text-align: center;"><code>darkcyan</code>（深青）</td>
-   <td><code>#008b8b</code></td>
-   <td style="background: darkcyan;"></td>
-  </tr>
-  <tr>
-   <td style="background: #b8860b;"></td>
-   <td style="text-align: center;"><code>darkgoldenrod</code>（暗金）</td>
-   <td><code>#b8860b</code></td>
-   <td style="background: darkgoldenrod;"></td>
-  </tr>
-  <tr>
-   <td style="background: #a9a9a9;"></td>
-   <td style="text-align: center;"><code>darkgray</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（深灰）</td>
-   <td><code>#a9a9a9</code></td>
-   <td style="background: darkgray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #006400;"></td>
-   <td style="text-align: center;"><code>darkgreen</code>（深绿）</td>
-   <td><code>#006400</code></td>
-   <td style="background: darkgreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #a9a9a9;"></td>
-   <td style="text-align: center;"><code>darkgrey</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（深灰）</td>
-   <td><code>#a9a9a9</code></td>
-   <td style="background: darkgrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #bdb76b;"></td>
-   <td style="text-align: center;"><code>darkkhaki</code>（暗黄褐）</td>
-   <td><code>#bdb76b</code></td>
-   <td style="background: darkkhaki;"></td>
-  </tr>
-  <tr>
-   <td style="background: #8b008b;"></td>
-   <td style="text-align: center;"><code>darkmagenta</code>（深紫）</td>
-   <td><code>#8b008b</code></td>
-   <td style="background: darkmagenta;"></td>
-  </tr>
-  <tr>
-   <td style="background: #556b2f;"></td>
-   <td style="text-align: center;"><code>darkolivegreen</code>（深橄榄绿）</td>
-   <td><code>#556b2f</code></td>
-   <td style="background: darkolivegreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff8c00;"></td>
-   <td style="text-align: center;"><code>darkorange</code>（深橙）</td>
-   <td><code>#ff8c00</code></td>
-   <td style="background: darkorange;"></td>
-  </tr>
-  <tr>
-   <td style="background: #9932cc;"></td>
-   <td style="text-align: center;"><code>darkorchid</code>（深兰花紫）</td>
-   <td><code>#9932cc</code></td>
-   <td style="background: darkorchid;"></td>
-  </tr>
-  <tr>
-   <td style="background: #8b0000;"></td>
-   <td style="text-align: center;"><code>darkred</code>（深红）</td>
-   <td><code>#8b0000</code></td>
-   <td style="background: darkred;"></td>
-  </tr>
-  <tr>
-   <td style="background: #e9967a;"></td>
-   <td style="text-align: center;"><code>darksalmon</code>（深橙红）</td>
-   <td><code>#e9967a</code></td>
-   <td style="background: darksalmon;"></td>
-  </tr>
-  <tr>
-   <td style="background: #8fbc8f;"></td>
-   <td style="text-align: center;"><code>darkseagreen</code>（深海绿）</td>
-   <td><code>#8fbc8f</code></td>
-   <td style="background: darkseagreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #483d8b;"></td>
-   <td style="text-align: center;"><code>darkslateblue</code>（暗灰蓝）</td>
-   <td><code>#483d8b</code></td>
-   <td style="background: darkslateblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #2f4f4f;"></td>
-   <td style="text-align: center;"><code>darkslategray</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（墨绿）</td>
-   <td><code>#2f4f4f</code></td>
-   <td style="background: darkslategray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #2f4f4f;"></td>
-   <td style="text-align: center;"><code>darkslategrey</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（墨绿）</td>
-   <td><code>#2f4f4f</code></td>
-   <td style="background: darkslategrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00ced1;"></td>
-   <td style="text-align: center;"><code>darkturquoise</code>（暗宝石绿）</td>
-   <td><code>#00ced1</code></td>
-   <td style="background: darkturquoise;"></td>
-  </tr>
-  <tr>
-   <td style="background: #9400d3;"></td>
-   <td style="text-align: center;"><code>darkviolet</code>（深紫罗兰）</td>
-   <td><code>#9400d3</code></td>
-   <td style="background: darkviolet;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff1493;"></td>
-   <td style="text-align: center;"><code>deeppink</code>（深粉红）</td>
-   <td><code>#ff1493</code></td>
-   <td style="background: deeppink;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00bfff;"></td>
-   <td style="text-align: center;"><code>deepskyblue</code>（深天蓝）</td>
-   <td><code>#00bfff</code></td>
-   <td style="background: deepskyblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #696969;"></td>
-   <td style="text-align: center;"><code>dimgray</code><sup><a href="#1" title="color_value#1">[*]</a>（暗灰）</sup></td>
-   <td><code>#696969</code></td>
-   <td style="background: dimgray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #696969;"></td>
-   <td style="text-align: center;"><code>dimgrey</code><sup><a href="#1" title="color_value#1">[*]</a>（暗灰）</sup></td>
-   <td><code>#696969</code></td>
-   <td style="background: dimgrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #1e90ff;"></td>
-   <td style="text-align: center;"><code>dodgerblue</code>（遮板蓝）</td>
-   <td><code>#1e90ff</code></td>
-   <td style="background: dodgerblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #b22222;"></td>
-   <td style="text-align: center;"><code>firebrick</code>（砖红）</td>
-   <td><code>#b22222</code></td>
-   <td style="background: firebrick;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fffaf0;"></td>
-   <td style="text-align: center;"><code>floralwhite</code>（花白）</td>
-   <td><code>#fffaf0</code></td>
-   <td style="background: floralwhite;"></td>
-  </tr>
-  <tr>
-   <td style="background: #228b22;"></td>
-   <td style="text-align: center;"><code>forestgreen</code>（丛林绿）</td>
-   <td><code>#228b22</code></td>
-   <td style="background: forestgreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #dcdcdc;"></td>
-   <td style="text-align: center;"><code>gainsboro</code>（浅灰）</td>
-   <td><code>#dcdcdc</code></td>
-   <td style="background: gainsboro;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f8f8ff;"></td>
-   <td style="text-align: center;"><code>ghostwhite</code>（幽灵白）</td>
-   <td><code>#f8f8ff</code></td>
-   <td style="background: ghostwhite;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffd700;"></td>
-   <td style="text-align: center;"><code>gold</code>（金）</td>
-   <td><code>#ffd700</code></td>
-   <td style="background: gold;"></td>
-  </tr>
-  <tr>
-   <td style="background: #daa520;"></td>
-   <td style="text-align: center;"><code>goldenrod</code>（橘黄）</td>
-   <td><code>#daa520</code></td>
-   <td style="background: goldenrod;"></td>
-  </tr>
-  <tr>
-   <td style="background: #adff2f;"></td>
-   <td style="text-align: center;"><code>greenyellow</code>（黄绿）</td>
-   <td><code>#adff2f</code></td>
-   <td style="background: greenyellow ;"></td>
-  </tr>
-  <tr>
-   <td style="background: #808080;"></td>
-   <td style="text-align: center;"><code>grey</code>（灰）</td>
-   <td><code>#808080</code></td>
-   <td style="background: grey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f0fff0;"></td>
-   <td style="text-align: center;"><code>honeydew</code>（蜜瓜色）</td>
-   <td><code>#f0fff0</code></td>
-   <td style="background: honeydew;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff69b4;"></td>
-   <td style="text-align: center;"><code>hotpink</code>（亮粉）</td>
-   <td><code>#ff69b4</code></td>
-   <td style="background: hotpink;"></td>
-  </tr>
-  <tr>
-   <td style="background: #cd5c5c;"></td>
-   <td style="text-align: center;"><code>indianred</code>（印第安红）</td>
-   <td><code>#cd5c5c</code></td>
-   <td style="background: indianred;"></td>
-  </tr>
-  <tr>
-   <td style="background: #4b0082;"></td>
-   <td style="text-align: center;"><code>indigo</code>（靛蓝）</td>
-   <td><code>#4b0082</code></td>
-   <td style="background: indigo;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fffff0;"></td>
-   <td style="text-align: center;"><code>ivory</code>（象牙白）</td>
-   <td><code>#fffff0</code></td>
-   <td style="background: ivory;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f0e68c;"></td>
-   <td style="text-align: center;"><code>khaki</code>（卡其色）</td>
-   <td><code>#f0e68c</code></td>
-   <td style="background: khaki;"></td>
-  </tr>
-  <tr>
-   <td style="background: #e6e6fa;"></td>
-   <td style="text-align: center;"><code>lavender</code>（淡紫）</td>
-   <td><code>#e6e6fa</code></td>
-   <td style="background: lavender;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fff0f5;"></td>
-   <td style="text-align: center;"><code>lavenderblush</code>（淡紫红）</td>
-   <td><code>#fff0f5</code></td>
-   <td style="background: lavenderblush ;"></td>
-  </tr>
-  <tr>
-   <td style="background: #7cfc00;"></td>
-   <td style="text-align: center;"><code>lawngreen</code>（草绿）</td>
-   <td><code>#7cfc00</code></td>
-   <td style="background: lawngreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fffacd;"></td>
-   <td style="text-align: center;"><code>lemonchiffon</code>（粉黄）</td>
-   <td><code>#fffacd</code></td>
-   <td style="background: lemonchiffon;"></td>
-  </tr>
-  <tr>
-   <td style="background: #add8e6;"></td>
-   <td style="text-align: center;"><code>lightblue</code>（淡蓝）</td>
-   <td><code>#add8e6</code></td>
-   <td style="background: lightblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f08080;"></td>
-   <td style="text-align: center;"><code>lightcoral</code>（浅珊瑚色）</td>
-   <td><code>#f08080</code></td>
-   <td style="background: lightcoral;"></td>
-  </tr>
-  <tr>
-   <td style="background: #e0ffff;"></td>
-   <td style="text-align: center;"><code>lightcyan</code>（淡青）</td>
-   <td><code>#e0ffff</code></td>
-   <td style="background: lightcyan;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fafad2;"></td>
-   <td style="text-align: center;"><code>lightgoldenrodyellow</code>（浅金黄）</td>
-   <td><code>#fafad2</code></td>
-   <td style="background: lightgoldenrodyellow ;"></td>
-  </tr>
-  <tr>
-   <td style="background: #d3d3d3;"></td>
-   <td style="text-align: center;"><code>lightgray</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（浅灰）</td>
-   <td><code>#d3d3d3</code></td>
-   <td style="background: lightgray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #90ee90;"></td>
-   <td style="text-align: center;"><code>lightgreen</code>（浅绿）</td>
-   <td><code>#90ee90</code></td>
-   <td style="background: lightgreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #d3d3d3;"></td>
-   <td style="text-align: center;"><code>lightgrey</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（浅灰）</td>
-   <td><code>#d3d3d3</code></td>
-   <td style="background: lightgrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffb6c1;"></td>
-   <td style="text-align: center;"><code>lightpink</code>（淡粉）</td>
-   <td><code>#ffb6c1</code></td>
-   <td style="background: lightpink;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffa07a;"></td>
-   <td style="text-align: center;"><code>lightsalmon</code>（浅肉色）</td>
-   <td><code>#ffa07a</code></td>
-   <td style="background: lightsalmon;"></td>
-  </tr>
-  <tr>
-   <td style="background: #20b2aa;"></td>
-   <td style="text-align: center;"><code>lightseagreen</code>（浅海绿）</td>
-   <td><code>#20b2aa</code></td>
-   <td style="background: lightseagreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #87cefa;"></td>
-   <td style="text-align: center;"><code>lightskyblue</code>（浅天蓝）</td>
-   <td><code>#87cefa</code></td>
-   <td style="background: lightskyblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #778899;"></td>
-   <td style="text-align: center;"><code>lightslategray</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（浅青灰）</td>
-   <td><code>#778899</code></td>
-   <td style="background: lightslategray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #778899;"></td>
-   <td style="text-align: center;"><code>lightslategrey</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（浅青灰）</td>
-   <td><code>#778899</code></td>
-   <td style="background: lightslategrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #b0c4de;"></td>
-   <td style="text-align: center;"><code>lightsteelblue</code>（浅钢蓝）</td>
-   <td><code>#b0c4de</code></td>
-   <td style="background: lightsteelblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffffe0;"></td>
-   <td style="text-align: center;"><code>lightyellow</code>（浅黄）</td>
-   <td><code>#ffffe0</code></td>
-   <td style="background: lightyellow;"></td>
-  </tr>
-  <tr>
-   <td style="background: #32cd32;"></td>
-   <td style="text-align: center;"><code>limegreen</code>（酸橙绿）</td>
-   <td><code>#32cd32</code></td>
-   <td style="background: limegreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #faf0e6;"></td>
-   <td style="text-align: center;"><code>linen</code>（亚麻色）</td>
-   <td><code>#faf0e6</code></td>
-   <td style="background: linen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #66cdaa;"></td>
-   <td style="text-align: center;"><code>mediumaquamarine</code>（中绿）</td>
-   <td><code>#66cdaa</code></td>
-   <td style="background: mediumaquamarine;"></td>
-  </tr>
-  <tr>
-   <td style="background: #0000cd;"></td>
-   <td style="text-align: center;"><code>mediumblue</code>（中蓝）</td>
-   <td><code>#0000cd</code></td>
-   <td style="background: mediumblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ba55d3;"></td>
-   <td style="text-align: center;"><code>mediumorchid</code>（间兰花紫）</td>
-   <td><code>#ba55d3</code></td>
-   <td style="background: mediumorchid;"></td>
-  </tr>
-  <tr>
-   <td style="background: #9370db;"></td>
-   <td style="text-align: center;"><code>mediumpurple</code>（中紫）</td>
-   <td><code>#9370db</code></td>
-   <td style="background: mediumpurple;"></td>
-  </tr>
-  <tr>
-   <td style="background: #3cb371;"></td>
-   <td style="text-align: center;"><code>mediumseagreen</code>（间海绿）</td>
-   <td><code>#3cb371</code></td>
-   <td style="background: mediumseagreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #7b68ee;"></td>
-   <td style="text-align: center;"><code>mediumslateblue</code>（中暗蓝）</td>
-   <td><code>#7b68ee</code></td>
-   <td style="background: mediumslateblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00fa9a;"></td>
-   <td style="text-align: center;"><code>mediumspringgreen</code>（中春绿）</td>
-   <td><code>#00fa9a</code></td>
-   <td style="background: mediumspringgreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #48d1cc;"></td>
-   <td style="text-align: center;"><code>mediumturquoise</code>（中海湖蓝）</td>
-   <td><code>#48d1cc</code></td>
-   <td style="background: mediumturquoise;"></td>
-  </tr>
-  <tr>
-   <td style="background: #c71585;"></td>
-   <td style="text-align: center;"><code>mediumvioletred</code>（中紫罗兰）</td>
-   <td><code>#c71585</code></td>
-   <td style="background: mediumvioletred;"></td>
-  </tr>
-  <tr>
-   <td style="background: #191970;"></td>
-   <td style="text-align: center;"><code>midnightblue</code>（午夜蓝）</td>
-   <td><code>#191970</code></td>
-   <td style="background: midnightblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f5fffa;"></td>
-   <td style="text-align: center;"><code>mintcream</code>（薄荷乳白）</td>
-   <td><code>#f5fffa</code></td>
-   <td style="background: mintcream;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffe4e1;"></td>
-   <td style="text-align: center;"><code>mistyrose</code>（粉玫瑰红）</td>
-   <td><code>#ffe4e1</code></td>
-   <td style="background: mistyrose;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffe4b5;"></td>
-   <td style="text-align: center;"><code>moccasin</code>（鹿皮色）</td>
-   <td><code>#ffe4b5</code></td>
-   <td style="background: moccasin;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffdead;"></td>
-   <td style="text-align: center;"><code>navajowhite</code>（纳瓦白）</td>
-   <td><code>#ffdead</code></td>
-   <td style="background: navajowhite;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fdf5e6;"></td>
-   <td style="text-align: center;"><code>oldlace</code>（浅米色）</td>
-   <td><code>#fdf5e6</code></td>
-   <td style="background: oldlace;"></td>
-  </tr>
-  <tr>
-   <td style="background: #6b8e23;"></td>
-   <td style="text-align: center;"><code>olivedrab</code>（橄榄褐）</td>
-   <td><code>#6b8e23</code></td>
-   <td style="background: olivedrab;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff4500;"></td>
-   <td style="text-align: center;"><code>orangered</code>（橙红）</td>
-   <td><code>#ff4500</code></td>
-   <td style="background: orangered;"></td>
-  </tr>
-  <tr>
-   <td style="background: #da70d6;"></td>
-   <td style="text-align: center;"><code>orchid</code>（兰花紫）</td>
-   <td><code>#da70d6</code></td>
-   <td style="background: orchid;"></td>
-  </tr>
-  <tr>
-   <td style="background: #eee8aa;"></td>
-   <td style="text-align: center;"><code>palegoldenrod</code>（灰菊黄）</td>
-   <td><code>#eee8aa</code></td>
-   <td style="background: palegoldenrod;"></td>
-  </tr>
-  <tr>
-   <td style="background: #98fb98;"></td>
-   <td style="text-align: center;"><code>palegreen</code>（苍绿）</td>
-   <td><code>#98fb98</code></td>
-   <td style="background: palegreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #afeeee;"></td>
-   <td style="text-align: center;"><code>paleturquoise</code>（苍宝石绿）</td>
-   <td><code>#afeeee</code></td>
-   <td style="background: paleturquoise;"></td>
-  </tr>
-  <tr>
-   <td style="background: #db7093;"></td>
-   <td style="text-align: center;"><code>palevioletred</code>（苍紫罗兰）</td>
-   <td><code>#db7093</code></td>
-   <td style="background: palevioletred;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffefd5;"></td>
-   <td style="text-align: center;"><code>papayawhip</code>（木瓜色）</td>
-   <td><code>#ffefd5</code></td>
-   <td style="background: papayawhip;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffdab9;"></td>
-   <td style="text-align: center;"><code>peachpuff</code>（桃色）</td>
-   <td><code>#ffdab9</code></td>
-   <td style="background: peachpuff;"></td>
-  </tr>
-  <tr>
-   <td style="background: #cd853f;"></td>
-   <td style="text-align: center;"><code>peru</code>（秘鲁色）</td>
-   <td><code>#cd853f</code></td>
-   <td style="background: peru;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ffc0cb;"></td>
-   <td style="text-align: center;"><code>pink</code>（粉）</td>
-   <td><code>#ffc0cb</code></td>
-   <td style="background: pink;"></td>
-  </tr>
-  <tr>
-   <td style="background: #dda0dd;"></td>
-   <td style="text-align: center;"><code>plum</code>（李子色）</td>
-   <td><code>#dda0dd</code></td>
-   <td style="background: plum;"></td>
-  </tr>
-  <tr>
-   <td style="background: #b0e0e6;"></td>
-   <td style="text-align: center;"><code>powderblue</code>（粉蓝）</td>
-   <td><code>#b0e0e6</code></td>
-   <td style="background: powderblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #bc8f8f;"></td>
-   <td style="text-align: center;"><code>rosybrown</code>（玫瑰粽）</td>
-   <td><code>#bc8f8f</code></td>
-   <td style="background: rosybrown;"></td>
-  </tr>
-  <tr>
-   <td style="background: #4169e1;"></td>
-   <td style="text-align: center;"><code>royalblue</code>（宝蓝）</td>
-   <td><code>#4169e1</code></td>
-   <td style="background: royalblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #8b4513;"></td>
-   <td style="text-align: center;"><code>saddlebrown</code>（马鞍棕）</td>
-   <td><code>#8b4513</code></td>
-   <td style="background: saddlebrown;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fa8072;"></td>
-   <td style="text-align: center;"><code>salmon</code>（鲑肉色）</td>
-   <td><code>#fa8072</code></td>
-   <td style="background: salmon;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f4a460;"></td>
-   <td style="text-align: center;"><code>sandybrown</code>（沙褐色）</td>
-   <td><code>#f4a460</code></td>
-   <td style="background: sandybrown;"></td>
-  </tr>
-  <tr>
-   <td style="background: #2e8b57;"></td>
-   <td style="text-align: center;"><code>seagreen</code>（海绿）</td>
-   <td><code>#2e8b57</code></td>
-   <td style="background: seagreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fff5ee;"></td>
-   <td style="text-align: center;"><code>seashell</code>（贝壳白）</td>
-   <td><code>#fff5ee</code></td>
-   <td style="background: seashell;"></td>
-  </tr>
-  <tr>
-   <td style="background: #a0522d;"></td>
-   <td style="text-align: center;"><code>sienna</code>（赭）</td>
-   <td><code>#a0522d</code></td>
-   <td style="background: sienna;"></td>
-  </tr>
-  <tr>
-   <td style="background: #87ceeb;"></td>
-   <td style="text-align: center;"><code>skyblue</code>（天蓝）</td>
-   <td><code>#87ceeb</code></td>
-   <td style="background: skyblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #6a5acd;"></td>
-   <td style="text-align: center;"><code>slateblue</code>（青蓝）</td>
-   <td><code>#6a5acd</code></td>
-   <td style="background: slateblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #708090;"></td>
-   <td style="text-align: center;"><code>slategray</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（青灰）</td>
-   <td><code>#708090</code></td>
-   <td style="background: slategray;"></td>
-  </tr>
-  <tr>
-   <td style="background: #708090;"></td>
-   <td style="text-align: center;"><code>slategrey</code><sup><a href="#1" title="color_value#1">[*]</a></sup>（青灰）</td>
-   <td><code>#708090</code></td>
-   <td style="background: slategrey;"></td>
-  </tr>
-  <tr>
-   <td style="background: #fffafa;"></td>
-   <td style="text-align: center;"><code>snow</code>（雪白）</td>
-   <td><code>#fffafa</code></td>
-   <td style="background: snow;"></td>
-  </tr>
-  <tr>
-   <td style="background: #00ff7f;"></td>
-   <td style="text-align: center;"><code>springgreen</code>（春绿）</td>
-   <td><code>#00ff7f</code></td>
-   <td style="background: springgreen;"></td>
-  </tr>
-  <tr>
-   <td style="background: #4682b4;"></td>
-   <td style="text-align: center;"><code>steelblue</code>（铁青）</td>
-   <td><code>#4682b4</code></td>
-   <td style="background: steelblue;"></td>
-  </tr>
-  <tr>
-   <td style="background: #d2b48c;"></td>
-   <td style="text-align: center;"><code>tan</code>（棕褐）</td>
-   <td><code>#d2b48c</code></td>
-   <td style="background: tan;"></td>
-  </tr>
-  <tr>
-   <td style="background: #d8bfd8;"></td>
-   <td style="text-align: center;"><code>thistle</code>（苍紫）</td>
-   <td><code>#d8bfd8</code></td>
-   <td style="background: thistle;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ff6347;"></td>
-   <td style="text-align: center;"><code>tomato</code>（番茄红）</td>
-   <td><code>#ff6347</code></td>
-   <td style="background: tomato;"></td>
-  </tr>
-  <tr>
-   <td style="background: #40e0d0;"></td>
-   <td style="text-align: center;"><code>turquoise</code>（蓝绿）</td>
-   <td><code>#40e0d0</code></td>
-   <td style="background: turquoise;"></td>
-  </tr>
-  <tr>
-   <td style="background: #ee82ee;"></td>
-   <td style="text-align: center;"><code>violet</code>（紫罗兰色）</td>
-   <td><code>#ee82ee</code></td>
-   <td style="background: violet;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f5deb3;"></td>
-   <td style="text-align: center;"><code>wheat</code>（麦色）</td>
-   <td><code>#f5deb3</code></td>
-   <td style="background: wheat;"></td>
-  </tr>
-  <tr>
-   <td style="background: #f5f5f5;"></td>
-   <td style="text-align: center;"><code>whitesmoke</code>（烟白）</td>
-   <td><code>#f5f5f5</code></td>
-   <td style="background: whitesmoke;"></td>
-  </tr>
-  <tr>
-   <td style="background: #9acd32;"></td>
-   <td style="text-align: center;"><code>yellowgreen</code>（黄绿）</td>
-   <td><code>#9acd32</code></td>
-   <td style="background: yellowgreen;"></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Colors")}}</td>
-   <td style="background: #639;"></td>
-   <td style="text-align: center;"><a href="https://en.wikipedia.org/wiki/Eric_A._Meyer#Personal_life">rebeccapurple</a>（利百加紫）</td>
-   <td><code>#663399</code></td>
-   <td style="background: rebeccapurple;"></td>
-  </tr>
- </tbody>
-</table>
+<h3 id="transparent_关键字"><code>transparent</code> 关键字</h3>
 
-<p>（译者注：颜色译名仅供参考。）</p>
-
-<h3 id="transparent_关键字"><code>transparent</code> 关键字</h3>
-
-<p><code>transparent</code> 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 <code>rgba(0,0,0,0)</code> 的简写。</p>
+<p><code>transparent</code> 关键字表示一个完全透明的颜色，即该颜色看上去将是背景色。从技术上说，它是带有阿尔法通道为最小值的黑色，是 <code>rgba(0,0,0,0)</code> 的简写。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意兼容性：</strong>为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。</p>
+<p><strong>备注：</strong> 为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为 alpha 值为 0 的黑色。</p>
 </div>
 
-<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
+<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a href="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
 
 <h3 id="currentColor_关键字"><code>currentColor</code> 关键字</h3>
 
@@ -1022,7 +126,7 @@ translation_of: Web/CSS/color_value
  <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，四位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
  <dt>函数符： <code>rgb[a](R, G, B[, A])</code></dt>
  <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255 相当于 100%。<code>A</code>（alpha）可以是<code>0</code>到<code>1</code>之间的数字，或者百分比，数字<code>1</code>相当于<code>100%</code>（完全不透明）。</dd>
- <dt>函数符：<code>rgb[a](R G B[ / A])</code></dt>
+ <dt>函数符：<code>rgb[a](R G B[ / A])</code></dt>
  <dd>CSS 颜色级别 4 支持用空格分开的值。</dd>
 </dl>
 
@@ -1042,7 +146,7 @@ translation_of: Web/CSS/color_value
 
 <dl>
  <dt>Functional notation: <code>hsl[a](H, S, L[, A])</code></dt>
- <dd><code>H</code> (hue)<strong> </strong>is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
+ <dd><code>H</code> (hue)<strong> </strong>is an {{cssxref("&lt;angle&gt;")}} of the color circle given in <code>deg</code>s, <code>rad</code>s, <code>grad</code>s, or <code>turn</code>s in <a href="https://drafts.csswg.org/css-color/#the-hsl-notation">CSS Color Module Level 4</a>. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in <a href="https://drafts.csswg.org/css-color-3/#hsl-color">CSS Color Module Level 3</a>. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an <code>&lt;angle&gt;</code>, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.</dd>
  <dd><code>S</code> (saturation) and <code>L</code> (lightness) are percentages. <code>100%</code> <strong>saturation</strong> is completely saturated, while <code>0%</code> is completely unsaturated (gray). <code>100%</code> <strong>lightness</strong> is white, <code>0%</code> lightness is black, and <code>50%</code> lightness is “normal.”</dd>
  <dd><code>A</code> (alpha) can be a {{cssxref("&lt;number&gt;")}} between <code>0</code> and <code>1</code>, or a {{cssxref("&lt;percentage&gt;")}}, where the number <code>1</code> corresponds to <code>100%</code> (full opacity).</dd>
  <dt>Functional notation: <code>hsl[a](H S L[ / A])</code></dt>
@@ -1051,7 +155,7 @@ translation_of: Web/CSS/color_value
 
 <h3 id="系统颜色">系统颜色</h3>
 
-<p>In <em>forced colors mode</em> (detectable with the <a href="/zh-CN/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
+<p>In <em>forced colors mode</em> (detectable with the <a href="/zh-CN/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
 
 <p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
 
@@ -1358,11 +462,11 @@ translation_of: Web/CSS/color_value
 
 <h2 id="插值">插值</h2>
 
-<p>在动画和<a href="/zh-CN/docs/Web/SVG/Tutorial/Gradients">渐变</a>中， <code>&lt;color&gt;</code> 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 <a class="external external-icon" href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> 中，以避免出现未预料的灰色。在动画中，插值速度由<a href="/zh-CN/docs/">时间函数</a>决定。</p>
+<p>在动画和<a href="/zh-CN/docs/Web/SVG/Tutorial/Gradients">渐变</a>中， <code>&lt;color&gt;</code> 值会在每个红绿蓝成分中插值。每一个成分都会插值为浮点实数。注意颜色的插值发生在 <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">alpha-premultiplied sRGBA color space</a> 中，以避免出现未预料的灰色。在动画中，插值速度由<a href="/zh-CN/docs/">时间函数</a>决定。</p>
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a class="external external-icon" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -1380,8 +484,8 @@ translation_of: Web/CSS/color_value
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css notranslate">div {
-  width: 100%;
-  height: 200px;
+  width: 100%;
+  height: 200px;
 }</pre>
 
 <div class="hidden">
@@ -1679,48 +783,16 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */ </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td>Adds <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and <code>hsla()</code> as aliases of <code>rgb()</code> and <code>hsl()</code> (both with identical parameter syntax), space-separated function parameters as an alternative to commas, percentages for alpha values, and angles for the hue component in <code>hsl()</code> colors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>Deprecates system colors. Adds SVG colors and <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> functional notations.</td>
-  </tr>
-  <tr style="vertical-align: top;">
-   <td style="vertical-align: top;">{{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}}</td>
-   <td style="vertical-align: top;">{{Spec2('CSS2.1')}}</td>
-   <td style="vertical-align: top;">Adds the <code>orange</code> keyword and system colors.</td>
-  </tr>
-  <tr>
-   <td style="vertical-align: top;">{{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}</td>
-   <td style="vertical-align: top;">{{Spec2('CSS1')}}</td>
-   <td style="vertical-align: top;">Initial definition. Includes 16 basic color keywords.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("css.types.color")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
  <li>The {{ Cssxref("opacity") }} property, allowing to define the transparency of color at the element level.</li>
  <li>The {{ Cssxref("color") }}, {{ Cssxref("background-color") }}, {{ Cssxref("border-color") }}, {{ Cssxref("outline-color") }}, {{ Cssxref("text-shadow") }}, {{ Cssxref("box-shadow") }} properties.</li>
- <li><a href="/en/CSS/CSS_Reference" title="CSS Reference">CSS Reference</a> index</li>
+ <li><a href="/en/CSS/CSS_Reference">CSS Reference</a> index</li>
 </ul>

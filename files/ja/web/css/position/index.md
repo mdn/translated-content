@@ -161,7 +161,7 @@ position: unset;
 }
 
 body {
-  width: 500px;
+  width: 500px;
   margin: 0 auto;
 }
 

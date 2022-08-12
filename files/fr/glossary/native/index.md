@@ -17,4 +17,4 @@ Un exemple d'application Android native serait une application mobile écrite en
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Code natif")}} sur Wikipédia
+- [Code natif](https://fr.wikipedia.org/wiki/Code_natif) sur Wikipédia

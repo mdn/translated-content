@@ -26,10 +26,10 @@ translation_of: Web/API/CSS_Properties_and_Values_API/guide
 <p>次の例では、{{domxref('CSS.registerProperty')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} <code>--my-prop</code> を色として登録し、デフォルト値を指定し、その値を継承しないようにします。</p>
 
 <pre class="brush: js notranslate">window.CSS.registerProperty({
-  name: '--my-prop',
-  syntax: '&lt;color&gt;',
-  inherits: false,
-  initialValue: '#c0ffee',
+  name: '--my-prop',
+  syntax: '&lt;color&gt;',
+  inherits: false,
+  initialValue: '#c0ffee',
 });
 </pre>
 
@@ -38,9 +38,9 @@ translation_of: Web/API/CSS_Properties_and_Values_API/guide
 <p>CSS で同じ登録を行うことができます。 次の例では、{{cssxref('@property')}} を使用して、{{cssxref('--*', 'CSS カスタムプロパティ')}} <code>--my-prop</code> を色として登録し、デフォルト値を指定し、その値を継承しないようにします。</p>
 
 <pre class="brush: css notranslate">@property --my-prop {
-  syntax: '&lt;color&gt;';
-  inherits: false;
-  initial-value: #c0ffee;
+  syntax: '&lt;color&gt;';
+  inherits: false;
+  initial-value: #c0ffee;
 }</pre>
 
 <h2 id="Using_registered_custom_properties" name="Using_registered_custom_properties">登録したカスタムプロパティの使用</h2>
@@ -50,25 +50,25 @@ translation_of: Web/API/CSS_Properties_and_Values_API/guide
 <p>この例では、カスタムプロパティ <code>--registered</code> を構文 <code>&lt;color&gt;</code> を使用して登録し、線形グラデーションで使用しています。 そのプロパティは、ホバーまたはフォーカスで別の色に遷移します。 登録されたプロパティでは遷移が機能しますが、未登録のプロパティでは機能しないことに注意してください！</p>
 
 <pre class="brush: css notranslate">.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
+  --registered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--registered));
+  transition: --registered 1s ease-in-out;
 }
 
 .registered:hover,
 .registered:focus {
-  --registered: #b4d455;
+  --registered: #b4d455;
 }
 
 .unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
+  --unregistered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  transition: --unregistered 1s ease-in-out;
 }
 
 .unregistered:hover,
 .unregistered:focus {
-  --unregistered: #b4d455;
+  --unregistered: #b4d455;
 }</pre>
 
 <div class="hidden" id="registered">
@@ -77,41 +77,41 @@ translation_of: Web/API/CSS_Properties_and_Values_API/guide
 </pre>
 
 <pre class="brush: css notranslate">.registered {
-  --registered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--registered));
-  transition: --registered 1s ease-in-out;
+  --registered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--registered));
+  transition: --registered 1s ease-in-out;
 }
 
 .registered:hover,
 .registered:focus {
-  --registered: #b4d455;
+  --registered: #b4d455;
 }
 
 .unregistered {
-  --unregistered: #c0ffee;
-  background-image: linear-gradient(to right, #fff, var(--unregistered));
-  transition: --unregistered 1s ease-in-out;
+  --unregistered: #c0ffee;
+  background-image: linear-gradient(to right, #fff, var(--unregistered));
+  transition: --unregistered 1s ease-in-out;
 }
 
 .unregistered:hover,
 .unregistered:focus {
-  --unregistered: #b4d455;
+  --unregistered: #b4d455;
 }
 
 button {
-  height: 40vh;
-  display: block;
-  width: 100%;
-  font-size: 3vw;
+  height: 40vh;
+  display: block;
+  width: 100%;
+  font-size: 3vw;
 }
 
 </pre>
 
 <pre class="brush: js notranslate">window.CSS.registerProperty({
-  name: '--registered',
-  syntax: '&lt;color&gt;',
-  inherits: false,
-  initialValue: 'red',
+  name: '--registered',
+  syntax: '&lt;color&gt;',
+  inherits: false,
+  initialValue: 'red',
 });</pre>
 </div>
 

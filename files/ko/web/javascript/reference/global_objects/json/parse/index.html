@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>JSON.parse()</code></strong> 메서드는 JSON 문자열의 구문을 분석하고, 그 결과에서 JavaScript 값이나 객체를 생성합니다. 선택적으로, <code>reviver</code> 함수를 인수로 전달할 경우, 결과를 반환하기 전에 변형할 수 있습니다.</p>
+<p><strong><code>JSON.parse()</code></strong> 메서드는 JSON 문자열의 구문을 분석하고, 그 결과에서 JavaScript 값이나 객체를 생성합니다. 선택적으로, <code>reviver</code> 함수를 인수로 전달할 경우, 결과를 반환하기 전에 변형할 수 있습니다.</p>
 
 
 <div>{{EmbedInteractiveExample("pages/js/json-parse.html")}}</div>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 <dl>
  <dt><code>text</code></dt>
- <dd>JSON으로 변환할 문자열. JSON 구문은 {{jsxref("JSON")}} 객체의 설명을 참고하세요.</dd>
+ <dd>JSON으로 변환할 문자열. JSON 구문은 {{jsxref("JSON")}} 객체의 설명을 참고하세요.</dd>
  <dt><code>reviver</code> {{optional_inline}}</dt>
  <dd>함수라면, 변환 결과를 반환하기 전에 이 인수에 전달해 변형함.</dd>
 </dl>
@@ -37,11 +37,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 <h3 id="예외">예외</h3>
 
-<p>변환할 문자열이 유효한 JSON이 아닐 경우 {{jsxref("SyntaxError")}}.</p>
+<p>변환할 문자열이 유효한 JSON이 아닐 경우 {{jsxref("SyntaxError")}}.</p>
 
 <h2 id="예제">예제</h2>
 
-<h3 id="JSON.parse()_사용하기"><code>JSON.parse()</code> 사용하기</h3>
+<h3 id="JSON.parse()_사용하기"><code>JSON.parse()</code> 사용하기</h3>
 
 <pre class="brush: js">JSON.parse('{}');              // {}
 JSON.parse('true');            // true
@@ -52,7 +52,7 @@ JSON.parse('null');            // null
 
 <h3 id="reviver_매개변수_사용하기"><code>reviver</code> 매개변수 사용하기</h3>
 
-<p><code>reviver</code>가 주어지면 분석한 값을 반환하기 전에 변환합니다. 구체적으로는, 분석한 값과 그 모든 속성(가장 깊게 중첩된 속성부터 시작해 제일 바깥의 원래 값까지)을 각각 <code>reviver</code>에 전달합니다. <code>reviver</code>의 <code>this</code> 문맥은 분석한 값으로 설정되고, 속성 명(문자열)과 값을 인자로 전달받습니다. <code>reviver</code>가 {{jsxref("undefined")}}를 반환하거나 반환하지 않는다면, 예컨대 함수가 중간에 실패한다면 그 속성은 최종 결과에서 제외됩니다. 그 외에는 반환 값으로 속성의 값을 재설정합니다.</p>
+<p><code>reviver</code>가 주어지면 분석한 값을 반환하기 전에 변환합니다. 구체적으로는, 분석한 값과 그 모든 속성(가장 깊게 중첩된 속성부터 시작해 제일 바깥의 원래 값까지)을 각각 <code>reviver</code>에 전달합니다. <code>reviver</code>의 <code>this</code> 문맥은 분석한 값으로 설정되고, 속성 명(문자열)과 값을 인자로 전달받습니다. <code>reviver</code>가 {{jsxref("undefined")}}를 반환하거나 반환하지 않는다면, 예컨대 함수가 중간에 실패한다면 그 속성은 최종 결과에서 제외됩니다. 그 외에는 반환 값으로 속성의 값을 재설정합니다.</p>
 
 <p>만약 <code>reviver</code>가 일부 값만 변환하고 나머지는 건드리지 않는다면, 나머지 값을 그대로 반환하는걸 잊지 마세요. 그렇지 않으면 변환한 값 외에는 결과에서 모두 제외됩니다.</p>
 
@@ -84,36 +84,11 @@ JSON.parse('[1, 2, 3, 4, ]');
 JSON.parse('{"foo" : 1, }');
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-
 
 <p>{{Compat("javascript.builtins.JSON.parse")}}</p>
 

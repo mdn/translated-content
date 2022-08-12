@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
  <dd>Função cujo retorno produz o elemento do novo Array. Recebe três argumentos:
  <dl>
   <dt><code>valorAtual</code></dt>
-  <dd>O valor do elemento original do Array de origem. </dd>
+  <dd>O valor do elemento original do Array de origem. </dd>
   <dt><code>indice</code></dt>
   <dd>O índice do elemento atual que está sendo processado no array.</dd>
   <dt><code>array</code></dt>
@@ -33,11 +33,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>O método <strong><code>map</code></strong> chama a função <code>callback</code> recebida por parâmetro para cada elemento do Array original, em ordem, e constrói um novo array com base nos retornos de cada chamada. A função <code>callback</code> é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que estiverem como <code>undefined</code>, que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.</p>
+<p>O método <strong><code>map</code></strong> chama a função <code>callback</code> recebida por parâmetro para cada elemento do Array original, em ordem, e constrói um novo array com base nos retornos de cada chamada. A função <code>callback</code> é chamada apenas para os elementos do array original que tiverem valores atribuídos; os elementos que estiverem como <code>undefined</code>, que tiverem sido removidos ou os que nunca tiveram valores atribuídos não serão considerados.</p>
 
 <p>A função <code>callback</code> é chamada com três argumentos: o valor do elemento corrente, o índice do elemento corrente e o array original que está sendo percorrido.</p>
 
-<p>Se o parametro <code>thisArg</code> foi passado para o método <code>map</code>, ele será repassado para a função <code>callback</code> no momento da invocação para ser utilizado como o <code>this</code>. Caso contrário, o valor {{jsxref("Global_Objects/undefined", "undefined")}} será repassado para uso como o <em><code>this</code></em>. O valor do <code>this</code> a ser repassado para o <code>callback</code> deve respeitar as <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">regras para determinar como o this é acessado por uma função</a> (em inglês).</p>
+<p>Se o parametro <code>thisArg</code> foi passado para o método <code>map</code>, ele será repassado para a função <code>callback</code> no momento da invocação para ser utilizado como o <code>this</code>. Caso contrário, o valor {{jsxref("Global_Objects/undefined", "undefined")}} será repassado para uso como o <em><code>this</code></em>. O valor do <code>this</code> a ser repassado para o <code>callback</code> deve respeitar as <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">regras para determinar como o this é acessado por uma função</a> (em inglês).</p>
 
 <p>O método <code>map</code> não modifica o array original. No entanto, a função <code>callback</code> invocada por ele pode fazê-lo.</p>
 
@@ -67,7 +67,7 @@ var doubles = numbers.map(function(num) {
 
 <h3 id="Example_using_map_generically" name="Example:_using_map_generically">Exemplo: usando <code>map</code> genericamente</h3>
 
-<p>Esse exemplo demonstra como usar o map em um {{jsxref("Global_Objects/String", "String")}} para recuperar a representação em ASCII de cada caracter em um array de bytes:</p>
+<p>Esse exemplo demonstra como usar o map em um {{jsxref("Global_Objects/String", "String")}} para recuperar a representação em ASCII de cada caracter em um array de bytes:</p>
 
 <pre class="brush: js">var map = Array.prototype.map;
 var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
@@ -84,7 +84,7 @@ var values = [].map.call(elems, function(obj) {
 });
 </pre>
 
-<h3 id="Exemplo_Usando_map_para_inverter_uma_string">Exemplo: Usando <code>map</code> para inverter uma string</h3>
+<h3 id="Exemplo_Usando_map_para_inverter_uma_string">Exemplo: Usando <code>map</code> para inverter uma string</h3>
 
 <pre class="brush: js">var str = '12345';
 [].map.call(str, function(x) {
@@ -127,7 +127,7 @@ function returnInt(element) {
 
 <p>(veja definição em <a href="https://pt.wikipedia.org/wiki/Polyfill">Polyfill</a>)</p>
 
-<p>O método <code>map</code> foi introduzido ao padrão ECMA-262 na sua 5ª edição, o que significa que ele pode não estar presente em todas as implementações desse padrão. Você pode contornar esse problema inserindo o código a seguir no início dos seus scripts, permitindo o uso do <code>map</code> mesmo que ele não esteja sendo suportado nativamente. Esse algoritmo é exatamente o especificado no ECMA-262 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, e {{jsxref("Global_Objects/Array", "Array")}} tenham seus valores originais, e que <code style="font-style: normal;">callback.call</code> avalie para o valor original de <code style="font-style: normal;">{{jsxref("Function.prototype.call")}}</code>.</p>
+<p>O método <code>map</code> foi introduzido ao padrão ECMA-262 na sua 5ª edição, o que significa que ele pode não estar presente em todas as implementações desse padrão. Você pode contornar esse problema inserindo o código a seguir no início dos seus scripts, permitindo o uso do <code>map</code> mesmo que ele não esteja sendo suportado nativamente. Esse algoritmo é exatamente o especificado no ECMA-262 5ª edição, assumindo que {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}}, e {{jsxref("Global_Objects/Array", "Array")}} tenham seus valores originais, e que <code style="font-style: normal;">callback.call</code> avalie para o valor original de <code style="font-style: normal;">{{jsxref("Function.prototype.call")}}</code>.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
@@ -141,8 +141,8 @@ if (!Array.prototype.map) {
       throw new TypeError(' this is null or not defined');
     }
 
-    //  1. Let O be the result of calling ToObject passing the |this|
-    //    value as the argument.
+    //  1. Let O be the result of calling ToObject passing the |this|
+    //    value as the argument.
     var O = Object(this);
 
     // 2. Let lenValue be the result of calling the Get internal

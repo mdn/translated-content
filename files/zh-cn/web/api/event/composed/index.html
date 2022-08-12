@@ -5,7 +5,7 @@ translation_of: Web/API/Event/composed
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
-<p>{{domxref("Event")}} 接口的只读属性 <strong><code>composed</code></strong> 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。</p>
+<p>{{domxref("Event")}} 接口的只读属性 <strong><code>composed</code></strong> 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。</p>
 
 <div class="note">
 <p>注意：此属性以前命名为<code>scoped</code>。</p>
@@ -17,9 +17,9 @@ translation_of: Web/API/Event/composed
 
 <h3 id="值">值</h3>
 
-<p>如果返回的 {{jsxref("Boolean")}} 值为 <code>true</code>，表明当事件到达 shadow DOM 的根节点（也就是 shadow DOM 中事件开始传播的第一个节点）时，事件可以从 shadow DOM 传递到一般 DOM。当然，事件要具有可传播性，即该事件的 {{domxref("Event.bubbles", "bubbles")}} 属性必须为 <code>true</code>。你也可以通过调用 {{domxref("Event.composedPath", "composedPath()")}} 来查看事件从 shadow DOM 传播到普通 DOM 的路径。</p>
+<p>如果返回的 {{jsxref("Boolean")}} 值为 <code>true</code>，表明当事件到达 shadow DOM 的根节点（也就是 shadow DOM 中事件开始传播的第一个节点）时，事件可以从 shadow DOM 传递到一般 DOM。当然，事件要具有可传播性，即该事件的 {{domxref("Event.bubbles", "bubbles")}} 属性必须为 <code>true</code>。你也可以通过调用 {{domxref("Event.composedPath", "composedPath()")}} 来查看事件从 shadow DOM 传播到普通 DOM 的路径。</p>
 
-<p>如果属性值为 <code>false</code>，那么事件将不会跨越 shadow DOM 的边界传播。</p>
+<p>如果属性值为 <code>false</code>，那么事件将不会跨越 shadow DOM 的边界传播。</p>
 
 <h2 id="例子">例子</h2>
 

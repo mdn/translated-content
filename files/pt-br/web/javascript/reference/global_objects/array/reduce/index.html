@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>reduce()</strong></code> executa uma função <strong>reducer</strong> (fornecida por você) para cada elemento do array, resultando num único valor de retorno.</p>
+<p>O método <code><strong>reduce()</strong></code> executa uma função <strong>reducer</strong> (fornecida por você) para cada elemento do array, resultando num único valor de retorno.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
 
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
  <li>Array original (<code>src</code>)</li>
 </ol>
 
-<p>O valor de retorno da sua função <strong>reducer</strong> é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.</p>
+<p>O valor de retorno da sua função <strong>reducer</strong> é atribuída ao acumulador. O acumulador, com seu valor atualizado, é repassado para cada iteração subsequente pelo array, que por fim, se tornará o valor resultante, único, final.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>Função que é executada em cada valor no array (exceto no primeiro, se nenhum <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code></font> for passado); recebe quatro argumentos:</dd>
+ <dd>Função que é executada em cada valor no array (exceto no primeiro, se nenhum <font face="Consolas, Liberation Mono, Courier, monospace"><code>valorInicial</code></font> for passado); recebe quatro argumentos:</dd>
 </dl>
 
 <dl>
@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <dl>
  <dt><code>valorInicial</code></dt>
- <dd>Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função <code>callback</code>. Se nenhum <code>valorInicial</code> é fornecido, o primeiro elemento do array será usado como o valor inicial do <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> e o <code>valorAtual</code> não será lido. Chamar <code>reduce()</code> em uma array vazia sem valor inicial retornará um erro.</dd>
+ <dd>Opcional. Valor a ser usado como o primeiro argumento da primeira chamada da função <code>callback</code>. Se nenhum <code>valorInicial</code> é fornecido, o primeiro elemento do array será usado como o valor inicial do <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> e o <code>valorAtual</code> não será lido. Chamar <code>reduce()</code> em uma array vazia sem valor inicial retornará um erro.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -61,26 +61,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>O método <code>reduce()</code> executa a função de <code>callback</code> uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:</p>
+<p>O método <code>reduce()</code> executa a função de <code>callback</code> uma vez para cada elemento presente no array, excluindo furos (valores indefinidos), recebendo quatro argumentos:</p>
 
 <ol>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>acumulador</em></span></font> - valor inicial (ou o valor do callback anterior),</li>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>valorAtual</em></span></font> - o valor do elemento atual</li>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>index</em></span></font> - o índice atual e</li>
- <li><code><var>array</var></code> - o array onde a iteração está ocorrendo.</li>
+ <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>acumulador</em></span></font> - valor inicial (ou o valor do callback anterior),</li>
+ <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>valorAtual</em></span></font> - o valor do elemento atual</li>
+ <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><em>index</em></span></font> - o índice atual e</li>
+ <li><code><var>array</var></code> - o array onde a iteração está ocorrendo.</li>
 </ol>
 
-<p>A primeira vez que o callback é chamado, o<font face="Consolas, Liberation Mono, Courier, monospace"> <code>acumulador</code> e o <code>valorAtual</code> </font>podem ter um de dois valores possíveis<font face="Consolas, Liberation Mono, Courier, monospace">. </font>Se o <code><font face="Consolas, Liberation Mono, Courier, monospace">valorInicial</font></code><font face="Consolas, Liberation Mono, Courier, monospace"> </font>tiver<font face="Consolas, Liberation Mono, Courier, monospace"> </font>sido fornecido na chamada à função <font face="Consolas, Liberation Mono, Courier, monospace"><code>reduce()</code></font>, então o <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> será igual ao <code>valorInicial</code> e o <font face="consolas, Liberation Mono, courier, monospace"><code>valorAtual</code> </font>será igual ao primeiro valor no array. Caso nenhum <code>valorInicial</code> seja fornecido, <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> será igual ao primeiro valor no array, e <code>valorAtual</code> será igual ao segundo.</p>
+<p>A primeira vez que o callback é chamado, o<font face="Consolas, Liberation Mono, Courier, monospace"> <code>acumulador</code> e o <code>valorAtual</code> </font>podem ter um de dois valores possíveis<font face="Consolas, Liberation Mono, Courier, monospace">. </font>Se o <code><font face="Consolas, Liberation Mono, Courier, monospace">valorInicial</font></code><font face="Consolas, Liberation Mono, Courier, monospace"> </font>tiver<font face="Consolas, Liberation Mono, Courier, monospace"> </font>sido fornecido na chamada à função <font face="Consolas, Liberation Mono, Courier, monospace"><code>reduce()</code></font>, então o <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> será igual ao <code>valorInicial</code> e o <font face="consolas, Liberation Mono, courier, monospace"><code>valorAtual</code> </font>será igual ao primeiro valor no array. Caso nenhum <code>valorInicial</code> seja fornecido, <font face="Consolas, Liberation Mono, Courier, monospace"><code>acumulador</code></font> será igual ao primeiro valor no array, e <code>valorAtual</code> será igual ao segundo.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Se o <code>valorInicial</code> não tiver sido passado como argumento, então <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reduce()</span></font> executará o callback da função começando a partir do índice 1 (<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index 1</span></font>), pulando o primeiro índice (<code>index 0</code>). Se o <code>valorInicial</code> for passado como argumento, a função irá começar no <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index 0</span></font>.</p>
+<p><strong>Nota</strong>: Se o <code>valorInicial</code> não tiver sido passado como argumento, então <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reduce()</span></font> executará o callback da função começando a partir do índice 1 (<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index 1</span></font>), pulando o primeiro índice (<code>index 0</code>). Se o <code>valorInicial</code> for passado como argumento, a função irá começar no <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">index 0</span></font>.</p>
 </div>
 
-<p>Se a array estiver vazia e o <code>valorInicial</code> não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.</p>
+<p>Se a array estiver vazia e o <code>valorInicial</code> não tiver sido informado, uma exceção do tipo {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançada.</p>
 
-<p>Se a array possuir somente um elemento (independente da posição) e o <code>valorInicial</code> não tiver sido fornecido, ou se <code>valorInicial</code> for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de <code>callback</code> seja chamada.</p>
+<p>Se a array possuir somente um elemento (independente da posição) e o <code>valorInicial</code> não tiver sido fornecido, ou se <code>valorInicial</code> for fornecido, mas a array estiver vazia, o valor será retornado sem que a função de <code>callback</code> seja chamada.</p>
 
-<p>É mais seguro provir um <code>valorInicial</code>, porque existem até <em>quatro</em> possíveis saídas sem o <code>valorInicial</code>, como mostrado no exemplo:</p>
+<p>É mais seguro provir um <code>valorInicial</code>, porque existem até <em>quatro</em> possíveis saídas sem o <code>valorInicial</code>, como mostrado no exemplo:</p>
 
 <pre class="brush: js notranslate">var maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
 var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
@@ -96,14 +96,14 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
 
 <h3 id="Como_funciona_o_reduce">Como funciona o reduce()</h3>
 
-<p>Suponha que o seguinte uso de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reduce()</span></font> tenha ocorrido:</p>
+<p>Suponha que o seguinte uso de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">reduce()</span></font> tenha ocorrido:</p>
 
 <pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduce(function(a<font face="Consolas, Liberation Mono, Courier, monospace"><code>cumulador</code></font>, valorAtual, index, array) {
   return a<font face="Consolas, Liberation Mono, Courier, monospace"><code>cumulador</code></font> + valorAtual;
 });
 // 10</pre>
 
-<p>O callback será invocado quatro vezes, com os argumentos e valores em cada chamada  sendo:</p>
+<p>O callback será invocado quatro vezes, com os argumentos e valores em cada chamada  sendo:</p>
 
 <table style="width: 100%;">
  <thead>
@@ -126,7 +126,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>1</code></td>
   </tr>
   <tr>
-   <th scope="row">segunda chamada</th>
+   <th scope="row">segunda chamada</th>
    <td><code>1</code></td>
    <td><code>2</code></td>
    <td><code>2</code></td>
@@ -134,7 +134,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>3</code></td>
   </tr>
   <tr>
-   <th scope="row">terceira chamada</th>
+   <th scope="row">terceira chamada</th>
    <td><code>3</code></td>
    <td><code>3</code></td>
    <td><code>3</code></td>
@@ -142,7 +142,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>6</code></td>
   </tr>
   <tr>
-   <th scope="row">quarta chamada</th>
+   <th scope="row">quarta chamada</th>
    <td><code>6</code></td>
    <td><code>4</code></td>
    <td><code>4</code></td>
@@ -152,13 +152,13 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
  </tbody>
 </table>
 
-<p>O valor retornado pelo <code>reduce</code> será o da última chamada à callback <code>(10)</code>.</p>
+<p>O valor retornado pelo <code>reduce</code> será o da última chamada à callback <code>(10)</code>.</p>
 
 <p>Você também pode usar uma {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}} em vez de uma função completa. O código abaixo produz a mesma saída que o código do bloco acima:</p>
 
 <pre class="brush: js line-numbers  language-js notranslate">[0, 1, 2, 3, 4].reduce( (accum, curr) =&gt; accum + curr );</pre>
 
-<p>Se você informar um <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">valorInicial</span></font> como o segundo argumento de reduce, o resultado será:</p>
+<p>Se você informar um <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">valorInicial</span></font> como o segundo argumento de reduce, o resultado será:</p>
 
 <pre class="brush: js notranslate">[0, 1, 2, 3, 4].reduce(function(acumulador, valorAtual, indice, array) {
   return acumulador + valorAtual;
@@ -179,7 +179,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
  </thead>
  <tbody>
   <tr>
-   <th scope="row">primeira chamada</th>
+   <th scope="row">primeira chamada</th>
    <td><code>10</code></td>
    <td><code>0</code></td>
    <td><code>0</code></td>
@@ -187,7 +187,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>10</code></td>
   </tr>
   <tr>
-   <th scope="row">segunda chamada</th>
+   <th scope="row">segunda chamada</th>
    <td><code>10</code></td>
    <td><code>1</code></td>
    <td><code>1</code></td>
@@ -195,7 +195,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>11</code></td>
   </tr>
   <tr>
-   <th scope="row">terceira chamada</th>
+   <th scope="row">terceira chamada</th>
    <td><code>11</code></td>
    <td><code>2</code></td>
    <td><code>2</code></td>
@@ -203,7 +203,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>13</code></td>
   </tr>
   <tr>
-   <th scope="row">quarta chamada</th>
+   <th scope="row">quarta chamada</th>
    <td><code>13</code></td>
    <td><code>3</code></td>
    <td><code>3</code></td>
@@ -211,7 +211,7 @@ var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
    <td><code>16</code></td>
   </tr>
   <tr>
-   <th scope="row">quinta chamada</th>
+   <th scope="row">quinta chamada</th>
    <td><code>16</code></td>
    <td><code>4</code></td>
    <td><code>4</code></td>
@@ -357,7 +357,7 @@ var allbooks = friends.reduce(function(prev, curr) {
 <h3 id="Removendo_itens_duplicados_num_array">Removendo itens duplicados num array</h3>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar <code>let orderedArray = Array.from(new Set(myArray))</code> para obter um array em que os itens duplicados tenham sido removidos.</p>
+<p><strong>Nota:</strong> Se você estiver usando um ambiente compatível com {{jsxref("Set")}} and {{jsxref("Array.from()")}}, você pode usar <code>let orderedArray = Array.from(new Set(myArray))</code> para obter um array em que os itens duplicados tenham sido removidos.</p>
 </div>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
@@ -372,7 +372,7 @@ console.log(result); //[1,2,3,4,5]</code>
 
 <h3 id="Substituindo_.filter.map_por_.reduce">Substituindo .filter().map() por .reduce()</h3>
 
-<p>Usar {{jsxref("Array.filter()")}} seguido por {{jsxref("Array.map()")}} faz com que o array seja percorrido duas vezes. Você pode obter o mesmo resultado percorrendo o array apenas uma vez com {{jsxref("Array.reduce()")}}, o que é, portanto, mais eficiente. (Se você gosta de for loops, você pode usar filter e map percorrendo o array apenas uma vez com {{jsxref("Array.forEach()")}}).</p>
+<p>Usar {{jsxref("Array.filter()")}} seguido por {{jsxref("Array.map()")}} faz com que o array seja percorrido duas vezes. Você pode obter o mesmo resultado percorrendo o array apenas uma vez com {{jsxref("Array.reduce()")}}, o que é, portanto, mais eficiente. (Se você gosta de for loops, você pode usar filter e map percorrendo o array apenas uma vez com {{jsxref("Array.forEach()")}}).</p>
 
 <pre class="notranslate">const numbers = [-5, 6, 2, 0,];
 
@@ -447,7 +447,7 @@ runPromiseInSequense(promiseArr)
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p><code>Array.prototype.reduce</code> foi adicionado ao padrão ECMA-262  na quinta edição; e portanto, pode não estar presente em todas as implementações do padrão. Você pode contornar isso inserindo o código a seguir no início de seus scripts, permitindo o uso do <code>reduce()</code> em implementações que não possuem suporte nativo a ele.</p>
+<p><code>Array.prototype.reduce</code> foi adicionado ao padrão ECMA-262  na quinta edição; e portanto, pode não estar presente em todas as implementações do padrão. Você pode contornar isso inserindo o código a seguir no início de seus scripts, permitindo o uso do <code>reduce()</code> em implementações que não possuem suporte nativo a ele.</p>
 
 <pre class="brush: js notranslate">// Etapas de produção para o ECMA-262, Edition 5, 15.4.4.21
 // Referencia: http://es5.github.io/#x15.4.4.21

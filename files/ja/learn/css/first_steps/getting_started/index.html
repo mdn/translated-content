@@ -88,7 +88,7 @@ translation_of: Learn/CSS/First_steps/Getting_started
 
 <h2 id="Styling_HTML_elements" name="Styling_HTML_elements">HTML 要素をスタイリングする</h2>
 
-<p>見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。<em><strong>要素セレクタ</strong>（</em>HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして <code>p</code> を使うことができます。すべての段落を緑色にするために次を使います:</p>
+<p>見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。<em><strong>要素セレクタ</strong>（</em>HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして <code>p</code> を使うことができます。すべての段落を緑色にするために次を使います:</p>
 
 <pre class="brush: css notranslate">p {
   color: green;
@@ -102,13 +102,13 @@ translation_of: Learn/CSS/First_steps/Getting_started
 
 <p>下にあるインタラクティブエディターのコードボックスを編集するか、コンピューターに保存された CSS ファイルを編集してこのルールセットを試してみてください。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
 
 <h2 id="Changing_the_default_behavior_of_elements" name="Changing_the_default_behavior_of_elements">要素の基本的なふるまいを変える</h2>
 
 <p>よくマークアップされた HTML 文書をみると、かんたんな例でさえ、基本的なスタイリングを加えることでブラウザーが HTML を読みやすくしているかがわかります。見出しは大きく太線になっているし、リストは箇条書きになっています。これはブラウザーがすべてのページにデフォルトで適用されるスタイルシートを含んでいるために起きます。それらがなければ、すべてのテキストがまとまって一緒に実行され、すべてを一からスタイリングしなければなりません。最新のブラウザーはすべて、ほぼ同じ方法をもちいて、デフォルトで HTML コンテンツを表示します。</p>
 
-<p>ブラウザーが選んだのとは別のスタイリングにしたい事もあるでしょう。これには単純に変更したい HTML 要素をえらび、CSS ルールを変更したい外観に変えるだけで可能です。よい例が <code>&lt;ul&gt;</code> 要素、つまり順番なしリストです。箇条書きの点がついていますが、もしこれが要らないと思ったら次のようにして削除することができます:</p>
+<p>ブラウザーが選んだのとは別のスタイリングにしたい事もあるでしょう。これには単純に変更したい HTML 要素をえらび、CSS ルールを変更したい外観に変えるだけで可能です。よい例が <code>&lt;ul&gt;</code> 要素、つまり順番なしリストです。箇条書きの点がついていますが、もしこれが要らないと思ったら次のようにして削除することができます:</p>
 
 <pre class="brush: css notranslate">li {
   list-style-type: none;
@@ -118,7 +118,7 @@ translation_of: Learn/CSS/First_steps/Getting_started
 
 <p><code>list-style-type</code> プロパティはどんな値がサポートされているか MDN上で調べるのに適したプロパティです。<code><a href="/ja/docs/Web/CSS/list-style-type">list-style-type</a></code> のページをみるとページの上部に違うプロパティ値を試せる対話型の例があります。そしてページの下部には使えるプロパティ値が詳細に説明されています。</p>
 
-<p>このページをみると、どのようなものに変えられるか見つけられます。プロパティ値 <code>square</code>  に変えてみてください。</p>
+<p>このページをみると、どのようなものに変えられるか見つけられます。プロパティ値 <code>square</code>  に変えてみてください。</p>
 
 <h2 id="Adding_a_class" name="Adding_a_class">クラスを加える</h2>
 
@@ -170,9 +170,9 @@ span.special {
   color: rebeccapurple;
 }</pre>
 
-<p>このセレクタは <code>&lt;li&gt;</code> 要素の中にある <code>&lt;em&gt;</code> 要素を選択します。よって HTML 文書の中で、3番目のリストアイテム内にある <code>&lt;em&gt;</code> 要素はパープルに変わっていますが、段落内にある <code>&lt;em&gt;</code> 要素は変更されていません。</p>
+<p>このセレクタは <code>&lt;li&gt;</code> 要素の中にある <code>&lt;em&gt;</code> 要素を選択します。よって HTML 文書の中で、3番目のリストアイテム内にある <code>&lt;em&gt;</code> 要素はパープルに変わっていますが、段落内にある <code>&lt;em&gt;</code> 要素は変更されていません。</p>
 
-<p>HTML ドキュメント内で、見出しの直後に来る段落を見出しとおなじ階層レベルにしたいと思うことがあるかもしれません。このときはセレクタ同士の間に <code>+</code>  を入れます（<strong>adjacent sibling combinator</strong>：アジェイセント・シブリング・コンビネーター）。</p>
+<p>HTML ドキュメント内で、見出しの直後に来る段落を見出しとおなじ階層レベルにしたいと思うことがあるかもしれません。このときはセレクタ同士の間に <code>+</code>  を入れます（<strong>adjacent sibling combinator</strong>：アジェイセント・シブリング・コンビネーター）。</p>
 
 <p>いま扱っている CSS につぎのルールセットを追加してみてください:</p>
 
@@ -208,7 +208,7 @@ a:visited {
 
 <p>下のライブ例では、プロパティ値をいろいろ変えることでさまざまなリンクの状態を試せます。すでに加えられているルールセットをみると、ピンクがとても明るくて読みづらいことがわかります。もっといい色に変えてみましょう。太字に変えられますか？</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
 
 <p>リンクをホバーすると下線が消えるようにしていますが、どんな状態でも下線が消えているようにできます。ただし実際のサイトでは、ページを見ている人に、リンクはリンクであることを知らせるのを忘れないようにしてください。下線を残すのは、ユーザーが慣れているように、テキスト内にリンクがあることを伝える重要な手掛かりになります。CSS にふくまれるあらゆるものには、変更によって文章を使いづらくするおそれがあることを強調しておきます。</p>
 
@@ -238,9 +238,9 @@ h1 + ul + p { ... }</pre>
   padding: 5px;
 }</pre>
 
-<p>これは <code>&lt;body&gt;</code> 要素の中にある <code>&lt;h1&gt;</code> 要素の直後に来た <code>&lt;p&gt;</code> 要素の中にある <code>special</code> クラスの要素をスタイリングします。</p>
+<p>これは <code>&lt;body&gt;</code> 要素の中にある <code>&lt;h1&gt;</code> 要素の直後に来た <code>&lt;p&gt;</code> 要素の中にある <code>special</code> クラスの要素をスタイリングします。</p>
 
-<p>HTML のうち、スタイルが適用されるのは <code>&lt;span class="special"&gt;</code> のみです。</p>
+<p>HTML のうち、スタイルが適用されるのは <code>&lt;span class="special"&gt;</code> のみです。</p>
 
 <p>現時点では複雑に思えても心配しなくて大丈夫です。CSS を書いていくうちにすぐに理解できるようになります。</p>
 

@@ -5,9 +5,9 @@ translation_of: Web/SVG/Attribute/d
 ---
 <div>{{SVGRef}}</div>
 
-<p><strong><code>d</code></strong>  속성은 그릴 패스를 정의합니다.</p>
+<p><strong><code>d</code></strong>  속성은 그릴 패스를 정의합니다.</p>
 
-<p>A path definition is a list of <a href="#Path_commands">path commands</a> where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.</p>
+<p>A path definition is a list of <a href="#Path_commands">path commands</a> where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.</p>
 
 <p>Three elements have this attribute: {{SVGElement("path")}}, {{SVGElement("glyph")}}, and {{SVGElement("missing-glyph")}}</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/SVG/Attribute/d
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -147,18 +147,18 @@ translation_of: Web/SVG/Attribute/d
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;path fill="none" stroke="red"
+  &lt;path fill="none" stroke="red"
     d="M 10,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 40,20 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
-       m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" /&gt;
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('MoveTo_path_commands', '100%', 200)}}</p>
@@ -215,18 +215,18 @@ translation_of: Web/SVG/Attribute/d
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- LineTo commands with absolute coordinates --&gt;
-  &lt;path fill="none" stroke="red"
-        d="M 10,10
-           L 90,90
-           V 10
-           H 50" /&gt;
+  &lt;path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" /&gt;
 
   &lt;!-- LineTo commands with relative coordinates --&gt;
   &lt;path fill="none" stroke="red"
-        d="M 110,10
-           l 80,80
-           v -80
-           h -40" /&gt;
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}</p>
@@ -254,12 +254,12 @@ translation_of: Web/SVG/Attribute/d
   <tr>
    <th scope="row">C</th>
    <td>(<code>x1</code>,<code>y1</code>, <code>x2</code>,<code>y2</code>, <code>x</code>,<code>y</code>)+</td>
-   <td>Draw a cubic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>start control point</em> is specified by <code>x1</code>,<code>y1</code> and the <em>end control point </em>is specified by <code>x2</code>,<code>y2</code><em>.</em> Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute cubic Bézier curve (<code>C</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>} ; P<sub>cs</sub> = {<code>x1</code>, <code>y1</code>} ; P<sub>ce</sub> = {<code>x2</code>, <code>y2</code>}</td>
+   <td>Draw a cubic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>start control point</em> is specified by <code>x1</code>,<code>y1</code> and the <em>end control point </em>is specified by <code>x2</code>,<code>y2</code><em>.</em> Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute cubic Bézier curve (<code>C</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>} ; P<sub>cs</sub> = {<code>x1</code>, <code>y1</code>} ; P<sub>ce</sub> = {<code>x2</code>, <code>y2</code>}</td>
   </tr>
   <tr>
    <th scope="row">c</th>
    <td>(<code>dx1</code>,<code>dy1</code>, <code>dx2</code>,<code>dy2</code>, <code>dx</code>,<code>dy</code>)+</td>
-   <td>Draw a cubic Bézier curve from the <em>current point </em>to the <em>end point,</em> which is the <em>current point</em> shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>start control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx1</code> along the x-axis and <code>dy1</code> along the y-axis. The <em>end control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx2</code> along the x-axis and <code>dy2</code> along the y-axis. Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit relative cubic Bézier curve (<code>c</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>} ; P<sub>cs</sub> = {x<sub>o</sub> + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>} ; P<sub>ce</sub> = {x<sub>o</sub> + <code>dx2</code>, y<sub>o</sub> + <code>dy2</code>}</td>
+   <td>Draw a cubic Bézier curve from the <em>current point </em>to the <em>end point,</em> which is the <em>current point</em> shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>start control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx1</code> along the x-axis and <code>dy1</code> along the y-axis. The <em>end control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx2</code> along the x-axis and <code>dy2</code> along the y-axis. Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit relative cubic Bézier curve (<code>c</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>} ; P<sub>cs</sub> = {x<sub>o</sub> + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>} ; P<sub>ce</sub> = {x<sub>o</sub> + <code>dx2</code>, y<sub>o</sub> + <code>dy2</code>}</td>
   </tr>
   <tr>
    <th scope="row">S</th>
@@ -269,7 +269,7 @@ translation_of: Web/SVG/Attribute/d
   <tr>
    <th scope="row">s</th>
    <td>(<code>dx2</code>,<code>dy2</code>, <code>dx</code>,<code>dy</code>)+</td>
-   <td>Draw a smooth cubic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>end control point</em> is the <em>current point</em> (starting point of the curve) shifted by <code>dx2</code> along the x-axis and <code>dy2</code> along the y-axis. The <em>start control point</em> is a reflection of the <em>end control point</em> of the previous curve command. If the previous command wasn't a curve, the <em>start control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative smooth cubic Bézier curve (<code>s</code>) commands.</td>
+   <td>Draw a smooth cubic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>end control point</em> is the <em>current point</em> (starting point of the curve) shifted by <code>dx2</code> along the x-axis and <code>dy2</code> along the y-axis. The <em>start control point</em> is a reflection of the <em>end control point</em> of the previous curve command. If the previous command wasn't a curve, the <em>start control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative smooth cubic Bézier curve (<code>s</code>) commands.</td>
   </tr>
  </tbody>
 </table>
@@ -331,11 +331,11 @@ translation_of: Web/SVG/Attribute/d
  <li><em>control point </em> (P<sub>c</sub> = {x<sub>c</sub>, y<sub>c</sub>}) (controls curvature)</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <p>After drawing, the <em>end point </em>(P<sub>n</sub>) becomes the <em>current point </em>for the next command (P<sub>o</sub>').</p>
 
-<p> </p>
+<p> </p>
 
 <table class="standard-table">
  <tbody>
@@ -347,22 +347,22 @@ translation_of: Web/SVG/Attribute/d
   <tr>
    <th scope="row">Q</th>
    <td>(<code>x1</code>,<code>y1</code>, <code>x</code>,<code>y</code>)+</td>
-   <td>Draw a quadratic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>control point</em> is specified by <code>x1</code>,<code>y1</code>. Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute quadratic Bézier curve (<code>Q</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>} ; P<sub>c</sub> = {<code>x1</code>, <code>y1</code>}</td>
+   <td>Draw a quadratic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>control point</em> is specified by <code>x1</code>,<code>y1</code>. Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit absolute quadratic Bézier curve (<code>Q</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>} ; P<sub>c</sub> = {<code>x1</code>, <code>y1</code>}</td>
   </tr>
   <tr>
    <th scope="row">q</th>
    <td>(<code>dx1</code>,<code>dy1</code>, <code>dx</code>,<code>dy</code>)+</td>
-   <td>Draw a quadratic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx1</code> along the x-axis and <code>dy1</code> along the y-axis. Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative quadratic Bézier curve (<code>q</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>} ; P<sub>c</sub> = {x<sub>o</sub> + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>}</td>
+   <td>Draw a quadratic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>control point </em>is the <em>current point</em> (starting point of the curve) shifted by <code>dx1</code> along the x-axis and <code>dy1</code> along the y-axis. Any subsequent pair(s) of coordinate pairs are interpreted as parameter(s) for implicit relative quadratic Bézier curve (<code>q</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>} ; P<sub>c</sub> = {x<sub>o</sub> + <code>dx1</code>, y<sub>o</sub> + <code>dy1</code>}</td>
   </tr>
   <tr>
    <th scope="row">T</th>
    <td>(<code>x</code>,<code>y</code>)+</td>
-   <td>Draw a smooth quadratic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>control point</em> is a reflection of the <em>control point</em> of the previous curve command. If the previous command wasn't a curve, the <em>control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit absolute smooth quadratic Bézier curve (<code>T</code>) command(s). Formula: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>}</td>
+   <td>Draw a smooth quadratic Bézier curve from the <em>current point </em>to the <em>end point </em>specified by <code>x</code>,<code>y</code>. The <em>control point</em> is a reflection of the <em>control point</em> of the previous curve command. If the previous command wasn't a curve, the <em>control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit absolute smooth quadratic Bézier curve (<code>T</code>) command(s). Formula: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {<code>x</code>, <code>y</code>}</td>
   </tr>
   <tr>
    <th scope="row">t</th>
    <td>(<code>dx</code>,<code>dy</code>)+</td>
-   <td>Draw a smooth quadratic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>control point </em>is a reflection of the <em>control point </em>of the previous curve command. If the previous command wasn't a curve, the <em>control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit relative smooth quadratic Bézier curve (<code>t</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>}</td>
+   <td>Draw a smooth quadratic Bézier curve from the <em>current point </em>to the <em>end point</em>, which is the <em>current point </em>shifted by <code>dx</code> along the x-axis and <code>dy</code> along the y-axis. The <em>control point </em>is a reflection of the <em>control point </em>of the previous curve command. If the previous command wasn't a curve, the <em>control point </em>is the same as the curve starting point (<em>current point</em>). Any subsequent coordinate pair(s) are interpreted as parameter(s) for implicit relative smooth quadratic Bézier curve (<code>t</code>) command(s). Formulae: P<sub>o</sub><sup>'</sup> = P<sub>n</sub> = {x<sub>o</sub> + <code>dx</code>, y<sub>o</sub> + <code>dy</code>}</td>
   </tr>
  </tbody>
 </table>
@@ -501,7 +501,7 @@ translation_of: Web/SVG/Attribute/d
   </tr>
   <tr>
    <th scope="row">Z, z</th>
-   <td> </td>
+   <td> </td>
    <td>Close the current subpath by connecting the last point of the path with its initial point. If the two points doesn't have the same coordinates, a straight line is drawn between those two points.</td>
   </tr>
  </tbody>

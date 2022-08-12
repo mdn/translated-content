@@ -16,7 +16,7 @@ original_slug: Glossaire/XQuery
 ### Culture générale
 
 - [Site web officiel](http://www.w3.org/XML/Query/)
-- {{Interwiki("wikipedia", "XQuery")}} sur Wikipédia
+- [XQuery](https://fr.wikipedia.org/wiki/XQuery) sur Wikipédia
 
 ### Référence technique
 
