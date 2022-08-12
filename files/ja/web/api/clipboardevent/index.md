@@ -1,19 +1,20 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
+page-type: web-api-interface
 tags:
   - API
   - Clipboard
-  - クリップボード API
+  - Clipboard API
   - Cut
-  - イベント
-  - 実験的
-  - インターフェイス
+  - Event
+  - Interface
   - copy
   - paste
+browser-compat: api.ClipboardEvent
 translation_of: Web/API/ClipboardEvent
 ---
-{{APIRef("Clipboard API")}} {{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
 **`ClipboardEvent`** インターフェイスは、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。
 
@@ -48,4 +49,4 @@ _固有のメソッドはありません。親である {{domxref("Event")}} か
 - Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
