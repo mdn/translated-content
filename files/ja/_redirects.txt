@@ -2682,7 +2682,7 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
+/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
