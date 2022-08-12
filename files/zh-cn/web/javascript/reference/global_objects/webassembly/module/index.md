@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 
 ## 构造函数语法
 
-> **警告：**由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 `Module()` 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。
+> **警告：** 由于大型模块的编译可能很消耗资源，开发人员只有在绝对需要同步编译时，才使用 `Module()` 构造函数；其他情况下，应该使用异步 {{jsxref("WebAssembly.compile()")}} 方法。
 
 ```plain
 var myModule = new WebAssembly.Module(bufferSource);

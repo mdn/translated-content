@@ -8,301 +8,226 @@ tags:
   - 方法
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>reduceRight()</strong></code> 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。</p>
+**`reduceRight()`** 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
 
+对于从左至右遍历的相似方法请参阅 {{jsxref("Array.prototype.reduce()")}}.
 
+## 语法
 
-<p>对于从左至右遍历的相似方法请参阅 {{jsxref("Array.prototype.reduce()")}}.</p>
+```plain
+arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="syntaxbox"><var>arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])</var></pre>
+- `callback`
+  - : 一个回调函数，用于操作数组中的每个元素，它可接受四个参数：_ `accumulator`
+    _ : 累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 `initialValue` 存在，累加器即为 `initialValue`，否则须为数组中的最后一个元素（详见下方 `initialValue` 处相关说明）。
+    - `currentValue`
+      - : 当前元素：当前被处理的元素。
+    - `index`{{optional_inline}}
+      - : 数组中当前被处理的元素的索引。
+    - `array`{{optional_inline}}
+      - : 调用 `reduceRight()` 的数组。
+- `initialValue`{{optional_inline}}
+  - : 首次调用 `callback` 函数时，累加器 `accumulator` 的值。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。
+    否则，在空数组上调用 `reduce` 或 `reduceRight` 且未提供初始值（例如 `[].reduce( (acc, cur, idx, arr) => {} )` ）的话，会导致类型错误 [`TypeError: reduce of empty array with no initial value`](/zh-CN/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value)。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>一个回调函数，用于操作数组中的每个元素，它可接受四个参数：
-  <dl>
-    <dt><code>accumulator</code></dt>
-    <dd>累加器：上一次调用回调函数时，回调函数返回的值。首次调用回调函数时，如果 <code>initialValue</code> 存在，累加器即为 <code>initialValue</code>，否则须为数组中的最后一个元素（详见下方 <code>initialValue</code> 处相关说明）。</dd>
-    <dt><code>currentValue</code></dt>
-    <dd>当前元素：当前被处理的元素。</dd>
-    <dt><code>index</code>{{optional_inline}}</dt>
-    <dd>数组中当前被处理的元素的索引。</dd>
-    <dt><code>array</code>{{optional_inline}}</dt>
-    <dd>调用 <code>reduceRight()</code> 的数组。</dd>
-  </dl>
- </dd>
- <dt><code>initialValue</code>{{optional_inline}} </dt>
- <dd>首次调用 <code>callback</code> 函数时，累加器  <code>accumulator</code> 的值。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。<br>
- 否则，在空数组上调用 <code>reduce</code> 或 <code>reduceRight</code> 且未提供初始值（例如 <code>[].reduce( (acc, cur, idx, arr) =&gt; {} )</code> ）的话，会导致类型错误 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value">TypeError: reduce of empty array with no initial value</a></code>。</dd>
-</dl>
+执行之后的返回值。
 
-<h3 id="返回值">返回值</h3>
+## 描述
 
-<p>执行之后的返回值。</p>
+`reduceRight` 为数组中每个元素调用一次 `callback` 回调函数，但是数组中被删除的索引或从未被赋值的索引会跳过。回调函数接受四个参数：初始值（或上次调用回调的返回值）、当前元素值、当前索引，以及调用迭代的当前数组。
 
-<h2 id="描述">描述</h2>
+可以像下面这样调用 `reduceRight` 的回调函数 `callback`：
 
-<p><code>reduceRight</code> 为数组中每个元素调用一次 <code>callback</code> 回调函数，但是数组中被删除的索引或从未被赋值的索引会跳过。回调函数接受四个参数：初始值（或上次调用回调的返回值）、当前元素值、当前索引，以及调用迭代的当前数组。</p>
-
-<p>可以像下面这样调用 <code>reduceRight</code> 的回调函数 <code>callback</code>：</p>
-
-<pre class="brush: js">array.reduceRight(function(accumulator, currentValue, index, array) {
+```js
+array.reduceRight(function(accumulator, currentValue, index, array) {
   // ...
-});</pre>
+});
+```
 
-<p>首次调用回调函数时，<code>accumulator</code> 和 <code>currentValue</code> 的可能取值情况有两种：</p>
+首次调用回调函数时，`accumulator` 和 `currentValue` 的可能取值情况有两种：
 
-<ul>
- <li>如果在调用 <code>reduceRight</code> 时提供了 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于 <code>initialValue</code>，<code>currentValue</code> 等于数组中的最后一个元素。</li>
- <li>如果没有提供 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于数组最后一个元素， <code>currentValue</code> 等于数组中倒数第二个元素。</li>
-</ul>
+- 如果在调用 `reduceRight` 时提供了 `initialValue` 参数，则 `accumulator` 等于 `initialValue`，`currentValue` 等于数组中的最后一个元素。
+- 如果没有提供 `initialValue` 参数，则 `accumulator` 等于数组最后一个元素， `currentValue` 等于数组中倒数第二个元素。
 
-<p>如果数组为空，但提供了 <code>initialValue</code> 参数，或如果数组中只有一个元素，且没有提供 <code>initialValue</code> 参数，将会直接返回 <code>initialValue</code> 参数或数组中的那一个元素。这两种情况下，都不会调用 <code>callback</code> 函数。</p>
+如果数组为空，但提供了 `initialValue` 参数，或如果数组中只有一个元素，且没有提供 `initialValue` 参数，将会直接返回 `initialValue` 参数或数组中的那一个元素。这两种情况下，都不会调用 `callback` 函数。
 
-<p>如果数组为空，且没有提供 <code>initialValue</code> 参数，则会抛出一个 <code>TypeError</code> 错误。</p>
+如果数组为空，且没有提供 `initialValue` 参数，则会抛出一个 `TypeError` 错误。
 
-<p>最终，首次调用时的情况可汇总为此表：</p>
+最终，首次调用时的情况可汇总为此表：
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>数组内元素数量</th>
-   <th>是否提供 <code>initialValue</code></th>
-   <th>结果</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td rowspan="2">&gt; 1</td>
-   <td>未提供</td>
-   <td><code>accumulator</code> 为<u>数组中</u>（下略）最后一个元素<br>
-    <code>currentValue</code> 为倒数第二个元素</td>
-  </tr>
-  <tr>
-   <td>提供</td>
-   <td><code>accumulator</code> 为 <code>initialValue</code><br>
-    <code>currentValue</code> 为最后一个元素</td>
-  </tr>
-  <tr>
-   <td>= 1</td>
-   <td>未提供</td>
-   <td>直接返回数组中的唯一一个元素</td>
-  </tr>
-  <tr>
-   <td rowspan="2">= 0</td>
-   <td>提供</td>
-   <td>直接返回 <code>initialValue</code></td>
-  </tr>
-  <tr>
-   <td>未提供</td>
-   <td>抛出 <code>TypeError</code> 错误</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>数组内元素数量</th>
+      <th>是否提供 <code>initialValue</code></th>
+      <th>结果</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">> 1</td>
+      <td>未提供</td>
+      <td>
+        <code>accumulator</code> 为<u>数组中</u>（下略）最后一个元素<br /><code
+          >currentValue</code
+        >
+        为倒数第二个元素
+      </td>
+    </tr>
+    <tr>
+      <td>提供</td>
+      <td>
+        <code>accumulator</code> 为 <code>initialValue</code><br /><code
+          >currentValue</code
+        >
+        为最后一个元素
+      </td>
+    </tr>
+    <tr>
+      <td>= 1</td>
+      <td>未提供</td>
+      <td>直接返回数组中的唯一一个元素</td>
+    </tr>
+    <tr>
+      <td rowspan="2">= 0</td>
+      <td>提供</td>
+      <td>直接返回 <code>initialValue</code></td>
+    </tr>
+    <tr>
+      <td>未提供</td>
+      <td>抛出 <code>TypeError</code> 错误</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>该函数的完整执行过程见下例：</p>
+该函数的完整执行过程见下例：
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+```js
+[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
     return previousValue + currentValue;
 });
-</pre>
+```
 
-<p>一共会调用四次回调函数，每次调用的参数及返回值如下：</p>
+一共会调用四次回调函数，每次调用的参数及返回值如下：
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>previousValue</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">返回值</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">第一次调用</th>
-   <td><code>4</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>7</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第二次调用</th>
-   <td><code>7</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>9</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第三次调用</th>
-   <td><code>9</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第四次调用</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
-</table>
+| `callback` | `previousValue` | `currentValue` | `index` | `array`       | 返回值 |
+| ---------- | --------------- | -------------- | ------- | ------------- | ------ |
+| 第一次调用 | `4`             | `3`            | `3`     | `[0,1,2,3,4]` | `7`    |
+| 第二次调用 | `7`             | `2`            | `2`     | `[0,1,2,3,4]` | `9`    |
+| 第三次调用 | `9`             | `1`            | `1`     | `[0,1,2,3,4]` | `10`   |
+| 第四次调用 | `10`            | `0`            | `0`     | `[0,1,2,3,4]` | `10`   |
 
-<p><code>reduceRight</code> 返回值是最后一次调用回调的返回值（<code>10</code>）。</p>
+`reduceRight` 返回值是最后一次调用回调的返回值（`10`）。
 
-<p>如果提供了一个 <code>initialValue</code> 参数，则结果如下：</p>
+如果提供了一个 `initialValue` 参数，则结果如下：
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+```js
+[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
     return previousValue + currentValue;
 }, 10);
-</pre>
+```
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>previousValue</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>index</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">返回值</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">第一次调用</th>
-   <td><code>10</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>14</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第二次调用</th>
-   <td><code>14</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>17</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第三次调用</th>
-   <td><code>17</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>19</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第四次调用</th>
-   <td><code>19</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>20</code></td>
-  </tr>
-  <tr>
-   <th scope="row">第五次调用</th>
-   <td><code>20</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0,1,2,3,4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
-</table>
+| `callback` | `previousValue` | `currentValue` | `index` | `array`       | 返回值 |
+| ---------- | --------------- | -------------- | ------- | ------------- | ------ |
+| 第一次调用 | `10`            | `4`            | `4`     | `[0,1,2,3,4]` | `14`   |
+| 第二次调用 | `14`            | `3`            | `3`     | `[0,1,2,3,4]` | `17`   |
+| 第三次调用 | `17`            | `2`            | `2`     | `[0,1,2,3,4]` | `19`   |
+| 第四次调用 | `19`            | `1`            | `1`     | `[0,1,2,3,4]` | `20`   |
+| 第五次调用 | `20`            | `0`            | `0`     | `[0,1,2,3,4]` | `20`   |
 
-<p>这时，<code>reduceRight</code> 返回值为 20。</p>
+这时，`reduceRight` 返回值为 20。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="求一个数组中所有值的和">求一个数组中所有值的和</h3>
+### 求一个数组中所有值的和
 
-<pre class="brush: js">var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+```js
+var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
   return a + b;
 });
-// sum is 6</pre>
+// sum is 6
+```
 
-<h3 id="扁平化（flatten）一个二维数组">扁平化（flatten）一个二维数组</h3>
+### 扁平化（flatten）一个二维数组
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+```js
+var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
     return a.concat(b);
 }, []);
 // flattened is [4, 5, 2, 3, 0, 1]
-</pre>
+```
 
-<h3 id="运行一个带有回调每个函数将其结果传给下一个的异步函数列表">运行一个带有回调每个函数将其结果传给下一个的异步函数列表</h3>
+### 运行一个带有回调每个函数将其结果传给下一个的异步函数列表
 
-<pre class="brush: js">const waterfall = (...functions) =&gt; (callback, ...args) =&gt;
+```js
+const waterfall = (...functions) => (callback, ...args) =>
   functions.reduceRight(
-    (composition, fn) =&gt; (...results) =&gt; fn(composition, ...results),
+    (composition, fn) => (...results) => fn(composition, ...results),
     callback
   )(...args);
 
-const randInt = max =&gt; Math.floor(Math.random() * max)
+const randInt = max => Math.floor(Math.random() * max)
 
-const add5 = (callback, x) =&gt; {
+const add5 = (callback, x) => {
   setTimeout(callback, randInt(1000), x + 5);
 };
-const mult3 = (callback, x) =&gt; {
+const mult3 = (callback, x) => {
   setTimeout(callback, randInt(1000), x * 3);
 };
-const sub2 = (callback, x) =&gt; {
+const sub2 = (callback, x) => {
   setTimeout(callback, randInt(1000), x - 2);
 };
-const split = (callback, x) =&gt; {
+const split = (callback, x) => {
   setTimeout(callback, randInt(1000), x, x);
 };
-const add = (callback, x, y) =&gt; {
+const add = (callback, x, y) => {
   setTimeout(callback, randInt(1000), x + y);
 };
-const div4 = (callback, x) =&gt; {
+const div4 = (callback, x) => {
   setTimeout(callback, randInt(1000), x / 4);
 };
 
 const computation = waterfall(add5, mult3, sub2, split, add, div4);
-computation(console.log, 5) // -&gt; 14
+computation(console.log, 5) // -> 14
 
 // same as:
 
-const computation2 = (input, callback) =&gt; {
-  const f6 = x=&gt; div4(callback, x);
-  const f5 = (x, y) =&gt; add(f6, x, y);
-  const f4 = x =&gt; split(f5, x);
-  const f3 = x =&gt; sub2(f4, x);
-  const f2 = x =&gt; mult3(f3, x);
+const computation2 = (input, callback) => {
+  const f6 = x=> div4(callback, x);
+  const f5 = (x, y) => add(f6, x, y);
+  const f4 = x => split(f5, x);
+  const f3 = x => sub2(f4, x);
+  const f2 = x => mult3(f3, x);
   add5(f2, input);
-}</pre>
+}
+```
 
-<h3 id="展示_reduce_与_reduceRight_之间的区别">展示 <code>reduce</code> 与 <code>reduceRight</code> 之间的区别</h3>
+### 展示 `reduce` 与 `reduceRight` 之间的区别
 
-<pre class="brush: js">var a = ['1', '2', '3', '4', '5'];
+```js
+var a = ['1', '2', '3', '4', '5'];
 var left  = a.reduce(function(prev, cur)      { return prev + cur; });
 var right = a.reduceRight(function(prev, cur) { return prev + cur; });
 
 console.log(left);  // "12345"
-console.log(right); // "54321"</pre>
+console.log(right); // "54321"
+```
 
-<h3 id="定义可组合函数">定义可组合函数</h3>
+### 定义可组合函数
 
-<p>组合函数的概念简单，它只是简单地结合了多个函数。它是一个从右向左流动的函数，用上一个函数的输出调用每个函数。</p>
+组合函数的概念简单，它只是简单地结合了多个函数。它是一个从右向左流动的函数，用上一个函数的输出调用每个函数。
 
-<pre class="brush: js">/**
+```js
+/**
  * Function Composition is way in which result of one function can
  * be passed to another and so on.
  *
@@ -313,25 +238,27 @@ console.log(right); // "54321"</pre>
  * https://en.wikipedia.org/wiki/Function_composition
  */
 
-const compose = (...args) =&gt; (value) =&gt; args.reduceRight((acc, fn) =&gt; fn(acc), value)
+const compose = (...args) => (value) => args.reduceRight((acc, fn) => fn(acc), value)
 
 // Increament passed number
-const inc = (n) =&gt; n + 1
+const inc = (n) => n + 1
 
 // Doubles the passed value
-const double = (n) =&gt; n * 2
+const double = (n) => n * 2
 
 // using composition function
 console.log(compose(double, inc)(2)); // 6
 
 // using composition function
-console.log(compose(inc, double)(2)); // 5</pre>
+console.log(compose(inc, double)(2)); // 5
+```
 
-<h2 id="兼容旧环境（Polyfill）">兼容旧环境（Polyfill）</h2>
+## 兼容旧环境（Polyfill）
 
-<p><code>reduceRight</code> 被添加到 ECMA-262 标准第 5 版，因此它在某些实现环境中可能不被支持。把下面的代码添加到脚本开头可以解决此问题，从而允许在那些没有原生支持 <code>reduceRight</code> 的实现环境中使用它。</p>
+`reduceRight` 被添加到 ECMA-262 标准第 5 版，因此它在某些实现环境中可能不被支持。把下面的代码添加到脚本开头可以解决此问题，从而允许在那些没有原生支持 `reduceRight` 的实现环境中使用它。
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.22
+```js
+// Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: http://es5.github.io/#x15.4.4.22
 if ('function' !== typeof Array.prototype.reduceRight) {
   Array.prototype.reduceRight = function(callback /*, initialValue*/) {
@@ -342,19 +269,19 @@ if ('function' !== typeof Array.prototype.reduceRight) {
     if ('function' !== typeof callback) {
       throw new TypeError(callback + ' is not a function');
     }
-    var t = Object(this), len = t.length &gt;&gt;&gt; 0, k = len - 1, value;
-    if (arguments.length &gt;= 2) {
+    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k &gt;= 0 &amp;&amp; !(k in t)) {
+      while (k >= 0 && !(k in t)) {
         k--;
       }
-      if (k &lt; 0) {
+      if (k < 0) {
         throw new TypeError('reduceRight of empty array with no initial value');
       }
       value = t[k--];
     }
-    for (; k &gt;= 0; k--) {
+    for (; k >= 0; k--) {
       if (k in t) {
         value = callback(value, t[k], k, t);
       }
@@ -362,18 +289,16 @@ if ('function' !== typeof Array.prototype.reduceRight) {
     return value;
   };
 }
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reduce()")}}

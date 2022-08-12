@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 这是一个包装了 WebAssemble Table 的 Javascript 包装对象，具有类数组结构，存储了多个函数引用。在 Javascript 或者 WebAssemble 中创建 Table 对象可以同时被 Javascript 或 WebAssemble 访问和更改。
 
-> **备注：**: Tables 对象目前只能存储函数引用，不过在将来可能会被扩展。
+> **备注：** Tables 对象目前只能存储函数引用，不过在将来可能会被扩展。
 
 ## 语法
 

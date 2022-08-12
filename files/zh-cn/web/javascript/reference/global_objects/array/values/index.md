@@ -61,7 +61,7 @@ iterator.next();               // Object { value: undefined, done: true }
 iterator.next().value;         // undefined
 ```
 
-> **警告：**数组迭代器是一次性的，或者说临时对象
+> **警告：** 数组迭代器是一次性的，或者说临时对象
 
 例子：
 
@@ -89,7 +89,7 @@ arr[1] = 'n';
 iterator.next().value;        // "n"
 ```
 
-> **备注：**如果数组中元素改变，那么迭代器的值也会改变
+> **备注：** 如果数组中元素改变，那么迭代器的值也会改变
 
 ## 规范
 

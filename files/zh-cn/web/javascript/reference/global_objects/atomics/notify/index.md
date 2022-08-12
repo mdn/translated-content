@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 
 静态方法 **`Atomics.notify()`** 提醒一些在等待队列中休眠的代理。
 
-> **备注：**本操作仅在共享的 {{jsxref("Int32Array")}} 下可用。
+> **备注：** 本操作仅在共享的 {{jsxref("Int32Array")}} 下可用。
 
 ## 语法
 

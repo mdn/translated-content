@@ -6,227 +6,177 @@ tags:
   - MathML 参考
 translation_of: Web/MathML/Element
 ---
-<p>{{MathMLRef}}</p>
+{{MathMLRef}}
 
-<p>这是一份按字母排序的 MathML <strong>呈现型</strong>元素列表。</p>
+这是一份按字母排序的 MathML **呈现型**元素列表。
 
-<p><strong>呈现型标记</strong>（<strong>presentation markup</strong>）相关条目被用来描述数学记号的布局结构，而<strong>内容型标记</strong>（<strong>content markup</strong>）则用于提供潜在的数学含义，MathML 解析器不支持渲染内容型标记（见 {{bug(276028)}}）。若想了解更多关于内容型标记的信息，可以考虑阅读 <a href="http://www.w3.org/TR/MathML3/">MathML 3 规范</a>的<a href="http://www.w3.org/TR/MathML3/chapter4.html">第四章</a>。</p>
+**呈现型标记**（**presentation markup**）相关条目被用来描述数学记号的布局结构，而**内容型标记**（**content markup**）则用于提供潜在的数学含义，MathML 解析器不支持渲染内容型标记（见 {{bug(276028)}}）。若想了解更多关于内容型标记的信息，可以考虑阅读 [MathML 3 规范](http://www.w3.org/TR/MathML3/)的[第四章](http://www.w3.org/TR/MathML3/chapter4.html)。
 
-<p>MathML 元素实现了 {{domxref("MathMLElement")}} 类。</p>
+MathML 元素实现了 {{domxref("MathMLElement")}} 类。
 
-<h2 id="MathML_呈现型元素（字母排序）">MathML 呈现型元素（字母排序）</h2>
+## MathML 呈现型元素（字母排序）
 
-<h3 id="math">math</h3>
+### math
 
-<ul>
- <li>{{MathMLElement("math")}}（顶层元素）</li>
-</ul>
+- {{MathMLElement("math")}}（顶层元素）
 
-<h3 id="A">A</h3>
+### A
 
-<ul>
- <li>{{MathMLElement("maction")}}（将动作绑定到子表达式）</li>
- <li>{{MathMLElement("maligngroup")}}（对齐分组）</li>
- <li>{{MathMLElement("malignmark")}}（对齐点）</li>
-</ul>
+- {{MathMLElement("maction")}}（将动作绑定到子表达式）
+- {{MathMLElement("maligngroup")}}（对齐分组）
+- {{MathMLElement("malignmark")}}（对齐点）
 
-<h3 id="E">E</h3>
+### E
 
-<ul>
- <li>{{MathMLElement("menclose")}}（被包裹的内容）</li>
- <li>{{MathMLElement("merror")}}（被包裹的语法错误消息）</li>
-</ul>
+- {{MathMLElement("menclose")}}（被包裹的内容）
+- {{MathMLElement("merror")}}（被包裹的语法错误消息）
 
-<h3 id="F">F</h3>
+### F
 
-<ul>
- <li>{{MathMLElement("mfenced")}}（圆括号）{{deprecated_inline}}</li>
- <li>{{MathMLElement("mfrac")}}（因子 Fraction）</li>
-</ul>
+- {{MathMLElement("mfenced")}}（圆括号）{{deprecated_inline}}
+- {{MathMLElement("mfrac")}}（因子 Fraction）
 
-<h3 id="G">G</h3>
+### G
 
-<ul>
- <li>{{MathMLElement("mglyph")}}（显示非标准符号）</li>
-</ul>
+- {{MathMLElement("mglyph")}}（显示非标准符号）
 
-<h3 id="I">I</h3>
+### I
 
-<ul>
- <li>{{MathMLElement("mi")}}（标识符 Identifier）</li>
-</ul>
+- {{MathMLElement("mi")}}（标识符 Identifier）
 
-<h3 id="L">L</h3>
+### L
 
-<ul>
- <li>{{MathMLElement("mlabeledtr")}}（表格或矩阵中，带标记的行）</li>
- <li>{{MathMLElement("mlongdiv")}}（长除法记号）</li>
-</ul>
+- {{MathMLElement("mlabeledtr")}}（表格或矩阵中，带标记的行）
+- {{MathMLElement("mlongdiv")}}（长除法记号）
 
-<h3 id="M">M</h3>
+### M
 
-<ul>
- <li>{{MathMLElement("mmultiscripts")}}（Prescript 和张量指标 tensor indice）</li>
-</ul>
+- {{MathMLElement("mmultiscripts")}}（Prescript 和张量指标 tensor indice）
 
-<h3 id="N">N</h3>
+### N
 
-<ul>
- <li>{{MathMLElement("mn")}}（数字）</li>
-</ul>
+- {{MathMLElement("mn")}}（数字）
 
-<h3 id="O">O</h3>
+### O
 
-<ul>
- <li>{{MathMLElement("mo")}}（运算符 Operator）</li>
- <li>{{MathMLElement("mover")}}（上标）</li>
-</ul>
+- {{MathMLElement("mo")}}（运算符 Operator）
+- {{MathMLElement("mover")}}（上标）
 
-<h3 id="P">P</h3>
+### P
 
-<ul>
- <li>{{MathMLElement("mpadded")}}（在内容周围增设空白）</li>
- <li>{{MathMLElement("mphantom")}}（保留空白占位的不可见内容）</li>
-</ul>
+- {{MathMLElement("mpadded")}}（在内容周围增设空白）
+- {{MathMLElement("mphantom")}}（保留空白占位的不可见内容）
 
-<h3 id="R">R</h3>
+### R
 
-<ul>
- <li>{{MathMLElement("mroot")}}（带指定根数的根号）</li>
- <li>{{MathMLElement("mrow")}}（分组后的子表达式）</li>
-</ul>
+- {{MathMLElement("mroot")}}（带指定根数的根号）
+- {{MathMLElement("mrow")}}（分组后的子表达式）
 
-<h3 id="S">S</h3>
+### S
 
-<ul>
- <li>{{MathMLElement("ms")}}（字符串字面量）</li>
- <li>{{MathMLElement("mscarries")}}（附注 Annotation，比如进位）</li>
- <li>{{MathMLElement("mscarry")}}（单进位， {{MathMLElement("mscarries")}} 的子元素）</li>
- <li>{{MathMLElement("msgroup")}}（{{MathMLElement("mstack")}} 和 {{MathMLElement("mlongdiv")}} 元素内的行组）</li>
- <li>{{MathMLElement("msline")}}（在 {{MathMLElement("mstack")}} 元素内的水平行）</li>
- <li>{{MathMLElement("mspace")}}（空白）</li>
- <li>{{MathMLElement("msqrt")}}（不带根数的平方根）</li>
- <li>{{MathMLElement("msrow")}}（在 {{MathMLElement("mstack")}} 元素中的行）</li>
- <li>{{MathMLElement("mstack")}}（堆叠式对齐）</li>
- <li>{{MathMLElement("mstyle")}}（改变样式）</li>
- <li>{{MathMLElement("msub")}}（下角标）</li>
- <li>{{MathMLElement("msup")}}（上角标）</li>
- <li>{{MathMLElement("msubsup")}}（上下角标对）</li>
-</ul>
+- {{MathMLElement("ms")}}（字符串字面量）
+- {{MathMLElement("mscarries")}}（附注 Annotation，比如进位）
+- {{MathMLElement("mscarry")}}（单进位， {{MathMLElement("mscarries")}} 的子元素）
+- {{MathMLElement("msgroup")}}（{{MathMLElement("mstack")}} 和 {{MathMLElement("mlongdiv")}} 元素内的行组）
+- {{MathMLElement("msline")}}（在 {{MathMLElement("mstack")}} 元素内的水平行）
+- {{MathMLElement("mspace")}}（空白）
+- {{MathMLElement("msqrt")}}（不带根数的平方根）
+- {{MathMLElement("msrow")}}（在 {{MathMLElement("mstack")}} 元素中的行）
+- {{MathMLElement("mstack")}}（堆叠式对齐）
+- {{MathMLElement("mstyle")}}（改变样式）
+- {{MathMLElement("msub")}}（下角标）
+- {{MathMLElement("msup")}}（上角标）
+- {{MathMLElement("msubsup")}}（上下角标对）
 
-<h3 id="T">T</h3>
+### T
 
-<ul>
- <li>{{MathMLElement("mtable")}}（表格或矩阵）</li>
- <li>{{MathMLElement("mtd")}}（表格或矩阵中的单元格）</li>
- <li>{{MathMLElement("mtext")}}（文本）</li>
- <li>{{MathMLElement("mtr")}}（表格或矩阵中的行）</li>
-</ul>
+- {{MathMLElement("mtable")}}（表格或矩阵）
+- {{MathMLElement("mtd")}}（表格或矩阵中的单元格）
+- {{MathMLElement("mtext")}}（文本）
+- {{MathMLElement("mtr")}}（表格或矩阵中的行）
 
-<h3 id="U">U</h3>
+### U
 
-<ul>
- <li>{{MathMLElement("munder")}}（下标）</li>
- <li>{{MathMLElement("munderover")}}（上标 - 下标对）</li>
-</ul>
+- {{MathMLElement("munder")}}（下标）
+- {{MathMLElement("munderover")}}（上标 - 下标对）
 
-<h3 id="其他元素">其他元素</h3>
+### 其他元素
 
-<ul>
- <li>{{MathMLElement("semantics")}}（语义附注的容器）</li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation"><code>&lt;annotation&gt;</code></a>（数据附注）</li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation-xml"><code>&lt;annotation-xml&gt;</code></a>（XML 附注）</li>
-</ul>
+- {{MathMLElement("semantics")}}（语义附注的容器）
+- [`<annotation>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation)（数据附注）
+- [`<annotation-xml>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation-xml)（XML 附注）
 
-<h2 id="MathML_呈现型元素（类别分类）">MathML 呈现型元素（类别分类）</h2>
+## MathML 呈现型元素（类别分类）
 
-<h3 id="顶层元素">顶层元素</h3>
+### 顶层元素
 
-<ul>
- <li>{{MathMLElement("math")}}</li>
-</ul>
+- {{MathMLElement("math")}}
 
-<h3 id="字符符号元素">字符/符号元素</h3>
+### 字符/符号元素
 
-<ul>
- <li>{{MathMLElement("mglyph")}}</li>
- <li>{{MathMLElement("mi")}}</li>
- <li>{{MathMLElement("mn")}}</li>
- <li>{{MathMLElement("mo")}}</li>
- <li>{{MathMLElement("ms")}}</li>
- <li>{{MathMLElement("mspace")}}</li>
- <li>{{MathMLElement("mtext")}}</li>
-</ul>
+- {{MathMLElement("mglyph")}}
+- {{MathMLElement("mi")}}
+- {{MathMLElement("mn")}}
+- {{MathMLElement("mo")}}
+- {{MathMLElement("ms")}}
+- {{MathMLElement("mspace")}}
+- {{MathMLElement("mtext")}}
 
-<h3 id="通用布局元素">通用布局元素</h3>
+### 通用布局元素
 
-<ul>
- <li>{{MathMLElement("menclose")}}</li>
- <li>{{MathMLElement("merror")}}</li>
- <li>{{MathMLElement("mfenced")}} {{deprecated_inline}}</li>
- <li>{{MathMLElement("mfrac")}}</li>
- <li>{{MathMLElement("mpadded")}}</li>
- <li>{{MathMLElement("mphantom")}}</li>
- <li>{{MathMLElement("mroot")}}</li>
- <li>{{MathMLElement("mrow")}}</li>
- <li>{{MathMLElement("msqrt")}}</li>
- <li>{{MathMLElement("mstyle")}}</li>
-</ul>
+- {{MathMLElement("menclose")}}
+- {{MathMLElement("merror")}}
+- {{MathMLElement("mfenced")}} {{deprecated_inline}}
+- {{MathMLElement("mfrac")}}
+- {{MathMLElement("mpadded")}}
+- {{MathMLElement("mphantom")}}
+- {{MathMLElement("mroot")}}
+- {{MathMLElement("mrow")}}
+- {{MathMLElement("msqrt")}}
+- {{MathMLElement("mstyle")}}
 
-<h3 id="边标和角标元素">边标和角标元素</h3>
+### 边标和角标元素
 
-<ul>
- <li>{{MathMLElement("mmultiscripts")}}</li>
- <li>{{MathMLElement("mover")}}</li>
- <li>{{MathMLElement("mprescripts")}}</li>
- <li>{{MathMLElement("msub")}}</li>
- <li>{{MathMLElement("msubsup")}}</li>
- <li>{{MathMLElement("msup")}}</li>
- <li>{{MathMLElement("munder")}}</li>
- <li>{{MathMLElement("munderover")}}</li>
- <li>{{MathMLElement("none")}}</li>
-</ul>
+- {{MathMLElement("mmultiscripts")}}
+- {{MathMLElement("mover")}}
+- {{MathMLElement("mprescripts")}}
+- {{MathMLElement("msub")}}
+- {{MathMLElement("msubsup")}}
+- {{MathMLElement("msup")}}
+- {{MathMLElement("munder")}}
+- {{MathMLElement("munderover")}}
+- {{MathMLElement("none")}}
 
-<h3 id="表格数学">表格数学</h3>
+### 表格数学
 
-<ul>
- <li>{{MathMLElement("maligngroup")}}</li>
- <li>{{MathMLElement("malignmark")}}</li>
- <li>{{MathMLElement("mlabeledtr")}}</li>
- <li>{{MathMLElement("mtable")}}</li>
- <li>{{MathMLElement("mtd")}}</li>
- <li>{{MathMLElement("mtr")}}</li>
-</ul>
+- {{MathMLElement("maligngroup")}}
+- {{MathMLElement("malignmark")}}
+- {{MathMLElement("mlabeledtr")}}
+- {{MathMLElement("mtable")}}
+- {{MathMLElement("mtd")}}
+- {{MathMLElement("mtr")}}
 
-<h3 id="初等数学">初等数学</h3>
+### 初等数学
 
-<ul>
- <li>{{MathMLElement("mlongdiv")}}</li>
- <li>{{MathMLElement("mscarries")}}</li>
- <li>{{MathMLElement("mscarry")}}</li>
- <li>{{MathMLElement("msgroup")}}</li>
- <li>{{MathMLElement("msline")}}</li>
- <li>{{MathMLElement("msrow")}}</li>
- <li>{{MathMLElement("mstack")}}</li>
-</ul>
+- {{MathMLElement("mlongdiv")}}
+- {{MathMLElement("mscarries")}}
+- {{MathMLElement("mscarry")}}
+- {{MathMLElement("msgroup")}}
+- {{MathMLElement("msline")}}
+- {{MathMLElement("msrow")}}
+- {{MathMLElement("mstack")}}
 
-<h3 id="尚无分类的元素">尚无分类的元素</h3>
+### 尚无分类的元素
 
-<ul>
- <li>{{MathMLElement("maction")}}</li>
-</ul>
+- {{MathMLElement("maction")}}
 
-<h2 id="语义附注元素">语义附注元素</h2>
+## 语义附注元素
 
-<ul>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation"><code>&lt;annotation&gt;</code></a></li>
- <li><a href="/en-US/docs/Web/MathML/Element/semantics#annotation-xml"><code>&lt;annotation-xml&gt;</code></a></li>
- <li>{{MathMLElement("semantics")}}</li>
-</ul>
+- [`<annotation>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation)
+- [`<annotation-xml>`](/zh-CN/docs/Web/MathML/Element/semantics#annotation-xml)
+- {{MathMLElement("semantics")}}
 
-<h2 id="请参阅">请参阅</h2>
+## 请参阅
 
-<ul>
- <li><a href="/en-US/docs/Web/MathML">MathML</a></li>
- <li><a href="/en-US/docs/Web/MathML/Attribute">MathML 属性参考</a></li>
-</ul>
+- [MathML](/zh-CN/docs/Web/MathML)
+- [MathML 属性参考](/zh-CN/docs/Web/MathML/Attribute)

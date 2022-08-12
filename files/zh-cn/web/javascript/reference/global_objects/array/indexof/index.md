@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 
-> **备注：**对于 String 方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。
+> **备注：** 对于 String 方法，请参阅 {{jsxref("String.prototype.indexOf()")}}。
 
 ## 语法
 

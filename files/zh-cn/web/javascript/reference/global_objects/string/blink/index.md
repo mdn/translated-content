@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 {{JSRef}} {{deprecated_header}}
 
-**`blink()`**方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。
+**`blink()`** 方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。
 
-> **警告：**闪烁文本被多种普及标准否决。 `<blink>`元素自身是非标准的，并且已废弃！
+> **警告：** 闪烁文本被多种普及标准否决。 `<blink>`元素自身是非标准的，并且已废弃！
 
 ## 语法
 

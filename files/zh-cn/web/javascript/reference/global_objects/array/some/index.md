@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 **`some()`** 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。
 
-> **备注：**如果用一个空数组进行测试，在任何情况下它返回的都是`false`。
+> **备注：** 如果用一个空数组进行测试，在任何情况下它返回的都是`false`。
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 

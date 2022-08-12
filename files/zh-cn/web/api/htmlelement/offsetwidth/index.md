@@ -20,7 +20,7 @@ var offsetWidth =element.offsetWidth;
 
 `intElemOffsetWidth` is a variable storing an integer corresponding to the `offsetWidth` pixel value of the element. `offsetWidth` 是一个只读属性。
 
-> **备注：**这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
+> **备注：** 这个属性将会 round(四舍五入) 为一个整数。如果你想要一个 fractional(小数) 值，请使用{{ domxref("element.getBoundingClientRect()") }}.
 
 ## 示例
 

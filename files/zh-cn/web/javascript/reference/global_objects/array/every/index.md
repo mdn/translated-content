@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 
 **`every()`** 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。
 
-> **备注：**若收到一个空数组，此方法在任何情况下都会返回 `true`。
+> **备注：** 若收到一个空数组，此方法在任何情况下都会返回 `true`。
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 

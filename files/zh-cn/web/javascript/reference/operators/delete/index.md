@@ -132,7 +132,7 @@ function func(param) {
 console.log(delete func); // false
 ```
 
-> **备注：**下文在英文原版中已删除
+> **备注：** 下文在英文原版中已删除
 
 任何使用 var 声明的变量都会被标记为不可设置的。在下面的例子中，salary 是不可设置的以及不能被删除的。在非严格模式下，下面的 delete 操作将会返回 false。
 

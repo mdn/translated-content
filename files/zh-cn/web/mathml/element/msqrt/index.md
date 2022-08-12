@@ -3,48 +3,45 @@ title: <msqrt>
 slug: Web/MathML/Element/msqrt
 translation_of: Web/MathML/Element/msqrt
 ---
-<div>{{MathMLRef}}</div>
+{{MathMLRef}}
 
-<p>MathML<code><strong>&lt;msqrt&gt;</strong></code>元素用于表示一个平方根（不显示根指数）。它只接受一个参数，语法如下：<code><strong>&lt;msqrt&gt; base &lt;/msqrt&gt;</strong></code>。</p>
+MathML**`<msqrt>`**元素用于表示一个平方根（不显示根指数）。它只接受一个参数，语法如下：**`<msqrt> base </msqrt>`**。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>class, id, style</dt>
- <dd>供<a href="/en-US/docs/CSS">样式表</a>使用。</dd>
- <dt>href</dt>
- <dd>用来设置标签点击后跳转的链接</dd>
- <dt>mathbackground</dt>
- <dd>用来设置标签的背景色，可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
- <dt>mathcolor</dt>
- <dd>用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用<code><strong>#rgb</strong></code>、<strong><code>#rrggbb</code></strong>或者<a href="/zh-CN/docs/Web/CSS/color_value">HTML 颜色名</a>。</dd>
-</dl>
+- class, id, style
+  - : 供[样式表](/zh-CN/docs/CSS)使用。
+- href
+  - : 用来设置标签点击后跳转的链接
+- mathbackground
+  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+- mathcolor
+  - : 用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下述代码表示： <img alt="root-x" src="/files/3201/msqrt.png" style="margin-left: 10px; vertical-align: middle;"></p>
+下述代码表示： ![root-x](/files/3201/msqrt.png)
 
-<p>您的浏览器的渲染结果： <math> <msqrt> <mi>x</mi> </msqrt> </math></p>
+您的浏览器的渲染结果： <math><msqrt><mi>x</mi></msqrt></math>
 
-<pre class="brush: html">&lt;math&gt;
+```html
+<math>
 
-  &lt;msqrt&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-  &lt;/msqrt&gt;
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
 
-&lt;/math&gt;
-</pre>
+</math>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li>{{ MathMLElement("mroot") }} (Radical with an index)</li>
-</ul>
+- {{ MathMLElement("mroot") }} (Radical with an index)

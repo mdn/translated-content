@@ -68,9 +68,9 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 let result = someInterface.customMethod?.();
 ```
 
-> **备注：**如果存在一个属性名且不是函数，使用 `?.` 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (`x.y is not a function`).
+> **备注：** 如果存在一个属性名且不是函数，使用 `?.` 仍然会产生一个 {{JSxRef("TypeError")}} 异常 (` x.y`` is not a function`).
 
-> **备注：**如果 `someInterface` 自身是 `null` 或者 `undefined` ，异常 {{JSxRef("TypeError")}} 仍会被抛出 `someInterface is null` 如果你希望允许 `someInterface` 也为 `null` 或者 `undefined` ，那么你需要像这样写 `someInterface?.customMethod?.()`
+> **备注：** 如果 `someInterface` 自身是 `null` 或者 `undefined` ，异常 {{JSxRef("TypeError")}} 仍会被抛出 `someInterface is null` 如果你希望允许 `someInterface` 也为 `null` 或者 `undefined` ，那么你需要像这样写 `someInterface?.customMethod?.()`
 
 #### 处理可选的回调函数或者事件处理器
 

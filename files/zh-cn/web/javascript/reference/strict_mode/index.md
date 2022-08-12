@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 
-> **备注：**有时你会看到非严格模式，被称为“**[sloppy mode](https://developer.mozilla.org/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
+> **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](https://developer.mozilla.org/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
 
 [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
 
@@ -102,7 +102,7 @@ delete Object.prototype; // 抛出 TypeError 错误
 
 第四，在 Gecko 版本 34 之前，严格模式要求一个对象内的所有属性名在对象内必须唯一。正常模式下重名属性是允许的，最后一个重名的属性决定其属性值。因为只有最后一个属性起作用，当代码要去改变属性值而不是修改最后一个重名属性的时候，复制这个对象就产生一连串的 bug。在严格模式下，重名属性被认为是语法错误：
 
-> **备注：**这个问题在 ECMAScript6 中已经不复存在 ({{bug(1041128)}})。
+> **备注：** 这个问题在 ECMAScript6 中已经不复存在 ({{bug(1041128)}})。
 
 ```js
 "use strict";
