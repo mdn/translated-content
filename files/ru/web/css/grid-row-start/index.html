@@ -48,15 +48,13 @@ grid-row-start: unset;
  <dt><code>auto</code></dt>
  <dd>Ключевое слово, указывающее, что свойство никак не влияет на размещение элемента сетки, обозначающее автоматическое размещение, автоматический диапазон или диапазон по умолчанию, равный 1.</dd>
  <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>Если есть именованная строка с именем '&lt;custom-ident&gt;-start', он вносит первую такую ​​строку в размещение элемента сетки.</dd>
- <dd>
+ <dd><p>Если есть именованная строка с именем '&lt;custom-ident&gt;-start', он вносит первую такую ​​строку в размещение элемента сетки.</p>
  <p class="note"><strong>Note:</strong> Named grid areas automatically generate implicit named lines of this form, so specifying <code>grid-row-start: foo;</code> will choose the start edge of that named grid area (unless another line named <code>foo-start</code> was explicitly specified before it).</p>
 
  <p>В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с <code>&lt;custom-ident&gt;</code>.</p>
  </dd>
  <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>Вносит n-ю линию сетки в размещение элемента сетки. Если задано отрицательное целое число, вместо этого начинается обратный отсчёт, начиная с конечного края явной сетки. Если имя задано как &lt;custom-<code>ident</code>&gt;, подсчитываются только строки с этим именем. Если существует недостаточно строк с таким именем, предполагается, что все неявные линии сетки имеют это имя для нахождения этой позиции.</dd>
- <dd>
+ <dd><p>Вносит n-ю линию сетки в размещение элемента сетки. Если задано отрицательное целое число, вместо этого начинается обратный отсчёт, начиная с конечного края явной сетки. Если имя задано как &lt;custom-<code>ident</code>&gt;, подсчитываются только строки с этим именем. Если существует недостаточно строк с таким именем, предполагается, что все неявные линии сетки имеют это имя для нахождения этой позиции.</p>
  <p>An {{cssxref("integer")}} value of <code>0</code> is invalid.</p>
  </dd>
  <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
