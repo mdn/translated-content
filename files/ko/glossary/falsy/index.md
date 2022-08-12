@@ -8,60 +8,30 @@ tags:
   - 거짓 같은 값
 translation_of: Glossary/Falsy
 ---
-<p id="Summary"><strong>거짓 같은 값</strong>(Falsy, <strong>falsey</strong>로 쓰이기도 함) 값은 {{Glossary("Boolean","불리언")}} 문맥에서 <code>false</code>로 평가되는 값입니다.</p>
+**거짓 같은 값**(Falsy, **falsey**로 쓰이기도 함) 값은 {{Glossary("Boolean","불리언")}} 문맥에서 `false`로 평가되는 값입니다.
 
-<p>{{Glossary("JavaScript")}}는 {{Glossary("Conditional", "조건절")}}, {{Glossary("Loop", "반복문")}} 등 불리언 값이 필요한 곳에서 {{Glossary("Type_Conversion", "형 변환")}}을 이용해 특정 값을 불리언 값으로 변환합니다.</p>
+{{Glossary("JavaScript")}}는 {{Glossary("Conditional", "조건절")}}, {{Glossary("Loop", "반복문")}} 등 불리언 값이 필요한 곳에서 {{Glossary("Type_Conversion", "형 변환")}}을 이용해 특정 값을 불리언 값으로 변환합니다.
 
-<p>다음은 8가지 거짓 같은 값들입니다:</p>
+다음은 8가지 거짓 같은 값들입니다:
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>false</code></td>
-   <td>키워드 <a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar#구형_표준의_확장_예약_키워드">false</a></td>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td>숫자 <a href="/ko/docs/Web/JavaScript/Data_structures#Number_타입">zero</a></td>
-  </tr>
-  <tr>
-   <td><code>-0</code></td>
-   <td>음수 <a href="/ko/docs/Web/JavaScript/Data_structures#Number_타입">zero</a></td>
-  </tr>
-  <tr>
-   <td><code>0n</code></td>
-   <td><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a>. 불리언으로 사용될 경우, 숫자와 같은 규칙을 따름. <code>0n</code>은 거짓 같은 값.</td>
-  </tr>
-  <tr>
-   <td><code>""</code></td>
-   <td>
-    <p>빈 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{Glossary("null")}}</td>
-   <td><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> - 아무런 값도 없음</td>
-  </tr>
-  <tr>
-   <td>{{Glossary("undefined")}}</td>
-   <td><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a> - 원시값</td>
-  </tr>
-  <tr>
-   <td>{{Glossary("NaN")}}</td>
-   <td><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN </a>- 숫자가 아님</td>
-  </tr>
- </tbody>
-</table>
+| `false`                          | 키워드 [false](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#구형_표준의_확장_예약_키워드)                                           |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `0`                              | 숫자 [zero](/ko/docs/Web/JavaScript/Data_structures#Number_타입)                                                                         |
+| `-0`                             | 음수 [zero](/ko/docs/Web/JavaScript/Data_structures#Number_타입)                                                                         |
+| `0n`                             | [BigInt](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt). 불리언으로 사용될 경우, 숫자와 같은 규칙을 따름. `0n`은 거짓 같은 값. |
+| `""`                             | 빈 [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)                                                                     |
+| {{Glossary("null")}}     | [null](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) - 아무런 값도 없음                                                         |
+| {{Glossary("undefined")}} | [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 원시값                                                         |
+| {{Glossary("NaN")}}         | [NaN ](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN)- 숫자가 아님                                                                |
 
-<div class="note">
-<p>오브젝트는  <a href="https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot">[[IsHTMLDDA]] internal slot</a> 을 가지고 있어야 거짓같은 값이 됩니다. 이 슬롯은 <a href="/ko/docs/Web/API/Document/all"><code>document.all</code></a> 에만 존재하며 자바스크립트로 설정될 수 없습니다.</p>
-</div>
+> **참고:** 오브젝트는 [\[\[IsHTMLDDA\]\] internal slot](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 을 가지고 있어야 거짓같은 값이 됩니다. 이 슬롯은 [`document.all`](/ko/docs/Web/API/Document/all) 에만 존재하며 자바스크립트로 설정될 수 없습니다.
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>다음은 거짓 같은 값의 예시입니다. 거짓 같은 값은 불리언 문맥에서 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">false</span></font>로 변환되므로, 아래의 모든 <code>if</code> 블록은 실행되지 않습니다.</p>
+다음은 거짓 같은 값의 예시입니다. 거짓 같은 값은 불리언 문맥에서 false로 변환되므로, 아래의 모든 `if` 블록은 실행되지 않습니다.
 
-<pre class="brush: js notranslate">if (false)
+```js
+if (false)
 if (null)
 if (undefined)
 if (0)
@@ -69,24 +39,23 @@ if (-0)
 if (0n)
 if (NaN)
 if ("")
-</pre>
+```
 
-<h3 id="논리_AND_연산자">논리 AND 연산자, &amp;&amp;</h3>
+### 논리 AND 연산자, &&
 
-<p>첫 번째 객체가 거짓 같은 값이라면, 해당 객체를 반환합니다.</p>
+첫 번째 객체가 거짓 같은 값이라면, 해당 객체를 반환합니다.
 
-<pre class="brush: js notranslate">false &amp;&amp; "dog"
+```js
+false && "dog"
 // ↪ false
 
-0 &amp;&amp; "dog"
+0 && "dog"
 // ↪ 0
-</pre>
+```
 
-<h2 id="같이_보기">같이 보기</h2>
+## 같이 보기
 
-<ul>
- <li>{{Glossary("Truthy", "참 같은 값")}}</li>
- <li>{{Glossary("Boolean", "불리언")}}</li>
-</ul>
+- {{Glossary("Truthy", "참 같은 값")}}
+- {{Glossary("Boolean", "불리언")}}
 
-<p>{{QuickLinksWithSubpages("/ko/docs/Glossary")}}</p>
+{{QuickLinksWithSubpages("/ko/docs/Glossary")}}

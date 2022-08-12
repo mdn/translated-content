@@ -7,28 +7,22 @@ tags:
   - flexbox
 translation_of: Glossary/Flex_Item
 ---
-<p>{{glossary("Flex Container", "플렉스 컨테이너")}}(<code>display: flex</code> 또는 <code>display: inline-flex</code>를 지정한 요소)의 바로 아래 자식은 <strong>플렉스 항목</strong>이 됩니다.</p>
+{{glossary("Flex Container", "플렉스 컨테이너")}}(`display: flex` 또는 `display: inline-flex`를 지정한 요소)의 바로 아래 자식은 **플렉스 항목**이 됩니다.
 
-<p>플렉스 컨테이너 내의 텍스트 역시 플렉스 항목입니다.</p>
+플렉스 컨테이너 내의 텍스트 역시 플렉스 항목입니다.
 
-<h2 id="더_알아보기">더 알아보기</h2>
+## 더 알아보기
 
-<h3 id="속성_참고서">속성 참고서</h3>
+### 속성 참고서
 
-<div class="index">
-<ul>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("flex-basis")}}</li>
- <li>{{cssxref("flex-grow")}}</li>
- <li>{{cssxref("flex-shrink")}}</li>
- <li>{{cssxref("order")}}</li>
-</ul>
-</div>
+- {{cssxref("align-self")}}
+- {{cssxref("flex-basis")}}
+- {{cssxref("flex-grow")}}
+- {{cssxref("flex-shrink")}}
+- {{cssxref("order")}}
 
-<h3 id="더_읽어보기">더 읽어보기</h3>
+### 더 읽어보기
 
-<ul>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of Flexbox</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordering flex items</a></em></li>
- <li>CSS Flexbox Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Controlling Ratios of flex items along the main axis</a></em></li>
-</ul>
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- CSS Flexbox Guide: _[Ordering flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
