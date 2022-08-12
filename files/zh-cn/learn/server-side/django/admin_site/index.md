@@ -139,7 +139,7 @@ Django 使用注册模型的信息为创建基本管理站点做了非常好的�
 
 在本节中，我们将看一些改进本地图书馆界面的更改，其中包括添加更多信息 Book 和 Author 模型列表，以及改进编辑视图的布局。我们不会改变 Language 和 Genre 模拟演示，因为它们只有一个字段，所以这样没有真正的好处。
 
-你可以 在[The Django Admin site ](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/)中找到所以管理员网站自定义选项的完整参考。
+你可以 在[The Django Admin site](https://docs.djangoproject.com/en/1.10/ref/contrib/admin/) 中找到所以管理员网站自定义选项的完整参考。
 
 ### 注册 一个 ModelAdmin 类
 
@@ -209,7 +209,7 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 ```
 
-不幸的是，我们不能直接指定 **list_display** 中的 **genre** 字段，因为它是一个**ManyToManyField** （Django 可以防止这种情况，因为在这样做时会有大量的数据库访问“成本”）。相反，我们将定义一个 `display_genre `函数来获取信息作为一个字符串（这是我们上面调用的函数;下面我们将定义它）。
+不幸的是，我们不能直接指定 **list_display** 中的 **genre** 字段，因为它是一个**ManyToManyField** （Django 可以防止这种情况，因为在这样做时会有大量的数据库访问“成本”）。相反，我们将定义一个 `display_genre` 函数来获取信息作为一个字符串（这是我们上面调用的函数;下面我们将定义它）。
 
 > **备注：** 在**genre**这里获取可能不是一个好主意，因为数据库操作的“成本”。我们向您展示了如何在模型中调用函数的其他原因非常有用 - 例如在列表中的每个项目旁边添加一个“删除”链接。
 

@@ -108,8 +108,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 让我们着手编写具有我们自己的返回值的函数。
 
-1.  首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
-2.  让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
+1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
+2. 让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
 
     ```js
     function squared(num) {
@@ -132,7 +132,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     `squared()` 和 `cubed()` 功能是相当明显的 - 他们的平方或立方的数作为一个参数返回。factorial() 函数返回给定数字的阶乘。
 
-3.  接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
+3. 接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
 
     ```js
     input.onchange = function() {
@@ -153,7 +153,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
 
-4.  保存您的代码，将其加载到浏览器中，然后尝试.
+4. 保存您的代码，将其加载到浏览器中，然后尝试.
 
 > **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 

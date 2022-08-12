@@ -331,7 +331,7 @@ textarea.onkeyup = function(){
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](http://www.w3.org/TR/SVG-access/)
-- [How to scale SVGs ](https://css-tricks.com/scale-svg/)（它不像光栅图形那么简单！）
+- [How to scale SVGs](https://css-tricks.com/scale-svg/)（它不像光栅图形那么简单！）
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

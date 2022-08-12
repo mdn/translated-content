@@ -25,10 +25,10 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 有些元素在跨平台上时很少出现问题。包括以下结构元素：
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}}
-3.  {{HTMLElement("label")}}
-4.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}}
+3. {{HTMLElement("label")}}
+4. {{HTMLElement("output")}}
 
 这还包括所有文本字段小部件（单行和多行）和按钮。
 
@@ -195,16 +195,16 @@ HTML 只比我们在 [the first article of this guide](/en-US/docs/HTML/Forms/My
 
 好戏要开始了！在开始写代码之前，我们需要三个额外的静态文件：
 
-1.  明信片的[背景](/files/4151/background.jpg)——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。
-2.  打字机字体：[源自 fontsquirrel.com 的 "Secret Typewriter“字体](http://www.fontsquirrel.com/fonts/Secret-Typewriter)——将 TTF 文件下载到和上面相同的文件夹里。
-3.  手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体 ](http://www.fontsquirrel.com/fonts/Journal)—— 将 TTF 文件下载到和上面相同的文件夹里。
+1. 明信片的[背景](/files/4151/background.jpg)——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。
+2. 打字机字体：[源自 fontsquirrel.com 的 "Secret Typewriter“字体](http://www.fontsquirrel.com/fonts/Secret-Typewriter)——将 TTF 文件下载到和上面相同的文件夹里。
+3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal) —— 将 TTF 文件下载到和上面相同的文件夹里。
 
 在你开始之前需要对字体做一些处理：
 
-1.  打开 fontsquirrel [网络字体生成器](https://www.fontsquirrel.com/tools/webfont-generator).
-2.  使用表单，上传你的字体文件并生成一个网络字体包，将这个包下载到你的电脑上。
-3.  解压提供的 zip 文件。
-4.  再解压后的文件内容里你会找到两个 `.woff` 文件和两个`.woff2` 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 [Web 字体](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) 一文获取更多信息。
+1. 打开 fontsquirrel [网络字体生成器](https://www.fontsquirrel.com/tools/webfont-generator).
+2. 使用表单，上传你的字体文件并生成一个网络字体包，将这个包下载到你的电脑上。
+3. 解压提供的 zip 文件。
+4. 再解压后的文件内容里你会找到两个 `.woff` 文件和两个`.woff2` 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 [Web 字体](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) 一文获取更多信息。
 
 ### CSS
 
@@ -381,7 +381,7 @@ button:focus {
 
 ## 总结
 
-如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 [normalize.css ](http://necolas.github.com/normalize.css)项目的表单部分。
+如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 [normalize.css](http://necolas.github.com/normalize.css) 项目的表单部分。
 
 [下一篇文章中](/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)，我们将会看到如何处理落入"不好的" 和"丑陋的" 分类的表单组件。
 

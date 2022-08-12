@@ -52,10 +52,10 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 
 我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义： _安全_、_函数_ 和 _电子邮件_。
 
-1.  [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
-2.  [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；
-3.  [Glossary/Signature/Function](/zh-CN/docs/Glossary/Signature/Function) 页面是定义函数签名的条目页面；
-4.  [Glossary/Signature/Email](/zh-CN/docs/Glossary/Signature/Email) 页面是定义电子邮件签名的条目页面。
+1. [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
+2. [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；
+3. [Glossary/Signature/Function](/zh-CN/docs/Glossary/Signature/Function) 页面是定义函数签名的条目页面；
+4. [Glossary/Signature/Email](/zh-CN/docs/Glossary/Signature/Email) 页面是定义电子邮件签名的条目页面。
 
 ## 如何使用 \\{{Glossary}} 宏
 

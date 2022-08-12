@@ -81,21 +81,21 @@ web 浏览器的软件中有很多活动的程序片段，而许多片段 web �
 
 要开始学习 DOM 操作，我们先做一个实际的例子。
 
-1.  本地备份[dom-example.html page](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html)和与之相关的[image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png)。
-2.  在闭合的`</body>`标签上面加入`<script></script>`元素。
-3.  要操作 DOM 内的元素，首先需要选择它，并将它的引用存储在一个变量中。在 script 元素中，添加下列代码行：
+1. 本地备份[dom-example.html page](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html)和与之相关的[image](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dinosaur.png)。
+2. 在闭合的`</body>`标签上面加入`<script></script>`元素。
+3. 要操作 DOM 内的元素，首先需要选择它，并将它的引用存储在一个变量中。在 script 元素中，添加下列代码行：
 
     ```js
     var link = document.querySelector('a');
     ```
 
-4.  现在你有了一个存储在变量中的元素引用，你可以使用它的可用属性和方法来操作它（在{{htmlelement("a")}}元素的情况下定义为接口{{domxref("HTMLAnchorElement")}}，它更常常用的父接口是{{domxref("HTMLElement")}}和表示 DOM 中所有节点的{{domxref("Node")}}）。首先，更新 {{domxref("Node.textContent")}}属性的值来修改链接中的文字。在上面的代码后面加入一行代码：
+4. 现在你有了一个存储在变量中的元素引用，你可以使用它的可用属性和方法来操作它（在{{htmlelement("a")}}元素的情况下定义为接口{{domxref("HTMLAnchorElement")}}，它更常常用的父接口是{{domxref("HTMLElement")}}和表示 DOM 中所有节点的{{domxref("Node")}}）。首先，更新 {{domxref("Node.textContent")}}属性的值来修改链接中的文字。在上面的代码后面加入一行代码：
 
     ```js
     link.textContent = 'Mozilla Developer Network';
     ```
 
-5.  我们也能修改链接指向的 URL，使得它被点击时不会走向错误的位置。在底部再加入下列代码：
+5. 我们也能修改链接指向的 URL，使得它被点击时不会走向错误的位置。在底部再加入下列代码：
 
     ```js
     link.href = 'https://developer.mozilla.org';
@@ -114,32 +114,32 @@ web 浏览器的软件中有很多活动的程序片段，而许多片段 web �
 
 以上只是让你稍微尝试一下你可以做的事情，让我们进一步看看我们可以怎样来创建新的元素。
 
-1.  回到当前的例子，我们先获取到{{htmlelement("section")}}元素的引用 — 在已有 script 中添加下列代码（其他代码也同样处理）：
+1. 回到当前的例子，我们先获取到{{htmlelement("section")}}元素的引用 — 在已有 script 中添加下列代码（其他代码也同样处理）：
 
     ```js
     var sect = document.querySelector('section');
     ```
 
-2.  现在用{{domxref("Document.createElement()")}}创建一个新的段落，用与之前相同的方法赋予相同的文本：
+2. 现在用{{domxref("Document.createElement()")}}创建一个新的段落，用与之前相同的方法赋予相同的文本：
 
     ```js
     var para = document.createElement('p');
     para.textContent = 'We hope you enjoyed the ride.';
     ```
 
-3.  现在可以用{{domxref("Node.appendChild()")}}方法在后面追加新的段落：
+3. 现在可以用{{domxref("Node.appendChild()")}}方法在后面追加新的段落：
 
     ```js
     sect.appendChild(para);
     ```
 
-4.  最后，在内部链接的段落中添加文本节点，完美的结束句子。首先我们要使用{{domxref("Document.createTextNode()")}}创建一个文本节点：
+4. 最后，在内部链接的段落中添加文本节点，完美的结束句子。首先我们要使用{{domxref("Document.createTextNode()")}}创建一个文本节点：
 
     ```js
     var text = document.createTextNode(' — the premier source for web development knowledge.');
     ```
 
-5.  现在获取内部连接的段落的引用，并把文本节点绑定到这个节点上：
+5. 现在获取内部连接的段落的引用，并把文本节点绑定到这个节点上：
 
     ```js
     var linkPara = document.querySelector('p');
@@ -182,7 +182,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 第一种方法是直接在想要动态设置样式的元素内部添加内联样式。这是用{{domxref("HTMLElement.style")}}属性来实现。这个属性包含了文档中每个元素的内联样式信息。你可以设置这个对象的属性直接修改元素样式。
 
-1.  要做个例子，把下面的代码行加到我们的例子中：
+1. 要做个例子，把下面的代码行加到我们的例子中：
 
     ```js
     para.style.color = 'white';
@@ -192,7 +192,7 @@ linkPara.parentNode.removeChild(linkPara);
     para.style.textAlign = 'center';
     ```
 
-2.  重新载入页面，你将看到样式已经应用到段落中。如果在浏览器的[Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector)中查看段落，你会看到这些代码的确为文档添加了内联样式：
+2. 重新载入页面，你将看到样式已经应用到段落中。如果在浏览器的[Page Inspector/DOM inspector](/en-US/docs/Tools/Page_Inspector)中查看段落，你会看到这些代码的确为文档添加了内联样式：
 
     ```html
     <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
@@ -202,8 +202,8 @@ linkPara.parentNode.removeChild(linkPara);
 
 现在我们来看看另一个操作文档样式的常用方法。
 
-1.  删除之前添加到 JavaScript 中的五行代码。
-2.  在 HTML 的{{htmlelement("head")}}中添加下列代码 :
+1. 删除之前添加到 JavaScript 中的五行代码。
+2. 在 HTML 的{{htmlelement("head")}}中添加下列代码 :
 
     ```plain
     <style>
@@ -217,13 +217,13 @@ linkPara.parentNode.removeChild(linkPara);
     </style>
     ```
 
-3.  现在我们改为使用 HTML 操作的常用方法 — {{domxref("Element.setAttribute()")}} — 这里有两个参数，你想在元素上设置的属性，你要为它设置的值。在这种情况下，我们在段落中设置类名为 highlight：
+3. 现在我们改为使用 HTML 操作的常用方法 — {{domxref("Element.setAttribute()")}} — 这里有两个参数，你想在元素上设置的属性，你要为它设置的值。在这种情况下，我们在段落中设置类名为 highlight：
 
     ```js
     para.setAttribute('class', 'highlight');
     ```
 
-4.  刷新页面，看不到改变 — CSS 仍然应用到段落，但是这次给出 CSS 规则选择的类不是内联 CSS 样式。
+4. 刷新页面，看不到改变 — CSS 仍然应用到段落，但是这次给出 CSS 规则选择的类不是内联 CSS 样式。
 
 两种方式各有优缺点，选择哪种取决于你自己。第一种方式无需安装，适合简单应用，第二种方式更加正统（没有 CSS 和 JavaScript 的混合，没有内联样式，而这些被认为是不好的体验）。当你开始构建更大更具吸引力的应用时，你可能会更多地使用第二种方法，但这完全取决于你自己。
 
@@ -241,7 +241,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 一开始，要做一个[window-resize-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example.html)和[bgtile.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/bgtile.png)文件的本地拷贝。打开文件看一看 — 你可以看到我们用一个{{htmlelement("div")}}元素包裹屏幕的小部分，用来获得应用的 background tile。我们也用它来表示应用的 UI 区域。
 
-1.  首先，获取这个 div 的引用，然后获取视窗（显示文档的内部窗口）的宽度和高度，并存入变量中 — 这两个值包含在{{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}属性中。在已存在的{{htmlelement("script")}}元素中加入下列代码：
+1. 首先，获取这个 div 的引用，然后获取视窗（显示文档的内部窗口）的宽度和高度，并存入变量中 — 这两个值包含在{{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}属性中。在已存在的{{htmlelement("script")}}元素中加入下列代码：
 
     ```js
     var div = document.querySelector('div');
@@ -249,15 +249,15 @@ linkPara.parentNode.removeChild(linkPara);
     var HEIGHT = window.innerHeight;
     ```
 
-2.  接下来，我们将动态地改变 div 的宽度和高度，使其等于视窗的宽度和高度。在您的代码下面添加以下两行：
+2. 接下来，我们将动态地改变 div 的宽度和高度，使其等于视窗的宽度和高度。在您的代码下面添加以下两行：
 
     ```js
     div.style.width = WIDTH + 'px';
     div.style.height = HEIGHT + 'px';
     ```
 
-3.  保存并刷新浏览器 — 现在可以看到不管你使用什么大小的屏幕，div 变得和视窗一样大。如果要调整窗口大小使其更大，你可以看到 div 会保持相同大小 — 因为我们只能设置一次。
-4.  在我们调整窗口时，我们怎样用事件来调整 div 的大小？ {{domxref("Window")}}对象有一个称为 resize 的可用事件。每次窗口调整大小时都会触发该事件 — 我们可以通过{{domxref("Window.onresize")}} 事件处理程序来访问它，并返回每次改变大小的代码。在代码底部添加下列程序：
+3. 保存并刷新浏览器 — 现在可以看到不管你使用什么大小的屏幕，div 变得和视窗一样大。如果要调整窗口大小使其更大，你可以看到 div 会保持相同大小 — 因为我们只能设置一次。
+4. 在我们调整窗口时，我们怎样用事件来调整 div 的大小？ {{domxref("Window")}}对象有一个称为 resize 的可用事件。每次窗口调整大小时都会触发该事件 — 我们可以通过{{domxref("Window.onresize")}} 事件处理程序来访问它，并返回每次改变大小的代码。在代码底部添加下列程序：
 
     ```js
     window.onresize = function() {
@@ -284,15 +284,15 @@ linkPara.parentNode.removeChild(linkPara);
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
-1.  首先，下载[shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html)文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 list 和一个空的 list 以及{{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
-2.  创建三个变量来保存 list({{htmlelement("ul")}})、{{htmlelement("input")}}和{{htmlelement("button")}}元素的引用。
-3.  创建一个[函数](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
-4.  在函数体内，开始要在一个变量中存储输入框的当前[值](/en-US/docs/Web/API/HTMLInputElement#Properties)。
-5.  然后，为输入框元素设置空字符 - `''`使其为空
-6.  创建三个新元素 — 一个 list 项（{{htmlelement('li')}}），{{htmlelement('span')}}和 {{htmlelement('button')}}，并把它们存入变量之中。
-7.  把 span 和 button 作为 list 项的子节点。
-8.  把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为'Delete'
-9.  把 list 项设置为 list 的子节点。
+1. 首先，下载[shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html)文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 list 和一个空的 list 以及{{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
+2. 创建三个变量来保存 list({{htmlelement("ul")}})、{{htmlelement("input")}}和{{htmlelement("button")}}元素的引用。
+3. 创建一个[函数](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
+4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/en-US/docs/Web/API/HTMLInputElement#Properties)。
+5. 然后，为输入框元素设置空字符 - `''`使其为空
+6. 创建三个新元素 — 一个 list 项（{{htmlelement('li')}}），{{htmlelement('span')}}和 {{htmlelement('button')}}，并把它们存入变量之中。
+7. 把 span 和 button 作为 list 项的子节点。
+8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为'Delete'
+9. 把 list 项设置为 list 的子节点。
 10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个 list 项。
 11. 最后，使用[`focus()`](/en-US/docs/Web/API/HTMLElement/focus)方法聚焦输入框准备输入下一个购物项。
 

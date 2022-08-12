@@ -37,7 +37,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 {{glossary("HTML")}} (HyperText Markup Language) 不是一门编程语言，而是一种用来告知浏览器如何组织页面的**标记语言**。HTML 可复杂、可简单，一切取决于开发者。它由一系列的**元素（{{Glossary("Element", "elements")}}）**组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("Tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如下面一行内容：
 
-    My cat is very grumpy
+```
+My cat is very grumpy
+```
 
 可以将这行文字封装成一个段落（Paragraph）{{htmlelement("p")}}元素来使其在单独一行呈现：
 
@@ -55,10 +57,10 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 这个元素的主要部分有：
 
-1.  **开始标签**（Opening tag）：包含元素的名称（本例为 p），被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。
-2.  **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。
-3.  **内容**（Content）：元素的内容，本例中就是所输入的文本本身。
-4.  **元素**（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。
+1. **开始标签**（Opening tag）：包含元素的名称（本例为 p），被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。
+2. **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。初学者常常会犯忘记包含结束标签的错误，这可能会产生一些奇怪的结果。
+3. **内容**（Content）：元素的内容，本例中就是所输入的文本本身。
+4. **元素**（Element）：开始标签、结束标签与内容相结合，便是一个完整的元素。
 
 ### 主动学习：创建第一个 HTML 元素
 
@@ -230,9 +232,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 一个属性必须包含如下内容：
 
-1.  一个空格，在属性和元素名称之间。(如果已经有一个或多个属性，就与前一个属性之间有一个空格。)
-2.  属性名称，后面跟着一个等于号。
-3.  一个属性值，由一对引号“ ”引起来。
+1. 一个空格，在属性和元素名称之间。(如果已经有一个或多个属性，就与前一个属性之间有一个空格。)
+2. 属性名称，后面跟着一个等于号。
+3. 一个属性值，由一对引号“ ”引起来。
 
 ### 学习实践：为一个元素添加属性
 
@@ -352,7 +354,9 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 有时你会看到没有值的属性，它是合法的。这些属性被称为布尔属性，他们只能有跟它的属性名一样的属性值。例如{{htmlattrxref("disabled", "input")}} 属性，他们可以标记表单输入使之变为不可用 (变灰色)，此时用户不能向他们输入任何数据。
 
-    <input type="text" disabled="disabled">
+```html
+<input type="text" disabled="disabled">
+```
 
 方便起见，我们完全可以将其写成以下形式 (我们还提供了一个非禁止输入的表单元素供您参考，以作为对比)：
 
@@ -431,27 +435,29 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 分析如下：
 
-1.  `<!DOCTYPE html>`: 声明文档类型。很久以前，早期的 HTML(大约 1991 年 2 月)，文档类型声明类似于链接，规定了 HTML 页面必须遵从的良好规则，能自动检测错误和其他有用的东西。使用如下：
+1. `<!DOCTYPE html>`: 声明文档类型。很久以前，早期的 HTML(大约 1991 年 2 月)，文档类型声明类似于链接，规定了 HTML 页面必须遵从的良好规则，能自动检测错误和其他有用的东西。使用如下：
 
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    ```html
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    ```
 
     然而这种写法已经过时了，这些内容已成为历史。只需要知道 `<!DOCTYPE html>` 是最短有效的文档声明。
 
-2.  `<html></html>`: `<html>`元素。这个元素包裹了整个完整的页面，是一个根元素。
-3.  `<head></head>`: `<head>`元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但不想在 HTML 页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS 样式，字符集声明等等。以后的章节能学到更多关于\<head>元素的内容。
-4.  `<meta charset="utf-8">`: 这个元素设置文档使用 utf-8 字符集编码，utf-8 字符集包含了人类大部分的文字。基本上他能识别你放上去的所有文本内容。毫无疑问要使用它，并且它能在以后避免很多其他问题。
-5.  `<title></title>`: 设置页面标题，出现在浏览器标签上，当你标记/收藏页面时它可用来描述页面。
-6.  `<body></body>`: `<body>`元素。包含了你访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。
+2. `<html></html>`: `<html>`元素。这个元素包裹了整个完整的页面，是一个根元素。
+3. `<head></head>`: `<head>`元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但不想在 HTML 页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS 样式，字符集声明等等。以后的章节能学到更多关于\<head>元素的内容。
+4. `<meta charset="utf-8">`: 这个元素设置文档使用 utf-8 字符集编码，utf-8 字符集包含了人类大部分的文字。基本上他能识别你放上去的所有文本内容。毫无疑问要使用它，并且它能在以后避免很多其他问题。
+5. `<title></title>`: 设置页面标题，出现在浏览器标签上，当你标记/收藏页面时它可用来描述页面。
+6. `<body></body>`: `<body>`元素。包含了你访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。
 
 ### 学习实践：为 HTML 文档添加一些特征
 
 如果你想在你的本地练习写一些 HTML 页面，你可以这样做：
 
-1.  复制上面的 HTML 页面例子。
-2.  在编辑器创建一个新文件。
-3.  粘贴代码到这个文件。
-4.  保存为`index.html`.
+1. 复制上面的 HTML 页面例子。
+2. 在编辑器创建一个新文件。
+3. 粘贴代码到这个文件。
+4. 保存为`index.html`.
 
 > **备注：** 可在 [学习区代码仓库](https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 上查看该示例。
 

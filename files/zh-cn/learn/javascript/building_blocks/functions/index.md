@@ -301,9 +301,9 @@ function greeting() {
 
 我们来看一个真正的例子来展示范围
 
-1.  首先，制作我们的[function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html)示例的本地副本。它包含两个函数`a()`和`b()`，和三个变量—— `x`，`y`和`z`——其中两个在函数中被定义，另一个被定义在全局作用域内。它还包含一个名为`output()`的函数，它接收一个参数，并将其输出到页面的一个段落中。
-2.  在浏览器和文本编辑器中打开示例。
-3.  在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：
+1. 首先，制作我们的[function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html)示例的本地副本。它包含两个函数`a()`和`b()`，和三个变量—— `x`，`y`和`z`——其中两个在函数中被定义，另一个被定义在全局作用域内。它还包含一个名为`output()`的函数，它接收一个参数，并将其输出到页面的一个段落中。
+2. 在浏览器和文本编辑器中打开示例。
+3. 在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：
 
 ```js
 output(x);

@@ -60,8 +60,8 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 
 然而，这种方法有一些局限性。要构建更复杂的应用程序，您需要使用 [Vue NPM package](https://www.npmjs.com/package/vue)。这将允许您使用 Vue 的高级功能并利用 WebPack 等捆绑包。为了使使用 Vue 构建应用程序更容易，有一个 CLI 来简化开发过程。要使用 npm 软件包和 CLI，您需要：
 
-1.  安装 Node.js 8.11 及以上的版本。
-2.  安装包管理器 npm 或 yarn。
+1. 安装 Node.js 8.11 及以上的版本。
+2. 安装包管理器 npm 或 yarn。
 
 > **备注：** 如果您还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
 
@@ -85,19 +85,19 @@ yarn global add @vue/cli
 
 为了探索 Vue 中各种各样的特征，我们将建立一个简单的任务清单应用。我们将会使用 Vue 脚手架工具去创建一个新的应用框架并在上面搭建我们的应用。请按照以下步骤：
 
-1.  在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
+1. 在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
 
-2.  使用方向键然后按下键盘上的 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
+2. 使用方向键然后按下键盘上的 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
 
-3.  你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果它们没有被选中，使用方向键切换，用空格键选中它们，一旦它们被选中，按下 <kbd>Enter</kbd>，继续进行。
+3. 你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果它们没有被选中，使用方向键切换，用空格键选中它们，一旦它们被选中，按下 <kbd>Enter</kbd>，继续进行。
 
-4.  接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样可以辅助我们捕获常见的并且不自以为是的错误。
+4. 接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样可以辅助我们捕获常见的并且不自以为是的错误。
 
-5.  然后你会被询问需要那种自动化的 lint，选择 "Lint on save"，这样我们在项目中保存文件的时候就会自动检查错误。按下 <kbd>Enter</kbd> 继续。
+5. 然后你会被询问需要那种自动化的 lint，选择 "Lint on save"，这样我们在项目中保存文件的时候就会自动检查错误。按下 <kbd>Enter</kbd> 继续。
 
-6.  接着你将需要选择把配置文件放在哪里。"In dedicated config files" 这个选项会把你的配置文件比如 ESLint 单独放在一个文件里。另一个选项 "In package.json" 则会把配置放进项目的 `package.json` 文件里。选择 "In dedicated config files" 然后按下 <kbd>Enter</kbd>。
+6. 接着你将需要选择把配置文件放在哪里。"In dedicated config files" 这个选项会把你的配置文件比如 ESLint 单独放在一个文件里。另一个选项 "In package.json" 则会把配置放进项目的 `package.json` 文件里。选择 "In dedicated config files" 然后按下 <kbd>Enter</kbd>。
 
-7.  最后会问你，是否选择把本次的选择作为将来的一个预设配置（Save this as a preset for future projects？），这个就完全由你自己决定了。如果你想把本次的配置作为一个预设配置并且以后想再次使用的话，按下 <kbd>y</kbd>，否则按下 <kbd>n</kbd>。
+7. 最后会问你，是否选择把本次的选择作为将来的一个预设配置（Save this as a preset for future projects？），这个就完全由你自己决定了。如果你想把本次的配置作为一个预设配置并且以后想再次使用的话，按下 <kbd>y</kbd>，否则按下 <kbd>n</kbd>。
 
 然后脚手架工具就开始构建项目，并且安装所需的依赖。
 

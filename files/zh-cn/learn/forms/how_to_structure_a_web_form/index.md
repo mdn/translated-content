@@ -177,14 +177,14 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
-1.  在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)的本地副本。
-2.  首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
+1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)的本地副本。
+2. 首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
 
     ```html
     <link href="payment-form.css" rel="stylesheet">
     ```
 
-3.  接下来，通过添加外部{{htmlelement("form")}}元素来开始一张表单：
+3. 接下来，通过添加外部{{htmlelement("form")}}元素来开始一张表单：
 
     ```html
     <form>
@@ -192,14 +192,14 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
     </form>
     ```
 
-4.  在 `<form>` 标签内，以添加一个标题和段落开始，告诉用户必需的字段是如何标记的：
+4. 在 `<form>` 标签内，以添加一个标题和段落开始，告诉用户必需的字段是如何标记的：
 
     ```html
     <h1>Payment form</h1>
     <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
     ```
 
-5.  接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
+5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
 
     ```plain
     <section>
@@ -251,7 +251,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
     </section>
     ```
 
-6.  现在，我们将转到表单的第二个`<section>`——支付信息。在这里，我们有三个不同的小部件以及它们的标签，每个都包含在一个`<p>`中。第一个是选择信用卡类型的下拉菜单 ({{htmlelement("select")}})。第二个是输入一个信用卡号的类型编号的 `<input>` 元素。最后一个是输入`date`类型的`<input>` 元素，用来输入卡片的过期日期（这将在支持的浏览器中出现一个日期选择器小部件，并在非支持的浏览器中回退到普通的文本输入）。同样，在之前的代码后面输入以下内容：
+6. 现在，我们将转到表单的第二个`<section>`——支付信息。在这里，我们有三个不同的小部件以及它们的标签，每个都包含在一个`<p>`中。第一个是选择信用卡类型的下拉菜单 ({{htmlelement("select")}})。第二个是输入一个信用卡号的类型编号的 `<input>` 元素。最后一个是输入`date`类型的`<input>` 元素，用来输入卡片的过期日期（这将在支持的浏览器中出现一个日期选择器小部件，并在非支持的浏览器中回退到普通的文本输入）。同样，在之前的代码后面输入以下内容：
 
     ```html
     <section>
@@ -284,7 +284,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
     </section>
     ```
 
-7.  我们要添加的最后一个部分要简单得多，它只包含了一个`submit`类型的 {{htmlelement("button")}} ，用于提交表单数据。现在把这个添加到你的表单的底部：
+7. 我们要添加的最后一个部分要简单得多，它只包含了一个`submit`类型的 {{htmlelement("button")}} ，用于提交表单数据。现在把这个添加到你的表单的底部：
 
     ```html
     <p> <button type="submit">Validate the payment</button> </p>

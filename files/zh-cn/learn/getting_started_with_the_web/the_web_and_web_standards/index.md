@@ -16,17 +16,17 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 快进到 1989 年，TimBL 在 CERN 撰写了 [《Information Management: A Proposal》](https://www.w3.org/History/1989/proposal.html) 和《HyperText》 ； 这两个出版物共同为 Web 将如何工作做了铺垫。两个出版物获得了极大的关注，这足以说服 TimBL 的上司让他继续前进，并创建一个全球超文本系统。
 
-到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[ HTML ](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
+到 1990 年底，TimBL 已经创建了运行第一个版本的 Web 所需的所有东西—— [HTTP](/en-US/docs/Web/HTTP)，[HTML](/en-US/docs/Web/HTML)，名为 [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) 的第一个 Web 浏览器，一个 HTTP 服务器和一些用于查看的网页。
 
 在随后的几年中，随着多个浏览器的发布，数以千计 Web 服务器的建立，上百万网页的生成，Web 爆发式发展。OK，这只是对事件非常粗略的描述，但我向您说过会简单叙述。
 
-最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像[ CSS ](/en-US/docs/Web/CSS)和[ JavaScript ](/en-US/docs/Web/JavaScript)出现了，Web 开始看起来更像我们现在所了解的 Web。
+最后一个值得分享的重要事件在 1994 年，TimBL 建立了[万维网联盟（World Wide Web Consortium，W3C）](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)，该组织汇集了来自许多不同技术公司的代表，共同制定 Web 技术规范。随后其他的技术像 [CSS](/en-US/docs/Web/CSS) 和 [JavaScript](/en-US/docs/Web/JavaScript) 出现了，Web 开始看起来更像我们现在所了解的 Web。
 
 ## Web 标准
 
 **Web 标准**是我们用来建立 Web 网站的技术。这些标准存在于名为规范的较长的技术文档中，该文档详细说明了技术应如何工作。这些文档对于学习如何使用它们所描述的技术并不是很有用（这就是我们建立像 MDN Web Docs 这样的网站的原因），而是旨在供软件工程师用来实现这些技术（通常在 Web 浏览器中）。
 
-例如，[ HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
+例如，[HTML Living Standard](https://html.spec.whatwg.org/multipage/) 描述了应如何实现 HTML（所有 HTML 元素及其关联的 API 和其他相关技术）。
 
 Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如[WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
 
@@ -64,7 +64,7 @@ _唯一不变的就是变化。_
 
 ### HTTP
 
-超文本传输协议（Hypertext Transfer Protocol，[ HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
+超文本传输协议（Hypertext Transfer Protocol，[HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP)），它允许 Web 浏览器与 Web 服务器（存储网站的位置）进行通信。典型的通信就像这样
 
 ```plain
 "你好 Web 服务器。你可以给我用于渲染 bbc.co.uk 的文件吗？"
@@ -78,7 +78,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### HTML , CSS , 和 JavaScript
 
-[HTML ](/en-US/docs/Web/HTML)，[ CSS ](/en-US/docs/Web/CSS)，和 [JavaScript ](/en-US/docs/Web/JavaScript)是您用来建立网站的三种主要技术：
+[HTML](/en-US/docs/Web/HTML)，[CSS](/en-US/docs/Web/CSS)，和 [JavaScript](/en-US/docs/Web/JavaScript) 是您用来建立网站的三种主要技术：
 
 - 超文本标记语言（HTML）是一种标记语言，由可以包装（标记）内容以赋予其含义（语义）和结构的各种元素组成。简单的 HTML 看起来像这样：
 

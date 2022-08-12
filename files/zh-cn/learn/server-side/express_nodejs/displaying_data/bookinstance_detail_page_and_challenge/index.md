@@ -78,9 +78,9 @@ block content
 
 这一挑战的要求：
 
-1.  用 BookInstance 详细信息页面中的 `due_back_formatted` 替换 `due_back`。
-2.  更新作者模块以添加寿命虚拟属性。寿命应該有两个值： *date_of_birth - date_of_death，這*两个值的格式与 `BookInstance.due_back_formatted`的日期格式相同。
-3.  在当前使用`date_of_birth` 和 `date_of_death`的所有视图中，使用 `Author.lifespan` 。
+1. 用 BookInstance 详细信息页面中的 `due_back_formatted` 替换 `due_back`。
+2. 更新作者模块以添加寿命虚拟属性。寿命应該有两个值： *date_of_birth - date_of_death，這*两个值的格式与 `BookInstance.due_back_formatted`的日期格式相同。
+3. 在当前使用`date_of_birth` 和 `date_of_death`的所有视图中，使用 `Author.lifespan` 。
 
 ## 下一步
 
