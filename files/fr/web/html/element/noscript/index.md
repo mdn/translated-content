@@ -24,11 +24,11 @@ On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 <p>Elle est où<noscript>, <a href="http://www.mozilla.com/">la poulette</a></noscript> ?</p>
 ```
 
-### Resultat avec JavaScript activé
+### Résultat avec JavaScript activé
 
 Elle est où ?
 
-### Resultat avec JavaScript désactivé
+### Résultat avec JavaScript désactivé
 
 Elle est où, [la poulette](https://www.mozilla.org/) ?
 
