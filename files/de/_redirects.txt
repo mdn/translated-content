@@ -6,7 +6,6 @@
 # FROM-URL	TO-URL
 /de/docs/AJAX	/de/docs/Web/Guide/AJAX
 /de/docs/Apps/Progressiv	/de/docs/Web/Progressive_web_apps
-/de/docs/Barrierefreiheit	/en-US/docs/Web/Accessibility
 /de/docs/Barrierefreiheit/ARIA	/de/docs/Web/Accessibility/ARIA
 /de/docs/Barrierefreiheit/ARIA/ARIA_Live_Regionen	/de/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /de/docs/Barrierefreiheit/An_overview_of_accessible_web_applications_and_widgets	/de/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
@@ -492,7 +491,6 @@
 /de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/WindowTimers/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/document.documentElement	/de/docs/Web/API/Document/documentElement
-/de/docs/Web/Barrierefreiheit	/de/docs/Web/Accessibility
 /de/docs/Web/Barrierefreiheit/ARIA	/de/docs/Web/Accessibility/ARIA
 /de/docs/Web/Barrierefreiheit/ARIA/ARIA_Live_Regionen	/de/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /de/docs/Web/Barrierefreiheit/ARIA/ARIA_Techniken	/de/docs/Web/Accessibility/ARIA/ARIA_Techniques
