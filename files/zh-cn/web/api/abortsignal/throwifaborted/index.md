@@ -32,7 +32,7 @@ throwIfAborted()
 
 该示例展示了你如何使用 `throwIfAborted()` 去中止一个轮询的操作。
 
-考虑一个异步的 `waitForCondition()` 函数被调用（该函数的参数由另一个异步函数 `func`、目标值 `targetValue` 和 `AbortSignal` 组成）。该函数在循环中将 `func` 的结果和 `targetValue` 进行比较，当它们匹配时返回。
+考虑一个异步函数 `waitForCondition()`，在调用时传入另一个异步函数 `func`、目标值 `targetValue` 和 `AbortSignal`。该函数在循环中将 `func` 的结果和 `targetValue` 进行比较，当它们匹配时返回。
 
 ```js
 async function waitForCondition(func, targetValue, { signal } = {}) {
