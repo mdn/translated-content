@@ -1,129 +1,137 @@
 ---
 title: パドルとキーボード操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+tags:
+  - Beginner
+  - Canvas
+  - Controls
+  - Games
+  - Graphics
+  - JavaScript
+  - Tutorial
+  - keyboard
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
+これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **4 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html)で見ることができます。
 
-<div class="summary">
-<p>これは<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch">ゲーム開発Canvasチュートリアル</a>の10ステップのうち<strong>4番目</strong>のステップです。このレッスンを終えたあとの完成予想のソースコードは<a class="external external-icon" href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html" rel="noopener">Gamedev-Canvas-workshop/lesson4.html</a>で入手できます。</p>
-</div>
+ボールが自由に壁に跳ね返っていて、それを無限に眺めることができるのですが、現状では対話することができないのです。操作できないのでは、ゲームとは言えません! そこで、ユーザーが操作できるパドルという対話を追加してみましょう。
 
-<p><span class="seoSummary">ボールは壁で自由に弾み、あなたはずっとそれを見ていることができますが、今の所何の対話要素もありません。操作できないものなんてゲームじゃありません! ですからユーザーとの対話要素、操作できるパドルを追加しましょう。</span></p>
+## ボールにぶつかるパドルの定義
 
-<h2 id="ボールにぶつかるパドルを定義する">ボールにぶつかるパドルを定義する</h2>
+そういうわけで、ボールに当てるパドルが必要になりました。パドルに用いるいくつかの変数を定義しましょう。次の変数を、他の変数と一緒にコードの一番上に追加してください。
 
-<p>そういうわけで、ボールに当てるパドルが必要になりました。パドルに用いるいくつかの変数を定義しましょう。次の変数を、他の変数と一緒にコードの一番上に追加してください。</p>
+```js
+const paddleHeight = 10;
+const paddleWidth = 75;
+let paddleX = (canvas.width - paddleWidth) / 2;
+```
 
-<pre class="brush: js">var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;</pre>
+ここではパドルの高さと幅、 `x` 軸上の開始地点を定義しています。続くコードではこれらを用いてさらなる計算が行われます。パドルを画面上に表示する関数を作成しましょう。 `drawBall()` のすぐ下に次の関数を追加してください。
 
-<p>ここではパドルの高さと幅、<code>x</code>軸上の開始地点を定義しています。続くコードではこれらを用いてさらなる計算が行われます。パドルを画面上に表示する関数を作成しましょう。<code>drawBall()</code>のすぐ下に次の関数を追加してください。</p>
-
-<pre class="brush: js">function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-}</pre>
-
-<h2 id="パドルを操作できるようにする">パドルを操作できるようにする</h2>
-
-<p>こにパドルを描画しても良いですが、ユーザーの行動に応答する必要があります。キーボード操作を実装するのです。必要なものは次のとおりです。</p>
-
-<ul>
- <li>左の操作ボタンが押されているか、右の操作ボタンが押されているかという情報を保存する2つの変数。</li>
- <li><code>keydown</code>イベントと<code>keyup</code>イベントの2つのイベントリスナー。ボタンが押されたときにパドルの動きを扱うコードを走らせたいのです。</li>
- <li><code>keydown</code>イベントと<code>keyup</code>イベントを扱い、ボタンが押されたときに実行されるコード。</li>
- <li>パドルを左や右に動かす機能</li>
-</ul>
-
-<p>押されているボタンはこのとおり、ブーリアン値として定義、初期化できます。このコードをどこか他の変数の近くに追記してください。</p>
-
-<pre class="brush: js">var rightPressed = false;
-var leftPressed = false;</pre>
-
-<p>最初は制御ボタンは押されていないため、どちらにおいてもデフォルトの値は<code>false</code>です。ボタンが押されたのを検知するため、2つのイベントリスナーを設定します。JavaScriptの最後にある<code>setInterval()</code>の行のちょうど上に次のコードを追記してください。</p>
-
-<pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);</pre>
-
-<p>キーボードのキーのどれかに対して<code>keydown</code>イベントが発火したとき (どれかが押されたとき) 、<code>keyDownHandler()</code>関数が実行されます。2つ目のリスナーについても同様で、(そのキーが押されなくなったき) <code>keyup</code>イベントは<code>keyUpHandler()</code>関数を呼び出します。自分の<code>addEventListener()</code>の行の下に次のコードを追記してください。</p>
-
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">keyDownHandler</span><span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"Right"</span> <span class="operator token">||</span> e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"ArrowRight"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        rightPressed <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">else</span> <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"Left"</span> <span class="operator token">||</span> e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"ArrowLeft"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        leftPressed <span class="operator token">=</span> <span class="boolean token">true</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
-
-<span class="keyword token">function</span> <span class="function token">keyUpHandler</span><span class="punctuation token">(</span><span class="parameter token">e</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"Right"</span> <span class="operator token">||</span> e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"ArrowRight"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        rightPressed <span class="operator token">=</span> <span class="boolean token">false</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">else</span> <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"Left"</span> <span class="operator token">||</span> e<span class="punctuation token">.</span>key <span class="operator token">==</span> <span class="string token">"ArrowLeft"</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        leftPressed <span class="operator token">=</span> <span class="boolean token">false</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
-
-<p>キーが押されたとき、その情報は変数に保存されます。それぞれの場合で関連する変数が<code>true</code>に設定されます。キーが離されたときに変数は<code>false</code>に戻されます。</p>
-
-<p>どちらの関数も変数<code>e</code>で表されるイベントをパラメーターとしてとります。これから有用な情報が手に入ります。<code>key</code>は押されたキーについての情報を持っています。大抵のブラウザでは左右の矢印キーにそれぞれ <code>ArrowLeft</code> と <code>ArrowRight</code> が対応します。ただし IE/Edge に対応するために、 <code>Left</code> と <code>Right</code>も確認する必要があります。 もし左カーソルが押されたら、変数<code>leftPressed</code>は<code>true</code>に、離されたら変数<code>leftPressed</code>は<code>false</code>に設定されます。右カーソルと変数<code>rightPressed</code>についても同様です。</p>
-
-<h3 id="パドルの移動ロジック">パドルの移動ロジック</h3>
-
-<p>押されているキーについての情報を保存している変数、そして関連する関数が設定されました。ではそれらを使う実際のコードに手を入れて画面上のパドルを動かしてみましょう。<code>draw()</code>関数の中で、各々のフレームを描画するときに左カーソルキーが押されているか、右カーソルが押されているか確認しましょう。次のようなコードになっているでしょう。</p>
-
-<pre class="brush: js">if(rightPressed) {
-    paddleX += 7;
+```js
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
-else if(leftPressed) {
-    paddleX -= 7;
-}</pre>
+```
 
-<p>左カーソルが押されていたら7ピクセル左に動き、右カーソルが押されていたら7ピクセル右に動きます。これだけでも良さそうですが、どちらかのキーを長く押し続けたらパドルがCanvasの縁から消えてしまいます。コードを次のように変えることでCanvasの境界内でのみ動くように改善できます。</p>
+## パドルを操作できるようにする
 
-<pre class="brush: js">if(rightPressed &amp;&amp; paddleX &lt; canvas.width-paddleWidth) {
-    paddleX += 7;
+こにパドルを描画しても良いですが、ユーザーの行動に応答する必要があります。キーボード操作を実装するのです。必要なものは次のとおりです。
+
+- 左の操作ボタンが押されているか、右の操作ボタンが押されているかという情報を保存する 2 つの変数。
+- `keydown` イベントと `keyup` イベントの 2 つのイベントリスナー。ボタンが押されたときにパドルの動きを扱うコードを走らせたいのです。
+- `keydown` イベントと `keyup` イベントを扱い、ボタンが押されたときに実行されるコード。
+- パドルを左や右に動かす機能
+
+押されているボタンはこのとおり、論理値として定義、初期化できます。このコードをどこか他の変数の近くに追記してください。
+
+```js
+let rightPressed = false;
+let leftPressed = false;
+```
+
+最初は制御ボタンは押されていないため、どちらにおいても既定値は `false` です。ボタンが押されたのを検知するため、 2 つのイベントリスナーを設定します。 JavaScript の最後にある `setInterval()` の行のちょうど上に次のコードを追記してください。
+
+```js
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+```
+
+キーボードのキーのどれかに対して `keydown` イベントが発生したとき（どれかが押されたとき）、 `keyDownHandler()` 関数が実行されます。 2 つ目のリスナーについても同様で、（そのキーが押されなくなったき） `keyup` イベントは `keyUpHandler()` 関数を呼び出します。自分の `addEventListener()` の行の下に次のコードを追記してください。
+
+```js
+function keyDownHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = true;
+  }
 }
-else if(leftPressed &amp;&amp; paddleX &gt; 0) {
-    paddleX -= 7;
-}</pre>
 
-<p>ここで用いられている位置<code>paddleX</code>は期待されているように左端の<code>0</code>と右端の<code>canvas.width-paddleWidth</code>間で動きます。</p>
+function keyUpHandler(e) {
+  if (e.key === "Right" || e.key === "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+```
 
-<p>上記のコード片を<code>draw()</code>関数の最後、閉じ波括弧のちょうど前に追記してください。</p>
+キーが押されたとき、その情報は変数に保存されます。それぞれの場合で関連する変数が `true` に設定されます。キーが離されたときに変数は `false` に戻されます。
 
-<p>あとは<code>drawPaddle()</code>関数を<code>draw()</code>関数から呼び出し、実際に画面に表示するようにすれば完了です。次の行を<code>draw()</code>関数の、ちょうど<code>drawBall()</code>を呼ぶ行の下に追記してください。</p>
+どちらの関数も変数 `e` で表されるイベントを引数としてとります。これから有用な情報が手に入ります。 `key` は押されたキーについての情報を持っています。大抵のブラウザーでは左右の矢印キーにそれぞれ `ArrowLeft` と `ArrowRight` が対応します。ただし IE/Edge に対応するために、 `Left` と `Right`も確認する必要があります。 もし左カーソルが押されたら、変数 `leftPressed` は `true` に、離されたら変数 `leftPressed` は `false` に設定されます。右カーソルと変数 `rightPressed` についても同様です。
 
-<pre class="brush: js">drawPaddle();
-</pre>
+### パドルの移動ロジック
 
-<h2 id="自分のコードと比べる">自分のコードと比べる</h2>
+押されているキーについての情報を保存している変数、そして関連する関数が設定されました。ではそれらを使う実際のコードに手を入れて画面上のパドルを動かしてみましょう。 `draw()` 関数の中で、各々のフレームを描画するときに左カーソルキーが押されているか、右カーソルが押されているか確認しましょう。次のようなコードになっているでしょう。
 
-<p>自分のコードと比べられる、実際に動くコードがこちらになります。</p>
+```js
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
+}
+```
 
-<p> </p>
+左カーソルを押すとパドルは左に 7 ピクセル移動し、右カーソルを押すとパドルは右に 7 ピクセル移動する。これは今のところうまく動作しているが、どちらかのキーを長く押しているとパドルがキャンバスの端から消えてしまいます。これを改善し、パドルをキャンバスの枠内だけ移動させるには、次のようなコードに変更します。
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/t2udo69j/","","395")}}</p>
+```js
+if (rightPressed) {
+  paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
+} else if (leftPressed) {
+  paddleX = Math.max(paddleX - 7, 0);
+}
+```
 
-<p> </p>
+ここで用いられている位置 `paddleX` は期待されているように左端の `0` と右端の `canvas.width-paddleWidth` 間で動きます。
 
-<div class="note">
-<p><strong>練習</strong>: パドルを速く、または遅く動くようにしたり、大きさを変えたりしてみましょう。</p>
-</div>
+上記のコード片を `draw()` 関数の最後、閉じ波括弧のちょうど前に追記してください。
 
-<h2 id="次のステップ">次のステップ</h2>
+あとは `drawPaddle()` 関数を `draw()` 関数から呼び出し、実際に画面に表示するようにすれば完了です。次の行を `draw()` 関数の、ちょうど `drawBall()` を呼ぶ行の下に追記してください。
 
-<p>ゲームっぽい要素を追加しましょう。今問題なのはただパドルでボールを永遠に打ち続けることしか出来ないという点です。これは第5章、<a href="/ja/docs/Games/Workflows/Breakout_game_from_scratch/Game_over">ゲームオーバー</a>でゲームの終了状態を追加することで完全に変わることになります。</p>
+```js
+drawPaddle();
+```
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}</p>
+## 自分のコードと比べる
+
+自分のコードと比べられる、実際に動くコードがこちらになります。
+
+{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
+
+> **Note:** パドルを速く、または遅く動くようにしたり、大きさを変えたりしてみましょう。
+
+## 次のステップ
+
+ゲームっぽい要素を追加しましょう。今問題なのはただパドルでボールを永遠に打ち続けることしか出来ないという点です。これは第5章、[ゲームオーバー](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)でゲームの終了状態を追加することで完全に変わることになります。
+
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
