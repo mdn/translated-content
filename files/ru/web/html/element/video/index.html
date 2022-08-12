@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/video
    <td>{{no_tag_omission}}</td>
   </tr>
   <tr>
-   <th scope="row"><span class="short_text" id="result_box" lang="ru"><span class="hps">Допустимые</span> <span class="hps">родительские элементы</span></span></th>
+   <th scope="row">Допустимые родительские элементы</th>
    <td>Любой элемент, который принимает встроенный контент.</td>
   </tr>
   <tr>
@@ -39,11 +39,11 @@ translation_of: Web/HTML/Element/video
 
 <h2 id="Атрибуты">Атрибуты</h2>
 
-<p><span style="background-color: #ffffff; color: #4d4e53; display: inline !important; float: none; font-family: open sans,arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 21px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">Как и все HTML-элементы, этот элемент поддерживает</span> <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+<p>Как и все HTML-элементы, этот элемент поддерживает <a href="/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">видео</span> <span class="hps">начнёт воспроизводится </span></span><span lang="ru"><span class="hps">автоматически</span><span class="hps">, как только</span> <span class="hps">это будет возможно сделать без</span> <span class="hps">остановки</span><span>, чтобы закончить</span> <span class="hps">загрузку данных</span><span>.</span></span></dd>
+ <dd>Логический атрибут<span>; если указан, то видео начнёт воспроизводится </span>автоматически, как только это будет возможно сделать без остановки<span>, чтобы закончить загрузку данных<span>.</span></span></dd>
  <dt>{{htmlattrdef("autobuffer")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.
  <div class="note"><strong>Примечание:</strong> несмотря на то, что в ранних версиях HTML5 атрибут <code>autobuffer</code> присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут <code>preload</code>, вместо <code>autobuffer</code> с другим синтаксисом. {{bug(548523)}}</div>
@@ -51,22 +51,22 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Если этот атрибут</span> <span class="hps">присутствует</span><span>, тогда браузер</span> отобразит <span class="hps">элементы</span> <span class="hps">управления</span><span>, чтобы позволить</span> <span class="hps">пользователю управлять</span> <span class="hps">воспроизведением видео</span><span>, регулировать громкость</span><span class="hps">,</span> осуществлять перемотку, <span>а также</span></span><span lang="ru"> ставить на паузу и <span class="hps">возобновление воспроизведение</span><span>.</span></span></dd>
+ <dd>Если этот атрибут присутствует<span>, тогда браузер отобразит элементы управления<span>, чтобы позволить</span> пользователю управлять воспроизведением видео<span>, регулировать громкость</span>, осуществлять перемотку, <span>а также</span></span> ставить на паузу и возобновление воспроизведение<span>.</span></dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>This enumerated attribute indicates whether to use CORS to fetch the related image. <a href="/en-US/docs/CORS_Enabled_Image">CORS-enabled resources</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
  <dl>
   <dt>anonymous</dt>
-  <dd>Sends a  cross-origin request without a credential. In other words, it sends the <code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header without a </span>cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the <code style="font-size: 15px;">Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em>, and its usage restricted.</dd>
+  <dd>Sends a  cross-origin request without a credential. In other words, it sends the <code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code> HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the <code style="font-size: 15px;">Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em>, and its usage restricted.</dd>
   <dt>use-credentials</dt>
-  <dd><span style="background-color: #f5f6f5;">Sends a  cross-origin request with a credential. </span><span style="background-color: #f5f6f5;">In other words, it sends the </span><code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header with </span>a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code style="font-size: 15px;">Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
+  <dd>Sends a  cross-origin request with a credential. In other words, it sends the <code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code> HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code style="font-size: 15px;">Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
  When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS settings attributes</a> for additional information.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Высота</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
+ <dd>Высота области отображения видео в пикселях<span>.</span></dd>
  <dt>{{htmlattrdef("loop")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">по окончанию проигрывания,</span> <span class="hps">видео</span> <span class="hps">автоматически</span> начнёт воспроизведение с начала<span class="hps">.</span></span></dd>
+ <dd>Логический атрибут<span>; если указан, то по окончанию проигрывания, видео автоматически начнёт воспроизведение с начала.</span></dd>
  <dt>{{htmlattrdef("muted")}}</dt>
- <dd>Логический атрибут, который определяет значение по умолчания для аудио дорожки, содержащуюся в видео. <span id="result_box" lang="ru"><span class="hps">Если атрибут указан</span></span>, то аудио дорожка <span id="result_box" lang="ru"><span class="hps">воспроизводиться </span></span>не будет. З<span id="result_box" lang="ru"><span class="hps">начение</span> <span class="hps">атрибута по умолчанию</span> <span class="hps">- "ложь"</span><span>,</span> и это<span class="hps"> означает, что</span> <span class="hps">звук будет</span> <span class="hps">воспроизводиться, когда</span> <span class="hps">видео воспроизводится</span><span>.</span></span></dd>
+ <dd>Логический атрибут, который определяет значение по умолчания для аудио дорожки, содержащуюся в видео. Если атрибут указан, то аудио дорожка воспроизводиться не будет. Значение атрибута по умолчанию - "ложь"<span>, и это означает, что звук будет воспроизводиться, когда видео воспроизводится<span>.</span></span></dd>
  <dt>{{htmlattrdef("played")}}</dt>
  <dd>Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.</dd>
  <dt>{{htmlattrdef("preload")}}</dt>
@@ -84,7 +84,7 @@ translation_of: Web/HTML/Element/video
 
  <ul>
   <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
-  <li>The <span style="background-color: #f5f6f5;">specification does not force the </span>browser to follow the value of this attribute; it is a mere hint.</li>
+  <li>The specification does not force the browser to follow the value of this attribute; it is a mere hint.</li>
  </ul>
  </div>
  </dd>
@@ -93,7 +93,7 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Ширина</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
+ <dd>Ширина области отображения видео в пикселях<span>.</span></dd>
 </dl>
 
 <h2 id="События">События</h2>
@@ -135,7 +135,7 @@ translation_of: Web/HTML/Element/video
 
 <p>If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).</p>
 
-<p>If you use <span style="background-color: #f5f6f5;">Apache Web Server</span><span style="background-color: #f5f6f5;"> to </span>serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. <span style="background-color: #f5f6f5;"> The </span><span style="background-color: #f5f6f5;">most common video file type extensions are </span><span style="background-color: #f5f6f5;">".ogm</span><span style="background-color: #f5f6f5;">",</span><span style="background-color: #f5f6f5;"> ".ogv", or ".ogg"</span><span style="background-color: #f5f6f5;">. </span>To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.</p>
+<p>If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type.  The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.</p>
 
 <pre class="eval">AddType video/ogg .ogm
 AddType video/ogg .ogv
@@ -151,7 +151,7 @@ AddType video/ogg .ogg
 
 <h2 id="Интерфейс_DOM">Интерфейс DOM</h2>
 
-<p><span class="short_text" id="result_box" lang="ru"><span class="hps">Этот элемент</span> <span class="hps">реализует интерфейс</span></span> <code><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></code>.</p>
+<p>Этот элемент реализует интерфейс <code><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></code>.</p>
 
 <h2 id="Совместимость_браузера">Совместимость браузера</h2>
 
