@@ -19,7 +19,7 @@ translation_of: Web/API/Document/createDocumentFragment
 var fragment = document.createDocumentFragment();
 ```
 
-`fragment `是 {{domxref("DocumentFragment")}} 的一個參考物件。
+`fragment` 是 {{domxref("DocumentFragment")}} 的一個參考物件。
 
 ## 描述
 
@@ -57,7 +57,7 @@ element.appendChild(fragment);
 
 ### 結果
 
-在 [jsfiddle ](https://jsfiddle.net/a0nn690f/)上看範例結果。
+在 [jsfiddle](https://jsfiddle.net/a0nn690f/) 上看範例結果。
 
 ## 規格
 

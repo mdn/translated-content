@@ -86,21 +86,21 @@ MIDDLEWARE = [
 
 首先，讓我們為圖書館成員創建一個新組。
 
-1.  單擊**Add**按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱“Library Members”。
+1. 單擊**Add**按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱“Library Members”。
     ![Admin site - add group](admin_authentication_add_group.png)
-2.  我們不需要該組的任何權限，因此只需按**SAVE** （您將被帶到組列表）。
+2. 我們不需要該組的任何權限，因此只需按**SAVE** （您將被帶到組列表）。
 
 現在讓我們創建一個用戶：
 
-1.  導航回到管理站點的主頁
-2.  單擊“用戶”旁邊的“添加”按鈕以打開“添加用戶”對話框。
+1. 導航回到管理站點的主頁
+2. 單擊“用戶”旁邊的“添加”按鈕以打開“添加用戶”對話框。
     ![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
-3.  輸入適合您的測試用戶的用戶名和密碼/密碼確認
-4.  按**SAVE**創建用戶。
+3. 輸入適合您的測試用戶的用戶名和密碼/密碼確認
+4. 按**SAVE**創建用戶。
     管理站點將創建新用戶，並立即將您帶到“更改用戶”視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置“活動”標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。
     ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
-5.  在“組”部分中，從“可用組”列表中選擇“**Library Member**”組，然後按框之間的右箭頭將其移至“選擇的組”框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
-6.  我們在這裡不需要執行任何其他操作，因此只需再次選擇**SAVE** 即可進入用戶列表。
+5. 在“組”部分中，從“可用組”列表中選擇“**Library Member**”組，然後按框之間的右箭頭將其移至“選擇的組”框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
+6. 我們在這裡不需要執行任何其他操作，因此只需再次選擇**SAVE** 即可進入用戶列表。
 
 就是這樣而已！ 現在，您將擁有一個“普通庫成員”帳戶，您將可以使用該帳戶進行測試（一旦我們實現了頁面以使其能夠登錄）。
 
@@ -456,7 +456,9 @@ from django.contrib.auth.models import User
 
 Ne 接下來，將`borrower` 字段添加到`BookInstance` 模型中：
 
-    borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+```python
+borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+```
 
 當我們在這裡時，讓我們添加一個屬性，我們可以從模板中調用該屬性，以告知特定的圖書實例是否過期。 儘管我們可以在模板本身中進行計算，但是使用如下所示的[屬性](https://docs.python.org/3/library/functions.html#property)會更加高效。
 

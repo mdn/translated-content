@@ -87,7 +87,7 @@ console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defi
 let y;
 ```
 
-你可以利用 `undefined` 來判斷該變數是否有值，在下面的程式碼的例子中，`input` 這個變數沒有賦值，`if `判斷式會得到 `true` 的結果。
+你可以利用 `undefined` 來判斷該變數是否有值，在下面的程式碼的例子中，`input` 這個變數沒有賦值，`if` 判斷式會得到 `true` 的結果。
 
 ```js
 var input;
@@ -450,7 +450,7 @@ Do not confuse the primitive Boolean values `true` and `false` with the true and
 
 - 第一個屬性 `myCar` 賦值為字串 '`Saturn`'
 - 第二個屬性 `getCar` 賦值為「調用函數`carTypes('Honda')`」的結果
-- 第三個屬性 `special `使用現有變量 `sales` 賦值
+- 第三個屬性 `special` 使用現有變量 `sales` 賦值
 
 ```js
 var sales = 'Toyota';

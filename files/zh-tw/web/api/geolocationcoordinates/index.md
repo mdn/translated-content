@@ -5,7 +5,7 @@ translation_of: Web/API/GeolocationCoordinates
 ---
 {{APIRef("Geolocation API")}}
 
-**`Coordinates `**`這個介面用來存取裝置的經緯度`，速度以及這些數值的準確度。
+**`Coordinates`** 這個介面用來存取裝置的經緯度，速度以及這些數值的準確度。
 
 ## 屬性
 

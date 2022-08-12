@@ -5,8 +5,8 @@ translation_of: Glossary/routers
 ---
 **routers** 是指路由器。在 Web 有兩種意思：
 
-1.  針對網路層，路由器是一種決定{{Glossary('封包')}}去向的網路設備。路由器是由 retailer 分發，允許用戶與網際網路互動。
-2.  針對應用層的 {{Glossary('SPA')}}，路由器是一種透過給定的 {{Glossary('URL')}} 來決定頁面如何呈現的函式庫。這個中間件（middleware）會藉由給定 URL 給檔案生成需要的路徑、以渲染下一頁的所需內容。
+1. 針對網路層，路由器是一種決定{{Glossary('封包')}}去向的網路設備。路由器是由 retailer 分發，允許用戶與網際網路互動。
+2. 針對應用層的 {{Glossary('SPA')}}，路由器是一種透過給定的 {{Glossary('URL')}} 來決定頁面如何呈現的函式庫。這個中間件（middleware）會藉由給定 URL 給檔案生成需要的路徑、以渲染下一頁的所需內容。
 
 ## 了解更多
 

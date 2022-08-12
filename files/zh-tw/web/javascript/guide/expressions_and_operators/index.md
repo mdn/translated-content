@@ -188,9 +188,9 @@ var var2 = 4;
 
 | Operator                                                                                          | Usage                  | Description                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [邏輯 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND)` `(`&&`) | `運算式1 && 運算式2`   | 假如` 運算式1` 可以被轉換成 false 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`&&`只有在 兩個運算元都是 True 時才會回傳 True，否則回傳` false`。    |
-| [邏輯 OR ](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR)(`\|\|`)   | `運算式1 \|\| 運算式2` | 假如` 運算式1` 可以被轉換成 true 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`\|\|`在 兩個運算元有任一個是 True 時就會回傳 True，否則回傳` false`。 |
-| [邏輯 NOT ](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT)(`!`)    | `!運算式`              | 假如單一個運算元能被轉換成 True 時，回傳`false` ， 不然回傳 `true`。                                                                                       |
+| [邏輯 AND](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND) (`&&`) | `運算式1 && 運算式2`   | 假如 `運算式1` 可以被轉換成 false 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`&&`只有在 兩個運算元都是 True 時才會回傳 True，否則回傳 `false`。    |
+| [邏輯 OR](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR) (`\|\|`)   | `運算式1 \|\| 運算式2` | 假如 `運算式1` 可以被轉換成 true 的話，回傳 `運算式1`; 否則，回傳 `運算式2`。 因此，`\|\|`在 兩個運算元有任一個是 True 時就會回傳 True，否則回傳 `false`。 |
+| [邏輯 NOT](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) (`!`)    | `!運算式`              | 假如單一個運算元能被轉換成 True 時，回傳`false` ， 不然回傳 `true`。                                                                                       |
 
 可以被轉換為 false 的運算式是 null， 0， NaN， 空字串 ("")，或 未定義。
 
@@ -415,7 +415,7 @@ typeof String;   // 回傳 "function"
 
 #### `void`
 
-[`void` 運算子 ](/zh-TW/docs/Web/JavaScript/Reference/Operators/void)能以下列任一方式使用:
+[`void` 運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/void) 能以下列任一方式使用:
 
 ```plain
 void (運算式)
@@ -445,13 +445,13 @@ void 運算式
 
 #### `in`
 
-[`in `運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/in) 在指定性質存在於物件中時回傳 true 。 語法是:
+[`in` 運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/in) 在指定性質存在於物件中時回傳 true 。 語法是:
 
 ```js
 性質名稱 in 物件名稱
 ```
 
-性質名稱 可以是 字串或數字，或是陣列的索引， 且` `物件名稱 是物件的名稱。
+性質名稱 可以是 字串或數字，或是陣列的索引， 且物件名稱是物件的名稱。
 
 下列範例示範了 `in` 運算子的一些用法。
 

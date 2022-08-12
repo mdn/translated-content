@@ -22,7 +22,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
   - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
 - {{domxref("HTMLSelectElement.length")}}
-  - : An `unsigned long `The number of {{HTMLElement("option")}} elements in this `select` element.
+  - : An `unsigned long` The number of {{HTMLElement("option")}} elements in this `select` element.
 - {{domxref("HTMLSelectElement.multiple")}}
   - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
 - {{domxref("HTMLSelectElement.name")}}

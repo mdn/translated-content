@@ -15,4 +15,4 @@ translation_of: Glossary/ECMA
 ## 了解更多
 
 - 維基百科上的 [Ecma International](https://zh.wikipedia.org/wiki/Ecma_International) 條目
-- [Ecma International ](http://www.ecma-international.org/)組織網站
+- [Ecma International](http://www.ecma-international.org/) 組織網站

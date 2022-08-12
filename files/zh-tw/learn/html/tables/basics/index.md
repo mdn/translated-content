@@ -189,7 +189,7 @@ original_slug: Learn/HTML/Tables/基礎
 
 ### 表格樣式
 
-你也可以在 [GitHub ](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而 GitHub 上的版本卻應用上了更多明顯的 CSS 。
+你也可以在 [GitHub](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) 上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而 GitHub 上的版本卻應用上了更多明顯的 CSS 。
 
 需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的 HTML 架構和 CSS 樣式資訊，但將在這個模組中聚焦在 HTML 的部分。若想瞭解 CSS 的部分，可以在完成這部分閱讀之後造訪[表格樣式設計](/zh-TW/docs/Learn/CSS/Building_blocks/Styling_tables)的文章。
 
@@ -203,23 +203,23 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 簡單來說，使用表格排版而非使用[CSS 排版技術](/zh-TW/docs/Learn/CSS/CSS_layout)是一件很糟的事情。
 下列是主要原因:
 
-1.  **表格排版會減少對視障使用者的輔助** : 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。
-2.  **表格會產生標籤雜燴(tag soup)**: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及 debug。
-3.  **表格不會自適應(automatically responsive)**: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為 100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。
+1. **表格排版會減少對視障使用者的輔助** : 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。
+2. **表格會產生標籤雜燴(tag soup)**: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及 debug。
+3. **表格不會自適應(automatically responsive)**: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為 100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。
 
 ## 主動學習:建造你第一個表格
 
 關於表格的理論我們已經談論夠了，所以，來深入實際的例子並建立一個簡單的表格吧!
 
-1.  第一件事，在自己的電腦複製一份新的[空白模板.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 以及 [簡易表格.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)
-2.  每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/en-US/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
-3.  表格裡最小的容器是表格儲存格，由**[`<td>`](/en-US/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
+1. 第一件事，在自己的電腦複製一份新的[空白模板.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 以及 [簡易表格.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)
+2. 每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/en-US/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
+3. 表格裡最小的容器是表格儲存格，由**[`<td>`](/en-US/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
 
     ```html
     <td>Hi, I'm your first cell.</td>
     ```
 
-4.  如果我們想要一個四格儲存格寬的列(row), 我們需要複製這些標籤三次。
+4. 如果我們想要一個四格儲存格寬的列(row), 我們需要複製這些標籤三次。
     將你的表格內容更新成這樣:
 
     ```html
@@ -233,7 +233,7 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 要讓這個列停止增加並開始在下一列增加連續的儲存格的話，我們需要用 **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** 元素 ('tr' 代表 'table row')，現在來探討一下:
 
-1.  放置四個你已新增在 `<tr>` 標籤裡的儲存格, 像這樣:
+1. 放置四個你已新增在 `<tr>` 標籤裡的儲存格, 像這樣:
 
     ```html
     <tr>
@@ -244,7 +244,7 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
     </tr>
     ```
 
-2.  現在你已經製作了一列了，可以再繼續做一、二列 — 每個列都需要被額外的 `<tr>` 元素包裹住, 並且每個儲存格都須包含在一個 `<td>` 內
+2. 現在你已經製作了一列了，可以再繼續做一、二列 — 每個列都需要被額外的 `<tr>` 元素包裹住, 並且每個儲存格都須包含在一個 `<td>` 內
 
 ### 結果
 
@@ -347,11 +347,11 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 讓我們來繼續改善這個表格吧!
 
-1.  首先, 複製 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案到你的電腦。
+1. 首先, 複製 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案到你的電腦。
     這份 HTML 裡包含跟底下你看到的一樣的狗狗範例。
-2.  為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/en-US/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
+2. 為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/en-US/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
     繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
-3.  儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
+3. 儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
 
 > **備註：** 你可以在 GitHub 上的[dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html)找到我們寫好的完整的範例([直接看看長怎樣](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
@@ -415,10 +415,10 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 來使用 `colspan` 和 `rowspan` 來改善這麼表格吧!
 
-1.  首先，複製一份我們的 [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案在你的電腦上。這個 HTML 包含跟上面同樣的動物範例。
-2.  接著，使用 `colspan` 來讓 "Animals", "Hippopotamus", 和 "Crocodile" 合併橫跨兩個欄位。
-3.  最後, 使用 `rowspan` 來讓 "Horse" and "Chicken" 合併橫跨兩列。
-4.  儲存並在瀏覽器上檢視你改善後的程式碼。
+1. 首先，複製一份我們的 [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案在你的電腦上。這個 HTML 包含跟上面同樣的動物範例。
+2. 接著，使用 `colspan` 來讓 "Animals", "Hippopotamus", 和 "Crocodile" 合併橫跨兩個欄位。
+3. 最後, 使用 `rowspan` 來讓 "Horse" and "Chicken" 合併橫跨兩列。
+4. 儲存並在瀏覽器上檢視你改善後的程式碼。
 
 > **備註：** 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
@@ -512,14 +512,14 @@ Below you can see the timetable of a languages teacher. On Friday she has a new 
 
 Recreate the table by following the steps below.
 
-1.  First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
-2.  Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
-3.  The first two columns need to be left unstyled.
-4.  Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
-5.  Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
-6.  Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
-7.  Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
-8.  The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
+1. First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
+2. Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
+3. The first two columns need to be left unstyled.
+4. Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
+5. Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
+6. Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
+7. Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
+8. The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
 
 See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 

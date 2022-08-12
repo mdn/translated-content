@@ -10,7 +10,7 @@ translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 
-**`transition`** [CSS ](/zh-TW/docs/Web/CSS)屬性是 {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}的 [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)。
+**`transition`** [CSS](/zh-TW/docs/Web/CSS) 屬性是 {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}的 [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)。
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 

@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 在 ES2015，有四個相等比較方法：
 
 - 一般相等 (`==`)
-- 嚴格相等 (`===`)：被用於 `Array.prototype.indexOf`、 `Array.prototype.lastIndexOf `和 `case`-matching
+- 嚴格相等 (`===`)：被用於 `Array.prototype.indexOf`、 `Array.prototype.lastIndexOf` 和 `case`-matching
 - 零值相等：被用於 `%TypedArray%` 和 `ArrayBuffer` 建構子，以及 `Map` 和 `Set` 運算子，還有將在 ES2016 新增的 `String.prototype.includes。`
 - 同值相等： 用在除上面提及的所有情況。
 
@@ -20,7 +20,7 @@ JavaScript 提供三種不同的值比較運算操作：
 
 要用哪個操作取決於你要哪種類型的比較。
 
-簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；`Object.is` 會和嚴格相等做同樣的事，但會將 `NaN`、` -0 和 `` +0  `獨立處理，因此這三個不會相等，而 `Object.is(NaN, NaN)` 則會回傳 true 。（用一般相等或嚴格相等比較兩個 `NaN` 時會回傳 `false` ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。
+簡單來說，一般相等會將型別一致化後比較；嚴格相等則不會（也就是說若型別不同，就會回傳 fasle）；`Object.is` 會和嚴格相等做同樣的事，但會將 `NaN`、`-0` 和 `+0` 獨立處理，因此這三個不會相等，而 `Object.is(NaN, NaN)` 則會回傳 true 。（用一般相等或嚴格相等比較兩個 `NaN` 時會回傳 `false` ，因為 IEEE 754 如此規範。） 切記，這三種判斷必須考慮原型，因為他們在設計上不被考慮為相等。對於任何非原型物件 x、y，即使他們有著相同結構，但如果是不同物件，比較就會是 false。
 
 ## 嚴格相等（`===`）
 
@@ -43,7 +43,7 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-嚴格比較適合在絕大多數情況下使用。對於所有非數字的值，嚴格比較就如字面：一個值只相等於自己。而數字則使用稍微不同的方式：第一種情況是浮點數 0 同時為正和負，在解決某些數學問題時，`+0` 和 `-0 `是不同的，但在大部分情況下我們不需要考慮這種情境，因此嚴格比較將他們視為相同的。第二種情況是非數字，`NaN`，用來表示某些定義不明確的數學問題的解， 例如：負無窮加正無窮，嚴格比較認為 `NaN` 不等於任何值，包含他本身。（`(x !== x)`只有在 `x` 是 `NaN `時會是 `true`。）
+嚴格比較適合在絕大多數情況下使用。對於所有非數字的值，嚴格比較就如字面：一個值只相等於自己。而數字則使用稍微不同的方式：第一種情況是浮點數 0 同時為正和負，在解決某些數學問題時，`+0` 和 `-0` 是不同的，但在大部分情況下我們不需要考慮這種情境，因此嚴格比較將他們視為相同的。第二種情況是非數字，`NaN`，用來表示某些定義不明確的數學問題的解， 例如：負無窮加正無窮，嚴格比較認為 `NaN` 不等於任何值，包含他本身。（`(x !== x)`只有在 `x` 是 `NaN`時會是 `true`。）
 
 ## 一般相等（==）
 
@@ -129,7 +129,7 @@ console.log(obj === undefined); // false
 
 根據上表， `ToNumber(A)` 嘗試在比較前轉換成一個數字。 這等同 `+A` （單 + 運算子）。`ToPrimitive(A)` 嘗試從物件轉換成原生值，透過嘗試對 A 使用 `A.toString` 和 `A.valueOf` 方法。
 
-一般來說，根據 ECMAScript 規範，所有物件應該不等於 `undefined` 和 `null`。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 `document.all` 物件）在某些情況下*當成* `undefined`。一般相等是其中一種：當 A 是個被*模擬* 成 `undefined `的物件` ，``null == A ` 和 `undefined == A` 會是 true。而在其他情況下物件不會等同於 `undefined` 或 `null。`
+一般來說，根據 ECMAScript 規範，所有物件應該不等於 `undefined` 和 `null`。但大多數瀏覽器允許很小部分的物件（尤其是所有頁面的 `document.all` 物件）在某些情況下*當成* `undefined`。一般相等是其中一種：當 A 是個被*模擬* 成 `undefined` 的物件，`null == A` 和 `undefined == A` 會是 true。而在其他情況下物件不會等同於 `undefined` 或 `null。`
 
 ```js
 var num = 0;
@@ -173,7 +173,7 @@ function attemptMutation(v)
 
 ## 零值相等
 
-和同值相等一樣，但將 `+0` 和 `-0 `視為相同。
+和同值相等一樣，但將 `+0` 和 `-0` 視為相同。
 
 ## 一般相等、嚴格相等和同值相等的規範
 
@@ -221,7 +221,7 @@ Aside from the way it treats [`NaN`](/zh-TW/docs/Web/JavaScript/Reference/Global
 Here's an in-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
 - [`- (unary negation)`](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
-  - : It's obvious that negating `0` produces `-0`. But the abstraction of an expression can cause `-0` to creep in when you don't realize it. For example, consider:`js let stoppingForce = obj.mass * -obj.velocity `If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propogates out into `stoppingForce`.
+  - : It's obvious that negating `0` produces `-0`. But the abstraction of an expression can cause `-0` to creep in when you don't realize it. For example, consider:`js let stoppingForce = obj.mass * -obj.velocity` If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propogates out into `stoppingForce`.
 - [`Math.atan2`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2),
   [`Math.ceil`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil),
   [`Math.pow`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/pow),

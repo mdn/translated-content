@@ -127,7 +127,7 @@ myFirstPromise.then((successMessage) => {
 <div id="log"></div>
 ```
 
-`這個小範例演示了` `Promise` `的運作機制。每當 `{{HTMLElement("button")}} 被點擊時，`testPromise()` 方法被呼叫。每次點擊將透過 {{domxref("window.setTimeout()")}} 建立一個將在 1-3 秒內隨機地被實現的 promise，供 promise 計數（一個從 1 開始的數值）。建構式 `Promise()` 被用來建立 promise。
+這個小範例演示了 `Promise` 的運作機制。每當 {{HTMLElement("button")}} 被點擊時，`testPromise()` 方法被呼叫。每次點擊將透過 {{domxref("window.setTimeout()")}} 建立一個將在 1-3 秒內隨機地被實現的 promise，供 promise 計數（一個從 1 開始的數值）。建構式 `Promise()` 被用來建立 promise。
 
 promise 的實現值單純地經由一個實現回呼函式 {{jsxref("Promise.prototype.then()","p1.then()")}} 被印出。下以一些文字紀錄來展現方法中同步的與非同步處理 promise 的部分是如何分離彼此。
 

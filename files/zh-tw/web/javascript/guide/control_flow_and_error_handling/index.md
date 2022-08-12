@@ -421,7 +421,7 @@ catch (e) {
 
 ### 使用 XHR 載入圖檔
 
-這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub[ promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](http://mdn.github.io/promises-test/)。 每一步都有註解來讓您慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動您或許可以對 promise 物件有所了解:
+這裏有個簡單的範例，使用了 `Promise` 物件與及 [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest) 來載入 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 中的一張圖檔。你也可以[觀看結果](http://mdn.github.io/promises-test/)。 每一步都有註解來讓您慢慢理解 Promise 物件與及 XHR 架構。 下面的版本沒有註解，但藉由觀察 `Promise` 物件的變動您或許可以對 promise 物件有所了解:
 
 ```js
 function imgLoad(url) {

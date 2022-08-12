@@ -198,7 +198,7 @@ Invoking the `Function` constructor as a function (without using the `new` opera
 
 ### Default parameters
 
-Default function parameters allow formal parameters to be initialized with default values if no value or `undefined` is passed. For more details, see[ default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+Default function parameters allow formal parameters to be initialized with default values if no value or `undefined` is passed. For more details, see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ### Rest parameters
 

@@ -67,11 +67,11 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 ### 在本地圖書館使用 Mongoose 和 MongoDb
 
-對於本地圖書館示例（以及本主題的其餘部分），我們將使用 [Mongoose ODM ](https://www.npmjs.com/package/mongoose)來訪問我們的圖書館數據。 Mongoose 是 [MongoDB](https://www.mongodb.com/what-is-mongodb) 的前端，MongoDB 是一個使用面向文檔數據模型的開源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 數據庫。在 MongoDB 數據庫中，“文檔” 的 “集合” ，[類似於](https://docs.mongodb.com/manual/core/databases-and-collections/#collections)關係數據庫中 “行” 的 “表”。
+對於本地圖書館示例（以及本主題的其餘部分），我們將使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 來訪問我們的圖書館數據。 Mongoose 是 [MongoDB](https://www.mongodb.com/what-is-mongodb) 的前端，MongoDB 是一個使用面向文檔數據模型的開源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 數據庫。在 MongoDB 數據庫中，“文檔” 的 “集合” ，[類似於](https://docs.mongodb.com/manual/core/databases-and-collections/#collections)關係數據庫中 “行” 的 “表”。
 
 這種 ODM 和數據庫的結合在 Node 社區中非常流行，部分原因是文檔存儲和查詢系統，看起來非常像 JSON，因此對 JavaScript 開發人員來說很熟悉。
 
-> **備註：** 使用 Mongoose 時，您不需要事先了解 MongoDB，但是如果您已經熟悉 MongoDB，[Mongoose documentation ](http://mongoosejs.com/docs/guide.html)文檔的一部分會更易於使用和理解。
+> **備註：** 使用 Mongoose 時，您不需要事先了解 MongoDB，但是如果您已經熟悉 MongoDB，[Mongoose documentation](http://mongoosejs.com/docs/guide.html)文檔的一部分會更易於使用和理解。
 
 本教程的其餘部分，將介紹如何為 本地圖書館網站示例，定義和訪問 Mongoose 模式和模型。
 
@@ -232,7 +232,7 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 內置的驗證器包括：
 
 - 所有[SchemaTypes](http://mongoosejs.com/docs/schematypes.html)都具有內置的[必需](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required)驗證器。這用於指定，是否必須提供該字段才能保存文檔。
-- [Numbers ](http://mongoosejs.com/docs/api.html#schema-number-js)[數字](http://mongoosejs.com/docs/api.html#schema-number-js)有最小[min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)和最大[max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)驗證器。
+- [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) 數字有最小[min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)和最大[max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)驗證器。
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js)字符串有：
 
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum)枚舉：指定該字段的允許值集合。
@@ -336,7 +336,7 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
 
 如果您指定回調，如上所示，查詢將立即執行。搜索完成後將調用回調。
 
-> **備註：** Mongoose 中的所有回調，都使用此回調模式`callback(error, result)`。如果執行查詢時發生錯誤，錯誤參數`error`將包含錯誤文檔，並且結果`result`將為 null。如果查詢成功，則`error`參數將為 null，並且結果`result `將被填充到查詢結果。
+> **備註：** Mongoose 中的所有回調，都使用此回調模式`callback(error, result)`。如果執行查詢時發生錯誤，錯誤參數`error`將包含錯誤文檔，並且結果`result`將為 null。如果查詢成功，則`error`參數將為 null，並且結果`result` 將被填充到查詢結果。
 
 如果您未指定回調，則 API 將返回[Query](http://mongoosejs.com/docs/api.html#query-js)類型的變量。您可以使用此查詢對象來構建查詢，然後稍後使用`exec()`方法執行（使用回調）。
 
@@ -377,9 +377,9 @@ Athlete.
 
 [find()](http://mongoosejs.com/docs/api.html#query_Query-find) 方法獲取所有匹配的記錄，但通常你只想獲得一個匹配。以下方法可以查詢單個記錄：
 
-- [`findById()`](http://mongoosejs.com/docs/api.html#model_Model.findById):用指定的`id `查找文檔（每個文檔都有一個唯一的`id`）。
+- [`findById()`](http://mongoosejs.com/docs/api.html#model_Model.findById):用指定的`id`查找文檔（每個文檔都有一個唯一的`id`）。
 - [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne): 查找與指定條件匹配的單個文檔。
-- [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate):通過`id `或條件查找單個文檔，並更新或刪除它。這些是用於更新和刪除記錄的有用便利功能。
+- [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate):通過`id` 或條件查找單個文檔，並更新或刪除它。這些是用於更新和刪除記錄的有用便利功能。
 
 > **備註：** 還有一個[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count)方法，您可以使用它來獲取與條件匹配的項目數。如果您想要在不實際提取記錄的情況下執行計數，這非常有用。
 
@@ -502,35 +502,35 @@ SomeModel.find(callback_function);
 
 登錄後，您將進入[mLab 主](https://mlab.com/home)畫面:
 
-1.  單擊*MongoDB Deployments*部分中的**Create New。**![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
-2.  這將打開“雲提供商”Cloud Provider 選擇畫面。
+1. 單擊*MongoDB Deployments*部分中的**Create New。**![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+2. 這將打開“雲提供商”Cloud Provider 選擇畫面。
     ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
 
     - 從“計劃類型”Plan Type 部分中，選擇“SANDBOX（免費）”計劃。
     - 從“雲提供商” *Cloud Provider*部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
     - 單擊“繼續” **Continue**按鈕。
 
-3.  這將打開“選擇區域” _Select Region_ 畫面。
+3. 這將打開“選擇區域” _Select Region_ 畫面。
 
     ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
 
     - 選擇離您最近的地區，然後選擇繼續**Continue** .
 
-4.  這將打開 Final Details 畫面。
+4. 這將打開 Final Details 畫面。
     ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
 
     - 輸入新數據庫的名稱`local_library`，然後選擇繼續**Continue**。
 
-5.  這將打開訂單確認畫面。
+5. 這將打開訂單確認畫面。
     ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
 
     - 單擊“提交訂單” **Submit Order**以創建數據庫。
 
-6.  您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。
+6. 您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。
     ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
     您需要用來訪問數據庫的 URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在 URL 中指定的數據庫用戶。
-7.  單擊用戶**Users**選項卡，並選擇添加數據庫用戶按鈕**Add database user**。
-8.  輸入用戶名和密碼（兩次），然後按創建**Create**。不要選擇只讀*read-only*。
+7. 單擊用戶**Users**選項卡，並選擇添加數據庫用戶按鈕**Add database user**。
+8. 輸入用戶名和密碼（兩次），然後按創建**Create**。不要選擇只讀*read-only*。
     ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
 
 您現在已經創建了數據庫，並且有一個可以用來訪問它的 URL（帶有用戶名和密碼）。這看起來像是這樣的：`mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
@@ -702,23 +702,23 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 為了測試這些模型（並創建一些示例書籍，和其他項目以便於我們在後面文章使用），現在我們將運行一個獨立的腳本來創建每種類型的項目：
 
-1.  在 express-locallibrary-tutorial 目錄下（與`package.json`處於同一級別），下載（或以其他方式創建）文件[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)。
+1. 在 express-locallibrary-tutorial 目錄下（與`package.json`處於同一級別），下載（或以其他方式創建）文件[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)。
 
     > **備註：** 您不需要知道[populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js)的工作原理;它只是將示例數據添加到數據庫中。
 
-2.  在項目根目錄中，輸入以下命令，以安裝腳本所需的異步模塊（我們將在後面的教程中討論這一點）
+2. 在項目根目錄中，輸入以下命令，以安裝腳本所需的異步模塊（我們將在後面的教程中討論這一點）
 
     ```bash
     npm install async
     ```
 
-3.  在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
+3. 在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
 
     ```bash
     node populatedb <your mongodb url>​​​​
     ```
 
-4.  該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
+4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
 
 > **備註：** 至[mLab](https://mlab.com/home)上的數據庫。您現在應該可以深入到書本籍，作者，種類和書本實例的各個集合中，並查看單個文檔。
 

@@ -38,12 +38,14 @@ There are many other elements in HTML for formatting text, which we didn't get t
 
 In HTML text fundamentals, we walked through how to [mark up basic lists](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) in HTML, but we didn't mention the third type of list you'll occasionally come across — **description lists**. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:
 
-    soliloquy
-    In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
-    monologue
-    In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
-    aside
-    In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+```
+soliloquy
+In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
+monologue
+In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
+aside
+In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
+```
 
 Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description description) element. Let's finish marking up our example:
 
@@ -205,9 +207,9 @@ Citations are styled in italic font by default. You can see this code at work in
 
 Time for another active learning example! In this example we'd like you to:
 
-1.  Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
-2.  Turn part of the third paragraph into an inline quote, which includes a `cite` attribute.
-3.  Include a `<cite>` element for each quote
+1. Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
+2. Turn part of the third paragraph into an inline quote, which includes a `cite` attribute.
+3. Include a `<cite>` element for each quote
 
 Search online to find appropriate quote sources.
 
@@ -278,9 +280,11 @@ window.addEventListener("load", drawOutput);
 
 Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.) Let's look at a couple of examples:
 
-    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+```html
+<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
 
-    <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+```
 
 These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):
 

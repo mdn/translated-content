@@ -172,14 +172,14 @@ for (initializer; exit-condition; final-expression) {
 
 這裡我們有：
 
-1.  關鍵字“ for”，即跟隨其後的一些括號。
-2.  在括號內，我們有三個項目，以 ; 分隔：
+1. 關鍵字“ for”，即跟隨其後的一些括號。
+2. 在括號內，我們有三個項目，以 ; 分隔：
 
-    1.  初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
-    2.  退出條件-如前所述，它定義了循環何時應停止循環。 通常，這是一個具有比較運算符的表達式，該測試用於檢驗是否滿足退出條件。
-    3.  最終表達式—每當循環經過完整的迭代時，總是對它進行評估（或運行）。 它通常用於遞增（或在某些情況下遞減）計數器變量，以使其更接近退出條件值。
+    1. 初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
+    2. 退出條件-如前所述，它定義了循環何時應停止循環。 通常，這是一個具有比較運算符的表達式，該測試用於檢驗是否滿足退出條件。
+    3. 最終表達式—每當循環經過完整的迭代時，總是對它進行評估（或運行）。 它通常用於遞增（或在某些情況下遞減）計數器變量，以使其更接近退出條件值。
 
-3.  一些花括號包含一個代碼塊-每次循環迭代時都將運行此代碼。
+3. 一些花括號包含一個代碼塊-每次循環迭代時都將運行此代碼。
 
 讓我們看一個真實的例子，以便我們可以更清楚地看到它們的作用。
 
@@ -235,15 +235,15 @@ para.textContent = info;
 
 這顯示了一個循環，該循環用於遍歷數組中的項目並對其進行處理-這是 JavaScript 中非常常見的模式。 這裡：
 
-1.  迭代器 i 從 0 開始（變量 i = 0）。
-2.  它被告知運行，直到它不再小於 cats 數組的長度為止。 這很重要,退出條件顯示了循環仍將運行的條件。 因此，在這種情況下，儘管 i \<cats.length 仍然為 true，循環仍將運行。
-3.  在循環內部，我們將當前循環項（cats \[i]是 cats \[無論 i 當時是什麼]）與一個逗號和一個空格連接到 info 變量的末尾。 所以：
+1. 迭代器 i 從 0 開始（變量 i = 0）。
+2. 它被告知運行，直到它不再小於 cats 數組的長度為止。 這很重要,退出條件顯示了循環仍將運行的條件。 因此，在這種情況下，儘管 i \<cats.length 仍然為 true，循環仍將運行。
+3. 在循環內部，我們將當前循環項（cats \[i]是 cats \[無論 i 當時是什麼]）與一個逗號和一個空格連接到 info 變量的末尾。 所以：
 
-    1.  在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（“ Bill，”）上。
-    2.  在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（“ Jeff，”）上
-    3.  等等。 每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
+    1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（“ Bill，”）上。
+    2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（“ Jeff，”）上
+    3. 等等。 每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
 
-4.  當 i 等於 cats.length 時，循環將停止，瀏覽器將繼續循環下方的下一段代碼。
+4. 當 i 等於 cats.length 時，循環將停止，瀏覽器將繼續循環下方的下一段代碼。
 
 > **備註：** We have made the exit condition `i < cats.length`, not `i <= cats.length`, because computers count from 0, not 1 — we are starting `i` at `0`, and going up to `i = 4` (the index of the last array item). `cats.length` returns 5, as there are 5 items in the array, but we don't want to get up to `i = 5`, as that would return `undefined` for the last item (there is no array item with an index of 5). So therefore we want to go up to 1 less than `cats.length` (`i <`), not the same as `cats.length` (`i <=`).
 
@@ -355,16 +355,16 @@ btn.addEventListener('click', function() {
 
 {{ EmbedLiveSample('中斷退出循環', '100%', 100) }}
 
-1.  首先，我們有一些變量定義-我們有一個聯繫信息陣列，每個項目都是一個字符串，其中包含用冒號分隔的姓名和電話號碼。
-2.  接下來，我們將事件監聽器附加到按鈕（btn），以便在按下按鈕時，將運行一些代碼來執行搜索並返回結果。
-3.  我們將輸入到文本輸入中的值存儲在一個名為 searchName 的變量中，然後清空文本輸入並再次對其進行聚焦，以準備進行下一次搜索。
-4.  現在到有趣的部分，for 循環：
+1. 首先，我們有一些變量定義-我們有一個聯繫信息陣列，每個項目都是一個字符串，其中包含用冒號分隔的姓名和電話號碼。
+2. 接下來，我們將事件監聽器附加到按鈕（btn），以便在按下按鈕時，將運行一些代碼來執行搜索並返回結果。
+3. 我們將輸入到文本輸入中的值存儲在一個名為 searchName 的變量中，然後清空文本輸入並再次對其進行聚焦，以準備進行下一次搜索。
+4. 現在到有趣的部分，for 循環：
 
-    1.  我們從 0 開始啟動計數器，運行循環直到計數器不再小於 contact.length，然後在每次循環之後將 i 遞增 1。
-    2.  在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
-    3.  然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
+    1. 我們從 0 開始啟動計數器，運行循環直到計數器不再小於 contact.length，然後在每次循環之後將 i 遞增 1。
+    2. 在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
+    3. 然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
 
-5.  在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為“找不到聯繫人。”，然後循環繼續進行迭代。
+5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為“找不到聯繫人。”，然後循環繼續進行迭代。
 
 > **備註：** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -435,10 +435,10 @@ Here's the output:
 
 {{ EmbedLiveSample('Skipping iterations with continue', '100%', 100) }}
 
-1.  In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
-2.  Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
-3.  If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4.  If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
+2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
+3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
+4. If the square root IS an integer, we skip past the if block entirely so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
 > **備註：** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 

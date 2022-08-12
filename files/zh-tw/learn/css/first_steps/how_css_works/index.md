@@ -37,12 +37,12 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 每當瀏覽器要顯示一份文件時，它得先為文件內容穿上樣式，這會歷經許多程序，我們已經列在下方了。記得喔，這只是非常簡化的版本，不同的瀏覽器會有自己的做法，不過原則上就是這樣。
 
-1.  瀏覽器載入 HTML (比如從網路上接收(receive))。
-2.  它將 {{Glossary("HTML")}} 轉換成 {{Glossary("DOM")}} (Document Object Model，文件物件模型)，這東西是文件在電腦記憶體中的表示形式，詳情我們下個小節再說。
-3.  瀏覽器蒐集所有 HTML 文件連到的資源，像是嵌入網頁的圖片和影片等等，當然，裡面也包含 CSS！JavaScript 也是其中的一種資源，在此步驟的稍後就會處理，但我們先不要把事情弄得這麼複雜，這邊暫且不講。
-4.  瀏覽器解析 (parse) CSS，先按照選擇器的類型(如元素、類別、ID 等等)，將規則放入相對應的「桶子(buckets)」裡。接著再依找到的選擇器，推算哪些規則應該要套用在哪些 DOM 節點上，並將樣式附著上去，最後產生的東西叫做轉譯樹(render tree)。
-5.  當規則都套用完畢後，開始按照網頁結構布局(layout)轉譯樹。
-6.  網頁被呈現在螢幕上，這個步驟稱為繪製(painting)。
+1. 瀏覽器載入 HTML (比如從網路上接收(receive))。
+2. 它將 {{Glossary("HTML")}} 轉換成 {{Glossary("DOM")}} (Document Object Model，文件物件模型)，這東西是文件在電腦記憶體中的表示形式，詳情我們下個小節再說。
+3. 瀏覽器蒐集所有 HTML 文件連到的資源，像是嵌入網頁的圖片和影片等等，當然，裡面也包含 CSS！JavaScript 也是其中的一種資源，在此步驟的稍後就會處理，但我們先不要把事情弄得這麼複雜，這邊暫且不講。
+4. 瀏覽器解析 (parse) CSS，先按照選擇器的類型(如元素、類別、ID 等等)，將規則放入相對應的「桶子(buckets)」裡。接著再依找到的選擇器，推算哪些規則應該要套用在哪些 DOM 節點上，並將樣式附著上去，最後產生的東西叫做轉譯樹(render tree)。
+5. 當規則都套用完畢後，開始按照網頁結構布局(layout)轉譯樹。
+6. 網頁被呈現在螢幕上，這個步驟稱為繪製(painting)。
 
 下面是此流程的示意圖。
 
@@ -167,8 +167,8 @@ p {
 
 ## 在這個主題中
 
-1.  [CSS 是什麼？](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [CSS 入門](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  [CSS 是如何組織的](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [CSS 是如何運作的](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [利用你學到的新知識](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [CSS 是什麼？](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [CSS 入門](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. [CSS 是如何組織的](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [CSS 是如何運作的](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [利用你學到的新知識](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

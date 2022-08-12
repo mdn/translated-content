@@ -45,9 +45,9 @@ translation_of: Learn/JavaScript/Objects/Object_building_practice
 
 先複製 [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html)`、style.css`、[`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) 檔案到你的本機磁碟中。這些檔案分別具備下列：
 
-1.  極簡的 HTML 文件，具備 1 個 {{HTMLElement("h1")}} 元素、1 個 {{HTMLElement("canvas")}} 元素可繪製彩球，以及其他元素可將 CSS 與 JavaScript 套用到 HTML 之上。
-2.  一些極簡單的樣式，主要可作為 `<h1> 的樣式風格與定位之用，並省去網頁邊緣的捲動棒或空白` (看起來更簡約)。
-3.  某些 JavaScript 可用以設定 `<canvas>` 元素，另有通用函式可供我們往後使用。
+1. 極簡的 HTML 文件，具備 1 個 {{HTMLElement("h1")}} 元素、1 個 {{HTMLElement("canvas")}} 元素可繪製彩球，以及其他元素可將 CSS 與 JavaScript 套用到 HTML 之上。
+2. 一些極簡單的樣式，主要可作為 `<h1> 的樣式風格與定位之用，並省去網頁邊緣的捲動棒或空白` (看起來更簡約)。
+3. 某些 JavaScript 可用以設定 `<canvas>` 元素，另有通用函式可供我們往後使用。
 
 指令碼第一部分就像：
 
@@ -128,15 +128,15 @@ Ball.prototype.draw = function() {
 
 你已經可以開始測試自己的物件了。
 
-1.  儲存目前的程式碼，在瀏覽器中載入此 HTML 檔案。
-2.  開啟瀏覽器的 JavaScript 主控台，並在主控台開啟時重新整理網頁，讓 canvas 尺寸變更為左側較小型的可視區域。
-3.  鍵入下列程式碼以建立新的球體實例：
+1. 儲存目前的程式碼，在瀏覽器中載入此 HTML 檔案。
+2. 開啟瀏覽器的 JavaScript 主控台，並在主控台開啟時重新整理網頁，讓 canvas 尺寸變更為左側較小型的可視區域。
+3. 鍵入下列程式碼以建立新的球體實例：
 
     ```js
     var testBall = new Ball();
     ```
 
-4.  再呼叫其成員：
+4. 再呼叫其成員：
 
     ```js
     testBall.x
@@ -145,7 +145,7 @@ Ball.prototype.draw = function() {
     testBall.draw()
     ```
 
-5.  輸入最後一行之後，應該就能看到 canvas 上出現自己產生的球體。
+5. 輸入最後一行之後，應該就能看到 canvas 上出現自己產生的球體。
 
 ### 更新球體的資料
 
@@ -193,7 +193,7 @@ Ball.prototype.update = function() {
 
 接著來玩玩吧。我們要加更多球到 canvas 中並開始動畫效果。
 
-1.  首先要弄個地方儲存所有的彩球。將下方陣列加到現有程式碼底部即可：
+1. 首先要弄個地方儲存所有的彩球。將下方陣列加到現有程式碼底部即可：
 
     ```js
     var balls = [];
@@ -201,7 +201,7 @@ Ball.prototype.update = function() {
 
     所有可提供動畫效果的程式，一般都會採用動畫迴圈，可用以更新程式中的資訊，並接著在動畫的各個畫格上繪製產生的結果。這也是大部分遊戲或類似程式的基礎。
 
-2.  再將下列程式碼加到現有程式碼底部：
+2. 再將下列程式碼加到現有程式碼底部：
 
     ```js
     function loop() {
@@ -229,7 +229,7 @@ Ball.prototype.update = function() {
     - 迴圈將巡過 `balls` 陣列中的所有彩球，並執行各個彩球的 `draw()` 與 `update()` 函式，以於畫面中逐一繪製，接著對下個畫格的位置與速度執行必要更新。
     - 再以 `requestAnimationFrame()` 函式執行過此函式 — 當此函式持續執行並傳送相同的函式名稱時，就會每秒執行此函式達特定次數，以產生流暢的動畫。接著重複執行此作業，也就是函式每次執行時均會呼叫自身 1 次，進而循環執行。
 
-3.  最後將下列程式碼加入最底端，呼叫函式 1 次讓動畫開始運作。
+3. 最後將下列程式碼加入最底端，呼叫函式 1 次讓動畫開始運作。
 
     ```js
     loop();
@@ -241,7 +241,7 @@ Ball.prototype.update = function() {
 
 現在弄點有趣的東西，就把碰撞偵測 (Collision detection) 加進程式裡，讓彩球知道自己碰到其他球了。
 
-1.  首先將下列函式定義加進你自己定義 `update()` 函式中 (例如 `Ball.prototype.update` 區塊)：
+1. 首先將下列函式定義加進你自己定義 `update()` 函式中 (例如 `Ball.prototype.update` 區塊)：
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -266,13 +266,13 @@ Ball.prototype.update = function() {
     - 接著使用一般演算法檢查 2 個球體之間的碰撞。我們基本上會檢查任 2 個球體的範圍是否重疊。另將透過〈[2D 碰撞偵測](/en-US/docs/Games/Techniques/2D_collision_detection)〉一文進一步解釋。
     - 如果偵測到碰撞，則隨即執行內部 `if` 陳述式的程式碼。在本範例中，我們剛設定了 2 個球體的 `color` 屬性為新的隨機色彩。但當然可以更複雜點，像是讓彩球更逼真的互相反彈，但這實作起來就更複雜了。對這類的物理模擬，開發者就必須使用如 [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/)、[matter.js](http://brm.io/matter-js/)、[Phaser](http://phaser.io/) 等的遊戲＼物理函式庫。
 
-2.  你也可以在動畫的每一畫格中呼叫此一函式。在 `balls[i].update();` 這一行下方新增下列程式碼即可：
+2. 你也可以在動畫的每一畫格中呼叫此一函式。在 `balls[i].update();` 這一行下方新增下列程式碼即可：
 
     ```js
     balls[i].collisionDetect();
     ```
 
-3.  儲存並重新整理之後，就能看到球體在碰撞時變更其色彩了！
+3. 儲存並重新整理之後，就能看到球體在碰撞時變更其色彩了！
 
 > **備註：** 如果你無法讓此範例順利運作，可比較我們的[最後版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (另可參閱[實際執行情形](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html))。
 

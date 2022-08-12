@@ -32,34 +32,34 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 陣列用方括弧包起來，每個單位會用逗號分隔起來。
 
-1.  來作一個購物清單的陣列吧：我們會做類似下面的事情。在主控台中輸入以下程式：
+1. 來作一個購物清單的陣列吧：我們會做類似下面的事情。在主控台中輸入以下程式：
 
     ```js
     var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping;
     ```
 
-2.  在此，陣列的每個單位都是字串。但請記住，陣列可以儲存任何單位：字串、數字、物件、另一個變數、甚至是另一個陣列。也可以混合單位的型別：它們不一定都要是數字或字串。來試試這個：
+2. 在此，陣列的每個單位都是字串。但請記住，陣列可以儲存任何單位：字串、數字、物件、另一個變數、甚至是另一個陣列。也可以混合單位的型別：它們不一定都要是數字或字串。來試試這個：
 
     ```js
     var sequence = [1, 1, 2, 3, 5, 8, 13];
     var random = ['tree', 795, [0, 1, 2]];
     ```
 
-3.  看下去之前，試著自己作幾個陣列。
+3. 看下去之前，試著自己作幾個陣列。
 
 ### 存取並修改陣列的單位
 
 你可以使用括號標記法存取個別單位，同時也可以[存取字串中的字母](/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)。
 
-1.  在主控台輸入以下程式：
+1. 在主控台輸入以下程式：
 
     ```js
     shopping[0];
     // returns "bread"
     ```
 
-2.  也可以透過賦予陣列新數值修改該單位。試試這個：
+2. 也可以透過賦予陣列新數值修改該單位。試試這個：
 
     ```js
     shopping[0] = 'tahini';
@@ -69,13 +69,13 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
     > **備註：** 前面有說過，但還是提醒下：電腦從 0 開始數！
 
-3.  請注意，陣列裡面的陣列稱為多維陣列（multidimensional array）。你可以撰寫兩組方括弧，來存取陣列裡面的陣列單位。例如說，存取前述 `random` 變數內的陣列單位就可以這麼寫：
+3. 請注意，陣列裡面的陣列稱為多維陣列（multidimensional array）。你可以撰寫兩組方括弧，來存取陣列裡面的陣列單位。例如說，存取前述 `random` 變數內的陣列單位就可以這麼寫：
 
     ```js
     random[2][2];
     ```
 
-4.  看下去之前，試著進一步使用並修改陣列。
+4. 看下去之前，試著進一步使用並修改陣列。
 
 ### 找出陣列長度
 
@@ -97,9 +97,9 @@ for (var i = 0; i < sequence.length; i++) {
 
 在後續的章節，你會學到更多關於迴圈的部分；簡而言之，上述程式碼的意思是：
 
-1.  從陣列中索引為 0 的單元開始循環。
-2.  當索引值等於陣列的長度時，停止循環。這個方法對任何長度的陣列都可行，但在這個例子中，迴圈會當索引等於 7 時停止循環（這樣很好，因為最後一個單元——我們希望有包含到的——是 6）。
-3.  我們在瀏覽器 console 中用 [`console.log()`](/en-US/docs/Web/API/Console/log) 將每個單元列印出來。
+1. 從陣列中索引為 0 的單元開始循環。
+2. 當索引值等於陣列的長度時，停止循環。這個方法對任何長度的陣列都可行，但在這個例子中，迴圈會當索引等於 7 時停止循環（這樣很好，因為最後一個單元——我們希望有包含到的——是 6）。
+3. 我們在瀏覽器 console 中用 [`console.log()`](/en-US/docs/Web/API/Console/log) 將每個單元列印出來。
 
 ## 好用的陣列方法
 
@@ -111,20 +111,20 @@ for (var i = 0; i < sequence.length; i++) {
 
 > **備註：** 好的，在技術上它屬於字串的方法，而非陣列的方法。但因為它可以很順利地對陣列進行操作，因此我們把它列在這邊。
 
-1.  來試試這個，看它如何運作。首先，建立一個字串在你的 console:
+1. 來試試這個，看它如何運作。首先，建立一個字串在你的 console:
 
     ```js
     var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  現在我們用逗點來分隔字串：
+2. 現在我們用逗點來分隔字串：
 
     ```js
     var myArray = myData.split(',');
     myArray;
     ```
 
-3.  最後，試著找出你新的陣列的長度，並且從中取出一些單元：
+3. 最後，試著找出你新的陣列的長度，並且從中取出一些單元：
 
     ```js
     myArray.length;
@@ -133,14 +133,14 @@ for (var i = 0; i < sequence.length; i++) {
     myArray[myArray.length-1]; // the last item in the array
     ```
 
-4.  相對地，你也可以用 {{jsxref("Array.prototype.join()","join()")}} 方法。試試下面這段：
+4. 相對地，你也可以用 {{jsxref("Array.prototype.join()","join()")}} 方法。試試下面這段：
 
     ```js
     var myNewString = myArray.join(',');
     myNewString;
     ```
 
-5.  另一個將陣列轉換為字串的方法是用 {{jsxref("Array.prototype.toString()","toString()")}} 。`toString()` 因為不需要參數而比 `join()` 更簡潔，但因此也更多限制。使用 `join()` 你可以使用特定的分隔符（試著使用其他不同的字元來執行步驟 4）。
+5. 另一個將陣列轉換為字串的方法是用 {{jsxref("Array.prototype.toString()","toString()")}} 。`toString()` 因為不需要參數而比 `join()` 更簡潔，但因此也更多限制。使用 `join()` 你可以使用特定的分隔符（試著使用其他不同的字元來執行步驟 4）。
 
     ```js
     var dogNames = ['Rocket','Flash','Bella','Slugger'];
@@ -157,7 +157,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 首先，我們可以分別使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 來增加或移除一個在陣列最末端的單元 。
 
-1.  Let's use `push()` first — note that you need to include one or more items that you want to add to the end of your array. Try this:
+1. Let's use `push()` first — note that you need to include one or more items that you want to add to the end of your array. Try this:
 
     ```js
     myArray.push('Cardiff');
@@ -166,7 +166,7 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     myArray;
     ```
 
-2.  The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
+2. The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
 
     ```js
     var newLength = myArray.push('Bristol');
@@ -174,13 +174,13 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
     newLength;
     ```
 
-3.  Removing the last item from the array is as simple as running `pop()` on it. Try this:
+3. Removing the last item from the array is as simple as running `pop()` on it. Try this:
 
     ```js
     myArray.pop();
     ```
 
-4.  The item that was removed is returned when the method call completes. To save that item in a new variable, you could do this:
+4. The item that was removed is returned when the method call completes. To save that item in a new variable, you could do this:
 
     ```js
     var removedItem = myArray.pop();
@@ -190,14 +190,14 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} and {{jsxref("Array.prototype.shift()","shift()")}} work in exactly the same way as `push()` and `pop()`, respectively, except that they work on the beginning of the array, not the end.
 
-1.  First `unshift()` — try the following commands:
+1. First `unshift()` — try the following commands:
 
     ```js
     myArray.unshift('Edinburgh');
     myArray;
     ```
 
-2.  Now `shift()`; try these!
+2. Now `shift()`; try these!
 
     ```js
     var removedItem = myArray.shift();
@@ -209,12 +209,12 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:
 
-1.  Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
-2.  On the same line as the `// number 2` comment is the beginning of a for loop. In this line we currently have `i <= 0`, which is a conditional test that causes the [for loop](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) to stop immediately, because it is saying "stop when `i` is no longer less than or equal to 0", and `i` starts at 0. We'd like you to replace this with a conditional test that stops the loop when `i` is no longer less than the `products` array's length.
-3.  Just below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#在字串與陣列之間轉換) section of this article.
-4.  As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
-5.  There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) to do this.
-6.  We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
+1. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
+2. On the same line as the `// number 2` comment is the beginning of a for loop. In this line we currently have `i <= 0`, which is a conditional test that causes the [for loop](/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops) to stop immediately, because it is saying "stop when `i` is no longer less than or equal to 0", and `i` starts at 0. We'd like you to replace this with a conditional test that stops the loop when `i` is no longer less than the `products` array's length.
+3. Just below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#在字串與陣列之間轉換) section of this article.
+4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
+5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators) to do this.
+6. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
 
 ```html hidden
 <h2>Live output</h2>
@@ -382,8 +382,8 @@ In this example we're going to show a much simpler use — here we're giving you
 
 To complete the app, we need you to:
 
-1.  Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
-2.  Add a line below the `// number 2` comment that removes the value currently at the end of the array.
+1. Add a line below the `// number 1` comment that adds the current value entered into the search input to the start of the array. This can be retrieved using `searchInput.value`.
+2. Add a line below the `// number 2` comment that removes the value currently at the end of the array.
 
 ```html hidden
 <h2>Live output</h2>

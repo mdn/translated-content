@@ -233,7 +233,7 @@ greeting: function() {
 }
 ```
 
-你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this `就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
+你可能會想這個「this」是幹嘛用的。「this」是指目前寫入程式碼的物件；所以此範例的 `this` 就等於 `person`。那又為何不寫 `person` 就好呢？如同你在〈[初學者的物件導向 JavaScript](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS)〉一文中所看過的，當我們開始設定建構子等東西時，有用的「`this`」就可在成員內文改變時 (例如 2 個不同 `person` 物件實例可能具備不同的名稱，但打招呼時仍要使用自己的名稱)，確保仍使用了正確的值。
 
 先用簡化的一對 person 物件說明：
 

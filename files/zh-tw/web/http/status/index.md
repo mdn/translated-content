@@ -7,11 +7,11 @@ translation_of: Web/HTTP/Status
 
 HTTP 狀態碼表明一個 [HTTP](/zh-TW/docs/Web/HTTP) 要求是否已經被完成。回應分為五種：
 
-1.  資訊回應 (Informational responses, `100`–`199`),
-2.  成功回應 (Successful responses, `200`–`299`),
-3.  重定向 (Redirects, `300`–`399`),
-4.  用戶端錯誤 (Client errors, `400`–`499`),
-5.  伺服器端錯誤 (Server errors, `500`–`599`).
+1. 資訊回應 (Informational responses, `100`–`199`),
+2. 成功回應 (Successful responses, `200`–`299`),
+3. 重定向 (Redirects, `300`–`399`),
+4. 用戶端錯誤 (Client errors, `400`–`499`),
+5. 伺服器端錯誤 (Server errors, `500`–`599`).
 
 以下的狀態碼定義在 [section 10 of RFC 2616](https://tools.ietf.org/html/rfc2616#section-10) 中。你可以在 [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6.5.1) 查看更新過的規範。
 

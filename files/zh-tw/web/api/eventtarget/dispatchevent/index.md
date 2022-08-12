@@ -23,11 +23,11 @@ cancelled = !target.dispatchEvent(event)
 - 會在事件完成傳遞（捕捉、命中、冒泡三階段）之後才回傳其值。
 - 若事件在傳遞過程當中，事件是可被取消的（{{domxref("Event.cancelable")}} 屬性為 `true`）且曾於一個或一個以上的事件處理器中被執行了該事件的 {{domxref("Event.preventDefault()")}} 方法（且事件須確實已被取消了預設行為），即回傳 `false`。否則回傳 `true` 值。
 
-若遇到以下 3 種情況，`dispatchEvent `會拋出錯誤資訊－－ `UNSPECIFIED_EVENT_TYPE_ERR` ：
+若遇到以下 3 種情況，`dispatchEvent` 會拋出錯誤資訊－－ `UNSPECIFIED_EVENT_TYPE_ERR` ：
 
-1.  執行 `dispatchEvent` 前並未藉由初始化事件指定事件類型
-2.  事件類型為 `null` 。
-3.  事件類型是個空白字串。
+1. 執行 `dispatchEvent` 前並未藉由初始化事件指定事件類型
+2. 事件類型為 `null` 。
+3. 事件類型是個空白字串。
 
 這些異常，處理器會報告「異常未捕獲（uncaught exceptions）」；
 

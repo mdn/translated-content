@@ -52,7 +52,7 @@ Date.UTC(year, month[, day[, hour[, minute[, second[, millisecond]]]]])
 
 當你指定參數超出預期的範圍， UTC( ) 方法會去調整其它的參數使之成立。比如如果你指定月份為 15 ，年份將被加 1 ，以 3 作為傳入的月份。
 
-因為 UTC( ) 是 {{jsxref("Date")}} 的一個靜態方法，只能使用 `Date.UTC() 的方式呼叫，而不能由建立出來的 `{{jsxref("Date")}} 物件去執行它。
+因為 UTC( ) 是 {{jsxref("Date")}} 的一個靜態方法，只能使用 `Date.UTC()` 的方式呼叫，而不能由建立出來的 {{jsxref("Date")}} 物件去執行它。
 
 ## 範例
 

@@ -65,8 +65,8 @@ Person.prototype.greeting = function() {
 
 假設要建立一個像前面 OO 定義中說過的 `Teacher` 類別，且除了繼承 `Person` 的所有成員，還要包含：
 
-1.  新的 `subject` 屬性，可包含老師所傳授的科目。
-2.  更新過的 `greeting()` 函式，要比標準的 `greeting()` 函式更正式一點，更適合老師在校對學生使用。
+1. 新的 `subject` 屬性，可包含老師所傳授的科目。
+2. 更新過的 `greeting()` 函式，要比標準的 `greeting()` 函式更正式一點，更適合老師在校對學生使用。
 
 ## 定義 Teacher() 建構子函式
 
@@ -84,7 +84,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 
 > **備註：** 我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數 (在建立物件時，你可能獲得設定為隨意值的屬性)。
 
-所以這裡可在 `Teacher()` 建構子函式之內有效執行 `Person() `建構子函式 (如上述)，藉以在 `Teacher()` 之內定義相同的屬性，但使用的是傳送到 `Teacher()` 的屬性值，而非 `Person()` 的屬性值 (我們將 `this` 值設為簡單的「`this」並`傳送到 `call()`，代表這個 `this` 是 `Teacher()` 的函式)。
+所以這裡可在 `Teacher()` 建構子函式之內有效執行 `Person()` 建構子函式 (如上述)，藉以在 `Teacher()` 之內定義相同的屬性，但使用的是傳送到 `Teacher()` 的屬性值，而非 `Person()` 的屬性值 (我們將 `this` 值設為簡單的「`this」並`傳送到 `call()`，代表這個 `this` 是 `Teacher()` 的函式)。
 
 建構子的最後一行則定義了新的 `subject` 屬性，代表只有老師具備，一般人不會有。
 
@@ -109,7 +109,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 
 到目前為止發現一個問題：我們定義了新的建構子，但預設只有 1 個空白的 `prototype` 屬性。接著要讓 `Teacher()` 繼承 `Person()` 原型中所定義的函式，該怎麼做呢？
 
-1.  繼續在現有程式碼下方加入：
+1. 繼續在現有程式碼下方加入：
 
     ```js
     Teacher.prototype = Object.create(Person.prototype);
@@ -117,19 +117,19 @@ function Teacher(first, last, age, gender, interests, subject) {
 
     這裡再次用好朋友 [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 解救。我們透過 `create()` 並搭配等同於 `Person.prototype` 的原型，建立新的 `prototype` 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 `Teacher.prototype` `的值。也就是說` `Teacher.prototype` 現在會繼承 `Person.prototype` 上的所有可用函式。
 
-2.  此外，基於我們的繼承方式，`Teacher()` `prototype` 的建構子屬性目前設定為 `Person()。可參閱` [Stack Overflow post](https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor) 進一步了解原因。可先儲存自己的程式碼、在瀏覽器中載入頁面，再將下列程式碼輸入至 JavaScript 主控台以驗證：
+2. 此外，基於我們的繼承方式，`Teacher()` `prototype` 的建構子屬性目前設定為 `Person()。可參閱` [Stack Overflow post](https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor) 進一步了解原因。可先儲存自己的程式碼、在瀏覽器中載入頁面，再將下列程式碼輸入至 JavaScript 主控台以驗證：
 
     ```js
     Teacher.prototype.constructor
     ```
 
-3.  這樣可能會產生問題，所以要設定正確。你可回到自己的原始碼並在最下方加入下列程式碼：
+3. 這樣可能會產生問題，所以要設定正確。你可回到自己的原始碼並在最下方加入下列程式碼：
 
     ```js
     Teacher.prototype.constructor = Teacher;
     ```
 
-4.  如果儲存並重新整理之後，只要輸入 `Teacher.prototype.constructor` 應該就會回傳 `Teacher()`。
+4. 如果儲存並重新整理之後，只要輸入 `Teacher.prototype.constructor` 應該就會回傳 `Teacher()`。
 
 ## 給 Teacher() 新的 greeting() 函式
 
@@ -193,9 +193,9 @@ teacher1.greeting();
 
 簡單來說，你基本上需要考量 3 種類型的屬性＼函式：
 
-1.  已於建構子函式中定義，會交給物件實體的屬性＼函式。這應該很容易處理。在你自己的程式碼中，就是透過 `this.x = x` 類別行並在建構子中定義的成員；在瀏覽器程式碼中，就是僅限物件實體可用的成員 (一般是透過 `new` 關鍵字並呼叫建構子所建立，例如 `var myInstance = new myConstructor()`)。
-2.  直接在建構子上定義，並僅能用於該建構子的屬性＼函式。這類屬性＼函式往往只能用於內建瀏覽器物件之上，並直接「鍊接」至建構子 (而非實例) 以利識別，例如 [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)。
-3.  定義於建構子原型上的屬性＼函式，交由所有的實例繼承，亦繼承了物件類別。這類屬性＼函式包含建構子原型屬性之上定義的所有成員，例如 `myConstructor.prototype.x()`。
+1. 已於建構子函式中定義，會交給物件實體的屬性＼函式。這應該很容易處理。在你自己的程式碼中，就是透過 `this.x = x` 類別行並在建構子中定義的成員；在瀏覽器程式碼中，就是僅限物件實體可用的成員 (一般是透過 `new` 關鍵字並呼叫建構子所建立，例如 `var myInstance = new myConstructor()`)。
+2. 直接在建構子上定義，並僅能用於該建構子的屬性＼函式。這類屬性＼函式往往只能用於內建瀏覽器物件之上，並直接「鍊接」至建構子 (而非實例) 以利識別，例如 [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)。
+3. 定義於建構子原型上的屬性＼函式，交由所有的實例繼承，亦繼承了物件類別。這類屬性＼函式包含建構子原型屬性之上定義的所有成員，例如 `myConstructor.prototype.x()`。
 
 如果你不確定到底屬於上述的哪一個，也別擔心。現在你還在學習階段，往後定會熟能生巧。
 

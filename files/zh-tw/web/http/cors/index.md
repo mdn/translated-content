@@ -309,8 +309,8 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 
 但若難以實施以上方法，仍有其他可行的方式：
 
-1.  建立一個[簡單請求](#Simple_requests)來測定（使用 Fetch API 的 [Response.url](/zh-TW/docs/Web/API/Response/url) 或 [XHR.responseURL](/zh-TW/docs/Web/API/XMLHttpRequest/responseURL) 來測定預檢請求最終真正導向的 URL）。
-2.  建立另一個請求（「真正的」請求）傳送至第一步自 [Response.url](/zh-TW/docs/Web/API/Response/url) 或 [XHR.responseURL](/zh-TW/docs/Web/API/XMLHttpRequest/responseURL) 所獲得的 URL。
+1. 建立一個[簡單請求](#Simple_requests)來測定（使用 Fetch API 的 [Response.url](/zh-TW/docs/Web/API/Response/url) 或 [XHR.responseURL](/zh-TW/docs/Web/API/XMLHttpRequest/responseURL) 來測定預檢請求最終真正導向的 URL）。
+2. 建立另一個請求（「真正的」請求）傳送至第一步自 [Response.url](/zh-TW/docs/Web/API/Response/url) 或 [XHR.responseURL](/zh-TW/docs/Web/API/XMLHttpRequest/responseURL) 所獲得的 URL。
 
 然而，假如請求是由於存在 `Authorization` 標頭而觸發預檢，便無法利用以上的步驟來解除限制。並且直到你對被請求的伺服擁有控制權前，沒有其他方式能夠解決。
 
