@@ -39,18 +39,18 @@ text-decoration-skip: unset;
  <dt><code>spaces</code></dt>
  <dd>All spacing is skipped, i.e. all <a href="http://www.unicode.org/reports/tr44/#White_Space">Unicode white space characters</a> and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.</dd>
  <dt><code>ink</code></dt>
- <dd>The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.</dd>
- <dd><img alt='An example of "text-decoration-skip: ink;".' src="https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png"></dd>
+ <dd><p>The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.</p>
+ <img alt='An example of "text-decoration-skip: ink;".' src="https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png"></dd>
  <dt><code>edges</code></dt>
- <dd>The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)</dd>
- <dd><img alt='An example of "text-decoration-skip: edges;".' src="https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png"></dd>
+ <dd><p>The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)</p>
+ <img alt='An example of "text-decoration-skip: edges;".' src="https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png"></dd>
  <dt><code>box-decoration</code></dt>
  <dd>The text decoration is skipped over the box's margin, border and padding areas. This only has an effect on decorations imposed by an ancestor; a <em>decorating box</em> never draws over its own box decoration.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 
-<p class="syntaxbox">{{csssyntax}}</p>
+<p>{{csssyntax}}</p>
 
 <h2 id="Примеры">Примеры</h2>
 

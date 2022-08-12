@@ -108,9 +108,9 @@ border-radius: unset;
 </table>
 
 <dl>
- <dt><a id="&lt;length>" name="&lt;length>">{{cssxref("&lt;length&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Обозначает размер радиуса окружности или две полуоси эллипса. Может быть выражена в любых единицах CSS. Отрицательные значения не принимаются.</dd>
- <dt><a id="&lt;percentage>" name="&lt;percentage>">{{cssxref("&lt;percentage&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Обозначает размер радиуса окружности, или две полуоси эллипса. Проценты по горизонтальной оси относятся к ширине элемента, проценты по вертикальной оси к высоте. Отрицательные значения недействительны.</dd>
 </dl>
 
@@ -140,37 +140,92 @@ border-bottom-left-radius:  3px 4px;
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre style="display: inline-block; margin: 10px; border: solid 10px; border-radius: 10px 40px 40px 10px;">  border: solid 10px;
-  /* угол изгибается в виде 'D' */
+<pre class="brush: html hidden">
+  &lt;pre id="example-1"&gt;
+border: solid 10px;
+border-radius: 10px 40px 40px 10px;
+  &lt;/pre&gt;
+  &lt;pre id="example-2"&gt;
+border: groove 1em red;
+border-radius: 2em;
+  &lt;/pre&gt;
+  &lt;pre id="example-3"&gt;
+background: gold;
+border: ridge gold;
+border-radius: 13em/3em;
+  &lt;/pre&gt;
+  &lt;pre id="example-4"&gt;
+border: none;
+border-radius: 40px 10px;
+background: gold;
+  &lt;/pre&gt;
+  &lt;pre id="example-5"&gt;
+border: none;
+border-radius: 50%;
+background: burlywood;
+  &lt;/pre&gt;
+  &lt;pre id="example-6"&gt;
+border: dotted;
+border-width: 10px 4px;
+border-radius: 10px 40px;
+  &lt;/pre&gt;
+  &lt;pre id="example-7"&gt;
+border: dashed;
+border-width: 2px 4px;
+border-radius: 40px;
+  &lt;/pre&gt;
+</pre>
+
+<pre class="brush: css hidden">
+pre {
+  margin: 20px;
+  padding: 20px;
+  width: 80%;
+  height: 80px;
+}
+
+pre#example-1 {
+  border: solid 10px;
   border-radius: 10px 40px 40px 10px;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; border: groove 1em red; border-radius: 2em;">  border: groove 1em red;
+pre#example-2 {
+  border: groove 1em red;
   border-radius: 2em;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; background: gold; border: ridge gold; border-radius: 13em/3em;">  background: gold;
+pre#example-3 {
+  background: gold;
   border: ridge gold;
   border-radius: 13em/3em;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; background: gold; border: none; border-radius: 40px 10px;">  border: none;
+pre#example-4 {
+  border: none;
   border-radius: 40px 10px;
-</pre>
+  background: gold;
+}
 
-<pre style="display: inline-block; margin: 10px; background: burlywood; border: none; border-radius: 50%;">  border: none;
+pre#example-5 {
+  border: none;
   border-radius: 50%;
-</pre>
+  background: burlywood;
+}
 
-<pre style="display: inline-block; margin: 10px; border: dotted; border-width: 10px 4px; border-radius: 10px 40px;">  border: dotted;
+pre#example-6 {
+  border: dotted;
   border-width: 10px 4px;
   border-radius: 10px 40px;
-</pre>
+}
 
-<pre style="display: inline-block; margin: 10px; border: dashed; border-width: 2px 4px; border-radius: 40px;">  border: dashed;
+pre#example-7 {
+  border: dashed;
   border-width: 2px 4px;
   border-radius: 40px;
+}
 </pre>
+
+{{EmbedLiveSample("", "200", "1150")}}
 
 <h2 id="Живые_примеры">Живые примеры</h2>
 
