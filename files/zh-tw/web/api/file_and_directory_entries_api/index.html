@@ -107,8 +107,7 @@ objectStore.add(myFile, myKey).onsuccess = function(event) {
   <dt>
     active</dt>
   <dd>
-    一旦建立之後，就隨即啟動 LockedFile。此 LockedFile 是「可寫入存取 (Write access) 實際底層檔案」的唯一物件。LockedFile 上的作業，均於 <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a> 之中執行；也就是說，只要啟動了 LockedFile，則此 LockedFile 的所有作業都一定會在底層檔案上依序執行，而不會與其他 LockedFiles 的作業交錯執行。</dd>
-  <dd>
+    一旦建立之後，就隨即啟動 LockedFile。此 LockedFile 是「可寫入存取 (Write access) 實際底層檔案」的唯一物件。LockedFile 上的作業，均於 <a href="http://en.wikipedia.org/wiki/Isolation_%28database_systems%29">isolation</a> 之中執行；也就是說，只要啟動了 LockedFile，則此 LockedFile 的所有作業都一定會在底層檔案上依序執行，而不會與其他 LockedFiles 的作業交錯執行。
     若停用了 LockedFile，則只要在同樣的 LockedFile 上執行讀/寫作業，都會丟出錯誤訊息。</dd>
 </dl>
 <dl>
@@ -177,10 +176,7 @@ request.onsuccess = function(event) {
   readonly attribute LockedFile lockedFile;
   attribute Function? onprogress;
 };</pre>
-<dl>
-  <dt>
-     </dt>
-</dl>
+
 <h2 id="說明">說明</h2>
 <h3 id="API_與_FileWriter_的差異？">API 與 FileWriter 的差異？</h3>
 <p><a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">FileWriter 規格</a>定義了 FileWriter，也就是用以呈現「可編輯的檔案」的物件。<a href="http://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html">Public-webapps 討論串</a>則下了結論：若單一檔案同時寫入不同的實體 (Entity)，將導致 API 成效不彰。最後就是 FileHandle API 應具備自己的 LockedFile 與交易機制。</p>

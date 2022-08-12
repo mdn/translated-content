@@ -29,7 +29,9 @@ width: initial;
 width: unset;
 </pre>
 
-<div class="hidden" id="width">
+<h2>Examples</h2>
+
+<div class="hidden">
 <pre class="brush: html">&lt;div class="grid"&gt;
   &lt;div class="col"&gt;
     &lt;div class="cell"&gt;
@@ -55,8 +57,6 @@ width: unset;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-
-<p>sd</p>
 
 <pre class="brush: css">html,body {
   height: 100%;
@@ -120,10 +120,10 @@ p {
 .w11 { width: fit-content; }</pre>
 </div>
 
-<div>{{EmbedLiveSample("width", "100%", 660, "", "", "example-outcome-frame")}}</div>
+<div>{{EmbedLiveSample("examples", "100%", 660)}}</div>
 
 <div class="note">
-<p><strong>注意：</strong> {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.</p>
+<p>{{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.</p>
 </div>
 
 <div>{{cssinfo}}</div>
@@ -140,25 +140,25 @@ p {
 <h3 id="Values">Values</h3>
 
 <dl>
- <dt><a id="&lt;length>" name="&lt;length>">{{cssxref("&lt;length&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Defines the width as an absolute value.</dd>
- <dt><a id="&lt;percentage>" name="&lt;percentage>">{{cssxref("&lt;percentage&gt;")}}</a></dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Defines the width as a percentage of the containing block's width. If the width of the containing block depends on the width of the element, the resulting layout is undefined.</dd>
- <dt><code><a id="border-box" name="border-box">border-box</a> </code>{{experimental_inline}}</dt>
+ <dt><code>border-box</code>{{experimental_inline}}</dt>
  <dd>If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's border box.</dd>
- <dt><a id="content-box" name="content-box"><code>content-box</code></a> {{experimental_inline}}</dt>
+ <dt><code>content-box</code> {{experimental_inline}}</dt>
  <dd>If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's content box.</dd>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
+ <dt><code>auto</code></dt>
  <dd>The browser will calculate and select a width for the specified element.</dd>
- <dt><a id="fill" name="fill"><code>fill</code></a> {{experimental_inline}}</dt>
+ <dt><code>fill</code> {{experimental_inline}}</dt>
  <dd>Use the <code>fill-available</code> inline size or <code>fill-available</code> block size, as appropriate to the writing mode.</dd>
- <dt><a id="max-content" name="max-content"><code>max-content</code></a> {{experimental_inline}}</dt>
+ <dt><code>max-content</code> {{experimental_inline}}</dt>
  <dd>The intrinsic preferred width.</dd>
- <dt><a id="min-content" name="min-content"><code>min-content</code></a> {{experimental_inline}}</dt>
+ <dt><code>min-content</code> {{experimental_inline}}</dt>
  <dd>The intrinsic minimum width.</dd>
- <dt><a id="available" name="available"><code>available</code></a> {{experimental_inline}}</dt>
+ <dt><code>available</code> {{experimental_inline}}</dt>
  <dd>The containing block width minus horizontal margin, border and padding.</dd>
- <dt><a id="fit-content" name="fit-content"><code>fit-content</code></a> {{experimental_inline}}</dt>
+ <dt><code>fit-content</code> {{experimental_inline}}</dt>
  <dd>The larger of:
  <ul>
   <li>the intrinsic minimum width</li>

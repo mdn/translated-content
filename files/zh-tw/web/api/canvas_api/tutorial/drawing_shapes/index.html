@@ -513,7 +513,7 @@ new Path2D(d);    // 以傳入的 SVG 路徑建立 Path2D 物件</pre>
 
 <p>這個例子用 Path2D 物件將矩形和圓形的繪圖路徑存起來，以供之後使用。而配合新的 Path2D API，有一些繪圖方法更接受傳入 Path2D 作為繪圖路徑使用，例如下方本例所用到的 stroke 和 fill。</p>
 
-<pre class="brush: js;highlight[6,9]">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');

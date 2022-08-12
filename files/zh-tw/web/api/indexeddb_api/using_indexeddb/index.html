@@ -77,7 +77,7 @@ request.onsuccess = function(event) {
 </pre>
 <p>最常見的錯誤之一就是VER_ERR，該錯誤代表現在資料料庫版本大於嘗試開啟的資料庫版本，這項錯誤必須要有錯誤處理器處理。</p>
 <h3 id="建立或更新資料庫版本">建立或更新資料庫版本</h3>
-<p><a name="Updating_the_version_of_the_database"></a>新版本資料庫建立會觸發onupgradeneeded事件，在這個事件的處理器中要建立這個版本資料庫需要的物件存檔。</p>
+<p>新版本資料庫建立會觸發onupgradeneeded事件，在這個事件的處理器中要建立這個版本資料庫需要的物件存檔。</p>
 <pre class="brush:js;">// This event is only implemented in recent browsers
 request.onupgradeneeded = function(event) {
   var db = event.target.result;

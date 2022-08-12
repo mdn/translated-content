@@ -26,11 +26,11 @@ translation_of: Web/CSS/Syntax
 
 <p>Declarations are grouped in <strong>blocks</strong>, that is in a structure delimited by an opening brace, '<code>{</code>' (<code>U+007B LEFT CURLY BRACKET</code>), and a closing one, '<code>}</code>' (<code>U+007D RIGHT CURLY BRACKET</code>). Blocks sometimes can be nested, so opening and closing braces must be matched.</p>
 
-<p><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style=""></p>
+<p><img alt="css syntax - block.png" src="/@api/deki/files/6165/=css_syntax_-_block.png" style=""></p>
 
 <p>Such blocks are naturally called <strong>declaration blocks</strong> and declarations inside them are separated by a semi-colon, '<code>;</code>' (<code>U+003B SEMICOLON</code>). A declaration block may be empty, that is containing null declaration. White spaces around declarations are ignored. The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered <em>good style</em> to do it as it prevents forgetting to add it when extending the block with another declaration.</p>
 
-<p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style=""></p>
+<p><img alt="css syntax - declarations block.png" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style=""></p>
 
 <div class="note">The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML {{htmlattrxref("style")}} attribute.</div>
 
@@ -40,7 +40,7 @@ translation_of: Web/CSS/Syntax
 
 <p>CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated <strong>selectors</strong> which are conditions selecting some elements of the page. The pair selector group-declarations block is called a <strong>ruleset</strong>, or often simply a <strong>rule</strong>.</p>
 
-<p><img alt="css syntax - ruleset.png" class="default internal" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style=""></p>
+<p><img alt="css syntax - ruleset.png" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style=""></p>
 
 <p>As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">cascade</a> algorithm.</p>
 
@@ -54,7 +54,7 @@ This leads to an important consequence: if one single basic selector is invalid,
 
 <p>A <strong>statement</strong> is a building block that begins with any non-space characters and ends at the first closing brace or semi-colon (outside a string, non-escaped and not included into another {}, () or [] pair).</p>
 
-<p><img alt="css syntax - statements Venn diag.png" class="default internal" src="/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png" style="padding: 1em;"></p>
+<p><img alt="css syntax - statements Venn diag.png" src="/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png" style="padding: 1em;"></p>
 
 <p>There are two kinds of statements:</p>
 
@@ -65,7 +65,7 @@ This leads to an important consequence: if one single basic selector is invalid,
 
 <p>Any statement which isn't a ruleset or an at-rule is invalid and ignored.</p>
 
-<p>There is another group of statements – the <strong>nested statements</strong>. These are statements that can be used in a specific subset of at-rules – the <em>conditional group rules</em>. These statements only apply if a specific condition is matched: the <code>@media</code> at-rule content is applied only if the device on which the browser runs matches the expressed condition; the <code>@document</code> at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only <em>rulesets</em> could be used inside conditional group rules. That was very restrictive and this restriction was lifted in <a href="/en-US/docs/Web/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>. Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.</p>
+<p>There is another group of statements - the <strong>nested statements</strong>. These are statements that can be used in a specific subset of at-rules – the <em>conditional group rules</em>. These statements only apply if a specific condition is matched: the <code>@media</code> at-rule content is applied only if the device on which the browser runs matches the expressed condition; the <code>@document</code> at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only <em>rulesets</em> could be used inside conditional group rules. That was very restrictive and this restriction was lifted in <a href="/en-US/docs/Web/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>. Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.</p>
 
 <h2 id="See_also">See also</h2>
 
