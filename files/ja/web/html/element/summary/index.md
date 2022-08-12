@@ -11,152 +11,141 @@ tags:
   - Reference
   - Summary
   - Web
+browser-compat: html.elements.summary
 translation_of: Web/HTML/Element/summary
 ---
-<div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の概要明示要素</strong> (<strong><code>&lt;summary&gt;</code></strong>) は、 {{HTMLElement("details")}} 要素の内容の要約、キャプション、説明、凡例を表します。</span> <code>&lt;summary&gt;</code> 要素をクリックすると、親の <code>&lt;details&gt;</code> 要素の開閉状態を切り替えることができます。</p>
+{{HTMLRef}}
 
-<div>{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}</div>
+**`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/Guide/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素</td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>不可。開始タグと終了タグの両方が必要。</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td>{{HTMLElement("details")}} 要素</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>許可されている <code>role</code> なし</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/Guide/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>不可。開始タグと終了タグの両方が必要。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("details")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみを持ちます。</p>
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<p><code>&lt;summary&gt;</code> 要素の中身には、見出しコンテンツ、プレーンテキスト、段落内で使用できる HTML が入れられます。</p>
+`<summary>` 要素の中身には、見出しコンテンツ、プレーンテキスト、段落内で使用できる HTML が入れられます。
 
-<p><code>&lt;summary&gt;</code> 要素は、 <code>&lt;details&gt;</code> 要素の最初の子として<em>のみ</em>使用できます。ユーザーが概要をクリックすると、親の <code>&lt;details&gt;</code> 要素が開閉し、 <code>&lt;details&gt;</code> 要素に {{event("toggle")}} イベントが送信され、状態が変化したことを知るために使用することができます。</p>
+`<summary>` 要素は、 `<details>` 要素の最初の子として*のみ*使用できます。ユーザーが概要をクリックすると、親の `<details>` 要素が開閉し、 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが `<details>` 要素に送信され、状態が変化したことを知るために使用することができます。
 
-<h3 id="Default_label_text" name="Default_label_text">既定のラベルテキスト</h3>
+## 既定のラベルテキスト
 
-<p><code>&lt;details&gt;</code> 要素の最初の子が <code>&lt;summary&gt;</code> 要素でない場合、{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列 (ふつうは「詳細」) を折りたたみボックスのラベルとして使用します。</p>
+`<details>` 要素の最初の子が `<summary>` 要素でな{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
 
-<h3 id="Default_style" name="Default_style">既定のスタイル</h3>
+## 既定のスタイル
 
-<p>HTML 標準では、<code>&lt;summary&gt;</code> の既定のスタイルに <code>display:list-item</code> が含まれています。これで、ラベルの隣に既定で (多くは三角形で) 表示される折りたたみウィジェットのとして表示さえるアイコンを変更したり削除したりすることができます。</p>
+HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットのとして表示さえるアイコンを変更したり削除したりすることができます。
 
-<p>スタイルを <code>display:block</code> に変更すると、展開用の三角印を削除することができます。</p>
+スタイルを `display: block` に変更すると、展開用の三角印を削除することができます。
 
-<p>詳しくは<a href="#browser_compatibility">ブラウザーの互換性</a>の節をご覧ください。すべてのブラウザーがこの要素の機能すべてに対応しているわけではありません。</p>
+詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節をご覧ください。すべてのブラウザーがこの要素の機能すべてに対応しているわけではありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬似要素 `::-webkit-details-marker` によって、アイコンの表示を制御することが可能です。三角形の表示を消すには、 `summary::-webkit-details-marker { display: none }` を使用してください。
 
-<p>以下に <code>&lt;summary&gt;</code> を使用している例をいくつか示します。 {{HTMLElement("details")}} 要素のドキュメントにもいくつか例があります。</p>
+## 例
 
-<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+以下に `<summary>` を使用している例をいくつか示します。 {{HTMLElement("details")}} 要素のドキュメントにもいくつか例があります。
 
-<p>{{HTMLElement("details")}} 要素の中で <code>&lt;summary&gt;</code> の使用を示す簡単な例です。</p>
+## 基本的な例
 
-<pre class="brush: html notranslate">&lt;details open&gt;
-  &lt;summary&gt;Overview&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+{{HTMLElement("details")}} 要素の中で `<summary>` の使用を示す簡単な例です。
 
-<p>{{EmbedLiveSample("Basic_example", 650, 120)}}</p>
+```html
+<details open>
+  <summary>Overview</summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<h3 id="Summaries_as_headings" name="Summaries_as_headings">見出しとしての概要</h3>
+{{EmbedLiveSample("Basic_example", 650, 120)}}
 
-<p>次のように、 <code>&lt;summary&gt;</code> の中で見出し要素を使用することができます。</p>
+## 見出しとしての概要
 
-<pre class="brush: html notranslate">&lt;details open&gt;
-  &lt;summary&gt;&lt;h4&gt;Overview&lt;/h4&gt;&lt;/summary&gt;
-    &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+次のように、 `<summary>` の中で見出し要素を使用することができます。
 
-<p>{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}</p>
+```html
+<details open>
+  <summary><h4>Overview</h4></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。</p>
+{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
-<div class="blockIndicator warning">
-<p><strong>警告:</strong> <code>&lt;summary&gt;</code> 要素の既定のロールは <a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a> (子要素からはすべてのロールを外す) ですので、この例は読み上げソフトのような支援技術のユーザーには動作しません。 <code>&lt;h4&gt;</code> のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。</p>
+これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
+
+> **Warning:** `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例は画面リーダーのような支援技術のユーザーには動作しません。 `<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
 </div>
 
-<h3 id="HTML_in_summaries" name="HTML_in_summaries">概要の中の HTML</h3>
+## 概要の中の HTML
 
-<p>この例は、 <code>&lt;summary&gt;</code> 要素にいくらか意味を追加して、ラベルを重要であると示します。</p>
+この例は、 `<summary>` 要素にいくらか意味を追加して、ラベルを重要であると示します。
 
-<pre class="brush: html notranslate">&lt;details open&gt;
-  &lt;summary&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/summary&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Cash on hand: $500.00&lt;/li&gt;
-    &lt;li&gt;Current invoice: $75.30&lt;/li&gt;
-    &lt;li&gt;Due date: 5/6/19&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/details&gt;</pre>
+```html
+<details open>
+  <summary><strong>Overview</strong></summary>
+  <ol>
+    <li>Cash on hand: $500.00</li>
+    <li>Current invoice: $75.30</li>
+    <li>Due date: 5/6/19</li>
+  </ol>
+</details>
+```
 
-<p>{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}</p>
+{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'interactive-elements.html#the-summary-element', '&lt;summary&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.summary")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("details")}}</li>
-</ul>
+- {{HTMLElement("details")}}
