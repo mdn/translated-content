@@ -8,7 +8,7 @@ slug: Web/API/AbortSignal/throwIfAborted
 
 需要支持中止的 API 可以接收一个 {{domxref("AbortSignal")}} 对象并且使用 `throwIfAborted()` 来测试并且当 [`abort`](/zh-CN/docs/Web/API/AbortSignal/abort_event) 事件发出信号时抛出。
 
-该方法也可以用来中止中止代码中特定的操作，而不是传递给接收信号的函数。
+该方法也可以用来中止代码中特定的操作，而不是传递给接收信号的函数。
 
 ## 语法
 
@@ -47,7 +47,7 @@ async function waitForCondition(func, targetValue, { signal } = {}) {
 }
 ```
 
-在每个循环的迭代中，如果操作已经被中止(否则什么也不做)我们使用 `throwIfAborted()` 来抛出 signal 中止的 `reason`。如果信号被中止，它将导致 `waitForCondition()` promise 被拒绝。
+在每个循环的迭代中，如果操作已经被中止（否则什么也不做）我们使用 `throwIfAborted()` 来抛出 signal 中止的 `reason`。如果信号被中止，它将导致 `waitForCondition()` promise 被拒绝。
 
 ### 实现可中止的 API
 
